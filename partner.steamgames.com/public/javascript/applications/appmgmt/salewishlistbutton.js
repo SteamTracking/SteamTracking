@@ -8,11 +8,11 @@ import {
   sn as r,
   vt as i,
 } from "./chunk~de7f2df91c.js";
-import { Xi as a, Yi as o, gn as s, ua as c } from "./chunk~1fa4b8f2ff.js";
-import { h as l, y as u } from "./chunk~0a99e05c44.js";
+import { Xi as a, Zi as o, _n as s, da as c } from "./chunk~1fa4b8f2ff.js";
+import { _ as l, x as u } from "./chunk~0a99e05c44.js";
 import {
   K as d,
-  Nn as f,
+  Pn as f,
   Sn as p,
   ct as m,
   lt as h,
@@ -55,8 +55,8 @@ function C(e) {
     r && !E
       ? (P = (0, x.jsx)(y, { size: 18 }))
       : k
-        ? k && (P = E ? c(`#OnWishlist`) : (0, x.jsx)(o, {}))
-        : (P = E ? c(`#wishlist_add_to_wishlist`) : (0, x.jsx)(a, {})),
+        ? k && (P = E ? c(`#OnWishlist`) : (0, x.jsx)(a, {}))
+        : (P = E ? c(`#wishlist_add_to_wishlist`) : (0, x.jsx)(o, {})),
     (0, x.jsxs)(x.Fragment, {
       children: [
         (0, x.jsx)(s, {

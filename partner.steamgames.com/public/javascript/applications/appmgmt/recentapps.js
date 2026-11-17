@@ -9,8 +9,8 @@ import {
   sn as i,
   vt as a,
 } from "./chunk~de7f2df91c.js";
-import { gn as o, ua as s } from "./chunk~1fa4b8f2ff.js";
-import { d as c, h as l } from "./chunk~0a99e05c44.js";
+import { _n as o, da as s } from "./chunk~1fa4b8f2ff.js";
+import { _ as c, p as l } from "./chunk~0a99e05c44.js";
 import { a as u, r as d } from "./chunk~0aa5028ef4.js";
 var f = i(e());
 function p(e, t) {
@@ -114,7 +114,7 @@ function j(e) {
 function M(e) {
   let { app: t } = e,
     n = t.appid,
-    { data: i } = c({ appid: n }),
+    { data: i } = l({ appid: n }),
     a = r.PARTNER_BASE_URL + `apps/landing/` + n,
     s = p(i, `header`);
   return (0, D.jsxs)(`div`, {
@@ -148,7 +148,7 @@ function M(e) {
 function N(e) {
   let { app: t } = e,
     n = t.appid,
-    { data: r } = l({ appid: n });
+    { data: r } = c({ appid: n });
   return (0, D.jsxs)(`div`, {
     className: y,
     children: [

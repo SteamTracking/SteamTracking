@@ -16,20 +16,20 @@ import {
 import { It as u, Q as d } from "./chunk~25a6634263.js";
 import { o as f } from "./chunk~b4171a8747.js";
 import {
-  an as p,
-  cn as m,
-  g as ee,
-  ia as h,
-  ua as g,
+  aa as p,
+  da as m,
+  g as h,
+  ln as ee,
+  on as te,
 } from "./chunk~1fa4b8f2ff.js";
 import "./chunk~8681f5c764.js";
-import { t as te } from "./chunk~f4e4ed5c17.js";
+import { t as ne } from "./chunk~f4e4ed5c17.js";
 import "./chunk~ca0c999570.js";
-import { t as ne } from "./chunk~874b4cd3a1.js";
-var _ = [`app_header_capsule`, `app_main_capsule`],
-  v = [`sale_header`, `sale_logo`, `capsule`, `localized_title_image`],
-  y = [`takeunder_art`, `takeunder_mobile_art`],
-  b = [
+import { t as re } from "./chunk~874b4cd3a1.js";
+var g = [`app_header_capsule`, `app_main_capsule`],
+  _ = [`sale_header`, `sale_logo`, `capsule`, `localized_title_image`],
+  v = [`takeunder_art`, `takeunder_mobile_art`],
+  y = [
     `takeover_art`,
     `takeover_mobile_art`,
     `takeover_webm_art`,
@@ -37,146 +37,146 @@ var _ = [`app_header_capsule`, `app_main_capsule`],
     `takeover_webm_mobile_art`,
     `takeover_mp4_mobile_art`,
   ],
-  x = [`marketingmessage_art`, `marketingmessage_art_2`],
-  S = [
+  b = [`marketingmessage_art`, `marketingmessage_art_2`],
+  x = [
     `marketingmessage_art_eventcapsule`,
     `marketingmessage_art_2_eventcapsule`,
   ],
-  C = [`spotlight_art_hero`],
-  w = [..._, ...v, ...y, ...b, ...x, ...S, ...C],
-  T = 622,
-  E = 1920,
-  D = 450,
-  O = 800,
-  re = 460,
-  ie = 2108,
-  ae = 300,
-  oe = 800,
-  se = 300,
-  ce = 644,
-  k = 337,
-  A = 155,
-  j = 433,
-  M = 199;
-[...w];
-function N(e) {
+  S = [`spotlight_art_hero`],
+  C = [...g, ..._, ...v, ...y, ...b, ...x, ...S],
+  w = 622,
+  T = 1920,
+  E = 450,
+  D = 800,
+  ie = 460,
+  ae = 2108,
+  oe = 300,
+  se = 800,
+  ce = 300,
+  le = 644,
+  O = 337,
+  k = 155,
+  A = 433,
+  j = 199;
+[...C];
+function M(e) {
   return Array.isArray(e) ? e[0] : e;
 }
-function P(e) {
+function N(e) {
   return Math.min(...(Array.isArray(e) ? e : [e]));
 }
-function le(e, t) {
-  return t === void 0 ? N(e) : Array.isArray(e) ? e[t] : e;
+function ue(e, t) {
+  return t === void 0 ? M(e) : Array.isArray(e) ? e[t] : e;
 }
-var ue = [1, 3, 2, 10],
-  F = [1, 3, 2],
-  I = [1, 3],
-  L = [5, 4],
-  de = [7, 6],
-  R = {
-    capsule: { width: O, height: D, rgAcceptableTypes: I },
+var de = [1, 3, 2, 10],
+  P = [1, 3, 2],
+  F = [1, 3],
+  I = [5, 4],
+  fe = [7, 6],
+  L = {
+    capsule: { width: D, height: E, rgAcceptableTypes: F },
     marketingmessage_art_2_eventcapsule: {
-      width: O,
-      height: D,
-      rgAcceptableTypes: I,
+      width: D,
+      height: E,
+      rgAcceptableTypes: F,
     },
     marketingmessage_art_eventcapsule: {
-      width: O,
-      height: D,
-      rgAcceptableTypes: I,
+      width: D,
+      height: E,
+      rgAcceptableTypes: F,
     },
-    spotlight: { width: ie, height: re, rgAcceptableTypes: I },
+    spotlight: { width: ae, height: ie, rgAcceptableTypes: F },
     localized_store_app_spotlight: {
       width: 1200,
       height: 260,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
     localized_store_app_spotlight_mobile: {
       width: 500,
       height: 160,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
-    localized_title_image: { width: E, height: T, rgAcceptableTypes: I },
-    background: { width: E, height: T, rgAcceptableTypes: I },
+    localized_title_image: { width: T, height: w, rgAcceptableTypes: F },
+    background: { width: T, height: w, rgAcceptableTypes: F },
     hero: {
       width: 0,
       height: 0,
       bDisableEnforceDimensions: !0,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
-    email_full: { width: oe, height: ae, rgAcceptableTypes: I },
-    email_centered: { width: ce, height: se, rgAcceptableTypes: I },
-    broadcast_left: { width: [M, A], height: [j, k], rgAcceptableTypes: I },
-    broadcast_right: { width: [M, A], height: [j, k], rgAcceptableTypes: I },
+    email_full: { width: se, height: oe, rgAcceptableTypes: F },
+    email_centered: { width: le, height: ce, rgAcceptableTypes: F },
+    broadcast_left: { width: [j, k], height: [A, O], rgAcceptableTypes: F },
+    broadcast_right: { width: [j, k], height: [A, O], rgAcceptableTypes: F },
     sale_header: {
       width: 0,
       height: 0,
       bDisableEnforceDimensions: !0,
-      rgAcceptableTypes: F,
+      rgAcceptableTypes: P,
     },
     sale_overlay: {
       width: 0,
       height: 0,
       bDisableEnforceDimensions: !0,
-      rgAcceptableTypes: F,
+      rgAcceptableTypes: P,
     },
     localized_image_group: {
       width: 0,
       height: 0,
       bDisableEnforceDimensions: !0,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
     localized_background_art: {
       width: 0,
       height: 0,
       bDisableEnforceDimensions: !0,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
     sale_section_background: {
       width: 0,
       height: 0,
       bDisableEnforceDimensions: !0,
-      rgAcceptableTypes: F,
+      rgAcceptableTypes: P,
     },
     sale_section_title: {
       width: 0,
       height: 0,
       bDisableEnforceDimensions: !0,
-      rgAcceptableTypes: F,
+      rgAcceptableTypes: P,
     },
     link_capsule: {
       width: 0,
       height: 0,
       bDisableEnforceDimensions: !0,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
     product_banner: {
       width: [1200, 1100],
       height: [175, 160],
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
-    product_mobile_banner: { width: 500, height: 160, rgAcceptableTypes: I },
+    product_mobile_banner: { width: 500, height: 160, rgAcceptableTypes: F },
     product_banner_override: {
       width: [1200, 1100],
       height: [175, 160],
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
     product_mobile_banner_override: {
       width: 500,
       height: 160,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
-    schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: I },
-    tab_bar_background: { width: 1500, height: 100, rgAcceptableTypes: I },
-    sale_logo: { width: [1200, 940], height: [460, 460], rgAcceptableTypes: I },
-    bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: F },
-    bestofyear_banner_mobile: { width: 500, height: 160, rgAcceptableTypes: F },
+    schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: F },
+    tab_bar_background: { width: 1500, height: 100, rgAcceptableTypes: F },
+    sale_logo: { width: [1200, 940], height: [460, 460], rgAcceptableTypes: F },
+    bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: P },
+    bestofyear_banner_mobile: { width: 500, height: 160, rgAcceptableTypes: P },
     localized_marketing_message: {
       width: 570,
       height: 600,
-      rgAcceptableTypes: ue,
+      rgAcceptableTypes: de,
     },
-    localized_optin_banner: { width: 1e3, height: 150, rgAcceptableTypes: I },
+    localized_optin_banner: { width: 1e3, height: 150, rgAcceptableTypes: F },
     localized_marketingmessage_webm: {
       width: 570,
       height: 600,
@@ -211,13 +211,13 @@ var ue = [1, 3, 2, 10],
     localized_marketingmessage_background: {
       width: 570,
       height: 600,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
     localized_email_image: {
       width: 0,
       height: 0,
       bDisableEnforceDimensions: !0,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
     template_asset: {
       width: 0,
@@ -229,40 +229,40 @@ var ue = [1, 3, 2, 10],
       width: 0,
       height: 0,
       bDisableEnforceDimensions: !0,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
     sale_store_capsule_header: {
       width: 920,
       height: 430,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
-    sale_store_capsule_small: { width: 462, height: 174, rgAcceptableTypes: I },
-    sale_store_capsule_main: { width: 1232, height: 706, rgAcceptableTypes: I },
+    sale_store_capsule_small: { width: 462, height: 174, rgAcceptableTypes: F },
+    sale_store_capsule_main: { width: 1232, height: 706, rgAcceptableTypes: F },
     sale_store_capsule_vertical: {
       width: 748,
       height: 896,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
     sale_cross_promo_background: {
       width: 1200,
       height: 600,
       bDisableEnforceDimensions: !0,
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
     sale_cross_promo_logo: {
       width: [1200, 940],
       height: [460, 460],
-      rgAcceptableTypes: I,
+      rgAcceptableTypes: F,
     },
-    spotlight_art: { width: 306, height: 260, rgAcceptableTypes: F },
-    spotlight_art_hero: { width: 748, height: 896, rgAcceptableTypes: I },
-    old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: F },
-    marketingmessage_art: { width: 570, height: 600, rgAcceptableTypes: F },
-    marketingmessage_art_2: { width: 570, height: 600, rgAcceptableTypes: F },
-    takeover_art: { width: 1850, height: 450, rgAcceptableTypes: F },
+    spotlight_art: { width: 306, height: 260, rgAcceptableTypes: P },
+    spotlight_art_hero: { width: 748, height: 896, rgAcceptableTypes: F },
+    old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: P },
+    marketingmessage_art: { width: 570, height: 600, rgAcceptableTypes: P },
+    marketingmessage_art_2: { width: 570, height: 600, rgAcceptableTypes: P },
+    takeover_art: { width: 1850, height: 450, rgAcceptableTypes: P },
     takeover_webm_art: { width: 1850, height: 450, rgAcceptableTypes: [5] },
     takeover_mp4_art: { width: 1850, height: 450, rgAcceptableTypes: [4] },
-    takeover_mobile_art: { width: 500, height: 350, rgAcceptableTypes: F },
+    takeover_mobile_art: { width: 500, height: 350, rgAcceptableTypes: P },
     takeover_webm_mobile_art: {
       width: 500,
       height: 350,
@@ -273,12 +273,12 @@ var ue = [1, 3, 2, 10],
       height: 350,
       rgAcceptableTypes: [4],
     },
-    takeunder_art: { width: 1200, height: 190, rgAcceptableTypes: F },
-    takeunder_mobile_art: { width: 500, height: 160, rgAcceptableTypes: F },
-    app_header_capsule: { width: 920, height: 430, rgAcceptableTypes: I },
-    app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: I },
+    takeunder_art: { width: 1200, height: 190, rgAcceptableTypes: P },
+    takeunder_mobile_art: { width: 500, height: 160, rgAcceptableTypes: P },
+    app_header_capsule: { width: 920, height: 430, rgAcceptableTypes: F },
+    app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: F },
   };
-function z(e, t, n, r) {
+function R(e, t, n, r) {
   let i = null;
   if (Array.isArray(n)) {
     if (
@@ -296,16 +296,16 @@ function z(e, t, n, r) {
   } else if (t !== r) return !1;
   return !0;
 }
-function B(e, t, n, r) {
-  let i = R[n];
+function z(e, t, n, r) {
+  let i = L[n];
   return i
     ? i.bDisableEnforceDimensions
       ? !!r
-      : z(e, t, i.width, i.height)
+      : R(e, t, i.width, i.height)
     : !1;
 }
-function V(e, t, n) {
-  let r = R[n];
+function B(e, t, n) {
+  let r = L[n];
   if (!r) return !1;
   if (r.bDisableEnforceDimensions) return !0;
   if (Array.isArray(r.width)) {
@@ -316,22 +316,22 @@ function V(e, t, n) {
   } else if (t < r.height) return !1;
   return !0;
 }
-function fe(e) {
-  let t = R[e];
+function pe(e) {
+  let t = L[e];
   return t.rgAcceptableTypes.includes(6) || t.rgAcceptableTypes.includes(7);
 }
+function V(e, t) {
+  return t.filter((t) => H(e, t));
+}
 function H(e, t) {
-  return t.filter((t) => U(e, t));
+  return L[t].rgAcceptableTypes.includes(e);
 }
-function U(e, t) {
-  return R[t].rgAcceptableTypes.includes(e);
-}
-var pe = s(t()),
-  me = `A5DZIArSiNc-`,
-  he = `VdxYwmaL6i4-`,
-  ge = `_3PNPGWpNrDs-`,
-  W = l(),
-  G = class extends pe.Component {
+var me = s(t()),
+  he = `A5DZIArSiNc-`,
+  ge = `VdxYwmaL6i4-`,
+  _e = `_3PNPGWpNrDs-`,
+  U = l(),
+  W = class extends me.Component {
     state = {
       region: {
         xPosPct: 0,
@@ -343,7 +343,7 @@ var pe = s(t()),
     async OnCrop() {
       let e = this.props.uploadFile.GetCanvasImageSource();
       (e &&
-        (await _e(
+        (await ve(
           this.props.uploadFile,
           e,
           (this.state.region.xPosPct / 100) * this.props.uploadFile.width,
@@ -364,16 +364,16 @@ var pe = s(t()),
       if (t) return t.width;
       let n = e.GetCurrentImageOption();
       if (!n) return 0;
-      let r = R[n.artworkType].width;
-      return n ? N(r) : 0;
+      let r = L[n.artworkType].width;
+      return n ? M(r) : 0;
     }
     GetDestHeight() {
       let { uploadFile: e, forceResolution: t } = this.props;
       if (t) return t.width;
       let n = e.GetCurrentImageOption();
       if (!n) return 0;
-      let r = R[n.artworkType].height;
-      return n ? N(r) : 0;
+      let r = L[n.artworkType].height;
+      return n ? M(r) : 0;
     }
     GetLargestBoxThatFits(e, t, n, r) {
       let i = n,
@@ -416,28 +416,28 @@ var pe = s(t()),
           800,
           500,
         );
-      return (0, W.jsx)(ee, {
+      return (0, U.jsx)(h, {
         onEscKeypress: this.props.closeModal,
         bDisableBackgroundDismiss: !0,
-        children: (0, W.jsxs)(`div`, {
+        children: (0, U.jsxs)(`div`, {
           className: a(`DialogContent`, `_DialogCenterVertically`),
           children: [
-            (0, W.jsx)(m, {
-              children: g(
+            (0, U.jsx)(ee, {
+              children: m(
                 `#ImageUpload_CropModalTitleDims`,
                 this.GetDestWidth(),
                 this.GetDestHeight(),
               ),
             }),
-            (0, W.jsx)(`div`, {
+            (0, U.jsx)(`div`, {
               className: a(`DialogBodyText`),
-              children: g(`#ImageUpload_CropModalDescription`),
+              children: m(`#ImageUpload_CropModalDescription`),
             }),
-            (0, W.jsxs)(`div`, {
-              className: me,
+            (0, U.jsxs)(`div`, {
+              className: he,
               style: { width: n.width, height: n.height },
               children: [
-                (0, W.jsx)(`img`, {
+                (0, U.jsx)(`img`, {
                   style: {
                     maxWidth: `100%`,
                     maxHeight: `100%`,
@@ -445,7 +445,7 @@ var pe = s(t()),
                   },
                   src: this.props.uploadFile.dataUrl,
                 }),
-                (0, W.jsx)(ne, {
+                (0, U.jsx)(re, {
                   bLockAspectRatio: !0,
                   bDisableLink: !0,
                   index: 0,
@@ -459,29 +459,29 @@ var pe = s(t()),
                 }),
               ],
             }),
-            (0, W.jsxs)(`div`, {
-              className: he,
+            (0, U.jsxs)(`div`, {
+              className: ge,
               children: [
-                (0, W.jsx)(`div`, {
-                  className: ge,
-                  children: g(`#ImageUpload_CropPreview`),
+                (0, U.jsx)(`div`, {
+                  className: _e,
+                  children: m(`#ImageUpload_CropPreview`),
                 }),
-                (0, W.jsx)(`div`, { style: this.GetPreviewWindowStyle() }),
+                (0, U.jsx)(`div`, { style: this.GetPreviewWindowStyle() }),
               ],
             }),
-            (0, W.jsx)(p, {
+            (0, U.jsx)(te, {
               onClick: this.OnCrop,
-              children: g(`#ImageUpload_CropAndContinue`),
+              children: m(`#ImageUpload_CropAndContinue`),
             }),
           ],
         }),
       });
     }
   };
-(e([u], G.prototype, `OnCrop`, null), e([u], G.prototype, `UpdateCrop`, null));
-async function _e(e, t, n, r, i, a, o, s, c) {
+(e([u], W.prototype, `OnCrop`, null), e([u], W.prototype, `UpdateCrop`, null));
+async function ve(e, t, n, r, i, a, o, s, c) {
   return new Promise((l, u) => {
-    let f = K(c);
+    let f = G(c);
     if (!f) {
       u(`Invalid format provided`);
       return;
@@ -506,7 +506,7 @@ async function _e(e, t, n, r, i, a, o, s, c) {
       }));
   });
 }
-function K(e) {
+function G(e) {
   switch (e) {
     case 3:
       return `image/png`;
@@ -514,7 +514,7 @@ function K(e) {
       return `image/jpeg`;
   }
 }
-function q(e) {
+function K(e) {
   if (
     (e.indexOf(`?`) > 0 && (e = e.split(`?`)[0]),
     e.endsWith(`.jpg`) || e.endsWith(`.jpeg`))
@@ -528,10 +528,10 @@ function q(e) {
   if (e.endsWith(`.srt`)) return 7;
   if (e.endsWith(`.webp`)) return 10;
 }
-function ve(e) {
+function ye(e) {
   return e == `waiting` || e == `uploading` || e == `processing`;
 }
-var J = class {
+var q = class {
   m_originalSize = { width: 0, height: 0 };
   m_originalDataUrl = ``;
   dataUrl = void 0;
@@ -548,7 +548,7 @@ var J = class {
     (r(this),
       (this.file = e),
       (this.filename = t),
-      (this.fileType = q(t) ?? 0),
+      (this.fileType = K(t) ?? 0),
       (this.language = n),
       (this.uploadTime = Date.now()),
       (this.status = `pending`),
@@ -565,17 +565,17 @@ var J = class {
   }
   GetImageOptionLabel() {}
 };
-(e([n], J.prototype, `dataUrl`, void 0),
-  e([n], J.prototype, `width`, void 0),
-  e([n], J.prototype, `height`, void 0),
-  e([n], J.prototype, `status`, void 0),
-  e([n.ref], J.prototype, `message`, void 0),
-  e([n], J.prototype, `language`, void 0));
-var ye = 960,
-  be = 311,
-  xe = 480,
-  Se = 156,
-  Y = class extends J {
+(e([n], q.prototype, `dataUrl`, void 0),
+  e([n], q.prototype, `width`, void 0),
+  e([n], q.prototype, `height`, void 0),
+  e([n], q.prototype, `status`, void 0),
+  e([n.ref], q.prototype, `message`, void 0),
+  e([n], q.prototype, `language`, void 0));
+var be = 960,
+  xe = 311,
+  Se = 480,
+  Ce = 156,
+  J = class extends q {
     m_rgImageOptions;
     m_currentImageOption = void 0;
     m_currentImageOptionKey = void 0;
@@ -594,45 +594,45 @@ var ye = 960,
           );
       if (e) ((n = e.width), (r = e.height), (i = !0));
       else if (this.GetCurrentImageOption()) {
-        let e = R[this.GetCurrentImageOption().artworkType];
+        let e = L[this.GetCurrentImageOption().artworkType];
         e &&
           ((n = e.width), (r = e.height), (i = !e.bDisableEnforceDimensions));
       }
-      let o = this.width >= P(n) && this.height >= P(r),
-        s = i ? z(this.width, this.height, n, r) : o,
+      let o = this.width >= N(n) && this.height >= N(r),
+        s = i ? R(this.width, this.height, n, r) : o,
         c = t && t != this.fileType,
         l =
           this.m_rgImageOptions && this.m_rgImageOptions.length > 0
-            ? H(
+            ? V(
                 this.fileType,
                 this.m_rgImageOptions?.map((e) => e.artworkType) || [],
               ).length == 0
             : !1,
-        u = !!K(this.fileType),
+        u = !!G(this.fileType),
         d = ``,
         p = !1,
-        m;
+        h;
       return (
         a
           ? l
-            ? (d = g(`#ImageUpload_InvalidFileType`))
+            ? (d = m(`#ImageUpload_InvalidFileType`))
             : c
-              ? (d = g(`#ImageUpload_InvalidFormat`, f(t) ?? ``))
+              ? (d = m(`#ImageUpload_InvalidFormat`, f(t) ?? ``))
               : !s && !u
-                ? (d = g(`#ImageUpload_InvalidResolution`, N(n), N(r)))
+                ? (d = m(`#ImageUpload_InvalidResolution`, M(n), M(r)))
                 : o
                   ? !s && u
-                    ? ((d = g(`#ImageUpload_InvalidDimensions`, N(n), N(r))),
+                    ? ((d = m(`#ImageUpload_InvalidDimensions`, M(n), M(r))),
                       (p = !0))
-                    : ((Array.isArray(n) && this.width != N(n)) ||
-                        (Array.isArray(r) && this.height != N(r))) &&
-                      ((m ??= []),
-                      m.push(g(`#ImageUpload_PreferredDimension`, N(n), N(r))))
-                  : (d = g(`#ImageUpload_TooSmall`, N(n), N(r)))
-          : (d = g(`#ImageUpload_InvalidFormatSelected`)),
+                    : ((Array.isArray(n) && this.width != M(n)) ||
+                        (Array.isArray(r) && this.height != M(r))) &&
+                      ((h ??= []),
+                      h.push(m(`#ImageUpload_PreferredDimension`, M(n), M(r))))
+                  : (d = m(`#ImageUpload_TooSmall`, M(n), M(r)))
+          : (d = m(`#ImageUpload_InvalidFormatSelected`)),
         {
           error: d,
-          warnings: m,
+          warnings: h,
           needsCrop: p,
           match: this.GetCurrentImageOption(),
         }
@@ -643,7 +643,7 @@ var ye = 960,
     }
     ComputeDefaultImageOption() {
       if (!this.m_rgImageOptions || this.m_rgImageOptions.length == 0) return;
-      let e = H(
+      let e = V(
           this.fileType,
           this.m_rgImageOptions?.map((e) => e.artworkType),
         ),
@@ -673,40 +673,40 @@ var ye = 960,
         (this.m_currentImageOptionKey = e?.sKey));
     }
   };
-(e([n], Y.prototype, `m_currentImageOption`, void 0),
-  e([n], Y.prototype, `m_currentImageOptionKey`, void 0));
-var Ce = class extends Y {
+(e([n], J.prototype, `m_currentImageOption`, void 0),
+  e([n], J.prototype, `m_currentImageOptionKey`, void 0));
+var Y = class extends J {
     video;
     constructor(e, t, n, r, i, a, o) {
       (super(e, t, n, r, i, a), (this.video = o));
     }
     BIsOriginalMinimumDimensions(e) {
-      return V(this.video.videoWidth, this.video.videoHeight, e.artworkType);
+      return B(this.video.videoWidth, this.video.videoHeight, e.artworkType);
     }
     FileTypeMatchesImageTypes(e) {
-      return U(this.fileType, e.artworkType);
+      return H(this.fileType, e.artworkType);
     }
     BIsVideo() {
-      return L.includes(this.fileType);
+      return I.includes(this.fileType);
     }
     GetResizeDimension() {}
   },
-  we = class extends Y {
+  we = class extends J {
     constructor(e, t, n, r) {
       super(e, t, n, r, URL.createObjectURL(e), { width: 0, height: 0 });
     }
     BIsOriginalMinimumDimensions(e) {
-      return fe(e.artworkType);
+      return pe(e.artworkType);
     }
     FileTypeMatchesImageTypes(e) {
-      return U(this.fileType, e.artworkType);
+      return H(this.fileType, e.artworkType);
     }
     BIsVideo() {
-      return L.includes(this.fileType);
+      return I.includes(this.fileType);
     }
     GetResizeDimension() {}
   },
-  X = class extends Y {
+  X = class extends J {
     bCropped = !1;
     localizedImageGroupPrimaryImage;
     media;
@@ -726,13 +726,13 @@ var Ce = class extends Y {
       return this.media;
     }
     BIsOriginalMinimumDimensions(e) {
-      return V(this.media?.width ?? 0, this.media?.height ?? 0, e.artworkType);
+      return B(this.media?.width ?? 0, this.media?.height ?? 0, e.artworkType);
     }
     FileTypeMatchesImageTypes(e) {
-      return U(this.fileType, e.artworkType);
+      return H(this.fileType, e.artworkType);
     }
     BIsVideo() {
-      return L.includes(this.fileType);
+      return I.includes(this.fileType);
     }
     GetResizeDimension() {
       return Te(this.GetCurrentImageOption()?.artworkType);
@@ -742,18 +742,18 @@ e([n], X.prototype, `bCropped`, void 0);
 function Te(e) {
   if (e === `background`)
     return [
-      { width: ye, height: be },
-      { width: xe, height: Se },
+      { width: be, height: xe },
+      { width: Se, height: Ce },
     ];
   if (e === `capsule` || e === `spotlight`)
-    return [{ width: N(R[e].width) / 2, height: N(R[e].height) / 2 }];
+    return [{ width: M(L[e].width) / 2, height: M(L[e].height) / 2 }];
 }
 function Z(e, t, n, r = !1) {
   if (n) {
-    for (let i of n) if (r ? V(e, t, i) : B(e, t, i)) return i;
+    for (let i of n) if (r ? B(e, t, i) : z(e, t, i)) return i;
   }
 }
-var Ee = s(te()),
+var Ee = s(ne()),
   Q = class {};
 function $(e, t, n) {
   let r = e.filter((e) => {
@@ -820,13 +820,13 @@ var ke = class extends Q {
     );
   }
   CancelAllUploads() {
-    this.m_cancel?.cancel(g(`#ImageUpload_CancelRequest`));
+    this.m_cancel?.cancel(m(`#ImageUpload_CancelRequest`));
   }
 };
 function Ae(e, t, n) {
   if (((e == null || e == null) && (e = t), !n || n.length === 0)) return e;
-  for (let t of n) if (h.IsELanguageValidInRealm(e, t)) return e;
-  for (let e of n) if (h.IsELanguageValidInRealm(t, e)) return t;
+  for (let t of n) if (p.IsELanguageValidInRealm(e, t)) return e;
+  for (let e of n) if (p.IsELanguageValidInRealm(t, e)) return t;
   return n.includes(i.k_ESteamRealmGlobal) ? 0 : 29;
 }
 function je(e, t = 0) {
@@ -854,30 +854,30 @@ function je(e, t = 0) {
   };
 }
 export {
-  v as C,
-  y as E,
-  w as S,
-  b as T,
-  de as _,
+  _ as C,
+  v as E,
+  C as S,
+  y as T,
+  fe as _,
   $ as a,
-  S as b,
+  x as b,
   we as c,
-  q as d,
-  G as f,
-  N as g,
-  le as h,
+  K as d,
+  W as f,
+  M as g,
+  ue as h,
   Ae as i,
-  ve as l,
-  B as m,
+  ye as l,
+  z as m,
   ke as n,
   X as o,
-  R as p,
+  L as p,
   je as r,
-  Ce as s,
+  Y as s,
   Q as t,
-  J as u,
-  L as v,
-  C as w,
-  _ as x,
-  x as y,
+  q as u,
+  I as v,
+  S as w,
+  g as x,
+  b as y,
 };

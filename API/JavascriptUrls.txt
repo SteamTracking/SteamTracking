@@ -1188,6 +1188,7 @@ ${PARTNER_BASE_URL}optin/sale/${pageid}/${appid}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${}
 ${PARTNER_BASE_URL}optin/sale/${}
 ${PARTNER_BASE_URL}optin/sale/${}/
+${PARTNER_BASE_URL}optin/sale/${}/${appid}
 ${PARTNER_BASE_URL}optin/sale/${}/${nBaseAppID}
 ${PARTNER_BASE_URL}optin/sale/${}/${}
 ${PARTNER_BASE_URL}optin/sale/${}/220

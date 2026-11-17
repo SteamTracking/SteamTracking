@@ -19,14 +19,14 @@ import {
 } from "./chunk~de7f2df91c.js";
 import { It as m, gt as h } from "./chunk~25a6634263.js";
 import {
-  Mr as g,
-  Mt as _,
-  Wt as ee,
-  an as te,
-  ea as ne,
-  ni as re,
-  ua as v,
-  xn as ie,
+  Gt as g,
+  Nr as _,
+  Nt as ee,
+  Sn as te,
+  da as v,
+  on as ne,
+  ri as re,
+  ta as ie,
 } from "./chunk~1fa4b8f2ff.js";
 import { C as ae } from "./chunk~44f252525d.js";
 import { n as oe, t as se } from "./chunk~90b9831ad2.js";
@@ -41,7 +41,7 @@ var fe = `UpperLeft`,
   ge = `BottomCenter`,
   y = u(t()),
   _e = u(d()),
-  ve = u(_()),
+  ve = u(ee()),
   ye = u(ce()),
   b = c({
     AddBoxSizer: () => Ve,
@@ -217,7 +217,7 @@ var fe = `UpperLeft`,
     enterDone: A,
     enterActive: D,
   },
-  K = ie(Ze),
+  K = te(Ze),
   q = { pinnedPosition: pe, nWidthPct: 50, nHeightPct: 50 },
   J = y.createContext({ bFullscreen: !1 }),
   Y = class extends y.Component {
@@ -1046,7 +1046,7 @@ var et = (e) => {
   let { title: t, className: n } = e,
     r = 26;
   t.length > 8 && (r = Math.max(r - (t.length - 5) / 2, 5.8));
-  let [i, a] = ne();
+  let [i, a] = ie();
   return (0, W.jsxs)(`svg`, {
     className: l(U, n),
     viewBox: `0 0 300 14`,
@@ -1220,7 +1220,7 @@ function Jt() {
                       `Game Info`,
                       (0, W.jsx)(`div`, {
                         className: Tt,
-                        children: (0, W.jsx)(g, { angle: 180 }),
+                        children: (0, W.jsx)(_, { angle: 180 }),
                       }),
                     ],
                   }),
@@ -1493,12 +1493,12 @@ var $ = class extends y.Component {
               (0, W.jsxs)(`div`, {
                 className: mt,
                 children: [
-                  (0, W.jsx)(te, {
+                  (0, W.jsx)(ne, {
                     onClick: this.OnOK,
                     className: ht,
                     children: v(`#Button_Save`),
                   }),
-                  (0, W.jsx)(ee, {
+                  (0, W.jsx)(g, {
                     onClick: this.OnCancel,
                     className: ht,
                     children: this.state.unsavedChanges

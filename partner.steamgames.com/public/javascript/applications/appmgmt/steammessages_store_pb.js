@@ -4415,7 +4415,7 @@ var _ = f(l(), 1),
     return e.SendMsg(`Store.GetRecommendedTagsForUser#1`, u(x, t, n), te, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   e.GetRecommendedTagsForUser = n;
@@ -4440,7 +4440,7 @@ var _ = f(l(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetTagList = a;
@@ -4448,7 +4448,7 @@ var _ = f(l(), 1),
     return e.SendMsg(`Store.GetDiscoveryQueue#1`, u(A, t, n), ae, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetDiscoveryQueue = o;
@@ -4462,7 +4462,7 @@ var _ = f(l(), 1),
   function c(e, t, n) {
     return e.SendMsg(`Store.SkipDiscoveryQueueItem#1`, u(ce, t, n), j, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.SkipDiscoveryQueueItem = c;
@@ -4477,7 +4477,7 @@ var _ = f(l(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   e.GetGamesFollowed = d;
@@ -4486,7 +4486,7 @@ var _ = f(l(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   e.GetGamesFollowedCount = f;
@@ -4494,7 +4494,7 @@ var _ = f(l(), 1),
     return e.SendMsg(`Store.GetDiscoveryQueueSkippedApps#1`, u(Te, t, n), Ee, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetDiscoveryQueueSkippedApps = p;
@@ -4506,7 +4506,7 @@ var _ = f(l(), 1),
     return e.SendMsg(`Store.GetStorePreferences#1`, u(W, t, n), G, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetStorePreferences = h;
@@ -4526,7 +4526,7 @@ var _ = f(l(), 1),
   function v(e, t, n) {
     return e.SendMsg(`Store.UpdatePackageReservations#1`, u(fe, t, n), pe, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.UpdatePackageReservations = v;
@@ -4611,14 +4611,14 @@ var Ue;
   function n(e, t, n) {
     return e.SendMsg(`Playtest.UpdateInvites#1`, u(Ae, t, n), je, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   e.UpdateInvites = n;
   function r(e, t, n) {
     return e.SendMsg(`Playtest.GetInvites#1`, u(Me, t, n), Ne, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   e.GetInvites = r;
@@ -4631,7 +4631,7 @@ var Ue;
   function a(e, t, n) {
     return e.SendMsg(`Playtest.GetUserStatus#1`, u(Le, t, n), Re, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   e.GetUserStatus = a;

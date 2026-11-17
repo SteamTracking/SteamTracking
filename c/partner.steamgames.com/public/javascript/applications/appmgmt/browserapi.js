@@ -189,7 +189,7 @@ var _ = class {
       _.bConstMethod)
     )
       return (
-        _.append(`origin`, self.origin),
+        typeof self < `u` && self.origin && _.append(`origin`, self.origin),
         this.m_bJsonMode
           ? _.append(`input_json`, JSON.stringify(_.Body().toObject()))
           : _.append(`input_protobuf_encoded`, _),

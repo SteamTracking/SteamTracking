@@ -183,7 +183,7 @@ var v = class {
       r.bConstMethod)
     )
       return (
-        d.append(`origin`, self.origin),
+        typeof self < `u` && self.origin && d.append(`origin`, self.origin),
         this.m_bJsonMode
           ? d.append(`input_json`, JSON.stringify(n.Body().toObject()))
           : d.append(`input_protobuf_encoded`, s),

@@ -392,7 +392,7 @@ var d = u(s(), 1),
     return e.SendMsg(`AccountPrivacy.GetCookiePreferences#1`, c(_, t, n), v, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`],
+      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
     });
   }
   e.GetCookiePreferences = t;

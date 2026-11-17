@@ -4,29 +4,29 @@
 import { At as e, rt as t, sn as n, vt as r } from "./chunk~de7f2df91c.js";
 import { I as i } from "./chunk~25a6634263.js";
 import {
-  $t as a,
-  Gt as o,
-  Pt as s,
-  Ut as c,
-  Vt as l,
+  Bt as a,
+  Ft as o,
+  Gt as s,
+  Ht as c,
+  Kt as l,
   Wt as u,
-  Yt as d,
-  an as f,
-  f as p,
-  h as m,
-  hr as h,
-  l as g,
-  rn as _,
-  tn as v,
-  ua as y,
-  zt as b,
+  Xt as d,
+  da as f,
+  en as p,
+  f as m,
+  gr as h,
+  h as g,
+  in as _,
+  l as v,
+  nn as y,
+  on as b,
 } from "./chunk~1fa4b8f2ff.js";
-import { a as x, r as S, t as ee } from "./chunk~44f252525d.js";
-import { r as te, t as ne } from "./chunk~9fc22a4638.js";
-import { t as re } from "./chunk~c12081e677.js";
-import { r as ie } from "./chunk~8681f5c764.js";
-import { t as ae } from "./chunk~f4e4ed5c17.js";
-import { r as oe } from "./chunk~af36c62e9f.js";
+import { a as ee, r as x, t as te } from "./chunk~44f252525d.js";
+import { r as ne, t as re } from "./chunk~9fc22a4638.js";
+import { t as ie } from "./chunk~c12081e677.js";
+import { r as ae } from "./chunk~8681f5c764.js";
+import { t as oe } from "./chunk~f4e4ed5c17.js";
+import { r as S } from "./chunk~af36c62e9f.js";
 import { t as C } from "./chunk~eefd71512b.js";
 import { t as w } from "./chunk~58c6c52d52.js";
 import { A as T, k as E, r as D } from "./chunk~6110f63e8e.js";
@@ -52,7 +52,7 @@ import { t as W } from "./chunk~fb7b5d9c48.js";
 import { t as G } from "./chunk~ea4856d3e2.js";
 var K = n(e()),
   q = r();
-ae();
+oe();
 var J = new Map();
 (J.set(2, 5), J.set(1, 5), J.set(4, 1), J.set(3, 4));
 function se(e) {
@@ -76,11 +76,11 @@ function se(e) {
     default:
       throw `Invalid content descriptor.`;
   }
-  return y(t);
+  return f(t);
 }
 function ce(e) {
-  return (0, q.jsx)(ee, {
-    message: (e) => !k() || y(`#Generel_Discard_Warning`),
+  return (0, q.jsx)(te, {
+    message: (e) => !k() || f(`#Generel_Discard_Warning`),
   });
 }
 var le = `ZPIxJReBVKs-`,
@@ -98,13 +98,13 @@ var le = `ZPIxJReBVKs-`,
     let [e, n] = K.useState(),
       [r, i] = K.useState(!1),
       [a, o] = K.useState(!1),
-      [s, c] = K.useState(!1);
+      [c, l] = K.useState(!1);
     K.useEffect(() => {
       V().then((e) => {
-        (n(e.rgCategories), c(e.bHasUnpublishedChanges), i(!0));
+        (n(e.rgCategories), l(e.bHasUnpublishedChanges), i(!0));
       });
     }, []);
-    let l = K.useCallback((e) => {
+    let u = K.useCallback((e) => {
       (n(e), o(!0));
     }, []);
     return r
@@ -131,22 +131,22 @@ var le = `ZPIxJReBVKs-`,
               children: `Content Hub Graphana Stats Page`,
             }),
             (0, q.jsx)(`div`, { className: E, children: `Categories` }),
-            s &&
+            c &&
               (0, q.jsx)(`div`, {
                 className: `JRkGXgv8PKM-`,
                 children: `You have unpublished changes. Click Publish below to publish and make them available to users.`,
               }),
-            (0, q.jsx)(ye, { categories: e, onUpdate: l }),
+            (0, q.jsx)(ye, { categories: e, onUpdate: u }),
             (0, q.jsxs)(`div`, {
               className: ue,
               children: [
-                (0, q.jsx)(f, {
+                (0, q.jsx)(b, {
                   onClick: () =>
-                    m(
+                    g(
                       (0, q.jsx)(Ee, {
                         categories: e,
                         onSave: () => {
-                          (o(!1), c(!0));
+                          (o(!1), l(!0));
                         },
                       }),
                       window,
@@ -157,9 +157,9 @@ var le = `ZPIxJReBVKs-`,
                         children: [(0, q.jsx)(h, {}), `Saved`],
                       }),
                 }),
-                (0, q.jsx)(u, {
+                (0, q.jsx)(s, {
                   onClick: () =>
-                    m((0, q.jsx)(De, { onPublish: () => c(!1) }), window),
+                    g((0, q.jsx)(De, { onPublish: () => l(!1) }), window),
                   children: `Publish`,
                 }),
               ],
@@ -171,7 +171,7 @@ var le = `ZPIxJReBVKs-`,
 function ye(e) {
   let { categories: t, onUpdate: n } = e,
     { rgTags: r } = H(),
-    [i] = oe(`edit`);
+    [i] = S(`edit`);
   if (!t) return (0, q.jsx)(`div`, { children: `No categories defined.` });
   let a = () => {
       n((e) => {
@@ -183,7 +183,7 @@ function ye(e) {
     o = (e) => {
       n((t) => t.filter((t, n) => n != e));
     },
-    s = (e) => {
+    c = (e) => {
       n((t) => t.map((t) => (t.id === e.id ? e : t)));
     };
   return (0, q.jsxs)(`div`, {
@@ -199,13 +199,13 @@ function ye(e) {
             {
               item: e,
               rgTags: r,
-              fnSaveCategory: s,
+              fnSaveCategory: c,
               bOpenEditor: i?.toLowerCase() == e.handle,
             },
             e.id,
           ),
       }),
-      (0, q.jsx)(u, { onClick: a, children: `Add Category` }),
+      (0, q.jsx)(s, { onClick: a, children: `Add Category` }),
     ],
   });
 }
@@ -242,7 +242,7 @@ function xe(e) {
         (0, q.jsxs)(`a`, {
           onClick: (e) => l(e, t),
           children: [
-            (0, q.jsx)(`b`, { children: t.loc_token ? y(t.loc_token) : `` }),
+            (0, q.jsx)(`b`, { children: t.loc_token ? f(t.loc_token) : `` }),
             t.loc_token ? ` (` + t.handle + `)` : t.handle,
           ],
         }),
@@ -268,7 +268,7 @@ function xe(e) {
             replacesTags: t.replaces_tags,
           }),
         }),
-        (0, q.jsx)(ie, {
+        (0, q.jsx)(ae, {
           active: o,
           children: (0, q.jsx)(Se, {
             category: t,
@@ -283,7 +283,7 @@ function xe(e) {
 function Se(e) {
   let { fnSaveCategory: t, closeModal: n } = e,
     [r, i] = K.useState(e.category),
-    u = K.useMemo(
+    s = K.useMemo(
       () => [
         { data: `tagids`, label: `Tag Hub` },
         { data: `category`, label: `Categories` },
@@ -292,17 +292,17 @@ function Se(e) {
       [],
     ),
     d = K.useCallback((e) => i((t) => ({ ...t, content_descriptors: e })), [i]);
-  return (0, q.jsxs)(p, {
+  return (0, q.jsxs)(m, {
     title: `Edit Category (ID ${r.id})`,
     bAllowFullSize: !0,
     onCancel: n,
     closeModal: n,
     children: [
-      (0, q.jsx)(l, {
+      (0, q.jsx)(c, {
         children: (0, q.jsxs)(`div`, {
           className: ge,
           children: [
-            (0, q.jsx)(b, {
+            (0, q.jsx)(a, {
               label: `Handle`,
               tooltip: `This forms the end of the URL. It must be unique`,
               value: r.handle,
@@ -311,15 +311,15 @@ function Se(e) {
             (0, q.jsxs)(`div`, {
               className: Y,
               children: [
-                (0, q.jsx)(b, {
+                (0, q.jsx)(a, {
                   label: `Loc Token`,
                   tooltip: `Token only needed if we wish to expose this hub to customers`,
                   value: r.loc_token,
                   onChange: (e) =>
                     i((t) => ({ ...t, loc_token: e.target.value })),
                 }),
-                r.loc_token && (0, q.jsx)(c, { children: y(r.loc_token) }),
-                (0, q.jsx)(b, {
+                r.loc_token && (0, q.jsx)(u, { children: f(r.loc_token) }),
+                (0, q.jsx)(a, {
                   label: `Description Loc Token`,
                   tooltip: `A localized token explaining this content hub to customers`,
                   value: r.description_loc_token,
@@ -327,31 +327,31 @@ function Se(e) {
                     i((t) => ({ ...t, description_loc_token: e.target.value })),
                 }),
                 r.description_loc_token &&
-                  (0, q.jsx)(c, { children: y(r.description_loc_token) }),
+                  (0, q.jsx)(u, { children: f(r.description_loc_token) }),
               ],
             }),
-            (0, q.jsx)(o, {
+            (0, q.jsx)(l, {
               label: `Use As A Heading `,
               tooltip: `Only used for establishing headings used on the main store drop-down menu`,
               checked: r.heading,
               onChange: (e) => i((t) => ({ ...t, heading: e })),
             }),
-            (0, q.jsx)(o, {
+            (0, q.jsx)(l, {
               label: `Exclude from search `,
               tooltip: `Do not show this category in store search`,
               checked: r.exclude_from_search,
               onChange: (e) => i((t) => ({ ...t, exclude_from_search: e })),
             }),
-            (0, q.jsx)(b, {
+            (0, q.jsx)(a, {
               label: `Search aliases`,
               tooltip: `Comma separated search aliases`,
               value: r.search_alias,
               onChange: (e) =>
                 i((t) => ({ ...t, search_alias: e.target.value })),
             }),
-            (0, q.jsx)(s, {
+            (0, q.jsx)(o, {
               label: `Type`,
-              rgOptions: u,
+              rgOptions: s,
               selectedOption: r.type,
               onChange: (e) => i((t) => ({ ...t, type: e.data })),
             }),
@@ -366,7 +366,7 @@ function Se(e) {
           ],
         }),
       }),
-      (0, q.jsx)(a, {
+      (0, q.jsx)(p, {
         children: (0, q.jsx)(_, {
           onCancel: n,
           onOK: () => {
@@ -383,7 +383,7 @@ var Z = K.memo(function (e) {
     r = K.useMemo(() => [2, 1, 4, 3], []);
   return (0, q.jsx)(d, {
     label: `Content Descriptors`,
-    children: (0, q.jsx)(re, {
+    children: (0, q.jsx)(ie, {
       selectedValue: t,
       onSelectionChange: n,
       options: r,
@@ -394,7 +394,7 @@ var Z = K.memo(function (e) {
 function Ce(e) {
   let { category: t, setCategory: n } = e,
     [r, i] = (0, K.useState)(!1),
-    [a, s] = (0, K.useState)(0);
+    [a, o] = (0, K.useState)(0);
   return (0, q.jsxs)(q.Fragment, {
     children: [
       (t.type == `tagids` || t.type == `category`) &&
@@ -442,15 +442,15 @@ function Ce(e) {
       r
         ? (0, q.jsxs)(q.Fragment, {
             children: [
-              (0, q.jsx)(u, {
-                onClick: () => s(a + 1),
+              (0, q.jsx)(s, {
+                onClick: () => o(a + 1),
                 children: `Refresh Stats`,
               }),
               (0, q.jsx)(we, { category: t }),
             ],
           })
         : (0, q.jsx)(
-            o,
+            l,
             {
               checked: r,
               onChange: (e) => i(e),
@@ -466,14 +466,14 @@ function we(e) {
     n = L(t.must, t.any, t.mustnot);
   if (!n)
     return (0, q.jsx)(C, {
-      string: y(`#Loading`),
+      string: f(`#Loading`),
       position: `center`,
       size: `medium`,
     });
   let r = n.total_games > 500 && n.total_games <= 5e3;
   return (0, q.jsxs)(q.Fragment, {
     children: [
-      (0, q.jsx)(u, {
+      (0, q.jsx)(s, {
         onClick: () => {
           let e = [];
           (e.push([`AppID`, `Sale Rank`]),
@@ -485,7 +485,7 @@ function we(e) {
         },
         children: `Download Top 100 Games`,
       }),
-      (0, q.jsx)(u, {
+      (0, q.jsx)(s, {
         onClick: () => {
           let e = [];
           (e.push([`AppID`]),
@@ -539,35 +539,35 @@ function Te(e) {
 }
 var Q = K.memo(function (e) {
   let { category: t, setCategory: n, list: r, title: i } = e,
-    { rgTags: a, rgCategories: o } = H(),
-    s = (e) => {
+    { rgTags: o, rgCategories: c } = H(),
+    l = (e) => {
       n((t) => ({ ...t, [r]: e(t[r]) }));
     },
-    c =
-      a?.map((e) => ({ value: e.tagid, label: `${e.name} (${e.tagid})` })) ||
+    u =
+      o?.map((e) => ({ value: e.tagid, label: `${e.name} (${e.tagid})` })) ||
       [],
-    l =
-      o?.map((e) => ({
+    d =
+      c?.map((e) => ({
         value: e.categoryid,
         label: `${e.name} (${e.categoryid})`,
       })) || [];
   return (0, q.jsxs)(`div`, {
     className: _e,
     children: [
-      (0, q.jsx)(v, { children: i }),
+      (0, q.jsx)(y, { children: i }),
       (0, q.jsx)(G, {
         bDisabled: !0,
         items: t[r] ?? [],
-        onDelete: (e) => s((t) => t.filter((t, n) => n != e)),
+        onDelete: (e) => l((t) => t.filter((t, n) => n != e)),
         render: (e, n) =>
           t.type === `tagids` || r === `replaces_tags`
             ? (0, q.jsxs)(`div`, {
                 className: X,
                 children: [
-                  (0, q.jsx)(b, {
+                  (0, q.jsx)(a, {
                     value: e.id,
                     onChange: (e) =>
-                      s((t) =>
+                      l((t) =>
                         t.map((t, r) =>
                           r == n ? { ...t, id: parseInt(e.target.value) } : t,
                         ),
@@ -577,10 +577,10 @@ var Q = K.memo(function (e) {
                     className: `react-select-container`,
                     classNamePrefix: `react-select`,
                     isSearchable: !0,
-                    options: c,
-                    value: c.find((t) => t.value === e.id),
+                    options: u,
+                    value: u.find((t) => t.value === e.id),
                     onChange: (e) =>
-                      s((t) =>
+                      l((t) =>
                         t.map((t, r) => (r == n ? { ...t, id: e.value } : t)),
                       ),
                   }),
@@ -593,18 +593,18 @@ var Q = K.memo(function (e) {
                     className: `react-select-container`,
                     classNamePrefix: `react-select`,
                     isSearchable: !0,
-                    options: l,
-                    value: l.find((t) => t.value === e.id),
+                    options: d,
+                    value: d.find((t) => t.value === e.id),
                     onChange: (e) =>
-                      s((t) =>
+                      l((t) =>
                         t.map((t, r) => (r == n ? { ...t, id: e.value } : t)),
                       ),
                   }),
                 })
               : null,
       }),
-      (0, q.jsx)(u, {
-        onClick: () => s((e) => (e ? [...e, { id: 0 }] : [{ id: 0 }])),
+      (0, q.jsx)(s, {
+        onClick: () => l((e) => (e ? [...e, { id: 0 }] : [{ id: 0 }])),
         children: `Add`,
       }),
     ],
@@ -619,7 +619,7 @@ function Ee(e) {
         e ? a(e.strErrorMsg) : (n(), r && r());
       });
     }, [t, r, n]),
-    (0, q.jsx)(g, {
+    (0, q.jsx)(v, {
       strTitle: `Saving`,
       bAlertDialog: !0,
       bDisableBackgroundDismiss: !0,
@@ -642,7 +642,7 @@ function De(e) {
           e ? o(e.strErrorMsg) : (t(), i(!1), n && n());
         });
     }, [r, n, t]),
-    (0, q.jsx)(g, {
+    (0, q.jsx)(v, {
       strTitle: r ? `Publishing` : `Really Publish?`,
       strDescription:
         !r && `Publishing will make your changes immediately visible to users.`,
@@ -667,14 +667,14 @@ function De(e) {
 }
 var $ = { ContentHubCategories: () => `/categories/` };
 function Oe(e) {
-  return (0, q.jsxs)(ne, {
-    basename: te() + `admin/store/contenthub/`,
+  return (0, q.jsxs)(re, {
+    basename: ne() + `admin/store/contenthub/`,
     children: [
       (0, q.jsx)(ce, {}),
-      (0, q.jsxs)(x, {
+      (0, q.jsxs)(ee, {
         children: [
-          (0, q.jsx)(S, { path: $.ContentHubCategories(), component: ve }),
-          (0, q.jsx)(S, { component: w }),
+          (0, q.jsx)(x, { path: $.ContentHubCategories(), component: ve }),
+          (0, q.jsx)(x, { component: w }),
         ],
       }),
     ],

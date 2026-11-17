@@ -14,8 +14,8 @@ import {
   vt as l,
 } from "./chunk~de7f2df91c.js";
 import { Ft as u, It as d, M as f } from "./chunk~25a6634263.js";
-import { Wt as p, ua as m } from "./chunk~1fa4b8f2ff.js";
-import { d as ee, h } from "./chunk~0a99e05c44.js";
+import { Gt as p, da as m } from "./chunk~1fa4b8f2ff.js";
+import { _ as ee, p as h } from "./chunk~0a99e05c44.js";
 import { En as te, Z as ne, rt as re } from "./chunk~6b8ddcaac8.js";
 import { t as g } from "./chunk~ede3e357a2.js";
 import { r as ie } from "./chunk~b390ee0f78.js";
@@ -920,8 +920,8 @@ function De(e) {
 function Z(e) {
   let { info: t, bSaleSummary: n } = e,
     r = ie(t.appid),
-    { data: i } = ee(r),
-    { data: a } = h(r);
+    { data: i } = h(r),
+    { data: a } = ee(r);
   return a && i
     ? (0, J.jsxs)(`div`, {
         className: G,

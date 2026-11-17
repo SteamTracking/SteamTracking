@@ -1403,7 +1403,7 @@ var _ = class _ extends _.Message {
     constructor(_ = null) {
       (super(),
         _.prototype.parent_appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6, 9], null));
+        _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6, 9, 10], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1457,6 +1457,14 @@ var _ = class _ extends _.Message {
             },
             dlc_parent_appids: {
               _: 9,
+              _: !0,
+              _: !0,
+              _: _.readUint32,
+              pbr: _.readPackedUint32,
+              _: _.writeRepeatedUint32,
+            },
+            provides_engine_appid: {
+              _: 10,
               _: !0,
               _: !0,
               _: _.readUint32,
@@ -1809,7 +1817,7 @@ var _ = class _ extends _.Message {
     constructor(_ = null) {
       (super(),
         _.prototype.short_description || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2, 3, 4], null));
+        _.Message.initialize(this, _, 0, -1, [2, 3, 4, 6], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1845,6 +1853,19 @@ var _ = class _ extends _.Message {
               _: 5,
               _: _.readString,
               _: _.writeString,
+            },
+            featured_creator_home_clan_account_ids: {
+              _: 6,
+              _: !0,
+              _: !0,
+              _: _.readUint32,
+              pbr: _.readPackedUint32,
+              _: _.writeRepeatedUint32,
+            },
+            first_franchise_clan_account_id: {
+              _: 7,
+              _: _.readUint32,
+              _: _.writeUint32,
             },
           },
         }),
@@ -7721,6 +7742,11 @@ var _ = class _ extends _.Message {
               _: _.readBool,
               _: _.writeBool,
             },
+            new_reservations_disabled: {
+              _: 29,
+              _: _.readBool,
+              _: _.writeBool,
+            },
           },
         }),
         _.sm_m
@@ -7964,7 +7990,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`],
+      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
     });
   }
   _.GetItems = _;
@@ -7981,7 +8007,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetContentHubConfig = _;
@@ -7990,7 +8016,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetPriceStops = _;
@@ -8006,7 +8032,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetDLCForAppsSolr = _;
@@ -8015,7 +8041,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetHardwareItems = _;

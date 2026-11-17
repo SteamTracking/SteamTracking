@@ -28,6 +28,7 @@ message CHardwarePackageDetails {
 	optional uint32 collection_time_active = 26;
 	optional bool reservation_not_allowed = 27;
 	optional bool requires_signature = 28;
+	optional bool new_reservations_disabled = 29;
 }
 
 message CStoreBrowse_GetContentHubConfig_Request {

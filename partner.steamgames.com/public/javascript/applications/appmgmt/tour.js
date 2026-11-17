@@ -12,7 +12,7 @@ import {
   vt as s,
 } from "./chunk~de7f2df91c.js";
 import { Ot as c } from "./chunk~25a6634263.js";
-import { Qi as l, T as u, an as d, ua as f } from "./chunk~1fa4b8f2ff.js";
+import { $i as l, T as u, da as d, on as f } from "./chunk~1fa4b8f2ff.js";
 import { w as p } from "./chunk~44f252525d.js";
 import { a as m } from "./chunk~f8b6a4beb3.js";
 var h = a(t()),
@@ -146,11 +146,11 @@ function P(e) {
               r.length > 1 &&
                 (0, T.jsx)(`div`, {
                   className: `heY0SzmLbNE-`,
-                  children: f(`#Tour_TipCount`, c + 1, r.length),
+                  children: d(`#Tour_TipCount`, c + 1, r.length),
                 }),
               c < r.length - 1
-                ? (0, T.jsx)(d, { onClick: u, children: f(`#Button_Next`) })
-                : (0, T.jsx)(d, { onClick: o, children: f(`#Button_Done`) }),
+                ? (0, T.jsx)(f, { onClick: u, children: d(`#Button_Next`) })
+                : (0, T.jsx)(f, { onClick: o, children: d(`#Button_Done`) }),
             ],
           }),
         ],

@@ -17997,7 +17997,7 @@ var CErrorReportingStore = class {
   m_pauseTimer = void 0;
   m_fnGetReportingInterval = GetDefaultReportingInterval;
   m_fnGetReportTags = () => [];
-  m_fnGetURL = () => location.href;
+  m_fnGetURL = () => (`location` in globalThis ? location.href : void 0);
   strDisplayVersion;
   m_bEnabled = !0;
   m_bInitialized = !1;
@@ -19752,32 +19752,55 @@ function CheckScrollRegionToStartOrEnd(t, n) {
         (o != t &&
           o.Element &&
           o.m_Properties?.scrollRegionToStartOrEnd &&
-          PerformScrollToStartOrEnd(o.Element, n, r, o == o.Tree.Root),
+          PerformScrollToStartOrEnd(
+            o.Element,
+            n,
+            r,
+            o == o.Tree.Root,
+            t.Element,
+          ),
         o.HasMovementHandler(n)) ||
         o == i
       );
       o = o.GetNavParentCrossingTrees()
     );
 }
-function PerformScrollToStartOrEnd(t, n, r, i) {
-  let o = t,
-    s = o.ownerDocument;
+function PerformScrollToStartOrEnd(t, n, r, i, o) {
+  let s = t,
+    l = s.ownerDocument;
   if (
-    ((i || o == s.body) &&
-      s.defaultView &&
-      !BIsElementScrollableOnAxis(o, r) &&
-      (o = s.defaultView),
-    !BIsElementScrollableOnAxis(o, r))
+    ((i || s == l.body) &&
+      l.defaultView &&
+      !BIsElementScrollableOnAxis(s, r) &&
+      (s = l.defaultView),
+    !BIsElementScrollableOnAxis(s, r))
   )
     return;
-  let l = GetScrollValues(o);
+  let u = GetScrollValues(s);
   if (r == `y`) {
-    let t = n == EGamepadButton.DIR_DOWN ? l.MaxScrollTop() : 0;
-    l.scrollTo({ top: t, behavior: `smooth` });
+    let t = n == EGamepadButton.DIR_DOWN ? u.MaxScrollTop() : 0;
+    if (n == EGamepadButton.DIR_UP && o && BScrollToTopWouldHideElement(s, o))
+      return;
+    u.scrollTo({ top: t, behavior: `smooth` });
   } else {
-    let t = n == EGamepadButton.DIR_RIGHT ? l.MaxScrollLeft() : 0;
-    l.scrollTo({ left: t, behavior: `smooth` });
+    let t = n == EGamepadButton.DIR_RIGHT ? u.MaxScrollLeft() : 0;
+    u.scrollTo({ left: t, behavior: `smooth` });
   }
+}
+function BScrollToTopWouldHideElement(t, n) {
+  let r = `ownerDocument` in t ? t : null;
+  for (let t = n; t && t != r; t = t.parentElement) {
+    let n = t.ownerDocument.defaultView?.getComputedStyle(t).position;
+    if (n == `fixed` || n == `sticky`) return !1;
+  }
+  let i, o, s;
+  `ownerDocument` in t
+    ? ((i = t.getBoundingClientRect().top + t.clientTop),
+      (o = t.clientHeight),
+      (s = t.scrollTop))
+    : ((i = 0), (o = t.innerHeight), (s = t.scrollY));
+  let l = n.getBoundingClientRect();
+  return l.height > o ? !1 : l.bottom - i + s > o + 1;
 }
 function GetBoundingRectNoTransform(t) {
   if (!t) return { left: 0, top: 0, right: 0, bottom: 0 };
@@ -22975,7 +22998,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
           n,
           0,
           -1,
-          [2, 3, 4, 5, 6, 9],
+          [2, 3, 4, 5, 6, 9, 10],
           null,
         ));
     }
@@ -23013,6 +23036,14 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
             related_f2p: { n: 7, c: StoreItem_RelatedF2P },
             dlc_parent_appids: {
               n: 9,
+              r: !0,
+              q: !0,
+              br: ReaderProto.readUint32,
+              pbr: ReaderProto.readPackedUint32,
+              bw: WriterProto.writeRepeatedUint32,
+            },
+            provides_engine_appid: {
+              n: 10,
               r: !0,
               q: !0,
               br: ReaderProto.readUint32,
@@ -23377,7 +23408,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
           n,
           0,
           -1,
-          [2, 3, 4],
+          [2, 3, 4, 6],
           null,
         ));
     }
@@ -23415,6 +23446,19 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
               n: 5,
               br: ReaderProto.readString,
               bw: WriterProto.writeString,
+            },
+            featured_creator_home_clan_account_ids: {
+              n: 6,
+              r: !0,
+              q: !0,
+              br: ReaderProto.readUint32,
+              pbr: ReaderProto.readPackedUint32,
+              bw: WriterProto.writeRepeatedUint32,
+            },
+            first_franchise_clan_account_id: {
+              n: 7,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
             },
           },
         }),
@@ -29643,6 +29687,11 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
               br: ReaderProto.readBool,
               bw: WriterProto.writeBool,
             },
+            new_reservations_disabled: {
+              n: 29,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
           },
         }),
         t.sm_m
@@ -29894,7 +29943,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 1,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -29925,7 +29974,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -29939,7 +29988,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -29966,7 +30015,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -29984,7 +30033,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -36792,8 +36841,8 @@ function OnRootContextMenu(t) {
     o = i && i.rangeCount > 0 && i.toString().length > 0,
     s = t.target,
     l = !1,
-    u = t.clientY,
-    p = t.clientX;
+    u = t.clientX,
+    p = t.clientY;
   if (
     (s &&
       `tagName` in s &&
@@ -58200,7 +58249,7 @@ var CAccountPrivacyCookiePreferences = class t
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -60288,7 +60337,7 @@ var CWebAPIInterface = class {
         i.bConstMethod)
       )
         return (
-          h.append(`origin`, self.origin),
+          typeof self < `u` && self.origin && h.append(`origin`, self.origin),
           this.m_bJsonMode
             ? h.append(`input_json`, JSON.stringify(r.Body().toObject()))
             : h.append(`input_protobuf_encoded`, l),

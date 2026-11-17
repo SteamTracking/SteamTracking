@@ -2751,7 +2751,7 @@ var _ = `tPLTOu9ePPk-`,
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 2,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -10994,7 +10994,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 2,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }

@@ -35,67 +35,67 @@ import {
 } from "./chunk~de7f2df91c.js";
 import { I as a, ct as o } from "./chunk~25a6634263.js";
 import {
-  $a as s,
-  $t as c,
-  Cn as l,
-  Gr as u,
-  Na as d,
-  Ut as f,
-  Vt as p,
-  Wt as m,
-  Ya as h,
-  an as g,
-  bn as _,
-  da as v,
+  Gt as s,
+  Ht as c,
+  Kr as l,
+  Mt as u,
+  Pa as d,
+  Wt as f,
+  Xa as p,
+  _n as m,
+  an as h,
+  da as g,
+  en as _,
+  eo as v,
   f as ee,
-  gn as y,
-  h as b,
-  ha as x,
+  fa as y,
+  ga as b,
+  h as x,
   in as te,
-  jt as S,
-  l as C,
+  l as S,
+  nr as C,
   on as w,
-  rn as ne,
-  tr as T,
-  ua as E,
+  sn as T,
+  wn as E,
+  xn as D,
 } from "./chunk~1fa4b8f2ff.js";
-import { n as D } from "./chunk~a58194c5d9.js";
+import { n as O } from "./chunk~a58194c5d9.js";
 import {
-  A as O,
-  F as k,
-  G as A,
-  H as j,
-  R as M,
-  S as re,
-  T as ie,
-  U as ae,
-  b as N,
-  c as oe,
-  h as P,
-  j as se,
-  k as F,
-  o as I,
-  u as L,
-  w as ce,
-  z as le,
+  A as k,
+  F as A,
+  G as j,
+  H as M,
+  R as N,
+  S as ne,
+  T as re,
+  U as P,
+  b as F,
+  c as ie,
+  h as I,
+  j as ae,
+  k as L,
+  o as R,
+  u as z,
+  w as oe,
+  z as se,
 } from "./chunk~360b8fa68b.js";
-import { r as R } from "./chunk~8681f5c764.js";
-import { t as ue } from "./chunk~92931c6310.js";
-import { t as z } from "./chunk~eefd71512b.js";
-import { i as de } from "./chunk~0111fcd096.js";
+import { r as B } from "./chunk~8681f5c764.js";
+import { t as ce } from "./chunk~92931c6310.js";
+import { t as le } from "./chunk~eefd71512b.js";
+import { i as ue } from "./chunk~0111fcd096.js";
 import {
-  c as fe,
-  i as pe,
-  n as me,
-  t as he,
-  u as ge,
+  c as de,
+  i as fe,
+  n as pe,
+  t as me,
+  u as he,
 } from "./chunk~55bac8fc8b.js";
-import { dt as _e, h as ve, n as ye, pt as be } from "./chunk~cb393b4e7b.js";
-import { t as B } from "./chunk~74d773532d.js";
+import { dt as ge, h as _e, n as ve, pt as ye } from "./chunk~cb393b4e7b.js";
+import { t as be } from "./chunk~74d773532d.js";
 var V = r(e(), 1),
   H = i(),
   U = V.lazy(() =>
-    h(
+    p(
       () => import(`./chunk~9e91add775.js`),
       __vite__mapDeps([
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
@@ -119,15 +119,15 @@ var V = r(e(), 1),
   G = `Bj-cDAje8jA-`;
 function Ee(e) {
   let { closeModal: t, fnOnApply: r, singlePackage: i } = e,
-    a = re();
-  return (0, H.jsxs)(C, {
+    a = ne();
+  return (0, H.jsxs)(S, {
     closeModal: t,
     bAlertDialog: !0,
-    strTitle: B.Localize(`#PricingDashboard_ApplyConversion_Method`),
+    strTitle: be.Localize(`#PricingDashboard_ApplyConversion_Method`),
     onOK: () => {
       (a(), r && r());
     },
-    strOKButtonText: E(
+    strOKButtonText: g(
       i
         ? `#PricingDashboard_ApplyGuidelines_Button_Single`
         : `#PricingDashboard_ApplyGuidelines_Button`,
@@ -135,7 +135,7 @@ function Ee(e) {
     children: [
       (0, H.jsx)(`div`, {
         className: G,
-        children: B.Localize(
+        children: be.Localize(
           `#PricingDashboard_ApplyGuidelines_Instructions_MultiOptions`,
         ),
       }),
@@ -143,18 +143,18 @@ function Ee(e) {
       (0, H.jsx)(`a`, {
         href: n.PARTNER_BASE_URL + `doc/store/pricing#5`,
         target: `_blank`,
-        children: E(`#PricingDashboard_ApplyGuidelines_Link`),
+        children: g(`#PricingDashboard_ApplyGuidelines_Link`),
       }),
       (0, H.jsx)(`br`, {}),
       (0, H.jsx)(`br`, {}),
       !i &&
         (0, H.jsx)(`div`, {
           className: `Bj-cDAje8jA-`,
-          children: E(`#PricingDashboard_ApplyGuidelines_Instructions2`),
+          children: g(`#PricingDashboard_ApplyGuidelines_Instructions2`),
         }),
       (0, H.jsx)(`div`, {
         className: G,
-        children: E(`#PricingDashboard_ApplyGuidelines_Assurance`),
+        children: g(`#PricingDashboard_ApplyGuidelines_Assurance`),
       }),
       (0, H.jsx)(`br`, {}),
       (0, H.jsx)(W, { bHideTour: !0 }),
@@ -162,7 +162,7 @@ function Ee(e) {
   });
 }
 var De = `CTciUzDmA1I-`,
-  K = new S(`price-grid-cell-popout-elements`);
+  K = new u(`price-grid-cell-popout-elements`);
 function q(e) {
   let { hoverKey: n, className: r, renderHover: i } = e,
     a = t(De, r),
@@ -176,7 +176,7 @@ function q(e) {
     className: a,
     onFocus: (e) => {
       e.target.focus();
-      let t = (0, H.jsx)(_, {
+      let t = (0, H.jsx)(D, {
         target: o.current,
         direction: `top`,
         bEnablePointerEvents: !0,
@@ -189,7 +189,7 @@ function q(e) {
     onBlur: () => {
       K.HideElement(o.current.ownerDocument, n, 100);
     },
-    children: (0, H.jsx)(u, {}),
+    children: (0, H.jsx)(l, {}),
   });
 }
 var Oe = `jkgPfypIl3g-`,
@@ -245,42 +245,42 @@ function Z(e) {
             (0, H.jsx)(ft, { override: e }, `${e.packageID}_${e.strPriceKey}`),
           ),
         })
-      : (0, H.jsx)(m, {
+      : (0, H.jsx)(s, {
           onClick: () => r(!0),
           className: Ue,
-          children: E(`#PackageGrid_SeePendingChanges`),
+          children: g(`#PackageGrid_SeePendingChanges`),
         }),
   });
 }
 function ft(e) {
   let { override: n } = e,
     { packageID: r, strPriceKey: i, nPriceInCents: a, nOldPriceInCents: o } = n,
-    s = A(r),
-    [c, l, u] = I(o, i),
-    [d, f, p] = I(a, i),
-    m = L(i),
-    { nMinPriceInCents: h, nMaxPriceInCents: g } = P(r, i),
-    _ = a < h || (!!g && a > g);
+    s = j(r),
+    [c, l, u] = R(o, i),
+    [d, f, p] = R(a, i),
+    h = z(i),
+    { nMinPriceInCents: g, nMaxPriceInCents: _ } = I(r, i),
+    v = a < g || (!!_ && a > _);
   return (0, H.jsxs)(`div`, {
     className: t(qe),
     children: [
-      (0, H.jsx)(y, {
-        toolTipContent: m,
+      (0, H.jsx)(m, {
+        toolTipContent: h,
         direction: `top`,
         className: Ze,
         strTooltipClassname: ot,
         children: i,
       }),
-      (0, H.jsx)(y, {
+      (0, H.jsx)(m, {
         toolTipContent: `${r}: ${s}`,
         direction: `overlay`,
         className: Je,
         strTooltipClassname: ot,
         children: s,
       }),
-      _
-        ? (0, H.jsx)(pe, { packageID: r, strPriceKey: i })
-        : (0, H.jsx)(me, { nPriceInCents: a, nSavedPriceInCents: o }),
+      v
+        ? (0, H.jsx)(fe, { packageID: r, strPriceKey: i })
+        : (0, H.jsx)(pe, { nPriceInCents: a, nSavedPriceInCents: o }),
       (0, H.jsxs)(`div`, {
         className: Ge,
         children: [
@@ -291,7 +291,7 @@ function ft(e) {
       }),
       (0, H.jsx)(`span`, {
         className: et,
-        children: (0, H.jsx)(T, { angle: 90 }),
+        children: (0, H.jsx)(C, { angle: 90 }),
       }),
       (0, H.jsxs)(`div`, {
         className: Ke,
@@ -306,54 +306,54 @@ function ft(e) {
 }
 function pt(e) {
   let { closeModal: t, packageID: n, bPackageVisible: r } = e,
-    i = le(n),
+    i = se(n),
     a = i.some((e) => e.nPriceInCents > e.nOldPriceInCents),
     o = ht(n, a),
     {
       fnPublish: s,
       ePublishState: c,
-      strPublishError: u,
-      bBlockedByCooldown: d,
+      strPublishError: l,
+      bBlockedByCooldown: u,
     } = mt(n),
-    f = o == 4 || d,
-    p = V.useCallback(async () => {
+    d = o == 4 || u,
+    f = V.useCallback(async () => {
       (await s()) && t?.();
     }, [s, t]),
-    m;
+    p;
   if (o == 3)
-    m = v(
+    p = y(
       `#PricingDashboard_PriceProposal_Publish_FailedToLoad`,
       (0, H.jsx)(`div`, {}),
       (0, H.jsx)(`div`, {}),
     );
-  else if (f) {
-    let e = (0, H.jsx)(l, {
+  else if (d) {
+    let e = (0, H.jsx)(E, {
       href: `https://partner.steamgames.com/doc/store/pricing`,
     });
-    m = (0, H.jsxs)(H.Fragment, {
+    p = (0, H.jsxs)(H.Fragment, {
       children: [
         (0, H.jsx)(`div`, {
-          children: E(`#PricingDashboard_PriceProposal_Publish_CooldownError1`),
+          children: g(`#PricingDashboard_PriceProposal_Publish_CooldownError1`),
         }),
         (0, H.jsx)(`div`, {
-          children: v(
+          children: y(
             `#PricingDashboard_PriceProposal_Publish_CooldownError2`,
             e,
           ),
         }),
         (0, H.jsx)(`div`, {
-          children: E(`#PricingDashboard_PriceProposal_Publish_CooldownError3`),
+          children: g(`#PricingDashboard_PriceProposal_Publish_CooldownError3`),
         }),
         (0, H.jsx)(`div`, {
           children: (0, H.jsxs)(`ol`, {
             children: [
               (0, H.jsx)(`li`, {
-                children: E(
+                children: g(
                   `#PricingDashboard_PriceProposal_Publish_CooldownError3a`,
                 ),
               }),
               (0, H.jsx)(`li`, {
-                children: E(
+                children: g(
                   `#PricingDashboard_PriceProposal_Publish_CooldownError3b`,
                 ),
               }),
@@ -364,57 +364,57 @@ function pt(e) {
     });
   } else
     c == 3 &&
-      (m =
-        u ||
-        v(
+      (p =
+        l ||
+        y(
           `#PricingDashboard_PriceProposal_Publish_FailedToPublish`,
           (0, H.jsx)(`div`, {}),
           (0, H.jsx)(`div`, {}),
         ));
-  if (m) {
-    let e = E(
+  if (p) {
+    let e = g(
       r
         ? `#PricingDashboard_PriceProposal_Publish_Title`
         : `#PricingDashboard_StageNewPrices_title`,
     );
     return (
-      f && (e = E(`#PricingDashboard_PriceProposal_Publish_CantPublishTitle`)),
-      (0, H.jsx)(C, {
+      d && (e = g(`#PricingDashboard_PriceProposal_Publish_CantPublishTitle`)),
+      (0, H.jsx)(S, {
         strTitle: e,
         bAlertDialog: !0,
         onOK: t,
         onCancel: t,
         closeModal: t,
-        children: (0, H.jsx)(`div`, { className: at, children: m }),
+        children: (0, H.jsx)(`div`, { className: at, children: p }),
       })
     );
   }
-  let h = o == 1 || c == 1;
-  return (0, H.jsxs)(C, {
-    strTitle: E(
+  let m = o == 1 || c == 1;
+  return (0, H.jsxs)(S, {
+    strTitle: g(
       r
         ? `#PricingDashboard_PriceProposal_Publish_Title`
         : `#PricingDashboard_StageNewPrices_title`,
     ),
     bAlertDialog: !1,
-    strOKButtonText: E(
+    strOKButtonText: g(
       r
         ? `#PricingDashboard_PriceProposal_Publish_Button`
         : `#PricingDashboard_StageNewPrices_ok`,
     ),
-    bOKDisabled: h,
-    bCancelDisabled: h,
+    bOKDisabled: m,
+    bCancelDisabled: m,
     bDestructiveWarning: !0,
     bCloseAfterOK: !1,
-    onOK: p,
+    onOK: f,
     onCancel: t,
     closeModal: t,
     children: [
-      h && (0, H.jsx)(z, { position: `center` }),
-      !h &&
+      m && (0, H.jsx)(le, { position: `center` }),
+      !m &&
         (0, H.jsxs)(H.Fragment, {
           children: [
-            x(
+            b(
               r
                 ? `#PricingDashboard_PriceProposal_Publish_Explanation`
                 : `#PricingDashboard_StageNewPrices_desc_Timing`,
@@ -423,13 +423,13 @@ function pt(e) {
             !r &&
               (0, H.jsx)(`div`, {
                 className: `IOfxER8mFb4-`,
-                children: E(`#PricingDashboard_StageNewPrices_NoStoreChange`),
+                children: g(`#PricingDashboard_StageNewPrices_NoStoreChange`),
               }),
-            ae(n) &&
+            P(n) &&
               a &&
               (0, H.jsx)(`div`, {
                 className: `Xloihdj9v2Y-`,
-                children: E(
+                children: g(
                   `#PricingDashboard_PriceProposal_Publish_CooldownWarning`,
                 ),
               }),
@@ -440,7 +440,7 @@ function pt(e) {
   });
 }
 function mt(e) {
-  let t = O(),
+  let t = k(),
     [n, r] = V.useState(0),
     [i, a] = V.useState(void 0),
     [o, s] = V.useState(!1);
@@ -461,8 +461,8 @@ function mt(e) {
 }
 function ht(e, t) {
   let [n, r] = V.useState(void 0),
-    i = be(),
-    a = de(60);
+    i = ye(),
+    a = ue(60);
   return (
     V.useEffect(() => {
       t &&
@@ -475,7 +475,7 @@ function ht(e, t) {
       ? n == null
         ? 1
         : n == 1
-          ? _e(e).every((e) => e.rtStartDate > a + ve || e.rtEndDate < a)
+          ? ge(e).every((e) => e.rtStartDate > a + _e || e.rtEndDate < a)
             ? 2
             : 4
           : 3
@@ -484,10 +484,10 @@ function ht(e, t) {
 }
 function gt(e) {
   let { packageID: n, bShowCancel: r } = e,
-    i = k(n),
-    a = M(n),
-    o = a && he(a.rtSubmitted),
-    [s, c] = ye(a?.submitterID),
+    i = A(n),
+    a = N(n),
+    o = a && me(a.rtSubmitted),
+    [s, c] = ve(a?.submitterID),
     l = c ? c.persona_name : a?.submitterID,
     u = `PackageMore_` + n,
     d = null,
@@ -495,31 +495,31 @@ function gt(e) {
     p = null;
   i
     ? ((d = Me),
-      (p = E(`#PricingDashboard_PriceProposal_NeedsReview_ttip`)),
-      (f = E(`#PricingDashboard_PriceProposal_NeedsReview`)))
+      (p = g(`#PricingDashboard_PriceProposal_NeedsReview_ttip`)),
+      (f = g(`#PricingDashboard_PriceProposal_NeedsReview`)))
     : a?.eState == 1 && a.bPartnerWillPublish
       ? ((d = Pe),
-        (p = E(
+        (p = g(
           `#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip`,
           l,
           o,
         )),
-        (f = E(
+        (f = g(
           `#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish`,
         )))
       : a?.eState == 1 && !a.bPartnerWillPublish
         ? ((d = Ne),
-          (p = E(
+          (p = g(
             `#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish_ttip`,
             l,
             o,
           )),
           (f = (0, H.jsxs)(`div`, {
             children: [
-              E(`#PricingDashboard_PriceProposal_WaitingForReview`),
+              g(`#PricingDashboard_PriceProposal_WaitingForReview`),
               (0, H.jsx)(`br`, {}),
               (0, H.jsx)(`span`, {
-                children: E(
+                children: g(
                   `#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish`,
                 ),
               }),
@@ -527,32 +527,32 @@ function gt(e) {
           })))
         : a?.eState == 4
           ? ((d = Fe),
-            (p = E(
-              j(n)
+            (p = g(
+              M(n)
                 ? `#PricingDashboard_PriceProposal_Approved_ttip`
                 : `#PricingDashboard_PriceProposal_Approved_Stage_ttip`,
             )),
             (f = (0, H.jsx)(bt, { packageID: n })))
           : ((d = je),
-            (p = E(`#PricingDashboard_PriceProposal_NoneInFlight_ttip`)),
-            (f = E(`#PricingDashboard_PriceProposal_NoneInFlight`)));
-  let m = () => (0, H.jsx)(xt, { packageID: n }),
-    h = r && (i || !!a);
+            (p = g(`#PricingDashboard_PriceProposal_NoneInFlight_ttip`)),
+            (f = g(`#PricingDashboard_PriceProposal_NoneInFlight`)));
+  let h = () => (0, H.jsx)(xt, { packageID: n }),
+    _ = r && (i || !!a);
   return (0, H.jsxs)(`div`, {
     className: t(Oe, d),
     children: [
-      (0, H.jsxs)(y, {
+      (0, H.jsxs)(m, {
         toolTipContent: p,
         className: ke,
         children: [(0, H.jsx)(`div`, { className: Ae }), f],
       }),
-      h && (0, H.jsx)(q, { hoverKey: u, className: void 0, renderHover: m }),
+      _ && (0, H.jsx)(q, { hoverKey: u, className: void 0, renderHover: h }),
     ],
   });
 }
 function _t(e) {
-  let t = M(e),
-    n = j(e);
+  let t = N(e),
+    n = M(e);
   return t
     ? t.eState == 4
       ? n
@@ -584,38 +584,38 @@ function _t(e) {
 function vt(e) {
   let t = _t(e.packageID);
   return t
-    ? (0, H.jsx)(D, {
+    ? (0, H.jsx)(O, {
         size: `4`,
         color: t.bApproved ? `text-success` : `text-warning`,
-        children: E(t.strMessage),
+        children: g(t.strMessage),
       })
     : null;
 }
 function yt(e) {
   let t = _t(e.packageID);
   return t
-    ? (0, H.jsx)(D, {
+    ? (0, H.jsx)(O, {
         size: `3`,
         color: t.bApproved ? `text-success` : `text-warning`,
-        children: E(t.strLabel),
+        children: g(t.strLabel),
       })
     : null;
 }
 function bt(e) {
   let { packageID: t } = e,
     [n, r, i] = a(),
-    o = j(t);
+    o = M(t);
   return (0, H.jsxs)(H.Fragment, {
     children: [
-      (0, H.jsx)(g, {
+      (0, H.jsx)(w, {
         onClick: r,
-        children: E(
+        children: g(
           o
             ? `#PricingDashboard_PriceProposal_PublishDialog_Button`
             : `#PricingDashboard_StageNewPrices`,
         ),
       }),
-      (0, H.jsx)(R, {
+      (0, H.jsx)(B, {
         active: n,
         children: (0, H.jsx)(pt, {
           packageID: t,
@@ -628,26 +628,26 @@ function bt(e) {
 }
 function xt(e) {
   let { packageID: t } = e,
-    n = k(t),
-    r = ie(t),
-    i = M(t),
-    a = ce(t);
+    n = A(t),
+    r = re(t),
+    i = N(t),
+    a = oe(t);
   return (0, H.jsx)(`div`, {
-    className: ge,
+    className: he,
     children: (0, H.jsxs)(`div`, {
-      className: fe,
+      className: de,
       children: [
         n &&
           (0, H.jsx)(`div`, {
             className: `dIR-rFd35NQ-`,
             onClick: r,
-            children: E(`#PricingDashboard_RevertAllPackage`),
+            children: g(`#PricingDashboard_RevertAllPackage`),
           }),
         !!i &&
           (0, H.jsx)(`div`, {
             className: `dIR-rFd35NQ-`,
             onClick: a,
-            children: E(`#PricingDashboard_CancelPriceProposal`),
+            children: g(`#PricingDashboard_CancelPriceProposal`),
           }),
       ],
     }),
@@ -655,16 +655,16 @@ function xt(e) {
 }
 function St(e) {
   let { closeModal: t } = e,
-    n = N(),
-    r = F();
-  return (0, H.jsxs)(C, {
-    strTitle: E(`#PackageGrid_DiscardChangesTitle`),
-    strOKButtonText: E(`#PackageGrid_DiscardChangesButton`),
+    n = F(),
+    r = L();
+  return (0, H.jsxs)(S, {
+    strTitle: g(`#PackageGrid_DiscardChangesTitle`),
+    strOKButtonText: g(`#PackageGrid_DiscardChangesButton`),
     onOK: r,
     bDestructiveWarning: !0,
     closeModal: t,
     children: [
-      x(`#PricingDashboard_DiscardChangesExplanation`, n.length),
+      b(`#PricingDashboard_DiscardChangesExplanation`, n.length),
       (0, H.jsx)(Z, { rgLocalPriceOverrides: n }),
     ],
   });
@@ -673,38 +673,38 @@ var Q = 30,
   Ct = 40;
 function wt(e) {
   let { bReloadPageOnSave: n } = e,
-    r = N()?.length ?? 0,
+    r = F()?.length ?? 0,
     i = r > 0,
-    [o, s, c] = a(),
-    [l, u, d] = a();
+    [o, c, l] = a(),
+    [u, d, f] = a();
   return (0, H.jsxs)(`div`, {
     className: t(J, i && `wfA7TOLqp5Y-`),
     children: [
       (0, H.jsx)(`div`, {
         className: Le,
-        children: x(`#PackageGrid_PendingChangeCount`, r),
+        children: b(`#PackageGrid_PendingChangeCount`, r),
       }),
       (0, H.jsxs)(`div`, {
         className: Y,
         children: [
-          (0, H.jsx)(m, {
-            onClick: s,
+          (0, H.jsx)(s, {
+            onClick: c,
             disabled: r == 0,
             className: t(X, ze),
-            children: E(`#PackageGrid_SaveChangesDialogButton`),
+            children: g(`#PackageGrid_SaveChangesDialogButton`),
           }),
-          (0, H.jsx)(R, {
+          (0, H.jsx)(B, {
             active: o,
-            children: (0, H.jsx)($, { closeModal: c, bReloadPageOnSave: n }),
+            children: (0, H.jsx)($, { closeModal: l, bReloadPageOnSave: n }),
           }),
-          (0, H.jsx)(m, {
+          (0, H.jsx)(s, {
             className: X,
-            onClick: u,
-            children: E(`#PackageGrid_DiscardChangesDialogButton`),
+            onClick: d,
+            children: g(`#PackageGrid_DiscardChangesDialogButton`),
           }),
-          (0, H.jsx)(R, {
-            active: l,
-            children: (0, H.jsx)(St, { closeModal: d }),
+          (0, H.jsx)(B, {
+            active: u,
+            children: (0, H.jsx)(St, { closeModal: f }),
           }),
         ],
       }),
@@ -713,7 +713,7 @@ function wt(e) {
 }
 function Tt() {
   return V.useCallback(
-    (e, t) => b((0, H.jsx)($, { strContinueUrl: t }), o(e)),
+    (e, t) => x((0, H.jsx)($, { strContinueUrl: t }), o(e)),
     [],
   );
 }
@@ -724,8 +724,8 @@ function Et(e) {
 }
 function Dt(e) {
   let [t, n] = V.useState(void 0),
-    r = be(),
-    i = de(60);
+    r = ye(),
+    i = ue(60);
   return (
     V.useEffect(() => {
       n(void 0);
@@ -742,10 +742,10 @@ function Dt(e) {
       let n = 2 ** 53 - 1,
         r = Et(e);
       for (let e of r) {
-        let t = _e(e);
+        let t = ge(e);
         for (let e of t) {
           if (e.rtStartDate < i) continue;
-          let t = Math.floor((e.rtStartDate - i) / s.PerDay);
+          let t = Math.floor((e.rtStartDate - i) / v.PerDay);
           n = Math.min(n, t);
         }
       }
@@ -759,7 +759,7 @@ function kt(e) {
   if (t.length == 0) return null;
   let n = t.slice(0, Ot),
     r = t.length - n.length,
-    i = (0, H.jsx)(l, {
+    i = (0, H.jsx)(E, {
       href: `https://partner.steamgames.com/doc/store/pricing`,
     });
   return (0, H.jsxs)(`div`, {
@@ -770,14 +770,14 @@ function kt(e) {
           `div`,
           {
             className: Ve,
-            children: E(
+            children: g(
               e.bTooLow
                 ? `#PricingDashboard_PreviewWarning_TooLow`
                 : `#PricingDashboard_PreviewWarning_TooHigh`,
-              A(e.packageID),
+              j(e.packageID),
               e.strPriceKey,
-              I(e.nPriceInCents, e.strPriceKey).join(``),
-              I(e.nLimitInCents, e.strPriceKey).join(``),
+              R(e.nPriceInCents, e.strPriceKey).join(``),
+              R(e.nLimitInCents, e.strPriceKey).join(``),
             ),
           },
           `${e.packageID}_${e.strPriceKey}`,
@@ -786,31 +786,31 @@ function kt(e) {
       r > 0 &&
         (0, H.jsx)(`div`, {
           className: `wgrJtAuBnVo-`,
-          children: x(`#PricingDashboard_PreviewWarning_MorePriceProblems`, r),
+          children: b(`#PricingDashboard_PreviewWarning_MorePriceProblems`, r),
         }),
       (0, H.jsx)(`div`, {
         className: Ve,
-        children: v(`#PricingDashboard_PreviewWarning_SeeRules`, i),
+        children: y(`#PricingDashboard_PreviewWarning_SeeRules`, i),
       }),
     ],
   });
 }
 function $(e) {
   let { closeModal: t, strContinueUrl: n, bReloadPageOnSave: r } = e,
-    i = N(),
-    a = F(),
+    i = F(),
+    a = L(),
     [o, s] = V.useState(void 0),
     l = Dt(i);
   if (!l) return null;
   let u = !!n,
-    d = E(
+    d = g(
       u
         ? `#PackageGrid_NavigationWarning_Title`
         : `#PricingDashboard_SavePricesTitle`,
     ),
-    m = x(`#PricingDashboard_SavePricesExplanation`, i.length);
+    p = b(`#PricingDashboard_SavePricesExplanation`, i.length);
   if (l.loadFailed)
-    return (0, H.jsx)(C, {
+    return (0, H.jsx)(S, {
       strTitle: d,
       bAlertDialog: !0,
       onOK: t,
@@ -818,22 +818,22 @@ function $(e) {
       closeModal: t,
       children: (0, H.jsx)(`div`, {
         className: at,
-        children: v(
+        children: y(
           `#PricingDashboard_SavePrices_FailedToLoad`,
           (0, H.jsx)(`div`, {}),
           (0, H.jsx)(`div`, {}),
         ),
       }),
     });
-  let h = [],
-    g = new Set(),
-    _ = new Set(),
-    y = new Set();
+  let m = [],
+    v = new Set(),
+    C = new Set(),
+    w = new Set();
   for (let e of i) {
     let { packageID: t, strPriceKey: n, nPriceInCents: r } = e,
-      { nMinPriceInCents: i, nMaxPriceInCents: a } = P(t, n);
+      { nMinPriceInCents: i, nMaxPriceInCents: a } = I(t, n);
     (r < i
-      ? h.push({
+      ? m.push({
           packageID: t,
           strPriceKey: n,
           nPriceInCents: r,
@@ -842,7 +842,7 @@ function $(e) {
         })
       : a &&
         r > a &&
-        h.push({
+        m.push({
           packageID: t,
           strPriceKey: n,
           nPriceInCents: r,
@@ -850,34 +850,34 @@ function $(e) {
           bTooLow: !1,
         }),
       e.nPriceInCents > e.nOldPriceInCents &&
-        (g.add(e.strPriceKey), ae(t) && _.add(e.strPriceKey)),
-      y.add(e.packageID));
+        (v.add(e.strPriceKey), P(t) && C.add(e.strPriceKey)),
+      w.add(e.packageID));
   }
-  let S = Array.from(g),
-    w = Array.from(_),
-    T = oe(y),
-    D;
-  if (T.length > 0) {
-    let e = T.map((e) => A(e));
-    D = E(`#PricingDashboad_RequiredPrices`, e.join(`, `));
+  let T = Array.from(v),
+    E = Array.from(C),
+    D = ie(w),
+    O;
+  if (D.length > 0) {
+    let e = D.map((e) => j(e));
+    O = g(`#PricingDashboad_RequiredPrices`, e.join(`, `));
   }
-  let O = h.length > 0 || o === void 0 || T.length != 0,
-    k = (e) => {
+  let k = m.length > 0 || o === void 0 || D.length != 0,
+    A = (e) => {
       n ? (window.location.href = n) : r && !e && window.location.reload();
     },
-    j = () => {
+    M = () => {
       o === void 0
         ? console.error(`Pricing:SaveChangesDialog auto publish undefined`)
         : (e.closeModal(),
-          b((0, H.jsx)(Pt, { bAutoPublish: o, fnOnSuccess: k }), window));
+          x((0, H.jsx)(Pt, { bAutoPublish: o, fnOnSuccess: A }), window));
     };
   return (0, H.jsx)(ee, {
     title: d,
-    onOK: j,
+    onOK: M,
     onCancel: e.closeModal,
     bDestructiveWarning: u,
     closeModal: t,
-    children: (0, H.jsxs)(p, {
+    children: (0, H.jsxs)(c, {
       className: tt,
       children: [
         (0, H.jsxs)(f, {
@@ -886,40 +886,40 @@ function $(e) {
             u &&
               (0, H.jsx)(`div`, {
                 className: `ABD5cRto1DQ-`,
-                children: E(`#PackageGrid_NavigationWarning`),
+                children: g(`#PackageGrid_NavigationWarning`),
               }),
-            m,
-            (0, H.jsx)(kt, { rgViolations: h }),
-            D &&
+            p,
+            (0, H.jsx)(kt, { rgViolations: m }),
+            O &&
               (0, H.jsxs)(`div`, {
                 className: `_5wYYMpXLWKI-`,
-                children: [` `, D, ` `],
+                children: [` `, O, ` `],
               }),
             (0, H.jsx)(Z, { rgLocalPriceOverrides: i }),
             (0, H.jsx)(At, {
-              rgIncreasedPriceKeys: S,
-              rgCooldownPriceKeys: w,
+              rgIncreasedPriceKeys: T,
+              rgCooldownPriceKeys: E,
               nextDiscount: l.days,
             }),
             (0, H.jsx)(jt, { value: o, onChange: s, nextDiscount: l.days }),
           ],
         }),
-        (0, H.jsx)(c, {
+        (0, H.jsx)(_, {
           children: u
-            ? (0, H.jsx)(te, {
-                strOKText: E(`#Button_Save`),
-                onOK: j,
-                bOKDisabled: O,
-                strUpdateText: E(`#PackageGrid_NavigateWithoutSavingButton`),
+            ? (0, H.jsx)(h, {
+                strOKText: g(`#Button_Save`),
+                onOK: M,
+                bOKDisabled: k,
+                strUpdateText: g(`#PackageGrid_NavigateWithoutSavingButton`),
                 onUpdate: () => {
-                  (a(), e.closeModal(), k(!0));
+                  (a(), e.closeModal(), A(!0));
                 },
                 onCancel: e.closeModal,
               })
-            : (0, H.jsx)(ne, {
-                strOKText: E(`#Button_Save`),
-                onOK: j,
-                bOKDisabled: O,
+            : (0, H.jsx)(te, {
+                strOKText: g(`#Button_Save`),
+                onOK: M,
+                bOKDisabled: k,
                 onCancel: e.closeModal,
               }),
         }),
@@ -932,10 +932,10 @@ function At(e) {
     i;
   return (
     r < Q
-      ? (i = E(`#PricingDashboard_SavePrice_FutureDiscountTooSoon`, Q))
+      ? (i = g(`#PricingDashboard_SavePrice_FutureDiscountTooSoon`, Q))
       : r < Ct
-        ? (i = E(`#PricingDashboard_SavePrice_FutureDiscountSoon`, r, Q))
-        : ((i = E(`#PricingDashboard_SavePrice_CooldownWarning`, Q)), (t = n)),
+        ? (i = g(`#PricingDashboard_SavePrice_FutureDiscountSoon`, r, Q))
+        : ((i = g(`#PricingDashboard_SavePrice_CooldownWarning`, Q)), (t = n)),
     t.length == 0
       ? null
       : (0, H.jsxs)(`div`, {
@@ -943,7 +943,7 @@ function At(e) {
           children: [
             (0, H.jsx)(`div`, {
               className: ct,
-              children: (0, H.jsx)(T, { angle: 0 }),
+              children: (0, H.jsx)(C, { angle: 0 }),
             }),
             (0, H.jsxs)(`div`, {
               className: lt,
@@ -954,7 +954,7 @@ function At(e) {
                 }),
                 (0, H.jsx)(`div`, {
                   className: ut,
-                  children: x(
+                  children: b(
                     `#PricingDashboard_SavePrice_IncreasedCurrencies`,
                     t.length,
                     t.join(`, `),
@@ -974,18 +974,18 @@ function jt(e) {
   return (0, H.jsxs)(`div`, {
     className: rt,
     children: [
-      (0, H.jsx)(w, {
+      (0, H.jsx)(T, {
         className: it,
         checked: t === !1,
         onChange: i,
-        label: E(`#PricingDashboard_AutoPublish_Disabled`),
+        label: g(`#PricingDashboard_AutoPublish_Disabled`),
       }),
-      (0, H.jsx)(w, {
+      (0, H.jsx)(T, {
         className: it,
         checked: t === !0,
         disabled: a,
         onChange: r,
-        label: E(`#PricingDashboard_AutoPublish_Enabled`),
+        label: g(`#PricingDashboard_AutoPublish_Enabled`),
       }),
     ],
   });
@@ -1006,25 +1006,25 @@ function Nt(e) {
         ...Object.keys(i.prices ?? {}),
       ]),
     );
-  return (0, H.jsx)(C, {
+  return (0, H.jsx)(S, {
     className: dt,
-    strTitle: E(`#PricingDashboard_UnappliedProposal_Title`),
+    strTitle: g(`#PricingDashboard_UnappliedProposal_Title`),
     strDescription: (0, H.jsxs)(H.Fragment, {
       children: [
         (0, H.jsx)(`p`, {
-          children: E(
+          children: g(
             `#PricingDashboard_UnappliedProposal_Description`,
-            A(i.packageID),
+            j(i.packageID),
             o,
           ),
         }),
         (0, H.jsx)(`p`, {
-          children: E(`#PricingDashboard_UnappliedProposal_Instructions`),
+          children: g(`#PricingDashboard_UnappliedProposal_Instructions`),
         }),
       ],
     }),
-    strOKButtonText: E(`#PricingDashboard_UnappliedProposal_Proceed`),
-    strCancelButtonText: E(`#Button_Cancel`),
+    strOKButtonText: g(`#PricingDashboard_UnappliedProposal_Proceed`),
+    strCancelButtonText: g(`#Button_Cancel`),
     onOK: () => r(!0),
     onCancel: () => r(!1),
     bDestructiveWarning: !0,
@@ -1037,23 +1037,23 @@ function Nt(e) {
             children: (0, H.jsxs)(`tr`, {
               children: [
                 (0, H.jsx)(`th`, {
-                  children: E(`#PricingDashboard_UnappliedProposal_PriceKey`),
+                  children: g(`#PricingDashboard_UnappliedProposal_PriceKey`),
                 }),
                 (0, H.jsx)(`th`, {
-                  children: E(
+                  children: g(
                     `#PricingDashboard_UnappliedProposal_PriceKeyName`,
                   ),
                 }),
                 (0, H.jsxs)(`th`, {
                   className: `AJ-VLRenOm8-`,
                   children: [
-                    E(`#PricingDashboard_UnappliedProposal_UnappliedPrice`),
+                    g(`#PricingDashboard_UnappliedProposal_UnappliedPrice`),
                     (0, H.jsx)(`br`, {}),
-                    E(`#PricingDashboard_UnappliedProposal_SubmittedDate`, o),
+                    g(`#PricingDashboard_UnappliedProposal_SubmittedDate`, o),
                   ],
                 }),
                 (0, H.jsx)(`th`, {
-                  children: E(`#PricingDashboard_UnappliedProposal_NewPrice`),
+                  children: g(`#PricingDashboard_UnappliedProposal_NewPrice`),
                 }),
               ],
             }),
@@ -1067,11 +1067,11 @@ function Nt(e) {
                 {
                   children: [
                     (0, H.jsx)(`td`, { children: e }),
-                    (0, H.jsx)(`td`, { children: Mt[e] ? E(Mt[e]) : L(e) }),
-                    (0, H.jsx)(`td`, { children: I(n, e).join(``) }),
+                    (0, H.jsx)(`td`, { children: Mt[e] ? g(Mt[e]) : z(e) }),
+                    (0, H.jsx)(`td`, { children: R(n, e).join(``) }),
                     (0, H.jsx)(`td`, {
                       className: t(n != r && `SDOQ9-PH82Y-`),
-                      children: I(r, e).join(``),
+                      children: R(r, e).join(``),
                     }),
                   ],
                 },
@@ -1085,9 +1085,9 @@ function Nt(e) {
 }
 function Pt(e) {
   let { closeModal: t, bAutoPublish: n, fnOnSuccess: r } = e,
-    i = N(),
-    a = se(),
-    o = ue(`SaveProgressDialog`),
+    i = F(),
+    a = ae(),
+    o = ce(`SaveProgressDialog`),
     [s, c] = V.useState(0),
     [l, u] = V.useState(null),
     [d, f] = V.useState(null),
@@ -1107,7 +1107,7 @@ function Pt(e) {
           if (r.unappliedProposal) {
             let e = await new Promise((e) => f({ response: r, fnResolve: e }));
             if ((f(null), !e)) {
-              u(E(`#PricingDashboard_UnappliedProposal_Declined`, A(n)));
+              u(g(`#PricingDashboard_UnappliedProposal_Declined`, j(n)));
               return;
             }
             if (((r = await a(n, m, !0, o)), o.token.reason)) return;
@@ -1116,7 +1116,7 @@ function Pt(e) {
             u(
               r.msg && r.success != 10
                 ? r.msg
-                : E(`#PricingDashboard_SavePricesError`),
+                : g(`#PricingDashboard_SavePricesError`),
             );
             return;
           }
@@ -1126,19 +1126,19 @@ function Pt(e) {
     }, []),
     d
       ? (0, H.jsx)(Nt, { response: d.response, fnResolve: d.fnResolve })
-      : (0, H.jsx)(C, {
-          strTitle: E(`#PackageGrid_SaveInProgress`),
+      : (0, H.jsx)(S, {
+          strTitle: g(`#PackageGrid_SaveInProgress`),
           bAlertDialog: !!l,
-          strOKButtonText: E(l ? `#Button_Close` : `#Button_OK`),
+          strOKButtonText: g(l ? `#Button_Close` : `#Button_OK`),
           onOK: l ? t : r,
           onCancel: p,
           closeModal: t,
           bDestructiveWarning: !0,
           children:
             l ??
-            (0, H.jsx)(z, {
+            (0, H.jsx)(le, {
               position: `center`,
-              string: E(`#PricingDashboard_Progress`, s),
+              string: g(`#PricingDashboard_Progress`, s),
             }),
         })
   );

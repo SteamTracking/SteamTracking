@@ -12,11 +12,11 @@ import {
 } from "./chunk~de7f2df91c.js";
 import { It as s } from "./chunk~25a6634263.js";
 import {
-  Na as c,
-  gn as l,
-  ia as u,
-  ka as d,
-  ua as f,
+  Aa as c,
+  Pa as l,
+  _n as u,
+  aa as d,
+  da as f,
 } from "./chunk~1fa4b8f2ff.js";
 import { C as p, w as m } from "./chunk~44f252525d.js";
 import { t as h } from "./chunk~802e967112.js";
@@ -40,16 +40,16 @@ var v = a(t()),
             `langpicker_unset`,
           ),
         );
-      let l = [],
+      let u = [],
         p = this.props.realms || [n.k_ESteamRealmGlobal];
-      for (let e of u.GetLanguageListForRealms(p)) {
+      for (let e of d.GetLanguageListForRealms(p)) {
         if (t && !t(e)) continue;
         let n = i(e),
           r = f(`#Language_` + n),
           a = !!(s && s(e));
-        l.push({ eLang: e, sLocName: r, bSupported: a });
+        u.push({ eLang: e, sLocName: r, bSupported: a });
       }
-      l.sort((e, t) =>
+      u.sort((e, t) =>
         e.bSupported == t.bSupported
           ? e.sLocName.localeCompare(t.sLocName)
           : e.bSupported
@@ -57,7 +57,7 @@ var v = a(t()),
             : 1,
       );
       let m = !1;
-      for (let t of l) {
+      for (let t of u) {
         t.bSupported != m &&
           (e.push(
             (0, y.jsx)(
@@ -83,7 +83,7 @@ var v = a(t()),
           ((s += ` `),
           (s += f(
             `#Language_Last_Update`,
-            c(i) + ` @ ` + d(i, { bForce24HourClock: !1 }),
+            l(i) + ` @ ` + c(i, { bForce24HourClock: !1 }),
           ))),
           e.push(
             (0, y.jsx)(
@@ -107,7 +107,7 @@ var v = a(t()),
     render() {
       let { selectedLang: e, bDisabled: t, strTooltip: n } = this.props,
         r = this.GenerateLanguageOptions();
-      return (0, y.jsx)(l, {
+      return (0, y.jsx)(u, {
         toolTipContent: n,
         children: (0, y.jsx)(`select`, {
           value: e,

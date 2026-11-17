@@ -40,31 +40,31 @@ import {
 } from "./chunk~25a6634263.js";
 import {
   Ai as T,
-  Di as ce,
+  Cn as ce,
   Fi as le,
   Ha as E,
-  Ii as D,
-  L as ue,
-  Mi as de,
-  Na as fe,
-  Oi as O,
-  Pi as pe,
-  Sn as me,
-  Va as k,
-  Vt as he,
-  Yn as ge,
-  f as _e,
-  gn as ve,
-  ji as ye,
-  ki as A,
-  na as j,
+  Ht as ue,
+  Ii as de,
+  Li as D,
+  Mi as O,
+  Ni as fe,
+  Oi as pe,
+  Pa as me,
+  R as he,
+  Ua as k,
+  Xn as ge,
+  _n as _e,
+  da as A,
+  f as ve,
+  ji as j,
+  ki as ye,
+  na as M,
   o as be,
   r as xe,
+  ra as N,
   s as Se,
-  ta as M,
-  ua as N,
 } from "./chunk~1fa4b8f2ff.js";
-import { S as Ce, h as we } from "./chunk~0a99e05c44.js";
+import { _ as Ce, w as we } from "./chunk~0a99e05c44.js";
 import "./chunk~44f252525d.js";
 import { n as Te } from "./chunk~f8b6a4beb3.js";
 import { t as Ee } from "./chunk~ede3e357a2.js";
@@ -114,7 +114,7 @@ function Ve() {
 }
 function He(e) {
   let { id: t, eHWCompat: n, className: r } = e,
-    { data: i } = Ce(t);
+    { data: i } = we(t);
   if (!i) return null;
   switch (n) {
     case 1:
@@ -145,41 +145,41 @@ var Ue = (e) => {
     let { category: t = 0, className: n } = e,
       r = z(t);
     return (0, R.jsxs)(`div`, {
-      className: m(j, n),
-      children: [(0, R.jsx)(ce, {}), (0, R.jsx)(r, { className: M })],
+      className: m(N, n),
+      children: [(0, R.jsx)(pe, {}), (0, R.jsx)(r, { className: M })],
     });
   },
   We = (e) => {
     let { category: t = 0, className: n } = e,
       r = z(t);
     return (0, R.jsxs)(`div`, {
-      className: m(j, n),
-      children: [(0, R.jsx)(pe, {}), (0, R.jsx)(r, { className: M })],
+      className: m(N, n),
+      children: [(0, R.jsx)(le, {}), (0, R.jsx)(r, { className: M })],
     });
   },
   Ge = (e) => {
     let { category: t = 0, className: n } = e,
       r = z(t);
     return (0, R.jsxs)(`div`, {
-      className: m(j, n),
-      children: [(0, R.jsx)(de, {}), (0, R.jsx)(r, { className: M })],
+      className: m(N, n),
+      children: [(0, R.jsx)(fe, {}), (0, R.jsx)(r, { className: M })],
     });
   },
   Ke = (e) => {
     let { category: t = 0, elControllerSupport: n } = e,
       r = Ye(t);
     return (0, R.jsxs)(`div`, {
-      className: m(j, e.className),
+      className: m(N, e.className),
       children: [n, (0, R.jsx)(r, { className: M })],
     });
   },
-  qe = { 1: T, 2: O, 3: ye, 0: A },
-  Je = { 0: A, 1: T, 2: D };
+  qe = { 1: j, 2: ye, 3: O, 0: T },
+  Je = { 0: T, 1: j, 2: D };
 function z(e) {
-  return qe[e] || A;
+  return qe[e] || T;
 }
 function Ye(e) {
-  return Je[e] || A;
+  return Je[e] || T;
 }
 var Xe = _(Oe()),
   B = class e {
@@ -580,175 +580,175 @@ function Lt(e) {
       return (0, R.jsx)(Rt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_A`),
+        "aria-label": A(`#ControllerButton_A`),
       });
     case V.B:
       return (0, R.jsx)(zt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_B`),
+        "aria-label": A(`#ControllerButton_B`),
       });
     case V.X:
       return (0, R.jsx)(Bt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_X`),
+        "aria-label": A(`#ControllerButton_X`),
       });
     case V.Y:
       return (0, R.jsx)(Vt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_Y`),
+        "aria-label": A(`#ControllerButton_Y`),
       });
     case V.Left:
       return (0, R.jsx)(Wt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_DpadLeft`),
+        "aria-label": A(`#ControllerButton_DpadLeft`),
       });
     case V.Right:
       return (0, R.jsx)(Gt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_DpadRight`),
+        "aria-label": A(`#ControllerButton_DpadRight`),
       });
     case V.Up:
       return (0, R.jsx)(Ht, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_DpadUp`),
+        "aria-label": A(`#ControllerButton_DpadUp`),
       });
     case V.Down:
       return (0, R.jsx)(Ut, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_DpadDown`),
+        "aria-label": A(`#ControllerButton_DpadDown`),
       });
     case V.HomeMenu:
       return (0, R.jsx)(Kt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_Steam`),
+        "aria-label": A(`#ControllerButton_Steam`),
       });
     case V.QuickMenu:
       return (0, R.jsx)(qt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_QAM`),
+        "aria-label": A(`#ControllerButton_QAM`),
       });
     case V.Select:
       return (0, R.jsx)(Jt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_View`),
+        "aria-label": A(`#ControllerButton_View`),
       });
     case V.Start:
       return (0, R.jsx)(Yt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_Menu`),
+        "aria-label": A(`#ControllerButton_Menu`),
       });
     case V.LeftBumper:
       return (0, R.jsx)(Xt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_L1`),
+        "aria-label": A(`#ControllerButton_L1`),
       });
     case V.RightBumper:
       return (0, R.jsx)(Zt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_R1`),
+        "aria-label": A(`#ControllerButton_R1`),
       });
     case V.LeftTrigger:
       return (0, R.jsx)(Qt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_L2`),
+        "aria-label": A(`#ControllerButton_L2`),
       });
     case V.RightTrigger:
       return (0, R.jsx)($t, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_R2`),
+        "aria-label": A(`#ControllerButton_R2`),
       });
     case V.LeftStick:
       return (0, R.jsx)(rn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_LS`),
+        "aria-label": A(`#ControllerButton_LS`),
       });
     case V.RightStick:
       return (0, R.jsx)(nn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_RS`),
+        "aria-label": A(`#ControllerButton_RS`),
       });
     case V.LeftStickClick:
       return (0, R.jsx)(en, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_L3`),
+        "aria-label": A(`#ControllerButton_L3`),
       });
     case V.RightStickClick:
       return (0, R.jsx)(tn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_R3`),
+        "aria-label": A(`#ControllerButton_R3`),
       });
     case V.LeftTrackpad:
       return (0, R.jsx)(ln, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_LPad`),
+        "aria-label": A(`#ControllerButton_LPad`),
       });
     case V.RightTrackpad:
       return (0, R.jsx)(dn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_RPad`),
+        "aria-label": A(`#ControllerButton_RPad`),
       });
     case V.LeftTrackpadClick:
       return (0, R.jsx)(un, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_LPad_Click`),
+        "aria-label": A(`#ControllerButton_LPad_Click`),
       });
     case V.RightTrackpadClick:
       return (0, R.jsx)(fn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_RPad_Click`),
+        "aria-label": A(`#ControllerButton_RPad_Click`),
       });
     case V.RearLeftUpper:
       return (0, R.jsx)(an, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_L4`),
+        "aria-label": A(`#ControllerButton_L4`),
       });
     case V.RearRightUpper:
       return (0, R.jsx)(sn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_R4`),
+        "aria-label": A(`#ControllerButton_R4`),
       });
     case V.RearLeftLower:
       return (0, R.jsx)(on, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_L5`),
+        "aria-label": A(`#ControllerButton_L5`),
       });
     case V.RearRightLower:
       return (0, R.jsx)(cn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_R5`),
+        "aria-label": A(`#ControllerButton_R5`),
       });
     default:
       return (0, R.jsx)(pn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": N(`#ControllerButton_Default`),
+        "aria-label": A(`#ControllerButton_Default`),
       });
   }
 }
@@ -1990,7 +1990,7 @@ function wn(e) {
     ne = u ? (r ?? b[0].key) : void 0,
     S = (0, R.jsxs)(R.Fragment, {
       children: [
-        (0, R.jsx)(E, {
+        (0, R.jsx)(k, {
           className: m(
             mn,
             d && `iBLrw-7gAIM-`,
@@ -2014,10 +2014,10 @@ function wn(e) {
             ),
           ),
         }),
-        x && (0, R.jsx)(E, { className: l, children: x.contents }),
+        x && (0, R.jsx)(k, { className: l, children: x.contents }),
       ],
     });
-  return d ? (0, R.jsx)(E, { className: m(gn), children: S }) : S;
+  return d ? (0, R.jsx)(k, { className: m(gn), children: S }) : S;
 }
 function Tn(e) {
   let { statusType: t = `success`, bShowStatusBox: n, children: r } = e,
@@ -2044,25 +2044,25 @@ function En(e) {
     active: a,
     preferredFocus: o,
   } = e;
-  return (0, R.jsx)(me, {
+  return (0, R.jsx)(ce, {
     condition: !!(t.statusToolTip || t.tooltip),
     wrap: (e) =>
-      (0, R.jsx)(ve, {
+      (0, R.jsx)(_e, {
         toolTipContent: t.statusToolTip || t.tooltip,
         children: e,
       }),
-    children: (0, R.jsxs)(E, {
+    children: (0, R.jsxs)(k, {
       className: m(hn, a && `Tw-TchJW1T8-`, a && `ActiveTab`, r),
       onActivate: () => n(t),
       preferredFocus: o,
       focusRingHasBorderRadius: i,
       children: [
         !!t.vo_warning &&
-          (0, R.jsx)(ve, {
+          (0, R.jsx)(_e, {
             toolTipContent: t.vo_warning,
             children: (0, R.jsx)(`div`, {
               className: `OpvmjD098-U-`,
-              children: N(`#EventEditor_VOWarning`),
+              children: A(`#EventEditor_VOWarning`),
             }),
           }),
         t.status,
@@ -2329,7 +2329,7 @@ function Bn({ active: e, payload: t }) {
   let n = t[0].payload;
   return (0, R.jsx)(`div`, {
     className: Rn,
-    children: `${k.Localize(`#GamePerformanceStats_FPS`, n.framerate ?? 0)}: ${n.percentage ?? 0}%`,
+    children: `${E.Localize(`#GamePerformanceStats_FPS`, n.framerate ?? 0)}: ${n.percentage ?? 0}%`,
   });
 }
 function Vn(e) {
@@ -2358,7 +2358,7 @@ function Vn(e) {
         children: [
           (0, R.jsx)(`div`, {
             className: In,
-            children: k.Localize(`#GamePerformanceStats_SessionLabel`),
+            children: E.Localize(`#GamePerformanceStats_SessionLabel`),
           }),
           (0, R.jsx)(je, {
             width: `100%`,
@@ -2378,7 +2378,7 @@ function Vn(e) {
                   dataKey: `framerate`,
                   stroke: `white`,
                   label: {
-                    value: k.Localize(`#GamePerformanceStats_Framerate`),
+                    value: E.Localize(`#GamePerformanceStats_Framerate`),
                     position: `bottom`,
                     fill: `#A9A9A9`,
                     fontSize: 14,
@@ -2408,7 +2408,7 @@ function Vn(e) {
         className: m(Fn, n),
         children: (0, R.jsx)(`div`, {
           className: Ln,
-          children: k.Localize(
+          children: E.Localize(
             `#GamePerformanceStats_StillGatheringData_NoDevice`,
           ),
         }),
@@ -2515,7 +2515,7 @@ function Gn(e) {
     p = null;
   if (
     (t.steam_deck_blog_url &&
-      ((d.onOptionsActionDescription = k.Localize(
+      ((d.onOptionsActionDescription = E.Localize(
         `#SteamDeckVerified_ViewDeveloperPost`,
       )),
       (d.onOptionsButton = u),
@@ -2537,7 +2537,7 @@ function Gn(e) {
       l = (0, R.jsx)($, { category: t.resolved_category });
     return (
       c == 3
-        ? ((e = k.Localize(
+        ? ((e = E.Localize(
             `#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI`,
           )),
           (s = (0, R.jsx)(lr, {
@@ -2547,7 +2547,7 @@ function Gn(e) {
           })),
           (l = (0, R.jsx)($, { category: t.machine_resolved_category })))
         : c == 2
-          ? ((e = k.Localize(
+          ? ((e = E.Localize(
               `#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI`,
             )),
             (s = (0, R.jsx)(cr, {
@@ -2558,7 +2558,7 @@ function Gn(e) {
             (l = (0, R.jsx)(or, { category: t.steamos_resolved_category })),
             (a = p))
           : c == 4
-            ? ((e = k.Localize(
+            ? ((e = E.Localize(
                 `#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI`,
               )),
               (s = (0, R.jsx)(ur, {
@@ -2567,7 +2567,7 @@ function Gn(e) {
                 appName: i,
               })),
               (l = (0, R.jsx)($, { category: t.frame_resolved_category })))
-            : ((e = k.Localize(
+            : ((e = E.Localize(
                 `#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI`,
               )),
               (s = (0, R.jsx)(sr, {
@@ -2576,7 +2576,7 @@ function Gn(e) {
               })),
               (a = f)),
       (0, R.jsx)(Kn, {
-        children: (0, R.jsxs)(E, {
+        children: (0, R.jsxs)(k, {
           autoFocus: o,
           focusableIfEmpty: o,
           noFocusRing: !0,
@@ -2628,7 +2628,7 @@ function Gn(e) {
         name: (0, R.jsxs)(`div`, {
           className: q,
           children: [
-            (0, R.jsx)(ce, { className: Dt }),
+            (0, R.jsx)(pe, { className: Dt }),
             (0, R.jsx)(m, { className: J }),
           ],
         }),
@@ -2642,7 +2642,7 @@ function Gn(e) {
         name: (0, R.jsxs)(`div`, {
           className: q,
           children: [
-            (0, R.jsx)(pe, { className: Tt }),
+            (0, R.jsx)(le, { className: Tt }),
             (0, R.jsx)(g, { className: J }),
           ],
         }),
@@ -2665,7 +2665,7 @@ function Gn(e) {
         name: (0, R.jsxs)(`div`, {
           className: q,
           children: [
-            (0, R.jsx)(de, { className: Et }),
+            (0, R.jsx)(fe, { className: Et }),
             (0, R.jsx)(_, { className: J }),
           ],
         }),
@@ -2697,7 +2697,7 @@ function Kn(e) {
   return (0, R.jsx)(xe, {
     ref: r,
     className: mt,
-    children: (0, R.jsx)(E, {
+    children: (0, R.jsx)(k, {
       ref: a,
       className: ht,
       focusableIfEmpty: t,
@@ -2718,7 +2718,7 @@ function Q(e) {
       children: c,
     } = e,
     l = i ?? {};
-  return (0, R.jsxs)(E, {
+  return (0, R.jsxs)(k, {
     className: at,
     ...l,
     children: [
@@ -2736,7 +2736,7 @@ function Q(e) {
         ],
       }),
       s,
-      (0, R.jsx)(E, {
+      (0, R.jsx)(k, {
         autoFocus: r,
         focusableIfEmpty: r,
         noFocusRing: !0,
@@ -2759,7 +2759,7 @@ function qn(e) {
     c = r.steamos_resolved_items && r.steamos_resolved_items?.length > 0;
   return (0, R.jsx)(Q, {
     titleId: t,
-    title: k.Localize(
+    title: E.Localize(
       `#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI`,
     ),
     ratingIcon: s,
@@ -2778,7 +2778,7 @@ function qn(e) {
                   className: `-vnBPYbU1nw-`,
                   children: [
                     (0, R.jsx)($n, { displaytype: e.display_type }),
-                    (0, R.jsx)(`span`, { children: k.Localize(e.loc_token) }),
+                    (0, R.jsx)(`span`, { children: E.Localize(e.loc_token) }),
                   ],
                 },
                 e.loc_token + e.display_type,
@@ -2796,7 +2796,7 @@ function qn(e) {
                     className: `-vnBPYbU1nw-`,
                     children: [
                       (0, R.jsx)($n, { displaytype: e.display_type }),
-                      (0, R.jsx)(`span`, { children: k.Localize(e.loc_token) }),
+                      (0, R.jsx)(`span`, { children: E.Localize(e.loc_token) }),
                     ],
                   },
                   e.loc_token + e.display_type,
@@ -2815,7 +2815,7 @@ function Jn(e) {
     c = r.resolved_items && r.resolved_items?.length > 0;
   return (0, R.jsx)(Q, {
     titleId: t,
-    title: k.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI`),
+    title: E.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI`),
     ratingIcon: s,
     ratingSummary: o,
     ...e,
@@ -2835,8 +2835,8 @@ function Jn(e) {
                     (0, R.jsx)(`span`, {
                       children:
                         e.loc_token.charAt(0) == `#`
-                          ? k.Localize(e.loc_token)
-                          : k.Localize(`#` + e.loc_token),
+                          ? E.Localize(e.loc_token)
+                          : E.Localize(`#` + e.loc_token),
                     }),
                   ],
                 },
@@ -2855,7 +2855,7 @@ function Jn(e) {
                   {
                     className: `_00kSG69QbjI-`,
                     children: (0, R.jsx)(`span`, {
-                      children: k.Localize(e.loc_token),
+                      children: E.Localize(e.loc_token),
                     }),
                   },
                   e.loc_token + e.display_type,
@@ -2879,7 +2879,7 @@ function Yn(e) {
     c = r.machine_resolved_items && r.machine_resolved_items?.length > 0;
   return (0, R.jsx)(Q, {
     titleId: t,
-    title: k.Localize(
+    title: E.Localize(
       `#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI`,
     ),
     ratingIcon: s,
@@ -2898,7 +2898,7 @@ function Yn(e) {
                   className: `-vnBPYbU1nw-`,
                   children: [
                     (0, R.jsx)(Qn, { displaytype: e.display_type }),
-                    (0, R.jsx)(`span`, { children: k.Localize(e.loc_token) }),
+                    (0, R.jsx)(`span`, { children: E.Localize(e.loc_token) }),
                   ],
                 },
                 e.loc_token + e.display_type,
@@ -2916,7 +2916,7 @@ function Yn(e) {
                   {
                     className: `_00kSG69QbjI-`,
                     children: (0, R.jsx)(`span`, {
-                      children: k.Localize(e.loc_token),
+                      children: E.Localize(e.loc_token),
                     }),
                   },
                   e.loc_token + e.display_type,
@@ -2939,7 +2939,7 @@ function Xn(e) {
     c = r.frame_resolved_items && r.frame_resolved_items?.length > 0;
   return (0, R.jsx)(Q, {
     titleId: t,
-    title: k.Localize(
+    title: E.Localize(
       `#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI`,
     ),
     ratingIcon: s,
@@ -2958,7 +2958,7 @@ function Xn(e) {
                   className: `-vnBPYbU1nw-`,
                   children: [
                     (0, R.jsx)(Qn, { displaytype: e.display_type }),
-                    (0, R.jsx)(`span`, { children: k.Localize(e.loc_token) }),
+                    (0, R.jsx)(`span`, { children: E.Localize(e.loc_token) }),
                   ],
                 },
                 e.loc_token + e.display_type,
@@ -2976,7 +2976,7 @@ function Xn(e) {
                   {
                     className: `_00kSG69QbjI-`,
                     children: (0, R.jsx)(`span`, {
-                      children: k.Localize(e.loc_token),
+                      children: E.Localize(e.loc_token),
                     }),
                   },
                   e.loc_token + e.display_type,
@@ -2994,8 +2994,8 @@ function Zn(e) {
   if (r) {
     let e =
       n == 2
-        ? k.Localize(`#SteamOS_DescriptionHeader_DeveloperBlog`)
-        : k.Localize(`#SteamDeckVerified_DescriptionHeader_DeveloperBlog`);
+        ? E.Localize(`#SteamOS_DescriptionHeader_DeveloperBlog`)
+        : E.Localize(`#SteamDeckVerified_DescriptionHeader_DeveloperBlog`);
     return (0, R.jsxs)(`div`, {
       className: W,
       children: [
@@ -3009,8 +3009,8 @@ function Zn(e) {
   }
   let i =
     n == 2
-      ? k.Localize(`#SteamOS_DescriptionHeader_DeveloperBlog_Desktop`)
-      : k.Localize(
+      ? E.Localize(`#SteamOS_DescriptionHeader_DeveloperBlog_Desktop`)
+      : E.Localize(
           `#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop`,
         );
   return (0, R.jsxs)(`div`, {
@@ -3020,7 +3020,7 @@ function Zn(e) {
       (0, R.jsx)(`a`, {
         href: t,
         className: $e,
-        children: k.Localize(`#SteamDeckVerified_ViewDeveloperPost`),
+        children: E.Localize(`#SteamDeckVerified_ViewDeveloperPost`),
       }),
     ],
   });
@@ -3029,13 +3029,13 @@ function Qn(e) {
   let { displaytype: t } = e;
   switch (t) {
     case 4:
-      return (0, R.jsx)(ye, { className: K });
-    case 3:
       return (0, R.jsx)(O, { className: K });
+    case 3:
+      return (0, R.jsx)(ye, { className: K });
     case 2:
-      return (0, R.jsx)(T, { className: K });
+      return (0, R.jsx)(j, { className: K });
     case 0:
-      return (0, R.jsx)(A, { className: K });
+      return (0, R.jsx)(T, { className: K });
     case 1:
       return null;
   }
@@ -3046,7 +3046,7 @@ function $n(e) {
     case 3:
       return (0, R.jsx)(D, { className: K });
     case 1:
-      return (0, R.jsx)(le, { className: K });
+      return (0, R.jsx)(de, { className: K });
     default:
       return null;
   }
@@ -3054,8 +3054,8 @@ function $n(e) {
 function er(e) {
   let { histogram: t, deviceName: n, nFrameLimit: r, appName: i } = e,
     a = i
-      ? k.Localize(`#GamePerformanceStats_FrameRateDistribution`, i, n)
-      : k.Localize(`#GamePerformanceStats_FrameRateDistribution_ThisGame`, n);
+      ? E.Localize(`#GamePerformanceStats_FrameRateDistribution`, i, n)
+      : E.Localize(`#GamePerformanceStats_FrameRateDistribution_ThisGame`, n);
   return (0, R.jsxs)(`div`, {
     className: dt,
     children: [
@@ -3063,7 +3063,7 @@ function er(e) {
         children: [
           (0, R.jsx)(`div`, {
             className: ft,
-            children: k.Localize(`#GamePerformanceStats_MoreInfoTitle`),
+            children: E.Localize(`#GamePerformanceStats_MoreInfoTitle`),
           }),
           (0, R.jsx)(`div`, { children: a }),
         ],
@@ -3071,20 +3071,20 @@ function er(e) {
       (0, R.jsx)(Vn, { histogram: t, minWidth: 200, minHeight: 200 }),
       (0, R.jsx)(`div`, {
         className: ft,
-        children: k.Localize(`#GamePerformanceStats_MoreDetailsTitle`),
+        children: E.Localize(`#GamePerformanceStats_MoreDetailsTitle`),
       }),
       (0, R.jsxs)(`div`, {
         className: pt,
         children: [
           (0, R.jsx)(`div`, {
-            children: k.Localize(
+            children: E.Localize(
               `#GamePerformanceStats_MoreDetails_Filtering`,
               n,
               r,
             ),
           }),
           (0, R.jsx)(`div`, {
-            children: k.Localize(
+            children: E.Localize(
               `#GamePerformanceStats_MoreDetails_VSync`,
               r / 2,
               r,
@@ -3129,8 +3129,8 @@ function nr(e) {
     f = L.useMemo(
       () =>
         new Map([
-          [3, k.Localize(`#GamePerformanceStats_SteamDeckLCD`)],
-          [4, k.Localize(`#GamePerformanceStats_SteamDeckOLED`)],
+          [3, E.Localize(`#GamePerformanceStats_SteamDeckLCD`)],
+          [4, E.Localize(`#GamePerformanceStats_SteamDeckOLED`)],
         ]),
       [],
     );
@@ -3142,7 +3142,7 @@ function nr(e) {
         (0, R.jsx)(`div`, { className: bt }),
         (0, R.jsx)(`div`, {
           className: st,
-          children: k.Localize(
+          children: E.Localize(
             `#GamePerformanceStats_StillGatheringData_NoDevice`,
           ),
         }),
@@ -3169,13 +3169,13 @@ function nr(e) {
   if (g) {
     let e = (0, R.jsx)(`span`, {
       className: lt,
-      children: k.Localize(`#GameFrameRate_FPS`, g),
+      children: E.Localize(`#GameFrameRate_FPS`, g),
     });
-    v = k.LocalizeReact(`#GameFrameRate_Description_ThisGame`, h, e);
+    v = E.LocalizeReact(`#GameFrameRate_Description_ThisGame`, h, e);
   } else
     v = n
-      ? k.Localize(`#GamePerformanceStats_StillGatheringData`, n, h)
-      : k.Localize(`#GamePerformanceStats_StillGatheringData_ThisGame`, h);
+      ? E.Localize(`#GamePerformanceStats_StillGatheringData`, n, h)
+      : E.Localize(`#GamePerformanceStats_StillGatheringData_ThisGame`, h);
   let y = !!g && !a;
   return (0, R.jsxs)(`div`, {
     className: ot,
@@ -3185,7 +3185,7 @@ function nr(e) {
     },
     children: [
       (0, R.jsx)(`div`, { className: bt }),
-      (0, R.jsxs)(E, {
+      (0, R.jsxs)(k, {
         className: st,
         onActivate: y ? () => o(!a) : void 0,
         focusable: y,
@@ -3195,7 +3195,7 @@ function nr(e) {
             children: [
               v,
               y &&
-                (0, R.jsx)(ue, {
+                (0, R.jsx)(he, {
                   className: `heKA7rr02xo-`,
                   direction: a ? `up` : `down`,
                 }),
@@ -3205,7 +3205,7 @@ function nr(e) {
             _ > 0 &&
             (0, R.jsx)(`div`, {
               className: `HKN5tcQd-XE-`,
-              children: k.Localize(`#GameFrameRate_LastUpdated`, fe(_)),
+              children: E.Localize(`#GameFrameRate_LastUpdated`, me(_)),
             }),
         ],
       }),
@@ -3230,8 +3230,8 @@ function nr(e) {
 }
 function rr(e) {
   let { id: t, compatibility: n, onShowDialog: r } = e,
-    { data: i } = we(t),
-    { data: a } = Ce(t),
+    { data: i } = Ce(t),
+    { data: a } = we(t),
     [o, s, c] = ne();
   if (!i || !a || i.item_type !== 0) return null;
   let l = null,
@@ -3239,19 +3239,19 @@ function rr(e) {
   if (n == 4) {
     let e = a.steam_frame_compat_category || 0;
     ((l = (0, R.jsx)(Ge, { category: e })),
-      (u = k.Localize(
+      (u = E.Localize(
         `#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI`,
       )));
   } else if (n == 3) {
     let e = a.steam_machine_compat_category || 0;
     ((l = (0, R.jsx)(We, { category: e })),
-      (u = k.Localize(
+      (u = E.Localize(
         `#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI`,
       )));
   } else {
     let e = a.steam_deck_compat_category || 0;
     ((l = (0, R.jsx)(Ue, { category: e })),
-      (u = k.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`)));
+      (u = E.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`)));
   }
   return (0, R.jsxs)(`div`, {
     className: m(et, `LearnMoreCtn`),
@@ -3290,13 +3290,13 @@ function ar(e) {
   let { nAppID: t, appName: n, startingTab: r, closeModal: i } = e,
     a = Ze(t),
     o = L.useId();
-  return (0, R.jsx)(_e, {
+  return (0, R.jsx)(ve, {
     "aria-labelledby": o,
     modalClassName: `DeckVerifiedModalDialog`,
     closeModal: i,
     onCancel: i,
-    children: (0, R.jsx)(he, {
-      children: (0, R.jsx)(E, {
+    children: (0, R.jsx)(ue, {
+      children: (0, R.jsx)(k, {
         focusable: !1,
         "flow-children": `column`,
         className: gt,
@@ -3310,7 +3310,7 @@ function ar(e) {
           : (0, R.jsx)(Re, {
               size: `medium`,
               position: `center`,
-              string: k.Localize(`#Loading`),
+              string: E.Localize(`#Loading`),
             }),
       }),
     }),
@@ -3320,13 +3320,13 @@ function $(e) {
   let { category: t } = e;
   switch (t) {
     case 3:
-      return (0, R.jsx)(ye, { className: U, role: `presentation` });
-    case 2:
       return (0, R.jsx)(O, { className: U, role: `presentation` });
+    case 2:
+      return (0, R.jsx)(ye, { className: U, role: `presentation` });
     case 1:
-      return (0, R.jsx)(T, { className: U, role: `presentation` });
+      return (0, R.jsx)(j, { className: U, role: `presentation` });
     default:
-      return (0, R.jsx)(A, { className: U, role: `presentation` });
+      return (0, R.jsx)(T, { className: U, role: `presentation` });
   }
 }
 function or(e) {
@@ -3335,9 +3335,9 @@ function or(e) {
     case 2:
       return (0, R.jsx)(D, { className: U, role: `presentation` });
     case 1:
-      return (0, R.jsx)(T, { className: U, role: `presentation` });
+      return (0, R.jsx)(j, { className: U, role: `presentation` });
     default:
-      return (0, R.jsx)(A, { className: U, role: `presentation` });
+      return (0, R.jsx)(T, { className: U, role: `presentation` });
   }
 }
 function sr(e) {
@@ -3347,11 +3347,11 @@ function sr(e) {
       id: t,
       className: W,
       children: r
-        ? k.LocalizeReact(
+        ? E.LocalizeReact(
             `#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName`,
             (0, R.jsx)(`b`, { children: I(r) }),
           )
-        : k.Localize(`#SteamDeckVerified_DescriptionHeader_Unknown`),
+        : E.Localize(`#SteamDeckVerified_DescriptionHeader_Unknown`),
     });
   let a = ``,
     o = null;
@@ -3365,16 +3365,16 @@ function sr(e) {
     case 1:
       ((a = `#SteamDeckVerified_DescriptionHeader_Unsupported`), (o = G));
   }
-  let s = (0, R.jsx)(`span`, { className: o, children: k.Localize(dr(n)) }),
-    c = (0, R.jsx)(`span`, { className: W, children: k.Localize(i || a) }),
+  let s = (0, R.jsx)(`span`, { className: o, children: E.Localize(dr(n)) }),
+    c = (0, R.jsx)(`span`, { className: W, children: E.Localize(i || a) }),
     l = r
-      ? k.LocalizeReact(
+      ? E.LocalizeReact(
           `#SteamDeckVerified_DescriptionHeader_WithAppName`,
           (0, R.jsx)(`b`, { children: I(r) }),
           s,
           c,
         )
-      : k.LocalizeReact(`#SteamDeckVerified_DescriptionHeader`, s, c);
+      : E.LocalizeReact(`#SteamDeckVerified_DescriptionHeader`, s, c);
   return (0, R.jsx)(`div`, { id: t, className: W, children: l });
 }
 function cr(e) {
@@ -3383,11 +3383,11 @@ function cr(e) {
     return (0, R.jsx)(`div`, {
       className: W,
       children: r
-        ? k.LocalizeReact(
+        ? E.LocalizeReact(
             `#SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName`,
             (0, R.jsx)(`b`, { children: I(r) }),
           )
-        : k.Localize(`#SteamOSCompatibility_DescriptionHeader_Unknown`),
+        : E.Localize(`#SteamOSCompatibility_DescriptionHeader_Unknown`),
     });
   let a = ``,
     o = null;
@@ -3398,16 +3398,16 @@ function cr(e) {
     case 1:
       ((a = `#SteamOSCompatibility_DescriptionHeader_Unsupported`), (o = G));
   }
-  let s = (0, R.jsx)(`span`, { className: o, children: k.Localize(fr(n)) }),
-    c = (0, R.jsx)(`span`, { className: W, children: k.Localize(i || a) }),
+  let s = (0, R.jsx)(`span`, { className: o, children: E.Localize(fr(n)) }),
+    c = (0, R.jsx)(`span`, { className: W, children: E.Localize(i || a) }),
     l = r
-      ? k.LocalizeReact(
+      ? E.LocalizeReact(
           `#SteamOSCompatibility_DescriptionHeader_WithAppName`,
           (0, R.jsx)(`b`, { children: I(r) }),
           s,
           c,
         )
-      : k.LocalizeReact(`#SteamOSCompatibility_DescriptionHeader`, s, c);
+      : E.LocalizeReact(`#SteamOSCompatibility_DescriptionHeader`, s, c);
   return (0, R.jsx)(`div`, { id: t, className: W, children: l });
 }
 function lr(e) {
@@ -3416,11 +3416,11 @@ function lr(e) {
     return (0, R.jsx)(`div`, {
       className: W,
       children: r
-        ? k.LocalizeReact(
+        ? E.LocalizeReact(
             `#SteamMachineVerified_DescriptionHeader_Unknown_WithAppName`,
             (0, R.jsx)(`b`, { children: I(r) }),
           )
-        : k.Localize(`#SteamMachineVerified_DescriptionHeader_Unknown`),
+        : E.Localize(`#SteamMachineVerified_DescriptionHeader_Unknown`),
     });
   let a = ``,
     o = null;
@@ -3434,16 +3434,16 @@ function lr(e) {
     case 1:
       ((a = `#SteamMachineVerified_DescriptionHeader_Unsupported`), (o = G));
   }
-  let s = (0, R.jsx)(`span`, { className: o, children: k.Localize(dr(n)) }),
-    c = (0, R.jsx)(`span`, { className: W, children: k.Localize(i || a) }),
+  let s = (0, R.jsx)(`span`, { className: o, children: E.Localize(dr(n)) }),
+    c = (0, R.jsx)(`span`, { className: W, children: E.Localize(i || a) }),
     l = r
-      ? k.LocalizeReact(
+      ? E.LocalizeReact(
           `#SteamMachineVerified_DescriptionHeader_WithAppName`,
           (0, R.jsx)(`b`, { children: I(r) }),
           s,
           c,
         )
-      : k.LocalizeReact(`#SteamMachineVerified_DescriptionHeader`, s, c);
+      : E.LocalizeReact(`#SteamMachineVerified_DescriptionHeader`, s, c);
   return (0, R.jsx)(`div`, { id: t, className: W, children: l });
 }
 function ur(e) {
@@ -3452,11 +3452,11 @@ function ur(e) {
     return (0, R.jsx)(`div`, {
       className: W,
       children: r
-        ? k.LocalizeReact(
+        ? E.LocalizeReact(
             `#SteamFrameVerified_DescriptionHeader_Unknown_WithAppName`,
             (0, R.jsx)(`b`, { children: I(r) }),
           )
-        : k.Localize(`#SteamFrameVerified_DescriptionHeader_Unknown`),
+        : E.Localize(`#SteamFrameVerified_DescriptionHeader_Unknown`),
     });
   let a = ``,
     o = null;
@@ -3470,16 +3470,16 @@ function ur(e) {
     case 1:
       ((a = `#SteamFrameVerified_DescriptionHeader_Unsupported`), (o = G));
   }
-  let s = (0, R.jsx)(`span`, { className: o, children: k.Localize(dr(n)) }),
-    c = (0, R.jsx)(`span`, { className: W, children: k.Localize(i || a) }),
+  let s = (0, R.jsx)(`span`, { className: o, children: E.Localize(dr(n)) }),
+    c = (0, R.jsx)(`span`, { className: W, children: E.Localize(i || a) }),
     l = r
-      ? k.LocalizeReact(
+      ? E.LocalizeReact(
           `#SteamFrameVerified_DescriptionHeader_WithAppName`,
           (0, R.jsx)(`b`, { children: I(r) }),
           s,
           c,
         )
-      : k.LocalizeReact(`#SteamFrameVerified_DescriptionHeader`, s, c);
+      : E.LocalizeReact(`#SteamFrameVerified_DescriptionHeader`, s, c);
   return (0, R.jsx)(`div`, { id: t, className: W, children: l });
 }
 function dr(e) {

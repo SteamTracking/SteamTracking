@@ -91,6 +91,8 @@ message CStoreQuery_MoreLikeThis_Request {
 
 message CStoreQuery_MoreLikeThis_Request_MoreLikeThisOptions {
 	optional float tag_weight = 1 [default = 90];
+	optional bool exclude_featured_creator_homes = 2;
+	optional bool apply_user_preferences = 3;
 }
 
 message CStoreQuery_MoreLikeThis_Response {
@@ -154,6 +156,9 @@ message CStoreQueryFilters {
 	optional int32 global_long_term_top_n_sellers = 43;
 	optional .CStorePageFilter store_page_filter = 44;
 	repeated uint32 parent_appids = 45;
+	repeated uint32 creator_clan_account_ids_exclude = 46;
+	optional .CStoreQueryFilters_PlatformFilter platform_filter = 47;
+	repeated uint32 mod_for_engine_appids = 48;
 }
 
 message CStoreQueryFilters_CompatibilityFilter {
@@ -165,6 +170,12 @@ message CStoreQueryFilters_DiscountedDatesFilter {
 	optional uint32 start_date = 1;
 	optional uint32 end_date = 2;
 	optional bool allow_partial_overlap = 3;
+}
+
+message CStoreQueryFilters_PlatformFilter {
+	optional bool include_windows = 1;
+	optional bool include_mac = 2;
+	optional bool include_linux = 3;
 }
 
 message CStoreQueryFilters_PredefinedFilter {

@@ -7361,6 +7361,8 @@ message StoreItem_BasicInfo {
 	repeated .StoreItem_BasicInfo_CreatorHomeLink developers = 3;
 	repeated .StoreItem_BasicInfo_CreatorHomeLink franchises = 4;
 	optional string capsule_headline = 5;
+	repeated uint32 featured_creator_home_clan_account_ids = 6;
+	optional uint32 first_franchise_clan_account_id = 7;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -7776,6 +7778,7 @@ message StoreItem_RelatedItems {
 	repeated .StoreItem_Playtest playtests = 6;
 	optional .StoreItem_RelatedF2P related_f2p = 7;
 	repeated uint32 dlc_parent_appids = 9;
+	repeated uint32 provides_engine_appid = 10;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

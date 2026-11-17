@@ -2,7 +2,7 @@
  ****/
 
 import { W as e, sn as t } from "./chunk~de7f2df91c.js";
-import { $a as n, Aa as r, Ca as i, wa as a } from "./chunk~1fa4b8f2ff.js";
+import { Ta as n, eo as r, ja as i, wa as a } from "./chunk~1fa4b8f2ff.js";
 import { w as o } from "./chunk~44f252525d.js";
 import { t as s } from "./chunk~ede3e357a2.js";
 import { c } from "./chunk~fc8a9e4879.js";
@@ -61,7 +61,7 @@ function S(e, t) {
     queryKey: w(e, t),
     queryFn: () => m(t),
     enabled: u() == e,
-    staleTime: n.PerMinute * 10,
+    staleTime: r.PerMinute * 10,
   };
 }
 function C(e, t) {
@@ -87,7 +87,7 @@ function O(e) {
     queryKey: [`MeetSteamRegistrantInfo`, e],
     queryFn: () => _(),
     enabled: !!e,
-    staleTime: n.PerMinute * 10,
+    staleTime: r.PerMinute * 10,
   };
 }
 function k(e) {
@@ -98,7 +98,7 @@ function A(e, t) {
     queryKey: [`useMeetSteamQRCode`, e, t],
     queryFn: () => v(e, t),
     enabled: !!t && !0,
-    staleTime: n.PerMinute * 10,
+    staleTime: r.PerMinute * 10,
   };
 }
 function j(e, t) {
@@ -123,17 +123,17 @@ function P(e, t) {
   return new Date((e + r * 60) * 1e3);
 }
 function F(e, t) {
-  let n = P(e, t),
-    r = new Date();
-  return n.getFullYear() == r.getFullYear() ? i(n) : a(n);
+  let r = P(e, t),
+    i = new Date();
+  return r.getFullYear() == i.getFullYear() ? a(r) : n(r);
 }
-function I(e, t, n, i) {
+function I(e, t, n, r) {
   let a = b.default.unix(e),
     o = b.default.unix(e).tz(n).utcOffset() - a.utcOffset(),
     s = b.default.unix(t),
     c = b.default.unix(t).tz(n),
     l = c.utcOffset() - s.utcOffset();
-  return r(e + o * 60, t + l * 60, !0) + (i ? `` : ` ` + c.format(`z`));
+  return i(e + o * 60, t + l * 60, !0) + (r ? `` : ` ` + c.format(`z`));
 }
 export {
   E as a,

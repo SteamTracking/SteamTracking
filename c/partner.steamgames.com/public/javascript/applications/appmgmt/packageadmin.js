@@ -647,6 +647,12 @@ function _(_) {
               }),
               _.length > 0 &&
                 (0, _.jsx)(_, {
+                  _: `p`,
+                  size: `2`,
+                  children: _(`#PackagePricing_CountryOverridesRemoved`),
+                }),
+              _.length > 0 &&
+                (0, _.jsx)(_, {
                   data: _,
                   className: (0, _.default)(
                     _.DefaultFancyTable,
@@ -664,7 +670,7 @@ function _(_) {
                       size: 100,
                       cell: _,
                     }),
-                    ..._,
+                    _[0],
                   ],
                   getRowKey: (_, _) => `${_.strCountryOverride}`,
                   nItemHeight: 20,

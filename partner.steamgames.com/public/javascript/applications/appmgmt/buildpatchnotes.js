@@ -168,63 +168,63 @@ import {
 } from "./chunk~25a6634263.js";
 import { a as oe } from "./chunk~68b7e78d68.js";
 import {
-  $r as se,
-  Bt as ce,
-  Ci as le,
-  Cn as ue,
-  Fn as D,
-  Gt as de,
+  $i as se,
+  Bi as ce,
+  Bt as le,
+  Ci as ue,
+  Ei as de,
+  Ft as fe,
+  Gn as pe,
+  Gt as D,
   Ha as O,
-  Ln as k,
-  Mr as fe,
-  Pt as pe,
-  Qi as me,
-  Si as he,
-  Ti as ge,
-  Va as A,
-  Wn as _e,
-  Wt as j,
-  Ya as ve,
-  _i as ye,
-  ai as be,
-  an as xe,
-  bi as Se,
-  ci as Ce,
-  di as we,
-  fi as Te,
-  ga as Ee,
-  gi as De,
-  gn as Oe,
-  h as M,
-  ha as ke,
-  hi as Ae,
-  ii as je,
-  l as Me,
-  li as Ne,
-  mi as Pe,
-  mr as Fe,
-  oi as Ie,
-  pi as Le,
-  r as Re,
-  ri as ze,
-  si as Be,
-  u as Ve,
-  ua as N,
-  ui as He,
-  vi as Ue,
-  wi as We,
-  wn as Ge,
-  xi as Ke,
-  yi as qe,
-  zi as P,
-  zt as Je,
+  In as k,
+  Kt as me,
+  Nr as he,
+  Rn as A,
+  Si as ge,
+  Ti as _e,
+  Tn as ve,
+  Ua as j,
+  Vt as ye,
+  Xa as be,
+  _a as xe,
+  _i as Se,
+  _n as Ce,
+  ai as we,
+  bi as Te,
+  ci as Ee,
+  da as M,
+  di as De,
+  ei as Oe,
+  fi as ke,
+  ga as Ae,
+  gi as je,
+  h as N,
+  hi as Me,
+  hr as Ne,
+  ii as Pe,
+  l as Fe,
+  li as Ie,
+  mi as Le,
+  oi as Re,
+  on as ze,
+  pi as P,
+  r as Be,
+  si as Ve,
+  u as He,
+  ui as Ue,
+  vi as We,
+  wi as Ge,
+  wn as Ke,
+  xi as qe,
+  yi as Je,
 } from "./chunk~1fa4b8f2ff.js";
 import {
-  d as Ye,
-  g as Xe,
-  h as F,
-  i as Ze,
-  o as Qe,
+  _ as F,
+  i as Ye,
+  p as Xe,
+  s as Ze,
+  v as Qe,
 } from "./chunk~0a99e05c44.js";
 import {
   En as $e,
@@ -277,10 +277,10 @@ import {
 import { A as Vt } from "./chunk~05a38bc848.js";
 import {
   c as Ht,
-  g as Ut,
-  l as Wt,
-  o as Gt,
-  u as Kt,
+  l as Ut,
+  o as Wt,
+  u as Gt,
+  v as Kt,
 } from "./chunk~2bee5a7d08.js";
 import "./chunk~a6b9ae1345.js";
 import { a as qt } from "./chunk~ca0c999570.js";
@@ -376,7 +376,7 @@ var Fn = { GetMyEventVote: Nn, RateEvent: Pn },
   V = v(n(), 1),
   H = y(),
   In = V.lazy(() =>
-    ve(
+    be(
       () =>
         import(`./chunk~1be18041c2.js`).then((e) => ({
           default: e.ShareEventDialogBody,
@@ -407,13 +407,13 @@ function Rn(e) {
     o = nn(t);
   return (0, H.jsxs)(H.Fragment, {
     children: [
-      (0, H.jsxs)(O, {
+      (0, H.jsxs)(j, {
         focusable: !0,
         className: p(Rt, Bt, pn),
         onActivate: i,
         children: [
-          (0, H.jsx)(ze, { className: gn }),
-          (0, H.jsx)(`span`, { className: vn, children: N(`#Button_Share`) }),
+          (0, H.jsx)(Pe, { className: gn }),
+          (0, H.jsx)(`span`, { className: vn, children: M(`#Button_Share`) }),
         ],
       }),
       (0, H.jsx)(Ln, {
@@ -441,11 +441,11 @@ function Gn(e) {
 }
 function Kn(e) {
   let { appid: t } = e,
-    { data: n } = Xe({ appid: t });
+    { data: n } = Qe({ appid: t });
   return !n || n.length == 0
     ? null
     : (0, H.jsx)(qn, {
-        strTitle: N(`#EventDisplay_SocialTitle`),
+        strTitle: M(`#EventDisplay_SocialTitle`),
         id: `` + t,
         rgSocialMedia: n,
       });
@@ -489,10 +489,10 @@ function Xn(e) {
   let { social: t } = e;
   return t.url
     ? (0, H.jsx)(`a`, {
-        href: D(t.url, !0),
+        href: k(t.url, !0),
         target: c.IN_CLIENT ? void 0 : `_blank`,
         rel: `noopener noreferrer`,
-        children: (0, H.jsx)(Oe, {
+        children: (0, H.jsx)(Ce, {
           toolTipContent: t.url,
           children: (0, H.jsx)(Qn, { social: t }),
         }),
@@ -504,7 +504,7 @@ function Zn(e) {
   return (0, H.jsxs)(`div`, {
     className: Un,
     children: [
-      (0, H.jsx)(Oe, {
+      (0, H.jsx)(Ce, {
         toolTipContent: t.text,
         children: (0, H.jsx)(Qn, { social: t }),
       }),
@@ -517,29 +517,29 @@ function Qn(e) {
   return (0, H.jsx)(er, { linkType: t.link_type || 0, className: Hn });
 }
 var $n = {
-  1: ge,
-  2: Ce,
-  3: Ke,
-  4: Se,
-  5: Ie,
-  6: Te,
-  18: Te,
-  23: Te,
-  7: he,
-  8: je,
-  9: We,
-  10: Pe,
-  11: Ne,
-  12: qe,
-  13: ye,
-  14: Ue,
-  15: Ae,
-  16: He,
-  17: le,
-  19: Be,
-  20: be,
-  21: we,
-  22: De,
+  1: de,
+  2: Ie,
+  3: ge,
+  4: qe,
+  5: Ve,
+  6: P,
+  18: P,
+  23: P,
+  7: ue,
+  8: we,
+  9: _e,
+  10: Me,
+  11: Ue,
+  12: Te,
+  13: We,
+  14: Je,
+  15: je,
+  16: De,
+  17: Ge,
+  19: Ee,
+  20: Re,
+  21: ke,
+  22: Se,
   24: Le,
 };
 function er(e) {
@@ -559,7 +559,7 @@ var tr = class e extends ht {
           t,
         i = await zn.default.post(r, n);
       if (i.data.success != 1) throw i.data;
-      return (this.RemoveGIDFromList(e, Wt + t), i.data);
+      return (this.RemoveGIDFromList(e, Ut + t), i.data);
     }
     static sm_Instance;
     static sm_SummaryInstance;
@@ -595,7 +595,7 @@ function ir(e) {
       children: (0, H.jsx)(Mt, {
         startDateAndTime: a,
         endDateAndTime: o,
-        bHideEndTime: !Kt(s),
+        bHideEndTime: !Gt(s),
         stylesmodule: c,
       }),
     })
@@ -683,7 +683,7 @@ function ur(e) {
     repost: c,
     share: l,
   } = e;
-  return (0, H.jsxs)(O, {
+  return (0, H.jsxs)(j, {
     className: yn,
     "flow-children": `row`,
     focusable: !1,
@@ -696,26 +696,26 @@ function ur(e) {
             children: [
               (0, H.jsxs)(`div`, {
                 className: dn,
-                children: [(0, H.jsx)(P, { className: ln }), gt(t)],
+                children: [(0, H.jsx)(ce, { className: ln }), gt(t)],
               }),
-              (0, H.jsxs)(O, {
+              (0, H.jsxs)(j, {
                 focusable: !0,
                 className: p(Rt, Bt, pn, r == `up` ? mn : ``),
                 onActivate: () => i(`up`),
                 children: [
-                  (0, H.jsx)(P, { className: r == `up` ? un : fn }),
+                  (0, H.jsx)(ce, { className: r == `up` ? un : fn }),
                   (0, H.jsx)(`span`, {
                     className: vn,
-                    children: N(`#Button_RateUp`),
+                    children: M(`#Button_RateUp`),
                   }),
                 ],
               }),
-              (0, H.jsx)(O, {
+              (0, H.jsx)(j, {
                 focusable: !0,
                 className: p(Rt, Bt, pn, r == `down` ? mn : ``),
                 onActivate: () => i(`down`),
-                "aria-label": N(`#Button_RateDown`),
-                children: (0, H.jsx)(P, { className: r == `down` ? xn : cn }),
+                "aria-label": M(`#Button_RateDown`),
+                children: (0, H.jsx)(ce, { className: r == `down` ? xn : cn }),
               }),
             ],
           }),
@@ -739,32 +739,32 @@ function dr(e) {
     children: [
       (0, H.jsxs)(`div`, {
         className: bn,
-        children: [(0, H.jsx)(Fe, {}), gt(t)],
+        children: [(0, H.jsx)(Ne, {}), gt(t)],
       }),
       n &&
         (0, H.jsx)(ae, {
-          href: k(n),
+          href: A(n),
           children: (0, H.jsxs)(`div`, {
             className: p(`yYL-OrX9PtQ-`, `DPUYf3XM-3s-`, `yGT3R-m6gZk-`),
             children: [
-              (0, H.jsx)(Fe, {}),
+              (0, H.jsx)(Ne, {}),
               (0, H.jsx)(`span`, {
                 className: `x25qTcshK-4-`,
-                children: N(`#Button_Discuss`),
+                children: M(`#Button_Discuss`),
               }),
             ],
           }),
         }),
       !n &&
-        (0, H.jsxs)(O, {
+        (0, H.jsxs)(j, {
           focusable: !0,
           onActivate: r,
           className: p(`yYL-OrX9PtQ-`, `DPUYf3XM-3s-`, `yGT3R-m6gZk-`),
           children: [
-            (0, H.jsx)(Fe, {}),
+            (0, H.jsx)(Ne, {}),
             (0, H.jsx)(`span`, {
               className: `x25qTcshK-4-`,
-              children: N(`#Button_Discuss`),
+              children: M(`#Button_Discuss`),
             }),
           ],
         }),
@@ -773,16 +773,16 @@ function dr(e) {
 }
 function fr() {
   return f.logged_in
-    ? !f.is_limited || (M((0, H.jsx)(st, {}), window), !1)
+    ? !f.is_limited || (N((0, H.jsx)(st, {}), window), !1)
     : (_.IN_CLIENT
         ? console.log(
             `EventDiscussionWidget: In Client: Cannot use login widget. We expect to be already logged in.`,
           )
-        : M(
-            (0, H.jsx)(Me, {
-              strTitle: N(`#EventDisplay_Share_NotLoggedIn`),
-              strDescription: N(`#EventDisplay_Share_NotLoggedIn_Description`),
-              strOKButtonText: N(`#MobileLogin_SignIn`),
+        : N(
+            (0, H.jsx)(Fe, {
+              strTitle: M(`#EventDisplay_Share_NotLoggedIn`),
+              strDescription: M(`#EventDisplay_Share_NotLoggedIn_Description`),
+              strOKButtonText: M(`#MobileLogin_SignIn`),
               onOK: () => tt(),
             }),
             window,
@@ -800,16 +800,16 @@ function pr(e) {
     l = (e) => {
       let t = te(e);
       t &&
-        M(
-          (0, H.jsx)(Ve, {
-            strDescription: N(`#EventDisplay_Share_CommentMigrationInProcess`),
+        N(
+          (0, H.jsx)(He, {
+            strDescription: M(`#EventDisplay_Share_CommentMigrationInProcess`),
           }),
           t,
         );
     },
     [u, d, f, p] = L(() => [
       b(t.nVotesUp - t.nVotesDown, 0, 2 ** 53 - 1),
-      D(t.GetDiscussionURL(c?.vanity_url)),
+      k(t.GetDiscussionURL(c?.vanity_url)),
       t.BIsUnlistedEvent(),
       t.nCommentCount,
     ]),
@@ -1044,7 +1044,7 @@ function li() {
     className: Rr,
     size: `medium`,
     position: `center`,
-    string: A.Localize(`#Loading`),
+    string: O.Localize(`#Loading`),
   });
 }
 function ui(e) {
@@ -1066,13 +1066,13 @@ function ui(e) {
 }
 function di(e) {
   let { bVote: t, closeModal: n } = e;
-  return (0, H.jsx)(Me, {
-    strTitle: A.Localize(`#Informational_Message`),
+  return (0, H.jsx)(Fe, {
+    strTitle: O.Localize(`#Informational_Message`),
     onCancel: n,
     onOK: n,
     bAlertDialog: !0,
     children: (0, H.jsx)(`div`, {
-      children: A.LocalizeReact(
+      children: O.LocalizeReact(
         t
           ? `#SteamAward_Vote_LimitedAccount`
           : `#SteamAward_Nominate_LimitedAccount`,
@@ -1080,7 +1080,7 @@ function di(e) {
           href: `${c.HELP_BASE_URL}wizard/HelpWithLimitedAccount`,
           target: c.IN_CLIENT ? void 0 : `_blank`,
           rel: `noreferrer`,
-          children: A.Localize(`#User_LimitedAccount_UrlInfo`),
+          children: O.Localize(`#User_LimitedAccount_UrlInfo`),
         }),
       ),
     }),
@@ -1096,13 +1096,13 @@ function fi(e) {
     } = e,
     { data: o } = F({ appid: n }),
     { data: s } = F({ appid: r }),
-    { data: c } = Ye({ appid: n }),
-    { data: l } = Ye({ appid: r }),
+    { data: c } = Xe({ appid: n }),
+    { data: l } = Xe({ appid: r }),
     u = c ? $e(c, `small_capsule`) : void 0,
     d = l ? $e(l, `small_capsule`) : void 0;
-  return (0, H.jsx)(Me, {
+  return (0, H.jsx)(Fe, {
     modalClassName: ni,
-    strTitle: A.Localize(
+    strTitle: O.Localize(
       t == `Vote`
         ? `#SteamAward_VoteConflictWarning_Title`
         : `#SteamAward_NominationConflictWarning_Title`,
@@ -1113,7 +1113,7 @@ function fi(e) {
     children: (0, H.jsxs)(`div`, {
       className: ri,
       children: [
-        A.LocalizeReact(
+        O.LocalizeReact(
           t == `Vote`
             ? `#SteamAward_VoteConflictWarning_Explanation`
             : `#SteamAward_NominationConflictWarning_Explanation`,
@@ -1132,7 +1132,7 @@ function fi(e) {
           : (0, H.jsx)(B, {
               size: `small`,
               position: `center`,
-              string: A.Localize(`#Loading`),
+              string: O.Localize(`#Loading`),
             }),
       ],
     }),
@@ -1155,25 +1155,25 @@ function pi(e) {
     x = h?.[a.internal_name] ?? g;
   if (!n.bNominationsLive) return null;
   if (!c) return (0, H.jsx)(li, {});
-  let C = D(Dr(`nominations/`)),
+  let C = k(Dr(`nominations/`)),
     w = s == t,
     ee = n.rgCategories.length == 1,
     T = i && !a.bLaborOfLove;
   return (0, H.jsxs)(ci, {
-    strMainTitle: A.Localize(`#SteamAwards_EventMainTitle`),
+    strMainTitle: O.Localize(`#SteamAwards_EventMainTitle`),
     subtitle: (0, H.jsxs)(`div`, {
       className: Ur,
       children: [
         i
-          ? A.Localize(`#SteamAwards_EventCallToAction`)
-          : A.Localize(`#SteamAwards_EventVotingDateTeaser`, Tr()),
+          ? O.Localize(`#SteamAwards_EventCallToAction`)
+          : O.Localize(`#SteamAwards_EventVotingDateTeaser`, Tr()),
         i &&
           (0, H.jsxs)(`a`, {
             href: C,
             className: `OztIiH5vYRE-`,
             children: [
               `(`,
-              A.Localize(`#EventDisplay_CallToAction_LearnMore`),
+              O.Localize(`#EventDisplay_CallToAction_LearnMore`),
               `)`,
             ],
           }),
@@ -1181,21 +1181,21 @@ function pi(e) {
     }),
     headerText: i
       ? ee
-        ? A.Localize(`#SteamAwards_EventNominateGamePrompt_Long`, o?.name ?? ``)
+        ? O.Localize(`#SteamAwards_EventNominateGamePrompt_Long`, o?.name ?? ``)
         : (0, H.jsx)(`a`, {
             className: Gr,
             href: C,
-            children: A.Localize(
+            children: O.Localize(
               `#SteamAwards_EventNominateGamePrompt_NoCategory`,
               o?.name ?? ``,
             ),
           })
-      : A.Localize(`#SteamAwards_Event_NominationsClosed`),
+      : O.Localize(`#SteamAwards_Event_NominationsClosed`),
     footer:
       T &&
       (0, H.jsx)(`a`, {
         href: C,
-        children: A.Localize(`#SteamAwards_EventNominationAlternativeLinkText`),
+        children: O.Localize(`#SteamAwards_EventNominationAlternativeLinkText`),
       }),
     children: [
       !!(ee && (i || w)) &&
@@ -1208,7 +1208,7 @@ function pi(e) {
               (0, H.jsx)(`div`, {
                 style: { background: f, color: m },
                 className: p(`SNoK7p5tEVU-`, w && `eIE9nuLmVLE-`),
-                children: (0, H.jsx)(de, {
+                children: (0, H.jsx)(me, {
                   controlled: !0,
                   className: p(`_1IIojhfpy34-`, w && `eIE9nuLmVLE-`),
                   checked: w,
@@ -1220,7 +1220,7 @@ function pi(e) {
                   highlightColor: m,
                   label: (0, H.jsx)(`div`, {
                     className: `bwYOMwZYlP0-`,
-                    children: A.Localize(
+                    children: O.Localize(
                       w
                         ? `#SteamAwards_NominateWidget_CTA_PastTense`
                         : `#SteamAwards_NominateWidget_CTA`,
@@ -1254,15 +1254,15 @@ function pi(e) {
 function mi(e) {
   let { unAppID: t, widget: n, actions: r, bVotesOpen: i } = e,
     { data: a } = F({ appid: t }),
-    o = D(Dr());
+    o = k(Dr());
   return (0, H.jsx)(ci, {
-    strMainTitle: A.Localize(`#SteamAwards_EventMainTitleCombined`),
+    strMainTitle: O.Localize(`#SteamAwards_EventMainTitleCombined`),
     headerText: i
-      ? A.Localize(`#SteamAwards_EventVoteForGamePrompt`, a?.name ?? ``)
+      ? O.Localize(`#SteamAwards_EventVoteForGamePrompt`, a?.name ?? ``)
       : (0, H.jsx)(`a`, {
           href: o,
           className: Gr,
-          children: A.Localize(`#SteamAwards_Event_VotesClosed`),
+          children: O.Localize(`#SteamAwards_Event_VotesClosed`),
         }),
     headerContent: (0, H.jsx)(`div`, {
       className: ti,
@@ -1276,7 +1276,7 @@ function mi(e) {
     }),
     footer: (0, H.jsx)(`a`, {
       href: o,
-      children: A.Localize(`#EventDisplay_CallToAction_LearnMore`),
+      children: O.Localize(`#EventDisplay_CallToAction_LearnMore`),
     }),
   });
 }
@@ -1304,7 +1304,7 @@ function hi(e) {
                     className: $r,
                     children: (0, H.jsx)(`span`, {
                       className: Qr,
-                      children: A.Localize(`#SteamAward_VoteButton_VotedText`),
+                      children: O.Localize(`#SteamAward_VoteButton_VotedText`),
                     }),
                   })
                 : (0, H.jsx)(`button`, {
@@ -1314,7 +1314,7 @@ function hi(e) {
                     },
                     children: (0, H.jsx)(`span`, {
                       className: Qr,
-                      children: A.Localize(`#SteamAward_VoteButton_PromptText`),
+                      children: O.Localize(`#SteamAward_VoteButton_PromptText`),
                     }),
                   }),
             ],
@@ -1505,7 +1505,7 @@ function ra(e) {
                   i,
                   (0, H.jsx)(`div`, {
                     className: Pi,
-                    children: N(`#EventDisplay_NewsHubSubtitle`),
+                    children: M(`#EventDisplay_NewsHubSubtitle`),
                   }),
                 ],
               }),
@@ -1590,46 +1590,46 @@ function aa(e) {
         _.IN_CLIENT &&
           f &&
           e.push({
-            label: N(`#EventDisplay_ViewInLibrary_ExtraShort`),
+            label: M(`#EventDisplay_ViewInLibrary_ExtraShort`),
             data: `steam://nav/games/details/` + t,
           }),
         i &&
           e.push({
-            label: N(`#EventDisplay_ViewStorePage_ExtraShort`),
-            data: k(i),
+            label: M(`#EventDisplay_ViewStorePage_ExtraShort`),
+            data: A(i),
           }),
         c ||
           (o &&
             e.push({
-              label: N(`#EventDisplay_ViewCommunityPage_ExtraShort`),
-              data: k(o),
+              label: M(`#EventDisplay_ViewCommunityPage_ExtraShort`),
+              data: A(o),
             }),
           s &&
             e.push({
-              label: N(`#EventDisplay_ViewForum_ExtraShort`),
-              data: k(s),
+              label: M(`#EventDisplay_ViewForum_ExtraShort`),
+              data: A(s),
             }),
           r &&
             e.push({
               label: (0, H.jsxs)(`div`, {
                 className: Ui,
                 children: [
-                  (0, H.jsx)(se, {}),
-                  N(`#EventDisplay_RSSFeed_ExtraShort`),
+                  (0, H.jsx)(Oe, {}),
+                  M(`#EventDisplay_RSSFeed_ExtraShort`),
                 ],
               }),
               data: l,
             })),
         d &&
           e.push({
-            label: N(`#EventDisplay_Admin_ExtraShort`),
+            label: M(`#EventDisplay_Admin_ExtraShort`),
             data: Qt(t, E.InitFromClanID(n, _.EUNIVERSE), `admin`),
           }),
         e
       );
     }, [f, i, c, d, o, s, r, l, t, n]);
-  return (0, H.jsx)(pe, {
-    strDefaultLabel: N(`#EventDisplay_LinksDropDown_ExtraShort`),
+  return (0, H.jsx)(fe, {
+    strDefaultLabel: M(`#EventDisplay_LinksDropDown_ExtraShort`),
     strClassName: zi,
     strDropDownButtonClassName: Bi,
     strDropDownMenuCtnClass: Hi,
@@ -1637,7 +1637,7 @@ function aa(e) {
     arrowClassName: Vi,
     rgOptions: p,
     onChange: (e, t, n) => {
-      n && Ge(n, e.data);
+      n && ve(n, e.data);
     },
   });
 }
@@ -1690,9 +1690,9 @@ var ca = `WbZZkptWLHg-`;
 function la(e) {
   let { event: t } = e,
     n = L(() => t.jsondata?.referenced_appids || []),
-    r = Ze(),
+    r = Ye(),
     i = oe({
-      queries: n.map((e) => Qe(r, { appid: e })),
+      queries: n.map((e) => Ze(r, { appid: e })),
       combine: (e) => ({
         bLoaded: e.every((e) => !e.isPending),
         data: e.map((e) => e.data),
@@ -1703,8 +1703,8 @@ function la(e) {
       .flatMap((e) =>
         e?.store_url_path && e?.name ? [`[url="${nt(e)}"]${e.name}[/url]`] : [],
       )
-      .join(N(`#EventDisplay_ReferencedApps_Joiner`)),
-    o = ke(`#EventDisplay_ReferencedApps`, n.length, a);
+      .join(M(`#EventDisplay_ReferencedApps_Joiner`)),
+    o = Ae(`#EventDisplay_ReferencedApps`, n.length, a);
   return (0, H.jsx)(`div`, {
     className: ca,
     children: (0, H.jsx)(en, { text: o, event: t }),
@@ -1713,13 +1713,13 @@ function la(e) {
 function ua(e) {
   let { children: t } = e;
   return x() && !_.IN_STEAMUI
-    ? (0, H.jsx)(Re, { className: It, children: t })
+    ? (0, H.jsx)(Be, { className: It, children: t })
     : (0, H.jsx)(H.Fragment, { children: t });
 }
 var da = 56,
   fa = 136,
   pa = V.lazy(() =>
-    ve(
+    be(
       () => import(`./chunk~404eafa76f.js`),
       __vite__mapDeps([
         91, 1, 2, 3, 4, 5, 10, 11, 8, 9, 12, 6, 7, 13, 14, 15, 16, 17, 18, 19,
@@ -1800,7 +1800,7 @@ var K = class extends V.Component {
       timing: `cubic-in-out`,
       onComplete: this.OnScrollComplete,
     };
-    ((this.m_scrollAnimation = new ce(t, { scrollTop: e }, n)),
+    ((this.m_scrollAnimation = new ye(t, { scrollTop: e }, n)),
       this.m_scrollAnimation.Start());
   }
   ScrollToBottom() {
@@ -1955,14 +1955,14 @@ var K = class extends V.Component {
     }
     return (
       (this.m_nCurrentRenderCount = i.length),
-      (0, H.jsxs)(O, {
+      (0, H.jsxs)(j, {
         onCancelButton: this.props.closeModal,
         className: wi,
         ref: this.m_refPage,
         children: [
           this.props.showAppHeader &&
             (0, H.jsx)(sa, { appId: a ?? 0, clanId: o ?? 0 }),
-          (0, H.jsx)(O, {
+          (0, H.jsx)(j, {
             className: p(Di, void 0),
             ref: this.m_refScroll,
             onScroll: this.OnScroll,
@@ -1973,7 +1973,7 @@ var K = class extends V.Component {
             children: n
               ? (0, H.jsx)(`div`, {
                   className: ki,
-                  children: N(`#EventDisplay_NoEventsToSee`),
+                  children: M(`#EventDisplay_NoEventsToSee`),
                 })
               : (0, H.jsxs)(H.Fragment, {
                   children: [
@@ -1992,7 +1992,7 @@ var K = class extends V.Component {
                               (0, H.jsx)(`div`, {
                                 className: p(`TlGGn2-aFiY-`, `ibKXDplBVRg-`),
                                 onClick: this.Close,
-                                children: (0, H.jsx)(me, {}),
+                                children: (0, H.jsx)(se, {}),
                               }),
                             !t &&
                               (0, H.jsx)(`div`, {
@@ -2002,7 +2002,7 @@ var K = class extends V.Component {
                                   `ibKXDplBVRg-`,
                                 ),
                                 onClick: this.ScrollToPrevEvent,
-                                children: (0, H.jsx)(fe, { angle: 0 }),
+                                children: (0, H.jsx)(he, { angle: 0 }),
                               }),
                             !t &&
                               (0, H.jsx)(`div`, {
@@ -2012,7 +2012,7 @@ var K = class extends V.Component {
                                   `ibKXDplBVRg-`,
                                 ),
                                 onClick: this.ScrollToNextEvent,
-                                children: (0, H.jsx)(fe, { angle: 180 }),
+                                children: (0, H.jsx)(he, { angle: 180 }),
                               }),
                             this.props.onAppIconClick &&
                               (0, H.jsx)(ma, {
@@ -2071,7 +2071,7 @@ var ha = I((e) => {
             className: Qi,
             children: (0, H.jsx)(B, {
               position: `center`,
-              string: N(`#Loading`),
+              string: M(`#Loading`),
             }),
           })
         : null;
@@ -2161,7 +2161,7 @@ var ha = I((e) => {
                               className: na,
                               children: [
                                 ` `,
-                                N(`#EventDisplay_PostedBy`),
+                                M(`#EventDisplay_PostedBy`),
                                 v,
                                 ` `,
                               ],
@@ -2233,7 +2233,7 @@ var ha = I((e) => {
                 children: [
                   (0, H.jsxs)(`div`, {
                     className: p(yr, Ki, c && `Vye1545x6hY-`),
-                    onContextMenu: _.IN_CLIENT ? _e : void 0,
+                    onContextMenu: _.IN_CLIENT ? pe : void 0,
                     children: [
                       (0, H.jsx)(wt, { text: d, event: e }),
                       (0, H.jsx)(`span`, { className: Lt }),
@@ -2243,10 +2243,10 @@ var ha = I((e) => {
                   !!e.jsondata.read_more_link &&
                     (0, H.jsx)(`div`, {
                       className: p(`Hr-OMRnVpqk-`),
-                      children: (0, H.jsx)(ue, {
+                      children: (0, H.jsx)(Ke, {
                         className: p(`yYL-OrX9PtQ-`),
                         href: e.jsondata.read_more_link,
-                        children: N(`#EventEmail_Button_ClickForMoreDetails`),
+                        children: M(`#EventEmail_Button_ClickForMoreDetails`),
                       }),
                     }),
                   x && (0, H.jsx)(wn, { event: e, language: u, strSaleURL: x }),
@@ -2273,7 +2273,7 @@ function _a(e) {
     } = e,
     o = t.BImageNeedScreenshotFallback(`background`, i),
     s = t.type,
-    c = Yt(t, `background`, i, Ut.background_main, !o);
+    c = Yt(t, `background`, i, Kt.background_main, !o);
   return (
     n && c && (c = n(c)),
     (0, H.jsxs)(H.Fragment, {
@@ -2498,18 +2498,18 @@ function Ra(e, t) {
     let a = Q(e, i).trim(),
       o = Q(t, i).trim();
     if (!a && !o) continue;
-    let s = N(`#Language_` + m(i));
-    if (((n = !0), !a)) return N(`#BuildNotes_Error_MissingTitle`, s);
-    if (!o) return N(`#BuildNotes_Error_MissingDescription`, s);
-    if (a.length > 80) return N(`#BuildNotes_Error_TitleTooLong`, s);
-    if (o.length > 32768) return N(`#BuildNotes_Error_DescriptionTooLong`, s);
+    let s = M(`#Language_` + m(i));
+    if (((n = !0), !a)) return M(`#BuildNotes_Error_MissingTitle`, s);
+    if (!o) return M(`#BuildNotes_Error_MissingDescription`, s);
+    if (a.length > 80) return M(`#BuildNotes_Error_TitleTooLong`, s);
+    if (o.length > 32768) return M(`#BuildNotes_Error_DescriptionTooLong`, s);
     i === 0 && (r = !0);
   }
   return n
     ? r
       ? null
-      : N(`#BuildNotes_Error_NoEnglishProvided`)
-    : N(`#BuildNotes_Error_NoLanguagesProvided`);
+      : M(`#BuildNotes_Error_NoEnglishProvided`)
+    : M(`#BuildNotes_Error_NoLanguagesProvided`);
 }
 async function za(e, t, n) {
   if (Ra(t, n)) return null;
@@ -2539,7 +2539,7 @@ async function za(e, t, n) {
   return null;
 }
 function Ba(e, t) {
-  let n = new Gt();
+  let n = new Wt();
   ((n.GID = `PreviewPartnerEventRow_0`),
     (n.clanSteamID = new E(f.steamid)),
     (n.postTime = Date.now() / 1e3),
@@ -2636,7 +2636,7 @@ function Ha(e) {
         children: [
           (0, H.jsx)(`div`, {
             className: Sa,
-            children: N(
+            children: M(
               `#BuildNotes_Title`,
               $.Get().GetPostedBuildVersion(),
               $.Get().GetBuildBranch() || `default`,
@@ -2650,20 +2650,20 @@ function Ha(e) {
                 children: [
                   (0, H.jsx)(`div`, {
                     className: Ca,
-                    children: N(`#BuildNotes_SubTitle`),
+                    children: M(`#BuildNotes_SubTitle`),
                   }),
                   (0, H.jsx)(`div`, {
                     className: wa,
-                    children: N(`#BuildNotes_Desc1`),
+                    children: M(`#BuildNotes_Desc1`),
                   }),
                   (0, H.jsx)(`div`, {
                     className: wa,
-                    children: Ee(`#BuildNotes_Desc2`),
+                    children: xe(`#BuildNotes_Desc2`),
                   }),
                   (0, H.jsx)(`a`, {
                     href: C,
-                    children: (0, H.jsx)(j, {
-                      children: N(`#BuildNotes_OpenFullEditor`),
+                    children: (0, H.jsx)(D, {
+                      children: M(`#BuildNotes_OpenFullEditor`),
                     }),
                   }),
                 ],
@@ -2722,7 +2722,7 @@ var Ua = (e) => {
       m = ``;
     if (r.includes(u.k_ESteamRealmChina)) {
       let e = o(29).trim() !== ``;
-      m = N(
+      m = M(
         e
           ? `#BuildNotes_SteamChina_Provided`
           : `#BuildNotes_SteamChina_NotProvided`,
@@ -2736,20 +2736,20 @@ var Ua = (e) => {
           children: [
             (0, H.jsx)(`div`, {
               className: Da,
-              children: N(`#BuildNotes_PatchnotesTitle`),
+              children: M(`#BuildNotes_PatchnotesTitle`),
             }),
             (0, H.jsxs)(`div`, {
               className: Ea,
               children: [
-                (0, H.jsx)(j, {
+                (0, H.jsx)(D, {
                   onClick: () => {
                     let e = new Et(),
-                      t = N(`#BuildNotes_SampleTitle`),
-                      n = N(`#BuildNotes_SampleDescription`);
+                      t = M(`#BuildNotes_SampleTitle`),
+                      n = M(`#BuildNotes_SampleDescription`);
                     for (let r = 0; r < 32; r++)
                       (e.SetLocalization(`Title`, r, t),
                         e.SetLocalization(`Description`, r, n));
-                    M(
+                    N(
                       (0, H.jsx)(At, {
                         sampleLocData: e,
                         sampleFilename: `patchnote_loc_sample`,
@@ -2758,7 +2758,7 @@ var Ua = (e) => {
                       window,
                     );
                   },
-                  children: N(`#BuildNotes_ImportLocalization`),
+                  children: M(`#BuildNotes_ImportLocalization`),
                 }),
                 (0, H.jsx)(On, {
                   selectedLang: n,
@@ -2770,21 +2770,21 @@ var Ua = (e) => {
             }),
           ],
         }),
-        (0, H.jsx)(Je, {
+        (0, H.jsx)(le, {
           value: o(n),
-          placeholder: N(`#BuildNotes_TitlePlaceholder`),
+          placeholder: M(`#BuildNotes_TitlePlaceholder`),
           onChange: (e) => s(n, e.currentTarget.value),
           maxLength: 80,
         }),
         (0, H.jsx)(`div`, {
           className: Da,
-          children: N(`#BuildNotes_PatchnotesDesc`),
+          children: M(`#BuildNotes_PatchnotesDesc`),
         }),
         (0, H.jsx)(tn, {
           fnGetCurText: () => c(n),
           fnOnTextChange: (e) => l(n, e.currentTarget.value),
           fnSetText: (e) => l(n, e),
-          strPlaceholder: N(`#BuildNotes_DescPlaceholder`),
+          strPlaceholder: M(`#BuildNotes_DescPlaceholder`),
           emoticonStore: p,
           bSupportHTMLImport: !0,
           showFormatHelp: `PartnerEvents`,
@@ -2794,9 +2794,9 @@ var Ua = (e) => {
           className: Oa,
           children: [
             !t &&
-              (0, H.jsx)(xe, {
+              (0, H.jsx)(ze, {
                 onClick: d,
-                children: N(`#BuildNotes_Preview`),
+                children: M(`#BuildNotes_Preview`),
               }),
             !!t &&
               (0, H.jsx)(`div`, { className: `eCw9BjENLEs-`, children: t }),
@@ -2831,10 +2831,10 @@ var Ua = (e) => {
             (0, H.jsxs)(`div`, {
               className: Oa,
               children: [
-                (0, H.jsx)(j, { onClick: i, children: N(`#BuildNotes_Close`) }),
-                (0, H.jsx)(xe, {
+                (0, H.jsx)(D, { onClick: i, children: M(`#BuildNotes_Close`) }),
+                (0, H.jsx)(ze, {
                   onClick: a,
-                  children: N(`#BuildNotes_PostNotes`),
+                  children: M(`#BuildNotes_PostNotes`),
                 }),
               ],
             }),
@@ -2858,7 +2858,7 @@ var Ua = (e) => {
         (0, H.jsx)(B, { className: Ma }),
         (0, H.jsx)(`div`, {
           className: void 0,
-          children: N(`#BuildNotes_Submitting`),
+          children: M(`#BuildNotes_Submitting`),
         }),
       ],
     }),
@@ -2868,13 +2868,13 @@ var Ua = (e) => {
       children: [
         (0, H.jsx)(`div`, {
           className: Ia,
-          children: N(`#BuildNotes_FailedDescription`),
+          children: M(`#BuildNotes_FailedDescription`),
         }),
         (0, H.jsx)(`div`, {
           className: La,
-          children: (0, H.jsx)(j, {
+          children: (0, H.jsx)(D, {
             onClick: e.fnOnReturnToEditor,
-            children: N(`#BuildNotes_ReturnToEditor`),
+            children: M(`#BuildNotes_ReturnToEditor`),
           }),
         }),
       ],
@@ -2887,12 +2887,12 @@ var Ua = (e) => {
       children: [
         (0, H.jsx)(`div`, {
           className: void 0,
-          children: N(`#BuildNotes_Success`),
+          children: M(`#BuildNotes_Success`),
         }),
         (0, H.jsx)(`a`, {
           href: r,
           className: Pa,
-          children: (0, H.jsx)(j, { children: N(`#BuildNotes_ViewPublished`) }),
+          children: (0, H.jsx)(D, { children: M(`#BuildNotes_ViewPublished`) }),
         }),
       ],
     });

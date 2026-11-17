@@ -462,7 +462,7 @@ var f = d(c(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetLists = t;
@@ -471,7 +471,7 @@ var f = d(c(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetListDetails = n;
@@ -1401,7 +1401,7 @@ var x = class r extends f.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetPartnerEventsByBuildIDRange = i;

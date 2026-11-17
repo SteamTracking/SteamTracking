@@ -3097,7 +3097,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`],
+        rgBrowserAPISites: [`partner`, `store`],
       },
     );
   }
@@ -3123,7 +3123,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`],
+        rgBrowserAPISites: [`partner`, `store`],
       },
     );
   }
@@ -3136,7 +3136,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`],
+        rgBrowserAPISites: [`partner`, `store`],
       },
     );
   }
@@ -3156,7 +3156,7 @@ var _ = class _ extends _.Message {
   function _(_, _) {
     return _.SendNotification(`MarketingMessages.MarkMessageSeen#1`, _(_, _), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.MarkMessageSeen = _;
@@ -3166,7 +3166,7 @@ var _ = class _ extends _.Message {
       _(_, _),
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`],
+        rgBrowserAPISites: [`partner`, `store`],
       },
     );
   }

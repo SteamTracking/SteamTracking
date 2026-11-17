@@ -1,4 +1,19 @@
-import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~de7f2df91c.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./chunk~de7f2df91c.js";
 import { _, _ } from "./chunk~25a6634263.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk~1fa4b8f2ff.js";
 import { _, _, _, _, _ } from "./chunk~0a99e05c44.js";
@@ -21,10 +36,15 @@ import {
   _,
   _,
   _,
+  _,
+  _,
+  _,
 } from "./chunk~6b8ddcaac8.js";
+import { _ } from "./chunk~9a06851bec.js";
 import "./chunk~44f252525d.js";
 import { _ } from "./chunk~8fb30ea08b.js";
 import { _ } from "./chunk~ede3e357a2.js";
+import { _ } from "./chunk~b390ee0f78.js";
 import { _ } from "./chunk~8681f5c764.js";
 import { _ } from "./chunk~2201b8cb3d.js";
 import { _ } from "./chunk~8ceeb46076.js";
@@ -974,6 +994,8 @@ function _() {
     children: _(`#home_page_live_broadcast`),
   });
 }
+var _ = _.createContext(void 0),
+  _ = _.createContext(void 0);
 function _(_) {
   let { appids: _, hide_status_banners: _, show_early_access: _ } = _,
     { data: _ } = _(),
@@ -981,12 +1003,20 @@ function _(_) {
     _ = _.length > 0 && _.every((_) => _ && _.has(_)),
     _ = _.length > 0 && _.every((_) => _ && _.has(_)),
     _ = _(_),
+    _ = _.useContext(_),
+    _ = _.useContext(_),
+    _ = _ && _ ? _(_, _) : void 0,
     _ = _ && !_,
     _ = _ && !_,
     _ = !_ && _;
   return (0, _.jsxs)(`div`, {
-    className: _(_, `CapsuleDecorators`),
+    className: _(_, `CapsuleDecorators`, _ && `HasReasonBanner`),
     children: [
+      _ &&
+        (0, _.jsx)(`span`, {
+          className: _(`LCYi5cxHqgI-`, _.strClassName),
+          children: _.strLabel,
+        }),
       _ &&
         (0, _.jsxs)(`span`, {
           className: _(`LCYi5cxHqgI-`, `ZuMhm9DQqbw-`),
@@ -1067,6 +1097,36 @@ function _(_, _, _, _, _, _) {
     },
     onOKActionDescription: _.Localize(`#Sale_Gamepad_Action_Select`),
   };
+}
+function _(_) {
+  if (_?.appid && _.item_type == 0)
+    switch (_.type) {
+      case 14:
+        return;
+      case 1:
+      case 12:
+        return _.related_items?.parent_appid || _.appid;
+      default:
+        return _.appid;
+    }
+}
+function _(_) {
+  let _ = _(),
+    { data: _ } = _(_ ? _ : void 0),
+    _ = _(_),
+    _ = !!_(_),
+    { bIsOwned: _ } = _(_(_)),
+    _ = _(),
+    { mutate: _ } = _(_, !_, _),
+    _ = !!_ && _?.type != 10;
+  return !_ || !_.logged_in || !_ || _
+    ? {}
+    : {
+        onOptionsButton: () => _(),
+        onOptionsActionDescription: _.Localize(
+          _ ? `#Sale_RemoveFromWishlist` : `#Sale_AddToWishlist`,
+        ),
+      };
 }
 function _(_) {
   let {

@@ -440,7 +440,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`AccountPrivacy.GetCookiePreferences#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`],
+      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
     });
   }
   _.GetCookiePreferences = _;

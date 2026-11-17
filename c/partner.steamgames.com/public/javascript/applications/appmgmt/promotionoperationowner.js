@@ -163,7 +163,7 @@ import {
   _,
   _,
 } from "./chunk~1fa4b8f2ff.js";
-import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~0a99e05c44.js";
+import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~0a99e05c44.js";
 import {
   _,
   _,
@@ -199,9 +199,10 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~44f252525d.js";
 import { _ } from "./chunk~f8b6a4beb3.js";
-import { _, _ } from "./chunk~8fb30ea08b.js";
+import { _, _, _ } from "./chunk~8fb30ea08b.js";
 import { _ } from "./chunk~ede3e357a2.js";
 import { _ } from "./chunk~9aa05d2c7d.js";
 import { _ } from "./chunk~6257ebd2d4.js";
@@ -414,7 +415,7 @@ import "./chunk~ca0c999570.js";
 import { _ } from "./chunk~f0141d9521.js";
 import { _, _, _, _, _, _, _ } from "./chunk~3f2c78281d.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk~739842ca30.js";
-import { _, _, _ } from "./chunk~3f4314f3b4.js";
+import { _, _, _, _, _ } from "./chunk~3f4314f3b4.js";
 import { _, _, _, _, _ } from "./chunk~7b4b9eb713.js";
 import { _, _ } from "./chunk~70c16cc80c.js";
 import { _, _ } from "./chunk~95ecbf576c.js";
@@ -651,7 +652,17 @@ var _ = class extends Error {
       (super(_ ? `EResult ${_}: ${_}` : `EResult ${_}`), (this.eResult = _));
     }
   },
-  _ = _(_(), 1),
+  _ = _(_(), 1);
+function _(_, _) {
+  let _ = _(_),
+    _ = _.getQueryCache();
+  return _.useSyncExternalStore(
+    _.useCallback((_) => _.subscribe(_.batchCalls(_)), [_]),
+    () => _.isFetching(_),
+    () => _.isFetching(_),
+  );
+}
+var _ = _(_(), 1),
   _ = `koPooBe-lCQ-`,
   _ = `C5U8msC6upM-`,
   _ = _();
@@ -714,8 +725,7 @@ function _(_) {
     ],
   });
 }
-var _ = _(_()),
-  _ = _(_());
+var _ = _(_());
 function _() {
   return (
     (_ = Object.assign
@@ -2473,6 +2483,7 @@ var _ = `ub-F6ByWbWM-`,
       })
     );
   },
+  _ = _(_(), 1),
   _ = _(_()),
   _ = _(_(), 1);
 function _(_) {
@@ -2556,6 +2567,8 @@ function _(_, _, _, _) {
         return _ ? _(`#Sale_PersonalizedCarousel_Section_title`, _) : null;
       case `creator_list`:
         return _();
+      case `discount_reason`:
+        return _(_) ?? null;
     }
   else if (_.section_type === `tabs`) return ``;
   else if (_.section_type === `curator`) {
@@ -2702,6 +2715,7 @@ _((_) => {
       subtitle: _,
       bShowSeeMoreHint: _,
       bUseGamepadLinkHint: _,
+      eGamepadLinkHintButton: _,
       onLinkResolved: _,
       personalizedCarousels: _,
       promotedSale: _,
@@ -2722,10 +2736,17 @@ _((_) => {
   let _ = _ || _(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation, !1, _, _);
   if (!_) return null;
   let _ = _ || _(_, _, _, _),
-    _ = (0, _.jsx)(`div`, {
+    _ = (0, _.jsxs)(`div`, {
       className: _(_, `SaleSectionHeader`),
       style: _(_, _, _),
-      children: _,
+      children: [
+        _.test_show_on_valve_ip_only &&
+          (0, _.jsx)(`div`, {
+            className: `JrlXbYAw30w-`,
+            children: `(VO)\xA0`,
+          }),
+        _,
+      ],
     }),
     _ = (0, _.jsx)(`div`, {
       className: _(_, _, `SaleSectionSubtitle`),
@@ -2745,6 +2766,7 @@ _((_) => {
           ? (0, _.jsx)(_, {
               label: _,
               shown: !!_,
+              button: _,
             })
           : _
             ? (0, _.jsx)(`div`, {
@@ -2842,23 +2864,627 @@ function _(_, _) {
                   : _
   );
 }
-function _(_, _) {
-  let _ = _.GetSaleSections().filter(
-    (_) => _(_.section_type) && _(_) == `personalized_carousel`,
-  );
-  if (_.length == 0)
-    return {
-      nNumSections: 0,
-      nSectionIndex: -1,
-    };
-  let _ = _.findIndex((_) => _.unique_id == _.unique_id);
-  return {
-    nNumSections: _.length,
-    nSectionIndex: _,
-  };
-}
-function _(_, _, _) {
-  if (_) return _[_(_, _).nSectionIndex] ?? null;
+var _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.count || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [2], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            count: {
+              _: 1,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            additional_source_items: {
+              _: 2,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.recommendations || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            recommendations: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.item_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            item_id: {
+              _: 1,
+              _: _,
+            },
+            weight: {
+              _: 2,
+              _: _.readFloat,
+              _: _.writeFloat,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response_Recommendation`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.count || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [2], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            count: {
+              _: 1,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            item_ids: {
+              _: 2,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.recommendations || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            recommendations: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.item_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            item_id: {
+              _: 1,
+              _: _,
+            },
+            weight: {
+              _: 2,
+              _: _.readFloat,
+              _: _.writeFloat,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response_Recommendation`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.start || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            start: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            count: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.sales || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            sales: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            total_count: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.clan_account_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            clan_account_id: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            clan_event_gid: {
+              _: 2,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Response_Sale`;
+    }
+  },
+  _;
+(function (_) {
+  function _(_, _, _) {
+    return _.SendMsg(
+      `StoreRecommendations.GetPackagePurchaseRecommendations#1`,
+      _(_, _, _),
+      _,
+      {
+        bConstMethod: !0,
+        ePrivilege: 1,
+      },
+    );
+  }
+  _.GetPackagePurchaseRecommendations = _;
+  function _(_, _, _) {
+    return _.SendMsg(
+      `StoreRecommendations.GetPackagePurchaseRecommendationsForItems#1`,
+      _(_, _, _),
+      _,
+      {
+        bConstMethod: !0,
+        ePrivilege: 0,
+        eWebAPIKeyRequirement: 1,
+      },
+    );
+  }
+  _.GetPackagePurchaseRecommendationsForItems = _;
+  function _(_, _, _) {
+    return _.SendMsg(`StoreRecommendations.GetLiveSales#1`, _(_, _, _), _, {
+      bConstMethod: !0,
+      ePrivilege: 0,
+      eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
+    });
+  }
+  _.GetLiveSales = _;
+})((_ ||= {}));
+var _ = {
+  1: `#Sale_default_label_OnYourWishlist`,
+  2: `#Sale_DiscountReason_Section_FirstTimeOnSale`,
+  3: `#Sale_DiscountReason_Section_LargestDiscount`,
+  4: `#Sale_DiscountReason_Section_EndingSoon`,
+  5: `#Sale_DiscountReason_Section_NewlyOnSale`,
+  6: `#Sale_DiscountReason_Section_WellReviewed`,
+  7: `#Sale_DiscountReason_Section_TopSeller`,
+  8: `#Sale_DiscountReason_Section_HotDeal`,
+  9: `#Sale_DiscountReason_Section_DeepDiscount`,
+};
+function _(_) {
+  return _.smart_section_discount_reason === void 0
+    ? void 0
+    : _[_.smart_section_discount_reason];
 }
 function _(_) {
   return !!(
@@ -4422,8 +5048,7 @@ function _(_) {
 function _(_, _, _) {
   return _(_, _, _);
 }
-var _ = _(_(), 1),
-  _ = class _ extends _.Message {
+var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       (super(),
@@ -9771,7 +10396,7 @@ var _ = _(_(), 1),
       {
         bConstMethod: !0,
         ePrivilege: 4,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -44373,6 +44998,24 @@ var _ = `section_`,
         _ !== this.m_model.deepest_discount[_] &&
           ((this.m_model.deepest_discount[_] = _), this.SetDirty(!0)));
     }
+    GetDeepestDiscountSettingsMissingForEnable() {
+      if (this.GetOptInKind() !== _.DeepestDiscount) return [];
+      let _ = this.GetDeepestDiscount(),
+        _ = [];
+      return (
+        (_.season && _.year) || _.push(`Seasonal sale (Deepest Discount)`),
+        _.min_discount_pct || _.push(`Lowest discount (Deepest Discount)`),
+        _.rtime_discount_deadline ||
+          _.push(`Discount deadline (Deepest Discount)`),
+        this.GetDiscountEventID() ||
+          _.push(`Discount event ID (Tasks That Can Be Done Any Time)`),
+        (this.m_model.event_start_date && this.m_model.event_end_date) ||
+          _.push(`Event start and end dates (Basic Event Info)`),
+        this.m_model.optin_deadline_date ||
+          _.push(`Registration deadline (Registration Requirements)`),
+        _
+      );
+    }
     BShowAllEditorSections() {
       return this.m_bShowAllEditorSections;
     }
@@ -45534,6 +46177,7 @@ var _ = `section_`,
   _([_], _.prototype, `BOptInKindRequiresInvitesAndDiscounts`, null),
   _([_], _.prototype, `GetDeepestDiscount`, null),
   _([_.bound], _.prototype, `SetDeepestDiscountField`, null),
+  _([_], _.prototype, `GetDeepestDiscountSettingsMissingForEnable`, null),
   _([_.bound], _.prototype, `SetShowAllEditorSections`, null),
   _([_.bound], _.prototype, `SetPublicEventURL`, null),
   _([_.bound], _.prototype, `SetAssetSetDocFile`, null),
@@ -53171,7 +53815,7 @@ function _(_) {
   });
 }
 function _(_) {
-  let { pageid: _, definition: _, registration: _ } = _,
+  let { pageid: _, definition: _, registration: _, bShowEventTitle: _ } = _,
     { bIsPreview: _ } = _(),
     _ = _().strLanguage,
     _ = _(_, _.localized_optin_banner, _),
@@ -53189,6 +53833,11 @@ function _(_) {
               style: {
                 backgroundImage: `url( '${_}' )`,
               },
+            }),
+          _ &&
+            (0, _.jsx)(`div`, {
+              className: `-DbO8F6ukH4-`,
+              children: _(_.event_title, _),
             }),
           !!_ &&
             (0, _.jsx)(`div`, {
@@ -55252,7 +55901,7 @@ function _(_) {
 }
 function _(_) {
   let _ = _.Get(),
-    [_, _, _, _, _, _, _] = _(() => [
+    [_, _, _, _, _, _, _, _] = _(() => [
       _.GetName(),
       _.GetFullName(),
       _.BIsOptInEnabled(),
@@ -55260,6 +55909,7 @@ function _(_) {
       _.GetOptInType(),
       _.GetOptInKind(),
       _.BShowAllEditorSections(),
+      _.GetDeepestDiscountSettingsMissingForEnable(),
     ]),
     _ = _(_),
     [_, _, _] = _(!1),
@@ -55411,10 +56061,31 @@ function _(_) {
                         ? `Show the request to invited partners`
                         : `Enable Partners to opt-in`,
                       checked: _,
+                      disabled: !_ && _.length > 0,
                       onChange: (_) => {
                         _ ? _.SetOptInEnabled(_) : _();
                       },
                     }),
+                    _.length > 0 &&
+                      (0, _.jsxs)(`div`, {
+                        className: `_2XKlfINGROk-`,
+                        children: [
+                          _
+                            ? `This Deepest Discount opt-in is enabled but is missing settings that the partner dashboard and emails need:`
+                            : `Set these before enabling this Deepest Discount opt-in:`,
+                          (0, _.jsx)(`ul`, {
+                            children: _.map((_) =>
+                              (0, _.jsx)(
+                                `li`,
+                                {
+                                  children: _,
+                                },
+                                _,
+                              ),
+                            ),
+                          }),
+                        ],
+                      }),
                     _ &&
                       (0, _.jsxs)(`div`, {
                         children: [
@@ -58886,6 +59557,619 @@ function _(_) {
         oAllStats: _,
       });
 }
+var _ = `yBOIU4Wj-l4-`,
+  _ = `iSEOs-IvuGw-`,
+  _ = `_8Eb4BKtnmAM-`,
+  _ = `UBiWoP-2tWE-`,
+  _ = `D2XZDwN1FiA-`,
+  _ = `nlAP0TLrWcE-`,
+  _ = `S2fgCLFU8Ac-`,
+  _ = `v45HL5FYr-I-`,
+  _ = `_8IrfwUFPdG8-`,
+  _ = `VB2dJjDBBsw-`,
+  _ = `kt-uyl1dseY-`,
+  _ = `lNRh9jL7LvE-`,
+  _ = `_7iVZBUBVJd8-`,
+  _ = `xOxE91h82Ss-`,
+  _ = `mpeLvPpdcUw-`,
+  _ = `KLXeRDgUhfI-`,
+  _ = [
+    {
+      label: `All invited`,
+      data: `all`,
+    },
+    {
+      label: `Not answered`,
+      data: `no_answer`,
+    },
+    {
+      label: `Opted in`,
+      data: `opted_in`,
+    },
+    {
+      label: `Opted in, no qualifying discount`,
+      data: `opted_in_no_discount`,
+    },
+    {
+      label: `Opted out`,
+      data: `opted_out`,
+    },
+    {
+      label: `Opted out, asked about a later sale`,
+      data: `ask_later`,
+    },
+    {
+      label: `Removed`,
+      data: `removed`,
+    },
+  ];
+function _() {
+  let _ = _.Get(),
+    [_, _, _, _, _] = _(() => [
+      _.GetFullName(),
+      _.GetName(),
+      _.GetEventStartTime(),
+      _.GetEventEndTime(),
+      _(_.GetModel()).nMinDiscountPct,
+    ]),
+    [_, _] = (0, _.useState)(`all`),
+    [_, _] = (0, _.useState)(``);
+  (0, _.useEffect)(() => {
+    _(_);
+  }, [_]);
+  let _ = _(_),
+    _ =
+      _({
+        queryKey: [`useAllOptInRegistrationByName`, _],
+      }) > 0,
+    _ = _(
+      _,
+      (0, _.useMemo)(() => (_ || []).map((_) => _.appid).filter(Boolean), [_]),
+      _,
+      _,
+      _,
+    );
+  if (_ === null)
+    return (0, _.jsx)(_, {
+      size: `medium`,
+      position: `center`,
+      string: `Loading invited games`,
+    });
+  if (!_)
+    return (0, _.jsx)(`div`, {
+      className: _,
+      children: `Could not load the invited games. Reload to try again.`,
+    });
+  let _ = _(_),
+    _ = _.trim().toLowerCase(),
+    _ = _.filter((_) => _(_, _)).filter(
+      (_) =>
+        !_ ||
+        String(_.appid) === _ ||
+        _.name.toLowerCase().includes(_) ||
+        _.publishers.toLowerCase().includes(_),
+    );
+  return (0, _.jsxs)(`div`, {
+    children: [
+      (0, _.jsx)(`h2`, {
+        children: _,
+      }),
+      (0, _.jsx)(`hr`, {}),
+      (0, _.jsxs)(`div`, {
+        className: _(_, _),
+        children: [
+          (0, _.jsxs)(`div`, {
+            className: _,
+            children: [
+              (0, _.jsx)(_, {
+                nValue: _.cInvited,
+                strLabel: `Invited`,
+              }),
+              (0, _.jsx)(_, {
+                nValue: _.cNoAnswer,
+                strLabel: `Not answered`,
+                strClassName: _,
+              }),
+              (0, _.jsx)(_, {
+                nValue: _.cOptedIn,
+                strLabel: `Opted in`,
+                strClassName: _,
+              }),
+              (0, _.jsx)(_, {
+                nValue: _.cOptedOut,
+                strLabel: `Opted out`,
+                strClassName: _,
+              }),
+              (0, _.jsx)(_, {
+                nValue: _.cAskLater,
+                strLabel: `Asked about a later sale`,
+              }),
+              (0, _.jsx)(_, {
+                nValue: _.cDiscountEntered,
+                strLabel: `Opted in, ${_}%+ entered`,
+                strClassName: _,
+              }),
+              _.cRemoved > 0 &&
+                (0, _.jsx)(_, {
+                  nValue: _.cRemoved,
+                  strLabel: `Removed`,
+                }),
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            className: _,
+            children: [
+              `Games are invited from Registration Requirements on the Editor tab. A discount qualifies when it is at least `,
+              _,
+              `% off and covers the whole event,`,
+              _ && _ ? ` ${_(_)} to ${_(_)}` : ` once the event dates are set`,
+              `. It can come from any discount event or be a custom discount.`,
+            ],
+          }),
+          (0, _.jsxs)(`div`, {
+            className: _,
+            children: [
+              (0, _.jsx)(`div`, {
+                className: _,
+                children: (0, _.jsx)(_, {
+                  label: `Show`,
+                  strDropDownClassName: _,
+                  rgOptions: _,
+                  selectedOption: _,
+                  onChange: (_) => _(_.data),
+                  bDisableMouseOverlay: !0,
+                  contextMenuPositionOptions: {
+                    bDisableMouseOverlay: !0,
+                  },
+                }),
+              }),
+              (0, _.jsx)(`div`, {
+                className: _,
+                children: (0, _.jsx)(_, {
+                  type: `text`,
+                  label: `Search game, publisher or app id`,
+                  value: _,
+                  onChange: (_) => _(_.target.value),
+                }),
+              }),
+              (0, _.jsxs)(`div`, {
+                className: _,
+                children: [
+                  (0, _.jsx)(_, {
+                    onClick: () => _(_),
+                    disabled: _,
+                    children: _ ? `Reloading...` : `Reload`,
+                  }),
+                  (0, _.jsxs)(_, {
+                    onClick: () => _(_, _, _),
+                    disabled: !_.length,
+                    children: [`Export CSV (`, _.length, `)`],
+                  }),
+                ],
+              }),
+            ],
+          }),
+          _.length
+            ? (0, _.jsx)(_, {
+                strOptInName: _,
+                rgShown: _,
+              })
+            : (0, _.jsx)(`div`, {
+                className: _,
+                children: `No games to show.`,
+              }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
+  _ &&
+    _.invalidateQueries({
+      queryKey: [`useAllOptInRegistrationByName`, _],
+    });
+}
+function _(_, _, _, _, _) {
+  let _ = _(),
+    _ = _({
+      queries: _.map((_) =>
+        _(_, {
+          appid: _,
+        }),
+      ),
+    }),
+    _ = _({
+      queries: _.map((_) =>
+        _(_, {
+          appid: _,
+        }),
+      ),
+    }),
+    _ = _(_),
+    _ = _.length > 0 && _.size == 0,
+    _ = _.map((_) => _.data?.name || ``),
+    _ = _.map((_) =>
+      (_.data?.publishers || [])
+        .map((_) => _.name)
+        .filter(Boolean)
+        .join(`, `),
+    ),
+    _ = _.map((_) =>
+      (_.data?.developers || [])
+        .map((_) => _.name)
+        .filter(Boolean)
+        .join(`, `),
+    ),
+    _ =
+      _.join(`
+`) +
+      _.join(`
+`) +
+      _.join(`
+`);
+  return (0, _.useMemo)(() => {
+    let _ = new Map(_.map((_, _) => [_, _]));
+    return (_ || [])
+      .filter((_) => _.appid)
+      .map((_) => {
+        let _ = _.get(_.appid),
+          _ = _(_),
+          _ = _
+            ? {
+                eState: `loading`,
+                nPct: 0,
+                strDetail: ``,
+              }
+            : _(_.get(_.appid), _, _, _),
+          _ = _(_);
+        return {
+          appid: _.appid,
+          name: _[_] || `App ${_.appid}`,
+          publishers: _[_] || ``,
+          developers: _[_] || ``,
+          answer: _,
+          rtime_answered:
+            _ == `opted_in`
+              ? _.time_opted_in || 0
+              : (_ == `opted_out` &&
+                  (_.time_opted_out || _.jsondata?.rtime_ask_again)) ||
+                0,
+          ask_again: _ === void 0 ? `` : _ === null ? `Don't ask again` : _(_),
+          ask_again_season: _ ? _.season : 0,
+          ask_again_year: _ ? _.year : 0,
+          discount_state: _.eState,
+          discount_pct: _.nPct,
+          discount_detail: _.strDetail,
+          accountid_lastmod: _.accountid_lastmod || 0,
+        };
+      });
+  }, [_, _, _, _, _, _, _, _]);
+}
+function _(_) {
+  return _.pruned
+    ? `removed`
+    : _.opt_in
+      ? `opted_in`
+      : _.invited
+        ? `no_answer`
+        : `opted_out`;
+}
+function _(_, _, _, _) {
+  if (!_ || !_ || _ <= _)
+    return {
+      eState: `no_event_dates`,
+      nPct: 0,
+      strDetail: ``,
+    };
+  if (_?.is_free)
+    return {
+      eState: `free`,
+      nPct: 0,
+      strDetail: ``,
+    };
+  if (_?.is_coming_soon)
+    return {
+      eState: `unreleased`,
+      nPct: 0,
+      strDetail: ``,
+    };
+  let _ = (_?.discounts || [])
+      .slice()
+      .sort((_, _) => _.nDiscountPct - _.nDiscountPct),
+    _ = (_) =>
+      `${_.nDiscountPct}% off, ${_(_.rtStartDate)} to ${_(_.rtEndDate)}, package ${_.packageID}`,
+    _ = _.filter((_) => _.rtStartDate <= _ && _.rtEndDate >= _),
+    _ = _.find((_) => _.nDiscountPct >= _);
+  if (_)
+    return {
+      eState: `entered`,
+      nPct: _.nDiscountPct,
+      strDetail: _(_),
+    };
+  if (_.length)
+    return {
+      eState: `below_min`,
+      nPct: _[0].nDiscountPct,
+      strDetail: _(_[0]),
+    };
+  let _ = _.find(
+    (_) => _.nDiscountPct >= _ && _.rtStartDate < _ && _.rtEndDate > _,
+  );
+  return _
+    ? {
+        eState: `partial`,
+        nPct: _.nDiscountPct,
+        strDetail: _(_),
+      }
+    : {
+        eState: `missing`,
+        nPct: 0,
+        strDetail: ``,
+      };
+}
+function _(_) {
+  let _ = _.filter((_) => _.answer != `removed`);
+  return {
+    cInvited: _.length,
+    cNoAnswer: _.filter((_) => _.answer == `no_answer`).length,
+    cOptedIn: _.filter((_) => _.answer == `opted_in`).length,
+    cOptedOut: _.filter((_) => _.answer == `opted_out`).length,
+    cAskLater: _.filter((_) => _.answer == `opted_out` && _.ask_again_year > 0)
+      .length,
+    cDiscountEntered: _.filter(
+      (_) => _.answer == `opted_in` && _.discount_state == `entered`,
+    ).length,
+    cRemoved: _.length - _.length,
+  };
+}
+function _(_, _) {
+  if (_ === `removed`) return _.answer == `removed`;
+  if (_.answer == `removed`) return !1;
+  switch (_) {
+    case `no_answer`:
+      return _.answer == `no_answer`;
+    case `opted_in`:
+      return _.answer == `opted_in`;
+    case `opted_in_no_discount`:
+      return _.answer == `opted_in` && _.discount_state != `entered`;
+    case `opted_out`:
+      return _.answer == `opted_out`;
+    case `ask_later`:
+      return _.answer == `opted_out` && _.ask_again_year > 0;
+  }
+  return !0;
+}
+function _(_) {
+  switch (_) {
+    case `opted_in`:
+      return `Opted in`;
+    case `opted_out`:
+      return `Opted out`;
+    case `removed`:
+      return `Removed`;
+  }
+  return `Not answered`;
+}
+function _(_, _) {
+  switch (_) {
+    case `entered`:
+      return `Entered (${_}%)`;
+    case `below_min`:
+      return `Below minimum (${_}%)`;
+    case `partial`:
+      return `Partial dates (${_}%)`;
+    case `missing`:
+      return `Missing`;
+    case `free`:
+      return `Free game`;
+    case `unreleased`:
+      return `Unreleased`;
+    case `no_event_dates`:
+      return `No event dates`;
+  }
+  return `Loading`;
+}
+function _(_) {
+  return (0, _.jsxs)(`div`, {
+    className: _(_, _.strClassName),
+    children: [
+      (0, _.jsx)(`div`, {
+        className: _,
+        children: _.nValue,
+      }),
+      (0, _.jsx)(`div`, {
+        className: _,
+        children: _.strLabel,
+      }),
+    ],
+  });
+}
+function _(_) {
+  return (0, _.jsx)(`span`, {
+    className: _(_, _.strClassName),
+    title: _.strTitle,
+    children: _.strLabel,
+  });
+}
+function _(_) {
+  switch (_) {
+    case `opted_in`:
+      return _;
+    case `opted_out`:
+      return _;
+    case `no_answer`:
+      return _;
+  }
+}
+function _(_) {
+  switch (_) {
+    case `entered`:
+      return _;
+    case `missing`:
+      return _;
+    case `below_min`:
+    case `partial`:
+      return _;
+  }
+}
+var _ = 40,
+  _ = 90,
+  _ = 300;
+function _(_) {
+  let { strOptInName: _, rgShown: _ } = _,
+    _ = (0, _.useMemo)(() => _(_), [_]),
+    _ = (0, _.useRef)(null),
+    _ = _(_, _.length);
+  return (0, _.jsx)(`div`, {
+    ref: _,
+    children: (0, _.jsx)(_, {
+      className: _.DefaultFancyTable,
+      stickyHeader: !0,
+      columns: _,
+      data: _,
+      getRowKey: (_, _) => _.appid,
+      nItemHeight: _,
+      height: _,
+      initialSorting: [
+        {
+          _: `answer`,
+          desc: !1,
+        },
+      ],
+    }),
+  });
+}
+function _(_, _) {
+  let [_, _] = (0, _.useState)(_);
+  return (
+    (0, _.useLayoutEffect)(() => {
+      let _ = () => {
+        let _ = _.current;
+        if (!_) return;
+        let _ = _.getBoundingClientRect().top + window.scrollY;
+        _(Math.max(_, Math.floor(window.innerHeight - _ - _)));
+      };
+      return (
+        _(),
+        window.addEventListener(`resize`, _),
+        () => window.removeEventListener(`resize`, _)
+      );
+    }, [_, _]),
+    _
+  );
+}
+var _ = _();
+function _(_) {
+  return [
+    _.accessor(`name`, {
+      header: `Game`,
+      size: 260,
+      meta: {
+        bGrowToFit: !0,
+      },
+      cell: (_) =>
+        (0, _.jsx)(`a`, {
+          className: _(_, _),
+          title: _.getValue(),
+          href: `${_.PARTNER_BASE_URL}optin/sale/${_}/${_.row.original.appid}`,
+          target: `_blank`,
+          children: _.getValue(),
+        }),
+    }),
+    _.accessor(`appid`, {
+      header: `App ID`,
+      size: 90,
+    }),
+    _.accessor(`publishers`, {
+      header: `Publisher`,
+      size: 200,
+      cell: (_) =>
+        (0, _.jsx)(`span`, {
+          className: _,
+          title: _.getValue(),
+          children: _.getValue(),
+        }),
+    }),
+    _.accessor(`answer`, {
+      header: `Answer`,
+      size: 130,
+      cell: (_) =>
+        (0, _.jsx)(_, {
+          strLabel: _(_.getValue()),
+          strClassName: _(_.getValue()),
+        }),
+    }),
+    _.accessor(`rtime_answered`, {
+      header: `Answered`,
+      size: 220,
+      cell: (_) =>
+        _.getValue()
+          ? (0, _.jsx)(_, {
+              dateAndTime: _.getValue(),
+              bSingleLine: !0,
+            })
+          : null,
+    }),
+    _.accessor(`ask_again`, {
+      header: `Ask Again`,
+      size: 170,
+      sortingFn: (_, _) =>
+        _.original.ask_again_year * 10 +
+        _.original.ask_again_season -
+        (_.original.ask_again_year * 10 + _.original.ask_again_season),
+      cell: (_) =>
+        _.getValue()
+          ? (0, _.jsx)(_, {
+              strLabel: _.getValue(),
+            })
+          : null,
+    }),
+    _.accessor(`discount_state`, {
+      header: `Discount`,
+      size: 190,
+      cell: (_) =>
+        (0, _.jsx)(_, {
+          strLabel: _(_.getValue(), _.row.original.discount_pct),
+          strClassName: _(_.getValue()),
+          strTitle: _.row.original.discount_detail || void 0,
+        }),
+    }),
+    _.accessor(`accountid_lastmod`, {
+      header: `Last Change By`,
+      size: 160,
+      cell: (_) =>
+        _.getValue()
+          ? (0, _.jsx)(`span`, {
+              className: _,
+              children: (0, _.jsx)(_, {
+                accountid: _.getValue(),
+              }),
+            })
+          : null,
+    }),
+  ];
+}
+function _(_, _, _) {
+  let _ = _.map((_) => ({
+    appid: _.appid,
+    name: _.name,
+    publishers: _.publishers,
+    developers: _.developers,
+    answer: _(_.answer),
+    answered: _.rtime_answered
+      ? new Date(_.rtime_answered * 1e3).toISOString()
+      : ``,
+    ask_again: _.ask_again,
+    ask_again_season: _.ask_again_season || ``,
+    ask_again_year: _.ask_again_year || ``,
+    discount_status: _(_.discount_state, _.discount_pct),
+    discount_pct: _.discount_pct || ``,
+    discount_detail: _.discount_detail,
+    last_change_accountid: _.accountid_lastmod || ``,
+    registration_page: `${_.PARTNER_BASE_URL}optin/sale/${_}/${_.appid}`,
+  }));
+  _.WriteCSVToFile(_, `${_}_games.csv`, !0);
+}
 function _(_) {
   switch (_) {
     case 1:
@@ -60814,8 +62098,8 @@ function _(_) {
     ]),
     _ = _(_.sale),
     _ = _(_.nTargetTitles),
-    _ = _.nMinDiscountPct + `%`,
-    _ = _.nMaxDiscountPct + `%`,
+    _ = String(_.nMinDiscountPct),
+    _ = String(_.nMaxDiscountPct),
     _ = (0, _.jsx)(`b`, {
       children: _(_ || _),
     }),
@@ -60845,10 +62129,6 @@ function _(_) {
               _,
             ),
           }),
-          (0, _.jsx)(`div`, {
-            className: _,
-            children: _(`#OptIn_EmailSection_DeepestDiscount_Invite_Body_2`),
-          }),
           (0, _.jsxs)(`div`, {
             className: _,
             children: [
@@ -60870,12 +62150,6 @@ function _(_) {
                   (0, _.jsx)(`li`, {
                     children: _(
                       `#OptIn_EmailSection_DeepestDiscount_Invite_Note_3`,
-                    ),
-                  }),
-                  (0, _.jsx)(`li`, {
-                    children: _(
-                      `#OptIn_EmailSection_DeepestDiscount_Invite_Note_4`,
-                      _,
                     ),
                   }),
                 ],
@@ -67644,14 +68918,16 @@ var _ = _((_) => {
           contents: (0, _.jsx)(_, {
             children: _
               ? (0, _.jsx)(_, {})
-              : (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_, {
-                      editModel: _,
-                    }),
-                    (0, _.jsx)(_, {}),
-                  ],
-                }),
+              : _.GetOptInKind() === _.DeepestDiscount
+                ? (0, _.jsx)(_, {})
+                : (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_, {
+                        editModel: _,
+                      }),
+                      (0, _.jsx)(_, {}),
+                    ],
+                  }),
           }),
           onClick: _,
         },

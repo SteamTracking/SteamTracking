@@ -14,31 +14,31 @@ import {
 } from "./chunk~de7f2df91c.js";
 import { Ft as l, It as u, M as d, ct as f } from "./chunk~25a6634263.js";
 import {
-  Ea as p,
-  Pt as m,
-  Va as h,
-  Wt as g,
-  h as _,
-  l as v,
-  tn as y,
-  ua as b,
-  zt as x,
+  Bt as p,
+  Da as m,
+  Ft as h,
+  Gt as g,
+  Ha as _,
+  da as v,
+  h as y,
+  l as b,
+  nn as x,
 } from "./chunk~1fa4b8f2ff.js";
-import { c as ee, l as S, s as te, t as ne } from "./chunk~428594b857.js";
-import { t as C } from "./chunk~726542bc75.js";
+import { c as ee, l as S, s as te, t as C } from "./chunk~428594b857.js";
+import { t as w } from "./chunk~726542bc75.js";
 import "./chunk~8681f5c764.js";
-import { t as w } from "./chunk~c55709d290.js";
-import { r as T, t as E } from "./chunk~8ceeb46076.js";
-import { n as D } from "./chunk~0111fcd096.js";
-import { o as O } from "./chunk~2f8c67b4de.js";
-import { r as k, t as A } from "./chunk~70c16cc80c.js";
-import { n as j, t as M } from "./chunk~95ecbf576c.js";
+import { t as T } from "./chunk~c55709d290.js";
+import { r as E, t as D } from "./chunk~8ceeb46076.js";
+import { n as O } from "./chunk~0111fcd096.js";
+import { o as k } from "./chunk~2f8c67b4de.js";
+import { r as A, t as j } from "./chunk~70c16cc80c.js";
+import { n as M, t as N } from "./chunk~95ecbf576c.js";
 import {
-  A as re,
-  M as ie,
-  N,
-  T as ae,
-  f as P,
+  A as ne,
+  M as re,
+  N as P,
+  T as ie,
+  f as ae,
   r as F,
 } from "./chunk~6110f63e8e.js";
 import { t as I } from "./chunk~b3f4ae92bc.js";
@@ -61,15 +61,15 @@ function W(e) {
       reservedHardwareDetail: o,
       bHideLabel: s,
     } = e,
-    c = h.Localize(`#Sale_Reservation_Fallback_V2`),
+    c = _.Localize(`#Sale_Reservation_Fallback_V2`),
     l = !1;
   if (
     (i
-      ? (c = h.Localize(`#Sale_Reservation_Fallback_user_V2`))
+      ? (c = _.Localize(`#Sale_Reservation_Fallback_user_V2`))
       : a &&
         o &&
         !o.position_is_waitlist &&
-        ((c = E.Localize(`#Reservation_Join_Waitlist_Cancel_Reservation`)),
+        ((c = D.Localize(`#Reservation_Join_Waitlist_Cancel_Reservation`)),
         (l = !0)),
     !t || !n || l)
   )
@@ -85,7 +85,7 @@ function W(e) {
     f = ``,
     p = ``,
     m = ``,
-    g = t;
+    h = t;
   switch (t) {
     case `#Sale_Reservation_Year`:
     case `#Sale_Reservation_AfterYear`:
@@ -93,60 +93,60 @@ function W(e) {
       break;
     case `#Sale_Reservation_MonthYear`:
     case `#Sale_Reservation_AfterMonthYear`:
-      ((f = b(`#Sale_Reservation_MonthNoun_` + d)), (p = `` + u.getFullYear()));
+      ((f = v(`#Sale_Reservation_MonthNoun_` + d)), (p = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_TwoMonthRangeYear`:
-      ((f = b(`#Sale_Reservation_MonthNoun_` + U(d, 1))),
-        (p = b(`#Sale_Reservation_MonthNoun_` + d)),
+      ((f = v(`#Sale_Reservation_MonthNoun_` + U(d, 1))),
+        (p = v(`#Sale_Reservation_MonthNoun_` + d)),
         (m = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_ThreeMonthRangeYear`:
-      ((f = b(`#Sale_Reservation_MonthNoun_` + U(d, 2))),
-        (p = b(`#Sale_Reservation_MonthNoun_` + d)),
+      ((f = v(`#Sale_Reservation_MonthNoun_` + U(d, 2))),
+        (p = v(`#Sale_Reservation_MonthNoun_` + d)),
         (m = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_FourMonthRangeYear`:
-      ((f = b(`#Sale_Reservation_MonthNoun_` + U(d, 3))),
-        (p = b(`#Sale_Reservation_MonthNoun_` + d)),
+      ((f = v(`#Sale_Reservation_MonthNoun_` + U(d, 3))),
+        (p = v(`#Sale_Reservation_MonthNoun_` + d)),
         (m = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_Quarter_ThreeMonths`:
-      ((g = `#Sale_Reservation_Quarter` + (Math.floor((d - 1) / 3) + 1)),
+      ((h = `#Sale_Reservation_Quarter` + (Math.floor((d - 1) / 3) + 1)),
         (f = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_AfterQuarter_ThreeMonths`:
-      ((g = `#Sale_Reservation_AfterQuarter` + (Math.floor((d - 1) / 3) + 1)),
-        (f = b(`#Sale_Reservation_MonthNoun_` + d)),
+      ((h = `#Sale_Reservation_AfterQuarter` + (Math.floor((d - 1) / 3) + 1)),
+        (f = v(`#Sale_Reservation_MonthNoun_` + d)),
         (p = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_ByYear`:
       f = `` + u.getFullYear();
       break;
     case `#Sale_Reservation_ByMonthYear`:
-      ((f = b(`#Sale_Reservation_MonthNoun_` + d)), (p = `` + u.getFullYear()));
+      ((f = v(`#Sale_Reservation_MonthNoun_` + d)), (p = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_BetweenNowAndLastDay`:
-      ((f = b(`#Sale_Reservation_MonthNoun_` + d)),
+      ((f = v(`#Sale_Reservation_MonthNoun_` + d)),
         (p = `` + new Date(u.getFullYear(), u.getMonth(), 0).getDate()),
         (m = `` + u.getFullYear()));
       break;
     case `#Sale_Reservation_RelativeWeekly`:
       {
-        let e = D.GetTimeNowWithOverride(),
+        let e = O.GetTimeNowWithOverride(),
           t = Math.floor((n - e) / 86400);
         t < 7 ||
           (t < 28
-            ? ((g = `#Sale_Reservation_RelativeWeekly_Plural`),
+            ? ((h = `#Sale_Reservation_RelativeWeekly_Plural`),
               (f = `` + Math.floor(t / 7 + 1)))
-            : ((g = `#Sale_Reservation_RelativeMonthly`),
+            : ((h = `#Sale_Reservation_RelativeMonthly`),
               (f = `` + Math.floor(t / 28 + 1))));
       }
       break;
     case `#Sale_Reservation_AvailabilityUnknown`:
-      g = void 0;
+      h = void 0;
       break;
     default:
-      g = `#Sale_Reservation_Fallback`;
+      h = `#Sale_Reservation_Fallback`;
   }
   return (0, V.jsxs)(`div`, {
     className: H,
@@ -154,15 +154,15 @@ function W(e) {
       (0, V.jsx)(`div`, {
         children:
           !s &&
-          !!g &&
-          b(
+          !!h &&
+          v(
             i
               ? `#Sale_Reservation_YourExpectedDate`
               : `#Sale_Reservation_ExpectedDate`,
           ),
       }),
       (0, V.jsx)(K, {
-        elReservationMessage: g ? b(g, f, p, m, ``) : c,
+        elReservationMessage: h ? v(h, f, p, m, ``) : c,
         strUrlLearnMoreLink: r,
       }),
     ],
@@ -175,10 +175,10 @@ function K(e) {
     ? (0, V.jsxs)(V.Fragment, {
         children: [
           t,
-          (0, V.jsx)(T, {
+          (0, V.jsx)(E, {
             url: n,
             className: G,
-            children: h.Localize(`#Button_Learn`),
+            children: _.Localize(`#Button_Learn`),
           }),
         ],
       })
@@ -284,9 +284,9 @@ var Y = class e {
           !0
         );
       }
-      n = w(i);
+      n = T(i);
     } catch (e) {
-      n = w(e);
+      n = T(e);
     }
     return (
       console.error(
@@ -298,7 +298,7 @@ var Y = class e {
     );
   }
   async DeletePositionMessage(e) {
-    let t = c.Init(ne);
+    let t = c.Init(C);
     (t.Body().set_edistributor(e.edistributor),
       t.Body().set_product_identifier(e.product_identifier),
       t.Body().set_start_queue_position(e.start_queue_position));
@@ -322,9 +322,9 @@ var Y = class e {
           !0
         );
       }
-      n = w(r);
+      n = T(r);
     } catch (e) {
-      n = w(e);
+      n = T(e);
     }
     return (
       console.error(
@@ -351,7 +351,7 @@ var Y = class e {
   }
   constructor() {}
   Init() {
-    this.m_steamInterface = A(new k(a.WEBAPI_BASE_URL));
+    this.m_steamInterface = j(new A(a.WEBAPI_BASE_URL));
     let e = n(`reservation_queue_position_messages`, `application_config`);
     this.ValidateInputDefault(e) &&
       (e.map((e) => {
@@ -408,7 +408,7 @@ function fe(e) {
     console.log(`AddProductToReservationPositionMessage selected: `, t),
     (0, V.jsxs)(`div`, {
       children: [
-        (0, V.jsx)(y, { children: `Add Product SKU:` }),
+        (0, V.jsx)(x, { children: `Add Product SKU:` }),
         (0, V.jsx)(`p`, {
           children: `Select an item for which we want to communicate a reservation status.`,
         }),
@@ -493,7 +493,7 @@ function me(e) {
 function Q(e) {
   return (0, V.jsxs)(`div`, {
     children: [
-      (0, V.jsx)(y, { children: `instructions:` }),
+      (0, V.jsx)(x, { children: `instructions:` }),
       (0, V.jsx)(`p`, {
         children: `Select an item from the drop-down to the left to set it as a visible item that we're taking reservations for.`,
       }),
@@ -511,7 +511,7 @@ function he(e) {
     X(),
     (0, V.jsxs)(`div`, {
       children: [
-        (0, V.jsx)(y, { children: `Force update:` }),
+        (0, V.jsx)(x, { children: `Force update:` }),
         (0, V.jsx)(`p`, {
           children: `By default, the server caches the list in memory and that list will refresh from SQL every hour. You can use the force button to refresh immediately across all of the servers.`,
         }),
@@ -519,7 +519,7 @@ function he(e) {
           children: `We recommend we force a refresh when all changes are done, otherwise, it will be somewhat random (within an hour) between each server picking up the updates -- so users might get different messages if they reload the page until all servers refresh.`,
         }),
         (0, V.jsx)(g, {
-          onClick: (e) => _((0, V.jsx)(ye, {}), f(e)),
+          onClick: (e) => y((0, V.jsx)(ye, {}), f(e)),
           children: `Force Reload Definitions on Steam Servers`,
         }),
       ],
@@ -538,7 +538,7 @@ function ge(e) {
         tooltip: `distributor enum: ${n.edistributor}, part number: ${n.part_number}, product identifier: ${n.product_identifier}`,
         children: [
           (0, V.jsx)(g, {
-            onClick: (e) => _((0, V.jsx)($, { productID: t }), f(e)),
+            onClick: (e) => y((0, V.jsx)($, { productID: t }), f(e)),
             children: `Add new start position`,
           }),
           (0, V.jsxs)(`table`, {
@@ -583,8 +583,8 @@ function _e(e) {
   let { positionMsg: t } = e;
   return (0, V.jsxs)(`tr`, {
     children: [
-      (0, V.jsx)(`td`, { children: C(t.start_queue_position) }),
-      (0, V.jsx)(`td`, { children: p(t.rtime_estimated_notification) }),
+      (0, V.jsx)(`td`, { children: w(t.start_queue_position) }),
+      (0, V.jsx)(`td`, { children: m(t.rtime_estimated_notification) }),
       (0, V.jsx)(`td`, {
         children: (0, V.jsx)(W, {
           strUrlLearnMoreLink: void 0,
@@ -601,18 +601,18 @@ function _e(e) {
           }),
           (0, V.jsx)(`br`, {}),
           `On: `,
-          p(t.rtime_created),
+          m(t.rtime_created),
         ],
       }),
       (0, V.jsxs)(`td`, {
         children: [
           (0, V.jsx)(g, {
             onClick: (e) =>
-              _((0, V.jsx)($, { productID: t, existingPositionMsg: t }), f(e)),
+              y((0, V.jsx)($, { productID: t, existingPositionMsg: t }), f(e)),
             children: `Update`,
           }),
           (0, V.jsx)(g, {
-            onClick: (e) => _((0, V.jsx)(ve, { positionMsg: t }), f(e)),
+            onClick: (e) => y((0, V.jsx)(ve, { positionMsg: t }), f(e)),
             children: `Delete`,
           }),
         ],
@@ -630,15 +630,15 @@ function $(e) {
       n?.localization_token || `#Sale_Reservation_MonthYear`,
     ),
     f = n ? `Update Queue Range` : `Create Queue Range`,
-    p = j();
-  return p.bLoading
-    ? (0, V.jsx)(M, { state: p, strDialogTitle: f, closeModal: r })
-    : (0, V.jsx)(v, {
+    m = M();
+  return m.bLoading
+    ? (0, V.jsx)(N, { state: m, strDialogTitle: f, closeModal: r })
+    : (0, V.jsx)(b, {
         bDisableBackgroundDismiss: !0,
         strTitle: f,
         onCancel: r,
         onOK: () => {
-          p.fnSetLoading(!0);
+          m.fnSetLoading(!0);
           let e = {
             ...t,
             start_queue_position: o,
@@ -647,10 +647,10 @@ function $(e) {
           };
           i([e]).then((e) => {
             e
-              ? (p.fnSetSuccess(!0),
-                p.fnSetStrSuccess(`Successfully created position`))
-              : (p.fnSetSuccess(!1),
-                p.fnSetStrError(
+              ? (m.fnSetSuccess(!0),
+                m.fnSetStrSuccess(`Successfully created position`))
+              : (m.fnSetSuccess(!1),
+                m.fnSetStrError(
                   `Failed, please check console logs and/or try again`,
                 ));
           });
@@ -665,7 +665,7 @@ function $(e) {
                 `, show those users a date they can anticipate to recieve an invite to purchase. If we are choosing a display that shows the day, please account for the date is being shown to each user in their local time.`,
               ],
             }),
-            (0, V.jsx)(x, {
+            (0, V.jsx)(p, {
               type: `number`,
               min: `0`,
               value: o,
@@ -690,11 +690,11 @@ function $(e) {
 function ve(e) {
   let { positionMsg: t, closeModal: n } = e,
     { fnDeletePositionMessage: r } = Z(),
-    i = `Delete Queue Position ${C(t.start_queue_position)}`,
-    a = j();
+    i = `Delete Queue Position ${w(t.start_queue_position)}`,
+    a = M();
   return a.bLoading
-    ? (0, V.jsx)(M, { state: a, strDialogTitle: i, closeModal: n })
-    : (0, V.jsx)(v, {
+    ? (0, V.jsx)(N, { state: a, strDialogTitle: i, closeModal: n })
+    : (0, V.jsx)(b, {
         strTitle: i,
         strDescription: `Are you sure, this action is no undo'able?`,
         onCancel: n,
@@ -720,7 +720,7 @@ function ye(e) {
     (0, B.useEffect)(() => {
       n().then(() => i(!0));
     }, [n]),
-    (0, V.jsx)(v, {
+    (0, V.jsx)(b, {
       bAlertDialog: !0,
       strTitle: `Reload Definition`,
       strDescription: r
@@ -763,8 +763,8 @@ function xe(e) {
     );
   return (0, V.jsxs)(`div`, {
     children: [
-      (0, V.jsx)(m, {
-        strDropDownClassName: O,
+      (0, V.jsx)(h, {
+        strDropDownClassName: k,
         label: `Date Format`,
         rgOptions: i,
         selectedOption: t,
@@ -779,7 +779,7 @@ function xe(e) {
             className: de,
             children: [
               (0, V.jsx)(`div`, {
-                children: b(`#Sale_Reservation_ExpectedDate`),
+                children: v(`#Sale_Reservation_ExpectedDate`),
               }),
               (0, V.jsx)(W, {
                 strUrlLearnMoreLink: void 0,
@@ -800,29 +800,29 @@ function Se(e) {
     className: i(void 0, F),
     children: [
       (0, V.jsx)(`h1`, {
-        className: re,
+        className: ne,
         children: `Lawrence's Reservation Queue Position Messaging Tools`,
       }),
       (0, V.jsx)(`hr`, { className: `VO` }),
       (0, V.jsxs)(`div`, {
-        className: P,
+        className: ae,
         children: [
-          (0, V.jsxs)(`div`, {
-            className: ae,
-            children: [
-              (0, V.jsx)(`div`, { className: N, children: (0, V.jsx)(fe, {}) }),
-              (0, V.jsx)(`div`, { className: N, children: (0, V.jsx)(me, {}) }),
-            ],
-          }),
           (0, V.jsxs)(`div`, {
             className: ie,
             children: [
-              (0, V.jsx)(`div`, { className: N, children: (0, V.jsx)(Q, {}) }),
-              (0, V.jsx)(`div`, { className: N, children: (0, V.jsx)(he, {}) }),
+              (0, V.jsx)(`div`, { className: P, children: (0, V.jsx)(fe, {}) }),
+              (0, V.jsx)(`div`, { className: P, children: (0, V.jsx)(me, {}) }),
+            ],
+          }),
+          (0, V.jsxs)(`div`, {
+            className: re,
+            children: [
+              (0, V.jsx)(`div`, { className: P, children: (0, V.jsx)(Q, {}) }),
+              (0, V.jsx)(`div`, { className: P, children: (0, V.jsx)(he, {}) }),
               (0, V.jsxs)(`div`, {
-                className: N,
+                className: P,
                 children: [
-                  (0, V.jsx)(y, { children: `Useful Links:` }),
+                  (0, V.jsx)(x, { children: `Useful Links:` }),
                   (0, V.jsx)(`ul`, {
                     children: (0, V.jsx)(`li`, {
                       children: (0, V.jsx)(`a`, {

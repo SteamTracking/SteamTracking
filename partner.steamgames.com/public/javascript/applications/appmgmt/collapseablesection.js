@@ -13,12 +13,12 @@ import {
 } from "./chunk~de7f2df91c.js";
 import { r as c, t as l } from "./chunk~25a6634263.js";
 import {
-  Kr as u,
-  Ur as d,
-  Wt as f,
-  hn as p,
-  pn as m,
-  ua as h,
+  Gt as u,
+  Wr as d,
+  da as f,
+  gn as p,
+  mn as m,
+  qr as h,
 } from "./chunk~1fa4b8f2ff.js";
 import { w as g } from "./chunk~44f252525d.js";
 import { n as _ } from "./chunk~f8b6a4beb3.js";
@@ -176,13 +176,13 @@ function G(e) {
 function K(e) {
   let { bIsMinimized: t, fnToggleMinimize: n } = e;
   return (0, U.jsx)(p, {
-    toolTipContent: h(
+    toolTipContent: f(
       t ? `#Section_Maximize_Tooltip` : `#Section_Minimize_Tooltip`,
     ),
-    children: (0, U.jsx)(f, {
+    children: (0, U.jsx)(u, {
       className: H,
       onClick: n,
-      children: e.bIsMinimized ? (0, U.jsx)(d, {}) : (0, U.jsx)(u, {}),
+      children: e.bIsMinimized ? (0, U.jsx)(d, {}) : (0, U.jsx)(h, {}),
     }),
   });
 }

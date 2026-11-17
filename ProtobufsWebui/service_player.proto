@@ -251,6 +251,7 @@ message CPlayer_GetGamesWithAchievementProgress_Request {
 	optional bool skip_unvetted_apps = 2 [default = false];
 	optional string language = 3;
 	optional bool include_groups_without_progress = 4 [default = false];
+	repeated uint32 appids = 5;
 }
 
 message CPlayer_GetGamesWithAchievementProgress_Response {

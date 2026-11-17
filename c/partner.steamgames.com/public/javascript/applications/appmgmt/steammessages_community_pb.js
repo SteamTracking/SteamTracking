@@ -5114,7 +5114,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetApps = _;
@@ -5127,7 +5127,7 @@ var _ = _(_(), 1),
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`community`],
+        rgBrowserAPISites: [`community`, `store`],
       },
     );
   }
@@ -5189,7 +5189,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Community.RateClanAnnouncement#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.RateClanAnnouncement = _;
@@ -5200,7 +5200,7 @@ var _ = _(_(), 1),
       _,
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`community`],
+        rgBrowserAPISites: [`community`, `store`],
       },
     );
   }
@@ -5276,7 +5276,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Community.MarkPartnerEventsForUser#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.MarkPartnerEventsForUser = _;

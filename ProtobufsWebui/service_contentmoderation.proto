@@ -44,6 +44,7 @@ message CContentModeration_GetAuditLogByID_Response_AuditLogEntry {
 	optional int32 action = 4 [(.description) = "enum"];
 	optional string additional_json_data = 5;
 	optional bool actor_is_support = 6;
+	optional bool actor_is_developer = 7;
 }
 
 message CContentModeration_GetClaimedSubjects_Request {
@@ -327,6 +328,7 @@ message ContentReport {
 	optional uint64 reported_content_id = 25;
 	optional .ReportedContentCoordinates coordinates = 26;
 	optional bool reporter_is_support = 27;
+	optional bool reporter_is_developer = 28;
 }
 
 message ContentReportSubject {

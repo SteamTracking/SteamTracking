@@ -14,22 +14,22 @@ import {
 import { I as c, Ot as l, Pt as u, ot as d } from "./chunk~25a6634263.js";
 import { n as f } from "./chunk~68b7e78d68.js";
 import {
-  Ha as p,
-  Ua as m,
-  Va as h,
-  Ya as g,
-  gn as _,
-  hn as v,
-  l as y,
-  la as b,
-  pr as x,
-  tr as S,
-  u as C,
-  ua as w,
-  wr as T,
-  zt as E,
+  Bt as p,
+  Ha as m,
+  Tr as h,
+  Ua as g,
+  Wa as _,
+  Xa as v,
+  _n as y,
+  da as b,
+  gn as x,
+  l as S,
+  mr as C,
+  nr as w,
+  u as T,
+  ua as E,
 } from "./chunk~1fa4b8f2ff.js";
-import { M as D } from "./chunk~0a99e05c44.js";
+import { P as D } from "./chunk~0a99e05c44.js";
 import { t as O } from "./chunk~6257ebd2d4.js";
 import { n as k, t as A } from "./chunk~fa5480ab25.js";
 import { n as j } from "./chunk~971d501580.js";
@@ -62,7 +62,7 @@ function de() {
 async function fe() {
   de() &&
     (
-      await g(() => import(`./chunk~952edc70be.js`), [], import.meta.url)
+      await v(() => import(`./chunk~952edc70be.js`), [], import.meta.url)
     ).apply();
 }
 var z = s();
@@ -298,7 +298,7 @@ function H(e) {
       renderWhenClosed: u = !0,
       ...d
     } = e,
-    { isShowingMenu: f, triggerProps: h, menuProps: g, closeMenu: _ } = B(e),
+    { isShowingMenu: f, triggerProps: p, menuProps: m, closeMenu: h } = B(e),
     v = R.useRef(null),
     y = l(v, o.props.navRef),
     b = R.useRef(null);
@@ -311,20 +311,20 @@ function H(e) {
     (0, z.jsxs)(z.Fragment, {
       children: [
         R.cloneElement(o, {
-          ...h,
-          onMouseEnter: V(o.props.onMouseEnter, h.onMouseEnter),
-          onMouseLeave: V(o.props.onMouseLeave, h.onMouseLeave),
+          ...p,
+          onMouseEnter: V(o.props.onMouseEnter, p.onMouseEnter),
+          onMouseLeave: V(o.props.onMouseLeave, p.onMouseLeave),
           navRef: y,
         }),
-        (0, z.jsx)(p, {
+        (0, z.jsx)(g, {
           ...d,
-          ...g,
-          className: (0, le.default)(g.className, s),
+          ...m,
+          className: (0, le.default)(m.className, s),
           navRef: b,
-          onCancel: _,
-          onFocusWithin: (e) => !e && _(),
+          onCancel: h,
+          onFocusWithin: (e) => !e && h(),
           childFocusDisabled: !f,
-          children: (0, z.jsx)(m, { children: (u || f) && c }),
+          children: (0, z.jsx)(_, { children: (u || f) && c }),
         }),
       ],
     })
@@ -386,7 +386,7 @@ function he(e) {
     [o, s, l] = c();
   return (0, z.jsxs)(z.Fragment, {
     children: [
-      (0, z.jsx)(v, {
+      (0, z.jsx)(x, {
         toolTipContent: a
           ? L.Localize(`#FreeOnDemand_Button_ttip`)
           : L.Localize(`#FreeOnDemand_Button_disabled_ttip`),
@@ -424,7 +424,7 @@ function ge(e) {
             t());
         },
       })
-    : (0, z.jsxs)(y, {
+    : (0, z.jsxs)(S, {
         strTitle: L.Localize(`#FreeOnDemand_Title`),
         strDescription: L.Localize(`#FreeOnDemand_Desc`),
         strOKButtonText: L.Localize(`#FreeOnDemand_Button_Confirm`),
@@ -446,7 +446,7 @@ function ge(e) {
               c.fnSetStrError(
                 e instanceof Error
                   ? e.message
-                  : h.Localize(`#Error_ErrorCommunicatingWithNetwork`),
+                  : m.Localize(`#Error_ErrorCommunicatingWithNetwork`),
               ));
           }
         },
@@ -481,7 +481,7 @@ function ge(e) {
 function _e(e) {
   let { closeModal: t } = e,
     n = `${a.SUPPORT_BASE_URL}wizard/HelpWithPublishing?issueid=915`;
-  return (0, z.jsxs)(C, {
+  return (0, z.jsxs)(T, {
     strTitle: L.Localize(`#FreeOnDemand_Title`),
     strDescription: L.Localize(`#FreeOnDemand_Desc_NotPermitted`),
     closeModal: t,
@@ -509,7 +509,7 @@ var ve = `_3K6UndZwcp4-`,
   Se = `X6JiGhh9z-Y-`,
   Ce = `ffBlm-5By18-`;
 function we(e) {
-  let t = (0, z.jsx)(`button`, { className: ve, children: (0, z.jsx)(T, {}) });
+  let t = (0, z.jsx)(`button`, { className: ve, children: (0, z.jsx)(h, {}) });
   return (0, z.jsx)(K, { menuTarget: t, ...e });
 }
 function Te(e) {
@@ -517,13 +517,13 @@ function Te(e) {
     r = (0, z.jsxs)(M, {
       onClick: () => {},
       children: [
-        (0, z.jsx)(v, {
+        (0, z.jsx)(x, {
           toolTipContent: n,
           children: (0, z.jsx)(`span`, { children: t }),
         }),
         (0, z.jsx)(`div`, {
           className: i(G, `DialogDropDown_Arrow`),
-          children: (0, z.jsx)(T, {}),
+          children: (0, z.jsx)(h, {}),
         }),
       ],
     });
@@ -635,39 +635,39 @@ function Be(e) {
         className: q,
         children: [
           !!a &&
-            (0, z.jsxs)(_, {
+            (0, z.jsxs)(y, {
               className: `QJXb3tYHa2s-`,
               direction: `left`,
-              toolTipContent: w(`#PricingDashboard_CurrentPriceOnStore_ttip`),
+              toolTipContent: b(`#PricingDashboard_CurrentPriceOnStore_ttip`),
               children: [
                 (0, z.jsx)(`div`, {
                   className: `dIR-rFd35NQ-`,
-                  children: w(`#PricingDashboard_CurrentPriceOnStore`),
+                  children: b(`#PricingDashboard_CurrentPriceOnStore`),
                 }),
                 (0, z.jsx)(`div`, {
                   className: `COSWR-duOjY-`,
                   children: I(a, n).join(``),
                 }),
-                (0, z.jsx)(_, {
+                (0, z.jsx)(y, {
                   className: i(`-SR0r-VcbgY-`, a == r && `_0TfgESjlOKw-`),
                   onClick: () => c(a),
                   bDisabled: a == r,
-                  toolTipContent: w(`#PricingDashboard_UseThisOldPrice_ttip`),
-                  children: w(`#PricingDashboard_UseThisPrice_Button`),
+                  toolTipContent: b(`#PricingDashboard_UseThisOldPrice_ttip`),
+                  children: b(`#PricingDashboard_UseThisPrice_Button`),
                 }),
               ],
             }),
           u &&
-            (0, z.jsxs)(_, {
+            (0, z.jsxs)(y, {
               className: `QJXb3tYHa2s-`,
               direction: `left`,
               toolTipContent: h
-                ? w(`#PricingDashboard_ApprovedPrice_ttip`)
-                : w(`#PricingDashboard_ProposedPrice_ttip`, m, f),
+                ? b(`#PricingDashboard_ApprovedPrice_ttip`)
+                : b(`#PricingDashboard_ProposedPrice_ttip`, m, f),
               children: [
                 (0, z.jsx)(`div`, {
                   className: `dIR-rFd35NQ-`,
-                  children: w(
+                  children: b(
                     h
                       ? `#PricingDashboard_ApprovedPrice`
                       : `#PricingDashboard_ProposedPrice`,
@@ -677,17 +677,17 @@ function Be(e) {
                   className: `COSWR-duOjY-`,
                   children: I(o, n).join(``),
                 }),
-                (0, z.jsx)(_, {
+                (0, z.jsx)(y, {
                   className: i(`-SR0r-VcbgY-`, o == r && `_0TfgESjlOKw-`),
                   onClick: () => c(o),
                   bDisabled: o == r,
-                  toolTipContent: w(`#PricingDashboard_UseThisNewPrice_ttip`),
-                  children: w(`#PricingDashboard_UseThisPrice_Button`),
+                  toolTipContent: b(`#PricingDashboard_UseThisNewPrice_ttip`),
+                  children: b(`#PricingDashboard_UseThisPrice_Button`),
                 }),
               ],
             }),
           !!s &&
-            (0, z.jsxs)(_, {
+            (0, z.jsxs)(y, {
               className: `QJXb3tYHa2s-`,
               direction: `left`,
               toolTipContent: L.Localize(
@@ -705,12 +705,12 @@ function Be(e) {
                   className: `COSWR-duOjY-`,
                   children: I(s, n).join(``),
                 }),
-                (0, z.jsx)(_, {
+                (0, z.jsx)(y, {
                   className: i(`-SR0r-VcbgY-`, s == r && `_0TfgESjlOKw-`),
                   onClick: () => c(s),
                   bDisabled: s == r,
-                  toolTipContent: w(`#PricingDashboard_UseThisNewPrice_ttip`),
-                  children: w(`#PricingDashboard_UseThisPrice_Button`),
+                  toolTipContent: b(`#PricingDashboard_UseThisNewPrice_ttip`),
+                  children: b(`#PricingDashboard_UseThisPrice_Button`),
                 }),
               ],
             }),
@@ -729,8 +729,8 @@ function Ve(e) {
     } = P(r, i),
     [l, u, d] = I(a, i),
     f = re(i),
-    p = R.useRef(void 0),
-    m = (e) => {
+    m = R.useRef(void 0),
+    h = (e) => {
       let t = e.target.value.replace(/[^0-9]/g, ``),
         n = Number(t || 0);
       if (Number.isNaN(n)) return;
@@ -738,23 +738,23 @@ function Ve(e) {
       let r = 2147483647;
       (n > r && (n = r), c(n));
     },
-    { strClassName: h } = Z(r, i),
-    g = i == `USD`,
-    _ = s ?? o;
+    { strClassName: g } = Z(r, i),
+    _ = i == `USD`,
+    v = s ?? o;
   return (0, z.jsxs)(`div`, {
-    ref: p,
+    ref: m,
     onKeyDown: ie,
-    className: h,
+    className: g,
     children: [
-      a != _ && (0, z.jsx)(Q, { nPriceInCents: a, nSavedPriceInCents: _ }),
+      a != v && (0, z.jsx)(Q, { nPriceInCents: a, nSavedPriceInCents: v }),
       (0, z.jsx)(`div`, { className: Oe, children: l && l }),
       (0, z.jsx)(H, {
         menuTarget: (0, z.jsx)(`div`, {
           className: je,
-          children: (0, z.jsx)(E, {
+          children: (0, z.jsx)(p, {
             value: u,
             className: Me,
-            onChange: m,
+            onChange: h,
             onFocus: () => ze(r + i),
           }),
         }),
@@ -765,7 +765,7 @@ function Ve(e) {
         children: (0, z.jsx)(Be, { packageID: r, strPriceKey: i }),
       }),
       (0, z.jsx)(`div`, { className: ke, children: d && d }),
-      g &&
+      _ &&
         (0, z.jsx)(He, {
           packageID: r,
           appids: n.original.appids,
@@ -793,12 +793,12 @@ function X(e) {
   let { packageID: t, strPriceKey: n } = e,
     { strPriceWarning: r, bBadPrice: i, bShowWarningIcon: a } = Z(t, n);
   return a
-    ? (0, z.jsx)(_, {
+    ? (0, z.jsx)(y, {
         className: Fe,
         strTooltipClassname: J,
         toolTipContent: r,
         direction: `top`,
-        children: (0, z.jsx)(x, { color: i ? `rgb(194, 45, 0)` : `#e5af37` }),
+        children: (0, z.jsx)(C, { color: i ? `rgb(194, 45, 0)` : `#e5af37` }),
       })
     : null;
 }
@@ -825,57 +825,57 @@ function Z(e, t) {
     v = !!l && n == l && !!c,
     y = !1;
   m
-    ? (y = w(`#PricingDashboard_PriceIncreaseDisallowed`))
+    ? (y = b(`#PricingDashboard_PriceIncreaseDisallowed`))
     : p && !f
-      ? (y = w(`#PricingDashboard_PriceTooLow_Grandfathered`))
+      ? (y = b(`#PricingDashboard_PriceTooLow_Grandfathered`))
       : p
-        ? (y = w(`#PricingDashboard_PriceTooLow`, I(o, t).join(``)))
+        ? (y = b(`#PricingDashboard_PriceTooLow`, I(o, t).join(``)))
         : h
-          ? (y = w(
+          ? (y = b(
               `#PricingDashboard_PriceMuchHigherThanMethod`,
               I(l, t).join(``),
             ))
           : g && _
-            ? (y = w(
+            ? (y = b(
                 `#PricingDashboard_PriceMuchLowerThanMethod_AndLimitDiscount`,
                 I(l, t).join(``),
                 c,
               ))
             : g
-              ? (y = w(
+              ? (y = b(
                   `#PricingDashboard_PriceMuchLowerThanMethod`,
                   I(l, t).join(``),
                 ))
               : _
-                ? (y = w(
+                ? (y = b(
                     `#PricingDashboard_PriceCheapAndLowerThanGuidelines`,
                     c,
                   ))
-                : v && (y = w(`#PricingDashboard_PriceCheap`, c));
-  let b = m || p,
-    x = h || g,
-    S = b || x || _,
-    C = !f && !!a && (!r || a != r),
+                : v && (y = b(`#PricingDashboard_PriceCheap`, c));
+  let x = m || p,
+    S = h || g,
+    C = x || S || _,
+    w = !f && !!a && (!r || a != r),
     T = u?.eState == 4,
     E = i(
       De,
       d && `_2jxaWr3nXmY-`,
       f && `_-58NL0goqOE-`,
-      C && `gWq-S1xg768-`,
+      w && `gWq-S1xg768-`,
       T && `zJrzoJbAzQ4-`,
-      S && `YhX-7qIsx74-`,
-      x && `rVG5SliiqF4-`,
-      b && `Q7bnsMFI6lE-`,
+      C && `YhX-7qIsx74-`,
+      S && `rVG5SliiqF4-`,
+      x && `Q7bnsMFI6lE-`,
     );
   return R.useMemo(
     () => ({
       strPriceWarning: y,
       strClassName: E,
-      bBadPrice: b,
-      bShowSevereWarning: x,
-      bShowWarningIcon: S,
+      bBadPrice: x,
+      bShowSevereWarning: S,
+      bShowWarningIcon: C,
     }),
-    [y, E, b, x, S],
+    [y, E, x, S, C],
   );
 }
 function Q(e) {
@@ -884,11 +884,11 @@ function Q(e) {
     a = null,
     o = null,
     s = null;
-  if (!n) ((r = w(`#PricingDashboard_PriceIsNew_Short`)), (s = i(Pe)));
+  if (!n) ((r = b(`#PricingDashboard_PriceIsNew_Short`)), (s = i(Pe)));
   else {
     let e = Math.ceil((100 * (t - n)) / n),
       c = t > n;
-    ((o = w(
+    ((o = b(
       c
         ? `#PricingDashboard_PriceIncreaseBy`
         : `#PricingDashboard_PriceLowerBy`,
@@ -897,11 +897,11 @@ function Q(e) {
       (s = i(Ne, c && `JsrDuEwdS04-`)),
       (a = (0, z.jsx)(`div`, {
         className: Ie,
-        children: (0, z.jsx)(S, { angle: c ? 0 : 180 }),
+        children: (0, z.jsx)(w, { angle: c ? 0 : 180 }),
       })),
       (r = e + `%`));
   }
-  return (0, z.jsxs)(_, {
+  return (0, z.jsxs)(y, {
     className: s,
     strTooltipClassname: J,
     toolTipContent: o,
@@ -910,7 +910,7 @@ function Q(e) {
   });
 }
 function $(e) {
-  return new Date(e * 1e3).toLocaleString(b.GetPreferredLocales(), {
+  return new Date(e * 1e3).toLocaleString(E.GetPreferredLocales(), {
     weekday: `long`,
     month: `long`,
     day: `numeric`,

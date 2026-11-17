@@ -11,11 +11,11 @@ import {
 } from "./chunk~de7f2df91c.js";
 import { It as o, gt as s } from "./chunk~25a6634263.js";
 import {
-  Jr as c,
-  Qi as l,
-  Wt as u,
-  ua as d,
-  zt as f,
+  $i as c,
+  Bt as l,
+  Gt as u,
+  Yr as d,
+  da as f,
 } from "./chunk~1fa4b8f2ff.js";
 import { C as p } from "./chunk~44f252525d.js";
 var m = r(t()),
@@ -435,13 +435,13 @@ var m = r(t()),
                       (0, G.jsx)(`div`, {
                         className: `o5BUe1m-4BM-`,
                         onClick: this.HandleDelete,
-                        children: (0, G.jsx)(l, {}),
+                        children: (0, G.jsx)(c, {}),
                       }),
                     !this.props.bDisableLink &&
                       (0, G.jsx)(`div`, {
                         className: `-e4w8MaVU8k-`,
                         onClick: this.OnEditLink,
-                        children: (0, G.jsx)(c, {}),
+                        children: (0, G.jsx)(d, {}),
                       }),
                     (0, G.jsxs)(`div`, {
                       className: U,
@@ -483,23 +483,23 @@ var m = r(t()),
               (0, G.jsxs)(`div`, {
                 className: `_1Be3592R7Ao-`,
                 children: [
-                  (0, G.jsx)(f, {
+                  (0, G.jsx)(l, {
                     className: void 0,
                     type: `text`,
                     name: `link_url`,
                     value: this.state.text_link_url,
-                    label: d(`#SteamTV_LinkURL`),
+                    label: f(`#SteamTV_LinkURL`),
                     placeholder: `https://www.example.com`,
                     onChange: this.OnSetLinkURLChange,
                     mustBeURL: !0,
                   }),
-                  (0, G.jsx)(f, {
+                  (0, G.jsx)(l, {
                     className: void 0,
                     type: `text`,
                     name: `link_description`,
                     value: this.state.text_link_description,
-                    label: d(`#SteamTV_LinkDescription`),
-                    placeholder: d(`#SteamTV_LinkDescription_Placeholder`),
+                    label: f(`#SteamTV_LinkDescription`),
+                    placeholder: f(`#SteamTV_LinkDescription_Placeholder`),
                     onChange: this.OnSetLinkDescriptionChange,
                   }),
                   (0, G.jsxs)(`div`, {
@@ -508,11 +508,11 @@ var m = r(t()),
                       (0, G.jsxs)(u, {
                         disabled: !this.state.valid_link,
                         onClick: this.OnSaveLink,
-                        children: [` `, d(`#Button_OK`), ` `],
+                        children: [` `, f(`#Button_OK`), ` `],
                       }),
                       (0, G.jsxs)(u, {
                         onClick: this.OnEditLink,
-                        children: [` `, d(`#Button_Cancel`)],
+                        children: [` `, f(`#Button_Cancel`)],
                       }),
                     ],
                   }),

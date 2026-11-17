@@ -182,6 +182,38 @@
             ]
         },
         {
+            "name": "QueryListedServer",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Perform a query on a specific server returned in a server list, by SteamID",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID the server is listed under.  (Also used for routing.)"
+                },
+                {
+                    "name": "steamid_gs",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of GS to query."
+                },
+                {
+                    "name": "query_type",
+                    "type": "{enum}",
+                    "optional": false,
+                    "description": "What type of query?"
+                }
+            ]
+        },
+        {
             "name": "GetServerSteamIDsByIP",
             "version": 1,
             "httpmethod": "GET",
@@ -242,7 +274,7 @@
                     "optional": false
                 },
                 {
-                    "name": "app_id",
+                    "name": "appid",
                     "type": "uint32",
                     "optional": false
                 }

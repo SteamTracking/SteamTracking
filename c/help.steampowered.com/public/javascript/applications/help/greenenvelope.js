@@ -753,7 +753,7 @@ var _ = _(),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetLists = _;
@@ -762,7 +762,7 @@ var _ = _(),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetListDetails = _;
@@ -3514,14 +3514,14 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Parental.EnableParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.EnableParentalSettings = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.DisableParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.DisableParentalSettings = _;
@@ -3543,14 +3543,14 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Parental.SetParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.SetParentalSettings = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ValidateToken#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`, `community`],
+      rgBrowserAPISites: [`help`, `community`, `store`],
     });
   }
   _.ValidateToken = _;
@@ -3575,28 +3575,28 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Parental.RequestFeatureAccess#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.RequestFeatureAccess = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ApproveFeatureAccess#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.ApproveFeatureAccess = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.RequestPlaytime#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.RequestPlaytime = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ApprovePlaytime#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.ApprovePlaytime = _;
@@ -3604,7 +3604,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Parental.GetRequests#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetRequests = _;
@@ -4606,7 +4606,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -4617,7 +4617,7 @@ var _ = class _ extends _.Message {
       _(_, _),
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -4628,7 +4628,7 @@ var _ = class _ extends _.Message {
       _(_, _),
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -4636,7 +4636,7 @@ var _ = class _ extends _.Message {
   function _(_, _) {
     return _.SendNotification(`SteamNotification.HideNotification#1`, _(_, _), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.HideNotification = _;
@@ -4651,7 +4651,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`SteamNotification.GetPreferences#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetPreferences = _;
@@ -6493,7 +6493,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 2,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -10881,7 +10881,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.CreateFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.CreateFamilyGroup = _;
@@ -10889,7 +10889,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetFamilyGroup#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetFamilyGroup = _;
@@ -10897,21 +10897,21 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetFamilyGroupForUser#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetFamilyGroupForUser = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.ModifyFamilyGroupDetails#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.ModifyFamilyGroupDetails = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.InviteToFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.InviteToFamilyGroup = _;
@@ -10922,7 +10922,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -10934,7 +10934,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -10942,28 +10942,28 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.JoinFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.JoinFamilyGroup = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.ConfirmJoinFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.ConfirmJoinFamilyGroup = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.RemoveFromFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.RemoveFromFamilyGroup = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.CancelFamilyGroupInvite#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.CancelFamilyGroupInvite = _;
@@ -10971,35 +10971,35 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetUsersSharingDevice#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetUsersSharingDevice = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.DeleteFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.DeleteFamilyGroup = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.UndeleteFamilyGroup#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.UndeleteFamilyGroup = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.GetPlaytimeSummary#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetPlaytimeSummary = _;
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.RequestPurchase#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.RequestPurchase = _;
@@ -11007,7 +11007,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetPurchaseRequests#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetPurchaseRequests = _;
@@ -11018,7 +11018,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -11027,7 +11027,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetChangeLog#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetChangeLog = _;
@@ -11038,7 +11038,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 5,
-        rgBrowserAPISites: [`community`],
+        rgBrowserAPISites: [`community`, `store`],
       },
     );
   }
@@ -11047,7 +11047,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetSharedLibraryApps#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetSharedLibraryApps = _;
@@ -11067,7 +11067,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`FamilyGroups.ForceAcceptInvite#1`, _(_, _, _), _, {
       ePrivilege: 5,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.ForceAcceptInvite = _;
@@ -11075,7 +11075,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FamilyGroups.GetInviteCheckResults#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetInviteCheckResults = _;
@@ -13065,7 +13065,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetShoppingCartContents = _;
@@ -13094,6 +13094,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ShoppingCart.ModifyLineItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.ModifyLineItem = _;
@@ -13101,7 +13102,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ShoppingCart.RemoveLineItems#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.RemoveLineItems = _;
@@ -13457,6 +13458,11 @@ var _ = class _ extends _.Message {
             },
             reporter_is_support: {
               _: 27,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            reporter_is_developer: {
+              _: 28,
               _: _.readBool,
               _: _.writeBool,
             },
@@ -16661,6 +16667,11 @@ var _ = class _ extends _.Message {
             },
             actor_is_support: {
               _: 6,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            actor_is_developer: {
+              _: 7,
               _: _.readBool,
               _: _.writeBool,
             },
@@ -20691,7 +20702,7 @@ var _ = `wtEvuR05t3A-`,
   function _(_, _, _) {
     return _.SendMsg(`StoreCatalog.GetDevPageAllAppsLinked#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetDevPageAllAppsLinked = _;
@@ -20700,7 +20711,7 @@ var _ = `wtEvuR05t3A-`,
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetDevPageListApps = _;
@@ -21840,7 +21851,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetPartnerEventsByBuildIDRange = _;
@@ -24751,6 +24762,7 @@ var _ = `127.0.0.1`,
           _.SendSerializedMessage(_) == 1
             ? this.m_mapPendingMethodRequests.set(_, {
                 m_iSeq: _,
+                m_sServiceName: _,
                 m_responseClass: _,
                 m_fnCallback: _,
                 m_fnError: _,
@@ -24864,7 +24876,16 @@ var _ = `127.0.0.1`,
       (_(_ == _.m_iSeq, `Transport Error: mistmatched request sequence`),
         this.m_mapPendingMethodRequests.delete(_));
       let _ = _.InitFromMsg(_.m_responseClass, _);
-      _.m_fnCallback(_);
+      (_.BIsValid() ||
+        _()?.ReportError(
+          Error(
+            `WebUITransport: failed to parse response for ${_.m_sServiceName}`,
+          ),
+          {
+            bIncludeMessageInIdentifier: !0,
+          },
+        ),
+        _.m_fnCallback(_));
     }
     DispatchNotification(_) {
       this.m_messageHandlers.DispatchMsgToHandlers(_, (_) => {

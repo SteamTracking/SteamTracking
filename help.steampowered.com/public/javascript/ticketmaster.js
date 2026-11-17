@@ -2873,8 +2873,22 @@ function InitReportPanel( strReferenceCode, bOpen, strAssetBaseURL )
 	$J( document ).off( 'change.reportPanel' ).on( 'change.reportPanel', '.reportOutcome', function() { ReportPanel.OnOutcomeChanged( this ); } );
 	$J( document ).off( 'mouseup.reportPanel' ).on( 'mouseup.reportPanel', ReportPanel.OnMouseUp );
 
+	// the page is rendered from the last save, so that's what the report is compared against. Unsaved changes kept from
+	// earlier in this tab then go back on top. Attachments are added and removed by the shared upload code, so their list
+	// is watched instead.
+	$J( '.reportTrainingForm' ).each( function() {
+		$J( this ).data( 'savedState', ReportPanel.GetReportStateKey( $J( this ) ) );
+		ReportPanel.RestoreDraft( $J( this ) );
+		$J( this ).find( 'ul.attached_file_list' ).each( function() {
+			new MutationObserver( ReportPanel.UpdateUnsavedIndicator ).observe( this, { childList: true } );
+		});
+	});
+	$J( document ).off( 'input.reportUnsaved change.reportUnsaved' ).on( 'input.reportUnsaved change.reportUnsaved', '.reportTrainingForm, #reportAnchorPopover', ReportPanel.UpdateUnsavedIndicator );
+
 	$J( '.reportOutcome' ).each( function() { ReportPanel.RenderOutcomeTargets( this ); } );
 	ReportPanel.UpdateAnchorTriggers();
+	ReportPanel.ShowSavedFlags();
+	ReportPanel.UpdateUnsavedIndicator();
 
 	if ( bOpen )
 		ReportPanel.SetOpen( true );
@@ -2940,7 +2954,8 @@ var ReportPanel = {
 		$Popover.children( 'ol' ).append( $Steps );
 		$Steps.find( '.reportOutcome' ).each( function() { ReportPanel.RenderOutcomeTargets( this ); } );
 
-		$Popover.show();
+		// a modal dialog makes everything outside it unclickable, so open inside the dialog when the trigger is in one
+		$Popover.appendTo( $J( elTrigger ).closest( 'dialog' ).get( 0 ) || document.body ).show();
 		var nScrollTop = $J( window ).scrollTop();
 		var nTop = Math.max( nScrollTop + 16, Math.min( $J( elTrigger ).offset().top, nScrollTop + $J( window ).height() - $Popover.outerHeight() - 16 ) );
 		$Popover.offset( { left: Math.max( $J( window ).scrollLeft() + 16, $J( elAsset ).offset().left - $Popover.outerWidth() - 8 ), top: nTop } );
@@ -2958,7 +2973,7 @@ var ReportPanel = {
 			$J( this ).data( 'placeholder' ).replaceWith( this );
 		});
 		$Steps.find( '.reportOutcome' ).each( function() { ReportPanel.RenderOutcomeTargets( this ); } );
-		$Popover.hide();
+		$Popover.hide().appendTo( document.body );
 		ReportPanel.elAnchorTriggerOpen = null;
 	},
 
@@ -2997,6 +3012,113 @@ var ReportPanel = {
 				.on( 'click', function() { ReportPanel.OpenAnchorPopover( this, this.parentNode, rgAnchors, target ); } );
 			$J( this ).prepend( $Trigger );
 		});
+	},
+
+	// marks what the saved report flagged, so a resubmission can be re-reviewed from where the last review left off. Reads the
+	// outcomes ticked and the targets recorded when the page loaded, not the panel's current state.
+	ShowSavedFlags: function()
+	{
+		$J( '.reportSavedFlag' ).removeAttr( 'title' ).removeClass( 'reportSavedFlag' );
+		var bHighlight = !!( window.CSS && CSS.highlights );
+		var rgRanges = [];
+		var mapOutcomes = new Map();
+
+		// flags the elements and the tabs they're on. When the element is a tab's entire content, only the tab is flagged,
+		// rather than outlining everything in it.
+		var fnFlag = function( $Elements, rgOutcomes )
+		{
+			$Elements.each( function() {
+				var rgAnchors = $J( this ).parents( '[data-report-anchor]' ).addBack( '[data-report-anchor]' ).map( function() { return this.dataset.reportAnchor; } ).get();
+				var $Tabs = $J( '[data-report-tab]' ).filter( function() { return rgAnchors.includes( this.dataset.reportTab ); } );
+				var strAnchor = this.dataset.reportAnchor;
+				var $Flagged = $Tabs.is( function() { return this.dataset.reportTab === strAnchor; } ) ? $Tabs : $Tabs.add( this );
+				$Flagged.addClass( 'reportSavedFlag' ).each( function() {
+					var rgTitle = mapOutcomes.get( this ) || [];
+					rgOutcomes.forEach( function( strOutcome ) { if ( !rgTitle.includes( strOutcome ) ) rgTitle.push( strOutcome ); } );
+					mapOutcomes.set( this, rgTitle );
+				});
+			});
+		};
+
+		$J( '.renderedReport li.reportStep, #reportAnchorPopover li.reportStep' ).each( function() {
+			var $Ticked = $J( this ).find( '.reportOutcome' ).filter( function() { return this.defaultChecked; } );
+			if ( !$Ticked.length )
+				return;
+
+			var fnOutcomeName = function( strValue ) {
+				return $Ticked.filter( function() { return this.value === strValue; } ).closest( 'label' ).text().trim() || strValue;
+			};
+			var rgOutcomes = $Ticked.map( function() { return fnOutcomeName( this.value ); } ).get();
+			var rgStepAnchors = this.dataset.anchors.split( ',' ).map( function( s ) { return s.trim(); } );
+			fnFlag( $J( '[data-report-anchor]' ).filter( function() { return rgStepAnchors.includes( this.dataset.reportAnchor ); } ), rgOutcomes );
+
+			var rgTargets = JSON.parse( this.getAttribute( 'data-targets' ) || '[]' );
+			( Array.isArray( rgTargets ) ? rgTargets : [] ).forEach( function( target ) {
+				var rgOutcome = [ fnOutcomeName( target.outcome ) ];
+				if ( !target.quote )
+				{
+					fnFlag( $J( '[data-report-item]' ).filter( function() { return this.dataset.reportItem === target.item; } ), rgOutcome );
+					return;
+				}
+
+				$J( '[data-report-text]' ).filter( function() { return this.dataset.reportText === target.item; } ).each( function() {
+					// a quote in a language that isn't shown flags that language's link
+					if ( this.dataset.reportLang !== target.lang )
+					{
+						fnFlag( $J( this ).find( 'a[data-language]' ).filter( function() { return this.dataset.language === target.lang; } ), rgOutcome );
+						return;
+					}
+
+					// text that no longer has the quote in it has changed since, so the whole of it is flagged instead
+					var range = bHighlight ? ReportPanel.FindQuoteRange( this, target.quote ) : null;
+					if ( range )
+						rgRanges.push( range );
+					fnFlag( range ? $J( this ).parents( '[data-report-anchor]' ).last() : $J( this ), rgOutcome );
+				});
+			});
+		});
+
+		// long text gets no tooltip
+		mapOutcomes.forEach( function( rgTitle, el ) {
+			if ( !el.dataset.reportText )
+				el.title = 'Flagged in the saved report:\n' + rgTitle.join( '\n' );
+		});
+
+		if ( bHighlight )
+		{
+			var highlight = new Highlight();
+			rgRanges.forEach( function( range ) { highlight.add( range ); } );
+			CSS.highlights.set( 'reportSavedFlag', highlight );
+		}
+	},
+
+	// the quote's range in elText, ignoring whitespace: a selection's text has line breaks between blocks that the page's text doesn't
+	FindQuoteRange: function( elText, strQuote )
+	{
+		var strText = '';
+		var rgChars = [];
+		var walker = document.createTreeWalker( elText, NodeFilter.SHOW_TEXT );
+		for ( var node = walker.nextNode(); node; node = walker.nextNode() )
+		{
+			for ( var i = 0; i < node.data.length; i++ )
+			{
+				if ( /\s/.test( node.data[i] ) )
+					continue;
+				strText += node.data[i];
+				rgChars.push( { node: node, offset: i } );
+			}
+		}
+
+		var strFind = strQuote.replace( /\s+/g, '' );
+		var iStart = strText.indexOf( strFind );
+		if ( iStart < 0 )
+			return null;
+
+		var start = rgChars[iStart], end = rgChars[iStart + strFind.length - 1];
+		var range = document.createRange();
+		range.setStart( start.node, start.offset );
+		range.setEnd( end.node, end.offset + 1 );
+		return range;
 	},
 
 	// offers to record highlighted store page text against an outcome of the steps anchored to where it is
@@ -3057,6 +3179,7 @@ var ReportPanel = {
 		var bAlreadyAdded = rgTargets.some( function( target ) { return target.outcome === elOutcome.value && ReportPanel.BSameTarget( target, ReportPanel.target ); } );
 		if ( !bAlreadyAdded )
 			rgTargets.push( $J.extend( { outcome: elOutcome.value }, ReportPanel.target ) );
+		ReportPanel.UpdateUnsavedIndicator();
 	},
 
 	CreateTargetChip: function( target )
@@ -3100,17 +3223,21 @@ var ReportPanel = {
 					event.stopPropagation();
 					$Step.data( 'targets', $Step.data( 'targets' ).filter( function( other ) { return other !== target; } ) );
 					ReportPanel.RenderOutcomeTargets( elOutcome );
+					ReportPanel.UpdateUnsavedIndicator();
 				});
 			$List.append( ReportPanel.CreateTargetChip( target ).append( $Remove ) );
 		});
 
+		// a chip-shaped button previewing what would be added, after the chips already recorded
 		if ( bCanAdd )
 		{
-			$List.append( $J( '<button type="button" class="reportTargetAdd">' ).text( '+ Record against this too' ).on( 'click', function( event ) {
-				event.stopPropagation();
-				ReportPanel.AddTarget( elOutcome );
-				ReportPanel.RenderOutcomeTargets( elOutcome );
-			}));
+			$List.append( $J( '<button type="button" class="reportTarget reportTargetAdd">' )
+				.append( $J( '<span class="reportTargetAddIcon">+</span>' ), ReportPanel.CreateTargetChip( ReportPanel.target ).find( 'img, q' ), $J( '<span>' ).text( 'Add' ) )
+				.on( 'click', function( event ) {
+					event.stopPropagation();
+					ReportPanel.AddTarget( elOutcome );
+					ReportPanel.RenderOutcomeTargets( elOutcome );
+				}));
 		}
 	},
 
@@ -3123,30 +3250,35 @@ var ReportPanel = {
 
 	SaveReport: function( elBtn, unReportTemplateID )
 	{
-		ReportPanel.CloseAnchorPopover();
-		var strTemplateSelector = '.renderedReport#reportTemplate_' + unReportTemplateID;
-		var $Form = $J( elBtn ).closest( strTemplateSelector + ' .reportTrainingForm' );
+		var $Form = $J( elBtn ).closest( '.renderedReport#reportTemplate_' + unReportTemplateID + ' .reportTrainingForm' );
 		var $SaveBtn = $Form.find( '#reportSaveBtn' );
 		var $SaveStatus = $Form.find( '#reportSaveStatus' );
 
 		$SaveStatus.text( 'Saving…' );
 		$SaveBtn.prop( 'disabled', true );
 
-		var mapSelectionsByStep = {};
-		$Form.find( '.reportOutcome:checked' ).each( function() {
-			var strStep = String( $J( this ).attr( 'data-step' ) || '' );
-			var strValue = String( $J( this ).val() || '' );
-			if ( !strStep || !strValue )
-				return;
-			if ( !mapSelectionsByStep[ strStep ] )
-				mapSelectionsByStep[ strStep ] = [];
-			mapSelectionsByStep[ strStep ].push( strValue );
+		ReportPanel.PostReport( $Form ).done( function() {
+			location.reload();
+		}).fail( function() {
+			$SaveStatus.text( 'Error submitting report' );
+			$SaveBtn.prop( 'disabled', false );
 		});
+	},
+
+	// what saving $Form would send, including its steps that are open in the step popover right now
+	GetReportState: function( $Form )
+	{
+		var $Steps = $Form.find( 'li.reportStep' );
+		if ( $Form.closest( '.renderedReport' ).is( '#reportTemplate_' + $J( '#reportSelector' ).val() ) )
+			$Steps = $Steps.add( '#reportAnchorPopover li.reportStep' );
 
 		// custom outcome text is saved like a normal outcome
-		$Form.find( '.reportOutcomeCustom' ).each( function() {
+		var mapSelectionsByStep = {};
+		$Steps.find( '.reportOutcome:checked, .reportOutcomeCustom' ).each( function() {
 			var strStep = String( $J( this ).attr( 'data-step' ) || '' );
-			var strValue = String( $J( this ).val() || '' ).trim();
+			var strValue = String( $J( this ).val() || '' );
+			if ( $J( this ).is( '.reportOutcomeCustom' ) )
+				strValue = strValue.trim();
 			if ( !strStep || !strValue )
 				return;
 			if ( !mapSelectionsByStep[ strStep ] )
@@ -3154,21 +3286,16 @@ var ReportPanel = {
 			mapSelectionsByStep[ strStep ].push( strValue );
 		});
 
-		var formData = new FormData();
-		formData.append( 'outcomes', JSON.stringify( mapSelectionsByStep ) );
-		formData.append( 'reference_code', ReportPanel.strReferenceCode );
-		formData.append( 'report_template_id', $Form.find( '#report_template_id' ).val() );
-
 		// custom fields can be an input or select
-		$J( strTemplateSelector + ' .customFields input[type="text"], ' + strTemplateSelector + ' .customFields select' ).each( function() {
+		var rgCustomFields = $Form.closest( '.renderedReport' ).find( '.customFields input[type="text"], .customFields select' ).map( function() {
 			var field = {};
 			field[ this.name ] = this.value;
-			formData.append( 'custom_fields[]', JSON.stringify( field ) );
-		});
+			return field;
+		}).get();
 
 		// only for outcomes still ticked; always sent, so removing the last one clears them
 		var mapTargetsByStep = {};
-		$Form.find( 'li.reportStep' ).each( function() {
+		$Steps.each( function() {
 			var $Step = $J( this );
 			var rgTargets = ( $Step.data( 'targets' ) || [] ).filter( function( target ) {
 				return $Step.find( '.reportOutcome:checked' ).filter( function() { return this.value === target.outcome; } ).length > 0;
@@ -3176,13 +3303,93 @@ var ReportPanel = {
 			if ( rgTargets.length )
 				mapTargetsByStep[ this.value ] = rgTargets;
 		});
-		formData.append( 'outcome_targets', JSON.stringify( mapTargetsByStep ) );
 
-		$Form.find( 'ul.attached_file_list' ).children().each( function() {
-			formData.append( 'attachments[]', $J( this ).data( 'file' ) );
+		return {
+			outcomes: mapSelectionsByStep,
+			custom_fields: rgCustomFields,
+			outcome_targets: mapTargetsByStep,
+			attachments: $Form.find( 'ul.attached_file_list' ).children().map( function() { return $J( this ).data( 'file' ); } ).get()
+		};
+	},
+
+	// GetReportState as a string to compare against the last save, with attachments by name
+	GetReportStateKey: function( $Form )
+	{
+		var state = ReportPanel.GetReportState( $Form );
+		state.attachments = state.attachments.map( function( file ) { return file && file.name; } );
+		return JSON.stringify( state );
+	},
+
+	// a dot on the side button and a notice in the panel header while any report differs from what was last saved. The
+	// differences are kept for the session, like the reply's draft, so a reload doesn't lose them.
+	UpdateUnsavedIndicator: function()
+	{
+		var bUnsaved = false;
+		$J( '.reportTrainingForm' ).each( function() {
+			var strState = ReportPanel.GetReportStateKey( $J( this ) );
+			if ( $J( this ).data( 'savedState' ) !== strState )
+			{
+				sessionStorage.setItem( ReportPanel.GetDraftKey( $J( this ) ), strState );
+				bUnsaved = true;
+			}
+			else
+			{
+				sessionStorage.removeItem( ReportPanel.GetDraftKey( $J( this ) ) );
+			}
+		});
+		$J( '#reportPanel' ).toggleClass( 'reportUnsaved', bUnsaved );
+		$J( '#openReportBtn' ).toggleClass( 'reportUnsaved', bUnsaved ).attr( 'title', bUnsaved ? 'This report has unsaved changes' : null );
+	},
+
+	GetDraftKey: function( $Form )
+	{
+		return 'strReportDraft_' + ReportPanel.strReferenceCode + '_' + $Form.find( '#report_template_id' ).val();
+	},
+
+	// puts back the unsaved changes UpdateUnsavedIndicator kept for $Form. Attachments can't be kept.
+	RestoreDraft: function( $Form )
+	{
+		var state = JSON.parse( sessionStorage.getItem( ReportPanel.GetDraftKey( $Form ) ) || 'null' );
+		if ( !state )
+			return;
+
+		$Form.find( 'li.reportStep' ).each( function() {
+			var rgValues = ( state.outcomes[ this.value ] || [] ).slice();
+			$J( this ).find( '.reportOutcome' ).each( function() {
+				var iValue = rgValues.indexOf( this.value );
+				this.checked = iValue >= 0;
+				if ( iValue >= 0 )
+					rgValues.splice( iValue, 1 );
+			});
+
+			// anything that isn't one of the step's outcomes was its note, the same way the server renders a saved report
+			$J( this ).find( '.reportOutcomeCustom' ).val( rgValues.join( ' ' ) ).trigger( 'input' );
+			$J( this ).data( 'targets', state.outcome_targets[ this.value ] || [] );
 		});
 
-		$J.ajax({
+		var $Fields = $Form.closest( '.renderedReport' ).find( '.customFields input[type="text"], .customFields select' );
+		state.custom_fields.forEach( function( field ) {
+			$J.each( field, function( strName, strValue ) {
+				$Fields.filter( function() { return this.name === strName; } ).val( strValue );
+			});
+		});
+	},
+
+	// saves the report in $Form as it stands; resolves once the server has it
+	PostReport: function( $Form )
+	{
+		ReportPanel.CloseAnchorPopover();
+		var state = ReportPanel.GetReportState( $Form );
+
+		var formData = new FormData();
+		formData.append( 'outcomes', JSON.stringify( state.outcomes ) );
+		formData.append( 'reference_code', ReportPanel.strReferenceCode );
+		formData.append( 'report_template_id', $Form.find( '#report_template_id' ).val() );
+		state.custom_fields.forEach( function( field ) { formData.append( 'custom_fields[]', JSON.stringify( field ) ); } );
+		formData.append( 'outcome_targets', JSON.stringify( state.outcome_targets ) );
+		state.attachments.forEach( function( file ) { formData.append( 'attachments[]', file ); } );
+
+		return $J.ajax({
 			url: 'https://help.steampowered.com/ticketmaster/AjaxSaveReport/',
 			type: 'POST',
 			data: formData,
@@ -3190,23 +3397,14 @@ var ReportPanel = {
 			contentType: false,
 			dataType: 'json'
 		})
-		.done( function( result )
+		.then( function( result )
 		{
 			if ( result.success != 1 )
-			{
-				alert( 'Error submitting report' );
-			}
-			else
-			{
-				location.reload();
-				$SaveStatus.text( 'Saved.' );
-				$SaveBtn.prop( 'disabled', false );
-			}
-		})
-		.fail( function()
-		{
-			$SaveStatus.text( 'Error submitting report' );
-			$SaveBtn.prop( 'disabled', false );
+				return $J.Deferred().reject();
+
+			// what was just saved is the new baseline, which also drops the kept draft
+			$Form.data( 'savedState', ReportPanel.GetReportStateKey( $Form ) );
+			ReportPanel.UpdateUnsavedIndicator();
 		});
 	},
 
@@ -3254,10 +3452,16 @@ var ReportPanel = {
 	// puts the #tags from every checked outcome and custom note into the reply
 	FillResponse: function( elBtn )
 	{
+		$J( '#reply_text' ).data( 'textautocomplete' ).InsertHTMLAndFocus( ReportPanel.GetResponseHTML( $J( elBtn ).closest( '.reportTrainingForm' ) ) );
+	},
+
+	// the canned responses for the outcomes ticked in $Form, with the recorded items filled into their ⭈…⭊ sections
+	GetResponseHTML: function( $Form )
+	{
 		ReportPanel.CloseAnchorPopover();
 		var regexHashtag = /(?:^| )#[\w\-]+(?: |$)/gi;
 		var mapTargetsByTag = new Map();
-		$J( elBtn ).closest( '.reportTrainingForm' ).find( 'input:checked, textarea' ).each( function() {
+		$Form.find( 'input:checked, textarea' ).each( function() {
 			var strValue = $J( this ).val();
 			if ( typeof strValue !== 'string' )
 				return;
@@ -3286,7 +3490,22 @@ var ReportPanel = {
 			var strTargets = entry[1].map( ReportPanel.FormatTargetForReply ).join( '<br>' );
 			return strResponse.replace( /⭈[^⭊]*⭊/u, function() { return strTargets; } );
 		});
-		autocomplete.InsertHTMLAndFocus( rgResponses.join( '<br><br>' ) );
+		return rgResponses.join( '<br><br>' );
+	},
+
+	// GetResponseHTML as plain text, for fields that don't take HTML. Links keep their address. Parsed into an inert
+	// document so nothing in the responses loads.
+	GetResponseText: function( $Form )
+	{
+		var elBody = new DOMParser().parseFromString( ReportPanel.GetResponseHTML( $Form ), 'text/html' ).body;
+		$J( elBody ).find( 'a[href]' ).each( function() {
+			var strURL = this.getAttribute( 'href' );
+			if ( this.textContent.trim() !== strURL )
+				this.append( ' (' + strURL + ')' );
+		});
+		$J( elBody ).find( 'br' ).each( function() { this.replaceWith( '\n' ); } );
+		$J( elBody ).find( 'p, div, li' ).each( function() { this.after( '\n' ); } );
+		return elBody.textContent.trim();
 	},
 
 	FormatTargetForReply: function( target )

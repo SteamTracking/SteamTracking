@@ -30,7 +30,14 @@ var _ = _(_(), 1),
     constructor(_ = null) {
       (super(),
         _.prototype.released_only || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [4, 10, 11, 15, 16, 45], null));
+        _.Message.initialize(
+          this,
+          _,
+          0,
+          -1,
+          [4, 10, 11, 15, 16, 45, 46, 48],
+          null,
+        ));
     }
     static sm_m;
     static sm_mbf;
@@ -146,6 +153,26 @@ var _ = _(_(), 1),
             },
             parent_appids: {
               _: 45,
+              _: !0,
+              _: !0,
+              _: _.readUint32,
+              pbr: _.readPackedUint32,
+              _: _.writeRepeatedUint32,
+            },
+            creator_clan_account_ids_exclude: {
+              _: 46,
+              _: !0,
+              _: !0,
+              _: _.readUint32,
+              pbr: _.readPackedUint32,
+              _: _.writeRepeatedUint32,
+            },
+            platform_filter: {
+              _: 47,
+              _: _,
+            },
+            mod_for_engine_appids: {
+              _: 48,
               _: !0,
               _: !0,
               _: _.readUint32,
@@ -776,6 +803,75 @@ var _ = _(_(), 1),
     }
     getClassName() {
       return `CStoreQueryFilters_ReviewScoreFilter`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.include_windows || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            include_windows: {
+              _: 1,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            include_mac: {
+              _: 2,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            include_linux: {
+              _: 3,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreQueryFilters_PlatformFilter`;
     }
   },
   _ = class _ extends _.Message {
@@ -1425,6 +1521,16 @@ var _ = _(_(), 1),
               _: 90,
               _: _.readFloat,
               _: _.writeFloat,
+            },
+            exclude_featured_creator_homes: {
+              _: 2,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            apply_user_preferences: {
+              _: 3,
+              _: _.readBool,
+              _: _.writeBool,
             },
           },
         }),
@@ -2380,7 +2486,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.Query = _;
@@ -2389,7 +2495,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.SearchSuggestions = _;
@@ -2409,7 +2515,7 @@ var _ = _(_(), 1),
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -2725,7 +2831,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`PartnerStoreBrowse.GetItems#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetItems = _;

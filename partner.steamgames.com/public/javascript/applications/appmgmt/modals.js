@@ -4,10 +4,10 @@
 import { At as e, sn as t, t as n, vt as r } from "./chunk~de7f2df91c.js";
 import "./chunk~25a6634263.js";
 import {
-  Qt as i,
-  b as a,
-  g as o,
-  qt as s,
+  $t as i,
+  Jt as a,
+  b as o,
+  g as s,
   v as c,
   x as l,
 } from "./chunk~1fa4b8f2ff.js";
@@ -17,8 +17,8 @@ var u = t(e()),
 function p(e) {
   let { active: t, children: n } = e,
     r = l() || c(window),
-    i = a(),
-    [o, s] = u.useState(null),
+    i = o(),
+    [a, s] = u.useState(null),
     [p, m] = u.useState(!1),
     h = u.useRef(void 0);
   if (
@@ -35,13 +35,13 @@ function p(e) {
         );
       }
     }, [r, t]),
-    !o || !t)
+    !a || !t)
   )
     return null;
   let g = n;
   return (
     i && (g = (0, f.jsx)(i, { active: p, modalKey: h.current, children: g })),
-    d.createPortal(g, o)
+    d.createPortal(g, a)
   );
 }
 function m(e) {
@@ -55,7 +55,7 @@ function h(e) {
       active: t,
       onDismiss: n,
       className: r,
-      modalClassName: a,
+      modalClassName: o,
       bGamepadUIScrollWithin: c,
       children: l,
       ...u
@@ -65,11 +65,11 @@ function h(e) {
     value: h,
     children: (0, f.jsx)(p, {
       active: t,
-      children: (0, f.jsx)(o, {
+      children: (0, f.jsx)(s, {
         onEscKeypress: n,
-        className: a,
+        className: o,
         bGamepadUIScrollWithin: c,
-        children: (0, f.jsx)(s, {
+        children: (0, f.jsx)(a, {
           role: `dialog`,
           "aria-labelledby": d,
           className: r,

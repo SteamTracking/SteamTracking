@@ -4389,7 +4389,7 @@ var m = f(l(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetApps = t;
@@ -4402,7 +4402,7 @@ var m = f(l(), 1),
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`community`],
+        rgBrowserAPISites: [`community`, `store`],
       },
     );
   }
@@ -4464,7 +4464,7 @@ var m = f(l(), 1),
   function f(e, t, n) {
     return e.SendMsg(`Community.RateClanAnnouncement#1`, u(O, t, n), k, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.RateClanAnnouncement = f;
@@ -4473,7 +4473,7 @@ var m = f(l(), 1),
       `Community.GetClanAnnouncementVoteForUser#1`,
       u(A, t, n),
       j,
-      { ePrivilege: 1, rgBrowserAPISites: [`community`] },
+      { ePrivilege: 1, rgBrowserAPISites: [`community`, `store`] },
     );
   }
   e.GetClanAnnouncementVoteForUser = p;
@@ -4551,7 +4551,7 @@ var m = f(l(), 1),
   function U(e, t, n) {
     return e.SendMsg(`Community.MarkPartnerEventsForUser#1`, u(G, t, n), we, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.MarkPartnerEventsForUser = U;

@@ -654,8 +654,6 @@ var _ = class _ {
       bPartnerWillPublish: _,
     };
     for (let _ of this.m_rgKnownPriceKeys) _.prices[_] = this.GetPrice(_, _);
-    let _ = this.m_mapPackageCountryOverridePrice.get(_);
-    if (_) for (let _ of _.keys()) _.prices[_] = this.GetPrice(_, _);
     return _;
   }
   async SubmitProposalToServer(_, _, _, _) {

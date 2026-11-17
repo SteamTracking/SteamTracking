@@ -19,6 +19,12 @@ message CGameAchievements {
 	repeated .CAchievementDetails achievements = 2;
 	optional uint32 all_time_unlocked_achievements = 3;
 	optional bool unlocked_more_in_future = 4;
+	repeated .CGameAchievements_CompletedSet completed_sets = 5;
+}
+
+message CGameAchievements_CompletedSet {
+	optional uint32 groupid = 1;
+	optional uint32 rtime_completed = 2;
 }
 
 message CGamePlaytimeStats {
@@ -228,6 +234,7 @@ message CSaleFeature_GetUserYearAchievements_Request {
 	optional uint32 year = 2;
 	repeated uint32 appids = 3;
 	optional bool total_only = 4;
+	optional bool include_completed_sets = 5;
 }
 
 message CSaleFeature_GetUserYearAchievements_Response {
@@ -235,6 +242,7 @@ message CSaleFeature_GetUserYearAchievements_Response {
 	optional uint32 total_achievements = 2;
 	optional uint32 total_rare_achievements = 3;
 	optional uint32 total_games_with_achievements = 4;
+	optional uint32 total_completed_sets = 5;
 }
 
 message CSaleFeature_GetUserYearInReview_Request {
@@ -375,7 +383,7 @@ message CYearInReviewPerformanceStats {
 service SaleFeature {
 	// bConstMethod=true, ePrivilege=4
 	rpc GetAllUserActionDataForType (.CSaleFeature_GetAllUserActionDataForType_Request) returns (.CSaleFeature_GetAllUserActionDataForType_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetFriendsSharedYearInReview (.CSaleFeature_GetFriendsSharedYearInReview_Request) returns (.CSaleFeature_GetFriendsSharedYearInReview_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc GetMultipleUserActionData (.CSaleFeature_GetMultipleUserActionData_Request) returns (.CSaleFeature_GetMultipleUserActionData_Response);
@@ -383,17 +391,17 @@ service SaleFeature {
 	rpc GetUserActionData (.CSaleFeature_GetUserActionData_Request) returns (.CSaleFeature_GetUserActionData_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc GetUserSharingPermissions (.CSaleFeature_GetUserSharingPermissions_Request) returns (.CSaleFeature_GetUserSharingPermissions_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetUserYearAchievements (.CSaleFeature_GetUserYearAchievements_Request) returns (.CSaleFeature_GetUserYearAchievements_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetUserYearInReview (.CSaleFeature_GetUserYearInReview_Request) returns (.CSaleFeature_GetUserYearInReview_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetUserYearInReviewShareImage (.CSaleFeature_GetUserYearInReviewShareImage_Request) returns (.CSaleFeature_GetUserYearInReviewShareImage_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetUserYearScreenshots (.CSaleFeature_GetUserYearScreenshots_Request) returns (.CSaleFeature_GetUserYearScreenshots_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc GetYIRCurrentMonthlySummary (.CSaleFeature_GetYIRCurrentMonthlySummary_Request) returns (.CSaleFeature_GetYIRCurrentMonthlySummary_Response);
-	// ePrivilege=1, eWebAPIKeyRequirement=2
+	// ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc SetUserSharingPermissions (.CSaleFeature_SetUserSharingPermissions_Request) returns (.CSaleFeature_SetUserSharingPermissions_Response);
 }
 

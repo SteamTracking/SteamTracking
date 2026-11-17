@@ -12,21 +12,21 @@ import {
 import { I as o, N as s, Pt as c, r as l } from "./chunk~25a6634263.js";
 import { n as u } from "./chunk~68b7e78d68.js";
 import {
-  Wt as d,
-  Ya as f,
-  l as p,
-  pn as m,
-  ua as h,
+  Gt as d,
+  Xa as f,
+  da as p,
+  l as ee,
+  mn as m,
 } from "./chunk~1fa4b8f2ff.js";
-import { E as ee, O as te, a as g, r as _ } from "./chunk~44f252525d.js";
-import { i as v, n as y, r as ne, t as b } from "./chunk~fa5480ab25.js";
-import { n as x, t as S } from "./chunk~971d501580.js";
-import { n as re, t as ie } from "./chunk~baca8b8889.js";
-import { n as C } from "./chunk~a58194c5d9.js";
-import { t as w } from "./chunk~e53a8c8667.js";
-import { t as T } from "./chunk~cfd048ddd7.js";
+import { E as te, O as ne, a as h, r as g } from "./chunk~44f252525d.js";
+import { i as _, n as v, r as re, t as y } from "./chunk~fa5480ab25.js";
+import { n as b, t as x } from "./chunk~971d501580.js";
+import { n as ie, t as ae } from "./chunk~baca8b8889.js";
+import { n as S } from "./chunk~a58194c5d9.js";
+import { t as C } from "./chunk~e53a8c8667.js";
+import { t as w } from "./chunk~cfd048ddd7.js";
 import {
-  B as ae,
+  B as T,
   O as E,
   R as D,
   V as oe,
@@ -133,7 +133,7 @@ var K = {};
 async function je(e) {
   if (K[e]) return await K[e]();
 }
-var q = ee(je);
+var q = te(je);
 function Me(e) {
   return q.Localize(`#CurrencyCodeDescription_${I(e)}`);
 }
@@ -153,7 +153,7 @@ function Ne(e) {
 var Pe = { PriceEdit: (e) => `/packages/pricing/${e}` },
   Z = i(c());
 function Fe(e, t, r) {
-  let i = v(),
+  let i = _(),
     a = V();
   return (0, J.useMemo)(() => {
     let o = [],
@@ -236,24 +236,24 @@ function Ie(e) {
   let n = `${t.PARTNER_BASE_URL}doc/finance/taxfaq`;
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
-      (0, Y.jsxs)(x, {
+      (0, Y.jsxs)(b, {
         paddingBottom: `4`,
         children: [
-          (0, Y.jsx)(C, {
+          (0, Y.jsx)(S, {
             as: `p`,
             size: `4`,
             color: `text-body`,
             contrast: `subtitle`,
             children: W.Localize(`#SinglePricingPackage_Intro_1`),
           }),
-          (0, Y.jsx)(C, {
+          (0, Y.jsx)(S, {
             as: `p`,
             size: `4`,
             color: `text-body`,
             contrast: `subtitle`,
             children: W.Localize(`#SinglePricingPackage_Intro_2`),
           }),
-          (0, Y.jsx)(C, {
+          (0, Y.jsx)(S, {
             size: `4`,
             color: `text-body`,
             contrast: `subtitle`,
@@ -270,20 +270,20 @@ function Ie(e) {
           }),
         ],
       }),
-      (0, Y.jsx)(x, {
+      (0, Y.jsx)(b, {
         paddingBottom: `4`,
-        children: (0, Y.jsx)(C, {
+        children: (0, Y.jsx)(S, {
           children: W.LocalizeReact(
             `#SinglePricingPackage_Desc_2`,
-            (0, Y.jsx)(T, {
+            (0, Y.jsx)(w, {
               href: n,
               children: W.LocalizeReact(`#SinglePricingPackage_Desc_2_Link`),
             }),
           ),
         }),
       }),
-      (0, Y.jsx)(x, {
-        children: (0, Y.jsx)(C, {
+      (0, Y.jsx)(b, {
+        children: (0, Y.jsx)(S, {
           children: W.Localize(`#SinglePricingPackage_Desc_3`),
         }),
       }),
@@ -324,9 +324,9 @@ function Ge(e) {
       eRegionCode: i,
       eCurrencyCode: a,
     } = e.row.original,
-    { nPriceInCents: o, nProposedPriceInCents: s } = ae(t, n),
-    c = v(),
-    l = y(),
+    { nPriceInCents: o, nProposedPriceInCents: s } = T(t, n),
+    c = _(),
+    l = v(),
     u = L(1).toUpperCase(),
     d = j(t, u) || A(t, u) || M(t, u),
     { nGuidelinesLevel: f } = oe(l, c, d, a, i),
@@ -339,47 +339,47 @@ function Ke(e) {
   let { nPackageID: n } = e;
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
-      (0, Y.jsxs)(S, {
+      (0, Y.jsxs)(x, {
         direction: `column`,
         align: `start`,
         paddingBottom: `4`,
         children: [
-          (0, Y.jsx)(re, {
+          (0, Y.jsx)(ie, {
             href: `${t.PARTNER_BASE_URL}pricing/dashboard/?pn=${n}`,
             children: W.Localize(`#SinglePackagePricing_Right_Edit`),
           }),
-          (0, Y.jsx)(C, {
+          (0, Y.jsx)(S, {
             children: W.Localize(`#SinglePackagePricing_Right_Edit_desc`),
           }),
         ],
       }),
-      (0, Y.jsxs)(S, {
+      (0, Y.jsxs)(x, {
         direction: `column`,
         paddingBottom: `4`,
         children: [
-          (0, Y.jsx)(w, {
+          (0, Y.jsx)(C, {
             size: `7`,
             children: W.Localize(`#SinglePackagePricing_Right_Help_Title`),
           }),
-          (0, Y.jsx)(C, {
+          (0, Y.jsx)(S, {
             children: W.Localize(`#SinglePackagePricing_Right_Help_Desc`),
           }),
-          (0, Y.jsx)(T, {
+          (0, Y.jsx)(w, {
             href: `${t.PARTNER_BASE_URL}doc/store/pricing`,
             children: W.Localize(`#SinglePackagePricing_Right_Link`),
           }),
         ],
       }),
-      (0, Y.jsxs)(S, {
+      (0, Y.jsxs)(x, {
         direction: `column`,
         children: [
-          (0, Y.jsx)(w, {
+          (0, Y.jsx)(C, {
             size: `7`,
             children: W.Localize(`#SinglePackagePricing_Right_FAQ`),
           }),
-          (0, Y.jsxs)(x, {
+          (0, Y.jsxs)(b, {
             children: [
-              (0, Y.jsx)(C, {
+              (0, Y.jsx)(S, {
                 size: `4`,
                 weight: `medium`,
                 children: W.Localize(
@@ -387,10 +387,10 @@ function Ke(e) {
                 ),
               }),
               (0, Y.jsx)(`br`, {}),
-              (0, Y.jsx)(C, {
+              (0, Y.jsx)(S, {
                 children: W.LocalizeReact(
                   `#SinglePackagePricing_Right_FAQ_switching_answer`,
-                  (0, Y.jsx)(T, {
+                  (0, Y.jsx)(w, {
                     href: `${t.PARTNER_BASE_URL}wizard/HelpWithPublishing?issueid=915`,
                     children: W.Localize(
                       `#SinglePackagePricing_Right_FAQ_switching_answer_link`,
@@ -426,20 +426,20 @@ function qe(e) {
               (0, Y.jsx)(d, {
                 onClick: a,
                 className: r(De),
-                children: h(`#PricingDashboard_CancelPriceProposal`),
+                children: p(`#PricingDashboard_CancelPriceProposal`),
               }),
               (0, Y.jsx)(N, {
                 active: i,
-                children: (0, Y.jsx)(p, {
-                  strTitle: h(`#PricingDashboard_CancelPriceProposal`),
-                  strDescription: h(`#Dialog_AreYouSure`),
+                children: (0, Y.jsx)(ee, {
+                  strTitle: p(`#PricingDashboard_CancelPriceProposal`),
+                  strDescription: p(`#Dialog_AreYouSure`),
                   closeModal: s,
                   onOK: async () => {
                     (u(!0), await c(), u(!1), window.location.reload());
                   },
                   children:
                     l &&
-                    (0, Y.jsx)(P, { string: h(`#ImageUpload_Processing`) }),
+                    (0, Y.jsx)(P, { string: p(`#ImageUpload_Processing`) }),
                 }),
               }),
             ],
@@ -456,7 +456,7 @@ function Je(e) {
   let i = Ee(),
     a = Number.parseInt(t);
   return (
-    y(),
+    v(),
     (0, Y.jsx)(l, {
       children: (0, Y.jsxs)(ge, {
         fnBLocalChangesExist: r,
@@ -495,7 +495,7 @@ function Je(e) {
 }
 function Ye(e) {
   let { nPackageID: t, appids: n } = e,
-    r = y(),
+    r = v(),
     {
       rgCurrencyRows: i,
       rgRegionRows: a,
@@ -504,19 +504,19 @@ function Ye(e) {
     s = D(t),
     c = !!s,
     l = s?.eState == 4,
-    { fnApplyGuidelines: u } = b(O());
+    { fnApplyGuidelines: u } = y(O());
   (0, J.useEffect)(() => {
     le([t]);
   }, [t]);
   let d = [
     $.accessor(`nPublishedPrice`, {
-      header: h(`#PackagePricing_Col_CurPrice`),
+      header: p(`#PackagePricing_Col_CurPrice`),
       meta: { cellClassname: (0, Z.default)(Be) },
       size: 120,
       cell: Q,
     }),
     $.accessor(c ? `nProposedPrice` : `strPriceKey`, {
-      header: h(
+      header: p(
         l ? `#PackagePricing_Col_Approved` : `#PackagePricing_Col_Proposal`,
       ),
       meta: { cellClassname: (0, Z.default)(Ve) },
@@ -525,10 +525,10 @@ function Ye(e) {
     }),
     $.accessor(c ? `nProposedPrice` : `strPriceKey`, {
       id: `nMaxDiscount`,
-      header: h(`#PackagePricing_Col_MaxDiscount`),
+      header: p(`#PackagePricing_Col_MaxDiscount`),
       meta: {
         cellClassname: (0, Z.default)(He),
-        strHeaderTooltip: h(`#PackagePricing_Col_MaxDiscount_ttip`),
+        strHeaderTooltip: p(`#PackagePricing_Col_MaxDiscount_ttip`),
       },
       size: 150,
       cell: Ge,
@@ -548,7 +548,7 @@ function Ye(e) {
             : (0, Y.jsx)(Y.Fragment, {
                 children: (0, Y.jsx)(`div`, {
                   className: `colSection`,
-                  children: (0, Y.jsxs)(S, {
+                  children: (0, Y.jsxs)(x, {
                     direction: `row`,
                     gap: `5`,
                     children: [
@@ -557,10 +557,10 @@ function Ye(e) {
                           u(t, k(t, `USD`), e);
                         },
                       }),
-                      (0, Y.jsxs)(S, {
+                      (0, Y.jsxs)(x, {
                         direction: `column`,
                         children: [
-                          (0, Y.jsx)(C, {
+                          (0, Y.jsx)(S, {
                             size: `3`,
                             children: W.Localize(
                               `#PricingDashboard_Select_Price`,
@@ -569,18 +569,18 @@ function Ye(e) {
                           (0, Y.jsx)(Xe, { usdRow: i[1] }),
                         ],
                       }),
-                      (0, Y.jsxs)(S, {
+                      (0, Y.jsxs)(x, {
                         direction: `column`,
                         align: `start`,
                         children: [
-                          (0, Y.jsxs)(C, {
+                          (0, Y.jsxs)(S, {
                             size: `3`,
                             children: [
-                              h(
+                              p(
                                 `#PricingDashboard_ApplyGuidelinesDialog_Context_Short`,
                               ),
                               (0, Y.jsx)(m, {
-                                tooltip: h(
+                                tooltip: p(
                                   `#PricingDashboard_ApplyGuidelinesDialog_Context`,
                                 ),
                               }),
@@ -608,7 +608,7 @@ function Ye(e) {
                 ),
                 columns: [
                   $.accessor(`eCurrencyCode`, {
-                    header: h(`#PackagePricing_Col_Currency`),
+                    header: p(`#PackagePricing_Col_Currency`),
                     size: 200,
                     cell: X,
                   }),
@@ -627,12 +627,12 @@ function Ye(e) {
                 ),
                 columns: [
                   $.accessor(`eRegionCode`, {
-                    header: h(`#PackagePricing_Col_Region`),
+                    header: p(`#PackagePricing_Col_Region`),
                     size: 200,
                     cell: Ne,
                   }),
                   $.accessor(`eCurrencyCode`, {
-                    header: h(`#PackagePricing_Col_Currency`),
+                    header: p(`#PackagePricing_Col_Currency`),
                     size: 100,
                     cell: X,
                   }),
@@ -643,6 +643,12 @@ function Ye(e) {
                 stickyHeader: !0,
               }),
               o.length > 0 &&
+                (0, Y.jsx)(S, {
+                  as: `p`,
+                  size: `2`,
+                  children: p(`#PackagePricing_CountryOverridesRemoved`),
+                }),
+              o.length > 0 &&
                 (0, Y.jsx)(U, {
                   data: o,
                   className: (0, Z.default)(
@@ -652,16 +658,16 @@ function Ye(e) {
                   ),
                   columns: [
                     $.accessor(`strCountryOverride`, {
-                      header: h(`#PackagePricing_Col_Country`),
+                      header: p(`#PackagePricing_Col_Country`),
                       size: 200,
                       cell: We,
                     }),
                     $.accessor(`eCurrencyCode`, {
-                      header: h(`#PackagePricing_Col_Currency`),
+                      header: p(`#PackagePricing_Col_Currency`),
                       size: 100,
                       cell: X,
                     }),
-                    ...d,
+                    d[0],
                   ],
                   getRowKey: (e, t) => `${t.strCountryOverride}`,
                   nItemHeight: 20,
@@ -676,7 +682,7 @@ function Ye(e) {
 }
 function Xe(e) {
   let { usdRow: t } = e,
-    { fnApplyGuidelines: n } = b(O());
+    { fnApplyGuidelines: n } = y(O());
   return (0, Y.jsx)(B, {
     strButton: W.Localize(`#PricingDashboard_Select_Price_button`),
     strTooltip: W.Localize(`#PricingDashboard_Select_Price_button_ttip`),
@@ -696,9 +702,9 @@ function Ze(e) {
     c = s();
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
-      (0, Y.jsx)(ie, {
+      (0, Y.jsx)(ae, {
         onClick: i,
-        children: h(`#PricingDashboard_ApplyGuidelinesDialog_Button`),
+        children: p(`#PricingDashboard_ApplyGuidelinesDialog_Button`),
       }),
       (0, Y.jsx)(N, {
         active: r,
@@ -713,11 +719,11 @@ function Ze(e) {
 }
 function Qe(e) {
   return (
-    J.use(te()),
-    (0, Y.jsx)(g, {
-      children: (0, Y.jsxs)(ne, {
+    J.use(ne()),
+    (0, Y.jsx)(h, {
+      children: (0, Y.jsxs)(re, {
         children: [
-          (0, Y.jsx)(_, {
+          (0, Y.jsx)(g, {
             path: Pe.PriceEdit(`:packageid`),
             children: (0, Y.jsx)(pe, {
               config: {
@@ -725,7 +731,7 @@ function Qe(e) {
               },
             }),
           }),
-          (0, Y.jsx)(_, { component: me }),
+          (0, Y.jsx)(g, { component: me }),
         ],
       }),
     })

@@ -16479,7 +16479,7 @@ var CErrorReportingStore = class {
   m_pauseTimer = void 0;
   m_fnGetReportingInterval = GetDefaultReportingInterval;
   m_fnGetReportTags = () => [];
-  m_fnGetURL = () => location.href;
+  m_fnGetURL = () => (`location` in globalThis ? location.href : void 0);
   strDisplayVersion;
   m_bEnabled = !0;
   m_bInitialized = !1;
@@ -18557,7 +18557,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
           _,
           0,
           -1,
-          [2, 3, 4, 5, 6, 9],
+          [2, 3, 4, 5, 6, 9, 10],
           null,
         ));
     }
@@ -18613,6 +18613,14 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
             },
             dlc_parent_appids: {
               _: 9,
+              _: !0,
+              _: !0,
+              _: ReaderProto.readUint32,
+              pbr: ReaderProto.readPackedUint32,
+              _: WriterProto.writeRepeatedUint32,
+            },
+            provides_engine_appid: {
+              _: 10,
               _: !0,
               _: !0,
               _: ReaderProto.readUint32,
@@ -19000,7 +19008,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
           _,
           0,
           -1,
-          [2, 3, 4],
+          [2, 3, 4, 6],
           null,
         ));
     }
@@ -19038,6 +19046,19 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
               _: 5,
               _: ReaderProto.readString,
               _: WriterProto.writeString,
+            },
+            featured_creator_home_clan_account_ids: {
+              _: 6,
+              _: !0,
+              _: !0,
+              _: ReaderProto.readUint32,
+              pbr: ReaderProto.readPackedUint32,
+              _: WriterProto.writeRepeatedUint32,
+            },
+            first_franchise_clan_account_id: {
+              _: 7,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
             },
           },
         }),
@@ -25380,6 +25401,11 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
               _: ReaderProto.readBool,
               _: WriterProto.writeBool,
             },
+            new_reservations_disabled: {
+              _: 29,
+              _: ReaderProto.readBool,
+              _: WriterProto.writeBool,
+            },
           },
         }),
         _.sm_m
@@ -25636,7 +25662,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 1,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -25671,7 +25697,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -25685,7 +25711,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -25715,7 +25741,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -25733,7 +25759,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -26577,7 +26603,7 @@ var CAccountPrivacyCookiePreferences = class _
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -28542,14 +28568,20 @@ function CheckScrollRegionToStartOrEnd(_, _) {
         (_ != _ &&
           _.Element &&
           _.m_Properties?.scrollRegionToStartOrEnd &&
-          PerformScrollToStartOrEnd(_.Element, _, _, _ == _.Tree.Root),
+          PerformScrollToStartOrEnd(
+            _.Element,
+            _,
+            _,
+            _ == _.Tree.Root,
+            _.Element,
+          ),
         _.HasMovementHandler(_)) ||
         _ == _
       );
       _ = _.GetNavParentCrossingTrees()
     );
 }
-function PerformScrollToStartOrEnd(_, _, _, _) {
+function PerformScrollToStartOrEnd(_, _, _, _, _) {
   let _ = _,
     _ = _.ownerDocument;
   if (
@@ -28563,6 +28595,8 @@ function PerformScrollToStartOrEnd(_, _, _, _) {
   let _ = GetScrollValues(_);
   if (_ == `y`) {
     let _ = _ == EGamepadButton.DIR_DOWN ? _.MaxScrollTop() : 0;
+    if (_ == EGamepadButton.DIR_UP && _ && BScrollToTopWouldHideElement(_, _))
+      return;
     _.scrollTo({
       top: _,
       behavior: `smooth`,
@@ -28574,6 +28608,21 @@ function PerformScrollToStartOrEnd(_, _, _, _) {
       behavior: `smooth`,
     });
   }
+}
+function BScrollToTopWouldHideElement(_, _) {
+  let _ = `ownerDocument` in _ ? _ : null;
+  for (let _ = _; _ && _ != _; _ = _.parentElement) {
+    let _ = _.ownerDocument.defaultView?.getComputedStyle(_).position;
+    if (_ == `fixed` || _ == `sticky`) return !1;
+  }
+  let _, _, _;
+  `ownerDocument` in _
+    ? ((_ = _.getBoundingClientRect().top + _.clientTop),
+      (_ = _.clientHeight),
+      (_ = _.scrollTop))
+    : ((_ = 0), (_ = _.innerHeight), (_ = _.scrollY));
+  let _ = _.getBoundingClientRect();
+  return _.height > _ ? !1 : _.bottom - _ + _ > _ + 1;
 }
 function GetBoundingRectNoTransform(_) {
   if (!_)
@@ -31053,6 +31102,7 @@ var unknown = 0,
   trailercarousel = 100757,
   greatonframe = 100804,
   salesmartsale_events_only = 100805,
+  salesmartdiscountreason = 100806,
   naveventdictionary_default$1 = {
     unknown: 0,
     "store.steampowered.com": 1,
@@ -31748,6 +31798,7 @@ var unknown = 0,
     "personalcalendar-homepage": 100803,
     greatonframe,
     salesmartsale_events_only,
+    salesmartdiscountreason,
   },
   naveventdictionary_default = naveventdictionary_default$1;
 function BIsKnownEventComponent(_) {

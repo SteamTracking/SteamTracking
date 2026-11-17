@@ -200,7 +200,7 @@ import { _ } from "./chunk~a825a84845.js";
 import { _, _ } from "./chunk~b390ee0f78.js";
 import { _ } from "./chunk~fa5480ab25.js";
 import { _ } from "./chunk~e29b7ee76a.js";
-import { _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
+import { _, _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
 import { _, _ } from "./chunk~971d501580.js";
 import { _, _, _ } from "./chunk~5f339e9a5f.js";
 import { _ } from "./chunk~a292304e38.js";
@@ -446,7 +446,8 @@ function _(_) {
     _ = _(_),
     { data: _ } = _(_),
     _ = _(_ ? _?.related_items?.parent_appid : void 0),
-    { data: _ } = _(_);
+    { data: _ } = _(_),
+    _ = _(_);
   if (!_ || !_) return null;
   let _ = !!_ && !!_,
     _ = (0, _.jsx)(_, {
@@ -467,6 +468,7 @@ function _(_) {
     navEntryPreferPosition: _.PREFERRED_CHILD,
     navKey: _,
     onFocusWithin: _,
+    ..._,
     children: [
       (0, _.jsxs)(_, {
         appid: _.appid,
@@ -521,11 +523,13 @@ function _(_) {
     } = _,
     _ = _(),
     _ = _(),
-    { data: _ } = _(_);
+    { data: _ } = _(_),
+    _ = _(_);
   return _
     ? (0, _.jsx)(_, {
         className: _,
         ..._(_, _, _, _, _),
+        ..._,
         children: (0, _.jsxs)(_, {
           appid: _.appid,
           children: [
@@ -2192,14 +2196,7 @@ function _() {
     ],
   });
 }
-var _ = (function (_) {
-    return (
-      (_[(_.k_CreatorHomeNone = 0)] = `k_CreatorHomeNone`),
-      (_[(_.k_CreatorHomeAll = -1)] = `k_CreatorHomeAll`),
-      _
-    );
-  })({}),
-  _ = `_36Mr-zFxrGg-`,
+var _ = `_36Mr-zFxrGg-`,
   _ = `vDk4ZmssF0c-`,
   _ = `D0pD3KsBa-k-`,
   _ = `FAhSNGdBt8k-`,
@@ -2296,7 +2293,7 @@ function _(_) {
     }),
     _ = (0, _.useCallback)(
       (_, _) => {
-        _.clan_account_id == _.k_CreatorHomeAll
+        _.clan_account_id == -1
           ? _({
               ..._,
               featured_appids: [...(_.featured_appids || []), _],
@@ -2313,7 +2310,7 @@ function _(_) {
       [_],
     ),
     _ = (0, _.useMemo)(() => {
-      if (_.clan_account_id == _.k_CreatorHomeAll) {
+      if (_.clan_account_id == -1) {
         let _ = new Set();
         _.forEach((_) => _.add(new _(_.clan_steamid).GetAccountID()));
         let _ = [];
@@ -2754,7 +2751,7 @@ function _(_) {
       return (
         _.push({
           label: _(`#Create_Home_None_Selected`),
-          data: _.k_CreatorHomeNone,
+          data: 0,
           tooltip: _(`#Create_Home_None_Selected_ttip`),
         }),
         _.forEach((_) => {
@@ -2767,7 +2764,7 @@ function _(_) {
         _.length > 2 &&
           _.push({
             label: _(`#Create_Home_All_Creators`) + ` (?)`,
-            data: _.k_CreatorHomeAll,
+            data: -1,
             tooltip: _(`#Create_Home_All_Creators_ttip`),
           }),
         _

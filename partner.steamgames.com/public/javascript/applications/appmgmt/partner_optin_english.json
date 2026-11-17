@@ -61,6 +61,7 @@
     "PartnerOptIn_Choice_Out": "No, we do not want to include <1>%1$s</1> in the <1>%2$s</1>",
     "PartnerOptIn_Choice_RequirementsNotMet": "Before you can register: %1$s",
     "PartnerOptIn_Choice_Title": "Event Registration",
+    "PartnerOptIn_Closed_DeadlinePast": "The Opt-In Submissions deadline has passed. No further changes are permitted.",
     "PartnerOptIn_Collect_Demo": "Demo Usage Permissions",
     "PartnerOptIn_Collect_Demo_check": "Check the box if you agree that Valve may use, excerpt, and distribute some or all of your demo gameplay in composite video trailers and/or livestream content for %1$s, to be shared both on and outside of Steam through social media and other channels.",
     "PartnerOptIn_Collect_Demo_check_label": "Yes, I agree to demo usage as described above",

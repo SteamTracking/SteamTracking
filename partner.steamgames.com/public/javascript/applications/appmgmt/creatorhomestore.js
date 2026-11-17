@@ -835,7 +835,7 @@ var E = v(p(), 1),
   function r(e, t, n) {
     return e.SendMsg(`StoreCatalog.GetDevPageAllAppsLinked#1`, h(N, t, n), P, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetDevPageAllAppsLinked = r;
@@ -844,7 +844,7 @@ var E = v(p(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetDevPageListApps = i;

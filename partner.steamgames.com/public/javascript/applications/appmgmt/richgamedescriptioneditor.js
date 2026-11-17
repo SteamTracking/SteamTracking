@@ -55,60 +55,60 @@ import {
 } from "./chunk~b4171a8747.js";
 import {
   $ as xe,
-  $t as Se,
-  Br as Ce,
-  Ga as we,
+  Bt as Se,
+  Ct as Ce,
+  Ft as we,
   Gt as Te,
   H as Ee,
-  Ha as De,
-  Jt as Oe,
+  Ht as De,
+  Ja as Oe,
   Ka as ke,
-  Pt as Ae,
-  Q as je,
-  Rr as Me,
-  St as Ne,
-  V as Pe,
-  Vt as Fe,
-  Wt as Ie,
-  X as Le,
-  Yn as Re,
-  Zi as ze,
-  _t as Be,
-  an as Ve,
-  at as He,
-  bt as Ue,
+  Kt as Ae,
+  Qi as je,
+  St as Me,
+  Tt as Ne,
+  U as Pe,
+  Ua as Fe,
+  Vr as Ie,
+  Xn as Le,
+  Yt as Re,
+  Z as ze,
+  _a as Be,
+  at as Ve,
+  bt as He,
+  ca as Ue,
   ct as We,
+  da as T,
   dt as Ge,
   en as Ke,
-  ft as qe,
-  g as Je,
-  ga as Ye,
-  ha as Xe,
-  hn as Ze,
-  ht as Qe,
-  i as $e,
-  it as et,
-  l as tt,
-  la as nt,
-  lt as rt,
-  mt as it,
-  nt as at,
-  oa as ot,
-  ot as st,
-  pn as ct,
+  et as qe,
+  ft as Je,
+  g as Ye,
+  ga as Xe,
+  gn as Ze,
+  gt as Qe,
+  ht as $e,
+  i as et,
+  in as tt,
+  it as nt,
+  l as rt,
+  lt as it,
+  mn as at,
+  mt as ot,
+  on as st,
+  ot as ct,
   pt as lt,
   qa as ut,
-  rn as dt,
-  rt as ft,
-  sa as pt,
-  st as mt,
-  ua as T,
-  ut as ht,
-  vt as gt,
-  wt as _t,
+  rt as dt,
+  sa as ft,
+  st as pt,
+  tn as mt,
+  ua as ht,
+  ut as gt,
+  vt as _t,
   xt as vt,
   yt,
-  zt as bt,
+  zr as bt,
 } from "./chunk~1fa4b8f2ff.js";
 import { t as xt } from "./chunk~6257ebd2d4.js";
 import { r as St } from "./chunk~9d71b14b50.js";
@@ -14461,7 +14461,7 @@ var wp = `image/png, image/jpeg, image/gif, image/webp, video/mp4, video/webm`,
         `span`,
         null,
         T(`#ImageUpload_ImageGroup`),
-        I.createElement(ct, { tooltip: T(`#ImageUpload_ImageGroup_ttip`) }),
+        I.createElement(at, { tooltip: T(`#ImageUpload_ImageGroup_ttip`) }),
       );
     }
     IsFileTypeSupported(e) {
@@ -14944,7 +14944,7 @@ function Pp(e) {
     ? s
       ? (0, Q.jsx)(kt, {
           active: !0,
-          children: (0, Q.jsx)(tt, {
+          children: (0, Q.jsx)(rt, {
             bAlertDialog: !0,
             strTitle: T(`#Error_Generic`),
             strDescription: s,
@@ -14966,7 +14966,7 @@ function Pp(e) {
               if (!r || !r.bSuccess) {
                 c(
                   r?.image?.message
-                    ? Ye(`#StoreAdmin_UploadError_Generic`, r.image.message)
+                    ? Be(`#StoreAdmin_UploadError_Generic`, r.image.message)
                     : T(`#StoreAdmin_UploadError_Unknown`),
                 );
                 return;
@@ -15018,13 +15018,13 @@ function Fp(e) {
     active: !0,
     onDismiss: a,
     className: void 0,
-    children: (0, Q.jsxs)(Oe, {
+    children: (0, Q.jsxs)(Re, {
       onSubmit: ee,
       children: [
-        (0, Q.jsx)(Ke, {
+        (0, Q.jsx)(mt, {
           children: T(`#StoreAdmin_ExtraAssetUpload_UploadNew`),
         }),
-        (0, Q.jsxs)(Fe, {
+        (0, Q.jsxs)(De, {
           children: [
             (0, Q.jsx)(Ip, {
               file: i,
@@ -15040,15 +15040,15 @@ function Fp(e) {
               disabled: n,
             }),
             h.length > 1 &&
-              (0, Q.jsx)(Ae, {
+              (0, Q.jsx)(we, {
                 rgOptions: h,
                 selectedOption: _,
                 onChange: (e) => v(e.data),
               }),
           ],
         }),
-        (0, Q.jsx)(Se, {
-          children: (0, Q.jsx)(dt, {
+        (0, Q.jsx)(Ke, {
+          children: (0, Q.jsx)(tt, {
             onOK: S,
             strOKText: w,
             bOKDisabled: !S,
@@ -15127,13 +15127,13 @@ function Lp(e) {
   let { name: t, setName: n, validatedName: r, disabled: i } = e,
     a = I.useCallback((e) => e && e.element.select(), []);
   return (0, Q.jsx)(`div`, {
-    children: (0, Q.jsx)(bt, {
+    children: (0, Q.jsx)(Se, {
       value: t,
       onChange: (e) => n(e.currentTarget.value),
       label: T(`#StoreAdmin_ExtraAssetUpload_EnterAName`),
       ref: a,
       disabled: i,
-      description: Ye(
+      description: Be(
         `#StoreAdmin_ExtraAssetUpload_WillBeSavedAsFilename`,
         (0, Q.jsx)(`b`, { children: r }),
       ),
@@ -15182,7 +15182,7 @@ function Jp(e) {
         window.LocChangeControlsToLanguage &&
         window.LocChangeControlsToLanguage(t);
     }, [t]),
-    we(
+    ke(
       window,
       Kp,
       I.useCallback((e) => {
@@ -15250,7 +15250,7 @@ function Xp(e) {
       );
     }, [t, n]),
     o = I.useCallback((e) => i(e.data), [i]);
-  return (0, Q.jsx)(Ae, {
+  return (0, Q.jsx)(we, {
     strClassName: Up,
     onChange: o,
     selectedOption: r,
@@ -15794,7 +15794,7 @@ var zm = I.memo(function (e) {
   return n.length
     ? (0, Q.jsx)(kt, {
         active: !0,
-        children: (0, Q.jsx)(tt, {
+        children: (0, Q.jsx)(rt, {
           bAlertDialog: !0,
           strTitle: T(`#Error_Generic`),
           strDescription: n.map((e, t) =>
@@ -15900,7 +15900,7 @@ function Km() {
 function qm(e) {
   return (0, Q.jsx)(`div`, {
     className: f(e.className, ym),
-    children: (0, Q.jsx)(De, {
+    children: (0, Q.jsx)(Fe, {
       className: bm,
       "flow-children": `row`,
       children: e.children,
@@ -15937,7 +15937,7 @@ function Xm(e) {
   let l = !s && !n;
   return (0, Q.jsx)(Qm, {
     ...i,
-    children: (0, Q.jsx)(Ie, {
+    children: (0, Q.jsx)(Te, {
       className: f(Cm, n && `LayGdJxtj74-`),
       onMouseDown: (e) => {
         (e.preventDefault(), t(a.state, a.dispatch, a));
@@ -15959,7 +15959,7 @@ function Zm(e) {
   } = e;
   return (0, Q.jsx)(Qm, {
     ...o,
-    children: (0, Q.jsx)(Ie, {
+    children: (0, Q.jsx)(Te, {
       className: f(Cm, n && `LayGdJxtj74-`, a),
       onMouseDown: (e) => {
         e.button === 0 && (e.preventDefault(), t(e));
@@ -16048,7 +16048,7 @@ function uh(e) {
       fnGetImage: c,
     } = e,
     { bAppHasSteamChinaToolsEnabled: l } = um(),
-    u = I.useMemo(() => pt(l), [l]),
+    u = I.useMemo(() => Ue(l), [l]),
     {
       strActiveLanguage: d,
       eActiveLang: p,
@@ -16106,13 +16106,13 @@ function uh(e) {
     ie = Array.from(g.values()).some((e) => e.caption != null);
   return (0, Q.jsx)(kt, {
     active: !0,
-    children: (0, Q.jsx)(Je, {
+    children: (0, Q.jsx)(Ye, {
       onEscKeypress: re,
       bDisableBackgroundDismiss: ne,
-      children: (0, Q.jsxs)(Oe, {
+      children: (0, Q.jsxs)(Re, {
         classNameContent: rh,
         children: [
-          (0, Q.jsx)(Ke, { children: T(`#StoreAdmin_EditAltText_Title`) }),
+          (0, Q.jsx)(mt, { children: T(`#StoreAdmin_EditAltText_Title`) }),
           (0, Q.jsxs)(`div`, {
             className: ih,
             children: [
@@ -16129,7 +16129,7 @@ function uh(e) {
               m,
             ],
           }),
-          (0, Q.jsxs)(Fe, {
+          (0, Q.jsxs)(De, {
             children: [
               (0, Q.jsxs)(`table`, {
                 className: f(ah),
@@ -16175,14 +16175,14 @@ function uh(e) {
               ne && (0, Q.jsx)(Mt, {}),
             ],
           }),
-          (0, Q.jsxs)(Se, {
+          (0, Q.jsxs)(Ke, {
             children: [
               C.size > 0 &&
                 (0, Q.jsx)(`div`, {
                   className: `HVdJMjJrFW8-`,
                   children: T(`#StoreAdmin_EditAltText_MutateFailed`),
                 }),
-              (0, Q.jsx)(dt, {
+              (0, Q.jsx)(tt, {
                 onCancel: re,
                 onOK: (e) => {
                   (e.preventDefault(), w());
@@ -16233,7 +16233,7 @@ function dh(e) {
       (0, Q.jsxs)(`td`, {
         className: ch,
         children: [
-          (0, Q.jsx)(bt, {
+          (0, Q.jsx)(Se, {
             type: `text`,
             placeholder: u
               ? T(`#StoreAdmin_EditAltText_PlaceholderDecorative`)
@@ -16245,7 +16245,7 @@ function dh(e) {
             onChange: (e) => m(e.target.value, !1),
             disabled: u,
           }),
-          (0, Q.jsx)(Te, {
+          (0, Q.jsx)(Ae, {
             checked: u,
             onChange: (e) => m(e ? `#decorative-only` : d, !0),
             label: T(`#StoreAdmin_EditAltText_Presentational`),
@@ -16431,8 +16431,8 @@ function ug(e) {
       fnUpdateDocument: l,
       selected: u,
     } = e,
-    [d, p] = ke(),
-    [m, h] = ke(),
+    [d, p] = ut(),
+    [m, h] = ut(),
     g = ie(d || m, 250),
     [_, v, y] = ee(),
     b = am(),
@@ -16504,8 +16504,8 @@ function ug(e) {
     },
     [se, ce] = I.useState(0),
     [le, ue] = I.useState(0),
-    de = Re((e) => ce(e.target.offsetLeft + e.borderBoxSize[0].inlineSize)),
-    fe = Re((e) => ue(e.borderBoxSize[0].inlineSize)),
+    de = Le((e) => ce(e.target.offsetLeft + e.borderBoxSize[0].inlineSize)),
+    fe = Le((e) => ue(e.borderBoxSize[0].inlineSize)),
     pe = le + 16 >= se,
     me = pe ? se : void 0;
   return (0, Q.jsxs)(Q.Fragment, {
@@ -16535,12 +16535,12 @@ function ug(e) {
               (0, Q.jsx)(Zm, {
                 onClick: v,
                 tooltip: T(`#StoreAdmin_GameDescription_ReplaceImage`),
-                children: (0, Q.jsx)(Ee, {}),
+                children: (0, Q.jsx)(Pe, {}),
               }),
               (0, Q.jsx)(Zm, {
                 onClick: a,
                 tooltip: T(`#StoreAdmin_GameDescription_RemoveImage`),
-                children: (0, Q.jsx)(ze, {}),
+                children: (0, Q.jsx)(je, {}),
               }),
             ],
           }),
@@ -16569,13 +16569,13 @@ function dg(e, t, n) {
         (c = (0, Q.jsx)(Zm, {
           onClick: i,
           tooltip: T(`#StoreAdmin_GameDescription_EditImageDetails`),
-          children: (0, Q.jsx)(Ce, { className: `SVGIcon_Button` }),
+          children: (0, Q.jsx)(Ie, { className: `SVGIcon_Button` }),
         })))
       : fp(e) &&
         (c = (0, Q.jsx)(Zm, {
           onClick: () => {},
           tooltip: T(`#StoreAdmin_GameDescription_EditImageDetails_Legacy`),
-          children: (0, Q.jsx)(Me, {}),
+          children: (0, Q.jsx)(bt, {}),
         })),
     { elLocalizedImageGroupDialog: s, elLocalizedImageGroupControl: c }
   );
@@ -16617,7 +16617,7 @@ function pg(e) {
         onClick: i,
         toggled: r,
         tooltip: T(`#StoreAdmin_GameDescription_InsertImage`),
-        children: (0, Q.jsx)(je, {}),
+        children: (0, Q.jsx)(xe, {}),
       }),
     ],
   });
@@ -16639,12 +16639,12 @@ function mg(e) {
     active: !0,
     children: [
       c,
-      (0, Q.jsx)(Je, {
+      (0, Q.jsx)(Ye, {
         onEscKeypress: i,
-        children: (0, Q.jsxs)(Oe, {
+        children: (0, Q.jsxs)(Re, {
           classNameContent: Oh,
           children: [
-            (0, Q.jsx)(Ke, {
+            (0, Q.jsx)(mt, {
               children: T(`#StoreAdmin_GameDescription_SelectImage`),
             }),
             (0, Q.jsxs)(`div`, {
@@ -16659,7 +16659,7 @@ function mg(e) {
                     (0, Q.jsx)(`div`, {
                       children: T(`#StoreAdmin_ExtraAssetUpload_UploadNew`),
                     }),
-                    (0, Q.jsx)(Ve, {
+                    (0, Q.jsx)(st, {
                       className: jh,
                       onClick: l,
                       children: T(`#StoreAdmin_ExtraAssetUpload_BrowseForFile`),
@@ -16670,7 +16670,7 @@ function mg(e) {
             }),
             (0, Q.jsx)(`div`, {
               className: Ph,
-              children: (0, Q.jsx)(bt, {
+              children: (0, Q.jsx)(Se, {
                 type: `text`,
                 value: p,
                 bShowClearAction: !0,
@@ -16680,7 +16680,7 @@ function mg(e) {
                 ),
               }),
             }),
-            (0, Q.jsx)(Fe, {
+            (0, Q.jsx)(De, {
               className: Nh,
               children: (0, Q.jsx)(`div`, {
                 className: f(Fh, Lh),
@@ -16700,17 +16700,17 @@ function mg(e) {
                   ),
               }),
             }),
-            (0, Q.jsxs)(Se, {
+            (0, Q.jsxs)(Ke, {
               children: [
                 n &&
-                  (0, Q.jsx)(Te, {
+                  (0, Q.jsx)(Ae, {
                     className: void 0,
                     checked: u,
                     onChange: d,
                     label: T(`#StoreAdmin_ExtraAssetUpload_ReplaceAll`),
                     tooltip: T(`#StoreAdmin_ExtraAssetUpload_ReplaceAll_ttip`),
                   }),
-                (0, Q.jsx)(dt, {
+                (0, Q.jsx)(tt, {
                   onCancel: i,
                   onOK: (e) => {
                     (e.preventDefault(), h(o, u));
@@ -16749,12 +16749,12 @@ function gg(e) {
   if ((vg(!t, r), t))
     return (0, Q.jsx)(kt, {
       active: !0,
-      children: (0, Q.jsx)(Je, {
+      children: (0, Q.jsx)(Ye, {
         onEscKeypress: r,
-        children: (0, Q.jsxs)(Oe, {
+        children: (0, Q.jsxs)(Re, {
           classNameContent: Jh,
           children: [
-            (0, Q.jsx)(Ke, {
+            (0, Q.jsx)(mt, {
               children: T(`#StoreAdmin_ExtraAssetUpload_LocalizeAsset_Title`),
             }),
             (0, Q.jsx)(`div`, {
@@ -16763,7 +16763,7 @@ function gg(e) {
                 children: T(`#StoreAdmin_ExtraAssetUpload_LocalizeAsset_Desc`),
               }),
             }),
-            (0, Q.jsxs)(Fe, {
+            (0, Q.jsxs)(De, {
               children: [
                 (0, Q.jsx)(bg, { onlyExtraAsset: t }),
                 (0, Q.jsx)(le, {
@@ -16774,8 +16774,8 @@ function gg(e) {
                 }),
               ],
             }),
-            (0, Q.jsx)(Se, {
-              children: (0, Q.jsx)(Ve, {
+            (0, Q.jsx)(Ke, {
+              children: (0, Q.jsx)(st, {
                 onClick: r,
                 children: T(`#Button_Close`),
               }),
@@ -16858,7 +16858,7 @@ function yg(e) {
           className: `R8CGEkn4Rzg-`,
           children: [
             (0, Q.jsx)(`p`, { children: T(`#StoreAdmin_CustomImages_Title`) }),
-            (0, Q.jsx)(Ve, {
+            (0, Q.jsx)(st, {
               onClick: l,
               children: T(`#StoreAdmin_EditAltText_Button`),
             }),
@@ -16956,7 +16956,7 @@ function Cg(e) {
       mapAssetsList: a,
     } = e,
     o = I.useRef(void 0),
-    s = ut(o),
+    s = Oe(o),
     [c, l, u] = ee(),
     d = up(),
     p = mp(t),
@@ -16988,7 +16988,7 @@ function Cg(e) {
     x = a
       ? Array.from(a).reduce((e, [t, n]) => (n.includes(p) ? [...e, t] : e), [])
       : [],
-    S = new Intl.ListFormat(nt.GetPreferredLocales(), {
+    S = new Intl.ListFormat(ht.GetPreferredLocales(), {
       style: `long`,
       type: `conjunction`,
     }),
@@ -17021,7 +17021,7 @@ function Cg(e) {
                 (0, Q.jsx)(Zm, {
                   onClick: h,
                   tooltip: T(`#StoreAdmin_GameDescription_OpenInNewWindow`),
-                  children: (0, Q.jsx)(Le, {}),
+                  children: (0, Q.jsx)(ze, {}),
                 }),
                 !_ &&
                   (0, Q.jsx)(Zm, {
@@ -17029,13 +17029,13 @@ function Cg(e) {
                     tooltip: T(
                       `#StoreAdmin_GameDescription_CopyNameToClipboard`,
                     ),
-                    children: (0, Q.jsx)(Pe, {}),
+                    children: (0, Q.jsx)(Ee, {}),
                   }),
                 x.length == 0 &&
                   (0, Q.jsx)(Zm, {
                     onClick: l,
                     tooltip: T(`#StoreAdmin_GameDescription_DeleteAsset`),
-                    children: (0, Q.jsx)(ze, {}),
+                    children: (0, Q.jsx)(je, {}),
                   }),
                 x.length > 0 &&
                   (0, Q.jsx)(Zm, {
@@ -17107,7 +17107,7 @@ function Tg(e) {
     }, [o, r]),
     (0, Q.jsx)(kt, {
       active: !0,
-      children: (0, Q.jsx)(tt, {
+      children: (0, Q.jsx)(rt, {
         onOK: () => i({ extraAsset: t, eLang: n }),
         bOKDisabled: s,
         strOKButtonText: T(`#StoreAdmin_GameDescription_DeleteAsset`),
@@ -17276,7 +17276,7 @@ var jg = I.memo(function (e) {
       pmState: t,
       children: [
         (0, Q.jsx)(
-          De,
+          Fe,
           {
             className: f({ [`` + n]: !!n, [_m]: !0, [vm]: !!o }),
             ref: _,
@@ -17319,7 +17319,7 @@ function Pg(e) {
   return {
     refDiv: t,
     onActivate: r,
-    onGamepadDirection: $e(t, void 0, void 0, i),
+    onGamepadDirection: et(t, void 0, void 0, i),
   };
 }
 var Fg = I.memo(function (e) {
@@ -17366,16 +17366,16 @@ function Lg(e) {
       (a && a(), t());
     }, [a, t]),
     f = c ? () => {} : d;
-  return (0, Q.jsx)(Je, {
+  return (0, Q.jsx)(Ye, {
     onEscKeypress: f,
-    children: (0, Q.jsxs)(Oe, {
+    children: (0, Q.jsxs)(Re, {
       onSubmit: r,
       classNameContent: l,
       children: [
-        (0, Q.jsx)(Ke, { children: n }),
+        (0, Q.jsx)(mt, { children: n }),
         u,
-        (0, Q.jsx)(Se, {
-          children: (0, Q.jsx)(dt, {
+        (0, Q.jsx)(Ke, {
+          children: (0, Q.jsx)(tt, {
             strOKText: i,
             bOKDisabled: s,
             onCancel: f,
@@ -17438,13 +17438,13 @@ I.memo(function (e) {
     strOKText: x,
     bOKDisabled: p.length == 0,
     children: [
-      (0, Q.jsx)(bt, {
+      (0, Q.jsx)(Se, {
         ref: h,
         value: d,
         onChange: (e) => f(e.currentTarget.value),
         label: T(`#FormattingToolbar_LinkText`),
       }),
-      (0, Q.jsx)(bt, {
+      (0, Q.jsx)(Se, {
         ref: g,
         value: p,
         placeholder: `https://`,
@@ -17591,13 +17591,13 @@ function Wg() {
         tooltip: T(`#FormattingToolbar_Undo`),
         keyboardShortcut: `Mod-z`,
         command: Za,
-        children: (0, Q.jsx)(_t, {}),
+        children: (0, Q.jsx)(Ne, {}),
       }),
       (0, Q.jsx)(Xm, {
         tooltip: T(`#FormattingToolbar_Redo`),
         keyboardShortcut: h.PLATFORM == `macos` ? `Mod-Shift-z` : `Mod-y`,
         command: Qa,
-        children: (0, Q.jsx)(xe, {}),
+        children: (0, Q.jsx)(qe, {}),
       }),
     ],
   });
@@ -17610,38 +17610,38 @@ function Gg(e) {
         tooltip: T(`#FormattingToolbar_Bold`),
         keyboardShortcut: `Mod-b`,
         mark: t.marks.strong,
-        children: (0, Q.jsx)(ft, {}),
+        children: (0, Q.jsx)(nt, {}),
       }),
       (0, Q.jsx)(Ym, {
         tooltip: T(`#FormattingToolbar_Italic`),
         keyboardShortcut: `Mod-i`,
         mark: t.marks.italic,
-        children: (0, Q.jsx)(it, {}),
+        children: (0, Q.jsx)($e, {}),
       }),
       (0, Q.jsx)(Ym, {
         tooltip: T(`#FormattingToolbar_Underline`),
         keyboardShortcut: `Mod-u`,
         mark: t.marks.underline,
-        children: (0, Q.jsx)(Ne, {}),
+        children: (0, Q.jsx)(Ce, {}),
       }),
       `strike` in t.marks &&
         (0, Q.jsx)(Ym, {
           tooltip: T(`#FormattingToolbar_Strike`),
           keyboardShortcut: `Mod-Shift-x`,
           mark: t.marks.strike,
-          children: (0, Q.jsx)(vt, {}),
+          children: (0, Q.jsx)(Me, {}),
         }),
       `code` in t.marks &&
         (0, Q.jsx)(Ym, {
           tooltip: T(`#FormattingToolbar_InlineCode`),
           keyboardShortcut: `Ctrl-Shift-c`,
           mark: t.marks.code,
-          children: (0, Q.jsx)(st, {}),
+          children: (0, Q.jsx)(pt, {}),
         }),
       `color` in t.marks &&
-        (0, Q.jsx)(Ug, { schema: t, bColor: !0, children: (0, Q.jsx)(mt, {}) }),
+        (0, Q.jsx)(Ug, { schema: t, bColor: !0, children: (0, Q.jsx)(We, {}) }),
       `bgcolor` in t.marks &&
-        (0, Q.jsx)(Ug, { schema: t, bColor: !1, children: (0, Q.jsx)(at, {}) }),
+        (0, Q.jsx)(Ug, { schema: t, bColor: !1, children: (0, Q.jsx)(dt, {}) }),
     ],
   });
 }
@@ -17651,7 +17651,7 @@ function Kg(e) {
     tooltip: T(`#FormattingToolbar_Paragraph`),
     keyboardShortcut: `Ctrl-Shift-0`,
     nodeType: t.nodes.paragraph,
-    children: (0, Q.jsx)(yt, {}),
+    children: (0, Q.jsx)(He, {}),
   });
 }
 function qg(e) {
@@ -17683,14 +17683,14 @@ function Jg(e) {
         keyboardShortcut: `Ctrl-Shift-E`,
         nodeTypes: i,
         attrs: { align: `center` },
-        children: (0, Q.jsx)(He, {}),
+        children: (0, Q.jsx)(ct, {}),
       }),
       (0, Q.jsx)(qg, {
         tooltip: T(`#FormattingToolbar_AlignRight`),
         keyboardShortcut: `Ctrl-Shift-R`,
         nodeTypes: i,
         attrs: { align: `right` },
-        children: (0, Q.jsx)(Ue, {}),
+        children: (0, Q.jsx)(vt, {}),
       }),
     ],
   });
@@ -17706,7 +17706,7 @@ function Yg(e) {
           keyboardShortcut: `Ctrl-Shift-1`,
           nodeType: t.nodes.heading,
           attrs: { level: 1 },
-          children: (0, Q.jsx)(We, {}),
+          children: (0, Q.jsx)(it, {}),
         }),
       n <= 2 &&
         i >= 2 &&
@@ -17715,7 +17715,7 @@ function Yg(e) {
           keyboardShortcut: `Ctrl-Shift-2`,
           nodeType: t.nodes.heading,
           attrs: { level: 2 },
-          children: (0, Q.jsx)(rt, {}),
+          children: (0, Q.jsx)(gt, {}),
         }),
       n <= 3 &&
         i >= 3 &&
@@ -17724,7 +17724,7 @@ function Yg(e) {
           keyboardShortcut: `Ctrl-Shift-3`,
           nodeType: t.nodes.heading,
           attrs: { level: 3 },
-          children: (0, Q.jsx)(ht, {}),
+          children: (0, Q.jsx)(Ge, {}),
         }),
       n <= 4 &&
         i >= 4 &&
@@ -17733,7 +17733,7 @@ function Yg(e) {
           keyboardShortcut: `Ctrl-Shift-4`,
           nodeType: t.nodes.heading,
           attrs: { level: 4 },
-          children: (0, Q.jsx)(Ge, {}),
+          children: (0, Q.jsx)(Je, {}),
         }),
       n <= 5 &&
         i >= 5 &&
@@ -17742,7 +17742,7 @@ function Yg(e) {
           keyboardShortcut: `Ctrl-Shift-5`,
           nodeType: t.nodes.heading,
           attrs: { level: 5 },
-          children: (0, Q.jsx)(qe, {}),
+          children: (0, Q.jsx)(lt, {}),
         }),
     ],
   });
@@ -17771,7 +17771,7 @@ function Xg(e) {
           keyboardShortcut: `Ctrl-Shift-8`,
           list_type: a,
           list_item: s,
-          children: (0, Q.jsx)(et, {}),
+          children: (0, Q.jsx)(Ve, {}),
         }),
         o &&
           (0, Q.jsx)(Zg, {
@@ -17779,7 +17779,7 @@ function Xg(e) {
             keyboardShortcut: `Ctrl-Shift-7`,
             list_type: o,
             list_item: s,
-            children: (0, Q.jsx)(Be, {}),
+            children: (0, Q.jsx)(_t, {}),
           }),
         (!n || u) &&
           (0, Q.jsxs)(Q.Fragment, {
@@ -17788,13 +17788,13 @@ function Xg(e) {
                 tooltip: T(`#FormattingToolbar_OutdentList`),
                 keyboardShortcut: `Mod-[`,
                 command: c,
-                children: (0, Q.jsx)(gt, {}),
+                children: (0, Q.jsx)(yt, {}),
               }),
               (0, Q.jsx)(Xm, {
                 tooltip: T(`#FormattingToolbar_IndentList`),
                 keyboardShortcut: `Mod-[`,
                 command: l,
-                children: (0, Q.jsx)(lt, {}),
+                children: (0, Q.jsx)(ot, {}),
               }),
             ],
           }),
@@ -18079,7 +18079,7 @@ function E_(e) {
       schema: d.pm_schema,
       rctAboveEditor: o,
       children: (0, Q.jsx)(Ng, {
-        panelProps: { lang: ot(t), onBlur: () => h?.CommitChanges() },
+        panelProps: { lang: ft(t), onBlur: () => h?.CommitChanges() },
         className: d_,
         pmState: h,
         refOnUpdate: u,
@@ -18154,7 +18154,7 @@ function k_(e) {
         e.borderBoxSize.length > 0 && l(e.borderBoxSize[0].blockSize > 300),
       [],
     ),
-    m = Re(p),
+    m = Le(p),
     h = t === `awards` && u === 3;
   return (0, Q.jsxs)(Q.Fragment, {
     children: [

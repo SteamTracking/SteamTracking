@@ -1500,14 +1500,14 @@ function _(_, _) {
         (_ != _ &&
           _.Element &&
           _.m_Properties?.scrollRegionToStartOrEnd &&
-          _(_.Element, _, _, _ == _.Tree.Root),
+          _(_.Element, _, _, _ == _.Tree.Root, _.Element),
         _.HasMovementHandler(_)) ||
         _ == _
       );
       _ = _.GetNavParentCrossingTrees()
     );
 }
-function _(_, _, _, _) {
+function _(_, _, _, _, _) {
   let _ = _,
     _ = _.ownerDocument;
   if (
@@ -1518,6 +1518,7 @@ function _(_, _, _, _) {
   let _ = _(_);
   if (_ == `y`) {
     let _ = _ == _.DIR_DOWN ? _.MaxScrollTop() : 0;
+    if (_ == _.DIR_UP && _ && _(_, _)) return;
     _.scrollTo({
       top: _,
       behavior: `smooth`,
@@ -1529,6 +1530,21 @@ function _(_, _, _, _) {
       behavior: `smooth`,
     });
   }
+}
+function _(_, _) {
+  let _ = `ownerDocument` in _ ? _ : null;
+  for (let _ = _; _ && _ != _; _ = _.parentElement) {
+    let _ = _.ownerDocument.defaultView?.getComputedStyle(_).position;
+    if (_ == `fixed` || _ == `sticky`) return !1;
+  }
+  let _, _, _;
+  `ownerDocument` in _
+    ? ((_ = _.getBoundingClientRect().top + _.clientTop),
+      (_ = _.clientHeight),
+      (_ = _.scrollTop))
+    : ((_ = 0), (_ = _.innerHeight), (_ = _.scrollY));
+  let _ = _.getBoundingClientRect();
+  return _.height > _ ? !1 : _.bottom - _ + _ > _ + 1;
 }
 function _(_) {
   if (!_)

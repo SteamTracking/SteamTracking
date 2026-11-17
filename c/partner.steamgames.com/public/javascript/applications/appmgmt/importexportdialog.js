@@ -1891,7 +1891,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Quest.GetCommunityInventory#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetCommunityInventory = _;
@@ -1899,14 +1899,15 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Quest.GetCommunityItemDefinitions#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      eWebAPIKeyRequirement: 4,
+      eWebAPIKeyRequirement: 2,
+      rgBrowserAPISites: [`store`, `community`],
     });
   }
   _.GetCommunityItemDefinitions = _;
   function _(_, _, _) {
     return _.SendMsg(`Quest.ActivateProfileModifierItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.ActivateProfileModifierItem = _;
@@ -3262,7 +3263,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`SaleItemRewards.ClaimItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.ClaimItem = _;
@@ -3270,7 +3271,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`SaleItemRewards.CanClaimItem#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.CanClaimItem = _;
@@ -3293,7 +3294,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`SaleItemRewards.GetClaimedSaleRewards#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetClaimedSaleRewards = _;
@@ -3302,7 +3303,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetCurrentDefinition = _;

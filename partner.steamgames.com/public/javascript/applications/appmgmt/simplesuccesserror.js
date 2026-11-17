@@ -2,7 +2,7 @@
  ****/
 
 import { At as e, sn as t, vt as n } from "./chunk~de7f2df91c.js";
-import { l as r, ua as i } from "./chunk~1fa4b8f2ff.js";
+import { da as r, l as i } from "./chunk~1fa4b8f2ff.js";
 import "./chunk~8681f5c764.js";
 import { t as a } from "./chunk~eefd71512b.js";
 import { o } from "./chunk~739842ca30.js";
@@ -49,7 +49,7 @@ function u(e) {
       strThrobber: _,
     } = n;
   return d || p || g
-    ? (0, c.jsxs)(r, {
+    ? (0, c.jsxs)(i, {
         strTitle: t,
         bAlertDialog: !0,
         closeModal: s,
@@ -58,27 +58,27 @@ function u(e) {
           !!p &&
             (0, c.jsx)(`div`, {
               className: `wizbFzhGtBc-`,
-              children: p || i(`#Error_ErrorCommunicatingWithNetwork`),
+              children: p || r(`#Error_ErrorCommunicatingWithNetwork`),
             }),
           !!g && g,
         ],
       })
     : f || m || h
-      ? (0, c.jsx)(r, {
+      ? (0, c.jsx)(i, {
           strTitle: t,
-          strDescription: m || i(`#EventDisplay_Share_Success`),
+          strDescription: m || r(`#EventDisplay_Share_Success`),
           bAlertDialog: !0,
           closeModal: s,
           className: o,
           children: (0, c.jsx)(c.Fragment, { children: !!h && h }),
         })
-      : (0, c.jsx)(r, {
+      : (0, c.jsx)(i, {
           strTitle: t,
           className: o,
           bProgressDialog: !0,
           closeModal: () => {},
           children: (0, c.jsx)(a, {
-            string: l || _ || i(`#Loading`),
+            string: l || _ || r(`#Loading`),
             size: `medium`,
             position: `center`,
           }),

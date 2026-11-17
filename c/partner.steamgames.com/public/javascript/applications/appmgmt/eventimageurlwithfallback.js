@@ -57,7 +57,7 @@ import "./chunk~44f252525d.js";
 import { _ } from "./chunk~8fb30ea08b.js";
 import { _ } from "./chunk~ede3e357a2.js";
 import { _ } from "./chunk~b390ee0f78.js";
-import { _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
+import { _, _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
 import { _, _ } from "./chunk~2201b8cb3d.js";
 import { _ } from "./chunk~2bee5a7d08.js";
 function _(_) {
@@ -157,6 +157,9 @@ function _(_) {
 }
 var _ = `WYXlhoxwBlU-`,
   _ = `Ypf4QLCxqQU-`,
+  _ = `rDvoly1XGQk-`,
+  _ = `n2t7u-oXiwM-`,
+  _ = `a1UUU8zD1Lg-`,
   _ = `jP-Qr-tpETg-`,
   _ = `triBTPpfZNQ-`,
   _ = `Ep0wQ-6tJLw-`,
@@ -201,7 +204,45 @@ function _(_) {
     is_expanded_maincap: _,
     is_expanded_display: _,
     show_auto_advance_bar: _,
+    swipe_row: _,
   } = _;
+  if (typeof _ == `string`)
+    return (0, _.jsx)(_, {
+      children: (0, _.jsx)(`div`, {
+        className: _(_, _),
+        children: [0, 1, 2, 3, 4].map((_) =>
+          (0, _.jsx)(
+            `div`,
+            {
+              className: _(_, _ === `tall_capsule` && `RDPLi3Xo-Mk-`),
+              children: (0, _.jsx)(`div`, {
+                className: _,
+              }),
+            },
+            _,
+          ),
+        ),
+      }),
+    });
+  if (_)
+    return (0, _.jsx)(_, {
+      children: (0, _.jsx)(`div`, {
+        className: _,
+        children: [0, 1].map((_) =>
+          (0, _.jsx)(
+            `div`,
+            {
+              className: _,
+              style: {
+                width: _.width,
+                height: _.height,
+              },
+            },
+            _,
+          ),
+        ),
+      }),
+    });
   if (!_) return null;
   if (_)
     return (0, _.jsx)(_, {
@@ -736,7 +777,8 @@ function _(_) {
           : _,
       [_, _, _],
     ),
-    { strStoreURL: _, snr: _ } = _(_, _);
+    { strStoreURL: _, snr: _ } = _(_, _),
+    _ = _(_ ? void 0 : _);
   if (!_)
     return _
       ? (0, _.jsx)(_, {
@@ -765,6 +807,7 @@ function _(_) {
     navEntryPreferPosition: _.PREFERRED_CHILD,
     autoFocus: _,
     navKey: `preview_widget_` + _(_),
+    ..._,
     children: [
       (0, _.jsx)(_, {
         appid: _ && `appid` in _ ? _.appid : void 0,

@@ -11,13 +11,13 @@ import {
 } from "./chunk~de7f2df91c.js";
 import { s as o } from "./chunk~25a6634263.js";
 import {
-  Dn as s,
-  Fn as c,
-  Nn as l,
-  On as u,
-  Pn as d,
-  Ya as f,
-  hn as p,
+  Fn as s,
+  In as c,
+  On as l,
+  Pn as u,
+  Xa as d,
+  gn as f,
+  kn as p,
 } from "./chunk~1fa4b8f2ff.js";
 import { l as m, r as h, s as g, t as _ } from "./chunk~9a06851bec.js";
 import { E as v } from "./chunk~44f252525d.js";
@@ -28,9 +28,9 @@ function b(e, t = ``, n = null) {
 function x(e, n, r) {
   let i = h();
   return y.useMemo(() => {
-    let a = l(e).toLowerCase(),
-      o = l(t.COMMUNITY_BASE_URL).toLowerCase(),
-      s = l(t.STORE_BASE_URL).toLowerCase();
+    let a = u(e).toLowerCase(),
+      o = u(t.COMMUNITY_BASE_URL).toLowerCase(),
+      s = u(t.STORE_BASE_URL).toLowerCase();
     return a === o || a === s ? _(i, e, n, r) : e;
   }, [i, e, n, r]);
 }
@@ -116,16 +116,16 @@ var T = class e {
 function D(e) {
   let t = e?.jsondata?.read_more_link;
   if (!t) return;
-  let n = l(t).toLocaleLowerCase();
+  let n = u(t).toLocaleLowerCase();
   return n ? [n] : void 0;
 }
 function O(e, t) {
-  return s(e, D(t));
+  return l(e, D(t));
 }
 function k(e, n) {
   if (!e) return ``;
-  if (!s(e)) return c(e);
-  let r = O(e, n) ? u(e) : e;
+  if (!l(e)) return c(e);
+  let r = O(e, n) ? p(e) : e;
   return (t.IN_CLIENT ? `steam://openurl_external/` : ``) + r;
 }
 function A(e, t, n) {
@@ -136,16 +136,16 @@ var j = (e) => {
     let { url: t, event: n, className: r, style: i } = e,
       a = x(t);
     a = k(a, n);
-    let c = s(a) ? `noopener nofollow` : void 0,
-      l =
+    let c = l(a) ? `noopener nofollow` : void 0,
+      u =
         typeof e.children == `string` &&
         e.children.length > 0 &&
         t &&
         !t.startsWith(`steam://`)
-          ? d(t)
+          ? s(t)
           : void 0;
-    return (0, E.jsx)(p, {
-      toolTipContent: l,
+    return (0, E.jsx)(f, {
+      toolTipContent: u,
       direction: `top`,
       children: (0, E.jsx)(o, {
         className: r,
@@ -159,69 +159,69 @@ var j = (e) => {
   },
   M = {};
 ((M.arabic = () =>
-  f(() => import(`./chunk~2db238c0f4.js`), [], import.meta.url)),
+  d(() => import(`./chunk~2db238c0f4.js`), [], import.meta.url)),
   (M.brazilian = () =>
-    f(() => import(`./chunk~3044d234ba.js`), [], import.meta.url)),
+    d(() => import(`./chunk~3044d234ba.js`), [], import.meta.url)),
   (M.bulgarian = () =>
-    f(() => import(`./chunk~01db69dc19.js`), [], import.meta.url)),
+    d(() => import(`./chunk~01db69dc19.js`), [], import.meta.url)),
   (M.czech = () =>
-    f(() => import(`./chunk~f4d9ad7041.js`), [], import.meta.url)),
+    d(() => import(`./chunk~f4d9ad7041.js`), [], import.meta.url)),
   (M.danish = () =>
-    f(() => import(`./chunk~1eca88ee2f.js`), [], import.meta.url)),
+    d(() => import(`./chunk~1eca88ee2f.js`), [], import.meta.url)),
   (M.dutch = () =>
-    f(() => import(`./chunk~ceb7dcfb8b.js`), [], import.meta.url)),
+    d(() => import(`./chunk~ceb7dcfb8b.js`), [], import.meta.url)),
   (M.english = () =>
-    f(() => import(`./chunk~456d0392b7.js`), [], import.meta.url)),
+    d(() => import(`./chunk~456d0392b7.js`), [], import.meta.url)),
   (M.finnish = () =>
-    f(() => import(`./chunk~01ed01ea05.js`), [], import.meta.url)),
+    d(() => import(`./chunk~01ed01ea05.js`), [], import.meta.url)),
   (M.french = () =>
-    f(() => import(`./chunk~3126638495.js`), [], import.meta.url)),
+    d(() => import(`./chunk~3126638495.js`), [], import.meta.url)),
   (M.german = () =>
-    f(() => import(`./chunk~d728c5ec5f.js`), [], import.meta.url)),
+    d(() => import(`./chunk~d728c5ec5f.js`), [], import.meta.url)),
   (M.greek = () =>
-    f(() => import(`./chunk~501aa82e4e.js`), [], import.meta.url)),
+    d(() => import(`./chunk~501aa82e4e.js`), [], import.meta.url)),
   (M.hungarian = () =>
-    f(() => import(`./chunk~963ceb2486.js`), [], import.meta.url)),
+    d(() => import(`./chunk~963ceb2486.js`), [], import.meta.url)),
   (M.indonesian = () =>
-    f(() => import(`./chunk~6f8f401629.js`), [], import.meta.url)),
+    d(() => import(`./chunk~6f8f401629.js`), [], import.meta.url)),
   (M.italian = () =>
-    f(() => import(`./chunk~525d1d36ed.js`), [], import.meta.url)),
+    d(() => import(`./chunk~525d1d36ed.js`), [], import.meta.url)),
   (M.japanese = () =>
-    f(() => import(`./chunk~4bfc8cee08.js`), [], import.meta.url)),
+    d(() => import(`./chunk~4bfc8cee08.js`), [], import.meta.url)),
   (M.koreana = () =>
-    f(() => import(`./chunk~17e4249e14.js`), [], import.meta.url)),
+    d(() => import(`./chunk~17e4249e14.js`), [], import.meta.url)),
   (M.latam = () =>
-    f(() => import(`./chunk~c94c5a350a.js`), [], import.meta.url)),
+    d(() => import(`./chunk~c94c5a350a.js`), [], import.meta.url)),
   (M.malay = () =>
-    f(() => import(`./chunk~4bdb31b089.js`), [], import.meta.url)),
+    d(() => import(`./chunk~4bdb31b089.js`), [], import.meta.url)),
   (M.norwegian = () =>
-    f(() => import(`./chunk~e559c7ccb5.js`), [], import.meta.url)),
+    d(() => import(`./chunk~e559c7ccb5.js`), [], import.meta.url)),
   (M.polish = () =>
-    f(() => import(`./chunk~41a1e8083b.js`), [], import.meta.url)),
+    d(() => import(`./chunk~41a1e8083b.js`), [], import.meta.url)),
   (M.portuguese = () =>
-    f(() => import(`./chunk~888ba42df4.js`), [], import.meta.url)),
+    d(() => import(`./chunk~888ba42df4.js`), [], import.meta.url)),
   (M.romanian = () =>
-    f(() => import(`./chunk~5d85cdff8f.js`), [], import.meta.url)),
+    d(() => import(`./chunk~5d85cdff8f.js`), [], import.meta.url)),
   (M.russian = () =>
-    f(() => import(`./chunk~1c942615a6.js`), [], import.meta.url)),
+    d(() => import(`./chunk~1c942615a6.js`), [], import.meta.url)),
   (M.sc_schinese = () =>
-    f(() => import(`./chunk~028c81a906.js`), [], import.meta.url)),
+    d(() => import(`./chunk~028c81a906.js`), [], import.meta.url)),
   (M.schinese = () =>
-    f(() => import(`./chunk~b4f7f522af.js`), [], import.meta.url)),
+    d(() => import(`./chunk~b4f7f522af.js`), [], import.meta.url)),
   (M.spanish = () =>
-    f(() => import(`./chunk~fe8f55d5c6.js`), [], import.meta.url)),
+    d(() => import(`./chunk~fe8f55d5c6.js`), [], import.meta.url)),
   (M.swedish = () =>
-    f(() => import(`./chunk~0110674332.js`), [], import.meta.url)),
+    d(() => import(`./chunk~0110674332.js`), [], import.meta.url)),
   (M.tchinese = () =>
-    f(() => import(`./chunk~567830f83a.js`), [], import.meta.url)),
+    d(() => import(`./chunk~567830f83a.js`), [], import.meta.url)),
   (M.thai = () =>
-    f(() => import(`./chunk~297d834957.js`), [], import.meta.url)),
+    d(() => import(`./chunk~297d834957.js`), [], import.meta.url)),
   (M.turkish = () =>
-    f(() => import(`./chunk~486ca1332b.js`), [], import.meta.url)),
+    d(() => import(`./chunk~486ca1332b.js`), [], import.meta.url)),
   (M.ukrainian = () =>
-    f(() => import(`./chunk~f6d66a3b64.js`), [], import.meta.url)),
+    d(() => import(`./chunk~f6d66a3b64.js`), [], import.meta.url)),
   (M.vietnamese = () =>
-    f(() => import(`./chunk~99cbd54bf9.js`), [], import.meta.url)));
+    d(() => import(`./chunk~99cbd54bf9.js`), [], import.meta.url)));
 async function N(e) {
   if (M[e]) return await M[e]();
 }

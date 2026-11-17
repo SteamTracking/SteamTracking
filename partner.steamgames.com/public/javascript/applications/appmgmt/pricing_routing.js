@@ -11,15 +11,15 @@ import {
 import { I as a, Pt as o, ct as s, r as c } from "./chunk~25a6634263.js";
 import {
   Gt as l,
-  Nt as u,
-  Wt as d,
-  an as f,
-  gn as p,
-  h as m,
-  l as h,
-  p as g,
-  ua as _,
-  wn as v,
+  Kt as u,
+  Pt as d,
+  Tn as f,
+  _n as p,
+  da as m,
+  h,
+  l as g,
+  on as _,
+  p as v,
 } from "./chunk~1fa4b8f2ff.js";
 import { a as y, r as b } from "./chunk~44f252525d.js";
 import { r as ee } from "./chunk~fa5480ab25.js";
@@ -102,10 +102,10 @@ function Ge(e) {
       strPackageFilter: o,
       setPackageFilter: s,
       bFilterToBelowMinPrice: c,
-      setFilterToBelowMinPrice: d,
+      setFilterToBelowMinPrice: l,
     } = e,
-    p = (0, U.useMemo)(() => i.filter((e) => D(e.packageID)).length, [i]),
-    m = U.useCallback(
+    f = (0, U.useMemo)(() => i.filter((e) => D(e.packageID)).length, [i]),
+    p = U.useCallback(
       (e) => {
         s(e.data);
       },
@@ -114,20 +114,20 @@ function Ge(e) {
     h = U.useMemo(
       () => [
         {
-          label: _(`#PricingDashboard_ShowOnlyReleasedPackages`),
+          label: m(`#PricingDashboard_ShowOnlyReleasedPackages`),
           data: `released`,
         },
-        { label: _(`#PricingDashboard_ShowAllPackages`), data: `all` },
+        { label: m(`#PricingDashboard_ShowAllPackages`), data: `all` },
         {
-          label: _(`#PricingDashboard_ShowOnlyUnreleasedPackages`),
+          label: m(`#PricingDashboard_ShowOnlyUnreleasedPackages`),
           data: `unreleased`,
         },
         {
-          label: _(`#PricingDashboard_ShowOnlyChangedPackages`),
+          label: m(`#PricingDashboard_ShowOnlyChangedPackages`),
           data: `changed`,
         },
         {
-          label: _(`#PricingDashboard_ShowSubmittedChanges`),
+          label: m(`#PricingDashboard_ShowSubmittedChanges`),
           data: `proposed`,
         },
       ],
@@ -137,37 +137,37 @@ function Ge(e) {
   return (0, G.jsxs)(`div`, {
     className: Re,
     children: [
-      (0, G.jsx)(u, {
+      (0, G.jsx)(d, {
         rgOptions: h,
         selectedOption: o,
         strDropDownClassName: void 0,
-        onChange: m,
+        onChange: p,
         contextMenuPositionOptions: { bMatchWidth: !1 },
       }),
-      !!(p || c) &&
+      !!(f || c) &&
         (0, G.jsx)(`div`, {
           className: t(`YqydI8xRHW0-`, `qcPQ4JjPk1w-`),
-          children: (0, G.jsx)(l, {
+          children: (0, G.jsx)(u, {
             checked: c,
-            onChange: d,
-            label: _(`#PricingDashboard_FilterToLowPrice`, p),
+            onChange: l,
+            label: m(`#PricingDashboard_FilterToLowPrice`, f),
           }),
         }),
       (0, G.jsx)(`div`, {
         className: t(W, void 0),
-        children: (0, G.jsx)(l, {
+        children: (0, G.jsx)(u, {
           checked: n,
           onChange: r,
-          label: _(`#PricingDashboard_ShowCompactModeCheckBoxLabel`),
+          label: m(`#PricingDashboard_ShowCompactModeCheckBoxLabel`),
         }),
       }),
       (0, G.jsx)(`div`, { className: t(W), children: (0, G.jsx)(Pe, {}) }),
       (0, G.jsxs)(`div`, {
         className: t(W),
         children: [
-          (0, G.jsx)(f, {
+          (0, G.jsx)(_, {
             onClick: v,
-            children: _(`#PricingDashboard_ApplyGuidelinesDialog_Button`),
+            children: m(`#PricingDashboard_ApplyGuidelinesDialog_Button`),
           }),
           (0, G.jsx)(j, {
             active: g,
@@ -208,8 +208,8 @@ function qe(e, t, n) {
       let o = a.grouped_app_name;
       o ||=
         a.appids.length > 1
-          ? _(`#PackageGrid_MultipleBaseGamesFoundForPackage`)
-          : _(`#PackageGrid_NoBaseGameFoundForPackage`);
+          ? m(`#PackageGrid_MultipleBaseGamesFoundForPackage`)
+          : m(`#PackageGrid_NoBaseGameFoundForPackage`);
       let s = {
         appids: a.appids.sort(),
         appName: o,
@@ -259,12 +259,12 @@ function Xe() {
   return U.useMemo(
     () =>
       me().accessor(`proposalState`, {
-        header: _(`#PricingDashboard_Column_PriceProposalState`),
+        header: m(`#PricingDashboard_Column_PriceProposalState`),
         enableSorting: !1,
         cell: Ye,
         size: 200,
         meta: {
-          strHeaderTooltip: _(
+          strHeaderTooltip: m(
             `#PricingDashboard_Column_PriceProposalState_ttip`,
           ),
         },
@@ -385,7 +385,7 @@ function et(e) {
       children: (0, G.jsx)(`div`, {
         className: R,
         onClick: r,
-        children: _(`#PricingDashboard_RevertAllCurrency`, n),
+        children: m(`#PricingDashboard_RevertAllCurrency`, n),
       }),
     }),
   });
@@ -406,26 +406,26 @@ function rt(e) {
     o = le(),
     s = `prices_all_${r}_${i}.csv`,
     c = `prices_${r}_${i}.csv`,
-    l = o.length == 0;
-  return (0, G.jsxs)(h, {
+    u = o.length == 0;
+  return (0, G.jsxs)(g, {
     bAllowFullSize: !1,
     closeModal: t,
     bAlertDialog: !0,
-    strTitle: _(`#PricingDashboard_ImportExportHeader`),
+    strTitle: m(`#PricingDashboard_ImportExportHeader`),
     children: [
-      _(`#PricingDashboard_ImportExport_GeneralInstructions`),
+      m(`#PricingDashboard_ImportExport_GeneralInstructions`),
       (0, G.jsx)(`br`, {}),
       (0, G.jsx)(`a`, {
         href: n.PARTNER_BASE_URL + `doc/store/pricing/csv`,
         target: `_blank`,
-        children: _(`#PricingDashboard_ImportExport_DocLink`),
+        children: m(`#PricingDashboard_ImportExport_DocLink`),
       }),
       (0, G.jsx)(`br`, {}),
       (0, G.jsx)(`br`, {}),
-      (0, G.jsx)(`h3`, { children: _(`#PricingDashboard_SubtitleExport`) }),
+      (0, G.jsx)(`h3`, { children: m(`#PricingDashboard_SubtitleExport`) }),
       (0, G.jsx)(`div`, {
         className: K,
-        children: _(`#PricingDashboard_ImportExport_DownloadInstructions`),
+        children: m(`#PricingDashboard_ImportExport_DownloadInstructions`),
       }),
       (0, G.jsxs)(`div`, {
         className: q,
@@ -436,18 +436,18 @@ function rt(e) {
               children: [
                 (0, G.jsx)(`span`, {
                   className: `xS20dcdZdD4-`,
-                  children: _(
+                  children: m(
                     `#PricingDashboard_ImportExport_DownloadVisible_Desc`,
                   ),
                 }),
-                (0, G.jsxs)(d, {
+                (0, G.jsxs)(l, {
                   className: `PlbQyglM-gI-`,
-                  disabled: l,
+                  disabled: u,
                   onClick: () => Q(o, c),
                   children: [
-                    _(`#PricingDashboard_ImportExport_DownloadVisible_Button`),
+                    m(`#PricingDashboard_ImportExport_DownloadVisible_Button`),
                     (0, G.jsx)(`span`, {
-                      children: _(`#PricingDashboard_PackageCount`, o.length),
+                      children: m(`#PricingDashboard_PackageCount`, o.length),
                     }),
                   ],
                 }),
@@ -458,16 +458,16 @@ function rt(e) {
             children: [
               (0, G.jsx)(`span`, {
                 className: Z,
-                children: _(`#PricingDashboard_ImportExport_DownloadAll_Desc`),
+                children: m(`#PricingDashboard_ImportExport_DownloadAll_Desc`),
               }),
-              (0, G.jsxs)(d, {
+              (0, G.jsxs)(l, {
                 className: J,
-                disabled: l,
+                disabled: u,
                 onClick: () => Q(a, s),
                 children: [
-                  _(`#PricingDashboard_ImportExport_DownloadAll_Button`),
+                  m(`#PricingDashboard_ImportExport_DownloadAll_Button`),
                   (0, G.jsx)(`span`, {
-                    children: _(`#PricingDashboard_PackageCount`, a.length),
+                    children: m(`#PricingDashboard_PackageCount`, a.length),
                   }),
                 ],
               }),
@@ -477,10 +477,10 @@ function rt(e) {
       }),
       (0, G.jsx)(`br`, {}),
       (0, G.jsx)(`br`, {}),
-      (0, G.jsx)(`h3`, { children: _(`#PricingDashboard_SubtitleImport`) }),
+      (0, G.jsx)(`h3`, { children: m(`#PricingDashboard_SubtitleImport`) }),
       (0, G.jsx)(`div`, {
         className: K,
-        children: _(`#PricingDashboard_ImportExport_UploadInstructions`),
+        children: m(`#PricingDashboard_ImportExport_UploadInstructions`),
       }),
       (0, G.jsx)(`div`, {
         className: q,
@@ -489,16 +489,16 @@ function rt(e) {
           children: [
             (0, G.jsx)(`span`, {
               className: Z,
-              children: _(`#PricingDashboard_ImportExport_Upload_Desc`),
+              children: m(`#PricingDashboard_ImportExport_Upload_Desc`),
             }),
-            (0, G.jsx)(d, {
+            (0, G.jsx)(l, {
               className: J,
-              disabled: l,
+              disabled: u,
               children: (0, G.jsxs)(`label`, {
                 className: Y,
                 htmlFor: `import-price-input`,
                 children: [
-                  _(`#PricingDashboard_ImportExport_Upload_Button`),
+                  m(`#PricingDashboard_ImportExport_Upload_Button`),
                   (0, G.jsx)(`input`, {
                     id: `import-price-input`,
                     type: `file`,
@@ -517,7 +517,7 @@ function rt(e) {
 function Q(e, t) {
   let n = [],
     r = w(),
-    i = [_(`#PackageGrid_Column_PackageName`), `ID`];
+    i = [m(`#PackageGrid_Column_PackageName`), `ID`];
   for (let e of r) i.push(e);
   n.push(i);
   for (let t of e) {
@@ -536,7 +536,7 @@ async function it(e, t) {
     let n = s(e),
       r = e.target.files[0],
       i = await H.ParseCSVFile(r);
-    (g((0, G.jsx)(st, { strFilename: r.name, parseResult: i }), n), t());
+    (v((0, G.jsx)(st, { strFilename: r.name, parseResult: i }), n), t());
   }
 }
 function at(e, t) {
@@ -578,32 +578,32 @@ function st(e) {
   )
     return (0, G.jsx)(N, { position: `center` });
   let d = s.length > 0,
-    f = _(d ? `#PackageGrid_SaveChangesDialogButton` : `#Button_Close`);
-  return (0, G.jsxs)(h, {
-    strTitle: _(`#PricingDashboard_ImportExport_UploadProgressTitle`),
-    strDescription: _(
+    f = m(d ? `#PackageGrid_SaveChangesDialogButton` : `#Button_Close`);
+  return (0, G.jsxs)(g, {
+    strTitle: m(`#PricingDashboard_ImportExport_UploadProgressTitle`),
+    strDescription: m(
       `#PricingDashboard_ImportExport_UploadProgressDetails`,
       l,
     ),
     bAlertDialog: !d,
     strOKButtonText: f,
     onOK: () => {
-      d && m((0, G.jsx)(Me, {}), window);
+      d && h((0, G.jsx)(Me, {}), window);
     },
-    strCancelButtonText: _(`#Button_OK`),
+    strCancelButtonText: m(`#Button_OK`),
     closeModal: t,
     children: [
       (0, G.jsx)(`div`, {
         className: nt,
-        children: _(`#PricingDashboard_ImportExport_UploadResults`, s.length),
+        children: m(`#PricingDashboard_ImportExport_UploadResults`, s.length),
       }),
-      d && _(`#PricingDashboard_ImportExport_UploadNextStepInstructions`),
+      d && m(`#PricingDashboard_ImportExport_UploadNextStepInstructions`),
       !!r.errors?.length &&
         (0, G.jsxs)(G.Fragment, {
           children: [
             (0, G.jsx)(`div`, {
               className: `pT-mBtArqF0-`,
-              children: _(
+              children: m(
                 `#PricingDashboard_ImportExport_UploadErrorsHeader`,
                 r.errors?.length,
               ),
@@ -644,22 +644,22 @@ function ct(e) {
         (0, G.jsxs)(`div`, {
           className: Ee,
           children: [
-            _(`#PricingDashboard_Title`),
+            m(`#PricingDashboard_Title`),
             (0, G.jsx)(`div`, { className: Ne }),
             (0, G.jsxs)(`div`, {
               className: Oe,
               children: [
-                (0, G.jsx)(d, {
-                  onClick: (e) => m((0, G.jsx)(rt, {}), s(e)),
-                  children: _(`#PricingDashboard_ImportExportButton`),
+                (0, G.jsx)(l, {
+                  onClick: (e) => h((0, G.jsx)(rt, {}), s(e)),
+                  children: m(`#PricingDashboard_ImportExportButton`),
                 }),
-                (0, G.jsx)(d, {
-                  onClick: (e) => v(e, r),
-                  children: _(`#PricingDashboard_DocumentationButton`),
+                (0, G.jsx)(l, {
+                  onClick: (e) => f(e, r),
+                  children: m(`#PricingDashboard_DocumentationButton`),
                 }),
-                (0, G.jsx)(d, {
-                  onClick: (e) => v(e, i),
-                  children: _(`#PricingDashboard_ContactUsButton`),
+                (0, G.jsx)(l, {
+                  onClick: (e) => f(e, i),
+                  children: m(`#PricingDashboard_ContactUsButton`),
                 }),
               ],
             }),
@@ -668,7 +668,7 @@ function ct(e) {
         t.length == 0 &&
           (0, G.jsx)(`div`, {
             className: `ChHauw6JZ6E-`,
-            children: _(`#PricingDashboard_Error_NoPackages`),
+            children: m(`#PricingDashboard_Error_NoPackages`),
           }),
         t.length > 0 &&
           (0, G.jsxs)(G.Fragment, {

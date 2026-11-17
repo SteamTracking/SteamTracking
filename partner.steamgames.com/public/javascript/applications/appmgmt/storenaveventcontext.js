@@ -704,6 +704,7 @@ var s = n(e(), 1),
     "personalcalendar-homepage": 100803,
     greatonframe: 100804,
     salesmartsale_events_only: 100805,
+    salesmartdiscountreason: 100806,
   };
 function l(e) {
   return e in c;

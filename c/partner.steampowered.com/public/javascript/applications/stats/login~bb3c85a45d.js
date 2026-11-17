@@ -7393,6 +7393,19 @@ var _ = _(_(), 1),
       _
     );
   })({});
+function _(_, _) {
+  if (_ !== 1) return _;
+  switch (_) {
+    case 84:
+      return 5;
+    case 10:
+    case 20:
+    case 16:
+    case 3:
+      return 3;
+  }
+  return _;
+}
 function _(_) {
   let {
     shared_secret: _,
@@ -7549,7 +7562,7 @@ var _ = class {
           );
         } else
           (_(`Failed to poll auth session. Result: ${_}`),
-            (this.m_eFailureState = 1));
+            (this.m_eFailureState = _(1, _)));
         return (
           this.m_onCompleteCallback({
             bSuccess: !1,
@@ -9264,7 +9277,7 @@ var _ = class extends _ {
           case 3:
             return (this.SetFailureState(_.Network, _.EResult(20)), _);
           case 84:
-            return (this.SetFailureState(_.RateLimitExceeded, _.EResult(_)), _);
+            return (this.SetFailureStateWithEResult(_.RateLimitExceeded, _), _);
           case 118: {
             let _ = _.Body().agreement_session_url();
             if (
@@ -9287,9 +9300,9 @@ var _ = class extends _ {
           default:
             return (
               _(`Failed to start auth session. Result: ${_} Transport: ${_}`),
-              this.SetFailureState(
+              this.SetFailureStateWithEResult(
                 _.Generic,
-                _.EResult(_),
+                _,
                 _.Body().extended_error_message(),
               ),
               this.m_onCompleteCallback({
@@ -9460,7 +9473,7 @@ var _ = class extends _ {
             return ((this.m_eStatus = _ ? 10 : 11), _);
           case 27:
             return (
-              this.SetFailureState(_.Expired, _.EResult(_)),
+              this.SetFailureStateWithEResult(_.Expired, _),
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
@@ -9468,7 +9481,7 @@ var _ = class extends _ {
             );
           case 84:
             return (
-              this.SetFailureState(_.RateLimitExceeded, _.EResult(_)),
+              this.SetFailureStateWithEResult(_.RateLimitExceeded, _),
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
@@ -9496,7 +9509,7 @@ var _ = class extends _ {
           default:
             return (
               _(`Failed to update auth session with SG code. Result: ${_}`),
-              this.SetFailureState(_.Generic, _.EResult(_)),
+              this.SetFailureStateWithEResult(_.Generic, _),
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
@@ -9545,17 +9558,26 @@ var _ = class extends _ {
           this.m_weakAuthWebInterface.GetServiceTransport(),
           _,
         );
-      _.GetEResult() == 1
-        ? (this.m_eStatus = 8)
-        : (_.DEBUG_LogToConsole(),
-          _(
-            `An unexpected error occured while adding an authenticator`,
-            _.GetEResult(),
-          ),
-          this.SetFailureState(_.MoveAuthenticator, _.EResult(_.GetEResult())));
+      return (
+        _.GetEResult() == 1
+          ? (this.m_eStatus = 8)
+          : (_.DEBUG_LogToConsole(),
+            _(
+              `An unexpected error occured while adding an authenticator`,
+              _.GetEResult(),
+            ),
+            this.SetFailureStateWithEResult(
+              _.MoveAuthenticator,
+              _.GetEResult(),
+            )),
+        _.GetEResult()
+      );
     } catch (_) {
-      (_(`An unexpected error occured while moving an authenticator`, _),
-        this.SetFailureState(_.MoveAuthenticator, _.EResult(2)));
+      return (
+        _(`An unexpected error occured while moving an authenticator`, _),
+        this.SetFailureStateWithEResult(_.MoveAuthenticator, 2),
+        2
+      );
     }
   }
   async ResendMoveCode() {
@@ -9596,7 +9618,7 @@ var _ = class extends _ {
           `Error when calling RemoveAuthenticatorViaChallengeContinue`,
           _.GetEResult(),
         ),
-        this.SetFailureState(_.MoveAuthenticator, _.EResult(_.GetEResult())));
+        this.SetFailureStateWithEResult(_.MoveAuthenticator, _.GetEResult()));
     else {
       _.DEBUG_LogToConsole();
       let _ = _.Body().replacement_token();
@@ -9605,6 +9627,7 @@ var _ = class extends _ {
         (this.m_eStatus = 9),
         (this.m_bUsingCodeOverride = !1));
     }
+    return _.GetEResult();
   }
   FinishMoveRecovery() {
     this.m_eStatus = 5;
@@ -9656,6 +9679,9 @@ var _ = class extends _ {
       (this.m_eFailureState = _),
       (this.m_strErrorReference = _),
       (this.m_strExtendedErrorMessage = _));
+  }
+  SetFailureStateWithEResult(_, _, _ = ``) {
+    this.SetFailureState(_(_, _), _.EResult(_), _);
   }
   onAuthComplete = (_) => {
     this.m_eStatus = _.bSuccess ? 14 : 15;
@@ -10263,9 +10289,13 @@ function _(_) {
   return (0, _.jsx)(`svg`, {
     version: `1.1`,
     xmlns: `http://www.w3.org/2000/svg`,
-    className: `SVGIcon_Button SVGIcon_Check`,
     _: `0px`,
     _: `0px`,
+    style: {
+      fill: `#FFFFFF`,
+      width: `100%`,
+      height: `100%`,
+    },
     width: `256px`,
     height: `256px`,
     viewBox: `0 0 256 256`,

@@ -27,89 +27,89 @@ import {
   s as te,
 } from "./chunk~25a6634263.js";
 import {
-  An as ne,
-  Cn as y,
-  Dn as re,
-  Dr as ie,
-  Fn as ae,
-  Ha as b,
-  In as oe,
-  Ka as se,
+  Bn as ne,
+  Bt as re,
+  Fn as ie,
+  Hn as y,
+  In as ae,
+  Jn as b,
+  Ln as oe,
+  Mn as x,
+  Mt as se,
   On as ce,
   Or as le,
-  Pn as ue,
-  Rn as x,
-  U as de,
-  Vn as S,
-  bn as fe,
-  ga as pe,
-  gn as me,
-  hn as he,
-  ia as C,
-  jn as ge,
-  jt as _e,
-  ma as ve,
-  no as ye,
-  qn as w,
-  ua as T,
-  zn as be,
-  zt as xe,
+  Ua as S,
+  W as ue,
+  _a as de,
+  _n as fe,
+  aa as C,
+  da as w,
+  gn as pe,
+  ha as me,
+  jn as he,
+  kn as ge,
+  kr as _e,
+  qa as ve,
+  ro as ye,
+  wn as T,
+  xn as be,
+  zn as E,
 } from "./chunk~1fa4b8f2ff.js";
-import { C as E } from "./chunk~44f252525d.js";
-import { n as Se } from "./chunk~f8b6a4beb3.js";
-import { t as D } from "./chunk~ede3e357a2.js";
-import { n as Ce, o as we, t as Te } from "./chunk~d9c3dab17a.js";
-import { n as Ee } from "./chunk~9d71b14b50.js";
-import { t as De } from "./chunk~eefd71512b.js";
-import { n as Oe, u as ke } from "./chunk~8ceeb46076.js";
+import { C as D } from "./chunk~44f252525d.js";
+import { n as xe } from "./chunk~f8b6a4beb3.js";
+import { t as O } from "./chunk~ede3e357a2.js";
+import { n as Se, o as Ce, t as we } from "./chunk~d9c3dab17a.js";
+import { n as Te } from "./chunk~9d71b14b50.js";
+import { t as Ee } from "./chunk~eefd71512b.js";
+import { n as De, u as Oe } from "./chunk~8ceeb46076.js";
 import {
-  B as Ae,
-  C as je,
-  D as Me,
-  E as Ne,
-  F as Pe,
-  I as Fe,
-  L as Ie,
-  M as Le,
-  N as Re,
-  O as ze,
-  P as Be,
-  R as Ve,
-  S as He,
-  W as Ue,
-  _ as We,
-  a as Ge,
-  c as Ke,
-  f as qe,
-  g as Je,
-  h as Ye,
-  i as Xe,
-  j as Ze,
-  m as Qe,
-  n as $e,
-  o as et,
-  p as tt,
-  r as nt,
-  s as rt,
-  t as it,
-  u as at,
-  v as ot,
-  w as st,
-  x as ct,
-  y as lt,
+  B as ke,
+  C as Ae,
+  D as je,
+  E as Me,
+  F as Ne,
+  I as Pe,
+  L as Fe,
+  M as Ie,
+  N as Le,
+  O as Re,
+  P as ze,
+  R as Be,
+  S as Ve,
+  W as He,
+  _ as Ue,
+  a as We,
+  c as Ge,
+  f as Ke,
+  g as qe,
+  h as Je,
+  i as Ye,
+  j as Xe,
+  m as Ze,
+  n as Qe,
+  o as $e,
+  p as et,
+  r as tt,
+  s as nt,
+  t as rt,
+  u as it,
+  v as at,
+  w as ot,
+  x as st,
+  y as ct,
 } from "./chunk~af1574091f.js";
-import { v as ut } from "./chunk~2bee5a7d08.js";
-import { t as dt } from "./chunk~4571d27d07.js";
-import { n as O, r as ft } from "./chunk~967b42dac9.js";
-import { n as pt } from "./chunk~a7c5e71e12.js";
-var k = d(t(), 1),
-  A = class {
+import { b as lt } from "./chunk~2bee5a7d08.js";
+import { t as ut } from "./chunk~4571d27d07.js";
+import { n as k, r as dt } from "./chunk~967b42dac9.js";
+import { n as ft } from "./chunk~a7c5e71e12.js";
+var A = d(t(), 1),
+  j = class {
     reactNodes = [];
     AppendText(e, t = !1) {
       e.length &&
         (t
           ? this.reactNodes.push(
-              k.createElement(
+              A.createElement(
                 `span`,
                 {
                   "data-copytext": ``,
@@ -128,7 +128,7 @@ var k = d(t(), 1),
       return this.reactNodes;
     }
   },
-  mt = class {
+  pt = class {
     m_decoratedAccumulator;
     constructor(e) {
       (i(e, `decorated accumulator cannot be null`),
@@ -144,7 +144,7 @@ var k = d(t(), 1),
       return this.m_decoratedAccumulator.GetElements();
     }
   },
-  ht = class extends mt {
+  mt = class extends pt {
     constructor(e) {
       super(e);
     }
@@ -159,7 +159,7 @@ var k = d(t(), 1),
 `)
       )
         (n.push(t.substr(0, e)),
-          n.push(k.createElement(`br`)),
+          n.push(A.createElement(`br`)),
           (t = t.substr(e + 1)));
       (t.length && n.push(t),
         n.forEach((e) => {
@@ -167,10 +167,10 @@ var k = d(t(), 1),
         }));
     }
   },
-  gt = class extends Ue {
+  ht = class extends He {
     m_renderingLanguage;
     constructor(e, t, n) {
-      (super(e, t ?? (() => new A())),
+      (super(e, t ?? (() => new j())),
         (this.m_renderingLanguage = typeof n == `string` ? c(n) : n));
     }
     UpdateOverrideLanguage(e) {
@@ -181,7 +181,7 @@ var k = d(t(), 1),
         i = this.Parse(
           e,
           (e, n, ...i) =>
-            k.createElement(
+            A.createElement(
               e,
               {
                 ...n,
@@ -194,21 +194,21 @@ var k = d(t(), 1),
           n,
         );
       return i.length > 1
-        ? k.createElement(k.Fragment, null, ...i)
+        ? A.createElement(A.Fragment, null, ...i)
         : i.length == 1
           ? i[0]
           : null;
     }
   },
-  j = p();
-function _t(e) {
+  M = p();
+function gt(e) {
   return !(
-    (!ne(e.sPoster) && !ge(e.sPoster)) ||
-    (e.rgVideoSources && e.rgVideoSources.some((e) => !ge(e.sURL))) ||
-    (e.rgVideoTracks && e.rgVideoTracks.some((e) => !ge(e.sURL)))
+    (!he(e.sPoster) && !x(e.sPoster)) ||
+    (e.rgVideoSources && e.rgVideoSources.some((e) => !x(e.sURL))) ||
+    (e.rgVideoTracks && e.rgVideoTracks.some((e) => !x(e.sURL)))
   );
 }
-var M = class e {
+var N = class e {
     m_bUserHasVolumePreference = !1;
     m_flVolumePreference = 0;
     BUserHasVolumePreference() {
@@ -228,7 +228,7 @@ var M = class e {
       return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
   },
-  vt = (0, k.forwardRef)(function (e, t) {
+  _t = (0, A.forwardRef)(function (e, t) {
     let {
         video: r,
         bAutoPlay: i,
@@ -241,22 +241,22 @@ var M = class e {
         onClick: d,
         altText: f,
       } = e,
-      p = (0, k.useMemo)(
+      p = (0, A.useMemo)(
         () =>
           !!r.rgVideoTracks?.some(
             (e) => e.sKind == `subtitles` || e.sKind == `captions`,
           ),
         [r.rgVideoTracks],
       ),
-      [m, h] = k.useState(!1),
-      g = yt();
+      [m, h] = A.useState(!1),
+      g = vt();
     if (!r.rgVideoSources || !r.rgVideoSources.length) return null;
-    let _ = _t(r),
+    let _ = gt(r),
       v;
     (!_ || (p && n.EUNIVERSE == 1)) && (v = `anonymous`);
-    let ee = s || (i && M.Get().BVolumePreferenceMuted()),
-      te = r.sPoster ? N(r.sPoster, g) : ``;
-    return (0, j.jsxs)(`video`, {
+    let ee = s || (i && N.Get().BVolumePreferenceMuted()),
+      te = r.sPoster ? yt(r.sPoster, g) : ``;
+    return (0, M.jsxs)(`video`, {
       width: `100%`,
       height: `auto`,
       autoPlay: i,
@@ -269,20 +269,20 @@ var M = class e {
       onVolumeChange: (e) => {
         let t = e.target,
           n = t.muted ? 0 : t.volume;
-        m && M.Get().SetVolumePreference(n);
+        m && N.Get().SetVolumePreference(n);
       },
       onPlay: (e) => {
         let t = e.target,
           n = t.currentTime == 0,
-          r = M.Get().BUserHasVolumePreference();
+          r = N.Get().BUserHasVolumePreference();
         if ((h(!0), n)) {
           if (!r && !i) {
             let e = t.muted ? 0 : t.volume;
-            M.Get().SetVolumePreference(e);
+            N.Get().SetVolumePreference(e);
           } else
             r &&
-              ((t.volume = M.Get().GetVolumePreference()),
-              (t.muted = M.Get().BVolumePreferenceMuted()));
+              ((t.volume = N.Get().GetVolumePreference()),
+              (t.muted = N.Get().BVolumePreferenceMuted()));
         }
       },
       ref: t,
@@ -294,18 +294,18 @@ var M = class e {
         aspectRatio: u || void 0,
       },
       children: [
-        (0, j.jsx)(bt, {
+        (0, M.jsx)(bt, {
           rgVideoSources: r.rgVideoSources,
           strCacheBreakOrigin: g,
         }),
-        (0, j.jsx)(xt, {
+        (0, M.jsx)(xt, {
           rgVideoTracks: r.rgVideoTracks,
           strCacheBreakOrigin: g,
         }),
       ],
     });
   });
-function yt() {
+function vt() {
   let e = window.location.href,
     t = [
       n.STORE_BASE_URL,
@@ -322,9 +322,9 @@ function yt() {
     return `unknown`;
   }
 }
-function N(e, t) {
+function yt(e, t) {
   if (e) {
-    if (ne(e)) return e;
+    if (he(e)) return e;
     try {
       let n = new URL(e);
       return (
@@ -341,14 +341,14 @@ function bt(e) {
   return t
     .filter((e) => !!e.sURL)
     .map((e) =>
-      (0, j.jsx)(`source`, { src: N(e.sURL, n), type: e.sFormat }, e.sURL),
+      (0, M.jsx)(`source`, { src: yt(e.sURL, n), type: e.sFormat }, e.sURL),
     );
 }
 function xt(e) {
   let { rgVideoTracks: t, strCacheBreakOrigin: n } = e;
   return t
     ? t.map((e, r) =>
-        (0, j.jsx)(
+        (0, M.jsx)(
           St,
           { track: e, rgVideoTracks: t, strCacheBreakOrigin: n },
           r,
@@ -366,24 +366,24 @@ function St(e) {
       if (i.find((e) => C.GetELanguageFallback(e.eLanguage) === o)) return null;
     } else return null;
   } else if (!C.IsELanguageValidInRealm(o, r.k_ESteamRealmGlobal)) return null;
-  return (0, j.jsx)(`track`, {
-    src: N(t.sURL, a),
+  return (0, M.jsx)(`track`, {
+    src: yt(t.sURL, a),
     kind: t.sKind,
     default: t.bDefault,
     srcLang: f(o),
-    label: ve(o),
+    label: me(o),
   });
 }
-var Ct = d(dt());
+var Ct = d(ut());
 function wt(e) {
   let t = B(e, `poster`);
-  t &&= x(t);
+  t &&= E(t);
   let n = [];
   {
     let t = B(e, `mp4`);
-    t && n.push({ sURL: x(t), sFormat: `video/mp4` });
+    t && n.push({ sURL: E(t), sFormat: `video/mp4` });
     let r = B(e, `webm`);
-    r && n.push({ sURL: x(r), sFormat: `video/webm` });
+    r && n.push({ sURL: E(r), sFormat: `video/webm` });
   }
   let r = c(u.LANGUAGE),
     i = r != 0,
@@ -392,7 +392,7 @@ function wt(e) {
     let n = B(e, `sub_` + f(t));
     n &&
       a.push({
-        sURL: x(n),
+        sURL: E(n),
         eLanguage: t,
         sKind: `subtitles`,
         bDefault: i && t == r,
@@ -400,7 +400,7 @@ function wt(e) {
     let o = B(e, `cap_` + f(t));
     o &&
       a.push({
-        sURL: x(o),
+        sURL: E(o),
         eLanguage: t,
         sKind: `captions`,
         bDefault: i && t == r,
@@ -410,20 +410,20 @@ function wt(e) {
 }
 function Tt(e) {
   let t = wt(e.args);
-  return (0, j.jsx)(vt, { video: t, bAutoPlay: !0, bControls: !1, bLoop: !0 });
+  return (0, M.jsx)(_t, { video: t, bAutoPlay: !0, bControls: !1, bLoop: !0 });
 }
 function Et(e) {
   let t = wt(e.args),
     n = e.children ? e.children.toString() : void 0;
   n &&
     n.startsWith(`http`) &&
-    t.rgVideoSources.push({ sURL: x(n), sFormat: `video/webm` });
+    t.rgVideoSources.push({ sURL: E(n), sFormat: `video/webm` });
   let r = B(e.args, `autoplay`),
     i = r !== `0` && r !== `off` && r !== `false`,
     a = B(e.args, `controls`),
     o = a !== `0` && a !== `off` && a !== `false`,
     s = B(e.args, `loop`);
-  return (0, j.jsx)(vt, {
+  return (0, M.jsx)(_t, {
     video: t,
     bAutoPlay: i,
     bControls: o,
@@ -442,35 +442,35 @@ var Dt = `m6bojdeQzBM-`,
   It = `ZfFIRgkpA2M-`,
   Lt = { Box: Dt, Preview: Ot, Type: void 0 };
 function Rt(e) {
-  return (0, j.jsx)(`img`, {
+  return (0, M.jsx)(`img`, {
     className: Ot,
     src: e.strURL || void 0,
     alt: e.strAlt ?? ``,
   });
 }
 function zt(e) {
-  return (0, j.jsx)(`div`, { className: jt, children: e.children });
+  return (0, M.jsx)(`div`, { className: jt, children: e.children });
 }
 function Bt(e) {
-  return (0, j.jsx)(`div`, { className: Mt, children: e.children });
+  return (0, M.jsx)(`div`, { className: Mt, children: e.children });
 }
 function Vt(e) {
-  return (0, j.jsx)(`div`, { className: kt, children: e.children });
+  return (0, M.jsx)(`div`, { className: kt, children: e.children });
 }
 function Ht(e) {
-  return (0, j.jsx)(`span`, { className: Ft, children: e.children });
+  return (0, M.jsx)(`span`, { className: Ft, children: e.children });
 }
 function Ut(e) {
-  return (0, j.jsx)(`div`, { className: At, children: e.children });
+  return (0, M.jsx)(`div`, { className: At, children: e.children });
 }
 function Wt(e) {
-  return (0, j.jsx)(`span`, { className: It, children: e.children });
+  return (0, M.jsx)(`span`, { className: It, children: e.children });
 }
 function Gt(e) {
-  return (0, j.jsx)(`div`, { className: Nt, children: e.children });
+  return (0, M.jsx)(`div`, { className: Nt, children: e.children });
 }
 function Kt(e) {
-  return (0, j.jsx)(`div`, { className: Pt, children: e.children });
+  return (0, M.jsx)(`div`, { className: Pt, children: e.children });
 }
 var P = {
   countrycodes: {
@@ -847,13 +847,13 @@ function Jt(e) {
 async function Yt(e, t, n, r) {
   if (a(r)) return { version: 1, preference_state: 0 };
   if (t) {
-    let t = (await we.GetCookiePreferences(e, {}))
+    let t = (await Ce.GetCookiePreferences(e, {}))
       .Body()
       .toObject().preferences;
     if (t && t.version !== void 0 && t.version != 0) return t;
   }
   try {
-    let e = Te(Ce);
+    let e = we(Se);
     if (e) {
       let t = JSON.parse(e);
       if (t && t.version !== void 0 && t.version != 0) return t;
@@ -870,8 +870,8 @@ function Xt(e) {
   };
 }
 function Zt() {
-  let e = Se();
-  return D(Xt(e));
+  let e = xe();
+  return O(Xt(e));
 }
 function Qt(e) {
   let { data: t } = Zt();
@@ -914,14 +914,14 @@ function un(e) {
   return { strVideoID: t, nStartSeconds: n ? ln(n) : void 0 };
 }
 function dn(e) {
-  let t = w(e, e.options);
-  return (0, j.jsx)(`span`, { ref: t, style: { fontSize: 0 } });
+  let t = b(e, e.options);
+  return (0, M.jsx)(`span`, { ref: t, style: { fontSize: 0 } });
 }
-var fn = k.forwardRef(function (e, t) {
+var fn = A.forwardRef(function (e, t) {
     let { onLeave: n, onEnter: r, options: i, ...a } = e,
-      o = w(e, e.options),
+      o = b(e, e.options),
       s = v(o, t);
-    return (0, j.jsx)(`div`, { ref: s, ...a });
+    return (0, M.jsx)(`div`, { ref: s, ...a });
   }),
   F = 0,
   I = [];
@@ -945,7 +945,7 @@ function hn() {
   for (let e of I) e();
   I = [];
 }
-var L = class e extends k.Component {
+var L = class e extends A.Component {
   m_strPlayerID = ``;
   m_player = null;
   m_playerContainer = null;
@@ -1092,15 +1092,15 @@ var L = class e extends k.Component {
       (e && this.m_player.seekTo(0, !0), this.m_player.playVideo());
   }
   render() {
-    return (0, j.jsx)(gn, {
+    return (0, M.jsx)(gn, {
       video: this.props.video,
-      children: (0, j.jsx)(
+      children: (0, M.jsx)(
         fn,
         {
           onLeave: this.props.autopause ? this.OnPlayerLeftView : void 0,
           ref: this.BindPlayerContainer,
           className: o(`YoutubePlayer`, this.props.classnames),
-          children: (0, j.jsx)(De, { className: `YoutubePlayerThrobber` }),
+          children: (0, M.jsx)(Ee, { className: `YoutubePlayerThrobber` }),
         },
         this.m_strPlayerID,
       ),
@@ -1119,9 +1119,9 @@ function gn(e) {
   let { video: t, children: n } = e;
   return Qt(`youtube`)
     ? n
-    : (0, j.jsx)(`a`, {
+    : (0, M.jsx)(`a`, {
         href: `https://www.youtube.com/watch?v=${t}`,
-        children: T(`#EventCalendar_WatchYouTubeVideo`),
+        children: w(`#EventCalendar_WatchYouTubeVideo`),
       });
 }
 function _n(e) {
@@ -1142,25 +1142,35 @@ function _n(e) {
 }
 function vn(e) {
   let { video: t, autopause: n, className: r } = e,
-    i = k.useRef(null),
-    a = k.useRef(null),
-    o = k.useCallback(() => i.current?.pauseVideo(), []),
-    s = w({ onLeave: n ? o : void 0 }),
-    c = v(a, s);
+    i = A.useRef(null),
+    a = A.useRef(null),
+    o = A.useRef(void 0),
+    s = A.useCallback(() => {
+      typeof i.current?.pauseVideo == `function` && i.current.pauseVideo();
+    }, []),
+    c = A.useCallback((e) => {
+      o.current = e.isIntersecting;
+    }, []),
+    l = b({ onLeave: n ? s : void 0, onIntersectionChange: c }),
+    u = v(a, l);
   return (
-    k.useEffect(() => {
+    A.useEffect(() => {
       let e = () => {
-        a.current && (i.current = new YT.Player(a.current, {}));
-      };
+          o.current === !1 && s();
+        },
+        t = () => {
+          a.current &&
+            (i.current = new YT.Player(a.current, { events: { onReady: e } }));
+        };
       return (
-        n && pn(e),
+        n && pn(t),
         () => {
-          (mn(e), (i.current = null));
+          (mn(t), (i.current = null));
         }
       );
-    }, [n]),
-    (0, j.jsx)(`iframe`, {
-      ref: c,
+    }, [n, s]),
+    (0, M.jsx)(`iframe`, {
+      ref: u,
       className: r,
       src: _n(e),
       title: t,
@@ -1204,7 +1214,7 @@ function xn(e, t = !0) {
   };
 }
 function Sn(e, t = !0) {
-  return D(xn(e, t));
+  return O(xn(e, t));
 }
 function Cn(e) {
   return [`DynamicEventMetadata`, `sharedfile`, e];
@@ -1230,7 +1240,7 @@ function wn(e) {
   };
 }
 function Tn(e) {
-  return D(wn(e));
+  return O(wn(e));
 }
 var En = `brm0OeRsTm4-`,
   Dn = `pcxkPBR3wVQ-`,
@@ -1258,14 +1268,14 @@ function z(e) {
       nStartSeconds: a,
       align: s = `full`,
     } = e,
-    [c, l] = (0, k.useState)(!r),
+    [c, l] = (0, A.useState)(!r),
     { data: u, isSuccess: d } = Sn(t, c);
   if (c) {
-    let e = u?.title ?? T(`#Loading`),
+    let e = u?.title ?? w(`#Loading`),
       n = u?.views ?? `0`,
       r = u?.description ?? ``,
       i = () => l(!1);
-    return (0, j.jsxs)(`div`, {
+    return (0, M.jsxs)(`div`, {
       className: Lt.Box,
       role: `button`,
       tabIndex: 0,
@@ -1274,39 +1284,39 @@ function z(e) {
         (e.key == `Enter` || e.key == ` `) && (e.preventDefault(), i());
       },
       children: [
-        (0, j.jsx)(Rt, {
+        (0, M.jsx)(Rt, {
           strURL: `https://img.youtube.com/vi/` + t + `/0.jpg`,
         }),
-        (0, j.jsxs)(zt, {
+        (0, M.jsxs)(zt, {
           children: [
-            (0, j.jsx)(Bt, {
-              children: T(`#EventEditor_YouTubeVideoTitle`, e),
+            (0, M.jsx)(Bt, {
+              children: w(`#EventEditor_YouTubeVideoTitle`, e),
             }),
-            (0, j.jsx)(Gt, {
-              children: T(`#EventEditor_YouTubeVideoViews`, Ee(Number(n))),
+            (0, M.jsx)(Gt, {
+              children: w(`#EventEditor_YouTubeVideoViews`, Te(Number(n))),
             }),
-            (0, j.jsxs)(Kt, {
-              children: [d && r, !d && (0, j.jsx)(De, { size: `medium` })],
+            (0, M.jsxs)(Kt, {
+              children: [d && r, !d && (0, M.jsx)(Ee, { size: `medium` })],
             }),
           ],
         }),
       ],
     });
   }
-  return (0, j.jsx)(gn, {
+  return (0, M.jsx)(gn, {
     video: t,
-    children: (0, j.jsxs)(`div`, {
+    children: (0, M.jsxs)(`div`, {
       className: o(En, Nn(s)),
       id: t,
       children: [
-        (0, j.jsx)(`img`, {
+        (0, M.jsx)(`img`, {
           className: kn,
           alt: ``,
           src:
             n.COMMUNITY_CDN_URL +
             `public/shared/images/responsive/youtube_16x9_placeholder.gif`,
         }),
-        (0, j.jsx)(vn, {
+        (0, M.jsx)(vn, {
           video: t,
           autoplay: i ?? !1,
           startSeconds: a,
@@ -1323,8 +1333,8 @@ function Pn(e, t) {
   if (n.EREALM === r.k_ESteamRealmChina) return null;
   let i = un(e);
   return i?.strVideoID === void 0
-    ? Oe(e, t?.event)
-    : (0, j.jsx)(z, {
+    ? De(e, t?.event)
+    : (0, M.jsx)(z, {
         videoID: i.strVideoID,
         nStartSeconds: i.nStartSeconds,
         bShowVideoImmediately: !1,
@@ -1341,17 +1351,17 @@ function In(e) {
     if (e.length == 2) {
       let t = e[0],
         n = e[1].toLocaleLowerCase();
-      return (0, j.jsx)(z, { videoID: t, align: n, bShowVideoImmediately: !0 });
+      return (0, M.jsx)(z, { videoID: t, align: n, bShowVideoImmediately: !0 });
     }
   }
-  return (0, j.jsx)(k.Fragment, {});
+  return (0, M.jsx)(A.Fragment, {});
 }
 function Ln(e) {
   if (Fn() || n.COUNTRY.toLocaleUpperCase() == `CN`) return Et(e);
   let t = B(e.args, `youtubeid`),
     r = B(e.args, `size`),
     i = B(e.args, `seconds`);
-  return (0, j.jsx)(z, {
+  return (0, M.jsx)(z, {
     videoID: t,
     nStartSeconds: i ? Number.parseInt(i) : void 0,
     align: r,
@@ -1431,31 +1441,31 @@ function zn(e, t) {
   return (n) => e({ ...n, className: t });
 }
 function Bn(e) {
-  return (0, j.jsx)(`b`, { className: $e, children: e.children });
+  return (0, M.jsx)(`b`, { className: Qe, children: e.children });
 }
 function Vn(e) {
-  return (0, j.jsx)(`i`, {
-    className: o(ct, `BB_Italic`),
+  return (0, M.jsx)(`i`, {
+    className: o(st, `BB_Italic`),
     children: e.children,
   });
 }
 function Hn(e) {
-  return (0, j.jsx)(`u`, { className: Ve, children: e.children });
+  return (0, M.jsx)(`u`, { className: Be, children: e.children });
 }
 function Un(e) {
-  return (0, j.jsx)(`s`, { className: Be, children: e.children });
+  return (0, M.jsx)(`s`, { className: ze, children: e.children });
 }
 function Wn(e) {
-  return (0, j.jsxs)(`p`, {
-    className: Me,
-    children: [e.children, (0, j.jsx)(`wbr`, {})],
+  return (0, M.jsxs)(`p`, {
+    className: je,
+    children: [e.children, (0, M.jsx)(`wbr`, {})],
   });
 }
 function Gn(e) {
-  return (0, j.jsxs)(`div`, {
-    className: Me,
+  return (0, M.jsxs)(`div`, {
+    className: je,
     role: `paragraph`,
-    children: [e.children, (0, j.jsx)(`wbr`, {})],
+    children: [e.children, (0, M.jsx)(`wbr`, {})],
   });
 }
 function V(e, t, n) {
@@ -1467,7 +1477,7 @@ function V(e, t, n) {
       r.length > 0 &&
       r[0] === `#` &&
       (r = r.substring(1)),
-    (0, j.jsx)(e, {
+    (0, M.jsx)(e, {
       id: r || void 0,
       className: o(n, t.className),
       children: t.children,
@@ -1475,19 +1485,19 @@ function V(e, t, n) {
   );
 }
 function Kn(e) {
-  return V(`h1`, e, o(Ye, `BB_Header1`));
+  return V(`h1`, e, o(Je, `BB_Header1`));
 }
 function qn(e) {
-  return V(`h2`, e, o(Je, `BB_Header2`));
+  return V(`h2`, e, o(qe, `BB_Header2`));
 }
 function Jn(e) {
-  return V(`h3`, e, o(We, `BB_Header3`));
+  return V(`h3`, e, o(Ue, `BB_Header3`));
 }
 function Yn(e) {
-  return V(`h4`, e, o(ot, `BB_Header4`));
+  return V(`h4`, e, o(at, `BB_Header4`));
 }
 function Xn(e) {
-  return V(`h5`, e, o(lt, `BB_Header5`));
+  return V(`h5`, e, o(ct, `BB_Header5`));
 }
 function Zn(e) {
   let t = B(e.args, `id`);
@@ -1497,52 +1507,52 @@ function Zn(e) {
       t.length > 0 &&
       t[0] === `#` &&
       (t = t.substring(1)),
-    (0, j.jsx)(`span`, {
+    (0, M.jsx)(`span`, {
       id: t || void 0,
-      className: o(Ge, `BB_Center`),
+      className: o(We, `BB_Center`),
       children: e.children,
     })
   );
 }
 function Qn(e) {
-  return V(`div`, e, o(Ze, `BB_SmallText`));
+  return V(`div`, e, o(Xe, `BB_SmallText`));
 }
 function $n(e) {
-  let [t, n] = k.useState(!1),
-    r = k.useCallback(() => {
+  let [t, n] = A.useState(!1),
+    r = A.useCallback(() => {
       n(!t);
     }, [t]);
-  return (0, j.jsx)(b, {
-    className: o(Le, t && `YDb-da9VezY-`),
+  return (0, M.jsx)(S, {
+    className: o(Ie, t && `YDb-da9VezY-`),
     focusable: !0,
     onActivate: r,
-    onOKActionDescription: T(
+    onOKActionDescription: w(
       t ? `#Bbcode_Spoiler_Hide` : `#Bbcode_Spoiler_Show`,
     ),
-    children: (0, j.jsx)(`span`, { className: Re, children: e.children }),
+    children: (0, M.jsx)(`span`, { className: Le, children: e.children }),
   });
 }
 function er(e) {
-  return (0, j.jsx)(`hr`, { className: Qe });
+  return (0, M.jsx)(`hr`, { className: Ze });
 }
 function tr(e) {
   let t = B(e.args);
-  return (0, j.jsx)(`span`, { style: { color: t }, children: e.children });
+  return (0, M.jsx)(`span`, { style: { color: t }, children: e.children });
 }
 function nr(e) {
   let t = B(e.args);
-  return (0, j.jsx)(`span`, {
+  return (0, M.jsx)(`span`, {
     style: { backgroundColor: t },
     children: e.children,
   });
 }
 function rr(e) {
-  let t = Ae(B(e.args));
+  let t = ke(B(e.args));
   if (!t) {
     let n = e.children;
-    typeof n == `string` && oe(n) && (t = Ae(n));
+    typeof n == `string` && oe(n) && (t = ke(n));
   }
-  let n = B(e.args, `style`) == `button` ? He : void 0,
+  let n = B(e.args, `style`) == `button` ? Ve : void 0,
     r = n && B(e.args, `buttoncolor`),
     i = B(e.args, `id`);
   return (
@@ -1554,8 +1564,8 @@ function rr(e) {
     t === void 0 && !i
       ? e.children || ``
       : t === void 0 || (typeof t == `string` && t.length > 0 && t[0] == `#`)
-        ? (0, j.jsx)(`a`, { href: t ?? null, id: i, children: e.children })
-        : (0, j.jsx)(ar, {
+        ? (0, M.jsx)(`a`, { href: t ?? null, id: i, children: e.children })
+        : (0, M.jsx)(ar, {
             className: n,
             href: t,
             id: i,
@@ -1566,9 +1576,9 @@ function rr(e) {
 }
 function ir(e) {
   let t = B(e.args),
-    n = B(e.args, `style`) == `button` ? He : void 0,
+    n = B(e.args, `style`) == `button` ? Ve : void 0,
     r = n && B(e.args, `buttoncolor`);
-  return (0, j.jsx)(ar, {
+  return (0, M.jsx)(ar, {
     className: n,
     style: { backgroundColor: r },
     href: `${u.PARTNER_BASE_URL}doc/${t}`,
@@ -1577,10 +1587,10 @@ function ir(e) {
 }
 var ar = (e) => {
   let { href: t, ...n } = e,
-    r = ke(t ?? ``),
+    r = Oe(t ?? ``),
     i;
-  re(r)
-    ? ((r = (u.IN_CLIENT ? `steam://openurl_external/` : ``) + ce(r)),
+  ce(r)
+    ? ((r = (u.IN_CLIENT ? `steam://openurl_external/` : ``) + ge(r)),
       (i = `noopener nofollow`))
     : (r = ae(r));
   let a =
@@ -1588,26 +1598,26 @@ var ar = (e) => {
     e.children.length > 0 &&
     t &&
     !t.startsWith(`steam://`)
-      ? ue(t)
+      ? ie(t)
       : void 0;
-  return (0, j.jsx)(he, {
+  return (0, M.jsx)(pe, {
     toolTipContent: a,
     direction: `top`,
-    children: (0, j.jsx)(te, { ...n, href: r, rel: i, children: e.children }),
+    children: (0, M.jsx)(te, { ...n, href: r, rel: i, children: e.children }),
   });
 };
 function or(e) {
   let t = B(e.args, `author`);
-  return (0, j.jsxs)(`blockquote`, {
-    className: o(it, e.className),
+  return (0, M.jsxs)(`blockquote`, {
+    className: o(rt, e.className),
     children: [
       !!t &&
-        (0, j.jsxs)(`div`, {
+        (0, M.jsxs)(`div`, {
           className: `iZjggU7O-fs-`,
           children: [
-            T(`#Bbcode_Originally_Posted_By`) + ` `,
+            w(`#Bbcode_Originally_Posted_By`) + ` `,
             ` `,
-            (0, j.jsx)(`b`, { children: t + `:` }),
+            (0, M.jsx)(`b`, { children: t + `:` }),
           ],
         }),
       e.children,
@@ -1615,22 +1625,22 @@ function or(e) {
   });
 }
 function sr(e) {
-  return (0, j.jsx)(`div`, { className: ze, children: e.children });
+  return (0, M.jsx)(`div`, { className: Re, children: e.children });
 }
 function cr(e) {
-  return (0, j.jsx)(`code`, { className: rt, children: e.children });
+  return (0, M.jsx)(`code`, { className: nt, children: e.children });
 }
 function lr(e) {
-  return (0, j.jsx)(`code`, { className: et, children: e.children });
+  return (0, M.jsx)(`code`, { className: $e, children: e.children });
 }
 function ur(e) {
-  return (0, j.jsx)(`ul`, {
-    className: o(je, `bullets`),
+  return (0, M.jsx)(`ul`, {
+    className: o(Ae, `bullets`),
     children: e.children,
   });
 }
 function dr(e) {
-  return (0, j.jsx)(`ol`, { className: Ne, children: e.children });
+  return (0, M.jsx)(`ol`, { className: Me, children: e.children });
 }
 function fr(e) {
   let t = B(e.args, `id`);
@@ -1640,7 +1650,7 @@ function fr(e) {
       t.length > 0 &&
       t[0] === `#` &&
       (t = t.substring(1)),
-    (0, j.jsx)(`li`, { className: st, id: t || void 0, children: e.children })
+    (0, M.jsx)(`li`, { className: ot, id: t || void 0, children: e.children })
   );
 }
 function pr(e) {
@@ -1650,14 +1660,14 @@ function mr(e) {
   let t = B(e.args, `noborder`),
     n = B(e.args, `equalcells`),
     r = B(e.args, `colwidth`);
-  return (0, j.jsxs)(`table`, {
-    className: o(Pe, `BB_Table`, t && `b20E2IrghSY-`, n && `zJnyxE63CCk-`),
+  return (0, M.jsxs)(`table`, {
+    className: o(Ne, `BB_Table`, t && `b20E2IrghSY-`, n && `zJnyxE63CCk-`),
     children: [
       r &&
-        (0, j.jsx)(`colgroup`, {
-          children: r.split(`,`).map((e, t) => (0, j.jsx)(hr, { width: e }, t)),
+        (0, M.jsx)(`colgroup`, {
+          children: r.split(`,`).map((e, t) => (0, M.jsx)(hr, { width: e }, t)),
         }),
-      (0, j.jsx)(`tbody`, { children: e.children }),
+      (0, M.jsx)(`tbody`, { children: e.children }),
     ],
   });
 }
@@ -1666,12 +1676,12 @@ function hr(e) {
     n;
   return (
     t && parseInt(t) > 0 && (n = { width: `${t}px` }),
-    (0, j.jsx)(`col`, { style: n })
+    (0, M.jsx)(`col`, { style: n })
   );
 }
 function gr(e) {
-  return (0, j.jsx)(`tr`, {
-    className: o(Ie, `BB_TableRow`),
+  return (0, M.jsx)(`tr`, {
+    className: o(Fe, `BB_TableRow`),
     children: e.children,
   });
 }
@@ -1683,8 +1693,8 @@ function _r(e, t) {
   return (
     r && parseInt(r) > 1 && (a.colSpan = parseInt(r)),
     i && parseInt(i) > 1 && (a.rowSpan = parseInt(i)),
-    (0, j.jsx)(e, {
-      className: o(Fe, e == `td` && `BB_TableData`),
+    (0, M.jsx)(e, {
+      className: o(Pe, e == `td` && `BB_TableData`),
       ...a,
       style: n ? { width: n } : void 0,
       children: t.children,
@@ -1715,7 +1725,7 @@ function br(e, t, n, r) {
       return {
         collapsed: t || n || `#Bbcode_Expand_ShowMore_Collapsed`,
         expanded: t || r || `#Bbcode_Expand_ShowMore_Expanded`,
-        style: tt,
+        style: et,
       };
     default:
     case `showmore`:
@@ -1728,14 +1738,14 @@ function br(e, t, n, r) {
 }
 function xr(e) {
   let t = !!B(e.args, `expanded`),
-    [n, r] = k.useState(t),
+    [n, r] = A.useState(t),
     i = B(e.args, `title`),
     a = B(e.args, `collapsed_str`),
     s = B(e.args, `expanded_str`),
     c = br(B(e.args, `type`), i, a, s);
-  return (0, j.jsxs)(`div`, {
+  return (0, M.jsxs)(`div`, {
     className: o({
-      [at]: !0,
+      [it]: !0,
       [c.style ?? ``]: c.style != null,
       [void 0]: n,
       [void 0]: !n,
@@ -1743,19 +1753,19 @@ function xr(e) {
       BBCodeCollapsed: !n,
     }),
     children: [
-      (0, j.jsxs)(`div`, {
-        className: qe,
+      (0, M.jsxs)(`div`, {
+        className: Ke,
         onClick: () => r(!n),
         children: [
-          T(n ? c.expanded : c.collapsed),
-          (0, j.jsx)(`div`, {
-            className: Ke,
-            children: (0, j.jsx)(le, { angle: n ? 180 : 0 }),
+          w(n ? c.expanded : c.collapsed),
+          (0, M.jsx)(`div`, {
+            className: Ge,
+            children: (0, M.jsx)(_e, { angle: n ? 180 : 0 }),
           }),
         ],
       }),
       n &&
-        (0, j.jsx)(`div`, { className: `Lwo0pX9leRw-`, children: e.children }),
+        (0, M.jsx)(`div`, { className: `Lwo0pX9leRw-`, children: e.children }),
     ],
   });
 }
@@ -1823,25 +1833,25 @@ function Sr(e) {
       (n.postMessage(JSON.stringify(r)), e.preventDefault());
     }
   };
-  return (0, j.jsxs)(`div`, {
-    className: o(`SaleSectionCalendarEventContainer`, nt),
+  return (0, M.jsxs)(`div`, {
+    className: o(`SaleSectionCalendarEventContainer`, tt),
     id: s,
     children: [
       f &&
-        (0, j.jsx)(`a`, {
+        (0, M.jsx)(`a`, {
           className: o(`SaleSectionCalendarEventLink`, `C-B3bdlHS0I-`),
           href: f,
           onClick: m,
           download: `calendar.ics`,
           children: `Apple`,
         }),
-      (0, j.jsx)(`a`, {
-        className: o(`SaleSectionCalendarEventLink`, Xe),
+      (0, M.jsx)(`a`, {
+        className: o(`SaleSectionCalendarEventLink`, Ye),
         href: p,
         children: `Google`,
       }),
       f &&
-        (0, j.jsx)(`a`, {
+        (0, M.jsx)(`a`, {
           className: o(`SaleSectionCalendarEventLink`, `C-B3bdlHS0I-`),
           href: f,
           onClick: m,
@@ -1853,7 +1863,7 @@ function Sr(e) {
 }
 function Cr(e) {
   let { text: t = ``, style: n, children: r } = e;
-  if (t == null) return (0, j.jsx)(k.Fragment, { children: r });
+  if (t == null) return (0, M.jsx)(A.Fragment, { children: r });
   let i;
   if (
     ((i =
@@ -1862,16 +1872,16 @@ function Cr(e) {
             .join(`
 `)
         : t.toString()),
-    k.Children.count(r) == 1)
+    A.Children.count(r) == 1)
   ) {
-    let e = k.Children.only(r);
-    return k.cloneElement(e, { "data-copystyle": n, "data-copytext": i });
+    let e = A.Children.only(r);
+    return A.cloneElement(e, { "data-copystyle": n, "data-copytext": i });
   }
   return (
     console.log(
       `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${n} copytext=${i}`,
     ),
-    (0, j.jsx)(k.Fragment, { children: r })
+    (0, M.jsx)(A.Fragment, { children: r })
   );
 }
 var wr = `EYdF9T-t7r0-`,
@@ -1891,16 +1901,16 @@ var wr = `EYdF9T-t7r0-`,
   Lr = `_7tqUEqEzFXI-`;
 function U(e) {
   let { emoticon: t, large: n } = e,
-    [r, i] = se(),
-    [a, s] = k.useState(null),
+    [r, i] = ve(),
+    [a, s] = A.useState(null),
     c = `:${t}:`,
-    l = ft(t, n);
-  return (0, j.jsxs)(j.Fragment, {
+    l = dt(t, n);
+  return (0, M.jsxs)(M.Fragment, {
     children: [
-      (0, j.jsx)(Cr, {
+      (0, M.jsx)(Cr, {
         text: c,
         style: `merge-adjacent`,
-        children: (0, j.jsx)(`img`, {
+        children: (0, M.jsx)(`img`, {
           ...i,
           src: l,
           className: o(Er, n ? Dr : void 0),
@@ -1909,22 +1919,22 @@ function U(e) {
           ref: s,
         }),
       }),
-      r && a && (0, j.jsx)(Rr, { target: a, emoticon: t }),
+      r && a && (0, M.jsx)(Rr, { target: a, emoticon: t }),
     ],
   });
 }
 function Rr(e) {
   let { target: t, emoticon: n } = e,
     { data: r } = zr(n);
-  return (0, j.jsx)(W, {
+  return (0, M.jsx)(W, {
     target: t,
     title: `:${n}:`,
     subtitle: r && r.app_name ? r.app_name : void 0,
-    children: (0, j.jsx)(U, { emoticon: n, large: !0 }),
+    children: (0, M.jsx)(U, { emoticon: n, large: !0 }),
   });
 }
 function zr(e) {
-  return D({
+  return O({
     queryKey: [`EmoticonHover`, e],
     queryFn: async () => {
       let t = `${n.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(n.LANGUAGE)}&origin=${self.origin}`,
@@ -1936,37 +1946,37 @@ function zr(e) {
   });
 }
 var W = ({ target: e, title: t, subtitle: n, children: r }) =>
-  (0, j.jsxs)(fe, {
+  (0, M.jsxs)(be, {
     target: e,
     style: { zIndex: 1700 },
     className: Ar,
     children: [
       r,
-      (0, j.jsxs)(`div`, {
+      (0, M.jsxs)(`div`, {
         className: jr,
         children: [
-          (0, j.jsx)(`div`, {
+          (0, M.jsx)(`div`, {
             className: Mr,
-            children: t || (0, j.jsx)(`span`, { children: `\xA0` }),
+            children: t || (0, M.jsx)(`span`, { children: `\xA0` }),
           }),
-          (0, j.jsx)(`div`, {
+          (0, M.jsx)(`div`, {
             className: Nr,
-            children: n || (0, j.jsx)(`span`, { children: `\xA0` }),
+            children: n || (0, M.jsx)(`span`, { children: `\xA0` }),
           }),
         ],
       }),
     ],
   });
 function Br(e) {
-  return new ht(new A());
+  return new mt(new j());
 }
 function Vr() {
   return new Map([...Array.from(Rn.entries())]);
 }
 function Hr(e) {
   let { text: t, languageOverride: r } = e,
-    [i] = (0, k.useState)(new gt(Vr(), Br, r ?? n.LANGUAGE));
-  return (0, j.jsx)(j.Fragment, { children: i.ParseBBCode(t, {}) });
+    [i] = (0, A.useState)(new ht(Vr(), Br, r ?? n.LANGUAGE));
+  return (0, M.jsx)(M.Fragment, { children: i.ParseBBCode(t, {}) });
 }
 var Ur = `L3HaktJsWWA-`,
   Wr = `YebKQISqLCs-`,
@@ -1974,33 +1984,33 @@ var Ur = `L3HaktJsWWA-`,
   Kr = `_7-cDUja4KeQ-`,
   qr = `PBXxHejQZTU-`,
   Jr = `JX6irDhLeng-`,
-  Yr = E((e) => {
-    let t = ut(e.photo, c(n.LANGUAGE)),
+  Yr = D((e) => {
+    let t = lt(e.photo, c(n.LANGUAGE)),
       r = t ? (typeof t == `string` ? t : t[1]) : void 0,
       i = !!e.title,
       a = !!e.company;
-    return (0, j.jsxs)(`div`, {
+    return (0, M.jsxs)(`div`, {
       className: Gr,
       onMouseLeave: e.fnClose,
       children: [
-        (0, j.jsxs)(`div`, {
+        (0, M.jsxs)(`div`, {
           className: Kr,
           children: [
-            e.photo && (0, j.jsx)(`img`, { src: r }),
-            (0, j.jsxs)(`div`, {
+            e.photo && (0, M.jsx)(`img`, { src: r }),
+            (0, M.jsxs)(`div`, {
               className: qr,
               children: [
-                (0, j.jsx)(`div`, { children: e.name }),
+                (0, M.jsx)(`div`, { children: e.name }),
                 (i || a) &&
-                  (0, j.jsxs)(`div`, {
+                  (0, M.jsxs)(`div`, {
                     children: [
                       i &&
-                        (0, j.jsx)(`span`, {
+                        (0, M.jsx)(`span`, {
                           className: `zv2bYEkwS4A-`,
                           children: e.title,
                         }),
-                      i && a && (0, j.jsx)(`span`, { children: `, ` }),
-                      a && (0, j.jsx)(`span`, { children: e.company }),
+                      i && a && (0, M.jsx)(`span`, { children: `, ` }),
+                      a && (0, M.jsx)(`span`, { children: e.company }),
                     ],
                   }),
               ],
@@ -2008,19 +2018,19 @@ var Ur = `L3HaktJsWWA-`,
           ],
         }),
         e.bio &&
-          (0, j.jsxs)(`div`, {
+          (0, M.jsxs)(`div`, {
             className: `sAGOlXZOYoQ-`,
             children: [
               e.bio,
-              e.bioString && (0, j.jsx)(Hr, { text: e.bioString }),
+              e.bioString && (0, M.jsx)(Hr, { text: e.bioString }),
             ],
           }),
       ],
     });
   }),
-  G = class e extends k.Component {
-    static sm_embeddedElements = new _e(`presenter-hover-source-elements`);
-    m_refAnchor = k.createRef();
+  G = class e extends A.Component {
+    static sm_embeddedElements = new se(`presenter-hover-source-elements`);
+    m_refAnchor = A.createRef();
     m_fnHidePopup = null;
     m_nScrollPosAtHoverStart = 0;
     ClosePopup() {
@@ -2054,9 +2064,9 @@ var Ur = `L3HaktJsWWA-`,
         e.sm_embeddedElements.ShowElementDelayed(
           n.ownerDocument,
           150,
-          (0, j.jsx)(fe, {
+          (0, M.jsx)(be, {
             ...r,
-            children: (0, j.jsx)(Yr, { ...this.props, fnClose: this.OnLeave }),
+            children: (0, M.jsx)(Yr, { ...this.props, fnClose: this.OnLeave }),
           }),
           i,
         ));
@@ -2065,7 +2075,7 @@ var Ur = `L3HaktJsWWA-`,
       this.ClosePopup();
     }
     render() {
-      return (0, j.jsx)(`div`, {
+      return (0, M.jsx)(`div`, {
         className: Jr,
         ref: this.m_refAnchor,
         onMouseEnter: this.OnHover,
@@ -2088,34 +2098,34 @@ function Xr(e) {
       company: a,
       hidePhotoInCompactView: o,
     } = e,
-    s = ut(t, c(n.LANGUAGE)),
+    s = lt(t, c(n.LANGUAGE)),
     l = s && !o ? (typeof s == `string` ? s : s[1]) : null,
     u = !!i,
     d = !!a;
-  return (0, j.jsx)(`div`, {
+  return (0, M.jsx)(`div`, {
     className: Ur,
-    children: (0, j.jsx)(G, {
+    children: (0, M.jsx)(G, {
       ...e,
-      children: (0, j.jsx)(`div`, {
+      children: (0, M.jsx)(`div`, {
         className: Wr,
-        children: (0, j.jsxs)(`div`, {
+        children: (0, M.jsxs)(`div`, {
           className: Kr,
           children: [
-            !!l && (0, j.jsx)(`img`, { src: l }),
-            (0, j.jsxs)(`div`, {
+            !!l && (0, M.jsx)(`img`, { src: l }),
+            (0, M.jsxs)(`div`, {
               className: qr,
               children: [
-                (0, j.jsx)(`div`, { children: r }),
+                (0, M.jsx)(`div`, { children: r }),
                 (u || d) &&
-                  (0, j.jsxs)(`div`, {
+                  (0, M.jsxs)(`div`, {
                     children: [
                       u &&
-                        (0, j.jsx)(`span`, {
+                        (0, M.jsx)(`span`, {
                           className: `zv2bYEkwS4A-`,
                           children: i,
                         }),
-                      u && d && (0, j.jsx)(`span`, { children: `, ` }),
-                      d && (0, j.jsx)(`span`, { children: a }),
+                      u && d && (0, M.jsx)(`span`, { children: `, ` }),
+                      d && (0, M.jsx)(`span`, { children: a }),
                     ],
                   }),
               ],
@@ -2141,7 +2151,7 @@ var Qr = `_6Ymd3Ej4NCU-`,
   si = `_0ZS8IEfJKto-`,
   ci = `R-BER3-p7c8-`,
   li = `nCS2TzxRijY-`,
-  K = class extends k.Component {
+  K = class extends A.Component {
     constructor(e) {
       (super(e), (this.state = { activeIndex: e.initialActiveIndex || 0 }));
     }
@@ -2166,16 +2176,16 @@ var Qr = `_6Ymd3Ej4NCU-`,
                   });
             }
           : void 0;
-      return (0, j.jsxs)(b, {
+      return (0, M.jsxs)(S, {
         className: Qr,
         onButtonDown: a,
-        children: [i && (0, j.jsx)(ui, { children: this.RenderTabs() }), r],
+        children: [i && (0, M.jsx)(ui, { children: this.RenderTabs() }), r],
       });
     }
     RenderTabs() {
       return this.props.config.map(({ renderTab: e }, t) => {
         let n = this.state.activeIndex === t;
-        return (0, j.jsx)(
+        return (0, M.jsx)(
           fi,
           {
             active: n,
@@ -2188,22 +2198,22 @@ var Qr = `_6Ymd3Ej4NCU-`,
     }
   };
 function ui(e) {
-  return (0, j.jsx)(b, {
+  return (0, M.jsx)(S, {
     className: $r,
     "flow-children": `row`,
     children: e.children,
   });
 }
 function di(e) {
-  return (0, j.jsx)(`div`, { className: ri, children: e.children });
+  return (0, M.jsx)(`div`, { className: ri, children: e.children });
 }
 function fi(e) {
   let { active: t, children: n, onClick: r } = e;
-  return (0, j.jsx)(b, {
+  return (0, M.jsx)(S, {
     className: o(ei, t && `f-iRFuUHuSo-`),
     focusClassName: ti,
     onActivate: r,
-    children: (0, j.jsx)(`div`, {
+    children: (0, M.jsx)(`div`, {
       className: o(ni, t && `f-iRFuUHuSo-`),
       children: n,
     }),
@@ -2218,8 +2228,8 @@ function pi(e) {
       renderEmpty: a,
     } = e,
     o = t.map((e, a) =>
-      (0, j.jsx)(
-        b,
+      (0, M.jsx)(
+        S,
         {
           className: ai,
           onActivate: () => r(t[a]),
@@ -2232,55 +2242,55 @@ function pi(e) {
     );
   return (
     t.length === 0 && a && (o = a()),
-    (0, j.jsx)(b, { "flow-children": `grid`, className: ii, children: o })
+    (0, M.jsx)(S, { "flow-children": `grid`, className: ii, children: o })
   );
 }
 function q(e) {
   let { title: t, onFilterChange: n, filter: r, onSubmit: i, ...a } = e;
-  return (0, j.jsxs)(j.Fragment, {
+  return (0, M.jsxs)(M.Fragment, {
     children: [
-      (0, j.jsx)(di, {
-        children: (0, j.jsx)(mi, {
+      (0, M.jsx)(di, {
+        children: (0, M.jsx)(mi, {
           title: t,
-          children: (0, j.jsx)(pi, { ...a }),
+          children: (0, M.jsx)(pi, { ...a }),
         }),
       }),
-      (0, j.jsx)(hi, { value: r, onChange: n, onSubmit: i }),
+      (0, M.jsx)(hi, { value: r, onChange: n, onSubmit: i }),
     ],
   });
 }
 function J(e) {
   let { onFilterChange: t, filter: n, sections: r, title: i } = e;
-  return (0, j.jsxs)(j.Fragment, {
+  return (0, M.jsxs)(M.Fragment, {
     children: [
-      (0, j.jsxs)(di, {
+      (0, M.jsxs)(di, {
         children: [
-          i && (0, j.jsx)(`div`, { className: `Zcgr0x6gQMc-`, children: i }),
+          i && (0, M.jsx)(`div`, { className: `Zcgr0x6gQMc-`, children: i }),
           r.map(({ title: e, ...t }) =>
-            (0, j.jsx)(mi, { title: e, children: (0, j.jsx)(pi, { ...t }) }, e),
+            (0, M.jsx)(mi, { title: e, children: (0, M.jsx)(pi, { ...t }) }, e),
           ),
         ],
       }),
-      (0, j.jsx)(hi, { value: n, onChange: t }),
+      (0, M.jsx)(hi, { value: n, onChange: t }),
     ],
   });
 }
 function mi(e) {
-  return (0, j.jsxs)(`div`, {
+  return (0, M.jsxs)(`div`, {
     className: void 0,
     children: [
-      (0, j.jsx)(`div`, { className: oi, children: e.title }),
-      (0, j.jsx)(`div`, { className: void 0, children: e.children }),
+      (0, M.jsx)(`div`, { className: oi, children: e.title }),
+      (0, M.jsx)(`div`, { className: void 0, children: e.children }),
     ],
   });
 }
 function hi(e) {
   let { value: t, onChange: n, onSubmit: r } = e;
-  return (0, j.jsx)(`div`, {
+  return (0, M.jsx)(`div`, {
     className: si,
-    children: (0, j.jsx)(xe, {
+    children: (0, M.jsx)(re, {
       type: `text`,
-      placeholder: T(`#AddonPicker_Search`),
+      placeholder: w(`#AddonPicker_Search`),
       className: ci,
       value: t,
       onChange: (e) => n(e.target.value),
@@ -2290,7 +2300,7 @@ function hi(e) {
 }
 function Y(e) {
   let { className: t, ...n } = e;
-  return (0, j.jsx)(`div`, { className: o(t, li), ...n });
+  return (0, M.jsx)(`div`, { className: o(t, li), ...n });
 }
 var gi = 1e3;
 function X(e) {
@@ -2303,9 +2313,9 @@ function vi(e) {
   return X(e).length + _i(e).length > 0;
 }
 function yi(e) {
-  let [t, n] = (0, k.useState)(e.is_initialized);
+  let [t, n] = (0, A.useState)(e.is_initialized);
   return (
-    (0, k.useEffect)(() => {
+    (0, A.useEffect)(() => {
       if (!e.is_initialized) {
         e.UpdateEmoticonList();
         let t = s(
@@ -2319,7 +2329,7 @@ function yi(e) {
     t
   );
 }
-var bi = E((e) => {
+var bi = D((e) => {
     let {
       emoticonStore: t,
       roomEffectSettings: n,
@@ -2334,32 +2344,32 @@ var bi = E((e) => {
       vi(t) &&
         c.push({
           renderTab: (e) =>
-            (0, j.jsx)(`span`, {
-              title: T(`#AddonPicker_RecentlyUsed`),
+            (0, M.jsx)(`span`, {
+              title: w(`#AddonPicker_RecentlyUsed`),
               className: o(H, Ir, e && void 0),
-              children: (0, j.jsx)(Ri, {}),
+              children: (0, M.jsx)(Ri, {}),
             }),
           renderContent: () =>
-            (0, j.jsx)(wi, {
+            (0, M.jsx)(wi, {
               store: t,
               onEmoticonSelect: (e) => i(e.name),
               onStickerSelect: (e) => s(e.name),
               flairGroupID: r,
             }),
         }),
-      (0, j.jsx)(S, {
-        children: (0, j.jsx)(K, {
+      (0, M.jsx)(y, {
+        children: (0, M.jsx)(K, {
           config: [
             ...c,
             {
               renderTab: (e) =>
-                (0, j.jsx)(`span`, {
-                  title: T(`#AddonPicker_Emoticons`),
+                (0, M.jsx)(`span`, {
+                  title: w(`#AddonPicker_Emoticons`),
                   className: o(H, e && void 0),
-                  children: (0, j.jsx)(Q, {}),
+                  children: (0, M.jsx)(Q, {}),
                 }),
               renderContent: () =>
-                (0, j.jsx)(Ti, {
+                (0, M.jsx)(Ti, {
                   store: t,
                   onItemSelect: (e) => i(e.name),
                   flairGroupID: r,
@@ -2367,23 +2377,23 @@ var bi = E((e) => {
             },
             {
               renderTab: (e) =>
-                (0, j.jsx)(`span`, {
-                  title: T(`#AddonPicker_Stickers`),
+                (0, M.jsx)(`span`, {
+                  title: w(`#AddonPicker_Stickers`),
                   className: o(H, e && void 0),
-                  children: (0, j.jsx)(Ii, {}),
+                  children: (0, M.jsx)(Ii, {}),
                 }),
               renderContent: () =>
-                (0, j.jsx)(Di, { store: t, onItemSelect: (e) => s(e.name) }),
+                (0, M.jsx)(Di, { store: t, onItemSelect: (e) => s(e.name) }),
             },
             {
               renderTab: (e) =>
-                (0, j.jsx)(`span`, {
-                  title: T(`#AddonPicker_RoomEffects`),
+                (0, M.jsx)(`span`, {
+                  title: w(`#AddonPicker_RoomEffects`),
                   className: o(H, e && void 0),
-                  children: (0, j.jsx)(Li, {}),
+                  children: (0, M.jsx)(Li, {}),
                 }),
               renderContent: () =>
-                (0, j.jsx)(Oi, {
+                (0, M.jsx)(Oi, {
                   store: t,
                   effectSettings: n,
                   onItemSelect: (e) => a(e.name),
@@ -2394,7 +2404,7 @@ var bi = E((e) => {
       })
     );
   }),
-  xi = class extends k.Component {
+  xi = class extends A.Component {
     m_disposeEmoticonStore;
     constructor(e) {
       (super(e), (this.state = { strSearchText: `` }));
@@ -2421,32 +2431,32 @@ var bi = E((e) => {
         vi(e) &&
           i.push({
             renderTab: (e) =>
-              (0, j.jsx)(`span`, {
-                title: T(`#AddonPicker_RecentlyUsed`),
+              (0, M.jsx)(`span`, {
+                title: w(`#AddonPicker_RecentlyUsed`),
                 className: o(H, Ir, e && void 0),
-                children: (0, j.jsx)(Ri, {}),
+                children: (0, M.jsx)(Ri, {}),
               }),
             renderContent: () =>
-              (0, j.jsx)(wi, {
+              (0, M.jsx)(wi, {
                 store: e,
                 onEmoticonSelect: (e) => t(e.name),
                 onStickerSelect: (e) => n(e.name),
                 flairGroupID: r,
               }),
           }),
-        (0, j.jsx)(S, {
-          children: (0, j.jsx)(K, {
+        (0, M.jsx)(y, {
+          children: (0, M.jsx)(K, {
             config: [
               ...i,
               {
                 renderTab: (e) =>
-                  (0, j.jsx)(`span`, {
-                    title: T(`#AddonPicker_Emoticons`),
+                  (0, M.jsx)(`span`, {
+                    title: w(`#AddonPicker_Emoticons`),
                     className: o(H, e && void 0),
-                    children: (0, j.jsx)(Q, {}),
+                    children: (0, M.jsx)(Q, {}),
                   }),
                 renderContent: () =>
-                  (0, j.jsx)(Ti, {
+                  (0, M.jsx)(Ti, {
                     store: e,
                     onItemSelect: (e) => t(e.name),
                     flairGroupID: r,
@@ -2454,13 +2464,13 @@ var bi = E((e) => {
               },
               {
                 renderTab: (e) =>
-                  (0, j.jsx)(`span`, {
-                    title: T(`#AddonPicker_Stickers`),
+                  (0, M.jsx)(`span`, {
+                    title: w(`#AddonPicker_Stickers`),
                     className: o(H, e && void 0),
-                    children: (0, j.jsx)(Ii, {}),
+                    children: (0, M.jsx)(Ii, {}),
                   }),
                 renderContent: () =>
-                  (0, j.jsx)(Di, { store: e, onItemSelect: (e) => n(e.name) }),
+                  (0, M.jsx)(Di, { store: e, onItemSelect: (e) => n(e.name) }),
               },
             ],
           }),
@@ -2468,8 +2478,8 @@ var bi = E((e) => {
       );
     }
   };
-xi = e([E], xi);
-var Si = class extends k.Component {
+xi = e([D], xi);
+var Si = class extends A.Component {
     m_disposeEmoticonStore;
     constructor(e) {
       (super(e), (this.state = { strSearchText: `` }));
@@ -2485,18 +2495,18 @@ var Si = class extends k.Component {
       this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
     }
     render() {
-      return (0, j.jsx)(S, {
-        children: (0, j.jsx)(K, {
+      return (0, M.jsx)(y, {
+        children: (0, M.jsx)(K, {
           config: [
             {
               renderTab: () =>
-                (0, j.jsx)(`span`, {
-                  title: T(`#AddonPicker_Emoticons`),
+                (0, M.jsx)(`span`, {
+                  title: w(`#AddonPicker_Emoticons`),
                   className: H,
-                  children: (0, j.jsx)(Q, {}),
+                  children: (0, M.jsx)(Q, {}),
                 }),
               renderContent: () =>
-                (0, j.jsx)(ki, {
+                (0, M.jsx)(ki, {
                   store: this.props.emoticonStore,
                   onItemSelect: (e) => this.props.OnSelected(e.name, !1),
                   flairGroupID: this.props.strFlairGroupID,
@@ -2507,7 +2517,7 @@ var Si = class extends k.Component {
       });
     }
   },
-  Ci = class extends k.Component {
+  Ci = class extends A.Component {
     m_disposeEmoticonStore;
     constructor(e) {
       (super(e), (this.state = { strSearchText: `` }));
@@ -2523,18 +2533,18 @@ var Si = class extends k.Component {
       this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
     }
     render() {
-      return (0, j.jsx)(S, {
-        children: (0, j.jsx)(K, {
+      return (0, M.jsx)(y, {
+        children: (0, M.jsx)(K, {
           config: [
             {
               renderTab: () =>
-                (0, j.jsx)(`span`, {
-                  title: T(`#AddonPicker_Emoticons`),
+                (0, M.jsx)(`span`, {
+                  title: w(`#AddonPicker_Emoticons`),
                   className: H,
-                  children: (0, j.jsx)(Q, {}),
+                  children: (0, M.jsx)(Q, {}),
                 }),
               renderContent: () =>
-                (0, j.jsx)(Ai, {
+                (0, M.jsx)(Ai, {
                   store: this.props.emoticonStore,
                   onItemSelect: (e) => this.props.OnSelected(e.name, !1),
                   flairGroupID: this.props.strFlairGroupID,
@@ -2545,7 +2555,7 @@ var Si = class extends k.Component {
       });
     }
   },
-  wi = class extends k.Component {
+  wi = class extends A.Component {
     state = { filter: `` };
     render() {
       let { store: e, onEmoticonSelect: t, onStickerSelect: n } = this.props,
@@ -2554,33 +2564,33 @@ var Si = class extends k.Component {
       return (
         X(e) &&
           i.push({
-            title: T(`#AddonPicker_RecentEmoticons`),
-            items: O.FilterEmoticons(X(e), r),
+            title: w(`#AddonPicker_RecentEmoticons`),
+            items: k.FilterEmoticons(X(e), r),
             onItemSelect: t,
-            renderItem: (e) => (0, j.jsx)(Z, { emoticon: e }),
+            renderItem: (e) => (0, M.jsx)(Z, { emoticon: e }),
             keyExtractor: (e) => e.name,
             renderEmpty: () =>
-              (0, j.jsx)(Y, {
+              (0, M.jsx)(Y, {
                 children: r
-                  ? T(`#AddonPicker_NoResults`)
-                  : T(`#AddonPicker_NoRecent`, T(`#AddonPicker_Emoticons`)),
+                  ? w(`#AddonPicker_NoResults`)
+                  : w(`#AddonPicker_NoRecent`, w(`#AddonPicker_Emoticons`)),
               }),
           }),
         _i(e).length &&
           i.push({
-            title: T(`#AddonPicker_RecentStickers`),
-            items: O.FilterStickers(_i(e), r),
+            title: w(`#AddonPicker_RecentStickers`),
+            items: k.FilterStickers(_i(e), r),
             onItemSelect: n,
-            renderItem: (e) => (0, j.jsx)(ji, { sticker: e }),
+            renderItem: (e) => (0, M.jsx)(ji, { sticker: e }),
             keyExtractor: ({ name: e }) => e,
             renderEmpty: () =>
-              (0, j.jsx)(Y, {
+              (0, M.jsx)(Y, {
                 children: r
-                  ? T(`#AddonPicker_NoResults`)
-                  : T(`#AddonPicker_NoRecent`, T(`#AddonPicker_Stickers`)),
+                  ? w(`#AddonPicker_NoResults`)
+                  : w(`#AddonPicker_NoRecent`, w(`#AddonPicker_Stickers`)),
               }),
           }),
-        (0, j.jsx)(J, {
+        (0, M.jsx)(J, {
           onFilterChange: (e) => this.setState({ filter: e }),
           filter: r,
           sections: i,
@@ -2588,83 +2598,83 @@ var Si = class extends k.Component {
       );
     }
   },
-  Ti = class extends k.Component {
+  Ti = class extends A.Component {
     state = { filter: `` };
     render() {
       let { store: e, onItemSelect: t, flairGroupID: n } = this.props,
         { filter: r } = this.state,
         i = !r && n ? e.GetFlairListByGroupID(n) : e.emoticon_list,
-        a = O.FilterEmoticons(i, r).slice(0, gi);
-      return (0, j.jsx)(q, {
-        title: T(`#AddonPicker_Emoticons`),
+        a = k.FilterEmoticons(i, r).slice(0, gi);
+      return (0, M.jsx)(q, {
+        title: w(`#AddonPicker_Emoticons`),
         items: a,
         onItemSelect: t,
-        renderItem: (e) => (0, j.jsx)(Z, { emoticon: e }),
+        renderItem: (e) => (0, M.jsx)(Z, { emoticon: e }),
         keyExtractor: (e) => e.name,
         onFilterChange: (e) => this.setState({ filter: e }),
         filter: r,
         onSubmit: () => t(a[0]),
         renderEmpty: () =>
           r
-            ? (0, j.jsx)(Y, { children: T(`#AddonPicker_NoResults`) })
-            : (0, j.jsx)(Ei, {}),
+            ? (0, M.jsx)(Y, { children: w(`#AddonPicker_NoResults`) })
+            : (0, M.jsx)(Ei, {}),
       });
     }
   };
 function Ei() {
-  return (0, j.jsxs)(j.Fragment, {
+  return (0, M.jsxs)(M.Fragment, {
     children: [
-      (0, j.jsx)(Y, {
-        children: T(`#AddonPicker_NoneOwned`, T(`#AddonPicker_Emoticons`)),
+      (0, M.jsx)(Y, {
+        children: w(`#AddonPicker_NoneOwned`, w(`#AddonPicker_Emoticons`)),
       }),
-      (0, j.jsx)(Y, {
-        children: pe(
+      (0, M.jsx)(Y, {
+        children: de(
           `#AddonPicker_AcquireAtPointsShopOrMarket`,
-          (0, j.jsx)(y, {
+          (0, M.jsx)(T, {
             href: `${u.STORE_BASE_URL}points/shop/c/emoticons`,
-            children: T(`#AddonPicker_AcquireAtPointsShop_Link`),
+            children: w(`#AddonPicker_AcquireAtPointsShop_Link`),
           }),
-          (0, j.jsx)(y, {
+          (0, M.jsx)(T, {
             href: `${u.COMMUNITY_BASE_URL}market`,
-            children: T(`#AddonPicker_AcquireAtPointsShopOrMarket_Link`),
+            children: w(`#AddonPicker_AcquireAtPointsShopOrMarket_Link`),
           }),
         ),
       }),
     ],
   });
 }
-var Di = class extends k.Component {
+var Di = class extends A.Component {
     state = { filter: `` };
     render() {
       let { store: e, onItemSelect: t } = this.props,
         { filter: n } = this.state,
-        r = O.FilterStickers(e.GetStickerList(), n);
-      return (0, j.jsx)(q, {
-        title: T(`#EmoticonPicker_StickerHeading`),
+        r = k.FilterStickers(e.GetStickerList(), n);
+      return (0, M.jsx)(q, {
+        title: w(`#EmoticonPicker_StickerHeading`),
         items: r,
         onItemSelect: t,
-        renderItem: (e) => (0, j.jsx)(ji, { sticker: e }),
+        renderItem: (e) => (0, M.jsx)(ji, { sticker: e }),
         keyExtractor: ({ name: e }) => e,
         onFilterChange: (e) => this.setState({ filter: e }),
         filter: n,
         onSubmit: () => t(r[0]),
         renderEmpty: () =>
           n
-            ? (0, j.jsx)(Y, { children: T(`#AddonPicker_NoResults`) })
-            : (0, j.jsxs)(j.Fragment, {
+            ? (0, M.jsx)(Y, { children: w(`#AddonPicker_NoResults`) })
+            : (0, M.jsxs)(M.Fragment, {
                 children: [
-                  (0, j.jsx)(Y, {
-                    children: T(
+                  (0, M.jsx)(Y, {
+                    children: w(
                       `#AddonPicker_NoneOwned`,
-                      T(`#AddonPicker_Stickers`),
+                      w(`#AddonPicker_Stickers`),
                     ),
                   }),
-                  (0, j.jsx)(Y, {
-                    children: pe(
+                  (0, M.jsx)(Y, {
+                    children: de(
                       `#AddonPicker_AcquireAtPointsShop`,
-                      (0, j.jsx)(y, {
+                      (0, M.jsx)(T, {
                         href: `${u.STORE_BASE_URL}points/shop/c/stickers`,
-                        children: T(`#AddonPicker_AcquireAtPointsShop_Link`),
+                        children: w(`#AddonPicker_AcquireAtPointsShop_Link`),
                       }),
                     ),
                   }),
@@ -2673,38 +2683,38 @@ var Di = class extends k.Component {
       });
     }
   },
-  Oi = class extends k.Component {
+  Oi = class extends A.Component {
     state = { filter: `` };
     render() {
       let { store: e, effectSettings: t, onItemSelect: n } = this.props,
         { filter: r } = this.state,
         i = e.GetEffectList().filter(({ name: e }) => e.indexOf(r) > -1);
-      return (0, j.jsx)(q, {
-        title: T(`#EmoticonPicker_EffectHeading`),
+      return (0, M.jsx)(q, {
+        title: w(`#EmoticonPicker_EffectHeading`),
         items: i,
         onItemSelect: n,
-        renderItem: (e) => (0, j.jsx)(Ni, { effect: e, roomEffectSettings: t }),
+        renderItem: (e) => (0, M.jsx)(Ni, { effect: e, roomEffectSettings: t }),
         keyExtractor: ({ name: e }) => e,
         onFilterChange: (e) => this.setState({ filter: e }),
         filter: r,
         onSubmit: () => n(i[0]),
         renderEmpty: () =>
           r
-            ? (0, j.jsx)(Y, { children: T(`#AddonPicker_NoResults`) })
-            : (0, j.jsxs)(j.Fragment, {
+            ? (0, M.jsx)(Y, { children: w(`#AddonPicker_NoResults`) })
+            : (0, M.jsxs)(M.Fragment, {
                 children: [
-                  (0, j.jsx)(Y, {
-                    children: T(
+                  (0, M.jsx)(Y, {
+                    children: w(
                       `#AddonPicker_NoneOwned`,
-                      T(`#AddonPicker_RoomEffects`),
+                      w(`#AddonPicker_RoomEffects`),
                     ),
                   }),
-                  (0, j.jsx)(Y, {
-                    children: pe(
+                  (0, M.jsx)(Y, {
+                    children: de(
                       `#AddonPicker_AcquireAtPointsShop`,
-                      (0, j.jsx)(y, {
+                      (0, M.jsx)(T, {
                         href: `${u.STORE_BASE_URL}points/shop/c/chateffects`,
-                        children: T(`#AddonPicker_AcquireAtPointsShop_Link`),
+                        children: w(`#AddonPicker_AcquireAtPointsShop_Link`),
                       }),
                     ),
                   }),
@@ -2713,7 +2723,7 @@ var Di = class extends k.Component {
       });
     }
   },
-  ki = class extends k.Component {
+  ki = class extends A.Component {
     state = { filter: `` };
     render() {
       let { store: e, onItemSelect: t, flairGroupID: n } = this.props,
@@ -2722,83 +2732,83 @@ var Di = class extends k.Component {
       return (
         X(e).length &&
           i.push({
-            title: T(`#AddonPicker_RecentEmoticons`),
-            items: O.FilterEmoticons(X(e), r),
+            title: w(`#AddonPicker_RecentEmoticons`),
+            items: k.FilterEmoticons(X(e), r),
             onItemSelect: t,
-            renderItem: (e) => (0, j.jsx)(Z, { emoticon: e }),
+            renderItem: (e) => (0, M.jsx)(Z, { emoticon: e }),
             keyExtractor: (e) => e.name,
             renderEmpty: () =>
-              (0, j.jsx)(Y, {
+              (0, M.jsx)(Y, {
                 children: r
-                  ? T(`#AddonPicker_NoResults`)
-                  : T(`#AddonPicker_NoRecent`, T(`#AddonPicker_Emoticons`)),
+                  ? w(`#AddonPicker_NoResults`)
+                  : w(`#AddonPicker_NoRecent`, w(`#AddonPicker_Emoticons`)),
               }),
           }),
-        (0, j.jsx)(J, {
+        (0, M.jsx)(J, {
           onFilterChange: (e) => this.setState({ filter: e }),
           filter: r,
           sections: [
             ...i,
             {
-              title: T(`#AddonPicker_AllEmoticons`),
-              items: O.FilterStickers(e.emoticon_list, r).slice(0, gi),
+              title: w(`#AddonPicker_AllEmoticons`),
+              items: k.FilterStickers(e.emoticon_list, r).slice(0, gi),
               onItemSelect: t,
-              renderItem: (e) => (0, j.jsx)(Z, { emoticon: e }),
+              renderItem: (e) => (0, M.jsx)(Z, { emoticon: e }),
               keyExtractor: (e) => e.name,
               renderEmpty: () =>
                 r
-                  ? (0, j.jsx)(Y, { children: T(`#AddonPicker_NoResults`) })
-                  : (0, j.jsx)(Ei, {}),
+                  ? (0, M.jsx)(Y, { children: w(`#AddonPicker_NoResults`) })
+                  : (0, M.jsx)(Ei, {}),
             },
           ],
         })
       );
     }
   };
-ki = e([E], ki);
-var Ai = class extends k.Component {
+ki = e([D], ki);
+var Ai = class extends A.Component {
   state = { filter: `` };
   render() {
     let { store: e, onItemSelect: t, flairGroupID: n } = this.props,
       { filter: r } = this.state;
-    return (0, j.jsx)(J, {
+    return (0, M.jsx)(J, {
       onFilterChange: (e) => this.setState({ filter: e }),
       filter: r,
       sections: [
         {
-          title: T(`#ChatEntryButton_Flair`),
-          items: O.FilterStickers(e.GetFlairListByGroupID(n), r),
+          title: w(`#ChatEntryButton_Flair`),
+          items: k.FilterStickers(e.GetFlairListByGroupID(n), r),
           onItemSelect: t,
-          renderItem: (e) => (0, j.jsx)(Z, { emoticon: e }),
+          renderItem: (e) => (0, M.jsx)(Z, { emoticon: e }),
           keyExtractor: (e) => e.name,
           renderEmpty: () =>
             r
-              ? (0, j.jsx)(Y, { children: T(`#AddonPicker_NoResults`) })
-              : (0, j.jsx)(Ei, {}),
+              ? (0, M.jsx)(Y, { children: w(`#AddonPicker_NoResults`) })
+              : (0, M.jsx)(Ei, {}),
         },
       ],
     });
   }
 };
-Ai = e([E], Ai);
+Ai = e([D], Ai);
 var Z = (e) => {
     let { emoticon: t, large: n } = e,
       r = !t.last_used && t.time_received;
-    return (0, j.jsxs)(`div`, {
+    return (0, M.jsxs)(`div`, {
       className: Lr,
       children: [
-        (0, j.jsx)(U, { emoticon: t.name, large: n }),
-        r && (0, j.jsx)(Fi, {}),
+        (0, M.jsx)(U, { emoticon: t.name, large: n }),
+        r && (0, M.jsx)(Fi, {}),
       ],
     });
   },
-  ji = class extends k.Component {
+  ji = class extends A.Component {
     state = { showHover: !1 };
-    m_ref = k.createRef();
+    m_ref = A.createRef();
     render() {
       let { sticker: e, className: t, ...n } = this.props,
         r = Zr(u.COMMUNITY_CDN_URL, e.name);
-      return (0, j.jsxs)(`div`, {
+      return (0, M.jsxs)(`div`, {
         ref: this.m_ref,
         className: o(t, Or),
         onMouseOver: () => this.setState({ showHover: !0 }),
@@ -2807,37 +2817,37 @@ var Z = (e) => {
         onBlur: () => this.setState({ showHover: !1 }),
         ...n,
         children: [
-          (0, j.jsx)(`img`, { style: { width: `100%` }, src: r }),
+          (0, M.jsx)(`img`, { style: { width: `100%` }, src: r }),
           this.state.showHover &&
             this.m_ref.current &&
-            (0, j.jsx)(Mi, { target: this.m_ref.current, sticker: e }),
+            (0, M.jsx)(Mi, { target: this.m_ref.current, sticker: e }),
         ],
       });
     }
   },
-  Mi = E((e) => {
+  Mi = D((e) => {
     let {
         target: t,
         sticker: { name: n, appid: r },
       } = e,
-      [i] = pt(r, {});
-    return (0, j.jsx)(W, {
+      [i] = ft(r, {});
+    return (0, M.jsx)(W, {
       target: t,
       title: n,
       subtitle: i?.GetName(),
-      children: (0, j.jsx)(`img`, {
+      children: (0, M.jsx)(`img`, {
         src: Zr(u.COMMUNITY_CDN_URL, n),
         className: Pr,
       }),
     });
   }),
-  Ni = class extends k.Component {
+  Ni = class extends A.Component {
     state = { showHover: !1 };
-    m_ref = k.createRef();
+    m_ref = A.createRef();
     render() {
       let { effect: e, roomEffectSettings: t, className: n, ...r } = this.props,
         i = t[e.name];
-      return (0, j.jsxs)(`div`, {
+      return (0, M.jsxs)(`div`, {
         ref: this.m_ref,
         onMouseOver: () => this.setState({ showHover: !0 }),
         onFocus: () => this.setState({ showHover: !0 }),
@@ -2849,7 +2859,7 @@ var Z = (e) => {
           i.renderEffectIcon(),
           this.state.showHover &&
             this.m_ref.current &&
-            (0, j.jsx)(Pi, {
+            (0, M.jsx)(Pi, {
               target: this.m_ref.current,
               effect: e,
               roomEffectSettings: t,
@@ -2858,62 +2868,62 @@ var Z = (e) => {
       });
     }
   },
-  Pi = E((e) => {
+  Pi = D((e) => {
     let {
         target: t,
         effect: { name: n, appid: r },
         roomEffectSettings: i,
       } = e,
       a = i[n],
-      [o] = pt(r, {});
-    return (0, j.jsx)(W, {
+      [o] = ft(r, {});
+    return (0, M.jsx)(W, {
       target: t,
       title: n,
       subtitle: o?.GetName(),
-      children: (0, j.jsx)(`div`, {
+      children: (0, M.jsx)(`div`, {
         className: Fr,
         children: a.renderEffectIcon(),
       }),
     });
   });
 function Fi() {
-  return (0, j.jsx)(`div`, {
+  return (0, M.jsx)(`div`, {
     className: wr,
-    children: (0, j.jsx)(`div`, { className: Tr }),
+    children: (0, M.jsx)(`div`, { className: Tr }),
   });
 }
 function Ii(e) {
-  return (0, j.jsxs)(`svg`, {
+  return (0, M.jsxs)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 36 36`,
     fill: `none`,
     ...e,
     children: [
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M8 4C5.79086 4 4 5.79086 4 8V27C4 29.2091 5.79086 31 8 31H13V20C13 16.134 16.134 13 20 13H31V8C31 5.79086 29.2091 4 27 4H8Z`,
       }),
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M16 20C16 17.7909 17.7909 16 20 16H31L16 31V20Z`,
       }),
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M29 24.0625V25C29 25.2671 28.9738 25.5282 28.9239 25.7806L30.8858 26.1688C30.9609 25.7892 31 25.3982 31 25V24.0625H29Z`,
       }),
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M28.3263 27.2225C28.0342 27.6587 27.6587 28.0342 27.2225 28.3263L28.3351 29.9882C28.9885 29.5507 29.5507 28.9885 29.9882 28.3351L28.3263 27.2225Z`,
       }),
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M21 29H22.1875V31H19L21 29Z`,
       }),
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M24.0625 29H25C25.2671 29 25.5282 28.9738 25.7806 28.9239L26.1688 30.8858C25.7892 30.9609 25.3982 31 25 31H24.0625V29Z`,
       }),
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M29 22.1875V21L31 19V22.1875H29Z`,
       }),
@@ -2921,12 +2931,12 @@ function Ii(e) {
   });
 }
 function Q(e) {
-  return (0, j.jsx)(`svg`, {
+  return (0, M.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 36 36`,
     fill: `none`,
     ...e,
-    children: (0, j.jsx)(`path`, {
+    children: (0, M.jsx)(`path`, {
       fill: `currentColor`,
       fillRule: `evenodd`,
       clipRule: `evenodd`,
@@ -2935,29 +2945,29 @@ function Q(e) {
   });
 }
 function Li(e) {
-  return (0, j.jsxs)(`svg`, {
+  return (0, M.jsxs)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 36 36`,
     fill: `none`,
     ...e,
     children: [
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M14.7163 7.6875L17.2476 15.5344C17.564 16.6102 18.4499 17.4328 19.5257 17.8125L27.3726 20.3438L19.5257 22.875C18.4499 23.1914 17.6273 24.0773 17.2476 25.1531L14.7163 33L12.1851 25.1531C11.8687 24.0773 10.9827 23.2547 9.90696 22.875L2.06009 20.3438L9.90696 17.8125C10.9827 17.4961 11.8054 16.6102 12.1851 15.5344L14.7163 7.6875Z`,
       }),
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M24.488 3L25.7861 7.06499C25.9591 7.63321 26.3918 8.07031 26.9543 8.24514L30.9784 9.55643L26.9543 10.8677C26.3918 11.0426 25.9591 11.4796 25.7861 12.0479L24.488 16.1129L23.1899 12.0479C23.0168 11.4796 22.5841 11.0426 22.0216 10.8677L17.9976 9.55643L22.0216 8.24514C22.5841 8.07031 23.0168 7.63321 23.1899 7.06499L24.488 3Z`,
       }),
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M8.11778 3.9375L8.76682 5.99185C8.85336 6.25411 9.0697 6.47265 9.32932 6.56007L11.363 7.21571L9.32932 7.87136C9.0697 7.95878 8.85336 8.17732 8.76682 8.43958L8.11778 10.4939L7.46874 8.43958C7.3822 8.17732 7.16586 7.95878 6.90624 7.87136L4.87259 7.21571L6.90624 6.56007C7.16586 6.47265 7.3822 6.25411 7.46874 5.99185L8.11778 3.9375Z`,
       }),
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M30.6178 12.375L31.2668 14.4293C31.3534 14.6916 31.5697 14.9102 31.8293 14.9976L33.863 15.6532L31.8293 16.3089C31.5697 16.3963 31.3534 16.6148 31.2668 16.8771L30.6178 18.9314L29.9687 16.8771C29.8822 16.6148 29.6659 16.3963 29.4062 16.3089L27.3726 15.6532L29.4062 14.9976C29.6659 14.9102 29.8822 14.6916 29.9687 14.4293L30.6178 12.375Z`,
       }),
-      (0, j.jsx)(`path`, {
+      (0, M.jsx)(`path`, {
         fill: `currentColor`,
         d: `M25.9303 24.5625L26.5793 26.6168C26.6659 26.8791 26.8822 27.0977 27.1418 27.1851L29.1755 27.8407L27.1418 28.4964C26.8822 28.5838 26.6659 28.8023 26.5793 29.0646L25.9303 31.1189L25.2812 29.0646C25.1947 28.8023 24.9784 28.5838 24.7187 28.4964L22.6851 27.8407L24.7187 27.1851C24.9784 27.0977 25.1947 26.8791 25.2812 26.6168L25.9303 24.5625Z`,
       }),
@@ -2966,7 +2976,7 @@ function Li(e) {
 }
 function Ri(e) {
   let { className: t, ...n } = e;
-  return (0, j.jsx)(`svg`, {
+  return (0, M.jsx)(`svg`, {
     className: o(`SVGIcon_Button SVGIcon_Clock`, t),
     version: `1.1`,
     x: `0px`,
@@ -2975,7 +2985,7 @@ function Ri(e) {
     height: `20px`,
     viewBox: `0 0 24 24`,
     ...n,
-    children: (0, j.jsx)(`path`, {
+    children: (0, M.jsx)(`path`, {
       d: `M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z`,
     }),
   });
@@ -2989,10 +2999,10 @@ var zi = `pvP8JT4e7EA-`,
   Gi = `_1zsmA-mI3cU-`,
   Ki = `_4X5-n9MaD8g-`;
 function qi() {
-  return m() ? (0, j.jsx)(de, {}) : (0, j.jsx)(ie, {});
+  return m() ? (0, M.jsx)(ue, {}) : (0, M.jsx)(le, {});
 }
 var Ji = 1576780700,
-  $ = class extends k.Component {
+  $ = class extends A.Component {
     OnEmoticonClick(e) {
       let {
           emoticonStore: t,
@@ -3010,7 +3020,7 @@ var Ji = 1576780700,
       if (
         ((l =
           a && o && s && c
-            ? (0, j.jsx)(bi, {
+            ? (0, M.jsx)(bi, {
                 emoticonStore: this.props.emoticonStore,
                 strFlairGroupID: this.props.strFlairGroupID,
                 onEmoticonSelected: (e) => this.props.OnEmoticonSelected(e, !1),
@@ -3019,17 +3029,17 @@ var Ji = 1576780700,
                 onStickerSelected: c,
               })
             : n && t.flair_list && t.GetFlairListByGroupID(n)?.length > 0
-              ? (0, j.jsx)(Ci, {
+              ? (0, M.jsx)(Ci, {
                   emoticonStore: this.props.emoticonStore,
                   strFlairGroupID: this.props.strFlairGroupID,
                   OnSelected: this.props.OnEmoticonSelected,
                 })
-              : (0, j.jsx)(Si, {
+              : (0, M.jsx)(Si, {
                   emoticonStore: this.props.emoticonStore,
                   strFlairGroupID: this.props.strFlairGroupID,
                   OnSelected: this.props.OnEmoticonSelected,
                 })),
-        be(
+        ne(
           l,
           e,
           i || {
@@ -3065,39 +3075,39 @@ var Ji = 1576780700,
         e ? i.push(`disabled`) : this.BHaveUnseenEmoticons() && (a = !0),
         n && i.push(`ttip`),
         r
-          ? (0, j.jsx)(b, {
+          ? (0, M.jsx)(S, {
               onClick: this.OnEmoticonClick,
-              onOKActionDescription: T(`#ChatEntryButton_Emoticon`),
+              onOKActionDescription: w(`#ChatEntryButton_Emoticon`),
               focusable: !0,
-              children: (0, j.jsx)(me, {
+              children: (0, M.jsx)(fe, {
                 toolTipContent: n,
-                children: (0, j.jsx)(`img`, {
+                children: (0, M.jsx)(`img`, {
                   src: this.props.useImg,
                   className: o(...i),
-                  title: this.props.title || T(`#ChatEntryButton_Emoticon`),
+                  title: this.props.title || w(`#ChatEntryButton_Emoticon`),
                 }),
               }),
             })
           : (i.push(Wi, Gi),
-            (0, j.jsx)(ee, {
+            (0, M.jsx)(ee, {
               className: o(...i),
-              onOKActionDescription: T(`#ChatEntryButton_Emoticon`),
+              onOKActionDescription: w(`#ChatEntryButton_Emoticon`),
               type: `button`,
               onClick: this.OnEmoticonClick,
-              title: this.props.title || T(`#ChatEntryButton_Emoticon`),
+              title: this.props.title || w(`#ChatEntryButton_Emoticon`),
               disabled: e,
-              children: (0, j.jsxs)(me, {
+              children: (0, M.jsxs)(fe, {
                 toolTipContent: n,
                 children: [
-                  this.props.buttonIcon || (0, j.jsx)(qi, {}),
-                  a && (0, j.jsx)(Fi, {}),
+                  this.props.buttonIcon || (0, M.jsx)(qi, {}),
+                  a && (0, M.jsx)(Fi, {}),
                 ],
               }),
             }))
       );
     }
   };
-(e([h], $.prototype, `OnEmoticonClick`, null), ($ = e([E], $)));
+(e([h], $.prototype, `OnEmoticonClick`, null), ($ = e([D], $)));
 var Yi = $;
 export {
   dn as A,
@@ -3109,8 +3119,8 @@ export {
   Et as G,
   Rt as H,
   Ht as I,
-  A as J,
-  gt as K,
+  j as J,
+  ht as K,
   Lt as L,
   un as M,
   $t as N,
@@ -3122,7 +3132,7 @@ export {
   Tt as U,
   Bt as V,
   wt as W,
-  ht as Y,
+  mt as Y,
   Kn as _,
   Wi as a,
   ur as b,
@@ -3139,7 +3149,7 @@ export {
   Hi as n,
   Bi as o,
   U as p,
-  mt as q,
+  pt as q,
   Vi as r,
   Ki as s,
   Yi as t,

@@ -1048,7 +1048,7 @@ var re = class e extends T.Message {
     constructor(t = null) {
       (super(),
         e.prototype.parent_appid || c(e.M()),
-        T.Message.initialize(this, t, 0, -1, [2, 3, 4, 5, 6, 9], null));
+        T.Message.initialize(this, t, 0, -1, [2, 3, 4, 5, 6, 9, 10], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1080,6 +1080,14 @@ var re = class e extends T.Message {
             related_f2p: { n: 7, c: oe },
             dlc_parent_appids: {
               n: 9,
+              r: !0,
+              q: !0,
+              br: a.readUint32,
+              pbr: a.readPackedUint32,
+              bw: d.writeRepeatedUint32,
+            },
+            provides_engine_appid: {
+              n: 10,
               r: !0,
               q: !0,
               br: a.readUint32,
@@ -1383,7 +1391,7 @@ var re = class e extends T.Message {
     constructor(t = null) {
       (super(),
         e.prototype.short_description || c(e.M()),
-        T.Message.initialize(this, t, 0, -1, [2, 3, 4], null));
+        T.Message.initialize(this, t, 0, -1, [2, 3, 4, 6], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1397,6 +1405,19 @@ var re = class e extends T.Message {
             developers: { n: 3, c: pe, r: !0, q: !0 },
             franchises: { n: 4, c: pe, r: !0, q: !0 },
             capsule_headline: { n: 5, br: a.readString, bw: d.writeString },
+            featured_creator_home_clan_account_ids: {
+              n: 6,
+              r: !0,
+              q: !0,
+              br: a.readUint32,
+              pbr: a.readPackedUint32,
+              bw: d.writeRepeatedUint32,
+            },
+            first_franchise_clan_account_id: {
+              n: 7,
+              br: a.readUint32,
+              bw: d.writeUint32,
+            },
           },
         }),
         e.sm_m
@@ -5995,6 +6016,11 @@ var re = class e extends T.Message {
             },
             reservation_not_allowed: { n: 27, br: a.readBool, bw: d.writeBool },
             requires_signature: { n: 28, br: a.readBool, bw: d.writeBool },
+            new_reservations_disabled: {
+              n: 29,
+              br: a.readBool,
+              bw: d.writeBool,
+            },
           },
         }),
         e.sm_m
@@ -6190,7 +6216,7 @@ var re = class e extends T.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`],
+      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
     });
   }
   e.GetItems = t;
@@ -6207,7 +6233,7 @@ var re = class e extends T.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetContentHubConfig = r;
@@ -6216,7 +6242,7 @@ var re = class e extends T.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetPriceStops = i;
@@ -6232,7 +6258,7 @@ var re = class e extends T.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetDLCForAppsSolr = o;
@@ -6241,7 +6267,7 @@ var re = class e extends T.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetHardwareItems = s;

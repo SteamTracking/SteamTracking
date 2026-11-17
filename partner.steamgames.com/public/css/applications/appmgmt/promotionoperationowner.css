@@ -122,6 +122,12 @@ div.koPooBe-lCQ- {
   margin-bottom: 10px;
   padding-inline: 8px;
 }
+.JrlXbYAw30w- {
+  color: #f74843;
+}
+.SaleSectionHeader:has(> .JrlXbYAw30w-) {
+  justify-content: flex-start;
+}
 :root {
   --list-day-width: 0px;
   --list-day-height: 28px;
@@ -5846,6 +5852,13 @@ table.cKYrmNuEAQs- td {
   z-index: 1;
   position: relative;
 }
+.-DbO8F6ukH4- {
+  z-index: 1;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 500;
+  position: relative;
+}
 ._81zAcbq59q4- {
   position: sticky;
   top: 0;
@@ -6090,6 +6103,101 @@ table.cKYrmNuEAQs- td {
 .Qa0R6OnzWmU- {
   color: orange;
   margin-bottom: 8px;
+}
+.yBOIU4Wj-l4- {
+  flex-flow: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  display: flex;
+}
+.iSEOs-IvuGw- {
+  background: #ffffff0a;
+  border-inline-start: 3px solid #4d505c;
+  min-width: 110px;
+  padding: 8px 14px;
+}
+.iSEOs-IvuGw- ._8Eb4BKtnmAM- {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+.iSEOs-IvuGw- .UBiWoP-2tWE- {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8f98a0;
+  font-size: 12px;
+}
+.iSEOs-IvuGw-.D2XZDwN1FiA- {
+  border-inline-start-color: #6fa720;
+}
+.iSEOs-IvuGw-.nlAP0TLrWcE- {
+  border-inline-start-color: #c44848;
+}
+.iSEOs-IvuGw-.S2fgCLFU8Ac- {
+  border-inline-start-color: #c4a548;
+}
+.v45HL5FYr-I- {
+  color: #8f98a0;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+._8IrfwUFPdG8- {
+  flex-flow: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 8px;
+  display: flex;
+}
+._8IrfwUFPdG8- .VB2dJjDBBsw-,
+._8IrfwUFPdG8- .kt-uyl1dseY- {
+  width: 280px;
+}
+._8IrfwUFPdG8- .lNRh9jL7LvE- {
+  flex-direction: row;
+  gap: 8px;
+  margin-inline-start: auto;
+  display: flex;
+}
+._8IrfwUFPdG8- button.DialogButton {
+  white-space: nowrap;
+  width: fit-content;
+  padding: 0 20px;
+}
+._7iVZBUBVJd8- {
+  font-weight: 600;
+}
+.xOxE91h82Ss- {
+  color: #c6d4df;
+  background: #ffffff14;
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+.xOxE91h82Ss-.D2XZDwN1FiA- {
+  color: #a4d007;
+  background: #6fa72033;
+}
+.xOxE91h82Ss-.nlAP0TLrWcE- {
+  color: #e07a7a;
+  background: #c4484833;
+}
+.xOxE91h82Ss-.S2fgCLFU8Ac- {
+  color: #d8c27a;
+  background: #c4a54833;
+}
+.mpeLvPpdcUw-,
+.xOxE91h82Ss- {
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+.KLXeRDgUhfI- {
+  text-align: center;
+  color: #8f98a0;
+  padding: 24px;
 }
 .Dfb0H0fS094- {
   justify-content: center;

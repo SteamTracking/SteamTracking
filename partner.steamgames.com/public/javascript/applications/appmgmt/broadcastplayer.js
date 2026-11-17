@@ -45,28 +45,28 @@ import {
   pt as me,
 } from "./chunk~25a6634263.js";
 import {
-  Bn as he,
-  Cn as ge,
-  Dn as _e,
-  Ki as ve,
-  Qi as ye,
-  Un as be,
-  Vn as xe,
-  Wr as w,
-  Xn as Se,
-  Xr as Ce,
-  Yr as we,
+  $i as he,
+  Bn as ge,
+  Gr as w,
+  Hn as _e,
+  Ji as ve,
+  On as ye,
+  Qn as be,
+  Tr as xe,
+  Vn as Se,
+  Wn as Ce,
+  Xr as we,
   Zn as Te,
-  _r as Ee,
-  ca as De,
-  ei as Oe,
-  ha as ke,
-  ni as Ae,
-  qi as je,
+  Zr as Ee,
+  da as T,
+  ga as De,
+  la as Oe,
+  ni as ke,
+  qi as Ae,
+  ri as je,
   ti as Me,
-  ua as T,
-  wr as Ne,
-  zn as Pe,
+  vr as Ne,
+  wn as Pe,
 } from "./chunk~1fa4b8f2ff.js";
 import { C as E, S as Fe, x as Ie, y as Le } from "./chunk~44f252525d.js";
 import { t as Re } from "./chunk~9aa05d2c7d.js";
@@ -1299,6 +1299,7 @@ var I = ae(ee(), 1),
   function n(e, t) {
     return e.SendNotification(`Video.SetVideoBookmark#1`, _(Tt, t), {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.SetVideoBookmark = n;
@@ -2173,7 +2174,7 @@ var H = (function (e) {
       return null;
     }
     SetSubtitles(e) {
-      let t = e ? De[e] : -1;
+      let t = e ? Oe[e] : -1;
       this.m_player.SetSubtitles(t);
     }
     SetStartWithSubtitles(e) {
@@ -2626,7 +2627,7 @@ var Kt = E((e) => {
         className: `BroadcastVideoUserInputNeeded`,
         onClick: this.OnClick,
         children: [
-          (0, G.jsx)(Ce, {}),
+          (0, G.jsx)(Ee, {}),
           (0, G.jsx)(`span`, {
             children: T(`#DASHPlayerControls_ClickToPlay`),
           }),
@@ -2650,7 +2651,7 @@ var Jt = class extends k.Component {
         (0, G.jsx)(`button`, {
           className: `dash_stat_close_button`,
           onClick: this.HideStats,
-          children: (0, G.jsx)(ye, {}),
+          children: (0, G.jsx)(he, {}),
         }),
         (0, G.jsxs)(`div`, {
           children: [
@@ -2982,7 +2983,7 @@ var K = class extends k.Component {
         (i = this.props.video.GetVideoRepresentations()),
         (a = i.map((e) =>
           (0, G.jsx)(
-            Se,
+            Te,
             {
               onClick: () => {
                 (this.props.video.SetVideoRepresentation(e),
@@ -2997,7 +2998,7 @@ var K = class extends k.Component {
         a.push(s),
         a.push(
           (0, G.jsxs)(
-            Te,
+            be,
             {
               onClick: this.OnShowStats,
               children: [T(`#Broadcast_VideoContext_ToggleStats`), `	`],
@@ -3012,7 +3013,7 @@ var K = class extends k.Component {
         (a = []),
         a.push(
           (0, G.jsx)(
-            Se,
+            Te,
             {
               onClick: () => {
                 (this.props.video.SetSubtitles(null),
@@ -3031,7 +3032,7 @@ var K = class extends k.Component {
         let t = this.props.video.ListSubtitles()[e];
         a.push(
           (0, G.jsx)(
-            Se,
+            Te,
             {
               onClick: () => {
                 (this.props.video.SetSubtitles(t.language),
@@ -3058,7 +3059,7 @@ var K = class extends k.Component {
               `videoControlButton` + (c ? ` ClosedCaptionsActive` : ``),
             onClick: this.OnSubtitlesClick,
             ref: this.m_elSubtitlesButton,
-            children: (0, G.jsx)(Ee, {}),
+            children: (0, G.jsx)(Ne, {}),
           }),
         (0, G.jsx)(`div`, {
           className:
@@ -3066,7 +3067,7 @@ var K = class extends k.Component {
             (e ? ` VideoSettingsOpen` : ``),
           onClick: this.OnVideoControlClick,
           ref: this.bindSettingsButton,
-          children: (0, G.jsx)(Ae, {}),
+          children: (0, G.jsx)(je, {}),
         }),
         (0, G.jsx)(q, { video: n }),
         r &&
@@ -3182,7 +3183,7 @@ var Xt = !0,
               (0, G.jsx)(`div`, {
                 className: r,
                 onClick: this.ToggleMute,
-                children: (0, G.jsx)(je, {}),
+                children: (0, G.jsx)(ve, {}),
               }),
               (0, G.jsx)(J, { video: e, onDrag: this.OnChildDrag }),
             ],
@@ -3441,7 +3442,7 @@ var Zt = 3200,
     }
     OnContextMenu(e) {
       this.state.bFullscreen ||
-        (Pe((0, G.jsx)(xe, { children: this.GetContextMenuItems() }), e),
+        (ge((0, G.jsx)(_e, { children: this.GetContextMenuItems() }), e),
         e.preventDefault());
     }
     ToggleStatsView(e) {
@@ -3466,7 +3467,7 @@ var Zt = 3200,
       return (
         e.push(
           (0, G.jsx)(
-            he,
+            Se,
             {
               bChecked: this.state.bShowStats,
               onSelected: (e) => {
@@ -3482,7 +3483,7 @@ var Zt = 3200,
           Number.parseInt(n.m_strAppId) != 7 &&
           e.push(
             (0, G.jsx)(
-              be,
+              Ce,
               {
                 onSelected: (e) => {
                   this.ShowStorePage(e);
@@ -3695,7 +3696,7 @@ var tn = class extends k.PureComponent {
         ? (0, G.jsx)(`div`, {
             className: `STV_BroadcastClose`,
             onClick: this.props.onClick,
-            children: (0, G.jsx)(ye, {}),
+            children: (0, G.jsx)(he, {}),
           })
         : null;
     }
@@ -3793,7 +3794,7 @@ var rn = E((e) => {
       return (0, G.jsx)(`div`, {
         className: `videoControlButton buttonPlayPause`,
         onClick: this.OnTogglePlayPause,
-        children: e ? (0, G.jsx)(Ce, {}) : (0, G.jsx)(we, {}),
+        children: e ? (0, G.jsx)(Ee, {}) : (0, G.jsx)(we, {}),
       });
     }
   };
@@ -3886,7 +3887,7 @@ var on = (e) =>
     onMouseDown: e.onMouseDown ? e.onMouseDown : void 0,
     children: (0, G.jsx)(`div`, {
       className: `timelineMarkerIcon`,
-      children: (0, G.jsx)(Me, {}),
+      children: (0, G.jsx)(ke, {}),
     }),
   });
 function sn(e) {
@@ -4184,7 +4185,7 @@ var Q = class extends k.Component {
                     className: `STV_timelineGrabber` + h,
                     children: (0, G.jsx)(`div`, {
                       className: `STV_timelineGrabberArrow`,
-                      children: (0, G.jsx)(Oe, {}),
+                      children: (0, G.jsx)(Me, {}),
                     }),
                   }),
                 }),
@@ -4278,8 +4279,8 @@ var cn = class extends k.Component {
                     (0, G.jsxs)(`div`, {
                       className: `BroadcastDetailsHeader_ViewerCount`,
                       children: [
-                        (0, G.jsx)(ve, {}),
-                        ke(`#Broadcast_ViewerCount`, t),
+                        (0, G.jsx)(Ae, {}),
+                        De(`#Broadcast_ViewerCount`, t),
                       ],
                     }),
                 ],
@@ -4316,12 +4317,12 @@ var ln = class extends k.Component {
     let { options: t, value: n, onChange: r } = this.props,
       i = Object.keys(t).map((e) =>
         (0, G.jsx)(
-          he,
+          Se,
           { onSelected: () => r(e), bChecked: e === n, children: T(t[e]) },
           e,
         ),
       );
-    Pe((0, G.jsx)(xe, { children: i }), e);
+    ge((0, G.jsx)(_e, { children: i }), e);
   }
   render() {
     let { value: e, options: t } = this.props,
@@ -4333,7 +4334,7 @@ var ln = class extends k.Component {
         (0, G.jsxs)(`span`, { children: [`\xA0- `, T(n)] }),
         (0, G.jsx)(`div`, {
           className: `ContextMenuButton`,
-          children: (0, G.jsx)(Ne, {}),
+          children: (0, G.jsx)(xe, {}),
         }),
       ],
     });
@@ -4413,9 +4414,9 @@ var $ = class extends k.Component {
           children: [
             !this.props.editMode && this.props.linkRegions
               ? this.props.linkRegions.map((e) => {
-                  let t = _e(e.url);
+                  let t = ye(e.url);
                   return (0, G.jsx)(
-                    ge,
+                    Pe,
                     {
                       href: e.url,
                       bForceExternal: t,

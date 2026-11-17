@@ -16109,7 +16109,7 @@ var CErrorReportingStore = class {
   m_pauseTimer = void 0;
   m_fnGetReportingInterval = GetDefaultReportingInterval;
   m_fnGetReportTags = () => [];
-  m_fnGetURL = () => location.href;
+  m_fnGetURL = () => (`location` in globalThis ? location.href : void 0);
   strDisplayVersion;
   m_bEnabled = !0;
   m_bInitialized = !1;

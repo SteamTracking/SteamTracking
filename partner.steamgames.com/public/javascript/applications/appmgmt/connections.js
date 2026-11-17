@@ -10,13 +10,13 @@ import {
 } from "./chunk~de7f2df91c.js";
 import { r as a } from "./chunk~25a6634263.js";
 import {
-  Gt as o,
-  Ia as s,
-  It as c,
+  Bt as o,
+  Kt as s,
+  La as c,
   Lt as l,
-  an as u,
-  la as d,
-  zt as f,
+  Rt as u,
+  on as d,
+  ua as f,
 } from "./chunk~1fa4b8f2ff.js";
 import { c as p } from "./chunk~44f252525d.js";
 import { t as m } from "./chunk~e29b7ee76a.js";
@@ -523,7 +523,7 @@ function Ce(e) {
               label: `Relay POP`,
               children: t.client.relay_cluster,
             }),
-            (0, U.jsx)(W, { label: `Active`, children: s(t.active_time) }),
+            (0, U.jsx)(W, { label: `Active`, children: c(t.active_time) }),
           ],
         }),
         r,
@@ -549,9 +549,9 @@ function Te(e) {
     r = t.peer,
     i = t.client_e2e,
     a = t.peer_e2e,
-    [c, l] = v.useState(!1),
+    [o, l] = v.useState(!1),
     u = we(t.client_sessions),
-    f = null,
+    d = null,
     p = null,
     m = null,
     h = null,
@@ -568,7 +568,7 @@ function Te(e) {
     ) {
       let e = new Date(u.start_time * 1e3),
         t = new Date((u.start_time + u.duration) * 1e3),
-        n = d.GetPreferredLocales(),
+        n = f.GetPreferredLocales(),
         r = e.toLocaleString(n, {
           weekday: `short`,
           year: `numeric`,
@@ -588,8 +588,8 @@ function Te(e) {
           second: `2-digit`,
           timeZoneName: `short`,
         }),
-        o = s(u.duration);
-      f = (0, U.jsxs)(`span`, {
+        o = c(u.duration);
+      d = (0, U.jsxs)(`span`, {
         className: void 0,
         children: [
           (0, U.jsxs)(W, { label: `Time`, children: [r, ` `, i, `--`, a] }),
@@ -639,14 +639,14 @@ function Te(e) {
   }
   if (i || a) {
     let [e, n] = q(i),
-      [r, o] = q(a),
-      s = Math.min(e, r),
-      l = Math.max(n, o);
-    if (s <= l) {
+      [r, s] = q(a),
+      c = Math.min(e, r),
+      l = Math.max(n, s);
+    if (c <= l) {
       let e =
-        s * 0.03 + 2 < l
-          ? `${s}--${l}ms`
-          : Math.floor((s + l) / 2 + 0.5) + `ms`;
+        c * 0.03 + 2 < l
+          ? `${c}--${l}ms`
+          : Math.floor((c + l) / 2 + 0.5) + `ms`;
       g = (0, U.jsx)(W, { label: `Ping`, children: e });
     }
     let u = J(i),
@@ -659,7 +659,7 @@ function Te(e) {
           label: `Packet delivery`,
           children: `${f.toFixed(2)}%`,
         })),
-      c)
+      o)
     ) {
       let e =
         t.kind == `ded`
@@ -677,7 +677,7 @@ function Te(e) {
       });
     }
   }
-  if (c) {
+  if (o) {
     let e = function (e) {
         let t = [...e];
         return (
@@ -716,11 +716,11 @@ function Te(e) {
         (0, U.jsxs)(`div`, {
           className: C,
           children: [
-            (0, U.jsxs)(`div`, { className: w, children: [f, g, _, m, h, p] }),
-            (0, U.jsx)(o, {
+            (0, U.jsxs)(`div`, { className: w, children: [d, g, _, m, h, p] }),
+            (0, U.jsx)(s, {
               className: M,
               label: `Details`,
-              checked: c,
+              checked: o,
               onChange: l,
             }),
           ],
@@ -742,8 +742,8 @@ function Te(e) {
 function Ee(e) {
   let r = p(),
     i = e.appId,
-    [o, s] = v.useState(!1),
-    [d, m] = v.useState(``),
+    [s, c] = v.useState(!1),
+    [f, m] = v.useState(``),
     [h, S] = v.useState(void 0),
     [C, w] = v.useState(``),
     [T, E] = v.useState(``),
@@ -756,10 +756,10 @@ function Ee(e) {
       t = e.get(`client_id`) || ``,
       a = e.get(`peer_id`) || ``,
       o = e.get(`kind`) || ``,
-      c = e.get(`app_name1`) || ``,
+      s = e.get(`app_name1`) || ``,
       l = e.get(`app_value1`) || ``;
-    if ((w(t), E(a), O(o), M(c), P(l), !e.toString() && k == 0)) return;
-    (s(!0), m(``), i > 0 && e.set(`appid`, `` + i));
+    if ((w(t), E(a), O(o), M(s), P(l), !e.toString() && k == 0)) return;
+    (c(!0), m(``), i > 0 && e.set(`appid`, `` + i));
     let u = n.PARTNER_BASE_URL + `sdr/ajaxsessionsearch?` + e.toString();
     (async () => {
       try {
@@ -778,7 +778,7 @@ function Ee(e) {
         (console.error(`sdrsessionsearch: OnPerformSearch ` + t.strErrorMsg, t),
           m(t.strErrorMsg));
       }
-      s(!1);
+      c(!1);
     })();
   }, [i, r.location, k]);
   let F = () => {
@@ -824,7 +824,7 @@ function Ee(e) {
             (0, U.jsx)(U.Fragment, { children: ` [BETA feature]` }),
           ],
         }),
-        d && (0, U.jsx)(`div`, { className: void 0, children: d }),
+        f && (0, U.jsx)(`div`, { className: void 0, children: f }),
         (0, U.jsxs)(`div`, {
           className: te,
           children: [
@@ -836,17 +836,17 @@ function Ee(e) {
                   className: `DialogLabel`,
                   children: `Connection kind`,
                 }),
-                (0, U.jsxs)(l, {
+                (0, U.jsxs)(u, {
                   labelId: R,
                   value: D,
                   onChange: (e) => O(e),
                   children: [
-                    (0, U.jsx)(c, { value: ``, children: `Any` }),
-                    (0, U.jsx)(c, {
+                    (0, U.jsx)(l, { value: ``, children: `Any` }),
+                    (0, U.jsx)(l, {
                       value: `ded`,
                       children: `Dedicated server`,
                     }),
-                    (0, U.jsx)(c, { value: `p2p`, children: `Peer-to-Peer` }),
+                    (0, U.jsx)(l, { value: `p2p`, children: `Peer-to-Peer` }),
                   ],
                 }),
               ],
@@ -854,14 +854,14 @@ function Ee(e) {
             (0, U.jsxs)(`div`, {
               className: x,
               children: [
-                (0, U.jsx)(f, {
+                (0, U.jsx)(o, {
                   type: `text`,
                   value: C,
                   disabled: !1,
                   label: `Client`,
                   onChange: (e) => w(e.currentTarget.value),
                 }),
-                (0, U.jsx)(f, {
+                (0, U.jsx)(o, {
                   type: `text`,
                   value: T,
                   disabled: !1,
@@ -873,14 +873,14 @@ function Ee(e) {
             (0, U.jsxs)(`div`, {
               className: x,
               children: [
-                (0, U.jsx)(f, {
+                (0, U.jsx)(o, {
                   type: `text`,
                   value: j,
                   disabled: !1,
                   label: `App field name 1`,
                   onChange: (e) => M(e.currentTarget.value),
                 }),
-                (0, U.jsx)(f, {
+                (0, U.jsx)(o, {
                   type: `text`,
                   value: N,
                   disabled: !1,
@@ -891,15 +891,15 @@ function Ee(e) {
             }),
             (0, U.jsx)(`div`, {
               className: re,
-              children: (0, U.jsx)(u, {
+              children: (0, U.jsx)(d, {
                 onClick: F,
-                disabled: o,
+                disabled: s,
                 children: `Search `,
               }),
             }),
           ],
         }),
-        o && (0, U.jsx)(_, {}),
+        s && (0, U.jsx)(_, {}),
         I,
       ],
     }),

@@ -22,14 +22,14 @@ import {
 } from "./chunk~de7f2df91c.js";
 import { Bt as _ } from "./chunk~25a6634263.js";
 import {
-  $a as v,
-  Na as y,
-  Ta as b,
-  ba as x,
-  ua as S,
+  Ea as v,
+  Pa as y,
+  Sa as b,
+  da as x,
+  eo as S,
   xa as C,
 } from "./chunk~1fa4b8f2ff.js";
-import { h as w, w as ee } from "./chunk~0a99e05c44.js";
+import { E as ee, _ as w } from "./chunk~0a99e05c44.js";
 import {
   F as T,
   I as E,
@@ -74,7 +74,7 @@ var oe = {
   options: { path: `/` },
   preferenceControls: { isTechnicallyNecessary: !0 },
 };
-2 * v.PerDay;
+2 * S.PerDay;
 function N() {
   let e = D(oe),
     t = e ? parseInt(e) : 0;
@@ -179,15 +179,15 @@ function z(e, t, n, r) {
     case `date_full`:
       return y(t);
     case `date_month`:
-      return x(new Date(t * 1e3));
+      return C(new Date(t * 1e3));
     case `date_quarter`:
-      return C(new Date(t * 1e3), r);
+      return b(new Date(t * 1e3), r);
     case `date_year`:
-      return b(new Date(t * 1e3));
+      return v(new Date(t * 1e3));
     case `text_comingsoon`:
-      return n || S(`#Store_ComingSoon_ComingSoon`);
+      return n || x(`#Store_ComingSoon_ComingSoon`);
     case `text_tba`:
-      return n || S(`#Store_ComingSoon_TBA`);
+      return n || x(`#Store_ComingSoon_TBA`);
     default:
       return ``;
   }
@@ -2610,7 +2610,11 @@ var V = class e extends P.Message {
       `MarketingMessages.GetMarketingMessagesForUser#1`,
       u(xe, t, n),
       Se,
-      { bConstMethod: !0, ePrivilege: 1, rgBrowserAPISites: [`partner`] },
+      {
+        bConstMethod: !0,
+        ePrivilege: 1,
+        rgBrowserAPISites: [`partner`, `store`],
+      },
     );
   }
   e.GetMarketingMessagesForUser = r;
@@ -2632,7 +2636,7 @@ var V = class e extends P.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`],
+        rgBrowserAPISites: [`partner`, `store`],
       },
     );
   }
@@ -2642,7 +2646,11 @@ var V = class e extends P.Message {
       `MarketingMessages.GetDisplayMarketingMessageForUser#1`,
       u(U, t, n),
       W,
-      { bConstMethod: !0, ePrivilege: 1, rgBrowserAPISites: [`partner`] },
+      {
+        bConstMethod: !0,
+        ePrivilege: 1,
+        rgBrowserAPISites: [`partner`, `store`],
+      },
     );
   }
   e.GetDisplayMarketingMessageForUser = o;
@@ -2658,7 +2666,7 @@ var V = class e extends P.Message {
   function c(e, t) {
     return e.SendNotification(`MarketingMessages.MarkMessageSeen#1`, u(Ee, t), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   e.MarkMessageSeen = c;
@@ -2666,7 +2674,7 @@ var V = class e extends P.Message {
     return e.SendNotification(
       `MarketingMessages.MarkMessageClicked#1`,
       u(De, t),
-      { ePrivilege: 1, rgBrowserAPISites: [`partner`] },
+      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `store`] },
     );
   }
   e.MarkMessageClicked = l;
@@ -3434,7 +3442,7 @@ var ht = class e {
       let e = this.m_ReleaseInfo?.steam_release_date;
       return e
         ? this.m_ReleaseInfo?.is_abridged_release_date
-          ? x(new Date(e * 1e3))
+          ? C(new Date(e * 1e3))
           : y(e)
         : ``;
     }

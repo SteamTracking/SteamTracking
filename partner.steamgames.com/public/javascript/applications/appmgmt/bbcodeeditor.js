@@ -64,63 +64,63 @@ import {
 } from "./chunk~25a6634263.js";
 import { l as Oe, n as ke, r as Ae, s as je } from "./chunk~b4171a8747.js";
 import {
-  $t as Me,
-  At as Ne,
-  Bi as Pe,
-  Cn as Fe,
-  Da as Ie,
-  Dt as Le,
-  Ea as Re,
-  Fn as ze,
-  G as Be,
-  Ha as Ve,
-  Ja as He,
-  Ka as Ue,
-  M as We,
+  At as Me,
+  Bn as Ne,
+  Bt as Pe,
+  Da as Fe,
+  Ga as Ie,
+  Gt as Le,
+  Ha as Re,
+  Hi as ze,
+  Ht as Be,
+  In as Ve,
+  Jt as He,
+  K as Ue,
+  Mn as We,
   N as Ge,
-  Ni as Ke,
-  Nn as qe,
-  Ot as Je,
-  Rn as Ye,
-  S as Xe,
-  Un as Ze,
-  Ut as Qe,
-  Va as $e,
-  Vi as et,
-  Vt as tt,
-  Wa as nt,
-  Wt as rt,
-  Xr as it,
-  Ya as k,
-  Yn as at,
-  br as ot,
-  da as st,
-  en as ct,
-  et as lt,
+  Oa as Ke,
+  Ot as qe,
+  P as Je,
+  Pi as Ye,
+  Pn as Xe,
+  S as Ze,
+  Ua as Qe,
+  Vi as $e,
+  Wn as et,
+  Wt as tt,
+  Xa as k,
+  Xn as nt,
+  Ya as rt,
+  Zr as it,
+  _a as at,
+  _n as ot,
+  aa as st,
+  an as ct,
+  da as A,
+  en as lt,
   f as ut,
-  g as dt,
-  ga as ft,
-  gn as pt,
-  h as mt,
-  ia as ht,
-  in as gt,
-  jn as _t,
-  k as vt,
-  kt as yt,
-  l as A,
-  m as bt,
-  n as xt,
-  pn as St,
-  qt as Ct,
-  u as wt,
-  ua as j,
-  zn as Tt,
-  zt as Et,
+  fa as dt,
+  g as ft,
+  h as pt,
+  jt as mt,
+  k as ht,
+  kt as gt,
+  l as j,
+  m as _t,
+  mn as vt,
+  n as yt,
+  qa as bt,
+  tn as xt,
+  tt as St,
+  u as Ct,
+  wn as wt,
+  xr as Tt,
+  zn as Et,
 } from "./chunk~1fa4b8f2ff.js";
-import { T as Dt, h as Ot, i as kt } from "./chunk~0a99e05c44.js";
+import { D as Dt, _ as Ot, i as kt } from "./chunk~0a99e05c44.js";
 import {
   G as At,
-  In as jt,
+  Ln as jt,
   N as Mt,
   U as Nt,
   Z as Pt,
@@ -158,10 +158,10 @@ import { r as ln } from "./chunk~b390ee0f78.js";
 import { i as un } from "./chunk~43407e91ef.js";
 import {
   _ as dn,
-  d as fn,
-  g as pn,
-  l as mn,
-  m as hn,
+  f as fn,
+  h as pn,
+  u as mn,
+  v as hn,
 } from "./chunk~cbbb6ae37c.js";
 import { t as gn } from "./chunk~e7f5a67b58.js";
 import { r as _n } from "./chunk~8681f5c764.js";
@@ -215,12 +215,12 @@ import {
 import { B as sr, b as cr } from "./chunk~af1574091f.js";
 import {
   C as lr,
-  _ as R,
-  b as ur,
-  f as dr,
-  g as fr,
+  S as ur,
+  b as dr,
+  m as fr,
   n as pr,
   v as mr,
+  y as R,
 } from "./chunk~2bee5a7d08.js";
 import "./chunk~a6b9ae1345.js";
 import "./chunk~ca0c999570.js";
@@ -375,7 +375,7 @@ var zr = ae(oe(), 1),
       (this.m_parentNode &&
         this.m_parentNode.tag == `img` &&
         !Wr(n) &&
-        (n = Ye(n)),
+        (n = Et(n)),
         super.AppendText(n, t));
     }
   };
@@ -414,7 +414,7 @@ function Yr(e) {
       }
       return (0, B.jsx)(`div`, {
         className: S(Jr, `AppSummaryWidgetCtn`),
-        children: st(
+        children: dt(
           e,
           (0, B.jsx)(`a`, { href: m.STORE_BASE_URL + `account/preferences/` }),
         ),
@@ -618,7 +618,7 @@ function fi(e, t, n, r) {
           : u
             ? `${a}curator/${e.clanSteamID.GetAccountID()}`
             : a +
-              dr(
+              fr(
                 e.clanSteamID.GetAccountID(),
                 e.GetSaleVanity(),
                 !!e.jsondata.sale_vanity_id_valve_approved_for_sale_subpath,
@@ -666,11 +666,11 @@ function hi(e) {
     a = Rt(),
     o = r && ii(e.route, t),
     s = di(t, e.route, o ? `relative` : `absolute`),
-    c = !o && s ? ze(s) : s,
+    c = !o && s ? Ve(s) : s,
     l = o || !c ? c : Cn(c, i),
     u = di(t, `websitehub`, `absolute`),
     d =
-      e.route == `websitehub` ? `` : $e.Localize(`#EventBrowse_MoreEventsBtn`),
+      e.route == `websitehub` ? `` : Re.Localize(`#EventBrowse_MoreEventsBtn`),
     f = z.useCallback(() => {
       u && window.location.assign(u);
     }, [u]);
@@ -717,8 +717,8 @@ function vi(e, t, n, r, i, a, o) {
       let s = [];
       if (!n.BImageNeedScreenshotFallback(r, i)) {
         let o = await e.ensureQueryData(tn(e, t, n, r, i, a));
-        if ((o && s.push(o), a != fr.full)) {
-          let a = await e.ensureQueryData(tn(e, t, n, r, i, fr.full));
+        if ((o && s.push(o), a != mr.full)) {
+          let a = await e.ensureQueryData(tn(e, t, n, r, i, mr.full));
           a && s.push(a);
         }
       }
@@ -731,7 +731,7 @@ function vi(e, t, n, r, i, a, o) {
   };
 }
 function yi(e) {
-  let t = ht.GetELanguageFallback(e);
+  let t = st.GetELanguageFallback(e);
   return e == t ? `${e}` : `${e}_${t}`;
 }
 function bi(e) {
@@ -821,7 +821,7 @@ function Di(e) {
     p = s.GetNameWithFallback(f),
     h = s.GetSubTitleWithSummaryFallback(f),
     g = d?.name,
-    _ = Re(s.GetStartTimeAndDateUnixSeconds());
+    _ = Fe(s.GetStartTimeAndDateUnixSeconds());
   return (0, B.jsxs)(hi, {
     eventModel: s,
     route: ti.k_eView,
@@ -834,7 +834,7 @@ function Di(e) {
         children: [
           (0, B.jsxs)(On, {
             children: [
-              j(
+              A(
                 s.type == 28
                   ? `#EventDisplay_Share_Announcement`
                   : `#EventDisplay_Share_Event`,
@@ -858,7 +858,7 @@ function Oi(e) {
       fnFilterImageURLsForKnownFailures: n,
       fnImageFailureCallback: r,
     } = e,
-    i = gi(t, `capsule`, C(m.LANGUAGE), fr.capsule_main) ?? [];
+    i = gi(t, `capsule`, C(m.LANGUAGE), mr.capsule_main) ?? [];
   return (
     i && n && (i = n(i)),
     (0, B.jsx)(hr, {
@@ -878,9 +878,9 @@ function Pi(e, t) {
   return t.some((t) => e == t || e.endsWith(`.${t}`));
 }
 function Fi(e) {
-  let t = qe(e).toLocaleLowerCase(),
-    n = qe(m.STORE_BASE_URL).toLocaleLowerCase(),
-    r = qe(m.COMMUNITY_BASE_URL).toLocaleLowerCase();
+  let t = Xe(e).toLocaleLowerCase(),
+    n = Xe(m.STORE_BASE_URL).toLocaleLowerCase(),
+    r = Xe(m.COMMUNITY_BASE_URL).toLocaleLowerCase();
   return t == n || t == r
     ? !0
     : Ai.includes(n)
@@ -981,7 +981,7 @@ function Yi(e) {
     r = m.COMMUNITY_BASE_URL + `sharedfiles/filedetails/?id=`,
     i = n ?? {
       sharedfileid: t,
-      title: j(`#Loading`),
+      title: A(`#Loading`),
       description: ``,
       type: ``,
       previewurl: ``,
@@ -998,7 +998,7 @@ function Yi(e) {
     strDescription: i.description,
     author:
       o &&
-      ft(`#EventEditor_Author`, (0, B.jsx)(jn, { children: i.personnaname })),
+      at(`#EventEditor_Author`, (0, B.jsx)(jn, { children: i.personnaname })),
     publishedfileid: t,
     appid: i.appid,
     bSizeToFit: i.bSizeToFit,
@@ -1064,7 +1064,7 @@ function sa(e) {
               children: [
                 (0, B.jsx)(`span`, {
                   className: ta,
-                  children: j(`#EventDisplay_Sketchfab`),
+                  children: A(`#EventDisplay_Sketchfab`),
                 }),
                 i?.title && (0, B.jsxs)(`div`, { children: [i.title, `\xA0`] }),
               ],
@@ -1110,7 +1110,7 @@ function fa(e) {
     a = `${m.MEDIA_CDN_COMMUNITY_URL}images/items/${r}/${i}`;
   return (0, B.jsx)(`div`, {
     className: da,
-    children: (0, B.jsx)(pt, {
+    children: (0, B.jsx)(ot, {
       toolTipContent: n.community_item_data.item_description,
       children: (0, B.jsx)(`img`, {
         src: a,
@@ -1242,16 +1242,16 @@ function Oa(e, t) {
     : F(e, t?.event);
 }
 function ka(e, t) {
-  return va() ? null : Na(e, (0, B.jsx)(et, {}), `@`, t);
+  return va() ? null : Na(e, (0, B.jsx)(ze, {}), `@`, t);
 }
 function Aa(e, t) {
-  return va() ? null : Na(e, (0, B.jsx)(et, {}), `#`, t);
+  return va() ? null : Na(e, (0, B.jsx)(ze, {}), `#`, t);
 }
 function ja(e, t) {
-  return va() ? null : Na(e, (0, B.jsx)(Pe, {}), void 0, t);
+  return va() ? null : Na(e, (0, B.jsx)($e, {}), void 0, t);
 }
 function Ma(e, t) {
-  return Na(e, (0, B.jsx)(Ke, {}), void 0, t);
+  return Na(e, (0, B.jsx)(Ye, {}), void 0, t);
 }
 function Na(e, t, n, r) {
   let i,
@@ -1301,7 +1301,7 @@ function La(e) {
     a = qr(L(e.args, `labelcolor`) || L(e.args, `color`), void 0),
     o = Pa(n),
     s = e.context.event,
-    c = mr(t, e.language, s?.rtime32_last_modified),
+    c = dr(t, e.language, s?.rtime32_last_modified),
     l = Sa(Ia(e.children, t) ? `` : (t ?? ``));
   if (l && t) return l.fnBBComponent(t, { event: e.context.event });
   if (c === void 0 || c == null) return e.children || ``;
@@ -1310,7 +1310,7 @@ function La(e) {
   return typeof t == `string` && t.length > 0 && t[0] == `#`
     ? (0, B.jsx)(De, { className: o, href: t, style: u, children: e.children })
     : t == `steam://settings/account`
-      ? (0, B.jsx)(Fe, {
+      ? (0, B.jsx)(wt, {
           className: o,
           href: `steam://settings/account`,
           children: e.children,
@@ -1769,7 +1769,7 @@ function to(e) {
     a = (0, z.useRef)(null),
     o = (0, z.useRef)(null),
     [s, c] = (0, z.useState)(`none`);
-  (Xe(s == `theater`), (n = !!n), (r = !!r));
+  (Ze(s == `theater`), (n = !!n), (r = !!r));
   let l = fe(
       (e) => {
         if (((o.current = e), !e)) return;
@@ -2295,7 +2295,7 @@ function gs(e) {
 }
 function _s(e) {
   let { onClick: t, checked: n, children: r } = e,
-    [i, a] = Ue(),
+    [i, a] = bt(),
     o = S(ds, n && `vi2dzrdIGJY-`),
     s = `#2d73ff`,
     c = `#00ccff`;
@@ -2311,7 +2311,7 @@ function _s(e) {
         (e.key === `Enter` || e.key === ` `) && (e.preventDefault(), t());
       },
       ...a,
-      children: [r, n && (0, B.jsx)(ot, { color: s, highlightColor: c })],
+      children: [r, n && (0, B.jsx)(Tt, { color: s, highlightColor: c })],
     })
   );
 }
@@ -2405,7 +2405,7 @@ var Ss = 4,
       } = e,
       s = Eo(),
       c = No(r);
-    return (0, B.jsx)(pt, {
+    return (0, B.jsx)(ot, {
       toolTipContent: n,
       direction: `top`,
       usePointerEvents: !0,
@@ -2422,8 +2422,8 @@ var Ss = 4,
 function ws(e) {
   let { player: t } = e,
     [n, r] = Ro(t),
-    i = Ie(n, !1),
-    a = Ie(r, !1);
+    i = Ke(n, !1),
+    a = Ke(r, !1);
   return (0, B.jsxs)(`div`, {
     className: Go,
     children: [
@@ -2453,7 +2453,7 @@ function Es(e) {
   if (!t || !t.bSupportsFullscreen) return null;
   z.use(W.Ready());
   let r = t.strMode == `fullscreen`,
-    i = r ? (0, B.jsx)(Be, {}) : (0, B.jsx)(yr, {}),
+    i = r ? (0, B.jsx)(Ue, {}) : (0, B.jsx)(yr, {}),
     a = W.Localize(
       r
         ? `#TrailerPlayer_ExitFullScreen_Tooltip`
@@ -2480,7 +2480,7 @@ function Ds(e) {
           onActivate: c,
           tooltip: W.Localize(`#TrailerPlayer_Settings_Tooltip`),
           disableTooltip: s,
-          children: (0, B.jsx)(lt, { className: l }),
+          children: (0, B.jsx)(St, { className: l }),
         }),
         r && (0, B.jsx)(vs, { player: t, refButton: o, onClose: a }),
       ],
@@ -2505,7 +2505,7 @@ function Os(e) {
               ref: a,
               onActivate: c,
               tooltip: W.Localize(`#TrailerPlayer_Captions_Tooltip`),
-              children: [s && (0, B.jsx)(Ge, {}), !s && (0, B.jsx)(We, {})],
+              children: [s && (0, B.jsx)(Je, {}), !s && (0, B.jsx)(Ge, {})],
             }),
             n && (0, B.jsx)(xs, { player: t, refButton: a, onClose: i }),
           ],
@@ -2546,7 +2546,7 @@ function ks(e) {
     "aria-valuemin": 0,
     "aria-valuemax": Math.round(s),
     "aria-valuenow": Math.round(o),
-    "aria-valuetext": `${Ie(o, !1)} / ${Ie(s, !1)}`,
+    "aria-valuetext": `${Ke(o, !1)} / ${Ke(s, !1)}`,
     onClick: f,
     onKeyDown: v,
     onPointerMove: l.onPointerMove,
@@ -2764,7 +2764,7 @@ function Is(e) {
     [r, i, a, o] = Lo(t);
   z.use(W.Ready());
   let s = n(),
-    c = r ? (0, B.jsx)(Ne, {}) : (0, B.jsx)(Le, {}),
+    c = r ? (0, B.jsx)(mt, {}) : (0, B.jsx)(qe, {}),
     l = W.Localize(
       r ? `#TrailerPlayer_Unmute_Tooltip` : `#TrailerPlayer_Mute_Tooltip`,
     );
@@ -2829,7 +2829,7 @@ function Hs(e) {
     d = To(l, u, a);
   s ||= l;
   let f = Us(t),
-    p = He(!!i),
+    p = rt(!!i),
     m = S(oo, s && `YnJEGhfB0wI-`);
   return (0, B.jsx)(Co.Provider, {
     value: d,
@@ -2996,12 +2996,12 @@ function Ys(e) {
     l;
   l =
     r || i === 0
-      ? (0, B.jsx)(Ne, {})
+      ? (0, B.jsx)(mt, {})
       : i < 0.3
-        ? (0, B.jsx)(Je, {})
+        ? (0, B.jsx)(gt, {})
         : i < 0.6
-          ? (0, B.jsx)(yt, {})
-          : (0, B.jsx)(Le, {});
+          ? (0, B.jsx)(Me, {})
+          : (0, B.jsx)(qe, {});
   let u = W.Localize(
     r ? `#TrailerPlayer_Unmute_Tooltip` : `#TrailerPlayer_Mute_Tooltip`,
   );
@@ -3014,7 +3014,7 @@ function Ys(e) {
       s &&
         (0, B.jsx)(`div`, {
           className: `KiYQJsCfGxI-`,
-          children: (0, B.jsx)(xt, {
+          children: (0, B.jsx)(yt, {
             min: 0,
             max: 1,
             value: r ? 0 : i,
@@ -3030,7 +3030,7 @@ function Xs(e) {
   let [t, n] = (0, z.useState)(!1),
     r = (0, z.useCallback)(() => n(!0), [n]);
   return (
-    nt(e, `mouseleave`, (e) => {
+    Ie(e, `mouseleave`, (e) => {
       e.target == e.currentTarget && n(!1);
     }),
     [t, r]
@@ -3270,7 +3270,7 @@ function kc(e) {
     te = S(yc, i && `wXx6UBVpmP0-`);
   return (0, B.jsx)(Co.Provider, {
     value: v,
-    children: (0, B.jsxs)(Ve, {
+    children: (0, B.jsxs)(Qe, {
       className: vc,
       focusable: !0,
       onClick: m,
@@ -3501,7 +3501,7 @@ function zc(e) {
     },
     [n, a],
   );
-  return [at(o), r.current];
+  return [nt(o), r.current];
 }
 function Bc(e) {
   let { player: t, uiMode: r, category: i, title: a, focus: o } = e,
@@ -3690,7 +3690,7 @@ function Xc(e) {
             className: S({ [Uc]: t == `pill`, [Wc]: t == `button` }),
             onClick: () => l(!0),
             style: { color: r, backgroundColor: i },
-            children: [(0, B.jsx)(it, {}), a || j(`#EventEmail_WatchNow`)],
+            children: [(0, B.jsx)(it, {}), a || A(`#EventEmail_WatchNow`)],
           }),
           (0, B.jsx)(qc, {
             id: u,
@@ -3710,7 +3710,7 @@ function Zc(e) {
     r = ln(t),
     { data: i } = Ot(r),
     [a, o] = (0, z.useState)(() =>
-      !t || !n ? j(`#TrailerPlayer_ID_NotProvided`) : null,
+      !t || !n ? A(`#TrailerPlayer_ID_NotProvided`) : null,
     ),
     s = an(r),
     c = (0, z.useMemo)(
@@ -3720,10 +3720,10 @@ function Zc(e) {
   return (
     (0, z.useEffect)(() => {
       (i?.unvailable_for_country_restriction &&
-        o(j(`#TrailerPlayer_CouldNotLoad`, t, n)),
+        o(A(`#TrailerPlayer_CouldNotLoad`, t, n)),
         s &&
           !c &&
-          o(j(`#TrailerPlayer_CouldNotLoad`, e.appid, e.trailerBaseID)));
+          o(A(`#TrailerPlayer_CouldNotLoad`, e.appid, e.trailerBaseID)));
     }, [
       t,
       e.appid,
@@ -3735,11 +3735,11 @@ function Zc(e) {
     ]),
     a
       ? e.bIsPreviewMode
-        ? (0, B.jsx)(`div`, { className: dn, children: a })
+        ? (0, B.jsx)(`div`, { className: hn, children: a })
         : null
       : c
         ? (0, B.jsx)(Qc, { trailerToPlay: c })
-        : (0, B.jsx)(P, { string: j(`#Loading`), size: `small` })
+        : (0, B.jsx)(P, { string: A(`#Loading`), size: `small` })
   );
 }
 function Qc(e) {
@@ -3785,7 +3785,7 @@ function $c(e) {
 var el = `FQV2hlT8BYs-`;
 function tl(e) {
   let { strURL: t, children: n } = e;
-  return (typeof t == `string` ? !_t(t) : t.some((e) => !_t(e)))
+  return (typeof t == `string` ? !We(t) : t.some((e) => !We(e)))
     ? (0, B.jsx)(nl, { children: n })
     : (0, B.jsx)(B.Fragment, { children: n });
 }
@@ -3795,7 +3795,7 @@ function nl(e) {
     ? (0, B.jsx)(B.Fragment, { children: t })
     : (0, B.jsx)(`div`, {
         className: el,
-        children: st(
+        children: dt(
           `#Image_Externally_Hosted_Hidden`,
           (0, B.jsx)(`a`, {
             href: m.STORE_BASE_URL + `account/cookiepreferences`,
@@ -3852,24 +3852,24 @@ function al(e) {
     r = L(e.args, `src`) || e.children?.toString();
   ((r ||= L(e.args)), (r = sr(r ?? ``) || void 0));
   let i = L(e.args, `style`) === `inline`,
-    a = mr(r, e.language, n?.rtime32_last_modified);
+    a = dr(r, e.language, n?.rtime32_last_modified);
   if (a == null) return null;
   if (typeof a == `string`) {
     r = a;
     let e;
     return (
-      (e = !_t(r)),
+      (e = !We(r)),
       n?.BHasTag(`auto_rssfeed`) && (e = !1),
       t
-        ? (0, B.jsx)(hn, {
+        ? (0, B.jsx)(pn, {
             className: S({ [cr]: i }),
             src: r,
             crossOrigin: e ? `anonymous` : void 0,
           })
-        : ((r = Ye(r)),
+        : ((r = Et(r)),
           (0, B.jsx)(tl, {
             strURL: r,
-            children: (0, B.jsx)(pn, {
+            children: (0, B.jsx)(dn, {
               className: S({ [cr]: i }),
               src: r,
               crossOrigin: e ? `anonymous` : void 0,
@@ -6594,13 +6594,14 @@ var K = ae(ee(), 1),
     return e.SendMsg(`LoyaltyRewards.GetSummary#1`, b(gl, t, n), _l, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetSummary = n;
   function r(e, t, n) {
     return e.SendMsg(`LoyaltyRewards.RedeemPoints#1`, b(xl, t, n), wl, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.RedeemPoints = r;
@@ -6609,7 +6610,7 @@ var K = ae(ee(), 1),
       `LoyaltyRewards.RedeemPointsForBadgeLevel#1`,
       b(Sl, t, n),
       wl,
-      { ePrivilege: 1 },
+      { ePrivilege: 1, rgBrowserAPISites: [`store`] },
     );
   }
   e.RedeemPointsForBadgeLevel = i;
@@ -6627,7 +6628,7 @@ var K = ae(ee(), 1),
       `LoyaltyRewards.RedeemPointsForProfileCustomization#1`,
       b(Tl, t, n),
       El,
-      { ePrivilege: 1 },
+      { ePrivilege: 1, rgBrowserAPISites: [`store`] },
     );
   }
   e.RedeemPointsForProfileCustomization = o;
@@ -6636,7 +6637,7 @@ var K = ae(ee(), 1),
       `LoyaltyRewards.RedeemPointsForProfileCustomizationUpgrade#1`,
       b(Dl, t, n),
       Ol,
-      { ePrivilege: 1 },
+      { ePrivilege: 1, rgBrowserAPISites: [`store`] },
     );
   }
   e.RedeemPointsForProfileCustomizationUpgrade = s;
@@ -6652,7 +6653,7 @@ var K = ae(ee(), 1),
   function l(e, t, n) {
     return e.SendMsg(`LoyaltyRewards.AddReaction#1`, b(jl, t, n), Ml, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.AddReaction = l;
@@ -6660,7 +6661,7 @@ var K = ae(ee(), 1),
     return e.SendMsg(`LoyaltyRewards.GetReactions#1`, b(Nl, t, n), Pl, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetReactions = u;
@@ -6678,7 +6679,7 @@ var K = ae(ee(), 1),
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetReactionConfig = f;
@@ -6696,6 +6697,7 @@ var K = ae(ee(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.GetEligibleApps = m;
@@ -6704,7 +6706,12 @@ var K = ae(ee(), 1),
       `LoyaltyRewards.GetActivePurchaseBonuses#1`,
       b(Xl, t, n),
       Zl,
-      { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.GetActivePurchaseBonuses = h;
@@ -6713,7 +6720,7 @@ var K = ae(ee(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.QueryRewardItems = g;
@@ -6722,7 +6729,12 @@ var K = ae(ee(), 1),
       `LoyaltyRewards.BatchedQueryRewardItems#1`,
       b(eu, t, n),
       tu,
-      { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.BatchedQueryRewardItems = _;
@@ -6731,7 +6743,12 @@ var K = ae(ee(), 1),
       `LoyaltyRewards.GetEquippedProfileItems#1`,
       b(ru, t, n),
       iu,
-      { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.GetEquippedProfileItems = v;
@@ -7255,7 +7272,7 @@ var Du = `ARyrUoFBJKQ-`,
     renderNoMatchMessage() {
       return (0, B.jsx)(
         `div`,
-        { className: S(Cu, void 0), children: j(`#Bbcode_No_Match`) },
+        { className: S(Cu, void 0), children: A(`#Bbcode_No_Match`) },
         `nomatches`,
       );
     }
@@ -8128,7 +8145,7 @@ var ju = class e extends K.Message {
     return e.SendMsg(`FriendsList.GetFriendsList#1`, b(Hu, t, n), Uu, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetFriendsList = n;
@@ -8136,7 +8153,7 @@ var ju = class e extends K.Message {
     return e.SendMsg(`FriendsList.GetFavorites#1`, b(Lu, t, n), Ru, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetFavorites = r;
@@ -8210,24 +8227,24 @@ var Ju = `nIUbxO5p4A8-`,
         (n(e), o());
       };
     return (0, B.jsx)(Ee, {
-      children: (0, B.jsx)(dt, {
+      children: (0, B.jsx)(ft, {
         onEscKeypress: o,
-        children: (0, B.jsxs)(Ct, {
+        children: (0, B.jsxs)(He, {
           children: [
-            (0, B.jsx)(ct, { children: j(`#ClanImageChooser_Title`) }),
-            (0, B.jsx)(tt, {
-              children: (0, B.jsxs)(Qe, {
+            (0, B.jsx)(xt, { children: A(`#ClanImageChooser_Title`) }),
+            (0, B.jsx)(Be, {
+              children: (0, B.jsxs)(tt, {
                 children: [
-                  (0, B.jsx)(`p`, { children: j(`#ClanImageChooser_Desc`) }),
-                  (0, B.jsx)(Et, {
-                    placeholder: j(`#ClanImageChooser_Search`),
+                  (0, B.jsx)(`p`, { children: A(`#ClanImageChooser_Desc`) }),
+                  (0, B.jsx)(Pe, {
+                    placeholder: A(`#ClanImageChooser_Search`),
                     value: r,
                     onChange: (e) => i(e.currentTarget.value),
                   }),
                   (0, B.jsx)(`div`, {
                     className: fd,
                     children: a
-                      ? (0, B.jsx)(P, { size: `medium`, string: j(`#Loading`) })
+                      ? (0, B.jsx)(P, { size: `medium`, string: A(`#Loading`) })
                       : s.length > 0
                         ? s.map((e) =>
                             (0, B.jsx)(
@@ -8242,10 +8259,10 @@ var Ju = `nIUbxO5p4A8-`,
                           )
                         : r.trim().length == 0
                           ? (0, B.jsx)(`div`, {
-                              children: j(`#ClanImageChooser_None`),
+                              children: A(`#ClanImageChooser_None`),
                             })
                           : (0, B.jsx)(`div`, {
-                              children: j(
+                              children: A(
                                 `#EventCalendar_GameSearch_NoneFound`,
                               ),
                             }),
@@ -8253,10 +8270,10 @@ var Ju = `nIUbxO5p4A8-`,
                 ],
               }),
             }),
-            (0, B.jsx)(Me, {
-              children: (0, B.jsx)(rt, {
+            (0, B.jsx)(lt, {
+              children: (0, B.jsx)(Le, {
                 onClick: o,
-                children: j(`#Button_Cancel`),
+                children: A(`#Button_Cancel`),
               }),
             }),
           ],
@@ -8325,8 +8342,8 @@ function bd(e, t, n) {
     bDeprecated: (n ?? 0) >= 1,
     fnGetLabelText() {
       return this.artworkType == `spotlight`
-        ? j(`#EventEditor_ArtworkType_store_spotlight`)
-        : j(`#EventEditor_ArtworkType_` + this.artworkType);
+        ? A(`#EventEditor_ArtworkType_store_spotlight`)
+        : A(`#EventEditor_ArtworkType_` + this.artworkType);
     },
   };
 }
@@ -8554,7 +8571,7 @@ var wd = M((e) => {
     }, [m, n]);
     let h = (e) => {
         let t = new O(re.CLANSTEAMID);
-        mt(
+        pt(
           (0, B.jsx)(_d, {
             clanSteamID: t,
             fnImageSelectCallBack: (e) => m(e),
@@ -8565,7 +8582,7 @@ var wd = M((e) => {
       g = (e) => {
         let t = D(e) ?? window,
           n = p.GetUploadImages()[0];
-        mt(
+        pt(
           (0, B.jsx)(kr, {
             ownerWin: t,
             uploadFile: n,
@@ -8620,7 +8637,7 @@ var wd = M((e) => {
     return (0, B.jsxs)(B.Fragment, {
       children: [
         l
-          ? (0, B.jsx)(P, { size: `medium`, string: j(`#Loading`) })
+          ? (0, B.jsx)(P, { size: `medium`, string: A(`#Loading`) })
           : s &&
             (0, B.jsx)(`div`, {
               className: `_9Z5REaLWRq4-`,
@@ -8632,25 +8649,25 @@ var wd = M((e) => {
             }),
         !!v && (0, B.jsx)(`p`, { children: v }),
         ee &&
-          (0, B.jsx)(rt, { onClick: g, children: j(`#BBCode_ResizeImage`) }),
+          (0, B.jsx)(Le, { onClick: g, children: A(`#BBCode_ResizeImage`) }),
         y &&
           y.bCropped &&
           (0, B.jsxs)(B.Fragment, {
             children: [
               (0, B.jsx)(`div`, {
-                children: j(`#ClanImagePickAndResize_UploadStatus`, y.status),
+                children: A(`#ClanImagePickAndResize_UploadStatus`, y.status),
               }),
               d
-                ? (0, B.jsx)(P, { string: j(`#Uploading`), size: `small` })
-                : (0, B.jsx)(rt, {
+                ? (0, B.jsx)(P, { string: A(`#Uploading`), size: `small` })
+                : (0, B.jsx)(Le, {
                     onClick: _,
-                    children: j(`#ClanImagePickAndResize_UploadImage`),
+                    children: A(`#ClanImagePickAndResize_UploadImage`),
                   }),
             ],
           }),
-        (0, B.jsx)(rt, {
+        (0, B.jsx)(Le, {
           onClick: h,
-          children: j(`#BBCode_ChooseImage`, r, i),
+          children: A(`#BBCode_ChooseImage`, r, i),
         }),
       ],
     });
@@ -8710,8 +8727,8 @@ var wd = M((e) => {
           })
         : this.state.formattingHelp.__html == ``
           ? (0, B.jsx)(P, {})
-          : (0, B.jsx)(A, {
-              strTitle: j(`#EventEditor_FormattingHelp_GetHelpLink`),
+          : (0, B.jsx)(j, {
+              strTitle: A(`#EventEditor_FormattingHelp_GetHelpLink`),
               strDescription: ``,
               closeModal: this.props.closeModal,
               onOK: this.props.closeModal,
@@ -8950,11 +8967,11 @@ var X = class e {
     }
     OnAddLink(e) {
       let t = this.props.fnTextareaRef();
-      t && bt((0, B.jsx)(kd, { textareaRef: t }), D(e) ?? window);
+      t && _t((0, B.jsx)(kd, { textareaRef: t }), D(e) ?? window);
     }
     ShowHelpDialog(e) {
       this.props.showFormatHelp &&
-        bt(
+        _t(
           (0, B.jsx)(Ed, { formatType: this.props.showFormatHelp }),
           D(e) ?? window,
         );
@@ -8963,24 +8980,24 @@ var X = class e {
       let t = this.props.fnTextareaRef();
       if (!t) return;
       let n = D(e) ?? window;
-      bt((0, B.jsx)(Pd, { ownerWindow: n, textareaRef: t }), n);
+      _t((0, B.jsx)(Pd, { ownerWindow: n, textareaRef: t }), n);
     }
     OnOpenYoutubeDialog(e) {
       let t = this.props.fnTextareaRef();
       if (!t) return;
       let n = T.IMG_URL + `applications/community/`;
-      bt((0, B.jsx)($, { textareaRef: t, pathToImages: n }), D(e) ?? window);
+      _t((0, B.jsx)($, { textareaRef: t, pathToImages: n }), D(e) ?? window);
     }
     OnOpenImageDialog(e) {
       let t = this.props.fnTextareaRef();
-      t && bt((0, B.jsx)(Ad, { textareaRef: t }), D(e) ?? window);
+      t && _t((0, B.jsx)(Ad, { textareaRef: t }), D(e) ?? window);
     }
     OnOpenSpeakerDialog(e) {
       let t = this.props.fnTextareaRef(),
         n = this.props.clanSteamID;
       t &&
         n &&
-        mt((0, B.jsx)(jd, { clanSteamID: n, textareaRef: t }), D(e) ?? window);
+        pt((0, B.jsx)(jd, { clanSteamID: n, textareaRef: t }), D(e) ?? window);
     }
     OnEmoticonSelected(e, t = !1) {
       let n = `\u02D0${e}\u02D0`;
@@ -9003,15 +9020,15 @@ var X = class e {
           (i = t
             ? (0, B.jsx)(`span`, {
                 className: S(`ttip`, void 0),
-                children: (0, B.jsx)(pt, {
-                  toolTipContent: j(`#EventEditor_FormattingHelp_GetHelpLink`),
+                children: (0, B.jsx)(ot, {
+                  toolTipContent: A(`#EventEditor_FormattingHelp_GetHelpLink`),
                   children: (0, B.jsxs)(`a`, {
                     href: Ed.GetHelpURL(e, !1),
                     target: T.IN_CLIENT ? void 0 : `_blank`,
                     children: [
                       (0, B.jsx)(`img`, { src: r + `/action_help.png` }),
                       ` `,
-                      j(`#EventEditor_FormattingHelp_GetHelpLink`),
+                      A(`#EventEditor_FormattingHelp_GetHelpLink`),
                     ],
                   }),
                 }),
@@ -9019,12 +9036,12 @@ var X = class e {
             : (0, B.jsx)(`span`, {
                 onClick: this.ShowHelpDialog,
                 className: S(`ttip`, void 0),
-                children: (0, B.jsxs)(pt, {
-                  toolTipContent: j(`#EventEditor_FormattingHelp_GetHelpLink`),
+                children: (0, B.jsxs)(ot, {
+                  toolTipContent: A(`#EventEditor_FormattingHelp_GetHelpLink`),
                   children: [
                     (0, B.jsx)(`img`, { src: r + `/action_help.png` }),
                     ` `,
-                    j(`#EventEditor_FormattingHelp_GetHelpLink`),
+                    A(`#EventEditor_FormattingHelp_GetHelpLink`),
                   ],
                 }),
               })),
@@ -9034,75 +9051,75 @@ var X = class e {
             this.BSupports(`b`) &&
               (0, B.jsx)(Q, {
                 onClick: this.onBold,
-                tooltip: j(`#Editor_Bold`),
+                tooltip: A(`#Editor_Bold`),
                 imgURL: this.props.pathToImages + `/format_bold.png`,
               }),
             this.BSupports(`u`) &&
               (0, B.jsx)(Q, {
                 onClick: this.onUnderline,
-                tooltip: j(`#Editor_Underline`),
+                tooltip: A(`#Editor_Underline`),
                 imgURL: this.props.pathToImages + `/format_underline.png`,
               }),
             this.BSupports(`i`) &&
               (0, B.jsx)(Q, {
                 onClick: this.onItalics,
-                tooltip: j(`#Editor_Italics`),
+                tooltip: A(`#Editor_Italics`),
                 imgURL: this.props.pathToImages + `/format_italic.png`,
               }),
             this.BSupports(`strike`) &&
               (0, B.jsx)(Q, {
                 onClick: this.onStrikeThrough,
-                tooltip: j(`#Editor_StrikeThrough`),
+                tooltip: A(`#Editor_StrikeThrough`),
                 imgURL: this.props.pathToImages + `/format_strike.png`,
               }),
             !(!this.BSupports(`url`) || t) &&
               (0, B.jsx)(Q, {
                 onClick: this.OnAddLink,
-                tooltip: j(`#Editor_Link`),
+                tooltip: A(`#Editor_Link`),
                 imgURL: this.props.pathToImages + `/format_link.png`,
               }),
             this.BSupports(`list`) &&
               (0, B.jsx)(Q, {
                 onClick: this.onUnorderedList,
-                tooltip: j(`#Editor_Unordered`),
+                tooltip: A(`#Editor_Unordered`),
                 imgURL: this.props.pathToImages + `/format_bullet.png`,
               }),
             this.BSupports(`olist`) &&
               (0, B.jsx)(Q, {
                 onClick: this.onOrderedList,
-                tooltip: j(`#Editor_Ordered`),
+                tooltip: A(`#Editor_Ordered`),
                 imgURL: this.props.pathToImages + `/format_numbered.png`,
               }),
             this.BSupports(`h1`) &&
               (0, B.jsx)(Q, {
                 onClick: this.onHeader,
-                tooltip: j(`#Editor_Header`),
+                tooltip: A(`#Editor_Header`),
                 imgURL: this.props.pathToImages + `/format_header1.png`,
               }),
             this.BSupports(`h2`) &&
               (0, B.jsx)(Q, {
                 onClick: this.onHeader2,
-                tooltip: j(`#Editor_Header2`),
+                tooltip: A(`#Editor_Header2`),
                 imgURL: this.props.pathToImages + `/format_header2.png`,
               }),
             this.BSupports(`h3`) &&
               (0, B.jsx)(Q, {
                 onClick: this.onHeader3,
-                tooltip: j(`#Editor_Header3`),
+                tooltip: A(`#Editor_Header3`),
                 imgURL: this.props.pathToImages + `/format_header3.png`,
               }),
             this.BSupports(`previewyoutube`) &&
               (0, B.jsx)(Q, {
                 onClick: this.OnOpenYoutubeDialog,
-                tooltip: j(`#EventEditor_InsertYouTube`),
+                tooltip: A(`#EventEditor_InsertYouTube`),
                 imgURL: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYyNjlFOEM1MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYyNjlFOEM2MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjI2OUU4QzMyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjI2OUU4QzQyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4IrEPeAAABJ0lEQVR42mL8//8/AzmABUScEOZJI1HfLBaoppmk2sh4Ql/r/69HD0jSxCanwMD07eVzhl9ADgz/ZmJikMjOY2CUlEIRR8YgPYzbBLhQQoeJl4/B7uY9hv9//jC8XLWc4UFfD8OPZ08xbGX6CSSQ8XdgKH/79o3h+69fDHwBwQy6ew8ySOYXMfxiZERRx/ILPTqA/K9fv8K5f4EG3Pn5i+EfSB2SWpaf6G6A2vgP6NSrWzYz3J8zk0Hk9SsGVka0ePzLxs7w9ydC+3+gpn29PQzv9uxiEHz7mkEY6ESQPb+QHMbMwcHAwiotw/Dj3h2E6L+/DIyrljKIgCMLGMoMmCmLQ0qagdnh66fn/xgYfP+B9BCJv79/lw5KcrPISKqzGMlN5AABBgBSmY83jVsiQAAAAABJRU5ErkJggg==`,
               }),
             (0, B.jsx)(`span`, {
               className: `ttip`,
               children:
                 this.props.emoticonStore &&
-                (0, B.jsx)(pt, {
-                  toolTipContent: j(`#Editor_Emoticon`),
+                (0, B.jsx)(ot, {
+                  toolTipContent: A(`#Editor_Emoticon`),
                   children: (0, B.jsx)(er, {
                     title: ` `,
                     className: S(`_5LFNlKLTFJM-`),
@@ -9121,7 +9138,7 @@ var X = class e {
             !(!this.BSupports(`img`) || t) &&
               (0, B.jsx)(Q, {
                 onClick: this.OnOpenImageDialog,
-                tooltip: j(`#EventEditor_InsertImage`),
+                tooltip: A(`#EventEditor_InsertImage`),
                 imgURL: this.props.pathToImages + `/insert_img.png`,
               }),
             !!(
@@ -9131,15 +9148,15 @@ var X = class e {
             ) &&
               (0, B.jsx)(Q, {
                 onClick: this.OnOpenSpeakerDialog,
-                tooltip: j(`#EventEditor_AddSpeaker`),
+                tooltip: A(`#EventEditor_AddSpeaker`),
                 imgURL: this.props.pathToImages + `/insert_img.png`,
               }),
             !(!n || t) &&
               (0, B.jsx)(Q, {
                 onClick: this.OnConvertHTMLToBBCodeDialog,
                 className: void 0,
-                tooltip: j(`#EventEditor_ImportFromHTML_ttip`),
-                children: j(`#EventEditor_ImportHTML`),
+                tooltip: A(`#EventEditor_ImportFromHTML_ttip`),
+                children: A(`#EventEditor_ImportHTML`),
               }),
             i,
           ],
@@ -9168,7 +9185,7 @@ function Q(e) {
   return (0, B.jsx)(`span`, {
     onClick: e.onClick,
     className: e.className,
-    children: (0, B.jsxs)(pt, {
+    children: (0, B.jsxs)(ot, {
       toolTipContent: e.tooltip,
       className: `ttip`,
       children: [
@@ -9182,7 +9199,7 @@ var $ = class extends z.Component {
   state = { youtubeInput: ``, alignment: I.left };
   OnYoutubeInsertLink() {
     let e = this.state.youtubeInput && Fn(this.state.youtubeInput);
-    if (!e) alert(j(`#EventEditor_InsertYouTube_NoURL`));
+    if (!e) alert(A(`#EventEditor_InsertYouTube_NoURL`));
     else {
       if (this.state.alignment == I.summary) {
         let t =
@@ -9216,13 +9233,13 @@ var $ = class extends z.Component {
   }
   OnOuterDivClickPassDown(e) {}
   render() {
-    return (0, B.jsx)(A, {
-      strTitle: j(`#EventEditor_InsertYouTube`),
+    return (0, B.jsx)(j, {
+      strTitle: A(`#EventEditor_InsertYouTube`),
       strDescription: ``,
       closeModal: this.props.closeModal,
       onCancel: this.props.closeModal,
       onOK: this.OnYoutubeInsertLink,
-      strOKButtonText: j(`#EventEditor_InsertYouTube`),
+      strOKButtonText: A(`#EventEditor_InsertYouTube`),
       className: dd,
       children: (0, B.jsxs)(`div`, {
         className: nd,
@@ -9233,7 +9250,7 @@ var $ = class extends z.Component {
               children: [
                 (0, B.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: j(`#EventEditor_InsertYouTube_URL`),
+                  children: A(`#EventEditor_InsertYouTube_URL`),
                 }),
                 (0, B.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
@@ -9245,7 +9262,7 @@ var $ = class extends z.Component {
                     type: `text`,
                     value: this.state.youtubeInput,
                     onChange: this.OnUrlChange,
-                    placeholder: j(`#EventEditor_InsertYouTube_Placholder`),
+                    placeholder: A(`#EventEditor_InsertYouTube_Placholder`),
                   }),
                 }),
               ],
@@ -9256,7 +9273,7 @@ var $ = class extends z.Component {
             children: [
               (0, B.jsx)(`div`, {
                 className: `DialogLabel`,
-                children: j(`#EventEditor_InsertYouTube_Position`),
+                children: A(`#EventEditor_InsertYouTube_Position`),
               }),
               (0, B.jsxs)(`div`, {
                 className: rd,
@@ -9273,7 +9290,7 @@ var $ = class extends z.Component {
                   (0, B.jsx)(`label`, {
                     htmlFor: I.left,
                     children: (0, B.jsx)(`span`, {
-                      children: j(`#EventEditor_InsertYouTube_Left`),
+                      children: A(`#EventEditor_InsertYouTube_Left`),
                     }),
                   }),
                 ],
@@ -9293,7 +9310,7 @@ var $ = class extends z.Component {
                   (0, B.jsx)(`label`, {
                     htmlFor: I.right,
                     children: (0, B.jsx)(`span`, {
-                      children: j(`#EventEditor_InsertYouTube_Right`),
+                      children: A(`#EventEditor_InsertYouTube_Right`),
                     }),
                   }),
                 ],
@@ -9313,7 +9330,7 @@ var $ = class extends z.Component {
                   (0, B.jsx)(`label`, {
                     htmlFor: I.full,
                     children: (0, B.jsx)(`span`, {
-                      children: j(`#EventEditor_InsertYouTube_Full`),
+                      children: A(`#EventEditor_InsertYouTube_Full`),
                     }),
                   }),
                 ],
@@ -9333,7 +9350,7 @@ var $ = class extends z.Component {
                   (0, B.jsx)(`label`, {
                     htmlFor: I.summary,
                     children: (0, B.jsx)(`span`, {
-                      children: j(`#EventEditor_InsertYouTube_Summary`),
+                      children: A(`#EventEditor_InsertYouTube_Summary`),
                     }),
                   }),
                 ],
@@ -9384,13 +9401,13 @@ var kd = class extends z.Component {
     X.replaceSelection(this.props.textareaRef.current, n);
   }
   render() {
-    return (0, B.jsx)(A, {
-      strTitle: j(`#Editor_Link`),
+    return (0, B.jsx)(j, {
+      strTitle: A(`#Editor_Link`),
       strDescription: ``,
       closeModal: this.props.closeModal,
       onOK: this.onInsertLink,
       onCancel: this.props.closeModal,
-      strOKButtonText: j(`#EventEditor_InsertLinkURL`),
+      strOKButtonText: A(`#EventEditor_InsertLinkURL`),
       className: dd,
       children: (0, B.jsxs)(`div`, {
         className: Xu,
@@ -9401,7 +9418,7 @@ var kd = class extends z.Component {
               children: [
                 (0, B.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: j(`#EventEditor_LinkDescription`),
+                  children: A(`#EventEditor_LinkDescription`),
                 }),
                 (0, B.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
@@ -9421,7 +9438,7 @@ var kd = class extends z.Component {
               children: [
                 (0, B.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: j(`#EventEditor_LinkURL`),
+                  children: A(`#EventEditor_LinkURL`),
                 }),
                 (0, B.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
@@ -9469,25 +9486,25 @@ var Ad = class extends z.Component {
   }
   render() {
     let { imgURL: e, anchorURL: t } = this.state;
-    return (0, B.jsx)(A, {
-      strTitle: j(`#EventEditor_InsertImage_Title`),
+    return (0, B.jsx)(j, {
+      strTitle: A(`#EventEditor_InsertImage_Title`),
       strDescription: ``,
       closeModal: this.props.closeModal,
       onCancel: this.props.closeModal,
       onOK: this.OnImageInsert,
-      strOKButtonText: j(`#EventEditor_InsertImage_Title`),
+      strOKButtonText: A(`#EventEditor_InsertImage_Title`),
       className: dd,
       children: (0, B.jsxs)(`div`, {
         className: Xu,
         children: [
-          (0, B.jsx)(`p`, { children: j(`#EventEditor_InsertImage_Desc`) }),
+          (0, B.jsx)(`p`, { children: A(`#EventEditor_InsertImage_Desc`) }),
           (0, B.jsx)(`div`, {
             className: `DialogInputLabelGroup`,
             children: (0, B.jsxs)(`label`, {
               children: [
                 (0, B.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: j(`#EventEditor_InsertImage_URL`),
+                  children: A(`#EventEditor_InsertImage_URL`),
                 }),
                 (0, B.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
@@ -9496,7 +9513,7 @@ var Ad = class extends z.Component {
                     type: `text`,
                     value: e,
                     onChange: this.OnImageURLChange,
-                    placeholder: j(`#EventEditor_InsertImage_Placeholder`),
+                    placeholder: A(`#EventEditor_InsertImage_Placeholder`),
                     ref: this.refFirstInput,
                   }),
                 }),
@@ -9509,7 +9526,7 @@ var Ad = class extends z.Component {
               children: [
                 (0, B.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: j(`#EventEditor_InsertImage_Anchor`),
+                  children: A(`#EventEditor_InsertImage_Anchor`),
                 }),
                 (0, B.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
@@ -9518,7 +9535,7 @@ var Ad = class extends z.Component {
                     type: `text`,
                     value: t,
                     onChange: this.OnAnchorURLChange,
-                    placeholder: j(`#EventEditor_InsertImage_Placeholder`),
+                    placeholder: A(`#EventEditor_InsertImage_Placeholder`),
                   }),
                 }),
               ],
@@ -9557,9 +9574,9 @@ var jd = (e) => {
         X.replaceSelection(e.textareaRef.current, n));
     },
     _ = t.trim().length != 0 && s.trim().length != 0;
-  return (0, B.jsx)(A, {
-    strTitle: j(`#EventEditor_AddSpeaker`),
-    strDescription: j(`#EventEditor_AddSpeaker_Desc`),
+  return (0, B.jsx)(j, {
+    strTitle: A(`#EventEditor_AddSpeaker`),
+    strDescription: A(`#EventEditor_AddSpeaker_Desc`),
     closeModal: e.closeModal,
     onCancel: e.closeModal,
     bOKDisabled: !_,
@@ -9568,9 +9585,9 @@ var jd = (e) => {
     children: (0, B.jsxs)(`div`, {
       className: ad,
       children: [
-        (0, B.jsx)(Et, {
+        (0, B.jsx)(Pe, {
           type: `text`,
-          label: j(`#EventEditor_AddSpeaker_Name`),
+          label: A(`#EventEditor_AddSpeaker_Name`),
           value: t,
           onChange: (e) => n(e.target.value),
           focusOnMount: !0,
@@ -9578,30 +9595,30 @@ var jd = (e) => {
         (0, B.jsxs)(`div`, {
           className: od,
           children: [
-            (0, B.jsx)(Et, {
+            (0, B.jsx)(Pe, {
               type: `text`,
-              label: j(`#EventEditor_AddSpeaker_Title`),
+              label: A(`#EventEditor_AddSpeaker_Title`),
               value: r,
               onChange: (e) => i(e.target.value),
             }),
-            (0, B.jsx)(Et, {
+            (0, B.jsx)(Pe, {
               type: `text`,
-              label: j(`#EventEditor_AddSpeaker_Company`),
+              label: A(`#EventEditor_AddSpeaker_Company`),
               value: a,
               onChange: (e) => o(e.target.value),
             }),
           ],
         }),
-        (0, B.jsx)(pt, {
-          toolTipContent: j(`#EventEditor_AssociateSteamAccount_ttip`),
+        (0, B.jsx)(ot, {
+          toolTipContent: A(`#EventEditor_AssociateSteamAccount_ttip`),
           children: (0, B.jsxs)(`div`, {
             className: `DialogLabel`,
-            children: [j(`#EventEditor_AssociateSteamAccount`), ` (?)`],
+            children: [A(`#EventEditor_AssociateSteamAccount`), ` (?)`],
           }),
         }),
         (0, B.jsxs)(`div`, {
           children: [
-            m && (0, B.jsx)(P, { string: j(`#Loading`), size: `small` }),
+            m && (0, B.jsx)(P, { string: A(`#Loading`), size: `small` }),
             d &&
               h &&
               (0, B.jsxs)(`a`, {
@@ -9621,18 +9638,18 @@ var jd = (e) => {
             (0, B.jsxs)(`div`, {
               className: sd,
               children: [
-                (0, B.jsx)(rt, {
+                (0, B.jsx)(Le, {
                   onClick: () => f(new O(ne.steamid)),
-                  children: j(`#EventEditor_SteamAccount_addme`),
+                  children: A(`#EventEditor_SteamAccount_addme`),
                 }),
-                (0, B.jsx)(rt, {
+                (0, B.jsx)(Le, {
                   onClick: (e) =>
-                    Tt((0, B.jsx)(Md, { friends: p ?? [], setSteamID: f }), e),
-                  children: j(`#EventEditor_SteamAccount_addfriend`),
+                    Ne((0, B.jsx)(Md, { friends: p ?? [], setSteamID: f }), e),
+                  children: A(`#EventEditor_SteamAccount_addfriend`),
                 }),
-                (0, B.jsx)(rt, {
+                (0, B.jsx)(Le, {
                   onClick: () => f(void 0),
-                  children: j(`#EventEditor_SteamAccount_clear`),
+                  children: A(`#EventEditor_SteamAccount_clear`),
                 }),
               ],
             }),
@@ -9643,7 +9660,7 @@ var jd = (e) => {
           children: [
             (0, B.jsx)(`div`, {
               className: `DialogLabel`,
-              children: j(`#EventEditor_ChoosePhoto`),
+              children: A(`#EventEditor_ChoosePhoto`),
             }),
             (0, B.jsx)(wd, {
               clanSteamID: e.clanSteamID,
@@ -9659,15 +9676,15 @@ var jd = (e) => {
           children: [
             (0, B.jsx)(`div`, {
               className: `DialogLabel`,
-              children: j(`#EventEditor_AddSpeaker_About`),
+              children: A(`#EventEditor_AddSpeaker_About`),
             }),
-            (0, B.jsx)(vt, {
+            (0, B.jsx)(ht, {
               value: s,
               onChange: (e) => c(e.target.value),
               rows: 8,
               cols: 80,
               nMinHeight: 40,
-              placeholder: j(`#EventEditor_AddSpeaker_About_Placeholder`),
+              placeholder: A(`#EventEditor_AddSpeaker_About_Placeholder`),
             }),
           ],
         }),
@@ -9676,7 +9693,7 @@ var jd = (e) => {
           children: [
             (0, B.jsx)(`div`, {
               className: `DialogLabel`,
-              children: j(`#Button_Preview`),
+              children: A(`#Button_Preview`),
             }),
             (0, B.jsx)(tr, {
               company: a,
@@ -9701,7 +9718,7 @@ function Md(e) {
 function Nd(e) {
   let { steamid: t, setSteamID: n } = e,
     { data: r } = Or(t);
-  return (0, B.jsx)(Ze, {
+  return (0, B.jsx)(et, {
     onSelected: () => n(new O(t)),
     children: (0, B.jsxs)(`div`, {
       style: { display: `flex`, alignItems: `center` },
@@ -9758,10 +9775,10 @@ var Pd = class extends z.Component {
             this.setState({ bConverting: !1, bFinishedConverting: !0 }));
         })
         .catch((e) => {
-          mt(
-            (0, B.jsx)(wt, {
-              strTitle: j(`#EventEditor_ConvertHTML_Error`),
-              strDescription: j(
+          pt(
+            (0, B.jsx)(Ct, {
+              strTitle: A(`#EventEditor_ConvertHTML_Error`),
+              strDescription: A(
                 `#EventEditor_ConvertHTML_Error_Desc`,
                 e.response && e.response.data ? e.response.data.msg : e,
               ),
@@ -9769,7 +9786,7 @@ var Pd = class extends z.Component {
               bDestructiveWarning: !0,
             }),
             this.props.ownerWindow,
-            { strTitle: j(`#EventEditor_ConvertHTML_Error`) },
+            { strTitle: A(`#EventEditor_ConvertHTML_Error`) },
           );
         }));
   }
@@ -9784,9 +9801,9 @@ var Pd = class extends z.Component {
   render() {
     let { closeModal: e } = this.props;
     return this.state.bConverting
-      ? (0, B.jsx)(A, {
-          strTitle: j(`#EventEditor_ImportFromHTML`),
-          strDescription: j(`#EventEditor_ImportFromHTML_ConversionInProgress`),
+      ? (0, B.jsx)(j, {
+          strTitle: A(`#EventEditor_ImportFromHTML`),
+          strDescription: A(`#EventEditor_ImportFromHTML_ConversionInProgress`),
           closeModal: e,
           bAlertDialog: !0,
           onOK: e,
@@ -9794,33 +9811,33 @@ var Pd = class extends z.Component {
           children: (0, B.jsx)(P, {}),
         })
       : this.state.bFinishedConverting
-        ? (0, B.jsx)(A, {
-            strTitle: j(`#EventEditor_ImportFromHTML`),
-            strDescription: j(`#EventEditor_ImportFromHTML_ConvertFinished`),
+        ? (0, B.jsx)(j, {
+            strTitle: A(`#EventEditor_ImportFromHTML`),
+            strDescription: A(`#EventEditor_ImportFromHTML_ConvertFinished`),
             closeModal: e,
             bAlertDialog: !0,
             onOK: e,
             onCancel: e,
           })
         : (0, B.jsx)(ut, {
-            title: j(`#EventEditor_ImportFromHTML`),
+            title: A(`#EventEditor_ImportFromHTML`),
             onOK: this.OnConvertAndOverriteHTML,
             onCancel: e,
             className: dd,
-            children: (0, B.jsxs)(tt, {
+            children: (0, B.jsxs)(Be, {
               children: [
-                (0, B.jsx)(Qe, {
+                (0, B.jsx)(tt, {
                   children: (0, B.jsxs)(`div`, {
                     className: S(wn, Qu),
                     children: [
                       (0, B.jsx)(`div`, {
                         className: wn,
-                        children: ft(
+                        children: at(
                           `#EventEditor_ImportFromHTML_ConvertDescription`,
                           (0, B.jsx)(`a`, {
                             target: T.IN_CLIENT ? void 0 : `_blank`,
                             href: `https://partner.steamgames.com/doc/marketing/event_tools/import`,
-                            children: j(
+                            children: A(
                               `#EventEditor_ImportFromHTML_ConvertLearn`,
                             ),
                           }),
@@ -9828,7 +9845,7 @@ var Pd = class extends z.Component {
                       }),
                       (0, B.jsx)(`textarea`, {
                         value: this.state.strHTMLData,
-                        placeholder: j(
+                        placeholder: A(
                           `#EventEditor_ImportFromHTML_Instruction`,
                         ),
                         className: $u,
@@ -9849,9 +9866,9 @@ var Pd = class extends z.Component {
                           (0, B.jsxs)(`label`, {
                             htmlFor: `ImportFromHTMLNewLines`,
                             children: [
-                              j(`#EventEditor_ImportFromHTML_PreserveNewlines`),
-                              (0, B.jsx)(St, {
-                                tooltip: j(
+                              A(`#EventEditor_ImportFromHTML_PreserveNewlines`),
+                              (0, B.jsx)(vt, {
+                                tooltip: A(
                                   `#EventEditor_ImportFromHTML_PreserveNewlines_Hint`,
                                 ),
                               }),
@@ -9860,19 +9877,19 @@ var Pd = class extends z.Component {
                         ],
                       }),
                       (0, B.jsx)(`div`, {
-                        children: j(
+                        children: A(
                           `#EventEditor_ImportFromHTML_ConvertToBBCode`,
                         ),
                       }),
                     ],
                   }),
                 }),
-                (0, B.jsx)(Me, {
-                  children: (0, B.jsx)(gt, {
+                (0, B.jsx)(lt, {
+                  children: (0, B.jsx)(ct, {
                     onCancel: () => e?.(),
-                    strOKText: j(`#Button_Overwrite`),
+                    strOKText: A(`#Button_Overwrite`),
                     onUpdate: this.OnConvertAndAppendHTML,
-                    strUpdateText: j(`#Button_Append`),
+                    strUpdateText: A(`#Button_Append`),
                   }),
                 }),
               ],

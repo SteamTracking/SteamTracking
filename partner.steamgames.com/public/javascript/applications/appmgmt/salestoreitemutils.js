@@ -11,51 +11,57 @@ import {
   W as o,
   en as s,
   j as c,
-  sn as l,
-  tn as u,
-  vt as d,
-  z as f,
+  q as l,
+  sn as u,
+  tn as d,
+  vt as f,
+  z as p,
 } from "./chunk~de7f2df91c.js";
-import { Pt as p, ct as m } from "./chunk~25a6634263.js";
+import { Pt as m, ct as h } from "./chunk~25a6634263.js";
 import {
-  Fn as h,
-  Mr as g,
-  Va as _,
-  Yi as ee,
-  Zi as v,
-  Zr as y,
-  f as te,
-  ua as b,
+  Ha as g,
+  In as _,
+  Nr as v,
+  Qi as ee,
+  Qr as y,
+  Xi as te,
+  da as b,
+  f as ne,
 } from "./chunk~1fa4b8f2ff.js";
-import { S as ne, d as x, h as S, i as C, o as w } from "./chunk~0a99e05c44.js";
+import { _ as x, i as S, p as C, s as w, w as re } from "./chunk~0a99e05c44.js";
 import {
   Bt as T,
-  Cn as E,
-  En as D,
-  Ht as O,
-  Mt as k,
-  Pn as re,
-  St as ie,
-  Ut as A,
-  Vt as ae,
-  Wt as j,
-  Xt as oe,
-  Z as se,
-  bn as ce,
-  jt as le,
-  ot as ue,
-  qt as de,
-  ut as fe,
-  zt as pe,
+  Cn as ie,
+  En as E,
+  Fn as ae,
+  Ht as oe,
+  Mt as D,
+  Pn as se,
+  St as ce,
+  Ut as O,
+  Vt as le,
+  Wt as k,
+  Xt as ue,
+  Z as de,
+  bn as fe,
+  ct as pe,
+  jt as me,
+  lt as he,
+  ot as ge,
+  qt as _e,
+  ut as ve,
+  zt as ye,
 } from "./chunk~6b8ddcaac8.js";
+import { o as be } from "./chunk~9a06851bec.js";
 import "./chunk~44f252525d.js";
-import { i as M } from "./chunk~8fb30ea08b.js";
-import { t as me } from "./chunk~ede3e357a2.js";
-import { r as he } from "./chunk~8681f5c764.js";
-import { f as ge } from "./chunk~2201b8cb3d.js";
-import { s as N } from "./chunk~8ceeb46076.js";
-var P = l(n()),
-  F = d(),
+import { i as A } from "./chunk~8fb30ea08b.js";
+import { t as j } from "./chunk~ede3e357a2.js";
+import { r as M } from "./chunk~b390ee0f78.js";
+import { r as N } from "./chunk~8681f5c764.js";
+import { f as xe } from "./chunk~2201b8cb3d.js";
+import { s as Se } from "./chunk~8ceeb46076.js";
+var P = u(n()),
+  F = f(),
   I = `Og4Odc3VLI8-`;
 function L(e, t, n, r) {
   P.useEffect(() => {
@@ -68,23 +74,23 @@ function L(e, t, n, r) {
     );
   }, [e, t, n, r]);
 }
-var _e = `oliNocjo3ok-`,
-  ve = `x3qY8Eev7UU-`,
-  ye = `_3lYhLNSBOpE-`,
-  be = `tyYNnQMYYyw-`,
-  xe = `-WD8g17w7iA-`;
-function Se() {
+var Ce = `oliNocjo3ok-`,
+  we = `x3qY8Eev7UU-`,
+  Te = `_3lYhLNSBOpE-`,
+  Ee = `tyYNnQMYYyw-`,
+  De = `-WD8g17w7iA-`;
+function Oe() {
   let [e, t] = P.useState(void 0),
     n = P.useCallback(() => t(void 0), []);
   return [
     t,
-    (0, F.jsx)(he, {
+    (0, F.jsx)(N, {
       active: e !== void 0,
-      children: (0, F.jsx)(Ce, { closeModal: n, rgImageURL: e }),
+      children: (0, F.jsx)(ke, { closeModal: n, rgImageURL: e }),
     }),
   ];
 }
-function Ce(e) {
+function ke(e) {
   let { closeModal: t, rgImageURL: n } = e,
     [r, i] = P.useState(0),
     a = n?.length ?? 0,
@@ -94,15 +100,15 @@ function Ce(e) {
     s = P.useCallback(() => {
       n && r + 1 >= a ? i(0) : i(r + 1);
     }, [r, n, a]);
-  return (0, F.jsxs)(te, {
+  return (0, F.jsxs)(ne, {
     title: b(`#SaleTech_Screenshot_Viewer`),
     bAllowFullSize: !0,
     bOKDisabled: !0,
     closeModal: t,
     bHideCloseIcon: !0,
-    modalClassName: _e,
+    modalClassName: Ce,
     children: [
-      (0, F.jsx)(we, {
+      (0, F.jsx)(Ae, {
         index: r,
         numElements: n?.length || 0,
         fnForward: s,
@@ -111,13 +117,13 @@ function Ce(e) {
         bCircular: !0,
       }),
       (0, F.jsx)(`div`, {
-        className: ve,
-        children: (0, F.jsx)(`img`, { className: ye, src: n?.[r], alt: `` }),
+        className: we,
+        children: (0, F.jsx)(`img`, { className: Te, src: n?.[r], alt: `` }),
       }),
     ],
   });
 }
-function we(e) {
+function Ae(e) {
   let {
     index: t,
     numElements: n,
@@ -134,7 +140,7 @@ function we(e) {
     L(`Esc`, () => a && a(), !0, !0));
   let s = n > 1;
   return (0, F.jsxs)(`div`, {
-    className: be,
+    className: Ee,
     children: [
       s &&
         (0, F.jsxs)(F.Fragment, {
@@ -147,7 +153,7 @@ function we(e) {
               ),
               onClick: i,
               "aria-label": b(`#Carousel_Prev`),
-              children: (0, F.jsx)(g, { angle: 270 }),
+              children: (0, F.jsx)(v, { angle: 270 }),
             }),
             (0, F.jsx)(`button`, {
               type: `button`,
@@ -157,25 +163,25 @@ function we(e) {
               ),
               onClick: r,
               "aria-label": b(`#Carousel_Next`),
-              children: (0, F.jsx)(g, { angle: 90 }),
+              children: (0, F.jsx)(v, { angle: 90 }),
             }),
           ],
         }),
       (0, F.jsx)(`button`, {
         type: `button`,
-        className: xe,
+        className: De,
         onClick: a,
         "aria-label": b(`#Button_Close`),
-        children: (0, F.jsx)(v, {}),
+        children: (0, F.jsx)(ee, {}),
       }),
     ],
   });
 }
-var Te = `xq-I5249Blg-`,
-  Ee = `_-8Ur6QivGZk-`,
+var je = `xq-I5249Blg-`,
+  Me = `_-8Ur6QivGZk-`,
   R = 1.3,
-  De = 3,
-  Oe = 256;
+  Ne = 3,
+  Pe = 256;
 function z(e) {
   let [t, n] = (0, P.useState)(!1),
     [r, i] = (0, P.useState)({
@@ -185,21 +191,21 @@ function z(e) {
       displayHeight: 0,
     }),
     a = (0, P.useRef)(null),
-    [o, s] = Se();
+    [o, s] = Oe();
   return (
     (0, P.useEffect)(() => {
       r.naturalWidth > r.displayWidth * R &&
         r.naturalHeight > r.displayHeight * R &&
-        r.naturalWidth > Oe &&
-        r.naturalWidth / r.naturalHeight < De &&
+        r.naturalWidth > Pe &&
+        r.naturalWidth / r.naturalHeight < Ne &&
         n(!0);
     }, [r]),
     t
       ? (0, F.jsxs)(`span`, {
-          className: Te,
+          className: je,
           children: [
             s,
-            (0, F.jsx)(`span`, { className: Ee, children: (0, F.jsx)(y, {}) }),
+            (0, F.jsx)(`span`, { className: Me, children: (0, F.jsx)(y, {}) }),
             (0, F.jsx)(`img`, {
               ...e,
               className: c({ ...(e.className && { [e.className]: !0 }) }),
@@ -213,7 +219,7 @@ function z(e) {
           ...e,
           ref: a,
           onLoad: (e) => {
-            if (!e.currentTarget.closest(`a`) && !E()) {
+            if (!e.currentTarget.closest(`a`) && !ie()) {
               let {
                 naturalWidth: t,
                 naturalHeight: n,
@@ -263,7 +269,7 @@ function B(e) {
         alt: o,
       });
 }
-function ke(e) {
+function Fe(e) {
   let [t, n] = P.useState(!1),
     {
       className: r,
@@ -296,7 +302,7 @@ function ke(e) {
         alt: c,
       });
 }
-function Ae(e) {
+function Ie(e) {
   let {
       id: t,
       imageType: n,
@@ -306,7 +312,7 @@ function Ae(e) {
     } = e,
     { storeItemAsset: o, storeItemDefaultInfo: s } = $(t, n, r);
   if (n === `library` || n == `vertical`)
-    return (0, F.jsx)(At, {
+    return (0, F.jsx)(Bt, {
       id: t,
       bPreferAssetWithoutOverride: r,
       bNoShadow: a,
@@ -314,10 +320,10 @@ function Ae(e) {
   let l = ``;
   switch (n) {
     case `main`:
-      l = de;
+      l = _e;
       break;
     default:
-      l = O;
+      l = oe;
   }
   if (o === void 0 || !s)
     return (0, F.jsx)(`div`, { className: c(l, `CapsuleImageCtn`, i) });
@@ -328,62 +334,62 @@ function Ae(e) {
     children: (0, F.jsx)(B, {
       lazyLoad: !0,
       srcs: u,
-      className: c(k),
+      className: c(D),
       alt: s.name,
     }),
   });
 }
-var V = l(p(), 1);
+var V = u(m(), 1);
 function H(e, t) {
   let n = [];
-  return (e && Me(n, e, t), n.filter((e) => !!e));
+  return (e && Re(n, e, t), n.filter((e) => !!e));
 }
-function je(e, t) {
+function Le(e, t) {
   return {
-    strStoreVerticalURL: D(e, `hero_capsule`),
-    strLibraryVerticalURL: D(e, `library_capsule`),
+    strStoreVerticalURL: E(e, `hero_capsule`),
+    strLibraryVerticalURL: E(e, `library_capsule`),
   };
 }
-function Me(e, t, n) {
-  let r = D(t, `header_2x`) ?? D(t, `header`),
-    i = D(t, `main_capsule_2x`) ?? D(t, `main_capsule`);
+function Re(e, t, n) {
+  let r = E(t, `header_2x`) ?? E(t, `header`),
+    i = E(t, `main_capsule_2x`) ?? E(t, `main_capsule`);
   n ? e.push(r, i) : e.push(i, r);
 }
-var Ne = `K2BGbCx37Cg-`,
-  Pe = `wnVw5QEjvtw-`,
-  Fe = `-a-3HG4gESE-`,
+var ze = `K2BGbCx37Cg-`,
+  Be = `wnVw5QEjvtw-`,
+  Ve = `-a-3HG4gESE-`,
   U = `-OQDE-IeSKo-`,
-  Ie = `iVqIvGU08cQ-`,
-  Le = `vO3l7X14-dI-`,
-  Re = `n1QMIymiV0w-`,
-  ze = `ebRw2SGSkSY-`,
+  He = `iVqIvGU08cQ-`,
+  Ue = `vO3l7X14-dI-`,
+  We = `n1QMIymiV0w-`,
+  Ge = `ebRw2SGSkSY-`,
   W = `qN5ejX3iSmI-`,
   G = `_7Xd-p6v3h-U-`,
-  Be = `_6uN5TDmIPak-`,
-  Ve = `_4UX-whX3nGs-`,
-  He = `f0EapRMh-PI-`,
-  Ue = `q4JwMxF0b-8-`,
-  We = `otywAXtYosA-`;
-function Ge(e) {
+  Ke = `_6uN5TDmIPak-`,
+  qe = `_4UX-whX3nGs-`,
+  Je = `f0EapRMh-PI-`,
+  Ye = `q4JwMxF0b-8-`,
+  Xe = `otywAXtYosA-`;
+function Ze(e) {
   let { id: t, ...n } = e,
-    { data: r } = ne(t);
-  return (0, F.jsx)(Ke, { ...n, platforms: r });
+    { data: r } = re(t);
+  return (0, F.jsx)(Qe, { ...n, platforms: r });
 }
 P.memo(function (e) {
   let { platforms: t } = e;
   if (!t) return null;
   let { windows: n, mac: r, steamos_linux: i, vr_support: a } = t;
   return (0, F.jsxs)(`span`, {
-    className: Fe,
+    className: Ve,
     children: [
-      n && (0, F.jsx)(qe, {}),
-      r && (0, F.jsx)(Je, {}),
-      i && (0, F.jsx)(Ye, {}),
-      a?.vrhmd && (0, F.jsx)(Xe, {}),
+      n && (0, F.jsx)($e, {}),
+      r && (0, F.jsx)(et, {}),
+      i && (0, F.jsx)(tt, {}),
+      a?.vrhmd && (0, F.jsx)(nt, {}),
     ],
   });
 });
-var Ke = P.memo(function (e) {
+var Qe = P.memo(function (e) {
   let { platforms: t, eHWCompat: n, size: r = `small` } = e,
     i;
   if (n == 0)
@@ -396,7 +402,7 @@ var Ke = P.memo(function (e) {
     if (e === void 0) return null;
     switch (e) {
       case 2:
-        i = ot;
+        i = ft;
         break;
       case 1:
         i = K;
@@ -405,7 +411,7 @@ var Ke = P.memo(function (e) {
         i = q;
         break;
       default:
-        return (u(e, `Unhandled steam os category: ${e}`), null);
+        return (d(e, `Unhandled steam os category: ${e}`), null);
     }
   } else {
     let e;
@@ -421,10 +427,10 @@ var Ke = P.memo(function (e) {
       return null;
     switch (e) {
       case 3:
-        i = it;
+        i = ut;
         break;
       case 2:
-        i = at;
+        i = dt;
         break;
       case 1:
         i = K;
@@ -433,52 +439,52 @@ var Ke = P.memo(function (e) {
         i = q;
         break;
       default:
-        return (u(e, `Unhandled deck compat category: ${e}`), null);
+        return (d(e, `Unhandled deck compat category: ${e}`), null);
     }
   }
   return (0, F.jsxs)(`span`, {
     className: (0, V.default)(
-      ze,
+      Ge,
       r == `small` && void 0,
       r == `fill` && `_4H-iJ5vlNuc-`,
     ),
     children: [
-      n == 1 && (0, F.jsx)(tt, {}),
-      n == 3 && (0, F.jsx)(nt, {}),
-      n == 4 && (0, F.jsx)(rt, {}),
+      n == 1 && (0, F.jsx)(st, {}),
+      n == 3 && (0, F.jsx)(ct, {}),
+      n == 4 && (0, F.jsx)(lt, {}),
       (0, F.jsx)(i, {}),
     ],
   });
 });
-function qe() {
+function $e() {
   return (0, F.jsx)(`span`, {
-    className: (0, V.default)(U, Ie),
-    title: _.Localize(`#Platform_Windows`),
-    children: (0, F.jsx)(Ze, {}),
+    className: (0, V.default)(U, He),
+    title: g.Localize(`#Platform_Windows`),
+    children: (0, F.jsx)(rt, {}),
   });
 }
-function Je() {
+function et() {
   return (0, F.jsx)(`span`, {
-    className: (0, V.default)(U, Re),
-    title: _.Localize(`#Platform_Mac`),
-    children: (0, F.jsx)(Qe, {}),
+    className: (0, V.default)(U, We),
+    title: g.Localize(`#Platform_Mac`),
+    children: (0, F.jsx)(it, {}),
   });
 }
-function Ye() {
+function tt() {
   return (0, F.jsx)(`span`, {
-    className: (0, V.default)(U, Le),
-    title: _.Localize(`#Platform_Linux`),
-    children: (0, F.jsx)($e, {}),
+    className: (0, V.default)(U, Ue),
+    title: g.Localize(`#Platform_Linux`),
+    children: (0, F.jsx)(at, {}),
   });
 }
-function Xe() {
+function nt() {
   return (0, F.jsx)(`span`, {
     className: U,
-    title: _.Localize(`#Platform_VR`),
-    children: (0, F.jsx)(et, {}),
+    title: g.Localize(`#Platform_VR`),
+    children: (0, F.jsx)(ot, {}),
   });
 }
-function Ze() {
+function rt() {
   return (0, F.jsxs)(`svg`, {
     version: `1.1`,
     xmlns: `http://www.w3.org/2000/svg`,
@@ -517,7 +523,7 @@ function Ze() {
     ],
   });
 }
-function Qe() {
+function it() {
   return (0, F.jsxs)(`svg`, {
     version: `1.1`,
     id: `base`,
@@ -537,7 +543,7 @@ function Qe() {
     ],
   });
 }
-function $e() {
+function at() {
   return (0, F.jsxs)(`svg`, {
     version: `1.1`,
     id: `Layer_1`,
@@ -562,7 +568,7 @@ function $e() {
     ],
   });
 }
-function et() {
+function ot() {
   return (0, F.jsxs)(`svg`, {
     width: `36`,
     height: `36`,
@@ -581,9 +587,9 @@ function et() {
     ],
   });
 }
-function tt() {
+function st() {
   return (0, F.jsx)(`span`, {
-    title: _.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`),
+    title: g.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`),
     className: (0, V.default)(W),
     children: (0, F.jsx)(`svg`, {
       viewBox: `0 0 20 20`,
@@ -599,9 +605,9 @@ function tt() {
     }),
   });
 }
-function nt() {
+function ct() {
   return (0, F.jsx)(`span`, {
-    title: _.Localize(
+    title: g.Localize(
       `#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI`,
     ),
     className: (0, V.default)(W),
@@ -628,9 +634,9 @@ function nt() {
     }),
   });
 }
-function rt() {
+function lt() {
   return (0, F.jsx)(`span`, {
-    title: _.Localize(
+    title: g.Localize(
       `#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI`,
     ),
     className: (0, V.default)(W),
@@ -655,12 +661,12 @@ function rt() {
     }),
   });
 }
-function it() {
+function ut() {
   return (0, F.jsx)(`span`, {
-    title: _.Localize(`#SteamDeckVerified_Category_Verified`),
+    title: g.Localize(`#SteamDeckVerified_Category_Verified`),
     className: G,
     children: (0, F.jsx)(`svg`, {
-      className: (0, V.default)(Be),
+      className: (0, V.default)(Ke),
       viewBox: `0 0 20 20`,
       fill: `none`,
       xmlns: `http://www.w3.org/2000/svg`,
@@ -673,12 +679,12 @@ function it() {
     }),
   });
 }
-function at() {
+function dt() {
   return (0, F.jsx)(`span`, {
-    title: _.Localize(`#SteamDeckVerified_Category_Playable`),
+    title: g.Localize(`#SteamDeckVerified_Category_Playable`),
     className: G,
     children: (0, F.jsx)(`svg`, {
-      className: (0, V.default)(Ve),
+      className: (0, V.default)(qe),
       viewBox: `0 0 20 20`,
       fill: `none`,
       xmlns: `http://www.w3.org/2000/svg`,
@@ -693,10 +699,10 @@ function at() {
 }
 function K() {
   return (0, F.jsx)(`span`, {
-    title: _.Localize(`#SteamDeckVerified_Category_Unsupported`),
+    title: g.Localize(`#SteamDeckVerified_Category_Unsupported`),
     className: G,
     children: (0, F.jsx)(`svg`, {
-      className: (0, V.default)(He),
+      className: (0, V.default)(Je),
       viewBox: `0 0 20 20`,
       fill: `none`,
       xmlns: `http://www.w3.org/2000/svg`,
@@ -711,10 +717,10 @@ function K() {
 }
 function q() {
   return (0, F.jsx)(`span`, {
-    title: _.Localize(`#SteamDeckVerified_Category_Unknown`),
+    title: g.Localize(`#SteamDeckVerified_Category_Unknown`),
     className: G,
     children: (0, F.jsx)(`svg`, {
-      className: (0, V.default)(Ue),
+      className: (0, V.default)(Ye),
       viewBox: `0 0 20 20`,
       fill: `none`,
       xmlns: `http://www.w3.org/2000/svg`,
@@ -727,12 +733,12 @@ function q() {
     }),
   });
 }
-function ot() {
+function ft() {
   return (0, F.jsx)(`span`, {
-    title: _.Localize(`#SteamOSCompatibility_Category_Compatible`),
+    title: g.Localize(`#SteamOSCompatibility_Category_Compatible`),
     className: G,
     children: (0, F.jsx)(`svg`, {
-      className: (0, V.default)(We),
+      className: (0, V.default)(Xe),
       viewBox: `0 0 20 20`,
       fill: `none`,
       xmlns: `http://www.w3.org/2000/svg`,
@@ -745,41 +751,41 @@ function ot() {
     }),
   });
 }
-function st(e) {
+function pt(e) {
   let { bAllowOutsideOfDeck: t } = e;
-  return !f() && !t ? null : (0, F.jsx)(ct, { ...e });
+  return !p() && !t ? null : (0, F.jsx)(mt, { ...e });
 }
-function ct(e) {
+function mt(e) {
   let { className: t, id: n } = e,
-    [r, i] = ge(),
+    [r, i] = xe(),
     a = i;
   if ((i == 0 && (a = 1), !n)) return null;
   let o;
   return (
-    i == 4 && (o = Pe),
+    i == 4 && (o = Be),
     (0, F.jsx)(`div`, {
-      className: c(Ne, o, t),
-      children: (0, F.jsx)(Ge, { id: n, eHWCompat: a }),
+      className: c(ze, o, t),
+      children: (0, F.jsx)(Ze, { id: n, eHWCompat: a }),
     })
   );
 }
-function lt(e) {
-  return (0, P.useMemo)(() => pt(e), [e?.id, e?.type]);
+function ht(e) {
+  return (0, P.useMemo)(() => yt(e), [e?.id, e?.type]);
 }
-function ut(e, t) {
-  return (0, P.useMemo)(() => mt(e, t), [e, t]);
+function gt(e, t) {
+  return (0, P.useMemo)(() => bt(e, t), [e, t]);
 }
-function dt(e, t) {
+function _t(e, t) {
   return (0, P.useMemo)(() => J(e, t), [e, t]);
 }
-function ft(e, t) {
+function vt(e, t) {
   let n = `app`;
   return (
     t == 2 ? (n = `bundle`) : t == 1 && (n = `sub`),
     (0, P.useMemo)(() => J(e, n), [e, n])
   );
 }
-function pt(e) {
+function yt(e) {
   if (e && e.id) {
     if (!e.type) return { appid: e.id };
     switch (e.type) {
@@ -802,7 +808,7 @@ function J(e, t) {
       return { appid: e };
   }
 }
-function mt(e, t) {
+function bt(e, t) {
   switch (t) {
     case `sub`:
       return { packageid: e };
@@ -812,7 +818,7 @@ function mt(e, t) {
       return { appid: e };
   }
 }
-async function ht() {
+async function xt() {
   let t = e(`broadcast_available_for_page`, `application_config`);
   if (X(t)) {
     let e = new Set();
@@ -854,11 +860,11 @@ var Y = class {
   t([r], Y.prototype, `viewer_count`, void 0),
   t([r], Y.prototype, `gamedata_subtitle`, void 0),
   t([r], Y.prototype, `current_selection_priority`, void 0));
-var gt = `primary`,
-  _t = `featured`,
-  vt = `default_featured`,
-  yt = `general`,
-  bt = (function (e) {
+var St = `primary`,
+  Ct = `featured`,
+  wt = `default_featured`,
+  Tt = `general`,
+  Et = (function (e) {
     return (
       (e[(e.k_ePrimary = 3)] = `k_ePrimary`),
       (e[(e.k_eFeatured = 2)] = `k_eFeatured`),
@@ -867,15 +873,15 @@ var gt = `primary`,
       e
     );
   })({});
-function xt(e) {
+function Dt(e) {
   switch (e) {
-    case gt:
+    case St:
       return 3;
-    case _t:
+    case Ct:
       return 2;
-    case vt:
+    case wt:
       return 1;
-    case yt:
+    case Tt:
     default:
       return 0;
   }
@@ -890,14 +896,14 @@ function X(e) {
     ? t.filtered.length == 0 || typeof t.filtered[0].accountid == `string`
     : !1;
 }
-function St() {
-  return me(wt());
+function Ot() {
+  return j(kt());
 }
-function Ct(e) {
-  let { data: t } = St(),
+function Z(e) {
+  let { data: t } = Ot(),
     [n, r] = (0, P.useState)(!1),
-    i = M(),
-    a = C();
+    i = A(),
+    a = S();
   return (
     (0, P.useEffect)(() => {
       if (!e || e.length == 0 || !t) return r(!1);
@@ -918,39 +924,49 @@ function Ct(e) {
     n
   );
 }
-function wt() {
+function kt() {
   return {
-    queryKey: Tt(),
+    queryKey: At(),
     queryFn: async () => {
-      let e = await ht();
+      let e = await xt();
       return new Set(e);
     },
   };
 }
-function Tt() {
+function At() {
   return [`BroadcastApps`];
 }
-var Et = `hRwhHwwKlgI-`;
-function Z() {
+var jt = `hRwhHwwKlgI-`;
+function Q() {
   return (0, F.jsx)(`div`, {
-    className: Et,
+    className: jt,
     children: b(`#home_page_live_broadcast`),
   });
 }
-function Q(e) {
+var Mt = P.createContext(void 0),
+  Nt = P.createContext(void 0);
+function Pt(e) {
   let { appids: t, hide_status_banners: n, show_early_access: r } = e,
-    { data: i } = re(),
-    { data: o } = fe(),
+    { data: i } = ae(),
+    { data: o } = ve(),
     s = t.length > 0 && t.every((e) => i && i.has(e)),
     l = t.length > 0 && t.every((e) => o && o.has(e)),
-    u = Ct(t),
-    d = s && !n,
-    f = l && !n,
-    p = !n && r;
+    u = Z(t),
+    d = P.useContext(Mt),
+    f = P.useContext(Nt),
+    p = d && f ? d(f, t) : void 0,
+    m = s && !n,
+    h = l && !n,
+    _ = !n && r;
   return (0, F.jsxs)(`div`, {
-    className: c(le, `CapsuleDecorators`),
+    className: c(me, `CapsuleDecorators`, p && `HasReasonBanner`),
     children: [
-      d &&
+      p &&
+        (0, F.jsx)(`span`, {
+          className: c(`LCYi5cxHqgI-`, p.strClassName),
+          children: p.strLabel,
+        }),
+      m &&
         (0, F.jsxs)(`span`, {
           className: c(`LCYi5cxHqgI-`, `ZuMhm9DQqbw-`),
           children: [
@@ -959,37 +975,37 @@ function Q(e) {
                 `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC`,
               ),
               className: `ppO76q5Y-Zg-`,
-              alt: _.Localize(`#Sale_InLibrary`),
+              alt: g.Localize(`#Sale_InLibrary`),
             }),
-            _.Localize(`#Sale_InLibrary`),
+            g.Localize(`#Sale_InLibrary`),
           ],
         }),
-      f &&
+      h &&
         (0, F.jsxs)(`span`, {
           className: `LCYi5cxHqgI-`,
           children: [
-            (0, F.jsx)(ee, { className: `ppO76q5Y-Zg-` }),
-            _.Localize(`#Sale_OnWishlist`),
+            (0, F.jsx)(te, { className: `ppO76q5Y-Zg-` }),
+            g.Localize(`#Sale_OnWishlist`),
           ],
         }),
-      p && !d && !f && (0, F.jsx)(Dt, { appids: t }),
-      u && (0, F.jsx)(Z, {}),
+      _ && !m && !h && (0, F.jsx)(Ft, { appids: t }),
+      u && (0, F.jsx)(Q, {}),
     ],
   });
 }
-function Dt(e) {
+function Ft(e) {
   let { appids: t } = e;
-  return Ot(t)
+  return It(t)
     ? (0, F.jsx)(`span`, {
-        className: c(ie, pe),
-        children: _.Localize(`#Sale_EarlyAccess`),
+        className: c(ce, ye),
+        children: g.Localize(`#Sale_EarlyAccess`),
       })
     : null;
 }
-function Ot(e) {
+function It(e) {
   let [t, n] = (0, P.useState)(!1),
-    r = M(),
-    i = C();
+    r = A(),
+    i = S();
   return (
     (0, P.useEffect)(() => {
       if (!e || e.length == 0) return n(!1);
@@ -1003,38 +1019,68 @@ function Ot(e) {
     t
   );
 }
-function kt(e, t, n, r, i, a) {
+function Lt(e, t, n, r, i, a) {
   if (!n) return;
-  if (!ue(e.item_type)) {
+  if (!ge(e.item_type)) {
     s(!1, `StoreItemWidgetSalePageAction: unexpected type: ` + e.item_type);
     return;
   }
-  let o = N(`${se(e, r)}${i ? `?${i}` : ``}`, t);
+  let o = Se(`${de(e, r)}${i ? `?${i}` : ``}`, t);
   return {
     onClick: (e) => {
-      let t = m(e) || window;
-      a ? a(e) : o.startsWith(`steam://`) || (t.location.href = h(o));
+      let t = h(e) || window;
+      a ? a(e) : o.startsWith(`steam://`) || (t.location.href = _(o));
     },
-    onOKActionDescription: _.Localize(`#Sale_Gamepad_Action_Select`),
+    onOKActionDescription: g.Localize(`#Sale_Gamepad_Action_Select`),
   };
 }
-function At(e) {
+function Rt(e) {
+  if (e?.appid && e.item_type == 0)
+    switch (e.type) {
+      case 14:
+        return;
+      case 1:
+      case 12:
+        return e.related_items?.parent_appid || e.appid;
+      default:
+        return e.appid;
+    }
+}
+function zt(e) {
+  let t = p(),
+    { data: n } = x(t ? e : void 0),
+    r = Rt(n),
+    i = !!he(r),
+    { bIsOwned: a } = se(M(r)),
+    o = be(),
+    { mutate: s } = pe(r, !i, o),
+    c = !!a && n?.type != 10;
+  return !t || !l.logged_in || !r || c
+    ? {}
+    : {
+        onOptionsButton: () => s(),
+        onOptionsActionDescription: g.Localize(
+          i ? `#Sale_RemoveFromWishlist` : `#Sale_AddToWishlist`,
+        ),
+      };
+}
+function Bt(e) {
   let {
       id: t,
       bPreferLibrary: n,
       bPreferAssetWithoutOverride: r,
       bNoShadow: i,
     } = e,
-    a = i ? oe : ``,
+    a = i ? ue : ``,
     { storeItemDefaultInfo: s, storeItemAsset: l } = $(t, `vertical`, r),
     [u, d] = P.useState(0);
-  if (!s || !l) return (0, F.jsx)(`div`, { className: A });
-  let { strStoreVerticalURL: f, strLibraryVerticalURL: p } = je(l, s);
+  if (!s || !l) return (0, F.jsx)(`div`, { className: O });
+  let { strStoreVerticalURL: f, strLibraryVerticalURL: p } = Le(l, s);
   if (f && (!n || !p))
     return (0, F.jsxs)(`div`, {
-      className: c(A, `HeroCapsuleImageContainer`),
+      className: c(O, `HeroCapsuleImageContainer`),
       children: [
-        (0, F.jsx)(`img`, { src: f, className: k, alt: s.name }),
+        (0, F.jsx)(`img`, { src: f, className: D, alt: s.name }),
         s.type == 4 &&
           (0, F.jsx)(`img`, {
             className: `eEjnmAoA07c-`,
@@ -1045,13 +1091,13 @@ function At(e) {
     });
   if (p)
     return (0, F.jsxs)(`div`, {
-      className: c(j, ce, n ? ae : ``, a),
+      className: c(k, fe, n ? le : ``, a),
       children: [
         (0, F.jsx)(`div`, {
           className: T,
           style: { backgroundImage: `url(${p})` },
         }),
-        (0, F.jsx)(`img`, { src: p, className: k, alt: s.name }),
+        (0, F.jsx)(`img`, { src: p, className: D, alt: s.name }),
       ],
     });
   let m = H(l, !0),
@@ -1063,7 +1109,7 @@ function At(e) {
   if (u < m.length) {
     let e = m[u];
     return (0, F.jsxs)(`div`, {
-      className: c(j, a),
+      className: c(k, a),
       children: [
         (0, F.jsx)(`div`, {
           className: T,
@@ -1072,35 +1118,35 @@ function At(e) {
         (0, F.jsx)(B, {
           lazyLoad: !0,
           srcs: m,
-          className: k,
+          className: D,
           alt: s.name,
           onImageError: g,
         }),
       ],
     });
   }
-  return (0, F.jsx)(`div`, { className: A });
+  return (0, F.jsx)(`div`, { className: O });
 }
 function $(e, t, n = !1) {
-  let { data: r } = S(e),
-    { data: i } = x(e, n),
-    a = jt(r, i, t),
-    { data: o } = S(a),
-    { data: s } = x(a, n),
+  let { data: r } = x(e),
+    { data: i } = C(e, n),
+    a = Vt(r, i, t),
+    { data: o } = x(a),
+    { data: s } = C(a, n),
     c = o?.visible ? o : r;
   return { storeItemAsset: o?.visible ? s : i, storeItemDefaultInfo: c };
 }
-function jt(e, t, n) {
+function Vt(e, t, n) {
   if (
     e &&
     e.included_appids?.length == 1 &&
-    !Mt(t, n) &&
+    !Ht(t, n) &&
     e.item_type &&
     [1, 2].includes(e.item_type)
   )
     return { appid: e.included_appids[0] };
 }
-function Mt(e, t) {
+function Ht(e, t) {
   if (!e) return !1;
   switch (t) {
     case `header`:
@@ -1111,25 +1157,26 @@ function Mt(e, t) {
     case `library`:
       return !!e.hero_capsule || !!e.library_capsule;
     default:
-      return (u(t, `Unhandled imageType: ${t}`), !1);
+      return (d(t, `Unhandled imageType: ${t}`), !1);
   }
 }
 export {
-  I as _,
-  bt as a,
-  ft as c,
-  dt as d,
-  st as f,
-  z as g,
-  B as h,
-  xt as i,
-  ut as l,
-  ke as m,
-  Q as n,
-  Y as o,
-  Ae as p,
-  Z as r,
-  X as s,
-  kt as t,
-  lt as u,
+  z as _,
+  Dt as a,
+  X as c,
+  ht as d,
+  _t as f,
+  B as g,
+  Fe as h,
+  Q as i,
+  vt as l,
+  Ie as m,
+  zt as n,
+  Et as o,
+  pt as p,
+  Pt as r,
+  Y as s,
+  Lt as t,
+  gt as u,
+  I as v,
 };

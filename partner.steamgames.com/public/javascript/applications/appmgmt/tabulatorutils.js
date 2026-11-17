@@ -23,7 +23,7 @@ import {
   Pt as g,
   at as ee,
 } from "./chunk~25a6634263.js";
-import { ua as _ } from "./chunk~1fa4b8f2ff.js";
+import { da as _ } from "./chunk~1fa4b8f2ff.js";
 import { w as te } from "./chunk~44f252525d.js";
 import { i as v, n as y } from "./chunk~fa5480ab25.js";
 import { t as b } from "./chunk~971d501580.js";
@@ -637,8 +637,6 @@ var z = class e {
       bPartnerWillPublish: t,
     };
     for (let t of this.m_rgKnownPriceKeys) n.prices[t] = this.GetPrice(e, t);
-    let r = this.m_mapPackageCountryOverridePrice.get(e);
-    if (r) for (let t of r.keys()) n.prices[t] = this.GetPrice(e, t);
     return n;
   }
   async SubmitProposalToServer(e, t, n, i) {

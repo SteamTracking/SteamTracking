@@ -7375,6 +7375,7 @@ var _ = `127.0.0.1`,
           _.SendSerializedMessage(_) == 1
             ? this.m_mapPendingMethodRequests.set(_, {
                 m_iSeq: _,
+                m_sServiceName: _,
                 m_responseClass: _,
                 m_fnCallback: _,
                 m_fnError: _,
@@ -7488,7 +7489,16 @@ var _ = `127.0.0.1`,
       (_(_ == _.m_iSeq, `Transport Error: mistmatched request sequence`),
         this.m_mapPendingMethodRequests.delete(_));
       let _ = _.InitFromMsg(_.m_responseClass, _);
-      _.m_fnCallback(_);
+      (_.BIsValid() ||
+        _()?.ReportError(
+          Error(
+            `WebUITransport: failed to parse response for ${_.m_sServiceName}`,
+          ),
+          {
+            bIncludeMessageInIdentifier: !0,
+          },
+        ),
+        _.m_fnCallback(_));
     }
     DispatchNotification(_) {
       this.m_messageHandlers.DispatchMsgToHandlers(_, (_) => {
@@ -10650,7 +10660,7 @@ var _ = {
     {
       appid: 730,
       url: `https://steam.tv/csgo`,
-      broadcasterAccountID: 927819071,
+      broadcasterAccountID: 155466124,
     },
   ],
 };

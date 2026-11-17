@@ -13,20 +13,20 @@ import {
 } from "./chunk~de7f2df91c.js";
 import { Ft as c, M as l, X as u, ct as d } from "./chunk~25a6634263.js";
 import {
-  K as f,
-  Pt as p,
-  Qi as m,
-  Va as h,
-  Wt as g,
-  an as ee,
-  h as _,
-  hn as te,
-  ia as ne,
-  l as v,
-  m as re,
-  u as y,
-  ua as b,
-  zn as ie,
+  $i as f,
+  Bn as p,
+  Ft as m,
+  Gt as h,
+  Ha as g,
+  aa as ee,
+  da as _,
+  gn as te,
+  h as v,
+  l as y,
+  m as ne,
+  on as re,
+  q as ie,
+  u as b,
 } from "./chunk~1fa4b8f2ff.js";
 import { C as ae, w as x } from "./chunk~44f252525d.js";
 import { n as S } from "./chunk~16aefcf65f.js";
@@ -331,7 +331,7 @@ function We(e) {
       (0, z.jsx)(Je, { hsva: c, fnSetColor: d }),
       (0, z.jsx)(U, {
         className: De,
-        strLabel: h.Localize(`#ColorPicker_Hue`),
+        strLabel: g.Localize(`#ColorPicker_Hue`),
         nMax: 360,
         nValue: Math.round(c.h),
         strValueText: `${Math.round(c.h)}°`,
@@ -340,7 +340,7 @@ function We(e) {
       !a &&
         (0, z.jsx)(U, {
           className: `xV4lUfTUFc4-`,
-          strLabel: h.Localize(`#ColorPicker_Opacity`),
+          strLabel: g.Localize(`#ColorPicker_Opacity`),
           nMax: 100,
           nValue: Math.round(c.a * 100),
           strValueText: `${Math.round(c.a * 100)}%`,
@@ -408,7 +408,7 @@ function Je(e) {
     className: we,
     role: `slider`,
     tabIndex: 0,
-    "aria-label": h.Localize(`#ColorPicker_SaturationBrightness`),
+    "aria-label": g.Localize(`#ColorPicker_SaturationBrightness`),
     "aria-valuemin": 0,
     "aria-valuemax": 100,
     "aria-valuenow": Math.round(t.v * 100),
@@ -486,7 +486,7 @@ function Ye(e) {
             type: `text`,
             spellCheck: !1,
             autoComplete: `off`,
-            "aria-label": h.Localize(`#ColorPicker_ColorValue`),
+            "aria-label": g.Localize(`#ColorPicker_ColorValue`),
             "aria-invalid": f,
             value: l ?? d,
             onChange: (e) => p(e.currentTarget.value),
@@ -501,7 +501,7 @@ function Ye(e) {
       f &&
         (0, z.jsx)(`div`, {
           className: `tHsVe8Ptn-s-`,
-          children: h.Localize(`#ColorPicker_InvalidColor`),
+          children: g.Localize(`#ColorPicker_InvalidColor`),
         }),
       (0, z.jsx)(`div`, {
         className: Ne,
@@ -535,13 +535,13 @@ function Xe(e) {
       let e = V((await new window.EyeDropper().open()).sRGBHex, t.h, n);
       e && r({ ...e, a: t.a });
     } catch (e) {
-      console.warn(h.Localize(`#Sale_EyeDropperFailed`), e);
+      console.warn(g.Localize(`#Sale_EyeDropperFailed`), e);
     } finally {
       e.classList.remove(B);
     }
   };
   if (!i) return null;
-  let s = h.Localize(`#Sale_BackgroundColorPicker`);
+  let s = g.Localize(`#Sale_BackgroundColorPicker`);
   return (0, z.jsx)(te, {
     toolTipContent: s,
     children: (0, z.jsx)(`button`, {
@@ -549,7 +549,7 @@ function Xe(e) {
       className: Me,
       "aria-label": s,
       onClick: o,
-      children: (0, z.jsx)(f, {}),
+      children: (0, z.jsx)(ie, {}),
     }),
   });
 }
@@ -558,7 +558,7 @@ function Ze(e) {
   return (0, z.jsx)(`div`, {
     className: Fe,
     role: `group`,
-    "aria-label": h.Localize(`#ColorPicker_Palette`),
+    "aria-label": g.Localize(`#ColorPicker_Palette`),
     children: ze.map((e) => {
       let a = r && e === t;
       return (0, z.jsx)(
@@ -650,7 +650,7 @@ function $e(e) {
       children: (0, z.jsx)(We, {
         color: t,
         disableAlpha: a,
-        strTitle: o ?? h.Localize(`#Button_Color`),
+        strTitle: o ?? g.Localize(`#Button_Color`),
         onChange: p,
         onSubmit: m,
         children: (0, z.jsxs)(`div`, {
@@ -660,13 +660,13 @@ function $e(e) {
               type: `button`,
               className: n(R, Re),
               onClick: m,
-              children: h.Localize(`#Button_Save`),
+              children: g.Localize(`#Button_Save`),
             }),
             (0, z.jsx)(`button`, {
               type: `button`,
               className: R,
               onClick: i,
-              children: h.Localize(`#Button_Cancel`),
+              children: g.Localize(`#Button_Cancel`),
             }),
           ],
         }),
@@ -690,7 +690,7 @@ function G(e, t, n) {
         o || ((o = !0), a?.Hide(), t.onClose?.());
       },
     });
-  a = (e instanceof HTMLElement, ie(s, e, { bDisablePopTop: !0 }));
+  a = (e instanceof HTMLElement, p(s, e, { bDisablePopTop: !0 }));
 }
 function et() {
   let e = (0, T.useContext)(W);
@@ -776,7 +776,7 @@ function Y(e) {
     className: n(s ? rt : nt, `DragAndDropContainer`),
     children: [
       r?.(),
-      (0, z.jsx)(`div`, { children: a || b(`#ImagePicker_DragAndDrop`) }),
+      (0, z.jsx)(`div`, { children: a || _(`#ImagePicker_DragAndDrop`) }),
       (0, z.jsxs)(`div`, {
         className: it,
         children: [
@@ -785,11 +785,11 @@ function Y(e) {
             onClick: l,
             children: [
               (0, z.jsxs)(`span`, {
-                children: [b(`#ImagePicker_OrBrowse`), ` `],
+                children: [_(`#ImagePicker_OrBrowse`), ` `],
               }),
               (0, z.jsx)(`span`, {
                 className: at,
-                children: b(`#selectimage_select_file`),
+                children: _(`#selectimage_select_file`),
               }),
             ],
           }),
@@ -835,9 +835,9 @@ function dt(e) {
                     ` file=` +
                     i.name,
                 ),
-                _(
-                  (0, z.jsx)(y, {
-                    strDescription: b(`#ImagePicker_Error`, i.name),
+                v(
+                  (0, z.jsx)(b, {
+                    strDescription: _(`#ImagePicker_Error`, i.name),
                   }),
                   window,
                 )));
@@ -847,9 +847,9 @@ function dt(e) {
               `ImageUploaderPanel.OnDropFiles: ` + t.strErrorMsg,
               t,
             ),
-              _(
-                (0, z.jsx)(y, {
-                  strDescription: b(`#EventError_Code`, t.strErrorMsg ?? ``),
+              v(
+                (0, z.jsx)(b, {
+                  strDescription: _(`#EventError_Code`, t.strErrorMsg ?? ``),
                 }),
                 window,
               ));
@@ -916,18 +916,18 @@ function ft(e) {
     className: ct,
     children: [
       !!r.length &&
-        (0, z.jsx)(g, {
+        (0, z.jsx)(h, {
           style: { margin: `8px` },
           onClick: n,
           disabled: !i,
-          children: b(`#ImageUpload_Upload`),
+          children: _(`#ImageUpload_Upload`),
         }),
       !!r.length &&
-        (0, z.jsx)(g, {
+        (0, z.jsx)(h, {
           style: { margin: `8px` },
           onClick: t.ClearImages,
           disabled: a,
-          children: b(`#ImageUpload_Clear`),
+          children: _(`#ImageUpload_Clear`),
         }),
     ],
   });
@@ -944,7 +944,7 @@ function mt(e) {
             forceResolution: e.forceResolution,
             fileType: e.forceFileType || 3,
           });
-        re(r, n, `CropModal`, { strTitle: b(`#ImageUpload_CropModalTitle`) });
+        ne(r, n, `CropModal`, { strTitle: _(`#ImageUpload_CropModalTitle`) });
       } else
         console.log(
           `ImageUploadEmbeddedDialog trying to crop non image`,
@@ -958,8 +958,8 @@ function mt(e) {
         n;
       (e.bEnforceDimensions && (t += ` - ${e.width}x${e.height}`),
         e.bDeprecated &&
-          ((t += ` ${b(`#ImageUpload_Deprecated`)}`),
-          (n = b(`#ImageUpload_Deprecated_ttip`))));
+          ((t += ` ${_(`#ImageUpload_Deprecated`)}`),
+          (n = _(`#ImageUpload_Deprecated_ttip`))));
       let r;
       return (
         (i.BIsOriginalMinimumDimensions(e) && i.FileTypeMatchesImageTypes(e)) ||
@@ -968,23 +968,23 @@ function mt(e) {
       );
     }).filter((e) => !e.data.bHiddenFromDropdown),
     c = {
-      pending: b(`#ImageUpload_Pending`),
-      waiting: b(`#ImageUpload_Waiting`),
-      uploading: b(`#ImageUpload_Uploading`),
-      processing: b(`#ImageUpload_Processing`),
-      success: b(`#ImageUpload_SuccessCard`),
-      failed: b(`#ImageUpload_Failed`),
+      pending: _(`#ImageUpload_Pending`),
+      waiting: _(`#ImageUpload_Waiting`),
+      uploading: _(`#ImageUpload_Uploading`),
+      processing: _(`#ImageUpload_Processing`),
+      success: _(`#ImageUpload_SuccessCard`),
+      failed: _(`#ImageUpload_Failed`),
     },
     l = i.BSupportsLanguages()
-      ? $(ne.GetLanguageListForRealms(o ?? [t.k_ESteamRealmGlobal]))
+      ? $(ee.GetLanguageListForRealms(o ?? [t.k_ESteamRealmGlobal]))
       : null,
     u = i.IsValidAssetType(e.forceResolution, e.forceFileType),
     d = i.status == `pending`,
-    f = c[i.status];
+    p = c[i.status];
   i.status == `pending` &&
     (u.needsCrop
-      ? (f = b(`#ImageUpload_NeedsCrop`))
-      : u.error && (f = b(`#ImageUpload_Invalid`)));
+      ? (p = _(`#ImageUpload_NeedsCrop`))
+      : u.error && (p = _(`#ImageUpload_Invalid`)));
   let h,
     g = i.GetCurrentImageOption();
   return (
@@ -996,11 +996,11 @@ function mt(e) {
         (0, z.jsx)(`div`, {
           className: lt,
           onClick: () => a(i),
-          children: (0, z.jsx)(m, {}),
+          children: (0, z.jsx)(f, {}),
         }),
         (0, z.jsx)(ht, { asset: i }),
         l &&
-          (0, z.jsx)(p, {
+          (0, z.jsx)(m, {
             strDropDownClassName: `ZsXFGEgobIY-`,
             rgOptions: l,
             selectedOption: i.language,
@@ -1009,7 +1009,7 @@ function mt(e) {
           }),
         s &&
           s?.length > 1 &&
-          (0, z.jsx)(p, {
+          (0, z.jsx)(m, {
             label: i.GetImageOptionLabel(),
             rgOptions: s,
             selectedOption: h,
@@ -1035,7 +1035,7 @@ function mt(e) {
         (0, z.jsxs)(`div`, {
           className: n({ [se]: !0, [X]: i.status == `failed` }),
           children: [
-            f,
+            p,
             ue(i.status) &&
               (0, z.jsx)(`div`, {
                 className: `RPxGbDpMPvc-`,
@@ -1049,9 +1049,9 @@ function mt(e) {
           (0, z.jsx)(`div`, { className: `_4l0OY5qTFkk-`, children: u.error }),
         d &&
           u.needsCrop &&
-          (0, z.jsx)(ee, {
+          (0, z.jsx)(re, {
             onClick: () => r(i),
-            children: b(`#ImageUpload_OpenEditor`),
+            children: _(`#ImageUpload_OpenEditor`),
           }),
       ],
     })
@@ -1062,7 +1062,7 @@ function ht(e) {
   return t.BIsVideo()
     ? (0, z.jsxs)(`div`, {
         className: Z,
-        onClick: (e) => _((0, z.jsx)(gt, { asset: t }), d(e)),
+        onClick: (e) => v((0, z.jsx)(gt, { asset: t }), d(e)),
         children: [
           (0, z.jsxs)(`span`, {
             className: Q,
@@ -1089,7 +1089,7 @@ function ht(e) {
 }
 function gt(e) {
   let { asset: t, closeModal: n } = e;
-  return (0, z.jsx)(v, {
+  return (0, z.jsx)(y, {
     bAlertDialog: !0,
     closeModal: n,
     bAllowFullSize: !0,
@@ -1107,7 +1107,7 @@ function $(e) {
     n = [];
   for (let t of e) {
     if (t == 25) continue;
-    let e = b(`#Language_` + r(t));
+    let e = _(`#Language_` + r(t));
     n.push({ label: e, data: t });
   }
   return (

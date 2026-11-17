@@ -10,23 +10,23 @@ import {
   vt as a,
 } from "./chunk~de7f2df91c.js";
 import {
-  Er as o,
-  Kt as s,
-  Mn as c,
-  Na as l,
-  Nt as u,
-  Vt as d,
-  Zi as f,
-  da as p,
-  en as m,
-  f as h,
-  ka as g,
-  l as _,
-  rn as v,
-  sa as y,
-  ua as b,
-  un as x,
-  va as S,
+  Aa as o,
+  Dr as s,
+  Ht as c,
+  Nn as l,
+  Pa as u,
+  Pt as d,
+  Qi as f,
+  ca as p,
+  da as m,
+  dn as h,
+  f as g,
+  fa as _,
+  in as v,
+  l as y,
+  qt as b,
+  tn as x,
+  ya as S,
 } from "./chunk~1fa4b8f2ff.js";
 import { t as C } from "./chunk~ede3e357a2.js";
 import { t as w } from "./chunk~9aa05d2c7d.js";
@@ -200,19 +200,19 @@ function xe(e) {
         t.set(n, e.rgEditionsAltText[n]);
       return t;
     }),
-    [d, m] = (0, O.useState)(c),
-    g = Object.keys(e.rgEditionsComparisonGraphics).length > 0,
-    _ = be(e.nItemId, a),
-    v = new Map();
-  for (let t of e.rgCandidates) v.set(t.nId, t);
-  let y = null;
+    [d, p] = (0, O.useState)(c),
+    h = Object.keys(e.rgEditionsComparisonGraphics).length > 0,
+    v = be(e.nItemId, a),
+    y = new Map();
+  for (let t of e.rgCandidates) y.set(t.nId, t);
+  let b = null;
   if (
     o.size > 0 &&
     e.nBasePackageId !== -1 &&
     !o.has({ packageid: e.nBasePackageId })
   ) {
     let t = e.rgCandidates.find((t) => t.nId === e.nBasePackageId);
-    y = b(
+    b = m(
       `#StoreAdmin_EditEditions_MustIncludeCheapestBasePageError`,
       t?.strName,
       e.nBasePackageId,
@@ -227,7 +227,7 @@ function xe(e) {
       (c.forEach((e, n) => {
         d.has(n) || t.push(n);
       }),
-        _.mutate({
+        v.mutate({
           rgEditionsToSave: Array.from(o),
           mapGraphicsToUpload: e,
           mapAltText: l,
@@ -246,7 +246,7 @@ function xe(e) {
     children: [
       (0, k.jsx)(E, {
         active: t === `editor` || t === `alert`,
-        children: (0, k.jsxs)(h, {
+        children: (0, k.jsxs)(g, {
           "aria-labelledby": w,
           closeModal: () => i(`closed`),
           children: [
@@ -258,18 +258,18 @@ function xe(e) {
                     children: [
                       (0, k.jsx)(`h2`, {
                         id: w,
-                        children: b(`#StoreAdmin_EditEditions_DialogTitle`),
+                        children: m(`#StoreAdmin_EditEditions_DialogTitle`),
                       }),
-                      _.isPending && (0, k.jsx)(D, {}),
-                      !_.isPending &&
+                      v.isPending && (0, k.jsx)(D, {}),
+                      !v.isPending &&
                         (0, k.jsxs)(k.Fragment, {
                           children: [
-                            y !== null &&
+                            b !== null &&
                               (0, k.jsxs)(`div`, {
                                 className: `fpGGKKGNA1Y-`,
                                 children: [
                                   (0, k.jsx)(f, {}),
-                                  (0, k.jsx)(`div`, { children: y }),
+                                  (0, k.jsx)(`div`, { children: b }),
                                 ],
                               }),
                             (0, k.jsx)(Ce, {
@@ -281,7 +281,7 @@ function xe(e) {
                             (0, k.jsx)(we, {
                               mapOriginalImages: c,
                               mapImages: d,
-                              setImages: m,
+                              setImages: p,
                               mapAltText: l,
                               setAltText: u,
                               bAppHasSteamChinaToolsEnabled:
@@ -296,19 +296,19 @@ function xe(e) {
                     children: [
                       (0, k.jsx)(`button`, {
                         className: `btn_green_white_innerfade`,
-                        disabled: y !== null,
+                        disabled: b !== null,
                         onClick: x,
-                        children: b(`#StoreAdmin_EditEditions_SaveButton`),
+                        children: m(`#StoreAdmin_EditEditions_SaveButton`),
                       }),
                       (0, k.jsx)(`button`, {
                         onClick: S,
-                        children: b(`#StoreAdmin_EditEditions_CancelButton`),
+                        children: m(`#StoreAdmin_EditEditions_CancelButton`),
                       }),
                     ],
                   }),
                   (0, k.jsx)(`p`, {
                     className: `gCn-Vxi9VPw-`,
-                    children: p(
+                    children: _(
                       `#StoreAdmin_EditEditions_NeedToPublishNotice`,
                       (0, k.jsx)(`a`, {
                         target: `_blank`,
@@ -324,28 +324,28 @@ function xe(e) {
                   className: void 0,
                   children: [
                     (0, k.jsx)(`h2`, {
-                      children: b(`#StoreAdmin_EditEditions_SavingTitle`),
+                      children: m(`#StoreAdmin_EditEditions_SavingTitle`),
                     }),
                     (0, k.jsxs)(`div`, {
                       className: `_2Euwmvsq7yw-`,
                       children: [
-                        _.isPending &&
+                        v.isPending &&
                           (0, k.jsxs)(k.Fragment, {
                             children: [
                               (0, k.jsx)(D, {}),
                               ` `,
-                              b(`#StoreAdmin_EditEditions_Saving`),
+                              m(`#StoreAdmin_EditEditions_Saving`),
                             ],
                           }),
-                        !_.isPending &&
+                        !v.isPending &&
                           (0, k.jsx)(`span`, {
-                            children: b(`#StoreAdmin_EditEditions_Saved`),
+                            children: m(`#StoreAdmin_EditEditions_Saved`),
                           }),
                       ],
                     }),
                     (0, k.jsx)(`span`, {
                       className: `_53IA82aOGpo-`,
-                      children: p(
+                      children: _(
                         `#StoreAdmin_EditEditions_NeedToPublishAlert`,
                         (0, k.jsx)(`a`, {
                           target: `_blank`,
@@ -357,7 +357,7 @@ function xe(e) {
                       className: `O-m7d-IwQ2c-`,
                       children: (0, k.jsx)(`button`, {
                         onClick: C,
-                        children: b(`#StoreAdmin_EditEditions_OK`),
+                        children: m(`#StoreAdmin_EditEditions_OK`),
                       }),
                     }),
                   ],
@@ -369,7 +369,7 @@ function xe(e) {
       (e.rgCandidates.length > 1 || e.rgEditions.length > 0) &&
         (0, k.jsx)(k.Fragment, {
           children: (0, k.jsxs)(`div`, {
-            className: n(`-VtEdw9C43A-`, g && `pBh5PfMTwpg-`),
+            className: n(`-VtEdw9C43A-`, h && `pBh5PfMTwpg-`),
             children: [
               t === `closed` &&
                 (0, k.jsxs)(k.Fragment, {
@@ -377,31 +377,31 @@ function xe(e) {
                     (0, k.jsx)(`button`, {
                       className: void 0,
                       onClick: () => i(`editor`),
-                      children: b(
+                      children: m(
                         `#StoreAdmin_EditEditions_ManageEditionsButton`,
                       ),
                     }),
                     o?.size > 0
                       ? (0, k.jsx)(`span`, {
-                          children: b(
+                          children: m(
                             `#StoreAdmin_EditEditions_ManageEditionsDescription`,
                             o.size,
                           ),
                         })
                       : (0, k.jsx)(`span`, {
-                          children: b(
+                          children: m(
                             `#StoreAdmin_EditEditions_GroupEditionsDescription`,
                           ),
                         }),
                     (0, k.jsx)(`span`, {
-                      children: g
+                      children: h
                         ? (0, k.jsx)(`span`, {
                             className: n(`_6XZF74-pNFM-`, `icon_check_green`),
-                            children: b(
+                            children: m(
                               `#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic`,
                             ),
                           })
-                        : b(
+                        : m(
                             `#StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic`,
                           ),
                     }),
@@ -442,7 +442,7 @@ function Ce(e) {
     className: ue,
     children: [
       (0, k.jsx)(`p`, {
-        children: p(
+        children: _(
           `#StoreAdmin_EditEditions_GroupEditionsIntro`,
           (0, k.jsx)(`a`, {
             target: `_blank`,
@@ -451,15 +451,15 @@ function Ce(e) {
         ),
       }),
       (0, k.jsx)(`br`, {}),
-      (0, k.jsx)(`h3`, { children: b(`#StoreAdmin_EditEditions_StepNumber1`) }),
+      (0, k.jsx)(`h3`, { children: m(`#StoreAdmin_EditEditions_StepNumber1`) }),
       (0, k.jsx)(`p`, {
-        children: b(`#StoreAdmin_EditEditions_SelectEditionsDescription`),
+        children: m(`#StoreAdmin_EditEditions_SelectEditionsDescription`),
       }),
       (0, k.jsx)(`div`, {
         className: de,
         children: (0, k.jsx)(`input`, {
           type: `text`,
-          placeholder: b(`#StoreAdmin_EditEditions_FilterDescription`),
+          placeholder: m(`#StoreAdmin_EditEditions_FilterDescription`),
           value: s,
           onChange: u,
         }),
@@ -470,16 +470,16 @@ function Ce(e) {
             children: (0, k.jsxs)(`tr`, {
               children: [
                 (0, k.jsx)(`td`, {
-                  children: b(`#StoreAdmin_EditEditions_ColumnEdition`),
+                  children: m(`#StoreAdmin_EditEditions_ColumnEdition`),
                 }),
                 (0, k.jsx)(`td`, {
-                  children: b(`#StoreAdmin_EditEditions_ColumnPackageTitle`),
+                  children: m(`#StoreAdmin_EditEditions_ColumnPackageTitle`),
                 }),
                 (0, k.jsx)(`td`, {
-                  children: b(`#StoreAdmin_EditEditions_ColumnState`),
+                  children: m(`#StoreAdmin_EditEditions_ColumnState`),
                 }),
                 (0, k.jsx)(`td`, {
-                  children: b(`#StoreAdmin_EditEditions_ColumnPrice`),
+                  children: m(`#StoreAdmin_EditEditions_ColumnPrice`),
                 }),
               ],
             }),
@@ -535,21 +535,21 @@ function we(e) {
       bAppHasSteamChinaToolsEnabled: o,
     } = e,
     [s, c] = (0, O.useState)(null),
-    l = y(e.bAppHasSteamChinaToolsEnabled),
+    l = p(e.bAppHasSteamChinaToolsEnabled),
     [u, d] = (0, O.useState)(`english`),
-    p = (0, O.useRef)(null),
-    m = null;
+    h = (0, O.useRef)(null),
+    g = null;
   if (n.has(u)) {
     let e = n.get(u);
-    m = e instanceof File ? URL.createObjectURL(e) : e;
+    g = e instanceof File ? URL.createObjectURL(e) : e;
   }
-  let h = async (e) => {
+  let _ = async (e) => {
       if (e.target.files && e.target.files[0]) {
         let t = e.target.files[0],
           i = await createImageBitmap(t);
         if (i.width !== R || i.height !== z) {
           c(
-            b(
+            m(
               `#StoreAdmin_EditEditions_ImageSizeError`,
               R,
               z,
@@ -563,14 +563,14 @@ function we(e) {
         (a.set(u, t), r(a), c(null));
       }
     },
-    g = (e) => {
+    v = (e) => {
       let t = new Map(i);
       (t.set(u, e.target.value), a(t));
     },
-    _ = (e) => {
+    y = (e) => {
       (d(e.target.value), c(null));
     },
-    v = () => {
+    b = () => {
       if (n.has(u)) {
         let e = new Map(n);
         (e.delete(u), r(e), c(null));
@@ -580,9 +580,9 @@ function we(e) {
   return (0, k.jsxs)(`div`, {
     className: ge,
     children: [
-      (0, k.jsx)(`h3`, { children: b(`#StoreAdmin_EditEditions_StepNumber2`) }),
+      (0, k.jsx)(`h3`, { children: m(`#StoreAdmin_EditEditions_StepNumber2`) }),
       (0, k.jsx)(`p`, {
-        children: b(
+        children: m(
           `#StoreAdmin_EditEditions_UploadComparisonGraphicsDescription`,
           R,
           z,
@@ -593,12 +593,12 @@ function we(e) {
         children: [
           (0, k.jsx)(`input`, {
             type: `file`,
-            ref: p,
-            onChange: h,
+            ref: h,
+            onChange: _,
             style: { display: `none` },
           }),
           (0, k.jsx)(`select`, {
-            onChange: _,
+            onChange: y,
             className: x(u),
             children: S(l, (e, t) =>
               (0, k.jsx)(
@@ -618,7 +618,7 @@ function we(e) {
       }),
       (0, k.jsx)(`div`, {
         className: N,
-        onClick: () => p.current?.click(),
+        onClick: () => h.current?.click(),
         onDragOver: (e) => e.preventDefault(),
         onDrop: async (e) => {
           if (
@@ -629,7 +629,7 @@ function we(e) {
               i = await createImageBitmap(t);
             if (i.width !== R || i.height !== z) {
               c(
-                b(
+                m(
                   `#StoreAdmin_EditEditions_ImageSizeError`,
                   R,
                   z,
@@ -643,39 +643,39 @@ function we(e) {
             (a.set(u, t), r(a), c(null));
           }
         },
-        children: m
+        children: g
           ? (0, k.jsxs)(k.Fragment, {
               children: [
                 (0, k.jsx)(`div`, {
                   className: P,
-                  children: b(`#StoreAdmin_EditEditions_DragAndDropToReplace`),
+                  children: m(`#StoreAdmin_EditEditions_DragAndDropToReplace`),
                 }),
-                (0, k.jsx)(`img`, { src: m }),
+                (0, k.jsx)(`img`, { src: g }),
                 (0, k.jsx)(`div`, {
                   className: I,
                   children: (0, k.jsx)(`a`, {
-                    onClick: v,
-                    children: b(`#StoreAdmin_EditEditions_Delete`),
+                    onClick: b,
+                    children: m(`#StoreAdmin_EditEditions_Delete`),
                   }),
                 }),
               ],
             })
           : (0, k.jsx)(`div`, {
               className: F,
-              children: b(`#StoreAdmin_EditEditions_DragAndDropHere`),
+              children: m(`#StoreAdmin_EditEditions_DragAndDropHere`),
             }),
       }),
-      (0, k.jsx)(`h3`, { children: b(`#StoreAdmin_EditEditions_StepNumber3`) }),
+      (0, k.jsx)(`h3`, { children: m(`#StoreAdmin_EditEditions_StepNumber3`) }),
       (0, k.jsx)(`label`, {
         htmlFor: `altTextArea`,
         children: (0, k.jsx)(`p`, {
-          children: b(`#StoreAdmin_EditEditions_AltTextDescription`),
+          children: m(`#StoreAdmin_EditEditions_AltTextDescription`),
         }),
       }),
       (0, k.jsx)(`textarea`, {
         id: `altTextArea`,
         className: ye,
-        onChange: g,
+        onChange: v,
         value: i.get(u) ?? ``,
       }),
     ],
@@ -720,10 +720,10 @@ function W(e) {
       },
       [r],
     ),
-    l = b(
+    l = m(
       t ? `#GameEdit_ComingSoon_SelectAnOption` : `#App_Landing_NoDateSelected`,
     );
-  return (0, k.jsx)(u, {
+  return (0, k.jsx)(d, {
     disabled: !o,
     strDefaultLabel: l,
     rgOptions: s,
@@ -755,7 +755,7 @@ function We(e) {
   return (
     c
       ? (d = (0, k.jsx)(q, {
-          strError: b(`#Error_ErrorCommunicatingWithNetwork`),
+          strError: m(`#Error_ErrorCommunicatingWithNetwork`),
         }))
       : (s || !o) && (d = (0, k.jsx)(D, {})),
     (0, k.jsx)(G.Provider, {
@@ -788,58 +788,58 @@ var Ke = O.memo(function (e) {
       strComingSoonDisplay: a,
     } = K(),
     { setOnOKButton: o, onCommit: s } = e,
-    [l, u] = O.useState(i),
+    [c, u] = O.useState(i),
     [d, f] = O.useState(a || void 0),
-    [m, h] = O.useState(`none`),
-    [g, _] = O.useState(),
-    v = O.useCallback((e) => {
-      (_(e), h(`none`));
+    [p, g] = O.useState(`none`),
+    [v, y] = O.useState(),
+    b = O.useCallback((e) => {
+      (y(e), g(`none`));
     }, []),
-    y = O.useCallback(() => {
-      l
+    x = O.useCallback(() => {
+      c
         ? d
-          ? (h(`submitting`),
-            _(null),
+          ? (g(`submitting`),
+            y(null),
             Ze({
               unAppID: t,
-              rtReleaseDate: n ? l : null,
+              rtReleaseDate: n ? c : null,
               strComingSoonDisplay: d,
             })
               .then(() => {
-                (h(`refreshing`), s(l, d));
+                (g(`refreshing`), s(c, d));
               })
               .catch((e) => {
-                v(e);
+                b(e);
               }))
-          : v(b(`#App_Landing_ReleaseDate_Error_ComingSoonDisplay`))
-        : v(b(`#App_Landing_ReleaseDate_Error_NoDate`));
-    }, [t, l, d, n, s, v]);
+          : b(m(`#App_Landing_ReleaseDate_Error_ComingSoonDisplay`))
+        : b(m(`#App_Landing_ReleaseDate_Error_NoDate`));
+    }, [t, c, d, n, s, b]);
   return (
     O.useEffect(() => {
-      o(m == `none` ? () => y : null);
-    }, [y, n, m, o]),
+      o(p == `none` ? () => x : null);
+    }, [x, n, p, o]),
     (0, k.jsxs)(k.Fragment, {
       children: [
-        g && (0, k.jsx)(q, { strError: g }),
+        v && (0, k.jsx)(q, { strError: v }),
         (0, k.jsx)(qe, {}),
-        (0, k.jsxs)(x, {
+        (0, k.jsxs)(h, {
           children: [
             (0, k.jsxs)(J, {
-              label: b(`#App_Landing_IntendedReleaseDateTitle`),
+              label: m(`#App_Landing_IntendedReleaseDateTitle`),
               children: [
-                (0, k.jsx)(Y, { rtSelectedDate: l, setSelectedDate: u }),
+                (0, k.jsx)(Y, { rtSelectedDate: c, setSelectedDate: u }),
                 (0, k.jsx)(Ye, {}),
               ],
             }),
             (0, k.jsxs)(J, {
-              label: b(`#App_Landing_PublicDateDisplayTitle`),
+              label: m(`#App_Landing_PublicDateDisplayTitle`),
               children: [
-                (0, k.jsx)(W, { rtSteamReleaseDate: l, value: d, onChange: f }),
+                (0, k.jsx)(W, { rtSteamReleaseDate: c, value: d, onChange: f }),
                 (0, k.jsx)(`p`, {
-                  children: b(`#App_Landing_ReleaseDateStorePage`),
+                  children: m(`#App_Landing_ReleaseDateStorePage`),
                 }),
                 (0, k.jsx)(`p`, {
-                  children: b(`#App_Landing_ReleaseDateStoreListing`),
+                  children: m(`#App_Landing_ReleaseDateStoreListing`),
                 }),
               ],
             }),
@@ -847,7 +847,7 @@ var Ke = O.memo(function (e) {
         }),
         (0, k.jsx)(`div`, {
           className: ze,
-          children: p(
+          children: _(
             `#App_Landing_NeedHelpWithReleaseDates`,
             (0, k.jsx)(`a`, {
               target: `_blank`,
@@ -855,7 +855,7 @@ var Ke = O.memo(function (e) {
             }),
             (0, k.jsx)(`a`, {
               target: `_blank`,
-              href: `${c()}wizard/HelpWithPublishing`,
+              href: `${l()}wizard/HelpWithPublishing`,
             }),
           ),
         }),
@@ -880,18 +880,18 @@ function qe() {
   return e && t
     ? n
       ? (0, k.jsx)(X, {
-          children: b(`#App_Landing_Release_EarliestDate_BuildReview`),
+          children: m(`#App_Landing_Release_EarliestDate_BuildReview`),
         })
       : (0, k.jsx)(X, {
-          children: b(`#App_Landing_Release_EarliestDate`, l(i)),
+          children: m(`#App_Landing_Release_EarliestDate`, u(i)),
         })
     : r && a
       ? (0, k.jsx)(X, {
-          children: b(`#App_Landing_Release_EarliestDate_TwoWeeks30Days`),
+          children: m(`#App_Landing_Release_EarliestDate_TwoWeeks30Days`),
         })
       : a
         ? (0, k.jsx)(X, {
-            children: b(`#App_Landing_Release_EarliestDate_TwoWeeks`),
+            children: m(`#App_Landing_Release_EarliestDate_TwoWeeks`),
           })
         : null;
 }
@@ -903,27 +903,27 @@ function Je(e) {
     className: Fe,
     onDismiss: t,
     children: [
-      (0, k.jsx)(m, {
-        children: b(
+      (0, k.jsx)(x, {
+        children: m(
           i
             ? `#App_Landing_Set_Release_Date`
             : `#App_Landing_Change_Release_Date`,
         ),
       }),
-      (0, k.jsx)(d, { className: Ie, children: r }),
+      (0, k.jsx)(c, { className: Ie, children: r }),
       (0, k.jsx)(v, {
         bOKDisabled: !n,
         onCancel: t,
-        strCancelText: b(`#App_Landing_Requested_Date_Cancel`),
+        strCancelText: m(`#App_Landing_Requested_Date_Cancel`),
         onOK: n,
-        strOKText: b(`#App_Landing_Requested_Date_Update`),
+        strOKText: m(`#App_Landing_Requested_Date_Update`),
       }),
     ],
   });
 }
 function J(e) {
   let { label: t, children: n } = e;
-  return (0, k.jsxs)(s, {
+  return (0, k.jsxs)(b, {
     className: Le,
     children: [
       (0, k.jsxs)(`div`, { className: Re, children: [t, `:`] }),
@@ -954,24 +954,24 @@ function Ye(e) {
     ? (0, k.jsxs)(k.Fragment, {
         children: [
           (0, k.jsx)(`p`, {
-            children: b(`#App_Landing_Set_Release_Date_SetIntended`),
+            children: m(`#App_Landing_Set_Release_Date_SetIntended`),
           }),
           (0, k.jsx)(`p`, {
-            children: b(`#App_Landing_Set_Release_Date_Weekends`),
+            children: m(`#App_Landing_Set_Release_Date_Weekends`),
           }),
           (0, k.jsx)(`p`, {
-            children: b(`#App_Landing_Set_Release_Date_PacificTime`),
+            children: m(`#App_Landing_Set_Release_Date_PacificTime`),
           }),
         ],
       })
     : (0, k.jsx)(`p`, {
-        children: p(
-          b(
+        children: _(
+          m(
             `#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Desc`,
-            l(n),
+            u(n),
           ),
           (0, k.jsx)(`a`, {
-            href: `${c()}wizard/HelpWithPublishing?issueid=905`,
+            href: `${l()}wizard/HelpWithPublishing?issueid=905`,
           }),
         ),
       });
@@ -989,9 +989,9 @@ function Xe(e) {
     ? null
     : (0, k.jsx)(`div`, {
         className: He,
-        children: b(
+        children: m(
           `#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note`,
-          l(t),
+          u(t),
         ),
       });
 }
@@ -1004,7 +1004,7 @@ async function Ze(e) {
     s.append(`coming_soon_display`, a));
   let c = await L.default.post(o, s);
   if (!c.data || c.data.success != 1)
-    throw b(
+    throw m(
       `#Error_Description`,
       c.data?.success,
       c.data?.error_message || `unknown`,
@@ -1037,18 +1037,18 @@ var Z = {
   et = [`view`, `preparestore`, `revertstore`, `savestore`, `publish`];
 function tt(e) {
   let { bIsGameEdit: t, unAppID: r, rgEarliestAdvancedAccessDate: i } = e,
-    [a, s] = O.useState(e.rtReleaseDate),
+    [a, o] = O.useState(e.rtReleaseDate),
     [c, l] = O.useState(e.strComingSoonDisplay),
     [u, d] = O.useState(!1),
     [f, p] = O.useState(!1),
-    m = O.useCallback(() => d(!0), []),
-    h = O.useCallback(() => d(!1), []),
-    g = O.useCallback((e, t, n) => {
-      (s(e), l(t), d(!1), n && p(!0));
+    h = O.useCallback(() => d(!0), []),
+    g = O.useCallback(() => d(!1), []),
+    _ = O.useCallback((e, t, n) => {
+      (o(e), l(t), d(!1), n && p(!0));
     }, []);
   return (0, k.jsxs)(k.Fragment, {
     children: [
-      u && (0, k.jsx)(We, { appid: r, onClose: h, onCommit: g }),
+      u && (0, k.jsx)(We, { appid: r, onClose: g, onCommit: _ }),
       f &&
         (0, k.jsx)(nt, { appid: r, bIsGameEdit: t, closeModal: () => p(!1) }),
       (0, k.jsxs)(`div`, {
@@ -1058,24 +1058,24 @@ function tt(e) {
             className: Ee,
             children: [
               (0, k.jsx)($, {
-                label: b(`#App_Landing_SpecifiedReleaseDate`),
+                label: m(`#App_Landing_SpecifiedReleaseDate`),
                 children: (0, k.jsx)(Q, { rtReleaseDate: a }),
               }),
               (0, k.jsx)($, {
-                label: b(`#App_Landing_CustomersSeeReleaseDate`),
+                label: m(`#App_Landing_CustomersSeeReleaseDate`),
                 children: (0, k.jsx)(`div`, {
                   className: n(H, c ? U : void 0),
-                  children: c ? T(c, a) : b(`#App_Landing_UnsetReleaseDate`),
+                  children: c ? T(c, a) : m(`#App_Landing_UnsetReleaseDate`),
                 }),
               }),
             ],
           }),
           (0, k.jsxs)(`div`, {
             className: De,
-            onClick: m,
+            onClick: h,
             children: [
               (0, k.jsx)(`div`, { className: n(V, Oe) }),
-              (0, k.jsx)(`div`, { className: Ae, children: (0, k.jsx)(o, {}) }),
+              (0, k.jsx)(`div`, { className: Ae, children: (0, k.jsx)(s, {}) }),
               (0, k.jsx)(`div`, { className: n(V, ke) }),
             ],
           }),
@@ -1083,7 +1083,7 @@ function tt(e) {
       }),
       i * 1e3 > new Date().getTime() &&
         (0, k.jsx)($, {
-          label: b(`#App_Landing_EarliestAdvancedAccessDate`),
+          label: m(`#App_Landing_EarliestAdvancedAccessDate`),
           children: (0, k.jsx)(Q, { rtReleaseDate: i }),
         }),
     ],
@@ -1094,16 +1094,16 @@ function Q(e) {
   return t
     ? (0, k.jsxs)(k.Fragment, {
         children: [
-          (0, k.jsx)(`div`, { className: n(H, U), children: l(t) }),
+          (0, k.jsx)(`div`, { className: n(H, U), children: u(t) }),
           (0, k.jsx)(`div`, {
             className: n(void 0, U),
-            children: g(t, {}, { timeZoneName: `short` }),
+            children: o(t, {}, { timeZoneName: `short` }),
           }),
         ],
       })
     : (0, k.jsx)(`div`, {
         className: n(H, void 0),
-        children: b(`#App_Landing_UnsetReleaseDate`),
+        children: m(`#App_Landing_UnsetReleaseDate`),
       });
 }
 function $(e) {
@@ -1126,12 +1126,12 @@ function nt(e) {
     }, [t, n, r]);
   return (0, k.jsx)(E, {
     active: !0,
-    children: (0, k.jsx)(_, {
-      strTitle: b(`#App_Landing_ReleaseDate_ChangesSaved`),
-      strDescription: b(`#App_Landing_Release_PublishStorePrompt`),
-      strOKButtonText: b(`#App_Landing_Release_PrepareToPublish`),
+    children: (0, k.jsx)(y, {
+      strTitle: m(`#App_Landing_ReleaseDate_ChangesSaved`),
+      strDescription: m(`#App_Landing_Release_PublishStorePrompt`),
+      strOKButtonText: m(`#App_Landing_Release_PrepareToPublish`),
       onOK: i,
-      strCancelButtonText: b(`#Button_OK`),
+      strCancelButtonText: m(`#Button_OK`),
       closeModal: r,
     }),
   });

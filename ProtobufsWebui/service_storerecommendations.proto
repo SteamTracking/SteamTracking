@@ -1,0 +1,53 @@
+
+message CStoreRecommendations_GetLiveSales_Request {
+	optional uint32 start = 1;
+	optional uint32 count = 2;
+}
+
+message CStoreRecommendations_GetLiveSales_Response {
+	repeated .CStoreRecommendations_GetLiveSales_Response_Sale sales = 1;
+	optional uint32 total_count = 2;
+}
+
+message CStoreRecommendations_GetLiveSales_Response_Sale {
+	optional uint32 clan_account_id = 1;
+	optional fixed64 clan_event_gid = 2;
+}
+
+message CStoreRecommendations_GetPackagePurchaseRecommendations_Request {
+	optional int32 count = 1;
+	//repeated UNKNOWN additional_source_items = 2;
+}
+
+message CStoreRecommendations_GetPackagePurchaseRecommendations_Response {
+	repeated .CStoreRecommendations_GetPackagePurchaseRecommendations_Response_Recommendation recommendations = 1;
+}
+
+message CStoreRecommendations_GetPackagePurchaseRecommendations_Response_Recommendation {
+	//optional UNKNOWN item_id = 1;
+	optional float weight = 2;
+}
+
+message CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Request {
+	optional int32 count = 1;
+	//repeated UNKNOWN item_ids = 2;
+}
+
+message CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response {
+	repeated .CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response_Recommendation recommendations = 1;
+}
+
+message CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response_Recommendation {
+	//optional UNKNOWN item_id = 1;
+	optional float weight = 2;
+}
+
+service StoreRecommendations {
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
+	rpc GetLiveSales (.CStoreRecommendations_GetLiveSales_Request) returns (.CStoreRecommendations_GetLiveSales_Response);
+	// bConstMethod=true, ePrivilege=1
+	rpc GetPackagePurchaseRecommendations (.CStoreRecommendations_GetPackagePurchaseRecommendations_Request) returns (.CStoreRecommendations_GetPackagePurchaseRecommendations_Response);
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	rpc GetPackagePurchaseRecommendationsForItems (.CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Request) returns (.CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response);
+}
+

@@ -5196,7 +5196,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Store.GetRecommendedTagsForUser#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetRecommendedTagsForUser = _;
@@ -5221,7 +5221,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetTagList = _;
@@ -5229,7 +5229,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Store.GetDiscoveryQueue#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetDiscoveryQueue = _;
@@ -5243,7 +5243,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Store.SkipDiscoveryQueueItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.SkipDiscoveryQueueItem = _;
@@ -5258,7 +5258,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetGamesFollowed = _;
@@ -5267,7 +5267,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetGamesFollowedCount = _;
@@ -5275,7 +5275,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Store.GetDiscoveryQueueSkippedApps#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetDiscoveryQueueSkippedApps = _;
@@ -5289,7 +5289,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Store.GetStorePreferences#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetStorePreferences = _;
@@ -5309,7 +5309,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Store.UpdatePackageReservations#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.UpdatePackageReservations = _;
@@ -5405,14 +5405,14 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.UpdateInvites#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.UpdateInvites = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetInvites#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetInvites = _;
@@ -5425,7 +5425,7 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetUserStatus#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetUserStatus = _;

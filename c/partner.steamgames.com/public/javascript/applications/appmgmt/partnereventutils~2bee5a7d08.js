@@ -64,6 +64,218 @@ function _(_, _ = null, _ = ``) {
   let _ = `\\[\\/?(?:` + _(_) + `){1,}.*?]`;
   return _.replace(new RegExp(_, `gi`), _);
 }
+var _ = `{STEAM_CLAN_IMAGE}`,
+  _ = `{STEAM_CLAN_LOC_IMAGE}`;
+function _(_, _) {
+  return `${_}/${_}`;
+}
+var _ = _.createContext({});
+function _() {
+  return _.useContext(_);
+}
+RegExp(`${_.replace(/[{}]/g, `\\$&`)}/(\\d+)/([0-9a-f]+\\.[a-z0-9]+)`, `gi`);
+function _(_, _, _ = 0) {
+  return _(_, _, _, _());
+}
+function _(_, _, _ = 0, _) {
+  if (!_ || _.length == 0) return null;
+  if (_?.startsWith(`{STEAM_CLAN_IMAGE}`))
+    return _.ReplacementTokenToClanImageURL(_);
+  if (_?.startsWith(`{STEAM_CLAN_LOC_IMAGE}`)) {
+    let _ = _.GetBaseURL(),
+      _ = _.substring(_.length + 1),
+      _ = parseInt(_.substring(0, _.indexOf(`/`))),
+      _ = _.substring(_.indexOf(`/`) + 1),
+      _ = _.GenerateURLFromHashAndExt(_, _);
+    if (_?.[_(_, _)] === !1) return _;
+    let _ = _.GetLocalizedClanImageFileNames(_, _).map(
+      (_) => _ + _ + `/` + _ + `?t=` + _,
+    );
+    return (_.push(_), _);
+  }
+  return _;
+}
+var _ = {
+    GetBaseURL() {
+      return `${_.CLAN_CDN_ASSET_URL}images/`;
+    },
+    GetBaseURLV2() {
+      return `${_.CLAN_CDN_ASSET_URL}locimages/`;
+    },
+    ReplacementTokenToClanImageURL(_) {
+      return (
+        (_ = _.replace(_, this.GetBaseURL())), _.replace(`http://`, `https://`)
+      );
+    },
+    ExtractHashFromBBCodeURL(_) {
+      let _ =
+        /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^.]*)$/.exec(
+          _,
+        );
+      return _?.groups
+        ? [_.groups.filename, parseInt(_.groups.clanid)]
+        : [void 0, void 0];
+    },
+    GetExtensionString(_) {
+      return (_.file_type == null ? null : _(_.file_type)) ?? `.jpg`;
+    },
+    GetHashAndExt(_) {
+      return _ ? _.image_hash + this.GetExtensionString(_) : null;
+    },
+    GetThumbHashAndExt(_) {
+      return _ ? _.thumbnail_hash + this.GetExtensionString(_) : null;
+    },
+    GetHashFromHashAndExt(_) {
+      let _ = _.substring(_.lastIndexOf(`.`));
+      return _.substring(0, _.length - _.length);
+    },
+    GetExtStringFromHashAndExt(_) {
+      return _.substring(_.lastIndexOf(`.`));
+    },
+    GetLocalizedClanImageFileNames(_, _) {
+      if (_ == null) return [];
+      let _ = this.GetHashFromHashAndExt(_),
+        _ = this.GetExtStringFromHashAndExt(_),
+        _ = [_ + `/` + _(_) + _];
+      return (_ == 4 && _.push(_ + `/` + _(_(_)) + _), _);
+    },
+    GenerateURLFromHashAndExt(_, _, _ = _.full) {
+      return this.GenerateURLFromHashAndExtAndLang(_, _, _, -1, void 0);
+    },
+    GenerateURLFromHashAndExtAndLang(_, _, _ = _.full, _, _) {
+      _ instanceof _ && (_ = _.GetAccountID());
+      let _ = this.GetBaseURL(),
+        _ = _ != null && _ != -1;
+      if (_ == _.full && !_) return _ + _ + `/` + _;
+      {
+        let _ = _.substring(_.lastIndexOf(`.`)),
+          _ = _.substring(0, _.length - _.length);
+        return !_ || _ == 0 || _ != `localized_image_group`
+          ? _ + _ + `/` + _ + _ + _
+          : _ + _ + `/` + _ + `/` + _(_(_)) + _;
+      }
+    },
+    GetHashAndExtFromURL(_) {
+      let _ = this.GetBaseURL();
+      return !_?.startsWith(_) ||
+        ((_ = _.substring(_.length)), _.indexOf(`/`) == -1)
+        ? null
+        : ((_ = _.substring(_.indexOf(`/`) + 1)), _);
+    },
+    GenerateEditableURLFromHashAndExt(_, _, _) {
+      let _ =
+        _.COMMUNITY_BASE_URL +
+        `gid/` +
+        _.ConvertTo64BitString() +
+        `/showclanimage/?image_hash_and_ext=` +
+        _;
+      return (_ && (_ += `&lang=` + _), _);
+    },
+    GetMimeType(_) {
+      return _(_);
+    },
+    async AsyncGetImageResolution(_, _, _, _, _) {
+      let _ =
+          _ +
+          this.GetExtensionString({
+            file_type: _,
+          }),
+        _ = this.GenerateEditableURLFromHashAndExt(_, _);
+      return await this.AsyncGetImageResolutionInternal(_, _, _);
+    },
+    async AsyncGetImageResolutionInternal(_, _, _) {
+      let _ = _(),
+        _ = new Image();
+      ((_.crossOrigin = `anonymous`),
+        (_.onerror = (_) => {
+          let _ = {
+            success: 2,
+          };
+          (_ ||
+            ((_.err_msg =
+              `Load fail on url ` + _ + ` with error: ` + _(_).strErrorMsg),
+            console.error(_.err_msg)),
+            (_.success = 2),
+            _.resolve(_));
+        }),
+        (_.onload = () => {
+          let _ = {
+            success: 2,
+          };
+          ((_.width = _.width),
+            (_.height = _.height),
+            !(_.width > 0) || !(_.height > 0)
+              ? (_(
+                  !1,
+                  `unexpected image resolution discovered for strURL: ` + _,
+                ),
+                (_.err_msg = `No resolution reported for url ` + _),
+                _.resolve(_))
+              : ((_.success = 1), _.resolve(_)));
+        }),
+        (_.src = _),
+        _.token.promise.catch(() => {
+          ((_.onload = () => {}),
+            (_.onerror = () => {}),
+            _.resolve({
+              success: 52,
+            }));
+        }));
+      let _,
+        _ = new Promise((_, _) => {
+          _ = setTimeout(() => _(), 1e4);
+        }),
+        _;
+      try {
+        _ = await Promise.race([_, _.promise]);
+      } catch {
+        _ = {
+          success: 16,
+          err_msg: `We timed out processing images`,
+        };
+      } finally {
+        clearTimeout(_);
+      }
+      return _;
+    },
+    BIsClanImageVideo(_) {
+      return _.file_type == 4 || _.file_type == 5;
+    },
+  },
+  _ = (function (_) {
+    return (
+      (_.full = ``),
+      (_.background_main = `_960x311`),
+      (_.background_mini = `_480x156`),
+      (_.capsule_main = `_400x225`),
+      (_.spotlight_main = `_1054x230`),
+      _
+    );
+  })({}),
+  _ = [
+    `localized_image_group`,
+    `link_capsule`,
+    `product_mobile_banner_override`,
+    `product_banner_override`,
+    `sale_section_title`,
+    `schedule_track_art`,
+    `localized_background_art`,
+  ],
+  _ = 39049601,
+  _ = 45479024,
+  _ = 41316928;
+function _(_, _, _) {
+  return _ == 45559995
+    ? `charts/topnewreleases/${_}`
+    : _ == 45902273
+      ? `charts/bestofyear/${_}`
+      : _
+        ? `sale/${_}`
+        : `curator/${_}/sale/${_}`;
+}
+function _(_, _) {
+  return _(_, ``, _).startsWith(`curator/`);
+}
 var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
@@ -1666,14 +1878,14 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetVoteDefinitions = _;
   function _(_, _, _) {
     return _.SendMsg(`StoreSales.SetVote#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.SetVote = _;
@@ -1681,7 +1893,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`StoreSales.GetUserVotes#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetUserVotes = _;
@@ -1692,7 +1904,7 @@ var _;
     return _.SendMsg(`SteamAwards.GetUserNominations#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetUserNominations = _;
@@ -1700,7 +1912,7 @@ var _;
     return _.SendMsg(`SteamAwards.GetOtherUserNominations#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 2,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetOtherUserNominations = _;
@@ -1708,7 +1920,7 @@ var _;
     return _.SendMsg(`SteamAwards.Nominate#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.Nominate = _;
@@ -1720,7 +1932,7 @@ var _;
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`community`],
+        rgBrowserAPISites: [`community`, `store`],
       },
     );
   }
@@ -1728,232 +1940,20 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`SteamAwards.GetNominationShareLink#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetNominationShareLink = _;
 })((_ ||= {}));
 var _ = {
-    bBroadcastEnabled: !1,
-    broadcastChatSetting: `hide`,
-    default_broadcast_title: `#Broadcast_default_title_dev`,
-    localized_broadcast_title: Array(32),
-    localized_broadcast_left_image: Array(32),
-    localized_broadcast_right_image: Array(32),
-    broadcast_whitelist: [],
-  },
-  _ = `{STEAM_CLAN_IMAGE}`,
-  _ = `{STEAM_CLAN_LOC_IMAGE}`;
-function _(_, _) {
-  return `${_}/${_}`;
-}
-var _ = _.createContext({});
-function _() {
-  return _.useContext(_);
-}
-RegExp(`${_.replace(/[{}]/g, `\\$&`)}/(\\d+)/([0-9a-f]+\\.[a-z0-9]+)`, `gi`);
-function _(_, _, _ = 0) {
-  return _(_, _, _, _());
-}
-function _(_, _, _ = 0, _) {
-  if (!_ || _.length == 0) return null;
-  if (_?.startsWith(`{STEAM_CLAN_IMAGE}`))
-    return _.ReplacementTokenToClanImageURL(_);
-  if (_?.startsWith(`{STEAM_CLAN_LOC_IMAGE}`)) {
-    let _ = _.GetBaseURL(),
-      _ = _.substring(_.length + 1),
-      _ = parseInt(_.substring(0, _.indexOf(`/`))),
-      _ = _.substring(_.indexOf(`/`) + 1),
-      _ = _.GenerateURLFromHashAndExt(_, _);
-    if (_?.[_(_, _)] === !1) return _;
-    let _ = _.GetLocalizedClanImageFileNames(_, _).map(
-      (_) => _ + _ + `/` + _ + `?t=` + _,
-    );
-    return (_.push(_), _);
-  }
-  return _;
-}
-var _ = {
-    GetBaseURL() {
-      return `${_.CLAN_CDN_ASSET_URL}images/`;
-    },
-    GetBaseURLV2() {
-      return `${_.CLAN_CDN_ASSET_URL}locimages/`;
-    },
-    ReplacementTokenToClanImageURL(_) {
-      return (
-        (_ = _.replace(_, this.GetBaseURL())), _.replace(`http://`, `https://`)
-      );
-    },
-    ExtractHashFromBBCodeURL(_) {
-      let _ =
-        /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^.]*)$/.exec(
-          _,
-        );
-      return _?.groups
-        ? [_.groups.filename, parseInt(_.groups.clanid)]
-        : [void 0, void 0];
-    },
-    GetExtensionString(_) {
-      return (_.file_type == null ? null : _(_.file_type)) ?? `.jpg`;
-    },
-    GetHashAndExt(_) {
-      return _ ? _.image_hash + this.GetExtensionString(_) : null;
-    },
-    GetThumbHashAndExt(_) {
-      return _ ? _.thumbnail_hash + this.GetExtensionString(_) : null;
-    },
-    GetHashFromHashAndExt(_) {
-      let _ = _.substring(_.lastIndexOf(`.`));
-      return _.substring(0, _.length - _.length);
-    },
-    GetExtStringFromHashAndExt(_) {
-      return _.substring(_.lastIndexOf(`.`));
-    },
-    GetLocalizedClanImageFileNames(_, _) {
-      if (_ == null) return [];
-      let _ = this.GetHashFromHashAndExt(_),
-        _ = this.GetExtStringFromHashAndExt(_),
-        _ = [_ + `/` + _(_) + _];
-      return (_ == 4 && _.push(_ + `/` + _(_(_)) + _), _);
-    },
-    GenerateURLFromHashAndExt(_, _, _ = _.full) {
-      return this.GenerateURLFromHashAndExtAndLang(_, _, _, -1, void 0);
-    },
-    GenerateURLFromHashAndExtAndLang(_, _, _ = _.full, _, _) {
-      _ instanceof _ && (_ = _.GetAccountID());
-      let _ = this.GetBaseURL(),
-        _ = _ != null && _ != -1;
-      if (_ == _.full && !_) return _ + _ + `/` + _;
-      {
-        let _ = _.substring(_.lastIndexOf(`.`)),
-          _ = _.substring(0, _.length - _.length);
-        return !_ || _ == 0 || _ != `localized_image_group`
-          ? _ + _ + `/` + _ + _ + _
-          : _ + _ + `/` + _ + `/` + _(_(_)) + _;
-      }
-    },
-    GetHashAndExtFromURL(_) {
-      let _ = this.GetBaseURL();
-      return !_?.startsWith(_) ||
-        ((_ = _.substring(_.length)), _.indexOf(`/`) == -1)
-        ? null
-        : ((_ = _.substring(_.indexOf(`/`) + 1)), _);
-    },
-    GenerateEditableURLFromHashAndExt(_, _, _) {
-      let _ =
-        _.COMMUNITY_BASE_URL +
-        `gid/` +
-        _.ConvertTo64BitString() +
-        `/showclanimage/?image_hash_and_ext=` +
-        _;
-      return (_ && (_ += `&lang=` + _), _);
-    },
-    GetMimeType(_) {
-      return _(_);
-    },
-    async AsyncGetImageResolution(_, _, _, _, _) {
-      let _ =
-          _ +
-          this.GetExtensionString({
-            file_type: _,
-          }),
-        _ = this.GenerateEditableURLFromHashAndExt(_, _);
-      return await this.AsyncGetImageResolutionInternal(_, _, _);
-    },
-    async AsyncGetImageResolutionInternal(_, _, _) {
-      let _ = _(),
-        _ = new Image();
-      ((_.crossOrigin = `anonymous`),
-        (_.onerror = (_) => {
-          let _ = {
-            success: 2,
-          };
-          (_ ||
-            ((_.err_msg =
-              `Load fail on url ` + _ + ` with error: ` + _(_).strErrorMsg),
-            console.error(_.err_msg)),
-            (_.success = 2),
-            _.resolve(_));
-        }),
-        (_.onload = () => {
-          let _ = {
-            success: 2,
-          };
-          ((_.width = _.width),
-            (_.height = _.height),
-            !(_.width > 0) || !(_.height > 0)
-              ? (_(
-                  !1,
-                  `unexpected image resolution discovered for strURL: ` + _,
-                ),
-                (_.err_msg = `No resolution reported for url ` + _),
-                _.resolve(_))
-              : ((_.success = 1), _.resolve(_)));
-        }),
-        (_.src = _),
-        _.token.promise.catch(() => {
-          ((_.onload = () => {}),
-            (_.onerror = () => {}),
-            _.resolve({
-              success: 52,
-            }));
-        }));
-      let _,
-        _ = new Promise((_, _) => {
-          _ = setTimeout(() => _(), 1e4);
-        }),
-        _;
-      try {
-        _ = await Promise.race([_, _.promise]);
-      } catch {
-        _ = {
-          success: 16,
-          err_msg: `We timed out processing images`,
-        };
-      } finally {
-        clearTimeout(_);
-      }
-      return _;
-    },
-    BIsClanImageVideo(_) {
-      return _.file_type == 4 || _.file_type == 5;
-    },
-  },
-  _ = (function (_) {
-    return (
-      (_.full = ``),
-      (_.background_main = `_960x311`),
-      (_.background_mini = `_480x156`),
-      (_.capsule_main = `_400x225`),
-      (_.spotlight_main = `_1054x230`),
-      _
-    );
-  })({}),
-  _ = [
-    `localized_image_group`,
-    `link_capsule`,
-    `product_mobile_banner_override`,
-    `product_banner_override`,
-    `sale_section_title`,
-    `schedule_track_art`,
-    `localized_background_art`,
-  ],
-  _ = 39049601,
-  _ = 45479024,
-  _ = 41316928;
-function _(_, _, _) {
-  return _ == 45559995
-    ? `charts/topnewreleases/${_}`
-    : _ == 45902273
-      ? `charts/bestofyear/${_}`
-      : _
-        ? `sale/${_}`
-        : `curator/${_}/sale/${_}`;
-}
-function _(_, _) {
-  return _(_, ``, _).startsWith(`curator/`);
-}
+  bBroadcastEnabled: !1,
+  broadcastChatSetting: `hide`,
+  default_broadcast_title: `#Broadcast_default_title_dev`,
+  localized_broadcast_title: Array(32),
+  localized_broadcast_left_image: Array(32),
+  localized_broadcast_right_image: Array(32),
+  broadcast_whitelist: [],
+};
 function _(_) {
   switch (_) {
     case 29:

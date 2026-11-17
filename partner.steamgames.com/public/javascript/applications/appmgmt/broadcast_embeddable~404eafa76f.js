@@ -47,32 +47,32 @@ import {
   t as O,
 } from "./chunk~25a6634263.js";
 import {
-  Cn as fe,
-  Ki as pe,
-  Li as me,
-  Rn as he,
-  Un as k,
-  Vn as ge,
-  Wt as _e,
-  Zi as ve,
+  Ar as fe,
+  Bn as pe,
+  Gt as me,
+  Hn as he,
+  Qi as ge,
+  Ri as _e,
+  Wn as k,
+  _a as ve,
+  _n as A,
   cr as ye,
-  dr as be,
+  da as j,
+  fr as be,
   g as xe,
-  ga as Se,
-  gn as A,
+  gn as Se,
   h as Ce,
-  hn as we,
-  kr as Te,
+  hr as we,
+  ii as Te,
   l as Ee,
   lr as De,
-  mr as Oe,
-  ni as ke,
-  ri as Ae,
-  sr as je,
-  ua as j,
+  qi as Oe,
+  ri as ke,
+  ur as Ae,
+  wn as je,
   zn as Me,
 } from "./chunk~1fa4b8f2ff.js";
-import { d as Ne, h as Pe, y as Fe } from "./chunk~0a99e05c44.js";
+import { _ as Ne, p as Pe, x as Fe } from "./chunk~0a99e05c44.js";
 import {
   En as Ie,
   Z as Le,
@@ -92,11 +92,11 @@ import { n as Ye } from "./chunk~fc8a9e4879.js";
 import { n as Xe } from "./chunk~9d71b14b50.js";
 import { t as Ze } from "./chunk~710e3cfd2f.js";
 import {
-  a as L,
-  h as Qe,
-  i as $e,
-  o as et,
-  r as tt,
+  a as Qe,
+  c as $e,
+  g as et,
+  i as tt,
+  o as L,
   s as nt,
 } from "./chunk~cbbb6ae37c.js";
 import "./chunk~8681f5c764.js";
@@ -118,7 +118,7 @@ import {
   r as vt,
   t as yt,
 } from "./chunk~05a38bc848.js";
-import { _ as bt } from "./chunk~2bee5a7d08.js";
+import { y as bt } from "./chunk~2bee5a7d08.js";
 import "./chunk~a6b9ae1345.js";
 import { t as xt } from "./chunk~4571d27d07.js";
 import { t as St } from "./chunk~967b42dac9.js";
@@ -6565,6 +6565,7 @@ var Xr = `127.0.0.1`,
           c.SendSerializedMessage(u) == 1
             ? this.m_mapPendingMethodRequests.set(l, {
                 m_iSeq: l,
+                m_sServiceName: e,
                 m_responseClass: n,
                 m_fnCallback: i,
                 m_fnError: a,
@@ -6667,7 +6668,14 @@ var Xr = `127.0.0.1`,
       (b(t == n.m_iSeq, `Transport Error: mistmatched request sequence`),
         this.m_mapPendingMethodRequests.delete(t));
       let r = E.InitFromMsg(n.m_responseClass, e);
-      n.m_fnCallback(r);
+      (r.BIsValid() ||
+        C()?.ReportError(
+          Error(
+            `WebUITransport: failed to parse response for ${n.m_sServiceName}`,
+          ),
+          { bIncludeMessageInIdentifier: !0 },
+        ),
+        n.m_fnCallback(r));
     }
     DispatchNotification(e) {
       this.m_messageHandlers.DispatchMsgToHandlers(e, (e) => {
@@ -8259,8 +8267,8 @@ function $i(e) {
     a = t.winners_info ?? [],
     o = a.length > 0 ? a[0].accountid : 0,
     [s, c] = R.useState(o),
-    l = he(`${bt.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`),
-    u = he(`${bt.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`);
+    l = Me(`${bt.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`),
+    u = Me(`${bt.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`);
   b(!!t.giveaway_gid, `Giveaway draw announcement is missing its giveaway`, t);
   let d = Hi(t.giveaway_gid),
     f = d.bLoadingGiveawayInfo || d.closed ? null : d.seconds_until_drawing,
@@ -8272,7 +8280,7 @@ function $i(e) {
     a.length > 0 && a[0].persona
       ? a[0].persona
       : j(`#GA2022_UnknownPersonaName`);
-  return (0, J.jsx)(fe, {
+  return (0, J.jsx)(je, {
     href: `https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022`,
     className: n,
     children: (0, J.jsxs)(`div`, {
@@ -8288,7 +8296,7 @@ function $i(e) {
             s !== o &&
               (0, J.jsx)(`div`, {
                 className: S(`l-AUoGdZDTw-`),
-                children: Se(
+                children: ve(
                   `#GA2022_Congrats_Deck_Unknown`,
                   (0, J.jsx)(`br`, {}),
                 ),
@@ -8296,7 +8304,7 @@ function $i(e) {
             s === o &&
               (0, J.jsx)(`div`, {
                 className: S(`l-AUoGdZDTw-`, `-LW3HYdhtwg-`),
-                children: Se(
+                children: ve(
                   p
                     ? `#GA2022_Congrats_Deck_Me`
                     : `#GA2022_Congrats_Deck_OTher`,
@@ -8307,7 +8315,7 @@ function $i(e) {
             !!(f && f > 0) &&
               (0, J.jsx)(`div`, {
                 className: `B7DECy1bqvs-`,
-                children: Se(`#GA2022_Congrats_NextDraw`, f),
+                children: ve(`#GA2022_Congrats_NextDraw`, f),
               }),
           ],
         }),
@@ -8421,27 +8429,27 @@ var aa = (e) => {
   oa = (e) => {
     switch (e.userType) {
       case `presenter`:
-        return (0, J.jsx)(we, {
+        return (0, J.jsx)(Se, {
           toolTipContent: j(`#BroadcastChat_Role_Presenter_ttip`),
-          children: (0, J.jsx)(`span`, {
-            className: Fi,
-            children: (0, J.jsx)(ye, {}),
-          }),
-        });
-      case `moderator`:
-        return (0, J.jsx)(we, {
-          toolTipContent: j(`#BroadcastChat_Role_Moderatorr_ttip`),
           children: (0, J.jsx)(`span`, {
             className: Fi,
             children: (0, J.jsx)(De, {}),
           }),
         });
+      case `moderator`:
+        return (0, J.jsx)(Se, {
+          toolTipContent: j(`#BroadcastChat_Role_Moderatorr_ttip`),
+          children: (0, J.jsx)(`span`, {
+            className: Fi,
+            children: (0, J.jsx)(Ae, {}),
+          }),
+        });
       case `broadcaster`:
-        return (0, J.jsx)(we, {
+        return (0, J.jsx)(Se, {
           toolTipContent: j(`#BroadcastChat_Role_Broadcaster_ttip`),
           children: (0, J.jsx)(`span`, {
             className: Fi,
-            children: (0, J.jsx)(je, {}),
+            children: (0, J.jsx)(ye, {}),
           }),
         });
       default:
@@ -8644,8 +8652,8 @@ var aa = (e) => {
                 ),
               )),
         r.length
-          ? Me(
-              (0, J.jsxs)(ge, {
+          ? pe(
+              (0, J.jsxs)(he, {
                 children: [
                   (0, J.jsxs)(`div`, {
                     className: Ni,
@@ -8837,7 +8845,7 @@ function ca(e) {
               title: j(`#ChatEntryButton_Submit`),
               disabled: u,
               onClick: l,
-              children: (0, J.jsx)(me, {}),
+              children: (0, J.jsx)(_e, {}),
             }),
           ],
         }),
@@ -8906,7 +8914,7 @@ var ua = class extends R.Component {
 function da(e) {
   return (0, J.jsx)(`div`, {
     className: Ii,
-    children: (0, J.jsx)(_e, {
+    children: (0, J.jsx)(me, {
       onClick: e.onSignIn,
       className: S(Ri),
       children: j(`#BroadcastChat_Login`),
@@ -8923,7 +8931,7 @@ function fa(e) {
       }),
       !x.logged_in &&
         !T.IN_STEAMUI &&
-        (0, J.jsx)(_e, {
+        (0, J.jsx)(me, {
           onClick: di,
           className: S(`h1DcT5FSiVw-`),
           children: j(`#Login_SignIn`),
@@ -8939,8 +8947,8 @@ var pa = `_7FIE12jcFio-`,
       n = Ve(),
       r = (0, R.useRef)({ include_assets: !0, include_release: !0 }),
       i = Ue(t),
-      { data: a } = Pe(i),
-      { data: o } = Ne(i),
+      { data: a } = Ne(i),
+      { data: o } = Pe(i),
       { data: s } = Fe(i),
       [c, l] = Yt(t, r.current),
       u = S(pa, `StoreSaleWidgetContainer_mini`),
@@ -9149,7 +9157,7 @@ var Q = class e {
         include_trailers: !0,
       }));
     let n = Ft.Get().GetApp(e.nAppIDVOD),
-      r = new et();
+      r = new nt();
     ((r.accountid = 0),
       (r.nAppIDVOD = e.nAppIDVOD),
       (r.default_selection_priority = L.k_ePrimary),
@@ -9207,7 +9215,7 @@ var Q = class e {
   }
   async InternalHintLoadEmbeddableStreams(e, t) {
     let n = l(`broadcast_available_for_page`, `application_config`);
-    if (nt(n)) return this.HandleHintLoadBroadcastResponse(e, n);
+    if ($e(n)) return this.HandleHintLoadBroadcastResponse(e, n);
     try {
       let n = await z.default.get(
         T.STORE_BASE_URL + `broadcast/ajaxgetstreamersforpage`,
@@ -9273,7 +9281,7 @@ var Q = class e {
       r = Array.from(e.jsondata.broadcast_priority ?? []),
       i = new Map();
     for (let e = 0; e < n.length && !(e >= r.length); e++)
-      i.set(n[e], $e(r[e]));
+      i.set(n[e], Qe(r[e]));
     t.forEach((e) => {
       let t = Number(e.accountid);
       i.has(t) && (e.current_selection_priority = i.get(t));
@@ -9554,7 +9562,7 @@ function mo(e) {
     children: [
       (0, J.jsx)(A, {
         toolTipContent: j(`#EventDisplay_Share_OnFaceBook`),
-        children: (0, J.jsx)(fe, {
+        children: (0, J.jsx)(je, {
           href: n.strFacebookUrl,
           className: Ht,
           children: (0, J.jsx)(`img`, { className: S(lt), src: Zt }),
@@ -9562,7 +9570,7 @@ function mo(e) {
       }),
       (0, J.jsx)(A, {
         toolTipContent: j(`#EventDisplay_Share_OnTwitter`),
-        children: (0, J.jsx)(fe, {
+        children: (0, J.jsx)(je, {
           href: n.strTwitterUrl,
           className: Ht,
           children: (0, J.jsx)(`img`, { className: S(lt), src: Qt }),
@@ -9570,7 +9578,7 @@ function mo(e) {
       }),
       (0, J.jsx)(A, {
         toolTipContent: j(`#EventDisplay_Share_OnReddit`),
-        children: (0, J.jsx)(fe, {
+        children: (0, J.jsx)(je, {
           href: n.strRedditUrl,
           className: Ht,
           children: (0, J.jsx)(`img`, { className: S(lt), src: Xt }),
@@ -9664,7 +9672,7 @@ var _o = {
     {
       appid: 730,
       url: `https://steam.tv/csgo`,
-      broadcasterAccountID: 927819071,
+      broadcasterAccountID: 155466124,
     },
   ],
 };
@@ -10036,7 +10044,7 @@ function xo(e) {
       children: (0, J.jsx)(`a`, {
         href: e,
         className: Ua,
-        children: (0, J.jsx)(Te, {}),
+        children: (0, J.jsx)(fe, {}),
       }),
     });
   }
@@ -10070,7 +10078,7 @@ var So = class extends R.Component {
       children: [
         (0, J.jsxs)(`div`, {
           className: S(Wa, `viewer_count`),
-          children: [(0, J.jsx)(pe, {}), Xe(i)],
+          children: [(0, J.jsx)(Oe, {}), Xe(i)],
         }),
         (0, J.jsxs)(`div`, {
           className: S(Va, `viewer_links`),
@@ -10089,7 +10097,7 @@ var So = class extends R.Component {
               (0, J.jsxs)(`div`, {
                 className: `ZfSk6AxA-Tw-`,
                 children: [
-                  (0, J.jsx)(Oe, {}),
+                  (0, J.jsx)(we, {}),
                   (0, J.jsx)(`a`, {
                     href: `#`,
                     className: void 0,
@@ -10106,7 +10114,7 @@ var So = class extends R.Component {
               (0, J.jsxs)(`div`, {
                 className: `ZfSk6AxA-Tw-`,
                 children: [
-                  (0, J.jsx)(Ae, {}),
+                  (0, J.jsx)(Te, {}),
                   (0, J.jsx)(`a`, {
                     href: `#`,
                     className: void 0,
@@ -10173,7 +10181,7 @@ var Co = class extends R.Component {
       n = I.GetOrCreateBroadcastInfo(t).m_nAppID;
     n = n == 7 ? 0 : n;
     let r = Ue(n),
-      { data: i } = Pe(r);
+      { data: i } = Ne(r);
     return (0, J.jsxs)(`div`, {
       className: [ao, void 0].join(` `),
       children: [
@@ -10192,7 +10200,7 @@ var Co = class extends R.Component {
           children: (0, J.jsx)(`button`, {
             className: so,
             onClick: e.OnPreventPopup,
-            children: (0, J.jsx)(ve, {}),
+            children: (0, J.jsx)(ge, {}),
           }),
         }),
       ],
@@ -10262,8 +10270,8 @@ function Do(e) {
     a = N(() => I.GetOrCreateBroadcastInfo(r.steamid).m_nAppID);
   a = a == 7 ? 0 : a;
   let o = Ue(a),
-    { data: s } = Pe(o),
-    { data: c } = Ne(o);
+    { data: s } = Ne(o),
+    { data: c } = Pe(o);
   if (!ya(r)) return null;
   let l = i && c ? Ie(c, `header`) : void 0,
     u = Number.parseInt(`` + r.viewer_count),
@@ -10295,7 +10303,7 @@ function Do(e) {
         children: d
           ? (0, J.jsxs)(J.Fragment, {
               children: [
-                (0, J.jsx)(pe, {}),
+                (0, J.jsx)(Oe, {}),
                 (0, J.jsx)(`div`, { className: qa, children: Xe(u) }),
               ],
             })
@@ -10312,7 +10320,7 @@ function Oo(e) {
     return (0, J.jsxs)(J.Fragment, {
       children: [
         (0, J.jsx)(`img`, { className: S(i, Xa), src: t }),
-        (0, J.jsx)(Qe, { className: S(i, Za), srcs: e }),
+        (0, J.jsx)(et, { className: S(i, Za), srcs: e }),
       ],
     });
   }

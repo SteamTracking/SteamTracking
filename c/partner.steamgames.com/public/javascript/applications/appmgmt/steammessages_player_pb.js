@@ -5192,7 +5192,7 @@ var _ = _(_(), 1),
     constructor(_ = null) {
       (super(),
         _.prototype.steamid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null));
+        _.Message.initialize(this, _, 0, -1, [5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -5222,6 +5222,14 @@ var _ = _(_(), 1),
               _: !1,
               _: _.readBool,
               _: _.writeBool,
+            },
+            appids: {
+              _: 5,
+              _: !0,
+              _: !0,
+              _: _.readUint32,
+              pbr: _.readPackedUint32,
+              _: _.writeRepeatedUint32,
             },
           },
         }),
@@ -11250,7 +11258,7 @@ var _ = _(_(), 1),
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -11260,7 +11268,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `help`, `community`],
+      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
     });
   }
   _.GetPlayerLinkDetails = _;
@@ -11281,7 +11289,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetOwnedGames = _;
@@ -11296,7 +11304,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Player.GetFriendsGameplayInfo#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetFriendsGameplayInfo = _;
@@ -11318,7 +11326,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Player.SetProfileBackground#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.SetProfileBackground = _;
@@ -11333,7 +11341,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Player.SetMiniProfileBackground#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.SetMiniProfileBackground = _;
@@ -11348,7 +11356,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Player.SetAvatarFrame#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.SetAvatarFrame = _;
@@ -11363,7 +11371,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Player.SetAnimatedAvatar#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.SetAnimatedAvatar = _;
@@ -11378,6 +11386,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Player.SetSteamDeckKeyboardSkin#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.SetSteamDeckKeyboardSkin = _;
@@ -11394,7 +11403,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetProfileItemsEquipped = _;
@@ -11417,7 +11426,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetCommunityBadgeProgress = _;
@@ -11443,7 +11452,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetGameAchievements = _;
@@ -11452,7 +11461,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetUserAchievements = _;
@@ -11465,7 +11474,7 @@ var _ = _(_(), 1),
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`],
+        rgBrowserAPISites: [`partner`, `store`],
       },
     );
   }
@@ -11535,6 +11544,7 @@ var _ = _(_(), 1),
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
       },
     );
   }
@@ -11562,7 +11572,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Player.PostStatusToFriends#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.PostStatusToFriends = _;
@@ -11584,6 +11594,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.ClientGetLastPlayedTimes = _;
@@ -11604,7 +11615,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Player.GetNicknameList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`],
+      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
     });
   }
   _.GetNicknameList = _;
@@ -11642,7 +11653,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Player.GetCommunityPreferences#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`],
+      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
     });
   }
   _.GetCommunityPreferences = _;
@@ -11655,7 +11666,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Player.GetTextFilterWords#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetTextFilterWords = _;

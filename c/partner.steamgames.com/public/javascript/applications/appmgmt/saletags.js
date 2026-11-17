@@ -550,10 +550,15 @@ function _(_) {
   return _?.[0] == _;
 }
 async function _(_) {
+  let _;
   try {
-    let _ = await fetch(_(_.STORE_BASE_URL, _, _.country_code), {
+    _ = await fetch(_(_.STORE_BASE_URL, _, _.country_code), {
       credentials: `include`,
     });
+  } catch (_) {
+    return (console.warn(`LoadDynamicUserData`, _), _());
+  }
+  try {
     if (!_._) throw Error(`Server returned ${_.status}`);
     return _(await _.json());
   } catch (_) {
@@ -871,6 +876,18 @@ function _(_) {
         : []),
     ].sort((_, _) => _.ordinal - _.ordinal);
 }
+function _(_, ..._) {
+  let { data: _ } = _(_);
+  return _(_, ..._);
+}
+function _(_, ..._) {
+  if (!_?.asset_url_format) return;
+  let _ = _.find((_) => {
+    let _ = _[_];
+    return typeof _ == `string` && _.trim() !== ``;
+  });
+  return _ && _(_, _);
+}
 var _ = `qkhMGgZoiEA-`,
   _ = `dR7N9Ozyb6k-`,
   _ = `_8j-XyEfRwfE-`;
@@ -972,6 +989,7 @@ var _ = `_8Wp5WbqAbJA-`,
   _ = `_4KL8m0wDedE-`,
   _ = `E3GBmOK5lMc-`,
   _ = `lOHW8g-YyoY-`,
+  _ = `Ybt9EqGhaaU-`,
   _ = `RQzfcqJK1Eg-`,
   _ = `_0MLgqm-W-nA-`,
   _ = `iwrzh-mg8hE-`,
@@ -2506,7 +2524,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.ValidateCart = _;
@@ -2520,7 +2538,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Checkout.AddFreeLicense#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.AddFreeLicense = _;
@@ -3335,6 +3353,7 @@ function _(_) {
       bHideReleaseDate: _,
       bHideIfDemo: _,
       bPurchaseOptionDisplay: _,
+      bCapsuleRowDisplay: _,
       strContainerClassName: _,
       strDiscountAndPriceClassName: _,
       strPriceFormattedClassName: _,
@@ -3353,6 +3372,7 @@ function _(_) {
       [_]: !0,
       [_]: _,
       StoreSalePriceWidgetContainer: !0,
+      [_]: _,
       [_]: _,
       [_]: _,
       [_ ?? ``]: !!_,
@@ -3454,6 +3474,7 @@ function _(_) {
     strDiscountAndPriceClassName: _,
     strPriceFormattedClassName: _,
     bPurchaseOptionDisplay: _,
+    bCapsuleRowDisplay: _,
   });
 }
 function _(_) {
@@ -3471,6 +3492,7 @@ function _(_) {
       strDiscountAndPriceClassName: _,
       strPriceFormattedClassName: _,
       bPurchaseOptionDisplay: _,
+      bCapsuleRowDisplay: _,
       bBundleItem: _,
     } = _,
     _ = _,
@@ -3492,6 +3514,7 @@ function _(_) {
       [_]: !!_,
       [_]: !!_,
       [_]: !!_,
+      [_]: _,
       [_]: _,
       [_ ?? ``]: !!_,
     }),
@@ -5074,26 +5097,28 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`AccountCart.GetCart#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetCart = _;
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.AddItemsToCart#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.AddItemsToCart = _;
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.ModifyLineItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.ModifyLineItem = _;
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.RemoveItemFromCart#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.RemoveItemFromCart = _;
@@ -5106,6 +5131,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.DeleteCart#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.DeleteCart = _;
@@ -6927,7 +6953,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetShoppingCartContents = _;
@@ -6956,6 +6982,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ShoppingCart.ModifyLineItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.ModifyLineItem = _;
@@ -6963,7 +6990,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ShoppingCart.RemoveLineItems#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.RemoveLineItems = _;
@@ -8889,6 +8916,7 @@ function _(_) {
     role: `button`,
     tabIndex: 0,
     className: _(_, _),
+    "data-hovered": _ || void 0,
     onMouseEnter: _,
     onMouseLeave: _,
     onTouchStart: () => _(!1),
@@ -10913,7 +10941,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ClientComm.GetAllClientLogonInfo#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetAllClientLogonInfo = _;
@@ -10928,42 +10956,42 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ClientComm.GetClientAppList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetClientAppList = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.InstallClientApp#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.InstallClientApp = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.UninstallClientApp#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.UninstallClientApp = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.LaunchClientApp#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.LaunchClientApp = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.SetClientAppUpdateState#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.SetClientAppUpdateState = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.EnableOrDisableDownloads#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.EnableOrDisableDownloads = _;

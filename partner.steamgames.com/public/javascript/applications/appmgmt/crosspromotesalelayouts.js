@@ -1,17 +1,23 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { At as e, j as t, vt as n, z as r } from "./chunk~de7f2df91c.js";
-import { $n as i, Ha as a, ua as o } from "./chunk~1fa4b8f2ff.js";
-import { Dn as s, r as c } from "./chunk~6b8ddcaac8.js";
-import { n as l } from "./chunk~e70aabe4d7.js";
-import { c as u } from "./chunk~fc8a9e4879.js";
+import {
+  At as e,
+  j as t,
+  sn as n,
+  vt as r,
+  z as i,
+} from "./chunk~de7f2df91c.js";
+import { Ua as a, da as o, er as s } from "./chunk~1fa4b8f2ff.js";
+import { Dn as c, On as l, r as u } from "./chunk~6b8ddcaac8.js";
+import { n as d } from "./chunk~e70aabe4d7.js";
+import { c as f } from "./chunk~fc8a9e4879.js";
 import "./chunk~2bee5a7d08.js";
-import { c as d, f, u as p } from "./chunk~3f4314f3b4.js";
-import { i as m } from "./chunk~7b4b9eb713.js";
-e();
-function h(e, t) {
-  let n = l(e ?? void 0, `capsule`, t);
+import { c as p, h as m, p as h, u as g } from "./chunk~3f4314f3b4.js";
+import { i as _ } from "./chunk~7b4b9eb713.js";
+var v = n(e(), 1);
+function y(e, t) {
+  let n = d(e ?? void 0, `capsule`, t);
   if (!e) return;
   let r = e.clanSteamID.GetAccountID();
   return {
@@ -21,149 +27,205 @@ function h(e, t) {
     rtEndTime: e.endTime || void 0,
     strSummary: e.GetSummaryWithFallback(t) || void 0,
     strCapsuleURL: n,
-    strSaleURL: m(e) ?? void 0,
-    strBackgroundURL: d(
+    strSaleURL: _(e) ?? void 0,
+    strBackgroundURL: p(
       r,
       e.jsondata.sale_cross_promo_carousel_background?.image,
     ),
     strScrimColor: e.jsondata.sale_cross_promo_scrim_color || void 0,
-    strLogoURL: p(e, t),
+    strLogoURL: h(e, t),
     eDesktopLayout:
       e.jsondata.sale_cross_promo_desktop_layout === `logo_top`
         ? `logo_top`
         : void 0,
   };
 }
-var g = `Es-UANTRhdg-`,
-  _ = `FsYxDNcAXaI-`,
-  v = `cSFkUHyVW24-`,
-  y = `yT92BfNEvpw-`,
-  b = `_6jMisrq5Zfo-`,
-  x = `XBv92QzB8Xc-`,
-  S = `NjUCqxvhkHk-`,
-  C = `gxh8RxFKhr8-`,
-  w = n();
-function T(e) {
+function b(e) {
+  return (e ?? []).slice(0, 48).map((e) => ({ appid: e }));
+}
+var x = `Es-UANTRhdg-`,
+  S = `FsYxDNcAXaI-`,
+  C = `cSFkUHyVW24-`,
+  w = `yT92BfNEvpw-`,
+  T = `gxh8RxFKhr8-`,
+  E = `AZSEWyNPfhc-`,
+  D = `gZNFN-cKUHw-`,
+  O = r();
+v.createContext(!1);
+function k(e) {
   let { event: n, language: r, strSaleURL: i } = e,
-    o = h(n, r);
+    o = y(n, r);
   if (!o) return null;
   let s = i ? { ...o, strSaleURL: i } : o;
   return s.strSaleURL
-    ? (0, w.jsx)(a, {
-        className: t(g, _, v),
+    ? (0, O.jsx)(a, {
+        className: t(x, S, C),
         "flow-children": `row`,
-        children: (0, w.jsx)(E, { saleEvent: s, bExploreButtonBelow: !0 }),
+        children: (0, O.jsx)(A, { saleEvent: s, bExploreButtonBelow: !0 }),
       })
     : null;
 }
-function E(e) {
+function A(e) {
   let {
       saleEvent: n,
-      bExploreButtonBelow: a,
-      bShowExploreHint: l,
-      children: d,
+      bExploreButtonBelow: r,
+      bShowExploreHint: a,
+      children: c,
     } = e,
-    p = n?.strSaleURL,
-    m = n?.strCapsuleURL,
-    h = n?.strSummary,
-    g = u(),
-    _ = r(),
-    v = _ && l !== void 0,
-    T = n?.rtEndTime
-      ? s(n.rtEndTime, {
+    d = n?.strSaleURL,
+    p = n?.eCreatorRole,
+    h = p || !e.strExploreLabel ? F(p) : e.strExploreLabel,
+    g = n?.strCapsuleURL,
+    _ = n?.strSummary,
+    v = f(),
+    y = i(),
+    b = y && a !== void 0,
+    x = n?.rtEndTime
+      ? l(n.rtEndTime, {
           weekday: void 0,
           year: void 0,
           month: `short`,
           day: `numeric`,
-          timeZone: g,
+          timeZone: v,
         })
       : void 0;
-  return (0, w.jsxs)(w.Fragment, {
+  return (0, O.jsxs)(O.Fragment, {
     children: [
-      m &&
-        (0, w.jsx)(`div`, {
+      g &&
+        !p &&
+        (0, O.jsx)(`div`, {
           className: `qbRGxo4aWcc-`,
-          style: { backgroundImage: `url(${m})` },
+          style: { backgroundImage: `url(${g})` },
         }),
-      m &&
-        (0, w.jsx)(`div`, {
-          className: `HgvxVtFlDis-`,
-          style: { backgroundImage: `url(${m})` },
+      g &&
+        (0, O.jsx)(`div`, {
+          className: t(`HgvxVtFlDis-`, p && `Lp2CuPiW8Lo-`),
+          style: { backgroundImage: `url(${g})` },
         }),
-      (0, w.jsxs)(`div`, {
-        className: y,
+      p && (0, O.jsx)(N, { rgAppIDs: n?.rgCreatorAppIDs, strAvatarURL: g }),
+      (0, O.jsxs)(`div`, {
+        className: t(w, p && `-NAWu4CYrl8-`),
         children: [
-          (0, w.jsxs)(`div`, {
-            className: b,
-            children: [
-              (0, w.jsx)(`div`, {
-                className: x,
-                children: (0, w.jsx)(c, {
-                  url: p,
-                  className: S,
-                  bFocusable: !1,
-                  children: n?.strName,
-                }),
-              }),
-              T &&
-                (0, w.jsx)(`div`, {
-                  className: `_6iUHDist0Jc-`,
-                  children: o(`#Sale_CrossPromoSale_NowThrough`, T),
-                }),
-            ],
-          }),
           p &&
-            !a &&
-            !v &&
-            (0, w.jsx)(c, {
-              url: p,
+            g &&
+            (0, O.jsx)(u, {
+              url: d,
+              className: `X4LW9zxgdTo-`,
+              bFocusable: !1,
+              children: (0, O.jsx)(`img`, { src: g, alt: `` }),
+            }),
+          !p &&
+            (0, O.jsxs)(`div`, {
+              className: `_6jMisrq5Zfo-`,
+              children: [
+                (0, O.jsx)(`div`, {
+                  className: `XBv92QzB8Xc-`,
+                  children: (0, O.jsx)(u, {
+                    url: d,
+                    className: `NjUCqxvhkHk-`,
+                    bFocusable: !1,
+                    children: n?.strName,
+                  }),
+                }),
+                x &&
+                  (0, O.jsx)(`div`, {
+                    className: `_6iUHDist0Jc-`,
+                    children: o(`#Sale_CrossPromoSale_NowThrough`, x),
+                  }),
+              ],
+            }),
+          d &&
+            !r &&
+            !b &&
+            !p &&
+            (0, O.jsx)(u, {
+              url: d,
               className: t(`_6O6T0vupYYc-`, `DuNM8zA4oz0-`),
-              fnCanTakeFocus: i,
-              children: o(`#Sale_CrossPromoSale_ExploreEvent`),
+              fnCanTakeFocus: s,
+              children: h,
             }),
-          p &&
-            v &&
-            (0, w.jsx)(f, {
-              label: o(`#Sale_CrossPromoSale_ExploreEvent`),
-              shown: !!l,
-            }),
+          d && b && (0, O.jsx)(m, { label: h, shown: !!a, button: `X` }),
         ],
       }),
-      (0, w.jsxs)(`div`, {
-        className: C,
+      (0, O.jsxs)(`div`, {
+        className: t(T, p && `ZONqp3dzTMI-`),
         children: [
-          m &&
-            (0, w.jsxs)(c, {
-              url: p,
-              className: `oztjxXYIBAk-`,
-              bFocusable: !!_,
+          g &&
+            (0, O.jsxs)(u, {
+              url: d,
+              className: t(`oztjxXYIBAk-`, p && `CDF-2WDX3lg-`),
+              bFocusable: !!y,
               children: [
-                (0, w.jsx)(`img`, { src: m, alt: `` }),
-                h &&
-                  (0, w.jsx)(`div`, {
+                (0, O.jsx)(`img`, { src: g, alt: `` }),
+                _ &&
+                  (0, O.jsx)(`div`, {
                     className: `_7CUHH8Trg28-`,
-                    children: (0, w.jsx)(`div`, {
+                    children: (0, O.jsx)(`div`, {
                       className: `ZMGnYjKDOEI-`,
-                      children: h,
+                      children: _,
                     }),
                   }),
               ],
             }),
-          d,
+          c,
         ],
       }),
-      p &&
-        !v &&
-        (0, w.jsx)(`div`, {
-          className: t(`T1fHkhyvNkM-`, a && `SAqjQ-F71kA-`),
-          children: (0, w.jsx)(c, {
-            url: p,
+      d &&
+        !b &&
+        !p &&
+        (0, O.jsx)(`div`, {
+          className: t(`T1fHkhyvNkM-`, r && `SAqjQ-F71kA-`),
+          children: (0, O.jsx)(u, {
+            url: d,
             className: `_6O6T0vupYYc-`,
-            fnCanTakeFocus: i,
-            children: o(`#Sale_CrossPromoSale_ExploreEvent`),
+            fnCanTakeFocus: s,
+            children: h,
           }),
         }),
     ],
   });
 }
-export { T as t };
+var j = 60,
+  M = 4;
+function N(e) {
+  let { rgAppIDs: t, strAvatarURL: n } = e,
+    r = v.useMemo(() => b(t), [t]),
+    i = g(r, !1),
+    a = v.useMemo(() => {
+      let e = (i ?? []).slice(0, 24);
+      return e.length < M
+        ? []
+        : Array.from({ length: j }, (t, n) => e[n % e.length]);
+    }, [i]);
+  return a.length
+    ? (0, O.jsxs)(`div`, {
+        className: E,
+        "aria-hidden": !0,
+        children: [
+          n &&
+            (0, O.jsx)(`div`, {
+              className: `ODb7GVMZzG8-`,
+              style: { backgroundImage: `url(${n})` },
+            }),
+          (0, O.jsx)(`div`, {
+            className: D,
+            children: a.map((e, t) => (0, O.jsx)(P, { id: e }, t)),
+          }),
+        ],
+      })
+    : null;
+}
+function P(e) {
+  let t = c(e.id, `header`);
+  return t
+    ? (0, O.jsx)(`img`, { src: t, alt: ``, loading: `lazy` })
+    : (0, O.jsx)(`div`, {});
+}
+function F(e) {
+  return o(
+    e
+      ? `#Sale_CrossPromoCreator_Visit_${e}`
+      : `#Sale_CrossPromoSale_ExploreEvent`,
+  );
+}
+export { k as t };

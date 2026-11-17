@@ -12,7 +12,7 @@ import {
 } from "./chunk~de7f2df91c.js";
 import { t as s } from "./chunk~25a6634263.js";
 import { a as c, t as l } from "./chunk~68b7e78d68.js";
-import { Ba as u, La as d, ua as f } from "./chunk~1fa4b8f2ff.js";
+import { Ra as u, Va as d, da as f } from "./chunk~1fa4b8f2ff.js";
 import { n as p } from "./chunk~f8b6a4beb3.js";
 import { t as m } from "./chunk~ede3e357a2.js";
 import { t as h } from "./chunk~9aa05d2c7d.js";
@@ -180,11 +180,11 @@ var x = a(t()),
     GetOfflineStatusTime() {
       if (this.last_seen_online == 0) return f(`#PersonaStateOffline`);
       let e = this.GetOfflineStatusUpdateRate();
-      (!i.IN_MOBILE || e <= 60) && u(e);
+      (!i.IN_MOBILE || e <= 60) && d(e);
       let t = b.CMInterface.GetServerRTime32() - this.last_seen_online;
       return t < 60
         ? f(`#PersonaStateLastSeen_JustNow`)
-        : f(`#PersonaStateLastSeen`, d(t));
+        : f(`#PersonaStateLastSeen`, u(t));
     }
     GetLocalizedOnlineStatus() {
       switch (this.m_ePersonaState) {

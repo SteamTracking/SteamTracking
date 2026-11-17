@@ -4337,7 +4337,7 @@ var f = d(c(), 1),
     constructor(e = null) {
       (super(),
         t.prototype.steamid || i(t.M()),
-        f.Message.initialize(this, e, 0, -1, void 0, null));
+        f.Message.initialize(this, e, 0, -1, [5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -4359,6 +4359,14 @@ var f = d(c(), 1),
               d: !1,
               br: r.readBool,
               bw: o.writeBool,
+            },
+            appids: {
+              n: 5,
+              r: !0,
+              q: !0,
+              br: r.readUint32,
+              pbr: r.readPackedUint32,
+              bw: o.writeRepeatedUint32,
             },
           },
         }),
@@ -9455,7 +9463,7 @@ var f = d(c(), 1),
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -9465,7 +9473,7 @@ var f = d(c(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `help`, `community`],
+      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
     });
   }
   e.GetPlayerLinkDetails = n;
@@ -9483,7 +9491,7 @@ var f = d(c(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetOwnedGames = i;
@@ -9498,7 +9506,7 @@ var f = d(c(), 1),
     return e.SendMsg(`Player.GetFriendsGameplayInfo#1`, l(Ot, t, n), kt, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetFriendsGameplayInfo = o;
@@ -9520,7 +9528,7 @@ var f = d(c(), 1),
   function u(e, t, n) {
     return e.SendMsg(`Player.SetProfileBackground#1`, l(ye, t, n), be, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.SetProfileBackground = u;
@@ -9535,7 +9543,7 @@ var f = d(c(), 1),
   function f(e, t, n) {
     return e.SendMsg(`Player.SetMiniProfileBackground#1`, l(Ce, t, n), we, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.SetMiniProfileBackground = f;
@@ -9550,7 +9558,7 @@ var f = d(c(), 1),
   function m(e, t, n) {
     return e.SendMsg(`Player.SetAvatarFrame#1`, l(De, t, n), Oe, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.SetAvatarFrame = m;
@@ -9565,7 +9573,7 @@ var f = d(c(), 1),
   function h(e, t, n) {
     return e.SendMsg(`Player.SetAnimatedAvatar#1`, l(je, t, n), Me, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.SetAnimatedAvatar = h;
@@ -9580,6 +9588,7 @@ var f = d(c(), 1),
   function _(e, t, n) {
     return e.SendMsg(`Player.SetSteamDeckKeyboardSkin#1`, l(Fe, t, n), Ie, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.SetSteamDeckKeyboardSkin = _;
@@ -9596,7 +9605,7 @@ var f = d(c(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetProfileItemsEquipped = y;
@@ -9619,7 +9628,7 @@ var f = d(c(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetCommunityBadgeProgress = S;
@@ -9645,7 +9654,7 @@ var f = d(c(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   e.GetGameAchievements = E;
@@ -9654,7 +9663,7 @@ var f = d(c(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   e.GetUserAchievements = D;
@@ -9667,7 +9676,7 @@ var f = d(c(), 1),
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`],
+        rgBrowserAPISites: [`partner`, `store`],
       },
     );
   }
@@ -9725,7 +9734,12 @@ var f = d(c(), 1),
       `Player.GetPurchasedAndUpgradedProfileCustomizations#1`,
       l(bt, t, n),
       xt,
-      { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.GetPurchasedAndUpgradedProfileCustomizations = F;
@@ -9752,7 +9766,7 @@ var f = d(c(), 1),
   function z(e, t, n) {
     return e.SendMsg(`Player.PostStatusToFriends#1`, l(T, t, n), qe, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.PostStatusToFriends = z;
@@ -9774,6 +9788,7 @@ var f = d(c(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.ClientGetLastPlayedTimes = H;
@@ -9792,7 +9807,7 @@ var f = d(c(), 1),
     return e.SendMsg(`Player.GetNicknameList#1`, l(J, t, n), Pt, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`],
+      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
     });
   }
   e.GetNicknameList = G;
@@ -9828,7 +9843,7 @@ var f = d(c(), 1),
   function Q(e, t, n) {
     return e.SendMsg(`Player.GetCommunityPreferences#1`, l(Gt, t, n), Kt, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`],
+      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
     });
   }
   e.GetCommunityPreferences = Q;
@@ -9841,7 +9856,7 @@ var f = d(c(), 1),
   function cn(e, t, n) {
     return e.SendMsg(`Player.GetTextFilterWords#1`, l(Yt, t, n), Xt, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetTextFilterWords = cn;

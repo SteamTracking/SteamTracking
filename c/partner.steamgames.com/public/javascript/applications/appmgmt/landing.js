@@ -57,6 +57,8 @@ import {
   _,
   _,
   _,
+  _,
+  _,
 } from "./chunk~54f70c90c1.js";
 import {
   _,
@@ -672,6 +674,9 @@ var _ = `j-KLJ7Mtr80-`,
         (delete _?.jsondata, _ && (_[_].description.definition = _));
       }
     }
+    GetOptInNames() {
+      return Object.keys(this.m_rgOptIns ?? {});
+    }
     GetInfo(_) {
       if (!_) return;
       if (this.m_rgOptInComputed.has(_)) return this.m_rgOptInComputed.get(_);
@@ -689,6 +694,15 @@ var _ = `j-KLJ7Mtr80-`,
           rgEligibleApps: _,
           rgRegisteredApps: _.summary?.apps_in,
           rgFeaturedApps: _.featured_appids,
+          rgInvitedAppIDs: _.invited_appids ?? [],
+          mapDiscountStatus: _.discount_status
+            ? new Map(
+                Object.entries(_.discount_status).map(([_, _]) => [
+                  Number(_),
+                  _,
+                ]),
+              )
+            : void 0,
         };
       return (this.m_rgOptInComputed.set(_, _), _);
     }
@@ -3800,6 +3814,200 @@ function _(_) {
     })
   );
 }
+var _ = `qLJQMv2BRm8-`,
+  _ = `WPmn4BD-cnk-`,
+  _ = `ZHqFiLwZ8SY-`,
+  _ = 604800,
+  _ = {
+    include_assets: !0,
+  };
+function _(_) {
+  let _ = _(),
+    _ = _(),
+    _ = _.useMemo(
+      () =>
+        new Set(
+          _(`rgOptInContactAppIDs`, `application_config`)?.map((_) =>
+            Number(_),
+          ) ?? [],
+        ),
+      [],
+    ),
+    _ = !!_(`bOptInPublisherContact`, `application_config`);
+  return _.useMemo(() => {
+    if (!_) return [];
+    let _ = Math.floor(_.getTime() / 1e3);
+    return _.GetOptInNames()
+      .map((_) => _(_, _.GetInfo(_), _, _, _ ?? new Set(), _))
+      .filter((_) => !!_)
+      .map((_) => _(_, _));
+  }, [_, _, _, _, _]);
+}
+function _(_, _, _, _, _, _) {
+  let _ = _?.description?.definition;
+  if (!_ || _.optin_kind !== _.DeepestDiscount) return;
+  let _ = _.optin_deadline_date || 0,
+    _ = _.deepest_discount?.rtime_discount_deadline || 0;
+  if (!_ || !_ || _ > Math.max(_, _)) return;
+  let _ = new Set((_.rgRegisteredApps ?? []).map((_) => _.appid)),
+    _ = Array.from(new Set([...(_.rgInvitedAppIDs ?? []), ..._])).filter(
+      (_) => _ || _.has(_),
+    );
+  if (_.length != 0)
+    return {
+      strOptInName: _,
+      optIn: _,
+      rtDecisionDeadline: _,
+      rtDiscountDeadline: _,
+      rgGames: _.map((_) => ({
+        appid: _,
+        bAnswered: _.has(_),
+        eDiscount: _(_.mapDiscountStatus?.get(_)),
+      })),
+      setOptInAppIDs: _,
+      setManageDiscountsAppIDs: _,
+    };
+}
+function _(_) {
+  switch (_) {
+    case 1:
+      return 1;
+    case 5:
+    case 6:
+    case 4:
+      return 2;
+    default:
+      return 0;
+  }
+}
+function _(_, _) {
+  let {
+      strOptInName: _,
+      optIn: _,
+      rtDecisionDeadline: _,
+      rtDiscountDeadline: _,
+      rgGames: _,
+    } = _,
+    _ = _ <= _ ? _ : _,
+    _ = new Date(_ * 1e3),
+    _ = !_.every((_) => _.bAnswered && _.eDiscount != 0) && _ - _ < _,
+    _ = _(_(_.description.definition).sale),
+    _ = _(`#Dashboard_DeepestDiscount_Title`, _),
+    _ = !_.description.active;
+  return {
+    _: `deepestdiscount_${_}`,
+    title: _,
+    startDate: _,
+    endDate: _,
+    dismissUntil: new Date(Math.max(_, _) * 1e3),
+    eventType: _ ? `deadline-urgent` : `deadline`,
+    eventTypeName: _(`#Dashboard_DeepestDiscount_Header`),
+    valveOnly: _,
+    getElement: () =>
+      (0, _.jsx)(_, {
+        rowData: _,
+        strTitle: _,
+        bUrgent: _,
+        bHidden: _,
+      }),
+    passesFilter: (_) => _ == 1,
+  };
+}
+function _(_) {
+  let { rowData: _, strTitle: _, bUrgent: _, bHidden: _ } = _,
+    _ = _.optIn.description.definition,
+    _ = _(_).nMinDiscountPct;
+  return (0, _.jsxs)(`div`, {
+    className: _ ? _ : void 0,
+    children: [
+      _ &&
+        (0, _.jsx)(`div`, {
+          className: `JfhhJkBlyGI-`,
+          children: `Hidden: this opt-in is not enabled, so partners do not see it. (VO)`,
+        }),
+      (0, _.jsx)(_, {
+        children: (0, _.jsxs)(_, {
+          children: [
+            (0, _.jsx)(_, {
+              text: _,
+            }),
+            (0, _.jsx)(`div`, {
+              children: _(`#Dashboard_DeepestDiscount_Body`, _),
+            }),
+            _.rgGames.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  game: _,
+                  rowData: _,
+                  nMinDiscountPct: _,
+                  bUrgent: _,
+                },
+                _.appid,
+              ),
+            ),
+          ],
+        }),
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { game: _, rowData: _, nMinDiscountPct: _, bUrgent: _ } = _,
+    [_] = _(_.appid, _),
+    _ = _.optIn.description.definition,
+    _ = new Intl.DateTimeFormat(navigator.language, {
+      month: `short`,
+      day: `numeric`,
+    }),
+    _ = _(
+      `#Dashboard_DeepestDiscount_DueDate`,
+      _.format(new Date(_.rtDecisionDeadline * 1e3)),
+    ),
+    _ =
+      _.eDiscount == 2
+        ? _(`#Dashboard_DeepestDiscount_NoDiscountNeeded`)
+        : _(
+            `#Dashboard_DeepestDiscount_DueDate`,
+            _.format(new Date(_.rtDiscountDeadline * 1e3)),
+          ),
+    _ = `${_.PARTNER_BASE_URL}optin/sale/${_.strOptInName.replace(`sale_`, ``)}/${_.appid}`,
+    _ = _.do_anytime?.discount_event_id,
+    _ = _
+      ? `${_.PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_}`
+      : `${_.PARTNER_BASE_URL}promotion/discounts/dashboard/`,
+    _ = !_.bAnswered && _.setOptInAppIDs.has(_.appid),
+    _ = _.eDiscount == 0 && _.setManageDiscountsAppIDs.has(_.appid);
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    children: [
+      (0, _.jsx)(`div`, {
+        className: _,
+        children: _?.GetName() || `(${_.appid})`,
+      }),
+      (0, _.jsx)(_, {
+        complete: _.bAnswered,
+        urgent: _,
+        label: _(`#Dashboard_DeepestDiscount_Answer`),
+        status: _,
+        actionStatus: _
+          ? _(`#Dashboard_DeepestDiscount_Answer_Button`)
+          : void 0,
+        actionUrl: _ ? _ : void 0,
+      }),
+      (0, _.jsx)(_, {
+        complete: _.eDiscount,
+        urgent: _,
+        label: _(`#Dashboard_DeepestDiscount_Discount`, _),
+        status: _,
+        actionStatus: _
+          ? _(`#Dashboard_DeepestDiscount_Discount_Button`)
+          : void 0,
+        actionUrl: _ ? _ : void 0,
+      }),
+    ],
+  });
+}
 function _(_, _, _, _) {
   let _ = _.useMemo(() => _(`sEventIds`, `application_config`)?.split(`,`), []),
     _ = _.now,
@@ -3814,11 +4022,12 @@ function _(_, _, _, _) {
     _ = _(_),
     _ = _(),
     _ = _(_),
+    _ = _(_.setManageDiscountsAppIDs),
     _ = _(_.additionalEventStore),
     _ = _(_.additionalEventStore),
     _ = _();
   return _.useMemo(() => {
-    let _ = _.concat(_, _, _, _, _, _, _, _, _, _ ? _ : []).filter((_) =>
+    let _ = _.concat(_, _, _, _, _, _, _, _, _, _, _ ? _ : []).filter((_) =>
         _(_, _, _, _, _),
       ),
       _ = _.length;
@@ -3826,7 +4035,7 @@ function _(_, _, _, _) {
       rgShownEvents: _.filter((_) => (_ == 3) == _.has(_(_))),
       nShouldBeShownCount: _,
     };
-  }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
+  }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
 }
 function _(_, _, _, _, _) {
   return !(
@@ -4576,8 +4785,11 @@ function _(_) {
     _ = _(_),
     _ = _.Get().GetDismissState(_),
     _ = _.useCallback(
-      (_) => (_ ? _.Get().SetDismiss(_, _.endDate) : _.Get().ClearDismiss(_)),
-      [_.endDate, _],
+      (_) =>
+        _
+          ? _.Get().SetDismiss(_, _.dismissUntil ?? _.endDate)
+          : _.Get().ClearDismiss(_),
+      [_.dismissUntil, _.endDate, _],
     ),
     _ = _(_._);
   return (
