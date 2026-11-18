@@ -3,7 +3,7 @@
 /* Third-party software licenses can be found at licenses.txt */
 import { o as e, t } from "./chunk~f025431ab0.js";
 import { Ft as n, ot as r } from "./chunk~01cfc309bf.js";
-import { dd as i, if as a } from "./main.js";
+import { rf as i, ud as a } from "./main.js";
 import { n as o } from "./chunk~42ec0f569d.js";
 var s = t((e, t, n) => {
     (function (n, r) {
@@ -2294,7 +2294,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     let {
       isLoading: n,
       imageRef: r,
-      loaderRef: i,
+      loaderRef: a,
       getBlob: o,
     } = y(e.imageData);
     return (
@@ -2306,10 +2306,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           children: [
             (0, m.jsx)(`img`, { ref: r, className: f }),
             (0, m.jsx)(`div`, {
-              ref: i,
+              ref: a,
               className: p,
               style: { display: n ? `` : `none` },
-              children: a(`#Loading`),
+              children: i(`#Loading`),
             }),
           ],
         }),
@@ -2366,18 +2366,18 @@ function y(e) {
 }
 async function b(e, t) {
   let n = new Image(),
-    r = i(n, `load`);
+    r = a(n, `load`);
   ((n.src = URL.createObjectURL(t)), await r);
-  let a = document.createElement(`canvas`);
-  ((a.width = n.width), (a.height = n.height));
-  let o = a.getContext(`2d`);
-  (o.rect(0, 0, a.width, a.height),
+  let i = document.createElement(`canvas`);
+  ((i.width = n.width), (i.height = n.height));
+  let o = i.getContext(`2d`);
+  (o.rect(0, 0, i.width, i.height),
     (o.fillStyle = `black`),
     o.fill(),
     o.drawImage(n, 0, 0),
     URL.revokeObjectURL(n.src));
-  let s = i(e, `load`);
-  ((e.src = URL.createObjectURL(await C(a))), await s);
+  let s = a(e, `load`);
+  ((e.src = URL.createObjectURL(await C(i))), await s);
 }
 async function x(e, t) {
   let n = e.getData(),

@@ -5,7 +5,7 @@ import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, K as n, ot as r, w as i } from "./chunk~01cfc309bf.js";
 import { t as a } from "./chunk~eefd71512b.js";
 import { u as o } from "./chunk~739842ca30.js";
-import { Id as s, Iu as c, if as l, lm as u, si as d } from "./main.js";
+import { Fd as s, Fu as c, cm as l, oi as u, rf as d } from "./main.js";
 var f = e(t(), 1),
   p = r(),
   m = f.createContext({
@@ -19,13 +19,13 @@ function h() {
 }
 function g(e) {
   let { appID: t, feature: n, depth: r, children: i } = e,
-    a = d(n, r),
+    a = u(n, r),
     o = h(),
-    [l, u] = f.useState(void 0),
+    [l, d] = f.useState(void 0),
     p = f.useCallback(
       (e) => {
         e.isIntersecting &&
-          u((e) => (e?.appID == t && e?.snr == a ? e : { appID: t, snr: a }));
+          d((e) => (e?.appID == t && e?.snr == a ? e : { appID: t, snr: a }));
       },
       [t, a],
     );
@@ -41,13 +41,13 @@ var _ = `minigamev2/itemdefs`,
   v = `appid`,
   y = `editor`;
 function b() {
-  return (typeof self < `u` ? self.origin + `/` : ``) === u.STORE_BASE_URL
-    ? u.STORE_BASE_URL
-    : u.COMMUNITY_BASE_URL;
+  return (typeof self < `u` ? self.origin + `/` : ``) === l.STORE_BASE_URL
+    ? l.STORE_BASE_URL
+    : l.COMMUNITY_BASE_URL;
 }
 async function x(e, t) {
   if (!e) return [];
-  let n = new URLSearchParams({ [v]: String(e), l: u.LANGUAGE });
+  let n = new URLSearchParams({ [v]: String(e), l: l.LANGUAGE });
   t && n.set(y, `1`);
   let r = `${b()}${_}?${n}`,
     i = await fetch(r, { credentials: t ? `include` : `same-origin` });
@@ -85,9 +85,9 @@ function E(e) {
     item_title: o,
   } = e;
   if (i && a) {
-    let r = `${u.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n}`,
-      o = `${u.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${a}`,
-      s = `${u.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${i}`;
+    let r = `${l.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n}`,
+      o = `${l.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${a}`,
+      s = `${l.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${i}`;
     return (0, p.jsx)(p.Fragment, {
       children: (0, p.jsxs)(`video`, {
         muted: !0,
@@ -99,13 +99,13 @@ function E(e) {
         className: e.videoClassName,
         children: [
           (0, p.jsx)(`source`, { src: o, type: `video/webm` }),
-          !u.IN_CLIENT && (0, p.jsx)(`source`, { src: s, type: `video/mp4` }),
+          !l.IN_CLIENT && (0, p.jsx)(`source`, { src: s, type: `video/mp4` }),
         ],
       }),
     });
   }
   {
-    let i = `${u.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n || r}`;
+    let i = `${l.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${n || r}`;
     return (0, p.jsx)(`img`, { className: e.className, src: i, alt: o });
   }
 }
@@ -116,12 +116,12 @@ function D(e) {
       i && !i.active
         ? (0, p.jsx)(`div`, {
             className: o,
-            children: l(`#Sale_Section_RewardShelf_ItemInActiveWarning`),
+            children: d(`#Sale_Section_RewardShelf_ItemInActiveWarning`),
           })
         : void 0;
   return i
     ? (0, p.jsxs)(p.Fragment, { children: [(0, p.jsx)(E, { ...i }), s] })
-    : (0, p.jsx)(a, { size: `small`, string: l(`#Loading`) });
+    : (0, p.jsx)(a, { size: `small`, string: d(`#Loading`) });
 }
 function O(e) {
   let { section: t, rewardDef: n, language: r } = e,
@@ -131,20 +131,20 @@ function O(e) {
   switch (n.community_class) {
     case 14:
     case 15:
-      s = `${u.COMMUNITY_BASE_URL}my/edit/avatar`;
+      s = `${l.COMMUNITY_BASE_URL}my/edit/avatar`;
       break;
     case 1:
-      s = `${u.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
+      s = `${l.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
       break;
     case 3:
     case 8:
-      s = `${u.COMMUNITY_BASE_URL}my/edit/background`;
+      s = `${l.COMMUNITY_BASE_URL}my/edit/background`;
       break;
     case 13:
-      s = `${u.COMMUNITY_BASE_URL}my/edit/miniprofile`;
+      s = `${l.COMMUNITY_BASE_URL}my/edit/miniprofile`;
       break;
     case 11:
-      s = `${u.COMMUNITY_BASE_URL}chat`;
+      s = `${l.COMMUNITY_BASE_URL}chat`;
   }
   return (0, p.jsxs)(`a`, {
     href: s,

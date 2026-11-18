@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { lm as e } from "./main.js";
+import { cm as e } from "./main.js";
 function t(t, r) {
   return t?.public_data?.profile_url
     ? `${e.COMMUNITY_BASE_URL}id/${t.public_data.profile_url}`

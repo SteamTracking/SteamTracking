@@ -1,6 +1,5 @@
 var _ = _(_(), 1),
   _ = _(),
-  _ = _(_(), 1),
   _ = new _(`FocusNavigation`).Debug,
   _ = new _(`GamepadEvents`).Debug,
   _ = class {
@@ -1114,7 +1113,8 @@ function _(_) {
     _ = _(_) ? _.type : void 0;
   return _(_, _);
 }
-var _ = `qnZg-WlNYp0-`,
+var _ = _(_(), 1),
+  _ = `qnZg-WlNYp0-`,
   _ = `NtlIACbluDs-`,
   _ = `kHLroHJHwyA-`;
 function _(_) {

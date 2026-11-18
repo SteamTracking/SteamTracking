@@ -11,33 +11,33 @@ import {
 } from "./chunk~01cfc309bf.js";
 import {
   $m as o,
-  Eu as s,
-  Iu as c,
-  Kr as l,
-  Lu as u,
-  Nf as d,
-  Ou as f,
-  _h as ee,
-  bm as p,
-  eh as m,
-  es as h,
-  hi as te,
-  hm as g,
-  if as _,
-  nm as v,
-  om as y,
-  pi as ne,
-  qm as re,
-  ts as b,
-  xl as ie,
-  zu as ae,
+  $o as s,
+  Du as c,
+  Fu as ee,
+  Gr as l,
+  Iu as u,
+  Km as te,
+  Mf as d,
+  Qm as f,
+  Ru as p,
+  Tu as m,
+  am as h,
+  bl as g,
+  es as _,
+  fi as ne,
+  gh as re,
+  mi as ie,
+  mm as ae,
+  rf as v,
+  tm as oe,
+  ym as se,
 } from "./main.js";
 import {
-  d as oe,
-  i as se,
-  l as x,
-  o as ce,
-  s as le,
+  d as ce,
+  i as le,
+  l as y,
+  o as b,
+  s as x,
   t as S,
   u as C,
 } from "./chunk~61f3bc8fe4.js";
@@ -76,60 +76,60 @@ var w = e(t()),
     k_rgFilterCheckboxes = [
       {
         type: 3,
-        display: _(`#NotificationsFilters_Comments`),
+        display: v(`#NotificationsFilters_Comments`),
         hash: `comments`,
       },
       {
         type: 8,
-        display: _(`#NotificationsFilters_Wishlist`),
+        display: v(`#NotificationsFilters_Wishlist`),
         hash: `wishlist`,
       },
       {
         type: 5,
-        display: _(`#NotificationsFilters_FriendRequest`),
+        display: v(`#NotificationsFilters_FriendRequest`),
         hash: `invites`,
       },
-      { type: 2, display: _(`#NotificationsFilters_Gifts`), hash: `gifts` },
+      { type: 2, display: v(`#NotificationsFilters_Gifts`), hash: `gifts` },
       {
         type: 4,
-        display: _(`#NotificationsFilters_Inventory`),
+        display: v(`#NotificationsFilters_Inventory`),
         hash: `inventory`,
       },
       {
         type: 12,
-        display: _(`#NotificationsFilters_AsyncGame`),
+        display: v(`#NotificationsFilters_AsyncGame`),
         hash: `asyncgame`,
       },
       {
         type: 11,
-        display: _(`#NotificationsFilters_HelpRequest`),
+        display: v(`#NotificationsFilters_HelpRequest`),
         hash: `help`,
       },
       {
         type: 9,
-        display: _(`#NotificationsFilters_TradeOffer`),
+        display: v(`#NotificationsFilters_TradeOffer`),
         hash: `trade`,
       },
       {
         type: 10,
-        display: _(`#NotificationsFilters_General`),
+        display: v(`#NotificationsFilters_General`),
         hash: `general`,
       },
     ];
     k_rgCommentFilters = [
       {
         type: 0,
-        display: _(`#NotificationsList_CommentFilters_All`),
+        display: v(`#NotificationsList_CommentFilters_All`),
         fnFilter: () => !0,
       },
       {
         type: 1,
-        display: _(`#NotificationsList_CommentFilters_YourItems`),
+        display: v(`#NotificationsList_CommentFilters_YourItems`),
         fnFilter: this.IsCommentOwned,
       },
       {
         type: 2,
-        display: _(`#NotificationsList_CommentFilters_Subscribed`),
+        display: v(`#NotificationsList_CommentFilters_Subscribed`),
         fnFilter: this.IsCommentSubscribed,
       },
     ];
@@ -146,7 +146,7 @@ var w = e(t()),
           e.split(`,`).forEach((e) => {
             let t = this.k_rgFilterCheckboxes.findIndex((t) => t.hash == e);
             t === -1
-              ? ee(e) &&
+              ? re(e) &&
                 this.rgFilterState.has(3) &&
                 this.commentFilter.setItemTypes.add(parseInt(e))
               : this.rgFilterState.set(this.k_rgFilterCheckboxes[t].type, !0);
@@ -200,10 +200,10 @@ function K() {
 }
 function he() {
   let e = Y(),
-    t = le();
+    t = x();
   return (
     e.map((e) => {
-      e.item.hidden || oe(t, e.type, e.rgunread?.length);
+      e.item.hidden || ce(t, e.type, e.rgunread?.length);
     }),
     C(t)
   );
@@ -220,12 +220,12 @@ function ge() {
   }, []);
 }
 function _e() {
-  let e = y();
+  let e = h();
   return w.useMemo(() => {
     let t = new Map();
     for (let n of X.k_rgCommentFilters)
       for (let r of Z.m_rgNotificationRollups.filter((e) => e.type == 3)) {
-        let i = x(r);
+        let i = y(r);
         n.fnFilter(i, e) && t.set(n.type, 1 + (t.get(n.type) || 0));
       }
     return t;
@@ -235,7 +235,7 @@ function J() {
   return w.useMemo(() => {
     let e = new Map();
     for (let t of Z.m_rgNotificationRollups.filter((e) => e.type == 3)) {
-      let n = x(t);
+      let n = y(t);
       e.set(n.comment_type, 1 + (e.get(n.comment_type) || 0));
     }
     return e;
@@ -244,15 +244,15 @@ function J() {
 function Y() {
   let { numActive: e, filters: t } = K(),
     n = q(),
-    r = y(),
-    { settings: i } = te(r).data,
+    r = h(),
+    { settings: i } = ie(r).data,
     o = ne();
   return (
     a(() => C(Z.m_summary)),
     Z.m_rgNotificationRollups.filter((a) => {
-      if ((e && !t.get(a.type)) || se(a.type, i, o)) return !1;
+      if ((e && !t.get(a.type)) || le(a.type, i, o)) return !1;
       if (e && a.type == 3 && (n.type != 0 || n.setItemTypes.size > 0)) {
-        let e = x(a),
+        let e = y(a),
           t = !n.fnFilter || n.fnFilter(e, r);
         return (
           n.setItemTypes.size > 0 &&
@@ -266,18 +266,18 @@ function Y() {
   );
 }
 var X = new G(),
-  Z = new ce(),
+  Z = new b(),
   Q = i();
 function ve(e) {
   let { hash: t } = e;
   (0, w.useEffect)(() => {
     X.ProcessHash(t);
   }, [t]);
-  let n = v();
+  let n = oe();
   (0, w.useEffect)(() => {
     (Z.setTransport(n), Z.m_nUnviewed > 0 && Z.MarkAllItemsViewed());
   }, [n]);
-  let r = g(`notifications`, `application_config`);
+  let r = ae(`notifications`, `application_config`);
   return (
     Z.ProcessNewNotificationPayload(r),
     Z.m_rgNotificationRollups.length
@@ -290,7 +290,7 @@ function ve(e) {
                 children: [
                   (0, Q.jsx)(`span`, {
                     className: O,
-                    children: _(`#NotificationsList_Header`),
+                    children: v(`#NotificationsList_Header`),
                   }),
                   (0, Q.jsx)(ye, {}),
                 ],
@@ -308,9 +308,9 @@ function ve(e) {
                       (0, Q.jsx)(Se, {}),
                       (0, Q.jsx)(`div`, {
                         className: me,
-                        children: (0, Q.jsx)(ae, {
+                        children: (0, Q.jsx)(p, {
                           href: `/my/moderatormessages`,
-                          children: _(`#CommunityActivity`),
+                          children: v(`#CommunityActivity`),
                         }),
                       }),
                     ],
@@ -325,27 +325,27 @@ function ve(e) {
 }
 function ye() {
   let e = he(),
-    t = _(`#NotificationsList_Unread`, e);
+    t = v(`#NotificationsList_Unread`, e);
   return (0, Q.jsx)(`span`, { className: k, children: t });
 }
 function be() {
   let e = Y();
-  return (0, Q.jsx)(f, {
+  return (0, Q.jsx)(c, {
     className: j,
     children: e.map((e, t) => (0, Q.jsx)(Oe, { rollup: e }, t)),
   });
 }
 function xe() {
-  return (0, Q.jsxs)(f, {
+  return (0, Q.jsxs)(c, {
     className: P,
     children: [
-      (0, Q.jsx)(f, {
+      (0, Q.jsx)(c, {
         className: F,
-        children: _(`#NotificationsList_EmptyTitle`),
+        children: v(`#NotificationsList_EmptyTitle`),
       }),
-      (0, Q.jsx)(f, {
+      (0, Q.jsx)(c, {
         className: I,
-        children: _(`#NotificationsList_EmptyBody`),
+        children: v(`#NotificationsList_EmptyBody`),
       }),
     ],
   });
@@ -361,28 +361,28 @@ function Se() {
         children: [
           (0, Q.jsx)(`div`, {
             className: R,
-            children: (0, Q.jsx)(h, {
+            children: (0, Q.jsx)(s, {
               className: z,
               onClick: () => Z.MarkAllItemsRead(e),
-              children: _(`#NotificationsList_MarkAllRead`),
+              children: v(`#NotificationsList_MarkAllRead`),
             }),
           }),
-          (0, Q.jsxs)(h, {
+          (0, Q.jsxs)(s, {
             className: B,
             onClick: () =>
               window.location.assign(
-                `${p.STORE_BASE_URL}account/notificationsettings`,
+                `${se.STORE_BASE_URL}account/notificationsettings`,
               ),
             children: [
-              (0, Q.jsx)(ie, { className: V }),
-              _(`#NotificationsList_Settings`),
+              (0, Q.jsx)(g, { className: V }),
+              v(`#NotificationsList_Settings`),
             ],
           }),
         ],
       }),
       (0, Q.jsx)(`div`, {
         className: H,
-        children: _(`#NotificationsList_FilterTo`),
+        children: v(`#NotificationsList_FilterTo`),
       }),
       (0, Q.jsx)(`div`, {
         className: U,
@@ -390,10 +390,10 @@ function Se() {
           .filter((e) => t.has(e.type))
           .map((e) => (0, Q.jsx)(Ce, { filterOptions: e }, e.type)),
       }),
-      (0, Q.jsx)(h, {
+      (0, Q.jsx)(s, {
         className: ue,
         onClick: () => X.SetFilter(null, !1, !0),
-        children: _(`#NotificationsList_Reset`),
+        children: v(`#NotificationsList_Reset`),
       }),
     ],
   });
@@ -404,7 +404,7 @@ function Ce(e) {
   return t.type == 3
     ? (0, Q.jsx)(Ee, { filterOptions: t, checked: n.get(t.type) })
     : (0, Q.jsx)(
-        b,
+        _,
         {
           className: W,
           label: t.display,
@@ -417,9 +417,9 @@ function Ce(e) {
 function $(e) {
   let { threadType: t } = e,
     n = q();
-  return (0, Q.jsx)(b, {
+  return (0, Q.jsx)(_, {
     className: void 0,
-    label: _(`#CommentThreadType_` + t),
+    label: v(`#CommentThreadType_` + t),
     checked: n.setItemTypes.has(t),
     onChange: (e) => {
       e
@@ -434,7 +434,7 @@ function we(e) {
   let { className: t } = e,
     n = J();
   return (0, Q.jsx)(`div`, {
-    className: s(de, t),
+    className: m(de, t),
     children: Array.from(n.keys()).map((e) =>
       (0, Q.jsx)($, { threadType: e }, e),
     ),
@@ -448,7 +448,7 @@ function Te(e) {
       i(t.scrollHeight);
     });
   return (0, Q.jsx)(`div`, {
-    className: s(pe, fe),
+    className: m(pe, fe),
     style: { height: t ? r : 0 },
     children: (0, Q.jsx)(`div`, { ref: a, children: n }),
   });
@@ -461,23 +461,23 @@ function Ee(e) {
       X.SetFilter(t.type, e);
     },
     o = r.size > 2,
-    c = i.size > 1,
-    l = o || c;
+    s = i.size > 1,
+    c = o || s;
   return (0, Q.jsxs)(Q.Fragment, {
     children: [
       (0, Q.jsx)(
-        b,
+        _,
         { className: W, label: t.display, checked: n, onChange: a },
         t.type,
       ),
-      l &&
+      c &&
         (0, Q.jsx)(`div`, {
-          className: s(`iOH5sYCnmag-`, n && `-s3QaLNsc1Q-`),
+          className: m(`iOH5sYCnmag-`, n && `-s3QaLNsc1Q-`),
           children: (0, Q.jsx)(Te, {
             expanded: n,
             children: (0, Q.jsx)(`div`, {
               className: void 0,
-              children: c && (0, Q.jsx)(we, { className: `-s3QaLNsc1Q-` }),
+              children: s && (0, Q.jsx)(we, { className: `-s3QaLNsc1Q-` }),
             }),
           }),
         }),
@@ -494,7 +494,7 @@ function Oe(e) {
   let { rollup: t } = e;
   a(() => t.item.hidden);
   let [n, r] = w.useState(!1),
-    i = c(
+    i = ee(
       (0, w.useCallback)((e) => {
         e.isIntersecting && r(!0);
       }, []),
@@ -505,20 +505,20 @@ function Oe(e) {
     }, [t.item.notification_id]);
   if (t.item.hidden) return null;
   if (t.item.hidden && t.type == 5) {
-    let e = x(t);
-    if (re(e.state) || e.state == 1) return null;
+    let e = y(t);
+    if (te(e.state) || e.state == 1) return null;
   }
-  let u = S(t.type);
-  return u
+  let c = S(t.type);
+  return c
     ? (0, Q.jsx)(l, {
         controller: `notification`,
-        method: m(3),
-        submethod: o(4),
+        method: o(3),
+        submethod: f(4),
         children: (0, Q.jsx)(ke, {
           ref: i,
           children:
             n &&
-            (0, Q.jsx)(u, {
+            (0, Q.jsx)(c, {
               rollup: t,
               onNotificationClick: De,
               onHide: s,

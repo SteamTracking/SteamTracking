@@ -9,31 +9,31 @@ import { f as s, i as c } from "./chunk~0111fcd096.js";
 import { r as l, u } from "./chunk~ec644f97c6.js";
 import { t as d } from "./chunk~d382bdf2cf.js";
 import {
-  Ct as ee,
-  Eu as f,
-  Hh as p,
-  Nf as te,
-  Oc as m,
-  Qi as h,
-  Ql as ne,
-  Sf as re,
-  Uf as g,
-  Uh as ie,
-  Yo as ae,
-  _l as oe,
-  bm as _,
-  dp as se,
-  ds as ce,
-  es as v,
-  eu as le,
-  if as y,
-  jm as ue,
-  md as b,
-  mm as x,
-  qi as de,
+  $l as ee,
+  $o as f,
+  Am as te,
+  Dc as ne,
+  Hf as p,
+  Hh as m,
+  Jo as h,
+  Ki as re,
+  Mf as ie,
+  St as ae,
+  Tu as g,
+  Vh as _,
+  Zi as oe,
+  Zl as se,
+  bf as ce,
+  bm as v,
+  bs as y,
+  gl as le,
+  pd as b,
+  pm as x,
+  rf as S,
+  up as ue,
+  us as de,
+  vm as C,
   xf as fe,
-  xm as S,
-  xs as C,
   ym as w,
 } from "./main.js";
 import { t as pe } from "./chunk~85f65a382b.js";
@@ -49,7 +49,7 @@ var T = e(r()),
   ],
   he = 2e3,
   E = class e {
-    m_callbackList = new p();
+    m_callbackList = new _();
     m_timer = null;
     m_bAreEventListenersRegistered = !1;
     static s_Singleton;
@@ -83,7 +83,7 @@ var T = e(r()),
       return ((this.m_bAreEventListenersRegistered = !1), !1);
     }
   };
-te([ie], E.prototype, `ResetFidgetTimer`, null);
+ie([m], E.prototype, `ResetFidgetTimer`, null);
 function ge() {
   T.useEffect(() => {
     let e = E.Get().BRegisterEventListeners();
@@ -116,7 +116,7 @@ var D = e(n()),
   O = class e {
     m_mapQAndASessions = new Map();
     m_mapQAndAChangeCallbackList = new Map();
-    m_dashboardCallbackList = new p();
+    m_dashboardCallbackList = new _();
     m_mapQuestions = new Map();
     m_mapQuestionCallbackList = new Map();
     m_rgPendingQuestionGIDs = [];
@@ -128,13 +128,13 @@ var D = e(n()),
     GetQAndACallbackList(e) {
       let t = this.m_mapQAndAChangeCallbackList.get(e);
       return (
-        t || ((t = new p()), this.m_mapQAndAChangeCallbackList.set(e, t)), t
+        t || ((t = new _()), this.m_mapQAndAChangeCallbackList.set(e, t)), t
       );
     }
     GetQuestionCallbackList(e) {
       let t = this.m_mapQuestionCallbackList.get(e);
       return (
-        t || ((t = new p()), this.m_mapQuestionCallbackList.set(e, t)), t
+        t || ((t = new _()), this.m_mapQuestionCallbackList.set(e, t)), t
       );
     }
     GetDashboardCallbackList() {
@@ -150,11 +150,11 @@ var D = e(n()),
       return this.m_mapQuestions.get(e);
     }
     async LoadAllSessions(e) {
-      if (!S.logged_in || !x()) return 15;
+      if (!v.logged_in || !x()) return 15;
       let t =
-          _.COMMUNITY_BASE_URL +
+          w.COMMUNITY_BASE_URL +
           `questions/` +
-          w.VANITY_ID +
+          C.VANITY_ID +
           `/ajaxgetqandasforgroup`,
         n = {},
         r = null;
@@ -174,7 +174,7 @@ var D = e(n()),
       } catch (e) {
         r = e;
       }
-      let i = g(r);
+      let i = p(r);
       return (
         console.error(
           `Could not load question and answer sessions for group`,
@@ -185,11 +185,11 @@ var D = e(n()),
       );
     }
     async CreateNewSession(e, t) {
-      if (!S.logged_in || !x()) return 15;
+      if (!v.logged_in || !x()) return 15;
       let n =
-          _.COMMUNITY_BASE_URL +
+          w.COMMUNITY_BASE_URL +
           `questions/` +
-          w.VANITY_ID +
+          C.VANITY_ID +
           `/ajaxcreateqanda`,
         r = new FormData();
       (r.append(`sessionid`, x()), r.append(`name`, e));
@@ -209,18 +209,18 @@ var D = e(n()),
       } catch (e) {
         i = e;
       }
-      let a = g(i);
+      let a = p(i);
       return (
         console.error(`Could not create Q&A`, e, a.strErrorMsg, a),
         i?.response?.data?.success ?? 2
       );
     }
     async RenameSession(e, t, n) {
-      if (!S.logged_in || !x()) return 15;
+      if (!v.logged_in || !x()) return 15;
       let r =
-          _.COMMUNITY_BASE_URL +
+          w.COMMUNITY_BASE_URL +
           `questions/` +
-          w.VANITY_ID +
+          C.VANITY_ID +
           `/ajaxrenameqanda/` +
           e,
         i = new FormData();
@@ -243,18 +243,18 @@ var D = e(n()),
       } catch (e) {
         a = e;
       }
-      let o = g(a);
+      let o = p(a);
       return (
         console.error(`Could not rename Q&A`, e, t, o.strErrorMsg, o),
         a?.response?.data?.success ?? 2
       );
     }
     async DeleteSession(e, t) {
-      if (!S.logged_in || !x()) return 15;
+      if (!v.logged_in || !x()) return 15;
       let n =
-          _.COMMUNITY_BASE_URL +
+          w.COMMUNITY_BASE_URL +
           `questions/` +
-          w.VANITY_ID +
+          C.VANITY_ID +
           `/ajaxdeleteqanda/` +
           e,
         r = new FormData();
@@ -275,7 +275,7 @@ var D = e(n()),
       } catch (e) {
         i = e;
       }
-      let a = g(i);
+      let a = p(i);
       return (
         console.error(`Could not delete Q&A`, e, a.strErrorMsg, a),
         i?.response?.data?.success ?? 2
@@ -284,14 +284,14 @@ var D = e(n()),
     async LoadSession(e, t, n) {
       let r = this.m_mapQAndASessions.get(e),
         i =
-          S.logged_in &&
+          v.logged_in &&
           (!r ||
             r.bUserCanModerate ||
             this.m_rgPendingQuestionGIDs.length > 0 ||
             t)
             ? `/ajaxgetqandasessionforuser/`
             : `/ajaxgetqandasession/`,
-        a = _.COMMUNITY_BASE_URL + `questions/` + w.VANITY_ID + i + e,
+        a = w.COMMUNITY_BASE_URL + `questions/` + C.VANITY_ID + i + e,
         o = {},
         s = null;
       try {
@@ -331,7 +331,7 @@ var D = e(n()),
       } catch (e) {
         s = e;
       }
-      let c = g(s);
+      let c = p(s);
       return (
         console.error(`Could not load Q&A`, e, c.strErrorMsg, c),
         s?.response?.data?.success ?? 2
@@ -341,7 +341,7 @@ var D = e(n()),
       let t = new Set();
       for (let n of e) {
         let e = this.m_mapQuestions.get(n);
-        e.posterAccountID == S.accountid &&
+        e.posterAccountID == v.accountid &&
           e.eState == 1 &&
           t.add(e.gidQuestion);
       }
@@ -354,15 +354,15 @@ var D = e(n()),
     }
     async AskNewQuestion(e, t, n) {
       if (
-        !S.logged_in ||
+        !v.logged_in ||
         !x() ||
         !this.m_mapQAndASessions.get(e)?.bUserCanAskQuestions
       )
         return 15;
       let r =
-          _.COMMUNITY_BASE_URL +
+          w.COMMUNITY_BASE_URL +
           `questions/` +
-          w.VANITY_ID +
+          C.VANITY_ID +
           `/ajaxaskquestion/` +
           e,
         i = new FormData();
@@ -383,7 +383,7 @@ var D = e(n()),
       } catch (e) {
         a = e;
       }
-      let o = g(a);
+      let o = p(a);
       return (
         console.error(`Could not upload question`, e, t, o.strErrorMsg, o),
         a?.response?.data?.success ?? 2
@@ -391,7 +391,7 @@ var D = e(n()),
     }
     async ModerateQuestion(e, t, n, r) {
       if (
-        !S.logged_in ||
+        !v.logged_in ||
         !x() ||
         !this.m_mapQAndASessions.get(e)?.bUserCanModerate
       )
@@ -399,9 +399,9 @@ var D = e(n()),
       if (n != 1 && n != 3) return 8;
       if (this.m_mapQuestions.get(t).eState == n) return 1;
       let i =
-          _.COMMUNITY_BASE_URL +
+          w.COMMUNITY_BASE_URL +
           `questions/` +
-          w.VANITY_ID +
+          C.VANITY_ID +
           `/ajaxmoderatequestion/` +
           e,
         a = new FormData();
@@ -420,7 +420,7 @@ var D = e(n()),
       } catch (e) {
         o = e;
       }
-      let s = g(o);
+      let s = p(o);
       return (
         console.error(`Could not moderate question`, e, t, n, s.strErrorMsg, s),
         o?.response?.data?.success ?? 2
@@ -428,15 +428,15 @@ var D = e(n()),
     }
     async AnswerQuestion(e, t, n, r) {
       if (
-        !S.logged_in ||
+        !v.logged_in ||
         !x() ||
         !this.m_mapQAndASessions.get(e)?.bUserCanAskQuestions
       )
         return 15;
       let i =
-          _.COMMUNITY_BASE_URL +
+          w.COMMUNITY_BASE_URL +
           `questions/` +
-          w.VANITY_ID +
+          C.VANITY_ID +
           `/ajaxanswerquestion/` +
           e,
         a = new FormData();
@@ -455,7 +455,7 @@ var D = e(n()),
       } catch (e) {
         o = e;
       }
-      let s = g(o);
+      let s = p(o);
       return (
         console.error(`Could not upload answer`, e, t, n, s.strErrorMsg, s),
         o?.response?.data?.success ?? 2
@@ -463,7 +463,7 @@ var D = e(n()),
     }
     async VoteOnQuestion(e, t, n, r) {
       if (
-        !S.logged_in ||
+        !v.logged_in ||
         !x() ||
         !this.m_mapQAndASessions.get(e)?.bUserCanAskQuestions
       )
@@ -477,9 +477,9 @@ var D = e(n()),
         this.m_mapQuestions.set(t, i),
         this.GetQuestionCallbackList(t).Dispatch(i));
       let s =
-          _.COMMUNITY_BASE_URL +
+          w.COMMUNITY_BASE_URL +
           `questions/` +
-          w.VANITY_ID +
+          C.VANITY_ID +
           `/ajaxvoteforquestion/` +
           e,
         c = new FormData();
@@ -500,7 +500,7 @@ var D = e(n()),
       ((i = { ...i, nVoteCount: a, bUserUpVoted: !n }),
         this.m_mapQuestions.set(t, i),
         this.GetQuestionCallbackList(t).Dispatch(i));
-      let u = g(l);
+      let u = p(l);
       return (
         console.error(`Could not upload vote`, e, t, n, u.strErrorMsg, u),
         l?.response?.data?.success ?? 2
@@ -883,20 +883,20 @@ function St(e) {
     children: [
       (0, Q.jsx)(Ct, {}),
       (0, Q.jsxs)(`div`, {
-        className: f(G, vt),
+        className: g(G, vt),
         children: [
           (0, Q.jsx)(`div`, {
             className: Y,
-            children: y(`#QAndA_Column_Name`),
+            children: S(`#QAndA_Column_Name`),
           }),
-          (0, Q.jsx)(`div`, { className: K, children: y(`#QAndA_Column_GID`) }),
+          (0, Q.jsx)(`div`, { className: K, children: S(`#QAndA_Column_GID`) }),
           (0, Q.jsx)(`div`, {
             className: q,
-            children: y(`#QAndA_Column_QuestionCount`),
+            children: S(`#QAndA_Column_QuestionCount`),
           }),
           (0, Q.jsx)(`div`, {
             className: J,
-            children: y(`#QAndA_Column_DeleteButtons`),
+            children: S(`#QAndA_Column_DeleteButtons`),
           }),
         ],
       }),
@@ -907,20 +907,20 @@ function St(e) {
 function Ct(e) {
   let t = T.useCallback(
     () =>
-      h((0, Q.jsx)(Tt, {}), window, {
-        strTitle: y(`#QAndA_CreateQAndA_Title`),
+      oe((0, Q.jsx)(Tt, {}), window, {
+        strTitle: S(`#QAndA_CreateQAndA_Title`),
       }),
     [],
   );
   return (0, Q.jsxs)(`div`, {
     className: ft,
     children: [
-      (0, Q.jsx)(`div`, { className: pt, children: y(`#QAndA_Dashboard`) }),
+      (0, Q.jsx)(`div`, { className: pt, children: S(`#QAndA_Dashboard`) }),
       (0, Q.jsx)(`div`, {
         className: mt,
-        children: (0, Q.jsx)(v, {
+        children: (0, Q.jsx)(f, {
           onClick: t,
-          children: y(`#QAndA_CreateQAndA_Button`),
+          children: S(`#QAndA_CreateQAndA_Button`),
         }),
       }),
     ],
@@ -930,19 +930,19 @@ var wt = 120;
 function Tt(e) {
   let t = Ce(),
     [n, r] = T.useState(``);
-  return (0, Q.jsx)(de, {
-    strTitle: y(`#QAndA_CreateQAndA_Title`),
-    strDescription: y(`#QAndA_CreateQAndA_Instructions`),
-    strOKButtonText: y(`#Button_Create`),
+  return (0, Q.jsx)(re, {
+    strTitle: S(`#QAndA_CreateQAndA_Title`),
+    strDescription: S(`#QAndA_CreateQAndA_Instructions`),
+    strOKButtonText: S(`#Button_Create`),
     onOK: () => t(n),
     bOKDisabled: n.length == 0,
     closeModal: e.closeModal,
     className: yt,
-    children: (0, Q.jsx)(ae, {
+    children: (0, Q.jsx)(h, {
       type: `text`,
       className: X,
       value: n,
-      placeholder: y(`#QAndA_EnterNamePrompt`),
+      placeholder: S(`#QAndA_EnterNamePrompt`),
       onFocus: (e) => e.target.select(),
       onChange: (e) => r(e.currentTarget.value),
       maxLength: wt,
@@ -952,17 +952,17 @@ function Tt(e) {
 function Et(e) {
   let { qanda: t } = e,
     n =
-      _.COMMUNITY_BASE_URL +
+      w.COMMUNITY_BASE_URL +
       `questions/` +
-      w.VANITY_ID +
+      C.VANITY_ID +
       `/view/` +
       t.gidSession,
     r = T.useCallback(
       (e) => {
         (e.stopPropagation(),
           e.preventDefault(),
-          h((0, Q.jsx)(Ot, { qanda: t }), window, {
-            strTitle: y(`#QAndA_CreateQAndA_Title`),
+          oe((0, Q.jsx)(Ot, { qanda: t }), window, {
+            strTitle: S(`#QAndA_CreateQAndA_Title`),
           }));
       },
       [t],
@@ -979,7 +979,7 @@ function Et(e) {
         children: (0, Q.jsx)(`div`, {
           className: _t,
           onClick: r,
-          children: (0, Q.jsx)(le, {}),
+          children: (0, Q.jsx)(ee, {}),
         }),
       }),
     ],
@@ -1003,29 +1003,29 @@ function Dt(e) {
         ? t.strName
         : (0, Q.jsx)(`span`, {
             className: ht,
-            children: y(`#QAndA_EnterNamePrompt`),
+            children: S(`#QAndA_EnterNamePrompt`),
           }),
     d = (0, Q.jsxs)(`div`, {
       className: X,
       children: [
-        (0, Q.jsx)(ae, {
+        (0, Q.jsx)(h, {
           type: `text`,
           className: X,
           value: i,
-          placeholder: y(`#QAndA_EnterNamePrompt`),
+          placeholder: S(`#QAndA_EnterNamePrompt`),
           onFocus: (e) => e.target.select(),
           onChange: (e) => a(e.currentTarget.value),
           maxLength: wt,
         }),
-        (0, Q.jsx)(ce, {
+        (0, Q.jsx)(de, {
           onClick: l,
           className: I,
-          children: y(`#Button_Save`),
+          children: S(`#Button_Save`),
         }),
       ],
     });
   return (0, Q.jsx)(`div`, {
-    className: f(Y, n && `drUbIttMg3s-`),
+    className: g(Y, n && `drUbIttMg3s-`),
     onClick: c,
     children: n ? d : u,
   });
@@ -1033,21 +1033,21 @@ function Dt(e) {
 function Ot(e) {
   let { qanda: t } = e,
     n = Te();
-  return (0, Q.jsxs)(de, {
-    strTitle: y(`#QAndA_Column_DeleteButtons`),
-    strDescription: y(`#QAndA_DeleteQAndA_Instructions`),
+  return (0, Q.jsxs)(re, {
+    strTitle: S(`#QAndA_Column_DeleteButtons`),
+    strDescription: S(`#QAndA_DeleteQAndA_Instructions`),
     onOK: () => n(t.gidSession),
     closeModal: e.closeModal,
     className: bt,
     children: [
       (0, Q.jsx)(`div`, {
         className: Z,
-        children: y(`#QAndA_Column_Name`) + `: ` + t.strName,
+        children: S(`#QAndA_Column_Name`) + `: ` + t.strName,
       }),
       (0, Q.jsx)(`div`, {
         className: Z,
         children:
-          y(`#QAndA_Column_QuestionCount`) + `: ` + t.rgQuestionGIDs.length,
+          S(`#QAndA_Column_QuestionCount`) + `: ` + t.rgQuestionGIDs.length,
       }),
     ],
   });
@@ -1064,10 +1064,10 @@ function $(e) {
     [s, c] = be(n);
   if (!s) return null;
   let l = o - s.rtPostTime,
-    d = l < se.PerDay ? re(l) : fe(s.rtPostTime),
-    p = i ? () => a(n, !s.bUserUpVoted) : null,
-    te = i ? (s.bUserUpVoted ? nt : tt) : it,
-    m = f(
+    d = l < ue.PerDay ? fe(l) : ce(s.rtPostTime),
+    ee = i ? () => a(n, !s.bUserUpVoted) : null,
+    f = i ? (s.bUserUpVoted ? nt : tt) : it,
+    te = g(
       Ke,
       s.eState == 3 && `izbX9Bk-ctQ-`,
       s.eState == 1 && void 0,
@@ -1075,10 +1075,10 @@ function $(e) {
       s.eState == 2 && void 0,
     );
   return (0, Q.jsxs)(`div`, {
-    className: m,
+    className: te,
     children: [
       (0, Q.jsxs)(`div`, {
-        className: f(Je, `questionCtn`),
+        className: g(Je, `questionCtn`),
         children: [
           (0, Q.jsx)(At, { accountID: s.posterAccountID }),
           (0, Q.jsxs)(`div`, {
@@ -1091,20 +1091,20 @@ function $(e) {
                     className: $e,
                     children: s.strQuestionText,
                   }),
-                  (0, Q.jsx)(C, {
+                  (0, Q.jsx)(y, {
                     toolTipContent:
                       i &&
                       (s.bUserUpVoted
-                        ? y(`#QAndA_VoteRemoveTooltip`)
-                        : y(`#QAndA_VoteTooltip`)),
+                        ? S(`#QAndA_VoteRemoveTooltip`)
+                        : S(`#QAndA_VoteTooltip`)),
                     children: (0, Q.jsxs)(`div`, {
-                      className: f(te, et),
-                      onClick: p,
+                      className: g(f, et),
+                      onClick: ee,
                       children: [
-                        (0, Q.jsx)(ne, { className: rt }),
+                        (0, Q.jsx)(se, { className: rt }),
                         (0, Q.jsx)(`div`, {
                           className: void 0,
-                          children: ee(Number(s.nVoteCount)),
+                          children: ae(Number(s.nVoteCount)),
                         }),
                       ],
                     }),
@@ -1135,7 +1135,7 @@ function $(e) {
 function kt(e) {
   let { question: t, rtNow: n } = e,
     r = t.rtAnswerTime && n - t.rtAnswerTime,
-    i = t.rtAnswerTime && (r < se.PerDay ? re(r) : fe(t.rtAnswerTime));
+    i = t.rtAnswerTime && (r < ue.PerDay ? fe(r) : ce(t.rtAnswerTime));
   return t.strAnswerText
     ? (0, Q.jsxs)(`div`, {
         className: ot,
@@ -1145,9 +1145,9 @@ function kt(e) {
             children: [
               (0, Q.jsx)(`div`, {
                 className: U,
-                children: (0, Q.jsx)(m, { color: `#67c1f5` }),
+                children: (0, Q.jsx)(ne, { color: `#67c1f5` }),
               }),
-              y(`#QAndA_ModeratorAnswerTitle`),
+              S(`#QAndA_ModeratorAnswerTitle`),
             ],
           }),
           (0, Q.jsxs)(`div`, {
@@ -1170,14 +1170,14 @@ function kt(e) {
         children: [
           (0, Q.jsx)(`div`, {
             className: U,
-            children: (0, Q.jsx)(m, { color: `#67c1f5` }),
+            children: (0, Q.jsx)(ne, { color: `#67c1f5` }),
           }),
-          y(`#QAndA_AlreadyAnsweredTitle`),
+          S(`#QAndA_AlreadyAnsweredTitle`),
         ],
       });
 }
 function At(e) {
-  let t = ue.InitFromAccountID(e.accountID, _.EUNIVERSE).ConvertTo64BitString(),
+  let t = te.InitFromAccountID(e.accountID, w.EUNIVERSE).ConvertTo64BitString(),
     { isLoading: n, data: r } = d(e.accountID);
   return n
     ? null
@@ -1200,43 +1200,43 @@ function jt(e) {
   return (0, Q.jsxs)(`div`, {
     className: lt,
     children: [
-      y(`#QAndA_ModeratorLabel`),
+      S(`#QAndA_ModeratorLabel`),
       (0, Q.jsx)(`div`, {
         className: W,
         children: (0, Q.jsx)(It, {
-          strPrompt: y(`#QAndA_AnswerPrompt`),
+          strPrompt: S(`#QAndA_AnswerPrompt`),
           fnSubmit: (e) => i(n, e),
         }),
       }),
       (0, Q.jsxs)(`div`, {
         className: W,
         children: [
-          y(`#QAndA_ModeratorOtherOptionsLabel`),
-          (0, Q.jsx)(C, {
-            toolTipContent: y(`#QAndA_ModerateApproveButton_ttip`),
-            children: (0, Q.jsx)(v, {
+          S(`#QAndA_ModeratorOtherOptionsLabel`),
+          (0, Q.jsx)(y, {
+            toolTipContent: S(`#QAndA_ModerateApproveButton_ttip`),
+            children: (0, Q.jsx)(f, {
               onClick: o,
               className: I,
               disabled: !l,
-              children: y(`#QAndA_ModerateApproveButton`),
+              children: S(`#QAndA_ModerateApproveButton`),
             }),
           }),
-          (0, Q.jsx)(C, {
-            toolTipContent: y(`#QAndA_ModerateHideButton_ttip`),
-            children: (0, Q.jsx)(v, {
+          (0, Q.jsx)(y, {
+            toolTipContent: S(`#QAndA_ModerateHideButton_ttip`),
+            children: (0, Q.jsx)(f, {
               onClick: s,
               className: I,
               disabled: !u,
-              children: y(`#QAndA_ModerateHideButton`),
+              children: S(`#QAndA_ModerateHideButton`),
             }),
           }),
-          (0, Q.jsx)(C, {
-            toolTipContent: y(`#QAndA_QuickAnswerButton_ttip`),
-            children: (0, Q.jsx)(v, {
+          (0, Q.jsx)(y, {
+            toolTipContent: S(`#QAndA_QuickAnswerButton_ttip`),
+            children: (0, Q.jsx)(f, {
               onClick: c,
               className: I,
               disabled: !d,
-              children: y(`#QAndA_QuickAnswerButton`),
+              children: S(`#QAndA_QuickAnswerButton`),
             }),
           }),
         ],
@@ -1253,7 +1253,7 @@ function Mt(e) {
     children: [
       (0, Q.jsx)(`div`, {
         className: j,
-        children: y(`#QAndA_Header`) + (n?.length > 0 ? `: ` + n : ``),
+        children: S(`#QAndA_Header`) + (n?.length > 0 ? `: ` + n : ``),
       }),
       (0, Q.jsxs)(`div`, {
         className: M,
@@ -1275,10 +1275,10 @@ function Nt(e) {
     a = c(10);
   return n
     ? (0, Q.jsxs)(`div`, {
-        className: f(P, F),
+        className: g(P, F),
         children: [
           (0, Q.jsx)(l, {
-            title: y(`#QAndA_ModeratorViewHeader`),
+            title: S(`#QAndA_ModeratorViewHeader`),
             className: De,
             children: (0, Q.jsx)(`div`, {
               className: z,
@@ -1298,7 +1298,7 @@ function Nt(e) {
             }),
           }),
           (0, Q.jsx)(l, {
-            title: y(`#QAndA_HiddenQuestionsHeader`),
+            title: S(`#QAndA_HiddenQuestionsHeader`),
             className: Oe,
             bStartMinimized: !0,
             children: (0, Q.jsx)(`div`, {
@@ -1335,38 +1335,38 @@ function Pt(e) {
       rgAnsweredQuestionGIDs: d,
       rgNewQuestionGIDs: ee,
     } = k(t),
-    { fnReload: p, bIsReloading: te } = ye(t),
-    m = c(10),
-    h = o && n,
-    { fnModerateQuestion: ne } = xe(t);
+    { fnReload: te, bIsReloading: ne } = ye(t),
+    p = c(10),
+    m = o && n,
+    { fnModerateQuestion: h } = xe(t);
   return (0, Q.jsxs)(`div`, {
-    className: f(N, n && `jikb8cKLdwg-`),
+    className: g(N, n && `jikb8cKLdwg-`),
     children: [
       (0, Q.jsxs)(`div`, {
-        className: f(Me, h && `YASLZpdIsfU-`),
+        className: g(Me, m && `YASLZpdIsfU-`),
         children: [
-          (0, Q.jsx)(v, {
-            onClick: p,
+          (0, Q.jsx)(f, {
+            onClick: te,
             disabled: !r,
-            className: f(I, ke, te && `_7zP2DXBFo3Y-`),
+            className: g(I, ke, ne && `_7zP2DXBFo3Y-`),
             children: (0, Q.jsx)(`div`, {
               className: void 0,
-              children: (0, Q.jsx)(oe, {}),
+              children: (0, Q.jsx)(le, {}),
             }),
           }),
-          h
+          m
             ? (0, Q.jsxs)(Q.Fragment, {
                 children: [
-                  y(`#QAndA_ModeratorLabelHeader`),
-                  (0, Q.jsx)(C, {
-                    toolTipContent: y(`#QAndA_ModerateHideAllButton_ttip`),
-                    children: (0, Q.jsx)(v, {
+                  S(`#QAndA_ModeratorLabelHeader`),
+                  (0, Q.jsx)(y, {
+                    toolTipContent: S(`#QAndA_ModerateHideAllButton_ttip`),
+                    children: (0, Q.jsx)(f, {
                       onClick: async () => {
                         for (let e of [ee, u, d])
-                          for (let t of e) await ne(t, 3);
+                          for (let t of e) await h(t, 3);
                       },
                       className: I,
-                      children: y(`#QAndA_ModerateHideAllButton`),
+                      children: S(`#QAndA_ModerateHideAllButton`),
                     }),
                   }),
                 ],
@@ -1379,7 +1379,7 @@ function Pt(e) {
       u.length + d.length == 0
         ? (0, Q.jsx)(`div`, {
             className: Ge,
-            children: y(`#QAndA_NoQuestionsYet`),
+            children: S(`#QAndA_NoQuestionsYet`),
           })
         : (0, Q.jsxs)(`div`, {
             className: Ve,
@@ -1397,10 +1397,10 @@ function Pt(e) {
                         {
                           gidSession: t,
                           gidQuestion: e,
-                          bUserCanModerate: h,
+                          bUserCanModerate: m,
                           bUserCanVote: i,
                           fnVoteOnQuestion: l,
-                          rtNow: m,
+                          rtNow: p,
                         },
                         e,
                       ),
@@ -1412,7 +1412,7 @@ function Pt(e) {
                   children: [
                     (0, Q.jsx)(`div`, {
                       className: `cua4C9nfXwM-`,
-                      children: y(`#QAndA_AnsweredQuestionsHeader`),
+                      children: S(`#QAndA_AnsweredQuestionsHeader`),
                     }),
                     (0, Q.jsx)(`div`, {
                       className: `_42oBi1K5Go4-`,
@@ -1422,10 +1422,10 @@ function Pt(e) {
                           {
                             gidSession: t,
                             gidQuestion: e,
-                            bUserCanModerate: h,
+                            bUserCanModerate: m,
                             bUserCanVote: i,
                             fnVoteOnQuestion: l,
-                            rtNow: m,
+                            rtNow: p,
                           },
                           e,
                         ),
@@ -1445,10 +1445,10 @@ function Ft(e) {
     children: [
       (0, Q.jsx)(`div`, {
         className: L,
-        children: y(`#QAndA_HeaderDescription`),
+        children: S(`#QAndA_HeaderDescription`),
       }),
       (0, Q.jsx)(It, {
-        strPrompt: y(`#QAndA_QuestionPrompt`),
+        strPrompt: S(`#QAndA_QuestionPrompt`),
         fnSubmit: async (t) => {
           let i = await e.fnAskQuestion(t);
           return (
@@ -1463,8 +1463,8 @@ function Ft(e) {
         },
       }),
       (0, Q.jsx)(`div`, {
-        className: f(Ne, t && `l0ZS73yFCCg-`),
-        children: y(`#QAndA_QuestionWasPosted`),
+        className: g(Ne, t && `l0ZS73yFCCg-`),
+        children: S(`#QAndA_QuestionWasPosted`),
       }),
     ],
   });
@@ -1477,7 +1477,7 @@ function It(e) {
     children: (0, Q.jsxs)(`div`, {
       className: Le,
       children: [
-        (0, Q.jsx)(ae, {
+        (0, Q.jsx)(h, {
           type: `text`,
           placeholder: t,
           maxLength: 512,
@@ -1492,13 +1492,13 @@ function It(e) {
                 className: `MHDRZEocQLo-`,
                 children: (0, Q.jsx)(a, { size: `small`, position: `center` }),
               }),
-            (0, Q.jsx)(v, {
+            (0, Q.jsx)(f, {
               onClick: async () => {
                 (s(!0), (await n(r)) == 1 && i(``), s(!1));
               },
               disabled: o || !r,
               className: I,
-              children: y(`#QAndA_SubmitCommentButton`),
+              children: S(`#QAndA_SubmitCommentButton`),
             }),
           ],
         }),
@@ -1510,12 +1510,12 @@ function Lt(e) {
   return (0, Q.jsxs)(`div`, {
     className: L,
     children: [
-      (0, Q.jsx)(`div`, { className: Re, children: y(`#QAndA_LogInPrompt`) }),
-      !S.logged_in &&
-        (0, Q.jsx)(v, {
+      (0, Q.jsx)(`div`, { className: Re, children: S(`#QAndA_LogInPrompt`) }),
+      !v.logged_in &&
+        (0, Q.jsx)(f, {
           onClick: pe,
-          className: f(`JOMsuYcfEgE-`, `KtfZY3EXbm4-`),
-          children: y(`#Login_SignIn`),
+          className: g(`JOMsuYcfEgE-`, `KtfZY3EXbm4-`),
+          children: S(`#Login_SignIn`),
         }),
     ],
   });

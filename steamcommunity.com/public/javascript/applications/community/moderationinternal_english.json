@@ -134,10 +134,12 @@
     "subjectauditlog_error": "Error: Failed to load audit log.",
     "subjectauditlog_noentries": "No entries",
     "ugcsubjectpanel_dialogtitle": "Moderation subject",
+    "ugcsubjectpanel_disputed": "Disputed",
     "ugcsubjectpanel_error": "Status: failed to load moderation history",
     "ugcsubjectpanel_history": "History",
     "ugcsubjectpanel_release": "Release",
     "ugcsubjectpanel_reports": "Reports",
     "ugcsubjectpanel_status": "Status: %1$s",
-    "ugcsubjectpanel_statuswithreason": "Status: %1$s (%2$s)"
+    "ugcsubjectpanel_statuswithreason": "Status: %1$s (%2$s)",
+    "ugcsubjectpanel_unresolved": "Unresolved"
 }

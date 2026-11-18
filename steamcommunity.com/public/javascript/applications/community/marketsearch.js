@@ -4,7 +4,7 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
 import { v as r } from "./chunk~e8ef2e6942.js";
-import { qt as i } from "./main.js";
+import { Kt as i } from "./main.js";
 import { MarketBaseUIRoot as a, n as o, t as s } from "./chunk~6b2e92847b.js";
 var c = e(t()),
   l = n();

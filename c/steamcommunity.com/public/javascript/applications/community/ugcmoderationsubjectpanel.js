@@ -3,7 +3,7 @@ import { _, _, _, _ } from "./chunk~01cfc309bf.js";
 import { _ } from "./chunk~5412a9f1de.js";
 import { _, _, _, _ } from "./chunk~1e67c3e4e4.js";
 import { _, _, _, _ } from "./chunk~0f9e58b0a5.js";
-import { _, _, _, _, _, _, _ } from "./main.js";
+import { _, _, _, _, _, _, _, _, _ } from "./main.js";
 var _ = `kz--RFdqETk-`,
   _ = `_37eExA4Y63U-`,
   _ = `ec1nSO9hROk-`,
@@ -81,7 +81,27 @@ function _(_) {
         ],
       });
 }
-var _ = _(_(), 1);
+var _ = `QyKPlQ4VsXM-`,
+  _ = `i0Uyqkg-S5o-`,
+  _ = `Nug0PHJEgnI-`,
+  _ = `TtTr5Dvwsng-`,
+  _ = `ltGDK3wj7iU-`,
+  _ = `Mb5M5Kl46Vs-`,
+  _ = `i-KGNaLie0w-`,
+  _ = _(_(), 1);
+function _(_) {
+  switch (_) {
+    case 0:
+      return _;
+    case 1:
+      return _;
+    case 3:
+    case 4:
+      return;
+    default:
+      return _;
+  }
+}
 function _(_) {
   let _ = _(_(_.publishedFileID)),
     [_, _] = (0, _.useState)(!1);
@@ -91,50 +111,83 @@ function _(_) {
       children: _.Localize(`#ugcsubjectpanel_error`),
     });
   let _ = _.data.subjects?.[0];
-  return _
-    ? (0, _.jsxs)(_, {
-        direction: `column`,
-        gap: `1`,
+  if (!_) return null;
+  let _ = _.resolved ?? 0,
+    _ = _.content_moderated_reason,
+    _ = _ !== 0 && !!_ && _ !== 1,
+    _ = _.unresolved_dispute_count ?? 0;
+  return (0, _.jsxs)(_, {
+    direction: `column`,
+    gap: `1`,
+    children: [
+      (0, _.jsx)(_, {
+        subject: _,
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsx)(`span`, {
+            className: (0, _.default)(_, _(_)),
+            children: _(_),
+          }),
+          _ &&
+            (0, _.jsx)(`span`, {
+              className: `i0Uyqkg-S5o-`,
+              children: _(_),
+            }),
+        ],
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsxs)(`span`, {
+            children: [
+              _.Localize(`#ugcsubjectpanel_unresolved`),
+              ` `,
+              (0, _.jsx)(`span`, {
+                className: _,
+                children: _(_.unresolved_report_count ?? 0),
+              }),
+            ],
+          }),
+          _ > 0 &&
+            (0, _.jsxs)(`span`, {
+              children: [
+                _.Localize(`#ugcsubjectpanel_disputed`),
+                ` `,
+                (0, _.jsx)(`span`, {
+                  className: `i-KGNaLie0w-`,
+                  children: _(_),
+                }),
+              ],
+            }),
+        ],
+      }),
+      (0, _.jsxs)(_, {
+        direction: `row`,
+        gap: `2`,
         children: [
           (0, _.jsx)(_, {
-            children: _(_),
+            size: `1`,
+            color: `dull`,
+            onClick: () => _(!0),
+            children: _.Localize(`#ugcsubjectpanel_history`),
           }),
           (0, _.jsx)(_, {
             subject: _,
           }),
           (0, _.jsx)(_, {
-            children: _.Localize(
-              `#forumsubjectlist_subjectreportsummary`,
-              _.unresolved_report_count ?? 0,
-              _.unresolved_dispute_count ?? 0,
-            ),
+            subject: _,
           }),
-          (0, _.jsxs)(_, {
-            direction: `row`,
-            gap: `2`,
-            children: [
-              (0, _.jsx)(_, {
-                size: `1`,
-                color: `dull`,
-                onClick: () => _(!0),
-                children: _.Localize(`#ugcsubjectpanel_history`),
-              }),
-              (0, _.jsx)(_, {
-                subject: _,
-              }),
-              (0, _.jsx)(_, {
-                subject: _,
-              }),
-            ],
-          }),
-          _ &&
-            (0, _.jsx)(_, {
-              subject: _,
-              onClose: () => _(!1),
-            }),
         ],
-      })
-    : null;
+      }),
+      _ &&
+        (0, _.jsx)(_, {
+          subject: _,
+          onClose: () => _(!1),
+        }),
+    ],
+  });
 }
 function _(_) {
   let { subject: _ } = _,

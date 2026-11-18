@@ -2302,6 +2302,10 @@ function _(_) {
       return _.Localize(`#moderationaction_ownerdisputed`);
     case 24:
       return _.Localize(`#moderationaction_partnerclearedreports`);
+    case 25:
+      return _.Localize(`#moderationaction_partnerbanneditem`);
+    case 26:
+      return _.Localize(`#moderationaction_partnerunbanneditem`);
     default:
       return `${_.Localize(`#moderationaction_unknown`)}: ${_}`;
   }

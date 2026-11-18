@@ -7457,7 +7457,9 @@
     "moderationaction_locked": "Locked",
     "moderationaction_marked_as_suspicious": "Content marked as suspicious",
     "moderationaction_ownerdisputed": "Moderation disputed by owner",
+    "moderationaction_partnerbanneditem": "Banned by partner",
     "moderationaction_partnerclearedreports": "Reports cleared by partner",
+    "moderationaction_partnerunbanneditem": "Unbanned by partner",
     "moderationaction_privatemessaged": "Private message sent",
     "moderationaction_released": "Released",
     "moderationaction_reset_content": "Reset author's content",
@@ -7663,10 +7665,12 @@
     "subjectauditlog_noentries": "No entries",
     "text_store_follow_desc": "Follow this item to see announcements in your community activity feed",
     "ugcsubjectpanel_dialogtitle": "Moderation subject",
+    "ugcsubjectpanel_disputed": "Disputed",
     "ugcsubjectpanel_error": "Status: failed to load moderation history",
     "ugcsubjectpanel_history": "History",
     "ugcsubjectpanel_release": "Release",
     "ugcsubjectpanel_reports": "Reports",
     "ugcsubjectpanel_status": "Status: %1$s",
-    "ugcsubjectpanel_statuswithreason": "Status: %1$s (%2$s)"
+    "ugcsubjectpanel_statuswithreason": "Status: %1$s (%2$s)",
+    "ugcsubjectpanel_unresolved": "Unresolved"
 }

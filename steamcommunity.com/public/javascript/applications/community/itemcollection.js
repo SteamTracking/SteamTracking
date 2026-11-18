@@ -6,24 +6,24 @@ import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
 import { a as r, t as i } from "./chunk~79ae1444d5.js";
 import { n as a } from "./chunk~a7c5e71e12.js";
 import {
-  $h as o,
-  Cf as s,
-  Eu as c,
-  Fi as l,
-  Ku as u,
-  Ou as d,
-  af as f,
-  hm as p,
-  if as m,
-  jd as h,
-  lm as g,
-  ti as _,
-  zu as v,
+  Ad as o,
+  Du as s,
+  Gu as c,
+  Pi as l,
+  Qh as u,
+  Ru as d,
+  Sf as f,
+  Tu as p,
+  cm as m,
+  ei as h,
+  if as g,
+  mm as _,
+  rf as v,
 } from "./main.js";
 var y = e(t());
 function b() {
   let [e, t] = (0, y.useState)(() =>
-    p(`profile-itemcollection`, `itemcollection_config`),
+    _(`profile-itemcollection`, `itemcollection_config`),
   );
   return e;
 }
@@ -33,7 +33,7 @@ var x = `HIX9b7ATPfU-`,
   w = n();
 function T({ nPercent: e, indeterminate: t, animate: n, className: r }) {
   return (0, w.jsx)(`div`, {
-    className: c(x, n && `EWofGQ-jYRU-`, t && `OXJZ1DT0EbQ-`, r),
+    className: p(x, n && `EWofGQ-jYRU-`, t && `OXJZ1DT0EbQ-`, r),
     style: { "--percent": e / 100 },
   });
 }
@@ -43,7 +43,7 @@ var E = ({ nPercent: e, size: t = 120, strokeWidth: n = 20 }) => {
       a = i - (e / 100) * i,
       o = e == 100;
     return (0, w.jsx)(`div`, {
-      className: c({ [S]: !0, [C]: o }),
+      className: p({ [S]: !0, [C]: o }),
       children: (0, w.jsxs)(`svg`, {
         width: t,
         height: t,
@@ -101,19 +101,19 @@ function X(e) {
       strSteamId: n,
       bViewingOwnProfile: i,
       rgCommunityItemDefs: a,
-      rgUserCommunityItems: s,
-      nAppID: l,
-      rgRewardItems: u,
-      rgUserItemRewarded: f,
-      oRewardDefinition: p,
+      rgUserCommunityItems: o,
+      nAppID: c,
+      rgRewardItems: l,
+      rgUserItemRewarded: d,
+      oRewardDefinition: f,
     } = b(),
-    h = (0, y.useMemo)(() => {
+    g = (0, y.useMemo)(() => {
       let e = new Set();
-      s.forEach((t) => {
+      o.forEach((t) => {
         e.add(`${t.appid}_${t.item_type}`);
       });
       let t = new Set();
-      u?.forEach((e) => {
+      l?.forEach((e) => {
         t.add(e.community_item_type);
       });
       let n = new Map();
@@ -146,10 +146,10 @@ function X(e) {
           }),
         n
       );
-    }, [a, u, s]),
-    v = (0, y.useMemo)(() => {
-      if (h.has(3)) {
-        let e = h
+    }, [a, l, o]),
+    _ = (0, y.useMemo)(() => {
+      if (g.has(3)) {
+        let e = g
           .get(3)
           .filter(
             (e) => (
@@ -157,10 +157,10 @@ function X(e) {
               e.item_movie_webm && e.item_movie_mp4
             ),
           );
-        if (e.length) return (o(e), e[0]);
+        if (e.length) return (u(e), e[0]);
       }
       return null;
-    }, [h]),
+    }, [g]),
     x = (0, y.useMemo)(() => {
       let e = new Map();
       return (
@@ -170,9 +170,9 @@ function X(e) {
         e
       );
     }, [a]),
-    S = (0, y.useMemo)(() => Array.from(h.keys()).sort((e, t) => t - e), [h]),
+    S = (0, y.useMemo)(() => Array.from(g.keys()).sort((e, t) => t - e), [g]),
     [C, E, O] = y.useMemo(() => {
-      let e = s?.filter((e) => {
+      let e = o?.filter((e) => {
           let t = x.get(e.item_type);
           return !t || (t.item_class != 2 && t.item_class != 1);
         }),
@@ -180,15 +180,15 @@ function X(e) {
         n = e.length || 0,
         r = t.length || 0;
       return [r ? Math.floor((n * 100) / r) : 0, r, n];
-    }, [x, a, s]);
-  return (0, w.jsx)(_, {
+    }, [x, a, o]);
+  return (0, w.jsx)(h, {
     feature: `itemcollections`,
     children: (0, w.jsx)(r, {
-      appID: l,
-      children: (0, w.jsxs)(d, {
+      appID: c,
+      children: (0, w.jsxs)(s, {
         className: D,
         children: [
-          v &&
+          _ &&
             (0, w.jsx)(`div`, {
               className: `ZTNO-ybI-Z0-`,
               children: (0, w.jsxs)(`video`, {
@@ -197,26 +197,26 @@ function X(e) {
                 muted: !0,
                 autoPlay: !0,
                 loop: !0,
-                poster: `${g.MEDIA_CDN_COMMUNITY_URL}images/items/${l}/${v.item_image_large}`,
+                poster: `${m.MEDIA_CDN_COMMUNITY_URL}images/items/${c}/${_.item_image_large}`,
                 children: [
                   (0, w.jsx)(`source`, {
-                    src: `${g.MEDIA_CDN_COMMUNITY_URL}images/items/${l}/${v.item_movie_webm}`,
+                    src: `${m.MEDIA_CDN_COMMUNITY_URL}images/items/${c}/${_.item_movie_webm}`,
                     type: `video/webm`,
                   }),
-                  !g.IN_CLIENT &&
+                  !m.IN_CLIENT &&
                     (0, w.jsx)(`source`, {
-                      src: `${g.MEDIA_CDN_COMMUNITY_URL}images/items/${l}/${v.item_movie_mp4}`,
+                      src: `${m.MEDIA_CDN_COMMUNITY_URL}images/items/${c}/${_.item_movie_mp4}`,
                       type: `video/mp4`,
                     }),
                 ],
               }),
             }),
-          (0, w.jsx)(re, { nAppID: l }),
+          (0, w.jsx)(re, { nAppID: c }),
           (0, w.jsxs)(`div`, {
             className: M,
             children: [
               (0, w.jsx)(`span`, {
-                children: m(`#ItemCollection_Collected`, O, E),
+                children: v(`#ItemCollection_Collected`, O, E),
               }),
               (0, w.jsx)(T, {
                 className: z,
@@ -226,31 +226,31 @@ function X(e) {
               }),
             ],
           }),
-          !!p &&
+          !!f &&
             (0, w.jsx)(`div`, {
-              className: c(`_-0AYX0qn8gM-`, `X7PlTNfr-tY-`, `xz2InerLPSo-`),
+              className: p(`_-0AYX0qn8gM-`, `X7PlTNfr-tY-`, `xz2InerLPSo-`),
               children: (0, w.jsx)(Z, {
-                oRewardDefinition: p,
+                oRewardDefinition: f,
                 bViewingOwnProfile: i,
-                rgRewardItems: u,
-                rgUserItemRewarded: f,
+                rgRewardItems: l,
+                rgUserItemRewarded: d,
                 rgCommunityItemDefs: a,
               }),
             }),
           (0, w.jsxs)(`div`, {
-            className: c(M, N),
+            className: p(M, N),
             children: [
               (0, w.jsx)(`div`, {
                 className: F,
-                children: m(`#ItemCollection_ForPoints_Title`),
+                children: v(`#ItemCollection_ForPoints_Title`),
               }),
               S.map((e) =>
                 (0, w.jsx)(
                   Q,
                   {
-                    nAppID: l,
+                    nAppID: c,
                     itemClass: e,
-                    rgItems: h.get(e),
+                    rgItems: g.get(e),
                     bViewingOwnProfile: i,
                     bHideItemStore: e == 2,
                   },
@@ -306,34 +306,34 @@ function Z(e) {
       );
     }, [n, r, i]);
   return (0, w.jsxs)(l, {
-    navEntryPreferPosition: u.LAST,
+    navEntryPreferPosition: c.LAST,
     preferredFocus: !0,
     className: I,
     children: [
       (0, w.jsx)(`div`, {
         className: F,
-        children: m(`#ItemCollection_ForFree_Title`),
+        children: v(`#ItemCollection_ForFree_Title`),
       }),
-      (0, w.jsxs)(d, {
+      (0, w.jsxs)(s, {
         children: [
           (0, w.jsxs)(`div`, {
             className: L,
             children: [
               (0, w.jsx)(`div`, {
                 className: R,
-                children: m(`#ItemCollection_ForFree_Discovery`),
+                children: v(`#ItemCollection_ForFree_Discovery`),
               }),
               (0, w.jsx)(`p`, {
-                children: s(t.rtime_start_time, t.rtime_end_time),
+                children: f(t.rtime_start_time, t.rtime_end_time),
               }),
               (0, w.jsxs)(`p`, {
                 children: [
-                  m(`#ItemCollection_ForFree_Discovery_desc`),
+                  v(`#ItemCollection_ForFree_Discovery_desc`),
                   (0, w.jsx)(`br`, {}),
-                  f(
+                  g(
                     `#ItemCollection_ForFree_Discovery_desc2`,
-                    (0, w.jsx)(v, {
-                      href: `${g.STORE_BASE_URL}explore?dq=widget`,
+                    (0, w.jsx)(d, {
+                      href: `${m.STORE_BASE_URL}explore?dq=widget`,
                     }),
                   ),
                 ],
@@ -363,26 +363,26 @@ function Q(e) {
     a = (0, y.useMemo)(() => t.filter((e) => e.user_has_item).length, [t]),
     o = t.length ? Math.floor((a * 100) / t.length) : 0;
   return (0, w.jsxs)(l, {
-    navEntryPreferPosition: u.LAST,
+    navEntryPreferPosition: c.LAST,
     preferredFocus: !0,
-    className: c(P),
+    className: p(P),
     children: [
       (0, w.jsx)($, { ...e }),
-      (0, w.jsxs)(d, {
+      (0, w.jsxs)(s, {
         className: B,
         children: [
-          (0, w.jsx)(d, {
+          (0, w.jsx)(s, {
             className: V,
-            children: m(`#Sale_Section_PointShop_class_` + n),
+            children: v(`#Sale_Section_PointShop_class_` + n),
           }),
           (0, w.jsx)(`div`, { className: H }),
           (0, w.jsx)(ee, { ...e }),
         ],
       }),
-      (0, w.jsxs)(d, {
+      (0, w.jsxs)(s, {
         className: W,
         children: [
-          (0, w.jsxs)(d, {
+          (0, w.jsxs)(s, {
             className: G,
             children: [
               (0, w.jsx)(E, { nPercent: o }),
@@ -390,10 +390,10 @@ function Q(e) {
                 className: K,
                 children: [
                   (0, w.jsx)(`div`, {
-                    children: m(`#ItemCollection_Collected_Item`, a, t.length),
+                    children: v(`#ItemCollection_Collected_Item`, a, t.length),
                   }),
                   (0, w.jsx)(`div`, {
-                    children: m(`#ItemCollection_Collected_Line`),
+                    children: v(`#ItemCollection_Collected_Line`),
                   }),
                 ],
               }),
@@ -408,38 +408,38 @@ function Q(e) {
 function $(e) {
   let { itemClass: t, nAppID: n } = e;
   return t === 2
-    ? (0, w.jsx)(d, {
+    ? (0, w.jsx)(s, {
         className: F,
-        children: m(`#ItemCollection_GameCards_Title`),
+        children: v(`#ItemCollection_GameCards_Title`),
       })
     : null;
 }
 function ee(e) {
   let { itemClass: t, nAppID: n, bViewingOwnProfile: r, bHideItemStore: i } = e;
   return t == 2 && r
-    ? (0, w.jsx)(v, {
-        href: `${g.COMMUNITY_BASE_URL}my/gamecards/${n}`,
+    ? (0, w.jsx)(d, {
+        href: `${m.COMMUNITY_BASE_URL}my/gamecards/${n}`,
         className: U,
-        children: m(`#ItemCollection_Visit_Badge`),
+        children: v(`#ItemCollection_Visit_Badge`),
       })
     : i
       ? null
-      : (0, w.jsx)(v, {
-          href: `${g.STORE_BASE_URL}points/shop/app/${n}`,
+      : (0, w.jsx)(d, {
+          href: `${m.STORE_BASE_URL}points/shop/app/${n}`,
           className: U,
-          children: m(`#ItemCollection_Visit`),
+          children: v(`#ItemCollection_Visit`),
         });
 }
 function te(e) {
   let { item: t } = e,
-    [n, r] = h(),
+    [n, r] = o(),
     a = t.user_has_item || n,
-    o = !a,
-    s =
+    c = !a,
+    l =
       (a || t.item_class == 2 || t.item_class == 8) && t.item_class != 4
         ? t.item_image_small
         : void 0;
-  return (0, w.jsx)(d, {
+  return (0, w.jsx)(s, {
     ...r,
     onFocus: () => r.onPointerEnter(),
     onBlur: () => r.onPointerLeave(),
@@ -448,11 +448,11 @@ function te(e) {
     children: (0, w.jsx)(i, {
       appid: t.appid,
       item_image_large: t.item_image_large,
-      item_image_small: s,
+      item_image_small: l,
       item_title: t.item_title,
       item_movie_mp4: a ? t.item_movie_mp4_small : void 0,
       item_movie_webm: a ? t.item_movie_webm_small : void 0,
-      className: c({ [J]: !0, [Y]: o }),
+      className: p({ [J]: !0, [Y]: c }),
       videoClassName: J,
     }),
   });
@@ -462,21 +462,21 @@ function re(e) {
   let { nAppID: t } = e,
     [n] = a(t, ne);
   return n
-    ? (0, w.jsx)(d, {
+    ? (0, w.jsx)(s, {
         className: O,
-        children: (0, w.jsxs)(d, {
+        children: (0, w.jsxs)(s, {
           children: [
-            (0, w.jsxs)(d, {
+            (0, w.jsxs)(s, {
               className: k,
               children: [
-                (0, w.jsx)(d, { className: A, children: n.GetName() }),
-                (0, w.jsx)(d, {
+                (0, w.jsx)(s, { className: A, children: n.GetName() }),
+                (0, w.jsx)(s, {
                   className: j,
-                  children: m(`#ItemCollection_Title`),
+                  children: v(`#ItemCollection_Title`),
                 }),
               ],
             }),
-            (0, w.jsx)(d, { children: m(`#ItemCollection_EventSubTitle`) }),
+            (0, w.jsx)(s, { children: v(`#ItemCollection_EventSubTitle`) }),
           ],
         }),
       })

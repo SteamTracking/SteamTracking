@@ -12,17 +12,17 @@ import { t as u } from "./chunk~eefd71512b.js";
 import {
   $ as d,
   B as f,
-  H as p,
-  Kt as m,
-  Lt as h,
-  Ou as g,
-  R as _,
-  V as v,
-  _t as y,
-  bm as b,
-  et as x,
-  z as S,
-  zt as C,
+  Du as p,
+  Gt as m,
+  H as h,
+  It as g,
+  Q as _,
+  R as v,
+  Rt as y,
+  V as b,
+  gt as x,
+  ym as S,
+  z as C,
 } from "./main.js";
 var w = `xLywNz6knuU-`,
   T = `nA9MaZPmXRU-`,
@@ -48,9 +48,9 @@ function F(e) {
           children: (0, N.jsx)(`tr`, {
             children: (0, N.jsx)(`td`, {
               colSpan: 4,
-              children: (0, N.jsx)(h, {
+              children: (0, N.jsx)(g, {
                 size: `2`,
-                children: d.Localize(`#subjectauditlog_noentries`),
+                children: _.Localize(`#subjectauditlog_noentries`),
               }),
             }),
           }),
@@ -74,7 +74,7 @@ function I() {
         children: (0, N.jsxs)(`tr`, {
           children: [
             (0, N.jsx)(`th`, {
-              children: (0, N.jsx)(h, {
+              children: (0, N.jsx)(g, {
                 size: `2`,
                 weight: `heavy`,
                 contrast: `description`,
@@ -82,7 +82,7 @@ function I() {
               }),
             }),
             (0, N.jsx)(`th`, {
-              children: (0, N.jsx)(h, {
+              children: (0, N.jsx)(g, {
                 size: `2`,
                 weight: `heavy`,
                 contrast: `description`,
@@ -90,7 +90,7 @@ function I() {
               }),
             }),
             (0, N.jsx)(`th`, {
-              children: (0, N.jsx)(h, {
+              children: (0, N.jsx)(g, {
                 size: `2`,
                 weight: `heavy`,
                 contrast: `description`,
@@ -98,7 +98,7 @@ function I() {
               }),
             }),
             (0, N.jsx)(`th`, {
-              children: (0, N.jsx)(h, {
+              children: (0, N.jsx)(g, {
                 size: `2`,
                 weight: `heavy`,
                 contrast: `description`,
@@ -130,9 +130,9 @@ function L(e) {
                   (0, N.jsx)(`tr`, {
                     children: (0, N.jsx)(`td`, {
                       colSpan: 4,
-                      children: (0, N.jsx)(h, {
+                      children: (0, N.jsx)(g, {
                         size: `2`,
-                        children: d.Localize(`#subjectauditlog_noentries`),
+                        children: _.Localize(`#subjectauditlog_noentries`),
                       }),
                     }),
                   }),
@@ -150,9 +150,9 @@ function L(e) {
                         (0, N.jsx)(`tr`, {
                           children: (0, N.jsx)(`td`, {
                             colSpan: 4,
-                            children: (0, N.jsx)(h, {
+                            children: (0, N.jsx)(g, {
                               size: `2`,
-                              children: d.Localize(`#subjectauditlog_error`),
+                              children: _.Localize(`#subjectauditlog_error`),
                             }),
                           }),
                         }),
@@ -161,9 +161,9 @@ function L(e) {
                         (0, N.jsx)(`tr`, {
                           children: (0, N.jsx)(`td`, {
                             colSpan: 4,
-                            children: (0, N.jsx)(h, {
+                            children: (0, N.jsx)(g, {
                               size: `2`,
-                              children: d.Localize(
+                              children: _.Localize(
                                 `#subjectauditlog_noentries`,
                               ),
                             }),
@@ -193,8 +193,8 @@ function R(e) {
       (0, N.jsx)(`span`, {
         className: j,
         children: (0, N.jsx)(r, {
-          href: `${b.COMMUNITY_BASE_URL}profiles/${t}`,
-          children: (0, N.jsx)(h, {
+          href: `${S.COMMUNITY_BASE_URL}profiles/${t}`,
+          children: (0, N.jsx)(g, {
             size: `2`,
             truncate: !0,
             title: n,
@@ -226,9 +226,9 @@ function z(e) {
   return (0, N.jsxs)(`tr`, {
     children: [
       (0, N.jsx)(`td`, {
-        children: (0, N.jsx)(h, {
+        children: (0, N.jsx)(g, {
           size: `2`,
-          children: y(t.timestamp, !1, ``),
+          children: x(t.timestamp, !1, ``),
         }),
       }),
       (0, N.jsx)(`td`, {
@@ -243,24 +243,24 @@ function z(e) {
             }),
             (0, N.jsx)(r, {
               size: `2`,
-              href: `${b.COMMUNITY_BASE_URL}moderation/activity/${t.actor_steamid}`,
+              href: `${S.COMMUNITY_BASE_URL}moderation/activity/${t.actor_steamid}`,
               children: `(activity)`,
             }),
           ],
         }),
       }),
       (0, N.jsx)(`td`, {
-        children: (0, N.jsxs)(h, {
+        children: (0, N.jsxs)(g, {
           size: `2`,
           children: [
-            p(t.action),
+            h(t.action),
             t.automated_action &&
               (0, N.jsx)(N.Fragment, { children: `\xA0(Automated)` }),
           ],
         }),
       }),
       (0, N.jsx)(`td`, {
-        children: (0, N.jsx)(h, {
+        children: (0, N.jsx)(g, {
           as: `div`,
           size: `2`,
           children: (0, N.jsx)(B, {
@@ -290,14 +290,14 @@ function B(e) {
           r.resolution !== 1 &&
             r.resolution !== 14 &&
             (0, N.jsxs)(N.Fragment, {
-              children: [(0, N.jsx)(`br`, {}), `Resolution: `, v(r.resolution)],
+              children: [(0, N.jsx)(`br`, {}), `Resolution: `, b(r.resolution)],
             }),
           r.sanctions &&
             (0, N.jsxs)(N.Fragment, {
               children: [
                 (0, N.jsx)(`br`, {}),
                 `Sanctions: `,
-                r.sanctions.map(_).join(`, `),
+                r.sanctions.map(v).join(`, `),
               ],
             }),
         ],
@@ -309,7 +309,7 @@ function B(e) {
         children: JSON.stringify(r, null, `	`),
       });
     case 6:
-      return (0, N.jsxs)(N.Fragment, { children: [`New level: `, S(r.level)] });
+      return (0, N.jsxs)(N.Fragment, { children: [`New level: `, C(r.level)] });
     case 7:
       return i;
     default:
@@ -344,7 +344,7 @@ function V(e) {
         children: (0, N.jsxs)(`tr`, {
           children: [
             (0, N.jsx)(`th`, {
-              children: (0, N.jsx)(h, {
+              children: (0, N.jsx)(g, {
                 size: `2`,
                 weight: `heavy`,
                 contrast: `description`,
@@ -352,7 +352,7 @@ function V(e) {
               }),
             }),
             (0, N.jsx)(`th`, {
-              children: (0, N.jsx)(h, {
+              children: (0, N.jsx)(g, {
                 size: `2`,
                 weight: `heavy`,
                 contrast: `description`,
@@ -360,7 +360,7 @@ function V(e) {
               }),
             }),
             (0, N.jsx)(`th`, {
-              children: (0, N.jsx)(h, {
+              children: (0, N.jsx)(g, {
                 size: `2`,
                 weight: `heavy`,
                 contrast: `description`,
@@ -368,7 +368,7 @@ function V(e) {
               }),
             }),
             (0, N.jsx)(`th`, {
-              children: (0, N.jsx)(h, {
+              children: (0, N.jsx)(g, {
                 size: `2`,
                 weight: `heavy`,
                 contrast: `description`,
@@ -384,9 +384,9 @@ function V(e) {
             (0, N.jsx)(`tr`, {
               children: (0, N.jsx)(`td`, {
                 colSpan: 4,
-                children: (0, N.jsx)(h, {
+                children: (0, N.jsx)(g, {
                   size: `2`,
-                  children: d.Localize(`#contentreportslist_noreports`),
+                  children: _.Localize(`#contentreportslist_noreports`),
                 }),
               }),
             }),
@@ -419,9 +419,9 @@ function H(e) {
   return (0, N.jsxs)(`tr`, {
     children: [
       (0, N.jsx)(`td`, {
-        children: (0, N.jsx)(h, {
+        children: (0, N.jsx)(g, {
           size: `2`,
-          children: y(t.time_reported, !1, ``),
+          children: x(t.time_reported, !1, ``),
         }),
       }),
       (0, N.jsx)(`td`, {
@@ -429,7 +429,7 @@ function H(e) {
           className: A,
           children: [
             (0, N.jsx)(`a`, {
-              href: `${b.COMMUNITY_BASE_URL}profiles/${t.reporter_steamid}`,
+              href: `${S.COMMUNITY_BASE_URL}profiles/${t.reporter_steamid}`,
               children: (0, N.jsx)(c, {
                 playerLinkDetails: i.data,
                 size: `X-Small`,
@@ -446,21 +446,21 @@ function H(e) {
         }),
       }),
       (0, N.jsx)(`td`, {
-        children: (0, N.jsxs)(h, {
+        children: (0, N.jsxs)(g, {
           as: `div`,
           size: `2`,
           children: [
             !o &&
               (0, N.jsx)(`span`, {
-                children: x.Localize(`#moderation_resolutionstatus_pending`),
+                children: d.Localize(`#moderation_resolutionstatus_pending`),
               }),
             u &&
               !a &&
               !s &&
               (0, N.jsx)(`span`, {
-                children: d.Localize(
+                children: _.Localize(
                   `#contentreportslist_acquitted_at`,
-                  y(t.time_resolved, !1, ``),
+                  x(t.time_resolved, !1, ``),
                 ),
               }),
             o &&
@@ -468,24 +468,24 @@ function H(e) {
               !a &&
               !s &&
               (0, N.jsx)(`span`, {
-                children: d.Localize(
+                children: _.Localize(
                   `#contentreportslist_resolved_at`,
-                  y(t.time_resolved, !1, ``),
+                  x(t.time_resolved, !1, ``),
                 ),
               }),
             a &&
               !s &&
               (0, N.jsx)(`span`, {
-                children: d.Localize(
+                children: _.Localize(
                   `#contentreportslist_disputed_at`,
-                  y(t.time_disputed, !1, ``),
+                  x(t.time_disputed, !1, ``),
                 ),
               }),
             s &&
               (0, N.jsx)(`span`, {
-                children: d.Localize(
+                children: _.Localize(
                   `#contentreportslist_dispute_resolved_at`,
-                  y(t.time_dispute_resolved, !1, ``),
+                  x(t.time_dispute_resolved, !1, ``),
                 ),
               }),
           ],
@@ -493,14 +493,14 @@ function H(e) {
       }),
       (0, N.jsxs)(`td`, {
         children: [
-          (0, N.jsx)(h, { as: `div`, size: `2`, children: f(t.report_reason) }),
+          (0, N.jsx)(g, { as: `div`, size: `2`, children: f(t.report_reason) }),
           !!t.report_text &&
-            (0, N.jsxs)(h, {
+            (0, N.jsxs)(g, {
               as: `div`,
               size: `2`,
               marginTop: `1`,
               children: [
-                (0, N.jsx)(h, {
+                (0, N.jsx)(g, {
                   size: `1`,
                   weight: `heavy`,
                   contrast: `description`,
@@ -511,12 +511,12 @@ function H(e) {
             }),
           !!t.time_disputed &&
             !!t.dispute_details &&
-            (0, N.jsxs)(h, {
+            (0, N.jsxs)(g, {
               as: `div`,
               size: `2`,
               marginTop: `1`,
               children: [
-                (0, N.jsx)(h, {
+                (0, N.jsx)(g, {
                   size: `1`,
                   weight: `heavy`,
                   contrast: `description`,
@@ -548,22 +548,22 @@ function J(e) {
     [s, c] = (0, U.useState)(10),
     l = o(t),
     [u, f] = (0, U.useState)(``);
-  return (0, N.jsxs)(g, {
+  return (0, N.jsxs)(p, {
     className: W,
     children: [
-      (0, N.jsx)(g, {
-        children: d.Localize(`#moderation_escalation_description`),
+      (0, N.jsx)(p, {
+        children: _.Localize(`#moderation_escalation_description`),
       }),
       (0, N.jsx)(`select`, {
         className: G,
         value: s,
         onChange: (e) => c(parseInt(e.target.value)),
         children: a.map(([e, t]) =>
-          (0, N.jsx)(`option`, { value: e, children: d.Localize(t) }, e),
+          (0, N.jsx)(`option`, { value: e, children: _.Localize(t) }, e),
         ),
       }),
       (0, N.jsx)(`label`, {
-        children: d.Localize(`#moderation_escalation_escalationnote`),
+        children: _.Localize(`#moderation_escalation_escalationnote`),
       }),
       (0, N.jsx)(i, { onTextChange: f, value: u }),
       (0, N.jsxs)(m, {
@@ -572,18 +572,18 @@ function J(e) {
         gap: `2`,
         marginTop: `2`,
         children: [
-          (0, N.jsx)(C, {
+          (0, N.jsx)(y, {
             color: `dull`,
             onClick: n,
-            children: x.Localize(`#moderation_cancel`),
+            children: d.Localize(`#moderation_cancel`),
           }),
-          (0, N.jsx)(C, {
+          (0, N.jsx)(y, {
             onClick: async () => {
               (await l.mutateAsync({ eNewLevel: s, strNote: u }), n());
             },
             disabled: a.length == 0,
             loading: l.isPending,
-            children: d.Localize(`#moderation_escalation_escalate`),
+            children: _.Localize(`#moderation_escalation_escalate`),
           }),
         ],
       }),

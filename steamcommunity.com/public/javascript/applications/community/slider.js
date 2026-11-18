@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
-import { $t as r, Pt as i, Zt as a, gh as o, ig as s } from "./main.js";
+import { Nt as r, Qt as i, Xt as a, hh as o, rg as s } from "./main.js";
 var c = e(t(), 1),
   l = `_0hkFFtEKd8o-`,
   u = `_7oKujRBWBjo-`,
@@ -42,7 +42,7 @@ function _(e) {
 }
 var v = (0, c.createContext)(null);
 function y(e) {
-  let { children: t, color: n, ...i } = e,
+  let { children: t, color: n, ...r } = e,
     {
       min: o,
       max: s,
@@ -51,7 +51,7 @@ function y(e) {
       step: p = 1,
       onValueSettled: h,
       ...g
-    } = i,
+    } = r,
     _ = {
       min: o,
       max: s,
@@ -60,7 +60,7 @@ function y(e) {
       onValueChange: d,
       onValueSettled: h,
     },
-    y = r({ ...g, className: l }, a),
+    y = i({ ...g, className: l }, a),
     x = (0, c.useRef)(null),
     C = (0, c.useRef)(null),
     [w] = (0, c.useState)(() => new Set()),
@@ -138,17 +138,17 @@ function S(e, t) {
 }
 function C(e) {
   let { render: t, ...n } = e;
-  return i(t, (0, m.jsx)(`div`, { className: d }), n, void 0);
+  return r(t, (0, m.jsx)(`div`, { className: d }), n, void 0);
 }
 function w(e) {
-  let { start: t, end: n, render: r } = e,
+  let { start: t, end: n, render: i } = e,
     a = (0, c.useContext)(v);
   s(a, `SliderRange must be used within a SliderRoot!`);
   let { min: o, max: l } = a,
     u = O(t, o, l),
     d = 100 - O(n, o, l);
-  return i(
-    r,
+  return r(
+    i,
     (0, m.jsx)(`div`, {
       className: f,
       style: { "--pct-left": `${u}%`, "--pct-right": `${d}%` },
@@ -162,7 +162,7 @@ function T(e) {
     n = (0, c.useContext)(v);
   s(n, `SliderHandle must be used within a SliderRoot!`);
   let {
-      min: r,
+      min: i,
       max: a,
       handles: o,
       value: l,
@@ -177,7 +177,7 @@ function T(e) {
     [h, o],
   );
   let b = _ > -1,
-    S = { "--handle-pct": `${O(b ? l[_] : r, r, a)}%` },
+    S = { "--handle-pct": `${O(b ? l[_] : i, i, a)}%` },
     C = (e) => {
       switch (e.key) {
         case `ArrowRight`:
@@ -187,8 +187,8 @@ function T(e) {
           let t = `ArrowRight`;
           e.currentTarget.matches(`:dir(rtl)`) && (t = `ArrowLeft`);
           let n = e.key === t || e.key === `ArrowUp`,
-            i = u * (n ? 1 : -1),
-            o = D({ value: l[_] + i, min: r, max: a, step: u }),
+            r = u * (n ? 1 : -1),
+            o = D({ value: l[_] + r, min: i, max: a, step: u }),
             s = [...l];
           ((s[_] = x(l, _, o)),
             d(s),
@@ -200,10 +200,10 @@ function T(e) {
         case `PageUp`:
         case `PageDown`: {
           let t = e.key === `PageUp`,
-            n = Math.round((a - r) / 10) * (t ? 1 : -1),
-            i = D({ value: l[_] + n, min: r, max: a, step: u }),
+            n = Math.round((a - i) / 10) * (t ? 1 : -1),
+            r = D({ value: l[_] + n, min: i, max: a, step: u }),
             o = [...l];
-          ((o[_] = x(l, _, i)),
+          ((o[_] = x(l, _, r)),
             d(o),
             f && f(o),
             e.preventDefault(),
@@ -217,12 +217,12 @@ function T(e) {
     ref: g,
     role: `slider`,
     "aria-valuenow": l[_],
-    "aria-valuemin": r,
+    "aria-valuemin": i,
     "aria-valuemax": a,
     tabIndex: 0,
     onKeyDown: C,
   };
-  return i(t, (0, m.jsx)(`span`, { className: p, style: S }), w, {
+  return r(t, (0, m.jsx)(`span`, { className: p, style: S }), w, {
     value: l[_],
     bDragActive: n.bDragActive,
   });

@@ -3,7 +3,7 @@
 /* Third-party software licenses can be found at licenses.txt */
 import { o as e, r as t } from "./chunk~f025431ab0.js";
 import { Ft as n } from "./chunk~01cfc309bf.js";
-import { tp as r } from "./main.js";
+import { ep as r } from "./main.js";
 function i() {
   return globalThis._VSCODE_NLS_MESSAGES;
 }

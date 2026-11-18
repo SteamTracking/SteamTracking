@@ -1,25 +1,25 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { Ap as e, Bp as t, ag as n, lm as r, op as i } from "./main.js";
-function a(e, t) {
-  if (e[t]) {
-    if (t == `community_icon`) {
-      let n = e.asset_url_format
+import { ap as e, cm as t, ig as n, kp as r, zp as i } from "./main.js";
+function a(e, n) {
+  if (e[n]) {
+    if (n == `community_icon`) {
+      let r = e.asset_url_format
         .replace(/^steam\//, `images/`)
-        .replace("${FILENAME}", `${e[t]}.jpg`)
+        .replace("${FILENAME}", `${e[n]}.jpg`)
         .replace(/\?.*$/, ``);
-      return `${r.MEDIA_CDN_COMMUNITY_URL}${n}`;
+      return `${t.MEDIA_CDN_COMMUNITY_URL}${r}`;
     }
-    if (typeof e[t] == `string`) {
-      let n = e.asset_url_format.replace("${FILENAME}", e[t]);
-      return `${r.STORE_ITEM_BASE_URL}${n}`;
+    if (typeof e[n] == `string`) {
+      let r = e.asset_url_format.replace("${FILENAME}", e[n]);
+      return `${t.STORE_ITEM_BASE_URL}${r}`;
     }
   }
 }
-function o(e, t = `full`) {
+function o(e, r = `full`) {
   let i = ``;
-  switch (t) {
+  switch (r) {
     case `thumb`:
       i = `.116x65`;
       break;
@@ -33,15 +33,15 @@ function o(e, t = `full`) {
       i = ``;
       break;
     default:
-      n(t, `Invalid size: ${t}`);
+      n(r, `Invalid size: ${r}`);
   }
   return (
-    r.STORE_ITEM_BASE_URL + e.filename.replace(/\.([^.]+)(\?.*)?$/, `${i}.$1$2`)
+    t.STORE_ITEM_BASE_URL + e.filename.replace(/\.([^.]+)(\?.*)?$/, `${i}.$1$2`)
   );
 }
-function s(e) {
-  let { data: n } = t(e),
-    r = i();
+function s(t) {
+  let { data: n } = i(t),
+    r = e();
   if (n)
     return [
       ...(n.all_ages_screenshots || []),
@@ -50,8 +50,8 @@ function s(e) {
         : []),
     ].sort((e, t) => e.ordinal - t.ordinal);
 }
-function c(t, n = !1) {
-  let { data: i } = e({ appid: t });
+function c(e, n = !1) {
+  let { data: i } = r({ appid: e });
   if (i !== void 0)
     return i === null
       ? null
@@ -59,11 +59,11 @@ function c(t, n = !1) {
         ? a(i, `library_capsule_2x`)
         : i.library_capsule
           ? a(i, `library_capsule`)
-          : `${r.STORE_ITEM_BASE_URL}steam/apps/${t}/portrait.png`;
+          : `${t.STORE_ITEM_BASE_URL}steam/apps/${e}/portrait.png`;
 }
-function l(t, ...n) {
-  let { data: r } = e(t);
-  return u(r, ...n);
+function l(e, ...t) {
+  let { data: n } = r(e);
+  return u(n, ...t);
 }
 function u(e, ...t) {
   if (!e?.asset_url_format) return;

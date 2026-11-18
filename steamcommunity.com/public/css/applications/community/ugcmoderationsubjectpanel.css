@@ -1,25 +1,65 @@
 .kz--RFdqETk- {
+  white-space: nowrap;
   border-radius: 3px;
-  padding: 0 6px;
+  padding: 1px 6px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px;
   text-decoration: none;
 }
 ._37eExA4Y63U- {
-  color: #fff;
-  background-color: green;
+  color: #e0ffe6;
+  background-color: #2ea0438c;
+  box-shadow: inset 0 0 0 1px #2ea043;
 }
 .ec1nSO9hROk- {
-  color: #000;
-  background-color: #ff0;
+  color: #fff8c4;
+  background-color: #e6c80080;
+  box-shadow: inset 0 0 0 1px #e6c800;
 }
 .-NGXn8lsHRg- {
-  color: #fff;
-  background-color: #ff4500;
+  color: #ffe0d4;
+  background-color: #ff450080;
+  box-shadow: inset 0 0 0 1px #ff4500;
 }
 .NQvpF1uY2-0- {
+  color: #f2dcff;
+  background-color: #a03cc88c;
+  box-shadow: inset 0 0 0 1px #a03cc8;
+}
+.QyKPlQ4VsXM- {
+  flex-wrap: wrap;
+  gap: 4px;
+  display: flex;
+}
+.i0Uyqkg-S5o- {
+  white-space: nowrap;
+  color: #b8bcbf;
+  background-color: #ffffff1a;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+}
+.i0Uyqkg-S5o-.Nug0PHJEgnI- {
+  color: #ffdcdc;
+  background-color: #cc333359;
+}
+.i0Uyqkg-S5o-.TtTr5Dvwsng- {
+  color: #d2efa9;
+  background-color: #5ba31959;
+}
+.i0Uyqkg-S5o-.ltGDK3wj7iU- {
+  color: #ffe8bc;
+  background-color: #ffcc6a40;
+}
+.Mb5M5Kl46Vs- {
+  color: #8f98a0;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  font-size: 12px;
+  display: flex;
+}
+.i-KGNaLie0w- {
   color: #fff;
-  background-color: purple;
 }
 /*$vite$:1*/

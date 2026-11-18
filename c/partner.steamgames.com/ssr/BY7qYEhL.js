@@ -2,11 +2,15 @@ var _ = _(_(), 1),
   _ = _(),
   _ = [`Section`, `Question`, `Answer`];
 function _(_) {
-  let [_, _] = (0, _.useState)(!!_.bShowAllInitially),
-    [_, _] = (0, _.useState)(null),
-    _ = _(),
+  let _ = _(),
     _ = _(_, _.edits),
     _ = _(_),
+    [_, _] = (0, _.useState)(!!_.bShowAllInitially),
+    [_, _] = (0, _.useState)(() =>
+      _.eLanguageInitially === void 0
+        ? null
+        : ([_.eLanguageInitially, 0].find((_) => _.includes(_)) ?? null),
+    ),
     _ = _ !== null && _.includes(_),
     _ = _ ? _.filter((_) => _.eLanguage === void 0 || _.eLanguage == _) : _,
     _ = _ ? _ : _.filter((_) => _.bPoliced);

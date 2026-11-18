@@ -40,67 +40,67 @@ import { t as ue } from "./chunk~92931c6310.js";
 import { t as de } from "./chunk~d382bdf2cf.js";
 import {
   $i as fe,
-  $o as pe,
-  Bh as y,
-  Eu as b,
-  Fh as x,
-  Fr as me,
-  Hh as he,
+  $o as y,
+  Am as pe,
+  Bh as me,
+  Fh as b,
+  Gm as he,
+  Hf as ge,
+  Hh as x,
+  Hs as _e,
   Ih as S,
-  Ji as ge,
-  Js as _e,
-  Km as ve,
-  Lh as C,
-  Nf as w,
-  Ph as T,
-  Qd as ye,
-  Qh as be,
-  Qm as xe,
-  Rh as E,
-  Uf as Se,
-  Uh as D,
-  Us as Ce,
-  Vh as O,
-  Yo as we,
-  Zi as Te,
-  Zm as Ee,
-  Zo as De,
-  Zs as Oe,
-  _ as ke,
-  bf as Ae,
-  bm as k,
-  cd as A,
-  cf as je,
-  ch as Me,
-  ds as Ne,
-  ea as Pe,
-  es as j,
-  hr as Fe,
-  if as M,
-  ig as Ie,
-  is as Le,
-  jm as Re,
-  ku as ze,
-  md as Be,
-  mm as Ve,
-  ms as He,
-  nd as Ue,
-  nh as We,
-  nm as Ge,
-  ns as Ke,
-  om as qe,
-  os as Je,
-  qi as N,
+  Jo as ve,
+  Ki as C,
+  Lh as w,
+  Mf as T,
+  Nh as E,
+  Ou as ye,
+  Ph as D,
+  Pr as be,
+  Qi as xe,
+  Qo as Se,
+  Rh as O,
+  Tu as k,
+  Vh as Ce,
+  Xi as we,
+  Xm as Te,
+  Xo as Ee,
+  Xs as De,
+  Zd as Oe,
+  Zh as ke,
+  Zm as Ae,
+  _ as je,
+  _f as Me,
+  am as Ne,
+  as as Pe,
+  bm as Fe,
+  bs as A,
+  ea as Ie,
+  er as Le,
+  ls as Re,
+  mr as ze,
+  oh as Be,
+  pd as Ve,
+  pm as He,
+  ps as Ue,
+  qi as We,
+  qs as Ge,
+  rf as j,
+  rg as Ke,
+  rs as qe,
+  sd as M,
+  sf as Je,
   sh as Ye,
-  ta as Xe,
-  tr as Ze,
-  us as Qe,
-  vf as $e,
-  xm as et,
-  xs as tt,
-  yd as nt,
-  ym as rt,
-  ys as it,
+  td as Xe,
+  th as Ze,
+  tm as Qe,
+  ts as $e,
+  us as et,
+  vd as tt,
+  vm as nt,
+  vs as rt,
+  yf as it,
+  ym as N,
   zh as P,
 } from "./main.js";
 var F = e(a(), 1),
@@ -108,10 +108,10 @@ var F = e(a(), 1),
   L = d(),
   R = e(t()),
   z = class e {
-    m_eCurLang = We(k.LANGUAGE);
-    m_rgHasData = be([], 32, !1);
+    m_eCurLang = Ze(N.LANGUAGE);
+    m_rgHasData = ke([], 32, !1);
     m_bHasLocalizationContext = !1;
-    m_callback = new he();
+    m_callback = new Ce();
     GetCallback() {
       return this.m_callback;
     }
@@ -147,13 +147,13 @@ var F = e(a(), 1),
       s(this);
     }
   };
-(w([l], z.prototype, `m_eCurLang`, void 0),
-  w([l], z.prototype, `m_rgHasData`, void 0),
-  w([l], z.prototype, `m_bHasLocalizationContext`, void 0),
-  w([D], z.prototype, `GetCurEditLanguage`, null),
-  w([D], z.prototype, `SetCurEditLanguage`, null),
-  w([u.bound], z.prototype, `SetHasLanguage`, null),
-  w([D], z.prototype, `BHasLanguageData`, null));
+(T([l], z.prototype, `m_eCurLang`, void 0),
+  T([l], z.prototype, `m_rgHasData`, void 0),
+  T([l], z.prototype, `m_bHasLocalizationContext`, void 0),
+  T([x], z.prototype, `GetCurEditLanguage`, null),
+  T([x], z.prototype, `SetCurEditLanguage`, null),
+  T([u.bound], z.prototype, `SetHasLanguage`, null),
+  T([x], z.prototype, `BHasLanguageData`, null));
 function at() {
   return f(() => z.Get().GetCurEditLanguage());
 }
@@ -178,7 +178,7 @@ var ot = class {
   GetImageListCallbackForClanAccountIDInternal(e) {
     return (
       this.m_imageListChangeCallback.has(e) ||
-        this.m_imageListChangeCallback.set(e, new he()),
+        this.m_imageListChangeCallback.set(e, new Ce()),
       this.m_imageListChangeCallback.get(e)
     );
   }
@@ -211,13 +211,13 @@ var ot = class {
   async InternalLoadClanImages(e, t, r) {
     let i = e.GetAccountID();
     if (
-      (Ie(e && i != 0, `ClanSteamID missing:` + e),
+      (Ke(e && i != 0, `ClanSteamID missing:` + e),
       e && (!this.m_mapClanToImages.has(i) || t))
     ) {
       let t = {},
         a,
         o =
-          k.COMMUNITY_BASE_URL +
+          N.COMMUNITY_BASE_URL +
           `/gid/` +
           e.ConvertTo64BitString() +
           `/getimages/`;
@@ -285,10 +285,10 @@ var ot = class {
     return r ? r.find((e) => e.image_hash == t) : void 0;
   }
   async DeleteClanImageByID(e, t) {
-    let n = { sessionid: Ve(), imageid: t },
+    let n = { sessionid: He(), imageid: t },
       r = e.GetAccountID(),
       i = await R.default.get(
-        k.COMMUNITY_BASE_URL +
+        N.COMMUNITY_BASE_URL +
           `/gid/` +
           e.ConvertTo64BitString() +
           `/deleteimage/`,
@@ -308,20 +308,20 @@ var ot = class {
     return this.DeleteClanImageByID(e, t.imageid);
   }
 };
-(w([l], ot.prototype, `m_mapClanToImages`, void 0),
-  w([l], ot.prototype, `m_mapClanImageLoadState`, void 0));
+(T([l], ot.prototype, `m_mapClanToImages`, void 0),
+  T([l], ot.prototype, `m_mapClanImageLoadState`, void 0));
 var B = new ot();
 function st(e) {
   let [t, n] = (0, I.useState)(B.GetClanImagesByAccount(e));
-  return (Be(B.GetImageListCallbackForClanAccountID(e), n), t);
+  return (Ve(B.GetImageListCallbackForClanAccountID(e), n), t);
 }
 function ct(e) {
-  let t = Re.InitFromClanID(e, k.EUNIVERSE),
+  let t = pe.InitFromClanID(e, N.EUNIVERSE),
     n = ue(`useLoadClanImages`),
     [r, i] = (0, I.useState)(() => B.BHasLoadedClanImages(t));
   return (
     (0, I.useEffect)(() => {
-      let t = Re.InitFromClanID(e, k.EUNIVERSE);
+      let t = pe.InitFromClanID(e, N.EUNIVERSE);
       return (
         B.BHasLoadedClanImages(t) ||
           B.LoadClanImages(t, !1, n.token).then(() => i(!0)),
@@ -515,10 +515,10 @@ var lt = `_0ayR5P4snOQ-`,
       });
     }
   };
-(w([D], mt.prototype, `OnKeyDown`, null),
-  w([D], mt.prototype, `OnClickSuggestion`, null),
-  w([D], mt.prototype, `OnMouseOverSuggestion`, null),
-  w([D], mt.prototype, `BindSelectedElement`, null));
+(T([x], mt.prototype, `OnKeyDown`, null),
+  T([x], mt.prototype, `OnClickSuggestion`, null),
+  T([x], mt.prototype, `OnMouseOverSuggestion`, null),
+  T([x], mt.prototype, `BindSelectedElement`, null));
 var ht = class extends I.PureComponent {
   containerRef = I.createRef();
   OnMouseOver(e) {
@@ -529,7 +529,7 @@ var ht = class extends I.PureComponent {
   }
   render() {
     return (0, L.jsx)(`div`, {
-      className: b(dt, ft, this.props.bIsSelected ? pt : ``),
+      className: k(dt, ft, this.props.bIsSelected ? pt : ``),
       onMouseEnter: this.OnMouseOver,
       onClick: this.OnClick,
       ref: this.containerRef,
@@ -537,8 +537,8 @@ var ht = class extends I.PureComponent {
     });
   }
 };
-(w([D], ht.prototype, `OnMouseOver`, null),
-  w([D], ht.prototype, `OnClick`, null));
+(T([x], ht.prototype, `OnMouseOver`, null),
+  T([x], ht.prototype, `OnClick`, null));
 var gt = `ARyrUoFBJKQ-`,
   _t = class extends mt {
     performSearch(e) {
@@ -552,7 +552,7 @@ var gt = `ARyrUoFBJKQ-`,
     }
     renderMatch(e) {
       return (0, L.jsxs)(`div`, {
-        className: b(void 0, e.recent ? `Recent` : ``),
+        className: k(void 0, e.recent ? `Recent` : ``),
         children: [
           (0, L.jsxs)(`div`, {
             className: gt,
@@ -601,7 +601,7 @@ var gt = `ARyrUoFBJKQ-`,
       return (0, L.jsxs)(
         `div`,
         {
-          className: b(void 0),
+          className: k(void 0),
           children: [
             (0, L.jsx)(`div`, { className: vt, children: e.name }),
             `[`,
@@ -617,7 +617,7 @@ var gt = `ARyrUoFBJKQ-`,
     renderNoMatchMessage() {
       return (0, L.jsx)(
         `div`,
-        { className: b(ft, void 0), children: M(`#Bbcode_No_Match`) },
+        { className: k(ft, void 0), children: j(`#Bbcode_No_Match`) },
         `nomatches`,
       );
     }
@@ -821,16 +821,16 @@ var gt = `ARyrUoFBJKQ-`,
       });
     }
   };
-(w([D], V.prototype, `BindMentionDialog`, null),
-  w([D], V.prototype, `OnKeyDown`, null),
-  w([D], V.prototype, `OnFocus`, null),
-  w([D], V.prototype, `OnKeyPress`, null),
-  w([D], V.prototype, `OnClick`, null),
-  w([D], V.prototype, `OnEmoticonSuggestionSelected`, null),
-  w([D], V.prototype, `OnBBCodeSuggestionSelected`, null),
-  w([D], V.prototype, `FocusTextInput`, null),
-  w([D], V.prototype, `GetTextAreaRef`, null),
-  w([D], V.prototype, `GetTextAreaCurrent`, null));
+(T([x], V.prototype, `BindMentionDialog`, null),
+  T([x], V.prototype, `OnKeyDown`, null),
+  T([x], V.prototype, `OnFocus`, null),
+  T([x], V.prototype, `OnKeyPress`, null),
+  T([x], V.prototype, `OnClick`, null),
+  T([x], V.prototype, `OnEmoticonSuggestionSelected`, null),
+  T([x], V.prototype, `OnBBCodeSuggestionSelected`, null),
+  T([x], V.prototype, `FocusTextInput`, null),
+  T([x], V.prototype, `GetTextAreaRef`, null),
+  T([x], V.prototype, `GetTextAreaCurrent`, null));
 var bt = `AqA5yADf-5M-`,
   xt = `OfpXVyFy5Fo-`,
   St = `Z2hFr9c9Bx8-`,
@@ -851,7 +851,7 @@ var bt = `AqA5yADf-5M-`,
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.groupid || T(e.M()),
+        e.prototype.groupid || E(e.M()),
         F.Message.initialize(this, t, 0, -1, [3], null));
     }
     static sm_m;
@@ -861,15 +861,15 @@ var bt = `AqA5yADf-5M-`,
         (e.sm_m ||= {
           proto: e,
           fields: {
-            groupid: { n: 1, br: C.readUint32, bw: O.writeUint32 },
-            name: { n: 2, br: C.readString, bw: O.writeString },
+            groupid: { n: 1, br: S.readUint32, bw: me.writeUint32 },
+            name: { n: 2, br: S.readString, bw: me.writeString },
             accountid_members: {
               n: 3,
               r: !0,
               q: !0,
-              br: C.readUint32,
-              pbr: C.readPackedUint32,
-              bw: O.writeRepeatedUint32,
+              br: S.readUint32,
+              pbr: S.readPackedUint32,
+              bw: me.writeRepeatedUint32,
             },
           },
         }),
@@ -877,16 +877,16 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= E(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return y(e.M(), t, n);
+      return P(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new F.BinaryReader(t),
@@ -894,14 +894,14 @@ var bt = `AqA5yADf-5M-`,
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return x(e.MBF(), t, n);
+      return D(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
@@ -950,7 +950,7 @@ var bt = `AqA5yADf-5M-`,
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.categories || T(e.M()),
+        e.prototype.categories || E(e.M()),
         F.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -965,16 +965,16 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= E(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return y(e.M(), t, n);
+      return P(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new F.BinaryReader(t),
@@ -982,14 +982,14 @@ var bt = `AqA5yADf-5M-`,
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return x(e.MBF(), t, n);
+      return D(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
@@ -1003,7 +1003,7 @@ var bt = `AqA5yADf-5M-`,
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.accountid || T(e.M()),
+        e.prototype.accountid || E(e.M()),
         F.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1013,12 +1013,12 @@ var bt = `AqA5yADf-5M-`,
         (e.sm_m ||= {
           proto: e,
           fields: {
-            accountid: { n: 1, br: C.readUint32, bw: O.writeUint32 },
-            clanid: { n: 2, br: C.readUint32, bw: O.writeUint32 },
+            accountid: { n: 1, br: S.readUint32, bw: me.writeUint32 },
+            clanid: { n: 2, br: S.readUint32, bw: me.writeUint32 },
             chat_group_id: {
               n: 3,
-              br: C.readUint64String,
-              bw: O.writeUint64String,
+              br: S.readUint64String,
+              bw: me.writeUint64String,
             },
           },
         }),
@@ -1026,16 +1026,16 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= E(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return y(e.M(), t, n);
+      return P(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new F.BinaryReader(t),
@@ -1043,14 +1043,14 @@ var bt = `AqA5yADf-5M-`,
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return x(e.MBF(), t, n);
+      return D(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
@@ -1099,7 +1099,7 @@ var bt = `AqA5yADf-5M-`,
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.favorites || T(e.M()),
+        e.prototype.favorites || E(e.M()),
         F.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -1114,16 +1114,16 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= E(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return y(e.M(), t, n);
+      return P(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new F.BinaryReader(t),
@@ -1131,14 +1131,14 @@ var bt = `AqA5yADf-5M-`,
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return x(e.MBF(), t, n);
+      return D(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
@@ -1152,7 +1152,7 @@ var bt = `AqA5yADf-5M-`,
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.favorites || T(e.M()),
+        e.prototype.favorites || E(e.M()),
         F.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -1167,16 +1167,16 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= E(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return y(e.M(), t, n);
+      return P(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new F.BinaryReader(t),
@@ -1184,14 +1184,14 @@ var bt = `AqA5yADf-5M-`,
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return x(e.MBF(), t, n);
+      return D(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
@@ -1240,7 +1240,7 @@ var bt = `AqA5yADf-5M-`,
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.favorites || T(e.M()),
+        e.prototype.favorites || E(e.M()),
         F.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -1255,16 +1255,16 @@ var bt = `AqA5yADf-5M-`,
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= E(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return y(e.M(), t, n);
+      return P(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new F.BinaryReader(t),
@@ -1272,14 +1272,14 @@ var bt = `AqA5yADf-5M-`,
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return x(e.MBF(), t, n);
+      return D(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
@@ -1328,28 +1328,28 @@ var bt = `AqA5yADf-5M-`,
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.friendslist || T(e.M()),
+        e.prototype.friendslist || E(e.M()),
         F.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
     static M() {
       return (
-        (e.sm_m ||= { proto: e, fields: { friendslist: { n: 1, c: ke } } }),
+        (e.sm_m ||= { proto: e, fields: { friendslist: { n: 1, c: je } } }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= E(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return y(e.M(), t, n);
+      return P(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return b(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new F.BinaryReader(t),
@@ -1357,14 +1357,14 @@ var bt = `AqA5yADf-5M-`,
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return x(e.MBF(), t, n);
+      return D(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new F.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new F.BinaryWriter();
@@ -1377,14 +1377,14 @@ var bt = `AqA5yADf-5M-`,
   qt;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`FriendsList.GetCategories#1`, Me(Lt, t, n), Rt, {
+    return e.SendMsg(`FriendsList.GetCategories#1`, Ye(Lt, t, n), Rt, {
       bConstMethod: !0,
       ePrivilege: 1,
     });
   }
   e.GetCategories = t;
   function n(e, t, n) {
-    return e.SendMsg(`FriendsList.GetFriendsList#1`, Me(Gt, t, n), Kt, {
+    return e.SendMsg(`FriendsList.GetFriendsList#1`, Ye(Gt, t, n), Kt, {
       bConstMethod: !0,
       ePrivilege: 1,
       rgBrowserAPISites: [`community`, `store`],
@@ -1392,7 +1392,7 @@ var bt = `AqA5yADf-5M-`,
   }
   e.GetFriendsList = n;
   function r(e, t, n) {
-    return e.SendMsg(`FriendsList.GetFavorites#1`, Me(Bt, t, n), Vt, {
+    return e.SendMsg(`FriendsList.GetFavorites#1`, Ye(Bt, t, n), Vt, {
       bConstMethod: !0,
       ePrivilege: 1,
       rgBrowserAPISites: [`community`, `store`],
@@ -1400,7 +1400,7 @@ var bt = `AqA5yADf-5M-`,
   }
   e.GetFavorites = r;
   function i(e, t, n) {
-    return e.SendMsg(`FriendsList.SetFavorites#1`, Me(Ht, t, n), Ut, {
+    return e.SendMsg(`FriendsList.SetFavorites#1`, Ye(Ht, t, n), Ut, {
       ePrivilege: 1,
     });
   }
@@ -1414,22 +1414,22 @@ var Jt;
   };
 })((Jt ||= {}));
 function Yt() {
-  let e = Ge(),
-    t = qe();
+  let e = Qe(),
+    t = Ne();
   return o(Xt(e, t));
 }
 function Xt(e, t) {
   return {
     queryKey: [`GetFriendsList`, t],
     queryFn: async () => {
-      let t = Ye.Init(Gt),
+      let t = Be.Init(Gt),
         n = await qt.GetFriendsList(e, t),
         r = [];
       for (let e of n.Body().friendslist()?.friends() ?? []) {
         let t = e.ulfriendid();
         t &&
           (e.efriendrelationship() == 3 || e.efriendrelationship() == 6) &&
-          new Re(t).BIsIndividualAccount() &&
+          new pe(t).BIsIndividualAccount() &&
           r.push(t);
       }
       return r;
@@ -1846,22 +1846,22 @@ var Yn = `A5DZIArSiNc-`,
           800,
           500,
         );
-      return (0, L.jsx)(Ce, {
+      return (0, L.jsx)(_e, {
         onEscKeypress: this.props.closeModal,
         bDisableBackgroundDismiss: !0,
         children: (0, L.jsxs)(`div`, {
-          className: b(`DialogContent`, `_DialogCenterVertically`),
+          className: k(`DialogContent`, `_DialogCenterVertically`),
           children: [
-            (0, L.jsx)(He, {
-              children: M(
+            (0, L.jsx)(Ue, {
+              children: j(
                 `#ImageUpload_CropModalTitleDims`,
                 this.GetDestWidth(),
                 this.GetDestHeight(),
               ),
             }),
             (0, L.jsx)(`div`, {
-              className: b(`DialogBodyText`),
-              children: M(`#ImageUpload_CropModalDescription`),
+              className: k(`DialogBodyText`),
+              children: j(`#ImageUpload_CropModalDescription`),
             }),
             (0, L.jsxs)(`div`, {
               className: Yn,
@@ -1894,22 +1894,22 @@ var Yn = `A5DZIArSiNc-`,
               children: [
                 (0, L.jsx)(`div`, {
                   className: Zn,
-                  children: M(`#ImageUpload_CropPreview`),
+                  children: j(`#ImageUpload_CropPreview`),
                 }),
                 (0, L.jsx)(`div`, { style: this.GetPreviewWindowStyle() }),
               ],
             }),
-            (0, L.jsx)(Ne, {
+            (0, L.jsx)(et, {
               onClick: this.OnCrop,
-              children: M(`#ImageUpload_CropAndContinue`),
+              children: j(`#ImageUpload_CropAndContinue`),
             }),
           ],
         }),
       });
     }
   };
-(w([D], Qn.prototype, `OnCrop`, null),
-  w([D], Qn.prototype, `UpdateCrop`, null));
+(T([x], Qn.prototype, `OnCrop`, null),
+  T([x], Qn.prototype, `UpdateCrop`, null));
 async function $n(e, t, n, r, i, a, o, s, c) {
   return new Promise((l, u) => {
     let d = er(c);
@@ -1926,7 +1926,7 @@ async function $n(e, t, n, r, i, a, o, s, c) {
         c !== 3 && n.startsWith(`data:image/png`)
           ? u(`Unable to encode into the requested file format`)
           : t
-            ? ((e.file = Ue(t, e.filename)),
+            ? ((e.file = Xe(t, e.filename)),
               (e.width = o),
               (e.height = s),
               (e.dataUrl = n),
@@ -1959,18 +1959,18 @@ var tr = `_1ZQxfdsiPgM-`,
       c = (e) => {
         (n(e), o());
       };
-    return (0, L.jsx)(ze, {
-      children: (0, L.jsx)(Ce, {
+    return (0, L.jsx)(ye, {
+      children: (0, L.jsx)(_e, {
         onEscKeypress: o,
-        children: (0, L.jsxs)(Ke, {
+        children: (0, L.jsxs)($e, {
           children: [
-            (0, L.jsx)(Je, { children: M(`#ClanImageChooser_Title`) }),
-            (0, L.jsx)(De, {
-              children: (0, L.jsxs)(pe, {
+            (0, L.jsx)(Pe, { children: j(`#ClanImageChooser_Title`) }),
+            (0, L.jsx)(Ee, {
+              children: (0, L.jsxs)(Se, {
                 children: [
-                  (0, L.jsx)(`p`, { children: M(`#ClanImageChooser_Desc`) }),
-                  (0, L.jsx)(we, {
-                    placeholder: M(`#ClanImageChooser_Search`),
+                  (0, L.jsx)(`p`, { children: j(`#ClanImageChooser_Desc`) }),
+                  (0, L.jsx)(ve, {
+                    placeholder: j(`#ClanImageChooser_Search`),
                     value: r,
                     onChange: (e) => i(e.currentTarget.value),
                   }),
@@ -1979,7 +1979,7 @@ var tr = `_1ZQxfdsiPgM-`,
                     children: a
                       ? (0, L.jsx)(ae, {
                           size: `medium`,
-                          string: M(`#Loading`),
+                          string: j(`#Loading`),
                         })
                       : s.length > 0
                         ? s.map((e) =>
@@ -1995,10 +1995,10 @@ var tr = `_1ZQxfdsiPgM-`,
                           )
                         : r.trim().length == 0
                           ? (0, L.jsx)(`div`, {
-                              children: M(`#ClanImageChooser_None`),
+                              children: j(`#ClanImageChooser_None`),
                             })
                           : (0, L.jsx)(`div`, {
-                              children: M(
+                              children: j(
                                 `#EventCalendar_GameSearch_NoneFound`,
                               ),
                             }),
@@ -2006,10 +2006,10 @@ var tr = `_1ZQxfdsiPgM-`,
                 ],
               }),
             }),
-            (0, L.jsx)(Le, {
-              children: (0, L.jsx)(j, {
+            (0, L.jsx)(qe, {
+              children: (0, L.jsx)(y, {
                 onClick: o,
-                children: M(`#Button_Cancel`),
+                children: j(`#Button_Cancel`),
               }),
             }),
           ],
@@ -2116,12 +2116,12 @@ var K = class {
   }
   GetImageOptionLabel() {}
 };
-(w([l], K.prototype, `dataUrl`, void 0),
-  w([l], K.prototype, `width`, void 0),
-  w([l], K.prototype, `height`, void 0),
-  w([l], K.prototype, `status`, void 0),
-  w([l.ref], K.prototype, `message`, void 0),
-  w([l], K.prototype, `language`, void 0));
+(T([l], K.prototype, `dataUrl`, void 0),
+  T([l], K.prototype, `width`, void 0),
+  T([l], K.prototype, `height`, void 0),
+  T([l], K.prototype, `status`, void 0),
+  T([l.ref], K.prototype, `message`, void 0),
+  T([l], K.prototype, `language`, void 0));
 var dr = 960,
   fr = 311,
   pr = 480,
@@ -2166,21 +2166,21 @@ var dr = 960,
       return (
         a
           ? l
-            ? (d = M(`#ImageUpload_InvalidFileType`))
+            ? (d = j(`#ImageUpload_InvalidFileType`))
             : c
-              ? (d = M(`#ImageUpload_InvalidFormat`, ie(t) ?? ``))
+              ? (d = j(`#ImageUpload_InvalidFormat`, ie(t) ?? ``))
               : !s && !u
-                ? (d = M(`#ImageUpload_InvalidResolution`, H(n), H(r)))
+                ? (d = j(`#ImageUpload_InvalidResolution`, H(n), H(r)))
                 : o
                   ? !s && u
-                    ? ((d = M(`#ImageUpload_InvalidDimensions`, H(n), H(r))),
+                    ? ((d = j(`#ImageUpload_InvalidDimensions`, H(n), H(r))),
                       (f = !0))
                     : ((Array.isArray(n) && this.width != H(n)) ||
                         (Array.isArray(r) && this.height != H(r))) &&
                       ((p ??= []),
-                      p.push(M(`#ImageUpload_PreferredDimension`, H(n), H(r))))
-                  : (d = M(`#ImageUpload_TooSmall`, H(n), H(r)))
-          : (d = M(`#ImageUpload_InvalidFormatSelected`)),
+                      p.push(j(`#ImageUpload_PreferredDimension`, H(n), H(r))))
+                  : (d = j(`#ImageUpload_TooSmall`, H(n), H(r)))
+          : (d = j(`#ImageUpload_InvalidFormatSelected`)),
         {
           error: d,
           warnings: p,
@@ -2224,8 +2224,8 @@ var dr = 960,
         (this.m_currentImageOptionKey = e?.sKey));
     }
   };
-(w([l], hr.prototype, `m_currentImageOption`, void 0),
-  w([l], hr.prototype, `m_currentImageOptionKey`, void 0));
+(T([l], hr.prototype, `m_currentImageOption`, void 0),
+  T([l], hr.prototype, `m_currentImageOptionKey`, void 0));
 var gr = class extends hr {
     video;
     constructor(e, t, n, r, i, a, o) {
@@ -2289,7 +2289,7 @@ var gr = class extends hr {
       return yr(this.GetCurrentImageOption()?.artworkType);
     }
   };
-w([l], vr.prototype, `bCropped`, void 0);
+T([l], vr.prototype, `bCropped`, void 0);
 function yr(e) {
   if (e === `background`)
     return [
@@ -2370,14 +2370,14 @@ var Tr = class extends xr {
     );
   }
   CancelAllUploads() {
-    this.m_cancel?.cancel(M(`#ImageUpload_CancelRequest`));
+    this.m_cancel?.cancel(j(`#ImageUpload_CancelRequest`));
   }
 };
 function Er(e, t, n) {
   if (((e == null || e == null) && (e = t), !n || n.length === 0)) return e;
-  for (let t of n) if (ye.IsELanguageValidInRealm(e, t)) return e;
-  for (let e of n) if (ye.IsELanguageValidInRealm(t, e)) return t;
-  return n.includes(ve.k_ESteamRealmGlobal) ? 0 : 29;
+  for (let t of n) if (Oe.IsELanguageValidInRealm(e, t)) return e;
+  for (let e of n) if (Oe.IsELanguageValidInRealm(t, e)) return t;
+  return n.includes(he.k_ESteamRealmGlobal) ? 0 : 29;
 }
 function Dr(e, t = 0) {
   let n = e.lastIndexOf(`.`);
@@ -2386,13 +2386,13 @@ function Dr(e, t = 0) {
     i = 0;
   e.endsWith(`korean`) && ((r = 4), (i = 6));
   for (let t = 0; t < 32; ++t) {
-    let n = xe(t);
+    let n = Ae(t);
     if (n.length <= i) continue;
     if (e.endsWith(n) && e.length > n.length + 2) {
       let a = e[e.length - n.length - 1];
       /\p{Alphabetic}|\p{Number}/u.test(a) || ((r = t), (i = n.length));
     }
-    let a = Ee(t);
+    let a = Te(t);
     a.length <= i || (e.endsWith(a) && ((r = t), (i = a.length)));
   }
   return {
@@ -2416,8 +2416,8 @@ function Or(e, t, n) {
     bDeprecated: (n ?? 0) >= 1,
     fnGetLabelText() {
       return this.artworkType == `spotlight`
-        ? M(`#EventEditor_ArtworkType_store_spotlight`)
-        : M(`#EventEditor_ArtworkType_` + this.artworkType);
+        ? j(`#EventEditor_ArtworkType_store_spotlight`)
+        : j(`#EventEditor_ArtworkType_` + this.artworkType);
     },
   };
 }
@@ -2425,7 +2425,7 @@ function kr(e) {
   return e?.flatMap((e) => {
     let t = G[e];
     if (
-      (Ie(!!t, `Artwork Type not in Map ${e}`),
+      (Ke(!!t, `Artwork Type not in Map ${e}`),
       typeof t.width == `number` && typeof t.height == `number`)
     )
       return [Or(e, t)];
@@ -2462,7 +2462,7 @@ var q = class extends Tr {
     return this.AddImageForLanguage(e, n);
   }
   async AddImageForLanguage(e, t) {
-    if (!h(e.type) && !(et.is_support && te(e.type))) return !1;
+    if (!h(e.type) && !(Fe.is_support && te(e.type))) return !1;
     let n = await p(e, te(e.type));
     if (!n) return !1;
     let r = new vr(
@@ -2482,7 +2482,7 @@ var q = class extends Tr {
     if (!n) return !1;
     let r = g.GenerateEditableURLFromHashAndExt(this.m_clanSteamID, n),
       i = await (0, R.default)({ url: r, method: `GET`, responseType: `blob` }),
-      a = Ue(i.data, e.file_name);
+      a = Xe(i.data, e.file_name);
     return await this.AddImage(a, t);
   }
   DeleteUploadImageByIndex(e) {
@@ -2543,7 +2543,7 @@ var q = class extends Tr {
       o = e.GetResizeDimension(),
       s = new FormData();
     (s.append(`clanimage`, i, t),
-      s.append(`sessionid`, Ve()),
+      s.append(`sessionid`, He()),
       this.m_clanImagesV2 && s.append(`clan_images_v2`, `1`),
       a?.artworkType && s.append(`arttype`, a.artworkType),
       o &&
@@ -2562,7 +2562,7 @@ var q = class extends Tr {
       (s.append(`video_width`, `` + e.width),
       s.append(`video_height`, `` + e.height));
     let d =
-        k.COMMUNITY_BASE_URL +
+        N.COMMUNITY_BASE_URL +
         `/gid/` +
         this.m_clanSteamID.ConvertTo64BitString() +
         c,
@@ -2580,7 +2580,7 @@ var q = class extends Tr {
         (this.m_lastError = {
           file: i,
           status: e.response ? e.response.status : 500,
-          message: Se(e).strErrorMsg,
+          message: ge(e).strErrorMsg,
         }),
         (p = e.response));
     }
@@ -2589,14 +2589,14 @@ var q = class extends Tr {
     );
   }
 };
-(w([l], q.prototype, `m_filesToUpload`, void 0),
-  w([l], q.prototype, `m_filesCompleted`, void 0),
-  w([l], q.prototype, `m_lastError`, void 0),
-  w([D], q.prototype, `AddImage`, null),
-  w([D], q.prototype, `AddExistingClanImage`, null),
-  w([D], q.prototype, `DeleteUploadImageByIndex`, null),
-  w([D], q.prototype, `DeleteUploadImage`, null),
-  w([D], q.prototype, `ClearImages`, null));
+(T([l], q.prototype, `m_filesToUpload`, void 0),
+  T([l], q.prototype, `m_filesCompleted`, void 0),
+  T([l], q.prototype, `m_lastError`, void 0),
+  T([x], q.prototype, `AddImage`, null),
+  T([x], q.prototype, `AddExistingClanImage`, null),
+  T([x], q.prototype, `DeleteUploadImageByIndex`, null),
+  T([x], q.prototype, `DeleteUploadImage`, null),
+  T([x], q.prototype, `ClearImages`, null));
 var Ar = class extends q {
     constructor(e, t, n) {
       super(e, t, n, !1);
@@ -2608,7 +2608,7 @@ var Ar = class extends q {
     }
   };
 function Mr(e, t, n) {
-  let r = nt(t instanceof Array ? t : [t]),
+  let r = tt(t instanceof Array ? t : [t]),
     i = e.ConvertTo64BitString();
   return I.useMemo(() => new Ar(e, r, n), [i, r]);
 }
@@ -2645,19 +2645,19 @@ var Nr = r((e) => {
       m(n);
     }, [m, n]);
     let ee = (e) => {
-        let t = new Re(rt.CLANSTEAMID);
-        Pe(
+        let t = new pe(nt.CLANSTEAMID);
+        fe(
           (0, L.jsx)(or, {
             clanSteamID: t,
             fnImageSelectCallBack: (e) => m(e),
           }),
-          A(e) ?? window,
+          M(e) ?? window,
         );
       },
       h = (e) => {
-        let t = A(e) ?? window,
+        let t = M(e) ?? window,
           n = p.GetUploadImages()[0];
-        Pe(
+        fe(
           (0, L.jsx)(Qn, {
             ownerWin: t,
             uploadFile: n,
@@ -2673,7 +2673,7 @@ var Nr = r((e) => {
           let e = await p.UploadAllImages(o),
             n = Object.values(e);
           if (n && n.length > 0) {
-            Ie(
+            Ke(
               n.length == 1,
               `ClanImagePickForCertainSize expected size 1, got ` + n.length,
             );
@@ -2712,7 +2712,7 @@ var Nr = r((e) => {
     return (0, L.jsxs)(L.Fragment, {
       children: [
         l
-          ? (0, L.jsx)(ae, { size: `medium`, string: M(`#Loading`) })
+          ? (0, L.jsx)(ae, { size: `medium`, string: j(`#Loading`) })
           : s &&
             (0, L.jsx)(`div`, {
               className: `_9Z5REaLWRq4-`,
@@ -2723,25 +2723,25 @@ var Nr = r((e) => {
               },
             }),
         !!ne && (0, L.jsx)(`p`, { children: ne }),
-        re && (0, L.jsx)(j, { onClick: h, children: M(`#BBCode_ResizeImage`) }),
+        re && (0, L.jsx)(y, { onClick: h, children: j(`#BBCode_ResizeImage`) }),
         _ &&
           _.bCropped &&
           (0, L.jsxs)(L.Fragment, {
             children: [
               (0, L.jsx)(`div`, {
-                children: M(`#ClanImagePickAndResize_UploadStatus`, _.status),
+                children: j(`#ClanImagePickAndResize_UploadStatus`, _.status),
               }),
               d
-                ? (0, L.jsx)(ae, { string: M(`#Uploading`), size: `small` })
-                : (0, L.jsx)(j, {
+                ? (0, L.jsx)(ae, { string: j(`#Uploading`), size: `small` })
+                : (0, L.jsx)(y, {
                     onClick: te,
-                    children: M(`#ClanImagePickAndResize_UploadImage`),
+                    children: j(`#ClanImagePickAndResize_UploadImage`),
                   }),
             ],
           }),
-        (0, L.jsx)(j, {
+        (0, L.jsx)(y, {
           onClick: ee,
-          children: M(`#BBCode_ChooseImage`, r, i),
+          children: j(`#BBCode_ChooseImage`, r, i),
         }),
       ],
     });
@@ -2763,7 +2763,7 @@ var Nr = r((e) => {
     }
     componentDidMount() {
       this.AjaxGetFormattingHelp().catch((e) => {
-        this.setState(Se(e));
+        this.setState(ge(e));
       });
     }
     componentWillUnmount() {
@@ -2771,7 +2771,7 @@ var Nr = r((e) => {
     }
     static GetHelpURL(e, t) {
       return (
-        k.COMMUNITY_BASE_URL +
+        N.COMMUNITY_BASE_URL +
         `comment/` +
         e +
         `/formattinghelp` +
@@ -2780,7 +2780,7 @@ var Nr = r((e) => {
     }
     async AjaxGetFormattingHelp() {
       if (this.state.formattingHelp.__html == ``) {
-        let e = { sessionid: Ve() },
+        let e = { sessionid: He() },
           t;
         ((t = await R.default.get(Pr.GetHelpURL(this.props.formatType, !0), {
           params: e,
@@ -2801,8 +2801,8 @@ var Nr = r((e) => {
           })
         : this.state.formattingHelp.__html == ``
           ? (0, L.jsx)(ae, {})
-          : (0, L.jsx)(N, {
-              strTitle: M(`#EventEditor_FormattingHelp_GetHelpLink`),
+          : (0, L.jsx)(C, {
+              strTitle: j(`#EventEditor_FormattingHelp_GetHelpLink`),
               strDescription: ``,
               closeModal: this.props.closeModal,
               onOK: this.props.closeModal,
@@ -2815,7 +2815,7 @@ var Nr = r((e) => {
             });
     }
   };
-Fr = Pr = w([r], Fr);
+Fr = Pr = T([r], Fr);
 var Ir,
   J = class extends I.Component {
     descAutoTextAreaRef = I.createRef();
@@ -2862,7 +2862,7 @@ var Ir,
         children: [
           (0, L.jsx)(X, {
             pathToImages:
-              k.COMMUNITY_CDN_URL + `public/images/sharedfiles/guides/`,
+              N.COMMUNITY_CDN_URL + `public/images/sharedfiles/guides/`,
             fnTextareaRef: this.GetTextAreaRef,
             emoticonStore: this.props.emoticonStore,
             supportBBCodes: this.props.limitBBCode ? this.props.limitBBCode : _,
@@ -2872,7 +2872,7 @@ var Ir,
             clanSteamID: this.props.clanSteamID,
           }),
           (0, L.jsx)(`div`, {
-            className: b(
+            className: k(
               Qt,
               hn,
               this.state.bShowDragTarget ? Zt : ``,
@@ -2882,7 +2882,7 @@ var Ir,
               cols: 90,
               rows: this.props.nOverridesRows || 22,
               maxLength: 64e3,
-              className: b(
+              className: k(
                 en,
                 this.props.classNameForTextArea
                   ? this.props.classNameForTextArea
@@ -2904,11 +2904,11 @@ var Ir,
       });
     }
   };
-(w([D], J.prototype, `ClanImageDragListener`, null),
-  w([D], J.prototype, `onFocus`, null),
-  w([D], J.prototype, `OnTextAreaDropListener`, null),
-  w([D], J.prototype, `GetTextAreaRef`, null),
-  (J = w([r], J)));
+(T([x], J.prototype, `ClanImageDragListener`, null),
+  T([x], J.prototype, `onFocus`, null),
+  T([x], J.prototype, `OnTextAreaDropListener`, null),
+  T([x], J.prototype, `GetTextAreaRef`, null),
+  (J = T([r], J)));
 var Y = class e {
     static BIsFireFox() {
       return !!new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
@@ -3039,37 +3039,37 @@ var Y = class e {
     }
     OnAddLink(e) {
       let t = this.props.fnTextareaRef();
-      t && fe((0, L.jsx)(Lr, { textareaRef: t }), A(e) ?? window);
+      t && xe((0, L.jsx)(Lr, { textareaRef: t }), M(e) ?? window);
     }
     ShowHelpDialog(e) {
       this.props.showFormatHelp &&
-        fe(
+        xe(
           (0, L.jsx)(Fr, { formatType: this.props.showFormatHelp }),
-          A(e) ?? window,
+          M(e) ?? window,
         );
     }
     OnConvertHTMLToBBCodeDialog(e) {
       let t = this.props.fnTextareaRef();
       if (!t) return;
-      let n = A(e) ?? window;
-      fe((0, L.jsx)($, { ownerWindow: n, textareaRef: t }), n);
+      let n = M(e) ?? window;
+      xe((0, L.jsx)($, { ownerWindow: n, textareaRef: t }), n);
     }
     OnOpenYoutubeDialog(e) {
       let t = this.props.fnTextareaRef();
       if (!t) return;
-      let n = k.IMG_URL + `applications/community/`;
-      fe((0, L.jsx)(Q, { textareaRef: t, pathToImages: n }), A(e) ?? window);
+      let n = N.IMG_URL + `applications/community/`;
+      xe((0, L.jsx)(Q, { textareaRef: t, pathToImages: n }), M(e) ?? window);
     }
     OnOpenImageDialog(e) {
       let t = this.props.fnTextareaRef();
-      t && fe((0, L.jsx)(Rr, { textareaRef: t }), A(e) ?? window);
+      t && xe((0, L.jsx)(Rr, { textareaRef: t }), M(e) ?? window);
     }
     OnOpenSpeakerDialog(e) {
       let t = this.props.fnTextareaRef(),
         n = this.props.clanSteamID;
       t &&
         n &&
-        Pe((0, L.jsx)(zr, { clanSteamID: n, textareaRef: t }), A(e) ?? window);
+        fe((0, L.jsx)(zr, { clanSteamID: n, textareaRef: t }), M(e) ?? window);
     }
     OnEmoticonSelected(e, t = !1) {
       let n = `\u02D0${e}\u02D0`;
@@ -3091,29 +3091,29 @@ var Y = class e {
         e &&
           (i = t
             ? (0, L.jsx)(`span`, {
-                className: b(`ttip`, void 0),
-                children: (0, L.jsx)(tt, {
-                  toolTipContent: M(`#EventEditor_FormattingHelp_GetHelpLink`),
+                className: k(`ttip`, void 0),
+                children: (0, L.jsx)(A, {
+                  toolTipContent: j(`#EventEditor_FormattingHelp_GetHelpLink`),
                   children: (0, L.jsxs)(`a`, {
                     href: Fr.GetHelpURL(e, !1),
-                    target: k.IN_CLIENT ? void 0 : `_blank`,
+                    target: N.IN_CLIENT ? void 0 : `_blank`,
                     children: [
                       (0, L.jsx)(`img`, { src: r + `/action_help.png` }),
                       ` `,
-                      M(`#EventEditor_FormattingHelp_GetHelpLink`),
+                      j(`#EventEditor_FormattingHelp_GetHelpLink`),
                     ],
                   }),
                 }),
               })
             : (0, L.jsx)(`span`, {
                 onClick: this.ShowHelpDialog,
-                className: b(`ttip`, void 0),
-                children: (0, L.jsxs)(tt, {
-                  toolTipContent: M(`#EventEditor_FormattingHelp_GetHelpLink`),
+                className: k(`ttip`, void 0),
+                children: (0, L.jsxs)(A, {
+                  toolTipContent: j(`#EventEditor_FormattingHelp_GetHelpLink`),
                   children: [
                     (0, L.jsx)(`img`, { src: r + `/action_help.png` }),
                     ` `,
-                    M(`#EventEditor_FormattingHelp_GetHelpLink`),
+                    j(`#EventEditor_FormattingHelp_GetHelpLink`),
                   ],
                 }),
               })),
@@ -3123,78 +3123,78 @@ var Y = class e {
             this.BSupports(`b`) &&
               (0, L.jsx)(Z, {
                 onClick: this.onBold,
-                tooltip: M(`#Editor_Bold`),
+                tooltip: j(`#Editor_Bold`),
                 imgURL: this.props.pathToImages + `/format_bold.png`,
               }),
             this.BSupports(`u`) &&
               (0, L.jsx)(Z, {
                 onClick: this.onUnderline,
-                tooltip: M(`#Editor_Underline`),
+                tooltip: j(`#Editor_Underline`),
                 imgURL: this.props.pathToImages + `/format_underline.png`,
               }),
             this.BSupports(`i`) &&
               (0, L.jsx)(Z, {
                 onClick: this.onItalics,
-                tooltip: M(`#Editor_Italics`),
+                tooltip: j(`#Editor_Italics`),
                 imgURL: this.props.pathToImages + `/format_italic.png`,
               }),
             this.BSupports(`strike`) &&
               (0, L.jsx)(Z, {
                 onClick: this.onStrikeThrough,
-                tooltip: M(`#Editor_StrikeThrough`),
+                tooltip: j(`#Editor_StrikeThrough`),
                 imgURL: this.props.pathToImages + `/format_strike.png`,
               }),
             !(!this.BSupports(`url`) || t) &&
               (0, L.jsx)(Z, {
                 onClick: this.OnAddLink,
-                tooltip: M(`#Editor_Link`),
+                tooltip: j(`#Editor_Link`),
                 imgURL: this.props.pathToImages + `/format_link.png`,
               }),
             this.BSupports(`list`) &&
               (0, L.jsx)(Z, {
                 onClick: this.onUnorderedList,
-                tooltip: M(`#Editor_Unordered`),
+                tooltip: j(`#Editor_Unordered`),
                 imgURL: this.props.pathToImages + `/format_bullet.png`,
               }),
             this.BSupports(`olist`) &&
               (0, L.jsx)(Z, {
                 onClick: this.onOrderedList,
-                tooltip: M(`#Editor_Ordered`),
+                tooltip: j(`#Editor_Ordered`),
                 imgURL: this.props.pathToImages + `/format_numbered.png`,
               }),
             this.BSupports(`h1`) &&
               (0, L.jsx)(Z, {
                 onClick: this.onHeader,
-                tooltip: M(`#Editor_Header`),
+                tooltip: j(`#Editor_Header`),
                 imgURL: this.props.pathToImages + `/format_header1.png`,
               }),
             this.BSupports(`h2`) &&
               (0, L.jsx)(Z, {
                 onClick: this.onHeader2,
-                tooltip: M(`#Editor_Header2`),
+                tooltip: j(`#Editor_Header2`),
                 imgURL: this.props.pathToImages + `/format_header2.png`,
               }),
             this.BSupports(`h3`) &&
               (0, L.jsx)(Z, {
                 onClick: this.onHeader3,
-                tooltip: M(`#Editor_Header3`),
+                tooltip: j(`#Editor_Header3`),
                 imgURL: this.props.pathToImages + `/format_header3.png`,
               }),
             this.BSupports(`previewyoutube`) &&
               (0, L.jsx)(Z, {
                 onClick: this.OnOpenYoutubeDialog,
-                tooltip: M(`#EventEditor_InsertYouTube`),
+                tooltip: j(`#EventEditor_InsertYouTube`),
                 imgURL: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYyNjlFOEM1MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYyNjlFOEM2MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjI2OUU4QzMyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjI2OUU4QzQyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4IrEPeAAABJ0lEQVR42mL8//8/AzmABUScEOZJI1HfLBaoppmk2sh4Ql/r/69HD0jSxCanwMD07eVzhl9ADgz/ZmJikMjOY2CUlEIRR8YgPYzbBLhQQoeJl4/B7uY9hv9//jC8XLWc4UFfD8OPZ08xbGX6CSSQ8XdgKH/79o3h+69fDHwBwQy6ew8ySOYXMfxiZERRx/ILPTqA/K9fv8K5f4EG3Pn5i+EfSB2SWpaf6G6A2vgP6NSrWzYz3J8zk0Hk9SsGVka0ePzLxs7w9ydC+3+gpn29PQzv9uxiEHz7mkEY6ESQPb+QHMbMwcHAwiotw/Dj3h2E6L+/DIyrljKIgCMLGMoMmCmLQ0qagdnh66fn/xgYfP+B9BCJv79/lw5KcrPISKqzGMlN5AABBgBSmY83jVsiQAAAAABJRU5ErkJggg==`,
               }),
             (0, L.jsx)(`span`, {
               className: `ttip`,
               children:
                 this.props.emoticonStore &&
-                (0, L.jsx)(tt, {
-                  toolTipContent: M(`#Editor_Emoticon`),
+                (0, L.jsx)(A, {
+                  toolTipContent: j(`#Editor_Emoticon`),
                   children: (0, L.jsx)(ce, {
                     title: ` `,
-                    className: b(`_5LFNlKLTFJM-`),
+                    className: k(`_5LFNlKLTFJM-`),
                     disabled: !1,
                     OnEmoticonSelected: this.OnEmoticonSelected,
                     rtLastAckedNewEmoticons: Number.MAX_VALUE,
@@ -3210,25 +3210,25 @@ var Y = class e {
             !(!this.BSupports(`img`) || t) &&
               (0, L.jsx)(Z, {
                 onClick: this.OnOpenImageDialog,
-                tooltip: M(`#EventEditor_InsertImage`),
+                tooltip: j(`#EventEditor_InsertImage`),
                 imgURL: this.props.pathToImages + `/insert_img.png`,
               }),
             !!(
-              et.is_support &&
+              Fe.is_support &&
               this.props.clanSteamID &&
               this.BSupports(`speaker`)
             ) &&
               (0, L.jsx)(Z, {
                 onClick: this.OnOpenSpeakerDialog,
-                tooltip: M(`#EventEditor_AddSpeaker`),
+                tooltip: j(`#EventEditor_AddSpeaker`),
                 imgURL: this.props.pathToImages + `/insert_img.png`,
               }),
             !(!n || t) &&
               (0, L.jsx)(Z, {
                 onClick: this.OnConvertHTMLToBBCodeDialog,
                 className: void 0,
-                tooltip: M(`#EventEditor_ImportFromHTML_ttip`),
-                children: M(`#EventEditor_ImportHTML`),
+                tooltip: j(`#EventEditor_ImportFromHTML_ttip`),
+                children: j(`#EventEditor_ImportHTML`),
               }),
             i,
           ],
@@ -3236,28 +3236,28 @@ var Y = class e {
       );
     }
   };
-(w([D], X.prototype, `onBold`, null),
-  w([D], X.prototype, `onItalics`, null),
-  w([D], X.prototype, `onUnderline`, null),
-  w([D], X.prototype, `onStrikeThrough`, null),
-  w([D], X.prototype, `onHeader`, null),
-  w([D], X.prototype, `onHeader2`, null),
-  w([D], X.prototype, `onHeader3`, null),
-  w([D], X.prototype, `onUnorderedList`, null),
-  w([D], X.prototype, `onOrderedList`, null),
-  w([D], X.prototype, `OnAddLink`, null),
-  w([D], X.prototype, `ShowHelpDialog`, null),
-  w([D], X.prototype, `OnConvertHTMLToBBCodeDialog`, null),
-  w([D], X.prototype, `OnOpenYoutubeDialog`, null),
-  w([D], X.prototype, `OnOpenImageDialog`, null),
-  w([D], X.prototype, `OnOpenSpeakerDialog`, null),
-  w([D], X.prototype, `OnEmoticonSelected`, null),
-  (X = w([r], X)));
+(T([x], X.prototype, `onBold`, null),
+  T([x], X.prototype, `onItalics`, null),
+  T([x], X.prototype, `onUnderline`, null),
+  T([x], X.prototype, `onStrikeThrough`, null),
+  T([x], X.prototype, `onHeader`, null),
+  T([x], X.prototype, `onHeader2`, null),
+  T([x], X.prototype, `onHeader3`, null),
+  T([x], X.prototype, `onUnorderedList`, null),
+  T([x], X.prototype, `onOrderedList`, null),
+  T([x], X.prototype, `OnAddLink`, null),
+  T([x], X.prototype, `ShowHelpDialog`, null),
+  T([x], X.prototype, `OnConvertHTMLToBBCodeDialog`, null),
+  T([x], X.prototype, `OnOpenYoutubeDialog`, null),
+  T([x], X.prototype, `OnOpenImageDialog`, null),
+  T([x], X.prototype, `OnOpenSpeakerDialog`, null),
+  T([x], X.prototype, `OnEmoticonSelected`, null),
+  (X = T([r], X)));
 function Z(e) {
   return (0, L.jsx)(`span`, {
     onClick: e.onClick,
     className: e.className,
-    children: (0, L.jsxs)(tt, {
+    children: (0, L.jsxs)(A, {
       toolTipContent: e.tooltip,
       className: `ttip`,
       children: [
@@ -3271,7 +3271,7 @@ var Q = class extends I.Component {
   state = { youtubeInput: ``, alignment: v.left };
   OnYoutubeInsertLink() {
     let e = this.state.youtubeInput && oe(this.state.youtubeInput);
-    if (!e) alert(M(`#EventEditor_InsertYouTube_NoURL`));
+    if (!e) alert(j(`#EventEditor_InsertYouTube_NoURL`));
     else {
       if (this.state.alignment == v.summary) {
         let t =
@@ -3305,13 +3305,13 @@ var Q = class extends I.Component {
   }
   OnOuterDivClickPassDown(e) {}
   render() {
-    return (0, L.jsx)(N, {
-      strTitle: M(`#EventEditor_InsertYouTube`),
+    return (0, L.jsx)(C, {
+      strTitle: j(`#EventEditor_InsertYouTube`),
       strDescription: ``,
       closeModal: this.props.closeModal,
       onCancel: this.props.closeModal,
       onOK: this.OnYoutubeInsertLink,
-      strOKButtonText: M(`#EventEditor_InsertYouTube`),
+      strOKButtonText: j(`#EventEditor_InsertYouTube`),
       className: hn,
       children: (0, L.jsxs)(`div`, {
         className: on,
@@ -3322,7 +3322,7 @@ var Q = class extends I.Component {
               children: [
                 (0, L.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: M(`#EventEditor_InsertYouTube_URL`),
+                  children: j(`#EventEditor_InsertYouTube_URL`),
                 }),
                 (0, L.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
@@ -3334,7 +3334,7 @@ var Q = class extends I.Component {
                     type: `text`,
                     value: this.state.youtubeInput,
                     onChange: this.OnUrlChange,
-                    placeholder: M(`#EventEditor_InsertYouTube_Placholder`),
+                    placeholder: j(`#EventEditor_InsertYouTube_Placholder`),
                   }),
                 }),
               ],
@@ -3345,7 +3345,7 @@ var Q = class extends I.Component {
             children: [
               (0, L.jsx)(`div`, {
                 className: `DialogLabel`,
-                children: M(`#EventEditor_InsertYouTube_Position`),
+                children: j(`#EventEditor_InsertYouTube_Position`),
               }),
               (0, L.jsxs)(`div`, {
                 className: sn,
@@ -3362,7 +3362,7 @@ var Q = class extends I.Component {
                   (0, L.jsx)(`label`, {
                     htmlFor: v.left,
                     children: (0, L.jsx)(`span`, {
-                      children: M(`#EventEditor_InsertYouTube_Left`),
+                      children: j(`#EventEditor_InsertYouTube_Left`),
                     }),
                   }),
                 ],
@@ -3382,7 +3382,7 @@ var Q = class extends I.Component {
                   (0, L.jsx)(`label`, {
                     htmlFor: v.right,
                     children: (0, L.jsx)(`span`, {
-                      children: M(`#EventEditor_InsertYouTube_Right`),
+                      children: j(`#EventEditor_InsertYouTube_Right`),
                     }),
                   }),
                 ],
@@ -3402,7 +3402,7 @@ var Q = class extends I.Component {
                   (0, L.jsx)(`label`, {
                     htmlFor: v.full,
                     children: (0, L.jsx)(`span`, {
-                      children: M(`#EventEditor_InsertYouTube_Full`),
+                      children: j(`#EventEditor_InsertYouTube_Full`),
                     }),
                   }),
                 ],
@@ -3422,7 +3422,7 @@ var Q = class extends I.Component {
                   (0, L.jsx)(`label`, {
                     htmlFor: v.summary,
                     children: (0, L.jsx)(`span`, {
-                      children: M(`#EventEditor_InsertYouTube_Summary`),
+                      children: j(`#EventEditor_InsertYouTube_Summary`),
                     }),
                   }),
                 ],
@@ -3434,14 +3434,14 @@ var Q = class extends I.Component {
     });
   }
 };
-(w([D], Q.prototype, `OnYoutubeInsertLink`, null),
-  w([D], Q.prototype, `OnUrlChange`, null),
-  w([D], Q.prototype, `OnLeftSelected`, null),
-  w([D], Q.prototype, `OnRightSelected`, null),
-  w([D], Q.prototype, `OnFullSelected`, null),
-  w([D], Q.prototype, `OnSummarySelected`, null),
-  w([D], Q.prototype, `OnOuterDivClickPassDown`, null),
-  (Q = w([r], Q)));
+(T([x], Q.prototype, `OnYoutubeInsertLink`, null),
+  T([x], Q.prototype, `OnUrlChange`, null),
+  T([x], Q.prototype, `OnLeftSelected`, null),
+  T([x], Q.prototype, `OnRightSelected`, null),
+  T([x], Q.prototype, `OnFullSelected`, null),
+  T([x], Q.prototype, `OnSummarySelected`, null),
+  T([x], Q.prototype, `OnOuterDivClickPassDown`, null),
+  (Q = T([r], Q)));
 var Lr = class extends I.Component {
   static {
     Ir = this;
@@ -3473,13 +3473,13 @@ var Lr = class extends I.Component {
     Y.replaceSelection(this.props.textareaRef.current, n);
   }
   render() {
-    return (0, L.jsx)(N, {
-      strTitle: M(`#Editor_Link`),
+    return (0, L.jsx)(C, {
+      strTitle: j(`#Editor_Link`),
       strDescription: ``,
       closeModal: this.props.closeModal,
       onOK: this.onInsertLink,
       onCancel: this.props.closeModal,
-      strOKButtonText: M(`#EventEditor_InsertLinkURL`),
+      strOKButtonText: j(`#EventEditor_InsertLinkURL`),
       className: hn,
       children: (0, L.jsxs)(`div`, {
         className: $t,
@@ -3490,7 +3490,7 @@ var Lr = class extends I.Component {
               children: [
                 (0, L.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: M(`#EventEditor_LinkDescription`),
+                  children: j(`#EventEditor_LinkDescription`),
                 }),
                 (0, L.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
@@ -3510,7 +3510,7 @@ var Lr = class extends I.Component {
               children: [
                 (0, L.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: M(`#EventEditor_LinkURL`),
+                  children: j(`#EventEditor_LinkURL`),
                 }),
                 (0, L.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
@@ -3529,10 +3529,10 @@ var Lr = class extends I.Component {
     });
   }
 };
-(w([D], Lr.prototype, `onLinkTitleUpdate`, null),
-  w([D], Lr.prototype, `onLinkURLUpdate`, null),
-  w([D], Lr.prototype, `onInsertLink`, null),
-  (Lr = Ir = w([r], Lr)));
+(T([x], Lr.prototype, `onLinkTitleUpdate`, null),
+  T([x], Lr.prototype, `onLinkURLUpdate`, null),
+  T([x], Lr.prototype, `onInsertLink`, null),
+  (Lr = Ir = T([r], Lr)));
 var Rr = class extends I.Component {
   refFirstInput = I.createRef();
   state = { imgURL: ``, anchorURL: `` };
@@ -3558,25 +3558,25 @@ var Rr = class extends I.Component {
   }
   render() {
     let { imgURL: e, anchorURL: t } = this.state;
-    return (0, L.jsx)(N, {
-      strTitle: M(`#EventEditor_InsertImage_Title`),
+    return (0, L.jsx)(C, {
+      strTitle: j(`#EventEditor_InsertImage_Title`),
       strDescription: ``,
       closeModal: this.props.closeModal,
       onCancel: this.props.closeModal,
       onOK: this.OnImageInsert,
-      strOKButtonText: M(`#EventEditor_InsertImage_Title`),
+      strOKButtonText: j(`#EventEditor_InsertImage_Title`),
       className: hn,
       children: (0, L.jsxs)(`div`, {
         className: $t,
         children: [
-          (0, L.jsx)(`p`, { children: M(`#EventEditor_InsertImage_Desc`) }),
+          (0, L.jsx)(`p`, { children: j(`#EventEditor_InsertImage_Desc`) }),
           (0, L.jsx)(`div`, {
             className: `DialogInputLabelGroup`,
             children: (0, L.jsxs)(`label`, {
               children: [
                 (0, L.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: M(`#EventEditor_InsertImage_URL`),
+                  children: j(`#EventEditor_InsertImage_URL`),
                 }),
                 (0, L.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
@@ -3585,7 +3585,7 @@ var Rr = class extends I.Component {
                     type: `text`,
                     value: e,
                     onChange: this.OnImageURLChange,
-                    placeholder: M(`#EventEditor_InsertImage_Placeholder`),
+                    placeholder: j(`#EventEditor_InsertImage_Placeholder`),
                     ref: this.refFirstInput,
                   }),
                 }),
@@ -3598,7 +3598,7 @@ var Rr = class extends I.Component {
               children: [
                 (0, L.jsx)(`div`, {
                   className: `DialogLabel`,
-                  children: M(`#EventEditor_InsertImage_Anchor`),
+                  children: j(`#EventEditor_InsertImage_Anchor`),
                 }),
                 (0, L.jsx)(`div`, {
                   className: `DialogInput_Wrapper`,
@@ -3607,7 +3607,7 @@ var Rr = class extends I.Component {
                     type: `text`,
                     value: t,
                     onChange: this.OnAnchorURLChange,
-                    placeholder: M(`#EventEditor_InsertImage_Placeholder`),
+                    placeholder: j(`#EventEditor_InsertImage_Placeholder`),
                   }),
                 }),
               ],
@@ -3618,10 +3618,10 @@ var Rr = class extends I.Component {
     });
   }
 };
-(w([D], Rr.prototype, `OnImageInsert`, null),
-  w([D], Rr.prototype, `OnImageURLChange`, null),
-  w([D], Rr.prototype, `OnAnchorURLChange`, null),
-  (Rr = w([r], Rr)));
+(T([x], Rr.prototype, `OnImageInsert`, null),
+  T([x], Rr.prototype, `OnImageURLChange`, null),
+  T([x], Rr.prototype, `OnAnchorURLChange`, null),
+  (Rr = T([r], Rr)));
 var zr = (e) => {
   let [t, n] = I.useState(``),
     [r, i] = I.useState(``),
@@ -3646,9 +3646,9 @@ var zr = (e) => {
         Y.replaceSelection(e.textareaRef.current, n));
     },
     re = t.trim().length != 0 && s.trim().length != 0;
-  return (0, L.jsx)(N, {
-    strTitle: M(`#EventEditor_AddSpeaker`),
-    strDescription: M(`#EventEditor_AddSpeaker_Desc`),
+  return (0, L.jsx)(C, {
+    strTitle: j(`#EventEditor_AddSpeaker`),
+    strDescription: j(`#EventEditor_AddSpeaker_Desc`),
     closeModal: e.closeModal,
     onCancel: e.closeModal,
     bOKDisabled: !re,
@@ -3657,9 +3657,9 @@ var zr = (e) => {
     children: (0, L.jsxs)(`div`, {
       className: ln,
       children: [
-        (0, L.jsx)(we, {
+        (0, L.jsx)(ve, {
           type: `text`,
-          label: M(`#EventEditor_AddSpeaker_Name`),
+          label: j(`#EventEditor_AddSpeaker_Name`),
           value: t,
           onChange: (e) => n(e.target.value),
           focusOnMount: !0,
@@ -3667,35 +3667,35 @@ var zr = (e) => {
         (0, L.jsxs)(`div`, {
           className: un,
           children: [
-            (0, L.jsx)(we, {
+            (0, L.jsx)(ve, {
               type: `text`,
-              label: M(`#EventEditor_AddSpeaker_Title`),
+              label: j(`#EventEditor_AddSpeaker_Title`),
               value: r,
               onChange: (e) => i(e.target.value),
             }),
-            (0, L.jsx)(we, {
+            (0, L.jsx)(ve, {
               type: `text`,
-              label: M(`#EventEditor_AddSpeaker_Company`),
+              label: j(`#EventEditor_AddSpeaker_Company`),
               value: a,
               onChange: (e) => o(e.target.value),
             }),
           ],
         }),
-        (0, L.jsx)(tt, {
-          toolTipContent: M(`#EventEditor_AssociateSteamAccount_ttip`),
+        (0, L.jsx)(A, {
+          toolTipContent: j(`#EventEditor_AssociateSteamAccount_ttip`),
           children: (0, L.jsxs)(`div`, {
             className: `DialogLabel`,
-            children: [M(`#EventEditor_AssociateSteamAccount`), ` (?)`],
+            children: [j(`#EventEditor_AssociateSteamAccount`), ` (?)`],
           }),
         }),
         (0, L.jsxs)(`div`, {
           children: [
-            m && (0, L.jsx)(ae, { string: M(`#Loading`), size: `small` }),
+            m && (0, L.jsx)(ae, { string: j(`#Loading`), size: `small` }),
             d &&
               h &&
               (0, L.jsxs)(`a`, {
                 href:
-                  k.COMMUNITY_BASE_URL + `profiles/` + d.ConvertTo64BitString(),
+                  N.COMMUNITY_BASE_URL + `profiles/` + d.ConvertTo64BitString(),
                 target: `_blank`,
                 children: [
                   h
@@ -3710,18 +3710,18 @@ var zr = (e) => {
             (0, L.jsxs)(`div`, {
               className: dn,
               children: [
-                (0, L.jsx)(j, {
-                  onClick: () => f(new Re(et.steamid)),
-                  children: M(`#EventEditor_SteamAccount_addme`),
+                (0, L.jsx)(y, {
+                  onClick: () => f(new pe(Fe.steamid)),
+                  children: j(`#EventEditor_SteamAccount_addme`),
                 }),
-                (0, L.jsx)(j, {
+                (0, L.jsx)(y, {
                   onClick: (e) =>
-                    _e((0, L.jsx)(Br, { friends: p ?? [], setSteamID: f }), e),
-                  children: M(`#EventEditor_SteamAccount_addfriend`),
+                    Ge((0, L.jsx)(Br, { friends: p ?? [], setSteamID: f }), e),
+                  children: j(`#EventEditor_SteamAccount_addfriend`),
                 }),
-                (0, L.jsx)(j, {
+                (0, L.jsx)(y, {
                   onClick: () => f(void 0),
-                  children: M(`#EventEditor_SteamAccount_clear`),
+                  children: j(`#EventEditor_SteamAccount_clear`),
                 }),
               ],
             }),
@@ -3732,7 +3732,7 @@ var zr = (e) => {
           children: [
             (0, L.jsx)(`div`, {
               className: `DialogLabel`,
-              children: M(`#EventEditor_ChoosePhoto`),
+              children: j(`#EventEditor_ChoosePhoto`),
             }),
             (0, L.jsx)(Nr, {
               clanSteamID: e.clanSteamID,
@@ -3748,15 +3748,15 @@ var zr = (e) => {
           children: [
             (0, L.jsx)(`div`, {
               className: `DialogLabel`,
-              children: M(`#EventEditor_AddSpeaker_About`),
+              children: j(`#EventEditor_AddSpeaker_About`),
             }),
-            (0, L.jsx)(Xe, {
+            (0, L.jsx)(Ie, {
               value: s,
               onChange: (e) => c(e.target.value),
               rows: 8,
               cols: 80,
               nMinHeight: 40,
-              placeholder: M(`#EventEditor_AddSpeaker_About_Placeholder`),
+              placeholder: j(`#EventEditor_AddSpeaker_About_Placeholder`),
             }),
           ],
         }),
@@ -3765,7 +3765,7 @@ var zr = (e) => {
           children: [
             (0, L.jsx)(`div`, {
               className: `DialogLabel`,
-              children: M(`#Button_Preview`),
+              children: j(`#Button_Preview`),
             }),
             (0, L.jsx)(ee, {
               company: a,
@@ -3790,8 +3790,8 @@ function Br(e) {
 function Vr(e) {
   let { steamid: t, setSteamID: n } = e,
     { data: r } = de(t);
-  return (0, L.jsx)(Oe, {
-    onSelected: () => n(new Re(t)),
+  return (0, L.jsx)(De, {
+    onSelected: () => n(new pe(t)),
     children: (0, L.jsxs)(`div`, {
       style: { display: `flex`, alignItems: `center` },
       children: [
@@ -3827,7 +3827,7 @@ var $ = class extends I.Component {
       n.append(`preserve_newlines`, t ? `1` : `0`),
       (
         await R.default.post(
-          k.COMMUNITY_BASE_URL + `/actions/ConvertHTMLToBBCode`,
+          N.COMMUNITY_BASE_URL + `/actions/ConvertHTMLToBBCode`,
           n,
         )
       ).data.content
@@ -3847,10 +3847,10 @@ var $ = class extends I.Component {
             this.setState({ bConverting: !1, bFinishedConverting: !0 }));
         })
         .catch((e) => {
-          Pe(
-            (0, L.jsx)(ge, {
-              strTitle: M(`#EventEditor_ConvertHTML_Error`),
-              strDescription: M(
+          fe(
+            (0, L.jsx)(We, {
+              strTitle: j(`#EventEditor_ConvertHTML_Error`),
+              strDescription: j(
                 `#EventEditor_ConvertHTML_Error_Desc`,
                 e.response && e.response.data ? e.response.data.msg : e,
               ),
@@ -3858,7 +3858,7 @@ var $ = class extends I.Component {
               bDestructiveWarning: !0,
             }),
             this.props.ownerWindow,
-            { strTitle: M(`#EventEditor_ConvertHTML_Error`) },
+            { strTitle: j(`#EventEditor_ConvertHTML_Error`) },
           );
         }));
   }
@@ -3873,9 +3873,9 @@ var $ = class extends I.Component {
   render() {
     let { closeModal: e } = this.props;
     return this.state.bConverting
-      ? (0, L.jsx)(N, {
-          strTitle: M(`#EventEditor_ImportFromHTML`),
-          strDescription: M(`#EventEditor_ImportFromHTML_ConversionInProgress`),
+      ? (0, L.jsx)(C, {
+          strTitle: j(`#EventEditor_ImportFromHTML`),
+          strDescription: j(`#EventEditor_ImportFromHTML_ConversionInProgress`),
           closeModal: e,
           bAlertDialog: !0,
           onOK: e,
@@ -3883,33 +3883,33 @@ var $ = class extends I.Component {
           children: (0, L.jsx)(ae, {}),
         })
       : this.state.bFinishedConverting
-        ? (0, L.jsx)(N, {
-            strTitle: M(`#EventEditor_ImportFromHTML`),
-            strDescription: M(`#EventEditor_ImportFromHTML_ConvertFinished`),
+        ? (0, L.jsx)(C, {
+            strTitle: j(`#EventEditor_ImportFromHTML`),
+            strDescription: j(`#EventEditor_ImportFromHTML_ConvertFinished`),
             closeModal: e,
             bAlertDialog: !0,
             onOK: e,
             onCancel: e,
           })
-        : (0, L.jsx)(Te, {
-            title: M(`#EventEditor_ImportFromHTML`),
+        : (0, L.jsx)(we, {
+            title: j(`#EventEditor_ImportFromHTML`),
             onOK: this.OnConvertAndOverriteHTML,
             onCancel: e,
             className: hn,
-            children: (0, L.jsxs)(De, {
+            children: (0, L.jsxs)(Ee, {
               children: [
-                (0, L.jsx)(pe, {
+                (0, L.jsx)(Se, {
                   children: (0, L.jsxs)(`div`, {
-                    className: b(Ze, tn),
+                    className: k(Le, tn),
                     children: [
                       (0, L.jsx)(`div`, {
-                        className: Ze,
-                        children: je(
+                        className: Le,
+                        children: Je(
                           `#EventEditor_ImportFromHTML_ConvertDescription`,
                           (0, L.jsx)(`a`, {
-                            target: k.IN_CLIENT ? void 0 : `_blank`,
+                            target: N.IN_CLIENT ? void 0 : `_blank`,
                             href: `https://partner.steamgames.com/doc/marketing/event_tools/import`,
-                            children: M(
+                            children: j(
                               `#EventEditor_ImportFromHTML_ConvertLearn`,
                             ),
                           }),
@@ -3917,7 +3917,7 @@ var $ = class extends I.Component {
                       }),
                       (0, L.jsx)(`textarea`, {
                         value: this.state.strHTMLData,
-                        placeholder: M(
+                        placeholder: j(
                           `#EventEditor_ImportFromHTML_Instruction`,
                         ),
                         className: nn,
@@ -3938,9 +3938,9 @@ var $ = class extends I.Component {
                           (0, L.jsxs)(`label`, {
                             htmlFor: `ImportFromHTMLNewLines`,
                             children: [
-                              M(`#EventEditor_ImportFromHTML_PreserveNewlines`),
-                              (0, L.jsx)(it, {
-                                tooltip: M(
+                              j(`#EventEditor_ImportFromHTML_PreserveNewlines`),
+                              (0, L.jsx)(rt, {
+                                tooltip: j(
                                   `#EventEditor_ImportFromHTML_PreserveNewlines_Hint`,
                                 ),
                               }),
@@ -3949,19 +3949,19 @@ var $ = class extends I.Component {
                         ],
                       }),
                       (0, L.jsx)(`div`, {
-                        children: M(
+                        children: j(
                           `#EventEditor_ImportFromHTML_ConvertToBBCode`,
                         ),
                       }),
                     ],
                   }),
                 }),
-                (0, L.jsx)(Le, {
-                  children: (0, L.jsx)(Qe, {
+                (0, L.jsx)(qe, {
+                  children: (0, L.jsx)(Re, {
                     onCancel: () => e?.(),
-                    strOKText: M(`#Button_Overwrite`),
+                    strOKText: j(`#Button_Overwrite`),
                     onUpdate: this.OnConvertAndAppendHTML,
-                    strUpdateText: M(`#Button_Append`),
+                    strUpdateText: j(`#Button_Append`),
                   }),
                 }),
               ],
@@ -3969,11 +3969,11 @@ var $ = class extends I.Component {
           });
   }
 };
-(w([D], $.prototype, `OnConvertAndOverriteHTML`, null),
-  w([D], $.prototype, `OnConvertAndAppendHTML`, null),
-  w([D], $.prototype, `OnCheckboxChange`, null),
-  w([D], $.prototype, `OnTextAreaChange`, null),
-  ($ = w([r], $)));
+(T([x], $.prototype, `OnConvertAndOverriteHTML`, null),
+  T([x], $.prototype, `OnConvertAndAppendHTML`, null),
+  T([x], $.prototype, `OnCheckboxChange`, null),
+  T([x], $.prototype, `OnTextAreaChange`, null),
+  ($ = T([r], $)));
 var Hr = class extends I.Component {
   GenerateLanguageOptions() {
     let e = [],
@@ -3987,16 +3987,16 @@ var Hr = class extends I.Component {
       e.push(
         (0, L.jsx)(
           `option`,
-          { value: -1, children: M(`#language_selection_none`) },
+          { value: -1, children: j(`#language_selection_none`) },
           `langpicker_unset`,
         ),
       );
     let a = [],
-      o = this.props.realms || [ve.k_ESteamRealmGlobal];
-    for (let e of ye.GetLanguageListForRealms(o)) {
+      o = this.props.realms || [he.k_ESteamRealmGlobal];
+    for (let e of Oe.GetLanguageListForRealms(o)) {
       if (t && !t(e)) continue;
-      let n = Ee(e),
-        r = M(`#Language_` + n),
+      let n = Te(e),
+        r = j(`#Language_` + n),
         o = !!(i && i(e));
       a.push({ eLang: e, sLocName: r, bSupported: o });
     }
@@ -4014,9 +4014,9 @@ var Hr = class extends I.Component {
           (0, L.jsx)(
             `option`,
             {
-              className: me,
+              className: be,
               disabled: !0,
-              children: M(
+              children: j(
                 t.bSupported
                   ? `#LanguageGroup_Supported`
                   : `#LanguageGroup_Unsupported`,
@@ -4032,16 +4032,16 @@ var Hr = class extends I.Component {
       (a &&
         a !== 0 &&
         ((o += ` `),
-        (o += M(
+        (o += j(
           `#Language_Last_Update`,
-          Ae(a) + ` @ ` + $e(a, { bForce24HourClock: !1 }),
+          it(a) + ` @ ` + Me(a, { bForce24HourClock: !1 }),
         ))),
         e.push(
           (0, L.jsx)(
             `option`,
             {
               value: t.eLang,
-              className: b({ [Fe]: i }, (t.bSupported, void 0)),
+              className: k({ [ze]: i }, (t.bSupported, void 0)),
               children: o,
             },
             `langpicker` + t.eLang + (i ? `_hasdata` : ``),
@@ -4058,7 +4058,7 @@ var Hr = class extends I.Component {
   render() {
     let { selectedLang: e, bDisabled: t, strTooltip: n } = this.props,
       r = this.GenerateLanguageOptions();
-    return (0, L.jsx)(tt, {
+    return (0, L.jsx)(A, {
       toolTipContent: n,
       children: (0, L.jsx)(`select`, {
         value: e,
@@ -4069,7 +4069,7 @@ var Hr = class extends I.Component {
     });
   }
 };
-(w([D], Hr.prototype, `OnLanguageChange`, null), (Hr = w([r], Hr)));
+(T([x], Hr.prototype, `OnLanguageChange`, null), (Hr = T([r], Hr)));
 export {
   Et as A,
   z as B,

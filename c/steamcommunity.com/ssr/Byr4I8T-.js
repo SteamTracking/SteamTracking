@@ -54,7 +54,7 @@ function _() {
 }
 async function _() {
   if (window.SSR?.reactRoot) return;
-  _().Init(`store SSR`, `11251161`, new _().GetServiceTransport(), {
+  _().Init(`community SSR`, `11254488`, new _().GetServiceTransport(), {
     fnGetReportTags: _,
   });
   let [_, _] = await Promise.all([_(), (window.SSR?.loaderData ?? []).map(_)]);

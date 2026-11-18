@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
-import { Eu as r, Ym as i, cm as a, um as o } from "./main.js";
+import { Jm as r, Tu as i, lm as a, sm as o } from "./main.js";
 var s = e(t()),
   c = `_5ZSIN7wAn6E-`,
   l = `zuEsqPx3FlM-`,
@@ -38,16 +38,16 @@ var s = e(t()),
     import.meta.url,
   ).href;
 function L() {
-  let e = o();
-  return e ? i(e.LAUNCHER_TYPE) : !1;
+  let e = a();
+  return e ? r(e.LAUNCHER_TYPE) : !1;
 }
 var R = n(),
   z = s.memo(function (e) {
     let {
         className: t,
         size: n,
-        string: i,
-        position: o,
+        string: r,
+        position: a,
         static: u,
         msDelayAppear: f,
       } = e,
@@ -60,12 +60,12 @@ var R = n(),
         let e = setTimeout(() => h(!0), f);
         return () => clearTimeout(e);
       }, [f, m]),
-      i === void 0 && p.push(d),
+      r === void 0 && p.push(d),
       t && p.push(t),
       u && p.push(l),
       (0, R.jsxs)(`div`, {
-        className: r(
-          o == `center` && `CnlxA61G8kY-`,
+        className: i(
+          a == `center` && `CnlxA61G8kY-`,
           !!f && `VF2yNCE0Yms-`,
           m && `uALx1rZZEbE-`,
         ),
@@ -76,10 +76,10 @@ var R = n(),
               className: p.join(` `),
               children: (0, R.jsx)(`div`, {
                 className: `Laj-8wPgPBM-`,
-                children: (0, R.jsx)(`img`, { src: a(I) }),
+                children: (0, R.jsx)(`img`, { src: o(I) }),
               }),
             }),
-          !!i && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: i }),
+          !!r && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: r }),
         ],
       })
     );
@@ -88,7 +88,7 @@ s.memo(function (e) {
   let {
       className: t,
       size: n,
-      string: i,
+      string: r,
       position: a,
       static: o,
       msDelayAppear: u,
@@ -101,11 +101,11 @@ s.memo(function (e) {
       let e = setTimeout(() => m(!0), u);
       return () => clearTimeout(e);
     }, [u, p]),
-    i === void 0 && f.push(d),
+    r === void 0 && f.push(d),
     t && f.push(t),
     o && f.push(l),
     (0, R.jsxs)(`div`, {
-      className: r(
+      className: i(
         a == `center` && `CnlxA61G8kY-`,
         !!u && `VF2yNCE0Yms-`,
         p && `uALx1rZZEbE-`,
@@ -122,7 +122,7 @@ s.memo(function (e) {
               ],
             }),
           }),
-        !!i && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: i }),
+        !!r && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: r }),
       ],
     })
   );

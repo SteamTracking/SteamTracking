@@ -21,26 +21,26 @@ import { t as v } from "./chunk~eefd71512b.js";
 import { o as y } from "./chunk~af36c62e9f.js";
 import { l as b } from "./chunk~0111fcd096.js";
 import {
-  $c as x,
-  Gr as S,
-  Js as C,
-  Nf as w,
-  Uf as T,
-  Xs as E,
-  Yo as D,
-  Zs as O,
-  bm as k,
-  cd as ee,
-  ea as A,
-  es as j,
-  if as M,
-  jm as N,
-  ku as te,
-  mm as P,
-  qi as F,
-  r as ne,
-  sl as re,
+  $i as x,
+  $o as S,
+  Am as C,
+  Hf as w,
+  Jo as T,
+  Ki as E,
+  Mf as D,
+  Ou as O,
+  Qc as k,
+  Wr as A,
+  Xs as ee,
+  Ys as te,
+  ol as ne,
+  pm as j,
+  qs as M,
+  r as N,
+  rf as P,
+  sd as re,
   t as ie,
+  ym as F,
 } from "./main.js";
 import "./chunk~bf4b546728.js";
 var I = e(i()),
@@ -83,7 +83,7 @@ var I = e(i()),
             try {
               let n = await g.SearchCreatorHomeStore(t, i, e);
               if (e.token.reason || !c.current) return;
-              o.current = C(
+              o.current = M(
                 (0, U.jsx)(G, { list: n, fnSetCurator: r }),
                 c.current.element,
                 {
@@ -97,7 +97,7 @@ var I = e(i()),
               );
             } catch (t) {
               if (e.token.reason) return;
-              let n = T(t);
+              let n = w(t);
               console.log(
                 `SearchForCurator.SearchCreatorHomeStore error ` +
                   n.strErrorMsg,
@@ -108,8 +108,8 @@ var I = e(i()),
       },
       [r, i],
     );
-    return (0, U.jsx)(te, {
-      children: (0, U.jsx)(D, {
+    return (0, U.jsx)(O, {
+      children: (0, U.jsx)(T, {
         type: `text`,
         label: t,
         onChange: l,
@@ -121,18 +121,18 @@ var I = e(i()),
   },
   G = (e) => {
     let { list: t, fnSetCurator: n } = e;
-    return (0, U.jsx)(E, {
+    return (0, U.jsx)(te, {
       className: H,
       children: t.map((e) =>
         (0, U.jsx)(
-          O,
+          ee,
           {
             onSelected: () => n(e),
             children: (0, U.jsxs)(`div`, {
               style: { display: `flex`, alignItems: `center` },
               children: [
                 (0, U.jsx)(`div`, {
-                  className: ne,
+                  className: N,
                   children: (0, U.jsx)(`img`, {
                     src: e.GetAvatarURLFullSize(),
                     className: ie,
@@ -151,7 +151,7 @@ var I = e(i()),
     let t = se();
     if (!t)
       return (0, U.jsx)(v, {
-        string: M(`#Loading`),
+        string: P(`#Loading`),
         position: `center`,
         size: `medium`,
       });
@@ -200,17 +200,17 @@ var I = e(i()),
             n.length,
             `)`,
             (0, U.jsx)(`span`, { children: `\xA0` }),
-            (0, U.jsx)(j, {
+            (0, U.jsx)(S, {
               onClick: () => a(!i),
-              children: i ? (0, U.jsx)(x, {}) : (0, U.jsx)(re, {}),
+              children: i ? (0, U.jsx)(k, {}) : (0, U.jsx)(ne, {}),
             }),
           ],
         }),
         (0, U.jsx)(`hr`, {}),
         i
-          ? (0, U.jsx)(j, {
+          ? (0, U.jsx)(S, {
               onClick: () => a(!1),
-              children: M(`#Sale_ShowContents`),
+              children: P(`#Sale_ShowContents`),
             })
           : (0, U.jsx)(U.Fragment, {
               children: n.map((e) =>
@@ -233,7 +233,7 @@ var I = e(i()),
               children: [
                 (0, U.jsx)(`div`, {
                   children: (0, U.jsx)(`a`, {
-                    href: k.STORE_BASE_URL + `sale/` + t.vanity,
+                    href: F.STORE_BASE_URL + `sale/` + t.vanity,
                     children: (0, U.jsx)(`b`, {
                       children: `${t.display_name} - (${t.vanity})`,
                     }),
@@ -250,11 +250,11 @@ var I = e(i()),
                   (0, U.jsx)(`div`, {
                     children: (0, U.jsx)(`a`, {
                       href:
-                        k.COMMUNITY_BASE_URL +
+                        F.COMMUNITY_BASE_URL +
                         `gid/` +
-                        N.InitFromClanID(
+                        C.InitFromClanID(
                           t.clan_account_id,
-                          k.EUNIVERSE,
+                          F.EUNIVERSE,
                         ).ConvertTo64BitString() +
                         `/partnerevents/edit/` +
                         t.gid_clan_event,
@@ -264,8 +264,8 @@ var I = e(i()),
               ],
             }),
             !!(!t.gid_clan_event || (t.hidden && !t.published)) &&
-              (0, U.jsx)(j, {
-                onClick: (e) => A((0, U.jsx)(ae, { record: t }), ee(e)),
+              (0, U.jsx)(S, {
+                onClick: (e) => x((0, U.jsx)(ae, { record: t }), re(e)),
                 children: `Migrate Sale Page`,
               }),
           ],
@@ -282,7 +282,7 @@ var I = e(i()),
       [l, u] = (0, I.useState)(!1),
       [d, f] = (0, I.useState)(t.gid_clan_event),
       [p, m] = (0, I.useState)(null);
-    return (0, U.jsxs)(F, {
+    return (0, U.jsxs)(E, {
       strTitle: `Migrate Sale page`,
       strDescription: `Will migrate the sale page ${t.vanity} to the below clan `,
       bOKDisabled: !r || a,
@@ -328,7 +328,7 @@ var I = e(i()),
             children: [
               (0, U.jsx)(`div`, {
                 children: (0, U.jsx)(`a`, {
-                  href: k.STORE_BASE_URL + `sale/` + t.vanity,
+                  href: F.STORE_BASE_URL + `sale/` + t.vanity,
                   target: `_blank`,
                   children: `Sale Page`,
                 }),
@@ -336,9 +336,9 @@ var I = e(i()),
               (0, U.jsx)(`div`, {
                 children: (0, U.jsx)(`a`, {
                   href:
-                    k.COMMUNITY_BASE_URL +
+                    F.COMMUNITY_BASE_URL +
                     `gid/` +
-                    N.InitFromClanID(r, k.EUNIVERSE).ConvertTo64BitString() +
+                    C.InitFromClanID(r, F.EUNIVERSE).ConvertTo64BitString() +
                     `/partnerevents/edit/` +
                     d,
                   target: `_blank`,
@@ -352,7 +352,7 @@ var I = e(i()),
   },
   oe = (e) => {
     let { creatorHome: t } = e,
-      n = N.InitFromClanID(t.GetClanAccountID(), k.EUNIVERSE),
+      n = C.InitFromClanID(t.GetClanAccountID(), F.EUNIVERSE),
       r = t.GetClanAccountID();
     return t
       ? (0, U.jsxs)(`div`, {
@@ -419,9 +419,9 @@ var I = e(i()),
           void 0,
         ];
       try {
-        let a = k.COMMUNITY_BASE_URL + `migrate/ajaxcreateupdatesalepage`,
+        let a = F.COMMUNITY_BASE_URL + `migrate/ajaxcreateupdatesalepage`,
           o = new URLSearchParams();
-        (o.append(`sessionid`, P()),
+        (o.append(`sessionid`, j()),
           o.append(`salePageID`, e),
           o.append(`clanAccountID`, `` + t),
           r && o.append(`gidClanEvent`, r));
@@ -439,7 +439,7 @@ var I = e(i()),
             [s.data.msg || `Success`, !0, s.data.gidClanEvent]
           );
         {
-          let e = T(s);
+          let e = w(s);
           return (
             console.error(
               `CMigrateSaleStore.LoadSalePageMigrationInfo: failed with ` +
@@ -450,7 +450,7 @@ var I = e(i()),
           );
         }
       } catch (e) {
-        let t = T(e);
+        let t = w(e);
         console.error(
           `CMigrateSaleStore.MigrateOrUpdateSalePage: caught error with ` +
             t.strErrorMsg,
@@ -467,8 +467,8 @@ var I = e(i()),
     }
     async InternalLoadSalePageMigrationInfo() {
       try {
-        let e = k.COMMUNITY_BASE_URL + `migrate/ajaxgetsalepagestomigrate`,
-          t = { sessionid: P() },
+        let e = F.COMMUNITY_BASE_URL + `migrate/ajaxgetsalepagestomigrate`,
+          t = { sessionid: j() },
           r = await L.default.get(e, { params: t, withCredentials: !0 });
         if (
           ((this.m_bLoadComplete = !0),
@@ -490,7 +490,7 @@ var I = e(i()),
             this.m_listSaleState
           );
         {
-          let e = T(r);
+          let e = w(r);
           console.error(
             `CMigrateSaleStore.LoadSalePageMigrationInfo: failed with ` +
               e.strErrorMsg,
@@ -498,7 +498,7 @@ var I = e(i()),
           );
         }
       } catch (e) {
-        let t = T(e);
+        let t = w(e);
         console.error(
           `CMigrateSaleStore.LoadSalePageMigrationInfo: caught error with ` +
             t.strErrorMsg,
@@ -515,8 +515,8 @@ var I = e(i()),
       a(this);
     }
   };
-(w([o], Y.prototype, `m_mapSaleIDToInfo`, void 0),
-  w([o], Y.prototype, `m_listSaleState`, void 0));
+(D([o], Y.prototype, `m_mapSaleIDToInfo`, void 0),
+  D([o], Y.prototype, `m_listSaleState`, void 0));
 function se() {
   let [e, t] = I.useState(!Y.Get().BHasLoadCompleted());
   return (
@@ -569,7 +569,7 @@ var X = class e {
     ) {
       let t = Math.min(a, 100),
         o = { offset: e, nBatchSize: t, start_appid: r },
-        s = k.COMMUNITY_BASE_URL + `migrate/ajaxgetallapps`,
+        s = F.COMMUNITY_BASE_URL + `migrate/ajaxgetallapps`,
         c = null;
       try {
         let r = await L.default.get(s, {
@@ -588,9 +588,9 @@ var X = class e {
             (a -= t));
           continue;
         }
-        c = T(r?.data);
+        c = w(r?.data);
       } catch (e) {
-        c = T(e);
+        c = w(e);
       }
       throw Error(
         `ajax request failed with error ` +
@@ -611,7 +611,7 @@ var X = class e {
   async FetchClans(e, t, n) {
     this.m_nHighestClanOffsetRequested = e + t;
     let r = { offset: e, count: t },
-      i = k.COMMUNITY_BASE_URL + `migrate/ajaxgetallclans`,
+      i = F.COMMUNITY_BASE_URL + `migrate/ajaxgetallclans`,
       a = null;
     try {
       let e = await L.default.get(i, {
@@ -625,15 +625,15 @@ var X = class e {
         );
         return;
       }
-      a = T(e?.data);
+      a = w(e?.data);
     } catch (e) {
-      a = T(e);
+      a = w(e);
     }
     console.error(`FetchClans: ajax request failed with error`, a.strErrorMsg);
   }
 };
-(w([o.shallow], X.prototype, `m_rgApps`, void 0),
-  w([o.shallow], X.prototype, `m_rgClanAccountIDs`, void 0));
+(D([o.shallow], X.prototype, `m_rgApps`, void 0),
+  D([o.shallow], X.prototype, `m_rgClanAccountIDs`, void 0));
 var ce = `vvKfa--ozEA-`,
   le = `oZ8bKUw8W-4-`,
   ue = `EZ-PZVqoIHM-`,
@@ -747,7 +747,7 @@ var ce = `vvKfa--ozEA-`,
     }, [t]);
     let u = _.GetOGGClanInfo(t),
       f = u ? u.group_name : e.app.name,
-      p = `${k.COMMUNITY_BASE_URL}games/${u ? u.vanity_url : t}/partnerevents/`,
+      p = `${F.COMMUNITY_BASE_URL}games/${u ? u.vanity_url : t}/partnerevents/`,
       m = i.length,
       h = n == m,
       g = i.filter((e) => e.BIsVisibleEvent()),
@@ -843,7 +843,7 @@ async function ve(e, t, n, r, i) {
           i(a.AnnouncementGID, !0));
       }
     } catch (e) {
-      let t = T(e);
+      let t = w(e);
       (console.error(`MigrateEvents: ` + t.strErrorMsg.slice(0, 512), t),
         i(a.AnnouncementGID, !1));
     }
@@ -861,7 +861,7 @@ function ye(e) {
           children: [
             (0, U.jsx)(l, { path: u.MigrateSaleEvents(), component: K }),
             (0, U.jsx)(l, { path: u.MigrateEvents(), component: ge }),
-            (0, U.jsx)(l, { component: S }),
+            (0, U.jsx)(l, { component: A }),
           ],
         })
   );

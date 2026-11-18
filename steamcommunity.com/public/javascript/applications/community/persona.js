@@ -4,7 +4,7 @@
 import { L as e, R as t, k as n } from "./chunk~01cfc309bf.js";
 import { n as r, r as i } from "./chunk~0278ae6236.js";
 import { t as a } from "./chunk~c55d6473b2.js";
-import { Nf as o, Sf as s, bm as c, if as l } from "./main.js";
+import { Mf as o, rf as s, xf as c, ym as l } from "./main.js";
 function u(e) {
   let t = `offline`;
   return (
@@ -155,7 +155,7 @@ var d = class {
         return e.Localize(t, this.m_mapRichPresence);
       }
     } else if (this.HasStateFlag(8))
-      return l(`#PersonaStateRemotePlayTogether`);
+      return s(`#PersonaStateRemotePlayTogether`);
     return ``;
   }
   GetCurrentGameStatus() {
@@ -173,13 +173,13 @@ var d = class {
     return ((t *= n > 86400 ? e : n > 2 * e ? 60 : 15), t);
   }
   GetOfflineStatusTime() {
-    if (this.last_seen_online == 0) return l(`#PersonaStateOffline`);
+    if (this.last_seen_online == 0) return s(`#PersonaStateOffline`);
     let e = this.GetOfflineStatusUpdateRate();
-    (!c.IN_MOBILE || e <= 60) && n(e);
+    (!l.IN_MOBILE || e <= 60) && n(e);
     let t = a.CMInterface.GetServerRTime32() - this.last_seen_online;
     return t < 60
-      ? l(`#PersonaStateLastSeen_JustNow`)
-      : l(`#PersonaStateLastSeen`, s(t));
+      ? s(`#PersonaStateLastSeen_JustNow`)
+      : s(`#PersonaStateLastSeen`, c(t));
   }
   GetLocalizedOnlineStatus() {
     switch (this.m_ePersonaState) {
@@ -187,17 +187,17 @@ var d = class {
       case 7:
         return this.GetOfflineStatusTime();
       case 1:
-        return l(`#PersonaStateOnline`);
+        return s(`#PersonaStateOnline`);
       case 2:
-        return l(`#PersonaStateBusy`);
+        return s(`#PersonaStateBusy`);
       case 3:
-        return l(`#PersonaStateAway`);
+        return s(`#PersonaStateAway`);
       case 4:
-        return l(`#PersonaStateSnooze`);
+        return s(`#PersonaStateSnooze`);
       case 5:
-        return l(`#PersonaStateLookingToTrade`);
+        return s(`#PersonaStateLookingToTrade`);
       case 6:
-        return l(`#PersonaStateLookingToPlay`);
+        return s(`#PersonaStateLookingToPlay`);
       default:
         return ``;
     }
@@ -260,8 +260,8 @@ var d = class {
   }
   GetCommunityProfileURL() {
     return this.m_strProfileURL
-      ? `${c.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-      : `${c.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+      ? `${l.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
+      : `${l.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
   }
 };
 (o([t], d.prototype, `m_bInitialized`, void 0),

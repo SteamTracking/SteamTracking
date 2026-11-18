@@ -6,16 +6,16 @@ import { A as t, Ft as n, ot as r, wt as i } from "./chunk~01cfc309bf.js";
 import { t as a } from "./chunk~af36c62e9f.js";
 import { i as o } from "./chunk~a7c5e71e12.js";
 import {
-  Bd as s,
-  Eu as c,
-  Ou as l,
-  Qc as u,
-  Tl as d,
-  Yo as f,
-  bm as p,
-  gm as m,
-  if as h,
-  zu as g,
+  Du as s,
+  Jo as c,
+  Ru as l,
+  Tu as u,
+  Zc as d,
+  hm as f,
+  rf as p,
+  wl as m,
+  ym as h,
+  zd as g,
 } from "./main.js";
 var _ = e(n()),
   v = `JdaHHph2WEE-`,
@@ -35,8 +35,8 @@ var _ = e(n()),
   M = `_66NCrBN2GQg-`,
   N = `_2Rvl-pkrrEM-`,
   P = `qPEUXE973Pg-`,
-  F = `WeNTqIr4ViU-`,
-  ee = `_8n-80ldseBI-`,
+  ee = `WeNTqIr4ViU-`,
+  F = `_8n-80ldseBI-`,
   I = `_1oWdNOpnzQ8-`,
   L = `rk3AyZUUqg8-`,
   R = `Zy5KmJxsPBE-`,
@@ -46,10 +46,10 @@ var _ = e(n()),
   H = e(t());
 function U() {
   let e = (0, _.useMemo)(
-      () => m(`personalapps`, `application_config`) || [],
+      () => f(`personalapps`, `application_config`) || [],
       [],
     ),
-    t = (0, _.useMemo)(() => m(`popularapps`, `application_config`) || [], []),
+    t = (0, _.useMemo)(() => f(`popularapps`, `application_config`) || [], []),
     n = [...e, ...t];
   return n.length
     ? {
@@ -59,7 +59,7 @@ function U() {
     : { isLoading: !1, data: { personalAppIds: e, popularAppIds: t } };
 }
 async function W(e) {
-  let t = `${p.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
+  let t = `${h.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
   return (await H.default.get(t)).data;
 }
 var G = r();
@@ -69,7 +69,7 @@ function K() {
     (0, _.useEffect)(() => {
       e.current && e.current.TakeFocus();
     }, []),
-    (0, G.jsxs)(l, {
+    (0, G.jsxs)(s, {
       navRef: e,
       className: v,
       children: [
@@ -80,18 +80,18 @@ function K() {
               children: [
                 (0, G.jsx)(`div`, {
                   className: b,
-                  children: h(`#Community_Home_Header_Title`),
+                  children: p(`#Community_Home_Header_Title`),
                 }),
                 (0, G.jsx)(`div`, {
                   className: x,
-                  children: h(`#Community_Home_Header_Subtitle`),
+                  children: p(`#Community_Home_Header_Subtitle`),
                 }),
               ],
             }),
-            (0, G.jsx)(g, {
+            (0, G.jsx)(l, {
               className: S,
-              href: `${p.COMMUNITY_BASE_URL}search/users/`,
-              children: h(`#Community_Home_Header_AddFriend_Button`),
+              href: `${h.COMMUNITY_BASE_URL}search/users/`,
+              children: p(`#Community_Home_Header_AddFriend_Button`),
             }),
           ],
         }),
@@ -111,33 +111,33 @@ function q() {
     : (0, G.jsxs)(`div`, {
         className: C,
         children: [
-          (0, G.jsxs)(l, {
+          (0, G.jsxs)(s, {
             className: w,
             children: [
               (0, G.jsx)(J, {
                 appShortcuts: o.data.personalAppIds,
-                sectionTitle: h(`#Community_Home_Header_GameHubs_ForYou`),
+                sectionTitle: p(`#Community_Home_Header_GameHubs_ForYou`),
                 withDivider: o.data.popularAppIds.length > 0,
               }),
               (0, G.jsx)(J, {
                 appShortcuts: o.data.popularAppIds,
-                sectionTitle: h(`#Community_Home_Header_GameHubs_Popular`),
+                sectionTitle: p(`#Community_Home_Header_GameHubs_Popular`),
               }),
             ],
           }),
-          (0, G.jsxs)(l, {
+          (0, G.jsxs)(s, {
             onFocus: () => a(!0),
             onBlur: (e) => {
               e.currentTarget.contains(e.relatedTarget) || a(!1);
             },
             className: T,
             children: [
-              (0, G.jsxs)(l, {
+              (0, G.jsxs)(s, {
                 className: E,
                 children: [
                   (0, G.jsx)(`div`, {
                     className: D,
-                    children: (0, G.jsx)(f, {
+                    children: (0, G.jsx)(c, {
                       onChange: async (e) => {
                         t(e.target.value);
                         let n = await W(e.target.value);
@@ -145,25 +145,25 @@ function q() {
                       },
                       value: e,
                       className: O,
-                      placeholder: h(
+                      placeholder: p(
                         `#Community_Home_Header_FindGame_Placeholder`,
                       ),
                     }),
                   }),
                   (0, G.jsx)(`div`, {
                     className: k,
-                    children: (0, G.jsx)(u, {}),
+                    children: (0, G.jsx)(d, {}),
                   }),
                 ],
               }),
               i &&
-                (0, G.jsx)(l, {
+                (0, G.jsx)(s, {
                   className: `OR4eoZumqTI-`,
                   children: n.map((e) =>
                     (0, G.jsx)(
-                      g,
+                      l,
                       {
-                        href: `${p.COMMUNITY_BASE_URL}app/${e.appid}`,
+                        href: `${h.COMMUNITY_BASE_URL}app/${e.appid}`,
                         className: `-F05C2uuY7c-`,
                         children: e.name,
                       },
@@ -186,18 +186,18 @@ function J(e) {
           (0, G.jsx)(`div`, { className: j, children: n }),
           (0, G.jsx)(`div`, {
             "flow-children": `row`,
-            className: c(M, r ? F : null),
+            className: u(M, r ? ee : null),
             children: t.map((e, t) => (0, G.jsx)(Y, { appId: e }, t)),
           }),
         ],
       });
 }
 function Y(e) {
-  let t = s.Get().GetApp(e.appId);
+  let t = g.Get().GetApp(e.appId);
   return t
-    ? (0, G.jsx)(g, {
+    ? (0, G.jsx)(l, {
         className: N,
-        href: `${p.COMMUNITY_BASE_URL}app/${e.appId}`,
+        href: `${h.COMMUNITY_BASE_URL}app/${e.appId}`,
         children: (0, G.jsx)(`img`, {
           className: P,
           src: t.GetAssets().GetLibraryCapsuleURL(),
@@ -229,9 +229,9 @@ function $(e) {
         t > window.innerWidth && r.current.scrollBy(t - window.innerWidth, 0);
       }
     }, [r?.current]),
-    (0, G.jsx)(l, {
+    (0, G.jsx)(s, {
       "flow-children": `row`,
-      className: ee,
+      className: F,
       ref: r,
       children: [
         { label: `#Community_Home_Header_Filter_All`, id: `` },
@@ -250,14 +250,14 @@ function $(e) {
         let i = t ? t === e.id : r === 0,
           a = e.id ? `${X}=${e.id}` : ``,
           o = n ? `${Z}=${n}` : ``,
-          s = `${p.COMMUNITY_BASE_URL}${o || a ? `?` : ``}${o}${a ? `&` : ``}${a}`;
+          s = `${h.COMMUNITY_BASE_URL}${o || a ? `?` : ``}${o}${a ? `&` : ``}${a}`;
         return (0, G.jsx)(
-          g,
+          l,
           {
             id: e.id,
             href: s,
-            className: c(I, i ? L : null),
-            children: h(e.label),
+            className: u(I, i ? L : null),
+            children: p(e.label),
           },
           e.id,
         );
@@ -267,11 +267,11 @@ function $(e) {
 }
 function te(e) {
   let { activeTab: t, activeSort: n } = e;
-  return (0, G.jsxs)(l, {
+  return (0, G.jsxs)(s, {
     "flow-children": `row`,
     className: R,
     children: [
-      (0, G.jsx)(`div`, { className: V, children: (0, G.jsx)(d, {}) }),
+      (0, G.jsx)(`div`, { className: V, children: (0, G.jsx)(m, {}) }),
       [
         { label: `#Community_Home_Header_BrowseFilter_Popular`, id: `` },
         {
@@ -282,10 +282,10 @@ function te(e) {
         let i = n ? n === e.id : r === 0,
           a = t ? `${X}=${t}` : ``,
           o = e.id ? `${Z}=${e.id}` : ``,
-          s = `${p.COMMUNITY_BASE_URL}${o || a ? `?` : ``}${o}${a ? `&` : ``}${a}`;
+          s = `${h.COMMUNITY_BASE_URL}${o || a ? `?` : ``}${o}${a ? `&` : ``}${a}`;
         return (0, G.jsx)(
-          g,
-          { href: s, className: c(z, i ? B : null), children: h(e.label) },
+          l,
+          { href: s, className: u(z, i ? B : null), children: p(e.label) },
           e.id,
         );
       }),

@@ -12,46 +12,46 @@ import {
 } from "./chunk~01cfc309bf.js";
 import { n as c, t as l } from "./chunk~eefd71512b.js";
 import {
-  Ad as u,
+  Ah as u,
   Bh as d,
-  Et as f,
-  Fh as p,
-  Hu as m,
-  Ih as h,
-  Km as g,
-  Lh as _,
-  Nf as v,
-  Om as y,
-  Ou as b,
-  Ph as x,
-  Rh as S,
-  Sm as C,
-  Uh as w,
-  Vh as T,
-  Zu as ee,
-  ch as E,
-  cm as te,
-  dh as ne,
-  dm as re,
-  ig as D,
-  jh as ie,
-  ku as ae,
-  lm as O,
-  nh as oe,
-  qs as se,
-  sh as k,
-  um as ce,
-  wf as A,
-  wm as le,
+  Cf as f,
+  Cm as p,
+  Dm as m,
+  Du as h,
+  Fh as g,
+  Gm as _,
+  Hh as v,
+  Ih as y,
+  Ks as b,
+  Lh as x,
+  Mf as S,
+  Nh as C,
+  Ou as w,
+  Ph as T,
+  Rh as E,
+  Rt as ee,
+  Tt as te,
+  Vu as ne,
+  Xu as re,
+  cm as D,
+  kd as ie,
+  lm as ae,
+  oh as O,
+  rg as k,
+  sh as A,
+  sm as oe,
+  th as se,
+  uh as ce,
+  um as le,
+  xm as ue,
   zh as j,
-  zt as ue,
 } from "./main.js";
 var M = e(a(), 1),
   de = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.account_name || x(e.M()),
+        e.prototype.account_name || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -61,23 +61,23 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            account_name: { n: 1, br: _.readString, bw: T.writeString },
+            account_name: { n: 1, br: y.readString, bw: d.writeString },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -85,14 +85,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -106,7 +106,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.publickey_mod || x(e.M()),
+        e.prototype.publickey_mod || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -116,12 +116,12 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            publickey_mod: { n: 1, br: _.readString, bw: T.writeString },
-            publickey_exp: { n: 2, br: _.readString, bw: T.writeString },
+            publickey_mod: { n: 1, br: y.readString, bw: d.writeString },
+            publickey_exp: { n: 2, br: y.readString, bw: d.writeString },
             timestamp: {
               n: 3,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
           },
         }),
@@ -129,16 +129,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -146,14 +146,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -167,7 +167,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.device_friendly_name || x(e.M()),
+        e.prototype.device_friendly_name || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -177,29 +177,29 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            device_friendly_name: { n: 1, br: _.readString, bw: T.writeString },
-            platform_type: { n: 2, br: _.readEnum, bw: T.writeEnum },
-            os_type: { n: 3, br: _.readInt32, bw: T.writeInt32 },
-            gaming_device_type: { n: 4, br: _.readUint32, bw: T.writeUint32 },
-            client_count: { n: 5, br: _.readUint32, bw: T.writeUint32 },
-            machine_id: { n: 6, br: _.readBytes, bw: T.writeBytes },
-            app_type: { n: 7, br: _.readEnum, bw: T.writeEnum },
+            device_friendly_name: { n: 1, br: y.readString, bw: d.writeString },
+            platform_type: { n: 2, br: y.readEnum, bw: d.writeEnum },
+            os_type: { n: 3, br: y.readInt32, bw: d.writeInt32 },
+            gaming_device_type: { n: 4, br: y.readUint32, bw: d.writeUint32 },
+            client_count: { n: 5, br: y.readUint32, bw: d.writeUint32 },
+            machine_id: { n: 6, br: y.readBytes, bw: d.writeBytes },
+            app_type: { n: 7, br: y.readEnum, bw: d.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -207,14 +207,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -228,7 +228,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.confirmation_type || x(e.M()),
+        e.prototype.confirmation_type || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -238,24 +238,24 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            confirmation_type: { n: 1, br: _.readEnum, bw: T.writeEnum },
-            associated_message: { n: 2, br: _.readString, bw: T.writeString },
+            confirmation_type: { n: 1, br: y.readEnum, bw: d.writeEnum },
+            associated_message: { n: 2, br: y.readString, bw: d.writeString },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -263,14 +263,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -284,7 +284,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.device_friendly_name || x(e.M()),
+        e.prototype.device_friendly_name || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -294,14 +294,14 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            device_friendly_name: { n: 1, br: _.readString, bw: T.writeString },
-            platform_type: { n: 2, br: _.readEnum, bw: T.writeEnum },
+            device_friendly_name: { n: 1, br: y.readString, bw: d.writeString },
+            platform_type: { n: 2, br: y.readEnum, bw: d.writeEnum },
             device_details: { n: 3, c: pe },
             website_id: {
               n: 4,
               d: `Unknown`,
-              br: _.readString,
-              bw: T.writeString,
+              br: y.readString,
+              bw: d.writeString,
             },
           },
         }),
@@ -309,16 +309,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -326,14 +326,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -347,7 +347,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.client_id || x(e.M()),
+        e.prototype.client_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [5], null));
     }
     static sm_m;
@@ -359,30 +359,30 @@ var M = e(a(), 1),
           fields: {
             client_id: {
               n: 1,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
-            challenge_url: { n: 2, br: _.readString, bw: T.writeString },
-            request_id: { n: 3, br: _.readBytes, bw: T.writeBytes },
-            interval: { n: 4, br: _.readFloat, bw: T.writeFloat },
+            challenge_url: { n: 2, br: y.readString, bw: d.writeString },
+            request_id: { n: 3, br: y.readBytes, bw: d.writeBytes },
+            interval: { n: 4, br: y.readFloat, bw: d.writeFloat },
             allowed_confirmations: { n: 5, c: me, r: !0, q: !0 },
-            version: { n: 6, br: _.readInt32, bw: T.writeInt32 },
+            version: { n: 6, br: y.readInt32, bw: d.writeInt32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -390,14 +390,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -411,7 +411,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.device_friendly_name || x(e.M()),
+        e.prototype.device_friendly_name || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -421,43 +421,43 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            device_friendly_name: { n: 1, br: _.readString, bw: T.writeString },
-            account_name: { n: 2, br: _.readString, bw: T.writeString },
-            encrypted_password: { n: 3, br: _.readString, bw: T.writeString },
+            device_friendly_name: { n: 1, br: y.readString, bw: d.writeString },
+            account_name: { n: 2, br: y.readString, bw: d.writeString },
+            encrypted_password: { n: 3, br: y.readString, bw: d.writeString },
             encryption_timestamp: {
               n: 4,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
-            remember_login: { n: 5, br: _.readBool, bw: T.writeBool },
-            platform_type: { n: 6, br: _.readEnum, bw: T.writeEnum },
-            persistence: { n: 7, d: 1, br: _.readEnum, bw: T.writeEnum },
+            remember_login: { n: 5, br: y.readBool, bw: d.writeBool },
+            platform_type: { n: 6, br: y.readEnum, bw: d.writeEnum },
+            persistence: { n: 7, d: 1, br: y.readEnum, bw: d.writeEnum },
             website_id: {
               n: 8,
               d: `Unknown`,
-              br: _.readString,
-              bw: T.writeString,
+              br: y.readString,
+              bw: d.writeString,
             },
             device_details: { n: 9, c: pe },
-            guard_data: { n: 10, br: _.readString, bw: T.writeString },
-            language: { n: 11, br: _.readUint32, bw: T.writeUint32 },
-            qos_level: { n: 12, d: 2, br: _.readInt32, bw: T.writeInt32 },
+            guard_data: { n: 10, br: y.readString, bw: d.writeString },
+            language: { n: 11, br: y.readUint32, bw: d.writeUint32 },
+            qos_level: { n: 12, d: 2, br: y.readInt32, bw: d.writeInt32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -465,14 +465,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -486,7 +486,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.client_id || x(e.M()),
+        e.prototype.client_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [4], null));
     }
     static sm_m;
@@ -498,23 +498,23 @@ var M = e(a(), 1),
           fields: {
             client_id: {
               n: 1,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
-            request_id: { n: 2, br: _.readBytes, bw: T.writeBytes },
-            interval: { n: 3, br: _.readFloat, bw: T.writeFloat },
+            request_id: { n: 2, br: y.readBytes, bw: d.writeBytes },
+            interval: { n: 3, br: y.readFloat, bw: d.writeFloat },
             allowed_confirmations: { n: 4, c: me, r: !0, q: !0 },
-            steamid: { n: 5, br: _.readUint64String, bw: T.writeUint64String },
-            weak_token: { n: 6, br: _.readString, bw: T.writeString },
+            steamid: { n: 5, br: y.readUint64String, bw: d.writeUint64String },
+            weak_token: { n: 6, br: y.readString, bw: d.writeString },
             agreement_session_url: {
               n: 7,
-              br: _.readString,
-              bw: T.writeString,
+              br: y.readString,
+              bw: d.writeString,
             },
             extended_error_message: {
               n: 8,
-              br: _.readString,
-              bw: T.writeString,
+              br: y.readString,
+              bw: d.writeString,
             },
           },
         }),
@@ -522,16 +522,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -539,14 +539,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -560,7 +560,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.client_id || x(e.M()),
+        e.prototype.client_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -572,14 +572,14 @@ var M = e(a(), 1),
           fields: {
             client_id: {
               n: 1,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
-            request_id: { n: 2, br: _.readBytes, bw: T.writeBytes },
+            request_id: { n: 2, br: y.readBytes, bw: d.writeBytes },
             token_to_revoke: {
               n: 3,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
           },
         }),
@@ -587,16 +587,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -604,14 +604,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -625,7 +625,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.new_client_id || x(e.M()),
+        e.prototype.new_client_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -637,19 +637,19 @@ var M = e(a(), 1),
           fields: {
             new_client_id: {
               n: 1,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
-            new_challenge_url: { n: 2, br: _.readString, bw: T.writeString },
-            refresh_token: { n: 3, br: _.readString, bw: T.writeString },
-            access_token: { n: 4, br: _.readString, bw: T.writeString },
-            had_remote_interaction: { n: 5, br: _.readBool, bw: T.writeBool },
-            account_name: { n: 6, br: _.readString, bw: T.writeString },
-            new_guard_data: { n: 7, br: _.readString, bw: T.writeString },
+            new_challenge_url: { n: 2, br: y.readString, bw: d.writeString },
+            refresh_token: { n: 3, br: y.readString, bw: d.writeString },
+            access_token: { n: 4, br: y.readString, bw: d.writeString },
+            had_remote_interaction: { n: 5, br: y.readBool, bw: d.writeBool },
+            account_name: { n: 6, br: y.readString, bw: d.writeString },
+            new_guard_data: { n: 7, br: y.readString, bw: d.writeString },
             agreement_session_url: {
               n: 8,
-              br: _.readString,
-              bw: T.writeString,
+              br: y.readString,
+              bw: d.writeString,
             },
           },
         }),
@@ -657,16 +657,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -674,14 +674,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -695,7 +695,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.client_id || x(e.M()),
+        e.prototype.client_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -707,8 +707,8 @@ var M = e(a(), 1),
           fields: {
             client_id: {
               n: 1,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
           },
         }),
@@ -716,16 +716,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -733,14 +733,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -754,7 +754,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.ip || x(e.M()),
+        e.prototype.ip || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -764,40 +764,40 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            ip: { n: 1, br: _.readString, bw: T.writeString },
-            geoloc: { n: 2, br: _.readString, bw: T.writeString },
-            city: { n: 3, br: _.readString, bw: T.writeString },
-            state: { n: 4, br: _.readString, bw: T.writeString },
-            country: { n: 5, br: _.readString, bw: T.writeString },
-            platform_type: { n: 6, br: _.readEnum, bw: T.writeEnum },
-            device_friendly_name: { n: 7, br: _.readString, bw: T.writeString },
-            version: { n: 8, br: _.readInt32, bw: T.writeInt32 },
-            login_history: { n: 9, br: _.readEnum, bw: T.writeEnum },
+            ip: { n: 1, br: y.readString, bw: d.writeString },
+            geoloc: { n: 2, br: y.readString, bw: d.writeString },
+            city: { n: 3, br: y.readString, bw: d.writeString },
+            state: { n: 4, br: y.readString, bw: d.writeString },
+            country: { n: 5, br: y.readString, bw: d.writeString },
+            platform_type: { n: 6, br: y.readEnum, bw: d.writeEnum },
+            device_friendly_name: { n: 7, br: y.readString, bw: d.writeString },
+            version: { n: 8, br: y.readInt32, bw: d.writeInt32 },
+            login_history: { n: 9, br: y.readEnum, bw: d.writeEnum },
             requestor_location_mismatch: {
               n: 10,
-              br: _.readBool,
-              bw: T.writeBool,
+              br: y.readBool,
+              bw: d.writeBool,
             },
-            high_usage_login: { n: 11, br: _.readBool, bw: T.writeBool },
-            requested_persistence: { n: 12, br: _.readEnum, bw: T.writeEnum },
-            device_trust: { n: 13, br: _.readInt32, bw: T.writeInt32 },
-            app_type: { n: 14, br: _.readEnum, bw: T.writeEnum },
+            high_usage_login: { n: 11, br: y.readBool, bw: d.writeBool },
+            requested_persistence: { n: 12, br: y.readEnum, bw: d.writeEnum },
+            device_trust: { n: 13, br: y.readInt32, bw: d.writeInt32 },
+            app_type: { n: 14, br: y.readEnum, bw: d.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -805,14 +805,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -826,7 +826,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.client_id || x(e.M()),
+        e.prototype.client_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -838,26 +838,26 @@ var M = e(a(), 1),
           fields: {
             client_id: {
               n: 1,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
-            language: { n: 2, br: _.readUint32, bw: T.writeUint32 },
+            language: { n: 2, br: y.readUint32, bw: d.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -865,14 +865,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -886,7 +886,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.location_confirmer || x(e.M()),
+        e.prototype.location_confirmer || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -896,26 +896,26 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            location_confirmer: { n: 1, br: _.readString, bw: T.writeString },
-            location_requestor: { n: 2, br: _.readString, bw: T.writeString },
-            location_other: { n: 3, br: _.readString, bw: T.writeString },
-            platform_type: { n: 4, br: _.readEnum, bw: T.writeEnum },
+            location_confirmer: { n: 1, br: y.readString, bw: d.writeString },
+            location_requestor: { n: 2, br: y.readString, bw: d.writeString },
+            location_other: { n: 3, br: y.readString, bw: d.writeString },
+            platform_type: { n: 4, br: y.readEnum, bw: d.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -923,14 +923,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -944,7 +944,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.client_id || x(e.M()),
+        e.prototype.client_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -956,28 +956,28 @@ var M = e(a(), 1),
           fields: {
             client_id: {
               n: 1,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
             results: { n: 2, c: Ee },
-            selected_action: { n: 3, br: _.readString, bw: T.writeString },
-            did_confirm_login: { n: 4, br: _.readBool, bw: T.writeBool },
+            selected_action: { n: 3, br: y.readString, bw: d.writeString },
+            did_confirm_login: { n: 4, br: y.readBool, bw: d.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -985,14 +985,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1006,7 +1006,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.platform || x(e.M()),
+        e.prototype.platform || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1016,25 +1016,25 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            platform: { n: 1, br: _.readBool, bw: T.writeBool },
-            location: { n: 2, br: _.readBool, bw: T.writeBool },
-            action: { n: 3, br: _.readBool, bw: T.writeBool },
+            platform: { n: 1, br: y.readBool, bw: d.writeBool },
+            location: { n: 2, br: y.readBool, bw: d.writeBool },
+            action: { n: 3, br: y.readBool, bw: d.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1042,14 +1042,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1098,7 +1098,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.client_ids || x(e.M()),
+        e.prototype.client_ids || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -1112,9 +1112,9 @@ var M = e(a(), 1),
               n: 1,
               r: !0,
               q: !0,
-              br: _.readUint64String,
-              pbr: _.readPackedUint64String,
-              bw: T.writeRepeatedUint64String,
+              br: y.readUint64String,
+              pbr: y.readPackedUint64String,
+              bw: d.writeRepeatedUint64String,
             },
           },
         }),
@@ -1122,16 +1122,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1139,14 +1139,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1160,7 +1160,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.version || x(e.M()),
+        e.prototype.version || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1170,36 +1170,36 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            version: { n: 1, br: _.readInt32, bw: T.writeInt32 },
+            version: { n: 1, br: y.readInt32, bw: d.writeInt32 },
             client_id: {
               n: 2,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
             steamid: {
               n: 3,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            signature: { n: 4, br: _.readBytes, bw: T.writeBytes },
-            confirm: { n: 5, d: !1, br: _.readBool, bw: T.writeBool },
-            persistence: { n: 6, d: 1, br: _.readEnum, bw: T.writeEnum },
+            signature: { n: 4, br: y.readBytes, bw: d.writeBytes },
+            confirm: { n: 5, d: !1, br: y.readBool, bw: d.writeBool },
+            persistence: { n: 6, d: 1, br: y.readEnum, bw: d.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1207,14 +1207,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1263,7 +1263,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.client_id || x(e.M()),
+        e.prototype.client_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1275,32 +1275,32 @@ var M = e(a(), 1),
           fields: {
             client_id: {
               n: 1,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
             steamid: {
               n: 2,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            code: { n: 3, br: _.readString, bw: T.writeString },
-            code_type: { n: 4, br: _.readEnum, bw: T.writeEnum },
+            code: { n: 3, br: y.readString, bw: d.writeString },
+            code_type: { n: 4, br: y.readEnum, bw: d.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1308,14 +1308,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1329,7 +1329,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.agreement_session_url || x(e.M()),
+        e.prototype.agreement_session_url || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1341,8 +1341,8 @@ var M = e(a(), 1),
           fields: {
             agreement_session_url: {
               n: 7,
-              br: _.readString,
-              bw: T.writeString,
+              br: y.readString,
+              bw: d.writeString,
             },
           },
         }),
@@ -1350,16 +1350,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1367,14 +1367,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1388,7 +1388,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.refresh_token || x(e.M()),
+        e.prototype.refresh_token || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1398,29 +1398,29 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            refresh_token: { n: 1, br: _.readString, bw: T.writeString },
+            refresh_token: { n: 1, br: y.readString, bw: d.writeString },
             steamid: {
               n: 2,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            renewal_type: { n: 3, br: _.readEnum, bw: T.writeEnum },
+            renewal_type: { n: 3, br: y.readEnum, bw: d.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1428,14 +1428,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1449,7 +1449,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.access_token || x(e.M()),
+        e.prototype.access_token || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1459,24 +1459,24 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            access_token: { n: 1, br: _.readString, bw: T.writeString },
-            refresh_token: { n: 2, br: _.readString, bw: T.writeString },
+            access_token: { n: 1, br: y.readString, bw: d.writeString },
+            refresh_token: { n: 2, br: y.readString, bw: d.writeString },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1484,14 +1484,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1505,7 +1505,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.include_revoked || x(e.M()),
+        e.prototype.include_revoked || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1515,23 +1515,23 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            include_revoked: { n: 1, d: !1, br: _.readBool, bw: T.writeBool },
+            include_revoked: { n: 1, d: !1, br: y.readBool, bw: d.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1539,14 +1539,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1560,7 +1560,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.refresh_tokens || x(e.M()),
+        e.prototype.refresh_tokens || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -1573,8 +1573,8 @@ var M = e(a(), 1),
             refresh_tokens: { n: 1, c: Re, r: !0, q: !0 },
             requesting_token: {
               n: 2,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
           },
         }),
@@ -1582,16 +1582,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1599,14 +1599,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1620,7 +1620,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.time || x(e.M()),
+        e.prototype.time || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1630,28 +1630,28 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            time: { n: 1, br: _.readUint32, bw: T.writeUint32 },
-            ip: { n: 2, c: ie },
-            locale: { n: 3, br: _.readString, bw: T.writeString },
-            country: { n: 4, br: _.readString, bw: T.writeString },
-            state: { n: 5, br: _.readString, bw: T.writeString },
-            city: { n: 6, br: _.readString, bw: T.writeString },
+            time: { n: 1, br: y.readUint32, bw: d.writeUint32 },
+            ip: { n: 2, c: u },
+            locale: { n: 3, br: y.readString, bw: d.writeString },
+            country: { n: 4, br: y.readString, bw: d.writeString },
+            state: { n: 5, br: y.readString, bw: d.writeString },
+            city: { n: 6, br: y.readString, bw: d.writeString },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1659,14 +1659,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1680,7 +1680,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.token_id || x(e.M()),
+        e.prototype.token_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1692,37 +1692,37 @@ var M = e(a(), 1),
           fields: {
             token_id: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            token_description: { n: 2, br: _.readString, bw: T.writeString },
-            time_updated: { n: 3, br: _.readUint32, bw: T.writeUint32 },
-            platform_type: { n: 4, br: _.readEnum, bw: T.writeEnum },
-            logged_in: { n: 5, br: _.readBool, bw: T.writeBool },
-            os_platform: { n: 6, br: _.readUint32, bw: T.writeUint32 },
-            auth_type: { n: 7, br: _.readUint32, bw: T.writeUint32 },
-            gaming_device_type: { n: 8, br: _.readUint32, bw: T.writeUint32 },
+            token_description: { n: 2, br: y.readString, bw: d.writeString },
+            time_updated: { n: 3, br: y.readUint32, bw: d.writeUint32 },
+            platform_type: { n: 4, br: y.readEnum, bw: d.writeEnum },
+            logged_in: { n: 5, br: y.readBool, bw: d.writeBool },
+            os_platform: { n: 6, br: y.readUint32, bw: d.writeUint32 },
+            auth_type: { n: 7, br: y.readUint32, bw: d.writeUint32 },
+            gaming_device_type: { n: 8, br: y.readUint32, bw: d.writeUint32 },
             first_seen: { n: 9, c: Le },
             last_seen: { n: 10, c: Le },
-            os_type: { n: 11, br: _.readInt32, bw: T.writeInt32 },
-            authentication_type: { n: 12, br: _.readEnum, bw: T.writeEnum },
-            effective_token_state: { n: 13, br: _.readEnum, bw: T.writeEnum },
+            os_type: { n: 11, br: y.readInt32, bw: d.writeInt32 },
+            authentication_type: { n: 12, br: y.readEnum, bw: d.writeEnum },
+            effective_token_state: { n: 13, br: y.readEnum, bw: d.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1730,14 +1730,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1751,7 +1751,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.token || x(e.M()),
+        e.prototype.token || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1761,24 +1761,24 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            token: { n: 1, br: _.readString, bw: T.writeString },
-            revoke_action: { n: 2, d: 1, br: _.readEnum, bw: T.writeEnum },
+            token: { n: 1, br: y.readString, bw: d.writeString },
+            revoke_action: { n: 2, d: 1, br: y.readEnum, bw: d.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1786,14 +1786,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1842,7 +1842,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.token_id || x(e.M()),
+        e.prototype.token_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1854,32 +1854,32 @@ var M = e(a(), 1),
           fields: {
             token_id: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
             steamid: {
               n: 2,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            revoke_action: { n: 3, d: 1, br: _.readEnum, bw: T.writeEnum },
-            signature: { n: 4, br: _.readBytes, bw: T.writeBytes },
+            revoke_action: { n: 3, d: 1, br: y.readEnum, bw: d.writeEnum },
+            signature: { n: 4, br: y.readBytes, bw: d.writeBytes },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1887,14 +1887,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -1943,7 +1943,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.token_id || x(e.M()),
+        e.prototype.token_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1955,22 +1955,22 @@ var M = e(a(), 1),
           fields: {
             token_id: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            token_description: { n: 2, br: _.readString, bw: T.writeString },
-            time_updated: { n: 3, br: _.readUint32, bw: T.writeUint32 },
-            platform_type: { n: 4, br: _.readEnum, bw: T.writeEnum },
-            token_state: { n: 5, br: _.readEnum, bw: T.writeEnum },
+            token_description: { n: 2, br: y.readString, bw: d.writeString },
+            time_updated: { n: 3, br: y.readUint32, bw: d.writeUint32 },
+            platform_type: { n: 4, br: y.readEnum, bw: d.writeEnum },
+            token_state: { n: 5, br: y.readEnum, bw: d.writeEnum },
             owner_steamid: {
               n: 6,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            os_platform: { n: 7, br: _.readUint32, bw: T.writeUint32 },
-            os_type: { n: 8, br: _.readInt32, bw: T.writeInt32 },
-            auth_type: { n: 9, br: _.readUint32, bw: T.writeUint32 },
-            gaming_device_type: { n: 10, br: _.readUint32, bw: T.writeUint32 },
+            os_platform: { n: 7, br: y.readUint32, bw: d.writeUint32 },
+            os_type: { n: 8, br: y.readInt32, bw: d.writeInt32 },
+            auth_type: { n: 9, br: y.readUint32, bw: d.writeUint32 },
+            gaming_device_type: { n: 10, br: y.readUint32, bw: d.writeUint32 },
             first_seen: { n: 11, c: We },
             last_seen: { n: 12, c: We },
           },
@@ -1979,16 +1979,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -1996,14 +1996,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2017,7 +2017,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.time || x(e.M()),
+        e.prototype.time || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -2027,27 +2027,27 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            time: { n: 1, br: _.readUint32, bw: T.writeUint32 },
-            ip: { n: 2, c: ie },
-            country: { n: 3, br: _.readString, bw: T.writeString },
-            state: { n: 4, br: _.readString, bw: T.writeString },
-            city: { n: 5, br: _.readString, bw: T.writeString },
+            time: { n: 1, br: y.readUint32, bw: d.writeUint32 },
+            ip: { n: 2, c: u },
+            country: { n: 3, br: y.readString, bw: d.writeString },
+            state: { n: 4, br: y.readString, bw: d.writeString },
+            city: { n: 5, br: y.readString, bw: d.writeString },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2055,14 +2055,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2076,7 +2076,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.action || x(e.M()),
+        e.prototype.action || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -2086,26 +2086,26 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            action: { n: 1, br: _.readInt32, bw: T.writeInt32 },
-            time: { n: 2, br: _.readUint32, bw: T.writeUint32 },
-            ip: { n: 3, c: ie },
-            actor: { n: 4, br: _.readFixed64String, bw: T.writeFixed64String },
+            action: { n: 1, br: y.readInt32, bw: d.writeInt32 },
+            time: { n: 2, br: y.readUint32, bw: d.writeUint32 },
+            ip: { n: 3, c: u },
+            actor: { n: 4, br: y.readFixed64String, bw: d.writeFixed64String },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2113,14 +2113,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2134,7 +2134,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || x(e.M()),
+        e.prototype.steamid || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -2146,26 +2146,26 @@ var M = e(a(), 1),
           fields: {
             steamid: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            include_revoked_tokens: { n: 2, br: _.readBool, bw: T.writeBool },
+            include_revoked_tokens: { n: 2, br: y.readBool, bw: d.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2173,14 +2173,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2194,7 +2194,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.refresh_tokens || x(e.M()),
+        e.prototype.refresh_tokens || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -2205,23 +2205,23 @@ var M = e(a(), 1),
           proto: e,
           fields: {
             refresh_tokens: { n: 1, c: Ue, r: !0, q: !0 },
-            last_token_reset: { n: 2, br: _.readInt32, bw: T.writeInt32 },
+            last_token_reset: { n: 2, br: y.readInt32, bw: d.writeInt32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2229,14 +2229,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2250,7 +2250,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.token_id || x(e.M()),
+        e.prototype.token_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -2262,8 +2262,8 @@ var M = e(a(), 1),
           fields: {
             token_id: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
           },
         }),
@@ -2271,16 +2271,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2288,14 +2288,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2309,7 +2309,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.refresh_tokens || x(e.M()),
+        e.prototype.refresh_tokens || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -2324,16 +2324,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2341,14 +2341,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2362,7 +2362,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.token_id || x(e.M()),
+        e.prototype.token_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -2374,13 +2374,13 @@ var M = e(a(), 1),
           fields: {
             token_id: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
             steamid: {
               n: 2,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
           },
         }),
@@ -2388,16 +2388,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2405,14 +2405,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2461,7 +2461,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.token_id || x(e.M()),
+        e.prototype.token_id || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -2473,8 +2473,8 @@ var M = e(a(), 1),
           fields: {
             token_id: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
           },
         }),
@@ -2482,16 +2482,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2499,14 +2499,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2520,7 +2520,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.history || x(e.M()),
+        e.prototype.history || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -2535,16 +2535,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2552,14 +2552,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2573,7 +2573,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || x(e.M()),
+        e.prototype.steamid || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -2585,13 +2585,13 @@ var M = e(a(), 1),
           fields: {
             steamid: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
             token_id: {
               n: 2,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
           },
         }),
@@ -2599,16 +2599,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2616,14 +2616,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2672,7 +2672,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || x(e.M()),
+        e.prototype.appid || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -2682,24 +2682,24 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            appid: { n: 1, br: _.readUint32, bw: T.writeUint32 },
-            minutes_remaining: { n: 2, br: _.readUint32, bw: T.writeUint32 },
+            appid: { n: 1, br: y.readUint32, bw: d.writeUint32 },
+            minutes_remaining: { n: 2, br: y.readUint32, bw: d.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2707,14 +2707,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2728,7 +2728,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.platform || x(e.M()),
+        e.prototype.platform || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
@@ -2738,14 +2738,14 @@ var M = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            platform: { n: 1, br: _.readString, bw: T.writeString },
+            platform: { n: 1, br: y.readString, bw: d.writeString },
             appid_list: {
               n: 2,
               r: !0,
               q: !0,
-              br: _.readUint32,
-              pbr: _.readPackedUint32,
-              bw: T.writeRepeatedUint32,
+              br: y.readUint32,
+              pbr: y.readPackedUint32,
+              bw: d.writeRepeatedUint32,
             },
           },
         }),
@@ -2753,16 +2753,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2770,14 +2770,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2791,7 +2791,7 @@ var M = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.entries || x(e.M()),
+        e.prototype.entries || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
@@ -2806,16 +2806,16 @@ var M = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -2823,14 +2823,14 @@ var M = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -2845,7 +2845,7 @@ var M = e(a(), 1),
   function t(e, t, n) {
     return e.SendMsg(
       `Authentication.GetPasswordRSAPublicKey#1`,
-      E(de, t, n),
+      A(de, t, n),
       fe,
       {
         bConstMethod: !0,
@@ -2859,7 +2859,7 @@ var M = e(a(), 1),
   function n(e, t, n) {
     return e.SendMsg(
       `Authentication.BeginAuthSessionViaQR#1`,
-      E(he, t, n),
+      A(he, t, n),
       ge,
       { ePrivilege: 0, eWebAPIKeyRequirement: 1, rgBrowserAPISites: [`all`] },
     );
@@ -2868,7 +2868,7 @@ var M = e(a(), 1),
   function r(e, t, n) {
     return e.SendMsg(
       `Authentication.BeginAuthSessionViaCredentials#1`,
-      E(_e, t, n),
+      A(_e, t, n),
       ve,
       { ePrivilege: 0, eWebAPIKeyRequirement: 1, rgBrowserAPISites: [`all`] },
     );
@@ -2877,14 +2877,14 @@ var M = e(a(), 1),
   function i(e, t, n) {
     return e.SendMsg(
       `Authentication.PollAuthSessionStatus#1`,
-      E(ye, t, n),
+      A(ye, t, n),
       be,
       { ePrivilege: 0, eWebAPIKeyRequirement: 1, rgBrowserAPISites: [`all`] },
     );
   }
   e.PollAuthSessionStatus = i;
   function a(e, t, n) {
-    return e.SendMsg(`Authentication.GetAuthSessionInfo#1`, E(xe, t, n), Se, {
+    return e.SendMsg(`Authentication.GetAuthSessionInfo#1`, A(xe, t, n), Se, {
       ePrivilege: 1,
     });
   }
@@ -2892,7 +2892,7 @@ var M = e(a(), 1),
   function o(e, t, n) {
     return e.SendMsg(
       `Authentication.GetAuthSessionRiskInfo#1`,
-      E(Ce, t, n),
+      A(Ce, t, n),
       we,
       { ePrivilege: 1 },
     );
@@ -2901,7 +2901,7 @@ var M = e(a(), 1),
   function s(e, t) {
     return e.SendNotification(
       `Authentication.NotifyRiskQuizResults#1`,
-      E(Te, t),
+      A(Te, t),
       { ePrivilege: 1 },
     );
   }
@@ -2909,7 +2909,7 @@ var M = e(a(), 1),
   function c(e, t, n) {
     return e.SendMsg(
       `Authentication.UpdateAuthSessionWithMobileConfirmation#1`,
-      E(ke, t, n),
+      A(ke, t, n),
       Ae,
       { ePrivilege: 1 },
     );
@@ -2918,7 +2918,7 @@ var M = e(a(), 1),
   function l(e, t, n) {
     return e.SendMsg(
       `Authentication.UpdateAuthSessionWithSteamGuardCode#1`,
-      E(je, t, n),
+      A(je, t, n),
       Me,
       { ePrivilege: 0, eWebAPIKeyRequirement: 1, rgBrowserAPISites: [`all`] },
     );
@@ -2927,14 +2927,14 @@ var M = e(a(), 1),
   function u(e, t, n) {
     return e.SendMsg(
       `Authentication.GenerateAccessTokenForApp#1`,
-      E(Ne, t, n),
+      A(Ne, t, n),
       Pe,
       { ePrivilege: 1, eWebAPIKeyRequirement: 1 },
     );
   }
   e.GenerateAccessTokenForApp = u;
   function d(e, t, n) {
-    return e.SendMsg(`Authentication.EnumerateTokens#1`, E(Fe, t, n), Ie, {
+    return e.SendMsg(`Authentication.EnumerateTokens#1`, A(Fe, t, n), Ie, {
       ePrivilege: 1,
     });
   }
@@ -2942,21 +2942,21 @@ var M = e(a(), 1),
   function f(e, t, n) {
     return e.SendMsg(
       `Authentication.GetAuthSessionsForAccount#1`,
-      E(De, t, n),
+      A(De, t, n),
       Oe,
       { bConstMethod: !0, ePrivilege: 1 },
     );
   }
   e.GetAuthSessionsForAccount = f;
   function p(e, t, n) {
-    return e.SendMsg(`Authentication.RevokeToken#1`, E(ze, t, n), Be, {
+    return e.SendMsg(`Authentication.RevokeToken#1`, A(ze, t, n), Be, {
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
     });
   }
   e.RevokeToken = p;
   function m(e, t, n) {
-    return e.SendMsg(`Authentication.RevokeRefreshToken#1`, E(Ve, t, n), He, {
+    return e.SendMsg(`Authentication.RevokeRefreshToken#1`, A(Ve, t, n), He, {
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
     });
@@ -2968,7 +2968,7 @@ var at;
   function t(e, t, n) {
     return e.SendMsg(
       `AuthenticationSupport.QueryRefreshTokensByAccount#1`,
-      E(Ke, t, n),
+      A(Ke, t, n),
       qe,
       { bConstMethod: !0, ePrivilege: 5 },
     );
@@ -2977,14 +2977,14 @@ var at;
   function n(e, t, n) {
     return e.SendMsg(
       `AuthenticationSupport.QueryRefreshTokenByID#1`,
-      E(Je, t, n),
+      A(Je, t, n),
       Ye,
       { bConstMethod: !0, ePrivilege: 5 },
     );
   }
   e.QueryRefreshTokenByID = n;
   function r(e, t, n) {
-    return e.SendMsg(`AuthenticationSupport.RevokeToken#1`, E(Xe, t, n), Ze, {
+    return e.SendMsg(`AuthenticationSupport.RevokeToken#1`, A(Xe, t, n), Ze, {
       ePrivilege: 5,
     });
   }
@@ -2992,7 +2992,7 @@ var at;
   function i(e, t, n) {
     return e.SendMsg(
       `AuthenticationSupport.GetTokenHistory#1`,
-      E(Qe, t, n),
+      A(Qe, t, n),
       $e,
       { bConstMethod: !0, ePrivilege: 5 },
     );
@@ -3001,7 +3001,7 @@ var at;
   function a(e, t, n) {
     return e.SendMsg(
       `AuthenticationSupport.MarkTokenCompromised#1`,
-      E(et, t, n),
+      A(et, t, n),
       tt,
       { ePrivilege: 5 },
     );
@@ -3011,7 +3011,7 @@ var at;
 var ot;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`CloudGaming.GetTimeRemaining#1`, E(rt, t, n), it, {
+    return e.SendMsg(`CloudGaming.GetTimeRemaining#1`, A(rt, t, n), it, {
       bConstMethod: !0,
       ePrivilege: 1,
     });
@@ -4081,7 +4081,7 @@ var ar = function (e, t) {
       return ((n[--t] = 2), (n[--t] = 0), new F(n));
     },
   },
-  lr = new ee(`Login`),
+  lr = new re(`Login`),
   ur = lr.Info;
 lr.Debug;
 var dr = lr.Warning,
@@ -4234,8 +4234,8 @@ var vr = class {
   }
   async PollForUpdate() {
     try {
-      let e = k.Init(ye);
-      (e.SetEMsg(ne),
+      let e = O.Init(ye);
+      (e.SetEMsg(ce),
         e.Body().set_client_id(this.m_strClientID),
         e.Body().set_request_id(this.m_rgRequestID),
         this.m_strTokenToRevoke &&
@@ -4258,7 +4258,7 @@ var vr = class {
         else if (n == 118) {
           let e = t.Body().agreement_session_url();
           if (
-            (D(!!e, `Missing agreement session URL for result`, n),
+            (k(!!e, `Missing agreement session URL for result`, n),
             this.m_onShowAgreement)
           )
             this.m_onShowAgreement(e);
@@ -4284,7 +4284,7 @@ var vr = class {
       return (
         (this.m_bRemoteInteraction = !!c),
         a
-          ? (D(
+          ? (k(
               !!o && !!s,
               `Missing access token or account name with refresh token`,
             ),
@@ -4327,19 +4327,19 @@ var vr = class {
     return pe.fromObject(e);
   }
 };
-(v([w], vr.prototype, `Subscribe`, null),
-  v([w], vr.prototype, `GetSnapshot`, null),
-  v([w], vr.prototype, `PollForUpdate`, null),
-  v([w], vr.prototype, `SetTokenToRevoke`, null));
+(S([v], vr.prototype, `Subscribe`, null),
+  S([v], vr.prototype, `GetSnapshot`, null),
+  S([v], vr.prototype, `PollForUpdate`, null),
+  S([v], vr.prototype, `SetTokenToRevoke`, null));
 function yr(e) {
   let t = new FormData();
-  (t.append(`nonce`, e), t.append(`sessionid`, le(y) ?? ``));
+  (t.append(`nonce`, e), t.append(`sessionid`, p(m) ?? ``));
   let n = new URL(location.href),
     r = new URLSearchParams(n.search);
   (r.has(`need_password`) &&
     (r.delete(`need_password`), (n.search = r.toString())),
     t.append(`redir`, n.toString()));
-  let i = `${O.LOGIN_BASE_URL}jwt/finalizelogin`;
+  let i = `${D.LOGIN_BASE_URL}jwt/finalizelogin`;
   return W.default.post(i, t, { withCredentials: !0 }).then(
     (e) => {
       let { data: t } = e;
@@ -4395,7 +4395,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.time || x(e.M()),
+        e.prototype.time || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -4405,26 +4405,26 @@ var Sr = class e extends M.Message {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            time: { n: 1, br: _.readUint32, bw: T.writeUint32 },
-            usage_type: { n: 2, br: _.readEnum, bw: T.writeEnum },
-            confirmation_type: { n: 3, br: _.readInt32, bw: T.writeInt32 },
-            confirmation_action: { n: 4, br: _.readInt32, bw: T.writeInt32 },
+            time: { n: 1, br: y.readUint32, bw: d.writeUint32 },
+            usage_type: { n: 2, br: y.readEnum, bw: d.writeEnum },
+            confirmation_type: { n: 3, br: y.readInt32, bw: d.writeInt32 },
+            confirmation_action: { n: 4, br: y.readInt32, bw: d.writeInt32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -4432,14 +4432,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -4453,7 +4453,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.sender_time || x(e.M()),
+        e.prototype.sender_time || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -4465,8 +4465,8 @@ var Sr = class e extends M.Message {
           fields: {
             sender_time: {
               n: 1,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
           },
         }),
@@ -4474,16 +4474,16 @@ var Sr = class e extends M.Message {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -4491,14 +4491,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -4512,7 +4512,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.server_time || x(e.M()),
+        e.prototype.server_time || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -4524,53 +4524,53 @@ var Sr = class e extends M.Message {
           fields: {
             server_time: {
               n: 1,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
             skew_tolerance_seconds: {
               n: 2,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
             large_time_jink: {
               n: 3,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
             probe_frequency_seconds: {
               n: 4,
-              br: _.readUint32,
-              bw: T.writeUint32,
+              br: y.readUint32,
+              bw: d.writeUint32,
             },
             adjusted_time_probe_frequency_seconds: {
               n: 5,
-              br: _.readUint32,
-              bw: T.writeUint32,
+              br: y.readUint32,
+              bw: d.writeUint32,
             },
             hint_probe_frequency_seconds: {
               n: 6,
-              br: _.readUint32,
-              bw: T.writeUint32,
+              br: y.readUint32,
+              bw: d.writeUint32,
             },
-            sync_timeout: { n: 7, br: _.readUint32, bw: T.writeUint32 },
-            try_again_seconds: { n: 8, br: _.readUint32, bw: T.writeUint32 },
-            max_attempts: { n: 9, br: _.readUint32, bw: T.writeUint32 },
+            sync_timeout: { n: 7, br: y.readUint32, bw: d.writeUint32 },
+            try_again_seconds: { n: 8, br: y.readUint32, bw: d.writeUint32 },
+            max_attempts: { n: 9, br: y.readUint32, bw: d.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -4578,14 +4578,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -4599,7 +4599,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || x(e.M()),
+        e.prototype.steamid || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -4611,26 +4611,26 @@ var Sr = class e extends M.Message {
           fields: {
             steamid: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            include: { n: 2, br: _.readEnum, bw: T.writeEnum },
+            include: { n: 2, br: y.readEnum, bw: d.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -4638,14 +4638,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -4659,7 +4659,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.state || x(e.M()),
+        e.prototype.state || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [16], null));
     }
     static sm_m;
@@ -4669,32 +4669,32 @@ var Sr = class e extends M.Message {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            state: { n: 1, br: _.readUint32, bw: T.writeUint32 },
-            inactivation_reason: { n: 2, br: _.readUint32, bw: T.writeUint32 },
-            authenticator_type: { n: 3, br: _.readUint32, bw: T.writeUint32 },
-            authenticator_allowed: { n: 4, br: _.readBool, bw: T.writeBool },
-            steamguard_scheme: { n: 5, br: _.readUint32, bw: T.writeUint32 },
-            token_gid: { n: 6, br: _.readString, bw: T.writeString },
-            email_validated: { n: 7, br: _.readBool, bw: T.writeBool },
-            device_identifier: { n: 8, br: _.readString, bw: T.writeString },
-            time_created: { n: 9, br: _.readUint32, bw: T.writeUint32 },
+            state: { n: 1, br: y.readUint32, bw: d.writeUint32 },
+            inactivation_reason: { n: 2, br: y.readUint32, bw: d.writeUint32 },
+            authenticator_type: { n: 3, br: y.readUint32, bw: d.writeUint32 },
+            authenticator_allowed: { n: 4, br: y.readBool, bw: d.writeBool },
+            steamguard_scheme: { n: 5, br: y.readUint32, bw: d.writeUint32 },
+            token_gid: { n: 6, br: y.readString, bw: d.writeString },
+            email_validated: { n: 7, br: y.readBool, bw: d.writeBool },
+            device_identifier: { n: 8, br: y.readString, bw: d.writeString },
+            time_created: { n: 9, br: y.readUint32, bw: d.writeUint32 },
             revocation_attempts_remaining: {
               n: 10,
-              br: _.readUint32,
-              bw: T.writeUint32,
+              br: y.readUint32,
+              bw: d.writeUint32,
             },
-            classified_agent: { n: 11, br: _.readString, bw: T.writeString },
+            classified_agent: { n: 11, br: y.readString, bw: d.writeString },
             allow_external_authenticator: {
               n: 12,
-              br: _.readBool,
-              bw: T.writeBool,
+              br: y.readBool,
+              bw: d.writeBool,
             },
-            time_transferred: { n: 13, br: _.readUint32, bw: T.writeUint32 },
-            version: { n: 14, br: _.readUint32, bw: T.writeUint32 },
+            time_transferred: { n: 13, br: y.readUint32, bw: d.writeUint32 },
+            version: { n: 14, br: y.readUint32, bw: d.writeUint32 },
             last_seen_auth_token_id: {
               n: 15,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
             usages: { n: 16, c: Sr, r: !0, q: !0 },
           },
@@ -4703,16 +4703,16 @@ var Sr = class e extends M.Message {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -4720,14 +4720,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -4741,7 +4741,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || x(e.M()),
+        e.prototype.steamid || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [7], null));
     }
     static sm_m;
@@ -4753,45 +4753,45 @@ var Sr = class e extends M.Message {
           fields: {
             steamid: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
             authenticator_time: {
               n: 2,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
             serial_number: {
               n: 3,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            authenticator_type: { n: 4, br: _.readUint32, bw: T.writeUint32 },
-            device_identifier: { n: 5, br: _.readString, bw: T.writeString },
+            authenticator_type: { n: 4, br: y.readUint32, bw: d.writeUint32 },
+            device_identifier: { n: 5, br: y.readString, bw: d.writeString },
             http_headers: {
               n: 7,
               r: !0,
               q: !0,
-              br: _.readString,
-              bw: T.writeRepeatedString,
+              br: y.readString,
+              bw: d.writeRepeatedString,
             },
-            version: { n: 8, d: 1, br: _.readUint32, bw: T.writeUint32 },
+            version: { n: 8, d: 1, br: y.readUint32, bw: d.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -4799,14 +4799,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -4820,7 +4820,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.shared_secret || x(e.M()),
+        e.prototype.shared_secret || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -4830,43 +4830,43 @@ var Sr = class e extends M.Message {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            shared_secret: { n: 1, br: _.readBytes, bw: T.writeBytes },
+            shared_secret: { n: 1, br: y.readBytes, bw: d.writeBytes },
             serial_number: {
               n: 2,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            revocation_code: { n: 3, br: _.readString, bw: T.writeString },
-            uri: { n: 4, br: _.readString, bw: T.writeString },
+            revocation_code: { n: 3, br: y.readString, bw: d.writeString },
+            uri: { n: 4, br: y.readString, bw: d.writeString },
             server_time: {
               n: 5,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
-            account_name: { n: 6, br: _.readString, bw: T.writeString },
-            token_gid: { n: 7, br: _.readString, bw: T.writeString },
-            identity_secret: { n: 8, br: _.readBytes, bw: T.writeBytes },
-            secret_1: { n: 9, br: _.readBytes, bw: T.writeBytes },
-            status: { n: 10, br: _.readInt32, bw: T.writeInt32 },
-            phone_number_hint: { n: 11, br: _.readString, bw: T.writeString },
-            confirm_type: { n: 12, br: _.readInt32, bw: T.writeInt32 },
-            next_step: { n: 13, br: _.readEnum, bw: T.writeEnum },
+            account_name: { n: 6, br: y.readString, bw: d.writeString },
+            token_gid: { n: 7, br: y.readString, bw: d.writeString },
+            identity_secret: { n: 8, br: y.readBytes, bw: d.writeBytes },
+            secret_1: { n: 9, br: y.readBytes, bw: d.writeBytes },
+            status: { n: 10, br: y.readInt32, bw: d.writeInt32 },
+            phone_number_hint: { n: 11, br: y.readString, bw: d.writeString },
+            confirm_type: { n: 12, br: y.readInt32, bw: d.writeInt32 },
+            next_step: { n: 13, br: y.readEnum, bw: d.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -4874,14 +4874,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -4895,7 +4895,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || x(e.M()),
+        e.prototype.steamid || C(e.M()),
         M.Message.initialize(this, t, 0, -1, [5], null));
     }
     static sm_m;
@@ -4907,40 +4907,40 @@ var Sr = class e extends M.Message {
           fields: {
             steamid: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            authenticator_code: { n: 2, br: _.readString, bw: T.writeString },
+            authenticator_code: { n: 2, br: y.readString, bw: d.writeString },
             authenticator_time: {
               n: 3,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
-            activation_code: { n: 4, br: _.readString, bw: T.writeString },
+            activation_code: { n: 4, br: y.readString, bw: d.writeString },
             http_headers: {
               n: 5,
               r: !0,
               q: !0,
-              br: _.readString,
-              bw: T.writeRepeatedString,
+              br: y.readString,
+              bw: d.writeRepeatedString,
             },
-            validate_sms_code: { n: 6, br: _.readBool, bw: T.writeBool },
+            validate_sms_code: { n: 6, br: y.readBool, bw: d.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -4948,14 +4948,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -4969,7 +4969,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.success || x(e.M()),
+        e.prototype.success || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -4979,30 +4979,30 @@ var Sr = class e extends M.Message {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            success: { n: 1, br: _.readBool, bw: T.writeBool },
+            success: { n: 1, br: y.readBool, bw: d.writeBool },
             server_time: {
               n: 3,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
-            status: { n: 4, br: _.readInt32, bw: T.writeInt32 },
-            next_step: { n: 5, br: _.readEnum, bw: T.writeEnum },
+            status: { n: 4, br: y.readInt32, bw: d.writeInt32 },
+            next_step: { n: 5, br: y.readEnum, bw: d.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -5010,14 +5010,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -5031,7 +5031,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.revocation_code || x(e.M()),
+        e.prototype.revocation_code || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -5041,13 +5041,13 @@ var Sr = class e extends M.Message {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            revocation_code: { n: 2, br: _.readString, bw: T.writeString },
-            revocation_reason: { n: 5, br: _.readUint32, bw: T.writeUint32 },
-            steamguard_scheme: { n: 6, br: _.readUint32, bw: T.writeUint32 },
+            revocation_code: { n: 2, br: y.readString, bw: d.writeString },
+            revocation_reason: { n: 5, br: y.readUint32, bw: d.writeUint32 },
+            steamguard_scheme: { n: 6, br: y.readUint32, bw: d.writeUint32 },
             remove_all_steamguard_cookies: {
               n: 7,
-              br: _.readBool,
-              bw: T.writeBool,
+              br: y.readBool,
+              bw: d.writeBool,
             },
           },
         }),
@@ -5055,16 +5055,16 @@ var Sr = class e extends M.Message {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -5072,14 +5072,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -5093,7 +5093,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.success || x(e.M()),
+        e.prototype.success || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -5103,16 +5103,16 @@ var Sr = class e extends M.Message {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            success: { n: 1, br: _.readBool, bw: T.writeBool },
+            success: { n: 1, br: y.readBool, bw: d.writeBool },
             server_time: {
               n: 3,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
             revocation_attempts_remaining: {
               n: 5,
-              br: _.readUint32,
-              bw: T.writeUint32,
+              br: y.readUint32,
+              bw: d.writeUint32,
             },
           },
         }),
@@ -5120,16 +5120,16 @@ var Sr = class e extends M.Message {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -5137,14 +5137,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -5193,7 +5193,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.success || x(e.M()),
+        e.prototype.success || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -5202,22 +5202,22 @@ var Sr = class e extends M.Message {
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { success: { n: 1, br: _.readBool, bw: T.writeBool } },
+          fields: { success: { n: 1, br: y.readBool, bw: d.writeBool } },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -5225,14 +5225,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -5246,7 +5246,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.sms_code || x(e.M()),
+        e.prototype.sms_code || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -5256,26 +5256,26 @@ var Sr = class e extends M.Message {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            sms_code: { n: 1, br: _.readString, bw: T.writeString },
-            generate_new_token: { n: 2, br: _.readBool, bw: T.writeBool },
-            version: { n: 3, d: 1, br: _.readUint32, bw: T.writeUint32 },
-            caller_version: { n: 4, br: _.readUint32, bw: T.writeUint32 },
+            sms_code: { n: 1, br: y.readString, bw: d.writeString },
+            generate_new_token: { n: 2, br: y.readBool, bw: d.writeBool },
+            version: { n: 3, d: 1, br: y.readUint32, bw: d.writeUint32 },
+            caller_version: { n: 4, br: y.readUint32, bw: d.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -5283,14 +5283,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -5304,7 +5304,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.shared_secret || x(e.M()),
+        e.prototype.shared_secret || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -5314,29 +5314,29 @@ var Sr = class e extends M.Message {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            shared_secret: { n: 1, br: _.readBytes, bw: T.writeBytes },
+            shared_secret: { n: 1, br: y.readBytes, bw: d.writeBytes },
             serial_number: {
               n: 2,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            revocation_code: { n: 3, br: _.readString, bw: T.writeString },
-            uri: { n: 4, br: _.readString, bw: T.writeString },
+            revocation_code: { n: 3, br: y.readString, bw: d.writeString },
+            uri: { n: 4, br: y.readString, bw: d.writeString },
             server_time: {
               n: 5,
-              br: _.readUint64String,
-              bw: T.writeUint64String,
+              br: y.readUint64String,
+              bw: d.writeUint64String,
             },
-            account_name: { n: 6, br: _.readString, bw: T.writeString },
-            token_gid: { n: 7, br: _.readString, bw: T.writeString },
-            identity_secret: { n: 8, br: _.readBytes, bw: T.writeBytes },
-            secret_1: { n: 9, br: _.readBytes, bw: T.writeBytes },
-            status: { n: 10, br: _.readInt32, bw: T.writeInt32 },
-            steamguard_scheme: { n: 11, br: _.readUint32, bw: T.writeUint32 },
+            account_name: { n: 6, br: y.readString, bw: d.writeString },
+            token_gid: { n: 7, br: y.readString, bw: d.writeString },
+            identity_secret: { n: 8, br: y.readBytes, bw: d.writeBytes },
+            secret_1: { n: 9, br: y.readBytes, bw: d.writeBytes },
+            status: { n: 10, br: y.readInt32, bw: d.writeInt32 },
+            steamguard_scheme: { n: 11, br: y.readUint32, bw: d.writeUint32 },
             steamid: {
               n: 12,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
           },
         }),
@@ -5344,16 +5344,16 @@ var Sr = class e extends M.Message {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -5361,14 +5361,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -5382,7 +5382,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.success || x(e.M()),
+        e.prototype.success || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -5392,7 +5392,7 @@ var Sr = class e extends M.Message {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            success: { n: 1, br: _.readBool, bw: T.writeBool },
+            success: { n: 1, br: y.readBool, bw: d.writeBool },
             replacement_token: { n: 2, c: Ir },
           },
         }),
@@ -5400,16 +5400,16 @@ var Sr = class e extends M.Message {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -5417,14 +5417,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -5438,7 +5438,7 @@ var Sr = class e extends M.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || x(e.M()),
+        e.prototype.steamid || C(e.M()),
         M.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -5450,27 +5450,27 @@ var Sr = class e extends M.Message {
           fields: {
             steamid: {
               n: 1,
-              br: _.readFixed64String,
-              bw: T.writeFixed64String,
+              br: y.readFixed64String,
+              bw: d.writeFixed64String,
             },
-            version: { n: 2, br: _.readUint32, bw: T.writeUint32 },
-            signature: { n: 3, br: _.readBytes, bw: T.writeBytes },
+            version: { n: 2, br: y.readUint32, bw: d.writeUint32 },
+            signature: { n: 3, br: y.readBytes, bw: d.writeBytes },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= S(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= x(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return d(e.M(), t, n);
+      return j(e.M(), t, n);
     }
     static fromObject(t) {
-      return h(e.M(), t);
+      return g(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new M.BinaryReader(t),
@@ -5478,14 +5478,14 @@ var Sr = class e extends M.Message {
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return p(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new M.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      j(e.M(), t, n);
+      E(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new M.BinaryWriter();
@@ -5533,7 +5533,7 @@ var Sr = class e extends M.Message {
   Br;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`TwoFactor.QueryTime#1`, E(Cr, t, n), wr, {
+    return e.SendMsg(`TwoFactor.QueryTime#1`, A(Cr, t, n), wr, {
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
       rgBrowserAPISites: [`help`],
@@ -5541,32 +5541,32 @@ var Sr = class e extends M.Message {
   }
   e.QueryTime = t;
   function n(e, t, n) {
-    return e.SendMsg(`TwoFactor.QueryStatus#1`, E(Tr, t, n), Er, {
+    return e.SendMsg(`TwoFactor.QueryStatus#1`, A(Tr, t, n), Er, {
       ePrivilege: 1,
     });
   }
   e.QueryStatus = n;
   function r(e, t, n) {
-    return e.SendMsg(`TwoFactor.AddAuthenticator#1`, E(Dr, t, n), Or, {
+    return e.SendMsg(`TwoFactor.AddAuthenticator#1`, A(Dr, t, n), Or, {
       ePrivilege: 1,
     });
   }
   e.AddAuthenticator = r;
   function i(e, t, n) {
-    return e.SendMsg(`TwoFactor.FinalizeAddAuthenticator#1`, E(kr, t, n), Ar, {
+    return e.SendMsg(`TwoFactor.FinalizeAddAuthenticator#1`, A(kr, t, n), Ar, {
       ePrivilege: 1,
     });
   }
   e.FinalizeAddAuthenticator = i;
   function a(e, t, n) {
-    return e.SendMsg(`TwoFactor.UpdateTokenVersion#1`, E(Rr, t, n), zr, {
+    return e.SendMsg(`TwoFactor.UpdateTokenVersion#1`, A(Rr, t, n), zr, {
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
     });
   }
   e.UpdateTokenVersion = a;
   function o(e, t, n) {
-    return e.SendMsg(`TwoFactor.RemoveAuthenticator#1`, E(jr, t, n), Mr, {
+    return e.SendMsg(`TwoFactor.RemoveAuthenticator#1`, A(jr, t, n), Mr, {
       ePrivilege: 9,
     });
   }
@@ -5574,7 +5574,7 @@ var Sr = class e extends M.Message {
   function s(e, t, n) {
     return e.SendMsg(
       `TwoFactor.RemoveAuthenticatorViaChallengeStart#1`,
-      E(Nr, t, n),
+      A(Nr, t, n),
       Pr,
       { ePrivilege: 9 },
     );
@@ -5583,7 +5583,7 @@ var Sr = class e extends M.Message {
   function c(e, t, n) {
     return e.SendMsg(
       `TwoFactor.RemoveAuthenticatorViaChallengeContinue#1`,
-      E(Fr, t, n),
+      A(Fr, t, n),
       Lr,
       { ePrivilege: 9 },
     );
@@ -5665,14 +5665,14 @@ var K = e(i(), 1),
             20
           );
         let a = fr(i, t),
-          o = k.Init(_e);
-        (o.SetEMsg(ne),
+          o = O.Init(_e);
+        (o.SetEMsg(ce),
           o.Body().set_account_name(r),
           o.Body().set_encrypted_password(a ?? void 0),
           o.Body().set_encryption_timestamp(t.timestamp),
           o.Body().set_remember_login(!!n),
           o.Body().set_persistence(+!!n));
-        let s = re();
+        let s = le();
         s && o.Body().set_website_id(s.WEBSITE_ID);
         try {
           o.Body().set_device_details(await this.GetDeviceDetails());
@@ -5680,7 +5680,7 @@ var K = e(i(), 1),
           (U(`Failed to GetDeviceDetails`), U(e));
         }
         if (
-          (o.Body().set_language(oe(O.LANGUAGE)),
+          (o.Body().set_language(se(D.LANGUAGE)),
           this.m_onGetMachineAuth != null)
         ) {
           let e = await this.m_onGetMachineAuth(r);
@@ -5705,7 +5705,7 @@ var K = e(i(), 1),
             case 118: {
               let e = c.Body().agreement_session_url();
               if (
-                (D(!!e, `Missing agreement session URL for result`, l),
+                (k(!!e, `Missing agreement session URL for result`, l),
                 this.m_onShowAgreement)
               )
                 this.m_onShowAgreement(e);
@@ -5741,7 +5741,7 @@ var K = e(i(), 1),
           weak_token: g,
         } = c.Body().toObject();
         if (
-          (D(
+          (k(
             p !== void 0 && !!d && !!h,
             `Missing poll interval, client ID, or steamid for result`,
             l,
@@ -5755,7 +5755,7 @@ var K = e(i(), 1),
         ) {
           let e = new FormData();
           (e.append(`clientid`, d), e.append(`steamid`, h));
-          let t = `${O.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
+          let t = `${D.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
           try {
             if (
               (
@@ -5786,7 +5786,7 @@ var K = e(i(), 1),
         let _ = Ur(
             m.map(
               ({ confirmation_type: e }) => (
-                D(
+                k(
                   e !== void 0,
                   `Missing confirmation type in allowed confirmations`,
                 ),
@@ -5867,8 +5867,8 @@ var K = e(i(), 1),
       try {
         await this.m_transport.MakeReady();
         let n = this.m_eStatus === 3 || this.m_eStatus === 10,
-          r = k.Init(je);
-        (r.SetEMsg(ne),
+          r = O.Init(je);
+        (r.SetEMsg(ce),
           r.Body().set_client_id(this.m_strClientID),
           r.Body().set_steamid(this.m_steamid),
           r.Body().set_code(e),
@@ -5905,7 +5905,7 @@ var K = e(i(), 1),
             case 118: {
               let e = i.Body().agreement_session_url();
               if (
-                (D(!!e, `Missing agreement session URL for result`, a),
+                (k(!!e, `Missing agreement session URL for result`, a),
                 this.m_onShowAgreement)
               )
                 this.m_onShowAgreement(e);
@@ -5957,12 +5957,12 @@ var K = e(i(), 1),
       this.m_eStatus = 7;
     }
     async StartMoveAuthenticator() {
-      this.m_weakAuthWebInterface = new C(
-        O.WEBAPI_BASE_URL,
+      this.m_weakAuthWebInterface = new ue(
+        D.WEBAPI_BASE_URL,
         this.m_strWeakAuthToken,
       );
       try {
-        let e = k.Init(Nr),
+        let e = O.Init(Nr),
           t = await Br.RemoveAuthenticatorViaChallengeStart(
             this.m_weakAuthWebInterface.GetServiceTransport(),
             e,
@@ -5990,11 +5990,11 @@ var K = e(i(), 1),
       }
     }
     async ResendMoveCode() {
-      D(
+      k(
         !!this.m_weakAuthWebInterface,
         `Resending move code before StartMoveAuthenticator`,
       );
-      let e = k.Init(Nr),
+      let e = O.Init(Nr),
         t = await Br.RemoveAuthenticatorViaChallengeStart(
           this.m_weakAuthWebInterface.GetServiceTransport(),
           e,
@@ -6008,11 +6008,11 @@ var K = e(i(), 1),
         (this.m_eStatus = 8));
     }
     async FinishMoveAuthenticator(e) {
-      D(
+      k(
         !!this.m_weakAuthWebInterface,
         `Finishing authenticator move before StartMoveAuthenticator`,
       );
-      let t = k.Init(Fr);
+      let t = O.Init(Fr);
       (t.Body().set_sms_code(e),
         t.Body().set_generate_new_token(!0),
         t.Body().set_version(2));
@@ -6031,7 +6031,7 @@ var K = e(i(), 1),
       else {
         n.DEBUG_LogToConsole();
         let e = n.Body().replacement_token();
-        (D(!!e, `Missing replacement token on successful authenticator move`),
+        (k(!!e, `Missing replacement token on successful authenticator move`),
           (this.m_replacementAuthenticator = hr(e.toObject())),
           (this.m_eStatus = 9),
           (this.m_bUsingCodeOverride = !1));
@@ -6096,7 +6096,7 @@ var K = e(i(), 1),
       this.m_eStatus = e.bSuccess ? 14 : 15;
       let t;
       (e.bSuccess
-        ? (D(
+        ? (k(
             !!this.m_strAccountName && !!this.m_steamid,
             `Missing account name or steamid on auth success`,
           ),
@@ -6112,19 +6112,19 @@ var K = e(i(), 1),
       this.m_onLoginComplete = e;
     }
   };
-(v([w], q.prototype, `Start`, null),
-  v([w], q.prototype, `SendSteamGuardCode`, null),
-  v([w], q.prototype, `UseCodeOverride`, null),
-  v([w], q.prototype, `CantAccessCode`, null),
-  v([w], q.prototype, `StartMoveAuthenticator`, null),
-  v([w], q.prototype, `ResendMoveCode`, null),
-  v([w], q.prototype, `FinishMoveAuthenticator`, null),
-  v([w], q.prototype, `FinishMoveRecovery`, null),
-  v([w], q.prototype, `GoBack`, null),
-  v([w], q.prototype, `SetOnLoginComplete`, null));
+(S([v], q.prototype, `Start`, null),
+  S([v], q.prototype, `SendSteamGuardCode`, null),
+  S([v], q.prototype, `UseCodeOverride`, null),
+  S([v], q.prototype, `CantAccessCode`, null),
+  S([v], q.prototype, `StartMoveAuthenticator`, null),
+  S([v], q.prototype, `ResendMoveCode`, null),
+  S([v], q.prototype, `FinishMoveAuthenticator`, null),
+  S([v], q.prototype, `FinishMoveRecovery`, null),
+  S([v], q.prototype, `GoBack`, null),
+  S([v], q.prototype, `SetOnLoginComplete`, null));
 async function Vr(e, t) {
-  let n = k.Init(de);
-  (n.Body().set_account_name(t), n.SetEMsg(ne));
+  let n = O.Init(de);
+  (n.Body().set_account_name(t), n.SetEMsg(ce));
   try {
     await e.MakeReady();
     let t = await N.GetPasswordRSAPublicKey(e, n);
@@ -6240,14 +6240,14 @@ var J = {
       this.m_eStatus = 1;
       try {
         await this.m_transport.MakeReady();
-        let e = k.Init(he);
-        e.SetEMsg(ne);
+        let e = O.Init(he);
+        e.SetEMsg(ce);
         try {
           e.Body().set_device_details(await this.GetDeviceDetails());
         } catch (e) {
           (console.error(`Failed to GetDeviceDetails`), console.log(e));
         }
-        let t = re();
+        let t = le();
         t && e.Body().set_website_id(t.WEBSITE_ID);
         let n = await N.BeginAuthSessionViaQR(this.m_transport, e),
           r = n.GetEResult(),
@@ -6268,7 +6268,7 @@ var J = {
           request_id: c,
         } = n.Body().toObject();
         return (
-          D(s !== void 0, `Missing poll interval for QR auth session`),
+          k(s !== void 0, `Missing poll interval for QR auth session`),
           (this.m_strClientID = a),
           (this.m_strChallengeURL = o),
           (this.m_msPollInterval = s * 1e3),
@@ -6411,39 +6411,39 @@ function ei(e, t = ``) {
       return { title: ``, description: `` };
     case G.Expired:
       n = {
-        title: A.Localize(`#Login_Error_Expired_Title`),
-        description: A.Localize(`#Login_Error_Expired_Description`),
+        title: f.Localize(`#Login_Error_Expired_Title`),
+        description: f.Localize(`#Login_Error_Expired_Description`),
       };
       break;
     case G.Network:
       n = {
-        title: A.Localize(`#Login_Error_Network_Title`),
-        description: A.Localize(`#Login_Error_Network_Description`),
+        title: f.Localize(`#Login_Error_Network_Title`),
+        description: f.Localize(`#Login_Error_Network_Description`),
       };
       break;
     case G.MoveAuthenticator:
       n = {
-        title: A.Localize(`#Error_Generic`),
-        description: A.Localize(`#Login_Error_MoveAuthenticator_Description`),
+        title: f.Localize(`#Error_Generic`),
+        description: f.Localize(`#Login_Error_MoveAuthenticator_Description`),
       };
       break;
     case G.RateLimitExceeded:
       n = {
-        title: A.Localize(`#Login_Error_RateLimit_Title`),
-        description: A.Localize(`#Login_Error_RateLimit_Description`),
+        title: f.Localize(`#Login_Error_RateLimit_Title`),
+        description: f.Localize(`#Login_Error_RateLimit_Description`),
       };
       break;
     case G.AnonymousLogin:
       n = {
-        title: A.Localize(`#Login_Error_Anonymous_Title`),
-        description: A.Localize(`#Login_Error_Anonymous_Description`),
+        title: f.Localize(`#Login_Error_Anonymous_Title`),
+        description: f.Localize(`#Login_Error_Anonymous_Description`),
       };
       break;
     case G.Generic:
     default:
       n = {
-        title: A.Localize(`#Error_Generic`),
-        description: A.Localize(`#Login_Error_Default_Description`),
+        title: f.Localize(`#Error_Generic`),
+        description: f.Localize(`#Login_Error_Default_Description`),
       };
   }
   return (t && (n.description = t), n);
@@ -6547,7 +6547,7 @@ function ba(e) {
       let n = e.target.nextElementSibling;
       (e.target.value && n && n.focus(), f());
     },
-    h = (e) => {
+    m = (e) => {
       d.current.findIndex((e) => !!e.value) === -1
         ? d.current[0]?.select()
         : e.target.select();
@@ -6591,7 +6591,7 @@ function ba(e) {
   for (let e = 0; e < t; e++)
     y.push(
       (0, X.jsx)(
-        m,
+        ne,
         {
           noFocusRing: !0,
           type: `text`,
@@ -6600,7 +6600,7 @@ function ba(e) {
             t && (d.current[e] = t);
           },
           onChange: p,
-          onFocus: h,
+          onFocus: m,
           onClick: (e) => e.stopPropagation(),
           onKeyDown: _,
           onPaste: v,
@@ -6613,7 +6613,7 @@ function ba(e) {
         e,
       ),
     );
-  return (0, X.jsxs)(b, {
+  return (0, X.jsxs)(h, {
     className: (0, Y.default)(
       va,
       a === `danger` && `faQ-XEuPsJg-`,
@@ -7510,7 +7510,7 @@ function za(e, t, n) {
     (o[s++] = 0),
     (o[s++] = i),
     (o[s++] = 0),
-    D(
+    k(
       t != `transparent` || n != `transparent`,
       `Trying to use transparent for both colors in QR`,
     ),
@@ -7642,11 +7642,11 @@ function Ka(e) {
     } = Yr({
       transport: t,
       onComplete: n,
-      onDeviceDetails: O.IN_STEAMUI ? Xr : Zr,
+      onDeviceDetails: D.IN_STEAMUI ? Xr : Zr,
       preloaded: s,
     });
   (0, K.useEffect)(() => r && r(c), [r, c]);
-  let m = c === 2 && l ? l : O.STORE_BASE_URL,
+  let m = c === 2 && l ? l : D.STORE_BASE_URL,
     h = c === 0 || c === 1 || d,
     g = c === 4,
     _ = c === 3,
@@ -7661,7 +7661,7 @@ function Ka(e) {
   (0, K.useEffect)(() => {
     e.refreshInfo?.login_token_id && p(e.refreshInfo.login_token_id);
   }, [e.refreshInfo, p]);
-  let b = O.EUNIVERSE !== 1,
+  let b = D.EUNIVERSE !== 1,
     x = `rgb(${o}, ${o}, ${o})`;
   return (0, X.jsx)(`div`, {
     className: Wa,
@@ -7710,7 +7710,7 @@ function Ja(e) {
   });
 }
 function Ya(e) {
-  return (0, X.jsx)(ue, {
+  return (0, X.jsx)(ee, {
     color: `dull`,
     variant: `ghost`,
     onClick: e.reset,
@@ -7795,7 +7795,7 @@ function to(e) {
 }
 function no(e) {
   let { embedded: t, children: n, ...r } = e;
-  return (0, X.jsx)(ae, {
+  return (0, X.jsx)(w, {
     children: (0, X.jsx)(Qa.Provider, {
       value: t ?? !1,
       children: (0, X.jsxs)(`div`, {
@@ -7809,10 +7809,10 @@ function ro(e) {
   if (c()) return null;
   let { variant: t } = e;
   return typeof t == `function`
-    ? (0, X.jsx)(Z, { onClick: t, children: A.Localize(`#Login_Help_SignIn`) })
+    ? (0, X.jsx)(Z, { onClick: t, children: f.Localize(`#Login_Help_SignIn`) })
     : (0, X.jsx)(Z, {
-        href: `${O.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(location.href)}`,
-        children: A.Localize(`#Login_Help_SignIn`),
+        href: `${D.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(location.href)}`,
+        children: f.Localize(`#Login_Help_SignIn`),
       });
 }
 function io(e) {
@@ -7821,7 +7821,7 @@ function io(e) {
     return (0, X.jsx)(Z, {
       inline: !0,
       onClick: t,
-      children: A.Localize(`#Login_CreateAccount`),
+      children: f.Localize(`#Login_CreateAccount`),
     });
   {
     let e = n ? `?redir=${encodeURIComponent(n)}` : ``;
@@ -7830,14 +7830,14 @@ function io(e) {
       case `normal`:
         return (0, X.jsx)(Z, {
           inline: !0,
-          href: `${O.STORE_BASE_URL}join/${e}`,
-          children: A.Localize(`#Login_CreateAccount`),
+          href: `${D.STORE_BASE_URL}join/${e}`,
+          children: f.Localize(`#Login_CreateAccount`),
         });
       case `partner`:
         return (0, X.jsx)(Z, {
           inline: !0,
-          href: `${O.PARTNER_BASE_URL}${e}`,
-          children: A.Localize(`#Login_CreateSteamworksAccount`),
+          href: `${D.PARTNER_BASE_URL}${e}`,
+          children: f.Localize(`#Login_CreateSteamworksAccount`),
         });
       case `none`:
         return null;
@@ -7860,7 +7860,7 @@ function ao(e) {
   return (0, X.jsxs)(`div`, {
     className: (0, Y.default)(ua, i && `Kv7QdVcb2UI-`),
     children: [
-      (0, X.jsx)(`span`, { className: da, children: A.Localize(a) }),
+      (0, X.jsx)(`span`, { className: da, children: f.Localize(a) }),
       (0, X.jsx)(io, { variant: n, redirectUrl: r }),
     ],
   });
@@ -7884,27 +7884,27 @@ function so(e) {
       defaultAccountName: l,
       secureComputer: u = !0,
       isProbablySharedPC: d = !1,
-      onShowAgreement: f,
-      creationRedirectUrl: p,
-      preloadedQRSession: m,
+      onShowAgreement: p,
+      creationRedirectUrl: m,
+      preloadedQRSession: h,
     } = e,
-    h = O.IN_STEAMUI ? Xr : Zr,
-    _ = O.IN_STEAMUI ? (e) => SteamClient.Auth.GetSteamGuardData(e) : null,
-    v = oo(),
-    y = $r({
+    g = D.IN_STEAMUI ? Xr : Zr,
+    v = D.IN_STEAMUI ? (e) => SteamClient.Auth.GetSteamGuardData(e) : null,
+    y = oo(),
+    b = $r({
       transport: t,
       platform: r,
       onSuccess: n,
       refreshInfo: a,
-      onDeviceDetails: h,
-      onGetMachineAuth: _,
+      onDeviceDetails: g,
+      onGetMachineAuth: v,
       defaultAccountName: l,
       secureComputer: u,
       isProbablySharedPC: d,
-      onShowAgreement: f,
+      onShowAgreement: p,
     }),
-    b = $a(),
-    x = (0, K.useId)();
+    x = $a(),
+    S = (0, K.useId)();
   if (s != null && s != 1)
     return (0, X.jsx)(`div`, {
       className: ti,
@@ -7912,48 +7912,48 @@ function so(e) {
         reset: () => window.location.reload(),
         failure: G.Generic,
         errorReference: s.toString(),
-        extendedErrorMessage: y.password.strExtendedErrorMessage,
+        extendedErrorMessage: b.password.strExtendedErrorMessage,
       }),
     });
-  let S = O.EREALM !== g.k_ESteamRealmChina;
-  if (!y.bInPasswordFlow) {
+  let C = D.EREALM !== _.k_ESteamRealmChina;
+  if (!b.bInPasswordFlow) {
     let n = (0, X.jsxs)(`div`, {
-      className: (0, Y.default)(ni, b && `rvRWTXNBcK4-`),
+      className: (0, Y.default)(ni, x && `rvRWTXNBcK4-`),
       children: [
         (0, X.jsx)(uo, {
-          strAccountName: y.strAccountName,
-          onAccountNameChange: y.onAccountNameChange,
-          strPassword: y.strPassword,
-          onPasswordChange: y.onPasswordChange,
-          bRememberMe: y.bRememberMe,
-          onRememberMeChange: y.onRememberMeChange,
-          onSubmit: y.onPasswordSubmit,
-          status: y.password.eStatus,
+          strAccountName: b.strAccountName,
+          onAccountNameChange: b.onAccountNameChange,
+          strPassword: b.strPassword,
+          onPasswordChange: b.onPasswordChange,
+          bRememberMe: b.bRememberMe,
+          onRememberMeChange: b.onRememberMeChange,
+          onSubmit: b.onPasswordSubmit,
+          status: b.password.eStatus,
           autoFocus: i,
           secureComputer: u,
           refreshInfo: e.refreshInfo,
         }),
-        S &&
+        C &&
           (0, X.jsx)(po, {
             transport: t,
-            onQRStatusChange: y.onQRStatusChange,
-            onComplete: y.onComplete,
+            onQRStatusChange: b.onQRStatusChange,
+            onComplete: b.onComplete,
             platform: r,
             refreshInfo: a,
-            preloadedQRSession: m,
+            preloadedQRSession: h,
           }),
       ],
     });
-    if (b) {
-      let t = O.IN_STEAMUI,
-        r = ce()?.LAUNCHER_TYPE;
+    if (x) {
+      let t = D.IN_STEAMUI,
+        r = ae()?.LAUNCHER_TYPE;
       return (0, X.jsxs)(Q, {
         className: (0, Y.default)(sa, t && `Kv7QdVcb2UI-`),
         children: [
           !t && !1,
           !e.refreshInfo &&
             (0, X.jsx)(Xo, {
-              realm: O.EREALM,
+              realm: D.EREALM,
               launcherType: r,
               className: `_19NDBszdpt8-`,
               onBack: e.onBack,
@@ -7964,7 +7964,7 @@ function so(e) {
             className: (0, Y.default)(la, t && `Kv7QdVcb2UI-`),
             children: [
               (0, X.jsx)(ro, { variant: e.helpLinkVariant }),
-              (0, X.jsx)(ao, { launcherType: r, variant: c, redirectUrl: p }),
+              (0, X.jsx)(ao, { launcherType: r, variant: c, redirectUrl: m }),
             ],
           }),
         ],
@@ -7981,22 +7981,22 @@ function so(e) {
         !1,
         (0, X.jsx)(`h2`, {
           className: ta,
-          id: x,
+          id: S,
           children: e.refreshInfo
-            ? A.Localize(`#Login_RefreshSignIn`)
-            : A.Localize(`#Login_SignInTitle`),
+            ? f.Localize(`#Login_RefreshSignIn`)
+            : f.Localize(`#Login_SignInTitle`),
         }),
         (0, X.jsx)(co, { refreshInfo: e.refreshInfo }),
       ],
     });
     return (0, X.jsxs)($, {
       title: o,
-      titleId: x,
-      children: [v && (0, X.jsx)(lo, {}), n],
+      titleId: S,
+      children: [y && (0, X.jsx)(lo, {}), n],
     });
   }
-  let C = y.password.eStatus;
-  switch (C) {
+  let w = b.password.eStatus;
+  switch (w) {
     case 13:
       return e.renderLoading
         ? (0, X.jsx)(X.Fragment, { children: e.renderLoading() })
@@ -8006,57 +8006,57 @@ function so(e) {
     case 3:
     case 10:
       return (
-        D(
-          !!y.password.strAccountName,
+        k(
+          !!b.password.strAccountName,
           `Missing account name in login session for status`,
-          C,
+          w,
         ),
         (0, X.jsx)(Io, {
-          type: C === 5 || C === 11 ? `mobile` : `email`,
-          onSubmitCode: y.password.addCode,
-          status: C,
-          associatedLabel: y.password.strConfirmationAssociatedMessage,
-          accountName: y.password.strAccountName,
-          onBack: y.password.goBack,
+          type: w === 5 || w === 11 ? `mobile` : `email`,
+          onSubmitCode: b.password.addCode,
+          status: w,
+          associatedLabel: b.password.strConfirmationAssociatedMessage,
+          accountName: b.password.strAccountName,
+          onBack: b.password.goBack,
           onCodeHelp: e.onCodeHelp,
         })
       );
     case 6:
     case 4:
       return (
-        D(
-          !!y.password.strAccountName,
+        k(
+          !!b.password.strAccountName,
           `Missing account name in login session for status`,
-          C,
+          w,
         ),
         (0, X.jsx)(Go, {
-          type: C === 6 ? `mobile` : `email`,
-          accountName: y.password.strAccountName,
-          onUseCodeOverride: y.password.useCodeOverride,
+          type: w === 6 ? `mobile` : `email`,
+          accountName: b.password.strAccountName,
+          onUseCodeOverride: b.password.useCodeOverride,
           onCodeHelp: e.onCodeHelp,
         })
       );
     case 16:
-      return (0, X.jsx)(Fo, { reset: y.password.reset });
+      return (0, X.jsx)(Fo, { reset: b.password.reset });
     case 15:
       return (0, X.jsx)(Po, {
-        reset: y.password.reset,
-        failure: y.password.eFailureState,
-        onRequestOffline: y.onTryOffline,
-        errorReference: y.password.strErrorReference,
-        extendedErrorMessage: y.password.strExtendedErrorMessage,
+        reset: b.password.reset,
+        failure: b.password.eFailureState,
+        onRequestOffline: b.onTryOffline,
+        errorReference: b.password.strErrorReference,
+        extendedErrorMessage: b.password.strExtendedErrorMessage,
       });
     case 14:
       return (0, X.jsx)($, { compact: !0, children: o() });
     default:
       return (
-        U(`Unknown Phase: ${C}`),
+        U(`Unknown Phase: ${w}`),
         (0, X.jsx)(Po, {
-          reset: y.password.reset,
+          reset: b.password.reset,
           failure: G.Generic,
-          onRequestOffline: y.onTryOffline,
-          errorReference: y.password.strErrorReference,
-          extendedErrorMessage: y.password.strExtendedErrorMessage,
+          onRequestOffline: b.onTryOffline,
+          errorReference: b.password.strErrorReference,
+          extendedErrorMessage: b.password.strExtendedErrorMessage,
         })
       );
   }
@@ -8102,16 +8102,16 @@ function co(e) {
     children: [
       (0, X.jsx)(`div`, {
         className: Qi,
-        children: A.Localize(`#Login_RefreshSignIn`),
+        children: f.Localize(`#Login_RefreshSignIn`),
       }),
-      (0, X.jsx)(`div`, { className: $i, children: A.Localize(t) }),
+      (0, X.jsx)(`div`, { className: $i, children: f.Localize(t) }),
     ],
   });
 }
 function lo() {
   return (0, X.jsx)(`div`, {
     className: ci,
-    children: A.Localize(`#Login_ConfirmCredentials`),
+    children: f.Localize(`#Login_ConfirmCredentials`),
   });
 }
 function uo(e) {
@@ -8128,88 +8128,88 @@ function uo(e) {
       onRememberMeChange: u,
       secureComputer: d = !0,
     } = e,
-    [f, p] = (0, K.useState)(!1),
-    m = $a(),
-    h = rs(),
-    g = () => {
+    [p, m] = (0, K.useState)(!1),
+    h = $a(),
+    g = rs(),
+    _ = () => {
       t().then(() => {
-        h() && p(!1);
+        g() && m(!1);
       });
     },
-    _ = n === 1 || n === 13,
-    v = n === 2 && !f,
-    y = v
-      ? (0, X.jsx)(Ao, { children: A.Localize(`#Login_CheckCredentials`) })
+    v = n === 1 || n === 13,
+    y = n === 2 && !p,
+    b = y
+      ? (0, X.jsx)(Ao, { children: f.Localize(`#Login_CheckCredentials`) })
       : (0, X.jsx)(Ao, { children: `\xA0` }),
-    b = r && !a,
-    x = r && !!a,
-    S = !!e.refreshInfo,
-    C = (0, K.useId)(),
-    w = (0, K.useId)();
+    x = r && !a,
+    S = r && !!a,
+    C = !!e.refreshInfo,
+    w = (0, K.useId)(),
+    T = (0, K.useId)();
   return (0, X.jsxs)(Ko, {
-    onSubmit: g,
+    onSubmit: _,
     className: bi,
     children: [
       (0, X.jsx)(yo, {
-        tone: v ? `danger` : void 0,
+        tone: y ? `danger` : void 0,
         label: (0, X.jsx)(bo, {
           highlight: !0,
-          inputId: C,
-          children: A.Localize(`#Login_SignIn_WithAccountName`),
+          inputId: w,
+          children: f.Localize(`#Login_SignIn_WithAccountName`),
         }),
         value: a,
         onChange: (e) => {
-          (p(!0), o(e));
+          (m(!0), o(e));
         },
-        autoFocus: b,
-        disabled: S,
-        id: C,
+        autoFocus: x,
+        disabled: C,
+        id: w,
       }),
       (0, X.jsx)(yo, {
-        tone: v ? `danger` : void 0,
+        tone: y ? `danger` : void 0,
         label: (0, X.jsx)(bo, {
-          inputId: w,
-          children: A.Localize(`#Login_Password`),
+          inputId: T,
+          children: f.Localize(`#Login_Password`),
         }),
         value: s,
         onChange: (e) => {
-          (p(!0), c(e));
+          (m(!0), c(e));
         },
         type: `password`,
-        autoFocus: x,
-        id: w,
+        autoFocus: S,
+        id: T,
       }),
       d
         ? (0, X.jsx)(Co, {
-            label: A.Localize(`#Login_RememberMe_Short`),
-            title: A.Localize(`#Login_RememberMe_Tooltip`),
+            label: f.Localize(`#Login_RememberMe_Short`),
+            title: f.Localize(`#Login_RememberMe_Tooltip`),
             value: l,
             onChange: u,
           })
         : (0, X.jsx)(`div`, {
             className: ea,
-            children: A.Localize(`#Login_InsecureComputer`),
+            children: f.Localize(`#Login_InsecureComputer`),
           }),
-      (0, X.jsx)(To, { loading: _, refreshLogin: S }),
-      y,
-      !m &&
+      (0, X.jsx)(To, { loading: v, refreshLogin: C }),
+      b,
+      !h &&
         (0, X.jsx)(Z, {
-          href: `${O.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(location.href)}`,
+          href: `${D.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(location.href)}`,
           align: `center`,
-          children: A.Localize(`#Login_Help_SignIn`),
+          children: f.Localize(`#Login_Help_SignIn`),
         }),
     ],
   });
 }
 var fo = 700;
 function po(e) {
-  let t = se(),
+  let t = b(),
     [n, r] = (0, K.useState)(!1);
   return (
     (0, K.useLayoutEffect)(() => {
       r(t.ownerWindow.screen.width < fo);
     }, [t.ownerWindow]),
-    u(t.ownerWindow, `resize`, () => {
+    ie(t.ownerWindow, `resize`, () => {
       r(t.ownerWindow.screen.width < fo);
     }),
     (0, X.jsx)(`div`, {
@@ -8220,7 +8220,7 @@ function po(e) {
 }
 function mo(e) {
   let t =
-    O.STORE_BASE_URL +
+    D.STORE_BASE_URL +
     `join/?guest=1&purchaseType=gift&checkout=1&redir=` +
     encodeURIComponent(e.redirectURL);
   return (0, X.jsx)(`div`, {
@@ -8232,8 +8232,8 @@ function mo(e) {
         children: [
           (0, X.jsx)(`div`, {
             className: oi,
-            children: f(
-              A.Localize(`#Login_Guest`),
+            children: te(
+              f.Localize(`#Login_Guest`),
               (0, X.jsx)(`a`, {
                 href: `${t}`,
                 style: { textDecoration: `underline` },
@@ -8245,7 +8245,7 @@ function mo(e) {
             href: `${t}`,
             children: (0, X.jsx)(`button`, {
               className: Ai,
-              children: A.Localize(`#Login_GuestContinue`),
+              children: f.Localize(`#Login_GuestContinue`),
             }),
           }),
         ],
@@ -8268,25 +8268,25 @@ function _o(e) {
     children: [
       (0, X.jsx)(`div`, {
         className: di,
-        children: A.Localize(`#Login_MobileFlow_New`),
+        children: f.Localize(`#Login_MobileFlow_New`),
       }),
       (0, X.jsx)(`div`, {
         className: fi,
         children: (0, X.jsx)(`div`, {
           className: fi,
-          children: A.Localize(`#Login_MobileFlow_SignIn_ScanQR`),
+          children: f.Localize(`#Login_MobileFlow_SignIn_ScanQR`),
         }),
       }),
       (0, X.jsx)(`button`, {
         type: `button`,
         className: pi,
         onClick: () => e.setShowQR(!0),
-        children: A.Localize(`#Login_MobileFlow_ShowMeQR_Button`),
+        children: f.Localize(`#Login_MobileFlow_ShowMeQR_Button`),
       }),
       (0, X.jsx)(`a`, {
-        href: `${O.STORE_BASE_URL}mobile`,
+        href: `${D.STORE_BASE_URL}mobile`,
         className: mi,
-        children: A.Localize(`#Login_JoinBeta_Button`),
+        children: f.Localize(`#Login_JoinBeta_Button`),
       }),
     ],
   });
@@ -8307,7 +8307,7 @@ function vo(e) {
     children: [
       (0, X.jsx)(bo, {
         highlight: !0,
-        children: A.Localize(`#Login_SignIn_OrWithQRCode`),
+        children: f.Localize(`#Login_SignIn_OrWithQRCode`),
       }),
       (0, X.jsx)(`div`, {
         className: gi,
@@ -8326,13 +8326,13 @@ function vo(e) {
           type: `button`,
           className: `X1WW6U5nVKQ-`,
           onClick: () => c(!1),
-          children: A.Localize(`#Button_Hide`),
+          children: f.Localize(`#Button_Hide`),
         }),
       (0, X.jsx)(`div`, {
         className: _i,
-        children: f(
-          A.Localize(`#Login_UseMobileAppForQR_Inline`),
-          (0, X.jsx)(Z, { href: `${O.STORE_BASE_URL}mobile`, align: `center` }),
+        children: te(
+          f.Localize(`#Login_UseMobileAppForQR_Inline`),
+          (0, X.jsx)(Z, { href: `${D.STORE_BASE_URL}mobile`, align: `center` }),
         ),
       }),
     ],
@@ -8434,7 +8434,7 @@ function To(e) {
 function Eo(e) {
   return (0, X.jsx)(`div`, {
     className: Ei,
-    children: (0, X.jsx)(Oo, { ...e, children: A.Localize(`#Login_SignIn`) }),
+    children: (0, X.jsx)(Oo, { ...e, children: f.Localize(`#Login_SignIn`) }),
   });
 }
 function Do() {
@@ -8444,12 +8444,12 @@ function Do() {
       (0, X.jsx)(`button`, {
         className: ji,
         type: `submit`,
-        children: A.Localize(`#Login_SignIn`),
+        children: f.Localize(`#Login_SignIn`),
       }),
       (0, X.jsx)(`button`, {
         className: Di,
         onClick: () => SteamClient.User.StartShutdown(!0),
-        children: A.Localize(`#Login_ExitSteam`),
+        children: f.Localize(`#Login_ExitSteam`),
       }),
     ],
   });
@@ -8483,13 +8483,13 @@ function jo() {
     compact: !0,
     children: (0, X.jsxs)(Q, {
       alignItems: `center`,
-      className: (0, Y.default)(_a, O.IN_STEAMUI && `ZV64fnc7PdA-`),
+      className: (0, Y.default)(_a, D.IN_STEAMUI && `ZV64fnc7PdA-`),
       children: [
         (0, X.jsx)(l, { size: `xlarge` }),
         (0, X.jsx)(`div`, {
           className: (0, Y.default)(Ri),
-          children: A.Localize(
-            O.IN_STEAMUI
+          children: f.Localize(
+            D.IN_STEAMUI
               ? `#Login_ConnectingToSteam`
               : `#Login_LoadingAccountInfo`,
           ),
@@ -8515,7 +8515,7 @@ function No(e) {
     children: (0, X.jsx)(`button`, {
       className: Oi,
       onClick: e.onRequestOffline,
-      children: A.Localize(`#Login_GoOffline_Button`),
+      children: f.Localize(`#Login_GoOffline_Button`),
     }),
   });
 }
@@ -8528,7 +8528,7 @@ function Po(e) {
       extendedErrorMessage: a,
     } = e,
     { title: o, description: s } = ei(n, a),
-    c = O.IN_STEAMUI && n == G.Network;
+    c = D.IN_STEAMUI && n == G.Network;
   return (0, X.jsxs)($, {
     compact: !0,
     children: [
@@ -8541,7 +8541,7 @@ function Po(e) {
           c &&
             (0, X.jsx)(`div`, {
               className: `sH-b0kW7QCY-`,
-              children: A.Localize(`#Login_GoOffline_Description`),
+              children: f.Localize(`#Login_GoOffline_Description`),
             }),
           (0, X.jsxs)(qo, {
             className: ma,
@@ -8549,7 +8549,7 @@ function Po(e) {
               (0, X.jsx)(ko, {
                 className: ki,
                 onClick: t,
-                children: A.Localize(`#Button_Retry`),
+                children: f.Localize(`#Button_Retry`),
               }),
               c && r && (0, X.jsx)(No, { onRequestOffline: r }),
             ],
@@ -8559,7 +8559,7 @@ function Po(e) {
       i &&
         (0, X.jsx)(`div`, {
           className: `La0SBF0lXr0-`,
-          children: A.Localize(`#Login_Error_Reference`, i),
+          children: f.Localize(`#Login_Error_Reference`, i),
         }),
     ],
   });
@@ -8579,47 +8579,47 @@ function Io(e) {
     } = e,
     [s, c] = (0, K.useState)([]),
     [l, u] = (0, K.useState)(!1),
-    [d, f] = (0, K.useState)(!1),
-    [p, m] = (0, K.useState)(!1),
-    [h, g] = (0, K.useState)(0),
-    _ = t === `mobile`,
-    v = s.join(``),
-    y = qr(v, p),
-    b = (e) => {
-      (f(!0),
+    [d, p] = (0, K.useState)(!1),
+    [m, h] = (0, K.useState)(!1),
+    [g, _] = (0, K.useState)(0),
+    v = t === `mobile`,
+    y = s.join(``),
+    b = qr(y, m),
+    x = (e) => {
+      (p(!0),
         n(e).then(() => {
-          (u(!1), f(!1));
+          (u(!1), p(!1));
         }));
     },
-    x = (e) => {
+    S = (e) => {
       (l || u(!0), c(e));
       let t = e.join(``);
-      qr(t, p) && b(t);
-    },
-    S = () => {
-      y && b(v);
+      qr(t, m) && x(t);
     },
     C = () => {
-      (m(!p), c([]), n(``), g(h + 1));
+      b && x(y);
     },
-    w = !l && (r === 11 || r === 10),
-    T,
+    w = () => {
+      (h(!m), c([]), n(``), _(g + 1));
+    },
+    T = !l && (r === 11 || r === 10),
+    E,
     ee;
   return (
-    p
+    m
       ? t === `mobile`
-        ? ((ee = (0, X.jsx)(Ro, {})), (T = `#Login_UseMobileCode`))
-        : ((ee = (0, X.jsx)(Ro, {})), (T = `#Login_UseEmailCode`))
+        ? ((ee = (0, X.jsx)(Ro, {})), (E = `#Login_UseMobileCode`))
+        : ((ee = (0, X.jsx)(Ro, {})), (E = `#Login_UseEmailCode`))
       : ((ee =
           t === `mobile`
             ? (0, X.jsx)(zo, {})
             : (0, X.jsx)(Bo, { emailAddress: a })),
-        (T = `#Login_UseBackupCode`)),
+        (E = `#Login_UseBackupCode`)),
     (0, X.jsx)($, {
       title: (0, X.jsx)(Xo, {}),
       compact: !0,
       children: (0, X.jsx)(Ko, {
-        onSubmit: S,
+        onSubmit: C,
         children: (0, X.jsxs)(Q, {
           alignItems: `center`,
           gap: 14,
@@ -8632,31 +8632,31 @@ function Io(e) {
                   alignItems: `center`,
                   gap: 2,
                   children: [
-                    w &&
+                    T &&
                       (0, X.jsx)(Ao, {
-                        children: A.Localize(`#Login_IncorrectSteamGuard`),
+                        children: f.Localize(`#Login_IncorrectSteamGuard`),
                       }),
                     (0, X.jsx)(
                       Jo,
                       {
                         value: s,
-                        onChange: x,
-                        tone: w ? `danger` : void 0,
+                        onChange: S,
+                        tone: T ? `danger` : void 0,
                         loading: d,
-                        backupCode: p,
+                        backupCode: m,
                       },
-                      h,
+                      g,
                     ),
                   ],
                 }),
                 ee,
               ],
             }),
-            _ &&
+            v &&
               (0, X.jsx)(Z, {
-                onClick: C,
+                onClick: w,
                 align: `center`,
-                children: A.Localize(T),
+                children: f.Localize(E),
               }),
             (0, X.jsx)(Lo, { type: t, onCodeHelp: e.onCodeHelp }),
           ],
@@ -8670,10 +8670,10 @@ function Lo(e) {
   let t, n;
   return (
     e.type === `mobile`
-      ? ((t = `${O.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`),
-        (n = A.Localize(`#Login_Help_AccessMobileApp`)))
-      : ((t = `${O.HELP_BASE_URL}wizard/HelpWithSteamGuardCode`),
-        (n = A.Localize(`#Login_Help_AccessEmail`))),
+      ? ((t = `${D.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`),
+        (n = f.Localize(`#Login_Help_AccessMobileApp`)))
+      : ((t = `${D.HELP_BASE_URL}wizard/HelpWithSteamGuardCode`),
+        (n = f.Localize(`#Login_Help_AccessEmail`))),
     e.onCodeHelp
       ? (0, X.jsx)(Z, {
           onClick: () => e.onCodeHelp(t),
@@ -8692,11 +8692,11 @@ function Ro() {
       children: [
         (0, X.jsx)(`div`, {
           className: Yi,
-          children: A.Localize(`#Login_EnterBackupCode`),
+          children: f.Localize(`#Login_EnterBackupCode`),
         }),
         (0, X.jsx)(`div`, {
           className: Ii,
-          children: A.Localize(`#Login_EnterBackupCodeDescription`),
+          children: f.Localize(`#Login_EnterBackupCodeDescription`),
         }),
       ],
     }),
@@ -8710,7 +8710,7 @@ function zo() {
     children: [
       (0, X.jsx)(`div`, {
         className: Yi,
-        children: A.Localize(`#Login_EnterMobileCode`),
+        children: f.Localize(`#Login_EnterMobileCode`),
       }),
       (0, X.jsx)(Uo, { className: Hi }),
     ],
@@ -8727,7 +8727,7 @@ function Bo(e) {
         spacing: 6,
         children: (0, X.jsx)(`div`, {
           className: Xi,
-          children: A.LocalizeReact(
+          children: f.LocalizeReact(
             `#Login_EnterEmailCode`,
             (0, X.jsx)(`span`, { className: Zi, children: e.emailAddress }),
           ),
@@ -8741,15 +8741,15 @@ function Vo(e) {
   let { accountName: t, type: n } = e,
     r =
       n === `mobile`
-        ? A.Localize(`#Login_MobileProtectingAccount`)
-        : A.Localize(`#Login_EmailProtectingAccount`),
+        ? f.Localize(`#Login_MobileProtectingAccount`)
+        : f.Localize(`#Login_EmailProtectingAccount`),
     i = $a();
   return (0, X.jsxs)(`div`, {
     className: Fi,
     children: [
       (0, X.jsx)(`div`, {
         className: Ii,
-        children: A.LocalizeReact(
+        children: f.LocalizeReact(
           `#Login_ActiveAccountName`,
           (0, X.jsx)(`span`, { className: Li, children: t }),
         ),
@@ -8764,10 +8764,10 @@ function Ho() {
     children: (0, X.jsxs)(`div`, {
       className: zi,
       children: [
-        (0, X.jsx)(`img`, { src: te(wa), alt: `` }),
+        (0, X.jsx)(`img`, { src: oe(wa), alt: `` }),
         (0, X.jsx)(`div`, {
           className: Bi,
-          children: f(A.Localize(`#Login_AwaitingMobileConfirmation`)),
+          children: te(f.Localize(`#Login_AwaitingMobileConfirmation`)),
         }),
       ],
     }),
@@ -8829,7 +8829,7 @@ function Go(e) {
           children: (0, X.jsx)(Z, {
             align: `center`,
             onClick: r,
-            children: A.Localize(`#Login_EnterCodeInstead`),
+            children: f.Localize(`#Login_EnterCodeInstead`),
           }),
         })
       : (0, X.jsx)(`div`, {
@@ -8837,14 +8837,14 @@ function Go(e) {
           children: (0, X.jsx)(Z, {
             align: `center`,
             onClick: r,
-            children: A.Localize(`#Login_EnterCodeInstead`),
+            children: f.Localize(`#Login_EnterCodeInstead`),
           }),
         });
   return (0, X.jsx)($, {
     title: (0, X.jsx)(Xo, {}),
     compact: !0,
     children: (0, X.jsxs)(Q, {
-      gap: O.IN_STEAMUI ? 24 : 40,
+      gap: D.IN_STEAMUI ? 24 : 40,
       children: [
         (0, X.jsx)(Vo, { type: t, accountName: n }),
         (0, X.jsx)(Ho, {}),
@@ -8857,7 +8857,7 @@ function Z(e) {
   let { children: t, align: n, inline: r } = e,
     i = (0, Y.default)(Mi, n === `center` && `p1pxbjr1kTM-`);
   if (`href` in e) {
-    let n = O.IN_STEAMUI ? `steam://openurl_external/${e.href}` : e.href;
+    let n = D.IN_STEAMUI ? `steam://openurl_external/${e.href}` : e.href;
     return (0, X.jsx)(`a`, { className: i, href: n, children: t });
   }
   return (0, X.jsx)(r ? `span` : `div`, {
@@ -8942,12 +8942,12 @@ function $(e) {
     a = $a(),
     o = (0, K.useId)();
   return (0, X.jsxs)(Q, {
-    gap: O.IN_STEAMUI ? 0 : 32,
+    gap: D.IN_STEAMUI ? 0 : 32,
     className: (0, Y.default)(
       ai,
       a && `rvRWTXNBcK4-`,
       i && `L35Fcv9fbYo-`,
-      O.IN_STEAMUI && `IN_CLIENT`,
+      D.IN_STEAMUI && `IN_CLIENT`,
     ),
     ariaLabelledBy: n ?? o,
     children: [
@@ -8960,8 +8960,8 @@ function $(e) {
 }
 function Xo(e) {
   let {
-    realm: t = O.EREALM,
-    launcherType: n = ce()?.LAUNCHER_TYPE,
+    realm: t = D.EREALM,
+    launcherType: n = ae()?.LAUNCHER_TYPE,
     className: r = ra,
   } = e;
   return n === 8
@@ -8970,7 +8970,7 @@ function Xo(e) {
         className: ia,
         children: [
           (0, X.jsx)(Zo, { onBack: e.onBack }),
-          t === g.k_ESteamRealmChina
+          t === _.k_ESteamRealmChina
             ? (0, X.jsx)($o, { className: r })
             : (0, X.jsx)(Qo, { className: r }),
           ` `,
@@ -8983,7 +8983,7 @@ function Zo(e) {
         type: `button`,
         className: aa,
         onClick: e.onBack,
-        "aria-label": A.Localize(`#Button_Back`),
+        "aria-label": f.Localize(`#Button_Back`),
         children: (0, X.jsx)(Sa, { className: oa }),
       })
     : null;
@@ -9125,7 +9125,7 @@ function ts(e) {
 async function ns(e) {
   let t = new FormData();
   t.append(`redir`, e);
-  let n = `${O.LOGIN_BASE_URL}jwt/ajaxrefresh`,
+  let n = `${D.LOGIN_BASE_URL}jwt/ajaxrefresh`,
     r = await W.default.post(n, t, { timeout: 1e4, withCredentials: !0 });
   if (r.status !== 200 || !r?.data?.success) return !1;
   let { success: i, login_url: a, error: o, ...s } = r.data,

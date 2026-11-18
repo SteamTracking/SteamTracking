@@ -22247,7 +22247,7 @@ function ry(e) {
   let t = Yv() == `blocked` && !!e,
     { data: n } = Iu(t ? { appid: e } : void 0);
   return t
-    ? !n ||
+    ? !n?.content_descriptorids ||
         n.content_descriptorids.includes(3) ||
         n.content_descriptorids.includes(4)
     : !1;

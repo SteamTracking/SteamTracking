@@ -6,14 +6,14 @@ import { Ft as t, K as n, ot as r } from "./chunk~01cfc309bf.js";
 import { l as i } from "./chunk~1e67c3e4e4.js";
 import { t as a } from "./chunk~eefd71512b.js";
 import {
-  $ as o,
-  Eu as s,
-  N as c,
-  bm as l,
-  hl as u,
-  k as d,
-  nm as f,
-  sh as p,
+  N as o,
+  Q as s,
+  Tu as c,
+  k as l,
+  ml as u,
+  oh as d,
+  tm as f,
+  ym as p,
 } from "./main.js";
 var m = `_9-W7SdmsKXY-`,
   h = `ek4QiIo5ajA-`,
@@ -42,7 +42,7 @@ function S(e) {
     !t.isSuccess || !t.data?.subjects || t.data.subjects.length === 0)
   )
     return null;
-  let c = () => {
+  let o = () => {
       (r ? localStorage.removeItem(n) : localStorage.setItem(n, `1`), i(!r));
     },
     l = 0;
@@ -60,11 +60,11 @@ function S(e) {
               children: [
                 (0, b.jsx)(`div`, {
                   className: `title`,
-                  children: o.Localize(`#reportedsubjectlist_header`),
+                  children: s.Localize(`#reportedsubjectlist_header`),
                 }),
                 (0, b.jsx)(`button`, {
                   className: g,
-                  onClick: c,
+                  onClick: o,
                   children: (0, b.jsx)(u, {}),
                 }),
               ],
@@ -89,7 +89,7 @@ function S(e) {
                   : (0, b.jsx)(
                       `div`,
                       {
-                        className: s(`moderatorToolLink`, `-LcpvovFNxA-`),
+                        className: c(`moderatorToolLink`, `-LcpvovFNxA-`),
                         children: `Bug - inform Valve`,
                       },
                       `bad-${l++}`,
@@ -152,38 +152,38 @@ function E(e) {
         }
   }
   i === null && (i = `[Comment]`);
-  let c;
+  let o;
   t.subject_type === 1
-    ? (c = r === `0` ? `#forum_op_${t.coordinates?.topic}` : `#c${r}`)
-    : t.subject_type === 2 && (c = `#comment_${r}`);
-  let u = t.unresolved_dispute_count > 0 || t.unresolved_report_count > 0,
-    d = t.required_moderator_level === 10,
-    f = t.required_moderator_level === 1;
+    ? (o = r === `0` ? `#forum_op_${t.coordinates?.topic}` : `#c${r}`)
+    : t.subject_type === 2 && (o = `#comment_${r}`);
+  let l = t.unresolved_dispute_count > 0 || t.unresolved_report_count > 0,
+    u = t.required_moderator_level === 10,
+    d = t.required_moderator_level === 1;
   return (0, b.jsxs)(`div`, {
-    className: s(`moderatorToolLink`, _),
+    className: c(`moderatorToolLink`, _),
     children: [
       (0, b.jsxs)(`a`, {
-        href: c,
+        href: o,
         children: [
-          u &&
+          l &&
+            !u &&
             !d &&
-            !f &&
             (0, b.jsx)(`img`, {
               className: `pSFLKLsjgbM-`,
-              src: `${l.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+              src: `${p.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
             }),
-          !u &&
+          !l &&
             (0, b.jsx)(`span`, { className: `pSFLKLsjgbM-`, children: `\xA0` }),
-          u &&
-            d &&
+          l &&
+            u &&
             (0, b.jsx)(`span`, {
-              className: s(`pSFLKLsjgbM-`, `W8Ft0tBdYIM-`),
+              className: c(`pSFLKLsjgbM-`, `W8Ft0tBdYIM-`),
               children: `VO`,
             }),
-          u &&
-            f &&
+          l &&
+            d &&
             (0, b.jsx)(`span`, {
-              className: s(`pSFLKLsjgbM-`, `sERoHMrC-4o-`),
+              className: c(`pSFLKLsjgbM-`, `sERoHMrC-4o-`),
               children: `▲`,
             }),
           `\xA0`,
@@ -196,7 +196,7 @@ function E(e) {
         className: v,
         children: [
           `\xA0`,
-          o.Localize(
+          s.Localize(
             `#forumsubjectlist_subjectreportsummary`,
             t.unresolved_report_count,
             t.unresolved_dispute_count,
@@ -211,7 +211,7 @@ function D(e, t, r, i) {
   return n({
     queryKey: [`comment_thread`, e, t, r, i],
     queryFn: async () => {
-      let n = p.Init(d);
+      let n = d.Init(l);
       return (
         n.Body().set_steamid(e),
         n.Body().set_comment_thread_type(t),
@@ -219,7 +219,7 @@ function D(e, t, r, i) {
         i !== -1 && n.Body().set_gidfeature2(i),
         n.Body().set_include_deleted(!0),
         n.Body().set_oldest_first(!0),
-        (await c.GetCommentThread(a, n)).Body().toObject()
+        (await o.GetCommentThread(a, n)).Body().toObject()
       );
     },
   });

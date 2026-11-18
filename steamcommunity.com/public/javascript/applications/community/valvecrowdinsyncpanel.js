@@ -7,27 +7,27 @@ import { t as r } from "./chunk~eefd71512b.js";
 import { c as i } from "./chunk~91ae5e1167.js";
 import { D as a, E as o, M as s } from "./chunk~2bb3c0c267.js";
 import {
-  Dn as c,
-  Eu as l,
-  Ji as u,
-  Km as d,
-  Ni as f,
-  Qd as p,
-  Qh as m,
-  Uf as h,
-  Wr as g,
-  Zm as _,
-  ds as v,
-  ea as y,
-  gu as b,
-  if as x,
-  nh as S,
+  $i as c,
+  En as l,
+  Gm as u,
+  Hf as d,
+  Ki as f,
+  Mi as p,
+  Tu as m,
+  Ur as h,
+  Xm as g,
+  Zd as _,
+  Zh as v,
+  bs as y,
+  ef as b,
+  eh as x,
+  hu as S,
   qi as C,
-  tf as w,
+  rf as w,
   th as T,
-  v as E,
-  xs as D,
-  ys as O,
+  us as E,
+  v as D,
+  vs as O,
 } from "./main.js";
 import { f as k, p as A } from "./chunk~bf4b546728.js";
 var j = e(t()),
@@ -40,7 +40,7 @@ var j = e(t()),
     }
     SetLocalization(e, t, n) {
       let r = this.m_mapTokens.get(e);
-      (r || ((r = m([], 32, null)), this.m_mapTokens.set(e, r)), (r[t] = n));
+      (r || ((r = v([], 32, null)), this.m_mapTokens.set(e, r)), (r[t] = n));
     }
     GetSortedTokenList() {
       let e = [];
@@ -95,7 +95,7 @@ var j = e(t()),
           ? (t = this.ReadLocalizationData_CSV_TokenLanguageList(e))
           : e?.meta?.fields?.length >= 2 &&
               e.meta.fields[0] === `field` &&
-              S(e.meta.fields[1], -1) != -1
+              T(e.meta.fields[1], -1) != -1
             ? (t = this.ReadLocalizationData_CSV_LanguageColumns(e))
             : e?.meta?.fields?.length >= 2 &&
               e.meta.fields[0] === `language` &&
@@ -123,7 +123,7 @@ var j = e(t()),
       return (
         e.data.forEach((e) => {
           let n = e.field,
-            r = S(e.language);
+            r = T(e.language);
           t.SetLocalization(n, r, e.value);
         }),
         t
@@ -135,7 +135,7 @@ var j = e(t()),
         e.data.forEach((e) => {
           let n = e.field;
           for (let r = 0; r < 32; ++r) {
-            let i = T(_(r));
+            let i = x(g(r));
             t.SetLocalization(n, r, e[i]);
           }
         }),
@@ -146,7 +146,7 @@ var j = e(t()),
       let t = new N();
       return (
         e.data.forEach((e) => {
-          let n = S(e.language, 32);
+          let n = T(e.language, 32);
           if (n !== 32)
             for (let [r, i] of Object.entries(e))
               r !== `language` &&
@@ -157,14 +157,14 @@ var j = e(t()),
       );
     }
     GetExportLanguages() {
-      return p.GetLanguageListForRealms([d.k_ESteamRealmGlobal]);
+      return _.GetLanguageListForRealms([u.k_ESteamRealmGlobal]);
     }
     WriteLocalizationData_CSV_TokenAndLanguageColumns(e, t) {
       let n = [];
       (e.GetSortedTokenList().forEach((t) => {
         for (let r of this.GetExportLanguages()) {
           let i = { field: t };
-          ((i.language = T(_(r))),
+          ((i.language = x(g(r))),
             (i.value = e.GetLocalization(t, r)),
             n.push(i));
         }
@@ -176,7 +176,7 @@ var j = e(t()),
       (e.GetSortedTokenList().forEach((t) => {
         let r = { field: t };
         for (let n of this.GetExportLanguages())
-          r[T(_(n))] = e.GetLocalization(t, n);
+          r[x(g(n))] = e.GetLocalization(t, n);
         n.push(r);
       }),
         o.WriteCSVToFile(n, t));
@@ -185,7 +185,7 @@ var j = e(t()),
       let n = [];
       for (let e of this.GetExportLanguages())
         (n.length <= e - 1 && n.push({ language: `` }),
-          n.push({ language: T(_(e)) }));
+          n.push({ language: x(g(e)) }));
       (e.GetSortedTokenList().forEach((t) => {
         for (let r of this.GetExportLanguages()) {
           let i = e.GetLocalization(t, r);
@@ -229,7 +229,7 @@ var j = e(t()),
           c.WriteLocalizationData_XML_SingleLanguage(
             s,
             o,
-            l + `_` + T(_(o)) + `.xml`,
+            l + `_` + x(g(o)) + `.xml`,
           );
       }
       i && i();
@@ -239,24 +239,24 @@ var j = e(t()),
         !!e.bShowCSV &&
           (0, L.jsxs)(j.Fragment, {
             children: [
-              (0, L.jsx)(v, {
+              (0, L.jsx)(E, {
                 onClick: (e) => t(e, `csv_row`),
-                children: x(`#Localization_Export_Btn_RowLanguages`),
+                children: w(`#Localization_Export_Btn_RowLanguages`),
               }),
-              (0, L.jsx)(v, {
+              (0, L.jsx)(E, {
                 onClick: (e) => t(e, `csv_column`),
-                children: x(`#Localization_Export_Btn_ColumnLanguages`),
+                children: w(`#Localization_Export_Btn_ColumnLanguages`),
               }),
-              (0, L.jsx)(v, {
+              (0, L.jsx)(E, {
                 onClick: (e) => t(e, `csv_token`),
-                children: x(`#Localization_Export_Btn_TokenLanguages`),
+                children: w(`#Localization_Export_Btn_TokenLanguages`),
               }),
             ],
           }),
         !!e.bShowXML &&
-          (0, L.jsx)(v, {
+          (0, L.jsx)(E, {
             onClick: (e) => t(e, `xml`),
-            children: x(`#Localization_Export_Btn_XML`),
+            children: w(`#Localization_Export_Btn_XML`),
           }),
       ],
     });
@@ -269,11 +269,11 @@ var j = e(t()),
             `ImportLocalizationAction: On Handle Parse error: ` + e.message,
             e,
           ),
-          y(
-            (0, L.jsx)(u, {
+          c(
+            (0, L.jsx)(C, {
               children: (0, L.jsxs)(`div`, {
                 children: [
-                  (0, L.jsx)(`p`, { children: x(`#Localization_Error_Input`) }),
+                  (0, L.jsx)(`p`, { children: w(`#Localization_Error_Input`) }),
                   (0, L.jsx)(`p`, { children: e.message }),
                 ],
               }),
@@ -285,17 +285,17 @@ var j = e(t()),
         n(!1);
         let t = ``;
         (e.forEach((e) => {
-          (t.length > 0 && (t += `, `), (t += x(`#Language_` + _(e))));
+          (t.length > 0 && (t += `, `), (t += w(`#Language_` + g(e))));
         }),
-          y(
-            (0, L.jsx)(C, {
-              strTitle: x(`#EventDisplay_Share_Success`),
+          c(
+            (0, L.jsx)(f, {
+              strTitle: w(`#EventDisplay_Share_Success`),
               bAlertDialog: !0,
               children: (0, L.jsx)(`div`, {
                 children:
                   t.length == 0
-                    ? x(`#Localization_Success_ImportComplete_NoChange`)
-                    : x(`#Localization_Success_ImportComplete`, t),
+                    ? w(`#Localization_Success_ImportComplete_NoChange`)
+                    : w(`#Localization_Success_ImportComplete`, t),
               }),
             }),
             window,
@@ -323,7 +323,7 @@ var j = e(t()),
                       });
                       return;
                     }
-                    let r = p.GetLanguageListForRealms([d.k_ESteamRealmGlobal]),
+                    let r = _.GetLanguageListForRealms([u.k_ESteamRealmGlobal]),
                       i = e.fnOnImportLocData(n, r);
                     o(i);
                   },
@@ -336,7 +336,7 @@ var j = e(t()),
                 if (o == null || o == -1) {
                   a({
                     code: ``,
-                    message: x(`#Localization_Error_FileLangauage`, r[n].name),
+                    message: w(`#Localization_Error_FileLangauage`, r[n].name),
                     row: 0,
                     type: `filenameerror`,
                   });
@@ -351,10 +351,10 @@ var j = e(t()),
                     t.indexOf(e) == -1 && t.push(e);
                   });
                 } catch (e) {
-                  let t = h(e);
+                  let t = d(e);
                   a({
                     code: ``,
-                    message: x(
+                    message: w(
                       `#Localization_Error_XMLParseError`,
                       t.strErrorMsg,
                     ),
@@ -366,7 +366,7 @@ var j = e(t()),
               } else
                 a({
                   code: ``,
-                  message: x(`#Localization_Error_FileExtention`, r[n].name),
+                  message: w(`#Localization_Error_FileExtention`, r[n].name),
                   row: 0,
                   type: `filenameerror`,
                 });
@@ -374,8 +374,8 @@ var j = e(t()),
           o(t);
         }
       };
-    return (0, L.jsx)(D, {
-      className: l(e.className ? e.className : c),
+    return (0, L.jsx)(y, {
+      className: m(e.className ? e.className : l),
       toolTipContent: e.strToolTip,
       children: (0, L.jsxs)(`label`, {
         className: I,
@@ -384,7 +384,7 @@ var j = e(t()),
           t && (0, L.jsx)(r, { size: `small` }),
           (0, L.jsx)(`div`, {
             className: F,
-            children: x(e.strLabel ? e.strLabel : `#Localization_Import_Btn`),
+            children: w(e.strLabel ? e.strLabel : `#Localization_Import_Btn`),
           }),
           (0, L.jsx)(`input`, {
             id: `importlocalization`,
@@ -412,67 +412,68 @@ function Y(e) {
   let { editModel: t } = e,
     [n, i] = j.useState(-1),
     [a, o] = j.useState(!1),
-    [l, u] = j.useState(null),
+    [c, u] = j.useState(null),
     d = (e) => {
       let t = e.target.value;
       if (t === `all`) i(-1);
       else {
-        let e = S(t);
+        let e = T(t);
         i(e);
       }
     },
-    p = t.GetClanSteamID(),
+    f = t.GetClanSteamID(),
     m = t.GetGID(),
-    h = k(p, m),
+    g = k(f, m),
     [, _] = j.useReducer((e) => e + 1, 0),
     v =
-      h.isSuccess && h.data?.crowdin_project_id && h.data?.crowdin_file_id
-        ? `https://valve.crowdin.com/editor/${h.data.crowdin_project_id}/${h.data.crowdin_file_id}`
+      g.isSuccess && g.data?.crowdin_project_id && g.data?.crowdin_file_id
+        ? `https://valve.crowdin.com/editor/${g.data.crowdin_project_id}/${g.data.crowdin_file_id}`
         : null,
     y = (e) => {
       (t.SetPushSourceToCrowdInAutomatically(e), _());
     },
-    C = A(p.ConvertTo64BitString(), m, n);
-  return h.isLoading
+    b = A(f.ConvertTo64BitString(), m, n);
+  return g.isLoading
     ? null
     : (0, L.jsxs)(s, {
         clanSteamID: e.editModel.GetClanSteamID(),
         children: [
-          (0, L.jsx)(E, { active: a, children: (0, L.jsx)(r, {}) }),
+          (0, L.jsx)(D, { active: a, children: (0, L.jsx)(r, {}) }),
           (0, L.jsxs)(`div`, {
             className: q,
             children: [
-              (0, L.jsx)(f, {
+              (0, L.jsx)(p, {
                 value: t.BPushUpdatesToCrowdInAutomatically(),
                 onChange: y,
               }),
               (0, L.jsxs)(`div`, {
                 className: J,
                 children: [
-                  x(
+                  w(
                     `#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn`,
                   ),
                   `\xA0(`,
                   v
                     ? (0, L.jsx)(`a`, { href: v, children: v })
-                    : x(`#EventEditor_Localization_NotMappedToCrowdIn`),
+                    : w(`#EventEditor_Localization_NotMappedToCrowdIn`),
                   `)`,
                   (0, L.jsx)(O, {
-                    tooltip: x(`#EventEditor_Localization_Tooltip`),
-                    className: g,
+                    tooltip: w(`#EventEditor_Localization_Tooltip`),
+                    className: h,
                   }),
                   (0, L.jsx)(`br`, {}),
                   (0, L.jsx)(`span`, {
-                    children: x(`#EventEditor_Localization_RememberToSave`),
+                    children: w(`#EventEditor_Localization_RememberToSave`),
                   }),
                 ],
               }),
               (0, L.jsx)(X, { onChange: d }),
               (0, L.jsx)(`div`, {
-                className: c,
+                className: l,
                 onClick: () => {
                   (o(!0),
-                    C.mutateAsync()
+                    b
+                      .mutateAsync()
                       .then(() => window.location.reload())
                       .catch((e) => {
                         (u(e.toString()), o(!1));
@@ -481,22 +482,22 @@ function Y(e) {
                         u(null);
                       }));
                 },
-                children: x(`#EventEditor_Localization_FetchLocalization`),
+                children: w(`#EventEditor_Localization_FetchLocalization`),
               }),
             ],
           }),
-          l &&
+          c &&
             (0, L.jsx)(L.Fragment, {
               children: (0, L.jsxs)(`div`, {
                 className: `_0YbsAe4FGV0-`,
-                children: [(0, L.jsx)(b, {}), ` `, l],
+                children: [(0, L.jsx)(S, {}), ` `, c],
               }),
             }),
         ],
       });
 }
 function X(e) {
-  let t = w(!1),
+  let t = b(!1),
     n = Array.from(t.entries());
   n.sort((e, t) => e[1].localeCompare(t[1]));
   let r = n.map(([e, t]) =>
@@ -507,7 +508,7 @@ function X(e) {
     children: [
       (0, L.jsx)(`option`, {
         value: `all`,
-        children: x(`#EventEditor_Localization_AllLanguages`),
+        children: w(`#EventEditor_Localization_AllLanguages`),
       }),
       r,
     ],

@@ -36,6 +36,7 @@ function _() {
                       nAppID: _.nAppID,
                       edits: _(_.survey),
                       bShowAllInitially: !0,
+                      eLanguageInitially: _.ELANGUAGE,
                     }),
                   }),
                 }),

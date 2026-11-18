@@ -23,8 +23,8 @@ import {
   P as v,
   S as y,
   j as b,
-  nm as x,
-  sh as S,
+  oh as x,
+  tm as S,
 } from "./main.js";
 var C = `get_reported_content`,
   w = `get_reported_content_by_id`,
@@ -44,7 +44,7 @@ function A(e, t) {
     queryKey: E(t),
     enabled: v(t),
     queryFn: async () => {
-      let n = S.Init(o);
+      let n = x.Init(o);
       n.Body().set_coordinates(c.fromObject(t));
       let r = await a.GetReportedContent(e, n);
       if (!r.BSuccess())
@@ -54,7 +54,7 @@ function A(e, t) {
   };
 }
 function j(e) {
-  let n = x();
+  let n = S();
   return t(A(n, e));
 }
 function M(e) {
@@ -68,7 +68,7 @@ function P(e, t, n = !1) {
     queryKey: [...D(t), n],
     enabled: !!t,
     queryFn: async () => {
-      let r = S.Init(f);
+      let r = x.Init(f);
       (r.Body().set_reported_content_id(t),
         n && r.Body().set_include_reporter_account_status(!0));
       let i = await a.GetReportedContentByID(e, r);
@@ -81,7 +81,7 @@ function P(e, t, n = !1) {
   };
 }
 function F(e, n = !1) {
-  let r = x();
+  let r = S();
   return t(P(r, e, n));
 }
 function I(e, t) {
@@ -89,7 +89,7 @@ function I(e, t) {
     queryKey: O(t),
     queryFn: async () => {
       if (!t) return;
-      let n = S.Init(l);
+      let n = x.Init(l);
       return (
         n.Body().set_reported_content_id(t),
         (await a.GetAuditLogByID(e, n)).Body().toObject()
@@ -98,15 +98,15 @@ function I(e, t) {
   };
 }
 function L(e) {
-  let n = x();
+  let n = S();
   return t(I(n, e));
 }
 function R(t) {
-  let r = x(),
+  let r = S(),
     i = n();
   return e({
     mutationFn: async (e) => {
-      let n = S.Init(m);
+      let n = x.Init(m);
       (n.Body().set_reported_content_id(t),
         n.Body().set_new_level(e.eNewLevel),
         e.eReason && n.Body().set_reason(e.eReason),
@@ -125,11 +125,11 @@ function R(t) {
   });
 }
 function z() {
-  let t = x(),
+  let t = S(),
     r = n();
   return e({
     mutationFn: async (e) => {
-      let n = S.Init(s);
+      let n = x.Init(s);
       n.Body().set_reported_content_id(e.reportedContentID);
       let r = await a.SustainModerationByID(t, n);
       if (!r.BSuccess()) throw Error(`EResult ` + r.GetEResult());
@@ -142,11 +142,11 @@ function z() {
 }
 function B(t) {
   let i = n(),
-    o = x();
+    o = S();
   return e({
     mutationKey: [`release_subject`, ...t],
     mutationFn: async () => {
-      let e = S.Init(r);
+      let e = x.Init(r);
       for (let n of t) {
         let t = new d();
         (t.set_reported_content_id(n), e.Body().add_subjects_to_release(t));
@@ -164,11 +164,11 @@ function B(t) {
   });
 }
 function V(t, r) {
-  let i = x(),
+  let i = S(),
     o = n();
   return e({
     mutationFn: async () => {
-      let e = S.Init(p);
+      let e = x.Init(p);
       (e.Body().set_reported_content_id(t), e.Body().set_details(r));
       let n = await a.OwnerDisputeModeration(i, e);
       if (!n.BSuccess()) throw Error(`EResult ` + n.GetEResult());
@@ -180,10 +180,10 @@ function V(t, r) {
 }
 function H(t, r) {
   let o = n(),
-    s = x();
+    s = S();
   return e({
     mutationFn: async () => {
-      let e = S.Init(i);
+      let e = x.Init(i);
       (e.Body().set_reported_content_id(t),
         e.Body().set_owner_dispute_details(r));
       let n = await a.UpdateSubjectByID(s, e);
@@ -198,7 +198,7 @@ function U(e, t) {
   return {
     queryKey: [`reporterstats`, t],
     queryFn: async () => {
-      let n = S.Init(u);
+      let n = x.Init(u);
       n.Body().set_steamid(t);
       let r = await a.GetReporterStats(e, n);
       if (!r.BSuccess()) throw Error(`EResult ` + r.GetEResult());
@@ -207,15 +207,15 @@ function U(e, t) {
   };
 }
 function W(e) {
-  let n = x();
+  let n = S();
   return t(U(n, e));
 }
 function G(t, r, i) {
-  let a = x(),
+  let a = S(),
     o = n();
   return e({
     mutationFn: async (e) => {
-      let n = S.Init(h);
+      let n = x.Init(h);
       (n.Body().set_steamid(t),
         n.Body().set_comment_thread_id(r),
         n.Body().set_gidcomment(i),
@@ -239,11 +239,11 @@ function G(t, r, i) {
   });
 }
 function K(t, r, i) {
-  let a = x(),
+  let a = S(),
     o = n();
   return e({
     mutationFn: async () => {
-      let e = S.Init(y);
+      let e = x.Init(y);
       (e.Body().set_steamid(t),
         e.Body().set_comment_thread_id(r),
         e.Body().set_gidcomment(i),

@@ -4,7 +4,7 @@
 import { G as e, at as t, ot as n } from "./chunk~01cfc309bf.js";
 import { l as r, r as i } from "./chunk~1e67c3e4e4.js";
 import { t as a } from "./chunk~3a8474f307.js";
-import { Q as o, X as s, Y as c, Z as l, nm as u, sh as d } from "./main.js";
+import { J as o, X as s, Y as c, Z as l, oh as u, tm as d } from "./main.js";
 import { t as f } from "./chunk~f0745bb5e2.js";
 var p = n();
 function m(e) {
@@ -93,44 +93,44 @@ function h(e) {
     }),
   });
 }
-function g(n, r, a, s, l) {
-  let f = u(),
+function g(n, r, a, s, c) {
+  let f = d(),
     p = t();
   return e({
     mutationFn: async () => {
-      let e = d.Init(c);
+      let e = u.Init(o);
       (e.Body().set_steamid(n),
         e.Body().set_gidforum(r),
         e.Body().set_gidtopic(a),
         e.Body().set_gidpost(s));
-      let t = await o.ResolveReportedPost(f, e);
+      let t = await l.ResolveReportedPost(f, e);
       if (!t.BSuccess())
         throw Error(`Failed to acquit forum comment: ` + t.GetEMsg());
     },
     onSuccess: async (e) => {
-      await i(p, l);
+      await i(p, c);
     },
   });
 }
-function _(n, r, a, c, f) {
-  let p = u(),
+function _(n, r, a, o, f) {
+  let p = d(),
     m = t();
   return e({
     mutationFn: async (e) => {
-      let t = d.Init(s);
+      let t = u.Init(c);
       (t.Body().set_steamid(n),
         t.Body().set_gidforum(r),
         t.Body().set_gidtopic(a),
-        t.Body().set_gidpost(c),
+        t.Body().set_gidpost(o),
         t.Body().set_reason(e.reason),
         t.Body().set_note(e.message));
       for (let n of e.sanctions) {
-        let e = new l();
+        let e = new s();
         (e.set_sanction(n.sanction),
           n.days !== void 0 && e.set_days(n.days),
           t.Body().add_sanctions(e));
       }
-      let i = await o.SanctionReportedPost(p, t);
+      let i = await l.SanctionReportedPost(p, t);
       if (!i.BSuccess())
         throw Error(
           `Failed to sanction forum comment: (` +

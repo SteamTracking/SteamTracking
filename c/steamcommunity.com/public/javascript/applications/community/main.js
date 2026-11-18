@@ -71585,13 +71585,6 @@ function _(_) {
   }
 }
 function _(_) {
-  let _ = _(_.resolved ?? 0),
-    _ = _.content_moderated_reason;
-  return _.resolved === 0 || !_ || _ === 1
-    ? _.Localize(`#ugcsubjectpanel_status`, _)
-    : _.Localize(`#ugcsubjectpanel_statuswithreason`, _, _(_));
-}
-function _(_) {
   switch (_) {
     case 3:
       return _.Localize(`#moderationaction_acquitted`);
@@ -71641,6 +71634,10 @@ function _(_) {
       return _.Localize(`#moderationaction_ownerdisputed`);
     case 24:
       return _.Localize(`#moderationaction_partnerclearedreports`);
+    case 25:
+      return _.Localize(`#moderationaction_partnerbanneditem`);
+    case 26:
+      return _.Localize(`#moderationaction_partnerunbanneditem`);
     default:
       return `${_.Localize(`#moderationaction_unknown`)}: ${_}`;
   }

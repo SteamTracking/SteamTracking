@@ -3,7 +3,7 @@
 
 import { o as e, r as t } from "./chunk~f025431ab0.js";
 import { D as n, Ft as r, ot as i } from "./chunk~01cfc309bf.js";
-import { $t as a, It as o, Yt as s, Zt as c } from "./main.js";
+import { Ft as a, Jt as o, Qt as s, Xt as c } from "./main.js";
 var l = e(r(), 1),
   u = t({
     Heading: () => d,
@@ -50,11 +50,11 @@ function E(e) {
   let { level: t = `auto`, className: n, color: r } = e,
     i = O(t, w());
   return (0, S.jsx)(i, {
-    ...a({ ...e, className: (0, T.default)(s(), d, n) }, D),
+    ...s({ ...e, className: (0, T.default)(o(), d, n) }, D),
   });
 }
 var D = [
-  ...o,
+  ...a,
   ...c,
   { prop: `size`, responsive: !0, className: (e) => u[`HeadingSize-${e}`] },
 ];

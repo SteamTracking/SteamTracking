@@ -4,7 +4,7 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { D as t, Ft as n, ot as r } from "./chunk~01cfc309bf.js";
 import { t as i } from "./chunk~c17e16859d.js";
-import { cm as a, lm as o } from "./main.js";
+import { cm as a, sm as o } from "./main.js";
 var s = e(n(), 1),
   c = `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=`,
   l = new URL(
@@ -79,16 +79,16 @@ function C(e) {
       playerLinkDetails: t,
       animatedAvatar: n,
       avatarFrame: r,
-      size: a,
+      size: o,
       ...s
     } = e,
-    c = i(t.public_data?.sha_digest_avatar, a);
+    c = i(t.public_data?.sha_digest_avatar, o);
   return (
     n?.image_small?.length &&
-      (c = o.MEDIA_CDN_COMMUNITY_URL + `images/` + n.image_small),
+      (c = a.MEDIA_CDN_COMMUNITY_URL + `images/` + n.image_small),
     (0, d.jsx)(S, {
       avatarURL: c,
-      size: a,
+      size: o,
       isOnline: t.private_data?.persona_state === 1,
       isInGame: t.private_data?.game_id !== void 0,
       isWatchingBroadcast:
@@ -104,14 +104,14 @@ function w(e) {
   switch (e) {
     case `X-Small`:
     case `Small`:
-      return a(c);
+      return o(c);
     case `Medium`:
     case `MediumLarge`:
-      return a(u);
+      return o(u);
     case `Large`:
     case `X-Large`:
     case `FillArea`:
-      return a(l);
+      return o(l);
   }
 }
 export { C as n, S as t };

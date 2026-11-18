@@ -5,15 +5,15 @@ import { o as e } from "./chunk~f025431ab0.js";
 import { E as t, Ft as n, ot as r } from "./chunk~01cfc309bf.js";
 import { n as i } from "./chunk~16aefcf65f.js";
 import {
-  Eu as a,
-  Hh as o,
-  Js as s,
-  ba as c,
-  bs as l,
-  ed as u,
-  gh as d,
-  md as f,
-  wf as p,
+  $u as a,
+  Cf as o,
+  Tu as s,
+  Vh as c,
+  hh as l,
+  pd as u,
+  qs as d,
+  ya as f,
+  ys as p,
 } from "./main.js";
 var m = e(n()),
   h = (e) => e != null;
@@ -44,7 +44,7 @@ function g(e, t) {
           ? (s = t.constructor(o !== `false`))
           : t != null && t != null && (s = t.constructor(o))
         : (s = o)),
-    f(_.Get().GetLocalStoreChangeCallback(e), r),
+    u(_.Get().GetLocalStoreChangeCallback(e), r),
     [s, a]
   );
 }
@@ -53,7 +53,7 @@ var _ = class e {
   GetLocalStoreChangeCallback(e) {
     return (
       this.m_mapChangeCallback.has(e) ||
-        this.m_mapChangeCallback.set(e, new o()),
+        this.m_mapChangeCallback.set(e, new c()),
       this.m_mapChangeCallback.get(e)
     );
   }
@@ -203,10 +203,10 @@ function ae(e) {
   return (
     o && (s /= 100),
     {
-      r: d(Math.round(parseFloat(n)), 0, 255),
-      g: d(Math.round(parseFloat(r)), 0, 255),
-      b: d(Math.round(parseFloat(i)), 0, 255),
-      a: d(s, 0, 1),
+      r: l(Math.round(parseFloat(n)), 0, 255),
+      g: l(Math.round(parseFloat(r)), 0, 255),
+      b: l(Math.round(parseFloat(i)), 0, 255),
+      a: l(s, 0, 1),
     }
   );
 }
@@ -269,64 +269,64 @@ function me(e) {
       onChange: n,
       strTitle: r,
       disableAlpha: i,
-      onSubmit: o,
-      children: s,
+      onSubmit: a,
+      children: c,
     } = e,
-    [c, l] = (0, m.useState)(() => ge(t, i)),
-    u = (0, m.useRef)(void 0);
+    [l, u] = (0, m.useState)(() => ge(t, i)),
+    d = (0, m.useRef)(void 0);
   (0, m.useEffect)(() => {
     let e = D(t);
-    !e || (u.current && he(e, u.current, i)) || l((e) => q(t, e.h, i) ?? e);
+    !e || (d.current && he(e, d.current, i)) || u((e) => q(t, e.h, i) ?? e);
   }, [t, i]);
-  let d = (0, m.useCallback)(
+  let f = (0, m.useCallback)(
       (e) => {
         let t = i ? { ...e, a: 1 } : e;
-        l(t);
+        u(t);
         let r = C(t);
-        ((u.current = r), n(T(r)));
+        ((d.current = r), n(T(r)));
       },
       [i, n],
     ),
-    f = C(c),
-    h = w({ ...f, a: 1 }, `hex`),
-    g = T(f);
+    p = C(l),
+    h = w({ ...p, a: 1 }, `hex`),
+    g = T(p);
   return (0, G.jsxs)(`div`, {
-    className: a(ce, `noOpinionatedGlobalStyles`),
+    className: s(ce, `noOpinionatedGlobalStyles`),
     style: {
-      "--colorpicker-hue": `hsl( ${c.h}deg 100% 50% )`,
+      "--colorpicker-hue": `hsl( ${l.h}deg 100% 50% )`,
       "--colorpicker-opaque": h,
       "--colorpicker-current": g,
     },
     children: [
       !!r && (0, G.jsx)(`div`, { className: `GEaX-EfeXNg-`, children: r }),
-      (0, G.jsx)(ve, { hsva: c, fnSetColor: d }),
+      (0, G.jsx)(ve, { hsva: l, fnSetColor: f }),
       (0, G.jsx)(Y, {
         className: M,
-        strLabel: p.Localize(`#ColorPicker_Hue`),
+        strLabel: o.Localize(`#ColorPicker_Hue`),
         nMax: 360,
-        nValue: Math.round(c.h),
-        strValueText: `${Math.round(c.h)}°`,
-        fnSetValue: (e) => d({ ...c, h: e }),
+        nValue: Math.round(l.h),
+        strValueText: `${Math.round(l.h)}°`,
+        fnSetValue: (e) => f({ ...l, h: e }),
       }),
       !i &&
         (0, G.jsx)(Y, {
           className: `xV4lUfTUFc4-`,
-          strLabel: p.Localize(`#ColorPicker_Opacity`),
+          strLabel: o.Localize(`#ColorPicker_Opacity`),
           nMax: 100,
-          nValue: Math.round(c.a * 100),
-          strValueText: `${Math.round(c.a * 100)}%`,
-          fnSetValue: (e) => d({ ...c, a: e / 100 }),
+          nValue: Math.round(l.a * 100),
+          strValueText: `${Math.round(l.a * 100)}%`,
+          fnSetValue: (e) => f({ ...l, a: e / 100 }),
         }),
-      (0, G.jsx)(ye, { hsva: c, disableAlpha: i, fnSetColor: d, onSubmit: o }),
+      (0, G.jsx)(ye, { hsva: l, disableAlpha: i, fnSetColor: f, onSubmit: a }),
       (0, G.jsx)(xe, {
         strCurrentHex: h,
-        bOpaque: f.a >= 1,
+        bOpaque: p.a >= 1,
         fnPick: (e) => {
-          let t = q(e, c.h, i);
-          t && d(t);
+          let t = q(e, l.h, i);
+          t && f(t);
         },
       }),
-      s,
+      c,
     ],
   });
 }
@@ -352,7 +352,7 @@ function _e(e) {
     let n = t.currentTarget.getBoundingClientRect(),
       r = n.width ? (t.clientX - n.left) / n.width : 0,
       i = n.height ? (t.clientY - n.top) / n.height : 0;
-    e(d(r, 0, 1), d(i, 0, 1));
+    e(l(r, 0, 1), l(i, 0, 1));
   };
   return {
     onPointerDown: (e) => {
@@ -379,7 +379,7 @@ function ve(e) {
     className: k,
     role: `slider`,
     tabIndex: 0,
-    "aria-label": p.Localize(`#ColorPicker_SaturationBrightness`),
+    "aria-label": o.Localize(`#ColorPicker_SaturationBrightness`),
     "aria-valuemin": 0,
     "aria-valuemax": 100,
     "aria-valuenow": Math.round(t.v * 100),
@@ -389,7 +389,7 @@ function ve(e) {
         i = J(e, `ArrowUp`, `ArrowDown`);
       (r !== void 0 || i !== void 0) &&
         (e.preventDefault(),
-        n({ ...t, s: d(t.s + (r ?? 0), 0, 1), v: d(t.v + (i ?? 0), 0, 1) }));
+        n({ ...t, s: l(t.s + (r ?? 0), 0, 1), v: l(t.v + (i ?? 0), 0, 1) }));
     },
     ...r,
     children: (0, G.jsx)(`div`, {
@@ -403,8 +403,8 @@ function Y(e) {
     className: t,
     strLabel: n,
     nMax: r,
-    nValue: o,
-    strValueText: s,
+    nValue: a,
+    strValueText: o,
     fnSetValue: c,
   } = e;
   return (0, G.jsx)(`div`, {
@@ -412,18 +412,18 @@ function Y(e) {
     children: (0, G.jsx)(i.Root, {
       min: 0,
       max: r,
-      value: [o],
+      value: [a],
       onValueChange: (e) => c(e[0]),
       children: (0, G.jsx)(i.Track, {
-        render: (0, G.jsx)(`div`, { className: a(j, t) }),
+        render: (0, G.jsx)(`div`, { className: s(j, t) }),
         children: (0, G.jsx)(i.Handle, {
           render: (e) =>
             (0, G.jsx)(`span`, {
               ...e,
               className: O,
-              style: { insetInlineStart: `${(o / r) * 100}%` },
+              style: { insetInlineStart: `${(a / r) * 100}%` },
               "aria-label": n,
-              "aria-valuetext": s,
+              "aria-valuetext": o,
             }),
         }),
       }),
@@ -432,18 +432,18 @@ function Y(e) {
 }
 function ye(e) {
   let { hsva: t, disableAlpha: n, fnSetColor: r, onSubmit: i } = e,
-    [o, s] = g(de),
-    c = x.find((e) => e === o) ?? `hex`,
-    [l, u] = (0, m.useState)(void 0),
-    d = w(C(t), c),
-    f = l !== void 0 && l.trim() !== `` && !D(l),
+    [a, c] = g(de),
+    l = x.find((e) => e === a) ?? `hex`,
+    [u, d] = (0, m.useState)(void 0),
+    f = w(C(t), l),
+    p = u !== void 0 && u.trim() !== `` && !D(u),
     h = (e) => {
-      u(e);
+      d(e);
       let i = q(e, t.h, n);
       i && r(i);
     },
     _ = (e) => {
-      (s(e), u(void 0));
+      (c(e), d(void 0));
     };
   return (0, G.jsxs)(`div`, {
     className: N,
@@ -453,26 +453,26 @@ function ye(e) {
         children: [
           (0, G.jsx)(`div`, { className: F, "aria-hidden": !0 }),
           (0, G.jsx)(`input`, {
-            className: a(I, f && `_5Zk11eFAaLo-`),
+            className: s(I, p && `_5Zk11eFAaLo-`),
             type: `text`,
             spellCheck: !1,
             autoComplete: `off`,
-            "aria-label": p.Localize(`#ColorPicker_ColorValue`),
-            "aria-invalid": f,
-            value: l ?? d,
+            "aria-label": o.Localize(`#ColorPicker_ColorValue`),
+            "aria-invalid": p,
+            value: u ?? f,
             onChange: (e) => h(e.currentTarget.value),
-            onBlur: () => u(void 0),
+            onBlur: () => d(void 0),
             onKeyDown: (e) => {
-              e.key === `Enter` && (e.preventDefault(), u(void 0), i?.());
+              e.key === `Enter` && (e.preventDefault(), d(void 0), i?.());
             },
           }),
           (0, G.jsx)(be, { hsva: t, disableAlpha: n, fnSetColor: r }),
         ],
       }),
-      f &&
+      p &&
         (0, G.jsx)(`div`, {
           className: `tHsVe8Ptn-s-`,
-          children: p.Localize(`#ColorPicker_InvalidColor`),
+          children: o.Localize(`#ColorPicker_InvalidColor`),
         }),
       (0, G.jsx)(`div`, {
         className: R,
@@ -483,8 +483,8 @@ function ye(e) {
             {
               type: `button`,
               role: `radio`,
-              "aria-checked": e === c,
-              className: a(z, e === c && `wBwV8sUsuTo-`),
+              "aria-checked": e === l,
+              className: s(z, e === l && `wBwV8sUsuTo-`),
               onClick: () => _(e),
               children: e.toUpperCase(),
             },
@@ -499,28 +499,28 @@ function be(e) {
   let { hsva: t, disableAlpha: n, fnSetColor: r } = e,
     [i, a] = (0, m.useState)(!1);
   (0, m.useEffect)(() => a(`EyeDropper` in window), []);
-  let o = async () => {
+  let s = async () => {
     let e = document.documentElement;
     e.classList.add(K);
     try {
       let e = q((await new window.EyeDropper().open()).sRGBHex, t.h, n);
       e && r({ ...e, a: t.a });
     } catch (e) {
-      console.warn(p.Localize(`#Sale_EyeDropperFailed`), e);
+      console.warn(o.Localize(`#Sale_EyeDropperFailed`), e);
     } finally {
       e.classList.remove(K);
     }
   };
   if (!i) return null;
-  let s = p.Localize(`#Sale_BackgroundColorPicker`);
-  return (0, G.jsx)(l, {
-    toolTipContent: s,
+  let c = o.Localize(`#Sale_BackgroundColorPicker`);
+  return (0, G.jsx)(p, {
+    toolTipContent: c,
     children: (0, G.jsx)(`button`, {
       type: `button`,
       className: L,
-      "aria-label": s,
-      onClick: o,
-      children: (0, G.jsx)(c, {}),
+      "aria-label": c,
+      onClick: s,
+      children: (0, G.jsx)(f, {}),
     }),
   });
 }
@@ -529,14 +529,14 @@ function xe(e) {
   return (0, G.jsx)(`div`, {
     className: B,
     role: `group`,
-    "aria-label": p.Localize(`#ColorPicker_Palette`),
+    "aria-label": o.Localize(`#ColorPicker_Palette`),
     children: le.map((e) => {
       let i = n && e === t;
       return (0, G.jsx)(
         `button`,
         {
           type: `button`,
-          className: a(V, i && `wBwV8sUsuTo-`),
+          className: s(V, i && `wBwV8sUsuTo-`),
           style: { background: e },
           "aria-label": e,
           "aria-pressed": i,
@@ -555,34 +555,34 @@ function Se(e) {
       onChange: n,
       onRequestClose: r,
       disableAlpha: i,
-      strTitle: o,
-      bLivePreview: s = !0,
-      fnRestoreChanges: c,
+      strTitle: a,
+      bLivePreview: c = !0,
+      fnRestoreChanges: l,
     } = e,
-    l = (0, m.useRef)(null),
-    u = (0, m.useRef)(void 0),
-    d = (0, m.useRef)(!1),
-    f = (0, m.useRef)({
+    u = (0, m.useRef)(null),
+    d = (0, m.useRef)(void 0),
+    f = (0, m.useRef)(!1),
+    p = (0, m.useRef)({
       color: t,
       onChange: n,
-      fnRestoreChanges: c,
-      bLivePreview: s,
+      fnRestoreChanges: l,
+      bLivePreview: c,
     });
-  f.current = { color: t, onChange: n, fnRestoreChanges: c, bLivePreview: s };
+  p.current = { color: t, onChange: n, fnRestoreChanges: l, bLivePreview: c };
   let h = (0, m.useCallback)(
       (e) => {
-        ((u.current = e), s && n(e));
+        ((d.current = e), c && n(e));
       },
-      [s, n],
+      [c, n],
     ),
     g = (0, m.useCallback)(() => {
-      ((d.current = !0), !s && u.current !== void 0 && n(u.current), r());
-    }, [s, n, r]);
+      ((f.current = !0), !c && d.current !== void 0 && n(d.current), r());
+    }, [c, n, r]);
   return (
     (0, m.useEffect)(
       () => () => {
-        let e = f.current;
-        if (!d.current && e.bLivePreview && u.current !== void 0)
+        let e = p.current;
+        if (!f.current && e.bLivePreview && d.current !== void 0)
           try {
             (e.onChange(e.color), e.fnRestoreChanges?.());
           } catch (e) {
@@ -592,9 +592,9 @@ function Se(e) {
       [],
     ),
     (0, m.useEffect)(() => {
-      let e = l.current?.ownerDocument ?? document,
+      let e = u.current?.ownerDocument ?? document,
         t = (e) => {
-          l.current && !l.current.contains(e.target) && r();
+          u.current && !u.current.contains(e.target) && r();
         },
         n = (e) => {
           e.key === `Escape` && (e.stopPropagation(), e.preventDefault(), r());
@@ -609,11 +609,11 @@ function Se(e) {
       );
     }, [r]),
     (0, G.jsx)(`div`, {
-      ref: l,
+      ref: u,
       children: (0, G.jsx)(me, {
         color: t,
         disableAlpha: i,
-        strTitle: o ?? p.Localize(`#Button_Color`),
+        strTitle: a ?? o.Localize(`#Button_Color`),
         onChange: h,
         onSubmit: g,
         children: (0, G.jsxs)(`div`, {
@@ -621,15 +621,15 @@ function Se(e) {
           children: [
             (0, G.jsx)(`button`, {
               type: `button`,
-              className: a(U, W),
+              className: s(U, W),
               onClick: g,
-              children: p.Localize(`#Button_Save`),
+              children: o.Localize(`#Button_Save`),
             }),
             (0, G.jsx)(`button`, {
               type: `button`,
               className: U,
               onClick: r,
-              children: p.Localize(`#Button_Cancel`),
+              children: o.Localize(`#Button_Cancel`),
             }),
           ],
         }),
@@ -642,7 +642,7 @@ function Z(e, t, n) {
     i = r ? n?.fnSnapshot() : void 0,
     a = null,
     o = !1,
-    c = (0, G.jsx)(Se, {
+    s = (0, G.jsx)(Se, {
       color: t.color,
       disableAlpha: t.disableAlpha,
       strTitle: t.strTitle,
@@ -653,7 +653,7 @@ function Z(e, t, n) {
         o || ((o = !0), a?.Hide(), t.onClose?.());
       },
     });
-  a = (e instanceof HTMLElement, s(c, e, { bDisablePopTop: !0 }));
+  a = (e instanceof HTMLElement, d(s, e, { bDisablePopTop: !0 }));
 }
 function Ce() {
   let e = (0, m.useContext)(X);
@@ -697,7 +697,7 @@ function Te(e) {
           n(!0);
       }, []),
       onDragLeave: m.useCallback((e) => {
-        u(e) && n(!1);
+        a(e) && n(!1);
       }, []),
       onDragEnd: m.useCallback(() => n(!1), []),
       onDragOver: t ? $ : void 0,

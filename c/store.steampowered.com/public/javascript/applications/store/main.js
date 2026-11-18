@@ -26810,7 +26810,7 @@ function _(_) {
         : void 0,
     );
   return _
-    ? !_ ||
+    ? !_?.content_descriptorids ||
         _.content_descriptorids.includes(3) ||
         _.content_descriptorids.includes(4)
     : !1;

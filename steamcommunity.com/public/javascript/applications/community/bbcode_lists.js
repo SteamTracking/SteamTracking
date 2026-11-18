@@ -4,7 +4,7 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
 import { t as r } from "./chunk~cfd048ddd7.js";
-import { Ms as i, js as a, ph as o } from "./main.js";
+import { As as i, fh as a, js as o } from "./main.js";
 var s = e(t(), 1);
 function c(e, t) {
   return t === void 0 ? e[``] : e[t];
@@ -98,7 +98,7 @@ function D(e) {
   if (t) return E(t, T(e.children));
   if (typeof e.children == `string`) {
     let t = e.children.trim();
-    if (o.exec(t)?.[0] == t)
+    if (a.exec(t)?.[0] == t)
       return { strURL: t, bFromBody: !0, bHasCustomText: !1 };
   }
 }
@@ -106,7 +106,7 @@ function O(e) {
   let t = D(e);
   if (!t) return e.children;
   if (t.bFromBody) return (0, l.jsx)(k, { strURL: t.strURL });
-  let n = a(t.strURL) ? i(t.strURL) : t.strURL;
+  let n = i(t.strURL) ? o(t.strURL) : t.strURL;
   return (0, l.jsx)(r, {
     target: `_blank`,
     href: n,
@@ -119,7 +119,7 @@ function k(e) {
   let t = e.strURL.match(/^[a-z][a-z0-9+.-]*:/i)
       ? e.strURL
       : `http://` + e.strURL,
-    n = a(t) ? i(t) : t;
+    n = i(t) ? o(t) : t;
   return (0, l.jsx)(r, {
     target: `_blank`,
     href: n,
