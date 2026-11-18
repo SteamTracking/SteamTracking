@@ -2272,25 +2272,6 @@ button.DialogButton.yRMbWy4dNRQ- {
   width: 12px;
   height: 12px;
 }
-._3OBYC1AY3xE- {
-  flex-direction: column;
-  gap: 4px;
-  margin-inline-start: 5px;
-  padding: 12px;
-  display: flex;
-}
-.bAXKAbpoIl8- {
-  color: #fff;
-  user-select: none;
-  font-size: 14px;
-  line-height: 17px;
-}
-._292mngwtrSI- {
-  cursor: pointer;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-}
 .FneGtSBNXCI- {
   box-sizing: border-box;
   background: linear-gradient(#1b3857 0%, #41628780 100%);
@@ -4220,21 +4201,21 @@ button.DialogButton.yRMbWy4dNRQ- {
 }
 .L6kQPtKJSNQ- {
   background-color: #21081f;
-  background-image: url(https://cdn.fastly.steamstatic.com/store/promo/steamawards2023/SA_header_still.png?v=2);
+  background-image: url(../../../images/applications/store/SA_header_still.png?v=valveisgoodatcaching);
 }
 .L6kQPtKJSNQ- .FunRCPAPbPs- {
   color: #e5c6df;
 }
 .MCt-hwZmC-4- {
   background-color: #111;
-  background-image: url(https://cdn.fastly.steamstatic.com/store/promo/steamawards2024/header_trophy.webp?v=2);
+  background-image: url(../../../images/applications/store/header_trophy.webp?v=N4l8UR6m);
 }
 .MCt-hwZmC-4- .FunRCPAPbPs- {
   color: #ebf000;
 }
 .JLXpbR9DqHc- {
   background-color: #00006d;
-  background-image: url(https://cdn.fastly.steamstatic.com/store/promo/steamawards2025/header_w_trophy.webp?v=1);
+  background-image: url(../../../images/applications/store/header_w_trophy.webp?v=CJHczFqU);
 }
 .JLXpbR9DqHc- .FunRCPAPbPs- {
   color: #ee6c5d;

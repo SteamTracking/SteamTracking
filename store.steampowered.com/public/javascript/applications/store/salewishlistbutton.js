@@ -4,12 +4,12 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
 import {
-  Eo as r,
-  _i as i,
-  do as a,
-  hi as o,
-  vt as s,
-  yo as c,
+  Do as r,
+  bo as i,
+  fo as a,
+  gi as o,
+  vi as s,
+  yt as c,
 } from "./chunk~6b8ddcaac8.js";
 import { n as l } from "./chunk~90b9831ad2.js";
 import {
@@ -44,10 +44,10 @@ function C(e) {
     p = d(),
     { appid: h, bIsFree: S, bIsComingSoon: C, className: T, bTextMode: E } = e,
     D = r(h),
-    { bIsOwned: O } = c(D),
-    k = i(h),
+    { bIsOwned: O } = i(D),
+    k = s(h),
     { mutateAsync: A } = o(h, !k, f(p)),
-    { elDialogElement: j, fnShowLogonDialog: M } = s(),
+    { elDialogElement: j, fnShowLogonDialog: M } = c(),
     N = async () => {
       g.logged_in ? t || (n(!0), await A(), n(!1)) : M();
     };

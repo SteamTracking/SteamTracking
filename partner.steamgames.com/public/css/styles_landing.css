@@ -932,6 +932,15 @@ p {
 .th.app_name_header {
 	width: 177px;
 }
+.th.app_type_header {
+	width: 62px;
+}
+.th.app_partner_header {
+	width: 62px;
+}
+.th.app_ticket_header {
+	width: 120px;
+}
 .th.app_purchase_header {
 	width: 53px;
 }

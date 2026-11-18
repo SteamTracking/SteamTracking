@@ -4,7 +4,7 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, dt as n, st as r, tt as i } from "./chunk~01cfc309bf.js";
 import { Et as a, Tt as o } from "./chunk~d8bbc3d946.js";
-import { cx as s, ly as c, ux as l, yx as u } from "./main.js";
+import { Xb as s, ly as c, qb as l, yx as u } from "./main.js";
 import { n as d } from "./chunk~65d992238f.js";
 var f = e(i()),
   p = e(t());
@@ -13,9 +13,12 @@ function m(e) {
 }
 function h(e) {
   let t = c();
-  return r({ queryKey: m(e), queryFn: () => b(t, e), enabled: l.logged_in });
+  return r({ ...g(t, e), enabled: s.logged_in });
 }
-function g() {
+function g(e, t) {
+  return { queryKey: m(t), queryFn: () => x(e, t) };
+}
+function _() {
   let e = n();
   return p.useCallback(
     (t, n) => {
@@ -24,25 +27,25 @@ function g() {
     [e],
   );
 }
-function _(e) {
+function v(e) {
   return r({
     queryKey: [`AppRelevanceStore`, `StoreRelevance`, e],
-    queryFn: () => x(e),
-    enabled: l.logged_in,
+    queryFn: () => S(e),
+    enabled: s.logged_in,
   });
 }
-function v() {
+function y() {
   return d(`App Relevance Store Top Sellers`, {
     sort: 11,
     start: 0,
     count: 100,
   });
 }
-function y() {
-  let { data: e } = v();
+function b() {
+  let { data: e } = y();
   return e;
 }
-async function b(e, t) {
+async function x(e, t) {
   let n = u.Init(o);
   n.Body().set_appid(t);
   let r = await a.GetFriendsRecommendedApp(e, n),
@@ -50,12 +53,12 @@ async function b(e, t) {
   if (i == 1) return r.Body().toObject();
   throw `Error ${i} failed to call GetFriendsRecommendedApp ${t}`;
 }
-async function x(e) {
+async function S(e) {
   let t = { appid: e },
     n = { arrSimilarPlayedApps: [], bRecommendedByIR: !1 },
     r = (
       await f.default.get(
-        `${s.STORE_BASE_URL}explore/ajaxgetstorerelevancedata`,
+        `${l.STORE_BASE_URL}explore/ajaxgetstorerelevancedata`,
         { params: t, withCredentials: !0, timeout: 1e4 },
       )
     ).data;
@@ -71,4 +74,4 @@ async function x(e) {
     n
   );
 }
-export { g as a, _ as i, y as n, v as r, h as t };
+export { _ as i, b as n, v as r, h as t };

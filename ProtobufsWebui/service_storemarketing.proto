@@ -79,7 +79,7 @@ message StoreCapsule {
 service StoreMarketing {
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetFrontPageConfig (.CStoreMarketing_GetFrontPageConfig_Request) returns (.CStoreMarketing_GetFrontPageConfig_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetItemsToFeature (.CStoreMarketing_GetItemsToFeature_Request) returns (.CStoreMarketing_GetItemsToFeature_Response);
 }
 

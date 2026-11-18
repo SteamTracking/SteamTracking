@@ -2236,11 +2236,12 @@ var jt = new URL(
         o = `#accountpreferences_revoked_devices_revoked_description_auth`;
     }
     let s = [],
-      c = [];
+      c = [],
+      l = [];
     for (let n of e.GetActiveDevices()) {
       let e = n.logged_in && n.last_seen?.time > r - 900,
         o = n.effective_token_state == 5 ? zt : null,
-        l = (0, Y.jsx)(
+        u = (0, Y.jsx)(
           dn,
           {
             className: o,
@@ -2252,9 +2253,9 @@ var jt = new URL(
           },
           n.token_id,
         );
-      e ? s.push(l) : c.push(l);
+      n.platform_type == 4 ? l.push(u) : e ? s.push(u) : c.push(u);
     }
-    let l = e
+    let u = e
       .GetRevokedDevices()
       .map((e) =>
         (0, Y.jsx)(
@@ -2305,6 +2306,12 @@ var jt = new URL(
                   ),
                   rgDevices: c,
                 }),
+                (0, Y.jsx)(sn, {
+                  elHeader: T(
+                    `#accountpreferences_authorized_devices_pat_heading`,
+                  ),
+                  rgDevices: l,
+                }),
                 (0, Y.jsx)(`div`, {
                   className: Rt,
                   children: (0, Y.jsx)(`div`, {
@@ -2322,7 +2329,7 @@ var jt = new URL(
             }),
           ],
         }),
-        l?.length > 0 &&
+        u?.length > 0 &&
           (0, Y.jsxs)(Y.Fragment, {
             children: [
               (0, Y.jsx)(`div`, {
@@ -2342,7 +2349,7 @@ var jt = new URL(
                   }),
                   (0, Y.jsx)(`div`, {
                     className: `jYhMQWJDOI0-`,
-                    children: (0, Y.jsx)(sn, { rgDevices: l }),
+                    children: (0, Y.jsx)(sn, { rgDevices: u }),
                   }),
                 ],
               }),
@@ -2720,6 +2727,8 @@ function bn(e) {
             : T(`#accountpreferences_authorized_devices_type_desktop`);
     case 2:
       return T(`#accountpreferences_authorized_devices_type_browser`);
+    case 4:
+      return T(`#accountpreferences_authorized_devices_type_pat`);
     default:
       return T(`#accountpreferences_authorized_devices_type_unknown`);
   }

@@ -272,6 +272,10 @@
     "AppPage_Owned_TrialWithMasterSub": "Play this title for up to %1$s with your <1>%2$s</1> subscription.",
     "AppPage_Owned_Use": "Use Now",
     "AppPage_Owned_Watch": "Watch Now",
+    "AppPage_PageTitle": "%1$s on Steam",
+    "AppPage_PageTitle_PreOrder": "Pre-order %1$s on Steam",
+    "AppPage_PageTitle_PrePurchase": "Pre-purchase %1$s on Steam",
+    "AppPage_PageTitle_SaveXPercent": "Save %1$s% on %2$s on Steam",
     "AppPage_PointsShop_Header": "POINTS SHOP ITEMS",
     "AppPage_PointsShop_ItemAlt": "Points shop item",
     "AppPage_Prepurchase": "Pre-Purchase %1$s",
@@ -658,5 +662,9 @@
     "music_album_track_duration": "%1$s:%2$s",
     "music_disc_tab": "Disc %1$s",
     "music_localized_track_name": "%1$s (%2$s)",
-    "wishlist_manage_categories": "Manage Wishlist Categories"
+    "wishlist_manage_categories": "Manage Wishlist Categories",
+    "wishlist_manage_wishlist": "Manage your wishlist",
+    "wishlist_quickadd_header": "Categorize",
+    "wishlist_quickadd_recent_and_suggested": "Recent & Suggested",
+    "wishlist_remove_from_wishlist": "Remove from your wishlist"
 }

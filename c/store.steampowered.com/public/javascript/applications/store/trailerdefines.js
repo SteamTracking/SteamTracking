@@ -1738,6 +1738,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`UserReviews.GetFriendsRecommendedApp#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetFriendsRecommendedApp = _;
@@ -1750,6 +1751,7 @@ var _ = _(_(), 1),
         bConstMethod: !0,
         ePrivilege: 1,
         eWebAPIKeyRequirement: 2,
+        rgBrowserAPISites: [`store`],
       },
     );
   }

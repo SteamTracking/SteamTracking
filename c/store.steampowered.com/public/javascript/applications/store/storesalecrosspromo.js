@@ -1,5 +1,5 @@
 import { _ } from "./chunk~f025431ab0.js";
-import { _, _, _, _, _, _ } from "./chunk~01cfc309bf.js";
+import { _, _, _, _, _ } from "./chunk~01cfc309bf.js";
 import { _, _ } from "./chunk~6b8ddcaac8.js";
 import {
   _,
@@ -18,18 +18,33 @@ import {
   _,
   _,
   _,
+} from "./chunk~3720b337f3.js";
+import { _, _ } from "./chunk~f57d770d64.js";
+import { _, _, _, _ } from "./chunk~cbbb6ae37c.js";
+import { _, _ } from "./chunk~9871ee5432.js";
+import { _ } from "./chunk~b980924b6a.js";
+import { _, _ } from "./chunk~d43c81a658.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
   _,
   _,
   _,
   _,
 } from "./chunk~b8ca037aae.js";
-import { _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
-import { _ } from "./chunk~b980924b6a.js";
-import { _ } from "./chunk~331382b23f.js";
-import { _ } from "./chunk~d43c81a658.js";
-import { _ } from "./chunk~21cdc464a1.js";
+import "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~710e3cfd2f.js";
-import { _, _, _, _, _, _ } from "./chunk~3720b337f3.js";
+import { _ } from "./chunk~331382b23f.js";
 import { _, _ } from "./chunk~379edc388d.js";
 import {
   _,
@@ -62,75 +77,50 @@ async function _(_, _ = 1e3) {
       _ > 0 && window.setTimeout(() => _(`timeout`), _));
   });
 }
-var _ = _(_(), 1);
-function _(_, _, _) {
-  if (!_) return !1;
-  let _ = !_?.bHasHideIgnoredValue || _.bHideIgnored;
-  return (_.ignored && _) ||
-    (_.excluded_tagids?.length ?? 0) > 0 ||
-    (_.excluded_content_descriptorids?.length ?? 0) > 0 ||
-    (_?.bHideOwned && _.already_owned) ||
-    (_?.bHideWishlisted && _.on_wishlist)
-    ? !0
-    : _ && !!(_.already_owned || _.demo_for_owned_game);
-}
+var _ = _(_(), 1),
+  _ = _.createContext(void 0);
 function _(_) {
-  return _.map((_) => _.data);
-}
-function _(_, _, _, _) {
-  let _ = _(),
-    _ = _.BUsesContentHubForItemSource(),
-    _ = !!_?.bHideOwned,
-    _ = !!_?.bHideWishlisted,
-    _ = !!_?.bHideIgnored,
-    _ = !!_?.bHasHideIgnoredValue,
-    _ = _({
-      queries: (_ ?? []).map((_) => {
-        let _ = _(_, _(_));
-        return _
-          ? {
-              ..._,
-              enabled: !1,
-            }
-          : _;
-      }),
-      combine: _,
-    });
-  return (0, _.useMemo)(() => {
-    if (!_)
-      return {
-        capsules: void 0,
-        nHiddenCapsules: 0,
-      };
-    let _ = {
-        bHideOwned: _,
-        bHideWishlisted: _,
-        bHideIgnored: _,
-        bHasHideIgnoredValue: _,
-      },
-      _ = 0;
-    return {
-      capsules: _.filter((_, _) => {
-        let _ = _[_];
-        return !_(_, _, _) || ((!_?.already_owned || _) && _++, !1);
-      }),
-      nHiddenCapsules: _,
-    };
-  }, [_, _, _, _, _, _, _]);
-}
-function _(_) {
-  let { capsules: _ } = _,
-    _ = _();
   return (
-    _({
-      queries: (_ ?? []).map((_) => _(_, _(_))),
-      combine: _,
-    }),
-    null
+    (_(_) || !!_.sale_tag_filter) &&
+    !_.enable_faceted_browsing &&
+    !_.disable_visibility_tracking &&
+    _.section_type !== `trailercarousel`
   );
 }
-function _() {
-  return null;
+function _(_, _, _, _) {
+  let _ = [],
+    _ = [];
+  for (let _ of _) (_(_) ? _ : _).push(_);
+  return _.length ? (_ && _.length < _ ? _ : _.concat(_)) : _;
+}
+function _(_, _, _, _) {
+  let _ = _.useContext(_),
+    _ = _.useContext(_),
+    _ = _.useMemo(
+      () => (_ ? _.GetSaleSectionIncludingFooterSections().indexOf(_) : -1),
+      [_, _],
+    ),
+    _ = _.useId(),
+    _ = _(_, 0, _) || _?.length || 0,
+    _ = _.useMemo(() => {
+      if (!_ || !_ || _ < 0) return _;
+      let _ = _(_)
+        ? _(
+            _,
+            (_) => _.BSeenAbove(_, _),
+            _,
+            !!_.visibility_tracking_drop_duplicates,
+          )
+        : _;
+      return (_.SetFirstPage(_, _, _.slice(0, _)), _);
+    }, [_, _, _, _, _, _]);
+  return (
+    _.useEffect(() => {
+      if (!(!_ || !_ || _ < 0))
+        return (_.SetFirstPage(_, _, _.slice(0, _)), () => _.Remove(_));
+    }, [_, _, _, _, _]),
+    _
+  );
 }
 var _ = _(),
   _ = 250;
@@ -148,18 +138,22 @@ function _(_) {
     { nMaxCapsulesPerRow: _, bScreenIsWide: _ } = _(_.section_type),
     _ = _.useContext(_),
     _ = _(_, _, !0),
-    { capsules: _, nHiddenCapsules: _ } = _(_, _, void 0, !0),
+    _ = _(_, _, _, _),
+    { capsules: _, nHiddenCapsules: _ } = _(_, _, _, void 0, !0),
     _ = _ ? _?.slice(0, _) : _,
     _ = _.useMemo(() => _(_, _?.length), [_, _?.length]),
     _ = _(_, _),
     _ = _(_, _),
     [_, _] = _.useState(0),
-    _ = _(_, _);
+    _ = _(_, _),
+    _ = _ && !_ && !_ && _(_),
+    _ = _ ? _(_, _, _) : void 0;
   if (_(_, _) === `personalized_carousel`) {
     let _ = _(_, _, _);
     if (_ === void 0)
       return (0, _.jsx)(_, {
         capsules_per_row: _,
+        swipe_row: _,
       });
     if (_ === null) return null;
   }
@@ -167,6 +161,7 @@ function _(_) {
   if (!_)
     _ = (0, _.jsx)(_, {
       capsules_per_row: _,
+      swipe_row: _,
     });
   else {
     let _ = _({
@@ -206,7 +201,7 @@ function _(_) {
       section: _,
       language: _,
       bInGamepadUI: _,
-      placeholderHeight: _(_, _?.length ?? 0, _) + `px`,
+      placeholderHeight: (_ ? _ : _(_, _?.length ?? 0, _)) + `px`,
       nHiddenCapsules: _,
       personalizedCarousels: _,
       promotedSaleEvent: _,
@@ -222,6 +217,16 @@ function _(_) {
       ],
     }),
   });
+}
+function _(_, _, _) {
+  return _[0] === 1
+    ? {
+        width: `80vw`,
+        height: `320px`,
+      }
+    : _(_, _)[0] === `tall`
+      ? `tall_capsule`
+      : `capsule`;
 }
 function _(_, _, _) {
   let _ = 0;
@@ -261,7 +266,7 @@ function _(_, _) {
 }
 async function _(_, _, _, _, _) {
   let { queryClient: _, storeItemLoader: _ } = _,
-    _ = _.BUsesContentHubForItemSource(),
+    _ = _(_, _),
     _ = _.prefer_assets_without_overrides ? _ : _,
     _ = _.flatMap((_) => {
       let _ = _(_);

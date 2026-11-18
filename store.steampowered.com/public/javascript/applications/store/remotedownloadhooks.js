@@ -1338,7 +1338,7 @@ var y = e(t()),
     return e.SendMsg(`ClientComm.GetAllClientLogonInfo#1`, c(C, t, n), w, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetAllClientLogonInfo = n;
@@ -1353,42 +1353,42 @@ var y = e(t()),
     return e.SendMsg(`ClientComm.GetClientAppList#1`, c(k, t, n), A, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetClientAppList = i;
   function a(e, t, n) {
     return e.SendMsg(`ClientComm.InstallClientApp#1`, c(N, t, n), P, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.InstallClientApp = a;
   function o(e, t, n) {
     return e.SendMsg(`ClientComm.UninstallClientApp#1`, c(F, t, n), I, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.UninstallClientApp = o;
   function s(e, t, n) {
     return e.SendMsg(`ClientComm.LaunchClientApp#1`, c(R, t, n), z, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.LaunchClientApp = s;
   function l(e, t, n) {
     return e.SendMsg(`ClientComm.SetClientAppUpdateState#1`, c(L, t, n), B, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.SetClientAppUpdateState = l;
   function u(e, t, n) {
     return e.SendMsg(`ClientComm.EnableOrDisableDownloads#1`, c(V, t, n), H, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.EnableOrDisableDownloads = u;

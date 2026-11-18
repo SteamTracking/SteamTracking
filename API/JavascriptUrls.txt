@@ -1372,9 +1372,11 @@ ${STORE_BASE_URL}${type}
 ${STORE_BASE_URL}${url_path}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
+${STORE_BASE_URL}${}${_ ? `?${}` : ``}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ``}
 ${STORE_BASE_URL}${}/${vanity_url}
+${STORE_BASE_URL}${}/${}
 ${STORE_BASE_URL}${}/${}?${}
 ${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
@@ -1576,7 +1578,6 @@ ${STORE_BASE_URL}forgeyourfate
 ${STORE_BASE_URL}forgeyourfate${_ ? `#badge` : `#next`}
 ${STORE_BASE_URL}franchise/${m_strVanity}/
 ${STORE_BASE_URL}franchise/${vanity}/
-${STORE_BASE_URL}franchise/${}
 ${STORE_BASE_URL}freelicense/addfreelicense
 ${STORE_BASE_URL}friends/recommendgame
 ${STORE_BASE_URL}fwlink?id=gamerecordingintro
@@ -1629,7 +1630,7 @@ ${STORE_BASE_URL}mobile/?show=steamapp
 ${STORE_BASE_URL}mobile?show=steamapp
 ${STORE_BASE_URL}news/
 ${STORE_BASE_URL}news/${}
-${STORE_BASE_URL}news/${}/view/${announcement_gid}
+${STORE_BASE_URL}news/${}/view/${}
 ${STORE_BASE_URL}news/app/${appid}?emclan=${}&emgid=${GID}
 ${STORE_BASE_URL}news/app/${parentAppID}/view/${completed_event_gid}
 ${STORE_BASE_URL}news/app/${}/view/${event_gid}
@@ -1722,7 +1723,6 @@ ${STORE_BASE_URL}search/?${}=${}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}%2C${strSecondaryCategory}
 ${STORE_BASE_URL}search/?filter=${_ ? `topsellers` : `globaltopsellers`}
-${STORE_BASE_URL}search/?franchise=${}
 ${STORE_BASE_URL}search/?term=${}
 ${STORE_BASE_URL}search/results/?${}
 ${STORE_BASE_URL}search/suggest

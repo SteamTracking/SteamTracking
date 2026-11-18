@@ -34,8 +34,7 @@ var _ = 39049601,
   _ = 41316928,
   _ = 4397053,
   _ = 45559995,
-  _ = 45902273,
-  _ = _(_(), 1);
+  _ = 45902273;
 function _(_, _, _) {
   return _ == 45559995
     ? `charts/topnewreleases/${_}`
@@ -78,7 +77,8 @@ function _(_, _ = null, _ = ``) {
   let _ = `\\[\\/?(?:` + _(_) + `){1,}.*?]`;
   return _.replace(new RegExp(_, `gi`), _);
 }
-var _ = class _ extends _.Message {
+var _ = _(_(), 1),
+  _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       (super(),
@@ -1679,14 +1679,14 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetVoteDefinitions = _;
   function _(_, _, _) {
     return _.SendMsg(`StoreSales.SetVote#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.SetVote = _;
@@ -1694,7 +1694,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`StoreSales.GetUserVotes#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetUserVotes = _;
@@ -1705,7 +1705,7 @@ var _;
     return _.SendMsg(`SteamAwards.GetUserNominations#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetUserNominations = _;
@@ -1713,7 +1713,7 @@ var _;
     return _.SendMsg(`SteamAwards.GetOtherUserNominations#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 2,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetOtherUserNominations = _;
@@ -1721,7 +1721,7 @@ var _;
     return _.SendMsg(`SteamAwards.Nominate#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.Nominate = _;
@@ -1733,7 +1733,7 @@ var _;
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`community`],
+        rgBrowserAPISites: [`community`, `store`],
       },
     );
   }
@@ -1741,7 +1741,7 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`SteamAwards.GetNominationShareLink#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetNominationShareLink = _;
@@ -1813,8 +1813,7 @@ _(
   `GetEventStartTime`,
   null,
 );
-var _ = 99999,
-  _ = `exploration`,
+var _ = `exploration`,
   _ = (function (_) {
     return ((_.Random = `r`), (_.Personalized = `p`), _);
   })({});
@@ -1844,7 +1843,8 @@ function _(_) {
       return;
   }
 }
-var _ = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
+var _ = 99999,
+  _ = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
 function _(_) {
   return (
     _.some((_) => _ == _.GetEventType()) &&

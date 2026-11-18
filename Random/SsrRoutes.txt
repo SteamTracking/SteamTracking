@@ -107,8 +107,8 @@ store.steampowered.com ^/oauth/loginform/?$
 store.steampowered.com ^/personalcalendar/?$
 store.steampowered.com ^/recommender/?$
 store.steampowered.com ^/sitemap/?$
-store.steampowered.com ^/specials_v2/?$
-store.steampowered.com ^/specials_v2/sales/?$
+store.steampowered.com ^/specials/?$
+store.steampowered.com ^/specials/sales/?$
 store.steampowered.com ^/steamawards(?:/(\d+))?/?$
 store.steampowered.com ^/steamawards/nominations(?:/(\d+))?(?:/(\d+))?/?$
 store.steampowered.com ^/trailer/assets/?$

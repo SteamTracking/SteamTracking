@@ -180,6 +180,7 @@
     "moderationaction_locked": "Locked",
     "moderationaction_marked_as_suspicious": "Content marked as suspicious",
     "moderationaction_ownerdisputed": "Moderation disputed by owner",
+    "moderationaction_partnerclearedreports": "Reports cleared by partner",
     "moderationaction_privatemessaged": "Private message sent",
     "moderationaction_released": "Released",
     "moderationaction_reset_content": "Reset author's content",

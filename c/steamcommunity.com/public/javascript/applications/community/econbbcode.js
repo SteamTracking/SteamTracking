@@ -9,6 +9,7 @@ import { _ } from "./chunk~2e61cac879.js";
 import { _, _ } from "./chunk~8d2b90a325.js";
 import { _, _ } from "./chunk~d6c6ad29fc.js";
 import { _, _, _, _ } from "./chunk~50a4210268.js";
+import { _ } from "./chunk~5e5f1b9ccf.js";
 import {
   _,
   _,
@@ -32,14 +33,6 @@ import {
   _,
 } from "./main.js";
 import { _, _ } from "./chunk~23d4719eb3.js";
-function _(_, _) {
-  return _?.public_data?.profile_url
-    ? `${_.COMMUNITY_BASE_URL}id/${_.public_data.profile_url}`
-    : _(_?.public_data?.steamid || _);
-}
-function _(_) {
-  return _ ? `${_.COMMUNITY_BASE_URL}profiles/${_}` : ``;
-}
 function _(_) {
   let { icon_url: _, icon_url_large: _ } = _;
   return _(_ || _);

@@ -2,6 +2,7 @@ import { _ } from "./chunk~f025431ab0.js";
 import { _, _, _, _ } from "./chunk~01cfc309bf.js";
 import { _ } from "./chunk~6b8ddcaac8.js";
 import { _ } from "./chunk~cd94ddba57.js";
+import { _ } from "./chunk~56437c278a.js";
 import { _ } from "./chunk~d43c81a658.js";
 import { _ } from "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~710e3cfd2f.js";
@@ -123,6 +124,12 @@ function _(_) {
       return _.Localize(`#DiscountsAndEvents_Banner_WellReviewed`);
     case `top_seller`:
       return _.Localize(`#DiscountsAndEvents_Banner_TopSeller`);
+    case `hot_deal`:
+      return _.Localize(`#DiscountsAndEvents_Banner_HotDeal`);
+    case `deep_discount`:
+      return _.Localize(`#DiscountsAndEvents_Banner_DeepDiscount`);
+    case `popular_in_region`:
+      return _.Localize(`#DiscountsAndEvents_Banner_PopularInRegion`);
     case `custom`:
       return _.title || void 0;
     default:
@@ -154,7 +161,7 @@ function _(_) {
         : (_.strSeeMoreURL ?? `${_.STORE_BASE_URL}specials`),
     ),
     _ = _.Localize(`#DiscountsAndEvents_SeeMore`),
-    { bShowSeeMoreHint: _, panelProps: _ } = _(_),
+    { bShowSeeMoreHint: _, panelProps: _ } = _(_, `X`),
     { rgPages: _, rgColumns: _ } = _.useMemo(() => {
       let _ = _(_ ?? [], _, _, _, _);
       return {
@@ -172,7 +179,7 @@ function _(_) {
             className: (0, _.default)(_, _),
             navEntryPreferPosition: _.PREFERRED_CHILD,
             ..._,
-            onOptionsActionDescription: _ ? _ : void 0,
+            onSecondaryActionDescription: _ ? _ : void 0,
             children: [
               (0, _.jsxs)(_, {
                 bHideTitle: _,
@@ -187,6 +194,7 @@ function _(_) {
                     (0, _.jsx)(_, {
                       label: _,
                       shown: _,
+                      button: `X`,
                     }),
                 ],
               }),
@@ -335,6 +343,7 @@ function _(_) {
     _ = _?.preferences?.disable_microtrailers,
     [_, _] = _.useState(!1),
     [_, _] = _.useState(!1),
+    _ = _(_),
     _ = !!_ && !_ && !_.sale_page && !_,
     _ = _ && (_ || _),
     _ = _(_),
@@ -410,6 +419,7 @@ function _(_) {
     ),
     onGamepadFocus: () => _(!0),
     onGamepadBlur: () => _(!1),
+    ..._,
     children: _
       ? _
         ? (0, _.jsx)(_, {

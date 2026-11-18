@@ -55,11 +55,23 @@ const __vite__mapDeps = (
       "./chunk~593a6b8ddc.js",
       "./chunk~6eb508043a.js",
       "./chunk~cf3721cc1c.js",
+      "./chunk~3720b337f3.js",
+      "./chunk~9871ee5432.js",
+      "./chunk~b980924b6a.js",
+      "../../../css/applications/store/chunk~fd36211970.css",
+      "./chunk~d43c81a658.js",
+      "./chunk~ceada343dc.js",
+      "../../../css/applications/store/chunk~998d46313d.css",
+      "./chunk~e70aabe4d7.js",
+      "./chunk~710e3cfd2f.js",
+      "./chunk~ffe4581a06.js",
+      "../../../css/applications/store/chunk~97629f3858.css",
+      "./chunk~7b4b9eb713.js",
+      "../../../css/applications/store/chunk~b3cb27b5e1.css",
       "./chunk~f0141d9521.js",
       "./chunk~93fc7377c2.js",
       "./chunk~673650a653.js",
       "./chunk~466a63c735.js",
-      "./chunk~331382b23f.js",
       "./chunk~0111fcd096.js",
       "./chunk~429133cc70.js",
       "./chunk~a19d1add1e.js",
@@ -71,39 +83,29 @@ const __vite__mapDeps = (
       "./chunk~5adf866415.js",
       "./chunk~684e72ad45.js",
       "../../../css/applications/store/chunk~f726963d25.css",
-      "./chunk~cbbb6ae37c.js",
-      "../../../css/applications/store/chunk~9f001c4d7c.css",
       "./chunk~f4c928a27a.js",
       "./chunk~751f63337e.js",
-      "./chunk~b980924b6a.js",
-      "../../../css/applications/store/chunk~fd36211970.css",
+      "./chunk~cbbb6ae37c.js",
+      "../../../css/applications/store/chunk~9f001c4d7c.css",
+      "./chunk~56437c278a.js",
       "../../../css/applications/store/chunk~eabb00f56a.css",
-      "./chunk~d43c81a658.js",
-      "./chunk~618fb52a90.js",
-      "../../../css/applications/store/chunk~51eda6e553.css",
-      "./chunk~e70aabe4d7.js",
-      "./chunk~ceada343dc.js",
+      "./chunk~d5ffe2610e.js",
       "./chunk~38061b7abb.js",
       "./chunk~b980797e15.js",
       "../../../css/applications/store/chunk~19ee63bf13.css",
       "./chunk~7dcf2f426f.js",
       "../../../css/applications/store/chunk~aa041bcbf9.css",
       "./chunk~21cdc464a1.js",
-      "./chunk~710e3cfd2f.js",
       "../../../css/applications/store/chunk~70cbcbc9c7.css",
       "./chunk~4e18b7e430.js",
       "../../../css/applications/store/chunk~0fa7d82d9f.css",
-      "./chunk~7b4b9eb713.js",
+      "./chunk~331382b23f.js",
       "./chunk~4d16ce5d1a.js",
       "./chunk~5214caf193.js",
       "./chunk~cb3200f06e.js",
       "./chunk~9e9562d60b.js",
       "./chunk~3f4314f3b4.js",
       "../../../css/applications/store/chunk~863c097d06.css",
-      "./chunk~3720b337f3.js",
-      "./chunk~ffe4581a06.js",
-      "../../../css/applications/store/chunk~97629f3858.css",
-      "../../../css/applications/store/chunk~b3cb27b5e1.css",
       "./chunk~221bff5eed.js",
       "../../../css/applications/store/chunk~67a945caf0.css",
       "./chunk~d902bc74d6.js",
@@ -209,7 +211,10 @@ import {
   _,
   _,
   _,
+  _,
+  _,
 } from "./chunk~2185942436.js";
+import { _ } from "./chunk~3720b337f3.js";
 import { _ } from "./chunk~8c66e1c7a5.js";
 import { _, _, _ } from "./chunk~cf3721cc1c.js";
 import { _, _ } from "./chunk~4c13037b22.js";
@@ -469,12 +474,15 @@ import {
   _,
   _,
   _,
+  _,
+  _,
+  _,
 } from "./main.js";
 import { GameRatingBlock as _, _ } from "./chunk~9265c24730.js";
 import { _ } from "./chunk~437071091c.js";
 import { _ } from "./chunk~6eb508043a.js";
 import { _ } from "./chunk~f169880238.js";
-import { _, _, _, _ } from "./chunk~15f90ada43.js";
+import { _, _ } from "./chunk~15f90ada43.js";
 import _, { _, _ } from "./chunk~04e3a455a5.js";
 import { _, _ } from "./chunk~9eea33c2a2.js";
 import { _, _, _ } from "./chunk~4c65b375ad.js";
@@ -1644,13 +1652,6 @@ function _(_) {
     ],
   });
 }
-var _ = (function (_) {
-  return (
-    (_[(_.k_CreatorHomeNone = 0)] = `k_CreatorHomeNone`),
-    (_[(_.k_CreatorHomeAll = -1)] = `k_CreatorHomeAll`),
-    _
-  );
-})({});
 function _(_) {
   let { src: _, className: _, maxWidth: _ } = _,
     _ = (0, _.useRef)(null),
@@ -1721,7 +1722,7 @@ function _(_) {
     _ = _(_, _),
     _ = (0, _.useMemo)(() => {
       let _ = new Map(Object.entries(_).map(([_, _]) => [Number(_), _]));
-      if (_ != 1 && _ == _.k_CreatorHomeAll) {
+      if (_ != 1 && _ == -1) {
         let _ = new Set(_);
         _.forEach((_) => {
           if (!_.has(_)) {
@@ -4864,6 +4865,51 @@ function _(_) {
     ],
   });
 }
+function _(_) {
+  let { data: _ } = _({
+      appid: _,
+    }),
+    { data: _ } = _({
+      appid: _,
+    }),
+    { data: _ } = _({
+      appid: _,
+    }),
+    _ = _?.hardware_compatibility,
+    _ = _.useMemo(
+      () => ({
+        appid: _,
+        resolved_category: _?.steam_deck_compat_category ?? 0,
+        resolved_items: _?.steam_deck_tests,
+        steamos_resolved_category: _?.steam_os_compat_category ?? 0,
+        steamos_resolved_items: _?.steam_os_tests,
+        machine_resolved_category: _?.steam_machine_compat_category ?? 0,
+        machine_resolved_items: _?.steam_machine_tests,
+        frame_resolved_category: _?.steam_frame_compat_category ?? 0,
+        frame_resolved_items: _?.steam_frame_tests,
+        steam_deck_blog_url: _?.steam_deck_blog_url,
+      }),
+      [_, _, _],
+    );
+  if (
+    _ &&
+    _ &&
+    _ !== void 0 &&
+    (_.resolved_category !== 0 || _.steam_deck_blog_url || !_(_.type))
+  )
+    return _;
+}
+function _(_) {
+  switch (_) {
+    case 4:
+    case 5:
+    case 10:
+    case 11:
+      return !0;
+    default:
+      return !1;
+  }
+}
 var _ = _,
   _ = `vAM8b-ZY9mg-`,
   _ = `-Lssf7qCuck-`,
@@ -5484,9 +5530,6 @@ function _() {
     children: _(`#Wishlist_Categories_Max_Per_App_Reached`, _),
   });
 }
-var _ = `_3OBYC1AY3xE-`,
-  _ = `bAXKAbpoIl8-`,
-  _ = `_292mngwtrSI-`;
 function _(_, _) {
   if (!_.current) return;
   let _ = _.current.closest(`.queue_menu_flyout`);
@@ -5494,7 +5537,7 @@ function _(_, _) {
     (_ ? _.classList.add(`force_expand`) : _.classList.remove(`force_expand`));
 }
 function _(_) {
-  let { appid: _ } = _,
+  let { appid: _, onManageCategories: _ } = _,
     _ = _(),
     [_, _] = _.useState(void 0),
     [_, _] = _.useState(!1),
@@ -5546,7 +5589,7 @@ function _(_) {
       }
     },
     _ = (_) => {
-      (_.stopPropagation(), _.preventDefault(), _(_, !0), _(!0));
+      (_.stopPropagation(), _.preventDefault(), _ ? _() : (_(_, !0), _(!0)));
     },
     _ = () => {
       (_(!1), _(_, !1), _(void 0));
@@ -5570,20 +5613,28 @@ function _(_) {
     !_ || _.length === 0)
   )
     return null;
+  _.use(_.Ready());
   let _ = _.filter((_) => !_.bSelected),
     _ = _.filter((_) => _.bSelected);
-  return (0, _.jsxs)(`div`, {
-    className: _,
+  return (0, _.jsxs)(_, {
     ref: _,
+    direction: `column`,
+    gap: `1`,
+    padding: `3`,
+    marginStart: `2`,
     children: [
       (0, _.jsxs)(_, {
-        className: _,
+        justify: `between`,
+        align: `center`,
+        cursor: `pointer`,
         ..._,
         onClick: _,
         children: [
-          (0, _.jsx)(`div`, {
-            className: _,
-            children: _(`#Wishlist_QuickAdd_Header`),
+          (0, _.jsx)(_, {
+            size: `4`,
+            color: `text-light`,
+            contrast: `title`,
+            children: _.Localize(`#wishlist_quickadd_header`),
           }),
           (0, _.jsx)(_, {
             categoryCount: _?.length ?? 0,
@@ -5602,8 +5653,12 @@ function _(_) {
       _.length > 0 &&
         (0, _.jsxs)(`div`, {
           children: [
-            (0, _.jsx)(`div`, {
-              children: _(`#Wishlist_QuickAdd_RecentAndSuggested`),
+            (0, _.jsx)(_, {
+              _: `div`,
+              size: `2`,
+              color: `text-light`,
+              contrast: `note`,
+              children: _.Localize(`#wishlist_quickadd_recent_and_suggested`),
             }),
             (0, _.jsx)(_, {
               rgCategories: _,
@@ -9102,18 +9157,26 @@ var _ = `V88-l-UtA-I-`,
   _ = `lSXh8Kk-MNs-`,
   _ = `eZTYkQe7vtU-`,
   _ = `_3ZBzmpG7qIg-`;
+function _(_, _, _, _) {
+  return _ == `manufacturer` || _.EREALM === _.k_ESteamRealmChina
+    ? `${_.STORE_BASE_URL}search/?${_}=${encodeURIComponent(_)}`
+    : _
+      ? `${_.STORE_BASE_URL}${_}/${encodeURIComponent(_)}`
+      : `${_.STORE_BASE_URL}curator/${_}`;
+}
+var _ = _.createContext({
+  ePreferredHWCompat: 0,
+});
+function _() {
+  return _.useContext(_).ePreferredHWCompat;
+}
 function _(_) {
   let {
-      appid: _,
-      oTags: _,
-      oCreatorLinks: _,
-      reviewSummaryRecent: _,
-      strIdForReviewSummary: _,
-    } = _,
-    _ = new Map();
-  for (let [_, _] of Object.entries(_)) _.set(_, _);
-  let _ = new Map();
-  for (let [_, _] of Object.entries(_)) _.set(_, _);
+    appid: _,
+    rgTags: _,
+    reviewSummaryRecent: _,
+    strIdForReviewSummary: _,
+  } = _;
   return (
     _.useLayoutEffect(() => {
       let _ = document.querySelector(`#summaryBarTop`);
@@ -9137,11 +9200,10 @@ function _(_) {
           }),
           (0, _.jsx)(_, {
             appid: _,
-            mapTags: _,
+            rgTags: _,
           }),
           (0, _.jsx)(_, {
             appid: _,
-            mapCreatorLinks: _,
           }),
         ],
       }),
@@ -9160,25 +9222,14 @@ function _(_) {
 }
 function _(_) {
   let { appid: _ } = _,
-    _ = _.useMemo(() => _(`hardwarecompatibility`, `application_config`), []),
-    { bSteamDeck: _, bSteamOS: _, bSteamMachine: _, bSteamFrame: _ } = _(),
-    [_, _] = _.useMemo(
-      () =>
-        _
-          ? [3, _.Localize(`#AppPage_SummaryBar_SteamMachineCompat`)]
-          : _
-            ? [4, _.Localize(`#AppPage_SummaryBar_SteamFrameCompat`)]
-            : _ && !_
-              ? [2, _.Localize(`#AppPage_SummaryBar_SteamOSCompat`)]
-              : [1, _.Localize(`#AppPage_SummaryBar_SteamDeckCompat`)],
-      [_, _, _, _],
-    );
+    _ = _(_),
+    _ = _();
   return _
     ? (0, _.jsxs)(_, {
         className: _(_, _),
         children: [
           (0, _.jsx)(_, {
-            children: _,
+            children: _.Localize(_(_)),
           }),
           (0, _.jsx)(_, {
             className: _,
@@ -9189,6 +9240,23 @@ function _(_) {
         ],
       })
     : null;
+}
+function _() {
+  let _ = _(),
+    { bSteamDeck: _, bSteamOS: _, bSteamMachine: _, bSteamFrame: _ } = _();
+  return _ === 0 ? (_ ? 3 : _ ? 4 : _ && !_ ? 2 : 1) : _;
+}
+function _(_) {
+  switch (_) {
+    case 3:
+      return `#AppPage_SummaryBar_SteamMachineCompat`;
+    case 4:
+      return `#AppPage_SummaryBar_SteamFrameCompat`;
+    case 2:
+      return `#AppPage_SummaryBar_SteamOSCompat`;
+    default:
+      return `#AppPage_SummaryBar_SteamDeckCompat`;
+  }
 }
 function _(_) {
   let _ = _.Element?.getBoundingClientRect(),
@@ -9214,7 +9282,7 @@ function _(_) {
   });
 }
 function _(_) {
-  let { appid: _, mapTags: _ } = _;
+  let { appid: _, rgTags: _ } = _;
   return (0, _.jsxs)(_, {
     className: _(_, _),
     focusable: !0,
@@ -9224,7 +9292,7 @@ function _(_) {
       }),
       (0, _.jsx)(_, {
         className: _,
-        children: Array.from(_.entries()).map(([_, _]) =>
+        children: _.map((_) =>
           (0, _.jsx)(
             _,
             {
@@ -9266,11 +9334,12 @@ function _(_) {
       appid: _,
     }),
     _ = _.useCallback(() => {
-      window.MoveFocusToId(_);
+      _ && window.MoveFocusToId(_);
     }, [_]);
   return !_ || !_.summary_filtered?.review_count
     ? null
-    : (0, _.jsxs)(_, {
+    : (_.use(_.Ready()),
+      (0, _.jsxs)(_, {
         className: _,
         onActivate: _,
         children: [
@@ -9286,15 +9355,15 @@ function _(_) {
           _ &&
             (0, _.jsx)(_, {
               label: `#AppPage_Reviews_Recent`,
-              reviewScoreDescription: _.description,
-              percentage: _.percentage,
-              count: _.count,
+              reviewScoreDescription: _(_.eReviewScore, _.nReviews),
+              percentage: _(_),
+              count: _.nReviews,
             }),
         ],
-      });
+      }));
 }
 function _(_) {
-  let { appid: _, mapCreatorLinks: _ } = _,
+  let { appid: _ } = _,
     { data: _ } = _({
       appid: _,
     }),
@@ -9321,13 +9390,11 @@ function _(_) {
                   label: `#AppPage_SummaryBar_Developer`,
                   strType: `developer`,
                   rgCreators: _.developers,
-                  mapCreatorLinks: _,
                 }),
                 (0, _.jsx)(_, {
                   label: `#AppPage_SummaryBar_Publisher`,
                   strType: `publisher`,
                   rgCreators: _.publishers,
-                  mapCreatorLinks: _,
                 }),
                 (0, _.jsx)(_, {
                   label: `#AppPage_SummaryBar_Manufacturer`,
@@ -9365,8 +9432,16 @@ function _(_) {
     : null;
 }
 function _(_) {
-  let { creator: _, strType: _, mapCreatorLinks: _ } = _,
-    _ = _(_?.get(_.name)),
+  let { creator: _, strType: _ } = _,
+    _ = _.creator_clan_account_id,
+    { data: _ } = _(
+      _
+        ? {
+            creatorid: _,
+          }
+        : void 0,
+    ),
+    _ = _(_ && _ ? _(_, _, _.name, _.store_url_slug) : void 0),
     _ = _(_.STORE_BASE_URL + `search/?${_}=${encodeURIComponent(_.name)}`);
   return (0, _.jsx)(_, {
     href: _ || _,
@@ -9378,7 +9453,7 @@ function _(_) {
   });
 }
 function _(_) {
-  let { label: _, strType: _, rgCreators: _, mapCreatorLinks: _ } = _;
+  let { label: _, strType: _, rgCreators: _ } = _;
   return !_ || _.length == 0
     ? null
     : (0, _.jsxs)(`tr`, {
@@ -9403,7 +9478,6 @@ function _(_) {
                         {
                           strType: _,
                           creator: _,
-                          mapCreatorLinks: _,
                         },
                         _.creator_clan_account_id || _.name,
                       ),
@@ -12167,6 +12241,8 @@ function _(_) {
   let { appid: _ } = _,
     [_, _] = _.useState(!1),
     _ = _(),
+    _ = _(),
+    { data: _ } = _(_),
     _ = (0, _.jsxs)(_, {
       direction: `row`,
       align: `center`,
@@ -12198,15 +12274,30 @@ function _(_) {
       onSecondaryButton: () => _(!0),
       onSecondaryActionDescription: _.Localize(`#wishlist_manage_categories`),
       children: [
-        (0, _.jsx)(_, {
-          appid: _,
-          bAllowRemove: !0,
-          width: `100%`,
-          children: (_) =>
+        (0, _.jsxs)(_, {
+          direction: `row`,
+          gap: `1`,
+          children: [
             (0, _.jsx)(_, {
-              options: [_, _],
-              children: _ ? _ : _,
+              flexGrow: `1`,
+              children: (0, _.jsx)(_, {
+                appid: _,
+                bAllowRemove: !0,
+                width: `100%`,
+                children: (_) =>
+                  (0, _.jsx)(_, {
+                    options: [_, _],
+                    children: _ ? _ : _,
+                  }),
+              }),
             }),
+            !_ &&
+              _?.wishlist &&
+              (0, _.jsx)(_, {
+                appid: _,
+                onManageCategories: () => _(!0),
+              }),
+          ],
         }),
         _ &&
           (0, _.jsx)(_, {
@@ -12218,10 +12309,95 @@ function _(_) {
     }),
   });
 }
+function _(_) {
+  let { appid: _, onManageCategories: _ } = _,
+    [_, _] = _.useState(!1),
+    { data: _ } = _(_),
+    _ = _(_);
+  return _
+    ? (0, _.jsxs)(_.Root, {
+        open: _,
+        onOpenChange: _,
+        placement: `bottom-end`,
+        children: [
+          (0, _.jsx)(_.Anchor, {
+            children: (0, _.jsx)(_, {
+              title: _.Localize(`#wishlist_manage_wishlist`),
+              onClick: () => _(!_),
+              children: (0, _.jsx)(_, {
+                direction: `down`,
+              }),
+            }),
+          }),
+          (0, _.jsx)(_.Positioner, {
+            children: (0, _.jsx)(_.FocusManager, {
+              children: (0, _.jsx)(_, {
+                width: `300px`,
+                border: `1`,
+                borderColor: `blue-7`,
+                background: `greyneutral-4`,
+                elevation: `1`,
+                padding: `1`,
+                children: (0, _.jsxs)(_, {
+                  direction: `column`,
+                  children: [
+                    (0, _.jsx)(_, {
+                      padding: `3`,
+                      children: (0, _.jsx)(_, {
+                        href: `${_.STORE_BASE_URL}wishlist/`,
+                        size: `4`,
+                        color: `text-light`,
+                        contrast: `title`,
+                        children: _.Localize(`#wishlist_manage_wishlist`),
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      padding: `3`,
+                      cursor: `pointer`,
+                      onClick: () => {
+                        (_(!1),
+                          _.mutateAsync({
+                            wishlist: !1,
+                            old_interest: _,
+                          }));
+                      },
+                      children: (0, _.jsx)(_, {
+                        size: `4`,
+                        color: `text-light`,
+                        contrast: `title`,
+                        children: _.Localize(`#wishlist_remove_from_wishlist`),
+                      }),
+                    }),
+                    (0, _.jsx)(_, {
+                      appid: _,
+                      onManageCategories: () => {
+                        (_(!1), _());
+                      },
+                    }),
+                  ],
+                }),
+              }),
+            }),
+          }),
+        ],
+      })
+    : null;
+}
 var _ = `ix-tBm6Bho8-`,
   _ = `ddSW8NTrpmA-`,
   _ = `tHgINvo1Hnc-`,
-  _ = `bIkJK6-VgKQ-`;
+  _ = `bIkJK6-VgKQ-`,
+  _ = {
+    name: `queue_type`,
+    preferenceControls: {
+      isTechnicallyNecessary: !0,
+    },
+  },
+  _ = [0, 3, 1];
+function _() {
+  let _ = Number.parseInt(_(_) ?? ``);
+  return _.find((_) => _ === _) ?? 0;
+}
 function _(_, _) {
   return (_ || []).map((_) => ({
     accountid: _.ToAccountID(_.steamid),
@@ -12257,20 +12433,86 @@ function _(_) {
     [_, _],
   );
 }
-async function _(_, _) {
-  let _ = _(_.STORE_BASE_URL, _, _.country_code),
-    _ = (await (await fetch(_)).json()).rgCurations[_] || {};
-  return Object.entries(_).map((_) => ({
-    clan_accountid: Number(_[0]),
-    recommendation: _[1],
-  }));
+function _() {
+  let _ = _(),
+    _ = _();
+  return _(_(_, _));
+}
+function _(_, _) {
+  return {
+    queryKey: [`RecommendationReasons`, `CountryTopSellingGames`, _.country],
+    queryFn: async () => {
+      let _ = await _.Query(_, {
+        query_name: `CountryTopSellingGames`,
+        query: {
+          start: 0,
+          count: 100,
+          sort: 10,
+          filters: {
+            type_filters: {
+              include_games: !0,
+            },
+          },
+        },
+        context: {
+          language: _.language,
+          country_code: _.country,
+        },
+      });
+      if (!_.BSuccess())
+        throw `Error loading top-selling games: ${_.GetErrorMessage()}`;
+      return _.Body()
+        .ids()
+        .map((_) => _.appid())
+        .filter((_) => _ !== void 0);
+    },
+    staleTime: 36e5,
+  };
 }
 function _(_) {
-  return _({
-    queryKey: [`UserCurations` + _.accountid],
-    queryFn: async () => _(_, _.accountid),
-    enabled: !!_.accountid,
-  });
+  return _(_(_.accountid, _));
+}
+function _(_, _) {
+  return {
+    queryKey: [`RecommendationReasons`, `SimilarPlayedApps`, _, _],
+    queryFn: async () => {
+      let _ = await _.default.get(
+        `${_.STORE_BASE_URL}explore/ajaxgetstorerelevancedata`,
+        {
+          params: {
+            appid: _,
+          },
+          withCredentials: !0,
+          timeout: 1e4,
+        },
+      );
+      return _.data?.success == 1
+        ? (_.data.results?.similar_played_apps ?? []).map((_) => ({
+            appid: _.appid,
+            playtimeForever: _.playtime_forever,
+          }))
+        : [];
+    },
+    enabled: !!_,
+  };
+}
+function _(_) {
+  return _(_(_.accountid, _));
+}
+function _(_, _) {
+  return {
+    queryKey: [`RecommendationReasons`, `CuratorRecommendations`, _, _],
+    queryFn: async () => {
+      let _ = await (
+        await fetch(_(_.STORE_BASE_URL, _, _.country_code))
+      ).json();
+      return Object.entries(_.rgCurations?.[_] ?? {}).map(([_, _]) => ({
+        clan_accountid: Number(_),
+        recommendation: _,
+      }));
+    },
+    enabled: !!_,
+  };
 }
 function _(_) {
   let { data: _ } = _({
@@ -12292,13 +12534,17 @@ function _(_) {
     { data: _ } = _(),
     { data: _ } = _(_),
     { data: _ } = _(),
+    { data: _ } = _(),
     { data: _ } = _(_),
     { data: _ } = _(),
     { data: _ } = _(_.steamid),
+    { data: _ } = _(_),
+    { data: _ } = _(),
     { data: _ } = _(),
     { data: _ } = _(_);
   return _.useMemo(() => {
     if (
+      !_ ||
       !_ ||
       !_ ||
       !_ ||
@@ -12320,9 +12566,9 @@ function _(_) {
     };
     ((_.nCurrentUserPlaytimeMins = _.your_info?.minutes_played_forever || 0),
       (_.bCurrentUserOwns = !!_.your_info?.owned),
-      (_.bFromInteractiveRecommender = _.bRecommendedByIR),
+      (_.bFromInteractiveRecommender = _.includes(_)),
       _.bCurrentUserOwns ||
-        ((_.rgSimilarApps = _.arrSimilarPlayedApps || []),
+        ((_.rgSimilarApps = _),
         _.rgSimilarApps?.length == 0 &&
           (_.rgMatchingTagsPlayed =
             _.filter((_) => _?.find((_) => _.tagid == _.tagid)) || [])));
@@ -12340,14 +12586,14 @@ function _(_) {
       let _ = _(_);
       _.bUserLanguageSupported = !!_.find((_) => _.elanguage == _);
     } else _.bUserLanguageSupported = !0;
-    let _ = _.GetItems().findIndex((_) => _.GetAppID() == _);
-    return (
-      _ != -1 && (_ < 25 ? (_.bTopSeller = !0) : (_.bPopular = !0)),
-      (_.bWishlisted = !!_.items.find((_) => _.appid == _)),
-      (_.rgExcludedTags =
-        _.tag_preferences?.tags_to_exclude?.filter((_) =>
-          _?.find((_) => _.tagid == _.tagid),
-        ) || []),
+    let _ = _.indexOf(_);
+    (_ != -1 && (_ < 25 ? (_.bTopSeller = !0) : (_.bPopular = !0)),
+      (_.bWishlisted = !!_.items.find((_) => _.appid == _)));
+    let _ =
+      _.tag_preferences?.tags_to_exclude?.filter((_) =>
+        _?.find((_) => _.tagid == _.tagid),
+      ) || [];
+    ((_.rgExcludedTags = _),
       (_.rgPublishersFollowed = _.publishers?.filter(
         (_) =>
           _.creator_clan_account_id &&
@@ -12378,10 +12624,37 @@ function _(_) {
       (_.rgFriendsRecommended = _.accountids_recommended || []),
       (_.rgFriendsDisrecommended = _.accountids_not_recommended || []),
       (_.rgFriendsWishlisted = _(_).map((_) => _.accountid)),
-      (_.rgFriendsOwned = _(_, !!_.is_free).map((_) => _.accountid)),
+      (_.rgFriendsOwned = _(_, !!_.is_free).map((_) => _.accountid)));
+    let _ =
+        !!_?.in_queues?.some((_) => _ == _() || _ == 2) &&
+        _.length == 0 &&
+        _.some(
+          (_) =>
+            _.some((_) => _.tagid == _.tagid) &&
+            !_.some((_) => _.tagid == _.tagid),
+        ),
+      _ = _.related_items?.parent_appid;
+    return (
+      (_.bStrongSignal =
+        _.nCurrentUserPlaytimeMins > 0 ||
+        _.bCurrentUserOwns ||
+        !!(_ && _?.has(_)) ||
+        _.length > 0 ||
+        !_.bUserLanguageSupported ||
+        _.rgExcludedTags.length > 0 ||
+        _ ||
+        !!_.rgDevelopersFollowed?.length ||
+        !!_.rgPublishersFollowed?.length ||
+        !!_.rgFranchisesFollowed?.length ||
+        _.rgCuratorsPositive.length > 0 ||
+        _.rgCuratorsNegative.length > 0 ||
+        _.bFromInteractiveRecommender ||
+        _.rgFriendsRecommended.length > 0 ||
+        _.rgFriendsDisrecommended.length > 0 ||
+        _ != -1),
       _
     );
-  }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
+  }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
 }
 var _ = `HyQJJqDXNrI-`,
   _ = `V9KeuIO8sXU-`,
@@ -13687,8 +13960,6 @@ function _(_) {
     _.useEffect(() => {
       (_(_, _), _(_), _(!0));
     }, [_, _, _, _, _]),
-    _.use(_.Ready()),
-    _.use(_.Ready()),
     _
       ? (0, _.jsx)(_.Suspense, {
           children: (0, _.jsx)(_, {
@@ -13717,8 +13988,11 @@ function _(_, _) {
 function _(_) {
   let { appid: _ } = _,
     _ = _(_);
-  return _
-    ? (0, _.jsxs)(_, {
+  return !_ || !_.bStrongSignal
+    ? null
+    : (_.use(_.Ready()),
+      _.use(_.Ready()),
+      (0, _.jsxs)(_, {
         className: _,
         navEntryPreferPosition: _.PREFERRED_CHILD,
         children: [
@@ -13777,8 +14051,7 @@ function _(_) {
             reasons: _,
           }),
         ],
-      })
-    : null;
+      }));
 }
 function _(_) {
   let { reasons: _ } = _,
@@ -13789,7 +14062,7 @@ function _(_) {
 }
 function _(_) {
   let { reasons: _ } = _;
-  if (_.nCurrentUserPlaytimeMins > 0) {
+  if (_.nCurrentUserPlaytimeMins) {
     let _ = _(_.nCurrentUserPlaytimeMins);
     return (0, _.jsx)(_, {
       description: _.Localize(`#AppPage_RecommendationReason_Playtime`, _),
@@ -17381,6 +17654,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`AccountHardware.GetSavedHardwareList#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetSavedHardwareList = _;
@@ -19139,7 +19413,10 @@ function _(_) {
     { data: _ } = _(_),
     { data: _ } = _(_),
     _ = _?.name,
-    _ = _(_ && _ ? _(_, _, _?.store_url_slug) : void 0, `franchise-home-link`);
+    _ = _(
+      _ && _ ? _(`franchise`, _, _, _?.store_url_slug) : void 0,
+      `franchise-home-link`,
+    );
   if (!_ || !_) return null;
   _.use(_.Ready());
   let _ = _?.creator_home_background,
@@ -19170,13 +19447,6 @@ function _(_) {
     ],
   });
 }
-function _(_, _, _) {
-  return _.EREALM === _.k_ESteamRealmChina
-    ? `${_.STORE_BASE_URL}search/?franchise=${encodeURIComponent(_)}`
-    : _
-      ? `${_.STORE_BASE_URL}franchise/${encodeURIComponent(_)}`
-      : `${_.STORE_BASE_URL}curator/${_}`;
-}
 var _ = _({
     AppGameInterestCacheInit: () => _,
     AppOwnershipCacheInit: () => _,
@@ -19190,9 +19460,9 @@ var _ = _({
         38, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
         50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67,
-        68, 29, 30, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83,
+        68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 29, 30, 83,
         84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100,
-        101, 102, 103, 104, 105, 106, 107, 108, 109,
+        101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
       ]),
       import.meta.url,
     ),
@@ -19212,9 +19482,9 @@ var _ = _({
           38, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
           20, 21, 22, 23, 24, 25, 26, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
           49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65,
-          66, 67, 68, 29, 30, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
-          81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97,
-          98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109,
+          66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82,
+          29, 30, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97,
+          98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
         ]),
         import.meta.url,
       )
@@ -19232,12 +19502,12 @@ var _ = _({
           };
         },
         __vite__mapDeps([
-          110, 1, 2, 51, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
-          18, 19, 20, 21, 22, 23, 24, 25, 26, 46, 52, 45, 47, 53, 54, 41, 42,
-          55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 29, 30, 69,
-          70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 49, 80, 81, 82, 83, 84, 85,
-          86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 43, 101,
-          102, 103, 44, 48, 104, 105, 106, 107, 108, 111,
+          112, 1, 2, 52, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
+          18, 19, 20, 21, 22, 23, 24, 25, 26, 46, 45, 47, 53, 54, 55, 56, 57,
+          58, 59, 60, 61, 62, 63, 64, 51, 65, 66, 67, 41, 42, 68, 69, 70, 71,
+          72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 29, 30, 83, 84, 85, 86,
+          49, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102,
+          43, 103, 104, 105, 44, 48, 106, 107, 108, 109, 110, 113,
         ]),
         import.meta.url,
       )
@@ -19247,11 +19517,11 @@ var _ = _({
     _(
       () => import(`./chunk~60675c9a27.js`),
       __vite__mapDeps([
-        112, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-        20, 21, 22, 23, 24, 25, 26, 113, 46, 114, 71, 45, 47, 115, 65, 66, 67,
-        68, 29, 30, 69, 70, 72, 73, 74, 116, 83, 80, 81, 82, 84, 91, 56, 75, 76,
-        77, 49, 79, 85, 86, 87, 98, 99, 90, 117, 103, 118, 97, 78, 100, 119,
-        120, 121,
+        114, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+        20, 21, 22, 23, 24, 25, 26, 52, 46, 45, 47, 53, 54, 55, 56, 57, 58, 59,
+        60, 61, 62, 63, 64, 82, 77, 78, 79, 29, 30, 83, 115, 116, 81, 117, 80,
+        84, 85, 118, 90, 87, 88, 89, 91, 97, 49, 86, 92, 93, 96, 119, 105, 120,
+        121, 122, 123,
       ]),
       import.meta.url,
     ),
@@ -19259,7 +19529,7 @@ var _ = _({
   _ = _.lazy(() =>
     _(
       () => import(`./chunk~432f9c68b6.js`),
-      __vite__mapDeps([122, 1, 2, 15, 6, 7, 123, 18, 124, 125]),
+      __vite__mapDeps([124, 1, 2, 15, 6, 7, 125, 18, 126, 127]),
       import.meta.url,
     ),
   ),
@@ -19267,11 +19537,11 @@ var _ = _({
     _(
       () => import(`./chunk~404eafa76f.js`),
       __vite__mapDeps([
-        126, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-        20, 21, 22, 23, 24, 25, 26, 46, 127, 65, 66, 67, 68, 29, 30, 69, 70, 71,
-        72, 73, 74, 59, 60, 61, 86, 90, 91, 95, 96, 43, 128, 129, 130, 131, 132,
-        133, 81, 134, 57, 55, 47, 44, 45, 48, 49, 135, 136, 137, 138, 139, 140,
-        97, 75, 76, 77, 78, 98, 99, 100, 141, 142, 143, 144,
+        128, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+        20, 21, 22, 23, 24, 25, 26, 46, 129, 77, 78, 79, 82, 29, 30, 83, 80, 81,
+        53, 54, 55, 84, 85, 71, 72, 73, 60, 63, 97, 101, 102, 43, 130, 131, 132,
+        133, 134, 135, 88, 136, 69, 68, 47, 44, 45, 48, 49, 137, 138, 139, 140,
+        141, 142, 52, 56, 57, 58, 59, 61, 62, 64, 143, 144, 145, 146,
       ]),
       import.meta.url,
     ),

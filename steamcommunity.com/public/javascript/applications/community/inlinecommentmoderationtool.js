@@ -2,14 +2,14 @@
  ****/
 
 import { ot as e } from "./chunk~01cfc309bf.js";
-import { c as t, d as n, r } from "./chunk~1e67c3e4e4.js";
+import { f as t, i as n, l as r } from "./chunk~1e67c3e4e4.js";
 import { t as i } from "./chunk~3a8474f307.js";
 var a = e();
 function o(e) {
   let { steamid: o, commentThreadID: c, gidComment: l, authorSteamID: u } = e,
-    d = t({ subject_type: 2, comment_thread_id: c }),
-    f = n(o, c, l),
-    p = r(o, c, l),
+    d = r({ subject_type: 2, comment_thread_id: c }),
+    f = t(o, c, l),
+    p = n(o, c, l),
     m = (d.data?.subjects ?? []).find((e) => e.coordinates?.comment === l);
   return (0, a.jsx)(i, {
     sanctionMutation: f,

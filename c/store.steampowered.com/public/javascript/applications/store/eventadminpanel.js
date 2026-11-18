@@ -6,10 +6,10 @@ import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~cf3721cc1c.js";
 import { _, _, _ } from "./chunk~673650a653.js";
 import "./chunk~8681f5c764.js";
 import { _ } from "./chunk~eefd71512b.js";
-import { _ } from "./chunk~331382b23f.js";
 import { _, _, _ } from "./chunk~2f8c67b4de.js";
 import { _, _ } from "./chunk~95ecbf576c.js";
 import { _ } from "./chunk~7b4b9eb713.js";
+import { _ } from "./chunk~331382b23f.js";
 import {
   _,
   _,
@@ -5631,7 +5631,7 @@ var _ = _(_(), 1),
       {
         bConstMethod: !0,
         ePrivilege: 4,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }

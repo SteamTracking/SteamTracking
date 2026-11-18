@@ -96,6 +96,18 @@ function HasRequiredField( fieldName )
 	return true;
 }
 
+function HasRequiredRadio( radioName, containerSelector )
+{
+	var radios = $J( radioName );
+	var container = $J( containerSelector );
+
+	// true if radios are disabled, or one is checked
+	var bResult = radios.filter( ':enabled' ).length == 0 || radios.filter( ':checked' ).length > 0;
+	container.toggleClass( "errorRequiredField", !bResult );
+
+	return bResult;
+}
+
 function IsValidRequiredField( fieldName, regex )
 {
 	var field = $J( fieldName );
@@ -255,6 +267,9 @@ function ValidateCompanyInfo( bTransition, bRequireVATForEU, nextSection )
 	bHasRequiredFields &= IsValidOptionalField( "[name='partner_info[fax]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= HasRequiredField( "[name='partner_info[finance_email]']" );
 	bHasRequiredFields &= IsValidVatIdField( bRequireVAT, "[name='partner_info[vat_id]']", "[name='partner_info[country_code]']", gValidFieldAlphaNumericRegex );
+
+// bugbug: yosefd to enable when UX is ready
+//	bHasRequiredFields &= HasRequiredRadio( "[name='partner_info[partner_kyc_type]']", "#partner_kyc_type_container" );
 
 	if ( !bHasRequiredFields )
 	{

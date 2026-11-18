@@ -5225,6 +5225,8 @@ function BindNavEvent()
 			if ( e.info == 'local' )
 			{
 				e.intercept({
+					scroll: 'manual',
+					focusReset: 'manual',
 					async handler() {
 											},
 				});

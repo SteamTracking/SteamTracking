@@ -346,6 +346,11 @@ var _ = _(_(), 1),
               _: _.readBool,
               _: _.writeBool,
             },
+            reporter_is_developer: {
+              _: 28,
+              _: _.readBool,
+              _: _.writeBool,
+            },
           },
         }),
         _.sm_m
@@ -3547,6 +3552,11 @@ var _ = _(_(), 1),
             },
             actor_is_support: {
               _: 6,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            actor_is_developer: {
+              _: 7,
               _: _.readBool,
               _: _.writeBool,
             },

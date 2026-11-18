@@ -4,173 +4,169 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, dt as n, ft as r } from "./chunk~01cfc309bf.js";
 import {
-  Aa as i,
-  Ai as a,
-  Bt as o,
-  Ca as s,
-  Di as c,
-  Ea as l,
-  Fi as u,
+  $a as i,
+  $i as a,
+  Da as o,
+  Ea as s,
+  Ei as c,
+  Eo as l,
+  Ft as u,
   Ht as d,
-  Ja as ee,
-  Ka as f,
-  Li as p,
-  Na as te,
-  Ot as ne,
-  Pt as m,
-  Qa as re,
-  Qi as h,
-  Ta as g,
-  Ti as _,
-  To as v,
-  Ua as y,
-  Ut as b,
-  Vt as x,
-  Yt as ie,
-  Za as ae,
-  ao as S,
-  bo as C,
-  bt as w,
-  co as oe,
-  ga as T,
-  io as E,
-  jt as se,
-  mi as ce,
-  no as D,
-  oo as le,
-  ro as ue,
-  t as O,
-  to as de,
-  uo as fe,
-  va as pe,
-  wa as me,
-  wi as he,
-  xt as k,
-  yi as ge,
-  yo as _e,
+  Ii as f,
+  Mt as p,
+  Oi as m,
+  Pa as h,
+  Qa as g,
+  Ri as _,
+  St as v,
+  Ta as y,
+  Ti as ee,
+  Ut as te,
+  Vt as ne,
+  Wa as re,
+  Wt as ie,
+  Xt as b,
+  Ya as x,
+  _a as S,
+  ao as C,
+  bi as ae,
+  bo as w,
+  do as oe,
+  hi as se,
+  io as ce,
+  ja as le,
+  ji as T,
+  kt as ue,
+  lo as de,
+  no as fe,
+  oo as E,
+  qa as pe,
+  ro as D,
+  so as me,
+  t as he,
+  wa as O,
+  xo as k,
+  xt as A,
+  ya as ge,
 } from "./chunk~6b8ddcaac8.js";
-import { n as A } from "./chunk~751f63337e.js";
-import { i as ve, r as ye } from "./chunk~4c13037b22.js";
+import { n as j } from "./chunk~751f63337e.js";
+import { i as _e, r as ve } from "./chunk~4c13037b22.js";
+import { d as ye, p as M, r as be } from "./chunk~cbbb6ae37c.js";
+import { n as xe, t as Se } from "./chunk~cd94ddba57.js";
+import { r as Ce } from "./chunk~9871ee5432.js";
+import { t as we } from "./chunk~b980924b6a.js";
+import { n as Te, t as Ee } from "./chunk~56437c278a.js";
 import {
-  g as be,
-  i as xe,
-  p as Se,
-  r as Ce,
-  v as j,
-} from "./chunk~cbbb6ae37c.js";
-import { n as we, t as Te } from "./chunk~cd94ddba57.js";
-import { t as Ee } from "./chunk~b980924b6a.js";
-import {
-  $v as M,
-  Bv as N,
-  Eb as P,
-  Ec as F,
-  Jy as I,
+  $v as N,
+  Bv as P,
+  Eb as F,
+  Ec as I,
+  Jy as L,
   Ku as De,
-  Mv as L,
-  Pv as R,
-  Tv as z,
+  Mv as R,
+  Pv as z,
+  Tv as Oe,
   Vv as B,
-  Wb as Oe,
+  Wb as ke,
   Yy as V,
-  _l as ke,
-  cl as Ae,
-  cx as je,
-  in as Me,
-  jc as Ne,
+  _l as Ae,
+  cl as je,
+  cx as Me,
+  in as Ne,
+  jc as Pe,
   jv as H,
-  mb as Pe,
-  qv as Fe,
+  mb as Fe,
+  qv as Ie,
   ub as U,
-  uv as Ie,
+  uv as Le,
   wc as W,
-  xr as G,
-  zv as K,
+  xr as Re,
+  zv as G,
 } from "./main.js";
-var q = e(t(), 1),
-  Le = `x33TRfA9NLE-`,
-  Re = `UWpi28gEMso-`,
+var K = e(t(), 1),
+  q = `x33TRfA9NLE-`,
+  ze = `UWpi28gEMso-`,
   J = r(),
-  Y = 6;
-function ze(e) {
+  Be = 6;
+function Ve(e) {
   let { id: t, bHideInLibraryApps: n } = e,
-    { data: r } = R(t),
+    { data: r } = z(t),
     i = r?.item_type == 2,
-    { data: a } = C(),
-    o = q.useMemo(() => {
+    { data: o } = k(),
+    s = K.useMemo(() => {
       if (r)
         return r.item_type === 1 || r.item_type === 2
           ? (r.included_appids || [])
-              .filter((e) => !i || !n || !a?.has(e))
+              .filter((e) => !i || !n || !o?.has(e))
               .map((e) => ({ appid: e }))
           : (console.error(
               `ContentsPreviewList unexpected store item type:`,
               r.item_type,
             ),
             null);
-    }, [r, n, i, a]);
-  if (!o || o.length == 0) return null;
-  let c = o.length,
-    l = P.LocalizePlural(`#Sale_ContentPreview`, c);
+    }, [r, n, i, o]);
+  if (!s || s.length == 0) return null;
+  let c = s.length,
+    l = F.LocalizePlural(`#Sale_ContentPreview`, c);
   if (i && r) {
     let e = r.included_appids?.length || 0;
-    e != c && (l = P.Localize(`#Sale_Bundle_CompletePartialSet`, e - c, e));
+    e != c && (l = F.Localize(`#Sale_Bundle_CompletePartialSet`, e - c, e));
   }
   return (0, J.jsxs)(`div`, {
-    className: p,
+    className: _,
     children: [
       (0, J.jsxs)(`div`, {
-        className: h,
+        className: a,
         children: [
           i &&
             (0, J.jsx)(`span`, {
               className: `_8o-dkC5O1co-`,
-              children: P.Localize(`#AppType_bundle`),
+              children: F.Localize(`#AppType_bundle`),
             }),
           l,
         ],
       }),
       (0, J.jsx)(`div`, {
-        className: s,
-        children: o
-          .slice(0, Y)
-          .map((e) => (0, J.jsx)(X, { id: e }, `preview${M(e)}`)),
+        className: O,
+        children: s
+          .slice(0, Be)
+          .map((e) => (0, J.jsx)(Y, { id: e }, `preview${N(e)}`)),
       }),
     ],
   });
 }
-function X(e) {
+function Y(e) {
   let { id: t } = e,
-    { data: n } = N(t),
-    { data: r } = K(t);
+    { data: n } = P(t),
+    { data: r } = G(t);
   if (!n || !r) return null;
-  let i = F(n, `small_capsule`);
-  return (0, J.jsx)(x, {
+  let i = I(n, `small_capsule`);
+  return (0, J.jsx)(d, {
     id: t,
-    className: g,
+    className: s,
     hoverProps: { direction: `right`, style: { minWidth: `350px` } },
     children: (0, J.jsx)(`img`, {
       src: i,
-      className: me,
+      className: y,
       loading: `lazy`,
       alt: r.name || ``,
     }),
   });
 }
-function Z(e) {
-  let [t, r] = (0, q.useState)(void 0),
-    { data: i } = R(e),
-    { data: a } = Fe(e),
+function X(e) {
+  let [t, r] = (0, K.useState)(void 0),
+    { data: i } = z(e),
+    { data: a } = Ie(e),
     o = n(),
-    s = Ie();
+    s = Le();
   return (
-    (0, q.useEffect)(() => {
+    (0, K.useEffect)(() => {
       if (i) {
         if (a && a.length > 0) r(a);
         else if (i.related_items?.parent_appid) {
           let e = { appid: i.related_items?.parent_appid };
           (async () => {
-            let t = await o.fetchQuery(z(s, e));
+            let t = await o.fetchQuery(Oe(s, e));
             t && t.length > 0 && r(t);
           })();
         }
@@ -179,95 +175,95 @@ function Z(e) {
     t
   );
 }
-function Be(e) {
+function He(e) {
   let { id: t } = e;
-  return t ? (0, J.jsx)(Q, { id: t }) : null;
+  return t ? (0, J.jsx)(Z, { id: t }) : null;
 }
-function Q(e) {
+function Z(e) {
   let { id: t } = e,
-    n = Z(t);
+    n = X(t);
   return n
     ? (0, J.jsx)(`div`, {
-        className: S,
+        className: E,
         children: n
           .slice(0, 10)
           .map((e) =>
-            (0, J.jsx)(O, { tagid: e.tagid, className: a }, `tag_` + e.tagid),
+            (0, J.jsx)(he, { tagid: e.tagid, className: T }, `tag_` + e.tagid),
           ),
       })
     : null;
 }
-function Ve(e) {
+function Q(e) {
   let {
       id: t,
       bShowDemoButton: n,
       bShowPurchaseOptionsButton: r,
       fnOnPurchaseOptionsClick: i,
       bHidePrice: a,
-      bShowDeckCompatibilityDialog: o,
-      eHardwareCompatibilityDisplay: s,
-      className: c,
-      bShowCartButton: u,
-    } = e,
-    { data: d } = R(t),
-    { data: ee } = B(t),
-    { data: f } = L(t),
-    { bIsOwned: p } = _e(t),
-    [ne, re] = b(o, s);
-  if (!d) return null;
-  let h =
-      (d.type === 1 && !ee?.is_coming_soon) ||
-      (d.related_items?.demo_appid && d.related_items?.demo_appid.length > 0),
-    g = A(d.type),
-    _ = n && g && h,
-    v = null;
-  if (!p && f?.is_free_to_keep && f?.free_to_keep_ends) {
-    let e = f.free_to_keep_ends,
-      t = I(
-        `#Sale_default_label_Free_Promo_Description_Short`,
-        Pe(e) + ` @ ` + U(e, { bForce24HourClock: !1 }),
-      );
-    v = (0, J.jsxs)(`div`, {
+      bShowDeckCompatibilityDialog: s,
+      eHardwareCompatibilityDisplay: c,
       className: l,
+      bShowCartButton: d,
+    } = e,
+    { data: f } = z(t),
+    { data: p } = B(t),
+    { data: m } = R(t),
+    { bIsOwned: g } = w(t),
+    [_, y] = ie(s, c);
+  if (!f) return null;
+  let ee =
+      (f.type === 1 && !p?.is_coming_soon) ||
+      (f.related_items?.demo_appid && f.related_items?.demo_appid.length > 0),
+    te = j(f.type),
+    ne = n && te && ee,
+    x = null;
+  if (!g && m?.is_free_to_keep && m?.free_to_keep_ends) {
+    let e = m.free_to_keep_ends,
+      t = L(
+        `#Sale_default_label_Free_Promo_Description_Short`,
+        Fe(e) + ` @ ` + U(e, { bForce24HourClock: !1 }),
+      );
+    x = (0, J.jsxs)(`div`, {
+      className: o,
       children: [
         t,
-        (0, J.jsx)(G, {
-          tooltip: I(`#Sale_default_Tooltip_Free_Promo_Limitation`),
+        (0, J.jsx)(Re, {
+          tooltip: L(`#Sale_default_Tooltip_Free_Promo_Limitation`),
         }),
       ],
     });
   }
   return (0, J.jsxs)(`div`, {
-    className: W(te, c),
+    className: W(h, l),
     children: [
-      v,
+      x,
       (0, J.jsxs)(`div`, {
-        className: y,
+        className: re,
         children: [
-          !!_ && (0, J.jsx)(w, { id: t, className: `R0sGSaFdUWo-` }),
+          !!ne && (0, J.jsx)(A, { id: t, className: `R0sGSaFdUWo-` }),
           !a &&
-            d.type !== 1 &&
+            f.type !== 1 &&
             (0, J.jsxs)(J.Fragment, {
               children: [
-                !(!r || d.is_free) &&
-                  (0, J.jsx)(He, { fnOnPurchaseOptionsClick: i }),
-                !(!u || d.is_free) &&
-                  (0, J.jsx)(k, { id: t, className: `CartBtn` }),
+                !(!r || f.is_free) &&
+                  (0, J.jsx)($, { fnOnPurchaseOptionsClick: i }),
+                !(!d || f.is_free) &&
+                  (0, J.jsx)(v, { id: t, className: `CartBtn` }),
               ],
             }),
-          !a && (0, J.jsx)(m, { id: t }),
-          ne && (0, J.jsx)(ie, { id: t, compatibility: re }),
+          !a && (0, J.jsx)(u, { id: t }),
+          _ && (0, J.jsx)(b, { id: t, compatibility: y }),
         ],
       }),
     ],
   });
 }
-function He(e) {
+function $(e) {
   return (0, J.jsx)(`div`, {
-    className: c,
+    className: m,
     onClick: e.fnOnPurchaseOptionsClick,
     children: (0, J.jsx)(`span`, {
-      children: I(`#EventDisplay_CallToAction_ShowPurchaseOptions_Button`),
+      children: L(`#EventDisplay_CallToAction_ShowPurchaseOptions_Button`),
     }),
   });
 }
@@ -277,191 +273,193 @@ function Ue(e) {
       type: n,
       bShowDemoButton: r,
       bPreferDemoStorePage: a,
-      bHidePrice: s,
-      bUseSubscriptionLayout: c,
-      bHidePlatforms: l,
-      bHideContainedApps: p,
-      bAllowTwoLinesForHeader: h,
-      bShowReviewSummary: g,
-      bShowDeckCompatibilityDialog: _,
-      eHardwareCompatibilityDisplay: x,
-      bAutoFocus: ie,
+      bHidePrice: o,
+      bUseSubscriptionLayout: s,
+      bHidePlatforms: c,
+      bHideContainedApps: d,
+      bAllowTwoLinesForHeader: m,
+      bShowReviewSummary: _,
+      bShowDeckCompatibilityDialog: v,
+      eHardwareCompatibilityDisplay: y,
+      bAutoFocus: b,
       fnOnClickOverride: S,
-      bIsMarketingMessage: w,
-      bPreferAssetWithoutOverride: T,
+      bIsMarketingMessage: C,
+      bPreferAssetWithoutOverride: w,
     } = e,
-    E = Se(t, n),
-    [D, O] = (0, q.useState)(!1),
-    me = De(),
-    { data: k, isPending: _e } = K(E),
-    { data: A } = L(E),
-    { data: N } = B(E),
-    { data: P } = C(),
-    F = v(E),
-    I = (0, q.useRef)(null),
-    [R, z] = (0, q.useState)(!1),
-    V = Oe(),
-    [H, Pe] = (0, q.useState)(!1);
-  ((0, q.useEffect)(() => {
+    T = Ce(t, n),
+    [E, D] = (0, K.useState)(!1),
+    he = De(),
+    { data: O, isPending: A } = G(T),
+    { data: j } = R(T),
+    { data: P } = B(T),
+    { data: F } = k(),
+    I = l(T),
+    L = (0, K.useRef)(null),
+    [z, Oe] = (0, K.useState)(!1),
+    V = ke(),
+    [H, Fe] = (0, K.useState)(!1);
+  ((0, K.useEffect)(() => {
     if (!H) {
-      O(!1);
+      D(!1);
       return;
     }
-    let e = window.setTimeout(() => O(!0), 500);
+    let e = window.setTimeout(() => D(!0), 500);
     return () => window.clearTimeout(e);
   }, [H]),
-    (0, q.useEffect)(() => {
-      I.current && z(I.current.offsetWidth < 370);
-    }, [I]));
-  let Fe = (0, q.useMemo)(
-      () => (a && k && ye(k) ? { appid: ve(k)[0] } : E),
-      [a, E, k],
+    (0, K.useEffect)(() => {
+      L.current && Oe(L.current.offsetWidth < 370);
+    }, [L]));
+  let Ie = (0, K.useMemo)(
+      () => (a && O && ve(O) ? { appid: _e(O)[0] } : T),
+      [a, T, O],
     ),
-    { strStoreURL: U, snr: Ie } = ne(k, a);
-  if (!k)
-    return _e
-      ? (0, J.jsx)(Ee, { capsules_per_row: [1], is_item_browser: !0 })
+    { strStoreURL: U, snr: Le } = ue(O, a),
+    Re = Te(C ? void 0 : T);
+  if (!O)
+    return A
+      ? (0, J.jsx)(we, { capsules_per_row: [1], is_item_browser: !0 })
       : null;
-  let G = k.included_appids?.length || 0,
-    Le = k.included_appids?.filter((e) => P?.has(e))?.length || 0,
-    Re = k.item_type == 2 && !!A?.must_purchase_as_set,
-    Y = !p && G > 1,
-    X = k.item_type == 1 && G == 1,
-    Z = k.item_type == 0 || X,
-    Q = X && k.appid,
-    He = k.name || ``,
-    Ue = he(N, A),
-    qe = V || !N?.is_coming_soon || Ue,
-    [Je, $] = b(_, x);
-  return (0, J.jsxs)(Ne, {
-    className: W({ [de]: !0, [void 0]: h, StoreSaleWidgetOuterContainer: !0 }),
+  let q = O.included_appids?.length || 0,
+    ze = O.included_appids?.filter((e) => F?.has(e))?.length || 0,
+    Be = O.item_type == 2 && !!j?.must_purchase_as_set,
+    Y = !d && q > 1,
+    X = O.item_type == 1 && q == 1,
+    Z = O.item_type == 0 || X,
+    $ = X && O.appid,
+    Ue = O.name || ``,
+    qe = ee(P, j),
+    Je = V || !P?.is_coming_soon || qe,
+    [Ye, Xe] = ie(v, y);
+  return (0, J.jsxs)(Pe, {
+    className: W({ [fe]: !0, [void 0]: m, StoreSaleWidgetOuterContainer: !0 }),
     "flow-children": `grid`,
-    navEntryPreferPosition: ke.PREFERRED_CHILD,
-    autoFocus: ie,
-    navKey: `preview_widget_` + M(E),
+    navEntryPreferPosition: Ae.PREFERRED_CHILD,
+    autoFocus: b,
+    navKey: `preview_widget_` + N(T),
+    ...Re,
     children: [
-      (0, J.jsx)(d, {
-        appid: Z && `appid` in E ? E.appid : void 0,
-        children: (0, J.jsxs)(Ae, {
-          onClick: w ? S : void 0,
-          className: W({ [ee]: !0, [i]: !0, [pe]: w }),
-          ...Ce(k, me, V, !!a, void 0, S),
+      (0, J.jsx)(te, {
+        appid: Z && `appid` in T ? T.appid : void 0,
+        children: (0, J.jsxs)(je, {
+          onClick: C ? S : void 0,
+          className: W({ [x]: !0, [le]: !0, [ge]: C }),
+          ...Ee(O, he, V, !!a, void 0, S),
           preferredFocus: Y,
-          onFocusWithin: V ? Pe : void 0,
+          onFocusWithin: V ? Fe : void 0,
           children: [
             (0, J.jsx)(`div`, {
-              className: W(ae),
+              className: W(g),
               children: (0, J.jsx)(We, {
-                id: Fe,
+                id: Ie,
                 strURL: U,
                 children: (0, J.jsxs)(`div`, {
-                  className: re,
+                  className: i,
                   children: [
-                    (0, J.jsx)(xe, { appids: F }),
-                    (0, J.jsx)(j, {
-                      id: E,
+                    (0, J.jsx)(be, { appids: I }),
+                    (0, J.jsx)(M, {
+                      id: T,
                       imageType: `header`,
-                      bPreferAssetWithoutOverride: T,
+                      bPreferAssetWithoutOverride: w,
                     }),
-                    (0, J.jsx)(be, { id: E }),
-                    (0, J.jsx)(Te, {
-                      id: E,
-                      active: E && D,
+                    (0, J.jsx)(ye, { id: T }),
+                    (0, J.jsx)(Se, {
+                      id: T,
+                      active: T && E,
                       bIsHoverMode: !0,
                       eGrowOnActivate: V
                         ? void 0
-                        : we.k_ETrailerGrowAmount_Medium,
+                        : xe.k_ETrailerGrowAmount_Medium,
                     }),
                   ],
                 }),
               }),
             }),
             (0, J.jsxs)(`div`, {
-              className: W({ [ue]: !0, [u]: Y }),
+              className: W({ [ce]: !0, [f]: Y }),
               children: [
                 !(!Z || S) &&
-                  (0, J.jsx)(ce, {
-                    id: E,
+                  (0, J.jsx)(se, {
+                    id: T,
                     classOverride: W(`x33TRfA9NLE-`, `WishlistButton`),
-                    snr: Ie,
+                    snr: Le,
                   }),
                 (0, J.jsx)(`div`, {
-                  className: oe,
+                  className: de,
                   children: (0, J.jsx)(`a`, {
                     href: S ? void 0 : U,
-                    target: je.IN_CLIENT ? void 0 : `_blank`,
+                    target: Me.IN_CLIENT ? void 0 : `_blank`,
                     onClick: S,
                     children: (0, J.jsx)(`div`, {
-                      className: W(le, `StoreSaleWidgetTitle`),
-                      children: He,
+                      className: W(me, `StoreSaleWidgetTitle`),
+                      children: Ue,
                     }),
                   }),
                 }),
-                !Y && (0, J.jsx)(Be, { id: E }),
+                !Y && (0, J.jsx)(He, { id: T }),
                 (0, J.jsxs)(`div`, {
-                  className: fe,
-                  ref: I,
+                  className: oe,
+                  ref: L,
                   children: [
-                    Z && (0, J.jsx)(Ge, { id: E }),
+                    Z && (0, J.jsx)(Ge, { id: T }),
                     !Y &&
-                      !l &&
-                      E &&
+                      !c &&
+                      T &&
                       (0, J.jsxs)(J.Fragment, {
                         children: [
-                          (0, J.jsx)(o, {
-                            id: E,
-                            bMinimizePlatforms: R,
-                            bHideWindows: R,
+                          (0, J.jsx)(ne, {
+                            id: T,
+                            bMinimizePlatforms: z,
+                            bHideWindows: z,
                           }),
-                          !!(Je && k.item_type == 0) &&
-                            (0, J.jsx)(Me, {
-                              eHWCompat: $,
+                          !!(Ye && O.item_type == 0) &&
+                            (0, J.jsx)(Ne, {
+                              eHWCompat: Xe,
                               className: `tUIs-i3NWoU-`,
-                              id: E,
+                              id: T,
                             }),
                         ],
                       }),
                   ],
                 }),
                 !Y &&
-                  g &&
-                  E &&
+                  _ &&
+                  T &&
                   (0, J.jsx)(`div`, {
                     className: `BZ9dZKOmXqE-`,
-                    children: (0, J.jsx)(ge, { id: E }),
+                    children: (0, J.jsx)(ae, { id: T }),
                   }),
                 Y &&
-                  E &&
-                  (0, J.jsx)(ze, {
-                    id: E,
-                    bHideInLibraryApps: !Re && k.item_type == 2 && Le < G,
+                  T &&
+                  (0, J.jsx)(Ve, {
+                    id: T,
+                    bHideInLibraryApps: !Be && O.item_type == 2 && ze < q,
                   }),
-                !!Z && (0, J.jsx)(Ke, { id: E }),
+                !!Z && (0, J.jsx)(Ke, { id: T }),
                 S
                   ? (0, J.jsx)(`div`, {
-                      className: te,
+                      className: h,
                       children: (0, J.jsx)(`div`, {
-                        className: y,
-                        children: (0, J.jsx)(m, { id: E }),
+                        className: re,
+                        children: (0, J.jsx)(u, { id: T }),
                       }),
                     })
                   : (0, J.jsx)(J.Fragment, {
                       children:
-                        c && Z && Q
-                          ? (0, J.jsx)(se, { appid: Q, bIsMuted: !!D })
-                          : (0, J.jsx)(Ve, {
-                              id: E,
+                        s && Z && $
+                          ? (0, J.jsx)(p, { appid: $, bIsMuted: !!E })
+                          : (0, J.jsx)(Q, {
+                              id: T,
                               bShowDemoButton: r,
-                              bHidePrice: s,
-                              bHideWishlistButton: qe,
-                              eHardwareCompatibilityDisplay: $,
+                              bHidePrice: o,
+                              bHideWishlistButton: Je,
+                              eHardwareCompatibilityDisplay: Xe,
                             }),
                     }),
                 (0, J.jsx)(`div`, {
-                  className: f,
-                  children: (0, J.jsx)(j, {
-                    id: E,
-                    bPreferAssetWithoutOverride: T,
+                  className: pe,
+                  children: (0, J.jsx)(M, {
+                    id: T,
+                    bPreferAssetWithoutOverride: w,
                     imageType: `header`,
                   }),
                 }),
@@ -478,20 +476,20 @@ function Ue(e) {
 function We(e) {
   let { id: t, strURL: n, children: r } = e;
   return `appid` in t
-    ? (0, J.jsxs)(x, { id: t, children: [r, ` `] })
+    ? (0, J.jsxs)(d, { id: t, children: [r, ` `] })
     : (0, J.jsx)(`a`, { href: n, children: r });
 }
 function Ge(e) {
   let { id: t } = e,
     { data: n } = B(t);
-  return n ? (0, J.jsx)(`div`, { className: D, children: _(n) }) : null;
+  return n ? (0, J.jsx)(`div`, { className: D, children: c(n) }) : null;
 }
 function Ke(e) {
   let { id: t } = e,
-    { data: n } = K(t),
-    { data: r } = L(t),
+    { data: n } = G(t),
+    { data: r } = R(t),
     { data: i } = H(t),
-    { data: a } = C();
+    { data: a } = k();
   if (!n || !i || !i.short_description || !a) return null;
   let o = r?.discount_pct || 0,
     s = n.included_appids?.length || 0,
@@ -503,16 +501,16 @@ function Ke(e) {
     (n.item_type == 2 || (n.item_type == 1 && !u)) &&
       (l =
         !d && c > 0 && c < s
-          ? I(`#Sale_Bundle_CompletePartialSet`, c, s)
+          ? L(`#Sale_Bundle_CompletePartialSet`, c, s)
           : o > 0
-            ? I(`#Sale_BundleSave_WithDiscount`, o, s)
-            : I(`#Sale_BundleSave`, s)),
+            ? L(`#Sale_BundleSave_WithDiscount`, o, s)
+            : L(`#Sale_BundleSave`, s)),
     (0, J.jsx)(`div`, {
-      className: W(E, `StoreSaleWidgetShortDesc`),
+      className: W(C, `StoreSaleWidgetShortDesc`),
       children:
         l.startsWith(`#`) && l.indexOf(` `) == -1
           ? (0, J.jsx)(`span`, {
-              className: T,
+              className: S,
               children: V(
                 l,
                 (0, J.jsx)(`i`, {}),
@@ -525,4 +523,4 @@ function Ke(e) {
     })
   );
 }
-export { Le as i, Ve as n, Re as r, Ue as t };
+export { q as i, Q as n, ze as r, Ue as t };

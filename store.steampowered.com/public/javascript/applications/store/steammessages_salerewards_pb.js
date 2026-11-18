@@ -978,7 +978,7 @@ var f = e(t(), 1),
   function t(e, t, n) {
     return e.SendMsg(`SaleItemRewards.ClaimItem#1`, i(g, t, n), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.ClaimItem = t;
@@ -986,7 +986,7 @@ var f = e(t(), 1),
     return e.SendMsg(`SaleItemRewards.CanClaimItem#1`, i(v, t, n), y, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.CanClaimItem = n;
@@ -1009,7 +1009,7 @@ var f = e(t(), 1),
     return e.SendMsg(`SaleItemRewards.GetClaimedSaleRewards#1`, i(T, t, n), E, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetClaimedSaleRewards = o;
@@ -1018,7 +1018,7 @@ var f = e(t(), 1),
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetCurrentDefinition = s;

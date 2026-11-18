@@ -2,7 +2,8 @@ import { _ } from "./chunk~f025431ab0.js";
 import { _ } from "./chunk~01cfc309bf.js";
 import { _ } from "./chunk~f57d770d64.js";
 import { _ } from "./main.js";
-var _ = _(_(), 1),
+var _ = _(_()),
+  _ = _.createContext(!1),
   _ = `100% 0px 100% 0px`,
   _ = `SaleSection_`;
 function _() {
@@ -33,7 +34,7 @@ function _(_ = 940) {
 }
 function _(_) {
   let _ = _(),
-    _ = _ >= 940,
+    _ = _ >= ((0, _.useContext)(_) ? 911 : 940),
     _ = _(_);
   return _
     ? {

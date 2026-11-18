@@ -183,7 +183,12 @@ function _(_) {
   );
 }
 function _(_) {
-  let { steamid: _, strPersonaName: _, bIsSupportAccount: _ } = _;
+  let {
+    steamid: _,
+    strPersonaName: _,
+    bIsSupportAccount: _,
+    bIsDeveloperAccount: _,
+  } = _;
   return (0, _.jsxs)(_.Fragment, {
     children: [
       (0, _.jsx)(`span`, {
@@ -195,7 +200,6 @@ function _(_) {
             truncate: !0,
             title: _,
             className: _,
-            weight: _ ? `heavy` : void 0,
             children: _,
           }),
         }),
@@ -205,6 +209,12 @@ function _(_) {
           className: `yMtdDuggCPo-`,
           title: `Support or Admin account`,
           children: `Mod`,
+        }),
+      _ &&
+        (0, _.jsx)(`span`, {
+          className: `yMtdDuggCPo-`,
+          title: `Partner account for this item's app`,
+          children: `Dev`,
         }),
     ],
   });
@@ -230,6 +240,7 @@ function _(_) {
               steamid: _.actor_steamid,
               strPersonaName: _,
               bIsSupportAccount: _.actor_is_support,
+              bIsDeveloperAccount: _.actor_is_developer,
             }),
             (0, _.jsx)(_, {
               size: `2`,
@@ -318,11 +329,12 @@ function _(_) {
     _ = [...(_?.reports ?? [])].sort(
       (_, _) => (_.time_reported ?? 0) - (_.time_reported ?? 0),
     ),
-    _ = _(_?.reported_content_id, !0),
+    _ = _(_?.reported_content_id, !0).data?.subject?.reports ?? [],
     _ = new Set(
-      (_.data?.subject?.reports ?? [])
-        .filter((_) => _.reporter_is_support)
-        .map((_) => _.reporter_steamid),
+      _.filter((_) => _.reporter_is_support).map((_) => _.reporter_steamid),
+    ),
+    _ = new Set(
+      _.filter((_) => _.reporter_is_developer).map((_) => _.reporter_steamid),
     );
   return (0, _.jsxs)(`table`, {
     className: _,
@@ -398,6 +410,7 @@ function _(_) {
                 {
                   report: _,
                   bReporterIsSupport: _.has(_.reporter_steamid),
+                  bReporterIsDeveloper: _.has(_.reporter_steamid),
                 },
                 _.report_id,
               ),
@@ -408,7 +421,7 @@ function _(_) {
   });
 }
 function _(_) {
-  let { report: _, bReporterIsSupport: _ } = _,
+  let { report: _, bReporterIsSupport: _, bReporterIsDeveloper: _ } = _,
     _ = _(_.reporter_steamid);
   if (!_.isSuccess || !_.data?.public_data) return null;
   let _ = !!_.time_disputed && _.dispute_resolved === 0,
@@ -440,6 +453,7 @@ function _(_) {
               steamid: _.reporter_steamid,
               strPersonaName: _,
               bIsSupportAccount: _,
+              bIsDeveloperAccount: _,
             }),
           ],
         }),

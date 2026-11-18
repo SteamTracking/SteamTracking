@@ -462,7 +462,8 @@ function _(_) {
         })
     : null;
 }
-var _ = `100% 0px 100% 0px`,
+var _ = _.createContext(!1),
+  _ = `100% 0px 100% 0px`,
   _ = `SaleSection_`;
 function _() {
   return window.innerWidth ?? 1920;
@@ -492,7 +493,7 @@ function _(_ = 940) {
 }
 function _(_) {
   let _ = _(),
-    _ = _ >= 940,
+    _ = _ >= ((0, _.useContext)(_) ? 911 : 940),
     _ = _(_);
   return _
     ? {
@@ -8396,7 +8397,6 @@ var _ = `_--jO3lLROzo-`,
   _ = `I5j74q712SQ-`,
   _ = `FStnZRH332A-`,
   _ = `eqYBsdUkt5U-`,
-  _ = _.createContext(!1),
   _ = 9;
 function _(_, _) {
   let _ = _.useRef(0);
@@ -8416,19 +8416,12 @@ function _(_, _) {
       nSelectedPage: _,
     };
   let _ = _.current;
-  (_ < _ ? (_ = _) : _ >= _ + _ && (_ = _ - _ + 1),
+  return (
+    _ < _ ? (_ = _) : _ >= _ + _ && (_ = _ - _ + 1),
     (_ = Math.min(Math.max(_, 0), _ - _)),
-    (_.current = _));
-  let _ = _ + _,
-    _ = _ > 0,
-    _ = _ < _;
-  return {
-    rgPills: [
-      {
-        nPage: _ - 1,
-        bHidden: !_,
-      },
-      ...Array.from(
+    (_.current = _),
+    {
+      rgPills: Array.from(
         {
           length: _,
         },
@@ -8436,16 +8429,12 @@ function _(_, _) {
           nPage: _ + _,
         }),
       ),
-      {
-        nPage: _,
-        bHidden: !_,
-      },
-    ],
-    strClassName: _(_, _ && `Vgwtx-YLRTw-`, _ && `XALey6nTKPs-`),
-    bWindowed: !0,
-    nPages: _,
-    nSelectedPage: _,
-  };
+      strClassName: _,
+      bWindowed: !0,
+      nPages: _,
+      nSelectedPage: _,
+    }
+  );
 }
 function _(_) {
   let { pillWindow: _, children: _ } = _;
@@ -8468,8 +8457,8 @@ function _(_) {
     ],
   });
 }
-function _(_) {
-  return _(_, _.bHidden && `yer2QyfyCPw-`);
+function _() {
+  return _;
 }
 function _(_) {
   let { bSelected: _, bCountdown: _ } = _,
@@ -8495,8 +8484,8 @@ function _(_) {
         (0, _.jsx)(
           `div`,
           {
-            className: _(_),
-            onClick: _ && !_.bHidden ? () => _(_.nPage) : void 0,
+            className: _(),
+            onClick: _ ? () => _(_.nPage) : void 0,
             children: (0, _.jsx)(_, {
               bSelected: _.nPage === _,
               bCountdown: _,
@@ -8516,7 +8505,6 @@ function _(_, _, _) {
   _.current = _;
   let _ = !!_;
   _.useEffect(() => {
-    let _ = _.current;
     if (!_ || !_ || typeof IntersectionObserver > `u`) return;
     let _ = Array.from(_.children);
     if (!_.length) return;
@@ -8543,18 +8531,22 @@ function _(_, _, _, _) {
     _ = _.getBoundingClientRect();
   return _ ? _.right - _ - _.right : _.left - (_.left + _);
 }
+function _(_) {
+  return Array.from(_.children).filter((_) => _.getClientRects().length > 0);
+}
 var _ = 10;
 function _(_, _, _) {
-  let [_, _] = _.useState(0);
+  let [_, _] = _.useState(0),
+    [_, _] = _.useState(_);
   return (
     _.useEffect(() => {
-      let _ = _.current;
       if (!_ || !_) return;
       let _ = 0,
         _ = () => {
           _ = 0;
-          let _ = Array.from(_.children),
-            _ = _.scrollWidth - _.clientWidth,
+          let _ = _(_);
+          _(_.length);
+          let _ = _.scrollWidth - _.clientWidth,
             _ = _ > 0 && Math.abs(_.scrollLeft) >= _ - 2,
             _ = getComputedStyle(_),
             _ = _.direction === `rtl`,
@@ -8590,8 +8582,9 @@ function _(_, _, _) {
         passive: !0,
       });
       let _ = new ResizeObserver(_);
+      _.observe(_);
+      for (let _ of Array.from(_.children)) _.observe(_);
       return (
-        _.observe(_),
         _(),
         () => {
           (_.removeEventListener(`scroll`, _),
@@ -8604,8 +8597,7 @@ function _(_, _, _) {
       _,
       _.useCallback(
         (_) => {
-          let _ = _.current,
-            _ = _?.children[_];
+          let _ = _ ? _(_)[_] : void 0;
           if (!_ || !_) return;
           let _ = getComputedStyle(_),
             _ = _.direction === `rtl`,
@@ -8617,6 +8609,7 @@ function _(_, _, _) {
         },
         [_],
       ),
+      _,
     ]
   );
 }
@@ -8643,10 +8636,14 @@ function _(_) {
     _ = _.useRef(null),
     _ = _.useRef(null),
     _ = _(),
-    _ = _.Children.count(_);
+    _ = _.Children.count(_),
+    [_, _] = _.useState(null),
+    _ = _.useCallback((_) => {
+      ((_.current = _), _(_));
+    }, []);
   _(_, _, _);
   let _ = _.useContext(_) && !_ && _ > 1,
-    [_, _] = _(_, _, _);
+    [_, _, _] = _(_, _, _);
   _.useLayoutEffect(() => {
     _.current &&
       _.current &&
@@ -9022,26 +9019,17 @@ function _(_) {
     ? (0, _.jsx)(_, {
         pillWindow: _,
         children: _.rgPills.map((_) =>
-          _.bHidden
-            ? (0, _.jsx)(
-                `span`,
-                {
-                  className: _(_),
-                  "aria-hidden": !0,
-                },
-                _.nPage,
-              )
-            : (0, _.jsx)(
-                _,
-                {
-                  slide: _.nPage * _,
-                  className: _(_),
-                  children: (0, _.jsx)(_, {
-                    bSelected: _.nPage === _,
-                  }),
-                },
-                _.nPage,
-              ),
+          (0, _.jsx)(
+            _,
+            {
+              slide: _.nPage * _,
+              className: _(),
+              children: (0, _.jsx)(_, {
+                bSelected: _.nPage === _,
+              }),
+            },
+            _.nPage,
+          ),
         ),
       })
     : (0, _.jsx)(_.Fragment, {

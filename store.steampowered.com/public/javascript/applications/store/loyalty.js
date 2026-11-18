@@ -2251,7 +2251,12 @@ var hn = `xON8oDeeQhs-`,
       `UserAccount.GetAvailableValveDiscountPromotions#1`,
       T(Vn, t, n),
       Hn,
-      { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.GetAvailableValveDiscountPromotions = t;
@@ -14646,17 +14651,24 @@ var Ix = class e extends B.Message {
   Qx;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`Auction.PlaceBid#1`, T(Rx, t, n), zx, { ePrivilege: 3 });
+    return e.SendMsg(`Auction.PlaceBid#1`, T(Rx, t, n), zx, {
+      ePrivilege: 3,
+      rgBrowserAPISites: [`store`],
+    });
   }
   e.PlaceBid = t;
   function n(e, t, n) {
-    return e.SendMsg(`Auction.CancelBid#1`, T(Bx, t, n), Vx, { ePrivilege: 1 });
+    return e.SendMsg(`Auction.CancelBid#1`, T(Bx, t, n), Vx, {
+      ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
+    });
   }
   e.CancelBid = n;
   function r(e, t, n) {
     return e.SendMsg(`Auction.GetBidsForUser#1`, T(Hx, t, n), Ux, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.GetBidsForUser = r;
@@ -14672,6 +14684,7 @@ var Ix = class e extends B.Message {
     return e.SendMsg(`Auction.GetUserBidForItem#1`, T(Kx, t, n), qx, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.GetUserBidForItem = a;
@@ -14687,6 +14700,7 @@ var Ix = class e extends B.Message {
     return e.SendMsg(`Auction.GetAllItems#1`, T(Xx, t, n), Zx, {
       bConstMethod: !0,
       ePrivilege: 0,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.GetAllItems = s;

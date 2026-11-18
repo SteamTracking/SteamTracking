@@ -1,10 +1,10 @@
 import { _ } from "./chunk~f025431ab0.js";
 import { _, _, _ } from "./chunk~01cfc309bf.js";
 import { _ } from "./chunk~6b8ddcaac8.js";
+import { _, _ } from "./chunk~3720b337f3.js";
 import { _ } from "./chunk~d43c81a658.js";
 import { _ } from "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~4d16ce5d1a.js";
-import { _, _ } from "./chunk~3720b337f3.js";
 import { _ } from "./chunk~fc8a9e4879.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./main.js";
 import _ from "./chunk~ec2a077c3e.js";
@@ -28,6 +28,7 @@ var _ = _(_()),
   _ = `eVV46lLoBq0-`,
   _ = `_07uXB52HKbs-`,
   _ = `OPtkpP5fmuc-`,
+  _ = `qaMMN0bGRU0-`,
   _ = `VUSjpUSCHKo-`,
   _ = `RXgTvW-0muA-`,
   _ = `OZS99odXDBw-`,
@@ -231,6 +232,12 @@ var _ = _(_()),
       })
     );
   },
+  _ = 1,
+  _ = {
+    1: `Publisher`,
+    2: `Franchise`,
+    3: `Developer`,
+  },
   _ = {
     section_type: `crosspromotesalepage`,
     capsules: [],
@@ -238,6 +245,36 @@ var _ = _(_()),
     links: [],
     localized_label: [],
     default_label: ``,
+  },
+  _ = (_) => {
+    let { sale: _ } = _,
+      _ = _[_.host] ?? `Creator`;
+    return (0, _.jsxs)(`div`, {
+      children: [
+        (0, _.jsxs)(`div`, {
+          className: _,
+          children: [
+            (0, _.jsx)(`a`, {
+              href: _.url,
+              children: _.name || _.url,
+            }),
+            ` - ${_} home - Score ${_.score.toFixed(3)}`,
+          ],
+        }),
+        (0, _.jsx)(`div`, {
+          className: _,
+          children: _.appids.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                nAppID: _,
+              },
+              _,
+            ),
+          ),
+        }),
+      ],
+    });
   },
   _ = (_) => {
     let { sale: _ } = _,
@@ -276,6 +313,14 @@ var _ = _(_()),
       ],
     });
   },
+  _ = (_) =>
+    _.sale.kind === _
+      ? (0, _.jsx)(_, {
+          sale: _.sale,
+        })
+      : (0, _.jsx)(_, {
+          sale: _.sale,
+        }),
   _ = (_) => {
     let [_, _] = _.useState(void 0),
       [_, _] = _.useState(void 0);
@@ -286,6 +331,7 @@ var _ = _(_()),
             max_sales: 5,
             max_apps: 5,
             accountid: _.nAccountID,
+            include_creator_homes: 1,
           };
           try {
             let _ = await _.default.get(
@@ -379,6 +425,9 @@ var _ = _(_()),
     NewlyOnSale: `#RecommenderDemos_DiscountReason_NewlyOnSale`,
     WellReviewed: `#RecommenderDemos_DiscountReason_WellReviewed`,
     TopSeller: `#RecommenderDemos_DiscountReason_TopSeller`,
+    HotDeal: `#RecommenderDemos_DiscountReason_HotDeal`,
+    DeepDiscount: `#RecommenderDemos_DiscountReason_DeepDiscount`,
+    PopularInRegion: `#RecommenderDemos_DiscountReason_PopularInRegion`,
   };
 function _(_) {
   let _ = _[_];

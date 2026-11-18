@@ -4,6 +4,9 @@ import { _, _ } from "./main.js";
 _();
 var _ = `WYXlhoxwBlU-`,
   _ = `Ypf4QLCxqQU-`,
+  _ = `rDvoly1XGQk-`,
+  _ = `n2t7u-oXiwM-`,
+  _ = `a1UUU8zD1Lg-`,
   _ = `jP-Qr-tpETg-`,
   _ = `triBTPpfZNQ-`,
   _ = `Ep0wQ-6tJLw-`,
@@ -49,7 +52,45 @@ function _(_) {
     is_expanded_maincap: _,
     is_expanded_display: _,
     show_auto_advance_bar: _,
+    swipe_row: _,
   } = _;
+  if (typeof _ == `string`)
+    return (0, _.jsx)(_, {
+      children: (0, _.jsx)(`div`, {
+        className: _(_, _),
+        children: [0, 1, 2, 3, 4].map((_) =>
+          (0, _.jsx)(
+            `div`,
+            {
+              className: _(_, _ === `tall_capsule` && `RDPLi3Xo-Mk-`),
+              children: (0, _.jsx)(`div`, {
+                className: _,
+              }),
+            },
+            _,
+          ),
+        ),
+      }),
+    });
+  if (_)
+    return (0, _.jsx)(_, {
+      children: (0, _.jsx)(`div`, {
+        className: _,
+        children: [0, 1].map((_) =>
+          (0, _.jsx)(
+            `div`,
+            {
+              className: _,
+              style: {
+                width: _.width,
+                height: _.height,
+              },
+            },
+            _,
+          ),
+        ),
+      }),
+    });
   if (!_) return null;
   if (_)
     return (0, _.jsx)(_, {

@@ -13,6 +13,80 @@
   border-radius: 5px;
   animation: 3.2s infinite iI1Gp8x7hBo-;
 }
+.WYXlhoxwBlU- .rDvoly1XGQk- {
+  gap: 16px;
+  display: flex;
+  overflow: hidden;
+}
+.WYXlhoxwBlU- .rDvoly1XGQk- .Ypf4QLCxqQU- {
+  flex-shrink: 0;
+}
+.WYXlhoxwBlU- .n2t7u-oXiwM- {
+  gap: 0;
+  container: pill-scroll-row/inline-size;
+}
+.WYXlhoxwBlU- .a1UUU8zD1Lg- {
+  flex-shrink: 0;
+  width: 258px;
+}
+@container pill-scroll-row (width>=0) {
+  .WYXlhoxwBlU- .a1UUU8zD1Lg- {
+    --pill-row-capsule-width: calc(
+      100cqi /
+        (
+          var(--pill-row-capsules-override, var(--pill-row-capsules)) +
+            var(--pill-row-peek, 0.3)
+        )
+    );
+    width: var(--pill-row-capsule-width);
+    --pill-row-capsules: 1;
+  }
+}
+@container pill-scroll-row (width>=575px) {
+  .WYXlhoxwBlU- .a1UUU8zD1Lg- {
+    --pill-row-capsules: 2;
+  }
+}
+@container pill-scroll-row (width>=830px) {
+  .WYXlhoxwBlU- .a1UUU8zD1Lg- {
+    --pill-row-capsules: 3;
+  }
+}
+.WYXlhoxwBlU- .a1UUU8zD1Lg- .Ypf4QLCxqQU- {
+  height: calc(
+    (var(--pill-row-capsule-width, 258px) - 16px) * 215 / 460 + 48px
+  );
+  margin-inline-end: 16px;
+}
+.WYXlhoxwBlU- .a1UUU8zD1Lg-.RDPLi3Xo-Mk- {
+  width: 180px;
+}
+@container pill-scroll-row (width>=0) {
+  .WYXlhoxwBlU- .a1UUU8zD1Lg-.RDPLi3Xo-Mk- {
+    --pill-row-capsule-width: calc(
+      100cqi /
+        (
+          var(--pill-row-capsules-override, var(--pill-row-capsules)) +
+            var(--pill-row-peek, 0.3)
+        )
+    );
+    width: var(--pill-row-capsule-width);
+    --pill-row-capsules: 2;
+  }
+}
+@container pill-scroll-row (width>=495px) {
+  .WYXlhoxwBlU- .a1UUU8zD1Lg-.RDPLi3Xo-Mk- {
+    --pill-row-capsules: 3;
+  }
+}
+@container pill-scroll-row (width>=710px) {
+  .WYXlhoxwBlU- .a1UUU8zD1Lg-.RDPLi3Xo-Mk- {
+    --pill-row-capsules: 4;
+  }
+}
+.WYXlhoxwBlU- .a1UUU8zD1Lg-.RDPLi3Xo-Mk- .Ypf4QLCxqQU- {
+  height: calc((var(--pill-row-capsule-width, 180px) - 16px) * 3 / 2 + 64px);
+}
 .WYXlhoxwBlU- .jP-Qr-tpETg- {
   width: 100%;
   height: 100%;

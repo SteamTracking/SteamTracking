@@ -494,6 +494,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetWeeklyTopSellers = _;
@@ -502,6 +503,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetCountryList = _;

@@ -22,8 +22,10 @@ import {
   _,
 } from "./chunk~6b8ddcaac8.js";
 import { _ } from "./chunk~4c13037b22.js";
-import { _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
+import { _, _, _ } from "./chunk~cbbb6ae37c.js";
 import { _, _ } from "./chunk~cd94ddba57.js";
+import { _ } from "./chunk~9871ee5432.js";
+import { _, _ } from "./chunk~56437c278a.js";
 import { _ } from "./chunk~4d16ce5d1a.js";
 import { _ } from "./chunk~d902bc74d6.js";
 import {
@@ -118,7 +120,8 @@ function _(_) {
     _ = _(_),
     { data: _ } = _(_),
     _ = _(_ ? _?.related_items?.parent_appid : void 0),
-    { data: _ } = _(_);
+    { data: _ } = _(_),
+    _ = _(_);
   if (!_ || !_) return null;
   let _ = !!_ && !!_,
     _ = (0, _.jsx)(_, {
@@ -139,6 +142,7 @@ function _(_) {
     navEntryPreferPosition: _.PREFERRED_CHILD,
     navKey: _,
     onFocusWithin: _,
+    ..._,
     children: [
       (0, _.jsxs)(_, {
         appid: _.appid,
@@ -193,11 +197,13 @@ function _(_) {
     } = _,
     _ = _(),
     _ = _(),
-    { data: _ } = _(_);
+    { data: _ } = _(_),
+    _ = _(_);
   return _
     ? (0, _.jsx)(_, {
         className: _,
         ..._(_, _, _, _, _),
+        ..._,
         children: (0, _.jsxs)(_, {
           appid: _.appid,
           children: [

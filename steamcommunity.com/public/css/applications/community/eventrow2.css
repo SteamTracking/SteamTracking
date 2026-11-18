@@ -261,6 +261,12 @@ button.DialogButton._8HEISlPy5Qg- svg {
   margin-bottom: 10px;
   padding-inline: 8px;
 }
+.JrlXbYAw30w- {
+  color: #f74843;
+}
+.SaleSectionHeader:has(> .JrlXbYAw30w-) {
+  justify-content: flex-start;
+}
 @font-face {
   font-family: Jolly Lodger fallback;
   src: local(Noto Sans);
@@ -5048,6 +5054,10 @@ textarea.fR9yHTgcATY- {
 }
 .yPDl714iuIk- {
   max-width: 100%;
+}
+.jNbhGePY0Zg- {
+  width: 92px;
+  height: 92px;
 }
 .-TtLaTxz3dM- {
   padding: 10px 0;

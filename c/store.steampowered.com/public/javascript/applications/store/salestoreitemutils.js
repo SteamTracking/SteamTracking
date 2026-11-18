@@ -15,33 +15,10 @@ import {
   _,
   _,
   _,
-  _,
 } from "./chunk~6b8ddcaac8.js";
-import { _ } from "./chunk~4c13037b22.js";
 import { _ } from "./chunk~5adf866415.js";
 import { _ } from "./chunk~034b02d99f.js";
-import {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./main.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./main.js";
 var _ = _(_(), 1),
   _ = _();
 function _(_) {
@@ -124,86 +101,6 @@ function _(_) {
       }),
     })
   );
-}
-function _(_) {
-  return (0, _.useMemo)(() => _(_), [_?._, _?.type]);
-}
-function _(_, _) {
-  return (0, _.useMemo)(() => _(_, _), [_, _]);
-}
-function _(_, _) {
-  return (0, _.useMemo)(() => _(_, _), [_, _]);
-}
-function _(_) {
-  if (_ && _._) {
-    if (!_.type)
-      return {
-        appid: _._,
-      };
-    switch (_.type) {
-      case `sub`:
-        return {
-          packageid: _._,
-        };
-      case `bundle`:
-        return {
-          bundleid: _._,
-        };
-      default:
-        return {
-          appid: _._,
-        };
-    }
-  }
-}
-function _(_) {
-  if (`appid` in _)
-    return {
-      _: _.appid,
-      type: `game`,
-    };
-  if (`packageid` in _)
-    return {
-      _: _.packageid,
-      type: `sub`,
-    };
-  if (`bundleid` in _)
-    return {
-      _: _.bundleid,
-      type: `bundle`,
-    };
-}
-function _(_, _) {
-  switch (_) {
-    case `sub`:
-      return {
-        packageid: _,
-      };
-    case `bundle`:
-      return {
-        bundleid: _,
-      };
-    default:
-      return {
-        appid: _,
-      };
-  }
-}
-function _(_, _) {
-  switch (_) {
-    case `sub`:
-      return {
-        packageid: _,
-      };
-    case `bundle`:
-      return {
-        bundleid: _,
-      };
-    default:
-      return {
-        appid: _,
-      };
-  }
 }
 async function _() {
   let _ = _(`broadcast_available_for_page`, `application_config`);
@@ -336,6 +233,8 @@ function _() {
     children: _(`#home_page_live_broadcast`),
   });
 }
+var _ = _.createContext(void 0),
+  _ = _.createContext(void 0);
 function _(_) {
   let { appids: _, hide_status_banners: _, show_early_access: _ } = _,
     { data: _ } = _(),
@@ -343,12 +242,20 @@ function _(_) {
     _ = _.length > 0 && _.every((_) => _ && _.has(_)),
     _ = _.length > 0 && _.every((_) => _ && _.has(_)),
     _ = _(_),
+    _ = _.useContext(_),
+    _ = _.useContext(_),
+    _ = _ && _ ? _(_, _) : void 0,
     _ = _ && !_,
-    _ = _ && !_,
+    _ = _ && !_ && !_?.bReplacesWishlistBanner,
     _ = !_ && _;
   return (0, _.jsxs)(`div`, {
-    className: _(_, `CapsuleDecorators`),
+    className: _(_, `CapsuleDecorators`, _ && `HasReasonBanner`),
     children: [
+      _ &&
+        (0, _.jsx)(`span`, {
+          className: _(`LCYi5cxHqgI-`, _.strClassName),
+          children: _.strLabel,
+        }),
       _ &&
         (0, _.jsxs)(`span`, {
           className: _(`LCYi5cxHqgI-`, `ZuMhm9DQqbw-`),
@@ -414,21 +321,6 @@ function _(_) {
     }, [_, _, _]),
     _
   );
-}
-function _(_, _, _, _, _, _) {
-  if (!_) return;
-  if (!_(_.item_type)) {
-    _(!1, `StoreItemWidgetSalePageAction: unexpected type: ` + _.item_type);
-    return;
-  }
-  let _ = _(`${_(_, _)}${_ ? `?${_}` : ``}`, _);
-  return {
-    onClick: (_) => {
-      let _ = _(_) || window;
-      _ ? _(_) : _.startsWith(`steam://`) || (_.location.href = _(_));
-    },
-    onOKActionDescription: _.Localize(`#Sale_Gamepad_Action_Select`),
-  };
 }
 function _(_) {
   let {

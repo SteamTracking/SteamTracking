@@ -4,15 +4,15 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n, st as r } from "./chunk~01cfc309bf.js";
 import {
-  Eo as i,
-  Pt as a,
-  Vt as o,
-  bt as s,
-  ii as c,
-  ni as l,
-  pi as u,
+  Do as i,
+  Ft as a,
+  Ht as o,
+  ai as s,
+  bi as c,
+  ii as l,
+  mi as u,
   ri as d,
-  vi as f,
+  xt as f,
   yi as p,
 } from "./chunk~6b8ddcaac8.js";
 import { t as m } from "./chunk~684e72ad45.js";
@@ -38,35 +38,35 @@ import {
   J as ae,
   L as oe,
   M as k,
+  Mt as se,
   N as A,
-  O as se,
-  Ot as ce,
+  O as ce,
+  Ot as le,
   P as j,
-  R as le,
-  S as ue,
-  T as de,
-  U as fe,
-  V as pe,
-  W as me,
-  X as he,
-  Z as ge,
-  _ as _e,
-  _t as ve,
-  a as ye,
-  at as be,
-  b as xe,
-  bt as Se,
-  ct as Ce,
-  d as we,
+  R as ue,
+  S as de,
+  T as fe,
+  U as pe,
+  V as me,
+  W as he,
+  X as ge,
+  Z as _e,
+  _ as ve,
+  _t as ye,
+  a as be,
+  at as xe,
+  b as Se,
+  bt as Ce,
+  ct as we,
+  d as Te,
   et as M,
-  f as Te,
-  ft as Ee,
-  g as De,
-  gt as Oe,
-  ht as ke,
-  it as Ae,
+  f as Ee,
+  ft as De,
+  g as Oe,
+  gt as ke,
+  ht as Ae,
+  it as je,
   j as N,
-  jt as je,
   kt as Me,
   lt as Ne,
   mt as Pe,
@@ -134,7 +134,7 @@ import { i as wt, n as J, o as Tt, t as Et } from "./chunk~7401689b78.js";
 import { t as Dt } from "./chunk~437071091c.js";
 import { i as Ot } from "./chunk~65da1d3223.js";
 import { n as kt } from "./chunk~1f9175251c.js";
-import { i as At, n as jt, t as Mt } from "./chunk~15f90ada43.js";
+import { n as At, r as jt, t as Mt } from "./chunk~15f90ada43.js";
 var Y = e(t()),
   Nt = `NerpSqWj84M-`,
   Pt = `SOzTsKYY9Yg-`,
@@ -198,8 +198,8 @@ function Rt(e) {
     } = e,
     c = T(t),
     l = Mt(t),
-    u = At(t),
-    d = jt(),
+    u = jt(t),
+    d = At(),
     f = r({
       queryKey: [`SimilarPlayedAppsLoad`, t],
       queryFn: () =>
@@ -401,7 +401,7 @@ function Rt(e) {
           }),
         !a || E == 0
           ? (0, X.jsx)(`div`, {
-              className: q(ye, E && void 0),
+              className: q(be, E && void 0),
               children: i.GetShortDescription(),
             })
           : (0, X.jsx)(`div`, { "aria-label": i.GetShortDescription() }),
@@ -533,7 +533,7 @@ function Wt(e) {
             statusPosition: `right`,
           }),
           (0, X.jsx)(kt, {
-            className: me,
+            className: he,
             persona: n,
             eFriendRelationship: 3,
             bIsSelf: !1,
@@ -551,9 +551,9 @@ function Q(e) {
   return (0, X.jsxs)(`div`, {
     className: E,
     children: [
-      (0, X.jsx)(`div`, { className: he, children: (0, X.jsx)(bt, {}) }),
+      (0, X.jsx)(`div`, { className: ge, children: (0, X.jsx)(bt, {}) }),
       (0, X.jsxs)(`div`, {
-        className: ge,
+        className: _e,
         children: [(0, X.jsx)(`div`, { className: void 0, children: n }), t],
       }),
     ],
@@ -568,7 +568,7 @@ function Gt(e) {
       selected: i,
       fnFocused: a,
       eStoreDiscoveryQueueType: o,
-      storePageFilter: s,
+      storePageFilter: c,
       bPreferDemoStorePage: f,
       elVideo: p,
       elDetails: m,
@@ -577,7 +577,7 @@ function Gt(e) {
     [g] = w(t, P),
     _ = U(),
     y = F()?.ownerWindow || window,
-    b = Kt(g, o, s, f),
+    b = Kt(g, o, c, f),
     { bIsIgnored: x, fnUpdateIgnored: S } = Me(t),
     { bIsWishlisted: C, fnUpdateWishlist: T } = O(t),
     E = Y.useRef(null);
@@ -622,7 +622,7 @@ function Gt(e) {
           className: q(oe, x && `_3ZYr-Efwvg8-`),
           children: [
             (0, X.jsx)(`div`, {
-              className: le,
+              className: ue,
               children: z(`#DiscoveryQueue_Ignored`),
             }),
             (0, X.jsx)(`div`, {
@@ -630,11 +630,11 @@ function Gt(e) {
               children: z(`#DiscoveryQueue_IgnoredConfirmation`),
             }),
             (0, X.jsxs)(K, {
-              className: q(Be, Se),
+              className: q(Be, Ce),
               onClick: S,
               children: [
                 _ &&
-                  (0, X.jsx)(l, { button: u.X, type: c.Light, size: d.Medium }),
+                  (0, X.jsx)(d, { button: u.X, type: s.Light, size: l.Medium }),
                 z(`#DiscoveryQueue_Undo`),
               ],
             }),
@@ -662,14 +662,14 @@ function qt(e) {
       bShowMinimizedDisplay: n,
       eStoreDiscoveryQueueType: r,
       storePageFilter: o,
-      bPreferDemoStorePage: f,
+      bPreferDemoStorePage: p,
       appAriaIDs: m,
     } = e,
     [h] = w(t, P),
     g = i(t),
     { bIsIgnored: _, fnUpdateIgnored: v } = Me(t),
     { bIsWishlisted: y, fnUpdateWishlist: b } = O(t),
-    x = Kt(h, r, o, f),
+    x = Kt(h, r, o, p),
     S = U(),
     C = S;
   if (!h) return;
@@ -692,7 +692,7 @@ function qt(e) {
             }),
           (0, X.jsxs)(`div`, {
             id: m.nameId,
-            className: be,
+            className: xe,
             children: [
               (0, X.jsx)(`a`, {
                 className: q(We),
@@ -704,9 +704,9 @@ function qt(e) {
           }),
           (0, X.jsx)(Jt, { rgTagIDs: h.GetTagIDs(), ariaLabelID: m.tagsId }),
           (0, X.jsx)(`div`, {
-            className: Te,
+            className: Ee,
             id: m.reviewId,
-            children: (0, X.jsx)(p, {
+            children: (0, X.jsx)(c, {
               bShowTooltip: !0,
               bTruncateTotalReviews: n,
               id: g,
@@ -714,7 +714,7 @@ function qt(e) {
           }),
           (0, X.jsx)(`div`, {
             id: m.relevanceId,
-            className: we,
+            className: Te,
             children: (0, X.jsx)(Rt, {
               bHideDescription: S,
               bShowAvatars: !n,
@@ -734,7 +734,7 @@ function qt(e) {
               className: `kjR6Qum8rRo-`,
               children: [
                 h.BHasDemo() &&
-                  (0, X.jsx)(s, {
+                  (0, X.jsx)(f, {
                     id: g,
                     className: q(
                       `BxLuFJsRaUQ-`,
@@ -747,10 +747,10 @@ function qt(e) {
                   href: x,
                   children: [
                     C &&
-                      (0, X.jsx)(l, {
+                      (0, X.jsx)(d, {
                         button: u.Y,
-                        type: c.Light,
-                        size: d.Medium,
+                        type: s.Light,
+                        size: l.Medium,
                         additionalClassName: `a-wHbIOxF8U-`,
                       }),
                     ` `,
@@ -770,10 +770,10 @@ function qt(e) {
                     onClick: b,
                     children: [
                       C &&
-                        (0, X.jsx)(l, {
+                        (0, X.jsx)(d, {
                           button: u.Y,
-                          type: c.Light,
-                          size: d.Medium,
+                          type: s.Light,
+                          size: l.Medium,
                           additionalClassName: `a-wHbIOxF8U-`,
                         }),
                       y ? (0, X.jsx)(xt, {}) : (0, X.jsx)(St, {}),
@@ -799,12 +799,12 @@ function qt(e) {
 }
 function Jt(e) {
   let { rgTagIDs: t, ariaLabelID: n } = e,
-    r = [...ce(t)].slice(0, 8);
+    r = [...le(t)].slice(0, 8);
   return (0, X.jsx)(`div`, {
     id: n,
     role: `list`,
     className: Re,
-    children: r.map((e) => (0, X.jsx)(it, { className: ke, tagID: e }, e)),
+    children: r.map((e) => (0, X.jsx)(it, { className: Ae, tagID: e }, e)),
   });
 }
 function Yt() {
@@ -908,28 +908,28 @@ function tn(e) {
       handleTouchMove: k,
       handleTouchEnd: A,
     } = rn((e) => c(e), S.length),
-    ce = (e) => {
+    le = (e) => {
       e.target == e.currentTarget && (n?.(), e.stopPropagation());
     },
     j = (e) => tt(s + e, S) && (nt(e, -1, 1) || te),
-    le = R(G.STORE_BASE_URL + `explore?dq=widget`),
-    me = !U() && !ft() && t === 0,
-    he = R(G.STORE_BASE_URL + `explore/next/0`),
-    ge = S[s] !== $,
-    { nQueueStart: ye, nCount: be } = nn(s, S);
+    ue = R(G.STORE_BASE_URL + `explore?dq=widget`),
+    he = !U() && !ft() && t === 0,
+    ge = R(G.STORE_BASE_URL + `explore/next/0`),
+    _e = S[s] !== $,
+    { nQueueStart: be, nCount: xe } = nn(s, S);
   return (0, X.jsx)(yt, {
     feature: Qt,
     children: (0, X.jsx)(K, {
       role: `dialog`,
       focusable: !1,
       "flow-children": `column`,
-      className: xe,
+      className: Se,
       navEntryPreferPosition: dt.LAST,
       onCancelButton: () => n?.(),
       onCancelActionDescription: z(`#Button_Close`),
       children: (0, X.jsxs)(`div`, {
         className: Ke,
-        onClick: ce,
+        onClick: le,
         children: [
           T.length > 0 &&
             (0, X.jsx)(K, {
@@ -939,25 +939,25 @@ function tn(e) {
             }),
           (0, X.jsxs)(K, {
             "flow-children": `row`,
-            className: ve,
+            className: ye,
             children: [
               (0, X.jsx)(K, {
                 className: void 0,
                 children: lt(
                   `#DiscoveryQueue_LearnMore_Default`,
-                  (0, X.jsx)(vt, { className: pe, href: V(le) }),
+                  (0, X.jsx)(vt, { className: me, href: V(ue) }),
                 ),
               }),
-              me &&
+              he &&
                 (0, X.jsx)(K, {
                   className: void 0,
                   children: lt(
                     `#DiscoveryQueue_ClassicQueue_Link`,
-                    (0, X.jsx)(vt, { className: `naQ5--hS5ms-`, href: V(he) }),
+                    (0, X.jsx)(vt, { className: `naQ5--hS5ms-`, href: V(ge) }),
                   ),
                 }),
               (0, X.jsx)(K, {
-                className: De,
+                className: Oe,
                 children: (0, X.jsx)(K, {
                   focusable: !0,
                   className: Be,
@@ -973,19 +973,19 @@ function tn(e) {
             role: `button`,
             "aria-label": z(`#Carousel_Next`),
             onClick: () => C(!1),
-            className: q(ae, fe, E && `_4dyYanLcAPg-`),
+            className: q(ae, pe, E && `_4dyYanLcAPg-`),
             children: (0, X.jsx)(rt, { angle: 180 }),
           }),
           (0, X.jsx)(K, {
             role: `button`,
             "aria-label": z(`#Carousel_Prev`),
             onClick: () => C(!0),
-            className: q(ae, Ae, D && `_4dyYanLcAPg-`),
+            className: q(ae, je, D && `_4dyYanLcAPg-`),
             children: (0, X.jsx)(rt, { angle: 0 }),
           }),
           (0, X.jsx)(K, {
             ref: O,
-            className: ue,
+            className: de,
             focusable: !1,
             onTouchStart: oe,
             onTouchMove: k,
@@ -996,14 +996,14 @@ function tn(e) {
                 {
                   className: q({
                     [Je]: !0,
-                    [de]: te,
+                    [fe]: te,
                     [Xe]: j(e),
                     [ee]: e == -2,
                     [re]: e == -1,
-                    [_e]: e == 0,
+                    [ve]: e == 0,
                     [Ve]: e == 1,
-                    [se]: e == 2,
-                    [Ce]: e + ie == 0,
+                    [ce]: e == 2,
+                    [we]: e + ie == 0,
                   }),
                   style: { "--dragOffsetX": `${ne}px` },
                   children:
@@ -1028,11 +1028,11 @@ function tn(e) {
               ),
             ),
           }),
-          (0, X.jsx)(je, {
-            className: q(!ge && `x7yACsfXkig-`),
+          (0, X.jsx)(se, {
+            className: q(!_e && `x7yACsfXkig-`),
             showPriorAsActive: !0,
-            count: be,
-            selectedIndex: s - ye,
+            count: xe,
+            selectedIndex: s - be,
           }),
         ],
       }),
@@ -1196,14 +1196,14 @@ function sn(e) {
       viewedAppCount: l,
       fnFocused: u,
       fnAdvance: d,
-      bSkipAppRequestPending: p,
+      bSkipAppRequestPending: f,
     } = e,
     [m, h] = Y.useState(!1),
     _ = U(),
     v = x(2, G.LANGUAGE, !1),
     [y, b] = Y.useState(0),
     [S, C] = Y.useState(0),
-    { data: w } = f();
+    { data: w } = p();
   Y.useEffect(() => {
     a &&
       !m &&
@@ -1239,7 +1239,7 @@ function sn(e) {
     bLoaded: m,
     children: [
       (0, X.jsxs)(`div`, {
-        className: Ee,
+        className: De,
         children: [
           (0, X.jsx)(`div`, {
             className: Pe,
@@ -1248,7 +1248,7 @@ function sn(e) {
           !D &&
             a &&
             v.data?.definition &&
-            (0, X.jsx)(un, { bSkipAppRequestPending: p, summaryCardIdx: r }),
+            (0, X.jsx)(un, { bSkipAppRequestPending: f, summaryCardIdx: r }),
           (0, X.jsx)(`div`, {
             className: qe,
             children: z(`#DiscoveryQueue_YourStats`),
@@ -1280,7 +1280,7 @@ function sn(e) {
                   }),
                   (0, X.jsx)(`div`, { className: k, children: W(y) }),
                   (0, X.jsx)(ot, {
-                    className: q(A, Oe),
+                    className: q(A, ke),
                     href: V(G.STORE_BASE_URL + `wishlist`),
                     children: z(`#DiscoveryQueue_ViewWishlist`),
                   }),
@@ -1295,7 +1295,7 @@ function sn(e) {
                   }),
                   (0, X.jsx)(`div`, { className: k, children: W(S) }),
                   (0, X.jsx)(ot, {
-                    className: q(A, Oe),
+                    className: q(A, ke),
                     href: V(G.STORE_BASE_URL + `account/notinterested`),
                     children: z(`#DiscoveryQueue_ViewIgnored`),
                   }),

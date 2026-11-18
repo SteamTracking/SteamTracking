@@ -2558,6 +2558,7 @@ var _ = `xON8oDeeQhs-`,
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
       },
     );
   }
@@ -16824,12 +16825,14 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Auction.PlaceBid#1`, _(_, _, _), _, {
       ePrivilege: 3,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.PlaceBid = _;
   function _(_, _, _) {
     return _.SendMsg(`Auction.CancelBid#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.CancelBid = _;
@@ -16837,6 +16840,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Auction.GetBidsForUser#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetBidsForUser = _;
@@ -16852,6 +16856,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Auction.GetUserBidForItem#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetUserBidForItem = _;
@@ -16867,6 +16872,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Auction.GetAllItems#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 0,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetAllItems = _;

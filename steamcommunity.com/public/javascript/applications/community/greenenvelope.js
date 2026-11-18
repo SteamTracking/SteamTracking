@@ -5,28 +5,28 @@ import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, ot as n, w as r } from "./chunk~01cfc309bf.js";
 import { t as i } from "./chunk~395a1fb77b.js";
 import {
-  Al as a,
-  Eu as o,
-  Kc as s,
-  Na as c,
-  Pl as l,
-  Qs as u,
-  Su as d,
-  Vc as f,
-  Ws as p,
-  Yl as m,
-  Zm as h,
-  Zp as g,
-  ef as _,
-  gm as v,
-  hi as y,
-  hm as b,
-  ja as x,
-  nc as ee,
-  pi as te,
-  rf as S,
-  tm as C,
-  yc as w,
+  $l as a,
+  Au as o,
+  Cc as s,
+  Eu as c,
+  Fa as l,
+  Gc as u,
+  Js as d,
+  La as f,
+  Pl as p,
+  Rl as m,
+  Xc as h,
+  bm as g,
+  hi as _,
+  if as v,
+  nc as y,
+  nh as b,
+  nm as x,
+  oc as ee,
+  om as te,
+  pi as S,
+  sf as C,
+  xm as w,
 } from "./main.js";
 import {
   a as T,
@@ -60,7 +60,7 @@ var j = e(t()),
     j.useEffect(() => {
       n && !J.m_bLoaded && J.ProcessNewNotificationPayload(n);
     }, [n]);
-    let r = g();
+    let r = x();
     (0, j.useEffect)(() => {
       (J.setTransport(r), (window.RefreshSteamNotifications = () => ue(r)));
     }, [r]);
@@ -81,9 +81,9 @@ function X() {
 }
 function Z() {
   let e = X(),
-    t = C(),
-    { data: n } = y(t),
-    r = te(),
+    t = te(),
+    { data: n } = _(t),
+    r = S(),
     i = n?.settings;
   return e.notifications.filter((e) => !D(e.type, i, r) && !T(e.item));
 }
@@ -94,7 +94,7 @@ function re(e) {
     [a, o] = j.useState(U);
   j.useEffect(() => {
     n.current ||
-      ((n.current = p(
+      ((n.current = d(
         (0, q.jsx)(ie, { popupRef: n }),
         document.getElementById(`green_envelope_menu_root`),
         {
@@ -125,10 +125,10 @@ function re(e) {
     children: (0, q.jsx)(`button`, {
       onClick: s,
       id: `green_envelope_menu_root`,
-      className: d(B, t ? H : ne, a),
-      children: (0, q.jsx)(c, {
+      className: c(B, t ? H : ne, a),
+      children: (0, q.jsx)(f, {
         className: V,
-        "aria-label": _(`#NotificationsMenu_Title`),
+        "aria-label": v(`#NotificationsMenu_Title`),
       }),
     }),
   });
@@ -147,7 +147,7 @@ var ie = (e) => {
       children: [
         (0, q.jsx)(ae, {}),
         (0, q.jsxs)(`div`, {
-          className: d(P, a),
+          className: c(P, a),
           ref: n,
           children: [(0, q.jsx)($, {}), (0, q.jsx)(Q, {}), (0, q.jsx)(le, {})],
         }),
@@ -155,33 +155,33 @@ var ie = (e) => {
     });
   },
   ae = () => {
-    let e = `${b.COMMUNITY_BASE_URL}profiles/${v.steamid}/notifications`;
+    let e = `${g.COMMUNITY_BASE_URL}profiles/${w.steamid}/notifications`;
     return (0, q.jsxs)(`div`, {
-      className: d(I),
+      className: c(I),
       children: [
         (0, q.jsx)(`div`, {
           className: R,
-          children: _(`#NotificationsMenu_Title`),
+          children: v(`#NotificationsMenu_Title`),
         }),
         (0, q.jsx)(`a`, {
           href: e,
           children: (0, q.jsx)(`div`, {
             className: z,
-            children: _(`#NotificationsMenu_ViewAll`),
+            children: v(`#NotificationsMenu_ViewAll`),
           }),
         }),
       ],
     });
   },
   oe = () => {
-    let e = `${b.COMMUNITY_BASE_URL}profiles/${v.steamid}/notifications`;
+    let e = `${g.COMMUNITY_BASE_URL}profiles/${w.steamid}/notifications`;
     return (0, q.jsx)(`div`, {
-      className: d(I, L),
+      className: c(I, L),
       children: (0, q.jsx)(`a`, {
         href: e,
         children: (0, q.jsx)(`div`, {
           className: z,
-          children: _(`#NotificationsMenu_ViewAll`),
+          children: v(`#NotificationsMenu_ViewAll`),
         }),
       }),
     });
@@ -211,68 +211,68 @@ function Q() {
 var ce = [
   {
     fnUrl: () =>
-      `${b.COMMUNITY_BASE_URL}profiles/${v.steamid}/inventory/#pending_gifts`,
+      `${g.COMMUNITY_BASE_URL}profiles/${w.steamid}/inventory/#pending_gifts`,
     countItem: `pending_gifts`,
-    icon: f,
-    fnLocalizeBody: (e) => S(`#Notification_NewGiftsPinned_Body`, e),
+    icon: u,
+    fnLocalizeBody: (e) => C(`#Notification_NewGiftsPinned_Body`, e),
     feature: 1,
   },
   {
-    fnUrl: () => `${b.COMMUNITY_BASE_URL}profiles/${v.steamid}/home/invites`,
+    fnUrl: () => `${g.COMMUNITY_BASE_URL}profiles/${w.steamid}/home/invites`,
     countItem: `pending_invites`,
-    icon: u,
-    fnLocalizeBody: (e) => S(`#Notification_FriendInvitePinned_Body`, e),
+    icon: y,
+    fnLocalizeBody: (e) => C(`#Notification_FriendInvitePinned_Body`, e),
     feature: 4,
   },
   {
     fnUrl: () =>
-      `${b.COMMUNITY_BASE_URL}profiles/${v.steamid}/notifications#comments`,
+      `${g.COMMUNITY_BASE_URL}profiles/${w.steamid}/notifications#comments`,
     countItem: `comments`,
-    icon: w,
-    fnLocalizeBody: (e) => S(`#Notification_NewCommentPinned_Body`, e),
+    icon: s,
+    fnLocalizeBody: (e) => C(`#Notification_NewCommentPinned_Body`, e),
     feature: 2,
   },
   {
-    fnUrl: () => `${b.COMMUNITY_BASE_URL}profiles/${v.steamid}/inventory`,
+    fnUrl: () => `${g.COMMUNITY_BASE_URL}profiles/${w.steamid}/inventory`,
     countItem: `inventory_items`,
-    icon: s,
-    fnLocalizeBody: (e) => S(`#Notification_NewItemAnnouncementPinned_Body`, e),
+    icon: h,
+    fnLocalizeBody: (e) => C(`#Notification_NewItemAnnouncementPinned_Body`, e),
     feature: 3,
   },
   {
-    fnUrl: () => `${b.COMMUNITY_BASE_URL}profiles/${v.steamid}/tradeoffers`,
+    fnUrl: () => `${g.COMMUNITY_BASE_URL}profiles/${w.steamid}/tradeoffers`,
     countItem: `trade_offers`,
-    icon: m,
-    fnLocalizeBody: (e) => S(`#Notification_NewTradeOffersPinned_Body`, e),
+    icon: a,
+    fnLocalizeBody: (e) => C(`#Notification_NewTradeOffersPinned_Body`, e),
     feature: 6,
   },
   {
     fnUrl: () =>
-      `${b.COMMUNITY_BASE_URL}profiles/${v.steamid}/gamenotifications`,
+      `${g.COMMUNITY_BASE_URL}profiles/${w.steamid}/gamenotifications`,
     countItem: `async_game_updates`,
     icon: ee,
-    fnLocalizeBody: (e) => S(`#Notification_NewAsyncGamePinned_Body`, e),
+    fnLocalizeBody: (e) => C(`#Notification_NewAsyncGamePinned_Body`, e),
   },
   {
-    fnUrl: () => `${b.COMMUNITY_BASE_URL}my/moderatormessages`,
+    fnUrl: () => `${g.COMMUNITY_BASE_URL}my/moderatormessages`,
     countItem: `moderator_messages`,
-    icon: x,
-    fnLocalizeBody: (e) => S(`#Notification_NewModeratorMessagePinned_Body`, e),
+    icon: l,
+    fnLocalizeBody: (e) => C(`#Notification_NewModeratorMessagePinned_Body`, e),
     feature: 2,
   },
   {
-    fnUrl: () => `${b.HELP_BASE_URL}wizard/HelpRequests`,
+    fnUrl: () => `${g.HELP_BASE_URL}wizard/HelpRequests`,
     countItem: `help_request_replies`,
-    icon: l,
+    icon: m,
     fnLocalizeBody: (e) =>
-      S(`#Notification_NewHelpRequestRepliesPinned_Body`, e),
+      C(`#Notification_NewHelpRequestRepliesPinned_Body`, e),
   },
   {
     fnUrl: () =>
-      `${b.STORE_BASE_URL}account/familymanagement/join?ft=${v.steamid}`,
+      `${g.STORE_BASE_URL}account/familymanagement/join?ft=${w.steamid}`,
     countItem: `family_invites`,
-    icon: a,
-    fnLocalizeBody: (e) => S(`#Notification_FamilyInvitePinned_Body`, e),
+    icon: p,
+    fnLocalizeBody: (e) => C(`#Notification_FamilyInvitePinned_Body`, e),
   },
 ];
 function $() {
@@ -299,11 +299,11 @@ function le() {
     children: [
       (0, q.jsx)(`div`, {
         className: G,
-        children: _(`#NotificationsList_EmptyTitle_New`),
+        children: v(`#NotificationsList_EmptyTitle_New`),
       }),
       (0, q.jsx)(`div`, {
         className: K,
-        children: _(`#NotificationsList_EmptyBody`),
+        children: v(`#NotificationsList_EmptyBody`),
       }),
     ],
   });
@@ -311,7 +311,7 @@ function le() {
 async function ue(e) {
   let t = null;
   try {
-    t = await E(e, v.steamid, h(b.LANGUAGE), void 0, !1, !1);
+    t = await E(e, w.steamid, b(g.LANGUAGE), void 0, !1, !1);
   } catch {}
   t && J.ProcessNewNotificationPayload(t);
 }

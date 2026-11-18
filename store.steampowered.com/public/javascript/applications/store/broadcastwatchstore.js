@@ -1093,6 +1093,7 @@ var B = e(r(), 1),
   function n(e, t) {
     return e.SendNotification(`Video.SetVideoBookmark#1`, S(H, t), {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.SetVideoBookmark = n;

@@ -1142,6 +1142,9 @@ html.responsive.touch .JM6qKRW4grY- ._4RT2F1qWDf0- {
     box-shadow 0.15s;
   box-shadow: 2px 2px 10px #0000004d;
 }
+.recharts-wrapper :focus {
+  outline: none;
+}
 @keyframes VgC9GOlWj28- {
   0% {
     opacity: 0;

@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
-import { Su as r, Wm as i, am as a, rm as o } from "./main.js";
+import { Eu as r, Ym as i, cm as a, um as o } from "./main.js";
 var s = e(t()),
   c = `_5ZSIN7wAn6E-`,
   l = `zuEsqPx3FlM-`,
@@ -38,7 +38,7 @@ var s = e(t()),
     import.meta.url,
   ).href;
 function L() {
-  let e = a();
+  let e = o();
   return e ? i(e.LAUNCHER_TYPE) : !1;
 }
 var R = n(),
@@ -47,7 +47,7 @@ var R = n(),
         className: t,
         size: n,
         string: i,
-        position: a,
+        position: o,
         static: u,
         msDelayAppear: f,
       } = e,
@@ -65,7 +65,7 @@ var R = n(),
       u && p.push(l),
       (0, R.jsxs)(`div`, {
         className: r(
-          a == `center` && `CnlxA61G8kY-`,
+          o == `center` && `CnlxA61G8kY-`,
           !!f && `VF2yNCE0Yms-`,
           m && `uALx1rZZEbE-`,
         ),
@@ -76,7 +76,7 @@ var R = n(),
               className: p.join(` `),
               children: (0, R.jsx)(`div`, {
                 className: `Laj-8wPgPBM-`,
-                children: (0, R.jsx)(`img`, { src: o(I) }),
+                children: (0, R.jsx)(`img`, { src: a(I) }),
               }),
             }),
           !!i && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: i }),

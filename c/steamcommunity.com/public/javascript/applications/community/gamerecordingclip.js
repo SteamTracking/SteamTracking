@@ -12905,6 +12905,12 @@ function _(_) {
       children: _.func({}),
     });
   }
+  if (`strImageURL` in _)
+    return (0, _.jsx)(`img`, {
+      src: _.strImageURL,
+      alt: ``,
+      className: _(_, _),
+    });
   let _ = ``;
   return (
     (_ = typeof _ == `string` ? _ : new XMLSerializer().serializeToString(_)),

@@ -27,6 +27,12 @@
   margin-bottom: 10px;
   padding-inline: 8px;
 }
+.JrlXbYAw30w- {
+  color: #f74843;
+}
+.SaleSectionHeader:has(> .JrlXbYAw30w-) {
+  justify-content: flex-start;
+}
 @font-face {
   font-family: Jolly Lodger fallback;
   src: local(Noto Sans);

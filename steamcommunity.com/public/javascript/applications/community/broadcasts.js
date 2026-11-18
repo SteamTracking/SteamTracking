@@ -15,7 +15,7 @@ import {
   xt as u,
 } from "./chunk~01cfc309bf.js";
 import { l as d, t as f } from "./chunk~35b0bf48ef.js";
-import { hi as p } from "./chunk~3f4314f3b4.js";
+import { yi as p } from "./chunk~3f4314f3b4.js";
 import { i as ee } from "./chunk~437071091c.js";
 import { t as m } from "./chunk~10c934b72c.js";
 import { t as te } from "./chunk~eee3bbd4cd.js";
@@ -23,44 +23,44 @@ import { t as h } from "./chunk~eefd71512b.js";
 import { o as ne } from "./chunk~af36c62e9f.js";
 import { i as re } from "./chunk~ec644f97c6.js";
 import { n as g } from "./chunk~9d71b14b50.js";
-import { n as ie } from "./chunk~d382bdf2cf.js";
-import { n as _ } from "./chunk~a7c5e71e12.js";
+import { n as _ } from "./chunk~d382bdf2cf.js";
+import { n as v } from "./chunk~a7c5e71e12.js";
 import {
-  Bo as ae,
-  Ct as oe,
-  Em as v,
-  Fc as y,
-  Fd as b,
-  Gc as se,
-  Go as x,
-  Gr as ce,
-  Is as S,
-  Qo as C,
-  Rr as le,
-  Su as w,
-  Ts as T,
-  Tu as E,
-  Wi as D,
-  Xo as O,
-  Yo as k,
-  Zi as A,
-  _s as j,
-  ef as M,
-  es as N,
-  gm as P,
-  hm as F,
-  hs as ue,
-  id as I,
-  kf as de,
-  lm as L,
-  ns as R,
-  ps as z,
-  qo as B,
-  rf as V,
-  ss as H,
-  um as U,
-  zf as W,
-  zs as G,
+  $o as y,
+  Bs as b,
+  Ct as ie,
+  Eu as x,
+  Gr as ae,
+  Nf as oe,
+  Rr as S,
+  Uf as C,
+  Us as w,
+  Wo as se,
+  Yc as ce,
+  Yo as T,
+  Zo as E,
+  _s as D,
+  bm as O,
+  cd as k,
+  ds as A,
+  ea as j,
+  es as M,
+  hm as N,
+  if as P,
+  is as F,
+  jm as le,
+  ks as I,
+  ku as L,
+  mm as R,
+  ns as z,
+  os as B,
+  qi as V,
+  sf as H,
+  xm as U,
+  xs as W,
+  ys as ue,
+  zc as de,
+  zd as G,
 } from "./main.js";
 import { Q as fe, t as pe } from "./chunk~750c562b0a.js";
 import { s as me } from "./chunk~cadb22900a.js";
@@ -96,7 +96,7 @@ var K = e(t()),
       return this.m_strIFrameParentOrigin;
     }
     async LoadBroadcastDebugInfo(e) {
-      let t = F.COMMUNITY_BASE_URL + `broadcast/broadcastdebuginfo`,
+      let t = O.COMMUNITY_BASE_URL + `broadcast/broadcastdebuginfo`,
         n = {
           steamid: this.m_steamid.ConvertTo64BitString(),
           origin: self.origin,
@@ -111,18 +111,18 @@ var K = e(t()),
         if (r && r.status == 200 && r.data && r.data.success == 1)
           return ((this.m_curDebugInfo = r.data), this.m_curDebugInfo);
       } catch (e) {
-        let t = W(e);
+        let t = C(e);
         console.error(`LoadBroadcastDebugInfo: Failed ` + t.strErrorMsg, t);
       }
       return null;
     }
     async UpdateBroadcastSettings(e, t, r) {
-      let i = F.COMMUNITY_BASE_URL + `broadcast/updatebroadcastsettings`,
+      let i = O.COMMUNITY_BASE_URL + `broadcast/updatebroadcastsettings`,
         a = {
           steamid: this.m_steamid.ConvertTo64BitString(),
           matchid: e,
           title: t,
-          sessionid: L(),
+          sessionid: R(),
         };
       try {
         let e = await K.default.get(i, {
@@ -144,7 +144,7 @@ var K = e(t()),
           );
         }
       } catch (e) {
-        let t = W(e);
+        let t = C(e);
         console.error(`UpdateBroadcastSettings: Failed ` + t.strErrorMsg, t);
       }
       return !1;
@@ -152,24 +152,24 @@ var K = e(t()),
     async StopBroadcast(e) {
       let t = this.m_steamid.ConvertTo64BitString(),
         n = m.GetBroadcast(t),
-        r = F.COMMUNITY_BASE_URL + `broadcast/stopbroadcast`,
+        r = O.COMMUNITY_BASE_URL + `broadcast/stopbroadcast`,
         i = {
           steamid: t,
           broadcastid: n ? n.m_ulBroadcastID : null,
-          sessionid: L(),
+          sessionid: R(),
         };
       return await this.InternalSendSimpleGetRequest(`StopBroadcast`, r, i, e);
     }
     async SetBroadcasterRestrictions(e, t, n) {
       let r = this.m_steamid.ConvertTo64BitString(),
         i = m.GetBroadcast(r),
-        a = F.COMMUNITY_BASE_URL + `broadcast/setbroadcastrestriction`,
+        a = O.COMMUNITY_BASE_URL + `broadcast/setbroadcastrestriction`,
         o = {
           steamid: r,
           broadcastid: i ? i.m_ulBroadcastID : null,
           type: e,
           days: t,
-          sessionid: L(),
+          sessionid: R(),
         };
       return await this.InternalSendSimpleGetRequest(
         `SetBroadcasterRestrictions`,
@@ -181,23 +181,23 @@ var K = e(t()),
     async SetUnBannable(e) {
       let t = this.m_steamid.ConvertTo64BitString(),
         n = m.GetBroadcast(t),
-        r = F.COMMUNITY_BASE_URL + `broadcast/unban`,
+        r = O.COMMUNITY_BASE_URL + `broadcast/unban`,
         i = {
           steamid: t,
           broadcastid: n ? n.m_ulBroadcastID : null,
-          sessionid: L(),
+          sessionid: R(),
         };
       return await this.InternalSendSimpleGetRequest(`SetUnBannable`, r, i, e);
     }
     async SendUserReportOnBroadcast(e) {
       let t = this.m_steamid.ConvertTo64BitString(),
         n = m.GetBroadcast(t),
-        r = F.COMMUNITY_BASE_URL + `broadcast/report`,
+        r = O.COMMUNITY_BASE_URL + `broadcast/report`,
         i = {
           steamid: t,
           broadcastid: n ? n.m_ulBroadcastID : null,
           description: e,
-          sessionid: L(),
+          sessionid: R(),
         };
       return await this.InternalSendSimpleGetRequest(
         `SendUserReportOnBroadcast`,
@@ -216,7 +216,7 @@ var K = e(t()),
         if (r && r.token.reason) return !1;
         if (e && e.status == 200 && e.data && e.data.success == 1) return !0;
       } catch (t) {
-        let n = W(t);
+        let n = C(t);
         console.error(
           `CCommunityBroadcastStore:${e}: Failed ` + n.strErrorMsg,
           n,
@@ -231,9 +231,9 @@ var K = e(t()),
       );
     }
     Init() {
-      let e = U(`broadcastsinfo`, `application_config`);
+      let e = N(`broadcastsinfo`, `application_config`);
       this.ValidateStoreDefault(e) &&
-        ((this.m_steamid = new v(e.steamid)),
+        ((this.m_steamid = new le(e.steamid)),
         (this.m_bShowOnlyChat = !!e.show_only_chat),
         (this.m_bShowOnlyVideo = !!e.show_only_video),
         (this.m_strIFrameParentOrigin = e.iframe_parent_origin || void 0));
@@ -243,7 +243,7 @@ var K = e(t()),
       return t && typeof t == `object` ? typeof t.steamid == `string` : !1;
     }
   };
-de([o], q.prototype, `m_curDebugInfo`, void 0);
+oe([o], q.prototype, `m_curDebugInfo`, void 0);
 var J = e(i()),
   Y = `weRyAFSdhQU-`,
   X = `SmOFdA0bRKo-`,
@@ -258,13 +258,13 @@ var J = e(i()),
         },
         [],
       ),
-      (0, Z.jsx)(E, {
+      (0, Z.jsx)(L, {
         children: (0, Z.jsxs)(`div`, {
-          className: w(void 0),
+          className: x(void 0),
           children: [
             (0, Z.jsx)(`div`, {
               className: void 0,
-              children: (0, Z.jsx)(O, {
+              children: (0, Z.jsx)(M, {
                 onClick: async () => {
                   t.current && t.current();
                   let e = K.default.CancelToken.source();
@@ -274,7 +274,7 @@ var J = e(i()),
                 children: `(VO) Load Debug Info`,
               }),
             }),
-            (0, Z.jsx)(E, { children: (0, Z.jsx)(ve, { info: n }) }),
+            (0, Z.jsx)(L, { children: (0, Z.jsx)(ve, { info: n }) }),
           ],
         }),
       })
@@ -611,17 +611,17 @@ var J = e(i()),
             (0, Z.jsxs)(`div`, { children: [`HLS Url: `, a.m_data.hls_url] }),
           ],
         }),
-        (0, Z.jsx)(O, { onClick: () => r(!n), children: `Toggle Raw Data` }),
+        (0, Z.jsx)(M, { onClick: () => r(!n), children: `Toggle Raw Data` }),
         !!n &&
           (0, Z.jsxs)(Z.Fragment, {
             children: [
               (0, Z.jsx)(`div`, {
                 className: `weRyAFSdhQU-`,
-                children: (0, Z.jsx)(b, { data: t }),
+                children: (0, Z.jsx)(G, { data: t }),
               }),
               (0, Z.jsx)(`div`, {
                 className: `weRyAFSdhQU-`,
-                children: (0, Z.jsx)(b, { data: a?.m_data || `` }),
+                children: (0, Z.jsx)(G, { data: a?.m_data || `` }),
               }),
             ],
           }),
@@ -638,7 +638,7 @@ var J = e(i()),
   Ee = `_2Qqqqokoe50-`,
   De = (e) => {
     let t = e.steamid.GetAccountID(),
-      { data: n } = ie(t);
+      { data: n } = _(t);
     return (0, Z.jsxs)(`div`, {
       className: Te,
       children: [
@@ -681,17 +681,17 @@ function Fe(e) {
         t = e.m_nAppID == 7 ? 0 : e.m_nAppID;
       return [e.m_nViewerCount, t];
     }),
-    [a] = _(i, { include_assets: !0 }),
+    [a] = v(i, { include_assets: !0 }),
     o = a?.GetAssets().GetMainCapsuleURL(),
     s = o && o.length > 0;
-  return (0, Z.jsx)(E, {
+  return (0, Z.jsx)(L, {
     children: (0, Z.jsxs)(`div`, {
       className: Oe,
       children: [
         s &&
           (0, Z.jsx)(`a`, {
             className: `A8QAZQrKuJo-`,
-            href: S(a?.GetStorePageURL() || F.STORE_BASE_URL + `app/` + i),
+            href: b(a?.GetStorePageURL() || O.STORE_BASE_URL + `app/` + i),
             children: (0, Z.jsx)(`img`, { src: o }),
           }),
         (0, Z.jsxs)(`div`, {
@@ -706,7 +706,7 @@ function Fe(e) {
                     (0, Z.jsx)(Ie, { broadcasterSteamID: t }),
                     (0, Z.jsx)(`div`, {
                       className: Ne,
-                      children: V(`#Broadcast_ViewerCount`, oe(r)),
+                      children: H(`#Broadcast_ViewerCount`, ie(r)),
                     }),
                   ],
                 }),
@@ -728,13 +728,13 @@ var Ie = r((e) => {
           t = e.m_nAppID == 7 ? 0 : e.m_nAppID;
         return [e.m_strAppTitle, t];
       }),
-      [a] = _(i, { include_assets: !0 });
+      [a] = v(i, { include_assets: !0 });
     return (0, Z.jsxs)(`div`, {
       className: je,
       children: [
-        M(`#Broadcast_Playing`),
+        P(`#Broadcast_Playing`),
         (0, Z.jsx)(`a`, {
-          href: S(a?.GetStorePageURL() || F.STORE_BASE_URL + `app/` + i),
+          href: b(a?.GetStorePageURL() || O.STORE_BASE_URL + `app/` + i),
           children: r || a?.GetName(),
         }),
         r?.length > 0 && (0, Z.jsxs)(`span`, { children: [` - `, r] }),
@@ -748,37 +748,37 @@ var Ie = r((e) => {
       (0, Z.jsxs)(`div`, {
         className: Pe,
         children: [
-          P.steamid != e.broadcasterSteamID.ConvertTo64BitString() &&
-            (0, Z.jsx)(O, {
+          U.steamid != e.broadcasterSteamID.ConvertTo64BitString() &&
+            (0, Z.jsx)(M, {
               onClick: (e) => {
-                P.logged_in
-                  ? A((0, Z.jsx)(Re, { broadcasterSteamID: t }), I(e))
-                  : A(
-                      (0, Z.jsx)(D, {
-                        strTitle: M(`#EventDisplay_Share_NotLoggedIn`),
-                        strDescription: M(
+                U.logged_in
+                  ? j((0, Z.jsx)(Re, { broadcasterSteamID: t }), k(e))
+                  : j(
+                      (0, Z.jsx)(V, {
+                        strTitle: P(`#EventDisplay_Share_NotLoggedIn`),
+                        strDescription: P(
                           `#EventDisplay_Share_NotLoggedIn_Description`,
                         ),
-                        strOKButtonText: M(`#MobileLogin_SignIn`),
+                        strOKButtonText: P(`#MobileLogin_SignIn`),
                         onOK: () => he(),
                       }),
-                      I(e),
+                      k(e),
                     );
               },
-              children: (0, Z.jsx)(j, {
-                toolTipContent: M(`#Broadcast_User_Report_ttip`),
-                children: (0, Z.jsx)(y, {}),
+              children: (0, Z.jsx)(W, {
+                toolTipContent: P(`#Broadcast_User_Report_ttip`),
+                children: (0, Z.jsx)(de, {}),
               }),
             }),
-          (0, Z.jsx)(O, {
+          (0, Z.jsx)(M, {
             onClick: (e) =>
-              T(
+              I(
                 e,
                 `https://help.steampowered.com/faqs/view/548F-BC55-89EB-1BC8`,
               ),
-            children: (0, Z.jsx)(j, {
-              toolTipContent: M(`#Broadcast_User_FAQ_ttip`),
-              children: (0, Z.jsx)(se, {}),
+            children: (0, Z.jsx)(W, {
+              toolTipContent: P(`#Broadcast_User_FAQ_ttip`),
+              children: (0, Z.jsx)(ce, {}),
             }),
           }),
         ],
@@ -787,9 +787,9 @@ var Ie = r((e) => {
   }),
   Re = (e) => {
     let [t, n] = (0, J.useState)(``);
-    return (0, Z.jsx)(D, {
-      strTitle: M(`#Broadcast_ReportItem_Title`),
-      strDescription: M(`#Broadcast_ReportItem_Description`),
+    return (0, Z.jsx)(V, {
+      strTitle: P(`#Broadcast_ReportItem_Title`),
+      strDescription: P(`#Broadcast_ReportItem_Description`),
       onCancel: e.closeModal,
       bOKDisabled: t.trim().length == 0,
       onOK: async () => {
@@ -806,37 +806,37 @@ var Ie = r((e) => {
   },
   ze = `_6XtxP-iuz1Y-`,
   Be = (e) => {
-    if (!P.is_support) return null;
+    if (!U.is_support) return null;
     let t = (t, n) => {
-        A(
+        j(
           (0, Z.jsx)(Ve, {
             broadcastSteamID: e.broadcastSteamID,
             strAction: n,
           }),
-          I(t),
+          k(t),
         );
       },
       n = (t) => {
-        A((0, Z.jsx)(Q, { steamid: e.broadcastSteamID }), I(t));
+        j((0, Z.jsx)(He, { steamid: e.broadcastSteamID }), k(t));
       },
       r =
         `https://steamsupport.valvesoftware.com/account/overview/` +
         e.broadcastSteamID.ConvertTo64BitString();
     return (0, Z.jsxs)(`div`, {
-      className: w(ze, le),
+      className: x(ze, S),
       children: [
         (0, Z.jsx)(`div`, { children: `(VO) Support Tools` }),
-        (0, Z.jsx)(O, {
+        (0, Z.jsx)(M, {
           onClick: (e) => t(e, `frontpage`),
           children: `Remove from Front Page`,
         }),
-        (0, Z.jsx)(O, {
+        (0, Z.jsx)(M, {
           onClick: (e) => t(e, `ban`),
           children: `Ban from Broadcasting`,
         }),
-        (0, Z.jsx)(O, { onClick: n, children: `Make Unbannable` }),
-        (0, Z.jsx)(O, {
-          onClick: (e) => T(e, r),
+        (0, Z.jsx)(M, { onClick: n, children: `Make Unbannable` }),
+        (0, Z.jsx)(M, {
+          onClick: (e) => I(e, r),
           children: `Go to Support Page`,
         }),
       ],
@@ -863,19 +863,19 @@ var Ie = r((e) => {
         { label: `1 Year`, data: 365 },
       ],
       p = () => e.closeModal && e.closeModal();
-    return (0, Z.jsx)(E, {
-      children: (0, Z.jsx)(G, {
+    return (0, Z.jsx)(L, {
+      children: (0, Z.jsx)(w, {
         onEscKeypress: p,
-        children: (0, Z.jsxs)(C, {
+        children: (0, Z.jsxs)(z, {
           children: [
-            (0, Z.jsx)(R, {
+            (0, Z.jsx)(B, {
               children:
                 n == `frontpage`
                   ? `Remove Broadcast From Front Page`
                   : `Ban from Broadcasting`,
             }),
-            (0, Z.jsx)(B, {
-              children: (0, Z.jsxs)(k, {
+            (0, Z.jsx)(E, {
+              children: (0, Z.jsxs)(y, {
                 children: [
                   (0, Z.jsx)(`p`, {
                     children:
@@ -885,7 +885,7 @@ var Ie = r((e) => {
                   }),
                   (0, Z.jsxs)(`div`, {
                     children: [
-                      (0, Z.jsx)(ae, {
+                      (0, Z.jsx)(se, {
                         rgOptions: f,
                         selectedOption: r,
                         onChange: (e) => i(e.data),
@@ -902,16 +902,16 @@ var Ie = r((e) => {
                 ],
               }),
             }),
-            (0, Z.jsx)(N, {
+            (0, Z.jsx)(F, {
               children: s
-                ? (0, Z.jsx)(H, { onClick: p, children: M(`#Button_Dismiss`) })
-                : (0, Z.jsxs)(z, {
+                ? (0, Z.jsx)(A, { onClick: p, children: P(`#Button_Dismiss`) })
+                : (0, Z.jsxs)(D, {
                     children: [
-                      (0, Z.jsx)(O, {
+                      (0, Z.jsx)(M, {
                         onClick: p,
-                        children: M(`#Button_Cancel`),
+                        children: P(`#Button_Cancel`),
                       }),
-                      (0, Z.jsx)(H, {
+                      (0, Z.jsx)(A, {
                         onClick: async () => {
                           o(!0);
                           try {
@@ -924,7 +924,7 @@ var Ie = r((e) => {
                             (o(!1), c(!0), u(!1));
                           }
                         },
-                        children: M(`#Button_Confirm`),
+                        children: P(`#Button_Confirm`),
                       }),
                     ],
                   }),
@@ -934,7 +934,7 @@ var Ie = r((e) => {
       }),
     });
   }),
-  Q = (e) => {
+  He = (e) => {
     let [t, n] = (0, J.useState)(!1),
       [r, i] = (0, J.useState)(!1),
       [a, o] = (0, J.useState)(!1),
@@ -946,14 +946,14 @@ var Ie = r((e) => {
       [],
     );
     let c = () => e.closeModal && e.closeModal();
-    return (0, Z.jsx)(E, {
-      children: (0, Z.jsx)(G, {
+    return (0, Z.jsx)(L, {
+      children: (0, Z.jsx)(w, {
         onEscKeypress: c,
-        children: (0, Z.jsxs)(C, {
+        children: (0, Z.jsxs)(z, {
           children: [
-            (0, Z.jsx)(R, { children: `Make Broadcast Unbannable` }),
-            (0, Z.jsx)(B, {
-              children: (0, Z.jsxs)(k, {
+            (0, Z.jsx)(B, { children: `Make Broadcast Unbannable` }),
+            (0, Z.jsx)(E, {
+              children: (0, Z.jsxs)(y, {
                 children: [
                   (0, Z.jsx)(`p`, {
                     children: `Prevent automatic, report based banning changes to this strema visibility the stream for 1 week?`,
@@ -972,16 +972,16 @@ var Ie = r((e) => {
                 ],
               }),
             }),
-            (0, Z.jsx)(N, {
+            (0, Z.jsx)(F, {
               children: r
-                ? (0, Z.jsx)(H, { onClick: c, children: M(`#Button_Dismiss`) })
-                : (0, Z.jsxs)(z, {
+                ? (0, Z.jsx)(A, { onClick: c, children: P(`#Button_Dismiss`) })
+                : (0, Z.jsxs)(D, {
                     children: [
-                      (0, Z.jsx)(O, {
+                      (0, Z.jsx)(M, {
                         onClick: c,
-                        children: M(`#Button_Cancel`),
+                        children: P(`#Button_Cancel`),
                       }),
-                      (0, Z.jsx)(H, {
+                      (0, Z.jsx)(A, {
                         onClick: async () => {
                           n(!0);
                           let e = !1;
@@ -994,7 +994,7 @@ var Ie = r((e) => {
                             (n(!1), i(!0), o(e));
                           }
                         },
-                        children: M(`#Button_Confirm`),
+                        children: P(`#Button_Confirm`),
                       }),
                     ],
                   }),
@@ -1004,9 +1004,9 @@ var Ie = r((e) => {
       }),
     });
   };
-function He() {
+function Q() {
   let [e] = (0, J.useState)(
-    () => U(`ewatchlocation`, `application_config`) || 5,
+    () => N(`ewatchlocation`, `application_config`) || 5,
   );
   return e;
 }
@@ -1040,7 +1040,7 @@ function We() {
 var Ge = r((e) => {
   let t = q.Get().GetBroadcasterSteamID(),
     n = t?.ConvertTo64BitString(),
-    r = He(),
+    r = Q(),
     [i, a] = ne(`muted`, !0),
     o = m.GetBroadcast(n),
     s = m.GetOrCreateBroadcastInfo(n),
@@ -1053,24 +1053,24 @@ var Ge = r((e) => {
     q.Get().GetIFrameParentOrigin() && (u = () => Ue(`OnLoginButtonClicked`)),
     (0, Z.jsx)(Z.Fragment, {
       children: (0, Z.jsxs)(`div`, {
-        className: w(ye),
+        className: x(ye),
         children: [
           (0, Z.jsxs)(`div`, {
-            className: w(pe),
+            className: x(pe),
             children: [
               !q.Get().BShowOnlyChat() &&
-                (0, Z.jsx)(E, {
+                (0, Z.jsx)(L, {
                   children: (0, Z.jsx)(`div`, {
-                    className: w(`SObNBjtfgbU-`),
+                    className: x(`SObNBjtfgbU-`),
                     children: (0, Z.jsx)(`div`, {
-                      className: w({
+                      className: x({
                         "-d8EQqzPfNs-": !0,
                         video_placeholder_trgt: !0,
                         "_27mwemkqVww-": q.Get().BShowOnlyVideo(),
                       }),
                       children: (0, Z.jsx)(`div`, {
                         className: `_6NUM7GMUXrI-`,
-                        children: (0, Z.jsx)(E, {
+                        children: (0, Z.jsx)(L, {
                           children: (0, Z.jsx)(te, {
                             steamIDBroadcast: n,
                             watchLocation: r,
@@ -1086,7 +1086,7 @@ var Ge = r((e) => {
                   className: `VEghDDjerCc-`,
                   children: (0, Z.jsx)(`div`, {
                     className: `eWHilAZFWEA-`,
-                    children: (0, Z.jsx)(E, {
+                    children: (0, Z.jsx)(L, {
                       children: (0, Z.jsx)(fe, {
                         emoticonStore: me,
                         watchLocation: 6,
@@ -1125,12 +1125,12 @@ var Ke = r((e) => {
         children: [
           (0, Z.jsx)(Fe, { broadcasterSteamID: t }),
           (0, Z.jsx)(qe, { steamid: t }),
-          !!P.is_support &&
+          !!U.is_support &&
             (0, Z.jsxs)(`div`, {
               children: [
                 (0, Z.jsx)(Be, { broadcastSteamID: t }),
                 (0, Z.jsx)(`div`, {
-                  className: w(`u6DPgTclyv4-`, `JCVGLJqumRQ-`),
+                  className: x(`u6DPgTclyv4-`, `JCVGLJqumRQ-`),
                   children: (0, Z.jsx)(_e, {}),
                 }),
               ],
@@ -1144,7 +1144,7 @@ var Ke = r((e) => {
                   children: [
                     (0, Z.jsxs)(`div`, {
                       className: `uhFcNuyHw60-`,
-                      children: [` `, M(`#Broadcast_About_Game`), ` `],
+                      children: [` `, P(`#Broadcast_About_Game`), ` `],
                     }),
                     (0, Z.jsx)(`div`, {
                       className: `XqoXynpd0bw-`,
@@ -1192,13 +1192,13 @@ var Ke = r((e) => {
         ),
         [n.m_strTitle],
       ),
-      P.accountid == e.steamid.GetAccountID()
+      U.accountid == e.steamid.GetAccountID()
         ? (0, Z.jsxs)(`div`, {
             className: be,
             children: [
               (0, Z.jsx)(`div`, {
                 className: xe,
-                children: M(`#Broadcaster_Control_title`),
+                children: P(`#Broadcaster_Control_title`),
               }),
               (0, Z.jsxs)(`div`, {
                 className: Se,
@@ -1206,20 +1206,20 @@ var Ke = r((e) => {
                   (0, Z.jsxs)(`div`, {
                     className: Ce,
                     children: [
-                      (0, Z.jsx)(x, {
+                      (0, Z.jsx)(T, {
                         type: `text`,
-                        label: M(`#Broadcast_title_title`),
+                        label: P(`#Broadcast_title_title`),
                         onChange: (e) => i(e.currentTarget.value || ``),
-                        placeholder: M(`#Broadcast_title_placeholder`),
+                        placeholder: P(`#Broadcast_title_placeholder`),
                         value: r,
                       }),
-                      (0, Z.jsx)(x, {
+                      (0, Z.jsx)(T, {
                         type: `text`,
-                        label: M(`#Broadcast_Control_matchid`),
+                        label: P(`#Broadcast_Control_matchid`),
                         onChange: (e) => o(e.currentTarget.value || ``),
                         value: a,
                       }),
-                      (0, Z.jsxs)(O, {
+                      (0, Z.jsxs)(M, {
                         onClick: async () => {
                           t.current && t.current();
                           let e = K.default.CancelToken.source();
@@ -1229,7 +1229,7 @@ var Ke = r((e) => {
                             .UpdateBroadcastSettings(a, r, e);
                           e.token.reason ||
                             c(
-                              M(
+                              P(
                                 n
                                   ? `#Broadcast_Control_Success`
                                   : `#Broadcast_Control_Failure`,
@@ -1237,9 +1237,9 @@ var Ke = r((e) => {
                             );
                         },
                         children: [
-                          M(`#Broadcast_save_changes`),
+                          P(`#Broadcast_save_changes`),
                           (0, Z.jsx)(ue, {
-                            tooltip: M(`#Broadcast_save_title_ttip`),
+                            tooltip: P(`#Broadcast_save_title_ttip`),
                           }),
                         ],
                       }),
@@ -1248,12 +1248,12 @@ var Ke = r((e) => {
                   (0, Z.jsxs)(`div`, {
                     className: we,
                     children: [
-                      (0, Z.jsx)(O, {
+                      (0, Z.jsx)(M, {
                         onClick: (e) => {
-                          A(
-                            (0, Z.jsx)(D, {
-                              strTitle: M(`#Broadcast_Control_StopBroadcast`),
-                              strDescription: M(
+                          j(
+                            (0, Z.jsx)(V, {
+                              strTitle: P(`#Broadcast_Control_StopBroadcast`),
+                              strDescription: P(
                                 `#EventEditor_GenericAreYouSure`,
                               ),
                               onOK: async () => {
@@ -1263,7 +1263,7 @@ var Ke = r((e) => {
                                 let n = await q.Get().StopBroadcast(e);
                                 e.token.reason ||
                                   c(
-                                    M(
+                                    P(
                                       n
                                         ? `#Broadcast_Control_StopSuccess`
                                         : `#Broadcast_Control_StopFailure`,
@@ -1271,10 +1271,10 @@ var Ke = r((e) => {
                                   );
                               },
                             }),
-                            I(e),
+                            k(e),
                           );
                         },
-                        children: M(`#Broadcast_Control_StopBroadcast`),
+                        children: P(`#Broadcast_Control_StopBroadcast`),
                       }),
                       !!s && (0, Z.jsx)(`div`, { children: s }),
                     ],
@@ -1298,7 +1298,7 @@ function Ye(e) {
               strSteamID: e.match.params.steamid_or_user_vanity,
             }),
         }),
-        (0, Z.jsx)(u, { component: ce }),
+        (0, Z.jsx)(u, { component: ae }),
       ],
     }),
   });

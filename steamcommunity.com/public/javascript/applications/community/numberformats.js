@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { bf as e, wt as t } from "./main.js";
+import { wf as e, wt as t } from "./main.js";
 function n(e, t) {
   let n = t.bUseBinary1K ? 1024 : 1e3,
     r = n * n,

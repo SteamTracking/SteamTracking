@@ -35,9 +35,9 @@ message CUserStoreVisitData_RecentApps {
 }
 
 service UserStoreVisit {
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetFrequentlyVisitedPages (.CUserStoreVisit_GetFrequentlyVisitedPages_Request) returns (.CUserStoreVisit_GetFrequentlyVisitedPages_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetMostVisitedItemsOnStore (.CUserStoreVisit_GetMostVisitedItemsOnStore_Request) returns (.CUserStoreVisit_GetMostVisitedItemsOnStore_Response);
 }
 

@@ -5189,7 +5189,7 @@ var _ = {
     constructor(_ = null) {
       (super(),
         _.prototype.appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2], null));
+        _.Message.initialize(this, _, 0, -1, [2, 5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -5218,6 +5218,12 @@ var _ = {
               _: 4,
               _: _.readBool,
               _: _.writeBool,
+            },
+            completed_sets: {
+              _: 5,
+              _: _,
+              _: !0,
+              _: !0,
             },
           },
         }),
@@ -5257,6 +5263,70 @@ var _ = {
     }
     getClassName() {
       return `CGameAchievements`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.groupid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            groupid: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            rtime_completed: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CGameAchievements_CompletedSet`;
     }
   },
   _ = class _ extends _.Message {
@@ -5928,6 +5998,11 @@ var _ = {
               _: _.readBool,
               _: _.writeBool,
             },
+            include_completed_sets: {
+              _: 5,
+              _: _.readBool,
+              _: _.writeBool,
+            },
           },
         }),
         _.sm_m
@@ -6000,6 +6075,11 @@ var _ = {
             },
             total_games_with_achievements: {
               _: 4,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            total_completed_sets: {
+              _: 5,
               _: _.readUint32,
               _: _.writeUint32,
             },
@@ -7432,6 +7512,7 @@ var _ = {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetUserYearInReview = _;
@@ -7446,6 +7527,7 @@ var _ = {
     return _.SendMsg(`SaleFeature.SetUserSharingPermissions#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.SetUserSharingPermissions = _;
@@ -7454,6 +7536,7 @@ var _ = {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetUserYearAchievements = _;
@@ -7462,6 +7545,7 @@ var _ = {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetUserYearScreenshots = _;
@@ -7504,6 +7588,7 @@ var _ = {
         bConstMethod: !0,
         ePrivilege: 1,
         eWebAPIKeyRequirement: 2,
+        rgBrowserAPISites: [`store`],
       },
     );
   }
@@ -7517,6 +7602,7 @@ var _ = {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
       },
     );
   }

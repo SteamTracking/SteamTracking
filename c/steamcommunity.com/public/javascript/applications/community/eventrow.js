@@ -21,9 +21,14 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~01cfc309bf.js";
 import { _ } from "./chunk~cc40f6af5e.js";
 import {
+  _,
+  _,
+  _,
+  _,
   _,
   _,
   _,
@@ -588,6 +593,17 @@ import {
   _,
   _,
   _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
 } from "./main.js";
 import {
   _,
@@ -869,6 +885,7 @@ function _({ fnOnSetDirty: _, section: _, property: _, color: _ }) {
     });
   };
 }
+var _ = _(_(), 1);
 function _(_) {
   let {
       _: _,
@@ -1707,6 +1724,8 @@ function _(_, _, _, _) {
         return _ ? _(`#Sale_PersonalizedCarousel_Section_title`, _) : null;
       case `creator_list`:
         return _();
+      case `discount_reason`:
+        return _(_) ?? null;
     }
   else if (_.section_type === `tabs`) return ``;
   else if (_.section_type === `curator`) {
@@ -1853,6 +1872,7 @@ var _ = _((_) => {
       subtitle: _,
       bShowSeeMoreHint: _,
       bUseGamepadLinkHint: _,
+      eGamepadLinkHintButton: _,
       onLinkResolved: _,
       personalizedCarousels: _,
       promotedSale: _,
@@ -1873,10 +1893,17 @@ var _ = _((_) => {
   let _ = _ || _(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation, !1, _, _);
   if (!_) return null;
   let _ = _ || _(_, _, _, _),
-    _ = (0, _.jsx)(`div`, {
+    _ = (0, _.jsxs)(`div`, {
       className: _(_, `SaleSectionHeader`),
       style: _(_, _, _),
-      children: _,
+      children: [
+        _.test_show_on_valve_ip_only &&
+          (0, _.jsx)(`div`, {
+            className: `JrlXbYAw30w-`,
+            children: `(VO)\xA0`,
+          }),
+        _,
+      ],
     }),
     _ = (0, _.jsx)(`div`, {
       className: _(_, _, `SaleSectionSubtitle`),
@@ -1896,6 +1923,7 @@ var _ = _((_) => {
           ? (0, _.jsx)(_, {
               label: _,
               shown: !!_,
+              button: _,
             })
           : _
             ? (0, _.jsx)(`div`, {
@@ -2241,21 +2269,6 @@ function _(_, _, _, _ = new Set()) {
     _(_) && (!_ || _.BIncludeLinkedCapsule(_)) && _.add(_._);
   }
   return _;
-}
-function _(_, _) {
-  let _ = _.GetSaleSections().filter(
-    (_) => _(_.section_type) && _(_) == `personalized_carousel`,
-  );
-  if (_.length == 0)
-    return {
-      nNumSections: 0,
-      nSectionIndex: -1,
-    };
-  let _ = _.findIndex((_) => _.unique_id == _.unique_id);
-  return {
-    nNumSections: _.length,
-    nSectionIndex: _,
-  };
 }
 var _ = [
     {
@@ -2758,6 +2771,12 @@ var _ = [
     "vr only": `#Sale_Tabs_TagFilter_Feature_VROnly`,
     free: `#Sale_Tabs_TagFilter_Feature_Free`,
     discounted: `#Sale_Tabs_TagFilter_Feature_Discounted`,
+    "xbox controller": `#ControllerSupportLabelTitle`,
+    "full controller": `#Store_ControllerFilter_Xbox`,
+    "ps4 controller": `#Store_ControllerFilter_PS4`,
+    "ps5 controller": `#Store_ControllerFilter_PS5`,
+    "remote play together": `#Sale_Tabs_TagFilter_Feature_RemotePlayTogether`,
+    "steam deck verified": `#Sale_Tabs_TagFilter_Feature_SteamDeckVerified`,
   },
   _ = [
     {
@@ -2880,11 +2899,686 @@ function _(_, _, _) {
       rgSubexpressions: [_(_, _), _(_, _)],
     };
 }
+var _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.count || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [2], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            count: {
+              _: 1,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            additional_source_items: {
+              _: 2,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.recommendations || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            recommendations: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.item_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            item_id: {
+              _: 1,
+              _: _,
+            },
+            weight: {
+              _: 2,
+              _: _.readFloat,
+              _: _.writeFloat,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response_Recommendation`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.count || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [2], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            count: {
+              _: 1,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            item_ids: {
+              _: 2,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.recommendations || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            recommendations: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.item_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            item_id: {
+              _: 1,
+              _: _,
+            },
+            weight: {
+              _: 2,
+              _: _.readFloat,
+              _: _.writeFloat,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response_Recommendation`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.start || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            start: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            count: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.sales || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            sales: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            total_count: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.clan_account_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            clan_account_id: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            clan_event_gid: {
+              _: 2,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Response_Sale`;
+    }
+  },
+  _;
+(function (_) {
+  function _(_, _, _) {
+    return _.SendMsg(
+      `StoreRecommendations.GetPackagePurchaseRecommendations#1`,
+      _(_, _, _),
+      _,
+      {
+        bConstMethod: !0,
+        ePrivilege: 1,
+      },
+    );
+  }
+  _.GetPackagePurchaseRecommendations = _;
+  function _(_, _, _) {
+    return _.SendMsg(
+      `StoreRecommendations.GetPackagePurchaseRecommendationsForItems#1`,
+      _(_, _, _),
+      _,
+      {
+        bConstMethod: !0,
+        ePrivilege: 0,
+        eWebAPIKeyRequirement: 1,
+      },
+    );
+  }
+  _.GetPackagePurchaseRecommendationsForItems = _;
+  function _(_, _, _) {
+    return _.SendMsg(`StoreRecommendations.GetLiveSales#1`, _(_, _, _), _, {
+      bConstMethod: !0,
+      ePrivilege: 0,
+      eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
+    });
+  }
+  _.GetLiveSales = _;
+})((_ ||= {}));
+var _ = `saleaction/recommendeddiscounts`;
 function _(_) {
-  return Math.max(1, _.smart_section_min_discount_percent ?? 1);
+  let _ = new URLSearchParams(),
+    { contentHub: _ } = _;
+  return (
+    _ &&
+      (_.set(`hub_type`, _.strHubType),
+      _.strCategory && _.set(`hub_category`, _.strCategory),
+      _.nTagID && _.set(`hub_tagid`, String(_.nTagID))),
+    _.toString()
+  );
+}
+async function _(_, _, _) {
+  let _ = _(_),
+    _ = `${_.STORE_BASE_URL}${_}${_ ? `?${_}` : ``}`,
+    _ = await fetch(_, {
+      credentials: `include`,
+    });
+  if (!_._) throw Error(`${_} answered ${_.status}`);
+  let _ = await _.json();
+  if (_?.success !== 1 || !_.discounts)
+    throw Error(`${_} answered EResult ${_?.success}`);
+  return _.discounts;
+}
+var _ = 6e5;
+function _(_, _, _, _) {
+  return {
+    queryKey: [
+      `RecommendedDiscounts`,
+      _ ?? 0,
+      _.country,
+      _ ? JSON.stringify(_) : null,
+    ],
+    queryFn: () =>
+      _(_, _.country, {
+        contentHub: _,
+      }),
+    staleTime: _,
+  };
+}
+function _(_, _) {
+  return _.rgReasonLists.find((_) => _.eReason === _)?.rgAppIDs ?? [];
+}
+function _(_) {
+  if (_.jsondata.item_source_type !== _.k_EContentHub) return;
+  let _ = _.GetContentHub();
+  if (_?.type)
+    return {
+      strHubType: _.type,
+      strCategory: _.category,
+      nTagID: _.tagid,
+    };
 }
 function _(_, _, _) {
-  if (_) return _[_(_, _).nSectionIndex] ?? null;
+  if (_)
+    return _.smart_section_discount_reason === void 0
+      ? []
+      : _(_, _.smart_section_discount_reason).slice(0, _);
+}
+var _ = {
+  1: `#Sale_default_label_OnYourWishlist`,
+  2: `#Sale_DiscountReason_Section_FirstTimeOnSale`,
+  3: `#Sale_DiscountReason_Section_LargestDiscount`,
+  4: `#Sale_DiscountReason_Section_EndingSoon`,
+  5: `#Sale_DiscountReason_Section_NewlyOnSale`,
+  6: `#Sale_DiscountReason_Section_WellReviewed`,
+  7: `#Sale_DiscountReason_Section_TopSeller`,
+  8: `#Sale_DiscountReason_Section_HotDeal`,
+  9: `#Sale_DiscountReason_Section_DeepDiscount`,
+};
+function _(_) {
+  return _.smart_section_discount_reason === void 0
+    ? void 0
+    : _[_.smart_section_discount_reason];
 }
 function _(_, _) {
   return _ == null || _ == null || !_(_)
@@ -2892,6 +3586,9 @@ function _(_, _) {
     : _.reverse_show_on_tabs
       ? !(!_.show_on_tabs || _.show_on_tabs.includes(_))
       : !!(_.show_on_tabs && _.show_on_tabs.includes(_));
+}
+function _(_) {
+  return _.template_tab_id ?? _.unique_id;
 }
 function _(_) {
   return _(_, `[Feature] Adult Only Sexual Content`);
@@ -3180,7 +3877,8 @@ function _(_) {
     _ = _(_),
     { data: _ } = _(_),
     _ = _(_ ? _?.related_items?.parent_appid : void 0),
-    { data: _ } = _(_);
+    { data: _ } = _(_),
+    _ = _(_);
   if (!_ || !_) return null;
   let _ = !!_ && !!_,
     _ = (0, _.jsx)(_, {
@@ -3201,6 +3899,7 @@ function _(_) {
     navEntryPreferPosition: _.PREFERRED_CHILD,
     navKey: _,
     onFocusWithin: _,
+    ..._,
     children: [
       (0, _.jsxs)(_, {
         appid: _.appid,
@@ -3255,11 +3954,13 @@ function _(_) {
     } = _,
     _ = _(),
     _ = _(),
-    { data: _ } = _(_);
+    { data: _ } = _(_),
+    _ = _(_);
   return _
     ? (0, _.jsx)(_, {
         className: _,
         ..._(_, _, _, _, _),
+        ..._,
         children: (0, _.jsxs)(_, {
           appid: _.appid,
           children: [
@@ -4106,8 +4807,9 @@ function _(_) {
   });
 }
 function _(_) {
-  let { displayStyle: _, requestCompact: _, ..._ } = _,
+  let { displayStyle: _, requestCompact: _, bNarrowScreen: _, ..._ } = _,
     { type: _ } = _,
+    _ = _ ?? _(),
     _ = _();
   if (_ === `purchaseonlydisplay`)
     return (0, _.jsx)(_, {
@@ -4117,7 +4819,7 @@ function _(_) {
     return (0, _.jsx)(_, {
       ..._,
     });
-  if (_ && !_())
+  if (_ && !_)
     return (0, _.jsx)(_, {
       ..._,
     });
@@ -4125,7 +4827,7 @@ function _(_) {
     return (0, _.jsx)(_, {
       ..._,
     });
-  if (_() && (_ == `library` || _ == `animated`))
+  if (_ && (_ == `library` || _ == `animated`))
     return (0, _.jsx)(_, {
       ..._,
       bShowReviewSummary: !0,
@@ -4146,14 +4848,14 @@ function _(_) {
       });
   }
 }
-function _(_, _) {
-  return !(_ === `purchaseonlydisplay` || _ || _());
+function _(_, _, _ = _()) {
+  return !(_ === `purchaseonlydisplay` || _ || _);
 }
 var _ = `h4e3CZE5mfI-`,
   _ = `lJc7R9Bil2I-`,
   _ = `IS179RoYT1Q-`,
   _ = `SZeormjSwYo-`,
-  _ = 240;
+  _ = 258;
 function _(_, _) {
   return _(_, _).every((_) => _ === 1);
 }
@@ -4232,7 +4934,7 @@ function _(_, _) {
     _ = _(_, _.activeTab),
     _ = _.unique_id + `_` + _ + `_` + _.type + `_` + _._;
   if (_ !== `fullrow`) {
-    let _ = _(_ && `FolDBzXMW2I-`);
+    let _ = _(_ && `FolDBzXMW2I-`, _ && _ === `tall` && `E6LHQcm-39c-`);
     return (0, _.jsx)(
       `div`,
       {
@@ -4847,8 +5549,27 @@ var _ = (function (_) {
       (_.MediaRight = `MediaLeft`),
       _
     );
-  })({}),
-  _ = `socialcontent_`;
+  })({});
+async function _(_, _) {
+  let _ = _(_.STORE_BASE_URL, _, _.country_code);
+  return (await (await fetch(_)).json()).rgRecommendedTags || [];
+}
+function _() {
+  let _ = _(),
+    _ = _.accountid;
+  return _(_(_, _));
+}
+function _(_, _) {
+  return {
+    queryKey: _(_),
+    queryFn: async () => (_ ? await _(_, _) : []),
+    staleTime: 6e5,
+  };
+}
+function _(_) {
+  return [`RecommendedTag`, _ ?? 0];
+}
+var _ = `socialcontent_`;
 function _() {
   return {
     platforms: [
@@ -4884,6 +5605,100 @@ function _() {
       },
     ],
   };
+}
+var _ = 1e9,
+  _ = _;
+function _(_, _, _) {
+  let _ = _.tabs,
+    _ = _(_);
+  if (!_ || _ == 0 || !_?.length) return _;
+  let _ = _.findIndex((_) => !_.hide);
+  if (_ < 0) return _;
+  let _ =
+      _.find(
+        (_) => !_.hide && _.unique_id === _.recommended_tag_tab_template_id,
+      ) ?? _[_],
+    _ = new Set(_.flatMap((_) => _(_.store_filter))),
+    _ = _.filter((_) => _.name && !_.has(_.tagid)).slice(0, _),
+    _ = _.recommended_tag_tab_as_menu
+      ? _.length
+        ? [_(_, _.unique_id)]
+        : []
+      : _.map((_) => _(_, _.unique_id, _));
+  return _.length == 0 ? _ : [..._.slice(0, _ + 1), ..._, ..._.slice(_ + 1)];
+}
+function _(_) {
+  let _ = Math.floor(_?.recommended_tag_tab_count ?? 0),
+    _ = _?.recommended_tag_tab_as_menu ? 10 : 5;
+  return Math.max(0, Math.min(_, _));
+}
+function _(_) {
+  return _?.type === _.k_EStoreFilterClauseTypeStoreTag
+    ? [Number(_.value)]
+    : _?.type === _.k_EStoreFilterClauseTypeOr &&
+        _.rgSubexpressions?.length &&
+        _.rgSubexpressions.every(
+          (_) => _.type === _.k_EStoreFilterClauseTypeStoreTag,
+        )
+      ? _.rgSubexpressions.map((_) => Number(_.value))
+      : [];
+}
+function _(_, _, _) {
+  let _ = [];
+  return (
+    (_[0] = _.name),
+    (_[_] = _.name),
+    {
+      unique_id: _ + _.tagid,
+      localized_label: _,
+      default_label: ``,
+      capsules: [],
+      store_filter: {
+        type: _.k_EStoreFilterClauseTypeStoreTag,
+        value: _.tagid,
+      },
+      template_tab_id: _,
+    }
+  );
+}
+function _(_, _) {
+  let _ = _.map((_) => ({
+    nTagID: _.tagid,
+  }));
+  return {
+    unique_id: _,
+    default_label: `#Sale_Tabs_RecommendedTagsMenu`,
+    localized_label: [],
+    capsules: [],
+    store_filter: {
+      type: _.k_EStoreFilterClauseTypeOr,
+      rgSubexpressions: _.map((_) => ({
+        type: _.k_EStoreFilterClauseTypeStoreTag,
+        value: _.tagid,
+      })),
+    },
+    tab_tag_filter: {
+      rgNodes: _,
+    },
+    template_tab_id: _,
+  };
+}
+function _(_, _) {
+  let _ = _(),
+    _ = _(_) > 0 && !!_.logged_in,
+    { data: _ } = _({
+      ..._(_, _.accountid),
+      enabled: _,
+    }),
+    _ = _?.tabs,
+    _ = _?.length,
+    _ = _?.recommended_tag_tab_count,
+    _ = _?.recommended_tag_tab_template_id,
+    _ = _?.recommended_tag_tab_as_menu;
+  return _.useMemo(
+    () => _ && _(_, _ ? _ : void 0, _),
+    [_, _, _, _, _, _, _, _, _],
+  );
 }
 function _(_) {
   let {
@@ -34280,6 +35095,11 @@ function _(_, _) {
               label: `Nearby Recommended Games`,
               tooltip: `Generates ML recommended and wishlistsed games for the previous month and next two months`,
             },
+            {
+              data: `discount_reason`,
+              label: `Discounts by reason`,
+              tooltip: `Shows the apps on sale for one reason (on the wishlist, first time on sale, largest discount, ending soon, newly on sale, well reviewed, top seller), ranked for the signed-in user. Not limited to the games featured on this sale page; on a content hub page, limited to the hub. Pick the reason below.`,
+            },
             _ && {
               data: `contenthub_popular`,
               label: `Popular - Content Hub`,
@@ -34341,6 +35161,10 @@ function _(_) {
               ..._,
             }),
           _ === `creator_list` &&
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          _ === `discount_reason` &&
             (0, _.jsx)(_, {
               ..._,
             }),
@@ -34444,6 +35268,57 @@ function _(_) {
         ((_.smart_section_min_discount_percent =
           _ > 0 ? Math.min(_, 99) : void 0),
           _.SetDirty(_.jsondata_sales));
+      },
+    }),
+  });
+}
+var _ = [
+  {
+    label: `On the user's wishlist`,
+    data: 1,
+  },
+  {
+    label: `First time on sale`,
+    data: 2,
+  },
+  {
+    label: `Largest discount yet`,
+    data: 3,
+  },
+  {
+    label: `Ending soon`,
+    data: 4,
+  },
+  {
+    label: `Newly on sale`,
+    data: 5,
+  },
+  {
+    label: `Well reviewed`,
+    data: 6,
+  },
+  {
+    label: `Top seller`,
+    data: 7,
+  },
+];
+function _(_) {
+  let { editModel: _, saleSection: _ } = _,
+    _ = _(() => _.smart_section_discount_reason);
+  return (0, _.jsx)(_, {
+    clanSteamID: _.GetClanSteamID(),
+    children: (0, _.jsx)(_, {
+      label: `(VO) Discount reason`,
+      tooltip: `Shows the apps on sale StoreRecommendations.GetRecommendedDiscounts lists for this reason, ranked for the signed-in user, or by popularity when signed out. On a content hub page only the hub's apps are picked.`,
+      strDropDownClassName: _,
+      rgOptions: _,
+      selectedOption: _,
+      onChange: (_) => {
+        ((_.smart_section_discount_reason = _.data),
+          _.SetDirty(_.jsondata_sales));
+      },
+      contextMenuPositionOptions: {
+        bDisablePopTop: !0,
       },
     }),
   });
@@ -47064,7 +47939,10 @@ var _ = class _ {
       return this.m_nSaleDay;
     }
     ShouldShowSection(_) {
-      return !this.m_activeTab || _(this.GetActiveTabUniqueID(), _);
+      return !this.m_activeTab || _(this.GetSectionTabUniqueID(), _);
+    }
+    GetSectionTabUniqueID() {
+      return this.m_activeTab ? _(this.m_activeTab) : void 0;
     }
     GetTab() {
       return this.m_activeTab;
@@ -48890,6 +49768,14 @@ var _ = _((_) => {
             section: this.props.saleSection,
             editModel: this.props.editModel,
           }),
+          (0, _.jsx)(_, {
+            requireAdmin: !0,
+            clanSteamID: this.props.editModel.GetClanSteamID(),
+            children: (0, _.jsx)(_, {
+              section: this.props.saleSection,
+              editModel: this.props.editModel,
+            }),
+          }),
           (0, _.jsxs)(`div`, {
             className: _,
             children: [
@@ -49143,6 +50029,52 @@ function _(_) {
         },
         children: _(`#Button_Clear`),
       }),
+    ],
+  });
+}
+function _(_) {
+  let { section: _, editModel: _ } = _,
+    [_, _, _, _] = _(() => [
+      _.recommended_tag_tab_count ?? 0,
+      _.recommended_tag_tab_template_id,
+      _.tabs?.filter((_) => !_.hide) ?? [],
+      _.GetCurEditLanguage(),
+    ]),
+    _ = [];
+  for (let _ = 0; _ <= 5; _++)
+    _.push({
+      label: _ == 0 ? _(`#Sale_Tabs_RecommendedTagTabs_None`) : String(_),
+      data: _,
+    });
+  let _ = _.map((_) => ({
+      label: _(_, _),
+      data: _.unique_id,
+    })),
+    _ = _.some((_) => _.unique_id === _) ? _ : _[0]?.unique_id;
+  return (0, _.jsxs)(`div`, {
+    children: [
+      (0, _.jsx)(_, {
+        label: _(`#Sale_Tabs_RecommendedTagTabs`),
+        tooltip: _(`#Sale_Tabs_RecommendedTagTabs_ttip`),
+        rgOptions: _,
+        selectedOption: _,
+        onChange: (_) => {
+          ((_.recommended_tag_tab_count = _.data || void 0),
+            _.SetDirty(_.jsondata_sales));
+        },
+      }),
+      _ > 0 &&
+        _.length > 0 &&
+        (0, _.jsx)(_, {
+          label: _(`#Sale_Tabs_RecommendedTagTabs_Template`),
+          tooltip: _(`#Sale_Tabs_RecommendedTagTabs_Template_ttip`),
+          rgOptions: _,
+          selectedOption: _,
+          onChange: (_) => {
+            ((_.recommended_tag_tab_template_id = _.data),
+              _.SetDirty(_.jsondata_sales));
+          },
+        }),
     ],
   });
 }
@@ -52552,6 +53484,109 @@ function _(_) {
       ],
     })
   );
+}
+function _(_) {
+  let { sale: _, editModel: _ } = _,
+    [_, _] = (0, _.useState)(() => !!_.creator_clan_account_id),
+    _ = (_) => {
+      _ != _ &&
+        (_
+          ? (delete _.event_gid,
+            delete _.clan_account_id,
+            delete _.featured_app_tagid)
+          : delete _.creator_clan_account_id,
+        _(_),
+        _.SetDirty(_.jsondata_sales));
+    };
+  return (0, _.jsxs)(`div`, {
+    children: [
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsx)(_, {
+            className: _,
+            checked: !_,
+            onChange: (_) => _ && _(!1),
+            label: _(`#Sale_CrossPromoSale_Mode_Sale`),
+          }),
+          (0, _.jsx)(_, {
+            className: _,
+            checked: _,
+            onChange: (_) => _ && _(!0),
+            label: _(`#Sale_CrossPromoSale_Mode_Creator`),
+            tooltip: _(`#Sale_CrossPromoSale_Mode_Creator_ttip`),
+          }),
+        ],
+      }),
+      _
+        ? (0, _.jsx)(_, {
+            ..._,
+          })
+        : (0, _.jsx)(_, {
+            ..._,
+          }),
+    ],
+  });
+}
+function _(_) {
+  let { sale: _, saleSection: _, editModel: _ } = _,
+    _ = _(() => _.creator_clan_account_id);
+  return (0, _.jsxs)(`div`, {
+    children: [
+      (0, _.jsx)(_, {
+        title: _(`#Sale_CrossPromoSale_CreatorID`),
+        tooltip: _(`#Sale_CrossPromoSale_CreatorID_ttip`),
+        value: _ ? String(_) : ``,
+        mustBeNumeric: !0,
+        onChange: (_) => {
+          let _ = Number.parseInt(_.currentTarget.value, 10);
+          (Number.isFinite(_) && _ > 0
+            ? (_.creator_clan_account_id = _)
+            : delete _.creator_clan_account_id,
+            (_.smart_section = !0),
+            (_.smart_section_type ||= `popularpurchased`),
+            _.SetDirty(_.jsondata_sales));
+        },
+      }),
+      !!_ &&
+        (0, _.jsx)(_, {
+          nClanAccountID: _,
+        }),
+      (0, _.jsx)(`div`, {
+        children: `Creator homes are not shown on sale pages yet.`,
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { nClanAccountID: _ } = _,
+    { data: _, isPending: _, isError: _ } = _(_);
+  return _
+    ? (0, _.jsx)(_, {
+        string: _(`#Loading`),
+        position: `center`,
+        size: `small`,
+      })
+    : _ || !_
+      ? (0, _.jsx)(`div`, {
+          children: _(`#Sale_CrossPromoSale_CreatorNotFound`),
+        })
+      : (0, _.jsxs)(`div`, {
+          children: [
+            (0, _.jsx)(`div`, {
+              children: _.name,
+            }),
+            _.avatar_url_full_size &&
+              (0, _.jsx)(`img`, {
+                src: _.avatar_url_full_size,
+                className: `jNbhGePY0Zg-`,
+              }),
+            !_.appids &&
+              (0, _.jsx)(`div`, {
+                children: _(`#Sale_CrossPromoSale_NotCreatorHome`),
+              }),
+          ],
+        });
 }
 function _(_) {
   let { sale: _, saleSection: _, editModel: _ } = _,

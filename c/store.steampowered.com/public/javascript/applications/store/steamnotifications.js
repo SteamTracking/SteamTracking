@@ -910,7 +910,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -921,7 +921,7 @@ var _ = class _ extends _.Message {
       _(_, _),
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -932,7 +932,7 @@ var _ = class _ extends _.Message {
       _(_, _),
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -940,7 +940,7 @@ var _ = class _ extends _.Message {
   function _(_, _) {
     return _.SendNotification(`SteamNotification.HideNotification#1`, _(_, _), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.HideNotification = _;
@@ -955,7 +955,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`SteamNotification.GetPreferences#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetPreferences = _;
@@ -2797,7 +2797,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 2,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -3174,6 +3174,11 @@ var _ = class _ extends _.Message {
             },
             reporter_is_support: {
               _: 27,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            reporter_is_developer: {
+              _: 28,
               _: _.readBool,
               _: _.writeBool,
             },
@@ -6378,6 +6383,11 @@ var _ = class _ extends _.Message {
             },
             actor_is_support: {
               _: 6,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            actor_is_developer: {
+              _: 7,
               _: _.readBool,
               _: _.writeBool,
             },

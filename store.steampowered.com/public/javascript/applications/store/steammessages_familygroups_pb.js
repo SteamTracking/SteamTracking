@@ -3975,7 +3975,7 @@ var d = e(t(), 1),
   function t(e, t, n) {
     return e.SendMsg(`FamilyGroups.CreateFamilyGroup#1`, r(f, t, n), p, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.CreateFamilyGroup = t;
@@ -3983,7 +3983,7 @@ var d = e(t(), 1),
     return e.SendMsg(`FamilyGroups.GetFamilyGroup#1`, r(m, t, n), v, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetFamilyGroup = n;
@@ -3991,7 +3991,7 @@ var d = e(t(), 1),
     return e.SendMsg(`FamilyGroups.GetFamilyGroupForUser#1`, r(b, t, n), S, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetFamilyGroupForUser = i;
@@ -4000,14 +4000,14 @@ var d = e(t(), 1),
       `FamilyGroups.ModifyFamilyGroupDetails#1`,
       r(C, t, n),
       ee,
-      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `community`] },
+      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `community`, `store`] },
     );
   }
   e.ModifyFamilyGroupDetails = a;
   function o(e, t, n) {
     return e.SendMsg(`FamilyGroups.InviteToFamilyGroup#1`, r(w, t, n), te, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.InviteToFamilyGroup = o;
@@ -4016,7 +4016,7 @@ var d = e(t(), 1),
       `FamilyGroups.ConfirmInviteToFamilyGroup#1`,
       r(q, t, n),
       pe,
-      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `community`] },
+      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `community`, `store`] },
     );
   }
   e.ConfirmInviteToFamilyGroup = s;
@@ -4025,35 +4025,35 @@ var d = e(t(), 1),
       `FamilyGroups.ResendInvitationToFamilyGroup#1`,
       r(Y, t, n),
       he,
-      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `community`] },
+      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `community`, `store`] },
     );
   }
   e.ResendInvitationToFamilyGroup = c;
   function l(e, t, n) {
     return e.SendMsg(`FamilyGroups.JoinFamilyGroup#1`, r(T, t, n), ne, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.JoinFamilyGroup = l;
   function u(e, t, n) {
     return e.SendMsg(`FamilyGroups.ConfirmJoinFamilyGroup#1`, r(J, t, n), me, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.ConfirmJoinFamilyGroup = u;
   function d(e, t, n) {
     return e.SendMsg(`FamilyGroups.RemoveFromFamilyGroup#1`, r(E, t, n), D, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.RemoveFromFamilyGroup = d;
   function h(e, t, n) {
     return e.SendMsg(`FamilyGroups.CancelFamilyGroupInvite#1`, r(O, t, n), re, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.CancelFamilyGroupInvite = h;
@@ -4061,35 +4061,35 @@ var d = e(t(), 1),
     return e.SendMsg(`FamilyGroups.GetUsersSharingDevice#1`, r(A, t, n), ae, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetUsersSharingDevice = g;
   function _(e, t, n) {
     return e.SendMsg(`FamilyGroups.DeleteFamilyGroup#1`, r(k, t, n), ie, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.DeleteFamilyGroup = _;
   function y(e, t, n) {
     return e.SendMsg(`FamilyGroups.UndeleteFamilyGroup#1`, r(Z, t, n), be, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.UndeleteFamilyGroup = y;
   function x(e, t, n) {
     return e.SendMsg(`FamilyGroups.GetPlaytimeSummary#1`, r(U, t, n), W, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetPlaytimeSummary = x;
   function M(e, t, n) {
     return e.SendMsg(`FamilyGroups.RequestPurchase#1`, r(oe, t, n), se, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.RequestPurchase = M;
@@ -4097,7 +4097,7 @@ var d = e(t(), 1),
     return e.SendMsg(`FamilyGroups.GetPurchaseRequests#1`, r(j, t, n), ce, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetPurchaseRequests = P;
@@ -4106,7 +4106,7 @@ var d = e(t(), 1),
       `FamilyGroups.RespondToRequestedPurchase#1`,
       r(N, t, n),
       le,
-      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `community`] },
+      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `community`, `store`] },
     );
   }
   e.RespondToRequestedPurchase = F;
@@ -4114,7 +4114,7 @@ var d = e(t(), 1),
     return e.SendMsg(`FamilyGroups.GetChangeLog#1`, r(z, t, n), B, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetChangeLog = I;
@@ -4123,7 +4123,7 @@ var d = e(t(), 1),
       `FamilyGroups.SetFamilyCooldownOverrides#1`,
       r(ue, t, n),
       de,
-      { ePrivilege: 5, rgBrowserAPISites: [`community`] },
+      { ePrivilege: 5, rgBrowserAPISites: [`community`, `store`] },
     );
   }
   e.SetFamilyCooldownOverrides = L;
@@ -4131,7 +4131,7 @@ var d = e(t(), 1),
     return e.SendMsg(`FamilyGroups.GetSharedLibraryApps#1`, r(G, t, n), fe, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetSharedLibraryApps = R;
@@ -4151,7 +4151,7 @@ var d = e(t(), 1),
   function K(e, t, n) {
     return e.SendMsg(`FamilyGroups.ForceAcceptInvite#1`, r(xe, t, n), Se, {
       ePrivilege: 5,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.ForceAcceptInvite = K;
@@ -4159,7 +4159,7 @@ var d = e(t(), 1),
     return e.SendMsg(`FamilyGroups.GetInviteCheckResults#1`, r(Ce, t, n), we, {
       bConstMethod: !0,
       ePrivilege: 5,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetInviteCheckResults = X;

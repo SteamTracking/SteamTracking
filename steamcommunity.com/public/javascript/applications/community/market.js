@@ -30,28 +30,28 @@ import { t as E } from "./chunk~5412a9f1de.js";
 import { t as te } from "./chunk~93195fc4a9.js";
 import { t as ne } from "./chunk~4239b66179.js";
 import {
-  $h as re,
+  Eu as re,
   Ft as ie,
-  Ht as ae,
-  Kf as oe,
+  Hs as ae,
+  Ht as oe,
   Kt as D,
   Lt as O,
-  Mt as se,
-  Nu as ce,
-  Qo as le,
-  Rs as ue,
-  Su as de,
-  ct as fe,
+  Lu as se,
+  Mt as ce,
+  Us as le,
+  Xf as ue,
+  ct as de,
   dt as k,
-  en as pe,
-  im as A,
-  jt as j,
+  en as fe,
+  fm as pe,
+  ig as me,
+  jt as A,
+  lm as j,
+  ns as he,
   qt as M,
   rn as N,
-  sm as me,
-  tt as he,
-  ym as ge,
-  zs as _e,
+  tt as ge,
+  wm as _e,
   zt as ve,
 } from "./main.js";
 var P = e(t(), 1),
@@ -97,7 +97,7 @@ function be(e) {
       popoverWidth: r = `dropdown`,
       ...i
     } = e,
-    a = se({
+    a = ce({
       ...i.state,
       width: r,
       placement: n,
@@ -109,7 +109,7 @@ function be(e) {
     });
   return (0, F.jsx)(R.Provider, {
     value: i,
-    children: (0, F.jsx)(j.Root, { state: a, children: t }),
+    children: (0, F.jsx)(A.Root, { state: a, children: t }),
   });
 }
 function xe(e) {
@@ -138,7 +138,7 @@ function xe(e) {
       (e.key === `Home` || e.key === `End`) && e.stopPropagation();
     },
     u = (0, P.useRef)(null);
-  return (0, F.jsx)(j.Anchor, {
+  return (0, F.jsx)(A.Anchor, {
     children: (0, F.jsx)(s, {
       ...e,
       inputRef: u,
@@ -153,7 +153,7 @@ function xe(e) {
 function Se(e) {
   return P.Children.toArray(e.children).length === 0
     ? null
-    : (0, F.jsx)(j.Positioner, { ...e, returnFocus: !1 });
+    : (0, F.jsx)(A.Positioner, { ...e, returnFocus: !1 });
 }
 function Ce(e) {
   let { value: t, children: n, ...r } = e,
@@ -165,7 +165,7 @@ function Ce(e) {
         onSuggestionSelected: s,
       },
     } = z(`<Autocomplete.TextInput>`);
-  return (0, F.jsx)(j.Item, {
+  return (0, F.jsx)(A.Item, {
     onSelect: (e) => {
       (s && s(t, e), e.defaultPrevented || i(t), o(null), a(!1));
     },
@@ -182,7 +182,7 @@ var L = Object.assign(ye, {
   R = (0, P.createContext)(null);
 function z(e) {
   let t = (0, P.useContext)(R);
-  return (re(t, `${e} must be used within an <Autocomplete>!`), t);
+  return (me(t, `${e} must be used within an <Autocomplete>!`), t);
 }
 var B = (0, P.createContext)(!1);
 function V() {
@@ -419,7 +419,7 @@ function Re(e) {
   };
 }
 async function q(e) {
-  let t = await fetch(`${A.COMMUNITY_BASE_URL}market/appfacets/${e}`);
+  let t = await fetch(`${j.COMMUNITY_BASE_URL}market/appfacets/${e}`);
   if (!t || !t.ok) throw Error(`Failed to load market filters for app ${e}`);
   let n = await t.json();
   if (!n.success || !n.facets)
@@ -451,7 +451,7 @@ function Be(e) {
           i.push({
             appid: a,
             name: t.localized_name,
-            icon: `${A.COMMUNITY_BASE_URL}market/steamitemfiltersicon/${a}`,
+            icon: `${j.COMMUNITY_BASE_URL}market/steamitemfiltersicon/${a}`,
           }));
       }
       return { rgApps: k(i, (e) => e.name), mapAppIDs: r, facets: t };
@@ -464,7 +464,7 @@ var Ve = {
   options: { path: `/market`, maxAge: 2592e6, httpOnly: !1 },
 };
 function He() {
-  return ge(Ve) === `1`;
+  return _e(Ve) === `1`;
 }
 var X = `4`,
   Z = (0, P.createContext)({});
@@ -536,7 +536,7 @@ function Ue(e) {
                         onTextChange: (e) => n({ ...t, strSearch: e }),
                       }),
                       h &&
-                        (0, F.jsx)(fe, {
+                        (0, F.jsx)(de, {
                           marginLeft: `4`,
                           checked: !!t.bSearchDescriptions,
                           onChange: (e) => n({ ...t, bSearchDescriptions: e }),
@@ -649,7 +649,7 @@ function Ge(e) {
             align: `center`,
             justify: `between`,
             children: (0, F.jsx)(`a`, {
-              href: `${A.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
+              href: `${j.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
               className: C,
               children: w.Localize(`#AdvancedSearch_BetaTag`),
             }),
@@ -736,7 +736,7 @@ function qe(e) {
     [g, ee] = (0, P.useState)(!1),
     [_, v] = (0, P.useState)(!1),
     y = g || !_,
-    b = ce(
+    b = se(
       (0, P.useCallback)((e) => {
         let t = e.contentRect.width < 300;
         ee(t);
@@ -1020,9 +1020,9 @@ function tt(e) {
   if (i)
     for (let e = 0; e < 20; e++)
       l.push((0, F.jsx)(ne, { width: `92px`, height: `138px` }, e));
-  let u = me.logged_in,
+  let u = pe.logged_in,
     [d, f] = (0, P.useState)(null),
-    p = ce(f),
+    p = se(f),
     h = s;
   if (!a) {
     let e = d ? Math.floor((d.contentRect.width - 10) / 104) : 0;
@@ -1042,7 +1042,7 @@ function tt(e) {
           : w.Localize(`#AdvancedSearch_AppSelect_PopularGames`),
       }),
       (0, F.jsxs)(`div`, {
-        className: de(m, a && `Ykg3xjFS3hs-`),
+        className: re(m, a && `Ykg3xjFS3hs-`),
         ref: p,
         children: [
           !i &&
@@ -1224,7 +1224,7 @@ function st(e) {
   return (0, F.jsx)(a, { appid: t, facets: r.data, accessories: i.data, ...n });
 }
 function ct(e) {
-  return _(e) && A.EUNIVERSE === 1 ? b : lt;
+  return _(e) && j.EUNIVERSE === 1 ? b : lt;
 }
 function lt(e) {
   let { appid: t, facets: n, ...r } = e,
@@ -1257,7 +1257,7 @@ function ut(e) {
   return {
     queryKey: [`marketaccessories`, e],
     queryFn: async () => {
-      let t = await fetch(`${A.COMMUNITY_BASE_URL}market/appaccessories/${e}`);
+      let t = await fetch(`${j.COMMUNITY_BASE_URL}market/appaccessories/${e}`);
       if (!t || !t.ok)
         throw Error(`Failed to load market filters for app ${e}`);
       let n = await t.json();
@@ -1281,7 +1281,7 @@ function ft(e = !0) {
   return n({
     queryKey: [`marketsuggestedapps`],
     queryFn: async () => {
-      let e = await fetch(`${A.COMMUNITY_BASE_URL}market/suggestedapps`);
+      let e = await fetch(`${j.COMMUNITY_BASE_URL}market/suggestedapps`);
       if (!e || !e.ok) throw Error(`Failed to load suggseted market apps`);
       return await e.json();
     },
@@ -1384,7 +1384,7 @@ function gt(e) {
     );
   }, []),
     r && (ht[t] = !0));
-  let a = pe(n),
+  let a = fe(n),
     o = `var(--spacing-${parseInt(a) + 3})`;
   return r
     ? (0, F.jsx)(`img`, {
@@ -1399,7 +1399,7 @@ function _t() {
     justify: `center`,
     align: `center`,
     marginTop: `6`,
-    children: (0, F.jsx)(ae, { size: `4` }),
+    children: (0, F.jsx)(oe, { size: `4` }),
   });
 }
 function vt(e) {
@@ -1436,7 +1436,7 @@ function bt(e) {
     s = (e, t) => {
       window.location.href = ot(e, t);
     };
-  return (0, F.jsx)(ue, {
+  return (0, F.jsx)(ae, {
     active: t,
     children: (0, F.jsx)(xt, {
       onRequestClose: n,
@@ -1455,10 +1455,10 @@ function bt(e) {
 }
 function xt(e) {
   let { onRequestClose: t, children: n } = e,
-    r = oe();
-  return (0, F.jsx)(_e, {
+    r = ue();
+  return (0, F.jsx)(le, {
     onEscKeypress: t,
-    children: (0, F.jsx)(le, {
+    children: (0, F.jsx)(he, {
       bCenterVertically: !r,
       className: `DialogContentFullSize noOpinionatedGlobalStyles`,
       children: n,
@@ -1466,6 +1466,6 @@ function xt(e) {
   });
 }
 function St(e) {
-  return (0, F.jsx)(he, { ...e });
+  return (0, F.jsx)(ge, { ...e });
 }
 export { St as MarketBaseUIRoot, vt as default, B as n, qe as t };

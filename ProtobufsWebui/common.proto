@@ -7881,7 +7881,7 @@ message StoreItem_Trailers_VideoSource {
 	optional string type = 2;
 }
 
-// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, UserStoreVisit
+// Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreRecommendations, UserStoreVisit
 message StoreItemID {
 	optional uint32 appid = 1;
 	optional uint32 packageid = 2;

@@ -3,12 +3,12 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n, l as r, tt as i } from "./chunk~01cfc309bf.js";
-import { Vt as a } from "./chunk~6b8ddcaac8.js";
+import { Ht as a } from "./chunk~6b8ddcaac8.js";
 import { f as o, s } from "./chunk~961c06e93e.js";
 import { i as c } from "./chunk~2f085f1384.js";
-import { m as l } from "./chunk~cbbb6ae37c.js";
-import { t as u } from "./chunk~92931c6310.js";
-import { t as d } from "./chunk~eefd71512b.js";
+import { t as l } from "./chunk~92931c6310.js";
+import { t as u } from "./chunk~eefd71512b.js";
+import { i as d } from "./chunk~9871ee5432.js";
 import { c as f, s as p } from "./chunk~6cf3fe3e07.js";
 import { c as m } from "./chunk~7b4b9eb713.js";
 import { n as h, t as g } from "./chunk~3ea79bd96d.js";
@@ -75,7 +75,7 @@ function G(e, t) {
   let [n, r] = (0, H.useState)(
       e?.BUsesContentHubForItemSource() ? new Set() : null,
     ),
-    i = u(`useFilteredAppViaContentHub`);
+    i = l(`useFilteredAppViaContentHub`);
   return (
     (0, H.useEffect)(() => {
       e?.BUsesContentHubForItemSource() &&
@@ -309,7 +309,7 @@ function Z(e) {
   let { listDetails: t, rgListItems: n } = e,
     [r, i] = (0, H.useState)(0),
     [a, c] = (0, H.useState)(null),
-    l = u(`CuratorAppListDisplay`);
+    d = l(`CuratorAppListDisplay`);
   if (
     (H.useEffect(() => {
       n &&
@@ -321,7 +321,7 @@ function Z(e) {
             T.Get()
               .QueueMultipleAppRequests(e, o)
               .then(() => {
-                l.token.reason ||
+                d.token.reason ||
                   c(
                     n.filter(
                       (e) => !s(T.Get().GetApp(e.recommended_app.appid)),
@@ -329,13 +329,13 @@ function Z(e) {
                   );
               })
               .catch(() => {
-                l.token.reason || c([]);
+                d.token.reason || c([]);
               });
           }));
-    }, [n, l]),
+    }, [n, d]),
     a == null)
   )
-    return (0, K.jsx)(d, {
+    return (0, K.jsx)(u, {
       string: E(`#Loading`),
       position: `center`,
       size: `medium`,
@@ -435,19 +435,19 @@ var ze = r((e) => {
       }),
       [o],
     ),
-    c = l(s);
+    c = d(s);
   if (!a || !o) return null;
   let {
-      appid: u,
-      link_url: d,
+      appid: l,
+      link_url: u,
       blurb: p,
       time_recommended: m,
       recommendation_state: g,
     } = t.recommended_app,
     _ = a.is_creator_home && !a.is_ogg,
-    y = n.list_jsondata.app_data?.[u],
-    b = d && f(d),
-    x = d && q(d),
+    y = n.list_jsondata.app_data?.[l],
+    b = u && f(u),
+    x = u && q(u),
     S = p != `0` && p,
     C = o.BHasDemo(),
     w = y?.img_url,
@@ -503,7 +503,7 @@ var ze = r((e) => {
               className: `ovSTFS3FlJQ-`,
               children: E(`#SteamCurator_ReviewTextQuoted`, S),
             }),
-          !!d && (0, K.jsx)($, { url: d }),
+          !!u && (0, K.jsx)($, { url: u }),
         ],
       }),
     ],

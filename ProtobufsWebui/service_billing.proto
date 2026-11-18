@@ -8,7 +8,7 @@ message CBilling_GetRecurringSubscriptionsCount_Response {
 }
 
 service Billing {
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetRecurringSubscriptionsCount (.CBilling_GetRecurringSubscriptionsCount_Request) returns (.CBilling_GetRecurringSubscriptionsCount_Response);
 }
 

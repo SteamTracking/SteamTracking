@@ -2330,6 +2330,7 @@ var _ = new URL(
         _ = `#accountpreferences_revoked_devices_revoked_description_auth`;
     }
     let _ = [],
+      _ = [],
       _ = [];
     for (let _ of _.GetActiveDevices()) {
       let _ = _.logged_in && _.last_seen?.time > _ - 900,
@@ -2346,7 +2347,7 @@ var _ = new URL(
           },
           _.token_id,
         );
-      _ ? _.push(_) : _.push(_);
+      _.platform_type == 4 ? _.push(_) : _ ? _.push(_) : _.push(_);
     }
     let _ = _.GetRevokedDevices().map((_) =>
       (0, _.jsx)(
@@ -2396,6 +2397,12 @@ var _ = new URL(
                 (0, _.jsx)(_, {
                   elHeader: _(
                     `#accountpreferences_authorized_devices_recentseen_heading`,
+                  ),
+                  rgDevices: _,
+                }),
+                (0, _.jsx)(_, {
+                  elHeader: _(
+                    `#accountpreferences_authorized_devices_pat_heading`,
                   ),
                   rgDevices: _,
                 }),
@@ -2867,6 +2874,8 @@ function _(_) {
             : _(`#accountpreferences_authorized_devices_type_desktop`);
     case 2:
       return _(`#accountpreferences_authorized_devices_type_browser`);
+    case 4:
+      return _(`#accountpreferences_authorized_devices_type_pat`);
     default:
       return _(`#accountpreferences_authorized_devices_type_unknown`);
   }

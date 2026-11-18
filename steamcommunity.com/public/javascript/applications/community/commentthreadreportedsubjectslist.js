@@ -2,7 +2,7 @@
  ****/
 
 import { ot as e } from "./chunk~01cfc309bf.js";
-import { c as t } from "./chunk~1e67c3e4e4.js";
+import { l as t } from "./chunk~1e67c3e4e4.js";
 import {
   ReportedSubjectList as n,
   useCommentThread as r,

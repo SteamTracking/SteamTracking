@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
-import { $h as r, $t as i, Pt as a, Zt as o, dh as s } from "./main.js";
+import { $t as r, Pt as i, Zt as a, gh as o, ig as s } from "./main.js";
 var c = e(t(), 1),
   l = `_0hkFFtEKd8o-`,
   u = `_7oKujRBWBjo-`,
@@ -42,25 +42,25 @@ function _(e) {
 }
 var v = (0, c.createContext)(null);
 function y(e) {
-  let { children: t, color: n, ...r } = e,
+  let { children: t, color: n, ...i } = e,
     {
-      min: a,
+      min: o,
       max: s,
       onValueChange: d,
       value: f,
       step: p = 1,
       onValueSettled: h,
       ...g
-    } = r,
+    } = i,
     _ = {
-      min: a,
+      min: o,
       max: s,
       step: p,
       value: f,
       onValueChange: d,
       onValueSettled: h,
     },
-    y = i({ ...g, className: l }, o),
+    y = r({ ...g, className: l }, a),
     x = (0, c.useRef)(null),
     C = (0, c.useRef)(null),
     [w] = (0, c.useState)(() => new Set()),
@@ -75,7 +75,7 @@ function y(e) {
         if (x.current) {
           if ((e.target.setPointerCapture(e.pointerId), typeof f != `number`)) {
             let t = x.current.getBoundingClientRect(),
-              n = E(b(x.current, t, e.clientX), [0, t.width], [a, s]);
+              n = E(b(x.current, t, e.clientX), [0, t.width], [o, s]);
             C.current = { activeValueIndex: S(f, n), bMoved: !1 };
           } else C.current = { activeValueIndex: 0, bMoved: !1 };
           O(!0);
@@ -92,8 +92,8 @@ function y(e) {
         if (e.target.hasPointerCapture(e.pointerId) && x.current && C.current) {
           let t = x.current.getBoundingClientRect(),
             n = D({
-              value: E(b(x.current, t, e.clientX), [0, t.width], [a, s]),
-              min: a,
+              value: E(b(x.current, t, e.clientX), [0, t.width], [o, s]),
+              min: o,
               max: s,
               step: p,
             }),
@@ -108,11 +108,11 @@ function y(e) {
       onClick: (e) => {
         if (!x.current || C.current?.bMoved) return;
         let t = x.current.getBoundingClientRect(),
-          n = E(b(x.current, t, e.clientX), [0, t.width], [a, s]),
-          r = D({ value: n, min: a, max: s, step: p }),
+          n = E(b(x.current, t, e.clientX), [0, t.width], [o, s]),
+          r = D({ value: n, min: o, max: s, step: p }),
           i = S(f, n),
-          o = [...f];
-        ((o[i] = r), d(o), h && h(o));
+          a = [...f];
+        ((a[i] = r), d(a), h && h(a));
       },
       children: (0, m.jsx)(`div`, { className: u, children: t }),
     }),
@@ -138,17 +138,17 @@ function S(e, t) {
 }
 function C(e) {
   let { render: t, ...n } = e;
-  return a(t, (0, m.jsx)(`div`, { className: d }), n, void 0);
+  return i(t, (0, m.jsx)(`div`, { className: d }), n, void 0);
 }
 function w(e) {
-  let { start: t, end: n, render: i } = e,
-    o = (0, c.useContext)(v);
-  r(o, `SliderRange must be used within a SliderRoot!`);
-  let { min: s, max: l } = o,
-    u = O(t, s, l),
-    d = 100 - O(n, s, l);
-  return a(
-    i,
+  let { start: t, end: n, render: r } = e,
+    a = (0, c.useContext)(v);
+  s(a, `SliderRange must be used within a SliderRoot!`);
+  let { min: o, max: l } = a,
+    u = O(t, o, l),
+    d = 100 - O(n, o, l);
+  return i(
+    r,
     (0, m.jsx)(`div`, {
       className: f,
       style: { "--pct-left": `${u}%`, "--pct-right": `${d}%` },
@@ -160,11 +160,11 @@ function w(e) {
 function T(e) {
   let { render: t } = e,
     n = (0, c.useContext)(v);
-  r(n, `SliderHandle must be used within a SliderRoot!`);
+  s(n, `SliderHandle must be used within a SliderRoot!`);
   let {
-      min: i,
-      max: o,
-      handles: s,
+      min: r,
+      max: a,
+      handles: o,
       value: l,
       step: u = 1,
       onValueChange: d,
@@ -173,11 +173,11 @@ function T(e) {
     [h, g] = (0, c.useState)(null),
     [_, y] = (0, c.useState)(-1);
   (0, c.useEffect)(
-    () => (h ? (s.add(h), y(s.size - 1), () => s.delete(h)) : () => {}),
-    [h, s],
+    () => (h ? (o.add(h), y(o.size - 1), () => o.delete(h)) : () => {}),
+    [h, o],
   );
   let b = _ > -1,
-    S = { "--handle-pct": `${O(b ? l[_] : i, i, o)}%` },
+    S = { "--handle-pct": `${O(b ? l[_] : r, r, a)}%` },
     C = (e) => {
       switch (e.key) {
         case `ArrowRight`:
@@ -187,10 +187,10 @@ function T(e) {
           let t = `ArrowRight`;
           e.currentTarget.matches(`:dir(rtl)`) && (t = `ArrowLeft`);
           let n = e.key === t || e.key === `ArrowUp`,
-            r = u * (n ? 1 : -1),
-            a = D({ value: l[_] + r, min: i, max: o, step: u }),
+            i = u * (n ? 1 : -1),
+            o = D({ value: l[_] + i, min: r, max: a, step: u }),
             s = [...l];
-          ((s[_] = x(l, _, a)),
+          ((s[_] = x(l, _, o)),
             d(s),
             f && f(s),
             e.preventDefault(),
@@ -200,12 +200,12 @@ function T(e) {
         case `PageUp`:
         case `PageDown`: {
           let t = e.key === `PageUp`,
-            n = Math.round((o - i) / 10) * (t ? 1 : -1),
-            r = D({ value: l[_] + n, min: i, max: o, step: u }),
-            a = [...l];
-          ((a[_] = x(l, _, r)),
-            d(a),
-            f && f(a),
+            n = Math.round((a - r) / 10) * (t ? 1 : -1),
+            i = D({ value: l[_] + n, min: r, max: a, step: u }),
+            o = [...l];
+          ((o[_] = x(l, _, i)),
+            d(o),
+            f && f(o),
             e.preventDefault(),
             e.stopPropagation());
           break;
@@ -217,12 +217,12 @@ function T(e) {
     ref: g,
     role: `slider`,
     "aria-valuenow": l[_],
-    "aria-valuemin": i,
-    "aria-valuemax": o,
+    "aria-valuemin": r,
+    "aria-valuemax": a,
     tabIndex: 0,
     onKeyDown: C,
   };
-  return a(t, (0, m.jsx)(`span`, { className: p, style: S }), w, {
+  return i(t, (0, m.jsx)(`span`, { className: p, style: S }), w, {
     value: l[_],
     bDragActive: n.bDragActive,
   });
@@ -230,12 +230,12 @@ function T(e) {
 function E(e, t, n) {
   if (t[0] === t[1] || n[0] === n[1]) return n[0];
   let r = ((n[1] - n[0]) / (t[1] - t[0])) * (e - t[0]) + n[0];
-  return s(r, n[0], n[1]);
+  return o(r, n[0], n[1]);
 }
 function D(e) {
   let { value: t, min: n, max: r, step: i } = e,
     a = Math.round((t - n) / i) / (1 / i);
-  return s(a + n, n, r);
+  return o(a + n, n, r);
 }
 function O(e, t, n) {
   return ((e - t) / (n - t)) * 100;

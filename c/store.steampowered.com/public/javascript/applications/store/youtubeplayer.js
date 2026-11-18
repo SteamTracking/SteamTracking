@@ -714,23 +714,38 @@ function _(_) {
   let { video: _, autopause: _, className: _ } = _,
     _ = _.useRef(null),
     _ = _.useRef(null),
-    _ = _.useCallback(() => _.current?.pauseVideo(), []),
+    _ = _.useRef(void 0),
+    _ = _.useCallback(() => {
+      typeof _.current?.pauseVideo == `function` && _.current.pauseVideo();
+    }, []),
+    _ = _.useCallback((_) => {
+      _.current = _.isIntersecting;
+    }, []),
     _ = _({
       onLeave: _ ? _ : void 0,
+      onIntersectionChange: _,
     }),
     _ = _(_, _);
   return (
     _.useEffect(() => {
       let _ = () => {
-        _.current && (_.current = new _.Player(_.current, {}));
-      };
+          _.current === !1 && _();
+        },
+        _ = () => {
+          _.current &&
+            (_.current = new _.Player(_.current, {
+              events: {
+                onReady: _,
+              },
+            }));
+        };
       return (
         _ && _(_),
         () => {
           (_(_), (_.current = null));
         }
       );
-    }, [_]),
+    }, [_, _]),
     (0, _.jsx)(`iframe`, {
       ref: _,
       className: _,

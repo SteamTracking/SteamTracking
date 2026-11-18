@@ -3,7 +3,7 @@
 
 import { K as e } from "./chunk~01cfc309bf.js";
 import { n as t } from "./chunk~cc40f6af5e.js";
-import { Em as n, Zp as r, im as i } from "./main.js";
+import { jm as n, lm as r, nm as i } from "./main.js";
 function a(e) {
   return (
     delete e?.private_data?.account_name,
@@ -18,19 +18,19 @@ function o(e) {
   return [`PlayerLinkDetails`, e];
 }
 function s(e, t) {
-  let r =
+  let i =
     typeof t == `number`
-      ? n.InitFromAccountID(t, i.EUNIVERSE).ConvertTo64BitString()
+      ? n.InitFromAccountID(t, r.EUNIVERSE).ConvertTo64BitString()
       : t;
   return {
-    queryKey: o(r),
-    queryFn: async () => (r ? a(await e.load(r)) : null),
-    enabled: !!r,
+    queryKey: o(i),
+    queryFn: async () => (i ? a(await e.load(i)) : null),
+    enabled: !!i,
   };
 }
 function c(n) {
-  let i = r(),
-    a = t(i);
+  let r = i(),
+    a = t(r);
   return e(s(a, n));
 }
 export { c as t };

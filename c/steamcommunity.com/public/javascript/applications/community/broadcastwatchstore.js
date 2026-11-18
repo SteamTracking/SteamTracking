@@ -1190,6 +1190,7 @@ var _ = _(_(), 1),
   function _(_, _) {
     return _.SendNotification(`Video.SetVideoBookmark#1`, _(_, _), {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.SetVideoBookmark = _;

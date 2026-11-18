@@ -674,7 +674,7 @@ var d = e(t(), 1),
     return e.SendMsg(`FriendsList.GetFriendsList#1`, r(C, t, n), w, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetFriendsList = n;
@@ -682,7 +682,7 @@ var d = e(t(), 1),
     return e.SendMsg(`FriendsList.GetFavorites#1`, r(v, t, n), y, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetFavorites = i;

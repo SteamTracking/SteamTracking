@@ -219,6 +219,7 @@ var _ = class {
       case 2:
         this.m_recordingState = null;
     }
+    (_ === 1 || _ === 2) && this.LoadAppsWithBackgroundVideo();
     let _ = this.m_mapTimelineLoaders.get(_);
     return (_ && _.loader.RecordingSessionChanged(_), 1);
   }

@@ -12,12 +12,12 @@ import {
   w as s,
 } from "./chunk~01cfc309bf.js";
 import {
-  Lh as c,
-  Rh as l,
-  dd as u,
-  hm as d,
-  kf as f,
-  um as p,
+  Hh as c,
+  Nf as l,
+  Uh as u,
+  bm as d,
+  hd as f,
+  hm as p,
 } from "./main.js";
 var m = e(t()),
   h = e(r()),
@@ -54,12 +54,12 @@ var m = e(t()),
       );
     }
   };
-(f([a], g.prototype, `giveaway_id`, void 0),
-  f([a], g.prototype, `seconds_until_drawing`, void 0),
-  f([a], g.prototype, `rtime_start`, void 0),
-  f([a], g.prototype, `rtime_end`, void 0),
-  f([a], g.prototype, `closed`, void 0),
-  f([a], g.prototype, `winner_count`, void 0));
+(l([a], g.prototype, `giveaway_id`, void 0),
+  l([a], g.prototype, `seconds_until_drawing`, void 0),
+  l([a], g.prototype, `rtime_start`, void 0),
+  l([a], g.prototype, `rtime_end`, void 0),
+  l([a], g.prototype, `closed`, void 0),
+  l([a], g.prototype, `winner_count`, void 0));
 var _ = class e {
   constructor() {
     i(this);
@@ -131,8 +131,8 @@ var _ = class e {
     }
   }
 };
-(f([a], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
-  f([o], _.prototype, `CopyToGiveaway`, null));
+(l([a], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
+  l([o], _.prototype, `CopyToGiveaway`, null));
 var v = class e {
   m_intervalID;
   m_intervalCountDownID;
@@ -165,10 +165,10 @@ var v = class e {
       (this.m_intervalCountDownID = window.setInterval(t, 1e3));
   }
 };
-(f([l], v.prototype, `ClearRefreshInterval`, null),
-  f([l], v.prototype, `ClearCountDown`, null),
-  f([l], v.prototype, `SetupRefreshDataInterval`, null),
-  f([l], v.prototype, `SetupCountDown`, null));
+(l([u], v.prototype, `ClearRefreshInterval`, null),
+  l([u], v.prototype, `ClearCountDown`, null),
+  l([u], v.prototype, `SetupRefreshDataInterval`, null),
+  l([u], v.prototype, `SetupCountDown`, null));
 function y(e, t) {
   let n = _.Get().GetInfoByInstance(e, t.m_myInstanceNumber);
   n &&
@@ -192,7 +192,7 @@ function b(e, t) {
 }
 function x(e) {
   let [t] = (0, h.useState)(new v()),
-    n = u();
+    n = f();
   (0, h.useEffect)(
     () => (
       _.Get()

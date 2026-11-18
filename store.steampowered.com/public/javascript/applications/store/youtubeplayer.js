@@ -699,23 +699,33 @@ function Z(e) {
   let { video: t, autopause: n, className: r } = e,
     i = R.useRef(null),
     a = R.useRef(null),
-    o = R.useCallback(() => i.current?.pauseVideo(), []),
-    s = m({ onLeave: n ? o : void 0 }),
-    c = u(a, s);
+    o = R.useRef(void 0),
+    s = R.useCallback(() => {
+      typeof i.current?.pauseVideo == `function` && i.current.pauseVideo();
+    }, []),
+    c = R.useCallback((e) => {
+      o.current = e.isIntersecting;
+    }, []),
+    l = m({ onLeave: n ? s : void 0, onIntersectionChange: c }),
+    d = u(a, l);
   return (
     R.useEffect(() => {
       let e = () => {
-        a.current && (i.current = new YT.Player(a.current, {}));
-      };
+          o.current === !1 && s();
+        },
+        t = () => {
+          a.current &&
+            (i.current = new YT.Player(a.current, { events: { onReady: e } }));
+        };
       return (
-        n && W(e),
+        n && W(t),
         () => {
-          (K(e), (i.current = null));
+          (K(t), (i.current = null));
         }
       );
-    }, [n]),
+    }, [n, s]),
     (0, z.jsx)(`iframe`, {
-      ref: c,
+      ref: d,
       className: r,
       src: X(e),
       title: t,

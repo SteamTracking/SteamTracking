@@ -4,7 +4,7 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { D as t, Ft as n, at as r, ot as i } from "./chunk~01cfc309bf.js";
 import { t as a } from "./chunk~5412a9f1de.js";
-import { c as o, f as s, s as c, t as l } from "./chunk~1e67c3e4e4.js";
+import { c as o, l as s, n as c, t as l } from "./chunk~1e67c3e4e4.js";
 import { i as u, n as d, r as f, t as p } from "./chunk~0f9e58b0a5.js";
 import {
   $ as m,
@@ -12,7 +12,7 @@ import {
   Lt as g,
   U as _,
   b as v,
-  sm as y,
+  fm as y,
   zt as b,
 } from "./main.js";
 var x = `kz--RFdqETk-`,
@@ -80,13 +80,7 @@ function F(e) {
 }
 var I = e(n(), 1);
 function L(e) {
-  return { subject_type: 3, published_file_id: e };
-}
-function R(e) {
-  return l(L(e));
-}
-function z(e) {
-  let t = o(L(e.publishedFileID)),
+  let t = s(l(e.publishedFileID)),
     [n, r] = (0, I.useState)(!1);
   if (t.isPending) return null;
   if (t.isError)
@@ -116,19 +110,18 @@ function z(e) {
                 onClick: () => r(!0),
                 children: m.Localize(`#ugcsubjectpanel_history`),
               }),
-              (0, D.jsx)(B, { subject: i }),
-              (0, D.jsx)(V, { subject: i }),
-              (0, D.jsx)(H, { subject: i }),
+              (0, D.jsx)(R, { subject: i }),
+              (0, D.jsx)(z, { subject: i }),
             ],
           }),
-          n && (0, D.jsx)(U, { subject: i, onClose: () => r(!1) }),
+          n && (0, D.jsx)(B, { subject: i, onClose: () => r(!1) }),
         ],
       })
     : null;
 }
-function B(e) {
+function R(e) {
   let { subject: t } = e,
-    n = c(t.reported_content_id ? [t.reported_content_id] : []),
+    n = o(t.reported_content_id ? [t.reported_content_id] : []),
     r = !!t.assigned_moderator_steamid && t.assigned_moderator_steamid !== `0`;
   return !t.reported_content_id ||
     !r ||
@@ -142,7 +135,7 @@ function B(e) {
         children: m.Localize(`#ugcsubjectpanel_release`),
       });
 }
-function V(e) {
+function z(e) {
   let { subject: t } = e,
     [n, r] = (0, I.useState)(!1);
   return !t.reported_content_id || !p(t)
@@ -168,23 +161,7 @@ function V(e) {
         ],
       });
 }
-function H(e) {
-  let { subject: t } = e,
-    n = s();
-  return t.reported_content_id &&
-    (t.resolved ?? 0) !== 0 &&
-    ((t.unresolved_report_count ?? 0) > 0 ||
-      (t.unresolved_dispute_count ?? 0) > 0)
-    ? (0, D.jsx)(b, {
-        size: `1`,
-        color: `dull`,
-        loading: n.isPending,
-        onClick: () => n.mutate({ reportedContentID: t.reported_content_id }),
-        children: m.Localize(`#moderation_actions_sustain_short`),
-      })
-    : null;
-}
-function U(e) {
+function B(e) {
   let { subject: t, onClose: n } = e,
     [r, i] = (0, I.useState)(`reports`);
   return (0, D.jsx)(v, {
@@ -215,21 +192,21 @@ function U(e) {
     }),
   });
 }
-function W(e) {
+function V(e) {
   let { publishedFileID: t } = e,
     n = r();
   return (
     (0, I.useEffect)(() => {
       let e = (e) => {
         e.detail?.publishedFileID == t &&
-          n.invalidateQueries({ queryKey: R(t) });
+          n.invalidateQueries({ queryKey: c(t) });
       };
       return (
         window.addEventListener(`ugc-moderation-resolved`, e),
         () => window.removeEventListener(`ugc-moderation-resolved`, e)
       );
     }, [n, t]),
-    (0, D.jsx)(z, { publishedFileID: t })
+    (0, D.jsx)(L, { publishedFileID: t })
   );
 }
-export { W as UGCModerationSubjectPanel };
+export { V as UGCModerationSubjectPanel };

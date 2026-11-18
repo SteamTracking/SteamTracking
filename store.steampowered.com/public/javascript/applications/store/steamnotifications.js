@@ -781,7 +781,7 @@ var T = class e extends w.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -790,7 +790,10 @@ var T = class e extends w.Message {
     return e.SendNotification(
       `SteamNotification.MarkNotificationsRead#1`,
       m(D, t),
-      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `help`, `community`] },
+      {
+        ePrivilege: 1,
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      },
     );
   }
   e.MarkNotificationsRead = n;
@@ -798,7 +801,10 @@ var T = class e extends w.Message {
     return e.SendNotification(
       `SteamNotification.MarkNotificationsViewed#1`,
       m(ie, t),
-      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `help`, `community`] },
+      {
+        ePrivilege: 1,
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      },
     );
   }
   e.MarkNotificationsViewed = r;
@@ -806,7 +812,7 @@ var T = class e extends w.Message {
     return e.SendNotification(
       `SteamNotification.HideNotification#1`,
       m(le, t),
-      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `community`] },
+      { ePrivilege: 1, rgBrowserAPISites: [`partner`, `community`, `store`] },
     );
   }
   e.HideNotification = i;
@@ -821,7 +827,7 @@ var T = class e extends w.Message {
     return e.SendMsg(`SteamNotification.GetPreferences#1`, m(se, t, n), ce, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.GetPreferences = o;
@@ -2258,7 +2264,7 @@ var pe = class e extends w.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 2,
-        rgBrowserAPISites: [`partner`, `help`, `community`],
+        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
       },
     );
   }
@@ -2550,6 +2556,7 @@ var z = class e extends w.Message {
             },
             coordinates: { n: 26, c: U },
             reporter_is_support: { n: 27, br: b.readBool, bw: x.writeBool },
+            reporter_is_developer: { n: 28, br: b.readBool, bw: x.writeBool },
           },
         }),
         e.sm_m
@@ -5344,6 +5351,7 @@ var z = class e extends w.Message {
             action: { n: 4, br: b.readEnum, bw: x.writeEnum },
             additional_json_data: { n: 5, br: b.readString, bw: x.writeString },
             actor_is_support: { n: 6, br: b.readBool, bw: x.writeBool },
+            actor_is_developer: { n: 7, br: b.readBool, bw: x.writeBool },
           },
         }),
         e.sm_m

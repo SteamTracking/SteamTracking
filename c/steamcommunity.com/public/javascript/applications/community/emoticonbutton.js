@@ -1249,23 +1249,38 @@ function _(_) {
   let { video: _, autopause: _, className: _ } = _,
     _ = _.useRef(null),
     _ = _.useRef(null),
-    _ = _.useCallback(() => _.current?.pauseVideo(), []),
+    _ = _.useRef(void 0),
+    _ = _.useCallback(() => {
+      typeof _.current?.pauseVideo == `function` && _.current.pauseVideo();
+    }, []),
+    _ = _.useCallback((_) => {
+      _.current = _.isIntersecting;
+    }, []),
     _ = _({
       onLeave: _ ? _ : void 0,
+      onIntersectionChange: _,
     }),
     _ = _(_, _);
   return (
     _.useEffect(() => {
       let _ = () => {
-        _.current && (_.current = new _.Player(_.current, {}));
-      };
+          _.current === !1 && _();
+        },
+        _ = () => {
+          _.current &&
+            (_.current = new _.Player(_.current, {
+              events: {
+                onReady: _,
+              },
+            }));
+        };
       return (
         _ && _(_),
         () => {
           (_(_), (_.current = null));
         }
       );
-    }, [_]),
+    }, [_, _]),
     (0, _.jsx)(`iframe`, {
       ref: _,
       className: _,
@@ -3606,7 +3621,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Quest.GetCommunityInventory#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetCommunityInventory = _;
@@ -3614,14 +3629,15 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Quest.GetCommunityItemDefinitions#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      eWebAPIKeyRequirement: 4,
+      eWebAPIKeyRequirement: 2,
+      rgBrowserAPISites: [`store`, `community`],
     });
   }
   _.GetCommunityItemDefinitions = _;
   function _(_, _, _) {
     return _.SendMsg(`Quest.ActivateProfileModifierItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.ActivateProfileModifierItem = _;

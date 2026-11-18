@@ -22,105 +22,106 @@ import {
   $t as g,
   An as _,
   Ar as v,
-  Bn as ee,
-  Br as y,
-  Cn as te,
-  Cr as ne,
-  Dn as re,
+  Bn as y,
+  Br as b,
+  Cn as ee,
+  Cr as te,
+  Dn as ne,
+  Do as re,
   Dr as ie,
   En as ae,
-  Eo as oe,
-  Er as se,
-  Fn as ce,
-  Fr as b,
-  Gn as le,
-  Gr as ue,
-  Hn as de,
-  Hr as fe,
-  Ht as pe,
-  In as me,
-  Ir as he,
-  Jn as ge,
-  Jr as _e,
-  Kn as ve,
-  Kr as ye,
-  Ln as be,
-  Lr as xe,
-  Mn as Se,
-  Mr as Ce,
-  Nn as we,
-  Nr as x,
-  On as Te,
-  Or as Ee,
-  Pn as De,
-  Pr as Oe,
-  Qn as ke,
-  Qr as Ae,
-  Qt as je,
-  Rn as Me,
-  Rr as Ne,
-  Sn as Pe,
-  Sr as Fe,
-  Tn as Ie,
-  Tr as Le,
-  Un as Re,
-  Ur as ze,
-  Vn as Be,
-  Vr as Ve,
-  Wn as He,
-  Wr as Ue,
-  Xn as We,
-  Xr as Ge,
-  Yn as Ke,
-  Yr as qe,
-  Zn as Je,
-  Zr as Ye,
-  _i as Xe,
-  _n as Ze,
-  _r as Qe,
-  an as $e,
-  ar as et,
-  bn as tt,
-  br as nt,
-  cn as rt,
-  cr as it,
-  dn as at,
-  dr as ot,
-  en as st,
-  er as ct,
-  fn as lt,
-  fr as ut,
-  gn as dt,
-  gr as ft,
-  hi as pt,
-  hn as mt,
-  hr as ht,
-  in as gt,
-  ir as _t,
-  jn as vt,
-  jr as yt,
-  kn as bt,
-  kr as xt,
-  ln as St,
-  lr as Ct,
-  mn as wt,
-  mr as Tt,
-  nn as Et,
-  nr as Dt,
-  on as Ot,
-  or as kt,
-  pn as At,
-  pr as jt,
-  qn as Mt,
-  qr as S,
-  rn as Nt,
-  rr as Pt,
-  sn as Ft,
-  sr as It,
-  tn as Lt,
-  tr as Rt,
-  un as zt,
-  ur as Bt,
+  Er as x,
+  Fn as oe,
+  Fr as se,
+  Gn as ce,
+  Gr as le,
+  Hn as ue,
+  Hr as de,
+  In as fe,
+  Ir as S,
+  Jn as pe,
+  Jr as me,
+  Kn as he,
+  Kr as ge,
+  Ln as _e,
+  Lr as ve,
+  Mn as ye,
+  Mr as be,
+  Nn as xe,
+  Nr as Se,
+  On as Ce,
+  Or as we,
+  Pn as Te,
+  Pr as C,
+  Qn as Ee,
+  Qr as De,
+  Rn as Oe,
+  Rr as ke,
+  Sn as Ae,
+  Sr as je,
+  Tn as Me,
+  Tr as Ne,
+  Un as Pe,
+  Ur as Fe,
+  Ut as Ie,
+  Vn as Le,
+  Vr as Re,
+  Wn as ze,
+  Wr as Be,
+  Xn as Ve,
+  Xr as He,
+  Yn as Ue,
+  Yr as We,
+  Zn as Ge,
+  Zr as Ke,
+  _n as qe,
+  _r as Je,
+  an as Ye,
+  ar as Xe,
+  bn as Ze,
+  bo as Qe,
+  br as $e,
+  cn as et,
+  cr as tt,
+  dn as nt,
+  dr as rt,
+  ei as it,
+  en as at,
+  er as ot,
+  fn as st,
+  fr as ct,
+  gi as lt,
+  gn as ut,
+  gr as dt,
+  hn as ft,
+  hr as pt,
+  in as mt,
+  ir as ht,
+  jn as gt,
+  jr as _t,
+  kn as vt,
+  kr as yt,
+  ln as bt,
+  lr as xt,
+  mn as St,
+  mr as Ct,
+  nn as wt,
+  nr as Tt,
+  on as Et,
+  or as Dt,
+  pn as Ot,
+  pr as kt,
+  qn as At,
+  qr as jt,
+  rn as Mt,
+  rr as Nt,
+  sn as Pt,
+  sr as Ft,
+  tn as It,
+  tr as Lt,
+  un as Rt,
+  ur as zt,
+  vi as Bt,
   vn as Vt,
   vr as Ht,
   wn as Ut,
@@ -128,460 +129,459 @@ import {
   xn as Gt,
   xr as Kt,
   yn as qt,
-  yo as Jt,
-  yr as Yt,
-  zn as Xt,
-  zr as Zt,
+  yr as Jt,
+  zn as Yt,
+  zr as Xt,
 } from "./chunk~6b8ddcaac8.js";
-import { t as Qt } from "./chunk~4c13037b22.js";
-import { a as $t, i as en } from "./chunk~5adf866415.js";
-import { t as tn } from "./chunk~684e72ad45.js";
+import { t as Zt } from "./chunk~4c13037b22.js";
+import { a as Qt, i as $t } from "./chunk~5adf866415.js";
+import { t as en } from "./chunk~684e72ad45.js";
 import "./chunk~8681f5c764.js";
-import { t as nn } from "./chunk~eefd71512b.js";
-import { t as rn } from "./chunk~91ae5e1167.js";
-import { M as an } from "./chunk~2f8c67b4de.js";
-import { n as on } from "./chunk~710e3cfd2f.js";
-import { t as sn } from "./chunk~a8b8151a67.js";
-import { n as cn } from "./chunk~5e5f1b9ccf.js";
+import { t as tn } from "./chunk~eefd71512b.js";
+import { t as nn } from "./chunk~91ae5e1167.js";
+import { M as rn } from "./chunk~2f8c67b4de.js";
+import { n as an } from "./chunk~710e3cfd2f.js";
+import { t as on } from "./chunk~a8b8151a67.js";
+import { n as sn } from "./chunk~5e5f1b9ccf.js";
 import {
-  $_ as ln,
-  $d as un,
-  $f as dn,
-  $g as fn,
-  $h as pn,
-  $i as mn,
-  $m as hn,
-  $p as gn,
-  $u as _n,
-  A_ as vn,
-  Ad as yn,
-  Af as bn,
-  Ag as xn,
-  Ah as Sn,
-  Am as Cn,
-  Ap as wn,
-  Av as Tn,
-  B_ as En,
-  Ba as Dn,
-  Bd as On,
-  Bf as kn,
-  Bg as An,
-  Bh as jn,
-  Bm as Mn,
-  Bp as Nn,
-  C_ as Pn,
-  Cf as Fn,
-  Cg as In,
-  Ch as Ln,
-  Cm as Rn,
-  Cp as zn,
-  D_ as Bn,
-  Db as C,
-  Dc as Vn,
-  Dd as Hn,
-  Df as Un,
-  Dg as Wn,
-  Dh as Gn,
-  Dm as Kn,
-  Dp as qn,
-  E_ as Jn,
-  Eb as Yn,
-  Ef as Xn,
-  Eg as Zn,
-  Eh as Qn,
-  Em as $n,
-  Ep as er,
-  F_ as tr,
-  Fd as nr,
-  Ff as rr,
-  Fg as ir,
-  Fh as ar,
-  Fm as or,
-  Fn as sr,
-  Fp as cr,
-  G_ as lr,
-  Gd as ur,
-  Gf as dr,
-  Gg as fr,
-  Gh as pr,
-  Gm as mr,
-  Gp as hr,
-  H_ as gr,
-  Hd as _r,
-  Hf as vr,
-  Hg as yr,
-  Hh as br,
-  Hm as xr,
-  Hp as Sr,
-  Hr as Cr,
-  I_ as wr,
-  Id as Tr,
-  Ig as Er,
-  Ih as Dr,
-  Im as Or,
-  Ip as kr,
-  J_ as Ar,
-  Jd as jr,
-  Jf as Mr,
-  Jg as Nr,
-  Jh as Pr,
-  Jm as Fr,
-  Jp as Ir,
-  Ju as Lr,
-  K_ as Rr,
-  Kd as zr,
-  Kf as Br,
-  Kg as Vr,
-  Kh as Hr,
-  Ki as Ur,
-  Km as Wr,
-  Kp as Gr,
-  L_ as Kr,
-  Ld as qr,
-  Lf as Jr,
-  Lg as Yr,
-  Lh as Xr,
-  Li as Zr,
-  Lm as Qr,
-  Lp as $r,
-  M_ as ei,
-  Md as ti,
-  Mf as ni,
-  Mg as ri,
-  Mh as ii,
-  Mm as ai,
-  Mp as oi,
-  N_ as si,
-  Nd as ci,
-  Nf as li,
-  Ng as ui,
-  Nh as di,
-  Nm as fi,
-  Np as pi,
-  O_ as mi,
-  Ob as hi,
-  Od as gi,
-  Of as _i,
-  Og as vi,
-  Om as yi,
-  Op as bi,
-  P_ as xi,
-  Pd as Si,
-  Pf as Ci,
-  Pg as wi,
-  Ph as Ti,
-  Pm as Ei,
-  Pp as Di,
-  Pv as Oi,
-  Q_ as ki,
-  Qd as Ai,
-  Qf as ji,
-  Qg as Mi,
-  Qh as Ni,
-  Qm as Pi,
-  Qp as Fi,
-  Qu as Ii,
-  Qx as Li,
-  R_ as Ri,
-  Rd as zi,
-  Rf as Bi,
-  Rg as Vi,
-  Rh as Hi,
-  Rm as Ui,
-  Rp as Wi,
-  S_ as Gi,
-  Sf as Ki,
-  Sg as qi,
-  Sh as Ji,
-  Sm as Yi,
-  Sp as Xi,
-  Sv as Zi,
-  T_ as Qi,
-  Tc as $i,
-  Tf as ea,
-  Tg as ta,
-  Th as na,
-  Tm as ra,
-  Tp as ia,
-  U_ as aa,
-  Ub as oa,
-  Ud as sa,
-  Uf as ca,
-  Ug as la,
-  Uh as ua,
-  Up as da,
-  Us as fa,
-  Uv as pa,
-  V_ as ma,
-  Vd as ha,
-  Vf as ga,
-  Vg as _a,
-  Vh as va,
-  Vi as ya,
-  Vm as ba,
-  Vp as xa,
-  Vr as Sa,
-  Vu as Ca,
-  Vy as wa,
-  W_ as Ta,
-  Wb as Ea,
-  Wd as Da,
-  Wf as Oa,
-  Wg as ka,
-  Wh as Aa,
-  Wm as ja,
-  Wp as Ma,
-  Wr as Na,
-  X_ as Pa,
-  Xb as w,
-  Xc as T,
-  Xd as Fa,
-  Xf as Ia,
-  Xg as La,
-  Xh as Ra,
-  Xi as za,
-  Xm as Ba,
-  Xp as Va,
-  Y_ as Ha,
-  Yd as Ua,
-  Yf as Wa,
-  Yg as Ga,
-  Yh as Ka,
-  Ym as qa,
-  Yn as Ja,
-  Yp as Ya,
-  Yu as Xa,
-  Z_ as Za,
-  Zd as Qa,
-  Zf as $a,
-  Zg as eo,
-  Zh as to,
-  Zi as E,
-  Zm as no,
-  Zp as ro,
-  __ as io,
-  _d as ao,
-  _f as oo,
-  _g as so,
-  _h as co,
-  _l as lo,
-  _m as uo,
-  _p as fo,
-  aS as D,
-  a_ as po,
-  af as mo,
-  ag as ho,
-  ah as go,
-  am as _o,
-  ap as vo,
-  b_ as yo,
-  bf as bo,
-  bg as xo,
-  bh as So,
-  bm as Co,
-  bp as wo,
-  bt as To,
-  bx as Eo,
-  c_ as Do,
-  cf as Oo,
-  cg as ko,
-  ch as Ao,
-  cm as jo,
-  cp as Mo,
-  d_ as No,
-  df as Po,
-  dg as Fo,
-  dh as Io,
-  dm as Lo,
-  dp as Ro,
-  ds as zo,
-  eS as O,
-  e_ as Bo,
-  ef as Vo,
-  eg as Ho,
-  eh as Uo,
-  em as Wo,
-  ep as Go,
-  ev as Ko,
-  ex as qo,
-  f_ as Jo,
-  ff as Yo,
-  fg as Xo,
-  fh as Zo,
-  fm as Qo,
-  fp as $o,
-  g_ as es,
-  gf as ts,
-  gg as ns,
-  gh as rs,
-  gm as is,
-  gp as as,
-  gv as os,
-  h_ as ss,
-  hf as cs,
-  hg as ls,
-  hh as us,
-  hm as ds,
-  hp as fs,
-  ht as ps,
-  iS as k,
-  i_ as ms,
-  if as hs,
-  ig as gs,
-  ih as _s,
-  il as vs,
-  im as ys,
-  ip as bs,
-  iv as xs,
-  j_ as Ss,
-  jc as A,
-  jd as Cs,
-  jf as ws,
-  jh as Ts,
-  jm as Es,
-  jp as Ds,
-  jx as Os,
-  k_ as ks,
-  kd as As,
-  kf as js,
-  kg as Ms,
-  kh as Ns,
-  km as Ps,
-  kn as Fs,
-  ko as Is,
-  kp as Ls,
-  l_ as Rs,
-  lc as zs,
-  lf as Bs,
-  lg as Vs,
-  lh as Hs,
-  lm as Us,
-  lp as Ws,
-  ly as Gs,
-  mS as Ks,
-  m_ as qs,
-  mf as Js,
-  mg as Ys,
-  mh as Xs,
-  mm as Zs,
-  mp as Qs,
-  mv as $s,
-  nS as j,
-  n_ as ec,
-  nf as tc,
-  ng as nc,
-  nh as rc,
-  nm as ic,
-  np as ac,
-  ns as oc,
-  nv as sc,
-  oS as M,
-  o_ as cc,
-  og as lc,
-  oh as uc,
-  ol as dc,
-  om as fc,
-  op as pc,
-  p_ as mc,
-  pf as hc,
-  pg as gc,
-  ph as _c,
-  pm as vc,
-  pp as yc,
-  pt as bc,
-  q_ as xc,
-  qb as N,
-  qd as Sc,
-  qf as Cc,
-  qg as wc,
-  qh as Tc,
-  qm as Ec,
-  qp as Dc,
-  rS as P,
-  r_ as Oc,
-  rf as kc,
-  rg as Ac,
-  rh as jc,
-  rm as Mc,
-  rp as Nc,
-  rv as Pc,
-  rx as Fc,
-  sS as F,
-  s_ as Ic,
-  sf as Lc,
-  sg as Rc,
-  sh as zc,
-  sm as Bc,
-  so as Vc,
-  sp as Hc,
-  tS as I,
-  t_ as Uc,
-  tf as Wc,
-  tg as Gc,
-  th as Kc,
-  tm as qc,
-  tp as Jc,
-  tv as Yc,
-  u_ as Xc,
-  uf as Zc,
-  ug as Qc,
-  uh as $c,
-  um as el,
-  up as tl,
-  ut as nl,
-  uv as rl,
-  v_ as il,
-  vc as al,
-  vd as ol,
-  vg as sl,
-  vh as cl,
-  vl as ll,
-  vp as ul,
-  vt as dl,
-  w_ as fl,
-  wc as pl,
-  wd as ml,
-  wf as hl,
-  wg as gl,
-  wh as _l,
-  wm as vl,
-  wp as yl,
-  x_ as bl,
-  xc as xl,
-  xf as Sl,
-  xg as Cl,
-  xh as wl,
-  xm as Tl,
-  xp as El,
-  yS as Dl,
-  y_ as Ol,
-  yc as kl,
-  yf as Al,
-  yg as jl,
-  yh as Ml,
-  ym as Nl,
-  yp as Pl,
-  yr as Fl,
-  z_ as Il,
-  zd as Ll,
-  zf as Rl,
-  zg as zl,
-  zh as Bl,
-  zm as Vl,
-  zp as Hl,
-  zr as Ul,
+  $_ as cn,
+  $d as ln,
+  $f as un,
+  $g as dn,
+  $h as fn,
+  $i as pn,
+  $m as mn,
+  $p as hn,
+  $u as gn,
+  A_ as _n,
+  Ad as vn,
+  Af as yn,
+  Ag as bn,
+  Ah as xn,
+  Am as Sn,
+  Ap as Cn,
+  Av as wn,
+  B_ as Tn,
+  Ba as En,
+  Bd as Dn,
+  Bf as On,
+  Bg as kn,
+  Bh as An,
+  Bm as jn,
+  Bp as Mn,
+  C_ as Nn,
+  Cf as Pn,
+  Cg as Fn,
+  Ch as In,
+  Cm as Ln,
+  Cp as Rn,
+  D_ as zn,
+  Db as w,
+  Dc as Bn,
+  Dd as Vn,
+  Df as Hn,
+  Dg as Un,
+  Dh as Wn,
+  Dm as Gn,
+  Dp as Kn,
+  E_ as qn,
+  Eb as Jn,
+  Ef as Yn,
+  Eg as Xn,
+  Eh as Zn,
+  Em as Qn,
+  Ep as $n,
+  F_ as er,
+  Fd as tr,
+  Ff as nr,
+  Fg as rr,
+  Fh as ir,
+  Fm as ar,
+  Fn as or,
+  Fp as sr,
+  G_ as cr,
+  Gd as lr,
+  Gf as ur,
+  Gg as dr,
+  Gh as fr,
+  Gm as pr,
+  Gp as mr,
+  H_ as hr,
+  Hd as gr,
+  Hf as _r,
+  Hg as vr,
+  Hh as yr,
+  Hm as br,
+  Hp as xr,
+  Hr as Sr,
+  I_ as Cr,
+  Id as wr,
+  Ig as Tr,
+  Ih as Er,
+  Im as Dr,
+  Ip as Or,
+  J_ as kr,
+  Jd as Ar,
+  Jf as jr,
+  Jg as Mr,
+  Jh as Nr,
+  Jm as Pr,
+  Jp as Fr,
+  Ju as Ir,
+  K_ as Lr,
+  Kd as Rr,
+  Kf as zr,
+  Kg as Br,
+  Kh as Vr,
+  Ki as Hr,
+  Km as Ur,
+  Kp as Wr,
+  L_ as Gr,
+  Ld as Kr,
+  Lf as qr,
+  Lg as Jr,
+  Lh as Yr,
+  Li as Xr,
+  Lm as Zr,
+  Lp as Qr,
+  M_ as $r,
+  Md as ei,
+  Mf as ti,
+  Mg as ni,
+  Mh as ri,
+  Mm as ii,
+  Mp as ai,
+  N_ as oi,
+  Nd as si,
+  Nf as ci,
+  Ng as li,
+  Nh as ui,
+  Nm as di,
+  Np as fi,
+  O_ as pi,
+  Ob as mi,
+  Od as hi,
+  Of as gi,
+  Og as _i,
+  Om as vi,
+  Op as yi,
+  P_ as bi,
+  Pd as xi,
+  Pf as Si,
+  Pg as Ci,
+  Ph as wi,
+  Pm as Ti,
+  Pp as Ei,
+  Pv as Di,
+  Q_ as Oi,
+  Qd as ki,
+  Qf as Ai,
+  Qg as ji,
+  Qh as Mi,
+  Qm as Ni,
+  Qp as Pi,
+  Qu as Fi,
+  Qx as Ii,
+  R_ as Li,
+  Rd as Ri,
+  Rf as zi,
+  Rg as Bi,
+  Rh as Vi,
+  Rm as Hi,
+  Rp as Ui,
+  S_ as Wi,
+  Sf as Gi,
+  Sg as Ki,
+  Sh as qi,
+  Sm as Ji,
+  Sp as Yi,
+  Sv as Xi,
+  T_ as Zi,
+  Tc as Qi,
+  Tf as $i,
+  Tg as ea,
+  Th as ta,
+  Tm as na,
+  Tp as ra,
+  U_ as ia,
+  Ub as aa,
+  Ud as oa,
+  Uf as sa,
+  Ug as ca,
+  Uh as la,
+  Up as ua,
+  Us as da,
+  Uv as fa,
+  V_ as pa,
+  Vd as ma,
+  Vf as ha,
+  Vg as ga,
+  Vh as _a,
+  Vi as va,
+  Vm as ya,
+  Vp as ba,
+  Vr as xa,
+  Vu as Sa,
+  Vy as Ca,
+  W_ as wa,
+  Wb as Ta,
+  Wd as Ea,
+  Wf as Da,
+  Wg as Oa,
+  Wh as ka,
+  Wm as Aa,
+  Wp as ja,
+  Wr as Ma,
+  X_ as Na,
+  Xb as T,
+  Xc as E,
+  Xd as Pa,
+  Xf as Fa,
+  Xg as Ia,
+  Xh as La,
+  Xi as Ra,
+  Xm as za,
+  Xp as Ba,
+  Y_ as Va,
+  Yd as Ha,
+  Yf as Ua,
+  Yg as Wa,
+  Yh as Ga,
+  Ym as Ka,
+  Yn as qa,
+  Yp as Ja,
+  Yu as Ya,
+  Z_ as Xa,
+  Zd as Za,
+  Zf as Qa,
+  Zg as $a,
+  Zh as eo,
+  Zi as D,
+  Zm as to,
+  Zp as no,
+  __ as ro,
+  _d as io,
+  _f as ao,
+  _g as oo,
+  _h as so,
+  _l as co,
+  _m as lo,
+  _p as uo,
+  aS as O,
+  a_ as fo,
+  af as po,
+  ag as mo,
+  ah as ho,
+  am as go,
+  ap as _o,
+  b_ as vo,
+  bf as yo,
+  bg as bo,
+  bh as xo,
+  bm as So,
+  bp as Co,
+  bt as wo,
+  bx as To,
+  c_ as Eo,
+  cf as Do,
+  cg as Oo,
+  ch as ko,
+  cm as Ao,
+  cp as jo,
+  d_ as Mo,
+  df as No,
+  dg as Po,
+  dh as Fo,
+  dm as Io,
+  dp as Lo,
+  ds as Ro,
+  eS as k,
+  e_ as zo,
+  ef as Bo,
+  eg as Vo,
+  eh as Ho,
+  em as Uo,
+  ep as Wo,
+  ev as Go,
+  ex as Ko,
+  f_ as qo,
+  ff as Jo,
+  fg as Yo,
+  fh as Xo,
+  fm as Zo,
+  fp as Qo,
+  g_ as $o,
+  gf as es,
+  gg as ts,
+  gh as ns,
+  gm as rs,
+  gp as is,
+  gv as as,
+  h_ as os,
+  hf as ss,
+  hg as cs,
+  hh as ls,
+  hm as us,
+  hp as ds,
+  ht as fs,
+  iS as A,
+  i_ as ps,
+  if as ms,
+  ig as hs,
+  ih as gs,
+  il as _s,
+  im as vs,
+  ip as ys,
+  iv as bs,
+  j_ as xs,
+  jc as j,
+  jd as Ss,
+  jf as Cs,
+  jh as ws,
+  jm as Ts,
+  jp as Es,
+  jx as Ds,
+  k_ as Os,
+  kd as ks,
+  kf as As,
+  kg as js,
+  kh as Ms,
+  km as Ns,
+  kn as Ps,
+  ko as Fs,
+  kp as Is,
+  l_ as Ls,
+  lc as Rs,
+  lf as zs,
+  lg as Bs,
+  lh as Vs,
+  lm as Hs,
+  lp as Us,
+  ly as Ws,
+  mS as Gs,
+  m_ as Ks,
+  mf as qs,
+  mg as Js,
+  mh as Ys,
+  mm as Xs,
+  mp as Zs,
+  mv as Qs,
+  nS as M,
+  n_ as $s,
+  nf as ec,
+  ng as tc,
+  nh as nc,
+  nm as rc,
+  np as ic,
+  ns as ac,
+  nv as oc,
+  oS as N,
+  o_ as sc,
+  og as cc,
+  oh as lc,
+  ol as uc,
+  om as dc,
+  op as fc,
+  p_ as pc,
+  pf as mc,
+  pg as hc,
+  ph as gc,
+  pm as _c,
+  pp as vc,
+  pt as yc,
+  q_ as bc,
+  qb as P,
+  qd as xc,
+  qf as Sc,
+  qg as Cc,
+  qh as wc,
+  qm as Tc,
+  qp as Ec,
+  rS as F,
+  r_ as Dc,
+  rf as Oc,
+  rg as kc,
+  rh as Ac,
+  rm as jc,
+  rp as Mc,
+  rv as Nc,
+  rx as Pc,
+  sS as I,
+  s_ as Fc,
+  sf as Ic,
+  sg as Lc,
+  sh as Rc,
+  sm as zc,
+  so as Bc,
+  sp as Vc,
+  tS as L,
+  t_ as Hc,
+  tf as Uc,
+  tg as Wc,
+  th as Gc,
+  tm as Kc,
+  tp as qc,
+  tv as Jc,
+  u_ as Yc,
+  uf as Xc,
+  ug as Zc,
+  uh as Qc,
+  um as $c,
+  up as el,
+  ut as tl,
+  uv as nl,
+  v_ as rl,
+  vc as il,
+  vd as al,
+  vg as ol,
+  vh as sl,
+  vl as cl,
+  vp as ll,
+  vt as ul,
+  w_ as dl,
+  wc as fl,
+  wd as pl,
+  wf as ml,
+  wg as hl,
+  wh as gl,
+  wm as _l,
+  wp as vl,
+  x_ as yl,
+  xc as bl,
+  xf as xl,
+  xg as Sl,
+  xh as Cl,
+  xm as wl,
+  xp as Tl,
+  yS as El,
+  y_ as Dl,
+  yc as Ol,
+  yf as kl,
+  yg as Al,
+  yh as jl,
+  ym as Ml,
+  yp as Nl,
+  yr as Pl,
+  z_ as Fl,
+  zd as Il,
+  zf as Ll,
+  zg as Rl,
+  zh as zl,
+  zm as Bl,
+  zp as Vl,
+  zr as Hl,
 } from "./main.js";
-import { y as Wl } from "./chunk~ec93a260ba.js";
-import { t as Gl } from "./chunk~65da1d3223.js";
-import { t as Kl } from "./chunk~d7992cfd18.js";
-import { i as ql, n as Jl } from "./chunk~4c65b375ad.js";
-import { r as Yl, t as Xl } from "./chunk~f6ebb80c8b.js";
-import { n as L, r as Zl, t as Ql } from "./chunk~c0f9f0eb46.js";
-import { t as $l } from "./chunk~10ec219681.js";
-var R = e(a());
-function eu() {
+import { y as Ul } from "./chunk~ec93a260ba.js";
+import { t as Wl } from "./chunk~65da1d3223.js";
+import { t as Gl } from "./chunk~d7992cfd18.js";
+import { i as Kl, n as ql } from "./chunk~4c65b375ad.js";
+import { r as Jl, t as Yl } from "./chunk~f6ebb80c8b.js";
+import { n as R, r as Xl, t as Zl } from "./chunk~c0f9f0eb46.js";
+import { t as Ql } from "./chunk~10ec219681.js";
+var z = e(a());
+function $l() {
   return (
-    (eu = Object.assign
+    ($l = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -590,10 +590,10 @@ function eu() {
           }
           return e;
         }),
-    eu.apply(null, arguments)
+    $l.apply(null, arguments)
   );
 }
-function tu(e, t) {
+function eu(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -605,24 +605,24 @@ function tu(e, t) {
   }
   return n;
 }
-function nu(e) {
+function tu(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? tu(Object(n), !0).forEach(function (t) {
-          ru(e, t, n[t]);
+      ? eu(Object(n), !0).forEach(function (t) {
+          nu(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : tu(Object(n)).forEach(function (t) {
+        : eu(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function ru(e, t, n) {
+function nu(e, t, n) {
   return (
-    (t = iu(t)) in e
+    (t = ru(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -633,11 +633,11 @@ function ru(e, t, n) {
     e
   );
 }
-function iu(e) {
-  var t = au(e, `string`);
+function ru(e) {
+  var t = iu(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function au(e, t) {
+function iu(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -647,55 +647,55 @@ function au(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-var ou = 32,
-  su = class extends R.PureComponent {
+var au = 32,
+  ou = class extends z.PureComponent {
     renderIcon(e, t) {
       var { inactiveColor: n } = this.props,
-        r = ou / 2,
-        i = ou / 6,
-        a = ou / 3,
+        r = au / 2,
+        i = au / 6,
+        a = au / 3,
         o = e.inactive ? n : e.color,
         s = t ?? e.type;
       if (s === `none`) return null;
       if (s === `plainline`)
-        return R.createElement(`line`, {
+        return z.createElement(`line`, {
           strokeWidth: 4,
           fill: `none`,
           stroke: o,
           strokeDasharray: e.payload.strokeDasharray,
           x1: 0,
           y1: r,
-          x2: ou,
+          x2: au,
           y2: r,
           className: `recharts-legend-icon`,
         });
       if (s === `line`)
-        return R.createElement(`path`, {
+        return z.createElement(`path`, {
           strokeWidth: 4,
           fill: `none`,
           stroke: o,
           d: `M0,${r}h${a}
             A${i},${i},0,1,1,${2 * a},${r}
-            H${ou}M${2 * a},${r}
+            H${au}M${2 * a},${r}
             A${i},${i},0,1,1,${a},${r}`,
           className: `recharts-legend-icon`,
         });
       if (s === `rect`)
-        return R.createElement(`path`, {
+        return z.createElement(`path`, {
           stroke: `none`,
           fill: o,
-          d: `M0,${ou / 8}h${ou}v${(ou * 3) / 4}h${-ou}z`,
+          d: `M0,${au / 8}h${au}v${(au * 3) / 4}h${-au}z`,
           className: `recharts-legend-icon`,
         });
-      if (R.isValidElement(e.legendIcon)) {
-        var c = nu({}, e);
-        return (delete c.legendIcon, R.cloneElement(e.legendIcon, c));
+      if (z.isValidElement(e.legendIcon)) {
+        var c = tu({}, e);
+        return (delete c.legendIcon, z.cloneElement(e.legendIcon, c));
       }
-      return R.createElement(Zt, {
+      return z.createElement(b, {
         fill: o,
         cx: r,
         cy: r,
-        size: ou,
+        size: au,
         sizeType: `diameter`,
         type: s,
       });
@@ -709,7 +709,7 @@ var ou = 32,
           inactiveColor: i,
           iconType: a,
         } = this.props,
-        o = { x: 0, y: 0, width: ou, height: ou },
+        o = { x: 0, y: 0, width: au, height: au },
         s = {
           display: n === `horizontal` ? `inline-block` : `block`,
           marginRight: 10,
@@ -721,7 +721,7 @@ var ou = 32,
         };
       return e.map((e, n) => {
         var l = e.formatter || r,
-          u = h({
+          u = it({
             "recharts-legend-item": !0,
             [`legend-item-${n}`]: !0,
             inactive: e.inactive,
@@ -729,14 +729,14 @@ var ou = 32,
         if (e.type === `none`) return null;
         var d = e.inactive ? i : e.color,
           f = l ? l(e.value, e, n) : e.value;
-        return R.createElement(
+        return z.createElement(
           `li`,
-          eu(
+          $l(
             { className: u, style: s, key: `legend-item-${n}` },
-            Ne(this.props, e, n),
+            Xt(this.props, e, n),
           ),
-          R.createElement(
-            _e,
+          z.createElement(
+            We,
             {
               width: t,
               height: t,
@@ -746,7 +746,7 @@ var ou = 32,
             },
             this.renderIcon(e, a),
           ),
-          R.createElement(
+          z.createElement(
             `span`,
             { className: `recharts-legend-item-text`, style: { color: d } },
             f,
@@ -762,29 +762,29 @@ var ou = 32,
         margin: 0,
         textAlign: t === `horizontal` ? n : `left`,
       };
-      return R.createElement(
+      return z.createElement(
         `ul`,
         { className: `recharts-default-legend`, style: r },
         this.renderItems(),
       );
     }
   };
-(ru(su, `displayName`, `Legend`),
-  ru(su, `defaultProps`, {
+(nu(ou, `displayName`, `Legend`),
+  nu(ou, `defaultProps`, {
     align: `center`,
     iconSize: 14,
     inactiveColor: `#ccc`,
     layout: `horizontal`,
     verticalAlign: `middle`,
   }));
-function cu() {
-  return b(Ce);
+function su() {
+  return S(Se);
 }
-var lu = e(r()),
-  uu = [`contextPayload`];
-function du() {
+var cu = e(r()),
+  lu = [`contextPayload`];
+function uu() {
   return (
-    (du = Object.assign
+    (uu = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -793,10 +793,10 @@ function du() {
           }
           return e;
         }),
-    du.apply(null, arguments)
+    uu.apply(null, arguments)
   );
 }
-function fu(e, t) {
+function du(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -808,24 +808,24 @@ function fu(e, t) {
   }
   return n;
 }
-function pu(e) {
+function fu(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? fu(Object(n), !0).forEach(function (t) {
-          mu(e, t, n[t]);
+      ? du(Object(n), !0).forEach(function (t) {
+          pu(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : fu(Object(n)).forEach(function (t) {
+        : du(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function mu(e, t, n) {
+function pu(e, t, n) {
   return (
-    (t = hu(t)) in e
+    (t = mu(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -836,11 +836,11 @@ function mu(e, t, n) {
     e
   );
 }
-function hu(e) {
-  var t = gu(e, `string`);
+function mu(e) {
+  var t = hu(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function gu(e, t) {
+function hu(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -850,11 +850,11 @@ function gu(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-function _u(e, t) {
+function gu(e, t) {
   if (e == null) return {};
   var n,
     r,
-    i = vu(e, t);
+    i = _u(e, t);
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
     for (r = 0; r < a.length; r++)
@@ -865,7 +865,7 @@ function _u(e, t) {
   }
   return i;
 }
-function vu(e, t) {
+function _u(e, t) {
   if (e == null) return {};
   var n = {};
   for (var r in e)
@@ -875,21 +875,21 @@ function vu(e, t) {
     }
   return n;
 }
-function yu(e) {
+function vu(e) {
   return e.value;
 }
-function bu(e) {
+function yu(e) {
   var { contextPayload: t } = e,
-    n = _u(e, uu),
-    r = he(t, e.payloadUniqBy, yu),
-    i = pu(pu({}, n), {}, { payload: r });
-  return R.isValidElement(e.content)
-    ? R.cloneElement(e.content, i)
+    n = gu(e, lu),
+    r = ve(t, e.payloadUniqBy, vu),
+    i = fu(fu({}, n), {}, { payload: r });
+  return z.isValidElement(e.content)
+    ? z.cloneElement(e.content, i)
     : typeof e.content == `function`
-      ? R.createElement(e.content, i)
-      : R.createElement(su, i);
+      ? z.createElement(e.content, i)
+      : z.createElement(ou, i);
 }
-function xu(e, t, n, r, i, a) {
+function bu(e, t, n, r, i, a) {
   var { layout: o, align: s, verticalAlign: c } = t,
     l,
     u;
@@ -912,26 +912,26 @@ function xu(e, t, n, r, i, a) {
           : c === `bottom`
             ? { bottom: (n && n.bottom) || 0 }
             : { top: (n && n.top) || 0 }),
-    pu(pu({}, l), u)
+    fu(fu({}, l), u)
   );
 }
-function Su(e) {
-  var t = Oe();
+function xu(e) {
+  var t = se();
   return (
-    (0, R.useEffect)(() => {
-      t(jt(e));
+    (0, z.useEffect)(() => {
+      t(Ct(e));
     }, [t, e]),
     null
   );
 }
-function Cu(e) {
-  var t = Oe();
+function Su(e) {
+  var t = se();
   return (
-    (0, R.useEffect)(
+    (0, z.useEffect)(
       () => (
-        t(Tt(e)),
+        t(pt(e)),
         () => {
-          t(Tt({ width: 0, height: 0 }));
+          t(pt({ width: 0, height: 0 }));
         }
       ),
       [t, e],
@@ -939,45 +939,45 @@ function Cu(e) {
     null
   );
 }
-function wu(e) {
-  var t = cu(),
-    n = ye(),
-    r = Ht(),
+function Cu(e) {
+  var t = su(),
+    n = jt(),
+    r = Jt(),
     { width: i, height: a, wrapperStyle: o, portal: s } = e,
-    [c, l] = yt([t]),
-    u = Qe(),
-    d = ft();
+    [c, l] = be([t]),
+    u = Ht(),
+    d = Je();
   if (u == null || d == null) return null;
   var f = u - (r.left || 0) - (r.right || 0),
-    p = Tu.getWidthOrHeight(e.layout, a, i, f),
+    p = wu.getWidthOrHeight(e.layout, a, i, f),
     m = s
       ? o
-      : pu(
-          pu(
+      : fu(
+          fu(
             {
               position: `absolute`,
               width: p?.width || i || `auto`,
               height: p?.height || a || `auto`,
             },
-            xu(o, e, r, u, d, c),
+            bu(o, e, r, u, d, c),
           ),
           o,
         ),
     h = s ?? n;
   if (h == null) return null;
-  var g = R.createElement(
+  var g = z.createElement(
     `div`,
     { className: `recharts-legend-wrapper`, style: m, ref: l },
-    R.createElement(Su, {
+    z.createElement(xu, {
       layout: e.layout,
       align: e.align,
       verticalAlign: e.verticalAlign,
       itemSorter: e.itemSorter,
     }),
-    R.createElement(Cu, { width: c.width, height: c.height }),
-    R.createElement(
-      bu,
-      du({}, e, p, {
+    z.createElement(Su, { width: c.width, height: c.height }),
+    z.createElement(
+      yu,
+      uu({}, e, p, {
         margin: r,
         chartWidth: u,
         chartHeight: d,
@@ -985,32 +985,32 @@ function wu(e) {
       }),
     ),
   );
-  return (0, lu.createPortal)(g, h);
+  return (0, cu.createPortal)(g, h);
 }
-var Tu = class extends R.PureComponent {
+var wu = class extends z.PureComponent {
   static getWidthOrHeight(e, t, n, r) {
-    return e === `vertical` && ze(t)
+    return e === `vertical` && Be(t)
       ? { height: t }
       : e === `horizontal`
         ? { width: n || r }
         : null;
   }
   render() {
-    return R.createElement(wu, this.props);
+    return z.createElement(Cu, this.props);
   }
 };
-(mu(Tu, `displayName`, `Legend`),
-  mu(Tu, `defaultProps`, {
+(pu(wu, `displayName`, `Legend`),
+  pu(wu, `defaultProps`, {
     align: `center`,
     iconSize: 14,
     itemSorter: `value`,
     layout: `horizontal`,
     verticalAlign: `bottom`,
   }));
-var Eu = [`points`, `className`, `baseLinePoints`, `connectNulls`];
-function Du() {
+var Tu = [`points`, `className`, `baseLinePoints`, `connectNulls`];
+function Eu() {
   return (
-    (Du = Object.assign
+    (Eu = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -1019,14 +1019,14 @@ function Du() {
           }
           return e;
         }),
-    Du.apply(null, arguments)
+    Eu.apply(null, arguments)
   );
 }
-function Ou(e, t) {
+function Du(e, t) {
   if (e == null) return {};
   var n,
     r,
-    i = ku(e, t);
+    i = Ou(e, t);
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
     for (r = 0; r < a.length; r++)
@@ -1037,7 +1037,7 @@ function Ou(e, t) {
   }
   return i;
 }
-function ku(e, t) {
+function Ou(e, t) {
   if (e == null) return {};
   var n = {};
   for (var r in e)
@@ -1047,23 +1047,23 @@ function ku(e, t) {
     }
   return n;
 }
-var Au = (e) => e && e.x === +e.x && e.y === +e.y,
-  ju = function () {
+var ku = (e) => e && e.x === +e.x && e.y === +e.y,
+  Au = function () {
     var e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : [],
       t = [[]];
     return (
       e.forEach((e) => {
-        Au(e)
+        ku(e)
           ? t[t.length - 1].push(e)
           : t[t.length - 1].length > 0 && t.push([]);
       }),
-      Au(e[0]) && t[t.length - 1].push(e[0]),
+      ku(e[0]) && t[t.length - 1].push(e[0]),
       t[t.length - 1].length <= 0 && (t = t.slice(0, -1)),
       t
     );
   },
-  Mu = (e, t) => {
-    var n = ju(e);
+  ju = (e, t) => {
+    var n = Au(e);
     t && (n = [n.reduce((e, t) => [...e, ...t], [])]);
     var r = n
       .map((e) =>
@@ -1072,56 +1072,56 @@ var Au = (e) => e && e.x === +e.x && e.y === +e.y,
       .join(``);
     return n.length === 1 ? `${r}Z` : r;
   },
-  Nu = (e, t, n) => {
-    var r = Mu(e, n);
-    return `${r.slice(-1) === `Z` ? r.slice(0, -1) : r}L${Mu(Array.from(t).reverse(), n).slice(1)}`;
+  Mu = (e, t, n) => {
+    var r = ju(e, n);
+    return `${r.slice(-1) === `Z` ? r.slice(0, -1) : r}L${ju(Array.from(t).reverse(), n).slice(1)}`;
   },
-  Pu = (e) => {
+  Nu = (e) => {
     var { points: t, className: n, baseLinePoints: r, connectNulls: i } = e,
-      a = Ou(e, Eu);
+      a = Du(e, Tu);
     if (!t || !t.length) return null;
-    var o = h(`recharts-polygon`, n);
+    var o = it(`recharts-polygon`, n);
     if (r && r.length) {
       var s = a.stroke && a.stroke !== `none`,
-        c = Nu(t, r, i);
-      return R.createElement(
+        c = Mu(t, r, i);
+      return z.createElement(
         `g`,
         { className: o },
-        R.createElement(
+        z.createElement(
           `path`,
-          Du({}, qe(a), {
+          Eu({}, He(a), {
             fill: c.slice(-1) === `Z` ? a.fill : `none`,
             stroke: `none`,
             d: c,
           }),
         ),
         s
-          ? R.createElement(
+          ? z.createElement(
               `path`,
-              Du({}, qe(a), { fill: `none`, d: Mu(t, i) }),
+              Eu({}, He(a), { fill: `none`, d: ju(t, i) }),
             )
           : null,
         s
-          ? R.createElement(
+          ? z.createElement(
               `path`,
-              Du({}, qe(a), { fill: `none`, d: Mu(r, i) }),
+              Eu({}, He(a), { fill: `none`, d: ju(r, i) }),
             )
           : null,
       );
     }
-    var l = Mu(t, i);
-    return R.createElement(
+    var l = ju(t, i);
+    return z.createElement(
       `path`,
-      Du({}, qe(a), {
+      Eu({}, He(a), {
         fill: l.slice(-1) === `Z` ? a.fill : `none`,
         className: o,
         d: l,
       }),
     );
   };
-function Fu() {
+function Pu() {
   return (
-    (Fu = Object.assign
+    (Pu = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -1130,76 +1130,76 @@ function Fu() {
           }
           return e;
         }),
-    Fu.apply(null, arguments)
+    Pu.apply(null, arguments)
   );
 }
-var Iu = (e) => {
+var Fu = (e) => {
     var { cx: t, cy: n, r, className: i } = e,
-      a = h(`recharts-dot`, i);
+      a = it(`recharts-dot`, i);
     return t === +t && n === +n && r === +r
-      ? R.createElement(
+      ? z.createElement(
           `circle`,
-          Fu({}, Ye(e), xe(e), { className: a, cx: t, cy: n, r }),
+          Pu({}, De(e), ke(e), { className: a, cx: t, cy: n, r }),
         )
       : null;
   },
-  Lu = (e) => e.graphicalItems.polarItems,
-  Ru = x([m, ke], He),
-  zu = x([Lu, Mt, Ru], ee),
-  Bu = x([zu], Xt),
-  Vu = x([Bu, It], me),
-  Hu = x([Vu, Mt, zu], vt);
-x([Vu, Mt, zu], (e, t, n) =>
+  Iu = (e) => e.graphicalItems.polarItems,
+  Lu = C([ot, m], ce),
+  Ru = C([Iu, pe, Lu], Le),
+  zu = C([Ru], y),
+  Bu = C([zu, tt], _e),
+  Vu = C([Bu, pe, Ru], ye);
+C([Bu, pe, Ru], (e, t, n) =>
   n.length > 0
     ? e
         .flatMap((e) =>
           n.flatMap((n) => ({
-            value: Le(e, t.dataKey ?? n.dataKey),
+            value: x(e, t.dataKey ?? n.dataKey),
             errorDomain: [],
           })),
         )
         .filter(Boolean)
     : t?.dataKey == null
       ? e.map((e) => ({ value: e, errorDomain: [] }))
-      : e.map((e) => ({ value: Le(e, t.dataKey), errorDomain: [] })),
+      : e.map((e) => ({ value: x(e, t.dataKey), errorDomain: [] })),
 );
-var Uu = () => void 0,
-  Wu = x([Vu, Mt, zu, le, m], be),
-  Gu = x([Mt, ge, Ke, Uu, Wu, Uu, ht, m], de),
-  Ku = x([Mt, ht, Vu, Hu, kt, m, Gu], Se),
-  qu = x([Ku, Mt, Je], Be),
-  Ju = x([Mt, Ku, qu, m], we),
+var Hu = () => void 0,
+  Uu = C([Bu, pe, Ru, he, ot], Oe),
+  Wu = C([pe, Ue, Ve, Hu, Uu, Hu, dt, ot], Pe),
+  Gu = C([pe, dt, Bu, Vu, Ft, ot, Wu], xe),
+  Ku = C([Gu, pe, Ee], ue),
+  qu = C([pe, Gu, Ku, ot], Te),
+  Ju = (e, t, n) => {
+    switch (t) {
+      case `angleAxis`:
+        return Lt(e, n);
+      case `radiusAxis`:
+        return ht(e, n);
+      default:
+        throw Error(`Unexpected axis type: ${t}`);
+    }
+  },
   Yu = (e, t, n) => {
     switch (t) {
       case `angleAxis`:
-        return ct(e, n);
+        return Tt(e, n);
       case `radiusAxis`:
-        return Pt(e, n);
+        return Xe(e, n);
       default:
         throw Error(`Unexpected axis type: ${t}`);
     }
   },
-  Xu = (e, t, n) => {
-    switch (t) {
-      case `angleAxis`:
-        return Rt(e, n);
-      case `radiusAxis`:
-        return _t(e, n);
-      default:
-        throw Error(`Unexpected axis type: ${t}`);
-    }
-  },
-  Zu = x([Yu, Je, Ju, Xu], Re),
-  Qu = x([ht, Hu, ve, m], ce),
-  $u = x([ht, Yu, Je, Zu, qu, Xu, We, Qu, m], De);
-x([ht, Yu, Zu, Xu, We, Qu, m], Me);
-var ed = x([(e, t) => $u(e, `angleAxis`, t, !1)], (e) => {
+  Xu = C([Ju, Ee, qu, Yu], ze),
+  Zu = C([dt, Vu, At, ot], fe),
+  Qu = C([dt, Ju, Ee, Xu, Ku, Yu, Ge, Zu, ot], oe);
+C([dt, Ju, Xu, Yu, Ge, Zu, ot], Yt);
+var $u = C([(e, t) => Qu(e, `angleAxis`, t, !1)], (e) => {
     if (e) return e.map((e) => e.coordinate);
   }),
-  td = x([(e, t) => $u(e, `radiusAxis`, t, !1)], (e) => {
+  ed = C([(e, t) => Qu(e, `radiusAxis`, t, !1)], (e) => {
     if (e) return e.map((e) => e.coordinate);
   }),
-  nd = [
+  td = [
     `gridType`,
     `radialLines`,
     `angleAxisId`,
@@ -1209,11 +1209,11 @@ var ed = x([(e, t) => $u(e, `angleAxis`, t, !1)], (e) => {
     `innerRadius`,
     `outerRadius`,
   ];
-function rd(e, t) {
+function nd(e, t) {
   if (e == null) return {};
   var n,
     r,
-    i = id(e, t);
+    i = rd(e, t);
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
     for (r = 0; r < a.length; r++)
@@ -1224,7 +1224,7 @@ function rd(e, t) {
   }
   return i;
 }
-function id(e, t) {
+function rd(e, t) {
   if (e == null) return {};
   var n = {};
   for (var r in e)
@@ -1234,9 +1234,9 @@ function id(e, t) {
     }
   return n;
 }
-function ad() {
+function id() {
   return (
-    (ad = Object.assign
+    (id = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -1245,10 +1245,10 @@ function ad() {
           }
           return e;
         }),
-    ad.apply(null, arguments)
+    id.apply(null, arguments)
   );
 }
-function od(e, t) {
+function ad(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -1260,24 +1260,24 @@ function od(e, t) {
   }
   return n;
 }
-function sd(e) {
+function od(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? od(Object(n), !0).forEach(function (t) {
-          cd(e, t, n[t]);
+      ? ad(Object(n), !0).forEach(function (t) {
+          sd(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : od(Object(n)).forEach(function (t) {
+        : ad(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function cd(e, t, n) {
+function sd(e, t, n) {
   return (
-    (t = ld(t)) in e
+    (t = cd(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -1288,11 +1288,11 @@ function cd(e, t, n) {
     e
   );
 }
-function ld(e) {
-  var t = ud(e, `string`);
+function cd(e) {
+  var t = ld(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function ud(e, t) {
+function ld(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -1302,18 +1302,18 @@ function ud(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-var dd = (e, t, n, r) => {
+var ud = (e, t, n, r) => {
     var i = ``;
     return (
       r.forEach((r, a) => {
-        var o = v(t, n, e, r);
+        var o = _t(t, n, e, r);
         i += a ? `L ${o.x},${o.y}` : `M ${o.x},${o.y}`;
       }),
       (i += `Z`),
       i
     );
   },
-  fd = (e) => {
+  dd = (e) => {
     var {
       cx: t,
       cy: n,
@@ -1323,63 +1323,63 @@ var dd = (e, t, n, r) => {
       radialLines: o,
     } = e;
     if (!a || !a.length || !o) return null;
-    var s = sd({ stroke: `#ccc` }, Ye(e));
-    return R.createElement(
+    var s = od({ stroke: `#ccc` }, De(e));
+    return z.createElement(
       `g`,
       { className: `recharts-polar-grid-angle` },
       a.map((e) => {
-        var a = v(t, n, r, e),
-          o = v(t, n, i, e);
-        return R.createElement(
+        var a = _t(t, n, r, e),
+          o = _t(t, n, i, e);
+        return z.createElement(
           `line`,
-          ad({ key: `line-${e}` }, s, { x1: a.x, y1: a.y, x2: o.x, y2: o.y }),
+          id({ key: `line-${e}` }, s, { x1: a.x, y1: a.y, x2: o.x, y2: o.y }),
         );
       }),
     );
   },
-  pd = (e) => {
+  fd = (e) => {
     var { cx: t, cy: n, radius: r } = e,
-      i = sd({ stroke: `#ccc`, fill: `none` }, Ye(e));
-    return R.createElement(
+      i = od({ stroke: `#ccc`, fill: `none` }, De(e));
+    return z.createElement(
       `circle`,
-      ad({}, i, {
-        className: h(`recharts-polar-grid-concentric-circle`, e.className),
+      id({}, i, {
+        className: it(`recharts-polar-grid-concentric-circle`, e.className),
         cx: t,
         cy: n,
         r,
       }),
     );
   },
-  md = (e) => {
+  pd = (e) => {
     var { radius: t } = e,
-      n = sd({ stroke: `#ccc`, fill: `none` }, Ye(e));
-    return R.createElement(
+      n = od({ stroke: `#ccc`, fill: `none` }, De(e));
+    return z.createElement(
       `path`,
-      ad({}, n, {
-        className: h(`recharts-polar-grid-concentric-polygon`, e.className),
-        d: dd(t, e.cx, e.cy, e.polarAngles),
+      id({}, n, {
+        className: it(`recharts-polar-grid-concentric-polygon`, e.className),
+        d: ud(t, e.cx, e.cy, e.polarAngles),
       }),
     );
   },
-  hd = (e) => {
+  md = (e) => {
     var { polarRadius: t, gridType: n } = e;
     if (!t || !t.length) return null;
     var r = Math.max(...t),
       i = e.fill && e.fill !== `none`;
-    return R.createElement(
+    return z.createElement(
       `g`,
       { className: `recharts-polar-grid-concentric` },
-      i && n === `circle` && R.createElement(pd, ad({}, e, { radius: r })),
-      i && n !== `circle` && R.createElement(md, ad({}, e, { radius: r })),
+      i && n === `circle` && z.createElement(fd, id({}, e, { radius: r })),
+      i && n !== `circle` && z.createElement(pd, id({}, e, { radius: r })),
       t.map((t, r) => {
         var i = r;
         return n === `circle`
-          ? R.createElement(pd, ad({ key: i }, e, { fill: `none`, radius: t }))
-          : R.createElement(md, ad({ key: i }, e, { fill: `none`, radius: t }));
+          ? z.createElement(fd, id({ key: i }, e, { fill: `none`, radius: t }))
+          : z.createElement(pd, id({ key: i }, e, { fill: `none`, radius: t }));
       }),
     );
   },
-  gd = (e) => {
+  hd = (e) => {
     var {
         gridType: t = `polygon`,
         radialLines: n = !0,
@@ -1390,9 +1390,9 @@ var dd = (e, t, n, r) => {
         innerRadius: s,
         outerRadius: c,
       } = e,
-      l = rd(e, nd),
-      u = b(Dt),
-      d = sd(
+      l = nd(e, td),
+      u = S(Nt),
+      d = od(
         {
           cx: u?.cx ?? a ?? 0,
           cy: u?.cy ?? o ?? 0,
@@ -1402,36 +1402,36 @@ var dd = (e, t, n, r) => {
         l,
       ),
       { polarAngles: f, polarRadius: p, outerRadius: m } = d,
-      h = b((e) => ed(e, r)),
-      g = b((e) => td(e, i)),
+      h = S((e) => $u(e, r)),
+      g = S((e) => ed(e, i)),
       _ = Array.isArray(f) ? f : h,
       v = Array.isArray(p) ? p : g;
     return m <= 0 || _ == null || v == null
       ? null
-      : R.createElement(
+      : z.createElement(
           `g`,
           { className: `recharts-polar-grid` },
-          R.createElement(
-            hd,
-            ad({ gridType: t, radialLines: n }, d, {
+          z.createElement(
+            md,
+            id({ gridType: t, radialLines: n }, d, {
               polarAngles: _,
               polarRadius: v,
             }),
           ),
-          R.createElement(
-            fd,
-            ad({ gridType: t, radialLines: n }, d, {
+          z.createElement(
+            dd,
+            id({ gridType: t, radialLines: n }, d, {
               polarAngles: _,
               polarRadius: v,
             }),
           ),
         );
   };
-gd.displayName = `PolarGrid`;
-var _d = [`children`];
-function vd() {
+hd.displayName = `PolarGrid`;
+var gd = [`children`];
+function _d() {
   return (
-    (vd = Object.assign
+    (_d = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -1440,10 +1440,10 @@ function vd() {
           }
           return e;
         }),
-    vd.apply(null, arguments)
+    _d.apply(null, arguments)
   );
 }
-function yd(e, t) {
+function vd(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -1455,24 +1455,24 @@ function yd(e, t) {
   }
   return n;
 }
-function bd(e) {
+function yd(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? yd(Object(n), !0).forEach(function (t) {
-          xd(e, t, n[t]);
+      ? vd(Object(n), !0).forEach(function (t) {
+          bd(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : yd(Object(n)).forEach(function (t) {
+        : vd(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function xd(e, t, n) {
+function bd(e, t, n) {
   return (
-    (t = Sd(t)) in e
+    (t = xd(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -1483,11 +1483,11 @@ function xd(e, t, n) {
     e
   );
 }
-function Sd(e) {
-  var t = Cd(e, `string`);
+function xd(e) {
+  var t = Sd(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function Cd(e, t) {
+function Sd(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -1497,11 +1497,11 @@ function Cd(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-function wd(e, t) {
+function Cd(e, t) {
   if (e == null) return {};
   var n,
     r,
-    i = Td(e, t);
+    i = wd(e, t);
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
     for (r = 0; r < a.length; r++)
@@ -1512,7 +1512,7 @@ function wd(e, t) {
   }
   return i;
 }
-function Td(e, t) {
+function wd(e, t) {
   if (e == null) return {};
   var n = {};
   for (var r in e)
@@ -1522,22 +1522,22 @@ function Td(e, t) {
     }
   return n;
 }
-var Ed = 1e-5,
-  Dd = Math.cos(ie(45)),
-  Od = `angleAxis`;
-function kd(e) {
-  var t = Oe(),
-    n = (0, R.useMemo)(() => {
+var Td = 1e-5,
+  Ed = Math.cos(we(45)),
+  Dd = `angleAxis`;
+function Od(e) {
+  var t = se(),
+    n = (0, z.useMemo)(() => {
       var { children: t } = e;
-      return wd(e, _d);
+      return Cd(e, gd);
     }, [e]),
-    r = n === b((e) => ct(e, n.id));
+    r = n === S((e) => Lt(e, n.id));
   return (
-    (0, R.useEffect)(
+    (0, z.useEffect)(
       () => (
-        t(qt(n)),
+        t(Ze(n)),
         () => {
-          t(tt(n));
+          t(Gt(n));
         }
       ),
       [t, n],
@@ -1545,75 +1545,75 @@ function kd(e) {
     r ? e.children : null
   );
 }
-var Ad = (e, t) => {
+var kd = (e, t) => {
     var { cx: n, cy: r, radius: i, orientation: a, tickSize: o } = t,
       s = o || 8,
-      c = v(n, r, i, e.coordinate),
-      l = v(n, r, i + (a === `inner` ? -1 : 1) * s, e.coordinate);
+      c = _t(n, r, i, e.coordinate),
+      l = _t(n, r, i + (a === `inner` ? -1 : 1) * s, e.coordinate);
     return { x1: c.x, y1: c.y, x2: l.x, y2: l.y };
   },
-  jd = (e, t) => {
-    var n = Math.cos(ie(-e.coordinate));
-    return n > Ed
+  Ad = (e, t) => {
+    var n = Math.cos(we(-e.coordinate));
+    return n > Td
       ? t === `outer`
         ? `start`
         : `end`
-      : n < -Ed
+      : n < -Td
         ? t === `outer`
           ? `end`
           : `start`
         : `middle`;
   },
-  Md = (e) => {
-    var t = Math.cos(ie(-e.coordinate)),
-      n = Math.sin(ie(-e.coordinate));
-    return Math.abs(t) <= Dd ? (n > 0 ? `start` : `end`) : `middle`;
+  jd = (e) => {
+    var t = Math.cos(we(-e.coordinate)),
+      n = Math.sin(we(-e.coordinate));
+    return Math.abs(t) <= Ed ? (n > 0 ? `start` : `end`) : `middle`;
   },
-  Nd = (e) => {
+  Md = (e) => {
     var { cx: t, cy: n, radius: r, axisLineType: i, axisLine: a, ticks: o } = e;
     if (!a) return null;
-    var s = bd(bd({}, Ye(e)), {}, { fill: `none` }, Ye(a));
+    var s = yd(yd({}, De(e)), {}, { fill: `none` }, De(a));
     if (i === `circle`)
-      return R.createElement(
-        Iu,
-        vd({ className: `recharts-polar-angle-axis-line` }, s, {
+      return z.createElement(
+        Fu,
+        _d({ className: `recharts-polar-angle-axis-line` }, s, {
           cx: t,
           cy: n,
           r,
         }),
       );
-    var c = o.map((e) => v(t, n, r, e.coordinate));
-    return R.createElement(
-      Pu,
-      vd({ className: `recharts-polar-angle-axis-line` }, s, { points: c }),
+    var c = o.map((e) => _t(t, n, r, e.coordinate));
+    return z.createElement(
+      Nu,
+      _d({ className: `recharts-polar-angle-axis-line` }, s, { points: c }),
     );
   },
-  Pd = (e) => {
+  Nd = (e) => {
     var { tick: t, tickProps: n, value: r } = e;
     return t
-      ? R.isValidElement(t)
-        ? R.cloneElement(t, n)
+      ? z.isValidElement(t)
+        ? z.cloneElement(t, n)
         : typeof t == `function`
           ? t(n)
-          : R.createElement(
-              Ie,
-              vd({}, n, { className: `recharts-polar-angle-axis-tick-value` }),
+          : z.createElement(
+              ae,
+              _d({}, n, { className: `recharts-polar-angle-axis-tick-value` }),
               r,
             )
       : null;
   },
-  Fd = (e) => {
+  Pd = (e) => {
     var { tick: t, tickLine: n, tickFormatter: r, stroke: i, ticks: a } = e,
-      o = Ye(e),
-      s = Ae(t),
-      c = bd(bd({}, o), {}, { fill: `none` }, Ye(n)),
+      o = De(e),
+      s = h(t),
+      c = yd(yd({}, o), {}, { fill: `none` }, De(n)),
       l = a.map((a, l) => {
-        var u = Ad(a, e),
-          d = jd(a, e.orientation),
-          f = Md(a),
-          p = bd(
-            bd(
-              bd({}, o),
+        var u = kd(a, e),
+          d = Ad(a, e.orientation),
+          f = jd(a),
+          p = yd(
+            yd(
+              yd({}, o),
               {},
               { textAnchor: d, verticalAnchor: f, stroke: `none`, fill: i },
               s,
@@ -1621,58 +1621,58 @@ var Ad = (e, t) => {
             {},
             { index: l, payload: a, x: u.x2, y: u.y2 },
           );
-        return R.createElement(
-          S,
-          vd(
+        return z.createElement(
+          me,
+          _d(
             {
-              className: h(`recharts-polar-angle-axis-tick`, xt(t)),
+              className: it(`recharts-polar-angle-axis-tick`, v(t)),
               key: `tick-${a.coordinate}`,
             },
-            Ne(e, a, l),
+            Xt(e, a, l),
           ),
           n &&
-            R.createElement(
+            z.createElement(
               `line`,
-              vd({ className: `recharts-polar-angle-axis-tick-line` }, c, u),
+              _d({ className: `recharts-polar-angle-axis-tick-line` }, c, u),
             ),
-          R.createElement(Pd, {
+          z.createElement(Nd, {
             tick: t,
             tickProps: p,
             value: r ? r(a.value, l) : a.value,
           }),
         );
       });
-    return R.createElement(
-      S,
+    return z.createElement(
+      me,
       { className: `recharts-polar-angle-axis-ticks` },
       l,
     );
   },
-  Id = (e) => {
+  Fd = (e) => {
     var { angleAxisId: t } = e,
-      n = b(Dt),
-      r = b((e) => Zu(e, `angleAxis`, t)),
-      i = Yt(),
-      a = b((e) => $u(e, `angleAxis`, t, i));
+      n = S(Nt),
+      r = S((e) => Xu(e, `angleAxis`, t)),
+      i = $e(),
+      a = S((e) => Qu(e, `angleAxis`, t, i));
     if (n == null || !a || !a.length) return null;
-    var o = bd(
-      bd(bd({}, e), {}, { scale: r }, n),
+    var o = yd(
+      yd(yd({}, e), {}, { scale: r }, n),
       {},
       { radius: n.outerRadius },
     );
-    return R.createElement(
-      S,
-      { className: h(`recharts-polar-angle-axis`, Od, o.className) },
-      R.createElement(Nd, vd({}, o, { ticks: a })),
-      R.createElement(Fd, vd({}, o, { ticks: a })),
+    return z.createElement(
+      me,
+      { className: it(`recharts-polar-angle-axis`, Dd, o.className) },
+      z.createElement(Md, _d({}, o, { ticks: a })),
+      z.createElement(Pd, _d({}, o, { ticks: a })),
     );
   },
-  Ld = class extends R.PureComponent {
+  Id = class extends z.PureComponent {
     render() {
       return this.props.radius <= 0
         ? null
-        : R.createElement(
-            kd,
+        : z.createElement(
+            Od,
             {
               id: this.props.angleAxisId,
               scale: this.props.scale,
@@ -1690,14 +1690,14 @@ var Ad = (e, t) => {
               tick: this.props.tick,
               domain: this.props.domain,
             },
-            R.createElement(Id, this.props),
+            z.createElement(Fd, this.props),
           );
     }
   };
-(xd(Ld, `displayName`, `PolarAngleAxis`),
-  xd(Ld, `axisType`, Od),
-  xd(Ld, `defaultProps`, et));
-function Rd(e, t) {
+(bd(Id, `displayName`, `PolarAngleAxis`),
+  bd(Id, `axisType`, Dd),
+  bd(Id, `defaultProps`, Dt));
+function Ld(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -1709,24 +1709,24 @@ function Rd(e, t) {
   }
   return n;
 }
-function zd(e) {
+function Rd(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? Rd(Object(n), !0).forEach(function (t) {
-          Bd(e, t, n[t]);
+      ? Ld(Object(n), !0).forEach(function (t) {
+          zd(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : Rd(Object(n)).forEach(function (t) {
+        : Ld(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function Bd(e, t, n) {
+function zd(e, t, n) {
   return (
-    (t = Vd(t)) in e
+    (t = Bd(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -1737,11 +1737,11 @@ function Bd(e, t, n) {
     e
   );
 }
-function Vd(e) {
-  var t = Hd(e, `string`);
+function Bd(e) {
+  var t = Vd(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function Hd(e, t) {
+function Vd(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -1751,29 +1751,29 @@ function Hd(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-var Ud = x([Lu, (e, t) => t], (e, t) =>
+var Hd = C([Iu, (e, t) => t], (e, t) =>
     e.filter((e) => e.type === `pie`).find((e) => e.id === t),
   ),
-  Wd = [],
-  Gd = (e, t, n) => (n?.length === 0 ? Wd : n),
-  Kd = x([It, Ud, Gd], (e, t, n) => {
+  Ud = [],
+  Wd = (e, t, n) => (n?.length === 0 ? Ud : n),
+  Gd = C([tt, Hd, Wd], (e, t, n) => {
     var { chartData: r } = e;
     if (t != null) {
       var i = t?.data != null && t.data.length > 0 ? t.data : r;
       if (
         ((i && i.length) ||
           n == null ||
-          (i = n.map((e) => zd(zd({}, t.presentationProps), e.props))),
+          (i = n.map((e) => Rd(Rd({}, t.presentationProps), e.props))),
         i != null)
       )
         return i;
     }
   }),
-  qd = x([Kd, Ud, Gd], (e, t, n) => {
+  Kd = C([Gd, Hd, Wd], (e, t, n) => {
     if (e != null && t != null)
       return e.map((e, r) => {
         var i,
-          a = Le(e, t.nameKey, t.name),
+          a = x(e, t.nameKey, t.name),
           o =
             n != null && (i = n[r]) != null && (i = i.props) != null && i.fill
               ? n[r].props.fill
@@ -1781,26 +1781,26 @@ var Ud = x([Lu, (e, t) => t], (e, t) =>
                 ? e.fill
                 : t.fill;
         return {
-          value: Wt(a, t.dataKey),
+          value: Ne(a, t.dataKey),
           color: o,
           payload: e,
           type: t.legendType,
         };
       });
   }),
-  Jd = x([Kd, Ud, Gd, nt], (e, t, n, r) => {
+  qd = C([Gd, Hd, Wd, Kt], (e, t, n, r) => {
     if (t != null && e != null)
-      return yf({ offset: r, pieSettings: t, displayedData: e, cells: n });
+      return vf({ offset: r, pieSettings: t, displayedData: e, cells: n });
   }),
-  Yd = e(ue()),
-  Xd = [`onMouseEnter`, `onClick`, `onMouseLeave`],
-  Zd = [`id`],
-  Qd = [`id`];
-function $d(e, t) {
+  Jd = e(ge()),
+  Yd = [`onMouseEnter`, `onClick`, `onMouseLeave`],
+  Xd = [`id`],
+  Zd = [`id`];
+function Qd(e, t) {
   if (e == null) return {};
   var n,
     r,
-    i = ef(e, t);
+    i = $d(e, t);
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
     for (r = 0; r < a.length; r++)
@@ -1811,7 +1811,7 @@ function $d(e, t) {
   }
   return i;
 }
-function ef(e, t) {
+function $d(e, t) {
   if (e == null) return {};
   var n = {};
   for (var r in e)
@@ -1821,7 +1821,7 @@ function ef(e, t) {
     }
   return n;
 }
-function tf(e, t) {
+function ef(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -1833,24 +1833,24 @@ function tf(e, t) {
   }
   return n;
 }
-function z(e) {
+function B(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? tf(Object(n), !0).forEach(function (t) {
-          nf(e, t, n[t]);
+      ? ef(Object(n), !0).forEach(function (t) {
+          tf(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : tf(Object(n)).forEach(function (t) {
+        : ef(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function nf(e, t, n) {
+function tf(e, t, n) {
   return (
-    (t = rf(t)) in e
+    (t = nf(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -1861,11 +1861,11 @@ function nf(e, t, n) {
     e
   );
 }
-function rf(e) {
-  var t = af(e, `string`);
+function nf(e) {
+  var t = rf(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function af(e, t) {
+function rf(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -1875,9 +1875,9 @@ function af(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-function of() {
+function af() {
   return (
-    (of = Object.assign
+    (af = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -1886,15 +1886,15 @@ function of() {
           }
           return e;
         }),
-    of.apply(null, arguments)
+    af.apply(null, arguments)
   );
 }
-function sf(e) {
-  var t = (0, R.useMemo)(() => Vt(e.children, re), [e.children]),
-    n = b((n) => qd(n, e.id, t));
-  return n == null ? null : R.createElement(lt, { legendPayload: n });
+function of(e) {
+  var t = (0, z.useMemo)(() => qt(e.children, Ce), [e.children]),
+    n = S((n) => Kd(n, e.id, t));
+  return n == null ? null : z.createElement(Ot, { legendPayload: n });
 }
-function cf(e) {
+function sf(e) {
   var {
     dataKey: t,
     nameKey: n,
@@ -1915,7 +1915,7 @@ function cf(e) {
       fill: o,
       dataKey: t,
       nameKey: n,
-      name: Wt(s, t),
+      name: Ne(s, t),
       hide: c,
       type: l,
       color: o,
@@ -1923,21 +1923,21 @@ function cf(e) {
     },
   };
 }
-var lf = (e, t) => (e > t ? `start` : e < t ? `end` : `middle`),
-  uf = (e, t, n) => y(typeof t == `function` ? t(e) : t, n, n * 0.8),
-  df = (e, t, n) => {
+var cf = (e, t) => (e > t ? `start` : e < t ? `end` : `middle`),
+  lf = (e, t, n) => Re(typeof t == `function` ? t(e) : t, n, n * 0.8),
+  uf = (e, t, n) => {
     var { top: r, left: i, width: a, height: o } = t,
-      s = Ee(a, o);
+      s = yt(a, o);
     return {
-      cx: i + y(e.cx, a, a / 2),
-      cy: r + y(e.cy, o, o / 2),
-      innerRadius: y(e.innerRadius, s, 0),
-      outerRadius: uf(n, e.outerRadius, s),
+      cx: i + Re(e.cx, a, a / 2),
+      cy: r + Re(e.cy, o, o / 2),
+      innerRadius: Re(e.innerRadius, s, 0),
+      outerRadius: lf(n, e.outerRadius, s),
       maxRadius: e.maxRadius || Math.sqrt(a * a + o * o) / 2,
     };
   },
-  ff = (e, t) => Ue(t - e) * Math.min(Math.abs(t - e), 360);
-function pf(e) {
+  df = (e, t) => le(t - e) * Math.min(Math.abs(t - e), 360);
+function ff(e) {
   return e &&
     typeof e == `object` &&
     `className` in e &&
@@ -1945,33 +1945,33 @@ function pf(e) {
     ? e.className
     : ``;
 }
-var mf = (e, t) => {
-    if (R.isValidElement(e)) return R.cloneElement(e, t);
+var pf = (e, t) => {
+    if (z.isValidElement(e)) return z.cloneElement(e, t);
     if (typeof e == `function`) return e(t);
-    var n = h(
+    var n = it(
       `recharts-pie-label-line`,
       typeof e == `boolean` ? `` : e.className,
     );
-    return R.createElement(ot, of({}, t, { type: `linear`, className: n }));
+    return z.createElement(ct, af({}, t, { type: `linear`, className: n }));
   },
-  hf = (e, t, n) => {
-    if (R.isValidElement(e)) return R.cloneElement(e, t);
+  mf = (e, t, n) => {
+    if (z.isValidElement(e)) return z.cloneElement(e, t);
     var r = n;
-    if (typeof e == `function` && ((r = e(t)), R.isValidElement(r))) return r;
-    var i = h(`recharts-pie-label-text`, pf(e));
-    return R.createElement(
-      Ie,
-      of({}, t, { alignmentBaseline: `middle`, className: i }),
+    if (typeof e == `function` && ((r = e(t)), z.isValidElement(r))) return r;
+    var i = it(`recharts-pie-label-text`, ff(e));
+    return z.createElement(
+      ae,
+      af({}, t, { alignmentBaseline: `middle`, className: i }),
       r,
     );
   };
-function gf(e) {
+function hf(e) {
   var { sectors: t, props: n, showLabels: r } = e,
     { label: i, labelLine: a, dataKey: o } = n;
   if (!r || !i || !t) return null;
-  var s = Ye(n),
-    c = Ae(i),
-    l = Ae(a),
+  var s = De(n),
+    c = h(i),
+    l = h(a),
     u =
       (typeof i == `object` &&
         `offsetRadius` in i &&
@@ -1980,85 +1980,85 @@ function gf(e) {
       20,
     d = t.map((e, t) => {
       var n = (e.startAngle + e.endAngle) / 2,
-        r = v(e.cx, e.cy, e.outerRadius + u, n),
-        d = z(
-          z(z(z({}, s), e), {}, { stroke: `none` }, c),
+        r = _t(e.cx, e.cy, e.outerRadius + u, n),
+        d = B(
+          B(B(B({}, s), e), {}, { stroke: `none` }, c),
           {},
-          { index: t, textAnchor: lf(r.x, e.cx) },
+          { index: t, textAnchor: cf(r.x, e.cx) },
           r,
         ),
-        f = z(
-          z(z(z({}, s), e), {}, { fill: `none`, stroke: e.fill }, l),
+        f = B(
+          B(B(B({}, s), e), {}, { fill: `none`, stroke: e.fill }, l),
           {},
           {
             index: t,
-            points: [v(e.cx, e.cy, e.outerRadius, n), r],
+            points: [_t(e.cx, e.cy, e.outerRadius, n), r],
             key: `line`,
           },
         );
-      return R.createElement(
-        S,
+      return z.createElement(
+        me,
         { key: `label-${e.startAngle}-${e.endAngle}-${e.midAngle}-${t}` },
-        a && mf(a, f),
-        hf(i, d, Le(e, o)),
+        a && pf(a, f),
+        mf(i, d, x(e, o)),
       );
     });
-  return R.createElement(S, { className: `recharts-pie-labels` }, d);
+  return z.createElement(me, { className: `recharts-pie-labels` }, d);
 }
-function _f(e) {
+function gf(e) {
   var { sectors: t, props: n, showLabels: r } = e,
     { label: i } = n;
   return typeof i == `object` && i && `position` in i
-    ? R.createElement(Pe, { label: i })
-    : R.createElement(gf, { sectors: t, props: n, showLabels: r });
+    ? z.createElement(ee, { label: i })
+    : z.createElement(hf, { sectors: t, props: n, showLabels: r });
 }
-function vf(e) {
+function _f(e) {
   var { sectors: t, activeShape: n, inactiveShape: r, allOtherPieProps: i } = e,
-    a = b(_),
+    a = S(gt),
     { onMouseEnter: o, onClick: s, onMouseLeave: c } = i,
-    l = $d(i, Xd),
-    u = mt(o, i.dataKey),
-    d = dt(c),
-    f = wt(s, i.dataKey);
+    l = Qd(i, Yd),
+    u = ut(o, i.dataKey),
+    d = qe(c),
+    f = ft(s, i.dataKey);
   return t == null || t.length === 0
     ? null
-    : R.createElement(
-        R.Fragment,
+    : z.createElement(
+        z.Fragment,
         null,
         t.map((e, o) => {
           if (e?.startAngle === 0 && e?.endAngle === 0 && t.length !== 1)
             return null;
           var s = n && String(o) === a,
             c = s ? n : a ? r : null,
-            p = z(
-              z({}, e),
+            p = B(
+              B({}, e),
               {},
-              { stroke: e.stroke, tabIndex: -1, [Fe]: o, [Kt]: i.dataKey },
+              { stroke: e.stroke, tabIndex: -1, [te]: o, [je]: i.dataKey },
             );
-          return R.createElement(
-            S,
-            of(
+          return z.createElement(
+            me,
+            af(
               {
                 key: `sector-${e?.startAngle}-${e?.endAngle}-${e.midAngle}-${o}`,
                 tabIndex: -1,
                 className: `recharts-pie-sector`,
               },
-              Ne(l, e, o),
+              Xt(l, e, o),
               {
                 onMouseEnter: u(e, o),
                 onMouseLeave: d(e, o),
                 onClick: f(e, o),
               },
             ),
-            R.createElement(
-              Ze,
-              of({ option: c, isActive: s, shapeType: `sector` }, p),
+            z.createElement(
+              Vt,
+              af({ option: c, isActive: s, shapeType: `sector` }, p),
             ),
           );
         }),
       );
 }
-function yf(e) {
+function vf(e) {
   var { pieSettings: t, displayedData: n, cells: r, offset: i } = e,
     {
       cornerRadius: a,
@@ -2069,48 +2069,48 @@ function yf(e) {
       tooltipType: u,
     } = t,
     d = Math.abs(t.minAngle),
-    f = ff(o, s),
+    f = df(o, s),
     p = Math.abs(f),
     m = n.length <= 1 ? 0 : (t.paddingAngle ?? 0),
-    h = n.filter((e) => Le(e, c, 0) !== 0).length,
+    h = n.filter((e) => x(e, c, 0) !== 0).length,
     g = (p >= 360 ? h : h - 1) * m,
     _ = p - h * d - g,
-    ee = n.reduce((e, t) => {
-      var n = Le(t, c, 0);
-      return e + (ze(n) ? n : 0);
+    v = n.reduce((e, t) => {
+      var n = x(t, c, 0);
+      return e + (Be(n) ? n : 0);
     }, 0),
     y;
-  if (ee > 0) {
-    var te;
+  if (v > 0) {
+    var b;
     y = n.map((e, n) => {
-      var s = Le(e, c, 0),
-        p = Le(e, l, n),
-        h = df(t, i, e),
-        g = (ze(s) ? s : 0) / ee,
+      var s = x(e, c, 0),
+        p = x(e, l, n),
+        h = uf(t, i, e),
+        g = (Be(s) ? s : 0) / v,
         y,
-        ne = z(z({}, e), r && r[n] && r[n].props);
-      y = n ? te.endAngle + Ue(f) * m * (s === 0 ? 0 : 1) : o;
-      var re = y + Ue(f) * ((s === 0 ? 0 : d) + g * _),
-        ie = (y + re) / 2,
-        ae = (h.innerRadius + h.outerRadius) / 2,
-        oe = [{ name: p, value: s, payload: ne, dataKey: c, type: u }],
-        se = v(h.cx, h.cy, ae, ie);
+        ee = B(B({}, e), r && r[n] && r[n].props);
+      y = n ? b.endAngle + le(f) * m * (s === 0 ? 0 : 1) : o;
+      var te = y + le(f) * ((s === 0 ? 0 : d) + g * _),
+        ne = (y + te) / 2,
+        re = (h.innerRadius + h.outerRadius) / 2,
+        ie = [{ name: p, value: s, payload: ee, dataKey: c, type: u }],
+        ae = _t(h.cx, h.cy, re, ne);
       return (
-        (te = z(
-          z(
-            z(
-              z({}, t.presentationProps),
+        (b = B(
+          B(
+            B(
+              B({}, t.presentationProps),
               {},
               {
                 percent: g,
                 cornerRadius: a,
                 name: p,
-                tooltipPayload: oe,
-                midAngle: ie,
-                middleRadius: ae,
-                tooltipPosition: se,
+                tooltipPayload: ie,
+                midAngle: ne,
+                middleRadius: re,
+                tooltipPosition: ae,
               },
-              ne,
+              ee,
             ),
             h,
           ),
@@ -2118,20 +2118,20 @@ function yf(e) {
           {
             value: s,
             startAngle: y,
-            endAngle: re,
-            payload: ne,
-            paddingAngle: Ue(f) * m,
+            endAngle: te,
+            payload: ee,
+            paddingAngle: le(f) * m,
           },
         )),
-        te
+        b
       );
     });
   }
   return y;
 }
-function bf(e) {
+function yf(e) {
   var { showLabels: t, sectors: n, children: r } = e,
-    i = (0, R.useMemo)(
+    i = (0, z.useMemo)(
       () =>
         !t || !n
           ? []
@@ -2153,9 +2153,9 @@ function bf(e) {
             })),
       [n, t],
     );
-  return R.createElement(te, { value: t ? i : void 0 }, r);
+  return z.createElement(Ut, { value: t ? i : void 0 }, r);
 }
-function xf(e) {
+function bf(e) {
   var { props: t, previousSectorsRef: n } = e,
     {
       sectors: r,
@@ -2168,20 +2168,20 @@ function xf(e) {
       onAnimationStart: u,
       onAnimationEnd: d,
     } = t,
-    f = it(t, `recharts-pie-`),
+    f = xt(t, `recharts-pie-`),
     p = n.current,
-    [m, h] = (0, R.useState)(!1),
-    g = (0, R.useCallback)(() => {
+    [m, h] = (0, z.useState)(!1),
+    g = (0, z.useCallback)(() => {
       (typeof d == `function` && d(), h(!1));
     }, [d]),
-    _ = (0, R.useCallback)(() => {
+    _ = (0, z.useCallback)(() => {
       (typeof u == `function` && u(), h(!0));
     }, [u]);
-  return R.createElement(
-    bf,
+  return z.createElement(
+    yf,
     { showLabels: !m, sectors: r },
-    R.createElement(
-      Ct,
+    z.createElement(
+      zt,
       {
         animationId: f,
         begin: a,
@@ -2198,27 +2198,27 @@ function xf(e) {
         return (
           r?.forEach((t, n) => {
             var r = p && p[n],
-              o = n > 0 ? (0, Yd.default)(t, `paddingAngle`, 0) : 0;
+              o = n > 0 ? (0, Jd.default)(t, `paddingAngle`, 0) : 0;
             if (r) {
-              var s = Ve(
+              var s = de(
                   r.endAngle - r.startAngle,
                   t.endAngle - t.startAngle,
                   e,
                 ),
-                c = z(z({}, t), {}, { startAngle: a + o, endAngle: a + s + o });
+                c = B(B({}, t), {}, { startAngle: a + o, endAngle: a + s + o });
               (i.push(c), (a = c.endAngle));
             } else {
               var { endAngle: l, startAngle: u } = t,
-                d = Ve(0, l - u, e),
-                f = z(z({}, t), {}, { startAngle: a + o, endAngle: a + d + o });
+                d = de(0, l - u, e),
+                f = B(B({}, t), {}, { startAngle: a + o, endAngle: a + d + o });
               (i.push(f), (a = f.endAngle));
             }
           }),
           (n.current = i),
-          R.createElement(
-            S,
+          z.createElement(
+            me,
             null,
-            R.createElement(vf, {
+            z.createElement(_f, {
               sectors: i,
               activeShape: c,
               inactiveShape: l,
@@ -2228,11 +2228,11 @@ function xf(e) {
         );
       },
     ),
-    R.createElement(_f, { showLabels: !m, sectors: r, props: t }),
+    z.createElement(gf, { showLabels: !m, sectors: r, props: t }),
     t.children,
   );
 }
-var Sf = {
+var xf = {
   animationBegin: 400,
   animationDuration: 1500,
   animationEasing: `ease`,
@@ -2243,7 +2243,7 @@ var Sf = {
   fill: `#808080`,
   hide: !1,
   innerRadius: 0,
-  isAnimationActive: !ut.isSsr,
+  isAnimationActive: !kt.isSsr,
   labelLine: !0,
   legendType: `rect`,
   minAngle: 0,
@@ -2254,40 +2254,40 @@ var Sf = {
   startAngle: 0,
   stroke: `#fff`,
 };
-function Cf(e) {
+function Sf(e) {
   var { id: t } = e,
-    n = $d(e, Zd),
+    n = Qd(e, Xd),
     { hide: r, className: i, rootTabIndex: a } = e,
-    o = (0, R.useMemo)(() => Vt(e.children, re), [e.children]),
-    s = b((e) => Jd(e, t, o)),
-    c = (0, R.useRef)(null),
-    l = h(`recharts-pie`, i);
+    o = (0, z.useMemo)(() => qt(e.children, Ce), [e.children]),
+    s = S((e) => qd(e, t, o)),
+    c = (0, z.useRef)(null),
+    l = it(`recharts-pie`, i);
   return r || s == null
-    ? ((c.current = null), R.createElement(S, { tabIndex: a, className: l }))
-    : R.createElement(
-        R.Fragment,
+    ? ((c.current = null), z.createElement(me, { tabIndex: a, className: l }))
+    : z.createElement(
+        z.Fragment,
         null,
-        R.createElement(At, { fn: cf, args: z(z({}, e), {}, { sectors: s }) }),
-        R.createElement(
-          S,
+        z.createElement(St, { fn: sf, args: B(B({}, e), {}, { sectors: s }) }),
+        z.createElement(
+          me,
           { tabIndex: a, className: l },
-          R.createElement(xf, {
-            props: z(z({}, n), {}, { sectors: s }),
+          z.createElement(bf, {
+            props: B(B({}, n), {}, { sectors: s }),
             previousSectorsRef: c,
           }),
         ),
       );
 }
-function wf(e) {
-  var t = Bt(e, Sf),
+function Cf(e) {
+  var t = rt(e, xf),
     { id: n } = t,
-    r = $d(t, Qd),
-    i = Ye(r);
-  return R.createElement(at, { id: n, type: `pie` }, (e) =>
-    R.createElement(
-      R.Fragment,
+    r = Qd(t, Zd),
+    i = De(r);
+  return z.createElement(st, { id: n, type: `pie` }, (e) =>
+    z.createElement(
+      z.Fragment,
       null,
-      R.createElement(zt, {
+      z.createElement(nt, {
         type: `pie`,
         id: e,
         data: r.data,
@@ -2312,13 +2312,13 @@ function wf(e) {
         presentationProps: i,
         maxRadius: t.maxRadius,
       }),
-      R.createElement(sf, of({}, r, { id: e })),
-      R.createElement(Cf, of({}, r, { id: e })),
+      z.createElement(of, af({}, r, { id: e })),
+      z.createElement(Sf, af({}, r, { id: e })),
     ),
   );
 }
-wf.displayName = `Pie`;
-function Tf(e, t) {
+Cf.displayName = `Pie`;
+function wf(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -2330,24 +2330,24 @@ function Tf(e, t) {
   }
   return n;
 }
-function Ef(e) {
+function Tf(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? Tf(Object(n), !0).forEach(function (t) {
-          Df(e, t, n[t]);
+      ? wf(Object(n), !0).forEach(function (t) {
+          Ef(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : Tf(Object(n)).forEach(function (t) {
+        : wf(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function Df(e, t, n) {
+function Ef(e, t, n) {
   return (
-    (t = Of(t)) in e
+    (t = Df(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -2358,11 +2358,11 @@ function Df(e, t, n) {
     e
   );
 }
-function Of(e) {
-  var t = kf(e, `string`);
+function Df(e) {
+  var t = Of(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function kf(e, t) {
+function Of(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -2372,11 +2372,11 @@ function kf(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-var Af = (e) => {
+var kf = (e) => {
   var { point: t, childIndex: n, mainColor: r, activeDot: i, dataKey: a } = e;
   if (i === !1 || t.x == null || t.y == null) return null;
-  var o = Ef(
-      Ef(
+  var o = Tf(
+      Tf(
         {
           index: n,
           dataKey: a,
@@ -2389,26 +2389,26 @@ var Af = (e) => {
           payload: t.payload,
           value: t.value,
         },
-        Ae(i),
+        h(i),
       ),
-      xe(i),
+      ke(i),
     ),
-    s = (0, R.isValidElement)(i)
-      ? (0, R.cloneElement)(i, o)
+    s = (0, z.isValidElement)(i)
+      ? (0, z.cloneElement)(i, o)
       : typeof i == `function`
         ? i(o)
-        : R.createElement(Iu, o);
-  return R.createElement(S, { className: `recharts-active-dot` }, s);
+        : z.createElement(Fu, o);
+  return z.createElement(me, { className: `recharts-active-dot` }, s);
 };
-function jf(e) {
+function Af(e) {
   var { points: t, mainColor: n, activeDot: r, itemDataKey: i } = e,
-    a = b(_),
-    o = St();
+    a = S(gt),
+    o = Rt();
   if (t == null || o == null) return null;
   var s = t.find((e) => o.includes(e.payload));
-  return fe(s)
+  return Fe(s)
     ? null
-    : Af({
+    : kf({
         point: s,
         childIndex: Number(a),
         mainColor: n,
@@ -2416,7 +2416,7 @@ function jf(e) {
         activeDot: r,
       });
 }
-function Mf(e, t) {
+function jf(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -2428,24 +2428,24 @@ function Mf(e, t) {
   }
   return n;
 }
-function Nf(e) {
+function Mf(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? Mf(Object(n), !0).forEach(function (t) {
-          Pf(e, t, n[t]);
+      ? jf(Object(n), !0).forEach(function (t) {
+          Nf(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : Mf(Object(n)).forEach(function (t) {
+        : jf(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function Pf(e, t, n) {
+function Nf(e, t, n) {
   return (
-    (t = Ff(t)) in e
+    (t = Pf(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -2456,11 +2456,11 @@ function Pf(e, t, n) {
     e
   );
 }
-function Ff(e) {
-  var t = If(e, `string`);
+function Pf(e) {
+  var t = Ff(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function If(e, t) {
+function Ff(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -2470,36 +2470,36 @@ function If(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-var Lf = (e, t) => Zu(e, `radiusAxis`, t),
-  Rf = x([Lf], (e) => {
+var If = (e, t) => Xu(e, `radiusAxis`, t),
+  Lf = C([If], (e) => {
     if (e != null) return { scale: e };
   }),
-  zf = x([Pt, Lf], (e, t) => {
-    if (e != null && t != null) return Nf(Nf({}, e), {}, { scale: t });
+  Rf = C([ht, If], (e, t) => {
+    if (e != null && t != null) return Mf(Mf({}, e), {}, { scale: t });
   }),
-  Bf = (e, t, n, r) => $u(e, `radiusAxis`, t, r),
-  Vf = (e, t, n) => ct(e, n),
-  Hf = (e, t, n) => Zu(e, `angleAxis`, n),
-  Uf = x([Vf, Hf], (e, t) => {
-    if (e != null && t != null) return Nf(Nf({}, e), {}, { scale: t });
+  zf = (e, t, n, r) => Qu(e, `radiusAxis`, t, r),
+  Bf = (e, t, n) => Lt(e, n),
+  Vf = (e, t, n) => Xu(e, `angleAxis`, n),
+  Hf = C([Bf, Vf], (e, t) => {
+    if (e != null && t != null) return Mf(Mf({}, e), {}, { scale: t });
   }),
-  Wf = (e, t, n, r) => $u(e, `angleAxis`, n, r),
-  Gf = x([Vf, Hf, Dt], (e, t, n) => {
+  Uf = (e, t, n, r) => Qu(e, `angleAxis`, n, r),
+  Wf = C([Bf, Vf, Nt], (e, t, n) => {
     if (n != null && t != null)
       return { scale: t, type: e.type, dataKey: e.dataKey, cx: n.cx, cy: n.cy };
   }),
-  Kf = (e, t, n, r, i) => i,
-  qf = x([ht, zf, Bf, Uf, Wf], (e, t, n, r, i) =>
-    se(e, `radiusAxis`) ? ne(t, n, !1) : ne(r, i, !1),
+  Gf = (e, t, n, r, i) => i,
+  Kf = C([dt, Rf, zf, Hf, Uf], (e, t, n, r, i) =>
+    ie(e, `radiusAxis`) ? Wt(t, n, !1) : Wt(r, i, !1),
   ),
-  Jf = x([Lu, Kf], (e, t) => {
+  qf = C([Iu, Gf], (e, t) => {
     if (e != null)
       return e.find((e) => e.type === `radar` && t === e.id)?.dataKey;
   }),
-  Yf = x([Rf, Gf, It, Jf, qf], (e, t, n, r, i) => {
+  Jf = C([Lf, Wf, tt, qf, Kf], (e, t, n, r, i) => {
     var { chartData: a, dataStartIndex: o, dataEndIndex: s } = n;
     if (e != null && t != null && a != null && i != null && r != null)
-      return lp({
+      return cp({
         radiusAxis: e,
         angleAxis: t,
         displayedData: a.slice(o, s + 1),
@@ -2507,13 +2507,13 @@ var Lf = (e, t) => Zu(e, `radiusAxis`, t),
         bandSize: i,
       });
   }),
-  Xf = e(Ut()),
-  Zf = [`id`];
-function Qf(e, t) {
+  Yf = e(Me()),
+  Xf = [`id`];
+function Zf(e, t) {
   if (e == null) return {};
   var n,
     r,
-    i = $f(e, t);
+    i = Qf(e, t);
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
     for (r = 0; r < a.length; r++)
@@ -2524,7 +2524,7 @@ function Qf(e, t) {
   }
   return i;
 }
-function $f(e, t) {
+function Qf(e, t) {
   if (e == null) return {};
   var n = {};
   for (var r in e)
@@ -2534,7 +2534,7 @@ function $f(e, t) {
     }
   return n;
 }
-function ep(e, t) {
+function $f(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -2546,24 +2546,24 @@ function ep(e, t) {
   }
   return n;
 }
-function B(e) {
+function V(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? ep(Object(n), !0).forEach(function (t) {
-          tp(e, t, n[t]);
+      ? $f(Object(n), !0).forEach(function (t) {
+          ep(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : ep(Object(n)).forEach(function (t) {
+        : $f(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function tp(e, t, n) {
+function ep(e, t, n) {
   return (
-    (t = np(t)) in e
+    (t = tp(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -2574,11 +2574,11 @@ function tp(e, t, n) {
     e
   );
 }
-function np(e) {
-  var t = rp(e, `string`);
+function tp(e) {
+  var t = np(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function rp(e, t) {
+function np(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -2588,9 +2588,9 @@ function rp(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-function ip() {
+function rp() {
   return (
-    (ip = Object.assign
+    (rp = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -2599,26 +2599,26 @@ function ip() {
           }
           return e;
         }),
-    ip.apply(null, arguments)
+    rp.apply(null, arguments)
   );
 }
-function ap(e, t) {
+function ip(e, t) {
   return e && e !== `none` ? e : t;
 }
-var op = (e) => {
+var ap = (e) => {
   var { dataKey: t, name: n, stroke: r, fill: i, legendType: a, hide: o } = e;
   return [
     {
       inactive: o,
       dataKey: t,
       type: a,
-      color: ap(r, i),
-      value: Wt(n, t),
+      color: ip(r, i),
+      value: Ne(n, t),
       payload: e,
     },
   ];
 };
-function sp(e) {
+function op(e) {
   var {
     dataKey: t,
     stroke: n,
@@ -2637,30 +2637,30 @@ function sp(e) {
       fill: i,
       nameKey: void 0,
       dataKey: t,
-      name: Wt(a, t),
+      name: Ne(a, t),
       hide: o,
       type: s,
-      color: ap(n, i),
+      color: ip(n, i),
       unit: ``,
     },
   };
 }
-function cp(e, t) {
-  return R.isValidElement(e)
-    ? R.cloneElement(e, t)
+function sp(e, t) {
+  return z.isValidElement(e)
+    ? z.cloneElement(e, t)
     : typeof e == `function`
       ? e(t)
-      : R.createElement(
-          Iu,
-          ip({}, t, {
-            className: h(
+      : z.createElement(
+          Fu,
+          rp({}, t, {
+            className: it(
               `recharts-radar-dot`,
               typeof e == `boolean` ? `` : e.className,
             ),
           }),
         );
 }
-function lp(e) {
+function cp(e) {
   var {
       radiusAxis: t,
       angleAxis: n,
@@ -2673,15 +2673,15 @@ function lp(e) {
     l = [],
     u = n.type === `number` ? 0 : (a ?? 0);
   r.forEach((e, r) => {
-    var a = Le(e, n.dataKey, r),
-      d = Le(e, i),
+    var a = x(e, n.dataKey, r),
+      d = x(e, i),
       f = n.scale(a) + u,
-      p = Array.isArray(d) ? (0, Xf.default)(d) : d,
-      m = fe(p) ? void 0 : t.scale(p);
+      p = Array.isArray(d) ? (0, Yf.default)(d) : d,
+      m = Fe(p) ? void 0 : t.scale(p);
     (Array.isArray(d) && d.length >= 2 && (c = !0),
       l.push(
-        B(
-          B({}, v(o, s, m, f)),
+        V(
+          V({}, _t(o, s, m, f)),
           {},
           { name: a, value: d, cx: o, cy: s, radius: m, angle: f, payload: e },
         ),
@@ -2693,39 +2693,39 @@ function lp(e) {
       l.forEach((e) => {
         if (Array.isArray(e.value)) {
           var n = e.value[0],
-            r = fe(n) ? void 0 : t.scale(n);
-          d.push(B(B({}, e), {}, { radius: r }, v(o, s, r, e.angle)));
+            r = Fe(n) ? void 0 : t.scale(n);
+          d.push(V(V({}, e), {}, { radius: r }, _t(o, s, r, e.angle)));
         } else d.push(e);
       }),
     { points: l, isRange: c, baseLinePoints: d }
   );
 }
-function up(e) {
+function lp(e) {
   var { points: t, props: n } = e,
     { dot: r, dataKey: i } = n;
   if (!r) return null;
   var { id: a } = n,
-    o = Qf(n, Zf),
-    s = Ye(o),
-    c = Ge(r),
+    o = Zf(n, Xf),
+    s = De(o),
+    c = Ke(r),
     l = t.map((e, t) =>
-      cp(
+      sp(
         r,
-        B(
-          B(B({ key: `dot-${t}`, r: 3 }, s), c),
+        V(
+          V(V({ key: `dot-${t}`, r: 3 }, s), c),
           {},
           { dataKey: i, cx: e.x, cy: e.y, index: t, payload: e },
         ),
       ),
     );
-  return R.createElement(S, { className: `recharts-radar-dots` }, l);
+  return z.createElement(me, { className: `recharts-radar-dots` }, l);
 }
-function dp(e) {
+function up(e) {
   var { showLabels: t, points: n, children: r } = e,
     i = n.map((e) => {
       var t = { x: e.x, y: e.y, width: 0, height: 0 };
-      return B(
-        B({}, t),
+      return V(
+        V({}, t),
         {},
         {
           value: e.value,
@@ -2736,19 +2736,19 @@ function dp(e) {
         },
       );
     });
-  return R.createElement(Gt, { value: t ? i : null }, r);
+  return z.createElement(Ae, { value: t ? i : null }, r);
 }
-function fp(e) {
+function dp(e) {
   var { points: t, baseLinePoints: n, props: r } = e;
   if (t == null) return null;
   var { shape: i, isRange: a, connectNulls: o } = r,
-    s = R.isValidElement(i)
-      ? R.cloneElement(i, B(B({}, r), {}, { points: t }))
+    s = z.isValidElement(i)
+      ? z.cloneElement(i, V(V({}, r), {}, { points: t }))
       : typeof i == `function`
-        ? i(B(B({}, r), {}, { points: t }))
-        : R.createElement(
-            Pu,
-            ip({}, qe(r), {
+        ? i(V(V({}, r), {}, { points: t }))
+        : z.createElement(
+            Nu,
+            rp({}, He(r), {
               onMouseEnter: (e) => {
                 var { onMouseEnter: t } = r;
                 t && t(r, e);
@@ -2762,20 +2762,20 @@ function fp(e) {
               connectNulls: o,
             }),
           );
-  return R.createElement(
-    S,
+  return z.createElement(
+    me,
     { className: `recharts-radar-polygon` },
     s,
-    R.createElement(up, { props: r, points: t }),
+    z.createElement(lp, { props: r, points: t }),
   );
 }
-var pp = (e, t, n) => (r, i) => {
+var fp = (e, t, n) => (r, i) => {
   var a = e && e[Math.floor(i * t)];
   return a
-    ? B(B({}, r), {}, { x: Ve(a.x, r.x, n), y: Ve(a.y, r.y, n) })
-    : B(B({}, r), {}, { x: Ve(r.cx, r.x, n), y: Ve(r.cy, r.y, n) });
+    ? V(V({}, r), {}, { x: de(a.x, r.x, n), y: de(a.y, r.y, n) })
+    : V(V({}, r), {}, { x: de(r.cx, r.x, n), y: de(r.cy, r.y, n) });
 };
-function mp(e) {
+function pp(e) {
   var { props: t, previousPointsRef: n, previousBaseLinePointsRef: r } = e,
     {
       points: i,
@@ -2791,20 +2791,20 @@ function mp(e) {
     p = r.current,
     m = f && f.length / i.length,
     h = p && p.length / a.length,
-    g = it(t, `recharts-radar-`),
-    [_, v] = (0, R.useState)(!1),
-    ee = !_,
-    y = (0, R.useCallback)(() => {
+    g = xt(t, `recharts-radar-`),
+    [_, v] = (0, z.useState)(!1),
+    y = !_,
+    b = (0, z.useCallback)(() => {
       (typeof u == `function` && u(), v(!1));
     }, [u]),
-    te = (0, R.useCallback)(() => {
+    te = (0, z.useCallback)(() => {
       (typeof d == `function` && d(), v(!0));
     }, [d]);
-  return R.createElement(
-    dp,
-    { showLabels: ee, points: i },
-    R.createElement(
-      Ct,
+  return z.createElement(
+    up,
+    { showLabels: y, points: i },
+    z.createElement(
+      zt,
       {
         animationId: g,
         begin: s,
@@ -2812,80 +2812,80 @@ function mp(e) {
         isActive: o,
         easing: l,
         key: `radar-${g}`,
-        onAnimationEnd: y,
+        onAnimationEnd: b,
         onAnimationStart: te,
       },
       (e) => {
-        var o = e === 1 ? i : i.map(pp(f, m, e)),
-          s = e === 1 ? a : a?.map(pp(p, h, e));
+        var o = e === 1 ? i : i.map(fp(f, m, e)),
+          s = e === 1 ? a : a?.map(fp(p, h, e));
         return (
           e > 0 && ((n.current = o), (r.current = s)),
-          R.createElement(fp, { points: o, baseLinePoints: s, props: t })
+          z.createElement(dp, { points: o, baseLinePoints: s, props: t })
         );
       },
     ),
-    R.createElement(Pe, { label: t.label }),
+    z.createElement(ee, { label: t.label }),
     t.children,
   );
 }
-function hp(e) {
-  var t = (0, R.useRef)(void 0),
-    n = (0, R.useRef)(void 0);
-  return R.createElement(mp, {
+function mp(e) {
+  var t = (0, z.useRef)(void 0),
+    n = (0, z.useRef)(void 0);
+  return z.createElement(pp, {
     props: e,
     previousPointsRef: t,
     previousBaseLinePointsRef: n,
   });
 }
-var gp = {
+var hp = {
     angleAxisId: 0,
     radiusAxisId: 0,
     hide: !1,
     activeDot: !0,
     dot: !1,
     legendType: `rect`,
-    isAnimationActive: !ut.isSsr,
+    isAnimationActive: !kt.isSsr,
     animationBegin: 0,
     animationDuration: 1500,
     animationEasing: `ease`,
   },
-  _p = class extends R.PureComponent {
+  gp = class extends z.PureComponent {
     render() {
       var { hide: e, className: t, points: n } = this.props;
       if (e || n == null) return null;
-      var r = h(`recharts-radar`, t);
-      return R.createElement(
-        R.Fragment,
+      var r = it(`recharts-radar`, t);
+      return z.createElement(
+        z.Fragment,
         null,
-        R.createElement(S, { className: r }, R.createElement(hp, this.props)),
-        R.createElement(jf, {
+        z.createElement(me, { className: r }, z.createElement(mp, this.props)),
+        z.createElement(Af, {
           points: n,
-          mainColor: ap(this.props.stroke, this.props.fill),
+          mainColor: ip(this.props.stroke, this.props.fill),
           itemDataKey: this.props.dataKey,
           activeDot: this.props.activeDot,
         }),
       );
     }
   };
-function vp(e) {
-  var t = Yt(),
-    n = b((n) => Yf(n, e.radiusAxisId, e.angleAxisId, t, e.id));
-  return R.createElement(
-    _p,
-    ip({}, e, {
+function _p(e) {
+  var t = $e(),
+    n = S((n) => Jf(n, e.radiusAxisId, e.angleAxisId, t, e.id));
+  return z.createElement(
+    gp,
+    rp({}, e, {
       points: n?.points,
       baseLinePoints: n?.baseLinePoints,
       isRange: n?.isRange,
     }),
   );
 }
-var yp = class extends R.PureComponent {
+var vp = class extends z.PureComponent {
   render() {
-    return R.createElement(at, { id: this.props.id, type: `radar` }, (e) =>
-      R.createElement(
-        R.Fragment,
+    return z.createElement(st, { id: this.props.id, type: `radar` }, (e) =>
+      z.createElement(
+        z.Fragment,
         null,
-        R.createElement(zt, {
+        z.createElement(nt, {
           type: `radar`,
           id: e,
           data: void 0,
@@ -2894,27 +2894,27 @@ var yp = class extends R.PureComponent {
           angleAxisId: this.props.angleAxisId,
           radiusAxisId: this.props.radiusAxisId,
         }),
-        R.createElement(lt, { legendPayload: op(this.props) }),
-        R.createElement(At, { fn: sp, args: this.props }),
-        R.createElement(vp, ip({}, this.props, { id: e })),
+        z.createElement(Ot, { legendPayload: ap(this.props) }),
+        z.createElement(St, { fn: op, args: this.props }),
+        z.createElement(_p, rp({}, this.props, { id: e })),
       ),
     );
   }
 };
-(tp(yp, `displayName`, `Radar`), tp(yp, `defaultProps`, gp));
-function bp(e) {
-  var t = Oe();
+(ep(vp, `displayName`, `Radar`), ep(vp, `defaultProps`, hp));
+function yp(e) {
+  var t = se();
   return (
-    (0, R.useEffect)(() => {
-      t(Nt(e));
+    (0, z.useEffect)(() => {
+      t(mt(e));
     }, [t, e]),
     null
   );
 }
-var xp = [`layout`];
-function Sp() {
+var bp = [`layout`];
+function xp() {
   return (
-    (Sp = Object.assign
+    (xp = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -2923,14 +2923,14 @@ function Sp() {
           }
           return e;
         }),
-    Sp.apply(null, arguments)
+    xp.apply(null, arguments)
   );
 }
-function Cp(e, t) {
+function Sp(e, t) {
   if (e == null) return {};
   var n,
     r,
-    i = wp(e, t);
+    i = Cp(e, t);
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
     for (r = 0; r < a.length; r++)
@@ -2941,7 +2941,7 @@ function Cp(e, t) {
   }
   return i;
 }
-function wp(e, t) {
+function Cp(e, t) {
   if (e == null) return {};
   var n = {};
   for (var r in e)
@@ -2951,7 +2951,7 @@ function wp(e, t) {
     }
   return n;
 }
-var Tp = {
+var wp = {
     accessibilityLayer: !0,
     stackOffset: `none`,
     barCategoryGap: `10%`,
@@ -2962,10 +2962,10 @@ var Tp = {
     layout: `radial`,
     responsive: !1,
   },
-  Ep = (0, R.forwardRef)(function (e, t) {
-    var n = Bt(e.categoricalChartProps, Tp),
+  Tp = (0, z.forwardRef)(function (e, t) {
+    var n = rt(e.categoricalChartProps, wp),
       { layout: r } = n,
-      i = Cp(n, xp),
+      i = Sp(n, bp),
       {
         chartName: a,
         defaultTooltipEventType: o,
@@ -2979,12 +2979,12 @@ var Tp = {
         tooltipPayloadSearcher: c,
         eventEmitter: void 0,
       };
-    return R.createElement(
-      Et,
+    return z.createElement(
+      Mt,
       { preloadedState: { options: l }, reduxStoreName: n.id ?? a },
-      R.createElement(Ft, { chartData: n.data }),
-      R.createElement(Lt, { layout: r, margin: n.margin }),
-      R.createElement(st, {
+      z.createElement(et, { chartData: n.data }),
+      z.createElement(wt, { layout: r, margin: n.margin }),
+      z.createElement(It, {
         accessibilityLayer: n.accessibilityLayer,
         barCategoryGap: n.barCategoryGap,
         maxBarSize: n.maxBarSize,
@@ -2995,7 +2995,7 @@ var Tp = {
         syncMethod: n.syncMethod,
         className: n.className,
       }),
-      R.createElement(bp, {
+      z.createElement(yp, {
         cx: n.cx,
         cy: n.cy,
         startAngle: n.startAngle,
@@ -3003,11 +3003,11 @@ var Tp = {
         innerRadius: n.innerRadius,
         outerRadius: n.outerRadius,
       }),
-      R.createElement(g, Sp({}, i, { ref: t })),
+      z.createElement(at, xp({}, i, { ref: t })),
     );
   }),
-  Dp = [`item`],
-  Op = {
+  Ep = [`item`],
+  Dp = {
     layout: `centric`,
     startAngle: 0,
     endAngle: 360,
@@ -3016,19 +3016,19 @@ var Tp = {
     innerRadius: 0,
     outerRadius: `80%`,
   },
-  kp = (0, R.forwardRef)((e, t) => {
-    var n = Bt(e, Op);
-    return R.createElement(Ep, {
+  Op = (0, z.forwardRef)((e, t) => {
+    var n = rt(e, Dp);
+    return z.createElement(Tp, {
       chartName: `PieChart`,
       defaultTooltipEventType: `item`,
-      validateTooltipEventTypes: Dp,
-      tooltipPayloadSearcher: bt,
+      validateTooltipEventTypes: Ep,
+      tooltipPayloadSearcher: _,
       categoricalChartProps: n,
       ref: t,
     });
   }),
-  Ap = [`axis`],
-  jp = {
+  kp = [`axis`],
+  Ap = {
     layout: `centric`,
     startAngle: 90,
     endAngle: -270,
@@ -3037,35 +3037,35 @@ var Tp = {
     innerRadius: 0,
     outerRadius: `80%`,
   },
-  Mp = (0, R.forwardRef)((e, t) => {
-    var n = Bt(e, jp);
-    return R.createElement(Ep, {
+  jp = (0, z.forwardRef)((e, t) => {
+    var n = rt(e, Ap);
+    return z.createElement(Tp, {
       chartName: `RadarChart`,
       defaultTooltipEventType: `axis`,
-      validateTooltipEventTypes: Ap,
-      tooltipPayloadSearcher: bt,
+      validateTooltipEventTypes: kp,
+      tooltipPayloadSearcher: _,
       categoricalChartProps: n,
       ref: t,
     });
   }),
-  Np = [`axis`],
-  Pp = (0, R.forwardRef)((e, t) =>
-    R.createElement(je, {
+  Mp = [`axis`],
+  Np = (0, z.forwardRef)((e, t) =>
+    z.createElement(g, {
       chartName: `ComposedChart`,
       defaultTooltipEventType: `axis`,
-      validateTooltipEventTypes: Np,
-      tooltipPayloadSearcher: bt,
+      validateTooltipEventTypes: Mp,
+      tooltipPayloadSearcher: _,
       categoricalChartProps: e,
       ref: t,
     }),
   ),
-  V = e(s(), 1),
-  Fp = class e extends V.Message {
+  H = e(s(), 1),
+  Pp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.total_playtime_seconds || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.total_playtime_seconds || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3076,50 +3076,50 @@ var Tp = {
           fields: {
             total_playtime_seconds: {
               n: 1,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
-            total_sessions: { n: 20, br: P.readUint32, bw: F.writeUint32 },
-            vr_sessions: { n: 21, br: P.readUint32, bw: F.writeUint32 },
-            deck_sessions: { n: 22, br: P.readUint32, bw: F.writeUint32 },
-            controller_sessions: { n: 23, br: P.readUint32, bw: F.writeUint32 },
-            linux_sessions: { n: 24, br: P.readUint32, bw: F.writeUint32 },
-            macos_sessions: { n: 25, br: P.readUint32, bw: F.writeUint32 },
-            windows_sessions: { n: 26, br: P.readUint32, bw: F.writeUint32 },
+            total_sessions: { n: 20, br: F.readUint32, bw: I.writeUint32 },
+            vr_sessions: { n: 21, br: F.readUint32, bw: I.writeUint32 },
+            deck_sessions: { n: 22, br: F.readUint32, bw: I.writeUint32 },
+            controller_sessions: { n: 23, br: F.readUint32, bw: I.writeUint32 },
+            linux_sessions: { n: 24, br: F.readUint32, bw: I.writeUint32 },
+            macos_sessions: { n: 25, br: F.readUint32, bw: I.writeUint32 },
+            windows_sessions: { n: 26, br: F.readUint32, bw: I.writeUint32 },
             total_playtime_percentagex100: {
               n: 27,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
             vr_playtime_percentagex100: {
               n: 28,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
             deck_playtime_percentagex100: {
               n: 29,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
             controller_playtime_percentagex100: {
               n: 30,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
             linux_playtime_percentagex100: {
               n: 31,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
             macos_playtime_percentagex100: {
               n: 32,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
             windows_playtime_percentagex100: {
               n: 33,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
           },
         }),
@@ -3127,46 +3127,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CPlaytimeStats`;
     }
   },
-  Ip = class e extends V.Message {
+  Fp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.appid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3174,52 +3174,52 @@ var Tp = {
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { appid: { n: 1, br: P.readUint32, bw: F.writeUint32 } },
+          fields: { appid: { n: 1, br: F.readUint32, bw: I.writeUint32 } },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CPlaytimeStreakGame`;
     }
   },
-  Lp = class e extends V.Message {
+  Ip = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.longest_consecutive_days || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [3], null));
+        e.prototype.longest_consecutive_days || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -3230,57 +3230,57 @@ var Tp = {
           fields: {
             longest_consecutive_days: {
               n: 1,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
-            rtime_start: { n: 2, br: P.readUint32, bw: F.writeUint32 },
-            streak_games: { n: 3, c: Ip, r: !0, q: !0 },
+            rtime_start: { n: 2, br: F.readUint32, bw: I.writeUint32 },
+            streak_games: { n: 3, c: Fp, r: !0, q: !0 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CPlaytimeStreak`;
     }
   },
-  Rp = class e extends V.Message {
+  Lp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.overall_rank || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.overall_rank || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3289,59 +3289,59 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            overall_rank: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            vr_rank: { n: 2, br: P.readUint32, bw: F.writeUint32 },
-            deck_rank: { n: 3, br: P.readUint32, bw: F.writeUint32 },
-            controller_rank: { n: 4, br: P.readUint32, bw: F.writeUint32 },
-            linux_rank: { n: 5, br: P.readUint32, bw: F.writeUint32 },
-            mac_rank: { n: 6, br: P.readUint32, bw: F.writeUint32 },
-            windows_rank: { n: 7, br: P.readUint32, bw: F.writeUint32 },
+            overall_rank: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            vr_rank: { n: 2, br: F.readUint32, bw: I.writeUint32 },
+            deck_rank: { n: 3, br: F.readUint32, bw: I.writeUint32 },
+            controller_rank: { n: 4, br: F.readUint32, bw: I.writeUint32 },
+            linux_rank: { n: 5, br: F.readUint32, bw: I.writeUint32 },
+            mac_rank: { n: 6, br: F.readUint32, bw: I.writeUint32 },
+            windows_rank: { n: 7, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CPlaytimeRanks`;
     }
   },
-  zp = class e extends V.Message {
+  Rp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.appid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3350,58 +3350,58 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            appid: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            stats: { n: 2, c: Fp },
-            playtime_streak: { n: 3, c: Lp },
-            playtime_ranks: { n: 4, c: Rp },
-            rtime_first_played: { n: 5, br: P.readUint32, bw: F.writeUint32 },
-            relative_game_stats: { n: 6, c: Fp },
+            appid: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            stats: { n: 2, c: Pp },
+            playtime_streak: { n: 3, c: Ip },
+            playtime_ranks: { n: 4, c: Lp },
+            rtime_first_played: { n: 5, br: F.readUint32, bw: I.writeUint32 },
+            relative_game_stats: { n: 6, c: Pp },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGamePlaytimeStats`;
     }
   },
-  Bp = class e extends V.Message {
+  zp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.appid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3410,80 +3410,80 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            appid: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            new_this_year: { n: 2, br: P.readBool, bw: F.writeBool },
+            appid: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            new_this_year: { n: 2, br: F.readBool, bw: I.writeBool },
             rtime_first_played_lifetime: {
               n: 3,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
-            demo: { n: 4, br: P.readBool, bw: F.writeBool },
-            playtest: { n: 5, br: P.readBool, bw: F.writeBool },
+            demo: { n: 4, br: F.readBool, bw: I.writeBool },
+            playtest: { n: 5, br: F.readBool, bw: I.writeBool },
             played_during_early_access: {
               n: 6,
-              br: P.readBool,
-              bw: F.writeBool,
+              br: F.readBool,
+              bw: I.writeBool,
             },
-            played_vr: { n: 7, br: P.readBool, bw: F.writeBool },
-            played_deck: { n: 8, br: P.readBool, bw: F.writeBool },
-            played_controller: { n: 9, br: P.readBool, bw: F.writeBool },
-            played_linux: { n: 10, br: P.readBool, bw: F.writeBool },
-            played_mac: { n: 11, br: P.readBool, bw: F.writeBool },
-            played_windows: { n: 12, br: P.readBool, bw: F.writeBool },
+            played_vr: { n: 7, br: F.readBool, bw: I.writeBool },
+            played_deck: { n: 8, br: F.readBool, bw: I.writeBool },
+            played_controller: { n: 9, br: F.readBool, bw: I.writeBool },
+            played_linux: { n: 10, br: F.readBool, bw: I.writeBool },
+            played_mac: { n: 11, br: F.readBool, bw: I.writeBool },
+            played_windows: { n: 12, br: F.readBool, bw: I.writeBool },
             total_playtime_percentagex100: {
               n: 13,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
-            total_sessions: { n: 14, br: P.readUint32, bw: F.writeUint32 },
-            rtime_release_date: { n: 15, br: P.readUint32, bw: F.writeUint32 },
-            parent_appid: { n: 16, br: P.readUint32, bw: F.writeUint32 },
+            total_sessions: { n: 14, br: F.readUint32, bw: I.writeUint32 },
+            rtime_release_date: { n: 15, br: F.readUint32, bw: I.writeUint32 },
+            parent_appid: { n: 16, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGameSummary`;
     }
   },
-  Vp = class e extends V.Message {
+  Bp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.appid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3492,16 +3492,16 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            appid: { n: 1, br: P.readUint32, bw: F.writeUint32 },
+            appid: { n: 1, br: F.readUint32, bw: I.writeUint32 },
             total_playtime_percentagex100: {
               n: 2,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
             relative_playtime_percentagex100: {
               n: 3,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
           },
         }),
@@ -3509,46 +3509,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSimpleGameSummary`;
     }
   },
-  Hp = class e extends V.Message {
+  Vp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.appid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3557,12 +3557,12 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            appid: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            rank: { n: 2, br: P.readUint32, bw: F.writeUint32 },
+            appid: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            rank: { n: 2, br: F.readUint32, bw: I.writeUint32 },
             relative_playtime_percentagex100: {
               n: 3,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
           },
         }),
@@ -3570,46 +3570,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGameRank`;
     }
   },
-  Up = class e extends V.Message {
+  Hp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.category || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [2], null));
+        e.prototype.category || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -3618,54 +3618,54 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            category: { n: 1, br: P.readString, bw: F.writeString },
-            rankings: { n: 2, c: Hp, r: !0, q: !0 },
+            category: { n: 1, br: F.readString, bw: I.writeString },
+            rankings: { n: 2, c: Vp, r: !0, q: !0 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CRankingCategory`;
     }
   },
-  Wp = class e extends V.Message {
+  Up = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.overall_ranking || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.overall_ranking || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3674,59 +3674,59 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            overall_ranking: { n: 1, c: Up },
-            vr_ranking: { n: 2, c: Up },
-            deck_ranking: { n: 3, c: Up },
-            controller_ranking: { n: 4, c: Up },
-            linux_ranking: { n: 5, c: Up },
-            mac_ranking: { n: 6, c: Up },
-            windows_ranking: { n: 7, c: Up },
+            overall_ranking: { n: 1, c: Hp },
+            vr_ranking: { n: 2, c: Hp },
+            deck_ranking: { n: 3, c: Hp },
+            controller_ranking: { n: 4, c: Hp },
+            linux_ranking: { n: 5, c: Hp },
+            mac_ranking: { n: 6, c: Hp },
+            windows_ranking: { n: 7, c: Hp },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGameRankings`;
     }
   },
-  Gp = class e extends V.Message {
+  Wp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.total_achievements || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.total_achievements || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3735,16 +3735,16 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            total_achievements: { n: 2, br: P.readUint32, bw: F.writeUint32 },
+            total_achievements: { n: 2, br: F.readUint32, bw: I.writeUint32 },
             total_games_with_achievements: {
               n: 3,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
             total_rare_achievements: {
               n: 4,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
           },
         }),
@@ -3752,46 +3752,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserPlaytimeSummaryStats`;
     }
   },
-  Kp = class e extends V.Message {
+  Gp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.stats || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [1], null));
+        e.prototype.stats || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -3799,52 +3799,52 @@ var Tp = {
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { stats: { n: 1, c: qp, r: !0, q: !0 } },
+          fields: { stats: { n: 1, c: Kp, r: !0, q: !0 } },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserTagStats`;
     }
   },
-  qp = class e extends V.Message {
+  Kp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.tag_id || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.tag_id || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3853,12 +3853,12 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            tag_id: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            tag_weight: { n: 2, br: P.readFloat, bw: F.writeFloat },
+            tag_id: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            tag_weight: { n: 2, br: F.readFloat, bw: I.writeFloat },
             tag_weight_pre_selection: {
               n: 3,
-              br: P.readFloat,
-              bw: F.writeFloat,
+              br: F.readFloat,
+              bw: I.writeFloat,
             },
           },
         }),
@@ -3866,46 +3866,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserTagStats_Tag`;
     }
   },
-  Jp = class e extends V.Message {
+  qp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.screenshots_shared || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.screenshots_shared || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -3914,82 +3914,82 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            screenshots_shared: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            gifts_sent: { n: 2, br: P.readUint32, bw: F.writeUint32 },
-            loyalty_reactions: { n: 3, br: P.readUint32, bw: F.writeUint32 },
-            written_reviews: { n: 4, br: P.readUint32, bw: F.writeUint32 },
-            guides_submitted: { n: 5, br: P.readUint32, bw: F.writeUint32 },
+            screenshots_shared: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            gifts_sent: { n: 2, br: F.readUint32, bw: I.writeUint32 },
+            loyalty_reactions: { n: 3, br: F.readUint32, bw: I.writeUint32 },
+            written_reviews: { n: 4, br: F.readUint32, bw: I.writeUint32 },
+            guides_submitted: { n: 5, br: F.readUint32, bw: I.writeUint32 },
             workshop_contributions: {
               n: 6,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
-            badges_earned: { n: 7, br: P.readUint32, bw: F.writeUint32 },
-            friends_added: { n: 8, br: P.readUint32, bw: F.writeUint32 },
-            forum_posts: { n: 9, br: P.readUint32, bw: F.writeUint32 },
+            badges_earned: { n: 7, br: F.readUint32, bw: I.writeUint32 },
+            friends_added: { n: 8, br: F.readUint32, bw: I.writeUint32 },
+            forum_posts: { n: 9, br: F.readUint32, bw: I.writeUint32 },
             workshop_subscriptions: {
               n: 10,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
-            guide_subscribers: { n: 11, br: P.readUint32, bw: F.writeUint32 },
+            guide_subscribers: { n: 11, br: F.readUint32, bw: I.writeUint32 },
             workshop_subscribers: {
               n: 12,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
-            games_played_pct: { n: 13, br: P.readUint32, bw: F.writeUint32 },
-            achievements_pct: { n: 14, br: P.readUint32, bw: F.writeUint32 },
-            game_streak_pct: { n: 15, br: P.readUint32, bw: F.writeUint32 },
-            games_played_avg: { n: 16, br: P.readUint32, bw: F.writeUint32 },
-            achievements_avg: { n: 17, br: P.readUint32, bw: F.writeUint32 },
-            game_streak_avg: { n: 18, br: P.readUint32, bw: F.writeUint32 },
+            games_played_pct: { n: 13, br: F.readUint32, bw: I.writeUint32 },
+            achievements_pct: { n: 14, br: F.readUint32, bw: I.writeUint32 },
+            game_streak_pct: { n: 15, br: F.readUint32, bw: I.writeUint32 },
+            games_played_avg: { n: 16, br: F.readUint32, bw: I.writeUint32 },
+            achievements_avg: { n: 17, br: F.readUint32, bw: I.writeUint32 },
+            game_streak_avg: { n: 18, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CPlaytimeByNumbers`;
     }
   },
-  Yp = class e extends V.Message {
+  Jp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.total_stats || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [2, 5, 6], null));
+        e.prototype.total_stats || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [2, 5, 6], null));
     }
     static sm_m;
     static sm_mbf;
@@ -3998,64 +3998,64 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            total_stats: { n: 1, c: Fp },
-            games: { n: 2, c: zp, r: !0, q: !0 },
-            playtime_streak: { n: 3, c: Lp },
-            months: { n: 5, c: Xp, r: !0, q: !0 },
-            game_summary: { n: 6, c: Bp, r: !0, q: !0 },
-            demos_played: { n: 7, br: P.readUint32, bw: F.writeUint32 },
-            game_rankings: { n: 8, c: Wp },
-            playtests_played: { n: 9, br: P.readUint32, bw: F.writeUint32 },
-            summary_stats: { n: 10, c: Gp },
-            substantial: { n: 11, d: !0, br: P.readBool, bw: F.writeBool },
-            tag_stats: { n: 12, c: Kp },
-            by_numbers: { n: 13, c: Jp },
+            total_stats: { n: 1, c: Pp },
+            games: { n: 2, c: Rp, r: !0, q: !0 },
+            playtime_streak: { n: 3, c: Ip },
+            months: { n: 5, c: Yp, r: !0, q: !0 },
+            game_summary: { n: 6, c: zp, r: !0, q: !0 },
+            demos_played: { n: 7, br: F.readUint32, bw: I.writeUint32 },
+            game_rankings: { n: 8, c: Up },
+            playtests_played: { n: 9, br: F.readUint32, bw: I.writeUint32 },
+            summary_stats: { n: 10, c: Wp },
+            substantial: { n: 11, d: !0, br: F.readBool, bw: I.writeBool },
+            tag_stats: { n: 12, c: Gp },
+            by_numbers: { n: 13, c: qp },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserPlaytimeStats`;
     }
   },
-  Xp = class e extends V.Message {
+  Yp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.rtime_month || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [4, 6], null));
+        e.prototype.rtime_month || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [4, 6], null));
     }
     static sm_m;
     static sm_mbf;
@@ -4064,57 +4064,57 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            rtime_month: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            stats: { n: 2, c: Fp },
-            appid: { n: 4, c: zp, r: !0, q: !0 },
-            relative_monthly_stats: { n: 5, c: Fp },
-            game_summary: { n: 6, c: Vp, r: !0, q: !0 },
+            rtime_month: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            stats: { n: 2, c: Pp },
+            appid: { n: 4, c: Rp, r: !0, q: !0 },
+            relative_monthly_stats: { n: 5, c: Pp },
+            game_summary: { n: 6, c: Bp, r: !0, q: !0 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CMonthlyPlaytimeStats`;
     }
   },
-  Zp = class e extends V.Message {
+  Xp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.account_id || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.account_id || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4123,56 +4123,56 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            account_id: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            year: { n: 2, br: P.readUint32, bw: F.writeUint32 },
-            playtime_stats: { n: 3, c: Yp },
-            privacy_state: { n: 4, br: P.readEnum, bw: F.writeEnum },
+            account_id: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            year: { n: 2, br: F.readUint32, bw: I.writeUint32 },
+            playtime_stats: { n: 3, c: Jp },
+            privacy_state: { n: 4, br: F.readEnum, bw: I.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserYearInReviewStats`;
     }
   },
-  Qp = class e extends V.Message {
+  Zp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.from_dbo || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.from_dbo || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4181,31 +4181,31 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            from_dbo: { n: 1, br: P.readBool, bw: F.writeBool },
+            from_dbo: { n: 1, br: F.readBool, bw: I.writeBool },
             overall_time_ms: {
               n: 2,
-              br: P.readUint64String,
-              bw: F.writeUint64String,
+              br: F.readUint64String,
+              bw: I.writeUint64String,
             },
             dbo_load_ms: {
               n: 3,
-              br: P.readUint64String,
-              bw: F.writeUint64String,
+              br: F.readUint64String,
+              bw: I.writeUint64String,
             },
             query_execution_ms: {
               n: 4,
-              br: P.readUint64String,
-              bw: F.writeUint64String,
+              br: F.readUint64String,
+              bw: I.writeUint64String,
             },
             message_population_ms: {
               n: 5,
-              br: P.readUint64String,
-              bw: F.writeUint64String,
+              br: F.readUint64String,
+              bw: I.writeUint64String,
             },
             dbo_lock_load_ms: {
               n: 6,
-              br: P.readUint64String,
-              bw: F.writeUint64String,
+              br: F.readUint64String,
+              bw: I.writeUint64String,
             },
           },
         }),
@@ -4213,46 +4213,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CYearInReviewPerformanceStats`;
     }
   },
-  $p = class e extends V.Message {
+  Qp = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.statid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.statid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4261,60 +4261,60 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            statid: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            fieldid: { n: 2, br: P.readUint32, bw: F.writeUint32 },
+            statid: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            fieldid: { n: 2, br: F.readUint32, bw: I.writeUint32 },
             achievement_name_internal: {
               n: 3,
-              br: P.readString,
-              bw: F.writeString,
+              br: F.readString,
+              bw: I.writeString,
             },
-            rtime_unlocked: { n: 4, br: P.readUint32, bw: F.writeUint32 },
+            rtime_unlocked: { n: 4, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CAchievementDetails`;
     }
   },
-  em = class e extends V.Message {
+  $p = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [2], null));
+        e.prototype.appid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [2, 5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -4323,60 +4323,61 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            appid: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            achievements: { n: 2, c: $p, r: !0, q: !0 },
+            appid: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            achievements: { n: 2, c: Qp, r: !0, q: !0 },
             all_time_unlocked_achievements: {
               n: 3,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
-            unlocked_more_in_future: { n: 4, br: P.readBool, bw: F.writeBool },
+            unlocked_more_in_future: { n: 4, br: F.readBool, bw: I.writeBool },
+            completed_sets: { n: 5, c: em, r: !0, q: !0 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGameAchievements`;
     }
   },
-  tm = class e extends V.Message {
+  em = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.median_achievements || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.groupid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4385,55 +4386,111 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            median_achievements: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            median_games: { n: 2, br: P.readUint32, bw: F.writeUint32 },
-            median_streak: { n: 3, br: P.readUint32, bw: F.writeUint32 },
+            groupid: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            rtime_completed: { n: 2, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
+    }
+    getClassName() {
+      return `CGameAchievements_CompletedSet`;
+    }
+  },
+  tm = class e extends H.Message {
+    static ImplementsStaticInterface() {}
+    constructor(t = null) {
+      (super(),
+        e.prototype.median_achievements || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (e.sm_m ||= {
+          proto: e,
+          fields: {
+            median_achievements: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            median_games: { n: 2, br: F.readUint32, bw: I.writeUint32 },
+            median_streak: { n: 3, br: F.readUint32, bw: I.writeUint32 },
+          },
+        }),
+        e.sm_m
+      );
+    }
+    static MBF() {
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
+    }
+    toObject(t = !1) {
+      return e.toObject(t, this);
+    }
+    static toObject(t, n) {
+      return N(e.M(), t, n);
+    }
+    static fromObject(t) {
+      return M(e.M(), t);
+    }
+    static deserializeBinary(t) {
+      let n = new H.BinaryReader(t),
+        r = new e();
+      return e.deserializeBinaryFromReader(r, n);
+    }
+    static deserializeBinaryFromReader(t, n) {
+      return L(e.MBF(), t, n);
+    }
+    serializeBinary() {
+      var t = new H.BinaryWriter();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
+    }
+    static serializeBinaryToWriter(t, n) {
+      O(e.M(), t, n);
+    }
+    serializeBase64String() {
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGlobalPercentiles`;
     }
   },
-  nm = class e extends V.Message {
+  nm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.new_releases || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.new_releases || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4442,56 +4499,56 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            new_releases: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            recent_releases: { n: 2, br: P.readUint32, bw: F.writeUint32 },
-            classic_releases: { n: 3, br: P.readUint32, bw: F.writeUint32 },
-            recent_cutoff_year: { n: 4, br: P.readUint32, bw: F.writeUint32 },
+            new_releases: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            recent_releases: { n: 2, br: F.readUint32, bw: I.writeUint32 },
+            classic_releases: { n: 3, br: F.readUint32, bw: I.writeUint32 },
+            recent_cutoff_year: { n: 4, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGlobalPlaytimeDistribution`;
     }
   },
-  rm = class e extends V.Message {
+  rm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.games_played || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.games_played || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4500,59 +4557,59 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            games_played: { n: 1, br: P.readUint32, bw: F.writeUint32 },
+            games_played: { n: 1, br: F.readUint32, bw: I.writeUint32 },
             unlocked_achievements: {
               n: 2,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
-            longest_streak: { n: 3, br: P.readUint32, bw: F.writeUint32 },
+            longest_streak: { n: 3, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CPreviousYIRSummaryData`;
     }
   },
-  im = class e extends V.Message {
+  im = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.steamid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4563,17 +4620,17 @@ var Tp = {
           fields: {
             steamid: {
               n: 1,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
-            year: { n: 2, br: P.readUint32, bw: F.writeUint32 },
-            force_regenerate: { n: 3, br: P.readBool, bw: F.writeBool },
-            access_source: { n: 4, br: P.readInt32, bw: F.writeInt32 },
+            year: { n: 2, br: F.readUint32, bw: I.writeUint32 },
+            force_regenerate: { n: 3, br: F.readBool, bw: I.writeBool },
+            access_source: { n: 4, br: F.readInt32, bw: I.writeInt32 },
             fetch_previous_year_summary: {
               n: 5,
               d: !1,
-              br: P.readBool,
-              bw: F.writeBool,
+              br: F.readBool,
+              bw: I.writeBool,
             },
           },
         }),
@@ -4581,46 +4638,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserYearInReview_Request`;
     }
   },
-  am = class e extends V.Message {
+  am = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.stats || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.stats || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4629,8 +4686,8 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            stats: { n: 1, c: Zp },
-            performance_stats: { n: 2, c: Qp },
+            stats: { n: 1, c: Xp },
+            performance_stats: { n: 2, c: Zp },
             percentiles: { n: 3, c: tm },
             distribution: { n: 4, c: nm },
             previous_year_summary: { n: 5, c: rm },
@@ -4640,46 +4697,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserYearInReview_Response`;
     }
   },
-  om = class e extends V.Message {
+  om = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.steamid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4690,57 +4747,57 @@ var Tp = {
           fields: {
             steamid: {
               n: 1,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
-            year: { n: 2, br: P.readUint32, bw: F.writeUint32 },
-            privacy_state: { n: 3, br: P.readEnum, bw: F.writeEnum },
+            year: { n: 2, br: F.readUint32, bw: I.writeUint32 },
+            privacy_state: { n: 3, br: F.readEnum, bw: I.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_SetUserSharingPermissions_Request`;
     }
   },
-  sm = class e extends V.Message {
+  sm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.privacy_state || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.privacy_state || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4748,52 +4805,52 @@ var Tp = {
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { privacy_state: { n: 1, br: P.readEnum, bw: F.writeEnum } },
+          fields: { privacy_state: { n: 1, br: F.readEnum, bw: I.writeEnum } },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_SetUserSharingPermissions_Response`;
     }
   },
-  cm = class e extends V.Message {
+  cm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.steamid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4804,56 +4861,56 @@ var Tp = {
           fields: {
             steamid: {
               n: 1,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
-            year: { n: 2, br: P.readUint32, bw: F.writeUint32 },
+            year: { n: 2, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserSharingPermissions_Request`;
     }
   },
-  lm = class e extends V.Message {
+  lm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.privacy_state || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.privacy_state || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -4862,60 +4919,60 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            privacy_state: { n: 1, br: P.readEnum, bw: F.writeEnum },
-            generated_value: { n: 2, br: P.readBool, bw: F.writeBool },
+            privacy_state: { n: 1, br: F.readEnum, bw: I.writeEnum },
+            generated_value: { n: 2, br: F.readBool, bw: I.writeBool },
             steamid: {
               n: 3,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
-            rt_privacy_updated: { n: 4, br: P.readUint32, bw: F.writeUint32 },
+            rt_privacy_updated: { n: 4, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserSharingPermissions_Response`;
     }
   },
-  um = class e extends V.Message {
+  um = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [3], null));
+        e.prototype.steamid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -4926,65 +4983,66 @@ var Tp = {
           fields: {
             steamid: {
               n: 1,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
-            year: { n: 2, br: P.readUint32, bw: F.writeUint32 },
+            year: { n: 2, br: F.readUint32, bw: I.writeUint32 },
             appids: {
               n: 3,
               r: !0,
               q: !0,
-              br: P.readUint32,
-              pbr: P.readPackedUint32,
-              bw: F.writeRepeatedUint32,
+              br: F.readUint32,
+              pbr: F.readPackedUint32,
+              bw: I.writeRepeatedUint32,
             },
-            total_only: { n: 4, br: P.readBool, bw: F.writeBool },
+            total_only: { n: 4, br: F.readBool, bw: I.writeBool },
+            include_completed_sets: { n: 5, br: F.readBool, bw: I.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserYearAchievements_Request`;
     }
   },
-  dm = class e extends V.Message {
+  dm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.game_achievements || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [1], null));
+        e.prototype.game_achievements || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -4993,64 +5051,65 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            game_achievements: { n: 1, c: em, r: !0, q: !0 },
-            total_achievements: { n: 2, br: P.readUint32, bw: F.writeUint32 },
+            game_achievements: { n: 1, c: $p, r: !0, q: !0 },
+            total_achievements: { n: 2, br: F.readUint32, bw: I.writeUint32 },
             total_rare_achievements: {
               n: 3,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
             total_games_with_achievements: {
               n: 4,
-              br: P.readUint32,
-              bw: F.writeUint32,
+              br: F.readUint32,
+              bw: I.writeUint32,
             },
+            total_completed_sets: { n: 5, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserYearAchievements_Response`;
     }
   },
-  fm = class e extends V.Message {
+  fm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [3], null));
+        e.prototype.steamid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -5061,17 +5120,17 @@ var Tp = {
           fields: {
             steamid: {
               n: 1,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
-            year: { n: 2, br: P.readUint32, bw: F.writeUint32 },
+            year: { n: 2, br: F.readUint32, bw: I.writeUint32 },
             appids: {
               n: 3,
               r: !0,
               q: !0,
-              br: P.readUint32,
-              pbr: P.readPackedUint32,
-              bw: F.writeRepeatedUint32,
+              br: F.readUint32,
+              pbr: F.readPackedUint32,
+              bw: I.writeRepeatedUint32,
             },
           },
         }),
@@ -5079,46 +5138,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserYearScreenshots_Request`;
     }
   },
-  pm = class e extends V.Message {
+  pm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.apps || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [1], null));
+        e.prototype.apps || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -5132,46 +5191,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserYearScreenshots_Response`;
     }
   },
-  mm = class e extends V.Message {
+  mm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.image_url || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.image_url || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -5180,64 +5239,64 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            image_url: { n: 1, br: P.readString, bw: F.writeString },
-            preview_url: { n: 2, br: P.readString, bw: F.writeString },
-            image_width: { n: 3, br: P.readUint32, bw: F.writeUint32 },
-            image_height: { n: 4, br: P.readUint32, bw: F.writeUint32 },
-            maybe_inappropriate_sex: { n: 5, br: P.readBool, bw: F.writeBool },
+            image_url: { n: 1, br: F.readString, bw: I.writeString },
+            preview_url: { n: 2, br: F.readString, bw: I.writeString },
+            image_width: { n: 3, br: F.readUint32, bw: I.writeUint32 },
+            image_height: { n: 4, br: F.readUint32, bw: I.writeUint32 },
+            maybe_inappropriate_sex: { n: 5, br: F.readBool, bw: I.writeBool },
             maybe_inappropriate_violence: {
               n: 6,
-              br: P.readBool,
-              bw: F.writeBool,
+              br: F.readBool,
+              bw: I.writeBool,
             },
-            visibility: { n: 7, br: P.readUint32, bw: F.writeUint32 },
-            spoiler_tag: { n: 8, br: P.readBool, bw: F.writeBool },
+            visibility: { n: 7, br: F.readUint32, bw: I.writeUint32 },
+            spoiler_tag: { n: 8, br: F.readBool, bw: I.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserYearScreenshots_Response_Screenshot`;
     }
   },
-  hm = class e extends V.Message {
+  hm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [2], null));
+        e.prototype.appid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -5246,7 +5305,7 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            appid: { n: 1, br: P.readUint32, bw: F.writeUint32 },
+            appid: { n: 1, br: F.readUint32, bw: I.writeUint32 },
             screenshots: { n: 2, c: mm, r: !0, q: !0 },
           },
         }),
@@ -5254,46 +5313,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserYearScreenshots_Response_ScreenshotsByApp`;
     }
   },
-  gm = class e extends V.Message {
+  gm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.steamid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -5304,57 +5363,57 @@ var Tp = {
           fields: {
             steamid: {
               n: 1,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
-            gid: { n: 2, br: P.readFixed64String, bw: F.writeFixed64String },
-            type: { n: 3, br: P.readEnum, bw: F.writeEnum },
+            gid: { n: 2, br: F.readFixed64String, bw: I.writeFixed64String },
+            type: { n: 3, br: F.readEnum, bw: I.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserActionData_Request`;
     }
   },
-  _m = class e extends V.Message {
+  _m = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.jsondata || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.jsondata || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -5362,52 +5421,52 @@ var Tp = {
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { jsondata: { n: 1, br: P.readString, bw: F.writeString } },
+          fields: { jsondata: { n: 1, br: F.readString, bw: I.writeString } },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserActionData_Response`;
     }
   },
-  vm = class e extends V.Message {
+  vm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [2], null));
+        e.prototype.steamid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -5418,64 +5477,64 @@ var Tp = {
           fields: {
             steamid: {
               n: 1,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
             gids: {
               n: 2,
               r: !0,
               q: !0,
-              br: P.readFixed64String,
-              pbr: P.readPackedFixed64String,
-              bw: F.writeRepeatedFixed64String,
+              br: F.readFixed64String,
+              pbr: F.readPackedFixed64String,
+              bw: I.writeRepeatedFixed64String,
             },
-            type: { n: 3, br: P.readEnum, bw: F.writeEnum },
+            type: { n: 3, br: F.readEnum, bw: I.writeEnum },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetMultipleUserActionData_Request`;
     }
   },
-  ym = class e extends V.Message {
+  ym = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.entries || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [1], null));
+        e.prototype.entries || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -5489,46 +5548,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetMultipleUserActionData_Response`;
     }
   },
-  bm = class e extends V.Message {
+  bm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.gid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.gid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -5537,12 +5596,12 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            gid: { n: 1, br: P.readFixed64String, bw: F.writeFixed64String },
-            jsondata: { n: 2, br: P.readString, bw: F.writeString },
+            gid: { n: 1, br: F.readFixed64String, bw: I.writeFixed64String },
+            jsondata: { n: 2, br: F.readString, bw: I.writeString },
             steamid: {
               n: 3,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
           },
         }),
@@ -5550,46 +5609,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetMultipleUserActionData_Response_Entry`;
     }
   },
-  xm = class e extends V.Message {
+  xm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.gid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.gid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -5598,56 +5657,56 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            gid: { n: 1, br: P.readFixed64String, bw: F.writeFixed64String },
-            type: { n: 2, br: P.readEnum, bw: F.writeEnum },
-            count: { n: 3, br: P.readUint32, bw: F.writeUint32 },
-            last_account_index: { n: 4, br: P.readUint32, bw: F.writeUint32 },
+            gid: { n: 1, br: F.readFixed64String, bw: I.writeFixed64String },
+            type: { n: 2, br: F.readEnum, bw: I.writeEnum },
+            count: { n: 3, br: F.readUint32, bw: I.writeUint32 },
+            last_account_index: { n: 4, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetAllUserActionDataForType_Request`;
     }
   },
-  Sm = class e extends V.Message {
+  Sm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.entries || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [1], null));
+        e.prototype.entries || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -5657,53 +5716,53 @@ var Tp = {
           proto: e,
           fields: {
             entries: { n: 1, c: Cm, r: !0, q: !0 },
-            last_account_index: { n: 2, br: P.readUint32, bw: F.writeUint32 },
+            last_account_index: { n: 2, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetAllUserActionDataForType_Response`;
     }
   },
-  Cm = class e extends V.Message {
+  Cm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.gid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.gid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -5712,12 +5771,12 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            gid: { n: 1, br: P.readFixed64String, bw: F.writeFixed64String },
-            jsondata: { n: 2, br: P.readString, bw: F.writeString },
+            gid: { n: 1, br: F.readFixed64String, bw: I.writeFixed64String },
+            jsondata: { n: 2, br: F.readString, bw: I.writeString },
             steamid: {
               n: 3,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
           },
         }),
@@ -5725,46 +5784,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetAllUserActionDataForType_Response_Entry`;
     }
   },
-  wm = class e extends V.Message {
+  wm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.steamid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -5775,57 +5834,57 @@ var Tp = {
           fields: {
             steamid: {
               n: 1,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
-            year: { n: 2, br: P.readUint32, bw: F.writeUint32 },
-            return_private: { n: 3, br: P.readBool, bw: F.writeBool },
+            year: { n: 2, br: F.readUint32, bw: I.writeUint32 },
+            return_private: { n: 3, br: F.readBool, bw: I.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetFriendsSharedYearInReview_Request`;
     }
   },
-  Tm = class e extends V.Message {
+  Tm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.steamid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -5836,58 +5895,58 @@ var Tp = {
           fields: {
             steamid: {
               n: 1,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
-            privacy_state: { n: 3, br: P.readEnum, bw: F.writeEnum },
-            rt_privacy_updated: { n: 4, br: P.readUint32, bw: F.writeUint32 },
-            privacy_override: { n: 5, br: P.readBool, bw: F.writeBool },
+            privacy_state: { n: 3, br: F.readEnum, bw: I.writeEnum },
+            rt_privacy_updated: { n: 4, br: F.readUint32, bw: I.writeUint32 },
+            privacy_override: { n: 5, br: F.readBool, bw: I.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CFriendSharedYearInView`;
     }
   },
-  Em = class e extends V.Message {
+  Em = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.friend_shares || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [1], null));
+        e.prototype.friend_shares || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -5897,53 +5956,53 @@ var Tp = {
           proto: e,
           fields: {
             friend_shares: { n: 1, c: Tm, r: !0, q: !0 },
-            year: { n: 2, br: P.readUint32, bw: F.writeUint32 },
+            year: { n: 2, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetFriendsSharedYearInReview_Response`;
     }
   },
-  Dm = class e extends V.Message {
+  Dm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.steamid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -5954,57 +6013,57 @@ var Tp = {
           fields: {
             steamid: {
               n: 1,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
-            year: { n: 2, br: P.readUint32, bw: F.writeUint32 },
-            language: { n: 3, br: P.readString, bw: F.writeString },
+            year: { n: 2, br: F.readUint32, bw: I.writeUint32 },
+            language: { n: 3, br: F.readString, bw: I.writeString },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserYearInReviewShareImage_Request`;
     }
   },
-  Om = class e extends V.Message {
+  Om = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.images || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, [1], null));
+        e.prototype.images || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -6018,46 +6077,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserYearInReviewShareImage_Response`;
     }
   },
-  km = class e extends V.Message {
+  km = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.name || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.name || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -6066,54 +6125,54 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            name: { n: 1, br: P.readString, bw: F.writeString },
-            url_path: { n: 2, br: P.readString, bw: F.writeString },
+            name: { n: 1, br: F.readString, bw: I.writeString },
+            url_path: { n: 2, br: F.readString, bw: I.writeString },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetUserYearInReviewShareImage_Response_Image`;
     }
   },
-  Am = class e extends V.Message {
+  Am = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.steamid || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -6124,8 +6183,8 @@ var Tp = {
           fields: {
             steamid: {
               n: 1,
-              br: P.readFixed64String,
-              bw: F.writeFixed64String,
+              br: F.readFixed64String,
+              bw: I.writeFixed64String,
             },
           },
         }),
@@ -6133,46 +6192,46 @@ var Tp = {
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CSaleFeature_GetYIRCurrentMonthlySummary_Request`;
     }
   },
-  jm = class e extends V.Message {
+  jm = class e extends H.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.year || O(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.year || k(e.M()),
+        H.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -6181,48 +6240,48 @@ var Tp = {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            year: { n: 1, br: P.readUint32, bw: F.writeUint32 },
-            month: { n: 2, br: P.readUint32, bw: F.writeUint32 },
-            games_played: { n: 4, br: P.readUint32, bw: F.writeUint32 },
-            top_played_appid: { n: 5, br: P.readUint32, bw: F.writeUint32 },
-            longest_streak_days: { n: 6, br: P.readUint32, bw: F.writeUint32 },
-            rt_streak_start: { n: 7, br: P.readUint32, bw: F.writeUint32 },
-            achievements: { n: 8, br: P.readUint32, bw: F.writeUint32 },
-            screenshots: { n: 9, br: P.readUint32, bw: F.writeUint32 },
+            year: { n: 1, br: F.readUint32, bw: I.writeUint32 },
+            month: { n: 2, br: F.readUint32, bw: I.writeUint32 },
+            games_played: { n: 4, br: F.readUint32, bw: I.writeUint32 },
+            top_played_appid: { n: 5, br: F.readUint32, bw: I.writeUint32 },
+            longest_streak_days: { n: 6, br: F.readUint32, bw: I.writeUint32 },
+            rt_streak_start: { n: 7, br: F.readUint32, bw: I.writeUint32 },
+            achievements: { n: 8, br: F.readUint32, bw: I.writeUint32 },
+            screenshots: { n: 9, br: F.readUint32, bw: I.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= k(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= A(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return M(e.M(), t, n);
+      return N(e.M(), t, n);
     }
     static fromObject(t) {
-      return j(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new H.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return L(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      O(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new H.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
@@ -6232,17 +6291,18 @@ var Tp = {
   Mm;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`SaleFeature.GetUserYearInReview#1`, Eo(im, t, n), am, {
+    return e.SendMsg(`SaleFeature.GetUserYearInReview#1`, To(im, t, n), am, {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.GetUserYearInReview = t;
   function n(e, t, n) {
     return e.SendMsg(
       `SaleFeature.GetUserSharingPermissions#1`,
-      Eo(cm, t, n),
+      To(cm, t, n),
       lm,
       { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
     );
@@ -6251,31 +6311,37 @@ var Tp = {
   function r(e, t, n) {
     return e.SendMsg(
       `SaleFeature.SetUserSharingPermissions#1`,
-      Eo(om, t, n),
+      To(om, t, n),
       sm,
-      { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
+      { ePrivilege: 1, eWebAPIKeyRequirement: 2, rgBrowserAPISites: [`store`] },
     );
   }
   e.SetUserSharingPermissions = r;
   function i(e, t, n) {
     return e.SendMsg(
       `SaleFeature.GetUserYearAchievements#1`,
-      Eo(um, t, n),
+      To(um, t, n),
       dm,
-      { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.GetUserYearAchievements = i;
   function a(e, t, n) {
-    return e.SendMsg(`SaleFeature.GetUserYearScreenshots#1`, Eo(fm, t, n), pm, {
+    return e.SendMsg(`SaleFeature.GetUserYearScreenshots#1`, To(fm, t, n), pm, {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.GetUserYearScreenshots = a;
   function o(e, t, n) {
-    return e.SendMsg(`SaleFeature.GetUserActionData#1`, Eo(gm, t, n), _m, {
+    return e.SendMsg(`SaleFeature.GetUserActionData#1`, To(gm, t, n), _m, {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
@@ -6286,7 +6352,7 @@ var Tp = {
   function s(e, t, n) {
     return e.SendMsg(
       `SaleFeature.GetMultipleUserActionData#1`,
-      Eo(vm, t, n),
+      To(vm, t, n),
       ym,
       {
         bConstMethod: !0,
@@ -6300,7 +6366,7 @@ var Tp = {
   function c(e, t, n) {
     return e.SendMsg(
       `SaleFeature.GetAllUserActionDataForType#1`,
-      Eo(xm, t, n),
+      To(xm, t, n),
       Sm,
       { bConstMethod: !0, ePrivilege: 4 },
     );
@@ -6309,25 +6375,35 @@ var Tp = {
   function l(e, t, n) {
     return e.SendMsg(
       `SaleFeature.GetFriendsSharedYearInReview#1`,
-      Eo(wm, t, n),
+      To(wm, t, n),
       Em,
-      { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 1,
+        eWebAPIKeyRequirement: 2,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.GetFriendsSharedYearInReview = l;
   function u(e, t, n) {
     return e.SendMsg(
       `SaleFeature.GetUserYearInReviewShareImage#1`,
-      Eo(Dm, t, n),
+      To(Dm, t, n),
       Om,
-      { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.GetUserYearInReviewShareImage = u;
   function d(e, t, n) {
     return e.SendMsg(
       `SaleFeature.GetYIRCurrentMonthlySummary#1`,
-      Eo(Am, t, n),
+      To(Am, t, n),
       jm,
       { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
     );
@@ -6335,374 +6411,374 @@ var Tp = {
   e.GetYIRCurrentMonthlySummary = d;
 })((Mm ||= {}));
 var Nm = {
-    19: [19, Sr, xn, es, ic, Zc],
-    [go]: [go, Wa, na, Ho, mc, dr, zl],
-    [ir]: [ir, Vo, yn, $o],
+    19: [19, xr, bn, $o, rc, Xc],
+    [ho]: [ho, Ua, ta, Vo, pc, ur, Rl],
+    [rr]: [rr, Bo, vn, Qo],
     113: [113],
-    21: [21, br],
+    21: [21, yr],
     492: [492],
-    [Qn]: [Qn, Gn],
-    [Sr]: [19, Sr, xn, $r],
-    9: [9, jl, tr, li, Fi, qr, Ac],
-    [Wa]: [go, Wa, na, Cn, Ia],
-    122: [122, _r, vl, di, Go],
-    [cc]: [cc, Gn],
-    [xn]: [19, Sr, xn, Qa],
-    599: [599, Ui, wo],
-    [$r]: [Sr, $r],
-    [Qo]: [Qo, Ra, Ic],
-    [vi]: [vi, wl, Bc],
-    [Vo]: [ir, Vo, Ha, Nc],
-    [wl]: [vi, wl, Bc],
+    [Zn]: [Zn, Wn],
+    [xr]: [19, xr, bn, Qr],
+    9: [9, Al, er, ci, Pi, Kr, kc],
+    [Ua]: [ho, Ua, ta, Sn, Fa],
+    122: [122, gr, _l, ui, Wo],
+    [sc]: [sc, Wn],
+    [bn]: [19, xr, bn, Za],
+    599: [599, Hi, Co],
+    [Qr]: [xr, Qr],
+    [Zo]: [Zo, La, Fc],
+    [_i]: [_i, Cl, zc],
+    [Bo]: [rr, Bo, Va, Mc],
+    [Cl]: [_i, Cl, zc],
     597: [597],
-    [fn]: [fn, bn, Xi, _c],
-    [gn]: [gn],
-    [jr]: [jr],
-    [yn]: [ir, yn, ui, ti],
-    [qi]: [qi, oo],
-    [na]: [go, Wa, na],
-    [Ra]: [Qo, Ra],
-    [da]: [da, ca],
-    [$o]: [ir, $o, pr],
-    [jn]: [jn],
-    [to]: [to],
-    [cr]: [cr, Ns],
-    [ss]: [ss],
-    [gl]: [gl, Vr, zr],
-    128: [128, Pi],
-    [xs]: [xs],
-    [Xc]: [Xc],
-    [Ho]: [go, Ho],
-    [bi]: [bi],
-    493: [493],
-    [Va]: [Va, lr],
-    [Ds]: [Ds, Qr],
-    [ca]: [da, ca],
-    [mc]: [go, mc],
-    [$a]: [$a, Gn],
-    [oo]: [qi, oo],
-    [ho]: [ho],
-    [Hc]: [Hc, so],
-    [Jc]: [Jc],
-    [Pa]: [Pa, Ec],
-    [Rr]: [Rr, Ns],
-    [Bc]: [vi, wl, Bc],
-    [Ic]: [Qo, Ic],
-    [va]: [va, pr],
-    [_r]: [122, _r],
-    [Ec]: [Pa, Ec],
-    [eo]: [eo],
-    [lr]: [Va, lr],
-    [dr]: [go, dr],
-    [Aa]: [Aa],
-    [wn]: [wn],
-    [mr]: [mr],
-    [rr]: [rr],
-    [Vr]: [gl, Vr, wc, Nr],
-    [Ar]: [Ar],
-    699: [699],
-    [sc]: [sc],
-    [es]: [19, es],
-    [Kc]: [Kc],
-    [Lo]: [Lo],
-    [Ha]: [Vo, Ha],
-    [bn]: [fn, bn],
-    [br]: [21, br],
-    [_i]: [_i],
-    [Ys]: [Ys, ls, ks, ns],
-    [ic]: [19, ic],
-    [Nc]: [Vo, Nc],
-    [Xr]: [Xr],
-    [vo]: [vo],
-    [kn]: [kn],
-    [Fo]: [Fo],
-    [mo]: [mo],
-    [Ua]: [Ua],
-    [er]: [er],
-    [si]: [si],
-    [ja]: [ja],
-    [Di]: [Di],
-    701: [701, Vi, xa, Pc],
-    [Ui]: [599, Ui, wo],
-    [Vs]: [Vs],
-    [Rc]: [Rc],
-    [jl]: [9, jl, sa],
-    [rs]: [rs, us],
-    [Pi]: [128, Pi],
-    [Cc]: [Cc],
-    [ci]: [ci],
-    [Cn]: [Wa, Cn, Es],
-    [us]: [rs, us],
-    [uc]: [uc],
-    [Kn]: [Kn],
-    [kr]: [kr],
-    [tr]: [9, tr],
-    [dn]: [dn],
-    [vl]: [122, vl],
-    [ka]: [ka],
-    [Es]: [Cn, Es, Tr, Ti, ii],
-    [as]: [as, hs],
-    [Sn]: [Sn],
-    [$c]: [$c],
-    [li]: [9, li],
-    [so]: [Hc, so],
-    [pn]: [pn],
-    [ac]: [ac],
-    [Wr]: [Wr],
-    [gc]: [gc],
-    [fo]: [fo],
+    [dn]: [dn, yn, Yi, gc],
     [hn]: [hn],
-    [ls]: [Ys, ls],
-    [Ma]: [Ma],
-    [Qr]: [Ds, Qr],
-    [On]: [On],
-    [Qi]: [Qi],
-    [ui]: [yn, ui],
-    [Bn]: [Bn],
-    [Po]: [Po],
-    [Gi]: [Gi],
-    [ri]: [ri],
-    [Bs]: [Bs],
-    [Al]: [Al],
-    [Qc]: [Qc],
-    [Fi]: [9, Fi],
-    [fi]: [fi],
-    [zr]: [gl, zr],
-    [Rn]: [Rn],
-    [ea]: [ea],
-    [Da]: [Da],
-    [wo]: [599, Ui, wo],
-    [pc]: [pc],
-    [zn]: [zn],
-    [zc]: [zc, Xo],
-    [tl]: [tl],
-    [xi]: [xi],
-    [ga]: [ga],
-    [Fn]: [Fn, mi, Mo, Ki, la],
-    [Gn]: [Qn, cc, $a, Gn],
-    [Zc]: [19, Zc],
-    [Ms]: [Ms],
-    [ko]: [ko],
-    [ys]: [ys],
-    [Uc]: [Uc],
-    [Uo]: [Uo],
-    [el]: [el],
-    [Hr]: [Hr],
-    [yc]: [yc],
-    [ar]: [ar],
-    [ti]: [yn, ti],
-    [ai]: [ai],
-    [El]: [El],
-    [Ro]: [Ro],
-    [or]: [or],
-    [Hl]: [Hl],
-    [fc]: [fc],
-    [Cs]: [Cs],
-    [Pl]: [Pl],
-    [Ba]: [Ba],
-    [po]: [po],
-    [fs]: [fs],
-    [Ni]: [Ni],
-    [nr]: [nr],
-    [Ln]: [Ln],
-    [Ws]: [Ws],
-    [ws]: [ws],
-    [wr]: [wr],
-    [Jo]: [Jo],
-    [hl]: [hl],
-    [Ta]: [Ta],
-    [Mi]: [Mi],
-    [Jr]: [Jr],
-    [co]: [co],
-    [Tr]: [Es, Tr],
-    [gi]: [gi],
-    [Xo]: [zc, Xo],
-    [hc]: [hc, Rs],
-    [Ci]: [Ci],
-    [Pn]: [Pn],
-    [Xi]: [fn, Xi],
-    [Or]: [Or],
-    [Hn]: [Hn],
-    [Sc]: [Sc],
-    [Ka]: [Ka],
-    [Ps]: [Ps],
-    [Zs]: [Zs],
-    [xo]: [xo],
-    [ni]: [ni],
-    [wc]: [Vr, wc],
-    [qr]: [9, qr],
-    [Mc]: [Mc],
-    [gs]: [gs],
-    [yl]: [yl],
-    [ma]: [ma],
-    [Oc]: [Oc],
-    [Qa]: [xn, Qa],
-    [fr]: [fr],
-    [xc]: [xc],
-    [Do]: [Do],
-    [di]: [122, di],
-    872: [872],
-    [Sl]: [Sl],
-    [xr]: [xr],
-    [As]: [As],
-    [bs]: [bs],
-    [qc]: [qc],
-    [La]: [La],
-    [Co]: [Co],
-    [Pr]: [Pr],
-    [uo]: [uo],
-    [io]: [io],
-    [hr]: [hr],
-    [Vi]: [701, Vi, xa],
-    [Yc]: [Yc],
-    [ha]: [ha],
-    [ur]: [ur],
-    [ln]: [ln],
-    [Zo]: [Zo],
-    [Bl]: [Bl],
-    [Ga]: [Ga],
-    [$n]: [$n],
-    [ba]: [ba],
-    [nc]: [nc],
-    [Ac]: [9, Ac],
-    [ta]: [ta],
-    [bl]: [bl],
-    [is]: [is],
-    [ms]: [ms],
-    87: [87],
-    [Go]: [122, Go],
-    [hs]: [as, hs],
-    84: [84],
-    [yi]: [yi],
-    [Ia]: [Wa, Ia],
-    [Ir]: [Ir],
-    [Gc]: [Gc],
-    [Wi]: [Wi],
+    [Ar]: [Ar],
+    [vn]: [rr, vn, li, ei],
+    [Ki]: [Ki, ao],
+    [ta]: [ho, Ua, ta],
+    [La]: [Zo, La],
+    [ua]: [ua, sa],
+    [Qo]: [rr, Qo, fr],
     [An]: [An],
-    [Za]: [Za],
-    [Un]: [Un],
-    [cl]: [cl],
-    [Ll]: [Ll],
-    [Rl]: [Rl],
-    [Zn]: [Zn],
-    [vn]: [vn],
-    [Oa]: [Oa],
-    [xa]: [701, Vi, xa],
-    [Ri]: [Ri],
-    [Ns]: [cr, Rr, Ns],
-    [qs]: [qs],
-    [yo]: [yo],
-    [No]: [No],
-    [Tl]: [Tl],
-    [Ei]: [Ei],
-    [Xn]: [Xn],
-    [qn]: [qn],
-    [Mn]: [Mn],
-    [bo]: [bo],
-    [ro]: [ro],
-    [Bo]: [Bo],
-    [Er]: [Er],
-    [In]: [In],
-    [Ts]: [Ts],
-    [vc]: [vc],
-    [pi]: [pi],
-    [Xs]: [Xs],
-    [mi]: [Fn, mi],
-    [Dr]: [Dr],
-    [So]: [So],
-    [Us]: [Us],
-    [Lc]: [Lc],
-    [Wn]: [Wn],
-    [Mo]: [Fn, Mo, Ki],
-    [Yi]: [Yi],
-    [_s]: [_s],
-    [Br]: [Br],
-    [jo]: [jo],
-    [wi]: [wi],
-    [Gr]: [Gr],
-    [kc]: [kc],
-    [Ji]: [Ji],
-    [pr]: [$o, va, pr],
-    [Rs]: [hc, Rs],
-    [rc]: [rc],
-    [gr]: [gr],
-    [Ol]: [Ol],
-    [fl]: [fl],
-    [Nn]: [Nn],
-    [_l]: [_l],
-    [Ko]: [Ko],
-    [no]: [no],
-    [Dc]: [Dc],
-    [Qs]: [Qs],
-    [ds]: [ds],
-    [qa]: [qa],
-    [Ml]: [Ml],
-    [Ls]: [Ls],
-    [oi]: [oi],
-    [sl]: [sl],
-    [ia]: [ia],
-    [Ti]: [Es, Ti, ii],
-    [Si]: [Si],
-    [Tc]: [Tc],
-    [ji]: [ji],
-    [Jn]: [Jn],
-    [Ki]: [Fn, Mo, Ki],
-    [Wo]: [Wo],
-    [_o]: [_o],
-    [Ai]: [Ai],
-    [ul]: [ul],
-    [Mr]: [Mr],
-    [Cl]: [Cl],
-    784: [784],
-    [Bi]: [Bi],
-    [cs]: [cs],
+    [eo]: [eo],
+    [sr]: [sr, Ms],
+    [os]: [os],
+    [hl]: [hl, Br, Rr],
+    128: [128, Ni],
+    [bs]: [bs],
+    [Yc]: [Yc],
+    [Vo]: [ho, Vo],
+    [yi]: [yi],
+    493: [493],
+    [Ba]: [Ba, cr],
+    [Es]: [Es, Zr],
+    [sa]: [ua, sa],
+    [pc]: [ho, pc],
+    [Qa]: [Qa, Wn],
+    [ao]: [Ki, ao],
+    [mo]: [mo],
+    [Vc]: [Vc, oo],
+    [qc]: [qc],
+    [Na]: [Na, Tc],
+    [Lr]: [Lr, Ms],
+    [zc]: [_i, Cl, zc],
+    [Fc]: [Zo, Fc],
+    [_a]: [_a, fr],
+    [gr]: [122, gr],
+    [Tc]: [Na, Tc],
+    [$a]: [$a],
+    [cr]: [Ba, cr],
+    [ur]: [ho, ur],
+    [ka]: [ka],
+    [Cn]: [Cn],
+    [pr]: [pr],
+    [nr]: [nr],
+    [Br]: [hl, Br, Cc, Mr],
+    [kr]: [kr],
+    699: [699],
+    [oc]: [oc],
+    [$o]: [19, $o],
+    [Gc]: [Gc],
     [Io]: [Io],
-    [Oo]: [Oo],
-    [zl]: [go, zl],
-    [Kr]: [Kr],
-    [js]: [js],
-    [un]: [un],
-    [ua]: [ua],
-    [tc]: [tc],
-    [_c]: [fn, _c],
-    [sa]: [jl, sa],
-    [aa]: [aa],
-    [il]: [il],
-    [Ao]: [Ao],
-    [ra]: [ra],
-    [Yo]: [Yo],
-    [ec]: [ec],
-    [zi]: [zi],
-    [Vl]: [Vl],
-    [ei]: [ei],
-    [Ss]: [Ss],
-    [Wc]: [Wc],
-    [Hi]: [Hi],
-    [Hs]: [Hs],
-    [Il]: [Il],
-    [ii]: [Es, Ti, ii],
-    [En]: [En],
-    [Nr]: [Vr, Nr],
-    [vr]: [vr],
-    [lc]: [lc],
-    [ns]: [Ys, ns],
-    809: [809],
-    [yr]: [yr],
-    [Nl]: [Nl],
-    [ts]: [ts],
-    [ki]: [ki],
-    [_a]: [_a],
-    [Ya]: [Ya, Fr],
-    [la]: [Fn, la],
-    [Fa]: [Fa],
-    [Fr]: [Ya, Fr],
-    [jc]: [jc],
+    [Va]: [Bo, Va],
+    [yn]: [dn, yn],
+    [yr]: [21, yr],
+    [gi]: [gi],
+    [Js]: [Js, cs, Os, ts],
+    [rc]: [19, rc],
+    [Mc]: [Bo, Mc],
     [Yr]: [Yr],
-    [ks]: [Ys, ks],
-    [Pc]: [701, Pc],
-    [Js]: [Js],
+    [_o]: [_o],
+    [On]: [On],
+    [Po]: [Po],
+    [po]: [po],
+    [Ha]: [Ha],
+    [$n]: [$n],
+    [oi]: [oi],
+    [Aa]: [Aa],
+    [Ei]: [Ei],
+    701: [701, Bi, ba, Nc],
+    [Hi]: [599, Hi, Co],
+    [Bs]: [Bs],
+    [Lc]: [Lc],
+    [Al]: [9, Al, oa],
+    [ns]: [ns, ls],
+    [Ni]: [128, Ni],
+    [Sc]: [Sc],
+    [si]: [si],
+    [Sn]: [Ua, Sn, Ts],
+    [ls]: [ns, ls],
+    [lc]: [lc],
+    [Gn]: [Gn],
+    [Or]: [Or],
+    [er]: [9, er],
+    [un]: [un],
+    [_l]: [122, _l],
+    [Oa]: [Oa],
+    [Ts]: [Sn, Ts, wr, wi, ri],
+    [is]: [is, ms],
+    [xn]: [xn],
+    [Qc]: [Qc],
+    [ci]: [9, ci],
+    [oo]: [Vc, oo],
+    [fn]: [fn],
+    [ic]: [ic],
+    [Ur]: [Ur],
+    [hc]: [hc],
+    [uo]: [uo],
+    [mn]: [mn],
+    [cs]: [Js, cs],
+    [ja]: [ja],
+    [Zr]: [Es, Zr],
+    [Dn]: [Dn],
+    [Zi]: [Zi],
+    [li]: [vn, li],
+    [zn]: [zn],
+    [No]: [No],
+    [Wi]: [Wi],
+    [ni]: [ni],
+    [zs]: [zs],
+    [kl]: [kl],
+    [Zc]: [Zc],
+    [Pi]: [9, Pi],
+    [di]: [di],
+    [Rr]: [hl, Rr],
+    [Ln]: [Ln],
+    [$i]: [$i],
+    [Ea]: [Ea],
+    [Co]: [599, Hi, Co],
+    [fc]: [fc],
+    [Rn]: [Rn],
+    [Rc]: [Rc, Yo],
+    [el]: [el],
+    [bi]: [bi],
+    [ha]: [ha],
+    [Pn]: [Pn, pi, jo, Gi, ca],
+    [Wn]: [Zn, sc, Qa, Wn],
+    [Xc]: [19, Xc],
+    [js]: [js],
+    [Oo]: [Oo],
+    [vs]: [vs],
+    [Hc]: [Hc],
+    [Ho]: [Ho],
+    [$c]: [$c],
+    [Vr]: [Vr],
+    [vc]: [vc],
+    [ir]: [ir],
+    [ei]: [vn, ei],
+    [ii]: [ii],
+    [Tl]: [Tl],
+    [Lo]: [Lo],
+    [ar]: [ar],
+    [Vl]: [Vl],
+    [dc]: [dc],
+    [Ss]: [Ss],
+    [Nl]: [Nl],
+    [za]: [za],
+    [fo]: [fo],
+    [ds]: [ds],
+    [Mi]: [Mi],
+    [tr]: [tr],
+    [In]: [In],
+    [Us]: [Us],
+    [Cs]: [Cs],
+    [Cr]: [Cr],
+    [qo]: [qo],
+    [ml]: [ml],
+    [wa]: [wa],
+    [ji]: [ji],
+    [qr]: [qr],
+    [so]: [so],
+    [wr]: [Ts, wr],
+    [hi]: [hi],
+    [Yo]: [Rc, Yo],
+    [mc]: [mc, Ls],
+    [Si]: [Si],
+    [Nn]: [Nn],
+    [Yi]: [dn, Yi],
+    [Dr]: [Dr],
+    [Vn]: [Vn],
+    [xc]: [xc],
+    [Ga]: [Ga],
+    [Ns]: [Ns],
+    [Xs]: [Xs],
+    [bo]: [bo],
+    [ti]: [ti],
+    [Cc]: [Br, Cc],
+    [Kr]: [9, Kr],
+    [jc]: [jc],
+    [hs]: [hs],
+    [vl]: [vl],
+    [pa]: [pa],
+    [Dc]: [Dc],
+    [Za]: [bn, Za],
+    [dr]: [dr],
+    [bc]: [bc],
+    [Eo]: [Eo],
+    [ui]: [122, ui],
+    872: [872],
+    [xl]: [xl],
+    [br]: [br],
+    [ks]: [ks],
+    [ys]: [ys],
+    [Kc]: [Kc],
+    [Ia]: [Ia],
+    [So]: [So],
+    [Nr]: [Nr],
+    [lo]: [lo],
+    [ro]: [ro],
+    [mr]: [mr],
+    [Bi]: [701, Bi, ba],
+    [Jc]: [Jc],
+    [ma]: [ma],
+    [lr]: [lr],
+    [cn]: [cn],
+    [Xo]: [Xo],
+    [zl]: [zl],
+    [Wa]: [Wa],
+    [Qn]: [Qn],
+    [ya]: [ya],
+    [tc]: [tc],
+    [kc]: [9, kc],
+    [ea]: [ea],
+    [yl]: [yl],
+    [rs]: [rs],
+    [ps]: [ps],
+    87: [87],
+    [Wo]: [122, Wo],
+    [ms]: [is, ms],
+    84: [84],
+    [vi]: [vi],
+    [Fa]: [Ua, Fa],
+    [Fr]: [Fr],
+    [Wc]: [Wc],
+    [Ui]: [Ui],
+    [kn]: [kn],
+    [Xa]: [Xa],
+    [Hn]: [Hn],
+    [sl]: [sl],
+    [Il]: [Il],
+    [Ll]: [Ll],
+    [Xn]: [Xn],
+    [_n]: [_n],
+    [Da]: [Da],
+    [ba]: [701, Bi, ba],
+    [Li]: [Li],
+    [Ms]: [sr, Lr, Ms],
+    [Ks]: [Ks],
+    [vo]: [vo],
+    [Mo]: [Mo],
+    [wl]: [wl],
+    [Ti]: [Ti],
+    [Yn]: [Yn],
+    [Kn]: [Kn],
+    [jn]: [jn],
+    [yo]: [yo],
+    [no]: [no],
+    [zo]: [zo],
+    [Tr]: [Tr],
+    [Fn]: [Fn],
+    [ws]: [ws],
+    [_c]: [_c],
+    [fi]: [fi],
+    [Ys]: [Ys],
+    [pi]: [Pn, pi],
+    [Er]: [Er],
+    [xo]: [xo],
+    [Hs]: [Hs],
+    [Ic]: [Ic],
+    [Un]: [Un],
+    [jo]: [Pn, jo, Gi],
+    [Ji]: [Ji],
+    [gs]: [gs],
+    [zr]: [zr],
+    [Ao]: [Ao],
+    [Ci]: [Ci],
+    [Wr]: [Wr],
+    [Oc]: [Oc],
+    [qi]: [qi],
+    [fr]: [Qo, _a, fr],
+    [Ls]: [mc, Ls],
+    [nc]: [nc],
+    [hr]: [hr],
+    [Dl]: [Dl],
+    [dl]: [dl],
+    [Mn]: [Mn],
+    [gl]: [gl],
+    [Go]: [Go],
+    [to]: [to],
+    [Ec]: [Ec],
+    [Zs]: [Zs],
+    [us]: [us],
+    [Ka]: [Ka],
+    [jl]: [jl],
+    [Is]: [Is],
+    [ai]: [ai],
+    [ol]: [ol],
+    [ra]: [ra],
+    [wi]: [Ts, wi, ri],
+    [xi]: [xi],
+    [wc]: [wc],
+    [Ai]: [Ai],
+    [qn]: [qn],
+    [Gi]: [Pn, jo, Gi],
+    [Uo]: [Uo],
+    [go]: [go],
+    [ki]: [ki],
+    [ll]: [ll],
+    [jr]: [jr],
+    [Sl]: [Sl],
+    784: [784],
+    [zi]: [zi],
+    [ss]: [ss],
+    [Fo]: [Fo],
+    [Do]: [Do],
+    [Rl]: [ho, Rl],
+    [Gr]: [Gr],
+    [As]: [As],
+    [ln]: [ln],
+    [la]: [la],
+    [ec]: [ec],
+    [gc]: [dn, gc],
+    [oa]: [Al, oa],
+    [ia]: [ia],
+    [rl]: [rl],
+    [ko]: [ko],
+    [na]: [na],
+    [Jo]: [Jo],
+    [$s]: [$s],
+    [Ri]: [Ri],
+    [Bl]: [Bl],
+    [$r]: [$r],
+    [xs]: [xs],
+    [Uc]: [Uc],
+    [Vi]: [Vi],
+    [Vs]: [Vs],
+    [Fl]: [Fl],
+    [ri]: [Ts, wi, ri],
+    [Tn]: [Tn],
+    [Mr]: [Br, Mr],
+    [_r]: [_r],
+    [cc]: [cc],
+    [ts]: [Js, ts],
+    809: [809],
+    [vr]: [vr],
+    [Ml]: [Ml],
+    [es]: [es],
+    [Oi]: [Oi],
+    [ga]: [ga],
+    [Ja]: [Ja, Pr],
+    [ca]: [Pn, ca],
+    [Pa]: [Pa],
+    [Pr]: [Ja, Pr],
+    [Ac]: [Ac],
+    [Jr]: [Jr],
+    [Os]: [Js, Os],
+    [Nc]: [701, Nc],
+    [qs]: [qs],
   },
-  Pm = [vi, wl, Bc, Ra];
+  Pm = [_i, Cl, zc, La];
 function Fm(e, t) {
   let n = e.filter((e) => Pm.findIndex((t) => t == e.nTagId) == -1),
     r = [],
@@ -6737,7 +6813,7 @@ function Fm(e, t) {
   return r;
 }
 function Im() {
-  return w.country_code.toLowerCase() === `cn`;
+  return T.country_code.toLowerCase() === `cn`;
 }
 function Lm(e, t, n) {
   let { rgRankings: r, nTotalResultCount: i } = zm(e, t),
@@ -6810,7 +6886,7 @@ function Bm(e, t, n) {
   let r = n.stats.total_playtime_percentagex100,
     i = `${e}_playtime_percentagex100`,
     a = n.relative_game_stats[i] ?? 0;
-  return Os((a * r) / t, 0, 1e4);
+  return Ds((a * r) / t, 0, 1e4);
 }
 function Vm(e, t) {
   let n = () => !0;
@@ -6932,7 +7008,7 @@ function Gm(e, t, n, r) {
 }
 function Km(e) {
   e.game_summary?.length &&
-    Li(
+    Ii(
       e.total_stats &&
         Array.isArray(e.games) &&
         Array.isArray(e.months) &&
@@ -6947,7 +7023,7 @@ function Km(e) {
 }
 function qm(e) {
   return (
-    Li(
+    Ii(
       typeof e.account_id == `number` &&
         typeof e.year == `number` &&
         typeof e.privacy_state == `number` &&
@@ -6961,7 +7037,7 @@ function qm(e) {
 function Jm(e) {
   if (typeof e?.new_releases == `number`)
     return (
-      Li(
+      Ii(
         typeof e.recent_releases == `number` &&
           typeof e.classic_releases == `number` &&
           typeof e.recent_cutoff_year == `number`,
@@ -6973,7 +7049,7 @@ function Jm(e) {
 function Ym(e) {
   if (typeof e?.games_played == `number`)
     return (
-      Li(
+      Ii(
         typeof e.unlocked_achievements == `number` &&
           typeof e.longest_streak == `number`,
         `YIR previous year summary missing expected fields!`,
@@ -7027,7 +7103,7 @@ var Xm = class {
       return this.m_mapGameSummary.get(e);
     }
     GetAccountID() {
-      return new wa(this.m_steamid).GetAccountID();
+      return new Ca(this.m_steamid).GetAccountID();
     }
     GetFilteredGameSummary() {
       return this.m_allStats.playtime_stats.game_summary.filter(
@@ -7075,9 +7151,10 @@ var Xm = class {
       let i = qm(e);
       if (
         ((this.m_allStats = i),
-        (this.m_steamid = wa
-          .InitFromAccountID(i.account_id, N.EUNIVERSE)
-          .ConvertTo64BitString()),
+        (this.m_steamid = Ca.InitFromAccountID(
+          i.account_id,
+          P.EUNIVERSE,
+        ).ConvertTo64BitString()),
         (this.m_globalPercentiles = t ?? void 0),
         (this.m_globalGameplayDistribution = Jm(n)),
         (this.m_previousYearSummary = Ym(r)),
@@ -7085,14 +7162,14 @@ var Xm = class {
           i.playtime_stats.total_stats.total_sessions > 0)
       ) {
         (i.playtime_stats.game_summary.forEach((e) => {
-          (Li(
+          (Ii(
             !this.m_mapGameSummary.has(e.appid),
             `Found at least two record of appid ${e.appid} in stats.playtime_stats.game_summary`,
           ),
             this.m_mapGameSummary.set(e.appid, e));
         }),
           i.playtime_stats.games.forEach((e) => {
-            (Li(
+            (Ii(
               !this.m_mapGameStats.has(e.appid),
               `Found at least two record of appid ${e.appid} in stats.playtime_stats.games`,
             ),
@@ -7155,7 +7232,7 @@ var Xm = class {
           r[0] += i.total_playtime_percentagex100;
           continue;
         }
-        let a = (n - t) / za.PerYear,
+        let a = (n - t) / Ra.PerYear,
           o = e.findIndex((e) => a < e);
         o >= 0
           ? (r[o] += i.total_playtime_percentagex100)
@@ -7202,7 +7279,7 @@ function th(e, t, n, r = {}) {
   };
 }
 function nh(e, t) {
-  return p(th(Gs(), e, t));
+  return p(th(Ws(), e, t));
 }
 function rh(e, t) {
   let { data: n, isLoading: r } = nh(e, t),
@@ -7214,7 +7291,7 @@ function rh(e, t) {
       previous_year_summary: c,
     } = n ?? {};
   return {
-    userYearInReview: R.useMemo(() => {
+    userYearInReview: z.useMemo(() => {
       if (i == 1 && a) return new Xm(a, o, s, c);
     }, [i, a, o, s, c]),
     isLoading: r,
@@ -7224,7 +7301,7 @@ function ih(e, t) {
   return nh(e, t).data?.privacy_state;
 }
 function ah(e, t) {
-  let n = Gs(),
+  let n = Ws(),
     r = c();
   return f({
     mutationFn: async (r) => {
@@ -7253,11 +7330,11 @@ function oh(e, t, n) {
     screenshots: new Qm.default((r) => _h(e, t, n, r), { cache: !1 }),
   };
 }
-var sh = R.createContext(void 0);
+var sh = z.createContext(void 0);
 function ch() {
-  let e = R.useContext(sh);
+  let e = z.useContext(sh);
   return (
-    Li(e, `Cannot use YIR data loaders outside of Steam Replay page!`), e
+    Ii(e, `Cannot use YIR data loaders outside of Steam Replay page!`), e
   );
 }
 async function lh(e, t, n, r) {
@@ -7311,7 +7388,7 @@ function ph(e, t, n) {
     queryKey: [`YIR`, `achievements`, `display`, t, n],
     queryFn: async () => {
       try {
-        let r = await nl.GetGameAchievements(e, { appid: t, language: n });
+        let r = await tl.GetGameAchievements(e, { appid: t, language: n });
         if (r.GetEResult() == 1)
           return (r.Body().toObject().achievements ?? []).map((e) => ({
             ...e,
@@ -7327,16 +7404,16 @@ function ph(e, t, n) {
   };
 }
 function mh(e, t = !0) {
-  let n = Gs(),
+  let n = Ws(),
     { data: r } = p({
-      ...ph(n, e, N.LANGUAGE || `english`),
+      ...ph(n, e, P.LANGUAGE || `english`),
       enabled: t && !!e,
     });
   return r;
 }
 function hh(e) {
   let t = mh(e);
-  return R.useMemo(() => {
+  return z.useMemo(() => {
     let e = new Map();
     for (let n of t ?? []) n.internal_name && e.set(n.internal_name, n);
     return e;
@@ -7399,13 +7476,13 @@ function bh(e, t, n, r) {
   };
 }
 function xh(e, t) {
-  return p(bh(Gs(), e, t, w.is_support));
+  return p(bh(Ws(), e, t, T.is_support));
 }
 function Sh(e, t) {
   return {
     queryKey: [`YIR`, `FamilyGroup`, t],
     queryFn: async () => {
-      let n = await Wl.GetFamilyGroupForUser(e, {
+      let n = await Ul.GetFamilyGroupForUser(e, {
         steamid: t,
         include_family_group_response: !0,
       });
@@ -7417,7 +7494,7 @@ function Sh(e, t) {
   };
 }
 function Ch(e) {
-  return p(Sh(Gs(), e));
+  return p(Sh(Ws(), e));
 }
 function wh(e, t, n, r) {
   return {
@@ -7436,22 +7513,22 @@ function wh(e, t, n, r) {
   };
 }
 function Th(e, t, n) {
-  return p(wh(Gs(), e, t, n));
+  return p(wh(Ws(), e, t, n));
 }
-var Eh = R.createContext(void 0);
+var Eh = z.createContext(void 0);
 function Dh() {
-  let e = R.useContext(Eh);
-  return (Li(e, `Cannot use YIR page data outside of Steam Replay page!`), e);
+  let e = z.useContext(Eh);
+  return (Ii(e, `Cannot use YIR page data outside of Steam Replay page!`), e);
 }
 function Oh(e) {
   return e?.success === 1 || e?.success === 15;
 }
 function kh(e) {
   let t = e ? { appid: e } : void 0,
-    { data: n, isLoading: r } = Oi(t),
-    { data: i, isLoading: a } = Tn(t);
+    { data: n, isLoading: r } = Di(t),
+    { data: i, isLoading: a } = wn(t);
   return {
-    item: R.useMemo(
+    item: z.useMemo(
       () => (Oh(n) ? { info: n, assets: i ?? null } : void 0),
       [n, i],
     ),
@@ -7459,7 +7536,7 @@ function kh(e) {
   };
 }
 function Ah(e, t = !1) {
-  return p(jh(c(), rl(), e, t));
+  return p(jh(c(), nl(), e, t));
 }
 function jh(e, t, n, r = !1) {
   return {
@@ -7468,9 +7545,9 @@ function jh(e, t, n, r = !1) {
       let i = await Promise.all(
           n.map(async (n) => {
             let [i, a] = await Promise.allSettled([
-              e.fetchQuery(os(t, { appid: n })),
-              e.fetchQuery($s(t, { appid: n })),
-              r && e.fetchQuery(Zi(t, { appid: n })),
+              e.fetchQuery(as(t, { appid: n })),
+              e.fetchQuery(Qs(t, { appid: n })),
+              r && e.fetchQuery(Xi(t, { appid: n })),
             ]);
             return i.status === `rejected` || !Oh(i.value)
               ? null
@@ -7490,282 +7567,282 @@ function jh(e, t, n, r = !1) {
     staleTime: 0,
   };
 }
-var H = {};
-((H.arabic = () =>
-  C(() => import(`./chunk~e848daa62e.js`), [], import.meta.url)),
-  (H.brazilian = () =>
-    C(() => import(`./chunk~c38582be51.js`), [], import.meta.url)),
-  (H.bulgarian = () =>
-    C(() => import(`./chunk~ccfa18fa3d.js`), [], import.meta.url)),
-  (H.czech = () =>
-    C(() => import(`./chunk~1f89df6a13.js`), [], import.meta.url)),
-  (H.danish = () =>
-    C(() => import(`./chunk~fc2bbceb5d.js`), [], import.meta.url)),
-  (H.dutch = () =>
-    C(() => import(`./chunk~da5799f81f.js`), [], import.meta.url)),
-  (H.english = () =>
-    C(() => import(`./chunk~2516855c32.js`), [], import.meta.url)),
-  (H.finnish = () =>
-    C(() => import(`./chunk~d587003d0a.js`), [], import.meta.url)),
-  (H.french = () =>
-    C(() => import(`./chunk~ed4ff863ac.js`), [], import.meta.url)),
-  (H.german = () =>
-    C(() => import(`./chunk~81227c1f72.js`), [], import.meta.url)),
-  (H.greek = () =>
-    C(() => import(`./chunk~8e60606527.js`), [], import.meta.url)),
-  (H.hungarian = () =>
-    C(() => import(`./chunk~75ebecc6b1.js`), [], import.meta.url)),
-  (H.indonesian = () =>
-    C(() => import(`./chunk~0098d8b0af.js`), [], import.meta.url)),
-  (H.italian = () =>
-    C(() => import(`./chunk~957a796a0a.js`), [], import.meta.url)),
-  (H.japanese = () =>
-    C(() => import(`./chunk~7629d9c89e.js`), [], import.meta.url)),
-  (H.koreana = () =>
-    C(() => import(`./chunk~b6086b9c24.js`), [], import.meta.url)),
-  (H.latam = () =>
-    C(() => import(`./chunk~7e7a28ac3e.js`), [], import.meta.url)),
-  (H.malay = () =>
-    C(() => import(`./chunk~4ee96a1953.js`), [], import.meta.url)),
-  (H.norwegian = () =>
-    C(() => import(`./chunk~da887fc950.js`), [], import.meta.url)),
-  (H.polish = () =>
-    C(() => import(`./chunk~c56820d9a8.js`), [], import.meta.url)),
-  (H.portuguese = () =>
-    C(() => import(`./chunk~e06c119adf.js`), [], import.meta.url)),
-  (H.romanian = () =>
-    C(() => import(`./chunk~369394c631.js`), [], import.meta.url)),
-  (H.russian = () =>
-    C(() => import(`./chunk~d7addddcd5.js`), [], import.meta.url)),
-  (H.sc_schinese = () =>
-    C(() => import(`./chunk~c3ba49c415.js`), [], import.meta.url)),
-  (H.schinese = () =>
-    C(() => import(`./chunk~8b81f35864.js`), [], import.meta.url)),
-  (H.spanish = () =>
-    C(() => import(`./chunk~050cba1d23.js`), [], import.meta.url)),
-  (H.swedish = () =>
-    C(() => import(`./chunk~052acd148b.js`), [], import.meta.url)),
-  (H.tchinese = () =>
-    C(() => import(`./chunk~bb59787bf8.js`), [], import.meta.url)),
-  (H.thai = () =>
-    C(() => import(`./chunk~e8f199b312.js`), [], import.meta.url)),
-  (H.turkish = () =>
-    C(() => import(`./chunk~6cc30891b5.js`), [], import.meta.url)),
-  (H.ukrainian = () =>
-    C(() => import(`./chunk~75429e242c.js`), [], import.meta.url)),
-  (H.vietnamese = () =>
-    C(() => import(`./chunk~96e64272d7.js`), [], import.meta.url)));
-async function Mh(e) {
-  if (H[e]) return await H[e]();
-}
-var Nh = hi(Mh),
-  U = {};
+var U = {};
 ((U.arabic = () =>
-  C(() => import(`./chunk~2a9ee28e4f.js`), [], import.meta.url)),
+  w(() => import(`./chunk~e848daa62e.js`), [], import.meta.url)),
   (U.brazilian = () =>
-    C(() => import(`./chunk~f8d7ac36da.js`), [], import.meta.url)),
+    w(() => import(`./chunk~c38582be51.js`), [], import.meta.url)),
   (U.bulgarian = () =>
-    C(() => import(`./chunk~aaa9c40b3c.js`), [], import.meta.url)),
+    w(() => import(`./chunk~ccfa18fa3d.js`), [], import.meta.url)),
   (U.czech = () =>
-    C(() => import(`./chunk~a1b78a4c90.js`), [], import.meta.url)),
+    w(() => import(`./chunk~1f89df6a13.js`), [], import.meta.url)),
   (U.danish = () =>
-    C(() => import(`./chunk~a91207123e.js`), [], import.meta.url)),
+    w(() => import(`./chunk~fc2bbceb5d.js`), [], import.meta.url)),
   (U.dutch = () =>
-    C(() => import(`./chunk~435b527bf1.js`), [], import.meta.url)),
+    w(() => import(`./chunk~da5799f81f.js`), [], import.meta.url)),
   (U.english = () =>
-    C(() => import(`./chunk~d172c03b1c.js`), [], import.meta.url)),
+    w(() => import(`./chunk~2516855c32.js`), [], import.meta.url)),
   (U.finnish = () =>
-    C(() => import(`./chunk~bfb6237bed.js`), [], import.meta.url)),
+    w(() => import(`./chunk~d587003d0a.js`), [], import.meta.url)),
   (U.french = () =>
-    C(() => import(`./chunk~2c42f52255.js`), [], import.meta.url)),
+    w(() => import(`./chunk~ed4ff863ac.js`), [], import.meta.url)),
   (U.german = () =>
-    C(() => import(`./chunk~ad973f8cdb.js`), [], import.meta.url)),
+    w(() => import(`./chunk~81227c1f72.js`), [], import.meta.url)),
   (U.greek = () =>
-    C(() => import(`./chunk~8d234bc224.js`), [], import.meta.url)),
+    w(() => import(`./chunk~8e60606527.js`), [], import.meta.url)),
   (U.hungarian = () =>
-    C(() => import(`./chunk~b331777e11.js`), [], import.meta.url)),
+    w(() => import(`./chunk~75ebecc6b1.js`), [], import.meta.url)),
   (U.indonesian = () =>
-    C(() => import(`./chunk~618ee32f14.js`), [], import.meta.url)),
+    w(() => import(`./chunk~0098d8b0af.js`), [], import.meta.url)),
   (U.italian = () =>
-    C(() => import(`./chunk~f1ffa65450.js`), [], import.meta.url)),
+    w(() => import(`./chunk~957a796a0a.js`), [], import.meta.url)),
   (U.japanese = () =>
-    C(() => import(`./chunk~76a55c4c25.js`), [], import.meta.url)),
+    w(() => import(`./chunk~7629d9c89e.js`), [], import.meta.url)),
   (U.koreana = () =>
-    C(() => import(`./chunk~cdde58a513.js`), [], import.meta.url)),
+    w(() => import(`./chunk~b6086b9c24.js`), [], import.meta.url)),
   (U.latam = () =>
-    C(() => import(`./chunk~8b4e3972ff.js`), [], import.meta.url)),
+    w(() => import(`./chunk~7e7a28ac3e.js`), [], import.meta.url)),
   (U.malay = () =>
-    C(() => import(`./chunk~2595da3066.js`), [], import.meta.url)),
+    w(() => import(`./chunk~4ee96a1953.js`), [], import.meta.url)),
   (U.norwegian = () =>
-    C(() => import(`./chunk~5afd320c84.js`), [], import.meta.url)),
+    w(() => import(`./chunk~da887fc950.js`), [], import.meta.url)),
   (U.polish = () =>
-    C(() => import(`./chunk~9282844403.js`), [], import.meta.url)),
+    w(() => import(`./chunk~c56820d9a8.js`), [], import.meta.url)),
   (U.portuguese = () =>
-    C(() => import(`./chunk~c163bd573d.js`), [], import.meta.url)),
+    w(() => import(`./chunk~e06c119adf.js`), [], import.meta.url)),
   (U.romanian = () =>
-    C(() => import(`./chunk~09a2963a34.js`), [], import.meta.url)),
+    w(() => import(`./chunk~369394c631.js`), [], import.meta.url)),
   (U.russian = () =>
-    C(() => import(`./chunk~e3d6765cd6.js`), [], import.meta.url)),
+    w(() => import(`./chunk~d7addddcd5.js`), [], import.meta.url)),
   (U.sc_schinese = () =>
-    C(() => import(`./chunk~a0a45dd693.js`), [], import.meta.url)),
+    w(() => import(`./chunk~c3ba49c415.js`), [], import.meta.url)),
   (U.schinese = () =>
-    C(() => import(`./chunk~3893a6c80f.js`), [], import.meta.url)),
+    w(() => import(`./chunk~8b81f35864.js`), [], import.meta.url)),
   (U.spanish = () =>
-    C(() => import(`./chunk~685c663764.js`), [], import.meta.url)),
+    w(() => import(`./chunk~050cba1d23.js`), [], import.meta.url)),
   (U.swedish = () =>
-    C(() => import(`./chunk~1ba18ad10d.js`), [], import.meta.url)),
+    w(() => import(`./chunk~052acd148b.js`), [], import.meta.url)),
   (U.tchinese = () =>
-    C(() => import(`./chunk~6765789f0d.js`), [], import.meta.url)),
+    w(() => import(`./chunk~bb59787bf8.js`), [], import.meta.url)),
   (U.thai = () =>
-    C(() => import(`./chunk~0ebe7e9b63.js`), [], import.meta.url)),
+    w(() => import(`./chunk~e8f199b312.js`), [], import.meta.url)),
   (U.turkish = () =>
-    C(() => import(`./chunk~3b6d72df14.js`), [], import.meta.url)),
+    w(() => import(`./chunk~6cc30891b5.js`), [], import.meta.url)),
   (U.ukrainian = () =>
-    C(() => import(`./chunk~0c6c7fcccd.js`), [], import.meta.url)),
+    w(() => import(`./chunk~75429e242c.js`), [], import.meta.url)),
   (U.vietnamese = () =>
-    C(() => import(`./chunk~c45856eefb.js`), [], import.meta.url)));
-async function Ph(e) {
+    w(() => import(`./chunk~96e64272d7.js`), [], import.meta.url)));
+async function Mh(e) {
   if (U[e]) return await U[e]();
 }
-var Fh = hi(Ph),
+var Nh = mi(Mh),
   W = {};
 ((W.arabic = () =>
-  C(() => import(`./chunk~2fe7aa2317.js`), [], import.meta.url)),
+  w(() => import(`./chunk~2a9ee28e4f.js`), [], import.meta.url)),
   (W.brazilian = () =>
-    C(() => import(`./chunk~5e4fd7dc0f.js`), [], import.meta.url)),
+    w(() => import(`./chunk~f8d7ac36da.js`), [], import.meta.url)),
   (W.bulgarian = () =>
-    C(() => import(`./chunk~88092a0904.js`), [], import.meta.url)),
+    w(() => import(`./chunk~aaa9c40b3c.js`), [], import.meta.url)),
   (W.czech = () =>
-    C(() => import(`./chunk~1b633fa830.js`), [], import.meta.url)),
+    w(() => import(`./chunk~a1b78a4c90.js`), [], import.meta.url)),
   (W.danish = () =>
-    C(() => import(`./chunk~5ef149ef0c.js`), [], import.meta.url)),
+    w(() => import(`./chunk~a91207123e.js`), [], import.meta.url)),
   (W.dutch = () =>
-    C(() => import(`./chunk~6e9c13f2b2.js`), [], import.meta.url)),
+    w(() => import(`./chunk~435b527bf1.js`), [], import.meta.url)),
   (W.english = () =>
-    C(() => import(`./chunk~ab24f40556.js`), [], import.meta.url)),
+    w(() => import(`./chunk~d172c03b1c.js`), [], import.meta.url)),
   (W.finnish = () =>
-    C(() => import(`./chunk~6152752886.js`), [], import.meta.url)),
+    w(() => import(`./chunk~bfb6237bed.js`), [], import.meta.url)),
   (W.french = () =>
-    C(() => import(`./chunk~6b67b676cb.js`), [], import.meta.url)),
+    w(() => import(`./chunk~2c42f52255.js`), [], import.meta.url)),
   (W.german = () =>
-    C(() => import(`./chunk~fbf253d943.js`), [], import.meta.url)),
+    w(() => import(`./chunk~ad973f8cdb.js`), [], import.meta.url)),
   (W.greek = () =>
-    C(() => import(`./chunk~3428bc53a5.js`), [], import.meta.url)),
+    w(() => import(`./chunk~8d234bc224.js`), [], import.meta.url)),
   (W.hungarian = () =>
-    C(() => import(`./chunk~3cfb626910.js`), [], import.meta.url)),
+    w(() => import(`./chunk~b331777e11.js`), [], import.meta.url)),
   (W.indonesian = () =>
-    C(() => import(`./chunk~f2ddcf973a.js`), [], import.meta.url)),
+    w(() => import(`./chunk~618ee32f14.js`), [], import.meta.url)),
   (W.italian = () =>
-    C(() => import(`./chunk~7bf1420f7c.js`), [], import.meta.url)),
+    w(() => import(`./chunk~f1ffa65450.js`), [], import.meta.url)),
   (W.japanese = () =>
-    C(() => import(`./chunk~83852f9c50.js`), [], import.meta.url)),
+    w(() => import(`./chunk~76a55c4c25.js`), [], import.meta.url)),
   (W.koreana = () =>
-    C(() => import(`./chunk~f6b67c2a99.js`), [], import.meta.url)),
+    w(() => import(`./chunk~cdde58a513.js`), [], import.meta.url)),
   (W.latam = () =>
-    C(() => import(`./chunk~0e50e7bbbb.js`), [], import.meta.url)),
+    w(() => import(`./chunk~8b4e3972ff.js`), [], import.meta.url)),
   (W.malay = () =>
-    C(() => import(`./chunk~c4ff866828.js`), [], import.meta.url)),
+    w(() => import(`./chunk~2595da3066.js`), [], import.meta.url)),
   (W.norwegian = () =>
-    C(() => import(`./chunk~8b1d1eb8bd.js`), [], import.meta.url)),
+    w(() => import(`./chunk~5afd320c84.js`), [], import.meta.url)),
   (W.polish = () =>
-    C(() => import(`./chunk~62e22aebed.js`), [], import.meta.url)),
+    w(() => import(`./chunk~9282844403.js`), [], import.meta.url)),
   (W.portuguese = () =>
-    C(() => import(`./chunk~5bd109855c.js`), [], import.meta.url)),
+    w(() => import(`./chunk~c163bd573d.js`), [], import.meta.url)),
   (W.romanian = () =>
-    C(() => import(`./chunk~25da5b8e6d.js`), [], import.meta.url)),
+    w(() => import(`./chunk~09a2963a34.js`), [], import.meta.url)),
   (W.russian = () =>
-    C(() => import(`./chunk~0d8846738b.js`), [], import.meta.url)),
+    w(() => import(`./chunk~e3d6765cd6.js`), [], import.meta.url)),
   (W.sc_schinese = () =>
-    C(() => import(`./chunk~c68b2602f6.js`), [], import.meta.url)),
+    w(() => import(`./chunk~a0a45dd693.js`), [], import.meta.url)),
   (W.schinese = () =>
-    C(() => import(`./chunk~724571da0c.js`), [], import.meta.url)),
+    w(() => import(`./chunk~3893a6c80f.js`), [], import.meta.url)),
   (W.spanish = () =>
-    C(() => import(`./chunk~293f64f382.js`), [], import.meta.url)),
+    w(() => import(`./chunk~685c663764.js`), [], import.meta.url)),
   (W.swedish = () =>
-    C(() => import(`./chunk~19cb7f6cba.js`), [], import.meta.url)),
+    w(() => import(`./chunk~1ba18ad10d.js`), [], import.meta.url)),
   (W.tchinese = () =>
-    C(() => import(`./chunk~42b1a18a7a.js`), [], import.meta.url)),
+    w(() => import(`./chunk~6765789f0d.js`), [], import.meta.url)),
   (W.thai = () =>
-    C(() => import(`./chunk~75c28cc2a3.js`), [], import.meta.url)),
+    w(() => import(`./chunk~0ebe7e9b63.js`), [], import.meta.url)),
   (W.turkish = () =>
-    C(() => import(`./chunk~d8552b3afe.js`), [], import.meta.url)),
+    w(() => import(`./chunk~3b6d72df14.js`), [], import.meta.url)),
   (W.ukrainian = () =>
-    C(() => import(`./chunk~e6018f1bdb.js`), [], import.meta.url)),
+    w(() => import(`./chunk~0c6c7fcccd.js`), [], import.meta.url)),
   (W.vietnamese = () =>
-    C(() => import(`./chunk~5e649757bf.js`), [], import.meta.url)));
-async function Ih(e) {
+    w(() => import(`./chunk~c45856eefb.js`), [], import.meta.url)));
+async function Ph(e) {
   if (W[e]) return await W[e]();
 }
-var Lh = hi(Ih),
+var Fh = mi(Ph),
   G = {};
 ((G.arabic = () =>
-  C(() => import(`./chunk~2ccce839d9.js`), [], import.meta.url)),
+  w(() => import(`./chunk~2fe7aa2317.js`), [], import.meta.url)),
   (G.brazilian = () =>
-    C(() => import(`./chunk~a4b02e3aec.js`), [], import.meta.url)),
+    w(() => import(`./chunk~5e4fd7dc0f.js`), [], import.meta.url)),
   (G.bulgarian = () =>
-    C(() => import(`./chunk~323e3dd751.js`), [], import.meta.url)),
+    w(() => import(`./chunk~88092a0904.js`), [], import.meta.url)),
   (G.czech = () =>
-    C(() => import(`./chunk~ab1c53a7a8.js`), [], import.meta.url)),
+    w(() => import(`./chunk~1b633fa830.js`), [], import.meta.url)),
   (G.danish = () =>
-    C(() => import(`./chunk~d7df11c444.js`), [], import.meta.url)),
+    w(() => import(`./chunk~5ef149ef0c.js`), [], import.meta.url)),
   (G.dutch = () =>
-    C(() => import(`./chunk~499b67db82.js`), [], import.meta.url)),
+    w(() => import(`./chunk~6e9c13f2b2.js`), [], import.meta.url)),
   (G.english = () =>
-    C(() => import(`./chunk~f9dcc7ae33.js`), [], import.meta.url)),
+    w(() => import(`./chunk~ab24f40556.js`), [], import.meta.url)),
   (G.finnish = () =>
-    C(() => import(`./chunk~8e3265a9b2.js`), [], import.meta.url)),
+    w(() => import(`./chunk~6152752886.js`), [], import.meta.url)),
   (G.french = () =>
-    C(() => import(`./chunk~65bde88826.js`), [], import.meta.url)),
+    w(() => import(`./chunk~6b67b676cb.js`), [], import.meta.url)),
   (G.german = () =>
-    C(() => import(`./chunk~7558ac0638.js`), [], import.meta.url)),
+    w(() => import(`./chunk~fbf253d943.js`), [], import.meta.url)),
   (G.greek = () =>
-    C(() => import(`./chunk~80d5e98417.js`), [], import.meta.url)),
+    w(() => import(`./chunk~3428bc53a5.js`), [], import.meta.url)),
   (G.hungarian = () =>
-    C(() => import(`./chunk~7cfa6da95d.js`), [], import.meta.url)),
+    w(() => import(`./chunk~3cfb626910.js`), [], import.meta.url)),
   (G.indonesian = () =>
-    C(() => import(`./chunk~f523ee529d.js`), [], import.meta.url)),
+    w(() => import(`./chunk~f2ddcf973a.js`), [], import.meta.url)),
   (G.italian = () =>
-    C(() => import(`./chunk~a9dcad5016.js`), [], import.meta.url)),
+    w(() => import(`./chunk~7bf1420f7c.js`), [], import.meta.url)),
   (G.japanese = () =>
-    C(() => import(`./chunk~8f28cd54ad.js`), [], import.meta.url)),
+    w(() => import(`./chunk~83852f9c50.js`), [], import.meta.url)),
   (G.koreana = () =>
-    C(() => import(`./chunk~4db0d8d0b7.js`), [], import.meta.url)),
+    w(() => import(`./chunk~f6b67c2a99.js`), [], import.meta.url)),
   (G.latam = () =>
-    C(() => import(`./chunk~ba0a093efb.js`), [], import.meta.url)),
+    w(() => import(`./chunk~0e50e7bbbb.js`), [], import.meta.url)),
   (G.malay = () =>
-    C(() => import(`./chunk~8ee08d7313.js`), [], import.meta.url)),
+    w(() => import(`./chunk~c4ff866828.js`), [], import.meta.url)),
   (G.norwegian = () =>
-    C(() => import(`./chunk~ed2c9b4b07.js`), [], import.meta.url)),
+    w(() => import(`./chunk~8b1d1eb8bd.js`), [], import.meta.url)),
   (G.polish = () =>
-    C(() => import(`./chunk~be96f85c04.js`), [], import.meta.url)),
+    w(() => import(`./chunk~62e22aebed.js`), [], import.meta.url)),
   (G.portuguese = () =>
-    C(() => import(`./chunk~9623731241.js`), [], import.meta.url)),
+    w(() => import(`./chunk~5bd109855c.js`), [], import.meta.url)),
   (G.romanian = () =>
-    C(() => import(`./chunk~aea2485f2f.js`), [], import.meta.url)),
+    w(() => import(`./chunk~25da5b8e6d.js`), [], import.meta.url)),
   (G.russian = () =>
-    C(() => import(`./chunk~229cf520cb.js`), [], import.meta.url)),
+    w(() => import(`./chunk~0d8846738b.js`), [], import.meta.url)),
   (G.sc_schinese = () =>
-    C(() => import(`./chunk~f3360eb1b0.js`), [], import.meta.url)),
+    w(() => import(`./chunk~c68b2602f6.js`), [], import.meta.url)),
   (G.schinese = () =>
-    C(() => import(`./chunk~95fc239b12.js`), [], import.meta.url)),
+    w(() => import(`./chunk~724571da0c.js`), [], import.meta.url)),
   (G.spanish = () =>
-    C(() => import(`./chunk~33841c653b.js`), [], import.meta.url)),
+    w(() => import(`./chunk~293f64f382.js`), [], import.meta.url)),
   (G.swedish = () =>
-    C(() => import(`./chunk~89ccff5b84.js`), [], import.meta.url)),
+    w(() => import(`./chunk~19cb7f6cba.js`), [], import.meta.url)),
   (G.tchinese = () =>
-    C(() => import(`./chunk~6ff3439c0c.js`), [], import.meta.url)),
+    w(() => import(`./chunk~42b1a18a7a.js`), [], import.meta.url)),
   (G.thai = () =>
-    C(() => import(`./chunk~116fb5962a.js`), [], import.meta.url)),
+    w(() => import(`./chunk~75c28cc2a3.js`), [], import.meta.url)),
   (G.turkish = () =>
-    C(() => import(`./chunk~30207c52bc.js`), [], import.meta.url)),
+    w(() => import(`./chunk~d8552b3afe.js`), [], import.meta.url)),
   (G.ukrainian = () =>
-    C(() => import(`./chunk~7ab9abd8ae.js`), [], import.meta.url)),
+    w(() => import(`./chunk~e6018f1bdb.js`), [], import.meta.url)),
   (G.vietnamese = () =>
-    C(() => import(`./chunk~58fcf52d61.js`), [], import.meta.url)));
-async function Rh(e) {
+    w(() => import(`./chunk~5e649757bf.js`), [], import.meta.url)));
+async function Ih(e) {
   if (G[e]) return await G[e]();
 }
-var zh = hi(Rh),
+var Lh = mi(Ih),
+  K = {};
+((K.arabic = () =>
+  w(() => import(`./chunk~2ccce839d9.js`), [], import.meta.url)),
+  (K.brazilian = () =>
+    w(() => import(`./chunk~a4b02e3aec.js`), [], import.meta.url)),
+  (K.bulgarian = () =>
+    w(() => import(`./chunk~323e3dd751.js`), [], import.meta.url)),
+  (K.czech = () =>
+    w(() => import(`./chunk~ab1c53a7a8.js`), [], import.meta.url)),
+  (K.danish = () =>
+    w(() => import(`./chunk~d7df11c444.js`), [], import.meta.url)),
+  (K.dutch = () =>
+    w(() => import(`./chunk~499b67db82.js`), [], import.meta.url)),
+  (K.english = () =>
+    w(() => import(`./chunk~f9dcc7ae33.js`), [], import.meta.url)),
+  (K.finnish = () =>
+    w(() => import(`./chunk~8e3265a9b2.js`), [], import.meta.url)),
+  (K.french = () =>
+    w(() => import(`./chunk~65bde88826.js`), [], import.meta.url)),
+  (K.german = () =>
+    w(() => import(`./chunk~7558ac0638.js`), [], import.meta.url)),
+  (K.greek = () =>
+    w(() => import(`./chunk~80d5e98417.js`), [], import.meta.url)),
+  (K.hungarian = () =>
+    w(() => import(`./chunk~7cfa6da95d.js`), [], import.meta.url)),
+  (K.indonesian = () =>
+    w(() => import(`./chunk~f523ee529d.js`), [], import.meta.url)),
+  (K.italian = () =>
+    w(() => import(`./chunk~a9dcad5016.js`), [], import.meta.url)),
+  (K.japanese = () =>
+    w(() => import(`./chunk~8f28cd54ad.js`), [], import.meta.url)),
+  (K.koreana = () =>
+    w(() => import(`./chunk~4db0d8d0b7.js`), [], import.meta.url)),
+  (K.latam = () =>
+    w(() => import(`./chunk~ba0a093efb.js`), [], import.meta.url)),
+  (K.malay = () =>
+    w(() => import(`./chunk~8ee08d7313.js`), [], import.meta.url)),
+  (K.norwegian = () =>
+    w(() => import(`./chunk~ed2c9b4b07.js`), [], import.meta.url)),
+  (K.polish = () =>
+    w(() => import(`./chunk~be96f85c04.js`), [], import.meta.url)),
+  (K.portuguese = () =>
+    w(() => import(`./chunk~9623731241.js`), [], import.meta.url)),
+  (K.romanian = () =>
+    w(() => import(`./chunk~aea2485f2f.js`), [], import.meta.url)),
+  (K.russian = () =>
+    w(() => import(`./chunk~229cf520cb.js`), [], import.meta.url)),
+  (K.sc_schinese = () =>
+    w(() => import(`./chunk~f3360eb1b0.js`), [], import.meta.url)),
+  (K.schinese = () =>
+    w(() => import(`./chunk~95fc239b12.js`), [], import.meta.url)),
+  (K.spanish = () =>
+    w(() => import(`./chunk~33841c653b.js`), [], import.meta.url)),
+  (K.swedish = () =>
+    w(() => import(`./chunk~89ccff5b84.js`), [], import.meta.url)),
+  (K.tchinese = () =>
+    w(() => import(`./chunk~6ff3439c0c.js`), [], import.meta.url)),
+  (K.thai = () =>
+    w(() => import(`./chunk~116fb5962a.js`), [], import.meta.url)),
+  (K.turkish = () =>
+    w(() => import(`./chunk~30207c52bc.js`), [], import.meta.url)),
+  (K.ukrainian = () =>
+    w(() => import(`./chunk~7ab9abd8ae.js`), [], import.meta.url)),
+  (K.vietnamese = () =>
+    w(() => import(`./chunk~58fcf52d61.js`), [], import.meta.url)));
+async function Rh(e) {
+  if (K[e]) return await K[e]();
+}
+var zh = mi(Rh),
   Bh = new Map([
     [2022, Nh],
     [2023, Fh],
@@ -7776,11 +7853,11 @@ function Vh(e) {
   return Bh.get(e);
 }
 function Hh() {
-  let e = To(L),
-    t = To(Nh),
-    n = To(Fh),
-    r = To(Lh),
-    i = To(zh);
+  let e = wo(R),
+    t = wo(Nh),
+    n = wo(Fh),
+    r = wo(Lh),
+    i = wo(zh);
   return e && t && n && r && i;
 }
 var Uh = new URL(
@@ -8005,25 +8082,25 @@ var Uh = new URL(
     BadgeBoxIntro: o_,
     BadgeBarFiller: s_,
   },
-  l_ = R.createContext({
+  l_ = z.createContext({
     bIsUser: !1,
     persona_name: ``,
     avatar_url: ``,
     themeStyle: {},
   });
 function u_() {
-  return (0, R.useContext)(l_).bIsUser;
+  return (0, z.useContext)(l_).bIsUser;
 }
-function K() {
-  return (0, R.useContext)(l_).themeStyle;
+function q() {
+  return (0, z.useContext)(l_).themeStyle;
 }
 function d_(e) {
-  let t = w.logged_in,
+  let t = T.logged_in,
     n = e?.content_descriptorids ?? [],
     r = u_(),
     i = c(),
-    { data: a } = _n(),
-    o = a ?? Ii(i),
+    { data: a } = gn(),
+    o = a ?? Fi(i),
     s =
       !!e &&
       (n.some((e) => o.setExcludedContentDescriptors.has(e)) ||
@@ -8031,390 +8108,390 @@ function d_(e) {
   return t ? !r && s : n.length > 0;
 }
 function f_() {
-  return (0, R.useContext)(l_).persona_name;
+  return (0, z.useContext)(l_).persona_name;
 }
-function q() {
-  let { persona_name: e, bIsUser: t } = (0, R.useContext)(l_);
-  return R.useCallback((n, ...r) => Ql(L, n, t, e, ...r) ?? n, [t, e]);
+function J() {
+  let { persona_name: e, bIsUser: t } = (0, z.useContext)(l_);
+  return z.useCallback((n, ...r) => Zl(R, n, t, e, ...r) ?? n, [t, e]);
 }
 function p_() {
-  let { persona_name: e, bIsUser: t } = (0, R.useContext)(l_);
-  return R.useCallback(
+  let { persona_name: e, bIsUser: t } = (0, z.useContext)(l_);
+  return z.useCallback(
     (n, r, ...i) => {
       let a = Vh(n);
-      return a && Ql(a, r, t, e, ...i);
+      return a && Zl(a, r, t, e, ...i);
     },
     [t, e],
   );
 }
-function J(e) {
+function m_(e) {
   return e < 100
-    ? L.Localize(`#YIR_Percent_Low`, `1`)
-    : L.Localize(`#YIR_Percent`, Math.round(e / 100).toFixed(0));
-}
-function m_() {
-  return !0;
+    ? R.Localize(`#YIR_Percent_Low`, `1`)
+    : R.Localize(`#YIR_Percent`, Math.round(e / 100).toFixed(0));
 }
 function h_() {
-  let e = m_(),
-    t = mn();
-  return R.useCallback(
+  return !0;
+}
+function g_() {
+  let e = h_(),
+    t = pn();
+  return z.useCallback(
     (n) =>
-      ya(n, { weekday: `short`, year: e ? void 0 : `numeric`, timeZone: t }),
+      va(n, { weekday: `short`, year: e ? void 0 : `numeric`, timeZone: t }),
     [e, t],
   );
 }
 var Y = l(),
-  g_ = { index: void 0, appids: [] },
-  __ = R.createContext(g_),
-  v_ = R.createContext(() => {});
-function y_(e) {
-  let [t, n] = R.useState(g_);
-  return (0, Y.jsx)(v_.Provider, {
+  __ = { index: void 0, appids: [] },
+  v_ = z.createContext(__),
+  y_ = z.createContext(() => {});
+function b_(e) {
+  let [t, n] = z.useState(__);
+  return (0, Y.jsx)(y_.Provider, {
     value: n,
-    children: (0, Y.jsx)(__.Provider, { value: t, children: e.children }),
+    children: (0, Y.jsx)(v_.Provider, { value: t, children: e.children }),
   });
 }
-function b_(e) {
+function x_(e) {
   return typeof e.index == `number` && e.appids.length > e.index
     ? e.appids[e.index]
     : null;
 }
-function x_() {
-  let e = R.useContext(__);
-  return { unAppID: b_(e), length: e.appids.length, index: e.index };
-}
 function S_() {
-  let e = R.useContext(v_);
-  return R.useCallback((t, n) => e({ index: t, appids: n }), [e]);
+  let e = z.useContext(v_);
+  return { unAppID: x_(e), length: e.appids.length, index: e.index };
 }
-function C_(e, t) {
-  let n = S_();
-  return R.useCallback(() => n(e, t), [n, e, t]);
+function C_() {
+  let e = z.useContext(y_);
+  return z.useCallback((t, n) => e({ index: t, appids: n }), [e]);
 }
-function w_(e) {
-  let t = R.useContext(v_);
-  return R.useCallback(() => {
+function w_(e, t) {
+  let n = C_();
+  return z.useCallback(() => n(e, t), [n, e, t]);
+}
+function T_(e) {
+  let t = z.useContext(y_);
+  return z.useCallback(() => {
     t((t) => (e >= 0 && e < t.appids.length ? { ...t, index: e } : t));
   }, [t, e]);
 }
-function T_() {
-  let e = R.useContext(v_);
-  return R.useCallback(
+function E_() {
+  let e = z.useContext(y_);
+  return z.useCallback(
     (t) => {
-      e((e) => (b_(e) == t ? g_ : e));
+      e((e) => (x_(e) == t ? __ : e));
     },
     [e],
   );
 }
-var E_ = t({
-    Achievements: () => _v,
-    AllFirstPlayedCtn: () => Bv,
-    AllPlayedContentCtn: () => zv,
-    AllPlayedCtn: () => Rv,
-    Answer: () => $v,
-    Appear: () => B_,
-    ArrowDownCtn: () => Mv,
-    ArrowUpCtn: () => jv,
-    AvatarName: () => F_,
-    BackgroundImage: () => Q_,
-    BackgroundImageCover: () => gv,
-    BadgeBarFiller: () => ry,
-    BadgeBoxIntro: () => ny,
-    Big: () => bv,
-    BigNum: () => tv,
-    BottomCtn: () => ey,
-    CompareArrow: () => kv,
-    CompareCtn: () => Ov,
-    CompareText: () => Av,
-    ConclusionCtn: () => Jv,
-    ContentCtn: () => sv,
-    ControllerPortion: () => uv,
-    DevToggle: () => Vv,
-    DeviceBlock: () => rv,
-    DeviceSummary: () => Nv,
-    ElementFadeIn: () => ty,
-    ErrorMsg: () => Kv,
-    FAQSection: () => Xv,
-    Game0: () => J_,
-    Game1: () => Y_,
-    Game2: () => X_,
-    GenericBackground: () => Wv,
-    GraphRelatedCtn: () => Fv,
-    GridItem: () => q_,
-    HardwareBlock: () => nv,
-    HardwareStats: () => Pv,
-    HardwareSummary: () => ov,
-    HeaderCtn: () => N_,
-    HeaderShareCtn: () => qv,
-    InlineUserName: () => R_,
-    KeyboardPortion: () => cv,
-    Large: () => fv,
-    LogInCtn: () => Uv,
-    LoginButtonCtn: () => Gv,
-    LongestStreakStat: () => Cv,
-    MissingUserCtn: () => Hv,
-    OverviewBlock: () => Z_,
-    Question: () => Qv,
-    QuestionCtn: () => Zv,
-    Questions: () => Yv,
-    RewindHeader: () => P_,
-    SectionSubTitle: () => V_,
-    SectionTitle: () => z_,
-    SixNumbers: () => Ev,
-    Small: () => dv,
-    SmallLightText: () => Dv,
-    SmallText: () => wv,
-    Stat: () => lv,
-    StatBox: () => xv,
-    StreakBlock: () => $_,
-    SubSummaryCtn: () => Sv,
-    Subtitle: () => pv,
-    SubtleBorder: () => av,
-    SummaryArea: () => H_,
-    SummaryBlockExtrasCtn: () => hv,
-    SummaryBlockGameName: () => mv,
-    SummaryBlockHugeNumCtn: () => ev,
-    SummaryBlockTitle: () => vv,
-    SummaryCtn: () => iv,
-    SummaryCtnShadow: () => W_,
-    SummaryGridCtn: () => U_,
-    SummaryGridSparse: () => K_,
-    SummaryGridStandard: () => G_,
-    Tab: () => M_,
-    TabBar: () => j_,
-    TabCtn: () => A_,
-    ThreeNumbers: () => Tv,
-    TimeRelatedCtn: () => Iv,
-    TopAreaSizer: () => O_,
-    TopHonorsContent: () => k_,
-    TopHonorsSection: () => Lv,
-    UserAvatar: () => I_,
-    UserName: () => L_,
-    YearInReviewContainer: () => D_,
+var D_ = t({
+    Achievements: () => vv,
+    AllFirstPlayedCtn: () => Vv,
+    AllPlayedContentCtn: () => Bv,
+    AllPlayedCtn: () => zv,
+    Answer: () => ey,
+    Appear: () => V_,
+    ArrowDownCtn: () => Nv,
+    ArrowUpCtn: () => Mv,
+    AvatarName: () => I_,
+    BackgroundImage: () => $_,
+    BackgroundImageCover: () => _v,
+    BadgeBarFiller: () => iy,
+    BadgeBoxIntro: () => ry,
+    Big: () => xv,
+    BigNum: () => nv,
+    BottomCtn: () => ty,
+    CompareArrow: () => Av,
+    CompareCtn: () => kv,
+    CompareText: () => jv,
+    ConclusionCtn: () => Yv,
+    ContentCtn: () => cv,
+    ControllerPortion: () => dv,
+    DevToggle: () => Hv,
+    DeviceBlock: () => iv,
+    DeviceSummary: () => Pv,
+    ElementFadeIn: () => ny,
+    ErrorMsg: () => qv,
+    FAQSection: () => Zv,
+    Game0: () => Y_,
+    Game1: () => X_,
+    Game2: () => Z_,
+    GenericBackground: () => Gv,
+    GraphRelatedCtn: () => Iv,
+    GridItem: () => J_,
+    HardwareBlock: () => rv,
+    HardwareStats: () => Fv,
+    HardwareSummary: () => sv,
+    HeaderCtn: () => P_,
+    HeaderShareCtn: () => Jv,
+    InlineUserName: () => z_,
+    KeyboardPortion: () => lv,
+    Large: () => pv,
+    LogInCtn: () => Wv,
+    LoginButtonCtn: () => Kv,
+    LongestStreakStat: () => wv,
+    MissingUserCtn: () => Uv,
+    OverviewBlock: () => Q_,
+    Question: () => $v,
+    QuestionCtn: () => Qv,
+    Questions: () => Xv,
+    RewindHeader: () => F_,
+    SectionSubTitle: () => H_,
+    SectionTitle: () => B_,
+    SixNumbers: () => Dv,
+    Small: () => fv,
+    SmallLightText: () => Ov,
+    SmallText: () => Tv,
+    Stat: () => uv,
+    StatBox: () => Sv,
+    StreakBlock: () => ev,
+    SubSummaryCtn: () => Cv,
+    Subtitle: () => mv,
+    SubtleBorder: () => ov,
+    SummaryArea: () => U_,
+    SummaryBlockExtrasCtn: () => gv,
+    SummaryBlockGameName: () => hv,
+    SummaryBlockHugeNumCtn: () => tv,
+    SummaryBlockTitle: () => yv,
+    SummaryCtn: () => av,
+    SummaryCtnShadow: () => G_,
+    SummaryGridCtn: () => W_,
+    SummaryGridSparse: () => q_,
+    SummaryGridStandard: () => K_,
+    Tab: () => N_,
+    TabBar: () => M_,
+    TabCtn: () => j_,
+    ThreeNumbers: () => Ev,
+    TimeRelatedCtn: () => Lv,
+    TopAreaSizer: () => k_,
+    TopHonorsContent: () => A_,
+    TopHonorsSection: () => Rv,
+    UserAvatar: () => L_,
+    UserName: () => R_,
+    YearInReviewContainer: () => O_,
     YearInReviewContent: () => X,
-    YearSubtitle: () => yv,
-    default: () => iy,
+    YearSubtitle: () => bv,
+    default: () => ay,
   }),
-  D_ = `KoPRGmgJJqo-`,
+  O_ = `KoPRGmgJJqo-`,
   X = `hJYEynQkmdU-`,
-  O_ = `wbSwZ4ddIBM-`,
-  k_ = `_06vjX6-LZ3o-`,
-  A_ = `rb53CfOiFDE-`,
-  j_ = `vK7--H0SAkw-`,
-  M_ = `gMb-gEMJz-o-`,
-  N_ = `ubb8Zl0avoo-`,
-  P_ = `f5HUQVPUdec-`,
-  F_ = `skidEiMf2PY-`,
-  I_ = `_6BJlyLcB6b0-`,
-  L_ = `EzNrIbLqFyI-`,
-  R_ = `D317B3qRUg4-`,
-  z_ = `jKX9urC1MxY-`,
-  B_ = `_4nPP92NisYg-`,
-  V_ = `bXtzee8AefM-`,
-  H_ = `zn9KZEp--BA-`,
-  U_ = `xJQGByL-21g-`,
-  W_ = `Ir5Sa8Wyk54-`,
-  G_ = `Du1AFzeoCqQ-`,
-  K_ = `DtJ29CA3-5w-`,
-  q_ = `gIuYhaWQ4fc-`,
-  J_ = `fKe87BWrvfQ-`,
-  Y_ = `_-5OsCs7YPk8-`,
-  X_ = `Zg95Ba7p3Qw-`,
-  Z_ = `_8Y3H4R2pQus-`,
-  Q_ = `GAtCzNnRjO8-`,
-  $_ = `dEuc93cpmYk-`,
-  ev = `nZ9-nfKNk0k-`,
-  tv = `ERwgqbs67Y0-`,
-  nv = `e6T89MsSCU4-`,
-  rv = `PSZWXs0q2BA-`,
-  iv = `ojW6P77M2CU-`,
-  av = `gq51gWeAGwg-`,
-  ov = `y29Eo6crp1Y-`,
-  sv = `lVezcGtu14c-`,
-  cv = `XrqoWcWOWto-`,
-  lv = `nuUlfFr-4go-`,
-  uv = `BJLPLEcobNA-`,
-  dv = `pM0nmAh-JmE-`,
-  fv = `czEXrqIBjoY-`,
-  pv = `V22nqpPVUDE-`,
-  mv = `r7SaWklbiLk-`,
-  hv = `WQbJEJwrh6A-`,
-  gv = `yhKq8JqyhHU-`,
-  _v = `NFRRVbS6gNQ-`,
-  vv = `quOp3zDhs0Q-`,
-  yv = `WtmqBEWwXUU-`,
-  bv = `OiCGsb3ZVjo-`,
-  xv = `-DExq33nuLc-`,
-  Sv = `iO7bySBmLDQ-`,
-  Cv = `rakWUwgngNs-`,
-  wv = `Ro3m9drEqnI-`,
-  Tv = `L57SkFUBplo-`,
-  Ev = `YLnkFjFOQOs-`,
-  Dv = `_0XQzOjcNRaw-`,
-  Ov = `kCKbop9CpRg-`,
-  kv = `_9tAN2yCIirs-`,
-  Av = `kK5H6hWa6D4-`,
-  jv = `BEY87Y5nD4o-`,
-  Mv = `HaiVKIU8Khw-`,
-  Nv = `qg0kxFOh1tk-`,
-  Pv = `qK-bv0Ju3ZE-`,
-  Fv = `Tyh9FPCHRrc-`,
-  Iv = `xan-F7AKHTg-`,
-  Lv = `msW7t3zPawc-`,
-  Rv = `zWuJ9eO1deE-`,
-  zv = `HguwBviDKIo-`,
-  Bv = `_2m4YMjqffsc-`,
-  Vv = `GDQOIFoBCP4-`,
-  Hv = `GM1A55ZEulI-`,
-  Uv = `jvwbuCbEfxI-`,
-  Wv = `tGzVeFXNEfc-`,
-  Gv = `CTJEahoyd2c-`,
-  Kv = `gHS2We-nxiI-`,
-  qv = `-vTPvlHUL7g-`,
-  Jv = `ofmH8EfaBy4-`,
-  Yv = `fGLzTigSNnY-`,
-  Xv = `_6ALXCVcszOs-`,
-  Zv = `X-87SlZ9MKU-`,
-  Qv = `_38wDSMap-gY-`,
-  $v = `bXJ94GBFl3U-`,
-  ey = `DALsnbbp3sE-`,
-  ty = `VgC9GOlWj28-`,
-  ny = `XJWfnQSYNt8-`,
-  ry = `FlPXt8CIBlI-`,
-  iy = {
-    YearInReviewContainer: D_,
+  k_ = `wbSwZ4ddIBM-`,
+  A_ = `_06vjX6-LZ3o-`,
+  j_ = `rb53CfOiFDE-`,
+  M_ = `vK7--H0SAkw-`,
+  N_ = `gMb-gEMJz-o-`,
+  P_ = `ubb8Zl0avoo-`,
+  F_ = `f5HUQVPUdec-`,
+  I_ = `skidEiMf2PY-`,
+  L_ = `_6BJlyLcB6b0-`,
+  R_ = `EzNrIbLqFyI-`,
+  z_ = `D317B3qRUg4-`,
+  B_ = `jKX9urC1MxY-`,
+  V_ = `_4nPP92NisYg-`,
+  H_ = `bXtzee8AefM-`,
+  U_ = `zn9KZEp--BA-`,
+  W_ = `xJQGByL-21g-`,
+  G_ = `Ir5Sa8Wyk54-`,
+  K_ = `Du1AFzeoCqQ-`,
+  q_ = `DtJ29CA3-5w-`,
+  J_ = `gIuYhaWQ4fc-`,
+  Y_ = `fKe87BWrvfQ-`,
+  X_ = `_-5OsCs7YPk8-`,
+  Z_ = `Zg95Ba7p3Qw-`,
+  Q_ = `_8Y3H4R2pQus-`,
+  $_ = `GAtCzNnRjO8-`,
+  ev = `dEuc93cpmYk-`,
+  tv = `nZ9-nfKNk0k-`,
+  nv = `ERwgqbs67Y0-`,
+  rv = `e6T89MsSCU4-`,
+  iv = `PSZWXs0q2BA-`,
+  av = `ojW6P77M2CU-`,
+  ov = `gq51gWeAGwg-`,
+  sv = `y29Eo6crp1Y-`,
+  cv = `lVezcGtu14c-`,
+  lv = `XrqoWcWOWto-`,
+  uv = `nuUlfFr-4go-`,
+  dv = `BJLPLEcobNA-`,
+  fv = `pM0nmAh-JmE-`,
+  pv = `czEXrqIBjoY-`,
+  mv = `V22nqpPVUDE-`,
+  hv = `r7SaWklbiLk-`,
+  gv = `WQbJEJwrh6A-`,
+  _v = `yhKq8JqyhHU-`,
+  vv = `NFRRVbS6gNQ-`,
+  yv = `quOp3zDhs0Q-`,
+  bv = `WtmqBEWwXUU-`,
+  xv = `OiCGsb3ZVjo-`,
+  Sv = `-DExq33nuLc-`,
+  Cv = `iO7bySBmLDQ-`,
+  wv = `rakWUwgngNs-`,
+  Tv = `Ro3m9drEqnI-`,
+  Ev = `L57SkFUBplo-`,
+  Dv = `YLnkFjFOQOs-`,
+  Ov = `_0XQzOjcNRaw-`,
+  kv = `kCKbop9CpRg-`,
+  Av = `_9tAN2yCIirs-`,
+  jv = `kK5H6hWa6D4-`,
+  Mv = `BEY87Y5nD4o-`,
+  Nv = `HaiVKIU8Khw-`,
+  Pv = `qg0kxFOh1tk-`,
+  Fv = `qK-bv0Ju3ZE-`,
+  Iv = `Tyh9FPCHRrc-`,
+  Lv = `xan-F7AKHTg-`,
+  Rv = `msW7t3zPawc-`,
+  zv = `zWuJ9eO1deE-`,
+  Bv = `HguwBviDKIo-`,
+  Vv = `_2m4YMjqffsc-`,
+  Hv = `GDQOIFoBCP4-`,
+  Uv = `GM1A55ZEulI-`,
+  Wv = `jvwbuCbEfxI-`,
+  Gv = `tGzVeFXNEfc-`,
+  Kv = `CTJEahoyd2c-`,
+  qv = `gHS2We-nxiI-`,
+  Jv = `-vTPvlHUL7g-`,
+  Yv = `ofmH8EfaBy4-`,
+  Xv = `fGLzTigSNnY-`,
+  Zv = `_6ALXCVcszOs-`,
+  Qv = `X-87SlZ9MKU-`,
+  $v = `_38wDSMap-gY-`,
+  ey = `bXJ94GBFl3U-`,
+  ty = `DALsnbbp3sE-`,
+  ny = `VgC9GOlWj28-`,
+  ry = `XJWfnQSYNt8-`,
+  iy = `FlPXt8CIBlI-`,
+  ay = {
+    YearInReviewContainer: O_,
     YearInReviewContent: X,
-    TopAreaSizer: O_,
-    TopHonorsContent: k_,
-    TabCtn: A_,
-    TabBar: j_,
-    Tab: M_,
-    HeaderCtn: N_,
-    RewindHeader: P_,
-    AvatarName: F_,
-    UserAvatar: I_,
-    UserName: L_,
-    InlineUserName: R_,
-    SectionTitle: z_,
-    Appear: B_,
-    SectionSubTitle: V_,
-    SummaryArea: H_,
-    SummaryGridCtn: U_,
-    SummaryCtnShadow: W_,
-    SummaryGridStandard: G_,
-    SummaryGridSparse: K_,
-    GridItem: q_,
-    Game0: J_,
-    Game1: Y_,
-    Game2: X_,
-    OverviewBlock: Z_,
-    BackgroundImage: Q_,
-    StreakBlock: $_,
-    SummaryBlockHugeNumCtn: ev,
-    BigNum: tv,
-    HardwareBlock: nv,
-    DeviceBlock: rv,
-    SummaryCtn: iv,
-    SubtleBorder: av,
-    HardwareSummary: ov,
-    ContentCtn: sv,
-    KeyboardPortion: cv,
-    Stat: lv,
-    ControllerPortion: uv,
-    Small: dv,
-    Large: fv,
-    Subtitle: pv,
-    SummaryBlockGameName: mv,
-    SummaryBlockExtrasCtn: hv,
-    BackgroundImageCover: gv,
-    Achievements: _v,
-    SummaryBlockTitle: vv,
-    YearSubtitle: yv,
-    Big: bv,
-    StatBox: xv,
-    SubSummaryCtn: Sv,
-    LongestStreakStat: Cv,
-    SmallText: wv,
-    ThreeNumbers: Tv,
-    SixNumbers: Ev,
-    SmallLightText: Dv,
-    CompareCtn: Ov,
-    CompareArrow: kv,
-    CompareText: Av,
-    ArrowUpCtn: jv,
-    ArrowDownCtn: Mv,
-    DeviceSummary: Nv,
-    HardwareStats: Pv,
-    GraphRelatedCtn: Fv,
-    TimeRelatedCtn: Iv,
-    TopHonorsSection: Lv,
-    AllPlayedCtn: Rv,
-    AllPlayedContentCtn: zv,
-    AllFirstPlayedCtn: Bv,
-    DevToggle: Vv,
-    MissingUserCtn: Hv,
-    LogInCtn: Uv,
-    GenericBackground: Wv,
-    LoginButtonCtn: Gv,
-    ErrorMsg: Kv,
-    HeaderShareCtn: qv,
-    ConclusionCtn: Jv,
-    Questions: Yv,
-    FAQSection: Xv,
-    QuestionCtn: Zv,
-    Question: Qv,
-    Answer: $v,
-    BottomCtn: ey,
-    ElementFadeIn: ty,
-    BadgeBoxIntro: ny,
-    BadgeBarFiller: ry,
+    TopAreaSizer: k_,
+    TopHonorsContent: A_,
+    TabCtn: j_,
+    TabBar: M_,
+    Tab: N_,
+    HeaderCtn: P_,
+    RewindHeader: F_,
+    AvatarName: I_,
+    UserAvatar: L_,
+    UserName: R_,
+    InlineUserName: z_,
+    SectionTitle: B_,
+    Appear: V_,
+    SectionSubTitle: H_,
+    SummaryArea: U_,
+    SummaryGridCtn: W_,
+    SummaryCtnShadow: G_,
+    SummaryGridStandard: K_,
+    SummaryGridSparse: q_,
+    GridItem: J_,
+    Game0: Y_,
+    Game1: X_,
+    Game2: Z_,
+    OverviewBlock: Q_,
+    BackgroundImage: $_,
+    StreakBlock: ev,
+    SummaryBlockHugeNumCtn: tv,
+    BigNum: nv,
+    HardwareBlock: rv,
+    DeviceBlock: iv,
+    SummaryCtn: av,
+    SubtleBorder: ov,
+    HardwareSummary: sv,
+    ContentCtn: cv,
+    KeyboardPortion: lv,
+    Stat: uv,
+    ControllerPortion: dv,
+    Small: fv,
+    Large: pv,
+    Subtitle: mv,
+    SummaryBlockGameName: hv,
+    SummaryBlockExtrasCtn: gv,
+    BackgroundImageCover: _v,
+    Achievements: vv,
+    SummaryBlockTitle: yv,
+    YearSubtitle: bv,
+    Big: xv,
+    StatBox: Sv,
+    SubSummaryCtn: Cv,
+    LongestStreakStat: wv,
+    SmallText: Tv,
+    ThreeNumbers: Ev,
+    SixNumbers: Dv,
+    SmallLightText: Ov,
+    CompareCtn: kv,
+    CompareArrow: Av,
+    CompareText: jv,
+    ArrowUpCtn: Mv,
+    ArrowDownCtn: Nv,
+    DeviceSummary: Pv,
+    HardwareStats: Fv,
+    GraphRelatedCtn: Iv,
+    TimeRelatedCtn: Lv,
+    TopHonorsSection: Rv,
+    AllPlayedCtn: zv,
+    AllPlayedContentCtn: Bv,
+    AllFirstPlayedCtn: Vv,
+    DevToggle: Hv,
+    MissingUserCtn: Uv,
+    LogInCtn: Wv,
+    GenericBackground: Gv,
+    LoginButtonCtn: Kv,
+    ErrorMsg: qv,
+    HeaderShareCtn: Jv,
+    ConclusionCtn: Yv,
+    Questions: Xv,
+    FAQSection: Zv,
+    QuestionCtn: Qv,
+    Question: $v,
+    Answer: ey,
+    BottomCtn: ty,
+    ElementFadeIn: ny,
+    BadgeBoxIntro: ry,
+    BadgeBarFiller: iy,
   },
-  ay = `C5cdndOEHt4-`,
-  oy = `-q0-kXkWN9U-`,
-  sy = `TB8Ftf6yNUE-`,
-  cy = `EOEvelxRXZw-`,
-  ly = `vCsbBq7knm8-`,
-  uy = `_4hgWT24Sdeo-`,
-  dy = `_7yIZmyI8qQk-`,
-  fy = `omJUDnVgRY4-`,
-  py = `wqTsvDkdQRg-`,
-  my = `HJLVd81kwnI-`,
-  hy = `TwAc8u5RE4g-`,
-  gy = `_2dQ-fNFsnAo-`,
-  _y = `nDPpMWikWgc-`,
-  vy = `_6qFV0psARg8-`,
-  yy = `Di5p4F2SHus-`,
-  by = `p34Ga9p9kxA-`,
-  xy = `_6dXzDQP9ksI-`,
-  Sy = `_8-zKy--vwkI-`,
-  Cy = `iKMpkIE2CyM-`,
-  wy = `S9H5nON1Nw0-`,
-  Ty = `-c1ti2-skhU-`,
-  Ey = `uvBrTjofppg-`,
+  oy = `C5cdndOEHt4-`,
+  sy = `-q0-kXkWN9U-`,
+  cy = `TB8Ftf6yNUE-`,
+  ly = `EOEvelxRXZw-`,
+  uy = `vCsbBq7knm8-`,
+  dy = `_4hgWT24Sdeo-`,
+  fy = `_7yIZmyI8qQk-`,
+  py = `omJUDnVgRY4-`,
+  my = `wqTsvDkdQRg-`,
+  hy = `HJLVd81kwnI-`,
+  gy = `TwAc8u5RE4g-`,
+  _y = `_2dQ-fNFsnAo-`,
+  vy = `nDPpMWikWgc-`,
+  yy = `_6qFV0psARg8-`,
+  by = `Di5p4F2SHus-`,
+  xy = `p34Ga9p9kxA-`,
+  Sy = `_6dXzDQP9ksI-`,
+  Cy = `_8-zKy--vwkI-`,
+  wy = `iKMpkIE2CyM-`,
+  Ty = `S9H5nON1Nw0-`,
+  Ey = `-c1ti2-skhU-`,
+  Dy = `uvBrTjofppg-`,
   Z = {
-    Section: ay,
-    Windows: oy,
-    Linux: sy,
-    Controller: cy,
-    Mac: ly,
-    Deck: uy,
-    CapRow: dy,
-    PlatformContentsCtn: fy,
-    VR: py,
-    SectionTitle: my,
-    BackgroundImage: hy,
-    Playtest: gy,
-    BG_Playtest: _y,
-    Demo: vy,
-    BG_Demo: yy,
-    GameImage: by,
-    SectionSubTitle: xy,
-    ElementFadeIn: Sy,
-    StatsRow: Cy,
-    StatBlock: wy,
-    BigNum: Ty,
-    StatDescription: Ey,
+    Section: oy,
+    Windows: sy,
+    Linux: cy,
+    Controller: ly,
+    Mac: uy,
+    Deck: dy,
+    CapRow: fy,
+    PlatformContentsCtn: py,
+    VR: my,
+    SectionTitle: hy,
+    BackgroundImage: gy,
+    Playtest: _y,
+    BG_Playtest: vy,
+    Demo: yy,
+    BG_Demo: by,
+    GameImage: xy,
+    SectionSubTitle: Sy,
+    ElementFadeIn: Cy,
+    StatsRow: wy,
+    StatBlock: Ty,
+    BigNum: Ey,
+    StatDescription: Dy,
     DemoSash: `WwCfmup4R-o-`,
     BadgeBoxIntro: `XGtVJBBHDi4-`,
     BadgeBarFiller: `_-0RNm-50A-I-`,
@@ -8423,15 +8500,15 @@ var E_ = t({
   Q = e(o(), 1);
 function $(e) {
   let { className: t, children: n, strClassOnFirstVisible: r } = e,
-    [i, a] = (0, R.useState)(!1);
-  return (0, Y.jsx)(ps, {
+    [i, a] = (0, z.useState)(!1);
+  return (0, Y.jsx)(fs, {
     trigger: `once`,
     onVisibilityChange: a,
     className: (0, Q.default)(t, i ? r || `NowVisible` : void 0),
     children: n,
   });
 }
-function Dy(e) {
+function Oy(e) {
   let {
       category: t,
       userYearInReview: n,
@@ -8447,64 +8524,64 @@ function Dy(e) {
       nTotalGames: u,
       nTotalSessions: d,
       nTotalPercentage: f,
-    } = (0, R.useMemo)(() => Hm(l, t), [l, t]),
-    { rgResults: p, nTotalResultCount: m } = (0, R.useMemo)(
+    } = (0, z.useMemo)(() => Hm(l, t), [l, t]),
+    { rgResults: p, nTotalResultCount: m } = (0, z.useMemo)(
       () => Rm(n, t, 5, f),
       [n, t, f, 5],
     ),
-    h = (0, R.useMemo)(() => p.map((e) => e.parent_appid || e.appid), [p]),
-    [g, _] = (0, R.useState)(
+    h = (0, z.useMemo)(() => p.map((e) => e.parent_appid || e.appid), [p]),
+    [g, _] = (0, z.useState)(
       p.length > 0 ? p[0].parent_appid || p[0].appid : 0,
     ),
-    { isLoading: v, data: ee } = Ah(h, t == `vr`),
-    y = Oy(p, t, v, ee),
-    te =
+    { isLoading: v, data: y } = Ah(h, t == `vr`),
+    b = ky(p, t, v, y),
+    ee =
       t === `overall` || t === `controller` || t == `demo` || t == `playtest`;
   return (0, Y.jsxs)(`div`, {
-    className: (0, Q.default)(r, t, fy),
+    className: (0, Q.default)(r, t, py),
     children: [
-      (0, Y.jsx)(`div`, { className: my, children: a }),
+      (0, Y.jsx)(`div`, { className: hy, children: a }),
       !!i && (0, Y.jsx)(`img`, { alt: ``, src: i, className: `TwAc8u5RE4g-` }),
-      t === `vr` && g > 0 && (0, Y.jsx)(ky, { appid: g }),
+      t === `vr` && g > 0 && (0, Y.jsx)(Ay, { appid: g }),
       (0, Y.jsxs)(`div`, {
-        className: (0, Q.default)(X, Cy),
+        className: (0, Q.default)(X, wy),
         children: [
           (0, Y.jsxs)(`div`, {
-            className: wy,
+            className: Ty,
             children: [
-              (0, Y.jsx)(`div`, { className: Ty, children: E(u) }),
+              (0, Y.jsx)(`div`, { className: Ey, children: D(u) }),
               (0, Y.jsx)(`div`, {
-                className: Ey,
-                children: L.LocalizePlural(`#YIR_NewLine_Games`, u),
+                className: Dy,
+                children: R.LocalizePlural(`#YIR_NewLine_Games`, u),
               }),
             ],
           }),
           (0, Y.jsxs)(`div`, {
-            className: wy,
+            className: Ty,
             children: [
-              (0, Y.jsx)(`div`, { className: Ty, children: E(d) }),
+              (0, Y.jsx)(`div`, { className: Ey, children: D(d) }),
               (0, Y.jsx)(`div`, {
-                className: Ey,
-                children: L.LocalizePlural(`#YIR_NewLine_Session`, d),
+                className: Dy,
+                children: R.LocalizePlural(`#YIR_NewLine_Session`, d),
               }),
             ],
           }),
-          !te && (0, Y.jsx)(Ny, { percentVal: f, subToken: `#YIR_NewLine` }),
+          !ee && (0, Y.jsx)(Py, { percentVal: f, subToken: `#YIR_NewLine` }),
         ],
       }),
       !!o && (0, Y.jsx)(`div`, { className: `_6dXzDQP9ksI-`, children: o }),
       !o &&
         !!c &&
         m > 5 &&
-        y > 0 &&
+        b > 0 &&
         (0, Y.jsx)(`div`, {
           className: `_6dXzDQP9ksI-`,
-          children: L.Localize(c, y),
+          children: R.Localize(c, b),
         }),
       !!s && (0, Y.jsx)(`div`, { className: void 0, children: s }),
       (0, Y.jsx)($, {
         className: kg,
-        children: (0, Y.jsx)(Ay, {
+        children: (0, Y.jsx)(jy, {
           rgGamePercentages: p,
           category: t,
           fnOnHoverApp: _,
@@ -8513,8 +8590,8 @@ function Dy(e) {
     ],
   });
 }
-function Oy(e, t, n, r) {
-  return (0, R.useMemo)(
+function ky(e, t, n, r) {
+  return (0, z.useMemo)(
     () =>
       n || !r
         ? 0
@@ -8527,10 +8604,10 @@ function Oy(e, t, n, r) {
     [e, n, r, t],
   );
 }
-function ky(e) {
+function Ay(e) {
   let { appid: t } = e,
-    { data: n } = pa({ appid: t }),
-    r = ol();
+    { data: n } = fa({ appid: t }),
+    r = al();
   if (!n) return null;
   let i = n.all_ages_screenshots ?? [],
     a = (
@@ -8544,11 +8621,11 @@ function ky(e) {
   let o = r == `masked` && !i.includes(a);
   return (0, Y.jsx)(`img`, {
     alt: ``,
-    src: Vn(a),
-    className: (0, Q.default)({ [by]: !0, [void 0]: o }),
+    src: Bn(a),
+    className: (0, Q.default)({ [xy]: !0, [void 0]: o }),
   });
 }
-function Ay(e) {
+function jy(e) {
   let { rgGamePercentages: t, category: n, fnOnHoverApp: r } = e,
     i = t.map((e) => e.appid),
     a;
@@ -8559,15 +8636,16 @@ function Ay(e) {
     case `playtest`:
       a = 12;
   }
-  return (0, Y.jsx)(A, {
+  return (0, Y.jsx)(j, {
     "flow-children": `grid`,
-    className: (0, Q.default)(X, dy, Ug),
+    className: (0, Q.default)(X, fy, Ug),
     children: t.map((e, t) =>
       (0, Y.jsx)(
-        jy,
+        My,
         {
           appid: e.appid,
-          strInfo: e.nPercentagex100 === void 0 ? void 0 : J(e.nPercentagex100),
+          strInfo:
+            e.nPercentagex100 === void 0 ? void 0 : m_(e.nPercentagex100),
           nParentAppID: e.parent_appid,
           eChildType: a,
           index: t,
@@ -8580,7 +8658,7 @@ function Ay(e) {
     ),
   });
 }
-function jy(e) {
+function My(e) {
   let {
       appid: t,
       strInfo: n,
@@ -8592,13 +8670,13 @@ function jy(e) {
       eChildType: c,
     } = e,
     { item: l, bLoading: u } = kh(c == null ? t : s),
-    d = C_(i, r);
+    d = w_(i, r);
   if (u) return null;
   if (!l || !l.info.visible)
     return s && (c == 1 || c == 12)
-      ? (0, Y.jsx)(jy, { ...e, nParentAppID: s, eChildType: 0 })
+      ? (0, Y.jsx)(My, { ...e, nParentAppID: s, eChildType: 0 })
       : null;
-  let f = $i(l.assets, `library_capsule`);
+  let f = Qi(l.assets, `library_capsule`);
   return (0, Y.jsxs)(`a`, {
     className: Ag,
     onClick: d,
@@ -8614,25 +8692,25 @@ function jy(e) {
                     c == 1 &&
                     (0, Y.jsx)(`div`, {
                       className: `qEnvz1uXbQU-`,
-                      children: L.Localize(`#YIR_Played_Demo`),
+                      children: R.Localize(`#YIR_Played_Demo`),
                     }),
                   s &&
                     c == 12 &&
                     (0, Y.jsx)(`div`, {
                       className: `pvLpzVIEyJQ-`,
-                      children: L.Localize(`#YIR_Played_PlayTest`),
+                      children: R.Localize(`#YIR_Played_PlayTest`),
                     }),
                 ],
               }),
               (0, Y.jsx)(`img`, { loading: a, src: f, alt: l.info.name }),
             ],
           })
-        : (0, Y.jsx)(My, { item: l.info }),
+        : (0, Y.jsx)(Ny, { item: l.info }),
       !!n && (0, Y.jsx)(`div`, { className: `x6rpHBjxzTg-`, children: n }),
     ],
   });
 }
-function My(e) {
+function Ny(e) {
   let { item: t } = e;
   return (0, Y.jsxs)(`div`, {
     className: Jg,
@@ -8642,30 +8720,30 @@ function My(e) {
     ],
   });
 }
-function Ny(e) {
+function Py(e) {
   let { percentVal: t, subToken: n } = e,
-    r = J(t),
+    r = m_(t),
     i = `${n}_Percent`;
   return (0, Y.jsxs)(`div`, {
-    className: wy,
+    className: Ty,
     children: [
-      (0, Y.jsx)(`div`, { className: Ty, children: r }),
-      (0, Y.jsx)(`div`, { className: Ey, children: L.Localize(i) }),
+      (0, Y.jsx)(`div`, { className: Ey, children: r }),
+      (0, Y.jsx)(`div`, { className: Dy, children: R.Localize(i) }),
     ],
   });
 }
-var Py = `_1zHgawHGZQ8-`,
-  Fy = `maZLLs320ng-`,
-  Iy = `FBNO-i1eCDU-`,
-  Ly = `lvInkGaT6tc-`,
-  Ry = `CdHUHmprZLc-`,
-  zy = `_0Di7EGWRhhg-`,
-  By = `xhff4YTQuUs-`,
-  Vy = `KxbX2VmSNpY-`;
-function Hy(e) {
+var Fy = `_1zHgawHGZQ8-`,
+  Iy = `maZLLs320ng-`,
+  Ly = `FBNO-i1eCDU-`,
+  Ry = `lvInkGaT6tc-`,
+  zy = `CdHUHmprZLc-`,
+  By = `_0Di7EGWRhhg-`,
+  Vy = `xhff4YTQuUs-`,
+  Hy = `KxbX2VmSNpY-`;
+function Uy(e) {
   let { userYearInReview: t, nYear: n } = e,
-    r = K(),
-    i = (0, R.useMemo)(() => {
+    r = q(),
+    i = (0, z.useMemo)(() => {
       let e = new Set();
       return (
         t.GetPlayTimeStats().game_summary.forEach((t) => {
@@ -8677,52 +8755,52 @@ function Hy(e) {
       );
     }, [t]),
     { isLoading: a } = Ah(i),
-    o = q(),
+    o = J(),
     s = [
       {
-        name: L.Localize(`#YIR_FirstTime_Tab_MonthlyGrid`),
+        name: R.Localize(`#YIR_FirstTime_Tab_MonthlyGrid`),
         key: `firsttimebymonth`,
-        contents: (0, Y.jsx)(T, {
+        contents: (0, Y.jsx)(E, {
           children: (0, Y.jsx)(`div`, {
-            className: Py,
-            children: (0, Y.jsx)(Ky, { userYearInReview: t, nYear: n }),
+            className: Fy,
+            children: (0, Y.jsx)(qy, { userYearInReview: t, nYear: n }),
           }),
         }),
       },
       {
-        name: L.Localize(`#YIR_FirstTime_Tab_Grid`),
+        name: R.Localize(`#YIR_FirstTime_Tab_Grid`),
         key: `firsttimegrid`,
-        contents: (0, Y.jsx)(T, {
-          children: (0, Y.jsx)(Gy, { userYearInReview: t, nYear: n }),
+        contents: (0, Y.jsx)(E, {
+          children: (0, Y.jsx)(Ky, { userYearInReview: t, nYear: n }),
         }),
       },
     ];
   return i.length == 0
     ? null
     : (0, Y.jsxs)($, {
-        className: Bv,
+        className: Vv,
         children: [
           (0, Y.jsx)(`div`, {
-            className: (0, Q.default)(zy, r.AllGamesBGImage),
+            className: (0, Q.default)(By, r.AllGamesBGImage),
           }),
           (0, Y.jsxs)(`div`, {
             className: X,
             children: [
               (0, Y.jsx)(`div`, {
-                className: z_,
+                className: B_,
                 children: o(`#YIR_FirstTime_Title`, i.length),
               }),
               a
-                ? (0, Y.jsx)(nn, {
+                ? (0, Y.jsx)(tn, {
                     size: `medium`,
                     position: `center`,
-                    string: Yn.Localize(`#Loading`),
+                    string: Jn.Localize(`#Loading`),
                   })
                 : (0, Y.jsx)(`div`, {
-                    className: A_,
-                    children: (0, Y.jsx)(Uy, {
-                      className: j_,
-                      classNameTab: (0, Q.default)(M_, r.Tab),
+                    className: j_,
+                    children: (0, Y.jsx)(Wy, {
+                      className: M_,
+                      classNameTab: (0, Q.default)(N_, r.Tab),
                       tabs: s,
                     }),
                   }),
@@ -8731,19 +8809,19 @@ function Hy(e) {
         ],
       });
 }
-function Uy(e) {
+function Wy(e) {
   let { className: t, classNameTab: n, tabs: r } = e,
-    [i, a] = (0, R.useState)(r[0]?.key);
+    [i, a] = (0, z.useState)(r[0]?.key);
   if (!r.length) return null;
   let o = r.find(({ key: e }) => e === i) ?? r[0];
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
-      (0, Y.jsx)(A, {
-        className: (0, Q.default)(By, t),
-        navEntryPreferPosition: lo.FIRST,
+      (0, Y.jsx)(j, {
+        className: (0, Q.default)(Vy, t),
+        navEntryPreferPosition: co.FIRST,
         children: r.map((e) =>
           (0, Y.jsx)(
-            Wy,
+            Gy,
             {
               className: n,
               active: e.key === o.key,
@@ -8754,24 +8832,24 @@ function Uy(e) {
           ),
         ),
       }),
-      (0, Y.jsx)(A, { children: o.contents }),
+      (0, Y.jsx)(j, { children: o.contents }),
     ],
   });
 }
-function Wy(e) {
+function Gy(e) {
   let { className: t, active: n, onActivate: r, children: i } = e;
-  return (0, Y.jsx)(A, {
-    className: (0, Q.default)(Vy, n && `_2Nz6-T0g-zc-`, n && `ActiveTab`, t),
+  return (0, Y.jsx)(j, {
+    className: (0, Q.default)(Hy, n && `_2Nz6-T0g-zc-`, n && `ActiveTab`, t),
     onActivate: r,
     children: i,
   });
 }
-function Gy(e) {
+function Ky(e) {
   let { nYear: t, userYearInReview: n } = e,
     r = n.GetPlayTimeStats().game_summary,
-    i = q(),
-    [a, o] = R.useState(!1),
-    { bShouldShowMore: s, rgGamesInOrderOfPlaytime: c } = (0, R.useMemo)(() => {
+    i = J(),
+    [a, o] = z.useState(!1),
+    { bShouldShowMore: s, rgGamesInOrderOfPlaytime: c } = (0, z.useMemo)(() => {
       let e = new Set(),
         t = r
           .filter(
@@ -8799,7 +8877,7 @@ function Gy(e) {
     }, [r, a]);
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
-      (0, Y.jsx)(Jy, {
+      (0, Y.jsx)(Yy, {
         nYear: t,
         rgGamesInOrderOfPlaytime: c,
         strTooltip: i(`#YIR_FirstTime_Percentages`),
@@ -8811,13 +8889,13 @@ function Gy(e) {
             href: `#`,
             className: `dUBouRPf5BM-`,
             onClick: () => o(!0),
-            children: L.Localize(`#YIR_ShowMore`),
+            children: R.Localize(`#YIR_ShowMore`),
           }),
         }),
     ],
   });
 }
-function Ky(e) {
+function qy(e) {
   let { nYear: t, userYearInReview: n } = e,
     r = n.GetRawStats().playtime_stats.months;
   return (0, Y.jsx)(Y.Fragment, {
@@ -8825,24 +8903,24 @@ function Ky(e) {
       .filter((e) => e.stats.total_sessions > 0)
       .map((e) =>
         (0, Y.jsx)(
-          qy,
+          Jy,
           { month: e, userYearInReview: n, nYear: t },
           `outermonth` + e.rtime_month,
         ),
       ),
   });
 }
-function qy(e) {
+function Jy(e) {
   let { nYear: t, userYearInReview: n, month: r } = e,
-    i = m_(),
-    a = q(),
-    [o, s] = R.useState(!1),
-    { bShouldShowMore: c, rgGameStats: l } = (0, R.useMemo)(() => {
+    i = h_(),
+    a = J(),
+    [o, s] = z.useState(!1),
+    { bShouldShowMore: c, rgGameStats: l } = (0, z.useMemo)(() => {
       let e = r.game_summary
           .filter((e) => {
             let t = n.GetGameSummaryForApp(e.appid);
             return (
-              Li(
+              Ii(
                 t,
                 `Displaying Month Data ${r.rtime_month} missing summary for appid: ${e.appid}`,
               ),
@@ -8873,17 +8951,17 @@ function qy(e) {
   return (0, Y.jsxs)(
     `div`,
     {
-      className: Fy,
+      className: Iy,
       children: [
         (0, Y.jsx)(`div`, {
-          className: Ly,
+          className: Ry,
           children: i
-            ? L.Localize(
+            ? R.Localize(
                 `#YIR_MonthlyGrid_MonthSingular_${u.getUTCMonth() + 1}`,
               )
-            : Zr(u),
+            : Xr(u),
         }),
-        (0, Y.jsx)(Jy, {
+        (0, Y.jsx)(Yy, {
           rgGamesInOrderOfPlaytime: l,
           nYear: t,
           strTooltip: a(`#YIR_FirstTime_MonthlyPercentages`),
@@ -8895,7 +8973,7 @@ function qy(e) {
               href: `#`,
               className: `dUBouRPf5BM-`,
               onClick: () => s(!0),
-              children: L.Localize(`#YIR_ShowMore`),
+              children: R.Localize(`#YIR_ShowMore`),
             }),
           }),
       ],
@@ -8903,24 +8981,24 @@ function qy(e) {
     `monthgroup_` + r.rtime_month,
   );
 }
-function Jy(e) {
+function Yy(e) {
   let { nYear: t, rgGamesInOrderOfPlaytime: n, strTooltip: r } = e,
-    i = S_(),
+    i = C_(),
     { data: a } = Ah(
-      (0, R.useMemo)(() => n.map((e) => e.nParentAppID || e.appid), [n]),
+      (0, z.useMemo)(() => n.map((e) => e.nParentAppID || e.appid), [n]),
     ),
     o = n.filter((e) => a?.has(e.nParentAppID || e.appid)),
     s = o.map((e) => e.appid),
     c = o.map((e, n) =>
       (0, Y.jsx)(
-        Yy,
+        Xy,
         {
           appid: e.nParentAppID || e.appid,
           bNewThisYear: e.bNewThisYear,
           fnOnClick: () => i(n, s),
           nYear: t,
           strPercentage:
-            e.nPercentagex100 === void 0 ? void 0 : J(e.nPercentagex100),
+            e.nPercentagex100 === void 0 ? void 0 : m_(e.nPercentagex100),
           strTooltip: r,
           bIsDemo: e.bIsDemo,
           bIsPlayTest: e.bIsPlaytest,
@@ -8928,13 +9006,13 @@ function Jy(e) {
         e.appid,
       ),
     );
-  return (0, Y.jsx)(A, {
+  return (0, Y.jsx)(j, {
     "flow-children": `grid`,
-    className: (0, Q.default)(Mg, Iy),
+    className: (0, Q.default)(Mg, Ly),
     children: c,
   });
 }
-function Yy(e) {
+function Xy(e) {
   let {
       nYear: t,
       appid: n,
@@ -8946,16 +9024,16 @@ function Yy(e) {
       bIsPlayTest: c,
     } = e,
     { item: l } = kh(n),
-    u = Lr(l && Qt(l.info)) || ``,
-    d = K();
+    u = Ir(l && Zt(l.info)) || ``,
+    d = q();
   if (!l || !l.info.visible) return null;
-  let f = $i(l.assets, `library_capsule`);
+  let f = Qi(l.assets, `library_capsule`);
   return (0, Y.jsx)(`div`, {
-    className: (0, Q.default)({ [Eg]: !0, [Ry]: !0, [void 0]: r }),
+    className: (0, Q.default)({ [Eg]: !0, [zy]: !0, [void 0]: r }),
     onClick: (e) => {
       i && (e.preventDefault(), i());
     },
-    children: (0, Y.jsx)(pe, {
+    children: (0, Y.jsx)(Ie, {
       appid: n,
       children: (0, Y.jsxs)(`a`, {
         href: i ? void 0 : u,
@@ -8971,7 +9049,7 @@ function Yy(e) {
                       `v6qwr186rUA-`,
                       d.GamePlayDetails,
                     ),
-                    children: L.Localize(`#YIR_FirstTime_Played`, t),
+                    children: R.Localize(`#YIR_FirstTime_Played`, t),
                   }),
                 !!s &&
                   (0, Y.jsx)(`div`, {
@@ -8979,7 +9057,7 @@ function Yy(e) {
                       `qEnvz1uXbQU-`,
                       d.DemoPlayDetails,
                     ),
-                    children: L.Localize(`#YIR_Played_Demo`),
+                    children: R.Localize(`#YIR_Played_Demo`),
                   }),
                 !!c &&
                   (0, Y.jsx)(`div`, {
@@ -8987,15 +9065,15 @@ function Yy(e) {
                       `pvLpzVIEyJQ-`,
                       d.PlaytestPlayDetails,
                     ),
-                    children: L.Localize(`#YIR_Played_PlayTest`),
+                    children: R.Localize(`#YIR_Played_PlayTest`),
                   }),
               ],
             }),
           f
             ? (0, Y.jsx)(`img`, { alt: ``, loading: `lazy`, src: f })
-            : (0, Y.jsx)(My, { item: l.info }),
+            : (0, Y.jsx)(Ny, { item: l.info }),
           !!a &&
-            (0, Y.jsx)(Sa, {
+            (0, Y.jsx)(xa, {
               toolTipContent: o,
               className: `x6rpHBjxzTg-`,
               children: a,
@@ -9005,26 +9083,26 @@ function Yy(e) {
     }),
   });
 }
-var Xy = `-mIgF6AA5LY-`,
-  Zy = `Vi83-LkMtoI-`,
-  Qy = `YXohyZxdvfQ-`,
-  $y = `-XC-c1uz0Ko-`,
-  eb = `zZFozEpTZI0-`,
-  tb = `xUqkAY4Oj3o-`,
-  nb = `rwGMj4tdqJs-`,
-  rb = `-ZlfMJZNVtw-`,
-  ib = `F6KTgf9lssw-`,
-  ab = 9e3,
-  ob = 1,
-  sb = 50;
-function cb(e) {
+var Zy = `-mIgF6AA5LY-`,
+  Qy = `Vi83-LkMtoI-`,
+  $y = `YXohyZxdvfQ-`,
+  eb = `-XC-c1uz0Ko-`,
+  tb = `zZFozEpTZI0-`,
+  nb = `xUqkAY4Oj3o-`,
+  rb = `rwGMj4tdqJs-`,
+  ib = `-ZlfMJZNVtw-`,
+  ab = `F6KTgf9lssw-`,
+  ob = 9e3,
+  sb = 1,
+  cb = 50;
+function lb(e) {
   let t = e
     .GetPlayTimeStats()
     .games.map((t) => e.GetGameSummaryForApp(t.appid))
     .filter((e) => e && (e.parent_appid || (!e.demo && !e.playtest)));
   if (t.length == 0) return { eType: `basic` };
   let n = t[0].total_playtime_percentagex100 ?? 0;
-  return e.GetPlayTimeStats().game_summary.length < ob || n >= ab
+  return e.GetPlayTimeStats().game_summary.length < sb || n >= ob
     ? { eType: `single`, appid: t[0].parent_appid || t[0].appid }
     : {
         eType: `tiles`,
@@ -9040,20 +9118,20 @@ function cb(e) {
                   t.total_playtime_percentagex100 -
                   e.total_playtime_percentagex100,
               )
-              .slice(0, sb)
+              .slice(0, cb)
               .map((e) => e.parent_appid || e.appid),
           ),
         ),
       };
 }
-var lb = `ugL-G4FTy2w-`,
-  ub = `c8-WfKGtCq8-`,
-  db = `OsIwsZtSRZQ-`,
-  fb = `_1RZIc4-Ydv8-`,
-  pb = `_4Q73gvvwSoU-`,
-  mb = `_6LO5BaihEDc-`,
-  hb = `bV66XEiP5a8-`;
-function gb(e) {
+var ub = `ugL-G4FTy2w-`,
+  db = `c8-WfKGtCq8-`,
+  fb = `OsIwsZtSRZQ-`,
+  pb = `_1RZIc4-Ydv8-`,
+  mb = `_4Q73gvvwSoU-`,
+  hb = `_6LO5BaihEDc-`,
+  gb = `bV66XEiP5a8-`;
+function _b(e) {
   let {
     children: t,
     className: n,
@@ -9064,75 +9142,75 @@ function gb(e) {
     bDrift: s,
   } = e;
   return (0, Y.jsx)(`div`, {
-    className: pl(lb, n),
+    className: fl(ub, n),
     children: (0, Y.jsx)(`div`, {
-      className: pl(ub, !o && `dXaS0YLAPWg-`),
+      className: fl(db, !o && `dXaS0YLAPWg-`),
       children: (0, Y.jsx)(`div`, {
-        className: pl(db, s && `dKtBrMD331I-`, r),
+        className: fl(fb, s && `dKtBrMD331I-`, r),
         children: (0, Y.jsx)(`div`, {
-          className: pl({ [fb]: !0, [mb]: !a, [hb]: o }, i),
+          className: fl({ [pb]: !0, [hb]: !a, [gb]: o }, i),
           children: t,
         }),
       }),
     }),
   });
 }
-function _b(e) {
+function vb(e) {
   return (0, Y.jsx)(`img`, {
-    className: pl(pb, e.className),
+    className: fl(mb, e.className),
     src: e.strImageURL,
     alt: ``,
   });
 }
-function vb(e) {
-  let { userYearInReview: t, children: n } = e,
-    r = (0, R.useMemo)(() => cb(t), [t]);
-  return r.eType == `basic`
-    ? (0, Y.jsx)(Sb, { children: n })
-    : r.eType == `single`
-      ? (0, Y.jsx)(xb, { appid: r.appid, children: n })
-      : (0, Y.jsx)(yb, { rgAppIDs: r.rgAppIDs, children: n });
-}
 function yb(e) {
+  let { userYearInReview: t, children: n } = e,
+    r = (0, z.useMemo)(() => lb(t), [t]);
+  return r.eType == `basic`
+    ? (0, Y.jsx)(Cb, { children: n })
+    : r.eType == `single`
+      ? (0, Y.jsx)(Sb, { appid: r.appid, children: n })
+      : (0, Y.jsx)(bb, { rgAppIDs: r.rgAppIDs, children: n });
+}
+function bb(e) {
   let { rgAppIDs: t, children: n } = e,
-    r = K(),
+    r = q(),
     { data: i } = Ah(t),
-    { rgStoreItems: a, rgImageURLs: o } = (0, R.useMemo)(() => {
+    { rgStoreItems: a, rgImageURLs: o } = (0, z.useMemo)(() => {
       if (!i) return { rgStoreItems: null, rgImageURLs: null };
       let e = t.map((e) => i.get(e)).filter((e) => !!e && !!e.assets);
-      return { rgStoreItems: e, rgImageURLs: bb(e) };
+      return { rgStoreItems: e, rgImageURLs: xb(e) };
     }, [t, i]);
   return a
     ? (0, Y.jsxs)(Y.Fragment, {
         children: [
-          (0, Y.jsx)(gb, {
-            className: (0, Q.default)(Xy, r.ImagesCtn),
-            squareClassName: Zy,
+          (0, Y.jsx)(_b, {
+            className: (0, Q.default)(Zy, r.ImagesCtn),
+            squareClassName: Qy,
             gridClassName: (0, Q.default)({
-              [Qy]: !0,
-              [tb]: a.length <= 10,
-              [eb]: a.length <= 20,
-              [$y]: a.length <= 40,
+              [$y]: !0,
+              [nb]: a.length <= 10,
+              [tb]: a.length <= 20,
+              [eb]: a.length <= 40,
             }),
             bFadeInTiles: !0,
             bDrift: !0,
             children: o.map((e, t) =>
-              (0, Y.jsx)(_b, { strImageURL: e, className: nb }, t),
+              (0, Y.jsx)(vb, { strImageURL: e, className: rb }, t),
             ),
           }),
           n,
         ],
       })
-    : (0, Y.jsx)(Sb, { children: n });
+    : (0, Y.jsx)(Cb, { children: n });
 }
-function bb(e) {
+function xb(e) {
   let t = (e) => (
-      Li(e.assets, `Cannot get image without assets`),
-      $i(e.assets, `library_hero`, `main_capsule`)
+      Ii(e.assets, `Cannot get image without assets`),
+      Qi(e.assets, `library_hero`, `main_capsule`)
     ),
     n = (e) => (
-      Li(e.assets, `Cannot get image without assets`),
-      $i(e.assets, `raw_page_background`, `main_capsule`)
+      Ii(e.assets, `Cannot get image without assets`),
+      Qi(e.assets, `raw_page_background`, `main_capsule`)
     ),
     r = e.map(t);
   return (
@@ -9141,22 +9219,22 @@ function bb(e) {
     r
   );
 }
-function xb(e) {
+function Sb(e) {
   let { appid: t, children: n } = e,
     { item: r } = kh(t),
-    i = K();
+    i = q();
   return r
     ? (0, Y.jsxs)(Y.Fragment, {
         children: [
           (0, Y.jsx)(`div`, {
-            className: (0, Q.default)(Xy, i.ImagesCtn),
+            className: (0, Q.default)(Zy, i.ImagesCtn),
             children: (0, Y.jsx)(`div`, {
-              className: (0, Q.default)(rb, i.SingleGame),
+              className: (0, Q.default)(ib, i.SingleGame),
               children: (0, Y.jsx)(`div`, {
-                className: (0, Q.default)(ib, i.ImageTint),
+                className: (0, Q.default)(ab, i.ImageTint),
                 children: (0, Y.jsx)(`img`, {
                   alt: ``,
-                  src: $i(r.assets, `library_hero`),
+                  src: Qi(r.assets, `library_hero`),
                 }),
               }),
             }),
@@ -9164,233 +9242,233 @@ function xb(e) {
           n,
         ],
       })
-    : (0, Y.jsx)(Sb, { children: n });
+    : (0, Y.jsx)(Cb, { children: n });
 }
-function Sb(e) {
+function Cb(e) {
   return (0, Y.jsx)(`div`, { className: void 0, children: e.children });
 }
-var Cb = t({
-    Active: () => Mx,
-    Appear: () => xx,
-    BadgeBarFiller: () => Bb,
-    BadgeBox: () => Tb,
-    BadgeBoxIntro: () => Eb,
-    BadgeContents: () => Db,
-    BadgeDesc: () => Wb,
-    BadgeGetBtn: () => Gb,
-    BadgeImgCtn: () => Ub,
-    BadgeName: () => Hb,
-    BadgeRarity_common: () => Ob,
-    BadgeRarity_epic: () => Mb,
-    BadgeRarity_legendary: () => Nb,
-    BadgeRarity_rare: () => jb,
-    BadgeRarity_uncommon: () => Ab,
-    DataBox: () => Ix,
-    DataBoxArrow: () => zx,
-    DataBoxesContainer: () => Px,
-    Disabled: () => ax,
-    ElementFadeIn: () => Vx,
-    FillerBar: () => Rb,
-    FillerDots: () => ix,
-    FlavorLabel: () => Fx,
-    GameNewnessComparisonContainer: () => Ox,
-    GameNewnessDataCnt: () => kx,
-    GameNewnessTitle: () => Bx,
-    Glitter: () => fx,
-    GlitterBox: () => ux,
-    GlitterSecond: () => dx,
-    GraphBox: () => Yb,
-    HalfwidthColumn: () => qb,
-    NumbersLabel: () => nx,
-    NumbersRow: () => tx,
-    NumbersRowsCnt: () => ex,
-    NumbersValue: () => rx,
-    PercentageDescriptionLabel: () => Rx,
-    PercentageLabel: () => Lx,
-    PlayBehaviorContainer: () => cx,
-    PlayBehaviorSectionSubTitle: () => hx,
-    PlayNewnessContainer: () => Dx,
-    PlayerBehaviorProgressCnt: () => gx,
-    ProgressBar: () => Tx,
-    ProgressBarFilled: () => lx,
-    ProgressBarWrapper: () => _x,
-    ProgressIcon: () => Sx,
-    ProgressIconSVG: () => Cx,
-    ProgressLabel: () => Ex,
-    ProgressLabelsCnt: () => vx,
-    ProgressRightSide: () => wx,
-    ProgressSteamAvgLabel: () => yx,
-    RadarChartLegend: () => $b,
-    RadarText: () => Xb,
-    RadarTextContainer: () => Zb,
-    RarityBar: () => Ib,
-    RarityBarSegment: () => Lb,
-    RarityDesc: () => Vb,
-    RarityInfoCtn: () => Fb,
-    RarityText: () => kb,
-    RightCol: () => Pb,
-    RightSideContainer: () => Nx,
-    SectionDesc: () => sx,
-    SectionLabel: () => ox,
-    SegmentCap: () => zb,
-    SpiderAndNumbersCnt: () => Kb,
-    SpiderResponsiveContainer: () => Qb,
-    SpidergraphContainer: () => Jb,
-    TopHonorsCtn: () => wb,
-    WheelArc: () => jx,
-    WheelChart: () => Ax,
-    default: () => Hx,
-    glitterMove: () => px,
-    glitterMove2: () => mx,
-    progressBar: () => bx,
+var wb = t({
+    Active: () => Nx,
+    Appear: () => Sx,
+    BadgeBarFiller: () => Vb,
+    BadgeBox: () => Eb,
+    BadgeBoxIntro: () => Db,
+    BadgeContents: () => Ob,
+    BadgeDesc: () => Gb,
+    BadgeGetBtn: () => Kb,
+    BadgeImgCtn: () => Wb,
+    BadgeName: () => Ub,
+    BadgeRarity_common: () => kb,
+    BadgeRarity_epic: () => Nb,
+    BadgeRarity_legendary: () => Pb,
+    BadgeRarity_rare: () => Mb,
+    BadgeRarity_uncommon: () => jb,
+    DataBox: () => Lx,
+    DataBoxArrow: () => Bx,
+    DataBoxesContainer: () => Fx,
+    Disabled: () => ox,
+    ElementFadeIn: () => Hx,
+    FillerBar: () => zb,
+    FillerDots: () => ax,
+    FlavorLabel: () => Ix,
+    GameNewnessComparisonContainer: () => kx,
+    GameNewnessDataCnt: () => Ax,
+    GameNewnessTitle: () => Vx,
+    Glitter: () => px,
+    GlitterBox: () => dx,
+    GlitterSecond: () => fx,
+    GraphBox: () => Xb,
+    HalfwidthColumn: () => Jb,
+    NumbersLabel: () => rx,
+    NumbersRow: () => nx,
+    NumbersRowsCnt: () => tx,
+    NumbersValue: () => ix,
+    PercentageDescriptionLabel: () => zx,
+    PercentageLabel: () => Rx,
+    PlayBehaviorContainer: () => lx,
+    PlayBehaviorSectionSubTitle: () => gx,
+    PlayNewnessContainer: () => Ox,
+    PlayerBehaviorProgressCnt: () => _x,
+    ProgressBar: () => Ex,
+    ProgressBarFilled: () => ux,
+    ProgressBarWrapper: () => vx,
+    ProgressIcon: () => Cx,
+    ProgressIconSVG: () => wx,
+    ProgressLabel: () => Dx,
+    ProgressLabelsCnt: () => yx,
+    ProgressRightSide: () => Tx,
+    ProgressSteamAvgLabel: () => bx,
+    RadarChartLegend: () => ex,
+    RadarText: () => Zb,
+    RadarTextContainer: () => Qb,
+    RarityBar: () => Lb,
+    RarityBarSegment: () => Rb,
+    RarityDesc: () => Hb,
+    RarityInfoCtn: () => Ib,
+    RarityText: () => Ab,
+    RightCol: () => Fb,
+    RightSideContainer: () => Px,
+    SectionDesc: () => cx,
+    SectionLabel: () => sx,
+    SegmentCap: () => Bb,
+    SpiderAndNumbersCnt: () => qb,
+    SpiderResponsiveContainer: () => $b,
+    SpidergraphContainer: () => Yb,
+    TopHonorsCtn: () => Tb,
+    WheelArc: () => Mx,
+    WheelChart: () => jx,
+    default: () => Ux,
+    glitterMove: () => mx,
+    glitterMove2: () => hx,
+    progressBar: () => xx,
   }),
-  wb = `_8MMZZOMlBHA-`,
-  Tb = `kjlSrD84bUs-`,
-  Eb = `CnBmGiFtNT0-`,
-  Db = `_2H6regBFr4A-`,
-  Ob = `xMSIrz8QNm4-`,
-  kb = `IveJy5QZXYo-`,
-  Ab = `_571YhehUkx4-`,
-  jb = `-nnBxrwGwuc-`,
-  Mb = `J6oM-PiOKAA-`,
-  Nb = `KSTPULVW5bQ-`,
-  Pb = `gUjbsGPoR4E-`,
-  Fb = `x3GiOuwvZgI-`,
-  Ib = `_2z5eG5DUYNA-`,
-  Lb = `OcZxMthyO1Q-`,
-  Rb = `dogr49iCxO0-`,
-  zb = `xIw4nr0zmDU-`,
-  Bb = `hrrpNs-t5os-`,
-  Vb = `d2u0-poYQ6Q-`,
-  Hb = `RP9sAnKzwq4-`,
-  Ub = `YCkJBRdHX74-`,
-  Wb = `wsZ4D5OBXxA-`,
-  Gb = `VbvjmHdYZUs-`,
-  Kb = `PMUu6aR8bT0-`,
-  qb = `NTDxIz9hpZQ-`,
-  Jb = `-LL-rRwXHvQ-`,
-  Yb = `udPMl22PhSc-`,
-  Xb = `URBSKU-uKts-`,
-  Zb = `p7VrPSl4acM-`,
-  Qb = `xPpu-EhMrzM-`,
-  $b = `e5EFq580oLg-`,
-  ex = `lkrsOd-pN7M-`,
-  tx = `gdGCZIz-fdM-`,
-  nx = `_2AcQ3eLZpqQ-`,
-  rx = `aBL1S716KHI-`,
-  ix = `_9kf74DPWJHs-`,
-  ax = `MvmFmRp0gao-`,
-  ox = `qFjJzWZ5t6U-`,
-  sx = `lBH0gHt22Fc-`,
-  cx = `EcABZ-m3zvk-`,
-  lx = `ntvLkao7PkE-`,
-  ux = `NJBuZKTDzAE-`,
-  dx = `n62MYB6VP4U-`,
-  fx = `FVHCXXtwkMc-`,
-  px = `FZJGl5gD9TA-`,
-  mx = `_9WKfAIJ7GYg-`,
-  hx = `_0jnwL-HxS8o-`,
-  gx = `r-PiY57GlY8-`,
-  _x = `E8dRIfC8z8U-`,
-  vx = `qffLKsSHu0M-`,
-  yx = `aKnZAgIhrq0-`,
-  bx = `MAhYpOkM9Zs-`,
-  xx = `_4xkdBuilUW8-`,
-  Sx = `_1paAUH9-U80-`,
-  Cx = `QwRTqCa5RJI-`,
-  wx = `_54a2wTltSQo-`,
-  Tx = `ACraqmlP6JQ-`,
-  Ex = `Em-W-2-scx4-`,
-  Dx = `_93HCZZaF-GQ-`,
-  Ox = `Lj6zc-CzUcI-`,
-  kx = `PPF1V2vagl4-`,
-  Ax = `Os1d9o6QJ48-`,
-  jx = `ncAmk-wH-LE-`,
-  Mx = `DXcvT92GGo8-`,
-  Nx = `AaHMu4lT7dk-`,
-  Px = `xBfnjHBm-1E-`,
-  Fx = `mJeXM2yr-2Q-`,
-  Ix = `RRGyT0y5ixE-`,
-  Lx = `GKnUCAKm6-M-`,
-  Rx = `_3mHbUC3OZ1w-`,
-  zx = `eeacvOJIz2s-`,
-  Bx = `TUUDCjzjuow-`,
-  Vx = `f5WBpNOlO1E-`,
-  Hx = {
-    TopHonorsCtn: wb,
-    BadgeBox: Tb,
-    BadgeBoxIntro: Eb,
-    BadgeContents: Db,
-    BadgeRarity_common: Ob,
-    RarityText: kb,
-    BadgeRarity_uncommon: Ab,
-    BadgeRarity_rare: jb,
-    BadgeRarity_epic: Mb,
-    BadgeRarity_legendary: Nb,
-    RightCol: Pb,
-    RarityInfoCtn: Fb,
-    RarityBar: Ib,
-    RarityBarSegment: Lb,
-    FillerBar: Rb,
-    SegmentCap: zb,
-    BadgeBarFiller: Bb,
-    RarityDesc: Vb,
-    BadgeName: Hb,
-    BadgeImgCtn: Ub,
-    BadgeDesc: Wb,
-    BadgeGetBtn: Gb,
-    SpiderAndNumbersCnt: Kb,
-    HalfwidthColumn: qb,
-    SpidergraphContainer: Jb,
-    GraphBox: Yb,
-    RadarText: Xb,
-    RadarTextContainer: Zb,
-    SpiderResponsiveContainer: Qb,
-    RadarChartLegend: $b,
-    NumbersRowsCnt: ex,
-    NumbersRow: tx,
-    NumbersLabel: nx,
-    NumbersValue: rx,
-    FillerDots: ix,
-    Disabled: ax,
-    SectionLabel: ox,
-    SectionDesc: sx,
-    PlayBehaviorContainer: cx,
-    ProgressBarFilled: lx,
-    GlitterBox: ux,
-    GlitterSecond: dx,
-    Glitter: fx,
-    glitterMove: px,
-    glitterMove2: mx,
-    PlayBehaviorSectionSubTitle: hx,
-    PlayerBehaviorProgressCnt: gx,
-    ProgressBarWrapper: _x,
-    ProgressLabelsCnt: vx,
-    ProgressSteamAvgLabel: yx,
-    progressBar: bx,
-    Appear: xx,
-    ProgressIcon: Sx,
-    ProgressIconSVG: Cx,
-    ProgressRightSide: wx,
-    ProgressBar: Tx,
-    ProgressLabel: Ex,
-    PlayNewnessContainer: Dx,
-    GameNewnessComparisonContainer: Ox,
-    GameNewnessDataCnt: kx,
-    WheelChart: Ax,
-    WheelArc: jx,
-    Active: Mx,
-    RightSideContainer: Nx,
-    DataBoxesContainer: Px,
-    FlavorLabel: Fx,
-    DataBox: Ix,
-    PercentageLabel: Lx,
-    PercentageDescriptionLabel: Rx,
-    DataBoxArrow: zx,
-    GameNewnessTitle: Bx,
-    ElementFadeIn: Vx,
+  Tb = `_8MMZZOMlBHA-`,
+  Eb = `kjlSrD84bUs-`,
+  Db = `CnBmGiFtNT0-`,
+  Ob = `_2H6regBFr4A-`,
+  kb = `xMSIrz8QNm4-`,
+  Ab = `IveJy5QZXYo-`,
+  jb = `_571YhehUkx4-`,
+  Mb = `-nnBxrwGwuc-`,
+  Nb = `J6oM-PiOKAA-`,
+  Pb = `KSTPULVW5bQ-`,
+  Fb = `gUjbsGPoR4E-`,
+  Ib = `x3GiOuwvZgI-`,
+  Lb = `_2z5eG5DUYNA-`,
+  Rb = `OcZxMthyO1Q-`,
+  zb = `dogr49iCxO0-`,
+  Bb = `xIw4nr0zmDU-`,
+  Vb = `hrrpNs-t5os-`,
+  Hb = `d2u0-poYQ6Q-`,
+  Ub = `RP9sAnKzwq4-`,
+  Wb = `YCkJBRdHX74-`,
+  Gb = `wsZ4D5OBXxA-`,
+  Kb = `VbvjmHdYZUs-`,
+  qb = `PMUu6aR8bT0-`,
+  Jb = `NTDxIz9hpZQ-`,
+  Yb = `-LL-rRwXHvQ-`,
+  Xb = `udPMl22PhSc-`,
+  Zb = `URBSKU-uKts-`,
+  Qb = `p7VrPSl4acM-`,
+  $b = `xPpu-EhMrzM-`,
+  ex = `e5EFq580oLg-`,
+  tx = `lkrsOd-pN7M-`,
+  nx = `gdGCZIz-fdM-`,
+  rx = `_2AcQ3eLZpqQ-`,
+  ix = `aBL1S716KHI-`,
+  ax = `_9kf74DPWJHs-`,
+  ox = `MvmFmRp0gao-`,
+  sx = `qFjJzWZ5t6U-`,
+  cx = `lBH0gHt22Fc-`,
+  lx = `EcABZ-m3zvk-`,
+  ux = `ntvLkao7PkE-`,
+  dx = `NJBuZKTDzAE-`,
+  fx = `n62MYB6VP4U-`,
+  px = `FVHCXXtwkMc-`,
+  mx = `FZJGl5gD9TA-`,
+  hx = `_9WKfAIJ7GYg-`,
+  gx = `_0jnwL-HxS8o-`,
+  _x = `r-PiY57GlY8-`,
+  vx = `E8dRIfC8z8U-`,
+  yx = `qffLKsSHu0M-`,
+  bx = `aKnZAgIhrq0-`,
+  xx = `MAhYpOkM9Zs-`,
+  Sx = `_4xkdBuilUW8-`,
+  Cx = `_1paAUH9-U80-`,
+  wx = `QwRTqCa5RJI-`,
+  Tx = `_54a2wTltSQo-`,
+  Ex = `ACraqmlP6JQ-`,
+  Dx = `Em-W-2-scx4-`,
+  Ox = `_93HCZZaF-GQ-`,
+  kx = `Lj6zc-CzUcI-`,
+  Ax = `PPF1V2vagl4-`,
+  jx = `Os1d9o6QJ48-`,
+  Mx = `ncAmk-wH-LE-`,
+  Nx = `DXcvT92GGo8-`,
+  Px = `AaHMu4lT7dk-`,
+  Fx = `xBfnjHBm-1E-`,
+  Ix = `mJeXM2yr-2Q-`,
+  Lx = `RRGyT0y5ixE-`,
+  Rx = `GKnUCAKm6-M-`,
+  zx = `_3mHbUC3OZ1w-`,
+  Bx = `eeacvOJIz2s-`,
+  Vx = `TUUDCjzjuow-`,
+  Hx = `f5WBpNOlO1E-`,
+  Ux = {
+    TopHonorsCtn: Tb,
+    BadgeBox: Eb,
+    BadgeBoxIntro: Db,
+    BadgeContents: Ob,
+    BadgeRarity_common: kb,
+    RarityText: Ab,
+    BadgeRarity_uncommon: jb,
+    BadgeRarity_rare: Mb,
+    BadgeRarity_epic: Nb,
+    BadgeRarity_legendary: Pb,
+    RightCol: Fb,
+    RarityInfoCtn: Ib,
+    RarityBar: Lb,
+    RarityBarSegment: Rb,
+    FillerBar: zb,
+    SegmentCap: Bb,
+    BadgeBarFiller: Vb,
+    RarityDesc: Hb,
+    BadgeName: Ub,
+    BadgeImgCtn: Wb,
+    BadgeDesc: Gb,
+    BadgeGetBtn: Kb,
+    SpiderAndNumbersCnt: qb,
+    HalfwidthColumn: Jb,
+    SpidergraphContainer: Yb,
+    GraphBox: Xb,
+    RadarText: Zb,
+    RadarTextContainer: Qb,
+    SpiderResponsiveContainer: $b,
+    RadarChartLegend: ex,
+    NumbersRowsCnt: tx,
+    NumbersRow: nx,
+    NumbersLabel: rx,
+    NumbersValue: ix,
+    FillerDots: ax,
+    Disabled: ox,
+    SectionLabel: sx,
+    SectionDesc: cx,
+    PlayBehaviorContainer: lx,
+    ProgressBarFilled: ux,
+    GlitterBox: dx,
+    GlitterSecond: fx,
+    Glitter: px,
+    glitterMove: mx,
+    glitterMove2: hx,
+    PlayBehaviorSectionSubTitle: gx,
+    PlayerBehaviorProgressCnt: _x,
+    ProgressBarWrapper: vx,
+    ProgressLabelsCnt: yx,
+    ProgressSteamAvgLabel: bx,
+    progressBar: xx,
+    Appear: Sx,
+    ProgressIcon: Cx,
+    ProgressIconSVG: wx,
+    ProgressRightSide: Tx,
+    ProgressBar: Ex,
+    ProgressLabel: Dx,
+    PlayNewnessContainer: Ox,
+    GameNewnessComparisonContainer: kx,
+    GameNewnessDataCnt: Ax,
+    WheelChart: jx,
+    WheelArc: Mx,
+    Active: Nx,
+    RightSideContainer: Px,
+    DataBoxesContainer: Fx,
+    FlavorLabel: Ix,
+    DataBox: Lx,
+    PercentageLabel: Rx,
+    PercentageDescriptionLabel: zx,
+    DataBoxArrow: Bx,
+    GameNewnessTitle: Vx,
+    ElementFadeIn: Hx,
   },
-  Ux = ({
+  Wx = ({
     spaceAroundCount: e,
     endValue: t,
     maxValue: n,
@@ -9402,11 +9480,11 @@ var Cb = t({
     delay: c = 0,
     className: l,
   }) => {
-    let [u, d] = (0, R.useState)(0),
-      f = R.useRef(null),
+    let [u, d] = (0, z.useState)(0),
+      f = z.useRef(null),
       p = (e) => (e < 0.5 ? 4 * e ** 3 : 1 - (-2 * e + 2) ** 3 / 2);
     return (
-      (0, R.useEffect)(() => {
+      (0, z.useEffect)(() => {
         let e = null,
           l = () => {
             if (!e) return;
@@ -9430,13 +9508,13 @@ var Cb = t({
         );
       }, [t, r, i, a, o, s, c, n]),
       e
-        ? (0, Y.jsxs)(Y.Fragment, { children: [`\xA0`, dl(u), `\xA0`] })
-        : (0, Y.jsx)(Y.Fragment, { children: dl(u) })
+        ? (0, Y.jsxs)(Y.Fragment, { children: [`\xA0`, ul(u), `\xA0`] })
+        : (0, Y.jsx)(Y.Fragment, { children: ul(u) })
     );
   };
-function Wx() {
-  typeof ae == `function`
-    ? ae({
+function Gx() {
+  typeof ne == `function`
+    ? ne({
         measureText: (e, t) => {
           let n = e.toString(),
             r = typeof t?.fontSize == `number` ? t.fontSize : 13;
@@ -9447,11 +9525,11 @@ function Wx() {
         `Cannot find configureTextMeasurement. Recharts not patched correctly for this context.`,
       );
 }
-Wx();
-var Gx = () => {
-    let e = K();
+Gx();
+var Kx = () => {
+    let e = q();
     return (0, Y.jsxs)(`svg`, {
-      className: (0, Q.default)(Cx, void 0, e.IconStreak),
+      className: (0, Q.default)(wx, void 0, e.IconStreak),
       x: `0px`,
       y: `0px`,
       width: `100px`,
@@ -9519,10 +9597,10 @@ var Gx = () => {
       ],
     });
   },
-  Kx = () => {
-    let e = K();
+  qx = () => {
+    let e = q();
     return (0, Y.jsxs)(`svg`, {
-      className: (0, Q.default)(Cx, void 0, e.IconGamesPlayed),
+      className: (0, Q.default)(wx, void 0, e.IconGamesPlayed),
       x: `0px`,
       y: `0px`,
       width: `100px`,
@@ -9552,10 +9630,10 @@ var Gx = () => {
       ],
     });
   },
-  qx = () => {
-    let e = K();
+  Jx = () => {
+    let e = q();
     return (0, Y.jsx)(`svg`, {
-      className: (0, Q.default)(Cx, void 0, e.IconAchievement),
+      className: (0, Q.default)(wx, void 0, e.IconAchievement),
       x: `0px`,
       y: `0px`,
       width: `100px`,
@@ -9571,22 +9649,22 @@ var Gx = () => {
       }),
     });
   };
-function Jx(e) {
+function Yx(e) {
   let { userYearInReview: t } = e,
-    n = K();
+    n = q();
   return (0, Y.jsx)($, {
-    className: (0, Q.default)(Lv, n.TopHonorsSection),
+    className: (0, Q.default)(Rv, n.TopHonorsSection),
     children: (0, Y.jsx)(`div`, {
-      className: (0, Q.default)(X, k_),
+      className: (0, Q.default)(X, A_),
       children: (0, Y.jsxs)(`div`, {
-        className: wb,
+        className: Tb,
         children: [
-          (0, Y.jsx)(Yx, { userYearInReview: t }),
+          (0, Y.jsx)(Xx, { userYearInReview: t }),
           (0, Y.jsxs)(`div`, {
-            className: Kb,
+            className: qb,
             children: [
-              (0, Y.jsx)($x, { userYearInReview: t }),
-              (0, Y.jsx)(rS, { userYearInReview: t }),
+              (0, Y.jsx)(eS, { userYearInReview: t }),
+              (0, Y.jsx)(iS, { userYearInReview: t }),
             ],
           }),
         ],
@@ -9594,11 +9672,11 @@ function Jx(e) {
     }),
   });
 }
-function Yx(e) {
+function Xx(e) {
   let { userYearInReview: t } = e;
   t.GetYear();
-  let n = q(),
-    r = K(),
+  let n = J(),
+    r = q(),
     i = t.GetPlayTimeStats().summary_stats?.total_achievements || 0,
     a = t.GetFilteredGameSummary()?.length || 0,
     o = t.GetPlayTimeStats().playtime_streak?.longest_consecutive_days || 0,
@@ -9615,27 +9693,27 @@ function Yx(e) {
     i == 0 && (s = 0),
     a == 0 && (c = 0),
     o == 0 && (l = 0));
-  let [d, f] = R.useState(!1),
-    [p, m] = R.useState(!1),
-    [h, g] = R.useState(!1),
-    _ = R.useCallback(async (e) => {
+  let [d, f] = z.useState(!1),
+    [p, m] = z.useState(!1),
+    [h, g] = z.useState(!1),
+    _ = z.useCallback(async (e) => {
       e && (f(!0), m(!0), g(!0));
     }, []),
-    v = (0, Y.jsx)(Ux, {
+    v = (0, Y.jsx)(Wx, {
       endValue: i,
       maxValue: (i * 100) / s,
       duration: 2e3,
       startAnimation: d,
       delay: 500,
     }),
-    ee = (0, Y.jsx)(Ux, {
+    y = (0, Y.jsx)(Wx, {
       endValue: a,
       maxValue: (a * 100) / c,
       duration: 2e3,
       startAnimation: p,
       delay: 700,
     }),
-    y = (0, Y.jsx)(Ux, {
+    b = (0, Y.jsx)(Wx, {
       endValue: o,
       maxValue: (o * 100) / l,
       duration: 2e3,
@@ -9643,20 +9721,20 @@ function Yx(e) {
       delay: 900,
     });
   return (0, Y.jsxs)(`div`, {
-    className: (0, Q.default)(cx, r.PlayBehaviorContainer),
+    className: (0, Q.default)(lx, r.PlayBehaviorContainer),
     children: [
       (0, Y.jsx)(`div`, {
-        className: z_,
+        className: B_,
         children: n(`#YIR_Compare_Title_Label`),
       }),
       (0, Y.jsx)(`div`, {
-        className: (0, Q.default)(V_, hx),
+        className: (0, Q.default)(H_, gx),
         children: n(`#YIR_Compare_Subtitle_Label`),
       }),
-      (0, Y.jsxs)(ps, {
+      (0, Y.jsxs)(fs, {
         onVisibilityChange: _,
         children: [
-          (0, Y.jsx)(Xx, {
+          (0, Y.jsx)(Zx, {
             progressLabel: n(
               i == 1
                 ? `#YIR_Compare_PlayerProgress_Achievements_Single`
@@ -9665,68 +9743,68 @@ function Yx(e) {
             ),
             userPercent: s,
             steamAverage: t.GetPlayTimeStats().by_numbers?.achievements_avg,
-            progressIcon: (0, Y.jsx)(qx, {}),
+            progressIcon: (0, Y.jsx)(Jx, {}),
           }),
-          (0, Y.jsx)(Xx, {
+          (0, Y.jsx)(Zx, {
             progressLabel: n(
               a == 1
                 ? `#YIR_Compare_PlayerProgress_PlayedGames_Single`
                 : `#YIR_Compare_PlayerProgress_PlayedGames_Label`,
-              ee,
+              y,
             ),
             userPercent: c,
             steamAverage: t.GetPlayTimeStats().by_numbers?.games_played_avg,
-            progressIcon: (0, Y.jsx)(Kx, {}),
+            progressIcon: (0, Y.jsx)(qx, {}),
           }),
           u &&
-            (0, Y.jsx)(Xx, {
+            (0, Y.jsx)(Zx, {
               progressLabel: n(
                 o == 1
                   ? `#YIR_Compare_PlayerProgress_LongestStreak_Single`
                   : `#YIR_Compare_PlayerProgress_LongestStreak_Label`,
-                y,
+                b,
               ),
               userPercent: l,
               steamAverage: t.GetPlayTimeStats().by_numbers?.game_streak_avg,
-              progressIcon: (0, Y.jsx)(Gx, {}),
+              progressIcon: (0, Y.jsx)(Kx, {}),
             }),
         ],
       }),
       (0, Y.jsx)(`div`, {
-        className: Dx,
-        children: (0, Y.jsx)(Qx, { userYearInReview: t }),
+        className: Ox,
+        children: (0, Y.jsx)($x, { userYearInReview: t }),
       }),
     ],
   });
 }
-function Xx(e) {
+function Zx(e) {
   let {
       progressLabel: t,
       steamAverage: n,
       progressIcon: r,
       userPercent: i,
     } = e,
-    a = K();
+    a = q();
   return (
-    (i = Os(i, 0, 100)),
+    (i = Ds(i, 0, 100)),
     (0, Y.jsxs)($, {
-      className: gx,
+      className: _x,
       children: [
-        (0, Y.jsx)(`div`, { className: Sx, children: r }),
+        (0, Y.jsx)(`div`, { className: Cx, children: r }),
         (0, Y.jsxs)(`div`, {
-          className: wx,
+          className: Tx,
           children: [
             (0, Y.jsx)(`div`, {
-              className: (0, Q.default)(Ex, a.ProgressLabel),
+              className: (0, Q.default)(Dx, a.ProgressLabel),
               children: t,
             }),
             (0, Y.jsx)(`div`, {
-              className: Tx,
+              className: Ex,
               children: (0, Y.jsx)(`div`, {
-                className: _x,
+                className: vx,
                 children: (0, Y.jsx)(`div`, {
                   className: (0, Q.default)(
-                    lx,
+                    ux,
                     a.ProgressBarFilled,
                     a.ProgressBarFilledGradient,
                   ),
@@ -9735,22 +9813,22 @@ function Xx(e) {
                       `polygon(0% 0, ` + i + `% 0%, ` + i + `% 100%, 0% 100%)`,
                   },
                   children: (0, Y.jsxs)(`div`, {
-                    className: ux,
+                    className: dx,
                     children: [
-                      (0, Y.jsx)(`div`, { className: fx }),
-                      (0, Y.jsx)(`div`, { className: (0, Q.default)(fx, dx) }),
+                      (0, Y.jsx)(`div`, { className: px }),
+                      (0, Y.jsx)(`div`, { className: (0, Q.default)(px, fx) }),
                     ],
                   }),
                 }),
               }),
             }),
             (0, Y.jsx)(`div`, {
-              className: vx,
+              className: yx,
               children:
                 n &&
                 (0, Y.jsx)(`div`, {
                   className: `aKnZAgIhrq0-`,
-                  children: L.Localize(
+                  children: R.Localize(
                     `#YIR_Compare_PlayerProgress_Steam_Avg`,
                     n,
                   ),
@@ -9762,20 +9840,20 @@ function Xx(e) {
     })
   );
 }
-var Zx = {
+var Qx = {
   NewActive: `#YIR_Compare_NewGames_Flavor`,
   UsedActive: `#YIR_Compare_ComfortGames_Flavor`,
   OldActive: `#YIR_Compare_OldGames_Flavor`,
 };
-function Qx(e) {
+function $x(e) {
   let { userYearInReview: t } = e,
     n = t.GetYear(),
-    r = K(),
+    r = q(),
     i = r.new_games_color,
     a = r.used_games_color,
     o = r.old_games_color,
-    [s, c] = (0, R.useState)(`NewActive`),
-    l = q(),
+    [s, c] = (0, z.useState)(`NewActive`),
+    l = J(),
     u = t.GetGlobalGameplayDistribition(),
     d = {
       NewActive: u?.new_releases || 0,
@@ -9784,7 +9862,7 @@ function Qx(e) {
     },
     f = u && u.new_releases ? u.recent_cutoff_year : 7,
     p = f + 1,
-    [m, h, g] = R.useMemo(() => {
+    [m, h, g] = z.useMemo(() => {
       let e = t.GetGameAgeCounts([1, p]),
         n = e.reduce((e, t) => t + e, 0);
       if (n == 0) return [0, 0, 0];
@@ -9806,12 +9884,12 @@ function Qx(e) {
       UsedActive: l(`#YIR_Compare_ComfortGames_Desc_User`, f),
       OldActive: l(`#YIR_Compare_OldGames_Desc_User`, p),
     },
-    ee = {
-      NewActive: L.Localize(`#YIR_Compare_NewGames_Desc_AvgSteam`, n),
-      UsedActive: L.Localize(`#YIR_Compare_ComfortGames_Desc_AvgSteam`, f),
-      OldActive: L.Localize(`#YIR_Compare_OldGames_Desc_AvgSteam`, p),
+    y = {
+      NewActive: R.Localize(`#YIR_Compare_NewGames_Desc_AvgSteam`, n),
+      UsedActive: R.Localize(`#YIR_Compare_ComfortGames_Desc_AvgSteam`, f),
+      OldActive: R.Localize(`#YIR_Compare_OldGames_Desc_AvgSteam`, p),
     },
-    y = (0, R.useMemo)(() => {
+    b = (0, z.useMemo)(() => {
       let e = [];
       return (
         e.push({ name: `new`, value: m > 0 ? m : 1 }),
@@ -9821,25 +9899,25 @@ function Qx(e) {
       );
     }, [m, h, g]);
   return (0, Y.jsxs)(`div`, {
-    className: (0, Q.default)(Ox, Cb[s], r[s]),
+    className: (0, Q.default)(kx, wb[s], r[s]),
     children: [
       (0, Y.jsx)(`div`, {
-        className: (0, Q.default)(Bx, r.GameNewnessTitle),
-        children: L.LocalizeReact(
+        className: (0, Q.default)(Vx, r.GameNewnessTitle),
+        children: R.LocalizeReact(
           `#YIR_Compare_Flavor_Title`,
           (0, Y.jsx)(`div`, {}),
         ),
       }),
       (0, Y.jsxs)(`div`, {
-        className: kx,
+        className: Ax,
         children: [
           (0, Y.jsx)(`div`, {
-            className: Ax,
-            children: (0, Y.jsx)(kp, {
+            className: jx,
+            children: (0, Y.jsx)(Op, {
               responsive: !0,
               style: { width: `100%`, aspectRatio: 1 },
-              children: (0, Y.jsxs)(wf, {
-                data: y,
+              children: (0, Y.jsxs)(Cf, {
+                data: b,
                 dataKey: `value`,
                 nameKey: `name`,
                 cx: `50%`,
@@ -9853,11 +9931,11 @@ function Qx(e) {
                 endAngle: 405,
                 children: [
                   (0, Y.jsx)(
-                    re,
+                    Ce,
                     {
                       onMouseEnter: () => c(`NewActive`),
                       className: (0, Q.default)(
-                        jx,
+                        Mx,
                         s === `NewActive` && `DXcvT92GGo8-`,
                       ),
                       fill: i,
@@ -9869,11 +9947,11 @@ function Qx(e) {
                     `cell-1`,
                   ),
                   (0, Y.jsx)(
-                    re,
+                    Ce,
                     {
                       onMouseEnter: () => c(`UsedActive`),
                       className: (0, Q.default)(
-                        jx,
+                        Mx,
                         s === `UsedActive` && `DXcvT92GGo8-`,
                       ),
                       fill: a,
@@ -9885,11 +9963,11 @@ function Qx(e) {
                     `cell-2`,
                   ),
                   (0, Y.jsx)(
-                    re,
+                    Ce,
                     {
                       onMouseEnter: () => c(`OldActive`),
                       className: (0, Q.default)(
-                        jx,
+                        Mx,
                         s === `OldActive` && `DXcvT92GGo8-`,
                       ),
                       fill: o,
@@ -9905,39 +9983,39 @@ function Qx(e) {
             }),
           }),
           (0, Y.jsx)(`div`, {
-            className: Nx,
+            className: Px,
             children: (0, Y.jsxs)(`div`, {
-              className: Px,
+              className: Fx,
               children: [
                 (0, Y.jsxs)(`div`, {
                   className: (0, Q.default)(
                     void 0,
                     r.UserData,
-                    Ix,
+                    Lx,
                     r.DataBox,
                     r.Background,
                   ),
                   children: [
                     (0, Y.jsx)(`div`, {
                       className: (0, Q.default)(
-                        zx,
+                        Bx,
                         r.DataBoxArrow,
                         r.Background,
                       ),
                     }),
                     (0, Y.jsxs)(`div`, {
-                      className: (0, Q.default)(Lx, r.PercentageLabel, r.Color),
+                      className: (0, Q.default)(Rx, r.PercentageLabel, r.Color),
                       children: [
-                        L.Localize(`#YIR_Compare_Percentage`, _[s]),
+                        R.Localize(`#YIR_Compare_Percentage`, _[s]),
                         (0, Y.jsx)(`div`, {
-                          className: Fx,
-                          children: L.Localize(Zx[s]),
+                          className: Ix,
+                          children: R.Localize(Qx[s]),
                         }),
                       ],
                     }),
                     (0, Y.jsx)(`div`, {
                       className: (0, Q.default)(
-                        Rx,
+                        zx,
                         r.PercentageDescriptionLabel,
                         r.Color,
                       ),
@@ -9949,22 +10027,22 @@ function Qx(e) {
                   className: (0, Q.default)(
                     void 0,
                     r.SteamData,
-                    Ix,
+                    Lx,
                     r.DataBox,
                     r.Border,
                   ),
                   children: [
                     (0, Y.jsx)(`div`, {
-                      className: (0, Q.default)(Lx, r.PercentageLabel, r.Color),
-                      children: L.Localize(`#YIR_Compare_Percentage`, d[s]),
+                      className: (0, Q.default)(Rx, r.PercentageLabel, r.Color),
+                      children: R.Localize(`#YIR_Compare_Percentage`, d[s]),
                     }),
                     (0, Y.jsx)(`div`, {
                       className: (0, Q.default)(
-                        Rx,
+                        zx,
                         r.PercentageDescriptionLabel,
                         r.Color,
                       ),
-                      children: ee[s],
+                      children: y[s],
                     }),
                   ],
                 }),
@@ -9976,13 +10054,13 @@ function Qx(e) {
     ],
   });
 }
-function $x(e) {
+function eS(e) {
   let { userYearInReview: t } = e,
     n = t.GetUserAggregateTagData(),
-    { data: r } = ml(N.LANGUAGE),
-    i = q(),
-    a = K(),
-    o = eS(),
+    { data: r } = pl(P.LANGUAGE),
+    i = J(),
+    a = q(),
+    o = tS(),
     s = n.map((e) => e.nPreSelectionWeight).sort((e, t) => t - e),
     c = n.map((e, t) => {
       let n = s.findIndex((t) => t - e.nPreSelectionWeight < 1e-5);
@@ -9991,33 +10069,33 @@ function $x(e) {
   if (c.length == 0) return null;
   let l = c.map((e, t) => (0, Y.jsx)(`li`, { children: e.subject }, t));
   return (0, Y.jsxs)(`div`, {
-    className: (0, Q.default)(Jb, qb),
+    className: (0, Q.default)(Yb, Jb),
     children: [
       (0, Y.jsx)(`div`, {
-        className: ox,
-        children: L.Localize(`#YIR_Spider_Title`),
+        className: sx,
+        children: R.Localize(`#YIR_Spider_Title`),
       }),
       (0, Y.jsx)(`div`, {
-        className: (0, Q.default)(sx, a.SectionDesc),
+        className: (0, Q.default)(cx, a.SectionDesc),
         children: i(`#YIR_Spider_Desc`, t.GetYear()),
       }),
       (0, Y.jsx)(`div`, {
-        className: Yb,
-        children: (0, Y.jsxs)(Mp, {
+        className: Xb,
+        children: (0, Y.jsxs)(jp, {
           responsive: !0,
-          className: Qb,
+          className: $b,
           style: { width: `100%`, height: `100%` },
           cx: `50%`,
           cy: `50%`,
           outerRadius: `70%`,
           data: c,
           children: [
-            (0, Y.jsx)(gd, {}),
-            (0, Y.jsx)(Ld, {
-              tick: (0, Y.jsx)(tS, { bNumberedLabels: o }),
+            (0, Y.jsx)(hd, {}),
+            (0, Y.jsx)(Id, {
+              tick: (0, Y.jsx)(nS, { bNumberedLabels: o }),
               dataKey: `subject`,
             }),
-            (0, Y.jsx)(yp, {
+            (0, Y.jsx)(vp, {
               name: `tempRadar`,
               dataKey: `A`,
               stroke: `#8884d8`,
@@ -10037,11 +10115,11 @@ function $x(e) {
     ],
   });
 }
-function eS() {
-  let [e, t] = (0, R.useState)(!1);
-  return ((0, R.useEffect)(() => t(Fc() || window.innerWidth <= 300), []), e);
+function tS() {
+  let [e, t] = (0, z.useState)(!1);
+  return ((0, z.useEffect)(() => t(Pc() || window.innerWidth <= 300), []), e);
 }
-function tS(e) {
+function nS(e) {
   let { payload: t, x: n, verticalAnchor: r, bNumberedLabels: i, ...a } = e;
   return i
     ? (0, Y.jsx)(`text`, {
@@ -10059,15 +10137,15 @@ function tS(e) {
         width: `170px`,
         height: `100%`,
         children: (0, Y.jsx)(`foreignObject`, {
-          className: Zb,
+          className: Qb,
           dy: `20px`,
           width: `170`,
           height: `150`,
-          children: (0, Y.jsx)(`div`, { className: Xb, children: t.value }),
+          children: (0, Y.jsx)(`div`, { className: Zb, children: t.value }),
         }),
       });
 }
-function nS(e) {
+function rS(e) {
   let t = e.GetRawStats().playtime_stats?.by_numbers;
   return t
     ? [
@@ -10086,56 +10164,56 @@ function nS(e) {
       ].sort((e, t) => t[1] - e[1])
     : [];
 }
-function rS(e) {
+function iS(e) {
   let { userYearInReview: t } = e,
-    n = nS(t);
+    n = rS(t);
   if (n.length == 0) return null;
   let r = n.map(([e, t]) =>
-    (0, Y.jsx)(iS, { label: L.Localize(e), value: t }, e),
+    (0, Y.jsx)(aS, { label: R.Localize(e), value: t }, e),
   );
   return (0, Y.jsxs)(`div`, {
-    className: (0, Q.default)(void 0, qb),
+    className: (0, Q.default)(void 0, Jb),
     children: [
       (0, Y.jsx)(`div`, {
-        className: ox,
-        children: L.Localize(`#YIR_ByTheNum_Title`),
+        className: sx,
+        children: R.Localize(`#YIR_ByTheNum_Title`),
       }),
-      (0, Y.jsx)(`div`, { className: ex, children: r }),
+      (0, Y.jsx)(`div`, { className: tx, children: r }),
     ],
   });
 }
-function iS(e) {
+function aS(e) {
   let { label: t, value: n } = e,
-    r = n ? E(n) : `-`;
+    r = n ? D(n) : `-`;
   return (0, Y.jsxs)(`div`, {
-    className: (0, Q.default)(tx, n == 0 && `MvmFmRp0gao-`),
+    className: (0, Q.default)(nx, n == 0 && `MvmFmRp0gao-`),
     children: [
-      (0, Y.jsx)(`div`, { className: nx, children: t }),
-      (0, Y.jsx)(`div`, { className: ix }),
-      (0, Y.jsx)(`div`, { className: rx, children: r }),
+      (0, Y.jsx)(`div`, { className: rx, children: t }),
+      (0, Y.jsx)(`div`, { className: ax }),
+      (0, Y.jsx)(`div`, { className: ix, children: r }),
     ],
   });
 }
-var aS = `Wdvtmz-DIUA-`,
-  oS = `_30hJH5z6jtk-`,
-  sS = `nFsP-fXNWUA-`,
-  cS = `c1gySWWvs3I-`;
-function lS(e) {
+var oS = `Wdvtmz-DIUA-`,
+  sS = `_30hJH5z6jtk-`,
+  cS = `nFsP-fXNWUA-`,
+  lS = `c1gySWWvs3I-`;
+function uS(e) {
   let { userYearInReview: t } = e;
-  if (w.is_support || w.accountid == t.GetAccountID()) {
+  if (T.is_support || T.accountid == t.GetAccountID()) {
     let e = t.GetSteamID(),
       n = t.GetYear();
-    return (0, Y.jsxs)(on, {
+    return (0, Y.jsxs)(an, {
       rootMargin: `0px 0px 100% 0px`,
       children: [
-        (0, Y.jsx)(uS, { steamid: e, year: n }),
-        (0, Y.jsx)(fS, { steamid: e, year: n }),
+        (0, Y.jsx)(dS, { steamid: e, year: n }),
+        (0, Y.jsx)(pS, { steamid: e, year: n }),
       ],
     });
   }
   return null;
 }
-function uS(e) {
+function dS(e) {
   let { steamid: t, year: n } = e,
     { data: r } = Ch(t);
   if (!r || r.is_not_member_of_any_group || !r.family_group) return null;
@@ -10145,17 +10223,17 @@ function uS(e) {
   return i.length == 0
     ? null
     : (0, Y.jsxs)(`div`, {
-        className: oS,
+        className: sS,
         children: [
           (0, Y.jsx)(`div`, {
-            className: sS,
-            children: L.Localize(`#YIR_FamilyShared`),
+            className: cS,
+            children: R.Localize(`#YIR_FamilyShared`),
           }),
           (0, Y.jsx)(`div`, {
-            className: cS,
+            className: lS,
             children: i.map((e) =>
               (0, Y.jsx)(
-                pS,
+                mS,
                 { steamid: e, year: n, ePrivacy: 3, bPrivacyOverride: !1 },
                 `family_` + e,
               ),
@@ -10164,11 +10242,11 @@ function uS(e) {
         ],
       });
 }
-var dS = 50;
-function fS(e) {
+var fS = 50;
+function pS(e) {
   let { steamid: t, year: n } = e,
     { isLoading: r, data: i } = xh(t, n),
-    a = (0, R.useMemo)(
+    a = (0, z.useMemo)(
       () =>
         i
           ? [...i]
@@ -10176,35 +10254,35 @@ function fS(e) {
                 (e, t) =>
                   (t.rt_privacy_updated ?? 0) - (e.rt_privacy_updated ?? 0),
               )
-              .slice(0, dS)
+              .slice(0, fS)
           : [],
       [i],
     ),
-    o = (0, R.useMemo)(
-      () => a.map((e) => new wa(e.steamid).GetAccountID()),
+    o = (0, z.useMemo)(
+      () => a.map((e) => new Ca(e.steamid).GetAccountID()),
       [a],
     ),
-    s = Yl(o);
+    s = Jl(o);
   if (r || o?.length == 0 || !s) return null;
   let c = new Map();
   for (let e of s) e && e.steamid && c.set(e.steamid, e.persona_name ?? ``);
   return (
     a.sort((e, t) => c.get(e.steamid).localeCompare(c.get(t.steamid))),
     (0, Y.jsxs)(`div`, {
-      className: oS,
+      className: sS,
       children: [
         (0, Y.jsx)(`div`, {
-          className: sS,
-          children: L.Localize(`#YIR_FriendShared`),
-        }),
-        (0, Y.jsx)(A, {
           className: cS,
+          children: R.Localize(`#YIR_FriendShared`),
+        }),
+        (0, Y.jsx)(j, {
+          className: lS,
           "flow-children": `grid`,
           children: a
-            .slice(0, dS)
+            .slice(0, fS)
             .map((e) =>
               (0, Y.jsx)(
-                pS,
+                mS,
                 {
                   steamid: e.steamid,
                   ePrivacy: e.privacy_state,
@@ -10215,145 +10293,145 @@ function fS(e) {
               ),
             ),
         }),
-        !!w.is_support &&
+        !!T.is_support &&
           (0, Y.jsx)(`div`, {
             style: {
               backgroundColor: `#461F28`,
               border: `1px solid #761F28`,
               padding: `4px`,
             },
-            children: L.Localize(`#YIR_FriendShared_support`),
+            children: R.Localize(`#YIR_FriendShared_support`),
           }),
       ],
     })
   );
 }
-function pS(e) {
+function mS(e) {
   let { steamid: t, year: n, ePrivacy: r } = e,
-    i = K();
-  return (0, Y.jsx)(dc, {
-    href: `${N.STORE_BASE_URL}replay/${t}/${n}`,
+    i = q();
+  return (0, Y.jsx)(uc, {
+    href: `${P.STORE_BASE_URL}replay/${t}/${n}`,
     className: (0, Q.default)({
       [void 0]: r == 1,
-      [aS]: !0,
+      [oS]: !0,
       [i.FriendCtn]: !0,
     }),
-    children: (0, Y.jsx)($l, {
-      accountID: new wa(t).GetAccountID(),
+    children: (0, Y.jsx)(Ql, {
+      accountID: new Ca(t).GetAccountID(),
       bHideWhenNotAvailable: !0,
       bLink: !1,
     }),
   });
 }
-function mS(e) {
-  return `${N.STORE_CDN_URL}public/images/yearinreview/${e}`;
+function hS(e) {
+  return `${P.STORE_CDN_URL}public/images/yearinreview/${e}`;
 }
-var hS = `cQe-oob-ixY-`,
-  gS = `tv7SmCaHL8c-`,
-  _S = `QEvd6eyhjtk-`,
-  vS = `VKJxuXZg9J4-`,
-  yS = `_8fQsxmA8PSo-`,
-  bS = `UNBAK8TydWc-`,
-  xS = `qxLHCRfIBjM-`;
-Wx();
-var SS = 100;
-function CS(e) {
+var gS = `cQe-oob-ixY-`,
+  _S = `tv7SmCaHL8c-`,
+  vS = `QEvd6eyhjtk-`,
+  yS = `VKJxuXZg9J4-`,
+  bS = `_8fQsxmA8PSo-`,
+  xS = `UNBAK8TydWc-`,
+  SS = `qxLHCRfIBjM-`;
+Gx();
+var CS = 100;
+function wS(e) {
   let { userYearInReview: t } = e,
     n = t.GetPlayTimeStats(),
     r = n.total_stats,
     i = n.game_summary,
-    a = q(),
-    o = K(),
-    s = (0, R.useMemo)(() => {
+    a = J(),
+    o = q(),
+    s = (0, z.useMemo)(() => {
       let e = [];
       return (
         typeof r.windows_playtime_percentagex100 == `number` &&
-          r.windows_playtime_percentagex100 > SS &&
+          r.windows_playtime_percentagex100 > CS &&
           e.push({
             id: `windows`,
-            name: L.Localize(`#YIR_Platfrom_windows`),
+            name: R.Localize(`#YIR_Platfrom_windows`),
             value: r.windows_playtime_percentagex100,
           }),
         typeof r.linux_playtime_percentagex100 == `number` &&
-          r.linux_playtime_percentagex100 > SS &&
+          r.linux_playtime_percentagex100 > CS &&
           e.push({
             id: `linux`,
-            name: L.Localize(`#YIR_Platfrom_linux`),
+            name: R.Localize(`#YIR_Platfrom_linux`),
             value: r.linux_playtime_percentagex100,
           }),
         typeof r.macos_playtime_percentagex100 == `number` &&
-          r.macos_playtime_percentagex100 > SS &&
+          r.macos_playtime_percentagex100 > CS &&
           e.push({
             id: `mac`,
-            name: L.Localize(`#YIR_Platfrom_macos`),
+            name: R.Localize(`#YIR_Platfrom_macos`),
             value: r.macos_playtime_percentagex100,
           }),
         typeof r.vr_playtime_percentagex100 == `number` &&
-          r.vr_playtime_percentagex100 > SS &&
+          r.vr_playtime_percentagex100 > CS &&
           e.push({
             id: `vr`,
-            name: L.Localize(`#YIR_Platfrom_vr`),
+            name: R.Localize(`#YIR_Platfrom_vr`),
             value: r.vr_playtime_percentagex100,
           }),
         typeof r.deck_playtime_percentagex100 == `number` &&
-          r.deck_playtime_percentagex100 > SS &&
+          r.deck_playtime_percentagex100 > CS &&
           e.push({
             id: `deck`,
-            name: L.Localize(`#YIR_Platfrom_deck`),
+            name: R.Localize(`#YIR_Platfrom_deck`),
             value: r.deck_playtime_percentagex100,
           }),
         e
       );
     }, [r]),
-    c = (0, R.useMemo)(() => {
+    c = (0, z.useMemo)(() => {
       let e = [];
       return (
         typeof r.windows_playtime_percentagex100 == `number` &&
-          r.windows_playtime_percentagex100 > SS &&
+          r.windows_playtime_percentagex100 > CS &&
           e.push({
             id: `windows`,
-            name: L.Localize(`#YIR_Platfrom_windows`),
+            name: R.Localize(`#YIR_Platfrom_windows`),
             value: i.filter((e) => e.played_windows).length,
           }),
         typeof r.linux_playtime_percentagex100 == `number` &&
-          r.linux_playtime_percentagex100 > SS &&
+          r.linux_playtime_percentagex100 > CS &&
           e.push({
             id: `linux`,
-            name: L.Localize(`#YIR_Platfrom_linux`),
+            name: R.Localize(`#YIR_Platfrom_linux`),
             value: i.filter((e) => e.played_linux).length,
           }),
         typeof r.macos_playtime_percentagex100 == `number` &&
-          r.macos_playtime_percentagex100 > SS &&
+          r.macos_playtime_percentagex100 > CS &&
           e.push({
             id: `mac`,
-            name: L.Localize(`#YIR_Platfrom_macos`),
+            name: R.Localize(`#YIR_Platfrom_macos`),
             value: i.filter((e) => e.played_mac).length,
           }),
         typeof r.vr_playtime_percentagex100 == `number` &&
-          r.vr_playtime_percentagex100 > SS &&
+          r.vr_playtime_percentagex100 > CS &&
           e.push({
             id: `vr`,
-            name: L.Localize(`#YIR_Platfrom_vr`),
+            name: R.Localize(`#YIR_Platfrom_vr`),
             value: i.filter((e) => e.played_vr).length,
           }),
         typeof r.deck_playtime_percentagex100 == `number` &&
-          r.deck_playtime_percentagex100 > SS &&
+          r.deck_playtime_percentagex100 > CS &&
           e.push({
             id: `deck`,
-            name: L.Localize(`#YIR_Platfrom_deck`),
+            name: R.Localize(`#YIR_Platfrom_deck`),
             value: i.filter((e) => e.played_deck).length,
           }),
         e
       );
     }, [r, i]);
   if (s.length < 2) return null;
-  let l = OS(r);
+  let l = kS(r);
   return (0, Y.jsx)($, {
     className: (0, Q.default)(Ig, o.PlatformChartsCtn),
     children: (0, Y.jsxs)(`div`, {
       className: (0, Q.default)(X, Lg),
       children: [
-        (0, Y.jsx)(`div`, { className: z_, children: a(`#YIR_Platform`) }),
+        (0, Y.jsx)(`div`, { className: B_, children: a(`#YIR_Platform`) }),
         (0, Y.jsxs)(`div`, {
           className: Rg,
           children: [
@@ -10362,13 +10440,13 @@ function CS(e) {
               children: [
                 (0, Y.jsx)(`div`, {
                   className: Bg,
-                  children: L.Localize(`#YIR_Platfrom_playtime`),
+                  children: R.Localize(`#YIR_Platfrom_playtime`),
                 }),
-                (0, Y.jsxs)(kp, {
+                (0, Y.jsxs)(Op, {
                   responsive: !0,
                   style: { width: `90%`, aspectRatio: 1 },
                   children: [
-                    (0, Y.jsx)(wf, {
+                    (0, Y.jsx)(Cf, {
                       data: s,
                       dataKey: `value`,
                       nameKey: `name`,
@@ -10379,17 +10457,17 @@ function CS(e) {
                       fill: `#8884d8`,
                       paddingAngle: 1,
                       children: s.map((e, t) =>
-                        (0, Y.jsx)(re, { fill: o[`pie_${e.id}`] }, `cell-${t}`),
+                        (0, Y.jsx)(Ce, { fill: o[`pie_${e.id}`] }, `cell-${t}`),
                       ),
                     }),
-                    (0, Y.jsx)(Te, {
+                    (0, Y.jsx)(vt, {
                       content: (e) =>
-                        (0, Y.jsx)(wS, {
+                        (0, Y.jsx)(TS, {
                           active: e.active,
                           payload: e.payload,
                         }),
                     }),
-                    (0, Y.jsx)(Tu, {}),
+                    (0, Y.jsx)(wu, {}),
                   ],
                 }),
               ],
@@ -10399,13 +10477,13 @@ function CS(e) {
               children: [
                 (0, Y.jsx)(`div`, {
                   className: Bg,
-                  children: L.Localize(`#YIR_Platfrom_games`),
+                  children: R.Localize(`#YIR_Platfrom_games`),
                 }),
-                (0, Y.jsxs)(kp, {
+                (0, Y.jsxs)(Op, {
                   responsive: !0,
                   style: { width: `90%`, aspectRatio: 1 },
                   children: [
-                    (0, Y.jsx)(wf, {
+                    (0, Y.jsx)(Cf, {
                       data: c,
                       dataKey: `value`,
                       nameKey: `name`,
@@ -10416,17 +10494,17 @@ function CS(e) {
                       fill: `#82ca9d`,
                       paddingAngle: 1,
                       children: c.map((e, t) =>
-                        (0, Y.jsx)(re, { fill: o[`pie_${e.id}`] }, `cell-${t}`),
+                        (0, Y.jsx)(Ce, { fill: o[`pie_${e.id}`] }, `cell-${t}`),
                       ),
                     }),
-                    (0, Y.jsx)(Te, {
+                    (0, Y.jsx)(vt, {
                       content: (e) =>
-                        (0, Y.jsx)(TS, {
+                        (0, Y.jsx)(ES, {
                           active: e.active,
                           payload: e.payload,
                         }),
                     }),
-                    (0, Y.jsx)(Tu, {}),
+                    (0, Y.jsx)(wu, {}),
                   ],
                 }),
               ],
@@ -10442,91 +10520,91 @@ function CS(e) {
     }),
   });
 }
-function wS(e) {
+function TS(e) {
   let { active: t, payload: n } = e;
   if (t && n && n.length) {
     let e = n[0].value;
-    return (0, Y.jsxs)(Ul, {
-      children: [n[0].name, `: `, L.Localize(`#YIR_Percent_Playtime`, J(e))],
+    return (0, Y.jsxs)(Hl, {
+      children: [n[0].name, `: `, R.Localize(`#YIR_Percent_Playtime`, m_(e))],
     });
   }
   return null;
 }
-function TS(e) {
+function ES(e) {
   let { active: t, payload: n } = e;
   if (t && n && n.length) {
     let e = n[0].value,
       t = n[0].name;
-    return (0, Y.jsx)(Ul, {
-      children: L.Localize(
+    return (0, Y.jsx)(Hl, {
+      children: R.Localize(
         e === 1
           ? `#YIR_Platfrom_gamesplays_tooltip`
           : `#YIR_Platfrom_gamesplays_tooltip_Plural`,
-        E(e),
+        D(e),
         t,
       ),
     });
   }
   return null;
 }
-function ES(e) {
+function DS(e) {
   let { userYearInReview: t } = e;
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
-      (0, Y.jsx)(CS, { userYearInReview: t }),
-      (0, Y.jsx)(kS, { userYearInReview: t }),
+      (0, Y.jsx)(wS, { userYearInReview: t }),
+      (0, Y.jsx)(AS, { userYearInReview: t }),
     ],
   });
 }
-function DS(e) {
+function OS(e) {
   let { userYearInReview: t, strClassName: n, nYear: r } = e,
     i = t.GetRawStats(),
-    a = q(),
+    a = J(),
     o = a(`#YIR_TopGames_deck_subtitle`),
     {
       nTotalGames: s,
       nTotalSessions: c,
       nTotalPercentage: l,
-    } = (0, R.useMemo)(() => Hm(i, `deck`), [i]),
-    { rgResults: u } = (0, R.useMemo)(() => Rm(t, `deck`, 5, l), [t, l]),
+    } = (0, z.useMemo)(() => Hm(i, `deck`), [i]),
+    { rgResults: u } = (0, z.useMemo)(() => Rm(t, `deck`, 5, l), [t, l]),
     d = Number(Math.round(l / 100).toFixed(0)),
     f = a(`#YIR_TopGames_deck_new`);
   d > 50 && (f = a(`#YIR_TopGames_deck_mostly`));
-  let p = (0, R.useRef)(null),
-    m = vs((e) => {
+  let p = (0, z.useRef)(null),
+    m = _s((e) => {
       p.current &&
         p.current.style.setProperty(
           `--contentSize`,
           `${e.contentRect.width}px`,
         );
     }),
-    [h, g] = R.useState(!1),
-    _ = R.useCallback((e) => {
+    [h, g] = z.useState(!1),
+    _ = z.useCallback((e) => {
       e && g(!0);
     }, []),
-    v = (0, Y.jsx)(Ux, { endValue: s, duration: 2e3, startAnimation: h }),
-    ee = (0, Y.jsx)(Ux, { endValue: c, duration: 2e3, startAnimation: h }),
-    y = (0, R.useRef)(null);
+    v = (0, Y.jsx)(Wx, { endValue: s, duration: 2e3, startAnimation: h }),
+    y = (0, Y.jsx)(Wx, { endValue: c, duration: 2e3, startAnimation: h }),
+    b = (0, z.useRef)(null);
   return (
-    Kl(y),
+    Gl(b),
     (0, Y.jsxs)(`div`, {
-      className: (0, Q.default)(n, Z.PlatformContentsCtn, _S),
+      className: (0, Q.default)(n, Z.PlatformContentsCtn, vS),
       ref: p,
       children: [
         (0, Y.jsx)(`div`, {
-          className: (0, Q.default)(Z.SectionTitle, bS),
+          className: (0, Q.default)(Z.SectionTitle, xS),
           children: f,
         }),
         (0, Y.jsxs)(`div`, {
-          className: xS,
+          className: SS,
           ref: m,
           children: [
             (0, Y.jsxs)(`div`, {
-              className: gS,
+              className: _S,
               children: [
-                (0, Y.jsxs)(ps, {
+                (0, Y.jsxs)(fs, {
                   onVisibilityChange: _,
-                  className: (0, Q.default)(X, Z.StatsRow, vS),
+                  className: (0, Q.default)(X, Z.StatsRow, yS),
                   children: [
                     (0, Y.jsxs)(`div`, {
                       className: Z.StatBlock,
@@ -10534,30 +10612,27 @@ function DS(e) {
                         (0, Y.jsx)(`div`, { className: Z.BigNum, children: v }),
                         (0, Y.jsx)(`div`, {
                           className: Z.StatDescription,
-                          children: L.LocalizePlural(`#YIR_NewLine_Games`, s),
+                          children: R.LocalizePlural(`#YIR_NewLine_Games`, s),
                         }),
                       ],
                     }),
                     (0, Y.jsxs)(`div`, {
                       className: Z.StatBlock,
                       children: [
-                        (0, Y.jsx)(`div`, {
-                          className: Z.BigNum,
-                          children: ee,
-                        }),
+                        (0, Y.jsx)(`div`, { className: Z.BigNum, children: y }),
                         (0, Y.jsx)(`div`, {
                           className: Z.StatDescription,
-                          children: L.LocalizePlural(`#YIR_NewLine_Session`, c),
+                          children: R.LocalizePlural(`#YIR_NewLine_Session`, c),
                         }),
                       ],
                     }),
-                    (0, Y.jsx)(Ny, { percentVal: l, subToken: `#YIR_NewLine` }),
+                    (0, Y.jsx)(Py, { percentVal: l, subToken: `#YIR_NewLine` }),
                   ],
                 }),
                 !1,
                 (0, Y.jsx)($, {
                   className: kg,
-                  children: (0, Y.jsx)(Ay, {
+                  children: (0, Y.jsx)(jy, {
                     rgGamePercentages: u,
                     category: `deck`,
                   }),
@@ -10565,14 +10640,14 @@ function DS(e) {
               ],
             }),
             (0, Y.jsxs)(`video`, {
-              className: hS,
+              className: gS,
               poster: `https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesPoster.jpg`,
               playsInline: !0,
               loop: !0,
               muted: !0,
               autoPlay: !0,
               controls: !1,
-              ref: y,
+              ref: b,
               children: [
                 (0, Y.jsx)(`source`, {
                   src: `https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.webm`,
@@ -10587,14 +10662,14 @@ function DS(e) {
           ],
         }),
         (0, Y.jsx)(`div`, {
-          className: (0, Q.default)(Z.Disclaimer, yS),
+          className: (0, Q.default)(Z.Disclaimer, bS),
           children: o,
         }),
       ],
     })
   );
 }
-function OS(e) {
+function kS(e) {
   return {
     bDeck:
       typeof e.deck_playtime_percentagex100 == `number` &&
@@ -10604,30 +10679,30 @@ function OS(e) {
       e.vr_playtime_percentagex100 > 100,
   };
 }
-function kS(e) {
+function AS(e) {
   let { userYearInReview: t } = e,
     n = t.GetYear(),
-    r = q(),
+    r = J(),
     i = t.GetPlayTimeStats().total_stats,
     a = i.controller_playtime_percentagex100 + i.deck_playtime_percentagex100,
     o = !1;
   a > 7e3 && (o = !0);
-  let s = OS(i);
-  return (0, Y.jsxs)(on, {
+  let s = kS(i);
+  return (0, Y.jsxs)(an, {
     rootMargin: `0px 0px 100% 0px`,
     children: [
       !!s.bDeck &&
         (0, Y.jsx)($, {
           className: (0, Q.default)(Z.Section, Z.Deck),
-          children: (0, Y.jsx)(DS, { userYearInReview: t, nYear: n }),
+          children: (0, Y.jsx)(OS, { userYearInReview: t, nYear: n }),
         }),
       !!s.bVR &&
         (0, Y.jsx)($, {
           className: (0, Q.default)(Z.Section, Z.VR),
-          children: (0, Y.jsx)(Dy, {
+          children: (0, Y.jsx)(Oy, {
             category: `vr`,
             userYearInReview: t,
-            bgImageURL: mS(`vr_background6.webp`),
+            bgImageURL: hS(`vr_background6.webp`),
             title: r(`#YIR_TopGames_vr`),
             subTitle: void 0,
           }),
@@ -10635,28 +10710,28 @@ function kS(e) {
       a > 1e3 &&
         (0, Y.jsx)($, {
           className: (0, Q.default)(Z.Section, Z.Controller),
-          children: (0, Y.jsx)(Dy, {
+          children: (0, Y.jsx)(Oy, {
             category: `controller`,
             userYearInReview: t,
             title: r(
               o ? `#YIR_TopGames_controllerMost` : `#YIR_TopGames_controller`,
-              J(a),
+              m_(a),
             ),
             subTitle: r(
               `#YIR_Platform_subtitle_controller`,
-              L.Localize(`#YIR_Platfrom_controller_forsubtitle`),
+              R.Localize(`#YIR_Platfrom_controller_forsubtitle`),
             ),
           }),
         }),
       n >= 2024 &&
-        (0, Y.jsx)(T, { children: (0, Y.jsx)(AS, { userYearInReview: t }) }),
+        (0, Y.jsx)(E, { children: (0, Y.jsx)(jS, { userYearInReview: t }) }),
     ],
   });
 }
-function AS(e) {
+function jS(e) {
   let { userYearInReview: t } = e,
-    n = q(),
-    [r, i] = (0, R.useMemo)(
+    n = J(),
+    [r, i] = (0, z.useMemo)(
       () => [
         t
           .GetDemoByPlaytime()
@@ -10678,7 +10753,7 @@ function AS(e) {
           className: (0, Q.default)(Z.Section, Z.Demo),
           children: [
             (0, Y.jsx)(`div`, { className: Z.BG_Demo }),
-            (0, Y.jsx)(Dy, {
+            (0, Y.jsx)(Oy, {
               category: `demo`,
               userYearInReview: t,
               title: n(`#YIR_TopGames_demo`),
@@ -10691,7 +10766,7 @@ function AS(e) {
           className: (0, Q.default)(Z.Section, Z.Playtest),
           children: [
             (0, Y.jsx)(`div`, { className: Z.BG_Playtest }),
-            (0, Y.jsx)(Dy, {
+            (0, Y.jsx)(Oy, {
               category: `playtest`,
               userYearInReview: t,
               title: n(`#YIR_TopGames_playtest`),
@@ -10702,23 +10777,23 @@ function AS(e) {
     ],
   });
 }
-var jS = `Zyx-HjZHUjo-`,
-  MS = `_1lcI3rMkINQ-`,
-  NS = `qHBQax2jUhc-`,
-  PS = `O1K2KPMCdBU-`,
-  FS = `vNi0RlyomPM-`,
-  IS = `TX-ZbWuG6nU-`,
-  LS = `IrsybK-NCqg-`,
-  RS = `-cwbu3H1bWI-`,
-  zS = `N6MvnixTrWs-`,
-  BS = `jYZcHfHVJ7Q-`,
-  VS = `pMnJje5ddJk-`,
-  HS = `_2hCwBXP7Dak-`,
-  US = `yvIttucwtMQ-`,
-  WS = `yy3vzELgSfc-`,
-  GS = `SOTrGkaPWt0-`,
-  KS = `ttuzGl2s44c-`;
-function qS(e) {
+var MS = `Zyx-HjZHUjo-`,
+  NS = `_1lcI3rMkINQ-`,
+  PS = `qHBQax2jUhc-`,
+  FS = `O1K2KPMCdBU-`,
+  IS = `vNi0RlyomPM-`,
+  LS = `TX-ZbWuG6nU-`,
+  RS = `IrsybK-NCqg-`,
+  zS = `-cwbu3H1bWI-`,
+  BS = `N6MvnixTrWs-`,
+  VS = `jYZcHfHVJ7Q-`,
+  HS = `pMnJje5ddJk-`,
+  US = `_2hCwBXP7Dak-`,
+  WS = `yvIttucwtMQ-`,
+  GS = `yy3vzELgSfc-`,
+  KS = `SOTrGkaPWt0-`,
+  qS = `ttuzGl2s44c-`;
+function JS(e) {
   let { userYearInReview: t } = e;
   if (Im()) return null;
   let n = t.GetPlayTimeStats().playtime_streak;
@@ -10726,25 +10801,25 @@ function qS(e) {
     (typeof n.longest_consecutive_days == `number` &&
       n.longest_consecutive_days < 5)
     ? null
-    : (0, Y.jsx)(JS, { ...e, longestStreak: n });
+    : (0, Y.jsx)(YS, { ...e, longestStreak: n });
 }
-function JS(e) {
+function YS(e) {
   let { userYearInReview: t, longestStreak: n } = e,
-    r = q(),
-    i = h_(),
-    a = K(),
-    [o, s] = R.useState(!1),
-    c = R.useCallback((e) => {
+    r = J(),
+    i = g_(),
+    a = q(),
+    [o, s] = z.useState(!1),
+    c = z.useCallback((e) => {
       e && s(!0);
     }, []),
-    [l, u] = R.useState(!1),
-    d = R.useCallback((e) => {
+    [l, u] = z.useState(!1),
+    d = z.useCallback((e) => {
       e &&
         window.setTimeout(() => {
           u(!0);
         }, 30);
     }, []),
-    [f, p] = R.useState(!1),
+    [f, p] = z.useState(!1),
     m = n.streak_games.length > 12 && !f,
     h = m
       ? n.streak_games.sort((e, t) => e.appid - t.appid).slice(0, 12)
@@ -10753,24 +10828,24 @@ function JS(e) {
     _ = n.streak_games.length,
     v = n.longest_consecutive_days ?? 0;
   return (0, Y.jsxs)(`div`, {
-    className: (0, Q.default)(Kg, zS, jS, a.Section),
+    className: (0, Q.default)(Kg, BS, MS, a.Section),
     children: [
       (0, Y.jsx)(`div`, {
-        className: (0, Q.default)(KS, a.LongestStreakBgImage),
+        className: (0, Q.default)(qS, a.LongestStreakBgImage),
       }),
       (0, Y.jsxs)(`div`, {
         className: X,
         children: [
           (0, Y.jsxs)(`div`, {
-            className: MS,
+            className: NS,
             children: [
-              (0, Y.jsx)(ps, {
-                className: NS,
+              (0, Y.jsx)(fs, {
+                className: PS,
                 onVisibilityChange: c,
                 children: r(
                   `#YIR_Longest_Streak_Title`,
-                  (0, Y.jsx)(Ux, {
-                    className: FS,
+                  (0, Y.jsx)(Wx, {
+                    className: IS,
                     endValue: v,
                     duration: 2e3,
                     startAnimation: o,
@@ -10778,21 +10853,21 @@ function JS(e) {
                 ),
               }),
               (0, Y.jsxs)($, {
-                className: VS,
+                className: HS,
                 children: [
-                  (0, Y.jsx)(`div`, { className: PS }),
+                  (0, Y.jsx)(`div`, { className: FS }),
                   (0, Y.jsx)(`div`, {
-                    className: (0, Q.default)(HS, a.StreakSizeFullBar),
+                    className: (0, Q.default)(US, a.StreakSizeFullBar),
                   }),
                   (0, Y.jsx)(`div`, {
-                    className: (0, Q.default)({ [WS]: !0, [GS]: v < 40 }),
-                    children: (0, Y.jsx)(XS, { nDays: v - 1 }),
+                    className: (0, Q.default)({ [GS]: !0, [KS]: v < 40 }),
+                    children: (0, Y.jsx)(ZS, { nDays: v - 1 }),
                   }),
-                  (0, Y.jsx)(`div`, { className: PS }),
+                  (0, Y.jsx)(`div`, { className: FS }),
                 ],
               }),
               (0, Y.jsxs)($, {
-                className: IS,
+                className: LS,
                 children: [
                   (0, Y.jsx)(`div`, {
                     className: void 0,
@@ -10806,35 +10881,35 @@ function JS(e) {
               }),
             ],
           }),
-          (0, Y.jsxs)(ps, {
+          (0, Y.jsxs)(fs, {
             onVisibilityChange: d,
-            className: (0, Q.default)(Hg, LS),
+            className: (0, Q.default)(Hg, RS),
             children: [
               (0, Y.jsx)(`div`, {
-                className: (0, Q.default)(RS, l && `JoDLfdcjJPY-`),
+                className: (0, Q.default)(zS, l && `JoDLfdcjJPY-`),
                 children: r(
                   _ > 1
                     ? `#YIR_Longest_Streak_Games`
                     : `#YIR_Longest_Streak_Games_Singular`,
-                  E(_),
+                  D(_),
                 ),
               }),
               (0, Y.jsx)(`div`, {
-                className: (0, Q.default)(BS),
-                children: (0, Y.jsx)(A, {
+                className: (0, Q.default)(VS),
+                children: (0, Y.jsx)(j, {
                   "flow-children": `grid`,
                   className: (0, Q.default)(Ug, Wg, l && `c42w8bI3Dx0-`),
                   children: h.map((e, n) => {
                     let r = t.GetGameSummaryForApp(e.appid);
                     return (0, Y.jsx)(
-                      jy,
+                      My,
                       {
                         appid: e.appid,
                         index: n,
                         loading: `lazy`,
                         rgAppIDs: g,
                         nParentAppID: r?.parent_appid,
-                        eChildType: YS(r),
+                        eChildType: XS(r),
                       },
                       `longest_` + e.appid,
                     );
@@ -10850,7 +10925,7 @@ function JS(e) {
                 href: `#`,
                 className: `dUBouRPf5BM-`,
                 onClick: () => p(!0),
-                children: L.Localize(`#YIR_ShowMore`),
+                children: R.Localize(`#YIR_ShowMore`),
               }),
             }),
         ],
@@ -10858,46 +10933,46 @@ function JS(e) {
     ],
   });
 }
-function YS(e) {
+function XS(e) {
   if (e?.demo) return 1;
   if (e?.playtest) return 12;
 }
-function XS(e) {
+function ZS(e) {
   let { nDays: t } = e,
     n = [];
   if (t > 0) {
     for (let e = 0; e < t + 2; ++e)
-      n.push((0, Y.jsx)(`div`, { className: US }, `DrawNDivForStreakDays` + e));
+      n.push((0, Y.jsx)(`div`, { className: WS }, `DrawNDivForStreakDays` + e));
     return (0, Y.jsx)(Y.Fragment, { children: n });
   }
   return null;
 }
-var ZS = `qdYD-Nli-BU-`,
-  QS = `ocrq1-0nW8Y-`,
-  $S = `uvsrpXUQL6E-`,
-  eC = `JSoZ402xLkY-`;
-function tC(e) {
+var QS = `qdYD-Nli-BU-`,
+  $S = `ocrq1-0nW8Y-`,
+  eC = `uvsrpXUQL6E-`,
+  tC = `JSoZ402xLkY-`;
+function nC(e) {
   let { steamid: t, year: n } = e,
-    r = K(),
+    r = q(),
     { rgOtherYears: i } = Dh(),
-    a = q();
+    a = J();
   return i.length === 0
     ? null
     : (0, Y.jsxs)(`div`, {
-        className: ZS,
+        className: QS,
         children: [
           (0, Y.jsx)(`div`, {
-            className: (0, Q.default)(QS, r.OtherYearsHeader),
+            className: (0, Q.default)($S, r.OtherYearsHeader),
             children: a(`#YearInReview_OtherYearLinks_Header`),
           }),
           (0, Y.jsx)(`div`, {
-            className: (0, Q.default)($S, r.OtherYearLinks),
+            className: (0, Q.default)(eC, r.OtherYearLinks),
             children: i.map((e) =>
               (0, Y.jsx)(
-                dc,
+                uc,
                 {
-                  href: `${N.STORE_BASE_URL}replay/${t}/${e}?src=8`,
-                  className: (0, Q.default)(eC, r.OtherYearLink),
+                  href: `${P.STORE_BASE_URL}replay/${t}/${e}?src=8`,
+                  className: (0, Q.default)(tC, r.OtherYearLink),
                   children: e,
                 },
                 e,
@@ -10907,274 +10982,274 @@ function tC(e) {
         ],
       });
 }
-var nC = t({
-    ActiveHint: () => tw,
-    Appear: () => Cw,
-    Arrow: () => LC,
-    ArrowDisabled: () => BC,
-    BadgeBarFiller: () => Sw,
-    BadgeBoxIntro: () => xw,
-    CarouselCtn: () => DC,
-    CarouselHint: () => ew,
-    CarouselHintCtn: () => $C,
-    CenterImage: () => HC,
-    CenterImg: () => JC,
-    CloseIcon: () => MC,
-    Disabled: () => hw,
-    DropDownSizer: () => hC,
-    DropdownButton: () => _C,
-    DropdownOption: () => yC,
-    ElementFadeIn: () => bw,
-    Error: () => vC,
-    FB: () => fw,
-    FeedBtn: () => dw,
-    FooterCtn: () => rw,
-    FormatHint: () => nw,
-    ImageArrowCtn: () => IC,
-    ImagesCtn: () => VC,
-    ImgAndPreviewCtn: () => UC,
-    InteractButton: () => XC,
-    InteractButtonIcon: () => ZC,
-    InteractButtonText: () => QC,
-    LangaugeDropdown: () => EC,
-    LanguageLabel: () => TC,
-    Left: () => RC,
-    LeftPeak: () => qC,
-    LoadingCtn: () => OC,
-    MobileCtn: () => _w,
-    PeakImg: () => YC,
-    Peek: () => GC,
-    PreviewAndIconCtn: () => jC,
-    PreviewClickCtn: () => AC,
-    PreviewImageCtn: () => kC,
-    PreviewImage_1080x1080: () => NC,
-    PreviewImage_1080x1920: () => PC,
-    PreviewImage_1200x628: () => FC,
-    PreviewMask: () => WC,
-    PrivacyWarning: () => uC,
-    RD: () => mw,
-    Right: () => zC,
-    RightPeak: () => KC,
-    SeeRewindButton: () => pC,
-    ShareArea: () => fC,
-    ShareButton: () => lC,
-    ShareColumns: () => aC,
-    ShareCtn: () => sC,
-    ShareHeader: () => gC,
-    ShareIcon: () => xC,
-    ShareLanguagePicker: () => wC,
-    ShareLinkButton: () => ow,
-    ShareLinkIcon: () => vw,
-    ShareLinkText: () => yw,
-    ShareModal: () => CC,
-    ShareModalDialogCtn: () => SC,
-    ShareOptions: () => rC,
-    ShareShortUrl: () => sw,
-    ShareText: () => bC,
-    ShareTitle: () => iC,
-    ShareTypeTitle: () => dC,
-    ShareURLCtn: () => aw,
-    ShareURLTitle: () => cw,
-    ShowcaseInfo: () => oC,
-    SocialButtons: () => uw,
-    SteamButtons: () => lw,
-    TW: () => pw,
-    TooltipCtn: () => iw,
-    VisBorder: () => gw,
-    Visible: () => mC,
-    YIRShareCtn: () => cC,
-    default: () => ww,
+var rC = t({
+    ActiveHint: () => nw,
+    Appear: () => ww,
+    Arrow: () => RC,
+    ArrowDisabled: () => VC,
+    BadgeBarFiller: () => Cw,
+    BadgeBoxIntro: () => Sw,
+    CarouselCtn: () => OC,
+    CarouselHint: () => tw,
+    CarouselHintCtn: () => ew,
+    CenterImage: () => UC,
+    CenterImg: () => YC,
+    CloseIcon: () => NC,
+    Disabled: () => gw,
+    DropDownSizer: () => gC,
+    DropdownButton: () => vC,
+    DropdownOption: () => bC,
+    ElementFadeIn: () => xw,
+    Error: () => yC,
+    FB: () => pw,
+    FeedBtn: () => fw,
+    FooterCtn: () => iw,
+    FormatHint: () => rw,
+    ImageArrowCtn: () => LC,
+    ImagesCtn: () => HC,
+    ImgAndPreviewCtn: () => WC,
+    InteractButton: () => ZC,
+    InteractButtonIcon: () => QC,
+    InteractButtonText: () => $C,
+    LangaugeDropdown: () => DC,
+    LanguageLabel: () => EC,
+    Left: () => zC,
+    LeftPeak: () => JC,
+    LoadingCtn: () => kC,
+    MobileCtn: () => vw,
+    PeakImg: () => XC,
+    Peek: () => KC,
+    PreviewAndIconCtn: () => MC,
+    PreviewClickCtn: () => jC,
+    PreviewImageCtn: () => AC,
+    PreviewImage_1080x1080: () => PC,
+    PreviewImage_1080x1920: () => FC,
+    PreviewImage_1200x628: () => IC,
+    PreviewMask: () => GC,
+    PrivacyWarning: () => dC,
+    RD: () => hw,
+    Right: () => BC,
+    RightPeak: () => qC,
+    SeeRewindButton: () => mC,
+    ShareArea: () => pC,
+    ShareButton: () => uC,
+    ShareColumns: () => oC,
+    ShareCtn: () => cC,
+    ShareHeader: () => _C,
+    ShareIcon: () => SC,
+    ShareLanguagePicker: () => TC,
+    ShareLinkButton: () => sw,
+    ShareLinkIcon: () => yw,
+    ShareLinkText: () => bw,
+    ShareModal: () => wC,
+    ShareModalDialogCtn: () => CC,
+    ShareOptions: () => iC,
+    ShareShortUrl: () => cw,
+    ShareText: () => xC,
+    ShareTitle: () => aC,
+    ShareTypeTitle: () => fC,
+    ShareURLCtn: () => ow,
+    ShareURLTitle: () => lw,
+    ShowcaseInfo: () => sC,
+    SocialButtons: () => dw,
+    SteamButtons: () => uw,
+    TW: () => mw,
+    TooltipCtn: () => aw,
+    VisBorder: () => _w,
+    Visible: () => hC,
+    YIRShareCtn: () => lC,
+    default: () => Tw,
   }),
-  rC = `GQ15KBYq0dM-`,
-  iC = `aXiQBfYGO9I-`,
-  aC = `QsTph6fo6tE-`,
-  oC = `MqMesN--4dY-`,
-  sC = `mPg8ksPIypA-`,
-  cC = `ql9xSqCdaH0-`,
-  lC = `j8A4NpxJ0t0-`,
-  uC = `wzkr-U2Espw-`,
-  dC = `smzKi1RTbdQ-`,
-  fC = `PmXhnAChGR0-`,
-  pC = `F8tObD0Db8k-`,
-  mC = `_74rjTvdFGHA-`,
-  hC = `_3K3tDOC4GJc-`,
-  gC = `r3ltIfNjuPk-`,
-  _C = `PzQjhUmqibw-`,
-  vC = `n1Fb28gGkQA-`,
-  yC = `IvgYPzwuDSc-`,
-  bC = `_2-Cr-SQJps0-`,
-  xC = `CnI2waDfQ34-`,
-  SC = `YKCweqawRAg-`,
-  CC = `WoxdMMqJPdU-`,
-  wC = `xH2JulcKe14-`,
-  TC = `UDsOCbvSZIU-`,
-  EC = `Gr4dorQ7W5c-`,
-  DC = `ANCmTxdRftQ-`,
-  OC = `p0yOORO-3xk-`,
-  kC = `v3ht7HUJu3M-`,
-  AC = `DIelFHIZzhU-`,
-  jC = `_7cpnCIhhrPY-`,
-  MC = `_1sB-7CAJZ8k-`,
-  NC = `xPVASClAx0k-`,
-  PC = `MUHNnGqkOqY-`,
-  FC = `vBdHL5mBGrg-`,
-  IC = `Zhn0fcf8K0A-`,
-  LC = `e1abu676--0-`,
-  RC = `H-DDc-hfx8I-`,
-  zC = `YH-nSsaJzMU-`,
-  BC = `pOiTs551keM-`,
-  VC = `IwfOPZqUlI0-`,
-  HC = `J3x0rrHLezU-`,
-  UC = `fmGqpqE4kNI-`,
-  WC = `boHwEaOCYyc-`,
-  GC = `IyLe07FQrvw-`,
-  KC = `XJ0X2gf4Bj8-`,
-  qC = `G3q0v1ojD1Y-`,
-  JC = `qfIY3K5wcM0-`,
-  YC = `_7c1acrIAHH4-`,
-  XC = `wNE8ANE5TsM-`,
-  ZC = `cHPBGtpOoh8-`,
-  QC = `W6T4-MeSpIc-`,
-  $C = `hbAE9JcKwtk-`,
-  ew = `OOKPlPQEH-w-`,
-  tw = `a5nzDP5fAS8-`,
-  nw = `OKLgRZL9G-8-`,
-  rw = `YZ3SbPJqfpo-`,
-  iw = `mhqjR9vpV54-`,
-  aw = `vYxszMZbMu8-`,
-  ow = `gCfLNYFfCkY-`,
-  sw = `Fszxyt7mMys-`,
-  cw = `LFvgTxoh4cM-`,
-  lw = `O8FfPGGUfsk-`,
-  uw = `DT0tk4O37yI-`,
-  dw = `ICd7j4gYWCY-`,
-  fw = `h96vh8Y0dDU-`,
-  pw = `_0XH6IlZcmBQ-`,
-  mw = `CJhunxWUcHo-`,
-  hw = `Vpkqj7M1WBw-`,
-  gw = `_7V5HmtHlzMQ-`,
-  _w = `RsGMBAZHmro-`,
-  vw = `uc6rSxuiYYU-`,
-  yw = `_6S7z8D0l51A-`,
-  bw = `W42-VaMVayE-`,
-  xw = `-Lm3gVp9t28-`,
-  Sw = `Bp9o640kQcU-`,
-  Cw = `F-nVb84xjt4-`,
-  ww = {
-    ShareOptions: rC,
-    ShareTitle: iC,
-    ShareColumns: aC,
-    ShowcaseInfo: oC,
-    ShareCtn: sC,
-    YIRShareCtn: cC,
-    ShareButton: lC,
-    PrivacyWarning: uC,
-    ShareTypeTitle: dC,
-    ShareArea: fC,
-    SeeRewindButton: pC,
-    Visible: mC,
-    DropDownSizer: hC,
-    ShareHeader: gC,
-    DropdownButton: _C,
+  iC = `GQ15KBYq0dM-`,
+  aC = `aXiQBfYGO9I-`,
+  oC = `QsTph6fo6tE-`,
+  sC = `MqMesN--4dY-`,
+  cC = `mPg8ksPIypA-`,
+  lC = `ql9xSqCdaH0-`,
+  uC = `j8A4NpxJ0t0-`,
+  dC = `wzkr-U2Espw-`,
+  fC = `smzKi1RTbdQ-`,
+  pC = `PmXhnAChGR0-`,
+  mC = `F8tObD0Db8k-`,
+  hC = `_74rjTvdFGHA-`,
+  gC = `_3K3tDOC4GJc-`,
+  _C = `r3ltIfNjuPk-`,
+  vC = `PzQjhUmqibw-`,
+  yC = `n1Fb28gGkQA-`,
+  bC = `IvgYPzwuDSc-`,
+  xC = `_2-Cr-SQJps0-`,
+  SC = `CnI2waDfQ34-`,
+  CC = `YKCweqawRAg-`,
+  wC = `WoxdMMqJPdU-`,
+  TC = `xH2JulcKe14-`,
+  EC = `UDsOCbvSZIU-`,
+  DC = `Gr4dorQ7W5c-`,
+  OC = `ANCmTxdRftQ-`,
+  kC = `p0yOORO-3xk-`,
+  AC = `v3ht7HUJu3M-`,
+  jC = `DIelFHIZzhU-`,
+  MC = `_7cpnCIhhrPY-`,
+  NC = `_1sB-7CAJZ8k-`,
+  PC = `xPVASClAx0k-`,
+  FC = `MUHNnGqkOqY-`,
+  IC = `vBdHL5mBGrg-`,
+  LC = `Zhn0fcf8K0A-`,
+  RC = `e1abu676--0-`,
+  zC = `H-DDc-hfx8I-`,
+  BC = `YH-nSsaJzMU-`,
+  VC = `pOiTs551keM-`,
+  HC = `IwfOPZqUlI0-`,
+  UC = `J3x0rrHLezU-`,
+  WC = `fmGqpqE4kNI-`,
+  GC = `boHwEaOCYyc-`,
+  KC = `IyLe07FQrvw-`,
+  qC = `XJ0X2gf4Bj8-`,
+  JC = `G3q0v1ojD1Y-`,
+  YC = `qfIY3K5wcM0-`,
+  XC = `_7c1acrIAHH4-`,
+  ZC = `wNE8ANE5TsM-`,
+  QC = `cHPBGtpOoh8-`,
+  $C = `W6T4-MeSpIc-`,
+  ew = `hbAE9JcKwtk-`,
+  tw = `OOKPlPQEH-w-`,
+  nw = `a5nzDP5fAS8-`,
+  rw = `OKLgRZL9G-8-`,
+  iw = `YZ3SbPJqfpo-`,
+  aw = `mhqjR9vpV54-`,
+  ow = `vYxszMZbMu8-`,
+  sw = `gCfLNYFfCkY-`,
+  cw = `Fszxyt7mMys-`,
+  lw = `LFvgTxoh4cM-`,
+  uw = `O8FfPGGUfsk-`,
+  dw = `DT0tk4O37yI-`,
+  fw = `ICd7j4gYWCY-`,
+  pw = `h96vh8Y0dDU-`,
+  mw = `_0XH6IlZcmBQ-`,
+  hw = `CJhunxWUcHo-`,
+  gw = `Vpkqj7M1WBw-`,
+  _w = `_7V5HmtHlzMQ-`,
+  vw = `RsGMBAZHmro-`,
+  yw = `uc6rSxuiYYU-`,
+  bw = `_6S7z8D0l51A-`,
+  xw = `W42-VaMVayE-`,
+  Sw = `-Lm3gVp9t28-`,
+  Cw = `Bp9o640kQcU-`,
+  ww = `F-nVb84xjt4-`,
+  Tw = {
+    ShareOptions: iC,
+    ShareTitle: aC,
+    ShareColumns: oC,
+    ShowcaseInfo: sC,
+    ShareCtn: cC,
+    YIRShareCtn: lC,
+    ShareButton: uC,
+    PrivacyWarning: dC,
+    ShareTypeTitle: fC,
+    ShareArea: pC,
+    SeeRewindButton: mC,
+    Visible: hC,
+    DropDownSizer: gC,
+    ShareHeader: _C,
+    DropdownButton: vC,
     Error: `n1Fb28gGkQA-`,
-    DropdownOption: yC,
-    ShareText: bC,
-    ShareIcon: xC,
-    ShareModalDialogCtn: SC,
-    ShareModal: CC,
-    ShareLanguagePicker: wC,
-    LanguageLabel: TC,
-    LangaugeDropdown: EC,
-    CarouselCtn: DC,
-    LoadingCtn: OC,
-    PreviewImageCtn: kC,
-    PreviewClickCtn: AC,
-    PreviewAndIconCtn: jC,
-    CloseIcon: MC,
-    PreviewImage_1080x1080: NC,
-    PreviewImage_1080x1920: PC,
-    PreviewImage_1200x628: FC,
-    ImageArrowCtn: IC,
-    Arrow: LC,
-    Left: RC,
-    Right: zC,
-    ArrowDisabled: BC,
-    ImagesCtn: VC,
-    CenterImage: HC,
-    ImgAndPreviewCtn: UC,
-    PreviewMask: WC,
-    Peek: GC,
-    RightPeak: KC,
-    LeftPeak: qC,
-    CenterImg: JC,
-    PeakImg: YC,
-    InteractButton: XC,
-    InteractButtonIcon: ZC,
-    InteractButtonText: QC,
-    CarouselHintCtn: $C,
-    CarouselHint: ew,
-    ActiveHint: tw,
-    FormatHint: nw,
-    FooterCtn: rw,
-    TooltipCtn: iw,
-    ShareURLCtn: aw,
-    ShareLinkButton: ow,
-    ShareShortUrl: sw,
-    ShareURLTitle: cw,
-    SteamButtons: lw,
-    SocialButtons: uw,
-    FeedBtn: dw,
-    FB: fw,
-    TW: pw,
-    RD: mw,
-    Disabled: hw,
-    VisBorder: gw,
-    MobileCtn: _w,
-    ShareLinkIcon: vw,
-    ShareLinkText: yw,
-    ElementFadeIn: bw,
-    BadgeBoxIntro: xw,
-    BadgeBarFiller: Sw,
-    Appear: Cw,
+    DropdownOption: bC,
+    ShareText: xC,
+    ShareIcon: SC,
+    ShareModalDialogCtn: CC,
+    ShareModal: wC,
+    ShareLanguagePicker: TC,
+    LanguageLabel: EC,
+    LangaugeDropdown: DC,
+    CarouselCtn: OC,
+    LoadingCtn: kC,
+    PreviewImageCtn: AC,
+    PreviewClickCtn: jC,
+    PreviewAndIconCtn: MC,
+    CloseIcon: NC,
+    PreviewImage_1080x1080: PC,
+    PreviewImage_1080x1920: FC,
+    PreviewImage_1200x628: IC,
+    ImageArrowCtn: LC,
+    Arrow: RC,
+    Left: zC,
+    Right: BC,
+    ArrowDisabled: VC,
+    ImagesCtn: HC,
+    CenterImage: UC,
+    ImgAndPreviewCtn: WC,
+    PreviewMask: GC,
+    Peek: KC,
+    RightPeak: qC,
+    LeftPeak: JC,
+    CenterImg: YC,
+    PeakImg: XC,
+    InteractButton: ZC,
+    InteractButtonIcon: QC,
+    InteractButtonText: $C,
+    CarouselHintCtn: ew,
+    CarouselHint: tw,
+    ActiveHint: nw,
+    FormatHint: rw,
+    FooterCtn: iw,
+    TooltipCtn: aw,
+    ShareURLCtn: ow,
+    ShareLinkButton: sw,
+    ShareShortUrl: cw,
+    ShareURLTitle: lw,
+    SteamButtons: uw,
+    SocialButtons: dw,
+    FeedBtn: fw,
+    FB: pw,
+    TW: mw,
+    RD: hw,
+    Disabled: gw,
+    VisBorder: _w,
+    MobileCtn: vw,
+    ShareLinkIcon: yw,
+    ShareLinkText: bw,
+    ElementFadeIn: xw,
+    BadgeBoxIntro: Sw,
+    BadgeBarFiller: Cw,
+    Appear: ww,
   },
-  Tw = `0123456789abcdef`,
-  Ew = `bcdfghjkmnpqrtvw`;
-function Dw(e, t, n) {
+  Ew = `0123456789abcdef`,
+  Dw = `bcdfghjkmnpqrtvw`;
+function Ow(e, t, n) {
   return Array.from(e, (e) => {
     let r = t.indexOf(e);
     return r >= 0 ? n[r] : e;
   }).join(``);
 }
-function Ow(e) {
-  return e ? Dw(new wa(e).GetAccountID().toString(16), Tw, Ew) : ``;
-}
 function kw(e) {
+  return e ? Ow(new Ca(e).GetAccountID().toString(16), Ew, Dw) : ``;
+}
+function Aw(e) {
   let { steamid: t, nYear: n } = e,
     r = u_(),
-    i = K();
-  return w.logged_in
-    ? !r && w.logged_in
-      ? (0, Y.jsx)(dc, {
-          className: (0, Q.default)(pC, i.SeeRewindButton),
-          href: `${N.STORE_BASE_URL}replay/${w.steamid}/${n}?src=9`,
-          children: L.Localize(`#YIR_SeeYourRewind`),
+    i = q();
+  return T.logged_in
+    ? !r && T.logged_in
+      ? (0, Y.jsx)(uc, {
+          className: (0, Q.default)(mC, i.SeeRewindButton),
+          href: `${P.STORE_BASE_URL}replay/${T.steamid}/${n}?src=9`,
+          children: R.Localize(`#YIR_SeeYourRewind`),
         })
-      : (0, Y.jsxs)(A, {
-          className: cC,
+      : (0, Y.jsxs)(j, {
+          className: lC,
           children: [
-            (0, Y.jsx)(Aw, { steamid: t, nYear: n }),
-            (0, Y.jsxs)(A, {
-              className: lC,
+            (0, Y.jsx)(jw, { steamid: t, nYear: n }),
+            (0, Y.jsxs)(j, {
+              className: uC,
               onActivate: () => {
-                sr((0, Y.jsx)(Pw, { steamid: t, nYear: n }), window, {
-                  strTitle: Yn.Localize(`#Button_Share`),
+                or((0, Y.jsx)(Fw, { steamid: t, nYear: n }), window, {
+                  strTitle: Jn.Localize(`#Button_Share`),
                 });
               },
               children: [
-                (0, Y.jsx)(zo, { className: (0, Q.default)(xC) }),
+                (0, Y.jsx)(Ro, { className: (0, Q.default)(SC) }),
                 (0, Y.jsx)(`span`, {
-                  className: (0, Q.default)(bC),
-                  children: Yn.Localize(`#Button_Share`),
+                  className: (0, Q.default)(xC),
+                  children: Jn.Localize(`#Button_Share`),
                 }),
               ],
             }),
@@ -11182,37 +11257,37 @@ function kw(e) {
         })
     : null;
 }
-function Aw(e) {
+function jw(e) {
   let { steamid: t, nYear: n } = e,
-    [r, i] = (0, R.useState)(``),
+    [r, i] = (0, z.useState)(``),
     a = ih(t, n),
     { mutateAsync: o } = ah(t, n),
-    s = (0, R.useMemo)(() => a === 3 || a === 2, [a]),
+    s = (0, z.useMemo)(() => a === 3 || a === 2, [a]),
     c = [
-      { data: 1, label: L.Localize(`#YIR_ShareVisbility_Private`) },
-      { data: 2, label: L.Localize(`#YIR_ShareVisbility_FriendsOnly`) },
-      { data: 3, label: L.Localize(`#YIR_ShareVisbility_Public`) },
+      { data: 1, label: R.Localize(`#YIR_ShareVisbility_Private`) },
+      { data: 2, label: R.Localize(`#YIR_ShareVisbility_FriendsOnly`) },
+      { data: 3, label: R.Localize(`#YIR_ShareVisbility_Public`) },
     ];
-  return (0, Y.jsxs)(A, {
+  return (0, Y.jsxs)(j, {
     "flow-children": `column`,
     children: [
       (0, Y.jsx)(`div`, {
-        className: (0, Q.default)(uC, s ? mC : ``),
+        className: (0, Q.default)(dC, s ? hC : ``),
         children: s
-          ? L.Localize(`#YIR_ShareVisbility`)
-          : L.Localize(`#YIR_ShareModal_DisabledShareTtp`),
+          ? R.Localize(`#YIR_ShareVisbility`)
+          : R.Localize(`#YIR_ShareModal_DisabledShareTtp`),
       }),
       (0, Y.jsx)(`div`, {
-        className: hC,
-        children: (0, Y.jsx)(Ja, {
-          strDropDownButtonClassName: _C,
-          strDropDownClassName: yC,
+        className: gC,
+        children: (0, Y.jsx)(qa, {
+          strDropDownButtonClassName: vC,
+          strDropDownClassName: bC,
           rgOptions: c,
           selectedOption: a,
           onChange: async (e) => {
             if (e.data !== a) {
               let { eResult: t } = await o(e.data),
-                n = t == 1 ? `` : jw(t);
+                n = t == 1 ? `` : Mw(t);
               n && i(n);
             }
           },
@@ -11222,7 +11297,7 @@ function Aw(e) {
     ],
   });
 }
-function jw(e) {
+function Mw(e) {
   switch (e) {
     case 10:
       return `Servers are busy, please try again later`;
@@ -11230,63 +11305,63 @@ function jw(e) {
       return ``;
   }
 }
-function Mw(e) {
+function Nw(e) {
   return `y${e % 100}`;
 }
-var Nw = `l`;
-function Pw(e) {
+var Pw = `l`;
+function Fw(e) {
   let { closeModal: t, steamid: n, nYear: r } = e,
-    [i, a] = (0, R.useState)(),
+    [i, a] = (0, z.useState)(),
     o = ih(n, r),
-    s = (0, R.useMemo)(() => o === 3 || o === 2, [o]),
-    [c, l] = (0, R.useState)(Dl(N.LANGUAGE)),
-    u = (0, R.useMemo)(() => Ks(c), [c]),
-    d = Ow(n),
-    f = `https://s.team/${Mw(r)}/${d}`,
-    p = (0, R.useMemo)(() => {
+    s = (0, z.useMemo)(() => o === 3 || o === 2, [o]),
+    [c, l] = (0, z.useState)(El(P.LANGUAGE)),
+    u = (0, z.useMemo)(() => Gs(c), [c]),
+    d = kw(n),
+    f = `https://s.team/${Nw(r)}/${d}`,
+    p = (0, z.useMemo)(() => {
       let e = new URL(f);
-      return (e.searchParams.set(Nw, u), e.href);
+      return (e.searchParams.set(Pw, u), e.href);
     }, [u, f]),
     m = () => {
       a(!0);
     };
   return i
-    ? (0, Y.jsx)(sn, { eventLink: p, closeModal: t })
-    : (0, Y.jsx)(Fs, {
+    ? (0, Y.jsx)(on, { eventLink: p, closeModal: t })
+    : (0, Y.jsx)(Ps, {
         strDescription: ``,
-        strTitle: L.Localize(`#YIR_ShareModal_Title`),
+        strTitle: R.Localize(`#YIR_ShareModal_Title`),
         onCancel: t,
         onOK: t,
         bAlertDialog: !0,
-        modalClassName: SC,
+        modalClassName: CC,
         children: (0, Y.jsxs)(`div`, {
-          className: CC,
+          className: wC,
           children: [
             (0, Y.jsx)(`div`, {
-              className: wC,
+              className: TC,
               children: (0, Y.jsx)(`div`, {
-                className: EC,
-                children: (0, Y.jsx)(rn, {
+                className: DC,
+                children: (0, Y.jsx)(nn, {
                   selectedLang: c,
                   fnOnLanguageChanged: l,
                   fnFilterLanguage: (e) => e !== 25,
                 }),
               }),
             }),
-            (0, Y.jsx)(Fw, { language: u, steamid: n, nYear: r, shareUrl: p }),
+            (0, Y.jsx)(Iw, { language: u, steamid: n, nYear: r, shareUrl: p }),
             (0, Y.jsxs)(`div`, {
-              className: rw,
+              className: iw,
               children: [
-                (0, Y.jsx)(Aw, { steamid: n, nYear: r }),
+                (0, Y.jsx)(jw, { steamid: n, nYear: r }),
                 (0, Y.jsx)(`div`, {
-                  className: (0, Q.default)(gw, !s && `Vpkqj7M1WBw-`),
-                  children: N.IN_MOBILE_WEBVIEW
-                    ? (0, Y.jsx)(Bw, {
+                  className: (0, Q.default)(_w, !s && `Vpkqj7M1WBw-`),
+                  children: P.IN_MOBILE_WEBVIEW
+                    ? (0, Y.jsx)(Vw, {
                         bCanShare: s,
                         shareUrl: p,
                         shareOnSteamActivityFeed: m,
                       })
-                    : (0, Y.jsx)(zw, {
+                    : (0, Y.jsx)(Bw, {
                         nYear: r,
                         bCanShare: s,
                         shareUrl: p,
@@ -11301,13 +11376,13 @@ function Pw(e) {
         }),
       });
 }
-function Fw(e) {
+function Iw(e) {
   let { language: t, steamid: n, nYear: r, shareUrl: i } = e,
-    [a, o] = (0, R.useState)(0),
-    [s, c] = (0, R.useState)(!1),
+    [a, o] = (0, z.useState)(0),
+    [s, c] = (0, z.useState)(!1),
     { isLoading: l, data: u } = Th(n, r, t),
     d = u ? u.length - 1 : 0,
-    f = `${N.BASE_URL_SHARED_CDN}social_sharing/`,
+    f = `${P.BASE_URL_SHARED_CDN}social_sharing/`,
     p = (e) => {
       a > 0 && (o(a - 1), e.stopPropagation());
     },
@@ -11315,21 +11390,21 @@ function Fw(e) {
       a < d && (o(a + 1), e.stopPropagation());
     };
   return (
-    tn(`ArrowLeft`, p),
-    tn(`Left`, p),
-    tn(`ArrowRight`, m),
-    tn(`Right`, m),
+    en(`ArrowLeft`, p),
+    en(`Left`, p),
+    en(`ArrowRight`, m),
+    en(`Right`, m),
     l
       ? (0, Y.jsx)(`div`, {
-          className: (0, Q.default)(DC, OC),
-          children: (0, Y.jsx)(nn, { position: `center` }),
+          className: (0, Q.default)(OC, kC),
+          children: (0, Y.jsx)(tn, { position: `center` }),
         })
       : u
         ? (0, Y.jsxs)(`div`, {
-            className: DC,
+            className: OC,
             children: [
               s &&
-                (0, Y.jsx)(Iw, {
+                (0, Y.jsx)(Lw, {
                   carouselIndex: a,
                   endPreviewImage: (e) => {
                     (c(!1), e.stopPropagation());
@@ -11341,31 +11416,31 @@ function Fw(e) {
                   maxIndex: d,
                 }),
               (0, Y.jsxs)(`div`, {
-                className: IC,
+                className: LC,
                 children: [
                   (0, Y.jsx)(`div`, {
                     className: (0, Q.default)(
-                      LC,
                       RC,
+                      zC,
                       a === 0 && `pOiTs551keM-`,
                     ),
                     onClick: p,
-                    children: (0, Y.jsx)(Is, { angle: 270 }),
+                    children: (0, Y.jsx)(Fs, { angle: 270 }),
                   }),
                   (0, Y.jsx)(`div`, {
                     className: (0, Q.default)(
-                      LC,
-                      zC,
+                      RC,
+                      BC,
                       a === d && `pOiTs551keM-`,
                     ),
                     onClick: m,
-                    children: (0, Y.jsx)(Is, { angle: 90 }),
+                    children: (0, Y.jsx)(Fs, { angle: 90 }),
                   }),
                   (0, Y.jsxs)(`div`, {
-                    className: VC,
+                    className: HC,
                     children: [
                       (0, Y.jsx)(`div`, {
-                        className: (0, Q.default)(GC, qC),
+                        className: (0, Q.default)(KC, JC),
                         children:
                           a !== 0 &&
                           (0, Y.jsx)(`img`, {
@@ -11375,29 +11450,29 @@ function Fw(e) {
                           }),
                       }),
                       (0, Y.jsx)(`div`, {
-                        className: HC,
+                        className: UC,
                         children: (0, Y.jsxs)(`div`, {
-                          className: UC,
+                          className: WC,
                           children: [
                             (0, Y.jsx)(`div`, {
                               onClick: (e) => {
                                 (c(!0), e.stopPropagation());
                               },
-                              className: WC,
-                              children: L.Localize(
+                              className: GC,
+                              children: R.Localize(
                                 `#YIR_ShareModal_FullscreenPreview`,
                               ),
                             }),
                             (0, Y.jsx)(`img`, {
                               alt: ``,
-                              className: JC,
+                              className: YC,
                               src: `${f}${u[a].url_path}`,
                             }),
                           ],
                         }),
                       }),
                       (0, Y.jsx)(`div`, {
-                        className: (0, Q.default)(GC, KC),
+                        className: (0, Q.default)(KC, qC),
                         children:
                           a !== d &&
                           (0, Y.jsx)(`img`, {
@@ -11410,41 +11485,41 @@ function Fw(e) {
                   }),
                 ],
               }),
-              N.IN_MOBILE_WEBVIEW
-                ? (0, Y.jsx)(Rw, {
+              P.IN_MOBILE_WEBVIEW
+                ? (0, Y.jsx)(zw, {
                     imageUrl: `${f}${u[a].url_path}`,
                     shareUrl: i,
                   })
-                : N.IN_CLIENT
+                : P.IN_CLIENT
                   ? null
-                  : (0, Y.jsx)(Lw, { imageUrl: `${f}${u[a].url_path}` }),
+                  : (0, Y.jsx)(Rw, { imageUrl: `${f}${u[a].url_path}` }),
               (0, Y.jsx)(`div`, {
-                className: $C,
+                className: ew,
                 children: u.map((e, t) =>
                   (0, Y.jsx)(
                     `div`,
-                    { className: (0, Q.default)(ew, t === a ? tw : null) },
+                    { className: (0, Q.default)(tw, t === a ? nw : null) },
                     `${t}_hint`,
                   ),
                 ),
               }),
               (0, Y.jsx)(`div`, {
-                className: nw,
-                children: L.Localize(
+                className: rw,
+                children: R.Localize(
                   `#YIR_ShareModal_ImageCaption_${u[a].name}`,
                 ),
               }),
             ],
           })
         : (0, Y.jsx)(`div`, {
-            className: (0, Q.default)(DC, OC),
+            className: (0, Q.default)(OC, kC),
             children: (0, Y.jsx)(`div`, {
-              children: L.Localize(`#YIR_ShareModal_FailedToGenerateImages`),
+              children: R.Localize(`#YIR_ShareModal_FailedToGenerateImages`),
             }),
           })
   );
 }
-function Iw(e) {
+function Lw(e) {
   let {
     carouselIndex: t,
     maxIndex: n,
@@ -11455,30 +11530,30 @@ function Iw(e) {
     url: s,
   } = e;
   return (
-    tn(`Escape`, a),
-    tn(`Esc`, a),
+    en(`Escape`, a),
+    en(`Esc`, a),
     (0, Y.jsx)(`div`, {
-      className: kC,
+      className: AC,
       children: (0, Y.jsx)(`div`, {
-        className: AC,
+        className: jC,
         onClick: a,
         children: (0, Y.jsxs)(`div`, {
-          className: jC,
+          className: MC,
           children: [
-            (0, Y.jsx)(`div`, { className: MC, children: (0, Y.jsx)(xl, {}) }),
+            (0, Y.jsx)(`div`, { className: NC, children: (0, Y.jsx)(bl, {}) }),
             (0, Y.jsx)(`div`, {
-              className: (0, Q.default)(LC, RC, t === 0 && `pOiTs551keM-`),
+              className: (0, Q.default)(RC, zC, t === 0 && `pOiTs551keM-`),
               onClick: r,
-              children: (0, Y.jsx)(Is, { angle: 270 }),
+              children: (0, Y.jsx)(Fs, { angle: 270 }),
             }),
             (0, Y.jsx)(`div`, {
-              className: (0, Q.default)(LC, zC, t === n && `pOiTs551keM-`),
+              className: (0, Q.default)(RC, BC, t === n && `pOiTs551keM-`),
               onClick: i,
-              children: (0, Y.jsx)(Is, { angle: 90 }),
+              children: (0, Y.jsx)(Fs, { angle: 90 }),
             }),
             (0, Y.jsx)(`img`, {
               alt: ``,
-              className: nC[`PreviewImage_${o}`],
+              className: rC[`PreviewImage_${o}`],
               src: s,
             }),
           ],
@@ -11487,9 +11562,9 @@ function Iw(e) {
     })
   );
 }
-function Lw(e) {
+function Rw(e) {
   return (0, Y.jsxs)(`div`, {
-    className: XC,
+    className: ZC,
     onClick: () => {
       fetch(e.imageUrl)
         .then((e) => e.blob())
@@ -11504,18 +11579,18 @@ function Lw(e) {
         });
     },
     children: [
-      (0, Y.jsx)(Vc, { className: ZC }),
+      (0, Y.jsx)(Bc, { className: QC }),
       (0, Y.jsx)(`span`, {
-        className: (0, Q.default)(QC),
-        children: L.Localize(`#YIR_ShareModal_SaveImage`),
+        className: (0, Q.default)($C),
+        children: R.Localize(`#YIR_ShareModal_SaveImage`),
       }),
     ],
   });
 }
-function Rw(e) {
+function zw(e) {
   let { imageUrl: t, shareUrl: n } = e;
   return (0, Y.jsxs)(`div`, {
-    className: XC,
+    className: ZC,
     onClick: () => {
       let e = Reflect.get(window, `ReactNativeWebView`);
       if (e?.postMessage) {
@@ -11523,23 +11598,23 @@ function Rw(e) {
           event_name: `shareimage`,
           link: t,
           url: t,
-          subject: L.Localize(`#YIR_ShareModal_MobileSubject`),
+          subject: R.Localize(`#YIR_ShareModal_MobileSubject`),
           message: n,
-          title: L.Localize(`#YIR_ShareModal_MobileMessage`),
+          title: R.Localize(`#YIR_ShareModal_MobileMessage`),
         };
         e.postMessage(JSON.stringify(r));
       }
     },
     children: [
-      (0, Y.jsx)(zo, { className: ZC }),
+      (0, Y.jsx)(Ro, { className: QC }),
       (0, Y.jsx)(`span`, {
-        className: (0, Q.default)(QC),
-        children: L.Localize(`#YIR_ShareModal_ShareImage`),
+        className: (0, Q.default)($C),
+        children: R.Localize(`#YIR_ShareModal_ShareImage`),
       }),
     ],
   });
 }
-function zw(e) {
+function Bw(e) {
   let {
       bCanShare: t,
       shareUrl: n,
@@ -11548,27 +11623,27 @@ function zw(e) {
       nYear: a,
       shareOnSteamActivityFeed: o,
     } = e,
-    [s, c] = (0, R.useState)(!1);
+    [s, c] = (0, z.useState)(!1);
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
       (0, Y.jsx)(`div`, {
-        className: cw,
-        children: L.Localize(`#YIR_ShareModal_YourLink`),
+        className: lw,
+        children: R.Localize(`#YIR_ShareModal_YourLink`),
       }),
       (0, Y.jsxs)(`div`, {
-        className: aw,
+        className: ow,
         children: [
-          (0, Y.jsx)(`div`, { className: sw, children: n }),
+          (0, Y.jsx)(`div`, { className: cw, children: n }),
           (0, Y.jsxs)(`div`, {
-            className: (0, Q.default)(ow),
+            className: (0, Q.default)(sw),
             onClick: () => {
               (navigator.clipboard.writeText(n), c(!0));
             },
             children: [
-              (0, Y.jsx)(zo, { className: vw }),
+              (0, Y.jsx)(Ro, { className: yw }),
               (0, Y.jsx)(`span`, {
-                className: (0, Q.default)(yw),
-                children: L.Localize(
+                className: (0, Q.default)(bw),
+                children: R.Localize(
                   s
                     ? `#YIR_ShareModal_CopyLink_Success`
                     : `#YIR_ShareModal_CopyLink`,
@@ -11579,27 +11654,27 @@ function zw(e) {
         ],
       }),
       (0, Y.jsxs)(`div`, {
-        className: (0, Q.default)(uw, lw),
+        className: (0, Q.default)(dw, uw),
         children: [
           (0, Y.jsxs)(`div`, {
             onClick: o,
-            className: (0, Q.default)(ow, dw),
+            className: (0, Q.default)(sw, fw),
             children: [
-              (0, Y.jsx)(fa, { className: vw }),
+              (0, Y.jsx)(da, { className: yw }),
               (0, Y.jsx)(`span`, {
-                className: (0, Q.default)(yw),
-                children: L.Localize(`#YIR_ShareModal_ShareOnFriendsActivity`),
+                className: (0, Q.default)(bw),
+                children: R.Localize(`#YIR_ShareModal_ShareOnFriendsActivity`),
               }),
             ],
           }),
           (0, Y.jsxs)(`a`, {
-            href: `${N.COMMUNITY_BASE_URL}profiles/${w.steamid}/edit/showcases`,
-            className: (0, Q.default)(ow, dw),
+            href: `${P.COMMUNITY_BASE_URL}profiles/${T.steamid}/edit/showcases`,
+            className: (0, Q.default)(sw, fw),
             children: [
-              (0, Y.jsx)(zs, { className: vw }),
+              (0, Y.jsx)(Rs, { className: yw }),
               (0, Y.jsx)(`span`, {
-                className: (0, Q.default)(yw),
-                children: L.Localize(`#YIR_ShareModal_AddShowcase`),
+                className: (0, Q.default)(bw),
+                children: R.Localize(`#YIR_ShareModal_AddShowcase`),
               }),
             ],
           }),
@@ -11608,14 +11683,14 @@ function zw(e) {
     ],
   });
 }
-function Bw(e) {
+function Vw(e) {
   let { bCanShare: t, shareUrl: n, shareOnSteamActivityFeed: r } = e;
   return (0, Y.jsx)(Y.Fragment, {
     children: (0, Y.jsxs)(`div`, {
-      className: _w,
+      className: vw,
       children: [
         (0, Y.jsxs)(`div`, {
-          className: (0, Q.default)(ow, !t && `Vpkqj7M1WBw-`),
+          className: (0, Q.default)(sw, !t && `Vpkqj7M1WBw-`),
           onClick: () => {
             let e = Reflect.get(window, `ReactNativeWebView`);
             if (e?.postMessage) {
@@ -11623,29 +11698,29 @@ function Bw(e) {
                 event_name: `share`,
                 link: n,
                 url: n,
-                subject: L.Localize(`#YIR_ShareModal_MobileSubject`),
-                message: L.Localize(`#YIR_ShareModal_MobileMessage`),
-                title: L.Localize(`#YIR_ShareModal_MobileMessage`),
+                subject: R.Localize(`#YIR_ShareModal_MobileSubject`),
+                message: R.Localize(`#YIR_ShareModal_MobileMessage`),
+                title: R.Localize(`#YIR_ShareModal_MobileMessage`),
               };
               e.postMessage(JSON.stringify(t));
             }
           },
           children: [
-            (0, Y.jsx)(zo, { className: vw }),
+            (0, Y.jsx)(Ro, { className: yw }),
             (0, Y.jsx)(`span`, {
-              className: (0, Q.default)(yw),
-              children: L.Localize(`#YIR_ShareModal_ShareLink`),
+              className: (0, Q.default)(bw),
+              children: R.Localize(`#YIR_ShareModal_ShareLink`),
             }),
           ],
         }),
         (0, Y.jsxs)(`div`, {
           onClick: r,
-          className: (0, Q.default)(ow, !t && `Vpkqj7M1WBw-`),
+          className: (0, Q.default)(sw, !t && `Vpkqj7M1WBw-`),
           children: [
-            (0, Y.jsx)(fa, { className: vw }),
+            (0, Y.jsx)(da, { className: yw }),
             (0, Y.jsx)(`span`, {
-              className: (0, Q.default)(yw),
-              children: L.Localize(`#YIR_ShareModal_ShareOnFriendsActivity`),
+              className: (0, Q.default)(bw),
+              children: R.Localize(`#YIR_ShareModal_ShareOnFriendsActivity`),
             }),
           ],
         }),
@@ -11653,10 +11728,10 @@ function Bw(e) {
     }),
   });
 }
-function Vw(e) {
+function Hw(e) {
   return e >= 2024;
 }
-function Hw(e) {
+function Uw(e) {
   let { userYearInReview: t } = e,
     n = t.GetYear(),
     r = t.GetPlayTimeStats().total_stats,
@@ -11667,14 +11742,14 @@ function Hw(e) {
     c = o.filter((e) => e.new_this_year).length || 0,
     l = t.GetPlayTimeStats().playtime_streak,
     u = t.GetTopGamesShown(),
-    d = q(),
-    f = (0, R.useMemo)(() => u.slice(0, 5), [u]),
-    { data: p } = Ah((0, R.useMemo)(() => f.map((e) => e.appid), [f])),
+    d = J(),
+    f = (0, z.useMemo)(() => u.slice(0, 5), [u]),
+    { data: p } = Ah((0, z.useMemo)(() => f.map((e) => e.appid), [f])),
     m = f
       .map((e, t) =>
         p?.has(e.appid)
           ? (0, Y.jsx)(
-              eT,
+              tT,
               { gameStat: e, gridClass: `Game${t}` },
               `${t}_${e.appid}`,
             )
@@ -11682,19 +11757,19 @@ function Hw(e) {
       )
       .filter((e) => e !== null),
     h = [
-      Ww(s, t),
-      qw(n, r),
-      Gw(n, l, Vw(n) ? t.GetPreviousYearSummary()?.longest_streak : void 0),
+      Gw(s, t),
+      Jw(n, r),
+      Kw(n, l, Hw(n) ? t.GetPreviousYearSummary()?.longest_streak : void 0),
     ].filter((e) => e !== null),
     g = (0, Y.jsx)(
-      Yw,
+      Xw,
       {
         rgGamesLength: o.length,
         nNewGames: c,
         nDemoPlayed: i,
         nPlaytestPlayed: a,
         nYear: t.GetYear(),
-        nPreviousYearsGames: Vw(n)
+        nPreviousYearsGames: Hw(n)
           ? t.GetPreviousYearSummary()?.games_played
           : void 0,
       },
@@ -11702,9 +11777,9 @@ function Hw(e) {
     );
   return (0, Y.jsx)($, {
     children: (0, Y.jsxs)(`div`, {
-      className: (0, Q.default)(X, H_),
+      className: (0, Q.default)(X, U_),
       children: [
-        (0, Y.jsx)(Jw, {
+        (0, Y.jsx)(Yw, {
           rgGamesLength: o.length,
           nNewGames: c,
           totalAchievementUnlocked: s,
@@ -11720,7 +11795,7 @@ function Hw(e) {
                   className: `bXtzee8AefM-`,
                   children: d(`#YIR_YourSummary_SubTitle`),
                 }),
-                (0, Y.jsx)(Uw, { overview: g, statFillers: h, gameFillers: m }),
+                (0, Y.jsx)(Ww, { overview: g, statFillers: h, gameFillers: m }),
               ],
             }),
           }),
@@ -11728,33 +11803,33 @@ function Hw(e) {
     }),
   });
 }
-function Uw(e) {
+function Ww(e) {
   let { statFillers: t, gameFillers: n, overview: r } = e;
   return n.length > 2 && t.length > 1
     ? (0, Y.jsx)(`div`, {
-        className: G_,
+        className: K_,
         children: [r, t[0], t[1], n[0], n[1], n[2]],
       })
     : n.length > 1 && t.length > 2
       ? (0, Y.jsx)(`div`, {
-          className: G_,
+          className: K_,
           children: [r, t[1], t[2], t[0], n[0], n[1]],
         })
       : t.length == 1 && n.length > 3
         ? (0, Y.jsx)(`div`, {
-            className: G_,
+            className: K_,
             children: [r, t[0], n[0], n[1], n[2], n[3]],
           })
         : n.length > 1
-          ? (0, Y.jsx)(`div`, { className: K_, children: [r, n[0], n[1]] })
+          ? (0, Y.jsx)(`div`, { className: q_, children: [r, n[0], n[1]] })
           : null;
 }
-function Ww(e, t) {
+function Gw(e, t) {
   return e > 0
-    ? (0, Y.jsx)(Zw, { userYearInReview: t }, `totalAchievements`)
+    ? (0, Y.jsx)(Qw, { userYearInReview: t }, `totalAchievements`)
     : null;
 }
-function Gw(e, t, n) {
+function Kw(e, t, n) {
   return t &&
     typeof t.longest_consecutive_days == `number` &&
     typeof n == `number` &&
@@ -11766,25 +11841,25 @@ function Gw(e, t, n) {
         t.longest_consecutive_days > 0 &&
         !Im()
       ? (0, Y.jsx)(
-          Qw,
+          $w,
           { oLongestStreak: t, nYear: e, nPrevLongestStreamDays: n },
           `longestStreak`,
         )
       : null;
 }
-var Kw = 1e3;
-function qw(e, t) {
+var qw = 1e3;
+function Jw(e, t) {
   let n = t.controller_playtime_percentagex100 + t.deck_playtime_percentagex100,
     r =
       t.total_playtime_percentagex100 -
       t.controller_playtime_percentagex100 -
       t.vr_playtime_percentagex100 -
       t.deck_playtime_percentagex100;
-  return n < Kw || r < Kw
+  return n < qw || r < qw
     ? null
-    : (0, Y.jsx)($w, { oTotalStats: t, nYear: e }, `hardwareTime`);
+    : (0, Y.jsx)(eT, { oTotalStats: t, nYear: e }, `hardwareTime`);
 }
-function Jw(e) {
+function Yw(e) {
   let {
       rgGamesLength: t,
       nNewGames: n,
@@ -11792,7 +11867,7 @@ function Jw(e) {
       nTotalPlaytimeSeconds: i,
       nTotalPercentagePlaytimex100: a,
     } = e,
-    o = q(),
+    o = J(),
     s;
   return (
     (s =
@@ -11819,10 +11894,10 @@ function Jw(e) {
                         : i > 36e4
                           ? o(`#YIR_YourSummary_HoursMany`)
                           : null),
-    (0, Y.jsx)(`div`, { className: z_, children: s })
+    (0, Y.jsx)(`div`, { className: B_, children: s })
   );
 }
-function Yw(e) {
+function Xw(e) {
   let t = f_(),
     {
       rgGamesLength: n,
@@ -11832,47 +11907,47 @@ function Yw(e) {
       nYear: o,
       nPreviousYearsGames: s,
     } = e,
-    c = K(),
-    l = mS(`bg_2023.svg`),
+    c = q(),
+    l = hS(`bg_2023.svg`),
     u;
   return (
-    n > 99999 ? (u = Ev) : n > 99 && (u = Tv),
+    n > 99999 ? (u = Dv) : n > 99 && (u = Ev),
     (0, Y.jsx)(`div`, {
-      className: (0, Q.default)(W_, c.SummaryCtnShadow),
+      className: (0, Q.default)(G_, c.SummaryCtnShadow),
       children: (0, Y.jsxs)(`div`, {
-        className: (0, Q.default)(iv, q_, c.GridItem, Z_, c.SummaryCtn),
+        className: (0, Q.default)(av, J_, c.GridItem, Q_, c.SummaryCtn),
         children: [
-          (0, Y.jsx)(`div`, { className: av }),
+          (0, Y.jsx)(`div`, { className: ov }),
           (0, Y.jsx)(`div`, {
-            className: (0, Q.default)(Q_, gv),
+            className: (0, Q.default)($_, _v),
             style: { backgroundImage: `url(${l})` },
           }),
           (0, Y.jsxs)(`div`, {
-            className: vv,
+            className: yv,
             children: [
               (0, Y.jsx)(`div`, {
-                className: P_,
-                children: L.LocalizeReact(
+                className: F_,
+                children: R.LocalizeReact(
                   `#YearInReview_SteamRewindHeader`,
                   (0, Y.jsx)(`span`, {
-                    className: (0, Q.default)(L_, c.UserName),
-                    children: L.Localize(`#YearInReview_PossessiveUserName`, t),
+                    className: (0, Q.default)(R_, c.UserName),
+                    children: R.Localize(`#YearInReview_PossessiveUserName`, t),
                   }),
-                  Yn.Localize(`#date_year`, o),
+                  Jn.Localize(`#date_year`, o),
                 ),
               }),
               (0, Y.jsxs)(`div`, {
-                className: (0, Q.default)(xv, bv),
+                className: (0, Q.default)(Sv, xv),
                 children: [
                   (0, Y.jsx)(`div`, {
-                    className: (0, Q.default)(tv, u),
-                    children: E(n),
+                    className: (0, Q.default)(nv, u),
+                    children: D(n),
                   }),
                   (0, Y.jsx)(`div`, {
-                    className: wv,
-                    children: L.LocalizePlural(`#YIR_YourSummary_Games`, n),
+                    className: Tv,
+                    children: R.LocalizePlural(`#YIR_YourSummary_Games`, n),
                   }),
-                  (0, Y.jsx)(Xw, {
+                  (0, Y.jsx)(Zw, {
                     strTokenPrefix: `#YIR_YourSummary_PrevYear_Game`,
                     nCurValue: n,
                     nPrevValue: s,
@@ -11882,7 +11957,7 @@ function Yw(e) {
             ],
           }),
           (0, Y.jsxs)(`div`, {
-            className: Sv,
+            className: Cv,
             children: [
               !!r &&
                 (0, Y.jsxs)(`div`, {
@@ -11890,11 +11965,11 @@ function Yw(e) {
                   children: [
                     (0, Y.jsx)(`div`, {
                       className: `ERwgqbs67Y0-`,
-                      children: E(r),
+                      children: D(r),
                     }),
                     (0, Y.jsx)(`div`, {
                       className: `Ro3m9drEqnI-`,
-                      children: L.LocalizePlural(
+                      children: R.LocalizePlural(
                         `#YIR_YourSummary_GamesFirst`,
                         r,
                       ),
@@ -11907,11 +11982,11 @@ function Yw(e) {
                   children: [
                     (0, Y.jsx)(`div`, {
                       className: `ERwgqbs67Y0-`,
-                      children: E(i),
+                      children: D(i),
                     }),
                     (0, Y.jsx)(`div`, {
                       className: `Ro3m9drEqnI-`,
-                      children: L.LocalizePlural(`#YIR_YourSummary_Demos`, i),
+                      children: R.LocalizePlural(`#YIR_YourSummary_Demos`, i),
                     }),
                   ],
                 }),
@@ -11921,11 +11996,11 @@ function Yw(e) {
                   children: [
                     (0, Y.jsx)(`div`, {
                       className: `ERwgqbs67Y0-`,
-                      children: E(a),
+                      children: D(a),
                     }),
                     (0, Y.jsx)(`div`, {
                       className: `Ro3m9drEqnI-`,
-                      children: L.LocalizePlural(
+                      children: R.LocalizePlural(
                         `#YIR_YourSummary_PlayTests`,
                         a,
                       ),
@@ -11939,102 +12014,102 @@ function Yw(e) {
     })
   );
 }
-function Xw(e) {
+function Zw(e) {
   let { strTokenPrefix: t, nCurValue: n, nPrevValue: r } = e;
   if (r != null && r !== 0 && n !== 0)
     return n == r
       ? null
       : n < r
         ? (0, Y.jsxs)(`div`, {
-            className: Ov,
+            className: kv,
             children: [
-              (0, Y.jsx)(`div`, { className: (0, Q.default)(kv, Mv) }),
+              (0, Y.jsx)(`div`, { className: (0, Q.default)(Av, Nv) }),
               (0, Y.jsx)(`div`, {
-                className: Av,
-                children: L.LocalizePlural(`${t}Less`, r - n, E(r - n)),
+                className: jv,
+                children: R.LocalizePlural(`${t}Less`, r - n, D(r - n)),
               }),
             ],
           })
         : (0, Y.jsxs)(`div`, {
-            className: Ov,
+            className: kv,
             children: [
-              (0, Y.jsx)(`div`, { className: (0, Q.default)(kv, jv) }),
+              (0, Y.jsx)(`div`, { className: (0, Q.default)(Av, Mv) }),
               (0, Y.jsx)(`div`, {
-                className: Av,
-                children: L.LocalizePlural(`${t}More`, n - r, E(n - r)),
+                className: jv,
+                children: R.LocalizePlural(`${t}More`, n - r, D(n - r)),
               }),
             ],
           });
 }
-function Zw(e) {
+function Qw(e) {
   let { userYearInReview: t } = e,
     n = t.GetPlayTimeStats().summary_stats;
   t.GetFilteredGameSummary();
   let r = t.GetYear(),
-    i = K();
+    i = q();
   if (!n) return null;
-  let a = mS(`achievement_grid_02.webp`),
+  let a = hS(`achievement_grid_02.webp`),
     o;
   return (
     typeof n.total_achievements == `number` && n.total_achievements > 99999
-      ? (o = Ev)
+      ? (o = Dv)
       : typeof n.total_achievements == `number` &&
         n.total_achievements > 99 &&
-        (o = Tv),
+        (o = Ev),
     (0, Y.jsx)(`div`, {
-      className: (0, Q.default)(W_, i.SummaryCtnShadow),
+      className: (0, Q.default)(G_, i.SummaryCtnShadow),
       children: (0, Y.jsxs)(`div`, {
         className: (0, Q.default)(
-          iv,
-          q_,
+          av,
+          J_,
           i.GridItem,
-          _v,
+          vv,
           void 0,
           i.SummaryCtn,
           i.AchievementBlock,
         ),
         children: [
-          (0, Y.jsx)(`div`, { className: av }),
+          (0, Y.jsx)(`div`, { className: ov }),
           (0, Y.jsx)(`div`, {
-            className: (0, Q.default)(Q_, gv),
+            className: (0, Q.default)($_, _v),
             style: { backgroundImage: `url(${a})` },
           }),
           (0, Y.jsxs)(`div`, {
-            className: (0, Q.default)(xv, ev),
+            className: (0, Q.default)(Sv, tv),
             children: [
               (0, Y.jsx)(`div`, {
-                className: (0, Q.default)(tv, o),
-                children: E(n.total_achievements),
+                className: (0, Q.default)(nv, o),
+                children: D(n.total_achievements),
               }),
               (0, Y.jsx)(`div`, {
-                className: wv,
-                children: L.LocalizePlural(
+                className: Tv,
+                children: R.LocalizePlural(
                   `#YIR_YourSummary_Achievement`,
                   n.total_achievements,
                 ),
               }),
-              (0, Y.jsx)(Xw, {
+              (0, Y.jsx)(Zw, {
                 strTokenPrefix: `#YIR_YourSummary_PrevYear_Ach`,
                 nCurValue: n.total_achievements,
-                nPrevValue: Vw(r)
+                nPrevValue: Hw(r)
                   ? t.GetPreviousYearSummary()?.unlocked_achievements
                   : void 0,
               }),
             ],
           }),
           (0, Y.jsxs)(`div`, {
-            className: hv,
+            className: gv,
             children: [
               (0, Y.jsxs)(`div`, {
-                className: xv,
+                className: Sv,
                 children: [
                   (0, Y.jsx)(`div`, {
-                    className: (0, Q.default)(tv),
-                    children: E(n.total_games_with_achievements || 0),
+                    className: (0, Q.default)(nv),
+                    children: D(n.total_games_with_achievements || 0),
                   }),
                   (0, Y.jsx)(`div`, {
-                    className: wv,
-                    children: L.LocalizePlural(
+                    className: Tv,
+                    children: R.LocalizePlural(
                       `#YIR_YourSummary_Achievement_Games`,
                       n.total_games_with_achievements,
                     ),
@@ -12042,15 +12117,15 @@ function Zw(e) {
                 ],
               }),
               (0, Y.jsxs)(`div`, {
-                className: xv,
+                className: Sv,
                 children: [
                   (0, Y.jsx)(`div`, {
-                    className: tv,
-                    children: E(n.total_rare_achievements || 0),
+                    className: nv,
+                    children: D(n.total_rare_achievements || 0),
                   }),
                   (0, Y.jsx)(`div`, {
-                    className: wv,
-                    children: L.LocalizePlural(
+                    className: Tv,
+                    children: R.LocalizePlural(
                       `#YIR_YourSummary_Achievement_Rare`,
                       n.total_rare_achievements,
                     ),
@@ -12064,56 +12139,56 @@ function Zw(e) {
     })
   );
 }
-function Qw(e) {
+function $w(e) {
   let { oLongestStreak: t, nPrevLongestStreamDays: n } = e,
     r = t.rtime_start ?? 0,
     i = t.longest_consecutive_days ?? 0,
-    a = h_(),
+    a = g_(),
     o = a(r),
     s = a(r + i * 24 * 60 * 60),
-    c = K();
+    c = q();
   if (Im()) return null;
-  let l = mS(`streak_bg.jpg`);
+  let l = hS(`streak_bg.jpg`);
   return (0, Y.jsx)(`div`, {
-    className: (0, Q.default)(W_, c.SummaryCtnShadow),
+    className: (0, Q.default)(G_, c.SummaryCtnShadow),
     children: (0, Y.jsxs)(`div`, {
       className: (0, Q.default)(
-        iv,
-        q_,
+        av,
+        J_,
         c.GridItem,
-        $_,
+        ev,
         c.SummaryCtn,
         c.StreakBlock,
       ),
       children: [
-        (0, Y.jsx)(`div`, { className: av }),
+        (0, Y.jsx)(`div`, { className: ov }),
         (0, Y.jsx)(`div`, {
-          className: (0, Q.default)(Q_, gv),
+          className: (0, Q.default)($_, _v),
           style: { backgroundImage: `url(${l})` },
         }),
         (0, Y.jsxs)(`div`, {
-          className: (0, Q.default)(xv, ev),
+          className: (0, Q.default)(Sv, tv),
           children: [
             (0, Y.jsx)(`div`, {
-              className: tv,
-              children: L.LocalizePlural(
+              className: nv,
+              children: R.LocalizePlural(
                 `#YIR_Game_LongestStreak_DaysPlayed`,
                 i,
               ),
             }),
             (0, Y.jsx)(`div`, {
-              className: wv,
-              children: L.Localize(`#YIR_YourSummary_Stat_Streak`),
+              className: Tv,
+              children: R.Localize(`#YIR_YourSummary_Stat_Streak`),
             }),
             (0, Y.jsx)(`div`, {
-              className: Dv,
-              children: L.Localize(
+              className: Ov,
+              children: R.Localize(
                 `#YIR_Game_LongestStreak_FromDateToDate`,
                 o,
                 s,
               ),
             }),
-            (0, Y.jsx)(Xw, {
+            (0, Y.jsx)(Zw, {
               strTokenPrefix: `#YIR_YourSummary_PrevYear_Day`,
               nCurValue: i,
               nPrevValue: n,
@@ -12121,17 +12196,17 @@ function Qw(e) {
           ],
         }),
         (0, Y.jsx)(`div`, {
-          className: hv,
+          className: gv,
           children: (0, Y.jsxs)(`div`, {
-            className: (0, Q.default)(xv, Cv),
+            className: (0, Q.default)(Sv, wv),
             children: [
               (0, Y.jsx)(`div`, {
-                className: tv,
-                children: E(t.streak_games.length),
+                className: nv,
+                children: D(t.streak_games.length),
               }),
               (0, Y.jsx)(`div`, {
-                className: wv,
-                children: L.LocalizePlural(
+                className: Tv,
+                children: R.LocalizePlural(
                   `#YIR_YourSummary_Games`,
                   t.streak_games.length,
                 ),
@@ -12143,77 +12218,77 @@ function Qw(e) {
     }),
   });
 }
-function $w(e) {
+function eT(e) {
   let { oTotalStats: t, nYear: n } = e,
-    r = J(
+    r = m_(
       t.total_playtime_percentagex100 -
         t.controller_playtime_percentagex100 -
         t.vr_playtime_percentagex100 -
         t.deck_playtime_percentagex100,
     ),
     i = t.controller_playtime_percentagex100 + t.deck_playtime_percentagex100,
-    a = J(i),
-    o = mS(`keyboard.png?v=3`),
-    s = mS(`controllers.png?v=2`),
-    c = K(),
+    a = m_(i),
+    o = hS(`keyboard.png?v=3`),
+    s = hS(`controllers.png?v=2`),
+    c = q(),
     l,
     u,
     d;
   return (
     Math.floor(i / 100) < 40
-      ? ((l = 40), (u = dv), (d = fv))
+      ? ((l = 40), (u = fv), (d = pv))
       : Math.floor(i / 100) > 60
-        ? ((l = 60), (u = fv), (d = dv))
+        ? ((l = 60), (u = pv), (d = fv))
         : (l = i / 100),
     (0, Y.jsx)(`div`, {
-      className: (0, Q.default)(W_, c.SummaryCtnShadow),
+      className: (0, Q.default)(G_, c.SummaryCtnShadow),
       children: (0, Y.jsxs)(`div`, {
         className: (0, Q.default)(
-          ov,
-          iv,
-          q_,
+          sv,
+          av,
+          J_,
           c.GridItem,
-          nv,
+          rv,
           c.SummaryCtn,
           c.HardwareBlock,
         ),
         children: [
-          (0, Y.jsx)(`div`, { className: av }),
+          (0, Y.jsx)(`div`, { className: ov }),
           (0, Y.jsxs)(`div`, {
-            className: sv,
+            className: cv,
             children: [
               (0, Y.jsxs)(`div`, {
-                className: cv,
+                className: lv,
                 children: [
                   (0, Y.jsx)(`div`, {
-                    className: Q_,
+                    className: $_,
                     style: { background: `url(${o}) bottom` },
                   }),
                   (0, Y.jsx)(`div`, {
-                    className: (0, Q.default)(lv, d),
+                    className: (0, Q.default)(uv, d),
                     children: r,
                   }),
                   (0, Y.jsx)(`div`, {
-                    className: (0, Q.default)(pv, d),
-                    children: L.Localize(`#YIR_HowYouPlayed_Keyboard_Generic`),
+                    className: (0, Q.default)(mv, d),
+                    children: R.Localize(`#YIR_HowYouPlayed_Keyboard_Generic`),
                   }),
                 ],
               }),
               (0, Y.jsxs)(`div`, {
-                className: uv,
+                className: dv,
                 style: { height: l + `%` },
                 children: [
                   (0, Y.jsx)(`div`, {
-                    className: Q_,
+                    className: $_,
                     style: { background: `url(${s}) top` },
                   }),
                   (0, Y.jsx)(`div`, {
-                    className: (0, Q.default)(lv, u),
+                    className: (0, Q.default)(uv, u),
                     children: a,
                   }),
                   (0, Y.jsx)(`div`, {
-                    className: (0, Q.default)(pv, u),
-                    children: L.Localize(
+                    className: (0, Q.default)(mv, u),
+                    children: R.Localize(
                       `#YIR_HowYouPlayed_Controllers_Percent`,
                     ),
                   }),
@@ -12226,41 +12301,41 @@ function $w(e) {
     })
   );
 }
-function eT(e) {
+function tT(e) {
   let { gameStat: t, gridClass: n } = e,
     { appid: r } = t,
     { item: i } = kh(r),
-    a = C_(0, [r]),
-    o = K();
+    a = w_(0, [r]),
+    o = q();
   if (!i) return null;
-  let s = $i(i.assets, `library_hero`),
+  let s = Qi(i.assets, `library_hero`),
     c = Math.trunc(t.stats.total_sessions);
   return (0, Y.jsx)(`div`, {
-    className: (0, Q.default)(W_, o.SummaryCtnShadow),
+    className: (0, Q.default)(G_, o.SummaryCtnShadow),
     children: (0, Y.jsxs)(`div`, {
-      className: (0, Q.default)(iv, q_, o.GridItem, E_[n], o.SummaryCtn, o[n]),
+      className: (0, Q.default)(av, J_, o.GridItem, D_[n], o.SummaryCtn, o[n]),
       onClick: a,
       children: [
-        (0, Y.jsx)(`div`, { className: av }),
+        (0, Y.jsx)(`div`, { className: ov }),
         (0, Y.jsx)(`div`, {
-          className: (0, Q.default)(Q_, o.BackgroundImage),
+          className: (0, Q.default)($_, o.BackgroundImage),
           style: { backgroundImage: `url(${s})` },
         }),
-        (0, Y.jsx)(`div`, { className: mv, children: i.info.name }),
+        (0, Y.jsx)(`div`, { className: hv, children: i.info.name }),
         (0, Y.jsxs)(`div`, {
-          className: hv,
+          className: gv,
           children: [
-            (0, Y.jsx)(tT, {
+            (0, Y.jsx)(nT, {
               percentVal: t.stats.total_playtime_percentagex100,
               subToken: `#YIR_Game_PlayStat`,
             }),
             (0, Y.jsxs)(`div`, {
-              className: xv,
+              className: Sv,
               children: [
-                (0, Y.jsx)(`div`, { className: tv, children: E(c) }),
+                (0, Y.jsx)(`div`, { className: nv, children: D(c) }),
                 (0, Y.jsx)(`div`, {
-                  className: wv,
-                  children: L.Localize(
+                  className: Tv,
+                  children: R.Localize(
                     c == 1
                       ? `#YIR_Game_PlaySession_Singular`
                       : `#YIR_Game_PlaySessions`,
@@ -12274,56 +12349,56 @@ function eT(e) {
     }),
   });
 }
-function tT(e) {
+function nT(e) {
   let { percentVal: t, subToken: n, className: r } = e,
-    i = J(t),
+    i = m_(t),
     a = `${n}_Percent`;
   return (0, Y.jsxs)(`div`, {
-    className: (0, Q.default)(xv, r),
+    className: (0, Q.default)(Sv, r),
     children: [
-      (0, Y.jsx)(`div`, { className: tv, children: i }),
-      (0, Y.jsx)(`div`, { className: wv, children: L.Localize(a) }),
+      (0, Y.jsx)(`div`, { className: nv, children: i }),
+      (0, Y.jsx)(`div`, { className: Tv, children: R.Localize(a) }),
     ],
   });
 }
-var nT = `VliP-d3rrOA-`,
-  rT = `rN6Rp7gRK-8-`,
-  iT = `_0KyNXUd2ye8-`,
-  aT = `XVKp9D8UO7c-`,
-  oT = `RY2J6XyyEuM-`,
-  sT = `yaLK-z4T8sw-`;
-Wx();
-var cT = R.memo(function (e) {
+var rT = `VliP-d3rrOA-`,
+  iT = `rN6Rp7gRK-8-`,
+  aT = `_0KyNXUd2ye8-`,
+  oT = `XVKp9D8UO7c-`,
+  sT = `RY2J6XyyEuM-`,
+  cT = `yaLK-z4T8sw-`;
+Gx();
+var lT = z.memo(function (e) {
     let { data: t, topMonthlyAppsAndRanks: n } = e,
-      r = K(),
-      i = (0, R.useCallback)((e, n) => (t[n]?.date ? Ur(t[n].date) : ``), [t]),
-      a = (0, R.useRef)(void 0);
-    return (0, Y.jsxs)(Pp, {
+      r = q(),
+      i = (0, z.useCallback)((e, n) => (t[n]?.date ? Hr(t[n].date) : ``), [t]),
+      a = (0, z.useRef)(void 0);
+    return (0, Y.jsxs)(Np, {
       responsive: !0,
       style: { width: `100%`, height: `100%` },
       data: t,
       margin: { top: 25, left: 0, right: 0, bottom: 0 },
       barGap: 30,
       children: [
-        (0, Y.jsx)(Ot, { vertical: !1, stroke: `#a0aab6` }),
-        (0, Y.jsx)(gt, {
-          tickFormatter: J,
+        (0, Y.jsx)(Pt, { vertical: !1, stroke: `#a0aab6` }),
+        (0, Y.jsx)(Ye, {
+          tickFormatter: m_,
           tick: { fill: `white` },
           axisLine: !0,
         }),
-        (0, Y.jsx)(Te, {
+        (0, Y.jsx)(vt, {
           wrapperStyle: { outline: `none` },
           allowEscapeViewBox: { x: !1, y: !0 },
           isAnimationActive: !1,
           offset: 0,
           content: (e) =>
-            (0, Y.jsx)(uT, {
+            (0, Y.jsx)(dT, {
               active: e.active,
               payload: e.payload,
               hoveredBarIDRef: a,
             }),
         }),
-        (0, Y.jsx)(rt, {
+        (0, Y.jsx)(bt, {
           barSize: 60,
           dataKey: `topPlayedPercentBreakdownPerMonth.${Wm}`,
           name: Wm,
@@ -12334,7 +12409,7 @@ var cT = R.memo(function (e) {
         }),
         n.map((e, t) =>
           (0, Y.jsx)(
-            rt,
+            bt,
             {
               barSize: 60,
               dataKey: `topPlayedPercentBreakdownPerMonth.${e.appid}`,
@@ -12347,22 +12422,22 @@ var cT = R.memo(function (e) {
             `${t}`,
           ),
         ),
-        (0, Y.jsx)($e, {
+        (0, Y.jsx)(Et, {
           interval: 0,
-          tick: (0, Y.jsx)(gT, {}),
+          tick: (0, Y.jsx)(_T, {}),
           tickFormatter: i,
         }),
       ],
     });
   }),
-  lT = 7;
-function uT(e) {
+  uT = 7;
+function dT(e) {
   let { active: t, payload: n, hoveredBarIDRef: r } = e,
-    i = K(),
-    a = q();
+    i = q(),
+    a = J();
   if (t && n && n.length) {
     let e = n[0].payload.date.getUTCMonth(),
-      t = L.Localize(`#YIR_MonthlyCharts_MonthNoun_${e + 1}`),
+      t = R.Localize(`#YIR_MonthlyCharts_MonthNoun_${e + 1}`),
       o = n[0].payload.topPlayedPercentBreakdownPerMonth[Um],
       s = Object.keys(n[0].payload.otherPlayedPercentBreakdownForMonth),
       c = n[0].payload.topPlayedRelativePercentBreakdownForMonth,
@@ -12375,13 +12450,13 @@ function uT(e) {
           if (r === `percentOtherGamesRelativeMonth`) {
             let a = u && n.length == 1;
             return (0, Y.jsxs)(
-              R.Fragment,
+              z.Fragment,
               {
                 children: [
                   !a &&
                     (0, Y.jsx)(`div`, {
                       className: (0, Q.default)(e === l && `QlEkl-Bj9Tk-`),
-                      children: vT(
+                      children: yT(
                         i,
                         t,
                         `#YIR_MonthlyCharts_OtherGamesTooltip`,
@@ -12389,21 +12464,21 @@ function uT(e) {
                     }),
                   u &&
                     s
-                      .slice(0, lT)
+                      .slice(0, uT)
                       .map((e) =>
                         (0, Y.jsx)(
-                          pT,
+                          mT,
                           { appId: e, className: `QlEkl-Bj9Tk-` },
                           e,
                         ),
                       ),
                   u &&
-                    s.length > lT &&
+                    s.length > uT &&
                     (0, Y.jsx)(`div`, {
                       className: `QlEkl-Bj9Tk-`,
-                      children: L.Localize(
+                      children: R.Localize(
                         `#YIR_MonthlyCharts_OtherGamesTooltip_AndMore`,
-                        s.length - lT,
+                        s.length - uT,
                       ),
                     }),
                 ],
@@ -12413,7 +12488,7 @@ function uT(e) {
           }
           return e.value
             ? (0, Y.jsx)(
-                mT,
+                hT,
                 {
                   appId: r,
                   className: (0, Q.default)(e === l && `QlEkl-Bj9Tk-`),
@@ -12426,34 +12501,34 @@ function uT(e) {
         })
         .reverse(),
       f = d.length == 1 && s.length > 0;
-    return (0, Y.jsxs)(Ul, {
+    return (0, Y.jsxs)(Hl, {
       style: { background: l?.color ?? i.monthOthersColor },
-      className: nT,
+      className: rT,
       children: [
-        (0, Y.jsx)(`div`, { className: rT }),
+        (0, Y.jsx)(`div`, { className: iT }),
         (0, Y.jsx)(`div`, {
-          className: aT,
+          className: oT,
           children:
             l &&
             (0, Y.jsxs)(Y.Fragment, {
               children: [
-                !u && (0, Y.jsx)(fT, { appId: l.name }),
-                u && (0, Y.jsx)(dT, { appIds: s.slice(0, 7) }),
+                !u && (0, Y.jsx)(pT, { appId: l.name }),
+                u && (0, Y.jsx)(fT, { appIds: s.slice(0, 7) }),
               ],
             }),
         }),
         (0, Y.jsxs)(`div`, {
-          className: iT,
+          className: aT,
           children: [
             (0, Y.jsx)(`div`, {
               className: void 0,
-              children: vT(o, t, `#YIR_MonthlyCharts_PlayedTotalTooltip`),
+              children: yT(o, t, `#YIR_MonthlyCharts_PlayedTotalTooltip`),
             }),
             !f &&
               (0, Y.jsxs)(Y.Fragment, {
                 children: [
                   (0, Y.jsx)(`div`, {
-                    children: L.Localize(
+                    children: R.Localize(
                       `#YIR_MonthlyCharts_PlayedSubtitleTooltip`,
                     ),
                   }),
@@ -12477,31 +12552,31 @@ function uT(e) {
   }
   return null;
 }
-function dT({ appIds: e }) {
+function fT({ appIds: e }) {
   return (0, Y.jsx)(`div`, {
-    className: oT,
+    className: sT,
     children: e?.map((t, n) =>
       (0, Y.jsx)(
-        fT,
+        pT,
         { appId: t, style: { zIndex: e.length - n, "--stack-position": n } },
         t,
       ),
     ),
   });
 }
-function fT({ appId: e, style: t }) {
+function pT({ appId: e, style: t }) {
   let { item: n } = kh(parseInt(e));
   if (!n?.assets) return null;
-  let r = $i(n.assets, `library_capsule`) || Uh;
-  return (0, Y.jsx)(`img`, { alt: ``, style: t, className: sT, src: r });
+  let r = Qi(n.assets, `library_capsule`) || Uh;
+  return (0, Y.jsx)(`img`, { alt: ``, style: t, className: cT, src: r });
 }
-function pT({ appId: e, className: t }) {
+function mT({ appId: e, className: t }) {
   let { item: n } = kh(parseInt(e));
   return n
     ? (0, Y.jsx)(`div`, { className: t, children: n.info.name }, e)
     : null;
 }
-function mT(e) {
+function hT(e) {
   let { appId: t, className: n, value: r, date: i } = e,
     { item: a } = kh(parseInt(t));
   return a
@@ -12509,7 +12584,7 @@ function mT(e) {
         `div`,
         {
           className: n,
-          children: vT(
+          children: yT(
             r,
             i,
             `#YIR_MonthlyCharts_TopPlayedTooltip`,
@@ -12520,25 +12595,25 @@ function mT(e) {
       )
     : null;
 }
-var hT = R.memo(function (e) {
+var gT = z.memo(function (e) {
   let { data: t, name: n, color: r } = e,
-    i = K(),
-    a = (0, R.useCallback)((e, n) => (t[n]?.date ? Ur(t[n].date) : ``), [t]),
-    [o, s] = (0, R.useState)(!1);
-  (0, R.useEffect)(() => {
+    i = q(),
+    a = (0, z.useCallback)((e, n) => (t[n]?.date ? Hr(t[n].date) : ``), [t]),
+    [o, s] = (0, z.useState)(!1);
+  (0, z.useEffect)(() => {
     s(document.documentElement.matches(`:dir(rtl)`));
   }, []);
   let c = `left`;
   return (
     o && (c = `right`),
-    (0, Y.jsxs)(Pp, {
+    (0, Y.jsxs)(Np, {
       responsive: !0,
       style: { width: `100%`, height: `100%` },
       data: t,
       margin: { top: 25, left: 0, right: 0, bottom: 0 },
       barGap: 30,
       children: [
-        (0, Y.jsx)(Te, {
+        (0, Y.jsx)(vt, {
           wrapperStyle: {
             outline: `1px solid ` + (r ?? i.chartAccentColorAlt),
           },
@@ -12546,23 +12621,23 @@ var hT = R.memo(function (e) {
           reverseDirection: { x: o, y: !1 },
           isAnimationActive: !1,
           content: (e) =>
-            (0, Y.jsx)(_T, { active: e.active, payload: e.payload, name: n }),
+            (0, Y.jsx)(vT, { active: e.active, payload: e.payload, name: n }),
         }),
-        (0, Y.jsx)(Ot, { vertical: !1, stroke: `#a0aab6` }),
-        (0, Y.jsx)(gt, {
-          tickFormatter: J,
+        (0, Y.jsx)(Pt, { vertical: !1, stroke: `#a0aab6` }),
+        (0, Y.jsx)(Ye, {
+          tickFormatter: m_,
           tick: { fill: `white` },
           axisLine: !0,
           orientation: c,
         }),
-        (0, Y.jsx)(rt, {
+        (0, Y.jsx)(bt, {
           barSize: 60,
           dataKey: `percent`,
           fill: r ?? i.chartAccentColorAlt,
         }),
-        (0, Y.jsx)($e, {
+        (0, Y.jsx)(Et, {
           interval: 0,
-          tick: (0, Y.jsx)(gT, { bRTL: o }),
+          tick: (0, Y.jsx)(_T, { bRTL: o }),
           tickFormatter: a,
           color: `#ffffff`,
           reversed: o,
@@ -12571,7 +12646,7 @@ var hT = R.memo(function (e) {
     })
   );
 });
-function gT(e) {
+function _T(e) {
   let { x: t, y: n, payload: r, bRTL: i } = e,
     a = e.tickFormatter(r.value, r.index),
     o = `end`,
@@ -12592,23 +12667,23 @@ function gT(e) {
     })
   );
 }
-function _T(e) {
+function vT(e) {
   let { active: t, payload: n, name: r } = e,
-    i = K(),
+    i = q(),
     a = n[0];
   if (t && a?.value) {
     let e = a.payload.date.getUTCMonth(),
-      t = L.Localize(`#YIR_MonthlyCharts_MonthNoun_${e + 1}`),
+      t = R.Localize(`#YIR_MonthlyCharts_MonthNoun_${e + 1}`),
       n = a.value;
-    return (0, Y.jsx)(Ul, {
+    return (0, Y.jsx)(Hl, {
       style: { background: `#0e1014` },
       children: (0, Y.jsx)(
         `div`,
         {
           style: { color: i.chartAccentColor },
-          children: L.LocalizeReact(
+          children: R.LocalizeReact(
             `#YIR_MonthlyCharts_TopPlayedGameTooltip_Percent`,
-            (0, Y.jsx)(`b`, { children: J(n) }),
+            (0, Y.jsx)(`b`, { children: m_(n) }),
             t,
             r,
           ),
@@ -12619,19 +12694,19 @@ function _T(e) {
   }
   return null;
 }
-function vT(e, t, n, ...r) {
+function yT(e, t, n, ...r) {
   let i = `${n}_Percent`;
-  return L.LocalizeReact(i, (0, Y.jsx)(`b`, { children: J(e) }), t, ...r);
+  return R.LocalizeReact(i, (0, Y.jsx)(`b`, { children: m_(e) }), t, ...r);
 }
-var yT = `Md96G4kZDAE-`;
-function bT(e) {
+var bT = `Md96G4kZDAE-`;
+function xT(e) {
   let { userYearInReview: t } = e,
-    n = q(),
+    n = J(),
     r = t.GetChartMonthlyData(),
     i = t.GetTopGameIdsAndRanks(),
     a = t.GetPlayTimeStats().games?.length ?? 0;
   return (0, Y.jsx)(`div`, {
-    className: yT,
+    className: bT,
     children:
       a > 1 &&
       (0, Y.jsxs)($, {
@@ -12645,130 +12720,130 @@ function bT(e) {
             className: `-q3HKBZo0Fg-`,
             children: (0, Y.jsx)(`div`, {
               className: `J-KteziHcsY-`,
-              children: (0, Y.jsx)(cT, { data: r, topMonthlyAppsAndRanks: i }),
+              children: (0, Y.jsx)(lT, { data: r, topMonthlyAppsAndRanks: i }),
             }),
           }),
         ],
       }),
   });
 }
-function xT(e) {
+function ST(e) {
   let t = fh(e),
     n = mh(e, !1);
-  return ST(t?.all_time_unlocked_achievements, n?.length ?? 0);
+  return CT(t?.all_time_unlocked_achievements, n?.length ?? 0);
 }
-function ST(e, t) {
+function CT(e, t) {
   return typeof e == `number` && e > 0 && t > 0 && t <= e;
 }
-var CT = 2022,
-  wT = `_2fXTkYFuLL0-`,
-  TT = `_5hU6-LHkC9I-`,
-  ET = `zDLaFJWW2Nk-`,
-  DT = `N5WJoNh0dWc-`,
-  OT = `JIuGrMQYevI-`,
-  kT = `WzRwXnpcz6g-`,
-  AT = `_4AJ91mlqTEg-`,
-  jT = `OetAU-ImB-A-`,
-  MT = `qRqoeOi-LW0-`,
-  NT = `wlHDLgvcDaY-`,
-  PT = `_7HxW8ABT2Qw-`,
-  FT = `_1XiF5sig4jA-`;
-function IT(e) {
+var wT = 2022,
+  TT = `_2fXTkYFuLL0-`,
+  ET = `_5hU6-LHkC9I-`,
+  DT = `zDLaFJWW2Nk-`,
+  OT = `N5WJoNh0dWc-`,
+  kT = `JIuGrMQYevI-`,
+  AT = `WzRwXnpcz6g-`,
+  jT = `_4AJ91mlqTEg-`,
+  MT = `OetAU-ImB-A-`,
+  NT = `qRqoeOi-LW0-`,
+  PT = `wlHDLgvcDaY-`,
+  FT = `_7HxW8ABT2Qw-`,
+  IT = `_1XiF5sig4jA-`;
+function LT(e) {
   let { appid: t, userYearInReview: n } = e,
     r = fh(t);
   return !r || !((r?.achievements?.length ?? 0) > 0)
     ? null
-    : (0, Y.jsx)(T, {
-        children: (0, R.createElement)(LT, {
+    : (0, Y.jsx)(E, {
+        children: (0, z.createElement)(RT, {
           ...e,
           key: `achievementunlucklist_` + t,
           userUnlockedAchievements: r,
         }),
       });
 }
-function LT(e) {
+function RT(e) {
   let {
       appid: t,
       userYearInReview: n,
       bBlurContent: r,
       userUnlockedAchievements: i,
     } = e,
-    [a, o] = (0, R.useState)(r),
-    s = q(),
+    [a, o] = (0, z.useState)(r),
+    s = J(),
     c = gh(t),
     l = () => o(!1),
     u = i.achievements?.length ?? 0,
     d = i.all_time_unlocked_achievements,
     f = d == c && c > 0 && u > 0 && d > 0 && !i.unlocked_more_in_future,
-    p = ql({ appid: t, profileUrl: cn(n.GetSteamID()) }),
-    m = oa();
+    p = Kl({ appid: t, profileUrl: sn(n.GetSteamID()) }),
+    m = aa();
   return (0, Y.jsxs)(`div`, {
-    className: (0, Q.default)(X, wT),
+    className: (0, Q.default)(X, TT),
     children: [
       a &&
         (0, Y.jsx)(`div`, {
           onClick: l,
           className: `_2i6-GdwcqFw-`,
-          children: L.Localize(`#YIR_TopGames_ContentRestrictionAchievements`),
+          children: R.Localize(`#YIR_TopGames_ContentRestrictionAchievements`),
         }),
       (0, Y.jsxs)(`div`, {
-        className: TT,
+        className: ET,
         children: [
           (0, Y.jsx)(`div`, {
-            className: DT,
+            className: OT,
             children: s(`#YIR_TopGames_Achievements`),
           }),
           (0, Y.jsxs)(`div`, {
-            className: ET,
+            className: DT,
             children: [
               m &&
                 (0, Y.jsx)(`a`, {
                   href: p,
                   className: `cOnRdqZh5ak-`,
-                  children: L.Localize(`#YIR_SeeAllAchievements`),
+                  children: R.Localize(`#YIR_SeeAllAchievements`),
                 }),
               !m &&
-                (0, Y.jsx)(dc, {
+                (0, Y.jsx)(uc, {
                   href: p,
                   target: `_blank`,
                   className: `cOnRdqZh5ak-`,
-                  children: L.Localize(`#YIR_SeeAllAchievements`),
+                  children: R.Localize(`#YIR_SeeAllAchievements`),
                 }),
             ],
           }),
         ],
       }),
       (0, Y.jsx)(`div`, {
-        className: (0, Q.default)({ [void 0]: f, [OT]: !0 }),
+        className: (0, Q.default)({ [void 0]: f, [kT]: !0 }),
         children: (0, Y.jsxs)(`div`, {
-          className: kT,
+          className: AT,
           children: [
             (0, Y.jsxs)(`div`, {
-              className: AT,
+              className: jT,
               children: [
-                (0, Y.jsx)(`div`, { className: jT, children: E(u) }),
+                (0, Y.jsx)(`div`, { className: MT, children: D(u) }),
                 (0, Y.jsx)(`div`, {
-                  className: MT,
-                  children: L.LocalizeReact(
+                  className: NT,
+                  children: R.LocalizeReact(
                     `#YIR_UnlockedThisYear_Short`,
                     (0, Y.jsx)(`br`, {}),
                   ),
                 }),
               ],
             }),
-            (0, Y.jsx)(RT, { userUnlockedAchievements: i }),
+            (0, Y.jsx)(zT, { userUnlockedAchievements: i }),
           ],
         }),
       }),
     ],
   });
 }
-function RT(e) {
+function zT(e) {
   let { userUnlockedAchievements: t } = e,
     n = t.appid;
-  Li(n, `Missing appid for achievements list!`);
+  Ii(n, `Missing appid for achievements list!`);
   let r = hh(n),
-    i = (0, R.useMemo)(
+    i = (0, z.useMemo)(
       () =>
         [...(t.achievements ?? [])].sort(
           (e, t) => (e.rtime_unlocked ?? 0) - (t.rtime_unlocked ?? 0),
@@ -12782,32 +12857,32 @@ function RT(e) {
           .filter((e) => !!e?.icon)
           .map((e) =>
             (0, Y.jsx)(
-              BT,
+              VT,
               { appid: n, display: e },
               `displayAch_` + e.internal_name,
             ),
           ),
       })
-    : (0, Y.jsx)(nn, { size: `small`, string: Yn.Localize(`#Loading`) });
+    : (0, Y.jsx)(tn, { size: `small`, string: Jn.Localize(`#Loading`) });
 }
-var zT = 10;
-function BT(e) {
+var BT = 10;
+function VT(e) {
   let { display: t, appid: n } = e,
-    r = `${N.MEDIA_CDN_COMMUNITY_URL}images/apps/${n}/${t.icon}`,
-    i = Number.parseFloat(`` + t.player_percent_unlocked) < zT;
-  return (0, Y.jsx)(Cr, {
-    toolTipContent: (0, Y.jsx)(VT, { display: t }),
-    className: (0, Q.default)({ [PT]: i, [NT]: !0 }),
-    children: (0, Y.jsx)(Jl, {
+    r = `${P.MEDIA_CDN_COMMUNITY_URL}images/apps/${n}/${t.icon}`,
+    i = Number.parseFloat(`` + t.player_percent_unlocked) < BT;
+  return (0, Y.jsx)(Sr, {
+    toolTipContent: (0, Y.jsx)(HT, { display: t }),
+    className: (0, Q.default)({ [FT]: i, [PT]: !0 }),
+    children: (0, Y.jsx)(ql, {
       imgURL: r,
-      className: FT,
+      className: IT,
       alt: t.localized_name ?? t.internal_name,
       glow: i,
       hideNativeTooltip: !0,
     }),
   });
 }
-function VT(e) {
+function HT(e) {
   let { display: t } = e,
     n;
   return (
@@ -12817,44 +12892,44 @@ function VT(e) {
         ? (n = t.localized_name)
         : t.internal_name && (n = t.internal_name),
     (0, Y.jsxs)(`div`, {
-      className: Na,
+      className: Ma,
       children: [
         (0, Y.jsx)(`div`, { children: n }),
         (0, Y.jsx)(`br`, {}),
         (0, Y.jsx)(`div`, {
-          children: L.Localize(
+          children: R.Localize(
             `#YIR_Achievement_ttip`,
-            E(Math.max(0.1, Number.parseFloat(`` + t.player_percent_unlocked))),
+            D(Math.max(0.1, Number.parseFloat(`` + t.player_percent_unlocked))),
           ),
         }),
       ],
     })
   );
 }
-var HT = `l-51YapU23U-`,
-  UT = `MFK0ZYn4p8Y-`,
-  WT = `z5SvMUtFD4c-`,
-  GT = `Pj3LFELaj0I-`;
-function KT(e) {
+var UT = `l-51YapU23U-`,
+  WT = `MFK0ZYn4p8Y-`,
+  GT = `z5SvMUtFD4c-`,
+  KT = `Pj3LFELaj0I-`;
+function qT(e) {
   let { appid: t, bBlurContent: n, nYear: r } = e,
     i = yh(t),
-    [a, o] = $t(),
-    s = q();
+    [a, o] = Qt(),
+    s = J();
   return !i || i.length == 0
     ? null
     : (0, Y.jsxs)(`div`, {
-        className: (0, Q.default)(X, HT),
+        className: (0, Q.default)(X, UT),
         children: [
           o,
           (0, Y.jsx)(`div`, {
-            className: UT,
+            className: WT,
             children: s(`#YIR_ScreenshotsThisYear`),
           }),
           (0, Y.jsx)(`div`, {
-            className: WT,
+            className: GT,
             children: i.map((e, t) =>
               (0, Y.jsx)(
-                JT,
+                YT,
                 {
                   nYear: r,
                   bBlurContent: n,
@@ -12874,18 +12949,18 @@ function KT(e) {
         ],
       });
 }
-var qT = `?imw=375&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false`;
-function JT(e) {
+var JT = `?imw=375&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false`;
+function YT(e) {
   let {
       screenshot: t,
       fnSetExpandScreenShot: n,
       bBlurContent: r,
       nYear: i,
     } = e,
-    [a, o] = (0, R.useState)(r),
-    s = { backgroundImage: `url(${t.image_url + qT})` };
+    [a, o] = (0, z.useState)(r),
+    s = { backgroundImage: `url(${t.image_url + JT})` };
   return (0, Y.jsxs)(`div`, {
-    className: GT,
+    className: KT,
     onClick: () => {
       (a && o(!1), n());
     },
@@ -12894,22 +12969,22 @@ function JT(e) {
       a &&
         (0, Y.jsx)(`div`, {
           className: `L83TMGRMjs8-`,
-          children: L.Localize(`#YIR_TopGames_ContentRestrictionScreenshots`),
+          children: R.Localize(`#YIR_TopGames_ContentRestrictionScreenshots`),
         }),
-      (0, Y.jsx)(`img`, { alt: ``, src: mS(`screenshot_placeholder.png`) }),
+      (0, Y.jsx)(`img`, { alt: ``, src: hS(`screenshot_placeholder.png`) }),
     ],
   });
 }
-function YT(e) {
+function XT(e) {
   let { userYearInReview: t } = e,
     n = t.GetTopGamesShownAppIDs(),
-    r = q(),
-    i = (0, R.useMemo)(() => n?.slice(0, 5), [0, 5, n]);
+    r = J(),
+    i = (0, z.useMemo)(() => n?.slice(0, 5), [0, 5, n]);
   if (!n || n.length == 0 || 0 > n.length) return null;
   let a = n.length > 1;
   return (0, Y.jsx)(`div`, {
     className: (0, Q.default)(Xh),
-    children: (0, Y.jsxs)(on, {
+    children: (0, Y.jsxs)(an, {
       placeholderHeight: `100vh`,
       rootMargin: Zm,
       className: Yh,
@@ -12927,7 +13002,7 @@ function YT(e) {
             $,
             {
               children: (0, Y.jsx)(
-                eE,
+                tE,
                 { unAppID: e, userYearInReview: t, index: n },
                 n,
               ),
@@ -12939,13 +13014,13 @@ function YT(e) {
     }),
   });
 }
-function XT(e) {
+function ZT(e) {
   let { gameSummary: t, index: n, userYearInReview: r } = e,
-    i = q(),
+    i = J(),
     a = p_(),
     o = t.appid,
     s = r.GetYear();
-  for (let e = s; e >= CT; --e) {
+  for (let e = s; e >= wT; --e) {
     let t = `#steamrewind${e}_gametext_appid_${o}`,
       n = a(e, t, s);
     if (n !== void 0)
@@ -12972,21 +13047,21 @@ function XT(e) {
       : null
   );
 }
-function ZT(e) {
-  let [t, n] = R.useState(!1),
-    r = R.useRef(null),
+function QT(e) {
+  let [t, n] = z.useState(!1),
+    r = z.useRef(null),
     i = r.current,
-    a = T_();
-  (R.useEffect(() => {
+    a = E_();
+  (z.useEffect(() => {
     (e !== null && e != i && n(!0), e === null && t && n(!1));
   }, [n, t, e, i]),
     (r.current = e));
-  let o = R.useRef(void 0),
-    s = R.useCallback(() => {
+  let o = z.useRef(void 0),
+    s = z.useCallback(() => {
       ((o.current = setTimeout(() => a(e), parseInt(Gh))), n(!1));
     }, [a, e]);
   return (
-    R.useEffect(
+    z.useEffect(
       () => () => {
         (o.current && clearTimeout(o.current), (o.current = void 0));
       },
@@ -12995,22 +13070,22 @@ function ZT(e) {
     [t, s]
   );
 }
-function QT(e) {
-  return R.useCallback(
+function $T(e) {
+  return z.useCallback(
     (t) => {
       t.target == t.currentTarget && e();
     },
     [e],
   );
 }
-function $T(e) {
+function eE(e) {
   let { userYearInReview: t } = e,
-    { unAppID: n, length: r, index: i = 0 } = x_(),
-    [a, o] = ZT(n),
-    s = QT(o),
-    c = w_(i + 1),
-    l = w_(i - 1),
-    u = Ea();
+    { unAppID: n, length: r, index: i = 0 } = S_(),
+    [a, o] = QT(n),
+    s = $T(o),
+    c = T_(i + 1),
+    l = T_(i - 1),
+    u = Ta();
   if (n == null && !a) return null;
   let d = (0, Q.default)(Xg, a && `eAjysxH-TgY-`, u && `maE92CVTDsk-`),
     f = (0, Y.jsx)(`div`, {
@@ -13023,9 +13098,9 @@ function $T(e) {
             className: n_,
             children:
               n !== null &&
-              (0, Y.jsx)(eE, { unAppID: n, userYearInReview: t, index: 1 }),
+              (0, Y.jsx)(tE, { unAppID: n, userYearInReview: t, index: 1 }),
           }),
-          (0, Y.jsx)(en, {
+          (0, Y.jsx)($t, {
             index: i,
             numElements: r,
             fnForward: c,
@@ -13035,99 +13110,99 @@ function $T(e) {
         ],
       }),
     });
-  return typeof document > `u` ? null : lu.createPortal(f, document.body);
+  return typeof document > `u` ? null : cu.createPortal(f, document.body);
 }
-var eE = R.memo(function (e) {
+var tE = z.memo(function (e) {
   let { unAppID: t, userYearInReview: n, index: r } = e,
     i = n.GetGameStats(t),
     a = Math.trunc(i?.playtime_streak?.longest_consecutive_days || 1),
     o = n.GetGameSummaryForApp(t),
     s = o ? o.parent_appid || t : 0,
     { item: c, bLoading: l } = kh(s),
-    u = xT(s),
-    d = Lr(c ? Qt(c.info) : void 0),
-    f = q(),
+    u = ST(s),
+    d = Ir(c ? Zt(c.info) : void 0),
+    f = J(),
     p = r % 2 ? `OddGradient` : `EvenGradient`,
-    m = Ea(),
+    m = Ta(),
     h = u_(),
-    g = K(),
-    _ = oa(),
-    { gameChartData: v, rank: ee } = (0, R.useMemo)(
+    g = q(),
+    _ = aa(),
+    { gameChartData: v, rank: y } = (0, z.useMemo)(
       () => n.GetChartMonthlyDataForApp(t),
       [t, n],
     );
   if (l)
     return (0, Y.jsx)(`div`, {
       className: (0, Q.default)($h, Wh[p], g.TopGameBlockContainer, g[p], eg),
-      children: (0, Y.jsx)(nn, { position: `center` }),
+      children: (0, Y.jsx)(tn, { position: `center` }),
     });
   if (!c || !o) return null;
-  let y = d;
-  N.IN_CLIENT && (y = `steam://openurl/` + y);
-  let te = v?.find((e) => e.percent > 0),
-    ne = te ? te.date.getUTCMonth() : null,
-    re = ne ? L.Localize(`#YIR_MonthlyCharts_MonthNoun_${ne + 1}`) : ``,
-    ie = Math.trunc(o.total_sessions),
-    ae = ``;
+  let b = d;
+  P.IN_CLIENT && (b = `steam://openurl/` + b);
+  let ee = v?.find((e) => e.percent > 0),
+    te = ee ? ee.date.getUTCMonth() : null,
+    ne = te ? R.Localize(`#YIR_MonthlyCharts_MonthNoun_${te + 1}`) : ``,
+    re = Math.trunc(o.total_sessions),
+    ie = ``;
   h && m
-    ? (ae = `steam://open/games/details/${t}`)
-    : h && !N.IN_MOBILE_WEBVIEW && (ae = `steam://open/library/details/${t}`);
-  let oe = c.info.name ?? ``,
-    se = oe;
+    ? (ie = `steam://open/games/details/${t}`)
+    : h && !P.IN_MOBILE_WEBVIEW && (ie = `steam://open/library/details/${t}`);
+  let ae = c.info.name ?? ``,
+    x = ae;
   return (
     o.demo
-      ? (se = L.Localize(`#YIR_GameName_PlusDemo`, se))
-      : o.playtest && (se = L.Localize(`#YIR_GameName_PlusPlaytest`, se)),
+      ? (x = R.Localize(`#YIR_GameName_PlusDemo`, x))
+      : o.playtest && (x = R.Localize(`#YIR_GameName_PlusPlaytest`, x)),
     (0, Y.jsxs)($, {
       className: (0, Q.default)($h, Wh[p], g.TopGameBlockContainer, g[p]),
       children: [
-        (0, Y.jsx)(nE, { item: c }),
+        (0, Y.jsx)(rE, { item: c }),
         (0, Y.jsxs)(`div`, {
           className: ng,
           children: [
-            (0, Y.jsx)(tE, { item: c }),
+            (0, Y.jsx)(nE, { item: c }),
             (0, Y.jsxs)(`div`, {
               className: (0, Q.default)(X, fg),
               children: [
                 (0, Y.jsxs)(`div`, {
                   className: pg,
                   children: [
-                    (0, Y.jsxs)(A, {
+                    (0, Y.jsxs)(j, {
                       className: mg,
                       "flow-children": `row`,
                       children: [
                         _ &&
                           (0, Y.jsx)(`a`, {
-                            href: y,
+                            href: b,
                             className: `_3zY6l-RwMbM-`,
-                            children: L.Localize(`#YIR_TopGames_VisitInStore`),
+                            children: R.Localize(`#YIR_TopGames_VisitInStore`),
                           }),
                         !_ &&
-                          (0, Y.jsx)(dc, {
-                            href: y,
+                          (0, Y.jsx)(uc, {
+                            href: b,
                             target: `_blank`,
                             className: `_3zY6l-RwMbM-`,
-                            children: L.Localize(`#YIR_TopGames_VisitInStore`),
+                            children: R.Localize(`#YIR_TopGames_VisitInStore`),
                           }),
-                        !!ae &&
-                          (0, Y.jsx)(dc, {
-                            href: ae,
+                        !!ie &&
+                          (0, Y.jsx)(uc, {
+                            href: ie,
                             className: `_3zY6l-RwMbM-`,
-                            children: L.Localize(
+                            children: R.Localize(
                               `#YIR_TopGames_VisitInLibrary`,
                             ),
                           }),
-                        !h && (0, Y.jsx)(iE, { appID: s }),
+                        !h && (0, Y.jsx)(aE, { appID: s }),
                       ],
                     }),
                     (0, Y.jsx)(`div`, {
                       className: (0, Q.default)({
                         [ag]: !0,
-                        [_g]: (se?.length ?? 0) > 25,
+                        [_g]: (x?.length ?? 0) > 25,
                       }),
-                      children: se,
+                      children: x,
                     }),
-                    (0, Y.jsx)(XT, {
+                    (0, Y.jsx)(ZT, {
                       gameSummary: o,
                       userYearInReview: n,
                       index: r,
@@ -13141,13 +13216,13 @@ var eE = R.memo(function (e) {
                             children: [
                               (0, Y.jsx)(`div`, {
                                 className: `Jsbe84OZILs-`,
-                                children: J(
+                                children: m_(
                                   Math.ceil(o.total_playtime_percentagex100),
                                 ),
                               }),
                               (0, Y.jsx)(`div`, {
                                 className: `ao7jCFf5gSI-`,
-                                children: L.Localize(
+                                children: R.Localize(
                                   `#YIR_Game_PercentPlaytime`,
                                 ),
                               }),
@@ -13159,12 +13234,12 @@ var eE = R.memo(function (e) {
                             children: [
                               (0, Y.jsx)(`div`, {
                                 className: `Jsbe84OZILs-`,
-                                children: E(ie),
+                                children: D(re),
                               }),
                               (0, Y.jsx)(`div`, {
                                 className: `ao7jCFf5gSI-`,
-                                children: L.Localize(
-                                  ie == 1
+                                children: R.Localize(
+                                  re == 1
                                     ? `#YIR_Game_PlaySession_Singular`
                                     : `#YIR_Game_PlaySessions`,
                                 ),
@@ -13175,18 +13250,18 @@ var eE = R.memo(function (e) {
                           a > 1 &&
                           (0, Y.jsx)(`div`, {
                             className: `XEHQVJnV1Do-`,
-                            children: (0, Y.jsxs)(Sa, {
-                              toolTipContent: L.LocalizeReact(
+                            children: (0, Y.jsxs)(xa, {
+                              toolTipContent: R.LocalizeReact(
                                 `#YIR_Game_LongestStreak_ttip`,
                               ),
                               children: [
                                 (0, Y.jsx)(`div`, {
                                   className: `Jsbe84OZILs-`,
-                                  children: E(a),
+                                  children: D(a),
                                 }),
                                 (0, Y.jsx)(`div`, {
                                   className: `ao7jCFf5gSI-`,
-                                  children: L.Localize(
+                                  children: R.Localize(
                                     `#YIR_Game_LongestStreak`,
                                   ),
                                 }),
@@ -13196,18 +13271,18 @@ var eE = R.memo(function (e) {
                         !!o?.new_this_year &&
                           (0, Y.jsx)(`div`, {
                             className: `XEHQVJnV1Do-`,
-                            children: (0, Y.jsxs)(Sa, {
+                            children: (0, Y.jsxs)(xa, {
                               toolTipContent: f(
                                 `#YIR_TopGames_NewThisYEar_ttip`,
                               ),
                               children: [
                                 (0, Y.jsx)(`div`, {
                                   className: `Jsbe84OZILs-`,
-                                  children: (0, Y.jsx)(oc, {}),
+                                  children: (0, Y.jsx)(ac, {}),
                                 }),
                                 (0, Y.jsx)(`div`, {
                                   className: `ao7jCFf5gSI-`,
-                                  children: L.Localize(
+                                  children: R.Localize(
                                     `#YIR_TopGames_NewThisYEar`,
                                   ),
                                 }),
@@ -13220,11 +13295,11 @@ var eE = R.memo(function (e) {
                             children: [
                               (0, Y.jsx)(`div`, {
                                 className: `Jsbe84OZILs-`,
-                                children: (0, Y.jsx)(Dn, {}),
+                                children: (0, Y.jsx)(En, {}),
                               }),
                               (0, Y.jsx)(`div`, {
                                 className: `ao7jCFf5gSI-`,
-                                children: L.Localize(`#YIR_TopGames_100`),
+                                children: R.Localize(`#YIR_TopGames_100`),
                               }),
                             ],
                           }),
@@ -13238,21 +13313,21 @@ var eE = R.memo(function (e) {
                     children: [
                       (0, Y.jsx)(`div`, {
                         className: `_1X4tYa2ADHY-`,
-                        children: re
+                        children: ne
                           ? f(
                               o?.new_this_year
                                 ? `#YIR_TopGames_firstplayedNew`
                                 : `#YIR_TopGames_firstplayed`,
-                              re,
+                              ne,
                             )
                           : null,
                       }),
                       (0, Y.jsx)(`div`, {
                         className: `xPrgBVyuYEE-`,
-                        children: (0, Y.jsx)(hT, {
+                        children: (0, Y.jsx)(gT, {
                           data: v,
-                          name: oe,
-                          color: g[`topApp_${ee}`],
+                          name: ae,
+                          color: g[`topApp_${y}`],
                         }),
                       }),
                     ],
@@ -13261,25 +13336,25 @@ var eE = R.memo(function (e) {
             }),
           ],
         }),
-        (0, Y.jsx)(rE, { appid: s, userYearInReview: n, item: c }),
+        (0, Y.jsx)(iE, { appid: s, userYearInReview: n, item: c }),
       ],
     })
   );
 });
-function tE(e) {
+function nE(e) {
   let { item: t } = e,
     n = d_(t.info),
-    r = $i(t.assets, `library_hero`);
+    r = Qi(t.assets, `library_hero`);
   return (0, Y.jsx)(`div`, {
     className: dg,
     style: n ? void 0 : { backgroundImage: `url(${r})` },
   });
 }
-function nE(e) {
+function rE(e) {
   let { item: t } = e,
-    n = K(),
+    n = q(),
     r = d_(t.info),
-    i = $i(t.assets, `library_hero`);
+    i = Qi(t.assets, `library_hero`);
   return (0, Y.jsx)(Y.Fragment, {
     children: (0, Y.jsx)(`div`, {
       className: (0, Q.default)(lg, n.BackgroundImageFull),
@@ -13287,104 +13362,104 @@ function nE(e) {
     }),
   });
 }
-function rE(e) {
+function iE(e) {
   let { appid: t, userYearInReview: n, item: r } = e,
     i = d_(r.info);
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
-      (0, Y.jsx)(IT, { bBlurContent: i, appid: t, userYearInReview: n }),
-      (0, Y.jsx)(KT, { bBlurContent: i, appid: t, nYear: n.GetYear() }),
+      (0, Y.jsx)(LT, { bBlurContent: i, appid: t, userYearInReview: n }),
+      (0, Y.jsx)(qT, { bBlurContent: i, appid: t, nYear: n.GetYear() }),
     ],
   });
 }
-function iE(e) {
+function aE(e) {
   let { appID: t } = e,
-    n = oe(t),
-    r = Xe(t),
-    { bIsOwned: i } = Jt(n),
-    a = Xa(),
-    { mutate: o } = pt(t, !r, a);
-  return !w.logged_in || i
+    n = re(t),
+    r = Bt(t),
+    { bIsOwned: i } = Qe(n),
+    a = Ya(),
+    { mutate: o } = lt(t, !r, a);
+  return !T.logged_in || i
     ? null
-    : (0, Y.jsxs)(A, {
+    : (0, Y.jsxs)(j, {
         className: (0, Q.default)(gg),
         onActivate: (e) => {
           (e.preventDefault(), e.stopPropagation(), o());
         },
         children: [
-          r ? (0, Y.jsx)(al, {}) : (0, Y.jsx)(kl, {}),
-          Yn.Localize(r ? `#Sale_RemoveFromWishlist` : `#Sale_AddToWishlist`),
+          r ? (0, Y.jsx)(il, {}) : (0, Y.jsx)(Ol, {}),
+          Jn.Localize(r ? `#Sale_RemoveFromWishlist` : `#Sale_AddToWishlist`),
         ],
       });
 }
-function aE(e) {
+function oE(e) {
   let { pageData: t } = e,
     { steamid: n, nYear: r, eResult: i } = t;
-  R.useEffect(() => {
+  z.useEffect(() => {
     let e = new URL(window.location.href),
       t = [`src`, `snr`, `sP`].filter((t) => e.searchParams.has(t));
     t.length &&
       (t.forEach((t) => e.searchParams.delete(t)),
       window.history.replaceState(window.history.state, ``, e));
   }, []);
-  let a = R.useRef(null);
+  let a = z.useRef(null);
   return (
-    R.useEffect(() => {
+    z.useEffect(() => {
       a.current && a.current.NavTree()?.Activate(!0);
     }, []),
     i == 15
-      ? (0, Y.jsx)(pE, {
-          message: L.Localize(`#YIR_Error_NoShareNoGameplayNotUser`),
+      ? (0, Y.jsx)(mE, {
+          message: R.Localize(`#YIR_Error_NoShareNoGameplayNotUser`),
         })
       : !n || !r
-        ? (0, Y.jsx)(pE, { message: L.Localize(`#YIR_Error_NoData`) })
+        ? (0, Y.jsx)(mE, { message: R.Localize(`#YIR_Error_NoData`) })
         : (0, Y.jsx)(Eh.Provider, {
             value: t,
-            children: (0, Y.jsx)(A, {
+            children: (0, Y.jsx)(j, {
               navRef: a,
-              children: (0, Y.jsx)(oE, { steamid: n, year: r }),
+              children: (0, Y.jsx)(sE, { steamid: n, year: r }),
             }),
           })
   );
 }
-function oE(e) {
+function sE(e) {
   let { steamid: t, year: n } = e,
-    r = new wa(t),
-    [i, a] = Xl(r.GetAccountID()),
+    r = new Ca(t),
+    [i, a] = Yl(r.GetAccountID()),
     { userYearInReview: o, isLoading: s } = rh(t, n),
     { isLoading: c, isError: l } = Ah(o?.GetTopGamesShownAppIDs() ?? []),
     u = Hh();
   if (a || s || c || !u)
-    return (0, Y.jsx)(nn, {
-      string: Yn.Localize(`#Loading`),
+    return (0, Y.jsx)(tn, {
+      string: Jn.Localize(`#Loading`),
       position: `center`,
     });
   if (!i || !r.BIsIndividualAccount())
-    return (0, Y.jsx)(pE, { message: L.Localize(`#YIR_Error_NoUser`) });
+    return (0, Y.jsx)(mE, { message: R.Localize(`#YIR_Error_NoUser`) });
   if (!o || l)
-    return (0, Y.jsx)(pE, { message: L.Localize(`#YIR_Error_PageLoadFailed`) });
+    return (0, Y.jsx)(mE, { message: R.Localize(`#YIR_Error_PageLoadFailed`) });
   let d = !o.GetPlayTimeStats()?.game_summary?.length;
-  return w.steamid !== i.steamid && d
-    ? (0, Y.jsx)(pE, {
-        message: L.Localize(`#YIR_Error_NoShareNoGameplayNotUser`),
+  return T.steamid !== i.steamid && d
+    ? (0, Y.jsx)(mE, {
+        message: R.Localize(`#YIR_Error_NoShareNoGameplayNotUser`),
       })
     : d
-      ? (0, Y.jsx)(pE, { message: L.Localize(`#YIR_Error_NoShareNoGameplay`) })
-      : (0, Y.jsx)(A, {
+      ? (0, Y.jsx)(mE, { message: R.Localize(`#YIR_Error_NoShareNoGameplay`) })
+      : (0, Y.jsx)(j, {
           autoFocus: !0,
           noFocusRing: !0,
           focusable: !1,
-          scrollIntoViewType: ll.NoTransformSparseContent,
+          scrollIntoViewType: cl.NoTransformSparseContent,
           children: (0, Y.jsx)(`div`, {
-            className: D_,
-            children: (0, Y.jsx)(cE, {
+            className: O_,
+            children: (0, Y.jsx)(lE, {
               userYearInReview: o,
               avatarAndPersona: i,
             }),
           }),
         });
 }
-function sE(e) {
+function cE(e) {
   let {
       viewAsUser: t,
       avatarAndPersona: n,
@@ -13392,12 +13467,12 @@ function sE(e) {
       themeYear: i,
       children: a,
     } = e,
-    o = Zl(i),
-    s = Gs(),
+    o = Xl(i),
+    s = Ws(),
     c = r.GetSteamID(),
     l = r.GetYear(),
-    u = R.useMemo(() => oh(s, c, l), [s, c, l]),
-    d = R.useMemo(
+    u = z.useMemo(() => oh(s, c, l), [s, c, l]),
+    d = z.useMemo(
       () => ({
         bIsUser: t,
         persona_name: n.persona_name,
@@ -13408,90 +13483,90 @@ function sE(e) {
     );
   return (0, Y.jsx)(l_.Provider, {
     value: d,
-    children: (0, Y.jsx)(ao, {
+    children: (0, Y.jsx)(io, {
       eAdultOnlyMediaBehavior: t ? `allowed` : `masked`,
       children: (0, Y.jsx)(sh.Provider, {
         value: u,
-        children: (0, Y.jsx)(y_, { children: a }),
+        children: (0, Y.jsx)(b_, { children: a }),
       }),
     }),
   });
 }
-function cE(e) {
+function lE(e) {
   let { userYearInReview: t, avatarAndPersona: n } = e,
     r = t.GetYear(),
-    i = w.logged_in && w.steamid === n.steamid,
-    [a, o] = (0, R.useState)(i),
-    [s, c] = (0, R.useState)(r);
-  return (0, Y.jsxs)(sE, {
+    i = T.logged_in && T.steamid === n.steamid,
+    [a, o] = (0, z.useState)(i),
+    [s, c] = (0, z.useState)(r);
+  return (0, Y.jsxs)(cE, {
     viewAsUser: a,
     userYearInReview: t,
     avatarAndPersona: n,
     themeYear: s,
     children: [
-      (0, Y.jsx)(fE, {
+      (0, Y.jsx)(pE, {
         viewAsUser: a,
         setViewAsUser: o,
         themeYear: s,
         setThemeYear: c,
       }),
-      (0, Y.jsx)(lE, { ...e, viewAsUser: a }),
+      (0, Y.jsx)(uE, { ...e, viewAsUser: a }),
     ],
   });
 }
-function lE(e) {
+function uE(e) {
   let { userYearInReview: t, viewAsUser: n } = e,
     r = t.GetSteamID(),
     i = t.GetYear();
   dh(t);
-  let { persona_name: a } = (0, R.useContext)(l_),
+  let { persona_name: a } = (0, z.useContext)(l_),
     o = t.GetPlayTimeStats().game_summary?.length;
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
-      (0, Y.jsx)(dE, { userYearInReview: t }),
-      (0, Y.jsx)(T, {
-        children: (0, Y.jsxs)(vb, {
+      (0, Y.jsx)(fE, { userYearInReview: t }),
+      (0, Y.jsx)(E, {
+        children: (0, Y.jsxs)(yb, {
           userYearInReview: t,
           children: [
-            (0, Y.jsx)(Hw, { userYearInReview: t }),
-            o === 1 && (0, Y.jsx)(YT, { userYearInReview: t }),
+            (0, Y.jsx)(Uw, { userYearInReview: t }),
+            o === 1 && (0, Y.jsx)(XT, { userYearInReview: t }),
           ],
         }),
       }),
-      (0, Y.jsx)(T, { children: (0, Y.jsx)(Jx, { userYearInReview: t }) }),
+      (0, Y.jsx)(E, { children: (0, Y.jsx)(Yx, { userYearInReview: t }) }),
       typeof o == `number` &&
         o > 1 &&
         (0, Y.jsxs)(Y.Fragment, {
           children: [
-            (0, Y.jsx)(YT, { userYearInReview: t }),
+            (0, Y.jsx)(XT, { userYearInReview: t }),
             (0, Y.jsx)(`div`, {
               className: `xan-F7AKHTg-`,
-              children: (0, Y.jsx)(T, {
-                children: (0, Y.jsx)(bT, { userYearInReview: t }),
+              children: (0, Y.jsx)(E, {
+                children: (0, Y.jsx)(xT, { userYearInReview: t }),
               }),
             }),
           ],
         }),
       (0, Y.jsx)(`div`, {
-        className: Fv,
-        children: (0, Y.jsx)(T, {
-          children: (0, Y.jsx)(ES, { userYearInReview: t }),
+        className: Iv,
+        children: (0, Y.jsx)(E, {
+          children: (0, Y.jsx)(DS, { userYearInReview: t }),
         }),
       }),
       !!t.GetPlayTimeStats().playtime_streak &&
-        (0, Y.jsx)(T, { children: (0, Y.jsx)(qS, { userYearInReview: t }) }),
+        (0, Y.jsx)(E, { children: (0, Y.jsx)(JS, { userYearInReview: t }) }),
       typeof o == `number` &&
         o > 5 &&
-        (0, Y.jsx)(T, {
-          children: (0, Y.jsx)(Hy, { userYearInReview: t, nYear: i }),
+        (0, Y.jsx)(E, {
+          children: (0, Y.jsx)(Uy, { userYearInReview: t, nYear: i }),
         }),
-      (0, Y.jsx)(T, {
+      (0, Y.jsx)(E, {
         children: (0, Y.jsxs)(`div`, {
-          className: ey,
+          className: ty,
           children: [
-            (0, Y.jsx)(vb, {
+            (0, Y.jsx)(yb, {
               userYearInReview: t,
-              children: (0, Y.jsx)(mE, { playerName: a, userYearInReview: t }),
+              children: (0, Y.jsx)(hE, { playerName: a, userYearInReview: t }),
             }),
             n &&
               (0, Y.jsxs)(`div`, {
@@ -13499,9 +13574,9 @@ function lE(e) {
                 children: [
                   (0, Y.jsx)(`div`, {
                     className: `aXiQBfYGO9I-`,
-                    children: L.Localize(`#YIR_ShareOptionsTitle`),
+                    children: R.Localize(`#YIR_ShareOptionsTitle`),
                   }),
-                  (0, Y.jsxs)(A, {
+                  (0, Y.jsxs)(j, {
                     className: `QsTph6fo6tE-`,
                     children: [
                       (0, Y.jsxs)(`div`, {
@@ -13509,9 +13584,9 @@ function lE(e) {
                         children: [
                           (0, Y.jsx)(`div`, {
                             className: `smzKi1RTbdQ-`,
-                            children: L.Localize(`#YIR_ShareModal_TitleSocial`),
+                            children: R.Localize(`#YIR_ShareModal_TitleSocial`),
                           }),
-                          (0, Y.jsx)(kw, { steamid: r, nYear: i }),
+                          (0, Y.jsx)(Aw, { steamid: r, nYear: i }),
                         ],
                       }),
                       (0, Y.jsxs)(`div`, {
@@ -13519,18 +13594,18 @@ function lE(e) {
                         children: [
                           (0, Y.jsx)(`div`, {
                             className: `smzKi1RTbdQ-`,
-                            children: L.Localize(
+                            children: R.Localize(
                               `#YIR_ShareModal_TitleProfile`,
                             ),
                           }),
-                          (0, Y.jsxs)(dc, {
-                            href: `${N.COMMUNITY_BASE_URL}profiles/${w.steamid}/edit/showcases`,
+                          (0, Y.jsxs)(uc, {
+                            href: `${P.COMMUNITY_BASE_URL}profiles/${T.steamid}/edit/showcases`,
                             className: (0, Q.default)(`j8A4NpxJ0t0-`),
                             children: [
-                              (0, Y.jsx)(zs, { className: `uc6rSxuiYYU-` }),
+                              (0, Y.jsx)(Rs, { className: `uc6rSxuiYYU-` }),
                               (0, Y.jsx)(`span`, {
                                 className: (0, Q.default)(`_2-Cr-SQJps0-`),
-                                children: L.Localize(
+                                children: R.Localize(
                                   `#YIR_ShareModal_AddShowcase`,
                                 ),
                               }),
@@ -13545,54 +13620,54 @@ function lE(e) {
           ],
         }),
       }),
-      (0, Y.jsx)(T, { children: (0, Y.jsx)(lS, { userYearInReview: t }) }),
-      (0, Y.jsx)(T, { children: (0, Y.jsx)(tC, { steamid: r, year: i }) }),
-      (0, Y.jsx)(T, { children: (0, Y.jsx)(hE, { year: i }) }),
-      (0, Y.jsx)(T, { children: (0, Y.jsx)($T, { userYearInReview: t }) }),
+      (0, Y.jsx)(E, { children: (0, Y.jsx)(uS, { userYearInReview: t }) }),
+      (0, Y.jsx)(E, { children: (0, Y.jsx)(nC, { steamid: r, year: i }) }),
+      (0, Y.jsx)(E, { children: (0, Y.jsx)(gE, { year: i }) }),
+      (0, Y.jsx)(E, { children: (0, Y.jsx)(eE, { userYearInReview: t }) }),
     ],
   });
 }
-function uE() {
-  let e = K(),
-    { persona_name: t, avatar_url: n } = (0, R.useContext)(l_);
+function dE() {
+  let e = q(),
+    { persona_name: t, avatar_url: n } = (0, z.useContext)(l_);
   return (0, Y.jsxs)(`div`, {
-    className: F_,
+    className: I_,
     children: [
-      (0, Y.jsx)(Gl, {
+      (0, Y.jsx)(Wl, {
         strAvatarURL: n.replace(/\.jpg$/, `_full.jpg`),
-        className: I_,
+        className: L_,
       }),
       (0, Y.jsx)(`span`, {
-        className: (0, Q.default)(L_, e.UserName),
-        children: L.Localize(`#YearInReview_PossessiveUserName`, t),
+        className: (0, Q.default)(R_, e.UserName),
+        children: R.Localize(`#YearInReview_PossessiveUserName`, t),
       }),
     ],
   });
 }
-function dE(e) {
+function fE(e) {
   let { userYearInReview: t } = e,
     n = t.GetSteamID(),
     r = t.GetYear();
   return (0, Y.jsx)(`div`, {
-    className: (0, Q.default)(X, O_),
+    className: (0, Q.default)(X, k_),
     children: (0, Y.jsxs)(`div`, {
-      className: N_,
+      className: P_,
       children: [
         (0, Y.jsx)(`div`, {
-          className: P_,
-          children: L.LocalizeReact(
+          className: F_,
+          children: R.LocalizeReact(
             `#YearInReview_SteamRewindHeader`,
-            (0, Y.jsx)(uE, {}),
-            Yn.Localize(`#date_year`, r, ` `),
+            (0, Y.jsx)(dE, {}),
+            Jn.Localize(`#date_year`, r, ` `),
           ),
         }),
-        w.logged_in &&
+        T.logged_in &&
           (0, Y.jsx)(`div`, {
             className: `-vTPvlHUL7g-`,
             children: (0, Y.jsx)(`div`, {
               className: (0, Q.default)(`PmXhnAChGR0-`),
-              children: (0, Y.jsx)(T, {
-                children: (0, Y.jsx)(kw, { steamid: n, nYear: r }),
+              children: (0, Y.jsx)(E, {
+                children: (0, Y.jsx)(Aw, { steamid: n, nYear: r }),
               }),
             }),
           }),
@@ -13600,7 +13675,7 @@ function dE(e) {
     }),
   });
 }
-function fE(e) {
+function pE(e) {
   let { viewAsUser: t, setViewAsUser: n, themeYear: r, setThemeYear: i } = e,
     a = [
       { data: 2022, label: `2022` },
@@ -13609,56 +13684,56 @@ function fE(e) {
       { data: 2025, label: `2025` },
       { data: 2026, label: `2026` },
     ],
-    o = (0, R.useCallback)(
+    o = (0, z.useCallback)(
       (e) => {
         i(e.data);
       },
       [i],
     ),
-    s = Ea(),
+    s = Ta(),
     { bAllowDevToggles: c } = Dh();
   return !c || s
     ? null
     : (0, Y.jsxs)(`div`, {
-        className: (0, Q.default)(Vv, an),
+        className: (0, Q.default)(Hv, rn),
         children: [
           (0, Y.jsx)(`div`, {
             children: `Debug Only: Toggle First Person View`,
           }),
-          (0, Y.jsx)(Fl, { onChange: n, checked: t }),
+          (0, Y.jsx)(Pl, { onChange: n, checked: t }),
           (0, Y.jsx)(`div`, {
             children: `Debug Only: Change to view the contents in the css style of a different year`,
           }),
-          (0, Y.jsx)(Ja, { rgOptions: a, selectedOption: r, onChange: o }),
+          (0, Y.jsx)(qa, { rgOptions: a, selectedOption: r, onChange: o }),
         ],
       });
 }
-function pE(e) {
+function mE(e) {
   let { message: t } = e;
   return (0, Y.jsxs)(`div`, {
-    className: Hv,
+    className: Uv,
     children: [
-      (0, Y.jsx)(`div`, { className: Wv }),
+      (0, Y.jsx)(`div`, { className: Gv }),
       (0, Y.jsxs)(`div`, {
-        className: (0, Q.default)(D_, Kv),
+        className: (0, Q.default)(O_, qv),
         children: [
-          (0, Y.jsx)(`div`, { className: z_, children: t }),
+          (0, Y.jsx)(`div`, { className: B_, children: t }),
           (0, Y.jsx)(`div`, {}),
         ],
       }),
     ],
   });
 }
-function mE(e) {
+function hE(e) {
   let { userYearInReview: t } = e,
-    n = K();
-  if (!w.is_support && w.accountid != t.GetAccountID()) return null;
+    n = q();
+  if (!T.is_support && T.accountid != t.GetAccountID()) return null;
   let r = t.GetYear();
   return (0, Y.jsx)(`div`, {
-    className: (0, Q.default)(X, Jv),
+    className: (0, Q.default)(X, Yv),
     children: (0, Y.jsx)(`div`, {
-      className: z_,
-      children: L.LocalizeReact(
+      className: B_,
+      children: R.LocalizeReact(
         `#YIR_Conclusion`,
         (0, Y.jsx)(`span`, {
           className: (0, Q.default)(void 0, n.ConclusionName),
@@ -13669,78 +13744,78 @@ function mE(e) {
     }),
   });
 }
-function hE(e) {
+function gE(e) {
   let { year: t } = e;
   return (0, Y.jsxs)(`div`, {
-    className: (0, Q.default)(void 0, Xv),
+    className: (0, Q.default)(void 0, Zv),
     children: [
       (0, Y.jsx)(`div`, {
-        className: z_,
-        children: L.Localize(`#YIR_FAQ_Title`),
+        className: B_,
+        children: R.Localize(`#YIR_FAQ_Title`),
       }),
       (0, Y.jsxs)(`div`, {
-        className: Yv,
+        className: Xv,
         children: [
           (0, Y.jsxs)(`div`, {
-            className: Zv,
+            className: Qv,
             children: [
               (0, Y.jsx)(`div`, {
-                className: Qv,
-                children: L.Localize(`#YIR_FAQ_Dates_Q`),
+                className: $v,
+                children: R.Localize(`#YIR_FAQ_Dates_Q`),
               }),
               (0, Y.jsx)(`div`, {
-                className: $v,
-                children: L.Localize(`#YIR_FAQ_Dates_A`, t),
+                className: ey,
+                children: R.Localize(`#YIR_FAQ_Dates_A`, t),
               }),
             ],
           }),
           (0, Y.jsxs)(`div`, {
-            className: Zv,
+            className: Qv,
             children: [
               (0, Y.jsx)(`div`, {
-                className: Qv,
-                children: L.Localize(`#YIR_FAQ_Offline_Q`),
+                className: $v,
+                children: R.Localize(`#YIR_FAQ_Offline_Q`),
               }),
               (0, Y.jsx)(`div`, {
-                className: $v,
-                children: L.Localize(`#YIR_FAQ_Offline_A`),
+                className: ey,
+                children: R.Localize(`#YIR_FAQ_Offline_A`),
               }),
             ],
           }),
           (0, Y.jsxs)(`div`, {
-            className: Zv,
+            className: Qv,
             children: [
               (0, Y.jsx)(`div`, {
-                className: Qv,
-                children: L.Localize(`#YIR_FAQ_Types_Q`),
+                className: $v,
+                children: R.Localize(`#YIR_FAQ_Types_Q`),
               }),
               (0, Y.jsx)(`div`, {
-                className: $v,
-                children: L.Localize(`#YIR_FAQ_Types_A`),
+                className: ey,
+                children: R.Localize(`#YIR_FAQ_Types_A`),
               }),
             ],
           }),
           (0, Y.jsxs)(`div`, {
-            className: Zv,
+            className: Qv,
             children: [
               (0, Y.jsx)(`div`, {
-                className: Qv,
-                children: L.Localize(`#YIR_FAQ_Share_Q`),
+                className: $v,
+                children: R.Localize(`#YIR_FAQ_Share_Q`),
               }),
               (0, Y.jsxs)(`div`, {
-                className: $v,
+                className: ey,
                 children: [
-                  L.Localize(`#YIR_FAQ_Share_A`),
+                  R.Localize(`#YIR_FAQ_Share_A`),
                   (0, Y.jsxs)(`ol`, {
                     children: [
                       (0, Y.jsx)(`li`, {
-                        children: L.Localize(`#YIR_FAQ_Share_A_b1`),
+                        children: R.Localize(`#YIR_FAQ_Share_A_b1`),
                       }),
                       (0, Y.jsx)(`li`, {
-                        children: L.Localize(`#YIR_FAQ_Share_A_b2`),
+                        children: R.Localize(`#YIR_FAQ_Share_A_b2`),
                       }),
                       (0, Y.jsx)(`li`, {
-                        children: L.Localize(`#YIR_FAQ_Share_A_b3`),
+                        children: R.Localize(`#YIR_FAQ_Share_A_b3`),
                       }),
                     ],
                   }),
@@ -13749,60 +13824,60 @@ function hE(e) {
             ],
           }),
           (0, Y.jsxs)(`div`, {
-            className: Zv,
+            className: Qv,
             children: [
               (0, Y.jsx)(`div`, {
-                className: Qv,
-                children: L.Localize(`#YIR_FAQ_ShareFamily_Q`),
+                className: $v,
+                children: R.Localize(`#YIR_FAQ_ShareFamily_Q`),
               }),
               (0, Y.jsx)(`div`, {
-                className: $v,
-                children: L.Localize(`#YIR_FAQ_ShareFamily_A`),
+                className: ey,
+                children: R.Localize(`#YIR_FAQ_ShareFamily_A`),
               }),
             ],
           }),
           (0, Y.jsxs)(`div`, {
-            className: Zv,
+            className: Qv,
             children: [
               (0, Y.jsx)(`div`, {
-                className: Qv,
-                children: L.Localize(`#YIR_FAQ_Controller_Q`),
+                className: $v,
+                children: R.Localize(`#YIR_FAQ_Controller_Q`),
               }),
               (0, Y.jsx)(`div`, {
-                className: $v,
-                children: L.Localize(`#YIR_FAQ_Controller_A1`),
+                className: ey,
+                children: R.Localize(`#YIR_FAQ_Controller_A1`),
               }),
               (0, Y.jsx)(`br`, {}),
               (0, Y.jsx)(`div`, {
-                className: $v,
-                children: L.Localize(`#YIR_FAQ_Controller_A2`),
+                className: ey,
+                children: R.Localize(`#YIR_FAQ_Controller_A2`),
               }),
             ],
           }),
           t == 2022
             ? (0, Y.jsxs)(`div`, {
-                className: Zv,
+                className: Qv,
                 children: [
                   (0, Y.jsx)(`div`, {
-                    className: Qv,
-                    children: L.Localize(`#YIR_FAQ_PrivateApps_Q`),
+                    className: $v,
+                    children: R.Localize(`#YIR_FAQ_PrivateApps_Q`),
                   }),
                   (0, Y.jsx)(`div`, {
-                    className: $v,
-                    children: L.Localize(`#YIR_FAQ_PrivateApps_A`, t),
+                    className: ey,
+                    children: R.Localize(`#YIR_FAQ_PrivateApps_A`, t),
                   }),
                 ],
               })
             : (0, Y.jsxs)(`div`, {
-                className: Zv,
+                className: Qv,
                 children: [
                   (0, Y.jsx)(`div`, {
-                    className: Qv,
-                    children: L.Localize(`#YIR_FAQ_PrivateApps_v2_Q`),
+                    className: $v,
+                    children: R.Localize(`#YIR_FAQ_PrivateApps_v2_Q`),
                   }),
                   (0, Y.jsx)(`div`, {
-                    className: $v,
-                    children: L.Localize(`#YIR_FAQ_PrivateApps_v2_A`, t),
+                    className: ey,
+                    children: R.Localize(`#YIR_FAQ_PrivateApps_v2_A`, t),
                   }),
                 ],
               }),
@@ -13811,19 +13886,19 @@ function hE(e) {
     ],
   });
 }
-var gE = { Home: (e, t) => `${Ca.YearInReview(e, t)}` };
-function _E(e) {
-  return (0, Y.jsx)(bc, {
+var _E = { Home: (e, t) => `${Sa.YearInReview(e, t)}` };
+function vE(e) {
+  return (0, Y.jsx)(yc, {
     domain: `store.steampowered.com`,
     controller: `yearinreview`,
     children: (0, Y.jsx)(i, {
       children: (0, Y.jsx)(n, {
-        path: `${gE.Home(`:steamId?`, `:year?`)}`,
+        path: `${_E.Home(`:steamId?`, `:year?`)}`,
         render: (e) =>
-          (0, Y.jsx)(bc, {
+          (0, Y.jsx)(yc, {
             method: `yearinreview`,
-            children: (0, Y.jsx)(T, {
-              children: (0, Y.jsx)(vE, {
+            children: (0, Y.jsx)(E, {
+              children: (0, Y.jsx)(yE, {
                 steamId: e.match.params.steamId,
                 year: e.match.params.year,
               }),
@@ -13833,54 +13908,54 @@ function _E(e) {
     }),
   });
 }
-function vE(e) {
+function yE(e) {
   let { steamId: t, year: n } = e,
     r = c(),
-    i = R.useMemo(() => yE(t, n), [t, n]);
-  return (R.useMemo(() => bE(r, i), [r, i]), (0, Y.jsx)(aE, { pageData: i }));
+    i = z.useMemo(() => bE(t, n), [t, n]);
+  return (z.useMemo(() => xE(r, i), [r, i]), (0, Y.jsx)(oE, { pageData: i }));
 }
-function yE(e, t) {
-  let n = e == `my` ? w.steamid : e || ``,
+function bE(e, t) {
+  let n = e == `my` ? T.steamid : e || ``,
     r = parseInt(t ?? ``),
-    i = n ? new wa(n).GetAccountID() : 0,
+    i = n ? new Ca(n).GetAccountID() : 0,
     a =
-      w.is_support &&
-      !!qo(`localization_advanced_access`, `application_config`);
+      T.is_support &&
+      !!Ko(`localization_advanced_access`, `application_config`);
   return {
     steamid: n,
     nYear: r,
-    eResult: Number.parseInt(qo(`yearinreview_eresults`, `application_config`)),
+    eResult: Number.parseInt(Ko(`yearinreview_eresults`, `application_config`)),
     rgOtherYears:
-      qo(`yearinreview_otheryears_${i}_${r}`, `application_config`) ?? [],
+      Ko(`yearinreview_otheryears_${i}_${r}`, `application_config`) ?? [],
     bLocalizationAdvancedAccess: a,
     bAllowDevToggles: a,
   };
 }
-function bE(e, t) {
+function xE(e, t) {
   let { steamid: n, nYear: r } = t;
   if (!n || !r) return;
-  let i = new wa(n),
+  let i = new Ca(n),
     a = eh(i.ConvertTo64BitString(), r);
   if (e.getQueryData(a)) return;
-  let o = qo(`yearinreview_${i.GetAccountID()}_${r}`, `application_config`);
-  xE(o) &&
+  let o = Ko(`yearinreview_${i.GetAccountID()}_${r}`, `application_config`);
+  SE(o) &&
     e.setQueryData(
       a,
       $m(1, {
         stats: o,
-        percentiles: qo(`yearinreview_${r}_percentiles`, `application_config`),
-        distribution: qo(
+        percentiles: Ko(`yearinreview_${r}_percentiles`, `application_config`),
+        distribution: Ko(
           `yearinreview_${r}_distribution`,
           `application_config`,
         ),
-        previous_year_summary: qo(
+        previous_year_summary: Ko(
           `yearinreview_${r}_previous_year_summary`,
           `application_config`,
         ),
       }),
     );
 }
-function xE(e) {
+function SE(e) {
   let t = e;
   return (
     !!t &&
@@ -13891,4 +13966,4 @@ function xE(e) {
     typeof t.playtime_stats == `object`
   );
 }
-export { gE as YearInReviewRoutes, _E as default };
+export { _E as YearInReviewRoutes, vE as default };

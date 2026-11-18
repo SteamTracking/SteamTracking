@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
-import { Ra as r, Su as i, xs as a } from "./main.js";
+import { Eu as r, Ha as i, Ts as a } from "./main.js";
 var o = e(t()),
   s = `_22H1cFqJ3Xo-`,
   c = `ILRTOLQcXtQ-`,
@@ -21,7 +21,7 @@ function d(e) {
         setTimeout(() => n(!1), 1e3),
         !1
       ),
-      className: i(s, e.size === `large` ? c : l),
+      className: r(s, e.size === `large` ? c : l),
       ref: d,
       title: e.text,
       children: [
@@ -35,7 +35,7 @@ function d(e) {
               children: `Copied.`,
             }),
           }),
-        (0, u.jsx)(r, {}),
+        (0, u.jsx)(i, {}),
       ],
     }),
   });

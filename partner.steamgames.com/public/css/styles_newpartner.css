@@ -359,6 +359,11 @@ select.errorRequiredField
 	border: 1px solid red;
 }
 
+#partner_kyc_type_container.errorRequiredField
+{
+	outline: 1px solid red;
+}
+
 .AdminPageContent ul
 {
 	margin: auto;

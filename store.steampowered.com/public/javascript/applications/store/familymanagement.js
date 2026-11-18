@@ -17,7 +17,7 @@ import {
   st as f,
   yt as p,
 } from "./chunk~01cfc309bf.js";
-import { Eo as m, Nt as h, Vt as g, ti as _ } from "./chunk~6b8ddcaac8.js";
+import { Do as m, Ht as h, Pt as g, ni as _ } from "./chunk~6b8ddcaac8.js";
 import { t as v } from "./chunk~8681f5c764.js";
 import { t as y } from "./chunk~eefd71512b.js";
 import { u as b } from "./chunk~e867464c75.js";
@@ -3354,7 +3354,7 @@ function Cs(e) {
       },
       [c],
     ),
-    g = J.useCallback(
+    h = J.useCallback(
       (e) => {
         gs(Se(e), t.appid);
       },
@@ -3366,13 +3366,13 @@ function Cs(e) {
       l &&
         (0, Y.jsx)(Me, {
           onSelected: () => {
-            h(t.appid, t.name);
+            g(t.appid, t.name);
           },
           children: k(`#FamilyGame_PlayGame`),
         }),
       _ &&
         (0, Y.jsx)(Me, {
-          onSelected: g,
+          onSelected: h,
           children: k(`#FamilyGame_OpenAppDetails`),
         }),
       c?.visible &&
@@ -3408,7 +3408,7 @@ function ws(e) {
     d = { direction: `right`, style: { minWidth: `320px` } },
     f = m(n.appid),
     { data: p } = Re(f),
-    h = n.exclude_reason == 0 || n.exclude_reason == 3,
+    g = n.exclude_reason == 0 || n.exclude_reason == 3,
     _ = n.owner_steamids.some((e) => e == c),
     v = N.IN_CLIENT,
     y = p && p.visible,
@@ -3420,19 +3420,19 @@ function ws(e) {
       },
       [n, _, l],
     ),
-    ee = (v && (h || _)) || y,
+    ee = (v && (g || _)) || y,
     x = J.useCallback(
       (e) => {
-        v && (h || _)
+        v && (g || _)
           ? gs(Se(e), t.appid)
           : y && _s(Se(e), `${N.STORE_BASE_URL}${p.store_url_path}`);
       },
-      [t.appid, h, _, p, y, v],
+      [t.appid, g, _, p, y, v],
     );
-  return (0, Y.jsx)(g, {
+  return (0, Y.jsx)(h, {
     id: f,
     name: n.name,
-    bPreventNavigation: _ || h,
+    bPreventNavigation: _ || g,
     bHidePrice: _,
     bShowWishlistButton: !_,
     hoverProps: d,
@@ -5661,7 +5661,7 @@ function Hc(e) {
     );
   return t
     ? (t.GetStoreItemType(),
-      (0, Y.jsx)(g, {
+      (0, Y.jsx)(h, {
         id: r,
         name: t.GetName(),
         bPreventNavigation: !0,

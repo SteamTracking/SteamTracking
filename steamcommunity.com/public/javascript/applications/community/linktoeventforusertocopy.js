@@ -13,13 +13,13 @@ import {
 } from "./chunk~3f4314f3b4.js";
 import { t as l } from "./chunk~5831a6de62.js";
 import {
-  Su as u,
-  cr as d,
-  ef as f,
-  fn as p,
-  gs as m,
-  rr as h,
-  wu as g,
+  Eu as u,
+  Ou as d,
+  bs as f,
+  cr as p,
+  fn as m,
+  if as h,
+  rr as g,
 } from "./main.js";
 var _ = e(t(), 1),
   v = n();
@@ -33,20 +33,20 @@ function y(e) {
         e &&
         e.navigator.clipboard
           .writeText(y.current.value)
-          .then(() => x(f(`#EventDisplay_Share_CopiedToClipboard`)))
+          .then(() => x(h(`#EventDisplay_Share_CopiedToClipboard`)))
           .catch((e) => {
-            (x(f(`#EventDisplay_Share_FailedToCopyToClipboard`)),
+            (x(h(`#EventDisplay_Share_FailedToCopyToClipboard`)),
               console.error(`Failed to copy link to clipboard:`, e));
           });
     };
   return (0, v.jsxs)(`div`, {
     children: [
       (0, v.jsxs)(`div`, {
-        className: u(h, s),
+        className: u(g, s),
         children: [
           (0, v.jsx)(`span`, {
             className: c,
-            children: f(n ?? `#EventDisplay_Share_Link`),
+            children: h(n ?? `#EventDisplay_Share_Link`),
           }),
           (0, v.jsx)(`input`, {
             className: a,
@@ -55,15 +55,15 @@ function y(e) {
             readOnly: !0,
             onClick: S,
           }),
-          (0, v.jsx)(g, {
-            className: u(p, d, r),
+          (0, v.jsx)(d, {
+            className: u(m, p, r),
             onActivate: S,
-            children: (0, v.jsx)(m, {
-              toolTipContent: f(`#ToolTip_CopyLinkToClipboard`),
+            children: (0, v.jsx)(f, {
+              toolTipContent: h(`#ToolTip_CopyLinkToClipboard`),
               children: (0, v.jsx)(`img`, {
                 className: i,
                 src: l,
-                alt: f(`#ToolTip_CopyLinkToClipboard`),
+                alt: h(`#ToolTip_CopyLinkToClipboard`),
               }),
             }),
           }),

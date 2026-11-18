@@ -1808,6 +1808,7 @@ var _ = _(_(), 1),
       {
         ePrivilege: 2,
         eWebAPIKeyRequirement: 2,
+        rgBrowserAPISites: [`store`],
       },
     );
   }

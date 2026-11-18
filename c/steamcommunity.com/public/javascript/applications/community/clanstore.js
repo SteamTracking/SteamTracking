@@ -645,7 +645,7 @@ var _ = _(_()),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetLists = _;
@@ -654,7 +654,7 @@ var _ = _(_()),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetListDetails = _;
@@ -2937,7 +2937,7 @@ var _ = () => (_.EUNIVERSE === 2 ? 2581 : 45267781),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetShoppingCartContents = _;
@@ -2966,6 +2966,7 @@ var _ = () => (_.EUNIVERSE === 2 ? 2581 : 45267781),
     return _.SendMsg(`ShoppingCart.ModifyLineItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.ModifyLineItem = _;
@@ -2973,7 +2974,7 @@ var _ = () => (_.EUNIVERSE === 2 ? 2581 : 45267781),
     return _.SendMsg(`ShoppingCart.RemoveLineItems#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.RemoveLineItems = _;
@@ -3895,7 +3896,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`StoreCatalog.GetDevPageAllAppsLinked#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetDevPageAllAppsLinked = _;
@@ -3904,7 +3905,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetDevPageListApps = _;
@@ -5045,7 +5046,7 @@ var _ = _(_()),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetPartnerEventsByBuildIDRange = _;

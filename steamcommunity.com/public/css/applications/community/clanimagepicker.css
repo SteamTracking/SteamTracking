@@ -17,11 +17,14 @@
   height: fit-content;
   display: flex;
 }
+._3k6zW2BR0Ec- > span:empty {
+  position: absolute;
+}
 @media screen and (width <= 910px) {
   ._3k6zW2BR0Ec- {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    min-width: 320px;
+    min-width: min(320px, 85vw);
   }
 }
 .GamepadMode ._3k6zW2BR0Ec- {
@@ -29,10 +32,13 @@
   scroll-snap-align: unset;
   scroll-snap-stop: unset;
 }
+.ScrollSnapCarousel ._3k6zW2BR0Ec- {
+  height: 100%;
+}
 .center_row_trgt.ItemCount_1 ._3k6zW2BR0Ec- {
   width: 50%;
 }
-@media screen and (width <= 600px) {
+@media screen and (width <= 910px) {
   .center_row_trgt.ItemCount_1 ._3k6zW2BR0Ec- {
     width: 100%;
   }
@@ -118,6 +124,9 @@
   }
   ._630lLH8fjII- .R-OtVF8pTAw- {
     display: block;
+  }
+  ._630lLH8fjII- .AYD-9JVfXTU- + * {
+    margin-top: auto;
   }
   ._2w1L-tFibuk-:hover .XfQfXm4a0JE-,
   ._2w1L-tFibuk-:hover .ZJSImf1olyA- {

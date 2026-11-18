@@ -52,8 +52,10 @@ const __vite__mapDeps = (
       "../../../css/applications/store/chunk~9f001c4d7c.css",
       "./chunk~f4c928a27a.js",
       "./chunk~751f63337e.js",
+      "./chunk~9871ee5432.js",
       "./chunk~b980924b6a.js",
       "../../../css/applications/store/chunk~fd36211970.css",
+      "./chunk~56437c278a.js",
       "../../../css/applications/store/chunk~eabb00f56a.css",
       "./chunk~710e3cfd2f.js",
       "./chunk~7b4b9eb713.js",
@@ -83,8 +85,8 @@ const __vite__mapDeps = (
       "./chunk~eee3bbd4cd.js",
       "./chunk~3720b337f3.js",
       "./chunk~d43c81a658.js",
-      "./chunk~618fb52a90.js",
-      "../../../css/applications/store/chunk~51eda6e553.css",
+      "./chunk~ceada343dc.js",
+      "../../../css/applications/store/chunk~998d46313d.css",
       "./chunk~e70aabe4d7.js",
       "./chunk~ffe4581a06.js",
       "../../../css/applications/store/chunk~97629f3858.css",
@@ -135,7 +137,6 @@ import {
   _,
 } from "./chunk~01cfc309bf.js";
 import {
-  _,
   _,
   _,
   _,
@@ -260,31 +261,12 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./chunk~b8ca037aae.js";
+} from "./chunk~3720b337f3.js";
 import { _, _ } from "./chunk~8c66e1c7a5.js";
 import { _ } from "./chunk~f0141d9521.js";
 import { _ } from "./chunk~6bf4d41b04.js";
 import {
+  _,
   _,
   _,
   _,
@@ -336,15 +318,16 @@ import { _, _ } from "./chunk~16aefcf65f.js";
 import "./chunk~19394a4118.js";
 import { _ } from "./chunk~8681f5c764.js";
 import { _, _ } from "./chunk~2f085f1384.js";
-import { _, _, _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
+import { _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
 import "./chunk~f4c928a27a.js";
 import { _ } from "./chunk~92931c6310.js";
 import { _, _, _, _, _, _ } from "./chunk~af36c62e9f.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _, _, _ } from "./chunk~e867464c75.js";
+import { _ } from "./chunk~9871ee5432.js";
 import { _ } from "./chunk~b980924b6a.js";
+import { _, _ } from "./chunk~56437c278a.js";
 import { _ } from "./chunk~466a63c735.js";
-import { _, _, _, _ } from "./chunk~331382b23f.js";
 import { _, _ } from "./chunk~0111fcd096.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~2f8c67b4de.js";
 import {
@@ -368,19 +351,54 @@ import {
   _,
   _,
 } from "./chunk~a19d1add1e.js";
-import { _, _, _, _, _, _, _ } from "./chunk~d43c81a658.js";
+import { _, _, _, _, _, _, _, _ } from "./chunk~d43c81a658.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./chunk~b8ca037aae.js";
 import { _, _, _ } from "./chunk~95ecbf576c.js";
 import { _, _, _, _ } from "./chunk~4180b1a25d.js";
 import { _, _, _ } from "./chunk~5a091db425.js";
 import { _, _ } from "./chunk~6cf3fe3e07.js";
-import { _ } from "./chunk~618fb52a90.js";
+import { _, _ } from "./chunk~ceada343dc.js";
 import { _ } from "./chunk~e70aabe4d7.js";
-import { _ } from "./chunk~ceada343dc.js";
 import { _, _, _, _ } from "./chunk~7dcf2f426f.js";
-import { _, _, _, _, _, _ } from "./chunk~21cdc464a1.js";
+import { _, _, _, _, _ } from "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~710e3cfd2f.js";
 import { _ } from "./chunk~ffe4581a06.js";
 import { _, _, _, _, _, _, _ } from "./chunk~7b4b9eb713.js";
+import { _, _, _ } from "./chunk~331382b23f.js";
 import {
   _,
   _,
@@ -409,13 +427,12 @@ import "./chunk~5214caf193.js";
 import { _, _, _, _, _ } from "./chunk~4e18b7e430.js";
 import { _, _ } from "./chunk~cb3200f06e.js";
 import { _ } from "./chunk~3f4314f3b4.js";
-import { _, _, _, _, _, _, _, _ } from "./chunk~3720b337f3.js";
 import { _, _, _ } from "./chunk~a7c5e71e12.js";
 import { _ } from "./chunk~221bff5eed.js";
 import { _, _, _ } from "./chunk~a243b6a34b.js";
 import { _ } from "./chunk~166d91af35.js";
 import { _ } from "./chunk~aeb15068c6.js";
-import { _, _, _, _, _, _, _ } from "./chunk~d8bbc3d946.js";
+import { _, _, _, _, _, _, _, _ } from "./chunk~d8bbc3d946.js";
 import { _, _, _ } from "./chunk~9e9862dda3.js";
 import { _ } from "./chunk~5e5f1b9ccf.js";
 import { _ } from "./chunk~d902bc74d6.js";
@@ -2782,6 +2799,20 @@ function _(_) {
   );
 }
 function _(_) {
+  if (
+    !_.localized_out_of_stock_override ||
+    _.localized_out_of_stock_override.length == 0
+  )
+    return;
+  let _ = _(_.LANGUAGE),
+    _ = _.GetELanguageFallback(_);
+  return (
+    _.localized_out_of_stock_override[_] ||
+    _.localized_out_of_stock_override[_] ||
+    void 0
+  );
+}
+function _(_) {
   let {
       reservationDef: _,
       hardwareDetail: _,
@@ -2791,11 +2822,9 @@ function _(_) {
     { elDialogElement: _, fnShowLogonDialog: _ } = _(),
     { bGated: _, bLoading: _, bUnlocked: _ } = _(_),
     _ = _(_);
-  if (
-    !_.logged_in &&
+  return !_.logged_in &&
     (_.requires_reservation || _.account_restricted_from_purchasing)
-  )
-    return _
+    ? _
       ? null
       : (0, _.jsxs)(`div`, {
           className: _(_, `ReservationLogin`),
@@ -2810,66 +2839,53 @@ function _(_) {
             }),
             _,
           ],
-        });
-  if (_ && !_)
-    return _
-      ? null
+        })
+    : _ && !_
+      ? _
+        ? null
+        : _
+          ? (0, _.jsx)(_, {
+              size: `medium`,
+              position: `center`,
+              string: _.Localize(`#Loading`),
+            })
+          : (0, _.jsx)(`div`, {
+              className: _(_, `ReservationRequiresPurchase`),
+              children: (0, _.jsx)(_, {
+                className: _,
+                disabled: !0,
+                children: _.Localize(`#Sale_Reservation_AvailableWithPurchase`),
+              }),
+            })
       : _
         ? (0, _.jsx)(_, {
-            size: `medium`,
-            position: `center`,
-            string: _.Localize(`#Loading`),
+            hardwareDetail: _,
+            bPSULessModel: _,
           })
-        : (0, _.jsx)(`div`, {
-            className: _(_, `ReservationRequiresPurchase`),
-            children: (0, _.jsx)(_, {
-              className: _,
-              disabled: !0,
-              children: _.Localize(`#Sale_Reservation_AvailableWithPurchase`),
-            }),
-          });
-  if (_)
-    return (0, _.jsx)(_, {
-      hardwareDetail: _,
-      bPSULessModel: _,
-    });
-  if (!_.requires_reservation && _.account_restricted_from_purchasing)
-    return _
-      ? null
-      : (0, _.jsx)(`div`, {
-          className: _({
-            [_]: !0,
-            ReservationUnavailable: !0,
-          }),
-          children: (0, _.jsx)(_, {
-            className: _,
-            disabled: !0,
-            children: _.Localize(`#Sale_RegisterNow_noteligible`),
-          }),
-        });
-  if (!_.requires_reservation && !_.inventory_available) {
-    let _;
-    if (
-      _.localized_out_of_stock_override &&
-      _.localized_out_of_stock_override.length > 0
-    ) {
-      let _ = _(_.LANGUAGE),
-        _ = _.GetELanguageFallback(_);
-      _ =
-        _.localized_out_of_stock_override[_] ||
-        _.localized_out_of_stock_override[_] ||
-        void 0;
-    }
-    return (0, _.jsx)(_, {
-      bPSULessModel: _,
-      strOutOfStockOverride: _,
-    });
-  }
-  return (0, _.jsx)(_, {
-    reservationDef: _,
-    hardwareDetail: _,
-    reservedHardwareDetail: _,
-  });
+        : !_.requires_reservation && _.account_restricted_from_purchasing
+          ? _
+            ? null
+            : (0, _.jsx)(`div`, {
+                className: _({
+                  [_]: !0,
+                  ReservationUnavailable: !0,
+                }),
+                children: (0, _.jsx)(_, {
+                  className: _,
+                  disabled: !0,
+                  children: _.Localize(`#Sale_RegisterNow_noteligible`),
+                }),
+              })
+          : !_.requires_reservation && !_.inventory_available
+            ? (0, _.jsx)(_, {
+                bPSULessModel: _,
+                strOutOfStockOverride: _(_),
+              })
+            : (0, _.jsx)(_, {
+                reservationDef: _,
+                hardwareDetail: _,
+                reservedHardwareDetail: _,
+              });
 }
 function _(_) {
   let {
@@ -3778,6 +3794,18 @@ function _(_) {
     return (0, _.jsx)(`div`, {
       className: _(_, `NoReserverMsg`),
       children: _.Localize(`#Sale_Reservation_CanceledPendingRefund`),
+    });
+  if (
+    _.new_reservations_disabled &&
+    _.requires_reservation &&
+    !_(_.reservation_state)
+  )
+    return (0, _.jsx)(`div`, {
+      className: _,
+      children: (0, _.jsx)(_, {
+        bPSULessModel: !1,
+        strOutOfStockOverride: _(_),
+      }),
     });
   let _ = !!_ && _(_.reservation_state),
     _ =
@@ -6666,17 +6694,27 @@ function _(_, _) {
 }
 var _ = `BEJJ0zhyKjM-`,
   _ = `hKkjz-K347w-`,
-  _ = `qpvtVMRAn98-`,
   _ = `_0AL4AZNHxZA-`,
-  _ = `nQLrnaKUhjI-`;
+  _ = `nQLrnaKUhjI-`,
+  _ = `qpvtVMRAn98-`,
+  _ = `MDwMXOTVL3g-`;
 function _(_) {
   let { event: _, section: _ } = _,
-    _ = _();
+    _ = _(),
+    _ = _.useContext(_),
+    { bScreenIsWide: _ } = _(`items`),
+    _ = _ && !_ && !_;
   return (0, _.jsx)(`div`, {
     className: _(_, _, _, `SaleSectionForCustomCSS`),
     style: _(_, _, _),
     children: (0, _.jsx)(_, {
       capsules_per_row: _(_, _),
+      swipe_row: _
+        ? {
+            width: `85%`,
+            height: `240px`,
+          }
+        : void 0,
     }),
   });
 }
@@ -6714,7 +6752,8 @@ function _(_) {
     _ = _(_),
     { strStoreURL: _ } = _(_ ?? void 0, _.prefer_demo_store_page),
     [_, _] = _.useState(void 0),
-    { bShowSeeMoreHint: _, panelProps: _ } = _(_),
+    { bShowSeeMoreHint: _, panelProps: _ } = _(_, `X`),
+    _ = _(_ ? _ : void 0),
     _ = _.useMemo(
       () => _.filter((_, _) => !!_[_]?.packageid).slice(0, _),
       [_, _, _],
@@ -6738,6 +6777,24 @@ function _(_) {
         ? _(`#DLCForYou_ParentApp_Playtime`) + _(_)
         : void 0;
   let _ = !_ && _(_),
+    _ = _ ? Math.min(_, _) : 0,
+    _ = _ > 2 && _.length <= 2 && _ && !_,
+    _ = (_) =>
+      (0, _.jsx)(
+        _,
+        {
+          _: _._,
+          type: _.type ?? `game`,
+          displayStyle: _,
+          requestCompact: _.length > 1,
+          bNarrowScreen: !1,
+          bShowDemoButton: _.show_as_demos,
+          bPreferDemoStorePage: _.prefer_demo_store_page,
+          bHidePrice: _.hide_prices,
+          bPreferAssetWithoutOverride: !!_.prefer_assets_without_overrides,
+        },
+        `dlc_` + _._,
+      ),
     _ = (_) =>
       (0, _.jsx)(
         `div`,
@@ -6794,6 +6851,7 @@ function _(_) {
                   children: _
                     ? (0, _.jsx)(_, {
                         href: _,
+                        ..._,
                         children: (0, _.jsx)(`img`, {
                           className: `_0a7lTsIyqhA-`,
                           src: _,
@@ -6816,6 +6874,7 @@ function _(_) {
             subtitle: _,
             bShowSeeMoreHint: _,
             bUseGamepadLinkHint: !0,
+            eGamepadLinkHintButton: `X`,
             onLinkResolved: (_) => _(_ ?? void 0),
           }),
           _ &&
@@ -6832,47 +6891,54 @@ function _(_) {
       }),
       _
         ? (0, _.jsx)(_, {
-            nSlots: Math.min(_, _),
-            children: _.slice(0, Math.min(_, _)).map(_),
+            className: _(_, _, `SaleSectionContainer`, _),
+            children: _.map(_),
           })
-        : _.length === 1
+        : _
           ? (0, _.jsx)(_, {
-              _: _[0]._,
-              type: _[0].type ?? `game`,
-              displayStyle: _.single_item_style || `bordered`,
-              bShowPurchaseOptionsButton: _.show_purchase_options,
-              bShowDemoButton: _.show_as_demos,
-              bPreferDemoStorePage: _.prefer_demo_store_page,
-              bHidePrice: _.hide_prices,
-              bShowDeckCompatibilityDialog: _.show_deck_compability_details,
-              eHardwareCompatibilityDisplay: _.display_hw_compatibility_details,
-              bPreferAssetWithoutOverride: !!_.prefer_assets_without_overrides,
+              nSlots: _,
+              children: _.slice(0, _).map(_),
             })
-          : _(
-              _.unique_id,
-              {
-                nMaxCapsulesPerRow: _,
-                bScreenIsWide: _,
-                nShowAdditionalRows: 0,
-                bShowAsCarousel: _(_),
-                bAutoAdvance: !!_.carousel_auto_advance,
-                bHideIfTooFewItems: !!_.hide_section_if_too_few_items,
-                ..._(_.jsondata),
-              },
-              _.map((_) => ({
-                Render: (_) => _(_),
-              })),
-              _(_, _) || [2, 3, 4, 3],
-              [`grid`],
-              _(_) || 10,
-              (_) => _(_, _) || 10,
-              {
-                section: _,
-                saleEvent: _,
-                language: _,
-              },
-              _,
-            ).content,
+          : _.length === 1
+            ? (0, _.jsx)(_, {
+                _: _[0]._,
+                type: _[0].type ?? `game`,
+                displayStyle: _.single_item_style || `bordered`,
+                bShowPurchaseOptionsButton: _.show_purchase_options,
+                bShowDemoButton: _.show_as_demos,
+                bPreferDemoStorePage: _.prefer_demo_store_page,
+                bHidePrice: _.hide_prices,
+                bShowDeckCompatibilityDialog: _.show_deck_compability_details,
+                eHardwareCompatibilityDisplay:
+                  _.display_hw_compatibility_details,
+                bPreferAssetWithoutOverride:
+                  !!_.prefer_assets_without_overrides,
+              })
+            : _(
+                _.unique_id,
+                {
+                  nMaxCapsulesPerRow: _,
+                  bScreenIsWide: _,
+                  nShowAdditionalRows: 0,
+                  bShowAsCarousel: _(_),
+                  bAutoAdvance: !!_.carousel_auto_advance,
+                  bHideIfTooFewItems: !!_.hide_section_if_too_few_items,
+                  ..._(_.jsondata),
+                },
+                _.map((_) => ({
+                  Render: (_) => _(_),
+                })),
+                _(_, _) || [2, 3, 4, 3],
+                [`grid`],
+                _(_) || 10,
+                (_) => _(_, _) || 10,
+                {
+                  section: _,
+                  saleEvent: _,
+                  language: _,
+                },
+                _,
+              ).content,
     ],
   });
 }
@@ -7355,7 +7421,44 @@ var _ = `i8Nz35tfmTA-`,
   _ = `N0K1kaLyXQ0-`,
   _ = `lCddIzY8s9c-`,
   _ = `IfKYdvlkwj4-`,
-  _ = `jIobwgHlqR8-`;
+  _ = `jIobwgHlqR8-`,
+  _ = `shEvQ8lVCTw-`,
+  _ = `qzyy-S8Vl70-`,
+  _ = `VGR8BFJduAI-`;
+function _(_, _, _, _) {
+  let _ = _.useRef(_);
+  ((_.current = _),
+    _.useEffect(() => {
+      let _ = _.current,
+        _ = _?.current;
+      if (!_) return;
+      let _ = () => {
+        let _ = _.current();
+        if (!_) return;
+        let _ = _.getBoundingClientRect(),
+          _ = _.getBoundingClientRect(),
+          _ = _.left + _.width / 2,
+          _ = getComputedStyle(_).direction === `rtl`;
+        (_.style.setProperty(
+          `--ShelfNotchX`,
+          `${_ ? _.right - _ : _ - _.left}px`,
+        ),
+          _.dataset.notchPlaced ||
+            (_.getBoundingClientRect(), (_.dataset.notchPlaced = `true`)));
+      };
+      _();
+      let _ = new ResizeObserver(_);
+      return (
+        _.observe(_),
+        _?.addEventListener(`scroll`, _, {
+          passive: !0,
+        }),
+        () => {
+          (_.disconnect(), _?.removeEventListener(`scroll`, _));
+        }
+      );
+    }, [_, _, _]));
+}
 function _(_) {
   let {
       tab: _,
@@ -7364,6 +7467,7 @@ function _(_) {
       classNames: _,
       section: _,
       selected: _,
+      bShowMenuChevron: _,
     } = _,
     [_] = _(() => [_?.tab_highlight_label_color]);
   _.useEffect(() => {
@@ -7377,9 +7481,25 @@ function _(_) {
         onClick: () => _(_),
         onOKButton: () => _(_),
         _: `Tab_` + _.unique_id,
-        children: (0, _.jsx)(`div`, {
+        children: (0, _.jsxs)(`div`, {
           className: _(_),
-          children: _,
+          children: [
+            _,
+            _ &&
+              (0, _.jsx)(`svg`, {
+                className: `iDvEl-Q1fUk-`,
+                viewBox: `0 0 10 6`,
+                "aria-hidden": `true`,
+                children: (0, _.jsx)(`path`, {
+                  _: `M1 1l4 4 4-4`,
+                  fill: `none`,
+                  stroke: `currentColor`,
+                  strokeWidth: `1.6`,
+                  strokeLinecap: `round`,
+                  strokeLinejoin: `round`,
+                }),
+              }),
+          ],
         }),
       })
     : null;
@@ -7398,12 +7518,22 @@ function _(_) {
     _ = _(),
     _ = _(),
     _ = _.useRef(null),
-    _ = _.useContext(_) && !_,
+    _ = _.useContext(_),
+    _ = _ && !_,
     _ = _.useRef(null),
     _ = _.useCallback((_) => {
       ((_.current = _), (_.current = _?.parentElement ?? null));
     }, []);
-  (_(_, _),
+  _(_, _);
+  let _ = _,
+    _ = _ && !!_.tab_tag_filter && !!_,
+    _ = _.useRef(null);
+  (_(
+    _,
+    () => document.getElementById(`Tab_` + _.unique_id),
+    _,
+    _ ? _.unique_id : void 0,
+  ),
     _.useEffect(() => {
       let _ = document.getElementById(`Tab_` + _.unique_id);
       if (_ && _?.current?.parentElement) {
@@ -7445,6 +7575,7 @@ function _(_) {
       [_]: !1,
       [_]: _,
       [_]: _,
+      [_]: _,
     }),
     ref: _,
     style: _,
@@ -7461,20 +7592,25 @@ function _(_) {
             [_]: !0,
           }),
           ref: _,
-          children: _.map((_) =>
-            (0, _.jsx)(
+          children: _.map((_, _) => {
+            let _ = _ && !!_.tab_tag_filter;
+            return (0, _.jsx)(
               _,
               {
                 section: _,
                 selected: _ === _,
                 tab: _,
                 language: _,
-                classNames: _,
+                classNames: _(
+                  _,
+                  _ && _ > 0 && !_[_ - 1].tab_tag_filter && `jp4wmLcVZGw-`,
+                ),
+                bShowMenuChevron: _,
                 onTabSelected: _,
               },
               `Tab_` + _.unique_id,
-            ),
-          ),
+            );
+          }),
         }),
       }),
       _ &&
@@ -7486,14 +7622,28 @@ function _(_) {
           styleVariation: _.k_JumpList,
           personalizedCarousels: _,
         }),
-      _,
+      _
+        ? (0, _.jsx)(`div`, {
+            className: _,
+            ref: _,
+            children: (0, _.jsx)(`div`, {
+              className: _,
+              children: _,
+            }),
+          })
+        : _,
     ],
   });
 }
 var _ = `RQil0cWMQXg-`,
   _ = `ao3TJifNHD0-`,
   _ = `VciG7uOJQ3U-`,
-  _ = `_8w4tGFAhPUk-`;
+  _ = `_8w4tGFAhPUk-`,
+  _ = `uj8GDfIeuPk-`,
+  _ = `Wo32Nnq4R00-`,
+  _ = `R--RU8rbDbo-`,
+  _ = `mTKxzinAdxs-`,
+  _ = `ViLfxQRCJLg-`;
 function _(_) {
   let {
       tab: _,
@@ -7503,6 +7653,7 @@ function _(_) {
       setSelection: _,
     } = _,
     { data: _ } = _(_(_)),
+    _ = _.useContext(_),
     {
       rgNodes: _,
       selectedNode: _,
@@ -7517,61 +7668,123 @@ function _(_) {
       };
     }),
     _ = (_) => _?.(_);
-  return !_ || _.length === 0
-    ? null
-    : (0, _.jsxs)(_, {
+  if (!_ || _.length === 0) return null;
+  if (_) {
+    let _ = [
+        {
+          strKey: `all`,
+          strName: _(`#Sale_Tabs_TagFilter_All`),
+          bSelected: !_,
+          fnOnClick: () => _(void 0),
+        },
+        ..._.map((_) => ({
+          strKey: _(_),
+          strName: _(_, _, _),
+          bSelected: _ === _,
+          fnOnClick: () =>
+            _({
+              strParentKey: _(_),
+            }),
+        })),
+      ],
+      _ = [];
+    if (_ && _.length > 0) {
+      _?.bShowAllChildOption &&
+        _.push({
+          strKey: `all`,
+          strName: _(`#Sale_Tabs_TagFilter_All`),
+          bSelected: !_.strChildKey,
+          fnOnClick: () =>
+            _({
+              strParentKey: _.strParentKey,
+            }),
+        });
+      for (let _ of _) {
+        let _ = _(_),
+          _ = _ === _.strChildKey;
+        _.push({
+          strKey: _,
+          strName: _(_, _, _),
+          bSelected: _,
+          fnOnClick: () =>
+            _({
+              strParentKey: _.strParentKey,
+              strChildKey: _ ? void 0 : _,
+            }),
+        });
+      }
+    }
+    return (0, _.jsx)(_, {
+      nTabID: _.unique_id,
+      rgParentOptions: _,
+      rgChildOptions: _,
+      strParentKey: _?.strParentKey,
+    });
+  }
+  return (0, _.jsxs)(_, {
+    className: _,
+    children: [
+      (0, _.jsxs)(_, {
         className: _,
+        "flow-children": `row`,
         children: [
-          (0, _.jsxs)(_, {
-            className: _,
-            "flow-children": `row`,
-            children: [
+          (0, _.jsx)(_, {
+            strName: _(`#Sale_Tabs_TagFilter_All`),
+            bSelected: !_,
+            fnOnClick: () => _(void 0),
+          }),
+          _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                strName: _(_, _, _),
+                bSelected: _ === _,
+                fnOnClick: () =>
+                  _({
+                    strParentKey: _(_),
+                  }),
+              },
+              `tagfilterparent_` + _(_),
+            ),
+          ),
+        ],
+      }),
+      _ &&
+        _.length > 0 &&
+        (0, _.jsxs)(_, {
+          className: _(`ao3TJifNHD0-`, `T575tMnrV-E-`),
+          "flow-children": `row`,
+          children: [
+            _?.bShowAllChildOption &&
               (0, _.jsx)(_, {
                 strName: _(`#Sale_Tabs_TagFilter_All`),
-                bSelected: !_,
-                fnOnClick: () => _(void 0),
+                bSelected: !_.strChildKey,
+                fnOnClick: () =>
+                  _({
+                    strParentKey: _.strParentKey,
+                  }),
               }),
-              _.map((_) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    strName: _(_, _, _),
-                    bSelected: _ === _,
-                    fnOnClick: () =>
-                      _({
-                        strParentKey: _(_),
-                      }),
-                  },
-                  `tagfilterparent_` + _(_),
-                ),
-              ),
-            ],
-          }),
-          _ &&
-            _.length > 0 &&
-            (0, _.jsx)(_, {
-              className: _(`ao3TJifNHD0-`, `T575tMnrV-E-`),
-              "flow-children": `row`,
-              children: _.map((_) => {
-                let _ = _(_),
-                  _ = _ === _.strChildKey;
-                return (0, _.jsx)(
-                  _,
-                  {
-                    strName: _(_, _, _),
-                    bSelected: _,
-                    fnOnClick: () =>
-                      _({
-                        strParentKey: _.strParentKey,
-                        strChildKey: _ ? void 0 : _,
-                      }),
-                  },
-                  `tagfilterchild_` + _,
-                );
-              }),
+            _.map((_) => {
+              let _ = _(_),
+                _ = _ === _.strChildKey;
+              return (0, _.jsx)(
+                _,
+                {
+                  strName: _(_, _, _),
+                  bSelected: _,
+                  fnOnClick: () =>
+                    _({
+                      strParentKey: _.strParentKey,
+                      strChildKey: _ ? void 0 : _,
+                    }),
+                },
+                `tagfilterchild_` + _,
+              );
             }),
-        ],
-      });
+          ],
+        }),
+    ],
+  });
 }
 function _(_, _, _) {
   let _ = _.nTagID || _.nOptInTagID;
@@ -7594,6 +7807,112 @@ function _(_) {
         children: _,
       })
     : null;
+}
+function _(_) {
+  let { nTabID: _, rgParentOptions: _, rgChildOptions: _, strParentKey: _ } = _,
+    _ = _.useRef(null),
+    _ = _.useRef(null),
+    _ = _.length > 0;
+  return (
+    _(_, () => _.current?.querySelector(`.` + _), _, _ ? _ : void 0),
+    (0, _.jsxs)(_, {
+      className: _,
+      children: [
+        (0, _.jsx)(
+          _,
+          {
+            refRow: _,
+            rgOptions: _,
+          },
+          _,
+        ),
+        _ &&
+          (0, _.jsx)(`div`, {
+            className: `qIm-OvGu-HQ-`,
+            ref: _,
+            children: (0, _.jsx)(`div`, {
+              className: `HtMY5ZRn3N4-`,
+              children: (0, _.jsx)(
+                _,
+                {
+                  rgOptions: _,
+                  bSmall: !0,
+                },
+                _,
+              ),
+            }),
+          }),
+      ],
+    })
+  );
+}
+function _(_) {
+  let { bSmall: _ } = _,
+    _ = _.rgOptions.filter((_) => _.strName),
+    _ = _.useRef(null),
+    _ = _.refRow ?? _,
+    _ = _.useRef(null),
+    _ = _.find((_) => _.bSelected)?.strKey;
+  return (
+    _.useEffect(() => {
+      let _ = _.current,
+        _ = _.current;
+      if (!_ || !_) return;
+      let _ = () => {
+        let _ = _.querySelector(`.${_} .undefined`);
+        if (!_) {
+          delete _.dataset.placed;
+          return;
+        }
+        let _ = 0,
+          _ = 0;
+        for (let _ = _; _ && _ !== _; _ = _.offsetParent)
+          ((_ += _.offsetLeft), (_ += _.offsetTop));
+        (_.style.setProperty(`--SubTabIndicatorX`, `${_}px`),
+          _.style.setProperty(
+            `--SubTabIndicatorY`,
+            `${_ + _.offsetHeight + 3}px`,
+          ),
+          _.style.setProperty(`--SubTabIndicatorWidth`, `${_.offsetWidth}px`),
+          _.dataset.placed ||
+            (_.getBoundingClientRect(), (_.dataset.placed = `true`)));
+      };
+      _();
+      let _ = new ResizeObserver(_);
+      return (_.observe(_), () => _.disconnect());
+    }, [_, _]),
+    (0, _.jsxs)(_, {
+      className: _(_, _ && `nO7ymjY1hhI-`),
+      "flow-children": `row`,
+      ref: _,
+      children: [
+        _.map((_, _) =>
+          (0, _.jsx)(
+            _,
+            {
+              focusable: !0,
+              className: _(_, _.bSelected && `mTKxzinAdxs-`),
+              style: {
+                "--SubTabIndex": _,
+              },
+              onClick: _.fnOnClick,
+              onOKButton: _.fnOnClick,
+              children: (0, _.jsx)(`span`, {
+                className: void 0,
+                children: _.strName,
+              }),
+            },
+            _.strKey,
+          ),
+        ),
+        (0, _.jsx)(`span`, {
+          className: _,
+          ref: _,
+          "aria-hidden": `true`,
+        }),
+      ],
+    })
+  );
 }
 var _ = `yVu7-rHAEsI-`,
   _ = `kpO9rsGazU4-`,
@@ -9528,6 +9847,100 @@ async function _(_, _, _, _) {
       ),
     ]).flat(),
   ]);
+}
+var _ = 1e9,
+  _ = _;
+function _(_, _, _) {
+  let _ = _.tabs,
+    _ = _(_);
+  if (!_ || _ == 0 || !_?.length) return _;
+  let _ = _.findIndex((_) => !_.hide);
+  if (_ < 0) return _;
+  let _ =
+      _.find(
+        (_) => !_.hide && _.unique_id === _.recommended_tag_tab_template_id,
+      ) ?? _[_],
+    _ = new Set(_.flatMap((_) => _(_.store_filter))),
+    _ = _.filter((_) => _.name && !_.has(_.tagid)).slice(0, _),
+    _ = _.recommended_tag_tab_as_menu
+      ? _.length
+        ? [_(_, _.unique_id)]
+        : []
+      : _.map((_) => _(_, _.unique_id, _));
+  return _.length == 0 ? _ : [..._.slice(0, _ + 1), ..._, ..._.slice(_ + 1)];
+}
+function _(_) {
+  let _ = Math.floor(_?.recommended_tag_tab_count ?? 0),
+    _ = _?.recommended_tag_tab_as_menu ? 10 : 5;
+  return Math.max(0, Math.min(_, _));
+}
+function _(_) {
+  return _?.type === _.k_EStoreFilterClauseTypeStoreTag
+    ? [Number(_.value)]
+    : _?.type === _.k_EStoreFilterClauseTypeOr &&
+        _.rgSubexpressions?.length &&
+        _.rgSubexpressions.every(
+          (_) => _.type === _.k_EStoreFilterClauseTypeStoreTag,
+        )
+      ? _.rgSubexpressions.map((_) => Number(_.value))
+      : [];
+}
+function _(_, _, _) {
+  let _ = [];
+  return (
+    (_[0] = _.name),
+    (_[_] = _.name),
+    {
+      unique_id: _ + _.tagid,
+      localized_label: _,
+      default_label: ``,
+      capsules: [],
+      store_filter: {
+        type: _.k_EStoreFilterClauseTypeStoreTag,
+        value: _.tagid,
+      },
+      template_tab_id: _,
+    }
+  );
+}
+function _(_, _) {
+  let _ = _.map((_) => ({
+    nTagID: _.tagid,
+  }));
+  return {
+    unique_id: _,
+    default_label: `#Sale_Tabs_RecommendedTagsMenu`,
+    localized_label: [],
+    capsules: [],
+    store_filter: {
+      type: _.k_EStoreFilterClauseTypeOr,
+      rgSubexpressions: _.map((_) => ({
+        type: _.k_EStoreFilterClauseTypeStoreTag,
+        value: _.tagid,
+      })),
+    },
+    tab_tag_filter: {
+      rgNodes: _,
+    },
+    template_tab_id: _,
+  };
+}
+function _(_, _) {
+  let _ = _(),
+    _ = _(_) > 0 && !!_.logged_in,
+    { data: _ } = _({
+      ..._(_, _.accountid),
+      enabled: _,
+    }),
+    _ = _?.tabs,
+    _ = _?.length,
+    _ = _?.recommended_tag_tab_count,
+    _ = _?.recommended_tag_tab_template_id,
+    _ = _?.recommended_tag_tab_as_menu;
+  return _.useMemo(
+    () => _ && _(_, _ ? _ : void 0, _),
+    [_, _, _, _, _, _, _, _, _],
+  );
 }
 function _(_) {
   return _.steamworks_appid || _.appid;
@@ -23663,7 +24076,9 @@ function _(_) {
   );
 }
 function _(_) {
-  let { appid: _ } = _,
+  let { appid: _, options: _ } = _,
+    _ = _?.summaryOptions,
+    _ = _?.filterOptions,
     _ = _({
       appid: _,
     }),
@@ -23672,24 +24087,42 @@ function _(_) {
     }),
     _ = _.data?.name || ``,
     _ = _.data?.steam_release_date || 0,
+    _ = _.data?.appid,
     _ = _.useMemo(
       () => ({
         appid: _,
+        steamworks_appid: _,
         appname: _,
         app_release_date: _,
+        summary_options: _,
+        filter_options: _,
       }),
-      [_, _, _],
+      [_, _, _, _, _, _],
     ),
     _ = _(),
     _ = _.useMemo(() => (_.data ?? []).map((_) => _(_)), [_.data]);
-  return (0, _.jsx)(_.Provider, {
-    value: _,
-    children:
-      _.length > 0 &&
-      (0, _.jsx)(_, {
-        rgLanguagePreferences: _,
-      }),
-  });
+  return _ && !_.bHasAnyReviews
+    ? (0, _.jsx)(_.Provider, {
+        value: _,
+        children: (0, _.jsx)(_, {
+          nLinkAppID: _(_),
+          bHasOwnReview: _.bHasOwnReview,
+        }),
+      })
+    : (0, _.jsxs)(_.Provider, {
+        value: _,
+        children: [
+          _ &&
+            (0, _.jsx)(_, {
+              options: _,
+            }),
+          _.length > 0 &&
+            (0, _.jsx)(_, {
+              rgLanguagePreferences: _,
+              options: _,
+            }),
+        ],
+      });
 }
 function _(_) {
   let _ = _.reviewSection?.review_appid;
@@ -26116,7 +26549,10 @@ var _ = class _ {
     return this.m_nSaleDay;
   }
   ShouldShowSection(_) {
-    return !this.m_activeTab || _(this.GetActiveTabUniqueID(), _);
+    return !this.m_activeTab || _(this.GetSectionTabUniqueID(), _);
+  }
+  GetSectionTabUniqueID() {
+    return this.m_activeTab ? _(this.m_activeTab) : void 0;
   }
   GetTab() {
     return this.m_activeTab;
@@ -28654,7 +29090,7 @@ var _ = class _ {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`partner`, `community`, `store`],
       },
     );
   }
@@ -28664,6 +29100,7 @@ var _ = class _ {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetMonthTopAppReleases = _;
@@ -28672,6 +29109,7 @@ var _ = class _ {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetYearTopAppReleases = _;
@@ -30970,9 +31408,9 @@ var _ = _.lazy(() =>
       __vite__mapDeps([
         38, 1, 2, 9, 10, 11, 4, 5, 12, 3, 13, 14, 15, 16, 17, 18, 6, 7, 19, 20,
         21, 22, 23, 24, 25, 26, 27, 28, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
-        49, 50, 51, 8, 29, 30, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
-        33, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
-        81, 82, 83, 84, 85, 86, 87, 88, 89,
+        49, 50, 51, 52, 53, 8, 29, 30, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
+        64, 65, 33, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+        81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91,
       ]),
       import.meta.url,
     ),
@@ -33646,6 +34084,24 @@ function _(_, _) {
     );
   return _;
 }
+async function _(_) {
+  try {
+    return await _.fetchQuery(
+      _(
+        _(),
+        {
+          country: _.COUNTRY,
+          language: _.LANGUAGE,
+        },
+        _.accountid,
+        _(_),
+      ),
+    );
+  } catch (_) {
+    console.error(`Failed to load the recommended discounts`, _);
+    return;
+  }
+}
 function _(_, _) {
   return _ ? _.filter((_) => _.ShouldShowOnTab(_)) : _;
 }
@@ -33910,6 +34366,16 @@ async function _(_, _, _, _, _, _, _, _, _, _, _ = 0) {
       bMoreRemaining: !1,
     };
   }
+  if (_ === `discount_reason`)
+    return {
+      capsules: _(_, _(_, await _(_), 1 / 0) ?? [])
+        .slice(0, _)
+        .map((_) => ({
+          _: _,
+          type: `game`,
+        })),
+      bMoreRemaining: !1,
+    };
   if (
     (_ === `deck_compatibility` || _ === `frame_compatibility`) &&
     _.smart_section_data_source === `popularity`
@@ -35620,7 +36086,7 @@ var _ = _(
     }
     GetFlavorsForActiveTab() {
       let { activeTab: _, browseInfo: _ } = this.props,
-        _ = _?.GetActiveTabUniqueID();
+        _ = _?.GetSectionTabUniqueID();
       if (_) {
         let _ = _?.tabs,
           _ = _?.show_flavor_on_sale_tabs;
@@ -36243,7 +36709,7 @@ function _(_) {
     } = _,
     _ = _(),
     [_, _] = _(),
-    _ = _(_.tabs, _, _, _),
+    _ = _(_(_, _), _, _, _),
     _ = _(_),
     _ = _(_, !!_(_));
   _();
@@ -36288,7 +36754,7 @@ var _ = (_) => {
     } = _,
     _ = _(),
     [_, _] = _(),
-    _ = _(_?.tabs, _, _, _);
+    _ = _(_(_, _), _, _, _);
   if (!_ || _.length === 0) return null;
   let _ = _.map((_) => {
     let _ = _?.GetActiveTabUniqueID() === _.unique_id;
@@ -37075,7 +37541,7 @@ var _ = _((_) => {
 function _(_) {
   let _ = Math.floor(Date.now() / 1e3),
     _ = _.GetCalendarEndTime();
-  _ >= _ && (_ = 0);
+  _ !== void 0 && _ >= _ && (_ = 0);
   let _ = _.GetCurrentlyLoadedEventCount(_, _);
   return _.nCount > 0 ? !1 : _.bIsComplete;
 }
@@ -37173,6 +37639,7 @@ var _ = class extends _.Component {
     }
   }
   OnBroadcastSelected(_) {
+    if (!_.steamid) return;
     let _ = this.GetFirstEventWithBroadcaster(_.steamid);
     _ && (_.Get().BIsEventSelected(_) || _.Get().ToggleClanEventGID(_));
   }
@@ -37191,7 +37658,7 @@ var _ = class extends _.Component {
       _ = _.Get().GetStreams(this.props.broadcastEmbedContext),
       _ = this.props.event.jsondata.broadcast_whitelist,
       _ = this.props.event.jsondata.broadcast_priority;
-    for (let _ of _) {
+    for (let _ of _ ?? []) {
       let _ = _.GetOrCreateBroadcastInfo(_?.steamid).m_nAppID,
         _ = _.some((_) => Number(_.appid) === _) ? _.k_eFeatured : _.k_eGeneral;
       if (_?.length) {
@@ -37305,7 +37772,7 @@ var _ = class extends _.Component {
                       _.show_as_demos || _?.BFilterRequiresFeatureDemo(),
                     bPreferDemoStorePage: _.prefer_demo_store_page,
                     bPreferAssetWithoutOverride:
-                      _.prefer_assets_without_overrides,
+                      !!_.prefer_assets_without_overrides,
                     rgFutureCalendarItems:
                       this.cachedUpcomingCalenderEvents.rgCalendarItems
                         .slice()
@@ -37348,15 +37815,11 @@ var _ = _(_),
         ));
     }
     OnEventVisibilityChange(_, _, _, _) {
-      ((this.m_visibleEventGIDs[_] = _(
-        this.m_visibleEventGIDs[_] || [],
-        _ + 1,
-        null,
-      )),
-        (this.m_visibleEventGIDs[_][_] = _ ? _ : null));
+      let _ = _(this.m_visibleEventGIDs[_] || [], _ + 1, null);
+      ((_[_] = _ ? _ : null), (this.m_visibleEventGIDs[_] = _));
       let _ = [];
-      for (let _ of this.m_visibleEventGIDs.filter(Boolean))
-        for (let _ of _.filter(Boolean)) _.push(_);
+      for (let _ of this.m_visibleEventGIDs)
+        if (_) for (let _ of _) _ && _.push(_);
       this.props.fnVisibleEventsChanged(_);
     }
     render() {
@@ -37554,9 +38017,10 @@ var _ = _((_) => {
     children: _.map((_) => {
       let _ = _.GetClanEventModel(_),
         _ = _.find((_) => _.unique_id == _);
-      if (!_) return null;
-      let _ = _(_);
-      return _ && _.Get().GetApp(_)
+      if (!_ || !_) return null;
+      let _ = _(_),
+        _ = _ && _.Get().GetApp(_);
+      return _ && _
         ? (0, _.jsx)(
             _,
             {
@@ -37592,7 +38056,7 @@ function _(_) {
     _ = _(_, `capsule`, _, _.capsule_main);
   return (0, _.jsxs)(`div`, {
     className: _,
-    onClick: () => _.Get().SelectClanEventGID(_.GID),
+    onClick: () => _.GID && _.Get().SelectClanEventGID(_.GID),
     children: [
       (0, _.jsx)(`img`, {
         className: _,
@@ -37611,23 +38075,24 @@ function _(_, _) {
       /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store)\/(app)\/(\d+)/gi,
     _ = _.GetDescriptionWithFallback(_),
     _ = null;
-  for (; (_ = _.exec(_)) !== null;) {
+  for (; (_ = _.exec(_ ?? ``)) !== null;) {
     let _ = Number(_[2]);
     _.includes(_) || _.push(_);
   }
   return _;
 }
 function _(_) {
-  let { eventGID: _ } = _;
-  return !_ || !_.BHasClanEventModel(_)
-    ? null
-    : (0, _.jsx)(_, {
+  let { eventGID: _ } = _,
+    _ = _ && _.GetClanEventModel(_);
+  return _
+    ? (0, _.jsx)(_, {
         ..._,
-      });
+        event: _,
+      })
+    : null;
 }
 function _(_) {
-  let { eventGID: _, bShowDemoButton: _, bPreferDemoStorePage: _ } = _,
-    _ = _.GetClanEventModel(_),
+  let { event: _, bShowDemoButton: _, bPreferDemoStorePage: _ } = _,
     _ = _(_),
     _ = _(_),
     { data: _ } = _(_),
@@ -37751,17 +38216,19 @@ function _(_) {
     children: [
       (0, _.jsx)(`div`, {
         className: _,
-        children: _?.slice(0, 10).map((_) =>
-          (0, _.jsx)(
-            `div`,
-            {
-              className: _,
-              children: (0, _.jsx)(_, {
-                tagid: _.tagid,
-              }),
-            },
-            _.tagid,
-          ),
+        children: _?.slice(0, 10).map(
+          (_) =>
+            _.tagid !== void 0 &&
+            (0, _.jsx)(
+              `div`,
+              {
+                className: `pNXxwljIaD8-`,
+                children: (0, _.jsx)(_, {
+                  tagid: _.tagid,
+                }),
+              },
+              _.tagid,
+            ),
         ),
       }),
       (0, _.jsx)(_, {
@@ -37807,19 +38274,21 @@ var _ = (_) => {
       async (_) => {
         if ((_.preventDefault(), _)) {
           _.preventDefault();
-          let _ = _(_),
-            _ = _.Get()
+          let _ = _(_);
+          if (!_) return;
+          let _ = _.Get()
               .GetStreamsForAppID(_)
               .sort((_, _) => (_.viewer_count || 0) - (_.viewer_count || 0)),
             _ = _.length > 0 ? _[0] : void 0;
           _ &&
-            _.Get().GetPlayReadyStream(_).accountid != _.accountid &&
+            _.Get().GetPlayReadyStream(_)?.accountid != _.accountid &&
             (await _.Get().AttemptToPlayStream(_, _));
         }
       },
       [_, _],
     ),
     _ = _.BIsEventInFuture(),
+    _ = _.startTime,
     _ = _(_.LANGUAGE),
     _ = _(_),
     _ = !!_ && !!_ && !_ && !_.BHasEventEnded() && _.Get().BIsAppStreaming(_);
@@ -37857,13 +38326,15 @@ var _ = (_) => {
                   }),
                   (0, _.jsx)(`div`, {
                     className: _,
-                    children: _
-                      ? _(_.startTime, {
-                          bForce24HourClock: _.bForce24HourClock,
-                        }) +
-                        ` ` +
-                        _(_.startTime)
-                      : _(Date.now() / 1e3 - _.startTime),
+                    children:
+                      _ !== void 0 &&
+                      (_
+                        ? _(_, {
+                            bForce24HourClock: _.bForce24HourClock,
+                          }) +
+                          ` ` +
+                          _(_)
+                        : _(Date.now() / 1e3 - _)),
                   }),
                 ],
               }),

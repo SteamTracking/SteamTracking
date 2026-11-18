@@ -3,15 +3,15 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, dt as n, ft as r, st as i } from "./chunk~01cfc309bf.js";
-import { At as a, Eo as o, go as s, kt as c } from "./chunk~6b8ddcaac8.js";
+import { At as a, Do as o, _o as s, jt as c } from "./chunk~6b8ddcaac8.js";
 import { i as l, t as u } from "./chunk~4c761eb6f4.js";
 import { d, u as f } from "./chunk~8c66e1c7a5.js";
 import { t as p } from "./chunk~f0141d9521.js";
 import { n as ee, r as te } from "./chunk~673650a653.js";
 import { o as m, r as h, t as g } from "./chunk~5adf866415.js";
-import { h as _, p as v } from "./chunk~cbbb6ae37c.js";
-import { t as ne } from "./chunk~f4c928a27a.js";
-import { t as y } from "./chunk~eefd71512b.js";
+import { t as _ } from "./chunk~f4c928a27a.js";
+import { t as v } from "./chunk~eefd71512b.js";
+import { a as y, r as ne } from "./chunk~9871ee5432.js";
 import {
   $ as re,
   B as ie,
@@ -53,20 +53,21 @@ import { a as Me } from "./chunk~d43c81a658.js";
 import { l as Ne } from "./chunk~6cf3fe3e07.js";
 import {
   a as Pe,
-  h as Fe,
-  i as Ie,
-  l as Le,
-  m as Re,
-  n as ze,
-  o as Be,
-  p as Ve,
-  r as He,
-  s as Ue,
-  t as We,
-  u as Ge,
-} from "./chunk~618fb52a90.js";
-import { r as Ke, t as E } from "./chunk~e70aabe4d7.js";
-import { r as qe, t as Je } from "./chunk~ceada343dc.js";
+  c as Fe,
+  d as Ie,
+  g as Le,
+  h as Re,
+  i as ze,
+  m as Be,
+  n as Ve,
+  o as He,
+  r as Ue,
+  s as We,
+  t as Ge,
+  u as Ke,
+} from "./chunk~ceada343dc.js";
+import { r as qe, t as E } from "./chunk~e70aabe4d7.js";
+import { n as Je } from "./chunk~d5ffe2610e.js";
 import { r as Ye } from "./chunk~38061b7abb.js";
 import { m as Xe, n as Ze } from "./chunk~7dcf2f426f.js";
 import { r as Qe } from "./chunk~21cdc464a1.js";
@@ -171,7 +172,7 @@ var Ct = class extends S {
                 break;
               }
           }
-          (i || super.AppendNode(c(r)),
+          (i || super.AppendNode(a(r)),
             (n = e.input.substring(e.index + r.length)),
             (e = this.m_LinkFilter.exec(n)));
         }
@@ -232,7 +233,7 @@ var At = `NiXfRuagfO4-`;
 function jt(e) {
   let { inputType: t, id: n, bApplyUserContentPref: r } = e,
     i = t == `bundle` ? `bundle` : t == `sub` ? `sub` : `game`,
-    a = v(n, i),
+    a = ne(n, i),
     { data: o } = A(a),
     { data: s, isPending: c } = ft(r ? a : void 0);
   if (!o) return null;
@@ -258,7 +259,7 @@ function jt(e) {
   }
   return (0, z.jsx)(`div`, {
     className: I(At, `AppSummaryWidgetCtn`),
-    children: (0, z.jsx)(ne, {
+    children: (0, z.jsx)(_, {
       id: n,
       type: i,
       bShowDemoButton: o.type == 1,
@@ -314,7 +315,7 @@ function Ft(e, t, n, r, i, a, o) {
         }
       }
       if (!o && s.length == 0) {
-        let r = await e.ensureQueryData(Ke(e, t, n));
+        let r = await e.ensureQueryData(qe(e, t, n));
         r && s.push(r);
       }
       return s;
@@ -332,17 +333,17 @@ function It({ clanSteamID: e, strVanity: t, strGroupVanity: n }) {
 }
 function Lt(e) {
   let { appid: t, announcementGID: n, eventGID: r, strURL: i } = e,
-    a = It(e),
-    s = a === null,
+    s = It(e),
+    c = s === null,
     {
       data: l,
       isPending: u,
       isError: d,
-    } = qe(
-      s
+    } = Je(
+      c
         ? void 0
         : {
-            clanAccountID: a ?? void 0,
+            clanAccountID: s ?? void 0,
             appid: t,
             eventGID: r,
             announcementGID: n,
@@ -350,13 +351,13 @@ function Lt(e) {
     ),
     f = o(t || l?.appid || void 0),
     { data: p } = A(f);
-  if (s || d || l === null) return c(i);
-  if (u || !l) return (0, z.jsx)(y, {});
+  if (c || d || l === null) return a(i);
+  if (u || !l) return (0, z.jsx)(v, {});
   let m = L(F.LANGUAGE),
     h = l.GetNameWithFallback(m),
     g = l.GetSubTitleWithSummaryFallback(m),
     _ = p?.name,
-    v = yt(l.GetStartTimeAndDateUnixSeconds());
+    y = yt(l.GetStartTimeAndDateUnixSeconds());
   return (0, z.jsxs)(te, {
     eventModel: l,
     route: ee.k_eView,
@@ -375,7 +376,7 @@ function Lt(e) {
                   : `#EventDisplay_Share_Event`,
                 _ ?? ``,
               ),
-              (0, z.jsx)(ue, { children: v }),
+              (0, z.jsx)(ue, { children: y }),
             ],
           }),
           (0, z.jsx)(T, {
@@ -451,7 +452,7 @@ function Gt(e) {
     { data: r, isLoading: i } = f(n),
     { data: a, isLoading: o } = s(n);
   if (!t) return null;
-  if (!(i || o)) return !a || !r || !Je(e, r) ? null : (a.appids ?? []);
+  if (!(i || o)) return !a || !r || !Ge(e, r) ? null : (a.appids ?? []);
 }
 function Kt(e, t) {
   return e === null || (t.length > 0 && t.every((t) => e.includes(t)));
@@ -465,8 +466,8 @@ function qt(e, t) {
 function Jt({ link: e, strURL: t, eventModel: n, bAnnouncement: r }) {
   let i = qt(e, n);
   if (i === void 0) return null;
-  if (!i) return c(t, n);
-  let a =
+  if (!i) return a(t, n);
+  let o =
     e.strClanSteamID64 === void 0
       ? e.clanAccountID === void 0
         ? void 0
@@ -474,7 +475,7 @@ function Jt({ link: e, strURL: t, eventModel: n, bAnnouncement: r }) {
       : new M(e.strClanSteamID64);
   return (0, z.jsx)(Lt, {
     appid: e.appid,
-    clanSteamID: a,
+    clanSteamID: o,
     strVanity: e.strOGGVanity,
     strGroupVanity: e.strGroupVanity,
     eventGID: r ? void 0 : e.eventGID,
@@ -493,7 +494,7 @@ function J(e, t, n, r = !1) {
         bAnnouncement: r,
       });
   }
-  return c(t, n?.event);
+  return a(t, n?.event);
 }
 function Y(e, t) {
   return J(H, e, t);
@@ -717,7 +718,7 @@ function Dn(e, t) {
         `/?autoplay=0&donate=0` +
         (t && t.event ? `&steamappid=` + t.event.appid : ``);
       return (0, z.jsx)(`iframe`, {
-        className: Ge,
+        className: Ie,
         src: n,
         title: e,
         frameBorder: 0,
@@ -725,7 +726,7 @@ function Dn(e, t) {
       });
     }
   }
-  return c(e, t?.event);
+  return a(e, t?.event);
 }
 function On(e, t) {
   let n = new RegExp(sn).exec(e);
@@ -733,11 +734,11 @@ function On(e, t) {
     let e = n[1];
     if (e && e.length > 1) return (0, z.jsx)(fn, { modelID: e });
   }
-  return c(e, t?.event);
+  return a(e, t?.event);
 }
 function kn(e, t) {
   let n = Qt(e);
-  return n === void 0 ? c(e, t?.event) : (0, z.jsx)($t, { sharedFileID: n });
+  return n === void 0 ? a(e, t?.event) : (0, z.jsx)($t, { sharedFileID: n });
 }
 function An(e, t) {
   let n = Ht(e);
@@ -748,33 +749,33 @@ function An(e, t) {
         inputType: n.strItemType,
         fallbackUrl: e,
       })
-    : c(e, t?.event);
+    : a(e, t?.event);
 }
 function jn(e) {
   let { inputID: t, inputType: n, eventModel: r, fallbackUrl: i } = e,
-    a = _(t, n),
-    { data: o } = A(a),
-    s = Gt(r),
+    o = y(t, n),
+    { data: s } = A(o),
+    c = Gt(r),
     l;
   return (
-    s === null
+    c === null
       ? (l = !0)
-      : s && o && (l = Kt(s, o.appid ? [o.appid] : (o.included_appids ?? []))),
+      : c && s && (l = Kt(c, s.appid ? [s.appid] : (s.included_appids ?? []))),
     l === void 0
       ? null
       : l
         ? (0, z.jsx)(jt, { id: t, inputType: n, bApplyUserContentPref: !0 })
-        : c(i, r)
+        : a(i, r)
   );
 }
 function Mn(e, t) {
   let n = hn(e);
   return n
     ? (0, z.jsx)(`div`, {
-        className: I(Le),
+        className: I(Ke),
         children: (0, z.jsx)(_n, { defid: n, url: e }),
       })
-    : c(e, t?.event);
+    : a(e, t?.event);
 }
 function Nn(e, t) {
   return X() ? null : Z(e, (0, z.jsx)(P, {}), `@`, t);
@@ -790,24 +791,24 @@ function In(e, t) {
 }
 function Z(e, t, n, r) {
   let i,
-    a = e.endsWith(`/`) ? e.length - 1 : e.length,
-    o = e.lastIndexOf(`/`, a - 1);
-  (o != -1 && o + 1 < e.length && (i = e.substring(o + 1, a)),
+    o = e.endsWith(`/`) ? e.length - 1 : e.length,
+    s = e.lastIndexOf(`/`, o - 1);
+  (s != -1 && s + 1 < e.length && (i = e.substring(s + 1, o)),
     n && i && (i = n + i));
-  let s = c(e, r?.event, i ?? e);
+  let c = a(e, r?.event, i ?? e);
   return (0, z.jsxs)(`div`, {
-    className: Fe,
-    children: [(0, z.jsx)(`div`, { className: Re, children: t }), s],
+    className: Le,
+    children: [(0, z.jsx)(`div`, { className: Re, children: t }), c],
   });
 }
 function Ln(e) {
   switch (e) {
     case `button`:
-      return I(Be, `LinkButton`);
+      return I(We, `LinkButton`);
     case `pill`:
-      return I(Ue, `LinkPill`);
+      return I(Fe, `LinkPill`);
     default:
-      return I(Pe, `Link`);
+      return I(He, `Link`);
   }
 }
 function Rn(e, t, n) {
@@ -833,25 +834,25 @@ function Bn(e) {
     n = w(e.args, `style`),
     r = w(e.args, `id`),
     i = B(w(e.args, `buttoncolor`) || w(e.args, `bgcolor`), void 0),
-    o = B(w(e.args, `labelcolor`) || w(e.args, `color`), void 0),
-    s = Ln(n),
-    c = e.context.event,
-    u = l(t, e.language, c?.rtime32_last_modified),
+    a = B(w(e.args, `labelcolor`) || w(e.args, `color`), void 0),
+    o = Ln(n),
+    s = e.context.event,
+    u = l(t, e.language, s?.rtime32_last_modified),
     d = En(zn(e.children, t) ? `` : (t ?? ``));
   if (d && t) return d.fnBBComponent(t, { event: e.context.event });
   if (u === void 0 || u == null) return e.children || ``;
   t = typeof u == `string` ? u : u[1];
-  let f = Rn(n, i, o);
+  let f = Rn(n, i, a);
   return typeof t == `string` && t.length > 0 && t[0] == `#`
-    ? (0, z.jsx)(_t, { className: s, href: t, style: f, children: e.children })
+    ? (0, z.jsx)(_t, { className: o, href: t, style: f, children: e.children })
     : t == `steam://settings/account`
       ? (0, z.jsx)(nt, {
-          className: s,
+          className: o,
           href: `steam://settings/account`,
           children: e.children,
         })
-      : (0, z.jsx)(a, {
-          className: s,
+      : (0, z.jsx)(c, {
+          className: o,
           url: t,
           event: e.context.event,
           id: r,
@@ -949,7 +950,7 @@ function Gn(e) {
         : null
       : l
         ? (0, z.jsx)(Kn, { trailerToPlay: l })
-        : (0, z.jsx)(y, { string: O(`#Loading`), size: `small` })
+        : (0, z.jsx)(v, { string: O(`#Loading`), size: `small` })
   );
 }
 function Kn(e) {
@@ -988,7 +989,7 @@ function qn(e) {
     bLazyRenderChildren: !0,
     screenIsWide: n,
     bAutoAdvance: r,
-    className: Ve,
+    className: Be,
     children: e.children,
   });
 }
@@ -1021,17 +1022,17 @@ function Qn() {
       [`dynamiclink`, { Constructor: Vn, autocloses: !1 }],
       [
         `h1`,
-        { Constructor: C(je, ze), autocloses: !1, skipFollowingNewline: !0 },
+        { Constructor: C(je, Ue), autocloses: !1, skipFollowingNewline: !0 },
       ],
       [
         `h2`,
-        { Constructor: C(Se, He), autocloses: !1, skipFollowingNewline: !0 },
+        { Constructor: C(Se, ze), autocloses: !1, skipFollowingNewline: !0 },
       ],
       [
         `h3`,
-        { Constructor: C(Ae, Ie), autocloses: !1, skipFollowingNewline: !0 },
+        { Constructor: C(Ae, Pe), autocloses: !1, skipFollowingNewline: !0 },
       ],
-      [`quote`, { Constructor: C(oe, We), autocloses: !1 }],
+      [`quote`, { Constructor: C(oe, Ve), autocloses: !1 }],
       [`list`, { Constructor: ae, autocloses: !1, skipInternalNewline: !0 }],
       [`olist`, { Constructor: _e, autocloses: !1, skipInternalNewline: !0 }],
       [`*`, { Constructor: ke, autocloses: !0, skipInternalNewline: !0 }],

@@ -1646,7 +1646,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`SaleItemRewards.ClaimItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.ClaimItem = _;
@@ -1654,7 +1654,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`SaleItemRewards.CanClaimItem#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.CanClaimItem = _;
@@ -1677,7 +1677,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`SaleItemRewards.GetClaimedSaleRewards#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetClaimedSaleRewards = _;
@@ -1686,7 +1686,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetCurrentDefinition = _;

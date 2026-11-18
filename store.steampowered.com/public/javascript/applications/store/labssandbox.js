@@ -1515,7 +1515,7 @@ var $ = e(a(), 1),
       `StoreAppSimilarity.IdentifyClustersFromPlaytime#1`,
       ie(Je, t, n),
       Ye,
-      { ePrivilege: 2, eWebAPIKeyRequirement: 2 },
+      { ePrivilege: 2, eWebAPIKeyRequirement: 2, rgBrowserAPISites: [`store`] },
     );
   }
   e.IdentifyClustersFromPlaytime = n;

@@ -280,73 +280,73 @@ import {
   l as d,
   rt as f,
   sn as p,
-  vt as m,
-  z as h,
+  vt as ee,
+  z as m,
 } from "./chunk~de7f2df91c.js";
 /* empty css                                     */ import {
-  A as g,
-  C as _,
-  F as v,
-  M as ee,
-  N as y,
-  Ot as b,
-  Pt as x,
-  ct as S,
-  j as C,
-  p as w,
-  r as T,
+  A as h,
+  C as te,
+  F as g,
+  M as ne,
+  N as _,
+  Ot as v,
+  Pt as y,
+  ct as b,
+  j as x,
+  p as S,
+  r as C,
 } from "./chunk~25a6634263.js";
 import {
-  E,
-  Ea as D,
-  Ha as O,
-  Hn as k,
-  Mt as te,
-  Ua as ne,
-  Va as re,
-  Ya as A,
-  _ as ie,
-  a as ae,
-  aa as oe,
-  an as se,
-  c as ce,
-  fn as le,
-  g as ue,
-  h as de,
-  ia as fe,
-  ka as pe,
-  la as j,
-  t as me,
-  tn as he,
-  ua as M,
-  w as ge,
-  y as _e,
-  zt as ve,
+  Aa as w,
+  Bt as T,
+  Da as E,
+  E as D,
+  Ha as re,
+  Nt as ie,
+  Ua as ae,
+  Un as oe,
+  Wa as se,
+  Xa as O,
+  _ as ce,
+  a as le,
+  aa as ue,
+  c as de,
+  da as k,
+  g as fe,
+  h as pe,
+  nn as me,
+  oa as he,
+  on as ge,
+  pn as _e,
+  t as ve,
+  ua as A,
+  w as ye,
+  y as be,
 } from "./chunk~1fa4b8f2ff.js";
-import { t as ye } from "./chunk~0a99e05c44.js";
-import { O as be, a as xe, r as N, w as Se } from "./chunk~44f252525d.js";
-import { t as Ce } from "./chunk~f8b6a4beb3.js";
-import { n as we } from "./chunk~9aa05d2c7d.js";
-import { t as Te } from "./chunk~6257ebd2d4.js";
-import { i as P, r as Ee, t as De } from "./chunk~9fc22a4638.js";
-import { t as Oe } from "./chunk~b0a84aab1b.js";
-import { i as ke, t as Ae } from "./chunk~43407e91ef.js";
-import { t as F } from "./chunk~726542bc75.js";
-import { i as je, r as Me, t as Ne } from "./chunk~f7fdc3d084.js";
-import { n as Pe, t as Fe } from "./chunk~a292304e38.js";
-import { t as Ie } from "./chunk~ecf04667fe.js";
-import { r as Le } from "./chunk~8681f5c764.js";
-import { t as Re } from "./chunk~f4e4ed5c17.js";
-import { r as ze } from "./chunk~af36c62e9f.js";
-import { n as Be, r as Ve, t as He } from "./chunk~70c16cc80c.js";
-import { n as Ue, t as We } from "./chunk~95ecbf576c.js";
-import { t as Ge } from "./chunk~5c6be4668b.js";
-/* empty css                                     */ import { t as Ke } from "./chunk~14243866ee.js";
-import { t as qe } from "./chunk~59af5622dd.js";
-import { t as I } from "./chunk~234d4d786c.js";
-import { t as Je } from "./chunk~58c6c52d52.js";
-import { i as Ye, o as Xe } from "./chunk~6446a0f79a.js";
-var L = (e, t, n) => {
+import { t as xe } from "./chunk~0a99e05c44.js";
+import { O as Se, a as Ce, r as j, w as we } from "./chunk~44f252525d.js";
+import { t as Te } from "./chunk~f8b6a4beb3.js";
+import { n as Ee } from "./chunk~9aa05d2c7d.js";
+import { t as De } from "./chunk~6257ebd2d4.js";
+import { i as M, r as Oe, t as ke } from "./chunk~9fc22a4638.js";
+import { t as Ae } from "./chunk~b0a84aab1b.js";
+import { i as je, t as Me } from "./chunk~43407e91ef.js";
+import { t as N } from "./chunk~726542bc75.js";
+import { i as Ne, r as P, t as Pe } from "./chunk~f7fdc3d084.js";
+import { n as Fe, t as Ie } from "./chunk~a292304e38.js";
+import { t as Le } from "./chunk~ecf04667fe.js";
+import { r as Re } from "./chunk~8681f5c764.js";
+import { t as ze } from "./chunk~f4e4ed5c17.js";
+import { r as Be } from "./chunk~af36c62e9f.js";
+import { n as Ve, r as He, t as Ue } from "./chunk~70c16cc80c.js";
+import { n as We, t as Ge } from "./chunk~95ecbf576c.js";
+import { t as Ke } from "./chunk~5c6be4668b.js";
+/* empty css                                     */ import { t as qe } from "./chunk~14243866ee.js";
+import { t as Je } from "./chunk~59af5622dd.js";
+import { t as F } from "./chunk~234d4d786c.js";
+import { t as Ye } from "./chunk~58c6c52d52.js";
+import { i as Xe, o as Ze } from "./chunk~6446a0f79a.js";
+var I = (e, t, n) => {
   let r = t.lastIndexOf(`?`),
     i = e[r === -1 || r < t.lastIndexOf(`/`) ? t : t.slice(0, r)];
   return i
@@ -375,22 +375,22 @@ var L = (e, t, n) => {
     ),
   Array.from(new Set([123]))[0] !== 123 &&
     console.error(`Should not include prototypejs.`));
-var Ze = p(x(), 1),
-  Qe = `_7u8JcHTlx8M-`,
-  $e = `KWtRH19ERaI-`,
-  R = p(t(), 1),
-  z = m(),
-  et = (0, R.createContext)({}),
-  tt = (0, R.createContext)(() => {});
+var Qe = p(y(), 1),
+  $e = `_7u8JcHTlx8M-`,
+  et = `KWtRH19ERaI-`,
+  L = p(t(), 1),
+  R = ee(),
+  z = (0, L.createContext)({}),
+  tt = (0, L.createContext)(() => {});
 function nt(e) {
-  let [t, n] = (0, R.useState)({});
-  return (0, z.jsx)(et.Provider, {
+  let [t, n] = (0, L.useState)({});
+  return (0, R.jsx)(z.Provider, {
     value: t,
-    children: (0, z.jsx)(tt.Provider, { value: n, children: e.children }),
+    children: (0, R.jsx)(tt.Provider, { value: n, children: e.children }),
   });
 }
 function rt() {
-  return (0, R.useContext)(et);
+  return (0, L.useContext)(z);
 }
 var it = [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`],
   at = [`title`, `subtitle`, `body`, `description`, `note`];
@@ -409,67 +409,67 @@ function ot(e) {
       breakpoints: d,
       variants: f,
       popoverPresentation: p,
-      spacing: m,
-      radius: h,
-      textSizes: g,
-      defaultTextSize: _,
-      controlHeights: v,
-      controlRadius: ee,
-      controlSize: y,
+      spacing: ee,
+      radius: m,
+      textSizes: h,
+      defaultTextSize: te,
+      controlHeights: g,
+      controlRadius: ne,
+      controlSize: _,
     } = e,
-    b = { display: `contents` },
-    x = (0, R.use)(st),
-    S = ct(
-      b,
+    v = { display: `contents` },
+    y = (0, L.use)(B),
+    b = st(
+      v,
       {
-        spacing: m,
-        radius: h,
-        textSizes: g,
-        defaultTextSize: _,
-        controlHeights: v,
-        controlRadius: ee,
+        spacing: ee,
+        radius: m,
+        textSizes: h,
+        defaultTextSize: te,
+        controlHeights: g,
+        controlRadius: ne,
       },
-      x,
+      y,
     ),
-    { defaultTextSize: C, controlRadius: w } = S,
-    T = (0, R.useMemo)(
-      () => ({ defaultTextSize: C, controlRadius: w }),
-      [C, w],
+    { defaultTextSize: x, controlRadius: S } = b,
+    C = (0, L.useMemo)(
+      () => ({ defaultTextSize: x, controlRadius: S }),
+      [x, S],
     ),
-    E;
-  typeof t == `string` ? (E = t) : t && B(b, `accent`, t);
-  let D;
-  typeof n == `string` ? (D = n) : n && B(b, `dull`, n);
-  let O;
-  (typeof r == `string` ? (O = r) : r && V(b, `body`, r),
-    i && B(b, `success`, i),
-    a && B(b, `warning`, a),
-    o && B(b, `error`, o),
-    s && V(b, `success`, s),
-    c && V(b, `warning`, c),
-    l && V(b, `error`, l));
-  let k = (0, z.jsx)(Pe, {
+    w;
+  typeof t == `string` ? (w = t) : t && V(v, `accent`, t);
+  let T;
+  typeof n == `string` ? (T = n) : n && V(v, `dull`, n);
+  let E;
+  (typeof r == `string` ? (E = r) : r && H(v, `body`, r),
+    i && V(v, `success`, i),
+    a && V(v, `warning`, a),
+    o && V(v, `error`, o),
+    s && H(v, `success`, s),
+    c && H(v, `warning`, c),
+    l && H(v, `error`, l));
+  let D = (0, R.jsx)(Fe, {
     variants: f,
-    children: (0, z.jsx)(`div`, {
-      "data-accent-color": E,
-      "data-dull-color": D,
-      "data-body-text-color": O,
-      style: b,
-      children: (0, z.jsx)(`div`, {
+    children: (0, R.jsx)(`div`, {
+      "data-accent-color": w,
+      "data-dull-color": T,
+      "data-body-text-color": E,
+      style: v,
+      children: (0, R.jsx)(`div`, {
         style: { display: `contents`, color: `var(--color-text-body-body)` },
         children: u,
       }),
     }),
   });
   return (
-    S !== x && (k = (0, z.jsx)(st, { value: T, children: k })),
-    y && (k = (0, z.jsx)(Fe, { size: y, children: k })),
-    p && (k = (0, z.jsx)(Ie, { presentation: p, children: k })),
-    d ? (0, z.jsx)(Me, { breakpoints: d, children: k }) : k
+    b !== y && (D = (0, R.jsx)(B, { value: C, children: D })),
+    _ && (D = (0, R.jsx)(Ie, { size: _, children: D })),
+    p && (D = (0, R.jsx)(Le, { presentation: p, children: D })),
+    d ? (0, R.jsx)(P, { breakpoints: d, children: D }) : D
   );
 }
-var st = (0, R.createContext)({ defaultTextSize: `3`, controlRadius: `sm` });
-function ct(e, t, n) {
+var B = (0, L.createContext)({ defaultTextSize: `3`, controlRadius: `sm` });
+function st(e, t, n) {
   let { spacing: r, radius: i, textSizes: a, controlHeights: o } = t,
     s = t.defaultTextSize ?? n.defaultTextSize,
     c = t.controlRadius ?? n.controlRadius;
@@ -490,7 +490,7 @@ function ct(e, t, n) {
     ((e[`--default-font-size`] = `var(--text-size-${s})`),
     (e[`--default-line-height`] = `var(--line-height-${s})`),
     (e[`--default-letter-spacing`] = `var(--letter-spacing-${s})`));
-  let l = Ne(c);
+  let l = Pe(c);
   return (
     (t.controlRadius || (l && i?.[c])) &&
       (e[`--control-radius`] = l ? `var(--radius-${c})` : c),
@@ -499,17 +499,17 @@ function ct(e, t, n) {
       : { defaultTextSize: s, controlRadius: c }
   );
 }
-function B(e, t, n) {
+function V(e, t, n) {
   if (typeof n == `string`)
     for (let r of it) e[`--color-${t}-${r}`] = `var(--color-${n}-${r})`;
   else for (let [r, i] of Object.entries(n)) e[`--color-${t}-${r}`] = i;
 }
-function V(e, t, n) {
+function H(e, t, n) {
   if (typeof n == `string`)
     for (let r of at) e[`--color-text-${t}-${r}`] = `var(--color-${n}-${r})`;
   else for (let [r, i] of Object.entries(n)) e[`--color-text-${t}-${r}`] = i;
 }
-var lt = R.memo(function (e) {
+var ct = L.memo(function (e) {
   let {
       accentColor: t = `blue`,
       dullColor: n = `greyneutral`,
@@ -524,21 +524,21 @@ var lt = R.memo(function (e) {
       variants: d,
       popoverPresentation: f,
       children: p,
-      zoo: m,
-      ...h
+      zoo: ee,
+      ...m
     } = e,
-    g = R.useRef(null);
+    h = L.useRef(null);
   return (
-    ut(g, t, n, o),
-    (0, z.jsx)(nt, {
-      children: (0, z.jsx)(Me, {
+    lt(h, t, n, o),
+    (0, R.jsx)(nt, {
+      children: (0, R.jsx)(P, {
         breakpoints: u,
-        children: (0, z.jsx)(dt, {
-          children: (0, z.jsx)(`div`, {
-            ref: g,
-            className: (0, Ze.default)($e, `noOpinionatedGlobalStyles`),
-            children: (0, z.jsxs)(ot, {
-              ...h,
+        children: (0, R.jsx)(ut, {
+          children: (0, R.jsx)(`div`, {
+            ref: h,
+            className: (0, Qe.default)(et, `noOpinionatedGlobalStyles`),
+            children: (0, R.jsxs)(ot, {
+              ...m,
               accentColor: t,
               dullColor: n,
               successColor: r,
@@ -558,8 +558,8 @@ var lt = R.memo(function (e) {
     })
   );
 });
-function ut(e, t, n, r) {
-  R.useLayoutEffect(() => {
+function lt(e, t, n, r) {
+  L.useLayoutEffect(() => {
     let i = e.current?.ownerDocument.documentElement;
     if (!i) return;
     let a = [],
@@ -578,122 +578,122 @@ function ut(e, t, n, r) {
     );
   }, [e, t, n, r]);
 }
-function dt(e) {
+function ut(e) {
   let { children: t } = e,
     { formFactorOverride: n } = rt();
-  return (0, z.jsx)(je, { formFactor: n, children: t });
+  return (0, R.jsx)(Ne, { formFactor: n, children: t });
 }
-var ft = `zFLaTiNrHiA-`,
-  pt = `AqiNZa8VC60-`,
-  mt = `_8tMz3xKeNAs-`,
-  ht = `tHNWhS0YeUA-`,
-  gt = `ifygCy-3uNI-`,
-  _t = `_8oIJtH-J0JA-`,
-  vt = `Kignul3K9OE-`,
-  yt = `iMDvo-zOOqs-`,
-  bt = `_0mS7Tngyoow-`,
-  xt = `eSqLQD-aPaE-`,
-  St = `e86kqPhqfq4-`,
-  Ct = `vCYbRpq2iJQ-`,
-  wt = (e) =>
-    (0, z.jsxs)(z.Fragment, {
+var dt = `zFLaTiNrHiA-`,
+  ft = `AqiNZa8VC60-`,
+  pt = `_8tMz3xKeNAs-`,
+  mt = `tHNWhS0YeUA-`,
+  ht = `ifygCy-3uNI-`,
+  gt = `_8oIJtH-J0JA-`,
+  _t = `Kignul3K9OE-`,
+  vt = `iMDvo-zOOqs-`,
+  yt = `_0mS7Tngyoow-`,
+  bt = `eSqLQD-aPaE-`,
+  xt = `e86kqPhqfq4-`,
+  St = `vCYbRpq2iJQ-`,
+  Ct = (e) =>
+    (0, R.jsxs)(R.Fragment, {
       children: [
-        (0, z.jsx)(Tt, {}),
-        (0, z.jsx)(`div`, {
+        (0, R.jsx)(wt, {}),
+        (0, R.jsx)(`div`, {
           className: `agenda_title`,
-          children: M(`#SteamworksEvents_BuildingCommunity_Speakers`),
+          children: k(`#SteamworksEvents_BuildingCommunity_Speakers`),
         }),
-        (0, z.jsx)(Et, {}),
+        (0, R.jsx)(Tt, {}),
       ],
     }),
-  H = (e) =>
-    (0, z.jsxs)(`div`, {
-      className: ft,
+  U = (e) =>
+    (0, R.jsxs)(`div`, {
+      className: dt,
       children: [
-        (0, z.jsx)(`div`, {
-          className: mt,
-          children: (0, z.jsx)(`img`, {
-            className: ht,
+        (0, R.jsx)(`div`, {
+          className: pt,
+          children: (0, R.jsx)(`img`, {
+            className: mt,
             src: f.COMMUNITY_CDN_ASSET_URL + e.screenshot,
           }),
         }),
-        (0, z.jsxs)(`div`, {
-          className: gt,
+        (0, R.jsxs)(`div`, {
+          className: ht,
           children: [
-            (0, z.jsxs)(`div`, {
-              className: _t,
+            (0, R.jsxs)(`div`, {
+              className: gt,
               children: [
-                (0, z.jsx)(`div`, {
+                (0, R.jsx)(`div`, {
                   className: void 0,
                   children: e.strSpeakers,
                 }),
-                (0, z.jsx)(`div`, { className: void 0, children: e.strTime }),
-                (0, z.jsx)(`div`, { className: vt, children: e.strTitle }),
+                (0, R.jsx)(`div`, { className: void 0, children: e.strTime }),
+                (0, R.jsx)(`div`, { className: _t, children: e.strTitle }),
               ],
             }),
-            (0, z.jsx)(`div`, { className: yt, children: e.strDesc }),
+            (0, R.jsx)(`div`, { className: vt, children: e.strDesc }),
           ],
         }),
       ],
     }),
-  Tt = (e) =>
-    (0, z.jsx)(`div`, {
+  wt = (e) =>
+    (0, R.jsx)(`div`, {
       className: void 0,
-      children: (0, z.jsxs)(ke, {
+      children: (0, R.jsxs)(je, {
         hideArrows: !1,
         visibleElements: 1,
         useTestScrollbar: !1,
         bLazyRenderChildren: !1,
         disableEdgeWrap: !1,
-        className: l(pt),
+        className: l(ft),
         children: [
-          (0, z.jsx)(
-            H,
+          (0, R.jsx)(
+            U,
             {
-              strDesc: M(`#SteamworksEvents_BuildingCommunity_Session1_Desc`),
+              strDesc: k(`#SteamworksEvents_BuildingCommunity_Session1_Desc`),
               screenshot: `steamworksevents/screenshot_gautam.png`,
-              strTime: M(`#SteamworksEvents_BuildingCommunity_Session1_Time`),
-              strTitle: M(`#SteamworksEvents_BuildingCommunity_Session1_Title`),
-              strSpeakers: M(
+              strTime: k(`#SteamworksEvents_BuildingCommunity_Session1_Time`),
+              strTitle: k(`#SteamworksEvents_BuildingCommunity_Session1_Title`),
+              strSpeakers: k(
                 `#SteamworksEvents_BuildingCommunity_Session1_Speakers`,
               ),
             },
             1,
           ),
-          (0, z.jsx)(
-            H,
+          (0, R.jsx)(
+            U,
             {
-              strDesc: M(`#SteamworksEvents_BuildingCommunity_Session2_Desc`),
+              strDesc: k(`#SteamworksEvents_BuildingCommunity_Session2_Desc`),
               screenshot: `steamworksevents/screenshot_alden_and_adil.png`,
-              strTime: M(`#SteamworksEvents_BuildingCommunity_Session2_Time`),
-              strTitle: M(`#SteamworksEvents_BuildingCommunity_Session2_Title`),
-              strSpeakers: M(
+              strTime: k(`#SteamworksEvents_BuildingCommunity_Session2_Time`),
+              strTitle: k(`#SteamworksEvents_BuildingCommunity_Session2_Title`),
+              strSpeakers: k(
                 `#SteamworksEvents_BuildingCommunity_Session2_Speakers`,
               ),
             },
             2,
           ),
-          (0, z.jsx)(
-            H,
+          (0, R.jsx)(
+            U,
             {
-              strDesc: M(`#SteamworksEvents_BuildingCommunity_Session3_Desc`),
+              strDesc: k(`#SteamworksEvents_BuildingCommunity_Session3_Desc`),
               screenshot: `steamworksevents/screenshot_jenny.png`,
-              strTime: M(`#SteamworksEvents_BuildingCommunity_Session3_Time`),
-              strTitle: M(`#SteamworksEvents_BuildingCommunity_Session3_Title`),
-              strSpeakers: M(
+              strTime: k(`#SteamworksEvents_BuildingCommunity_Session3_Time`),
+              strTitle: k(`#SteamworksEvents_BuildingCommunity_Session3_Title`),
+              strSpeakers: k(
                 `#SteamworksEvents_BuildingCommunity_Session3_Speakers`,
               ),
             },
             3,
           ),
-          (0, z.jsx)(
-            H,
+          (0, R.jsx)(
+            U,
             {
-              strDesc: M(`#SteamworksEvents_BuildingCommunity_Session4_Desc`),
+              strDesc: k(`#SteamworksEvents_BuildingCommunity_Session4_Desc`),
               screenshot: `steamworksevents/screenshot_joe.png`,
-              strTime: M(`#SteamworksEvents_BuildingCommunity_Session4_Time`),
-              strTitle: M(`#SteamworksEvents_BuildingCommunity_Session4_Title`),
-              strSpeakers: M(
+              strTime: k(`#SteamworksEvents_BuildingCommunity_Session4_Time`),
+              strTitle: k(`#SteamworksEvents_BuildingCommunity_Session4_Title`),
+              strSpeakers: k(
                 `#SteamworksEvents_BuildingCommunity_Session4_Speakers`,
               ),
             },
@@ -702,87 +702,87 @@ var ft = `zFLaTiNrHiA-`,
         ],
       }),
     }),
-  U = (e) =>
-    (0, z.jsxs)(`div`, {
-      className: xt,
+  W = (e) =>
+    (0, R.jsxs)(`div`, {
+      className: bt,
       children: [
-        (0, z.jsx)(`img`, {
+        (0, R.jsx)(`img`, {
           title: e.strTitle,
           src: f.COMMUNITY_CDN_ASSET_URL + e.imgHeadshot,
         }),
-        (0, z.jsxs)(`div`, {
-          className: St,
+        (0, R.jsxs)(`div`, {
+          className: xt,
           children: [
-            (0, z.jsx)(`div`, { className: Ct, children: e.strTitle }),
+            (0, R.jsx)(`div`, { className: St, children: e.strTitle }),
             e.strBio,
           ],
         }),
       ],
     }),
-  Et = (e) =>
-    (0, z.jsxs)(`div`, {
-      className: bt,
+  Tt = (e) =>
+    (0, R.jsxs)(`div`, {
+      className: yt,
       children: [
-        (0, z.jsx)(U, {
+        (0, R.jsx)(W, {
           imgHeadshot: `steamworksevents/gautam_headshot.png`,
-          strTitle: M(`#SteamworksEvents_BuildingCommunity_GautamTitle`),
-          strBio: M(`#SteamworksEvents_BuildingCommunity_Gautam`),
+          strTitle: k(`#SteamworksEvents_BuildingCommunity_GautamTitle`),
+          strBio: k(`#SteamworksEvents_BuildingCommunity_Gautam`),
         }),
-        (0, z.jsx)(U, {
+        (0, R.jsx)(W, {
           imgHeadshot: `steamworksevents/alden_headshot.png`,
-          strTitle: M(`#SteamworksEvents_BuildingCommunity_AldenTitle`),
-          strBio: M(`#SteamworksEvents_BuildingCommunity_Alden`),
+          strTitle: k(`#SteamworksEvents_BuildingCommunity_AldenTitle`),
+          strBio: k(`#SteamworksEvents_BuildingCommunity_Alden`),
         }),
-        (0, z.jsx)(U, {
+        (0, R.jsx)(W, {
           imgHeadshot: `steamworksevents/adil_headshot.png`,
-          strTitle: M(`#SteamworksEvents_BuildingCommunity_AdilTitle`),
-          strBio: M(`#SteamworksEvents_BuildingCommunity_Adil`),
+          strTitle: k(`#SteamworksEvents_BuildingCommunity_AdilTitle`),
+          strBio: k(`#SteamworksEvents_BuildingCommunity_Adil`),
         }),
-        (0, z.jsx)(U, {
+        (0, R.jsx)(W, {
           imgHeadshot: `steamworksevents/jenny_headshot.png`,
-          strTitle: M(`#SteamworksEvents_BuildingCommunity_JennyTitle`),
-          strBio: M(`#SteamworksEvents_BuildingCommunity_Jenny`),
+          strTitle: k(`#SteamworksEvents_BuildingCommunity_JennyTitle`),
+          strBio: k(`#SteamworksEvents_BuildingCommunity_Jenny`),
         }),
-        (0, z.jsx)(U, {
+        (0, R.jsx)(W, {
           imgHeadshot: `steamworksevents/joe_headshot.png`,
-          strTitle: M(`#SteamworksEvents_BuildingCommunity_JoeTitle`),
-          strBio: M(`#SteamworksEvents_BuildingCommunity_Joe`),
+          strTitle: k(`#SteamworksEvents_BuildingCommunity_JoeTitle`),
+          strBio: k(`#SteamworksEvents_BuildingCommunity_Joe`),
         }),
       ],
     }),
-  Dt = c({
-    Arrow: () => Gt,
-    BasicContextMenuContainer: () => q,
-    BasicContextMenuHeader: () => G,
-    BasicContextMenuHeaderShrinkableSpacing: () => K,
-    BasicContextMenuModal: () => W,
+  Et = c({
+    Arrow: () => Y,
+    BasicContextMenuContainer: () => J,
+    BasicContextMenuHeader: () => K,
+    BasicContextMenuHeaderShrinkableSpacing: () => q,
+    BasicContextMenuModal: () => G,
     Capitalized: () => Bt,
-    ContextMenuSeparator: () => Ut,
+    ContextMenuSeparator: () => Wt,
     Destructive: () => Pt,
     Emphasis: () => It,
     Focused: () => zt,
-    Label: () => Wt,
+    Label: () => Gt,
     MenuSectionHeader: () => Vt,
     Positive: () => Ft,
     Selected: () => Rt,
-    SubMenu: () => Ht,
-    UpperCase: () => Y,
+    SubMenu: () => Ut,
+    UpperCase: () => Ht,
     active: () => Lt,
     contextMenu: () => kt,
     contextMenuContents: () => At,
     contextMenuFade: () => Mt,
     contextMenuItem: () => Nt,
     default: () => Kt,
-    "duration-app-launch": () => Ot,
+    "duration-app-launch": () => Dt,
     hasSubMenu: () => jt,
-    slideInAnimation: () => J,
+    slideInAnimation: () => Ot,
   }),
-  Ot = `800ms`,
-  W = `_8DByIe8Ea8E-`,
-  G = `q3pFgCOI2yI-`,
-  K = `QHsAQy5yu8A-`,
-  q = `MTKb4J7AMgY-`,
-  J = `poBGSvpOAGo-`,
+  Dt = `800ms`,
+  G = `_8DByIe8Ea8E-`,
+  K = `q3pFgCOI2yI-`,
+  q = `QHsAQy5yu8A-`,
+  J = `MTKb4J7AMgY-`,
+  Ot = `poBGSvpOAGo-`,
   kt = `tWKaLgB0owM-`,
   At = `OFr-eEHnljA-`,
   jt = `AjGNGR6Osiw-`,
@@ -796,18 +796,18 @@ var ft = `zFLaTiNrHiA-`,
   zt = `I9gEZvVo2Eg-`,
   Bt = `DcYAZDy2pgM-`,
   Vt = `lTpANgOhAS0-`,
-  Y = `_6v6Y4gGN8Zc-`,
-  Ht = `jz-34Yr9NBQ-`,
-  Ut = `kn3J3BWkqGc-`,
-  Wt = `u3qomCoD6qk-`,
-  Gt = `DhXuCxvuF58-`,
+  Ht = `_6v6Y4gGN8Zc-`,
+  Ut = `jz-34Yr9NBQ-`,
+  Wt = `kn3J3BWkqGc-`,
+  Gt = `u3qomCoD6qk-`,
+  Y = `DhXuCxvuF58-`,
   Kt = {
     "duration-app-launch": `800ms`,
-    BasicContextMenuModal: W,
-    BasicContextMenuHeader: G,
-    BasicContextMenuHeaderShrinkableSpacing: K,
-    BasicContextMenuContainer: q,
-    slideInAnimation: J,
+    BasicContextMenuModal: G,
+    BasicContextMenuHeader: K,
+    BasicContextMenuHeaderShrinkableSpacing: q,
+    BasicContextMenuContainer: J,
+    slideInAnimation: Ot,
     contextMenu: kt,
     contextMenuContents: At,
     hasSubMenu: jt,
@@ -821,58 +821,58 @@ var ft = `zFLaTiNrHiA-`,
     Focused: zt,
     Capitalized: Bt,
     MenuSectionHeader: Vt,
-    UpperCase: Y,
-    SubMenu: Ht,
-    ContextMenuSeparator: Ut,
-    Label: Wt,
-    Arrow: Gt,
+    UpperCase: Ht,
+    SubMenu: Ut,
+    ContextMenuSeparator: Wt,
+    Label: Gt,
+    Arrow: Y,
   };
 function qt(e) {
   let { managerOverride: t } = e,
-    n = ge(),
+    n = ye(),
     r = t ?? n,
-    i = y();
+    i = _();
   return (
-    ee(r.OnMenusChanged, i),
-    (0, z.jsx)(Le, {
+    ne(r.OnMenusChanged, i),
+    (0, R.jsx)(Re, {
       active: !!r.ActiveMenu,
-      children: (0, z.jsx)(Jt, { ActiveMenu: r.ActiveMenu }),
+      children: (0, R.jsx)(Jt, { ActiveMenu: r.ActiveMenu }),
     })
   );
 }
 function Jt(e) {
   let { ActiveMenu: t } = e,
-    n = R.useCallback(() => {
+    n = L.useCallback(() => {
       t?.OnCancel();
     }, [t]);
-  R.useEffect(() => () => t?.Hide(), [t]);
+  L.useEffect(() => () => t?.Hide(), [t]);
   let r = [],
     i = null;
-  Se(() => {
+  we(() => {
     for (let e = t; e && e.visible; e = e.submenu)
-      (r.push((0, z.jsx)(Yt, { instance: e }, e.key)), (i = e.label));
+      (r.push((0, R.jsx)(Yt, { instance: e }, e.key)), (i = e.label));
   });
-  let a = R.useCallback(
+  let a = L.useCallback(
     (e) => {
       e.currentTarget == e.target && n();
     },
     [n],
   );
-  return (0, z.jsx)(ue, {
+  return (0, R.jsx)(fe, {
     padding: `none`,
-    children: (0, z.jsxs)(`div`, {
+    children: (0, R.jsxs)(`div`, {
       onClick: a,
-      className: l(`BasicUIContextMenu`, W),
+      className: l(`BasicUIContextMenu`, G),
       children: [
         i &&
-          (0, z.jsx)(z.Fragment, {
-            children: (0, z.jsx)(`div`, {
+          (0, R.jsx)(R.Fragment, {
+            children: (0, R.jsx)(`div`, {
               className: `q3pFgCOI2yI-`,
               children: i,
             }),
           }),
-        (0, z.jsx)(O, {
-          className: q,
+        (0, R.jsx)(ae, {
+          className: J,
           onCancelButton: n,
           onClick: a,
           children: r,
@@ -883,25 +883,25 @@ function Jt(e) {
 }
 function Yt(e) {
   let { instance: t } = e,
-    n = h(),
-    r = R.useCallback(() => {
-      n && g.PlayNavSound(C.FailedNav);
+    n = m(),
+    r = L.useCallback(() => {
+      n && h.PlayNavSound(x.FailedNav);
     }, [n]),
-    i = R.useMemo(
+    i = L.useMemo(
       () => ({
         instance: t,
-        styles: Dt,
+        styles: Et,
         presentation: 1,
         callbacks: { onDisabledItemSelected: r },
       }),
       [t, r],
     );
-  return (0, z.jsx)(T, {
-    children: (0, z.jsx)(k.Provider, { value: i, children: t.ReactElement }),
+  return (0, R.jsx)(C, {
+    children: (0, R.jsx)(oe.Provider, { value: i, children: t.ReactElement }),
   });
 }
 function Xt() {
-  return R.useMemo(() => Zt(), []);
+  return L.useMemo(() => Zt(), []);
 }
 function Zt() {
   return function (e) {
@@ -912,10 +912,10 @@ function Zt() {
         children: i,
         modalKey: a,
       } = e,
-      o = R.useRef(void 0);
-    w(o, r, !0);
-    let s = b(o, t);
-    return (0, z.jsx)(_, {
+      o = L.useRef(void 0);
+    S(o, r, !0);
+    let s = v(o, t);
+    return (0, R.jsx)(te, {
       className: n,
       navTreeRef: s,
       modal: !0,
@@ -933,25 +933,25 @@ function Qt(e) {
       bGamepadUIScrollWithin: i,
       children: a,
     } = e,
-    o = l(E, r == `standard` && `S9g96mcfmi4-`, i && `_3voolpCtr6w-`, t);
-  return (0, z.jsx)(O, {
+    o = l(D, r == `standard` && `S9g96mcfmi4-`, i && `_3voolpCtr6w-`, t);
+  return (0, R.jsx)(ae, {
     className: o,
     onCancelButton: n,
     focusableIfEmpty: !0,
-    children: (0, z.jsx)(ne, { children: (0, z.jsx)(T, { children: a }) }),
+    children: (0, R.jsx)(se, { children: (0, R.jsx)(C, { children: a }) }),
   });
 }
 function $t(e) {
-  let t = R.useMemo(() => ({ ModalPosition: Qt }), []);
-  return (0, z.jsx)(ie.Provider, { value: t, children: e.children });
+  let t = L.useMemo(() => ({ ModalPosition: Qt }), []);
+  return (0, R.jsx)(ce.Provider, { value: t, children: e.children });
 }
 function en(e) {
   let t = Xt(),
-    n = R.useMemo(() => ({ DropDownMenu: ce, Content: me }), []);
-  return (0, z.jsx)(le.Provider, {
+    n = L.useMemo(() => ({ DropDownMenu: de, Content: ve }), []);
+  return (0, R.jsx)(_e.Provider, {
     value: n,
-    children: (0, z.jsx)($t, {
-      children: (0, z.jsx)(_e, {
+    children: (0, R.jsx)($t, {
+      children: (0, R.jsx)(be, {
         ...e,
         bUseDialogElement: !1,
         DialogWrapper: t,
@@ -961,17 +961,17 @@ function en(e) {
   });
 }
 function tn(e) {
-  let t = h(),
+  let t = m(),
     n = { bRenderOverlayAtRoot: !0, bUsePopups: !1, ...e };
-  return t ? (0, z.jsx)(en, { ...n }) : (0, z.jsx)(_e, { ...n });
+  return t ? (0, R.jsx)(en, { ...n }) : (0, R.jsx)(be, { ...n });
 }
-var nn = p(Re()),
+var nn = p(ze()),
   rn = `NRLdpp5SW8Q-`,
   an = `XWkt0fWtpXM-`,
   on = `_05insej4ZsY-`,
   sn = `BfhwqcpG0-8-`;
 function cn() {
-  let [t] = (0, R.useState)(() => e(`rgPackageInfo`, `application_config`));
+  let [t] = (0, L.useState)(() => e(`rgPackageInfo`, `application_config`));
   return t;
 }
 async function ln(e, t) {
@@ -981,10 +981,10 @@ async function ln(e, t) {
     i = await nn.default.post(r, n);
   return i?.data?.message
     ? i.data
-    : { success: !1, message: M(`#Error_Generic`) };
+    : { success: !1, message: k(`#Error_Generic`) };
 }
 function un(e, t, n, r, i) {
-  return Te({
+  return De({
     mutationFn: () =>
       ln(e, [
         {
@@ -997,67 +997,67 @@ function un(e, t, n, r, i) {
         },
       ]),
     onSuccess: (e) => i(e.success, e.message),
-    onError: () => i(!1, M(`#Error_Generic`)),
+    onError: () => i(!1, k(`#Error_Generic`)),
   });
 }
 function dn(e) {
-  let t = (0, R.useMemo)(() => Number.parseInt(e.appId), [e.appId]),
+  let t = (0, L.useMemo)(() => Number.parseInt(e.appId), [e.appId]),
     n = cn(),
-    [r, i] = (0, R.useState)(1),
-    [a, o] = (0, R.useState)(``);
-  return (0, z.jsxs)(`div`, {
+    [r, i] = (0, L.useState)(1),
+    [a, o] = (0, L.useState)(``);
+  return (0, R.jsxs)(`div`, {
     className: rn,
     children: [
-      (0, z.jsx)(`div`, {
+      (0, R.jsx)(`div`, {
         className: `title2`,
-        children: M(`#KeyWizard_Title`),
+        children: k(`#KeyWizard_Title`),
       }),
-      (0, z.jsx)(`div`, {
+      (0, R.jsx)(`div`, {
         className: `titleHelper`,
-        children: (0, z.jsx)(`a`, {
+        children: (0, R.jsx)(`a`, {
           href: `${f.PARTNER_BASE_URL}doc/features/playtest#4`,
           target: `_blank`,
-          children: M(`#ViewDocumentation`),
+          children: k(`#ViewDocumentation`),
         }),
       }),
-      (0, z.jsx)(`br`, { style: { clear: `left` } }),
-      (0, z.jsxs)(`div`, {
+      (0, R.jsx)(`br`, { style: { clear: `left` } }),
+      (0, R.jsxs)(`div`, {
         className: `instructions`,
         children: [
-          (0, z.jsx)(`p`, { children: M(`#KeyWizard_Playtest_Desc`) }),
-          (0, z.jsx)(`p`, { children: M(`#KeyWizard_Request_notes`) }),
-          (0, z.jsx)(`div`, {
+          (0, R.jsx)(`p`, { children: k(`#KeyWizard_Playtest_Desc`) }),
+          (0, R.jsx)(`p`, { children: k(`#KeyWizard_Request_notes`) }),
+          (0, R.jsx)(`div`, {
             className: on,
-            children: (0, z.jsx)(ve, {
+            children: (0, R.jsx)(T, {
               type: `number`,
-              label: M(`#KeyWizard_NumKeys`, n.name),
+              label: k(`#KeyWizard_NumKeys`, n.name),
               min: 1,
               max: 1e8,
               value: r,
               onChange: (e) => i(Number.parseInt(e.currentTarget.value)),
             }),
           }),
-          (0, z.jsx)(he, { children: M(`#KeyWizard_KeyUsage`) }),
-          (0, z.jsx)(`textarea`, {
+          (0, R.jsx)(me, { children: k(`#KeyWizard_KeyUsage`) }),
+          (0, R.jsx)(`textarea`, {
             className: l(`DialogTextInputBase`, sn),
             value: a || ``,
             onChange: (e) => o(e?.currentTarget?.value || ``),
           }),
-          (0, z.jsx)(`div`, {
+          (0, R.jsx)(`div`, {
             className: an,
-            children: (0, z.jsx)(se, {
+            children: (0, R.jsx)(ge, {
               onClick: (e) =>
-                de(
-                  (0, z.jsx)(fn, {
+                pe(
+                  (0, R.jsx)(fn, {
                     unAppID: t,
                     oPackage: n,
                     nKeys: r,
                     strNotes: a,
                   }),
-                  S(e),
+                  b(e),
                 ),
               disabled: r <= 0,
-              children: M(`#Button_Submit`),
+              children: k(`#Button_Submit`),
             }),
           }),
         ],
@@ -1067,52 +1067,52 @@ function dn(e) {
 }
 function fn(e) {
   let { unAppID: t, oPackage: n, nKeys: r, strNotes: i, closeModal: a } = e,
-    o = Ue(),
+    o = We(),
     s = un(t, n.packageid, r, i, (e, t) => {
       e
         ? (o.fnSetSuccess(!0), o.fnSetStrSuccess(t))
         : (o.fnSetError(!0), o.fnSetStrError(t));
     });
   return (
-    (0, R.useEffect)(() => {
+    (0, L.useEffect)(() => {
       (o.fnSetLoading(!0), s.mutate());
     }, []),
-    (0, z.jsx)(We, {
+    (0, R.jsx)(Ge, {
       state: o,
-      strDialogTitle: M(`#KeyWizard_Dialog_Title`),
+      strDialogTitle: k(`#KeyWizard_Dialog_Title`),
       closeModal: a,
     })
   );
 }
 function pn() {
-  let [e] = (0, R.useState)(() =>
+  let [e] = (0, L.useState)(() =>
     r(`year_in_review_proress`, `application_config`),
   );
   return e;
 }
 function mn(e) {
   let t = pn(),
-    [n] = ze(`year`, new Date().getFullYear());
+    [n] = Be(`year`, new Date().getFullYear());
   return (
     new Date().getMonth() + 1,
-    (0, z.jsx)(T, {
-      children: (0, z.jsxs)(`div`, {
-        className: Ye,
+    (0, R.jsx)(C, {
+      children: (0, R.jsxs)(`div`, {
+        className: Xe,
         children: [
-          (0, z.jsxs)(`h1`, {
+          (0, R.jsxs)(`h1`, {
             children: [`Steam Replay Progress Monitoring: `, n],
           }),
-          (0, z.jsx)(`hr`, {}),
-          (0, z.jsxs)(`p`, {
+          (0, R.jsx)(`hr`, {}),
+          (0, R.jsxs)(`p`, {
             children: [
               `We are running batches in `,
-              F(t.queue_batch_size),
+              N(t.queue_batch_size),
               ` accounts at a time. Active phase 2 queue size is `,
-              F(t.monthly_active_queue_size),
+              N(t.monthly_active_queue_size),
             ],
           }),
           t.progress.map((e) =>
-            (0, z.jsx)(
+            (0, R.jsx)(
               hn,
               { oMonth: e, nActiveQueue: t.monthly_active_queue_size },
               e.month,
@@ -1125,10 +1125,10 @@ function mn(e) {
 }
 function hn(e) {
   let { oMonth: t, nActiveQueue: n } = e;
-  return (0, z.jsxs)(`div`, {
-    className: l(Xe, void 0),
+  return (0, R.jsxs)(`div`, {
+    className: l(Ze, void 0),
     children: [
-      (0, z.jsxs)(`h3`, {
+      (0, R.jsxs)(`h3`, {
         children: [
           `Month: `,
           [
@@ -1147,72 +1147,72 @@ function hn(e) {
           ][t.month - 1],
         ],
       }),
-      (0, z.jsxs)(`div`, {
+      (0, R.jsxs)(`div`, {
         children: [
-          (0, z.jsx)(`b`, { children: `Phase 1:` }),
+          (0, R.jsx)(`b`, { children: `Phase 1:` }),
           ` Pre-Fetching Accounts to Process `,
           !t.rt_start_processing &&
-            (0, z.jsx)(`span`, { children: `- In Progress` }),
+            (0, R.jsx)(`span`, { children: `- In Progress` }),
         ],
       }),
-      (0, z.jsxs)(`div`, {
+      (0, R.jsxs)(`div`, {
         children: [
           `Started: `,
-          (0, z.jsx)(X, { rtTime: t.rt_start_finding_accounts }),
+          (0, R.jsx)(X, { rtTime: t.rt_start_finding_accounts }),
         ],
       }),
-      (0, z.jsxs)(`div`, {
-        children: [`Account prefetched `, F(t.prefetched_accounts_count)],
+      (0, R.jsxs)(`div`, {
+        children: [`Account prefetched `, N(t.prefetched_accounts_count)],
       }),
       t.rt_end_finding_accounts
-        ? (0, z.jsxs)(`div`, {
+        ? (0, R.jsxs)(`div`, {
             children: [
               `Completed `,
-              (0, z.jsx)(X, { rtTime: t.rt_end_finding_accounts }),
+              (0, R.jsx)(X, { rtTime: t.rt_end_finding_accounts }),
               ` prefetched upto accountid `,
-              F(t.largest_account_id_prefetched),
+              N(t.largest_account_id_prefetched),
             ],
           })
-        : (0, z.jsxs)(`div`, {
+        : (0, R.jsxs)(`div`, {
             children: [
               `Pre-fetched upto Account ID `,
-              F(t.largest_account_id_prefetched),
+              N(t.largest_account_id_prefetched),
             ],
           }),
       !!t.rt_start_processing &&
-        (0, z.jsxs)(`div`, {
+        (0, R.jsxs)(`div`, {
           children: [
-            (0, z.jsxs)(`div`, {
+            (0, R.jsxs)(`div`, {
               children: [
-                (0, z.jsx)(`b`, { children: `Phase 2:` }),
+                (0, R.jsx)(`b`, { children: `Phase 2:` }),
                 ` Processing Monthly Playtime Summary `,
                 !t.rt_end_processing &&
-                  (0, z.jsx)(`span`, { children: `- In Progress` }),
+                  (0, R.jsx)(`span`, { children: `- In Progress` }),
               ],
             }),
-            (0, z.jsxs)(`div`, {
+            (0, R.jsxs)(`div`, {
               children: [
                 `Started:`,
-                (0, z.jsx)(X, { rtTime: t.rt_start_processing }),
+                (0, R.jsx)(X, { rtTime: t.rt_start_processing }),
               ],
             }),
             t.rt_end_processing
-              ? (0, z.jsxs)(`div`, {
+              ? (0, R.jsxs)(`div`, {
                   children: [
                     `Completed `,
-                    (0, z.jsx)(X, { rtTime: t.rt_end_processing }),
+                    (0, R.jsx)(X, { rtTime: t.rt_end_processing }),
                     `\xA0 queue'ed upto account ID `,
-                    F(t.largest_account_queued),
+                    N(t.largest_account_queued),
                     `total accounts queued `,
-                    F(t.queued_accounts),
+                    N(t.queued_accounts),
                   ],
                 })
-              : (0, z.jsxs)(`div`, {
+              : (0, R.jsxs)(`div`, {
                   children: [
                     `Queue'ed upto Account ID `,
-                    F(t.largest_account_queued),
+                    N(t.largest_account_queued),
                     `total accounts queued `,
-                    F(t.queued_accounts),
+                    N(t.queued_accounts),
                   ],
                 }),
           ],
@@ -1222,36 +1222,36 @@ function hn(e) {
         t.rt_platform_summary ||
         t.rt_queue_empty
       ) &&
-        (0, z.jsxs)(`div`, {
+        (0, R.jsxs)(`div`, {
           children: [
-            (0, z.jsxs)(`div`, {
+            (0, R.jsxs)(`div`, {
               children: [
-                (0, z.jsx)(`b`, { children: `Phase 3:` }),
+                (0, R.jsx)(`b`, { children: `Phase 3:` }),
                 ` Global Playtime Distribution`,
               ],
             }),
-            (0, z.jsxs)(`div`, {
+            (0, R.jsxs)(`div`, {
               children: [
                 `Started: `,
-                (0, z.jsx)(X, { rtTime: t.rt_queue_empty }),
+                (0, R.jsx)(X, { rtTime: t.rt_queue_empty }),
               ],
             }),
             t.rt_platform_summary
-              ? (0, z.jsxs)(`div`, {
+              ? (0, R.jsxs)(`div`, {
                   children: [
                     `Completed at `,
-                    (0, z.jsx)(X, { rtTime: t.rt_platform_summary }),
+                    (0, R.jsx)(X, { rtTime: t.rt_platform_summary }),
                   ],
                 })
-              : (0, z.jsx)(`div`, { children: `In progress started at` }),
+              : (0, R.jsx)(`div`, { children: `In progress started at` }),
           ],
         }),
       !!t.rt_community_stats &&
-        (0, z.jsxs)(`div`, {
+        (0, R.jsxs)(`div`, {
           children: [
-            (0, z.jsx)(`b`, { children: `Phase Idependant:` }),
+            (0, R.jsx)(`b`, { children: `Phase Idependant:` }),
             ` Community Stats calculation Completed at `,
-            (0, z.jsx)(X, { rtTime: t.rt_community_stats }),
+            (0, R.jsx)(X, { rtTime: t.rt_community_stats }),
           ],
         }),
     ],
@@ -1259,10 +1259,10 @@ function hn(e) {
 }
 function X(e) {
   let { rtTime: t } = e;
-  return (0, z.jsxs)(`span`, { children: [D(t), ` as `, pe(t)] });
+  return (0, R.jsxs)(`span`, { children: [E(t), ` as `, w(t)] });
 }
-var gn = R.lazy(() =>
-    A(
+var gn = L.lazy(() =>
+    O(
       () => import(`./chunk~a8a12c686e.js`),
       __vite__mapDeps([
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
@@ -1271,15 +1271,15 @@ var gn = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  _n = R.lazy(() =>
-    A(
+  _n = L.lazy(() =>
+    O(
       () => import(`./chunk~cad0693c0c.js`),
       __vite__mapDeps([28, 1, 4, 29, 30, 31, 21, 32]),
       import.meta.url,
     ),
   );
-R.lazy(() =>
-  A(
+L.lazy(() =>
+  O(
     () => import(`./chunk~91e3af12c1.js`),
     __vite__mapDeps([
       33, 34, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 42, 43, 22, 23,
@@ -1288,8 +1288,8 @@ R.lazy(() =>
     import.meta.url,
   ),
 );
-var Z = R.lazy(() =>
-    A(
+var Z = L.lazy(() =>
+    O(
       () => import(`./chunk~a2cb8ea8dc.js`),
       __vite__mapDeps([
         46, 1, 34, 3, 2, 4, 5, 35, 36, 37, 38, 39, 27, 21, 40, 41, 42, 43, 22,
@@ -1298,8 +1298,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  vn = R.lazy(() =>
-    A(
+  vn = L.lazy(() =>
+    O(
       () => import(`./chunk~9661a67253.js`),
       __vite__mapDeps([
         47, 1, 3, 2, 4, 5, 48, 38, 37, 49, 50, 51, 29, 52, 9, 10, 11, 12, 13,
@@ -1311,8 +1311,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  yn = R.lazy(() =>
-    A(
+  yn = L.lazy(() =>
+    O(
       () => import(`./chunk~6151aaad06.js`),
       __vite__mapDeps([
         97, 1, 3, 62, 37, 38, 2, 4, 5, 35, 36, 39, 98, 19, 49, 50, 70, 99, 7,
@@ -1327,8 +1327,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  bn = R.lazy(() =>
-    A(
+  bn = L.lazy(() =>
+    O(
       () => import(`./chunk~af3bd1e68d.js`),
       __vite__mapDeps([
         160, 161, 1, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
@@ -1347,8 +1347,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  xn = R.lazy(() =>
-    A(
+  xn = L.lazy(() =>
+    O(
       () => import(`./chunk~ac46798222.js`),
       __vite__mapDeps([
         208, 1, 161, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
@@ -1367,8 +1367,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  Sn = R.lazy(() =>
-    A(
+  Sn = L.lazy(() =>
+    O(
       () => import(`./chunk~f5466f3e0e.js`),
       __vite__mapDeps([
         209, 161, 1, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
@@ -1387,8 +1387,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  Q = R.lazy(() =>
-    A(
+  Q = L.lazy(() =>
+    O(
       () => import(`./chunk~6bd490454e.js`),
       __vite__mapDeps([
         210, 1, 3, 116, 68, 2, 4, 5, 35, 36, 37, 38, 39, 49, 50, 99, 101, 164,
@@ -1400,8 +1400,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  $ = R.lazy(() =>
-    A(
+  $ = L.lazy(() =>
+    O(
       () => import(`./chunk~5e6874a411.js`),
       __vite__mapDeps([
         215, 1, 3, 62, 37, 38, 2, 4, 5, 35, 36, 39, 98, 19, 49, 50, 70, 99, 7,
@@ -1417,8 +1417,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  Cn = R.lazy(() =>
-    A(
+  Cn = L.lazy(() =>
+    O(
       () => import(`./chunk~2dcd698413.js`),
       __vite__mapDeps([
         221, 1, 3, 62, 37, 38, 2, 4, 5, 48, 49, 50, 51, 9, 10, 11, 12, 13, 14,
@@ -1430,15 +1430,15 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  wn = R.lazy(() =>
-    A(
+  wn = L.lazy(() =>
+    O(
       () => import(`./chunk~a3c2cda769.js`),
       __vite__mapDeps([223, 1, 3, 2, 4, 5, 31, 21, 40, 22, 23, 224]),
       import.meta.url,
     ),
   ),
-  Tn = R.lazy(() =>
-    A(
+  Tn = L.lazy(() =>
+    O(
       () => import(`./chunk~92973ecf63.js`),
       __vite__mapDeps([
         225, 1, 3, 161, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
@@ -1458,8 +1458,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  En = R.lazy(() =>
-    A(
+  En = L.lazy(() =>
+    O(
       () => import(`./chunk~7a45b43a5d.js`),
       __vite__mapDeps([
         231, 1, 3, 2, 4, 5, 232, 67, 64, 27, 21, 58, 40, 41, 104, 105, 72, 73,
@@ -1469,8 +1469,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  Dn = R.lazy(() =>
-    A(
+  Dn = L.lazy(() =>
+    O(
       () => import(`./chunk~be64a9384d.js`),
       __vite__mapDeps([
         237, 1, 161, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
@@ -1489,8 +1489,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  On = R.lazy(() =>
-    A(
+  On = L.lazy(() =>
+    O(
       () => import(`./chunk~0242e5eb11.js`),
       __vite__mapDeps([
         239, 1, 3, 2, 4, 5, 99, 30, 31, 27, 40, 21, 103, 19, 57, 58, 59, 60,
@@ -1500,8 +1500,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  kn = R.lazy(() =>
-    A(
+  kn = L.lazy(() =>
+    O(
       () => import(`./chunk~4d6a0703cb.js`),
       __vite__mapDeps([
         241, 1, 3, 2, 4, 5, 29, 167, 122, 9, 10, 11, 12, 13, 14, 15, 16, 17, 53,
@@ -1513,8 +1513,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  An = R.lazy(() =>
-    A(
+  An = L.lazy(() =>
+    O(
       () => import(`./chunk~cf0982cd3a.js`),
       __vite__mapDeps([
         243, 1, 161, 3, 62, 37, 38, 116, 68, 2, 4, 5, 35, 36, 39, 98, 19, 49,
@@ -1533,8 +1533,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  jn = R.lazy(() =>
-    A(
+  jn = L.lazy(() =>
+    O(
       () => import(`./chunk~9ea24a5c24.js`),
       __vite__mapDeps([
         244, 1, 3, 2, 4, 5, 38, 37, 21, 41, 104, 105, 106, 107, 81, 35, 36, 39,
@@ -1543,15 +1543,15 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  Mn = R.lazy(() =>
-    A(
+  Mn = L.lazy(() =>
+    O(
       () => import(`./chunk~8bbbc35117.js`),
       __vite__mapDeps([246, 1, 3, 2, 4, 5, 21, 40, 184, 185, 228, 247]),
       import.meta.url,
     ),
   ),
-  Nn = R.lazy(() =>
-    A(
+  Nn = L.lazy(() =>
+    O(
       () => import(`./chunk~a7bc2e23e5.js`),
       __vite__mapDeps([
         248, 1, 3, 62, 37, 38, 2, 4, 5, 35, 36, 39, 98, 19, 49, 50, 70, 99, 7,
@@ -1564,8 +1564,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  Pn = R.lazy(() =>
-    A(
+  Pn = L.lazy(() =>
+    O(
       () => import(`./chunk~7ec67c8c4e.js`),
       __vite__mapDeps([
         250, 1, 3, 2, 4, 5, 35, 36, 37, 38, 39, 70, 50, 31, 166, 122, 9, 10, 11,
@@ -1576,8 +1576,8 @@ var Z = R.lazy(() =>
       import.meta.url,
     ),
   ),
-  Fn = R.lazy(() =>
-    A(
+  Fn = L.lazy(() =>
+    O(
       () => import(`./chunk~5173a490dd.js`),
       __vite__mapDeps([
         252, 1, 3, 49, 37, 38, 50, 22, 23, 148, 100, 21, 60, 63, 25, 7, 24, 253,
@@ -1587,21 +1587,21 @@ var Z = R.lazy(() =>
   );
 function In(e) {
   let t = r(`publisherid`, `application_config`),
-    i = R.useMemo(() => ({ country: f.COUNTRY, language: f.LANGUAGE }), []);
-  return (0, z.jsx)(n, {
+    i = L.useMemo(() => ({ country: f.COUNTRY, language: f.LANGUAGE }), []);
+  return (0, R.jsx)(n, {
     IN_DESKTOPUI: !1,
     IN_GAMEPADUI: !1,
     IN_VR: !1,
-    children: (0, z.jsx)(Oe.Provider, {
+    children: (0, R.jsx)(Ae.Provider, {
       value: parseInt(t),
-      children: (0, z.jsx)(Ge, {
-        children: (0, z.jsx)(we, {
-          children: (0, z.jsx)(Bn, {
-            children: (0, z.jsx)(ye, {
+      children: (0, R.jsx)(Ke, {
+        children: (0, R.jsx)(Ee, {
+          children: (0, R.jsx)(Bn, {
+            children: (0, R.jsx)(xe, {
               context: i,
-              children: (0, z.jsx)(lt, {
-                children: (0, z.jsx)(tn, {
-                  children: (0, z.jsx)(Ae, { children: e.children }),
+              children: (0, R.jsx)(ct, {
+                children: (0, R.jsx)(tn, {
+                  children: (0, R.jsx)(Me, { children: e.children }),
                 }),
               }),
             }),
@@ -1613,101 +1613,101 @@ function In(e) {
 }
 function Ln(e) {
   let { children: t } = e,
-    n = ae([P.PricingTools(), P.PromotionTools()]);
-  return (0, z.jsx)(`div`, {
-    className: (0, Ze.default)(Qe, n && `mh5mngcGbRY-`),
+    n = le([M.PricingTools(), M.PromotionTools()]);
+  return (0, R.jsx)(`div`, {
+    className: (0, Qe.default)($e, n && `mh5mngcGbRY-`),
     children: t,
   });
 }
 function Rn(e) {
-  let [t, n] = R.useState(!1);
+  let [t, n] = L.useState(!1);
   return (
-    R.useEffect(() => {
-      let e = oe();
+    L.useEffect(() => {
+      let e = he();
       (e &&
         (document.documentElement.setAttribute(`lang`, e),
-        j.SetPreferredLocales([e])),
+        A.SetPreferredLocales([e])),
         n(!0));
     }, []),
     t
-      ? (0, z.jsx)(De, {
-          basename: Ee(),
-          children: (0, z.jsx)(In, {
-            children: (0, z.jsx)(Ln, {
-              children: (0, z.jsx)(R.Suspense, {
+      ? (0, R.jsx)(ke, {
+          basename: Oe(),
+          children: (0, R.jsx)(In, {
+            children: (0, R.jsx)(Ln, {
+              children: (0, R.jsx)(L.Suspense, {
                 fallback: null,
-                children: (0, z.jsxs)(xe, {
+                children: (0, R.jsxs)(Ce, {
                   children: [
-                    (0, z.jsx)(N, { exact: !0, path: `/`, component: gn }),
-                    (0, z.jsx)(N, {
+                    (0, R.jsx)(j, { exact: !0, path: `/`, component: gn }),
+                    (0, R.jsx)(j, {
                       exact: !0,
-                      path: P.DiagData(),
+                      path: M.DiagData(),
                       render: (e) =>
-                        (0, R.createElement)(qe, {
+                        (0, L.createElement)(Je, {
                           ...e,
                           key: e.match.params.gid,
                           strConfigID: `application_config`,
                         }),
                     }),
-                    (0, z.jsx)(N, { path: P.SalePages(), component: xn }),
-                    (0, z.jsx)(N, { path: P.OptInPages(), component: Sn }),
-                    (0, z.jsx)(N, { path: P.ContentHubPages(), component: kn }),
-                    (0, z.jsx)(N, { path: P.RecapPages(), component: An }),
-                    (0, z.jsx)(N, { path: P.DeadlinesAdmin(), component: jn }),
-                    (0, z.jsx)(N, {
-                      path: P.StoreGameAdminRoot(),
+                    (0, R.jsx)(j, { path: M.SalePages(), component: xn }),
+                    (0, R.jsx)(j, { path: M.OptInPages(), component: Sn }),
+                    (0, R.jsx)(j, { path: M.ContentHubPages(), component: kn }),
+                    (0, R.jsx)(j, { path: M.RecapPages(), component: An }),
+                    (0, R.jsx)(j, { path: M.DeadlinesAdmin(), component: jn }),
+                    (0, R.jsx)(j, {
+                      path: M.StoreGameAdminRoot(),
                       component: $,
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.StoreAdminReviewPriceProposals(),
+                    (0, R.jsx)(j, {
+                      path: M.StoreAdminReviewPriceProposals(),
                       component: $,
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.StoreAdminPackagePricingComparison(),
+                    (0, R.jsx)(j, {
+                      path: M.StoreAdminPackagePricingComparison(),
                       component: $,
                     }),
-                    (0, z.jsx)(N, { path: P.PackageLanding(), component: $ }),
-                    (0, z.jsx)(N, { path: P.StoreAdminRoot(), component: $ }),
-                    (0, z.jsx)(N, { path: P.BundlesEditor(), component: $ }),
-                    (0, z.jsx)(N, {
-                      path: P.CreatorHomeAdminPage(),
-                      children: (0, z.jsx)(I, {
+                    (0, R.jsx)(j, { path: M.PackageLanding(), component: $ }),
+                    (0, R.jsx)(j, { path: M.StoreAdminRoot(), component: $ }),
+                    (0, R.jsx)(j, { path: M.BundlesEditor(), component: $ }),
+                    (0, R.jsx)(j, {
+                      path: M.CreatorHomeAdminPage(),
+                      children: (0, R.jsx)(F, {
                         config: {
                           "admin-creatorhome": (e) =>
-                            (0, z.jsx)(Fn, { creatorHomes: e.creator_homes }),
+                            (0, R.jsx)(Fn, { creatorHomes: e.creator_homes }),
                         },
                       }),
                     }),
-                    (0, z.jsx)(N, { path: P.AppCommunityItem(), component: Q }),
-                    (0, z.jsx)(N, { path: P.AppLandingPage(), component: Q }),
-                    (0, z.jsx)(N, { path: P.AppInstallerPage(), component: Q }),
-                    (0, z.jsx)(N, { path: P.AppEconomyPage(), component: Q }),
-                    (0, z.jsx)(N, {
-                      path: P.PackageAdminRoot(),
+                    (0, R.jsx)(j, { path: M.AppCommunityItem(), component: Q }),
+                    (0, R.jsx)(j, { path: M.AppLandingPage(), component: Q }),
+                    (0, R.jsx)(j, { path: M.AppInstallerPage(), component: Q }),
+                    (0, R.jsx)(j, { path: M.AppEconomyPage(), component: Q }),
+                    (0, R.jsx)(j, {
+                      path: M.PackageAdminRoot(),
                       component: Cn,
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.SteamML(),
-                      render: () => (0, z.jsx)(_n, {}),
+                    (0, R.jsx)(j, {
+                      path: M.SteamML(),
+                      render: () => (0, R.jsx)(_n, {}),
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.BuildPatchNotes(),
+                    (0, R.jsx)(j, {
+                      path: M.BuildPatchNotes(),
                       render: (e) =>
-                        (0, z.jsx)(yn, { appId: e.match.params.appid }),
+                        (0, R.jsx)(yn, { appId: e.match.params.appid }),
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.SteamworksEvents(),
-                      render: () => (0, z.jsx)(wt, {}),
+                    (0, R.jsx)(j, {
+                      path: M.SteamworksEvents(),
+                      render: () => (0, R.jsx)(Ct, {}),
                     }),
-                    (0, z.jsx)(N, { path: P.PromotionTools(), component: bn }),
-                    (0, z.jsx)(N, { path: P.PricingTools(), component: vn }),
-                    (0, z.jsx)(N, {
-                      path: P.DeckVerifiedAdmin(),
+                    (0, R.jsx)(j, { path: M.PromotionTools(), component: bn }),
+                    (0, R.jsx)(j, { path: M.PricingTools(), component: vn }),
+                    (0, R.jsx)(j, {
+                      path: M.DeckVerifiedAdmin(),
                       render: () =>
-                        (0, z.jsx)(I, {
+                        (0, R.jsx)(F, {
                           config: {
                             "deck-verified-results": (e) =>
-                              (0, z.jsx)(Z, {
+                              (0, R.jsx)(Z, {
                                 dataprops: e,
                                 results: r(
                                   `deckcompatibility`,
@@ -1717,13 +1717,13 @@ function Rn(e) {
                           },
                         }),
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.DeckCompatTestingDashboard(),
+                    (0, R.jsx)(j, {
+                      path: M.DeckCompatTestingDashboard(),
                       render: () =>
-                        (0, z.jsx)(I, {
+                        (0, R.jsx)(F, {
                           config: {
                             "deck-verified-results-inflight": (e) =>
-                              (0, z.jsx)(Z, {
+                              (0, R.jsx)(Z, {
                                 dataprops: e,
                                 results: r(
                                   `deckcompatibility_inflight`,
@@ -1731,7 +1731,7 @@ function Rn(e) {
                                 ),
                               }),
                             "deck-verified-results-submitted": (e) =>
-                              (0, z.jsx)(Z, {
+                              (0, R.jsx)(Z, {
                                 dataprops: e,
                                 results: r(
                                   `deckcompatibility_submitted`,
@@ -1739,7 +1739,7 @@ function Rn(e) {
                                 ),
                               }),
                             "deck-verified-results-published": (e) =>
-                              (0, z.jsx)(Z, {
+                              (0, R.jsx)(Z, {
                                 dataprops: e,
                                 results: r(
                                   `deckcompatibility_published`,
@@ -1749,13 +1749,13 @@ function Rn(e) {
                           },
                         }),
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.DeckCompatTestingAppHistory(),
+                    (0, R.jsx)(j, {
+                      path: M.DeckCompatTestingAppHistory(),
                       render: () =>
-                        (0, z.jsx)(I, {
+                        (0, R.jsx)(F, {
                           config: {
                             "deck-verified-results-reports": (e) =>
-                              (0, z.jsx)(Z, {
+                              (0, R.jsx)(Z, {
                                 dataprops: e,
                                 results: r(
                                   `deckcompatibility_reports`,
@@ -1765,63 +1765,63 @@ function Rn(e) {
                           },
                         }),
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.SDRConnections(),
+                    (0, R.jsx)(j, {
+                      path: M.SDRConnections(),
                       render: (e) =>
-                        (0, z.jsx)(wn, { appId: e.match.params.appid }),
+                        (0, R.jsx)(wn, { appId: e.match.params.appid }),
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.PublisherDashboard(),
+                    (0, R.jsx)(j, {
+                      path: M.PublisherDashboard(),
                       render: () =>
-                        (0, z.jsx)(I, {
+                        (0, R.jsx)(F, {
                           config: {
-                            "publisher-dashboard": () => (0, z.jsx)(Tn, {}),
+                            "publisher-dashboard": () => (0, R.jsx)(Tn, {}),
                             "promotion-review-dashboard": () =>
-                              (0, z.jsx)(Dn, {}),
+                              (0, R.jsx)(Dn, {}),
                           },
                         }),
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.TimelineMarkerEditor(),
+                    (0, R.jsx)(j, {
+                      path: M.TimelineMarkerEditor(),
                       render: (e) =>
-                        (0, z.jsx)(I, {
+                        (0, R.jsx)(F, {
                           config: {
                             "timeline-marker-editor": () =>
-                              (0, z.jsx)(En, { appId: e.match.params.appid }),
+                              (0, R.jsx)(En, { appId: e.match.params.appid }),
                           },
                         }),
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.AchievementsEditor(),
+                    (0, R.jsx)(j, {
+                      path: M.AchievementsEditor(),
                       render: (e) =>
-                        (0, z.jsx)(I, {
+                        (0, R.jsx)(F, {
                           config: {
                             "achievements-editor": () =>
-                              (0, z.jsx)(Pn, { appId: e.match.params.appid }),
+                              (0, R.jsx)(Pn, { appId: e.match.params.appid }),
                           },
                         }),
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.HardwareReservationQueueMessaging(),
+                    (0, R.jsx)(j, {
+                      path: M.HardwareReservationQueueMessaging(),
                       component: On,
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.KeyWizardPackagePage(),
+                    (0, R.jsx)(j, {
+                      path: M.KeyWizardPackagePage(),
                       render: (e) =>
-                        (0, z.jsx)(I, {
+                        (0, R.jsx)(F, {
                           config: {
                             "key-wizard": () =>
-                              (0, z.jsx)(dn, { appId: e.match.params.appid }),
+                              (0, R.jsx)(dn, { appId: e.match.params.appid }),
                           },
                         }),
                     }),
-                    (0, z.jsx)(N, {
-                      path: P.YearInReviewProgressMonitor(),
+                    (0, R.jsx)(j, {
+                      path: M.YearInReviewProgressMonitor(),
                       component: mn,
                     }),
-                    (0, z.jsx)(N, { path: P.TaxRequirement(), component: Mn }),
-                    (0, z.jsx)(N, { path: P.MeetSteam(), component: Nn }),
-                    (0, z.jsx)(N, { children: (0, z.jsx)(Je, {}) }),
+                    (0, R.jsx)(j, { path: M.TaxRequirement(), component: Mn }),
+                    (0, R.jsx)(j, { path: M.MeetSteam(), component: Nn }),
+                    (0, R.jsx)(j, { children: (0, R.jsx)(Ye, {}) }),
                   ],
                 }),
               }),
@@ -1832,18 +1832,18 @@ function Rn(e) {
   );
 }
 function zn() {
-  return He(new Ve(f.WEBAPI_BASE_URL));
+  return Ue(new He(f.WEBAPI_BASE_URL));
 }
 function Bn(e) {
-  let t = v(zn),
-    n = v(R.useCallback(() => new Ke(), []));
-  return (0, z.jsx)(Ce, {
+  let t = g(zn),
+    n = g(L.useCallback(() => new qe(), []));
+  return (0, R.jsx)(Te, {
     useActiveSteamInterface: t,
     useStorage: n,
     children: e.children,
   });
 }
-var Vn = p(te());
+var Vn = p(ie());
 function Hn() {
   let e = [];
   return (
@@ -1861,7 +1861,7 @@ function Un() {
     switch (r) {
       case `LibraryLogoEditor`:
       case `LibraryLogoEditorPopup`:
-        A(
+        O(
           async () => {
             let { Init_LibraryLogoEditor: e } = await import(
               `./chunk~79627e9162.js`
@@ -1882,458 +1882,458 @@ function Un() {
 document.addEventListener(`DOMContentLoaded`, async function () {
   let e = document.getElementById(`application_root`);
   (o(e ? `application_config` : void 0),
-    u().Init(`Partner`, CLSTAMP, new Be().GetServiceTransport(), {
+    u().Init(`Partner`, CLSTAMP, new Ve().GetServiceTransport(), {
       fnGetReportTags: Hn,
     }),
     await Wn(f.LANGUAGE),
-    e ? Vn.createRoot(e).render(R.createElement(Rn, {})) : Un());
+    e ? Vn.createRoot(e).render(L.createElement(Rn, {})) : Un());
 });
 async function Wn(e) {
   let [t, n, r] = await Promise.all([
-      L(
+      I(
         Object.assign({
           "../../../shared/localization/marketing/marketing_arabic.json": () =>
-            A(() => import(`./chunk~d06d52ad94.js`), [], import.meta.url),
+            O(() => import(`./chunk~d06d52ad94.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_brazilian.json":
-            () => A(() => import(`./chunk~c7efe4b325.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~c7efe4b325.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_bulgarian.json":
-            () => A(() => import(`./chunk~f4c02deb1c.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~f4c02deb1c.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_czech.json": () =>
-            A(() => import(`./chunk~1e1a737e57.js`), [], import.meta.url),
+            O(() => import(`./chunk~1e1a737e57.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_danish.json": () =>
-            A(() => import(`./chunk~8adbd8d2a7.js`), [], import.meta.url),
+            O(() => import(`./chunk~8adbd8d2a7.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_dutch.json": () =>
-            A(() => import(`./chunk~9432315ae6.js`), [], import.meta.url),
+            O(() => import(`./chunk~9432315ae6.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_english.json": () =>
-            A(() => import(`./chunk~672dff74b8.js`), [], import.meta.url),
+            O(() => import(`./chunk~672dff74b8.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_finnish.json": () =>
-            A(() => import(`./chunk~c71a2bb9d4.js`), [], import.meta.url),
+            O(() => import(`./chunk~c71a2bb9d4.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_french.json": () =>
-            A(() => import(`./chunk~b174530c55.js`), [], import.meta.url),
+            O(() => import(`./chunk~b174530c55.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_german.json": () =>
-            A(() => import(`./chunk~e5ec045f75.js`), [], import.meta.url),
+            O(() => import(`./chunk~e5ec045f75.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_greek.json": () =>
-            A(() => import(`./chunk~e9e4c994fc.js`), [], import.meta.url),
+            O(() => import(`./chunk~e9e4c994fc.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_hungarian.json":
-            () => A(() => import(`./chunk~0f8f5b66ea.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~0f8f5b66ea.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_indonesian.json":
-            () => A(() => import(`./chunk~afa19427a6.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~afa19427a6.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_italian.json": () =>
-            A(() => import(`./chunk~cc110d9310.js`), [], import.meta.url),
+            O(() => import(`./chunk~cc110d9310.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_japanese.json":
-            () => A(() => import(`./chunk~5cdf6e1887.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~5cdf6e1887.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_koreana.json": () =>
-            A(() => import(`./chunk~f8d1c3eb39.js`), [], import.meta.url),
+            O(() => import(`./chunk~f8d1c3eb39.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_latam.json": () =>
-            A(() => import(`./chunk~dcb198cb70.js`), [], import.meta.url),
+            O(() => import(`./chunk~dcb198cb70.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_malay.json": () =>
-            A(() => import(`./chunk~7794cfc016.js`), [], import.meta.url),
+            O(() => import(`./chunk~7794cfc016.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_norwegian.json":
-            () => A(() => import(`./chunk~75ca050ede.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~75ca050ede.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_polish.json": () =>
-            A(() => import(`./chunk~ab26257a4b.js`), [], import.meta.url),
+            O(() => import(`./chunk~ab26257a4b.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_portuguese.json":
-            () => A(() => import(`./chunk~7e6a0dfeac.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~7e6a0dfeac.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_romanian.json":
-            () => A(() => import(`./chunk~c25ddcf2dd.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~c25ddcf2dd.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_russian.json": () =>
-            A(() => import(`./chunk~e7e9152c82.js`), [], import.meta.url),
+            O(() => import(`./chunk~e7e9152c82.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_sc_schinese.json":
-            () => A(() => import(`./chunk~f03332406a.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~f03332406a.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_schinese.json":
-            () => A(() => import(`./chunk~fe42bc9af6.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~fe42bc9af6.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_spanish.json": () =>
-            A(() => import(`./chunk~84913aa7ea.js`), [], import.meta.url),
+            O(() => import(`./chunk~84913aa7ea.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_swedish.json": () =>
-            A(() => import(`./chunk~d51cfc3d8e.js`), [], import.meta.url),
+            O(() => import(`./chunk~d51cfc3d8e.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_tchinese.json":
-            () => A(() => import(`./chunk~c468013b32.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~c468013b32.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_thai.json": () =>
-            A(() => import(`./chunk~e9a21f2d23.js`), [], import.meta.url),
+            O(() => import(`./chunk~e9a21f2d23.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_turkish.json": () =>
-            A(() => import(`./chunk~a65681121d.js`), [], import.meta.url),
+            O(() => import(`./chunk~a65681121d.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_ukrainian.json":
-            () => A(() => import(`./chunk~89a480c739.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~89a480c739.js`), [], import.meta.url),
           "../../../shared/localization/marketing/marketing_vietnamese.json":
-            () => A(() => import(`./chunk~bd7a2449df.js`), [], import.meta.url),
+            () => O(() => import(`./chunk~bd7a2449df.js`), [], import.meta.url),
         }),
         `../../../shared/localization/marketing/marketing_${e}.json`,
         7,
       ),
-      L(
+      I(
         Object.assign({
           "../../../shared/localization/sales/sales_arabic.json": () =>
-            A(() => import(`./chunk~a2651acc01.js`), [], import.meta.url),
+            O(() => import(`./chunk~a2651acc01.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_brazilian.json": () =>
-            A(() => import(`./chunk~137fe161a3.js`), [], import.meta.url),
+            O(() => import(`./chunk~137fe161a3.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_bulgarian.json": () =>
-            A(() => import(`./chunk~3388f59a8c.js`), [], import.meta.url),
+            O(() => import(`./chunk~3388f59a8c.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_czech.json": () =>
-            A(() => import(`./chunk~684fc3a48f.js`), [], import.meta.url),
+            O(() => import(`./chunk~684fc3a48f.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_danish.json": () =>
-            A(() => import(`./chunk~478dcdfd50.js`), [], import.meta.url),
+            O(() => import(`./chunk~478dcdfd50.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_dutch.json": () =>
-            A(() => import(`./chunk~07af9aa5c9.js`), [], import.meta.url),
+            O(() => import(`./chunk~07af9aa5c9.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_english.json": () =>
-            A(() => import(`./chunk~467c065f96.js`), [], import.meta.url),
+            O(() => import(`./chunk~467c065f96.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_finnish.json": () =>
-            A(() => import(`./chunk~17f8e94605.js`), [], import.meta.url),
+            O(() => import(`./chunk~17f8e94605.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_french.json": () =>
-            A(() => import(`./chunk~0d8952bf3a.js`), [], import.meta.url),
+            O(() => import(`./chunk~0d8952bf3a.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_german.json": () =>
-            A(() => import(`./chunk~4cde817ea0.js`), [], import.meta.url),
+            O(() => import(`./chunk~4cde817ea0.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_greek.json": () =>
-            A(() => import(`./chunk~eadaa09f2d.js`), [], import.meta.url),
+            O(() => import(`./chunk~eadaa09f2d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_hungarian.json": () =>
-            A(() => import(`./chunk~c3cd1630c5.js`), [], import.meta.url),
+            O(() => import(`./chunk~c3cd1630c5.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_indonesian.json": () =>
-            A(() => import(`./chunk~f01fd3cdae.js`), [], import.meta.url),
+            O(() => import(`./chunk~f01fd3cdae.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_italian.json": () =>
-            A(() => import(`./chunk~7530843e6f.js`), [], import.meta.url),
+            O(() => import(`./chunk~7530843e6f.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_japanese.json": () =>
-            A(() => import(`./chunk~8c1b5f00ab.js`), [], import.meta.url),
+            O(() => import(`./chunk~8c1b5f00ab.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_koreana.json": () =>
-            A(() => import(`./chunk~5dd04956c2.js`), [], import.meta.url),
+            O(() => import(`./chunk~5dd04956c2.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_latam.json": () =>
-            A(() => import(`./chunk~cd7cbec106.js`), [], import.meta.url),
+            O(() => import(`./chunk~cd7cbec106.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_malay.json": () =>
-            A(() => import(`./chunk~19e4851e4a.js`), [], import.meta.url),
+            O(() => import(`./chunk~19e4851e4a.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_norwegian.json": () =>
-            A(() => import(`./chunk~cead22bc95.js`), [], import.meta.url),
+            O(() => import(`./chunk~cead22bc95.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_polish.json": () =>
-            A(() => import(`./chunk~59fe5ba68d.js`), [], import.meta.url),
+            O(() => import(`./chunk~59fe5ba68d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_portuguese.json": () =>
-            A(() => import(`./chunk~4ce4f00e1d.js`), [], import.meta.url),
+            O(() => import(`./chunk~4ce4f00e1d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_romanian.json": () =>
-            A(() => import(`./chunk~396e8e03ab.js`), [], import.meta.url),
+            O(() => import(`./chunk~396e8e03ab.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_russian.json": () =>
-            A(() => import(`./chunk~b90af23307.js`), [], import.meta.url),
+            O(() => import(`./chunk~b90af23307.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_sc_schinese.json": () =>
-            A(() => import(`./chunk~62f4ec6297.js`), [], import.meta.url),
+            O(() => import(`./chunk~62f4ec6297.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_schinese.json": () =>
-            A(() => import(`./chunk~fd02ec7ab8.js`), [], import.meta.url),
+            O(() => import(`./chunk~fd02ec7ab8.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_spanish.json": () =>
-            A(() => import(`./chunk~5b296efd25.js`), [], import.meta.url),
+            O(() => import(`./chunk~5b296efd25.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_swedish.json": () =>
-            A(() => import(`./chunk~c2dd4b566b.js`), [], import.meta.url),
+            O(() => import(`./chunk~c2dd4b566b.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_tchinese.json": () =>
-            A(() => import(`./chunk~8eb6adf994.js`), [], import.meta.url),
+            O(() => import(`./chunk~8eb6adf994.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_thai.json": () =>
-            A(() => import(`./chunk~d1918a051e.js`), [], import.meta.url),
+            O(() => import(`./chunk~d1918a051e.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_turkish.json": () =>
-            A(() => import(`./chunk~151ab2fec5.js`), [], import.meta.url),
+            O(() => import(`./chunk~151ab2fec5.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_ukrainian.json": () =>
-            A(() => import(`./chunk~ec9b4ec76d.js`), [], import.meta.url),
+            O(() => import(`./chunk~ec9b4ec76d.js`), [], import.meta.url),
           "../../../shared/localization/sales/sales_vietnamese.json": () =>
-            A(() => import(`./chunk~bf026fe6b0.js`), [], import.meta.url),
+            O(() => import(`./chunk~bf026fe6b0.js`), [], import.meta.url),
         }),
         `../../../shared/localization/sales/sales_${e}.json`,
         7,
       ).then((e) => e.default),
-      L(
+      I(
         Object.assign({
           "../localization/main_arabic.json": () =>
-            A(() => import(`./chunk~a1afcc6b49.js`), [], import.meta.url),
+            O(() => import(`./chunk~a1afcc6b49.js`), [], import.meta.url),
           "../localization/main_brazilian.json": () =>
-            A(() => import(`./chunk~efce32a0fd.js`), [], import.meta.url),
+            O(() => import(`./chunk~efce32a0fd.js`), [], import.meta.url),
           "../localization/main_bulgarian.json": () =>
-            A(() => import(`./chunk~a0c563b312.js`), [], import.meta.url),
+            O(() => import(`./chunk~a0c563b312.js`), [], import.meta.url),
           "../localization/main_czech.json": () =>
-            A(() => import(`./chunk~86e73de564.js`), [], import.meta.url),
+            O(() => import(`./chunk~86e73de564.js`), [], import.meta.url),
           "../localization/main_danish.json": () =>
-            A(() => import(`./chunk~8ed5a1f992.js`), [], import.meta.url),
+            O(() => import(`./chunk~8ed5a1f992.js`), [], import.meta.url),
           "../localization/main_dutch.json": () =>
-            A(() => import(`./chunk~c177c2c91d.js`), [], import.meta.url),
+            O(() => import(`./chunk~c177c2c91d.js`), [], import.meta.url),
           "../localization/main_english.json": () =>
-            A(() => import(`./chunk~fbc9faf024.js`), [], import.meta.url),
+            O(() => import(`./chunk~fbc9faf024.js`), [], import.meta.url),
           "../localization/main_finnish.json": () =>
-            A(() => import(`./chunk~2985c8f3da.js`), [], import.meta.url),
+            O(() => import(`./chunk~2985c8f3da.js`), [], import.meta.url),
           "../localization/main_french.json": () =>
-            A(() => import(`./chunk~3fa8b7849a.js`), [], import.meta.url),
+            O(() => import(`./chunk~3fa8b7849a.js`), [], import.meta.url),
           "../localization/main_german.json": () =>
-            A(() => import(`./chunk~897d980c88.js`), [], import.meta.url),
+            O(() => import(`./chunk~897d980c88.js`), [], import.meta.url),
           "../localization/main_greek.json": () =>
-            A(() => import(`./chunk~d4f65e6d28.js`), [], import.meta.url),
+            O(() => import(`./chunk~d4f65e6d28.js`), [], import.meta.url),
           "../localization/main_hungarian.json": () =>
-            A(() => import(`./chunk~2f837a1fa1.js`), [], import.meta.url),
+            O(() => import(`./chunk~2f837a1fa1.js`), [], import.meta.url),
           "../localization/main_indonesian.json": () =>
-            A(() => import(`./chunk~cd202e69b5.js`), [], import.meta.url),
+            O(() => import(`./chunk~cd202e69b5.js`), [], import.meta.url),
           "../localization/main_italian.json": () =>
-            A(() => import(`./chunk~34938c270d.js`), [], import.meta.url),
+            O(() => import(`./chunk~34938c270d.js`), [], import.meta.url),
           "../localization/main_japanese.json": () =>
-            A(() => import(`./chunk~359677a3c7.js`), [], import.meta.url),
+            O(() => import(`./chunk~359677a3c7.js`), [], import.meta.url),
           "../localization/main_koreana.json": () =>
-            A(() => import(`./chunk~15f48863a2.js`), [], import.meta.url),
+            O(() => import(`./chunk~15f48863a2.js`), [], import.meta.url),
           "../localization/main_latam.json": () =>
-            A(() => import(`./chunk~826d3b5250.js`), [], import.meta.url),
+            O(() => import(`./chunk~826d3b5250.js`), [], import.meta.url),
           "../localization/main_malay.json": () =>
-            A(() => import(`./chunk~1865eab4be.js`), [], import.meta.url),
+            O(() => import(`./chunk~1865eab4be.js`), [], import.meta.url),
           "../localization/main_norwegian.json": () =>
-            A(() => import(`./chunk~0f3103bc69.js`), [], import.meta.url),
+            O(() => import(`./chunk~0f3103bc69.js`), [], import.meta.url),
           "../localization/main_polish.json": () =>
-            A(() => import(`./chunk~d757c1664f.js`), [], import.meta.url),
+            O(() => import(`./chunk~d757c1664f.js`), [], import.meta.url),
           "../localization/main_portuguese.json": () =>
-            A(() => import(`./chunk~e45f96fdb3.js`), [], import.meta.url),
+            O(() => import(`./chunk~e45f96fdb3.js`), [], import.meta.url),
           "../localization/main_romanian.json": () =>
-            A(() => import(`./chunk~6bfef4da5d.js`), [], import.meta.url),
+            O(() => import(`./chunk~6bfef4da5d.js`), [], import.meta.url),
           "../localization/main_russian.json": () =>
-            A(() => import(`./chunk~f6efdfaf9b.js`), [], import.meta.url),
+            O(() => import(`./chunk~f6efdfaf9b.js`), [], import.meta.url),
           "../localization/main_schinese.json": () =>
-            A(() => import(`./chunk~e325844ad5.js`), [], import.meta.url),
+            O(() => import(`./chunk~e325844ad5.js`), [], import.meta.url),
           "../localization/main_spanish.json": () =>
-            A(() => import(`./chunk~2d97981d2c.js`), [], import.meta.url),
+            O(() => import(`./chunk~2d97981d2c.js`), [], import.meta.url),
           "../localization/main_swedish.json": () =>
-            A(() => import(`./chunk~a18566ab59.js`), [], import.meta.url),
+            O(() => import(`./chunk~a18566ab59.js`), [], import.meta.url),
           "../localization/main_tchinese.json": () =>
-            A(() => import(`./chunk~a7cc5d09d2.js`), [], import.meta.url),
+            O(() => import(`./chunk~a7cc5d09d2.js`), [], import.meta.url),
           "../localization/main_thai.json": () =>
-            A(() => import(`./chunk~378a998550.js`), [], import.meta.url),
+            O(() => import(`./chunk~378a998550.js`), [], import.meta.url),
           "../localization/main_turkish.json": () =>
-            A(() => import(`./chunk~454f02dbb5.js`), [], import.meta.url),
+            O(() => import(`./chunk~454f02dbb5.js`), [], import.meta.url),
           "../localization/main_ukrainian.json": () =>
-            A(() => import(`./chunk~1c557f5550.js`), [], import.meta.url),
+            O(() => import(`./chunk~1c557f5550.js`), [], import.meta.url),
           "../localization/main_vietnamese.json": () =>
-            A(() => import(`./chunk~312af0dfee.js`), [], import.meta.url),
+            O(() => import(`./chunk~312af0dfee.js`), [], import.meta.url),
         }),
         `../localization/main_${e}.json`,
         3,
       ),
-      be(),
+      Se(),
     ]),
     i = { ...r.default },
-    a = fe.GetLanguageFallback(e);
+    a = ue.GetLanguageFallback(e);
   if (e !== a) {
     let [e, r, o] = await Promise.all([
-        L(
+        I(
           Object.assign({
             "../../../shared/localization/marketing/marketing_arabic.json":
               () =>
-                A(() => import(`./chunk~d06d52ad94.js`), [], import.meta.url),
+                O(() => import(`./chunk~d06d52ad94.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_brazilian.json":
               () =>
-                A(() => import(`./chunk~c7efe4b325.js`), [], import.meta.url),
+                O(() => import(`./chunk~c7efe4b325.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_bulgarian.json":
               () =>
-                A(() => import(`./chunk~f4c02deb1c.js`), [], import.meta.url),
+                O(() => import(`./chunk~f4c02deb1c.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_czech.json": () =>
-              A(() => import(`./chunk~1e1a737e57.js`), [], import.meta.url),
+              O(() => import(`./chunk~1e1a737e57.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_danish.json":
               () =>
-                A(() => import(`./chunk~8adbd8d2a7.js`), [], import.meta.url),
+                O(() => import(`./chunk~8adbd8d2a7.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_dutch.json": () =>
-              A(() => import(`./chunk~9432315ae6.js`), [], import.meta.url),
+              O(() => import(`./chunk~9432315ae6.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_english.json":
               () =>
-                A(() => import(`./chunk~672dff74b8.js`), [], import.meta.url),
+                O(() => import(`./chunk~672dff74b8.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_finnish.json":
               () =>
-                A(() => import(`./chunk~c71a2bb9d4.js`), [], import.meta.url),
+                O(() => import(`./chunk~c71a2bb9d4.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_french.json":
               () =>
-                A(() => import(`./chunk~b174530c55.js`), [], import.meta.url),
+                O(() => import(`./chunk~b174530c55.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_german.json":
               () =>
-                A(() => import(`./chunk~e5ec045f75.js`), [], import.meta.url),
+                O(() => import(`./chunk~e5ec045f75.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_greek.json": () =>
-              A(() => import(`./chunk~e9e4c994fc.js`), [], import.meta.url),
+              O(() => import(`./chunk~e9e4c994fc.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_hungarian.json":
               () =>
-                A(() => import(`./chunk~0f8f5b66ea.js`), [], import.meta.url),
+                O(() => import(`./chunk~0f8f5b66ea.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_indonesian.json":
               () =>
-                A(() => import(`./chunk~afa19427a6.js`), [], import.meta.url),
+                O(() => import(`./chunk~afa19427a6.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_italian.json":
               () =>
-                A(() => import(`./chunk~cc110d9310.js`), [], import.meta.url),
+                O(() => import(`./chunk~cc110d9310.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_japanese.json":
               () =>
-                A(() => import(`./chunk~5cdf6e1887.js`), [], import.meta.url),
+                O(() => import(`./chunk~5cdf6e1887.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_koreana.json":
               () =>
-                A(() => import(`./chunk~f8d1c3eb39.js`), [], import.meta.url),
+                O(() => import(`./chunk~f8d1c3eb39.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_latam.json": () =>
-              A(() => import(`./chunk~dcb198cb70.js`), [], import.meta.url),
+              O(() => import(`./chunk~dcb198cb70.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_malay.json": () =>
-              A(() => import(`./chunk~7794cfc016.js`), [], import.meta.url),
+              O(() => import(`./chunk~7794cfc016.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_norwegian.json":
               () =>
-                A(() => import(`./chunk~75ca050ede.js`), [], import.meta.url),
+                O(() => import(`./chunk~75ca050ede.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_polish.json":
               () =>
-                A(() => import(`./chunk~ab26257a4b.js`), [], import.meta.url),
+                O(() => import(`./chunk~ab26257a4b.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_portuguese.json":
               () =>
-                A(() => import(`./chunk~7e6a0dfeac.js`), [], import.meta.url),
+                O(() => import(`./chunk~7e6a0dfeac.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_romanian.json":
               () =>
-                A(() => import(`./chunk~c25ddcf2dd.js`), [], import.meta.url),
+                O(() => import(`./chunk~c25ddcf2dd.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_russian.json":
               () =>
-                A(() => import(`./chunk~e7e9152c82.js`), [], import.meta.url),
+                O(() => import(`./chunk~e7e9152c82.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_sc_schinese.json":
               () =>
-                A(() => import(`./chunk~f03332406a.js`), [], import.meta.url),
+                O(() => import(`./chunk~f03332406a.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_schinese.json":
               () =>
-                A(() => import(`./chunk~fe42bc9af6.js`), [], import.meta.url),
+                O(() => import(`./chunk~fe42bc9af6.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_spanish.json":
               () =>
-                A(() => import(`./chunk~84913aa7ea.js`), [], import.meta.url),
+                O(() => import(`./chunk~84913aa7ea.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_swedish.json":
               () =>
-                A(() => import(`./chunk~d51cfc3d8e.js`), [], import.meta.url),
+                O(() => import(`./chunk~d51cfc3d8e.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_tchinese.json":
               () =>
-                A(() => import(`./chunk~c468013b32.js`), [], import.meta.url),
+                O(() => import(`./chunk~c468013b32.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_thai.json": () =>
-              A(() => import(`./chunk~e9a21f2d23.js`), [], import.meta.url),
+              O(() => import(`./chunk~e9a21f2d23.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_turkish.json":
               () =>
-                A(() => import(`./chunk~a65681121d.js`), [], import.meta.url),
+                O(() => import(`./chunk~a65681121d.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_ukrainian.json":
               () =>
-                A(() => import(`./chunk~89a480c739.js`), [], import.meta.url),
+                O(() => import(`./chunk~89a480c739.js`), [], import.meta.url),
             "../../../shared/localization/marketing/marketing_vietnamese.json":
               () =>
-                A(() => import(`./chunk~bd7a2449df.js`), [], import.meta.url),
+                O(() => import(`./chunk~bd7a2449df.js`), [], import.meta.url),
           }),
           `../../../shared/localization/marketing/marketing_${a}.json`,
           7,
         ),
-        L(
+        I(
           Object.assign({
             "../../../shared/localization/sales/sales_arabic.json": () =>
-              A(() => import(`./chunk~a2651acc01.js`), [], import.meta.url),
+              O(() => import(`./chunk~a2651acc01.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_brazilian.json": () =>
-              A(() => import(`./chunk~137fe161a3.js`), [], import.meta.url),
+              O(() => import(`./chunk~137fe161a3.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_bulgarian.json": () =>
-              A(() => import(`./chunk~3388f59a8c.js`), [], import.meta.url),
+              O(() => import(`./chunk~3388f59a8c.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_czech.json": () =>
-              A(() => import(`./chunk~684fc3a48f.js`), [], import.meta.url),
+              O(() => import(`./chunk~684fc3a48f.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_danish.json": () =>
-              A(() => import(`./chunk~478dcdfd50.js`), [], import.meta.url),
+              O(() => import(`./chunk~478dcdfd50.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_dutch.json": () =>
-              A(() => import(`./chunk~07af9aa5c9.js`), [], import.meta.url),
+              O(() => import(`./chunk~07af9aa5c9.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_english.json": () =>
-              A(() => import(`./chunk~467c065f96.js`), [], import.meta.url),
+              O(() => import(`./chunk~467c065f96.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_finnish.json": () =>
-              A(() => import(`./chunk~17f8e94605.js`), [], import.meta.url),
+              O(() => import(`./chunk~17f8e94605.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_french.json": () =>
-              A(() => import(`./chunk~0d8952bf3a.js`), [], import.meta.url),
+              O(() => import(`./chunk~0d8952bf3a.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_german.json": () =>
-              A(() => import(`./chunk~4cde817ea0.js`), [], import.meta.url),
+              O(() => import(`./chunk~4cde817ea0.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_greek.json": () =>
-              A(() => import(`./chunk~eadaa09f2d.js`), [], import.meta.url),
+              O(() => import(`./chunk~eadaa09f2d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_hungarian.json": () =>
-              A(() => import(`./chunk~c3cd1630c5.js`), [], import.meta.url),
+              O(() => import(`./chunk~c3cd1630c5.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_indonesian.json": () =>
-              A(() => import(`./chunk~f01fd3cdae.js`), [], import.meta.url),
+              O(() => import(`./chunk~f01fd3cdae.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_italian.json": () =>
-              A(() => import(`./chunk~7530843e6f.js`), [], import.meta.url),
+              O(() => import(`./chunk~7530843e6f.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_japanese.json": () =>
-              A(() => import(`./chunk~8c1b5f00ab.js`), [], import.meta.url),
+              O(() => import(`./chunk~8c1b5f00ab.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_koreana.json": () =>
-              A(() => import(`./chunk~5dd04956c2.js`), [], import.meta.url),
+              O(() => import(`./chunk~5dd04956c2.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_latam.json": () =>
-              A(() => import(`./chunk~cd7cbec106.js`), [], import.meta.url),
+              O(() => import(`./chunk~cd7cbec106.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_malay.json": () =>
-              A(() => import(`./chunk~19e4851e4a.js`), [], import.meta.url),
+              O(() => import(`./chunk~19e4851e4a.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_norwegian.json": () =>
-              A(() => import(`./chunk~cead22bc95.js`), [], import.meta.url),
+              O(() => import(`./chunk~cead22bc95.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_polish.json": () =>
-              A(() => import(`./chunk~59fe5ba68d.js`), [], import.meta.url),
+              O(() => import(`./chunk~59fe5ba68d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_portuguese.json": () =>
-              A(() => import(`./chunk~4ce4f00e1d.js`), [], import.meta.url),
+              O(() => import(`./chunk~4ce4f00e1d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_romanian.json": () =>
-              A(() => import(`./chunk~396e8e03ab.js`), [], import.meta.url),
+              O(() => import(`./chunk~396e8e03ab.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_russian.json": () =>
-              A(() => import(`./chunk~b90af23307.js`), [], import.meta.url),
+              O(() => import(`./chunk~b90af23307.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_sc_schinese.json": () =>
-              A(() => import(`./chunk~62f4ec6297.js`), [], import.meta.url),
+              O(() => import(`./chunk~62f4ec6297.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_schinese.json": () =>
-              A(() => import(`./chunk~fd02ec7ab8.js`), [], import.meta.url),
+              O(() => import(`./chunk~fd02ec7ab8.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_spanish.json": () =>
-              A(() => import(`./chunk~5b296efd25.js`), [], import.meta.url),
+              O(() => import(`./chunk~5b296efd25.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_swedish.json": () =>
-              A(() => import(`./chunk~c2dd4b566b.js`), [], import.meta.url),
+              O(() => import(`./chunk~c2dd4b566b.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_tchinese.json": () =>
-              A(() => import(`./chunk~8eb6adf994.js`), [], import.meta.url),
+              O(() => import(`./chunk~8eb6adf994.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_thai.json": () =>
-              A(() => import(`./chunk~d1918a051e.js`), [], import.meta.url),
+              O(() => import(`./chunk~d1918a051e.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_turkish.json": () =>
-              A(() => import(`./chunk~151ab2fec5.js`), [], import.meta.url),
+              O(() => import(`./chunk~151ab2fec5.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_ukrainian.json": () =>
-              A(() => import(`./chunk~ec9b4ec76d.js`), [], import.meta.url),
+              O(() => import(`./chunk~ec9b4ec76d.js`), [], import.meta.url),
             "../../../shared/localization/sales/sales_vietnamese.json": () =>
-              A(() => import(`./chunk~bf026fe6b0.js`), [], import.meta.url),
+              O(() => import(`./chunk~bf026fe6b0.js`), [], import.meta.url),
           }),
           `../../../shared/localization/sales/sales_${a}.json`,
           7,
         ),
-        L(
+        I(
           Object.assign({
             "../localization/main_arabic.json": () =>
-              A(() => import(`./chunk~a1afcc6b49.js`), [], import.meta.url),
+              O(() => import(`./chunk~a1afcc6b49.js`), [], import.meta.url),
             "../localization/main_brazilian.json": () =>
-              A(() => import(`./chunk~efce32a0fd.js`), [], import.meta.url),
+              O(() => import(`./chunk~efce32a0fd.js`), [], import.meta.url),
             "../localization/main_bulgarian.json": () =>
-              A(() => import(`./chunk~a0c563b312.js`), [], import.meta.url),
+              O(() => import(`./chunk~a0c563b312.js`), [], import.meta.url),
             "../localization/main_czech.json": () =>
-              A(() => import(`./chunk~86e73de564.js`), [], import.meta.url),
+              O(() => import(`./chunk~86e73de564.js`), [], import.meta.url),
             "../localization/main_danish.json": () =>
-              A(() => import(`./chunk~8ed5a1f992.js`), [], import.meta.url),
+              O(() => import(`./chunk~8ed5a1f992.js`), [], import.meta.url),
             "../localization/main_dutch.json": () =>
-              A(() => import(`./chunk~c177c2c91d.js`), [], import.meta.url),
+              O(() => import(`./chunk~c177c2c91d.js`), [], import.meta.url),
             "../localization/main_english.json": () =>
-              A(() => import(`./chunk~fbc9faf024.js`), [], import.meta.url),
+              O(() => import(`./chunk~fbc9faf024.js`), [], import.meta.url),
             "../localization/main_finnish.json": () =>
-              A(() => import(`./chunk~2985c8f3da.js`), [], import.meta.url),
+              O(() => import(`./chunk~2985c8f3da.js`), [], import.meta.url),
             "../localization/main_french.json": () =>
-              A(() => import(`./chunk~3fa8b7849a.js`), [], import.meta.url),
+              O(() => import(`./chunk~3fa8b7849a.js`), [], import.meta.url),
             "../localization/main_german.json": () =>
-              A(() => import(`./chunk~897d980c88.js`), [], import.meta.url),
+              O(() => import(`./chunk~897d980c88.js`), [], import.meta.url),
             "../localization/main_greek.json": () =>
-              A(() => import(`./chunk~d4f65e6d28.js`), [], import.meta.url),
+              O(() => import(`./chunk~d4f65e6d28.js`), [], import.meta.url),
             "../localization/main_hungarian.json": () =>
-              A(() => import(`./chunk~2f837a1fa1.js`), [], import.meta.url),
+              O(() => import(`./chunk~2f837a1fa1.js`), [], import.meta.url),
             "../localization/main_indonesian.json": () =>
-              A(() => import(`./chunk~cd202e69b5.js`), [], import.meta.url),
+              O(() => import(`./chunk~cd202e69b5.js`), [], import.meta.url),
             "../localization/main_italian.json": () =>
-              A(() => import(`./chunk~34938c270d.js`), [], import.meta.url),
+              O(() => import(`./chunk~34938c270d.js`), [], import.meta.url),
             "../localization/main_japanese.json": () =>
-              A(() => import(`./chunk~359677a3c7.js`), [], import.meta.url),
+              O(() => import(`./chunk~359677a3c7.js`), [], import.meta.url),
             "../localization/main_koreana.json": () =>
-              A(() => import(`./chunk~15f48863a2.js`), [], import.meta.url),
+              O(() => import(`./chunk~15f48863a2.js`), [], import.meta.url),
             "../localization/main_latam.json": () =>
-              A(() => import(`./chunk~826d3b5250.js`), [], import.meta.url),
+              O(() => import(`./chunk~826d3b5250.js`), [], import.meta.url),
             "../localization/main_malay.json": () =>
-              A(() => import(`./chunk~1865eab4be.js`), [], import.meta.url),
+              O(() => import(`./chunk~1865eab4be.js`), [], import.meta.url),
             "../localization/main_norwegian.json": () =>
-              A(() => import(`./chunk~0f3103bc69.js`), [], import.meta.url),
+              O(() => import(`./chunk~0f3103bc69.js`), [], import.meta.url),
             "../localization/main_polish.json": () =>
-              A(() => import(`./chunk~d757c1664f.js`), [], import.meta.url),
+              O(() => import(`./chunk~d757c1664f.js`), [], import.meta.url),
             "../localization/main_portuguese.json": () =>
-              A(() => import(`./chunk~e45f96fdb3.js`), [], import.meta.url),
+              O(() => import(`./chunk~e45f96fdb3.js`), [], import.meta.url),
             "../localization/main_romanian.json": () =>
-              A(() => import(`./chunk~6bfef4da5d.js`), [], import.meta.url),
+              O(() => import(`./chunk~6bfef4da5d.js`), [], import.meta.url),
             "../localization/main_russian.json": () =>
-              A(() => import(`./chunk~f6efdfaf9b.js`), [], import.meta.url),
+              O(() => import(`./chunk~f6efdfaf9b.js`), [], import.meta.url),
             "../localization/main_schinese.json": () =>
-              A(() => import(`./chunk~e325844ad5.js`), [], import.meta.url),
+              O(() => import(`./chunk~e325844ad5.js`), [], import.meta.url),
             "../localization/main_spanish.json": () =>
-              A(() => import(`./chunk~2d97981d2c.js`), [], import.meta.url),
+              O(() => import(`./chunk~2d97981d2c.js`), [], import.meta.url),
             "../localization/main_swedish.json": () =>
-              A(() => import(`./chunk~a18566ab59.js`), [], import.meta.url),
+              O(() => import(`./chunk~a18566ab59.js`), [], import.meta.url),
             "../localization/main_tchinese.json": () =>
-              A(() => import(`./chunk~a7cc5d09d2.js`), [], import.meta.url),
+              O(() => import(`./chunk~a7cc5d09d2.js`), [], import.meta.url),
             "../localization/main_thai.json": () =>
-              A(() => import(`./chunk~378a998550.js`), [], import.meta.url),
+              O(() => import(`./chunk~378a998550.js`), [], import.meta.url),
             "../localization/main_turkish.json": () =>
-              A(() => import(`./chunk~454f02dbb5.js`), [], import.meta.url),
+              O(() => import(`./chunk~454f02dbb5.js`), [], import.meta.url),
             "../localization/main_ukrainian.json": () =>
-              A(() => import(`./chunk~1c557f5550.js`), [], import.meta.url),
+              O(() => import(`./chunk~1c557f5550.js`), [], import.meta.url),
             "../localization/main_vietnamese.json": () =>
-              A(() => import(`./chunk~312af0dfee.js`), [], import.meta.url),
+              O(() => import(`./chunk~312af0dfee.js`), [], import.meta.url),
           }),
           `../localization/main_${a}.json`,
           3,
@@ -2341,11 +2341,11 @@ async function Wn(e) {
         re.Ready(),
       ]),
       s = { ...o.default };
-    (j.InitFromObjects(i, s), j.AddTokens(t, e), j.AddTokens(n, r));
+    (A.InitFromObjects(i, s), A.AddTokens(t, e), A.AddTokens(n, r));
   } else
-    (j.InitFromObjects(i, null), j.AddTokens(t, null), j.AddTokens(n, null));
+    (A.InitFromObjects(i, null), A.AddTokens(t, null), A.AddTokens(n, null));
 }
 function Gn(e, t, n) {
-  (s(t === `manifest`, `Expected manifest not "${t}"`), j.InitDirect(n));
+  (s(t === `manifest`, `Expected manifest not "${t}"`), A.InitDirect(n));
 }
 window.LocalizationManifestReady = Gn;

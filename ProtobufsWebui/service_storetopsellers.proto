@@ -38,9 +38,9 @@ message CStoreTopSellers_GetWeeklyTopSellers_Response_TopSellersRank {
 }
 
 service StoreTopSellers {
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetCountryList (.CStoreTopSellers_GetCountryList_Request) returns (.CStoreTopSellers_GetCountryList_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetWeeklyTopSellers (.CStoreTopSellers_GetWeeklyTopSellers_Request) returns (.CStoreTopSellers_GetWeeklyTopSellers_Response);
 }
 

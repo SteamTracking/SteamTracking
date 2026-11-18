@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
-import { Wu as r, jd as i, ku as a, wu as o } from "./main.js";
+import { Fd as r, Ju as i, Nu as a, Ou as o } from "./main.js";
 var s = e(t(), 1),
   c = n(),
   l = class e extends s.Component {
@@ -63,7 +63,7 @@ var s = e(t(), 1),
         (this.m_observer.observe(t), (this.m_elTracked = t));
     }
     FindScrollableAncestor(t) {
-      return r(t, (t) => {
+      return i(t, (t) => {
         let n = this.props.horizontal
           ? window.getComputedStyle(t).overflowX
           : window.getComputedStyle(t).overflowY;
@@ -75,8 +75,8 @@ var s = e(t(), 1),
       });
     }
     HandleRef = (e) => {
-      (i(this.m_refElement, e),
-        this.props.containerRef && i(this.props.containerRef, e));
+      (r(this.m_refElement, e),
+        this.props.containerRef && r(this.props.containerRef, e));
     };
     OnIntersection = (e) => {
       let t = !1;

@@ -83,15 +83,6 @@ function _(_) {
 }
 var _ = _(_(), 1);
 function _(_) {
-  return {
-    subject_type: 3,
-    published_file_id: _,
-  };
-}
-function _(_) {
-  return _(_(_));
-}
-function _(_) {
   let _ = _(_(_.publishedFileID)),
     [_, _] = (0, _.useState)(!1);
   if (_.isPending) return null;
@@ -127,9 +118,6 @@ function _(_) {
                 color: `dull`,
                 onClick: () => _(!0),
                 children: _.Localize(`#ugcsubjectpanel_history`),
-              }),
-              (0, _.jsx)(_, {
-                subject: _,
               }),
               (0, _.jsx)(_, {
                 subject: _,
@@ -189,25 +177,6 @@ function _(_) {
             }),
         ],
       });
-}
-function _(_) {
-  let { subject: _ } = _,
-    _ = _();
-  return _.reported_content_id &&
-    (_.resolved ?? 0) !== 0 &&
-    ((_.unresolved_report_count ?? 0) > 0 ||
-      (_.unresolved_dispute_count ?? 0) > 0)
-    ? (0, _.jsx)(_, {
-        size: `1`,
-        color: `dull`,
-        loading: _.isPending,
-        onClick: () =>
-          _.mutate({
-            reportedContentID: _.reported_content_id,
-          }),
-        children: _.Localize(`#moderation_actions_sustain_short`),
-      })
-    : null;
 }
 function _(_) {
   let { subject: _, onClose: _ } = _,

@@ -3,11 +3,11 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n, tt as r } from "./chunk~01cfc309bf.js";
-import { Eo as i } from "./chunk~6b8ddcaac8.js";
-import { a } from "./chunk~d43c81a658.js";
-import { r as o } from "./chunk~21cdc464a1.js";
-import { t as s } from "./chunk~4d16ce5d1a.js";
-import { c, t as l } from "./chunk~3720b337f3.js";
+import { Do as i } from "./chunk~6b8ddcaac8.js";
+import { c as a, t as o } from "./chunk~3720b337f3.js";
+import { a as s } from "./chunk~d43c81a658.js";
+import { r as c } from "./chunk~21cdc464a1.js";
+import { t as l } from "./chunk~4d16ce5d1a.js";
 import { i as u } from "./chunk~fc8a9e4879.js";
 import {
   Jy as d,
@@ -18,57 +18,58 @@ import {
   b as g,
   c as _,
   cx as v,
-  kv as y,
-  pt as ee,
-  ux as te,
-  wc as ne,
-  yS as b,
+  kv as ee,
+  pt as te,
+  ux as ne,
+  wc as re,
+  yS as y,
 } from "./main.js";
-import x from "./chunk~ec2a077c3e.js";
-import { t as S } from "./chunk~4d6f892b8c.js";
-import { t as C } from "./chunk~85f65a382b.js";
-var w = e(t()),
-  T = e(r()),
-  E = `_3qrofBB-aBQ-`,
-  D = `xABO8-oxGRA-`,
-  O = `fh6Buxcrbt8-`,
-  k = `_2j5jZzvpJTE-`,
-  A = `LuwmqeZ2qf8-`,
-  j = `SqnqFBdriWw-`,
-  M = `EMw4B5LOLPc-`,
-  N = `CsfvVIa26qA-`,
-  P = `_7oh7BX88TCE-`,
-  F = `yhi-3P9hR2Y-`,
-  I = `CkYKLkUv3Us-`,
-  L = `pnpXcQv8pmY-`,
-  R = `c3fxHWQQlC0-`,
-  z = `eVV46lLoBq0-`,
-  re = `_07uXB52HKbs-`,
+import b from "./chunk~ec2a077c3e.js";
+import { t as x } from "./chunk~4d6f892b8c.js";
+import { t as S } from "./chunk~85f65a382b.js";
+var C = e(t()),
+  w = e(r()),
+  T = `_3qrofBB-aBQ-`,
+  E = `xABO8-oxGRA-`,
+  D = `fh6Buxcrbt8-`,
+  O = `_2j5jZzvpJTE-`,
+  k = `LuwmqeZ2qf8-`,
+  A = `SqnqFBdriWw-`,
+  j = `EMw4B5LOLPc-`,
+  M = `CsfvVIa26qA-`,
+  N = `_7oh7BX88TCE-`,
+  P = `yhi-3P9hR2Y-`,
+  F = `CkYKLkUv3Us-`,
+  I = `pnpXcQv8pmY-`,
+  L = `c3fxHWQQlC0-`,
+  R = `eVV46lLoBq0-`,
+  z = `_07uXB52HKbs-`,
   B = `OPtkpP5fmuc-`,
-  V = `VUSjpUSCHKo-`,
-  H = `RXgTvW-0muA-`,
+  V = `qaMMN0bGRU0-`,
+  H = `VUSjpUSCHKo-`,
+  ie = `RXgTvW-0muA-`,
   U = `OZS99odXDBw-`,
   W = `JnaKPJOaNwY-`,
   G = n(),
   K = (e) => {
     let t = i(e.nAppID),
-      n = y(t),
+      n = ee(t),
       r = p(t),
       { data: a } = f(t);
     if (!n.data || !r.data) return null;
-    let o = S(n.data, `header`);
+    let o = x(n.data, `header`);
     return (0, G.jsxs)(`div`, {
-      className: re,
+      className: z,
       children: [
-        (0, G.jsx)(s, {
+        (0, G.jsx)(l, {
           id: t,
           children: (0, G.jsx)(`img`, { className: U, src: o }),
         }),
         (0, G.jsxs)(`div`, {
-          className: V,
+          className: H,
           children: [
             (0, G.jsx)(`div`, {
-              className: H,
+              className: ie,
               children: e.fWeight ? `${(e.fWeight * 100).toFixed(2)}%` : ``,
             }),
             (0, G.jsx)(q, { purchaseOption: a, bIsFree: !!r.data.is_free }),
@@ -93,10 +94,10 @@ var w = e(t()),
   J = 5,
   Y = 940,
   X = (e) => {
-    let t = a(Y);
+    let t = s(Y);
     return (0, G.jsx)(`div`, {
-      className: z,
-      children: (0, G.jsx)(o, {
+      className: R,
+      children: (0, G.jsx)(c, {
         visibleElements: J,
         disableEdgeWrap: !0,
         screenIsWide: t,
@@ -105,10 +106,10 @@ var w = e(t()),
     });
   },
   Z = (e) => {
-    let [t, n] = w.useState([]),
-      [r, i] = w.useState([]);
+    let [t, n] = C.useState([]),
+      [r, i] = C.useState([]);
     return (
-      w.useEffect(() => {
+      C.useEffect(() => {
         (async () => {
           let t = {
             rec: e.strName,
@@ -117,7 +118,7 @@ var w = e(t()),
             accountid: e.nAccountID,
           };
           try {
-            let e = await T.default.get(
+            let e = await w.default.get(
               `${v.STORE_BASE_URL}recommenderdemos/getlist`,
               { params: t, timeout: 1e4 },
             );
@@ -128,10 +129,10 @@ var w = e(t()),
         })();
       }, [e.strName, e.nAccountID, e.bExclude]),
       (0, G.jsxs)(`div`, {
-        className: j,
+        className: A,
         children: [
-          (0, G.jsx)(`div`, { className: M, children: e.strTitle }),
-          (0, G.jsx)(`div`, { className: N, children: e.strSubtitle }),
+          (0, G.jsx)(`div`, { className: j, children: e.strTitle }),
+          (0, G.jsx)(`div`, { className: M, children: e.strSubtitle }),
           (0, G.jsx)(X, {
             children: t?.map((t, n) =>
               (0, G.jsx)(K, { nAppID: t, fWeight: r[n] }, `${e.strName}_${n}`),
@@ -141,13 +142,13 @@ var w = e(t()),
       })
     );
   },
-  ie = (e) =>
+  ae = (e) =>
     (0, G.jsxs)(`div`, {
-      className: j,
+      className: A,
       children: [
-        (0, G.jsx)(`div`, { className: M, children: e.strName }),
+        (0, G.jsx)(`div`, { className: j, children: e.strName }),
         (0, G.jsx)(`div`, {
-          className: N,
+          className: M,
           children: d(`#RecommenderDemos_ReleasedGames`),
         }),
         (0, G.jsx)(X, {
@@ -155,9 +156,9 @@ var w = e(t()),
             (0, G.jsx)(K, { nAppID: t }, `${e.strName}_${n}`),
           ),
         }),
-        (0, G.jsx)(`div`, { className: R }),
+        (0, G.jsx)(`div`, { className: L }),
         (0, G.jsx)(`div`, {
-          className: N,
+          className: M,
           children: d(`#RecommenderDemos_UnreleasedGames`),
         }),
         (0, G.jsx)(X, {
@@ -167,14 +168,14 @@ var w = e(t()),
         }),
       ],
     }),
-  ae = (e) => {
-    let [t, n] = w.useState(void 0);
+  oe = (e) => {
+    let [t, n] = C.useState(void 0);
     return (
-      w.useEffect(() => {
+      C.useEffect(() => {
         (async () => {
           let t = { max: 40, exclude: +!!e.bExclude, accountid: e.nAccountID };
           try {
-            let e = await T.default.get(
+            let e = await w.default.get(
               `${v.STORE_BASE_URL}recommenderdemos/getfests`,
               { params: t, timeout: 1e4 },
             );
@@ -188,7 +189,7 @@ var w = e(t()),
         className: void 0,
         children: t?.map((e) =>
           (0, G.jsx)(
-            ie,
+            ae,
             {
               strName: e.title,
               nStartTime: e.start_date,
@@ -202,7 +203,9 @@ var w = e(t()),
       })
     );
   },
-  oe = {
+  se = 1,
+  ce = { 1: `Publisher`, 2: `Franchise`, 3: `Developer` },
+  le = {
     section_type: `crosspromotesalepage`,
     capsules: [],
     events: [],
@@ -210,24 +213,43 @@ var w = e(t()),
     localized_label: [],
     default_label: ``,
   },
-  se = (e) => {
+  ue = (e) => {
+    let { sale: t } = e,
+      n = ce[t.host] ?? `Creator`;
+    return (0, G.jsxs)(`div`, {
+      children: [
+        (0, G.jsxs)(`div`, {
+          className: M,
+          children: [
+            (0, G.jsx)(`a`, { href: t.url, children: t.name || t.url }),
+            ` - ${n} home - Score ${t.score.toFixed(3)}`,
+          ],
+        }),
+        (0, G.jsx)(`div`, {
+          className: V,
+          children: t.appids.map((e) => (0, G.jsx)(K, { nAppID: e }, e)),
+        }),
+      ],
+    });
+  },
+  de = (e) => {
     let { sale: t } = e,
       { eventModel: n } = u(t.clan_account_id, t.clan_event_gid),
-      r = b(v.LANGUAGE),
-      i = c(n, r),
-      a = m();
+      r = y(v.LANGUAGE),
+      i = a(n, r),
+      s = m();
     return (0, G.jsxs)(`div`, {
       children: [
         (0, G.jsx)(`div`, {
-          className: N,
+          className: M,
           children: `${t.name || t.url} - Score ${t.score.toFixed(3)}`,
         }),
         n &&
-          (0, G.jsx)(l, {
+          (0, G.jsx)(o, {
             event: n,
-            section: oe,
+            section: le,
             language: r,
-            bInGamepadUI: a,
+            bInGamepadUI: s,
             placeholderHeight: 300,
             promotedSaleEvent: i,
             nItemsToFeature: t.appids.length,
@@ -239,15 +261,24 @@ var w = e(t()),
       ],
     });
   },
-  Q = (e) => {
-    let [t, n] = w.useState(void 0),
-      [r, i] = w.useState(void 0);
+  fe = (e) =>
+    e.sale.kind === se
+      ? (0, G.jsx)(ue, { sale: e.sale })
+      : (0, G.jsx)(de, { sale: e.sale }),
+  pe = (e) => {
+    let [t, n] = C.useState(void 0),
+      [r, i] = C.useState(void 0);
     return (
-      w.useEffect(() => {
+      C.useEffect(() => {
         (async () => {
-          let t = { max_sales: 5, max_apps: 5, accountid: e.nAccountID };
+          let t = {
+            max_sales: 5,
+            max_apps: 5,
+            accountid: e.nAccountID,
+            include_creator_homes: 1,
+          };
           try {
-            let e = await T.default.get(
+            let e = await w.default.get(
               `${v.STORE_BASE_URL}recommenderdemos/getcreatorsales`,
               { params: t, timeout: 1e4 },
             );
@@ -258,29 +289,29 @@ var w = e(t()),
         })();
       }, [e.nAccountID]),
       (0, G.jsxs)(`div`, {
-        className: j,
+        className: A,
         children: [
           (0, G.jsx)(`div`, {
-            className: M,
+            className: j,
             children: d(`#RecommenderDemos_CreatorSales`),
           }),
           (0, G.jsx)(`div`, {
-            className: N,
+            className: M,
             children: d(`#RecommenderDemos_CreatorSales_Desc`),
           }),
           r && (0, G.jsx)(`div`, { className: `CsfvVIa26qA-`, children: r }),
           (0, G.jsx)(`div`, {
             className: B,
-            children: t?.map((e) => (0, G.jsx)(se, { sale: e }, e.url)),
+            children: t?.map((e) => (0, G.jsx)(fe, { sale: e }, e.url)),
           }),
         ],
       })
     );
   },
-  ce = { no_scheduled: `1` },
-  le = { no_scheduled: `1`, as_anon: `1` },
+  me = { no_scheduled: `1` },
+  Q = { no_scheduled: `1`, as_anon: `1` },
   $ = (e) => {
-    let t = w.useMemo(
+    let t = C.useMemo(
       () =>
         e.nAccountID
           ? { ...e.switches, accountid: String(e.nAccountID) }
@@ -288,18 +319,18 @@ var w = e(t()),
       [e.switches, e.nAccountID],
     );
     return (0, G.jsxs)(`div`, {
-      className: j,
+      className: A,
       children: [
-        (0, G.jsx)(`div`, { className: M, children: e.strTitle }),
-        (0, G.jsx)(`div`, { className: N, children: e.strSubtitle }),
+        (0, G.jsx)(`div`, { className: j, children: e.strTitle }),
+        (0, G.jsx)(`div`, { className: M, children: e.strSubtitle }),
         (0, G.jsx)(`div`, {
-          className: I,
-          children: (0, G.jsx)(x, { switches: t }),
+          className: F,
+          children: (0, G.jsx)(b, { switches: t }),
         }),
       ],
     });
   },
-  ue = {
+  he = {
     Wishlist: `#RecommenderDemos_DiscountReason_Wishlist`,
     FirstTimeOnSale: `#RecommenderDemos_DiscountReason_FirstTimeOnSale`,
     LargestDiscount: `#RecommenderDemos_DiscountReason_LargestDiscount`,
@@ -307,20 +338,23 @@ var w = e(t()),
     NewlyOnSale: `#RecommenderDemos_DiscountReason_NewlyOnSale`,
     WellReviewed: `#RecommenderDemos_DiscountReason_WellReviewed`,
     TopSeller: `#RecommenderDemos_DiscountReason_TopSeller`,
+    HotDeal: `#RecommenderDemos_DiscountReason_HotDeal`,
+    DeepDiscount: `#RecommenderDemos_DiscountReason_DeepDiscount`,
+    PopularInRegion: `#RecommenderDemos_DiscountReason_PopularInRegion`,
   };
-function de(e) {
-  let t = ue[e];
+function ge(e) {
+  let t = he[e];
   return t ? d(t) : e;
 }
-var fe = (e) => {
-    let [t, n] = w.useState(void 0),
-      [r, i] = w.useState(void 0);
+var _e = (e) => {
+    let [t, n] = C.useState(void 0),
+      [r, i] = C.useState(void 0);
     return (
-      w.useEffect(() => {
+      C.useEffect(() => {
         (async () => {
           let t = { accountid: e.nAccountID };
           try {
-            let e = await T.default.get(
+            let e = await w.default.get(
               `${v.STORE_BASE_URL}recommenderdemos/getdiscountreasons`,
               { params: t, timeout: 1e4 },
             );
@@ -331,14 +365,14 @@ var fe = (e) => {
         })();
       }, [e.nAccountID]),
       (0, G.jsxs)(`div`, {
-        className: j,
+        className: A,
         children: [
           (0, G.jsx)(`div`, {
-            className: M,
+            className: j,
             children: d(`#RecommenderDemos_DiscountReasons`),
           }),
           (0, G.jsx)(`div`, {
-            className: N,
+            className: M,
             children: d(`#RecommenderDemos_DiscountReasons_Desc`),
           }),
           r && (0, G.jsx)(`div`, { className: `CsfvVIa26qA-`, children: r }),
@@ -346,9 +380,9 @@ var fe = (e) => {
             (0, G.jsxs)(
               `div`,
               {
-                className: P,
+                className: N,
                 children: [
-                  (0, G.jsx)(`div`, { className: F, children: de(e.reason) }),
+                  (0, G.jsx)(`div`, { className: P, children: ge(e.reason) }),
                   (0, G.jsx)(X, {
                     children: e.appids.map((e) =>
                       (0, G.jsx)(K, { nAppID: e }, e),
@@ -363,25 +397,25 @@ var fe = (e) => {
       })
     );
   },
-  pe = () => {
-    let [e, t] = w.useState(!1),
-      [n, r] = w.useState(0),
-      [i, a] = w.useState(``),
-      [o, s] = w.useState(!0);
-    return te.logged_in
-      ? (0, G.jsx)(ee, {
+  ve = () => {
+    let [e, t] = C.useState(!1),
+      [n, r] = C.useState(0),
+      [i, a] = C.useState(``),
+      [o, s] = C.useState(!0);
+    return ne.logged_in
+      ? (0, G.jsx)(te, {
           controller: `recommenderdemos`,
           method: `default`,
           feature: `capsule`,
           children: (0, G.jsxs)(`div`, {
-            className: D,
+            className: E,
             children: [
-              (0, G.jsx)(`div`, { className: E, children: `(Valve-Only)` }),
+              (0, G.jsx)(`div`, { className: T, children: `(Valve-Only)` }),
               (0, G.jsxs)(`div`, {
-                className: O,
+                className: D,
                 children: [
                   (0, G.jsxs)(`div`, {
-                    className: k,
+                    className: O,
                     children: [
                       (0, G.jsx)(`input`, {
                         type: `text`,
@@ -389,7 +423,7 @@ var fe = (e) => {
                         onChange: (e) => a(e.target.value),
                       }),
                       (0, G.jsx)(h, {
-                        className: A,
+                        className: k,
                         onClick: () => {
                           isNaN(parseInt(i)) || (t(!0), r(parseInt(i)));
                         },
@@ -397,7 +431,7 @@ var fe = (e) => {
                       }),
                       (0, G.jsx)(h, {
                         disabled: !e,
-                        className: A,
+                        className: k,
                         onClick: () => {
                           (t(!1), r(0), a(``));
                         },
@@ -417,7 +451,7 @@ var fe = (e) => {
                       ],
                     }),
                   (0, G.jsxs)(`div`, {
-                    className: L,
+                    className: I,
                     children: [
                       (0, G.jsx)(`input`, {
                         type: `checkbox`,
@@ -454,20 +488,20 @@ var fe = (e) => {
                 strTitle: d(`#RecommenderDemos_NextFestInversePopular`),
                 strSubtitle: d(`#RecommenderDemos_NextFestDesc`),
               }),
-              (0, G.jsx)(ae, { nAccountID: n, bExclude: o }),
-              (0, G.jsx)(Q, { nAccountID: n }),
+              (0, G.jsx)(oe, { nAccountID: n, bExclude: o }),
+              (0, G.jsx)(pe, { nAccountID: n }),
               (0, G.jsx)($, {
                 nAccountID: n,
-                switches: ce,
+                switches: me,
                 strTitle: d(`#RecommenderDemos_DiscountsNoScheduled`),
                 strSubtitle: d(`#RecommenderDemos_DiscountsNoScheduled_Desc`),
               }),
               (0, G.jsx)($, {
-                switches: le,
+                switches: Q,
                 strTitle: d(`#RecommenderDemos_DiscountsAnonymous`),
                 strSubtitle: d(`#RecommenderDemos_DiscountsAnonymous_Desc`),
               }),
-              (0, G.jsx)(fe, { nAccountID: n }),
+              (0, G.jsx)(_e, { nAccountID: n }),
               (0, G.jsx)(Z, {
                 nAccountID: n,
                 bExclude: o,
@@ -523,12 +557,12 @@ var fe = (e) => {
                 children: d(`#LoginText`),
               }),
               (0, G.jsx)(`div`, {
-                className: ne(`btn_green_white_innerfade`, ` btn_medium`),
-                onClick: C,
+                className: re(`btn_green_white_innerfade`, ` btn_medium`),
+                onClick: S,
                 children: (0, G.jsx)(`span`, { children: d(`#LoginButton`) }),
               }),
             ],
           }),
         });
   };
-export { pe as default };
+export { ve as default };

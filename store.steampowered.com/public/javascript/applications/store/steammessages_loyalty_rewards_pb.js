@@ -2619,13 +2619,14 @@ var d = e(t(), 1),
     return e.SendMsg(`LoyaltyRewards.GetSummary#1`, r(f, t, n), p, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetSummary = n;
   function i(e, t, n) {
     return e.SendMsg(`LoyaltyRewards.RedeemPoints#1`, r(_, t, n), b, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.RedeemPoints = i;
@@ -2634,7 +2635,7 @@ var d = e(t(), 1),
       `LoyaltyRewards.RedeemPointsForBadgeLevel#1`,
       r(v, t, n),
       b,
-      { ePrivilege: 1 },
+      { ePrivilege: 1, rgBrowserAPISites: [`store`] },
     );
   }
   e.RedeemPointsForBadgeLevel = a;
@@ -2652,7 +2653,7 @@ var d = e(t(), 1),
       `LoyaltyRewards.RedeemPointsForProfileCustomization#1`,
       r(x, t, n),
       S,
-      { ePrivilege: 1 },
+      { ePrivilege: 1, rgBrowserAPISites: [`store`] },
     );
   }
   e.RedeemPointsForProfileCustomization = s;
@@ -2661,7 +2662,7 @@ var d = e(t(), 1),
       `LoyaltyRewards.RedeemPointsForProfileCustomizationUpgrade#1`,
       r(C, t, n),
       w,
-      { ePrivilege: 1 },
+      { ePrivilege: 1, rgBrowserAPISites: [`store`] },
     );
   }
   e.RedeemPointsForProfileCustomizationUpgrade = c;
@@ -2677,7 +2678,7 @@ var d = e(t(), 1),
   function u(e, t, n) {
     return e.SendMsg(`LoyaltyRewards.AddReaction#1`, r(D, t, n), O, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.AddReaction = u;
@@ -2685,7 +2686,7 @@ var d = e(t(), 1),
     return e.SendMsg(`LoyaltyRewards.GetReactions#1`, r(k, t, n), A, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetReactions = d;
@@ -2703,7 +2704,7 @@ var d = e(t(), 1),
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetReactionConfig = N;
@@ -2721,6 +2722,7 @@ var d = e(t(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.GetEligibleApps = B;
@@ -2729,7 +2731,12 @@ var d = e(t(), 1),
       `LoyaltyRewards.GetActivePurchaseBonuses#1`,
       r(G, t, n),
       K,
-      { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.GetActivePurchaseBonuses = V;
@@ -2738,7 +2745,7 @@ var d = e(t(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   e.QueryRewardItems = H;
@@ -2747,7 +2754,12 @@ var d = e(t(), 1),
       `LoyaltyRewards.BatchedQueryRewardItems#1`,
       r(Y, t, n),
       X,
-      { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.BatchedQueryRewardItems = U;
@@ -2756,7 +2768,12 @@ var d = e(t(), 1),
       `LoyaltyRewards.GetEquippedProfileItems#1`,
       r(Q, t, n),
       te,
-      { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.GetEquippedProfileItems = W;

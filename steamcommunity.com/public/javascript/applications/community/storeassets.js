@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { Fp as e, Tp as t, eg as n, im as r, np as i } from "./main.js";
+import { Ap as e, Bp as t, ag as n, lm as r, op as i } from "./main.js";
 function a(e, t) {
   if (e[t]) {
     if (t == `community_icon`) {
@@ -39,8 +39,8 @@ function o(e, t = `full`) {
     r.STORE_ITEM_BASE_URL + e.filename.replace(/\.([^.]+)(\?.*)?$/, `${i}.$1$2`)
   );
 }
-function s(t) {
-  let { data: n } = e(t),
+function s(e) {
+  let { data: n } = t(e),
     r = i();
   if (n)
     return [
@@ -50,8 +50,8 @@ function s(t) {
         : []),
     ].sort((e, t) => e.ordinal - t.ordinal);
 }
-function c(e, n = !1) {
-  let { data: i } = t({ appid: e });
+function c(t, n = !1) {
+  let { data: i } = e({ appid: t });
   if (i !== void 0)
     return i === null
       ? null
@@ -59,10 +59,10 @@ function c(e, n = !1) {
         ? a(i, `library_capsule_2x`)
         : i.library_capsule
           ? a(i, `library_capsule`)
-          : `${r.STORE_ITEM_BASE_URL}steam/apps/${e}/portrait.png`;
+          : `${r.STORE_ITEM_BASE_URL}steam/apps/${t}/portrait.png`;
 }
-function l(e, ...n) {
-  let { data: r } = t(e);
+function l(t, ...n) {
+  let { data: r } = e(t);
   return u(r, ...n);
 }
 function u(e, ...t) {

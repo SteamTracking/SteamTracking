@@ -71,7 +71,7 @@ message StoreAppSimilarityPriorityOptions {
 }
 
 service StoreAppSimilarity {
-	// ePrivilege=2, eWebAPIKeyRequirement=2
+	// ePrivilege=2, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc IdentifyClustersFromPlaytime (.CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request) returns (.CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=2
 	rpc PrioritizeAppsForUser (.CStoreAppSimilarity_PrioritizeAppsForUser_Request) returns (.CStoreAppSimilarity_PrioritizeAppsForUser_Response);

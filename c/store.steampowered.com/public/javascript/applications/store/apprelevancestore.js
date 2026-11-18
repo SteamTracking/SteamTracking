@@ -11,10 +11,15 @@ function _(_) {
 function _(_) {
   let _ = _();
   return _({
-    queryKey: _(_),
-    queryFn: () => _(_, _),
+    ..._(_, _),
     enabled: _.logged_in,
   });
+}
+function _(_, _) {
+  return {
+    queryKey: _(_),
+    queryFn: () => _(_, _),
+  };
 }
 function _() {
   let _ = _();

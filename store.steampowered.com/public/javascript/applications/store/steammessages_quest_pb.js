@@ -962,7 +962,7 @@ var d = e(t(), 1),
     return e.SendMsg(`Quest.GetCommunityInventory#1`, r(m, t, n), h, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.GetCommunityInventory = t;
@@ -970,14 +970,15 @@ var d = e(t(), 1),
     return e.SendMsg(`Quest.GetCommunityItemDefinitions#1`, r(g, t, n), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      eWebAPIKeyRequirement: 4,
+      eWebAPIKeyRequirement: 2,
+      rgBrowserAPISites: [`store`, `community`],
     });
   }
   e.GetCommunityItemDefinitions = n;
   function i(e, t, n) {
     return e.SendMsg(`Quest.ActivateProfileModifierItem#1`, r(y, t, n), b, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   e.ActivateProfileModifierItem = i;

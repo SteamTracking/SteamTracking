@@ -3,30 +3,25 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
-import { n as r } from "./chunk~521597d5f9.js";
-var i = e(t(), 1),
-  a = n(),
-  o = i.createContext(void 0);
-function s() {
-  return i.useContext(o) ?? r();
-}
-var c = { eLocation: 0 },
-  l = i.createContext(c);
-function u(e) {
+var r = e(t(), 1),
+  i = n(),
+  a = { eLocation: 0 },
+  o = r.createContext(a);
+function s(e) {
   let { children: t, location: n } = e;
-  return (0, a.jsx)(l.Provider, {
-    value: { ...c, eLocation: n ?? 0 },
+  return (0, i.jsx)(o.Provider, {
+    value: { ...a, eLocation: n ?? 0 },
     children: t,
   });
 }
-function d() {
-  return i.useContext(l);
+function c() {
+  return r.useContext(o);
 }
-function f() {
-  return d().eLocation == 2;
+function l() {
+  return c().eLocation == 2;
 }
-function p() {
-  let e = d();
+function u() {
+  let e = c();
   return e.eLocation == 2 || e.eLocation == 1;
 }
-export { p as a, f as i, u as n, s as o, d as r, l as t };
+export { u as a, l as i, s as n, c as r, o as t };

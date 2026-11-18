@@ -1624,7 +1624,7 @@ function _(_) {
     strImageURL: _,
     strImageTarget: _,
   } = _.rating;
-  if (_ === `0`)
+  if (_ === `0` && _?.includes(`/default/`))
     return (0, _.jsx)(`div`, {
       className: _,
       children: _.Localize(`#GameRating_AllAges`),

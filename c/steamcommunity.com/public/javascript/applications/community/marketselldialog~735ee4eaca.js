@@ -79,7 +79,6 @@ import {
   _,
 } from "./chunk~cfb555d6e5.js";
 import { _ } from "./chunk~008c00a198.js";
-import { _, _, _, _ } from "./chunk~bb87983663.js";
 import {
   _,
   _,
@@ -110,6 +109,7 @@ import {
   _,
   _,
 } from "./main.js";
+import { _, _, _, _ } from "./chunk~bb87983663.js";
 var _ = _(_());
 function _() {
   return (
@@ -2129,19 +2129,24 @@ function _(_) {
   let { children: _ } = _;
   return (0, _.jsx)(_, {
     isAnimationActive: !1,
-    content: (_) =>
-      (0, _.jsx)(_, {
-        background: `dull-7`,
-        radius: `md`,
-        padding: `2`,
-        elevation: `1`,
-        children: typeof _ == `function` ? _(_) : _,
-      }),
+    content: (_) => {
+      let _ = typeof _ == `function` ? _(_) : _;
+      return _
+        ? (0, _.jsx)(_, {
+            background: `dull-7`,
+            radius: `md`,
+            padding: `2`,
+            elevation: `1`,
+            children: _,
+          })
+        : null;
+    },
   });
 }
 _.memo(function () {
   return (0, _.jsx)(_, {
     stroke: `#FFFFFF10`,
+    fill: `var(--color-dull-5)`,
   });
 });
 function _(_) {
@@ -2171,6 +2176,36 @@ function _(_) {
   };
 }
 function _(_) {
+  let {
+    _: _,
+    color: _,
+    stops: _ = [
+      [`0%`, 0.7],
+      [`100%`, 0],
+    ],
+    gradientUnits: _,
+  } = _;
+  return (0, _.jsx)(`linearGradient`, {
+    _: _,
+    _: `0`,
+    _: `0`,
+    _: `0`,
+    _: `100%`,
+    gradientUnits: _,
+    children: _.map(([_, _, _], _) =>
+      (0, _.jsx)(
+        `stop`,
+        {
+          offset: _,
+          stopColor: _ ?? _,
+          stopOpacity: _,
+        },
+        _,
+      ),
+    ),
+  });
+}
+function _(_) {
   let { dataKey: _, color: _, numPoints: _, ..._ } = _;
   return (0, _.jsx)(_, {
     dataKey: _,
@@ -2185,21 +2220,41 @@ function _(_) {
 }
 function _(_) {
   let { scale: _, dataKey: _ } = _,
+    _ = (0, _.useId)(),
     _ = {
       dataKey: _,
-      fill: `var(--color-blue-9)`,
-      opacity: 0.25,
+      fill: `url(#${_})`,
       yAxisId: `purchases`,
       isAnimationActive: !1,
     };
-  return _ === `lifetime`
-    ? (0, _.jsx)(_, {
-        ..._,
-        connectNulls: !0,
-      })
-    : (0, _.jsx)(_, {
-        ..._,
-      });
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsx)(`defs`, {
+        children: (0, _.jsx)(_, {
+          _: _,
+          color: `var(--color-blue-9)`,
+          stops: [
+            [`0%`, 1],
+            [
+              `50%`,
+              1,
+              `color-mix(in srgb, var(--color-blue-9) 25%, var(--color-dull-5))`,
+            ],
+          ],
+          gradientUnits: `userSpaceOnUse`,
+        }),
+      }),
+      _ === `lifetime`
+        ? (0, _.jsx)(_, {
+            ..._,
+            strokeOpacity: 0.25,
+            connectNulls: !0,
+          })
+        : (0, _.jsx)(_, {
+            ..._,
+          }),
+    ],
+  });
 }
 function _() {
   typeof _ == `function`
@@ -2451,15 +2506,22 @@ function _(_) {
     ),
   ];
 }
-var _ = 86400,
+var _ = `VJlhvA2sWGg-`,
+  _ = 86400,
   _ = 604800;
 _();
 var _ = {
-  week: _ / 4,
-  month: _,
-  year: _,
-  lifetime: _,
-};
+    week: _ / 4,
+    month: _,
+    year: _,
+    lifetime: _,
+  },
+  _ = {
+    week: _ / 48,
+    month: _ / 48,
+    year: _ / 2,
+    lifetime: _ / 2,
+  };
 function _(_, _) {
   let _ = new Date(_ * 1e3);
   switch (_) {
@@ -2485,7 +2547,8 @@ function _(_) {
     _ = (0, _.useMemo)(
       () => _.reduce((_, _) => _ + +(_.purchases > 0), 0),
       [_],
-    );
+    ),
+    _ = (0, _.useId)();
   return (0, _.jsxs)(_, {
     currency: _.ecurrency,
     data: _,
@@ -2494,13 +2557,71 @@ function _(_) {
     height: _,
     children: [
       (0, _.jsx)(_, {
+        horizontal: !1,
+        vertical: !1,
+        fill: `var(--color-dull-5)`,
+        yAxisId: `price`,
+      }),
+      (0, _.jsxs)(`defs`, {
+        children: [
+          (0, _.jsx)(_, {
+            _: `${_}price`,
+            color: `var(--color-green-9)`,
+            stops: [
+              [`0%`, 0.5],
+              [`90%`, 0],
+            ],
+            gradientUnits: `userSpaceOnUse`,
+          }),
+          (0, _.jsxs)(`filter`, {
+            _: `${_}band`,
+            children: [
+              (0, _.jsx)(`feColorMatrix`, {
+                _: `SourceAlpha`,
+                values: `0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 100 0`,
+                result: `solid`,
+              }),
+              (0, _.jsx)(`feOffset`, {
+                _: `solid`,
+                _: `60`,
+                result: `shifted`,
+              }),
+              (0, _.jsx)(`feGaussianBlur`, {
+                _: `shifted`,
+                stdDeviation: `25`,
+                result: `blurred`,
+              }),
+              (0, _.jsx)(`feComposite`, {
+                _: `SourceGraphic`,
+                in2: `blurred`,
+                operator: `out`,
+              }),
+            ],
+          }),
+        ],
+      }),
+      (0, _.jsx)(_, {
         dataKey: `price`,
-        color: `var(--color-green-9)`,
-        numPoints: _,
+        yAxisId: `price`,
+        stroke: `none`,
+        fill: `url(#${_}price)`,
+        fillOpacity: 1,
+        filter: `url(#${_}band)`,
+        activeDot: !1,
+        tooltipType: `none`,
+        isAnimationActive: !1,
+        connectNulls: !0,
       }),
       (0, _.jsx)(_, {
         dataKey: `purchases`,
         scale: _,
+      }),
+      (0, _.jsx)(_, {
+        dataKey: `price`,
+        color: `var(--color-green-9)`,
+        numPoints: _,
+        strokeWidth: 1.5,
+        className: _,
       }),
       _.length === 0 &&
         (0, _.jsx)(_, {
@@ -2768,11 +2889,11 @@ function _(_) {
             children: _,
           }),
           (0, _.jsx)(_, {
-            contrast: `title`,
+            color: `green-9`,
             children: _,
           }),
           (0, _.jsx)(_, {
-            contrast: `title`,
+            color: `blue-9`,
             children: _,
           }),
         ],

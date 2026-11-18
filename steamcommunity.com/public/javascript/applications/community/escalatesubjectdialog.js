@@ -5,7 +5,7 @@ import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
 import { t as r } from "./chunk~cfd048ddd7.js";
 import { t as i } from "./chunk~91ffd0567f.js";
-import { i as a, l as o, o as s } from "./chunk~1e67c3e4e4.js";
+import { a, s as o, u as s } from "./chunk~1e67c3e4e4.js";
 import { n as c } from "./chunk~6c2bf73948.js";
 import { t as l } from "./chunk~bdc7e21194.js";
 import { t as u } from "./chunk~eefd71512b.js";
@@ -15,12 +15,12 @@ import {
   H as p,
   Kt as m,
   Lt as h,
-  R as g,
-  V as _,
-  _t as v,
-  et as y,
-  hm as b,
-  wu as x,
+  Ou as g,
+  R as _,
+  V as v,
+  _t as y,
+  bm as b,
+  et as x,
   z as S,
   zt as C,
 } from "./main.js";
@@ -182,7 +182,12 @@ function L(e) {
   );
 }
 function R(e) {
-  let { steamid: t, strPersonaName: n, bIsSupportAccount: i } = e;
+  let {
+    steamid: t,
+    strPersonaName: n,
+    bIsSupportAccount: i,
+    bIsDeveloperAccount: a,
+  } = e;
   return (0, N.jsxs)(N.Fragment, {
     children: [
       (0, N.jsx)(`span`, {
@@ -194,7 +199,6 @@ function R(e) {
             truncate: !0,
             title: n,
             className: M,
-            weight: i ? `heavy` : void 0,
             children: n,
           }),
         }),
@@ -204,6 +208,12 @@ function R(e) {
           className: `yMtdDuggCPo-`,
           title: `Support or Admin account`,
           children: `Mod`,
+        }),
+      a &&
+        (0, N.jsx)(`span`, {
+          className: `yMtdDuggCPo-`,
+          title: `Partner account for this item's app`,
+          children: `Dev`,
         }),
     ],
   });
@@ -218,7 +228,7 @@ function z(e) {
       (0, N.jsx)(`td`, {
         children: (0, N.jsx)(h, {
           size: `2`,
-          children: v(t.timestamp, !1, ``),
+          children: y(t.timestamp, !1, ``),
         }),
       }),
       (0, N.jsx)(`td`, {
@@ -229,6 +239,7 @@ function z(e) {
               steamid: t.actor_steamid,
               strPersonaName: i,
               bIsSupportAccount: t.actor_is_support,
+              bIsDeveloperAccount: t.actor_is_developer,
             }),
             (0, N.jsx)(r, {
               size: `2`,
@@ -279,14 +290,14 @@ function B(e) {
           r.resolution !== 1 &&
             r.resolution !== 14 &&
             (0, N.jsxs)(N.Fragment, {
-              children: [(0, N.jsx)(`br`, {}), `Resolution: `, _(r.resolution)],
+              children: [(0, N.jsx)(`br`, {}), `Resolution: `, v(r.resolution)],
             }),
           r.sanctions &&
             (0, N.jsxs)(N.Fragment, {
               children: [
                 (0, N.jsx)(`br`, {}),
                 `Sanctions: `,
-                r.sanctions.map(g).join(`, `),
+                r.sanctions.map(_).join(`, `),
               ],
             }),
         ],
@@ -311,11 +322,12 @@ function V(e) {
     r = [...(t?.reports ?? [])].sort(
       (e, t) => (t.time_reported ?? 0) - (e.time_reported ?? 0),
     ),
-    i = o(t?.reported_content_id, !0),
+    i = s(t?.reported_content_id, !0).data?.subject?.reports ?? [],
     a = new Set(
-      (i.data?.subject?.reports ?? [])
-        .filter((e) => e.reporter_is_support)
-        .map((e) => e.reporter_steamid),
+      i.filter((e) => e.reporter_is_support).map((e) => e.reporter_steamid),
+    ),
+    o = new Set(
+      i.filter((e) => e.reporter_is_developer).map((e) => e.reporter_steamid),
     );
   return (0, N.jsxs)(`table`, {
     className: w,
@@ -382,7 +394,11 @@ function V(e) {
             r.map((e) =>
               (0, N.jsx)(
                 H,
-                { report: e, bReporterIsSupport: a.has(e.reporter_steamid) },
+                {
+                  report: e,
+                  bReporterIsSupport: a.has(e.reporter_steamid),
+                  bReporterIsDeveloper: o.has(e.reporter_steamid),
+                },
                 e.report_id,
               ),
             ),
@@ -392,20 +408,20 @@ function V(e) {
   });
 }
 function H(e) {
-  let { report: t, bReporterIsSupport: n } = e,
-    r = l(t.reporter_steamid);
-  if (!r.isSuccess || !r.data?.public_data) return null;
-  let i = !!t.time_disputed && t.dispute_resolved === 0,
-    a = t.resolved !== 0 && (!t.time_disputed || t.dispute_resolved !== 0),
-    o = t.time_dispute_resolved !== 0,
-    s = t.resolved === 1,
-    u = r.data.public_data.persona_name;
+  let { report: t, bReporterIsSupport: n, bReporterIsDeveloper: r } = e,
+    i = l(t.reporter_steamid);
+  if (!i.isSuccess || !i.data?.public_data) return null;
+  let a = !!t.time_disputed && t.dispute_resolved === 0,
+    o = t.resolved !== 0 && (!t.time_disputed || t.dispute_resolved !== 0),
+    s = t.time_dispute_resolved !== 0,
+    u = t.resolved === 1,
+    p = i.data.public_data.persona_name;
   return (0, N.jsxs)(`tr`, {
     children: [
       (0, N.jsx)(`td`, {
         children: (0, N.jsx)(h, {
           size: `2`,
-          children: v(t.time_reported, !1, ``),
+          children: y(t.time_reported, !1, ``),
         }),
       }),
       (0, N.jsx)(`td`, {
@@ -415,15 +431,16 @@ function H(e) {
             (0, N.jsx)(`a`, {
               href: `${b.COMMUNITY_BASE_URL}profiles/${t.reporter_steamid}`,
               children: (0, N.jsx)(c, {
-                playerLinkDetails: r.data,
+                playerLinkDetails: i.data,
                 size: `X-Small`,
                 alt: `Reporter`,
               }),
             }),
             (0, N.jsx)(R, {
               steamid: t.reporter_steamid,
-              strPersonaName: u,
+              strPersonaName: p,
               bIsSupportAccount: n,
+              bIsDeveloperAccount: r,
             }),
           ],
         }),
@@ -433,42 +450,42 @@ function H(e) {
           as: `div`,
           size: `2`,
           children: [
-            !a &&
+            !o &&
               (0, N.jsx)(`span`, {
-                children: y.Localize(`#moderation_resolutionstatus_pending`),
+                children: x.Localize(`#moderation_resolutionstatus_pending`),
               }),
-            s &&
-              !i &&
-              !o &&
+            u &&
+              !a &&
+              !s &&
               (0, N.jsx)(`span`, {
                 children: d.Localize(
                   `#contentreportslist_acquitted_at`,
-                  v(t.time_resolved, !1, ``),
+                  y(t.time_resolved, !1, ``),
+                ),
+              }),
+            o &&
+              !u &&
+              !a &&
+              !s &&
+              (0, N.jsx)(`span`, {
+                children: d.Localize(
+                  `#contentreportslist_resolved_at`,
+                  y(t.time_resolved, !1, ``),
                 ),
               }),
             a &&
               !s &&
-              !i &&
-              !o &&
-              (0, N.jsx)(`span`, {
-                children: d.Localize(
-                  `#contentreportslist_resolved_at`,
-                  v(t.time_resolved, !1, ``),
-                ),
-              }),
-            i &&
-              !o &&
               (0, N.jsx)(`span`, {
                 children: d.Localize(
                   `#contentreportslist_disputed_at`,
-                  v(t.time_disputed, !1, ``),
+                  y(t.time_disputed, !1, ``),
                 ),
               }),
-            o &&
+            s &&
               (0, N.jsx)(`span`, {
                 children: d.Localize(
                   `#contentreportslist_dispute_resolved_at`,
-                  v(t.time_dispute_resolved, !1, ``),
+                  y(t.time_dispute_resolved, !1, ``),
                 ),
               }),
           ],
@@ -528,18 +545,18 @@ function J(e) {
   let { reportedContentID: t, onClose: n } = e,
     r = e.eCurrentLevel ?? 0,
     a = K.filter(([e]) => e > r),
-    [o, c] = (0, U.useState)(10),
-    l = s(t),
+    [s, c] = (0, U.useState)(10),
+    l = o(t),
     [u, f] = (0, U.useState)(``);
-  return (0, N.jsxs)(x, {
+  return (0, N.jsxs)(g, {
     className: W,
     children: [
-      (0, N.jsx)(x, {
+      (0, N.jsx)(g, {
         children: d.Localize(`#moderation_escalation_description`),
       }),
       (0, N.jsx)(`select`, {
         className: G,
-        value: o,
+        value: s,
         onChange: (e) => c(parseInt(e.target.value)),
         children: a.map(([e, t]) =>
           (0, N.jsx)(`option`, { value: e, children: d.Localize(t) }, e),
@@ -558,11 +575,11 @@ function J(e) {
           (0, N.jsx)(C, {
             color: `dull`,
             onClick: n,
-            children: y.Localize(`#moderation_cancel`),
+            children: x.Localize(`#moderation_cancel`),
           }),
           (0, N.jsx)(C, {
             onClick: async () => {
-              (await l.mutateAsync({ eNewLevel: o, strNote: u }), n());
+              (await l.mutateAsync({ eNewLevel: s, strNote: u }), n());
             },
             disabled: a.length == 0,
             loading: l.isPending,

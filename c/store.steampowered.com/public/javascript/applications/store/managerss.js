@@ -1104,6 +1104,7 @@ var _ = _(_()),
     return _.SendMsg(`News.PreviewPartnerEvents#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.PreviewPartnerEvents = _;
@@ -1117,6 +1118,7 @@ var _ = _(_()),
   function _(_, _, _) {
     return _.SendMsg(`News.PublishPartnerEvent#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.PublishPartnerEvent = _;
@@ -1124,6 +1126,7 @@ var _ = _(_()),
     return _.SendMsg(`News.GetBatchPublishedPartnerEvent#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetBatchPublishedPartnerEvent = _;

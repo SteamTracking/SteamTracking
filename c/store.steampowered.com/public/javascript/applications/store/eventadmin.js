@@ -11299,7 +11299,7 @@ var _ = class extends _.Component {
       _ = _ ? _.type : Number(_.event_type),
       _ = new _(_.clan_steamid),
       _ = _ ? `app/${_}` : `group/${_.GetAccountID()}`,
-      _ = `${_.STORE_BASE_URL}news/${_}/view/${_.announcement_gid}`,
+      _ = `${_.STORE_BASE_URL}news/${_}/view/${_}`,
       _ = !!(_ && _.BHasTag(`adult_only_content`)),
       _ = !!(_ && _.BHasTag(`halloween`));
     return (0, _.jsxs)(_, {

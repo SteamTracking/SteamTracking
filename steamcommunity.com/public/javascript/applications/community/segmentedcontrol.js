@@ -4,11 +4,11 @@
 import { o as e, r as t } from "./chunk~f025431ab0.js";
 import { D as n, Ft as r, ot as i } from "./chunk~01cfc309bf.js";
 import {
-  $h as a,
-  Gt as o,
-  Kt as s,
-  Wt as c,
-  en as l,
+  Gt as a,
+  Kt as o,
+  Wt as s,
+  en as c,
+  ig as l,
   kt as u,
   qt as d,
 } from "./main.js";
@@ -63,7 +63,7 @@ function A(e) {
       radius: n,
       size: r,
       status: i,
-      color: s,
+      color: o,
       children: g,
       value: v,
       onValueChange: y,
@@ -99,7 +99,7 @@ function A(e) {
           i = t > 0 ? -1 : r;
         v !== null &&
           ((i = n.findIndex(([e]) => e === v)),
-          a(i !== -1, `Could not find current segmented value position`));
+          l(i !== -1, `Could not find current segmented value position`));
         for (let a = 1; a <= r; a++) {
           let [o, s] = n[(((i + t * a) % r) + r) % r];
           if (!s.bDisabled) {
@@ -109,9 +109,9 @@ function A(e) {
         }
       }
     },
-    E = o(`SegmentedControl`, t),
-    D = c(r),
-    A = l(D),
+    E = a(`SegmentedControl`, t),
+    D = s(r),
+    A = c(D),
     j = (0, f.useMemo)(
       () => ({
         value: v,
@@ -147,7 +147,7 @@ function A(e) {
         },
         children: [
           g,
-          v !== null && (0, O.jsx)(N, { radius: n, color: s, size: A }),
+          v !== null && (0, O.jsx)(N, { radius: n, color: o, size: A }),
         ],
       }),
     }),
@@ -156,7 +156,7 @@ function A(e) {
 function j(e) {
   let { value: t, children: n, disabled: r } = e,
     i = (0, f.useContext)(k),
-    [a, o] = (0, f.useState)(),
+    [a, s] = (0, f.useState)(),
     { register: c, unregister: l } = i || {};
   if (
     ((0, f.useEffect)(
@@ -172,10 +172,10 @@ function j(e) {
       (e.stopPropagation(), e.preventDefault(), !(g || r) && d(t));
     },
     v = n === void 0 ? t : n;
-  return (0, O.jsx)(s, {
+  return (0, O.jsx)(o, {
     justify: `center`,
     align: `center`,
-    ref: o,
+    ref: s,
     onClick: _,
     "data-selected": g ? `true` : `false`,
     className: (0, p.default)(b, h && m[`Size-${h}`], r ? S : ``),

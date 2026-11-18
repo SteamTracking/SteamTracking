@@ -27,8 +27,9 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~2185942436.js";
-import { _, _, _, _, _, _, _, _, _ } from "./chunk~b8ca037aae.js";
+import { _, _, _, _, _, _ } from "./chunk~3720b337f3.js";
 import { _ } from "./chunk~f0141d9521.js";
 import { _, _, _, _ } from "./chunk~f57d770d64.js";
 import { _, _, _ } from "./chunk~cf3721cc1c.js";
@@ -37,16 +38,16 @@ import "./chunk~8681f5c764.js";
 import { _ } from "./chunk~2f085f1384.js";
 import { _, _ } from "./chunk~af36c62e9f.js";
 import { _ } from "./chunk~eefd71512b.js";
-import { _ } from "./chunk~331382b23f.js";
 import { _, _, _, _ } from "./chunk~91ae5e1167.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~2f8c67b4de.js";
 import { _, _ } from "./chunk~d43c81a658.js";
+import { _, _, _, _ } from "./chunk~b8ca037aae.js";
 import { _, _ } from "./chunk~95ecbf576c.js";
 import { _ } from "./chunk~5a091db425.js";
 import { _ } from "./chunk~e70aabe4d7.js";
 import { _, _ } from "./chunk~710e3cfd2f.js";
 import { _ } from "./chunk~7b4b9eb713.js";
-import { _ } from "./chunk~3720b337f3.js";
+import { _ } from "./chunk~331382b23f.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~0be5d7b286.js";
 import { _, _ } from "./chunk~a7c5e71e12.js";
 import { _ } from "./chunk~a243b6a34b.js";
@@ -831,6 +832,14 @@ function _() {
 }
 var _ = `Vvgd20dCqjc-`;
 function _(_) {
+  return (0, _.jsx)(`div`, {
+    className: _(_, _.bValveOnly && `zt09NDfGU3s-`),
+    children: (0, _.jsx)(`div`, {
+      children: _.children,
+    }),
+  });
+}
+function _(_) {
   let { eventModel: _ } = _,
     { data: _ } = _(_.clanSteamID.GetAccountID());
   if (!_ || (!_.can_edit && !_.support_user) || _() == `community`) return;
@@ -847,35 +856,32 @@ function _(_) {
       _.push(_.Localize(`#Sale_SaleEventIsHidden_ContentHub_Preview`)),
     !(_.BIsVisibleEvent() && _.length == 0))
   )
-    return (0, _.jsx)(`div`, {
-      className: _,
-      children: (0, _.jsxs)(`div`, {
-        children: [
-          !_.BIsVisibleEvent() &&
-            (0, _.jsx)(`div`, {
-              className: `XZUb9Zq6ctI-`,
-              children: _.Localize(`#Sale_SaleEventIsHidden`),
-            }),
-          _.length > 0 &&
-            (0, _.jsxs)(`div`, {
-              className: `XZUb9Zq6ctI-`,
-              children: [
-                _.LocalizePlural(`#Sale_SaleEventIsHidden_Reason`, _.length),
-                (0, _.jsx)(`ul`, {
-                  children: _.map((_) =>
-                    (0, _.jsx)(
-                      `li`,
-                      {
-                        children: _,
-                      },
-                      _,
-                    ),
+    return (0, _.jsxs)(_, {
+      children: [
+        !_.BIsVisibleEvent() &&
+          (0, _.jsx)(`div`, {
+            className: `XZUb9Zq6ctI-`,
+            children: _.Localize(`#Sale_SaleEventIsHidden`),
+          }),
+        _.length > 0 &&
+          (0, _.jsxs)(`div`, {
+            className: `XZUb9Zq6ctI-`,
+            children: [
+              _.LocalizePlural(`#Sale_SaleEventIsHidden_Reason`, _.length),
+              (0, _.jsx)(`ul`, {
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    `li`,
+                    {
+                      children: _,
+                    },
+                    _,
                   ),
-                }),
-              ],
-            }),
-        ],
-      }),
+                ),
+              }),
+            ],
+          }),
+      ],
     });
 }
 var _ = `_4rizx-X0oWo-`;
@@ -5042,7 +5048,7 @@ function _(_) {
     [_, _] = _.useState(null),
     _ = _(() => _.jsondata.sale_header_disable_top_margin),
     _ = _(_, !!_(_)),
-    _ = _(_, _, _(!!_)),
+    _ = _(_, _, _, _(!!_)),
     [_, _] = (0, _.useState)(!1);
   _.useEffect(() => {
     if (
@@ -5202,14 +5208,14 @@ function _(_) {
     });
   }
 }
-function _(_, _, _) {
-  let [_] = _(`tab`, void 0),
+function _(_, _, _, _) {
+  let _ = _(() => _.GetSaleSectionFirstMatchByType(`tabs`)),
+    _ = _(_, _),
+    [_] = _(`tab`, void 0),
     [_] = _(_, void 0),
     [_] = _(_, void 0),
     _ = _.useMemo(() => {
-      let _ = _.GetSaleSectionFirstMatchByType(`tabs`)?.tabs?.filter(
-        (_) => !_.hide,
-      );
+      let _ = _?.filter((_) => !_.hide);
       if (_ && _.length > 0) {
         let _ = _ > 0 ? _.find((_) => _.unique_id == _) : void 0;
         _ ||= _[0];
@@ -5295,7 +5301,7 @@ function _(_) {
         _(
           _.jsondata.sale_background_img_groups,
           _,
-          _ && _.GetActiveTabUniqueID(),
+          _ && _.GetSectionTabUniqueID(),
         ),
         _,
       ];
@@ -5343,7 +5349,7 @@ function _(_) {
           ? new _(void 0, _ && _.GetSaleDay())
           : _;
         (_.section_type == `tabs` &&
-          _.tabs?.some((_) => _.unique_id == _?.GetActiveTabUniqueID()) &&
+          _.tabs?.some((_) => _.unique_id == _?.GetSectionTabUniqueID()) &&
           _.push({
             activeTab: _,
             elements: [],
@@ -5371,7 +5377,7 @@ function _(_) {
         _,
         {
           section: _,
-          nActiveTabID: _ && _.activeTab && _.activeTab.GetActiveTabUniqueID(),
+          nActiveTabID: _ && _.activeTab && _.activeTab.GetSectionTabUniqueID(),
           saleSectionIndex: _,
           ePreviewMode: _,
           salePageBackgroundDerivedConfig: _,
@@ -5388,7 +5394,7 @@ function _(_) {
     (_ &&
       _.groupID != _ &&
       (_[_.length - 1].elements.push(
-        _(_, _, _, _ && _?.GetActiveTabUniqueID()),
+        _(_, _, _, _ && _?.GetSectionTabUniqueID()),
       ),
       (_ = null)),
       _
@@ -5402,7 +5408,7 @@ function _(_) {
   }),
     (_ &&=
       (_[_.length - 1].elements.push(
-        _(_, _, _, _ && _?.GetActiveTabUniqueID()),
+        _(_, _, _, _ && _?.GetSectionTabUniqueID()),
       ),
       null)));
   let _ = _.map((_, _) =>

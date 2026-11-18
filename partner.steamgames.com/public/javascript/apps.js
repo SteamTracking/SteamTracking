@@ -2064,8 +2064,9 @@ function CancelEvent( event )
 // template - html template for each row
 // dataRequest - 0 = global, 1 = global around specified user, 2 = friends of user
 // onReceivedEntries - callback reporting new total entries in leaderboard (params: leaderboardid, totalCount)
+// onDeleteEntry - callback after an entry is deleted (params: leaderboardid)
 //
-function GetLeaderboardEntries( target, template, onReceivedEntries, appid, leaderboardid, dataRequest, rangeStart, rangeEnd, steamid )
+function GetLeaderboardEntries( target, template, onReceivedEntries, onDeleteEntry, appid, leaderboardid, dataRequest, rangeStart, rangeEnd, steamid )
 {
 	var element = $( target );
 	element.innerHTML = 'Loading...';
@@ -2102,9 +2103,12 @@ function GetLeaderboardEntries( target, template, onReceivedEntries, appid, lead
 				var personaname = results['entries'][i]['personaname'];
 				var details = results['entries'][i]['details'];
 
-				var deletename = EscapeHTML( personaname.replace( /'/g, "\\'" ) ); // Escape any HTML and any single-quotes in the personaname
-				var html = template.evaluate( { score: score, steamid: steamid, rank: rank, leaderboardid: leaderboardid, personaname: personaname, details: details, deletename: deletename } );
+				var html = template.evaluate( { score: score, steamid: steamid, rank: rank, leaderboardid: leaderboardid, personaname: personaname, details: details } );
 				element.insert( html );
+
+				var deleteLink = element.childElements().last().down( '.leaderboard_entry_delete' );
+				if ( deleteLink )
+					BindLeaderboardEntryDelete( deleteLink, onDeleteEntry, appid, leaderboardid, steamid, personaname );
 			}
 
 			onReceivedEntries( leaderboardid, results['totalEntries'] );
@@ -2195,6 +2199,16 @@ function RenderPageControl( target, onChange, context, currentPage, maxPage )
 
 	// set it
 	$( target ).innerHTML = html;
+}
+
+// persona names are user-controlled, so keep them out of inline handlers
+function BindLeaderboardEntryDelete( link, onDelete, appid, leaderboardid, steamid, personaname )
+{
+	link.observe( 'click', function( event )
+	{
+		event.stop();
+		DeleteLeaderboardEntry( onDelete, appid, leaderboardid, steamid, personaname );
+	} );
 }
 
 function DeleteLeaderboardEntry( onDelete, appid, leaderboardid, steamid, personaname )

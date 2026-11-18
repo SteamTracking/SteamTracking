@@ -22,9 +22,9 @@ import {
   N as _,
   P as v,
   S as y,
-  Zp as b,
-  j as x,
-  nh as S,
+  j as b,
+  nm as x,
+  sh as S,
 } from "./main.js";
 var C = `get_reported_content`,
   w = `get_reported_content_by_id`,
@@ -54,10 +54,16 @@ function A(e, t) {
   };
 }
 function j(e) {
-  let n = b();
+  let n = x();
   return t(A(n, e));
 }
-function M(e, t, n = !1) {
+function M(e) {
+  return { subject_type: 3, published_file_id: e };
+}
+function N(e) {
+  return E(M(e));
+}
+function P(e, t, n = !1) {
   return {
     queryKey: [...D(t), n],
     enabled: !!t,
@@ -74,11 +80,11 @@ function M(e, t, n = !1) {
     },
   };
 }
-function N(e, n = !1) {
-  let r = b();
-  return t(M(r, e, n));
+function F(e, n = !1) {
+  let r = x();
+  return t(P(r, e, n));
 }
-function P(e, t) {
+function I(e, t) {
   return {
     queryKey: O(t),
     queryFn: async () => {
@@ -91,12 +97,12 @@ function P(e, t) {
     },
   };
 }
-function F(e) {
-  let n = b();
-  return t(P(n, e));
+function L(e) {
+  let n = x();
+  return t(I(n, e));
 }
-function I(t) {
-  let r = b(),
+function R(t) {
+  let r = x(),
     i = n();
   return e({
     mutationFn: async (e) => {
@@ -118,8 +124,8 @@ function I(t) {
     },
   });
 }
-function L() {
-  let t = b(),
+function z() {
+  let t = x(),
     r = n();
   return e({
     mutationFn: async (e) => {
@@ -134,9 +140,9 @@ function L() {
     },
   });
 }
-function R(t) {
+function B(t) {
   let i = n(),
-    o = b();
+    o = x();
   return e({
     mutationKey: [`release_subject`, ...t],
     mutationFn: async () => {
@@ -157,8 +163,8 @@ function R(t) {
     },
   });
 }
-function z(t, r) {
-  let i = b(),
+function V(t, r) {
+  let i = x(),
     o = n();
   return e({
     mutationFn: async () => {
@@ -172,9 +178,9 @@ function z(t, r) {
     },
   });
 }
-function B(t, r) {
+function H(t, r) {
   let o = n(),
-    s = b();
+    s = x();
   return e({
     mutationFn: async () => {
       let e = S.Init(i);
@@ -188,7 +194,7 @@ function B(t, r) {
     },
   });
 }
-function V(e, t) {
+function U(e, t) {
   return {
     queryKey: [`reporterstats`, t],
     queryFn: async () => {
@@ -200,12 +206,12 @@ function V(e, t) {
     },
   };
 }
-function H(e) {
-  let n = b();
-  return t(V(n, e));
+function W(e) {
+  let n = x();
+  return t(U(n, e));
 }
-function U(t, r, i) {
-  let a = b(),
+function G(t, r, i) {
+  let a = x(),
     o = n();
   return e({
     mutationFn: async (e) => {
@@ -216,7 +222,7 @@ function U(t, r, i) {
         n.Body().set_reason(e.reason),
         n.Body().set_note(e.message));
       for (let t of e.sanctions) {
-        let e = new x();
+        let e = new b();
         (e.set_sanction(t.sanction),
           t.days && e.set_days(t.days),
           n.Body().add_sanctions(e));
@@ -232,8 +238,8 @@ function U(t, r, i) {
     },
   });
 }
-function W(t, r, i) {
-  let a = b(),
+function K(t, r, i) {
+  let a = x(),
     o = n();
   return e({
     mutationFn: async () => {
@@ -251,17 +257,18 @@ function W(t, r, i) {
   });
 }
 export {
-  z as a,
-  j as c,
-  U as d,
-  L as f,
-  F as i,
-  N as l,
-  k as n,
-  I as o,
-  B as p,
-  W as r,
+  L as a,
+  B as c,
+  W as d,
+  G as f,
+  K as i,
+  j as l,
+  H as m,
+  N as n,
+  V as o,
+  z as p,
+  k as r,
   R as s,
-  E as t,
-  H as u,
+  M as t,
+  F as u,
 };

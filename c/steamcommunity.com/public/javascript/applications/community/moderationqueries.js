@@ -39,6 +39,15 @@ function _(_) {
   let _ = _();
   return _(_(_, _));
 }
+function _(_) {
+  return {
+    subject_type: 3,
+    published_file_id: _,
+  };
+}
+function _(_) {
+  return _(_(_));
+}
 function _(_, _, _ = !1) {
   return {
     queryKey: [..._(_), _],

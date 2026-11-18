@@ -12,49 +12,43 @@ import {
 } from "./chunk~01cfc309bf.js";
 import {
   Gi as s,
-  Wi as c,
-  Wt as l,
-  _a as u,
-  ba as d,
-  bo as f,
-  ca as p,
-  fa as m,
-  ia as h,
-  ji as g,
-  la as _,
-  lo as ee,
-  sa as v,
-  ua as y,
-  vi as b,
+  Ki as c,
+  Mi as l,
+  aa as u,
+  ca as d,
+  da as f,
+  la as p,
+  pa as m,
+  ua as h,
+  uo as g,
+  va as _,
+  xa as v,
+  xo as y,
+  yi as b,
 } from "./chunk~6b8ddcaac8.js";
-import { t as te } from "./chunk~4c13037b22.js";
 import { n as x } from "./chunk~5adf866415.js";
 import { t as S } from "./chunk~034b02d99f.js";
 import {
-  $x as ne,
+  $x as ee,
   Eb as C,
   Ec as w,
-  Fc as re,
-  Fu as T,
-  Jy as E,
-  Kb as D,
-  Lb as O,
-  Pv as k,
-  Qx as ie,
-  Uc as ae,
-  Wb as oe,
-  ex as se,
-  gv as A,
-  kv as j,
-  qb as ce,
-  sn as le,
-  uv as M,
-  vc as N,
-  wc as P,
+  Jy as te,
+  Kb as T,
+  Lb as E,
+  Pv as D,
+  Wb as ne,
+  ex as re,
+  gv as O,
+  kv as k,
+  qb as ie,
+  sn as ae,
+  uv as A,
+  vc as oe,
+  wc as j,
 } from "./main.js";
-var F = e(n(), 1),
-  I = i();
-function L(e) {
+var M = e(n(), 1),
+  N = i();
+function P(e) {
   let {
       id: t,
       imageType: n,
@@ -62,9 +56,9 @@ function L(e) {
       strAdditionalClassName: i,
       bNoShadow: a,
     } = e,
-    { storeItemAsset: o, storeItemDefaultInfo: c } = Q(t, n, r);
+    { storeItemAsset: o, storeItemDefaultInfo: s } = Q(t, n, r);
   if (n === `library` || n == `vertical`)
-    return (0, I.jsx)(Z, {
+    return (0, N.jsx)(Z, {
       id: t,
       bPreferAssetWithoutOverride: r,
       bNoShadow: a,
@@ -72,109 +66,62 @@ function L(e) {
   let l = ``;
   switch (n) {
     case `main`:
-      l = u;
+      l = _;
       break;
     default:
-      l = _;
+      l = h;
   }
-  if (o === void 0 || !c)
-    return (0, I.jsx)(`div`, { className: P(l, `CapsuleImageCtn`, i) });
+  if (o === void 0 || !s)
+    return (0, N.jsx)(`div`, { className: j(l, `CapsuleImageCtn`, i) });
   if (o == null) return null;
-  let d = R(o, n === `header`);
-  return (0, I.jsx)(`div`, {
-    className: P(l, `CapsuleImageCtn`, i),
-    children: (0, I.jsx)(x, {
+  let u = F(o, n === `header`);
+  return (0, N.jsx)(`div`, {
+    className: j(l, `CapsuleImageCtn`, i),
+    children: (0, N.jsx)(x, {
       lazyLoad: !0,
-      srcs: d,
-      className: P(s),
-      alt: c.name,
+      srcs: u,
+      className: j(c),
+      alt: s.name,
     }),
   });
 }
-function R(e, t) {
+function F(e, t) {
   let n = [];
-  return (e && B(n, e, t), n.filter((e) => !!e));
+  return (e && L(n, e, t), n.filter((e) => !!e));
 }
-function z(e, t) {
+function I(e, t) {
   return {
     strStoreVerticalURL: w(e, `hero_capsule`),
     strLibraryVerticalURL: w(e, `library_capsule`),
   };
 }
-function B(e, t, n) {
+function L(e, t, n) {
   let r = w(t, `header_2x`) ?? w(t, `header`),
     i = w(t, `main_capsule_2x`) ?? w(t, `main_capsule`);
   n ? e.push(r, i) : e.push(i, r);
 }
-var V = `K2BGbCx37Cg-`,
-  H = `wnVw5QEjvtw-`;
-function U(e) {
+var R = `K2BGbCx37Cg-`,
+  z = `wnVw5QEjvtw-`;
+function B(e) {
   let { bAllowOutsideOfDeck: t } = e;
-  return !oe() && !t ? null : (0, I.jsx)(W, { ...e });
+  return !ne() && !t ? null : (0, N.jsx)(V, { ...e });
 }
-function W(e) {
+function V(e) {
   let { className: t, id: n } = e,
-    [r, i] = le(),
+    [r, i] = ae(),
     a = i;
   if ((i == 0 && (a = 1), !n)) return null;
   let o;
   return (
-    i == 4 && (o = H),
-    (0, I.jsx)(`div`, {
-      className: P(V, o, t),
-      children: (0, I.jsx)(S, { id: n, eHWCompat: a }),
+    i == 4 && (o = z),
+    (0, N.jsx)(`div`, {
+      className: j(R, o, t),
+      children: (0, N.jsx)(S, { id: n, eHWCompat: a }),
     })
   );
 }
-function ue(e) {
-  return (0, F.useMemo)(() => G(e), [e?.id, e?.type]);
-}
-function de(e, t) {
-  return (0, F.useMemo)(() => he(e, t), [e, t]);
-}
-function fe(e, t) {
-  return (0, F.useMemo)(() => me(e, t), [e, t]);
-}
-function G(e) {
-  if (e && e.id) {
-    if (!e.type) return { appid: e.id };
-    switch (e.type) {
-      case `sub`:
-        return { packageid: e.id };
-      case `bundle`:
-        return { bundleid: e.id };
-      default:
-        return { appid: e.id };
-    }
-  }
-}
-function pe(e) {
-  if (`appid` in e) return { id: e.appid, type: `game` };
-  if (`packageid` in e) return { id: e.packageid, type: `sub` };
-  if (`bundleid` in e) return { id: e.bundleid, type: `bundle` };
-}
-function me(e, t) {
-  switch (t) {
-    case `sub`:
-      return { packageid: e };
-    case `bundle`:
-      return { bundleid: e };
-    default:
-      return { appid: e };
-  }
-}
-function he(e, t) {
-  switch (t) {
-    case `sub`:
-      return { packageid: e };
-    case `bundle`:
-      return { bundleid: e };
-    default:
-      return { appid: e };
-  }
-}
-async function ge() {
-  let e = se(`broadcast_available_for_page`, `application_config`);
+async function H() {
+  let e = re(`broadcast_available_for_page`, `application_config`);
   if (q(e)) {
     let t = new Set();
     return (
@@ -186,7 +133,7 @@ async function ge() {
   }
   return [];
 }
-var K = class {
+var U = class {
   constructor() {
     a(this);
   }
@@ -211,15 +158,15 @@ var K = class {
   default_selection_priority = 0;
   current_selection_priority = 0;
 };
-(O([t], K.prototype, `title`, void 0),
-  O([t], K.prototype, `viewer_count`, void 0),
-  O([t], K.prototype, `gamedata_subtitle`, void 0),
-  O([t], K.prototype, `current_selection_priority`, void 0));
-var _e = `primary`,
-  ve = `featured`,
-  ye = `default_featured`,
-  be = `general`,
-  xe = (function (e) {
+(E([t], U.prototype, `title`, void 0),
+  E([t], U.prototype, `viewer_count`, void 0),
+  E([t], U.prototype, `gamedata_subtitle`, void 0),
+  E([t], U.prototype, `current_selection_priority`, void 0));
+var W = `primary`,
+  G = `featured`,
+  K = `default_featured`,
+  se = `general`,
+  ce = (function (e) {
     return (
       (e[(e.k_ePrimary = 3)] = `k_ePrimary`),
       (e[(e.k_eFeatured = 2)] = `k_eFeatured`),
@@ -228,15 +175,15 @@ var _e = `primary`,
       e
     );
   })({});
-function Se(e) {
+function le(e) {
   switch (e) {
-    case _e:
+    case W:
       return 3;
-    case ve:
+    case G:
       return 2;
-    case ye:
+    case K:
       return 1;
-    case be:
+    case se:
     default:
       return 0;
   }
@@ -251,20 +198,20 @@ function q(e) {
     ? t.filtered.length == 0 || typeof t.filtered[0].accountid == `string`
     : !1;
 }
-function Ce() {
+function ue() {
   return o(J());
 }
-function we(e) {
-  let { data: t } = Ce(),
-    [n, i] = (0, F.useState)(!1),
+function de(e) {
+  let { data: t } = ue(),
+    [n, i] = (0, M.useState)(!1),
     a = r(),
-    o = M();
+    o = A();
   return (
-    (0, F.useEffect)(() => {
+    (0, M.useEffect)(() => {
       if (!e || e.length == 0 || !t) return i(!1);
       (async () => {
         let n = await Promise.all(
-          e.filter((e) => !!e).map((e) => a.fetchQuery(A(o, { appid: e }))),
+          e.filter((e) => !!e).map((e) => a.fetchQuery(O(o, { appid: e }))),
         );
         i(
           n.some(
@@ -281,42 +228,52 @@ function we(e) {
 }
 function J() {
   return {
-    queryKey: Te(),
+    queryKey: fe(),
     queryFn: async () => {
-      let e = await ge();
+      let e = await H();
       return new Set(e);
     },
   };
 }
-function Te() {
+function fe() {
   return [`BroadcastApps`];
 }
-var Ee = `hRwhHwwKlgI-`;
+var pe = `hRwhHwwKlgI-`;
 function Y() {
-  return (0, I.jsx)(`div`, {
-    className: Ee,
-    children: E(`#home_page_live_broadcast`),
+  return (0, N.jsx)(`div`, {
+    className: pe,
+    children: te(`#home_page_live_broadcast`),
   });
 }
-function X(e) {
+var me = M.createContext(void 0),
+  X = M.createContext(void 0);
+function he(e) {
   let { appids: t, hide_status_banners: n, show_early_access: r } = e,
-    { data: i } = f(),
+    { data: i } = y(),
     { data: a } = b(),
     o = t.length > 0 && t.every((e) => i && i.has(e)),
-    s = t.length > 0 && t.every((e) => a && a.has(e)),
-    l = we(t),
-    u = o && !n,
-    d = s && !n,
-    p = !n && r;
-  return (0, I.jsxs)(`div`, {
-    className: P(c, `CapsuleDecorators`),
+    c = t.length > 0 && t.every((e) => a && a.has(e)),
+    l = de(t),
+    u = M.useContext(me),
+    d = M.useContext(X),
+    f = u && d ? u(d, t) : void 0,
+    p = o && !n,
+    m = c && !n && !f?.bReplacesWishlistBanner,
+    h = !n && r;
+  return (0, N.jsxs)(`div`, {
+    className: j(s, `CapsuleDecorators`, f && `HasReasonBanner`),
     children: [
-      u &&
-        (0, I.jsxs)(`span`, {
-          className: P(`LCYi5cxHqgI-`, `ZuMhm9DQqbw-`),
+      f &&
+        (0, N.jsx)(`span`, {
+          className: j(`LCYi5cxHqgI-`, f.strClassName),
+          children: f.strLabel,
+        }),
+      p &&
+        (0, N.jsxs)(`span`, {
+          className: j(`LCYi5cxHqgI-`, `ZuMhm9DQqbw-`),
           children: [
-            (0, I.jsx)(`img`, {
-              src: D(
+            (0, N.jsx)(`img`, {
+              src: T(
                 `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC`,
               ),
               className: `ppO76q5Y-Zg-`,
@@ -325,59 +282,44 @@ function X(e) {
             C.Localize(`#Sale_InLibrary`),
           ],
         }),
-      d &&
-        (0, I.jsxs)(`span`, {
+      m &&
+        (0, N.jsxs)(`span`, {
           className: `LCYi5cxHqgI-`,
           children: [
-            (0, I.jsx)(N, { className: `ppO76q5Y-Zg-` }),
+            (0, N.jsx)(oe, { className: `ppO76q5Y-Zg-` }),
             C.Localize(`#Sale_OnWishlist`),
           ],
         }),
-      p && !u && !d && (0, I.jsx)(De, { appids: t }),
-      l && (0, I.jsx)(Y, {}),
+      h && !p && !c && (0, N.jsx)(ge, { appids: t }),
+      l && (0, N.jsx)(Y, {}),
     ],
   });
 }
-function De(e) {
+function ge(e) {
   let { appids: t } = e;
-  return Oe(t)
-    ? (0, I.jsx)(`span`, {
-        className: P(g, h),
+  return _e(t)
+    ? (0, N.jsx)(`span`, {
+        className: j(l, u),
         children: C.Localize(`#Sale_EarlyAccess`),
       })
     : null;
 }
-function Oe(e) {
-  let [t, n] = (0, F.useState)(!1),
+function _e(e) {
+  let [t, n] = (0, M.useState)(!1),
     i = r(),
-    a = M();
+    a = A();
   return (
-    (0, F.useEffect)(() => {
+    (0, M.useEffect)(() => {
       if (!e || e.length == 0) return n(!1);
       (async () => {
         let t = await Promise.all(
-          e.map((e) => i.fetchQuery(A(a, { appid: e }))),
+          e.map((e) => i.fetchQuery(O(a, { appid: e }))),
         );
         n(t.some((e) => e && e.is_early_access));
       })();
     }, [e, a, i]),
     t
   );
-}
-function ke(e, t, n, r, i, a) {
-  if (!n) return;
-  if (!l(e.item_type)) {
-    ie(!1, `StoreItemWidgetSalePageAction: unexpected type: ` + e.item_type);
-    return;
-  }
-  let o = re(`${te(e, r)}${i ? `?${i}` : ``}`, t);
-  return {
-    onClick: (e) => {
-      let t = T(e) || window;
-      a ? a(e) : o.startsWith(`steam://`) || (t.location.href = ae(o));
-    },
-    onOKActionDescription: C.Localize(`#Sale_Gamepad_Action_Select`),
-  };
 }
 function Z(e) {
   let {
@@ -386,68 +328,68 @@ function Z(e) {
       bPreferAssetWithoutOverride: r,
       bNoShadow: i,
     } = e,
-    a = i ? d : ``,
-    { storeItemDefaultInfo: o, storeItemAsset: c } = Q(t, `vertical`, r),
-    [l, u] = F.useState(0);
-  if (!o || !c) return (0, I.jsx)(`div`, { className: y });
-  let { strStoreVerticalURL: f, strLibraryVerticalURL: h } = z(c, o);
-  if (f && (!n || !h))
-    return (0, I.jsxs)(`div`, {
-      className: P(y, `HeroCapsuleImageContainer`),
+    a = i ? v : ``,
+    { storeItemDefaultInfo: o, storeItemAsset: s } = Q(t, `vertical`, r),
+    [l, u] = M.useState(0);
+  if (!o || !s) return (0, N.jsx)(`div`, { className: f });
+  let { strStoreVerticalURL: h, strLibraryVerticalURL: _ } = I(s, o);
+  if (h && (!n || !_))
+    return (0, N.jsxs)(`div`, {
+      className: j(f, `HeroCapsuleImageContainer`),
       children: [
-        (0, I.jsx)(`img`, { src: f, className: s, alt: o.name }),
+        (0, N.jsx)(`img`, { src: h, className: c, alt: o.name }),
         o.type == 4 &&
-          (0, I.jsx)(`img`, {
+          (0, N.jsx)(`img`, {
             className: `eEjnmAoA07c-`,
-            src: `${ce.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
+            src: `${ie.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
             alt: `DLC`,
           }),
       ],
     });
-  if (h)
-    return (0, I.jsxs)(`div`, {
-      className: P(m, ee, n ? p : ``, a),
+  if (_)
+    return (0, N.jsxs)(`div`, {
+      className: j(m, g, n ? p : ``, a),
       children: [
-        (0, I.jsx)(`div`, {
-          className: v,
-          style: { backgroundImage: `url(${h})` },
+        (0, N.jsx)(`div`, {
+          className: d,
+          style: { backgroundImage: `url(${_})` },
         }),
-        (0, I.jsx)(`img`, { src: h, className: s, alt: o.name }),
+        (0, N.jsx)(`img`, { src: _, className: c, alt: o.name }),
       ],
     });
-  let g = R(c, !0),
-    _ = g.length - 1,
-    b = (e) => {
-      let t = g.indexOf(e);
-      t >= _ && t < g.length - 1 && u(t + 1);
+  let y = F(s, !0),
+    b = y.length - 1,
+    S = (e) => {
+      let t = y.indexOf(e);
+      t >= b && t < y.length - 1 && u(t + 1);
     };
-  if (l < g.length) {
-    let e = g[l];
-    return (0, I.jsxs)(`div`, {
-      className: P(m, a),
+  if (l < y.length) {
+    let e = y[l];
+    return (0, N.jsxs)(`div`, {
+      className: j(m, a),
       children: [
-        (0, I.jsx)(`div`, {
-          className: v,
+        (0, N.jsx)(`div`, {
+          className: d,
           style: { backgroundImage: `url(${e})` },
         }),
-        (0, I.jsx)(x, {
+        (0, N.jsx)(x, {
           lazyLoad: !0,
-          srcs: g,
-          className: s,
+          srcs: y,
+          className: c,
           alt: o.name,
-          onImageError: b,
+          onImageError: S,
         }),
       ],
     });
   }
-  return (0, I.jsx)(`div`, { className: y });
+  return (0, N.jsx)(`div`, { className: f });
 }
 function Q(e, t, n = !1) {
-  let { data: r } = k(e),
-    { data: i } = j(e, n),
+  let { data: r } = D(e),
+    { data: i } = k(e, n),
     a = $(r, i, t),
-    { data: o } = k(a),
-    { data: s } = j(a, n),
+    { data: o } = D(a),
+    { data: s } = k(a, n),
     c = o?.visible ? o : r;
   return { storeItemAsset: o?.visible ? s : i, storeItemDefaultInfo: c };
 }
@@ -455,13 +397,13 @@ function $(e, t, n) {
   if (
     e &&
     e.included_appids?.length == 1 &&
-    !Ae(t, n) &&
+    !ve(t, n) &&
     e.item_type &&
     [1, 2].includes(e.item_type)
   )
     return { appid: e.included_appids[0] };
 }
-function Ae(e, t) {
+function ve(e, t) {
   if (!e) return !1;
   switch (t) {
     case `header`:
@@ -472,26 +414,21 @@ function Ae(e, t) {
     case `library`:
       return !!e.hero_capsule || !!e.library_capsule;
     default:
-      return (ne(t, `Unhandled imageType: ${t}`), !1);
+      return (ee(t, `Unhandled imageType: ${t}`), !1);
   }
 }
 export {
-  R as _,
   Y as a,
-  xe as c,
-  G as d,
-  pe as f,
-  U as g,
-  fe as h,
+  ce as c,
+  B as d,
+  F as f,
   X as i,
-  K as l,
-  ue as m,
+  U as l,
   Z as n,
   J as o,
-  de as p,
-  ke as r,
-  Se as s,
+  P as p,
+  he as r,
+  le as s,
   $ as t,
   q as u,
-  L as v,
 };

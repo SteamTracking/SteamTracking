@@ -18,7 +18,7 @@ import {
   tt as _,
   u as v,
 } from "./chunk~01cfc309bf.js";
-import { Eo as y } from "./chunk~6b8ddcaac8.js";
+import { Do as y } from "./chunk~6b8ddcaac8.js";
 import { r as b, t as x } from "./chunk~4c761eb6f4.js";
 import { p as S } from "./chunk~2185942436.js";
 import { t as C } from "./chunk~f0141d9521.js";
@@ -10010,7 +10010,7 @@ var Pr = class extends X.Component {
       c = a ? a.type : Number(e.event_type),
       l = new J(e.clan_steamid),
       u = n ? `app/${n}` : `group/${l.GetAccountID()}`,
-      d = `${Y.STORE_BASE_URL}news/${u}/view/${e.announcement_gid}`,
+      d = `${Y.STORE_BASE_URL}news/${u}/view/${t}`,
       f = !!(a && a.BHasTag(`adult_only_content`)),
       p = !!(a && a.BHasTag(`halloween`));
     return (0, Z.jsxs)(be, {

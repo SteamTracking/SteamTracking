@@ -321,6 +321,7 @@ var b = e(t(), 1),
   function t(e, t, n) {
     return e.SendMsg(`AccountPrivateApps.ToggleAppPrivacy#1`, s(S, t, n), C, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.ToggleAppPrivacy = t;
@@ -328,6 +329,7 @@ var b = e(t(), 1),
     return e.SendMsg(`AccountPrivateApps.GetPrivateAppList#1`, s(w, t, n), T, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.GetPrivateAppList = n;

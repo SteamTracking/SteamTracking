@@ -4,15 +4,15 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, Pt as n, ft as r, st as i } from "./chunk~01cfc309bf.js";
 import {
-  Eo as a,
+  Do as a,
   N as o,
   P as s,
-  _i as c,
-  hi as l,
+  ai as c,
+  gi as l,
   ii as u,
-  ni as d,
-  pi as f,
-  ri as p,
+  mi as d,
+  ri as f,
+  vi as p,
 } from "./chunk~6b8ddcaac8.js";
 import { r as m } from "./chunk~cd94ddba57.js";
 import { r as h, t as g } from "./chunk~38061b7abb.js";
@@ -95,38 +95,38 @@ async function ve(e, t) {
 function ye() {
   let e = ne(),
     t = O.accountid;
-  return i(be(e, t));
+  return i(q(e, t));
 }
-function be(e, t) {
+function q(e, t) {
   return {
-    queryKey: xe(t),
+    queryKey: be(t),
     queryFn: async () => (t ? await ve(e, t) : []),
     staleTime: 6e5,
   };
 }
-function xe(e) {
+function be(e) {
   return [`RecommendedTag`, e ?? 0];
 }
-var Se = `_1wbMyxGnGy8-`,
-  Ce = `-D61WKs-ZxQ-`,
-  we = `XUHGRxAX2xY-`,
-  Te = `NH1MEWmeFeg-`,
-  Ee = `Ef3pPDTc654-`,
-  De = `URoGnzLvPas-`,
-  Oe = `T-FsaU490gE-`,
-  ke = `rMfcun2JSm8-`,
-  Ae = `YVFVQr81mPI-`,
-  je = `atnaqSRaIew-`,
-  Me = `LkfujtBIcfQ-`,
-  Ne = `RmSUNTNiH6o-`,
-  Pe = `nVMhmfpEhl0-`,
-  Fe = `D-0yhpQ3YbY-`,
-  Ie = `_2J2v30O7L10-`,
-  Le = `md8klOzvRXo-`,
-  Re = `G80uW2Mpt6o-`,
-  ze = `_4KA4WmZc39M-`,
-  Be = `lnv5hodvZ5U-`;
-function Ve(e, t) {
+var xe = `_1wbMyxGnGy8-`,
+  Se = `-D61WKs-ZxQ-`,
+  Ce = `XUHGRxAX2xY-`,
+  we = `NH1MEWmeFeg-`,
+  Te = `Ef3pPDTc654-`,
+  Ee = `URoGnzLvPas-`,
+  De = `T-FsaU490gE-`,
+  Oe = `rMfcun2JSm8-`,
+  ke = `YVFVQr81mPI-`,
+  Ae = `atnaqSRaIew-`,
+  je = `LkfujtBIcfQ-`,
+  Me = `RmSUNTNiH6o-`,
+  Ne = `nVMhmfpEhl0-`,
+  Pe = `D-0yhpQ3YbY-`,
+  Fe = `_2J2v30O7L10-`,
+  Ie = `md8klOzvRXo-`,
+  Le = `G80uW2Mpt6o-`,
+  Re = `_4KA4WmZc39M-`,
+  ze = `lnv5hodvZ5U-`;
+function Be(e, t) {
   G.useEffect(() => {
     if (!t || !t.onended || !e) return;
     let n = t.onended,
@@ -136,7 +136,7 @@ function Ve(e, t) {
     return () => clearTimeout(r);
   }, [e, t]);
 }
-function He(e, t) {
+function Ve(e, t) {
   G.useEffect(() => {
     if (!e) return;
     let n = () => t(!0),
@@ -150,7 +150,7 @@ function He(e, t) {
     );
   }, [t, e]);
 }
-function Ue(e, t, n, r) {
+function He(e, t, n, r) {
   return G.useCallback(() => {
     e == 0
       ? t(!0)
@@ -161,7 +161,7 @@ function Ue(e, t, n, r) {
         : e == 2 && r && (r.IsPaused() ? r.Play() : r.Pause());
   }, [e, n, r, t]);
 }
-function We(e, t, n, r, i, a) {
+function Ue(e, t, n, r, i, a) {
   let [o, s] = G.useState(!1);
   G.useEffect(() => {
     e && !o
@@ -171,9 +171,9 @@ function We(e, t, n, r, i, a) {
       : !e && o && (t == 1 && n ? n.play() : t == 2 && i && i.Play(), s(!1));
   }, [t, e, o, r, a, n, i]);
 }
-var q = new E(`TrailerAppVideo`),
-  J = `bGameHighlightAutoplayDisabled`;
-function Ge(e) {
+var J = new E(`TrailerAppVideo`),
+  Y = `bGameHighlightAutoplayDisabled`;
+function We(e) {
   let {
       id: t,
       bCurrentlyActive: n,
@@ -198,7 +198,7 @@ function Ge(e) {
     [A, j] = G.useState(0),
     [M, N] = (0, G.useState)(null),
     [P, F] = (0, G.useState)(null),
-    { bCookieLoaded: I } = qe(r, n, d),
+    { bCookieLoaded: I } = Ke(r, n, d),
     L = I;
   (G.useEffect(() => {
     n && L && u && !E && p(!0);
@@ -207,9 +207,9 @@ function Ge(e) {
       E && f && u && D();
     }, [f, E, u, D]));
   let ne = (e) => {
-      (re(r ?? J, String(!e), 3650), d(e), p(e));
+      (re(r ?? Y, String(!e), 3650), d(e), p(e));
     },
-    z = Ue(A, p, P, M);
+    z = He(A, p, P, M);
   G.useEffect(() => {
     s && (s.current = z);
   }, [z, s]);
@@ -220,7 +220,7 @@ function Ge(e) {
         ? x(S, `main_capsule`)
         : void 0;
   return (0, K.jsxs)(R, {
-    className: je,
+    className: Ae,
     onMouseEnter: () => k(!0),
     onMouseLeave: () => k(!1),
     children: [
@@ -228,13 +228,13 @@ function Ge(e) {
         onClick: z,
         "aria-label": b.Localize(`#SaleTrailerCarousel_PlayPause`),
         children: (0, K.jsx)(`img`, {
-          className: W(ze, A != 0 && void 0),
+          className: W(Re, A != 0 && void 0),
           src: B,
           alt: ``,
         }),
       }),
       _ &&
-        (0, K.jsx)(Qe, {
+        (0, K.jsx)(Ze, {
           appID: _.appid,
           bAutoplayVideos: u,
           autoplayCheckboxPosition: o,
@@ -246,7 +246,7 @@ function Ge(e) {
         trailerDisplay: A,
         mouseOver: O,
       }),
-      (0, K.jsx)(Je, {
+      (0, K.jsx)(qe, {
         eTrailerDisplay: A,
         setTrailerDisplay: j,
         featuredTrailer: h,
@@ -279,23 +279,23 @@ function Ge(e) {
     ],
   });
 }
-function Ke(e, t) {
+function Ge(e, t) {
   let [n, r] = G.useState(!1);
   return (
     G.useEffect(() => (e && (t(), r(!0)), () => r(!1)), [e, t]),
     { bCookieLoaded: n }
   );
 }
-function qe(e, t, n) {
-  return Ke(
+function Ke(e, t, n) {
+  return Ge(
     t,
     G.useCallback(() => {
-      let t = ce(e ?? J);
+      let t = ce(e ?? Y);
       n(!(t && t.toLowerCase() === `true`));
     }, [e, n]),
   );
 }
-function Je(e) {
+function qe(e) {
   let {
       id: t,
       featuredTrailer: n,
@@ -328,7 +328,7 @@ function Je(e) {
       y(e),
       a?.(g && e));
   }, [a, c, w, S, f, g, b, M]),
-    He(k, C),
+    Ve(k, C),
     G.useEffect(() => {
       _ ||
         (l(0),
@@ -342,20 +342,20 @@ function Je(e) {
     if (f && c === 0) {
       if ((x(!0), _)) {
         if (D) {
-          (q.Debug(`Starting microtrailer`), l(1));
-          let e = () => Xe(N, l, D);
+          (J.Debug(`Starting microtrailer`), l(1));
+          let e = () => Ye(N, l, D);
           r || !k
             ? e()
-            : (C(!0), (k.onended = e), Ze(k, `microtrailer`, () => C(!1)));
+            : (C(!0), (k.onended = e), Xe(k, `microtrailer`, () => C(!1)));
         }
-      } else q.Debug(`Showing image`);
+      } else J.Debug(`Showing image`);
     }
   }, [f, c, r, _, s, l, D, k]),
-    Ve(S, k),
+    Be(S, k),
     G.useEffect(() => {
       f || p(!1);
     }, [f, p]),
-    We(!!o, c, k, S, D, w));
+    Ue(!!o, c, k, S, D, w));
   let P = (0, G.useCallback)((e) => {
     (d(e), A(e));
   }, []);
@@ -372,7 +372,7 @@ function Je(e) {
             }),
           n.microtrailer &&
             (0, K.jsx)(`video`, {
-              className: Y(!0, c),
+              className: X(!0, c),
               ref: P,
               preload: `auto`,
               playsInline: !0,
@@ -380,7 +380,7 @@ function Je(e) {
               onClick: h,
               children: (0, K.jsx)(m, { trailer: n }),
             }),
-          (0, K.jsx)(Ye, {
+          (0, K.jsx)(Je, {
             trailer: n,
             onRefChange: (e) => {
               (O(e), u(e));
@@ -393,7 +393,7 @@ function Je(e) {
         ],
       });
 }
-function Ye(e) {
+function Je(e) {
   let {
       trailer: t,
       eTrailerDisplay: n,
@@ -410,7 +410,7 @@ function Ye(e) {
     }
   }, [r, s]);
   let l = n != 2,
-    u = Y(!1, n),
+    u = X(!1, n),
     d = (0, G.useMemo)(() => A(t), [t]),
     f = (0, G.useCallback)((e) => {
       (c(e), o(e));
@@ -437,26 +437,26 @@ function Ye(e) {
     }),
   });
 }
-function Xe(e, t, n) {
+function Ye(e, t, n) {
   e.current ||
-    ((e.current = !0), q.Debug(`Starting main trailer`), t(2), n.Play());
+    ((e.current = !0), J.Debug(`Starting main trailer`), t(2), n.Play());
 }
-function Ze(e, t, n) {
+function Xe(e, t, n) {
   e.play().catch((e) => {
-    (n(), q.Warning(`Failed to play ${t}: `, e));
+    (n(), J.Warning(`Failed to play ${t}: `, e));
   });
 }
-function Y(e, t) {
+function X(e, t) {
   return W({
-    [Ne]: !0,
-    [Fe]: t == 2,
-    [Ie]: t == 1,
-    [Le]: t == 0,
-    [Pe]: e,
-    [Re]: !e,
+    [Me]: !0,
+    [Pe]: t == 2,
+    [Fe]: t == 1,
+    [Ie]: t == 0,
+    [Ne]: e,
+    [Le]: !e,
   });
 }
-function Qe(e) {
+function Ze(e) {
   let {
       appID: t,
       bAutoplayVideos: n,
@@ -469,13 +469,13 @@ function Qe(e) {
       onClick: (e) => {
         (e.preventDefault(), e.stopPropagation());
       },
-      className: Be,
+      className: ze,
       children: (0, K.jsx)(
         ie,
         {
           controlled: !0,
           checked: n,
-          className: Me,
+          className: je,
           style: a,
           label: I.Localize(`#StoreTrailer_AutoPlayVideos`),
           onChange: r,
@@ -485,7 +485,7 @@ function Qe(e) {
     }),
   });
 }
-function $e(e) {
+function Qe(e) {
   let {
       appID: t,
       trailerBaseID: n,
@@ -503,15 +503,15 @@ function $e(e) {
     m = a(t),
     { data: h } = T(m),
     { data: g } = w(m),
-    { bIsIgnored: _ } = X(t),
-    { bIsWishlisted: v } = Z(t),
-    { bIsWishlisted: y } = Z(h?.related_items?.parent_appid),
+    { bIsIgnored: _ } = Z(t),
+    { bIsWishlisted: v } = Q(t),
+    { bIsWishlisted: y } = Q(h?.related_items?.parent_appid),
     [b, x] = se();
   return (0, K.jsxs)(R, {
-    className: W(Se, `AppVideoCtn`),
+    className: W(xe, `AppVideoCtn`),
     children: [
       (0, K.jsx)(`div`, {
-        className: W(Ce, (v || y) && `cIdEvZnHFHs-`),
+        className: W(Se, (v || y) && `cIdEvZnHFHs-`),
         children: C(`#Sale_OnWishlist`),
       }),
       b &&
@@ -521,11 +521,11 @@ function $e(e) {
           storeItemPlatform: g,
         }),
       (0, K.jsxs)(`div`, {
-        className: we,
+        className: Ce,
         children: [
-          (0, K.jsx)(et, { appID: t }),
+          (0, K.jsx)($e, { appID: t }),
           (0, K.jsx)(
-            Ge,
+            We,
             {
               id: m,
               trailerBaseID: n,
@@ -548,34 +548,34 @@ function $e(e) {
     ],
   });
 }
-function X(e) {
+function Z(e) {
   let t = s(e),
     n = k(),
     { mutateAsync: r } = o(e, !t, n);
   return { bIsIgnored: t, fnUpdateIgnored: r };
 }
-function et(e) {
+function $e(e) {
   let { appID: t } = e,
     n = D(),
-    { bIsIgnored: r, fnUpdateIgnored: i } = X(t);
+    { bIsIgnored: r, fnUpdateIgnored: i } = Z(t);
   return (0, K.jsx)(`div`, {
-    className: W(Te, r && `cIdEvZnHFHs-`),
+    className: W(we, r && `cIdEvZnHFHs-`),
     children: (0, K.jsxs)(`div`, {
-      className: W(Ee, r && `cIdEvZnHFHs-`),
+      className: W(Te, r && `cIdEvZnHFHs-`),
       children: [
         (0, K.jsx)(`div`, {
-          className: De,
+          className: Ee,
           children: C(`#SaleTrailerCarousel_Ignored`),
         }),
         (0, K.jsx)(`div`, {
-          className: Oe,
+          className: De,
           children: C(`#SaleTrailerCarousel_IgnoredConfirmation`),
         }),
         (0, K.jsxs)(R, {
-          className: W(Ae, ke),
+          className: W(ke, Oe),
           onClick: i,
           children: [
-            n && (0, K.jsx)(d, { button: f.X, type: u.Light, size: p.Medium }),
+            n && (0, K.jsx)(f, { button: d.X, type: c.Light, size: u.Medium }),
             C(`#SaleTrailerCarousel_Undo`),
           ],
         }),
@@ -583,13 +583,13 @@ function et(e) {
     }),
   });
 }
-function Z(e) {
-  let t = !!c(e),
+function Q(e) {
+  let t = !!p(e),
     n = k(),
     { mutate: r } = l(e, !t, n);
   return { bIsWishlisted: t, fnUpdateWishlist: r };
 }
-function tt(e) {
+function et(e) {
   let { data: t } = ye(),
     n = G.useMemo(
       () => new Map((t || []).map((e) => e.tagid).map((e, t) => [e, t])),
@@ -612,13 +612,13 @@ function tt(e) {
     [r, n, e],
   );
 }
-var Q = e(n(), 1),
-  nt = class e extends Q.Message {
+var $ = e(n(), 1),
+  tt = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.recommendationid || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null));
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -663,7 +663,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -671,24 +671,24 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserReviews_Update_Request`;
     }
   },
-  rt = class e extends Q.Message {
+  nt = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
-      (super(), Q.Message.initialize(this, e, 0, -1, void 0, null));
+      (super(), $.Message.initialize(this, e, 0, -1, void 0, null));
     }
     toObject(t = !1) {
       return e.toObject(t, this);
@@ -700,7 +700,7 @@ var Q = e(n(), 1),
       return new e();
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -708,24 +708,24 @@ var Q = e(n(), 1),
       return e;
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(e, t) {}
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserReviews_Update_Response`;
     }
   },
-  it = class e extends Q.Message {
+  rt = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.saved_hardware_id || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null));
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -757,7 +757,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -765,26 +765,26 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserReviews_BackfillSavedHardware_Request`;
     }
   },
-  at = class e extends Q.Message {
+  it = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.num_backfilled || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null));
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -812,7 +812,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -820,26 +820,26 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserReviews_BackfillSavedHardware_Response`;
     }
   },
-  ot = class e extends Q.Message {
+  at = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.reaction_type || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null));
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -868,7 +868,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -876,26 +876,26 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserReviews_Recommendation_LoyaltyReaction`;
     }
   },
-  st = class e extends Q.Message {
+  ot = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.id || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [2], null));
+        $.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -905,7 +905,7 @@ var Q = e(n(), 1),
           proto: e,
           fields: {
             id: { n: 1, br: V.readEnum, bw: H.writeEnum },
-            ranges: { n: 2, c: ct, r: !0, q: !0 },
+            ranges: { n: 2, c: st, r: !0, q: !0 },
           },
         }),
         e.sm_m
@@ -924,7 +924,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -932,26 +932,26 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserReviews_Recommendation_Tag`;
     }
   },
-  ct = class e extends Q.Message {
+  st = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.start || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null));
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -980,7 +980,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -988,26 +988,26 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserReviews_Recommendation_Tag_Range`;
     }
   },
-  lt = class e extends Q.Message {
+  ct = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.recommendationid || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [27, 40, 54], null));
+        $.Message.initialize(this, t, 0, -1, [27, 40, 54], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1086,7 +1086,7 @@ var Q = e(n(), 1),
             ban_check_result: { n: 37, br: V.readEnum, bw: H.writeEnum },
             refunded: { n: 38, br: V.readBool, bw: H.writeBool },
             account_score_spend: { n: 39, br: V.readInt32, bw: H.writeInt32 },
-            reactions: { n: 40, c: ot, r: !0, q: !0 },
+            reactions: { n: 40, c: at, r: !0, q: !0 },
             ipaddress: { n: 41, br: V.readString, bw: H.writeString },
             hidden_in_steam_china: { n: 42, br: V.readBool, bw: H.writeBool },
             steam_china_location: {
@@ -1118,7 +1118,7 @@ var Q = e(n(), 1),
             },
             is_bot_review_pct: { n: 50, br: V.readUint32, bw: H.writeUint32 },
             positivity_pct: { n: 51, br: V.readUint32, bw: H.writeUint32 },
-            tags_with_ranges: { n: 54, c: st, r: !0, q: !0 },
+            tags_with_ranges: { n: 54, c: ot, r: !0, q: !0 },
             saved_hardware_id: {
               n: 56,
               br: V.readUint64String,
@@ -1147,7 +1147,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -1155,26 +1155,26 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `RecommendationDetails`;
     }
   },
-  $ = class e extends Q.Message {
+  lt = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.appid || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null));
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1200,7 +1200,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -1208,26 +1208,26 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserReviews_GetFriendsRecommendedApp_Request`;
     }
   },
-  ut = class e extends Q.Message {
+  ut = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.accountids_recommended || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [1, 3], null));
+        $.Message.initialize(this, t, 0, -1, [1, 3], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1270,7 +1270,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -1278,26 +1278,26 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserReviews_GetFriendsRecommendedApp_Response`;
     }
   },
-  dt = class e extends Q.Message {
+  dt = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.requests || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [1], null));
+        $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1323,7 +1323,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -1331,26 +1331,26 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserReviews_GetIndividualRecommendations_Request`;
     }
   },
-  ft = class e extends Q.Message {
+  ft = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.steamid || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, void 0, null));
+        $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -1379,7 +1379,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -1387,26 +1387,26 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CUserReviews_GetIndividualRecommendations_Request_RecommendationRequest`;
     }
   },
-  pt = class e extends Q.Message {
+  pt = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
         e.prototype.recommendations || F(e.M()),
-        Q.Message.initialize(this, t, 0, -1, [1], null));
+        $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -1414,7 +1414,7 @@ var Q = e(n(), 1),
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { recommendations: { n: 1, c: lt, r: !0, q: !0 } },
+          fields: { recommendations: { n: 1, c: ct, r: !0, q: !0 } },
         }),
         e.sm_m
       );
@@ -1432,7 +1432,7 @@ var Q = e(n(), 1),
       return z(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Q.BinaryReader(t),
+      let n = new $.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -1440,14 +1440,14 @@ var Q = e(n(), 1),
       return U(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
       j(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Q.BinaryWriter();
+      var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
@@ -1457,22 +1457,24 @@ var Q = e(n(), 1),
   mt;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`UserReviews.Update#1`, M(nt, t, n), rt, {
+    return e.SendMsg(`UserReviews.Update#1`, M(tt, t, n), nt, {
       ePrivilege: 3,
     });
   }
   e.Update = t;
   function n(e, t, n) {
-    return e.SendMsg(`UserReviews.BackfillSavedHardware#1`, M(it, t, n), at, {
+    return e.SendMsg(`UserReviews.BackfillSavedHardware#1`, M(rt, t, n), it, {
       ePrivilege: 1,
     });
   }
   e.BackfillSavedHardware = n;
   function r(e, t, n) {
-    return e.SendMsg(`UserReviews.GetFriendsRecommendedApp#1`, M($, t, n), ut, {
-      bConstMethod: !0,
-      ePrivilege: 1,
-    });
+    return e.SendMsg(
+      `UserReviews.GetFriendsRecommendedApp#1`,
+      M(lt, t, n),
+      ut,
+      { bConstMethod: !0, ePrivilege: 1, rgBrowserAPISites: [`store`] },
+    );
   }
   e.GetFriendsRecommendedApp = r;
   function i(e, t, n) {
@@ -1480,7 +1482,12 @@ var Q = e(n(), 1),
       `UserReviews.GetIndividualRecommendations#1`,
       M(dt, t, n),
       pt,
-      { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 1,
+        eWebAPIKeyRequirement: 2,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.GetIndividualRecommendations = i;
@@ -1575,12 +1582,12 @@ var ht = `f6ytvVy3zPE-`,
 export {
   Vt as $,
   Mn as A,
-  Z as At,
+  Q as At,
   hn as B,
   Fn as C,
   $t as Ct,
   wt as D,
-  $e as Dt,
+  Qe as Dt,
   vn as E,
   mt as Et,
   qt as F,
@@ -1591,16 +1598,17 @@ export {
   Pn as K,
   Yt as L,
   sn as M,
+  _e as Mt,
   cn as N,
   Ot as O,
-  tt as Ot,
+  et as Ot,
   on as P,
   zt as Q,
   Xt as R,
   yt as S,
   gn as St,
   Ct as T,
-  $ as Tt,
+  lt as Tt,
   bn as U,
   dn as V,
   Nn as W,
@@ -1627,9 +1635,9 @@ export {
   Wt as i,
   yn as it,
   an as j,
-  _e as jt,
+  q as jt,
   Dn as k,
-  X as kt,
+  Z as kt,
   Mt as l,
   Tn as lt,
   Kt as m,

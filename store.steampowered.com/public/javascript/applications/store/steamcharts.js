@@ -427,7 +427,12 @@ var R = e(a(), 1),
       `StoreTopSellers.GetWeeklyTopSellers#1`,
       Se(Ge, t, n),
       Ke,
-      { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
+      },
     );
   }
   e.GetWeeklyTopSellers = t;
@@ -436,6 +441,7 @@ var R = e(a(), 1),
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.GetCountryList = n;

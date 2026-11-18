@@ -6,10 +6,10 @@ import { Ft as t, K as n } from "./chunk~01cfc309bf.js";
 import { t as r } from "./chunk~cc40f6af5e.js";
 import { r as i } from "./chunk~0278ae6236.js";
 import { t as a } from "./chunk~a35e3605eb.js";
-import { Em as o, Zp as s, hm as c, ih as l } from "./main.js";
+import { bm as o, jm as s, lh as c, nm as l } from "./main.js";
 var u = e(t());
 function d(e) {
-  let t = s(),
+  let t = l(),
     r = u.useContext(p);
   return n(m(r, t, e));
 }
@@ -19,7 +19,7 @@ function f(e) {
   return n.data
     ? n
     : ((t.current ||= new a(
-        typeof e == `string` ? new o(e) : o.InitFromAccountID(e, c.EUNIVERSE),
+        typeof e == `string` ? new s(e) : s.InitFromAccountID(e, o.EUNIVERSE),
       )),
       { ...n, data: t.current });
 }
@@ -27,13 +27,13 @@ var p = u.createContext({
   loadPersonaState: async (e, t) => {
     if (e == null) return null;
     let n = await g(t).load(
-      o.InitFromAccountID(e, c.EUNIVERSE).ConvertTo64BitString(),
+      s.InitFromAccountID(e, o.EUNIVERSE).ConvertTo64BitString(),
     );
-    return _(o.InitFromAccountID(e, c.EUNIVERSE), n);
+    return _(s.InitFromAccountID(e, o.EUNIVERSE), n);
   },
 });
 function m(e, t, n) {
-  let r = typeof n == `string` ? new o(n).GetAccountID() : n;
+  let r = typeof n == `string` ? new s(n).GetAccountID() : n;
   return {
     queryKey: [`PlayerSummary`, r],
     queryFn: () => e.loadPersonaState(r, t),
@@ -51,7 +51,7 @@ function _(e, t) {
   return (
     (n.m_bInitialized = !!t),
     (n.m_ePersonaState = o?.persona_state ?? 0),
-    (n.m_strAvatarHash = r?.sha_digest_avatar ? l(r.sha_digest_avatar) : i),
+    (n.m_strAvatarHash = r?.sha_digest_avatar ? c(r.sha_digest_avatar) : i),
     (n.m_strPlayerName = r?.persona_name ?? e.ConvertTo64BitString()),
     (n.m_strAccountName = o?.account_name),
     o?.persona_state_flags &&

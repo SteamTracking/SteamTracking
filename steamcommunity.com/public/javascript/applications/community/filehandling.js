@@ -5,15 +5,15 @@ import { o as e } from "./chunk~f025431ab0.js";
 import { E as t, Ft as n, ot as r } from "./chunk~01cfc309bf.js";
 import { n as i } from "./chunk~16aefcf65f.js";
 import {
-  Lh as a,
-  Su as o,
-  Ws as s,
-  Xu as c,
-  bf as l,
-  dh as u,
-  ga as d,
-  gs as f,
-  ud as p,
+  Eu as a,
+  Hh as o,
+  Js as s,
+  ba as c,
+  bs as l,
+  ed as u,
+  gh as d,
+  md as f,
+  wf as p,
 } from "./main.js";
 var m = e(n()),
   h = (e) => e != null;
@@ -44,7 +44,7 @@ function g(e, t) {
           ? (s = t.constructor(o !== `false`))
           : t != null && t != null && (s = t.constructor(o))
         : (s = o)),
-    p(_.Get().GetLocalStoreChangeCallback(e), r),
+    f(_.Get().GetLocalStoreChangeCallback(e), r),
     [s, a]
   );
 }
@@ -53,7 +53,7 @@ var _ = class e {
   GetLocalStoreChangeCallback(e) {
     return (
       this.m_mapChangeCallback.has(e) ||
-        this.m_mapChangeCallback.set(e, new a()),
+        this.m_mapChangeCallback.set(e, new o()),
       this.m_mapChangeCallback.get(e)
     );
   }
@@ -203,10 +203,10 @@ function ae(e) {
   return (
     o && (s /= 100),
     {
-      r: u(Math.round(parseFloat(n)), 0, 255),
-      g: u(Math.round(parseFloat(r)), 0, 255),
-      b: u(Math.round(parseFloat(i)), 0, 255),
-      a: u(s, 0, 1),
+      r: d(Math.round(parseFloat(n)), 0, 255),
+      g: d(Math.round(parseFloat(r)), 0, 255),
+      b: d(Math.round(parseFloat(i)), 0, 255),
+      a: d(s, 0, 1),
     }
   );
 }
@@ -269,29 +269,29 @@ function me(e) {
       onChange: n,
       strTitle: r,
       disableAlpha: i,
-      onSubmit: a,
+      onSubmit: o,
       children: s,
     } = e,
-    [c, u] = (0, m.useState)(() => ge(t, i)),
-    d = (0, m.useRef)(void 0);
+    [c, l] = (0, m.useState)(() => ge(t, i)),
+    u = (0, m.useRef)(void 0);
   (0, m.useEffect)(() => {
     let e = D(t);
-    !e || (d.current && he(e, d.current, i)) || u((e) => q(t, e.h, i) ?? e);
+    !e || (u.current && he(e, u.current, i)) || l((e) => q(t, e.h, i) ?? e);
   }, [t, i]);
-  let f = (0, m.useCallback)(
+  let d = (0, m.useCallback)(
       (e) => {
         let t = i ? { ...e, a: 1 } : e;
-        u(t);
+        l(t);
         let r = C(t);
-        ((d.current = r), n(T(r)));
+        ((u.current = r), n(T(r)));
       },
       [i, n],
     ),
-    p = C(c),
-    h = w({ ...p, a: 1 }, `hex`),
-    g = T(p);
+    f = C(c),
+    h = w({ ...f, a: 1 }, `hex`),
+    g = T(f);
   return (0, G.jsxs)(`div`, {
-    className: o(ce, `noOpinionatedGlobalStyles`),
+    className: a(ce, `noOpinionatedGlobalStyles`),
     style: {
       "--colorpicker-hue": `hsl( ${c.h}deg 100% 50% )`,
       "--colorpicker-opaque": h,
@@ -299,31 +299,31 @@ function me(e) {
     },
     children: [
       !!r && (0, G.jsx)(`div`, { className: `GEaX-EfeXNg-`, children: r }),
-      (0, G.jsx)(ve, { hsva: c, fnSetColor: f }),
+      (0, G.jsx)(ve, { hsva: c, fnSetColor: d }),
       (0, G.jsx)(Y, {
         className: M,
-        strLabel: l.Localize(`#ColorPicker_Hue`),
+        strLabel: p.Localize(`#ColorPicker_Hue`),
         nMax: 360,
         nValue: Math.round(c.h),
         strValueText: `${Math.round(c.h)}°`,
-        fnSetValue: (e) => f({ ...c, h: e }),
+        fnSetValue: (e) => d({ ...c, h: e }),
       }),
       !i &&
         (0, G.jsx)(Y, {
           className: `xV4lUfTUFc4-`,
-          strLabel: l.Localize(`#ColorPicker_Opacity`),
+          strLabel: p.Localize(`#ColorPicker_Opacity`),
           nMax: 100,
           nValue: Math.round(c.a * 100),
           strValueText: `${Math.round(c.a * 100)}%`,
-          fnSetValue: (e) => f({ ...c, a: e / 100 }),
+          fnSetValue: (e) => d({ ...c, a: e / 100 }),
         }),
-      (0, G.jsx)(ye, { hsva: c, disableAlpha: i, fnSetColor: f, onSubmit: a }),
+      (0, G.jsx)(ye, { hsva: c, disableAlpha: i, fnSetColor: d, onSubmit: o }),
       (0, G.jsx)(xe, {
         strCurrentHex: h,
-        bOpaque: p.a >= 1,
+        bOpaque: f.a >= 1,
         fnPick: (e) => {
           let t = q(e, c.h, i);
-          t && f(t);
+          t && d(t);
         },
       }),
       s,
@@ -352,7 +352,7 @@ function _e(e) {
     let n = t.currentTarget.getBoundingClientRect(),
       r = n.width ? (t.clientX - n.left) / n.width : 0,
       i = n.height ? (t.clientY - n.top) / n.height : 0;
-    e(u(r, 0, 1), u(i, 0, 1));
+    e(d(r, 0, 1), d(i, 0, 1));
   };
   return {
     onPointerDown: (e) => {
@@ -379,7 +379,7 @@ function ve(e) {
     className: k,
     role: `slider`,
     tabIndex: 0,
-    "aria-label": l.Localize(`#ColorPicker_SaturationBrightness`),
+    "aria-label": p.Localize(`#ColorPicker_SaturationBrightness`),
     "aria-valuemin": 0,
     "aria-valuemax": 100,
     "aria-valuenow": Math.round(t.v * 100),
@@ -389,7 +389,7 @@ function ve(e) {
         i = J(e, `ArrowUp`, `ArrowDown`);
       (r !== void 0 || i !== void 0) &&
         (e.preventDefault(),
-        n({ ...t, s: u(t.s + (r ?? 0), 0, 1), v: u(t.v + (i ?? 0), 0, 1) }));
+        n({ ...t, s: d(t.s + (r ?? 0), 0, 1), v: d(t.v + (i ?? 0), 0, 1) }));
     },
     ...r,
     children: (0, G.jsx)(`div`, {
@@ -403,7 +403,7 @@ function Y(e) {
     className: t,
     strLabel: n,
     nMax: r,
-    nValue: a,
+    nValue: o,
     strValueText: s,
     fnSetValue: c,
   } = e;
@@ -412,16 +412,16 @@ function Y(e) {
     children: (0, G.jsx)(i.Root, {
       min: 0,
       max: r,
-      value: [a],
+      value: [o],
       onValueChange: (e) => c(e[0]),
       children: (0, G.jsx)(i.Track, {
-        render: (0, G.jsx)(`div`, { className: o(j, t) }),
+        render: (0, G.jsx)(`div`, { className: a(j, t) }),
         children: (0, G.jsx)(i.Handle, {
           render: (e) =>
             (0, G.jsx)(`span`, {
               ...e,
               className: O,
-              style: { insetInlineStart: `${(a / r) * 100}%` },
+              style: { insetInlineStart: `${(o / r) * 100}%` },
               "aria-label": n,
               "aria-valuetext": s,
             }),
@@ -432,18 +432,18 @@ function Y(e) {
 }
 function ye(e) {
   let { hsva: t, disableAlpha: n, fnSetColor: r, onSubmit: i } = e,
-    [a, s] = g(de),
-    c = x.find((e) => e === a) ?? `hex`,
-    [u, d] = (0, m.useState)(void 0),
-    f = w(C(t), c),
-    p = u !== void 0 && u.trim() !== `` && !D(u),
+    [o, s] = g(de),
+    c = x.find((e) => e === o) ?? `hex`,
+    [l, u] = (0, m.useState)(void 0),
+    d = w(C(t), c),
+    f = l !== void 0 && l.trim() !== `` && !D(l),
     h = (e) => {
-      d(e);
+      u(e);
       let i = q(e, t.h, n);
       i && r(i);
     },
     _ = (e) => {
-      (s(e), d(void 0));
+      (s(e), u(void 0));
     };
   return (0, G.jsxs)(`div`, {
     className: N,
@@ -453,26 +453,26 @@ function ye(e) {
         children: [
           (0, G.jsx)(`div`, { className: F, "aria-hidden": !0 }),
           (0, G.jsx)(`input`, {
-            className: o(I, p && `_5Zk11eFAaLo-`),
+            className: a(I, f && `_5Zk11eFAaLo-`),
             type: `text`,
             spellCheck: !1,
             autoComplete: `off`,
-            "aria-label": l.Localize(`#ColorPicker_ColorValue`),
-            "aria-invalid": p,
-            value: u ?? f,
+            "aria-label": p.Localize(`#ColorPicker_ColorValue`),
+            "aria-invalid": f,
+            value: l ?? d,
             onChange: (e) => h(e.currentTarget.value),
-            onBlur: () => d(void 0),
+            onBlur: () => u(void 0),
             onKeyDown: (e) => {
-              e.key === `Enter` && (e.preventDefault(), d(void 0), i?.());
+              e.key === `Enter` && (e.preventDefault(), u(void 0), i?.());
             },
           }),
           (0, G.jsx)(be, { hsva: t, disableAlpha: n, fnSetColor: r }),
         ],
       }),
-      p &&
+      f &&
         (0, G.jsx)(`div`, {
           className: `tHsVe8Ptn-s-`,
-          children: l.Localize(`#ColorPicker_InvalidColor`),
+          children: p.Localize(`#ColorPicker_InvalidColor`),
         }),
       (0, G.jsx)(`div`, {
         className: R,
@@ -484,7 +484,7 @@ function ye(e) {
               type: `button`,
               role: `radio`,
               "aria-checked": e === c,
-              className: o(z, e === c && `wBwV8sUsuTo-`),
+              className: a(z, e === c && `wBwV8sUsuTo-`),
               onClick: () => _(e),
               children: e.toUpperCase(),
             },
@@ -506,21 +506,21 @@ function be(e) {
       let e = q((await new window.EyeDropper().open()).sRGBHex, t.h, n);
       e && r({ ...e, a: t.a });
     } catch (e) {
-      console.warn(l.Localize(`#Sale_EyeDropperFailed`), e);
+      console.warn(p.Localize(`#Sale_EyeDropperFailed`), e);
     } finally {
       e.classList.remove(K);
     }
   };
   if (!i) return null;
-  let s = l.Localize(`#Sale_BackgroundColorPicker`);
-  return (0, G.jsx)(f, {
+  let s = p.Localize(`#Sale_BackgroundColorPicker`);
+  return (0, G.jsx)(l, {
     toolTipContent: s,
     children: (0, G.jsx)(`button`, {
       type: `button`,
       className: L,
       "aria-label": s,
       onClick: o,
-      children: (0, G.jsx)(d, {}),
+      children: (0, G.jsx)(c, {}),
     }),
   });
 }
@@ -529,14 +529,14 @@ function xe(e) {
   return (0, G.jsx)(`div`, {
     className: B,
     role: `group`,
-    "aria-label": l.Localize(`#ColorPicker_Palette`),
+    "aria-label": p.Localize(`#ColorPicker_Palette`),
     children: le.map((e) => {
       let i = n && e === t;
       return (0, G.jsx)(
         `button`,
         {
           type: `button`,
-          className: o(V, i && `wBwV8sUsuTo-`),
+          className: a(V, i && `wBwV8sUsuTo-`),
           style: { background: e },
           "aria-label": e,
           "aria-pressed": i,
@@ -555,34 +555,34 @@ function Se(e) {
       onChange: n,
       onRequestClose: r,
       disableAlpha: i,
-      strTitle: a,
+      strTitle: o,
       bLivePreview: s = !0,
       fnRestoreChanges: c,
     } = e,
-    u = (0, m.useRef)(null),
-    d = (0, m.useRef)(void 0),
-    f = (0, m.useRef)(!1),
-    p = (0, m.useRef)({
+    l = (0, m.useRef)(null),
+    u = (0, m.useRef)(void 0),
+    d = (0, m.useRef)(!1),
+    f = (0, m.useRef)({
       color: t,
       onChange: n,
       fnRestoreChanges: c,
       bLivePreview: s,
     });
-  p.current = { color: t, onChange: n, fnRestoreChanges: c, bLivePreview: s };
+  f.current = { color: t, onChange: n, fnRestoreChanges: c, bLivePreview: s };
   let h = (0, m.useCallback)(
       (e) => {
-        ((d.current = e), s && n(e));
+        ((u.current = e), s && n(e));
       },
       [s, n],
     ),
     g = (0, m.useCallback)(() => {
-      ((f.current = !0), !s && d.current !== void 0 && n(d.current), r());
+      ((d.current = !0), !s && u.current !== void 0 && n(u.current), r());
     }, [s, n, r]);
   return (
     (0, m.useEffect)(
       () => () => {
-        let e = p.current;
-        if (!f.current && e.bLivePreview && d.current !== void 0)
+        let e = f.current;
+        if (!d.current && e.bLivePreview && u.current !== void 0)
           try {
             (e.onChange(e.color), e.fnRestoreChanges?.());
           } catch (e) {
@@ -592,9 +592,9 @@ function Se(e) {
       [],
     ),
     (0, m.useEffect)(() => {
-      let e = u.current?.ownerDocument ?? document,
+      let e = l.current?.ownerDocument ?? document,
         t = (e) => {
-          u.current && !u.current.contains(e.target) && r();
+          l.current && !l.current.contains(e.target) && r();
         },
         n = (e) => {
           e.key === `Escape` && (e.stopPropagation(), e.preventDefault(), r());
@@ -609,11 +609,11 @@ function Se(e) {
       );
     }, [r]),
     (0, G.jsx)(`div`, {
-      ref: u,
+      ref: l,
       children: (0, G.jsx)(me, {
         color: t,
         disableAlpha: i,
-        strTitle: a ?? l.Localize(`#Button_Color`),
+        strTitle: o ?? p.Localize(`#Button_Color`),
         onChange: h,
         onSubmit: g,
         children: (0, G.jsxs)(`div`, {
@@ -621,15 +621,15 @@ function Se(e) {
           children: [
             (0, G.jsx)(`button`, {
               type: `button`,
-              className: o(U, W),
+              className: a(U, W),
               onClick: g,
-              children: l.Localize(`#Button_Save`),
+              children: p.Localize(`#Button_Save`),
             }),
             (0, G.jsx)(`button`, {
               type: `button`,
               className: U,
               onClick: r,
-              children: l.Localize(`#Button_Cancel`),
+              children: p.Localize(`#Button_Cancel`),
             }),
           ],
         }),
@@ -697,7 +697,7 @@ function Te(e) {
           n(!0);
       }, []),
       onDragLeave: m.useCallback((e) => {
-        c(e) && n(!1);
+        u(e) && n(!1);
       }, []),
       onDragEnd: m.useCallback(() => n(!1), []),
       onDragOver: t ? $ : void 0,

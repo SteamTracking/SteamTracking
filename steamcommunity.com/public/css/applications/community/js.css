@@ -3279,6 +3279,10 @@ button.Cw4uxrkspko- svg {
 .BNSyOf0Yaj8- {
   text-align: center;
 }
+input.BNSyOf0Yaj8-.BNSyOf0Yaj8-,
+input.BNSyOf0Yaj8-.BNSyOf0Yaj8-:focus {
+  padding-inline: 16px;
+}
 .lOrYsgAQ7xY- {
   flex-grow: 1;
 }

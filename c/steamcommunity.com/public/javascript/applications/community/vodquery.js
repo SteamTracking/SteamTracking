@@ -44,7 +44,7 @@ import { _, _, _, _, _, _ } from "./chunk~437071091c.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~75db1bf948.js";
 import { _, _ } from "./chunk~05a38bc848.js";
-import { _, _, _ } from "./chunk~2e61cac879.js";
+import { _, _, _, _ } from "./chunk~2e61cac879.js";
 import { _ } from "./chunk~92931c6310.js";
 import { _ } from "./chunk~37e5316e27.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~cfb555d6e5.js";
@@ -56,6 +56,9 @@ import { _ } from "./chunk~395a1fb77b.js";
 import { _ } from "./chunk~0278ae6236.js";
 import "./chunk~c55d6473b2.js";
 import {
+  _,
+  _,
+  _,
   _,
   _,
   _,
@@ -5742,7 +5745,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Store.GetRecommendedTagsForUser#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetRecommendedTagsForUser = _;
@@ -5767,7 +5770,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetTagList = _;
@@ -5775,7 +5778,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Store.GetDiscoveryQueue#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetDiscoveryQueue = _;
@@ -5789,7 +5792,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Store.SkipDiscoveryQueueItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.SkipDiscoveryQueueItem = _;
@@ -5804,7 +5807,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetGamesFollowed = _;
@@ -5813,7 +5816,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetGamesFollowedCount = _;
@@ -5821,7 +5824,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Store.GetDiscoveryQueueSkippedApps#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetDiscoveryQueueSkippedApps = _;
@@ -5835,7 +5838,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Store.GetStorePreferences#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.GetStorePreferences = _;
@@ -5855,7 +5858,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Store.UpdatePackageReservations#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`partner`, `community`, `store`],
     });
   }
   _.UpdatePackageReservations = _;
@@ -5951,14 +5954,14 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.UpdateInvites#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.UpdateInvites = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetInvites#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetInvites = _;
@@ -5971,7 +5974,7 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetUserStatus#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`partner`, `store`],
     });
   }
   _.GetUserStatus = _;
@@ -6447,10 +6450,15 @@ function _(_) {
   return _?.[0] == _;
 }
 async function _(_) {
+  let _;
   try {
-    let _ = await fetch(_(_.STORE_BASE_URL, _, _.country_code), {
+    _ = await fetch(_(_.STORE_BASE_URL, _, _.country_code), {
       credentials: `include`,
     });
+  } catch (_) {
+    return (console.warn(`LoadDynamicUserData`, _), _());
+  }
+  try {
     if (!_._) throw Error(`Server returned ${_.status}`);
     return _(await _.json());
   } catch (_) {
@@ -7869,6 +7877,8 @@ var _ = `_8Wp5WbqAbJA-`,
   _ = `_4KL8m0wDedE-`,
   _ = `E3GBmOK5lMc-`,
   _ = `lOHW8g-YyoY-`,
+  _ = `NqZ9uMSo13A-`,
+  _ = `Ybt9EqGhaaU-`,
   _ = `RQzfcqJK1Eg-`,
   _ = `_0MLgqm-W-nA-`,
   _ = `iwrzh-mg8hE-`,
@@ -7905,7 +7915,6 @@ var _ = `_8Wp5WbqAbJA-`,
   _ = `v7ul8g8zqHs-`,
   _ = `aN31caRmRcQ-`,
   _ = `tobj1evrU4w-`,
-  _ = `NqZ9uMSo13A-`,
   _ = `RAahmG4F6sc-`;
 function _(_) {
   let {
@@ -9177,7 +9186,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.ValidateCart = _;
@@ -9191,7 +9200,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Checkout.AddFreeLicense#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.AddFreeLicense = _;
@@ -14079,6 +14088,7 @@ function _(_) {
       bHideReleaseDate: _,
       bHideIfDemo: _,
       bPurchaseOptionDisplay: _,
+      bCapsuleRowDisplay: _,
       strContainerClassName: _,
       strDiscountAndPriceClassName: _,
       strPriceFormattedClassName: _,
@@ -14097,6 +14107,7 @@ function _(_) {
       [_]: !0,
       [_]: _,
       StoreSalePriceWidgetContainer: !0,
+      [_]: _,
       [_]: _,
       [_]: _,
       [_ ?? ``]: !!_,
@@ -14198,6 +14209,7 @@ function _(_) {
     strDiscountAndPriceClassName: _,
     strPriceFormattedClassName: _,
     bPurchaseOptionDisplay: _,
+    bCapsuleRowDisplay: _,
   });
 }
 function _(_) {
@@ -14215,6 +14227,7 @@ function _(_) {
       strDiscountAndPriceClassName: _,
       strPriceFormattedClassName: _,
       bPurchaseOptionDisplay: _,
+      bCapsuleRowDisplay: _,
       bBundleItem: _,
     } = _,
     _ = _,
@@ -14236,6 +14249,7 @@ function _(_) {
       [_]: !!_,
       [_]: !!_,
       [_]: !!_,
+      [_]: _,
       [_]: _,
       [_ ?? ``]: !!_,
     }),
@@ -14465,6 +14479,8 @@ function _() {
     children: _(`#home_page_live_broadcast`),
   });
 }
+var _ = _.createContext(void 0),
+  _ = _.createContext(void 0);
 function _(_) {
   let { appids: _, hide_status_banners: _, show_early_access: _ } = _,
     { data: _ } = _(),
@@ -14472,12 +14488,20 @@ function _(_) {
     _ = _.length > 0 && _.every((_) => _ && _.has(_)),
     _ = _.length > 0 && _.every((_) => _ && _.has(_)),
     _ = _(_),
+    _ = _.useContext(_),
+    _ = _.useContext(_),
+    _ = _ && _ ? _(_, _) : void 0,
     _ = _ && !_,
     _ = _ && !_,
     _ = !_ && _;
   return (0, _.jsxs)(`div`, {
-    className: _(_, `CapsuleDecorators`),
+    className: _(_, `CapsuleDecorators`, _ && `HasReasonBanner`),
     children: [
+      _ &&
+        (0, _.jsx)(`span`, {
+          className: _(`LCYi5cxHqgI-`, _.strClassName),
+          children: _.strLabel,
+        }),
       _ &&
         (0, _.jsxs)(`span`, {
           className: _(`LCYi5cxHqgI-`, `ZuMhm9DQqbw-`),
@@ -14546,6 +14570,9 @@ function _(_) {
 }
 var _ = `WYXlhoxwBlU-`,
   _ = `Ypf4QLCxqQU-`,
+  _ = `rDvoly1XGQk-`,
+  _ = `n2t7u-oXiwM-`,
+  _ = `a1UUU8zD1Lg-`,
   _ = `jP-Qr-tpETg-`,
   _ = `triBTPpfZNQ-`,
   _ = `Ep0wQ-6tJLw-`,
@@ -14590,7 +14617,45 @@ function _(_) {
     is_expanded_maincap: _,
     is_expanded_display: _,
     show_auto_advance_bar: _,
+    swipe_row: _,
   } = _;
+  if (typeof _ == `string`)
+    return (0, _.jsx)(_, {
+      children: (0, _.jsx)(`div`, {
+        className: _(_, _),
+        children: [0, 1, 2, 3, 4].map((_) =>
+          (0, _.jsx)(
+            `div`,
+            {
+              className: _(_, _ === `tall_capsule` && `RDPLi3Xo-Mk-`),
+              children: (0, _.jsx)(`div`, {
+                className: _,
+              }),
+            },
+            _,
+          ),
+        ),
+      }),
+    });
+  if (_)
+    return (0, _.jsx)(_, {
+      children: (0, _.jsx)(`div`, {
+        className: _,
+        children: [0, 1].map((_) =>
+          (0, _.jsx)(
+            `div`,
+            {
+              className: _,
+              style: {
+                width: _.width,
+                height: _.height,
+              },
+            },
+            _,
+          ),
+        ),
+      }),
+    });
   if (!_) return null;
   if (_)
     return (0, _.jsx)(_, {
@@ -16451,26 +16516,28 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`AccountCart.GetCart#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetCart = _;
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.AddItemsToCart#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.AddItemsToCart = _;
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.ModifyLineItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.ModifyLineItem = _;
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.RemoveItemFromCart#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.RemoveItemFromCart = _;
@@ -16483,6 +16550,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.DeleteCart#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.DeleteCart = _;
@@ -17043,6 +17111,36 @@ function _(_, _, _, _, _, _) {
   };
 }
 function _(_) {
+  if (_?.appid && _.item_type == 0)
+    switch (_.type) {
+      case 14:
+        return;
+      case 1:
+      case 12:
+        return _.related_items?.parent_appid || _.appid;
+      default:
+        return _.appid;
+    }
+}
+function _(_) {
+  let _ = _(),
+    { data: _ } = _(_ ? _ : void 0),
+    _ = _(_),
+    _ = !!_(_),
+    { bIsOwned: _ } = _(_(_)),
+    _ = _(),
+    { mutate: _ } = _(_, !_, _),
+    _ = !!_ && _?.type != 10;
+  return !_ || !_.logged_in || !_ || _
+    ? {}
+    : {
+        onOptionsButton: () => _(),
+        onOptionsActionDescription: _.Localize(
+          _ ? `#Sale_RemoveFromWishlist` : `#Sale_AddToWishlist`,
+        ),
+      };
+}
+function _(_) {
   let {
       _: _,
       type: _,
@@ -17093,7 +17191,8 @@ function _(_) {
           : _,
       [_, _, _],
     ),
-    { strStoreURL: _, snr: _ } = _(_, _);
+    { strStoreURL: _, snr: _ } = _(_, _),
+    _ = _(_ ? void 0 : _);
   if (!_)
     return _
       ? (0, _.jsx)(_, {
@@ -17122,6 +17221,7 @@ function _(_) {
     navEntryPreferPosition: _.PREFERRED_CHILD,
     autoFocus: _,
     navKey: `preview_widget_` + _(_),
+    ..._,
     children: [
       (0, _.jsx)(_, {
         appid: _ && `appid` in _ ? _.appid : void 0,
@@ -19196,14 +19296,14 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetVoteDefinitions = _;
   function _(_, _, _) {
     return _.SendMsg(`StoreSales.SetVote#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.SetVote = _;
@@ -19211,7 +19311,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`StoreSales.GetUserVotes#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetUserVotes = _;
@@ -19222,7 +19322,7 @@ var _;
     return _.SendMsg(`SteamAwards.GetUserNominations#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetUserNominations = _;
@@ -19230,7 +19330,7 @@ var _;
     return _.SendMsg(`SteamAwards.GetOtherUserNominations#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 2,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetOtherUserNominations = _;
@@ -19238,7 +19338,7 @@ var _;
     return _.SendMsg(`SteamAwards.Nominate#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.Nominate = _;
@@ -19250,7 +19350,7 @@ var _;
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`community`],
+        rgBrowserAPISites: [`community`, `store`],
       },
     );
   }
@@ -19258,7 +19358,7 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`SteamAwards.GetNominationShareLink#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetNominationShareLink = _;
@@ -19340,11 +19440,6 @@ _(
   `GetEventStartTime`,
   null,
 );
-var _ = 1e4,
-  _ = 99999;
-function _() {
-  return Math.floor(_ + Math.random() * 9e4);
-}
 var _ = `exploration`,
   _ = (function (_) {
     return ((_.Random = `r`), (_.Personalized = `p`), _);
@@ -19374,6 +19469,11 @@ function _(_) {
     default:
       return;
   }
+}
+var _ = 1e4,
+  _ = 99999;
+function _() {
+  return Math.floor(_ + Math.random() * 9e4);
 }
 var _ = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
 function _(_) {
@@ -19526,7 +19626,7 @@ var _ = (function (_) {
     );
   })({}),
   _ =
-    `sale_tag_filter.store_filter.smart_section_type.smart_section_tag.smart_section_category.smart_section_max_apps.smart_section_event_tags.smart_section_deck_compatibility.smart_section_data_source.smart_section_personalized_carousel_sort.smart_section_personalized_carousel_min_items.smart_section_personalized_carousel_randomize.smart_section_filter_by_deck_compatibility.smart_section_creator_listid.smart_section_min_discount_percent.smart_section_include_packages.smart_section_include_bundles.smart_section_include_dlc.random_from_entire_set.prioritize_discounts.store_item_filter_require_discount.store_item_filter_require_coming_soon.store_item_filter_require_released.store_item_filter_require_free.store_item_filter_require_demo.store_item_filter_require_playtest`.split(
+    `sale_tag_filter.store_filter.smart_section_type.smart_section_tag.smart_section_category.smart_section_max_apps.smart_section_event_tags.smart_section_deck_compatibility.smart_section_data_source.smart_section_personalized_carousel_sort.smart_section_personalized_carousel_min_items.smart_section_personalized_carousel_randomize.smart_section_filter_by_deck_compatibility.smart_section_creator_listid.smart_section_min_discount_percent.smart_section_include_packages.smart_section_include_bundles.smart_section_include_dlc.smart_section_discount_reason.random_from_entire_set.prioritize_discounts.store_item_filter_require_discount.store_item_filter_require_coming_soon.store_item_filter_require_released.store_item_filter_require_free.store_item_filter_require_demo.store_item_filter_require_playtest`.split(
       `.`,
     );
 function _(_) {
@@ -21938,6 +22038,7 @@ var _ = _({
     CarouselDisplay: () => _,
     CarouselPage: () => _,
     CarouselSalePageCapsule: () => _,
+    CarouselSalePageCapsuleTall: () => _,
     CustomStyle_together: () => _,
     DefaultCreatorCtn: () => _,
     DesktopTabs: () => _,
@@ -22016,6 +22117,7 @@ var _ = _({
   _ = `giUOrzG6Ujs-`,
   _ = `zct4M8EzfNo-`,
   _ = `FolDBzXMW2I-`,
+  _ = `E6LHQcm-39c-`,
   _ = `_0pSO3K-0Hs4-`,
   _ = `_9D3431c8-XE-`,
   _ = `G-t-vlNhbRM-`,
@@ -22078,6 +22180,7 @@ var _ = _({
     CarouselCapsuleAnimated: _,
     AppSummaryWidgetCtn: _,
     CarouselSalePageCapsule: _,
+    CarouselSalePageCapsuleTall: _,
     SaleBroadcastCtn: _,
     SaleOuterTopMargin: _,
     SaleOuterContainer: _,
@@ -22119,27 +22222,40 @@ var _ = _({
   },
   _ = `ewL7epZsubk-`,
   _ = `data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M30.5%2016C30.5%2024.0081%2024.0081%2030.5%2016%2030.5C7.99187%2030.5%201.5%2024.0081%201.5%2016C1.5%207.99187%207.99187%201.5%2016%201.5C24.0081%201.5%2030.5%207.99187%2030.5%2016Z'%20fill='white'/%3e%3cpath%20d='M17.3817%2022.5H14.6183V17.1193L10%209H13.2177L16.0946%2014.4L18.9905%209H22L17.3817%2017.1386V22.5Z'%20fill='%230E141B'/%3e%3c/svg%3e`;
-function _(_) {
-  let [_, _] = _.useState(!1);
+function _(_, _ = `Y`) {
+  let [_, _] = _.useState(!1),
+    _ = _.useCallback((_) => _(_ && !!_), [_]),
+    _ = _.useCallback(() => {
+      _ && _.length !== 0 && (window.location.href = _);
+    }, [_]);
   return {
     bShowSeeMoreHint: _,
-    panelProps: {
-      onFocusWithin: _.useCallback((_) => _(_ && !!_), [_]),
-      onOptionsButton: _.useCallback(() => {
-        _ && _.length !== 0 && (window.location.href = _);
-      }, [_]),
-    },
+    panelProps:
+      _ == `X`
+        ? {
+            onFocusWithin: _,
+            onSecondaryButton: _,
+          }
+        : {
+            onFocusWithin: _,
+            onOptionsButton: _,
+          },
   };
 }
 function _(_) {
-  let { label: _, shown: _ } = _;
+  let { label: _, shown: _, button: _ = `Y` } = _;
   return (0, _.jsxs)(`div`, {
     className: (0, _.default)(_, _ && `lDd-amB-eCU-`),
     children: [
-      (0, _.jsx)(`img`, {
-        src: _,
-        alt: `Y`,
-      }),
+      _ == `X`
+        ? (0, _.jsx)(_, {
+            button: `X`,
+            "aria-label": `X`,
+          })
+        : (0, _.jsx)(`img`, {
+            src: _,
+            alt: `Y`,
+          }),
       (0, _.jsx)(`div`, {
         children: _,
       }),
@@ -23011,6 +23127,7 @@ function _(_) {
     role: `button`,
     tabIndex: 0,
     className: _(_, _),
+    "data-hovered": _ || void 0,
     onMouseEnter: _,
     onMouseLeave: _,
     onTouchStart: () => _(!1),
@@ -23310,7 +23427,9 @@ function _(_, _) {
 }
 function _(_) {
   let _ = _(_)[0];
-  return !!_?.event_gid && (!!_.featured_app_tagid || !!_.capsules?.length);
+  return _?.creator_clan_account_id
+    ? !!_.capsules?.length
+    : !!_?.event_gid && (!!_.featured_app_tagid || !!_.capsules?.length);
 }
 function _(_, _) {
   return _
@@ -23329,6 +23448,60 @@ function _(_, _) {
     _.GetImageURL(`sale_logo`, _) ||
     _.GetImageURL(`sale_logo`, _)
   );
+}
+function _(_, _) {
+  let _ = _.GetSaleSections().filter(
+    (_) => _(_.section_type) && _(_) == `personalized_carousel`,
+  );
+  if (_.length == 0)
+    return {
+      nNumSections: 0,
+      nSectionIndex: -1,
+    };
+  let _ = _.findIndex((_) => _.unique_id == _.unique_id);
+  return {
+    nNumSections: _.length,
+    nSectionIndex: _,
+  };
+}
+function _(_, _, _) {
+  if (!_) return !1;
+  let _ = !_?.bHasHideIgnoredValue || _.bHideIgnored;
+  return (_.ignored && _) ||
+    (_.excluded_tagids?.length ?? 0) > 0 ||
+    (_.excluded_content_descriptorids?.length ?? 0) > 0 ||
+    (_?.bHideOwned && _.already_owned) ||
+    (_?.bHideWishlisted && _.on_wishlist)
+    ? !0
+    : _ && !!(_.already_owned || _.demo_for_owned_game);
+}
+function _(_) {
+  return Math.max(1, _.smart_section_min_discount_percent ?? 1);
+}
+function _(_, _, _) {
+  if (_) return _[_(_, _).nSectionIndex] ?? null;
+}
+function _(_, _) {
+  let _ = _(),
+    _ = _({
+      queries: _.map((_) => {
+        let _ = _(_, _);
+        return _
+          ? {
+              ..._,
+              enabled: !1,
+            }
+          : _;
+      }),
+      combine: _,
+    });
+  return (0, _.useMemo)(() => {
+    if (_ || !_.some((_) => _ === void 0))
+      return _.filter((_, _) => !_(_[_], !1));
+  }, [_, _, _]);
+}
+function _(_) {
+  return _.map((_) => _.data);
 }
 var _ = `hZ-dKtI-DOE-`,
   _ = `_48uVrbfJQEM-`,
@@ -23888,6 +24061,57 @@ var _ = `hZ-dKtI-DOE-`,
   _([_], _.prototype, `OnSaveLink`, null),
   _([_], _.prototype, `OnEditLink`, null),
   (_ = _([_], _)));
+function _(_) {
+  let {
+      className: _,
+      url: _,
+      style: _,
+      children: _,
+      bSkipForcingStoreLink: _,
+      bOpenInline: _,
+      bFocusable: _ = !0,
+      fnCanTakeFocus: _,
+    } = _,
+    _ = _ ? _ : _ ? _(_, _.STORE_BASE_URL) : void 0,
+    _ = _(_);
+  return _
+    ? (0, _.jsx)(_, {
+        href: _,
+        target: _.IN_CLIENT || _ ? void 0 : `_blank`,
+        className: _,
+        style: _,
+        rel: `noopener noreferrer`,
+        focusable: _,
+        fnCanTakeFocus: _,
+        children: _,
+      })
+    : (0, _.jsx)(`span`, {
+        style: _,
+        className: _,
+        children: _,
+      });
+}
+function _(_, _) {
+  try {
+    let _ = new URL(_),
+      _ = new URL(_);
+    return _.href.replace(/\/$/, ``) + _.pathname + _.search + _.hash;
+  } catch {
+    return ``;
+  }
+}
+function _(_) {
+  let { section: _ } = _;
+  return !_.label_link || _.label_link_style
+    ? null
+    : (0, _.jsx)(`div`, {
+        className: _,
+        children: (0, _.jsx)(_, {
+          url: _.label_link,
+          children: _.Localize(`#btn_live_streams_all`),
+        }),
+      });
+}
 function _(_, _) {
   return !_ || _.startsWith(`https://`) || _.startsWith(`http://`)
     ? _
@@ -23966,67 +24190,21 @@ function _(_, _) {
         : void 0,
   };
 }
+function _(_) {
+  return (_ ?? []).slice(0, 48).map((_) => ({
+    appid: _,
+  }));
+}
 var _ = `Es-UANTRhdg-`,
   _ = `FsYxDNcAXaI-`,
   _ = `cSFkUHyVW24-`,
   _ = `yT92BfNEvpw-`,
-  _ = `_6jMisrq5Zfo-`,
-  _ = `XBv92QzB8Xc-`,
-  _ = `NjUCqxvhkHk-`,
   _ = `gxh8RxFKhr8-`,
+  _ = `AZSEWyNPfhc-`,
+  _ = `gZNFN-cKUHw-`,
   _ = `AmB85SkEC3Q-`,
   _ = `P5j4maR0i14-`;
-function _(_) {
-  let {
-      className: _,
-      url: _,
-      style: _,
-      children: _,
-      bSkipForcingStoreLink: _,
-      bOpenInline: _,
-      bFocusable: _ = !0,
-      fnCanTakeFocus: _,
-    } = _,
-    _ = _ ? _ : _ ? _(_, _.STORE_BASE_URL) : void 0,
-    _ = _(_);
-  return _
-    ? (0, _.jsx)(_, {
-        href: _,
-        target: _.IN_CLIENT || _ ? void 0 : `_blank`,
-        className: _,
-        style: _,
-        rel: `noopener noreferrer`,
-        focusable: _,
-        fnCanTakeFocus: _,
-        children: _,
-      })
-    : (0, _.jsx)(`span`, {
-        style: _,
-        className: _,
-        children: _,
-      });
-}
-function _(_, _) {
-  try {
-    let _ = new URL(_),
-      _ = new URL(_);
-    return _.href.replace(/\/$/, ``) + _.pathname + _.search + _.hash;
-  } catch {
-    return ``;
-  }
-}
-function _(_) {
-  let { section: _ } = _;
-  return !_.label_link || _.label_link_style
-    ? null
-    : (0, _.jsx)(`div`, {
-        className: _,
-        children: (0, _.jsx)(_, {
-          url: _.label_link,
-          children: _.Localize(`#btn_live_streams_all`),
-        }),
-      });
-}
+_.createContext(!1);
 function _(_) {
   let { event: _, language: _, strSaleURL: _ } = _,
     _ = _(_, _);
@@ -24056,6 +24234,8 @@ function _(_) {
       children: _,
     } = _,
     _ = _?.strSaleURL,
+    _ = _?.eCreatorRole,
+    _ = _ || !_.strExploreLabel ? _(_) : _.strExploreLabel,
     _ = _?.strCapsuleURL,
     _ = _?.strSummary,
     _ = _(),
@@ -24073,6 +24253,7 @@ function _(_) {
   return (0, _.jsxs)(_.Fragment, {
     children: [
       _ &&
+        !_ &&
         (0, _.jsx)(`div`, {
           className: `qbRGxo4aWcc-`,
           style: {
@@ -24081,57 +24262,76 @@ function _(_) {
         }),
       _ &&
         (0, _.jsx)(`div`, {
-          className: `HgvxVtFlDis-`,
+          className: _(`HgvxVtFlDis-`, _ && `Lp2CuPiW8Lo-`),
           style: {
             backgroundImage: `url(${_})`,
           },
         }),
+      _ &&
+        (0, _.jsx)(_, {
+          rgAppIDs: _?.rgCreatorAppIDs,
+          strAvatarURL: _,
+        }),
       (0, _.jsxs)(`div`, {
-        className: _,
+        className: _(_, _ && `-NAWu4CYrl8-`),
         children: [
-          (0, _.jsxs)(`div`, {
-            className: _,
-            children: [
-              (0, _.jsx)(`div`, {
-                className: _,
-                children: (0, _.jsx)(_, {
-                  url: _,
-                  className: _,
-                  bFocusable: !1,
-                  children: _?.strName,
-                }),
-              }),
-              _ &&
-                (0, _.jsx)(`div`, {
-                  className: `_6iUHDist0Jc-`,
-                  children: _(`#Sale_CrossPromoSale_NowThrough`, _),
-                }),
-            ],
-          }),
           _ &&
+            _ &&
+            (0, _.jsx)(_, {
+              url: _,
+              className: `X4LW9zxgdTo-`,
+              bFocusable: !1,
+              children: (0, _.jsx)(`img`, {
+                src: _,
+                alt: ``,
+              }),
+            }),
+          !_ &&
+            (0, _.jsxs)(`div`, {
+              className: `_6jMisrq5Zfo-`,
+              children: [
+                (0, _.jsx)(`div`, {
+                  className: `XBv92QzB8Xc-`,
+                  children: (0, _.jsx)(_, {
+                    url: _,
+                    className: `NjUCqxvhkHk-`,
+                    bFocusable: !1,
+                    children: _?.strName,
+                  }),
+                }),
+                _ &&
+                  (0, _.jsx)(`div`, {
+                    className: `_6iUHDist0Jc-`,
+                    children: _(`#Sale_CrossPromoSale_NowThrough`, _),
+                  }),
+              ],
+            }),
+          _ &&
+            !_ &&
             !_ &&
             !_ &&
             (0, _.jsx)(_, {
               url: _,
               className: _(`_6O6T0vupYYc-`, `DuNM8zA4oz0-`),
               fnCanTakeFocus: _,
-              children: _(`#Sale_CrossPromoSale_ExploreEvent`),
+              children: _,
             }),
           _ &&
             _ &&
             (0, _.jsx)(_, {
-              label: _(`#Sale_CrossPromoSale_ExploreEvent`),
+              label: _,
               shown: !!_,
+              button: `X`,
             }),
         ],
       }),
       (0, _.jsxs)(`div`, {
-        className: _,
+        className: _(_, _ && `ZONqp3dzTMI-`),
         children: [
           _ &&
             (0, _.jsxs)(_, {
               url: _,
-              className: `oztjxXYIBAk-`,
+              className: _(`oztjxXYIBAk-`, _ && `CDF-2WDX3lg-`),
               bFocusable: !!_,
               children: [
                 (0, _.jsx)(`img`, {
@@ -24153,17 +24353,82 @@ function _(_) {
       }),
       _ &&
         !_ &&
+        !_ &&
         (0, _.jsx)(`div`, {
           className: _(`T1fHkhyvNkM-`, _ && `SAqjQ-F71kA-`),
           children: (0, _.jsx)(_, {
             url: _,
             className: `_6O6T0vupYYc-`,
             fnCanTakeFocus: _,
-            children: _(`#Sale_CrossPromoSale_ExploreEvent`),
+            children: _,
           }),
         }),
     ],
   });
+}
+var _ = 60,
+  _ = 4;
+function _(_) {
+  let { rgAppIDs: _, strAvatarURL: _ } = _,
+    _ = _(
+      _.useMemo(() => _(_), [_]),
+      !1,
+    ),
+    _ = _.useMemo(() => {
+      let _ = (_ ?? []).slice(0, 24);
+      return _.length < _
+        ? []
+        : Array.from(
+            {
+              length: _,
+            },
+            (_, _) => _[_ % _.length],
+          );
+    }, [_]);
+  return _.length
+    ? (0, _.jsxs)(`div`, {
+        className: _,
+        "aria-hidden": !0,
+        children: [
+          _ &&
+            (0, _.jsx)(`div`, {
+              className: `ODb7GVMZzG8-`,
+              style: {
+                backgroundImage: `url(${_})`,
+              },
+            }),
+          (0, _.jsx)(`div`, {
+            className: _,
+            children: _.map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  _: _,
+                },
+                _,
+              ),
+            ),
+          }),
+        ],
+      })
+    : null;
+}
+function _(_) {
+  let _ = _(_._, `header`);
+  return _
+    ? (0, _.jsx)(`img`, {
+        src: _,
+        alt: ``,
+        loading: `lazy`,
+      })
+    : (0, _.jsx)(`div`, {});
+}
+function _(_) {
+  return _(
+    _
+      ? `#Sale_CrossPromoCreator_Visit_${_}`
+      : `#Sale_CrossPromoSale_ExploreEvent`,
+  );
 }
 function _(_, _, _ = !1) {
   let { data: _ } = _(_),
@@ -26068,7 +26333,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ClientComm.GetAllClientLogonInfo#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetAllClientLogonInfo = _;
@@ -26083,42 +26348,42 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ClientComm.GetClientAppList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.GetClientAppList = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.InstallClientApp#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.InstallClientApp = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.UninstallClientApp#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.UninstallClientApp = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.LaunchClientApp#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.LaunchClientApp = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.SetClientAppUpdateState#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.SetClientAppUpdateState = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.EnableOrDisableDownloads#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`community`, `store`],
     });
   }
   _.EnableOrDisableDownloads = _;

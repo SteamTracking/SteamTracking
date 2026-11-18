@@ -3,26 +3,26 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
-import { r, t as i } from "./chunk~bb87983663.js";
 import {
-  $h as a,
-  Kt as o,
-  Tu as s,
-  im as c,
-  qt as l,
-  zt as u,
+  Kt as r,
+  ig as i,
+  ku as a,
+  lm as o,
+  qt as s,
+  zt as c,
 } from "./main.js";
+import { r as l, t as u } from "./chunk~bb87983663.js";
 var d = e(t()),
   f = n();
 function p(e) {
   let {
       name: t,
       bIsMarket: n,
-      bInteractable: i = !0,
-      bIncludeMarketInfo: a = !0,
+      bInteractable: r = !0,
+      bIncludeMarketInfo: i = !0,
       bHideActionsForUnique: o = !1,
-      steamidOwner: c,
-      strSelectItemAction: l,
+      steamidOwner: s,
+      strSelectItemAction: c,
     } = e,
     [u, p] = d.useState();
   return (
@@ -31,9 +31,9 @@ function p(e) {
       [t],
     ),
     u
-      ? (0, f.jsx)(r, {
-          steamidOwner: c,
-          children: (0, f.jsx)(s, {
+      ? (0, f.jsx)(l, {
+          steamidOwner: s,
+          children: (0, f.jsx)(a, {
             children: n
               ? (0, f.jsx)(g, {
                   description: u.description,
@@ -43,9 +43,9 @@ function p(e) {
               : (0, f.jsx)(m, {
                   description: u.description,
                   asset: u.asset,
-                  bInteractable: i,
-                  bIncludeMarketInfo: a,
-                  strSelectItemAction: l,
+                  bInteractable: r,
+                  bIncludeMarketInfo: i,
+                  strSelectItemAction: c,
                 }),
           }),
         })
@@ -57,46 +57,46 @@ function m(e) {
     description: t,
     asset: n,
     bInteractable: r,
-    bIncludeMarketInfo: a,
-    strSelectItemAction: o,
+    bIncludeMarketInfo: i,
+    strSelectItemAction: a,
   } = e;
-  return (0, f.jsx)(i.Root, {
+  return (0, f.jsx)(u.Root, {
     description: t,
     asset: n,
     bInteractable: r,
-    children: (0, f.jsxs)(i.Container, {
+    children: (0, f.jsxs)(u.Container, {
       children: [
-        (0, f.jsxs)(i.Content, {
+        (0, f.jsxs)(u.Content, {
           children: [
-            (0, f.jsx)(i.Image, {}),
-            (0, f.jsx)(i.Separator, {}),
-            (0, f.jsx)(i.Name, {}),
-            (0, f.jsx)(i.FraudWarnings, {}),
-            (0, f.jsx)(i.GameInfo, {}),
-            (0, f.jsx)(i.Descriptions, {}),
-            (0, f.jsx)(i.AssetAccessories, {}),
-            (0, f.jsx)(i.Actions, {}),
-            (0, f.jsx)(i.OwnerDescriptions, {}),
-            (0, f.jsx)(i.OwnerActions, {}),
-            (0, f.jsx)(i.Tags, {}),
-            (0, f.jsx)(i.AssetProperties, {}),
+            (0, f.jsx)(u.Image, {}),
+            (0, f.jsx)(u.Separator, {}),
+            (0, f.jsx)(u.Name, {}),
+            (0, f.jsx)(u.FraudWarnings, {}),
+            (0, f.jsx)(u.GameInfo, {}),
+            (0, f.jsx)(u.Descriptions, {}),
+            (0, f.jsx)(u.AssetAccessories, {}),
+            (0, f.jsx)(u.Actions, {}),
+            (0, f.jsx)(u.OwnerDescriptions, {}),
+            (0, f.jsx)(u.OwnerActions, {}),
+            (0, f.jsx)(u.Tags, {}),
+            (0, f.jsx)(u.AssetProperties, {}),
           ],
         }),
-        a && !o && (0, f.jsx)(i.SellOnMarket, {}),
-        !!o && (0, f.jsx)(h, { strLabel: o }),
+        i && !a && (0, f.jsx)(u.SellOnMarket, {}),
+        !!a && (0, f.jsx)(h, { strLabel: a }),
       ],
     }),
   });
 }
 function h(e) {
   let { strLabel: t } = e;
-  return (0, f.jsx)(o, {
+  return (0, f.jsx)(r, {
     background: `greyneutral-3`,
     padding: `4`,
     gapY: `3`,
     direction: `column`,
-    children: (0, f.jsx)(l, {
-      children: (0, f.jsx)(u, {
+    children: (0, f.jsx)(s, {
+      children: (0, f.jsx)(c, {
         color: `green`,
         onClick: () => window.SelectItemDialogOnSelect(),
         size: `1`,
@@ -106,17 +106,17 @@ function h(e) {
   });
 }
 function g(e) {
-  let { description: t, asset: n, bHideActionsForUnique: r } = e,
-    a = !(r && !t.commodity);
-  return (0, f.jsx)(i.Root, {
+  let { description: t, asset: n, bHideActionsForUnique: i } = e,
+    a = !(i && !t.commodity);
+  return (0, f.jsx)(u.Root, {
     description: t,
     asset: n,
-    children: (0, f.jsxs)(o, {
+    children: (0, f.jsxs)(r, {
       direction: `row`,
       align: `start`,
       gap: `4`,
       children: [
-        (0, f.jsx)(o, {
+        (0, f.jsx)(r, {
           flexGrow: `1`,
           flexShrink: `1`,
           flexBasis: `0%`,
@@ -126,9 +126,9 @@ function g(e) {
           align: `center`,
           minHeight: `360px`,
           justify: `center`,
-          children: (0, f.jsx)(i.Image, {}),
+          children: (0, f.jsx)(u.Image, {}),
         }),
-        (0, f.jsxs)(o, {
+        (0, f.jsxs)(r, {
           flexGrow: `1`,
           flexShrink: `1`,
           flexBasis: `0%`,
@@ -136,13 +136,13 @@ function g(e) {
           gapY: `2`,
           minWidth: `0`,
           children: [
-            (0, f.jsx)(i.Name, {}),
-            (0, f.jsx)(i.GameInfo, {
-              hrefGame: `${c.COMMUNITY_BASE_URL}market/search?appid=${t.appid ?? 0}`,
+            (0, f.jsx)(u.Name, {}),
+            (0, f.jsx)(u.GameInfo, {
+              hrefGame: `${o.COMMUNITY_BASE_URL}market/search?appid=${t.appid ?? 0}`,
             }),
-            (0, f.jsx)(i.Descriptions, {}),
-            (0, f.jsx)(i.AssetAccessories, {}),
-            a && (0, f.jsx)(i.MarketActions, {}),
+            (0, f.jsx)(u.Descriptions, {}),
+            (0, f.jsx)(u.AssetAccessories, {}),
+            a && (0, f.jsx)(u.MarketActions, {}),
           ],
         }),
       ],
@@ -155,7 +155,7 @@ function v(e, t) {
   if (
     ((n.UpdateReactItemInfo ||= (e, t, n) => {
       let r = _.get(e);
-      r ? r(t, n) : a(!1, `Updater not registered: ${e}`);
+      r ? r(t, n) : i(!1, `Updater not registered: ${e}`);
     }),
     n.g_mapPendingItemInfo?.has(e))
   ) {

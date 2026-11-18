@@ -528,7 +528,7 @@ function ResetProfileAndGroupContent( steamID )
 {
 	new Ajax.Request( 'https://steamcommunity.com/moderation/ajaxgetresetcontentmodal', {
 		method: 'post',
-		parameters: { steamid : steamID },
+		parameters: { steamid : steamID, sessionid : g_sessionID },
 		onSuccess: function( jqxhr )
 		{
 			var results = jqxhr.responseText;

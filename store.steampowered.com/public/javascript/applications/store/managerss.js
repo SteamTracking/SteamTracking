@@ -910,6 +910,7 @@ var B = e(ee()),
     return e.SendMsg(`News.PreviewPartnerEvents#1`, S(Oe, t, n), ke, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.PreviewPartnerEvents = n;
@@ -923,6 +924,7 @@ var B = e(ee()),
   function i(e, t, n) {
     return e.SendMsg(`News.PublishPartnerEvent#1`, S(Me, t, n), Ne, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.PublishPartnerEvent = i;
@@ -930,6 +932,7 @@ var B = e(ee()),
     return e.SendMsg(`News.GetBatchPublishedPartnerEvent#1`, S(Pe, t, n), Fe, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   e.GetBatchPublishedPartnerEvent = a;

@@ -13,7 +13,7 @@ import {
   tt as c,
   u as l,
 } from "./chunk~01cfc309bf.js";
-import { Eo as u, Ia as d, Ti as f, oo as p } from "./chunk~6b8ddcaac8.js";
+import { Do as u, Ei as d, La as f, so as p } from "./chunk~6b8ddcaac8.js";
 import { r as m } from "./chunk~4c761eb6f4.js";
 import { n as h, t as ee } from "./chunk~a0dd05a569.js";
 import { t as te } from "./chunk~4c13037b22.js";
@@ -6436,7 +6436,7 @@ var oi = `_7FIE12jcFio-`,
           }),
         }),
         (0, X.jsxs)(`div`, {
-          className: d,
+          className: f,
           children: [
             (0, X.jsx)(`a`, {
               href: g,
@@ -6450,7 +6450,7 @@ var oi = `_7FIE12jcFio-`,
               }),
             }),
             s &&
-              (0, X.jsx)(`div`, { className: `A8oyzoRvWQ8-`, children: f(s) }),
+              (0, X.jsx)(`div`, { className: `A8oyzoRvWQ8-`, children: d(s) }),
             !!ne && (0, X.jsx)(ie, { id: i, bShowDemoButton: !0 }),
           ],
         }),
@@ -6684,7 +6684,7 @@ var na = {
     {
       appid: 730,
       url: `https://steam.tv/csgo`,
-      broadcasterAccountID: 927819071,
+      broadcasterAccountID: 155466124,
     },
   ],
 };

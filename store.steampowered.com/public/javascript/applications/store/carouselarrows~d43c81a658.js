@@ -5,22 +5,23 @@ import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t } from "./chunk~01cfc309bf.js";
 import { N as n } from "./chunk~f57d770d64.js";
 import { Da as r } from "./main.js";
-var i = e(t(), 1),
-  a = `100% 0px 100% 0px`,
-  o = `SaleSection_`;
-function s() {
+var i = e(t()),
+  a = i.createContext(!1),
+  o = `100% 0px 100% 0px`,
+  s = `SaleSection_`;
+function c() {
   return window.innerWidth ?? 1920;
 }
-function c() {
-  return s() >= 940;
-}
 function l() {
+  return c() >= 940;
+}
+function u() {
   r();
-  let [e, t] = (0, i.useState)(() => s());
+  let [e, t] = (0, i.useState)(() => c());
   return (
     (0, i.useEffect)(() => {
       let e = () => {
-        t(s());
+        t(c());
       };
       return (
         e(),
@@ -31,30 +32,30 @@ function l() {
     e
   );
 }
-function u(e = 940) {
-  return l() >= e;
+function d(e = 940) {
+  return u() >= e;
 }
-function d(e) {
-  let t = l(),
-    r = t >= 940,
-    i = n(e);
+function f(e) {
+  let t = u(),
+    r = t >= ((0, i.useContext)(a) ? 911 : 940),
+    o = n(e);
   return r
-    ? { nMaxCapsulesPerRow: i.nMaxItemsPerRow, bScreenIsWide: r }
+    ? { nMaxCapsulesPerRow: o.nMaxItemsPerRow, bScreenIsWide: r }
     : {
         nMaxCapsulesPerRow: Math.min(
-          Math.max(Math.floor(t / i.nItemMinimumWidth), 1),
-          i.nMaxItemsPerRow,
+          Math.max(Math.floor(t / o.nItemMinimumWidth), 1),
+          o.nMaxItemsPerRow,
         ),
         bScreenIsWide: r,
       };
 }
-function f(e) {
+function p(e) {
   let t = n(e);
-  return c()
+  return l()
     ? t.nMaxItemsPerRow
     : Math.min(
         Math.max(Math.floor(window.innerWidth / t.nItemMinimumWidth), 1),
         t.nMaxItemsPerRow,
       );
 }
-export { u as a, o as i, f as n, d as o, a as r, l as s, c as t };
+export { d as a, a as c, s as i, p as n, f as o, o as r, u as s, l as t };

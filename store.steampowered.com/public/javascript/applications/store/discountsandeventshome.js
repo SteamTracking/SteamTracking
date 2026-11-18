@@ -3,32 +3,33 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, N as n, ft as r, st as i } from "./chunk~01cfc309bf.js";
-import { Vt as a } from "./chunk~6b8ddcaac8.js";
+import { Ht as a } from "./chunk~6b8ddcaac8.js";
 import { t as o } from "./chunk~cd94ddba57.js";
-import { a as s } from "./chunk~d43c81a658.js";
-import { r as c } from "./chunk~21cdc464a1.js";
-import { n as l } from "./chunk~710e3cfd2f.js";
-import { n as u, t as d } from "./chunk~ffe4581a06.js";
-import { n as f } from "./chunk~4d16ce5d1a.js";
+import { n as s } from "./chunk~56437c278a.js";
+import { a as c } from "./chunk~d43c81a658.js";
+import { r as l } from "./chunk~21cdc464a1.js";
+import { n as u } from "./chunk~710e3cfd2f.js";
+import { n as d, t as f } from "./chunk~ffe4581a06.js";
+import { n as p } from "./chunk~4d16ce5d1a.js";
 import {
-  Ju as p,
-  Mv as m,
-  Pv as h,
-  St as g,
-  Tc as _,
-  Wb as v,
-  Zt as y,
+  Ju as m,
+  Mv as h,
+  Pv as g,
+  St as _,
+  Tc as v,
+  Wb as y,
+  Zt as ee,
   _l as b,
   b as x,
   c as S,
-  gd as ee,
+  gd as te,
   jc as C,
-  kv as te,
-  ol as ne,
+  kv as ne,
+  ol as re,
   qb as w,
-  u as re,
+  u as ie,
   wu as T,
-  xt as ie,
+  xt as ae,
 } from "./main.js";
 var E = e(t(), 1),
   D = e(n(), 1),
@@ -47,28 +48,28 @@ var E = e(t(), 1),
   B = `F6Wso3e7oqk-`,
   V = `h8E3fLYHMcw-`,
   H = `_5w6AlYMyKXw-`,
-  ae = `I5xcEcLqHQE-`,
-  oe = `OahpVA-2mkI-`,
-  se = `nL4oSzmS8Ds-`,
-  ce = `cV6I71ujCms-`,
-  le = `VqHCjCKSpdg-`,
+  oe = `I5xcEcLqHQE-`,
+  se = `OahpVA-2mkI-`,
+  ce = `nL4oSzmS8Ds-`,
+  le = `cV6I71ujCms-`,
+  ue = `VqHCjCKSpdg-`,
   U = `Wv-2-GahLGE-`,
   W = `-qUG2JW7G8E-`,
   G = `TSCZ-XXe31E-`,
   K = `NCC9qjeD1o8-`,
   q = r(),
   J = 3,
-  ue = 4,
-  de = 2,
+  de = 4,
   fe = 2,
-  pe = parseInt(O),
-  me = parseInt(k),
-  he = parseInt(A),
+  pe = 2,
+  me = parseInt(O),
+  he = parseInt(k),
+  ge = parseInt(A),
   Y = `DiscountsAndEventsReady`;
 function X(e) {
   return e.appid ? `app_${e.appid}` : `url_${e.url ?? ``}`;
 }
-function ge(e, t, n, r, i) {
+function _e(e, t, n, r, i) {
   let a = e.filter((e) => e.style === `full`),
     o = e.filter((e) => e.style !== `full` && e.banner === `daily_deal`),
     s = e.filter((e) => e.style !== `full` && e.banner !== `daily_deal`),
@@ -98,7 +99,7 @@ function ge(e, t, n, r, i) {
   }
   return c;
 }
-function _e(e) {
+function ve(e) {
   switch (e.banner) {
     case `weekend_deal`:
       return x.Localize(`#DiscountsAndEvents_Banner_WeekendDeal`);
@@ -120,13 +121,19 @@ function _e(e) {
       return x.Localize(`#DiscountsAndEvents_Banner_WellReviewed`);
     case `top_seller`:
       return x.Localize(`#DiscountsAndEvents_Banner_TopSeller`);
+    case `hot_deal`:
+      return x.Localize(`#DiscountsAndEvents_Banner_HotDeal`);
+    case `deep_discount`:
+      return x.Localize(`#DiscountsAndEvents_Banner_DeepDiscount`);
+    case `popular_in_region`:
+      return x.Localize(`#DiscountsAndEvents_Banner_PopularInRegion`);
     case `custom`:
       return e.title || void 0;
     default:
       return;
   }
 }
-function ve(e) {
+function ye(e) {
   return e.feature
     ? e.feature
     : e.style === `full`
@@ -135,54 +142,54 @@ function ve(e) {
         ? `daily-deal`
         : `spotlight-specials`;
 }
-function ye(e) {
+function be(e) {
   let {
       rgItems: t,
       bLoadError: n = !1,
       bHideTitle: r = !1,
       bReactHover: i = !1,
     } = e,
-    a = s(pe),
-    o = v(),
-    l = a && !o,
-    f = p(
+    a = c(me),
+    o = y(),
+    s = a && !o,
+    u = m(
       e.strSeeMoreURL === null
         ? void 0
         : (e.strSeeMoreURL ?? `${w.STORE_BASE_URL}specials`),
     ),
-    m = x.Localize(`#DiscountsAndEvents_SeeMore`),
-    { bShowSeeMoreHint: h, panelProps: g } = u(f),
-    { rgPages: _, rgColumns: y } = E.useMemo(() => {
-      let e = ge(t ?? [], J, de, fe, ue);
+    p = x.Localize(`#DiscountsAndEvents_SeeMore`),
+    { bShowSeeMoreHint: h, panelProps: g } = d(u, `X`),
+    { rgPages: _, rgColumns: v } = E.useMemo(() => {
+      let e = _e(t ?? [], J, fe, pe, de);
       return { rgPages: e, rgColumns: e.flat() };
     }, [t]);
   return !t && n
-    ? (0, q.jsx)(be, { bHideTitle: r })
+    ? (0, q.jsx)(xe, { bHideTitle: r })
     : t
-      ? y.length
+      ? v.length
         ? (0, q.jsxs)(C, {
             className: (0, D.default)(j, Y),
             navEntryPreferPosition: b.PREFERRED_CHILD,
             ...g,
-            onOptionsActionDescription: f ? m : void 0,
+            onSecondaryActionDescription: u ? p : void 0,
             children: [
               (0, q.jsxs)(Z, {
                 bHideTitle: r,
                 children: [
-                  !o && f && (0, q.jsx)(Q, { url: f, location: `desktop` }),
-                  o && (0, q.jsx)(d, { label: m, shown: h }),
+                  !o && u && (0, q.jsx)(Q, { url: u, location: `desktop` }),
+                  o && (0, q.jsx)(f, { label: p, shown: h, button: `X` }),
                 ],
               }),
-              (0, q.jsx)(c, {
+              (0, q.jsx)(l, {
                 visibleElements: 1,
                 disableEdgeWrap: !1,
                 hideArrows: !1,
                 hidePips: o,
                 screenIsWide: a,
                 bForceSimpleCarousel: o,
-                gap: he,
-                className: (0, D.default)(B, !l && `tvKN6VPvEYo-`),
-                children: l
+                gap: ge,
+                className: (0, D.default)(B, !s && `tvKN6VPvEYo-`),
+                children: s
                   ? _.map((e, t) =>
                       (0, q.jsx)(
                         C,
@@ -202,7 +209,7 @@ function ye(e) {
                         e[0].key,
                       ),
                     )
-                  : y.map((e, t) =>
+                  : v.map((e, t) =>
                       (0, q.jsx)(
                         $,
                         {
@@ -214,13 +221,13 @@ function ye(e) {
                       ),
                     ),
               }),
-              !o && f && (0, q.jsx)(Q, { url: f, location: `mobile` }),
+              !o && u && (0, q.jsx)(Q, { url: u, location: `mobile` }),
             ],
           })
         : null
       : (0, q.jsx)(`div`, { className: (0, D.default)(j, M, Y) });
 }
-function be(e) {
+function xe(e) {
   return (0, q.jsxs)(`div`, {
     className: (0, D.default)(j, Y),
     children: [
@@ -267,51 +274,52 @@ function $(e) {
     "flow-children": `column`,
     navEntryPreferPosition: b.MAINTAIN_Y,
     children: t.items.map((e) =>
-      (0, q.jsx)(xe, { item: e, depth: n, bReactHover: r }, X(e)),
+      (0, q.jsx)(Se, { item: e, depth: n, bReactHover: r }, X(e)),
     ),
   });
 }
-function xe(e) {
+function Se(e) {
   let { item: t, depth: n, bReactHover: r } = e,
     i = t.style === `full`,
-    s = E.useMemo(() => (t.appid ? { appid: t.appid } : void 0), [t.appid]),
-    c = !!t.url,
-    l = t.alt !== void 0,
-    u = !!t.image,
-    d = !!t.price || !!t.is_free || !!t.discount_text,
-    v = !c || !l || !d,
-    b = !u,
-    x = !d,
-    { data: S } = h(v ? s : void 0),
-    { data: w } = te(b ? s : void 0),
-    { data: T } = m(x ? s : void 0),
-    { data: O } = ee(),
+    c = E.useMemo(() => (t.appid ? { appid: t.appid } : void 0), [t.appid]),
+    l = !!t.url,
+    u = t.alt !== void 0,
+    d = !!t.image,
+    f = !!t.price || !!t.is_free || !!t.discount_text,
+    y = !l || !u || !f,
+    b = !d,
+    x = !f,
+    { data: S } = g(y ? c : void 0),
+    { data: w } = ne(b ? c : void 0),
+    { data: T } = h(x ? c : void 0),
+    { data: O } = te(),
     k = O?.preferences?.disable_microtrailers,
     [A, j] = E.useState(!1),
     [M, N] = E.useState(!1),
-    P = !!s && !i && !t.sale_page && !k,
-    F = P && (A || M),
-    I = ve(t),
-    L = p(t.url, I, n),
-    R = g(S, I, n),
-    z = t.image || (i ? _(w, `hero_capsule`, `header`) : _(w, `header`)),
-    B = _e(t),
-    V = t.alt ?? S?.name ?? ``;
-  if (s && ((!c && S === null) || (!u && w === null))) return null;
-  let H = (0, q.jsxs)(q.Fragment, {
+    P = s(c),
+    F = !!c && !i && !t.sale_page && !k,
+    I = F && (A || M),
+    L = ye(t),
+    R = m(t.url, L, n),
+    z = _(S, L, n),
+    B = t.image || (i ? v(w, `hero_capsule`, `header`) : v(w, `header`)),
+    V = ve(t),
+    H = t.alt ?? S?.name ?? ``;
+  if (c && ((!l && S === null) || (!d && w === null))) return null;
+  let G = (0, q.jsxs)(q.Fragment, {
       children: [
         (0, q.jsxs)(`div`, {
-          className: se,
+          className: ce,
           children: [
-            z &&
-              (0, q.jsx)(`img`, { className: `auc77O9GIek-`, src: z, alt: V }),
-            P && (0, q.jsx)(o, { id: s, active: F, bIsHoverMode: !0 }),
-            B && (0, q.jsx)(`div`, { className: `jxYpM-g5fRs-`, children: B }),
+            B &&
+              (0, q.jsx)(`img`, { className: `auc77O9GIek-`, src: B, alt: H }),
+            F && (0, q.jsx)(o, { id: c, active: I, bIsHoverMode: !0 }),
+            V && (0, q.jsx)(`div`, { className: `jxYpM-g5fRs-`, children: V }),
           ],
         }),
         (0, q.jsx)(`div`, {
-          className: ce,
-          children: (0, q.jsx)(Se, {
+          className: le,
+          children: (0, q.jsx)(Ce, {
             item: t,
             storeItem: S,
             purchaseOption: T,
@@ -319,49 +327,50 @@ function xe(e) {
         }),
       ],
     }),
-    G;
-  if (L) {
-    let e = (0, q.jsx)(ne, { href: L, className: W, children: H });
-    G = s
-      ? (0, q.jsx)(y, { appID: s.appid, feature: I, depth: n, children: e })
+    K;
+  if (R) {
+    let e = (0, q.jsx)(re, { href: R, className: W, children: G });
+    K = c
+      ? (0, q.jsx)(ee, { appID: c.appid, feature: L, depth: n, children: e })
       : e;
   } else
-    G = (0, q.jsx)(ie, {
+    K = (0, q.jsx)(ae, {
       storeItem: S,
-      feature: I,
+      feature: L,
       depth: n,
       className: W,
-      children: H,
+      children: G,
     });
-  let K = (0, q.jsx)(C, {
+  let J = (0, q.jsx)(C, {
     className: (0, D.default)(
-      ae,
-      i ? oe : le,
+      oe,
+      i ? se : ue,
       t.banner === `daily_deal` && `-xyaBPF0Lno-`,
-      F && `l6QUbDlbEUk-`,
+      I && `l6QUbDlbEUk-`,
     ),
     onGamepadFocus: () => N(!0),
     onGamepadBlur: () => N(!1),
-    children: s
+    ...P,
+    children: c
       ? r
         ? (0, q.jsx)(a, {
-            id: s,
+            id: c,
             className: U,
-            strChildLinkURL: L ?? R,
-            children: G,
+            strChildLinkURL: R ?? z,
+            children: K,
           })
-        : (0, q.jsx)(f, {
-            id: s,
+        : (0, q.jsx)(p, {
+            id: c,
             hoverClassName: U,
             fnHoverState: j,
             disableScreenshots: !0,
-            children: G,
+            children: K,
           })
-      : (0, q.jsx)(`div`, { className: U, children: G }),
+      : (0, q.jsx)(`div`, { className: U, children: K }),
   });
-  return s ? (0, q.jsx)(re, { itemid: s, children: K }) : K;
+  return c ? (0, q.jsx)(ie, { itemid: c, children: J }) : J;
 }
-function Se(e) {
+function Ce(e) {
   let { item: t, storeItem: n, purchaseOption: r } = e;
   if (t.discount_text)
     return (0, q.jsx)(`div`, { className: G, children: t.discount_text });
@@ -372,12 +381,12 @@ function Se(e) {
       ? (0, q.jsx)(`div`, { className: K, children: x.Localize(`#Price_Free`) })
       : null;
 }
-var Ce = 2e4,
-  we = 3e5;
-function Te(e, t, n, r, a = {}) {
-  return i(Ee(e, t, n, r, a));
+var we = 2e4,
+  Te = 3e5;
+function Ee(e, t, n, r, a = {}) {
+  return i(De(e, t, n, r, a));
 }
-function Ee(e, t, n, r, i = {}) {
+function De(e, t, n, r, i = {}) {
   let a = new URLSearchParams(r);
   n && a.set(`t`, n);
   let o = `${w.STORE_BASE_URL}default/discounts_and_events_data/`,
@@ -391,25 +400,25 @@ function Ee(e, t, n, r, i = {}) {
       queryFn: async () => {
         let e = await fetch(o, {
           credentials: `include`,
-          signal: AbortSignal.timeout(Ce),
+          signal: AbortSignal.timeout(we),
         });
         if (!e.ok) throw Error(`discounts_and_events_data failed: ${e.status}`);
         let t = await e.json();
         return { items: Array.isArray(t.items) ? t.items : [] };
       },
-      staleTime: we,
+      staleTime: Te,
       ...i,
     }
   );
 }
-function De(e) {
+function Oe(e) {
   let {
       initialData: t,
       initialDataUpdatedAt: n,
       previewTime: r,
       switches: i,
     } = e,
-    a = Te(t, n, r, i),
+    a = Ee(t, n, r, i),
     [o, s] = T(),
     c = !!i?.as_anon && i.as_anon !== `0`,
     l = !!i?.accountid && i.accountid !== `0`,
@@ -426,13 +435,13 @@ function De(e) {
             ),
       [a.data, o, u, s],
     );
-  return (0, q.jsx)(ye, { rgItems: d, bLoadError: a.isError });
+  return (0, q.jsx)(be, { rgItems: d, bLoadError: a.isError });
 }
-function Oe(e) {
-  return (0, q.jsx)(l, {
-    placeholderHeight: me,
+function ke(e) {
+  return (0, q.jsx)(u, {
+    placeholderHeight: he,
     rootMargin: `100% 0px 100% 0px`,
-    children: (0, q.jsx)(De, { ...e }),
+    children: (0, q.jsx)(Oe, { ...e }),
   });
 }
-export { Oe as default };
+export { ke as default };
