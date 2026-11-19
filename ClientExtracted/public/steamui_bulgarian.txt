@@ -1,4 +1,5 @@
-﻿"Language" "bulgarian"
+﻿
+"Language" "bulgarian"
 "Tokens"
 {
 "WelcomeToSteamTitle" "ДОБРЕ ДОШЛИ В STEAM"
@@ -942,7 +943,6 @@
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Производител на основния монитор: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Модел на основния монитор: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Поддържани MSAA режими: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Открит Eyefinity (%s1 дисплея)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Драйверът не е открит"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"DirectX името на драйвера не е открито"
@@ -4826,9 +4826,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 
 "Steam_VacBanOnAccount"		"наложена(и) VAC забрана(и) на акаунта"
 "Steam_NoVacBanOnAccount"	"Няма наложени VAC забрани на акаунта"
-
-"Steam_NeedToRestart"		"Изисква се рестартиране"
-"Steam_NeedToRestartDifferentClientLauncher" "Друга версия на Steam в този компютър се опитва да стартира.\n\nЗа да я пуснете, трябва първо да затворите тази версия на Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Позволяване на уеб браузърите от десктопа да влизат автоматично в Steam сайтовете\n(изисква рестартиране, за да се приложат промените)"
 

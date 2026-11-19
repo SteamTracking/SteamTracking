@@ -972,7 +972,7 @@ service Econ {
 	rpc FlushInventoryCache (.CEcon_FlushInventoryCache_Request) returns (.CEcon_FlushInventoryCache_Response);
 	// ePrivilege=0
 	rpc FlushInventoryServiceDBOs (.CEcon_FlushInventoryServiceDBOs_Request) returns (.CEcon_FlushInventoryServiceDBOs_Response);
-	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetAssetClassInfo (.CEcon_GetAssetClassInfo_Request) returns (.CEcon_GetAssetClassInfo_Response);
 	// ePrivilege=0
 	rpc GetAssetClassInfoInternal (.CEcon_GetAssetClassInfo_Request) returns (.CEcon_GetAssetClassInfo_Response);

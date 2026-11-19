@@ -474,7 +474,8 @@ $ORIGIN
 *pcubPlaintextData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGB
+++CCUNG=
+++CCUNGb$D
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 ++KEY_PAD_PLUS
@@ -527,6 +528,7 @@ $ORIGIN
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of
 ...<truncated>...
+../common/callbacklist.h
 ../common/crypto.cpp
 ../common/crypto_aescbc_openssl.cpp
 ../common/crypto_textencode.cpp
@@ -547,6 +549,7 @@ $ORIGIN
 ../public/tier0/tslist.h
 ../public/tier1/bitstring.h
 ../public/tier1/interface.h
+../public/tier1/keyvalues.h
 ../public/tier1/netadr.h
 ../public/tier1/smartptr.h
 ../public/tier1/utlbuffer.h
@@ -574,6 +577,7 @@ $ORIGIN
 ../vgui2/src/NotificationManager.cpp
 ../vgui2/src/Scheme.cpp
 ../vgui2/src/SerializedSurface.cpp
+../vgui2/src/SerializedSurface.h
 ../vgui2/src/clip2d.cpp
 ../vgui2/src/fonttexturecache.cpp
 ../vgui2/src/inputbase.cpp
@@ -626,9 +630,11 @@ $ORIGIN
 .placeholder.proto
 .res
 .steam_exec_test
+/.flatpak-info
 //KEY_PAD_DIVIDE
 /?KEY_SLASH
 /Steam3PosixRegistryManager
+/app
 /bin/lsof
 /dev
 /dev/
@@ -640,6 +646,7 @@ $ORIGIN
 /dev/srandom
 /dev/tty
 /dev/urandom
+/etc
 /etc/mtab
 /etc/os-release
 /name
@@ -669,6 +676,7 @@ $ORIGIN
 /tmp/cmd-stdout.XXXXXX
 /tmp/gamescope.png
 /tmp/steam_chrome_overlay_uid%d_spid%s
+/usr
 /usr/bin/crosdisk %s
 /usr/bin/lsof
 /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -832,6 +840,7 @@ $ORIGIN
 10CUtlVectorIy10CUtlMemoryIyEE
 10ConCommand
 10IAppSystem
+10IMemStream
 11CDirWatcher
 11CFileWriter
 11CInputLinux
@@ -903,6 +912,7 @@ $ORIGIN
 1536
 15CChatMemberInfo
 15FileImageStream
+16CLayerDrawStream
 16CStyleAppearance
 16IDynamicFunction
 16IIMEPostCallback
@@ -1364,6 +1374,7 @@ BITSTRING
 BITWRAP
 BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
+BIsValid()
 BLAKE2b512
 BLAKE2s256
 BMPSTRING
@@ -1932,6 +1943,7 @@ CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPathString
+CPathString::Concat: null path element
 CRC error
 CRC32_ProcessBuffer
 CRL Sign
@@ -2076,6 +2088,7 @@ Compression buffer size cannot be reduced below 6
 ConCommand '%s' not currently supported in config file\n
 ConVar
 ConVar::InternalSetValue: called with NULL
+Container path must be absolute
 Content-Disposition: attachment;
 Content-Transfer-Encoding: base64%s
 Content-Transfer-Encoding: base64%s%s
@@ -2726,6 +2739,7 @@ First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 FirstName
 Flags
+FmtStr_ReportTruncation
 FontManager()
 Fonts
 ForceQuit
@@ -3215,28 +3229,19 @@ KeyRangeID
 KeyTyped
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues binary nested deeper than the parse depth assert, probably bad usage
 KeyValues don't support #include anymore, file "%s"
+KeyValues text nested deeper than the parse depth assert, probably bad usage
 KeyValues::FindKey( StringView ... )
 KeyValues::FindKey( hks )
 KeyValues::FindKey( hks, bCreate )
-KeyValues::MergeFromBuffer
+KeyValues::LoadFromBuffer
+KeyValues::LoadSubKeysFromBuffer
 KeyValues::ReadAsBinary
-KeyValues::ReadAsBinary - Set name
-KeyValues::ReadAsBinary - TYPE_BINARY_STRING
-KeyValues::ReadAsBinary - TYPE_COLOR
-KeyValues::ReadAsBinary - TYPE_FLOAT
-KeyValues::ReadAsBinary - TYPE_INT
-KeyValues::ReadAsBinary - TYPE_INT64
-KeyValues::ReadAsBinary - TYPE_NONE
-KeyValues::ReadAsBinary - TYPE_PTR
-KeyValues::ReadAsBinary - TYPE_STRING
-KeyValues::ReadAsBinary - TYPE_UINT64
-KeyValues::ReadAsBinary - TYPE_WSTRING
-KeyValues::ReadAsBinary() stack depth > 100
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::SaveToBuffer: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
@@ -4265,16 +4270,17 @@ Reached impossible case in HasBit().
 Read Error
 Read failure in png_handle_zTXt
 Read palette index exceeding num_palette
+ReadSectionFromBuffer:  got EOF instead of keyname
+ReadSectionFromBuffer:  got NULL key
+ReadSectionFromBuffer:  got conditional between key and value
+ReadSectionFromBuffer:  got empty keyname
+ReadSectionFromBuffer:  got } in key
+ReadSectionFromBuffer:  sections nested too deep
 Really too many panels, crashing
 Reasons
 RecipientAddress
 RecordPadding
 Recursion limit at end of parse should be
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
 Refundable
 Registered ID
 Registered ID:
@@ -4338,6 +4344,7 @@ SCT_set_version
 SDL.display.HDR_enabled
 SDL_CreateWindow
 SDL_DestroyWindow
+SDL_FlushEvent
 SDL_GL_CreateContext
 SDL_GL_DestroyContext
 SDL_GL_GetAttribute
@@ -5264,7 +5271,7 @@ VGUI_Scheme010
 VGUI_Setup001
 VGUI_Surface040
 VGUI_System011
-VGUI_ivgui007
+VGUI_ivgui008
 VGuiModuleLoader004
 VIDEOS
 VIDEOTEXSTRING
@@ -5319,7 +5326,6 @@ V_stristr(char const*, char const*)
 V_strlen( pchTime ) == 25
 V_strlower_fast
 V_strncat
-V_strncat_length
 V_strnchr
 V_strncmp
 V_strncpy
@@ -5706,7 +5712,6 @@ YearOrMore
 Yoruba
 You must type in
 You need to name the scheme!
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 Z0000
 ZINT32
 ZINT64
@@ -5761,6 +5766,7 @@ Zulu
 \nkhT
 \nlibpng version 1.6.37\nCopyright (c) 2018-2019 Cosmin Truta\nCopyright (c) 1998-2002,2004,2006-2018 Glenn Randers-Pehrson\nCopyright (c) 1996-1997 Andreas Dilger\nCopyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.\n
 \t(%zu) comparing %s with %s\n
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \tpanel '%s' of type '%s' leaked\n
 \u%04x
 \u000
@@ -5779,6 +5785,7 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 _KDE_NET_WM_WINDOW_TYPE_OVERRIDE
 _MOTIF_WM_HINTS
@@ -8015,7 +8022,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen(
 givenName
 glBegin
 glBindTexture
@@ -9241,10 +9248,12 @@ m_mapStyleAppearances
 m_mapStyleLists
 m_memNodes
 m_nAllocationCount >= 0
+m_nCount > 0
 m_p == NULL
 m_pData
 m_pFontPackagePB
 m_pFontPackagePB->package_version() == 1
+m_pItemRunning
 m_pKeyValues
 m_pMemory
 m_pParent == this
@@ -9279,6 +9288,7 @@ m_strLanguage
 m_strLogLine
 m_strName
 m_strPackageFile
+m_strUTF8Path
 m_strWatchPath
 m_tree
 m_treeIKeySymbolLists

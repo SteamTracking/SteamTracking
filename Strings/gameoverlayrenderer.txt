@@ -49,8 +49,9 @@ $ORIGIN
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGq
+++CCUNGQ
 ++CCUNGstd::exception
+++CCUNGv
 ----------------------------\n
 /ValveIPCSHM_%d
 /bin/sh
@@ -108,6 +109,8 @@ CVulkanRenderer
 Clearing input stream because it is about to overflow\n
 Corrupt render stream (getting cmd)... %s\n
 Corrupt render stream: k_EBeginFrame\n
+Corrupt render stream: k_EBeginLayer content\n
+Corrupt render stream: k_EBeginLayer\n
 Corrupt render stream: k_ECreateCustomCursor (custom2)\n
 Corrupt render stream: k_ECreateCustomCursor (custom3)\n
 Corrupt render stream: k_ECreateCustomCursor\n
@@ -204,7 +207,6 @@ Frame time: %f ms\n
 GAMESCOPE_WAYLAND_DISPLAY
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
-GL extensions: %s\n
 GLIBCXX_TUNABLES
 GLIBC_2.12
 GLIBC_2.14
@@ -297,7 +299,6 @@ OpenGL ES
 OpenGL ES version: %d.%d (%s) (overlay is not supported)\n
 OpenGL Enabled LOD bias\n
 OpenGL does not support non-power-of-two textures!\n
-OpenGL version is >= 3.1\n
 OpenGL version: %d.%d (%s) %s (overlay will use %s)\n
 Opening display '%s', process %d returned %p\n
 Overlay pid %d dpy %p: An X Error occurred\n
@@ -719,6 +720,7 @@ glCheckFramebufferStatusEXT
 glClear
 glClientActiveTexture
 glClientActiveTextureARB
+glClientWaitSync
 glClipControl
 glColor4ub
 glColorMask
@@ -732,6 +734,7 @@ glDeleteFramebuffers
 glDeleteFramebuffersEXT
 glDeleteProgram
 glDeleteShader
+glDeleteSync
 glDeleteTextures
 glDeleteVertexArrays
 glDepthMask
@@ -745,6 +748,7 @@ glDrawElements
 glEnable
 glEnableVertexAttribArray
 glEnd
+glFenceSync
 glFramebufferTexture2D
 glFramebufferTexture2DEXT
 glGenBuffers
@@ -794,6 +798,7 @@ glTexEnvf
 glTexImage2D
 glTexParameterf
 glTexParameteri
+glTexSubImage2D
 glTranslatef
 glUniform1i
 glUniform4fv
@@ -909,6 +914,7 @@ pthread_once
 pthread_rwlock_destroy
 pthread_rwlock_init
 pthread_rwlock_rdlock
+pthread_rwlock_tryrdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
 pthread_rwlockattr_destroy

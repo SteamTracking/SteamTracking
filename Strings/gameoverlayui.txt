@@ -75,8 +75,8 @@
 !("No handler for vgui message function")
 !(cascadeMenu && checkable)
 != and not NULL
+!BLockedForRead()
 !BStringEquals( pathAlreadyLoaded.GetUTF8Path(), pathSDKModulePath.GetUTF8Path() )
-!IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
 !bSuccess || bufOutput.TellPut() == width*height*3
 !bSuccess || bufOutput.TellPut() == width*height*4
 !bUsePartnerWebAPI
@@ -86,6 +86,7 @@
 !m_pInt
 !pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pCmd->has_hwnd_browser()
+!pControl || ( nBuffers >= 2 && nBuffers <= k_nSharedImageMaxBuffers )
 !pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pszString || pszString[nChars] == '\0'
 !sm_bShutDown
@@ -161,10 +162,7 @@
 "MapEnd"
 "MapSize"
 "MutableRawRepeatedField"
-"ctrl"\t"1"\n
 "e" must be followed by exponent.
-"keycode"\t"%s"\n
-"shift"\t"1"\n
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
@@ -434,9 +432,10 @@ $ORIGIN
 *pcubDecodedData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8
+++CCUNGSo?
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
+++CCUNGxw?
 , bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars, string font
 , but was
 , int SubTabPosition
@@ -446,7 +445,6 @@ $ORIGIN
 , string URLText
 , string command, int default
 , string labelText, string associate, alignment textAlignment, int wrap, string font, string flow_right
-, string leftText, string rightText
 , string progress, string variable
 , string text, bool scrollbar
 , string title
@@ -502,6 +500,9 @@ $ORIGIN
 ../common/logfile.cpp
 ../common/logger.cpp
 ../common/messageobjects.cpp
+../common/overlay/sharedimage.cpp
+../common/overlay/shmemstream.cpp
+../common/overlay/videomemstream.cpp
 ../common/platformhelpers.cpp
 ../common/registry.cpp
 ../common/steam/client_api.cpp
@@ -511,19 +512,19 @@ $ORIGIN
 ../common/urlhelper.cpp
 ../common/urlhelper_webapihost.cpp
 ../external/picojson/picojson.h
-../overlay/common/shmemstream.cpp
-../overlay/common/videomemstream.cpp
 ../overlay/gameoverlayui/BasePanel.cpp
 ../overlay/gameoverlayui/main.cpp
 ../overlay/gameoverlayui/main_serialized.cpp
 ../overlay/gameoverlayui/screenshotthread.cpp
-../public/html/htmlpaintbuffer.h
+../public/html/../../common/overlay/sharedimage.h
+../public/html/../../common/overlay/sharedimagememory.h
 ../public/html/htmlprotobuf.cpp
 ../public/rtime.cpp
 ../public/tier0/memoverride.cpp
 ../public/tier0/tslist.h
 ../public/tier1/bitstring.h
 ../public/tier1/interface.h
+../public/tier1/keyvalues.h
 ../public/tier1/netadr.h
 ../public/tier1/refcount.h
 ../public/tier1/smartptr.h
@@ -554,7 +555,6 @@ $ORIGIN
 ../tier1/utlqueue.cpp
 ../tier1/utlstring.cpp
 ../tier1/utlsymbol.cpp
-../vgui2/controls/AnimationController.cpp
 ../vgui2/controls/BuildFactoryHelper.cpp
 ../vgui2/controls/BuildGroup.cpp
 ../vgui2/controls/EditablePanel.cpp
@@ -576,7 +576,7 @@ $ORIGIN
 ../vgui2/controls/TreeView.cpp
 ../vgui2/controls/TreeViewListControl.cpp
 ../vgui2/controls/controls.cpp
-../vgui2/controls/wrappanel.cpp
+../vgui2/src/SerializedSurface.h
 ..Too many IDATs found
 ./google/protobuf/arena_impl.h
 ./google/protobuf/arenastring.h
@@ -615,8 +615,10 @@ $ORIGIN
 .png
 .steam_exec_test
 .webm
+/.flatpak-info
 /Steam3PosixRegistryManager
 /ValveIPCSHM_%d
+/app
 /bin/lsof
 /dev
 /dev/
@@ -624,6 +626,7 @@ $ORIGIN
 /dev/null
 /dev/random
 /dev/urandom
+/etc
 /etc/mtab
 /name
 /proc/%u/status
@@ -653,6 +656,7 @@ $ORIGIN
 /tmp/gameoverlay_ui.txt
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
+/usr
 /usr/bin/crosdisk %s
 /usr/bin/lsof
 /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -681,11 +685,12 @@ $ORIGIN
 0000000000000000000000000000000000000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:21:10
 01/01/00
 0123456789
 0123456789ABCDEF
+0123456789ABCDEF`W
 0123456789abcdef
-01:59:57
 0x%llx
 1 Mbps
 1.2.11
@@ -702,7 +707,6 @@ $ORIGIN
 10CUtlMemoryI10CUtlStringE
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryI20ModuleAddressRange_tE
-10CUtlMemoryI22PanelAnimationMapEntryE
 10CUtlMemoryI9CSmartPtrI15CJSCallbackFuncEE
 10CUtlMemoryIN10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES2_E6Node_tEE
@@ -710,14 +714,10 @@ $ORIGIN
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN4vgui13StyleHandle_tEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcPN4vgui32IPanelAnimationPropertyConverterEi22CDefCaselessStringLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcbi22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiPN4vgui5PanelEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_tS_IS2_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
@@ -747,14 +747,9 @@ $ORIGIN
 10CUtlMemoryIN14CUtlLinkedListIPN4vgui8TreeNodeEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIiiE10ListElem_tEE
 10CUtlMemoryIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tEE
-10CUtlMemoryIN4vgui10BoundKey_tEE
 10CUtlMemoryIN4vgui11layoutcmd_tEE
 10CUtlMemoryIN4vgui13PropertySheet6Page_tEE
-10CUtlMemoryIN4vgui15KeyBindingMap_tEE
 10CUtlMemoryIN4vgui16MessageMapItem_tEE
-10CUtlMemoryIN4vgui19AnimationController13AnimCommand_tEE
-10CUtlMemoryIN4vgui19AnimationController14AnimSequence_tEE
-10CUtlMemoryIN4vgui19AnimationController15PostedMessage_tEE
 10CUtlMemoryIN4vgui19AnimationController17ActiveAnimation_tEE
 10CUtlMemoryIN4vgui4HTML18CustomURLHandler_tEE
 10CUtlMemoryIN4vgui4HTML19CustomCursorCache_tEE
@@ -790,14 +785,10 @@ $ORIGIN
 10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlRBTreeIN7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN4vgui13StyleHandle_tEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlRBTreeIN7CUtlMapIPKcPN4vgui32IPanelAnimationPropertyConverterEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcbi22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlRBTreeIN7CUtlMapIiPN4vgui5PanelEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
 10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS1_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E
 10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
@@ -807,7 +798,6 @@ $ORIGIN
 10CUtlString
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
-10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
 10CUtlVectorIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E12HashBucket_tE10CUtlMemoryIS9_EE
@@ -816,14 +806,9 @@ $ORIGIN
 10CUtlVectorIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tE10CUtlMemoryIS4_EE
-10CUtlVectorIN4vgui10BoundKey_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui11layoutcmd_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui13PropertySheet6Page_tE10CUtlMemoryIS2_EE
-10CUtlVectorIN4vgui15KeyBindingMap_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui16MessageMapItem_tE10CUtlMemoryIS1_EE
-10CUtlVectorIN4vgui19AnimationController13AnimCommand_tE10CUtlMemoryIS2_EE
-10CUtlVectorIN4vgui19AnimationController14AnimSequence_tE10CUtlMemoryIS2_EE
-10CUtlVectorIN4vgui19AnimationController15PostedMessage_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui19AnimationController17ActiveAnimation_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui4HTML18CustomURLHandler_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
@@ -894,13 +879,11 @@ $ORIGIN
 12CDynamicFuncIPFP11SDL_SurfaceS1_15SDL_PixelFormatEE
 12CDynamicFuncIPFP12SDL_IOStreamPKvmEE
 12CDynamicFuncIPFvP11SDL_SurfaceEE
-12CIntProperty
 12CLicenseInfo
 12CLogInstance
 12CMsgSetFocus
 12CMsgStopFind
 12CMsgStopLoad
-13CBoolProperty
 13CCallbackBase
 13CCallbackImplILi12EE
 13CCallbackImplILi16EE
@@ -929,10 +912,7 @@ $ORIGIN
 13CMsgWasHidden
 14CCBAccountInfo
 14CClanEventInfo
-14CColorProperty
-14CFloatProperty
 14CGuestPassInfo
-14CHFontProperty
 14CMachineIDInfo
 14CMessageObject
 14CMsgHideWindow
@@ -973,7 +953,6 @@ $ORIGIN
 15CMsgHideToolTip
 15CMsgShowToolTip
 15CSavedMemStream
-15CStringProperty
 15CUtlHandleTableIN4vgui10BuildGroupELi20EE
 15IGPUStatsReader
 15IOverlayOSPumps
@@ -1045,7 +1024,9 @@ $ORIGIN
 16CMsgPopupCreated
 16CMsgSetHTMLTitle
 16CMsgSetZoomLevel
+16CMsgSplashWindow
 16CMsgStartRequest
+16CMsgStartTracing
 16CMsgTouchGesture
 16CSharedMemStream
 16HTMLComboBoxHost
@@ -1085,7 +1066,6 @@ $ORIGIN
 18CMsgLinkAtPosition
 18CMsgMinimizeWindow
 18CMsgSavePageToJPEG
-18CTextureIdProperty
 18CUtlCharConversion
 19CActivationCodeInfo
 19CClientMicroTxnInfo
@@ -1155,6 +1135,7 @@ $ORIGIN
 23CMsgCanGoBackAndForward
 23CMsgSetForegroundWindow
 23CMsgSetHorizontalScroll
+23CMsgSetSimulatedLatency
 23CMsgSetWindowVisibility
 23CMsgSteamAuthCookiesSet
 23CVGUIApplicationOverlay
@@ -1166,7 +1147,6 @@ $ORIGIN
 24CMsgNotifyUserActivation
 24CMsgSetProtocolBlockList
 24CMsgStartRequestResponse
-24CProportionalIntProperty
 256 Kbps
 256K
 25CIngameFPSPresentationFPS
@@ -1176,7 +1156,6 @@ $ORIGIN
 25CMsgMaximizeRestoreWindow
 25CMsgSetSharedPaintBuffers
 25CMsgVerticalScrollBarSize
-25CPanelAnimationDictionary
 26CActivationCodePackageInfo
 26CMsgFileLoadDialogResponse
 26CMsgLinkAtPositionResponse
@@ -1185,11 +1164,9 @@ $ORIGIN
 26CMsgShowBrowserContextMenu
 26CMsgToggleFindInPageDialog
 26CPanelMessageMapDictionary
-26CProportionalFloatProperty
 27CLinuxSystemHWMonitorThread
 27CMsgDraggableRegionsChanged
 27CMsgHorizontalScrollBarSize
-27CMsgNeedsSharedTexturePaint
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetVRKeyboardVisibility
@@ -1222,6 +1199,7 @@ $ORIGIN
 41CMsgShowBrowserContextMenu_ContextCommand
 42CMsgDraggableRegionsChanged_DraggableRects
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
+47CMsgSetLocalFileRequestMapping_ClientAssetRoute
 5000
 512 Kbps
 512K
@@ -1235,14 +1213,10 @@ $ORIGIN
 7CUtlMapI10CUtlStringli8CDefLessE
 7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE
 7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE
-7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE
 7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE
-7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE
 7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE
 7CUtlMapIPKcN4vgui13StyleHandle_tEi22CDefCaselessStringLessE
-7CUtlMapIPKcPN4vgui32IPanelAnimationPropertyConverterEi22CDefCaselessStringLessE
 7CUtlMapIPKcbi22CDefCaselessStringLessE
-7CUtlMapIiPN4vgui5PanelEi8CDefLessE
 7CUtlMapIjbs8CDefLessE
 7CUtlSetI10CUtlStringi8CDefLessE
 7CUtlSetIyi8CDefLessE
@@ -1329,7 +1303,6 @@ AUDIO
 AVGRATE
 AVS Failure
 Abuse reporter's UGC Image
-Accel
 AcceptPanel
 Accepted
 AcceptedForGameRankedByAcceptanceDate
@@ -1399,7 +1372,6 @@ Already Logged In Elsewhere
 Already Owned
 Already Purchased
 Already Redeemed
-Already have converter for type %s, ignoring...\n
 Already saw decimal point or exponent; can't have another one.
 Always Blocked
 American Express
@@ -1477,6 +1449,8 @@ BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
 BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
+BIsValid()
+BLockedForRead()
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BResizeImageRGBA
 BResolveHostString - unexpected DNS lookup flag '%d'\n
@@ -1937,8 +1911,8 @@ CPUTempUnits
 CPUUtilization
 CPUUtilizationMax
 CPUUtilizationSep
-CPanelKeyBindingMapDictionary
 CPathString
+CPathString::Concat: null path element
 CPerfLabel
 CRC error
 CRC32_ProcessBuffer
@@ -1988,7 +1962,6 @@ Caller should provide us with *buffer_ when buffer is non-empty
 Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
 Can't
 Can't BackUp() after failed Next().
-Can't add Keybindings Context for unnamed panels\n
 Can't discard critical data on CRC error
 Can't get here.
 Can't get here: failed to get default value as string
@@ -2151,7 +2124,6 @@ Collection
 CollectionEligible
 CollectionPublished
 Collections
-Color
 ColumnResized
 ColumnSelectButton
 ComboBox
@@ -2193,6 +2165,7 @@ Connection timeout
 Console
 Console User
 Contact Support
+Container path must be absolute
 Container: %container%
 Content Server
 Content Version
@@ -2227,13 +2200,8 @@ Corrupted or unrecoverable data error
 Could not create an instance of
 Could not find type "
 Could not read existing registry file.
-Couldn't find script file %s\n
 Couldn't format time value %llu
 Couldn't parse default value "
-Couldn't parse script file: expected 'event', found '%s'\n
-Couldn't parse script file: expected <event name>, found nothing\n
-Couldn't parse script sequence '%s': expected '{', found '%s'\n
-Couldn't parse script sequence '%s': expected <anim command>, found '%s'\n
 CountryCode
 Coupon has expired
 Create
@@ -2299,7 +2267,6 @@ Danish
 Dankort
 Dari
 Data Exploit
-Deaccel
 Debit Card (Nodwin)
 Debug
 December
@@ -2335,6 +2302,7 @@ Detected file change in %s\n
 Detected leaked fd
 Detected possibly crashed/killed game, exiting\n
 Devanagari
+Developer
 Device Corrupt
 Device Error
 Device Not Found
@@ -2801,7 +2769,7 @@ FirstName
 FiveHours
 Flags
 FlashWindow
-Flicker
+FmtStr_ReportTruncation
 FolderIcon
 FolderUpButton
 Forbidden
@@ -2952,10 +2920,7 @@ GetInt64FromString() did not get correct peCS parameter
 GetIntFromString() did not get correct peCS parameter
 GetInts()
 GetMessage
-GetName() && GetName()[ 0 ]
 GetOSType
-GetPanelAnimationDictionary()
-GetPanelKeyBindingMapDictionary()
 GetPanelMessageMapDictionary()
 GetPlatformFromOS
 GetRawRepeatedField
@@ -3000,7 +2965,6 @@ Gray color space not permitted on RGB PNG
 Greek
 Greenlight Items
 GreenlightItems
-Grid item #%d
 GripPanel
 GroupCreated
 Groups
@@ -3011,7 +2975,6 @@ Guides
 Gujarati
 Gurmukhi
 HEAD
-HFont
 HKCR
 HKCU
 HKEY_CLASSES_ROOT
@@ -3339,7 +3302,6 @@ IsTriplePressAllowed()
 IsValidIndex( elem )
 IsValidIndex( idx )
 IsValidIndex(elem)
-IsValidKeyBindingsContext()
 IsVisible()
 Italian
 Itau Online
@@ -3548,7 +3510,6 @@ Key Pad =
 Key Pad Enter
 Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
-KeyBinding for panel '%s' contained unknown binding '%s'\n
 KeyCodePressed
 KeyCodeReleased
 KeyCodeTyped
@@ -3559,28 +3520,19 @@ KeyRangeID
 KeyTyped
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues binary nested deeper than the parse depth assert, probably bad usage
 KeyValues don't support #include anymore, file "%s"
+KeyValues text nested deeper than the parse depth assert, probably bad usage
 KeyValues::FindKey( StringView ... )
 KeyValues::FindKey( hks )
 KeyValues::FindKey( hks, bCreate )
-KeyValues::MergeFromBuffer
+KeyValues::LoadFromBuffer
+KeyValues::LoadSubKeysFromBuffer
 KeyValues::ReadAsBinary
-KeyValues::ReadAsBinary - Set name
-KeyValues::ReadAsBinary - TYPE_BINARY_STRING
-KeyValues::ReadAsBinary - TYPE_COLOR
-KeyValues::ReadAsBinary - TYPE_FLOAT
-KeyValues::ReadAsBinary - TYPE_INT
-KeyValues::ReadAsBinary - TYPE_INT64
-KeyValues::ReadAsBinary - TYPE_NONE
-KeyValues::ReadAsBinary - TYPE_PTR
-KeyValues::ReadAsBinary - TYPE_STRING
-KeyValues::ReadAsBinary - TYPE_UINT64
-KeyValues::ReadAsBinary - TYPE_WSTRING
-KeyValues::ReadAsBinary() stack depth > 100
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::SaveToBuffer: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
@@ -4014,7 +3966,6 @@ N4vgui22ListPanelCollapserBaseE
 N4vgui22ListPanelSectionHeaderE
 N4vgui23CNotificationClickPanelE
 N4vgui25ListPanelSectionCollapserE
-N4vgui32IPanelAnimationPropertyConverterE
 N4vgui4HTML12CHTMLFindBarE
 N4vgui4HTMLE
 N4vgui4MenuE
@@ -4024,7 +3975,6 @@ N4vgui5LabelE
 N4vgui5PanelE
 N4vgui6ButtonE
 N4vgui6IImageE
-N4vgui6SliderE
 N4vgui7MenuBarE
 N4vgui7PageTabE
 N4vgui7TooltipE
@@ -4045,7 +3995,6 @@ N4vgui9RGBAImageE
 N4vgui9ScrollBarE
 N4vgui9TextEntryE
 N4vgui9TextImageE
-N4vgui9WrapPanelE
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
@@ -4236,7 +4185,6 @@ No IDATs written into file
 No Result
 No account or email was specified to send the gift
 No billing agreement exists for recurring option
-No binding for '%s', defautl key already bound to '%s'\n
 No connection
 No connection to content servers
 No control groups specified
@@ -4251,7 +4199,6 @@ No profile for iCCP chunk
 No site licenses found
 No space in chunk cache for sPLT
 No subscription
-No such Panel Animation class %s\n
 No verified phone number
 NoInternet
 NoLAN
@@ -4292,7 +4239,7 @@ Not supported.
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 NotificationClickPanel
-Nov 13 2026
+Nov 19 2026
 November
 Num Lock
 Num Lock Toggle
@@ -4444,11 +4391,7 @@ Panel::IsWithinTraverse
 Panel::LocalToScreen
 Panel::OnThink
 Panel::ParentLocalToScreen
-Panel::ReloadKeyBindings:  Can't find entry for panel '%s'\n
-Panel::SaveKeyBindings '%s' is read-only!!!\n
 Panel::ScreenToLocal
-PanelClicked
-PanelGrid
 PanelPtr
 Parent
 Parental Settings
@@ -4607,7 +4550,6 @@ Proxy
 Proxy Authentication Required
 Przelewy24
 Public
-Pulse
 Punjabi (Gurmukhi)
 Punjabi (Shahmukhi)
 Purchase
@@ -4676,6 +4618,12 @@ Read failure in png_handle_zTXt
 Read from EMS failed
 Read from XMS failed
 Read palette index exceeding num_palette
+ReadSectionFromBuffer:  got EOF instead of keyname
+ReadSectionFromBuffer:  got NULL key
+ReadSectionFromBuffer:  got conditional between key and value
+ReadSectionFromBuffer:  got empty keyname
+ReadSectionFromBuffer:  got } in key
+ReadSectionFromBuffer:  sections nested too deep
 Reboot required before updates can install
 Rebuild
 ReceivedNewGame
@@ -4691,11 +4639,6 @@ Recurring option is not valid for billing agreement
 Recurring option will stack time beyond our maximum limit
 Recurring payment option
 Recursion limit at end of parse should be
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
 Red Pagos
 RedCompra
 Refundable
@@ -4892,7 +4835,6 @@ SetEnumValue
 SetEvent failed for paint event\n
 SetFloat
 SetFocus
-SetFont
 SetHalfRateShading
 SetHostname
 SetInt32
@@ -4913,7 +4855,6 @@ SetSortColumn
 SetState
 SetString
 SetText
-SetTexture
 SetTimezone
 SetTitle
 SetUInt32
@@ -4958,9 +4899,7 @@ Size() == operand.Size()
 SkinV5
 Skipping js method registration, already exists: %s
 Sleep for overlay FPS limiting
-Slider
 SliderHoriz
-SliderMoved
 SlotsAvailable
 Slovak
 Slovenian
@@ -4984,7 +4923,6 @@ Spending limit exceeded
 SpewAndLogActivate
 SpewAndLogChangeIfStillDefault
 SpewOutputFunc
-Spline
 Split
 Spoofing
 Sports
@@ -5195,7 +5133,6 @@ SteamworksAccessInvites
 Still busy
 Stop using I64/I32 - use lld or d, respectively
 StopButton
-StopPanelAnimations
 Stopping
 Store
 Store / Billing country code mismatch
@@ -5560,7 +5497,7 @@ VGUI_Scheme010
 VGUI_Setup001
 VGUI_Surface040
 VGUI_System011
-VGUI_ivgui007
+VGUI_ivgui008
 VGy#
 VIDEOS
 VISTA
@@ -5631,7 +5568,6 @@ V_stristr(char const*, char const*)
 V_strlen( pchTime ) == 25
 V_strlower_fast
 V_strncat
-V_strncat_length
 V_strnchr
 V_strncmp
 V_strncpy
@@ -5724,7 +5660,6 @@ Warning: Tried to clear, but game started reading right as we would have done so
 Warning: thumbnail image size does not match data length %u
 Warning: unknown JFIF revision number %d.%02d
 WeChat
-WeakRandomFloat
 WeakRandomInt
 WeakRandomUint32
 Web API key registration ban
@@ -5770,11 +5705,6 @@ Workshop
 Workshop Items
 WorkshopItemPublished
 WorkshopShowcase
-WrapPanel
-WrapPanel::PerformLayout()
-WrapPanel::Repaint
-WrapPanelItem
-WrapPanelItemVisibility
 Write Error
 Write Failed
 Write failed on temporary file --- out of disk space?
@@ -5795,7 +5725,6 @@ Yapi Kredi
 YooMoney
 Yoruba
 You must refund this transaction to wallet
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 Z0000
 Z_OK on Z_FINISH with output space
 Ziraat Bank
@@ -5843,6 +5772,7 @@ Zulu
 \p{Xsp}
 \p{Xwd}
 \t(%zu) comparing %s with %s\n
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \u%04x
 \u000
 \u001
@@ -5959,10 +5889,8 @@ _imageDar.IsValidIndex( index )
 _input
 _internal.RegisterForStyleChanges
 _label
-_leftCaption
 _new
 _panelDar
-_rightCaption
 _setjmp
 _strlwr
 _textImage
@@ -5985,7 +5913,6 @@ akamai
 albanian
 albummetadata
 alicloud
-alignment
 alignof
 all styles
 allocator
@@ -6011,7 +5938,6 @@ android64
 android7
 android8
 android9
-animate
 announcement created
 announcement deleted
 announcement failed content check
@@ -6119,7 +6045,6 @@ bgcolor
 bin64
 bind
 bind_textdomain_codeset
-binding
 bindtextdomain
 bitNum >= 0 && bitNum < this->Size()
 blGrip
@@ -6152,7 +6077,6 @@ browser
 browserview
 btowc
 buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
-buf.IsText()
 bufRGB.TellPut() == nWidth*nHeight*3
 bufRGBA.TellPut() == nWidth*nHeight * 4
 buffer error
@@ -6431,7 +6355,6 @@ croatian
 crypto
 cs_CZ
 csgolauncher
-ctrl
 cubBytesToRead < INT32_MAX
 cubData
 cubData < FIO_MAX_IO_BYTES
@@ -6570,7 +6493,6 @@ es_419
 es_ES
 estonian
 eurotransit
-event
 event created
 event deleted
 event updated
@@ -6613,7 +6535,6 @@ feature_touchmenu
 feof
 ferror
 fflush
-fgcolor
 fgetc
 fgets
 fi_FI
@@ -6708,7 +6629,6 @@ futex robust_list not pthreads-compatible
 futimes
 fwrite
 gAMA
-g_AnimationPropertyConverters
 g_ScriptSymbols
 g_VProfManager
 g_VProfProfilesRunningCount
@@ -7005,8 +6925,9 @@ i < length_
 iCCP
 iCCP: invalid keyword
 iDEAL
-iNewReadIndex != 3
+iNew < k_nSharedImageMaxBuffers
 iPhoneOS
+iRead < m_nBuffers && iReady < m_nBuffers
 iSection < 32
 iSection >= 0
 iTXt
@@ -7044,14 +6965,12 @@ incorrect header check
 incorrect length check
 index
 index > 0
-index >= 0 && index < kb->m_Panels.Count()
 indonesian
 infinity
 info change after png_start_read_image or png_read_update_info
 info.m_pReplacementString == 0
 initializer for module
 input
-inputData
 inspectelement
 install
 insufficient memory
@@ -7064,7 +6983,6 @@ int32
 int64
 intent outside defined range
 interaction.ie
-interiorspacing
 internal error checking chromaticities
 internal error handling cHRM coefficients
 internal error handling cHRM->XYZ
@@ -7162,7 +7080,6 @@ iswspace
 it_IT
 italian
 item
-item%d
 itemID
 itemIndex
 itemid
@@ -7179,7 +7096,6 @@ json
 json_name = "
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 jupiter
-justify
 k10temp
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 k_EIPTypeV4 == addr.GetType()
@@ -7187,13 +7103,7 @@ k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 kannada
 kazakh
-kbPanel
-kbPanel->GetName()
-kbPanel->GetName()[ 0 ]
-keybindings
-keybindings\n
 keyboardinputenabled
-keycode
 keyword "@1": bad character '0x@2'
 keyword truncated
 keywordsstudios.com
@@ -7227,7 +7137,6 @@ left
 left the group
 leftGrip
 leftPanel
-leftText
 len > 0 || HasError()
 len >= input_len
 length does not match profile
@@ -7319,13 +7228,10 @@ lzma_dict_valve
 lzma_valve
 m_ActiveAnimations
 m_AllChildren
-m_AnimationMaps
-m_AnimationMaps[ iAnimationMap ].map->entries
 m_BaseIP.GetType() == k_EIPTypeV4
 m_ColumnsData
 m_ColumnsData[ iColumn ].m_strCustomStyle
 m_ColumnsData[m_CurrentColumns[column]].m_iFlags & COLUMN_CUSTOMPANEL
-m_Contents
 m_Count == 0
 m_CurrentColumns
 m_CustomURLHandlers
@@ -7351,26 +7257,19 @@ m_MenuItems
 m_MenuItems.IsValidIndex( itemID )
 m_MenuItems.IsValidIndex(itemID)
 m_MessageMaps
-m_MessageMaps[ iMessageMap ].map->boundkeys
-m_MessageMaps[ iMessageMap ].map->defaultkeys
 m_MessageMaps[ iMessageMap ].map->entries
 m_NodeList
 m_NodeList.IsValidIndex( endItem )
 m_NodeList.IsValidIndex(itemIndex)
 m_Pages
-m_PanelAnimationMapPool
-m_PanelKeyBindingMapPool
 m_PanelMessageMapPool
 m_PerLineEllipses
-m_PostedMessages
 m_ReplacedKVs
 m_ResourceCache
 m_SelectedItems
 m_SeparatorPanels
 m_SeparatorPanels.Count() == 0
 m_Separators
-m_Sequences
-m_Sequences[ iSequence ].cmdList
 m_SortedItems
 m_SpewThrottle
 m_StringPools
@@ -7385,7 +7284,6 @@ m_VisibleItems.IsValidIndex( iItem )
 m_VisibleSortedItems
 m_bAllowUnstableRemoval
 m_bCheckable
-m_bSorted
 m_bitsMigratedBuckets
 m_buffer
 m_bufferVarArgs
@@ -7414,8 +7312,7 @@ m_mapFileWatchData.Key( i )
 m_mapGroupsVisible
 m_memNodes
 m_nAllocationCount >= 0
-m_nLockedIdx == -1
-m_nLockedIdx >= 0
+m_nCount > 0
 m_nSuppressDialogVariablesMessages >= 1
 m_p == NULL
 m_pBuildGroup
@@ -7431,6 +7328,7 @@ m_pFontWidthCache
 m_pFriendButtons
 m_pImageList
 m_pImagePanel
+m_pItemRunning
 m_pKV
 m_pKeyValues
 m_pLogInstance
@@ -7489,6 +7387,7 @@ m_strFileName
 m_strFileNamePrevious
 m_strLogLine
 m_strResourceName
+m_strUTF8Path
 m_strWatchPath
 m_tree
 m_unInCounter == m_unOutCounter
@@ -7511,7 +7410,6 @@ m_vecRegisteredWriters.HasElement( pFile )
 m_vecSections
 m_vecSections.IsValidIndex(iSection)
 m_vecSections[i].m_sName
-m_vecSortedContents
 m_vecStyleChangedCallbacks
 m_vecVisibleItemsYPos
 macedonian
@@ -7705,8 +7603,6 @@ nonsegmentedvideo
 north
 north-east
 north-west
-northeast
-northwest
 norwegian
 not in
 nothing to repeat
@@ -7770,7 +7666,6 @@ out of place
 out-of-date sRGB profile with no signature
 output gamma out of expected range
 output specified is nullptr
-outputData
 pBlob
 pBuffer->TellPut() == 0
 pCAL
@@ -7803,7 +7698,6 @@ page
 paintbackground
 palette color-map: too few entries
 panel
-panel != NULL
 panel_list
 param
 parameters
@@ -7920,8 +7814,6 @@ promoted to moderator
 promoted to officer
 promoted to owner
 propertysheet
-proportional_float
-proportional_int
 proto
 proto2
 proto3
@@ -7963,7 +7855,6 @@ pwrd.com
 pwrd_telecom
 pwrd_unicom
 pwrite64
-qsort
 quantil
 quantity
 quechua
@@ -8065,7 +7956,6 @@ rgb[ga] color-map: too few entries
 rgb[gray] color-map: too few entries
 right
 rightGrip
-rightText
 rightarrow
 rmdir
 ro_RO
@@ -8077,7 +7967,6 @@ row_stride == (int)( nImageWidth * jpegInfo.output_components )
 row_stride_out >= row_stride
 rowheight
 ru_RU
-runevent
 rungame
 russian
 sBIT
@@ -8116,12 +8005,10 @@ scaling_cur_freq
 scandir
 scandir64
 sched_yield
-scheme
 schinese
 scots
 screenx
 screeny
-scriptname
 scrollbar
 sdk64
 second
@@ -8160,7 +8047,6 @@ shacknews.com
 shaderserver
 shahmukhi
 shellcmd
-shift
 shm_open
 shm_open failed (errno %d)
 shm_unlink
@@ -8168,9 +8054,7 @@ short
 shortcut
 shortname
 showDownArrow
-showbar
 showhotkey
-showticks
 shred --remove %s
 signal
 signed char
@@ -8179,7 +8063,6 @@ singleapp
 sinhala
 sint32
 sint64
-size
 size too big:
 size_t to int conversion
 sizeable
@@ -8211,8 +8094,6 @@ sotho
 south
 south-east
 south-west
-southeast
-southwest
 space
 spaceGranted
 spaceReleased
@@ -8298,8 +8179,6 @@ steamui.so
 steamworks_drm
 stop
 stop using I64/I32, use lld or d respectively
-stopanimation
-stopevent
 store
 strFileTypeName
 strInitialFile
@@ -8436,7 +8315,6 @@ this version of PCRE is compiled without UTF support
 this version of PCRE is not compiled with Unicode property support
 threads
 throw
-thumbwidth
 tigrinya
 time
 tinet
@@ -8594,13 +8472,11 @@ vgui2_s
 vgui::
 vgui::AppRootPanel
 vgui::BuildGroup
-vgui::CPanelAnimationDictionary
 vgui::CPanelMessageMapDictionary
 vgui::CheckButton
 vgui::DragDrop_t
 vgui::EditablePanel
 vgui::Frame
-vgui::HFont
 vgui::HTML
 vgui::Label
 vgui::ListPanel
@@ -8614,7 +8490,6 @@ vgui::PropertyPage
 vgui::PropertySheet
 vgui::RichText
 vgui::RunFrame()
-vgui::Slider
 vgui::TextEntry
 vgui::TextImage
 vgui::TreeNode
@@ -8678,7 +8553,6 @@ websockets
 week
 welsh
 west
-wheelpct
 which lsof >/dev/null 2>&1
 wide
 wide > 0
@@ -8694,6 +8568,7 @@ win2012R2
 win2016
 win2019
 win2022
+win2025
 win311
 win32
 win64

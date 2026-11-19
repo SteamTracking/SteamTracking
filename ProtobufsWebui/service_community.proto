@@ -478,21 +478,21 @@ service Community {
 	rpc ClearUserPartnerEventsAppPriorities (.CCommunity_ClearUserPartnerEventsAppPriorities_Request) returns (.CCommunity_ClearUserPartnerEventsAppPriorities_Response);
 	// ePrivilege=1
 	rpc DeleteCommentFromThread (.CCommunity_DeleteCommentFromThread_Request) returns (.CCommunity_DeleteCommentFromThread_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc FetchTranslationFromCrowdIn (.CCommunity_FetchTranslationFromCrowdIn_Request) returns (.CCommunity_FetchTranslationFromCrowdIn_Response);
-	// ePrivilege=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetAppRichPresenceLocalization (.CCommunity_GetAppRichPresenceLocalization_Request) returns (.CCommunity_GetAppRichPresenceLocalization_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetApps (.CCommunity_GetApps_Request) returns (.CCommunity_GetApps_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetAvatarHistory (.CCommunity_GetAvatarHistory_Request) returns (.CCommunity_GetAvatarHistory_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc GetBestEventsForUser (.CCommunity_GetBestEventsForUser_Request) returns (.CCommunity_GetBestEventsForUser_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetClanAnnouncementVoteForUser (.CCommunity_GetClanAnnouncementVoteForUser_Request) returns (.CCommunity_GetClanAnnouncementVoteForUser_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetClanCrowdInMetadata (.CCommunity_GetClanCrowdInMetadata_Request) returns (.CCommunity_GetClanCrowdInMetadata_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetClanEventCrowdInMetadata (.CCommunity_GetClanEventCrowdInMetadata_Request) returns (.CCommunity_GetClanEventCrowdInMetadata_Response);
 	// bConstMethod=true, ePrivilege=0
 	rpc GetClanLocGroupImages (.CCommunity_GetClanLocGroupImages_Request) returns (.CCommunity_GetClanLocGroupImages_Response);
@@ -500,7 +500,7 @@ service Community {
 	rpc GetClanMetadata (.CCommunity_GetClanMetadata_Request) returns (.CCommunity_GetClanMetadata_Response);
 	// bConstMethod=true, ePrivilege=5
 	rpc GetComment (.CCommunity_GetComment_Request) returns (.CCommunity_GetComment_Response);
-	// ePrivilege=2, eWebAPIKeyRequirement=1
+	// ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetCommentThread (.CCommunity_GetCommentThread_Request) returns (.CCommunity_GetCommentThread_Response);
 	// ePrivilege=2
 	rpc GetCommentThreadRatings (.CCommunity_GetCommentThreadRatings_Request) returns (.CCommunity_GetCommentThreadRatings_Response);
@@ -512,7 +512,7 @@ service Community {
 	rpc GetUserPartnerEventViewStatus (.CCommunity_GetUserPartnerEventViewStatus_Request) returns (.CCommunity_GetUserPartnerEventViewStatus_Response);
 	// ePrivilege=3, rgBrowserAPISites=ArrayExpression
 	rpc HideAndReportComment (.CCommunity_HideAndReportComment_Request) returns (.CCommunity_HideAndReportComment_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc MarkPartnerEventsForUser (.CCommunity_MarkPartnerEventsForUser_Request) returns (.CCommunity_MarkPartnerEventsForUser_Response);
 	// ePrivilege=1
 	rpc PartnerEventsShowLessForApp (.CCommunity_PartnerEventsShowLessForApp_Request) returns (.CCommunity_PartnerEventsShowLessForApp_Response);
@@ -520,11 +520,11 @@ service Community {
 	rpc PartnerEventsShowMoreForApp (.CCommunity_PartnerEventsShowMoreForApp_Request) returns (.CCommunity_PartnerEventsShowMoreForApp_Response);
 	// ePrivilege=3
 	rpc PostCommentToThread (.CCommunity_PostCommentToThread_Request) returns (.CCommunity_PostCommentToThread_Response);
-	// ePrivilege=3
+	// ePrivilege=3, rgBrowserAPISites=ArrayExpression
 	rpc RateClanAnnouncement (.CCommunity_RateClanAnnouncement_Request) returns (.CCommunity_RateClanAnnouncement_Response);
 	// ePrivilege=3
 	rpc RateCommentThread (.CCommunity_RateCommentThread_Request) returns (.CCommunity_RateCommentThread_Response);
-	// ePrivilege=5
+	// ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc SanctionComment (.CCommunity_SanctionComment_Request) returns (.CCommunity_SanctionComment_Response);
 	// ePrivilege=1
 	rpc SetRecommendationBotReviewStatus (.CCommunity_SetRecommendationBotReviewStatus_Request) returns (.CCommunity_SetRecommendationBotReviewStatus_Response);

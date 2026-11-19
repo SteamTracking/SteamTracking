@@ -330,6 +330,7 @@ message CSteamInputService_RawControllerDetailItem {
 	optional int32 triton_gyro_hw_cal = 48;
 	optional bool use_gyro_sw_biases = 49;
 	optional int32 rumble_intensity = 50;
+	optional int32 led_charged_level = 51;
 }
 
 message CSteamInputService_ControllerListChanged_Notification {

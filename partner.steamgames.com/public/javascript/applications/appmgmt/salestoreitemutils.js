@@ -32,11 +32,11 @@ import { _ as x, i as S, p as C, s as w, w as re } from "./chunk~0a99e05c44.js";
 import {
   Bt as T,
   Cn as ie,
-  En as E,
+  Dn as E,
   Fn as ae,
   Ht as oe,
+  In as se,
   Mt as D,
-  Pn as se,
   St as ce,
   Ut as O,
   Vt as le,
@@ -947,7 +947,7 @@ var Mt = P.createContext(void 0),
   Nt = P.createContext(void 0);
 function Pt(e) {
   let { appids: t, hide_status_banners: n, show_early_access: r } = e,
-    { data: i } = ae(),
+    { data: i } = se(),
     { data: o } = ve(),
     s = t.length > 0 && t.every((e) => i && i.has(e)),
     l = t.length > 0 && t.every((e) => o && o.has(e)),
@@ -1051,7 +1051,7 @@ function zt(e) {
     { data: n } = x(t ? e : void 0),
     r = Rt(n),
     i = !!he(r),
-    { bIsOwned: a } = se(M(r)),
+    { bIsOwned: a } = ae(M(r)),
     o = be(),
     { mutate: s } = pe(r, !i, o),
     c = !!a && n?.type != 10;

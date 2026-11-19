@@ -152,7 +152,6 @@ function _(_) {
               {
                 bInitialFocus: _ === 10,
                 nTimestamp: _,
-                nNextTimestamp: _ < _.length - 1 ? _[_ + 1] : _ + 86400,
                 arrAppInfos: _,
                 nRankThreshold: _?.nResultsToShow ?? 100,
               },
@@ -183,9 +182,17 @@ function _(_) {
   });
 }
 function _(_) {
+  let _ = new Date(_ * 1e3);
+  _.getDay() == 1 && _.setDate(_.getDate() - 2);
+  let _ = new Date(_ * 1e3);
+  return (
+    _.setDate(_.getDate() + 1),
+    [Math.floor(_.getTime() / 1e3), Math.floor(_.getTime() / 1e3)]
+  );
+}
+function _(_) {
   let {
       nTimestamp: _,
-      nNextTimestamp: _,
       bInitialFocus: _,
       arrAppInfos: _,
       nRankThreshold: _,
@@ -209,12 +216,14 @@ function _(_) {
     _ = _ > _,
     _ = _.toLocaleDateString(_(), _),
     _ = _.toLocaleString(_(), _),
-    _ = _.filter((_) => _.nReleaseDate > _ && _.nReleaseDate < _).sort((_, _) =>
-      _.bIsWishlisted && !_.bIsWishlisted
-        ? -1
-        : _.bIsWishlisted && !_.bIsWishlisted
-          ? 1
-          : _.nRank - _.nRank,
+    [_, _] = _(_),
+    _ = _.filter((_) => _.nReleaseDate >= _ && _.nReleaseDate < _).sort(
+      (_, _) =>
+        _.bIsWishlisted && !_.bIsWishlisted
+          ? -1
+          : _.bIsWishlisted && !_.bIsWishlisted
+            ? 1
+            : _.nRank - _.nRank,
     ),
     _ = _ ?? 100,
     _ = _.filter((_) => _.nRank <= _).length - 2,

@@ -1,4 +1,5 @@
-﻿"Language" "ukrainian"
+﻿
+"Language" "ukrainian"
 "Tokens"
 {
 "WelcomeToSteamTitle" "ВІТАЄМО У STEAM"
@@ -938,7 +939,6 @@
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Виробник головного екрана: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Модель головного екрана: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Підтримувані режими MSAA: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Виявлено Eyefinity (%s1 екрана)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Драйвер не виявлено"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"не вдалося отримати назву драйвера DirectX"
@@ -3347,7 +3347,7 @@
 "Steam_FullGameAlreadyInAccount" "Повна версія гри вже на цьому акаунті"
 "Steam_AlreadyInAccountInfo" "Ви вже володієте всіма цими іграми. Ви можете отримати доступ до них у бібліотеці ігор Steam."
 "SteamUI_OldClient_Title" "Steam — Застаріла версія"
-"SteamUI_OldClient" "Вашу клієнтську програму необхідно оновити для запуску цієї гри."
+"SteamUI_OldClient" "Для запуску цієї гри необхідно оновити клієнт."
 
 "SteamUI_WrongPlatform_Title" "Steam — Гра несумісна"
 "SteamUI_WrongPlatform" "%game% недоступна для вашої поточної платформи."
@@ -4815,9 +4815,6 @@
 
 "Steam_VacBanOnAccount"		"Блокування античіта Valve на акаунті"
 "Steam_NoVacBanOnAccount"	"Акаунт не має блокувань VAC"
-
-"Steam_NeedToRestart"		"Потрібне перезавантаження"
-"Steam_NeedToRestartDifferentClientLauncher" "Відбувається спроба запуску іншої версії Steam на цьому комп'ютері.\n\nЩоб запустити її, потрібно спершу вийти з цієї версії Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Дозволити браузерам автоматично входити на сайти Steam\n (для застосування змін необхідний перезапуск)"
 

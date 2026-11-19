@@ -1,4 +1,5 @@
-﻿"Language" "korean"
+﻿
+"Language" "korean"
 "Tokens"
 {
 "WelcomeToSteamTitle" "Steam에 오신 것을 환영합니다"
@@ -940,7 +941,6 @@
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"기본 모니터 공급업체: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"기본 모니터 모델: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"지원되는 MSAA 모드: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity 감지됨 (%s1 개의 화면)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"드라이버 검색 안 됨"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"DirectX 드라이버 이름 검색 안 됨"
@@ -1497,7 +1497,7 @@
 "Steam_NoSavePersonalInfoCheck" "이 컴퓨터에 계정 로그인 정보 저장 안 함"
 "Steam_NoSavePersonalInfoCheckDescription" "공용 컴퓨터를 사용하는 경우 이 옵션이 권장됩니다.\n\n이 옵션을 설정할 경우 '오프라인 모드'를 사용할 수 없습니다."
 
-"Steam_PurchaseZipCodeInfoInvalid"    "5자리 수의 유효한 우편 번호를 입력하세요."
+"Steam_PurchaseZipCodeInfoInvalid"    "5자리 수의 유효한 우편번호를 입력하세요."
 "Steam_PurchaseStateInfoInvalid"        "유효한 시/도를 입력하세요."
 
 "Steam_InternetSpeedLabel"			"인터넷 연결"
@@ -4820,9 +4820,6 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_VacBanOnAccount"		"VAC 차단"
 "Steam_NoVacBanOnAccount"	"VAC 차단 없음"
-
-"Steam_NeedToRestart"		"다시 시작 필요"
-"Steam_NeedToRestartDifferentClientLauncher" "이 컴퓨터에서 다른 버전의 Steam을 시작하려고 합니다.\n\n실행하려면 먼저 현재 사용 중인 Steam 버전을 반드시 종료해야 합니다."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "데스크톱 웹 브라우저에서 Steam 사이트에 자동 로그인하도록 허용합니다.\n변경 내용을 적용하려면 다시 시작해야 합니다."
 

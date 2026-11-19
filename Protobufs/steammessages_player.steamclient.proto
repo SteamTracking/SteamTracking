@@ -127,6 +127,7 @@ message CPlayer_GetOwnedGames_Request {
 	optional string language = 7;
 	optional bool include_extended_appinfo = 8;
 	optional bool include_family_licenses = 9;
+	optional bool include_all_free_games = 10;
 }
 
 message CPlayer_GetOwnedGames_Response {
@@ -925,6 +926,58 @@ message CPlayer_RecordDisconnectedPlaytime_Request {
 message CPlayer_RecordDisconnectedPlaytime_Response {
 }
 
+message CPlayer_GetMiniprofileData_Request {
+	optional fixed64 steamid = 1;
+	optional uint32 appid = 2;
+	optional string language = 3;
+}
+
+message CPlayer_GetMiniprofileData_Response {
+	message FavoriteBadge {
+		optional uint32 badgeid = 1;
+		optional uint32 appid = 2;
+		optional uint32 border_color = 3;
+		optional uint32 level = 4;
+		optional uint32 xp = 5;
+		optional string name = 6;
+		optional string icon = 7;
+		optional string game_name = 8;
+		optional uint32 completion_time = 9;
+	}
+
+	message Playtime {
+		optional int32 playtime_2weeks = 1;
+		optional int32 playtime_forever = 2;
+	}
+
+	message RichPresenceKey {
+		optional string key = 1;
+		optional string value = 2;
+	}
+
+	message InGame {
+		optional bool is_non_steam = 1;
+		optional string name = 2;
+		optional uint32 appid = 3;
+		repeated .CPlayer_GetMiniprofileData_Response.RichPresenceKey rich_presence = 4;
+		optional int32 os_type = 5;
+		optional int32 gaming_device_type = 6;
+		optional string device_name = 7;
+	}
+
+	optional uint32 level = 1;
+	optional string persona_name = 2;
+	optional string avatar_hash = 3;
+	optional string nickname = 4;
+	optional .CPlayer_GetMiniprofileData_Response.FavoriteBadge favorite_badge = 5;
+	optional .CPlayer_GetMiniprofileData_Response.Playtime playtime = 6;
+	optional .CPlayer_GetMiniprofileData_Response.InGame in_game = 7;
+	optional .ProfileItem mini_profile_background = 8;
+	optional .ProfileItem avatar_frame = 9;
+	optional .ProfileItem animated_avatar = 10;
+	optional uint32 golden_profile_appid = 11;
+}
+
 message CPlayer_LastPlayedTimes_Notification {
 	repeated .CPlayer_GetLastPlayedTimes_Response.Game games = 1;
 }
@@ -1022,6 +1075,7 @@ service Player {
 	rpc GetPrivacySettings (.CPlayer_GetPrivacySettings_Request) returns (.CPlayer_GetPrivacySettings_Response);
 	rpc GetDurationControl (.CPlayer_GetDurationControl_Request) returns (.CPlayer_GetDurationControl_Response);
 	rpc RecordDisconnectedPlaytime (.CPlayer_RecordDisconnectedPlaytime_Request) returns (.CPlayer_RecordDisconnectedPlaytime_Response);
+	rpc GetMiniprofileData (.CPlayer_GetMiniprofileData_Request) returns (.CPlayer_GetMiniprofileData_Response);
 }
 
 service PlayerClient {

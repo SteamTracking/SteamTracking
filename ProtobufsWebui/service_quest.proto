@@ -117,17 +117,17 @@ message CVirtualItemRewardDefinition {
 }
 
 service Quest {
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc ActivateProfileModifierItem (.CQuest_ActivateProfileModifierItem_Request) returns (.CQuest_ActivateProfileModifierItem_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetCommunityInventory (.CQuest_GetCommunityInventory_Request) returns (.CQuest_GetCommunityInventory_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=4
 	rpc GetCommunityItemDefinitions (.CQuest_GetCommunityItemDefinitions_Request) returns (.CQuest_GetCommunityItemDefinitions_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetNumTradingCardsEarned (.CQuest_GetNumTradingCardsEarned_Request) returns (.CQuest_GetNumTradingCardsEarned_Response);
-	// bConstMethod=true, ePrivilege=4
+	// bConstMethod=true, ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc GetVirtualItemRewardDefinition (.CQuest_VirtualItemRewardDefinition_Request) returns (.CQuest_VirtualItemRewardDefinition_Response);
-	// ePrivilege=4
+	// ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc SetVirtualItemRewardDefinition (.CQuest_SetVirtualItemRewardDefinition_Request) returns (.CQuest_SetVirtualItemRewardDefinition_Response);
 }
 

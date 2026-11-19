@@ -130,12 +130,12 @@
 "Friends_FriendlyName"				"Nome"
 "Friends_RecentlyUsedNames"			"Nomes recentemente usados:"
 
-"Friends_PlaySoundWhenFriendJoins"			"Emitir um som quando um amigo entra no jogo"
+"Friends_PlaySoundWhenFriendJoins"			"Emitir um som quando um amigo começa a jogar"
 "Friends_PlaySoundWhenFriendComesOnline"		"Emitir um som quando um amigo fica online"
 "Friends_PlaySoundWhenReceiveAMessage"		"Emitir um som quando recebes uma mensagem"
 "Friends_NotifyMeWhenUserComesOnline"			"Avisar-me quando este utilizador ficar online"
 "Friends_PlaySoundWhenUserComesOnline"		"Emitir sempre um som quando este utilizador ficar online"
-"Friends_PlaySoundWhenUserJoinsGame"			"Emitir sempre um som quando este utilizador entrar num jogo"
+"Friends_PlaySoundWhenUserJoinsGame"			"Emitir sempre um som quando este utilizador começa a jogar"
 
 "Friends_RemoveUserExplanation"	"Se removeres este amigo da tua lista, ele não poderá saber quando estás online nem enviar-te mensagens."
 
@@ -373,7 +373,7 @@
 "Friends_ShowTimeInChatLog"	"Mostrar a hora nas mensagens do chat"
 "Friends_AlwaysNewChatCheck" "Abrir novas conversas em janelas em vez de separadores"
 "Friends_NotificationsAndSounds"		"Notificações e sons"
-"Friends_WhenFriendJoinsGame"			"Quando qualquer amigo inicia um jogo"
+"Friends_WhenFriendJoinsGame"			"Quando qualquer amigo começa a jogar"
 "Friends_WhenFriendComesOnline"		"Quando qualquer amigo fica online"
 "Friends_WhenReceiveMessage"			"Quando recebo uma mensagem"
 "Friends_WhenGroupEventsOrAnnouncementsHappen"	"Para anúncios e eventos de grupos"
@@ -434,7 +434,7 @@
 "Friends_AddRecentPlayerAsFriend"			"Ver utilizadores com quem jogaste recentemente"
 "Friends_NotificationOptions_Title"		"Opções de notificação - %FriendName%"
 
-"Friends_WhenThisFriendJoinsGame"				"Quando %FriendName% inicia um jogo"
+"Friends_WhenThisFriendJoinsGame"				"Quando %FriendName% começa a jogar"
 "Friends_WhenThisFriendComesOnline"			"Quando %FriendName% fica online"
 "Friends_WhenReceiveMessageFromThisFriend"	"Quando recebo uma mensagem de %FriendName%"
 "Friends_InviteInfo_HasAdded"					"adicionou-te à sua"

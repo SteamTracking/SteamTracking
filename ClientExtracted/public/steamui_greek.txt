@@ -1,4 +1,5 @@
-﻿"Language" "greek"
+﻿
+"Language" "greek"
 "Tokens"
 {
 "WelcomeToSteamTitle" "ΚΑΛΩΣ ΟΡΙΣΑΤΕ ΣΤΟ STEAM"
@@ -81,7 +82,7 @@
 "Steam_ProcessingSubscriptionInfo" "Επεξεργαζόμαστε τη συνδρομή σας.
 Αυτό διαρκεί συνήθως λιγότερο από ένα λεπτό."
 "Steam_SubscribeCompleteInfo" "Ευχαριστούμε! Η αγορά σας του %s1 ολοκληρώθηκε. \n\nΣτη συλλογή παιχνιδιών σας, μπορείτε τώρα να κάνετε διπλό κλικ στο παιχνίδι για να παίξετε (ή να κάνετε δεξί κλικ στον τίτλο του παιχνιδιού και να επιλέξετε «Εκκίνηση παιχνιδιού» από το μενού.)"
-"Steam_PreorderCompleteInfo" "Ευχαριστούμε! Η προαγορά του %s1 ολοκληρώθηκε. \n\nΘα έχετε τη δυνατότητα να παίξετε το παιχνίδι μόλις γίνει επίσημα διαθέσιμο!"
+"Steam_PreorderCompleteInfo" "Ευχαριστούμε! Η προπαραγγελία του %s1 ολοκληρώθηκε. \n\nΘα έχετε τη δυνατότητα να παίξετε το παιχνίδι μόλις κυκλοφορήσει επίσημα!"
 "Steam_SubscribeFailedInfo"	"Η αγορά σας δεν ολοκληρώθηκε. Τα στοιχεία της πιστωτικής \nκάρτας που μας δώσατε δεν έγιναν δεκτά.\n\nΈνα μήνυμα ηλεκτρονικής αλληλογραφίας έχει σταλθεί σε εσάς με περισσότερες \nλεπτομέριες. Εάν επιθυμείτε να δώσετε διαφορετικά \nστοιχεία πιστωτικής κάρτας, προσπαθήστε να επαναλάβετε την αγορά."
 
 "Steam_ErrorPasswordNotSet" "Το συνθηματικό σας δεν ορίστηκε.\nΕίτε απαντήσατε λάθος στη μυστική ερώτηση, είτε ο συγκεκριμένος λογαριασμός δεν υπάρχει."
@@ -395,7 +396,7 @@
 "Steam_PayWithPayPal"				"PayPal"
 "Steam_IAlreadyOwnThisProduct"		"Έχω ήδη αυτό το προϊόν"
 "Steam_Working_PurchasingProduct"		"Γίνεται αγορά..."
-"Steam_Working_PreorderingProduct"	"Γίνεται προαγορά…"
+"Steam_Working_PreorderingProduct"	"Γίνεται προπαραγγελία…"
 "Steam_Working_InitTxn"				"Αρχικοποίηση αγοράς..."
 "Steam_Working_GetFinalPrice"		"Γίνεται λήψη της τελικής τιμής..."
 "Steam_PurchaseFailedTitle"			"Steam - Σφάλμα"
@@ -494,7 +495,7 @@
 "Steam_DiskUsageMB"				"Χρήση δίσκου: %diskusagemb% MB"
 "Steam_ContentBuildID"				"Τρέχον BuildID: %buildid%"
 "Steam_Games_Purchase"				"Αγορά"
-"Steam_Games_PreOrder"				"Προαγορά"
+"Steam_Games_PreOrder"				"Προπαραγγελία"
 "Steam_Games_MoreInfo"				"Περισσότερες πληροφορίες"
 "Steam_Games_AddToMyGames"			"ΕΓΚΑΤΑΣΤΑΣΗ"
 "Steam_Games_PreDownload"			"Εκκίνηση προφόρτωσης"
@@ -610,7 +611,7 @@
 "Steam_PreloadComplete_Title"	"Η προφόρτωση του %game% έχει ολοκληρωθεί"
 "Steam_PreloadComplete"			"Η προφόρτωση έχει ολοκληρωθεί"
 "Steam_PreloadCompletePreOrder"	"Ένα κλειδωμένο αντίγραφο του %game% βρίσκεται τώρα στον υπολογιστή σας. Πραπαραγγείλετε το παιχνίδι τώρα και παίξτε το αμέσως μόλις κυκλοφορήσει επίσημα!"
-"Steam_PreloadPrePayNow"		"Ολοκλήρωση της προπαραγγελίας"
+"Steam_PreloadPrePayNow"		"Ολοκλήρωση της προπαραγγελίας μου τώρα…"
 "Steam_PreOrderNow"	"Προπαραγγελία τώρα"
 
 "Steam_PreloadCompletePurchase"	"Ένα κλειδωμένο αντίγραφο του %game% έχει ήδη εγκατασταθεί στον υπολογιστή σας. Αγοράστε το τώρα και ξεκινήστε να παίζετε αμέσως!"
@@ -934,7 +935,6 @@
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Κατασκευαστής κύριας οθόνης: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Μοντέλο κύριας οθόνης: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Υποστηριζόμενα MSAA Modes: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Εντοπίστηκε Eyefinity (%s1 οθόνες)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Οδηγός δεν εντοπίστηκε"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Όνομα οδηγού DirectX δεν εντοπίστηκε"
@@ -1241,7 +1241,7 @@
 "Steam_Subscription_Preorder_PreProcess_PayPal_Headline" "Η προπαραγγελία σας έχει διεκπεραιωθεί"
 "Steam_Subscription_Preorder_PreProcess_PayPal" "Η προπαραγγελία σας για το %subscription% έχει ολοκληρωθεί, και το παιχνίδι θα κυκλοφορήσει επίσημα σύντομα. Ο λογαριασμός %provider% σας έχει χρεωθεί.\n\nΘα σας ειδοποιήσουμε όταν το παιχνίδι είναι διαθέσιμο για παίξιμο. Ευχαριστούμε για την παραγγελία σας!"
 
-"Steam_Subscription_Preorder_Timeout_Headline" "Προπαραγγελία εκκρεμεί"
+"Steam_Subscription_Preorder_Timeout_Headline" "Προπαραγγελία σε αναμονή"
 "Steam_Subscription_Preorder_Timeout" "Η προπαρραγελία σας για το%subscription% δεν έχει ολοκληρωθεί, επειδή το Steam είναι αυτή τη στιγμή πολύ απασχολημένο για να επεξεργαστεί τη συναλλαγή.\n\nΘα σας ειδοποιήσουμε για τα αποτελέσματα της συναλλαγής σας μόλις μπορέσουμε να τα επεξεργαστούμε."
 
 "Steam_SubscriptionCancelled_Cancelled_Headline" "Συνδρομή ακυρώθηκε"
@@ -1280,7 +1280,7 @@
 "Steam_SubscriptionSuccess_HardwarePromo2" "Θα μπορείτε να αποκτήσετε πρόσβαση στα παιχνίδια που περιέχονται σε αυτή τη προσφορά από οποιονδήποτε υπολογιστή, εφόσον συνδέεστε στον λογαριασμό Steam «%accountname%»."
 
 "Steam_PreorderCancelled_Headline" "Προπαραγγελία ακυρώθηκε"
-"Steam_PreorderCancelled" "Όπως αιτήσατε, η προπαραγγελία σας μέσω Steam για το %subscription% ακυρώθηκε. Ο λογαριασμός σας δε θα χρεωθεί."
+"Steam_PreorderCancelled" "Όπως ζητήσατε, η προπαραγγελία σας μέσω του Steam για το «%subscription%» ακυρώθηκε. Δεν θα γίνει χρέωση του λογαριασμού σας."
 
 "Steam_PleaseWait" "Περιμένετε"
 "Steam_Printing" "Εκτυπώνει..."
@@ -1334,7 +1334,7 @@
 "SteamUI_GamesDialog_JustReleased"	"ΜΟΛΙΣ ΚΥΚΛΟΦΟΡΗΣΑΝ"
 
 "Steam_PurchaseInfo"			"Η προσφορά περιέχει τα παρακάτω αντικείμενα."
-"Steam_PurchaseInfo_Preorder"		"Προπαραγγέλνετε αυτό το πακέτο. Η πληρωμή σας δεν θα διεκπεραιωθεί μέχρι το πακέτο γίνει διαθέσιμο την επίσημη μέρα κυκλοφορίας του."
+"Steam_PurchaseInfo_Preorder"		"Βρίσκεστε σε διαδικασία προπαραγγελίας αυτού του πακέτου. Δεν θα γίνει επεξεργασία της πληρωμής σας μέχρι το πακέτο να καταστεί λειτουργικό κατά την ημέρα της επίσημης κυκλοφορίας του."
 
 "Steam_InstallGameInfo"			"Πρόκειται να εγκαταστήσετε το %game%.\n"
 "Steam_InstallGameInfo_Preload"		"Πρόκειται να προφορτώσετε το %game%.\n"
@@ -2943,7 +2943,7 @@
 "Steam_SubscriptionFailure_ServiceUnavailable" "Είτε ο υπολογιστής σας αδυνατεί να συνδεθεί με τους διακομιστές του Steam, είτε η υπηρεσία είναι προσωρινά απενεργοποιημένη. Δοκιμάστε ξανά αργότερα."
 
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddress"	"Η αγορά σας του %subscription% δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε ένα πρόβλημα με τη διεύθυνση που σχετίζεται με τον %provider% λογαριασμό σας. Μπορείτε είτε να διορθώσετε αυτό το πρόβλημα μέσω του %provider%, ή να κάνετε κλικ στο «Πίσω» και να επιλέξετε διαφορετική μέθοδο πληρωμής."
-"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSource"	"Η αγορά σας του %subscription% δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε ένα πρόβλημα με την πηγή χρηματοδότησης που σχετίζεται με τον %provider% λογαριασμό σας. Μπορείτε είτε να διορθώσετε αυτό το πρόβλημα μέσω του %provider%, ή να κάνετε κλικ στο «Πίσω» και να επιλέξετε διαφορετική μέθοδο πληρωμής."
+"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSource"	"Η αγορά του %subscription% δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε πρόβλημα με την πηγή χρηματοδότησης που είναι συσχετισμένη με τον λογαριασμό %provider% σας. Μπορείτε είτε να διορθώσετε το πρόβλημα μέσω του %provider% είτε να κάνετε κλικ στο «Πίσω» και να επιλέξετε διαφορετικό τρόπο πληρωμής."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethod"	"Η αγορά σας του %subscription% δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε αποτυχία εξουσιοδότησης. Πατήστε «Πίσω» και επιλέξτε διαφορετική μέθοδο πληρωμής."
 "Steam_PayPalDeclined_SupportLink"									"Επισκεφθείτε την ιστοσελίδα υποστήριξης του Steam για περισσότερες πληροφορίες."
 
@@ -3372,7 +3372,7 @@
 "Steam_ModNeedsFullGame_Button"	"Περισσότερες πληροφορίες"
 
 "Steam_AccountEmail_Title"		"Πληροφορίες λογαριασμού Steam"
-"Steam_AccountEmail_Info"		"Προτείνετε να εκτυπώσετε αυτές τις πληροφορίες και να τις κρατήσετε σε ασφαλές μέρος. Ο λογαριασμός Steam σας και οι πληροφορίες σύνδεσης είναι σημαντικές. Από εδώ και πέρα, θα τις χρειαστείτε για να αποκτήσετε πρόσβαση στα παιχνίδια σας και στις υπόλοιπες λειτουργίες του Steam."
+"Steam_AccountEmail_Info"		"Προτείνεται να εκτυπώσετε αυτές τις πληροφορίες και να τις κρατήσετε σε ένα ασφαλές μέρος. Ο λογαριασμός Steam και τα στοιχεία σύνδεσής σας είναι σημαντικά. Από εδώ και στο εξής, θα τα χρειαστείτε για να έχετε πρόσβαση στα παιχνίδια σας, καθώς και σε άλλα χαρακτηριστικά του Steam."
 "Steam_AccountEmail_AccountName" "Όνομα λογαριασμού:"
 "Steam_AccountEmail_Password"	"Συνθηματικό:"
 "Steam_AccountEmail_Email"		"Διεύθυνση email:"
@@ -3393,7 +3393,7 @@
 "Steam_Subscription_ContactSupportCart" "Παρουσιάστηκε απρόσμενο σφάλμα. Η συνδρομή σας στα ακόλουθα αντικείμενα δεν ολοκληρώθηκε.\n\nΕπικοινωνήστε με την Υποστήριξη Steam χρησιμοποιώντας τον παρακάτω σύνδεσμο."
 "Steam_SubscriptionCancelled_PayPalDeclinedCart" "Η αγορά των ακόλουθων αντικειμένων δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε ένα σφάλμα εξουσιοδότησης. Δοκιμάστε ξανά χρησιμοποιώντας διαφορετική μέθοδο πληρωμής."
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddressCart"	"Η αγορά των ακόλουθων αντικειμένων δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε ένα πρόβλημα με τη διεύθυνση που σχετίζεται με το λογαριασμό %provider% σας. Μπορείτε είτε να διορθώσετε αυτό το πρόβλημα μέσω του %provider%, ή να προσπαθήσετε την αγορά σας ξανά χρησιμοποιώντας μια διαφορετική μέθοδο πληρωμής."
-"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSourceCart"	"Η αγορά των ακόλουθων αντικειμένων δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε ένα πρόβλημα πηγή κεφαλαίων που είναι συνδεδεμένη με το λογαριασμό %provider% σας. Μπορείτε είτε να διορθώσετε αυτό το πρόβλημα μέσω του %provider%, ή να προσπαθήσετε την αγορά σας ξανά χρησιμοποιώντας μια διαφορετική μέθοδο πληρωμής."
+"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSourceCart"	"Η αγορά των ακόλουθων αντικειμένων δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε πρόβλημα με την πηγή χρηματοδότησης που είναι συσχετισμένη με τον λογαριασμό %provider% σας. Μπορείτε είτε να διορθώσετε το πρόβλημα μέσω του %provider% είτε να δοκιμάσετε να πραγματοποιήσετε την αγορά σας ξανά χρησιμοποιώντας διαφορετικό τρόπο πληρωμής."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethodCart"	"Η αγορά των ακόλουθων αντικειμένων δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε ένα σφάλμα εξουσιοδότησης. Δοκιμάστε ξανά χρησιμοποιώντας διαφορετική μέθοδο πληρωμής."
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProviderCart"	"Η αγορά των ακόλουθων αντικειμένων δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε ένα πρόβλημα με το λογαριασμό %provider% σας. Επικοινωνήστε με την υποστήριξη του %provider% ή προσπαθήστε την αγορά ξανά χρησιμοποιώντας μια διαφορετική μέθοδο πληρωμής."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerifiedCart"	"Η αγορά των ακόλουθων αντικειμένων δεν ολοκληρώθηκε.\n\nΤο %provider% ανέφερε ότι ο λογαριασμός %provider% σας πρέπει να επιβεβαιωθεί ή να χρηματοδοτηθεί για να ολοκληρωθεί η αγορά. Επικοινωνήστε με την υποστήριξη του %provider% ή προσπαθήστε την αγορά ξανά χρησιμοποιώντας μια διαφορετική μέθοδο πληρωμής."
@@ -4720,7 +4720,7 @@
 "Steam_Screenshots_UploadImage" "ΜΕΤΑΦΟΡΤΩΣΗ"
 "Steam_Screenshots_DeleteImage" "Διαγραφή"
 "Steam_Screenshots_CancelUpload" "Ακύρωση"
-"Steam_Screenshots_ShowOnDisk" "Εμφάνιση στο δίσκο"
+"Steam_Screenshots_ShowOnDisk" "Εμφάνιση στον δίσκο"
 "Steam_Screenshots_ShowOnline" "Εμφάνιση στο διαδίκτυο"
 "Steam_Screenshots_IsSpoiler" "Προσθήκη ετικέτας Spoiler"
 "Steam_Screenshots_Private" "Ιδιωτική"
@@ -4813,9 +4813,6 @@
 
 "Steam_VacBanOnAccount"		"Αποκλεισμοί VAC στον λογαριασμό"
 "Steam_NoVacBanOnAccount"	"Χωρίς αποκλεισμούς VAC"
-
-"Steam_NeedToRestart"		"Απαιτείται επανεκκίνηση"
-"Steam_NeedToRestartDifferentClientLauncher" "Μια άλλη έκδοση του Steam σε αυτόν τον υπολογιστή προσπαθεί να κάνει εκκίνηση.\n\nΓια να την τρέξετε πρέπει πρώτα να τερματίσετε αυτήν την έκδοση του Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Να επιτρέπεται η αυτόματη σύνδεση σε ιστοσελίδες Steam από περιηγητές υπολογιστών\n (απαιτεί επανεκκίνηση για εφαρμογή αλλαγών)"
 

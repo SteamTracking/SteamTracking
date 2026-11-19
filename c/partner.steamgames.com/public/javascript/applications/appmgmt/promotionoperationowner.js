@@ -163,8 +163,9 @@ import {
   _,
   _,
 } from "./chunk~1fa4b8f2ff.js";
-import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~0a99e05c44.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~0a99e05c44.js";
 import {
+  _,
   _,
   _,
   _,
@@ -517,7 +518,7 @@ import { _, _, _ } from "./chunk~91ae5e1167.js";
 import { _, _, _, _, _, _ } from "./chunk~209a3e6c2e.js";
 import { _ } from "./chunk~fb7b5d9c48.js";
 import { _ } from "./chunk~ea4856d3e2.js";
-import { _, _, _, _, _, _, _, _, _ } from "./chunk~30ccd6dee5.js";
+import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~87cd89c815.js";
 import { _, _, _ } from "./chunk~8255136f90.js";
 import {
   _,
@@ -25774,6 +25775,12 @@ function _(_) {
   let _ = _.useContext(_);
   return _(_(_, _));
 }
+function _(_) {
+  let _ = _.useContext(_);
+  return _({
+    queries: _.map((_) => _(_, _)),
+  });
+}
 var _ = _.createContext({
   loadAppToPaidPartners: async (_) => await _().load(_),
 });
@@ -25789,7 +25796,7 @@ function _() {
   return (
     (_ ||= new _.default(
       async (_) => {
-        let _ = `${_.PARTNER_BASE_URL}promotionanalysis/ajaxgetgetpaidpublishersforapp`,
+        let _ = `${_.PARTNER_BASE_URL}promotionanalysis/ajaxgetpaidpublishersforapp`,
           _ = {
             rgAppIDs: _.join(`,`),
           },
@@ -48607,6 +48614,7 @@ var _ = `siDKpJnIDEc-`,
   _ = `QD8nIAqC4gM-`,
   _ = `VdKslHqsKJU-`,
   _ = `qy15-iPiq04-`,
+  _ = `-uizKdMptX8-`,
   _ = `VdR3uA9QY9A-`,
   _ = `HpKlyUndLXY-`,
   _ = `S6hizLtzqXw-`,
@@ -59568,11 +59576,13 @@ var _ = `yBOIU4Wj-l4-`,
   _ = `_8IrfwUFPdG8-`,
   _ = `VB2dJjDBBsw-`,
   _ = `kt-uyl1dseY-`,
+  _ = `swyxOaDtFcY-`,
   _ = `lNRh9jL7LvE-`,
   _ = `_7iVZBUBVJd8-`,
   _ = `xOxE91h82Ss-`,
   _ = `mpeLvPpdcUw-`,
   _ = `KLXeRDgUhfI-`,
+  _ = `Ng09o0dZ2HA-`,
   _ = [
     {
       label: `All invited`,
@@ -59647,16 +59657,38 @@ function _() {
         !_ ||
         String(_.appid) === _ ||
         _.name.toLowerCase().includes(_) ||
-        _.publishers.toLowerCase().includes(_),
+        _.publishers.toLowerCase().includes(_) ||
+        _.partnerids.some((_) => String(_) === _),
     );
   return (0, _.jsxs)(`div`, {
+    className: _,
     children: [
-      (0, _.jsx)(`h2`, {
-        children: _,
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsx)(`h2`, {
+            children: _,
+          }),
+          (0, _.jsxs)(`div`, {
+            className: _,
+            children: [
+              (0, _.jsx)(_, {
+                onClick: () => _(_),
+                disabled: _,
+                children: _ ? `Reloading...` : `Reload`,
+              }),
+              (0, _.jsxs)(_, {
+                onClick: () => _(_, _, _),
+                disabled: !_.length,
+                children: [`Export CSV (`, _.length, `)`],
+              }),
+            ],
+          }),
+        ],
       }),
       (0, _.jsx)(`hr`, {}),
       (0, _.jsxs)(`div`, {
-        className: _(_, _),
+        className: _,
         children: [
           (0, _.jsxs)(`div`, {
             className: _,
@@ -59727,25 +59759,11 @@ function _() {
                 className: _,
                 children: (0, _.jsx)(_, {
                   type: `text`,
-                  label: `Search game, publisher or app id`,
+                  label: `Search`,
+                  placeholder: `Game, publisher, app id or partner id`,
                   value: _,
                   onChange: (_) => _(_.target.value),
                 }),
-              }),
-              (0, _.jsxs)(`div`, {
-                className: _,
-                children: [
-                  (0, _.jsx)(_, {
-                    onClick: () => _(_),
-                    disabled: _,
-                    children: _ ? `Reloading...` : `Reload`,
-                  }),
-                  (0, _.jsxs)(_, {
-                    onClick: () => _(_, _, _),
-                    disabled: !_.length,
-                    children: [`Export CSV (`, _.length, `)`],
-                  }),
-                ],
               }),
             ],
           }),
@@ -59785,6 +59803,14 @@ function _(_, _, _, _, _) {
         }),
       ),
     }),
+    _ = _({
+      queries: _.map((_) =>
+        _(_, {
+          appid: _,
+        }),
+      ),
+    }),
+    _ = _(_),
     _ = _(_),
     _ = _.length > 0 && _.size == 0,
     _ = _.map((_) => _.data?.name || ``),
@@ -59800,8 +59826,33 @@ function _(_, _, _, _, _) {
         .filter(Boolean)
         .join(`, `),
     ),
+    _ = _.map((_) => _.data?.publisherid || []),
+    _ = Array.from(new Set(_.flat()))
+      .sort((_, _) => _ - _)
+      .join(`,`),
+    _ = (0, _.useMemo)(() => (_ ? _.split(`,`).map(Number) : []), [_]),
+    { data: _ } = _(_),
+    _ = _.map((_, _) => _(_, _[_], _)),
+    _ = _.map((_) => _(_.data, `hero_capsule`) || ``),
+    _ = _.map((_, _) =>
+      _.isSuccess
+        ? _[_]
+          ? `yes`
+          : `missing`
+        : _.isError
+          ? `failed`
+          : `loading`,
+    ),
     _ =
       _.join(`
+`) +
+      _.join(`
+`) +
+      _.join(`
+`) +
+      _.map((_) => _.join(`,`)).join(`
+`) +
+      _.map((_) => _.join(`,`)).join(`
 `) +
       _.join(`
 `) +
@@ -59827,6 +59878,10 @@ function _(_, _, _, _, _) {
           name: _[_] || `App ${_.appid}`,
           publishers: _[_] || ``,
           developers: _[_] || ``,
+          partnerids: _[_] || [],
+          manager_accountids: _[_] || [],
+          vertical_capsule: _[_] || `loading`,
+          vertical_capsule_url: _[_] || ``,
           answer: _,
           rtime_answered:
             _ == `opted_in`
@@ -59844,6 +59899,20 @@ function _(_, _, _, _, _) {
         };
       });
   }, [_, _, _, _, _, _, _, _]);
+}
+function _(_, _, _) {
+  if (!_?.length || !_?.length) return [];
+  let _ = (_) =>
+      Array.from(new Set(_.map((_) => new _(_.steamid).GetAccountID()))),
+    _ = new Set(_),
+    _ = _.filter((_) => _.is_business_contact && _.has(_.partnerid)),
+    _ = _.filter((_) => _.appid == _);
+  if (_.length) return _(_);
+  for (let _ of _) {
+    let _ = _.filter((_) => !_.appid && _.partnerid == _);
+    if (_.length) return _(_);
+  }
+  return [];
 }
 function _(_) {
   return _.pruned
@@ -59970,6 +60039,39 @@ function _(_, _) {
   return `Loading`;
 }
 function _(_) {
+  switch (_) {
+    case `yes`:
+      return `Yes`;
+    case `missing`:
+      return `Missing`;
+    case `failed`:
+      return `Could not load`;
+  }
+  return `Loading`;
+}
+function _(_) {
+  let { eState: _, strURL: _ } = _,
+    _ = _(_);
+  return _ == `yes`
+    ? (0, _.jsx)(_, {
+        toolTipContent: (0, _.jsx)(`div`, {
+          className: _,
+          children: (0, _.jsx)(`img`, {
+            src: _,
+            alt: `Vertical capsule`,
+          }),
+        }),
+        children: (0, _.jsx)(_, {
+          strLabel: _,
+          strClassName: _,
+        }),
+      })
+    : (0, _.jsx)(_, {
+        strLabel: _,
+        strClassName: _ == `missing` ? _ : void 0,
+      });
+}
+function _(_) {
   return (0, _.jsxs)(`div`, {
     className: _(_, _.strClassName),
     children: [
@@ -60014,12 +60116,13 @@ function _(_) {
 }
 var _ = 40,
   _ = 90,
-  _ = 300;
+  _ = 300,
+  _ = 20;
 function _(_) {
   let { strOptInName: _, rgShown: _ } = _,
-    _ = (0, _.useMemo)(() => _(_), [_]),
     _ = (0, _.useRef)(null),
-    _ = _(_, _.length);
+    { nWidth: _, nHeight: _ } = _(_, _.length),
+    _ = (0, _.useMemo)(() => _(_, _ - _), [_, _]);
   return (0, _.jsx)(`div`, {
     ref: _,
     children: (0, _.jsx)(_, {
@@ -60040,14 +60143,26 @@ function _(_) {
   });
 }
 function _(_, _) {
-  let [_, _] = (0, _.useState)(_);
+  let [_, _] = (0, _.useState)({
+    nWidth: 0,
+    nHeight: _,
+  });
   return (
     (0, _.useLayoutEffect)(() => {
       let _ = () => {
         let _ = _.current;
         if (!_) return;
-        let _ = _.getBoundingClientRect().top + window.scrollY;
-        _(Math.max(_, Math.floor(window.innerHeight - _ - _)));
+        let _ = _.getBoundingClientRect().top + window.scrollY,
+          _ = _.clientWidth,
+          _ = Math.max(_, Math.floor(window.innerHeight - _ - _));
+        _((_) =>
+          _.nWidth == _ && _.nHeight == _
+            ? _
+            : {
+                nWidth: _,
+                nHeight: _,
+              },
+        );
       };
       return (
         _(),
@@ -60058,15 +60173,32 @@ function _(_, _) {
     _
   );
 }
-var _ = _();
+var _ = _(),
+  _ = new Map([
+    [`name`, 3],
+    [`publishers`, 2],
+    [`manager_accountids`, 2],
+  ]),
+  _ = Array.from(_.values()).reduce((_, _) => _ + _, 0);
+function _(_, _) {
+  let _ = _(_),
+    _ = _.reduce((_, _) => _ + (_.size || 0), 0),
+    _ = Math.max(0, _ - _);
+  return _.map((_) => {
+    let _ = (`accessorKey` in _ && _.get(String(_.accessorKey))) || 0;
+    return _
+      ? {
+          ..._,
+          size: (_.size || 0) + Math.floor((_ * _) / _),
+        }
+      : _;
+  });
+}
 function _(_) {
   return [
     _.accessor(`name`, {
       header: `Game`,
-      size: 260,
-      meta: {
-        bGrowToFit: !0,
-      },
+      size: 240,
       cell: (_) =>
         (0, _.jsx)(`a`, {
           className: _(_, _),
@@ -60078,16 +60210,77 @@ function _(_) {
     }),
     _.accessor(`appid`, {
       header: `App ID`,
-      size: 90,
+      size: 80,
     }),
     _.accessor(`publishers`, {
       header: `Publisher`,
-      size: 200,
+      size: 170,
       cell: (_) =>
         (0, _.jsx)(`span`, {
           className: _,
           title: _.getValue(),
           children: _.getValue(),
+        }),
+    }),
+    _.accessor(`partnerids`, {
+      header: `Partner ID`,
+      size: 110,
+      sortingFn: (_, _) =>
+        (_.original.partnerids[0] || 0) - (_.original.partnerids[0] || 0),
+      cell: (_) =>
+        (0, _.jsx)(`span`, {
+          className: _,
+          children: _.getValue().map((_, _) =>
+            (0, _.jsxs)(
+              _.Fragment,
+              {
+                children: [
+                  _ > 0 && `, `,
+                  (0, _.jsx)(`a`, {
+                    href: `${_.PARTNER_BASE_URL}dashboard/${_}`,
+                    target: `_blank`,
+                    title: `Open this partner's dashboard`,
+                    children: _,
+                  }),
+                ],
+              },
+              _,
+            ),
+          ),
+        }),
+    }),
+    _.accessor(`manager_accountids`, {
+      header: `Partner Manager`,
+      size: 170,
+      sortingFn: (_, _) =>
+        (_.original.manager_accountids[0] || 0) -
+        (_.original.manager_accountids[0] || 0),
+      cell: (_) =>
+        (0, _.jsx)(`span`, {
+          className: _,
+          children: _.getValue().map((_, _) =>
+            (0, _.jsxs)(
+              _.Fragment,
+              {
+                children: [
+                  _ > 0 && `, `,
+                  (0, _.jsx)(_, {
+                    accountid: _,
+                  }),
+                ],
+              },
+              _,
+            ),
+          ),
+        }),
+    }),
+    _.accessor(`vertical_capsule`, {
+      header: `Vertical Capsule`,
+      size: 130,
+      cell: (_) =>
+        (0, _.jsx)(_, {
+          eState: _.getValue(),
+          strURL: _.row.original.vertical_capsule_url,
         }),
     }),
     _.accessor(`answer`, {
@@ -60101,7 +60294,7 @@ function _(_) {
     }),
     _.accessor(`rtime_answered`, {
       header: `Answered`,
-      size: 220,
+      size: 200,
       cell: (_) =>
         _.getValue()
           ? (0, _.jsx)(_, {
@@ -60126,7 +60319,7 @@ function _(_) {
     }),
     _.accessor(`discount_state`, {
       header: `Discount`,
-      size: 190,
+      size: 170,
       cell: (_) =>
         (0, _.jsx)(_, {
           strLabel: _(_.getValue(), _.row.original.discount_pct),
@@ -60136,7 +60329,7 @@ function _(_) {
     }),
     _.accessor(`accountid_lastmod`, {
       header: `Last Change By`,
-      size: 160,
+      size: 150,
       cell: (_) =>
         _.getValue()
           ? (0, _.jsx)(`span`, {
@@ -60155,6 +60348,9 @@ function _(_, _, _) {
     name: _.name,
     publishers: _.publishers,
     developers: _.developers,
+    partnerids: _.partnerids.join(` `),
+    partner_manager_accountids: _.manager_accountids.join(` `),
+    vertical_capsule: _(_.vertical_capsule),
     answer: _(_.answer),
     answered: _.rtime_answered
       ? new Date(_.rtime_answered * 1e3).toISOString()

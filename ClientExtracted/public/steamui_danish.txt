@@ -1,4 +1,5 @@
-﻿"Language" "danish"
+﻿
+"Language" "danish"
 "Tokens"
 {
 "WelcomeToSteamTitle" "VELKOMMEN TIL STEAM"
@@ -156,7 +157,7 @@ Dette burde vare mindre end et minut."
 "SteamUI_SteamProgress_Title"	"Steam – Arbejder"
 "SteamUI_CreatingAccount"	"Opretter konto..."
 
-"SteamUI_InstallServiceTitle" "Steam-tjeneste fejl"
+"SteamUI_InstallServiceTitle" "Steam-tjenestefejl"
 "SteamUI_InstallServiceText" "Steam-tjenesten på din maskine har brug for vedligeholdelse.\nTjenesten hjælper Steam med at installere eller opdatere spil, slår registrering af snyd til i visse spil og hjælper med andre systemopgaver.\nGeninstallering af Steam-tjenesten kræver administratorrettigheder."
 "SteamUI_InstallServiceOk" "Installer tjeneste"
 "SteamUI_InstallServiceCancel" "Annuller"
@@ -940,7 +941,6 @@ Dette burde vare mindre end et minut."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Primær skærmleverandør: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Primær skærmmodel: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Understøttede MSAA-tilstande:  %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity registreret (%s1 skærme)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Driver ikke registreret"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"DirectX-drivernavn ikke registreret"
@@ -4814,9 +4814,6 @@ Få en ny ven på Steam ved at e-maile en gave til én, du kender."
 
 "Steam_VacBanOnAccount"		"VAC-udelukkelse(r) registreret"
 "Steam_NoVacBanOnAccount"	"Ingen VAC-udelukkelser registreret"
-
-"Steam_NeedToRestart"		"Kræver genstart"
-"Steam_NeedToRestartDifferentClientLauncher" "En anden version af Steam på denne computer forsøger at starte.\n\nFor at køre den skal du først afslutte denne version af Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Tillad at stationære PC-webbrowsere automatisk logger ind på Steam-sider\n (kræver genstart før ændringerne træder i kraft)"
 

@@ -1068,7 +1068,7 @@ service Player {
 	rpc GetProfileCustomization (.CPlayer_GetProfileCustomization_Request) returns (.CPlayer_GetProfileCustomization_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetProfileItemsEquipped (.CPlayer_GetProfileItemsEquipped_Request) returns (.CPlayer_GetProfileItemsEquipped_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetProfileItemsOwned (.CPlayer_GetProfileItemsOwned_Request) returns (.CPlayer_GetProfileItemsOwned_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetProfileThemesAvailable (.CPlayer_GetProfileThemesAvailable_Request) returns (.CPlayer_GetProfileThemesAvailable_Response);
@@ -1080,7 +1080,7 @@ service Player {
 	rpc GetRecentPlaytimeSessionsForChild (.CPlayer_GetRecentPlaytimeSessionsForChild_Request) returns (.CPlayer_GetRecentPlaytimeSessionsForChild_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetSteamDeckKeyboardSkin (.CPlayer_GetSteamDeckKeyboardSkin_Request) returns (.CPlayer_GetSteamDeckKeyboardSkin_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetTextFilterWords (.CPlayer_GetTextFilterWords_Request) returns (.CPlayer_GetTextFilterWords_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetTimeSSAAccepted (.CPlayer_GetTimeSSAAccepted_Request) returns (.CPlayer_GetTimeSSAAccepted_Response);
@@ -1092,31 +1092,31 @@ service Player {
 	rpc GetUserStats (.CPlayer_GetUserStats_Request) returns (.CPlayer_GetUserStats_Response);
 	// ePrivilege=1
 	rpc IgnoreFriend (.CPlayer_IgnoreFriend_Request) returns (.CPlayer_IgnoreFriend_Response);
-	// ePrivilege=3
+	// ePrivilege=3, rgBrowserAPISites=ArrayExpression
 	rpc PostStatusToFriends (.CPlayer_PostStatusToFriends_Request) returns (.CPlayer_PostStatusToFriends_Response);
 	// ePrivilege=1
 	rpc RecordDisconnectedPlaytime (.CPlayer_RecordDisconnectedPlaytime_Request) returns (.CPlayer_RecordDisconnectedPlaytime_Response);
 	// ePrivilege=1
 	rpc RemoveFriend (.CPlayer_RemoveFriend_Request) returns (.CPlayer_RemoveFriend_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetAnimatedAvatar (.CPlayer_SetAnimatedAvatar_Request) returns (.CPlayer_SetAnimatedAvatar_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetAvatarFrame (.CPlayer_SetAvatarFrame_Request) returns (.CPlayer_SetAvatarFrame_Response);
 	// ePrivilege=1
 	rpc SetCommunityPreferences (.CPlayer_SetCommunityPreferences_Request) returns (.CPlayer_SetCommunityPreferences_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetEquippedProfileItemFlags (.CPlayer_SetEquippedProfileItemFlags_Request) returns (.CPlayer_SetEquippedProfileItemFlags_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetFavoriteBadge (.CPlayer_SetFavoriteBadge_Request) returns (.CPlayer_SetFavoriteBadge_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetMiniProfileBackground (.CPlayer_SetMiniProfileBackground_Request) returns (.CPlayer_SetMiniProfileBackground_Response);
 	// ePrivilege=1
 	rpc SetPerFriendPreferences (.CPlayer_SetPerFriendPreferences_Request) returns (.CPlayer_SetPerFriendPreferences_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetProfileBackground (.CPlayer_SetProfileBackground_Request) returns (.CPlayer_SetProfileBackground_Response);
 	// ePrivilege=1
 	rpc SetProfilePreferences (.CPlayer_SetProfilePreferences_Request) returns (.CPlayer_SetProfilePreferences_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetProfileTheme (.CPlayer_SetProfileTheme_Request) returns (.CPlayer_SetProfileTheme_Response);
 	// ePrivilege=1
 	rpc SetSteamDeckKeyboardSkin (.CPlayer_SetSteamDeckKeyboardSkin_Request) returns (.CPlayer_SetSteamDeckKeyboardSkin_Response);

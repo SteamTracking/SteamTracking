@@ -1,4 +1,5 @@
-﻿"Language" "norwegian"
+﻿
+"Language" "norwegian"
 "Tokens"
 {
 "WelcomeToSteamTitle" "VELKOMMEN TIL STEAM"
@@ -941,7 +942,6 @@ nødvendig for å kontakte deg via e-post."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Leverandør av hovedskjerm: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Hovedskjermmodell: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"MSAA-moduser som støttes: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity oppdaget (%s1 skjermer)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Driver ikke oppdaget"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"DirectX-drivernavn ikke oppdaget"
@@ -4819,9 +4819,6 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 
 "Steam_VacBanOnAccount"		"VAC-utestengelse(r) på konto"
 "Steam_NoVacBanOnAccount"	"Ingen VAC-utestengelser på konto"
-
-"Steam_NeedToRestart"		"Omstart kreves"
-"Steam_NeedToRestartDifferentClientLauncher" "En annen versjon av Steam på denne datamaskinen prøver å starte.\n\nDu må først avslutte denne versjonen av Steam for å kunne kjøre den andre."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Tillat at skrivebordsnettlesere automatisk logger inn på Steam-nettsteder\n (krever omstart for å tre i kraft)"
 

@@ -93,7 +93,7 @@ message CGameServers_FriendsQuery_Request {
 
 	repeated .CGameServers_FriendsQuery_Request.Server servers = 1;
 	repeated fixed64 friends = 2;
-	optional uint32 app_id = 3;
+	optional uint32 appid = 3;
 }
 
 message CGameServers_FriendsQuery_Response {
@@ -110,6 +110,12 @@ message CGameServers_FriendsQuery_Response {
 	}
 
 	repeated .CGameServers_FriendsQuery_Response.Server servers = 1;
+}
+
+message CGameServers_QueryListedServer_Request {
+	optional uint32 appid = 1;
+	optional fixed64 steamid_gs = 2;
+	optional .CGameServers_QueryByFakeIP_Request.EQueryType query_type = 3 [default = Query_Invalid];
 }
 
 message CGameServers_ReportServerPingReply_Notification {
@@ -149,6 +155,7 @@ service GameServers {
 	rpc GetServerIPsBySteamID (.CGameServers_GetServerIPsBySteamID_Request) returns (.CGameServers_IPsWithSteamIDs_Response);
 	rpc QueryByFakeIP (.CGameServers_QueryByFakeIP_Request) returns (.CGameServers_GameServerQuery_Response);
 	rpc FriendsQuery (.CGameServers_FriendsQuery_Request) returns (.CGameServers_FriendsQuery_Response);
+	rpc QueryListedServer (.CGameServers_QueryListedServer_Request) returns (.CGameServers_GameServerQuery_Response);
 	rpc ReportServerPingReply (.CGameServers_ReportServerPingReply_Notification) returns (.NoResponse);
 	rpc MasterServerQuery (.CGameServers_MasterServerQuery_Request) returns (.CGameServers_MasterServerQuery_Response);
 	rpc RestrictPlayersToSteamClan (.CGameServers_RestrictPlayersToSteamClan_Request) returns (.CGameServers_RestrictPlayersToSteamClan_Response);

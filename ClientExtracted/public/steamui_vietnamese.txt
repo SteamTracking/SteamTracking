@@ -1,4 +1,5 @@
-﻿"Language" "vietnamese"
+﻿
+"Language" "vietnamese"
 "Tokens"
 {
 "WelcomeToSteamTitle" "CHÀO MỪNG BẠN ĐẾN VỚI STEAM"
@@ -936,7 +937,6 @@ Công đoạn này nên hoàn thành dưới một phút."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Nhà cung cấp màn hình: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Model màn hình chính: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Được hỗ trợ chế độ MSAA: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Phát hiện Eyefinity (%s1 màn hình)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Không phát hiện driver đồ họa"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Không thể phát hiện tên driver DirectX"
@@ -2927,11 +2927,11 @@ Hãy kiếm một người bạn bằng cách gửi món quà đến một ai đ
 "Steam_ActivateGuestPass"		"Kích hoạt"
 "Steam_GuestPassPending"		"Sẵn sàng để kích hoạt"
 
-"SteamUI_ValveSurvey_MicrophoneLabel"		"Bạn hiện có kết nối một micrô với máy tính của mình không?"
+"SteamUI_ValveSurvey_MicrophoneLabel"		"Bạn hiện có kết nối một micro với máy tính của mình không?"
 "SteamUI_ValveSurvey_MicrophoneDontKnow"	"Tôi không biết"
-"SteamUI_ValveSurvey_MicrophoneYes"		"Có, tôi có một micrô."
-"SteamUI_ValveSurvey_MicrophoneNo"		"Không, tôi không có micrô nào."
-"SteamUI_ValveSurvey_Summary_Microphone"	"Micrô: %s1"
+"SteamUI_ValveSurvey_MicrophoneYes"		"Có, tôi có một micro."
+"SteamUI_ValveSurvey_MicrophoneNo"		"Không, tôi không có micro nào."
+"SteamUI_ValveSurvey_Summary_Microphone"	"Micro: %s1"
 
 "SteamUI_ValveSurvey_ControllerCradleLabel"		"Bạn có sử dụng bộ khuếch đại để cải thiện kết nối không dây tới bộ điều khiển Steam của mình (như hình bên dưới)?"
 "SteamUI_ValveSurvey_ControllerCradleDontHave"	"Tôi không có bộ khuếch sóng không dây."
@@ -4819,9 +4819,6 @@ Nếu bạn tiếp tục, bạn có thể gặp vấn đề trong khi chơi."
 
 "Steam_VacBanOnAccount"		"Lệnh cấm VAC trên tài khoản"
 "Steam_NoVacBanOnAccount"	"Không có lệnh cấm VAC trên tài khoản"
-
-"Steam_NeedToRestart"		"Cần khởi động lại"
-"Steam_NeedToRestartDifferentClientLauncher" "Một phiên bản khác của Steam trên máy tính này đang cố khởi động.\n\nĐể chạy nó, bạn đầu tiên phải thoát khỏi phiên bản này của Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Cho phép trình duyệt web tại desktop tự động đăng nhập vào trang\nSteam (cần phải khởi động lại để áp dụng thay đổi này)"
 

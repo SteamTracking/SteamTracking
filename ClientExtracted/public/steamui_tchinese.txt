@@ -1,4 +1,5 @@
-﻿"Language" "tchinese"
+﻿
+"Language" "tchinese"
 "Tokens"
 {
 "WelcomeToSteamTitle" "歡迎來到 STEAM"
@@ -938,7 +939,6 @@ Steam，請在其圖示上按右鍵。"
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"主要顯示器供應商：%s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"主要顯示器型號：%s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"支援的 MSAA 模式：%s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"偵測到 Eyefinity（%s1 個顯示器）"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"未偵測到驅動程式"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"未偵測到 DirectX 驅動程式名稱"
@@ -4816,9 +4816,6 @@ Mac OS X 10.7 或是更高的版本。"
 
 "Steam_VacBanOnAccount"		"此帳戶上的 VAC 封鎖"
 "Steam_NoVacBanOnAccount"	"此帳戶無 VAC 封鎖"
-
-"Steam_NeedToRestart"		"需要重新啟動"
-"Steam_NeedToRestartDifferentClientLauncher" "這台電腦上有另一個版本的 Steam 正在嘗試啟動。\n\n如欲執行，您必須先退出此版本的 Steam。"
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "允許桌面網頁瀏覽器自動登入 Steam 網站\n（需要重新啟動以套用）"
 

@@ -63,15 +63,15 @@ message CSteamAwardsNomination {
 }
 
 service SteamAwards {
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetNominationRecommendations (.CSteamAwards_GetNominationRecommendations_Request) returns (.CSteamAwards_GetNominationRecommendations_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetNominationShareLink (.CSteamAwards_GetNominationShareLink_Request) returns (.CSteamAwards_GetNominationShareLink_Response);
-	// bConstMethod=true, ePrivilege=2
+	// bConstMethod=true, ePrivilege=2, rgBrowserAPISites=ArrayExpression
 	rpc GetOtherUserNominations (.CSteamAwards_GetOtherUserNominations_Request) returns (.CSteamAwards_GetUserNominations_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetUserNominations (.CSteamAwards_GetUserNominations_Request) returns (.CSteamAwards_GetUserNominations_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc Nominate (.CSteamAwards_Nominate_Request) returns (.CSteamAwards_Nominate_Response);
 }
 

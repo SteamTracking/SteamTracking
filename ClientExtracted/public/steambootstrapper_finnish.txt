@@ -3,7 +3,7 @@
 { 
 "SteamBootstrapper_UpdatingSteam"				"Päivitetään %appname%iä"
 "SteamBootstrapper_ElevationPrompt"			"%appname%in pitää tehdä päivitys ennen käynnistämistä."
-"SteamBootstrapper_ReadOnlyInstallOSX"		"%appname% ei pysty kirjoittamaan asennushakemistoonsa. Varmista, että et yritä käyttää levykuvaa käynnistämiseen."
+"SteamBootstrapper_ReadOnlyInstallOSX"		"%appname% ei pysty kirjoittamaan omaan asennushakemistoonsa. Varmista, ettet käynnistä sovellusta näköistiedostosta."
 "SteamBootstrapper_RunFromDiskImageOSX"		"Ole hyvä ja vedä %appname% Applications-kansioosi ennen kuin käynnistät sen."
 "SteamBootstrapper_ReadOnlyInstall"			"%appname% ei pysty kirjoittamaan asennushakemistoonsa."
 "SteamBootstrapper_InstallDirNotASCII"			"Sovellusta %appname% ei voida suorittaa tiedostosijainnista, joka sisältää muita kuin englanninkielisiä aakkosia. Ole hyvä ja asenna %appname% uudelleen oletustiedostosijaintiin."

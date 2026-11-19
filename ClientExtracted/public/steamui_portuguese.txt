@@ -1,4 +1,5 @@
-﻿"Language" "portuguese"
+﻿
+"Language" "portuguese"
 "Tokens"
 {
 "WelcomeToSteamTitle" "BEM-VINDO AO STEAM"
@@ -933,7 +934,6 @@
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Fornecedor do monitor principal:  %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Modelo do monitor principal:  %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Modos MSAA suportados: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity Detetada (%s1 Monitores)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Driver não detetado"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Nome do driver do DirectX não detetado"
@@ -1281,7 +1281,7 @@
 "Steam_PreorderCancelled_Headline" "Pré-reserva cancelada"
 "Steam_PreorderCancelled" "Tal como pedido, a tua pré-reserva através do Steam de %subscription% foi cancelada. A tua conta não será debitada."
 
-"Steam_PleaseWait" "Por Favor, aguarda"
+"Steam_PleaseWait" "Por favor, aguarda"
 "Steam_Printing" "A imprimir..."
 
 "Steam_CyberCafe_FeatureLocked_Title" "Steam - Erro"
@@ -3766,7 +3766,7 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 "steam_details_sharedinuseheader" "Biblioteca em uso por"
 "steam_details_sharedbyname" "%share_user%"
 "steam_details_sharedbyinuse" "%share_user% - Biblioteca em uso"
-"steam_details_streamfromheader" "Fazer stream de"
+"steam_details_streamfromheader" "Transmitir de"
 "steam_details_streamfromname" "%stream_from%"
 "steam_details_totalplaytimeheader_video" "Assististe durante"
 "steam_details_lastplayedheader_video" "Última sessão"
@@ -4351,7 +4351,7 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 
 "SteamUI_StreamingSource_ThisMachine_Installed"     "Jogar nesta máquina"
 "SteamUI_StreamingSource_ThisMachine_NotInstalled"  "Instalar nesta máquina"
-"SteamUI_StreamingSource_Installed"    				"Fazer stream de %ClientName%"
+"SteamUI_StreamingSource_Installed"    				"Transmitir de %ClientName%"
 "SteamUI_StreamingSource_NotInstalled" 				"Instalar em %ClientName%"
 
 "SteamUI_StreamClient_Failed_Title"	"Falha no cliente de streaming"
@@ -4810,9 +4810,6 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 
 "Steam_VacBanOnAccount"		"Banimento(s) pelo VAC na conta"
 "Steam_NoVacBanOnAccount"	"Nenhum banimento pelo VAC na conta"
-
-"Steam_NeedToRestart"		"É necessário reiniciar"
-"Steam_NeedToRestartDifferentClientLauncher" "Outra versão do Steam neste computador está a tentar ser iniciada.\n\nPara tal, tens primeiro de sair desta versão do Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Permitir que browsers de computadores iniciem sessão automaticamente em sites do Steam\n (é necessário reiniciar para que alterações entrem em efeito)"
 

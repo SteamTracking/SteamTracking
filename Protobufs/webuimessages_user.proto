@@ -21,9 +21,26 @@ message CUser_GetSavedHardwareInfo_Response {
 	optional .UserSystemInformation system_info = 3;
 }
 
+message CUser_GetCachedFriendData_Request {
+}
+
+message CUser_GetCachedFriendData_Response {
+	message Player {
+		optional uint32 accountid = 1;
+		optional string persona_name = 2;
+		optional string avatar_hash = 3;
+		optional string nickname = 4;
+		optional bool is_friend = 5;
+		optional bool is_family = 6;
+	}
+
+	repeated .CUser_GetCachedFriendData_Response.Player players = 1;
+}
+
 service User {
 	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
 
 	rpc SaveHardwareInfo (.CUser_SaveHardwareInfo_Request) returns (.CUser_SaveHardwareInfo_Response);
 	rpc GetSavedHardwareInfo (.CUser_GetSavedHardwareInfo_Request) returns (.CUser_GetSavedHardwareInfo_Response);
+	rpc GetCachedFriendData (.CUser_GetCachedFriendData_Request) returns (.CUser_GetCachedFriendData_Response);
 }

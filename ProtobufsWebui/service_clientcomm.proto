@@ -150,23 +150,23 @@ message CClientComm_UninstallClientApp_Response {
 }
 
 service ClientComm {
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc EnableOrDisableDownloads (.CClientComm_EnableOrDisableDownloads_Request) returns (.CClientComm_EnableOrDisableDownloads_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetAllClientLogonInfo (.CClientComm_GetAllClientLogonInfo_Request) returns (.CClientComm_GetAllClientLogonInfo_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetClientAppList (.CClientComm_GetClientAppList_Request) returns (.CClientComm_GetClientAppList_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetClientInfo (.CClientComm_GetClientInfo_Request) returns (.CClientComm_GetClientInfo_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetClientLogonInfo (.CClientComm_GetClientLogonInfo_Request) returns (.CClientComm_GetClientLogonInfo_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc InstallClientApp (.CClientComm_InstallClientApp_Request) returns (.CClientComm_InstallClientApp_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc LaunchClientApp (.CClientComm_LaunchClientApp_Request) returns (.CClientComm_LaunchClientApp_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetClientAppUpdateState (.CClientComm_SetClientAppUpdateState_Request) returns (.CClientComm_SetClientAppUpdateState_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc UninstallClientApp (.CClientComm_UninstallClientApp_Request) returns (.CClientComm_UninstallClientApp_Response);
 }
 

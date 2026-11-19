@@ -2844,7 +2844,7 @@ function ShowCompletedProcesses( strReferenceCode )
 }
 
 // support report side panel on a ticket
-function InitReportPanel( strReferenceCode, bOpen, strAssetBaseURL )
+function InitReportPanel( strReferenceCode, strAssetBaseURL )
 {
 	ReportPanel.strReferenceCode = strReferenceCode;
 	ReportPanel.strAssetBaseURL = strAssetBaseURL;
@@ -2889,9 +2889,6 @@ function InitReportPanel( strReferenceCode, bOpen, strAssetBaseURL )
 	ReportPanel.UpdateAnchorTriggers();
 	ReportPanel.ShowSavedFlags();
 	ReportPanel.UpdateUnsavedIndicator();
-
-	if ( bOpen )
-		ReportPanel.SetOpen( true );
 }
 
 var ReportPanel = {

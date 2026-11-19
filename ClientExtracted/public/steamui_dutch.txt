@@ -1,4 +1,5 @@
-﻿"Language" "dutch"
+﻿
+"Language" "dutch"
 "Tokens"
 {
 "WelcomeToSteamTitle" "WELKOM BIJ STEAM"
@@ -940,7 +941,6 @@ Dit duurt niet langer dan een minuut."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Leverancier primaire monitor:  %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Model primaire monitor:  %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Ondersteunde MSAA-modi:  %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity gedetecteerd (%s1 schermen)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Geen stuurprogramma gevonden"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Naam stuurprogramma DirectX niet gevonden"
@@ -4823,9 +4823,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 
 "Steam_VacBanOnAccount"		"VAC-ban(s) op account"
 "Steam_NoVacBanOnAccount"	"Geen VAC-bans op account"
-
-"Steam_NeedToRestart"		"Opnieuw opstarten vereist"
-"Steam_NeedToRestartDifferentClientLauncher" "Een andere versie van Steam op deze computer probeert op te starten.\n\nOm die versie te draaien, moet je eerst deze versie van Steam afsluiten."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Desktopbrowsers toestaan om automatisch in te loggen op Steam-sites\n (vereist opnieuw starten om wijzigingen toe te passen)"
 

@@ -1,4 +1,5 @@
-﻿"Language" "romanian"
+﻿
+"Language" "romanian"
 "Tokens"
 {
 "WelcomeToSteamTitle" "BUN-VENIT PE STEAM"
@@ -936,7 +937,6 @@ Te rugăm să reintroduci parola dorită."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Furnizorul monitorului principal: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Modelul monitorului principal: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Moduri MSAA suportate: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity Detectat (%s1 Monitoare)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Driverul nu este detectat"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Numele driverului DirectX nu este detectat"
@@ -4810,9 +4810,6 @@ Artiști"
 
 "Steam_VacBanOnAccount"		"Banare(ări) VAC pe cont"
 "Steam_NoVacBanOnAccount"	"Nu există banări VAC pe cont"
-
-"Steam_NeedToRestart"		"Este necesară repornirea"
-"Steam_NeedToRestartDifferentClientLauncher" "O altă versiune de Steam încearcă să pornească pe acest calculator.\n\nPentru a putea rula, trebuie mai întâi să părăsești această versiune de Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Permite browserelor web de pe desktop să se autentifice automat pe site-urile Steam\n (necesită o repornire pentru ca schimbările să fie aplicate)"
 

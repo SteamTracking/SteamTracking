@@ -1,4 +1,5 @@
-﻿"Language" "thai"
+﻿
+"Language" "thai"
 "Tokens"
 {
 "WelcomeToSteamTitle" "ยินดีต้อนรับสู่ STEAM"
@@ -939,7 +940,6 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"ผู้จำหน่ายจอภาพหลัก:  %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"รุ่นจอภาพหลัก:   %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"โหมด MSAA ที่รองรับ:  %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"ตรวจพบ Eyefinity (%s1 หน้าจอ)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"ไม่พบไดรเวอร์"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"ไม่พบชื่อไดรเวอร์ DirectX"
@@ -4817,9 +4817,6 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 
 "Steam_VacBanOnAccount"		"VAC แบนบนบัญชี"
 "Steam_NoVacBanOnAccount"	"ไม่มี VAC แบนบนบัญชี"
-
-"Steam_NeedToRestart"		"จำเป็นต้องรีสตาร์ท"
-"Steam_NeedToRestartDifferentClientLauncher" "Steam อีกเวอร์ชันหนึ่งบนคอมพิวเตอร์เครื่องนี้พยายามที่จะเริ่มทำงาน\n\nหากต้องการใช้งาน คุณต้องออกจาก Steam เวอร์ชันนี้ก่อน"
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "อนุญาตให้เว็บเบราเซอร์บนเดสก์ท็อปเข้าสู่ระบบไปยังไซต์ Steam ได้โดยอัตโนมัติ \n (จำเป็นต้องรีสตาร์ทเพื่อให้การเปลี่ยนแปลงมีผลใช้)"
 

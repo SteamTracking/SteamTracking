@@ -1,4 +1,5 @@
-﻿"Language" "swedish"
+﻿
+"Language" "swedish"
 "Tokens"
 {
 "WelcomeToSteamTitle" "VÄLKOMMEN TILL STEAM"
@@ -939,7 +940,6 @@ Felkod (%error%)"
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Primär skärmleverantör:  %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Primär skärmmodell:  %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"MSAA-lägen som stöds:  %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity hittades (%s1 skärmar)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Drivrutinen hittades inte"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Namn på DirectX-drivrutin hittades inte"
@@ -4817,9 +4817,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 
 "Steam_VacBanOnAccount"		"VAC-avstängning(ar) på kontot"
 "Steam_NoVacBanOnAccount"	"Inga VAC-avstängningar på kontot"
-
-"Steam_NeedToRestart"		"Omstart krävs"
-"Steam_NeedToRestartDifferentClientLauncher" "En annan version av Steam försöker starta på den här datorn.\n\nFör att köra den måste du först avsluta den här versionen av Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Låt skrivbordswebbläsare automatiskt logga in på Steam-sidor\n (kräver omstart för att träda i kraft)"
 

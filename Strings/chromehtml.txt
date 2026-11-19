@@ -209,11 +209,14 @@ $ORIGIN
 ++CCUNGstd::exception
 , but was
 , not just within "
+,disabled-by-default-devtools.screenshot,disabled-by-default-devtools.timeline.invalidationTracking,disabled-by-default-layout_shift.debug
+,disabled-by-default-devtools.timeline.stack,disabled-by-default-v8.cpu_profiler
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 --crl-sets-path=%s
 --device-scale-factor=1
 --disable-accelerated-video-decode
+--disable-auto-reload
 --disable-backgrounding-occluded-windows
 --disable-breakpad
 --disable-component-update
@@ -355,8 +358,8 @@ $ORIGIN
 ../common/html/chrome_ipc_shared.cpp
 ../common/html/chromewrapper.cpp
 ../common/language.cpp
+../common/overlay/shmemstream.cpp
 ../external/picojson/picojson.h
-../overlay/common/shmemstream.cpp
 ../public/html/htmlprotobuf.cpp
 ../public/tier0/memoverride.cpp
 ../public/tier0/tslist.h
@@ -399,12 +402,15 @@ $ORIGIN
 .foo = value".
 .placeholder.proto
 .steam_exec_test
+/.flatpak-info
+/app
 /dev
 /dev/
 /dev/disk/by-uuid
 /dev/null
 /dev/random
 /dev/urandom
+/etc
 /etc/mtab
 /proc/mounts
 /proc/self/fd/%d
@@ -418,6 +424,7 @@ $ORIGIN
 /tmp/steam_chrome_shmem_uid%d_spid%u
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
+/usr
 /usr/bin/crosdisk %s
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789
@@ -516,7 +523,9 @@ $ORIGIN
 16CHTMLProtoBufMsgI16CMsgPageSecurityE
 16CHTMLProtoBufMsgI16CMsgPopupCreatedE
 16CHTMLProtoBufMsgI16CMsgSetHTMLTitleE
+16CHTMLProtoBufMsgI16CMsgSplashWindowE
 16CHTMLProtoBufMsgI16CMsgStartRequestE
+16CHTMLProtoBufMsgI16CMsgStartTracingE
 16CHTMLProtoBufMsgI16CMsgTouchGestureE
 16CHTMLProtoBufMsgI17CMsgBrowserCreateE
 16CHTMLProtoBufMsgI17CMsgBrowserRemoveE
@@ -546,6 +555,7 @@ $ORIGIN
 16CHTMLProtoBufMsgI22CMsgSetPIDShuttingDownE
 16CHTMLProtoBufMsgI23CMsgCanGoBackAndForwardE
 16CHTMLProtoBufMsgI23CMsgSetForegroundWindowE
+16CHTMLProtoBufMsgI23CMsgSetSimulatedLatencyE
 16CHTMLProtoBufMsgI23CMsgSteamAuthCookiesSetE
 16CHTMLProtoBufMsgI25CMsgAckSharedPaintBuffersE
 16CHTMLProtoBufMsgI25CMsgBrowserCreateResponseE
@@ -556,7 +566,6 @@ $ORIGIN
 16CHTMLProtoBufMsgI26CMsgShowBrowserContextMenuE
 16CHTMLProtoBufMsgI26CMsgToggleFindInPageDialogE
 16CHTMLProtoBufMsgI27CMsgDraggableRegionsChangedE
-16CHTMLProtoBufMsgI27CMsgNeedsSharedTexturePaintE
 16CHTMLProtoBufMsgI27CMsgProcessInfoNotificationE
 16CHTMLProtoBufMsgI27CMsgRenderProcessTerminatedE
 16CHTMLProtoBufMsgI28CMsgGetCookiesForURLResponseE
@@ -581,7 +590,9 @@ $ORIGIN
 16CMsgPopupCreated
 16CMsgSetHTMLTitle
 16CMsgSetZoomLevel
+16CMsgSplashWindow
 16CMsgStartRequest
+16CMsgStartTracing
 16CMsgTouchGesture
 16CSharedMemStream
 17CFileWriterThread
@@ -652,6 +663,7 @@ $ORIGIN
 23CMsgCanGoBackAndForward
 23CMsgSetForegroundWindow
 23CMsgSetHorizontalScroll
+23CMsgSetSimulatedLatency
 23CMsgSetWindowVisibility
 23CMsgSteamAuthCookiesSet
 24CDirWatcherPollingThread
@@ -674,7 +686,6 @@ $ORIGIN
 26CMsgToggleFindInPageDialog
 27CMsgDraggableRegionsChanged
 27CMsgHorizontalScrollBarSize
-27CMsgNeedsSharedTexturePaint
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetVRKeyboardVisibility
@@ -696,6 +707,7 @@ $ORIGIN
 41CMsgShowBrowserContextMenu_ContextCommand
 42CMsgDraggableRegionsChanged_DraggableRects
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
+47CMsgSetLocalFileRequestMapping_ClientAssetRoute
 7CCookie
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringli8CDefLessE
@@ -759,6 +771,7 @@ BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
+BIsValid()
 BOffScreenRendererBrowser( eBrowserType )
 BREAKPAD_DUMP_LOCATION
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
@@ -1056,6 +1069,7 @@ CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPathString
+CPathString::Concat: null path element
 CSHA1::HashFile
 CSHA1::Update
 CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
@@ -1104,6 +1118,7 @@ Command stream from webhelper is corrupt, got larger than 128M command
 Command stream from webhelper is corrupt, got larger than 128M command (%d)
 Command stream from webhelper is corrupt, invalid read size
 Command stream from webhelper is corrupt, invalid read size %d/%d
+Container path must be absolute
 Could not create an instance of
 Could not find type "
 Couldn't parse default value "
@@ -1266,6 +1281,7 @@ Filipino
 Finnish
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
+FmtStr_ReportTruncation
 Force enable CEF accessibility features
 Force enable GPU acceleration
 Force enable GPU blocklist
@@ -2117,7 +2133,6 @@ V_isvalidhex
 V_snprintf
 V_stristr(char const*, char const*)
 V_strncat
-V_strncat_length
 V_strnchr
 V_strncmp
 V_strncpy
@@ -2761,6 +2776,7 @@ m_options
 m_pCurrentCmd
 m_pDataWritten
 m_pFromChromeStream
+m_pItemRunning
 m_pMapFile
 m_pMasterCommandEvent
 m_pMutex
@@ -2775,6 +2791,7 @@ m_strDirectory
 m_strFileName
 m_strFileNamePrevious
 m_strLogLine
+m_strUTF8Path
 m_strWatchPath
 m_unInCounter == m_unOutCounter
 m_vecPendingCommands
@@ -2852,7 +2869,7 @@ optional
 output specified is nullptr
 pBuf == NULL
 pBuffer->TellPut() == 0
-pCmd->m_eCmd == eHTMLCommands_NeedsPaint || pCmd->m_eCmd == eHTMLCommands_NeedsSharedTexturePaint
+pCmd->m_eCmd == eHTMLCommands_NeedsPaint
 pCmd->m_eCmd == eHTMLCommands_SetSharedPaintBuffers
 pCmd->m_eCmd > 0 && pCmd->m_eCmd < eHTMLCommands_None
 pConv && pConv->GetDelimiterLength() > 0
@@ -3078,6 +3095,7 @@ throw
 tigrinya
 time
 tolower
+toplevel,toplevel.flow,ipc,mojom,loading,navigation,blink,blink.user_timing,v8,v8.execute,disabled-by-default-v8.compile,devtools.timeline,disabled-by-default-devtools.timeline,disabled-by-default-devtools.timeline.frame
 tr_TR
 transaction clone for
 transaction clone for operator delete(void*)

@@ -1,0 +1,84 @@
+.watchPartyDialog .watchOption {
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  padding: 8px;
+  display: flex;
+}
+.watchPartyDialog .watchOptionRow {
+  border-bottom: 1px solid #535c68;
+}
+.watchPartyDialog .watchOption .watchOptionTitle,
+.watchPartyDialog .watchOption .watchOptionSubtitle {
+  color: #fff;
+}
+.watchPartyDialog .watchOption .watchOptionTitle .friendName {
+  color: #c9bdf7;
+}
+.watchPartyDialog .watchOption .watchOptionTitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 20px;
+  overflow: hidden;
+}
+.watchPartyDialog .watchOption .watchOptionSubtitle {
+  color: #777;
+  font-size: 14px;
+}
+.watchPartyDialog .watchPartyPrompt {
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+.DialogButton.watchHowButton {
+  text-align: left;
+  align-items: center;
+  width: calc(100% - 16px);
+  height: 48px;
+  margin-bottom: 8px;
+  padding-left: 8px;
+  display: flex;
+}
+.watchPartyDialog {
+  width: 450px;
+  max-height: 600px;
+}
+.ChatRoomListGroupItem.WatchPartyGroup .ChatRoomListGroupItem_header {
+  padding: 0;
+}
+.ChatRoomListGroupItem.WatchPartyGroup .ChatRoomMultiFriendAvatar.Small,
+.ChatRoomListGroupItem.WatchPartyGroup .ChatRoomGroupAvatar {
+  margin-left: 0;
+}
+.ChatRoomListGroupItem.WatchPartyGroup
+  .groupNameStatusContainer
+  .chatRoomDetails {
+  color: #9384d4;
+}
+.DialogButton.watchHowButton .friend.FriendAvatar.watchingbroadcast {
+  margin-right: 8px;
+}
+.DialogButton.watchHowButton .highlight {
+  color: #fff;
+  margin-left: 4px;
+}
+.DialogButton.watchHowButton .SVGIcon_Button {
+  width: 38px;
+  margin-right: 6px;
+  padding-top: 4px;
+}
+.DialogButton.watchHowButton .SVGIcon_FriendRequest .friendArm,
+.DialogButton.watchHowButton .SVGIcon_FriendRequest .redCircle {
+  display: none;
+}
+.DialogButton.watchHowButton .SVGIcon_FriendRequest,
+.DialogButton.watchHowButton .SVGIcon_NewChatGroup .Bubble {
+  fill: #b7ccd5;
+}
+.DialogButton.watchHowButton .SVGIcon_NewChatGroup line {
+  stroke: #3d4450;
+}
+.watchPartyDialog .DialogLabel {
+  margin-top: 16px;
+}
+/*$vite$:1*/

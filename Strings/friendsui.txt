@@ -70,8 +70,8 @@
 !("Invalid number of parameters")
 !("No handler for vgui message function")
 !(cascadeMenu && checkable)
+!BLockedForRead()
 !BStringEquals( pathAlreadyLoaded.GetUTF8Path(), pathSDKModulePath.GetUTF8Path() )
-!IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
 !is_large()
 !m_SelectedItems.HasElement( itemID )
 !m_data.HasError()
@@ -153,10 +153,7 @@
 "MapEnd"
 "MapSize"
 "MutableRawRepeatedField"
-"ctrl"\t"1"\n
 "e" must be followed by exponent.
-"keycode"\t"%s"\n
-"shift"\t"1"\n
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
@@ -370,6 +367,8 @@ $ORIGIN
 *pcubDecodedData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGCiD
+++CCUNGhqD
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 , bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars, string font
@@ -436,12 +435,14 @@ $ORIGIN
 ../friendsUI/friendswebchat.cpp
 ../htmlwindow/htmlwindow.cpp
 ../htmlwindow/htmlwindowcontroller.cpp
-../public/html/htmlpaintbuffer.h
+../public/html/../../common/overlay/sharedimage.h
+../public/html/../../common/overlay/sharedimagememory.h
 ../public/html/htmlprotobuf.cpp
 ../public/rtime.cpp
 ../public/tier0/memoverride.cpp
 ../public/tier0/tslist.h
 ../public/tier1/bitstring.h
+../public/tier1/keyvalues.h
 ../public/tier1/netadr.h
 ../public/tier1/refcount.h
 ../public/tier1/smartptr.h
@@ -474,7 +475,6 @@ $ORIGIN
 ../tier1/utlqueue.cpp
 ../tier1/utlstring.cpp
 ../tier1/utlsymbol.cpp
-../vgui2/controls/AnimationController.cpp
 ../vgui2/controls/BuildFactoryHelper.cpp
 ../vgui2/controls/BuildGroup.cpp
 ../vgui2/controls/EditablePanel.cpp
@@ -531,14 +531,17 @@ $ORIGIN
 .png
 .steam_exec_test
 .webm
+/.flatpak-info
 /Steam3PosixRegistryManager
 /ValveIPCSHM_%d
+/app
 /dev
 /dev/
 /dev/disk/by-uuid
 /dev/null
 /dev/random
 /dev/urandom
+/etc
 /etc/mtab
 /proc/mounts
 /proc/self/fd/%d
@@ -548,6 +551,7 @@ $ORIGIN
 /steamrt64
 /steamsysinfo
 /tmp
+/usr
 /usr/bin/crosdisk %s
 /usr/bin/xdg-open
 /var/lib/dbus/machine-id
@@ -561,7 +565,6 @@ $ORIGIN
 01/01/00
 0123456789
 0123456789ABCDEF
-0123456789ABCDEF0
 0123456789abcdef
 0x%llx
 1 Mbps
@@ -578,19 +581,15 @@ $ORIGIN
 10CSetQoSMsg
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryI20ModuleAddressRange_tE
-10CUtlMemoryI22PanelAnimationMapEntryE
 10CUtlMemoryI9CSmartPtrI15CJSCallbackFuncEE
 10CUtlMemoryIN10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN4vgui13StyleHandle_tEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcPN4vgui32IPanelAnimationPropertyConverterEi22CDefCaselessStringLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcbi22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI15CJSCallbackFuncEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
@@ -635,13 +634,8 @@ $ORIGIN
 10CUtlMemoryIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tEE
 10CUtlMemoryIN24CSteamParentalController15UnlockPromise_tEE
 10CUtlMemoryIN27CSteamUIMessagingController15QueuedMessage_tEE
-10CUtlMemoryIN4vgui10BoundKey_tEE
 10CUtlMemoryIN4vgui11layoutcmd_tEE
-10CUtlMemoryIN4vgui15KeyBindingMap_tEE
 10CUtlMemoryIN4vgui16MessageMapItem_tEE
-10CUtlMemoryIN4vgui19AnimationController13AnimCommand_tEE
-10CUtlMemoryIN4vgui19AnimationController14AnimSequence_tEE
-10CUtlMemoryIN4vgui19AnimationController15PostedMessage_tEE
 10CUtlMemoryIN4vgui19AnimationController17ActiveAnimation_tEE
 10CUtlMemoryIN4vgui4HTML18CustomURLHandler_tEE
 10CUtlMemoryIN4vgui4HTML19CustomCursorCache_tEE
@@ -679,12 +673,9 @@ $ORIGIN
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlRBTreeIN7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN4vgui13StyleHandle_tEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlRBTreeIN7CUtlMapIPKcPN4vgui32IPanelAnimationPropertyConverterEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcbi22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIj7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI15CJSCallbackFuncEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
@@ -697,7 +688,6 @@ $ORIGIN
 10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 10CUtlString
 10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
-10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN11CHTMLWindow22JSMethodRegistration_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN21CHTMLWindowController20JSRegisteredMethod_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
@@ -712,13 +702,8 @@ $ORIGIN
 10CUtlVectorIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tE10CUtlMemoryIS4_EE
 10CUtlVectorIN24CSteamParentalController15UnlockPromise_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN27CSteamUIMessagingController15QueuedMessage_tE10CUtlMemoryIS1_EE
-10CUtlVectorIN4vgui10BoundKey_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui11layoutcmd_tE10CUtlMemoryIS1_EE
-10CUtlVectorIN4vgui15KeyBindingMap_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN4vgui16MessageMapItem_tE10CUtlMemoryIS1_EE
-10CUtlVectorIN4vgui19AnimationController13AnimCommand_tE10CUtlMemoryIS2_EE
-10CUtlVectorIN4vgui19AnimationController14AnimSequence_tE10CUtlMemoryIS2_EE
-10CUtlVectorIN4vgui19AnimationController15PostedMessage_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui19AnimationController17ActiveAnimation_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui4HTML18CustomURLHandler_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
@@ -793,7 +778,6 @@ $ORIGIN
 12CAutoReleaseI15CJSCallbackFuncE
 12CAutoReleaseI18CJSCallbackPromiseE
 12CDLLValidate
-12CIntProperty
 12CLogInstance
 12CMsgSetFocus
 12CMsgStopFind
@@ -801,13 +785,13 @@ $ORIGIN
 12CQuitRequest
 12CSetTitleMsg
 12CStopRequest
-13CBoolProperty
 13CCallbackBase
 13CCallbackImplILi1032EE
 13CCallbackImplILi16EE
 13CCallbackImplILi1EE
 13CCallbackImplILi20EE
 13CCallbackImplILi24584EE
+13CCallbackImplILi260EE
 13CCallbackImplILi264EE
 13CCallbackImplILi2EE
 13CCallbackImplILi32EE
@@ -838,9 +822,6 @@ $ORIGIN
 13CSetCursorMsg
 13CSetKeymapMsg
 13IUIController
-14CColorProperty
-14CFloatProperty
-14CHFontProperty
 14CHideCursorMsg
 14CInputKeyUpMsg
 14CMsgHideWindow
@@ -880,7 +861,6 @@ $ORIGIN
 15CMsgShowToolTip
 15CSetActivityMsg
 15CSetCapslockMsg
-15CStringProperty
 15CUtlHandleTableIN4vgui10BuildGroupELi20EE
 16 Mbps
 16CDeleteCursorMsg
@@ -958,7 +938,9 @@ $ORIGIN
 16CMsgPopupCreated
 16CMsgSetHTMLTitle
 16CMsgSetZoomLevel
+16CMsgSplashWindow
 16CMsgStartRequest
+16CMsgStartTracing
 16CMsgTouchGesture
 16CSetGammaRampMsg
 16CStreamVideoMode
@@ -1009,7 +991,6 @@ $ORIGIN
 18CStartAudioDataMsg
 18CStartVideoDataMsg
 18CStreamDataLostMsg
-18CTextureIdProperty
 18CUtlCharConversion
 18CVRConnectionReady
 19CClientHandshakeMsg
@@ -1140,6 +1121,7 @@ $ORIGIN
 23CMsgCanGoBackAndForward
 23CMsgSetForegroundWindow
 23CMsgSetHorizontalScroll
+23CMsgSetSimulatedLatency
 23CMsgSetWindowVisibility
 23CMsgSteamAuthCookiesSet
 23CNegotiationCompleteMsg
@@ -1159,7 +1141,6 @@ $ORIGIN
 24CNegotiationSetConfigMsg
 24CParentalSettingsManager
 24CPauseControllerInputMsg
-24CProportionalIntProperty
 24CShowOnScreenKeyboardMsg
 24CSteamParentalController
 24CTouchActionSetActiveMsg
@@ -1174,7 +1155,6 @@ $ORIGIN
 25CMsgMaximizeRestoreWindow
 25CMsgSetSharedPaintBuffers
 25CMsgVerticalScrollBarSize
-25CPanelAnimationDictionary
 25CResumeControllerInputMsg
 25CSaveTouchConfigLayoutMsg
 25CSetStreamingClientConfig
@@ -1189,11 +1169,9 @@ $ORIGIN
 26CMsgShowBrowserContextMenu
 26CMsgToggleFindInPageDialog
 26CPanelMessageMapDictionary
-26CProportionalFloatProperty
 26CVirtualHereShareDeviceMsg
 27CMsgDraggableRegionsChanged
 27CMsgHorizontalScrollBarSize
-27CMsgNeedsSharedTexturePaint
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetVRKeyboardVisibility
@@ -1286,6 +1264,7 @@ $ORIGIN
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 47CClientNotificationGameRecordingUserMarkerAdded
+47CMsgSetLocalFileRequestMapping_ClientAssetRoute
 48CClientNotificationFamilySharingLibraryAvailable
 5000
 50CClientNotificationCannotReadControllerGuideButton
@@ -1304,12 +1283,9 @@ $ORIGIN
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringli8CDefLessE
 7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE
-7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE
 7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE
-7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE
 7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE
 7CUtlMapIPKcN4vgui13StyleHandle_tEi22CDefCaselessStringLessE
-7CUtlMapIPKcPN4vgui32IPanelAnimationPropertyConverterEi22CDefCaselessStringLessE
 7CUtlMapIPKcbi22CDefCaselessStringLessE
 7CUtlMapIj7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEEi8CDefLessE
 7CUtlMapIj9CSmartPtrI15CJSCallbackFuncEi8CDefLessE
@@ -1382,7 +1358,6 @@ ANDROID64
 ASCII
 ASCII conversion buffer too small
 ASCII//TRANSLIT
-Accel
 AcceptPanel
 Activate
 ActivateItem
@@ -1403,7 +1378,6 @@ Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
 Afrikaans
 Albanian
 All files
-Already have converter for type %s, ignoring...\n
 Already saw decimal point or exponent; can't have another one.
 Amharic
 AnimationController
@@ -1442,6 +1416,8 @@ BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
 BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
+BIsValid()
+BLockedForRead()
 BREAKPAD_DUMP_LOCATION
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BResizeImageRGBA
@@ -1850,9 +1826,9 @@ CPPTYPE_MESSAGE
 CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
-CPanelKeyBindingMapDictionary
 CParentalCache::OnParentalLockChangeBegin
 CPathString
+CPathString::Concat: null path element
 CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
 CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
 CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
@@ -1879,6 +1855,7 @@ CSteamParentalController::OnParentalPlaytimeExhausted
 CSteamParentalController::OnParentalPlaytimeWarning
 CSteamParentalController::OnParentalWebTokenChanged
 CSteamUIMessagingController::OnClientPostMessage
+CSteamUIStorageController::OnConfigStoreChanged
 CTreeViewListControl
 CUIProtoBufMsg::BDeserialize
 CUIProtoBufMsg::SerializeCrossProc
@@ -1911,7 +1888,6 @@ Caller should provide us with *buffer_ when buffer is non-empty
 Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
 Can't
 Can't BackUp() after failed Next().
-Can't add Keybindings Context for unnamed panels\n
 Can't discard critical data on CRC error
 Can't get here.
 Can't get here: failed to get default value as string
@@ -2013,7 +1989,6 @@ CloseMenu
 CloseModal
 Closed temporary file %s
 CollapserChanged
-Color
 ColumnResized
 ColumnSelectButton
 ComboBox
@@ -2028,6 +2003,7 @@ Compression buffer size cannot be reduced below 6
 ConCommand '%s' not currently supported in config file\n
 ConVar
 ConVar::InternalSetValue: called with NULL
+Container path must be absolute
 ContextMenu
 ControlFactory
 ControlName
@@ -2046,13 +2022,8 @@ Could not find type "
 Could not get SERVERBROWSER and RUNGAMEENGINE interfaces.
 Could not parse
 Could not read existing registry file.
-Couldn't find script file %s\n
 Couldn't format time value %llu
 Couldn't parse default value "
-Couldn't parse script file: expected 'event', found '%s'\n
-Couldn't parse script file: expected <event name>, found nothing\n
-Couldn't parse script sequence '%s': expected '{', found '%s'\n
-Couldn't parse script sequence '%s': expected <anim command>, found '%s'\n
 Create
 CreateButton
 CreateDirectory
@@ -2081,7 +2052,6 @@ DLOPEN Error:%s\n
 DO NOT PARSE: fields may be stripped and missing.\n
 Danish
 Dari
-Deaccel
 December
 Decode failed
 Default
@@ -2272,7 +2242,7 @@ Finnish
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 FlashWindow
-Flicker
+FmtStr_ReportTruncation
 FolderIcon
 FolderUpButton
 ForwardButton
@@ -2352,10 +2322,7 @@ GetInt64FromString() did not get correct peCS parameter
 GetIntFromString() did not get correct peCS parameter
 GetInts()
 GetMessage
-GetName() && GetName()[ 0 ]
 GetOSType
-GetPanelAnimationDictionary()
-GetPanelKeyBindingMapDictionary()
 GetPanelMessageMapDictionary()
 GetRawRepeatedField
 GetRepeatedBool
@@ -2383,7 +2350,6 @@ Greek
 GripPanel
 Groups are not supported in proto3 syntax.
 Gujarati
-HFont
 HKCR
 HKCU
 HKEY_CLASSES_ROOT
@@ -2584,7 +2550,6 @@ IsTriplePressAllowed()
 IsValidIndex( elem )
 IsValidIndex( idx )
 IsValidIndex(elem)
-IsValidKeyBindingsContext()
 IsVisible()
 Italian
 ItemDeselected
@@ -2778,7 +2743,6 @@ Key Pad =
 Key Pad Enter
 Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
-KeyBinding for panel '%s' contained unknown binding '%s'\n
 KeyCodePressed
 KeyCodeReleased
 KeyCodeTyped
@@ -2788,28 +2752,19 @@ KeyModeSet
 KeyTyped
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues binary nested deeper than the parse depth assert, probably bad usage
 KeyValues don't support #include anymore, file "%s"
+KeyValues text nested deeper than the parse depth assert, probably bad usage
 KeyValues::FindKey( StringView ... )
 KeyValues::FindKey( hks )
 KeyValues::FindKey( hks, bCreate )
-KeyValues::MergeFromBuffer
+KeyValues::LoadFromBuffer
+KeyValues::LoadSubKeysFromBuffer
 KeyValues::ReadAsBinary
-KeyValues::ReadAsBinary - Set name
-KeyValues::ReadAsBinary - TYPE_BINARY_STRING
-KeyValues::ReadAsBinary - TYPE_COLOR
-KeyValues::ReadAsBinary - TYPE_FLOAT
-KeyValues::ReadAsBinary - TYPE_INT
-KeyValues::ReadAsBinary - TYPE_INT64
-KeyValues::ReadAsBinary - TYPE_NONE
-KeyValues::ReadAsBinary - TYPE_PTR
-KeyValues::ReadAsBinary - TYPE_STRING
-KeyValues::ReadAsBinary - TYPE_UINT64
-KeyValues::ReadAsBinary - TYPE_WSTRING
-KeyValues::ReadAsBinary() stack depth > 100
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::SaveToBuffer: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
@@ -3056,7 +3011,9 @@ N24CSteamParentalController35CCallback_OnParentalWebTokenChangedE
 N24CSteamParentalController38CCallback_OnParentalLockChangeCompleteE
 N24CSteamParentalController43CCallbackInternal_OnParentalPlaytimeWarningE
 N24CSteamParentalController45CCallbackInternal_OnParentalPlaytimeExhaustedE
+N25CFriendSettingsController38CCallbackInternal_OnConfigStoreChangedE
 N25CFriendSettingsController41CCallbackInternal_OnClientSettingsChangedE
+N25CSteamUIStorageController38CCallbackInternal_OnConfigStoreChangedE
 N27CSharedConnectionController22SharedConnectionInfo_tE
 N27CSharedConnectionController24CCallback_OnMessageReadyE
 N27CSharedConnectionController26CCallback_OnPostLogonStateE
@@ -3115,7 +3072,6 @@ N4vgui22ListPanelCollapserBaseE
 N4vgui22ListPanelSectionHeaderE
 N4vgui23CNotificationClickPanelE
 N4vgui25ListPanelSectionCollapserE
-N4vgui32IPanelAnimationPropertyConverterE
 N4vgui4HTML12CHTMLFindBarE
 N4vgui4HTMLE
 N4vgui4MenuE
@@ -3306,12 +3262,10 @@ NewFolderButton
 NewVoiceHotKeyState
 Nil time value
 No IDATs written into file
-No binding for '%s', defautl key already bound to '%s'\n
 No default value
 No field named "uninterpreted_option" in the Options proto.
 No profile for iCCP chunk
 No space in chunk cache for sPLT
-No such Panel Animation class %s\n
 Non-primitive types can't be packed.
 Non-repeated Any specified multiple times.
 Non-repeated field "
@@ -3413,8 +3367,6 @@ Panel::IsWithinTraverse
 Panel::LocalToScreen
 Panel::OnThink
 Panel::ParentLocalToScreen
-Panel::ReloadKeyBindings:  Can't find entry for panel '%s'\n
-Panel::SaveKeyBindings '%s' is read-only!!!\n
 Panel::ScreenToLocal
 PanelPtr
 Parent
@@ -3469,7 +3421,6 @@ Prompt
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
-Pulse
 Punjabi (Gurmukhi)
 Punjabi (Shahmukhi)
 QC,A
@@ -3496,12 +3447,13 @@ Read failure in png_handle_zTXt
 Read from EMS failed
 Read from XMS failed
 Read palette index exceeding num_palette
+ReadSectionFromBuffer:  got EOF instead of keyname
+ReadSectionFromBuffer:  got NULL key
+ReadSectionFromBuffer:  got conditional between key and value
+ReadSectionFromBuffer:  got empty keyname
+ReadSectionFromBuffer:  got } in key
+ReadSectionFromBuffer:  sections nested too deep
 Recursion limit at end of parse should be
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
 Registry
 ReleaseCleared() can only be used on a RepeatedPtrField not on
 ReleaseLast
@@ -3598,7 +3550,6 @@ SetEnum
 SetEnumValue
 SetFloat
 SetFocus
-SetFont
 SetInt32
 SetInt64
 SetPersonaState
@@ -3616,7 +3567,6 @@ SetSortColumn
 SetState
 SetString
 SetText
-SetTexture
 SetTitle
 SetUInt32
 SetUInt64
@@ -3665,7 +3615,6 @@ Space
 Spanish
 SpewAndLogActivate
 SpewAndLogChangeIfStillDefault
-Spline
 St10bad_typeid
 St10ctype_base
 St10money_base
@@ -3845,7 +3794,6 @@ Steam_GetAPICallResult
 SteamworksChatAPI
 Stop using I64/I32 - use lld or d, respectively
 StopButton
-StopPanelAnimations
 Storage.DeleteKey
 Storage.GetJSON
 Storage.GetString
@@ -4042,7 +3990,7 @@ VGUI_Scheme010
 VGUI_Setup001
 VGUI_Surface040
 VGUI_System011
-VGUI_ivgui007
+VGUI_ivgui008
 VGuiModuleTracker001
 VGy#
 VISTA
@@ -4098,7 +4046,6 @@ V_stristr(char const*, char const*)
 V_strlen( pchTime ) == 25
 V_strlower_fast
 V_strncat
-V_strncat_length
 V_strnchr
 V_strncmp
 V_strncpy
@@ -4149,7 +4096,6 @@ Warning
 Warning parsing text-format
 Warning: thumbnail image size does not match data length %u
 Warning: unknown JFIF revision number %d.%02d
-WeakRandomFloat
 WeakRandomInt
 WeakRandomUint32
 WebBack
@@ -4207,7 +4153,6 @@ XXXXXX
 Xhosa
 YYYY
 Yoruba
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 Z0000
 Z_OK on Z_FINISH with output space
 Zulu
@@ -4233,6 +4178,7 @@ Zulu
 \nParsing attempt:
 \nlibpng version 1.6.37\nCopyright (c) 2018-2019 Cosmin Truta\nCopyright (c) 1998-2002,2004,2006-2018 Glenn Randers-Pehrson\nCopyright (c) 1996-1997 Andreas Dilger\nCopyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.\n
 \t(%zu) comparing %s with %s\n
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \u%04x
 \u000
 \u001
@@ -4369,7 +4315,6 @@ alphasort64
 amazon.com
 amharic
 an arena.
-animate
 anonymous
 aperturescience.com
 appID
@@ -4468,7 +4413,6 @@ belarusian
 bg_BG
 bgcolor
 bind_textdomain_codeset
-binding
 bindtextdomain
 bitNum >= 0 && bitNum < this->Size()
 blGrip
@@ -4495,7 +4439,6 @@ browserid
 btakefocus
 btowc
 buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
-buf.IsText()
 bufRGB.TellPut() == nWidth*nHeight*3
 bufRGBA.TellPut() == nWidth*nHeight * 4
 buffer error
@@ -4622,7 +4565,6 @@ created64
 croatian
 crypto
 cs_CZ
-ctrl
 cubBytesToRead < INT32_MAX
 cubData
 cubData < FIO_MAX_IO_BYTES
@@ -4723,7 +4665,6 @@ es-419
 es_419
 es_ES
 estonian
-event
 ever_enabled
 exceeds application limits
 execve
@@ -4747,7 +4688,6 @@ featuresEnabled
 feof
 ferror
 fflush
-fgcolor
 fgets
 fi_FI
 fieldName
@@ -4830,7 +4770,6 @@ function %s
 futimes
 fwrite
 gAMA
-g_AnimationPropertyConverters
 g_ButtonSoundNames
 g_FriendsUIModule
 g_ParentalCache
@@ -5079,7 +5018,7 @@ hungarian
 i < length_
 iCCP
 iCCP: invalid keyword
-iNewReadIndex != 3
+iNew < k_nSharedImageMaxBuffers
 iSection < 32
 iSection >= 0
 iTXt
@@ -5115,7 +5054,6 @@ incorrect header check
 incorrect length check
 index
 index > 0
-index >= 0 && index < kb->m_Panels.Count()
 indonesian
 infinity
 info change after png_start_read_image or png_read_update_info
@@ -5123,7 +5061,6 @@ info.m_pReplacementString == 0
 ingame
 initializer for module
 input
-inputData
 inspectelement
 insufficient memory
 insufficient memory to read chunk
@@ -5223,14 +5160,8 @@ k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 kannada
 kazakh
-kbPanel
-kbPanel->GetName()
-kbPanel->GetName()[ 0 ]
 keyMap
-keybindings
-keybindings\n
 keyboardinputenabled
-keycode
 keyword "@1": bad character '0x@2'
 keyword truncated
 kh9F
@@ -5304,8 +5235,6 @@ lseek64
 luxembourgish
 m_ActiveAnimations
 m_AllChildren
-m_AnimationMaps
-m_AnimationMaps[ iAnimationMap ].map->entries
 m_BaseIP.GetType() == k_EIPTypeV4
 m_Buffer
 m_ColumnsData
@@ -5335,26 +5264,19 @@ m_MenuItems
 m_MenuItems.IsValidIndex( itemID )
 m_MenuItems.IsValidIndex(itemID)
 m_MessageMaps
-m_MessageMaps[ iMessageMap ].map->boundkeys
-m_MessageMaps[ iMessageMap ].map->defaultkeys
 m_MessageMaps[ iMessageMap ].map->entries
 m_NodeList
 m_NodeList.IsValidIndex( endItem )
 m_NodeList.IsValidIndex(itemIndex)
-m_PanelAnimationMapPool
-m_PanelKeyBindingMapPool
 m_PanelMessageMapPool
 m_ParentalSettings
 m_PerLineEllipses
-m_PostedMessages
 m_ReplacedKVs
 m_ResourceCache
 m_SelectedItems
 m_SeparatorPanels
 m_SeparatorPanels.Count() == 0
 m_Separators
-m_Sequences
-m_Sequences[ iSequence ].cmdList
 m_SortedItems
 m_SpewThrottle
 m_StringPools
@@ -5414,8 +5336,7 @@ m_mapWaitingCalls
 m_memNodes
 m_nAllocationCount >= 0
 m_nBrowserID
-m_nLockedIdx == -1
-m_nLockedIdx >= 0
+m_nCount > 0
 m_nSuppressDialogVariablesMessages >= 1
 m_p == NULL
 m_pBuildGroup
@@ -5431,6 +5352,7 @@ m_pFriendButtons
 m_pHTMLController
 m_pImageList
 m_pImagePanel
+m_pItemRunning
 m_pKV
 m_pLogInstance
 m_pObj
@@ -5452,6 +5374,7 @@ m_pkv
 m_pkvCommand
 m_pkvData
 m_pkvDialogVariables
+m_pkvHeldRoamingChanges
 m_pkvLastKeyAdded != NULL
 m_pkvSettings
 m_protoSettings.ParseFromArray( ( char * )pBuffer->Base() + pBuffer->TellGet(), nBytesProto )
@@ -5495,6 +5418,7 @@ m_strParentalWebToken
 m_strPreventNavigateExceptURL
 m_strResourceName
 m_strURLToLoad
+m_strUTF8Path
 m_strWatchPath
 m_strWindowConfig
 m_tree
@@ -5638,8 +5562,6 @@ none
 north
 north-east
 north-west
-northeast
-northwest
 norwegian
 null
 nullptr output boolean given.
@@ -5677,7 +5599,6 @@ out of place
 out-of-date sRGB profile with no signature
 output gamma out of expected range
 output specified is nullptr
-outputData
 pBlob
 pBuffer->TellPut() == 0
 pCAL
@@ -5710,7 +5631,6 @@ package $0;\n\n
 paintbackground
 palette color-map: too few entries
 panel
-panel != NULL
 parent
 parentItemIndex == -1 || m_NodeList.IsValidIndex(parentItemIndex)
 parental
@@ -5802,8 +5722,6 @@ profile '
 profile matches sRGB but writing iCCP instead
 progress
 propertysheet
-proportional_float
-proportional_int
 proto
 proto2
 proto3
@@ -5913,7 +5831,6 @@ row_stride == (int)( nImageWidth * jpegInfo.output_components )
 row_stride_out >= row_stride
 rowheight
 ru_RU
-runevent
 rungame/
 rungameid/
 russian
@@ -5953,12 +5870,10 @@ scaling
 scandir
 scandir64
 sched_yield
-scheme
 schinese
 scots
 screenx
 screeny
-scriptname
 scrollbar
 scrypt: N out of range
 scrypt: hash function power-on-self-test failed
@@ -5997,7 +5912,6 @@ sha512_block_data_order
 shacknews.com
 shahmukhi
 shellcmd
-shift
 shm_open
 shm_open failed (errno %d)
 shm_unlink
@@ -6010,7 +5924,6 @@ sindhi
 sinhala
 sint32
 sint64
-size
 size too big:
 size_t to int conversion
 sizeable
@@ -6040,8 +5953,6 @@ sotho
 south
 south-east
 south-west
-southeast
-southwest
 space
 spaceGranted
 spaceReleased
@@ -6114,8 +6025,6 @@ steamtranslation.ru
 steamui.so
 stop
 stop using I64/I32, use lld or d respectively
-stopanimation
-stopevent
 store
 store/
 strAccountName
@@ -6351,13 +6260,11 @@ vertical-align
 vgui2_s
 vgui::
 vgui::BuildGroup
-vgui::CPanelAnimationDictionary
 vgui::CPanelMessageMapDictionary
 vgui::CheckButton
 vgui::DragDrop_t
 vgui::EditablePanel
 vgui::Frame
-vgui::HFont
 vgui::HTML
 vgui::Label
 vgui::ListPanel

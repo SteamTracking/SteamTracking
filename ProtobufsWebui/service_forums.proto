@@ -152,13 +152,13 @@ message CForums_UserPermissions {
 service Forums {
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetTopicDetails (.CForums_GetTopicDetails_Request) returns (.CForums_GetTopicDetails_Response);
-	// ePrivilege=1, eWebAPIKeyRequirement=2
+	// ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc ReportPost (.CForums_ReportPost_Request) returns (.CForums_ReportPost_Response);
-	// ePrivilege=1, eWebAPIKeyRequirement=2
+	// ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc ResolveReportedPost (.CForums_ResolveReportedPost_Request) returns (.CForums_ResolveReportedPost_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc ResolveReportedPosts (.CForums_ResolveReportedPosts_Request) returns (.CForums_ResolveReportedPosts_Response);
-	// ePrivilege=1, eWebAPIKeyRequirement=2
+	// ePrivilege=1, eWebAPIKeyRequirement=2, rgBrowserAPISites=ArrayExpression
 	rpc SanctionReportedPost (.CForums_SanctionReportedPost_Request) returns (.CForums_SanctionReportedPost_Response);
 }
 

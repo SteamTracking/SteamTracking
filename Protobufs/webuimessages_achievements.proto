@@ -48,9 +48,46 @@ message CAchievements_GetUserAchievements_Response {
 	optional int32 schema_version = 3;
 }
 
+message CAchievements_GetGameAchievements_Request {
+	optional uint64 gameid = 1;
+}
+
+message CAchievements_GetGameAchievements_Response {
+	message Achievement {
+		optional string internal_name = 1;
+		optional string localized_name = 2;
+		optional string localized_desc = 3;
+		optional string icon = 4;
+		optional string icon_gray = 5;
+		optional bool hidden = 6;
+		optional uint32 internal_key = 8;
+		optional int32 min_progress_int = 9;
+		optional int32 max_progress_int = 10;
+		optional uint32 groupid = 11;
+		optional bool archived = 12;
+		optional float min_progress_float = 14;
+		optional float max_progress_float = 15;
+	}
+
+	message Group {
+		optional uint32 groupid = 1;
+		optional string localized_name = 2;
+		optional uint32 dlcappid = 3;
+		optional bool archived = 4;
+		optional bool developeronly = 5;
+		optional uint32 order = 6;
+		optional bool ispublic = 7;
+	}
+
+	repeated .CAchievements_GetGameAchievements_Response.Achievement achievements = 1;
+	optional int32 schema_version = 2;
+	repeated .CAchievements_GetGameAchievements_Response.Group groups = 3;
+}
+
 service Achievements {
 	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
 
 	rpc GetInfo (.CAchievements_GetInfo_Request) returns (.CAchievements_GetInfo_Response);
 	rpc GetUserAchievements (.CAchievements_GetUserAchievements_Request) returns (.CAchievements_GetUserAchievements_Response);
+	rpc GetGameAchievements (.CAchievements_GetGameAchievements_Request) returns (.CAchievements_GetGameAchievements_Response);
 }

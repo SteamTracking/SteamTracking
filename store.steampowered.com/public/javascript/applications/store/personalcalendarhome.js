@@ -133,11 +133,10 @@ function X(e) {
           className: v ? void 0 : `fiveElementEightGap`,
           children: E.map((e, t) =>
             (0, J.jsx)(
-              Q,
+              $,
               {
                 bInitialFocus: t === 10,
                 nTimestamp: e,
-                nNextTimestamp: t < E.length - 1 ? E[t + 1] : e + 86400,
                 arrAppInfos: V,
                 nRankThreshold: l?.nResultsToShow ?? 100,
               },
@@ -164,29 +163,38 @@ function Z(e) {
   });
 }
 function Q(e) {
+  let t = new Date(e * 1e3);
+  t.getDay() == 1 && t.setDate(t.getDate() - 2);
+  let n = new Date(e * 1e3);
+  return (
+    n.setDate(n.getDate() + 1),
+    [Math.floor(t.getTime() / 1e3), Math.floor(n.getTime() / 1e3)]
+  );
+}
+function $(e) {
   let {
       nTimestamp: t,
-      nNextTimestamp: n,
-      bInitialFocus: r,
-      arrAppInfos: i,
-      nRankThreshold: a,
+      bInitialFocus: n,
+      arrAppInfos: r,
+      nRankThreshold: i,
     } = e,
-    o = m(),
-    s = p(),
-    c = f(`${k.STORE_BASE_URL}personalcalendar`, o, s),
-    l = { weekday: `short` },
-    u = { day: `numeric`, month: `numeric` },
-    d = new Date(t * 1e3),
-    g = new Date(),
-    v =
-      d.getDate() === g.getDate() &&
-      d.getMonth() === g.getMonth() &&
-      d.getFullYear() === g.getFullYear(),
-    y = d > g,
-    S = d.toLocaleDateString(h(), l),
-    w = d.toLocaleString(h(), u),
-    E = i
-      .filter((e) => e.nReleaseDate > t && e.nReleaseDate < n)
+    a = m(),
+    o = p(),
+    s = f(`${k.STORE_BASE_URL}personalcalendar`, a, o),
+    c = { weekday: `short` },
+    l = { day: `numeric`, month: `numeric` },
+    u = new Date(t * 1e3),
+    d = new Date(),
+    g =
+      u.getDate() === d.getDate() &&
+      u.getMonth() === d.getMonth() &&
+      u.getFullYear() === d.getFullYear(),
+    v = u > d,
+    y = u.toLocaleDateString(h(), c),
+    S = u.toLocaleString(h(), l),
+    [w, E] = Q(t),
+    D = r
+      .filter((e) => e.nReleaseDate >= w && e.nReleaseDate < E)
       .sort((e, t) =>
         e.bIsWishlisted && !t.bIsWishlisted
           ? -1
@@ -194,30 +202,30 @@ function Q(e) {
             ? 1
             : e.nRank - t.nRank,
       ),
-    D = a ?? 100,
-    j = E.filter((e) => e.nRank <= D).length - 2,
-    M = E.length == 0,
-    [N, F] = P.useState(!1),
-    I = _(),
-    L = P.useRef(null);
+    j = i ?? 100,
+    M = D.filter((e) => e.nRank <= j).length - 2,
+    N = D.length == 0,
+    [F, I] = P.useState(!1),
+    L = _(),
+    R = P.useRef(null);
   return (
     P.useEffect(() => {
-      if (r && I && L.current) {
-        let e = L.current.closest(`.carousel__slide`),
-          t = L.current.closest(`.carousel__slider-tray-wrapper`);
+      if (n && L && R.current) {
+        let e = R.current.closest(`.carousel__slide`),
+          t = R.current.closest(`.carousel__slider-tray-wrapper`);
         t && e && (t.scrollLeft = e.offsetLeft);
       }
-    }, [r, I]),
+    }, [n, L]),
     (0, J.jsxs)(T, {
-      className: A(B, v && `_8XPG-IbvHHs-`, y && `N3v3VnhKgU8-`, M && void 0),
+      className: A(B, g && `_8XPG-IbvHHs-`, v && `N3v3VnhKgU8-`, N && void 0),
       "flow-children": `column`,
       children: [
         (0, J.jsxs)(`div`, {
           className: V,
           children: [
-            !v && (0, J.jsx)(`div`, { className: `FeN6na6SvAg-`, children: S }),
-            !v && (0, J.jsx)(`div`, { className: `bLQQ-syFWHg-`, children: w }),
-            v &&
+            !g && (0, J.jsx)(`div`, { className: `FeN6na6SvAg-`, children: y }),
+            !g && (0, J.jsx)(`div`, { className: `bLQQ-syFWHg-`, children: S }),
+            g &&
               (0, J.jsx)(`div`, {
                 className: `lGsGMjZ-9IE-`,
                 children: x.Localize(`#Time_Today`),
@@ -228,37 +236,37 @@ function Q(e) {
           className: H,
           "flow-children": `column`,
           navEntryPreferPosition: b.MAINTAIN_Y,
-          preferredFocus: r && !N,
-          ref: L,
-          onFocusWithin: () => F(!0),
+          preferredFocus: n && !F,
+          ref: R,
+          onFocusWithin: () => I(!0),
           children: (0, J.jsxs)(J.Fragment, {
             children: [
-              E.slice(0, 2).map((e) =>
-                (0, J.jsx)($, { nAppID: e.nAppID }, e.nAppID),
+              D.slice(0, 2).map((e) =>
+                (0, J.jsx)(ee, { nAppID: e.nAppID }, e.nAppID),
               ),
-              M &&
+              N &&
                 (0, J.jsx)(`div`, {
                   className: `MDx-yf8h-Ww-`,
                   children: C(
                     x.Localize(`#PersonalCalendar_EmptyDay`),
-                    (0, J.jsx)(`a`, { href: c }),
+                    (0, J.jsx)(`a`, { href: s }),
                   ),
                 }),
             ],
           }),
         }),
-        !I &&
-          j > 0 &&
+        !L &&
+          M > 0 &&
           (0, J.jsx)(O, {
-            href: c,
+            href: s,
             className: `rsPEubiF9HI-`,
-            children: x.Localize(`#PersonalCalendar_More`, j),
+            children: x.Localize(`#PersonalCalendar_More`, M),
           }),
       ],
     })
   );
 }
-function $(e) {
+function ee(e) {
   let t = D({ appid: e.nAppID }),
     n = i(940),
     a = _(),
@@ -301,7 +309,7 @@ function $(e) {
                 (0, J.jsx)(`img`, { className: G, src: p, alt: `` }),
                 h &&
                   v &&
-                  (0, J.jsx)(ee, { id: { appid: e.nAppID }, nIntervalMS: 1e3 }),
+                  (0, J.jsx)(te, { id: { appid: e.nAppID }, nIntervalMS: 1e3 }),
                 !h &&
                   (0, J.jsx)(r, {
                     id: { appid: e.nAppID },
@@ -316,7 +324,7 @@ function $(e) {
     })
   );
 }
-function ee(e) {
+function te(e) {
   let t = E(e.id) ?? [],
     [n, r] = P.useState(0);
   return (
@@ -341,7 +349,7 @@ function ee(e) {
         })
   );
 }
-function te(e) {
+function ne(e) {
   return v.logged_in
     ? (0, J.jsx)(o, {
         placeholderHeight: 390,
@@ -350,4 +358,4 @@ function te(e) {
       })
     : null;
 }
-export { te as default };
+export { ne as default };

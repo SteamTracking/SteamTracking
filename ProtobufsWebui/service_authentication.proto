@@ -24,7 +24,7 @@ message CAuthentication_BeginAuthSessionViaCredentials_Request {
 	optional uint64 encryption_timestamp = 4;
 	optional bool remember_login = 5;
 	optional int32 platform_type = 6 [(.description) = "enum"];
-	optional int32 persistence = 7 [(.description) = "enum"];
+	optional int32 persistence = 7 [default = 1, (.description) = "enum"];
 	optional string website_id = 8 [default = "Unknown"];
 	optional .CAuthentication_DeviceDetails device_details = 9;
 	optional string guard_data = 10;
@@ -218,7 +218,7 @@ message CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request {
 	optional fixed64 steamid = 3;
 	optional bytes signature = 4;
 	optional bool confirm = 5 [default = false];
-	optional int32 persistence = 6 [(.description) = "enum"];
+	optional int32 persistence = 6 [default = 1, (.description) = "enum"];
 }
 
 message CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response {

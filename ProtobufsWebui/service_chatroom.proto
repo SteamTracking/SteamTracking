@@ -870,7 +870,7 @@ service ChatRoom {
 	rpc ReorderRole (.CChatRoom_ReorderRole_Request) returns (.CChatRoom_ReorderRole_Response);
 	// ePrivilege=3
 	rpc ReplaceRoleActions (.CChatRoom_ReplaceRoleActions_Request) returns (.CChatRoom_ReplaceRoleActions_Response);
-	// ePrivilege=3
+	// ePrivilege=3, rgBrowserAPISites=ArrayExpression
 	rpc ReportMessage (.CChatRoom_ReportMessage_Request) returns (.CChatRoom_ReportMessage_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc ResolveReport (.CChatRoom_ResolveReport_Request) returns (.CChatRoom_ResolveReport_Response);

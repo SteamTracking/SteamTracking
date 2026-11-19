@@ -82,7 +82,7 @@ service GameRecordingClip {
 	rpc CreateShareClip (.CGameRecording_CreateShareClip_Request) returns (.CGameRecording_CreateShareClip_Response);
 	// ePrivilege=1
 	rpc DeleteSharedClip (.CGameRecording_DeleteSharedClip_Request) returns (.CGameRecording_DeleteSharedClip_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetSingleSharedClip (.CGameRecording_GetSingleSharedClip_Request) returns (.CGameRecording_GetSingleSharedClip_Response);
 }
 

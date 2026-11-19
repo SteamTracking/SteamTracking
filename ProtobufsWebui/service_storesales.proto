@@ -71,11 +71,11 @@ message SteamAwardsUserVote {
 }
 
 service StoreSales {
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetUserVotes (.CStore_GetUserVotes_Request) returns (.CStore_GetUserVotes_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetVoteDefinitions (.CStore_GetVoteDefinitions_Request) returns (.CStore_GetVoteDefinitions_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetVote (.CStore_SetVote_Request) returns (.CStore_SetVote_Response);
 }
 

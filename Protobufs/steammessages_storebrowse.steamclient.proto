@@ -52,6 +52,14 @@ enum EUserReviewScore {
 	k_EUserReviewScore_OverwhelminglyPositive = 9;
 }
 
+enum EScreenshotCategory {
+	k_EScreenshotCategory_Invalid = 0;
+	k_EScreenshotCategory_Gameplay = 1;
+	k_EScreenshotCategory_GameMenu = 2;
+	k_EScreenshotCategory_Cinematic = 3;
+	k_EScreenshotCategory_ConceptArt = 4;
+}
+
 enum ETrailerCategory {
 	k_ETrailerCategory_Invalid = 0;
 	k_ETrailerCategory_Gameplay = 1;
@@ -220,6 +228,7 @@ message StoreItem {
 		optional .StoreItem.Reviews.StoreReviewSummary summary_filtered = 1;
 		optional .StoreItem.Reviews.StoreReviewSummary summary_unfiltered = 2;
 		optional .StoreItem.Reviews.StoreReviewSummary summary_language_specific = 3;
+		optional bool counts_all_purchases = 4;
 	}
 
 	message BasicInfo {
@@ -233,6 +242,8 @@ message StoreItem {
 		repeated .StoreItem.BasicInfo.CreatorHomeLink developers = 3;
 		repeated .StoreItem.BasicInfo.CreatorHomeLink franchises = 4;
 		optional string capsule_headline = 5;
+		repeated uint32 featured_creator_home_clan_account_ids = 6;
+		optional uint32 first_franchise_clan_account_id = 7;
 	}
 
 	message Tag {
@@ -352,12 +363,15 @@ message StoreItem {
 		optional uint32 free_with_master_sub_appid = 54;
 		optional string formatted_lowest_recent_price = 55;
 		optional bool is_free_license = 56;
+		optional int32 combined_discount_pct = 57;
 	}
 
 	message Screenshots {
 		message Screenshot {
 			optional string filename = 1;
 			optional int32 ordinal = 2;
+			optional string alt_text = 3;
+			optional .EScreenshotCategory category = 4 [default = k_EScreenshotCategory_Invalid];
 		}
 
 		repeated .StoreItem.Screenshots.Screenshot all_ages_screenshots = 2;
@@ -386,6 +400,8 @@ message StoreItem {
 			optional string screenshot_full = 11;
 			optional int32 trailer_base_id = 12;
 			optional bool all_ages = 14;
+			optional string screenshot_small = 15;
+			optional uint32 trailer_id = 16;
 		}
 
 		repeated .StoreItem.Trailers.Trailer highlights = 1;
@@ -572,6 +588,72 @@ message StoreItem {
 			repeated uint32 episode_appids = 3;
 		}
 
+		message EventSpotlight {
+			optional uint32 clan_account_id = 1;
+			optional fixed64 event_gid = 2;
+			optional fixed64 announcement_gid = 3;
+		}
+
+		message MusicAlbum {
+			message Track {
+				optional uint32 disc_number = 1;
+				optional uint32 track_number = 2;
+				optional string name = 3;
+				optional string other_name = 4;
+				optional uint32 duration_seconds = 5;
+			}
+
+			repeated .StoreItem.ExtraDetails.MusicAlbum.Track tracks = 1;
+			optional string artist = 2;
+			optional string composer = 3;
+			optional string label = 4;
+			optional string other_credits = 5;
+		}
+
+		message SalePage {
+			optional uint32 clan_account_id = 1;
+			optional fixed64 event_gid = 2;
+		}
+
+		message HardwareCompatibility {
+			message TestResult {
+				optional .ESteamDeckCompatibilityResultDisplayType display_type = 1 [default = k_ESteamDeckCompatibilityResultDisplayType_Invisible];
+				optional string loc_token = 2;
+			}
+
+			message SteamOSTestResult {
+				optional .ESteamOSCompatibilityResultDisplayType display_type = 1 [default = k_ESteamOSCompatibilityResultDisplayType_Invisible];
+				optional string loc_token = 2;
+			}
+
+			repeated .StoreItem.ExtraDetails.HardwareCompatibility.TestResult steam_deck_tests = 1;
+			repeated .StoreItem.ExtraDetails.HardwareCompatibility.SteamOSTestResult steam_os_tests = 2;
+			repeated .StoreItem.ExtraDetails.HardwareCompatibility.TestResult steam_machine_tests = 3;
+			repeated .StoreItem.ExtraDetails.HardwareCompatibility.TestResult steam_frame_tests = 4;
+			optional string steam_deck_blog_url = 5;
+		}
+
+		message DLCForPurchase {
+			message DLC {
+				optional uint32 appid = 1;
+				optional uint32 packageid = 2;
+				repeated .EContentDescriptorID content_descriptorids = 3;
+				optional .EDLCHighlightReason highlight_reason = 4 [default = k_EDLCHighlightReason_None];
+			}
+
+			message Dependency {
+				optional uint32 appid = 1;
+				optional uint32 packageid = 2;
+				optional bool required = 3;
+			}
+
+			repeated .StoreItem.ExtraDetails.DLCForPurchase.DLC dlc = 1;
+			optional uint32 dlc_count = 2;
+			repeated .StoreItem.ExtraDetails.DLCForPurchase.Dependency dependencies = 3;
+			optional uint32 packageid = 4;
+			optional string formatted_total_price = 5;
+		}
+
 		enum EVideoExtrasNote {
 			k_EVideoExtrasNote_Purchase = 0;
 			k_EVideoExtrasNote_Rental = 1;
@@ -611,6 +693,13 @@ message StoreItem {
 		optional .StoreItem.ExtraDetails.Episode episode = 30;
 		repeated .StoreItem.ExtraDetails.Season seasons = 31;
 		optional .StoreItem.ExtraDetails.EVideoExtrasNote video_extras_note = 32 [default = k_EVideoExtrasNote_Purchase];
+		optional bool has_community_hub = 33;
+		optional .StoreItem.ExtraDetails.EventSpotlight event_spotlight = 34;
+		optional .StoreItem.ExtraDetails.MusicAlbum music_album = 35;
+		repeated .StoreItem.ExtraDetails.SalePage sale_pages = 36;
+		optional bool item_store_show_featured = 37;
+		optional .StoreItem.ExtraDetails.HardwareCompatibility hardware_compatibility = 38;
+		optional .StoreItem.ExtraDetails.DLCForPurchase dlc_for_purchase = 39;
 	}
 
 	message OptInRegistrationTags {
@@ -697,6 +786,7 @@ message StoreGameRating {
 	optional bool use_age_gate = 11;
 	repeated .ERatingDescriptorImage descriptor_images = 12;
 	optional string content_survey_notes = 13;
+	optional .EAgencyRating agency_rating = 14 [default = k_EAgencyRating_Invalid];
 	optional string image_url = 20;
 	optional string image_target = 21;
 }
@@ -706,6 +796,7 @@ message StoreBrowseFilterFailure {
 	optional bool already_owned = 5;
 	optional bool on_wishlist = 6;
 	optional bool ignored = 7;
+	optional bool ignored_creator = 8;
 	optional bool not_in_users_language = 10;
 	optional bool not_on_users_platform = 11;
 	optional bool demo_for_owned_game = 12;
@@ -857,6 +948,7 @@ message CHardwarePackageDetails {
 	optional uint32 collection_time_active = 26;
 	optional bool reservation_not_allowed = 27;
 	optional bool requires_signature = 28;
+	optional bool new_reservations_disabled = 29;
 }
 
 message CStoreBrowse_GetHardwareItems_Response {

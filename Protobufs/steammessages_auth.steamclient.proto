@@ -9,6 +9,7 @@ enum EAuthTokenPlatformType {
 	k_EAuthTokenPlatformType_SteamClient = 1;
 	k_EAuthTokenPlatformType_WebBrowser = 2;
 	k_EAuthTokenPlatformType_MobileApp = 3;
+	k_EAuthTokenPlatformType_PAT = 4;
 }
 
 enum EAuthTokenAppType {

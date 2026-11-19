@@ -170,7 +170,7 @@ import {
   wr as qe,
 } from "./chunk~1fa4b8f2ff.js";
 import { _ as Je } from "./chunk~0a99e05c44.js";
-import { K as Ye, U as Xe, jn as Ze } from "./chunk~6b8ddcaac8.js";
+import { K as Ye, Mn as Xe, U as Ze } from "./chunk~6b8ddcaac8.js";
 import { C as Qe, O as $e, w as F } from "./chunk~44f252525d.js";
 import { n as et } from "./chunk~f8b6a4beb3.js";
 import { i as I } from "./chunk~8fb30ea08b.js";
@@ -3729,7 +3729,7 @@ function Bi(e) {
   let t = e.appid || void 0,
     n = rt(t),
     { data: r } = Je(n),
-    { data: i } = Xe(t ? void 0 : e.clanSteamID.GetAccountID());
+    { data: i } = Ze(t ? void 0 : e.clanSteamID.GetAccountID());
   return (t ? r?.name : i?.group_name) || void 0;
 }
 var Vi = {
@@ -6138,7 +6138,7 @@ function ks(e) {
             d?.display_message
               ? (0, G.jsx)(`div`, { children: d?.display_message })
               : (0, G.jsx)(`div`, {
-                  children: Ee(`#UserPolls_status_N_TimeRemaining`, Ze(f - a)),
+                  children: Ee(`#UserPolls_status_N_TimeRemaining`, Xe(f - a)),
                 }),
           ],
         }),

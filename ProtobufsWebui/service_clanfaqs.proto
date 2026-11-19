@@ -204,11 +204,11 @@ message CClanFAQSummary_CLanguageInfo {
 service ClanFAQS {
 	// ePrivilege=1
 	rpc CheckFAQPermissions (.CClanFAQS_CheckFAQPermissions_Request) returns (.CClanFAQS_CheckFAQPermissions_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc Create (.CClanFAQS_Create_Request) returns (.CClanFAQS_Create_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc Delete (.CClanFAQS_Delete_Request) returns (.CClanFAQS_Delete_Response);
-	// bConstMethod=true, ePrivilege=5
+	// bConstMethod=true, ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc FetchLocalizationFromCrowdIn (.CClanFAQs_FetchLocalizationFromCrowdIn_Request) returns (.CClanFAQs_FetchLocalizationFromCrowdIn_Response);
 	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetAllDrafts (.CClanFAQS_GetAllDrafts_Request) returns (.CClanFAQS_GetAllDrafts_Response);
@@ -216,7 +216,7 @@ service ClanFAQS {
 	rpc GetAllFAQsForClan (.CClanFAQS_GetAllFAQsForClan_Request) returns (.CClanFAQS_GetAllFAQsForClan_Response);
 	// ePrivilege=1
 	rpc GetAllLatestVersionPublishedFAQS (.CClanFAQS_GetAllLatestVersionPublishedFAQS_Request) returns (.CClanFAQS_GetAllLatestVersionPublishedFAQS_Response);
-	// ePrivilege=5
+	// ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc GetCrowdInMetadata (.CClanFAQs_GetCrowdInMetadata_Request) returns (.CClanFAQs_GetCrowdInMetadata_Response);
 	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
 	rpc GetFAQ (.CClanFAQS_GetFAQ_Request) returns (.CClanFAQS_GetFAQ_Response);
@@ -224,17 +224,17 @@ service ClanFAQS {
 	rpc GetFAQVersion (.CClanFAQS_GetFAQVersion_Request) returns (.CClanFAQS_GetFAQVersion_Response);
 	// ePrivilege=1
 	rpc PreviewDraft (.CClanFAQS_PreviewDraft_Request) returns (.CClanFAQS_PreviewDraft_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc PublishDraft (.CClanFAQS_PublishDraft_Request) returns (.CClanFAQS_PublishDraft_Response);
 	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc SearchFAQs (.CClanFAQS_SearchFAQs_Request) returns (.CClanFAQS_SearchFAQs_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetVisibility (.CClanFAQS_SetVisibility_Request) returns (.CClanFAQS_SetVisibility_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc UpdateDraft (.CClanFAQS_UpdateDraft_Request) returns (.CClanFAQS_UpdateDraft_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc UpdateInternalName (.CClanFAQS_UpdateInternalName_Request) returns (.CClanFAQS_UpdateInternalName_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc UpdateJsonData (.CClanFAQS_UpdateJsonData_Request) returns (.CClanFAQS_UpdateJsonData_Response);
 }
 

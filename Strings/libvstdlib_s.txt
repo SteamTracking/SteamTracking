@@ -181,7 +181,8 @@ $ORIGIN
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGgo\t
+++CCUNGG
+++CCUNGl
 ++CCUNGstd::exception
 ----------------------------------------\n
 -chromeosdiskmanagement
@@ -193,6 +194,7 @@ $ORIGIN
 ../public/tier0/memoverride.cpp
 ../public/tier0/tslist.h
 ../public/tier1/bitstring.h
+../public/tier1/keyvalues.h
 ../public/tier1/netadr.h
 ../public/tier1/smartptr.h
 ../public/tier1/utlbuffer.h
@@ -232,13 +234,16 @@ $ORIGIN
 ../vstdlib/strtools_unicode.cpp
 .cpl
 .steam_exec_test
+/.flatpak-info
 /ValveIPCSHM_%d
+/app
 /dev
 /dev/
 /dev/disk/by-uuid
 /dev/null
 /dev/random
 /dev/urandom
+/etc
 /etc/SUSE-release
 /etc/arch-release
 /etc/centos-release
@@ -263,6 +268,7 @@ $ORIGIN
 /steamrt64
 /steamsysinfo
 /tmp
+/usr
 /usr/bin/crosdisk %s
 0123456789
 0123456789ABCDEF
@@ -388,6 +394,7 @@ BIKE
 BIPFamiliesOverlap - unknown eServerFamilies value %d
 BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
+BIsValid()
 BLACK
 BLACKFRIDAY
 BLUE
@@ -428,6 +435,7 @@ CFileWriter::Close
 CFileWriter::FlushInternal
 CFileWriter::Write
 CFileWriterThread
+CFmtStr truncated: "%s"
 CGaussianRandomStream::AttachToStream(IUniformRandomStream*)
 CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
 CGaussianRandomStream::RandomFloat(float, float)
@@ -468,6 +476,7 @@ COOL
 COOP
 COUNTRY
 CPathString
+CPathString::Concat: null path element
 CRC32_ProcessBuffer
 CREDIT
 CREDITCARD
@@ -524,6 +533,7 @@ CommandLine
 ConCommand '%s' not currently supported in config file\n
 ConVar
 ConVar::InternalSetValue: called with NULL
+Container path must be absolute
 Convars
 Coroutine '%s' stack save size is %d bytes
 Coroutine stack bookkeeping error
@@ -598,6 +608,8 @@ FURNITURE
 FUTBOL
 Failed to load optional module %s\n
 File change notification for %s but no file contents changed based on hash\n
+FmtStr_ReportTruncation
+FmtStr_SetTruncationAssertMax
 GALLERY
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
 GCoroutineMgr().IsAnyCoroutineActive()
@@ -685,28 +697,19 @@ KOELN
 KRED
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues binary nested deeper than the parse depth assert, probably bad usage
 KeyValues don't support #include anymore, file "%s"
+KeyValues text nested deeper than the parse depth assert, probably bad usage
 KeyValues::FindKey( StringView ... )
 KeyValues::FindKey( hks )
 KeyValues::FindKey( hks, bCreate )
-KeyValues::MergeFromBuffer
+KeyValues::LoadFromBuffer
+KeyValues::LoadSubKeysFromBuffer
 KeyValues::ReadAsBinary
-KeyValues::ReadAsBinary - Set name
-KeyValues::ReadAsBinary - TYPE_BINARY_STRING
-KeyValues::ReadAsBinary - TYPE_COLOR
-KeyValues::ReadAsBinary - TYPE_FLOAT
-KeyValues::ReadAsBinary - TYPE_INT
-KeyValues::ReadAsBinary - TYPE_INT64
-KeyValues::ReadAsBinary - TYPE_NONE
-KeyValues::ReadAsBinary - TYPE_PTR
-KeyValues::ReadAsBinary - TYPE_STRING
-KeyValues::ReadAsBinary - TYPE_UINT64
-KeyValues::ReadAsBinary - TYPE_WSTRING
-KeyValues::ReadAsBinary() stack depth > 100
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::SaveToBuffer: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
@@ -890,11 +893,12 @@ RODEO
 RUHR
 RYUKYU
 ReOpenFd: failed to reopen: %s: %s\n
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
+ReadSectionFromBuffer:  got EOF instead of keyname
+ReadSectionFromBuffer:  got NULL key
+ReadSectionFromBuffer:  got conditional between key and value
+ReadSectionFromBuffer:  got empty keyname
+ReadSectionFromBuffer:  got } in key
+ReadSectionFromBuffer:  sections nested too deep
 SAARLAND
 SCHMIDT
 SCHULE
@@ -967,14 +971,12 @@ SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamThreadTools::CThreadRWLock::LockForWrite()
 SteamThreadTools::CThreadRWLock::UnlockWrite()
-SteamThreadTools::CThreadRWLock::WaitForRead()
 SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
 SteamThreadTools::CThreadSharedMutex::LockExclusive()
 SteamThreadTools::CThreadSharedMutex::LockShared() const
 SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
 SteamThreadTools::CThreadSharedMutex::UnlockShared() const
 SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
-SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
@@ -1016,12 +1018,10 @@ Target buffer for V_URLEncode should be 3x source length, plus one for terminati
 Target buffer too short to terminate\n
 Target buffer too short\n
 ThreadCloseProcess
-ThreadGetCurrentId
 ThreadGetCurrentProcessId
 ThreadGetProcessExitCode
 ThreadImplOneTimeInit
 ThreadInMainThread
-ThreadInterlockedAssignIf
 ThreadInterlockedDecrement
 ThreadInterlockedExchange
 ThreadInterlockedExchangeAdd
@@ -1089,6 +1089,7 @@ V_FileBase
 V_FixDoubleSlashes
 V_FixSlashes
 V_FixupPathName
+V_FixupPathNameInPlace
 V_FormatAndAppend
 V_FormatAndAppendTail
 V_FormatAndAppendV
@@ -1293,6 +1294,7 @@ Windows 2012 R2
 Windows 2016
 Windows 2019
 Windows 2022
+Windows 2025
 Windows 3.11
 Windows 7
 Windows 8
@@ -1373,12 +1375,12 @@ XXXXXX
 YACHTS
 YANDEX
 YOKOHAMA
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 ZONE
 [abi:
 [friend]
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \t(%zu) comparing %s with %s\n
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \u%04x
 \u000
 \u001
@@ -1727,7 +1729,9 @@ m_mapFileWatchData
 m_mapFileWatchData.Key( i )
 m_memNodes
 m_nAllocationCount >= 0
+m_nCount > 0
 m_p == NULL
+m_pItemRunning
 m_pParent == this
 m_pSavedStack
 m_pSetIntValue
@@ -1742,6 +1746,7 @@ m_strDirectory
 m_strFileName
 m_strFileNamePrevious
 m_strLogLine
+m_strUTF8Path
 m_strWatchPath
 m_tree
 m_unInCounter == m_unOutCounter

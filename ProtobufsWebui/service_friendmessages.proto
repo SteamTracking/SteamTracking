@@ -174,7 +174,7 @@ service FriendMessages {
 	rpc GetRecentMessages (.CFriendMessages_GetRecentMessages_Request) returns (.CFriendMessages_GetRecentMessages_Response);
 	// ePrivilege=1
 	rpc IsInFriendsUIBeta (.CFriendMessages_IsInFriendsUIBeta_Request) returns (.CFriendMessages_IsInFriendsUIBeta_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc ReportMessage (.CFriendMessages_ReportMessage_Request) returns (.CFriendMessages_ReportMessage_Response);
 	// ePrivilege=1, eWebAPIKeyRequirement=2
 	rpc ResolveReport (.CFriendMessages_ResolveReport_Request) returns (.CFriendMessages_ResolveReport_Response);

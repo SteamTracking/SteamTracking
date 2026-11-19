@@ -1,4 +1,5 @@
-﻿"Language" "japanese"
+﻿
+"Language" "japanese"
 "Tokens"
 {
 "WelcomeToSteamTitle" "Steam へようこそ"
@@ -940,7 +941,6 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"メインモニターの製造元：%s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"メインモニターの製品名：%s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"サポートされているMSAAモード：%s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinityを検出（%s1台のディスプレイ）"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"ドライバー検出不可"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"DirectXドライバー名検出不可"
@@ -4820,9 +4820,6 @@ Betaプログラムの一つに参加するためには、 下記のリストか
 
 "Steam_VacBanOnAccount"		"VAC 検出されたアカウント"
 "Steam_NoVacBanOnAccount"	"VAC 検出のないアカウント"
-
-"Steam_NeedToRestart"		"再起動が必要です"
-"Steam_NeedToRestartDifferentClientLauncher" "このコンピューター上の別のバージョンのSteamを起動中です。\n\n起動するには、まずこのバージョンのSteamを終了する必要があります。"
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "デスクトップWebブラウザーがSteamサイトに自動ログインすることを許可する\n（変更を適用するには再起動が必要）"
 

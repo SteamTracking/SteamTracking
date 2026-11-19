@@ -1871,13 +1871,6 @@ enum UnnamedEnumdf90a08aed284b03
 	GEOMETRIC = 6;
 }
 
-enum UnnamedEnumdfa716524449ed10
-{
-	None = 0;
-	KeepLocal = 1;
-	KeepRemote = 2;
-}
-
 enum UnnamedEnume36c5cd7cd6e71c1
 {
 	k_eLibrary = 1;
@@ -1944,13 +1937,6 @@ enum UnnamedEnumee13fc02f2c6851d
 	Snap = 3;
 	Sliding = 4;
 	SlidingEdge = 5;
-}
-
-enum UnnamedEnumf04bc9fb1d60800d
-{
-	k_Intro = 0;
-	k_ParentalControlDetails = 1;
-	k_SendOff = 2;
 }
 
 enum UnnamedEnumf0865f3c163d92e3

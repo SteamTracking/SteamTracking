@@ -1,4 +1,5 @@
-﻿"Language" "brazilian"
+﻿
+"Language" "brazilian"
 "Tokens"
 {
 "WelcomeToSteamTitle" "BEM-VINDO(A) AO STEAM"
@@ -935,7 +936,6 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Fabricante do monitor primário: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Modelo do monitor primário: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Modos de MSAA compatíveis: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity detectado (%s1 monitores)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Driver não detectado"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Nome do driver do DirectX não detectado"
@@ -4814,9 +4814,6 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "Steam_VacBanOnAccount"		"banimento(s) VAC na conta"
 "Steam_NoVacBanOnAccount"	"sem banimentos VAC na conta"
-
-"Steam_NeedToRestart"		"Reinicialização necessária"
-"Steam_NeedToRestartDifferentClientLauncher" "Outra versão do Steam instalada neste computador tentou ser inicializada.\n\nPara tal, feche esta versão do Steam primeiro."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Permitir que navegadores iniciem a sessão automaticamente em sites do Steam\n (requer reinicialização)"
 

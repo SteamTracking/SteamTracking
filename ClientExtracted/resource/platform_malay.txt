@@ -31,12 +31,10 @@
 "app_task_stop_streaming"	"Hentikan Remote Play"
 
 "Steam_AccountAlreadyLoggedInNeedShutdown"		"Akaun anda \"%account%\" sedang digunakan pada mesin lain.\nAnda perlu menutup Steam pada komputer anda yang lain terlebih dahulu untuk log masuk di sini."
-"Steam_AccountAlreadyLoggedInNeedPassword"		"Akaun ini telah log masuk di tempat lain pada masa ini.\nMasukkan semula kata laluan anda untuk log masuk pada komputer ini."
 "Steam_AccountOfflineMissingConfig"				"Gagal memuat turun data konfigurasi platform."
 "Steam_NeverConnectedNoConnection"				"Akaun ini \"%account%\" tidak pernah diakses pada mesin ini lagi dan sambungan kepada pelayan Steam tidak dapat dibuat.\nSesetengah perkhidmatan tidak akan tersedia. Steam akan terus cuba membuat sambungan dan perkhidmatan akan tersedia selepas sambungan berjaya dibuat."
 "Steam_RefreshEnterTwoFactorCode"				"Sila masukkan kod semasa daripada Pengesah Steam Guard anda"
 "Steam_RefreshLogin_RateLimited"		"Terlalu banyak kegagalan log masuk daripada rangkaian anda telah berlaku dalam tempoh masa yang singkat. Sila tunggu dan cuba lagi kemudian."
-"Steam_RefreshLogin_Title"			"Steam – Segarkan Semula Log Masuk"
 "Steam_RefreshLogin_InfoTicketExpired"	"Tiket Steam anda telah luput.\nSila masukkan semula kata laluan anda untuk meneruskannya."
 "Steam_RefreshLogin_InvalidPassword"	"Bukti kelayakan akaun anda telah diubah.\nSila masukkan semula kata laluan anda untuk meneruskan."
 

@@ -15,6 +15,17 @@ enum ETwoFactorUsageType {
 	k_ETwoFactorUsageType_Login = 3;
 }
 
+enum ETwoFactorNextStep {
+	k_ETwoFactorNextStep_Invalid = 0;
+	k_ETwoFactorNextStep_None = 1;
+	k_ETwoFactorNextStep_EnterSMSCode = 2;
+	k_ETwoFactorNextStep_EnterEmailCode = 3;
+	k_ETwoFactorNextStep_ConfirmPhoneEmail = 4;
+	k_ETwoFactorNextStep_Retry = 5;
+	k_ETwoFactorNextStep_StartOver = 6;
+	k_ETwoFactorNextStep_Blocked = 7;
+}
+
 message CTwoFactor_Time_Request {
 	optional uint64 sender_time = 1;
 }
@@ -85,6 +96,7 @@ message CTwoFactor_AddAuthenticator_Response {
 	optional int32 status = 10;
 	optional string phone_number_hint = 11;
 	optional int32 confirm_type = 12;
+	optional .ETwoFactorNextStep next_step = 13 [default = k_ETwoFactorNextStep_Invalid];
 }
 
 message CTwoFactor_FinalizeAddAuthenticator_Request {
@@ -100,6 +112,7 @@ message CTwoFactor_FinalizeAddAuthenticator_Response {
 	optional bool success = 1;
 	optional uint64 server_time = 3;
 	optional int32 status = 4;
+	optional .ETwoFactorNextStep next_step = 5 [default = k_ETwoFactorNextStep_Invalid];
 }
 
 message CTwoFactor_UpdateTokenVersion_Request {
@@ -135,6 +148,7 @@ message CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request {
 	optional string sms_code = 1;
 	optional bool generate_new_token = 2;
 	optional uint32 version = 3 [default = 1];
+	optional uint32 caller_version = 4;
 }
 
 message CRemoveAuthenticatorViaChallengeContinue_Replacement_Token {

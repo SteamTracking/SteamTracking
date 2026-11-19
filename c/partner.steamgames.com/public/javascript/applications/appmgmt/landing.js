@@ -96,7 +96,7 @@ import { _ } from "./chunk~7b4b9eb713.js";
 import { _, _ } from "./chunk~a7c5e71e12.js";
 import { _, _ } from "./chunk~7e6646f5a7.js";
 import { _ } from "./chunk~9b35b2d482.js";
-import { _, _, _, _ } from "./chunk~30ccd6dee5.js";
+import { _, _, _, _ } from "./chunk~87cd89c815.js";
 import { _, _, _, _, _ } from "./chunk~8e34816c9e.js";
 import { _ } from "./chunk~8255136f90.js";
 import { _ } from "./chunk~cb393b4e7b.js";
@@ -659,7 +659,11 @@ var _ = `j-KLJ7Mtr80-`,
       return (await _.Init(), _);
     }
     async Init() {
-      let _ = await fetch(`${_.PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard`);
+      let _ = _(`publisherid`, `application_config`),
+        _ = _ > 0 ? `?publisherid=${_}` : ``,
+        _ = await fetch(
+          `${_.PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard${_}`,
+        );
       try {
         ((this.m_rgOptIns = await _.json()),
           this.m_rgOptIns && _.ExtractOptInDefinitions(this.m_rgOptIns));

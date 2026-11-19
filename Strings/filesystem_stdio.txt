@@ -47,6 +47,8 @@ $ORIGIN
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGAD
+++CCUNGVL
 ++CCUNGstd::exception
 ---------------\n
 ---FS:  %s %s\n
@@ -82,12 +84,15 @@ $ORIGIN
 .bsp
 .cpl
 .steam_exec_test
+/.flatpak-info
+/app
 /dev
 /dev/
 /dev/disk/by-uuid
 /dev/null
 /dev/random
 /dev/urandom
+/etc
 /etc/mtab
 /proc/mounts
 /proc/self/fd/%d
@@ -97,6 +102,7 @@ $ORIGIN
 /steamrt64
 /steamsysinfo
 /tmp
+/usr
 /usr/bin/crosdisk %s
 0123456789
 0123456789ABCDEF
@@ -179,6 +185,7 @@ BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
+BIsValid()
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
@@ -207,6 +214,7 @@ CFileWriter::FlushInternal
 CFileWriter::Write
 CFileWriterThread
 CPathString
+CPathString::Concat: null path element
 CSHA1::HashFile
 CSHA1::Update
 CUtlBuffer
@@ -228,6 +236,7 @@ CValidator::IsClaimed(void const*, bool) const
 CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
+Container path must be absolute
 Couldn't open .bsp %s for embedded pack file check\n
 CreateInterface
 DBG_PATHMATCH
@@ -265,6 +274,7 @@ Failed to load optional module %s\n
 File %s was never closed\n
 File change notification for %s but no file contents changed based on hash\n
 Filesystem
+FmtStr_ReportTruncation
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
 GLIBCXX_TUNABLES
 GLIBC_2.10
@@ -440,7 +450,6 @@ V_strcat
 V_stristr(char const*, char const*)
 V_strlower_fast
 V_strncat
-V_strncat_length
 V_strnchr
 V_strncmp
 V_strncpy
@@ -744,12 +753,14 @@ m_mapFileTimes
 m_mapFileWatchData
 m_mapFileWatchData.Key( i )
 m_nAllocationCount >= 0
+m_pItemRunning
 m_pthreadWatcher
 m_queueItemsPending.Count() == 0
 m_strDirectory
 m_strFileName
 m_strFileNamePrevious
 m_strLogLine
+m_strUTF8Path
 m_strWatchPath
 m_unInCounter == m_unOutCounter
 m_vecRegisteredWriters

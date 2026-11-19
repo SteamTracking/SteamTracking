@@ -702,6 +702,8 @@ enum EExternalSaleEventType {
 	k_EExternalSaleEventType_Region = 3;
 	k_EExternalSaleEventType_Theme = 4;
 	k_EExternalSaleEventType_Franchise = 5;
+	k_EExternalSaleEventType_LockedPublisher = 6;
+	k_EExternalSaleEventType_LockedFranchise = 7;
 }
 
 enum EEnhancedMarketAppearanceStatus {
@@ -873,7 +875,8 @@ enum EContentReportReason {
 	k_EContentReportReason_Miscategorized = 67;
 	k_EContentReportReason_BypassingProfanityFilter = 68;
 	k_EContentReportReason_BulkDeletion = 69;
-	k_EContentReportReason_MAX = 70;
+	k_EContentReportReason_Malware = 70;
+	k_EContentReportReason_MAX = 71;
 }
 
 enum EResolutionAutomation {

@@ -41,6 +41,9 @@
 !pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pTracker->IsClaimed( pKey )
 !pszString || pszString[nChars] == '\0'
+"type mismatch! call is<type>() before get<type>()" && is<array>()
+"type mismatch! call is<type>() before get<type>()" && is<object>()
+"type mismatch! call is<type>() before get<type>()" && is<std::string>()
 #include
 #include is NULL
 $ORIGIN
@@ -49,6 +52,7 @@ $ORIGIN
 %%-%ds | %%9d | %%12s\n
 %*s%s %s --> %d blocks = %s (%s larger)\n
 %*s%s %s --> %d blocks = %s (new)\n
+%.17g
 %.18g
 %.1f pct of time accounted for\n
 %0.8X%0.4X%0.4X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
@@ -62,12 +66,19 @@ $ORIGIN
 %d frames sampled for %.2f seconds\n
 %d validator nodes, %d nodes larger than %s\n
 %d.%d.%d.%d:%d
+%d:00
 %f %f %f %f
 %lld
 %llu
+%llx
 %s double claimed!\n
 %s not implemented
+%s overflow!\n
+%s%c.temp_write_%x
+%s.%u.tmp
+%s.async%u.tmp
 %s/.steam/steam
+%s/steamXXXXXX
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: no such process %d - %d\n
 &AElig;
@@ -177,8 +188,6 @@ $ORIGIN
 &yen;
 &yuml;
 ( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
-( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
-( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (anonymous namespace)
@@ -188,9 +197,7 @@ $ORIGIN
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGU
 ++CCUNGstd::exception
-++CCUNGz
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
@@ -200,6 +207,10 @@ $ORIGIN
 -- Profile scopes sorted by time (without children) --
 -- Summary --\n
 -chromeos
+-chromeosdiskmanagement
+-chromeosnopreallocate
+-chromeosverbose
+-clientbeta
 -debugbreak
 -deckard
 -holo
@@ -214,10 +225,14 @@ $ORIGIN
 -steamos3
 -tesla
 ../common/filesystem_helpers.cpp
+../external/picojson/picojson.h
 ../public/tier0/memblockhdr.h
+../public/tier0/tslist.h
 ../public/tier0/vprof.h
+../public/tier1/keyvalues.h
 ../public/tier1/utlbuffer.h
 ../public/tier1/utldict.h
+../public/tier1/utllinkedlist.h
 ../public/tier1/utlmemory.h
 ../public/tier1/utlrbtree.h
 ../public/tier1/utlstring.h
@@ -231,6 +246,7 @@ $ORIGIN
 ../tier0/validator.cpp
 ../tier0/vprof.cpp
 ../tier1/KeyValues.cpp
+../tier1/fileio.cpp
 ../tier1/mempool.cpp
 ../tier1/utlbuffer.cpp
 ../tier1/utlmemory.cpp
@@ -238,36 +254,74 @@ $ORIGIN
 ../vstdlib/keyvaluessystem.cpp
 ../vstdlib/strtools.cpp
 ../vstdlib/strtools_unicode.cpp
+.steam_exec_test
+/.flatpak-info
+/app
 /bin/sh
+/dev
+/dev/
+/dev/disk/by-uuid
+/dev/null
 /dev/random
 /dev/urandom
+/etc
+/etc/mtab
 /etc/os-release
 /etc/steamos-oobe-image
 /proc/meminfo
+/proc/mounts
 /proc/self/exe
 /proc/self/fd
+/proc/self/fd/%d
 /proc/self/status
 /run/host/etc/os-release
+/run/host/root
+/run/host/usr
+/steamsysinfo
+/tmp
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
+/usr
+/usr/bin/crosdisk %s
+00:21:02
+00:21:04
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-01:59:05
-02:01:45
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
+10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
+10CUtlMemoryIPK11CFileWriterE
+10CUtlMemoryIhE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlString
+10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
+11CDirWatcher
+11CFileWriter
+11CPathString
 12CStdMemAlloc
+14CUtlLinkedListI10CUtlStringiE
 16CAdHocValidation
 16CKeyValuesSystem
 16IKeyValuesSystem
+17CFileWriterThread
+17CStreamReaderBase
 18CUtlCharConversion
+19CDirContentsWatcher
 19CUtlNoEscConversion
+20CUniformRandomStream
+20IUniformRandomStream
 21CUtlCStringConversion
+24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
+7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
+7CUtlMapI10CUtlStringli8CDefLessE
 7CUtlMapIPvii8CDefLessE
 7CUtlMapIjbi8CDefLessE
 9IMemAlloc
@@ -286,6 +340,22 @@ Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
 Average %.2f fps, %.2f ms per frame\n
+BCreateDirectory
+BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BFilesystemAllowsExecution: couldn't read %s\n
+BFilesystemAllowsExecution: execute test timed out\n
+BFilesystemAllowsExecution: failed to copy %s to %s: %s\n
+BFilesystemAllowsExecution: failed to get exit code\n
+BFilesystemAllowsExecution: failed to reopen fd: %d\n
+BFilesystemAllowsExecution: failed to write %s: %s\n
+BFilesystemAllowsExecution: fork() failed: %s\n
+BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
+BIsHostPathVisibleToContainer only accepts absolute paths
+BIsOpen()
+BIsValid()
+BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
+BSaveBufferToFileWithTemporary() failed to find unused file temp name
+BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
 Bad expression token: %c %c\n
 Bad expression token: %c at %d in %s\n
 Bad thread local: Get\n
@@ -296,6 +366,15 @@ Breaking '%s' in '%s'\n
 Bucket size : count\n
 Busy, please retry.\n
 C-runtime internal
+CFileReader
+CFileReader::BOpenFile - %s
+CFileReader::Read
+CFileWriter::BOpenFileInternal
+CFileWriter::Close
+CFileWriter::FlushInternal
+CFileWriter::Write
+CFileWriterThread
+CFmtStr truncated: "%s"
 CHROMEOS
 CKeyValuesSystem
 CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
@@ -308,7 +387,19 @@ CLcx
 CMemoryPool
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 CMemoryPool::Alloc: ran out of memory
+CPathString
+CPathString::Concat: null path element
 CRC32_ProcessBuffer
+CSHA1::HashFile
+CSHA1::Update
+CTSListBase: Misaligned list\n
+CTSQueue bad node count
+CTSQueue bad peek pointer when empty
+CTSQueue bad tail pointer
+CTSQueue bad tail->Next value
+CTSQueue freelist depth mismatch
+CTSQueue m_HeadTailPair mismatch when empty
+CUtlBuffer
 CUtlBuffer::GetStringFast: binary buffers only
 CUtlString::ReplaceInternal
 CUtlString::SetValue
@@ -326,9 +417,11 @@ CValidator::ClaimUntrackedMemory
 CValidator::IsClaimed
 CValidator::Pop
 CValidator::Push
+Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
+Container path must be absolute
 Couldn't create process with command line: %s\n
 CreateInterface
 DBG_PATHMATCH
@@ -341,7 +434,9 @@ DF64_
 DF64x
 DONT_BREAK_ON_ASSERT
 Deleting thread object from the thread, this is bad
+Don't know how to check filesystem type on POSIX!
 DumpMemTrackingStats %d %d \n
+Element( i )
 Error State on string being set.
 Error decoding string1: %s
 Error decoding string2: %s
@@ -356,14 +451,17 @@ Failed to set thread local value
 Fatal Assertion Failed:
 Fatal assert
 Fatal assert; application exiting
+File change notification for %s but no file contents changed based on hash\n
 GAMESCOPE_WAYLAND_DISPLAY
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
 GLIBCXX_TUNABLES
+GLIBC_2.10
 GLIBC_2.12
 GLIBC_2.14
 GLIBC_2.17
 GLIBC_2.2.5
 GLIBC_2.25
+GLIBC_2.27
 GLIBC_2.29
 GLIBC_2.3
 GLIBC_2.3.2
@@ -372,6 +470,8 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.9
+GetFileSystemStableId requires a valid path
+GetFileSystemStableId requires a valid path: %s\n
 GetFloatFromString() did not get correct peCS parameter
 GetInt64FromString() did not get correct peCS parameter
 GetIntFromString() did not get correct peCS parameter
@@ -381,37 +481,32 @@ INVALID_KEY_SYMBOL
 IVALIDATE001
 Ignoring resume of count %d\n
 Illegal termination of worker thread '%s'
+Invalid FileWriterItem_t
 Invalid flags in %s
+Invalid index %u
 Invalid initial value for semaphore
 Invalid max value for semaphore
 Invalid thread id during thread Start()
 IsSpewActive
+IsText()
 IsValidIndex( elem )
+IsValidIndex(elem)
 JArray
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues binary nested deeper than the parse depth assert, probably bad usage
 KeyValues don't support #include anymore, file "%s"
+KeyValues text nested deeper than the parse depth assert, probably bad usage
 KeyValues::FindKey( StringView ... )
 KeyValues::FindKey( hks )
 KeyValues::FindKey( hks, bCreate )
-KeyValues::MergeFromBuffer
+KeyValues::LoadFromBuffer
+KeyValues::LoadSubKeysFromBuffer
 KeyValues::ReadAsBinary
-KeyValues::ReadAsBinary - Set name
-KeyValues::ReadAsBinary - TYPE_BINARY_STRING
-KeyValues::ReadAsBinary - TYPE_COLOR
-KeyValues::ReadAsBinary - TYPE_FLOAT
-KeyValues::ReadAsBinary - TYPE_INT
-KeyValues::ReadAsBinary - TYPE_INT64
-KeyValues::ReadAsBinary - TYPE_NONE
-KeyValues::ReadAsBinary - TYPE_PTR
-KeyValues::ReadAsBinary - TYPE_STRING
-KeyValues::ReadAsBinary - TYPE_UINT64
-KeyValues::ReadAsBinary - TYPE_WSTRING
-KeyValues::ReadAsBinary() stack depth > 100
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::SaveToBuffer: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
@@ -420,12 +515,15 @@ KeyValuesSystem()
 LINUX
 LINUX32
 LINUX64
+LOCK_EX
+LOCK_SH
 Leaked KeyValues (%u):\n
 Leaked mem: %s %s\n
 LoadFileIntoBuffer: NULL parameters
+LoadFileRangeIntoBuffer_Internal
 LoadFromBuffer: missing {   (current key: '%s')
-Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
+MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
 MemFree:
 MemTotal:
@@ -443,6 +541,9 @@ N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
 N16SteamThreadTools7CThreadE
+N17CFileWriterThread14CFileWriteItemE
+N17CFileWriterThread16CLogFileWorkItemE
+N17CFileWriterThread19CFileWriterWorkItemE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
@@ -454,7 +555,7 @@ NULL buffer passed to V_atoi()
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-Nov 13 2026
+Nov 19 2026
 OSX1010
 OUT OF MEMORY
 Object
@@ -484,19 +585,26 @@ POSIX
 POSIX does not support inheriting full mutexes
 PS3 Unattributed
 Peak %.2f ms frame\n
+PosixFileOpen: RESOLVE_BENEATH unsupported, falling back to plain open()\n
+PosixFileOpen: failed to compute relative path for: %s - %s\n
+PosixFileOpen: failed to get path fd for: %s - %s\n
 PrepareBuffer( nNewLength ) == pstrNew
 Probably deadlock or failure waiting for thread to initialize.
 RGBA: %.2X %.2X %.2X %.2X
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
+ReOpenFd: failed to reopen: %s: %s\n
+ReadSectionFromBuffer:  got EOF instead of keyname
+ReadSectionFromBuffer:  got NULL key
+ReadSectionFromBuffer:  got conditional between key and value
+ReadSectionFromBuffer:  got empty keyname
+ReadSectionFromBuffer:  got } in key
+ReadSectionFromBuffer:  sections nested too deep
 Root
 SDL_GetError
 SDL_SetCurrentThreadPriority
 STEAM_DESKTOP_APP_AFFINITY_LIST
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
+Seeking to a position not supported with async io
+Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 Size
 Someone called ClearWritingMinidump without holding the minidump lock.
@@ -523,11 +631,14 @@ St9type_info
 Stack%2d: %s\n
 Stack%2d: 0x%llX\n
 Stack:%2d    %s (%d): %s\n
+StaticFileWriterThread()
 Steam
+Steam - DirWatcher
 Steam Helper
 String pool bytes used %u, max %u, %u pools\n
 TLS init function for
 TLS wrapper function for
+TMPDIR
 Target buffer for V_URLEncode should be 3x source length, plus one for terminating null\n
 Target buffer too short to terminate\n
 Target buffer too short\n
@@ -545,6 +656,8 @@ TracerPid:\t
 Tracked allocs currently in use. %d Total %d\n
 Tried to create a thread that has already been created!
 USER
+Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
+Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unmatched %s\n
 Usage: %s PID command [arguments]\n
 VISTA
@@ -567,13 +680,14 @@ WIN64
 WIN7
 WINDOWS
 WSL_DISTRO_NAME
+Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 Warning: failed to set thread priority: foreign thread unsupported\n
 Warning: failed to set thread priority: set failed for %d: %s\n
 Warning: failed to set thread priority: set failed for priority %d\n
 Warning: support for elevated priorities is most likely unavailable, suppressing future warnings\n
 Warning: thread priority outside allowed range %d\n
 X360
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
+XXXXXX
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [abi:
@@ -583,6 +697,8 @@ You should clear the KeyValues instance before calling this function or call Mer
 \tValidate Failed: leaked connection to %s\n
 \tValidate Failed: leaked file '%s'\n
 \tValidate Failed: leaked socket remote address %s\n
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+\u%04x
 \u000
 \u001
 _ExitOnFatalAssert\n
@@ -604,6 +720,7 @@ __cxa_finalize
 __cxa_pure_virtual
 __errno_location
 __float128
+__fxstat64
 __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
@@ -625,11 +742,13 @@ abort
 access
 alignof
 allocator
+alphasort64
 argLen < 0x10000000u
 asctime_r
 audio.so
 auto
 auto:
+availableSpace
 backtrace
 backtrace_symbols
 basic_iostream
@@ -660,12 +779,14 @@ boolean
 buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 bufferLen == 0 || pDest != NULL
 bufferLen > 0 && bufferLen <= INT_MAX
+bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
 byte
 cActualReplacements == cReplacements
 calloc
 can't convert int64 to uint64 (negative number)
 can't convert uint64 to int32 (data loss)
 can't convert uint64 to int64 (data loss)
+cbActual < (uint32)nBufSizeWithTerminator
 ccMax >= 1
 cefwebhelper
 char
@@ -696,6 +817,9 @@ crashhandler002
 crashhandler003
 crashhandler004
 ctime_r
+cubBytesToRead < INT32_MAX
+cubData < FIO_MAX_IO_BYTES
+cubData < INT32_MAX
 data:
 daylight
 decimal128
@@ -711,6 +835,7 @@ dest != NULL
 destCapacity != 0
 destSize >= 1
 dirName
+diskSize
 dl_iterate_phdr
 dladdr
 dlclose
@@ -719,42 +844,68 @@ dlopen
 dlsym
 double
 dprintf
+dup2
 dynamic_cast
 eGroup < VPROF_BUDGETGROUP_MAX
+endmntent
 environ
+error
 exec
 execv
+execve
 execvp
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
+expandableSpace
 extension
 extension[0] == '.'
 externaltests.so
 faccessat
+fallocate64
 false
+fchmod
 fclose
+fcntl
+fdatasync
+feof
 fflush
 fgets
+fileno
 filesystem
 filesystem_stdio.so
 filesystem_steam.so
 float
+flock
+flock %s %s failed. errno = %d
+flock LOCK_EX %s failed, errno = %d\n
+flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
+fnmatch
 fopen
 fopen64
 fork
 fprintf
 fputc
 fputs
+fread
 free
 freopen
 friendsui.so
+fseek
+fsync %s failed, errno = %d\n
+ftello64
+ftruncate64
+futimes
 fwrite
+g_pFioAsyncEnqueue == NULL
+g_pFioAsyncFinalize == NULL
 g_pMemAllocSteam
 generic
+get_disk_info
 getcwd
 getentropy
 getenv
 gethostbyname
 gethostname
+getmntent
 getpid
 getpriority
 gettimeofday
@@ -796,29 +947,53 @@ libpthread.so.0
 link
 localeconv
 localtime_r
+logf
 long
 long double
 long long
+lseek64
+m_Count == 0
 m_Elements
 m_HashItemMemPool
 m_LeakTrack
+m_Memory
+m_TotalElements != InvalidIndex()
 m_Tree
 m_bSemOwner
+m_buffer
 m_errorIndex>=0
+m_fileReader
 m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeof(m_threadMutexValidationLock[0]) )
 m_iThreadMutexValidationLock == 0
+m_listChangedFiles
 m_mapConditionalSymbolTable
+m_mapFileTimes
+m_mapFileWatchData
+m_mapFileWatchData.Key( i )
 m_nAllocationCount >= 0
+m_nCount > 0
 m_nRecursions > 0
 m_pBudgetGroups
 m_pBudgetGroups == NULL
 m_pChild
+m_pItemRunning
 m_pSibling
 m_pValObjects != NULL
 m_pkvLastKeyAdded != NULL
 m_pszName
+m_pthreadWatcher
+m_queueItemsPending.Count() == 0
+m_strDirectory
+m_strFileName
+m_strFileNamePrevious
+m_strLogLine
+m_strUTF8Path
+m_strWatchPath
+m_unInCounter == m_unOutCounter
 m_vecNodeMemBlocks.size() == 1
 m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
+m_vecRegisteredWriters
+m_vecRegisteredWriters.HasElement( pFile )
 malloc
 malloc_usable_size
 maxLen <= INT_MAX
@@ -837,9 +1012,12 @@ misc.h
 mkdir
 mkfifo
 mmap
+mmap64
+modf
 mold 2.36.0 (compatible with GNU ld)
 mount
 mprotect
+msync
 mt19937
 munmap
 n == 0 || s1 != NULL
@@ -866,6 +1044,7 @@ non-transaction clone for
 non-virtual thunk to
 num > 0
 numElements >= 0
+nvme
 obj_count
 obj_size
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
@@ -889,11 +1068,13 @@ pDest
 pDest != NULL
 pDest >= pBuffer && pDest <= pBuffer + destBufferSize
 pEndingDelim && pEndingDelim[0]
+pFile->m_hFileDest != INVALID_OSFILEHANDLE
 pFmt
 pFormat != NULL
 pGroupName
 pKeyValuesTextParser
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
+pNode && pNode->Next == QueueEnd()
 pSearch != NULL
 pSrc != NULL
 pStr != NULL
@@ -901,6 +1082,7 @@ pStr1 != NULL
 pStr2 != NULL
 pToken
 pTracker->Find( pKey ) != NULL
+pWatcher != NULL
 panorama.so
 parms.Count() == 0
 path
@@ -911,10 +1093,13 @@ pchNeedle != NULL
 pchOut
 pchSearch != nullptr
 pchString != nullptr
+pclose
 pipe2
-posix_memalign
+popen
+posix_fadvise
 ppFrames[iFrame] != NULL
 ppath
+pread64
 printf
 propack.so
 pstrDest[nNewLength] == '\0'
@@ -953,6 +1138,7 @@ pthread_once
 pthread_rwlock_destroy
 pthread_rwlock_init
 pthread_rwlock_rdlock
+pthread_rwlock_tryrdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
 pthread_rwlockattr_destroy
@@ -962,6 +1148,7 @@ pthread_self
 pthread_setname_np
 pthread_setschedparam
 pthread_setspecific
+pwrite64
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
@@ -979,7 +1166,9 @@ realloc
 realpath
 reference temporary #
 reinterpret_cast
+release_space %llu
 rename
+request_space %llu
 rmdir
 s1 != NULL
 s2 != NULL
@@ -990,14 +1179,17 @@ sched_get_priority_max
 sched_get_priority_min
 sched_setaffinity
 sched_yield
+script
 secblock.h
 secure_getenv
 semaphore creation failed %s
 semctl
 semget
 semop
+sendfile64
 server.so
 serverbrowser.so
+setmntent
 setpriority
 setsid
 short
@@ -1011,14 +1203,21 @@ size < INT_MAX
 sizeof
 sizeof...
 snprintf
+spaceGranted
+spaceReleased
 sprintf
+sqrtf
 src != NULL
 stackLevel >= 0 && stackLevel < m_errorIndex
 statfs
 statfs64
 static_cast
+static_cast<Node_t*>(pNode)->elem
 statvfs
 statvfs64
+statvfs64 failed for %s, errno %d %s
+statvfs64 output would overflow: %s
+statvfs64 reports success but zero free space\n
 std::allocator
 std::bad_alloc
 std::bad_array_new_length
@@ -1075,6 +1274,7 @@ strtoul
 strtoull
 swprintf
 symlink
+syntax error at line %d near:
 syscall
 system
 szDomainName != nullptr
@@ -1102,6 +1302,8 @@ typeinfo fn for
 typeinfo for
 typeinfo name for
 typename
+unReadAheadChunkSize < INT32_MAX/2
+unReadAheadChunkSize should be zero when using bUnbuffered = true
 uname
 unknown
 unlink
@@ -1112,6 +1314,7 @@ unsigned int
 unsigned long
 unsigned long long
 unsigned short
+unsupported flags 0x%x passed to CFileReader::BOpenFile
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 usleep
 utime
@@ -1143,6 +1346,7 @@ wcstol
 wcstoll
 wcstoull
 write
+write %s failed, errno = %d\n
 x86_64
 xlocale
 xmemory

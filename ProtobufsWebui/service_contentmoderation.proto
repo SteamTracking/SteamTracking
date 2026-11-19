@@ -398,9 +398,9 @@ message ReportedContentCoordinates {
 service ContentModeration {
 	// ePrivilege=5
 	rpc ClaimBatch (.CContentModeration_ClaimBatch_Request) returns (.CContentModeration_ClaimBatch_Response);
-	// ePrivilege=5
+	// ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc EscalateSubjectByID (.CContentModeration_EscalateSubjectByID_Request) returns (.CContentModeration_EscalateSubjectByID_Response);
-	// bConstMethod=true, ePrivilege=5
+	// bConstMethod=true, ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc GetAuditLogByID (.CContentModeration_GetAuditLogByID_Request) returns (.CContentModeration_GetAuditLogByID_Response);
 	// bConstMethod=true, ePrivilege=5
 	rpc GetClaimedSubjects (.CContentModeration_GetClaimedSubjects_Request) returns (.CContentModeration_GetClaimedSubjects_Response);
@@ -414,23 +414,23 @@ service ContentModeration {
 	rpc GetOldestUnresolvedSubjects (.CContentModeration_GetOldestUnresolvedSubjects_Request) returns (.CContentModeration_GetOldestUnresolvedSubjects_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetOneReportSubmittedByUser (.CContentModeration_GetOneReportSubmittedByUser_Request) returns (.CContentModeration_GetOneReportSubmittedByUser_Response);
-	// bConstMethod=true, ePrivilege=5
+	// bConstMethod=true, ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc GetReportedContent (.CContentModeration_GetReportedContent_Request) returns (.CContentModeration_GetReportedContent_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetReportedContentByID (.CContentModeration_GetReportedContentByID_Request) returns (.CContentModeration_GetReportedContentByID_Response);
 	// bConstMethod=true, ePrivilege=5
 	rpc GetReportedSubjectsByOwner (.CContentModeration_GetReportedSubjectsByOwner_Request) returns (.CContentModeration_GetReportedSubjectsByOwner_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetReporterCooldown (.CContentModeration_GetReporterCooldown_Request) returns (.CContentModeration_GetReporterCooldown_Response);
-	// bConstMethod=true, ePrivilege=5
+	// bConstMethod=true, ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc GetReporterStats (.CContentModeration_GetReporterStats_Request) returns (.CContentModeration_GetReporterStats_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetReportsSubmittedByUser (.CContentModeration_GetReportsSubmittedByUser_Request) returns (.CContentModeration_GetReportsSubmittedByUser_Response);
 	// ePrivilege=5
 	rpc GetSubjectOverview (.CContentModeration_GetSubjectOverview_Request) returns (.CContentModeration_GetSubjectOverview_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc OwnerDisputeModeration (.CContentModeration_OwnerDisputeModeration_Request) returns (.CContentModeration_OwnerDisputeModeration_Response);
-	// ePrivilege=5
+	// ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc ReleaseSubjects (.CContentModeration_ReleaseSubjects_Request) returns (.CContentModeration_ReleaseSubjects_Response);
 	// ePrivilege=1
 	rpc ReporterDisputeModeration (.CContentModeration_ReporterDisputeModeration_Request) returns (.CContentModeration_ReporterDisputeModeration_Response);
@@ -438,11 +438,11 @@ service ContentModeration {
 	rpc ResolveByID (.CContentModeration_ResolveByID_Request) returns (.CContentModeration_ResolveByID_Response);
 	// ePrivilege=5
 	rpc SetModeratorPreferences (.CContentModeration_SetModeratorPreferences_Request) returns (.CContentModeration_SetModeratorPreferences_Response);
-	// ePrivilege=5
+	// ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc SustainModerationByID (.CContentModeration_SustainModerationByID_Request) returns (.CContentModeration_SustainModerationByID_Response);
-	// ePrivilege=5
+	// ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc UpdateReporterCooldown (.CContentModeration_UpdateReporterCooldown_Request) returns (.CContentModeration_UpdateReporterCooldown_Response);
-	// ePrivilege=5
+	// ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc UpdateSubjectByID (.CContentModeration_UpdateSubjectByID_Request) returns (.CContentModeration_UpdateSubjectByID_Response);
 	// ePrivilege=5
 	rpc WriteToAuditLogByID (.CContentModeration_WriteToAuditLogByID_Request) returns (.CContentModeration_WriteToAuditLogByID_Response);

@@ -60,9 +60,9 @@ message CMsgClientFriendsList_Friend {
 service FriendsList {
 	// bConstMethod=true, ePrivilege=1
 	rpc GetCategories (.CFriendsList_GetCategories_Request) returns (.CFriendsList_GetCategories_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetFavorites (.CFriendsList_GetFavorites_Request) returns (.CFriendsList_GetFavorites_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetFriendsList (.CFriendsList_GetFriendsList_Request) returns (.CFriendsList_GetFriendsList_Response);
 	// ePrivilege=1
 	rpc SetFavorites (.CFriendsList_SetFavorites_Request) returns (.CFriendsList_SetFavorites_Response);

@@ -224,17 +224,17 @@ message ParentalTemporaryPlaytimeRestrictions {
 }
 
 service Parental {
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc ApproveFeatureAccess (.CParental_ApproveFeatureAccess_Request) returns (.CParental_ApproveFeatureAccess_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc ApprovePlaytime (.CParental_ApprovePlaytime_Request) returns (.CParental_ApprovePlaytime_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc DisableParentalSettings (.CParental_DisableParentalSettings_Request) returns (.CParental_DisableParentalSettings_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc EnableParentalSettings (.CParental_EnableParentalSettings_Request) returns (.CParental_EnableParentalSettings_Response);
 	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetParentalSettings (.CParental_GetParentalSettings_Request) returns (.CParental_GetParentalSettings_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetRequests (.CParental_GetRequests_Request) returns (.CParental_GetRequests_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetSignedParentalSettings (.CParental_GetSignedParentalSettings_Request) returns (.CParental_GetSignedParentalSettings_Response);
@@ -242,13 +242,13 @@ service Parental {
 	rpc LockClient (.CParental_LockClient_Request) returns (.CParental_LockClient_Response);
 	// ePrivilege=1
 	rpc ReportPlaytimeAndNotify (.CParental_ReportPlaytimeAndNotify_Request) returns (.CParental_ReportPlaytimeAndNotify_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc RequestFeatureAccess (.CParental_RequestFeatureAccess_Request) returns (.CParental_RequestFeatureAccess_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc RequestPlaytime (.CParental_RequestPlaytime_Request) returns (.CParental_RequestPlaytime_Response);
 	// ePrivilege=1
 	rpc RequestRecoveryCode (.CParental_RequestRecoveryCode_Request) returns (.CParental_RequestRecoveryCode_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc SetParentalSettings (.CParental_SetParentalSettings_Request) returns (.CParental_SetParentalSettings_Response);
 	// ePrivilege=1
 	rpc ValidatePassword (.CParental_ValidatePassword_Request) returns (.CParental_ValidatePassword_Response);

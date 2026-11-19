@@ -1,4 +1,5 @@
-﻿"Language" "german"
+﻿
+"Language" "german"
 "Tokens"
 {
 "WelcomeToSteamTitle" "WILLKOMMEN BEI STEAM"
@@ -938,7 +939,6 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Primärer Monitoranbieter: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Primäres Monitormodell: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Unterstützte MSAA-Modi: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity erkannt (%s1 Anzeigegeräte)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Kein Treiber erkannt"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Kein DirectX-Treibername erkannt"
@@ -4818,9 +4818,6 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 
 "Steam_VacBanOnAccount"		"Von VAC ausgeschlossen"
 "Steam_NoVacBanOnAccount"	"Keine VAC-Ausschlüsse"
-
-"Steam_NeedToRestart"		"Neustart erforderlich"
-"Steam_NeedToRestartDifferentClientLauncher" "Eine weitere Version von Steam versucht auf diesem Computer zu starten.\n\nUm diese auszuführen, müssen Sie zuerst die aktuelle Version von Steam schließen."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Erlauben Sie Webbrowsern, sich automatisch auf Steam-Seiten anzumelden\n(Damit die Änderungen wirksam werden, ist ein Neustart erforderlich.)"
 

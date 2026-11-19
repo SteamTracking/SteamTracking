@@ -235,7 +235,7 @@ message LoyaltyRewardPurchaseBonus {
 }
 
 service LoyaltyRewards {
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc AddReaction (.CLoyaltyRewards_AddReaction_Request) returns (.CLoyaltyRewards_AddReaction_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc BatchedQueryRewardItems (.CLoyaltyRewards_BatchedQueryRewardItems_Request) returns (.CLoyaltyRewards_BatchedQueryRewardItems_Response);
@@ -249,13 +249,13 @@ service LoyaltyRewards {
 	rpc GetPointsForSpend (.CLoyaltyRewards_GetPointsForSpend_Request) returns (.CLoyaltyRewards_GetPointsForSpend_Response);
 	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
 	rpc GetProfileCustomizationsConfig (.CLoyaltyRewards_GetProfileCustomizationsConfig_Request) returns (.CLoyaltyRewards_GetProfileCustomizationsConfig_Response);
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetReactionConfig (.CLoyaltyRewards_GetReactionConfig_Request) returns (.CLoyaltyRewards_GetReactionConfig_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetReactions (.CLoyaltyRewards_GetReactions_Request) returns (.CLoyaltyRewards_GetReactions_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetReactionsSummaryForUser (.CLoyaltyRewards_GetReactionsSummaryForUser_Request) returns (.CLoyaltyRewards_GetReactionsSummaryForUser_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetSummary (.CLoyaltyRewards_GetSummary_Request) returns (.CLoyaltyRewards_GetSummary_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc QueryRewardItems (.CLoyaltyRewards_QueryRewardItems_Request) returns (.CLoyaltyRewards_QueryRewardItems_Response);

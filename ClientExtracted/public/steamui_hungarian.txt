@@ -1,4 +1,5 @@
-﻿"Language" "hungarian"
+﻿
+"Language" "hungarian"
 "Tokens"
 {
 "WelcomeToSteamTitle" "ÜDVÖZLÜNK A STEAMEN"
@@ -933,7 +934,6 @@
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Elsődleges monitor gyártója: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Elsődleges monitor modellje: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Támogatott MSAA üzemmódok:  %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity észlelve (%s1 monitor)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Illesztőprogram nem észlelhető."
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"DirectX illesztőprogram neve nem észlelhető."
@@ -4797,9 +4797,6 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 
 "Steam_VacBanOnAccount"		"VAC-kitiltás(ok) a fiókon"
 "Steam_NoVacBanOnAccount"	"Nincs VAC-kitiltás a fiókon"
-
-"Steam_NeedToRestart"		"Újraindítás szükséges"
-"Steam_NeedToRestartDifferentClientLauncher" "A Steam egy másik verziója próbál elindulni ezen a számítógépen.\n\nA futtatásához előbb ki kell lépned a Steam e verziójából."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Asztali böngészők automatikusan bejelentkezhetnek Steames weboldalakra\n (a változások alkalmazása újraindítást igényel)"
 

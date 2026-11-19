@@ -1,4 +1,5 @@
-﻿"Language" "czech"
+﻿
+"Language" "czech"
 "Tokens"
 {
 "WelcomeToSteamTitle" "VÍTEJTE VE SLUŽBĚ STEAM"
@@ -939,7 +940,6 @@ Tato operace zabere jenom okamžik."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Dodavatel primárního monitoru: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Model primárního monitoru: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Podporované režimy vyhlazování MSAA: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Byla zjištěna technologie Eyefinity (%s1 monitory)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Nebyl zjištěn ovladač"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Nebyl zjištěn název ovladače DirectX"
@@ -1653,14 +1653,14 @@ Změna se projeví až po opětovném přihlášení do macOS."
 "Steam_CardNumber"	"Číslo karty"
 "Steam_CardExpiration"	"Datum konce platnosti karty"
 "Steam_BillingAddress"	"Fakturační adresa"
-"Steam_BillingAddressLine2" "Fakturační adresa (2. řádek)"
+"Steam_BillingAddressLine2" "Fakturační adresa (2. řádka)"
 "Steam_BillingCity"	"Město"
 "Steam_BillingPostCode"	"Poštovní směrovací číslo"
 "Steam_BillingState"	"Stát"
 "Steam_BillingCountry"	"Země"
 
 "Steam_ShippingAddress"	"Dodací adresa"
-"Steam_ShippingAddressLine2" "Dodací adresa (2. řádek)"
+"Steam_ShippingAddressLine2" "Dodací adresa (2. řádka)"
 "Steam_ShippingCity"	"Město"
 "Steam_ShippingPostCode"	"Poštovní směrovací číslo"
 "Steam_ShippingState"	"Stát"
@@ -2240,7 +2240,7 @@ Změna se projeví až po opětovném přihlášení do macOS."
 "Steam_Purchase_CardholderName"		"Jméno: %name%"
 
 "Steam_Address"						"Adresa ulice"
-"Steam_Purchase_StreetAddressLine2"	"Adresa ulice (2. řádek, volitelný)"
+"Steam_Purchase_StreetAddressLine2"	"Adresa ulice (2. řádka, volitelná)"
 
 "Steam_LaunchGame"					"Hrát"
 "Steam_LaunchStream"				"Streamovat"
@@ -2418,7 +2418,7 @@ Změna se projeví až po opětovném přihlášení do macOS."
 "Steam_Shutdown_Dialog_Text" "Ukončování klienta služby Steam..."
 "Steam_Shutdown_Waiting_For_Game" "Čeká se na ukončení hry %game% ..."
 "Steam_Shutdown_Finishing_Download" "Čeká se na dokončení stahování zařazených do fronty..."
-"Steam_Shutdown_Waiting_For_Download" "Zastavování stahování hry %game%..."
+"Steam_Shutdown_Waiting_For_Download" "Zastavování stahování %game%..."
 "Steam_Shutdown_Waiting_For_Cloud" "Dokončování synchronizace s funkcí Steam Cloud..."
 "Steam_Shutdown_Waiting_For_Logoff" "Odhlašování..."
 "Steam_Shutdown_ForceQuit" "Ukončit nyní"
@@ -4823,9 +4823,6 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 
 "Steam_VacBanOnAccount"		"ban(y) ochrany VAC"
 "Steam_NoVacBanOnAccount"	"Žádné bany ochrany VAC"
-
-"Steam_NeedToRestart"		"Je vyžadován restart"
-"Steam_NeedToRestartDifferentClientLauncher" "Na tomto počítači se pokouší spustit jiná verze klienta služby Steam.\n\nPro její spuštění musíte nejprve ukončit tuto verzi."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Povolit desktopovým prohlížečům automatické přihlašování na stránkách služby Steam\n (vyžaduje restart)"
 

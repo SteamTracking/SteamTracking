@@ -127,7 +127,7 @@ import { i as gt } from "./chunk~7b4b9eb713.js";
 import { n as _t, t as W } from "./chunk~a7c5e71e12.js";
 import { n as vt, r as yt } from "./chunk~7e6646f5a7.js";
 import { t as bt } from "./chunk~9b35b2d482.js";
-import { g as xt, h as St, m as G, p as K } from "./chunk~30ccd6dee5.js";
+import { g as xt, h as St, m as G, p as K } from "./chunk~87cd89c815.js";
 import {
   a as Ct,
   i as wt,
@@ -618,9 +618,13 @@ var on = `j-KLJ7Mtr80-`,
       return (await t.Init(), t);
     }
     async Init() {
-      let t = await fetch(`${s.PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard`);
+      let t = n(`publisherid`, `application_config`),
+        r = t > 0 ? `?publisherid=${t}` : ``,
+        i = await fetch(
+          `${s.PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard${r}`,
+        );
       try {
-        ((this.m_rgOptIns = await t.json()),
+        ((this.m_rgOptIns = await i.json()),
           this.m_rgOptIns && e.ExtractOptInDefinitions(this.m_rgOptIns));
       } catch {
         this.m_rgOptIns = {};

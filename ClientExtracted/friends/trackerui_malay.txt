@@ -145,7 +145,6 @@
 "Friends_NotifyFriendOnline_Title"	"%friend% – Pemberitahuan Rakan dalam talian"
 "Friends_NotifyFriendOnline_Info"		"Rakan anda %friend% telah kembali ke dalam talian."
 
-"Friends_RefreshLogin_Title"			"Steam – Segarkan log masuk"
 "Friends_RefreshLogin"				"Sila masukkan semula butiran log masuk Steam anda untuk mendaftar masuk ke Rakan."
 "Friends_AccountName"					"Nama akaun"
 "Friends_Login_Btn"					"Log masuk"
@@ -318,7 +317,6 @@
 "Friends_Voice_Answer"			"Jawab"
 "Friends_Voice_IncomingStatus"	"%friend% ingin bersembang melalui suara."
 "Friends_Voice_OutgoingStatus"	"Membuat panggilan kepada %friend%..."
-"Friends_Voice_Resume"			"Sambung"
 "Friends_Voice_ResumeStatusLocalHold"		"Sedang ditahan"
 "Friends_Voice_ResumeStatusRemoteHold"	"%friend% sedang menahan sembang suara ini"
 "Friends_Voice_AudioOptionsTitle"		"Tetapan Audio"
@@ -356,11 +354,9 @@
 
 "Friends_SteamIDLink"					"Lihat profil"
 "Friends_EditAlias"						"Edit alias..."
-"Friends_UnsetAlias"					"Tetapkan semula"
+"Friends_UnsetAlias"					"Set semula"
 "Friends_ViewAliases"					"Lihat Alias"
 "Friends_NotificationOptions"			"Pilihan Pemberitahuan"
-"Friends_FriendList_Suggested"			"RAKAN YANG DICADANGKAN"
-
 "Friends_FriendAliases_Title"			"Rakan – %FriendName%"
 "Friends_FriendAliasesInfo"			"Anda telah melihat %FriendName% menggunakan nama ini:"
 "Friends_FriendAliases_None"			"Pemain ini tidak menggunakan nama lain."
@@ -460,8 +456,6 @@
 "Friends_ViewGroupMembersLink"			"Lihat semua ahli"
 "Friends_GroupCollapsedTooManyMembers"	"(terlalu ramai ahli untuk ditunjukkan)"
 "Friends_GroupCollapsedNoOtherMembers"	"(tiada ahli lain untuk ditunjukkan)"
-
-"Friends_ControlPanelLink"		"Komuniti Utama"
 
 "Friends_AchievementUnlocked_Headline"		"Pencapaian Dibuka!"
 "Friends_AchievementUnlocked_Body"			"%achievement%"
@@ -614,8 +608,6 @@
 "friends_trade_they_are_banned"		"Anda tidak boleh melakukan pertukaran dengan %friend% kerana mereka mempunyai sekatan pertukaran."
 "friends_trade_you_are_cafe"	"Anda tidak boleh melakukan pertukaran dengan %friend% kerana anda sedang menggunakan akaun Cyber Cafe."
 "friends_trade_they_are_cafe"	"Anda tidak boleh melakukan pertukaran dengan %friend% kerana mereka sedang menggunakan akaun Cyber Cafe."
-"friends_trade_you_are_school"	"Anda tidak boleh melakukan pertukaran dengan %friend% kerana anda sedang menggunakan akaun School Lab."
-"friends_trade_they_are_school"	"Anda tidak boleh melakukan pertukaran dengan %friend% kerana mereka sedang menggunakan akaun School Lab."
 "friends_trade_they_are_blocked"	"Anda tidak boleh melakukan pertukaran dengan %friend% kerana anda telah menyekat mereka."
 "friends_trade_you_need_verified_email"		"Anda mestilah mengesahkan alamat e-mel anda sebelum anda boleh menyertai pertukaran. Sahkan alamat e-mel anda daripada tetingkap Tetapan."
 "friends_trade_you_have_steam_guard_disabled"	"Anda mestilah mendayakan Steam Guard sebelum anda boleh menyertai pertukaran. Dayakan Steam Guard daripada tetingkap Tetapan."
@@ -642,7 +634,6 @@
 "friends_trade_too_soon_penalty"	"Anda tidak boleh melakukan pertukaran dengan %friend% kerana anda telah membuat permintaan terlalu kerap – anda boleh cuba semula dalam masa beberapa minit."
 "friends_trade_connection_failed"	"%friend% belum memberikan respons kepada permintaan pertukaran anda."
 "friends_trade_you_are_already_trading" "Anda tidak boleh membuat permintaan pertukaran baharu semasa anda masih berada dalam sesi pertukaran lain."
-"friends_trade_you_are_already_requesting_trade" "Anda hanya boleh mempunyai satu permintaan pertukaran yang tertunggak."
 "friends_trade_no_respond"			"%friend% tidak memberikan respons kepada permintaan pertukaran."
 
 "friends_trade_accepted"			"%friend% telah menerima permintaan anda untuk melakukan pertukaran."

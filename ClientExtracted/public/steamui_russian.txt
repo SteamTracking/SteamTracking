@@ -1,4 +1,5 @@
-﻿"Language" "russian"
+﻿
+"Language" "russian"
 "Tokens"
 {
 "WelcomeToSteamTitle" "ДОБРО ПОЖАЛОВАТЬ В STEAM"
@@ -765,14 +766,14 @@
 "SteamUI_OfflineMode_GameNotReady"		"Данная игра еще не готова для работы в автономном режиме."
 "SteamUI_OfflineMode_GameNotReady_Title"	"Игра недоступна"
 
-"SteamUI_5_kb"		"5 КБ/с"
-"SteamUI_50_kb"		"50 КБ/с"
-"SteamUI_100_kb"		"100 КБ/с"
-"SteamUI_250_kb"		"250 КБ/с"
+"SteamUI_5_kb"		"5 Кбит/с"
+"SteamUI_50_kb"		"50 Кбит/с"
+"SteamUI_100_kb"		"100 Кбит/с"
+"SteamUI_250_kb"		"250 Кбит/с"
 "SteamUI_1_Mb"		"1 МБ/с"
 "SteamUI_10_Mb"		"10 МБ/с"
 "SteamUI_b_s"		"бит/с"
-"SteamUI_kb_s"		"КБ/с"
+"SteamUI_kb_s"		"Кбит/с"
 "SteamUI_Mb_s"		"МБ/с"
 
 "SteamUI_Skins_DefaultSkin"		"< стандартное оформление >"
@@ -934,7 +935,6 @@
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Монитор:  %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Модель:  %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Поддерживаемое сглаживание:  %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Обнаружено применение Eyefinity (%s1 экранов)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Драйвер не найден"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Имя драйвера DirectX не установлено"
@@ -4812,9 +4812,6 @@
 
 "Steam_VacBanOnAccount"		"Имеются блокировки VAC"
 "Steam_NoVacBanOnAccount"	"Блокировок VAC нет"
-
-"Steam_NeedToRestart"		"Требуется перезапуск"
-"Steam_NeedToRestartDifferentClientLauncher" "На этом компьютере пытается запуститься другая версия Steam.\n\nЧтобы запуск состоялся, закройте текущую версию Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Разрешить браузерам автоматически выполнять вход в аккаунт на сайтах Steam\n(изменения вступят в силу только после перезагрузки компьютера)"
 

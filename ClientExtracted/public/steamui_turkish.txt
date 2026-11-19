@@ -1,4 +1,5 @@
-﻿"Language" "turkish"
+﻿
+"Language" "turkish"
 "Tokens"
 {
 "WelcomeToSteamTitle" "STEAM'E HOŞ GELDİNİZ"
@@ -940,7 +941,6 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Birincil Monitör Üreticisi:  %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Birincil Monitör Modeli:  %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Desteklenen MSAA Modları:  %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity Algılandı (%s1 Ekran)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Sürücü Bulunamadı"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"DirectX Sürücü Adı Belirlenemedi"
@@ -1515,7 +1515,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"Seçili ise, Steam Remote Play deneyiminin yüksek kalitesini korumak için indirme hızınız Steam tarafından sınırlanır."
 "Steam_DownloadRatesInBits"			"İndirme hızını saniyede bit cinsinden göster"
 
-"Steam_PeerContentTitle"			"Yerel ağ üzerinden oyun dosyalarının aktarılması"
+"Steam_PeerContentTitle"			"Yerel ağ üzerinden oyun dosyası aktarımı"
 "Steam_PeerContentInfo"			"Bu özellik yerel ağınıza bağlı diğer bilgisayarlardan dosya aktarımına olanak tanır. Bu, oyun indirirken internet trafiğinizi azaltır. Diğer kullanıcıların da bu bilgisayardan aktarım yapmasını sağlayabilirsiniz."
 "Steam_PeerContentOff"			"Kapalı - Aktarıma izin verme"
 "Steam_PeerContentSameUser"		"Sadece kendi aygıtlarıma aktarıma izin ver"
@@ -4687,7 +4687,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_Settings_ShareIPNetworking_Always" "Her Zaman"
 "Steam_Settings_ShareIPNetworking_FriendsOnly" "Sadece Arkadaşlarla"
 "Steam_Settings_ShareIPNetworking_Never" "Asla"
-"Steam_Settings_ShareIPNetworking_URL" "Daha Fazlasını Öğrenin"
+"Steam_Settings_ShareIPNetworking_URL" "Daha Fazla Bilgi"
 "Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329"
 
 "SteamUI_StreamingIntro_Title"		"Steam Remote Play'e Hoş Geldiniz"
@@ -4800,7 +4800,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_BLEControllerFirmware_Title" "Bluetooth Aygıt Yazılımı Güncellemesi"
 "Steam_BLEControllerFirmware_Header" "Steam Link Uygulaması"
 "Steam_BLEControllerFirmware_Body" "Steam'deki oyun tecrübenizi telefonunuza, tabletinize ya da televizyonunuza yerel ağ aracılığıyla aktararak genişletin.\n\nSteam Kontrolcünüzü Steam Link uygulaması ile kullanmak için yeni Bluetooth aygıt yazılımına ihtiyacınız olacak."
-"Steam_BLEControllerFirmware_LearnMore" "Daha fazlasını öğrenin"
+"Steam_BLEControllerFirmware_LearnMore" "Daha Fazla Bilgi"
 "Steam_BLEControllerFirmware_UpdateNow" "Aygıt Yazılımını Şimdi Güncelle"
 
 "Steam_Browser_Disabled" "Steam Tarayıcısı etkin değil."
@@ -4822,9 +4822,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 
 "Steam_VacBanOnAccount"		"Hesaptaki VAC Yasakları"
 "Steam_NoVacBanOnAccount"	"Hesapta VAC Yasağı Yok"
-
-"Steam_NeedToRestart"		"Yeniden Başlatma Gerekli"
-"Steam_NeedToRestartDifferentClientLauncher" "Bu bilgisayarda Steam'in başka bir sürümü başlatılmaya çalışıyor.\n\nOnu çalıştırmak için Steam'in bu sürümüden çıkış yapmalısınız."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Masaüstü internet tarayıcılarının Steam sitelerine otomatik olarak giriş yapmasına izin ver\n (değişikliklerin uygulanması için yeniden başlatılması gerekiyor)"
 

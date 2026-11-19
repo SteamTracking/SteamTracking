@@ -29,6 +29,7 @@ enum ERemoteClientService {
 	k_ERemoteClientServiceContentServer = 16;
 	k_ERemoteClientServiceManageDownloads = 32;
 	k_ERemoteClientServiceRemoteInstallWithoutPin = 64;
+	k_ERemoteClientServiceMultipleConnections = 128;
 }
 
 enum EVRLinkCaps {

@@ -1,4 +1,5 @@
-﻿"Language" "french"
+﻿
+"Language" "french"
 "Tokens"
 {
 "WelcomeToSteamTitle" "BIENVENUE SUR STEAM"
@@ -938,7 +939,6 @@ Cela devrait prendre moins d'une minute."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Fournisseur de moniteur primaire : %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Modèle de moniteur primaire : %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Modes MSAA pris en charge : %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity détecté (%s1 affichages)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Pilote non détecté"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Nom de pilote DirectX non détecté"
@@ -3776,7 +3776,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "steam_details_sharedinuseheader" "Bibliothèque utilisée par"
 "steam_details_sharedbyname" "%share_user%"
 "steam_details_sharedbyinuse" "%share_user%, dont la bibliothèque partagée est en cours d'utilisation"
-"steam_details_streamfromheader" "Stream depuis"
+"steam_details_streamfromheader" "Retransmettre depuis"
 "steam_details_streamfromname" "%stream_from%"
 "steam_details_totalplaytimeheader_video" "Vous avez visionné"
 "steam_details_lastplayedheader_video" "Dernier visionnage"
@@ -4575,7 +4575,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Streamez depuis votre ordinateur vers d'autres appareils. Pour vous connecter, enregistrez-vous avec ce compte Steam sur un autre ordinateur, ou sélectionnez l'option « Autre ordinateur » sur Steam Link."
+"Steam_Settings_Streaming_Description" "Retransmettez vos jeux depuis votre ordinateur vers d'autres appareils. Pour établir la connexion, connectez-vous avec ce compte Steam sur un autre ordinateur, ou sélectionnez l'option « Autre ordinateur » sur Steam Link."
 "Steam_Settings_Streaming_DeviceName" "NOM DE L'APPAREIL"
 "Steam_Settings_Streaming_Status" "ÉTAT"
 "Steam_Settings_Streaming_EnableStreaming" "Activer Remote Play"
@@ -4820,9 +4820,6 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 
 "Steam_VacBanOnAccount"		"Bannissement(s) VAC enregistré(s)"
 "Steam_NoVacBanOnAccount"	"Aucun bannissement VAC enregistré"
-
-"Steam_NeedToRestart"		"Redémarrage requis"
-"Steam_NeedToRestartDifferentClientLauncher" "Une autre version de Steam essaie de démarrer sur cet ordinateur.\n\nPour la lancer, vous devez d'abord quitter cette version de Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Permet aux navigateurs Web de se connecter automatiquement aux sites Steam\n (nécessite un redémarrage)"
 

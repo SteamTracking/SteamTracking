@@ -1,4 +1,5 @@
-﻿"Language" "italian"
+﻿
+"Language" "italian"
 "Tokens"
 {
 "WelcomeToSteamTitle" "BENVENUTO SU STEAM"
@@ -12,7 +13,7 @@
 "SteamUI_YourAnswer" "La tua risposta"
 "WelcomeToSteamCreateAccount" "Crea un nuovo account"
 "WelcomeToSteamLogin" "Accedi ad un account esistente"
-"SteamUI_AccountNameInfo" "Inserisci il tuo indirizzo e-mail. Se dimentichi la password, sarai contattato\ntramite questo indirizzo email per verificare la tua identità."
+"SteamUI_AccountNameInfo" "Inserisci il tuo indirizzo e-mail. Se dimentichi la password, sarai contattato\ntramite questo indirizzo e-mail per verificare la tua identità."
 "SteamUI_WelcomeNameInfo" "Inserisci un nome per il tuo profilo. Questo è il nome che i tuoi amici \nvedranno quando sei online. Puoi anche inserire il tuo vero \nnome per aiutarli a trovarti."
 "SteamUI_WelcomeNameOptional" "(facoltativo)"
 
@@ -938,7 +939,6 @@ L'operazione dovrebbe richiedere meno di un minuto."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Produttore del display principale: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Modello del display principale: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Modalità di MSAA supportate: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity rilevato (%s1 display)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Driver non rilevato"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Nome del driver delle DirectX non rilevato"
@@ -1531,7 +1531,7 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "Start_Server_FSMount_Error_Title"	"Server dedicato - Errore del filesystem"
 "Start_Server_FSMount_Error" 		"Montaggio del filesystem di Steam non riuscito."
 
-"Steam_Subscription_Success_WithShipping$purchasetype=regular"	"La tua sottoscrizione a %subscription% è avvenuta con successo.\n\nPuoi giocare i titoli rilasciati attualmente cliccandoci sopra nella Libreria di Steam. Riceverai inoltre un email di conferma non appena gli articoli del tuo ordine verranno spediti. Grazie per il tuo ordine!"
+"Steam_Subscription_Success_WithShipping$purchasetype=regular"	"La tua sottoscrizione a %subscription% è avvenuta con successo.\n\nPuoi giocare i titoli rilasciati attualmente cliccandoci sopra nella Libreria di Steam. Riceverai inoltre un e-mail di conferma non appena gli articoli del tuo ordine verranno spediti. Grazie per il tuo ordine!"
 "Steam_Subscription_Success_WithShipping$purchasetype=gift"	"Il tuo dono di %subscription% è stato inviato a %giftee%. Riceverai un'e-mail di conferma non appena gli articoli del tuo ordine verranno spediti. Grazie per il tuo ordine!"
 "Steam_Subscription_Success_WithShipping$purchasetype=unknown"	"Il tuo acquisto di %subscription% è stato completato. Riceverai un'e-mail di conferma non appena gli articoli del tuo ordine verranno spediti. Grazie per il tuo ordine!"
 "Steam_Subscription_Success_WithShipping_Headline"	"Grazie: la transazione è completata."
@@ -2481,7 +2481,7 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "Steam_RegionRestrictedPurchase_Info"				"Questo gioco è stato attivato con un codice prodotto valido solo in una specifica regione geografica. Poiché attualmente non ti trovi in quella regione, non puoi giocare a %game%."
 "Steam_RegionRestricted_SupportLink"		"Per ulteriori informazioni, visita il sito web dell'Assistenza di Steam"
 "Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
-"Steam_RegionRestricted_Info"				"%game% non è disponibile nella tua nazione."
+"Steam_RegionRestricted_Info"				"%game% non è disponibile nel tuo Paese."
 "Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_CountryRestricted_Info"				"Questa sottoscrizione non può essere acquistata nel tuo paese."
@@ -3334,7 +3334,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_SendGuestPass_AlreadyOwnsGame"		"%s1 possiede già questo gioco"
 
 "Steam_GiftRevoked_Title"			"Steam - Dono revocato"
-"Steam_GiftRevoked"					"Il recente dono di %package% ricevuto da parte di %gifter% è stato revocato a causa di un problema nell'elaborazione del pagamento.\n\nNon potrai più giocare con i titoli associati a questo dono. Se desideri acquistarlo, visita il negozio Steam. In alternativa, puoi eliminare i contenuti locali associati al dono."
+"Steam_GiftRevoked"					"Il recente dono di %package% ricevuto da parte di %gifter% è stato revocato a causa di un problema nell'elaborazione del pagamento.\n\nNon potrai più giocare con i titoli associati a questo dono. Se desideri acquistarlo, visita il Negozio di Steam. In alternativa, puoi eliminare i contenuti locali associati al dono."
 "Steam_GiftRevoked_SupportLink"		"Per ulteriori informazioni, visita il sito web dell'Assistenza di Steam"
 
 "Steam_ExternalSignupButton" "Vai al sito web di %s1"
@@ -3774,7 +3774,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "steam_details_sharedinuseheader" "Libreria in uso da"
 "steam_details_sharedbyname" "%share_user%"
 "steam_details_sharedbyinuse" "%share_user%, ma la sua Libreria condivisa è in uso"
-"steam_details_streamfromheader" "Streaming da"
+"steam_details_streamfromheader" "Trasmetti da"
 "steam_details_streamfromname" "%stream_from%"
 "steam_details_totalplaytimeheader_video" "Guardato per"
 "steam_details_lastplayedheader_video" "Ultimo avvio"
@@ -3885,7 +3885,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "steam_edittags_menuitem"	"Imposta categorie..."
 "steam_edittags_addtag"		"Aggiungi categoria"
 "steam_edittags_title"		"%game% - Categorie"
-"steam_edittags_hide"		"Nascondi il gioco in Libreria"
+"steam_edittags_hide"		"Nascondi il gioco nella Libreria"
 "steam_edittags_hide_multi"	"Nascondi questi giochi dalla Libreria"
 "steam_usertag_favorites"	"Preferiti"
 "steam_tags"			"Categorie"
@@ -4359,7 +4359,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 
 "SteamUI_StreamingSource_ThisMachine_Installed"     "Gioca su questo computer"
 "SteamUI_StreamingSource_ThisMachine_NotInstalled"  "Installa su questa macchina"
-"SteamUI_StreamingSource_Installed"    				"Streaming da %ClientName%"
+"SteamUI_StreamingSource_Installed"    				"Trasmetti da %ClientName%"
 "SteamUI_StreamingSource_NotInstalled" 				"Installa su %ClientName%"
 
 "SteamUI_StreamClient_Failed_Title"	"Client di streaming - Errore"
@@ -4819,9 +4819,6 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 
 "Steam_VacBanOnAccount"		"Ban del VAC sull'account"
 "Steam_NoVacBanOnAccount"	"Nessun ban del VAC sull'account"
-
-"Steam_NeedToRestart"		"È necessario riavviare"
-"Steam_NeedToRestartDifferentClientLauncher" "Un'altra versione di Steam sta cercando di avviarsi su questo computer.\n\nPer eseguirla, devi prima uscire da questa versione di Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Consenti ai browser di connettersi automaticamente ai siti di Steam\n(è richiesto un riavvio per applicare le modifiche)."
 

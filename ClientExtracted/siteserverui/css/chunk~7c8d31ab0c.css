@@ -1,0 +1,1513 @@
+body {
+  background-color: #fff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family:
+    Helvetica\, Motiva Sans,
+    Helvetica fallback,
+    Segoe UI,
+    Arial,
+    sans-serif;
+  position: fixed;
+  inset: 0;
+}
+:focus {
+  outline: unset;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+.link {
+  text-decoration: underline;
+}
+.blue {
+  color: #00f;
+}
+.PopupGenericTitle {
+  letter-spacing: 2px;
+  font-family:
+    Helvetica,
+    Helvetica fallback;
+  font-size: 18px;
+  font-weight: 700;
+}
+.PopupGenericBodyText {
+  letter-spacing: 0.5px;
+  font-family:
+    Helvetica,
+    Helvetica fallback;
+  font-size: 14px;
+  font-weight: 400;
+}
+.HelpText {
+  letter-spacing: 0.5px;
+  font-family:
+    Helvetica,
+    Helvetica fallback;
+  font-size: 12px;
+  font-weight: 400;
+}
+.TextPairName {
+  float: left;
+  padding-right: 4px;
+  font-weight: 700;
+}
+.TextPairValue {
+  float: left;
+  font-weight: 400;
+}
+.GenericButton {
+  color: #fff;
+  letter-spacing: 1px;
+  background-color: #545455;
+  border-color: #3f3f3f;
+  border-radius: 4px;
+  margin: auto;
+  padding: 6px 12px;
+  font-family:
+    Helvetica,
+    Helvetica fallback;
+  font-size: 14px;
+  font-weight: 400;
+}
+.default {
+  text-decoration: underline dotted #a1a1a1;
+}
+.disabled {
+  opacity: 0.6;
+}
+.GenericButton:hover {
+  background-color: #696969;
+}
+.GenericButtonGroup .GenericButton {
+  margin-right: 10px;
+}
+.btn_blue_white_innerfade {
+  cursor: pointer;
+  background: linear-gradient(#8bbbfd 5%, #3c6091 95%);
+  border: none;
+  border-radius: 4px;
+  padding: 2px 8px;
+  display: inline-block;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.btn_blue_white_innerfade:hover {
+  background: linear-gradient(#93bffd 5%, #41628f 95%);
+}
+.btn_blue_white_innerfade:active {
+  box-shadow: 2px 2px #666;
+}
+.SiteServerMain {
+  border: 0 solid #0e0f11;
+  width: 100%;
+  height: 100%;
+}
+.MainWindow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.MainWindowContentContainer {
+  flex-direction: row;
+  display: flex;
+  position: absolute;
+  inset: 130px 0 30px;
+}
+.MainWindowContent .MainWindowContentGradient {
+  z-index: 10;
+  background: linear-gradient(#eee 0%, #777879 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.MainWindowContent,
+.MainWindowContent > div {
+  width: 100%;
+  height: 100%;
+}
+.MainNavRoot {
+  z-index: 900;
+  background-color: #191c2100;
+  grid-area: 2/1;
+  position: relative;
+}
+.TitleBar {
+  -webkit-app-region: drag;
+  z-index: 1000;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  position: relative;
+}
+.Footer {
+  z-index: 1000;
+  letter-spacing: 0.25px;
+  color: #91a4b4;
+  background-color: #0e0f11;
+  width: 100%;
+  height: 30px;
+  font-family:
+    Helvetica,
+    Helvetica fallback;
+  font-size: 12px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.FooterStatusName {
+  float: left;
+  padding-right: 4px;
+  font-weight: 700;
+}
+.FooterStatusValue {
+  float: left;
+  font-weight: 400;
+}
+.FooterConnectionStatus {
+  float: left;
+  margin-left: 10px;
+  padding-top: 8px;
+}
+.FooterCacheStatus {
+  float: right;
+  color: #91a4b4;
+  margin-right: 10px;
+  padding-top: 8px;
+}
+.MainNavContainer {
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  margin-top: 16px;
+  margin-left: 20px;
+  margin-right: auto;
+  display: flex;
+  position: absolute;
+}
+.SteamLogoMainNav {
+  -webkit-app-region: no-drag;
+  background-image: url(../images/SteamLogo.png?v=IApvSWwP);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-top: 0;
+  transition-property: background-image;
+  transition-duration: 0.24s;
+  transition-timing-function: ease-in-out;
+}
+.TitleBarTitle {
+  text-transform: uppercase;
+  color: #91a4b4;
+  font-size: 18px;
+  font-weight: medium;
+  letter-spacing: 0.25px;
+  height: 27px;
+  margin-top: 1px;
+  margin-left: 33px;
+  font-family:
+    Helvetica,
+    Helvetica fallback;
+  line-height: 27px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.MainWindowTitleBarButton {
+  text-transform: uppercase;
+  color: #91a4b4;
+  font-size: 12px;
+  font-weight: medium;
+  letter-spacing: 0.25px;
+  -webkit-app-region: no-drag;
+  height: 27px;
+  margin-top: 1px;
+  margin-left: 33px;
+  font-family:
+    Helvetica,
+    Helvetica fallback;
+  line-height: 27px;
+  transition-property: color;
+  transition-duration: 0.24s;
+  position: relative;
+}
+.MainWindowTitleBarButton:hover {
+  color: #eee;
+  height: 46px;
+}
+.MainWindowTitleBar.TitleBar {
+  background-color: #0e0f11;
+  justify-content: space-between;
+}
+.MainWindowTitleBarButton.SteamLogoMainNav .MainNavPopout {
+  margin-left: 10px;
+}
+.TitleButtonBar {
+  z-index: 1;
+  flex-direction: row-reverse;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+.title-area-icon {
+  -webkit-app-region: no-drag;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  border-radius: 0;
+  width: 30px;
+  height: 30px;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.TitleButtonBar .title-area-icon:hover {
+  background-color: #2f333b;
+}
+.closeButtonContainer {
+  background-image: url(../images/x_close_icon.png?v=B8FSYZr8);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  width: 30px;
+  height: 30px;
+  transition-property: filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.closeButtonContainer:hover {
+  filter: brightness(2);
+}
+.maximizeRestoreButtonContainer {
+  background-image: url(../images/maximize_icon.png?v=DK-Xmu_X);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  width: 30px;
+  height: 30px;
+  transition-property: filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.maximizeRestoreButtonContainer:hover {
+  filter: brightness(2);
+}
+.minimizeButtonContainer {
+  background-image: url(../images/minimize_icon.png?v=DBVdINlR);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  width: 30px;
+  height: 30px;
+  transition-property: filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.minimizeButtonContainer:hover {
+  filter: brightness(2);
+}
+.fullScreenButton {
+  background-image: url(../images/maximize_icon.png?v=DK-Xmu_X);
+}
+:-webkit-full-screen .TitleBar {
+  background-color: #00f;
+}
+.modal_background {
+  z-index: 9999;
+  opacity: 1;
+  background-color: #000c;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+.modal-anim-appear,
+.modal-anim-enter {
+  opacity: 0.01;
+}
+.modal-anim-appear.modal-anim-appear-active,
+.modal-anim-enter.modal-anim-enter-active {
+  opacity: 1;
+  transition: opacity 0.32s ease-in;
+}
+.modal-anim-exit {
+  opacity: 1;
+}
+.modal-anim-exit.modal-anim-exit-active {
+  opacity: 0.01;
+  transition: opacity 0.32s ease-in;
+}
+.modal_frame {
+  background-color: #222;
+  border: 1px solid #bbb;
+  padding: 20px;
+}
+.modal_title {
+  padding: 20px 20px 0;
+}
+.model_content {
+  padding: 20px;
+}
+.SteamFeatureNav {
+  box-sizing: border-box;
+  z-index: 1;
+  background-color: #23262c;
+  flex-direction: column;
+  flex: 1;
+  width: 270px;
+  max-width: 270px;
+  height: 100%;
+  max-height: 100%;
+  padding-right: 12px;
+  display: flex;
+  overflow: hidden scroll;
+}
+.SteamFeatureNav .HowToTip {
+  color: #a0a8ab;
+  box-sizing: border-box;
+  background-color: #1e2126;
+  width: 100%;
+  max-width: 210px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.SteamFeatureNav .HighlightTip {
+  color: #1294c5;
+}
+.SteamFeatureNavGroup {
+  width: 100%;
+  margin-bottom: 4px;
+}
+.TopNavPopoutLineRule {
+  width: 100%;
+  height: 8px;
+}
+.SteamFeatureNavGroup h1 {
+  color: #dde3ee;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 300;
+}
+.PersonaLineRule {
+  background-color: #2f333b;
+  width: 100%;
+  height: 1px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+.SteamFeatureNavGroup.BottomSection {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.SteamFeatureNav hr {
+  border-color: #565656;
+  margin-bottom: 20px;
+}
+.SteamFeatureNavItem {
+  cursor: pointer;
+  align-items: center;
+  padding: 5px 16px 5px 8px;
+  transition-property: background-color;
+  transition-duration: 0.18s;
+  transition-timing-function: ease-in-out;
+  display: flex;
+}
+.SteamFeatureNavItem:hover {
+  color: #dde3ee;
+  background-color: #2f333b;
+}
+.SteamFeatureNavItem.NoIcon {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.SteamFeatureNavItem_icon {
+  filter: hue-rotate(180deg) saturate(0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  margin-right: 6px;
+}
+.SteamFeatureNavItem:hover .SteamFeatureNavItem_icon {
+  filter: hue-rotate() saturate(10);
+}
+.SteamFeatureNavItem_label {
+  color: #9b9b9b;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-top: 3px;
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 300;
+  display: inline-flex;
+}
+.SteamFeatureNavItem.NoIcon .SteamFeatureNavItem_label {
+  text-transform: none;
+  letter-spacing: 0.1px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.SteamFeatureNavItem:hover .SteamFeatureNavItem_label {
+  color: #c9c9c9;
+}
+.PersonaButton .MainNavPopout,
+.NotificationsButton .MainNavPopout {
+  top: 45px;
+}
+.NotificationsButton .MainNavPopout {
+  left: auto;
+  right: 0;
+}
+.TopNavPopoutContents {
+  opacity: 0.8;
+  background-color: #17181b;
+  flex-direction: column;
+  flex-grow: 1;
+  align-content: flex-start;
+  min-width: 200px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: none;
+}
+.MainWindowTitleBarButton:hover .MainNavPopout .TopNavPopoutContents {
+  display: block;
+}
+.LoginWindowContentContainer {
+  flex-direction: row;
+  display: flex;
+  position: absolute;
+  inset: 130px 0 30px;
+}
+.LoginWindowContent .LoginWindowContentGradient {
+  z-index: 10;
+  background: linear-gradient(#eee 0%, #777879 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.LoginWindowContent {
+  background-color: #eee;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.MainWindowContent > div {
+  width: 100%;
+  height: 100%;
+}
+.MainWindowClientStatusContainer {
+  flex-direction: row;
+  display: flex;
+  position: absolute;
+  inset: 20px 20px 0;
+}
+.MainWindowClientStatusContainer .ClientStatusContainerGradient {
+  z-index: 10;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+.ClientStatusContainer {
+  flex-direction: column;
+  display: flex;
+}
+.ClientStatusHeader {
+  vertical-align: middle;
+  flex-shrink: 0;
+  min-height: 1px;
+  padding-bottom: 10px;
+}
+.ClientStatusHeader .PopupGenericBodyTitle {
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.LoginBackground {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.LoginBackground .TitleBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.LoginStatusContainer {
+  margin: auto;
+}
+.LoginError {
+  color: #888;
+  max-width: 485px;
+  margin-top: 15px;
+  font-size: 20px;
+}
+.LoginContainer {
+  vertical-align: middle;
+  max-width: 485px;
+  min-height: 1px;
+  margin-top: 72px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.LoginContainer .PopupGenericTitle {
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.LanguageWindowContentContainer,
+.CacheWindowContentContainer {
+  flex-direction: row;
+  display: flex;
+  position: absolute;
+  inset: 130px 0 30px;
+}
+.LanguageWindowContent .LanguageWindowContentGradient,
+.CacheWindowContent .CacheWindowContentGradient {
+  z-index: 10;
+  background: linear-gradient(#eee 0%, #777879 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.LanguageWindowContent,
+.CacheWindowContent {
+  background-color: #eee;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.LanguageBackground,
+.CacheBackground {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.LanguageContainer,
+.CacheContainer {
+  vertical-align: middle;
+  max-width: 500px;
+  min-height: 1px;
+  margin-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.LanguageContainer .PopupGenericTitle,
+.CacheContainer .PopupGenericTitle {
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.LanguageForm {
+  max-width: 300px;
+}
+.LanguageFormGroup,
+.CacheFormGroup {
+  margin-bottom: 15px;
+  display: flex;
+}
+.LanguageFormGroup select {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #b3b5b6;
+  border-radius: 4px;
+  width: 100%;
+  height: 28px;
+  padding-left: 4px;
+  font-size: 16px;
+  line-height: 1.42857;
+  display: block;
+}
+.SteamGuardForm,
+.MainLoginForm {
+  width: 485px;
+  margin-top: 32px;
+}
+.MainLoginFormGroup {
+  margin-bottom: 15px;
+}
+.MainLoginFormGroup input {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #b3b5b6;
+  border-radius: 4px;
+  width: 100%;
+  height: 28px;
+  padding-left: 4px;
+  font-size: 16px;
+  line-height: 1.42857;
+  display: block;
+}
+.MainLoginFormGroup .PopupGenericBodyText {
+  letter-spacing: 0.5px;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+}
+.MainLoginFormRemember {
+  margin-bottom: 15px;
+  display: flex;
+}
+.MainLoginFormRemember input {
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #777879;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  margin-left: -1px;
+  display: block;
+}
+.MainLoginFormRemember .PopupGenericBodyText {
+  letter-spacing: 0.5px;
+  max-width: 100%;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+}
+.LoginStatusContainer,
+.LanguageForm,
+.SteamGuardForm {
+  width: 485px;
+}
+.LoginStatusMessage {
+  width: 485px;
+  margin-top: 32px;
+  margin-bottom: 15px;
+}
+.LoginStatusMessage .PopupGenericBodyText {
+  letter-spacing: 0.5px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+}
+.LoginStatusButtonContainer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.SteamGuardForm input[type="text"] {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 150px;
+  height: 28px;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  display: block;
+}
+.HowToTip {
+  position: relative;
+}
+.HowToTip .HowToDismiss {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > td {
+  vertical-align: middle;
+  word-wrap: break-word;
+  border-top: 1px solid #555;
+  padding: 4px;
+  line-height: 16px;
+}
+.table > thead > tr > th {
+  text-align: left;
+  vertical-align: bottom;
+  background-color: #777;
+  border-bottom: 2px solid #555;
+  font-weight: 700;
+}
+.table > thead:first-child > tr:first-child > th {
+  border-top: 0;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #888;
+}
+.table-bordered,
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > td {
+  border: 1px solid #555;
+}
+.table-hover > tbody > tr:hover {
+  background-color: #aaa;
+}
+.ClientStatusTableContainer {
+  display: block;
+  overflow: auto;
+}
+.ClientStatusTable {
+  letter-spacing: 0.25px;
+  font-family:
+    Helvetica,
+    Helvetica fallback;
+  font-size: 12px;
+}
+.ClientStatusTable .col0 {
+  width: 120px;
+}
+.ClientStatusTable .col1 {
+  width: 150px;
+}
+.CafeFundingContainer {
+  flex-shrink: 0;
+  margin-bottom: 20px;
+  display: block;
+}
+.CafeFundingTableContainer {
+  max-height: 200px;
+  display: block;
+  overflow: auto;
+}
+.CafeFundingTable {
+  letter-spacing: 0.25px;
+  font-family:
+    Helvetica,
+    Helvetica fallback;
+  font-size: 12px;
+}
+.CafeFundingTable .col0 {
+  width: 120px;
+}
+.CafeFundingTable .col1 {
+  width: 150px;
+}
+.profile {
+  align-items: center;
+  display: flex;
+}
+.avatar {
+  width: 32px;
+  height: 32px;
+  margin: 2px 4px -2px 2px;
+}
+.GenericDialog {
+  background-color: #a3a2a2;
+  width: 500px;
+}
+.GenericDialogContainer {
+  margin-bottom: 15px;
+}
+.CacheEditDialog {
+  text-transform: uppercase;
+  background-color: #a3a2a2;
+}
+.CacheEditContainer {
+  font-size: 12px;
+  font-weight: medium;
+  letter-spacing: 0.25px;
+  -webkit-app-region: no-drag;
+  margin-top: 15px;
+  font-family:
+    Helvetica,
+    Helvetica fallback;
+}
+.CacheEditGroup {
+  break-before: always;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 28px;
+  margin-bottom: 15px;
+  line-height: 20px;
+  display: flex;
+}
+.CacheEditGroup input {
+  margin-left: 0;
+}
+.CacheEditMaxSize,
+.CacheEditPort {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #b3b5b6;
+  border-radius: 4px;
+  width: 60px;
+  height: 18px;
+  margin-right: 15px;
+  padding-left: 4px;
+  font-size: 12px;
+  line-height: 1.42857;
+  display: block;
+}
+.CacheEditLocation {
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #b3b5b6;
+  border-radius: 4px;
+  width: 200px;
+  height: 18px;
+  margin-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 12px;
+  line-height: 1.42857;
+  display: block;
+}
+.tooltip {
+  display: inline-block;
+  position: relative;
+}
+.tooltip-icon {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0OTQ0NzUwMkJCNkZFNjExODg0QUU3OUFCRTc0MzBEOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowMTkwMDcxMTc5M0QxMUU2QkUzMEEwMTJFNDJDQzQ1RiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowMTkwMDcxMDc5M0QxMUU2QkUzMEEwMTJFNDJDQzQ1RiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ5NDQ3NTAyQkI2RkU2MTE4ODRBRTc5QUJFNzQzMEQ4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQ5NDQ3NTAyQkI2RkU2MTE4ODRBRTc5QUJFNzQzMEQ4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+xkGUqAAAAM5JREFUeNqUkj0LwjAQhptqsZOgQv0YxEEQV3Hwt/sr3ETQRQexYBcdFLHxOb2UWOzgCw8NyXuXy12NtTYQGWNCPgm0IQ4+ukEGKb787ZMAzA3WY89YlgRu8d4NC8k8VbMEzqEDTzjCCnINWrsyXOYadOHsBff0TDyJGIYQ6eZDssBBbxjBBq56HoUVdTdhAXs4eftxWPHIGVxgqfUXkpJaXklOkmjnlVJ0K9Q+l5NMvMf6yiQg1ZY51WEA/R+zSKsGJ4ms8j24f3+NlwADADZAQ2GIoxTgAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-left: 4px;
+}
+.tooltip .tooltip-container .tooltiptext {
+  visibility: hidden;
+  opacity: 0.85;
+  color: #c9c9c9;
+  text-align: left;
+  z-index: 1;
+  background-color: #17181b;
+  border-radius: 4px;
+  max-width: 300px;
+  margin-bottom: 10px;
+  margin-left: -9px;
+  padding: 5px;
+  font-size: 12px;
+  display: block;
+  position: absolute;
+  bottom: 100%;
+}
+.tooltip .tooltip-container .tooltiptext:after {
+  content: " ";
+  border: 5px solid #0000;
+  border-top-color: #17181b;
+  margin-left: -5px;
+  position: absolute;
+  top: 100%;
+  left: 5%;
+}
+.tooltip-container {
+  width: 300px;
+  position: absolute;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.slideup,
+.slidedown {
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+  overflow-y: hidden;
+}
+.slideup {
+  max-height: 200px;
+}
+.AcctStatusAlert {
+  z-index: 1000;
+  opacity: 0.8;
+  color: #c9c9c9;
+  text-align: left;
+  background-color: #17181b;
+  border: none;
+  outline: none;
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+}
+.AcctAlertIcon {
+  -webkit-app-region: no-drag;
+  background-image: url(../images/icon_errorwarning.png?v=CRD0Iwkt);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.AcctInfoIcon {
+  -webkit-app-region: no-drag;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzFBRjJFRTJERjRDMTFFNzg2QjJGNkJENkQ1QUZFNTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzFBRjJFRTNERjRDMTFFNzg2QjJGNkJENkQ1QUZFNTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDMUFGMkVFMERGNEMxMUU3ODZCMkY2QkQ2RDVBRkU1NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDMUFGMkVFMURGNEMxMUU3ODZCMkY2QkQ2RDVBRkU1NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pr4nhqYAAAFdSURBVHjahJO9SwNBEMUvm6uTIJxN7Pxq/OgCNnYipLH2YmEREP+TNNYipNQkrQh6MYVgIwQbtQuk0jRekJhWRd/IWxnWjQ78YG533s7c7kwmSZLAsRKogg1Q5NoAdEAddHWwUX4OnIA2eAExmCEx19qMyVlRqMSSYQQWQOpU9QxuwAE4ZqxUOLYVHFJcpniF2d7AO7jkWsqYETXfFZS4KJk/eOAVmFIVSLZrsASewA7oidbwwo6css9ACyyCeXAL8mCb+yk11ZCnx84/7yp/TvkZ5Z+CRsin6ge/TYLvwDK/X0FT7YumaILJllfiC7AOHt2gkE0yy6fSJhkf6Jc9CUQzMHzTLU/AJ1jl8/lMNB3D9twD0YQ7uPeII2rqhr19zg7LBv9blrGi6dpL3AcFLkZ//ELEmAI1P8M0Zj8M2WE1sEbBNP0a94Z2DvQw2UMqapwbnnHedMf5S4ABAHu/VAZyE6RkAAAAAElFTkSuQmCC);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.AcctStatusAlertMsg {
+  max-width: 90%;
+  padding: 6px 4px;
+}
+.ExpandAlertIcon {
+  -webkit-app-region: no-drag;
+  background-color: #777879;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAAHkRx0oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzYzNThFOTJGMjZEMTFFN0JFOTJDQ0MwMDAwMDJBOEEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzYzNThFOTNGMjZEMTFFN0JFOTJDQ0MwMDAwMDJBOEEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NjM1OEU5MEYyNkQxMUU3QkU5MkNDQzAwMDAwMkE4QSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NjM1OEU5MUYyNkQxMUU3QkU5MkNDQzAwMDAwMkE4QSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlnlVRQAAAHESURBVHjaYvz//z8DNsAPYzChywAEECO6liQo/ZcZSJyHcn4DBBCyChkg9gLiq8iC25HY7kCsCWX/BwggRlxuQgYgFd+wCcLAIRjjL5R+BMRfoOx0bDoOgAiAAMKFuKCKNzIQAaygijWQxB4C8TtsiidBFTMjiR0GYgEk/kwsauAAFAyqSPx7QOyNxOdEVrwAlylQMAWIWUAMgAAiKhaIBRug7uciVsMVqL+8oBplCGl4C41hGNCAarTCpeEvNJixJfz/SKkanglAgrOQxEDxcwSJzwxVMwk5baUjKQAl8K/QxP4Ii2t2oEcWKBLvI/FVsaV5ZFCJIxXzo6V0eKYGxbQ0EDtg0fQRKr8AJgAQYKQiUIDMgWJmBhoAQWgMgLz2B4r/Q8UEqWGBFhA/hhr6BogtkeQsoGL/oWq0yLHABxqjIEMuE0jmMlA1sJLPlxgLqqAaQHgdelmAVD5w4RBfh6S/Gl0BGxCvQlLQQMDlv6D4Ch6fNiCZtwpqBzjHvAbiIByaLKFxAVJjiiRuChV7ixZ3yCAIqsYdXzAmQlPXBSCWxKNOEqrmD1QPUQCUGSdCvbwG5mUiARtUz3+oGYx4a2paAQAij3rXp3xjNQAAAABJRU5ErkJggg==);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  border-radius: 4px;
+  width: 15px;
+  height: 15px;
+  padding-right: 4px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+}
+.ExpandAlertIcon:hover {
+  filter: brightness(1.2);
+}
+body {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  font-family:
+    Motiva Sans,
+    Motiva Sans fallback,
+    Segoe UI,
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+textarea,
+input,
+button {
+  outline: none;
+  font-family:
+    Motiva Sans,
+    Motiva Sans fallback;
+}
+.MainNavPopout {
+  z-index: 5;
+  pointer-events: auto;
+  -webkit-app-region: no-drag;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+.MainWindowTitleBarButton .PopoutHighlight {
+  z-index: 10;
+  background: linear-gradient(90deg, #2b77fe 0%, #29aaff 100%);
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  top: 29px;
+  left: 0;
+}
+.MainWindowTitleBarButton.popoutVisible .PopoutHighlight {
+  width: 100%;
+}
+.MainWindowTitleBarButton.SteamLogoMainNav.popoutVisible .PopoutHighlight {
+  width: calc(100% - 36px);
+  margin-left: 36px;
+}
+.MainNavMenu {
+  filter: hue-rotate(180deg) saturate(0);
+  background-position: 12% 5%;
+  background-repeat: no-repeat;
+  background-size: 25% 25%;
+  width: 64px;
+  height: 64px;
+  display: none;
+}
+.MainNav .steam_logo {
+  opacity: 1;
+  cursor: pointer;
+  width: 40px;
+  margin: 16px auto 0;
+}
+.MainNav .steam_logo svg {
+  filter: hue-rotate(180deg) saturate(0);
+  transition-property: transform, color, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+.MainNav .steam_logo svg:hover {
+  filter: hue-rotate(180deg) saturate(10);
+}
+.MainNav .steam_logo:hover,
+.MainNav .steam_logo.homeMenuVisible {
+  opacity: 1;
+}
+.sidebar_container {
+  width: 20px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+}
+.sidebar {
+  color: #fff;
+  background-color: #212121;
+  width: 500px;
+  transition:
+    right 0.35s 1s,
+    opacity 0.35s 1s,
+    box-shadow 0.35s 1s;
+  display: flex;
+  position: absolute;
+  top: 96px;
+  bottom: 0;
+  right: -500px;
+}
+.sidebar_target {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  display: flex;
+}
+.sidebar_icon {
+  width: 64px;
+  height: 64px;
+  position: relative;
+}
+.sidebar_container:hover .sidebar,
+.sidebar:hover,
+.sidebar.active {
+  transition-delay: 0s;
+  right: 0;
+  box-shadow: 10px 0 150px 50px #000;
+}
+.sidebar_content {
+  flex-grow: 1;
+  display: none;
+}
+.sidebar_content.active:not(.not_hover),
+.sidebar_content.hover,
+.active .sidebar_content {
+  display: block;
+}
+.icon_container {
+  flex-direction: column;
+  flex-basis: 50px;
+  height: 100%;
+  display: flex;
+}
+.icon_container > div {
+  flex-grow: 1;
+}
+.QuitButtonContainer {
+  flex-direction: column;
+  margin: 40px;
+  display: flex;
+}
+.QuitButtonContainer button {
+  margin-bottom: 5px;
+}
+.MainNavBackground {
+  background: linear-gradient(#272a2e 0%, #0e0f11 100%);
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-out;
+  position: absolute;
+  top: 0;
+}
+.MainNav {
+  box-sizing: border-box;
+  z-index: 10;
+  flex-direction: column;
+  width: 43px;
+  height: 100%;
+  padding-bottom: 10px;
+  transition-property: background-color, transform, width;
+  transition-duration: 0.2s;
+  display: flex;
+  position: relative;
+}
+.MainWindow.sidebar_collapsed .MainNav {
+  width: 0;
+  transform: translate(-43px);
+}
+.MainNavToggleButton {
+  z-index: 3000;
+  opacity: 0.4;
+  background-color: #101113;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  transition-property: opacity;
+  transition-duration: 0.24s;
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+}
+.MainNavToggleButton:hover {
+  opacity: 1;
+}
+._5ZSIN7wAn6E- {
+  flex-direction: column;
+  margin: 0;
+  display: flex;
+}
+._5ZSIN7wAn6E-.zuEsqPx3FlM- {
+  animation-name: none;
+}
+._5ZSIN7wAn6E-.zuEsqPx3FlM- * {
+  stroke-dasharray: initial !important;
+  stroke-dashoffset: initial !important;
+  stroke-width: 5px !important;
+  opacity: 1 !important;
+  animation-name: none !important;
+}
+._5ZSIN7wAn6E-.zuEsqPx3FlM- .lSX5-sK13fE- path {
+  stroke-width: 0 !important;
+}
+._5ZSIN7wAn6E-._9ifT2fGdq30- {
+  flex-direction: row;
+}
+._5ZSIN7wAn6E- .kfL-m23H5XM-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber,
+._5ZSIN7wAn6E- .SVGIcon_Throbber path {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+._5ZSIN7wAn6E- .kfL-m23H5XM- {
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+._5ZSIN7wAn6E-.OZPDdNP4BlE- .kfL-m23H5XM- {
+  width: 32px;
+  height: 32px;
+}
+._5ZSIN7wAn6E-.CiER6ovkLN4- .kfL-m23H5XM- {
+  width: 64px;
+  height: 64px;
+}
+._5ZSIN7wAn6E-.ap9xoluiWE8- .kfL-m23H5XM- {
+  width: 92px;
+  height: 92px;
+}
+.CnlxA61G8kY- {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.flvSd6Licro-,
+._5ZSIN7wAn6E- .flvSd6Licro- {
+  color: #3d85c8;
+  text-transform: uppercase;
+  text-align: center;
+  user-select: none;
+  flex: 1;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+._5ZSIN7wAn6E-.CiER6ovkLN4- .flvSd6Licro- {
+  margin-top: 4px;
+}
+._5ZSIN7wAn6E-.OZPDdNP4BlE- .flvSd6Licro- {
+  margin-top: 2px;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber.hxxrDeXoxWQ- {
+  filter: blur(3px);
+  inset-inline-start: 0;
+  position: absolute;
+  top: 0;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber.hxxrDeXoxWQ- path {
+  stroke: #4375fd;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber path {
+  stroke: #67c1f5;
+  stroke-linecap: butt;
+  opacity: 0;
+  animation-name: L7ngpvu8-Tc-;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .Kpi0-rRHJgM-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .DSe4gwh02MM- {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 116;
+  stroke-width: 6px;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .DSe4gwh02MM- {
+  opacity: 1;
+  stroke: #3b8bb9;
+  stroke-width: 6px;
+  transform-origin: 50%;
+  stroke-linecap: round;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .Kpi0-rRHJgM- {
+  display: none;
+}
+@keyframes L7ngpvu8-Tc- {
+  to {
+    stroke-dashoffset: -232px;
+  }
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .Lkyq1egj6es- {
+  opacity: 1;
+  stroke-width: 0;
+  animation-name: j81eySOz-LQ-;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: -1.2s;
+}
+@keyframes j81eySOz-LQ- {
+  0% {
+    fill: #67c1f500;
+  }
+  50% {
+    fill: #67c1f50d;
+  }
+  to {
+    fill: #67c1f500;
+  }
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .whGFWgAsd0U- .DCWcIP1pUQ8-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .whGFWgAsd0U- circle {
+  stroke: #67c1f5;
+  transform-origin: 67% 36%;
+  animation-name: CrOeGEaiF6Y-;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: -1.2s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .whGFWgAsd0U- circle {
+  animation-name: Qzi6fMXPdE0-;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .lSX5-sK13fE- path {
+  fill: #67c1f5;
+  stroke-width: 0;
+  animation-name: Qzi6fMXPdE0-;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: -0.6s;
+}
+@keyframes CrOeGEaiF6Y- {
+  0% {
+    opacity: 0;
+    stroke-width: 4px;
+    transform: scale(0.75);
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    stroke-width: 0;
+    transform: scale(5);
+  }
+  to {
+    opacity: 0;
+    stroke-width: 0;
+    transform: scale(5);
+  }
+}
+@keyframes Qzi6fMXPdE0- {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber ._2JDR7sA0aXg-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .m2hvR7gx-6w-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .qqqupBFca0w-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .KEh8FE6CS3A-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .G-Ild6re3CI-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .-GTUE7hcPdE-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .JFEDQymQuzM-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .EDwB-WhQu6w-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .d-47LK5oiRI-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .yFS9xOKggIk-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .LTHCVV1OMTQ-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .G4dDPXGgXx8-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber ._4ccJpuR0F8o-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .NVuf9TmVDOU-,
+._5ZSIN7wAn6E- .SVGIcon_Throbber .EexJySqIon8- {
+  stroke-dasharray: 150 950;
+  animation-name: _2rFb3wkHVHc-;
+  animation-duration: 3s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .EexJySqIon8- {
+  opacity: 0.06;
+  stroke-width: 0.5px;
+  animation-delay: 0s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .NVuf9TmVDOU- {
+  opacity: 0.13;
+  stroke-width: 1px;
+  animation-delay: -0.1s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber ._4ccJpuR0F8o- {
+  opacity: 0.2;
+  stroke-width: 1.5px;
+  animation-delay: -0.2s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .G4dDPXGgXx8- {
+  opacity: 0.26;
+  stroke-width: 2px;
+  animation-delay: -0.3s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .LTHCVV1OMTQ- {
+  opacity: 0.33;
+  stroke-width: 2.5px;
+  animation-delay: -0.4s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .yFS9xOKggIk- {
+  opacity: 0.4;
+  stroke-width: 3px;
+  animation-delay: -0.5s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .d-47LK5oiRI- {
+  opacity: 0.46;
+  stroke-width: 3.5px;
+  animation-delay: -0.6s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .EDwB-WhQu6w- {
+  opacity: 0.53;
+  stroke-width: 4px;
+  animation-delay: -0.7s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .JFEDQymQuzM- {
+  opacity: 0.6;
+  stroke-width: 4.5px;
+  animation-delay: -0.8s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .-GTUE7hcPdE- {
+  opacity: 0.66;
+  stroke-width: 5px;
+  animation-delay: -0.9s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .G-Ild6re3CI- {
+  opacity: 0.73;
+  stroke-width: 5.5px;
+  animation-delay: -1s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .KEh8FE6CS3A- {
+  opacity: 0.8;
+  stroke-width: 6px;
+  animation-delay: -1.1s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .qqqupBFca0w- {
+  opacity: 0.86;
+  stroke-width: 6.5px;
+  animation-delay: -1.2s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber .m2hvR7gx-6w- {
+  opacity: 0.93;
+  stroke-width: 7px;
+  animation-delay: -1.3s;
+}
+._5ZSIN7wAn6E- .SVGIcon_Throbber ._2JDR7sA0aXg- {
+  opacity: 1;
+  stroke-width: 7.5px;
+  animation-delay: -1.4s;
+}
+@keyframes _2rFb3wkHVHc- {
+  to {
+    stroke-dashoffset: -1100px;
+  }
+}
+.OZPDdNP4BlE- {
+  width: 36px;
+  height: 36px;
+}
+.CiER6ovkLN4- {
+  width: 64px;
+  height: 64px;
+}
+.ap9xoluiWE8- {
+  width: 92px;
+  height: 92px;
+}
+.aK59xJ2GP9s- {
+  width: 120px;
+  height: 120px;
+}
+._7sOsy8KxW18- {
+  width: 240px;
+  height: 240px;
+}
+.VF2yNCE0Yms- {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.VF2yNCE0Yms-.uALx1rZZEbE- {
+  opacity: 1;
+}
+.Laj-8wPgPBM- img {
+  width: 100%;
+}
+/*$vite$:1*/

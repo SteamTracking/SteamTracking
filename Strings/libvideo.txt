@@ -181,7 +181,7 @@
 !m_bHasStartMsg
 !m_bInThreadPool
 !m_bInitialRequest
-!m_bInitialized
+!m_bIsFlushingAll
 !m_bIsShutdown
 !m_bJustCount
 !m_bLoaded
@@ -655,8 +655,6 @@ $RepresentationID$
 &yen;
 &yuml;
 ( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
-( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
-( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
 ( Assoc.nFlags & ( k_nAssocProcessing | k_nAssocFinalizing ) ) == 0 && Assoc.pPending == NULL
 ( id & k_nMessageTypeID_Mask ) == k_nMessageTypeID_EMsg
 ( m_AssocHandles[nAssocIdx].nFlags & k_nAssocClosed ) == 0
@@ -705,6 +703,7 @@ $RepresentationID$
 ((size_t)((buf)->end - (buf)->last)) >= datamax
 ((size_t)((buf)->end - (buf)->last)) >= padlen - 1
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
+(1@p9
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -791,6 +790,7 @@ $RepresentationID$
 *pcubSignature > 0
 *pubExtraData == nullptr && *pcubExtraData == 0
 ++CCUNG
+++CCUNG jv
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
@@ -888,6 +888,8 @@ $RepresentationID$
 ../common/net_misc.cpp
 ../common/netconnection.cpp
 ../common/netconnection.h
+../common/netconnectionbuffer.cpp
+../common/netconnectionbuffer.h
 ../common/netfilter.cpp
 ../common/netfilter.h
 ../common/nethost.cpp
@@ -940,6 +942,7 @@ $RepresentationID$
 ../public/tier0/tslist.h
 ../public/tier0/vprof.h
 ../public/tier1/bitstring.h
+../public/tier1/keyvalues.h
 ../public/tier1/netadr.h
 ../public/tier1/refcount.h
 ../public/tier1/smartptr.h
@@ -1010,6 +1013,8 @@ $RepresentationID$
 .placeholder.proto
 .steam_exec_test
 .tmp
+/.flatpak-info
+/app
 /bin/sh
 /dev
 /dev/
@@ -1020,6 +1025,7 @@ $RepresentationID$
 /dev/srandom
 /dev/tty
 /dev/urandom
+/etc
 /etc/mtab
 /etc/os-release
 /etc/pki/tls/cert.pem
@@ -1050,6 +1056,7 @@ $RepresentationID$
 /sys/kernel/tracing/trace_marker
 /tmp
 /tmp/.steam-sem-names
+/usr
 /usr/bin/crosdisk %s
 /usr/local/ssl
 /usr/local/ssl/cert.pem
@@ -1086,6 +1093,7 @@ $RepresentationID$
 00000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:21:02
 01/01/00
 0123456789
 0123456789.
@@ -1093,7 +1101,6 @@ $RepresentationID$
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:59:05
 1 Mbps
 1.5 Mbps
 1.5.6
@@ -1166,6 +1173,8 @@ $RepresentationID$
 10CUtlMemoryIN11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIiy10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIiy10CDefEqualsIiE11HashFunctorIiEiE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIjP11CBufferBase10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIjP11CBufferBase10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjP13MessageInfo_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIjP13MessageInfo_t10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjP14CTCPConnection10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
@@ -1302,6 +1311,7 @@ $RepresentationID$
 10CUtlVectorIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIiy10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIjP11CBufferBase10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIjP13MessageInfo_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIjP14CTCPConnection10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIjP14CUDPConnection10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
@@ -1354,6 +1364,7 @@ $RepresentationID$
 10CUtlVectorIj10CUtlMemoryIjEE
 10CUtlVectorIy10CUtlMemoryIyEE
 10ConCommand
+11CBufferBase
 11CDirWatcher
 11CFileWriter
 11CFunctorJob
@@ -1375,6 +1386,7 @@ $RepresentationID$
 11CUtlHashMapIPKci10CDefEqualsIS1_E11HashFunctorIS1_ES1_E
 11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE
 11CUtlHashMapIiy10CDefEqualsIiE11HashFunctorIiEiE
+11CUtlHashMapIjP11CBufferBase10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjP13MessageInfo_t10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjP14CTCPConnection10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjP14CUDPConnection10CDefEqualsIjE11HashFunctorIjEjE
@@ -1406,6 +1418,7 @@ $RepresentationID$
 12CIPRangeList
 12CLogInstance
 12CMessageList
+12CProtoBufMsgI9CMsgMultiE
 12CProtoBufMsgIvE
 12CRefCounted1I29IHTTPStreamingResponseHandler20CRefCountServiceBaseILb1E6CRefMTEE
 12CStdMemAlloc
@@ -1483,6 +1496,7 @@ $RepresentationID$
 15CMetricsFactory
 15CMetricsPayload
 15CMsgKeyValueSet
+15CMsgMultiBuffer
 15COpenSSLContext
 15CVideoMPDParser
 15CWorkThreadPool
@@ -1576,6 +1590,7 @@ $RepresentationID$
 20CAlignedYUV420Buffer
 20CCDDBAppDetailCommon
 20CECSigningPrivateKey
+20CNetConnectionBuffer
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
 20CRefCountServiceBaseILb1E6CRefMTE
@@ -1596,8 +1611,10 @@ $RepresentationID$
 21CMetricsReporterChain
 21CMsgKubeRPCPacket_Hdr
 21COpenSSLCachedSession
+21CProtoBufCountsByEMsg
 21CScheduledFunctionMgr
 21CUtlCStringConversion
+21IWorkThreadPoolSignal
 21UserSystemInformation
 21VideoRepresentation_t
 22CBaseScheduledFunction
@@ -1614,6 +1631,8 @@ $RepresentationID$
 23CDummyWebSocketCallback
 23CECKeyExchangePublicKey
 23CFreeNetPacketsWorkItem
+23CProtoBufMsgMultiBuffer
+23CWorkItemBufferedPacket
 23GamePerformanceSettings
 23IUnbufferedSendCallback
 24 Mbps
@@ -1631,6 +1650,7 @@ $RepresentationID$
 25CWorkItemNetFilterDecrypt
 25CWorkItemNetFilterEncrypt
 25CWorkItemRunSSLConnection
+25CWorkItemsCompletedWaiter
 25INetSSLConnectionCallback
 26CHTTPCacheInitializeThread
 26CSSLFramedRecvMsgCollector
@@ -1684,6 +1704,7 @@ $RepresentationID$
 30CWorkItemNetFilterOnDisconnect
 31CAdHocValidation_SimpleCallback
 31CCommunity_ClanAnnouncementInfo
+31CProtoBufHConnectionSendHandler
 32CWorkItemThreadedDeleteCacheFile
 32UserContentDescriptorPreferences
 33CHTTPDefaultRedirectEnableHandler
@@ -1761,6 +1782,7 @@ $RepresentationID$
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
+9H(DG
 9IMemAlloc
 : Tried to copy from a message with a different type. to:
 : Tried to merge from a message with a different type.  to:
@@ -1826,6 +1848,7 @@ $RepresentationID$
 @MaxOutstandingSendThreadItemFatalAssert
 @MaxOutstandingSendThreadItemFatalAssertSecondsAtLimit
 @MaxOutstandingSendThreadItemSleep
+@NetConnectionBufferMsgLimit
 @bAssertOnProtoBufBodyMismatch
 @bCallerDeadlineAbortJobDisableWhenHTTPReqStart
 @bEnableFrameFuncOverageWarnings
@@ -1843,11 +1866,13 @@ $RepresentationID$
 @bProfileYieldsInTestSuiteJobs
 @bProtobufParseSizeProfile
 @bProtobufParseTimeProfile
+@bSSLDirectWSASend
 @cMinimumJobTimeoutsToCheckPerFrame
 @cNetEncryptionHandshakeWorkMax_HighPri
 @cNetEncryptionHandshakeWorkMax_LowPri
 @cNetEncryptionHandshakeWorkMax_MedPri
 @cUDPSendRetries
+@client_simulated_latency_ms
 @metricsDisabledCatalogs
 @metricsDisabledOperations
 @metricsEnabledOperations
@@ -1859,6 +1884,7 @@ $RepresentationID$
 @nJobInteryieldMillisecondsLogThreshold
 @nJobInteryieldMillisecondsSpewThreshold
 @nJobNetSendsInsaneThreshold
+@nNetConnectionBufferZipLevel
 @nProtobufArenaInitialBlockSize
 @nProtobufArenaMaxBlockSize
 @nProtobufArenaNumberOfHeadersToShare
@@ -2389,6 +2415,7 @@ Accounts not friends
 AchievementUnlocked
 Active
 AdaptationSet
+Add this many ms of fake latency to every non-loopback HTTP request and every message from the CM
 AddAllocatedMessage
 AddBool
 AddCleared() can only be used on a RepeatedPtrField not on an arena.
@@ -2609,6 +2636,7 @@ BITWRAP
 BIsDTLS()
 BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
+BIsValid()
 BLAKE2b512
 BLAKE2s256
 BMPSTRING
@@ -2864,6 +2892,7 @@ CFileWriter::Close
 CFileWriter::FlushInternal
 CFileWriter::Write
 CFileWriterThread
+CFmtStr truncated: "%s"
 CFrameFunctionMgr::BRun
 CFrameFunctionMgr::BRun - DeletePass
 CFrameFunctionMgr::BRun - OverageWarning
@@ -3369,6 +3398,18 @@ CNetConnection::OnConnectFailure
 CNetConnection::OnConnectionSucceeded
 CNetConnectionAsyncDisconnectWorkItem
 CNetConnectionAsyncDisconnectWorkItem::ThreadProcess
+CNetConnectionBuffer::Flush()
+CNetConnectionBuffer::MultiplexMultiMsg unzip
+CNetConnectionBuffer::MultiplexMultiMsg() unzipping multi
+CNetConnectionBuffer::MultiplexMultiMsg: claimed compression ratio is suspect (%d:1).
+CNetConnectionBuffer::MultiplexMultiMsg: claimed compression ratio is suspect (%llu:1).
+CNetConnectionBuffer::MultiplexMultiMsg: cubSubPacket claims to be larger than remaining data, discarding message.
+CNetConnectionBuffer::MultiplexMultiMsg: msg.Body().m_cubUnzipped very large (%d).
+CNetConnectionBuffer::MultiplexMultiMsg: msg.Body().size_unzipped() very large (%d).
+CNetConnectionBuffer::MultiplexMultiMsg: unzipped data isn't larger than zipped data - bad packet.
+CNetConnectionBuffer::SendBufferedClientPacket
+CNetConnectionBuffer::SendBufferedClientPacket sending huge packet %d bytes -- dropping
+CNetConnectionBuffer::SendBufferedClientPacket sending huge packet %d bytes, msg=%s, to=%s -- dropping
 CNetConnectionDestroyWorkItem
 CNetConnectionDestroyWorkItem::ThreadProcess
 CNetConnectionImmediateDisconnectWorkItem
@@ -3409,11 +3450,14 @@ COpenSSLConnection(%c%p) handshake complete after %u BIO reads (%u calls) of %ll
 COpenSSLConnection(%c%p) made no progress: %s (%u in %d out)
 COpenSSLConnection(%c%p) waiting in connect: %s (last err = %d) after %u BIO reads (%u calls, %u truncated) of %llu bytes, %u BIO writes of %llu bytes, %u DTLS retransmits\n
 COpenSSLConnection(c%p) reused session certificate was previously accepted, now rejected by callback\n
+COpenSSLConnection: Multi ends partway through a sub-message length, discarding it
+COpenSSLConnection: Multi sub-message claims to be larger than remaining data, discarding the rest
 COpenSSLConnection::BAsyncSend
 COpenSSLConnection::BAsyncSend (prefixed)
 COpenSSLConnection::BAsyncSend (swap)
 COpenSSLConnection::BAsyncSend prefix + payload size overflow
 COpenSSLConnection::BAsyncUnbufferedSend
+COpenSSLConnection::BThreadedQueueMultiMsgSubMsgs
 COpenSSLConnection::BYieldingWaitForSendsCompleted
 COpenSSLConnection::COpenSSLConnection
 COpenSSLConnection::OnDTLSTimeoutPoll
@@ -3444,6 +3488,7 @@ CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPU_MHZ
 CPathString
+CPathString::Concat: null path element
 CPendingMsg::SendPkt
 CProtoBufMsg::BAsyncSend
 CProtoBufMsg::BAsyncSendInternal
@@ -3647,6 +3692,8 @@ CWebSocketConnectionDelayedCloseConnectionWorkItem
 CWebSocketConnectionDelayedCloseConnectionWorkItem::ThreadProcess
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
 CWorkItem::SetOrderingKey must be called before AddWorkItem
+CWorkItemBufferedPacket
+CWorkItemBufferedPacket::ThreadProcess
 CWorkItemHTTPClientRequest
 CWorkItemHTTPClientRequest::ThreadProcess
 CWorkItemNetEncryptionHandshakeEncrypt
@@ -3681,6 +3728,7 @@ CWorkThreadPool::BTryDeleteExitedWorkerThreads
 CWorkThreadPool::SetEnsureOutputOrdering must be set before any work item is added
 CWorkThreadPool::StartWorkThread: Thread creation failed.\n
 CWorkThreadPool::StartWorkThreads: called with no threads in the pool, this is probably a bug.\n
+CWorkThreadPool::StopWorkThreads: %s gave up after %ums with %d thread(s) still running (first is "%s"), leaking them and continuing.\n
 CWorkThreadPool::StopWorkThreads: giving up after %dms with %d deferred work item(s) outstanding; continuing shutdown.\n
 CWorkThreadPool::StopWorkThreads: still waiting on %d deferred work item(s) after %dms.\n
 CWorkThreadPool::~CWorkThreadPool(): Thread pool %s shutdown incorrectly.\n
@@ -3688,7 +3736,6 @@ CWorkThreadPool::~CWorkThreadPool: %d items were waiting on output ordering, dis
 CWorkThreadPool::~CWorkThreadPool: work complete queue not empty, %d items discarded.\n
 CWorkThreadPool::~CWorkThreadPool: work processing queue not empty: %d items discarded.\n
 CYieldingScopedJobLock failed - there is no indication to the caller!!!
-CZipEntryStreamInflater::SetInput called when it doesn't need input
 CZipWriterFile was not finalized before destruction
 CZipWriterFile was not finalized before reuse
 Cabal
@@ -3869,6 +3916,7 @@ Console
 Console User
 ConstHdr().ip_v6().length() == 16
 Contact Support
+Container path must be absolute
 Content Server
 Content Version
 Content unavailable
@@ -4209,6 +4257,7 @@ Destination
 Destination buffer is too small
 Destination buffer is wrong
 DetectNow failed
+Developer
 Device Corrupt
 Device Error
 Device Not Found
@@ -5434,7 +5483,7 @@ INVALID_SOCKET != hSocket
 INVALID_SOCKET != m_hSocket
 INVALID_SOCKET == m_hSocket
 IOCP Thread
-IOCP Thread %u
+IOCP Thread %u port %d
 IOTYPE_ACCEPT == pCompletionData->type && 0 == pCompletionData->ulResult
 IOTYPE_RECV should never be posted back to main thread
 IOTYPE_SEND/UNBUFERREDSEND
@@ -5725,28 +5774,19 @@ Key not initialized, cannot verify signature
 Key type %d doesn't know how to load from buffer
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues binary nested deeper than the parse depth assert, probably bad usage
 KeyValues don't support #include anymore, file "%s"
+KeyValues text nested deeper than the parse depth assert, probably bad usage
 KeyValues::FindKey( StringView ... )
 KeyValues::FindKey( hks )
 KeyValues::FindKey( hks, bCreate )
-KeyValues::MergeFromBuffer
+KeyValues::LoadFromBuffer
+KeyValues::LoadSubKeysFromBuffer
 KeyValues::ReadAsBinary
-KeyValues::ReadAsBinary - Set name
-KeyValues::ReadAsBinary - TYPE_BINARY_STRING
-KeyValues::ReadAsBinary - TYPE_COLOR
-KeyValues::ReadAsBinary - TYPE_FLOAT
-KeyValues::ReadAsBinary - TYPE_INT
-KeyValues::ReadAsBinary - TYPE_INT64
-KeyValues::ReadAsBinary - TYPE_NONE
-KeyValues::ReadAsBinary - TYPE_PTR
-KeyValues::ReadAsBinary - TYPE_STRING
-KeyValues::ReadAsBinary - TYPE_UINT64
-KeyValues::ReadAsBinary - TYPE_WSTRING
-KeyValues::ReadAsBinary() stack depth > 100
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::SaveToBuffer: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
@@ -5853,7 +5893,6 @@ Logger does not handle * char as used for a width specifier (where width is a pa
 Logging Off
 Logging On
 Logic problem? szsrc =
-Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Logon Extra Security
 Logon Extra Security Disabled
 Long interyield runtime -  %u jobs ran over interyield threshold and spew was rate limited since last output\n
@@ -5936,6 +5975,7 @@ MasterCard
 Mastercard (BoaCompra)
 MatchCaseInsensitivePathIfAvailable: in slow path
 Matched '%s' -> '%s'\n
+Max # of message that will be buffered into a single zipped packet
 Max block allocation size for PB arena
 Max worker threads in the dedicated pool used for threaded protobuf body parses (see @nThreadedProtobufParseMinBytes).  Changes take effect live.
 MaxProtocol
@@ -6129,6 +6169,7 @@ N14CUtlHashMapLRUI10CIPAndPortN11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS0_
 N14CUtlHashMapLRUIN11CHTTPClient12HostLookup_tENS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE15ElementBucket_tE
 N15CWorkThreadPool12OrderGroup_tE
 N16CCookieContainer11CCookieInfoE
+N16CProtoBufMsgBase20IProtoBufSendHandlerE
 N16SteamThreadTools7CThreadE
 N17CFileWriterThread14CFileWriteItemE
 N17CFileWriterThread16CLogFileWorkItemE
@@ -6526,7 +6567,7 @@ Not supported.
 Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov 13 2026
+Nov 19 2026
 November
 NullMetrics()
 NumTickets
@@ -7372,6 +7413,12 @@ Reached impossible case in HasBit().
 Read Failed
 ReadCh
 ReadCh_Opt
+ReadSectionFromBuffer:  got EOF instead of keyname
+ReadSectionFromBuffer:  got NULL key
+ReadSectionFromBuffer:  got conditional between key and value
+ReadSectionFromBuffer:  got empty keyname
+ReadSectionFromBuffer:  got } in key
+ReadSectionFromBuffer:  sections nested too deep
 Ready to run
 ReallyBigKey
 Reasons
@@ -7400,11 +7447,6 @@ Recurring option will stack time beyond our maximum limit
 Recurring payment option
 Recursion limit at end of parse should be
 Recursive reference in entity '%s'
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
 Recv
 Recv message: %s - %u bytes\n
 RecvFile
@@ -9384,7 +9426,6 @@ You are about to call a thread func on an object on the current stack - it will 
 You can't set a body manually AND set POST params
 You must refund this transaction to wallet
 You must type in
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 Z0000
 ZINT32
 ZINT64
@@ -9549,6 +9590,7 @@ Zulu
 \t\t\t\t<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="%d" />\n
 \t\t\t\t<SegmentTemplate timescale="%d" duration="%lld" initialization="%s" media="%s" startNumber="%d" />\n
 \t\t\t\t\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \u%04x
 \u000
 \u001
@@ -12244,7 +12286,6 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
 givenName
 glibcxx.eh_pool
 global constructors keyed to
@@ -13909,6 +13950,9 @@ m_bSemOwner
 m_bitsMigratedBuckets
 m_bufBody
 m_bufBody.TellPut() == 0
+m_bufData
+m_bufData.TellPut() == RAW_DATA_OFFSET
+m_bufData.TellPut() > 0
 m_bufDecryptedRecvBuffer
 m_bufFromMemory
 m_bufFromMemory.TellPut() <= 0 || m_strURL.IsEmpty()
@@ -13970,6 +14014,8 @@ m_listChangedFiles
 m_listEncryptedSendChunks
 m_listEncryptedSendChunks.Count() == 0
 m_listHandlesDelayedForCache
+m_listHandlesDelayedForSimulatedLatency
+m_listHandlesDelayedForSimulatedLatency[i]
 m_listJobsToWakeOnSendsComplete
 m_listLRU
 m_listLogWatchParams
@@ -13984,6 +14030,7 @@ m_llQueuedAudioSegments
 m_llQueuedVideoSegments
 m_mapCacheFiles
 m_mapConditionalSymbolTable
+m_mapConnectionToBuffer
 m_mapFileTimes
 m_mapFileWatchData
 m_mapFileWatchData.Key( i )
@@ -14012,6 +14059,7 @@ m_mapStatsBucket[iBucket]
 m_memNodes
 m_memPSK
 m_nAllocationCount >= 0
+m_nCount > 0
 m_nHTTP2CallbackDepth > 0
 m_nInputBitsPerChannel <= 32 && m_nInputBitsPerChannel % 8 == 0
 m_nPollFd >= 0
@@ -14058,6 +14106,7 @@ m_pHeader->ip_v6().length() == 16
 m_pInitSegment
 m_pInitalizeFileStream
 m_pInitializationThread
+m_pItemRunning
 m_pJob->m_pMsgTraceVProfSlice == this
 m_pJobFuncsData->m_listActiveJobs.Count()
 m_pListQueuedSSLRecvsPostHandshake
@@ -14082,6 +14131,7 @@ m_pObj
 m_pObj == NULL
 m_pOriginatingRequestHandle
 m_pParent == this
+m_pParent->s_ulOutstandingBytesToCompress >= 0
 m_pParsedHeader && m_pParsedBody
 m_pProtoBufBody == NULL
 m_pReceivedPktFirst->GetSeq() != m_pReceivedPktFirst->PReceivedPktNext()->GetSeq()
@@ -14144,6 +14194,10 @@ m_sb
 m_sps
 m_stackDoNotYieldGuards
 m_stackDoNotYieldGuards.Count() == 0
+m_statBytesSent
+m_statBytesUncompressedSent
+m_statPacketsPosted
+m_statPacketsSent
 m_stimeFakeTimeout.LTime() < INT64_MAX
 m_strActualHostName
 m_strActualUrl
@@ -14182,6 +14236,7 @@ m_strTargetHostName
 m_strTargetPath
 m_strTempFile
 m_strURL
+m_strUTF8Path
 m_strValue
 m_strWatchPath
 m_tree
@@ -14520,6 +14575,7 @@ nDay < 32
 nDay > 0
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
 nDestSize == 0 || pDest != NULL
+nDivisor >= 0 && nDivisor <= 0x7F
 nFieldDescriptorType == WireFormatLite::TYPE_INT32 || nFieldDescriptorType == WireFormatLite::TYPE_INT64 || nFieldDescriptorType == WireFormatLite::TYPE_SINT32 || nFieldDescriptorType == WireFormatLite::TYPE_SINT64 || nFieldDescriptorType == WireFormatLite::TYPE_UINT32 || nFieldDescriptorType == WireFormatLite::TYPE_UINT64 || nFieldDescriptorType == WireFormatLite::TYPE_FIXED32 || nFieldDescriptorType == WireFormatLite::TYPE_FIXED64 || nFieldDescriptorType == WireFormatLite::TYPE_SFIXED32 || nFieldDescriptorType == WireFormatLite::TYPE_SFIXED64 || nFieldDescriptorType == WireFormatLite::TYPE_ENUM
 nFieldDescriptorTypeIfKnown != ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE
 nFieldDescriptorTypeIfKnown != ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT
@@ -14534,6 +14590,7 @@ nMinCapacity > Capacity()
 nMinCapacity >= nChars
 nMonth == 1 || nMonth == 3 || nMonth == 5 || nMonth == 7 || nMonth == 8 || nMonth == 10 || nMonth == 12
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
+nProbeIntervalSeconds > 0
 nPut + nPutDelta <= outBuf.TellMaxPut()
 nRead == nPeeked
 nSRecord
@@ -15021,6 +15078,7 @@ pCompletion->type == IOTYPE_ACCEPT && pCompletion->ulResult == 0 && pCompletion-
 pCompletion->type == IOTYPE_CONNECT
 pCompletion->type == IOTYPE_RECV
 pCompletion->type == IOTYPE_SEND || pCompletion->type == IOTYPE_UNBUFFEREDSEND
+pCompletionData && pCompletionData->func
 pCompletionData->pNext == NULL && pCompletionData->nPollFlags != 0
 pCompletionData->pubBuffer == pRecvState->m_bufMsg.PeekPut()
 pCompletionData->pvUserData
@@ -15384,7 +15442,6 @@ popen
 port
 portuguese
 posix_fadvise
-posix_memalign
 post handshake auth encoding err
 postOfficeBox
 postalAddress
@@ -15530,6 +15587,7 @@ pthread_once
 pthread_rwlock_destroy
 pthread_rwlock_init
 pthread_rwlock_rdlock
+pthread_rwlock_tryrdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
 pthread_rwlockattr_destroy
@@ -15898,6 +15956,7 @@ scheduledItem.m_ulTime
 scheme=
 schinese
 scots
+script
 scrypt
 scsv received when renegotiating
 sct future timestamp
@@ -16275,6 +16334,7 @@ sizeof...
 sk_reserve
 slg_write
 slot full
+slot.m_map
 slovak
 slovenian
 sm-scheme
@@ -17810,6 +17870,7 @@ win2012R2
 win2016
 win2019
 win2022
+win2025
 win311
 win32
 win32_bind_func

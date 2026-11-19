@@ -353,8 +353,6 @@ $ORIGIN
 &yen;
 &yuml;
 ( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
-( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
-( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
@@ -396,9 +394,9 @@ $ORIGIN
 *pchMsg && *pchMsg == '%'
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG[
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNG{
 , but was
 , not just within "
 -+xX0123456789abcdef0123456789ABCDEF
@@ -456,6 +454,7 @@ $ORIGIN
 ../public/tier0/vprof.h
 ../public/tier1/bitstring.h
 ../public/tier1/interface.h
+../public/tier1/keyvalues.h
 ../public/tier1/netadr.h
 ../public/tier1/smartptr.h
 ../public/tier1/utlbuffer.h
@@ -516,6 +515,8 @@ $ORIGIN
 .foo = value".
 .placeholder.proto
 .steam_exec_test
+/.flatpak-info
+/app
 /bin/sh
 /dev
 /dev/
@@ -523,6 +524,7 @@ $ORIGIN
 /dev/null
 /dev/random
 /dev/urandom
+/etc
 /etc/mtab
 /etc/os-release
 /etc/steamos-oobe-image
@@ -540,6 +542,7 @@ $ORIGIN
 /steamsysinfo
 /tmp
 /tmp/.steam-sem-names
+/usr
 /usr/bin/crosdisk %s
 0 != m_rgchPrefixFileName[0]
 0 == m_ThreadLocalSpewReentrancyGuardInstance.Get()
@@ -547,11 +550,11 @@ $ORIGIN
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:21:02
 01/01/00
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-01:59:05
 1 Mbps
 1.5 Mbps
 1.5M
@@ -775,6 +778,7 @@ BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
 BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
+BIsValid()
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BResolveHostString - unexpected DNS lookup flag '%d'\n
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
@@ -809,6 +813,7 @@ CFileWriter::Close
 CFileWriter::FlushInternal
 CFileWriter::Write
 CFileWriterThread
+CFmtStr truncated: "%s"
 CHECK failed: !InRealOneof(field):
 CHECK failed: !IsDefault(default_value):
 CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1):
@@ -1091,6 +1096,7 @@ CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPathString
+CPathString::Concat: null path element
 CRC32_ProcessBuffer
 CSHA1::HashFile
 CSHA1::Update
@@ -1160,6 +1166,7 @@ CommandLine
 ConCommand '%s' not currently supported in config file\n
 ConVar
 ConVar::InternalSetValue: called with NULL
+Container path must be absolute
 Convars
 Could not create an instance of
 Could not find type "
@@ -1458,28 +1465,19 @@ Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues binary nested deeper than the parse depth assert, probably bad usage
 KeyValues don't support #include anymore, file "%s"
+KeyValues text nested deeper than the parse depth assert, probably bad usage
 KeyValues::FindKey( StringView ... )
 KeyValues::FindKey( hks )
 KeyValues::FindKey( hks, bCreate )
-KeyValues::MergeFromBuffer
+KeyValues::LoadFromBuffer
+KeyValues::LoadSubKeysFromBuffer
 KeyValues::ReadAsBinary
-KeyValues::ReadAsBinary - Set name
-KeyValues::ReadAsBinary - TYPE_BINARY_STRING
-KeyValues::ReadAsBinary - TYPE_COLOR
-KeyValues::ReadAsBinary - TYPE_FLOAT
-KeyValues::ReadAsBinary - TYPE_INT
-KeyValues::ReadAsBinary - TYPE_INT64
-KeyValues::ReadAsBinary - TYPE_NONE
-KeyValues::ReadAsBinary - TYPE_PTR
-KeyValues::ReadAsBinary - TYPE_STRING
-KeyValues::ReadAsBinary - TYPE_UINT64
-KeyValues::ReadAsBinary - TYPE_WSTRING
-KeyValues::ReadAsBinary() stack depth > 100
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::SaveToBuffer: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
@@ -1523,7 +1521,6 @@ Log stopped.\n
 Logger
 Logger does not handle * char as used for a width specifier (where width is a param)
 Logic problem? szsrc =
-Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 Luxembourgish
 Macedonian
@@ -1777,7 +1774,7 @@ Norwegian
 Not implemented field number
 Not supported.
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov 13 2026
+Nov 19 2026
 November
 Numbers starting with leading zero must be in octal.
 OSX1010
@@ -1842,12 +1839,13 @@ RGBA: %.2X %.2X %.2X %.2X
 ReOpenFd: failed to reopen: %s: %s\n
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
+ReadSectionFromBuffer:  got EOF instead of keyname
+ReadSectionFromBuffer:  got NULL key
+ReadSectionFromBuffer:  got conditional between key and value
+ReadSectionFromBuffer:  got empty keyname
+ReadSectionFromBuffer:  got } in key
+ReadSectionFromBuffer:  sections nested too deep
 Recursion limit at end of parse should be
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
 ReleaseCleared() can only be used on a RepeatedPtrField not on
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena,
@@ -2202,7 +2200,6 @@ XXXXXX
 Xhosa
 YYYY
 Yoruba
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 Z0000
 Zulu
 [ func+child   func ]     Count\n
@@ -2233,6 +2230,7 @@ Zulu
 \tValidate Failed: leaked connection to %s\n
 \tValidate Failed: leaked file '%s'\n
 \tValidate Failed: leaked socket remote address %s\n
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \u%04x
 \u000
 \u001
@@ -2877,11 +2875,13 @@ m_mapFileWatchData
 m_mapFileWatchData.Key( i )
 m_memNodes
 m_nAllocationCount >= 0
+m_nCount > 0
 m_nRecursions > 0
 m_p == NULL
 m_pBudgetGroups
 m_pBudgetGroups == NULL
 m_pChild
+m_pItemRunning
 m_pLogInstance
 m_pParent == this
 m_pSetIntValue
@@ -2900,6 +2900,7 @@ m_strDirectory
 m_strFileName
 m_strFileNamePrevious
 m_strLogLine
+m_strUTF8Path
 m_strWatchPath
 m_tree
 m_unInCounter == m_unOutCounter
@@ -3076,7 +3077,6 @@ popen
 port
 portuguese
 posix_fadvise
-posix_memalign
 ppFrames[iFrame] != NULL
 ppath
 pread64
@@ -3126,6 +3126,7 @@ pthread_once
 pthread_rwlock_destroy
 pthread_rwlock_init
 pthread_rwlock_rdlock
+pthread_rwlock_tryrdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
 pthread_rwlockattr_destroy
@@ -3202,6 +3203,7 @@ sched_setaffinity
 sched_yield
 schinese
 scots
+script
 secblock.h
 secure_getenv
 semaphore creation failed %s

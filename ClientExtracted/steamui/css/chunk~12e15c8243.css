@@ -1,0 +1,158 @@
+.nUuv5WlFHKU- {
+  top: 32px;
+  inset-inline: 32px;
+  -webkit-app-region: no-drag;
+  z-index: 50;
+  position: absolute;
+  bottom: 32px;
+}
+.nUuv5WlFHKU-.JsVZp4CAPKg- {
+  z-index: 52;
+}
+.s3jO9FbN4u4- {
+  grid-gap: 0;
+  grid-row-gap: 0;
+  margin-inline-start: -16px;
+  -webkit-app-region: no-drag;
+  grid-template-rows: 16px auto 16px;
+  grid-template-columns: 16px auto 16px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  margin-top: -16px;
+  display: grid;
+}
+.SO1XLFjtCbU- {
+  -webkit-app-region: no-drag;
+  background-color: #5cbfe631;
+  width: 100%;
+  height: 100%;
+}
+.SO1XLFjtCbU-.TpO-SNRNS-E- {
+  border-inline-end: 2px dotted #008ada;
+  cursor: nwse-resize;
+  border-bottom: 2px dotted #008ada;
+}
+.SO1XLFjtCbU-.lmnZa-M7bq0- {
+  cursor: ns-resize;
+  background: linear-gradient(#1d1e2300 0%, #0199ff80 150%);
+  border-bottom: 2px dotted #008ada;
+}
+.SO1XLFjtCbU-.LDrqaW8EJl8- {
+  border-inline-start: 2px dotted #008ada;
+  cursor: nesw-resize;
+  border-bottom: 2px dotted #008ada;
+}
+.SO1XLFjtCbU-.WEHXDbI-0ZI- {
+  cursor: ew-resize;
+  background: linear-gradient(270deg, #0199ff80 -50%, #1d1e2300 100%);
+  border-inline-end: 2px dotted #008ada;
+}
+.SO1XLFjtCbU-.hc0dk3OoBCU- {
+  cursor: move;
+  background-color: #bfcafa22;
+}
+.SO1XLFjtCbU-.hc0dk3OoBCU- .o5BUe1m-4BM- {
+  inset-inline-end: 8px;
+  cursor: default;
+  opacity: 0;
+  -webkit-app-region: no-drag;
+  width: 20px;
+  max-width: 100%;
+  height: 20px;
+  max-height: 100%;
+  transition-property: opacity;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  top: 8px;
+}
+.SO1XLFjtCbU-.hc0dk3OoBCU- .-e4w8MaVU8k- {
+  inset-inline-start: 8px;
+  cursor: default;
+  opacity: 0;
+  -webkit-app-region: no-drag;
+  width: 20px;
+  max-width: 100%;
+  height: 20px;
+  max-height: 100%;
+  transition-property: opacity;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  top: 8px;
+}
+.SO1XLFjtCbU-.hc0dk3OoBCU- .o5BUe1m-4BM- line,
+.SO1XLFjtCbU-.hc0dk3OoBCU- .-e4w8MaVU8k- line {
+  stroke-width: 26px;
+  stroke: #008ada;
+  transition-property: stroke, stroke-width;
+  transition-duration: 0.21s;
+  transition-timing-function: ease-in-out;
+}
+.SO1XLFjtCbU-.hc0dk3OoBCU-:hover .o5BUe1m-4BM-:hover line,
+.SO1XLFjtCbU-.hc0dk3OoBCU-:hover .-e4w8MaVU8k-:hover line {
+  stroke: #cce0ff;
+}
+.SO1XLFjtCbU-.hc0dk3OoBCU-:hover .o5BUe1m-4BM-,
+.SO1XLFjtCbU-.hc0dk3OoBCU-:hover .-e4w8MaVU8k- {
+  opacity: 1;
+}
+.SO1XLFjtCbU-.V3hcFn4-kHE- {
+  cursor: ew-resize;
+  background: linear-gradient(90deg, #0199ff80 -50%, #1d1e2300 100%);
+  border-inline-start: 2px dotted #008ada;
+}
+.SO1XLFjtCbU-.RIIVuSM7Y6Y- {
+  border-inline-end: 2px dotted #008ada;
+  cursor: nesw-resize;
+  border-top: 2px dotted #008ada;
+}
+.SO1XLFjtCbU-.dkKyB9jj9aI- {
+  cursor: ns-resize;
+  background: linear-gradient(#0199ff80 -50%, #1d1e2300 100%);
+  border-top: 2px dotted #008ada;
+}
+.SO1XLFjtCbU-.R4iVDKb6zeU- {
+  border-inline-start: 2px dotted #008ada;
+  cursor: nwse-resize;
+  border-top: 2px dotted #008ada;
+}
+.nUuv5WlFHKU-.fzzwZd4-ISg- .SO1XLFjtCbU-.TpO-SNRNS-E-,
+.nUuv5WlFHKU-.Oo4-WMoHDeE- .SO1XLFjtCbU-.lmnZa-M7bq0-,
+.nUuv5WlFHKU-.D8BWJF43X-Q- .SO1XLFjtCbU-.LDrqaW8EJl8-,
+.nUuv5WlFHKU-.Yc8TU3u-VW4- .SO1XLFjtCbU-.WEHXDbI-0ZI-,
+.nUuv5WlFHKU-.KMAHJAnBe6Q- .SO1XLFjtCbU-.V3hcFn4-kHE-,
+.nUuv5WlFHKU-.bxVoRh5lFi4- .SO1XLFjtCbU-.RIIVuSM7Y6Y-,
+.nUuv5WlFHKU-.e2-ZZOF2QKQ- .SO1XLFjtCbU-.dkKyB9jj9aI-,
+.nUuv5WlFHKU-.XUrOCtEsKxM- .SO1XLFjtCbU-.R4iVDKb6zeU- {
+  border-color: #fff;
+}
+.SO1XLFjtCbU-:hover {
+  border-color: #7eadf8;
+}
+.JsVZp4CAPKg-.TSm-D5CZFsE- .SO1XLFjtCbU-.hc0dk3OoBCU-,
+.SO1XLFjtCbU-.hc0dk3OoBCU-:hover {
+  z-index: 10;
+  background-color: #859cff2c;
+}
+.JsVZp4CAPKg-.TSm-D5CZFsE- .SO1XLFjtCbU-.V3hcFn4-kHE-,
+.JsVZp4CAPKg-.TSm-D5CZFsE- .SO1XLFjtCbU-.dkKyB9jj9aI-,
+.JsVZp4CAPKg-.TSm-D5CZFsE- .SO1XLFjtCbU-.lmnZa-M7bq0-,
+.JsVZp4CAPKg-.TSm-D5CZFsE- .SO1XLFjtCbU-.WEHXDbI-0ZI- {
+  border-color: #fff;
+}
+.fzB9IY83oAQ- .RpcfV3ZNn8s- {
+  width: 100px;
+  margin-inline-end: 20px;
+  display: inline-block;
+}
+._1Be3592R7Ao- {
+  background-color: #000;
+  padding: 10px;
+}
+.m9bHoo6uIPM- {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+/*$vite$:1*/

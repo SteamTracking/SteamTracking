@@ -171,6 +171,7 @@
  - license state: %s\n
  - mounted depots:\n
  - release state: %s\n
+ - standby connection 0x%x : %s\n
  - update delay: %u seconds\n
  - update state: %s\n
  - update stats: staged %llu/%llu MB (%u%%), downloaded %llu/%llu MB (%u%%)\n
@@ -402,6 +403,7 @@
 !(pQueue->m_pLast->*pMbrLinks).m_pNext
 != and not NULL
 !BIsSingleFileUpdateMode()
+!BLockedForRead()
 !BLoggedOn()
 !BRunningAsSiteLicenseProvider()
 !BSuccess()
@@ -477,7 +479,6 @@
 !m_bHaveLowLevelRef
 !m_bInitialRequest
 !m_bInitializationFinished
-!m_bInitialized
 !m_bIsFinalized
 !m_bIsFlushingAll
 !m_bIsInitialized
@@ -1276,6 +1277,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %llu%cscreenshots%cthumbnails%c%s_%u.jpg
 %llu%n %n
 %llu/
+%llu/%s
 %llu/screenshots/%s
 %llu\%s
 %llu_%llu_%llu
@@ -1354,8 +1356,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s [AppID %u] Init cache request complete
 %s algorithm "%s" unsupported\n
 %s allocated in untracked memory\n
+%s allocated\n
 %s authorizes client '%s', but we are '%s'.
-%s blocks allocated for %s bytes\n
 %s caching proxy type '%s' at '%s' - request template '%s', HTTPS: %s\n
 %s called
 %s destroyed (%s)
@@ -1380,7 +1382,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s set to_virtual_port in rendezvous when connecting by FakeIP; ignored
 %s set-low-latency-mode %s
 %s should not be called
-%s streaming mode
 %s wrong user type
 %s#%d (via %s %s)
 %s#%u %s '%s'
@@ -1410,11 +1411,13 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s%s%s%s%s%s%s_md.png
 %s%s%s%s%s%s%s_sm.png
 %s%s.download
+%s%s.jpg
 %s%s/../ubuntu12_%s/fossilize_replay
 %s%s_full.jpg
 %s%s_gyro.vdf
 %s%s_gyro_l.vdf
 %s%sbin%svrclient%s.%s
+%s%simages/apps/
 %s(%d): %s @ %s\n
 %s(%d): Lock '%s' not held
 %s() failed, achievement %s does not exist - needs to be first configured on the Steamworks site\n
@@ -1427,7 +1430,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s() failed, stat %s violated constraints (trying to go from %f to %f)\n
 %s() failed, stats %s is not type %s\n
 %s() failed, stats are not loaded for SteamID %s\n
-%s() failed, stats are not loaded for game %llu\n
+%s() failed, stats are not loaded for game %u\n
 %s(): File %s could not be found to share\n
 %s(): File %s is not in sync with the cloud and could not be shared\n
 %s,100 127.0.0.1 stale
@@ -1441,7 +1444,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s.current.txt
 %s.decompressed
 %s.guids
-%s.jpg
 %s.old
 %s.old.%i
 %s.old.1
@@ -1502,15 +1504,19 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s/ISteamDirectory/GetCMListForConnect/v0001/
 %s/Steam/registry.vdf
 %s/TOUCH
+%s/appcache/appinfo
 %s/appcache/appinfo.vdf
+%s/appcache/appinfo/appinfo_%02x.vdf
 %s/appcache/httpcache/
 %s/appcache/packageinfo.vdf
 %s/appcache/sdr_config.txt
 %s/appworkshop_%u.acf
 %s/audio.foz
 %s/battery_percent
+%s/clientassets/%s/%s/%s
 %s/cloudstorage
 %s/config
+%s/config/localconfig.vdf
 %s/config_%u_%s.vdf
 %s/content/%u
 %s/content/%u/%llu
@@ -1520,6 +1526,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s/depotcache/%d_%llu.manifest
 %s/downloads
 %s/downloads/%u
+%s/external_battery_present
 %s/foz_cache.foz
 %s/fozmediav%u
 %s/fozpipelinesv%u
@@ -1570,6 +1577,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s: %p: factor: %d
 %s: %p: name: '%s'
 %s: %p: px: %d x %d phys: %d x %d subpix: %d make: '%s' model: '%s' transform: %d
+%s: %s is not a gameserver SteamID\n
 %s: %s returned %s %d (%s), disconnecting TCP connection. %d sends, %lld bytes outstanding %s\n
 %s: %s, by message:\n
 %s: %s: call failed. elapsed time %llu us, transport %s (%d), method %s (%d), message %s
@@ -1653,6 +1661,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s: restored connection attempt token
 %s: restoring previous glx context\n
 %s: resuming bootstrapper download
+%s: server address needs an IP and a port\n
+%s: server identity type %d not supported, only a gameserver SteamID or an IPv4 address\n
 %s: set fan mode: %d -> %d
 %s: set hostname to %s\n
 %s: set timezone to %s\n
@@ -1749,8 +1759,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s\Global\%d\%d
 %s\NoSavePersonalInfo
 %s\Secret
-%s\appcache\stats\UserGameStatsSchema_%s.bin
-%s\appcache\stats\UserGameStats_%u_%s.bin
+%s\appcache\stats\UserGameStatsSchema_%u.bin
+%s\appcache\stats\UserGameStats_%u_%u.bin
 %s\apps\%u\autocloud\lastexit
 %s\apps\%u\autocloud\lastlaunch
 %s\apps\%u\perfreporting\secondssubmitted
@@ -1766,12 +1776,11 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s\steamapps\content\app_%u\depot_%u
 %s\steamapps\content\app_%u\item_%llu
 %s_%03d.vpk
+%s_ChangeCounters
 %s_avail
 %s_client
 %s_dir.vpk
-%s_full.jpg
 %s_log.txt
-%s_medium.jpg
 %s_mem
 %s_mutex
 %s_server
@@ -1779,6 +1788,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %sdata.vdf
 %sdownloads/
 %simages/%s
+%simages/chaticons/%.2s/%.2s/%.2s/%s_%d.jpg
 %sobjcopy
 %sstalled cross-thread pipe%s.
 %ssteamlink/connect/%s
@@ -2016,6 +2026,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 (ubb)
 (uint)m_pReadCtx->m_bufData.Count() == m_pReadCtx->m_pChunkData->m_unOriginalSize
 (uint)~0 != hConnection
+(uint32)buf.TellPut() == k_cubCacheShardHeader
 (uint32)m_pHTTPRequestCache->m_listCacheFileLRU.Count() == (uint32)m_pHTTPRequestCache->m_mapCacheFiles.Count()
 (uint64) bufferCompressed.TellPut() + LZMA_PROPS_SIZE + cbDataOut + 4 + 4 + 2 <= (uint64) INT_MAX
 (uint64)bufferCompressed.TellPut() + LZMA_PROPS_SIZE + cbDataOut + 4 + 4 + 2 <= (uint64)INT_MAX
@@ -2050,6 +2061,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 *11CUtlHashMapIj8CAutoPtrIN12_GLOBAL__N_119AppNetworkSummary_tEE10CDefEqualsIjE11HashFunctorIjEjE
 *18CScheduledFunctionIN12_GLOBAL__N_119AppNetworkSummary_tEE
 *18CWebUIMsgLambdaJobIZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceE28CWebUIAchievementsGetInfoJob29CAchievements_GetInfo_Request30CAchievements_GetInfo_ResponseE
+*18CWebUIMsgLambdaJobIZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceE40CWebUIAchievementsGetGameAchievementsJob41CAchievements_GetGameAchievements_Request42CAchievements_GetGameAchievements_ResponseE
 *18CWebUIMsgLambdaJobIZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceE40CWebUIAchievementsGetUserAchievementsJob41CAchievements_GetUserAchievements_Request42CAchievements_GetUserAchievements_ResponseE
 *18CWebUIMsgLambdaJobIZN12CSteamEngine4InitE12EAccountTypejE35CWebUISteamEngineGetGameIDForPIDJob36CSteamEngine_GetGameIDForPID_Request37CSteamEngine_GetGameIDForPID_ResponseE
 *18CWebUIMsgLambdaJobIZN12CSteamEngine4InitE12EAccountTypejE43CWebUISteamEngineGetTextFilterDictionaryJob44CSteamEngine_GetTextFilterDictionary_Request45CSteamEngine_GetTextFilterDictionary_ResponseE
@@ -2077,6 +2089,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 *18CWebUIMsgLambdaJobIZN17CTritonControllerC4EP16CSteamControllerE49CWebUISteamInputManagerForgetTritonPairingBondJob50CSteamInputService_ForgetTritonPairingBond_Request51CSteamInputService_ForgetTritonPairingBond_ResponseE
 *18CWebUIMsgLambdaJobIZN17CTritonControllerC4EP16CSteamControllerE51CWebUISteamInputManagerPairDongleTritonConnectedJob52CSteamInputService_PairDongleTritonConnected_Request53CSteamInputService_PairDongleTritonConnected_ResponseE
 *18CWebUIMsgLambdaJobIZN5CUserC4EiE29CWebUIUserSaveHardwareInfoJob30CUser_SaveHardwareInfo_Request31CUser_SaveHardwareInfo_ResponseE
+*18CWebUIMsgLambdaJobIZN5CUserC4EiE32CWebUIUserGetCachedFriendDataJob33CUser_GetCachedFriendData_Request34CUser_GetCachedFriendData_ResponseE
 *18CWebUIMsgLambdaJobIZN5CUserC4EiE33CWebUIUserGetSavedHardwareInfoJob34CUser_GetSavedHardwareInfo_Request35CUser_GetSavedHardwareInfo_ResponseE
 *20SteamClientJobLambdaIZN12CUserFriends25GetLocalizedDisplayStringEjP10ClFriend_tEUlvE_E
 *20SteamClientJobLambdaIZN20CRemoteClientManager20StopStreamingSessionEjEUlvE_E
@@ -2090,7 +2103,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 *23CInternalLambdaWorkItemIZN14CSystemManager12YldWriteFileERK32CSystemManager_WriteFile_RequestR33CSystemManager_WriteFile_ResponseEUlvE_bE
 *23CInternalLambdaWorkItemIZN14CSystemManager13SuspendSystemEvEUlvE_vE
 *23CInternalLambdaWorkItemIZN15CDepotBuildBase24BYieldingWriteDepotToLCSEvEUlvE_vE
-*23CInternalLambdaWorkItemIZN15CSteamClientApp22BYieldingWriteAppStateEvEUlvE_bE
+*23CInternalLambdaWorkItemIZN15CSteamClientApp22BYieldingWriteAppStateEvEUlvE_12EFileIOErrorE
 *23CInternalLambdaWorkItemIZN16CContentManifest28BYldTakeBufferAndDeserializeEP10CUtlBufferPK13CRSAPublicKeyjEUlvE_vE
 *23CInternalLambdaWorkItemIZN17CDepotReconstruct29YldCreateEmptyFilesAndFoldersEvEUlvE_vE
 *23CInternalLambdaWorkItemIZN17CShaderCompileJob21BYieldingRunClientJobEvEUlvE0_vE
@@ -2122,13 +2135,17 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 *23CInternalLambdaWorkItemIZN21CFindCurrentBucketJob22YieldingRunTestProgramEvEUlvE_vE
 *23CInternalLambdaWorkItemIZN21CPruneOtherBucketsJob21BYieldingRunClientJobEvEUlvE0_vE
 *23CInternalLambdaWorkItemIZN21CPruneOtherBucketsJob21BYieldingRunClientJobEvEUlvE1_vE
+*23CInternalLambdaWorkItemIZN23CClientAssetDownloadJob13YldSaveToDiskEP10CUtlBufferEUlvE_bE
+*23CInternalLambdaWorkItemIZN23CClientAssetDownloadJob15YldReadFromDiskEP10CUtlBufferEUlvE_bE
 *23CInternalLambdaWorkItemIZN23CShaderContentUpdateJob21BYieldingRunClientJobEvEUlvE_vE
 *23CInternalLambdaWorkItemIZN25CGetCompatDataDiskSizeJob21BYieldingRunClientJobEvEUlvE_vE
+*23CInternalLambdaWorkItemIZN28CClientAssetAvatarCleanupJob15BYieldingRunJobEPvEUlvE_vE
 *23CInternalLambdaWorkItemIZN28CUpdateSystemPerfSettingsJob30YieldingWritePerfOverlayConfigEb25EGraphicsPerfOverlayLevelbEUlvE0_vE
 *23CInternalLambdaWorkItemIZN28CUpdateSystemPerfSettingsJob30YieldingWritePerfOverlayConfigEb25EGraphicsPerfOverlayLevelbEUlvE_vE
 *23CInternalLambdaWorkItemIZN4CNet24YieldingIPAddrToHostNameE10CIPAddressPcjEUlvE_vE
 *23CInternalLambdaWorkItemIZN4CNet26YieldingHostStringToNetAdrEPKcR10CIPAndPortEUlvE_S3_E
 *23CInternalLambdaWorkItemIZN5CUser12SpawnProcessEPKcS2_S2_7CGameIDS2_jj13ELaunchSourcejRjEUlvE_vE
+*23CInternalLambdaWorkItemIZN5CUser29YldLoadCachedLicensesForLogonEvEUlvE0_P21CMsgClientLicenseListE
 *23CInternalLambdaWorkItemIZZN21CNetworkManagerClient23RequestUpdateDeviceDataEjENKUlvE_clEvEUlvE_bE
 *7CUtlMapIPKc8CAutoPtrIN12_GLOBAL__N_115CachedSDRConfigEEi22CDefCaselessStringLessE
 *8CAutoPtrIN12_GLOBAL__N_115CachedSDRConfigEE
@@ -2145,6 +2162,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
 *N12_GLOBAL__N_127CDummySSLConnectionCallbackE
+*N16SteamThreadTools19CSimpleLambdaThreadIZ18RunCacheShardTasksIZN13CAppInfoCache18ThreadedReadShardsEvEUliE_EviiRKT_EUlvE0_EE
+*N16SteamThreadTools19CSimpleLambdaThreadIZ18RunCacheShardTasksIZN13CAppInfoCache19ThreadedWriteToDiskEvEUliE_EviiRKT_EUlvE0_EE
 *N16SteamThreadTools19CSimpleLambdaThreadIZN21CSteamServiceBaseImpl17StartAsyncConnectEvEUlvE_EE
 *N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
 *N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
@@ -2182,6 +2201,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 *ZL16download_sourcesPvR9ConParamsR10ConCommandEUlvE_
 *ZL18timed_trial_statusPvR9ConParamsR10ConCommandEUlvE_
 *ZL19http_cache_clearallPvR9ConParamsR10ConCommandEUlvE_
+*ZL20cloud_force_conflictPvR9ConParamsR10ConCommandEUlvE_
 *ZL23remote_client_softapcmdPvR9ConParamsR10ConCommandEUlvE_
 *ZL24dump_scheduled_functionsPvR9ConParamsR10ConCommandEUlvE_
 *ZL24timed_trial_add_playtimePvR9ConParamsR10ConCommandEUlvE_
@@ -2198,8 +2218,10 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 *ZN10CClientUGC19RemoveAppDependencyEyjE26CAPIJobRemoveAppDependency
 *ZN10CClientUGC21GetWorkshopEULAStatusEvE28CAPIJobGetWorkshopEULAStatus
 *ZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceE28CWebUIAchievementsGetInfoJob
+*ZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceE40CWebUIAchievementsGetGameAchievementsJob
 *ZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceE40CWebUIAchievementsGetUserAchievementsJob
 *ZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceEUlRK29CAchievements_GetInfo_RequestR30CAchievements_GetInfo_ResponseE_
+*ZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceEUlRK41CAchievements_GetGameAchievements_RequestR42CAchievements_GetGameAchievements_ResponseE_
 *ZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceEUlRK41CAchievements_GetUserAchievements_RequestR42CAchievements_GetUserAchievements_ResponseE_
 *ZN12CSteamClient19FlushBeforeValidateEvEUlvE_
 *ZN12CSteamEngine28OnFilterDictionaryDownloadedE26EBannedWordsDictionaryTypeiP18CHTTPRequestHandleEUlvE_
@@ -2310,7 +2332,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 *ZN19CRemoteClientDongle14RunDongleCheckEvEUlvE_
 *ZN19CRemoteClientSoftAP11OnIPCountryEP11IPCountry_tEUlvE_
 *ZN19CRemoteClientSoftAP19ScheduledStateCheckEvEUlvE_
-*ZN19CRemoteClientSoftAP19UpdateStreamingModeEbEUlvE_
 *ZN19CRemoteClientSoftAP21NotifySettingsChangedERK10CUtlStringEUlvE_
 *ZN19CRemoteClientSoftAP24SetPairedSSIDAndPasswordERK10CUtlStringS2_EUlvE_
 *ZN19CRemoteClientSoftAP4InitEvEUlvE_
@@ -2347,13 +2368,17 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 *ZN31CSteamEngineHTTPResponseHandler5ResetEvEUlP18CHTTPRequestHandleE_
 *ZN4CNet26CallbackDeleteOnCompletionEvE39CUnbufferedSendCallbackDeleteOnComplete
 *ZN5CUser12LogOnOfflineEbEUlvE_
+*ZN5CUser26StartLoadingCachedLicensesEvEUlvE_
 *ZN5CUserC4EiE29CWebUIUserSaveHardwareInfoJob
+*ZN5CUserC4EiE32CWebUIUserGetCachedFriendDataJob
 *ZN5CUserC4EiE33CWebUIUserGetSavedHardwareInfoJob
 *ZN5CUserC4EiEUlRK30CUser_SaveHardwareInfo_RequestR31CUser_SaveHardwareInfo_ResponseE_
+*ZN5CUserC4EiEUlRK33CUser_GetCachedFriendData_RequestR34CUser_GetCachedFriendData_ResponseE_
 *ZN5CUserC4EiEUlRK34CUser_GetSavedHardwareInfo_RequestR35CUser_GetSavedHardwareInfo_ResponseE_
 *ZNK24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
+*ZZL20cloud_force_conflictPvR9ConParamsR10ConCommandENKUlvE_clEvEUlvE_
 *ZZL23remote_client_softapcmdPvR9ConParamsR10ConCommandENKUlvE_clEvEUlvE_
 *ZZN12_GLOBAL__N_1L19app_installed_filesEPvR9ConParamsR10ConCommandENKUlvE_clEvEUlvE_
 *_depotcache_*
@@ -2515,6 +2540,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 --device-scale-factor=1
 --disable
 --disable-accelerated-video-decode
+--disable-auto-reload
 --disable-backgrounding-occluded-windows
 --disable-breakpad
 --disable-component-update
@@ -2697,7 +2723,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 -opendevtools
 -overlay-gpu-pri-delay
 -overlaylogging
--overlaytestmode
 -pid
 -prefer-gamescope-composer
 -prefer-gamescope-composer-vr
@@ -2733,6 +2758,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 -usepipewireaudio
 -verbose
 -verbose-computer-activity
+-verbose-controller-activity
 -verbosejslogging
 -verifyfiles
 -voicerelay
@@ -2790,6 +2816,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../clientcommon/webui_job_dispatcher.cpp
 ../clientcommon/webui_transport.cpp
 ../clientdll/ClientJobRemoteStorageSync.cpp
+../clientdll/appcacheshard.cpp
 ../clientdll/appdatacache.cpp
 ../clientdll/appdatacache.h
 ../clientdll/applicationmanager.cpp
@@ -2801,10 +2828,10 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../clientdll/baseuser.h
 ../clientdll/broadcastupload.cpp
 ../clientdll/broadcastupload.h
-../clientdll/cdncache.cpp
 ../clientdll/client_capi.cpp
 ../clientdll/clientapp.cpp
 ../clientdll/clientapp.h
+../clientdll/clientassetcacheengine.cpp
 ../clientdll/clientdfsconnection.h
 ../clientdll/clientdrm.cpp
 ../clientdll/clientgamestats.h
@@ -2899,13 +2926,13 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../clientdll/shadercachemanager/../depotreconstruct.h
 ../clientdll/shadercachemanager/../raterecorder.h
 ../clientdll/shadercachemanager/shadercachemanager.cpp
-../clientdll/shadercachemanager/shadercachemanager.cpp:2194
-../clientdll/shadercachemanager/shadercachemanager.cpp:2292
-../clientdll/shadercachemanager/shadercachemanager.cpp:2362
-../clientdll/shadercachemanager/shadercachemanager.cpp:2416
-../clientdll/shadercachemanager/shadercachemanager.cpp:4063
-../clientdll/shadercachemanager/shadercachemanager.cpp:4198
-../clientdll/shadercachemanager/shadercachemanager.cpp:4485
+../clientdll/shadercachemanager/shadercachemanager.cpp:2281
+../clientdll/shadercachemanager/shadercachemanager.cpp:2379
+../clientdll/shadercachemanager/shadercachemanager.cpp:2449
+../clientdll/shadercachemanager/shadercachemanager.cpp:2503
+../clientdll/shadercachemanager/shadercachemanager.cpp:4153
+../clientdll/shadercachemanager/shadercachemanager.cpp:4288
+../clientdll/shadercachemanager/shadercachemanager.cpp:4575
 ../clientdll/shadercachemanager/shadercompilejob.cpp
 ../clientdll/shadercachemanager/shadercontentupdatejob.cpp
 ../clientdll/sitelicenseclient.cpp
@@ -2921,10 +2948,10 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../clientdll/systemdockmanager_linux.cpp:337
 ../clientdll/systemdockmanager_linux.cpp:562
 ../clientdll/systemmanager.cpp
-../clientdll/systemmanager.cpp:2674
-../clientdll/systemmanager.cpp:3021
-../clientdll/systemmanager.cpp:4706
-../clientdll/systemmanager.cpp:5195
+../clientdll/systemmanager.cpp:2725
+../clientdll/systemmanager.cpp:3072
+../clientdll/systemmanager.cpp:4758
+../clientdll/systemmanager.cpp:5247
 ../clientdll/systemperfmanager.cpp
 ../clientdll/systemperfmanager_linux.cpp
 ../clientdll/systemperfmanager_linux.cpp:1185
@@ -2953,6 +2980,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../common/audio/audio_utils.cpp
 ../common/audio/clientaudio.cpp
 ../common/bannedwords.cpp
+../common/callbacklist.h
 ../common/chunkdatastore.cpp
 ../common/chunkfinder.cpp
 ../common/clientdirectories.h
@@ -3039,6 +3067,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../common/offlinemsgcache.cpp
 ../common/opensslconnection.cpp
 ../common/opensslwrapper.cpp
+../common/overlay/shmemstream.cpp
+../common/overlay/videomemstream.cpp
 ../common/parentalinterpreter.cpp
 ../common/percentile_generator.h
 ../common/pipes.cpp
@@ -3141,8 +3171,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../mathlib/sseconst.cpp
 ../mathlib/vmatrix.cpp
 ../overlay/common/shmemdrop.h
-../overlay/common/shmemstream.cpp
-../overlay/common/videomemstream.cpp
 ../p2pengine/p2pjinglewrapper/socketclient.cc
 ../p2pengine/p2pvoice/MultiUserVoiceChat.cpp
 ../p2pengine/p2pvoice/p2pvoice.cpp
@@ -3153,7 +3181,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../p2pengine/p2pvoice/voiceclient.cpp
 ../p2pengine/p2pvoice/voiceencoder_opus.cpp
 ../p2pengine/p2pvoice/voiceencoder_silk.cpp
-../public/html/htmlpaintbuffer.h
+../public/html/../../common/overlay/sharedimage.h
+../public/html/../../common/overlay/sharedimagememory.h
 ../public/html/htmlprotobuf.cpp
 ../public/mathlib/vector.h
 ../public/mathlib/vector2d.h
@@ -3166,6 +3195,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../public/tier1/bitstring.h
 ../public/tier1/functors.h
 ../public/tier1/interface.h
+../public/tier1/keyvalues.h
 ../public/tier1/netadr.h
 ../public/tier1/refcount.h
 ../public/tier1/smartptr.h
@@ -3307,7 +3337,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 .pac
 .placeholder.proto
 .steam_exec_test
-.temp
 .tmp
 .txt
 .txt.gz
@@ -3317,6 +3346,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 /%s.bin
 /%s.toc
 /.SteamCloud/%s/%s
+/.flatpak-info
 //\r\n// Use this file to configure your local site server\r\n//\r\n\r\n// Running the server:\r\n// 1) You must specify login credentials of an account that has been associated to your business site.\r\n//    If you haven't already, go to https://partner.steamgames.com and log in with your business account.\r\n//    Go to the Manage Sites page, and add information about your site.\r\n//    Associate a Steam account to your new site.  This is the account you will use with your server.\r\n//\t-For security reasons this account should not own anything.  If you need to make a new account go to https://store.steampowered.com/join/\r\n//    \t-New accounts will need to be added to your business. Go to the Manage Users and Permissions page, and add the account as a new user.\r\n//\t-Go to the Manage Sites page and associate the account to the site.\r\n// 2) Run the server, using the accountname and password from step 1.\r\n//\r\n//   a. The easiest way is to find the line in this file below that has "@sStartupScript" and change <account> to be the accountname, and <password> the password, of your site account. \r\n//\tThen remove the // characters from before @sStartupScript, save this file, and run steamcmd.exe. It should login to Steam and begin operating the local site server.\r\n//\r\n//   b. Alternatively, you can specify the account and password on the command-line as follows (for example via a Windows shortcut):\r\n//\r\n//\tsteamcmd.exe +login <account> <password>\r\n\r\n\r\n// This enables the site license server functionality in steamcmd, must be set to 1\r\n@bSiteLicenseServer 1\r\n\r\n// *** EDIT ME *** \r\n// This enables the site license server Graphical User Interface (GUI). Comment out or set to zero to run command line only.\r\n@bSiteLicenseServerGUI 1\r\n\r\n// *** EDIT ME *** \r\n// This will let steamcmd login to your site account automatically at startup. \r\n// You MUST login for the site license server to operate\r\n// @sStartupScript "login <account> <password>"\r\n\r\n\r\n//\r\n// Content cache configuration\r\n//\r\n// It is recommended that you enable the content cache, to improve efficiency of Steam game updates at your site\r\n// and reduce the traffic on your internet links.\r\n//\r\n\r\n// *** EDIT ME ***\r\n// Steam client game downloads will proxy through this port on the site server\r\n// This must be set to something greater than zero for the content cache to operate\r\n// Recommended setting: 80, or another port that is free on your server and accessible to clients\r\n@nSiteLicenseProxyPort 0\r\n\r\n// *** EDIT ME ***\r\n// The location of the game download cache on the server machine.\r\n// You should create the cache directory before running the server.\r\n@sSiteLicenseProxyCacheDirectory "c:\sls_cache_public\"\r\n\r\n\r\n// The maximum size on disk of the game download cache (default = 100GB)\r\n@nSiteLicenseProxyCacheMaxGB 500\r\n\r\n// Optional flag to enable the Steam clients on your network to share downloads with each other, reducing traffic further\r\n@nSiteLicenseProxyEnableP2P 1\r\n
 /ScreenSaver
 /Steam.dll
@@ -3325,6 +3355,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 /ValveIPCSHM_%d
 /actions/haptics
 /actions/haptics/out/haptic
+/app
 /app/extra/chrome
 /appcontrollericons%d/%s/
 /appinfo/%u/sha/%s.txt.gz
@@ -3361,6 +3392,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 /dev/urandom
 /dfs/download/%s/
 /downloading
+/etc
 /etc/atomic-update.conf.d
 /etc/mtab
 /etc/os-release
@@ -3504,6 +3536,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 /u%d-ValveIPCSharedObj-Steam
 /user/hand/left
 /user/hand/right
+/usr
 /usr/bin/
 /usr/bin/crosdisk %s
 /usr/bin/holo-polkit-helpers/holo-realtek-firmware-toggles
@@ -3517,7 +3550,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 /usr/bin/steamos-polkit-helpers/steamos-set-hostname
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
@@ -3711,7 +3743,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryI18SteamItemDetails_tE
 10CUtlMemoryI19CClientAuthInstanceE
 10CUtlMemoryI19CECSigningPublicKeyE
-10CUtlMemoryI19PendingWebRequest_tE
+10CUtlMemoryI19FamilyGroupMember_tE
 10CUtlMemoryI19PopupMenuTouchKey_tE
 10CUtlMemoryI20ChangedFileMapping_sE
 10CUtlMemoryI20ModuleAddressRange_tE
@@ -3786,11 +3818,9 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI26SteamPartyBeaconLocation_t7CUtlPtrIS0_Iyi8CDefLess25CDefRBTreeBalanceListenerIiEyEEiPFbRKS2_SA_EE6Node_tEiNSD_8CKeyLessES6_S2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI4CSHA17ChunkIndexEntry_ti8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameID10CUtlStringi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameIDN10CUserStats16CurrentPlayers_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameIDP10CUtlVectorI22ScreenshotUploadData_tS_IS4_EEi8CDefLessE6Node_tEiNS9_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameIDP10CUtlVectorIyS_IyEEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameIDP15CUtlDualHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjES5_IS4_ES7_IS4_EEi8CDefLessE6Node_tEiNSE_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7CGameIDP21ClUserGameStatsSchemai8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI7GroupIdN17CInputAccumulator28ControllerAnalogCursorData_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI8CSteamID6CSTimei8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI8CSteamID7CUtlPtrIN16CUserMatchmaking13ActiveLobby_tEEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
@@ -3812,11 +3842,9 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN11CHTTPClient18SSLContextLookup_tEP15COpenSSLContexti8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN11CServerList17ServerSortOrder_tEii8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN12CSteamClient14InterfaceKey_tEP14CUserInterfacei8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN12IClientUtils15ECDNRequestTypeE10CUtlStringi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN16CSteamController16ConfigOwnerKey_tE7CUtlPtrI8CUtlDictINS2_11configset_tE22CDefCaselessStringLessiEEiNS2_19CDefConfigOwnerLessEE6Node_tEiNSB_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN18CUserRemoteStorage26DownloadJobInProgressKey_tENS2_23DownloadJobInProgress_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN5CUser26SteamGroupChatSubscriptionENS2_38SteamGroupChatChannelSubscriptionStateEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN9CCDNCache9CDNLookupEii8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIP18CHTTPRequestHandleN17CHTTPRequestCache30RequestWaitingValidationData_tEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIP18CHTTPRequestHandleP17ChunkRequestKey_ti8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIP18CHTTPRequestHandleP17PatchRequestKey_ti8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
@@ -3848,7 +3876,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiN12CSteamEngine22ControllerConfigData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiN14CRateLimitBaseIiE17ClientUsageInfo_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiN5CUser15TicketRequest_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiN9CCDNCache27CDNFileLoadedCallbackList_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiP10CUtlVectorI8CSteamIDS_IS3_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiP12CVoiceClienti8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiP25CHTTPClientNetworkRequesti8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
@@ -3873,6 +3900,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj7CUtlPtrIS0_Iyi8CDefLess25CDefRBTreeBalanceListenerIiEyEEiS3_E6Node_tEiNS8_8CKeyLessES5_jE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj7EOSTypei8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj8CAutoPtrI32CMsgCloudPendingRemoteOperationsEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjN10CUserStats16CurrentPlayers_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjN12CSteamEngine13OverlayInfo_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjN12CUserFriends20AppRichPresenceMap_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjN13CRemoteClient16RemoteAppState_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
@@ -3895,6 +3923,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP19CUtlQueueDeprecatedIP10CGCMessageEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP20AppOwnershipTicket_ti8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP21CP2PNetworkingSessioni8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP21ClUserGameStatsSchemai8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP24CSubscribedWorkshopItemsi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP26GameControllerUsageSummaryi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP32SteamDatagramCachedCredentials_ti8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
@@ -3915,6 +3944,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIt24AchievementUnlockTimes_tt8CDefLessE6Node_tEtNS4_8CKeyLessE25CDefRBTreeBalanceListenerItEtE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapItP10ClUserStatt8CDefLessE6Node_tEtNS5_8CKeyLessE25CDefRBTreeBalanceListenerItEtE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapItP12ClGlobalStatt8CDefLessE6Node_tEtNS5_8CKeyLessE25CDefRBTreeBalanceListenerItEtE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapItPKci8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIy10CUtlStringi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIy13CCollectedRowi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIy18CCopyableUtlVectorIP21CInternalCallbackBaseS_IS4_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
@@ -3969,12 +3999,16 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_S1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib13CSharedSocket10RemoteHostE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib13CSharedSocket10RemoteHostE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_7CUtlPtrI5CLockE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_7CUtlPtrI5CLockE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringPN23CClientAssetCacheEngine11ImageData_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringPN23CClientAssetCacheEngine11ImageData_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringi10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
@@ -4007,8 +4041,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN11CUtlHashMapI18VerifiedTokenKey_tN14CUtlHashMapLRUIS1_4CJWT10CDefEqualsIS1_E28HashFunctorUnpaddedStructureIS1_EE15ElementBucket_tES5_S7_S1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI20EAuthTokenPermissionS1_10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI20EAuthTokenPermissionS1_10CDefEqualsIS1_E11HashFunctorIS1_ES1_E6Node_tEE
-10CUtlMemoryIN11CUtlHashMapI20EAuthTokenPermissionSt6bitsetILm21EE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
-10CUtlMemoryIN11CUtlHashMapI20EAuthTokenPermissionSt6bitsetILm21EE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapI20EAuthTokenPermissionSt6bitsetILm22EE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapI20EAuthTokenPermissionSt6bitsetILm22EE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI21IndicateProgressKey_t22IndicateProgressData_t10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI21IndicateProgressKey_t22IndicateProgressData_t10CDefEqualsIS1_E11HashFunctorIS1_ES1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI23EControllerActionOrigin12GlyphPaths_t10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
@@ -4055,10 +4089,16 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIPv6CSTime10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIPv6CSTime10CDefEqualsIS1_E11HashFunctorIS1_ES1_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIiN14CUtlHashMapLRUIiP10CUtlBuffer10CDefEqualsIiE11HashFunctorIiEE15ElementBucket_tES5_S7_iE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIiN14CUtlHashMapLRUIiP10CUtlBuffer10CDefEqualsIiE11HashFunctorIiEE15ElementBucket_tES5_S7_iE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIiP10CUtlVectorIN23CClientAssetCacheEngine20FileLoadedCallback_tES_IS3_EE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIiP10CUtlVectorIN23CClientAssetCacheEngine20FileLoadedCallback_tES_IS3_EE10CDefEqualsIiE11HashFunctorIiEiE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIiP19HTTP2ServerStream_t10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIiP19HTTP2ServerStream_t10CDefEqualsIiE11HashFunctorIiEiE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIiPN23CClientAssetCacheEngine11ImageData_tE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIiPN23CClientAssetCacheEngine11ImageData_tE10CDefEqualsIiE11HashFunctorIiEiE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIiPN25SteamNetworkingSocketsLib22CSteamNetworkPollGroupESt8equal_toIiENS1_8IdentityIiEEiE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIiPN25SteamNetworkingSocketsLib22CSteamNetworkPollGroupESt8equal_toIiENS1_8IdentityIiEEiE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIiPN25SteamNetworkingSocketsLib24CSteamNetworkingMessages7ChannelESt8equal_toIiESt4hashIiEiE12HashBucket_tEE
@@ -4169,6 +4209,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN11CUtlHashMapIy17ClientTaskState_t10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIy17QueryUGCRequest_t10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIy17QueryUGCRequest_t10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIy4CSHA10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIy4CSHA10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIy8CAutoPtrI33CGameNetworkingUI_ConnectionStateE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIy8CAutoPtrI33CGameNetworkingUI_ConnectionStateE10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyP18QueryUGCResponse_t10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
@@ -4177,6 +4219,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIyPN23CClientAssetCacheEngine27AchievementPreloadRequest_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIyPN23CClientAssetCacheEngine27AchievementPreloadRequest_tE10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIySt10unique_ptrIN25SteamNetworkingSocketsLib9PublicKeyESt14default_deleteIS3_EESt8equal_toIyESt4hashIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIySt10unique_ptrIN25SteamNetworkingSocketsLib9PublicKeyESt14default_deleteIS3_EESt8equal_toIyESt4hashIyEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
@@ -4190,6 +4234,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN12CUserFriends20ClFriendSourceItem_tEE
 10CUtlMemoryIN12ClGlobalStat6Data_tEE
 10CUtlMemoryIN13CRemoteClient10UserInfo_tEE
+10CUtlMemoryIN13CRemoteClient19StandbyConnection_tEE
 10CUtlMemoryIN14CCompatManager12CompatTool_tEE
 10CUtlMemoryIN14CCompatManager13CompatAlias_tEE
 10CUtlMemoryIN14CCompatManager24CompatToolRegistration_tEE
@@ -4208,6 +4253,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN14CUtlLinkedListIN10CIPCClient15ListUtlBuffer_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN10CUserStats18DownloadedLBData_tEyE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN12CCMInterface20ConnectionPriority_tEiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListIN13CCMConnection15DelayedPacket_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN17CHTTPRequestCache19CachedFileLRUData_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN18COpenSSLConnection20EncryptedSendChunk_tEiE10ListElem_tEE
@@ -4251,6 +4297,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN22CBannedWordsDictionary11MatchLink_tEE
 10CUtlMemoryIN22CBannedWordsDictionary7Regex_tEE
 10CUtlMemoryIN22ISpoofControllerXInput10DeviceInfoEE
+10CUtlMemoryIN23CClientAssetCacheEngine20FileLoadedCallback_tEE
 10CUtlMemoryIN24CInternalCallbackManager15PendingRemove_tEE
 10CUtlMemoryIN27CClientJobRemoteStorageSync18FileDownloadInfo_tEE
 10CUtlMemoryIN32SteamDatagramCachedCredentials_t11RelayTicketEE
@@ -4260,8 +4307,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIN6ConVar22ConVarChangeCallback_tEE
 10CUtlMemoryIN7CJobMgr12JobTimeout_tEE
 10CUtlMemoryIN7CJobMgr13JobSleeping_tEE
-10CUtlMemoryIN9CCDNCache23CDNFileLoadedCallback_tEE
-10CUtlMemoryIN9CCDNCache9CDNFile_tEE
 10CUtlMemoryIP10CUtlBufferE
 10CUtlMemoryIP11CGameActionE
 10CUtlMemoryIP11CHTTPClientE
@@ -4292,6 +4337,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIP20IControllerActivatorE
 10CUtlMemoryIP21CInternalCallbackBaseE
 10CUtlMemoryIP21CManifestResponseDataE
+10CUtlMemoryIP23CClientAssetDownloadJobE
 10CUtlMemoryIP25CHTTPClientNetworkRequestE
 10CUtlMemoryIP25ServiceMethodStartParam_tE
 10CUtlMemoryIP26CGameNotifications_SessionE
@@ -4311,13 +4357,13 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlMemoryIPN19CBaseUtlSymbolTableI14CMetricsSymbolE12StringPool_tEE
 10CUtlMemoryIPN20CRemoteClientManager18StreamingSession_tEE
 10CUtlMemoryIPN22CBannedWordsDictionary11MatchNode_tEE
+10CUtlMemoryIPN25SteamNetworkingSocketsLib12RelaySessionEE
 10CUtlMemoryIPN25SteamNetworkingSocketsLib17CRawUDPSocketImplEE
 10CUtlMemoryIPN25SteamNetworkingSocketsLib8IThinkerEE
 10CUtlMemoryIPN9CHashTrie13CHashTrieNodeEE
 10CUtlMemoryIPcE
 10CUtlMemoryISt4pairI14CMetricsSymbol13MetricValue_tEE
 10CUtlMemoryISt4pairI14CMetricsSymbolS1_EE
-10CUtlMemoryISt4pairIj16EFamilyGroupRoleEE
 10CUtlMemoryISt4pairIyPKcEE
 10CUtlMemoryIcE
 10CUtlMemoryIfE
@@ -4367,11 +4413,9 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlRBTreeIN7CUtlMapI26SteamPartyBeaconLocation_t7CUtlPtrIS_Iyi8CDefLess25CDefRBTreeBalanceListenerIiEyEEiPFbRKS1_S9_EE6Node_tEiNSC_8CKeyLessES5_S1_E
 10CUtlRBTreeIN7CUtlMapI4CSHA17ChunkIndexEntry_ti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI7CGameID10CUtlStringi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
-10CUtlRBTreeIN7CUtlMapI7CGameIDN10CUserStats16CurrentPlayers_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI7CGameIDP10CUtlVectorI22ScreenshotUploadData_t10CUtlMemoryIS3_EEi8CDefLessE6Node_tEiNS9_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI7CGameIDP10CUtlVectorIy10CUtlMemoryIyEEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI7CGameIDP15CUtlDualHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjES4_IS3_ES6_IS3_EEi8CDefLessE6Node_tEiNSD_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
-10CUtlRBTreeIN7CUtlMapI7CGameIDP21ClUserGameStatsSchemai8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI7GroupIdN17CInputAccumulator28ControllerAnalogCursorData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI8CSteamID6CSTimei8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI8CSteamID7CUtlPtrIN16CUserMatchmaking13ActiveLobby_tEEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
@@ -4393,11 +4437,9 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlRBTreeIN7CUtlMapIN11CHTTPClient18SSLContextLookup_tEP15COpenSSLContexti8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIN11CServerList17ServerSortOrder_tEii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIN12CSteamClient14InterfaceKey_tEP14CUserInterfacei8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlRBTreeIN7CUtlMapIN12IClientUtils15ECDNRequestTypeE10CUtlStringi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIN16CSteamController16ConfigOwnerKey_tE7CUtlPtrI8CUtlDictINS1_11configset_tE22CDefCaselessStringLessiEEiNS1_19CDefConfigOwnerLessEE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIN18CUserRemoteStorage26DownloadJobInProgressKey_tENS1_23DownloadJobInProgress_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIN5CUser26SteamGroupChatSubscriptionENS1_38SteamGroupChatChannelSubscriptionStateEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlRBTreeIN7CUtlMapIN9CCDNCache9CDNLookupEii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIP18CHTTPRequestHandleN17CHTTPRequestCache30RequestWaitingValidationData_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIP18CHTTPRequestHandleP17ChunkRequestKey_ti8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIP18CHTTPRequestHandleP17PatchRequestKey_ti8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -4429,7 +4471,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlRBTreeIN7CUtlMapIiN12CSteamEngine22ControllerConfigData_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIN7CUtlMapIiN14CRateLimitBaseIiE17ClientUsageInfo_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIN7CUtlMapIiN5CUser15TicketRequest_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
-10CUtlRBTreeIN7CUtlMapIiN9CCDNCache27CDNFileLoadedCallbackList_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIN7CUtlMapIiP10CUtlVectorI8CSteamID10CUtlMemoryIS2_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIN7CUtlMapIiP12CVoiceClienti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIN7CUtlMapIiP25CHTTPClientNetworkRequesti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
@@ -4454,6 +4495,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlRBTreeIN7CUtlMapIj7CUtlPtrIS_Iyi8CDefLess25CDefRBTreeBalanceListenerIiEyEEiS2_E6Node_tEiNS7_8CKeyLessES4_jE
 10CUtlRBTreeIN7CUtlMapIj7EOSTypei8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIj8CAutoPtrI32CMsgCloudPendingRemoteOperationsEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlRBTreeIN7CUtlMapIjN10CUserStats16CurrentPlayers_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjN12CSteamEngine13OverlayInfo_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjN12CUserFriends20AppRichPresenceMap_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjN13CRemoteClient16RemoteAppState_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
@@ -4477,6 +4519,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlRBTreeIN7CUtlMapIjP19CUtlQueueDeprecatedIP10CGCMessageEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjP20AppOwnershipTicket_ti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjP21CP2PNetworkingSessioni8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlRBTreeIN7CUtlMapIjP21ClUserGameStatsSchemai8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjP24CSubscribedWorkshopItemsi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjP26GameControllerUsageSummaryi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjP32SteamDatagramCachedCredentials_ti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
@@ -4496,6 +4539,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlRBTreeIN7CUtlMapIt24AchievementUnlockTimes_tt8CDefLessE6Node_tEtNS3_8CKeyLessE25CDefRBTreeBalanceListenerItEtE
 10CUtlRBTreeIN7CUtlMapItP10ClUserStatt8CDefLessE6Node_tEtNS4_8CKeyLessE25CDefRBTreeBalanceListenerItEtE
 10CUtlRBTreeIN7CUtlMapItP12ClGlobalStatt8CDefLessE6Node_tEtNS4_8CKeyLessE25CDefRBTreeBalanceListenerItEtE
+10CUtlRBTreeIN7CUtlMapItPKci8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE
 10CUtlRBTreeIN7CUtlMapIy10CUtlStringi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIy13CCollectedRowi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIy18CCopyableUtlVectorIP21CInternalCallbackBase10CUtlMemoryIS3_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
@@ -4588,7 +4632,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlVectorI18SteamItemDetails_t10CUtlMemoryIS0_EE
 10CUtlVectorI19CClientAuthInstance10CUtlMemoryIS0_EE
 10CUtlVectorI19CECSigningPublicKey10CUtlMemoryIS0_EE
-10CUtlVectorI19PendingWebRequest_t10CUtlMemoryIS0_EE
+10CUtlVectorI19FamilyGroupMember_t10CUtlMemoryIS0_EE
 10CUtlVectorI19PopupMenuTouchKey_t10CUtlMemoryIS0_EE
 10CUtlVectorI20ChangedFileMapping_s10CUtlMemoryIS0_EE
 10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
@@ -4631,9 +4675,11 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_S1_E12HashBucket_tE10CUtlMemoryISD_EE
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_S1_E12HashBucket_tE10CUtlMemoryISC_EE
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryISA_EE
+10CUtlVectorIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib13CSharedSocket10RemoteHostE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryISB_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_7CUtlPtrI5CLockE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_10StringViewE12HashBucket_tE10CUtlMemoryISE_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_10StringViewE12HashBucket_tE10CUtlMemoryISD_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlVectorIN11CUtlHashMapI10CUtlStringPN23CClientAssetCacheEngine11ImageData_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISB_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringb10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringi10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringj10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryIS8_EE
@@ -4650,7 +4696,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlVectorIN11CUtlHashMapI18RemotePlayPlayer_t27RemoteClientInputSettings_t10CDefEqualsIS1_E28HashFunctorUnpaddedStructureIS1_ES1_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI18VerifiedTokenKey_tN14CUtlHashMapLRUIS1_4CJWT10CDefEqualsIS1_E28HashFunctorUnpaddedStructureIS1_EE15ElementBucket_tES5_S7_S1_E12HashBucket_tE10CUtlMemoryISB_EE
 10CUtlVectorIN11CUtlHashMapI20EAuthTokenPermissionS1_10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
-10CUtlVectorIN11CUtlHashMapI20EAuthTokenPermissionSt6bitsetILm21EE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS9_EE
+10CUtlVectorIN11CUtlHashMapI20EAuthTokenPermissionSt6bitsetILm22EE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapI21IndicateProgressKey_t22IndicateProgressData_t10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI23EControllerActionOrigin12GlyphPaths_t10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapI23LocalHitCacheEntryKey_t24LocalHitCacheEntryData_t10CDefEqualsIS1_E28HashFunctorUnpaddedStructureIS1_ES1_E12HashBucket_tE10CUtlMemoryIS8_EE
@@ -4674,13 +4720,16 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlVectorIN11CUtlHashMapIPKcP21ClientServiceMethod_tN24CClientServiceMethodList28EqualsFunctorServiceMethod_tENS5_26HashFunctorServiceMethod_tES2_E12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIPv6CSTime10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlVectorIN11CUtlHashMapIiN14CUtlHashMapLRUIiP10CUtlBuffer10CDefEqualsIiE11HashFunctorIiEE15ElementBucket_tES5_S7_iE12HashBucket_tE10CUtlMemoryISB_EE
 10CUtlVectorIN11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIiP19HTTP2ServerStream_t10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlVectorIN11CUtlHashMapIiPN23CClientAssetCacheEngine11ImageData_tE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIiPN25SteamNetworkingSocketsLib22CSteamNetworkPollGroupESt8equal_toIiENS1_8IdentityIiEEiE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIiPN25SteamNetworkingSocketsLib24CSteamNetworkingMessages7ChannelESt8equal_toIiESt4hashIiEiE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapIiPN25SteamNetworkingSocketsLib28CSteamNetworkListenSocketP2PESt8equal_toIiESt4hashIiEiE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIiPN25SteamNetworkingSocketsLib29CSteamNetworkListenSocketBaseESt8equal_toIiENS1_8IdentityIiEEiE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIiPN25SteamNetworkingSocketsLib34CSteamNetworkListenSocketSDRServerESt8equal_toIiESt4hashIiEiE12HashBucket_tE10CUtlMemoryIS9_EE
+10CUtlVectorIN11CUtlHashMapIiPS_IN23CClientAssetCacheEngine20FileLoadedCallback_tE10CUtlMemoryIS2_EE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tES3_ISC_EE
 10CUtlVectorIN11CUtlHashMapIibSt8equal_toIiESt4hashIiEiE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIiy10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS7_EE
@@ -4731,10 +4780,12 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlVectorIN11CUtlHashMapIy16ProfileItemDef_t10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapIy17ClientTaskState_t10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapIy17QueryUGCRequest_t10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS7_EE
+10CUtlVectorIN11CUtlHashMapIy4CSHA10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapIy8CAutoPtrI33CGameNetworkingUI_ConnectionStateE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIyP18QueryUGCResponse_t10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS9_EE
+10CUtlVectorIN11CUtlHashMapIyPN23CClientAssetCacheEngine27AchievementPreloadRequest_tE10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIySt10unique_ptrIN25SteamNetworkingSocketsLib9PublicKeyESt14default_deleteIS3_EESt8equal_toIyESt4hashIyEyE12HashBucket_tE10CUtlMemoryISC_EE
 10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
@@ -4744,6 +4795,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlVectorIN12CUserFriends20ClFriendSourceItem_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN12ClGlobalStat6Data_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN13CRemoteClient10UserInfo_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN13CRemoteClient19StandbyConnection_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN14CCompatManager12CompatTool_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN14CCompatManager13CompatAlias_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN14CCompatManager24CompatToolRegistration_tE10CUtlMemoryIS1_EE
@@ -4771,6 +4823,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlVectorIN22CBannedWordsDictionary11MatchLink_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN22CBannedWordsDictionary7Regex_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN22ISpoofControllerXInput10DeviceInfoE10CUtlMemoryIS1_EE
+10CUtlVectorIN23CClientAssetCacheEngine20FileLoadedCallback_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN24CInternalCallbackManager15PendingRemove_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN27CClientJobRemoteStorageSync18FileDownloadInfo_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN32SteamDatagramCachedCredentials_t11RelayTicketE10CUtlMemoryIS1_EE
@@ -4780,8 +4833,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN7CJobMgr12JobTimeout_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN7CJobMgr13JobSleeping_tE10CUtlMemoryIS1_EE
-10CUtlVectorIN9CCDNCache23CDNFileLoadedCallback_tE10CUtlMemoryIS1_EE
-10CUtlVectorIN9CCDNCache9CDNFile_tE10CUtlMemoryIS1_EE
 10CUtlVectorIP10CUtlBuffer10CUtlMemoryIS1_EE
 10CUtlVectorIP11CGameAction10CUtlMemoryIS1_EE
 10CUtlVectorIP11CHTTPClient10CUtlMemoryIS1_EE
@@ -4812,6 +4863,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlVectorIP20IControllerActivator10CUtlMemoryIS1_EE
 10CUtlVectorIP21CInternalCallbackBase10CUtlMemoryIS1_EE
 10CUtlVectorIP21CManifestResponseData10CUtlMemoryIS1_EE
+10CUtlVectorIP23CClientAssetDownloadJob10CUtlMemoryIS1_EE
 10CUtlVectorIP25CHTTPClientNetworkRequest10CUtlMemoryIS1_EE
 10CUtlVectorIP25ServiceMethodStartParam_t10CUtlMemoryIS1_EE
 10CUtlVectorIP26CGameNotifications_Session10CUtlMemoryIS1_EE
@@ -4831,13 +4883,13 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 10CUtlVectorIPN19CBaseUtlSymbolTableI14CMetricsSymbolE12StringPool_tE10CUtlMemoryIS4_EE
 10CUtlVectorIPN20CRemoteClientManager18StreamingSession_tE10CUtlMemoryIS2_EE
 10CUtlVectorIPN22CBannedWordsDictionary11MatchNode_tE10CUtlMemoryIS2_EE
+10CUtlVectorIPN25SteamNetworkingSocketsLib12RelaySessionE10CUtlMemoryIS2_EE
 10CUtlVectorIPN25SteamNetworkingSocketsLib17CRawUDPSocketImplE10CUtlMemoryIS2_EE
 10CUtlVectorIPN25SteamNetworkingSocketsLib8IThinkerE10CUtlMemoryIS2_EE
 10CUtlVectorIPN9CHashTrie13CHashTrieNodeE10CUtlMemoryIS2_EE
 10CUtlVectorIPc10CUtlMemoryIS0_EE
 10CUtlVectorISt4pairI14CMetricsSymbol13MetricValue_tE10CUtlMemoryIS3_EE
 10CUtlVectorISt4pairI14CMetricsSymbolS1_E10CUtlMemoryIS2_EE
-10CUtlVectorISt4pairIj16EFamilyGroupRoleE10CUtlMemoryIS2_EE
 10CUtlVectorISt4pairIyPKcE10CUtlMemoryIS3_EE
 10CUtlVectorIc10CUtlMemoryIcEE
 10CUtlVectorIf10CUtlMemoryIfEE
@@ -4928,9 +4980,11 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS0_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES6_S8_S0_E
 11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS0_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES5_S7_S0_E
 11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
+11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib13CSharedSocket10RemoteHostE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS0_7CUtlPtrI5CLockE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES6_S8_10StringViewE
 11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS0_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES5_S7_10StringViewE
 11CUtlHashMapI10CUtlStringN24CChildEnvironmentBuilder10EnvEntry_tE27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE
+11CUtlHashMapI10CUtlStringPN23CClientAssetCacheEngine11ImageData_tE10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringb10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringi10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
 11CUtlHashMapI10CUtlStringj10CDefEqualsIS0_E11HashFunctorIS0_E10StringViewE
@@ -4947,7 +5001,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 11CUtlHashMapI18RemotePlayPlayer_t27RemoteClientInputSettings_t10CDefEqualsIS0_E28HashFunctorUnpaddedStructureIS0_ES0_E
 11CUtlHashMapI18VerifiedTokenKey_tN14CUtlHashMapLRUIS0_4CJWT10CDefEqualsIS0_E28HashFunctorUnpaddedStructureIS0_EE15ElementBucket_tES4_S6_S0_E
 11CUtlHashMapI20EAuthTokenPermissionS0_10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
-11CUtlHashMapI20EAuthTokenPermissionSt6bitsetILm21EE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
+11CUtlHashMapI20EAuthTokenPermissionSt6bitsetILm22EE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 11CUtlHashMapI21IndicateProgressKey_t22IndicateProgressData_t10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 11CUtlHashMapI23EControllerActionOrigin12GlyphPaths_t10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 11CUtlHashMapI23LocalHitCacheEntryKey_t24LocalHitCacheEntryData_t10CDefEqualsIS0_E28HashFunctorUnpaddedStructureIS0_ES0_E
@@ -4971,8 +5025,11 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 11CUtlHashMapIPKcP21ClientServiceMethod_tN24CClientServiceMethodList28EqualsFunctorServiceMethod_tENS4_26HashFunctorServiceMethod_tES1_E
 11CUtlHashMapIPKci10CDefEqualsIS1_E11HashFunctorIS1_ES1_E
 11CUtlHashMapIPv6CSTime10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
+11CUtlHashMapIiN14CUtlHashMapLRUIiP10CUtlBuffer10CDefEqualsIiE11HashFunctorIiEE15ElementBucket_tES4_S6_iE
 11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE
+11CUtlHashMapIiP10CUtlVectorIN23CClientAssetCacheEngine20FileLoadedCallback_tE10CUtlMemoryIS2_EE10CDefEqualsIiE11HashFunctorIiEiE
 11CUtlHashMapIiP19HTTP2ServerStream_t10CDefEqualsIiE11HashFunctorIiEiE
+11CUtlHashMapIiPN23CClientAssetCacheEngine11ImageData_tE10CDefEqualsIiE11HashFunctorIiEiE
 11CUtlHashMapIiPN25SteamNetworkingSocketsLib22CSteamNetworkPollGroupESt8equal_toIiENS0_8IdentityIiEEiE
 11CUtlHashMapIiPN25SteamNetworkingSocketsLib24CSteamNetworkingMessages7ChannelESt8equal_toIiESt4hashIiEiE
 11CUtlHashMapIiPN25SteamNetworkingSocketsLib28CSteamNetworkListenSocketP2PESt8equal_toIiESt4hashIiEiE
@@ -5028,10 +5085,12 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 11CUtlHashMapIy16ProfileItemDef_t10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIy17ClientTaskState_t10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIy17QueryUGCRequest_t10CDefEqualsIyE11HashFunctorIyEyE
+11CUtlHashMapIy4CSHA10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIy8CAutoPtrI33CGameNetworkingUI_ConnectionStateE10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyP18QueryUGCResponse_t10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyP4CJob10CDefEqualsIyEN7CJobMgr15JobHasFunctor_tEyE
 11CUtlHashMapIyPN15CWorkThreadPool12OrderGroup_tE10CDefEqualsIyE11HashFunctorIyEyE
+11CUtlHashMapIyPN23CClientAssetCacheEngine27AchievementPreloadRequest_tE10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIySt10unique_ptrIN25SteamNetworkingSocketsLib9PublicKeyESt14default_deleteIS2_EESt8equal_toIyESt4hashIyEyE
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
 11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE
@@ -5102,6 +5161,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 12CBannedWords
 12CCMInterface
 12CCSInterface
+12CClientAudio
 12CClientMusic
 12CClientVideo
 12CConfigStore
@@ -5244,7 +5304,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 12CProtoBufMsgI19CMsgClientLBSSetUGCE
 12CProtoBufMsgI19CMsgClientLoggedOffE
 12CProtoBufMsgI20CMsgClientChatInviteE
-12CProtoBufMsgI20CMsgClientHideFriendE
 12CProtoBufMsgI20CMsgFSGetIsFollowingE
 12CProtoBufMsgI20CMsgGameServerRemoveE
 12CProtoBufMsgI20CMsgRemoteClientPingE
@@ -5508,6 +5567,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 12CProtoBufMsgI38CCloud_ClientGetAppQuotaUsage_ResponseE
 12CProtoBufMsgI38CCloud_CompleteAppUploadBatch_ResponseE
 12CProtoBufMsgI38CGameServers_MasterServerQuery_RequestE
+12CProtoBufMsgI38CGameServers_QueryListedServer_RequestE
 12CProtoBufMsgI38CInventoryClient_NewItems_NotificationE
 12CProtoBufMsgI38CMsgCREGetUserPublishedItemVoteDetailsE
 12CProtoBufMsgI38CMsgClientCheckAppBetaPasswordResponseE
@@ -5854,6 +5914,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 14CUtlHashMapLRUI18VerifiedTokenKey_t4CJWT10CDefEqualsIS0_E28HashFunctorUnpaddedStructureIS0_EE
 14CUtlHashMapLRUI8CSteamID7CUtlPtrI5CLockE10CDefEqualsIS0_E11HashFunctorIS0_EE
 14CUtlHashMapLRUIN11CHTTPClient12HostLookup_tENS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE
+14CUtlHashMapLRUIiP10CUtlBuffer10CDefEqualsIiE11HashFunctorIiEE
 14CUtlLinkedListI10CUtlStringiE
 14CUtlLinkedListI11KeyValuesADiE
 14CUtlLinkedListI12CWatchingLogiE
@@ -5870,6 +5931,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 14CUtlLinkedListIN10CIPCClient15ListUtlBuffer_tEiE
 14CUtlLinkedListIN10CUserStats18DownloadedLBData_tEyE
 14CUtlLinkedListIN12CCMInterface20ConnectionPriority_tEiE
+14CUtlLinkedListIN13CCMConnection15DelayedPacket_tEiE
 14CUtlLinkedListIN16CUserMatchmaking23LobbyEnterTimestamped_tEiE
 14CUtlLinkedListIN17CHTTPRequestCache19CachedFileLRUData_tEiE
 14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE
@@ -6059,6 +6121,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 162.254.193.74:27017
 162.254.195.66:27017
 162.254.195.71:27017
+16AppInfoSummary_t
 16AppRatingAuxData
 16AppStageProgress
 16BluetoothManager
@@ -6169,7 +6232,9 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 16CMsgSetHTMLTitle
 16CMsgSetZoomLevel
 16CMsgShortcutInfo
+16CMsgSplashWindow
 16CMsgStartRequest
+16CMsgStartTracing
 16CMsgTOSTreatment
 16CMsgTouchGesture
 16CPeriodicFunctor
@@ -6286,6 +6351,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 16StoreItem_Assets
 16UserAccount_Stub
 16VideoClient_Stub
+16gameserveritem_t
 172.16.145.110:27017
 172.16.145.120:27017
 172.16.3.16
@@ -6398,6 +6464,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 17CInternalCallbackI16CUserScreenshots19AppLifetimeNotice_tE
 17CInternalCallbackI17CDepotDownloadMgr21RemoteClientOffline_tE
 17CInternalCallbackI17CDepotDownloadMgr23RemoteClientAvailable_tE
+17CInternalCallbackI17CDepotDownloadMgr26RemoteClientDisconnected_tE
 17CInternalCallbackI17CDepotDownloadMgr29RemoteClientSiteAssociation_tE
 17CInternalCallbackI18CSiteLicenseClient23RemoteClientAvailable_tE
 17CInternalCallbackI18CSiteLicenseClient23RemoteClientConnected_tE
@@ -6661,6 +6728,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 18CRemoteClient_Task
 18CScheduledFunctionI10CClientUGCE
 18CScheduledFunctionI10CIPCServerE
+18CScheduledFunctionI10CUserStatsE
 18CScheduledFunctionI11CGameServerE
 18CScheduledFunctionI11CSNetSocketE
 18CScheduledFunctionI12CCMInterfaceE
@@ -6669,6 +6737,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 18CScheduledFunctionI12CSteamEngineE
 18CScheduledFunctionI12CUserFriendsE
 18CScheduledFunctionI13CAppInfoCacheE
+18CScheduledFunctionI13CCMConnectionE
 18CScheduledFunctionI14CCompatManagerE
 18CScheduledFunctionI14CNetConnectionE
 18CScheduledFunctionI14CSystemManagerE
@@ -6690,6 +6759,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 18CScheduledFunctionI20CWebSocketConnectionE
 18CScheduledFunctionI21CHTTPClientConnectionE
 18CScheduledFunctionI21CP2PNetworkingSessionE
+18CScheduledFunctionI23CClientAssetCacheEngineE
 18CScheduledFunctionI23CSystemDockManagerLinuxE
 18CScheduledFunctionI23CSystemPerfManagerLinuxE
 18CScheduledFunctionI24CClientTimedTrialManagerE
@@ -6698,7 +6768,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 18CScheduledFunctionI27CHTTPServerClientConnectionE
 18CScheduledFunctionI28CSystemDisplayManagerWaylandE
 18CScheduledFunctionI5CUserE
-18CScheduledFunctionI9CCDNCacheE
 18CSetCaptureSizeMsg
 18CSetCursorImageMsg
 18CSetCursorScaleMsg
@@ -6886,6 +6955,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 19CommunityLinkFilter
 19ContentBuilder_Stub
 19EmbeddedClient_Stub
+19FamilyGroupMember_t
 19FriendMessages_Stub
 19FriendsMenuChange_t
 19GameNetworking_Stub
@@ -6908,7 +6978,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 19OpenFriendsDialog_t
 19ParentalClient_Stub
 19ParentalPlaytimeDay
-19PendingWebRequest_t
 19PublishedFileClient
 19RemoteFileAppData_t
 19ScreenshotDeleted_t
@@ -7020,6 +7089,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 20CStartPressActivator
 20CStaticFrameFunction
 20CSteamCacheInterface
+20CSteamChangeCounters
 20CSteamOSManagerState
 20CStreamingClientCaps
 20CUDPConnectionRouter
@@ -7131,6 +7201,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 21CHTTPClientWorkThread
 21CHapticScriptWorkItem
 21CInternalCallbackBase
+21CJobQueryListedServer
 21CLoadLocalToolListJob
 21CLogFileAsyncCallback
 21CManifestResponseData
@@ -7171,6 +7242,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 21CPerfReportingManager
 21CPipewireObjectDevice
 21CProcessChunkWorkItem
+21CProtoBufCountsByEMsg
 21CPruneOtherBucketsJob
 21CPurchaseLineItemInfo
 21CSNetSocketMsgHandler
@@ -7233,6 +7305,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 21TestExternalPrivilege
 21TradeInviteCanceled_t
 21UserSystemInformation
+21WebSocketCMBestPing_t
 22AES_ECB_DecryptContext
 22AES_ECB_EncryptContext
 22AES_GCM_DecryptContext
@@ -7283,6 +7356,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 22CFlashFirmwareWorkItem
 22CFutureSharedStateBase
 22CGameRecordingClipFile
+22CGameServerItemDetails
 22CGameserverQueryPinger
 22CGameserverSimpleQuery
 22CGetTouchConfigDataMsg
@@ -7425,6 +7499,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 23CAudioManagerObjectPort
 23CChatRoomMemberListView
 23CClanEventUserNewsTuple
+23CClientAssetCacheEngine
+23CClientAssetDownloadJob
 23CClientJobDownloadChunk
 23CClientJobDownloadDepot
 23CClientJobEmailAddrInfo
@@ -7486,6 +7562,9 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 23CInternalLambdaWorkItemIZN17CYieldingFileInfo16GetFileTimestampE10StringViewbEUlvE_lE
 23CInternalLambdaWorkItemIZN17CYieldingFileInfo17BDirectoryIsEmptyE10StringViewbEUlvE_bE
 23CInternalLambdaWorkItemIZN19CUpdateSomethingJob18BYieldingRunAPIJobEvEUlvE_vE
+23CInternalLambdaWorkItemIZN22CProductBuilderJobBaseI17CEGWrapResponse_tE13EYldPostChunkERK10CUtlStringS5_jjjEUlvE_bE
+23CInternalLambdaWorkItemIZN22CProductBuilderJobBaseI17DRMWrapResponse_tE13EYldPostChunkERK10CUtlStringS5_jjjEUlvE_bE
+23CInternalLambdaWorkItemIZN22CProductBuilderJobBaseI27InstallScriptSignResponse_tE13EYldPostChunkERK10CUtlStringS5_jjjEUlvE_bE
 23CInternalLambdaWorkItemIZN26CJobSteamRuntimeSystemInfo29BYieldingContainerRuntimeInfoE10StringViewS1_EUlvE1_bE
 23CInternalLambdaWorkItemIZN31CSystemManagerCheckForUpdateJob26YieldingCheckForUpdateBIOSEvEUlvE_vE
 23CInternalLambdaWorkItemIZN33CRunWindowsCompatInstallScriptJob21BYieldingRunClientJobEvEUlvE0_vE
@@ -7509,6 +7588,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 23CMsgGameServerOutOfDate
 23CMsgSetForegroundWindow
 23CMsgSetHorizontalScroll
+23CMsgSetSimulatedLatency
 23CMsgSetWindowVisibility
 23CMsgSteamAuthCookiesSet
 23CMsgTest_NoBody_Request
@@ -7537,6 +7617,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 23CUtlAssociativeListBaseI17ChunkRequestKey_tP18CChunkResponseData7CUtlMapIS0_21AssociativeListElem_tIS2_iEi8CDefLessEE
 23CUtlAssociativeListBaseIji7CUtlMapIj21AssociativeListElem_tIiiEi8CDefLessEE
 23CVirtualControllerColor
+23CWebSocketCMPingPassJob
 23CWorkItemBufferedPacket
 23CWorkItemPasswordHasher
 23ChatMemberInfoChanged_t
@@ -7820,6 +7901,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 25CWorkItemNetFilterEncrypt
 25CWorkItemRunSSLConnection
 25CWorkItemSaveBufferToFile
+25CWorkItemsCompletedWaiter
 25CWorkshopContentUpdateJob
 25ClientAppNewsItemUpdate_t
 25ControllerGyroEulerAngles
@@ -8121,7 +8203,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 27CMsgGameServerPingQueryData
 27CMsgHorizontalScrollBarSize
 27CMsgMonitorInfo_MonitorInfo
-27CMsgNeedsSharedTexturePaint
 27CMsgNetworkDeviceIP4Address
 27CMsgNetworkDeviceIP6Address
 27CMsgNetworkDeviceSetOptions
@@ -8207,6 +8288,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 28CChatRoom_DeleteRole_Request
 28CChatRoom_GetBanList_Request
 28CChatRoom_RenameRole_Request
+28CClientAssetAvatarCleanupJob
 28CClientInventoryPurchaseInit
 28CClientJobCreateFriendsGroup
 28CClientJobDeleteFriendsGroup
@@ -8622,6 +8704,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 30CShader_GetStaleBucket_Request
 30CShader_RegisterShader_Request
 30CSleepManager_GetState_Request
+30CStartFindingCurrentBucketsJob
 30CSteamOSSLS_SetEnabled_Request
 30CStoreBrowse_GetItems_Response
 30CStore_GetTagList_Response_Tag
@@ -8643,10 +8726,12 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 30HTTPRequestRouteRegistration_t
 30IClientControllerSerializedMap
 30IClientGameServerPacketHandler
+30IClientMatchmakingPingResponse
 30IClientNetworkDeviceManagerMap
 30IClientSystemDisplayManagerMap
 30IClientUnifiedServiceTransport
 30IControllerMappingErrorHandler
+30ISteamMatchmakingServerDetails
 30QueuedMatchmakingGameHost_Stub
 30RemoteStorageAppSyncProgress_t
 30RemoteStorageAppSyncedClient_t
@@ -8754,6 +8839,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 31CPlayer_SetAvatarFrame_Response
 31CPlayer_SetProfileTheme_Request
 31CProductBuilderJobInstallScript
+31CProtoBufHConnectionSendHandler
 31CPublishedFile_AddChild_Request
 31CPublishedFile_Publish_Response
 31CQueryCache_GetDocument_Request
@@ -8787,6 +8873,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 31ControllerPersonalizationData_t
 31FamilyGroupPendingInviteForUser
 31RequestFriendsLobbiesResponse_t
+31StoreItem_ExtraDetails_SalePage
 31StoreItem_OptInRegistrationTags
 31VoiceMutingHotKeyStateChanged_t
 32 bit float RGBA video
@@ -9065,6 +9152,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 33CSystemManager_WriteFile_Response
 33CTimedTrial_ResetPlaytime_Request
 33CTransportSignalMsg_WebRTCMessage
+33CUser_GetCachedFriendData_Request
 33CVDFControllerMappingErrorHandler
 33CVideo_ClientGetVideoURL_Response
 33CVideo_GetVideoBookmarks_Response
@@ -9082,6 +9170,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 33SiteServerUI_LoginStatus_Response
 33SiteServerUI_SetLanguage_Response
 33StoreItem_ExtraDetails_Metacritic
+33StoreItem_ExtraDetails_MusicAlbum
 33StoreItem_PurchaseOption_Discount
 33s?
 34CAPIJobDoesGamePhaseRecordingExist
@@ -9092,6 +9181,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 34CAdapterSteamMatchmakingServers001
 34CAdapterSteamMatchmakingServers002
 34CAdapterSteamMatchmakingServers003
+34CAdapterSteamMatchmakingServers004
 34CAdapterSteamNetworkingMessages002
 34CBluetoothManager_Connect_Response
 34CBluetoothManager_GetState_Request
@@ -9179,6 +9269,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 34CPlayer_GetDurationControl_Request
 34CPlayer_GetGameBadgeLevels_Request
 34CPlayer_GetLastPlayedTimes_Request
+34CPlayer_GetMiniprofileData_Request
 34CPlayer_GetPrivacySettings_Request
 34CPlayer_GetTextFilterWords_Request
 34CPlayer_GetTimeSSAAccepted_Request
@@ -9212,6 +9303,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 34CStore_GetStorePreferences_Request
 34CTimedTrial_RecordPlaytime_Request
 34CTimedTrial_ResetPlaytime_Response
+34CUser_GetCachedFriendData_Response
 34CUser_GetSavedHardwareInfo_Request
 34CVirtualControllerConfig_ActionSet
 34CWorkItemThreadedGetCachedResponse
@@ -9298,6 +9390,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 35CMsgSteamDatagramCertificateRequest
 35CMsgSteamSockets_UDP_ChallengeReply
 35CMsgSteamSockets_UDP_ConnectRequest
+35CPackageInfoCacheReadFromDiskThread
 35CParental_ParentalLock_Notification
 35CParental_PlaytimeUsed_Notification
 35CParental_ValidatePassword_Response
@@ -9310,6 +9403,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 35CPlayer_GetGameAchievements_Request
 35CPlayer_GetGameBadgeLevels_Response
 35CPlayer_GetLastPlayedTimes_Response
+35CPlayer_GetMiniprofileData_Response
 35CPlayer_GetOwnedGames_Response_Game
 35CPlayer_GetPrivacySettings_Response
 35CPlayer_GetTextFilterWords_Response
@@ -9608,6 +9702,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 37OverlayBrowserProtocalRegistrations_t
 37ParentalTemporaryPlaytimeRestrictions
 37SteamEngine_NetworkingUtilsSerialized
+37StoreItem_ExtraDetails_DLCForPurchase
+37StoreItem_ExtraDetails_EventSpotlight
 384 Kbps
 384K
 38CAPIJobEnumeratePublishedWorkshopFiles
@@ -9654,6 +9750,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 38CGameRecording_StartRecording_Response
 38CGameRecording_TakeScreenshot_Response
 38CGameServers_MasterServerQuery_Request
+38CGameServers_QueryListedServer_Request
 38CHIDMessageFromRemote_UpdateDeviceList
 38CHardwareUpdate_PrepForUpdate_Response
 38CInventoryClient_NewItems_Notification
@@ -9727,6 +9824,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 39CAPIJobMatchmakingRequestFriendsLobbies
 39CAPIJobPrepareForControllerSystemReport
 39CAPIJobRequestNewSteamAnnouncementState
+39CAchievementPreloadMissingFilesWorkItem
 39CAudio_PlaySpeakerTestOnChannel_Request
 39CAudio_SetSpeakerConfiguration_Response
 39CBroadcast_BroadcastStatus_Notification
@@ -9844,6 +9942,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 39ClientNetworking_RequestSDRPingLocation
 39SiteServerUI_ContentCacheConfig_Request
 39SiteServerUI_ContentCacheStatus_Request
+39StoreItem_ExtraDetails_MusicAlbum_Track
 39StoreItem_PurchaseOption_RecurrenceInfo
 3App
 3DES
@@ -9977,6 +10076,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 40RemoteStorageUpdatePublishedFileResult_t
 40SiteServerUI_ContentCacheConfig_Response
 40SiteServerUI_ContentCacheStatus_Response
+41CAchievements_GetGameAchievements_Request
 41CAchievements_GetUserAchievements_Request
 41CBluetoothManager_SetDiscovering_Response
 41CBluetoothManager_SetWakeAllowed_Response
@@ -9993,6 +10093,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 41CChatRoom_SetChatRoomGroupAvatar_Response
 41CChatRoom_SetChatRoomGroupTagline_Request
 41CChat_RequestFriendPersonaStates_Response
+41CClientAssetAchievementsCacheLoadWorkItem
 41CClientJobMatchmakingSetLobbyDataResponse
 41CClientJobNotifyChatGroupUserStateChanged
 41CClientJobNotifyChatRoomGroupHeaderChange
@@ -10091,12 +10192,15 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 41CTransportValidation_DataRequest_Response
 41CUserAccount_CancelLicenseForApp_Response
 41CUserAccount_GetAccountLinkStatus_Request
+41CUser_GetCachedFriendData_Response_Player
 41CValveHWSurvey_GetSurveySchedule_Response
 41CWorkItemThreadedEnsureScreenshotImported
 41GameServerClient_QueryServerData_Response
+41StoreItem_ExtraDetails_DLCForPurchase_DLC
 41StoreItem_ExtraDetails_SystemRequirements
 42CAPIJobEnumeratePublishedFilesByUserAction
 42CAPIJobRequestGlobalAchievementPercentages
+42CAchievements_GetGameAchievements_Response
 42CAchievements_GetUserAchievements_Response
 42CAdapterSteamNetworkingSocketSerialized002
 42CAdapterSteamNetworkingSocketSerialized005
@@ -10180,6 +10284,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 42CPlayer_FriendNicknameChanged_Notification
 42CPlayer_GetCommunityBadgeProgress_Response
 42CPlayer_GetGameAchievements_Response_Group
+42CPlayer_GetMiniprofileData_Response_InGame
 42CPlayer_GetProfileThemesAvailable_Response
 42CPlayer_GetTopAchievementsForGames_Request
 42CPlayer_GetUserAchievements_Response_Group
@@ -10286,6 +10391,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 43CPublishedFile_QueryFiles_Request_DateRange
 43CPublishedFile_StopPlaytimeTracking_Request
 43CQueuedMatchmakingGameHost_EndGame_Response
+43CSetTritonFullyChargedLEDBrightnessWorkItem
 43CSteamDeckCompatibility_SetFeedback_Request
 43CSteamInputService_EnableQosStatus_Response
 43CSteamOSManager_CECWakeAndSetActive_Request
@@ -10360,6 +10466,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 44CMsgClientUCMUpdatePublishedFile_KeyValueTag
 44CMsgClientUGSGetGlobalStatsResponse_Day_Stat
 44CParental_GetSignedParentalSettings_Response
+44CPlayer_GetMiniprofileData_Response_Playtime
 44CPlayer_GetNewSteamAnnouncementState_Request
 44CPlayer_SetEquippedProfileItemFlags_Response
 44CPublishedFile_FileUnsubscribed_Notification
@@ -10396,6 +10503,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 44CUserAccount_RedeemFriendInviteToken_Request
 44CUserAccount_RevokeFriendInviteToken_Request
 44ContentManifestPayload_FileMapping_ChunkData
+44StoreItem_ExtraDetails_HardwareCompatibility
 45CAccountHardware_GetSavedHardwareList_Request
 45CAccountHardware_ManageSavedHardware_Response
 45CAccountHardware_RegisterSteamMachine_Request
@@ -10571,6 +10679,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 47CMsgClientSharedLibraryLockStatus_LockedLibrary
 47CMsgClientUCMSetUserPublishedFileActionResponse
 47CMsgControllerInputControllerActionMouseBinding
+47CMsgSetLocalFileRequestMapping_ClientAssetRoute
 47CMsgSteamDatagramRouterPingReply_RouteException
 47CMsgSteamNetworkingP2PRendezvous_ConnectRequest
 47COffline_GetUnsignedOfflineLogonTicket_Response
@@ -10601,6 +10710,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 48CAccountHardware_GetSteamDeckComponents_Response
 48CAccountHardware_RegisterSteamController_Request
 48CAccountHardware_SetPersonalizationFile_Response
+48CAchievements_GetGameAchievements_Response_Group
 48CAchievements_GetUserAchievements_Response_Group
 48CAuthentication_GetPasswordRSAPublicKey_Response
 48CBroadcast_WebRTCAddViewerCandidate_Notification
@@ -10658,6 +10768,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 48CVideo_GameRecordingCommitSegmentUploads_Request
 48SteamMessagesClientIClientForcedEnumDependencies
 48StoreItem_ExtraDetails_AIGeneratedContentService
+48StoreItem_ExtraDetails_DLCForPurchase_Dependency
 49CAccountHardware_RegisterSteamController_Response
 49CAccountHardware_SteamControllerGetConfig_Request
 49CAccountHardware_SteamControllerSetConfig_Request
@@ -10693,6 +10804,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 49CMsgSteamDatagramConnectionStatsP2PRouterToClient
 49CMsgSteamDatagramSignedGameCoordinatorServerLogin
 49CMsgSteamNetworkingP2PRendezvous_ConnectionClosed
+49CPlayer_GetMiniprofileData_Response_FavoriteBadge
 49CPlayer_GetPurchasedProfileCustomizations_Request
 49CPlayer_GetRecentPlaytimeSessionsForChild_Request
 49CPublishedFile_AreFilesInSubscriptionList_Request
@@ -10798,6 +10910,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 51CMarketingMessages_GetPastMarketingMessages_Request
 51CMsgClientCheckAppBetaPasswordResponse_BetaPassword
 51CMsgSteamNetworkingP2PRendezvous_ApplicationMessage
+51CPlayer_GetMiniprofileData_Response_RichPresenceKey
 51CPlayer_GetMutualFriendsForIncomingInvites_Response
 51CQueuedMatchmakingGameHost_SearchForPlayers_Request
 51CSteamInputService_ControllerPowerMenu_Notification
@@ -10863,6 +10976,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 53CSteamOSManager_SetDesktopAsDefaultLoginMode_Response
 53CSteamTV_SetBroadcastChannelLinkRegions_Request_Links
 53CTransportValidation_RequestLargeNotification_Request
+54CAchievements_GetGameAchievements_Response_Achievement
 54CAchievements_GetUserAchievements_Response_Achievement
 54CAuthentication_BeginAuthSessionViaCredentials_Request
 54CChatRoom_ChatMessageModified_Notification_ChatMessage
@@ -10928,6 +11042,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 55CSteamEngine_SearchAppDataCacheByStoreKeywords_Response
 55CSteamInputService_UnpairedTritonPluggedIn_Notification
 55CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request
+55StoreItem_ExtraDetails_HardwareCompatibility_TestResult
 56 Mbps
 56CAccountHardware_QueryAccountsRegisteredToSerial_Request
 56CBroadcast_GetBroadcastViewerStats_Response_CountryStats
@@ -11036,6 +11151,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 61CSteamTV_GetBroadcastChannelBroadcasters_Response_Broadcaster
 62CCommunity_GetUserPartnerEventViewStatus_Response_PartnerEvent
 62CSteamInputService_FirstSteamControllerConnection_Notification
+62StoreItem_ExtraDetails_HardwareCompatibility_SteamOSTestResult
 62StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements
 63CAccountHardware_UpdateControllerUsageReport_Request_Controller
 63CAccountHardware_VRCompatibilityCheck_Response_ComponentDisplay
@@ -11122,11 +11238,9 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 7CUtlMapI26SteamPartyBeaconLocation_t7CUtlPtrI31ClientPartyBeaconLocationData_tEiPFbRKS0_S5_EE
 7CUtlMapI4CSHA17ChunkIndexEntry_ti8CDefLessE
 7CUtlMapI7CGameID10CUtlStringi8CDefLessE
-7CUtlMapI7CGameIDN10CUserStats16CurrentPlayers_tEi8CDefLessE
 7CUtlMapI7CGameIDP10CUtlVectorI22ScreenshotUploadData_t10CUtlMemoryIS2_EEi8CDefLessE
 7CUtlMapI7CGameIDP10CUtlVectorIy10CUtlMemoryIyEEi8CDefLessE
 7CUtlMapI7CGameIDP15CUtlDualHashMapIj10CUtlString10CDefEqualsIjE11HashFunctorIjES3_IS2_ES5_IS2_EEi8CDefLessE
-7CUtlMapI7CGameIDP21ClUserGameStatsSchemai8CDefLessE
 7CUtlMapI7GroupIdN17CInputAccumulator28ControllerAnalogCursorData_tEi8CDefLessE
 7CUtlMapI8CSteamID6CSTimei8CDefLessE
 7CUtlMapI8CSteamID7CUtlPtrIN16CUserMatchmaking13ActiveLobby_tEEi8CDefLessE
@@ -11148,11 +11262,9 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 7CUtlMapIN11CHTTPClient18SSLContextLookup_tEP15COpenSSLContexti8CDefLessE
 7CUtlMapIN11CServerList17ServerSortOrder_tEii8CDefLessE
 7CUtlMapIN12CSteamClient14InterfaceKey_tEP14CUserInterfacei8CDefLessE
-7CUtlMapIN12IClientUtils15ECDNRequestTypeE10CUtlStringi8CDefLessE
 7CUtlMapIN16CSteamController16ConfigOwnerKey_tE7CUtlPtrI8CUtlDictINS0_11configset_tE22CDefCaselessStringLessiEEiNS0_19CDefConfigOwnerLessEE
 7CUtlMapIN18CUserRemoteStorage26DownloadJobInProgressKey_tENS0_23DownloadJobInProgress_tEi8CDefLessE
 7CUtlMapIN5CUser26SteamGroupChatSubscriptionENS0_38SteamGroupChatChannelSubscriptionStateEi8CDefLessE
-7CUtlMapIN9CCDNCache9CDNLookupEii8CDefLessE
 7CUtlMapIP18CHTTPRequestHandleN17CHTTPRequestCache30RequestWaitingValidationData_tEi8CDefLessE
 7CUtlMapIP18CHTTPRequestHandleP17ChunkRequestKey_ti8CDefLessE
 7CUtlMapIP18CHTTPRequestHandleP17PatchRequestKey_ti8CDefLessE
@@ -11184,7 +11296,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 7CUtlMapIiN12CSteamEngine22ControllerConfigData_tEi8CDefLessE
 7CUtlMapIiN14CRateLimitBaseIiE17ClientUsageInfo_tEi8CDefLessE
 7CUtlMapIiN5CUser15TicketRequest_tEi8CDefLessE
-7CUtlMapIiN9CCDNCache27CDNFileLoadedCallbackList_tEi8CDefLessE
 7CUtlMapIiP10CUtlVectorI8CSteamID10CUtlMemoryIS1_EEi8CDefLessE
 7CUtlMapIiP12CVoiceClienti8CDefLessE
 7CUtlMapIiP25CHTTPClientNetworkRequesti8CDefLessE
@@ -11209,6 +11320,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 7CUtlMapIj7CUtlPtrIN23CClientSharedConnection18SharedConnection_tEEi8CDefLessE
 7CUtlMapIj7EOSTypei8CDefLessE
 7CUtlMapIj8CAutoPtrI32CMsgCloudPendingRemoteOperationsEi8CDefLessE
+7CUtlMapIjN10CUserStats16CurrentPlayers_tEi8CDefLessE
 7CUtlMapIjN12CSteamEngine13OverlayInfo_tEi8CDefLessE
 7CUtlMapIjN12CUserFriends20AppRichPresenceMap_tEi8CDefLessE
 7CUtlMapIjN13CRemoteClient16RemoteAppState_tEi8CDefLessE
@@ -11232,6 +11344,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 7CUtlMapIjP19CUtlQueueDeprecatedIP10CGCMessageEi8CDefLessE
 7CUtlMapIjP20AppOwnershipTicket_ti8CDefLessE
 7CUtlMapIjP21CP2PNetworkingSessioni8CDefLessE
+7CUtlMapIjP21ClUserGameStatsSchemai8CDefLessE
 7CUtlMapIjP24CSubscribedWorkshopItemsi8CDefLessE
 7CUtlMapIjP26GameControllerUsageSummaryi8CDefLessE
 7CUtlMapIjP32SteamDatagramCachedCredentials_ti8CDefLessE
@@ -11251,6 +11364,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 7CUtlMapIt24AchievementUnlockTimes_tt8CDefLessE
 7CUtlMapItP10ClUserStatt8CDefLessE
 7CUtlMapItP12ClGlobalStatt8CDefLessE
+7CUtlMapItPKci8CDefLessE
 7CUtlMapIy10CUtlStringi8CDefLessE
 7CUtlMapIy13CCollectedRowi8CDefLessE
 7CUtlMapIy18CCopyableUtlVectorIP21CInternalCallbackBase10CUtlMemoryIS2_EEi8CDefLessE
@@ -11309,6 +11423,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 7CUtlPtrIN23CClientSharedConnection18SharedConnection_tEE
 7CUtlSetI10CUtlStringi8CDefLessE
 7CUtlSetIP27CHTTPServerClientConnectioni8CDefLessE
+7CUtlSetIii8CDefLessE
 7CUtlSetIyi8CDefLessE
 7Offline
 7Parties
@@ -11350,6 +11465,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 8CAutoPtrI19CMsgSystemPerfStateE
 8CAutoPtrI20CBatteryStateManagerE
 8CAutoPtrI20CDisplayColorManagerE
+8CAutoPtrI21CMsgClientLicenseListE
 8CAutoPtrI21CMsgSystemUpdateStateE
 8CAutoPtrI21UserSystemInformationE
 8CAutoPtrI22CStore_UserPreferencesE
@@ -11393,10 +11509,12 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 9Broadcast
 9CAPIGSJob
 9CBaseUser
-9CCDNCache
 9CCardInfo
 9CChatRole
 9CDPadMode
+9CFunctor0IZN22CProductBuilderJobBaseI17CEGWrapResponse_tE11EYldDoPostsEvEUlvE_E
+9CFunctor0IZN22CProductBuilderJobBaseI17DRMWrapResponse_tE11EYldDoPostsEvEUlvE_E
+9CFunctor0IZN22CProductBuilderJobBaseI27InstallScriptSignResponse_tE11EYldDoPostsEvEUlvE_E
 9CFunctor1IPFb10StringViewEPcE
 9CFunctor1IPFv8AESKey_tES0_E
 9CFunctor1IPFv8CSteamIDES0_E
@@ -11417,7 +11535,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 9CFunctor4IPFvPKcPjS2_PbEPcS2_S2_S3_E
 9CFunctor4IPFvPvjP10CUtlBufferP7EResultES0_iS2_S4_E
 9CFunctor5IPFv8CSteamIDP15DownloadedUGC_tPcjPbES0_S2_S3_jS4_E
-9CFunctor7IPFvP12CCMInterfaceP11CHTTPClientP21WebSocketCMBestPing_tPKcS7_ffES1_S3_S5_S7_S7_ffE
+9CFunctor5IPFvP12CCMInterfaceP11CHTTPClientP21WebSocketCMBestPing_tPKcS7_ES1_S3_S5_S7_S7_E
 9CMsgClose
 9CMsgKeyUp
 9CMsgMulti
@@ -11495,6 +11613,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 <INVALID>
 <NULL>
 <Unknown>
+<appid> - create a real conflict (test file) on the next cloud sync of an app
 <appid> : shows active licenses for appid
 <appid> <seconds> force delay update
 <appid> [force:0|1] stop this running app
@@ -11521,7 +11640,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 >>>>> SHAKE <<<<< >>>>> SHAKE <<<<< >>>>> SHAKE <<<<<
 ? * + invalid
 ?10IP2PSocket
-?12CClientAudio
 ???\f???????\n???\r?\t?\v
 ?fff?
 ?w8'g
@@ -11593,6 +11711,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 @bProtobufParseTimeProfile
 @bRefreshDownloadSourcesFrequently
 @bRequireOfflineLogonTicket
+@bSSLDirectWSASend
 @bScreenshotsLegacyCloudUpload
 @bShaderClientGetBucketManifestUseWebAPI
 @bSiteLicenseAllowCachedClientCredentials
@@ -11613,9 +11732,11 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 @cNetEncryptionHandshakeWorkMax_HighPri
 @cNetEncryptionHandshakeWorkMax_LowPri
 @cNetEncryptionHandshakeWorkMax_MedPri
+@cPartnerUploadChunksInFlight
 @cSecUploadDownloadRates
 @cUDPSendRetries
 @cbPartnerUploadChunkSize
+@client_simulated_latency_ms
 @cloud_testdynamicsyncapp
 @csecCSJobSuccessfulRequestTimeWindow
 @csecCSRequestProcessorTimeOut
@@ -11698,6 +11819,8 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 @nLANPeerMaxConnections
 @nLANPeerRateLimitKbps
 @nLegalDictionaryUpdateRateInSeconds
+@nLogonAppInfoSkipMaxMissingPct
+@nLogonAppInfoSkipWaitSec
 @nNetConnectionBufferZipLevel
 @nParentalSettingsLogLevel
 @nPartnerUploadFinalizeTimeoutSecs
@@ -11733,6 +11856,9 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 @sSteamCmdForcePlatformType
 @sTrustedLocalContentCacheName
 @strCSNoCacheHeader
+@test_bAppInfoFakeOutage
+@test_bAppInfoFakeOutage: forgetting app info for %u (%s)\n
+@test_bAppInfoFakeOutage: no owned game to forget\n
 @test_bCloudForceSyncConflict
 @test_nCloudForceSyncFailureAppID
 @uDownloadLANPeerPort
@@ -12101,6 +12227,7 @@ Accounts not friends
 Acer
 AchievementTimes
 AchievementUnlocked
+Achievements.GetGameAchievements#1
 Achievements.GetInfo#1
 Achievements.GetUserAchievements#1
 Acid
@@ -12150,6 +12277,7 @@ ActiveChanged
 ActiveDevices
 ActiveInstances
 Adapter
+Add this many ms of fake latency to every non-loopback HTTP request and every message from the CM
 Add to Config Cache Request %u %u - adopting binding %u\n
 Add to Config Cache Request %u %u - binding was built for app %u/controller type %d, reloading\n
 Add to Config Cache Request %u %u\n
@@ -12356,8 +12484,7 @@ App Info
 App Running
 App Status %u "%s":\n
 App Update Info %u : %s\n
-App cache failed writing %s (%u apps, %lld KB) in %lld ms
-App cache write succeeded %s (%u apps, %lld KB) in %lld ms
+App cache %s writing %d shards (%d apps) in %lld ms
 App did not respond; discarding.
 App didn't accept or close incoming connection in time.
 App ignored P2P connect request from %s on %s\n
@@ -12681,6 +12808,7 @@ BDeleteValue
 BDeserializeFromProtobuf
 BDoNotDisturb
 BDownloadsDisabled
+BEBGCZDKDEEEIEELGRESFRHRISITCYLILVLTLUHUMTNLNOATPLPTROSISKFISEUKGB
 BEGIN
 BEnableEmbeddedClient
 BEnableRemotePlayTogetherInputEvents
@@ -12704,6 +12832,7 @@ BFilesystemAllowsExecution: fork() failed: %s\n
 BFinishCryptoHandshake
 BG RSSI
 BGameConnectTokensAvailable
+BGetAchievementIconSteamLoopbackURL
 BGetAchievementIconURL
 BGetActiveBetaForApps
 BGetAppDirInternal %u failed: nInstallFolder %d
@@ -12737,6 +12866,7 @@ BGetParentalWebToken
 BGetProcessIDsForGame
 BGetRecoveryEmail
 BGetRemotePlayTogetherMouseCursor
+BGetRunningStreamClientConnections
 BGetSerializedParentalSettings
 BGetSessionClientResolution
 BGetStreamTransportSignal
@@ -12756,12 +12886,14 @@ BHandleTCPMessageData - buffered
 BHandleTCPMessageData - unbuffered
 BHasCachedCredentials
 BHasConnectedClients
+BHasDefaultRouteDevice
 BHasEmbeddedClientToken
 BHasEquippedProfileItem
 BHasLocalContentServer
 BHasNetworkAddress()
 BHasRemoteDeviceSession()
 BHasRemotePlayInviteAndSession
+BHasStandbyConnections()
 BHasTrackIndex()
 BHasTwoFactor
 BIGNUM
@@ -12861,6 +12993,7 @@ BIsPhoneRequiringVerification
 BIsPhoneVerified
 BIsPlaying
 BIsRemoteLaunch
+BIsRoamingConfigSettled
 BIsRunningInCafe
 BIsSameFilesystem Yielding IO Job
 BIsSandboxMicroTxn
@@ -12868,7 +13001,6 @@ BIsShaderBackgroundProcessingEnabled
 BIsShaderManagementEnabled
 BIsStreamClientRemotePlayTogether
 BIsStreamClientRunning
-BIsStreamClientRunningConnectedToClient
 BIsStreamStartInProgress
 BIsStreamingClientConnected
 BIsStreamingDisabledBySystemPolicy
@@ -12880,6 +13012,7 @@ BIsStreamingUIToRemoteDevice
 BIsSubscribedApp
 BIsUpdateLocked()
 BIsUploadingThumbnails
+BIsValid()
 BIsValidDirectory Yielding IO Job
 BIsWaitingForInstalledApps
 BIsWebBasedUIMode
@@ -13624,7 +13757,6 @@ CAPIJobRequestUGCDetails
 CAPIJobRequestUserStats
 CAPIJobRequestUserStats - Failed to init schema from server response\n
 CAPIJobRequestUserStats - Missing schema in server response\n
-CAPIJobRequestUserStats - Server response failed %d\n
 CAPIJobReservationCompleted
 CAPIJobReservePartySlot
 CAPIJobRestrictPlayersToSteamClan
@@ -13653,16 +13785,18 @@ CAST5-CFB
 CAST5-ECB
 CAST5-OFB
 CATALOGNUMBER
+CAchievementPreloadMissingFilesWorkItem
+CAchievementPreloadMissingFilesWorkItem::ThreadProcess
 CAdHocValidation::StaticValidateAll(CValidator&)
 CAdHocValidation::~CAdHocValidation()
 CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
 CAppApplyFilesTransaction::AbortCommit
 CAppApplyFilesTransaction::CommitNewFiles
 CAppData::BReadFromBuffer - Binary
-CAppData::BReadFromBuffer - Get release state
 CAppData::BReadFromBuffer - Hash Check
 CAppData::BReadFromBuffer - KV ReadAsBinary
 CAppData::BReadFromBuffer - Text
+CAppData::BReadFromBuffer - Update summary
 CAppInfoCache::BlockOnInitialization
 CAppInfoCacheReadFromDiskThread
 CAppInfoCacheReadFromDiskThread took %lld milliseconds to initialize
@@ -13704,9 +13838,6 @@ CBaseUser::RunFrame
 CBatteryStateManager_UpdateBatteryState
 CBluetoothSetEnabledJob
 CBootReserveJob
-CCDNCache Copy
-CCDNCache::GetImageRGBA
-CCDNCache::Process
 CCIR601 sampling not implemented yet
 CCMConnection::RecvPkt() multi
 CCMInterface - received heartbeat response, connection still good
@@ -13750,7 +13881,6 @@ CCMInterface::YieldingConnect -- got %d CMs and %d WebSocket CMS from ISteamDire
 CCMInterface::YieldingConnect -- no CMs cached locally, calling ISteamDirectory/GetCMList web api for launcher type '%s'. . .
 CCMInterface::YieldingConnect -- web API call failed (status = %d)
 CCMInterface::YldResolveStunAndRelayAddress
-CCRemoteClientManager::DisconnectClient
 CCSInterfaceTokenAuth
 CCSRequestProcessorJob
 CCSRequestProcessorJob : Unexpected result %u
@@ -13781,6 +13911,14 @@ CChunkFinder::~CChunkFinder: failed to join thread
 CClearAudioDefaultsJob
 CClearAudioDefaultsJob: mode:%d result:%d
 CClearAudioDefaultsJob::ThreadedClearAudioDefaults
+CClientAssetAchievementsCacheLoadWorkItem
+CClientAssetAchievementsCacheLoadWorkItem::ThreadProcess
+CClientAssetAvatarCleanupJob
+CClientAssetAvatarCleanupJob::BYieldingRunJob
+CClientAssetCacheEngine::GetImageRGBA
+CClientAssetDownloadJob
+CClientAssetDownloadJob::YldReadFromDisk
+CClientAssetDownloadJob::YldSaveToDisk
 CClientDRMDownloadJob
 CClientDRMDownloadJob::ExtractGUIDsFromFile
 CClientGame::Init: passed own procID as game procID
@@ -14740,6 +14878,7 @@ CJobMgr::SetWaitDetails
 CJobMgr::TimeoutJob
 CJobMgr::m_PBParseThreadPool
 CJobMgr::m_WorkThreadPool
+CJobQueryListedServer
 CJobQueryMasterGameServer
 CJobQueryMasterGameServer work item
 CJobQueryServerByFakeIP
@@ -14890,7 +15029,9 @@ CMS_verify
 CMWS
 CMWebSocket
 CMWebSocketChina
+CMWebSocketPing
 CMWebSocketPingJobs
+CMWebSocketPingPass
 CMasterServerUpdater - CRTime running in reverse\n
 CMemcachedAccess
 CMemoryPool
@@ -15041,11 +15182,14 @@ COpenSSLConnection(%c%p) handshake complete after %u BIO reads (%u calls) of %ll
 COpenSSLConnection(%c%p) made no progress: %s (%u in %d out)
 COpenSSLConnection(%c%p) waiting in connect: %s (last err = %d) after %u BIO reads (%u calls, %u truncated) of %llu bytes, %u BIO writes of %llu bytes, %u DTLS retransmits\n
 COpenSSLConnection(c%p) reused session certificate was previously accepted, now rejected by callback\n
+COpenSSLConnection: Multi ends partway through a sub-message length, discarding it
+COpenSSLConnection: Multi sub-message claims to be larger than remaining data, discarding the rest
 COpenSSLConnection::BAsyncSend
 COpenSSLConnection::BAsyncSend (prefixed)
 COpenSSLConnection::BAsyncSend (swap)
 COpenSSLConnection::BAsyncSend prefix + payload size overflow
 COpenSSLConnection::BAsyncUnbufferedSend
+COpenSSLConnection::BThreadedQueueMultiMsgSubMsgs
 COpenSSLConnection::BYieldingWaitForSendsCompleted
 COpenSSLConnection::COpenSSLConnection
 COpenSSLConnection::OnDTLSTimeoutPoll
@@ -15086,8 +15230,12 @@ CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPUGhz
 CPUID
+CPackageInfoCache::BlockOnInitialization
 CPackageInfoCache::ReadFromDisk
+CPackageInfoCacheReadFromDiskThread
+CPackageInfoCacheReadFromDiskThread loaded %d packages in %lld milliseconds
 CPathString
+CPathString::Concat: null path element
 CPeerContentServerJob
 CPendingMsg::SendPkt
 CPersistTritonPairingInfoWorkItem
@@ -15131,6 +15279,8 @@ CProcessWorkItem: %s
 CProcessWorkItem: shutting down, terminate %s\n
 CProcessWorkItem::ThreadProcess: %s
 CProductBuilderJobBase
+CProductBuilderJobBase::EYldDoPosts
+CProductBuilderJobBase::EYldPostChunk - Read
 CProtoBufMsg::BAsyncSend
 CProtoBufMsg::BAsyncSendInternal
 CProtoBufMsg::BPrepareParseFromPacket( IMsgNetPacket )
@@ -15362,6 +15512,7 @@ CSetAPAutoconnectJob
 CSetAPSetOptionsJob
 CSetAPSetOptionsJob::ThreadedSetOptions
 CSetDonglePairingInfoWorkItem
+CSetTritonFullyChargedLEDBrightnessWorkItem
 CSetTritonPairingInfoWorkItem
 CSetWifiEnabledJob
 CSetWifiEnabledJob::ThreadedSetWifiEnabled
@@ -15633,7 +15784,7 @@ CUser::EmbeddedClientToken - error(%d)\n
 CUser::GetAppConfigStore
 CUser::InternalUpdateClientGame
 CUser::PerformSyncCloud: unhandled RemoteStorageSyncState (%d)
-CUser::RunFrame - BCheckUserLicensesUpdate
+CUser::RunPendingLicensesCheck
 CUser::SaveCachedPreferences
 CUser::SaveFavorites
 CUser::ScheduledSyncCloud
@@ -15733,6 +15884,7 @@ CUserStats::GetNumAchievedAchievements
 CUserStats::GetNumAchievements
 CUserStats::LoadStatsFromDisk( %d ) failed to deserialize stats file\n
 CUserStats::SaveStatsToDisk( %d ) failed to write stats data to disk for user %s\n
+CUserStats::YldGetGameAchievements
 CUserStats::YldGetUserAchievements
 CUserWorkshopItems::GetSubscribedItems: appID mismatch : requested %u, in file %u
 CUser_OnRemoteClientConnected_AssociateUser
@@ -15877,6 +16029,7 @@ CWorkThreadPool::BTryDeleteExitedWorkerThreads
 CWorkThreadPool::SetEnsureOutputOrdering must be set before any work item is added
 CWorkThreadPool::StartWorkThread: Thread creation failed.\n
 CWorkThreadPool::StartWorkThreads: called with no threads in the pool, this is probably a bug.\n
+CWorkThreadPool::StopWorkThreads: %s gave up after %ums with %d thread(s) still running (first is "%s"), leaking them and continuing.\n
 CWorkThreadPool::StopWorkThreads: giving up after %dms with %d deferred work item(s) outstanding; continuing shutdown.\n
 CWorkThreadPool::StopWorkThreads: still waiting on %d deferred work item(s) after %dms.\n
 CWorkThreadPool::~CWorkThreadPool(): Thread pool %s shutdown incorrectly.\n
@@ -15901,7 +16054,6 @@ CXInputSteamMemStream::SetDeviceType(): Passed an invalid index: %d\n
 CXInputSteamMemStream::SetDeviceType(): Passed an invalid type: %d\n
 CXInputSteamMemStream::SetSerialNumber(): Passed an invalid index: %d\n
 CYieldingScopedJobLock failed - there is no indication to the caller!!!
-CZipEntryStreamInflater::SetInput called when it doesn't need input
 CZipWriterFile was not finalized before destruction
 CZipWriterFile was not finalized before reuse
 Cabal
@@ -15914,6 +16066,7 @@ Cache miss for %s - file '%s' has wrong version\n
 Cache miss for %s - file '%s' not found\n
 Cache-Control
 CacheRelayTicket
+CacheShardWorker
 Cached
 Cached credential is invalid
 Cached data for %s exceeds request max-age cache-control, forcing validation\n
@@ -15995,6 +16148,9 @@ Can't perform CEG wrap; couldn't finalize ZIP file\n
 Can't perform CEG wrap; couldn't get temp filename\n
 Can't print proto content: proto type
 Can't query FakeIP server %s (query type %d), we don't know the AppID\n
+Can't query friends on server %s, we don't know the AppID\n
+Can't query listed server %s, it's not a gameserver SteamID\n
+Can't query listed server %s, we don't know the AppID\n
 Can't reach
 Can't read enough bytes for cache file footer, skipping.
 Can't read enough bytes for cache file header, skipping.
@@ -16327,9 +16483,15 @@ Clearing HTTP cache, deleting all files under %s\n
 Clearing in-memory token - %d (%s): %s
 Click&Buy
 Client
+Client %llu (%s) added standby direct connection 0x%x at %s\n
+Client %llu (%s) closed standby direct connection 0x%x at %s: %s\n
 Client %llu (%s) connected via direct connection\n
 Client %llu (%s) connected via indirect connection\n
 Client %llu (%s) disconnected%s%s\n
+Client %llu (%s) lost direct connection: %s, staying connected via indirect connection\n
+Client %llu (%s) lost direct connection: %s, switched to standby 0x%x at %s\n
+Client Assets Engine
+Client asset image handles wrapped, handles will be reused
 Client challenge requested, but we are logged on\n
 Client challenge requested, but we are not connected\n
 Client changenumber out of sync (AppID %u, on server: %d, on client: %d
@@ -16641,6 +16803,7 @@ Console User
 ConstHdr().ip_v6().length() == 16
 ConsumeItem
 Contact Support
+Container path must be absolute
 Contemporary Christian
 Content Manifest for Depot %u \n\n
 Content Proxy: Cnx [%d cur, %d tot], Req [%llu cur, %llu tot], Bytes [%s cur, %s tot] Cached Bytes [%s cur, %s tot]\n
@@ -16716,6 +16879,9 @@ Controller Quality of Service (QoS) report for %u\n
 Controller Serial# invalid\n
 Controller VDF:
 Controller Work Item Thread
+Controller activity: controller type %d went active, reason: %s, buttons changed: 0x%llx, counted by mask: 0x%llx\n
+Controller activity: controller type %d went idle\n
+Controller activity: controller type %d would have gone active before filtering, reason: %s, value: 0x%llx\n
 Controller detected on wireless receiver\n
 Controller device closed after hid_read failure\n
 Controller has an Invalid or missing unit serial number %s, setting to '%s'\n
@@ -16823,6 +16989,7 @@ Couldn't open toc/bin, skipping %s.
 Couldn't parse CMsgRemoteDeviceAuthorizationRequest from pairing info
 Couldn't parse default value "
 Couldn't parse input settings: %s
+Couldn't read bytes %u-%u of '%s'\r\n
 Couldn't read file '%s'\r\n
 Couldn't read header, skipping %s.
 Couldn't read manifest from bucket file!
@@ -17487,6 +17654,7 @@ Detected leaked fd
 Detected write gap %llu MB in file "%s"
 DevComp
 Devanagari
+Developer
 Developer/HDRCompatTesting
 Device
 Device Corrupt
@@ -17592,7 +17760,6 @@ Disconnected By Remote Host
 Disconnected from %s %s
 Disconnected from %s %s - '%s' (%llu)
 Disconnected from pending remote client: %s, trying indirect connection
-Disconnected from remote client: 0x%x %llu (%s), trying indirect connection
 Disconnecting
 Disconnecting #%d for remote endpoint %s due to HandleSSLFailure() - eReason=%d, eConnectionState=%d, m_EConnectionMode=%s\n
 Disconnecting \n
@@ -18792,6 +18959,7 @@ Failed in DeserializeResult because the appid does not match( result %u != %u )
 Failed in DeserializeResult because the serialized data was incorrect
 Failed in DeserializeResult because the signature was incorrect
 Failed in DeserializeResult because the signature was the incorrect size
+Failed in writing RGBW LED fully charged level for controller in slot%d\n
 Failed in writing bonding info to controller in slot %d\n
 Failed installing AppID %u (%s)
 Failed loading registry KV.
@@ -18848,7 +19016,7 @@ Failed to communicate with routing cluster '%s'.
 Failed to connect to Steam
 Failed to connect to Steam Service
 Failed to connect to remote client: %s, result=%d, ext=%llu, trying indirect connection
-Failed to connect to remote client: 0x%x %llu, result=%d, ext=%llu, trying indirect connection
+Failed to connect to remote client: 0x%x %llu, result=%d, ext=%llu
 Failed to create "%s" folder.
 Failed to create LCS folder "%s".
 Failed to create Service pipe
@@ -19142,6 +19310,7 @@ Failure
 Failure pushing command to webhelper
 Failure pushing command to webhelper %d/%d
 Fake IP allocation failed for %s
+Fake a PICS outage: appinfo update jobs fail, and at logon we forget the newest owned game's appinfo so logon waits on it
 Fake net local state is now '%s' (enabling single wireless device, and wifi is not enabled) \n
 Fake net local state is now '%s' (enabling single wireless device, wifi is enabled) \n
 Fake net local state is now '%s'\n
@@ -19176,6 +19345,7 @@ FakeUDPSession::Think
 False
 Family Group
 FamilyGroup
+FamilyGroup/members
 FamilyGroupChanged_t
 FamilyGroupID_t
 FamilyGroupRunningApp_t
@@ -19183,6 +19353,9 @@ FamilyGroup\country
 FamilyGroup\groupid
 FamilyGroup\members
 FamilyGroup\members\%d\accountid
+FamilyGroup\members\%d\avatar
+FamilyGroup\members\%d\name
+FamilyGroup\members\%d\nickname
 FamilyGroup\members\%d\role
 FamilyGroup\name
 FamilyGroup\role
@@ -19353,6 +19526,7 @@ FlushMessagesOnConnection
 FlushToDisk
 Flushed store '%s' to '%s'
 Flushed write-aside store '%s' to path '%s'
+FmtStr_ReportTruncation
 FocusGained
 FocusLost
 Folk
@@ -19383,7 +19557,6 @@ ForceUpdate
 ForceUpdateNextRestart
 Forced Off
 Forced create but already created for SharedObjectEvent\n
-Forces overlay testmode mode for debugging
 Forcing IMU Polling Rate= from %u to %u \n
 Forcing Left IMU Polling Rate= from %u to %u \n
 Forcing content server %s for download!
@@ -19622,6 +19795,7 @@ GSApprove
 GSDeny
 GSKick
 GScheduledFunctionMgr()
+GSteamChangeCountersReader()
 GSteamClient()
 GSteamEngine()
 GSteamEngine().GetCellID() < 500
@@ -19670,8 +19844,6 @@ GameOverlay: failed to execute process '%s': (%s)\n
 GameOverlay: started '%s' (pid %d) for game process %d\n
 GameOverlayRender_PIDStream
 GameOverlay_BlockOculusSDK
-GameOverlay_CompatMode
-GameOverlay_TestMode
 GameRecording
 GameRecording.NotifyOpenOverlayToGamePhase#1
 GameRecording.NotifyOpenOverlayToTimelineEvent#1
@@ -19689,8 +19861,10 @@ GameServers.GetServerIPsBySteamID#1
 GameServers.GetServerSteamIDsByIP#1
 GameServers.MasterServerQuery#1
 GameServers.QueryByFakeIP#1
+GameServers.QueryListedServer#1
 GameServers.ReportServerPingReply#1
 GameServers.RestrictPlayersToSteamClan#1
+GameSir G7 Pro
 GameStats
 GameStop
 GameTags
@@ -19709,6 +19883,7 @@ Gangsta
 Garanti
 Gateway Time-out
 GatherSystemInformation
+Gave up waiting for current buckets after %llu seconds
 GeneralDirectoryServer_FindServerIPAddrPorts
 GeneralNames
 GeneralString
@@ -19728,7 +19903,7 @@ GetAccountName
 GetAccountSecurityPolicyFlags
 GetAchievement
 GetAchievementAchievedPercent
-GetAchievementAchievedPercent() failed, stats are not loaded for game %llu. Call RequestCurrentStats() and RequestGlobalAchievementPercentages() first.\n
+GetAchievementAchievedPercent() failed, stats are not loaded for game %u. Call RequestCurrentStats() and RequestGlobalAchievementPercentages() first.\n
 GetAchievementDisplayAttribute
 GetAchievementIcon
 GetAchievementName
@@ -20262,7 +20437,7 @@ GetMiniDumpBuildID
 GetMiniDumpDirectory
 GetMiniDumpSteamID
 GetMostAchievedAchievementInfo
-GetMostAchievedAchievementInfo() failed, stats are not loaded for game %llu. Call RequestCurrentStats() and RequestGlobalAchievementPercentages() first.\n
+GetMostAchievedAchievementInfo() failed, stats are not loaded for game %u. Call RequestCurrentStats() and RequestGlobalAchievementPercentages() first.\n
 GetMostRecentAchievementUnlocked
 GetMoveAppProgress
 GetMultiplayerSessionShareURL
@@ -20275,7 +20450,7 @@ GetNextEventID
 GetNextFriendsGroupMember
 GetNextGroupFriendsMember
 GetNextMostAchievedAchievementInfo
-GetNextMostAchievedAchievementInfo() failed, stats are not loaded for game %llu. Call RequestCurrentStats() and RequestGlobalAchievementPercentages() first.\n
+GetNextMostAchievedAchievementInfo() failed, stats are not loaded for game %u. Call RequestCurrentStats() and RequestGlobalAchievementPercentages() first.\n
 GetNextOutgoingPacket
 GetNotification
 GetNotificationCount
@@ -20685,7 +20860,7 @@ HTTP Connection (%p) Dispatching pending request (%p) as failed due to AsyncAbor
 HTTP Connection (%p) Dispatching pending request (%p) as failed due to failure sending\n
 HTTP Connection (%p) handle (%X) Dispatching pending request (%p) as failed due to AsyncAbort() called before RecvHTTPResponseData\n
 HTTP File request %s result: %d
-HTTP POST timeout, %d retries left\n
+HTTP POST of bytes %u-%u failed (%s %d), %d tries left\n
 HTTP Server has %d connections awaiting scheduled destruction but with references left.\n
 HTTP Server has zero active connections.\n
 HTTP Version not supported
@@ -20999,7 +21174,7 @@ IO error opening output foz %s
 IO error opening output foz index %s
 IO error trying to write disk cache!
 IOCP Thread
-IOCP Thread %u
+IOCP Thread %u port %d
 IOTYPE_ACCEPT == pCompletionData->type && 0 == pCompletionData->ulResult
 IOTYPE_RECV should never be posted back to main thread
 IOTYPE_SEND/UNBUFERREDSEND
@@ -21251,7 +21426,7 @@ Ignoring connection request, no local logged-in user
 Ignoring duplciate POP '%s'
 Ignoring extension "
 Ignoring hibernate request while a suspend operation is already in progress
-Ignoring high priority wildcard mapping for %u (is Proton or SLR).
+Ignoring high priority wildcard mapping for %u (is compat tool).
 Ignoring inavlid forced relay cluster '%s'\n
 Ignoring incoming data due to bMute\n
 Ignoring initial input. Connection time: %.2f\n
@@ -21503,7 +21678,7 @@ Internal_SDR_LISTEN_PORT
 International Organizations
 Internet query back from steam has invalid sdr_location_string %s.  Cannot measure ping\n
 Internet query back from steam, without ping_data\n
-Internet query back from steam, without sdr_popid.  How can we measure ping?\n
+Internet query back from steam, without sdr_popid or IP.  How can we measure ping?\n
 Interpreting non ascii codepoint %d.
 Introspect
 Invalid
@@ -22143,28 +22318,19 @@ Key type %d doesn't know how to load from buffer
 KeyRangeID
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues binary nested deeper than the parse depth assert, probably bad usage
 KeyValues don't support #include anymore, file "%s"
+KeyValues text nested deeper than the parse depth assert, probably bad usage
 KeyValues::FindKey( StringView ... )
 KeyValues::FindKey( hks )
 KeyValues::FindKey( hks, bCreate )
-KeyValues::MergeFromBuffer
+KeyValues::LoadFromBuffer
+KeyValues::LoadSubKeysFromBuffer
 KeyValues::ReadAsBinary
-KeyValues::ReadAsBinary - Set name
-KeyValues::ReadAsBinary - TYPE_BINARY_STRING
-KeyValues::ReadAsBinary - TYPE_COLOR
-KeyValues::ReadAsBinary - TYPE_FLOAT
-KeyValues::ReadAsBinary - TYPE_INT
-KeyValues::ReadAsBinary - TYPE_INT64
-KeyValues::ReadAsBinary - TYPE_NONE
-KeyValues::ReadAsBinary - TYPE_PTR
-KeyValues::ReadAsBinary - TYPE_STRING
-KeyValues::ReadAsBinary - TYPE_UINT64
-KeyValues::ReadAsBinary - TYPE_WSTRING
-KeyValues::ReadAsBinary() stack depth > 100
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::SaveToBuffer: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
@@ -22416,6 +22582,7 @@ Load certs from files in a directory
 Load failed: %s.
 Load file into cache
 LoadBroadcastSettings
+LoadCachedLicensesForLogon
 LoadClientServiceCall: %x
 LoadConfigFromBindingInstance
 LoadConfigFromBindingInstance with invalid binding handle %u
@@ -22485,6 +22652,7 @@ Log session started
 Log started.\n
 Log stopped.\n
 Log the Linux virtual gamepad slot tables on every seat/swap/reset
+Log the reason a controller was marked active to the controller log.
 LogLevel
 LogLevel_AckRTT
 LogLevel_Message
@@ -22496,6 +22664,7 @@ LogOff
 LogOff()
 LogOff() called while in state '%s'; clearing connection state
 LogOn
+LogOn() called while connecting; will send credentials once connected.
 LogOn() called, but reconnection is already scheduled in %.3f s.
 LogOn() called, but user is in offline mode.
 LogOn() called, but we don't have a GS token set yet
@@ -22538,6 +22707,9 @@ Login1OrgFreedesktopDBusPropertiesProxy
 Login1OrgFreedesktopDBusPropertiesSkeleton
 Logon Extra Security
 Logon Extra Security Disabled
+Logon: got all app and package info after skipping the wait for it\n
+Logon: ignoring request to skip waiting for app info, can't skip now\n
+Logon: user skipped waiting for app and package info\n
 LogonFailureReceived(1)
 LogonFailureReceived(2)
 Long interyield runtime -  %u jobs ran over interyield threshold and spew was rate limited since last output\n
@@ -23046,8 +23218,10 @@ N14CUtlHashMapLRUI10CUtlStringN20COfflineMessageCache13CachedMessageE10CDefEqual
 N14CUtlHashMapLRUI18VerifiedTokenKey_t4CJWT10CDefEqualsIS0_E28HashFunctorUnpaddedStructureIS0_EE15ElementBucket_tE
 N14CUtlHashMapLRUI8CSteamID7CUtlPtrI5CLockE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tE
 N14CUtlHashMapLRUIN11CHTTPClient12HostLookup_tENS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE15ElementBucket_tE
+N14CUtlHashMapLRUIiP10CUtlBuffer10CDefEqualsIiE11HashFunctorIiEE15ElementBucket_tE
 N15CWorkThreadPool12OrderGroup_tE
 N16CCookieContainer11CCookieInfoE
+N16CProtoBufMsgBase20IProtoBufSendHandlerE
 N16CSteamController11configset_tE
 N16CSteamController12CHIDIOThread16ControllerData_tE
 N16CSteamController12CHIDIOThread23VIDPIDControllerEntry_tE
@@ -23082,18 +23256,23 @@ N20COfflineMessageCache13CachedMessageE
 N20CPeriodicFunctionJobI18CSiteLicenseClientE11InternalJobE
 N20CRemoteClientManager21CStreamingPSKCallbackE
 N20CRemoteClientManager23CSiteLicensePSKCallbackE
+N22CGameserverSimpleQuery25CPingResponseDetailsThunkE
 N22CMusicDecoder_LibVideo23CAsyncIOAndDecodeThreadE
 N22ISpoofControllerXInput10DeviceInfoE
+N23CClientAssetCacheEngine11ImageData_tE
+N23CClientAssetCacheEngine27AchievementPreloadRequest_tE
 N23CClientSharedConnection18SharedConnection_t11QueuedMsg_tE
 N23CClientSharedConnection18SharedConnection_tE
 N24CSteamMatchMakingServers49_CSteamMatchmakingServerListResponse_v001_AdapterE
 N25CRemoteStorageSyncHelpers21ISyncProgressCallbackE
 N25SteamNetworkingSocketsLib11CQueuedTaskE
 N25SteamNetworkingSocketsLib11CTaskTargetE
+N25SteamNetworkingSocketsLib11RelayServerE
 N25SteamNetworkingSocketsLib12CFakeUDPPortE
 N25SteamNetworkingSocketsLib13CLaggedPacketE
 N25SteamNetworkingSocketsLib13CPacketLaggerE
 N25SteamNetworkingSocketsLib13CSharedSocket10RemoteHostE
+N25SteamNetworkingSocketsLib13CSharedSocketE
 N25SteamNetworkingSocketsLib13IRawUDPSocketE
 N25SteamNetworkingSocketsLib14FakeUDPSessionE
 N25SteamNetworkingSocketsLib15CSDRHTTPRequestE
@@ -23741,9 +23920,6 @@ N8tinyxml28MemPoolTILi104EEE
 N8tinyxml28MemPoolTILi112EEE
 N8tinyxml28MemPoolTILi120EEE
 N8tinyxml28MemPoolTILi80EEE
-N9CCDNCache27CDNFileLoadedCallbackList_tE
-N9CCDNCache9CDNFile_tE
-N9CCDNCache9CDNLookupE
 N9CJobFuncs20CJobFuncsDispatchJobE
 N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE
@@ -24993,7 +25169,7 @@ POSIX
 POSIX collating elements are not supported
 POSIX named classes are supported only within a class
 POST
-POST of %d bytes\n
+POST of %u bytes at %u\n
 PRESSURE_VESSEL_BATCH
 PRETTY_NAME
 PREV_TRACK
@@ -25122,6 +25298,7 @@ Parties.JoinParty#1
 Parties.OnReservationCompleted#1
 Partner Member
 Partner needs VAT ID set to purchase commercial licenses
+Partner upload chunks to POST at once
 PartnerApps.Download#1
 PartnerApps.FinishUploadCEGUpload#1
 PartnerApps.FinishUploadDRMUpload#1
@@ -25238,13 +25415,12 @@ Ping location: %s\n
 Ping measurement completed in %.1fs.  Relays: %d valid, %d great, %d good+, %d ok+, %d ignored\n
 Ping request has my_ips list, but from address isn't present.  Could be spoofed / replay attack.  Dropping!
 Ping timed out to %s\n
+PingServer
+PingWebSocketCM() %s (%s)
 PingWebSocketCM() (%s) failed talking to cm (%s - %s)
 PingWebSocketCM() (%s) results: %1.4fms + load %1.4f
 PingWebSocketCM() (%s) returned invalid response
 PingWebSocketCM() (%s) starting...
-PingWebSocketCM() stopping after %1.2fms timeout and using good enough host (%s)
-PingWebSocketCM() stopping after %1.2fms timeout and using sort of ok host (%s)
-PingWebSocketCM() stopping early for good host (%s)
 Pinging %s (%s).  ECN%d  reply_tos=0x%02x[DSCP%d ECN%d]
 Pipe IO error connecting to global user
 PipeWire:Interface:Device
@@ -25321,6 +25497,7 @@ PlayerClient.NotifyLastPlayedTimes#1
 PlayerClient.NotifyNewSteamAnnouncementState#1
 PlayerClient.NotifyPerFriendPreferencesChanged#1
 PlayerClient.NotifyTextFilterWordsChanged#1
+PlayerDetails
 PlayerNicknameList
 PlayerQuery
 Players query back from steam, without players_data\n
@@ -25380,6 +25557,8 @@ PostConnectionStateUpdateForDiagnosticsUI
 PostConnectionStateUpdatesForAllConnections
 PostControllerConfig
 PostInternalCallback %d
+PostLogonAppInfoPending_t
+PostLogonProgress
 PostOutstandingRequestFriendshipCallbacks
 PostOutstandingRequestFriendshipCallbacks()
 PostProgressCallback
@@ -25536,8 +25715,7 @@ Protocol
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
 Protocol error
-Proton download bug: Proton %u is linux native, blocking attempt to set a compat tool for it that has windows as source platform: %s %u (manifest version %d)
-Proton download bug: ignoring invalid entry for Proton (%u) when restoring platform overrides.
+Proton download bug: compat tool %u blocking attempt to set an incompatible compat tool for it that has %s as source platform: %s %u (manifest version %d)
 Provider doesn't support currency
 Proxy
 Proxy Authentication Required
@@ -25624,7 +25802,9 @@ Quantizing to %d = %d*%d*%d colors
 Quantizing to %d colors
 Quaternion Speed: %f, %f, %f\n
 Quechua
+Query servers we have no IP for (e.g. SDR) by SteamID through Steam
 QueryEndResponse
+QueryListedServer
 QueryServerByFakeIP
 QueryServerFriends
 QueryStatus
@@ -25638,6 +25818,7 @@ QueueFetchingControllerDetails
 QueueHasEnded_t
 Queued calibration stage %u for target %u on controller %u\n
 Queued deletion of %d files in HTTP cache\n
+Queued level set  %u on controller %u\n
 Queueing activation for controller: %d app: %d
 Queueing request for http%s://%s%s, %d already in queue, we are still discovering HTTP/2 support\n
 Queueing request for http%s://%s%s, %d already in queue\n
@@ -25865,6 +26046,12 @@ ReadP2PPacket
 ReadP2PPacket() %d bytes buffer too small, %d bytes in message - message truncated\n
 ReadP2PPacket() failed, empty packet received - closing connection\n
 ReadP2PPacket() failed, unknown packet type %d received (%d bytes)\n
+ReadSectionFromBuffer:  got EOF instead of keyname
+ReadSectionFromBuffer:  got NULL key
+ReadSectionFromBuffer:  got conditional between key and value
+ReadSectionFromBuffer:  got empty keyname
+ReadSectionFromBuffer:  got } in key
+ReadSectionFromBuffer:  sections nested too deep
 Reading %u hit entries from legacy cache file %s.
 Ready to run
 RealGetCallStack
@@ -25980,11 +26167,6 @@ Recurring option will stack time beyond our maximum limit
 Recurring payment option
 Recursion limit at end of parse should be
 Recursive
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
 Recv
 Recv %s stats from %s for %s:%s\n
 Recv message: %s - %u bytes\n
@@ -26300,10 +26482,10 @@ RequestFriendsLobbies
 RequestFriendsWhoPlayGame
 RequestGlobal
 RequestGlobalAchievementPercentages
-RequestGlobalAchievementPercentages() failed: Stats not loaded for GameID %llu. Call RequestCurrentStats() first.
+RequestGlobalAchievementPercentages() failed: Stats not loaded for GameID %u. Call RequestCurrentStats() first.
 RequestGlobalStats
-RequestGlobalStats() failed: Stats not loaded for GameID %llu. Call RequestCurrentStats() first.
-RequestGlobalStats() failed: Stats not refreshed for GameID %llu. Beging called too frequently.
+RequestGlobalStats() failed: Stats not loaded for GameID %u. Call RequestCurrentStats() first.
+RequestGlobalStats() failed: Stats not refreshed for GameID %u. Beging called too frequently.
 RequestGlobalStats(): Too many history days requested. Max is %d.
 RequestGyroActive
 RequestInstallToken
@@ -26483,6 +26665,7 @@ Roaming config - loaded write-aside store from '%s'
 Roaming config - local (potentially out of sync) copy of roaming config loaded - %d bytes.
 Roaming config - present via cloud but zero bytes
 Roaming config - read via RemoteStorage().FileRead
+Roaming config - reading local copy (%d bytes) until the sync is done
 Roaming store '%s' saved successfully
 Roaming store '%s': RemoteStorage().FileWrite() returned false
 Rock
@@ -26647,14 +26830,13 @@ SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS
 SDL_JOYSTICK_ENHANCED_REPORTS
 SDL_JOYSTICK_GAMEINPUT
 SDL_JOYSTICK_GAMEINPUT_RAW
+SDL_JOYSTICK_HIDAPI_COMBINE_JOY_CONS
 SDL_JOYSTICK_HIDAPI_GIP
 SDL_JOYSTICK_HIDAPI_JOYCON_HOME_LED
 SDL_JOYSTICK_HIDAPI_STEAM
 SDL_JOYSTICK_HIDAPI_STEAMXBOX
 SDL_JOYSTICK_LINUX_DEADZONES
-SDL_JOYSTICK_RAWINPUT
 SDL_JOYSTICK_ROG_CHAKRAM
-SDL_JOYSTICK_WGI
 SDL_JoystickConnected
 SDL_LoadFunction
 SDL_LoadObject
@@ -27531,12 +27713,14 @@ ServerBrowser:ServerFailedToRespond\n
 ServerBrowser:ServerResponded: server %d estimated ping %d ( %d ) actual ping %d IPAddress: %s\n
 ServerBrowser:UpdateServer: Missing query for server: %s\n
 ServerFailedToRespond: %s server: %s\n
+ServerFriends
 ServerInfoFile
 ServerList
 ServerName
 ServerPassword
 ServerPing
 ServerPreference
+ServerRules
 ServerSystemInfo
 Service Read Only
 Service Unavailable
@@ -27843,6 +28027,7 @@ SetOpenVRShortcut
 SetOption(
 SetOverlayAppIDs
 SetOverlayBrowserInfo
+SetOverlayCompositedForPipe
 SetOverlayGPUPriorityBoostForPipe
 SetOverlayNotificationInset
 SetOverlayNotificationPosition
@@ -28145,6 +28330,7 @@ SizeOnDisk
 Skip VR initialization entirely no matter who asks for it
 Skip mapping AppID %u to tool "%s" with priority %d: mapping to tool "%s" with priority %d already exists.
 Skip streaming driver checks
+SkipPostLogonAppInfoWait
 SkipShaderProcessing
 Skipped
 Skipped Loading Antidrift because it was already loaded: %f, %f, %f \n
@@ -28427,7 +28613,6 @@ St25__codecvt_utf8_utf16_baseIwE
 St4pairI14CMetricsSymbol13MetricValue_tE
 St4pairI14CMetricsSymbolS0_E
 St4pairIijE
-St4pairIj16EFamilyGroupRoleE
 St5_BindIFM12CSteamEngineFv26EBannedWordsDictionaryTypeiP18CHTTPRequestHandleEPS0_S1_iSt12_PlaceholderILi1EEEE
 St5_BindIFM17CDepotDownloadMgrFbbEPS0_bEE
 St5ctypeIcE
@@ -28483,6 +28668,7 @@ Start of Image
 Start validating appID %u on BuildID %u
 StartAutoReconnect with a live hconn (logon state %d)
 StartAutoReconnect() called with a live hconn - disconnecting it first
+StartAutoReconnect() not reconnecting due to offline mode
 StartAutoReconnect() will start in %.1f seconds (attempt %d)
 StartBatch
 StartBigPictureForStreaming_t
@@ -28713,6 +28899,7 @@ SteamHIDPipeToRemote_%u
 SteamID
 SteamInput Active Polling interval in microseconds. Default 2000us = 500hz
 SteamInput Idle Polling interval in microseconds. Default 50,000us = 20hz
+SteamInput/Configurator/CombinedJoycons
 SteamInput001
 SteamInput002
 SteamInput003
@@ -28773,6 +28960,7 @@ SteamMatchMaking009
 SteamMatchMakingServers001
 SteamMatchMakingServers002
 SteamMatchMakingServers003
+SteamMatchMakingServers004
 SteamNetworkPingLocation lists not sorted!
 SteamNetworkPingLocation_t truncated while printing to string.  Use a bigger buffer!
 SteamNetworking001
@@ -29031,6 +29219,7 @@ SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned in
 SteamTraceEnter
 SteamTraceExit
 SteamTraceModule
+SteamUIStartupPainted
 SteamUdevContext
 SteamUniverse
 SteamUser
@@ -29214,6 +29403,7 @@ SubscribeToSubsystem
 Subscribed
 Subscribers
 Succeeded
+Succeeded in writing RGBW LED fully charged level for controller in slot %d\n
 Succeeded in writing bonding info to controller in slot %d: %X, %X\n
 Succeeded in writing bonding info to dongle slot %d: %X %X\n
 Success
@@ -29825,6 +30015,7 @@ Thread "%s" (ID %d) failed to shut down\n
 Thread pool rejected HTTP work item, bad news.
 ThreadCloseProcess
 ThreadFindProcessByName
+ThreadGetCounterSlot
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
 ThreadGetProcessExitCode
@@ -29888,6 +30079,11 @@ ThreadedReadFromDisk: truncated entry: deleting corrupted cache: %u - %u
 ThreadedReadFromDisk: unexpected file size: %llu vs %u
 ThreadedReadFromDisk: unexpected short file size: %llu
 ThreadedReadFromDisk: wrong universe: %d
+ThreadedReadLegacyFile
+ThreadedReadShards
+ThreadedReadShards: dropped invalid apps from shard %02x
+ThreadedReadShards: failed to read shard %02x: %s
+ThreadedReadShards: read %u shards, %u apps
 ThreadedReadUGCFromDisk
 ThreadedSetCurrentMode
 ThreadedSetFileReader
@@ -29900,7 +30096,9 @@ ThreadedValidateFiles worker
 ThreadedWriteCompletedDownload
 ThreadedWriteDownloadMetadata
 ThreadedWriteFile
-ThreadedWriteToDisk: writing appinfo cache to: %s
+ThreadedWriteToDisk: converted %s to shards
+ThreadedWriteToDisk: failed to create %s
+ThreadedWriteToDisk: failed writing shard %02x
 ThreadedWriteToFileWriter
 ThreeHours
 Throttle
@@ -30113,6 +30311,7 @@ TrimDevices
 Trip
 Trip-Hop
 Triton IMUDT (us): %u. Sensor time: %u\n
+TritonControllerFullyChargeLEDLevel
 True
 TrueAudio::File::save() -- File is read only.
 TrueMoney
@@ -30363,7 +30562,7 @@ Unexpected IP_TOS cmsg_len %lld
 Unexpected NoConnection
 Unexpected P2PSessionError %d
 Unexpected StatID
-Unexpected StatID %hu for GameID %llu
+Unexpected StatID %hu for GameID %u
 Unexpected account type %d
 Unexpected auth avail %d (%s)
 Unexpected characters at end
@@ -30521,6 +30720,7 @@ Unnamed service method.
 Unpack failed (c:%u,u:%u,r:%zu,b:%zu)
 UnpairLocalWifiAP
 UnpairLocalWifiAP: clearing SSID/password
+UnpairLocalWifiAP: disavowing dongle pairing
 UnpairRemoteClient
 UnpairRemoteDevice
 UnpairRemoteDevices
@@ -30652,7 +30852,6 @@ UpdateSomething
 UpdateSteamAnnouncementLastRead
 UpdateStreamClientNetworkUtilization
 UpdateStreamClientResolution
-UpdateStreamingMode
 UpdateStreamingSessionInputPermissions
 UpdateTime
 UpdateTimelineRichPresence_t
@@ -30661,6 +30860,7 @@ UpdateUserPublishedItemVote
 UpdateWifiDeviceSignal
 Updated Disabled by app
 Updated SHAs with %u new access tokens
+UpdatesJob: @test_bAppInfoFakeOutage set, failing
 UpdatesJob: apps still needs updates, run again\n
 UpdatesJob: canceled %u HTTP requests
 UpdatesJob: empty buffer for app %u
@@ -30704,6 +30904,7 @@ Urdu
 UsableInGame
 Usage: %s\n
 Usage: controller_calibration_stage controller_index, target_type, stage\n
+Usage: fully_charged_led_level controller_index, level\n
 UsbDevices
 UsbOverCurrent
 Use CMDirectory webapi to get fresh CM list on connect - 0=disabled, 1=enabled, 2=main/dev/beta clients only
@@ -30742,6 +30943,7 @@ User is online
 User().RunFrame()
 User-Agent
 User-Agent:
+User.GetCachedFriendData#1
 User.GetSavedHardwareInfo#1
 User.SaveHardwareInfo#1
 User/Controller Activity
@@ -30918,7 +31120,6 @@ V_strlen( strEntryName.String() ) == 40 && V_isvalidhex( strEntryName.String(), 
 V_strlower_fast
 V_strnappend
 V_strncat
-V_strncat_length
 V_strncat_length_unbounded
 V_strnchr
 V_strncmp
@@ -31175,6 +31376,7 @@ Wait for msg
 Wait for time in %s
 Wait ms
 Wait until new work item
+WaitForServerLicenses
 Waited %.1fms for SteamNetworkingSockets lock
 Waited %.1fms for SteamNetworkingSockets lock [%s]
 Waited %f seconds for game mapping!\n
@@ -31785,7 +31987,6 @@ You can't set a body manually AND set POST params
 You must at least specify a frame ID.
 You must refund this transaction to wallet
 You must type in
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 You should not use gameport = queryport.  To use shared socket mode, pass STEAMGAMESERVER_QUERY_PORT_SHARED for queryport\n
 Your ping location string buffer is too small, truncation is possible
 Z0000
@@ -32616,6 +32817,7 @@ Zulu
 \t\tSubject: %s\n
 \t\tWindows %llu, Minutes %u, Expires %s
 \t\t\t\t\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \tpid: %12u (%s)\n
 \u%04x
 \u00
@@ -32924,6 +33126,7 @@ _desktop_portal_trash_skeleton_handle_set_property
 _double < (double)(1ULL << 53 )
 _eCmd != k_EAsyncFileIOCmd_Unknown
 _exit
+_full
 _g_value_equal
 _g_value_equal() does not handle type %s
 _input
@@ -32941,6 +33144,7 @@ _login1_org_freedesktop_dbus_properties_skeleton_handle_get_property
 _login1_org_freedesktop_dbus_properties_skeleton_handle_method_call
 _login1_org_freedesktop_dbus_properties_skeleton_handle_set_property
 _longjmp
+_medium
 _notifications__skeleton_handle_get_property
 _notifications__skeleton_handle_method_call
 _notifications__skeleton_handle_set_property
@@ -33198,6 +33402,9 @@ accessor_ == other.accessor_
 account
 account flags changed
 accountid
+achievements
+achievementscache
+achievementscache.bin
 ack block header
 ack count upper bits
 ack delay
@@ -33467,6 +33674,9 @@ app_stop
 app_update_cancel
 app_update_status
 app_update_status [appId]
+appcache/achievementscache
+appcache/avatarcache
+appcache/librarycache
 appcache/slscache
 appcloudsessions
 appearance
@@ -33722,6 +33932,7 @@ available-source-types
 availableSpace
 avatar
 avatar_pending_review
+avatars
 avg time
 away
 axis
@@ -33772,6 +33983,7 @@ bIsServiceLocal
 bKGD
 bKGD must be after
 bManualReset
+bParsed
 bPostCallback
 bPrefetchDownloadDetails
 bReceivedSomething
@@ -33829,6 +34041,7 @@ bad cmd
 bad color-map processing (internal error)
 bad compression info
 bad compression method
+bad counts
 bad data
 bad data option (internal error)
 bad data returned by callback
@@ -33844,14 +34057,17 @@ bad encoding (internal error)
 bad end line
 bad escape sequence
 bad extension
+bad file size
 bad fixed header decrypt
 bad fopen mode
 bad generator
 bad handshake length
 bad handshake state
+bad header CRC
 bad height format
 bad hello request
 bad hrr version
+bad index CRC
 bad ip address
 bad iv chars
 bad key length
@@ -33861,6 +34077,7 @@ bad keyword
 bad legacy version
 bad length
 bad longjmp:
+bad magic
 bad magic number
 bad nPayloadType %d
 bad object
@@ -33869,6 +34086,7 @@ bad packet
 bad packet length
 bad pad byte count
 bad parameters to zlib
+bad part sizes
 bad password read
 bad pkcs7 type
 bad protocol version number
@@ -34011,6 +34229,7 @@ bitmap-location
 bitrate
 bits
 bits too small
+bits/%u
 bitset::set
 bitset::test
 bitstr_cb
@@ -34019,9 +34238,7 @@ blacklisted
 blake2b512
 blake2s256
 blank
-blank_avatar_184x184.png
-blank_avatar_32x32.png
-blank_avatar_64x64.png
+blank/%d.png
 blk->n < (2 * 16 - 1)
 blk->n >= (16 - 1)
 blobSize <= nMaxBlobSize
@@ -34659,6 +34876,7 @@ character value in \x{} or \o{} is too large
 characteristic-two-field
 charge_full
 charge_now
+charged_led_level
 charing state change
 charset
 charset=ISO-8859-1
@@ -34726,6 +34944,7 @@ ciphersuites
 cjoee
 clFriendSource.m_vecUsers
 clamped s_convarWriteHandleCache and s_convarReadHandleCache from %d/%d to %d, to stay under max open descriptor limit %u
+clanonly
 class
 clean
 cleanup method function failed
@@ -34806,6 +35025,19 @@ closing session
 cloud
 cloudFilename.IsValid()
 cloud\last_sync_state
+cloud_force_conflict
+cloud_force_conflict <appid>\n
+cloud_force_conflict local version %u\n
+cloud_force_conflict server version %u\n
+cloud_force_conflict: '%s' set up for %u; run 'cloud_sync_down %u' or launch the app\n
+cloud_force_conflict: FileWrite failed for %u (%d)\n
+cloud_force_conflict: Steam Cloud is disabled for the account or app %u - enable it first\n
+cloud_force_conflict: Steam is offline or not logged on - can't sync %u\n
+cloud_force_conflict: exit sync failed to start for %u\n
+cloud_force_conflict: launch sync failed to start for %u (cloud disabled?)\n
+cloud_force_conflict: second FileWrite failed for %u (%d)\n
+cloud_force_conflict: test file upload did not complete for %u (see cloud_log)\n
+cloud_force_conflict: timed out waiting for cloud cache / sync of %u\n
 cloud_log
 cloudenabled
 clping
@@ -34989,8 +35221,6 @@ conditional group contains more than two branches
 config
 config-failed
 config.vdf
-config/GameOverlay_CompatMode
-config/GameOverlay_TestMode
 config/SteamTraceEnter
 config/SteamTraceExit
 config/SteamTraceModule
@@ -35977,6 +36207,7 @@ detached content
 details.unControllerIndex == unControllerIndex
 detect_self_dependency
 developer
+developeronly
 device
 device-added
 device-model
@@ -36750,6 +36981,11 @@ extension setting not supported
 extension value error
 extensions
 external
+external_battery_percent
+external_battery_present
+external_battery_status
+external_secs_until_battery_full
+external_secs_until_shutdown_request
 externalfilename
 externalthumbname
 externalvrfilename
@@ -36789,6 +37025,7 @@ failed to parse KV from string
 failed to parse patch file\n
 failed to parse request message for target: %s
 failed to read '%s'
+failed to read file
 failed to request appinfo
 failed to restore
 failed to roll-back installed file
@@ -37042,6 +37279,8 @@ full list
 full\n
 full_press
 fullname
+fully_charged_led_level
+fully_charged_led_level  [controller index] [level [0-3] - send LED level message to the controller hardware
 func(%lu)
 functionality not supported
 futex robust_list not initialized by pthreads
@@ -38211,7 +38450,6 @@ https://%s.%s.steam.dev/
 https://%s.beta.steampowered.com/
 https://%s.steamchina.com/
 https://%s.steampowered.com/
-https://%s/%s%s
 https://%s/cmping/
 https://%s/cmsocket/
 https://api-china.beta.valve.org
@@ -38306,7 +38544,7 @@ iGenerateRandomNumberRetry < 300
 iIP < g_vecIPv4ThisBox.Count()
 iIP < g_vecIPv6ThisBox.Count()
 iIndex == m_mapActiveConnections.InvalidIndex()
-iNewReadIndex != 3
+iNew < k_nSharedImageMaxBuffers
 iNode == iIndex
 iOutstanding != m_mapChunksOutstanding.InvalidIndex()
 iPhoneOS
@@ -38738,8 +38976,6 @@ image/jpeg
 image/png
 image_path
 image_path_capsule
-images/apps/%s/%s
-images/chaticons/%.2s/%.2s/%.2s/%s_%d.jpg
 imap
 impl != NULL
 impl_ != NULL
@@ -38793,6 +39029,7 @@ incrementonly
 indent_len > 0
 indent_level > 0
 index >= 0 && index < 256
+index size mismatch
 index too large
 index too small
 index.html
@@ -39749,6 +39986,7 @@ k_eP2PDisconnectReasonNetworkError
 k_eP2PDisconnectReasonNone
 k_eP2PDisconnectReasonTCPConnectionAborted
 k_eP2PDisconnectReasonTimeout
+k_mapCountries
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 k_nSymmetricKeyLen256 == cubKey || k_nSymmetricKeyLen128 == cubKey
@@ -39910,7 +40148,10 @@ led_brightness
 leddebug
 lednodebug
 left
+left pad
+left stick
 left the group
+left trigger
 left_accelerometer_stationary_noise_tolerance
 left_antidrift_set
 left_bumper
@@ -40017,8 +40258,11 @@ libraryFolder.m_ulContentID
 library_assets_full/library_capsule/image/english
 library_assets_full/library_header/image/english
 library_folder_list
+library_hero.jpg
 libraryfolder.vdf
 libraryfolders.vdf
+libraryhero
+libraryheroblur
 librarysharing_log
 librt.so.1
 libsteam.so
@@ -40174,10 +40418,10 @@ lost rgb to gray
 lost/gained channels
 low-memory-warning
 low-power-mode1
-low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1650
-low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1814
-low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:2019
-low-pri yield - ../clientdll/appdatacache.cpp:876
+low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1653
+low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:1817
+low-pri yield - ../clientdll/ClientJobRemoteStorageSync.cpp:2022
+low-pri yield - ../clientdll/appdatacache.cpp:901
 low-pri yield - ../clientdll/autocloud.cpp:591
 low-pri yield - ../clientdll/autocloud.cpp:670
 low-pri yield - ../clientdll/autocloud.cpp:845
@@ -40187,14 +40431,14 @@ low-pri yield - ../clientdll/clientjob.cpp:463
 low-pri yield - ../clientdll/clientjob.cpp:772
 low-pri yield - ../clientdll/clientjobbuildchunkstore.cpp:1009
 low-pri yield - ../clientdll/clientugc.cpp:7110
-low-pri yield - ../clientdll/compatmanager.cpp:2271
-low-pri yield - ../clientdll/compatmanager.cpp:2545
-low-pri yield - ../clientdll/compatmanager.cpp:2857
-low-pri yield - ../clientdll/compatmanager.cpp:3639
-low-pri yield - ../clientdll/compatmanager.cpp:3679
-low-pri yield - ../clientdll/compatmanager.cpp:3692
-low-pri yield - ../clientdll/compatmanager.cpp:3744
-low-pri yield - ../clientdll/compatmanager.cpp:4376
+low-pri yield - ../clientdll/compatmanager.cpp:2249
+low-pri yield - ../clientdll/compatmanager.cpp:2532
+low-pri yield - ../clientdll/compatmanager.cpp:2827
+low-pri yield - ../clientdll/compatmanager.cpp:3609
+low-pri yield - ../clientdll/compatmanager.cpp:3649
+low-pri yield - ../clientdll/compatmanager.cpp:3662
+low-pri yield - ../clientdll/compatmanager.cpp:3714
+low-pri yield - ../clientdll/compatmanager.cpp:4367
 low-pri yield - ../clientdll/contentupdatecontext.cpp:1384
 low-pri yield - ../clientdll/contentupdatecontext.cpp:1420
 low-pri yield - ../clientdll/csinterface.cpp:224
@@ -40253,7 +40497,6 @@ m_BaselineManifest.GetDepotID() == m_uDepotID
 m_BodyDataBuffer
 m_BufData
 m_Buffer
-m_CDNCache
 m_CMConnection
 m_CMInterface
 m_CRC32 == msg.Body().m_CRC32
@@ -40261,10 +40504,12 @@ m_CachedLEDColorMap
 m_CachedVal
 m_CertStatus.m_eAvail != k_ESteamNetworkingAvailability_NeverTried
 m_CertStatus.m_eAvail == k_ESteamNetworkingAvailability_Current
+m_ChangeCountersWriter
 m_ChatRooms
 m_ChatRooms[ i ]
 m_ChromeConnection
 m_ChromeIPClient
+m_ClientAssetCache
 m_ClientAudio
 m_ClientGameCoordinator
 m_ClientHTTP
@@ -40425,8 +40670,6 @@ m_RefreshListFailed
 m_RefreshListSDRHostedServer
 m_RefreshListSDRLocationString
 m_ReleaseState
-m_RemoteClientDongle
-m_RemoteClientSoftAP
 m_Reporters
 m_RequestHeaders
 m_RequestMap
@@ -40462,6 +40705,7 @@ m_StrChunkDataPath
 m_StreamFromRemote
 m_StreamToRemote
 m_StringPools
+m_Summary
 m_TCPHost
 m_TCPHostDR
 m_TargetCollection
@@ -40562,6 +40806,7 @@ m_bLocked
 m_bMarkedForDeletion
 m_bNVIDIAGameStream
 m_bPaused
+m_bPending
 m_bPendingIO
 m_bPlayingRepeatStatus
 m_bPlayingShuffled
@@ -40577,6 +40822,7 @@ m_bTrackCorruptChunks
 m_bValid
 m_bWirelessDongle == GetSteamController()->BIsControllerWirelessDongle( GetControllerIndex() )
 m_bitsMigratedBuckets
+m_bufAppStateWrite
 m_bufAuthToken
 m_bufBGRA
 m_bufBody
@@ -40592,6 +40838,7 @@ m_bufDataRead
 m_bufDataToWrite
 m_bufDecryptedRecvBuffer
 m_bufDepotDecryptionKey
+m_bufFile
 m_bufFirmware
 m_bufGameDataBlob
 m_bufHeadChunkResampled
@@ -40846,6 +41093,7 @@ m_listCacheFileLRU
 m_listCacheFileLRU.IsValidIndex( mapData.m_iLRUListIndex )
 m_listChangedFiles
 m_listConnectionPriority
+m_listDelayedPackets
 m_listDownloadSchedule
 m_listDownloadedLeaderboardData
 m_listDownloadedLeaderboardData[i].m_vecEntries
@@ -40853,6 +41101,8 @@ m_listDownloadedLeaderboardData[i].m_vecEntries[j].m_Details
 m_listEncryptedSendChunks
 m_listEncryptedSendChunks.Count() == 0
 m_listHandlesDelayedForCache
+m_listHandlesDelayedForSimulatedLatency
+m_listHandlesDelayedForSimulatedLatency[i]
 m_listJobsToWakeOnSendsComplete
 m_listLRU
 m_listLogWatchParams
@@ -40881,6 +41131,7 @@ m_map
 m_mapAPICallPending
 m_mapAPICallResults
 m_mapAchievementLookup
+m_mapAchievementPreloadRequests
 m_mapAchievementStoreCallbacks
 m_mapAchievementTimes
 m_mapActionSetNameToHandle
@@ -40932,14 +41183,6 @@ m_mapBeaconsByGroup.IsValidIndex( pBeaconData->m_vecLocations[0] )
 m_mapBroadcastMPDs
 m_mapBroadcastMPDs.Element( i )
 m_mapBrowserData.Find( cmd.BodyConst().browser_handle() ) != m_mapBrowserData.InvalidIndex()
-m_mapCDNFileLoadedCallbackLists
-m_mapCDNFiles
-m_mapCDNRequestPath
-m_mapCDNRequestPath.HasElement( item.m_requestType )
-m_mapCDNRequestPath.HasElement( requestType )
-m_mapCDNServerAddresses
-m_mapCDNServerAddresses.HasElement( item.m_requestType )
-m_mapCDNServerAddresses.HasElement( requestType )
 m_mapCache
 m_mapCacheFiles
 m_mapCachedCompatToolInfo
@@ -40971,6 +41214,7 @@ m_mapCoplayEvents
 m_mapCurrentItemDefPricesByApp
 m_mapCurrentPlayers
 m_mapDataCenterPingsByID
+m_mapDecoded
 m_mapDeltaChunks
 m_mapDeltaChunks.Element( i )
 m_mapDependentApps
@@ -40991,6 +41235,7 @@ m_mapFakeIPsForApp
 m_mapFamilyDLC
 m_mapFamilyRunningApps
 m_mapFileListing.Count() == 0
+m_mapFileLoadedCallbacks
 m_mapFileMappings
 m_mapFileMappings[i]
 m_mapFileReadAsyncContexts
@@ -41023,6 +41268,9 @@ m_mapHTTP2Streams
 m_mapHandlers
 m_mapIPToPingCache
 m_mapIconReadyCallbacks
+m_mapImageKeys
+m_mapImageKeys.Key( i )
+m_mapImages
 m_mapIndicateAchievementProgress
 m_mapInterfaceCreations
 m_mapInternalCallbackVProfNames
@@ -41134,6 +41382,7 @@ m_mapRemoteClientCache
 m_mapRemoteClients
 m_mapRemoteDevices
 m_mapRemoteFileCacheData
+m_mapRemoteHosts
 m_mapRemoteToLocalApp
 m_mapReportReplyByIP
 m_mapReportedVRHardwareRevisions
@@ -41224,6 +41473,7 @@ m_nAppID
 m_nAppID == 0 || m_nAppID == k_nGameIDSteamLink || m_nAppID == k_nGameIDWinUI
 m_nBytesLeftInCurrentChunkStore >= 0
 m_nChunksNeededFromCurrentChunkStore == 0
+m_nCount > 0
 m_nElapsedSeconds
 m_nEpollSet >= 0
 m_nEventCount == 0
@@ -41239,8 +41489,6 @@ m_nIndex
 m_nLastRecvRendesvousMessageID == 0
 m_nLastSendRendesvousMessageID == m_vecUnackedOutboundMessages.size()
 m_nLocalVirtualPort <= k_nVirtualPort_GlobalFakePortMax
-m_nLockedIdx == -1
-m_nLockedIdx >= 0
 m_nMaxVideoKbps
 m_nMessageCount == 0
 m_nMessageCount > 0
@@ -41288,6 +41536,7 @@ m_pBroadcast
 m_pBuffer
 m_pCEFGPUProcPIDStream
 m_pCPUThreadPool
+m_pCachedLicenseList
 m_pCachedResponseData
 m_pCalibrationClient
 m_pChunkRequestRedirectHandler
@@ -41382,6 +41631,7 @@ m_pInstallScriptManager
 m_pInternalCallbackMgr
 m_pInternalPipe
 m_pInternalPipe->BRead failed
+m_pItemRunning
 m_pJob->m_pMsgTraceVProfSlice == this
 m_pJobFactoryFn
 m_pJobFuncsData->m_listActiveJobs.Count()
@@ -41465,7 +41715,6 @@ m_pPossibleOutOfOrderPacket == nullptr
 m_pPrev == nullptr
 m_pPrev->m_pNext == this
 m_pProtoBufBody == NULL
-m_pRGBA
 m_pRateLimitServerQueryRefresh
 m_pRawSock == nullptr
 m_pReadCtx->m_pChunkData->m_unOriginalSize > 0
@@ -41478,7 +41727,9 @@ m_pRedirectRequestHandle.Get()
 m_pRef->m_pT
 m_pRegisteredWithMgr != nullptr
 m_pRegisteredWithMgr == nullptr
+m_pRemoteClientDongle
 m_pRemoteClientManager
+m_pRemoteClientSoftAP
 m_pRemoteDevices
 m_pRemoteFileCacheInfo.Get()
 m_pRequest
@@ -41490,6 +41741,7 @@ m_pRequestInProgress is set, but no URI yet, last URI: %s
 m_pRequestStream
 m_pResponse.Get()
 m_pResponseTarget
+m_pResults.Get()
 m_pRulesResponseTarget
 m_pSDLDevices
 m_pSSLConnection
@@ -41626,13 +41878,13 @@ m_pkvState
 m_player
 m_pmapAdrToClientSessionLRU
 m_pmapAdrToClientSessionLRU->Peek(i).Get()
+m_pmapCachedAchievements
 m_prescientDimensions
 m_protoSettings.ParseFromArray( ( char * )pBuffer->Base() + pBuffer->TellGet(), nBytesProto )
 m_pstrValue
 m_pthreadFileIOReader
 m_pthreadFileIOWriter
 m_pthreadWatcher
-m_pubData
 m_pubMappedView
 m_pubMsgIncoming == NULL
 m_pubRecvBuffer
@@ -41668,6 +41920,7 @@ m_queuedReports
 m_receiverState.m_itPendingNack->first < nExpectedNextPktNum
 m_response.m_nStatusCode >= 0
 m_rgAppsUpdated
+m_rgCacheDirectories
 m_rgClientPlatformTypeCounts[ ePlatformType ] >= 0
 m_rgConnectedControllers
 m_rgControllerIDs
@@ -41707,7 +41960,6 @@ m_sAppName
 m_sAssociatedSiteName
 m_sAuthKey
 m_sAuthToken
-m_sCDNFileID
 m_sCaller
 m_sCert
 m_sCertRemote.empty()
@@ -41799,6 +42051,8 @@ m_senderState.m_mapInFlightPacketsByPktNum.begin()->first < 0
 m_senderState.m_mapInFlightPacketsByPktNum.lower_bound( m_statsEndToEnd.m_nNextSendSequenceNumber ) == m_senderState.m_mapInFlightPacketsByPktNum.end()
 m_setAppCloudSyncInhibit
 m_setConnectionsPendingDestruction
+m_setPackagesMissingInfo
+m_setPendingImages
 m_socket != INVALID_SOCKET
 m_spAlwaysOn
 m_spBinding
@@ -41887,6 +42141,8 @@ m_steamNetworkingSockets.m_pSteamNetworkingMessages == nullptr
 m_steamSpeaker
 m_stimeFakeTimeout.LTime() < INT64_MAX
 m_strAccountName
+m_strAchievementBaseURL
+m_strAchievementsCacheFile
 m_strActionBlockConfigPath
 m_strActionBlockConfigVDF
 m_strActionBlockPath
@@ -41899,8 +42155,11 @@ m_strAllocationErrorDetail
 m_strAppInstallDir
 m_strAppName
 m_strAppProtocol
+m_strAppStateWriteFileName
 m_strArg1
 m_strArg2
+m_strAvatarBaseURL
+m_strAvatarHash
 m_strBackupRestoreDir
 m_strBaseDir
 m_strBaseFolder
@@ -41982,6 +42241,7 @@ m_strLoginToken
 m_strManagedContentRoot
 m_strMissingFolder
 m_strName
+m_strNickname
 m_strOfficialConfigVDF
 m_strOriginalFileName
 m_strParentalPasswordPlaintext
@@ -41993,6 +42253,7 @@ m_strPath
 m_strPathCertPEMFile
 m_strPathPrivKeyPEMFile
 m_strPathToConfigFile
+m_strPersonaName
 m_strPrivKeyPEMFile
 m_strProcessName
 m_strProductName
@@ -42006,6 +42267,7 @@ m_strRecoverFolder
 m_strRecoverInstallDir
 m_strRequestHost
 m_strRequestHostName
+m_strRequestPath
 m_strRoot
 m_strSRTPProfileSelected
 m_strSSID
@@ -42026,12 +42288,14 @@ m_strTargetHostName
 m_strTempDirectory
 m_strTempDownloadFile
 m_strTempFolder
+m_strTestWebAPIURL
 m_strThumbname
 m_strTimelineID
 m_strTitle
 m_strToolName
 m_strURI
 m_strURL
+m_strUTF8Path
 m_strUpdateError
 m_strUploadAddress
 m_strUploadToken
@@ -42175,12 +42439,14 @@ m_vecActiveActionSetLayerIds
 m_vecActiveActivators
 m_vecActiveDepots
 m_vecActiveInputs
+m_vecActiveRequests
 m_vecActiveSessions.Count() == 0
 m_vecActiveSessions.Count() > 0
 m_vecActiveSessions.Count() >= idxCurrentBackup
 m_vecActiveSessions.IsEmpty()
 m_vecActiveSessions[0]->m_sessionSelectQualityMetrics.m_nScore < k_nRouteScoreHuge
 m_vecActiveSessions[i] != m_vecActiveSessions[j]
+m_vecAdditionalParentApps
 m_vecAllRelaySessions.Count() == 0
 m_vecAllRelaySessions.Count() == i
 m_vecAllRelaySessions.Count() > 0
@@ -42205,10 +42471,9 @@ m_vecBlacklistedDevices
 m_vecBoundSockets
 m_vecBuildQueue
 m_vecBuildQueue.Count() > 0
-m_vecCDNFileIDsQueuedForRetry
-m_vecCDNFileLoadedCallbacks
-m_vecCDNFiles
 m_vecCMOverride
+m_vecCMsToPing
+m_vecCMsToPing[i]
 m_vecCachedDLCForAppID
 m_vecCallbackData
 m_vecCallbacks
@@ -42292,7 +42557,6 @@ m_vecHistory
 m_vecIPAddresses
 m_vecIPFilterRanges
 m_vecIPFilterRangesV6
-m_vecInFlightHTTPRequests
 m_vecInputs
 m_vecInstallScripts
 m_vecInstalledApps
@@ -42367,6 +42631,7 @@ m_vecProcessIds
 m_vecProxyOverrideExcludedHosts
 m_vecPrunedBucketIDs
 m_vecQueued
+m_vecQueuedRequests
 m_vecQueuedToRunNextFrame
 m_vecRandomIndexQueue
 m_vecRandomIndexQueue.IsValidIndex( nIndex )
@@ -42399,12 +42664,14 @@ m_vecSamplesInputSourceFile
 m_vecSamplesMicDataLeftOver
 m_vecSamplesMicDataPrevFrame
 m_vecServers.empty()
+m_vecSessions
 m_vecSettings
 m_vecSharedDepots
 m_vecShortcutsCreated
 m_vecSiblings
 m_vecSortedThreadPending.Count() == 0
 m_vecStagedDepots
+m_vecStandbyConnections
 m_vecStatusUpdateListeners
 m_vecSteamIDInvites
 m_vecSteamToSteamPackets
@@ -42431,6 +42698,7 @@ m_vecUserTags
 m_vecUserTags[ i ]
 m_vecUsers
 m_vecVacBans
+m_vecWaitingToRetry
 m_vecWatched
 m_vecWebSocket443FailuresInARow
 m_vecWebSocketNon443FailuresInARow
@@ -42832,7 +43100,6 @@ msgAddress.port() == 0 || msgAddress.port() == s_sdrRoutingAddrV6.m_port
 msgBuffer.GetCurSize() >= sizeof(SNetMsgHeader_t) + sizeof(int)
 msgCommitResponse.file_committed()
 msgConnectionClosed.relay_mode() == CMsgSteamDatagramConnectionClosed_ERelayMode_None
-msgMulti.Body().message_body().size() < UINT_MAX
 msgResponse.Body().response_pending() == 0
 msgResponse.Body().token().size() == sizeof( callback.m_Token )
 msgResponse.fake_ip()
@@ -42961,12 +43228,10 @@ nFrontPingLocalMin <= nFrontPingLocal && nFrontPingLocal <= nFrontPingLocalMax
 nFrontPingRemote >= 0 && nFrontPingRemote < 5000
 nGameAppId > 1000 || ( nGameAppId != 310 && nGameAppId != 5 && nGameAppId != 205 )
 nGameID.AppID() != k_nGameIDSteamWebHelper
-nGamePort
 nGap != 0
 nGap >= -8 * (int64)sizeof(TLinkStatsTracker::m_recvPktNumberMask)
 nGrowSize >= 0
 nHTTPConnectionFindCount <= 1
-nIP && nQueryPort
 nImageHeight == nOutputHeight
 nIndex != m_mapCompatToolBuckets.InvalidIndex()
 nIndex != m_pManager->m_mapCompatToolBuckets.InvalidIndex()
@@ -43022,6 +43287,7 @@ nPktNumAckBegin >= 0
 nPktNumBeforeSentinelGap <= m_statsEndToEnd.m_nMaxRecvPktNum
 nPktNumNackBegin >= 0
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
+nProbeIntervalSeconds > 0
 nProductInfoUpdateInterval
 nPut + nPutDelta <= outBuf.TellMaxPut()
 nQueueIndex != -1
@@ -43212,6 +43478,7 @@ nghttp2_submit.c
 nghttp2_submit_origin
 nice
 nick
+nickname
 nis_steam_sharpness=%d\n
 nistp224_pre_comp_new
 nistp256_pre_comp_new
@@ -43567,7 +43834,6 @@ numchunks
 numfiles
 numfolders
 nv->name->len > 0
-nvagipman:
 nvme
 nvme-
 nytimes.com
@@ -43606,6 +43872,7 @@ oeap
 official
 official_default
 offline
+offline mode
 offline_ticket.proto
 offset
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
@@ -43958,6 +44225,7 @@ pCompletion->type == IOTYPE_ACCEPT && pCompletion->ulResult == 0 && pCompletion-
 pCompletion->type == IOTYPE_CONNECT
 pCompletion->type == IOTYPE_RECV
 pCompletion->type == IOTYPE_SEND || pCompletion->type == IOTYPE_UNBUFFEREDSEND
+pCompletionData && pCompletionData->func
 pCompletionData->pNext == NULL && pCompletionData->nPollFlags != 0
 pCompletionData->pubBuffer == pRecvState->m_bufMsg.PeekPut()
 pCompletionData->pvUserData
@@ -44116,6 +44384,7 @@ pNextForTarget->m_pPrevTaskForTarget == pTask
 pNextForTarget->m_pTarget == pTarget
 pNode && pNode->Next == QueueEnd()
 pNodeCombineTarget->m_nCombined == 1
+pObject
 pOldCallback
 pOldCallback != pConnectionCallback
 pOldConn->m_identityRemote == identityRemote
@@ -45214,6 +45483,7 @@ recommended-private-length: %d bits\n
 recommended_runtime
 reconnect-mode
 record length mismatch
+record out of range
 record overflow
 record too small
 record_padding
@@ -45432,6 +45702,9 @@ rgb-alpha color-map: too few entries
 rgb[ga] color-map: too few entries
 rgb[gray] color-map: too few entries
 rgrip
+right pad
+right stick
+right trigger
 right_bumper
 right_click
 right_double_tap
@@ -45662,6 +45935,7 @@ s_pSDRPhsyicalSocket == this
 s_pSDRPhsyicalSocket->m_mapClientBySessionKey.Count() == 0
 s_pSDRPhsyicalSocket->m_mapLogicalListenSocketsByVirtualPort.Count() == 0
 s_pScratchBuffer
+s_pSharedSocket
 s_pSharedSocket == nullptr
 s_pSymbolTable
 s_queueThinkers
@@ -45725,6 +45999,7 @@ screen-reader1
 screen_saver_object_proxy_new
 screen_saver_object_skeleton_new
 screen_saver_object_skeleton_set_property
+screenshot/
 screenshots
 scroll_angle
 scroll_clockwise
@@ -45905,6 +46180,7 @@ serverbrowser_debug_toggle debug spew is %d\n
 serverbrowser_debug_toggle debug spew is %s\n
 serverbrowser_debug_verbose
 serverbrowser_hist.vdf
+serverbrowser_query_by_steamid_through_steam
 serverbrowsername
 serverhello tlsext
 serverlist
@@ -46263,6 +46539,7 @@ sleeping
 slg_write
 slot
 slot full
+slot.m_map
 slovak
 slovenian
 slscache
@@ -46650,7 +46927,7 @@ stderr
 stdin
 stdout
 steam
-steam Nov 13 2026 02:01:26
+steam Nov 19 2026 00:21:08
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
@@ -46701,6 +46978,7 @@ steam_appid.txt
 steam_autocloud.vdf
 steam_china_only
 steam_china_only/steam_china_enable_duration_control
+steam_cloud_conflict_test.txt
 steam_controller_force_oobe
 steam_deck_compatibility
 steam_dev.cfg
@@ -46989,6 +47267,9 @@ stime went backwards?
 stop using I64/I32, use lld or d respectively
 stop_waiting offset
 stop_waiting pktNum %llu offset %llu
+stopping after 12s timeout and using sort of ok host
+stopping after 400ms timeout and using good enough host
+stopping early for good host
 storage1
 store
 store init error
@@ -46997,7 +47278,9 @@ store_asset_mtime
 storepreferences
 str:
 str:%s
+strCMHost
 strCacheFilePath
+strDC
 strDefaultPathRoot
 strHTMLCacheDir
 strManifestPath
@@ -47060,8 +47343,6 @@ streaming_v2\WifiAPPlanHidden
 streaming_v2\WifiAPPlanMode
 streaming_v2\WifiAPPlanName
 streaming_v2\dongle\%llu\%s
-streamoff\n
-streamon\n
 street
 streetAddress
 strerror
@@ -47134,6 +47415,7 @@ subtitles
 subtreeMaximumQuality
 subtreeMinimumQuality
 subtype mismatch
+succeeded
 success
 successful
 sudo -n chmod a+w %s
@@ -47995,6 +48277,8 @@ triton_uuid
 trkn
 true
 truncated
+truncated index
+truncated string table
 trust
 trustRoot
 trusted
@@ -48621,6 +48905,7 @@ user-new
 user-removed
 user-requested
 user-stop-delay-usec
+user/fully_charged_led_intensity
 user/wireless_transport
 user=%u %s,
 userCertificate
@@ -48964,6 +49249,7 @@ win2012R2
 win2016
 win2019
 win2022
+win2025
 win311
 win32
 win32_bind_func
@@ -48990,6 +49276,9 @@ windows,
 windowsize
 wine\n
 wired
+wireless connect
+wireless event
+wireless pair
 wireless_established
 wireless_pairing
 wireless_unknown
@@ -49093,6 +49382,7 @@ wrong message length
 wrong order
 wrong pkcs7 type
 wrong public key type
+wrong shard
 wrong signature length
 wrong signature size
 wrong signature type
@@ -49100,6 +49390,7 @@ wrong ssl version
 wrong submessage type
 wrong tag
 wrong type
+wrong universe %u
 wrong version number
 ws://%s/transportsocket/
 wtd_load

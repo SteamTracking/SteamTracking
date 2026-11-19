@@ -1,4 +1,5 @@
-﻿"Language" "polish"
+﻿
+"Language" "polish"
 "Tokens"
 {
 "WelcomeToSteamTitle" "WITAMY W STEAM"
@@ -937,7 +938,6 @@ Potrwa to niecałą minutę."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Sprzedawca głównego monitora: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Model głównego monitora:  %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Obsługiwane tryby MSAA:  %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Wykryto Eyefinity (ekrany: %s1)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Nie wykryto sterownika"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Nie wykryto nazwy sterownika DirectX"
@@ -4807,9 +4807,6 @@ zaktualizować system do wersji Mac OS X 10.7 lub wyższej."
 
 "Steam_VacBanOnAccount"		"Blokada(-y) VAC na koncie"
 "Steam_NoVacBanOnAccount"	"Brak blokad VAC na koncie"
-
-"Steam_NeedToRestart"		"Wymagany restart"
-"Steam_NeedToRestartDifferentClientLauncher" "Inna wersja Steam próbuje się uruchomić na tym komputerze.\n\nAby ją uruchomić, musisz najpierw wyjść z tej wersji Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Zezwalaj pulpitowym przeglądarkom internetowym na automatyczne logowanie do stron Steam\n(wymaga ponownego uruchomienia w celu zastosowania zmian)"
 

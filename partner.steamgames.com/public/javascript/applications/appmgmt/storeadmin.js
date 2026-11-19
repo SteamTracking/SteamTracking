@@ -168,13 +168,13 @@ import { T as yt, _ as bt, p as xt, x as St } from "./chunk~0a99e05c44.js";
 import {
   $ as Ct,
   At as wt,
-  En as Tt,
-  In as Et,
+  Dn as Tt,
+  Fn as Et,
   It as Dt,
   J as Ot,
-  Lt as kt,
-  Nt as At,
-  Pn as jt,
+  Ln as kt,
+  Lt as At,
+  Nt as jt,
   Pt as Mt,
   Qt as Nt,
   Tt as Pt,
@@ -455,7 +455,7 @@ function Ki(e) {
     }
     return (g(p || d), () => {});
   }, [p, d]);
-  let { data: v } = Et(),
+  let { data: v } = kt(),
     y = !!v?.preferences?.disable_microtrailers,
     x = gn(t),
     { data: S } = bt(x),
@@ -674,7 +674,7 @@ function Xi(e) {
       strDoubleCapsuleMessage: d,
     } = e,
     { data: f } = bt(t),
-    { bIsOwned: p } = jt(t);
+    { bIsOwned: p } = Et(t);
   return i && f && f.item_type == 0 && f.appid
     ? (0, V.jsx)(Ct, { appid: f.appid, bIsMuted: l })
     : a
@@ -797,7 +797,7 @@ function ta(e) {
   let { id: t } = e,
     { data: n } = bt(t);
   return n?.name
-    ? (0, V.jsx)(`div`, { className: At, children: n.name })
+    ? (0, V.jsx)(`div`, { className: jt, children: n.name })
     : null;
 }
 function na(e) {
@@ -812,7 +812,7 @@ function na(e) {
     className: b(Pt, n),
     children: [
       (0, V.jsx)(`img`, { className: b(Dt), src: o, alt: s }),
-      (0, V.jsx)(`span`, { className: kt, children: s }),
+      (0, V.jsx)(`span`, { className: At, children: s }),
     ],
   });
 }

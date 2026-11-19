@@ -20,7 +20,6 @@ $ORIGIN
 *NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN26CVulkanAsyncReadbackThread4InitEP10VkDevice_TEUlvE_EEEEEE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG\fx
 ++CCUNGstd::exception
 /dev/random
 /dev/urandom
@@ -104,11 +103,23 @@ VK_KHR_timeline_semaphore
 VTT for
 Vcoeff
 Voffset
+VulkanSteamOverlayBeginLayer(int, int, int)
 VulkanSteamOverlayBeginRendering
+VulkanSteamOverlayChromeTexturesState
+VulkanSteamOverlayCloseLayerImage
+VulkanSteamOverlayCopyChromeTexture
 VulkanSteamOverlayDeleteTexture(int)
 VulkanSteamOverlayDestroySwapChain
+VulkanSteamOverlayDrawLayer(int, int, int, int, int, float)
+VulkanSteamOverlayDrawLayerImage
 VulkanSteamOverlayDrawTexturedQuad
 VulkanSteamOverlayDrawTexturedRect
+VulkanSteamOverlayEndLayer(int)
+VulkanSteamOverlayIsLayerCached(int, int, int)
+VulkanSteamOverlayLayerImageBufferBusy
+VulkanSteamOverlayLayerImageOpen
+VulkanSteamOverlayOpenChromeTextures
+VulkanSteamOverlayOpenLayerImage
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame
 VulkanSteamOverlayProcessSharedPlanarFrame
@@ -117,6 +128,7 @@ VulkanSteamOverlayStartCaptureFrame
 VulkanSteamOverlayStopRendering
 VulkanSteamOverlayTextureExists
 VulkanSteamOverlayUpdateTexture
+VulkanSteamOverlayWaitForPreviousGPUFrame(unsigned int)
 Ycoeff
 Yoffset
 [abi:

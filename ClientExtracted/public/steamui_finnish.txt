@@ -1,4 +1,5 @@
-﻿"Language" "finnish"
+﻿
+"Language" "finnish"
 "Tokens"
 {
 "WelcomeToSteamTitle" "TERVETULOA STEAMIIN"
@@ -938,7 +939,6 @@ Tämä kestää alle minuutin."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Ensisijainen näytön toimittaja:  %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Ensisijainen näytön malli:  %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Tuetut MSAA-tilat:  %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Tunnistettiin Eyefinity (%s1 näyttöä)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Ajuria ei tunnistettu"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"DirectX-ajurin nimeä ei tunnistettu"
@@ -3530,7 +3530,7 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 
 "SteamUI_ManageSecurity_InfoLabel" "Steam-tilisi on nyt suojattu Steam Guardilla, joka valvoo sitä joutumasta vääriin käsiin."
 "SteamUI_ManageSecurity_InfoLabel2" "Tämä tarkoittaa sitä, että tarvitset pääsyn sähköpostiisi, että pääset Steam-tilillesi tunnistamattomalta tietokoneelta tai selaimelta."
-"SteamUI_ManageSecurity_InfoLabel3" "Steam lähettää viestin yhteyssähköpostiosoitteesesi kun yrität ensimmäistä kertaa kirjautua Steam-tiliisi tunnistamattomasta tietokoneesta tai selaimesta. Kyseinen viesti sisältää pääsykoodin, joka vaaditaan pääsyyn Steam-tilillesi."
+"SteamUI_ManageSecurity_InfoLabel3" "Steam lähettää viestin yhteyssähköpostiosoitteeseesi, kun yrität kirjautua Steam-tilillesi ensimmäistä kertaa tietokoneesta tai selaimesta, jota ei tunnisteta. Viesti sisältää koodin, joka vaaditaan Steam-tilin käyttämiseksi."
 "SteamUI_ManageSecurity_NothingRadio" "Pidä tilini suojattuna Steam Guardilla"
 "SteamUI_ManageSecurity_UnlockRadio" "Kytke Steam Guard pois päältä (ei suositella)"
 "SteamUI_ManageSecurity_UnlockWarning" "Huomautus: Steam-vaihtaminen ja Steam-yhteisön kauppapaikka eivät ole käytössä kun Steam Guard on poissa päältä, eivätkä ne ole käytössä viiteentoista päivään Steam Guardin uudelleen aktivoinnin jälkeen."
@@ -4819,9 +4819,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 
 "Steam_VacBanOnAccount"		"Tilin VAC-kiellot"
 "Steam_NoVacBanOnAccount"	"Tilillä ei ole VAC-kieltoja"
-
-"Steam_NeedToRestart"		"Uudelleenkäynnistys vaaditaan"
-"Steam_NeedToRestartDifferentClientLauncher" "Toinen Steamin versio yrittää käynnistyä tällä koneella.\n\nJotta voit käynnistää sen, sinun tulee ensin poistua tästä Steamin versiosta."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Salli selainten kirjautua automaattisesti Steam-sivustoille\n (käyttöönotto vaatii uudelleenkäynnistyksen)"
 

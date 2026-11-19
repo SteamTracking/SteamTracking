@@ -120,8 +120,8 @@ import {
 import { D as Dt, _ as Ot, i as kt } from "./chunk~0a99e05c44.js";
 import {
   G as At,
-  Ln as jt,
-  N as Mt,
+  N as jt,
+  Rn as Mt,
   U as Nt,
   Z as Pt,
 } from "./chunk~6b8ddcaac8.js";
@@ -914,7 +914,7 @@ function zi(e) {
   let t = Ri(e),
     n = t ? e.clanSteamID.GetAccountID() : void 0,
     { data: r, isLoading: i } = Nt(n),
-    { data: a, isLoading: o } = Mt(n);
+    { data: a, isLoading: o } = jt(n);
   if (!t) return null;
   if (!(i || o)) return !a || !r || !hu(e, r) ? null : (a.appids ?? []);
 }
@@ -8173,7 +8173,7 @@ var Gu;
 })((Gu ||= {}));
 function Ku() {
   let e = zt(),
-    t = jt();
+    t = Mt();
   return Vt(qu(e, t));
 }
 function qu(e, t) {

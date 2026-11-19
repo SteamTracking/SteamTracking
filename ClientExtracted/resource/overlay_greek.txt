@@ -191,7 +191,7 @@
 "Overlay_Screenshots_Size_Original" " (%selected_ss_size_original% στο δίσκο)"
 "Overlay_View_All_Screenshots" "ΠΡΟΒΟΛΗ ΔΙΑΔΙΚΤΥΑΚΗΣ ΣΥΛΛΟΓΗΣ"
 "Overlay_View_Screenshots" "ΕΜΦΑΝΙΣΗ ΦΩΤΟΓΡΑΦΙΩΝ"
-"Overlay_View_Local" "ΕΜΦΑΝΙΣΗ ΣΤΟ ΔΙΣΚΟ"
+"Overlay_View_Local" "ΕΜΦΑΝΙΣΗ ΣΤΟΝ ΔΙΣΚΟ"
 "Overlay_Set_Shortcut" "ΟΡΙΣΜΟΣ ΣΥΝΤΟΜΕΥΣΗΣ"
 "Overlay_Publish" "ΜΕΤΑΦΟΡΤΩΣΗ"
 "Overlay_Delete" "ΔΙΑΓΡΑΦΗ"

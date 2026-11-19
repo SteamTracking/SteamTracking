@@ -107,11 +107,19 @@ message CMsgBrowserRemove {
 }
 
 message CMsgSetLocalFileRequestMapping {
+	message ClientAssetRoute {
+		optional int32 type = 1;
+		optional string remote_base_url = 2;
+		optional string fallback_local_path = 3;
+		optional bool mark_used_when_read = 4;
+	}
+
 	message AdditionalRoute {
 		optional string relative_url = 1;
 		optional string local_path = 2;
 		optional string allowed_extensions = 3;
 		optional bool url_rewrite = 4;
+		optional .CMsgSetLocalFileRequestMapping.ClientAssetRoute client_asset = 5;
 	}
 
 	optional uint32 browser_handle = 1;
@@ -524,6 +532,8 @@ message CMsgSetSharedPaintBuffers {
 	optional uint64 source_pid = 4;
 	optional uint64 source_handle = 5;
 	optional uint64 handle = 6;
+	repeated uint64 texture_handles = 7;
+	optional uint64 adapter_luid = 9;
 }
 
 message CMsgAckSharedPaintBuffers {
@@ -548,17 +558,6 @@ message CMsgComboNeedsPaint {
 	optional uint32 combobox_tall = 4 [default = 0];
 	optional uint64 shared_memory_handle = 5 [default = 0];
 	optional uint64 shared_memory_size = 7 [default = 0];
-}
-
-message CMsgNeedsSharedTexturePaint {
-	optional uint32 browser_handle = 1;
-	optional uint32 share_handle = 2;
-	optional uint32 width = 3;
-	optional uint32 height = 4;
-	optional uint32 scrollx = 5;
-	optional uint32 scrolly = 6;
-	optional float pagescale = 7;
-	optional uint32 pageserial = 8;
 }
 
 message CMsgGetZoom {
@@ -742,6 +741,10 @@ message CMsgScreenDPI {
 	optional float dpi_scaling = 2;
 }
 
+message CMsgSplashWindow {
+	optional uint64 window = 1;
+}
+
 message CMsgAckScreenDPI {
 	optional uint32 browser_handle = 1;
 }
@@ -823,6 +826,10 @@ message CMsgNotifyUserActivation {
 
 message CMsgSetNetFakeLocalSystemState {
 	optional uint32 state = 1;
+}
+
+message CMsgSetSimulatedLatency {
+	optional uint32 latency_ms = 1;
 }
 
 message CMsgDraggableRegionsChanged {
@@ -965,6 +972,12 @@ message CMsgDisableF5 {
 message CMsgStartDownload {
 	optional uint32 browser_handle = 1;
 	optional string url = 2;
+}
+
+message CMsgStartTracing {
+	optional string categories = 1;
+	optional string file = 2;
+	optional uint32 duration_ms = 3;
 }
 
 message CMsgSetWindowStackingOrder {

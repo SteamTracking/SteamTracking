@@ -131,10 +131,10 @@
 "Friends_RecentlyUsedNames"			"Numele utilizate recent:"
 
 "Friends_PlaySoundWhenFriendJoins"			"Redă un sunet când un prieten pornește un joc"
-"Friends_PlaySoundWhenFriendComesOnline"		"Redă un sunet când un prieten devine online"
+"Friends_PlaySoundWhenFriendComesOnline"		"Redă un sunet când un prieten intră online"
 "Friends_PlaySoundWhenReceiveAMessage"		"Redă un sunet când primești un mesaj"
-"Friends_NotifyMeWhenUserComesOnline"			"Notifică-mă când acest utilizator devine online"
-"Friends_PlaySoundWhenUserComesOnline"		"Redă întotdeauna un sunet când acest utilizator devine online"
+"Friends_NotifyMeWhenUserComesOnline"			"Notifică-mă când acest utilizator intră online"
+"Friends_PlaySoundWhenUserComesOnline"		"Redă întotdeauna un sunet când acest utilizator intră online"
 "Friends_PlaySoundWhenUserJoinsGame"			"Redă întotdeauna un sunet când acest utilizator joacă un joc"
 
 "Friends_RemoveUserExplanation"	"Dacă ștergi acest Prieten din listă, nu va mai putea să vadă când ești online și nu-ți va mai putea trimite mesaje."
@@ -374,7 +374,7 @@
 "Friends_AlwaysNewChatCheck" "Deschide întotdeauna o nouă fereastră de chat în locul unui tab"
 "Friends_NotificationsAndSounds"		"Notificări și Sunete"
 "Friends_WhenFriendJoinsGame"			"Când orice prieten pornește un joc"
-"Friends_WhenFriendComesOnline"		"Când orice prieten devine online"
+"Friends_WhenFriendComesOnline"		"Când orice prieten intră online"
 "Friends_WhenReceiveMessage"			"Când primesc un mesaj"
 "Friends_WhenGroupEventsOrAnnouncementsHappen"	"Pentru evenimentele și anunțurile grupului"
 "Friends_DisplayNotification"			"Afișează o notificare"
@@ -435,7 +435,7 @@
 "Friends_NotificationOptions_Title"		"Opțiuni de notificare - %FriendName%"
 
 "Friends_WhenThisFriendJoinsGame"				"Când %FriendName% pornește un joc"
-"Friends_WhenThisFriendComesOnline"			"Când %FriendName% devine online"
+"Friends_WhenThisFriendComesOnline"			"Când %FriendName% intră online"
 "Friends_WhenReceiveMessageFromThisFriend"	"Când primesc un mesaj de la %FriendName%"
 "Friends_InviteInfo_HasAdded"					"te-a adăugat la lista sa de"
 "Friends_InviteInfo_FriendsList"				"prieteni"

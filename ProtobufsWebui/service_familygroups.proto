@@ -178,7 +178,7 @@ message CFamilyGroups_GetSharedLibraryApps_Response_SharedApp {
 	optional uint32 rt_time_acquired = 11;
 	optional uint32 rt_last_played = 12;
 	optional uint32 rt_playtime = 13;
-	optional int32 app_type = 14 [(.description) = "enum"];
+	optional int32 app_type = 14 [default = 1, (.description) = "enum"];
 	repeated uint32 content_descriptors = 15;
 }
 
@@ -381,7 +381,7 @@ service FamilyGroups {
 	rpc CreateFamilyGroup (.CFamilyGroups_CreateFamilyGroup_Request) returns (.CFamilyGroups_CreateFamilyGroup_Response);
 	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc DeleteFamilyGroup (.CFamilyGroups_DeleteFamilyGroup_Request) returns (.CFamilyGroups_DeleteFamilyGroup_Response);
-	// ePrivilege=5
+	// ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc ForceAcceptInvite (.CFamilyGroups_ForceAcceptInvite_Request) returns (.CFamilyGroups_ForceAcceptInvite_Response);
 	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetChangeLog (.CFamilyGroups_GetChangeLog_Request) returns (.CFamilyGroups_GetChangeLog_Response);
@@ -389,7 +389,7 @@ service FamilyGroups {
 	rpc GetFamilyGroup (.CFamilyGroups_GetFamilyGroup_Request) returns (.CFamilyGroups_GetFamilyGroup_Response);
 	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetFamilyGroupForUser (.CFamilyGroups_GetFamilyGroupForUser_Request) returns (.CFamilyGroups_GetFamilyGroupForUser_Response);
-	// bConstMethod=true, ePrivilege=5
+	// bConstMethod=true, ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc GetInviteCheckResults (.CFamilyGroups_GetInviteCheckResults_Request) returns (.CFamilyGroups_GetInviteCheckResults_Response);
 	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetPlaytimeSummary (.CFamilyGroups_GetPlaytimeSummary_Request) returns (.CFamilyGroups_GetPlaytimeSummary_Response);
@@ -417,7 +417,7 @@ service FamilyGroups {
 	rpc RespondToRequestedPurchase (.CFamilyGroups_RespondToRequestedPurchase_Request) returns (.CFamilyGroups_RespondToRequestedPurchase_Response);
 	// ePrivilege=5
 	rpc RollbackFamilyGroup (.CFamilyGroups_RollbackFamilyGroup_Request) returns (.CFamilyGroups_RollbackFamilyGroup_Response);
-	// ePrivilege=5
+	// ePrivilege=5, rgBrowserAPISites=ArrayExpression
 	rpc SetFamilyCooldownOverrides (.CFamilyGroups_SetFamilyCooldownOverrides_Request) returns (.CFamilyGroups_SetFamilyCooldownOverrides_Response);
 	// ePrivilege=1
 	rpc SetPreferredLender (.CFamilyGroups_SetPreferredLender_Request) returns (.CFamilyGroups_SetPreferredLender_Response);

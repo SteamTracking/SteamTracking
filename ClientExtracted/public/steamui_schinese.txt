@@ -77,7 +77,7 @@
 "Steam_SubscribeBillingInfo" "请输入在您信用卡账单上出现的地址。"
 "Steam_City" "城市"
 "Steam_StateOrProvince" "州或省"
-"Steam_Country" "居住地"
+"Steam_Country" "国家/地区"
 "Steam_PostCode" "邮政编码"
 "Steam_CountryOfResidence"	"我目前居住在以上所选的国家/地区"
 "Steam_SubscribeReviewInfo" "请检查您的订单。如果下面存在错误，请单击“返回”以进行纠正。若无，单击“购买”完成您的交易。"
@@ -942,7 +942,6 @@
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"主显示器供应商：%s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"主显示器型号：%s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"支持的 MSAA 模式：%s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"检测到宽域技术（%s 台显示器）"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"未检测到驱动程序"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"未检测到 DirectX 驱动程序名称"
@@ -4828,9 +4827,6 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 
 "Steam_VacBanOnAccount"		"此帐户上的 VAC 封禁"
 "Steam_NoVacBanOnAccount"	"帐户无 VAC 封禁"
-
-"Steam_NeedToRestart"		"需要重启"
-"Steam_NeedToRestartDifferentClientLauncher" "此电脑上另一版本的 Steam 正在尝试启动。\n\n 要运行它，您必须首先退出此版本的 Steam。"
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "允许桌面网页浏览器自动登入 Steam 站点\n（需要重新启动以应用更改）"
 

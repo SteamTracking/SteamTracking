@@ -38,16 +38,16 @@ import {
 } from "./chunk~0a99e05c44.js";
 import {
   $ as te,
-  $t as ne,
-  Dt as k,
-  En as A,
+  $t as k,
+  Dn as A,
+  Dt as ne,
   Et as re,
   Fn as j,
   Ft as M,
-  J as N,
-  Jt as ie,
-  Kt as ae,
-  Pn as oe,
+  In as N,
+  J as ie,
+  Jt as ae,
+  Kt as oe,
   V as P,
   Y as se,
   _n as F,
@@ -122,7 +122,7 @@ function qe(e) {
   let { id: t, bHideInLibraryApps: n } = e,
     { data: r } = y(t),
     i = r?.item_type == 2,
-    { data: a } = j(),
+    { data: a } = N(),
     o = G.useMemo(() => {
       if (r)
         return r.item_type === 1 || r.item_type === 2
@@ -143,7 +143,7 @@ function qe(e) {
     e != s && (c = u.Localize(`#Sale_Bundle_CompletePartialSet`, e - s, e));
   }
   return (0, K.jsxs)(`div`, {
-    className: k,
+    className: ne,
     children: [
       (0, K.jsxs)(`div`, {
         className: M,
@@ -157,7 +157,7 @@ function qe(e) {
         ],
       }),
       (0, K.jsx)(`div`, {
-        className: ne,
+        className: k,
         children: o
           .slice(0, q)
           .map((e) => (0, K.jsx)(Je, { id: e }, `preview${_(e)}`)),
@@ -551,7 +551,7 @@ function jt(e) {
     { data: p } = y(t),
     { data: m } = D(t),
     { data: g } = C(t),
-    { bIsOwned: _ } = oe(t),
+    { bIsOwned: _ } = j(t),
     [v, b] = ue(s, c);
   if (!p) return null;
   let x =
@@ -591,7 +591,7 @@ function jt(e) {
                 !(!i || p.is_free) &&
                   (0, K.jsx)(Mt, { fnOnPurchaseOptionsClick: a }),
                 !(!d || p.is_free) &&
-                  (0, K.jsx)(N, { id: t, className: `CartBtn` }),
+                  (0, K.jsx)(ie, { id: t, className: `CartBtn` }),
               ],
             }),
           !o && (0, K.jsx)(Ae, { id: t }),
@@ -631,11 +631,11 @@ function Nt(e) {
     } = e,
     w = We(t, i),
     [T, E] = (0, G.useState)(!1),
-    ne = Le(),
-    { data: k, isPending: A } = O(w),
-    { data: M } = C(w),
-    { data: N } = D(w),
-    { data: ae } = j(),
+    k = Le(),
+    { data: A, isPending: ne } = O(w),
+    { data: j } = C(w),
+    { data: M } = D(w),
+    { data: ie } = N(),
     oe = Re(w),
     P = (0, G.useRef)(null),
     [F, me] = (0, G.useState)(!1),
@@ -653,25 +653,25 @@ function Nt(e) {
       P.current && me(P.current.offsetWidth < 370);
     }, [P]));
   let De = (0, G.useMemo)(
-      () => (l && k && Se(k) ? { appid: ye(k)[0] } : w),
-      [l, w, k],
+      () => (l && A && Se(A) ? { appid: ye(A)[0] } : w),
+      [l, w, A],
     ),
-    { strStoreURL: R, snr: z } = se(k, l),
+    { strStoreURL: R, snr: z } = se(A, l),
     ke = Be(x ? void 0 : w);
-  if (!k)
-    return A
+  if (!A)
+    return ne
       ? (0, K.jsx)(Dt, { capsules_per_row: [1], is_item_browser: !0 })
       : null;
-  let B = k.included_appids?.length || 0,
-    Ne = k.included_appids?.filter((e) => ae?.has(e))?.length || 0,
-    Fe = k.item_type == 2 && !!M?.must_purchase_as_set,
+  let B = A.included_appids?.length || 0,
+    Ne = A.included_appids?.filter((e) => ie?.has(e))?.length || 0,
+    Fe = A.item_type == 2 && !!j?.must_purchase_as_set,
     V = !m && B > 1,
-    H = k.item_type == 1 && B == 1,
-    U = k.item_type == 0 || H,
-    W = H && k.appid,
-    Ke = k.name || ``,
-    q = ge(N, M),
-    Je = I || !N?.is_coming_soon || q,
+    H = A.item_type == 1 && B == 1,
+    U = A.item_type == 0 || H,
+    W = H && A.appid,
+    Ke = A.name || ``,
+    q = ge(M, j),
+    Je = I || !M?.is_coming_soon || q,
     [Ye, J] = ue(ee, v);
   return (0, K.jsxs)(p, {
     className: n({ [Ee]: !0, [void 0]: h, StoreSaleWidgetOuterContainer: !0 }),
@@ -685,8 +685,8 @@ function Nt(e) {
         appid: U && `appid` in w ? w.appid : void 0,
         children: (0, K.jsxs)(c, {
           onClick: x ? b : void 0,
-          className: n({ [je]: !0, [le]: !0, [ie]: x }),
-          ...Ue(k, ne, I, !!l, void 0, b),
+          className: n({ [je]: !0, [le]: !0, [ae]: x }),
+          ...Ue(A, k, I, !!l, void 0, b),
           preferredFocus: V,
           onFocusWithin: I ? Ce : void 0,
           children: [
@@ -754,7 +754,7 @@ function Nt(e) {
                             bMinimizePlatforms: F,
                             bHideWindows: F,
                           }),
-                          !!(Ye && k.item_type == 0) &&
+                          !!(Ye && A.item_type == 0) &&
                             (0, K.jsx)(Ge, {
                               eHWCompat: J,
                               className: `tUIs-i3NWoU-`,
@@ -775,7 +775,7 @@ function Nt(e) {
                   w &&
                   (0, K.jsx)(qe, {
                     id: w,
-                    bHideInLibraryApps: !Fe && k.item_type == 2 && Ne < B,
+                    bHideInLibraryApps: !Fe && A.item_type == 2 && Ne < B,
                   }),
                 !!U && (0, K.jsx)(It, { id: w }),
                 b
@@ -832,7 +832,7 @@ function It(e) {
     { data: r } = O(t),
     { data: i } = C(t),
     { data: a } = T(t),
-    { data: o } = j();
+    { data: o } = N();
   if (!r || !a || !a.short_description || !o) return null;
   let s = i?.discount_pct || 0,
     c = r.included_appids?.length || 0,
@@ -853,7 +853,7 @@ function It(e) {
       children:
         u.startsWith(`#`) && u.indexOf(` `) == -1
           ? (0, K.jsx)(`span`, {
-              className: ae,
+              className: oe,
               children: g(
                 u,
                 (0, K.jsx)(`i`, {}),

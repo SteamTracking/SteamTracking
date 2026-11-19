@@ -713,7 +713,6 @@
 	"Steam_Browser_Disabled_KB_URL" "https://help.steamchina.com/zh/kb/4090-RTKZ-4347"
 	"Steam_ViewSSAInBrowser" "您必须阅读并同意《蒸汽平台订户协议》。\n<a href=\"%url%\">点击这里</a>在浏览器中打开协议。返回到此窗口以继续。"
 	"Steam_OculusOnlyGameWarning_Desc" "%launching_app% 将在 SteamVR 环境外启动。您也许需要取下您的头戴式显示器，以返回蒸汽平台。"
-	"Steam_NeedToRestartDifferentClientLauncher" "此电脑上另一版本的蒸汽平台正在尝试启动。\n\n 要运行它，您必须首先退出此版本的蒸汽平台。"
 	"Steam_ClientBrowserAuth_AllowBrowserAuth" "允许桌面网页浏览器自动登入蒸汽平台站点\n（需要重新启动以应用更改）"
 	"SteamUI_RunningIncompatibleTcpService" "在蒸汽平台进程中检测到 %incompatdll% （与 %incompatname% 相关）\n 的不兼容版本。\n\n 如果您在运行蒸汽平台或单个游戏时，遭遇崩溃或网络速度缓慢，我们建议更新或卸载此软件。"
 	"SteamUI_RunningBannedSoftware" "修改蒸汽平台行为的软件"

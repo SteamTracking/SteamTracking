@@ -11,8 +11,8 @@ import {
 import { Xi as a, Zi as o, _n as s, da as c } from "./chunk~1fa4b8f2ff.js";
 import { _ as l, x as u } from "./chunk~0a99e05c44.js";
 import {
-  K as d,
-  Pn as f,
+  Fn as d,
+  K as f,
   Sn as p,
   ct as m,
   lt as h,
@@ -42,10 +42,10 @@ function C(e) {
     l = g(),
     { appid: u, bIsFree: S, bIsComingSoon: C, className: T, bTextMode: E } = e,
     D = _(u),
-    { bIsOwned: O } = f(D),
+    { bIsOwned: O } = d(D),
     k = h(u),
     { mutateAsync: A } = m(u, !k, v(l)),
-    { elDialogElement: j, fnShowLogonDialog: M } = d(),
+    { elDialogElement: j, fnShowLogonDialog: M } = f(),
     N = async () => {
       t.logged_in ? r || (i(!0), await A(), i(!1)) : M();
     };

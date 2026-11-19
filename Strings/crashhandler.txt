@@ -221,8 +221,6 @@ $ORIGIN
 &yuml;
 '', upload
 ( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
-( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
-( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (anonymous namespace)
@@ -233,10 +231,8 @@ $ORIGIN
 *N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGU
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
-++CCUNGz
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
@@ -304,6 +300,8 @@ $ORIGIN
 .note.gnu.build-id
 .steam_exec_test
 .text
+/.flatpak-info
+/app
 /bin/sh
 /bin/steamerrorreporter
 /dev
@@ -312,6 +310,7 @@ $ORIGIN
 /dev/null
 /dev/random
 /dev/urandom
+/etc
 /etc/lsb-release
 /etc/mtab
 /etc/os-release
@@ -332,12 +331,13 @@ $ORIGIN
 /tmp
 /tmp/.steam-sem-names
 /tmp/dumps
+/usr
 /usr/bin/crosdisk %s
+00:21:02
 0123456789
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
 0123456789abcdef
-01:59:05
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
@@ -397,6 +397,7 @@ BFilesystemAllowsExecution: fork() failed: %s\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
+BIsValid()
 BREAKPAD_DUMP_LOCATION
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
@@ -419,8 +420,10 @@ CFileWriter::Close
 CFileWriter::FlushInternal
 CFileWriter::Write
 CFileWriterThread
+CFmtStr truncated: "%s"
 CLcx
 CPathString
+CPathString::Concat: null path element
 CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
 CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
 CProcessEnvironmentManager ERROR: preallocated environment variable '%s' not found, something is very wrong, disabling.\n
@@ -463,6 +466,7 @@ Calling Tell on an async file writer is unsafe, will race with thread and may co
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
+Container path must be absolute
 Could not find steamerrorreporter binary. Any minidumps will be uploaded in-process
 Could not read /proc/self/cmdline when trying to find steamerrorreporter
 CrashTime
@@ -551,7 +555,6 @@ LOCK_SH
 Leaked mem: %s %s\n
 Linux
 LoadFileRangeIntoBuffer_Internal
-Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 MDRVA google_breakpad::MinidumpFileWriter::Allocate(size_t)
 MatchCaseInsensitivePathIfAvailable: in slow path
@@ -589,7 +592,7 @@ No Error
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-Nov 13 2026
+Nov 19 2026
 OUT OF MEMORY
 Object
 Only thread can stop self: Use a higher-level protocol
@@ -1127,6 +1130,7 @@ m_nRecursions > 0
 m_pBudgetGroups
 m_pBudgetGroups == NULL
 m_pChild
+m_pItemRunning
 m_pSibling
 m_pValObjects != NULL
 m_pszName
@@ -1136,6 +1140,7 @@ m_strDirectory
 m_strFileName
 m_strFileNamePrevious
 m_strLogLine
+m_strUTF8Path
 m_strWatchPath
 m_unInCounter == m_unOutCounter
 m_vecNodeMemBlocks.size() == 1
@@ -1251,7 +1256,6 @@ pipe2
 popen
 pos + size <= position_ + size_
 posix_fadvise
-posix_memalign
 ppFrames[iFrame] != NULL
 ppath
 pread64
@@ -1294,6 +1298,7 @@ pthread_once
 pthread_rwlock_destroy
 pthread_rwlock_init
 pthread_rwlock_rdlock
+pthread_rwlock_tryrdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
 pthread_rwlockattr_destroy
@@ -1335,6 +1340,7 @@ sched_get_priority_max
 sched_get_priority_min
 sched_setaffinity
 sched_yield
+script
 sdk32
 secblock.h
 section_size

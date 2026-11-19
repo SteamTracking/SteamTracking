@@ -102,11 +102,11 @@ message CCheckout_ValidateCart_Response_EstimatedTotals {
 }
 
 service Checkout {
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc AddFreeLicense (.CCheckout_AddFreeLicense_Request) returns (.CCheckout_AddFreeLicense_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetFriendOwnershipForGifting (.CCheckout_GetFriendOwnershipForGifting_Request) returns (.CCheckout_GetFriendOwnershipForGifting_Response);
-	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc ValidateCart (.CCheckout_ValidateCart_Request) returns (.CCheckout_ValidateCart_Response);
 }
 

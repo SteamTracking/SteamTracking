@@ -1,4 +1,5 @@
-﻿"Language" "indonesian"
+﻿
+"Language" "indonesian"
 "Tokens"
 {
 "WelcomeToSteamTitle" "SELAMAT DATANG DI STEAM"
@@ -941,7 +942,6 @@ Mohon tunggu sebentar."
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Vendor Monitor Utama: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Model Monitor Utama: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Mode MSAA yang Didukung: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Eyefinity Terdeteksi (%s1 Ditampilkan)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"Driver Tidak Terdeteksi"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"Nama Driver DirectX Tidak Terdeteksi"
@@ -4822,9 +4822,6 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 
 "Steam_VacBanOnAccount"		"Ban VAC pada Akun"
 "Steam_NoVacBanOnAccount"	"Tidak ada Ban VAC pada Akun"
-
-"Steam_NeedToRestart"		"Butuh Restart"
-"Steam_NeedToRestartDifferentClientLauncher" "Versi Steam lain sedang berusaha diluncurkan di komputer ini.\n\nUntuk melanjutkannya, kamu harus menutup versi Steam yang ini."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Izinkan peramban web desktop untuk secara otomatis login ke situs-situs Steam\n (restart dibutuhkan untuk menerapkan perubahan)"
 

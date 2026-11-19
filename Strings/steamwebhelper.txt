@@ -144,6 +144,7 @@
 !m_pEarlyIPCAcceptThread
 !m_pInt
 !pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
+!pControl || ( nBuffers >= 2 && nBuffers <= k_nSharedImageMaxBuffers )
 !pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pszString || pszString[nChars] == '\0'
 !sm_bShutDown
@@ -623,6 +624,7 @@ $ORIGIN
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of
 ...<truncated>...
+../common/callbacklist.h
 ../common/commonkeycode.cpp
 ../common/crypto.cpp
 ../common/crypto_aescbc_openssl.cpp
@@ -644,6 +646,8 @@ $ORIGIN
 ../common/logger.cpp
 ../common/messageobjects.cpp
 ../common/opensslwrapper.cpp
+../common/overlay/sharedimage.cpp
+../common/overlay/shmemstream.cpp
 ../common/platformhelpers.cpp
 ../common/registry.cpp
 ../common/steam/client_api.cpp
@@ -654,7 +658,6 @@ $ORIGIN
 ../common/urlhelper.cpp
 ../common/vr/vrapi.cpp
 ../external/picojson/picojson.h
-../overlay/common/shmemstream.cpp
 ../public/html/htmlprotobuf.cpp
 ../public/rtime.cpp
 ../public/steam_tray_posix.png
@@ -662,6 +665,7 @@ $ORIGIN
 ../public/tier0/tslist.h
 ../public/tier1/bitstring.h
 ../public/tier1/interface.h
+../public/tier1/keyvalues.h
 ../public/tier1/netadr.h
 ../public/tier1/refcount.h
 ../public/tier1/smartptr.h
@@ -699,6 +703,7 @@ $ORIGIN
 ../webhelper/browsercomposertest.cpp
 ../webhelper/browserview.cpp
 ../webhelper/chromepainter.cpp
+../webhelper/clientassets.cpp
 ../webhelper/clienthandler.cpp
 ../webhelper/clienthandler_gamepad.cpp
 ../webhelper/clienthandler_vr.cpp
@@ -744,6 +749,8 @@ $ORIGIN
 .include
 .jpeg
 .jpg
+.json
+.mjs
 .mp4
 .mpeg
 .mpg
@@ -754,9 +761,12 @@ $ORIGIN
 .uifont
 .valvefile
 .webm
+/.flatpak-info
 /Steam3PosixRegistryManager
 /SteamFrame
 /ValveIPCSHM_%d
+/app
+/b%d_f%u_%llu.jpg
 /bin/lsof
 /chat
 /custom_fonts/
@@ -771,6 +781,7 @@ $ORIGIN
 /dev/srandom
 /dev/tty
 /dev/urandom
+/etc
 /etc/mtab
 /home
 /home/andres/git/experiments/settings.png
@@ -805,6 +816,7 @@ $ORIGIN
 /tmp/steam_chrome_shmem_uid%d_spid%u
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
+/usr
 /usr/bin/crosdisk %s
 /usr/bin/lsof
 /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
@@ -839,6 +851,7 @@ $ORIGIN
 0000000000000000000000000000000000000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:21:09
 01/01/00
 0123456789
 0123456789.
@@ -846,7 +859,6 @@ $ORIGIN
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-02:01:49
 063d37c9aeb7583e891be14276f2627edbcaa5ee
 0x%llx
 0x%p - %s-\n
@@ -858,6 +870,7 @@ $ORIGIN
 1.5 Mbps
 1.5M
 1.6.37
+10.10.10.10
 1000
 1024
 10CCEFThread
@@ -1103,6 +1116,7 @@ $ORIGIN
 14CClientHandler
 14CGuestPassInfo
 14CImageDrawable
+14CLogEndTracing
 14CMachineIDInfo
 14CMessageObject
 14CMsgGameAction
@@ -1230,7 +1244,9 @@ $ORIGIN
 16CHTMLProtoBufMsgI16CMsgPopupCreatedE
 16CHTMLProtoBufMsgI16CMsgSetHTMLTitleE
 16CHTMLProtoBufMsgI16CMsgSetZoomLevelE
+16CHTMLProtoBufMsgI16CMsgSplashWindowE
 16CHTMLProtoBufMsgI16CMsgStartRequestE
+16CHTMLProtoBufMsgI16CMsgStartTracingE
 16CHTMLProtoBufMsgI16CMsgTouchGestureE
 16CHTMLProtoBufMsgI17CMsgBrowserCreateE
 16CHTMLProtoBufMsgI17CMsgBrowserRemoveE
@@ -1288,6 +1304,7 @@ $ORIGIN
 16CHTMLProtoBufMsgI23CMsgCanGoBackAndForwardE
 16CHTMLProtoBufMsgI23CMsgSetForegroundWindowE
 16CHTMLProtoBufMsgI23CMsgSetHorizontalScrollE
+16CHTMLProtoBufMsgI23CMsgSetSimulatedLatencyE
 16CHTMLProtoBufMsgI23CMsgSetWindowVisibilityE
 16CHTMLProtoBufMsgI23CMsgSteamAuthCookiesSetE
 16CHTMLProtoBufMsgI24CMsgClearAllBrowsingDataE
@@ -1354,7 +1371,9 @@ $ORIGIN
 16CMsgPopupCreated
 16CMsgSetHTMLTitle
 16CMsgSetZoomLevel
+16CMsgSplashWindow
 16CMsgStartRequest
+16CMsgStartTracing
 16CMsgTouchGesture
 16CSharedMemStream
 16CefBrowserCToCpp
@@ -1395,6 +1414,7 @@ $ORIGIN
 17CMsgUpdateToolTip
 17CPurchaseGiftInfo
 17CStreamReaderBase
+17CTraceScreenshots
 17CV8HandlerContext
 17CWebhelperLogFile
 17CefBaseRefCounted
@@ -1407,6 +1427,7 @@ $ORIGIN
 17CefRequestHandler
 17CefResponseCToCpp
 18CBrowserComposerGL
+18CClientAssetResult
 18CContextMenuWindow
 18CGlibContextThread
 18CMsgBlockedRequest
@@ -1655,6 +1676,7 @@ $ORIGIN
 21CefCompletionCallback
 21CefContextMenuHandler
 21CefDownloadItemCToCpp
+21CefEndTracingCallback
 21CefFileDialogCallback
 21CefFocusHandlerCppToC
 21CefFrameHandlerCppToC
@@ -1695,6 +1717,7 @@ $ORIGIN
 23CMsgCanGoBackAndForward
 23CMsgSetForegroundWindow
 23CMsgSetHorizontalScroll
+23CMsgSetSimulatedLatency
 23CMsgSetWindowVisibility
 23CMsgSteamAuthCookiesSet
 23CTGATextureStaticStream
@@ -1737,6 +1760,7 @@ $ORIGIN
 256K
 25CAllowSetForegroundThread
 25CBrowserComposerGamescope
+25CClientAssetRequestClient
 25CLocalFileResourceHandler
 25CMsgAckSharedPaintBuffers
 25CMsgBrowserCreateResponse
@@ -1769,16 +1793,17 @@ $ORIGIN
 26CMsgShowBrowserContextMenu
 26CMsgToggleFindInPageDialog
 26CefContextMenuParamsCToCpp
+26CefDevToolsMessageObserver
 26CefMenuModelDelegateCppToC
 26CefPermissionHandlerCppToC
 26CefPreferenceManagerCToCpp
 26CefSetCookieCallbackCppToC
 26CefX509CertPrincipalCToCpp
 26ICompositorEventDispatcher
+27CClientAssetResourceHandler
 27CMsgControllerConfiguration
 27CMsgDraggableRegionsChanged
 27CMsgHorizontalScrollBarSize
-27CMsgNeedsSharedTexturePaint
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetControllerSourceMode
@@ -1884,6 +1909,7 @@ $ORIGIN
 43CUIFontFilePackagePB_CUIEncryptedFontFilePB
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 47CMsgControllerInputControllerActionMouseBinding
+47CMsgSetLocalFileRequestMapping_ClientAssetRoute
 5000
 50CMsgControllerInputControllerActionLEDColorBinding
 512 Kbps
@@ -2457,6 +2483,7 @@ BITSTRING
 BITWRAP
 BIsHostPathVisibleToContainer only accepts absolute paths
 BIsOpen()
+BIsValid()
 BIsValidBrowserHandle( htmlCommand.BodyConst().browser_handle(), iClient_ )
 BLAKE2b512
 BLAKE2s256
@@ -2711,6 +2738,7 @@ BrowserView.Create optional option bBrowserViewDomainMapping must be a boolean.
 BrowserView.Create optional option bEnableCertWarningDisplay must be a boolean.
 BrowserView.Create optional option bOnlyAllowTrustedPopups must be a boolean.
 BrowserView.Create optional option bPreventCloseFromJavascript must be a boolean.
+BrowserView.Create optional option bSuppressLoadErrorPage must be a boolean.
 BrowserView.Create optional option parentPopupBrowserID must be an int.
 BrowserView.Create optional option strInitialURL must be a string.
 BrowserView.Create optional option strName must be a string.
@@ -2852,6 +2880,12 @@ CD Key
 CDNAuth
 CEF captive portal simulation: Generating redirect '%s' -> '%s'\n
 CEF captive portal simulation: blocking '%s'
+CEF trace: couldn't start, a trace is already running
+CEF trace: failed to stop tracing to %s
+CEF trace: screenshots of %u browsers to %s
+CEF trace: tracing for %u ms to %s
+CEF trace: wrote %s
+CEF trace: wrote %u screenshots to %s
 CERTIFICATE
 CERTIFICATE REQUEST
 CERTIFICATEPOLICIES
@@ -3248,6 +3282,7 @@ CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
 CPathString
+CPathString::Concat: null path element
 CRC error
 CRC32_ProcessBuffer
 CRITICAL
@@ -3553,6 +3588,7 @@ ConnectionBus
 Console
 Console User
 Contact Support
+Container path must be absolute
 Content Server
 Content Version
 Content unavailable
@@ -3968,6 +4004,7 @@ DetectNow failed
 Detected leaked fd
 DevToolsRestoreData
 DevToolsSetting: DisableAutoMinimize
+Developer
 Device
 Device Corrupt
 Device Error
@@ -4809,6 +4846,7 @@ FirstPaint
 FiveHours
 Flags
 FlushDevices
+FmtStr_ReportTruncation
 Forbidden
 Force Bounce
 Force Password Change
@@ -6385,28 +6423,19 @@ Key in map fields cannot be float/double, bytes or message types.
 KeyRangeID
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues binary nested deeper than the parse depth assert, probably bad usage
 KeyValues don't support #include anymore, file "%s"
+KeyValues text nested deeper than the parse depth assert, probably bad usage
 KeyValues::FindKey( StringView ... )
 KeyValues::FindKey( hks )
 KeyValues::FindKey( hks, bCreate )
-KeyValues::MergeFromBuffer
+KeyValues::LoadFromBuffer
+KeyValues::LoadSubKeysFromBuffer
 KeyValues::ReadAsBinary
-KeyValues::ReadAsBinary - Set name
-KeyValues::ReadAsBinary - TYPE_BINARY_STRING
-KeyValues::ReadAsBinary - TYPE_COLOR
-KeyValues::ReadAsBinary - TYPE_FLOAT
-KeyValues::ReadAsBinary - TYPE_INT
-KeyValues::ReadAsBinary - TYPE_INT64
-KeyValues::ReadAsBinary - TYPE_NONE
-KeyValues::ReadAsBinary - TYPE_PTR
-KeyValues::ReadAsBinary - TYPE_STRING
-KeyValues::ReadAsBinary - TYPE_UINT64
-KeyValues::ReadAsBinary - TYPE_WSTRING
-KeyValues::ReadAsBinary() stack depth > 100
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::SaveToBuffer: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::SaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
@@ -7117,6 +7146,7 @@ Netscape SSL server
 Netscape Server Gated Crypto
 Network Authentication Required
 Network send exceeded
+Network.emulateNetworkConditions
 News
 Next
 Night
@@ -7215,7 +7245,7 @@ NotifyTouchDown
 NotifyTouchMotion
 NotifyTouchUp
 NotifyUserActivation
-Nov 13 2026
+Nov 19 2026
 November
 Num Lock
 Num Lock Toggle
@@ -7652,6 +7682,10 @@ Package id 0
 Package requires an invitation for a reservation to purchase
 PackageCount
 PackageID
+Page.screencastFrame
+Page.screencastFrameAck
+Page.startScreencast
+Page.stopScreencast
 Pago Facil
 PagoEfectivo
 Pagseguro
@@ -8038,6 +8072,12 @@ ReadLookaheadEnabled
 ReadLookaheadSupported
 ReadOnly
 ReadPixel
+ReadSectionFromBuffer:  got EOF instead of keyname
+ReadSectionFromBuffer:  got NULL key
+ReadSectionFromBuffer:  got conditional between key and value
+ReadSectionFromBuffer:  got empty keyname
+ReadSectionFromBuffer:  got } in key
+ReadSectionFromBuffer:  sections nested too deep
 Real KB Added %s\n
 Reallocating OpenVR overlay (%s) to handle larger paint areas (%dx%d)
 RearLeftLower
@@ -8068,11 +8108,6 @@ Recurring option is not valid for billing agreement
 Recurring option will stack time beyond our maximum limit
 Recurring payment option
 Recursion limit at end of parse should be
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
 Red Pagos
 RedCompra
 Refundable
@@ -8292,6 +8327,7 @@ SDL_IOFromConstMem
 SDL_Init
 SDL_Init failed: %s
 SDL_InitSubSystem
+SDL_MAC_ORDER_BELOW_WINDOW
 SDL_MAC_REGISTER_ACTIVATION_HANDLERS
 SDL_MOUSE_AUTO_CAPTURE
 SDL_MaximizeWindow
@@ -8328,6 +8364,7 @@ SDL_VIDEO_X11_WINDOW_VISUALID
 SDL_WINDOWS_DETECT_DEVICE_HOTPLUG
 SDL_WINDOWS_ENABLE_MENU_MNEMONICS
 SDL_WINDOWS_ERASE_BACKGROUND_MODE
+SDL_WINDOWS_HWND_INSERT_AFTER
 SDL_WINDOW_ACTIVATE_WHEN_RAISED
 SDL_WINDOW_ACTIVATE_WHEN_SHOWN
 SDL_WINDOW_RETAIN_CONTENT
@@ -8787,6 +8824,7 @@ Signing Tool of Subject
 Simple
 Simplified_Chinese
 SimulateUserActivity
+Simulated latency: %u ms
 Sindhi
 Single Purchase
 Single Purchase, Limited Use
@@ -9139,6 +9177,7 @@ SteamOSManagerLegacyProxy
 SteamOSManagerLegacySkeleton
 SteamRealPath
 SteamRealm
+SteamScreenshot
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
 SteamStdLib::CommandLine()
@@ -9912,6 +9951,7 @@ V_StripFilename
 V_StripLastDir
 V_URLContainsDomain
 V_URLDecodeRaw
+V_URLEncodeRaw
 V_URLParse
 V_UTF16ToUTF32
 V_UTF32ToUTF16
@@ -9933,7 +9973,6 @@ V_stristr(char const*, char const*)
 V_strlen( pchTime ) == 25
 V_strlower_fast
 V_strncat
-V_strncat_length
 V_strnchr
 V_strncmp
 V_strncpy
@@ -10124,7 +10163,7 @@ Window.ProcessShuttingDown
 Window.ResizeTo
 Window.RestoreWindowSizeAndPosition
 Window.SetComposition
-Window.SetComposition requires 3 arguments. mode: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque, 4 = overlay keyboard, 5 = virtual menu}, appidCompositionQueue: [123456, 769], windowID: 1234
+Window.SetComposition requires 3 arguments. mode: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque, 4 = overlay keyboard}, appidCompositionQueue: [123456, 769], windowID: 1234
 Window.SetHideOnClose
 Window.SetHideOnClose takes one argument: <hide on close>?
 Window.SetKeyFocus
@@ -10380,6 +10419,7 @@ XSendEvent
 XSetErrorHandler
 XSetIOErrorHandler
 XSetInputFocus
+XSetTransientForHint
 XShapeCombineRectangles
 XShapeQueryExtension
 XSync
@@ -10398,7 +10438,6 @@ YooMoney
 Yoruba
 You must refund this transaction to wallet
 You must type in
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 Z0000
 ZINT32
 ZINT64
@@ -10580,6 +10619,7 @@ Zulu
 \nkhT
 \nlibpng version 1.6.37\nCopyright (c) 2018-2019 Cosmin Truta\nCopyright (c) 1998-2002,2004,2006-2018 Glenn Randers-Pehrson\nCopyright (c) 1996-1997 Andreas Dilger\nCopyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.\n
 \t(%zu) comparing %s with %s\n
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \u%04x
 \u000
 \u001
@@ -10797,6 +10837,8 @@ _desktop_portal_trash_skeleton_handle_get_property
 _desktop_portal_trash_skeleton_handle_method_call
 _desktop_portal_trash_skeleton_handle_set_property
 _exit
+_frames
+_full
 _g_value_equal
 _g_value_equal() does not handle type %s
 _input
@@ -10823,6 +10865,7 @@ _login1_org_freedesktop_dbus_properties_skeleton_handle_get_property
 _login1_org_freedesktop_dbus_properties_skeleton_handle_method_call
 _login1_org_freedesktop_dbus_properties_skeleton_handle_set_property
 _longjmp
+_medium
 _new
 _notifications__skeleton_handle_get_property
 _notifications__skeleton_handle_method_call
@@ -11042,6 +11085,7 @@ access
 accessor_ == other.accessor_
 account
 account flags changed
+achievements
 acpitz
 acpt_state
 action
@@ -11385,6 +11429,7 @@ available-gpu-power-profiles
 available-performance-profiles
 available-source-types
 availableSpace
+avatars
 axis
 azerbaijani
 azure
@@ -11410,6 +11455,7 @@ bKGD
 bKGD must be after
 bOnlyAllowTrustedPopups
 bPreventCloseFromJavascript
+bSuppressLoadErrorPage
 background color must be supplied to remove alpha/transparency
 backing-file
 bad adaptive filter value
@@ -12036,6 +12082,7 @@ cef_task_runner_get_for_current_thread
 cef_task_runner_get_for_thread
 cef_time_from_timet
 cef_time_to_basetime
+cef_trace_event_instant
 cef_uridecode
 cef_uriencode
 cef_urlrequest_create
@@ -13154,6 +13201,7 @@ disable-gpu-compositing
 disable-winh264
 disabled
 disabled group
+disabled-by-default-devtools.screenshot
 disabled_off
 disabled_off_ok
 disabled_software
@@ -13234,6 +13282,7 @@ domain_reliability.allowed_by_policy
 done
 dota2.com
 double
+downloadThroughput
 dpkg-query -s steamos-updatelevel | grep Version | cut -d' ' -f2
 dprintf
 drbg already initialized
@@ -13730,6 +13779,7 @@ forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
 forever
 fork
 form
+format
 format error in CRL's lastUpdate field
 format error in CRL's nextUpdate field
 format error in certificate's notAfter field
@@ -13745,6 +13795,7 @@ fputs
 fr-FR
 fr_FR
 fragmented client hello
+frame
 franchise
 fread
 free
@@ -14158,7 +14209,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen(;a
 givenName
 gizmodo.com
 glAccumxOES
@@ -17426,8 +17477,8 @@ iClientFD != m_mapShMemFD.InvalidIndex()
 iDEAL
 iGenerateRandomNumberRetry < 300
 iIndex >= 0 && iIndex < m_pFontPackagePB->encrypted_font_files_size()
-iLockedForRead < 3 && iReadyToPresent < 3
 iPhoneOS
+iRead < m_nBuffers && iReady < m_nBuffers
 iRet > 0
 iTXt
 iTXt: invalid compression
@@ -18261,6 +18312,7 @@ job1
 jobpath
 joined the group
 joint-iso-itu-t
+jpeg
 js_method_list
 json
 json_name = "
@@ -18397,6 +18449,7 @@ lastModifiedBy
 lastModifiedTime
 lastUpdate
 latam
+latency
 latvian
 launcher
 lcO/<1\r=,!\r-@@@
@@ -18451,6 +18504,9 @@ libpng warning: %s
 libpthread.so.0
 library bug
 library has no ciphers
+library_hero.jpg
+libraryhero
+libraryheroblur
 librt.so.1
 libsteam.so
 libtier0_s.so
@@ -18614,6 +18670,7 @@ m_mapLastFocusForSDLWindow
 m_memNodes
 m_nAllocationCount >= 0
 m_nAnalogBPMDataMsgsEnabled >= 0
+m_nCount > 0
 m_p == NULL
 m_pComposer.IsValid()
 m_pCompositeThread == nullptr
@@ -18622,6 +18679,7 @@ m_pFontPackagePB
 m_pFontPackagePB->package_version() == 1
 m_pFromChromeStream
 m_pGLXPixmap != 0
+m_pItemRunning
 m_pKeyValues
 m_pLogInstance
 m_pMapFile
@@ -18659,6 +18717,7 @@ m_strLocalFileRequestURL
 m_strLogLine
 m_strPackageFile
 m_strPostData
+m_strUTF8Path
 m_strUserAgentIdentifier
 m_strUserAgentOverride
 m_strWatchPath
@@ -18771,6 +18830,8 @@ max-age=31536000, immutable
 max-age=3600
 max-charge-level
 max-realtime-priority
+maxHeight
+maxWidth
 maxX
 maxY
 max_early_data
@@ -18828,6 +18889,7 @@ messageDigest
 messagedigest attribute wrong length
 messagedigest wrong length
 metacritic.com
+metadata
 metered
 method
 method not supported
@@ -18899,7 +18961,7 @@ mobilechat
 modal
 modalias
 mode
-mode must be one of: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque, 4 = overlay keyboard, 5 = virtual menu}
+mode must be one of: {0 = hidden, 1 = notification, 2 = overlay, 3 = opaque, 4 = overlay keyboard}
 model
 modf
 module
@@ -18958,7 +19020,7 @@ nBytes < (size_t)INT_MAX - curInsertPos - 1
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nCertBits
 nCommand > 0 && nCommand < eHTMLCommands_None
-nCompositionMode >= k_EUIComposition_Hidden && nCompositionMode <= k_EUIComposition_VirtualMenu
+nCompositionMode >= k_EUIComposition_Hidden && nCompositionMode <= k_EUIComposition_OverlayKeyboard
 nDay < 32
 nDay > 0
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
@@ -19143,6 +19205,7 @@ no_tls1_3
 node-has-focus
 noecho_console
 noexcept
+nofallback
 nomask
 nombstr
 non hex characters
@@ -19259,6 +19322,7 @@ odd number of chars
 odd number of digits
 odia
 oeap
+offline
 offset
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put
@@ -19990,6 +20054,7 @@ q not prime
 qcStatements
 qsort
 qualifiers
+quality
 qualityLabelledData
 quantil
 quantity
@@ -20321,6 +20386,7 @@ screen_saver_object_skeleton_new
 screen_saver_object_skeleton_set_property
 screenavailheight
 screenavailwidth
+screenshot/
 scroll_bars_changed
 scrypt
 scsv received when renegotiating
@@ -20443,6 +20509,7 @@ session id context uninitialized
 session-management1
 session-new
 session-removed
+sessionId
 session_handle
 session_id
 session_id_context
@@ -21336,7 +21403,6 @@ thisUpdate
 thread
 threads
 throw
-throw '%s'
 ticket_appdata
 tigrinya
 time
@@ -21578,6 +21644,9 @@ tool
 towerattack
 tpBasis
 tr_TR
+trace-startup
+trace-startup-duration
+trace-startup-file
 traffic upd
 trailerField
 transaction clone for
@@ -21963,6 +22032,7 @@ update-lookup-table
 update-preedit-text
 update-preedit-text-with-mode
 update-property
+uploadThroughput
 upper
 upper-left
 upper-right
@@ -22184,6 +22254,7 @@ win2012R2
 win2016
 win2019
 win2022
+win2025
 win311
 win32
 win32_bind_func

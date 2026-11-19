@@ -304,9 +304,9 @@ service ClientMetrics {
 	rpc ReportClientArgs (.CClientMetrics_ReportClientArgs_Notification) returns (.NoResponse);
 	// ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc ReportClientError (.CClientMetrics_ReportClientError_Notification) returns (.NoResponse);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc ReportClipRange (.CClientMetrics_ClipRange_Notification) returns (.NoResponse);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc ReportClipShare (.CClientMetrics_ClipShare_Notification) returns (.NoResponse);
 	// ePrivilege=1
 	rpc ReportEndGameRecording (.CClientMetrics_EndGameRecording_Notification) returns (.NoResponse);

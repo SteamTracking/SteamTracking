@@ -90,7 +90,6 @@
 "SMPEvent_MediaBegin"		"Media Bermula"
 "SMPEvent_MediaEnd"		"Media Tamat"
 "SMPEvent_Play"			"Main"
-"SMPEvent_JumpHome"		"Lompat ke Utama"
 "SMPEvent_JumpEnd"		"Lompat Ke Tamat"
 "SMPEvent_Pause"		"Jeda"
 "SMPEvent_Stop"			"Hentikan"

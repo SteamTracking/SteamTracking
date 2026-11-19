@@ -1,4 +1,5 @@
-﻿"Language" "spanish"
+﻿
+"Language" "spanish"
 "Tokens"
 {
 "WelcomeToSteamTitle" "BIENVENIDO A STEAM"
@@ -81,7 +82,7 @@
 "Steam_ProcessingSubscriptionInfo" "Procesando tu suscripción. Esto llevará menos de un minuto."
 "Steam_SubscribeCompleteInfo" "¡Gracias! Se ha completado tu compra de %s1. \n\nAhora, en tu biblioteca de productos, puedes hacer doble clic en el juego para jugar (o hacer clic con el botón derecho del ratón en el título del juego y seleccionar «Iniciar» en el menú)."
 "Steam_PreorderCompleteInfo" "¡Gracias! Se ha completado la reserva de %s1. \n\nPodrás empezar a jugar en cuanto el juego se ponga oficialmente a la venta."
-"Steam_SubscribeFailedInfo"	"La compra no se ha completado. La información de \nla tarjeta de crédito que has introducido ha sido rechazada.\n\nTe hemos enviado un email con más \ninformación. Intenta realizar la compra de nuevo,\n utilizando otra tarjeta de crédito."
+"Steam_SubscribeFailedInfo"	"La compra no se ha completado. La información de \nla tarjeta de crédito que has introducido ha sido rechazada.\n\nTe hemos enviado un correo electrónico con más \ninformación. Intenta realizar la compra de nuevo,\n utilizando otra tarjeta de crédito."
 
 "Steam_ErrorPasswordNotSet" "No se ha enviado correctamente tu contraseña.\nO has contestado mal a la pregunta secreta o la cuenta especificada no existe."
 "Steam_ErrorPasswordTooShort" "Tu nueva contraseña debe contener al menos 8 caracteres."
@@ -118,9 +119,9 @@
 "Steam_ForgottenPassword_EnterSms" "Código por SMS"
 "Steam_ForgottenPassword_EnterSmsDescription"	"Hemos enviado un código por SMS a tu teléfono. Por favor, introduce ese código abajo."
 
-"Steam_ForgottenPassword_EmailCodeDescription" "Se ha enviado un email con un código de verificación a la dirección de email de tu cuenta.\n\nPor favor, introduce dicho código abajo para poder continuar."
-"Steam_ForgottenPassword_EmailCode" "Código del email"
-"Steam_ForgottenPassword_EmailCode_Incorrect" "El código del email que has introducido no era correcto."
+"Steam_ForgottenPassword_EmailCodeDescription" "Se ha enviado un correo electrónico con un código de verificación a la dirección de correo electrónico de tu cuenta.\n\nPor favor, introduce dicho código abajo para poder continuar."
+"Steam_ForgottenPassword_EmailCode" "Código del correo electrónico"
+"Steam_ForgottenPassword_EmailCode_Incorrect" "El código del correo electrónico que has introducido no era correcto."
 
 "Steam_Login_Title"		"Inicio de sesión en Steam"
 "Steam_RefreshLogin_Title"		"Actualizar inicio de sesión en Steam"
@@ -233,7 +234,7 @@
 "SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "Las aplicaciones de 32 bits ya no son compatibles con macOS 10.15 o superior."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "No se ha podido iniciar %game% en RV. (Error: %error%)"
-"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Esperando a que %quitting_game% se cierre %dots%"
+"SteamUI_JoinDialog_OpenVRWaitingForQuit" "Esperando a que «%quitting_game%» se cierre%dots%"
 
 "SteamUI_JoinDialog_UpdatingAppInfo" "Actualizando configuración %dots%"
 "SteamUI_JoinDialog_UpdatingAppTicket" "Actualizando el ticket %dots%"
@@ -639,14 +640,14 @@
 "Steam_ChangeContactEmailWizard_NotChangedYet" "Contactando con los servidores de Steam para enviar un código de confirmación a la nueva dirección de correo electrónico que has propuesto..."
 "Steam_ChangeContactEmailWizard_WaitingForVerify" "El cambio se completará una vez que nos confirmes la recepción de ese correo electrónico haciendo clic en el enlace incluido."
 "Steam_WeMaySMSYou" "Steam puede confirmar este cambio con un mensaje de texto enviado por SMS a tu número de teléfono."
-"Steam_ChangeEmail_MissingSMSCode" "Se ha enviado un mensaje por SMS al teléfono que se encuentra asociado a tu cuenta. Necesitarás introducir el código de cambio de email que encontrarás en dicho mensaje."
+"Steam_ChangeEmail_MissingSMSCode" "Se ha enviado un mensaje por SMS al teléfono que se encuentra asociado a tu cuenta. Necesitarás introducir el código de cambio de correo electrónico que encontrarás en dicho mensaje."
 
 "Steam_ChangeCred_ClickNext"		"Haz clic en «Siguiente» para comenzar el proceso de actualización de tu contraseña."
 "Steam_ChangeCred_EmailCodeForPassword"		"Haz clic en Siguiente para comenzar el proceso de actualización de la contraseña. Se enviará un correo electrónico con un código de confirmación a"
 "Steam_ChangeCred_EmailCodeForEmail"		"Haz clic en «Siguiente» para comenzar el proceso de actualización de la dirección de correo electrónico de contacto. Se enviará un mensaje por correo electrónico con un código de confirmación a: %s1."
 "Steam_ChangeCred_EmailProgress"	"Contactando con los servidores de Steam para enviar un mensaje de confirmación a:"
 "Steam_ChangeCred_ForgotPassword"	"¿Olvidaste la contraseña?"
-"Steam_ChangeCred_LostEmail"		"¿Has perdido el acceso a tu email?"
+"Steam_ChangeCred_LostEmail"		"¿Has perdido el acceso a tu correo electrónico?"
 "Steam_ChangeCred_LostPhone"		"¿Ya no tienes acceso a tu teléfono?"
 "Steam_ChangeCred_LostTwoFactor"	"¿Has perdido el acceso a tu autenticador móvil de Steam Guard?"
 "Steam_ChangeCred_EnterCode"		"Introduce el código de confirmación enviado a: %s1"
@@ -656,7 +657,7 @@
 "Steam_ChangeCred_IncorrectVerificationCode"			"Error al cambiar la contraseña.\nComprueba que el código de verificación introducido es el correcto."
 
 "Steam_ChangeEmail_IncorrectVerificationCode"		"Error al cambiar el correo electrónico de contacto.\nComprueba que el código de verificación introducido es el correcto."
-"Steam_ChangeEmail_IncorrectTwoFactorCode"		"No se ha podido cambiar el email de contacto.\nPor favor, comprueba que has introducido correctamente el código del autenticador móvil de Steam Guard."
+"Steam_ChangeEmail_IncorrectTwoFactorCode"		"No se ha podido cambiar el correo electrónico de contacto.\nPor favor, comprueba que has introducido correctamente el código del autenticador móvil de Steam Guard."
 "Steam_ChangeEmail_EnterSMSCode"	"Como medida de seguridad adicional, hemos enviado un mensaje de texto por SMS al teléfono asociado a tu cuenta. Por favor, introduce el código aquí:"
 
 "Steam_ChangeContactEmailError_Title"			"Error de validación de dirección de correo electrónico"
@@ -682,11 +683,11 @@
 "Steam_RecoverAuthenticator_Password"				"Contraseña"
 
 "SteamUI_RecoverAuthenticatorEmailOrSmsChoice"		"Para eliminar el autenticador de Steam Guard necesitaremos un código que te enviaremos por SMS, o el código que anotaste cuando añadiste el autenticador a tu cuenta (empieza con una 'R' y le siguen algunos dígitos)."
-"SteamUI_RecoverAuthenticatorUseEmail"				"Enviarme un código por email"
+"SteamUI_RecoverAuthenticatorUseEmail"				"Enviarme un código por correo electrónico"
 "SteamUI_RecoverAuthenticatorUseSms"				"Enviarme un código por SMS a mi teléfono"
 "Steam_RecoverAuthenticator_EnterSmsDescription"	"Hemos enviado un SMS al número de teléfono registrado en tu cuenta. Por favor, introduce abajo el número que encontrarás en el SMS."
-"Steam_RecoverAuthenticator_Authorization"			"Se ha enviado un mensaje con un código de verificación a tu dirección de email. Dicho código empieza con una 'D' y le siguen algunos dígitos. Por favor, introduce el código abajo."
-"Steam_RecoverAuthenticator_VerificationCode"		"Código del email"
+"Steam_RecoverAuthenticator_Authorization"			"Se ha enviado un mensaje con un código de verificación a tu dirección de correo electrónico. Dicho código empieza con una 'D' y le siguen algunos dígitos. Por favor, introduce el código abajo."
+"Steam_RecoverAuthenticator_VerificationCode"		"Código del correo electrónico"
 "Steam_RecoverAuthenticator_RevocationExposition"	"Por favor, introduce el código que se te requirió anotar cuando te registraste para tu autenticador. Empieza por R y le siguen algunos dígitos."
 "Steam_RecoverAuthenticator_RevocationCode"			"Código de registro"
 
@@ -933,7 +934,6 @@
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Fabricante del monitor principal: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Modelo del monitor principal: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Modos MSAA compatibles: %s1"
-"SteamUI_ValveSurvey_Summary_Eyefinity"						"Tecnología Eyefinity detectada (%s1 monitores)"
 
 "SteamUI_ValveSurvey_Summary_VideoDriverName_Unknown"				"No se ha detectado el controlador"
 "SteamUI_ValveSurvey_Summary_DirectXDriverName_Unknown"				"No se ha detectado el nombre de controlador de DirectX"
@@ -1253,7 +1253,7 @@
 "Steam_Subscription_ContactSupport" "Se ha producido un error inesperado. No se ha completado la suscripción a «%subscription%».\n\nPor favor, ponte en contacto con el Soporte de Steam a través del siguiente enlace."
 
 "Steam_SubscriptionFailure_Timeout_Headline" "Suscripción pendiente"
-"Steam_SubscriptionFailure_Timeout" "No se ha completado la suscripción a «%subscription%» porque Steam está muy ocupado en estos momentos y no puede procesar la transacción.\n\nSin embargo, puedes jugar a ««%subscription%»» mientras esperas. Nos pondremos en contacto contigo con los resultados de la transacción tan pronto como nos sea posible procesarla."
+"Steam_SubscriptionFailure_Timeout" "No se ha completado la suscripción a «%subscription%» porque Steam está muy ocupado en estos momentos y no puede procesar la transacción.\n\nSin embargo, puedes jugar a «%subscription%» mientras esperas. Nos pondremos en contacto contigo con los resultados de la transacción tan pronto como nos sea posible procesarla."
 
 "Steam_Subscription_RestrictedCountry_Headline" "No disponible"
 "Steam_Subscription_RestrictedCountry" "Lo sentimos, pero no puedes adquirir «%subscription%» en este país. Se ha cancelado la compra."
@@ -2409,7 +2409,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 
 "Steam_Shutdown_Dialog_Title"	"Steam - Salir"
 "Steam_Shutdown_Dialog_Text" "Saliendo de Steam ..."
-"Steam_Shutdown_Waiting_For_Game" "Esperando a que %game% se cierre..."
+"Steam_Shutdown_Waiting_For_Game" "Esperando a que «%game%» se cierre..."
 "Steam_Shutdown_Finishing_Download" "Esperando a que finalicen las descargas en cola..."
 "Steam_Shutdown_Waiting_For_Download" "Deteniendo la descarga de %game%..."
 "Steam_Shutdown_Waiting_For_Cloud" "Terminando la sincronización con Steam Cloud..."
@@ -3548,9 +3548,9 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "SteamUI_SteamGuardNotifyNewMachinesTitle" "Notificación de Steam Guard"
 "SteamUI_SteamGuardNotifyNewMachinesDetails" "Desde tu último inicio de sesión en este ordenador, las credenciales de tu cuenta se han utilizado y Steam Guard ha sido autorizado desde otra ubicación.\n\nPor favor, confirma que has sido tú quien ha autorizado estas sesiones:"
-"SteamUI_SteamGuardNotifyNewMachinesExplainButtons" "Si alguna de las sesiones que se detallan no fue autorizada por ti, selecciona 'No, no fui yo' para cambiar tu contraseña y dirección de email de Steam y retirar la autorización a otras ubicaciones."
+"SteamUI_SteamGuardNotifyNewMachinesExplainButtons" "Si alguna de las sesiones que se detallan no fue autorizada por ti, selecciona 'No, no fui yo' para cambiar tu contraseña y dirección de correo electrónico de Steam y retirar la autorización a otras ubicaciones."
 "SteamUI_SteamGuardNotifyNewMachinesTurnedOff" "Desde tu último inicio de sesión en este ordenador, las credenciales de tu cuenta se han utilizado y Steam Guard ha sido desactivado desde otra ubicación.\n\nPor favor, confirma que has sido tú quien ha autorizado estas sesiones:"
-"SteamUI_SteamGuardNotifyNewMachinesExplainButtons2" "Si alguna de las sesiones que se detallan no fue autorizada por ti, selecciona 'No, no fui yo' para cambiar tu contraseña y dirección de email de Steam, retirar la autorización a otras ubicaciones y reactivar Steam Guard."
+"SteamUI_SteamGuardNotifyNewMachinesExplainButtons2" "Si alguna de las sesiones que se detallan no fue autorizada por ti, selecciona 'No, no fui yo' para cambiar tu contraseña y dirección de correo electrónico de Steam, retirar la autorización a otras ubicaciones y reactivar Steam Guard."
 "SteamUI_SteamGuardNotifyNewMachines_WebBrowserAt" "IP del navegador"
 "SteamUI_SteamGuardNotifyNewMachines_ComputerAt" "IP del equipo"
 "SteamUI_SteamGuardNotifyNewMachines_CloseButton" "Sí, he sido yo"
@@ -3565,9 +3565,9 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 
 "SteamUI_SteamGuardCompromised_Title" "Steam - Seguridad de cuenta comprometida"
-"SteamUI_SteamGuardCompromised_Explain"	"Parece que la seguridad de tu cuenta de Steam y de tu email se ha visto comprometida.\n\nSe ha revocado la autorización de Steam Guard de todos los demás equipos."
-"SteamUI_SteamGuardCompromised_Explain2"	"Parece que la seguridad de tu cuenta de Steam y de tu email se ha visto comprometida.\n\nSteam Guard ha sido reactivado y se ha revocado la autorización de todos los demás equipos."
-"SteamUI_SteamGuardCompromised_ExplainActions" "Cambia de inmediato la contraseña de tu cuenta de email:\n%s1\n\nAviso: Usa una contraseña nueva y única.\n\nNo continúes hasta que no hayas hecho esto, tu cuenta no estará segura sin dicho cambio."
+"SteamUI_SteamGuardCompromised_Explain"	"Parece que la seguridad de tu cuenta de Steam y de tu correo electrónico se ha visto comprometida.\n\nSe ha revocado la autorización de Steam Guard de todos los demás equipos."
+"SteamUI_SteamGuardCompromised_Explain2"	"Parece que la seguridad de tu cuenta de Steam y de tu correo electrónico se ha visto comprometida.\n\nSteam Guard ha sido reactivado y se ha revocado la autorización de todos los demás equipos."
+"SteamUI_SteamGuardCompromised_ExplainActions" "Cambia de inmediato la contraseña de tu cuenta de correo electrónico:\n%s1\n\nAviso: Usa una contraseña nueva y única.\n\nNo continúes hasta que no hayas hecho esto, tu cuenta no estará segura sin dicho cambio."
 "SteamUI_SteamGuardCompromised_ExplainPasswords" "A continuación cambiarás tu contraseña de Steam."
 "SteamUI_SteamGuardCompromised_ChangePasswordButton" "Cambiar contraseña"
 
@@ -3789,11 +3789,11 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_viewallfriends"		"Ver todos los amigos que juegan a este juego"
 "steam_friendsplayingnowapplication"	"¡Tienes %friendsplayingnow% amigos utilizando «%gamename%» en este momento!"
 "steam_friendplayingnowapplication"	"¡Tienes %friendsplayingnow% amigo utilizando «%gamename%» en este momento!"
-"steam_morefriendswhoplayapplication"		"Tienes %friendswhoplay% amigos más que utilizan ««%gamename%»»"
+"steam_morefriendswhoplayapplication"		"Tienes %friendswhoplay% amigos más que utilizan «%gamename%»"
 "steam_morefriendwhoplaysapplication"		"Tienes %friendswhoplay% amigo más que utiliza «%gamename%»"
-"steam_friendswhoplayapplication"		"Tienes %friendswhoplay% amigos que utilizan ««%gamename%»»"
+"steam_friendswhoplayapplication"		"Tienes %friendswhoplay% amigos que utilizan «%gamename%»"
 "steam_friendwhoplaysapplication"		"Tienes %friendswhoplay% amigo que utiliza «%gamename%»"
-"steam_nofriendswhoplayapplication"	"No tienes amigos que utilicen ««%gamename%»»"
+"steam_nofriendswhoplayapplication"	"No tienes amigos que utilicen «%gamename%»"
 "steam_viewallfriendsapplication"		"Ver todos los amigos que utilizan esta aplicación"
 "steam_RecentNews"		"Últimas noticias"
 "Steam_Screenshots"		"Capturas"
@@ -4240,7 +4240,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "Steam_RememberThisComputer" "¿Recordar este equipo?"
 "SteamUI_Invalid_Account_Name" "Nombre de cuenta no válido"
-"SteamUI_Invalid_Email_Address" "Dirección de email no válida"
+"SteamUI_Invalid_Email_Address" "Dirección de correo electrónico no válida"
 
 "Steam_DeviceAuth_Play_Button" "Jugar"
 "Steam_DeviceAuth_Purchase_Locked" "Comprar"
@@ -4326,8 +4326,8 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_Parental_UnlockTitle"			"Modo familiar"
 "Steam_Parental_UnlockInstructions"		"Introduce tu PIN abajo para salir del modo familiar."
 "Steam_Parental_ForgotPIN"				"He olvidado mi PIN"
-"Steam_Parental_NoRecoveryEmail"		"No hay email de recuperación."
-"Steam_Parental_NoRecoveryEmail_Instructions"		 "No se ha establecido ninguna dirección de email de recuperación para tu cuenta. Para actualizar tu dirección de email de recuperación, sal del modo familiar y vuelve a iniciar su configuración."
+"Steam_Parental_NoRecoveryEmail"		"No hay correo electrónico de recuperación."
+"Steam_Parental_NoRecoveryEmail_Instructions"		 "No se ha establecido ninguna dirección de correo electrónico de recuperación para tu cuenta. Para actualizar tu dirección de correo electrónico de recuperación, sal del modo familiar y vuelve a iniciar su configuración."
 "Steam_Parental_UnlockFailureTitle"		"Modo familiar"
 "Steam_Parental_UnlockFailure"			"Buen intento. Por favor, introduce el PIN correcto."
 "Steam_Parental_UnlockFailureExceeded"	"Demasiados intentos fallidos. Por favor, reinicia Steam para intentarlo de nuevo."
@@ -4802,7 +4802,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_ViewSSAInBrowser" "Debes leer y aceptar el Acuerdo de Suscriptor a Steam.\n<a href=\"%url%\">Haz clic aquí</a> para abrir el acuerdo en tu navegador. Regresa a esta ventana para continuar."
 
 "Steam_VR2DGameWarning_Title" "Advertencia"
-"Steam_VR2DGameWarning_Desc" "%launching_app% se iniciará en un entorno en el HMD de RV así como en el escritorio.\nPuede que el rendimiento no sea aceptable en este modo. Para iniciar el juego solo en el escritorio, sal de SteamVR antes de iniciarlo."
+"Steam_VR2DGameWarning_Desc" "%launching_app% se iniciará tanto en el entorno de tu visor de RV como en el escritorio.\nPuede que el rendimiento no sea aceptable en este modo. Si solo quieres iniciar el juego en el escritorio, sal de SteamVR antes de ejecutarlo."
 "Steam_VR2DGameWarning_Desc_Old" "%launching_app% no es compatible con la RV. Aparecerá en tu escritorio y puede afectar al rendimiento de la RV."
 "Steam_VR2DGameWarning_Desc_VRGame" "%launching_app% incluye compatibilidad nativa con la RV, pero has seleccionado la versión de escritorio. ¿Quieres continuar?"
 
@@ -4814,9 +4814,6 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "Steam_VacBanOnAccount"		"Bloqueo(s) por VAC en la cuenta"
 "Steam_NoVacBanOnAccount"	"Sin bloqueos por VAC en la cuenta"
-
-"Steam_NeedToRestart"		"Reinicio necesario"
-"Steam_NeedToRestartDifferentClientLauncher" "Otra versión de Steam en este ordenador está tratando de iniciarse.\n\nPara ejecutarla, primero tienes que salir de esta versión de Steam."
 
 "Steam_ClientBrowserAuth_AllowBrowserAuth" "Permitir que los navegadores del escritorio accedan automáticamente a los sitios de Steam\n (Requiere reiniciar para que se apliquen los cambios)"
 

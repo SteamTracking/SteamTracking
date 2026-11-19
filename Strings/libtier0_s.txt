@@ -48,8 +48,6 @@ $ORIGIN
 %s: '%s', '%s'
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: no such process %d - %d\n
-( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
-( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (anonymous namespace)
@@ -59,6 +57,7 @@ $ORIGIN
 *N12_GLOBAL__N_122generic_error_categoryE
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG<`
 ++CCUNGstd::exception
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
@@ -109,9 +108,9 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tmp/.steam-sem-names
+00:21:04
 0123456789
 0123456789ABCDEF
-01:59:13
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
@@ -171,6 +170,7 @@ CValidator
 CValidator : too many memory nodes to store, try again with a higher threshold value\n
 CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)
 CValidator::BExcludeAllocationFromTracking(char const*, int)
+CValidator::BExcludeAllocationFromTrackingCached(CExcludeAllocCache&, void const*)
 CValidator::CValidator(int, bool, IMemBlockClaimedList*)
 CValidator::ClaimArrayMemory
 CValidator::ClaimArrayMemory(void const*, bool)
@@ -320,7 +320,6 @@ JArray
 Jobs/Coroutines
 Leaked mem: %s %s\n
 Logger
-Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 Matched '%s' -> '%s'\n
 MemFree:
@@ -348,7 +347,7 @@ Network
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-Nov 13 2026
+Nov 19 2026
 OUT OF MEMORY
 Object
 Only thread can stop self: Use a higher-level protocol
@@ -386,6 +385,7 @@ Plat_AttachDebuggerToProcess
 Plat_CommandLineParamExists
 Plat_CommandLineParamValue
 Plat_DefaultAllocErrorFn
+Plat_ExitProcess
 Plat_FloatTime
 Plat_Free
 Plat_GetExecutablePath
@@ -547,6 +547,7 @@ SteamThreadTools::CThreadSemaphore::Release(long)
 SteamThreadTools::CThreadSharedMutex::CThreadSharedMutex()
 SteamThreadTools::CThreadSharedMutex::LockExclusive()
 SteamThreadTools::CThreadSharedMutex::LockShared() const
+SteamThreadTools::CThreadSharedMutex::TryLockShared() const
 SteamThreadTools::CThreadSharedMutex::UnlockExclusive()
 SteamThreadTools::CThreadSharedMutex::UnlockShared() const
 SteamThreadTools::CThreadSharedMutex::~CThreadSharedMutex()
@@ -667,6 +668,7 @@ Thread synchronization object is unuseable
 Thread(0x%p/0x%p/0x%x)
 ThreadCloseProcess
 ThreadFindProcessByName
+ThreadGetCounterSlot
 ThreadGetCurrentHandle
 ThreadGetCurrentId
 ThreadGetCurrentProcessHandle
@@ -1028,7 +1030,6 @@ pTracker->Find( pKey ) != NULL
 panorama.so
 physical id
 pipe2
-posix_memalign
 ppFrames[iFrame] != NULL
 printf
 processor
@@ -1065,6 +1066,7 @@ pthread_once
 pthread_rwlock_destroy
 pthread_rwlock_init
 pthread_rwlock_rdlock
+pthread_rwlock_tryrdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
 pthread_rwlockattr_destroy

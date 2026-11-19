@@ -5063,6 +5063,9 @@ button.rbc-input::-moz-focus-inner {
   width: 100%;
   padding: 20px 2% 160px;
 }
+.qy15-iPiq04-:has(.-uizKdMptX8-) {
+  max-width: none;
+}
 .VdR3uA9QY9A- {
   background: #2c2e35;
   margin-bottom: 30px;
@@ -6148,17 +6151,25 @@ table.cKYrmNuEAQs- td {
   margin-bottom: 8px;
   display: flex;
 }
-._8IrfwUFPdG8- .VB2dJjDBBsw-,
-._8IrfwUFPdG8- .kt-uyl1dseY- {
+._8IrfwUFPdG8- .VB2dJjDBBsw- {
   width: 280px;
 }
-._8IrfwUFPdG8- .lNRh9jL7LvE- {
+._8IrfwUFPdG8- .kt-uyl1dseY- {
+  width: 360px;
+}
+.swyxOaDtFcY- {
   flex-direction: row;
-  gap: 8px;
-  margin-inline-start: auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
   display: flex;
 }
-._8IrfwUFPdG8- button.DialogButton {
+.swyxOaDtFcY- .lNRh9jL7LvE- {
+  flex-direction: row;
+  gap: 8px;
+  display: flex;
+}
+.swyxOaDtFcY- button.DialogButton {
   white-space: nowrap;
   width: fit-content;
   padding: 0 20px;
@@ -6198,6 +6209,16 @@ table.cKYrmNuEAQs- td {
   text-align: center;
   color: #8f98a0;
   padding: 24px;
+}
+.Ng09o0dZ2HA- {
+  background: #171a21;
+  padding: 4px;
+  box-shadow: 0 0 12px #0009;
+}
+.Ng09o0dZ2HA- img {
+  width: 374px;
+  height: 448px;
+  display: block;
 }
 .Dfb0H0fS094- {
   justify-content: center;

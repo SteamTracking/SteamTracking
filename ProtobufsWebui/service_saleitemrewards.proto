@@ -33,7 +33,8 @@ message CSaleItemRewards_CanClaimItem_Request {
 message CSaleItemRewards_CanClaimItem_Response {
 	optional bool can_claim = 1;
 	optional uint32 next_claim_time = 2;
-	optional .LoyaltyRewardDefinition reward_item = 3;
+	//optional UNKNOWN reward_item = 3;
+	//optional .LoyaltyRewardDefinition reward_item = 3;
 }
 
 message CSaleItemRewards_ClaimItem_Request {
@@ -43,7 +44,8 @@ message CSaleItemRewards_ClaimItem_Request {
 message CSaleItemRewards_ClaimItem_Response {
 	optional uint64 communityitemid = 1;
 	optional uint32 next_claim_time = 2;
-	optional .LoyaltyRewardDefinition reward_item = 3;
+	//optional UNKNOWN reward_item = 3;
+	//optional .LoyaltyRewardDefinition reward_item = 3;
 }
 
 message CSaleItemRewards_GetClaimedSaleRewards_Request {
@@ -111,17 +113,17 @@ message SaleReward_ItemDefinition {
 }
 
 service SaleItemRewards {
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc CanClaimItem (.CSaleItemRewards_CanClaimItem_Request) returns (.CSaleItemRewards_CanClaimItem_Response);
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc ClaimItem (.CSaleItemRewards_ClaimItem_Request) returns (.CSaleItemRewards_ClaimItem_Response);
-	// bConstMethod=true, ePrivilege=1
+	// bConstMethod=true, ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc GetClaimedSaleRewards (.CSaleItemRewards_GetClaimedSaleRewards_Request) returns (.CSaleItemRewards_GetClaimedSaleRewards_Response);
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetCurrentDefinition (.CSaleItemRewards_GetCurrentDefinition_Request) returns (.CSaleItemRewards_GetCurrentDefinition_Response);
-	// bConstMethod=true, ePrivilege=4
+	// bConstMethod=true, ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc GetRewardDefinitions (.CSaleItemRewards_GetRewardDefinitions_Request) returns (.CSaleItemRewards_GetRewardDefinitions_Response);
-	// ePrivilege=4
+	// ePrivilege=4, rgBrowserAPISites=ArrayExpression
 	rpc SetRewardDefinitions (.CSaleItemRewards_SetRewardDefinitions_Request) returns (.CSaleItemRewards_SetRewardDefinitions_Response);
 }
 

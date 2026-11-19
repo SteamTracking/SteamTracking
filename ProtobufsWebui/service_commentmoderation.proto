@@ -36,7 +36,7 @@ message CommentClassification {
 }
 
 service CommentModeration {
-	// ePrivilege=1
+	// ePrivilege=1, rgBrowserAPISites=ArrayExpression
 	rpc UpdateCommentReportState (.CCommentModeration_UpdateCommentReportState_Request) returns (.CCommentModeration_UpdateCommentReportState_Response);
 }
 
