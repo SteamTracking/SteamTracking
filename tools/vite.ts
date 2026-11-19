@@ -121,6 +121,8 @@ function BuildChunkNames(): Map<string, ChunkName> {
 		const id = hash("sha256", path).slice(0, 10);
 		const sourcePath = path.replace(/^(\.\.\/)+/, "");
 		const name = GetPathName(sourcePath);
+		// The community webui is the friendsui project, which the client imports as `../friendsui/`
+		const sourceKey = sourcePath.replace(/^friendsui\//, "").replace(/\.[^./]*$/, "");
 
 		if (!idNames.has(id)) {
 			idNames.set(id, name);
@@ -137,7 +139,7 @@ function BuildChunkNames(): Map<string, ChunkName> {
 			sources.set(name, nameSources);
 		}
 
-		nameSources.add(sourcePath.replace(/\.[^./]*$/, ""));
+		nameSources.add(sourceKey);
 	}
 
 	for (const [id, name] of chunkTemporaryNames) {
