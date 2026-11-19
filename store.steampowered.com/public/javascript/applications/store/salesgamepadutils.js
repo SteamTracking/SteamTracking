@@ -2,11 +2,11 @@
  ****/
 
 import {
-  Do as e,
-  Gt as t,
-  bo as n,
-  gi as r,
-  vi as i,
+  Aa as e,
+  Ps as t,
+  Vs as n,
+  ir as r,
+  ka as i,
 } from "./chunk~6b8ddcaac8.js";
 import { t as a } from "./chunk~4c13037b22.js";
 import {
@@ -20,13 +20,13 @@ import {
   Xb as p,
   Yu as m,
 } from "./main.js";
-function h(e, n, r, i, l, f) {
-  if (!r) return;
-  if (!t(e.item_type)) {
+function h(e, t, n, i, l, f) {
+  if (!n) return;
+  if (!r(e.item_type)) {
     u(!1, `StoreItemWidgetSalePageAction: unexpected type: ` + e.item_type);
     return;
   }
-  let p = s(`${a(e, i)}${l ? `?${l}` : ``}`, n);
+  let p = s(`${a(e, i)}${l ? `?${l}` : ``}`, t);
   return {
     onClick: (e) => {
       let t = c(e) || window;
@@ -47,14 +47,14 @@ function g(e) {
         return e.appid;
     }
 }
-function _(t) {
+function _(r) {
   let a = f(),
-    { data: s } = l(a ? t : void 0),
+    { data: s } = l(a ? r : void 0),
     c = g(s),
-    u = !!i(c),
-    { bIsOwned: d } = n(e(c)),
+    u = !!e(c),
+    { bIsOwned: d } = t(n(c)),
     h = m(),
-    { mutate: _ } = r(c, !u, h),
+    { mutate: _ } = i(c, !u, h),
     v = !!d && s?.type != 10;
   return !a || !p.logged_in || !c || v
     ? {}

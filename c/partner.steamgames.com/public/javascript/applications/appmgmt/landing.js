@@ -58,7 +58,6 @@ import {
   _,
   _,
   _,
-  _,
 } from "./chunk~54f70c90c1.js";
 import {
   _,
@@ -78,13 +77,15 @@ import {
   _,
   _,
 } from "./chunk~1fa4b8f2ff.js";
+import { _ } from "./chunk~0a99e05c44.js";
+import { _ } from "./chunk~6b8ddcaac8.js";
 import "./chunk~44f252525d.js";
 import { _ } from "./chunk~ede3e357a2.js";
 import "./chunk~a825a84845.js";
 import { _ } from "./chunk~b0a84aab1b.js";
 import { _, _ } from "./chunk~fc8a9e4879.js";
 import { _ } from "./chunk~9d71b14b50.js";
-import { _, _, _, _, _, _, _ } from "./chunk~0aa5028ef4.js";
+import { _, _, _, _, _, _ } from "./chunk~0aa5028ef4.js";
 import { _ } from "./chunk~af36c62e9f.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~0111fcd096.js";
@@ -651,66 +652,98 @@ var _ = `j-KLJ7Mtr80-`,
   _ = `_87cPEnGNg-A-`,
   _ = `Rulq0q4y6GY-`,
   _ = `lfrlL7fm77Q-`,
-  _ = class _ {
-    m_rgOptIns;
-    m_rgOptInComputed = new Map();
-    static async Construct() {
-      let _ = new _();
-      return (await _.Init(), _);
+  _ = 100;
+async function _(_, _, _, _) {
+  let _ = [];
+  for (let _ = 0; _ < _.length; _ += _) _.push(_.slice(_, _ + _));
+  return (
+    await Promise.all(
+      _.map(async (_) => {
+        let _ = new URLSearchParams({
+          appids: _.join(`,`),
+          start: String(_),
+          end: String(_),
+        });
+        _ && _.set(`mindiscountpct`, String(_));
+        let _ = `${_.PARTNER_BASE_URL}discounts/ajaxgetappsdiscountforevent?${_.toString()}`,
+          _ = await fetch(_, {
+            credentials: `include`,
+          });
+        if (!_._) throw Error(`${_} answered ${_.status}`);
+        let _ = await _.json();
+        if (_.success != 1)
+          throw Error(_.msg || `${_} answered EResult ${_.success}`);
+        return _.apps ?? [];
+      }),
+    )
+  ).flat();
+}
+function _(_, _, _, _) {
+  let _ = Array.from(new Set(_))
+      .filter((_) => _ > 0)
+      .sort((_, _) => _ - _),
+    { data: _ } = _({
+      queryKey: [`useAppsDiscountForEvent`, _, _, _, _ ?? 0],
+      queryFn: () => _(_, _, _, _),
+      enabled: _ > 0 && _ > _ && _.length > 0,
+    });
+  return _.useMemo(() => _ && new Map(_.map((_) => [_.appid, _])), [_]);
+}
+var _ = class _ {
+  m_rgOptIns;
+  m_rgOptInComputed = new Map();
+  static async Construct() {
+    let _ = new _();
+    return (await _.Init(), _);
+  }
+  async Init() {
+    let _ = _(`publisherid`, `application_config`),
+      _ = _ > 0 ? `?publisherid=${_}` : ``,
+      _ = await fetch(`${_.PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard${_}`);
+    try {
+      ((this.m_rgOptIns = await _.json()),
+        this.m_rgOptIns && _.ExtractOptInDefinitions(this.m_rgOptIns));
+    } catch {
+      this.m_rgOptIns = {};
     }
-    async Init() {
-      let _ = _(`publisherid`, `application_config`),
-        _ = _ > 0 ? `?publisherid=${_}` : ``,
-        _ = await fetch(
-          `${_.PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard${_}`,
-        );
-      try {
-        ((this.m_rgOptIns = await _.json()),
-          this.m_rgOptIns && _.ExtractOptInDefinitions(this.m_rgOptIns));
-      } catch {
-        this.m_rgOptIns = {};
-      }
+  }
+  static ExtractOptInDefinitions(_) {
+    for (let _ of Object.keys(_)) {
+      let _ = _[_].description,
+        _ = _(_?.jsondata);
+      (delete _?.jsondata, _ && (_[_].description.definition = _));
     }
-    static ExtractOptInDefinitions(_) {
-      for (let _ of Object.keys(_)) {
-        let _ = _[_].description,
-          _ = _(_?.jsondata);
-        (delete _?.jsondata, _ && (_[_].description.definition = _));
-      }
+  }
+  GetOptInNames() {
+    return Object.keys(this.m_rgOptIns ?? {});
+  }
+  GetInfo(_) {
+    if (!_) return;
+    if (this.m_rgOptInComputed.has(_)) return this.m_rgOptInComputed.get(_);
+    let _ = this.m_rgOptIns?.[_];
+    if (!_) {
+      this.m_rgOptInComputed.set(_, void 0);
+      return;
     }
-    GetOptInNames() {
-      return Object.keys(this.m_rgOptIns ?? {});
-    }
-    GetInfo(_) {
-      if (!_) return;
-      if (this.m_rgOptInComputed.has(_)) return this.m_rgOptInComputed.get(_);
-      let _ = this.m_rgOptIns?.[_];
-      if (!_) {
-        this.m_rgOptInComputed.set(_, void 0);
-        return;
-      }
-      let _ = new Set(_.invited_appids),
-        _ = _.description.definition.invitation_only
-          ? _.summary?.apps_eligible.filter((_) => _.has(_.appid))
-          : _.summary?.apps_eligible,
-        _ = {
-          description: _.description,
-          rgEligibleApps: _,
-          rgRegisteredApps: _.summary?.apps_in,
-          rgFeaturedApps: _.featured_appids,
-          rgInvitedAppIDs: _.invited_appids ?? [],
-          mapDiscountStatus: _.discount_status
-            ? new Map(
-                Object.entries(_.discount_status).map(([_, _]) => [
-                  Number(_),
-                  _,
-                ]),
-              )
-            : void 0,
-        };
-      return (this.m_rgOptInComputed.set(_, _), _);
-    }
-  };
+    let _ = new Set(_.invited_appids),
+      _ = _.description.definition.invitation_only
+        ? _.summary?.apps_eligible.filter((_) => _.has(_.appid))
+        : _.summary?.apps_eligible,
+      _ = {
+        description: _.description,
+        rgEligibleApps: _,
+        rgRegisteredApps: _.summary?.apps_in,
+        rgFeaturedApps: _.featured_appids,
+        rgInvitedAppIDs: _.invited_appids ?? [],
+        mapDiscountStatus: _.discount_status
+          ? new Map(
+              Object.entries(_.discount_status).map(([_, _]) => [Number(_), _]),
+            )
+          : void 0,
+      };
+    return (this.m_rgOptInComputed.set(_, _), _);
+  }
+};
 function _() {
   return _({
     queryKey: [`DashboardOptInStore`],
@@ -1179,15 +1212,18 @@ function _(_) {
       _.m_optIn.rgRegisteredApps &&
       _.m_optIn.rgFeaturedApps &&
       _.m_optIn.description.definition.additional_featuring_section_enabled,
-    _ = _.useMemo(
-      () =>
-        _.m_optIn?.rgRegisteredApps?.map((_) => ({
-          appid: _.appid,
-          appName: _.app_name,
-        })) ?? [],
-      [_.m_optIn?.rgRegisteredApps],
+    _ = _(
+      _.useMemo(
+        () =>
+          _.m_optIn?.rgRegisteredApps?.map((_) => ({
+            appid: _.appid,
+            appName: _.app_name,
+          })) ?? [],
+        [_.m_optIn?.rgRegisteredApps],
+      ),
+      _.m_plan.start_date,
+      _.m_plan.end_date,
     ),
-    _ = _(_.m_partnerId, _, _.m_plan.start_date, _.m_plan.end_date),
     _ = _(),
     _ = _(),
     _ = _.setManageDiscountsAppIDs;
@@ -1698,19 +1734,22 @@ function _(_) {
       include_basic_info: !0,
       include_assets: !0,
     }),
-    _ = _.useMemo(
-      () =>
-        _
-          ? [
-              {
-                appid: _.GetAppID(),
-                appName: _.GetName(),
-              },
-            ]
-          : void 0,
-      [_],
+    _ = _(
+      _.useMemo(
+        () =>
+          _
+            ? [
+                {
+                  appid: _.GetAppID(),
+                  appName: _.GetName(),
+                },
+              ]
+            : void 0,
+        [_],
+      ),
+      _.start_date,
+      _.end_date,
     ),
-    _ = _(_.m_partnerId, _, _.start_date, _.end_date),
     _ = _ && _.discount_event_id,
     _ = _.discount_event_id
       ? `${_.PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_.discount_event_id}`
@@ -1763,15 +1802,18 @@ function _(_) {
         details: _,
         bRegistered: _,
       })) ?? [],
-    _ = _.useMemo(
-      () =>
-        _?.rgRegisteredApps?.map((_) => ({
-          appid: _.appid,
-          appName: _.app_name,
-        })) ?? [],
-      [_?.rgRegisteredApps],
+    _ = _(
+      _.useMemo(
+        () =>
+          _?.rgRegisteredApps?.map((_) => ({
+            appid: _.appid,
+            appName: _.app_name,
+          })) ?? [],
+        [_?.rgRegisteredApps],
+      ),
+      _.start_date,
+      _.end_date,
     ),
-    _ = _(_.m_partnerId, _, _.start_date, _.end_date),
     _ = _.useMemo(
       () =>
         _?.length &&
@@ -1782,7 +1824,7 @@ function _(_) {
               (0, _.jsx)(
                 `div`,
                 {
-                  children: `${_.appName} (${_(_.discountsDuring)})`,
+                  children: `${_.appName} (${_(_.discount)})`,
                 },
                 _.appid,
               ),
@@ -2023,15 +2065,19 @@ function _(_) {
     _ = _.discount_event_id
       ? `${_.PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_.discount_event_id}`
       : void 0,
-    _ = _.useMemo(
-      () =>
-        _?.map((_) => ({
-          appid: _.appid,
-          appName: _.app_name,
-        })) ?? [],
-      [_],
-    ),
-    _ = _(_.m_partnerId, _, _.start_date, _.end_date)?.length > 0,
+    _ =
+      _(
+        _.useMemo(
+          () =>
+            _?.map((_) => ({
+              appid: _.appid,
+              appName: _.app_name,
+            })) ?? [],
+          [_],
+        ),
+        _.start_date,
+        _.end_date,
+      )?.length > 0,
     _ = _?.description?.definition?.localized_optin_banner?.[_.LANGUAGE],
     _ = _?.description.opt_in_name && _ && _(_?.description.opt_in_name, _, _),
     _ = _ && _,
@@ -2121,51 +2167,26 @@ function _(_) {
     day: `numeric`,
     year: `2-digit`,
   });
-  return _(_, (_) => `${_.rtStartDate}_${_.rtEndDate}`)
-    .map(
-      (_) =>
-        `${_.format(new Date(_.rtStartDate * 1e3))} - ${_.format(new Date(_.rtEndDate * 1e3))}`,
-    )
-    .join(`, `);
+  return `${_.format(new Date(_.start_date * 1e3))} - ${_.format(new Date(_.end_date * 1e3))}`;
 }
-function _(_, _, _, _) {
-  let _ = _.useMemo(
-      () =>
-        _?.map((_) => ({
+var _ = new Set([1, 7, 8, 9]);
+function _(_, _, _) {
+  let _ = _(
+    _.useMemo(() => _?.map((_) => _.appid) ?? [], [_]),
+    _,
+    _,
+  );
+  return _.useMemo(
+    () =>
+      (_ ?? [])
+        .map((_) => ({
           appid: _.appid,
           appName: _.appName,
-          startDate: _,
-          endDate: _,
-        })) ?? [],
-      [_, _, _],
-    ),
-    _ = _.useMemo(() => _?.map((_) => _.appid) ?? [], [_]),
-    _ = _(_, {
-      nPartnerID: _,
-    });
-  return _.useMemo(() => {
-    let _ = _?.reduce((_, _) => _.set(_.appid, _), new Map());
-    return (
-      _ && _
-        ? Array.from(_)
-            .map(([_, _]) => ({
-              appid: _,
-              discountsDuring: _?.discounts?.filter(
-                (_) =>
-                  _.get(_).startDate &&
-                  _.get(_).startDate <= _.rtEndDate &&
-                  _.get(_).endDate &&
-                  _.rtStartDate <= _.get(_).endDate,
-              ),
-            }))
-            .filter((_) => _.discountsDuring?.length)
-        : void 0
-    )?.map(({ appid: _, discountsDuring: _ }) => ({
-      appid: _,
-      appName: _?.get(_).appName,
-      discountsDuring: _,
-    }));
-  }, [_, _]);
+          discount: _?.get(_.appid),
+        }))
+        .filter((_) => _.discount && _.has(_.discount.status)),
+    [_, _],
+  );
 }
 function _(_, _, _, _) {
   let _ = _;
@@ -3820,11 +3841,10 @@ function _(_) {
 }
 var _ = `qLJQMv2BRm8-`,
   _ = `WPmn4BD-cnk-`,
+  _ = `tosx4mmDBDA-`,
+  _ = `-Pqt9C8D2zg-`,
   _ = `ZHqFiLwZ8SY-`,
-  _ = 604800,
-  _ = {
-    include_assets: !0,
-  };
+  _ = 604800;
 function _(_) {
   let _ = _(),
     _ = _(),
@@ -3958,7 +3978,11 @@ function _(_) {
 }
 function _(_) {
   let { game: _, rowData: _, nMinDiscountPct: _, bUrgent: _ } = _,
-    [_] = _(_.appid, _),
+    _ = {
+      appid: _.appid,
+    },
+    { data: _ } = _(_),
+    _ = _(_, `header`),
     _ = _.optIn.description.definition,
     _ = new Intl.DateTimeFormat(navigator.language, {
       month: `short`,
@@ -3987,27 +4011,41 @@ function _(_) {
     children: [
       (0, _.jsx)(`div`, {
         className: _,
-        children: _?.GetName() || `(${_.appid})`,
+        children:
+          _ &&
+          (0, _.jsx)(`img`, {
+            src: _,
+            alt: ``,
+          }),
       }),
-      (0, _.jsx)(_, {
-        complete: _.bAnswered,
-        urgent: _,
-        label: _(`#Dashboard_DeepestDiscount_Answer`),
-        status: _,
-        actionStatus: _
-          ? _(`#Dashboard_DeepestDiscount_Answer_Button`)
-          : void 0,
-        actionUrl: _ ? _ : void 0,
-      }),
-      (0, _.jsx)(_, {
-        complete: _.eDiscount,
-        urgent: _,
-        label: _(`#Dashboard_DeepestDiscount_Discount`, _),
-        status: _,
-        actionStatus: _
-          ? _(`#Dashboard_DeepestDiscount_Discount_Button`)
-          : void 0,
-        actionUrl: _ ? _ : void 0,
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsx)(`div`, {
+            className: _,
+            children: _?.name || `(${_.appid})`,
+          }),
+          (0, _.jsx)(_, {
+            complete: _.bAnswered,
+            urgent: _,
+            label: _(`#Dashboard_DeepestDiscount_Answer`),
+            status: _,
+            actionStatus: _
+              ? _(`#Dashboard_DeepestDiscount_Answer_Button`)
+              : void 0,
+            actionUrl: _ ? _ : void 0,
+          }),
+          (0, _.jsx)(_, {
+            complete: _.eDiscount,
+            urgent: _,
+            label: _(`#Dashboard_DeepestDiscount_Discount`, _),
+            status: _,
+            actionStatus: _
+              ? _(`#Dashboard_DeepestDiscount_Discount_Button`)
+              : void 0,
+            actionUrl: _ ? _ : void 0,
+          }),
+        ],
       }),
     ],
   });

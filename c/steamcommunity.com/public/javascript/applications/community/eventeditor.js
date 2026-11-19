@@ -5900,10 +5900,12 @@ function _(_) {
                   children: _(`#EventEditor_CrossPromoArt_ScrimColor_Label`),
                 }),
                 (0, _.jsx)(`span`, {
-                  className: `r6WYpHbc7f8-`,
-                  style: {
-                    background: _ || `#000000`,
-                  },
+                  className: _(`r6WYpHbc7f8-`, !_ && `_0pVtclCkHfg-`),
+                  style: _
+                    ? {
+                        background: _,
+                      }
+                    : void 0,
                 }),
                 (0, _.jsx)(`span`, {
                   className: `dTHv3h5Lt04-`,
@@ -5919,6 +5921,12 @@ function _(_) {
                     }),
                   children: _(`#EventEditor_CrossPromoArt_ScrimColor_Choose`),
                 }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    className: `Ib3ChwuUeec-`,
+                    onClick: () => _(void 0),
+                    children: _(`#EventEditor_CrossPromoArt_ScrimColor_Reset`),
+                  }),
               ],
             }),
             (0, _.jsx)(_, {
@@ -6047,18 +6055,28 @@ function _(_) {
   let { editModel: _, strBackgroundURL: _, strScrimColor: _, eLayout: _ } = _,
     _ = _(() => _(_.GetEventModel(), _(_.LANGUAGE)));
   return (0, _.jsxs)(`div`, {
-    className: _(_, _ === `logo_left` ? _ : _, !_ && `_1Sd0N8u6aBw-`),
+    className: _(
+      _,
+      _ === `logo_left` ? _ : _,
+      !_ && `_1Sd0N8u6aBw-`,
+      _ && `_43CkJ2VflCE-`,
+    ),
     style: _
       ? {
           backgroundImage: `url(${_})`,
+          "--cross-promo-fade-color": _,
         }
       : void 0,
     children: [
       _ &&
         (0, _.jsx)(`div`, {
           className: `_2izhRvP-rcU-`,
+        }),
+      _ &&
+        (0, _.jsx)(`div`, {
+          className: `TBMtg7dsexw-`,
           style: {
-            "--cross-promo-scrim-color": _ || `#000000`,
+            backgroundImage: `url(${_})`,
           },
         }),
       _ &&

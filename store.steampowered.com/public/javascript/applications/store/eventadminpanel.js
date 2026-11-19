@@ -12,39 +12,39 @@ import {
   st as s,
   u as c,
 } from "./chunk~01cfc309bf.js";
+import { Ot as l } from "./chunk~6b8ddcaac8.js";
+import { l as u, m as d, s as f } from "./chunk~f57d770d64.js";
 import {
-  C as l,
-  S as u,
-  St as d,
-  bt as f,
-  ct as p,
-  ot as m,
-  st as h,
-  tt as g,
-  wt as _,
-  xt as v,
-  yt as y,
+  Ct as p,
+  S as m,
+  at as h,
+  bt as g,
+  et as _,
+  ot as v,
+  st as y,
+  vt as b,
+  x,
+  xt as S,
+  yt as C,
 } from "./chunk~2185942436.js";
-import { l as b, m as x, s as S } from "./chunk~f57d770d64.js";
 import {
-  C,
-  T as w,
+  C as w,
+  T as ee,
   cn as T,
   f as E,
-  nn as ee,
-  nt as te,
-  st as ne,
-  w as re,
-  x as ie,
-  y as ae,
+  nn as te,
+  nt as ne,
+  st as re,
+  w as ie,
+  x as ae,
+  y as oe,
 } from "./chunk~cf3721cc1c.js";
 import { n as D, r as O, s as k } from "./chunk~673650a653.js";
 import "./chunk~8681f5c764.js";
-import { t as oe } from "./chunk~eefd71512b.js";
+import { t as se } from "./chunk~eefd71512b.js";
 import { M as A, i as j, u as M } from "./chunk~2f8c67b4de.js";
-import { c as N, r as se } from "./chunk~95ecbf576c.js";
-import { u as ce } from "./chunk~7b4b9eb713.js";
-import { i as le } from "./chunk~331382b23f.js";
+import { u as N } from "./chunk~7b4b9eb713.js";
+import { c as ce, r as le } from "./chunk~95ecbf576c.js";
 import {
   $b as ue,
   Ay as de,
@@ -119,43 +119,43 @@ function Me(e) {
       onDeleteRequest: a,
       saleDayControl: o,
       promotionPlanLinks: s,
-      testControls: l,
-      bSupportsSticky: u = !1,
+      testControls: u,
+      bSupportsSticky: f = !1,
     } = e,
-    d = be(),
-    f = le(),
-    [p, m, h, g] = c(() => [
+    p = be(),
+    m = l(),
+    [h, g, _, v] = c(() => [
       t.visibility_state,
       t.jsondata.bSaleEnabled,
       t.GID,
       t.clanSteamID.GetAccountID(),
     ]),
-    [_, v] = Y.useState(u),
-    { bVisible: y, ref: b } = Ce();
-  if (!(n?.can_edit || n?.support_user) || d) return (0, X.jsx)(`span`, {});
-  let S = ke(),
-    T = S == `community`,
-    ee = S == `store`,
+    [y, b] = Y.useState(f),
+    { bVisible: x, ref: S } = Ce();
+  if (!(n?.can_edit || n?.support_user) || p) return (0, X.jsx)(`span`, {});
+  let C = ke(),
+    T = C == `community`,
+    te = C == `store`,
     k = !!n.support_user,
-    oe = Ne(n),
-    A = _ && !y,
+    se = Ne(n),
+    A = y && !x,
     M = t.GetEventType() == 36,
     N =
-      (p == x.k_EEventStateVisible || p == x.k_EEventStateUnlisted) &&
+      (h == d.k_EEventStateVisible || h == d.k_EEventStateUnlisted) &&
       (!M || r),
-    se = p == x.k_EEventStateStaged;
+    ce = h == d.k_EEventStateStaged;
   return (0, X.jsxs)(xe, {
     children: [
-      (0, X.jsx)(`div`, { className: J(re, A && `FWx4hiffwLs-`) }),
+      (0, X.jsx)(`div`, { className: J(ie, A && `FWx4hiffwLs-`) }),
       (0, X.jsxs)(`div`, {
-        className: J({ [ae]: !0, [te]: T, [ne]: A }),
+        className: J({ [oe]: !0, [ne]: T, [re]: A }),
         children: [
           (0, X.jsx)(`span`, {
-            className: C,
+            className: w,
             children: P.Localize(`#EventDisplay_Admin_Title`),
           }),
           (0, X.jsxs)(`div`, {
-            className: J(w, A && `FWx4hiffwLs-`),
+            className: J(ee, A && `FWx4hiffwLs-`),
             children: [
               i,
               i &&
@@ -187,7 +187,7 @@ function Me(e) {
                     route: D.k_eCommunityPublish,
                     className: J(`yYL-OrX9PtQ-`, `_09V7NXTmtlY-`),
                     children: P.Localize(
-                      se
+                      ce
                         ? `#EventEditor_Publish_VisibleNow`
                         : `#Button_Publish`,
                     ),
@@ -200,41 +200,41 @@ function Me(e) {
                 children: P.Localize(`#EventDisplay_Events`),
               }),
               o,
-              !!(m && f && !M) &&
+              !!(g && m && !M) &&
                 (0, X.jsx)(O, {
                   eventModel: t,
                   route: D.k_eStoreSalePage,
                   className: J(`yYL-OrX9PtQ-`, `_09V7NXTmtlY-`),
                   children: P.Localize(`#EventDisplay_SalesPage`),
                 }),
-              !!(m && k && h) &&
+              !!(g && k && _) &&
                 (0, X.jsx)(`a`, {
                   href:
                     W.STATS_BASE_URL +
                     `sales/details/?gid=` +
-                    h +
+                    _ +
                     `&clanid=` +
-                    g,
+                    v,
                   target: W.IN_CLIENT ? `` : `_blank`,
                   rel: `noreferrer`,
                   className: J(`yYL-OrX9PtQ-`, `_09V7NXTmtlY-`, `u6DPgTclyv4-`),
                   children: P.Localize(`#EventDisplay_StatsPage`),
                 }),
-              !!(m && k && h && !M) &&
+              !!(g && k && _ && !M) &&
                 (0, X.jsx)(`a`, {
                   href:
                     W.PARTNER_BASE_URL +
                     `promotion/invitationplanner/dashboard?saleclaneventgid=` +
-                    h +
+                    _ +
                     `&saleclanaccountid=` +
-                    g,
+                    v,
                   target: W.IN_CLIENT ? `` : `_blank`,
                   rel: `noreferrer`,
                   className: J(`yYL-OrX9PtQ-`, `_09V7NXTmtlY-`, `u6DPgTclyv4-`),
                   children: P.Localize(`#EventDisplay_InvitationPlannerPage`),
                 }),
               s,
-              !!(m && oe && g == 41316928 && t.GetContentHubCategory()) &&
+              !!(g && se && v == 41316928 && t.GetContentHubCategory()) &&
                 (0, X.jsx)(`a`, {
                   href: `${W.PARTNER_BASE_URL}admin/store/contenthub/categories?edit=${t.GetContentHubCategory()}`,
                   target: W.IN_CLIENT ? `` : `_blank`,
@@ -242,13 +242,13 @@ function Me(e) {
                   className: J(`yYL-OrX9PtQ-`, `_09V7NXTmtlY-`, `u6DPgTclyv4-`),
                   children: P.Localize(`#EventDisplay_CategoryEditor`),
                 }),
-              !!(N && (ee || (f && !T))) &&
+              !!(N && (te || (m && !T))) &&
                 (0, X.jsx)(O, {
                   eventModel: t,
-                  route: m ? D.k_eCommunityPreviewSale : D.k_eCommunityView,
+                  route: g ? D.k_eCommunityPreviewSale : D.k_eCommunityView,
                   className: J(`yYL-OrX9PtQ-`, `_09V7NXTmtlY-`),
                   children: P.Localize(
-                    m
+                    g
                       ? `#EventDisplay_PreviewOnCommunity`
                       : `#EventDisplay_ViewOnCommunity`,
                   ),
@@ -260,14 +260,14 @@ function Me(e) {
                   className: J(`yYL-OrX9PtQ-`, `_09V7NXTmtlY-`),
                   children: P.Localize(`#EventDisplay_ViewOnStore`),
                 }),
-              l,
+              u,
               A &&
                 (0, X.jsx)(`div`, {
                   className: `ZlbFAmu86SM-`,
                   role: `button`,
                   tabIndex: 0,
-                  onClick: () => v(!1),
-                  onKeyDown: Z(() => v(!1)),
+                  onClick: () => b(!1),
+                  onKeyDown: Z(() => b(!1)),
                   children: (0, X.jsx)(fe, {
                     toolTipContent: P.Localize(
                       `#EventDisplay_Admin_Close_ttip`,
@@ -275,14 +275,14 @@ function Me(e) {
                     children: (0, X.jsx)(Se, {}),
                   }),
                 }),
-              !_ &&
-                u &&
+              !y &&
+                f &&
                 (0, X.jsx)(`div`, {
                   className: `ZlbFAmu86SM-`,
                   role: `button`,
                   tabIndex: 0,
-                  onClick: () => v(!0),
-                  onKeyDown: Z(() => v(!0)),
+                  onClick: () => b(!0),
+                  onKeyDown: Z(() => b(!0)),
                   children: (0, X.jsx)(fe, {
                     toolTipContent: P.Localize(
                       `#EventDisplay_Admin_Reopen_ttip`,
@@ -294,7 +294,7 @@ function Me(e) {
           }),
         ],
       }),
-      (0, X.jsx)(`div`, { className: ie, ref: b }),
+      (0, X.jsx)(`div`, { className: ae, ref: S }),
     ],
   });
 }
@@ -5123,7 +5123,7 @@ function cn(e) {
             (0, X.jsxs)(
               `div`,
               {
-                className: N,
+                className: ce,
                 children: [
                   (0, X.jsx)(`input`, {
                     type: `checkbox`,
@@ -5144,14 +5144,14 @@ function cn(e) {
       break;
     case `waiting`:
       ((b = F(`#EventDisplay_DeleteEvent_InProgress`)),
-        x.push((0, X.jsx)(oe, {}, `throbber`)));
+        x.push((0, X.jsx)(se, {}, `throbber`)));
       break;
     case `error`:
       ((b = F(`#EventDisplay_DeleteEvent_Error`)),
         x.push(
           (0, X.jsx)(
             `div`,
-            { className: se, children: c.strErrorMsg },
+            { className: le, children: c.strErrorMsg },
             `deleteerror_` + ++sn,
           ),
         ));
@@ -5161,7 +5161,7 @@ function cn(e) {
         x.push(
           (0, X.jsx)(
             `div`,
-            { className: se, children: c.strErrorMsg },
+            { className: le, children: c.strErrorMsg },
             `deleteerror_` + ++sn,
           ),
         ),
@@ -5223,45 +5223,45 @@ function fn(e) {
 function pn(e) {
   let { eventModel: t } = e,
     [n, i] = (0, Y.useState)(!1),
-    o = _(),
+    o = p(),
     s = r(),
-    c = d();
+    c = S();
   if (
     ((0, Y.useEffect)(() => {
-      y(s).then(() => i(!0));
+      b(s).then(() => i(!0));
     }, [s]),
     !n)
   )
     return null;
   let l = t.GetSaleSectionsByType(`quiz`),
     u = l.length > 0 ? l[0].quiz : void 0,
-    g = u?.answer_categories ?? [],
-    b = [],
-    x = l.length > 0 ? l[0].unique_id : void 0,
-    S =
+    d = u?.answer_categories ?? [],
+    f = [],
+    m = l.length > 0 ? l[0].unique_id : void 0,
+    _ =
       l.length == 1 &&
       (u?.quiz_type == `scenario` || u?.quiz_type == `branching`) &&
-      g.length > 0;
-  if (S)
-    (b.push({ label: `State: Reset the Quiz`, data: -1 }),
-      b.push(
-        ...g.map((e) => ({
+      d.length > 0;
+  if (_)
+    (f.push({ label: `State: Reset the Quiz`, data: -1 }),
+      f.push(
+        ...d.map((e) => ({
           label: dn + e.category_name,
           data: e.door_index ?? 0,
         })),
       ),
-      b.push(
-        ...g.map((e) => ({
+      f.push(
+        ...d.map((e) => ({
           label: `Rewarded as: ` + e.category_name,
           data: e.door_index ?? 0,
         })),
       ));
   else
     for (let e = -1; e <= 7; ++e)
-      b.push({ label: `Doors Opened ` + (e + 1), data: e });
-  let C = t.GetSaleSectionsByType(`rewards`),
-    w = C.length > 0 ? C[0] : void 0,
-    T = w?.rewards?.reward_items ?? [];
+      f.push({ label: `Doors Opened ` + (e + 1), data: e });
+  let x = t.GetSaleSectionsByType(`rewards`),
+    w = x.length > 0 ? x[0] : void 0,
+    ee = w?.rewards?.reward_items ?? [];
   return (0, X.jsxs)(X.Fragment, {
     children: [
       (0, X.jsx)(`a`, {
@@ -5280,15 +5280,15 @@ function pn(e) {
       }),
       (0, X.jsx)(I, {
         strDropDownClassName: J(M),
-        rgOptions: b,
+        rgOptions: f,
         selectedOption: o,
         label: `Minigame States:`,
         onChange: (e) => {
           let t = [];
-          if (S)
+          if (_)
             a(() => {
-              if ((v(s, -1), m(s, x), e.data != -1)) {
-                let n = g.find((t) => t.door_index == e.data),
+              if ((g(s, -1), h(s, m), e.data != -1)) {
+                let n = d.find((t) => t.door_index == e.data),
                   r = n?.category_id;
                 (n &&
                   r !== void 0 &&
@@ -5298,22 +5298,22 @@ function pn(e) {
                       let n = e.answers ?? [],
                         i = n.findIndex((e) => e.category_ids?.includes(r));
                       (i < 0 && (i = 0),
-                        p(s, x, t, n[i].category_ids),
-                        h(s, x, t, n[i]));
+                        y(s, m, t, n[i].category_ids),
+                        v(s, m, t, n[i]));
                     }),
                   fn(e.label).startsWith(dn) ||
-                    (f(s, 0, !0), f(s, e.data, !0), t.push(0), t.push(e.data)));
+                    (C(s, 0, !0), C(s, e.data, !0), t.push(0), t.push(e.data)));
               }
             });
           else {
             for (let n = 0; n <= e.data; ++n) t.push(n);
-            v(s, e.data);
+            g(s, e.data);
           }
-          let n = T[0]?.appid;
+          let n = ee[0]?.appid;
           if (w && n !== void 0 && e.data > -1 && !fn(e.label).startsWith(dn)) {
             let e = t.map((e) => un(w, e)).filter(Boolean),
               r = [];
-            (e.forEach((e) => r.push(...e)), ee(s, n, r));
+            (e.forEach((e) => r.push(...e)), te(s, n, r));
           }
         },
       }),
@@ -5337,7 +5337,7 @@ function mn(e) {
       t.clanSteamID.GetAccountID(),
     ]),
     { data: h } = T(m),
-    _ = (e) => {
+    g = (e) => {
       n &&
         me(
           (0, X.jsx)(cn, {
@@ -5348,8 +5348,8 @@ function mn(e) {
           he(e) ?? window,
         );
     },
-    v = g(),
-    { creatorHome: y } = ce(m);
+    v = _(),
+    { creatorHome: y } = N(m);
   if (o)
     return (0, X.jsx)(k, { eventModel: t, route: D.k_eCommunityAdminPage });
   if (v) return (0, X.jsx)(`span`, {});
@@ -5363,7 +5363,7 @@ function mn(e) {
     permissions: h,
     bIsCreatorHomeVisible: x && y?.GetLinkedEventGID() == t.GID,
     additionalButtons: r,
-    onDeleteRequest: n && ke() == `community` ? _ : void 0,
+    onDeleteRequest: n && ke() == `community` ? g : void 0,
     saleDayControl:
       l !== void 0 &&
       b.length > 0 &&
@@ -5395,8 +5395,8 @@ function hn(e) {
   if (e?.BHasSaleEnabled()) {
     e.GetSaleSectionCount() > 0 &&
       e.GetSaleSections().forEach((e) => {
-        b(e.section_type) &&
-          !S(e) &&
+        u(e.section_type) &&
+          !f(e) &&
           e.capsules.forEach((e) => {
             e.visibility_index !== void 0 &&
               (t === void 0 || t < e.visibility_index) &&
@@ -5421,7 +5421,7 @@ function gn(e) {
 }
 function _n(e) {
   let { section: t } = e,
-    n = l(t.badge_progress?.event_badgeid),
+    n = m(t.badge_progress?.event_badgeid),
     r = c(() => t.badge_progress?.levels),
     i = Math.max(...(r ?? []).map((e) => e.level ?? 0));
   if (!n) return null;
@@ -5432,7 +5432,7 @@ function _n(e) {
     rgOptions: a,
     selectedOption: n.level,
     onChange: (e) =>
-      u({ badgeid: t.badge_progress?.event_badgeid, level: e.data }),
+      x({ badgeid: t.badge_progress?.event_badgeid, level: e.data }),
   });
 }
 function vn(e) {

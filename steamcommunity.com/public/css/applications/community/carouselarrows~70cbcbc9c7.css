@@ -1501,8 +1501,8 @@ html.responsive.touch .fiveElementEightGap {
   display: block;
 }
 .bY2thn3lfUw- {
+  background-color: var(--pagination-pill-selected-color, #fff);
   opacity: 1;
-  background-color: #fff;
   width: 24px;
 }
 .NItUkZKCFW8- {
@@ -1518,7 +1518,7 @@ html.responsive.touch .fiveElementEightGap {
   [data-auto-advance="running"] .D6a-33r-4xk- .NItUkZKCFW8-,
   [data-auto-advance="paused"] .D6a-33r-4xk- .NItUkZKCFW8- {
     width: var(--auto-advance-ratio, 0%);
-    background-color: #fff;
+    background-color: var(--pagination-pill-selected-color, #fff);
     display: block;
     position: absolute;
     inset-block: 0;

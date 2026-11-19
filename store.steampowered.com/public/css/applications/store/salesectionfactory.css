@@ -1203,6 +1203,20 @@ html:not(.GamepadMode)
   margin-bottom: unset;
   padding: 0;
 }
+html:not(.GamepadMode)
+  .carousel__slider-tray:has(
+    > .carousel__slide > .carousel__inner-slide > .BEJJ0zhyKjM-
+  ) {
+  align-items: flex-start !important;
+}
+html:not(.GamepadMode)
+  .carousel__slider-tray:has(
+    > .carousel__slide > .carousel__inner-slide > .BEJJ0zhyKjM-
+  )
+  > .carousel__slide--hidden {
+  visibility: hidden;
+  height: 0 !important;
+}
 ._0AL4AZNHxZA- {
   padding-bottom: 20px;
 }

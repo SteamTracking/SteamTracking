@@ -3,8 +3,8 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
-import { nt as r, tt as i } from "./chunk~2185942436.js";
-import { m as a } from "./chunk~f57d770d64.js";
+import { m as r } from "./chunk~f57d770d64.js";
+import { et as i, tt as a } from "./chunk~2185942436.js";
 import { t as o } from "./chunk~06d7f063bc.js";
 import { n as s, t as c } from "./chunk~3135e25ddf.js";
 import { t as l } from "./chunk~eefd71512b.js";
@@ -43,7 +43,7 @@ function S(e) {
       ).then(x);
     }
   }, [p, c]);
-  let S = r() ?? p,
+  let S = a() ?? p,
     w = i();
   if ((s(1500), !S))
     return (0, b.jsx)(`div`, {
@@ -52,8 +52,8 @@ function S(e) {
       children: (0, b.jsx)(l, { size: `medium`, string: d(`#Loading`) }),
     });
   let T =
-    (S.visibility_state !== a.k_EEventStateVisible &&
-      S.visibility_state !== a.k_EEventStateUnlisted) ||
+    (S.visibility_state !== r.k_EEventStateVisible &&
+      S.visibility_state !== r.k_EEventStateUnlisted) ||
     w;
   return (0, b.jsx)(C, {
     eventModel: S,

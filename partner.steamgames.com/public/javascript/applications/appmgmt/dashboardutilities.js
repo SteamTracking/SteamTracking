@@ -96,23 +96,16 @@ function S(e) {
     return null;
   }
 }
-function C(e, t) {
-  let n = new Set();
-  return e.filter((e) => {
-    let r = t(e);
-    return !n.has(r) && (n.add(r), !0);
-  });
-}
-function w(...e) {
+function C(...e) {
   return [...new Set(e.flat())];
 }
-function T(e) {
+function w(e) {
   let { href: t, children: n } = e;
   return t
     ? (0, y.jsx)(`a`, { ...e, children: n })
     : (0, y.jsx)(y.Fragment, { children: n });
 }
-function E(e, t) {
+function T(e, t) {
   let n = {
       sText: c(`#Dashboard_UpcomingEvents_AppReleaseState_unavailable`),
       sTooltip: c(
@@ -165,7 +158,7 @@ function E(e, t) {
     a = n;
   return (e in i ? (a = i[e]) : t || (a = r), a);
 }
-function D(e) {
+function E(e) {
   if (e.type == `seasonalsale`) {
     let t = e.name.toLowerCase();
     if (t.includes(`spring`)) return `#dd71d4`;
@@ -174,19 +167,9 @@ function D(e) {
     if (t.includes(`winter`)) return `#01704f`;
   }
 }
-function O(e) {
+function D(e) {
   let t = 0;
   for (let n = 0; n < e.length; n++) t = e.charCodeAt(n) + ((t << 5) - t);
   return `hsl(${t % 360}, ${50 + (t % 50)}%, ${40 + (t % 30)}%, 0.25)`;
 }
-export {
-  w as a,
-  b as c,
-  S as i,
-  v as l,
-  O as n,
-  C as o,
-  E as r,
-  D as s,
-  T as t,
-};
+export { C as a, v as c, S as i, D as n, E as o, T as r, b as s, w as t };

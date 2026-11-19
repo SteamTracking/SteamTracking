@@ -3,11 +3,11 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n, tt as r } from "./chunk~01cfc309bf.js";
-import { Do as i } from "./chunk~6b8ddcaac8.js";
-import { c as a, t as o } from "./chunk~3720b337f3.js";
-import { a as s } from "./chunk~d43c81a658.js";
-import { r as c } from "./chunk~21cdc464a1.js";
-import { t as l } from "./chunk~4d16ce5d1a.js";
+import { Vs as i } from "./chunk~6b8ddcaac8.js";
+import { c as a } from "./chunk~ffe4581a06.js";
+import { r as o } from "./chunk~21cdc464a1.js";
+import { t as s } from "./chunk~4d16ce5d1a.js";
+import { l as c, n as l } from "./chunk~3720b337f3.js";
 import { i as u } from "./chunk~fc8a9e4879.js";
 import {
   Jy as d,
@@ -61,7 +61,7 @@ var C = e(t()),
     return (0, G.jsxs)(`div`, {
       className: z,
       children: [
-        (0, G.jsx)(l, {
+        (0, G.jsx)(s, {
           id: t,
           children: (0, G.jsx)(`img`, { className: U, src: o }),
         }),
@@ -94,10 +94,10 @@ var C = e(t()),
   J = 5,
   Y = 940,
   X = (e) => {
-    let t = s(Y);
+    let t = a(Y);
     return (0, G.jsx)(`div`, {
       className: R,
-      children: (0, G.jsx)(c, {
+      children: (0, G.jsx)(o, {
         visibleElements: J,
         disableEdgeWrap: !0,
         screenIsWide: t,
@@ -236,8 +236,8 @@ var C = e(t()),
     let { sale: t } = e,
       { eventModel: n } = u(t.clan_account_id, t.clan_event_gid),
       r = y(v.LANGUAGE),
-      i = a(n, r),
-      s = m();
+      i = c(n, r),
+      a = m();
     return (0, G.jsxs)(`div`, {
       children: [
         (0, G.jsx)(`div`, {
@@ -245,11 +245,11 @@ var C = e(t()),
           children: `${t.name || t.url} - Score ${t.score.toFixed(3)}`,
         }),
         n &&
-          (0, G.jsx)(o, {
+          (0, G.jsx)(l, {
             event: n,
             section: le,
             language: r,
-            bInGamepadUI: s,
+            bInGamepadUI: a,
             placeholderHeight: 300,
             promotedSaleEvent: i,
             nItemsToFeature: t.appids.length,

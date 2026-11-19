@@ -1,11 +1,12 @@
 .Es-UANTRhdg- {
   isolation: isolate;
+  border-radius: 4px;
   position: relative;
   overflow: hidden;
 }
 .DsfJ3U7A71o- {
   z-index: -1;
-  background-color: #1b2838;
+  background-color: #1b2129;
   position: absolute;
   inset: 0;
 }
@@ -15,92 +16,146 @@
   position: absolute;
   inset: 0;
 }
+div.CUTWfXkiCwY-,
+div.KiJVH4vp4eM- {
+  padding: 24px;
+}
+.BasicUI div.CUTWfXkiCwY-,
+.BasicUI div.KiJVH4vp4eM- {
+  margin: 16px calc(var(--gpSpace-Gutter, 24px) + 8px);
+  padding: 24px;
+}
+@media screen and (width <= 939px) {
+  html:not(.GamepadMode) div.CUTWfXkiCwY-,
+  html:not(.GamepadMode) div.KiJVH4vp4eM- {
+    padding: 16px;
+  }
+}
 .CUTWfXkiCwY- .hcF0Za7ucCA- {
   background-position: 50% 15%;
 }
-.CUTWfXkiCwY- .DsfJ3U7A71o-:after,
-.KiJVH4vp4eM- .DsfJ3U7A71o-:after {
+.Rya5E4ml32o- {
+  filter: blur(80px) saturate(2) brightness(0.75);
+  opacity: 0.22;
+  background-position: 50%;
+  background-size: cover;
+  position: absolute;
+  inset: -80px;
+}
+.DsfJ3U7A71o-.Q2Etnziq-Ow- .hcF0Za7ucCA-:after,
+.DsfJ3U7A71o-.Q2Etnziq-Ow- .Rya5E4ml32o- {
+  display: none;
+}
+.CUTWfXkiCwY- .hcF0Za7ucCA- {
+  mask-image: linear-gradient(
+    90deg,
+    #000 28%,
+    #000000f7 30.2%,
+    #000000e6 32.4%,
+    #000000c7 34.6%,
+    #000000a6 36.8%,
+    #00000080 39%,
+    #00000059 41.2%,
+    #00000038 43.4%,
+    #0000001a 45.6%,
+    #00000008 47.8%,
+    #0000 50%
+  );
+}
+.CUTWfXkiCwY- .hcF0Za7ucCA-:after {
   content: "";
+  background: linear-gradient(90deg, #0000 28%, #0009 50%);
   position: absolute;
   inset: 0;
 }
-.CUTWfXkiCwY- .DsfJ3U7A71o-:after {
-  background: linear-gradient(
-    to right,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 0%, transparent) 5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 3%, transparent)
-      10.5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 9%, transparent) 16%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 19%, transparent)
-      21.5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 32%, transparent)
-      27%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 45%, transparent)
-      32.5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 58%, transparent)
-      38%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 71%, transparent)
-      43.5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 81%, transparent)
-      49%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 87%, transparent)
-      54.5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 90%, transparent)
-      60%
+.CUTWfXkiCwY- .Rya5E4ml32o- {
+  mask-image: linear-gradient(
+    90deg,
+    #0000 28%,
+    #00000008 30.2%,
+    #0000001a 32.4%,
+    #00000038 34.6%,
+    #00000059 36.8%,
+    #00000080 39%,
+    #000000a6 41.2%,
+    #000000c7 43.4%,
+    #000000e6 45.6%,
+    #000000f7 47.8%,
+    #000 50%
   );
 }
 @media screen and (width <= 939px) {
-  html:not(.GamepadMode) .CUTWfXkiCwY- .DsfJ3U7A71o-:after {
-    background: linear-gradient(
-      to bottom,
-      color-mix(in srgb, var(--cross-promo-scrim-color, #000) 0%, transparent)
-        20%,
-      color-mix(in srgb, var(--cross-promo-scrim-color, #000) 3%, transparent)
-        28%,
-      color-mix(in srgb, var(--cross-promo-scrim-color, #000) 9%, transparent)
-        36%,
-      color-mix(in srgb, var(--cross-promo-scrim-color, #000) 19%, transparent)
-        44%,
-      color-mix(in srgb, var(--cross-promo-scrim-color, #000) 32%, transparent)
-        52%,
-      color-mix(in srgb, var(--cross-promo-scrim-color, #000) 45%, transparent)
-        60%,
-      color-mix(in srgb, var(--cross-promo-scrim-color, #000) 58%, transparent)
-        68%,
-      color-mix(in srgb, var(--cross-promo-scrim-color, #000) 71%, transparent)
-        76%,
-      color-mix(in srgb, var(--cross-promo-scrim-color, #000) 81%, transparent)
-        84%,
-      color-mix(in srgb, var(--cross-promo-scrim-color, #000) 87%, transparent)
-        92%,
-      color-mix(in srgb, var(--cross-promo-scrim-color, #000) 90%, transparent)
-        100%
+  html:not(.GamepadMode) .CUTWfXkiCwY- .hcF0Za7ucCA- {
+    mask-image: linear-gradient(
+      #000 30%,
+      #000000f7 33%,
+      #000000e6 36%,
+      #000000c7 39%,
+      #000000a6 42%,
+      #00000080 45%,
+      #00000059 48%,
+      #00000038 51%,
+      #0000001a 54%,
+      #00000008 57%,
+      #0000 60%
+    );
+  }
+  html:not(.GamepadMode) .CUTWfXkiCwY- .hcF0Za7ucCA-:after {
+    content: "";
+    background: linear-gradient(#0000 30%, #0009 60%);
+    position: absolute;
+    inset: 0;
+  }
+  html:not(.GamepadMode) .CUTWfXkiCwY- .Rya5E4ml32o- {
+    mask-image: linear-gradient(
+      #0000 30%,
+      #00000008 33%,
+      #0000001a 36%,
+      #00000038 39%,
+      #00000059 42%,
+      #00000080 45%,
+      #000000a6 48%,
+      #000000c7 51%,
+      #000000e6 54%,
+      #000000f7 57%,
+      #000 60%
     );
   }
 }
-.KiJVH4vp4eM- .DsfJ3U7A71o-:after {
-  background: linear-gradient(
-    to bottom,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 0%, transparent) 15%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 3%, transparent)
-      20.5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 9%, transparent) 26%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 19%, transparent)
-      31.5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 32%, transparent)
-      37%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 45%, transparent)
-      42.5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 58%, transparent)
-      48%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 71%, transparent)
-      53.5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 81%, transparent)
-      59%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 87%, transparent)
-      64.5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color, #000) 90%, transparent)
-      70%
+.KiJVH4vp4eM- .hcF0Za7ucCA- {
+  mask-image: linear-gradient(
+    #000 30%,
+    #000000f7 33%,
+    #000000e6 36%,
+    #000000c7 39%,
+    #000000a6 42%,
+    #00000080 45%,
+    #00000059 48%,
+    #00000038 51%,
+    #0000001a 54%,
+    #00000008 57%,
+    #0000 60%
+  );
+}
+.KiJVH4vp4eM- .hcF0Za7ucCA-:after {
+  content: "";
+  background: linear-gradient(#0000 30%, #0009 60%);
+  position: absolute;
+  inset: 0;
+}
+.KiJVH4vp4eM- .Rya5E4ml32o- {
+  mask-image: linear-gradient(
+    #0000 30%,
+    #00000008 33%,
+    #0000001a 36%,
+    #00000038 39%,
+    #00000059 42%,
+    #00000080 45%,
+    #000000a6 48%,
+    #000000c7 51%,
+    #000000e6 54%,
+    #000000f7 57%,
+    #000 60%
   );
 }
 .YJT5S54fzP0- {
@@ -110,7 +165,16 @@
   object-fit: contain;
   max-width: 100%;
   max-height: 100%;
+  transition:
+    transform 0.15s ease-in-out,
+    filter 0.15s ease-in-out;
   display: block;
+}
+@media (hover: hover) {
+  .YJT5S54fzP0-:hover img {
+    transform: var(--sale-capsule-hover-transform, translateY(-4px));
+    filter: drop-shadow(0 10px 12px #00000080);
+  }
 }
 .KNEaTOnJJWw- {
   min-width: 0;
@@ -125,9 +189,37 @@
 .ypQ9RrTsvmE- .aMHZOpwLiBw- {
   margin-bottom: 0;
 }
+.ypQ9RrTsvmE- ._6O6T0vupYYc-,
+.ypQ9RrTsvmE- .Ri7uYDYJ-bo- {
+  margin-inline-start: auto;
+}
+.ypQ9RrTsvmE-:not(:has(.aMHZOpwLiBw-, .Ri7uYDYJ-bo-)) {
+  margin-bottom: 16px;
+}
+@media screen and (width <= 939px) {
+  html:not(.GamepadMode) .ypQ9RrTsvmE-:not(:has(.aMHZOpwLiBw-, .Ri7uYDYJ-bo-)) {
+    display: none;
+  }
+}
+.BasicUI .ypQ9RrTsvmE-:not(:has(.aMHZOpwLiBw-, .Ri7uYDYJ-bo-)) {
+  display: none;
+}
 .KoPPnD8UeHY- .KNEaTOnJJWw- .SaleSectionContainer,
 .P-rHowg9bhA- .KNEaTOnJJWw- .SaleSectionContainer {
   padding-inline: 0;
+  padding-bottom: 0;
+}
+.BasicUI .KoPPnD8UeHY- .KNEaTOnJJWw- .carousel__slider,
+.BasicUI .P-rHowg9bhA- .KNEaTOnJJWw- .carousel__slider {
+  overflow: visible;
+}
+.BasicUI .KoPPnD8UeHY- .KNEaTOnJJWw- .carousel__slider-tray-wrapper,
+.BasicUI .P-rHowg9bhA- .KNEaTOnJJWw- .carousel__slider-tray-wrapper {
+  margin-block: 0;
+  margin-inline: calc(0px - var(--gpSpace-FocusRingAffordance, 10px)) -24px;
+  padding-block: 4px 8px;
+  padding-inline: var(--gpSpace-FocusRingAffordance, 10px) 24px;
+  scroll-padding: var(--gpSpace-FocusRingAffordance, 10px);
 }
 .KoPPnD8UeHY- .KNEaTOnJJWw- .aMHZOpwLiBw-,
 .P-rHowg9bhA- .KNEaTOnJJWw- .aMHZOpwLiBw- {
@@ -137,31 +229,30 @@
   border-radius: 2px;
   padding: 6px 10px;
 }
-.KoPPnD8UeHY- .KNEaTOnJJWw- ._6O6T0vupYYc-,
-.P-rHowg9bhA- .KNEaTOnJJWw- ._6O6T0vupYYc- {
-  backdrop-filter: blur(6px);
-}
 .KoPPnD8UeHY- {
-  align-items: center;
-  gap: 32px;
-  padding: 32px;
+  gap: 24px;
   display: flex;
 }
 .KoPPnD8UeHY- .YJT5S54fzP0- {
-  flex: 38%;
+  flex: 35%;
   justify-content: center;
+  align-items: center;
   display: flex;
 }
 .KoPPnD8UeHY- .YJT5S54fzP0- img {
   max-height: 240px;
 }
 .KoPPnD8UeHY- .KNEaTOnJJWw- {
-  flex: 62%;
+  flex-direction: column;
+  flex: 65%;
+  display: flex;
+}
+.KoPPnD8UeHY- .ypQ9RrTsvmE- + * {
+  margin-block: auto;
 }
 @media screen and (width <= 939px) {
   html:not(.GamepadMode) .KoPPnD8UeHY- {
     flex-direction: column;
-    padding: 16px;
   }
   html:not(.GamepadMode) .KoPPnD8UeHY- .YJT5S54fzP0-,
   html:not(.GamepadMode) .KoPPnD8UeHY- .KNEaTOnJJWw- {
@@ -170,11 +261,19 @@
   }
 }
 .P-rHowg9bhA- {
-  padding: 24px 10% 32px;
+  padding-inline: 8%;
+}
+.P-rHowg9bhA- .DuNM8zA4oz0- {
+  top: 24px;
+  position: absolute;
+  inset-inline-end: 24px;
+}
+.P-rHowg9bhA- .ypQ9RrTsvmE-:not(:has(.aMHZOpwLiBw-)) {
+  margin-bottom: 0;
 }
 .P-rHowg9bhA- .YJT5S54fzP0- {
   justify-content: center;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   display: flex;
 }
 .P-rHowg9bhA- .YJT5S54fzP0- img {
@@ -182,7 +281,7 @@
 }
 @media screen and (width <= 939px) {
   html:not(.GamepadMode) .P-rHowg9bhA- {
-    padding: 16px;
+    padding-inline: 0;
   }
 }
 .FsYxDNcAXaI- {
@@ -196,9 +295,9 @@
   }
 }
 .BasicUI div.FsYxDNcAXaI- {
+  padding: 16px calc(var(--gpSpace-Gutter, 24px) + 8px);
   background-color: #0000;
   border-radius: 0;
-  padding: 16px 0;
   overflow: visible;
 }
 .cSFkUHyVW24- {
@@ -215,6 +314,13 @@
 }
 ._9Av6r-4YUXs- > * {
   width: 100%;
+}
+.BasicUI ._9Av6r-4YUXs- div.FsYxDNcAXaI- {
+  padding-inline: 8px;
+}
+.BasicUI ._9Av6r-4YUXs- div.CUTWfXkiCwY-,
+.BasicUI ._9Av6r-4YUXs- div.KiJVH4vp4eM- {
+  margin-inline: 8px;
 }
 .qbRGxo4aWcc- {
   z-index: -1;
@@ -383,7 +489,7 @@ html:not(.GamepadMode) .gxh8RxFKhr8- {
 }
 .BasicUI .gxh8RxFKhr8- .oztjxXYIBAk- {
   flex: 0 0 calc(33.3333cqi - 14px);
-  margin-top: 12px;
+  margin-top: 4px;
 }
 .BasicUI .gxh8RxFKhr8- .KNEaTOnJJWw- {
   flex: 1 1 0;
@@ -424,10 +530,10 @@ html:not(.GamepadMode) .gxh8RxFKhr8- {
   .carousel__slider-tray-wrapper {
   margin-block: 0;
   margin-inline: calc(0px - var(--gpSpace-FocusRingAffordance, 10px))
-    calc(0px - var(--gpSpace-Gutter, 24px));
+    calc(0px - calc(var(--gpSpace-Gutter, 24px) + 8px));
   padding-block: 4px 8px;
   padding-inline: var(--gpSpace-FocusRingAffordance, 10px)
-    var(--gpSpace-Gutter, 24px);
+    calc(var(--gpSpace-Gutter, 24px) + 8px);
   scroll-padding: var(--gpSpace-FocusRingAffordance, 10px);
 }
 @media screen and (width <= 939px) {
@@ -500,6 +606,8 @@ html:not(.GamepadMode) .gxh8RxFKhr8- {
 }
 .gxh8RxFKhr8-.ZONqp3dzTMI- {
   justify-content: center;
+}
+html:not(.GamepadMode) .gxh8RxFKhr8-.ZONqp3dzTMI- {
   align-items: center;
 }
 .gxh8RxFKhr8- .oztjxXYIBAk-.CDF-2WDX3lg- {
@@ -619,10 +727,35 @@ div.VCRuNjWNqVc- {
   padding-bottom: 4px;
 }
 .BasicUI div.VCRuNjWNqVc- {
-  padding-inline-start: var(--gpSpace-Gutter, 24px);
-  padding-inline-end: var(--gpSpace-Gutter, 24px);
+  padding: 16px 0 0;
 }
-div.AmB85SkEC3Q- {
+.BasicUI div.VCRuNjWNqVc- > :first-child {
+  padding-inline: var(--gpSpace-Gutter, 24px);
+}
+.BasicUI div.VCRuNjWNqVc- div.FsYxDNcAXaI- {
+  padding-top: 0;
+}
+.BasicUI div.VCRuNjWNqVc- div.CUTWfXkiCwY-,
+.BasicUI div.VCRuNjWNqVc- div.KiJVH4vp4eM- {
+  margin-top: 0;
+}
+.BasicUI div.VCRuNjWNqVc-:has(.XBv92QzB8Xc-) > :first-child {
+  margin-bottom: 0;
+}
+.BasicUI div.VCRuNjWNqVc-:has(.XBv92QzB8Xc-) .SaleSectionLabelCtn > * {
+  margin-bottom: 4px;
+}
+.BasicUI div.VCRuNjWNqVc-:has(.XBv92QzB8Xc-) .SaleSectionHeader {
+  font: var(
+    --gpText-BodyMedium,
+    normal 400 14px/1.4 "Motiva Sans",
+    Arial,
+    sans-serif
+  );
+  color: #acb2b8;
+}
+div.AmB85SkEC3Q-,
+.BasicUI div.AmB85SkEC3Q- {
   padding: 0;
 }
 .P5j4maR0i14- {

@@ -181,6 +181,7 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~6b8ddcaac8.js";
 import {
   _,
@@ -518,7 +519,7 @@ import { _, _, _ } from "./chunk~91ae5e1167.js";
 import { _, _, _, _, _, _ } from "./chunk~209a3e6c2e.js";
 import { _ } from "./chunk~fb7b5d9c48.js";
 import { _ } from "./chunk~ea4856d3e2.js";
-import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~87cd89c815.js";
+import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~87cd89c815.js";
 import { _, _, _ } from "./chunk~8255136f90.js";
 import {
   _,
@@ -4525,229 +4526,7 @@ function _(_, _, _) {
   let _ = new Date(_ * 1e3).getDay();
   return _ == 6 ? _ - _.PerDay : _ == 0 ? _ - 2 * _.PerDay : _;
 }
-var _ = _(_());
-function _(_, _) {
-  let _ = _(),
-    _ = _.useMemo(
-      () => ({
-        bExcludeExpired: _?.bExcludeExpired ?? !0,
-        bExcludeCommercial: _?.bExcludeCommercial ?? !0,
-        nPartnerID: _?.nPartnerID ?? _,
-      }),
-      [_, _?.bExcludeExpired, _?.bExcludeCommercial, _?.nPartnerID],
-    ),
-    _ = (0, _.useMemo)(() => {
-      let _ = Array.from(new Set(_)).filter((_) => _ > 0),
-        _ = [];
-      for (let _ = 0; _ < _.length; _ += 100) _.push(_.slice(_, _ + 100));
-      return _;
-    }, [_]),
-    _ = _({
-      queries: _.map((_) => ({
-        queryKey: [`useAppWithDiscounts`, _, _],
-        queryFn: async () => {
-          let _ = await _(_).loadMany(_),
-            _ = _.find((_) => _ instanceof Error);
-          if (_) throw _;
-          return _;
-        },
-      })),
-    }),
-    _ = _.some((_) => _.isLoading);
-  return _.useMemo(() => {
-    let _ = new Map();
-    return (
-      _ ||
-        _.forEach((_) => {
-          _.isSuccess &&
-            _.data &&
-            _.data.forEach((_) => {
-              _ &&
-                !(_ instanceof Error) &&
-                _.set(_.storeItem, _.discountSetting);
-            });
-        }),
-      _
-    );
-  }, [_, _, _]);
-}
-function _(_, _) {
-  let _ = _,
-    _ = _(),
-    _ = {
-      bExcludeExpired: _?.bExcludeExpired ?? !0,
-      nPartnerID: _?.nPartnerID ?? _,
-    },
-    _ = Array.from(new Set(_)).filter((_) => _ > 0),
-    _ = _({
-      queries: _.map((_) => _(_, _, _)),
-    }),
-    _ = _.some((_) => _.isLoading);
-  return _.useMemo(() => {
-    let _ = new Map();
-    return (
-      _ ||
-        _.forEach((_) => {
-          _.isSuccess &&
-            _.data &&
-            _.set(_.data.storeItem, _.data.discountSetting);
-        }),
-      _
-    );
-  }, [_, _, _]);
-}
-function _(_, _, _, _, _) {
-  let _ = _?.get(_);
-  if (_) {
-    if (_.is_coming_soon) return _(`#DiscountEvent_ComingSoon`);
-    if (_.is_free) return _(`#DiscountEvent_Free`);
-    if (_.discounts?.some((_) => _.discountEventID == _))
-      return _(`#DiscountEvent_Official`);
-    let _ = _.discounts?.filter((_) => _.rtStartDate < _ && _.rtEndDate > _);
-    if (_?.length > 0)
-      return _.map(
-        (_) =>
-          `${_.nDiscountPct}% - ${_(_.rtStartDate)} to ${_(_.rtEndDate)} (package id:${_.packageID})`,
-      ).join(`
-`);
-  }
-  return ``;
-}
-function _(_) {
-  let _ = JSON.stringify(_);
-  return (
-    _.get(_) ||
-      _.set(
-        _,
-        new _.default(
-          async (_) => {
-            let _ = _.PARTNER_BASE_URL + `discounts/ajaxgetdiscountbyapp`,
-              _ = new Map();
-            if (!_ || _.length == 0) return [];
-            let _ = [..._],
-              _ = [];
-            for (; _.length > 0;) {
-              let _ = new FormData(),
-                _ = _.splice(0, 250);
-              (_.append(`sessionid`, _()),
-                _.append(`rgAppIDs`, _.join(`,`)),
-                _.append(`bExcludeExpired`, _.bExcludeExpired ? `1` : `0`),
-                _.append(
-                  `bExcludeCommercial`,
-                  _.bExcludeCommercial ? `1` : `0`,
-                ),
-                _.nPartnerID &&
-                  _.append(`publisherid`, _.nPartnerID.toString()),
-                _.push(
-                  _.default.post(_, _, {
-                    withCredentials: !0,
-                  }),
-                ));
-            }
-            return (
-              (await Promise.all(_)).forEach((_) => {
-                if (_?.status == 200 && _?.data?.success == 1 && _?.data?.map)
-                  for (let _ in _.data.map) {
-                    let _ = Number.parseInt(_);
-                    _ &&
-                      _.set(_, {
-                        storeItem: _,
-                        discountSetting: _.data.map[_],
-                      });
-                  }
-                else
-                  throw Error(
-                    `Error: Failed on FetchDiscountByApp request ` +
-                      _?.status +
-                      ` ` +
-                      _?.statusText +
-                      ` ` +
-                      _?.data?.success,
-                  );
-              }),
-              _.map((_) => _.get(_) ?? null)
-            );
-          },
-          {
-            maxBatchSize: 100,
-          },
-        ),
-      ),
-    _.get(_)
-  );
-}
-var _ = {
-  loadBundleWithDiscounts: async (_, _) => await _(_).load(_),
-};
-function _(_, _, _) {
-  return {
-    queryKey: [`useBundleWithDiscounts`, _, _],
-    queryFn: () => _.loadBundleWithDiscounts(_, _),
-    enabled: !!_,
-  };
-}
-function _(_) {
-  let _ = JSON.stringify(_);
-  return (
-    _.get(_) ||
-      _.set(
-        _,
-        new _.default(
-          async (_) => {
-            let _ = _.PARTNER_BASE_URL + `discounts/ajaxgetdiscountbybundle`,
-              _ = new Map();
-            if (!_ || _.length == 0) return [];
-            let _ = [..._],
-              _ = [];
-            for (; _.length > 0;) {
-              let _ = _.splice(0, 100),
-                _ = new FormData();
-              (_.append(`sessionid`, _()),
-                _.append(`rgBundleIDs`, _.join(`,`)),
-                _.append(`bExcludeExpired`, _.bExcludeExpired ? `1` : `0`),
-                _.nPartnerID &&
-                  _.append(`publisherid`, _.nPartnerID.toString()),
-                _.push(
-                  _.default.post(_, _, {
-                    withCredentials: !0,
-                  }),
-                ));
-            }
-            return (
-              (await Promise.all(_)).forEach((_) => {
-                if (_?.status == 200 && _?.data?.success == 1 && _?.data?.map)
-                  for (let _ in _.data.map) {
-                    let _ = Number.parseInt(_);
-                    _ &&
-                      _.set(_, {
-                        storeItem: _,
-                        discountSetting: _.data.map[_],
-                      });
-                  }
-                else
-                  throw Error(
-                    `Error: Failed on FetchDiscountByBundle request ` +
-                      _?.status +
-                      ` ` +
-                      _?.statusText +
-                      ` ` +
-                      _?.data?.success,
-                  );
-              }),
-              _.map((_) => _.get(_) ?? null)
-            );
-          },
-          {
-            maxBatchSize: 100,
-          },
-        ),
-      ),
-    _.get(_)
-  );
-}
-var _ = new Map(),
-  _ = new Map(),
-  _ = {};
+var _ = {};
 ((_.arabic = () =>
   _(() => import(`./chunk~1999f448ed.js`), [], import.meta.url)),
   (_.brazilian = () =>
@@ -4980,8 +4759,22 @@ var _ = (function (_) {
         `k_EOptInVisibility_InviteOnly`),
       _
     );
-  })({}),
-  _ = [`satisfied`, `neutral`, `unsatisfied`],
+  })({});
+function _(_) {
+  let _ = (_ || ``).toLowerCase();
+  return _.includes(`nextfest`) || _.includes(`next_fest`);
+}
+function _(_) {
+  return (
+    _(_.pageid) &&
+    (!!_.release_date_eligibility?.include_released_games ||
+      !_.release_date_eligibility?.include_unreleased_games)
+  );
+}
+function _(_) {
+  return _(_.pageid) && !_(_);
+}
+var _ = [`satisfied`, `neutral`, `unsatisfied`],
   _ = [`0`, `1`, `2-10`, `11+`],
   _ = 1024,
   _ = 2048,
@@ -13457,136 +13250,137 @@ function _(_, _, _ = 0) {
   });
   return _.isLoading ? null : _.data;
 }
-var _ = class _ {
-  m_rgSpotlights = [];
-  m_mapSpotlights = new Map();
-  m_mapSpotlightsCallback = new Map();
-  m_SpotlightListCallback = new _();
-  m_mapLoadingSpotlights = new Map();
-  GetAllSpotlights() {
-    return this.m_rgSpotlights;
-  }
-  GetSpotlightByID(_) {
-    return this.m_mapSpotlights.get(_);
-  }
-  GetCallbackForSpotlightList() {
-    return this.m_SpotlightListCallback;
-  }
-  GetCallbackForSpotlightID(_) {
-    return (
-      this.m_mapSpotlightsCallback.has(_) ||
-        this.m_mapSpotlightsCallback.set(_, new _()),
-      this.m_mapSpotlightsCallback.get(_)
-    );
-  }
-  async LoadSpotlight(_) {
-    return this.m_mapSpotlights.has(_)
-      ? this.m_mapSpotlights.get(_)
-      : (this.m_mapLoadingSpotlights.has(_) ||
-          this.m_mapLoadingSpotlights.set(_, this.InternalLoadSpotlight(_)),
-        this.m_mapLoadingSpotlights.get(_));
-  }
-  async InternalLoadSpotlight(_) {
-    let _ = null;
-    try {
-      let _ = _.PARTNER_BASE_URL + `promotion/spotlights/ajaxloadspotlight`,
-        _ = {
-          spotlightid: _,
-          sessionid: _(),
-        },
-        _ = await _.default.get(_, {
-          params: _,
+var _ = _(_()),
+  _ = class _ {
+    m_rgSpotlights = [];
+    m_mapSpotlights = new Map();
+    m_mapSpotlightsCallback = new Map();
+    m_SpotlightListCallback = new _();
+    m_mapLoadingSpotlights = new Map();
+    GetAllSpotlights() {
+      return this.m_rgSpotlights;
+    }
+    GetSpotlightByID(_) {
+      return this.m_mapSpotlights.get(_);
+    }
+    GetCallbackForSpotlightList() {
+      return this.m_SpotlightListCallback;
+    }
+    GetCallbackForSpotlightID(_) {
+      return (
+        this.m_mapSpotlightsCallback.has(_) ||
+          this.m_mapSpotlightsCallback.set(_, new _()),
+        this.m_mapSpotlightsCallback.get(_)
+      );
+    }
+    async LoadSpotlight(_) {
+      return this.m_mapSpotlights.has(_)
+        ? this.m_mapSpotlights.get(_)
+        : (this.m_mapLoadingSpotlights.has(_) ||
+            this.m_mapLoadingSpotlights.set(_, this.InternalLoadSpotlight(_)),
+          this.m_mapLoadingSpotlights.get(_));
+    }
+    async InternalLoadSpotlight(_) {
+      let _ = null;
+      try {
+        let _ = _.PARTNER_BASE_URL + `promotion/spotlights/ajaxloadspotlight`,
+          _ = {
+            spotlightid: _,
+            sessionid: _(),
+          },
+          _ = await _.default.get(_, {
+            params: _,
+          });
+        if (_?.status == 200 && _.data?.success == 1 && _.data.spotlight)
+          return (
+            this.InternalAddSpotlight(_.data.spotlight),
+            this.GetCallbackForSpotlightList().Dispatch(this.m_rgSpotlights),
+            this.GetCallbackForSpotlightID(_).Dispatch(_.data.spotlight),
+            _.data.spotlight
+          );
+        _ = _(_?.data);
+      } catch (_) {
+        _ = _(_);
+      }
+      return (
+        console.error(
+          `CPartnerContactStore.InternalLoadSpotlight: ajax request failed with error: ` +
+            _.strErrorMsg,
+          _,
+        ),
+        null
+      );
+    }
+    async AddSpotlight(_) {
+      let _ = null;
+      try {
+        let _ =
+            _.PARTNER_BASE_URL + `promotion/spotlights/ajaxcreatenewspotlight`,
+          _ = new FormData();
+        (_.append(`sessionid`, _()), _.append(`spotlight`, JSON.stringify(_)));
+        let _ = _.association;
+        _?.appid && _.association_type == `application`
+          ? _.append(`nAppID`, `` + _.appid)
+          : _?.packageid && _.association_type == `package`
+            ? _.append(`nPackageID`, `` + _.packageid)
+            : _?.bundleid &&
+              _.association_type == `bundle` &&
+              _.append(`nBundleID`, `` + _.bundleid);
+        let _ = await _.default.post(_, _, {
+          withCredentials: !0,
         });
-      if (_?.status == 200 && _.data?.success == 1 && _.data.spotlight)
-        return (
-          this.InternalAddSpotlight(_.data.spotlight),
-          this.GetCallbackForSpotlightList().Dispatch(this.m_rgSpotlights),
-          this.GetCallbackForSpotlightID(_).Dispatch(_.data.spotlight),
-          _.data.spotlight
-        );
-      _ = _(_?.data);
-    } catch (_) {
-      _ = _(_);
+        if (_?.status == 200 && _.data?.success == 1 && _.data.spotlight)
+          return (
+            this.InternalAddSpotlight(_),
+            this.GetCallbackForSpotlightList().Dispatch(this.m_rgSpotlights),
+            this.GetCallbackForSpotlightID(_._).Dispatch(_),
+            _.data.spotlight._
+          );
+        _ = _(_?.data);
+      } catch (_) {
+        _ = _(_);
+      }
+      return (
+        console.error(
+          `CPartnerContactStore.AddSpotlight: ajax request failed with error: ` +
+            _.strErrorMsg,
+          _,
+        ),
+        null
+      );
     }
-    return (
-      console.error(
-        `CPartnerContactStore.InternalLoadSpotlight: ajax request failed with error: ` +
-          _.strErrorMsg,
-        _,
-      ),
-      null
-    );
-  }
-  async AddSpotlight(_) {
-    let _ = null;
-    try {
-      let _ =
-          _.PARTNER_BASE_URL + `promotion/spotlights/ajaxcreatenewspotlight`,
-        _ = new FormData();
-      (_.append(`sessionid`, _()), _.append(`spotlight`, JSON.stringify(_)));
-      let _ = _.association;
-      _?.appid && _.association_type == `application`
-        ? _.append(`nAppID`, `` + _.appid)
-        : _?.packageid && _.association_type == `package`
-          ? _.append(`nPackageID`, `` + _.packageid)
-          : _?.bundleid &&
-            _.association_type == `bundle` &&
-            _.append(`nBundleID`, `` + _.bundleid);
-      let _ = await _.default.post(_, _, {
-        withCredentials: !0,
-      });
-      if (_?.status == 200 && _.data?.success == 1 && _.data.spotlight)
-        return (
-          this.InternalAddSpotlight(_),
-          this.GetCallbackForSpotlightList().Dispatch(this.m_rgSpotlights),
-          this.GetCallbackForSpotlightID(_._).Dispatch(_),
-          _.data.spotlight._
-        );
-      _ = _(_?.data);
-    } catch (_) {
-      _ = _(_);
+    SetSpotlight(_) {
+      let _ = this.m_rgSpotlights.findIndex((_) => _._ == _._);
+      (this.m_mapSpotlights.set(_._, _),
+        _ >= 0 &&
+          ((this.m_rgSpotlights[_] = _),
+          this.GetCallbackForSpotlightList().Dispatch(this.m_rgSpotlights)),
+        this.GetCallbackForSpotlightID(_._).Dispatch(_));
     }
-    return (
-      console.error(
-        `CPartnerContactStore.AddSpotlight: ajax request failed with error: ` +
-          _.strErrorMsg,
-        _,
-      ),
-      null
-    );
-  }
-  SetSpotlight(_) {
-    let _ = this.m_rgSpotlights.findIndex((_) => _._ == _._);
-    (this.m_mapSpotlights.set(_._, _),
-      _ >= 0 &&
-        ((this.m_rgSpotlights[_] = _),
-        this.GetCallbackForSpotlightList().Dispatch(this.m_rgSpotlights)),
-      this.GetCallbackForSpotlightID(_._).Dispatch(_));
-  }
-  static s_Singleton;
-  static Get() {
-    return (
-      _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-      _.s_Singleton
-    );
-  }
-  constructor() {}
-  InternalAddSpotlight(_) {
-    (this.m_mapSpotlights.set(_._, _), this.m_rgSpotlights.push(_));
-  }
-  Init() {
-    let _ = _(`spotlightinfo`, `application_config`);
-    this.ValidateStoreDefault(_) && _.forEach(this.InternalAddSpotlight);
-  }
-  ValidateStoreDefault(_) {
-    let _ = _;
-    return _ && Array.isArray(_) && _.length > 0 && typeof _[0] == `object`
-      ? typeof _[0].name == `string` &&
-          typeof _[0].location == `object` &&
-          typeof _[0].visibility == `object`
-      : !1;
-  }
-};
+    static s_Singleton;
+    static Get() {
+      return (
+        _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
+        _.s_Singleton
+      );
+    }
+    constructor() {}
+    InternalAddSpotlight(_) {
+      (this.m_mapSpotlights.set(_._, _), this.m_rgSpotlights.push(_));
+    }
+    Init() {
+      let _ = _(`spotlightinfo`, `application_config`);
+      this.ValidateStoreDefault(_) && _.forEach(this.InternalAddSpotlight);
+    }
+    ValidateStoreDefault(_) {
+      let _ = _;
+      return _ && Array.isArray(_) && _.length > 0 && typeof _[0] == `object`
+        ? typeof _[0].name == `string` &&
+            typeof _[0].location == `object` &&
+            typeof _[0].visibility == `object`
+        : !1;
+    }
+  };
 (_([_], _.prototype, `LoadSpotlight`, null),
   _([_], _.prototype, `AddSpotlight`, null),
   _([_], _.prototype, `InternalAddSpotlight`, null));
@@ -15835,20 +15629,6 @@ var _ = `_9sOsjvP957w-`,
       _
     );
   })({});
-function _(_) {
-  let _ = (_ || ``).toLowerCase();
-  return _.includes(`nextfest`) || _.includes(`next_fest`);
-}
-function _(_) {
-  return (
-    _(_.pageid) &&
-    (!!_.release_date_eligibility?.include_released_games ||
-      !_.release_date_eligibility?.include_unreleased_games)
-  );
-}
-function _(_) {
-  return _(_.pageid) && !_(_);
-}
 function _(_, _) {
   if (_) {
     let _ =
@@ -19186,60 +18966,281 @@ function _(_) {
     ],
   });
 }
-var _ = class _ {
-  m_mapAppToRank = new Map();
-  bHasLoadedLongTermSalesRankForApp(_) {
-    return this.m_mapAppToRank.has(_);
-  }
-  bHasSomeLongTermSaleRankForApp(_) {
-    return this.m_mapAppToRank.get(_) !== void 0;
-  }
-  GetLongTermSaleRankForApp(_) {
-    return this.m_mapAppToRank.get(_);
-  }
-  async LoadLongTermSalesRank(_) {
-    if (
-      (_ || []).filter((_) => !this.bHasLoadedLongTermSalesRankForApp(_))
-        .length == 0
-    )
-      return !0;
-    let _ = null;
-    try {
-      let _ = new FormData();
-      (_.append(`rgAppIDs`, _.join(`,`)), _.append(`sessionid`, _()));
-      let _ = _.PARTNER_BASE_URL + `sales/ajaxgetsalerank`,
-        _ = await _.default.post(_, _, {
-          withCredentials: !0,
-        });
-      if (_?.status == 200 && _.data?.success == 1 && _.data.apps)
-        return (
-          _.data.apps.forEach((_) =>
-            this.m_mapAppToRank.set(
-              _.appid,
-              _.long_term_sales_rank == null || _.long_term_sales_rank == null
-                ? void 0
-                : _.long_term_sales_rank,
-            ),
-          ),
-          !0
-        );
-      _ = _(_);
-    } catch (_) {
-      _ = _(_);
-    }
+function _(_, _) {
+  let _ = _(),
+    _ = _.useMemo(
+      () => ({
+        bExcludeExpired: _?.bExcludeExpired ?? !0,
+        bExcludeCommercial: _?.bExcludeCommercial ?? !0,
+        nPartnerID: _?.nPartnerID ?? _,
+      }),
+      [_, _?.bExcludeExpired, _?.bExcludeCommercial, _?.nPartnerID],
+    ),
+    _ = (0, _.useMemo)(() => {
+      let _ = Array.from(new Set(_)).filter((_) => _ > 0),
+        _ = [];
+      for (let _ = 0; _ < _.length; _ += 100) _.push(_.slice(_, _ + 100));
+      return _;
+    }, [_]),
+    _ = _({
+      queries: _.map((_) => ({
+        queryKey: [`useAppWithDiscounts`, _, _],
+        queryFn: async () => {
+          let _ = await _(_).loadMany(_),
+            _ = _.find((_) => _ instanceof Error);
+          if (_) throw _;
+          return _;
+        },
+      })),
+    }),
+    _ = _.some((_) => _.isLoading);
+  return _.useMemo(() => {
+    let _ = new Map();
     return (
-      console.error(
-        `CPromotionInviteStore.RemoveInvite failed: ` + _?.strErrorMsg,
-        _,
-      ),
-      !1
+      _ ||
+        _.forEach((_) => {
+          _.isSuccess &&
+            _.data &&
+            _.data.forEach((_) => {
+              _ &&
+                !(_ instanceof Error) &&
+                _.set(_.storeItem, _.discountSetting);
+            });
+        }),
+      _
     );
+  }, [_, _, _]);
+}
+function _(_, _) {
+  let _ = _,
+    _ = _(),
+    _ = {
+      bExcludeExpired: _?.bExcludeExpired ?? !0,
+      nPartnerID: _?.nPartnerID ?? _,
+    },
+    _ = Array.from(new Set(_)).filter((_) => _ > 0),
+    _ = _({
+      queries: _.map((_) => _(_, _, _)),
+    }),
+    _ = _.some((_) => _.isLoading);
+  return _.useMemo(() => {
+    let _ = new Map();
+    return (
+      _ ||
+        _.forEach((_) => {
+          _.isSuccess &&
+            _.data &&
+            _.set(_.data.storeItem, _.data.discountSetting);
+        }),
+      _
+    );
+  }, [_, _, _]);
+}
+function _(_, _, _, _, _) {
+  let _ = _?.get(_);
+  if (_) {
+    if (_.is_coming_soon) return _(`#DiscountEvent_ComingSoon`);
+    if (_.is_free) return _(`#DiscountEvent_Free`);
+    if (_.discounts?.some((_) => _.discountEventID == _))
+      return _(`#DiscountEvent_Official`);
+    let _ = _.discounts?.filter((_) => _.rtStartDate < _ && _.rtEndDate > _);
+    if (_?.length > 0)
+      return _.map(
+        (_) =>
+          `${_.nDiscountPct}% - ${_(_.rtStartDate)} to ${_(_.rtEndDate)} (package id:${_.packageID})`,
+      ).join(`
+`);
   }
-  static s_Singleton;
-  static Get() {
-    return ((_.s_Singleton ||= new _()), _.s_Singleton);
-  }
+  return ``;
+}
+function _(_) {
+  let _ = JSON.stringify(_);
+  return (
+    _.get(_) ||
+      _.set(
+        _,
+        new _.default(
+          async (_) => {
+            let _ = _.PARTNER_BASE_URL + `discounts/ajaxgetdiscountbyapp`,
+              _ = new Map();
+            if (!_ || _.length == 0) return [];
+            let _ = [..._],
+              _ = [];
+            for (; _.length > 0;) {
+              let _ = new FormData(),
+                _ = _.splice(0, 250);
+              (_.append(`sessionid`, _()),
+                _.append(`rgAppIDs`, _.join(`,`)),
+                _.append(`bExcludeExpired`, _.bExcludeExpired ? `1` : `0`),
+                _.append(
+                  `bExcludeCommercial`,
+                  _.bExcludeCommercial ? `1` : `0`,
+                ),
+                _.nPartnerID &&
+                  _.append(`publisherid`, _.nPartnerID.toString()),
+                _.push(
+                  _.default.post(_, _, {
+                    withCredentials: !0,
+                  }),
+                ));
+            }
+            return (
+              (await Promise.all(_)).forEach((_) => {
+                if (_?.status == 200 && _?.data?.success == 1 && _?.data?.map)
+                  for (let _ in _.data.map) {
+                    let _ = Number.parseInt(_);
+                    _ &&
+                      _.set(_, {
+                        storeItem: _,
+                        discountSetting: _.data.map[_],
+                      });
+                  }
+                else
+                  throw Error(
+                    `Error: Failed on FetchDiscountByApp request ` +
+                      _?.status +
+                      ` ` +
+                      _?.statusText +
+                      ` ` +
+                      _?.data?.success,
+                  );
+              }),
+              _.map((_) => _.get(_) ?? null)
+            );
+          },
+          {
+            maxBatchSize: 100,
+          },
+        ),
+      ),
+    _.get(_)
+  );
+}
+var _ = {
+  loadBundleWithDiscounts: async (_, _) => await _(_).load(_),
 };
+function _(_, _, _) {
+  return {
+    queryKey: [`useBundleWithDiscounts`, _, _],
+    queryFn: () => _.loadBundleWithDiscounts(_, _),
+    enabled: !!_,
+  };
+}
+function _(_) {
+  let _ = JSON.stringify(_);
+  return (
+    _.get(_) ||
+      _.set(
+        _,
+        new _.default(
+          async (_) => {
+            let _ = _.PARTNER_BASE_URL + `discounts/ajaxgetdiscountbybundle`,
+              _ = new Map();
+            if (!_ || _.length == 0) return [];
+            let _ = [..._],
+              _ = [];
+            for (; _.length > 0;) {
+              let _ = _.splice(0, 100),
+                _ = new FormData();
+              (_.append(`sessionid`, _()),
+                _.append(`rgBundleIDs`, _.join(`,`)),
+                _.append(`bExcludeExpired`, _.bExcludeExpired ? `1` : `0`),
+                _.nPartnerID &&
+                  _.append(`publisherid`, _.nPartnerID.toString()),
+                _.push(
+                  _.default.post(_, _, {
+                    withCredentials: !0,
+                  }),
+                ));
+            }
+            return (
+              (await Promise.all(_)).forEach((_) => {
+                if (_?.status == 200 && _?.data?.success == 1 && _?.data?.map)
+                  for (let _ in _.data.map) {
+                    let _ = Number.parseInt(_);
+                    _ &&
+                      _.set(_, {
+                        storeItem: _,
+                        discountSetting: _.data.map[_],
+                      });
+                  }
+                else
+                  throw Error(
+                    `Error: Failed on FetchDiscountByBundle request ` +
+                      _?.status +
+                      ` ` +
+                      _?.statusText +
+                      ` ` +
+                      _?.data?.success,
+                  );
+              }),
+              _.map((_) => _.get(_) ?? null)
+            );
+          },
+          {
+            maxBatchSize: 100,
+          },
+        ),
+      ),
+    _.get(_)
+  );
+}
+var _ = new Map(),
+  _ = new Map(),
+  _ = class _ {
+    m_mapAppToRank = new Map();
+    bHasLoadedLongTermSalesRankForApp(_) {
+      return this.m_mapAppToRank.has(_);
+    }
+    bHasSomeLongTermSaleRankForApp(_) {
+      return this.m_mapAppToRank.get(_) !== void 0;
+    }
+    GetLongTermSaleRankForApp(_) {
+      return this.m_mapAppToRank.get(_);
+    }
+    async LoadLongTermSalesRank(_) {
+      if (
+        (_ || []).filter((_) => !this.bHasLoadedLongTermSalesRankForApp(_))
+          .length == 0
+      )
+        return !0;
+      let _ = null;
+      try {
+        let _ = new FormData();
+        (_.append(`rgAppIDs`, _.join(`,`)), _.append(`sessionid`, _()));
+        let _ = _.PARTNER_BASE_URL + `sales/ajaxgetsalerank`,
+          _ = await _.default.post(_, _, {
+            withCredentials: !0,
+          });
+        if (_?.status == 200 && _.data?.success == 1 && _.data.apps)
+          return (
+            _.data.apps.forEach((_) =>
+              this.m_mapAppToRank.set(
+                _.appid,
+                _.long_term_sales_rank == null || _.long_term_sales_rank == null
+                  ? void 0
+                  : _.long_term_sales_rank,
+              ),
+            ),
+            !0
+          );
+        _ = _(_);
+      } catch (_) {
+        _ = _(_);
+      }
+      return (
+        console.error(
+          `CPromotionInviteStore.RemoveInvite failed: ` + _?.strErrorMsg,
+          _,
+        ),
+        !1
+      );
+    }
+    static s_Singleton;
+    static Get() {
+      return ((_.s_Singleton ||= new _()), _.s_Singleton);
+    }
+  };
 (_([_], _.prototype, `bHasLoadedLongTermSalesRankForApp`, null),
   _([_], _.prototype, `bHasSomeLongTermSaleRankForApp`, null),
   _([_], _.prototype, `GetLongTermSaleRankForApp`, null));
@@ -46806,6 +46807,7 @@ var _ = `OptInEdit_BasicInfo`,
   _ = `OptInEdit_PartnerTargetDate`,
   _ = `OptInEdit_ShippingCountries`,
   _ = `OptInEdit_InvitedPartners`,
+  _ = `OptInEdit_PublicEventID`,
   _ = new Set([_, _, _, _, _]),
   _ = [
     {
@@ -48631,6 +48633,9 @@ var _ = `siDKpJnIDEc-`,
   _ = `_2XKlfINGROk-`,
   _ = `uSVVy3XzAxM-`,
   _ = `i5rn9voxNf0-`,
+  _ = `fRYveTg0GSk-`,
+  _ = `_0LbrykiaptE-`,
+  _ = `xeWoY7Meh9Y-`,
   _ = `netYQcllljM-`,
   _ = `inXh1oXPSjU-`,
   _ = `b6zrmCMuXBY-`,
@@ -49208,9 +49213,17 @@ function _(_, _) {
   _(_.strSectionID);
   let _ = 10,
     _ = () => {
-      let _ = document.getElementById(_.strSectionID);
+      let _ = _.strFieldID ? document.getElementById(_.strFieldID) : null,
+        _ = _ <= 0,
+        _ =
+          _ ??
+          (!_.strFieldID || _ ? document.getElementById(_.strSectionID) : null);
       _
-        ? (_.scrollIntoView(!0), window.scrollBy(0, -75))
+        ? (_.scrollIntoView(!0),
+          window.scrollBy(0, -75),
+          _?.querySelector(`input, textarea`)?.focus({
+            preventScroll: !0,
+          }))
         : _-- > 0 && window.requestAnimationFrame(_);
     };
   window.requestAnimationFrame(_);
@@ -49349,6 +49362,26 @@ var _ = _((_) => {
           strLinkText: `Upload one in Editor → Basic Event Info → Artwork`,
           elMessage: (0, _.jsx)(_.Fragment, {
             children: `This opt-in has no banner artwork, so emails send without a header image.`,
+          }),
+        });
+  }),
+  _ = _((_) => {
+    let _ = _.Get(),
+      _ = _.GetPublicEventID()?.trim();
+    return (_ && _ !== `0`) ||
+      _(_.GetOptInType()) ||
+      !_(`CategoryStatReporting`)
+      ? null
+      : (0, _.jsx)(_, {
+          className: _.className,
+          target: {
+            strTab: _,
+            strSectionID: _,
+            strFieldID: _,
+          },
+          strLinkText: `Set it in Editor → Basic Event Info → Categorization & Stat Reporting`,
+          elMessage: (0, _.jsx)(_.Fragment, {
+            children: `This opt-in does not name its sale page (event GID). Until it does, the fest will not appear automatically on the store's Discounts & Events page, and event stats have no sale page to count.`,
           }),
         });
   });
@@ -50914,6 +50947,109 @@ var _ = _((_) => {
   });
 });
 function _(_) {
+  let _ = _(_.strEventGID?.trim() ?? ``),
+    _ = /^\d+$/.test(_) && _ !== `0`,
+    { data: _, isLoading: _, isError: _, error: _ } = _(_ ? _ : void 0);
+  return !_ || _ === `0`
+    ? null
+    : _
+      ? _
+        ? (0, _.jsx)(_, {
+            size: `small`,
+            position: `center`,
+            string: `Checking the sale page...`,
+          })
+        : _
+          ? (0, _.jsxs)(`div`, {
+              className: _,
+              children: [`Could not check the sale page: `, _?.message],
+            })
+          : _
+            ? (0, _.jsx)(_, {
+                event: _,
+              })
+            : (0, _.jsxs)(`div`, {
+                className: _,
+                children: [
+                  `No published event has GID `,
+                  _,
+                  `. Check the number, and that the sale page is published and visible. A Next Fest developer preview page that is not public yet also shows here.`,
+                ],
+              })
+      : (0, _.jsxs)(`div`, {
+          className: _,
+          children: [
+            `"`,
+            _,
+            `" is not an event GID: it should be a number only.`,
+          ],
+        });
+}
+function _(_) {
+  let { event: _ } = _,
+    _ = _(_.LANGUAGE),
+    _ =
+      _.GetImageURL(`capsule`, _, _.capsule_main) ||
+      _.GetImageURL(`capsule`, void 0, _.capsule_main),
+    _ = _.GetEventType() === 20,
+    _ = Math.floor(Date.now() / 1e3),
+    _ = _.GetStartTimeAndDateUnixSeconds(),
+    _ = _.GetEndTimeAndDateUnixSeconds(),
+    _ = `Live now`;
+  _ > _ ? (_ = `Not started yet`) : _ && _ < _ && (_ = `Ended`);
+  let _ = _
+    ? _.STORE_BASE_URL +
+      _(
+        _.clanSteamID.GetAccountID(),
+        _.GetSaleVanity(),
+        !!_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath,
+      )
+    : void 0;
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    children: [
+      _ &&
+        (0, _.jsx)(`img`, {
+          className: `UnG9FU-ITxc-`,
+          src: _,
+          alt: ``,
+        }),
+      (0, _.jsxs)(`div`, {
+        children: [
+          (0, _.jsx)(`div`, {
+            className: _,
+            children: _.GetNameWithFallback(_),
+          }),
+          (0, _.jsxs)(`div`, {
+            children: [
+              _(_),
+              !!_ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [` – `, _(_)],
+                }),
+              ` `,
+              `(`,
+              _,
+              `)`,
+            ],
+          }),
+          _
+            ? (0, _.jsx)(`a`, {
+                href: _,
+                target: `_blank`,
+                rel: `noopener noreferrer`,
+                children: `Open the sale page`,
+              })
+            : (0, _.jsx)(`div`, {
+                className: _,
+                children: `This event is not a sale page, so the store will not use it for the fest.`,
+              }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
   return _
     ? {
         label: _(_),
@@ -51281,7 +51417,8 @@ var _ = `ceLp-YB2cQs-`,
   _ = `_12r-hoHQ3DQ-`,
   _ = 8;
 function _(_) {
-  let _ = _(_.definition),
+  let { strGameName: _ } = _,
+    _ = _(_.definition),
     _ = _(_.sale);
   return (0, _.jsxs)(`div`, {
     children: [
@@ -51291,6 +51428,13 @@ function _(_) {
           children: _.Localize(`#PartnerOptIn_DeepestDiscount_Title`, _),
         }),
       }),
+      _ &&
+        (0, _.jsx)(`p`, {
+          children: _(
+            _.Localize(`#PartnerOptIn_DeepestDiscount_ForGame`, _),
+            (0, _.jsx)(`b`, {}),
+          ),
+        }),
       (0, _.jsx)(`p`, {
         children: _.Localize(
           `#PartnerOptIn_DeepestDiscount_Desc`,
@@ -52144,6 +52288,9 @@ var _ = `W4ZHBOBAYgQ-`,
   _ = `qe3NSv-TCro-`,
   _ = `NJ0tgw9I6EI-`;
 function _(_) {
+  return _(_) ? _.public_event_id : void 0;
+}
+function _(_) {
   let { eventGID: _, appid: _ } = _,
     { data: _ } = _(_);
   if (!_) return null;
@@ -52960,6 +53107,63 @@ function _(_, _, _) {
         : _.append(_, String(_));
   }
 }
+var _ = `Cmxx-wypanY-`,
+  _ = `_2Kn7aIu594c-`,
+  _ = `_81zAcbq59q4-`,
+  _ = `hOFDWFQ9y9Y-`,
+  _ = `FmUdbsmSRhI-`,
+  _ = `jUykXEPzkzM-`,
+  _ = `-i--kn3art4-`,
+  _ = `GeryDlJgjMg-`,
+  _ = `gaSCvI4Q6Tg-`,
+  _ = `HRuUyKVMU0o-`;
+function _(_, _) {
+  let { data: _ } = _({
+    appid: _,
+  });
+  return _?.name || _ || String(_);
+}
+function _(_) {
+  let { appid: _, strAppName: _ } = _,
+    _ = _(_, _),
+    _ = _(
+      {
+        appid: _,
+      },
+      `header`,
+    );
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    children: [
+      (0, _.jsx)(`div`, {
+        className: _,
+        children: _.Localize(`#PartnerOptIn_RightColumn_GameTitle`),
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          _ &&
+            (0, _.jsx)(`img`, {
+              className: `_4sCcXQZz6PU-`,
+              src: _,
+              alt: ``,
+            }),
+          (0, _.jsxs)(`div`, {
+            className: _,
+            children: [
+              _,
+              ` `,
+              (0, _.jsxs)(`span`, {
+                className: _,
+                children: [`(`, _, `)`],
+              }),
+            ],
+          }),
+        ],
+      }),
+    ],
+  });
+}
 var _ = `Dd2r2Vw75QA-`,
   _ = `SkyKbyDo0ms-`,
   _ = `wTeTJMM6BkI-`;
@@ -53602,7 +53806,14 @@ function _(_) {
   });
 }
 function _(_) {
-  let { pageid: _, definition: _, registration: _ } = _,
+  let {
+      pageid: _,
+      definition: _,
+      registration: _,
+      appid: _,
+      strAppName: _,
+    } = _,
+    _ = _(_, _),
     _ = _().strLanguage,
     _ = _(_, _.localized_optin_banner, _),
     _ = _(_.description, _),
@@ -53653,6 +53864,7 @@ function _(_) {
                       _.Localize(
                         `#PartnerOptIn_Intro_DiscountParticipation`,
                         _(_.event_start_date),
+                        _,
                       ),
                   ],
                 }),
@@ -53695,12 +53907,6 @@ function _(_) {
         })
       : null;
 }
-var _ = `Cmxx-wypanY-`,
-  _ = `_2Kn7aIu594c-`,
-  _ = `hOFDWFQ9y9Y-`,
-  _ = `FmUdbsmSRhI-`,
-  _ = `gaSCvI4Q6Tg-`,
-  _ = `HRuUyKVMU0o-`;
 function _(_) {
   if (!_?.opt_in) return [];
   let _ = _.jsondata ?? {},
@@ -53823,7 +54029,14 @@ function _(_) {
   });
 }
 function _(_) {
-  let { pageid: _, definition: _, registration: _, bShowEventTitle: _ } = _,
+  let {
+      pageid: _,
+      appid: _,
+      strAppName: _,
+      definition: _,
+      registration: _,
+      bShowEventTitle: _,
+    } = _,
     { bIsPreview: _ } = _(),
     _ = _().strLanguage,
     _ = _(_, _.localized_optin_banner, _),
@@ -53859,53 +54072,63 @@ function _(_) {
             }),
         ],
       }),
-      !_ &&
-        (0, _.jsxs)(`div`, {
-          className: `_81zAcbq59q4-`,
-          children: [
-            (0, _.jsxs)(`div`, {
-              className: `hOFDWFQ9y9Y-`,
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsx)(_, {
+            appid: _,
+            strAppName: _,
+          }),
+          !_ &&
+            (0, _.jsxs)(_.Fragment, {
               children: [
-                (0, _.jsx)(`div`, {
-                  className: `FmUdbsmSRhI-`,
-                  children: _.Localize(
-                    `#PartnerOptIn_RightColumn_QuestionsTitle`,
-                  ),
+                (0, _.jsxs)(`div`, {
+                  className: `hOFDWFQ9y9Y-`,
+                  children: [
+                    (0, _.jsx)(`div`, {
+                      className: `FmUdbsmSRhI-`,
+                      children: _.Localize(
+                        `#PartnerOptIn_RightColumn_QuestionsTitle`,
+                      ),
+                    }),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        text: _,
+                      }),
+                  ],
                 }),
-                _ &&
-                  (0, _.jsx)(_, {
-                    text: _,
-                  }),
+                (0, _.jsxs)(`div`, {
+                  className: `hOFDWFQ9y9Y-`,
+                  children: [
+                    (0, _.jsx)(`div`, {
+                      className: `FmUdbsmSRhI-`,
+                      children: _.Localize(
+                        `#PartnerOptIn_RightColumn_HelpTitle`,
+                      ),
+                    }),
+                    (0, _.jsx)(`p`, {
+                      children: (0, _.jsx)(`a`, {
+                        href: `${_.HELP_BASE_URL}wizard/HelpWithPublishing?issueid=933`,
+                        target: `_blank`,
+                        rel: `noreferrer`,
+                        children: _.Localize(
+                          `#PartnerOptIn_RightColumn_ContactLink`,
+                        ),
+                      }),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_, {
+                  definition: _,
+                  registration: _,
+                }),
+                (0, _.jsx)(_, {
+                  registration: _,
+                }),
               ],
             }),
-            (0, _.jsxs)(`div`, {
-              className: `hOFDWFQ9y9Y-`,
-              children: [
-                (0, _.jsx)(`div`, {
-                  className: `FmUdbsmSRhI-`,
-                  children: _.Localize(`#PartnerOptIn_RightColumn_HelpTitle`),
-                }),
-                (0, _.jsx)(`p`, {
-                  children: (0, _.jsx)(`a`, {
-                    href: `${_.HELP_BASE_URL}wizard/HelpWithPublishing?issueid=933`,
-                    target: `_blank`,
-                    rel: `noreferrer`,
-                    children: _.Localize(
-                      `#PartnerOptIn_RightColumn_ContactLink`,
-                    ),
-                  }),
-                }),
-              ],
-            }),
-            (0, _.jsx)(_, {
-              definition: _,
-              registration: _,
-            }),
-            (0, _.jsx)(_, {
-              registration: _,
-            }),
-          ],
-        }),
+        ],
+      }),
     ],
   });
 }
@@ -54281,6 +54504,8 @@ function _(_) {
             children: [
               (0, _.jsx)(_, {
                 pageid: _,
+                appid: _,
+                strAppName: _,
                 definition: _,
                 registration: _,
               }),
@@ -54289,6 +54514,8 @@ function _(_) {
                 children: [
                   (0, _.jsx)(_, {
                     pageid: _,
+                    appid: _,
+                    strAppName: _,
                     definition: _,
                     registration: _,
                   }),
@@ -54298,7 +54525,7 @@ function _(_) {
                     bEventStarted: _,
                   }),
                   (0, _.jsx)(_, {
-                    eventGID: _.public_event_id,
+                    eventGID: _(_),
                     appid: _,
                   }),
                   (0, _.jsxs)(`div`, {
@@ -54368,8 +54595,16 @@ function _(_) {
   });
 }
 function _(_) {
-  let { pageid: _, appid: _, definition: _, bFocusMedia: _, save: _ } = _,
+  let {
+      pageid: _,
+      appid: _,
+      strAppName: _,
+      definition: _,
+      bFocusMedia: _,
+      save: _,
+    } = _,
     _ = _(),
+    _ = _(_, _),
     _ = _(() => {
       let _ = _.GetModel().jsondata ?? {};
       return {
@@ -54392,6 +54627,7 @@ function _(_) {
       _.optin_kind === _.DeepestDiscount &&
         (0, _.jsx)(_, {
           definition: _,
+          strGameName: _,
         }),
       _ &&
         (0, _.jsx)(_, {
@@ -56094,6 +56330,7 @@ function _(_) {
                           }),
                         ],
                       }),
+                    (0, _.jsx)(_, {}),
                     _ &&
                       (0, _.jsxs)(`div`, {
                         children: [
@@ -56413,32 +56650,39 @@ var _ = _((_) => {
         (0, _.jsx)(_, {}),
         _(`CategoryStatReporting`) &&
           (0, _.jsxs)(`div`, {
+            _: `OptInEdit_PublicEventID`,
             className: `VdR3uA9QY9A-`,
             children: [
               (0, _.jsx)(`h3`, {
                 children: `Categorization & Stat Reporting:`,
               }),
               (0, _.jsx)(`p`, {
-                children: `Allows the developer to view how their game is being categorized within the sale page. The event hosting the sale page must be publicly visible.`,
+                children: `The clan event GID of this opt-in's sale page. The event hosting the sale page must be publicly visible.`,
               }),
               (0, _.jsxs)(`ul`, {
                 children: [
                   (0, _.jsx)(`li`, {
-                    children: `Before the event start, this would be the developer preview sale pages. `,
+                    children: `Links the fest to its sale page. While the fest is running, the store's Discounts & Events page only shows it automatically when this is the live sale page's GID.`,
                   }),
                   (0, _.jsx)(`li`, {
-                    children: `Once the evnet is live, we should update this value to the actual sale page's clan event GID.`,
+                    children: `Next Fest only: lets developers see on their registration page how their game is categorized within the sale page.`,
+                  }),
+                  (0, _.jsx)(`li`, {
+                    children: `Our event stats are based on the apps included in this sale page.`,
                   }),
                 ],
               }),
               (0, _.jsx)(`p`, {
-                children: `Our event stats will also be based on the apps included in this sale page.`,
+                children: `Next Fest only: before the event starts this can be the developer preview sale page. Nothing switches it over automatically, so change it to the live sale page's GID when the event starts.`,
               }),
               (0, _.jsx)(_, {
                 type: `text`,
                 onChange: (_) => _.SetPublicEventID(_.target.value),
                 value: _.GetPublicEventID(),
                 placeholder: `5196643638649256091`,
+              }),
+              (0, _.jsx)(_, {
+                strEventGID: _.GetPublicEventID(),
               }),
             ],
           }),
@@ -69652,7 +69896,7 @@ var _ = (_) => {
                   _: `GameListing`,
                 }),
                 (0, _.jsx)(_, {
-                  eventGID: _.public_event_id,
+                  eventGID: _(_),
                   appid: Number.parseInt(_),
                 }),
                 (0, _.jsxs)(`div`, {

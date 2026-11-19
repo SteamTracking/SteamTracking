@@ -407,6 +407,7 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~3f4314f3b4.js";
 import {
   _,
@@ -5197,7 +5198,7 @@ function _(_) {
       type: `sub`,
     };
 }
-function _(_, _, _, _, _, _) {
+function _(_, _, _, _, _, _, _) {
   let _ = _(_),
     _ = {
       rgSections: _.map((_) => ({
@@ -5223,11 +5224,11 @@ function _(_, _, _, _, _, _) {
       _.language,
       JSON.stringify(_),
     ],
-    queryFn: () => _(_, _, _, _),
+    queryFn: () => _(_, _, _, _, _),
     staleTime: 1 / 0,
   };
 }
-async function _(_, _, _, _) {
+async function _(_, _, _, _, _) {
   if (!_ || _.rgSections.length === 0) return [];
   let _ = _.Init(_);
   for (let _ of _.rgSections) {
@@ -5239,6 +5240,10 @@ async function _(_, _, _, _) {
       _.set_include_bundles(!!_.bIncludeBundles),
       _.set_include_dlc(_.bIncludeDLC),
       _.set_min_discount_percent(_.nMinDiscountPercent));
+  }
+  for (let _ of _ ?? []) {
+    let _ = _.Body().add_recommended_tags();
+    (_.set_tagid(_.tagid), _.set_name(_.name));
   }
   (_.Body().set_context(_(_)),
     _.Body().set_filters(_(_.storePageFilter, !1)),
@@ -6183,7 +6188,9 @@ function _(_) {
       children: _,
     } = _,
     [_, _] = _.useState(void 0),
-    { bShowSeeMoreHint: _, panelProps: _ } = _(_, `X`);
+    _ = _(_, _),
+    _ = _ && !!_ && !_,
+    { bShowSeeMoreHint: _, panelProps: _ } = _(_ ? _ : _, `X`);
   return (0, _.jsxs)(_, {
     placeholderHeight: _,
     className: _({
@@ -6217,10 +6224,16 @@ function _(_) {
             eGamepadLinkHintButton: `X`,
             onLinkResolved: (_) => _(_ ?? void 0),
           }),
-          (0, _.jsx)(_, {
-            event: _,
-            section: _,
-          }),
+          _
+            ? (0, _.jsx)(_, {
+                label: _(`#EventBrowse_AllEventsBtn`),
+                shown: _,
+                button: `X`,
+              })
+            : (0, _.jsx)(_, {
+                event: _,
+                section: _,
+              }),
         ],
       }),
       _,
@@ -6231,33 +6244,36 @@ function _(_) {
   });
 }
 function _(_) {
-  let { event: _, section: _ } = _,
-    _ = _.useMemo(
-      () =>
-        _.section_type == `events`
-          ? _(`ch_newshub`, `application_config`)
-          : void 0,
-      [_.section_type],
-    );
-  if (_.hide_view_all_events_link) return null;
+  let _ = _(_.event, _.section);
+  return _
+    ? (0, _.jsx)(`div`, {
+        className: _,
+        children: (0, _.jsx)(_, {
+          onClick: (_) => _(_, _),
+          children: _(`#EventBrowse_AllEventsBtn`),
+        }),
+      })
+    : null;
+}
+function _(_, _) {
+  let _ = _.useMemo(
+    () =>
+      _.section_type == `events`
+        ? _(`ch_newshub`, `application_config`)
+        : void 0,
+    [_.section_type],
+  );
+  if (_.hide_view_all_events_link) return;
   let _ = null;
   if (_.section_type == `events`) {
-    if (!_ || !_.BUsesContentHubForItemSource() || !_(_)) return null;
+    if (!_ || !_.BUsesContentHubForItemSource() || !_(_)) return;
     _ = _.STORE_BASE_URL + `news/` + _;
   } else
     _.section_type == `sale_events`
       ? (_ = _.STORE_BASE_URL + `news/collection/sales/`)
       : _.section_type == `calendar` &&
         (_ = _.STORE_BASE_URL + `personalcalendar`);
-  if (!_) return null;
-  let _ = _;
-  return (0, _.jsx)(`div`, {
-    className: _,
-    children: (0, _.jsx)(_, {
-      onClick: (_) => _(_, _),
-      children: _(`#EventBrowse_AllEventsBtn`),
-    }),
-  });
+  return _ ?? void 0;
 }
 function _(_) {
   let { saleEvent: _, section: _, bInGamepadUI: _ } = _,
@@ -6503,7 +6519,9 @@ function _(_) {
     _ = _(_),
     { strStoreURL: _ } = _(_ ?? void 0, _.prefer_demo_store_page),
     [_, _] = _.useState(void 0),
-    { bShowSeeMoreHint: _, panelProps: _ } = _(_, `X`),
+    _ = _ && _ ? `${_.STORE_BASE_URL}dlc/${_}` : void 0,
+    _ = _ && !!_ && !_,
+    { bShowSeeMoreHint: _, panelProps: _ } = _(_ ? _ : _, `X`),
     _ = _(_ ? _ : void 0),
     _ = _.useMemo(
       () => _.filter((_, _) => !!_[_]?.packageid).slice(0, _),
@@ -6629,6 +6647,13 @@ function _(_) {
             onLinkResolved: (_) => _(_ ?? void 0),
           }),
           _ &&
+            (0, _.jsx)(_, {
+              label: _(`#DLCForYou_ViewAll`),
+              shown: _,
+              button: `X`,
+            }),
+          _ &&
+            !_ &&
             (0, _.jsx)(`div`, {
               className: `XQCbpyNssck-`,
               children: (0, _.jsx)(_, {

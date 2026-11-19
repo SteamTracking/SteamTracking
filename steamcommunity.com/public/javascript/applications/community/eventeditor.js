@@ -5466,8 +5466,8 @@ function yf(e) {
                   children: W(`#EventEditor_CrossPromoArt_ScrimColor_Label`),
                 }),
                 (0, X.jsx)(`span`, {
-                  className: `r6WYpHbc7f8-`,
-                  style: { background: s || `#000000` },
+                  className: I(`r6WYpHbc7f8-`, !s && `_0pVtclCkHfg-`),
+                  style: s ? { background: s } : void 0,
                 }),
                 (0, X.jsx)(`span`, {
                   className: `dTHv3h5Lt04-`,
@@ -5479,6 +5479,12 @@ function yf(e) {
                   onClick: (e) => r(e, { color: s, onChange: u }),
                   children: W(`#EventEditor_CrossPromoArt_ScrimColor_Choose`),
                 }),
+                s &&
+                  (0, X.jsx)(O, {
+                    className: `Ib3ChwuUeec-`,
+                    onClick: () => u(void 0),
+                    children: W(`#EventEditor_CrossPromoArt_ScrimColor_Reset`),
+                  }),
               ],
             }),
             (0, X.jsx)(Cf, {
@@ -5587,13 +5593,21 @@ function Cf(e) {
   let { editModel: t, strBackgroundURL: n, strScrimColor: r, eLayout: i } = e,
     a = g(() => ni(t.GetEventModel(), Gs(Y.LANGUAGE)));
   return (0, X.jsxs)(`div`, {
-    className: I(pf, i === `logo_left` ? mf : hf, !n && `_1Sd0N8u6aBw-`),
-    style: n ? { backgroundImage: `url(${n})` } : void 0,
+    className: I(
+      pf,
+      i === `logo_left` ? mf : hf,
+      !n && `_1Sd0N8u6aBw-`,
+      r && `_43CkJ2VflCE-`,
+    ),
+    style: n
+      ? { backgroundImage: `url(${n})`, "--cross-promo-fade-color": r }
+      : void 0,
     children: [
+      n && (0, X.jsx)(`div`, { className: `_2izhRvP-rcU-` }),
       n &&
         (0, X.jsx)(`div`, {
-          className: `_2izhRvP-rcU-`,
-          style: { "--cross-promo-scrim-color": r || `#000000` },
+          className: `TBMtg7dsexw-`,
+          style: { backgroundImage: `url(${n})` },
         }),
       n &&
         (0, X.jsxs)(`div`, {

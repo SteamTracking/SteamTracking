@@ -32,7 +32,7 @@ import {
   u as S,
 } from "./chunk~c12081e677.js";
 import { t as re } from "./chunk~0c46413ed4.js";
-import { c as ie, l as C } from "./chunk~0aa5028ef4.js";
+import { c as ie, s as C } from "./chunk~0aa5028ef4.js";
 import { a as w, t as T } from "./chunk~5ab42519dc.js";
 var E = r(e(), 1),
   D = r(s(), 1),
@@ -241,7 +241,7 @@ function z(e) {
         (0, k.jsx)(p, {
           flexShrink: `0`,
           className: n(F, y ? I : L),
-          children: (0, k.jsx)(ie, {
+          children: (0, k.jsx)(C, {
             margin: `3`,
             variant: `inset`,
             radius: `sm`,
@@ -635,7 +635,7 @@ function pe(e) {
     y = { resize: r, fieldSizing: n, minHeight: _, maxHeight: v },
     b = x({
       ...d,
-      className: (0, D.default)(h(), C()),
+      className: (0, D.default)(h(), ie()),
       style: y,
       cursor: `text`,
       disabled: l,

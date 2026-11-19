@@ -18,27 +18,28 @@ import {
   tt as _,
   u as v,
 } from "./chunk~01cfc309bf.js";
-import { Do as y } from "./chunk~6b8ddcaac8.js";
-import { r as b, t as x } from "./chunk~4c761eb6f4.js";
-import { p as S } from "./chunk~2185942436.js";
-import { t as C } from "./chunk~f0141d9521.js";
+import { Vs as y } from "./chunk~6b8ddcaac8.js";
 import {
-  K as w,
-  S as T,
-  a as E,
-  f as D,
-  i as O,
-  r as k,
-  t as A,
+  K as b,
+  S as x,
+  a as S,
+  at as C,
+  f as w,
+  i as T,
+  r as E,
+  st as D,
+  t as O,
 } from "./chunk~f57d770d64.js";
+import { f as k } from "./chunk~2185942436.js";
+import { t as A } from "./chunk~f0141d9521.js";
 import { ht as j, n as M } from "./chunk~cf3721cc1c.js";
 import { n as N, r as P } from "./chunk~673650a653.js";
 import { n as F } from "./chunk~8681f5c764.js";
 import { t as I } from "./chunk~3135e25ddf.js";
 import { t as L } from "./chunk~eefd71512b.js";
-import { n as R } from "./chunk~0111fcd096.js";
-import { t as z } from "./chunk~429133cc70.js";
-import { i as ee, y as te } from "./chunk~2f8c67b4de.js";
+import { i as R, y as z } from "./chunk~2f8c67b4de.js";
+import { n as ee } from "./chunk~0111fcd096.js";
+import { t as te } from "./chunk~429133cc70.js";
 import { a as ne } from "./chunk~5a091db425.js";
 import { n as re } from "./chunk~4d16ce5d1a.js";
 import { n as ie } from "./chunk~d382bdf2cf.js";
@@ -385,7 +386,7 @@ var We = n(_()),
             }),
             (0, Z.jsx)(`div`, {
               className: Xe,
-              children: (0, Z.jsx)(S, {
+              children: (0, Z.jsx)(k, {
                 bHideCreatorType: !0,
                 creatorID: {
                   name: null,
@@ -682,8 +683,8 @@ var Q = new st(),
     }
     async GetImageInfo(e, t, n = ``) {
       let r = B(t),
-        i = b.GetHashFromHashAndExt(t) + n;
-      return b.AsyncGetImageResolution(e, i, r, this.m_cancelSignal, !0);
+        i = D.GetHashFromHashAndExt(t) + n;
+      return D.AsyncGetImageResolution(e, i, r, this.m_cancelSignal, !0);
     }
     HandleErrorFatal(e, t, n, r) {
       let i = U(t),
@@ -721,8 +722,8 @@ var Q = new st(),
                 n.bAlreadyProcessed = !0;
               else {
                 n.bProcessing = !0;
-                let e = b.GetHashFromHashAndExt(o),
-                  t = b.GetExtStringFromHashAndExt(o),
+                let e = D.GetHashFromHashAndExt(o),
+                  t = D.GetExtStringFromHashAndExt(o),
                   i = oe(r);
                 if (i)
                   try {
@@ -832,7 +833,7 @@ var Q = new st(),
                 n,
                 r,
                 `capsule`,
-                x.capsule_main,
+                C.capsule_main,
               ).catch((e) =>
                 this.HandleErrorFatal(
                   null,
@@ -849,7 +850,7 @@ var Q = new st(),
                 n,
                 r,
                 `background`,
-                x.background_mini,
+                C.background_mini,
               ).catch((e) =>
                 this.HandleErrorFatal(
                   null,
@@ -866,7 +867,7 @@ var Q = new st(),
                 n,
                 r,
                 `spotlight`,
-                x.spotlight_main,
+                C.spotlight_main,
               ).catch((e) =>
                 this.HandleErrorFatal(
                   null,
@@ -8916,7 +8917,7 @@ var yn,
   }),
   Tn = n(Ve()),
   En = wn(),
-  Dn = z(),
+  Dn = te(),
   On = [`mod_reviewed`, `auto_migrated`],
   kn = 20,
   $ = class e {
@@ -8958,7 +8959,7 @@ var yn,
           .filter(Boolean)
           .map((e) => {
             let n = Number.parseInt(t.get(`eventtype`));
-            return { label: w(n), value: n };
+            return { label: b(n), value: n };
           }));
       let o;
       t.has(`filterDate`) &&
@@ -9254,7 +9255,7 @@ function In(e) {
           `#EventModTile_Action_NewEventType`,
           (0, Z.jsx)(`span`, { children: n }),
           r,
-          w(t.m_newEventType),
+          b(t.m_newEventType),
         ),
       });
     case An.k_UpdateSeasonTags:
@@ -9462,7 +9463,7 @@ var Rn = r({
     ChannelInfo: br,
     HasAdultContent: xr,
   },
-  Cr = z(),
+  Cr = te(),
   wr = 500,
   Tr = 50,
   Er = {
@@ -9621,7 +9622,7 @@ var Rn = r({
               (0, Z.jsx)(`h2`, { children: G(`#EventModeration_Title`) }),
               (0, Z.jsx)(be, {
                 children: (0, Z.jsxs)(`div`, {
-                  className: Re(te),
+                  className: Re(z),
                   children: [
                     (0, Z.jsx)(kr, {
                       fnRequireRefetchEvents: this.RefetchAllEventTiles,
@@ -9703,10 +9704,10 @@ var Or = f(Dr),
   Ar = g((e) => {
     let t = $.Get(),
       { fnRequireRefetchEvents: n } = e,
-      r = Me.map((e) => ({ value: e, label: w(e) })).sort((e, t) =>
+      r = Me.map((e) => ({ value: e, label: b(e) })).sort((e, t) =>
         e.label.localeCompare(t.label),
       ),
-      i = A.map((e) => ({ value: e, label: e })).sort((e, t) =>
+      i = O.map((e) => ({ value: e, label: e })).sort((e, t) =>
         e.label.localeCompare(t.label),
       ),
       a = { option: (e) => ({ ...e, color: `#444444` }) };
@@ -9830,11 +9831,11 @@ var Or = f(Dr),
       a,
       o = !1;
     return (
-      D(n) ||
+      w(n) ||
         ((i = G(`#EventModTile_Moderate_MarkReviewed`)), (a = Gn), (o = !0)),
       r && ((i = G(`#EventModTile_Moderate_Saving`)), (a = void 0)),
       (0, Z.jsxs)(`button`, {
-        className: Re(ee, pr, a),
+        className: Re(R, pr, a),
         onClick: () => t(o),
         disabled: r,
         children: [r && (0, Z.jsx)(L, { size: `small` }), i],
@@ -9852,7 +9853,7 @@ var Or = f(Dr),
     return (
       r && (a = G(`#EventModTile_Moderate_Saving`)),
       (0, Z.jsxs)(`button`, {
-        className: Re(ee, pr),
+        className: Re(R, pr),
         onClick: () => t(!i),
         disabled: r,
         children: [r && (0, Z.jsx)(L, { size: `small` }), a],
@@ -9868,10 +9869,10 @@ function Nr(e) {
         : `#EventModTile_Moderate_FlagHalloween`,
     );
   r && (a = G(`#EventModTile_Moderate_Saving`));
-  let o = R.GetTimeNowWithOverrideAsDate();
+  let o = ee.GetTimeNowWithOverrideAsDate();
   return o.getMonth() >= 8 && o.getMonth() <= 10
     ? (0, Z.jsxs)(`button`, {
-        className: Re(ee, pr),
+        className: Re(R, pr),
         onClick: () => t(!i),
         disabled: r,
         children: [r && (0, Z.jsx)(L, { size: `small` }), a],
@@ -9944,7 +9945,7 @@ var Pr = class extends X.Component {
     let { solrData: t } = this.props,
       n = t.unique_id,
       r = V.GetClanEventModel(n);
-    if (!r || e === D(r)) return;
+    if (!r || e === w(r)) return;
     let i = [],
       a = [],
       o = new Mn().SetReviewAction(e);
@@ -10143,12 +10144,12 @@ var Pr = class extends X.Component {
   (Pr = K([g], Pr)));
 function Fr(e) {
   let { eventModel: t, lang: n } = e,
-    r = ne(t, `capsule`, n, x.capsule_main),
+    r = ne(t, `capsule`, n, C.capsule_main),
     i = t.BImageNeedScreenshotFallback(`capsule`, n);
   return r && r.length > 0
     ? (0, Z.jsxs)(Z.Fragment, {
         children: [
-          (0, Z.jsx)(C, { rgSources: r }),
+          (0, Z.jsx)(A, { rgSources: r }),
           i &&
             (0, Z.jsx)(`div`, {
               className: `koqw6dEwI70-`,
@@ -10367,9 +10368,9 @@ var Lr = g((e) => {
               : `#EVentModTile_State_Draft`
             : `#EVentModTile_State_Published`,
         ),
-        i = O(e),
-        a = k(e),
-        o = E(e),
+        i = T(e),
+        a = E(e),
+        o = S(e),
         s = o && !e.BHasTag(`hide_store`) && !e.BHasTag(`mod_hide_store`),
         c =
           i &&
@@ -10447,7 +10448,7 @@ Rr = K([g], Rr);
 var zr = class extends X.Component {
   state = {
     bUpdating: !1,
-    newCategoryOption: { label: w(34), value: { eventType: 34 } },
+    newCategoryOption: { label: b(34), value: { eventType: 34 } },
   };
   m_cancelSignal = We.default.CancelToken.source();
   componentWillUnmount() {
@@ -10464,7 +10465,7 @@ var zr = class extends X.Component {
         e.GID,
         r,
       );
-      let i = T,
+      let i = x,
         a = [];
       n.value.tags &&
         n.value.tags.forEach((e) => {
@@ -10498,7 +10499,7 @@ var zr = class extends X.Component {
       n = Me.filter((e) => e == 1 || e == 4 || e >= 9).map((e) => {
         let t = { eventType: e };
         return (
-          e == 12 && (t.tags = [`patchnotes`]), { label: w(e), value: t }
+          e == 12 && (t.tags = [`patchnotes`]), { label: b(e), value: t }
         );
       });
     (n.push({
@@ -10545,7 +10546,7 @@ var zr = class extends X.Component {
           label: `Halloween: ` + G(`#PartnerEvent_35`),
         },
       ],
-      i = R.GetTimeNowWithOverrideAsDate();
+      i = ee.GetTimeNowWithOverrideAsDate();
     return (
       i.getMonth() == 8 || i.getMonth() == 9 ? n.unshift(...r) : n.push(...r),
       (0, Z.jsx)(Te, {

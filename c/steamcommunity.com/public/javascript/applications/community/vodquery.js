@@ -14492,7 +14492,7 @@ function _(_) {
     _ = _.useContext(_),
     _ = _ && _ ? _(_, _) : void 0,
     _ = _ && !_,
-    _ = _ && !_,
+    _ = _ && !_ && !_?.bReplacesWishlistBanner,
     _ = !_ && _;
   return (0, _.jsxs)(`div`, {
     className: _(_, `CapsuleDecorators`, _ && `HasReasonBanner`),
@@ -24061,6 +24061,44 @@ var _ = `hZ-dKtI-DOE-`,
   _([_], _.prototype, `OnSaveLink`, null),
   _([_], _.prototype, `OnEditLink`, null),
   (_ = _([_], _)));
+function _(_, _, _ = !1) {
+  let { data: _ } = _(_),
+    { data: _ } = _(_, _),
+    _ = _(_, _, _),
+    { data: _ } = _(_),
+    { data: _ } = _(_, _),
+    _ = _?.visible ? _ : _;
+  return {
+    storeItemAsset: _?.visible ? _ : _,
+    storeItemDefaultInfo: _,
+  };
+}
+function _(_, _, _) {
+  if (
+    _ &&
+    _.included_appids?.length == 1 &&
+    !_(_, _) &&
+    _.item_type &&
+    [1, 2].includes(_.item_type)
+  )
+    return {
+      appid: _.included_appids[0],
+    };
+}
+function _(_, _) {
+  if (!_) return !1;
+  switch (_) {
+    case `header`:
+      return !!_.header;
+    case `main`:
+      return !!_.main_capsule;
+    case `vertical`:
+    case `library`:
+      return !!_.hero_capsule || !!_.library_capsule;
+    default:
+      return (_(_, `Unhandled imageType: ${_}`), !1);
+  }
+}
 function _(_) {
   let {
       className: _,
@@ -24204,7 +24242,7 @@ var _ = `Es-UANTRhdg-`,
   _ = `gZNFN-cKUHw-`,
   _ = `AmB85SkEC3Q-`,
   _ = `P5j4maR0i14-`;
-_.createContext(!1);
+(_.createContext(!1), _.createContext(null));
 function _(_) {
   let { event: _, language: _, strSaleURL: _ } = _,
     _ = _(_, _);
@@ -24231,6 +24269,7 @@ function _(_) {
       saleEvent: _,
       bExploreButtonBelow: _,
       bShowExploreHint: _,
+      bExploreHintInHeading: _,
       children: _,
     } = _,
     _ = _?.strSaleURL,
@@ -24318,6 +24357,7 @@ function _(_) {
             }),
           _ &&
             _ &&
+            !_ &&
             (0, _.jsx)(_, {
               label: _,
               shown: !!_,
@@ -24429,44 +24469,6 @@ function _(_) {
       ? `#Sale_CrossPromoCreator_Visit_${_}`
       : `#Sale_CrossPromoSale_ExploreEvent`,
   );
-}
-function _(_, _, _ = !1) {
-  let { data: _ } = _(_),
-    { data: _ } = _(_, _),
-    _ = _(_, _, _),
-    { data: _ } = _(_),
-    { data: _ } = _(_, _),
-    _ = _?.visible ? _ : _;
-  return {
-    storeItemAsset: _?.visible ? _ : _,
-    storeItemDefaultInfo: _,
-  };
-}
-function _(_, _, _) {
-  if (
-    _ &&
-    _.included_appids?.length == 1 &&
-    !_(_, _) &&
-    _.item_type &&
-    [1, 2].includes(_.item_type)
-  )
-    return {
-      appid: _.included_appids[0],
-    };
-}
-function _(_, _) {
-  if (!_) return !1;
-  switch (_) {
-    case `header`:
-      return !!_.header;
-    case `main`:
-      return !!_.main_capsule;
-    case `vertical`:
-    case `library`:
-      return !!_.hero_capsule || !!_.library_capsule;
-    default:
-      return (_(_, `Unhandled imageType: ${_}`), !1);
-  }
 }
 var _ = -700,
   _ = -600,

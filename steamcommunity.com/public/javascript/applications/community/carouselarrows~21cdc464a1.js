@@ -478,6 +478,7 @@ function Dr(e) {
 var Or = N.createContext(!1),
   kr = `100% 0px 100% 0px`,
   Ar = `SaleSection_`;
+(0, N.createContext)(!1);
 function jr() {
   return window.innerWidth ?? 1920;
 }

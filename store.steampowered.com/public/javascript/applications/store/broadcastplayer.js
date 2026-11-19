@@ -13,11 +13,11 @@ import {
   l as c,
   n as l,
 } from "./chunk~01cfc309bf.js";
-import { n as u } from "./chunk~3720b337f3.js";
-import { t as d } from "./chunk~f4c928a27a.js";
-import { t as f } from "./chunk~eefd71512b.js";
-import { c as p } from "./chunk~b980797e15.js";
-import { t as ee } from "./chunk~874b4cd3a1.js";
+import { t as u } from "./chunk~f4c928a27a.js";
+import { t as d } from "./chunk~eefd71512b.js";
+import { c as f } from "./chunk~b980797e15.js";
+import { t as p } from "./chunk~874b4cd3a1.js";
+import { r as ee } from "./chunk~3720b337f3.js";
 import { o as m } from "./chunk~fc8a9e4879.js";
 import {
   $o as h,
@@ -165,7 +165,7 @@ function Te(e) {
 function Ee(e) {
   let { gidEvent: t } = e,
     n = m(t);
-  return n ? (0, I.jsx)(u, { event: n, language: Se(ye.LANGUAGE) }) : null;
+  return n ? (0, I.jsx)(ee, { event: n, language: Se(ye.LANGUAGE) }) : null;
 }
 function De() {
   return (0, I.jsx)(`div`, {
@@ -191,7 +191,7 @@ var Oe = c((e) => {
       className: `BroadcastVideoWatchState`,
       style: { filter: `hue-rotate(40deg)` },
       children: [
-        i && (0, I.jsx)(f, {}),
+        i && (0, I.jsx)(d, {}),
         !i &&
           (0, I.jsx)(`div`, {
             className: `BroadcastVideoWatchState_Text`,
@@ -1616,8 +1616,8 @@ var Z = class extends F.Component {
     t
       ? ((d.left = a), (c.width = a), (l.width = o), (u.width = s))
       : ((d.left = o), (l.width = o), (u.width = s));
-    let f = p(e.GetPlaybackTime()),
-      ee = p(this.state.nHoverValue ?? 0),
+    let p = f(e.GetPlaybackTime()),
+      ee = f(this.state.nHoverValue ?? 0),
       m = `STV_timelineContainer`;
     (this.state.bGrabberMouseDown && (m += ` grabberDown`),
       e.IsTimelineMapActive() && (m += ` minimapActive`));
@@ -1699,7 +1699,7 @@ var Z = class extends F.Component {
       children: (0, I.jsxs)(`div`, {
         className: m,
         children: [
-          (0, I.jsx)(`div`, { className: `DialogLabel`, children: f }),
+          (0, I.jsx)(`div`, { className: `DialogLabel`, children: p }),
           (0, I.jsx)(`div`, {
             className: `STV_timelineSegmentsContainer`,
             children: _,
@@ -1875,7 +1875,7 @@ var Q = class extends F.Component {
         }),
         i && (0, I.jsx)(Ee, { gidEvent: j.gidEvent }),
         r &&
-          (0, I.jsx)(d, {
+          (0, I.jsx)(u, {
             id:
               j.bValid && j.stream && j.stream[e.m_steamIDBroadcast]
                 ? j.appID
@@ -2018,7 +2018,7 @@ var $ = class extends F.Component {
             this.props.editMode &&
               this.state.sizableRegion.map((e, t) =>
                 (0, I.jsx)(
-                  ee,
+                  p,
                   {
                     index: t,
                     deleteFn: this.DeleteRegion,

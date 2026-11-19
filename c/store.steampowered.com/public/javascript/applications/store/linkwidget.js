@@ -1,7 +1,11 @@
 import { _ } from "./chunk~f025431ab0.js";
-import { _, _, _, _, _, _ } from "./chunk~01cfc309bf.js";
-import { _ } from "./chunk~68b7e78d68.js";
+import { _, _, _ } from "./chunk~01cfc309bf.js";
 import {
+  _,
+  _,
+  _,
+  _,
+  _,
   _,
   _,
   _,
@@ -22,34 +26,22 @@ import {
   _,
   _,
 } from "./chunk~6b8ddcaac8.js";
-import { _ } from "./chunk~4c761eb6f4.js";
-import { _ } from "./chunk~961c06e93e.js";
-import { _, _, _, _, _, _, _, _ } from "./chunk~3720b337f3.js";
 import { _, _, _, _, _, _, _, _, _ } from "./chunk~f57d770d64.js";
+import { _ } from "./chunk~961c06e93e.js";
 import { _ } from "./chunk~5adf866415.js";
 import { _ } from "./chunk~2f085f1384.js";
+import { _, _, _, _ } from "./chunk~ffe4581a06.js";
 import { _, _ } from "./chunk~f4c928a27a.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~e867464c75.js";
-import { _ } from "./chunk~9871ee5432.js";
 import { _ } from "./chunk~4e9767668d.js";
-import { _, _, _, _, _, _ } from "./chunk~2f8c67b4de.js";
-import { _, _ } from "./chunk~d43c81a658.js";
-import { _ } from "./chunk~ceada343dc.js";
-import { _ } from "./chunk~593a6b8ddc.js";
-import { _ } from "./chunk~d5ffe2610e.js";
+import { _, _, _ } from "./chunk~2f8c67b4de.js";
+import { _ } from "./chunk~618fb52a90.js";
 import { _ } from "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~710e3cfd2f.js";
-import { _, _ } from "./chunk~ffe4581a06.js";
-import { _, _, _, _ } from "./chunk~7b4b9eb713.js";
-import { _ } from "./chunk~331382b23f.js";
 import { _, _ } from "./chunk~3ea79bd96d.js";
+import { _, _ } from "./chunk~3720b337f3.js";
 import {
-  _,
-  _,
-  _,
-  _,
-  _,
   _,
   _,
   _,
@@ -71,453 +63,7 @@ import {
   _,
 } from "./main.js";
 var _ = _(_()),
-  _ = _(),
-  _ = _(_(), 1);
-function _(_, _, _) {
-  return `linear-gradient(${_ ?? 0}deg, ${_ || `transparent`} 0%, ${_ || `transparent`} 100%)`;
-}
-function _(_) {
-  return _(
-    _.background_gradient_bottom,
-    _.background_gradient_top,
-    _.background_gradient_angle,
-  );
-}
-function _(_, _, _) {
-  if (_.disable_background)
-    return {
-      paddingLeft: 0,
-      paddingRight: 0,
-    };
-  let _ = ``;
-  if (_.background_image) {
-    let _ = _.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image);
-    _ += `,url(${_})`;
-  }
-  return _.background_gradient_bottom ||
-    _.background_gradient_top ||
-    _.length > 0 ||
-    _.background_repeat ||
-    _.border_color ||
-    _.border_width
-    ? {
-        backgroundImage: _(_) + _,
-        backgroundRepeat: _.background_repeat,
-        backgroundSize: _.background_repeat == `coverBlur` ? `cover` : ``,
-        outlineStyle: _.border_color && _.border_width ? `solid` : void 0,
-        outlineColor: _.border_color,
-        outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
-      }
-    : {};
-}
-function _(_, _) {
-  return _
-    ? _.disable_background && !_
-      ? {
-          paddingLeft: 0,
-          paddingRight: 0,
-        }
-      : _.background_gradient_bottom ||
-          _.background_gradient_top ||
-          _.background_repeat ||
-          _.border_color ||
-          _.border_width
-        ? {
-            background: _(_),
-            backgroundRepeat: _.background_repeat,
-            outlineStyle: _.border_color && _.border_width ? `solid` : void 0,
-            outlineColor: _.border_color,
-            outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
-          }
-        : {}
-    : {};
-}
-function _(_) {
-  return _?.clan_steamid ? _(new _(_.clan_steamid), _) : null;
-}
-var _ = 100;
-async function _(_, _) {
-  let _ = new URLSearchParams();
-  (_.set(`event_gids`, [...new Set(_)].sort().join(`,`)),
-    _.set(`lang_list`, _(_)),
-    _.set(`origin`, location.origin));
-  let _ =
-      _.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + _.toString(),
-    _ = await fetch(_);
-  if (_.status === 204) return _.map(() => null);
-  if (!_._) throw Error(`${_} answered ${_.status}`);
-  let _ = await _.json(),
-    _ = new Map((_.events ?? []).map((_) => [_.gid, _]));
-  return _.map((_) => _.get(_) ?? null);
-}
-function _(_) {
-  return _(
-    [`PublicPartnerEventBrowser`, _],
-    () =>
-      new _.default((_) => _(_, _), {
-        maxBatchSize: _,
-        cache: !1,
-      }),
-  );
-}
-function _(_, _) {
-  return [`PublicPartnerEvent`, _, _];
-}
-function _(_, _, _) {
-  return {
-    queryKey: _(_, _),
-    queryFn: async () => (_ ? _.load(_) : (await _([_], _))[0]),
-    select: _,
-    enabled: !!_,
-    staleTime: 6e5,
-  };
-}
-function _(_) {
-  let _ = _(_.LANGUAGE),
-    _ = _(_);
-  return _(_(_, _, _));
-}
-function _(_, _, _) {
-  return _(_, _, _)?.strTagName || void 0;
-}
-function _(_, _, _, _) {
-  let _ = _ == 1 || _ == 3 || _ == 4,
-    _ = () => {
-      let _ = _(_.smart_section_creator_listid);
-      return _
-        ? _
-          ? _(`#Sale_CreatorList_Section_Editor_title`, _)
-          : _
-        : null;
-    };
-  if (_.section_type === `items`)
-    switch (_(_)) {
-      case `wishlist`:
-        return `#Sale_default_label_OnYourWishlist`;
-      case `interactive_recommender`:
-        return `#Sale_default_label_RecommendedForYou`;
-      case `tag_recommender`:
-        return `#Sale_default_label_RecommendedForYou`;
-      case `deck_topplayed`:
-        return `#Sale_TopPlayedOnDeckSection`;
-      case `personalized_carousel`:
-        if (_) {
-          let { nSectionIndex: _, nNumSections: _ } = _(_, _);
-          return _(`#Sale_PersonalizedCarousel_Section_Editor_title`, _ + 1, _);
-        }
-        let _ = _(_, _, _);
-        if (!_ && _ == 2) {
-          let { nSectionIndex: _, nNumSections: _ } = _(_, _);
-          return _(`#Sale_PersonalizedCarousel_Section_Editor_title`, _ + 1, _);
-        }
-        return _ ? _(`#Sale_PersonalizedCarousel_Section_title`, _) : null;
-      case `creator_list`:
-        return _();
-      case `discount_reason`:
-        return _(_) ?? null;
-    }
-  else if (_.section_type === `tabs`) return ``;
-  else if (_.section_type === `curator`) {
-    if (_.curator_clan_id) {
-      let _ = _.InitFromClanID(_.curator_clan_id, _.EUNIVERSE),
-        _ = _.GetCreatorHome(_);
-      if (_) return _(`#Sale_CuratorSection_Name`, _.GetName());
-    }
-    return `#Sale_CuratorSection`;
-  } else if (_.section_type === `event_schedule`) return `#Sale_EventSchedule`;
-  else if (_.section_type === `curator_recommendation`)
-    return `#Sale_CuratorRecommendation_title`;
-  else if (_.section_type === `discoveryqueue`) return `#DiscoveryQueue_Title`;
-  else if (_.section_type === `sale_events`) return `#Sale_SaleEvent_Section`;
-  else if (_.section_type === `calendar`) return `#Sale_SectionType_Calendar`;
-  else if (_.section_type === `crosspromotesalepage` && _ == 1)
-    return `#Sale_CrossPromoSale_DefaultSectionTitle`;
-  else if (_.section_type === `creator_list`) return _();
-  return null;
-}
-function _(_, _, _, _) {
-  let _ = _(_, _, _, _);
-  return _ === null ? null : _ && _.startsWith(`#`) ? _(_) : _;
-}
-function _(_, _, _, _, _, _, _, _) {
-  if (!_) return ``;
-  if (_.section_type === `crosspromotesalepage`) return _(_, _);
-  let _ = _(_, _, _, _),
-    _ = _.GetWithFallback(_.localized_label, _),
-    _ =
-      _ ||
-      _ ||
-      (_.default_label === `#Sale_default_label` ? `` : _(_.default_label)),
-    _ = _.internal_section_title?.trim();
-  if ((_?.length ?? 0) > 0) {
-    if (_ == 3 || _ == 4)
-      return _?.trim().length == 0 || _
-        ? _
-        : (0, _.jsxs)(_.Fragment, {
-            children: [
-              _,
-              ` `,
-              (0, _.jsx)(_, {
-                tooltip: _(
-                  `#Sale_Section_InternalTitle_Note`,
-                  (0, _.jsx)(`br`, {}),
-                  _,
-                ),
-              }),
-            ],
-          });
-    if (_ == 1)
-      return _?.trim().length == 0 || _
-        ? _
-        : (0, _.jsxs)(_.Fragment, {
-            children: [
-              _,
-              ` `,
-              (0, _.jsx)(`span`, {
-                children: _(`#Sale_Section_InternalTitle_Actual`, _),
-              }),
-            ],
-          });
-  }
-  let _ = _.GetWithFallback(_.localized_label_image, _);
-  if (!_ && _) {
-    let _ = _.GenerateURLFromHashAndExt(_, _);
-    return (0, _.jsx)(`img`, {
-      loading: `lazy`,
-      src: _,
-      alt: _,
-    });
-  }
-  return _;
-}
-function _(_, _, _) {
-  if (_(_.section_type))
-    switch (_(_)) {
-      case `personalized_carousel`:
-        let _ = _(_, _, _);
-        return _ ? _(`#Sale_PersonalizedCarousel_Section_subtitle`, _) : null;
-      case `creator_list`:
-        return _(_.smart_section_creator_listid) ?? null;
-    }
-  return null;
-}
-function _(_, _, _, _) {
-  let _ = _(_, _, _);
-  return _ === null
-    ? _.GetWithFallback(_.localized_subtitle, _) ||
-        (!_.default_subtitle || _.default_subtitle === `#Sale_default_subtitle`
-          ? ``
-          : _(_.default_subtitle))
-    : _ && _.startsWith(`#`)
-      ? _(_)
-      : _;
-}
-var _ = `dYYkud-Jf3s-`,
-  _ = `zZo1XshRYmQ-`,
-  _ = `RfHJSn8AdQE-`,
-  _ = `D8GFuSKNhX0-`,
-  _ = `woc2JepJIek-`;
-function _(_, _) {
-  return (
-    _.GetWithFallback(_.localized_label, _) ||
-    (_.default_label === `#Sale_default_label` ? `` : _(_.default_label))
-  );
-}
-function _(_) {
-  if (_(_.section_type))
-    switch (_(_)) {
-      case `deck_topplayed`:
-        return _.STORE_BASE_URL + `charts/steamdecktopplayed`;
-    }
-  return _.label_link;
-}
-function _(_) {
-  let _,
-    _,
-    _ = !1;
-  return (
-    _.label_link_style === `button`
-      ? ((_ = _(`#Sale_SectionLink_BrowseAll`)), (_ = !0))
-      : _.label_link_style === `browseall`
-        ? ((_ = _(`#Sale_SectionLink_BrowseAll`)),
-          (_ = _(_, `SaleSectionLabelLinkButton`)))
-        : _(_) === `deck_topplayed` &&
-          ((_ = _(`#EventBrowse_MoreEventsBtn`)),
-          (_ = _(_, `SaleSectionLabelLinkButton`))),
-    {
-      strLinkButtonLabel: _,
-      strLinkButtonClasses: _,
-      bSmallButton: _,
-    }
-  );
-}
-var _ = _((_) => {
-  let {
-      section: _,
-      event: _,
-      language: _,
-      nHiddenCapsules: _,
-      title: _,
-      subtitle: _,
-      bShowSeeMoreHint: _,
-      bUseGamepadLinkHint: _,
-      eGamepadLinkHintButton: _,
-      onLinkResolved: _,
-      personalizedCarousels: _,
-      promotedSale: _,
-    } = _,
-    _ = _(),
-    _ = _(),
-    _ = _ !== void 0,
-    { data: _ } = _(_ ? void 0 : _(_)),
-    _ = (_ ? _ : _) ?? void 0,
-    _ = _.link || _(_) || _(_);
-  if (
-    (_.useEffect(() => {
-      _?.(_);
-    }, [_, _]),
-    _.section_type == `title_image` && _.title_image_selected === `image`)
-  )
-    return null;
-  let _ = _ || _(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation, !1, _, _);
-  if (!_) return null;
-  let _ = _ || _(_, _, _, _),
-    _ = (0, _.jsxs)(`div`, {
-      className: _(_, `SaleSectionHeader`),
-      style: _(_, _, _),
-      children: [
-        _.test_show_on_valve_ip_only &&
-          (0, _.jsx)(`div`, {
-            className: `JrlXbYAw30w-`,
-            children: `(VO)\xA0`,
-          }),
-        _,
-      ],
-    }),
-    _ = (0, _.jsx)(`div`, {
-      className: _(_, _, `SaleSectionSubtitle`),
-      style: _(_, _, _),
-      children: _,
-    }),
-    _ = null;
-  if ((_?.length ?? 0) > 0) {
-    let {
-      strLinkButtonLabel: _,
-      strLinkButtonClasses: _,
-      bSmallButton: _,
-    } = _(_);
-    (_ &&
-      (_ =
-        _ && _
-          ? (0, _.jsx)(_, {
-              label: _,
-              shown: !!_,
-              button: _,
-            })
-          : _
-            ? (0, _.jsx)(`div`, {
-                className: _(_, _),
-                children: (0, _.jsx)(_, {
-                  url: _,
-                  children: (0, _.jsx)(_, {
-                    children: _,
-                  }),
-                }),
-              })
-            : (0, _.jsx)(_, {
-                url: _,
-                className: _,
-                children: _,
-              })),
-      (_ = (0, _.jsx)(_, {
-        url: _,
-        bFocusable: !_,
-        children: _,
-      })));
-  }
-  return (0, _.jsxs)(`div`, {
-    className: _(_, `SaleSectionLabelCtn`),
-    children: [
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [_, !!_ && _],
-      }),
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [
-          !!_ &&
-            (0, _.jsx)(_, {
-              className: `pL8IDIWBDg8-`,
-              toolTipContent: _(`#Sale_HiddenItem_Tooltip`),
-              children: (0, _.jsx)(`a`, {
-                href: _.STORE_BASE_URL + `account/preferences`,
-                children: _(
-                  _ == 1
-                    ? `#Sale_HiddenItem_Single_Short`
-                    : `#Sale_HiddenItems_Short`,
-                  _,
-                ),
-              }),
-            }),
-          _,
-        ],
-      }),
-    ],
-  });
-});
-function _(_, _, _) {
-  return {
-    fontFamily: _.jsondata.sale_font ? _(_.jsondata.sale_font, _) : void 0,
-    fontWeight: _.jsondata.sale_font_weight,
-    fontSize: `${_.jsondata.sale_section_font_size}px`,
-    textTransform: _.jsondata.sale_section_disable_capitalize
-      ? `initial`
-      : void 0,
-    color: _.label_color,
-  };
-}
-function _(_, _, _) {
-  return {
-    fontFamily: _.jsondata.sale_font ? _(_.jsondata.sale_font, _) : void 0,
-    fontWeight: 300,
-    fontSize: `${_.jsondata.sale_section_font_size && _.jsondata.sale_section_font_size - 3}px`,
-    letterSpacing: 0,
-    lineHeight: `${_.jsondata.sale_section_font_size}px`,
-    textTransform: _.jsondata.sale_section_disable_capitalize
-      ? `initial`
-      : void 0,
-    color: _.label_color,
-    opacity: `50%`,
-  };
-}
-function _(_, _) {
-  return (
-    (_ ||= ``),
-    _ === 12
-      ? _.replace(`Jolly Lodger`, `New Rocker`)
-      : _ === 23 || _ === 19 || _ === 24 || _ === 18 || _ === 8 || _ === 26
-        ? _.replace(`Sigmar One`, `Play`)
-        : _ === 6
-          ? _.replace(`Sigmar One`, `Noto Serif SC`)
-          : _ === 7
-            ? _.replace(`Sigmar One`, `Noto Serif TC`)
-            : _ === 10
-              ? _.replace(`Sigmar One`, `M PLUS Rounded 1c`)
-              : _ === 4
-                ? _.replace(`Sigmar One`, `Black Han Sans`)
-                : _ === 9
-                  ? _.replace(`Sigmar One`, `Prompt`)
-                  : _
-  );
-}
-function _(_, _, _, _, _) {
-  let _ = _(_, _, _, _.clanSteamID.GetAccountID(), _);
-  if (_) return _;
-  let _ = _(`#Sale_Section_Header`, _ + 1),
-    _ = `#Sale_Section_Type_` + (_?.section_type || `unknowntype`),
-    _ = _(_);
-  if (_ !== _) return `${_} (${_})`;
-}
+  _ = _();
 function _(_, _) {
   return _ == null || _ == null || !_(_)
     ? !0
@@ -1033,6 +579,7 @@ function _(_, _) {
 function _(_, _) {
   return _ === `tall` ? _ + 1 : _;
 }
+var _ = 3;
 function _(_, _, _, _, _, _, _, _, _, _) {
   let {
     nMaxCapsulesPerRow: _,
@@ -1043,6 +590,7 @@ function _(_, _, _, _, _, _, _, _, _, _) {
     bHideIfTooFewItems: _,
     strCarouselKey: _,
     bPaginationPills: _,
+    bDropShortLastCarouselPage: _,
   } = _;
   if (_.length === 0)
     return {
@@ -1069,9 +617,15 @@ function _(_, _, _, _, _, _, _, _, _, _) {
     _ = !1,
     _ = _ ? [1] : _,
     _ = _;
-  _ && (_ > 1 || _[0] == `tall`) && (_ = [`fullrow`]);
+  _ && (_ > 1 || _[0] == `tall`)
+    ? (_ = [`fullrow`])
+    : _ && _.length === 2 && _[0] === `tall` && (_ = [`grid`]);
   let _ = _ && (_ <= 1 || (!!_ && !_)),
     _ = Math.min(_[0], _);
+  if (_ && _) {
+    let _ = _ ? _ : _(_, _, _, _, _);
+    _ = _(_, _);
+  }
   if (_ && _.length > _)
     _ = (0, _.createElement)(
       _,
@@ -1187,6 +741,20 @@ function _(_, _, _, _, _, _, _, _, _, _) {
     content: _,
     bAdditionalContent: _,
   };
+}
+function _(_, _, _, _, _) {
+  let _ = 0;
+  for (let _ = 0; _ < _; _++) {
+    let _ = _(_ ? _ : 0, _);
+    _ += Math.min(_[_ % _.length], _(_, _));
+  }
+  return _;
+}
+function _(_, _) {
+  if (_.length <= _) return _;
+  let _ = Math.min(_ - 2, _),
+    _ = _.length % _;
+  return _ === 0 || _ > _ ? _ : _.slice(0, _.length - _);
 }
 function _(_) {
   let {
@@ -1350,7 +918,9 @@ function _(_) {
       children: _,
     } = _,
     [_, _] = _.useState(void 0),
-    { bShowSeeMoreHint: _, panelProps: _ } = _(_, `X`);
+    _ = _(_, _),
+    _ = _ && !!_ && !_,
+    { bShowSeeMoreHint: _, panelProps: _ } = _(_ ? _ : _, `X`);
   return (0, _.jsxs)(_, {
     placeholderHeight: _,
     className: _({
@@ -1384,10 +954,16 @@ function _(_) {
             eGamepadLinkHintButton: `X`,
             onLinkResolved: (_) => _(_ ?? void 0),
           }),
-          (0, _.jsx)(_, {
-            event: _,
-            section: _,
-          }),
+          _
+            ? (0, _.jsx)(_, {
+                label: _(`#EventBrowse_AllEventsBtn`),
+                shown: _,
+                button: `X`,
+              })
+            : (0, _.jsx)(_, {
+                event: _,
+                section: _,
+              }),
         ],
       }),
       _,
@@ -1398,33 +974,36 @@ function _(_) {
   });
 }
 function _(_) {
-  let { event: _, section: _ } = _,
-    _ = _.useMemo(
-      () =>
-        _.section_type == `events`
-          ? _(`ch_newshub`, `application_config`)
-          : void 0,
-      [_.section_type],
-    );
-  if (_.hide_view_all_events_link) return null;
+  let _ = _(_.event, _.section);
+  return _
+    ? (0, _.jsx)(`div`, {
+        className: _,
+        children: (0, _.jsx)(_, {
+          onClick: (_) => _(_, _),
+          children: _(`#EventBrowse_AllEventsBtn`),
+        }),
+      })
+    : null;
+}
+function _(_, _) {
+  let _ = _.useMemo(
+    () =>
+      _.section_type == `events`
+        ? _(`ch_newshub`, `application_config`)
+        : void 0,
+    [_.section_type],
+  );
+  if (_.hide_view_all_events_link) return;
   let _ = null;
   if (_.section_type == `events`) {
-    if (!_ || !_.BUsesContentHubForItemSource() || !_(_)) return null;
+    if (!_ || !_.BUsesContentHubForItemSource() || !_(_)) return;
     _ = _.STORE_BASE_URL + `news/` + _;
   } else
     _.section_type == `sale_events`
       ? (_ = _.STORE_BASE_URL + `news/collection/sales/`)
       : _.section_type == `calendar` &&
         (_ = _.STORE_BASE_URL + `personalcalendar`);
-  if (!_) return null;
-  let _ = _;
-  return (0, _.jsx)(`div`, {
-    className: _,
-    children: (0, _.jsx)(_, {
-      onClick: (_) => _(_, _),
-      children: _(`#EventBrowse_AllEventsBtn`),
-    }),
-  });
+  return _ ?? void 0;
 }
 function _(_) {
   let { saleEvent: _, section: _, bInGamepadUI: _ } = _,

@@ -3574,6 +3574,7 @@ var _ = {
   7: `#Sale_DiscountReason_Section_TopSeller`,
   8: `#Sale_DiscountReason_Section_HotDeal`,
   9: `#Sale_DiscountReason_Section_DeepDiscount`,
+  10: `#Sale_DiscountReason_Section_PopularInRegion`,
 };
 function _(_) {
   return _.smart_section_discount_reason === void 0
@@ -5061,6 +5062,7 @@ function _(_, _) {
 function _(_, _) {
   return _ === `tall` ? _ + 1 : _;
 }
+var _ = 3;
 function _(_, _, _, _, _, _, _, _, _, _) {
   let {
     nMaxCapsulesPerRow: _,
@@ -5071,6 +5073,7 @@ function _(_, _, _, _, _, _, _, _, _, _) {
     bHideIfTooFewItems: _,
     strCarouselKey: _,
     bPaginationPills: _,
+    bDropShortLastCarouselPage: _,
   } = _;
   if (_.length === 0)
     return {
@@ -5100,6 +5103,10 @@ function _(_, _, _, _, _, _, _, _, _, _) {
   _ && (_ > 1 || _[0] == `tall`) && (_ = [`fullrow`]);
   let _ = _ && (_ <= 1 || (!!_ && !_)),
     _ = Math.min(_[0], _);
+  if (_ && _) {
+    let _ = _ ? _ : _(_, _, _, _, _);
+    _ = _(_, _);
+  }
   if (_ && _.length > _)
     _ = (0, _.createElement)(
       _,
@@ -5215,6 +5222,20 @@ function _(_, _, _, _, _, _, _, _, _, _) {
     content: _,
     bAdditionalContent: _,
   };
+}
+function _(_, _, _, _, _) {
+  let _ = 0;
+  for (let _ = 0; _ < _; _++) {
+    let _ = _(_ ? _ : 0, _);
+    _ += Math.min(_[_ % _.length], _(_, _));
+  }
+  return _;
+}
+function _(_, _) {
+  if (_.length <= _) return _;
+  let _ = Math.min(_ - 2, _),
+    _ = _.length % _;
+  return _ === 0 || _ > _ ? _ : _.slice(0, _.length - _);
 }
 function _(_) {
   let {
@@ -62072,7 +62093,9 @@ var _ = class _ {
         (_.carousel_rows = 1),
         (_.show_as_carousel = !0),
         (_.event_schedule_use_relative_time = !0),
-        (_.default_label = `#Sale_default_label_269`)));
+        (_.default_label = `#Sale_default_label_269`)),
+      _ == `crosspromotesalepage` &&
+        ((_.default_label = `#Sale_default_label`), (_.localized_label = [])));
   }
   BHasSaleSectionTextLocalization(_) {
     let _ = this.GetSaleSections()[_];

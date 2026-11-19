@@ -10,7 +10,14 @@ import {
   kt as a,
   tt as o,
 } from "./chunk~01cfc309bf.js";
-import { a as s, c, l, o as u, r as d, s as f } from "./chunk~4c761eb6f4.js";
+import {
+  dt as s,
+  ft as c,
+  lt as l,
+  pt as u,
+  st as d,
+  ut as f,
+} from "./chunk~f57d770d64.js";
 import "./chunk~8681f5c764.js";
 import { t as p } from "./chunk~92931c6310.js";
 import { t as m } from "./chunk~874b4cd3a1.js";
@@ -782,39 +789,39 @@ var Ie = 960,
           ((n = e.width), (r = e.height), (i = !e.bDisableEnforceDimensions));
       }
       let o = this.width >= I(n) && this.height >= I(r),
-        s = i ? V(this.width, this.height, n, r) : o,
-        c = t && t != this.fileType,
-        l =
+        c = i ? V(this.width, this.height, n, r) : o,
+        l = t && t != this.fileType,
+        u =
           this.m_rgImageOptions && this.m_rgImageOptions.length > 0
             ? W(
                 this.fileType,
                 this.m_rgImageOptions?.map((e) => e.artworkType) || [],
               ).length == 0
             : !1,
-        u = !!J(this.fileType),
-        d = ``,
+        d = !!J(this.fileType),
+        f = ``,
         p = !1,
         m;
       return (
         a
-          ? l
-            ? (d = g(`#ImageUpload_InvalidFileType`))
-            : c
-              ? (d = g(`#ImageUpload_InvalidFormat`, f(t) ?? ``))
-              : !s && !u
-                ? (d = g(`#ImageUpload_InvalidResolution`, F(n), F(r)))
+          ? u
+            ? (f = g(`#ImageUpload_InvalidFileType`))
+            : l
+              ? (f = g(`#ImageUpload_InvalidFormat`, s(t) ?? ``))
+              : !c && !d
+                ? (f = g(`#ImageUpload_InvalidResolution`, F(n), F(r)))
                 : o
-                  ? !s && u
-                    ? ((d = g(`#ImageUpload_InvalidDimensions`, F(n), F(r))),
+                  ? !c && d
+                    ? ((f = g(`#ImageUpload_InvalidDimensions`, F(n), F(r))),
                       (p = !0))
                     : ((Array.isArray(n) && this.width != F(n)) ||
                         (Array.isArray(r) && this.height != F(r))) &&
                       ((m ??= []),
                       m.push(g(`#ImageUpload_PreferredDimension`, F(n), F(r))))
-                  : (d = g(`#ImageUpload_TooSmall`, F(n), F(r)))
-          : (d = g(`#ImageUpload_InvalidFormatSelected`)),
+                  : (f = g(`#ImageUpload_TooSmall`, F(n), F(r)))
+          : (f = g(`#ImageUpload_InvalidFormatSelected`)),
         {
-          error: d,
+          error: f,
           warnings: m,
           needsCrop: p,
           match: this.GetCurrentImageOption(),
@@ -1063,8 +1070,8 @@ var $ = class extends Ke {
     return this.AddImageForLanguage(e, n);
   }
   async AddImageForLanguage(e, t) {
-    if (!s(e.type) && !(ue.is_support && u(e.type))) return !1;
-    let n = await c(e, u(e.type));
+    if (!l(e.type) && !(ue.is_support && f(e.type))) return !1;
+    let n = await c(e, f(e.type));
     if (!n) return !1;
     let r = new Q(
       e,
@@ -1072,7 +1079,7 @@ var $ = class extends Ke {
       t,
       this.m_rgImageOptions,
       n.src,
-      l(n),
+      u(n),
       n,
       this.m_localizedImageGroupPrimaryImage,
     );

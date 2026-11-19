@@ -4,18 +4,18 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t } from "./chunk~01cfc309bf.js";
 import "./chunk~92931c6310.js";
-import { t as n } from "./chunk~466a63c735.js";
-import { i as r, n as i, r as a, t as o } from "./chunk~521597d5f9.js";
+import { i as n, n as r, r as i, t as a } from "./chunk~521597d5f9.js";
+import { t as o } from "./chunk~466a63c735.js";
 import { Tu as s } from "./main.js";
-n();
+o();
 var c = e(t()),
   l = new (class {
     bIncludeFeaturedAsGameSource = !0;
     get nOverrideDateNow() {
-      return a();
+      return i();
     }
     set nOverrideDateNow(e) {
-      r(e);
+      n(e);
     }
     get bRequireAllEventsLoadedInTimeBlock() {
       return !1;
@@ -24,13 +24,13 @@ var c = e(t()),
       return !0;
     }
     GetTimeNowWithOverride() {
-      return i();
+      return r();
     }
     GetTimeNowWithOverrideAsDate() {
-      return o();
+      return a();
     }
     BHasTimeOverride() {
-      return !!a();
+      return !!i();
     }
     ParseDevOverrides(e) {
       e &&

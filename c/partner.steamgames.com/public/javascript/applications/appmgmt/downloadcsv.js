@@ -53,83 +53,113 @@ function _(_) {
 function _(_, _) {
   return _(_)?.find((_) => _.partnerid === _);
 }
-var _ = _(_()),
-  _ = class _ {
-    m_mapPartnerToContactInfo = new Map();
-    m_mapPromisePartnerLoading = new Map();
-    async FetchValvePartnerContacts(_) {
-      let _ = _.PARTNER_BASE_URL + `actions/ajaxgetpartnervalvecontacts`,
-        _ = {
-          sessionid: _(),
-          strPartnerIDs: _.join(`,`),
-        },
-        _ = await _.default.get(_, {
-          params: _,
-          withCredentials: !0,
-        });
-      return _?.status == 200 && _?.data.success == 1
-        ? (_.data.contacts.forEach((_) => {
-            (this.m_mapPartnerToContactInfo.has(_.partnerid) ||
-              this.m_mapPartnerToContactInfo.set(_.partnerid, []),
-              this.m_mapPartnerToContactInfo.get(_.partnerid).push(_));
-          }),
-          _.data.contacts)
-        : [];
+var _ = _(_(), 1);
+function _(_, _ = {}) {
+  let {
+      nTimeoutMS: _ = 350,
+      nTimeoutExtensionMS: _ = 125,
+      nMaxTimeoutExtensions: _ = 3,
+    } = _,
+    [_, _] = _.useState(_),
+    _ = _.useRef(void 0);
+  return (
+    _.useEffect(() => {
+      let _ = performance.now();
+      _.current
+        ? _ - _.current.tsLastChange < _ * _ &&
+          (_.current.tsScheduledTimeout = Math.max(
+            performance.now() + _,
+            _.current.tsScheduledTimeout,
+          ))
+        : (_.current = {
+            tsLastChange: _,
+            tsScheduledTimeout: performance.now() + _,
+          });
+      let _ = _.current.tsScheduledTimeout - performance.now(),
+        _ = window.setTimeout(() => {
+          ((_.current = void 0), _(_));
+        }, _);
+      return () => window.clearTimeout(_);
+    }, [_, _, _, _]),
+    _
+  );
+}
+var _ = class _ {
+  m_mapPartnerToContactInfo = new Map();
+  m_mapPromisePartnerLoading = new Map();
+  async FetchValvePartnerContacts(_) {
+    let _ = _.PARTNER_BASE_URL + `actions/ajaxgetpartnervalvecontacts`,
+      _ = {
+        sessionid: _(),
+        strPartnerIDs: _.join(`,`),
+      },
+      _ = await _.default.get(_, {
+        params: _,
+        withCredentials: !0,
+      });
+    return _?.status == 200 && _?.data.success == 1
+      ? (_.data.contacts.forEach((_) => {
+          (this.m_mapPartnerToContactInfo.has(_.partnerid) ||
+            this.m_mapPartnerToContactInfo.set(_.partnerid, []),
+            this.m_mapPartnerToContactInfo.get(_.partnerid).push(_));
+        }),
+        _.data.contacts)
+      : [];
+  }
+  async LoadValvePartnerContact(_) {
+    return _
+      ? this.m_mapPartnerToContactInfo.has(_)
+        ? this.m_mapPartnerToContactInfo.get(_)
+        : (this.m_mapPromisePartnerLoading.has(_) ||
+            this.m_mapPromisePartnerLoading.set(
+              _,
+              this.InternalLoadValvePartnerContact(_),
+            ),
+          this.m_mapPromisePartnerLoading.get(_))
+      : [];
+  }
+  async InternalLoadValvePartnerContact(_) {
+    return this.FetchValvePartnerContacts([_]);
+  }
+  async InternalLoadMultiplePartnerContact(_) {
+    return this.FetchValvePartnerContacts(_);
+  }
+  GetPartnerContact(_) {
+    return this.m_mapPartnerToContactInfo.get(_);
+  }
+  GetPartnerContactAccountsByFilter(_, _, _) {
+    let _ = this.m_mapPartnerToContactInfo.get(_);
+    if (_?.length > 0) {
+      let _ = _.filter((_) => !_.appid || _.appid == _)
+        .filter(
+          (_) =>
+            !_ ||
+            _ == `any` ||
+            (_ == `business` && _.is_business_contact) ||
+            (_ == `tech` && _.is_tech_contact),
+        )
+        .map((_) => new _(_.steamid).GetAccountID());
+      return _(_);
     }
-    async LoadValvePartnerContact(_) {
-      return _
-        ? this.m_mapPartnerToContactInfo.has(_)
-          ? this.m_mapPartnerToContactInfo.get(_)
-          : (this.m_mapPromisePartnerLoading.has(_) ||
-              this.m_mapPromisePartnerLoading.set(
-                _,
-                this.InternalLoadValvePartnerContact(_),
-              ),
-            this.m_mapPromisePartnerLoading.get(_))
-        : [];
-    }
-    async InternalLoadValvePartnerContact(_) {
-      return this.FetchValvePartnerContacts([_]);
-    }
-    async InternalLoadMultiplePartnerContact(_) {
-      return this.FetchValvePartnerContacts(_);
-    }
-    GetPartnerContact(_) {
-      return this.m_mapPartnerToContactInfo.get(_);
-    }
-    GetPartnerContactAccountsByFilter(_, _, _) {
-      let _ = this.m_mapPartnerToContactInfo.get(_);
-      if (_?.length > 0) {
-        let _ = _.filter((_) => !_.appid || _.appid == _)
-          .filter(
-            (_) =>
-              !_ ||
-              _ == `any` ||
-              (_ == `business` && _.is_business_contact) ||
-              (_ == `tech` && _.is_tech_contact),
-          )
-          .map((_) => new _(_.steamid).GetAccountID());
-        return _(_);
-      }
-      return [];
-    }
-    static s_Singleton;
-    static Get() {
-      return (
-        _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-        _.s_Singleton
-      );
-    }
-    Init() {
-      let _ = _(`partner_valve_contact_list`, `application_config`);
-      _ &&
-        _.forEach((_) => {
-          this.m_mapPartnerToContactInfo.has(_.partnerid)
-            ? this.m_mapPartnerToContactInfo.get(_.partnerid).push(_)
-            : this.m_mapPartnerToContactInfo.set(_.partnerid, [_]);
-        });
-    }
-  };
+    return [];
+  }
+  static s_Singleton;
+  static Get() {
+    return (
+      _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
+      _.s_Singleton
+    );
+  }
+  Init() {
+    let _ = _(`partner_valve_contact_list`, `application_config`);
+    _ &&
+      _.forEach((_) => {
+        this.m_mapPartnerToContactInfo.has(_.partnerid)
+          ? this.m_mapPartnerToContactInfo.get(_.partnerid).push(_)
+          : this.m_mapPartnerToContactInfo.set(_.partnerid, [_]);
+      });
+  }
+};
 function _(_) {
   return [`PartnerValveContactByPartnerID`, _];
 }

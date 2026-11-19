@@ -676,6 +676,9 @@ html.responsive.touch .MYmTqhwexFc- .WishlistButtonText {
   height: 28px;
   display: inline-block;
 }
+._0pVtclCkHfg- {
+  background: linear-gradient(135deg, #1b2129 50%, #3a2f3f);
+}
 .dTHv3h5Lt04- {
   color: #8f98a0;
   min-width: 80px;
@@ -688,30 +691,48 @@ html.responsive.touch .MYmTqhwexFc- .WishlistButtonText {
   background-size: cover;
   margin: 0 16px 16px;
   position: relative;
+  overflow: hidden;
 }
 ._2izhRvP-rcU- {
   position: absolute;
   inset: 0;
+}
+.TBMtg7dsexw- {
+  filter: blur(80px) saturate(2) brightness(0.75);
+  opacity: 0.22;
+  background-position: 50%;
+  background-size: cover;
+  position: absolute;
+  inset: -80px;
+}
+._43CkJ2VflCE- .TBMtg7dsexw- {
+  display: none;
 }
 .yQQJOJ-o53Y- {
   aspect-ratio: 1200/300;
   background-position: 50% 15%;
 }
 .yQQJOJ-o53Y- ._2izhRvP-rcU- {
+  background: linear-gradient(90deg, #0000 28%, #00000073 40%, #1b2129 50%);
+}
+.yQQJOJ-o53Y- .TBMtg7dsexw- {
+  mask-image: linear-gradient(90deg, #0000 28%, #000 50%);
+}
+.yQQJOJ-o53Y-._43CkJ2VflCE- ._2izhRvP-rcU- {
   background: linear-gradient(
     to right,
-    transparent 5%,
-    color-mix(in srgb, var(--cross-promo-scrim-color) 90%, transparent) 60%
+    transparent 28%,
+    var(--cross-promo-fade-color) 50%
   );
 }
 .yQQJOJ-o53Y- .QeXhHcfzVFs- {
   flex-direction: row;
   align-items: center;
-  gap: 2.7%;
-  padding: 2.7%;
+  gap: 2%;
+  padding: 2%;
 }
 .yQQJOJ-o53Y- .ZLssJPXh0q4- {
-  flex: 0 0 36%;
+  flex: 0 0 35%;
   height: 100%;
 }
 .yQQJOJ-o53Y- .P7E9-6K46oc- {
@@ -724,15 +745,21 @@ html.responsive.touch .MYmTqhwexFc- .WishlistButtonText {
   aspect-ratio: 1200/480;
 }
 .EMnlujwcHvM- ._2izhRvP-rcU- {
+  background: linear-gradient(#0000 30%, #00000073 45%, #1b2129 60%);
+}
+.EMnlujwcHvM- .TBMtg7dsexw- {
+  mask-image: linear-gradient(#0000 30%, #000 60%);
+}
+.EMnlujwcHvM-._43CkJ2VflCE- ._2izhRvP-rcU- {
   background: linear-gradient(
     to bottom,
-    transparent 15%,
-    color-mix(in srgb, var(--cross-promo-scrim-color) 90%, transparent) 70%
+    transparent 30%,
+    var(--cross-promo-fade-color) 60%
   );
 }
 .EMnlujwcHvM- .QeXhHcfzVFs- {
   flex-direction: column;
-  padding: 2% 10% 2.7%;
+  padding: 2% 10%;
 }
 .EMnlujwcHvM- .ZLssJPXh0q4- {
   height: 42%;

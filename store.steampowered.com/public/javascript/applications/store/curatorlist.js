@@ -3,14 +3,13 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n, l as r, tt as i } from "./chunk~01cfc309bf.js";
-import { Ht as a } from "./chunk~6b8ddcaac8.js";
-import { f as o, s } from "./chunk~961c06e93e.js";
-import { i as c } from "./chunk~2f085f1384.js";
-import { t as l } from "./chunk~92931c6310.js";
-import { t as u } from "./chunk~eefd71512b.js";
-import { i as d } from "./chunk~9871ee5432.js";
-import { c as f, s as p } from "./chunk~6cf3fe3e07.js";
-import { c as m } from "./chunk~7b4b9eb713.js";
+import { $n as a, tr as o } from "./chunk~6b8ddcaac8.js";
+import { f as s, s as c } from "./chunk~961c06e93e.js";
+import { i as l } from "./chunk~2f085f1384.js";
+import { t as u } from "./chunk~92931c6310.js";
+import { t as d } from "./chunk~eefd71512b.js";
+import { c as f } from "./chunk~7b4b9eb713.js";
+import { c as p, s as m } from "./chunk~6cf3fe3e07.js";
 import { n as h, t as g } from "./chunk~3ea79bd96d.js";
 import { n as ee } from "./chunk~a7c5e71e12.js";
 import { a as _ } from "./chunk~fc8a9e4879.js";
@@ -75,7 +74,7 @@ function G(e, t) {
   let [n, r] = (0, H.useState)(
       e?.BUsesContentHubForItemSource() ? new Set() : null,
     ),
-    i = l(`useFilteredAppViaContentHub`);
+    i = u(`useFilteredAppViaContentHub`);
   return (
     (0, H.useEffect)(() => {
       e?.BUsesContentHubForItemSource() &&
@@ -308,8 +307,8 @@ function Re(e) {
 function Z(e) {
   let { listDetails: t, rgListItems: n } = e,
     [r, i] = (0, H.useState)(0),
-    [a, c] = (0, H.useState)(null),
-    d = l(`CuratorAppListDisplay`);
+    [a, o] = (0, H.useState)(null),
+    l = u(`CuratorAppListDisplay`);
   if (
     (H.useEffect(() => {
       n &&
@@ -319,23 +318,23 @@ function Z(e) {
           .then(() => {
             let e = n.map((e) => e.recommended_app.appid);
             T.Get()
-              .QueueMultipleAppRequests(e, o)
+              .QueueMultipleAppRequests(e, s)
               .then(() => {
-                d.token.reason ||
-                  c(
+                l.token.reason ||
+                  o(
                     n.filter(
-                      (e) => !s(T.Get().GetApp(e.recommended_app.appid)),
+                      (e) => !c(T.Get().GetApp(e.recommended_app.appid)),
                     ),
                   );
               })
               .catch(() => {
-                d.token.reason || c([]);
+                l.token.reason || o([]);
               });
           }));
-    }, [n, d]),
+    }, [n, l]),
     a == null)
   )
-    return (0, K.jsx)(u, {
+    return (0, K.jsx)(d, {
       string: E(`#Loading`),
       position: `center`,
       size: `medium`,
@@ -374,22 +373,22 @@ function Q(e) {
     n = L(t),
     r = v(`showlisttitle`, `application_config`),
     i = v(`titleareaheight`, `application_config`),
-    a = t.list_jsondata.youtube_link && f(t.list_jsondata.youtube_link),
+    a = t.list_jsondata.youtube_link && p(t.list_jsondata.youtube_link),
     o = t.list_jsondata.youtube_link && q(t.list_jsondata.youtube_link),
     s = se(j.LANGUAGE),
-    l = O.GetWithFallback(t.localized_flat_title, s),
+    c = O.GetWithFallback(t.localized_flat_title, s),
     u = O.GetWithFallback(t.localized_flat_blurb, s),
     d = O.GetWithFallback(t.localized_flat_link, s),
-    p = n && n.GetImageURL(c() ? `product_mobile_banner` : `product_banner`, s);
+    m = n && n.GetImageURL(l() ? `product_mobile_banner` : `product_banner`, s);
   return (0, K.jsxs)(`div`, {
     className: me,
     children: [
-      !!p &&
+      !!m &&
         (0, K.jsx)(P, {
-          href: m(n),
-          children: (0, K.jsx)(`img`, { className: `axGkuQwOueg-`, src: p }),
+          href: f(n),
+          children: (0, K.jsx)(`img`, { className: `axGkuQwOueg-`, src: m }),
         }),
-      r && l && (0, K.jsx)(`div`, { className: `TuILqTJ3-A8-`, children: l }),
+      r && c && (0, K.jsx)(`div`, { className: `TuILqTJ3-A8-`, children: c }),
       r && u && (0, K.jsx)(`div`, { className: `JICo3A7R0cg-`, children: u }),
       i > 0 && (0, K.jsx)(`div`, { style: { height: i } }),
       a &&
@@ -423,36 +422,36 @@ function Q(e) {
 var ze = r((e) => {
   let { item: t, listDetails: n, bAutoFocus: r } = e,
     i = parseInt(v(`curator_account_id`, `application_config`)),
-    a = I(i),
-    [o] = ee(t?.recommended_app?.appid, {
+    o = I(i),
+    [s] = ee(t?.recommended_app?.appid, {
       include_assets: !0,
       include_release: !0,
     }),
-    s = (0, H.useMemo)(
+    c = (0, H.useMemo)(
       () => ({
-        id: o?.GetID(),
-        type: M(o?.GetStoreItemType(), o?.GetAppType()),
+        id: s?.GetID(),
+        type: M(s?.GetStoreItemType(), s?.GetAppType()),
       }),
-      [o],
+      [s],
     ),
-    c = d(s);
-  if (!a || !o) return null;
+    l = a(c);
+  if (!o || !s) return null;
   let {
-      appid: l,
-      link_url: u,
-      blurb: p,
+      appid: u,
+      link_url: d,
+      blurb: f,
       time_recommended: m,
       recommendation_state: g,
     } = t.recommended_app,
-    _ = a.is_creator_home && !a.is_ogg,
-    y = n.list_jsondata.app_data?.[l],
-    b = u && f(u),
-    x = u && q(u),
-    S = p != `0` && p,
-    C = o.BHasDemo(),
+    _ = o.is_creator_home && !o.is_ogg,
+    y = n.list_jsondata.app_data?.[u],
+    b = d && p(d),
+    x = d && q(d),
+    S = f != `0` && f,
+    C = s.BHasDemo(),
     w = y?.img_url,
-    T = `curator_clanid=${a.clanAccountID}&curator_listid=${n.listid}`,
-    D = o.GetStorePageURL() + `/?curator_clanid=` + a.clanAccountID;
+    T = `curator_clanid=${o.clanAccountID}&curator_listid=${n.listid}`,
+    D = s.GetStorePageURL() + `/?curator_clanid=` + o.clanAccountID;
   return (0, K.jsxs)(N, {
     className: ge,
     autoFocus: r,
@@ -464,7 +463,7 @@ var ze = r((e) => {
             ? (0, K.jsx)(Be, {
                 strVideoID: b?.strVideoID || x,
                 nStartSeconds: b?.nStartSeconds,
-                id: c,
+                id: l,
                 strImgOverrideUrl: w,
                 bShowDemoButton: C,
                 strExtraParams: T,
@@ -472,7 +471,7 @@ var ze = r((e) => {
               })
             : (0, K.jsx)(h, {
                 imageType: `header`,
-                capsule: s,
+                capsule: c,
                 bShowDemoButton: C,
                 strExtraParams: T,
                 bPreferAssetWithoutOverride: !1,
@@ -481,7 +480,7 @@ var ze = r((e) => {
       (0, K.jsxs)(`div`, {
         className: we,
         children: [
-          (0, K.jsx)(`a`, { className: Te, href: D, children: o.GetName() }),
+          (0, K.jsx)(`a`, { className: Te, href: D, children: s.GetName() }),
           (0, K.jsxs)(`div`, {
             className: Ee,
             children: [
@@ -492,7 +491,7 @@ var ze = r((e) => {
                   _ || !m
                     ? E(
                         `#EventModTile_ReleaseDate`,
-                        o.GetFormattedSteamReleaseDate(),
+                        s.GetFormattedSteamReleaseDate(),
                       )
                     : ie(m),
               }),
@@ -503,7 +502,7 @@ var ze = r((e) => {
               className: `ovSTFS3FlJQ-`,
               children: E(`#SteamCurator_ReviewTextQuoted`, S),
             }),
-          !!u && (0, K.jsx)($, { url: u }),
+          !!d && (0, K.jsx)($, { url: d }),
         ],
       }),
     ],
@@ -515,7 +514,7 @@ function Be(e) {
       nStartSeconds: n,
       id: r,
       strImgOverrideUrl: i,
-      bShowDemoButton: o,
+      bShowDemoButton: a,
       strExtraParams: s,
       bTwitchVideo: c,
     } = e,
@@ -550,9 +549,9 @@ function Be(e) {
         children: [
           (0, K.jsx)(`div`, {
             className: xe,
-            children: (0, K.jsx)(a, {
+            children: (0, K.jsx)(o, {
               id: r,
-              bShowDemoButton: o,
+              bShowDemoButton: a,
               nDelayShowMs: 300,
               strExtraParams: s,
               hoverProps: {
@@ -601,7 +600,7 @@ function $(e) {
       `linkfilter/?url=` +
       t);
   let n = k(e.url),
-    r = p(e.url);
+    r = m(e.url);
   return (0, K.jsxs)(`div`, {
     className: je,
     children: [

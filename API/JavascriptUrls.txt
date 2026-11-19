@@ -1053,6 +1053,7 @@ ${PARTNER_BASE_URL}dashboard/${partner_id}?eventids=${}
 ${PARTNER_BASE_URL}dashboard/${}
 ${PARTNER_BASE_URL}dashboard/${}?eventids=${}
 ${PARTNER_BASE_URL}deadlines/ajaxgetdeadlines
+${PARTNER_BASE_URL}discounts/ajaxgetappsdiscountforevent?${}
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbyapp
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbybundle
 ${PARTNER_BASE_URL}doc/${}

@@ -5211,6 +5211,30 @@ table.cKYrmNuEAQs- td {
   padding: 0;
   text-decoration: underline;
 }
+.fRYveTg0GSk- {
+  background: #5ba32b1f;
+  border-inline-start: 3px solid #5ba32b;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 18px;
+  display: flex;
+}
+.UnG9FU-ITxc- {
+  flex-shrink: 0;
+  width: 184px;
+}
+._0LbrykiaptE- {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+.xeWoY7Meh9Y- {
+  color: #c44848;
+  margin-top: 8px;
+}
 .netYQcllljM- {
   color: #fff;
   flex-direction: row;
@@ -5699,6 +5723,111 @@ table.cKYrmNuEAQs- td {
 .eSSpbx9b-pU-:dir(rtl) {
   background-position-x: right 10px;
 }
+.Cmxx-wypanY- {
+  width: 40%;
+}
+._2Kn7aIu594c- {
+  box-sizing: border-box;
+  color: #fff;
+  background: linear-gradient(90deg, #3a9bed, #2460d0);
+  flex-direction: column;
+  justify-content: center;
+  height: 122px;
+  margin-top: 15px;
+  padding-block: 16px;
+  padding-inline: 28px 16px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+._4ajQStjyfyU- {
+  inset-inline: 0;
+  filter: blur(20px) brightness(0.5);
+  z-index: 0;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: scale(1.7);
+}
+.T-NFwlB7I78- {
+  z-index: 1;
+  position: relative;
+}
+.-DbO8F6ukH4- {
+  z-index: 1;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 500;
+  position: relative;
+}
+._81zAcbq59q4- {
+  position: sticky;
+  top: 0;
+}
+.hOFDWFQ9y9Y- {
+  box-sizing: border-box;
+  color: #cacaca;
+  word-break: break-word;
+  padding-block: 16px;
+  padding-inline: 28px 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+.hOFDWFQ9y9Y- a {
+  color: #fff;
+}
+.FmUdbsmSRhI- {
+  color: #a1a7af;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  font-family:
+    Motiva Sans,
+    Motiva Sans fallback,
+    sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+.jUykXEPzkzM- {
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+  display: flex;
+}
+._4sCcXQZz6PU- {
+  aspect-ratio: 460/215;
+  object-fit: cover;
+  width: 100%;
+  max-width: 324px;
+  display: block;
+}
+.-i--kn3art4- {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.GeryDlJgjMg- {
+  color: #a1a7af;
+  font-size: 14px;
+  font-weight: 300;
+}
+.gaSCvI4Q6Tg- {
+  color: #a4d007;
+  margin-bottom: 7px;
+  font-size: 20px;
+}
+.HRuUyKVMU0o- {
+  color: red;
+}
+.Mttbb2KfW7k- {
+  color: #ca5029;
+}
+.xqwtms6X2P8- {
+  background-color: #351e18;
+  border: 1px solid #542f26;
+  padding: 8px;
+}
 :where(.Dd2r2Vw75QA-) {
   color: #cacaca;
   font-size: 14px;
@@ -5823,88 +5952,6 @@ table.cKYrmNuEAQs- td {
   background: linear-gradient(90deg, #7faa1f, #5e810f);
   border-radius: 2px;
   padding: 4px 8px;
-}
-.Cmxx-wypanY- {
-  width: 40%;
-}
-._2Kn7aIu594c- {
-  box-sizing: border-box;
-  color: #fff;
-  background: linear-gradient(90deg, #3a9bed, #2460d0);
-  flex-direction: column;
-  justify-content: center;
-  height: 122px;
-  margin-top: 15px;
-  padding-block: 16px;
-  padding-inline: 28px 16px;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-._4ajQStjyfyU- {
-  inset-inline: 0;
-  filter: blur(20px) brightness(0.5);
-  z-index: 0;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  transform: scale(1.7);
-}
-.T-NFwlB7I78- {
-  z-index: 1;
-  position: relative;
-}
-.-DbO8F6ukH4- {
-  z-index: 1;
-  color: #fff;
-  font-size: 23px;
-  font-weight: 500;
-  position: relative;
-}
-._81zAcbq59q4- {
-  position: sticky;
-  top: 0;
-}
-.hOFDWFQ9y9Y- {
-  box-sizing: border-box;
-  color: #cacaca;
-  word-break: break-word;
-  padding-block: 16px;
-  padding-inline: 28px 0;
-  font-size: 14px;
-  font-weight: 300;
-}
-.hOFDWFQ9y9Y- a {
-  color: #fff;
-}
-.FmUdbsmSRhI- {
-  color: #a1a7af;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 3px;
-  font-family:
-    Motiva Sans,
-    Motiva Sans fallback,
-    sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-}
-.gaSCvI4Q6Tg- {
-  color: #a4d007;
-  margin-bottom: 7px;
-  font-size: 20px;
-}
-.HRuUyKVMU0o- {
-  color: red;
-}
-.Mttbb2KfW7k- {
-  color: #ca5029;
-}
-.xqwtms6X2P8- {
-  background-color: #351e18;
-  border: 1px solid #542f26;
-  padding: 8px;
 }
 .tVh1S7exK-I- {
   padding-top: 16px;

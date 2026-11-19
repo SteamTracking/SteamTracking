@@ -6929,7 +6929,7 @@ function Id(e) {
       strAdditionalClassName: i,
       bNoShadow: a,
     } = e,
-    { storeItemAsset: o, storeItemDefaultInfo: s } = DD(t, n, r);
+    { storeItemAsset: o, storeItemDefaultInfo: s } = GE(t, n, r);
   if (n === `library` || n == `vertical`)
     return (0, q.jsx)(fy, {
       id: t,
@@ -8719,7 +8719,7 @@ function qp(e) {
       case 8:
         g = `#ReviewScore_PercentPositive_series`;
     }
-  return (0, q.jsx)(GE, {
+  return (0, q.jsx)(JE, {
     url: m,
     className: F(Rp, `ReviewScore`),
     children:
@@ -12875,7 +12875,7 @@ function e_(e) {
     u = K.useContext($g),
     d = l && u ? l(u, t) : void 0,
     f = o && !n,
-    p = s && !n,
+    p = s && !n && !d?.bReplacesWishlistBanner,
     m = !n && r;
   return (0, q.jsxs)(`div`, {
     className: F(bd, `CapsuleDecorators`, d && `HasReasonBanner`),
@@ -12907,7 +12907,7 @@ function e_(e) {
             T.Localize(`#Sale_OnWishlist`),
           ],
         }),
-      m && !f && !p && (0, q.jsx)(t_, { appids: t }),
+      m && !f && !s && (0, q.jsx)(t_, { appids: t }),
       c && (0, q.jsx)(Zg, {}),
     ],
   });
@@ -15385,7 +15385,7 @@ function fy(e) {
       bNoShadow: i,
     } = e,
     a = i ? dd : ``,
-    { storeItemDefaultInfo: o, storeItemAsset: s } = DD(t, `vertical`, r),
+    { storeItemDefaultInfo: o, storeItemAsset: s } = GE(t, `vertical`, r),
     [c, l] = K.useState(0);
   if (!o || !s) return (0, q.jsx)(`div`, { className: ud });
   let { strStoreVerticalURL: u, strLibraryVerticalURL: d } = Rd(s, o);
@@ -21424,7 +21424,40 @@ var zT = `hZ-dKtI-DOE-`,
   A([D], WE.prototype, `OnSaveLink`, null),
   A([D], WE.prototype, `OnEditLink`, null),
   (WE = A([a], WE)));
-function GE(e) {
+function GE(e, t, n = !1) {
+  let { data: r } = M(e),
+    { data: i } = mr(e, n),
+    a = KE(r, i, t),
+    { data: o } = M(a),
+    { data: s } = mr(a, n),
+    c = o?.visible ? o : r;
+  return { storeItemAsset: o?.visible ? s : i, storeItemDefaultInfo: c };
+}
+function KE(e, t, n) {
+  if (
+    e &&
+    e.included_appids?.length == 1 &&
+    !qE(t, n) &&
+    e.item_type &&
+    [1, 2].includes(e.item_type)
+  )
+    return { appid: e.included_appids[0] };
+}
+function qE(e, t) {
+  if (!e) return !1;
+  switch (t) {
+    case `header`:
+      return !!e.header;
+    case `main`:
+      return !!e.main_capsule;
+    case `vertical`:
+    case `library`:
+      return !!e.hero_capsule || !!e.library_capsule;
+    default:
+      return (or(t, `Unhandled imageType: ${t}`), !1);
+  }
+}
+function JE(e) {
   let {
       className: t,
       url: n,
@@ -21435,7 +21468,7 @@ function GE(e) {
       bFocusable: s = !0,
       fnCanTakeFocus: c,
     } = e,
-    l = a ? n : n ? KE(n, R.STORE_BASE_URL) : void 0,
+    l = a ? n : n ? YE(n, R.STORE_BASE_URL) : void 0,
     u = Pn(l);
   return u
     ? (0, q.jsx)(cn, {
@@ -21450,7 +21483,7 @@ function GE(e) {
       })
     : (0, q.jsx)(`span`, { style: r, className: t, children: i });
 }
-function KE(e, t) {
+function YE(e, t) {
   try {
     let n = new URL(t),
       r = new URL(e);
@@ -21459,39 +21492,39 @@ function KE(e, t) {
     return ``;
   }
 }
-function qE(e) {
+function XE(e) {
   let { section: t } = e;
   return !t.label_link || t.label_link_style
     ? null
     : (0, q.jsx)(`div`, {
         className: OS,
-        children: (0, q.jsx)(GE, {
+        children: (0, q.jsx)(JE, {
           url: t.label_link,
           children: T.Localize(`#btn_live_streams_all`),
         }),
       });
 }
-function JE(e, t) {
+function ZE(e, t) {
   return !t || t.startsWith(`https://`) || t.startsWith(`http://`)
     ? t
     : `${R.CLAN_CDN_ASSET_URL}images/clan/${e}/${t}`;
 }
-function YE(e, t, n) {
+function QE(e, t, n) {
   return !t || on(t) ? t : `${n}images/clan/${e}/${t}`;
 }
-var XE = `poster`,
-  ZE = `${XE}.avif`,
-  QE = /^([0-9a-f]{32})(?:_2x)?\.[a-z0-9.]+$/i;
-function $E(e) {
+var $E = `poster`,
+  eD = `${$E}.avif`,
+  tD = /^([0-9a-f]{32})(?:_2x)?\.[a-z0-9.]+$/i;
+function nD(e) {
   let t = e.video_webm_src || e.video_mp4_src;
-  if (!t || e.image?.includes(`.${XE}.`)) return e.image;
-  let n = QE.exec(t);
-  return n ? `${n[1]}.${ZE}` : e.image;
+  if (!t || e.image?.includes(`.${$E}.`)) return e.image;
+  let n = tD.exec(t);
+  return n ? `${n[1]}.${eD}` : e.image;
 }
-var eD = 0.01,
-  tD = 100,
-  nD = 4,
-  rD = [
+var rD = 0.01,
+  iD = 100,
+  aD = 4,
+  oD = [
     [16, 9],
     [9, 16],
     [4, 3],
@@ -21505,27 +21538,27 @@ var eD = 0.01,
     [5, 4],
     [4, 5],
   ],
-  iD = 0.005;
-function aD(e, t) {
-  if (!(!e || !t || e <= 0 || t <= 0)) return oD(e / t);
+  sD = 0.005;
+function cD(e, t) {
+  if (!(!e || !t || e <= 0 || t <= 0)) return lD(e / t);
 }
-function oD(e) {
-  if (!e || !Number.isFinite(e) || e < eD || e > tD) return;
-  let t = 10 ** nD;
+function lD(e) {
+  if (!e || !Number.isFinite(e) || e < rD || e > iD) return;
+  let t = 10 ** aD;
   return Math.round(e * t) / t;
 }
-function sD(e) {
+function uD(e) {
   let t = e.trim();
   if (!t) return;
   let n = /^(\d+(?:\.\d+)?)\s*[:x/]\s*(\d+(?:\.\d+)?)$/i.exec(t);
-  if (n) return aD(parseFloat(n[1]), parseFloat(n[2]));
-  if (/^\d+(?:\.\d+)?$/.test(t)) return oD(parseFloat(t));
+  if (n) return cD(parseFloat(n[1]), parseFloat(n[2]));
+  if (/^\d+(?:\.\d+)?$/.test(t)) return lD(parseFloat(t));
 }
-function cD(e) {
-  let t = rD.find(([t, n]) => Math.abs(e - t / n) < iD);
+function dD(e) {
+  let t = oD.find(([t, n]) => Math.abs(e - t / n) < sD);
   return t ? `${t[0]}:${t[1]}` : String(e);
 }
-function lD(e, t) {
+function fD(e, t) {
   let n = $x(e ?? void 0, `capsule`, t);
   if (!e) return;
   let r = e.clanSteamID.GetAccountID();
@@ -21537,7 +21570,7 @@ function lD(e, t) {
     strSummary: e.GetSummaryWithFallback(t) || void 0,
     strCapsuleURL: n,
     strSaleURL: Se(e) ?? void 0,
-    strBackgroundURL: JE(
+    strBackgroundURL: ZE(
       r,
       e.jsondata.sale_cross_promo_carousel_background?.image,
     ),
@@ -21549,169 +21582,170 @@ function lD(e, t) {
         : void 0,
   };
 }
-function uD(e) {
+function pD(e) {
   return (e ?? []).slice(0, 48).map((e) => ({ appid: e }));
 }
-var dD = `Es-UANTRhdg-`,
-  fD = `FsYxDNcAXaI-`,
-  pD = `cSFkUHyVW24-`,
-  mD = `yT92BfNEvpw-`,
-  hD = `gxh8RxFKhr8-`,
-  gD = `AZSEWyNPfhc-`,
-  _D = `gZNFN-cKUHw-`,
-  vD = `AmB85SkEC3Q-`,
-  yD = `P5j4maR0i14-`;
-K.createContext(!1);
-function bD(e) {
+var mD = `Es-UANTRhdg-`,
+  hD = `FsYxDNcAXaI-`,
+  gD = `cSFkUHyVW24-`,
+  _D = `yT92BfNEvpw-`,
+  vD = `gxh8RxFKhr8-`,
+  yD = `AZSEWyNPfhc-`,
+  bD = `gZNFN-cKUHw-`,
+  xD = `AmB85SkEC3Q-`,
+  SD = `P5j4maR0i14-`;
+(K.createContext(!1), K.createContext(null));
+function CD(e) {
   let { event: t, language: n, strSaleURL: r } = e,
-    i = lD(t, n);
+    i = fD(t, n);
   if (!i) return null;
   let a = r ? { ...i, strSaleURL: r } : i;
   return a.strSaleURL
     ? (0, q.jsx)(mt, {
-        className: F(dD, fD, pD),
+        className: F(mD, hD, gD),
         "flow-children": `row`,
-        children: (0, q.jsx)(xD, { saleEvent: a, bExploreButtonBelow: !0 }),
+        children: (0, q.jsx)(wD, { saleEvent: a, bExploreButtonBelow: !0 }),
       })
     : null;
 }
-function xD(e) {
+function wD(e) {
   let {
       saleEvent: t,
       bExploreButtonBelow: n,
       bShowExploreHint: r,
-      children: i,
+      bExploreHintInHeading: i,
+      children: a,
     } = e,
-    a = t?.strSaleURL,
-    o = t?.eCreatorRole,
-    s = o || !e.strExploreLabel ? ED(o) : e.strExploreLabel,
-    c = t?.strCapsuleURL,
-    l = t?.strSummary,
-    u = Qr(),
-    d = Dn(),
-    f = d && r !== void 0,
-    p = t?.rtEndTime
+    o = t?.strSaleURL,
+    s = t?.eCreatorRole,
+    c = s || !e.strExploreLabel ? kD(s) : e.strExploreLabel,
+    l = t?.strCapsuleURL,
+    u = t?.strSummary,
+    d = Qr(),
+    f = Dn(),
+    p = f && r !== void 0,
+    m = t?.rtEndTime
       ? rr(t.rtEndTime, {
           weekday: void 0,
           year: void 0,
           month: `short`,
           day: `numeric`,
-          timeZone: u,
+          timeZone: d,
         })
       : void 0;
   return (0, q.jsxs)(q.Fragment, {
     children: [
-      c &&
-        !o &&
+      l &&
+        !s &&
         (0, q.jsx)(`div`, {
           className: `qbRGxo4aWcc-`,
-          style: { backgroundImage: `url(${c})` },
+          style: { backgroundImage: `url(${l})` },
         }),
-      c &&
+      l &&
         (0, q.jsx)(`div`, {
-          className: F(`HgvxVtFlDis-`, o && `Lp2CuPiW8Lo-`),
-          style: { backgroundImage: `url(${c})` },
+          className: F(`HgvxVtFlDis-`, s && `Lp2CuPiW8Lo-`),
+          style: { backgroundImage: `url(${l})` },
         }),
-      o && (0, q.jsx)(wD, { rgAppIDs: t?.rgCreatorAppIDs, strAvatarURL: c }),
+      s && (0, q.jsx)(DD, { rgAppIDs: t?.rgCreatorAppIDs, strAvatarURL: l }),
       (0, q.jsxs)(`div`, {
-        className: F(mD, o && `-NAWu4CYrl8-`),
+        className: F(_D, s && `-NAWu4CYrl8-`),
         children: [
-          o &&
-            c &&
-            (0, q.jsx)(GE, {
-              url: a,
+          s &&
+            l &&
+            (0, q.jsx)(JE, {
+              url: o,
               className: `X4LW9zxgdTo-`,
               bFocusable: !1,
-              children: (0, q.jsx)(`img`, { src: c, alt: `` }),
+              children: (0, q.jsx)(`img`, { src: l, alt: `` }),
             }),
-          !o &&
+          !s &&
             (0, q.jsxs)(`div`, {
               className: `_6jMisrq5Zfo-`,
               children: [
                 (0, q.jsx)(`div`, {
                   className: `XBv92QzB8Xc-`,
-                  children: (0, q.jsx)(GE, {
-                    url: a,
+                  children: (0, q.jsx)(JE, {
+                    url: o,
                     className: `NjUCqxvhkHk-`,
                     bFocusable: !1,
                     children: t?.strName,
                   }),
                 }),
-                p &&
+                m &&
                   (0, q.jsx)(`div`, {
                     className: `_6iUHDist0Jc-`,
-                    children: V(`#Sale_CrossPromoSale_NowThrough`, p),
+                    children: V(`#Sale_CrossPromoSale_NowThrough`, m),
                   }),
               ],
             }),
-          a &&
+          o &&
             !n &&
-            !f &&
-            !o &&
-            (0, q.jsx)(GE, {
-              url: a,
+            !p &&
+            !s &&
+            (0, q.jsx)(JE, {
+              url: o,
               className: F(`_6O6T0vupYYc-`, `DuNM8zA4oz0-`),
               fnCanTakeFocus: _t,
-              children: s,
+              children: c,
             }),
-          a && f && (0, q.jsx)(jC, { label: s, shown: !!r, button: `X` }),
+          o && p && !i && (0, q.jsx)(jC, { label: c, shown: !!r, button: `X` }),
         ],
       }),
       (0, q.jsxs)(`div`, {
-        className: F(hD, o && `ZONqp3dzTMI-`),
+        className: F(vD, s && `ZONqp3dzTMI-`),
         children: [
-          c &&
-            (0, q.jsxs)(GE, {
-              url: a,
-              className: F(`oztjxXYIBAk-`, o && `CDF-2WDX3lg-`),
-              bFocusable: !!d,
+          l &&
+            (0, q.jsxs)(JE, {
+              url: o,
+              className: F(`oztjxXYIBAk-`, s && `CDF-2WDX3lg-`),
+              bFocusable: !!f,
               children: [
-                (0, q.jsx)(`img`, { src: c, alt: `` }),
-                l &&
+                (0, q.jsx)(`img`, { src: l, alt: `` }),
+                u &&
                   (0, q.jsx)(`div`, {
                     className: `_7CUHH8Trg28-`,
                     children: (0, q.jsx)(`div`, {
                       className: `ZMGnYjKDOEI-`,
-                      children: l,
+                      children: u,
                     }),
                   }),
               ],
             }),
-          i,
+          a,
         ],
       }),
-      a &&
-        !f &&
-        !o &&
+      o &&
+        !p &&
+        !s &&
         (0, q.jsx)(`div`, {
           className: F(`T1fHkhyvNkM-`, n && `SAqjQ-F71kA-`),
-          children: (0, q.jsx)(GE, {
-            url: a,
+          children: (0, q.jsx)(JE, {
+            url: o,
             className: `_6O6T0vupYYc-`,
             fnCanTakeFocus: _t,
-            children: s,
+            children: c,
           }),
         }),
     ],
   });
 }
-var SD = 60,
-  CD = 4;
-function wD(e) {
+var TD = 60,
+  ED = 4;
+function DD(e) {
   let { rgAppIDs: t, strAvatarURL: n } = e,
     r = LT(
-      K.useMemo(() => uD(t), [t]),
+      K.useMemo(() => pD(t), [t]),
       !1,
     ),
     i = K.useMemo(() => {
       let e = (r ?? []).slice(0, 24);
-      return e.length < CD
+      return e.length < ED
         ? []
-        : Array.from({ length: SD }, (t, n) => e[n % e.length]);
+        : Array.from({ length: TD }, (t, n) => e[n % e.length]);
     }, [r]);
   return i.length
     ? (0, q.jsxs)(`div`, {
-        className: gD,
+        className: yD,
         "aria-hidden": !0,
         children: [
           n &&
@@ -21720,58 +21754,25 @@ function wD(e) {
               style: { backgroundImage: `url(${n})` },
             }),
           (0, q.jsx)(`div`, {
-            className: _D,
-            children: i.map((e, t) => (0, q.jsx)(TD, { id: e }, t)),
+            className: bD,
+            children: i.map((e, t) => (0, q.jsx)(OD, { id: e }, t)),
           }),
         ],
       })
     : null;
 }
-function TD(e) {
+function OD(e) {
   let t = Oe(e.id, `header`);
   return t
     ? (0, q.jsx)(`img`, { src: t, alt: ``, loading: `lazy` })
     : (0, q.jsx)(`div`, {});
 }
-function ED(e) {
+function kD(e) {
   return V(
     e
       ? `#Sale_CrossPromoCreator_Visit_${e}`
       : `#Sale_CrossPromoSale_ExploreEvent`,
   );
-}
-function DD(e, t, n = !1) {
-  let { data: r } = M(e),
-    { data: i } = mr(e, n),
-    a = OD(r, i, t),
-    { data: o } = M(a),
-    { data: s } = mr(a, n),
-    c = o?.visible ? o : r;
-  return { storeItemAsset: o?.visible ? s : i, storeItemDefaultInfo: c };
-}
-function OD(e, t, n) {
-  if (
-    e &&
-    e.included_appids?.length == 1 &&
-    !kD(t, n) &&
-    e.item_type &&
-    [1, 2].includes(e.item_type)
-  )
-    return { appid: e.included_appids[0] };
-}
-function kD(e, t) {
-  if (!e) return !1;
-  switch (t) {
-    case `header`:
-      return !!e.header;
-    case `main`:
-      return !!e.main_capsule;
-    case `vertical`:
-    case `library`:
-      return !!e.hero_capsule || !!e.library_capsule;
-    default:
-      return (or(t, `Unhandled imageType: ${t}`), !1);
-  }
 }
 var AD = -700,
   jD = -600,
@@ -23959,7 +23960,7 @@ function Uk(e) {
   if (!r) return null;
   let i = jn(Hr(R.LANGUAGE)),
     a = `${R.STORE_BASE_URL}tags/${i}/${r}`;
-  return (0, q.jsx)(GE, {
+  return (0, q.jsx)(JE, {
     url: a,
     className: F(Fu, `WidgetTag`, n),
     children: r,
@@ -23973,7 +23974,7 @@ function Wk(e) {
   return a
     ? r
       ? (0, q.jsx)(`div`, { className: F(Fu, `WidgetTag`, n), children: a })
-      : (0, q.jsx)(GE, {
+      : (0, q.jsx)(JE, {
           url: o,
           className: F(Fu, `WidgetTag`, n),
           children: a,
@@ -30254,7 +30255,7 @@ export {
   sx as Br,
   qs as Bs,
   Tw as Bt,
-  YE as C,
+  QE as C,
   Od as Ca,
   Bs as Cc,
   ny as Ci,
@@ -30272,7 +30273,7 @@ export {
   zb as Dr,
   ms as Ds,
   xw as Dt,
-  GE as E,
+  JE as E,
   Ed as Ea,
   Fs as Ec,
   Kv as Ei,
@@ -30397,7 +30398,7 @@ export {
   Gb as Rr,
   fs as Rs,
   fw as Rt,
-  JE as S,
+  ZE as S,
   rd as Sa,
   ic as Sc,
   ry as Si,
@@ -30406,7 +30407,7 @@ export {
   Pb as Sr,
   Js as Ss,
   vw as St,
-  qE as T,
+  XE as T,
   xd as Ta,
   ps as Tc,
   Uv as Ti,
@@ -30466,7 +30467,7 @@ export {
   mb as Zr,
   Zo as Zs,
   AC as Zt,
-  vD as _,
+  xD as _,
   Id as _a,
   ls as _c,
   my as _i,
@@ -30484,7 +30485,7 @@ export {
   Tx as ar,
   Os as as,
   NT as at,
-  aD as b,
+  cD as b,
   ju as ba,
   Ps as bc,
   ay as bi,
@@ -30528,7 +30529,7 @@ export {
   Ob as fr,
   Us as fs,
   TT as ft,
-  bD as g,
+  CD as g,
   Xd as ga,
   is as gc,
   gy as gi,
@@ -30663,7 +30664,7 @@ export {
   Db as ur,
   tc as us,
   MT as ut,
-  yD as v,
+  SD as v,
   od as va,
   cs as vc,
   fy as vi,
@@ -30672,7 +30673,7 @@ export {
   nx as vr,
   Es as vs,
   Pw as vt,
-  $E as w,
+  nD as w,
   Td as wa,
   Xo as wc,
   $v as wi,
@@ -30681,7 +30682,7 @@ export {
   ax as wr,
   as as ws,
   gw as wt,
-  sD as x,
+  uD as x,
   ed as xa,
   Lo as xc,
   sy as xi,
@@ -30690,7 +30691,7 @@ export {
   Ib as xr,
   $s as xs,
   Aw as xt,
-  cD as y,
+  dD as y,
   sd as ya,
   Io as yc,
   cy as yi,

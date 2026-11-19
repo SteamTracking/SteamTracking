@@ -17,7 +17,7 @@ import {
   st as f,
   yt as p,
 } from "./chunk~01cfc309bf.js";
-import { Do as m, Ht as h, Pt as g, ni as _ } from "./chunk~6b8ddcaac8.js";
+import { Hn as m, Vs as h, ha as g, tr as _ } from "./chunk~6b8ddcaac8.js";
 import { t as v } from "./chunk~8681f5c764.js";
 import { t as y } from "./chunk~eefd71512b.js";
 import { u as b } from "./chunk~e867464c75.js";
@@ -3348,13 +3348,13 @@ function Cs(e) {
     p = J.useCallback(async () => {
       (await d(!u), o());
     }, [d, u, o]),
-    m = J.useCallback(
+    h = J.useCallback(
       (e) => {
         c && _s(Se(e), `${N.STORE_BASE_URL}${c.store_url_path}`);
       },
       [c],
     ),
-    h = J.useCallback(
+    g = J.useCallback(
       (e) => {
         gs(Se(e), t.appid);
       },
@@ -3366,17 +3366,17 @@ function Cs(e) {
       l &&
         (0, Y.jsx)(Me, {
           onSelected: () => {
-            g(t.appid, t.name);
+            m(t.appid, t.name);
           },
           children: k(`#FamilyGame_PlayGame`),
         }),
       _ &&
         (0, Y.jsx)(Me, {
-          onSelected: h,
+          onSelected: g,
           children: k(`#FamilyGame_OpenAppDetails`),
         }),
       c?.visible &&
-        (0, Y.jsx)(Me, { onSelected: m, children: k(`#FamilyGame_ViewStore`) }),
+        (0, Y.jsx)(Me, { onSelected: h, children: k(`#FamilyGame_ViewStore`) }),
       (0, Y.jsx)(Me, {
         onSelected: p,
         children: k(
@@ -3406,35 +3406,35 @@ function ws(e) {
     l = J.useContext(Fs),
     u = (0, Y.jsx)(vs, { app: n, sort: i }),
     d = { direction: `right`, style: { minWidth: `320px` } },
-    f = m(n.appid),
+    f = h(n.appid),
     { data: p } = Re(f),
-    g = n.exclude_reason == 0 || n.exclude_reason == 3,
-    _ = n.owner_steamids.some((e) => e == c),
+    m = n.exclude_reason == 0 || n.exclude_reason == 3,
+    g = n.owner_steamids.some((e) => e == c),
     v = N.IN_CLIENT,
     y = p && p.visible,
     b = J.useCallback(
       (e) => {
-        (me((0, Y.jsx)(Cs, { item: n, bOwnsGame: _, familyContext: l }), e),
+        (me((0, Y.jsx)(Cs, { item: n, bOwnsGame: g, familyContext: l }), e),
           e.stopPropagation(),
           e.preventDefault());
       },
-      [n, _, l],
+      [n, g, l],
     ),
-    ee = (v && (g || _)) || y,
+    ee = (v && (m || g)) || y,
     x = J.useCallback(
       (e) => {
-        v && (g || _)
+        v && (m || g)
           ? gs(Se(e), t.appid)
           : y && _s(Se(e), `${N.STORE_BASE_URL}${p.store_url_path}`);
       },
-      [t.appid, g, _, p, y, v],
+      [t.appid, m, g, p, y, v],
     );
-  return (0, Y.jsx)(h, {
+  return (0, Y.jsx)(_, {
     id: f,
     name: n.name,
-    bPreventNavigation: _ || g,
-    bHidePrice: _,
-    bShowWishlistButton: !_,
+    bPreventNavigation: g || m,
+    bHidePrice: g,
+    bShowWishlistButton: !g,
     hoverProps: d,
     className: os,
     elElementToAppend: u,
@@ -5180,7 +5180,7 @@ function Ec(e) {
       ],
       [t, n, r],
     );
-  return (0, Y.jsx)(_, { tabs: i, classNameCtn: Pi, classNameTab: Fi });
+  return (0, Y.jsx)(g, { tabs: i, classNameCtn: Pi, classNameTab: Fi });
 }
 function Dc(e) {
   let { steamid: t, settings: n } = e;
@@ -5661,7 +5661,7 @@ function Hc(e) {
     );
   return t
     ? (t.GetStoreItemType(),
-      (0, Y.jsx)(h, {
+      (0, Y.jsx)(_, {
         id: r,
         name: t.GetName(),
         bPreventNavigation: !0,
@@ -6176,7 +6176,7 @@ function Cl(e) {
       contents: e.children,
     },
   ];
-  return (0, Y.jsx)(_, { tabs: t, classNameCtn: Pi });
+  return (0, Y.jsx)(g, { tabs: t, classNameCtn: Pi });
 }
 function wl(e) {
   let t = [
@@ -6186,7 +6186,7 @@ function wl(e) {
       contents: e.children,
     },
   ];
-  return (0, Y.jsx)(_, { tabs: t, classNameCtn: Pi });
+  return (0, Y.jsx)(g, { tabs: t, classNameCtn: Pi });
 }
 function Tl(e) {
   let { familyGroupID: t } = e,
@@ -6688,7 +6688,7 @@ function Il(e) {
     (0, Y.jsx)(F, {
       autoFocus: !0,
       focusableIfEmpty: !0,
-      children: (0, Y.jsx)(_, {
+      children: (0, Y.jsx)(g, {
         tabs: i,
         classNameCtn: Pi,
         classNameTab: Fi,

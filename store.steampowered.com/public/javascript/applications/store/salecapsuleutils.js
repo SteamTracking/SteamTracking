@@ -2,8 +2,8 @@
  ****/
 
 import { jt as e, st as t } from "./chunk~01cfc309bf.js";
-import { t as n } from "./chunk~751f63337e.js";
-import { _ as r, v as i } from "./chunk~f57d770d64.js";
+import { _ as n, v as r } from "./chunk~f57d770d64.js";
+import { t as i } from "./chunk~751f63337e.js";
 import { r as a } from "./chunk~a243b6a34b.js";
 import {
   $b as o,
@@ -71,7 +71,7 @@ function O(e) {
 function k(e, t) {
   return (
     e.jsondata.item_source_type != null &&
-    e.jsondata.item_source_type !== i.k_ETaggedItems
+    e.jsondata.item_source_type !== r.k_ETaggedItems
   );
 }
 function A(e) {
@@ -157,20 +157,20 @@ function I(e) {
     !t || s.Get().BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport())
   );
 }
-async function L(e, t, r) {
+async function L(e, t, n) {
   if (!e || e.length == 0) return [];
-  let i = e.filter((e) => n(e.type)).map((e) => e.id),
+  let r = e.filter((e) => i(e.type)).map((e) => e.id),
     a = e.filter((e) => e.type === `sub`).map((e) => e.id),
     o = e.filter((e) => e.type === `bundle`).map((e) => e.id);
   {
-    let e = i.filter((e) => !c.Get().BHasApp(e, t)),
+    let e = r.filter((e) => !c.Get().BHasApp(e, t)),
       n = a.filter((e) => !c.Get().BHasApp(e, t)),
-      r = o.filter((e) => !c.Get().BHasApp(e, t));
-    (e.length > 0 || n.length > 0 || r.length > 0) &&
+      i = o.filter((e) => !c.Get().BHasApp(e, t));
+    (e.length > 0 || n.length > 0 || i.length > 0) &&
       (await Promise.all([
         c.Get().QueueMultipleAppRequests(e, t),
         c.Get().QueueMultiplePackageRequests(n, t),
-        c.Get().QueueMultipleBundleRequests(r, t),
+        c.Get().QueueMultipleBundleRequests(i, t),
       ]));
   }
   let s = new Set();
@@ -189,8 +189,8 @@ async function L(e, t, r) {
   let l = Array.from(s).filter((e) => !c.Get().BHasApp(e, t));
   if (
     (l.length > 0 && (await c.Get().QueueMultipleAppRequests(l, t)),
-    i.forEach((e) => s.add(e)),
-    r)
+    r.forEach((e) => s.add(e)),
+    n)
   ) {
     let e = Array.from(s)
       .map((e) => {
@@ -308,16 +308,16 @@ function U() {
 function W(e) {
   return !(
     !e?.BHasHideIgnoredItemsFacetValue() ||
-    e.BIsUserPreferenceEnabled(r.k_EHideIgnoredItems)
+    e.BIsUserPreferenceEnabled(n.k_EHideIgnoredItems)
   );
 }
-async function G(t, n, i, a) {
+async function G(t, r, i, a) {
   let o = t.BHasHideIgnoredItemsFacetValue(),
-    s = t.BIsUserPreferenceEnabled(r.k_EHideOwnedItems),
-    c = t.BIsUserPreferenceEnabled(r.k_EHideWishlistedItems),
-    l = t.BIsUserPreferenceEnabled(r.k_EHideIgnoredItems),
+    s = t.BIsUserPreferenceEnabled(n.k_EHideOwnedItems),
+    c = t.BIsUserPreferenceEnabled(n.k_EHideWishlistedItems),
+    l = t.BIsUserPreferenceEnabled(n.k_EHideIgnoredItems),
     u = [],
-    d = await V(n, i, s, c, o, l, u);
+    d = await V(r, i, s, c, o, l, u);
   return (
     e(() => {
       t.SetCapsulesRemovedByUserPreferenceFilters(new Set(u.map(O)));

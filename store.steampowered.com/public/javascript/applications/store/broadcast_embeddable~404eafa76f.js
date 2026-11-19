@@ -13,8 +13,8 @@ import {
   tt as c,
   u as l,
 } from "./chunk~01cfc309bf.js";
-import { Do as u, Ei as d, La as f, so as p } from "./chunk~6b8ddcaac8.js";
-import { r as m } from "./chunk~4c761eb6f4.js";
+import { Qo as u, Ss as d, Va as f, Vs as p } from "./chunk~6b8ddcaac8.js";
+import { st as m } from "./chunk~f57d770d64.js";
 import { n as h, t as ee } from "./chunk~a0dd05a569.js";
 import { t as te } from "./chunk~4c13037b22.js";
 import { n as ne } from "./chunk~5adf866415.js";
@@ -22,11 +22,11 @@ import "./chunk~8681f5c764.js";
 import { a as g, c as re } from "./chunk~cbbb6ae37c.js";
 import { n as ie } from "./chunk~f4c928a27a.js";
 import { t as ae } from "./chunk~eefd71512b.js";
-import { i as _, y as oe } from "./chunk~2f8c67b4de.js";
-import { a as se, n as ce } from "./chunk~a19d1add1e.js";
-import { o as le } from "./chunk~6cf3fe3e07.js";
-import { n as ue } from "./chunk~710e3cfd2f.js";
-import { l as de } from "./chunk~7b4b9eb713.js";
+import { a as oe, n as se } from "./chunk~a19d1add1e.js";
+import { i as _, y as ce } from "./chunk~2f8c67b4de.js";
+import { l as le } from "./chunk~7b4b9eb713.js";
+import { o as ue } from "./chunk~6cf3fe3e07.js";
+import { n as de } from "./chunk~710e3cfd2f.js";
 import { n as v, t as fe } from "./chunk~4d16ce5d1a.js";
 import {
   F as pe,
@@ -4982,29 +4982,29 @@ var U = e(n()),
     });
   }
   e.AddChatModerator = ae;
-  function _(e, t, n) {
+  function oe(e, t, n) {
     return e.SendMsg(`SteamTV.GetChatModerators#1`, D(En, t, n), On, {
       bConstMethod: !0,
       ePrivilege: 0,
       rgBrowserAPISites: [`store`, `community`],
     });
   }
-  e.GetChatModerators = _;
-  function oe(e, t, n) {
+  e.GetChatModerators = oe;
+  function se(e, t, n) {
     return e.SendMsg(`SteamTV.AddWordBan#1`, D(kn, t, n), An, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
     });
   }
-  e.AddWordBan = oe;
-  function se(e, t, n) {
+  e.AddWordBan = se;
+  function _(e, t, n) {
     return e.SendMsg(`SteamTV.GetWordBans#1`, D(jn, t, n), Mn, {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
     });
   }
-  e.GetWordBans = se;
+  e.GetWordBans = _;
   function ce(e, t, n) {
     return e.SendMsg(`SteamTV.JoinChat#1`, D(Nn, t, n), Pn, {
       ePrivilege: 2,
@@ -5849,7 +5849,7 @@ var Qr = (e) => {
     let { userType: t, msg: n, presenterInfo: r } = e;
     if (t === `presenter` && r)
       return (0, X.jsx)(`span`, {
-        children: (0, X.jsx)(ce, {
+        children: (0, X.jsx)(se, {
           name: r.name ?? ``,
           title: r.title,
           photo: r.photo,
@@ -5959,7 +5959,7 @@ var Qr = (e) => {
         r = [];
       for (let e = 0; e < n.length; e += 1)
         e % 2 == 1
-          ? r.push((0, X.jsx)(se, { emoticon: n[e], large: !0 }, e))
+          ? r.push((0, X.jsx)(oe, { emoticon: n[e], large: !0 }, e))
           : r.push(n[e]);
       return r;
     }
@@ -6399,7 +6399,7 @@ var oi = `_7FIE12jcFio-`,
     let { appid: t } = e,
       n = Ye(),
       r = (0, U.useRef)({ include_assets: !0, include_release: !0 }),
-      i = u(t),
+      i = p(t),
       { data: a } = et(i),
       { data: o } = pt(i),
       { data: s } = it(i),
@@ -6436,7 +6436,7 @@ var oi = `_7FIE12jcFio-`,
           }),
         }),
         (0, X.jsxs)(`div`, {
-          className: f,
+          className: u,
           children: [
             (0, X.jsx)(`a`, {
               href: g,
@@ -6444,13 +6444,13 @@ var oi = `_7FIE12jcFio-`,
               children: (0, X.jsx)(v, {
                 id: i,
                 children: (0, X.jsx)(`div`, {
-                  className: L(p, `StoreSaleWidgetTitle`),
+                  className: L(d, `StoreSaleWidgetTitle`),
                   children: a.name,
                 }),
               }),
             }),
             s &&
-              (0, X.jsx)(`div`, { className: `A8oyzoRvWQ8-`, children: d(s) }),
+              (0, X.jsx)(`div`, { className: `A8oyzoRvWQ8-`, children: f(s) }),
             !!ne && (0, X.jsx)(ie, { id: i, bShowDemoButton: !0 }),
           ],
         }),
@@ -6503,7 +6503,7 @@ var oi = `_7FIE12jcFio-`,
       n = t.clanSteamID.GetAccountID(),
       r = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
       i = (0, U.useRef)(null),
-      [a, o] = (0, U.useState)(t ? de.GetCreatorHome(t.clanSteamID) : void 0);
+      [a, o] = (0, U.useState)(t ? le.GetCreatorHome(t.clanSteamID) : void 0);
     if (
       ((0, U.useEffect)(() => {
         let e = W.default.CancelToken.source();
@@ -6511,7 +6511,7 @@ var oi = `_7FIE12jcFio-`,
           (i.current = e.cancel),
           (async () => {
             let t = at.InitFromClanID(n, O.EUNIVERSE),
-              r = await de.LoadCreatorHome(t, !1, e);
+              r = await le.LoadCreatorHome(t, !1, e);
             e.token.reason || o(r);
           })(),
           () => {
@@ -6570,7 +6570,7 @@ function $i(e) {
   let { steamid: t } = e,
     n = ta(t);
   return (0, X.jsxs)(`div`, {
-    className: L(oe, me),
+    className: L(ce, me),
     children: [
       (0, X.jsx)(T, {
         toolTipContent: x(`#EventDisplay_Share_OnFaceBook`),
@@ -6623,7 +6623,7 @@ function ea(e) {
   return (0, X.jsxs)(`div`, {
     children: [
       (0, X.jsxs)(`div`, {
-        className: L(oe, pe),
+        className: L(ce, pe),
         onClick: o,
         children: [
           (0, X.jsx)(`span`, {
@@ -6986,7 +6986,7 @@ var aa = class extends U.Component {
   render() {
     return (0, X.jsx)(`div`, {
       className: Ci,
-      children: (0, X.jsx)(le, {
+      children: (0, X.jsx)(ue, {
         onEnter: this.OnEnter,
         onLeave: this.OnLeave,
         onIntersectionChange: (e) => {
@@ -7192,7 +7192,7 @@ var sa = class extends U.Component {
     let { steamIDBroadcast: t } = e,
       n = B.GetOrCreateBroadcastInfo(t).m_nAppID;
     n = n == 7 ? 0 : n;
-    let r = u(n),
+    let r = p(n),
       { data: i } = et(r);
     return (0, X.jsxs)(`div`, {
       className: [Gi, void 0].join(` `),
@@ -7281,42 +7281,42 @@ function da(e) {
   let { onStreamSelect: t, bSelected: n, stream: r, bShowCapsuleArt: i } = e,
     a = l(() => B.GetOrCreateBroadcastInfo(r.steamid).m_nAppID);
   a = a == 7 ? 0 : a;
-  let o = u(a),
+  let o = p(a),
     { data: s } = et(o),
     { data: c } = pt(o);
   if (!wt(r)) return null;
-  let d = i && c ? Be(c, `header`) : void 0,
-    f = Number.parseInt(`` + r.viewer_count),
-    p = !Number.isNaN(f),
+  let u = i && c ? Be(c, `header`) : void 0,
+    d = Number.parseInt(`` + r.viewer_count),
+    f = !Number.isNaN(d),
     m = !!r.nAppIDVOD && s?.name;
   return (0, X.jsxs)(`div`, {
     className: L({
       [ji]: !0,
       [void 0]: r.current_selection_priority == re.k_eFeatured,
-      [Mi]: !!d,
+      [Mi]: !!u,
     }),
     children: [
       (0, X.jsx)(v, {
         id: o,
         hoverClassName: Pi,
-        children: (0, X.jsx)(ue, {
+        children: (0, X.jsx)(de, {
           className: L(Fi, n && void 0),
           onClick: () => t && t(r),
           rootMargin: `100px 0px 100px 0px`,
           children: (0, X.jsx)(fa, {
             strThumbnail: r.thumbnail_http_address,
             bSelected: n,
-            strCapsuleArtURL: d,
+            strCapsuleArtURL: u,
           }),
         }),
       }),
       (0, X.jsx)(`div`, {
-        className: L(Ai, !p && `QP7p0y7iNjE-`),
-        children: p
+        className: L(Ai, !f && `QP7p0y7iNjE-`),
+        children: f
           ? (0, X.jsxs)(X.Fragment, {
               children: [
                 (0, X.jsx)(mt, {}),
-                (0, X.jsx)(`div`, { className: Ni, children: vt(f) }),
+                (0, X.jsx)(`div`, { className: Ni, children: vt(d) }),
               ],
             })
           : m,

@@ -4,23 +4,23 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n, st as r } from "./chunk~01cfc309bf.js";
 import {
-  Do as i,
-  Ft as a,
-  Ht as o,
-  ai as s,
-  bi as c,
-  ii as l,
-  mi as u,
-  ri as d,
-  xt as f,
-  yi as p,
+  Da as i,
+  Ma as a,
+  Un as o,
+  Vs as s,
+  _a as c,
+  ga as l,
+  ja as u,
+  kn as d,
+  tr as f,
+  va as p,
 } from "./chunk~6b8ddcaac8.js";
 import { t as m } from "./chunk~684e72ad45.js";
 import { i as h } from "./chunk~2f085f1384.js";
 import { t as g } from "./chunk~92931c6310.js";
 import { t as _ } from "./chunk~eefd71512b.js";
-import { n as v } from "./chunk~38061b7abb.js";
-import { u as y } from "./chunk~7b4b9eb713.js";
+import { u as v } from "./chunk~7b4b9eb713.js";
+import { n as y } from "./chunk~38061b7abb.js";
 import "./chunk~9e9562d60b.js";
 import { n as b, r as x } from "./chunk~cb3200f06e.js";
 import { n as S, t as C } from "./chunk~d382bdf2cf.js";
@@ -437,7 +437,7 @@ function zt(e) {
 }
 function Bt(e) {
   let { curator: t } = e,
-    { creatorHome: n } = y(t?.clanAccountID);
+    { creatorHome: n } = v(t?.clanAccountID);
   return !t || !n
     ? null
     : (0, X.jsx)(vt, {
@@ -450,7 +450,7 @@ function Vt(e) {
     r = $e(n);
   return (0, X.jsx)(`div`, {
     className: Ne,
-    children: (0, X.jsx)(o, {
+    children: (0, X.jsx)(f, {
       id: r,
       bHidePrice: !0,
       hoverProps: {
@@ -565,32 +565,32 @@ function Gt(e) {
       appID: t,
       nItemHeight: n,
       nItemWidth: r,
-      selected: i,
-      fnFocused: a,
-      eStoreDiscoveryQueueType: o,
-      storePageFilter: c,
-      bPreferDemoStorePage: f,
-      elVideo: p,
+      selected: a,
+      fnFocused: o,
+      eStoreDiscoveryQueueType: s,
+      storePageFilter: u,
+      bPreferDemoStorePage: d,
+      elVideo: f,
       elDetails: m,
       appAriaIDs: h,
     } = e,
     [g] = w(t, P),
     _ = U(),
-    y = F()?.ownerWindow || window,
-    b = Kt(g, o, c, f),
+    v = F()?.ownerWindow || window,
+    b = Kt(g, s, u, d),
     { bIsIgnored: x, fnUpdateIgnored: S } = Me(t),
     { bIsWishlisted: C, fnUpdateWishlist: T } = O(t),
     E = Y.useRef(null);
   if (
     (Y.useEffect(() => {
-      i && E.current && E.current.focus({ preventScroll: !0 });
-    }, [i]),
+      a && E.current && E.current.focus({ preventScroll: !0 });
+    }, [a]),
     !g)
   )
     return (console.warn(`Error: missing store item for appid `, t), null);
   let D = { width: r || void 0, height: n || void 0 };
   return (0, X.jsxs)(K, {
-    "aria-labelledby": v(
+    "aria-labelledby": y(
       h.nameId,
       h.tagsId,
       h.reviewId,
@@ -599,7 +599,7 @@ function Gt(e) {
     ),
     ref: E,
     style: D,
-    className: q(Ye, i && `vyD3DBFIFUc-`),
+    className: q(Ye, a && `vyD3DBFIFUc-`),
     onOptionsActionDescription: z(
       C
         ? `#DiscoveryQueue_RemoveFromWishlist`
@@ -608,13 +608,13 @@ function Gt(e) {
     onOptionsButton: T,
     onOKActionDescription: z(`#DiscoveryQueue_ViewStorePage`),
     onOKButton: () => {
-      y.location.href = b;
+      v.location.href = b;
     },
     onSecondaryActionDescription: z(
       x ? `#DiscoveryQueue_Undo` : `#DiscoveryQueue_IgnoreLink`,
     ),
     onSecondaryButton: S,
-    fnScrollIntoViewHandler: () => (a(), !0),
+    fnScrollIntoViewHandler: () => (o(), !0),
     children: [
       (0, X.jsx)(`div`, {
         className: q(ne, x && `_3ZYr-Efwvg8-`),
@@ -634,14 +634,14 @@ function Gt(e) {
               onClick: S,
               children: [
                 _ &&
-                  (0, X.jsx)(d, { button: u.X, type: s.Light, size: l.Medium }),
+                  (0, X.jsx)(l, { button: i.X, type: p.Light, size: c.Medium }),
                 z(`#DiscoveryQueue_Undo`),
               ],
             }),
           ],
         }),
       }),
-      p,
+      f,
       m,
     ],
   });
@@ -661,15 +661,15 @@ function qt(e) {
       appID: t,
       bShowMinimizedDisplay: n,
       eStoreDiscoveryQueueType: r,
-      storePageFilter: o,
-      bPreferDemoStorePage: p,
+      storePageFilter: u,
+      bPreferDemoStorePage: f,
       appAriaIDs: m,
     } = e,
     [h] = w(t, P),
-    g = i(t),
+    g = s(t),
     { bIsIgnored: _, fnUpdateIgnored: v } = Me(t),
     { bIsWishlisted: y, fnUpdateWishlist: b } = O(t),
-    x = Kt(h, r, o, p),
+    x = Kt(h, r, u, f),
     S = U(),
     C = S;
   if (!h) return;
@@ -699,14 +699,14 @@ function qt(e) {
                 href: x,
                 children: h.GetName(),
               }),
-              (0, X.jsx)(a, { bSingleLineMode: !0, id: g }),
+              (0, X.jsx)(o, { bSingleLineMode: !0, id: g }),
             ],
           }),
           (0, X.jsx)(Jt, { rgTagIDs: h.GetTagIDs(), ariaLabelID: m.tagsId }),
           (0, X.jsx)(`div`, {
             className: Ee,
             id: m.reviewId,
-            children: (0, X.jsx)(c, {
+            children: (0, X.jsx)(a, {
               bShowTooltip: !0,
               bTruncateTotalReviews: n,
               id: g,
@@ -734,7 +734,7 @@ function qt(e) {
               className: `kjR6Qum8rRo-`,
               children: [
                 h.BHasDemo() &&
-                  (0, X.jsx)(f, {
+                  (0, X.jsx)(d, {
                     id: g,
                     className: q(
                       `BxLuFJsRaUQ-`,
@@ -747,10 +747,10 @@ function qt(e) {
                   href: x,
                   children: [
                     C &&
-                      (0, X.jsx)(d, {
-                        button: u.Y,
-                        type: s.Light,
-                        size: l.Medium,
+                      (0, X.jsx)(l, {
+                        button: i.Y,
+                        type: p.Light,
+                        size: c.Medium,
                         additionalClassName: `a-wHbIOxF8U-`,
                       }),
                     ` `,
@@ -770,10 +770,10 @@ function qt(e) {
                     onClick: b,
                     children: [
                       C &&
-                        (0, X.jsx)(d, {
-                          button: u.Y,
-                          type: s.Light,
-                          size: l.Medium,
+                        (0, X.jsx)(l, {
+                          button: i.Y,
+                          type: p.Light,
+                          size: c.Medium,
                           additionalClassName: `a-wHbIOxF8U-`,
                         }),
                       y ? (0, X.jsx)(xt, {}) : (0, X.jsx)(St, {}),
@@ -1194,16 +1194,16 @@ function sn(e) {
       storePageFilter: s,
       fnDisplaySummaryReward: c,
       viewedAppCount: l,
-      fnFocused: u,
-      fnAdvance: d,
-      bSkipAppRequestPending: f,
+      fnFocused: d,
+      fnAdvance: f,
+      bSkipAppRequestPending: p,
     } = e,
     [m, h] = Y.useState(!1),
     _ = U(),
     v = x(2, G.LANGUAGE, !1),
     [y, b] = Y.useState(0),
     [S, C] = Y.useState(0),
-    { data: w } = p();
+    { data: w } = u();
   Y.useEffect(() => {
     a &&
       !m &&
@@ -1229,11 +1229,11 @@ function sn(e) {
     D = Tt(t, s),
     O = g(`DiscoveryQueueSummary`),
     ee = async () => {
-      i ? T || (E(!0), await o(), O?.token?.reason || E(!1)) : d();
+      i ? T || (E(!0), await o(), O?.token?.reason || E(!1)) : f();
     };
   return (0, X.jsxs)(cn, {
     selected: a,
-    fnFocused: u,
+    fnFocused: d,
     fnOnContinue: ee,
     fnCloseModal: n,
     bLoaded: m,
@@ -1248,7 +1248,7 @@ function sn(e) {
           !D &&
             a &&
             v.data?.definition &&
-            (0, X.jsx)(un, { bSkipAppRequestPending: f, summaryCardIdx: r }),
+            (0, X.jsx)(un, { bSkipAppRequestPending: p, summaryCardIdx: r }),
           (0, X.jsx)(`div`, {
             className: qe,
             children: z(`#DiscoveryQueue_YourStats`),

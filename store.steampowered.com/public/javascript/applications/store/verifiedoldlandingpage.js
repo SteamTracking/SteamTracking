@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
-import { Do as r, bt as i } from "./chunk~6b8ddcaac8.js";
+import { On as r, Vs as i } from "./chunk~6b8ddcaac8.js";
 import { t as a } from "./chunk~6bf4d41b04.js";
 import { a as o, i as s } from "./chunk~2f085f1384.js";
 import { t as c } from "./chunk~f4c928a27a.js";
@@ -49,8 +49,8 @@ var D = `eNekHvzmFIU-`,
   B = e(t(), 1);
 function V(e) {
   let { appid: t, strUrlOverride: n } = e,
-    i = r(t),
-    { data: a } = m(i);
+    r = i(t),
+    { data: a } = m(r);
   return (
     (0, B.useEffect)(() => {
       if (a) {
@@ -61,45 +61,45 @@ function V(e) {
         e != window.location.href && window.history.replaceState({}, ``, e);
       }
     }, [a, n]),
-    !a || !i
+    !a || !r
       ? null
       : (0, T.jsx)(x, {
           method: `verifiedprogram`,
-          children: (0, T.jsx)(_, { children: (0, T.jsx)(U, { id: i }) }),
+          children: (0, T.jsx)(_, { children: (0, T.jsx)(U, { id: r }) }),
         })
   );
 }
 function H(e) {
   let { id: t } = e,
     { data: n } = m(t),
-    r = `${S.CLAN_CDN_ASSET_URL}images/41316928/846f603df6057b070667f2741730c2038648955d.png`;
+    i = `${S.CLAN_CDN_ASSET_URL}images/41316928/846f603df6057b070667f2741730c2038648955d.png`;
   return (0, T.jsxs)(T.Fragment, {
     children: [
       (0, T.jsx)(`div`, {
         className: j,
-        children: i.LocalizeReact(
+        children: r.LocalizeReact(
           `#VerifiedProgram_DeckTitle`,
           n?.name,
           (0, T.jsxs)(`span`, {
             className: M,
             children: [
               (0, T.jsx)(`img`, {
-                src: r,
-                alt: i.Localize(`#VerifiedProgram_DeckAlt`),
+                src: i,
+                alt: r.Localize(`#VerifiedProgram_DeckAlt`),
               }),
-              i.Localize(`#VerifiedProgram_DeckTitle_Verified`),
+              r.Localize(`#VerifiedProgram_DeckTitle_Verified`),
             ],
           }),
         ),
       }),
       (0, T.jsx)(`div`, {
         className: N,
-        children: i.LocalizeReact(
+        children: r.LocalizeReact(
           `#VerifiedProgram_DeckSubTitle`,
           (0, T.jsx)(b, {
             className: O,
             href: `${S.STORE_BASE_URL}greatondeck`,
-            children: i.Localize(`#VerifiedProgram_GreatOnDeck`),
+            children: r.Localize(`#VerifiedProgram_GreatOnDeck`),
           }),
         ),
       }),
@@ -167,10 +167,10 @@ function K(e) {
 function q(e) {
   let { id: t } = e,
     { data: n } = m(t),
-    r = h(t);
-  if (!r) return null;
+    i = h(t);
+  if (!i) return null;
   let a = `${S.CLAN_CDN_ASSET_URL}images/39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png`,
-    { rgDashTrailers: o, rgHlsTrailers: s } = v(r);
+    { rgDashTrailers: o, rgHlsTrailers: s } = v(i);
   return (0, T.jsxs)(`div`, {
     className: P,
     children: [
@@ -183,7 +183,7 @@ function q(e) {
               children: (0, T.jsx)(u, {
                 dashManifests: o,
                 hlsManifest: s[0],
-                screenshot: r.screenshot_full ?? r.screenshot_medium ?? ``,
+                screenshot: i.screenshot_full ?? i.screenshot_medium ?? ``,
                 altText: n?.name ?? ``,
                 muteWhenAutoplayBlocked: !0,
               }),
@@ -191,13 +191,13 @@ function q(e) {
           }),
           (0, T.jsx)(`img`, {
             src: a,
-            alt: i.Localize(`#VerifiedProgram_DeckDeviceAlt`),
+            alt: r.Localize(`#VerifiedProgram_DeckDeviceAlt`),
           }),
         ],
       }),
       (0, T.jsx)(`div`, {
         className: F,
-        children: i.Localize(`#VerifiedProgram_DeckDisclaimer`),
+        children: r.Localize(`#VerifiedProgram_DeckDisclaimer`),
       }),
     ],
   });
@@ -207,7 +207,7 @@ function J(e) {
     n = w(S.LANGUAGE);
   return (0, T.jsx)(a, {
     language: n,
-    strAltText: i.Localize(`#VerifiedProgram_DeckShopBannerAlt`),
+    strAltText: r.Localize(`#VerifiedProgram_DeckShopBannerAlt`),
     strImageToken: t
       ? `{STEAM_CLAN_LOC_IMAGE}/39049601/6e0ec24257ee5ada6e922c2130eaa75ce83747e8.jpg`
       : `{STEAM_CLAN_LOC_IMAGE}/39049601/c18308dc60fd94678bb348608ddc0d6b8fdb11ab.jpg`,

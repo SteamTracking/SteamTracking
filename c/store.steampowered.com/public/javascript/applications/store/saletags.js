@@ -1,16 +1,20 @@
 import { _, _, _ } from "./chunk~f025431ab0.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~01cfc309bf.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~01cfc309bf.js";
 import { _ } from "./chunk~68b7e78d68.js";
-import { _ } from "./chunk~8c66e1c7a5.js";
+import { _, _, _, _, _, _, _, _ } from "./chunk~f57d770d64.js";
+import { _, _ } from "./chunk~8c66e1c7a5.js";
 import { _, _, _ } from "./chunk~4c13037b22.js";
 import "./chunk~8681f5c764.js";
 import { _, _, _ } from "./chunk~2f085f1384.js";
-import { _ } from "./chunk~cd94ddba57.js";
+import { _, _ } from "./chunk~ffe4581a06.js";
 import { _ } from "./chunk~92931c6310.js";
 import { _, _ } from "./chunk~af36c62e9f.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~e867464c75.js";
-import { _ } from "./chunk~2f8c67b4de.js";
+import { _ } from "./chunk~521597d5f9.js";
+import { _ } from "./chunk~593a6b8ddc.js";
+import { _, _, _, _ } from "./chunk~2f8c67b4de.js";
+import { _, _, _, _ } from "./chunk~7b4b9eb713.js";
 import { _ } from "./chunk~0278ae6236.js";
 import { _, _ } from "./chunk~90b9831ad2.js";
 import { _, _ } from "./chunk~f162f235ea.js";
@@ -182,14 +186,251 @@ import {
   _,
   _,
   _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
 } from "./main.js";
 var _ = class extends Error {
-    eResult;
-    constructor(_, _) {
-      (super(_ ? `EResult ${_}: ${_}` : `EResult ${_}`), (this.eResult = _));
-    }
-  },
-  _ = _(_(), 1);
+  eResult;
+  constructor(_, _) {
+    (super(_ ? `EResult ${_}: ${_}` : `EResult ${_}`), (this.eResult = _));
+  }
+};
+function _(_, _, _, _) {
+  let { tagid: _, top_n_sellers: _, store_filter_json: _ } = _,
+    _ = _.min_discount_percent ?? 1,
+    _ = !!_.include_packages,
+    _ = !!_.include_bundles,
+    _ = !!_.include_dlc;
+  return {
+    queryKey: [
+      `DiscountedItems`,
+      _ ?? 0,
+      _ ?? 0,
+      _ ?? ``,
+      _,
+      _,
+      _,
+      _,
+      _,
+      _.country,
+    ],
+    queryFn: async () =>
+      (
+        await _(`DiscountedItems`, _, _, {
+          start: 0,
+          count: _,
+          sort: 10,
+          filters: {
+            released_only: !0,
+            type_filters: {
+              include_games: !0,
+              include_packages: _,
+              include_bundles: _,
+              include_dlc: _,
+            },
+            price_filters: {
+              min_discount_percent: _,
+            },
+            tagids_must_match: _
+              ? [
+                  {
+                    tagids: [_],
+                  },
+                ]
+              : void 0,
+            regional_top_n_sellers: _,
+            store_page_filter: _
+              ? {
+                  store_filters: [
+                    {
+                      filter_json: _,
+                    },
+                  ],
+                }
+              : void 0,
+          },
+        })
+      ).rgItemIDs,
+    staleTime: 6e5,
+  };
+}
+var _ = 3;
+function _(_, _) {
+  if (!_.is_coming_soon()) return !1;
+  if (!_.min_discount_percent) return !0;
+  let _ = _.best_purchase_option(!1);
+  return !!_?.packageid() && (_?.discount_pct() ?? 0) >= _.min_discount_percent;
+}
+function _(_, _, _, _) {
+  let { store_filter_json: _, min_discount_percent: _ } = _;
+  return {
+    queryKey: [`TopWishlistedComingSoon`, _ ?? ``, _ ?? 0, _, _.country],
+    queryFn: async () => {
+      let _ = new Map();
+      return (
+        await _(
+          `TopWishlistedComingSoon`,
+          _,
+          _,
+          {
+            start: 0,
+            count: _ * _,
+            sort: 23,
+            filters: {
+              coming_soon_only: !0,
+              exclude_from: [2, 4],
+              type_filters: {
+                include_games: !0,
+                include_dlc: !0,
+                include_software: !0,
+                include_music: !0,
+                include_hardware: !0,
+              },
+              price_filters: _
+                ? {
+                    min_discount_percent: _,
+                  }
+                : void 0,
+              store_page_filter: _
+                ? {
+                    store_filters: [
+                      {
+                        filter_json: _,
+                      },
+                    ],
+                  }
+                : void 0,
+            },
+          },
+          {
+            data_request: {},
+            cacheStoreItemData: (_) => {
+              let _ = _({
+                item_type: _.item_type(),
+                _: _._(),
+              });
+              _ && _.set(_(_), _);
+            },
+          },
+        )
+      ).rgItemIDs
+        .filter((_) => {
+          let _ = _.get(_(_));
+          return _ !== void 0 && _(_, _);
+        })
+        .slice(0, _);
+    },
+    staleTime: 6e5,
+  };
+}
+var _ = _(_(), 1);
 function _(_) {
   let { data: _ } = _(_);
   return (0, _.useMemo)(
@@ -239,7 +480,6 @@ function _(_) {
     [_],
   );
 }
-var _ = _();
 async function _(_, _) {
   let _ = _(_.STORE_BASE_URL, _, _.country_code);
   return (await (await fetch(_)).json()).rgOwnedApps || [];
@@ -308,6 +548,39 @@ function _(_) {
         }
   );
 }
+var _ = 500,
+  _ = 100;
+function _(_, _, _, _, _, _ = 1) {
+  return {
+    queryKey: [`AccountOwnedDLCOnSale`, _ ?? 0, _, _.country, _],
+    queryFn: async () => {
+      if (!_) return [];
+      let _ = await _.fetchQuery(_(_, _)),
+        _ = Array.from(_).slice(0, _);
+      return _.length
+        ? (
+            await _(`SaleTechOwnedDLCOnSale`, _, _, {
+              start: 0,
+              count: _,
+              sort: 10,
+              filters: {
+                released_only: !0,
+                type_filters: {
+                  include_dlc: _ === `dlc`,
+                  include_music: _ === `music`,
+                },
+                price_filters: {
+                  min_discount_percent: _,
+                },
+                parent_appids: _,
+              },
+            })
+          ).rgItemIDs.flatMap((_) => (`appid` in _ ? [_.appid] : []))
+        : [];
+    },
+    staleTime: 6e5,
+  };
+}
 async function _(_) {
   let _ = {
       get_appids: !0,
@@ -356,7 +629,8 @@ function _(_, _) {
 }
 var _ = `qkhMGgZoiEA-`,
   _ = `dR7N9Ozyb6k-`,
-  _ = `_8j-XyEfRwfE-`;
+  _ = `_8j-XyEfRwfE-`,
+  _ = _();
 function _(_) {
   let { children: _, ..._ } = _;
   return (0, _.jsx)(_, {
@@ -621,6 +895,37 @@ async function _(_, _) {
   _.Body().set_item_id(_.fromObject(_));
   let _ = await _.AddFreeLicense(_, _);
   return [_.GetEResult(), _.Body().toObject()];
+}
+async function _(_, _) {
+  _.set(`origin`, location.origin);
+  let _ = `${_.STORE_BASE_URL}saleaction/${_}?${_}`,
+    _ = await fetch(_);
+  if (!_._) throw Error(`${_} answered ${_.status}`);
+  let _ = await _.json();
+  if (_?.success != 1) throw Error(`${_} answered EResult ${_?.success}`);
+  return _;
+}
+async function _(_) {
+  let _ = await _(
+    `ajaxgetpopularcompatlist`,
+    new URLSearchParams({
+      compatDevice: _,
+    }),
+  );
+  if (!_.list) throw Error(`ajaxgetpopularcompatlist answered without a list`);
+  return _.list;
+}
+var _ = 3e5;
+function _(_) {
+  return [`PopularCompatList`, _];
+}
+function _(_) {
+  return {
+    queryKey: _(_),
+    queryFn: () => _(_),
+    staleTime: _,
+    retry: !1,
+  };
 }
 var _ = `PFP2RDjCi0w-`,
   _ = `Cbfoq6WaXq4-`,
@@ -25908,6 +26213,86 @@ function _(_) {
   });
 }
 function _(_) {
+  return (0, _.useMemo)(() => _(_), [_?._, _?.type]);
+}
+function _(_, _) {
+  return (0, _.useMemo)(() => _(_, _), [_, _]);
+}
+function _(_, _) {
+  return (0, _.useMemo)(() => _(_, _), [_, _]);
+}
+function _(_) {
+  if (_ && _._) {
+    if (!_.type)
+      return {
+        appid: _._,
+      };
+    switch (_.type) {
+      case `sub`:
+        return {
+          packageid: _._,
+        };
+      case `bundle`:
+        return {
+          bundleid: _._,
+        };
+      default:
+        return {
+          appid: _._,
+        };
+    }
+  }
+}
+function _(_) {
+  if (`appid` in _)
+    return {
+      _: _.appid,
+      type: `game`,
+    };
+  if (`packageid` in _)
+    return {
+      _: _.packageid,
+      type: `sub`,
+    };
+  if (`bundleid` in _)
+    return {
+      _: _.bundleid,
+      type: `bundle`,
+    };
+}
+function _(_, _) {
+  switch (_) {
+    case `sub`:
+      return {
+        packageid: _,
+      };
+    case `bundle`:
+      return {
+        bundleid: _,
+      };
+    default:
+      return {
+        appid: _,
+      };
+  }
+}
+function _(_, _) {
+  switch (_) {
+    case `sub`:
+      return {
+        packageid: _,
+      };
+    case `bundle`:
+      return {
+        bundleid: _,
+      };
+    default:
+      return {
+        appid: _,
+      };
+  }
+}
+function _(_) {
   let { _: _, strClassName: _, bMinimizePlatforms: _, bHideWindows: _ } = _,
     { data: _ } = _(_);
   if (!_) return null;
@@ -27435,44 +27820,10 @@ var _ = {};
 async function _(_) {
   if (_[_]) return await _[_]();
 }
-var _ = _(_);
-function _(_) {
-  let { closeModal: _, strDescOverride: _ } = _;
-  return (0, _.jsx)(_, {
-    strTitle: _.Localize(`#LoginRedirect_Dialog_Title`),
-    strDescription: _ || _.Localize(`#LoginRedirect_Dialog_Description`),
-    onCancel: _,
-    strOKButtonText: _.Localize(`#Button_OK`),
-    onOK: () => {
-      (_(), _());
-    },
-  });
-}
-function _(_) {
-  let [_, _, _] = _();
-  return {
-    elDialogElement: (0, _.jsx)(_, {
-      active: _,
-      children: (0, _.jsx)(_, {
-        closeModal: _,
-        strDescOverride: _,
-      }),
-    }),
-    fnShowLogonDialog: _,
-  };
-}
-function _(_) {
-  let { label: _, strDialogDesc: _ } = _,
-    { elDialogElement: _, fnShowLogonDialog: _ } = _(_);
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      (0, _.jsx)(_, {
-        onClick: _,
-        children: _ || _.Localize(`#Login_SignIn`),
-      }),
-      _,
-    ],
-  });
+var _ = _(_),
+  _ = _.createContext(void 0);
+function _() {
+  return _.useContext(_) ?? _();
 }
 var _ = _({
     AlbumCoverImage: () => _,
@@ -27665,6 +28016,616 @@ var _ = _({
     EventSectionViewAllCtn: _,
     SaleSectionBackgroundImageGroupEdit: _,
   };
+function _(_) {
+  let _ = _.GetELanguageFallback(_);
+  return _ == _ ? `${_}` : `${_}_${_}`;
+}
+function _(_) {
+  return _ ? _(new _(_.clanSteamID64), _.event) : null;
+}
+async function _(_, _) {
+  let _ = new URLSearchParams();
+  (_.clanAccountID && _.set(`clan_accountid`, String(_.clanAccountID)),
+    _.appid && _.set(`appid`, String(_.appid)),
+    _.eventGID && _.set(`event_gid`, _.eventGID),
+    _.announcementGID && _.set(`announcement_gid`, _.announcementGID),
+    _.set(`lang_list`, _(_)),
+    _.set(`last_modified_time`, `0`),
+    _.set(`origin`, window.location.origin));
+  let _ = _.STORE_BASE_URL + `events/ajaxgetpartnerevent?` + _.toString(),
+    _ = await fetch(_);
+  if (!_._) throw Error(`${_} answered ${_.status}`);
+  let _ = await _.json();
+  return _.success !== 1 || !_.event?.clan_steamid
+    ? null
+    : {
+        clanSteamID64: _.event.clan_steamid,
+        event: _.event,
+      };
+}
+function _(_, _) {
+  return [
+    `LinkedPartnerEvent`,
+    _.clanAccountID,
+    _.appid,
+    _.eventGID,
+    _.announcementGID,
+    _,
+  ];
+}
+function _(_) {
+  return (
+    !!_ &&
+    (!!_.clanAccountID || !!_.appid) &&
+    (!!_.eventGID || !!_.announcementGID)
+  );
+}
+function _(_, _) {
+  let _ = _(_);
+  return {
+    queryKey: _(_ ?? {}, _),
+    queryFn: () => _(_ ?? {}, _),
+    select: _,
+    enabled: _,
+    staleTime: 36e5,
+    retry: !1,
+  };
+}
+function _(_) {
+  let _ = _(_.LANGUAGE);
+  return _(_(_, _));
+}
+function _(_) {
+  return _?.clan_steamid ? _(new _(_.clan_steamid), _) : null;
+}
+var _ = 100;
+async function _(_, _) {
+  let _ = new URLSearchParams();
+  (_.set(`event_gids`, [...new Set(_)].sort().join(`,`)),
+    _.set(`lang_list`, _(_)),
+    _.set(`origin`, location.origin));
+  let _ =
+      _.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + _.toString(),
+    _ = await fetch(_);
+  if (_.status === 204) return _.map(() => null);
+  if (!_._) throw Error(`${_} answered ${_.status}`);
+  let _ = await _.json(),
+    _ = new Map((_.events ?? []).map((_) => [_.gid, _]));
+  return _.map((_) => _.get(_) ?? null);
+}
+function _(_) {
+  return _(
+    [`PublicPartnerEventBrowser`, _],
+    () =>
+      new _.default((_) => _(_, _), {
+        maxBatchSize: _,
+        cache: !1,
+      }),
+  );
+}
+function _(_, _) {
+  return [`PublicPartnerEvent`, _, _];
+}
+function _(_, _, _) {
+  return {
+    queryKey: _(_, _),
+    queryFn: async () => (_ ? _.load(_) : (await _([_], _))[0]),
+    select: _,
+    enabled: !!_,
+    staleTime: 6e5,
+  };
+}
+function _(_) {
+  let _ = _(_.LANGUAGE),
+    _ = _(_);
+  return _(_(_, _, _));
+}
+function _(_, _, _) {
+  return _(_, _, _)?.strTagName || void 0;
+}
+function _(_, _, _, _) {
+  let _ = _ == 1 || _ == 3 || _ == 4,
+    _ = () => {
+      let _ = _(_.smart_section_creator_listid);
+      return _
+        ? _
+          ? _(`#Sale_CreatorList_Section_Editor_title`, _)
+          : _
+        : null;
+    };
+  if (_.section_type === `items`)
+    switch (_(_)) {
+      case `wishlist`:
+        return `#Sale_default_label_OnYourWishlist`;
+      case `interactive_recommender`:
+        return `#Sale_default_label_RecommendedForYou`;
+      case `tag_recommender`:
+        return `#Sale_default_label_RecommendedForYou`;
+      case `deck_topplayed`:
+        return `#Sale_TopPlayedOnDeckSection`;
+      case `personalized_carousel`:
+        if (_) {
+          let { nSectionIndex: _, nNumSections: _ } = _(_, _);
+          return _(`#Sale_PersonalizedCarousel_Section_Editor_title`, _ + 1, _);
+        }
+        let _ = _(_, _, _);
+        if (!_ && _ == 2) {
+          let { nSectionIndex: _, nNumSections: _ } = _(_, _);
+          return _(`#Sale_PersonalizedCarousel_Section_Editor_title`, _ + 1, _);
+        }
+        return _ ? _(`#Sale_PersonalizedCarousel_Section_title`, _) : null;
+      case `creator_list`:
+        return _();
+      case `discount_reason`:
+        return _(_) ?? null;
+    }
+  else if (_.section_type === `tabs`) return ``;
+  else if (_.section_type === `curator`) {
+    if (_.curator_clan_id) {
+      let _ = _.InitFromClanID(_.curator_clan_id, _.EUNIVERSE),
+        _ = _.GetCreatorHome(_);
+      if (_) return _(`#Sale_CuratorSection_Name`, _.GetName());
+    }
+    return `#Sale_CuratorSection`;
+  } else if (_.section_type === `event_schedule`) return `#Sale_EventSchedule`;
+  else if (_.section_type === `curator_recommendation`)
+    return `#Sale_CuratorRecommendation_title`;
+  else if (_.section_type === `discoveryqueue`) return `#DiscoveryQueue_Title`;
+  else if (_.section_type === `sale_events`) return `#Sale_SaleEvent_Section`;
+  else if (_.section_type === `calendar`) return `#Sale_SectionType_Calendar`;
+  else if (_.section_type === `crosspromotesalepage` && _ == 1)
+    return `#Sale_CrossPromoSale_DefaultSectionTitle`;
+  else if (_.section_type === `creator_list`) return _();
+  return null;
+}
+function _(_, _, _, _) {
+  let _ = _(_, _, _, _);
+  return _ === null ? null : _ && _.startsWith(`#`) ? _(_) : _;
+}
+function _(_, _, _, _, _, _, _, _) {
+  if (!_) return ``;
+  if (_.section_type === `crosspromotesalepage`) return _(_, _);
+  let _ = _(_, _, _, _),
+    _ = _.GetWithFallback(_.localized_label, _),
+    _ =
+      _ ||
+      _ ||
+      (_.default_label === `#Sale_default_label` ? `` : _(_.default_label)),
+    _ = _.internal_section_title?.trim();
+  if ((_?.length ?? 0) > 0) {
+    if (_ == 3 || _ == 4)
+      return _?.trim().length == 0 || _
+        ? _
+        : (0, _.jsxs)(_.Fragment, {
+            children: [
+              _,
+              ` `,
+              (0, _.jsx)(_, {
+                tooltip: _(
+                  `#Sale_Section_InternalTitle_Note`,
+                  (0, _.jsx)(`br`, {}),
+                  _,
+                ),
+              }),
+            ],
+          });
+    if (_ == 1)
+      return _?.trim().length == 0 || _
+        ? _
+        : (0, _.jsxs)(_.Fragment, {
+            children: [
+              _,
+              ` `,
+              (0, _.jsx)(`span`, {
+                children: _(`#Sale_Section_InternalTitle_Actual`, _),
+              }),
+            ],
+          });
+  }
+  let _ = _.GetWithFallback(_.localized_label_image, _);
+  if (!_ && _) {
+    let _ = _.GenerateURLFromHashAndExt(_, _);
+    return (0, _.jsx)(`img`, {
+      loading: `lazy`,
+      src: _,
+      alt: _,
+    });
+  }
+  return _;
+}
+function _(_, _, _) {
+  if (_(_.section_type))
+    switch (_(_)) {
+      case `personalized_carousel`:
+        let _ = _(_, _, _);
+        return _ ? _(`#Sale_PersonalizedCarousel_Section_subtitle`, _) : null;
+      case `creator_list`:
+        return _(_.smart_section_creator_listid) ?? null;
+    }
+  return null;
+}
+function _(_, _, _, _) {
+  let _ = _(_, _, _);
+  return _ === null
+    ? _.GetWithFallback(_.localized_subtitle, _) ||
+        (!_.default_subtitle || _.default_subtitle === `#Sale_default_subtitle`
+          ? ``
+          : _(_.default_subtitle))
+    : _ && _.startsWith(`#`)
+      ? _(_)
+      : _;
+}
+var _ = `dYYkud-Jf3s-`,
+  _ = `zZo1XshRYmQ-`,
+  _ = `RfHJSn8AdQE-`,
+  _ = `D8GFuSKNhX0-`,
+  _ = `woc2JepJIek-`;
+function _(_, _) {
+  return (
+    _.GetWithFallback(_.localized_label, _) ||
+    (_.default_label === `#Sale_default_label` ? `` : _(_.default_label))
+  );
+}
+function _(_) {
+  if (_(_.section_type))
+    switch (_(_)) {
+      case `deck_topplayed`:
+        return _.STORE_BASE_URL + `charts/steamdecktopplayed`;
+    }
+  return _.label_link;
+}
+function _(_) {
+  let _,
+    _,
+    _ = !1;
+  return (
+    _.label_link_style === `button`
+      ? ((_ = _(`#Sale_SectionLink_BrowseAll`)), (_ = !0))
+      : _.label_link_style === `browseall`
+        ? ((_ = _(`#Sale_SectionLink_BrowseAll`)),
+          (_ = _(_, `SaleSectionLabelLinkButton`)))
+        : _(_) === `deck_topplayed` &&
+          ((_ = _(`#EventBrowse_MoreEventsBtn`)),
+          (_ = _(_, `SaleSectionLabelLinkButton`))),
+    {
+      strLinkButtonLabel: _,
+      strLinkButtonClasses: _,
+      bSmallButton: _,
+    }
+  );
+}
+var _ = _((_) => {
+  let {
+      section: _,
+      event: _,
+      language: _,
+      nHiddenCapsules: _,
+      title: _,
+      subtitle: _,
+      bShowSeeMoreHint: _,
+      bUseGamepadLinkHint: _,
+      eGamepadLinkHintButton: _,
+      onLinkResolved: _,
+      personalizedCarousels: _,
+      promotedSale: _,
+    } = _,
+    _ = _(),
+    _ = _(),
+    _ = _ !== void 0,
+    { data: _ } = _(_ ? void 0 : _(_)),
+    _ = (_ ? _ : _) ?? void 0,
+    _ = _.link || _(_) || _(_);
+  if (
+    (_.useEffect(() => {
+      _?.(_);
+    }, [_, _]),
+    _.section_type == `title_image` && _.title_image_selected === `image`)
+  )
+    return null;
+  let _ = _ || _(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation, !1, _, _);
+  if (!_) return null;
+  let _ = _ || _(_, _, _, _),
+    _ = (0, _.jsxs)(`div`, {
+      className: _(_, `SaleSectionHeader`),
+      style: _(_, _, _),
+      children: [
+        _.test_show_on_valve_ip_only &&
+          (0, _.jsx)(`div`, {
+            className: `JrlXbYAw30w-`,
+            children: `(VO)\xA0`,
+          }),
+        _,
+      ],
+    }),
+    _ = (0, _.jsx)(`div`, {
+      className: _(_, _, `SaleSectionSubtitle`),
+      style: _(_, _, _),
+      children: _,
+    }),
+    _ = null;
+  if ((_?.length ?? 0) > 0) {
+    let {
+      strLinkButtonLabel: _,
+      strLinkButtonClasses: _,
+      bSmallButton: _,
+    } = _(_);
+    (_ &&
+      (_ =
+        _ && _
+          ? (0, _.jsx)(_, {
+              label: _,
+              shown: !!_,
+              button: _,
+            })
+          : _
+            ? (0, _.jsx)(`div`, {
+                className: _(_, _),
+                children: (0, _.jsx)(_, {
+                  url: _,
+                  children: (0, _.jsx)(_, {
+                    children: _,
+                  }),
+                }),
+              })
+            : (0, _.jsx)(_, {
+                url: _,
+                className: _,
+                children: _,
+              })),
+      (_ = (0, _.jsx)(_, {
+        url: _,
+        bFocusable: !_,
+        children: _,
+      })));
+  }
+  return (0, _.jsxs)(`div`, {
+    className: _(_, `SaleSectionLabelCtn`),
+    children: [
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [_, !!_ && _],
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          !!_ &&
+            (0, _.jsx)(_, {
+              className: `pL8IDIWBDg8-`,
+              toolTipContent: _(`#Sale_HiddenItem_Tooltip`),
+              children: (0, _.jsx)(`a`, {
+                href: _.STORE_BASE_URL + `account/preferences`,
+                children: _(
+                  _ == 1
+                    ? `#Sale_HiddenItem_Single_Short`
+                    : `#Sale_HiddenItems_Short`,
+                  _,
+                ),
+              }),
+            }),
+          _,
+        ],
+      }),
+    ],
+  });
+});
+function _(_, _, _) {
+  return {
+    fontFamily: _.jsondata.sale_font ? _(_.jsondata.sale_font, _) : void 0,
+    fontWeight: _.jsondata.sale_font_weight,
+    fontSize: `${_.jsondata.sale_section_font_size}px`,
+    textTransform: _.jsondata.sale_section_disable_capitalize
+      ? `initial`
+      : void 0,
+    color: _.label_color,
+  };
+}
+function _(_, _, _) {
+  return {
+    fontFamily: _.jsondata.sale_font ? _(_.jsondata.sale_font, _) : void 0,
+    fontWeight: 300,
+    fontSize: `${_.jsondata.sale_section_font_size && _.jsondata.sale_section_font_size - 3}px`,
+    letterSpacing: 0,
+    lineHeight: `${_.jsondata.sale_section_font_size}px`,
+    textTransform: _.jsondata.sale_section_disable_capitalize
+      ? `initial`
+      : void 0,
+    color: _.label_color,
+    opacity: `50%`,
+  };
+}
+function _(_, _) {
+  return (
+    (_ ||= ``),
+    _ === 12
+      ? _.replace(`Jolly Lodger`, `New Rocker`)
+      : _ === 23 || _ === 19 || _ === 24 || _ === 18 || _ === 8 || _ === 26
+        ? _.replace(`Sigmar One`, `Play`)
+        : _ === 6
+          ? _.replace(`Sigmar One`, `Noto Serif SC`)
+          : _ === 7
+            ? _.replace(`Sigmar One`, `Noto Serif TC`)
+            : _ === 10
+              ? _.replace(`Sigmar One`, `M PLUS Rounded 1c`)
+              : _ === 4
+                ? _.replace(`Sigmar One`, `Black Han Sans`)
+                : _ === 9
+                  ? _.replace(`Sigmar One`, `Prompt`)
+                  : _
+  );
+}
+function _(_, _, _, _, _) {
+  let _ = _(_, _, _, _.clanSteamID.GetAccountID(), _);
+  if (_) return _;
+  let _ = _(`#Sale_Section_Header`, _ + 1),
+    _ = `#Sale_Section_Type_` + (_?.section_type || `unknowntype`),
+    _ = _(_);
+  if (_ !== _) return `${_} (${_})`;
+}
+function _(_, _, _) {
+  return `linear-gradient(${_ ?? 0}deg, ${_ || `transparent`} 0%, ${_ || `transparent`} 100%)`;
+}
+function _(_) {
+  return _(
+    _.background_gradient_bottom,
+    _.background_gradient_top,
+    _.background_gradient_angle,
+  );
+}
+function _(_, _, _) {
+  if (_.disable_background)
+    return {
+      paddingLeft: 0,
+      paddingRight: 0,
+    };
+  let _ = ``;
+  if (_.background_image) {
+    let _ = _.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image);
+    _ += `,url(${_})`;
+  }
+  return _.background_gradient_bottom ||
+    _.background_gradient_top ||
+    _.length > 0 ||
+    _.background_repeat ||
+    _.border_color ||
+    _.border_width
+    ? {
+        backgroundImage: _(_) + _,
+        backgroundRepeat: _.background_repeat,
+        backgroundSize: _.background_repeat == `coverBlur` ? `cover` : ``,
+        outlineStyle: _.border_color && _.border_width ? `solid` : void 0,
+        outlineColor: _.border_color,
+        outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
+      }
+    : {};
+}
+function _(_, _) {
+  return _
+    ? _.disable_background && !_
+      ? {
+          paddingLeft: 0,
+          paddingRight: 0,
+        }
+      : _.background_gradient_bottom ||
+          _.background_gradient_top ||
+          _.background_repeat ||
+          _.border_color ||
+          _.border_width
+        ? {
+            background: _(_),
+            backgroundRepeat: _.background_repeat,
+            outlineStyle: _.border_color && _.border_width ? `solid` : void 0,
+            outlineColor: _.border_color,
+            outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
+          }
+        : {}
+    : {};
+}
+function _(_) {
+  let { closeModal: _, strDescOverride: _ } = _;
+  return (0, _.jsx)(_, {
+    strTitle: _.Localize(`#LoginRedirect_Dialog_Title`),
+    strDescription: _ || _.Localize(`#LoginRedirect_Dialog_Description`),
+    onCancel: _,
+    strOKButtonText: _.Localize(`#Button_OK`),
+    onOK: () => {
+      (_(), _());
+    },
+  });
+}
+function _(_) {
+  let [_, _, _] = _();
+  return {
+    elDialogElement: (0, _.jsx)(_, {
+      active: _,
+      children: (0, _.jsx)(_, {
+        closeModal: _,
+        strDescOverride: _,
+      }),
+    }),
+    fnShowLogonDialog: _,
+  };
+}
+function _(_) {
+  let { label: _, strDialogDesc: _ } = _,
+    { elDialogElement: _, fnShowLogonDialog: _ } = _(_);
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsx)(_, {
+        onClick: _,
+        children: _ || _.Localize(`#Login_SignIn`),
+      }),
+      _,
+    ],
+  });
+}
+function _(_, _ = {}) {
+  let _ = _(_);
+  return !!(
+    _.section_type == `discoveryqueue` ||
+    _.section_type == `dlc_for_you` ||
+    _.section_type == `claim_item` ||
+    (_(_.section_type) &&
+      _(_) &&
+      (_ == `wishlist` ||
+        _ == `interactive_recommender` ||
+        _ == `personalized_carousel` ||
+        _ == `dlc_music_onsale` ||
+        _ == `ir_subscription` ||
+        ((_ == `deck_compatibility` || _ == `frame_compatibility`) &&
+          _.smart_section_data_source != `popularity`) ||
+        (_ == `wishlist_onsale` && !_.bHideWishlist) ||
+        (_ == `dlc_onsale` && !_.bHideDLC) ||
+        (_ == `interactive_recommender_onsale` && !_.bHideIRList)))
+  );
+}
+function _(_) {
+  let { section: _, event: _ } = _,
+    _ = _();
+  return (0, _.jsxs)(_, {
+    className: _,
+    style: _(_, _, _),
+    children: [
+      (0, _.jsx)(_, {
+        ..._,
+      }),
+      (0, _.jsxs)(_, {
+        className: _,
+        children: [_(`#SalePage_LoginPrompt`), (0, _.jsx)(_, {})],
+      }),
+    ],
+  });
+}
+function _() {
+  return (0, _.jsx)(`button`, {
+    onClick: () => _(),
+    className: _,
+    children: _(`#Login_SignIn`),
+  });
+}
+var _ = {
+    eLocation: 0,
+  },
+  _ = _.createContext(_);
+function _(_) {
+  let { children: _, location: _ } = _;
+  return (0, _.jsx)(_.Provider, {
+    value: {
+      ..._,
+      eLocation: _ ?? 0,
+    },
+    children: _,
+  });
+}
+function _() {
+  return _.useContext(_);
+}
+function _() {
+  return _().eLocation == 2;
+}
+function _() {
+  let _ = _();
+  return _.eLocation == 2 || _.eLocation == 1;
+}
 async function _(_, _) {
   let _ = _(_.STORE_BASE_URL, _, _.country_code);
   return (await (await fetch(_)).json()).rgFollowedApps || [];
@@ -28613,6 +29574,2371 @@ function _(_) {
   window.sessionStorage.setItem(_, _);
 }
 window.SetHoverPresentation = _;
+var _ = _.createContext(void 0);
+function _() {
+  return _.useContext(_);
+}
+function _(_, _, _, _) {
+  if (_ === void 0 || _.length <= 1 || !_(_, _, void 0)) return _;
+  let _ = _(_ + (_.unique_id ?? 0));
+  return _([..._], _.random_order_top_x ?? 0, _);
+}
+function _(_, _, _, _) {
+  if (_.length <= _) return _;
+  if (_ === void 0) return _.slice(0, _);
+  let _ = _(_ + (_.unique_id ?? 0));
+  return _([..._], 0, _).slice(0, _);
+}
+async function _(_, _) {
+  let _ = _(_.STORE_BASE_URL, _, _.country_code);
+  return ((await (await fetch(_)).json()).rgRecommendedApps ?? []).map(Number);
+}
+function _() {
+  let _ = _(),
+    _ = _.accountid;
+  return _(_(_, _));
+}
+function _(_, _) {
+  return {
+    queryKey: _(_),
+    queryFn: async () => (_ ? _(_, _) : []),
+    staleTime: 6e5,
+  };
+}
+function _(_) {
+  return [`AccountRecommendedApps`, _ ?? 0];
+}
+var _ = 100;
+function _(_, _, _, _, _ = 1) {
+  return {
+    queryKey: [`AccountRecommendedAppsOnSale`, _ ?? 0, _.cacheScope ?? ``, _],
+    queryFn: async () => {
+      if (!_) return [];
+      let _ = (await _.fetchQuery(_(_, _))).slice(0, _),
+        _ = await Promise.all(
+          _.map((_) =>
+            _.fetchQuery(
+              _(_, {
+                appid: _,
+              }),
+            ),
+          ),
+        );
+      return _.filter(
+        (_, _) => (_[_]?.best_purchase_option?.discount_pct ?? 0) >= _,
+      );
+    },
+    staleTime: 6e5,
+  };
+}
+function _(_) {
+  return _.section_type === `crosspromotesalepage`
+    ? (_.sale_page_cross_promo_sales ?? [])
+    : [];
+}
+function _(_) {
+  return _(_).map((_) => ({
+    ..._,
+    sale_page_cross_promo_sales: [_],
+    capsules: _.capsules ?? [],
+  }));
+}
+function _(_) {
+  return _(_)[0]?.event_gid || void 0;
+}
+function _(_) {
+  return _(_).flatMap((_) => _.event_gid || []);
+}
+function _(_) {
+  return _(_)[0]?.featured_app_tagid || void 0;
+}
+function _(_) {
+  let _ = _(_);
+  return _.length > 0 && _.every((_) => (_.capsules?.length ?? 0) > 0);
+}
+function _(_, _) {
+  return _(_) ? (_?.BIsVisibleEvent() ? null : `missing`) : `setup`;
+}
+function _(_) {
+  let _ = _(_)[0];
+  return _?.creator_clan_account_id
+    ? !!_.capsules?.length
+    : !!_?.event_gid && (!!_.featured_app_tagid || !!_.capsules?.length);
+}
+function _(_, _) {
+  return _
+    ? _(`#Sale_CrossPromoSale_SectionTitle`, _.GetNameWithFallback(_) ?? ``)
+    : _(`#Sale_CrossPromoSale_DefaultSectionTitle`);
+}
+function _(_, _) {
+  let _ = _.GetELanguageFallback(_),
+    _ =
+      _.jsondata.localized_sale_cross_promo_logo_image?.findIndex((_) => !!_) ??
+      -1;
+  return (
+    _.GetImageURL(`sale_cross_promo_logo`, _) ||
+    _.GetImageURL(`sale_cross_promo_logo`, _) ||
+    (_ >= 0 ? _.GetImageURL(`sale_cross_promo_logo`, _) : void 0) ||
+    _.GetImageURL(`sale_logo`, _) ||
+    _.GetImageURL(`sale_logo`, _)
+  );
+}
+function _(_) {
+  return 3;
+}
+function _(_) {
+  return _.type !== `sub` && _.type !== `bundle`;
+}
+function _(_, _, _, _) {
+  let _ = [];
+  for (let _ of _)
+    if ((!_ || _.has(_)) && !_(_) && (_.push(_), _.length >= _)) break;
+  return _;
+}
+function _(_, _, _, _ = new Set()) {
+  for (let _ of _.GetSaleSections())
+    if (!(!_(_.section_type) || (_ && !_.BIncludeSection(_))))
+      for (let _ of _.capsules) _(_) && _.add(_._);
+  for (let _ of _ ?? []) {
+    let _ = _.capsule;
+    _(_) && (!_ || _.BIncludeLinkedCapsule(_)) && _.add(_._);
+  }
+  return _;
+}
+function _(_, _, _) {
+  return {
+    nSaleTagID: _.BUsesContentHubForItemSource()
+      ? void 0
+      : _.featured_app_tagid,
+    strContentHubType: _.GetContentHubType(),
+    strContentHubCategory: _.GetContentHubCategory(),
+    nContentHubTagID: _.GetContentHubTag(),
+    bDiscountsOnly: _.BContentHubDiscountedOnly(),
+    bPrioritizeDiscounts: _,
+    strOptInName: _.jsondata.prune_list_optin_name,
+    nOptInTagID: _.jsondata.optin_tagid,
+    nPruneTagID: _.jsondata.optin_prune_tagid,
+    bOptInOnly: _.jsondata.optin_only,
+    nCreatorClanAccountId: _ ? _.clanSteamID.GetAccountID() : void 0,
+  };
+}
+var _ = 4;
+function _(_) {
+  return _.GetSaleSections().filter(
+    (_) => _(_.section_type) && _(_) === `personalized_carousel`,
+  );
+}
+function _(_) {
+  return _(_)[0];
+}
+function _(_) {
+  if (_.appid())
+    return {
+      _: _.appid(),
+      type: `game`,
+    };
+  if (_.bundleid())
+    return {
+      _: _.bundleid(),
+      type: `bundle`,
+    };
+  if (_.packageid())
+    return {
+      _: _.packageid(),
+      type: `sub`,
+    };
+}
+function _(_, _, _, _, _, _, _) {
+  let _ = _(_),
+    _ = {
+      rgSections: _.map((_) => ({
+        eSort: _.smart_section_personalized_carousel_sort ?? 13,
+        nMinItems: _.smart_section_personalized_carousel_min_items ?? _,
+        bRandomize: !!_.smart_section_personalized_carousel_randomize,
+        bIncludePackages: _.smart_section_include_packages,
+        bIncludeBundles: _.smart_section_include_bundles,
+        bIncludeDLC: _.smart_section_include_dlc,
+        nMinDiscountPercent:
+          _.smart_section_min_discount_percent === void 0 ? void 0 : _(_),
+      })),
+      storePageFilter: _(_, !!_[0]?.prioritize_discounts, _),
+      strStoreFilterJSON: _[0] ? _(_[0]) : void 0,
+      strTabStoreFilterJSON: _ ? JSON.stringify(_) : void 0,
+    };
+  return {
+    queryKey: [
+      `SaleTech`,
+      `PersonalizedCarousels`,
+      _,
+      _.country,
+      _.language,
+      JSON.stringify(_),
+    ],
+    queryFn: () => _(_, _, _, _, _),
+    staleTime: 1 / 0,
+  };
+}
+async function _(_, _, _, _, _) {
+  if (!_ || _.rgSections.length === 0) return [];
+  let _ = _.Init(_);
+  for (let _ of _.rgSections) {
+    let _ = _.Body().add_sections();
+    (_.set_sort(_.eSort),
+      _.set_min_items(_.nMinItems),
+      _.set_randomize(_.bRandomize),
+      _.set_include_packages(!!_.bIncludePackages),
+      _.set_include_bundles(!!_.bIncludeBundles),
+      _.set_include_dlc(_.bIncludeDLC),
+      _.set_min_discount_percent(_.nMinDiscountPercent));
+  }
+  for (let _ of _ ?? []) {
+    let _ = _.Body().add_recommended_tags();
+    (_.set_tagid(_.tagid), _.set_name(_.name));
+  }
+  (_.Body().set_context(_(_)),
+    _.Body().set_filters(_(_.storePageFilter, !1)),
+    _.strStoreFilterJSON &&
+      _.Body()
+        .filters(!0)
+        .add_store_filters()
+        .set_filter_json(_.strStoreFilterJSON),
+    _.strTabStoreFilterJSON &&
+      _.Body()
+        .filters(!0)
+        .add_store_filters()
+        .set_filter_json(_.strTabStoreFilterJSON));
+  let _ = await _.GetItemsByUserRecommendedTags(_, _);
+  if (_.GetEResult() != 1)
+    throw Error(`GetItemsByUserRecommendedTags failed: ${_.GetEResult()}`);
+  return _.Body()
+    .sections()
+    .map((_) => ({
+      strTagName: _.tag_name() ?? ``,
+      rgCapsules: _.store_item_ids().flatMap((_) => {
+        let _ = _(_);
+        return _ ? [_] : [];
+      }),
+    }));
+}
+function _(_, _) {
+  let _ = _.GetSaleSections().filter(
+    (_) => _(_.section_type) && _(_) == `personalized_carousel`,
+  );
+  if (_.length == 0)
+    return {
+      nNumSections: 0,
+      nSectionIndex: -1,
+    };
+  let _ = _.findIndex((_) => _.unique_id == _.unique_id);
+  return {
+    nNumSections: _.length,
+    nSectionIndex: _,
+  };
+}
+var _ = 1778623200;
+function _(_, _) {
+  let _ = !1;
+  return (
+    _ && _.GetEventType() == 36
+      ? (_ = !0)
+      : _ && _ && _.is_creator_home && (_ = _(_, _)),
+    _
+  );
+}
+function _(_, _) {
+  return !!_ && !!_.is_creator_home && (_.createTime ?? 0) > _;
+}
+function _(_) {
+  return _(_) === `frame_compatibility` ? `frame` : `deck`;
+}
+function _(_, _) {
+  let _ = _.smart_section_deck_compatibility ?? 3;
+  switch (_) {
+    case 3:
+      return _.verifiedList ?? [];
+    case 2:
+      return _.playableList ?? [];
+    case 1:
+      return _.unsupportedList ?? [];
+    case 0:
+      return _.unknownList ?? [];
+  }
+  return (
+    console.error(
+      `GetAppsForSectionCompatCategory: unexpected compatibility category ${_}`,
+    ),
+    []
+  );
+}
+var _ = [
+    {
+      nOptInTagID: 9,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nOptInTagID: 19,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nOptInTagID: 21,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nOptInTagID: 122,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nOptInTagID: 599,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nOptInTagID: 699,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nOptInTagID: 701,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: 599,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nOptInTagID: _,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nOptInTagID: _,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nOptInTagID: _,
+      rgChildren: [
+        {
+          eContentDescriptor: 3,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+  ],
+  _ = [
+    {
+      nTagID: _,
+      rgChildren: [
+        {
+          nTagID: 122,
+        },
+        {
+          nTagID: 9,
+        },
+        {
+          nTagID: 597,
+        },
+        {
+          nTagID: 19,
+        },
+        {
+          nTagID: 21,
+        },
+        {
+          nTagID: 599,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nTagID: _,
+      rgChildren: [
+        {
+          nTagID: 122,
+        },
+        {
+          nTagID: 9,
+        },
+        {
+          nTagID: 597,
+        },
+        {
+          nTagID: 19,
+        },
+        {
+          nTagID: 21,
+        },
+        {
+          nTagID: 599,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nTagID: _,
+      rgChildren: [
+        {
+          nTagID: 9,
+        },
+        {
+          nTagID: 122,
+        },
+        {
+          nTagID: 19,
+        },
+        {
+          nTagID: 21,
+        },
+        {
+          nTagID: 597,
+        },
+        {
+          nTagID: 599,
+        },
+      ],
+    },
+    {
+      nTagID: _,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: 19,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nTagID: _,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: 599,
+        },
+        {
+          nTagID: 21,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      nTagID: _,
+      rgChildren: [
+        {
+          nTagID: 21,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      eContentDescriptor: 3,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+  ],
+  _ = [
+    {
+      strOptInTag: `option_58733`,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: 128,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      strOptInTag: `option_40066`,
+      rgChildren: [
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+        {
+          nTagID: _,
+        },
+      ],
+    },
+    {
+      strAppType: `software`,
+    },
+    {
+      strFeature: `vr`,
+    },
+    {
+      strFeature: `mac`,
+    },
+  ],
+  _ = {
+    linux: `#Platform_Linux`,
+    mac: `#Platform_Mac`,
+    _: `#Platform_VR`,
+    "vr only": `#Sale_Tabs_TagFilter_Feature_VROnly`,
+    free: `#Sale_Tabs_TagFilter_Feature_Free`,
+    discounted: `#Sale_Tabs_TagFilter_Feature_Discounted`,
+    "xbox controller": `#ControllerSupportLabelTitle`,
+    "full controller": `#Store_ControllerFilter_Xbox`,
+    "ps4 controller": `#Store_ControllerFilter_PS4`,
+    "ps5 controller": `#Store_ControllerFilter_PS5`,
+    "remote play together": `#Sale_Tabs_TagFilter_Feature_RemotePlayTogether`,
+    "steam deck verified": `#Sale_Tabs_TagFilter_Feature_SteamDeckVerified`,
+  },
+  _ = [
+    {
+      strClass: `genre`,
+      strLocToken: `#Sale_Tabs_TagFilter_Class_Genre`,
+      rgNodes: _,
+    },
+    {
+      strClass: `theme`,
+      strLocToken: `#Sale_Tabs_TagFilter_Class_Theme`,
+      rgNodes: _,
+    },
+    {
+      strClass: `feature`,
+      strLocToken: `#Sale_Tabs_TagFilter_Class_Feature`,
+      rgNodes: _,
+    },
+  ];
+function _(_) {
+  return _?.rgNodes
+    ? _.rgNodes
+    : (_.find((_) => _.strClass === _?.tag_class)?.rgNodes ?? []);
+}
+function _(_) {
+  return _.nTagID
+    ? String(_.nTagID)
+    : _.nOptInTagID || _.strOptInTag
+      ? `optin:` + _(_)
+      : _.eContentDescriptor
+        ? `descriptor:` + _.eContentDescriptor
+        : _.strFeature
+          ? `feature:` + _.strFeature
+          : `apptype:` + _.strAppType;
+}
+function _(_) {
+  if (_.strFeature) return _[_.strFeature];
+  if (_.strAppType) return `#AppTypeLabel_` + _.strAppType;
+}
+function _(_) {
+  if (_)
+    return _.strChildKey
+      ? _.strParentKey + `,` + _.strChildKey
+      : _.strParentKey;
+}
+var _ = `tabtag`,
+  _ = `tabsubtag`;
+function _(_, _) {
+  if (_)
+    return {
+      strParentKey: _,
+      strChildKey: _ || void 0,
+    };
+}
+function _(_) {
+  return {
+    [_]: _?.strParentKey ?? null,
+    [_]: _?.strChildKey ?? null,
+  };
+}
+function _(_, _, _) {
+  if (!_) return;
+  let _ = _(_(_), _.strParentKey);
+  if (!_ || !_(_)) return;
+  if (!_.strChildKey) return _;
+  let _ = _(_.rgChildren ?? [], _.strChildKey);
+  return !_ || !_(_)
+    ? {
+        strParentKey: _.strParentKey,
+      }
+    : _;
+}
+function _(_) {
+  return _.strOptInTag ?? String(_.nOptInTagID);
+}
+function _(_, _) {
+  return _.nOptInTagID || _.strOptInTag
+    ? (_(_, `Opt-in registration tag used on a sale without an opt-in`),
+      {
+        type: _.k_EStoreFilterClauseTypeOptInRegistrationTag,
+        optin: _,
+        value: _(_),
+      })
+    : _.nTagID
+      ? {
+          type: _.k_EStoreFilterClauseTypeStoreTag,
+          value: _.nTagID,
+        }
+      : _.eContentDescriptor
+        ? {
+            type: _.k_EStoreFilterClauseTypeContentDescriptor,
+            value: _.eContentDescriptor,
+          }
+        : _.strFeature
+          ? {
+              type: _.k_EStoreFilterClauseTypeFeatureTag,
+              value: _.strFeature,
+            }
+          : {
+              type: _.k_EStoreFilterClauseTypeAppType,
+              value: _.strAppType,
+            };
+}
+function _(_, _) {
+  return _.find((_) => _(_) === _);
+}
+function _(_, _, _) {
+  if (!_) return;
+  let _ = _(_(_), _.strParentKey);
+  if (!_) return;
+  if (!_.strChildKey) return _(_, _);
+  let _ = _(_.rgChildren ?? [], _.strChildKey);
+  if (_)
+    return {
+      type: _.k_EStoreFilterClauseTypeAnd,
+      rgSubexpressions: [_(_, _), _(_, _)],
+    };
+}
+function _() {
+  let [_] = _(`tab`),
+    _ = _.useCallback(
+      (_, _) =>
+        _({
+          ..._,
+          tab: String(_),
+        }),
+      [],
+    );
+  return [_(_), _];
+}
+function _(_) {
+  return _ === null ? 0 : Number(_);
+}
+function _(_) {
+  let [_] = _();
+  return _(_, _);
+}
+function _(_, _) {
+  let _ = _(_);
+  return _.find((_) => _.unique_id === _) ?? _[0];
+}
+function _(_) {
+  return (
+    _.GetSaleSectionFirstMatchByType(`tabs`)?.tabs?.filter((_) => !_.hide) ?? []
+  );
+}
+function _(_, _, _, _) {
+  if (!_ || _.diable_tab_id_filtering) return;
+  let _ = _.jsondata.sale_opt_in_page_name || _.jsondata.prune_list_optin_name,
+    _ = _(_, _.tab_tag_filter, _),
+    _ =
+      _.store_filter && _
+        ? {
+            type: _.k_EStoreFilterClauseTypeAnd,
+            rgSubexpressions: [_.store_filter, _],
+          }
+        : (_.store_filter ?? _);
+  if (_) return _(_, _, _) ? _ : void 0;
+}
+function _(_, _, _) {
+  let _ = _.GetSaleSections(),
+    _ = _.findIndex((_) => _.section_type === `tabs`);
+  return _ < 0 || !_[_].tabs?.includes(_) ? !1 : _.indexOf(_) > _;
+}
+function _(_, _) {
+  let _ = _(_);
+  return !_ || _ === _(_)[0] || _.diable_tab_id_filtering || !_(_, _, _)
+    ? ``
+    : `tabid${_.unique_id}`;
+}
+function _(_) {
+  let _ = _.useSyncExternalStore(_, _, _);
+  return [
+    new URLSearchParams(_).get(_),
+    _.useCallback(
+      (_) =>
+        _({
+          [_]: _ ?? null,
+        }),
+      [_],
+    ),
+  ];
+}
+function _() {
+  return location.search;
+}
+function _(_) {
+  let _ = new URL(window.location.href);
+  for (let [_, _] of Object.entries(_))
+    _ === null ? _.searchParams.delete(_) : _.searchParams.set(_, _);
+  _.href !== window.location.href && _((_) => _, _);
+}
+function _(_) {
+  let _ = _(_),
+    _ = _(),
+    [_] = _(_),
+    [_] = _(_),
+    _ = _.useCallback(
+      (_, _) =>
+        _({
+          ..._,
+          ..._(_),
+        }),
+      [],
+    );
+  return [_(_(_, _), _?.tab_tag_filter, _), _];
+}
+function _() {
+  let { data: _ } = _();
+  return _.useMemo(() => _(_), [_]);
+}
+function _(_) {
+  let _ = !!_.logged_in && _.EREALM !== _.k_ESteamRealmChina && _ !== void 0,
+    _ = new Set(_(_));
+  return (_) => !_.eContentDescriptor || (_ && !_.has(_.eContentDescriptor));
+}
+function _(_, _) {
+  let _ = _(_),
+    [_] = _(_);
+  return _(_, _, _, _);
+}
+var _ = 50;
+function _(_, _, _) {
+  let { defaultInfo: _ } = _;
+  switch (_.type) {
+    case _.k_EStoreFilterClauseTypeStoreTag:
+      return !!_.tags?.some((_) => _.tagid === _.value);
+    case _.k_EStoreFilterClauseTypeFeatureTag:
+      switch (_.value) {
+        case `linux`:
+          return !!_.platforms?.steamos_linux;
+        case `mac`:
+          return !!_.platforms?.mac;
+        case `vr`:
+          return !!_.platforms?.vr_support?.vrhmd;
+        case `vr only`:
+          return !!_.platforms?.vr_support?.vrhmd_only;
+        case `free`:
+          return !!_?.is_free;
+        case `discounted`:
+          return (_?.best_purchase_option?.discount_pct ?? 0) > 0;
+        default:
+          return !1;
+      }
+    case _.k_EStoreFilterClauseTypeAppType:
+      return (
+        (_?.item_type !== void 0 && _.type !== void 0
+          ? _(_.item_type, _.type)
+          : `game`) === _.value
+      );
+    case _.k_EStoreFilterClauseTypeLanguage: {
+      let _ = _(String(_.value));
+      return !!_.supportedLanguages?.some(
+        (_) =>
+          _.elanguage === _ && (_.supported || _.subtitles || _.full_audio),
+      );
+    }
+    case _.k_EStoreFilterClauseTypeContentDescriptor:
+      return !!_?.content_descriptorids?.some((_) => _ === _.value);
+    case _.k_EStoreFilterClauseTypePrice: {
+      let _ = _?.free_weekend,
+        _ = !!_ && (_.start_time ?? 1 / 0) <= _ && _ <= (_.end_time ?? 0),
+        _ = _?.best_purchase_option?.final_price_in_cents,
+        _ = _ ? Number.parseInt(_) : 1 / 0;
+      return (
+        !!_?.is_free ||
+        !!_?.is_free_temporarily ||
+        _ ||
+        _ <= Number(_.value) * 100
+      );
+    }
+    case _.k_EStoreFilterClauseTypeOr: {
+      let _ = _.rgSubexpressions?.some((_) => _(_, _, _)) ?? !1;
+      return _.bNegated ? !_ : _;
+    }
+    case _.k_EStoreFilterClauseTypeAnd: {
+      let _ = _.rgSubexpressions?.every((_) => _(_, _, _)) ?? !1;
+      return _.bNegated ? !_ : _;
+    }
+    case _.k_EStoreFilterClauseTypeOptInRegistrationTag:
+      return !!(
+        _.optin &&
+        _.optInRegistrationTags
+          ?.find((_) => _.optin_name === _.optin)
+          ?.values?.includes(String(_.value))
+      );
+    default:
+      return !0;
+  }
+}
+function _(_, _, _, _, _) {
+  return {
+    queryKey: [
+      `StoreFilterPassingApps`,
+      _.cacheScope,
+      _ && JSON.stringify(_),
+      _,
+      _,
+    ],
+    queryFn: () =>
+      _(
+        _,
+        _,
+        _,
+        (_) => ({
+          appid: _,
+        }),
+        _,
+        _,
+      ),
+    enabled: !!(_ && _),
+    staleTime: 6e5,
+  };
+}
+function _(_, _, _, _, _) {
+  return {
+    queryKey: [
+      `StoreFilterPassingItems`,
+      _.cacheScope,
+      _ && JSON.stringify(_),
+      _,
+      _?.map(_),
+    ],
+    queryFn: () => _(_, _, _, (_) => _, _, _),
+    enabled: !!(_ && _),
+    staleTime: 6e5,
+  };
+}
+async function _(_, _, _, _, _, _) {
+  let _ = _(_, {
+      bTags: !1,
+      bPlatforms: !1,
+      bLanguages: !1,
+      bOptInRegistrationTags: !1,
+    }),
+    _ = Math.floor(Date.now() / 1e3),
+    _ = [];
+  for (let _ = 0; _ < _.length && _.length < _; _ += _) {
+    let _ = _.slice(_, _ + _),
+      _ = await Promise.all(_.map((_) => _(_, _, _(_), _)));
+    _.forEach((_, _) => {
+      _.length < _ && _(_, _[_], _) && _.push(_);
+    });
+  }
+  return _;
+}
+function _(_, _) {
+  switch (_.type) {
+    case _.k_EStoreFilterClauseTypeStoreTag:
+      _.bTags = !0;
+      break;
+    case _.k_EStoreFilterClauseTypeFeatureTag:
+      _.bPlatforms = !0;
+      break;
+    case _.k_EStoreFilterClauseTypeLanguage:
+      _.bLanguages = !0;
+      break;
+    case _.k_EStoreFilterClauseTypeOptInRegistrationTag:
+      _.bOptInRegistrationTags = !0;
+      break;
+    case _.k_EStoreFilterClauseTypeOr:
+    case _.k_EStoreFilterClauseTypeAnd:
+      _.rgSubexpressions?.forEach((_) => _(_, _));
+  }
+  return _;
+}
+async function _(_, _, _, _) {
+  let [_, _, _, _, _] = await Promise.all([
+    _.fetchQuery(_(_, _)).catch(() => void 0),
+    _.bTags ? _.fetchQuery(_(_, _)).catch(() => null) : null,
+    _.bPlatforms ? _.fetchQuery(_(_, _)).catch(() => null) : null,
+    _.bLanguages ? _.fetchQuery(_(_, _)).catch(() => null) : null,
+    _.bOptInRegistrationTags ? _.fetchQuery(_(_, _)).catch(() => null) : null,
+  ]);
+  return {
+    defaultInfo: _,
+    tags: _,
+    platforms: _,
+    supportedLanguages: _,
+    optInRegistrationTags: _,
+  };
+}
+var _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.count || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [2], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            count: {
+              _: 1,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            additional_source_items: {
+              _: 2,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.recommendations || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            recommendations: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.item_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            item_id: {
+              _: 1,
+              _: _,
+            },
+            weight: {
+              _: 2,
+              _: _.readFloat,
+              _: _.writeFloat,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response_Recommendation`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.count || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [2], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            count: {
+              _: 1,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            item_ids: {
+              _: 2,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.recommendations || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            recommendations: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.item_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            item_id: {
+              _: 1,
+              _: _,
+            },
+            weight: {
+              _: 2,
+              _: _.readFloat,
+              _: _.writeFloat,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response_Recommendation`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.start || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            start: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            count: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.sales || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            sales: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            total_count: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.clan_account_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            clan_account_id: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            clan_event_gid: {
+              _: 2,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Response_Sale`;
+    }
+  },
+  _;
+(function (_) {
+  function _(_, _, _) {
+    return _.SendMsg(
+      `StoreRecommendations.GetPackagePurchaseRecommendations#1`,
+      _(_, _, _),
+      _,
+      {
+        bConstMethod: !0,
+        ePrivilege: 1,
+      },
+    );
+  }
+  _.GetPackagePurchaseRecommendations = _;
+  function _(_, _, _) {
+    return _.SendMsg(
+      `StoreRecommendations.GetPackagePurchaseRecommendationsForItems#1`,
+      _(_, _, _),
+      _,
+      {
+        bConstMethod: !0,
+        ePrivilege: 0,
+        eWebAPIKeyRequirement: 1,
+      },
+    );
+  }
+  _.GetPackagePurchaseRecommendationsForItems = _;
+  function _(_, _, _) {
+    return _.SendMsg(`StoreRecommendations.GetLiveSales#1`, _(_, _, _), _, {
+      bConstMethod: !0,
+      ePrivilege: 0,
+      eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
+    });
+  }
+  _.GetLiveSales = _;
+})((_ ||= {}));
+var _ = `saleaction/recommendeddiscounts`;
+function _(_) {
+  let _ = new URLSearchParams(),
+    { contentHub: _ } = _;
+  return (
+    _ &&
+      (_.set(`hub_type`, _.strHubType),
+      _.strCategory && _.set(`hub_category`, _.strCategory),
+      _.nTagID && _.set(`hub_tagid`, String(_.nTagID))),
+    _.toString()
+  );
+}
+async function _(_, _, _) {
+  let _ = _(_),
+    _ = `${_.STORE_BASE_URL}${_}${_ ? `?${_}` : ``}`,
+    _ = await fetch(_, {
+      credentials: `include`,
+    });
+  if (!_._) throw Error(`${_} answered ${_.status}`);
+  let _ = await _.json();
+  if (_?.success !== 1 || !_.discounts)
+    throw Error(`${_} answered EResult ${_?.success}`);
+  return _.discounts;
+}
+var _ = 6e5;
+function _(_, _, _, _) {
+  return {
+    queryKey: [
+      `RecommendedDiscounts`,
+      _ ?? 0,
+      _.country,
+      _ ? JSON.stringify(_) : null,
+    ],
+    queryFn: () =>
+      _(_, _.country, {
+        contentHub: _,
+      }),
+    staleTime: _,
+  };
+}
+function _(_, _) {
+  return _.rgReasonLists.find((_) => _.eReason === _)?.rgAppIDs ?? [];
+}
+function _(_) {
+  if (_.jsondata.item_source_type !== _.k_EContentHub) return;
+  let _ = _.GetContentHub();
+  if (_?.type)
+    return {
+      strHubType: _.type,
+      strCategory: _.category,
+      nTagID: _.tagid,
+    };
+}
+function _(_, _) {
+  let _ = _(_),
+    _ = {
+      contentHub: _,
+      listStoreFilter: _,
+      bTabTagHub: !1,
+    };
+  if (!_ || _) return _;
+  let _ = _(_);
+  if (!_) return _;
+  let _ = _(_[_.length - 1]);
+  return _
+    ? {
+        contentHub: {
+          strHubType: `tags`,
+          nTagID: _,
+        },
+        listStoreFilter: _(_.slice(0, -1)),
+        bTabTagHub: !0,
+      }
+    : _;
+}
+function _(_) {
+  if (_.type !== _.k_EStoreFilterClauseTypeStoreTag || _.bNegated) return;
+  let _ = Number(_.value);
+  if (!(!Number.isSafeInteger(_) || _ <= 0)) return _;
+}
+function _(_) {
+  return _.length <= 1
+    ? _[0]
+    : {
+        type: _.k_EStoreFilterClauseTypeAnd,
+        rgSubexpressions: _,
+      };
+}
+function _(_) {
+  if (_.type !== _.k_EStoreFilterClauseTypeAnd) return [_];
+  if (_.bNegated || !_.rgSubexpressions?.length) return;
+  let _ = [];
+  for (let _ of _.rgSubexpressions) {
+    let _ = _(_);
+    if (!_) return;
+    _.push(..._);
+  }
+  return _;
+}
+function _(_, _, _) {
+  if (_)
+    return _.smart_section_discount_reason === void 0
+      ? []
+      : _(_, _.smart_section_discount_reason).slice(0, _);
+}
+var _ = {
+  1: `#Sale_default_label_OnYourWishlist`,
+  2: `#Sale_DiscountReason_Section_FirstTimeOnSale`,
+  3: `#Sale_DiscountReason_Section_LargestDiscount`,
+  4: `#Sale_DiscountReason_Section_EndingSoon`,
+  5: `#Sale_DiscountReason_Section_NewlyOnSale`,
+  6: `#Sale_DiscountReason_Section_WellReviewed`,
+  7: `#Sale_DiscountReason_Section_TopSeller`,
+  8: `#Sale_DiscountReason_Section_HotDeal`,
+  9: `#Sale_DiscountReason_Section_DeepDiscount`,
+  10: `#Sale_DiscountReason_Section_PopularInRegion`,
+};
+function _(_) {
+  return _.smart_section_discount_reason === void 0
+    ? void 0
+    : _[_.smart_section_discount_reason];
+}
+function _(_, _) {
+  return _.BUsesContentHubForItemSource() || !!_.hide_owned_items;
+}
+function _(_, _, _) {
+  if (!_) return !1;
+  let _ = !_?.bHasHideIgnoredValue || _.bHideIgnored;
+  return (_.ignored && _) ||
+    (_.excluded_tagids?.length ?? 0) > 0 ||
+    (_.excluded_content_descriptorids?.length ?? 0) > 0 ||
+    (_?.bHideOwned && _.already_owned) ||
+    (_?.bHideWishlisted && _.on_wishlist)
+    ? !0
+    : _ && !!(_.already_owned || _.demo_for_owned_game);
+}
+function _(_) {
+  return _.map((_) => _.data);
+}
+function _(_) {
+  return _.map((_) => _.data?.visible === !1);
+}
+function _(_, _, _, _, _) {
+  let _ = _(),
+    _ = _(_, _),
+    _ = !!_?.bHideOwned,
+    _ = !!_?.bHideWishlisted,
+    _ = !!_?.bHideIgnored,
+    _ = !!_?.bHasHideIgnoredValue,
+    _ = _({
+      queries: (_ ?? []).map((_) => {
+        let _ = _(_, _(_));
+        return _
+          ? {
+              ..._,
+              enabled: !1,
+            }
+          : _;
+      }),
+      combine: _,
+    }),
+    _ = _({
+      queries: (_ ?? []).map((_) => ({
+        ..._(_, _(_)),
+        enabled: !1,
+      })),
+      combine: _,
+    });
+  return (0, _.useMemo)(() => {
+    if (!_)
+      return {
+        capsules: void 0,
+        nHiddenCapsules: 0,
+      };
+    let _ = {
+        bHideOwned: _,
+        bHideWishlisted: _,
+        bHideIgnored: _,
+        bHasHideIgnoredValue: _,
+      },
+      _ = 0;
+    return {
+      capsules: _.filter((_, _) => {
+        if (_[_]) return !1;
+        let _ = _[_];
+        return !_(_, _, _) || ((!_?.already_owned || _) && _++, !1);
+      }),
+      nHiddenCapsules: _,
+    };
+  }, [_, _, _, _, _, _, _, _]);
+}
+function _(_) {
+  let { capsules: _ } = _,
+    _ = _();
+  return (
+    _({
+      queries: (_ ?? []).map((_) => _(_, _(_))),
+      combine: _,
+    }),
+    null
+  );
+}
+function _() {
+  return null;
+}
+var _ = {
+    popularity: {
+      eType: `game`,
+      bDropsOwned: !1,
+    },
+    wishlist: {
+      eType: `game`,
+      bDropsOwned: !0,
+    },
+    interactive_recommender: {
+      eType: `game`,
+      bDropsOwned: !0,
+    },
+    wishlist_onsale: {
+      eType: `game`,
+      bDropsOwned: !0,
+    },
+    interactive_recommender_onsale: {
+      eType: `game`,
+      bDropsOwned: !0,
+    },
+    dlc_onsale: {
+      eType: `dlc`,
+      bDropsOwned: !0,
+    },
+    dlc_music_onsale: {
+      eType: `music`,
+      bDropsOwned: !0,
+    },
+    discount_reason: {
+      eType: `game`,
+      bDropsOwned: !1,
+    },
+  },
+  _ = 24,
+  _ = 100,
+  _ = 500;
+function _(_) {
+  return Math.max(1, _.smart_section_min_discount_percent ?? 1);
+}
+function _(_) {
+  return _(_) && _[_].bDropsOwned;
+}
+function _(_) {
+  return _ !== void 0 && _ in _;
+}
+function _(_, _, _, _) {
+  let _ = _(_),
+    _ =
+      _ === `tag`
+        ? {
+            tagid: _.smart_section_tag,
+          }
+        : _ === `top_n`
+          ? {
+              top_n_sellers: _,
+            }
+          : {};
+  return (
+    (_.min_discount_percent = _(_)),
+    (_.include_packages = _.smart_section_include_packages),
+    (_.include_bundles = _.smart_section_include_bundles),
+    (_.include_dlc = _.smart_section_include_dlc),
+    _ && (_.store_filter_json = JSON.stringify(_)),
+    _(
+      _,
+      _,
+      _,
+      _ === `tag` && _.random_from_entire_set
+        ? _
+        : _.smart_section_max_apps || _,
+    )
+  );
+}
+function _(_, _, _, _) {
+  return _(
+    _,
+    _,
+    {
+      min_discount_percent: _.smart_section_min_discount_percent || void 0,
+      store_filter_json: _ ? JSON.stringify(_) : void 0,
+    },
+    _(_),
+  );
+}
+function _(_, _) {
+  if (_(_)) return `manual`;
+  if (_.section_type !== `items`) return;
+  let _ = _(_);
+  if (_.enable_faceted_browsing) return _ === void 0 ? `faceted` : void 0;
+  if (_ === void 0) return `manual`;
+  if (
+    (_ === `deck_compatibility` || _ === `frame_compatibility`) &&
+    _.smart_section_data_source === `popularity`
+  )
+    return `popularity`;
+  if (
+    ((_ === `wishlist` || _ === `interactive_recommender`) &&
+      _.jsondata.item_source_type !== _.k_EContentHub) ||
+    _ === `wishlist_onsale` ||
+    _ === `interactive_recommender_onsale` ||
+    _ === `dlc_onsale` ||
+    _ === `dlc_music_onsale`
+  )
+    return _;
+  if (_ === `tag` && _.smart_section_tag) return `tag`;
+  if (_ === `top_n`) return `top_n`;
+  if (_ === `all_discounted`) return `all_discounted`;
+  if (_ === `topwishlisted`) return `topwishlisted`;
+  if (_ === `personalized_carousel`) return `personalized_carousel`;
+  if (_ === `discount_reason`) return `discount_reason`;
+}
+function _(_, _, _) {
+  let _ = _.GetDayIndexFromEventStart(_);
+  return _.capsules.filter(
+    (_) => _.visibility_index === void 0 || _.visibility_index === _,
+  );
+}
+function _(_, _, _) {
+  return _(_, _, _).flatMap((_) => {
+    let _ = _(_);
+    return _ ? [_] : [];
+  });
+}
+function _(_, _, _, _, _) {
+  let _ = _(_),
+    _ = _(_, _);
+  if (_(_)) {
+    let _ = _[_].eType;
+    return (_.tabStoreFilter ? _.tabFilteredAppIDs : _(_, _, _, _))?.map(
+      (_) => ({
+        _: _,
+        type: _,
+      }),
+    );
+  }
+  switch (_) {
+    case `manual`: {
+      let _ = _(_, _, _);
+      if (!_.tabStoreFilter) return _;
+      if (!_.tabFilteredItems) return;
+      let _ = new Set(_.tabFilteredItems.map(_));
+      return _.filter((_) => {
+        let _ = _(_);
+        return _ !== void 0 && _.has(_(_));
+      });
+    }
+    case `tag`:
+    case `top_n`:
+    case `all_discounted`: {
+      if (!_.discountedItems) return;
+      let _ = _.discountedItems.map(_).filter((_) => !!_);
+      return _ === `tag` && _.random_from_entire_set
+        ? _(_, _, _, _)
+        : _.slice(0, _);
+    }
+    case `topwishlisted`:
+      return _.topWishlistedItems
+        ?.map(_)
+        .filter((_) => !!_)
+        .slice(0, _);
+    case `personalized_carousel`: {
+      let _ = _(_, _, _.personalizedCarousels)?.rgCapsules;
+      return _ && _(_, _).slice(0, _);
+    }
+    default:
+      return;
+  }
+}
+function _(_, _, _, _) {
+  let _ = _(_, _);
+  if (_(_))
+    switch (_) {
+      case `popularity`:
+        return _.compatAppList && _(_, _.compatAppList).slice(0, _);
+      case `wishlist`:
+        return _(
+          _,
+          _.wishlistAppIDs,
+          _(_, _.GetTaggedItems()),
+          _.ownedAppIDs,
+          _,
+        );
+      case `interactive_recommender`:
+        return _(
+          _,
+          _.recommendedAppIDs,
+          _(_, _.GetTaggedItems()),
+          _.ownedAppIDs,
+          _,
+        );
+      case `wishlist_onsale`:
+        return _(_, _.wishlistOnSaleAppIDs, void 0, _.ownedAppIDs, _);
+      case `interactive_recommender_onsale`:
+        return _(_, _.recommendedOnSaleAppIDs, void 0, _.ownedAppIDs, _);
+      case `dlc_onsale`:
+        return _(_, _.ownedDLCOnSaleAppIDs, void 0, _.ownedAppIDs, _);
+      case `dlc_music_onsale`:
+        return _(_, _.ownedSoundtracksOnSaleAppIDs, void 0, _.ownedAppIDs, _);
+      case `discount_reason`:
+        return _(_, _.recommendedDiscounts, _);
+      default:
+        _(_, `GetSaleItemSectionAppList: fixed-list flavor with no list`);
+        return;
+    }
+}
+function _(_, _) {
+  if (!_.smart_section_exclude_appids?.length) return _;
+  let _ = new Set(_.smart_section_exclude_appids);
+  return _.filter((_) => _.type !== `game` || !_.has(_._));
+}
+function _(_) {
+  return _.smart_section_max_apps || _;
+}
+function _(_, _, _) {
+  if (_) return _[_(_, _).nSectionIndex] ?? null;
+}
+function _(_, _) {
+  let _ = _(_, _) === `personalized_carousel`;
+  return _(_, _(_) ?? _, _);
+}
+function _(_, _, _) {
+  let _ = _(),
+    _ = _(),
+    { storeBrowseContext: _ } = _(),
+    _ = _(_),
+    [_] = _(_),
+    _ = _ ? _(_, _, _, _) : void 0,
+    { data: _, isSuccess: _ } = _({
+      ..._(_.clanSteamID.GetAccountID(), _),
+      enabled: _,
+    }),
+    { data: _ } = _({
+      ..._(_, _, _, _(_, _), _.accountid, _),
+      enabled: _ && _,
+    });
+  return _;
+}
+function _(_, _, _, _, _) {
+  if (!_ || !_) return;
+  let _ = new Set(_.smart_section_exclude_appids);
+  return _(_, _, (_) => _.has(_) || _.has(_), _);
+}
+function _(_, _, _) {
+  let _ = !_,
+    _ = _(),
+    _ = _(),
+    _ = _(_, _),
+    _ = _(),
+    _ = _(),
+    { storeBrowseContext: _, dataLoader: _ } = _(),
+    _ = _(_, _),
+    _ = _(_),
+    _ = (0, _.useMemo)(() => _(_, _), [_, _]),
+    _ = _ === `discount_reason` ? _.listStoreFilter : _,
+    { data: _ } = _({
+      ..._(_(_)),
+      enabled: _ && _ === `popularity`,
+    }),
+    { data: _ } = _({
+      ..._(_, _.accountid),
+      enabled: _ && _ === `wishlist`,
+    }),
+    { data: _ } = _({
+      ..._(_, _.accountid),
+      enabled: _ && _ === `interactive_recommender`,
+    }),
+    { data: _ } = _({
+      ..._(_, _, _.accountid, _),
+      enabled: _ && _ === `wishlist_onsale`,
+    }),
+    { data: _ } = _({
+      ..._(_, _, _, _.accountid, _),
+      enabled: _ && _ === `interactive_recommender_onsale`,
+    }),
+    { data: _ } = _({
+      ..._(_, _, _, _.accountid, `dlc`, _),
+      enabled: _ && _ === `dlc_onsale`,
+    }),
+    { data: _ } = _({
+      ..._(_, _, _, _.accountid, `music`, _),
+      enabled: _ && _ === `dlc_music_onsale`,
+    }),
+    { data: _ } = _({
+      ..._(_, _, _, _),
+      enabled: _ && (_ === `tag` || _ === `top_n` || _ === `all_discounted`),
+    }),
+    { data: _ } = _({
+      ..._(_, _, _, _),
+      enabled: _ && _ === `topwishlisted`,
+    }),
+    _ = _(_, _),
+    { data: _ } = _({
+      ..._(_, _, _.accountid, _.contentHub),
+      enabled: _ && _ === `discount_reason`,
+    }),
+    { data: _ } = _({
+      ..._(_, _.accountid),
+      enabled: _ && _(_),
+    }),
+    _ = (0, _.useMemo)(
+      () => ({
+        compatAppList: _,
+        wishlistAppIDs: _,
+        recommendedAppIDs: _,
+        wishlistOnSaleAppIDs: _,
+        recommendedOnSaleAppIDs: _,
+        ownedDLCOnSaleAppIDs: _,
+        ownedSoundtracksOnSaleAppIDs: _,
+        discountedItems: _,
+        topWishlistedItems: _,
+        personalizedCarousels: _,
+        recommendedDiscounts: _,
+        ownedAppIDs: _,
+        tabStoreFilter: _,
+      }),
+      [_, _, _, _, _, _, _, _, _, _, _, _, _],
+    ),
+    _ = !!_ && _(_),
+    _ = (0, _.useMemo)(() => (_ ? _(_, _, _, 1 / 0) : void 0), [_, _, _, _]),
+    { data: _ } = _({
+      ..._(_, _, _, _, _(_)),
+      enabled: _ && _ && _ !== void 0,
+    }),
+    _ = !!_ && _ === `manual`,
+    _ = (0, _.useMemo)(() => (_ ? _(_, _, _) : void 0), [_, _, _, _]),
+    { data: _ } = _({
+      ..._(_, _, _, _, _?.length ?? 0),
+      enabled: _ && _ && _ !== void 0,
+    });
+  return (0, _.useMemo)(() => {
+    let _ = _(
+      _,
+      _,
+      _,
+      {
+        ..._,
+        tabFilteredAppIDs: _,
+        tabFilteredItems: _,
+      },
+      _,
+    );
+    return _ && _(_, _, _, _);
+  }, [_, _, _, _, _, _, _]);
+}
+function _(_) {
+  return (_(_.event, _.section), null);
+}
+function _(_, _) {
+  let _ = _(),
+    _ = _({
+      queries: _.map((_) => {
+        let _ = _(_, _);
+        return _
+          ? {
+              ..._,
+              enabled: !1,
+            }
+          : _;
+      }),
+      combine: _,
+    });
+  return (0, _.useMemo)(() => {
+    if (_ || !_.some((_) => _ === void 0))
+      return _.filter((_, _) => !_(_[_], !1));
+  }, [_, _, _]);
+}
+function _(_) {
+  return _.map((_) => _.data);
+}
 function _(_) {
   let {
       className: _,

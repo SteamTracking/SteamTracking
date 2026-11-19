@@ -3,11 +3,9 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
-import { t as r } from "./chunk~cd94ddba57.js";
-import { a as i } from "./chunk~d43c81a658.js";
-import { r as a } from "./chunk~21cdc464a1.js";
-import { n as o } from "./chunk~710e3cfd2f.js";
-import { n as s, t as c } from "./chunk~ffe4581a06.js";
+import { c as r, f as i, n as a, t as o } from "./chunk~ffe4581a06.js";
+import { r as s } from "./chunk~21cdc464a1.js";
+import { n as c } from "./chunk~710e3cfd2f.js";
 import { t as l } from "./chunk~4d16ce5d1a.js";
 import {
   El as u,
@@ -55,10 +53,10 @@ var P = e(t(), 1),
     preferenceControls: { isTechnicallyNecessary: !0 },
   };
 function X(e) {
-  let { bShowNewBadge: t, bHasFooterActionLegend: n, onSeeMore: r } = e,
-    o = d(Y),
-    l = o ? JSON.parse(o) : void 0,
-    u = i(940),
+  let { bShowNewBadge: t, bHasFooterActionLegend: n, onSeeMore: i } = e,
+    c = d(Y),
+    l = c ? JSON.parse(c) : void 0,
+    u = r(940),
     h = m(),
     g = p(),
     v = _(),
@@ -68,9 +66,9 @@ function X(e) {
     w = M(0, S, C),
     E = j(S, C, !0, !0).flat(),
     D = f(`${k.STORE_BASE_URL}personalcalendar`, h, g),
-    { bShowSeeMoreHint: O, panelProps: A } = s(D),
+    { bShowSeeMoreHint: O, panelProps: A } = a(D),
     N = x.Localize(`#PersonalCalendar_Explore`),
-    B = P.useCallback(() => r?.(D), [r, D]);
+    B = P.useCallback(() => i?.(D), [i, D]);
   if (!w.data) return (0, J.jsx)(T, { className: F });
   let V = w.data.arrAppInfos;
   return (
@@ -93,7 +91,7 @@ function X(e) {
       className: F,
       navEntryPreferPosition: b.PREFERRED_CHILD,
       ...A,
-      onOptionsButton: r ? B : A.onOptionsButton,
+      onOptionsButton: i ? B : A.onOptionsButton,
       onOptionsActionDescription: N,
       children: [
         (0, J.jsxs)(`div`, {
@@ -120,10 +118,10 @@ function X(e) {
               ],
             }),
             !v && (0, J.jsx)(Z, { calendarURL: D, location: `desktop` }),
-            v && !n && (0, J.jsx)(c, { label: N, shown: O }),
+            v && !n && (0, J.jsx)(o, { label: N, shown: O }),
           ],
         }),
-        (0, J.jsx)(a, {
+        (0, J.jsx)(s, {
           visibleElements: 5,
           hideArrows: !1,
           disableEdgeWrap: !0,
@@ -268,7 +266,7 @@ function $(e) {
 }
 function ee(e) {
   let t = D({ appid: e.nAppID }),
-    n = i(940),
+    n = r(940),
     a = _(),
     [o, s] = P.useState(!1),
     [c, u] = P.useState(!1),
@@ -311,7 +309,7 @@ function ee(e) {
                   v &&
                   (0, J.jsx)(te, { id: { appid: e.nAppID }, nIntervalMS: 1e3 }),
                 !h &&
-                  (0, J.jsx)(r, {
+                  (0, J.jsx)(i, {
                     id: { appid: e.nAppID },
                     active: v,
                     bIsHoverMode: !0,
@@ -351,7 +349,7 @@ function te(e) {
 }
 function ne(e) {
   return v.logged_in
-    ? (0, J.jsx)(o, {
+    ? (0, J.jsx)(c, {
         placeholderHeight: 390,
         rootMargin: `100% 0px 100% 0px`,
         children: (0, J.jsx)(X, { ...e }),

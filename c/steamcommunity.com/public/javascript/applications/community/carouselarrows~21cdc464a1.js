@@ -465,6 +465,7 @@ function _(_) {
 var _ = _.createContext(!1),
   _ = `100% 0px 100% 0px`,
   _ = `SaleSection_`;
+(0, _.createContext)(!1);
 function _() {
   return window.innerWidth ?? 1920;
 }

@@ -3,9 +3,8 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
-import { a as r } from "./chunk~d43c81a658.js";
-import { r as i } from "./chunk~21cdc464a1.js";
-import { n as a, t as o } from "./chunk~ffe4581a06.js";
+import { c as r, n as i, t as a } from "./chunk~ffe4581a06.js";
+import { r as o } from "./chunk~21cdc464a1.js";
 import { n as s } from "./chunk~3ea79bd96d.js";
 import { a as c, t as l } from "./chunk~a7c5e71e12.js";
 import { r as u } from "./chunk~a243b6a34b.js";
@@ -41,8 +40,8 @@ function L(e) {
   let {
       navKey: t,
       classes: n,
-      appIDs: a,
-      sortOrder: o,
+      appIDs: i,
+      sortOrder: a,
       scorePenaltyIfOwned: s,
       capsuleSize: l,
       maxItemCount: f,
@@ -53,19 +52,19 @@ function L(e) {
     _ = r(910),
     v = p(),
     [x, S] = b(),
-    [C, w] = T.useState(a),
-    E = c(a, u),
+    [C, w] = T.useState(i),
+    E = c(i, u),
     [O, k] = T.useState(null);
   T.useEffect(() => {
     if (E == 1) return;
-    let e = a.filter((e) => !d.Get().BIsStoreItemMissing(e, 0));
-    if (h && _ && !v && e.length > 0 && e[0] == a[0]) {
+    let e = i.filter((e) => !d.Get().BIsStoreItemMissing(e, 0));
+    if (h && _ && !v && e.length > 0 && e[0] == i[0]) {
       let t = [e[0], P, ...e.slice(1)];
       (w(t), k(h), g?.(t.length));
     } else (w(e), g?.(e.length));
-  }, [a, v, _, E, g, h]);
+  }, [i, v, _, E, g, h]);
   let A = v;
-  return (0, N.jsx)(i, {
+  return (0, N.jsx)(o, {
     className: y(n, { SaleSectionCarousel: !0, [D]: !0 }),
     visibleElements: f,
     useTestScrollbar: !0,
@@ -77,7 +76,7 @@ function L(e) {
     screenIsWide: _,
     navKey: t,
     bForceSimpleCarousel: A,
-    children: z(S, C, o ?? `none`, s ?? 3).map((e, t) =>
+    children: z(S, C, a ?? `none`, s ?? 3).map((e, t) =>
       (0, N.jsx)(
         R,
         {
@@ -152,14 +151,14 @@ function V(e) {
       title: t,
       navKey: n,
       seeAllLink: r,
-      appIDs: i,
+      appIDs: o,
       sortOrder: s,
       scorePenaltyIfOwned: c,
       capsuleSize: l,
       bFullWidth: u,
     } = e,
     d = p(),
-    { bShowSeeMoreHint: h, panelProps: v } = a(r);
+    { bShowSeeMoreHint: h, panelProps: v } = i(r);
   return (0, N.jsx)(_, {
     className: y(S, u && `YmSKmufcDTw-`),
     navEntryPreferPosition: m.PREFERRED_CHILD,
@@ -171,7 +170,7 @@ function V(e) {
           children: [
             (0, N.jsx)(`div`, { className: w, children: t }),
             !d && (0, N.jsx)(B, { url: r }),
-            d && (0, N.jsx)(o, { label: f(`#StoreApp_SeeAll`), shown: h }),
+            d && (0, N.jsx)(a, { label: f(`#StoreApp_SeeAll`), shown: h }),
           ],
         }),
         (0, N.jsx)(_, {
@@ -179,7 +178,7 @@ function V(e) {
           children: (0, N.jsx)(L, {
             navKey: n,
             classes: C,
-            appIDs: i,
+            appIDs: o,
             maxItemCount: 4,
             sortOrder: s,
             scorePenaltyIfOwned: c,

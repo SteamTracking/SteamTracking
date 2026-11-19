@@ -573,8 +573,26 @@
 }
 .WPmn4BD-cnk- {
   border-top: 1px solid #ffffff1a;
+  align-items: flex-start;
+  gap: 12px;
   margin-top: 8px;
   padding-top: 6px;
+  display: flex;
+}
+.tosx4mmDBDA- {
+  aspect-ratio: 460/215;
+  background-color: #0003;
+  flex: 0 0 184px;
+}
+.tosx4mmDBDA- img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.-Pqt9C8D2zg- {
+  flex: 1;
+  min-width: 0;
 }
 .ZHqFiLwZ8SY- {
   margin-bottom: 2px;

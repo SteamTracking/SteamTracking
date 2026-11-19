@@ -1785,7 +1785,7 @@ function Xo(e) {
       strAdditionalClassName: i,
       bNoShadow: a,
     } = e,
-    { storeItemAsset: o, storeItemDefaultInfo: s } = Iq(t, n, r);
+    { storeItemAsset: o, storeItemDefaultInfo: s } = _q(t, n, r);
   if (n === `library` || n == `vertical`)
     return (0, V.jsx)(qW, {
       id: t,
@@ -3762,7 +3762,7 @@ function sl(e) {
       case 8:
         _ = `#ReviewScore_PercentPositive_series`;
     }
-  return (0, V.jsx)(_q, {
+  return (0, V.jsx)(bq, {
     url: h,
     className: R(Qc, `ReviewScore`),
     children:
@@ -27553,7 +27553,7 @@ function rH(e) {
     u = B.useContext(nH),
     d = l && u ? l(u, t) : void 0,
     f = o && !n,
-    p = s && !n,
+    p = s && !n && !d?.bReplacesWishlistBanner,
     m = !n && r;
   return (0, V.jsxs)(`div`, {
     className: R(Wo, `CapsuleDecorators`, d && `HasReasonBanner`),
@@ -27585,7 +27585,7 @@ function rH(e) {
             L.Localize(`#Sale_OnWishlist`),
           ],
         }),
-      m && !f && !p && (0, V.jsx)(iH, { appids: t }),
+      m && !f && !s && (0, V.jsx)(iH, { appids: t }),
       c && (0, V.jsx)(eH, {}),
     ],
   });
@@ -31739,7 +31739,7 @@ function qW(e) {
       bNoShadow: i,
     } = e,
     a = i ? Ro : ``,
-    { storeItemDefaultInfo: o, storeItemAsset: s } = Iq(t, `vertical`, r),
+    { storeItemDefaultInfo: o, storeItemAsset: s } = _q(t, `vertical`, r),
     [c, l] = B.useState(0);
   if (!o || !s) return (0, V.jsx)(`div`, { className: Lo });
   let { strStoreVerticalURL: d, strLibraryVerticalURL: f } = $o(s, o);
@@ -34809,7 +34809,40 @@ var BK = t({
   w([v], gq.prototype, `OnSaveLink`, null),
   w([v], gq.prototype, `OnEditLink`, null),
   (gq = w([Br], gq)));
-function _q(e) {
+function _q(e, t, n = !1) {
+  let { data: r } = yr(e),
+    { data: i } = ar(e, n),
+    a = vq(r, i, t),
+    { data: o } = yr(a),
+    { data: s } = ar(a, n),
+    c = o?.visible ? o : r;
+  return { storeItemAsset: o?.visible ? s : i, storeItemDefaultInfo: c };
+}
+function vq(e, t, n) {
+  if (
+    e &&
+    e.included_appids?.length == 1 &&
+    !yq(t, n) &&
+    e.item_type &&
+    [1, 2].includes(e.item_type)
+  )
+    return { appid: e.included_appids[0] };
+}
+function yq(e, t) {
+  if (!e) return !1;
+  switch (t) {
+    case `header`:
+      return !!e.header;
+    case `main`:
+      return !!e.main_capsule;
+    case `vertical`:
+    case `library`:
+      return !!e.hero_capsule || !!e.library_capsule;
+    default:
+      return (xe(t, `Unhandled imageType: ${t}`), !1);
+  }
+}
+function bq(e) {
   let {
       className: t,
       url: n,
@@ -34820,7 +34853,7 @@ function _q(e) {
       bFocusable: s = !0,
       fnCanTakeFocus: c,
     } = e,
-    l = a ? n : n ? vq(n, u.STORE_BASE_URL) : void 0,
+    l = a ? n : n ? xq(n, u.STORE_BASE_URL) : void 0,
     d = Hn(l);
   return d
     ? (0, V.jsx)(Kt, {
@@ -34835,7 +34868,7 @@ function _q(e) {
       })
     : (0, V.jsx)(`span`, { style: r, className: t, children: i });
 }
-function vq(e, t) {
+function xq(e, t) {
   try {
     let n = new URL(t),
       r = new URL(e);
@@ -34844,12 +34877,12 @@ function vq(e, t) {
     return ``;
   }
 }
-function yq(e, t) {
+function Sq(e, t) {
   return !t || t.startsWith(`https://`) || t.startsWith(`http://`)
     ? t
     : `${u.CLAN_CDN_ASSET_URL}images/clan/${e}/${t}`;
 }
-function bq(e, t) {
+function Cq(e, t) {
   let n = sG(e ?? void 0, `capsule`, t);
   if (!e) return;
   let r = e.clanSteamID.GetAccountID();
@@ -34861,7 +34894,7 @@ function bq(e, t) {
     strSummary: e.GetSummaryWithFallback(t) || void 0,
     strCapsuleURL: n,
     strSaleURL: MG(e) ?? void 0,
-    strBackgroundURL: yq(
+    strBackgroundURL: Sq(
       r,
       e.jsondata.sale_cross_promo_carousel_background?.image,
     ),
@@ -34873,167 +34906,168 @@ function bq(e, t) {
         : void 0,
   };
 }
-function xq(e) {
+function wq(e) {
   return (e ?? []).slice(0, 48).map((e) => ({ appid: e }));
 }
-var Sq = `Es-UANTRhdg-`,
-  Cq = `FsYxDNcAXaI-`,
-  wq = `cSFkUHyVW24-`,
-  Tq = `yT92BfNEvpw-`,
-  Eq = `gxh8RxFKhr8-`,
-  Dq = `AZSEWyNPfhc-`,
-  Oq = `gZNFN-cKUHw-`;
-B.createContext(!1);
-function kq(e) {
+var Tq = `Es-UANTRhdg-`,
+  Eq = `FsYxDNcAXaI-`,
+  Dq = `cSFkUHyVW24-`,
+  Oq = `yT92BfNEvpw-`,
+  kq = `gxh8RxFKhr8-`,
+  Aq = `AZSEWyNPfhc-`,
+  jq = `gZNFN-cKUHw-`;
+(B.createContext(!1), B.createContext(null));
+function Mq(e) {
   let { event: t, language: n, strSaleURL: r } = e,
-    i = bq(t, n);
+    i = Cq(t, n);
   if (!i) return null;
   let a = r ? { ...i, strSaleURL: r } : i;
   return a.strSaleURL
     ? (0, V.jsx)(cn, {
-        className: R(Sq, Cq, wq),
+        className: R(Tq, Eq, Dq),
         "flow-children": `row`,
-        children: (0, V.jsx)(Aq, { saleEvent: a, bExploreButtonBelow: !0 }),
+        children: (0, V.jsx)(Nq, { saleEvent: a, bExploreButtonBelow: !0 }),
       })
     : null;
 }
-function Aq(e) {
+function Nq(e) {
   let {
       saleEvent: t,
       bExploreButtonBelow: n,
       bShowExploreHint: r,
-      children: i,
+      bExploreHintInHeading: i,
+      children: a,
     } = e,
-    a = t?.strSaleURL,
-    o = t?.eCreatorRole,
-    s = o || !e.strExploreLabel ? Fq(o) : e.strExploreLabel,
-    c = t?.strCapsuleURL,
-    l = t?.strSummary,
-    u = ui(),
-    d = oe(),
-    f = d && r !== void 0,
-    p = t?.rtEndTime
+    o = t?.strSaleURL,
+    s = t?.eCreatorRole,
+    c = s || !e.strExploreLabel ? Rq(s) : e.strExploreLabel,
+    l = t?.strCapsuleURL,
+    u = t?.strSummary,
+    d = ui(),
+    f = oe(),
+    p = f && r !== void 0,
+    m = t?.rtEndTime
       ? zn(t.rtEndTime, {
           weekday: void 0,
           year: void 0,
           month: `short`,
           day: `numeric`,
-          timeZone: u,
+          timeZone: d,
         })
       : void 0;
   return (0, V.jsxs)(V.Fragment, {
     children: [
-      c &&
-        !o &&
+      l &&
+        !s &&
         (0, V.jsx)(`div`, {
           className: `qbRGxo4aWcc-`,
-          style: { backgroundImage: `url(${c})` },
+          style: { backgroundImage: `url(${l})` },
         }),
-      c &&
+      l &&
         (0, V.jsx)(`div`, {
-          className: R(`HgvxVtFlDis-`, o && `Lp2CuPiW8Lo-`),
-          style: { backgroundImage: `url(${c})` },
+          className: R(`HgvxVtFlDis-`, s && `Lp2CuPiW8Lo-`),
+          style: { backgroundImage: `url(${l})` },
         }),
-      o && (0, V.jsx)(Nq, { rgAppIDs: t?.rgCreatorAppIDs, strAvatarURL: c }),
+      s && (0, V.jsx)(Iq, { rgAppIDs: t?.rgCreatorAppIDs, strAvatarURL: l }),
       (0, V.jsxs)(`div`, {
-        className: R(Tq, o && `-NAWu4CYrl8-`),
+        className: R(Oq, s && `-NAWu4CYrl8-`),
         children: [
-          o &&
-            c &&
-            (0, V.jsx)(_q, {
-              url: a,
+          s &&
+            l &&
+            (0, V.jsx)(bq, {
+              url: o,
               className: `X4LW9zxgdTo-`,
               bFocusable: !1,
-              children: (0, V.jsx)(`img`, { src: c, alt: `` }),
+              children: (0, V.jsx)(`img`, { src: l, alt: `` }),
             }),
-          !o &&
+          !s &&
             (0, V.jsxs)(`div`, {
               className: `_6jMisrq5Zfo-`,
               children: [
                 (0, V.jsx)(`div`, {
                   className: `XBv92QzB8Xc-`,
-                  children: (0, V.jsx)(_q, {
-                    url: a,
+                  children: (0, V.jsx)(bq, {
+                    url: o,
                     className: `NjUCqxvhkHk-`,
                     bFocusable: !1,
                     children: t?.strName,
                   }),
                 }),
-                p &&
+                m &&
                   (0, V.jsx)(`div`, {
                     className: `_6iUHDist0Jc-`,
-                    children: F(`#Sale_CrossPromoSale_NowThrough`, p),
+                    children: F(`#Sale_CrossPromoSale_NowThrough`, m),
                   }),
               ],
             }),
-          a &&
+          o &&
             !n &&
-            !f &&
-            !o &&
-            (0, V.jsx)(_q, {
-              url: a,
+            !p &&
+            !s &&
+            (0, V.jsx)(bq, {
+              url: o,
               className: R(`_6O6T0vupYYc-`, `DuNM8zA4oz0-`),
               fnCanTakeFocus: pn,
-              children: s,
+              children: c,
             }),
-          a && f && (0, V.jsx)(pG, { label: s, shown: !!r, button: `X` }),
+          o && p && !i && (0, V.jsx)(pG, { label: c, shown: !!r, button: `X` }),
         ],
       }),
       (0, V.jsxs)(`div`, {
-        className: R(Eq, o && `ZONqp3dzTMI-`),
+        className: R(kq, s && `ZONqp3dzTMI-`),
         children: [
-          c &&
-            (0, V.jsxs)(_q, {
-              url: a,
-              className: R(`oztjxXYIBAk-`, o && `CDF-2WDX3lg-`),
-              bFocusable: !!d,
+          l &&
+            (0, V.jsxs)(bq, {
+              url: o,
+              className: R(`oztjxXYIBAk-`, s && `CDF-2WDX3lg-`),
+              bFocusable: !!f,
               children: [
-                (0, V.jsx)(`img`, { src: c, alt: `` }),
-                l &&
+                (0, V.jsx)(`img`, { src: l, alt: `` }),
+                u &&
                   (0, V.jsx)(`div`, {
                     className: `_7CUHH8Trg28-`,
                     children: (0, V.jsx)(`div`, {
                       className: `ZMGnYjKDOEI-`,
-                      children: l,
+                      children: u,
                     }),
                   }),
               ],
             }),
-          i,
+          a,
         ],
       }),
-      a &&
-        !f &&
-        !o &&
+      o &&
+        !p &&
+        !s &&
         (0, V.jsx)(`div`, {
           className: R(`T1fHkhyvNkM-`, n && `SAqjQ-F71kA-`),
-          children: (0, V.jsx)(_q, {
-            url: a,
+          children: (0, V.jsx)(bq, {
+            url: o,
             className: `_6O6T0vupYYc-`,
             fnCanTakeFocus: pn,
-            children: s,
+            children: c,
           }),
         }),
     ],
   });
 }
-var jq = 60,
-  Mq = 4;
-function Nq(e) {
+var Pq = 60,
+  Fq = 4;
+function Iq(e) {
   let { rgAppIDs: t, strAvatarURL: n } = e,
     r = RK(
-      B.useMemo(() => xq(t), [t]),
+      B.useMemo(() => wq(t), [t]),
       !1,
     ),
     i = B.useMemo(() => {
       let e = (r ?? []).slice(0, 24);
-      return e.length < Mq
+      return e.length < Fq
         ? []
-        : Array.from({ length: jq }, (t, n) => e[n % e.length]);
+        : Array.from({ length: Pq }, (t, n) => e[n % e.length]);
     }, [r]);
   return i.length
     ? (0, V.jsxs)(`div`, {
-        className: Dq,
+        className: Aq,
         "aria-hidden": !0,
         children: [
           n &&
@@ -35042,58 +35076,25 @@ function Nq(e) {
               style: { backgroundImage: `url(${n})` },
             }),
           (0, V.jsx)(`div`, {
-            className: Oq,
-            children: i.map((e, t) => (0, V.jsx)(Pq, { id: e }, t)),
+            className: jq,
+            children: i.map((e, t) => (0, V.jsx)(Lq, { id: e }, t)),
           }),
         ],
       })
     : null;
 }
-function Pq(e) {
+function Lq(e) {
   let t = sr(e.id, `header`);
   return t
     ? (0, V.jsx)(`img`, { src: t, alt: ``, loading: `lazy` })
     : (0, V.jsx)(`div`, {});
 }
-function Fq(e) {
+function Rq(e) {
   return F(
     e
       ? `#Sale_CrossPromoCreator_Visit_${e}`
       : `#Sale_CrossPromoSale_ExploreEvent`,
   );
-}
-function Iq(e, t, n = !1) {
-  let { data: r } = yr(e),
-    { data: i } = ar(e, n),
-    a = Lq(r, i, t),
-    { data: o } = yr(a),
-    { data: s } = ar(a, n),
-    c = o?.visible ? o : r;
-  return { storeItemAsset: o?.visible ? s : i, storeItemDefaultInfo: c };
-}
-function Lq(e, t, n) {
-  if (
-    e &&
-    e.included_appids?.length == 1 &&
-    !Rq(t, n) &&
-    e.item_type &&
-    [1, 2].includes(e.item_type)
-  )
-    return { appid: e.included_appids[0] };
-}
-function Rq(e, t) {
-  if (!e) return !1;
-  switch (t) {
-    case `header`:
-      return !!e.header;
-    case `main`:
-      return !!e.main_capsule;
-    case `vertical`:
-    case `library`:
-      return !!e.hero_capsule || !!e.library_capsule;
-    default:
-      return (xe(t, `Unhandled imageType: ${t}`), !1);
-  }
 }
 var zq = -700,
   Bq = -600,
@@ -37252,7 +37253,7 @@ function ZY(e) {
   if (!r) return null;
   let i = ge(ce(u.LANGUAGE)),
     a = `${u.STORE_BASE_URL}tags/${i}/${r}`;
-  return (0, V.jsx)(_q, {
+  return (0, V.jsx)(bq, {
     url: a,
     className: R(bo, `WidgetTag`, n),
     children: r,
@@ -37317,7 +37318,7 @@ var QY = class extends B.Component {
 function $Y(e) {
   let { gidEvent: t } = e,
     n = nr(t);
-  return n ? (0, V.jsx)(kq, { event: n, language: ce(u.LANGUAGE) }) : null;
+  return n ? (0, V.jsx)(Mq, { event: n, language: ce(u.LANGUAGE) }) : null;
 }
 function eX() {
   return (0, V.jsx)(`div`, {

@@ -3,10 +3,10 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
-import { yt as r } from "./chunk~6b8ddcaac8.js";
+import { Pt as r } from "./chunk~6b8ddcaac8.js";
 import { l as i } from "./chunk~673650a653.js";
-import { t as a } from "./chunk~91ae5e1167.js";
-import { S as o, i as s, v as c, y as l } from "./chunk~2f8c67b4de.js";
+import { S as a, i as o, v as s, y as c } from "./chunk~2f8c67b4de.js";
+import { t as l } from "./chunk~91ae5e1167.js";
 import {
   F as u,
   I as d,
@@ -40,23 +40,23 @@ var P = e(t(), 1),
 function I(e) {
   let { eventLink: t, labelOverride: n } = e,
     r = P.useRef(null),
-    [i, a] = P.useState(``),
-    c = () => {
+    [i, s] = P.useState(``),
+    l = () => {
       let e = r.current?.ownerDocument.defaultView;
       r.current &&
         e &&
         e.navigator.clipboard
           .writeText(r.current.value)
-          .then(() => a(S(`#EventDisplay_Share_CopiedToClipboard`)))
+          .then(() => s(S(`#EventDisplay_Share_CopiedToClipboard`)))
           .catch((e) => {
-            (a(S(`#EventDisplay_Share_FailedToCopyToClipboard`)),
+            (s(S(`#EventDisplay_Share_FailedToCopyToClipboard`)),
               console.error(`Failed to copy link to clipboard:`, e));
           });
     };
   return (0, F.jsxs)(`div`, {
     children: [
       (0, F.jsxs)(`div`, {
-        className: M(l, u),
+        className: M(c, u),
         children: [
           (0, F.jsx)(`span`, {
             className: g,
@@ -67,11 +67,11 @@ function I(e) {
             ref: r,
             value: t,
             readOnly: !0,
-            onClick: c,
+            onClick: l,
           }),
           (0, F.jsx)(D, {
-            className: M(s, o, f),
-            onActivate: c,
+            className: M(o, a, f),
+            onActivate: l,
             children: (0, F.jsx)(b, {
               toolTipContent: S(`#ToolTip_CopyLinkToClipboard`),
               children: (0, F.jsx)(`img`, {
@@ -93,9 +93,9 @@ function R(e) {
   return (0, F.jsx)(j, { store: t, children: (0, F.jsx)(z, { ...n }) });
 }
 function z(e) {
-  let { eventModel: t, strEventLink: n, closeModal: o } = e,
-    s = i(t),
-    l = E(),
+  let { eventModel: t, strEventLink: n, closeModal: a } = e,
+    o = i(t),
+    c = E(),
     [u, f] = P.useState(() => N(A.LANGUAGE)),
     [p, m] = P.useState(!1),
     { elDialogElement: h, fnShowLogonDialog: g } = r(
@@ -111,19 +111,19 @@ function z(e) {
     ? (0, F.jsx)(_, {
         eventLink: n,
         appid: t.appid,
-        emoticonStore: l,
-        closeModal: o,
+        emoticonStore: c,
+        closeModal: a,
       })
     : (0, F.jsxs)(O, {
         strDescription: ``,
         strTitle: S(`#Button_Share`),
-        onCancel: o,
-        onOK: o,
+        onCancel: a,
+        onOK: a,
         bAlertDialog: !0,
         modalClassName: `EventDisplay_Share_Dialog`,
         children: [
           (0, F.jsxs)(`div`, {
-            className: M(c, d),
+            className: M(s, d),
             children: [
               !b &&
                 (0, F.jsxs)(F.Fragment, {
@@ -136,7 +136,7 @@ function z(e) {
                           children: S(`#EventDisplay_Share_LanguageLabel`),
                         }),
                         (0, F.jsx)(`div`, {
-                          children: (0, F.jsx)(a, {
+                          children: (0, F.jsx)(l, {
                             selectedLang: u,
                             fnOnLanguageChanged: f,
                           }),
@@ -174,7 +174,7 @@ function z(e) {
                         (0, F.jsx)(w, {
                           toolTipContent: S(`#EventDisplay_Share_OnFaceBook`),
                           children: (0, F.jsx)(x, {
-                            href: s.strFacebookUrl,
+                            href: o.strFacebookUrl,
                             className: `D4J8JhjevEo-`,
                             children: (0, F.jsx)(`img`, {
                               className: M(`yYL-OrX9PtQ-`),
@@ -186,7 +186,7 @@ function z(e) {
                         (0, F.jsx)(w, {
                           toolTipContent: S(`#EventDisplay_Share_OnTwitter`),
                           children: (0, F.jsx)(x, {
-                            href: s.strTwitterUrl,
+                            href: o.strTwitterUrl,
                             className: `D4J8JhjevEo-`,
                             children: (0, F.jsx)(`img`, {
                               className: M(`yYL-OrX9PtQ-`),
@@ -198,7 +198,7 @@ function z(e) {
                         (0, F.jsx)(w, {
                           toolTipContent: S(`#EventDisplay_Share_OnReddit`),
                           children: (0, F.jsx)(x, {
-                            href: s.strRedditUrl,
+                            href: o.strRedditUrl,
                             className: `D4J8JhjevEo-`,
                             children: (0, F.jsx)(`img`, {
                               className: M(`yYL-OrX9PtQ-`),

@@ -2519,15 +2519,14 @@ html.responsive.touch .Wo32Nnq4R00-::-webkit-scrollbar {
 }
 .R--RU8rbDbo- {
   color: #dcdedf99;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
   border-radius: 3px;
   padding: 8px 10px;
-  font-size: clamp(13px, 0.85vw, 16px);
-  font-weight: 700;
+  font-size: clamp(15px, 0.85vw + 2px, 17px);
+  font-weight: 500;
   transition: color 0.15s;
 }
 .R--RU8rbDbo-:hover,
@@ -2538,11 +2537,11 @@ html.responsive.touch .Wo32Nnq4R00-::-webkit-scrollbar {
   background: #ffffff14;
 }
 html.responsive.touch .R--RU8rbDbo- {
-  font-size: 12px;
+  font-size: 14px;
 }
 @media screen and (width <= 910px) {
   html.responsive .R--RU8rbDbo- {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 .nO7ymjY1hhI- .R--RU8rbDbo- {

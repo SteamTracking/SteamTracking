@@ -2,539 +2,98 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
+import { Lt as t, ft as n, u as r } from "./chunk~01cfc309bf.js";
 import {
-  Lt as t,
-  ft as n,
-  l as r,
-  nt as i,
-  st as a,
-  u as o,
-} from "./chunk~01cfc309bf.js";
-import { t as s } from "./chunk~68b7e78d68.js";
-import {
-  Aa as c,
-  B as l,
-  K as u,
-  L as d,
-  R as f,
-  Ut as p,
-  V as m,
-  Vt as h,
-  W as g,
-  Wi as _,
-  Wt as v,
-  X as y,
-  ct as b,
-  ga as x,
-  i as S,
-  mt as C,
-  ot as w,
-  r as T,
-  z as E,
+  $n as i,
+  Cn as a,
+  Go as o,
+  Ht as s,
+  Jt as c,
+  M as l,
+  Qt as u,
+  Rt as d,
+  Xt as f,
+  Yn as p,
+  Yt as m,
+  Zt as h,
+  ao as g,
+  b as _,
+  gn as v,
+  i as y,
+  jo as b,
+  nr as x,
+  r as S,
+  rn as C,
+  rr as w,
+  sn as T,
+  tn as E,
+  vn as D,
 } from "./chunk~6b8ddcaac8.js";
-import { r as D } from "./chunk~4c761eb6f4.js";
-import { o as ee } from "./chunk~961c06e93e.js";
 import {
-  E as te,
-  J as ne,
-  L as O,
-  U as re,
-  d as ie,
-  i as ae,
-  o as oe,
-  x as se,
-} from "./chunk~3720b337f3.js";
-import {
-  A as k,
-  D as ce,
-  I as le,
-  O as ue,
-  c as de,
-  j as A,
-  l as fe,
-  s as j,
-  w as pe,
+  A as O,
+  D as k,
+  I as ee,
+  O as A,
+  c as te,
+  j,
+  s as M,
+  st as ne,
+  w as re,
 } from "./chunk~f57d770d64.js";
-import { r as me } from "./chunk~5adf866415.js";
-import { i as M } from "./chunk~2f085f1384.js";
-import { n as he, t as N } from "./chunk~f4c928a27a.js";
-import { t as ge } from "./chunk~eefd71512b.js";
-import { i as _e } from "./chunk~e867464c75.js";
-import { i as ve } from "./chunk~9871ee5432.js";
-import { t as P } from "./chunk~4e9767668d.js";
-import {
-  D as ye,
-  O as F,
-  k as be,
-  m as xe,
-  n as Se,
-  t as Ce,
-} from "./chunk~2f8c67b4de.js";
-import { o as we, r as Te } from "./chunk~d43c81a658.js";
-import { p as Ee } from "./chunk~ceada343dc.js";
-import { n as De } from "./chunk~593a6b8ddc.js";
-import { t as Oe } from "./chunk~d5ffe2610e.js";
+import { o as ie } from "./chunk~961c06e93e.js";
+import { r as ae } from "./chunk~5adf866415.js";
+import { i as N } from "./chunk~2f085f1384.js";
+import { l as oe, n as se, o as ce, t as le } from "./chunk~ffe4581a06.js";
+import { n as ue, t as P } from "./chunk~f4c928a27a.js";
+import { t as de } from "./chunk~eefd71512b.js";
+import { i as fe } from "./chunk~e867464c75.js";
+import { t as F } from "./chunk~4e9767668d.js";
+import { D as pe, n as me, t as he } from "./chunk~2f8c67b4de.js";
+import { f as ge } from "./chunk~618fb52a90.js";
 import { r as I } from "./chunk~21cdc464a1.js";
-import { n as ke } from "./chunk~710e3cfd2f.js";
-import { n as Ae, t as je } from "./chunk~ffe4581a06.js";
-import { c as Me, i as Ne, l as Pe, o as Fe } from "./chunk~7b4b9eb713.js";
-import { r as Ie } from "./chunk~331382b23f.js";
-import { n as Le, r as Re } from "./chunk~3ea79bd96d.js";
+import { n as _e } from "./chunk~710e3cfd2f.js";
+import { n as ve, r as ye } from "./chunk~3ea79bd96d.js";
+import { a as be, s as xe } from "./chunk~3720b337f3.js";
 import {
-  $y as L,
-  Er as ze,
-  Jy as R,
-  Kv as Be,
-  Pv as Ve,
-  Uy as z,
-  Vb as He,
-  Vr as Ue,
-  Vy as We,
-  Wb as B,
-  _l as Ge,
-  cx as V,
-  ex as Ke,
-  gr as qe,
-  jc as Je,
-  jx as Ye,
-  nl as Xe,
-  pt as Ze,
-  qb as H,
-  rn as Qe,
-  sl as $e,
-  wc as U,
-  xr as et,
-  yS as tt,
+  Er as Se,
+  Jy as L,
+  Kv as Ce,
+  Pv as R,
+  Uy as we,
+  Vb as Te,
+  Wb as z,
+  _l as Ee,
+  cx as B,
+  ex as De,
+  gr as Oe,
+  jc as V,
+  jx as H,
+  nl as ke,
+  pt as Ae,
+  qb as U,
+  rn as je,
+  sl as Me,
+  wc as W,
 } from "./main.js";
-var W = e(t()),
-  G = n(),
-  nt = e(i(), 1);
-function rt(e, t, n) {
-  return `linear-gradient(${n ?? 0}deg, ${e || `transparent`} 0%, ${t || `transparent`} 100%)`;
-}
-function K(e) {
-  return rt(
-    e.background_gradient_bottom,
-    e.background_gradient_top,
-    e.background_gradient_angle,
-  );
-}
-function it(e, t, n) {
-  if (e.disable_background) return { paddingLeft: 0, paddingRight: 0 };
-  let r = ``;
-  if (e.background_image) {
-    let n = D.GenerateURLFromHashAndExt(t.clanSteamID, e.background_image);
-    r += `,url(${n})`;
-  }
-  return e.background_gradient_bottom ||
-    e.background_gradient_top ||
-    r.length > 0 ||
-    e.background_repeat ||
-    e.border_color ||
-    e.border_width
-    ? {
-        backgroundImage: K(e) + r,
-        backgroundRepeat: e.background_repeat,
-        backgroundSize: e.background_repeat == `coverBlur` ? `cover` : ``,
-        outlineStyle: e.border_color && e.border_width ? `solid` : void 0,
-        outlineColor: e.border_color,
-        outlineWidth: e.border_width ? `${e.border_width}px` : void 0,
-      }
-    : {};
-}
-function at(e, t) {
-  return e
-    ? e.disable_background && !t
-      ? { paddingLeft: 0, paddingRight: 0 }
-      : e.background_gradient_bottom ||
-          e.background_gradient_top ||
-          e.background_repeat ||
-          e.border_color ||
-          e.border_width
-        ? {
-            background: K(e),
-            backgroundRepeat: e.background_repeat,
-            outlineStyle: e.border_color && e.border_width ? `solid` : void 0,
-            outlineColor: e.border_color,
-            outlineWidth: e.border_width ? `${e.border_width}px` : void 0,
-          }
-        : {}
-    : {};
-}
-function ot(e) {
-  return e?.clan_steamid ? De(new We(e.clan_steamid), e) : null;
-}
-var st = 100;
-async function ct(e, t) {
-  let n = new URLSearchParams();
-  (n.set(`event_gids`, [...new Set(e)].sort().join(`,`)),
-    n.set(`lang_list`, Oe(t)),
-    n.set(`origin`, location.origin));
-  let r =
-      H.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + n.toString(),
-    i = await fetch(r);
-  if (i.status === 204) return e.map(() => null);
-  if (!i.ok) throw Error(`${r} answered ${i.status}`);
-  let a = await i.json(),
-    o = new Map((a.events ?? []).map((e) => [e.gid, e]));
-  return e.map((e) => o.get(e) ?? null);
-}
-function lt(e) {
-  return s(
-    [`PublicPartnerEventBrowser`, e],
-    () => new nt.default((t) => ct(t, e), { maxBatchSize: st, cache: !1 }),
-  );
-}
-function ut(e, t) {
-  return [`PublicPartnerEvent`, e, t];
-}
-function dt(e, t, n) {
-  return {
-    queryKey: ut(e, t),
-    queryFn: async () => (n ? n.load(e) : (await ct([e], t))[0]),
-    select: ot,
-    enabled: !!e,
-    staleTime: 6e5,
-  };
-}
-function ft(e) {
-  let t = tt(H.LANGUAGE),
-    n = lt(t);
-  return a(dt(e, t, n));
-}
-function pt(e, t, n) {
-  return ie(t, e, n)?.strTagName || void 0;
-}
-function mt(e, t, n, r) {
-  let i = n == 1 || n == 3 || n == 4,
-    a = () => {
-      let t = Fe(e.smart_section_creator_listid);
-      return t
-        ? i
-          ? R(`#Sale_CreatorList_Section_Editor_title`, t)
-          : t
-        : null;
-    };
-  if (e.section_type === `items`)
-    switch (A(e)) {
-      case `wishlist`:
-        return `#Sale_default_label_OnYourWishlist`;
-      case `interactive_recommender`:
-        return `#Sale_default_label_RecommendedForYou`;
-      case `tag_recommender`:
-        return `#Sale_default_label_RecommendedForYou`;
-      case `deck_topplayed`:
-        return `#Sale_TopPlayedOnDeckSection`;
-      case `personalized_carousel`:
-        if (i) {
-          let { nSectionIndex: n, nNumSections: r } = O(e, t);
-          return R(`#Sale_PersonalizedCarousel_Section_Editor_title`, n + 1, r);
-        }
-        let o = pt(e, t, r);
-        if (!o && n == 2) {
-          let { nSectionIndex: n, nNumSections: r } = O(e, t);
-          return R(`#Sale_PersonalizedCarousel_Section_Editor_title`, n + 1, r);
-        }
-        return o ? R(`#Sale_PersonalizedCarousel_Section_title`, o) : null;
-      case `creator_list`:
-        return a();
-      case `discount_reason`:
-        return se(e) ?? null;
-    }
-  else if (e.section_type === `tabs`) return ``;
-  else if (e.section_type === `curator`) {
-    if (e.curator_clan_id) {
-      let t = We.InitFromClanID(e.curator_clan_id, V.EUNIVERSE),
-        n = Pe.GetCreatorHome(t);
-      if (n) return R(`#Sale_CuratorSection_Name`, n.GetName());
-    }
-    return `#Sale_CuratorSection`;
-  } else if (e.section_type === `event_schedule`) return `#Sale_EventSchedule`;
-  else if (e.section_type === `curator_recommendation`)
-    return `#Sale_CuratorRecommendation_title`;
-  else if (e.section_type === `discoveryqueue`) return `#DiscoveryQueue_Title`;
-  else if (e.section_type === `sale_events`) return `#Sale_SaleEvent_Section`;
-  else if (e.section_type === `calendar`) return `#Sale_SectionType_Calendar`;
-  else if (e.section_type === `crosspromotesalepage` && n == 1)
-    return `#Sale_CrossPromoSale_DefaultSectionTitle`;
-  else if (e.section_type === `creator_list`) return a();
-  return null;
-}
-function ht(e, t, n, r) {
-  let i = mt(e, t, n, r);
-  return i === null ? null : i && i.startsWith(`#`) ? R(i) : i;
-}
-function q(e, t, n, r, i, a, o, s) {
-  if (!e) return ``;
-  if (e.section_type === `crosspromotesalepage`) return ne(s, n);
-  let c = ht(e, t, i, o),
-    l = z.GetWithFallback(e.localized_label, n),
-    u =
-      c ||
-      l ||
-      (e.default_label === `#Sale_default_label` ? `` : R(e.default_label)),
-    d = e.internal_section_title?.trim();
-  if ((d?.length ?? 0) > 0) {
-    if (i == 3 || i == 4)
-      return u?.trim().length == 0 || a
-        ? d
-        : (0, G.jsxs)(G.Fragment, {
-            children: [
-              d,
-              ` `,
-              (0, G.jsx)(et, {
-                tooltip: L(
-                  `#Sale_Section_InternalTitle_Note`,
-                  (0, G.jsx)(`br`, {}),
-                  u,
-                ),
-              }),
-            ],
-          });
-    if (i == 1)
-      return u?.trim().length == 0 || a
-        ? d
-        : (0, G.jsxs)(G.Fragment, {
-            children: [
-              d,
-              ` `,
-              (0, G.jsx)(`span`, {
-                children: L(`#Sale_Section_InternalTitle_Actual`, u),
-              }),
-            ],
-          });
-  }
-  let f = z.GetWithFallback(e.localized_label_image, n);
-  if (!a && f) {
-    let e = D.GenerateURLFromHashAndExt(r, f);
-    return (0, G.jsx)(`img`, { loading: `lazy`, src: e, alt: u });
-  }
-  return u;
-}
-function gt(e, t, n) {
-  if (fe(e.section_type))
-    switch (A(e)) {
-      case `personalized_carousel`:
-        let r = pt(e, t, n);
-        return r ? R(`#Sale_PersonalizedCarousel_Section_subtitle`, r) : null;
-      case `creator_list`:
-        return Ne(e.smart_section_creator_listid) ?? null;
-    }
-  return null;
-}
-function _t(e, t, n, r) {
-  let i = gt(e, t, r);
-  return i === null
-    ? z.GetWithFallback(e.localized_subtitle, n) ||
-        (!e.default_subtitle || e.default_subtitle === `#Sale_default_subtitle`
-          ? ``
-          : R(e.default_subtitle))
-    : i && i.startsWith(`#`)
-      ? R(i)
-      : i;
-}
-var vt = `dYYkud-Jf3s-`,
-  yt = `zZo1XshRYmQ-`,
-  bt = `RfHJSn8AdQE-`,
-  xt = `D8GFuSKNhX0-`,
-  St = `woc2JepJIek-`;
-function Ct(e, t) {
-  return (
-    z.GetWithFallback(e.localized_label, t) ||
-    (e.default_label === `#Sale_default_label` ? `` : R(e.default_label))
-  );
-}
-function wt(e) {
-  if (fe(e.section_type))
-    switch (A(e)) {
-      case `deck_topplayed`:
-        return H.STORE_BASE_URL + `charts/steamdecktopplayed`;
-    }
-  return e.label_link;
-}
-function Tt(e) {
-  let t,
-    n,
-    r = !1;
-  return (
-    e.label_link_style === `button`
-      ? ((t = R(`#Sale_SectionLink_BrowseAll`)), (r = !0))
-      : e.label_link_style === `browseall`
-        ? ((t = R(`#Sale_SectionLink_BrowseAll`)),
-          (n = U(bt, `SaleSectionLabelLinkButton`)))
-        : A(e) === `deck_topplayed` &&
-          ((t = R(`#EventBrowse_MoreEventsBtn`)),
-          (n = U(xe, `SaleSectionLabelLinkButton`))),
-    { strLinkButtonLabel: t, strLinkButtonClasses: n, bSmallButton: r }
-  );
-}
-var Et = r((e) => {
-  let {
-      section: t,
-      event: n,
-      language: r,
-      nHiddenCapsules: i,
-      title: a,
-      subtitle: o,
-      bShowSeeMoreHint: s,
-      bUseGamepadLinkHint: c,
-      eGamepadLinkHintButton: l,
-      onLinkResolved: d,
-      personalizedCarousels: f,
-      promotedSale: p,
-    } = e,
-    m = B(),
-    h = Ie(),
-    g = p !== void 0,
-    { data: _ } = ft(g ? void 0 : re(t)),
-    v = (g ? p : _) ?? void 0,
-    y = e.link || wt(t) || Me(v);
-  if (
-    (W.useEffect(() => {
-      d?.(y);
-    }, [y, d]),
-    t.section_type == `title_image` && t.title_image_selected === `image`)
-  )
-    return null;
-  let b = a || q(t, n, r, n.clanSteamID.GetAccountID(), h.eLocation, !1, f, v);
-  if (!b) return null;
-  let x = o || _t(t, n, r, f),
-    C = (0, G.jsxs)(`div`, {
-      className: U(F, `SaleSectionHeader`),
-      style: Dt(t, n, r),
-      children: [
-        t.test_show_on_valve_ip_only &&
-          (0, G.jsx)(`div`, {
-            className: `JrlXbYAw30w-`,
-            children: `(VO)\xA0`,
-          }),
-        b,
-      ],
-    }),
-    w = (0, G.jsx)(`div`, {
-      className: U(F, be, `SaleSectionSubtitle`),
-      style: Ot(t, n, r),
-      children: x,
-    }),
-    T = null;
-  if ((y?.length ?? 0) > 0) {
-    let {
-      strLinkButtonLabel: e,
-      strLinkButtonClasses: n,
-      bSmallButton: r,
-    } = Tt(t);
-    (e &&
-      (T =
-        m && c
-          ? (0, G.jsx)(je, { label: e, shown: !!s, button: l })
-          : r
-            ? (0, G.jsx)(`div`, {
-                className: U(u, xt),
-                children: (0, G.jsx)(S, {
-                  url: y,
-                  children: (0, G.jsx)(qe, { children: e }),
-                }),
-              })
-            : (0, G.jsx)(S, { url: y, className: n, children: e })),
-      (C = (0, G.jsx)(S, { url: y, bFocusable: !T, children: C })));
-  }
-  return (0, G.jsxs)(`div`, {
-    className: U(vt, `SaleSectionLabelCtn`),
-    children: [
-      (0, G.jsxs)(`div`, { className: St, children: [C, !!x && w] }),
-      (0, G.jsxs)(`div`, {
-        className: yt,
-        children: [
-          !!i &&
-            (0, G.jsx)(Ue, {
-              className: `pL8IDIWBDg8-`,
-              toolTipContent: R(`#Sale_HiddenItem_Tooltip`),
-              children: (0, G.jsx)(`a`, {
-                href: H.STORE_BASE_URL + `account/preferences`,
-                children: L(
-                  i == 1
-                    ? `#Sale_HiddenItem_Single_Short`
-                    : `#Sale_HiddenItems_Short`,
-                  i,
-                ),
-              }),
-            }),
-          T,
-        ],
-      }),
-    ],
-  });
-});
-function Dt(e, t, n) {
-  return {
-    fontFamily: t.jsondata.sale_font ? kt(t.jsondata.sale_font, n) : void 0,
-    fontWeight: t.jsondata.sale_font_weight,
-    fontSize: `${t.jsondata.sale_section_font_size}px`,
-    textTransform: t.jsondata.sale_section_disable_capitalize
-      ? `initial`
-      : void 0,
-    color: e.label_color,
-  };
-}
-function Ot(e, t, n) {
-  return {
-    fontFamily: t.jsondata.sale_font ? kt(t.jsondata.sale_font, n) : void 0,
-    fontWeight: 300,
-    fontSize: `${t.jsondata.sale_section_font_size && t.jsondata.sale_section_font_size - 3}px`,
-    letterSpacing: 0,
-    lineHeight: `${t.jsondata.sale_section_font_size}px`,
-    textTransform: t.jsondata.sale_section_disable_capitalize
-      ? `initial`
-      : void 0,
-    color: e.label_color,
-    opacity: `50%`,
-  };
-}
-function kt(e, t) {
-  return (
-    (e ||= ``),
-    t === 12
-      ? e.replace(`Jolly Lodger`, `New Rocker`)
-      : t === 23 || t === 19 || t === 24 || t === 18 || t === 8 || t === 26
-        ? e.replace(`Sigmar One`, `Play`)
-        : t === 6
-          ? e.replace(`Sigmar One`, `Noto Serif SC`)
-          : t === 7
-            ? e.replace(`Sigmar One`, `Noto Serif TC`)
-            : t === 10
-              ? e.replace(`Sigmar One`, `M PLUS Rounded 1c`)
-              : t === 4
-                ? e.replace(`Sigmar One`, `Black Han Sans`)
-                : t === 9
-                  ? e.replace(`Sigmar One`, `Prompt`)
-                  : e
-  );
-}
-function At(e, t, n, r, i) {
-  let a = q(t, r, n, r.clanSteamID.GetAccountID(), e);
-  if (a) return a;
-  let o = R(`#Sale_Section_Header`, i + 1),
-    s = `#Sale_Section_Type_` + (t?.section_type || `unknowntype`),
-    c = R(s);
-  if (c !== s) return `${o} (${c})`;
-}
-function jt(e, t) {
-  return e == null || e == null || !It(t)
+var G = e(t()),
+  K = n();
+function Ne(e, t) {
+  return e == null || e == null || !Le(t)
     ? !0
     : t.reverse_show_on_tabs
       ? !(!t.show_on_tabs || t.show_on_tabs.includes(e))
       : !!(t.show_on_tabs && t.show_on_tabs.includes(e));
 }
-function Mt(e) {
+function Pe(e) {
   return e.template_tab_id ?? e.unique_id;
 }
-function Nt(e) {
-  return Ft(e, `[Feature] Adult Only Sexual Content`);
+function Fe(e) {
+  return q(e, `[Feature] Adult Only Sexual Content`);
 }
-function Pt(e) {
-  return Ft(e, `[Feature] Coming Soon`);
+function Ie(e) {
+  return q(e, `[Feature] Coming Soon`);
 }
-function Ft(e, t) {
+function q(e, t) {
   if (e?.sale_tag_filter?.clauses?.length == 1) {
     let n = e.sale_tag_filter.clauses[0];
     return (
@@ -543,14 +102,14 @@ function Ft(e, t) {
   }
   return !1;
 }
-function It(e) {
+function Le(e) {
   return !!(
     e.show_on_tabs &&
     e.show_on_tabs.length > 0 &&
     !e.diable_tab_id_filtering
   );
 }
-function Lt(e, t) {
+function Re(e, t) {
   return e.show_deck_compability_details ||
     e.display_hw_compatibility_details == 1 ||
     t?.BFilterRequiresSteamDeckVerifiedOrPlayable()
@@ -563,8 +122,8 @@ function Lt(e, t) {
         ? 3
         : 0;
 }
-var Rt = `partnereventaction/eventsummary`;
-function zt(e) {
+var ze = `partnereventaction/eventsummary`;
+function Be(e) {
   let t = new URLSearchParams();
   return (
     t.set(`clan_account_id`, String(e.clanAccountID)),
@@ -573,8 +132,8 @@ function zt(e) {
     t.toString()
   );
 }
-var Bt = `partnereventaction/eventsummaries`;
-function Vt(e) {
+var Ve = `partnereventaction/eventsummaries`;
+function He(e) {
   let t = new Map();
   for (let n of e)
     t.has(n.strEventGID) ||
@@ -588,54 +147,54 @@ function Vt(e) {
       (e.strEventGID < t.strEventGID ? -1 : +(e.strEventGID > t.strEventGID)),
   );
 }
-function Ht(e) {
-  return Vt(e)
+function Ue(e) {
+  return He(e)
     .map((e) => `${e.clanAccountID}:${e.strEventGID}`)
     .join(`,`);
 }
-function Ut(e) {
+function We(e) {
   let t = new URLSearchParams();
   return (
-    t.set(`events`, Ht(e.rgEvents)),
+    t.set(`events`, Ue(e.rgEvents)),
     t.set(`language`, String(e.eLanguage)),
     t.toString()
   );
 }
-async function Wt(e) {
-  let t = `${H.STORE_BASE_URL}${Rt}?${zt(e)}`,
+async function Ge(e) {
+  let t = `${U.STORE_BASE_URL}${ze}?${Be(e)}`,
     n = await fetch(t);
   if (!n.ok) throw Error(`${t} answered ${n.status}`);
   let r = await n.json();
   if (r?.success !== 1) throw Error(`${t} answered EResult ${r?.success}`);
   return r.summary ?? null;
 }
-async function Gt(e) {
+async function Ke(e) {
   if (e.rgEvents.length === 0) return [];
-  let t = `${H.STORE_BASE_URL}${Bt}?${Ut(e)}`,
+  let t = `${U.STORE_BASE_URL}${Ve}?${We(e)}`,
     n = await fetch(t);
   if (!n.ok) throw Error(`${t} answered ${n.status}`);
   let r = await n.json();
   if (r?.success !== 1) throw Error(`${t} answered EResult ${r?.success}`);
   return r.summaries ?? [];
 }
-function Kt(e, t, n) {
+function qe(e, t, n) {
   return [`PartnerEventSummary`, e, t, n];
 }
-function qt(e, t) {
+function Je(e, t) {
   return {
-    queryKey: Kt(e.clanAccountID, e.strEventGID, e.eLanguage),
-    queryFn: () => Wt(e),
+    queryKey: qe(e.clanAccountID, e.strEventGID, e.eLanguage),
+    queryFn: () => Ge(e),
     select: t,
     staleTime: 6e5,
   };
 }
-function Jt(e) {
-  return [`PartnerEventSummaries`, e.eLanguage, Ht(e.rgEvents)];
+function Ye(e) {
+  return [`PartnerEventSummaries`, e.eLanguage, Ue(e.rgEvents)];
 }
-function Yt(e) {
-  return { queryKey: Jt(e), queryFn: () => Gt(e), staleTime: 3e5 };
+function Xe(e) {
+  return { queryKey: Ye(e), queryFn: () => Ke(e), staleTime: 3e5 };
 }
-function Xt(e, t, n) {
+function Ze(e, t, n) {
   let r = n,
     i = 0;
   for (i = 0; i < t; i++) {
@@ -645,7 +204,7 @@ function Xt(e, t, n) {
   }
   return i;
 }
-function Zt(e, t) {
+function Qe(e, t) {
   if (t === void 0 || !e.capsule_layout_by_item_count) return e;
   let n = e.capsule_layout_by_item_count.find(
     (e) => e.max_items === void 0 || t <= e.max_items,
@@ -659,18 +218,18 @@ function Zt(e, t) {
     : e;
 }
 function J(e, t) {
-  if (k(e)) return 0;
-  let n = ce(e);
+  if (O(e)) return 0;
+  let n = k(e);
   return n <= 0 ? 0 : n + t;
 }
-function Qt(e, t, n, r, i) {
+function $e(e, t, n, r, i) {
   let a =
     `section_` +
     r +
     `_` +
     e.GID +
     (i || 0) +
-    _e(t.unique_id ? t.unique_id.toString() : JSON.stringify(t)).toString();
+    fe(t.unique_id ? t.unique_id.toString() : JSON.stringify(t)).toString();
   return (
     n &&
       e.rtime32_last_local_modification &&
@@ -678,82 +237,82 @@ function Qt(e, t, n, r, i) {
     a
   );
 }
-function $t(e) {
+function et(e) {
   let { id: t, type: n } = e,
-    r = ve({ id: t, type: n }),
-    { data: i } = Ve(r);
-  return (0, G.jsx)(`div`, {
-    className: c,
-    children: (0, G.jsx)(N, {
+    r = i({ id: t, type: n }),
+    { data: a } = R(r);
+  return (0, K.jsx)(`div`, {
+    className: o,
+    children: (0, K.jsx)(P, {
       ...e,
       bShowReviewSummary: !0,
-      bShowDemoButton: e.bShowDemoButton || i?.type == 1,
+      bShowDemoButton: e.bShowDemoButton || a?.type == 1,
       bPreferDemoStorePage: e.bPreferDemoStorePage,
     }),
   });
 }
-var en = `SppL95yx9BU-`,
-  tn = `_7Na7-QNyAn4-`,
-  nn = `zdh0LkaHoKw-`,
-  rn = `vZlB-C6RUio-`;
-function an(e) {
+var tt = `SppL95yx9BU-`,
+  nt = `_7Na7-QNyAn4-`,
+  rt = `zdh0LkaHoKw-`,
+  it = `vZlB-C6RUio-`;
+function at(e) {
   let {
       id: t,
       type: n,
       bShowDemoButton: r,
-      bHidePrice: i,
-      bHidePlatforms: a,
-      bShowDeckCompatibilityDialog: o,
-      eHardwareCompatibilityDisplay: s,
-      bAutoFocus: c,
+      bHidePrice: a,
+      bHidePlatforms: o,
+      bShowDeckCompatibilityDialog: s,
+      eHardwareCompatibilityDisplay: c,
+      bAutoFocus: l,
     } = e,
-    l = ve({ id: t, type: n }),
-    { data: u } = Ve(l),
-    { data: d } = Be(l),
-    [f, m] = v(o, s),
-    g = u?.item_type == 0;
-  return (0, G.jsx)(p, {
-    appid: g ? u.id : void 0,
-    children: (0, G.jsxs)(Je, {
+    u = i({ id: t, type: n }),
+    { data: d } = R(u),
+    { data: f } = Ce(u),
+    [m, h] = w(s, c),
+    g = d?.item_type == 0;
+  return (0, K.jsx)(x, {
+    appid: g ? d.id : void 0,
+    children: (0, K.jsxs)(V, {
       "flow-children": `grid`,
-      navEntryPreferPosition: Ge.PREFERRED_CHILD,
-      autoFocus: c,
-      navKey: `purchase_only_` + u?.id,
+      navEntryPreferPosition: Ee.PREFERRED_CHILD,
+      autoFocus: l,
+      navKey: `purchase_only_` + d?.id,
       children: [
         `	`,
-        (0, G.jsxs)(`div`, {
-          className: tn,
+        (0, K.jsxs)(`div`, {
+          className: nt,
           children: [
-            (0, G.jsx)(`div`, {
+            (0, K.jsx)(`div`, {
               className: void 0,
-              children: (0, G.jsx)(`div`, { className: en, children: u?.name }),
+              children: (0, K.jsx)(`div`, { className: tt, children: d?.name }),
             }),
-            (0, G.jsxs)(`div`, {
-              className: rn,
+            (0, K.jsxs)(`div`, {
+              className: it,
               children: [
-                !a &&
-                  u?.type != 10 &&
-                  (0, G.jsxs)(`div`, {
+                !o &&
+                  d?.type != 10 &&
+                  (0, K.jsxs)(`div`, {
                     className: void 0,
                     children: [
-                      (0, G.jsx)(h, { id: l }),
-                      !!(f && u?.item_type == 0 && d) &&
-                        (0, G.jsx)(Qe, {
-                          eDisplay: m,
-                          storeItemPlatform: d,
+                      (0, K.jsx)(p, { id: u }),
+                      !!(m && d?.item_type == 0 && f) &&
+                        (0, K.jsx)(je, {
+                          eDisplay: h,
+                          storeItemPlatform: f,
                           className: void 0,
                         }),
                     ],
                   }),
-                (0, G.jsx)(he, {
-                  id: l,
-                  className: nn,
+                (0, K.jsx)(ue, {
+                  id: u,
+                  className: rt,
                   bShowDemoButton: r,
                   bShowCartButton: !0,
-                  bHidePrice: i,
+                  bHidePrice: a,
                   bHideWishlistButton: !0,
-                  bShowDeckCompatibilityDialog: o,
-                  eHardwareCompatibilityDisplay: s,
+                  bShowDeckCompatibilityDialog: s,
+                  eHardwareCompatibilityDisplay: c,
                 }),
               ],
             }),
@@ -763,51 +322,51 @@ function an(e) {
     }),
   });
 }
-function on(e) {
+function ot(e) {
   let { displayStyle: t, requestCompact: n, bNarrowScreen: r, ...i } = e,
     { type: a } = e,
-    o = r ?? M(),
-    s = B();
-  if (t === `purchaseonlydisplay`) return (0, G.jsx)(an, { ...i });
-  if (s) return (0, G.jsx)(N, { ...i });
-  if (n && !o) return (0, G.jsx)($t, { ...i });
-  if (a == `bundle` || a == `sub`) return (0, G.jsx)(N, { ...i });
+    o = r ?? N(),
+    s = z();
+  if (t === `purchaseonlydisplay`) return (0, K.jsx)(at, { ...i });
+  if (s) return (0, K.jsx)(P, { ...i });
+  if (n && !o) return (0, K.jsx)(et, { ...i });
+  if (a == `bundle` || a == `sub`) return (0, K.jsx)(P, { ...i });
   if (o && (t == `library` || t == `animated`))
-    return (0, G.jsx)(N, { ...i, bShowReviewSummary: !0 });
+    return (0, K.jsx)(P, { ...i, bShowReviewSummary: !0 });
   switch (t) {
     case `library`:
-      return (0, G.jsx)(P, { ...i });
+      return (0, K.jsx)(F, { ...i });
     case `animated`:
-      return (0, G.jsx)(P, { ...i });
+      return (0, K.jsx)(F, { ...i });
     default:
-      return (0, G.jsx)(N, { ...i, bShowReviewSummary: !0 });
+      return (0, K.jsx)(P, { ...i, bShowReviewSummary: !0 });
   }
 }
-function sn(e, t, n = M()) {
+function st(e, t, n = N()) {
   return !(e === `purchaseonlydisplay` || t || n);
 }
-var cn = `h4e3CZE5mfI-`,
-  ln = `lJc7R9Bil2I-`,
-  un = `IS179RoYT1Q-`,
-  dn = `SZeormjSwYo-`,
-  Y = 258;
-function fn(e, t) {
-  return Z(e, t).every((e) => e === 1);
+var ct = `h4e3CZE5mfI-`,
+  lt = `lJc7R9Bil2I-`,
+  ut = `IS179RoYT1Q-`,
+  dt = `SZeormjSwYo-`,
+  ft = 258;
+function pt(e, t) {
+  return X(e, t).every((e) => e === 1);
 }
-function pn(e) {
+function mt(e) {
   let t = !1,
-    n = A(e);
+    n = j(e);
   return (
     n && (t = [`dlc`, `dlc_onsale`, `dlc_music_onsale`].includes(n)),
     !!(t || e.show_parent_app)
   );
 }
-function X(e, t) {
-  if (k(e)) return 0;
-  let n = ce(e);
+function Y(e, t) {
+  if (O(e)) return 0;
+  let n = k(e);
   return n <= 0 ? 0 : n + t;
 }
-function Z(e, t) {
+function X(e, t) {
   return !e || e.enable_faceted_browsing
     ? [1]
     : e.capsules_per_row_array
@@ -818,43 +377,43 @@ function Z(e, t) {
               e.capsule_style_per_row_array?.length > n
                 ? e.capsule_style_per_row_array[n]
                 : `grid`;
-            return Ye(t, 1, r == `tall` ? 4 : 3);
+            return H(t, 1, r == `tall` ? 4 : 3);
           })
         : e.capsules_per_row_array
       : e.adaptive_capsules_per_row
         ? t
           ? [2, 3]
           : [2, 3, 4, 3]
-        : [Ye(e.capsules_per_row || 1, 1, t ? 3 : 5) || 1];
+        : [H(e.capsules_per_row || 1, 1, t ? 3 : 5) || 1];
 }
-function mn(e, t, n) {
-  let r = Z(e, n),
-    i = k(e) ? ue(e) : X(e, t),
+function ht(e, t, n) {
+  let r = X(e, n),
+    i = O(e) ? A(e) : Y(e, t),
     a = 0;
   for (let e = 0; e < i; e++) a += r[e % r.length];
   return a;
 }
-function Q(e, t) {
+function Z(e, t) {
   return e.capsule_style_per_row_array
     ? e.capsule_style_per_row_array
-    : fn(e, t)
+    : pt(e, t)
       ? [`fullrow`]
       : [`grid`];
 }
-function hn(e, t) {
+function gt(e, t) {
   let { saleEvent: n, language: r, index: i, section: a } = t;
-  return (0, G.jsx)(
-    Mn,
+  return (0, K.jsx)(
+    It,
     {
       link: e,
       language: r,
       clanAccountID: n.clanSteamID.GetAccountID(),
-      strClassName: y,
+      strClassName: T,
     },
     a.unique_id + `_` + i,
   );
 }
-function gn(e, t) {
+function _t(e, t) {
   let {
     capsuleStyle: n,
     index: r,
@@ -862,26 +421,26 @@ function gn(e, t) {
     saleEvent: a,
     rowElements: o,
   } = t;
-  if (ee(e)) return null;
-  let s = pn(i),
-    c = a.BUseSubscriptionLayout(),
-    l = k(i) && !t.bIsSingleCapsule,
-    u = Lt(i, t.activeTab),
+  if (ie(e)) return null;
+  let s = mt(i),
+    l = a.BUseSubscriptionLayout(),
+    u = O(i) && !t.bIsSingleCapsule,
+    d = Re(i, t.activeTab),
     p = i.unique_id + `_` + r + `_` + e.type + `_` + e.id;
   if (n !== `fullrow`) {
-    let a = U(l && `FolDBzXMW2I-`, l && n === `tall` && `E6LHQcm-39c-`);
-    return (0, G.jsx)(
+    let a = W(u && `FolDBzXMW2I-`, u && n === `tall` && `E6LHQcm-39c-`);
+    return (0, K.jsx)(
       `div`,
       {
         className: a,
-        children: (0, G.jsx)(
-          Le,
+        children: (0, K.jsx)(
+          ve,
           {
             imageType: n === `tall` ? `library` : `header`,
             navKey: p,
             capsule: e,
             bShowParentApp: s,
-            bUseSubscriptionLayout: c,
+            bUseSubscriptionLayout: l,
             bShowDemoButton:
               i.show_as_demos || t.activeTab?.BFilterRequiresFeatureDemo(),
             bPreferDemoStorePage: i.prefer_demo_store_page,
@@ -889,7 +448,7 @@ function gn(e, t) {
             bHidePlatforms: o >= 5,
             index: r,
             bPreferAssetWithoutOverride: !!i.prefer_assets_without_overrides,
-            eHardwareCompatibilityDisplay: u,
+            eHardwareCompatibilityDisplay: d,
           },
           p,
         ),
@@ -898,7 +457,7 @@ function gn(e, t) {
     );
   }
   {
-    let n = i.single_item_style ? i.single_item_style : le,
+    let n = i.single_item_style ? i.single_item_style : ee,
       a;
     (`overrideNavigation` in e &&
       (a = (t) => (
@@ -906,28 +465,28 @@ function gn(e, t) {
         t && (t.preventDefault(), t.stopPropagation()),
         !1
       )),
-      M() && (n == `library` || n == `animated`) && (n = `bordered`));
-    let o = U({
-      [d]: !l && n == `bordered`,
-      [E]: l && n == `bordered`,
-      [f]: l && n == `animated`,
-      [Re + r]: r === 0,
+      N() && (n == `library` || n == `animated`) && (n = `bordered`));
+    let o = W({
+      [c]: !u && n == `bordered`,
+      [f]: u && n == `bordered`,
+      [m]: u && n == `animated`,
+      [ye + r]: r === 0,
     });
-    return (0, G.jsx)(
+    return (0, K.jsx)(
       `div`,
       {
         className: o,
-        children: (0, G.jsx)(on, {
+        children: (0, K.jsx)(ot, {
           id: e.id,
           type: e.type,
           displayStyle: n,
           bShowPurchaseOptionsButton: i.show_purchase_options,
-          bUseSubscriptionLayout: c,
+          bUseSubscriptionLayout: l,
           bShowDemoButton:
             i.show_as_demos || t.activeTab?.BFilterRequiresFeatureDemo(),
           bPreferDemoStorePage: i.prefer_demo_store_page,
           bHidePrice: i.hide_prices,
-          eHardwareCompatibilityDisplay: u,
+          eHardwareCompatibilityDisplay: d,
           fnOnClickOverride: a,
           bPreferAssetWithoutOverride: !!i.prefer_assets_without_overrides,
         }),
@@ -936,7 +495,7 @@ function gn(e, t) {
     );
   }
 }
-function _n(e, t, n, r, i, a, o, s, c) {
+function vt(e, t, n, r, i, a, o, s, c) {
   let {
     RenderEvent: l,
     RenderEventSummary: u,
@@ -952,15 +511,15 @@ function _n(e, t, n, r, i, a, o, s, c) {
         : r.filter((e) => !!e).map((e) => ({ Render: (t) => l(e, t) }))
     : e.section_type === `links` ||
         e.section_type === `title_image` ||
-        A(e) === `sale_tabhub`
+        j(e) === `sale_tabhub`
       ? (e.section_type === `title_image` &&
           e.title_image_selected === `title`) ||
         !n
         ? []
-        : n.map((e) => ({ Render: (t) => hn(e, t) }))
-      : de(e.section_type)
+        : n.map((e) => ({ Render: (t) => gt(e, t) }))
+      : te(e.section_type)
         ? t
-          ? t.filter((e) => !ee(e)).map((e) => ({ Render: (t) => gn(e, t) }))
+          ? t.filter((e) => !ie(e)).map((e) => ({ Render: (t) => _t(e, t) }))
           : []
         : e.section_type === `itemdef`
           ? !a || !d
@@ -976,33 +535,35 @@ function _n(e, t, n, r, i, a, o, s, c) {
                 : s.map((e) => ({ Render: (t) => p(e, t) }))
               : [];
 }
-function $(e, t) {
+function Q(e, t) {
   return t[e % t.length];
 }
-function vn(e, t) {
+function $(e, t) {
   return e === `tall` ? t + 1 : t;
 }
-function yn(e, t, n, r, i, a, o, s, c, l) {
+var yt = 3;
+function bt(e, t, n, r, i, a, o, s, c, l) {
   let {
-    nMaxCapsulesPerRow: u,
-    bScreenIsWide: d,
-    nShowAdditionalRows: f,
-    bShowAsCarousel: p,
+    nMaxCapsulesPerRow: d,
+    bScreenIsWide: f,
+    nShowAdditionalRows: p,
+    bShowAsCarousel: m,
     bAutoAdvance: h,
     bHideIfTooFewItems: g,
     strCarouselKey: _,
     bPaginationPills: v,
+    bDropShortLastCarouselPage: y,
   } = t;
   if (n.length === 0) return { content: null, bAdditionalContent: !1 };
-  let y = n.length === 1,
-    b = (e, t, n, r, i) => {
+  let b = n.length === 1,
+    x = (e, t, n, r, i) => {
       let a = [];
       for (let o = t; o < n; o++) {
         let t = {
             capsuleStyle: i,
             index: o,
             rowElements: r,
-            bIsSingleCapsule: y,
+            bIsSingleCapsule: b,
             ...s,
           },
           n = e[o].Render(t);
@@ -1010,26 +571,32 @@ function yn(e, t, n, r, i, a, o, s, c, l) {
       }
       return a;
     },
-    x = null,
-    S = !1,
-    C = y ? [1] : r,
-    w = i;
-  y && (u > 1 || w[0] == `tall`) && (w = [`fullrow`]);
-  let T = p && (a <= 1 || (!!v && !d)),
-    E = Math.min(C[0], u);
-  if (T && n.length > E)
-    x = (0, W.createElement)(
+    S = null,
+    C = !1,
+    w = b ? [1] : r,
+    T = i;
+  b && (d > 1 || T[0] == `tall`)
+    ? (T = [`fullrow`])
+    : v && n.length === 2 && T[0] === `tall` && (T = [`grid`]);
+  let E = m && (a <= 1 || (!!v && !f)),
+    D = Math.min(w[0], d);
+  if (m && y) {
+    let e = E ? D : xt(w, T, a, d, f);
+    n = St(n, e);
+  }
+  if (E && n.length > D)
+    S = (0, G.createElement)(
       I,
       {
         ...t,
         key: _,
-        hideArrows: !d,
-        visibleElements: E,
-        className: U({
+        hideArrows: !f,
+        visibleElements: D,
+        className: W({
           SaleSectionCarousel: !0,
           SaleSectionCarouselPadding: !l,
-          ItemCount_4: C[0] == 4,
-          [un]:
+          ItemCount_4: w[0] == 4,
+          [ut]:
             t && t.section && t.section.section_type == `creator_list_of_lists`,
         }),
         useTestScrollbar: !0,
@@ -1037,21 +604,21 @@ function yn(e, t, n, r, i, a, o, s, c, l) {
         bAutoAdvance: !!h,
         hidePips: c,
         padded: !l,
-        screenIsWide: d,
+        screenIsWide: f,
         navKey: e,
-        lazyRenderPlaceholderWidth: Y,
+        lazyRenderPlaceholderWidth: ft,
       },
-      b(n, 0, n.length, E, $(0, w)),
+      x(n, 0, n.length, D, Q(0, T)),
     );
   else {
-    let e = o(f),
+    let e = o(p),
       r = !0;
-    if (p) ((e = a), (r = T));
-    else if (f == 0 && e > 0) {
+    if (m) ((e = a), (r = E));
+    else if (p == 0 && e > 0) {
       let t = 0,
         r = 0;
       for (; t < e && r < n.length; t++) {
-        let e = Math.min(C[t % C.length], u);
+        let e = Math.min(w[t % w.length], d);
         r += e;
       }
       e = Math.max(2, t);
@@ -1060,20 +627,20 @@ function yn(e, t, n, r, i, a, o, s, c, l) {
       s = [],
       l = 0;
     for (let t = 0; l < n.length; t++) {
-      let a = $(0, w);
+      let a = Q(0, T);
       for (let t = 0; (e == 0 || t < e) && l < n.length; t++) {
-        (t == 0 || d) && (a = $(t, w));
-        let e = vn(a, u),
-          r = Math.min(C[t % C.length], e),
+        (t == 0 || f) && (a = Q(t, T));
+        let e = $(a, d),
+          r = Math.min(w[t % w.length], e),
           i = Math.min(r, n.length - l);
         if (i < r && t === 0) {
           if (g) return { content: null, bAdditionalContent: !1 };
           r = Math.max(a === `tall` ? 3 : 2, i);
         }
         (s.push(
-          (0, G.jsx)(
-            xn,
-            { nMaxItems: r, nItems: i, children: b(n, l, l + i, r, a) },
+          (0, K.jsx)(
+            wt,
+            { nMaxItems: r, nItems: i, children: x(n, l, l + i, r, a) },
             `Row_` + t,
           ),
         ),
@@ -1082,41 +649,55 @@ function yn(e, t, n, r, i, a, o, s, c, l) {
       if (r || (l >= n.length && i.length === 0)) break;
       let o = i.length || void 0;
       (i.push(
-        (0, G.jsx)(
+        (0, K.jsx)(
           `div`,
-          { className: m, children: (0, G.jsx)(Ze, { depth: o, children: s }) },
+          { className: u, children: (0, K.jsx)(Ae, { depth: o, children: s }) },
           `Page_${t}`,
         ),
       ),
         (s = []));
     }
     i.length == 0
-      ? ((S = n.length > l),
-        (x = (0, G.jsx)(Je, {
+      ? ((C = n.length > l),
+        (S = (0, K.jsx)(V, {
           "flow-children": `grid`,
           focusable: !1,
           children: s,
         })))
-      : (x = (0, W.createElement)(
+      : (S = (0, G.createElement)(
           I,
           {
             ...t,
             key: _,
-            hideArrows: !d,
+            hideArrows: !f,
             visibleElements: 1,
             className: `SaleSectionCarousel`,
             useTestScrollbar: !0,
             bLazyRenderChildren: !0,
-            lazyRenderPlaceholderWidth: Y,
+            lazyRenderPlaceholderWidth: ft,
             hidePips: c,
-            screenIsWide: d,
+            screenIsWide: f,
           },
           i,
         ));
   }
-  return { content: x, bAdditionalContent: S };
+  return { content: S, bAdditionalContent: C };
 }
-function bn(e) {
+function xt(e, t, n, r, i) {
+  let a = 0;
+  for (let o = 0; o < n; o++) {
+    let n = Q(i ? o : 0, t);
+    a += Math.min(e[o % e.length], $(n, r));
+  }
+  return a;
+}
+function St(e, t) {
+  if (e.length <= t) return e;
+  let n = Math.min(t - 2, yt),
+    r = e.length % t;
+  return r === 0 || r > n ? e : e.slice(0, e.length - r);
+}
+function Ct(e) {
   let {
     saleEvent: t,
     section: n,
@@ -1127,11 +708,11 @@ function bn(e) {
   (n.carousel_rows || 0) > 1 &&
     (i && (n.carousel_rows = 1),
     (i ||
-      (!j(n) &&
+      (!M(n) &&
         n.capsules_per_row_array?.length &&
         n.capsules_per_row_array[0] >= (n.capsules?.length || 0))) &&
       (n.carousel_rows = 1));
-  let o = _n(
+  let o = vt(
     n,
     e.capsules,
     e.links,
@@ -1143,15 +724,15 @@ function bn(e) {
     e.renderers,
   );
   if (o.length === 0) return { content: null, bAdditionalContent: !1 };
-  let s = Z(n, i),
-    c = Q(n, i),
-    l = ue(n),
-    u = (e) => X(n, e),
+  let s = X(n, i),
+    c = Z(n, i),
+    l = A(n),
+    u = (e) => Y(n, e),
     d = { section: n, saleEvent: t, language: r, activeTab: a },
-    f = { ...e, strCarouselKey: te(a?.GetTagSelection()) };
-  return yn(n.unique_id, f, o, s, c, l, u, d, i);
+    f = { ...e, strCarouselKey: _(a?.GetTagSelection()) };
+  return bt(n.unique_id, f, o, s, c, l, u, d, i);
 }
-var xn = (e) => {
+var wt = (e) => {
   let { nMaxItems: t, nItems: n } = e,
     r = t - n,
     i = r % 2 == 0 ? `repeat(${t}, 1fr)` : `0.5fr repeat(${t - 1}, 1fr) 0.5fr`,
@@ -1161,13 +742,13 @@ var xn = (e) => {
     let e = Math.floor((r + 1) / 2);
     ((a = []), (o = []));
     for (let t = 0; t < e; t++)
-      (a.push((0, G.jsx)(`div`, {}, `front_` + t)),
-        o.push((0, G.jsx)(`div`, {}, `back_` + t)));
+      (a.push((0, K.jsx)(`div`, {}, `front_` + t)),
+        o.push((0, K.jsx)(`div`, {}, `back_` + t)));
   }
-  return (0, G.jsxs)(`div`, {
-    className: U(
-      ye,
-      b,
+  return (0, K.jsxs)(`div`, {
+    className: W(
+      pe,
+      D,
       `SaleSectionContainer`,
       `center_row_trgt`,
       `ItemCount_` + t,
@@ -1176,42 +757,42 @@ var xn = (e) => {
     children: [a, e.children, o],
   });
 };
-function Sn(e) {
+function Tt(e) {
   let { section: t, nMaxCapsulesPerRow: n, bInGamepadUI: r } = e,
-    i = $(0, Q(t, r)),
-    a = Math.min(Z(t, r)[0], vn(i, n)),
-    o = U(
-      dn,
+    i = Q(0, Z(t, r)),
+    a = Math.min(X(t, r)[0], $(i, n)),
+    o = W(
+      dt,
       i === `tall` && `_9Xrgw1NkKg8-`,
       i === `fullrow` && `hbaqi-sk8nE-`,
     );
-  return (0, G.jsx)(xn, {
+  return (0, K.jsx)(wt, {
     nMaxItems: a,
     nItems: a,
     children: Array.from({ length: a }, (e, t) =>
-      (0, G.jsx)(`div`, { className: o }, t),
+      (0, K.jsx)(`div`, { className: o }, t),
     ),
   });
 }
-function Cn(e) {
+function Et(e) {
   let { event: t, section: n, rgSlides: r, onSlide: i, onNavIntent: a } = e,
-    o = B(),
-    { bScreenIsWide: s } = we(n.section_type);
+    o = z(),
+    { bScreenIsWide: s } = oe(n.section_type);
   return r.length === 0
     ? null
     : r.length === 1
-      ? (0, G.jsx)(G.Fragment, { children: r[0] })
+      ? (0, K.jsx)(K.Fragment, { children: r[0] })
       : !s || o
-        ? (0, G.jsx)(`div`, {
-            className: oe,
+        ? (0, K.jsx)(`div`, {
+            className: xe,
             children: r.map((e, t) =>
-              (0, G.jsx)(wn, { nSlide: t, onSlide: i, children: e }, t),
+              (0, K.jsx)(Dt, { nSlide: t, onSlide: i, children: e }, t),
             ),
           })
-        : (0, G.jsx)(`div`, {
-            className: U(w, ae),
-            children: (0, G.jsx)(I, {
-              ...pe(t.jsondata),
+        : (0, K.jsx)(`div`, {
+            className: W(v, be),
+            children: (0, K.jsx)(I, {
+              ...re(t.jsondata),
               visibleElements: 1,
               screenIsWide: !0,
               useTestScrollbar: !0,
@@ -1222,109 +803,120 @@ function Cn(e) {
             }),
           });
 }
-function wn(e) {
+function Dt(e) {
   let { nSlide: t, onSlide: n, children: r } = e,
-    i = Xe({ onEnter: () => n?.(t) });
-  return (0, G.jsx)(`div`, { ref: i, children: r });
+    i = ke({ onEnter: () => n?.(t) });
+  return (0, K.jsx)(`div`, { ref: i, children: r });
 }
-function Tn(e) {
+function Ot(e) {
   let {
       event: t,
       section: n,
       language: r,
       bInGamepadUI: i,
-      placeholderHeight: a,
-      nHiddenCapsules: o,
-      personalizedCarousels: s,
-      children: c,
+      placeholderHeight: o,
+      nHiddenCapsules: c,
+      personalizedCarousels: l,
+      children: u,
     } = e,
-    [u, d] = W.useState(void 0),
-    { bShowSeeMoreHint: f, panelProps: p } = Ae(u, `X`);
-  return (0, G.jsxs)(ke, {
-    placeholderHeight: a,
-    className: U({
-      [w]: !0,
-      [l]: k(n),
-      [g]: n.disable_background,
-      [Ee]: !0,
+    [f, p] = G.useState(void 0),
+    m = At(t, n),
+    g = i && !!m && !f,
+    { bShowSeeMoreHint: _, panelProps: y } = se(g ? m : f, `X`);
+  return (0, K.jsxs)(_e, {
+    placeholderHeight: o,
+    className: W({
+      [v]: !0,
+      [h]: O(n),
+      [E]: n.disable_background,
+      [ge]: !0,
       SaleSectionForCustomCSS: !0,
       [n.sale_section_classname || ``]: !!n.sale_section_classname,
       [void 0]: n.background_repeat == `coverBlur`,
     }),
-    rootMargin: Te,
+    rootMargin: ce,
     holdGamepadFocus: i,
-    ...p,
+    ...y,
     children: [
-      (0, G.jsx)(`div`, {
-        className: U(Ce, n.background_repeat == `coverBlur` ? Se : ``),
-        style: it(n, t, i),
+      (0, K.jsx)(`div`, {
+        className: W(he, n.background_repeat == `coverBlur` ? me : ``),
+        style: d(n, t, i),
       }),
-      (0, G.jsxs)(`div`, {
-        className: C,
+      (0, K.jsxs)(`div`, {
+        className: a,
         children: [
-          (0, G.jsx)(Et, {
+          (0, K.jsx)(s, {
             section: n,
             event: t,
             language: r,
-            nHiddenCapsules: o,
-            personalizedCarousels: s,
-            bShowSeeMoreHint: f,
+            nHiddenCapsules: c,
+            personalizedCarousels: l,
+            bShowSeeMoreHint: _,
             bUseGamepadLinkHint: !0,
             eGamepadLinkHintButton: `X`,
-            onLinkResolved: (e) => d(e ?? void 0),
+            onLinkResolved: (e) => p(e ?? void 0),
           }),
-          (0, G.jsx)(En, { event: t, section: n }),
+          g
+            ? (0, K.jsx)(le, {
+                label: L(`#EventBrowse_AllEventsBtn`),
+                shown: _,
+                button: `X`,
+              })
+            : (0, K.jsx)(kt, { event: t, section: n }),
         ],
       }),
-      c,
-      (0, G.jsx)(T, { section: n }),
+      u,
+      (0, K.jsx)(S, { section: n }),
     ],
   });
 }
-function En(e) {
-  let { event: t, section: n } = e,
-    r = W.useMemo(
-      () =>
-        n.section_type == `events`
-          ? Ke(`ch_newshub`, `application_config`)
-          : void 0,
-      [n.section_type],
-    );
-  if (n.hide_view_all_events_link) return null;
-  let i = null;
-  if (n.section_type == `events`) {
-    if (!r || !t.BUsesContentHubForItemSource() || !j(n)) return null;
-    i = V.STORE_BASE_URL + `news/` + r;
-  } else
-    n.section_type == `sale_events`
-      ? (i = V.STORE_BASE_URL + `news/collection/sales/`)
-      : n.section_type == `calendar` &&
-        (i = V.STORE_BASE_URL + `personalcalendar`);
-  if (!i) return null;
-  let a = i;
-  return (0, G.jsx)(`div`, {
-    className: u,
-    children: (0, G.jsx)(qe, {
-      onClick: (e) => ze(e, a),
-      children: R(`#EventBrowse_AllEventsBtn`),
-    }),
-  });
+function kt(e) {
+  let t = At(e.event, e.section);
+  return t
+    ? (0, K.jsx)(`div`, {
+        className: C,
+        children: (0, K.jsx)(Oe, {
+          onClick: (e) => Se(e, t),
+          children: L(`#EventBrowse_AllEventsBtn`),
+        }),
+      })
+    : null;
 }
-function Dn(e) {
+function At(e, t) {
+  let n = G.useMemo(
+    () =>
+      t.section_type == `events`
+        ? De(`ch_newshub`, `application_config`)
+        : void 0,
+    [t.section_type],
+  );
+  if (t.hide_view_all_events_link) return;
+  let r = null;
+  if (t.section_type == `events`) {
+    if (!n || !e.BUsesContentHubForItemSource() || !M(t)) return;
+    r = B.STORE_BASE_URL + `news/` + n;
+  } else
+    t.section_type == `sale_events`
+      ? (r = B.STORE_BASE_URL + `news/collection/sales/`)
+      : t.section_type == `calendar` &&
+        (r = B.STORE_BASE_URL + `personalcalendar`);
+  return r ?? void 0;
+}
+function jt(e) {
   let { saleEvent: t, section: n, bInGamepadUI: r } = e,
     i = {
       ...e,
-      bShowAsCarousel: k(n),
+      bShowAsCarousel: O(n),
       bAutoAdvance: !!n.carousel_auto_advance,
       bHideIfTooFewItems: !!n.hide_section_if_too_few_items,
-      ...pe(t.jsondata),
+      ...re(t.jsondata),
     },
     a = J(n, i.nShowAdditionalRows),
-    o = Xt(Z(n, r), a, i.capsules?.length ?? 0);
-  return (o < a && j(n) && (i.nShowAdditionalRows -= a - o), i);
+    o = Ze(X(n, r), a, i.capsules?.length ?? 0);
+  return (o < a && M(n) && (i.nShowAdditionalRows -= a - o), i);
 }
-var On = `NQebVMQULto-`;
-function kn(e) {
+var Mt = `NQebVMQULto-`;
+function Nt(e) {
   let {
       section: t,
       nRowsWithNext: n,
@@ -1333,28 +925,28 @@ function kn(e) {
       bLoading: a,
       onShowMore: o,
     } = e,
-    s = Xt(i, n, r) < n;
-  return (0, G.jsx)(`div`, {
-    className: U(On, `ShowContentsContainer`),
+    s = Ze(i, n, r) < n;
+  return (0, K.jsx)(`div`, {
+    className: W(Mt, `ShowContentsContainer`),
     children: a
-      ? (0, G.jsx)(ge, { size: `small`, string: R(`#Loading`) })
+      ? (0, K.jsx)(de, { size: `small`, string: L(`#Loading`) })
       : !s &&
         t.cap_section_content &&
-        (0, G.jsx)($e, {
+        (0, K.jsx)(Me, {
           onClick: o,
-          className: U(`XQ46KRNpLMk-`, `ShowContentsButton`),
-          children: R(`#Sale_ShowMore`),
+          className: W(`XQ46KRNpLMk-`, `ShowContentsButton`),
+          children: L(`#Sale_ShowMore`),
         }),
   });
 }
-function An(e) {
+function Pt(e) {
   return Math.max(J(e, 0), 4);
 }
-function jn(e, t, n = ``, r = 0) {
+function Ft(e, t, n = ``, r = 0) {
   if (e.enable_faceted_browsing && r > 0)
     return { feature: `salefacetbrowse` + n, depth: r };
-  if (j(e) && e.section_type != `crosspromotesalepage`) {
-    let r = A(e);
+  if (M(e) && e.section_type != `crosspromotesalepage`) {
+    let r = j(e);
     if (r)
       switch (r) {
         case `wishlist`:
@@ -1378,7 +970,7 @@ function jn(e, t, n = ``, r = 0) {
         case `personalized_carousel`:
           return {
             feature: `salesmartpersonalizedcarousel` + n,
-            depth: O(e, t).nSectionIndex,
+            depth: l(e, t).nSectionIndex,
           };
         case `discount_reason`:
           return {
@@ -1425,69 +1017,57 @@ function jn(e, t, n = ``, r = 0) {
   }
   return { feature: `salesection` + n };
 }
-function Mn(e) {
+function It(e) {
   let { language: t, link: n } = e,
-    r = He(),
-    [i, a, s] = o(() => [
-      z.GetWithFallback(n.localized_link_capsule, t),
-      r ? n.sc_url : n.url,
+    i = Te(),
+    [a, o, s] = r(() => [
+      we.GetWithFallback(n.localized_link_capsule, t),
+      i ? n.sc_url : n.url,
       n.materialized_link_capsule,
     ]),
-    c = i ? D.GenerateURLFromHashAndExt(e.clanAccountID, i) : void 0;
-  return (0, G.jsx)(S, {
-    url: a,
+    c = a ? ne.GenerateURLFromHashAndExt(e.clanAccountID, a) : void 0;
+  return (0, K.jsx)(y, {
+    url: o,
     className: e.strClassName,
     bSkipForcingStoreLink: !1,
     bOpenInline: !!n.open_in_place,
-    children: (0, G.jsxs)(`div`, {
-      className: U(_, e.link.url ? x : ``),
+    children: (0, K.jsxs)(`div`, {
+      className: W(g, e.link.url ? b : ``),
       children: [
-        !!c && (0, G.jsx)(me, { className: `_-4JZsb8K2FY-`, src: c }),
+        !!c && (0, K.jsx)(ae, { className: `_-4JZsb8K2FY-`, src: c }),
         !!s &&
-          (0, G.jsx)(`img`, { className: `_-4JZsb8K2FY-`, src: s, alt: a }),
+          (0, K.jsx)(`img`, { className: `_-4JZsb8K2FY-`, src: s, alt: o }),
       ],
     }),
   });
 }
 export {
-  Ct as A,
-  it as B,
-  Yt as C,
-  jt as D,
-  Pt as E,
-  dt as F,
-  lt as I,
-  rt as L,
-  Et as M,
-  q as N,
-  Mt as O,
-  _t as P,
-  K as R,
+  Xe as C,
+  Ne as D,
+  Ie as E,
+  Pe as O,
   J as S,
-  Nt as T,
-  ln as _,
-  Tn as a,
-  Zt as b,
-  fn as c,
-  Z as d,
-  X as f,
-  cn as g,
-  yn as h,
-  Dn as i,
-  Dt as j,
-  At as k,
-  mn as l,
-  Sn as m,
-  An as n,
-  Cn as o,
-  bn as p,
-  kn as r,
-  pn as s,
-  jn as t,
-  Q as u,
-  sn as v,
-  qt as w,
-  Qt as x,
-  on as y,
-  at as z,
+  Fe as T,
+  lt as _,
+  Ot as a,
+  Qe as b,
+  pt as c,
+  X as d,
+  Y as f,
+  ct as g,
+  bt as h,
+  jt as i,
+  ht as l,
+  Tt as m,
+  Pt as n,
+  Et as o,
+  Ct as p,
+  Nt as r,
+  mt as s,
+  Ft as t,
+  Z as u,
+  st as v,
+  Je as w,
+  $e as x,
+  ot as y,
 };

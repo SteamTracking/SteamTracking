@@ -4,30 +4,30 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
 import {
-  Ca as r,
-  Do as i,
-  Ei as a,
-  Eo as o,
-  Fi as s,
-  Ft as c,
-  Ht as l,
-  Ji as u,
-  Mt as d,
-  Sa as f,
-  St as p,
-  Ut as m,
-  Vt as h,
-  Wi as g,
-  bo as _,
-  ea as v,
-  n as y,
-  qi as b,
-  ta as x,
+  $n as r,
+  An as i,
+  Bn as a,
+  Bs as o,
+  Lo as s,
+  Ps as c,
+  Ro as l,
+  Un as u,
+  Va as d,
+  Vs as f,
+  Xa as p,
+  Yn as m,
+  ao as h,
+  co as g,
+  go as _,
+  ho as v,
+  lo as y,
+  n as b,
+  nr as x,
+  tr as S,
 } from "./chunk~6b8ddcaac8.js";
-import { t as S } from "./chunk~4c13037b22.js";
-import { d as C, p as w, r as T } from "./chunk~cbbb6ae37c.js";
-import { n as E, t as D } from "./chunk~cd94ddba57.js";
-import { i as O } from "./chunk~9871ee5432.js";
+import { t as C } from "./chunk~4c13037b22.js";
+import { d as w, p as T, r as E } from "./chunk~cbbb6ae37c.js";
+import { f as D, p as O } from "./chunk~ffe4581a06.js";
 import { n as k, t as A } from "./chunk~56437c278a.js";
 import { t as j } from "./chunk~4d16ce5d1a.js";
 import { n as M } from "./chunk~d902bc74d6.js";
@@ -93,66 +93,66 @@ function Pe(e) {
   let {
       capsule: t,
       bShowParentApp: n,
-      elElementToAppendToHover: r,
+      elElementToAppendToHover: i,
       index: a,
       navKey: o,
-      bHideStoreHover: s,
-      onlyOneDiscountPct: c,
+      bHideStoreHover: c,
+      onlyOneDiscountPct: l,
       bPreferDemoStorePage: u,
       bShowEarlyAccessBanner: d,
     } = e,
     p = z(),
-    [h, _] = K.useState(!1),
-    [v, y] = K.useState(!1),
-    [b, x] = K.useState(!1),
-    S = K.useRef(!1);
+    [m, g] = K.useState(!1),
+    [_, v] = K.useState(!1),
+    [y, b] = K.useState(!1),
+    C = K.useRef(!1);
   K.useEffect(() => {
-    if (v && !S.current) {
+    if (_ && !C.current) {
       let e = window.setTimeout(() => {
-        ((S.current = !0), x(!0));
+        ((C.current = !0), b(!0));
       }, 500);
       return () => window.clearTimeout(e);
     }
-    return (x(v || h), () => {});
-  }, [v, h]);
-  let { data: C } = ae(),
-    w = !!C?.preferences?.disable_microtrailers,
-    T = O(t),
-    { data: E } = L(T),
-    D = i(n ? E?.related_items?.parent_appid : void 0),
-    { data: A } = L(D),
-    j = k(T);
-  if (!E || !T) return null;
-  let M = !!A && !!D,
+    return (b(_ || m), () => {});
+  }, [_, m]);
+  let { data: w } = ae(),
+    T = !!w?.preferences?.disable_microtrailers,
+    E = r(t),
+    { data: D } = L(E),
+    O = f(n ? D?.related_items?.parent_appid : void 0),
+    { data: A } = L(O),
+    j = k(E);
+  if (!D || !E) return null;
+  let M = !!A && !!O,
     N = (0, Z.jsx)(Ie, {
       ...e,
       strExtraParams: e.strExtraParams,
-      id: T,
-      bIsHovered: b && !w,
+      id: E,
+      bIsHovered: y && !T,
       bHasParentAppToDisplay: M,
-      onlyOneDiscountPct: c,
+      onlyOneDiscountPct: l,
       bShowEarlyAccessBanner: d,
-      bUsePanel: !s && !p,
+      bUsePanel: !c && !p,
     });
   return (0, Z.jsxs)(B, {
-    className: W({ [f]: !0, [Q + a]: a == 0 }),
+    className: W({ [s]: !0, [Q + a]: a == 0 }),
     navEntryPreferPosition: re.PREFERRED_CHILD,
     navKey: o,
-    onFocusWithin: y,
+    onFocusWithin: v,
     ...j,
     children: [
-      (0, Z.jsxs)(m, {
-        appid: E.appid,
+      (0, Z.jsxs)(x, {
+        appid: D.appid,
         children: [
-          s
+          c
             ? (0, Z.jsx)(`div`, {
-                onMouseEnter: () => _(!0),
-                onMouseLeave: () => _(!1),
+                onMouseEnter: () => g(!0),
+                onMouseLeave: () => g(!1),
                 children: N,
               })
-            : (0, Z.jsx)(l, {
-                className: g,
-                id: T,
+            : (0, Z.jsx)(S, {
+                className: h,
+                id: E,
                 elElementToAppend: e.elElementToAppendToHover,
                 bShowDemoButton: e.bShowDemoButton,
                 bPreferDemoStorePage: e.bPreferDemoStorePage,
@@ -167,15 +167,15 @@ function Pe(e) {
                 bShowDescription: e.bShowDescriptionInHover,
                 children: N,
               }),
-          !!r && (0, Z.jsx)(Z.Fragment, { children: r }),
+          !!i && (0, Z.jsx)(Z.Fragment, { children: i }),
         ],
       }),
       M &&
         (0, Z.jsx)(Fe, {
           strExtraParams: e.strExtraParams,
-          parentID: D,
+          parentID: O,
           parentStoreItemDefaultInfo: A,
-          childAppType: E.type,
+          childAppType: D.type,
           bPreferDemoStorePage: !!u,
         }),
     ],
@@ -185,26 +185,26 @@ function Fe(e) {
   let {
       strExtraParams: t,
       parentID: n,
-      parentStoreItemDefaultInfo: i,
-      childAppType: a,
-      bPreferDemoStorePage: o,
+      parentStoreItemDefaultInfo: r,
+      childAppType: i,
+      bPreferDemoStorePage: a,
     } = e,
-    s = I(),
-    c = z(),
-    { data: l } = V(n),
-    d = k(n);
-  return l
+    o = I(),
+    s = z(),
+    { data: c } = V(n),
+    u = k(n);
+  return c
     ? (0, Z.jsx)(ie, {
-        className: u,
-        ...A(i, s, c, o, t),
-        ...d,
-        children: (0, Z.jsxs)(m, {
-          appid: i.appid,
+        className: y,
+        ...A(r, o, s, a, t),
+        ...u,
+        children: (0, Z.jsxs)(x, {
+          appid: r.appid,
           children: [
             (0, Z.jsx)(`div`, {
-              className: r,
+              className: l,
               children: te(
-                a == 11
+                i == 11
                   ? `#SalePage_ParentApp_SoundTrack`
                   : `#SalePage_ParentApp_DLC`,
               ),
@@ -215,8 +215,8 @@ function Fe(e) {
               children: (0, Z.jsx)(`img`, {
                 loading: `lazy`,
                 className: Y,
-                alt: i.name || ``,
-                src: N(l, `small_capsule`),
+                alt: r.name || ``,
+                src: N(c, `small_capsule`),
                 ...G(),
               }),
             }),
@@ -246,10 +246,10 @@ function Ie(e) {
     _ = o(t),
     { data: v } = L(t);
   if (!v) return null;
-  let y = r ? void 0 : R(F(`${S(v, d)}${i ? `?${i}` : ``}`, m, h)),
+  let y = r ? void 0 : R(F(`${C(v, d)}${i ? `?${i}` : ``}`, m, h)),
     b = r ? B : H,
     x = l && g,
-    O = x && s == `library`,
+    S = x && s == `library`,
     k = !!u;
   return (0, Z.jsxs)(Z.Fragment, {
     children: [
@@ -267,25 +267,25 @@ function Ie(e) {
             preferredFocus: c,
             focusable: !0,
             children: [
-              (0, Z.jsx)(T, {
+              (0, Z.jsx)(E, {
                 appids: _,
                 hide_status_banners: n,
                 show_early_access: f,
               }),
               s != `none` &&
-                (0, Z.jsx)(w, {
+                (0, Z.jsx)(T, {
                   imageType: s,
                   id: t,
                   bPreferAssetWithoutOverride: p,
                 }),
-              (0, Z.jsx)(C, { id: t }),
+              (0, Z.jsx)(w, { id: t }),
               (0, Z.jsx)(`div`, {
-                className: W({ [Me]: x, [Ne]: O }),
+                className: W({ [Me]: x, [Ne]: S }),
                 children: (0, Z.jsx)(D, {
                   id: t,
                   active: l,
                   bIsHoverMode: !0,
-                  eGrowOnActivate: O ? E.k_ETrailerGrowAmount_Implicit : void 0,
+                  eGrowOnActivate: S ? O.k_ETrailerGrowAmount_Implicit : void 0,
                 }),
               }),
             ],
@@ -300,18 +300,18 @@ function Ie(e) {
 function Le(e) {
   let { id: t, strDoubleCapsuleMessage: n, index: r } = e,
     { data: i } = ne(t),
-    { data: o } = U(t);
+    { data: a } = U(t);
   return (0, Z.jsxs)(`div`, {
     className: W(Ae, `TwoWidthSideInfo`),
     children: [
       (0, Z.jsx)(`div`, { className: X, children: n }),
       (0, Z.jsx)(`div`, {
         className: je,
-        children: (0, Z.jsx)(`span`, { children: i ? a(i) : `` }),
+        children: (0, Z.jsx)(`span`, { children: i ? d(i) : `` }),
       }),
-      (0, Z.jsx)(y, {
+      (0, Z.jsx)(b, {
         bHideTitle: !0,
-        rgTagIDs: o?.map((e) => e.tagid) || [],
+        rgTagIDs: a?.map((e) => e.tagid) || [],
         instanceNum: r,
       }),
     ],
@@ -323,29 +323,29 @@ function Re(e) {
       bHidePriceIfOwned: n,
       bHideStatusBanners: r,
       bUseSubscriptionLayout: i,
-      elElementToAppendToHover: a,
-      bHidePrice: o,
-      bHidePlatforms: s,
-      creatorAccountID: c,
-      bIsHovered: l,
-      onlyOneDiscountPct: u,
-      strDoubleCapsuleMessage: f,
+      elElementToAppendToHover: o,
+      bHidePrice: s,
+      bHidePlatforms: l,
+      creatorAccountID: u,
+      bIsHovered: d,
+      onlyOneDiscountPct: f,
+      strDoubleCapsuleMessage: p,
     } = e,
-    { data: p } = L(t),
-    { bIsOwned: m } = _(t);
-  return i && p && p.item_type == 0 && p.appid
-    ? (0, Z.jsx)(d, { appid: p.appid, bIsMuted: l })
-    : a
+    { data: m } = L(t),
+    { bIsOwned: h } = c(t);
+  return i && m && m.item_type == 0 && m.appid
+    ? (0, Z.jsx)(a, { appid: m.appid, bIsMuted: d })
+    : o
       ? null
       : (0, Z.jsx)($, {
           id: t,
-          bHidePrice: o,
-          bShowInLibraryInsteadOfPrice: !!(m && n),
-          bHidePlatforms: s,
-          creatorAccountID: c,
+          bHidePrice: s,
+          bShowInLibraryInsteadOfPrice: !!(h && n),
+          bHidePlatforms: l,
+          creatorAccountID: u,
           bShowName: e.bShowName,
-          onlyOneDiscountPct: u,
-          bShowWishlistButton: !!f,
+          onlyOneDiscountPct: f,
+          bShowWishlistButton: !!p,
         });
 }
 function $(e) {
@@ -353,35 +353,35 @@ function $(e) {
       id: t,
       bHidePrice: n,
       bShowInLibraryInsteadOfPrice: r,
-      bHidePlatforms: i,
-      strClassName: a,
-      creatorAccountID: o,
-      bShowName: s,
+      bHidePlatforms: a,
+      strClassName: o,
+      creatorAccountID: s,
+      bShowName: c,
       onlyOneDiscountPct: l,
-      bShowAddToCart: u,
-      bShowWishlistButton: d,
+      bShowAddToCart: d,
+      bShowWishlistButton: f,
     } = e,
-    f = (0, K.useRef)(null),
-    [m, g] = (0, K.useState)(!1),
+    p = (0, K.useRef)(null),
+    [h, g] = (0, K.useState)(!1),
     { data: _ } = L(t);
   if (
     ((0, K.useEffect)(() => {
-      f.current && g(f.current.offsetWidth < 370);
-    }, [f]),
+      p.current && g(p.current.offsetWidth < 370);
+    }, [p]),
     !t || !(`appid` in t || `bundleid` in t || `packageid` in t))
   )
     return null;
-  let v = !!(d && _?.item_type == 0);
+  let v = !!(f && _?.item_type == 0);
   return (0, Z.jsxs)(Z.Fragment, {
     children: [
-      !(!o && !u && !v && i && n) &&
+      !(!s && !d && !v && a && n) &&
         (0, Z.jsxs)(`div`, {
-          ref: f,
-          className: W(`fNtXEMzHz58-`, `CapsuleBottomBar`, a),
+          ref: p,
+          className: W(`fNtXEMzHz58-`, `CapsuleBottomBar`, o),
           children: [
-            o && (0, Z.jsx)(Be, { creatorAccountID: o, ...e }),
-            u &&
-              (0, Z.jsx)(p, {
+            s && (0, Z.jsx)(Be, { creatorAccountID: s, ...e }),
+            d &&
+              (0, Z.jsx)(i, {
                 id: t,
                 className: W(`RAahmG4F6sc-`, `oqhyMK1Krt0-`),
               }),
@@ -391,12 +391,12 @@ function $(e) {
                 appid: t.appid,
                 className: W(`RAahmG4F6sc-`, `GRw4r5TpD5s-`),
               }),
-            !i &&
-              (0, Z.jsx)(h, { id: t, bMinimizePlatforms: m, bHideWindows: !0 }),
+            !a &&
+              (0, Z.jsx)(m, { id: t, bMinimizePlatforms: h, bHideWindows: !0 }),
             !n &&
               (0, Z.jsx)(`span`, {
                 className: `_0MLgqm-W-nA-`,
-                children: (0, Z.jsx)(c, {
+                children: (0, Z.jsx)(u, {
                   id: t,
                   bShowInLibrary: r,
                   onlyOneDiscountPct: l,
@@ -404,14 +404,14 @@ function $(e) {
               }),
           ],
         }),
-      s && (0, Z.jsx)(ze, { id: t }),
+      c && (0, Z.jsx)(ze, { id: t }),
     ],
   });
 }
 function ze(e) {
   let { id: t } = e,
     { data: n } = L(t);
-  return n?.name ? (0, Z.jsx)(`div`, { className: b, children: n.name }) : null;
+  return n?.name ? (0, Z.jsx)(`div`, { className: g, children: n.name }) : null;
 }
 function Be(e) {
   let { creatorAccountID: t, strClassName: n } = e,
@@ -420,12 +420,12 @@ function Be(e) {
     { data: a } = V(r);
   if (!i) return null;
   let o = P(a?.clan_avatar, `Medium`),
-    c = i.name || ``;
+    s = i.name || ``;
   return (0, Z.jsxs)(`div`, {
-    className: W(s, n),
+    className: W(p, n),
     children: [
-      (0, Z.jsx)(`img`, { className: W(v), src: o, alt: c }),
-      (0, Z.jsx)(`span`, { className: x, children: c }),
+      (0, Z.jsx)(`img`, { className: W(v), src: o, alt: s }),
+      (0, Z.jsx)(`span`, { className: _, children: s }),
     ],
   });
 }

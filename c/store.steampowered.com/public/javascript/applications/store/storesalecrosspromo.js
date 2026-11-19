@@ -1,6 +1,5 @@
 import { _ } from "./chunk~f025431ab0.js";
 import { _, _, _, _, _ } from "./chunk~01cfc309bf.js";
-import { _, _ } from "./chunk~6b8ddcaac8.js";
 import {
   _,
   _,
@@ -18,14 +17,16 @@ import {
   _,
   _,
   _,
-} from "./chunk~3720b337f3.js";
+  _,
+  _,
+} from "./chunk~6b8ddcaac8.js";
 import { _, _ } from "./chunk~f57d770d64.js";
 import { _, _, _, _ } from "./chunk~cbbb6ae37c.js";
-import { _, _ } from "./chunk~9871ee5432.js";
+import { _, _, _, _ } from "./chunk~ffe4581a06.js";
 import { _ } from "./chunk~b980924b6a.js";
-import { _, _ } from "./chunk~d43c81a658.js";
+import "./chunk~21cdc464a1.js";
+import { _ } from "./chunk~710e3cfd2f.js";
 import {
-  _,
   _,
   _,
   _,
@@ -42,9 +43,7 @@ import {
   _,
   _,
 } from "./chunk~b8ca037aae.js";
-import "./chunk~21cdc464a1.js";
-import { _ } from "./chunk~710e3cfd2f.js";
-import { _ } from "./chunk~331382b23f.js";
+import { _, _, _, _, _ } from "./chunk~3720b337f3.js";
 import { _, _ } from "./chunk~379edc388d.js";
 import {
   _,
@@ -76,193 +75,6 @@ async function _(_, _ = 1e3) {
       (_.onerror = () => _(`error`)),
       _ > 0 && window.setTimeout(() => _(`timeout`), _));
   });
-}
-var _ = _(_(), 1),
-  _ = _.createContext(void 0);
-function _(_) {
-  return (
-    (_(_) || !!_.sale_tag_filter) &&
-    !_.enable_faceted_browsing &&
-    !_.disable_visibility_tracking &&
-    _.section_type !== `trailercarousel`
-  );
-}
-function _(_, _, _, _) {
-  let _ = [],
-    _ = [];
-  for (let _ of _) (_(_) ? _ : _).push(_);
-  return _.length ? (_ && _.length < _ ? _ : _.concat(_)) : _;
-}
-function _(_, _, _, _) {
-  let _ = _.useContext(_),
-    _ = _.useContext(_),
-    _ = _.useMemo(
-      () => (_ ? _.GetSaleSectionIncludingFooterSections().indexOf(_) : -1),
-      [_, _],
-    ),
-    _ = _.useId(),
-    _ = _(_, 0, _) || _?.length || 0,
-    _ = _.useMemo(() => {
-      if (!_ || !_ || _ < 0) return _;
-      let _ = _(_)
-        ? _(
-            _,
-            (_) => _.BSeenAbove(_, _),
-            _,
-            !!_.visibility_tracking_drop_duplicates,
-          )
-        : _;
-      return (_.SetFirstPage(_, _, _.slice(0, _)), _);
-    }, [_, _, _, _, _, _]);
-  return (
-    _.useEffect(() => {
-      if (!(!_ || !_ || _ < 0))
-        return (_.SetFirstPage(_, _, _.slice(0, _)), () => _.Remove(_));
-    }, [_, _, _, _, _]),
-    _
-  );
-}
-var _ = _(),
-  _ = 250;
-function _(_) {
-  let {
-      event: _,
-      section: _,
-      language: _,
-      promotedSaleEvent: _,
-      Frame: _ = _,
-      nMaxCapsules: _,
-    } = _,
-    _ = _(),
-    _ = _(),
-    { nMaxCapsulesPerRow: _, bScreenIsWide: _ } = _(_.section_type),
-    _ = _.useContext(_),
-    _ = _(_, _, !0),
-    _ = _(_, _, _, _),
-    { capsules: _, nHiddenCapsules: _ } = _(_, _, _, void 0, !0),
-    _ = _ ? _?.slice(0, _) : _,
-    _ = _.useMemo(() => _(_, _?.length), [_, _?.length]),
-    _ = _(_, _),
-    _ = _(_, _),
-    [_, _] = _.useState(0),
-    _ = _(_, _),
-    _ = _ && !_ && !_ && _(_),
-    _ = _ ? _(_, _, _) : void 0;
-  if (_(_, _) === `personalized_carousel`) {
-    let _ = _(_, _, _);
-    if (_ === void 0)
-      return (0, _.jsx)(_, {
-        capsules_per_row: _,
-        swipe_row: _,
-      });
-    if (_ === null) return null;
-  }
-  let _;
-  if (!_)
-    _ = (0, _.jsx)(_, {
-      capsules_per_row: _,
-      swipe_row: _,
-    });
-  else {
-    let _ = _({
-        saleEvent: _,
-        section: _,
-        capsules: _,
-        language: _,
-        bInGamepadUI: _,
-        nMaxCapsulesPerRow: _,
-        bScreenIsWide: _,
-        nShowAdditionalRows: _,
-        bPaginationPills: _,
-      }),
-      { content: _, bAdditionalContent: _ } = _(_);
-    if (((_ = _), !_ && !_)) return null;
-    _ &&
-      _ &&
-      (_ = (0, _.jsxs)(_.Fragment, {
-        children: [
-          _,
-          (0, _.jsx)(_, {
-            section: _,
-            nRowsWithNext: _(_, _) + 1,
-            nCapsules: _.length,
-            rgRowSizes: _,
-            onShowMore: () => _(_ + _(_)),
-          }),
-        ],
-      }));
-  }
-  let { feature: _, depth: _ } = _(_, _, _);
-  return (0, _.jsx)(_, {
-    feature: _,
-    depth: _,
-    children: (0, _.jsxs)(_, {
-      event: _,
-      section: _,
-      language: _,
-      bInGamepadUI: _,
-      placeholderHeight: (_ ? _ : _(_, _?.length ?? 0, _)) + `px`,
-      nHiddenCapsules: _,
-      personalizedCarousels: _,
-      promotedSaleEvent: _,
-      children: [
-        (0, _.jsx)(_, {
-          event: _,
-          section: _,
-        }),
-        (0, _.jsx)(_, {
-          capsules: _,
-        }),
-        _,
-      ],
-    }),
-  });
-}
-function _(_, _, _) {
-  return _[0] === 1
-    ? {
-        width: `80vw`,
-        height: `320px`,
-      }
-    : _(_, _)[0] === `tall`
-      ? `tall_capsule`
-      : `capsule`;
-}
-function _(_, _, _) {
-  let _ = 0;
-  if (_.length > 0) for (let _ = _; _ > 0; _++) _ -= _[_ % _.length];
-  let _ = Math.min(_, _(_, 0));
-  return Math.max(1, _) * _;
-}
-function _(_) {
-  let { event: _, section: _, language: _, strHeading: _, children: _ } = _;
-  return (0, _.jsxs)(`div`, {
-    className: _(_, _),
-    children: [
-      (0, _.jsx)(`div`, {
-        className: _,
-        children: (0, _.jsx)(_, {
-          section: _,
-          event: _,
-          language: _,
-          promotedSale: null,
-          title: _ || _(`#Sale_CrossPromoSale_EventCapsuleHeading`),
-        }),
-      }),
-      _,
-    ],
-  });
-}
-function _(_, _) {
-  return {
-    ..._(`crosspromotesalepage`, ``),
-    sale_page_cross_promo_sales: _,
-    use_random_order: !1,
-    show_as_carousel: !0,
-    sale_page_cross_promo_layout: _,
-    capsules_per_row_array: [4],
-    carousel_rows: 1,
-  };
 }
 async function _(_, _, _, _, _) {
   let { queryClient: _, storeItemLoader: _ } = _,
@@ -342,6 +154,216 @@ function _(_, _) {
     : _.capsule_style_per_row_array
       ? _.capsule_style_per_row_array.includes(`fullrow`)
       : _(_, !1);
+}
+var _ = _(_(), 1),
+  _ = _.createContext(void 0);
+function _(_) {
+  return (
+    (_(_) || !!_.sale_tag_filter) &&
+    !_.enable_faceted_browsing &&
+    !_.disable_visibility_tracking &&
+    _.section_type !== `trailercarousel`
+  );
+}
+function _(_, _, _, _) {
+  let _ = [],
+    _ = [];
+  for (let _ of _) (_(_) ? _ : _).push(_);
+  return _.length ? (_ && _.length < _ ? _ : _.concat(_)) : _;
+}
+function _(_, _, _, _) {
+  let _ = _.useContext(_),
+    _ = _.useContext(_),
+    _ = _.useMemo(
+      () => (_ ? _.GetSaleSectionIncludingFooterSections().indexOf(_) : -1),
+      [_, _],
+    ),
+    _ = _.useId(),
+    _ = _(_, 0, _) || _?.length || 0,
+    _ = _.useMemo(() => {
+      if (!_ || !_ || _ < 0) return _;
+      let _ = _(_)
+        ? _(
+            _,
+            (_) => _.BSeenAbove(_, _),
+            _,
+            !!_.visibility_tracking_drop_duplicates,
+          )
+        : _;
+      return (_.SetFirstPage(_, _, _.slice(0, _)), _);
+    }, [_, _, _, _, _, _]);
+  return (
+    _.useEffect(() => {
+      if (!(!_ || !_ || _ < 0))
+        return (_.SetFirstPage(_, _, _.slice(0, _)), () => _.Remove(_));
+    }, [_, _, _, _, _]),
+    _
+  );
+}
+var _ = _(),
+  _ = 250;
+function _(_) {
+  let {
+      event: _,
+      section: _,
+      language: _,
+      promotedSaleEvent: _,
+      Frame: _ = _,
+      nMaxCapsules: _,
+    } = _,
+    _ = _(),
+    _ = _(),
+    { nMaxCapsulesPerRow: _, bScreenIsWide: _ } = _(_.section_type),
+    _ = _.useContext(_),
+    _ = _.useContext(_),
+    _ = _(_, _, !0),
+    _ = _(_, _, _, _),
+    { capsules: _, nHiddenCapsules: _ } = _(_, _, _, void 0, !0),
+    _ = _ ? _?.slice(0, _) : _,
+    _ = _.useMemo(() => _(_, _?.length), [_, _?.length]),
+    _ = _(_, _),
+    _ = _(_, _),
+    [_, _] = _.useState(0),
+    _ = _(_, _),
+    _ = _ && !_ && !_ && _(_),
+    _ = _ ? _(_, _, _) : void 0;
+  if (_(_, _) === `personalized_carousel`) {
+    let _ = _(_, _, _);
+    if (_ === void 0)
+      return (0, _.jsx)(_, {
+        capsules_per_row: _,
+        swipe_row: _,
+      });
+    if (_ === null) return null;
+  }
+  let _;
+  if (!_)
+    _ = (0, _.jsx)(_, {
+      capsules_per_row: _,
+      swipe_row: _,
+    });
+  else {
+    let _ = _({
+        saleEvent: _,
+        section: _,
+        capsules: _,
+        language: _,
+        bInGamepadUI: _,
+        nMaxCapsulesPerRow: _,
+        bScreenIsWide: _,
+        nShowAdditionalRows: _,
+        bPaginationPills: _,
+        bDropShortLastCarouselPage: _,
+      }),
+      { content: _, bAdditionalContent: _ } = _(_);
+    if (((_ = _), !_ && !_)) return null;
+    _ &&
+      _ &&
+      (_ = (0, _.jsxs)(_.Fragment, {
+        children: [
+          _,
+          (0, _.jsx)(_, {
+            section: _,
+            nRowsWithNext: _(_, _) + 1,
+            nCapsules: _.length,
+            rgRowSizes: _,
+            onShowMore: () => _(_ + _(_)),
+          }),
+        ],
+      }));
+  }
+  let { feature: _, depth: _ } = _(_, _, _);
+  return (0, _.jsx)(_, {
+    feature: _,
+    depth: _,
+    children: (0, _.jsxs)(_, {
+      event: _,
+      section: _,
+      language: _,
+      bInGamepadUI: _,
+      placeholderHeight: (_ ? _ : _(_, _?.length ?? 0, _)) + `px`,
+      nHiddenCapsules: _,
+      personalizedCarousels: _,
+      promotedSaleEvent: _,
+      children: [
+        (0, _.jsx)(_, {
+          event: _,
+          section: _,
+        }),
+        (0, _.jsx)(_, {
+          capsules: _,
+        }),
+        _,
+      ],
+    }),
+  });
+}
+function _(_, _, _) {
+  return _[0] === 1
+    ? {
+        width: `80vw`,
+        height: `320px`,
+      }
+    : _(_, _)[0] === `tall`
+      ? `tall_capsule`
+      : `capsule`;
+}
+function _(_, _, _) {
+  let _ = 0;
+  if (_.length > 0) for (let _ = _; _ > 0; _++) _ -= _[_ % _.length];
+  let _ = Math.min(_, _(_, 0));
+  return Math.max(1, _) * _;
+}
+function _(_) {
+  let {
+      event: _,
+      section: _,
+      language: _,
+      strHeading: _,
+      bOneSlide: _,
+      children: _,
+    } = _,
+    _ = _(),
+    [_, _] = _.useState(null);
+  return (0, _.jsxs)(`div`, {
+    className: _(_, _),
+    children: [
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsx)(_, {
+            section: _,
+            event: _,
+            language: _,
+            promotedSale: null,
+            title: _ || _(`#Sale_CrossPromoSale_EventCapsuleHeading`),
+          }),
+          _ &&
+            _ &&
+            (0, _.jsx)(_, {
+              label: _.strLabel,
+              shown: _.bShown,
+              button: `X`,
+            }),
+        ],
+      }),
+      (0, _.jsx)(_, {
+        value: _ ? _ : null,
+        children: _,
+      }),
+    ],
+  });
+}
+function _(_, _) {
+  return {
+    ..._(`crosspromotesalepage`, ``),
+    sale_page_cross_promo_sales: _,
+    use_random_order: !1,
+    show_as_carousel: !0,
+    sale_page_cross_promo_layout: _,
+    capsules_per_row_array: [4],
+    carousel_rows: 1,
+  };
 }
 var _ = `saleaction/storeitemsalecrosspromoitems`;
 function _(_) {
