@@ -2896,6 +2896,7 @@ var ReportPanel = {
 	strAssetBaseURL: '',
 	elLastFocused: null,
 	elAnchorTriggerOpen: null,
+	mapEnglishPlaceholders: {},
 
 	// { anchor, item, lang, quote } that outcomes ticked in the open popover are recorded against
 	target: null,
@@ -3480,7 +3481,8 @@ var ReportPanel = {
 
 		var autocomplete = $J( '#reply_text' ).data( 'textautocomplete' );
 		var rgResponses = Array.from( mapTargetsByTag, function( entry ) {
-			var strResponse = autocomplete.ReplacePlaceholders( entry[0] );
+			// TEMPORARY: English only for now, whatever the ticket's language
+			var strResponse = ReportPanel.mapEnglishPlaceholders[ entry[0] ] || autocomplete.ReplacePlaceholders( entry[0] );
 			if ( !entry[1].length )
 				return strResponse;
 
