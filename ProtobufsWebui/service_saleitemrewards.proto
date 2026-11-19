@@ -33,8 +33,7 @@ message CSaleItemRewards_CanClaimItem_Request {
 message CSaleItemRewards_CanClaimItem_Response {
 	optional bool can_claim = 1;
 	optional uint32 next_claim_time = 2;
-	//optional UNKNOWN reward_item = 3;
-	//optional .LoyaltyRewardDefinition reward_item = 3;
+	optional .LoyaltyRewardDefinition reward_item = 3;
 }
 
 message CSaleItemRewards_ClaimItem_Request {
@@ -44,8 +43,7 @@ message CSaleItemRewards_ClaimItem_Request {
 message CSaleItemRewards_ClaimItem_Response {
 	optional uint64 communityitemid = 1;
 	optional uint32 next_claim_time = 2;
-	//optional UNKNOWN reward_item = 3;
-	//optional .LoyaltyRewardDefinition reward_item = 3;
+	optional .LoyaltyRewardDefinition reward_item = 3;
 }
 
 message CSaleItemRewards_GetClaimedSaleRewards_Request {

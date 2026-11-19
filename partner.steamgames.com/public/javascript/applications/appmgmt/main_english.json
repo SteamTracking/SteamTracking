@@ -1872,6 +1872,8 @@
     "PartnerDeadline_TaxRequirement_Invalid": "Your tax information is invalid.",
     "PartnerDeadline_TaxRequirement_NewDocuments": "New tax documents are available.",
     "PartnerDeadline_TaxRequirement_NoTINTreaty": "You may be eligible to claim tax treaty benefits.",
+    "PartnerDeadline_TaxRequirement_Renewal-W8-Initial": "Our records show that the US tax form W-8BEN we have on file for you is due to expire on %1$s.",
+    "PartnerDeadline_TaxRequirement_Renewal-W8-Partner-Urgent": "Our records show that the US tax form W-8BEN we have on file for you has expired.",
     "PartnerDeadline_TaxRequirement_Title": "Your tax information requires attention",
     "PartnerDeadline_TaxRequirement_Title_FileReceived": "Your tax/identity file has been received",
     "PartnerDeadline_TaxRequirement_Title_Freeform": "You have a message about your tax status",

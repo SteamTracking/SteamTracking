@@ -1,0 +1,20 @@
+.crossfade {
+  position: relative;
+  overflow: hidden;
+}
+.crossfade-anim-exit {
+  opacity: 1;
+  transition-property: opacity;
+  transition-timing-function: linear;
+}
+.crossfade-anim-exit-active {
+  opacity: 0.01;
+}
+.crossfade-img {
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  position: absolute;
+  inset-inline: 0;
+}
+/*$vite$:1*/
