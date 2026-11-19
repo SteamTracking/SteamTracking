@@ -21,6 +21,9 @@ import { ReadLines, rootDir, state } from "./state.ts";
 
 type ClientAssets = Record<string, { href: string }[] | undefined>;
 
+// Language chunk import, with the import path as written and the key that names the language
+type LanguageImport = { path: string; language: string; key: string };
+
 export const ssrRequest = "SSR";
 
 const ssrUrlsPath = join(rootDir, ".support/urls_from_ssr.txt");
@@ -225,11 +228,41 @@ export function DeleteOldSsrFiles(): void {
 }
 
 /**
+ * Returns the language chunk imports in the code, with the import path as written.
+ */
+export function FindLanguageImports(code: string): LanguageImport[] {
+	const imports: LanguageImport[] = [];
+
+	traverse(ParseJavascript(code), {
+		enter: function (node) {
+			if (node.type !== Syntax.ImportExpression) {
+				return;
+			}
+
+			const path = GetStringValue((node as ImportExpression).source);
+
+			if (path === null) {
+				return;
+			}
+
+			const languageKey = GetLanguageKey(this.parents());
+
+			if (languageKey !== null) {
+				imports.push({ path, ...languageKey });
+			}
+		},
+	});
+
+	return imports;
+}
+
+/**
  * Language chunks are imported as `x.russian = () => import(...)` or as `"sales_russian.json": () => import(...)`.
  * The nearest assignment or object key names the language.
- * Returns the language, or null when the import is not a language chunk.
+ * Returns the language and the key, or null when the import is not a language chunk.
+ * The key is a property name such as `russian`, or a path such as `../../localization/main_russian.json`.
  */
-export function GetLanguageChunk(parents: Node[]): string | null {
+function GetLanguageKey(parents: Node[]): { language: string; key: string } | null {
 	for (let i = parents.length - 1; i >= 0; i--) {
 		const parent = parents[i] as Node;
 		const assignment = parent as AssignmentExpression;
@@ -246,7 +279,11 @@ export function GetLanguageChunk(parents: Node[]): string | null {
 
 		const match = languageKeyPattern.exec(key);
 
-		return match === null ? null : match[1];
+		if (match === null) {
+			return null;
+		}
+
+		return { language: match[1], key };
 	}
 
 	return null;
@@ -334,7 +371,7 @@ export async function GenerateSsrUrls(reachableOnly: boolean): Promise<void> {
 							return;
 						}
 
-						const language = GetLanguageChunk(this.parents());
+						const language = GetLanguageKey(this.parents())?.language ?? null;
 
 						if (language === "english") {
 							englishChunks.add(basename(importPath));

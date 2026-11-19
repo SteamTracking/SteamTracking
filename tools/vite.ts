@@ -2,14 +2,10 @@ import { hash } from "node:crypto";
 import { existsSync, readdirSync, unlinkSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { join, posix, relative, sep } from "node:path";
-import { Syntax, traverse } from "estraverse";
-import type { ImportExpression } from "estree";
 import { chunkSourcePaths, chunkTemporaryNames } from "./chunk_names.ts";
-import { ParseJavascript } from "./dump_javascript_paths.ts"; // also fixes estraverse Syntax and VisitorKeys
-import { GetStringValue } from "./extract_strings.ts";
 import { ParseUrls } from "./fetch_urls.ts";
 import { Log } from "./log.ts";
-import { GetLanguageChunk } from "./ssr.ts";
+import { FindLanguageImports } from "./ssr.ts";
 import type { UrlToFetch } from "./state.ts";
 import { rootDir, state } from "./state.ts";
 
@@ -19,12 +15,14 @@ export type ViteDiscovery = {
 	missingFiles: string[];
 };
 
-const apps = [
-	{ host: "store.steampowered.com", app: "store" },
-	{ host: "steamcommunity.com", app: "community" },
-	{ host: "help.steampowered.com", app: "help" },
-	{ host: "partner.steamgames.com", app: "appmgmt" },
-	{ host: "partner.steampowered.com", app: "stats" },
+// Script folder of each app, relative to the root
+const appScriptFolders = [
+	"store.steampowered.com/public/javascript/applications/store",
+	"steamcommunity.com/public/javascript/applications/community",
+	"steamcommunity.com/public/javascript/webui",
+	"help.steampowered.com/public/javascript/applications/help",
+	"partner.steamgames.com/public/javascript/applications/appmgmt",
+	"partner.steampowered.com/public/javascript/applications/stats",
 ];
 
 // Matches a relative .js or .css path inside any kind of quote, with an optional query such as `?contenthash=`.
@@ -37,18 +35,27 @@ export function IsEnglishChunk(file: string): boolean {
 	return state.viteEnglishChunks.has(file);
 }
 
-function GetAppFolders(host: string, app: string): string[] {
-	return [`${host}/public/javascript/applications/${app}`, `${host}/public/css/applications/${app}`];
-}
-
 type ChunkName = { name: string; clashes: boolean };
 
-const appFolders = new Set<string>();
+// Script and css folders of the apps, relative to the root
+export const appFolders = new Set<string>();
 
-for (const { host, app } of apps) {
-	for (const folder of GetAppFolders(host, app)) {
-		appFolders.add(folder);
+for (const scriptFolder of appScriptFolders) {
+	appFolders.add(scriptFolder);
+	appFolders.add(scriptFolder.replace("/public/javascript/", "/public/css/"));
+}
+
+/**
+ * Returns true for a file in an app folder or below it.
+ */
+export function IsViteAppFile(file: string): boolean {
+	for (const folder of appFolders) {
+		if (file.startsWith(`${folder}/`)) {
+			return true;
+		}
 	}
+
+	return false;
 }
 
 const chunkFilePattern = /^chunk~([0-9a-f]{10,11})\.(js|css)$/;
@@ -193,24 +200,36 @@ export function GetChunkName(id: string): string | null {
 }
 
 /**
+ * Returns the readable file name of a `chunk~` file name, or the file name as is when the id is not known.
+ */
+export function GetReadableChunkFileName(fileName: string): string {
+	const match = chunkFilePattern.exec(fileName);
+
+	if (match === null) {
+		return fileName;
+	}
+
+	const name = GetChunkName(match[1]);
+
+	if (name === null) {
+		return fileName;
+	}
+
+	return `${name}.${match[2]}`;
+}
+
+/**
  * Returns the path of a `chunk~` file in an app folder under its readable name, or the path as is.
  */
 function GetReadableChunkPath(file: string): string {
 	const slash = file.lastIndexOf("/");
-	const match = chunkFilePattern.exec(file.slice(slash + 1));
-
-	if (match === null) {
-		return file;
-	}
-
 	const folder = file.slice(0, slash);
-	const name = GetChunkName(match[1]);
 
-	if (!appFolders.has(folder) || name === null) {
+	if (!appFolders.has(folder)) {
 		return file;
 	}
 
-	return `${folder}/${name}.${match[2]}`;
+	return `${folder}/${GetReadableChunkFileName(file.slice(slash + 1))}`;
 }
 
 /**
@@ -245,7 +264,7 @@ export function GetSavedPath(file: string): string {
 /**
  * Returns the path of the json file saved for a js file: `x.js` becomes `x.json` and `x-json.js` becomes `x.json`.
  */
-function GetJsonPath(path: string): string {
+export function GetJsonPath(path: string): string {
 	if (path.endsWith("-json.js")) {
 		return `${path.slice(0, -8)}.json`;
 	}
@@ -258,14 +277,21 @@ function GetJsonPath(path: string): string {
  * A change to the name table moves saved files without any chunk being downloaded, so this is what
  * makes a run with every file cached still update the Vite files.
  * The English chunk list is only filled while discovering, so a json file counts as present too.
+ * Also returns true when an app has no saved chunks, because every app references chunks
+ * and a newly added app has never been walked.
  */
 export function HasMissingViteFiles(): boolean {
+	const foldersWithChunks = new Set<string>();
+
 	for (const file of Object.keys(state.hashes)) {
 		const slash = file.lastIndexOf("/");
+		const folder = file.slice(0, slash);
 
-		if (!appFolders.has(file.slice(0, slash)) || !chunkFilePattern.test(file.slice(slash + 1))) {
+		if (!appFolders.has(folder) || !chunkFilePattern.test(file.slice(slash + 1))) {
 			continue;
 		}
+
+		foldersWithChunks.add(folder);
 
 		const path = GetReadableChunkPath(file);
 
@@ -274,6 +300,12 @@ export function HasMissingViteFiles(): boolean {
 		}
 
 		return true;
+	}
+
+	for (const scriptFolder of appScriptFolders) {
+		if (!foldersWithChunks.has(scriptFolder)) {
+			return true;
+		}
 	}
 
 	return false;
@@ -296,35 +328,16 @@ function FindReferences(file: string, code: string): { chunks: string[]; english
 	const languageChunks = new Set<string>();
 	const englishChunks: string[] = [];
 	const chunks: string[] = [];
-	const ast = ParseJavascript(code);
 
-	traverse(ast, {
-		enter: function (node) {
-			if (node.type !== Syntax.ImportExpression) {
-				return;
-			}
+	for (const languageImport of FindLanguageImports(code)) {
+		const chunk = ResolveReference(languageImport.path, file);
 
-			const importPath = GetStringValue((node as ImportExpression).source);
+		languageChunks.add(chunk);
 
-			if (importPath === null) {
-				return;
-			}
-
-			const language = GetLanguageChunk(this.parents());
-
-			if (language === null) {
-				return;
-			}
-
-			const chunk = ResolveReference(importPath, file);
-
-			languageChunks.add(chunk);
-
-			if (language === "english") {
-				englishChunks.push(chunk);
-			}
-		},
-	});
+		if (languageImport.language === "english") {
+			englishChunks.push(chunk);
+		}
+	}
 
 	for (const match of code.matchAll(referencePattern)) {
 		const chunk = ResolveReference(match[1], file);
@@ -355,8 +368,7 @@ export async function DiscoverViteFiles(listedFiles: Set<string>): Promise<ViteD
 	const reachedFiles = new Set<string>();
 	const missingFiles: string[] = [];
 
-	for (const { host, app } of apps) {
-		const scriptFolder = `${host}/public/javascript/applications/${app}`;
+	for (const scriptFolder of appScriptFolders) {
 		const queue: string[] = [];
 		let references = 0;
 
@@ -404,7 +416,7 @@ export async function DiscoverViteFiles(listedFiles: Set<string>): Promise<ViteD
 		}
 
 		if (references === 0) {
-			throw new Error(`No chunk references found for ${host} ${app}`);
+			throw new Error(`No chunk references found for ${scriptFolder}`);
 		}
 	}
 

@@ -1,14 +1,23 @@
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
-import { basename, dirname, extname, join, relative, resolve, sep } from "node:path";
+import {
+	existsSync,
+	mkdirSync,
+	readdirSync,
+	readFileSync,
+	renameSync,
+	rmSync,
+	unlinkSync,
+	writeFileSync,
+} from "node:fs";
+import { basename, dirname, extname, join, posix, relative, resolve, sep } from "node:path";
 import { crc32 } from "node:zlib";
-import type { ExpressionStatement } from "estree";
 import { unzipSync } from "fflate";
-import { ParseJavascript } from "./dump_javascript_paths.ts";
-import { GetStringValue } from "./extract_strings.ts";
+import { ExtractStrings, FormatStrings } from "./extract_strings.ts";
 import { FormatFiles } from "./format_files.ts";
 import { GenerateCleanJs } from "./generate_clean_js.ts";
 import { Log } from "./log.ts";
+import { FindLanguageImports } from "./ssr.ts";
+import { GetJsonPath, GetReadableChunkFileName } from "./vite.ts";
 
 export const linuxArchivesPath = ".support/linux_archives";
 export const linuxArchiveManifests = [
@@ -38,8 +47,6 @@ const dumpStrings = join(dumpStringsDir, `DumpStrings${exeSuffix}`);
 
 // Dumped strings can be tens of megabytes.
 const maxOutputSize = 1024 * 1024 * 1024;
-
-const jsonParsePattern = /exports=JSON\.parse\(('[^\n]*'|`[^\n]*`)\)/;
 
 interface ArchiveEntry {
 	name: string;
@@ -261,40 +268,6 @@ function DumpStringsFile(file: string): void {
 	writeFileSync(outputFile, `${[...uniqueLines].join("\n")}\n`);
 }
 
-// Empty objects are written as empty arrays.
-export function EmptyObjectToArray(_key: string, value: unknown): unknown {
-	if (typeof value === "object" && value !== null && !Array.isArray(value) && Object.keys(value).length === 0) {
-		return [];
-	}
-
-	return value;
-}
-
-export function ExtractJsonFromWebpack(filename: string): boolean {
-	const data = readFileSync(filename, "utf8");
-	const match = jsonParsePattern.exec(data);
-
-	if (match === null) {
-		return false;
-	}
-
-	const program = ParseJavascript(match[1]);
-	const statement = program.body[0] as ExpressionStatement;
-	const value = GetStringValue(statement.expression);
-
-	if (value === null) {
-		throw new Error(`Failed to read the JSON string in ${filename}`);
-	}
-
-	const newFilename = filename.replace(/(-json)?\.js$/, ".json");
-	const json = JSON.parse(value, EmptyObjectToArray);
-
-	writeFileSync(newFilename, `${JSON.stringify(json, null, 4)}\n`);
-	unlinkSync(filename);
-
-	return true;
-}
-
 function FindFiles(dir: string, extensions: string[]): string[] {
 	if (!existsSync(dir)) {
 		return [];
@@ -309,11 +282,7 @@ function FindFiles(dir: string, extensions: string[]): string[] {
 async function ProcessJavascript(): Promise<void> {
 	Log("Processing javascript");
 
-	const directories = [
-		join(clientExtractedDir, "steamui"),
-		join(clientExtractedDir, "clientui"),
-		join(clientExtractedDir, "siteserverui"),
-	];
+	const directories = [join(clientExtractedDir, "steamui"), join(clientExtractedDir, "siteserverui")];
 
 	const files: string[] = [];
 
@@ -321,20 +290,16 @@ async function ProcessJavascript(): Promise<void> {
 		files.push(...FindFiles(dir, [".js", ".css"]));
 	}
 
+	const languageChunks = SaveLanguageChunks(files);
 	const filesToFormat: string[] = [];
-	let jsonFiles = 0;
 
-	for (const file of files) {
+	const otherFiles = files.filter((path) => !languageChunks.has(path));
+
+	for (const file of RenameChunks(otherFiles)) {
 		const relativePath = relative(clientExtractedDir, file);
-		const filename = basename(file);
 
 		if (extname(file) === ".js") {
-			if (!filename.startsWith("libraries~") && ExtractJsonFromWebpack(file)) {
-				jsonFiles++;
-				continue;
-			}
-
-			if (filename !== "manifest.js" && filename !== "licenses.js") {
+			if (basename(file) !== "licenses.js") {
 				const cleanFile = join(clientCleanDir, relativePath);
 
 				mkdirSync(dirname(cleanFile), { recursive: true });
@@ -351,9 +316,102 @@ async function ProcessJavascript(): Promise<void> {
 		filesToFormat.push(file);
 	}
 
-	Log(`Extracted json from ${jsonFiles} files`);
-
 	await FormatFiles(filesToFormat);
+}
+
+/**
+ * Saves the English language chunks that the files import as json, and deletes the js files of all language chunks.
+ * A chunk imported by its source path, as in `"../../localization/steamui_english.json": () => import(...)`,
+ * is saved in a localization folder under that file name. Other chunks are saved under their chunk name.
+ * Returns the js files of all language chunks.
+ */
+function SaveLanguageChunks(files: string[]): Set<string> {
+	const languageChunks = new Set<string>();
+	const jsonPaths = new Map<string, string>();
+
+	for (const file of files) {
+		if (extname(file) !== ".js") {
+			continue;
+		}
+
+		for (const languageImport of FindLanguageImports(readFileSync(file, "utf8"))) {
+			const chunk = resolve(dirname(file), languageImport.path.replace(/\?.*$/, ""));
+
+			languageChunks.add(chunk);
+
+			if (languageImport.language !== "english") {
+				continue;
+			}
+
+			if (languageImport.key.endsWith(".json")) {
+				jsonPaths.set(chunk, join(dirname(chunk), "localization", posix.basename(languageImport.key)));
+			} else if (!jsonPaths.has(chunk)) {
+				const fileName = GetReadableChunkFileName(basename(chunk));
+
+				jsonPaths.set(chunk, join(dirname(chunk), GetJsonPath(fileName)));
+			}
+		}
+	}
+
+	const chunkOfJsonPath = new Map<string, string>();
+
+	for (const [chunk, jsonPath] of [...jsonPaths].toSorted()) {
+		const owner = chunkOfJsonPath.get(jsonPath);
+
+		if (owner !== undefined) {
+			throw new Error(`${owner} and ${chunk} are both saved at ${jsonPath}`);
+		}
+
+		chunkOfJsonPath.set(jsonPath, chunk);
+
+		let strings: Record<string, string>;
+
+		try {
+			strings = ExtractStrings(readFileSync(chunk, "utf8"));
+		} catch (error) {
+			throw new Error(`Failed to extract strings from ${relative(clientExtractedDir, chunk)}`, { cause: error });
+		}
+
+		mkdirSync(dirname(jsonPath), { recursive: true });
+		writeFileSync(jsonPath, FormatStrings(strings));
+	}
+
+	for (const chunk of languageChunks) {
+		unlinkSync(chunk);
+	}
+
+	Log(`Saved ${jsonPaths.size} English chunks as json, deleted ${languageChunks.size} language chunks`);
+
+	return languageChunks;
+}
+
+/**
+ * Renames the `chunk~` files to their readable names, and returns the files at their new paths.
+ * A file keeps its `chunk~` name when another file already has the readable name.
+ */
+function RenameChunks(files: string[]): string[] {
+	const renamedFiles: string[] = [];
+
+	for (const file of files) {
+		const fileName = basename(file);
+		const readableFile = join(dirname(file), GetReadableChunkFileName(fileName));
+
+		if (readableFile === file) {
+			renamedFiles.push(file);
+			continue;
+		}
+
+		if (existsSync(readableFile)) {
+			Log(`{yellow}${relative(clientExtractedDir, readableFile)} already exists, keeping ${fileName}`);
+			renamedFiles.push(file);
+			continue;
+		}
+
+		renameSync(file, readableFile);
+		renamedFiles.push(readableFile);
+	}
+
+	return renamedFiles;
 }
 
 function FixEncodings(): void {

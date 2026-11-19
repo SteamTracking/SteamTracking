@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
-import { createWriteStream } from "node:fs";
+import { createWriteStream, existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
-import { dirname as pathDirname, join as pathJoin, resolve as pathResolve } from "node:path";
+import { basename as pathBasename, dirname as pathDirname, join as pathJoin, resolve as pathResolve } from "node:path";
 import type { Writable } from "node:stream";
 import { Syntax as EstraverseSyntax, replace, traverse } from "estraverse";
 import type {
@@ -10,6 +10,7 @@ import type {
 	BlockStatement,
 	CallExpression,
 	ClassBody,
+	ClassExpression,
 	FunctionExpression,
 	Identifier,
 	Literal,
@@ -20,9 +21,11 @@ import type {
 	Property,
 	SequenceExpression,
 	SpreadElement,
+	VariableDeclarator,
 } from "estree";
 import { GetFilesToParse, ParseJavascript } from "./dump_javascript_paths.ts";
 import { Log } from "./log.ts";
+import { GetReadableChunkFileName } from "./vite.ts";
 
 const __dirname = import.meta.dirname;
 const rootDir = pathResolve(__dirname, "..");
@@ -152,14 +155,15 @@ export async function DumpProtobufs(): Promise<void> {
 			const messages: Message[] = [];
 			const enums: Enum[] = [];
 
-			// ESM chunks (top-level `import`/`export` statements) go through a
-			// separate traversal. Webpack chunks contain their modules as Property
+			// ESM chunks and flat bundles (top-level `import`/`export` statements or message classes)
+			// go through a separate traversal. Webpack chunks contain their modules as Property
 			// nodes inside an object literal and still use the original path.
 			const isEsm = ast.body.some(
 				(node) =>
 					node.type === Syntax.ImportDeclaration ||
 					node.type === Syntax.ExportNamedDeclaration ||
-					node.type === Syntax.ExportDefaultDeclaration,
+					node.type === Syntax.ExportDefaultDeclaration ||
+					(node.type === Syntax.VariableDeclaration && node.declarations.some(IsMessageClassDeclarator)),
 			);
 
 			if (isEsm) {
@@ -1277,6 +1281,35 @@ function TraverseModule(ast: FunctionExpression | ArrowFunctionExpression, fileN
 }
 
 /**
+ * Returns the path of an imported file as saved, without its query.
+ * A `chunk~` file that is not on disk is saved under its readable name.
+ */
+function ResolveImportPath(file: string, importPath: string): string {
+	const path = pathResolve(pathDirname(file), importPath.replace(/\?.*$/, ""));
+
+	if (existsSync(path)) {
+		return path;
+	}
+
+	return pathJoin(pathDirname(path), GetReadableChunkFileName(pathBasename(path)));
+}
+
+/**
+ * Returns true for a message class declared as `var Ae = class t extends o.Message { ... }`.
+ */
+function IsMessageClassDeclarator(
+	node: VariableDeclarator,
+): node is VariableDeclarator & { id: Identifier; init: ClassExpression } {
+	return (
+		node.id.type === Syntax.Identifier &&
+		node.init?.type === Syntax.ClassExpression &&
+		node.init.superClass?.type === Syntax.MemberExpression &&
+		node.init.superClass.property.type === Syntax.Identifier &&
+		node.init.superClass.property.name === "Message"
+	);
+}
+
+/**
  * Parse an ES module file (top-level `import`/`export` statements, classes as
  * `var X = class extends o.Message { ... }` expressions) rather than a webpack
  * runtime chunk.
@@ -1298,7 +1331,7 @@ function TraverseEsmModule(ast: Program, file: string): TraverseResult {
 	// cross-file references and their exported name in the source chunk.
 	for (const node of ast.body) {
 		if (node.type === Syntax.ImportDeclaration) {
-			const moduleKey = pathResolve(pathDirname(file), node.source.value as string);
+			const moduleKey = ResolveImportPath(file, node.source.value as string);
 
 			for (const spec of node.specifiers) {
 				if (spec.type === Syntax.ImportSpecifier) {
@@ -1325,15 +1358,7 @@ function TraverseEsmModule(ast: Program, file: string): TraverseResult {
 	// Pass 2: walk the whole program for classes, services, enums.
 	traverse(ast, {
 		enter: function (node, parent) {
-			// var Ae = class t extends o.Message { ... }
-			if (
-				node.type === Syntax.VariableDeclarator &&
-				node.id.type === Syntax.Identifier &&
-				node.init?.type === Syntax.ClassExpression &&
-				node.init.superClass?.type === Syntax.MemberExpression &&
-				node.init.superClass.property.type === Syntax.Identifier &&
-				node.init.superClass.property.name === "Message"
-			) {
+			if (node.type === Syntax.VariableDeclarator && IsMessageClassDeclarator(node)) {
 				const message = TraverseClass(node.init.body, importedIds, constants);
 				message.id = node.id.name;
 				messages.push(message);

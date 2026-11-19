@@ -109,7 +109,6 @@ https://steamcommunity.com/public/css/skin_1/workshop_itemdetails.css?__TIME__&_
 https://steamcommunity.com/public/css/skin_1/workshop_itemedittext.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/workshop_managecollection.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/skin_1/workshop_userfiles.css?__TIME__&__CDN__
-https://steamcommunity.com/public/css/webui/friends.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/apphub.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/apphub_gamepad.css?__TIME__&__CDN__
 https://steamcommunity.com/public/shared/css/apphub_images.css?__TIME__&__CDN__

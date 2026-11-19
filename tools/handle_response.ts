@@ -1,23 +1,21 @@
 import { createHash, hash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
+import type { ExpressionStatement } from "estree";
 import { unzipSync } from "fflate";
-import {
-	archiveNamePattern,
-	EmptyObjectToArray,
-	ExtractJsonFromWebpack,
-	linuxArchiveManifests,
-	linuxArchivesPath,
-} from "./extract_client.ts";
-import { ExtractStrings, FormatStrings } from "./extract_strings.ts";
+import { ParseJavascript } from "./dump_javascript_paths.ts";
+import { archiveNamePattern, linuxArchiveManifests, linuxArchivesPath } from "./extract_client.ts";
+import { ExtractStrings, FormatStrings, GetStringValue } from "./extract_strings.ts";
 import { GenerateCleanJs } from "./generate_clean_js.ts";
 import { ExtractHermesStrings } from "./hermes.ts";
 import { Log } from "./log.ts";
 import { HandleSsrPage, IsSsrFile, ssrRequest } from "./ssr.ts";
 import { rootDir, state } from "./state.ts";
-import { GetSavedPath, IsEnglishChunk } from "./vite.ts";
+import { GetJsonPath, GetSavedPath, IsEnglishChunk, IsViteAppFile } from "./vite.ts";
 
 const apkFile = ".support/archives/steam-android.apk";
+
+const jsonParsePattern = /exports=JSON\.parse\(('[^\n]*'|`[^\n]*`)\)/;
 
 /**
  * Handles a downloaded file. Contains no await, so concurrent downloads never interleave in here.
@@ -170,10 +168,9 @@ function SaveTracked(originalFile: string, data: string, isSsr: boolean): boolea
 	}
 
 	if (savedFile.endsWith(".js")) {
-		const isViteFile = originalFile.includes("/applications/");
 		const isLocalization = originalFile.includes("/localization/");
 
-		if (isViteFile) {
+		if (IsViteAppFile(originalFile)) {
 			state.updateViteUrls = true;
 		}
 
@@ -196,6 +193,44 @@ function SaveTracked(originalFile: string, data: string, isSsr: boolean): boolea
 
 	state.filesToFormat.add(savedFile);
 	state.hashes[originalFile] = unmodifiedHash;
+
+	return true;
+}
+
+// Empty objects are written as empty arrays.
+function EmptyObjectToArray(_key: string, value: unknown): unknown {
+	if (typeof value === "object" && value !== null && !Array.isArray(value) && Object.keys(value).length === 0) {
+		return [];
+	}
+
+	return value;
+}
+
+/**
+ * Saves the JSON string of a webpack `-json.js` bundle next to it as `.json`, and deletes the bundle.
+ * Returns false when the file has no JSON string.
+ */
+function ExtractJsonFromWebpack(filename: string): boolean {
+	const data = readFileSync(filename, "utf8");
+	const match = jsonParsePattern.exec(data);
+
+	if (match === null) {
+		return false;
+	}
+
+	const program = ParseJavascript(match[1]);
+	const statement = program.body[0] as ExpressionStatement;
+	const value = GetStringValue(statement.expression);
+
+	if (value === null) {
+		throw new Error(`Failed to read the JSON string in ${filename}`);
+	}
+
+	const newFilename = GetJsonPath(filename);
+	const json = JSON.parse(value, EmptyObjectToArray);
+
+	writeFileSync(newFilename, `${JSON.stringify(json, null, 4)}\n`);
+	unlinkSync(filename);
 
 	return true;
 }

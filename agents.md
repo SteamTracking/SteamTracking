@@ -12,7 +12,7 @@ Tools are TypeScript run directly by Node, with no build step. Fix lint and form
 
 - `tools/update.ts` runs the steps in order. `urls.txt` lists what `tools/fetch_urls.ts` fetches.
 - `tools/handle_response.ts` validates and saves each response. A rejected response records no ETag, so it is fetched again.
-- `tools/vite.ts` walks from the `applications/` entries in `urls.txt` through the chunks they reference. Fetching repeats until nothing new appears, then files in the app folders that were not reached, or that the server no longer has, are deleted.
+- `tools/vite.ts` walks from the app entries in `urls.txt` (`applications/` folders and the community `webui/`) through the chunks they reference. Fetching repeats until nothing new appears, then files in the app folders that were not reached, or that the server no longer has, are deleted.
 - Language chunks are recognized by how they are imported, such as `x.russian = () => import(...)`, not by their file names.
 - `SSR @` pages and `tools/ssr.ts` find SSR bundles, and keep the list of SSR sites. Raw `ssr/` folders are ignored by git, only `c/` copies are tracked. Old SSR files are deleted only when every SSR page was parsed. The route table each SSR page embeds is saved to `Random/SsrRoutes.txt`.
 - `tools/extract_client.ts` unpacks client archives into `ClientExtracted/`.
@@ -20,12 +20,13 @@ Tools are TypeScript run directly by Node, with no build step. Fix lint and form
 
 ## Saved files
 
-- The four web apps (store, community, help, partner) are Vite builds. Dota 2, Counter-Strike, Deadlock and the client are webpack builds.
+- The four web apps (store, community, help, partner) and the client are Vite builds. Dota 2, Counter-Strike and Deadlock are webpack builds.
 - `chunk~<id>` file names are hashes of source paths. `tools/chunk_names.ts` explains the hash and lists the known source paths; add new ones there. Files are saved under the readable name when one is known, and keep the `chunk~` name otherwise.
 - To follow a `chunk~` import to its saved file, run `node tools/chunk_lookup.ts <file or id>`.
 - `contenthash` is stripped from saved files.
 - `c/` holds normalized JS. Do not mark it `linguist-generated`: its diffs are the ones to read.
-- English chunks under `applications/` and `*_english-json.js` bundles are saved as JSON only. SSR English chunks merge into `Strings/*_ssr_english.json`. Web files in other languages are skipped; `ClientExtracted/` keeps them.
+- English chunks in the app folders and `*_english-json.js` bundles are saved as JSON only. SSR English chunks merge into `Strings/*_ssr_english.json`. Web files in other languages are skipped.
+- Client English chunks are saved as JSON, and other languages are skipped. Chunks imported by source path, such as `"../../localization/steamui_english.json"`, are saved under that name in `localization/`.
 - Binary file types must be listed in `.gitattributes`, because everything else is normalized to LF.
 
 ## urls.txt
@@ -42,4 +43,4 @@ JS files use `?__TIME__&l=english&__CDN__`, CSS files use `?__TIME__&__CDN__`. N
 
 Use the site's own host, not a CDN host: `/public/` URLs on `store.steampowered.com` and `steamcommunity.com` are rewritten to the CDN when fetched.
 
-List only entry files under `applications/`. Chunks they reference are discovered automatically.
+List only entry files in the app folders. Chunks they reference are discovered automatically.

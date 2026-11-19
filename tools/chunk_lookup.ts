@@ -1,7 +1,7 @@
 import { existsSync, globSync, readFileSync } from "node:fs";
 import { dirname, relative, resolve } from "node:path";
 import { rootDir } from "./state.ts";
-import { GetChunkName } from "./vite.ts";
+import { appFolders, GetChunkName } from "./vite.ts";
 
 const referencePattern = /chunk~([0-9a-f]{10,11})\.(js|css)/g;
 const bareIdPattern = /^(?:chunk~)?([0-9a-f]{10,11})(?:\.js)?$/;
@@ -38,7 +38,11 @@ function ToRootPath(path: string): string {
 function LookupFile(file: string): void {
 	const code = readFileSync(file, "utf8");
 	const folder = dirname(file);
-	const cssFolder = folder.replace(/([\\/])javascript([\\/]applications[\\/])/, "$1css$2");
+	const cssFolders = [
+		folder.replace(/([\\/]public[\\/])javascript([\\/])/, "$1css$2"),
+		resolve(folder, "css"),
+		resolve(folder, "..", "css"),
+	];
 	const seen = new Set<string>();
 
 	for (const match of code.matchAll(referencePattern)) {
@@ -54,8 +58,10 @@ function LookupFile(file: string): void {
 		const extension = match[2];
 		let saved = FindSavedFile(folder, id, extension);
 
-		if (saved === null && extension === "css") {
-			saved = FindSavedFile(cssFolder, id, extension);
+		if (extension === "css") {
+			for (const cssFolder of cssFolders) {
+				saved ??= FindSavedFile(cssFolder, id, extension);
+			}
 		}
 
 		const name = GetChunkName(id) ?? "unknown";
@@ -81,9 +87,12 @@ function LookupId(id: string): void {
 	}
 
 	for (const fileName of names) {
-		const pattern = `{,c/}*/public/{javascript,css}/applications/*/${fileName}.{js,json,css}`;
+		const patterns = [
+			`{,c/}{${[...appFolders].join(",")}}/${fileName}.{js,json,css}`,
+			`{,c/}ClientExtracted/*/{,js/,css/}${fileName}.{js,json,css}`,
+		];
 
-		for (const path of globSync(pattern, { cwd: rootDir }).toSorted()) {
+		for (const path of globSync(patterns, { cwd: rootDir }).toSorted()) {
 			console.log(`\t${path.replaceAll("\\", "/")}`);
 		}
 	}
