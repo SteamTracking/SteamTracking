@@ -61,15 +61,19 @@ function _(_) {
       marginTop: `3`,
       children: (0, _.jsxs)(_, {
         gap: `2`,
-        padding: `4`,
+        padding: `5`,
         direction: `column`,
-        background: `red-3`,
-        border: `2px solid var(--color-red-7)`,
+        outline: `red-7`,
         radius: `sm`,
         align: `center`,
+        style: {
+          background: `#2f2121`,
+        },
         children: [
           (0, _.jsx)(_, {
-            size: `5`,
+            size: `4`,
+            weight: `regular`,
+            contrast: `title`,
             align: `center`,
             children: _.Localize(`#Market_AppUnplayedAndUnvetted`),
           }),

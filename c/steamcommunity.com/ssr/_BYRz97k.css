@@ -54,6 +54,11 @@
   height: 32px;
   display: block;
 }
+._6hfcXb8dNEU- {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
 @property --item-color-strength {
   syntax: "<percentage>";
   inherits: false;
@@ -79,7 +84,7 @@
       var(--item-color-mixed) 0%,
       transparent 100%
     ),
-    var(--color-dull-6);
+    var(--row-background, var(--color-dull-6));
   border: 1px solid var(--item-color-mixed);
   pointer-events: none;
   z-index: -1;

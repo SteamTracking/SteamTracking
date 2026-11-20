@@ -21,8 +21,6 @@ function _(_) {
   return (0, _.jsxs)(_.Fragment, {
     children: [
       (0, _.jsx)(_, {
-        size: `6`,
-        weight: `heavy`,
         children: _.Localize(`#AdvancedSearch_Header`),
       }),
       (0, _.jsx)(_, {
@@ -62,14 +60,18 @@ function _(_) {
     _ = _.length > 0;
   return (0, _.jsxs)(_, {
     gap: `2`,
-    padding: `4`,
+    padding: `5`,
     direction: `column`,
-    background: `red-3`,
-    border: `2px solid var(--color-red-7)`,
+    outline: `red-7`,
     radius: `sm`,
+    style: {
+      background: `#2f2121`,
+    },
     children: [
       (0, _.jsx)(_, {
-        size: `5`,
+        size: `4`,
+        weight: `regular`,
+        contrast: `title`,
         children: _.LocalizePlural(`#Unavailable_Header`, _.length),
       }),
       (0, _.jsxs)(`ul`, {
@@ -112,7 +114,7 @@ function _(_) {
     children: _.LocalizeReact(
       `#Economy_Market_HeaderTip_TimeCanUse`,
       (0, _.jsx)(_, {
-        color: `green-10`,
+        color: `blue-11`,
         children: _,
       }),
     ),
@@ -398,11 +400,6 @@ function _() {
       initial: `2`,
       _: `4`,
     },
-    paddingTop: {
-      initial: `0`,
-      _: `2`,
-      _: `7`,
-    },
     className: _,
     children: [
       (0, _.jsxs)(_, {
@@ -421,21 +418,38 @@ function _() {
             gap: `3`,
             className: _,
             children: [
-              (0, _.jsx)(_, {
-                href: _.Home(),
-                children: (0, _.jsx)(_, {
-                  size: {
-                    initial: `7`,
-                    _: `6`,
-                  },
-                  align: {
-                    initial: `center`,
-                    _: `start`,
-                  },
-                  weight: `medium`,
-                  className: _,
-                  children: _.Localize(`#Header_MarketTitle`),
-                }),
+              (0, _.jsxs)(_, {
+                direction: `column`,
+                gap: `1`,
+                children: [
+                  (0, _.jsx)(_, {
+                    href: _.Home(),
+                    children: (0, _.jsx)(_, {
+                      size: {
+                        initial: `6`,
+                        _: `7`,
+                      },
+                      align: {
+                        initial: `center`,
+                        _: `start`,
+                      },
+                      weight: `medium`,
+                      className: _,
+                      children: _.Localize(`#Header_MarketTitle`),
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    display: {
+                      initial: `none`,
+                      _: `block`,
+                    },
+                    children: (0, _.jsx)(_, {
+                      size: `3`,
+                      contrast: `description`,
+                      children: _.Localize(`#Header_MarketDescriptionNew`),
+                    }),
+                  }),
+                ],
               }),
               (0, _.jsx)(_, {
                 align: {
@@ -464,51 +478,53 @@ function _() {
               }),
             ],
           }),
-          (0, _.jsxs)(_, {
-            justify: `end`,
-            marginTop: `2`,
-            alignSelf: `end`,
-            gap: `1`,
-            marginLeft: {
-              initial: `1`,
-              _: `0`,
-            },
-            marginRight: {
-              initial: `1`,
-              _: `0`,
-            },
-            children: [
-              (0, _.jsx)(_, {
-                children: (0, _.jsx)(_, {
-                  href: _,
-                  variant: `inverted`,
-                  color: `dull`,
-                  children: _.Localize(`#Header_GiveFeedback`),
-                }),
-              }),
-              (0, _.jsx)(_, {
-                children: (0, _.jsx)(_, {
-                  onClick: _,
-                  variant: `inverted`,
-                  color: `dull`,
-                  children: _.Localize(`#Header_OptOut`),
-                }),
-              }),
-            ],
+          (0, _.jsx)(_, {
+            className: _,
           }),
         ],
       }),
       (0, _.jsx)(_, {
-        children:
-          !_.bEligible &&
-          (0, _.jsx)(_, {
-            marginTop: `3`,
-            children: (0, _.jsx)(_, {
-              reasons: _.rgReasons,
-              guardDaysRequired: _.unSGRequiredDays,
-              allowedTime: _.rtAllowed,
+        width: `100%`,
+        paddingX: {
+          initial: `3`,
+          _: `5`,
+        },
+        children: (0, _.jsxs)(_, {
+          children: [
+            (0, _.jsxs)(_, {
+              justify: `end`,
+              marginTop: `2`,
+              gap: `1`,
+              children: [
+                (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_, {
+                    href: _,
+                    variant: `inverted`,
+                    color: `dull`,
+                    children: _.Localize(`#Header_GiveFeedback`),
+                  }),
+                }),
+                (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_, {
+                    onClick: _,
+                    variant: `inverted`,
+                    color: `dull`,
+                    children: _.Localize(`#Header_OptOut`),
+                  }),
+                }),
+              ],
             }),
-          }),
+            !_.bEligible &&
+              (0, _.jsx)(_, {
+                marginTop: `3`,
+                children: (0, _.jsx)(_, {
+                  reasons: _.rgReasons,
+                  guardDaysRequired: _.unSGRequiredDays,
+                  allowedTime: _.rtAllowed,
+                }),
+              }),
+          ],
+        }),
       }),
       (0, _.jsx)(_, {
         pattern: `corner-start`,
@@ -542,6 +558,7 @@ function _(_) {
     children: [
       (0, _.jsx)(_, {
         className: _,
+        minWidth: `0`,
         children: (0, _.jsx)(`form`, {
           className: _(),
           onSubmit: (_) => {
@@ -566,6 +583,7 @@ function _(_) {
       (0, _.jsx)(_, {
         onClick: () => _(!0),
         contrast: `title`,
+        whiteSpace: `nowrap`,
         title: _.Localize(`#AdvancedSearch_Link`),
         children: _.Localize(`#AdvancedSearch_Link`),
       }),

@@ -411,7 +411,11 @@ function _(_) {
         }),
         (0, _.jsx)(_, {
           background: `dull-6`,
-          padding: `4`,
+          padding: {
+            initial: `1`,
+            _: `4`,
+          },
+          paddingTop: `5`,
           children: (0, _.jsxs)(_, {
             style: {
               width: `100%`,
@@ -628,6 +632,10 @@ function _(_) {
         ],
       }),
       (0, _.jsx)(_, {
+        dataKey: `purchases`,
+        scale: _,
+      }),
+      (0, _.jsx)(_, {
         dataKey: `price`,
         yAxisId: `price`,
         stroke: `none`,
@@ -638,10 +646,6 @@ function _(_) {
         tooltipType: `none`,
         isAnimationActive: !1,
         connectNulls: !0,
-      }),
-      (0, _.jsx)(_, {
-        dataKey: `purchases`,
-        scale: _,
       }),
       (0, _.jsx)(_, {
         dataKey: `price`,
@@ -669,7 +673,7 @@ function _(_) {
       height: _,
     } = _,
     _ = _ === `week` || _ === `month`,
-    _ = new Intl.DateTimeFormat(void 0, {
+    _ = new Intl.DateTimeFormat(_(), {
       year: `numeric`,
       month: `numeric`,
       day: `numeric`,
@@ -759,12 +763,10 @@ function _(_) {
           data: _,
           responsive: !0,
           ..._,
-          margin: _
-            ? void 0
-            : {
-                left: 20,
-                right: 20,
-              },
+          margin: {
+            left: 20,
+            right: 20,
+          },
           children: [
             (0, _.jsx)(_, {
               currency: _,
@@ -1120,6 +1122,10 @@ var _ = _.memo(function (_) {
           activeGroupID: _,
         }),
       children: [
+        (0, _.jsx)(_, {
+          dataKey: _ ? `${_}_purchases` : `purchases`,
+          scale: _,
+        }),
         _.map(
           (_) =>
             (!_ || _._ === _) &&
@@ -1132,10 +1138,6 @@ var _ = _.memo(function (_) {
               _._,
             ),
         ),
-        (0, _.jsx)(_, {
-          dataKey: _ ? `${_}_purchases` : `purchases`,
-          scale: _,
-        }),
         _.length === 0 &&
           (0, _.jsx)(_, {
             position: `center`,
@@ -1896,6 +1898,239 @@ function _(_, _) {
 function _(_, _) {
   return _(_) ? _.filter((_) => _._ !== 2) : _;
 }
+var _ = Object.assign(_, {
+  Root: _,
+  Content: _,
+  SoldContent: _,
+  BucketContent: _,
+});
+function _(_) {
+  let { listing: _, expectEnhancedAppearance: _, ..._ } = _;
+  return (0, _.jsx)(_.Root, {
+    ..._,
+    children: (0, _.jsx)(_.Content, {
+      listing: _,
+      expectEnhancedAppearance: _,
+    }),
+  });
+}
+function _(_) {
+  let {
+      listing: { asset: _ },
+      name: _,
+      handle: _,
+      children: _,
+    } = _,
+    {
+      bWarnMissingAppearance: _,
+      color: _,
+      rgAccessories: _,
+      rgProperties: _,
+      strPrimaryImageURL: _,
+      strType: _,
+      strName: _,
+      bMine: _,
+      bAvailable: _,
+    } = _(_);
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsx)(_, {
+        color: _,
+        type: _,
+        itemName: _,
+        name: _,
+      }),
+      (0, _.jsxs)(_.Body, {
+        children: [
+          (0, _.jsx)(_.PrimaryImage, {
+            src: _,
+            dim: _,
+          }),
+          (0, _.jsx)(_, {
+            justify: `end`,
+            align: `end`,
+            position: `absolute`,
+            inset: `0`,
+            children:
+              _ &&
+              (0, _.jsx)(`div`, {
+                title: _.Localize(`#Listing_EnhancedAppearance_Missing`),
+                children: (0, _.jsx)(_, {
+                  width: `18px`,
+                }),
+              }),
+          }),
+        ],
+      }),
+      (0, _.jsxs)(_.Footer, {
+        children: [
+          _.length > 0 &&
+            (0, _.jsx)(_, {
+              align: `center`,
+              minHeight: `0`,
+              children: _.map((_, _) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    accessory: _,
+                  },
+                  _,
+                ),
+              ),
+            }),
+          (0, _.jsx)(_, {
+            wrap: `wrap`,
+            gap: `2`,
+            marginTop: `2`,
+            children: _.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  appid: _.appid,
+                  property: _,
+                  size: `2`,
+                  color: `dull-11`,
+                  truncate: !0,
+                },
+                _.propertyid,
+              ),
+            ),
+          }),
+          (0, _.jsx)(_, {
+            appid: _.appid,
+            properties: _,
+          }),
+          (0, _.jsxs)(_, {
+            handle: _,
+            children: [
+              (0, _.jsx)(_, {
+                mine: _,
+                available: _,
+                listing: _.listing,
+                gap: `3`,
+              }),
+              _,
+            ],
+          }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
+  let {
+    sold: { description: _, strSoldPrice: _ },
+    name: _,
+    handle: _,
+    children: _,
+  } = _;
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsx)(_, {
+        color: _(_),
+        type: _.type,
+        itemName: _.market_name,
+        name: _,
+      }),
+      (0, _.jsx)(_.Body, {
+        children: (0, _.jsx)(_.PrimaryImage, {
+          src: _(_),
+        }),
+      }),
+      (0, _.jsx)(_.Footer, {
+        marginTop: `2`,
+        children: (0, _.jsxs)(_, {
+          handle: _,
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
+                contrast: `title`,
+                children: _,
+              }),
+            (0, _.jsx)(_, {
+              size: `1`,
+              color: `dull`,
+              disabled: !0,
+              children: _.Localize(`#Listing_Sold`),
+            }),
+            _,
+          ],
+        }),
+      }),
+    ],
+  });
+}
+function _(_) {
+  let {
+    description: _,
+    bucketName: _,
+    details: _,
+    name: _,
+    handle: _,
+    children: _,
+  } = _;
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsx)(_, {
+        color: _(_),
+        type: _.type,
+        itemName: _,
+        name: _,
+      }),
+      (0, _.jsx)(_.Body, {
+        children: (0, _.jsx)(_.PrimaryImage, {
+          src: _(_),
+        }),
+      }),
+      (0, _.jsxs)(_.Footer, {
+        gap: `3`,
+        marginTop: `2`,
+        children: [
+          _,
+          (0, _.jsx)(_, {
+            handle: _,
+            children: _,
+          }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { color: _, type: _, itemName: _, name: _ } = _;
+  return (0, _.jsxs)(_.Header, {
+    children: [
+      (0, _.jsx)(_.ItemColor, {
+        color: _,
+      }),
+      _ &&
+        (0, _.jsx)(_.Subtitle, {
+          children: _,
+        }),
+      (0, _.jsx)(_.Title, {
+        children: _ || _,
+      }),
+      _ &&
+        (0, _.jsx)(_.Subtitle, {
+          children: _,
+        }),
+    ],
+  });
+}
+function _(_) {
+  let { handle: _, children: _ } = _;
+  return (0, _.jsxs)(_, {
+    align: `center`,
+    gap: `3`,
+    children: [
+      (0, _.jsx)(_, {
+        flexGrow: `1`,
+        children: _,
+      }),
+      _,
+    ],
+  });
+}
 var _ = `-RfAozBAXnc-`;
 function _() {
   return (0, _.jsx)(_, {
@@ -1994,7 +2229,7 @@ function _(_) {
             _ === `list` &&
               (0, _.jsxs)(_, {
                 direction: `column`,
-                gap: `4`,
+                gap: `2`,
                 children: [
                   _,
                   _ &&
@@ -2068,8 +2303,6 @@ function _(_) {
         direction: `column`,
         width: `300px`,
         maxWidth: `300px`,
-        position: `sticky`,
-        inset: `var(--spacing-2) auto auto auto`,
         children: _,
       });
 }
@@ -2229,9 +2462,9 @@ function _(_) {
     _ = !!_.data && !!_.data && !_.isPending && !!_;
   return (0, _.jsxs)(_, {
     onClose: _,
+    fitContent: !0,
     children: [
       (0, _.jsx)(_.Heading, {
-        size: `6`,
         children: _.Localize(`#BuyOrderDialog_Header_NoItem`),
       }),
       (_.length > 1 || !_) &&
@@ -2495,17 +2728,18 @@ function _(_) {
       (0, _.jsx)(_, {
         width: `64px`,
         height: `64px`,
+        flexShrink: `0`,
         objectFit: `contain`,
         src: _,
         alt: ``,
       }),
       (0, _.jsxs)(_, {
         direction: `column`,
+        minWidth: `0`,
         children: [
           (0, _.jsx)(_, {
             size: `4`,
             contrast: `subtitle`,
-            truncate: !0,
             children: _.localized_name || _.bucket_id,
           }),
           (0, _.jsx)(_, {
@@ -2559,10 +2793,35 @@ function _(_) {
     _ = _.price * _.quantity + _,
     _ = _(_, _.wallet_info);
   return (0, _.jsxs)(_, {
-    columns: `1fr 100px max-content`,
-    justifyItems: `end`,
+    columns: {
+      initial: `1fr`,
+      _: `1fr 100px max-content`,
+    },
+    justifyItems: {
+      initial: `start`,
+      _: `end`,
+    },
     alignItems: `center`,
-    gap: `2`,
+    gap: {
+      initial: `3`,
+      _: `2`,
+    },
+    width: {
+      initial: `100%`,
+      _: void 0,
+    },
+    marginTop: {
+      initial: `3`,
+      _: `0`,
+    },
+    padding: {
+      initial: `3`,
+      _: `0`,
+    },
+    background: {
+      initial: `dull-5`,
+      _: void 0,
+    },
     children: [
       (0, _.jsx)(_, {
         label: _.Localize(`#BuyOrderDialog_PriceField`),
@@ -2602,14 +2861,18 @@ function _(_) {
       (0, _.jsx)(_, {
         label: _.LocalizeReact(`#BuyOrderDialog_MaxPrice`, (0, _.jsx)(_, {})),
         children: (0, _.jsx)(_, {
-          contrast: `title`,
-          size: `3`,
-          children: _(_, _),
+          justifySelf: `start`,
+          paddingStart: `2`,
+          children: (0, _.jsx)(_, {
+            contrast: `title`,
+            size: `3`,
+            children: _(_, _),
+          }),
         }),
       }),
       (0, _.jsx)(_, {
         size: `3`,
-        color: `text-red`,
+        color: `red-10`,
         align: `center`,
         children: _
           ? `\xA0`
@@ -2647,17 +2910,51 @@ function _(_, _, _) {
 }
 function _(_) {
   let { label: _, children: _, suffix: _, error: _ } = _;
-  return (0, _.jsxs)(_.Fragment, {
+  return (0, _.jsxs)(_, {
+    display: {
+      initial: `block`,
+      _: `contents`,
+    },
     children: [
-      (0, _.jsx)(_, {
-        size: `3`,
-        color: _ ? `text-red` : void 0,
-        children: _,
+      (0, _.jsxs)(_, {
+        direction: `column`,
+        align: {
+          initial: `start`,
+          _: `end`,
+        },
+        marginBottom: {
+          initial: `1`,
+          _: `0`,
+        },
+        children: [
+          (0, _.jsx)(_, {
+            size: `3`,
+            color: _ ? `red-10` : void 0,
+            children: _,
+          }),
+          _ &&
+            (0, _.jsx)(_, {
+              display: {
+                initial: `block`,
+                _: `none`,
+              },
+              children: (0, _.jsx)(_, {
+                size: `3`,
+                children: _,
+              }),
+            }),
+        ],
       }),
       _,
       (0, _.jsx)(_, {
-        size: `3`,
-        children: _,
+        display: {
+          initial: `none`,
+          _: `block`,
+        },
+        children: (0, _.jsx)(_, {
+          size: `3`,
+          children: _,
+        }),
       }),
     ],
   });
@@ -2833,6 +3130,10 @@ function _(_) {
       color: `green`,
       width: {
         initial: `100%`,
+        _: void 0,
+      },
+      marginY: {
+        initial: `3`,
         _: void 0,
       },
     };
@@ -3354,7 +3655,7 @@ function _(_) {
     flexGrow: `1`,
     children: (0, _.jsx)(_, {
       size: `2`,
-      color: _ === `error` ? `text-red` : `text-green`,
+      color: _ === `error` ? `red-10` : `text-green`,
       children: _,
     }),
   });
@@ -3370,7 +3671,7 @@ function _(_) {
     : (0, _.jsx)(_, {
         error: !0,
         children: (0, _.jsx)(_, {
-          color: `text-red`,
+          color: `red-10`,
           children: _.Localize(`#MyOrders_FailedToLoad`),
         }),
       });
@@ -3610,7 +3911,7 @@ function _(_) {
           marginBottom: `2`,
           children: (0, _.jsx)(_, {
             _: `div`,
-            color: `text-red`,
+            color: `red-10`,
             size: `2`,
             children: _.Localize(`#CancelBuyOrder_GenericError`),
           }),
@@ -3674,7 +3975,7 @@ function _(_) {
           marginBottom: `2`,
           children: (0, _.jsx)(_, {
             _: `div`,
-            color: `text-red`,
+            color: `red-10`,
             size: `2`,
             children: _.Localize(`#CancelBuyOrder_GenericError`),
           }),
@@ -4343,7 +4644,7 @@ function _(_) {
         (0, _.jsx)(_, {
           maxHeight: _,
           overflow: `hidden`,
-          className: _,
+          className: _(_, _ && `XHgrZiRC1Jg-`),
           children: (0, _.jsx)(`div`, {
             ref: _,
             children: _,
@@ -4451,7 +4752,6 @@ function _(_) {
                 _ &&
                   (0, _.jsx)(_, {
                     description: _,
-                    marginTop: `3`,
                   }),
                 (0, _.jsx)(_, {
                   description: _,
@@ -4459,7 +4759,6 @@ function _(_) {
                     appid: _.appid,
                     strItemName: _.market_hash_name,
                   },
-                  marginTop: `3`,
                 }),
               ],
             }),
@@ -4600,8 +4899,14 @@ function _(_) {
                     description: _,
                   }),
                 }),
-                (0, _.jsx)(_.MarketActions, {}),
-                _,
+                (0, _.jsxs)(_, {
+                  wrap: `wrap`,
+                  align: `center`,
+                  gap: `2`,
+                  marginTop: `3`,
+                  marginBottom: `2`,
+                  children: [(0, _.jsx)(_.MarketActions, {}), _],
+                }),
               ],
             }),
           ],
@@ -4715,6 +5020,7 @@ function _(_) {
               gap: `3`,
               flexGrow: `1`,
               align: `center`,
+              justify: _ ? void 0 : `center`,
               children: [
                 (0, _.jsxs)(_, {
                   direction: `column`,
@@ -4760,6 +5066,7 @@ function _(_) {
               gap: `3`,
               flexGrow: `1`,
               align: `center`,
+              justify: _ ? void 0 : `center`,
               children: [
                 (0, _.jsxs)(_, {
                   direction: `column`,
@@ -5163,6 +5470,10 @@ function _(_) {
       direction: `column`,
       children: [
         (0, _.jsxs)(_, {
+          marginX: {
+            initial: `0`,
+            _: `2`,
+          },
           children: [
             (0, _.jsxs)(_, {
               gap: `1`,
@@ -5201,13 +5512,10 @@ function _(_) {
                 _ &&
                   (0, _.jsx)(_, {
                     description: _,
-                    marginTop: `3`,
                   }),
                 (0, _.jsx)(_, {
                   description: _,
                   query: _,
-                  marginTop: `3`,
-                  width: `fit-content`,
                 }),
               ],
             }),
@@ -5661,7 +5969,14 @@ function _(_) {
                     description: _,
                   }),
                 }),
-                _,
+                (0, _.jsx)(_, {
+                  wrap: `wrap`,
+                  align: `center`,
+                  gap: `2`,
+                  marginTop: `3`,
+                  marginBottom: `2`,
+                  children: _,
+                }),
               ],
             }),
         ],
@@ -5910,6 +6225,7 @@ function _(_) {
                       (0, _.jsx)(_, {}),
                       _ &&
                         (0, _.jsxs)(_, {
+                          align: `center`,
                           children: [
                             (0, _.jsxs)(_, {
                               weight: `medium`,
@@ -5942,9 +6258,14 @@ function _(_) {
                       !_ &&
                         !_ &&
                         (0, _.jsxs)(_, {
+                          align: `center`,
+                          gap: `1`,
                           children: [
-                            _.Localize(`#OrderBook_BuyOrder_NeedBucket`),
-                            `\xA0`,
+                            (0, _.jsx)(_, {
+                              children: _.Localize(
+                                `#OrderBook_BuyOrder_NeedBucket`,
+                              ),
+                            }),
                             (0, _.jsx)(_, {
                               direction: _ ? `up` : `down`,
                             }),

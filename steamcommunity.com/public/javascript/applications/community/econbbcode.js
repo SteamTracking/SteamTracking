@@ -97,7 +97,7 @@ function we(e) {
   });
 }
 function E(e) {
-  return (0, T.jsx)(M, {
+  return (0, T.jsx)(j, {
     ...e,
     size: { initial: `1`, sm: `2` },
     contrast: `note`,
@@ -112,13 +112,13 @@ function Te(e, t, n, r) {
   return {
     queryKey: [`AssetPropertySchemaMap`, n, r],
     queryFn: async () => {
-      let i = await e.fetchQuery(O(t, n, r)),
+      let i = await e.fetchQuery(Ee(t, n, r)),
         a = new Map();
       return (i.property_schemas.forEach((e) => a.set(e.id, e)), a);
     },
   };
 }
-function O(e, t, n) {
+function Ee(e, t, n) {
   return {
     queryKey: [`AssetPropertySchema`, t, n],
     queryFn: async () => {
@@ -129,78 +129,78 @@ function O(e, t, n) {
     },
   };
 }
-var k = {};
-((k.arabic = () =>
+var O = {};
+((O.arabic = () =>
   y(() => import(`./chunk~7613b453bc.js`), [], import.meta.url)),
-  (k.brazilian = () =>
+  (O.brazilian = () =>
     y(() => import(`./chunk~37c8906f1f.js`), [], import.meta.url)),
-  (k.bulgarian = () =>
+  (O.bulgarian = () =>
     y(() => import(`./chunk~ecdcd246b5.js`), [], import.meta.url)),
-  (k.czech = () =>
+  (O.czech = () =>
     y(() => import(`./chunk~0256c3f60a.js`), [], import.meta.url)),
-  (k.danish = () =>
+  (O.danish = () =>
     y(() => import(`./chunk~4450764e1e.js`), [], import.meta.url)),
-  (k.dutch = () =>
+  (O.dutch = () =>
     y(() => import(`./chunk~1ae2258501.js`), [], import.meta.url)),
-  (k.english = () =>
+  (O.english = () =>
     y(() => import(`./chunk~f3f9cbe888.js`), [], import.meta.url)),
-  (k.finnish = () =>
+  (O.finnish = () =>
     y(() => import(`./chunk~6afbb0ea00.js`), [], import.meta.url)),
-  (k.french = () =>
+  (O.french = () =>
     y(() => import(`./chunk~9ea2d5a2ed.js`), [], import.meta.url)),
-  (k.german = () =>
+  (O.german = () =>
     y(() => import(`./chunk~e91ca08c39.js`), [], import.meta.url)),
-  (k.greek = () =>
+  (O.greek = () =>
     y(() => import(`./chunk~afe55566d0.js`), [], import.meta.url)),
-  (k.hungarian = () =>
+  (O.hungarian = () =>
     y(() => import(`./chunk~7482717cb5.js`), [], import.meta.url)),
-  (k.indonesian = () =>
+  (O.indonesian = () =>
     y(() => import(`./chunk~86bd892986.js`), [], import.meta.url)),
-  (k.italian = () =>
+  (O.italian = () =>
     y(() => import(`./chunk~f89bd07123.js`), [], import.meta.url)),
-  (k.japanese = () =>
+  (O.japanese = () =>
     y(() => import(`./chunk~e64835c7b5.js`), [], import.meta.url)),
-  (k.koreana = () =>
+  (O.koreana = () =>
     y(() => import(`./chunk~b08cd6031b.js`), [], import.meta.url)),
-  (k.latam = () =>
+  (O.latam = () =>
     y(() => import(`./chunk~761d3d158c.js`), [], import.meta.url)),
-  (k.malay = () =>
+  (O.malay = () =>
     y(() => import(`./chunk~091e7d40c1.js`), [], import.meta.url)),
-  (k.norwegian = () =>
+  (O.norwegian = () =>
     y(() => import(`./chunk~4b4803b799.js`), [], import.meta.url)),
-  (k.polish = () =>
+  (O.polish = () =>
     y(() => import(`./chunk~45e3403b81.js`), [], import.meta.url)),
-  (k.portuguese = () =>
+  (O.portuguese = () =>
     y(() => import(`./chunk~117c48f703.js`), [], import.meta.url)),
-  (k.romanian = () =>
+  (O.romanian = () =>
     y(() => import(`./chunk~5a39ccae78.js`), [], import.meta.url)),
-  (k.russian = () =>
+  (O.russian = () =>
     y(() => import(`./chunk~e1021bc419.js`), [], import.meta.url)),
-  (k.sc_schinese = () =>
+  (O.sc_schinese = () =>
     y(() => import(`./chunk~cdf7bda2ff.js`), [], import.meta.url)),
-  (k.schinese = () =>
+  (O.schinese = () =>
     y(() => import(`./chunk~cb510e1464.js`), [], import.meta.url)),
-  (k.spanish = () =>
+  (O.spanish = () =>
     y(() => import(`./chunk~b3f4cde693.js`), [], import.meta.url)),
-  (k.swedish = () =>
+  (O.swedish = () =>
     y(() => import(`./chunk~1adcc33513.js`), [], import.meta.url)),
-  (k.tchinese = () =>
+  (O.tchinese = () =>
     y(() => import(`./chunk~6e9690022c.js`), [], import.meta.url)),
-  (k.thai = () =>
+  (O.thai = () =>
     y(() => import(`./chunk~ab8f74c71d.js`), [], import.meta.url)),
-  (k.turkish = () =>
+  (O.turkish = () =>
     y(() => import(`./chunk~2b2974444a.js`), [], import.meta.url)),
-  (k.ukrainian = () =>
+  (O.ukrainian = () =>
     y(() => import(`./chunk~8646b70518.js`), [], import.meta.url)),
-  (k.vietnamese = () =>
+  (O.vietnamese = () =>
     y(() => import(`./chunk~b6a98c9270.js`), [], import.meta.url)));
-async function Ee(e) {
-  if (k[e]) return await k[e]();
+async function De(e) {
+  if (O[e]) return await O[e]();
 }
-var A = xe(Ee),
-  j = A.Localize,
-  De = { Label: ke, Value: N };
-function Oe(e) {
+var k = xe(De),
+  A = k.Localize,
+  Oe = { Label: Ae, Value: M };
+function ke(e) {
   let { appid: t, property: n, ...r } = e,
     { data: i } = D(t),
     a = i?.get(n.propertyid);
@@ -209,24 +209,24 @@ function Oe(e) {
     : (0, T.jsx)(p, {
         as: `div`,
         ...r,
-        children: A.LocalizeReact(
+        children: k.LocalizeReact(
           `#ItemDescription_AssetPropertyLabelColonValue`,
           a.localized_label,
           (0, T.jsx)(p, {
             whiteSpace: `pre-wrap`,
-            children: (0, T.jsx)(N, { property: n }),
+            children: (0, T.jsx)(M, { property: n }),
           }),
         ),
       });
 }
-var M = Object.assign(Oe, De);
-function ke(e) {
+var j = Object.assign(ke, Oe);
+function Ae(e) {
   let { appid: t, property: n } = e,
     { data: r } = D(t),
     i = r?.get(n.propertyid);
   return i ? i.localized_label : null;
 }
-function N(e) {
+function M(e) {
   let { property: t } = e;
   if (t.float_value !== void 0) {
     let e =
@@ -252,8 +252,8 @@ function N(e) {
       : t.string_value
     : Number(t.int_value).toLocaleString(d());
 }
-var P = w.createContext(void 0);
-function Ae(e) {
+var N = w.createContext(void 0);
+function je(e) {
   let {
       description: t,
       asset: n,
@@ -265,23 +265,23 @@ function Ae(e) {
       () => ({ description: t, asset: n, bInteractable: r, listingID: i }),
       [t, n, r, i],
     );
-  return (0, T.jsx)(P.Provider, { value: o, children: a });
+  return (0, T.jsx)(N.Provider, { value: o, children: a });
+}
+function P() {
+  return w.useContext(N).description;
 }
 function F() {
-  return w.useContext(P).description;
+  return w.useContext(N).asset;
 }
 function I() {
-  return w.useContext(P).asset;
+  return w.useContext(N).bInteractable;
 }
-function L() {
-  return w.useContext(P).bInteractable;
+function Me() {
+  return w.useContext(N).listingID;
 }
-function je() {
-  return w.useContext(P).listingID;
-}
-function Me(e) {
+function Ne(e) {
   let { action: t } = e,
-    n = I();
+    n = F();
   if (!n) return null;
   let r = t.link.match(
       /GetGooValue\(\s*'?[^']*'?\s*,\s*'?[^']*'?\s*,\s*'?(?<appid>[0-9]+)'?\s*,\s*'?(?<item_type>[0-9]+)'?\s*,\s*'?(?<border_color>[0-9]+)'?/,
@@ -290,7 +290,7 @@ function Me(e) {
   if (!r || !a || n?.appid != 753 || i != `6` || !r.appid || !r.item_type)
     return null;
   let { appid: o, item_type: s, border_color: c } = r;
-  return (0, T.jsx)(Ne, {
+  return (0, T.jsx)(Pe, {
     contextid: i,
     assetid: a,
     appid: parseInt(o),
@@ -298,9 +298,9 @@ function Me(e) {
     border_color: parseInt(c),
   });
 }
-function Ne(e) {
+function Pe(e) {
   let { contextid: t, assetid: n, appid: r, item_type: i, border_color: a } = e,
-    { data: o, isLoading: s } = Pe(r, i, a);
+    { data: o, isLoading: s } = Fe(r, i, a);
   return o === void 0 && !s
     ? null
     : (0, T.jsxs)(f, {
@@ -314,11 +314,11 @@ function Ne(e) {
           (0, T.jsx)(p, {
             as: `div`,
             contrast: `body`,
-            children: A.LocalizeReact(
+            children: k.LocalizeReact(
               `#ItemDescription_ThisItemIsWorthGems`,
               (0, T.jsx)(p, {
                 color: `sky-11`,
-                children: A.Localize(
+                children: k.Localize(
                   `#ItemDescription_XGems`,
                   o?.toLocaleString(d()) ?? ``,
                 ),
@@ -329,13 +329,13 @@ function Ne(e) {
             color: `green`,
             onClick: () => window.GrindIntoGoo(r, t, n),
             size: `1`,
-            children: j(`#ItemDescription_TurnIntoGemsButton`),
+            children: A(`#ItemDescription_TurnIntoGemsButton`),
           }),
           (0, T.jsx)(p, {
             as: `div`,
             contrast: `body`,
             children: ve(
-              j(`#ItemDescription_GemDescription`),
+              A(`#ItemDescription_GemDescription`),
               (0, T.jsx)(c, {
                 underline: `auto`,
                 color: `greyneutral-12`,
@@ -346,7 +346,7 @@ function Ne(e) {
         ],
       });
 }
-function Pe(e, t, r) {
+function Fe(e, t, r) {
   return n({
     queryKey: [`GetGooValue`, e, t, r],
     queryFn: async () => {
@@ -363,34 +363,34 @@ function Pe(e, t, r) {
     retry: !1,
   });
 }
-var R = w.createContext({ steamidOwner: void 0 });
-function z() {
-  return w.useContext(R).steamidOwner;
+var L = w.createContext({ steamidOwner: void 0 });
+function R() {
+  return w.useContext(L).steamidOwner;
 }
-function Fe(e) {
+function Ie(e) {
   let { steamidOwner: t, children: n } = e,
     r = w.useMemo(() => ({ steamidOwner: t }), [t]);
-  return (0, T.jsx)(R.Provider, { value: r, children: n });
-}
-function Ie() {
-  let e = F(),
-    t = L(),
-    { actions: n } = e;
-  return t ? n && (0, T.jsx)(B, { actions: n }) : null;
+  return (0, T.jsx)(L.Provider, { value: r, children: n });
 }
 function Le() {
-  let e = F(),
-    t = L(),
-    { owner_actions: n } = e;
-  return t ? n && (0, T.jsx)(B, { actions: n }) : null;
+  let e = P(),
+    t = I(),
+    { actions: n } = e;
+  return t ? n && (0, T.jsx)(z, { actions: n }) : null;
 }
 function Re() {
-  let e = F(),
-    t = L(),
-    { market_actions: n } = e;
-  return t ? n && (0, T.jsx)(B, { actions: n }) : null;
+  let e = P(),
+    t = I(),
+    { owner_actions: n } = e;
+  return t ? n && (0, T.jsx)(z, { actions: n }) : null;
 }
-function B(e) {
+function ze() {
+  let e = P(),
+    t = I(),
+    { market_actions: n } = e;
+  return t ? n && (0, T.jsx)(z, { actions: n }) : null;
+}
+function z(e) {
   let { actions: t } = e,
     [n, r] = w.useMemo(() => {
       let e = [],
@@ -398,22 +398,25 @@ function B(e) {
       return (
         t.forEach((t, r) => {
           t.link?.startsWith(`javascript:GetGooValue`)
-            ? n.push((0, T.jsx)(Me, { action: t }, r))
-            : e.push((0, T.jsx)(ze, { action: t }, r));
+            ? n.push((0, T.jsx)(Ne, { action: t }, r))
+            : e.push((0, T.jsx)(Be, { action: t }, r));
         }),
         [e, n]
       );
     }, [t]);
   return (0, T.jsxs)(T.Fragment, {
-    children: [n && (0, T.jsx)(f, { wrap: `wrap`, gap: `2`, children: n }), r],
+    children: [
+      n.length > 0 && (0, T.jsx)(f, { wrap: `wrap`, gap: `2`, children: n }),
+      r,
+    ],
   });
 }
-function ze(e) {
-  let t = z(),
-    n = F(),
-    r = I(),
-    i = je();
-  return (0, T.jsx)(Be, {
+function Be(e) {
+  let t = R(),
+    n = P(),
+    r = F(),
+    i = Me();
+  return (0, T.jsx)(Ve, {
     ...e,
     ownerSteamID: t,
     description: n,
@@ -421,7 +424,7 @@ function ze(e) {
     listingID: i,
   });
 }
-function Be(e) {
+function Ve(e) {
   let {
       action: t,
       description: n,
@@ -429,7 +432,7 @@ function Be(e) {
       ownerSteamID: i,
       listingID: a,
     } = e,
-    o = V(t.link, n, r, i, a);
+    o = B(t.link, n, r, i, a);
   if (o.startsWith(`javascript:`)) {
     let e = o.substring(11),
       n = Function(e);
@@ -442,7 +445,7 @@ function Be(e) {
   }
   return (0, T.jsx)(x, { href: o, size: `1`, color: `dull`, children: t.name });
 }
-function V(e, t, n, r, i) {
+function B(e, t, n, r, i) {
   let a = e
     .replace(/%assetid%/, n?.assetid ?? ``)
     .replace(/%contextid%/, n?.contextid ?? ``)
@@ -463,7 +466,7 @@ function V(e, t, n, r, i) {
     a
   );
 }
-function H(e) {
+function V(e) {
   let { description: t, asset: n, type: r = `descriptions`, ...i } = e,
     a = t[r];
   if (ee(t.appid) && a) {
@@ -479,11 +482,11 @@ function H(e) {
   return (0, T.jsx)(f, {
     direction: `column`,
     children: a?.map((e, r) =>
-      (0, T.jsx)(Ve, { line: e, description: t, asset: n, ...i }, r),
+      (0, T.jsx)(He, { line: e, description: t, asset: n, ...i }, r),
     ),
   });
 }
-function Ve(e) {
+function He(e) {
   let { line: t, description: n, asset: r, ...i } = e,
     a = {
       as: `div`,
@@ -492,7 +495,7 @@ function Ve(e) {
       style: { color: t.color ? `#${t.color}` : void 0 },
     },
     o = t.value?.trim() ?? ``;
-  switch (((o ||= `\xA0`), (o = V(o, n, r)), t.type)) {
+  switch (((o ||= `\xA0`), (o = B(o, n, r)), t.type)) {
     case `html`:
       return (0, T.jsx)(p, {
         ...a,
@@ -504,21 +507,21 @@ function Ve(e) {
     case `bbcode`:
       return (0, T.jsx)(p, {
         ...a,
-        children: (0, T.jsx)(At, { itemDescription: n, line: t, bbcode: o }),
+        children: (0, T.jsx)(jt, { itemDescription: n, line: t, bbcode: o }),
       });
     default:
       return (0, T.jsx)(p, { ...a, children: o });
   }
 }
-function U(e, t) {
+function H(e, t) {
   return e.name_color ? `#${e.name_color}` : t;
 }
-function W(e, t, n) {
+function U(e, t, n) {
   let r = typeof t?.amount == `string` ? parseInt(t.amount) : t?.amount,
     i = n || e.name;
   return (r && r > 1 ? `${_e(r)} ` : ``) + i;
 }
-function G(e) {
+function W(e) {
   let {
       description: t,
       asset: n,
@@ -527,15 +530,15 @@ function G(e) {
       style: a = {},
       ...o
     } = e,
-    s = i || U(t);
+    s = i || H(t);
   return (0, T.jsx)(p, {
     contrast: `note`,
     ...o,
     style: { ...(a ?? {}), color: s },
-    children: W(t, n, r),
+    children: U(t, n, r),
   });
 }
-function He(e) {
+function Ue(e) {
   let {
       description: t,
       asset: n,
@@ -544,44 +547,44 @@ function He(e) {
       style: a = {},
       ...o
     } = e,
-    s = i || U(t);
+    s = i || H(t);
   return (0, T.jsx)(c, {
     contrast: `note`,
     underline: `hover`,
     ...o,
     style: { ...(a ?? {}), color: s },
-    children: W(t, n, r),
+    children: U(t, n, r),
   });
 }
-var Ue = `KPHI633nxrg-`,
-  We = `s0X-oxmOBU4-`;
-function Ge() {
+var We = `KPHI633nxrg-`,
+  Ge = `s0X-oxmOBU4-`;
+function Ke() {
   return (0, T.jsxs)(m, {
     position: `relative`,
-    title: j(`#ItemDescription_ListedItemTooltip`),
+    title: A(`#ItemDescription_ListedItemTooltip`),
     children: [
       (0, T.jsx)(m, {
-        className: We,
-        children: j(`#ItemDescription_ListedItem`),
+        className: Ge,
+        children: A(`#ItemDescription_ListedItem`),
       }),
       (0, T.jsx)(l, {
-        className: Ue,
-        alt: j(`#ItemDescription_ListedItem`),
+        className: We,
+        alt: A(`#ItemDescription_ListedItem`),
         src: `${_.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
       }),
     ],
   });
 }
-function K() {
-  let e = F(),
-    t = I(),
-    n = L(),
+function G() {
+  let e = P(),
+    t = F(),
+    n = I(),
     r = ie(v.country_code),
     i = !!e.sealed && e.sealed_type == 1;
   if (!e.marketable && e.sealed_type != 1) return null;
   let a = e.market_hash_name || e.market_name || e.name;
   return a
-    ? (0, T.jsx)(Ke, {
+    ? (0, T.jsx)(qe, {
         eWalletCurrency: r,
         appid: e.appid,
         hashName: a,
@@ -591,7 +594,7 @@ function K() {
       })
     : null;
 }
-function Ke(e) {
+function qe(e) {
   let {
       eWalletCurrency: t,
       appid: n,
@@ -600,7 +603,7 @@ function Ke(e) {
       bItemSealed: a,
       assetid: o,
     } = e,
-    { data: s, isLoading: c } = Ye(t, n, r);
+    { data: s, isLoading: c } = Xe(t, n, r);
   return !i && !s?.lowest_price && !s?.volume && !c
     ? null
     : a
@@ -613,7 +616,7 @@ function Ke(e) {
             color: `dull`,
             href: `${_.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(r)}${o ? `?sellorderassetid=${o}` : ``}`,
             size: `1`,
-            children: j(`#SellOnMarket_ViewListing`),
+            children: A(`#SellOnMarket_ViewListing`),
           }),
         })
       : (0, T.jsxs)(f, {
@@ -622,19 +625,19 @@ function Ke(e) {
           gapY: `3`,
           direction: `column`,
           children: [
-            (0, T.jsx)(qe, { isLoading: c, priceOverview: s }),
+            (0, T.jsx)(Je, { isLoading: c, priceOverview: s }),
             i &&
               (0, T.jsx)(x, {
                 size: `1`,
                 color: `dull`,
                 href: `${_.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(r)}`,
-                children: j(`#SellOnMarket_View`),
+                children: A(`#SellOnMarket_View`),
               }),
-            i && !a && (0, T.jsx)(Je, {}),
+            i && !a && (0, T.jsx)(Ye, {}),
           ],
         });
 }
-function qe(e) {
+function Je(e) {
   let { isLoading: t, priceOverview: n } = e;
   return !t && !n?.lowest_price && !n?.volume
     ? null
@@ -644,18 +647,18 @@ function qe(e) {
           (0, T.jsx)(p, {
             as: `div`,
             children: n?.lowest_price
-              ? j(`#SellOnMarket_LowestPrice`, n.lowest_price)
+              ? A(`#SellOnMarket_LowestPrice`, n.lowest_price)
               : `\xA0`,
           }),
           (0, T.jsx)(p, {
             as: `div`,
-            children: n?.volume ? j(`#SellOnMarket_Volume`, n.volume) : `\xA0`,
+            children: n?.volume ? A(`#SellOnMarket_Volume`, n.volume) : `\xA0`,
           }),
         ],
       });
 }
-function Je() {
-  let e = z();
+function Ye() {
+  let e = R();
   return !v.logged_in || !e || e != v.steamid
     ? null
     : (0, T.jsx)(m, {
@@ -663,14 +666,14 @@ function Je() {
           color: `green`,
           onClick: () => window.SellCurrentSelection(),
           size: `1`,
-          children: j(`#SellOnMarket_SellThisItem`),
+          children: A(`#SellOnMarket_SellThisItem`),
         }),
       });
 }
-function Ye(e, t, r) {
-  return n(q(e, t, r));
+function Xe(e, t, r) {
+  return n(K(e, t, r));
 }
-function q(e, t, n) {
+function K(e, t, n) {
   return {
     queryKey: [`MarketPriceOverview`, e, t, n],
     queryFn: async () => {
@@ -685,50 +688,51 @@ function q(e, t, n) {
     },
   };
 }
-var Xe = `_1xfmrbWlObU-`,
-  Ze = `ggWou2cLoQ4-`;
-function Qe() {
+var Ze = `_1xfmrbWlObU-`,
+  Qe = `ggWou2cLoQ4-`;
+function $e() {
   return (0, T.jsxs)(m, {
     position: `relative`,
-    title: j(`#ItemDescription_TradeProtectedTooltip`),
+    title: A(`#ItemDescription_TradeProtectedTooltip`),
     children: [
       (0, T.jsx)(m, {
-        className: Ze,
-        children: j(`#ItemDescription_TradeProtected`),
+        className: Qe,
+        children: A(`#ItemDescription_TradeProtected`),
       }),
       (0, T.jsx)(l, {
-        className: Xe,
-        alt: j(`#ItemDescription_TradeProtected`),
+        className: Ze,
+        alt: A(`#ItemDescription_TradeProtected`),
         src: `${_.COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png`,
       }),
     ],
   });
 }
-var $e = `wAh8JbvC0H0-`,
-  et = `Rtks4145anw-`,
-  tt = `_8pjoM5Ojtyk-`,
-  nt = `bcj1tMFXpQk-`,
-  rt = {
-    Root: Ae,
-    Container: st,
-    Content: ct,
-    Image: ut,
-    Separator: dt,
-    Name: ft,
-    FraudWarnings: gt,
-    GameInfo: pt,
+var et = `wAh8JbvC0H0-`,
+  tt = `Rtks4145anw-`,
+  nt = `_8pjoM5Ojtyk-`,
+  rt = `bcj1tMFXpQk-`,
+  q = `C9wW-Rgfrl4-`,
+  it = {
+    Root: je,
+    Container: ct,
+    Content: lt,
+    Image: dt,
+    Separator: ft,
+    Name: pt,
+    FraudWarnings: _t,
+    GameInfo: mt,
     GameName: X,
-    Descriptions: at,
-    Actions: Ie,
-    OwnerDescriptions: ot,
-    OwnerActions: Le,
-    MarketActions: Re,
-    Tags: ht,
-    AssetProperties: vt,
-    AssetAccessories: yt,
-    SellOnMarket: K,
+    Descriptions: ot,
+    Actions: Le,
+    OwnerDescriptions: st,
+    OwnerActions: Re,
+    MarketActions: ze,
+    Tags: gt,
+    AssetProperties: yt,
+    AssetAccessories: bt,
+    SellOnMarket: G,
   };
-function it(e) {
+function at(e) {
   let {
     description: t,
     asset: n,
@@ -762,12 +766,12 @@ function it(e) {
     }),
   });
 }
-var J = Object.assign(it, rt);
-function at() {
-  let e = F(),
-    t = I();
+var J = Object.assign(at, it);
+function ot() {
+  let e = P(),
+    t = F();
   return (0, T.jsx)(T.Fragment, {
-    children: (0, T.jsx)(H, {
+    children: (0, T.jsx)(V, {
       description: e,
       asset: t,
       contrast: `body`,
@@ -775,10 +779,10 @@ function at() {
     }),
   });
 }
-function ot() {
-  let e = F(),
-    t = I();
-  return (0, T.jsx)(H, {
+function st() {
+  let e = P(),
+    t = F();
+  return (0, T.jsx)(V, {
     description: e,
     asset: t,
     type: `owner_descriptions`,
@@ -786,18 +790,18 @@ function ot() {
     size: `3`,
   });
 }
-function st(e) {
+function ct(e) {
   let { children: t, ...n } = e,
-    r = F();
+    r = P();
   return (0, T.jsx)(f, {
     direction: `column`,
-    border: `2px solid ${U(r, `#3A3A3A`)}`,
-    className: $e,
+    border: `2px solid ${H(r, `#3A3A3A`)}`,
+    className: et,
     ...n,
     children: t,
   });
 }
-function ct(e) {
+function lt(e) {
   let { children: t, ...n } = e;
   return (0, T.jsx)(f, {
     direction: `column`,
@@ -807,13 +811,13 @@ function ct(e) {
     children: t,
   });
 }
-var lt = { row: `330x192`, fit: `512x512` };
-function ut(e) {
+var ut = { row: `330x192`, fit: `512x512` };
+function dt(e) {
   let { bAllowAnimatedIcon: t = !0, size: n = `row` } = e,
-    r = F(),
+    r = P(),
     i = n == `fit`,
     a =
-      `${_.COMMUNITY_CDN_URL}economy/image/${r.icon_url_large || r.icon_url}/${lt[n]}` +
+      `${_.COMMUNITY_CDN_URL}economy/image/${r.icon_url_large || r.icon_url}/${ut[n]}` +
       (t ? `?allow_animated=1` : ``);
   return (0, T.jsxs)(f, {
     height: i ? `100%` : `196px`,
@@ -823,39 +827,39 @@ function ut(e) {
     justify: i ? `center` : `start`,
     position: `relative`,
     children: [
-      (0, T.jsx)(`img`, { className: i ? et : void 0, src: a, alt: r.name }),
+      (0, T.jsx)(`img`, { className: i ? tt : void 0, src: a, alt: r.name }),
       !!r.sealed &&
         r.sealed_type != 1 &&
         (0, T.jsx)(m, {
           position: `absolute`,
           style: { left: `0`, bottom: `0` },
-          children: (0, T.jsx)(Qe, {}),
+          children: (0, T.jsx)($e, {}),
         }),
       !!r.sealed &&
         r.sealed_type == 1 &&
         (0, T.jsx)(m, {
           position: `absolute`,
           style: { left: `0`, bottom: `0` },
-          children: (0, T.jsx)(Ge, {}),
+          children: (0, T.jsx)(Ke, {}),
         }),
     ],
   });
 }
-function dt() {
+function ft() {
   return (0, T.jsx)(te, { color: `dull-10`, size: `4`, marginY: `2` });
 }
-function ft(e) {
-  let t = F(),
-    n = I();
+function pt(e) {
+  let t = P(),
+    n = F();
   return (0, T.jsx)(s, {
     size: `7`,
     weight: `heavy`,
     ...e,
-    children: (0, T.jsx)(G, { description: t, asset: n }),
+    children: (0, T.jsx)(W, { description: t, asset: n }),
   });
 }
 function Y(e) {
-  let t = F().appid,
+  let t = P().appid,
     { data: n } = ye({ appid: t }),
     { data: r } = he({ appid: t }),
     i = n && n.community_icon ? re(n, `community_icon`) : void 0,
@@ -878,55 +882,56 @@ function X(e) {
       })
     : (0, T.jsx)(p, { size: `3`, contrast: `description`, children: n });
 }
-function pt(e) {
-  let t = F(),
-    { gameURL: n, strName: r, iconURL: i } = Y(e.hrefGame);
+function mt(e) {
+  let { hrefGame: t, compact: n } = e,
+    r = P(),
+    { gameURL: i, strName: a, iconURL: o } = Y(t);
   return (0, T.jsxs)(f, {
     direction: `row`,
     gapX: `2`,
-    align: `center`,
+    align: n ? `start` : `center`,
     children: [
-      (0, T.jsx)(mt, {
-        href: n,
-        children: i
-          ? (0, T.jsx)(l, { alt: r ?? ``, src: i, className: tt })
-          : (0, T.jsx)(m, { className: nt }),
+      (0, T.jsx)(ht, {
+        href: i,
+        children: o
+          ? (0, T.jsx)(l, { alt: a ?? ``, src: o, className: n ? q : nt })
+          : (0, T.jsx)(m, { className: n ? q : rt }),
       }),
       (0, T.jsxs)(f, {
         direction: `column`,
         children: [
-          (0, T.jsx)(X, { ...e }),
+          (0, T.jsx)(X, { hrefGame: t }),
           (0, T.jsx)(p, {
             size: `3`,
             contrast: `description`,
-            children: t.type,
+            children: r.type,
           }),
         ],
       }),
     ],
   });
 }
-function mt(e) {
+function ht(e) {
   let { children: t, href: n } = e;
   return n ? (0, T.jsx)(`a`, { href: n, children: t }) : t;
 }
-function ht() {
-  let { tags: e } = F();
+function gt() {
+  let { tags: e } = P();
   return !e || !e.length
     ? null
     : (0, T.jsxs)(p, {
         size: `3`,
         contrast: `note`,
         children: [
-          j(`#ItemDescription_Tags`),
+          A(`#ItemDescription_Tags`),
           ` `,
           ` `,
           e.map((e) => e.localized_tag_name).join(`, `),
         ],
       });
 }
-function gt() {
-  let { fraudwarnings: e } = F();
+function _t() {
+  let { fraudwarnings: e } = P();
   return !e || e.length == 0
     ? null
     : (0, T.jsx)(m, {
@@ -940,7 +945,7 @@ function gt() {
               color: `red-9`,
               as: `div`,
               children: [
-                (0, T.jsx)(_t, {
+                (0, T.jsx)(vt, {
                   style: {
                     height: `1.25em`,
                     verticalAlign: `text-bottom`,
@@ -955,7 +960,7 @@ function gt() {
         ),
       });
 }
-function _t(e) {
+function vt(e) {
   return (0, T.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 20 20`,
@@ -969,20 +974,20 @@ function _t(e) {
     }),
   });
 }
-function vt() {
-  let e = I();
+function yt() {
+  let e = F();
   return !e || !e.asset_properties || e.asset_properties.length == 0
     ? null
     : (0, T.jsx)(f, {
         direction: `column`,
         children: e.asset_properties.map((t, n) =>
-          (0, T.jsx)(M, { appid: e.appid, property: t, contrast: `note` }, n),
+          (0, T.jsx)(j, { appid: e.appid, property: t, contrast: `note` }, n),
         ),
       });
 }
-function yt() {
-  let e = I(),
-    t = F();
+function bt() {
+  let e = F(),
+    t = P();
   return !e || !e.asset_accessories || e.asset_accessories.length == 0
     ? null
     : (0, T.jsxs)(f, {
@@ -992,7 +997,7 @@ function yt() {
           (0, T.jsx)(p, {
             as: `div`,
             size: `4`,
-            children: j(`#ItemDescription_AccessoriesList_Title`),
+            children: A(`#ItemDescription_AccessoriesList_Title`),
           }),
           e.asset_accessories.map((e, n) =>
             (0, T.jsx)(we, { appid: t.appid, accessory: e }, n),
@@ -1000,12 +1005,12 @@ function yt() {
         ],
       });
 }
-var bt = e(r(), 1);
+var xt = e(r(), 1);
 function Z(e, t) {
-  let r = St(b(), e, _.LANGUAGE);
-  return n(xt(r, e, t));
+  let r = Ct(b(), e, _.LANGUAGE);
+  return n(St(r, e, t));
 }
-function xt(e, t, n) {
+function St(e, t, n) {
   let r = `${n?.classid}_${n?.instanceid}`;
   return {
     queryKey: [`AssetClassInfo`, t, r],
@@ -1013,11 +1018,11 @@ function xt(e, t, n) {
     enabled: !!n && !!n.classid,
   };
 }
-function St(e, t, n, r = S.GetAssetClassInfo) {
-  return o(`AssetClassInfo_${t}_${n}`, () => Ct(e, t, n, r));
-}
 function Ct(e, t, n, r = S.GetAssetClassInfo) {
-  return new bt.default(async (i) => {
+  return o(`AssetClassInfo_${t}_${n}`, () => wt(e, t, n, r));
+}
+function wt(e, t, n, r = S.GetAssetClassInfo) {
+  return new xt.default(async (i) => {
     let a = be.Init(Se);
     (a.Body().set_language(n),
       a.Body().set_appid(t),
@@ -1035,7 +1040,7 @@ function Ct(e, t, n, r = S.GetAssetClassInfo) {
 function Q(e) {
   let { children: t, ...n } = e,
     r = w.useRef(null),
-    i = w.useCallback(() => `${wt}px`, []),
+    i = w.useCallback(() => `${Tt}px`, []),
     a = w.useCallback((e) => {
       let t = r.current;
       if (t && e.deltaY != 0) {
@@ -1057,14 +1062,14 @@ function Q(e) {
       (0, T.jsx)(h.Positioner, {
         children: (0, T.jsx)(m, {
           marginX: `2`,
-          children: (0, T.jsx)(Tt, { ...n, refHover: r }),
+          children: (0, T.jsx)(Et, { ...n, refHover: r }),
         }),
       }),
     ],
   });
 }
-var wt = 346;
-function Tt(e) {
+var Tt = 346;
+function Et(e) {
   let { description: t, asset: n, bHideImage: r = !1, refHover: i } = e,
     a,
     o = t?.appid;
@@ -1105,18 +1110,18 @@ function Tt(e) {
       })
     : null;
 }
-function Et(e) {
+function Dt(e) {
   let t = e.context.itemDescription;
   if (!t.container_properties?.contained_items) return null;
   let n = t.appid,
     r = t.container_properties.contained_items;
   return (0, T.jsx)(`ul`, {
     children: r.map((e, t) =>
-      (0, T.jsx)(Ot, { appid: n, contained_item: e }, t),
+      (0, T.jsx)(kt, { appid: n, contained_item: e }, t),
     ),
   });
 }
-function Dt(e) {
+function Ot(e) {
   let t = e.context.itemDescription,
     n = parseInt(e.args.index || `-1`),
     r;
@@ -1136,11 +1141,11 @@ function Dt(e) {
           n,
         )
       : a
-        ? (0, T.jsx)(G, { description: {}, nameOverride: a, colorOverride: o })
+        ? (0, T.jsx)(W, { description: {}, nameOverride: a, colorOverride: o })
         : null
     : null;
 }
-function Ot(e) {
+function kt(e) {
   let { appid: t, contained_item: n } = e,
     { data: r } = Z(t, n);
   return r
@@ -1155,16 +1160,16 @@ function $(e) {
     description: n,
     children:
       n.marketable && n.market_hash_name
-        ? (0, T.jsx)(He, {
+        ? (0, T.jsx)(Ue, {
             description: n,
             href: u.Item(t, n.market_bucket_group_id || n.market_hash_name),
             nameOverride: r,
             colorOverride: i,
           })
-        : (0, T.jsx)(G, { description: n, nameOverride: r, colorOverride: i }),
+        : (0, T.jsx)(W, { description: n, nameOverride: r, colorOverride: i }),
   });
 }
-function kt(e) {
+function At(e) {
   let t = parseInt(e.children?.toString() ?? `0`),
     n = pe.InitFromAccountID(t, _.EUNIVERSE).ConvertTo64BitString(),
     { data: r, isLoading: i } = ne(n);
@@ -1176,7 +1181,7 @@ function kt(e) {
     children: r ? r.public_data.persona_name : t,
   });
 }
-function At(e) {
+function jt(e) {
   let { itemDescription: t, line: n, bbcode: r = `` } = e,
     i = w.useMemo(() => {
       let e = (e) => new oe(),
@@ -1185,18 +1190,18 @@ function At(e) {
           ...de,
           ...ce,
           url: { Constructor: le },
-          container_item_list: { Constructor: Et },
-          container_item: { Constructor: Dt },
-          persona: { Constructor: kt },
-          date: { Constructor: jt },
+          container_item_list: { Constructor: Dt },
+          container_item: { Constructor: Ot },
+          persona: { Constructor: At },
+          date: { Constructor: Mt },
         };
       return new se(t, e, _.LANGUAGE);
     }, []),
     a = w.useMemo(() => ({ itemDescription: t, line: n }), [t, n]);
   return w.useMemo(() => i.ParseBBCode(r, a), [i, r, a]);
 }
-function jt(e) {
+function Mt(e) {
   let t = parseInt(e.children?.toString() ?? `0`);
   return t ? new Date(t * 1e3).toLocaleString(d()) : null;
 }
-export { C as i, q as n, Fe as r, J as t };
+export { C as i, K as n, Ie as r, J as t };

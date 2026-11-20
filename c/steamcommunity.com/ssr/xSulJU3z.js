@@ -183,7 +183,9 @@ function _(_) {
 }
 var _ = `ggzXZcP3Klw-`,
   _ = `Qv1YbBl8g5E-`,
-  _ = `n07JNVB2Q7s-`;
+  _ = `n07JNVB2Q7s-`,
+  _ = `TwUP4ufMir4-`,
+  _ = `Q3HN9tuzIkg-`;
 function _(_) {
   let {
     description: _,
@@ -192,7 +194,6 @@ function _(_) {
     hrefGame: _,
     strImageMaxWidth: _ = `330px`,
     layout: _ = `stacked`,
-    strDetailMinWidth: _ = `0`,
     assetProperties: _,
     children: _,
   } = _;
@@ -202,68 +203,10 @@ function _(_) {
     bInteractable: _,
     children:
       _ == `split`
-        ? (0, _.jsxs)(_, {
-            direction: {
-              initial: `column`,
-              _: `row`,
-            },
-            gap: `4`,
-            align: `stretch`,
-            height: `100%`,
-            minHeight: `0`,
-            children: [
-              (0, _.jsx)(_, {
-                className: _,
-                flexGrow: `1`,
-                flexShrink: `1`,
-                flexBasis: `0%`,
-                minWidth: `0`,
-                align: `center`,
-                justify: `center`,
-                padding: `3`,
-                radius: `sm`,
-                children: (0, _.jsx)(_.Image, {
-                  size: `fit`,
-                }),
-              }),
-              (0, _.jsxs)(_, {
-                direction: `column`,
-                gapY: `2`,
-                flexGrow: `1`,
-                flexShrink: `1`,
-                flexBasis: `0%`,
-                minWidth: {
-                  initial: `0`,
-                  _: _,
-                },
-                minHeight: `0`,
-                children: [
-                  (0, _.jsx)(_.Name, {}),
-                  (0, _.jsx)(_.FraudWarnings, {}),
-                  (0, _.jsx)(_.GameInfo, {
-                    hrefGame: _,
-                  }),
-                  (0, _.jsxs)(_, {
-                    direction: `column`,
-                    gapY: `2`,
-                    className: _,
-                    flexGrow: `1`,
-                    flexShrink: `1`,
-                    minHeight: `0`,
-                    children: [
-                      _ ?? (0, _.jsx)(_.AssetProperties, {}),
-                      (0, _.jsx)(_.Descriptions, {}),
-                      (0, _.jsx)(_.AssetAccessories, {}),
-                      (0, _.jsx)(_.Tags, {}),
-                    ],
-                  }),
-                  (0, _.jsx)(_, {
-                    flexShrink: `0`,
-                    children: _,
-                  }),
-                ],
-              }),
-            ],
+        ? (0, _.jsx)(_, {
+            hrefGame: _,
+            assetProperties: _,
+            children: _,
           })
         : (0, _.jsxs)(_, {
             direction: `column`,
@@ -291,6 +234,119 @@ function _(_) {
             ],
           }),
   });
+}
+function _(_) {
+  let { hrefGame: _, assetProperties: _, children: _ } = _,
+    _ = !_(`sm`),
+    _ = (0, _.jsxs)(_.Fragment, {
+      children: [
+        (0, _.jsx)(_.Name, {
+          weight: `regular`,
+        }),
+        (0, _.jsx)(_.FraudWarnings, {}),
+        (0, _.jsx)(_.GameInfo, {
+          hrefGame: _,
+        }),
+      ],
+    }),
+    _ = (0, _.jsxs)(_.Fragment, {
+      children: [
+        _ ?? (0, _.jsx)(_.AssetProperties, {}),
+        (0, _.jsx)(_.Descriptions, {}),
+        (0, _.jsx)(_.AssetAccessories, {}),
+        (0, _.jsx)(_.Tags, {}),
+      ],
+    });
+  return _
+    ? (0, _.jsxs)(_, {
+        direction: `column`,
+        height: `100%`,
+        minHeight: `0`,
+        children: [
+          (0, _.jsxs)(_, {
+            direction: `column`,
+            gapY: `4`,
+            className: _,
+            flexGrow: `1`,
+            flexShrink: `1`,
+            minHeight: `0`,
+            children: [
+              (0, _.jsx)(_, {
+                className: _,
+                flexShrink: `0`,
+                align: `center`,
+                justify: `center`,
+                padding: `3`,
+                children: (0, _.jsx)(_, {
+                  width: `60%`,
+                  height: `100%`,
+                  children: (0, _.jsx)(_.Image, {
+                    size: `fit`,
+                  }),
+                }),
+              }),
+              (0, _.jsxs)(_, {
+                direction: `column`,
+                gapY: `2`,
+                paddingX: `3`,
+                children: [_, _],
+              }),
+            ],
+          }),
+          (0, _.jsx)(_, {
+            flexShrink: `0`,
+            children: _,
+          }),
+        ],
+      })
+    : (0, _.jsxs)(_, {
+        direction: `row`,
+        gap: `4`,
+        align: `stretch`,
+        height: `100%`,
+        minHeight: `0`,
+        children: [
+          (0, _.jsx)(_, {
+            className: _,
+            flexGrow: `2`,
+            flexShrink: `1`,
+            flexBasis: `0%`,
+            minWidth: `0`,
+            align: `center`,
+            justify: `center`,
+            padding: `3`,
+            radius: `sm`,
+            children: (0, _.jsx)(_.Image, {
+              size: `fit`,
+            }),
+          }),
+          (0, _.jsxs)(_, {
+            direction: `column`,
+            gapY: `2`,
+            flexGrow: `3`,
+            flexShrink: `1`,
+            flexBasis: `0%`,
+            minWidth: `0`,
+            minHeight: `0`,
+            children: [
+              _,
+              (0, _.jsx)(_, {
+                direction: `column`,
+                gapY: `2`,
+                className: _,
+                flexGrow: `1`,
+                flexShrink: `1`,
+                minHeight: `0`,
+                children: _,
+              }),
+              (0, _.jsx)(_, {
+                flexShrink: `0`,
+                children: _,
+              }),
+            ],
+          }),
+        ],
+      });
 }
 var _ = 1e-5;
 function _(_) {
@@ -458,11 +514,13 @@ function _(_) {
         justify: `end`,
         gap: `2`,
         wrap: `wrap`,
+        alignSelf: `stretch`,
         children: [
           _ != null &&
             (0, _.jsxs)(_, {
               align: `center`,
               gap: `2`,
+              flexGrow: `1`,
               children: [
                 (0, _.jsx)(_, {
                   size: `3`,
@@ -478,51 +536,63 @@ function _(_) {
                 }),
               ],
             }),
-          _,
           (0, _.jsxs)(_, {
             align: `center`,
+            justify: `end`,
             gap: `2`,
-            wrap: `nowrap`,
+            wrap: `wrap`,
             children: [
+              _,
               (0, _.jsxs)(_, {
                 align: `center`,
                 gap: `2`,
+                wrap: `nowrap`,
                 children: [
-                  (0, _.jsx)(_, {
-                    size: `3`,
-                    weight: `heavy`,
-                    whiteSpace: `nowrap`,
-                    children: _.Localize(`#RepriceListing_Dialog_BuyerPays`),
+                  (0, _.jsxs)(_, {
+                    align: `center`,
+                    gap: `2`,
+                    children: [
+                      (0, _.jsx)(_, {
+                        size: `3`,
+                        contrast: `title`,
+                        whiteSpace: `nowrap`,
+                        children: _.Localize(
+                          `#RepriceListing_Dialog_BuyerPays`,
+                        ),
+                      }),
+                      (0, _.jsx)(_, {
+                        currency: _,
+                        value: _,
+                        defaultValue: _,
+                        editable: !!_,
+                        onValueChange: _,
+                        placeholder: 0,
+                      }),
+                    ],
                   }),
-                  (0, _.jsx)(_, {
-                    currency: _,
-                    value: _,
-                    defaultValue: _,
-                    editable: !!_,
-                    onValueChange: _,
-                    placeholder: 0,
-                  }),
-                ],
-              }),
-              (0, _.jsxs)(_, {
-                align: `center`,
-                gap: `2`,
-                children: [
-                  (0, _.jsx)(_, {
-                    size: `3`,
-                    weight: `heavy`,
-                    whiteSpace: `nowrap`,
-                    children: _.Localize(`#RepriceListing_Dialog_YouReceive`),
-                  }),
-                  (0, _.jsx)(_, {
-                    currency: _,
-                    value: _,
-                    defaultValue: _,
-                    editable: !!_,
-                    onValueChange: _,
-                    status: _,
-                    inputRef: _,
-                    placeholder: 0,
+                  (0, _.jsxs)(_, {
+                    align: `center`,
+                    gap: `2`,
+                    children: [
+                      (0, _.jsx)(_, {
+                        size: `3`,
+                        contrast: `title`,
+                        whiteSpace: `nowrap`,
+                        children: _.Localize(
+                          `#RepriceListing_Dialog_YouReceive`,
+                        ),
+                      }),
+                      (0, _.jsx)(_, {
+                        currency: _,
+                        value: _,
+                        defaultValue: _,
+                        editable: !!_,
+                        onValueChange: _,
+                        status: _,
+                        inputRef: _,
+                        placeholder: 0,
+                      }),
+                    ],
                   }),
                 ],
               }),
@@ -579,66 +649,30 @@ function _(_) {
 }
 function _(_) {
   let { children: _, type: _ } = _;
-  return (0, _.jsx)(_, {
-    size: `3`,
-    align: `end`,
-    color:
-      _ == `error`
-        ? `text-error`
-        : _ == `warning`
-          ? `text-warning`
-          : `accent-11`,
-    whiteSpace: `pre-wrap`,
-    children: _,
-  });
-}
-var _ = `nkpiiCgJzc4-`,
-  _ = `RhxjftThqKs-`;
-function _(_) {
-  let {
-      onClose: _,
-      children: _,
-      fillHeight: _,
-      fitContent: _,
-      onSubmit: _,
-      ..._
-    } = _,
-    _ = _(
-      _,
-      _ && `Nb2JjlzZ-o0-`,
-      _ && `RU2W0IZBNTI-`,
-      `noOpinionatedGlobalStyles`,
-    );
-  return (0, _.jsxs)(_, {
-    onClose: _,
-    className: _,
-    children: [
-      (0, _.jsx)(`div`, {
-        className: _,
-        children: (0, _.jsx)(_, {
-          size: `5`,
-          onClick: _,
-        }),
-      }),
-      (0, _.jsx)(`form`, {
-        onSubmit: (_) => {
-          (_.preventDefault(), _ && _());
+  return _ == `warning`
+    ? (0, _.jsx)(_, {
+        background: `dull-5`,
+        padding: {
+          initial: `3`,
+          _: `5`,
         },
+        width: `100%`,
         children: (0, _.jsx)(_, {
-          direction: `column`,
-          gap: `4`,
-          padding: {
-            initial: `3`,
-            _: `5`,
-          },
-          height: _ ? `100%` : void 0,
-          minHeight: _ ? `0` : void 0,
-          ..._,
+          _: `div`,
+          size: `3`,
+          align: `center`,
+          color: `text-warning`,
+          whiteSpace: `pre-wrap`,
           children: _,
         }),
-      }),
-    ],
-  });
+      })
+    : (0, _.jsx)(_, {
+        size: `3`,
+        align: `end`,
+        color: _ == `error` ? `red-10` : `green-11`,
+        whiteSpace: `pre-wrap`,
+        children: _,
+      });
 }
 function _(_) {
   let { lastUpdate: _, agreed: _, onAgreeChange: _, disabled: _ } = _,
@@ -648,8 +682,12 @@ function _(_) {
     checked: _,
     onChange: _,
     disabled: _,
+    align: `start`,
     children: (0, _.jsx)(_, {
       size: `3`,
+      style: {
+        paddingTop: `2px`,
+      },
       children: _.LocalizeReact(
         `#PurchaseDialog_SSA_Link`,
         (0, _.jsx)(_, {
@@ -692,10 +730,10 @@ var _ = Object.assign(_, {
   EUSSAAgreement: _,
 });
 function _(_) {
-  let { onClose: _, children: _, fillHeight: _, onSubmit: _, ..._ } = _;
+  let { onClose: _, children: _, onSubmit: _, ..._ } = _;
   return (0, _.jsx)(_, {
     onClose: _,
-    fillHeight: _,
+    onSubmit: _,
     ..._,
     children: _,
   });
@@ -715,24 +753,51 @@ function _(_) {
       },
       gap: `2`,
       children: [
-        (0, _.jsx)(_, {
-          children: _.Localize(`#PurchaseDialog_PaymentMethod_Label`),
-        }),
         (0, _.jsxs)(_, {
-          size: `4`,
-          color: `green-8`,
+          display: {
+            initial: `block`,
+            _: `contents`,
+          },
           children: [
-            _.Localize(`#PurchaseDialog_PaymentMethod_Wallet`),
-            _ ? ` (${_})` : ``,
+            (0, _.jsx)(_, {
+              children: _.Localize(`#PurchaseDialog_PaymentMethod_Label`),
+            }),
+            ` `,
+            (0, _.jsxs)(_, {
+              size: `4`,
+              color: `green-8`,
+              whiteSpace: `nowrap`,
+              children: [
+                _.Localize(`#PurchaseDialog_PaymentMethod_Wallet`),
+                _ ? ` (${_})` : ``,
+              ],
+            }),
           ],
         }),
-        (0, _.jsx)(_, {
-          children: _.Localize(`#PurchaseDialog_SteamAccount_Label`),
-        }),
-        (0, _.jsx)(_, {
-          size: `4`,
-          contrast: `title`,
-          children: _,
+        (0, _.jsxs)(_, {
+          display: {
+            initial: `block`,
+            _: `contents`,
+          },
+          children: [
+            (0, _.jsx)(_, {
+              children: _.Localize(`#PurchaseDialog_SteamAccount_Label`),
+            }),
+            ` `,
+            (0, _.jsx)(_, {
+              size: `4`,
+              contrast: `title`,
+              whiteSpace: `nowrap`,
+              style: {
+                display: `inline-block`,
+                maxWidth: `100%`,
+                overflow: `hidden`,
+                textOverflow: `ellipsis`,
+                verticalAlign: `bottom`,
+              },
+              children: _,
+            }),
+          ],
         }),
         _ &&
           (0, _.jsx)(_, {
@@ -890,14 +955,13 @@ function _(_) {
 }
 function _(_) {
   return (0, _.jsx)(_, {
-    size: `4`,
-    contrast: {
-      initial: `subtitle`,
-      _: `description`,
+    size: {
+      initial: `3`,
+      _: `4`,
     },
-    weight: {
-      initial: `medium`,
-      _: void 0,
+    contrast: {
+      initial: void 0,
+      _: `description`,
     },
     children: _.children,
   });
@@ -1068,7 +1132,7 @@ function _(_) {
     children: (0, _.jsx)(_, {
       align: `center`,
       size: `4`,
-      color: `red-9`,
+      color: `red-10`,
       _: `div`,
       children: _.children,
     }),
@@ -1078,7 +1142,7 @@ function _(_) {
   return (0, _.jsx)(_, {
     align: `center`,
     size: `4`,
-    color: `red-9`,
+    color: `red-10`,
     _: `div`,
     whiteSpace: `pre-wrap`,
     children: _.children,
@@ -2025,13 +2089,12 @@ function _(_) {
     { description: _ } = _;
   return (0, _.jsx)(_, {
     onClose: _,
-    fillHeight: !0,
+    capHeight: !0,
     children: (0, _.jsx)(_, {
       layout: `split`,
       description: _,
       asset: _.asset,
       hrefGame: _.AppHome(_.appid),
-      strDetailMinWidth: _,
       assetProperties: (0, _.jsx)(_, {
         appid: _.appid,
         properties: _.asset?.asset_properties ?? [],
@@ -2048,8 +2111,7 @@ function _(_) {
     children: _.children,
   });
 }
-var _ = `160px`,
-  _ = `500px`;
+var _ = `160px`;
 function _(_) {
   let {
       activeListing: _,

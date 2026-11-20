@@ -4210,6 +4210,7 @@ SellItemDialog = {
 		$J('#pricehistory_throbber').show();
 		$J('#pricehistory_notavailable').hide();
 
+				this.LoadMarketLowPrice();
 				new Ajax.Request( 'https://steamcommunity.com/market/pricehistory/', {
 			method: 'get',
 			parameters: {
@@ -4219,6 +4220,31 @@ SellItemDialog = {
 			onSuccess: function( transport ) { SellItemDialog.OnPriceHistorySuccess( transport ); },
 			onFailure: function( transport ) { SellItemDialog.OnPriceHistoryFailure( transport ); }
 		} );
+	},
+
+	LoadMarketLowPrice: function() {
+		var item = this.m_item;
+		new Ajax.Request( 'https://steamcommunity.com/market/priceoverview/', {
+			method: 'get',
+			parameters: {
+				country: g_strCountryCode,
+				currency: g_rgWalletInfo['wallet_currency'],
+				appid: item.appid,
+				market_hash_name: GetMarketHashName( item.description )
+			},
+			onSuccess: function( transport ) { SellItemDialog.OnMarketLowPriceSuccess( item, transport ); }
+		} );
+	},
+
+	OnMarketLowPriceSuccess: function( item, transport ) {
+		if ( item != this.m_item || this.m_bWaitingForUserToConfirm || !transport.responseJSON || !transport.responseJSON.success || !transport.responseJSON.lowest_price )
+			return;
+
+		if ( this.GetPriceAsInt() > 0 || this.GetBuyerPriceAsInt() > 0 )
+			return;
+
+		$('market_sell_buyercurrency_input').value = transport.responseJSON.lowest_price;
+		this.OnBuyerPriceInputKeyUp();
 	},
 
 	
@@ -4259,7 +4285,7 @@ SellItemDialog = {
 		$('market_sell_dialog_error').show();
 		$('market_sell_dialog_error').update( error );
 		$('market_sell_dialog_error').style.color = '#ffffff';
-		new Effect.Morph( $('market_sell_dialog_error'), { style: {color: '#ff0000'}, duration: 0.25 } );
+		new Effect.Morph( $('market_sell_dialog_error'), { style: {color: '#ec5d5e'}, duration: 0.25 } );
 	},
 
 	Dismiss: function() {
@@ -4493,14 +4519,14 @@ SellItemDialog = {
 				var strText = '';
 				if ( bNeedsMobileConfirmation )
 				{
-					strText = '<div style="max-width:800px">In order to list this item on the Community Market, you must verify the listing in your Steam Mobile app. You can verify it by launching the app and navigating to the Confirmations page from the menu.' +
+					strText = '<div class="market_dialog_content_darker market_sell_dialog_confirmation">In order to list this item on the Community Market, you must verify the listing in your Steam Mobile app. You can verify it by launching the app and navigating to the Confirmations page from the menu.' +
 						'<br><br>' +
 						'If you don\'t see the Confirmations option in the main menu of the app, then make sure you have the latest version of the app.' +
 						'</div>';
 				}
 				else
 				{
-					strText = '<div style="max-width:800px">In order to list this item on the Community Market, you must complete an additional verification step.  An email has been sent to your address (ending in "%s") with additional instructions.</div>'.replace( /%s/, transport.responseJSON.email_domain );
+					strText = '<div class="market_dialog_content_darker market_sell_dialog_confirmation">In order to list this item on the Community Market, you must complete an additional verification step.  An email has been sent to your address (ending in "%s") with additional instructions.</div>'.replace( /%s/, transport.responseJSON.email_domain );
 				}
 
 				ShowAlertDialog(

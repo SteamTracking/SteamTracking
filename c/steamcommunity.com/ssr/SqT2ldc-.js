@@ -81,16 +81,18 @@ function _(_) {
     }
   return _?._(_) ?? _;
 }
-function _(_, _) {
-  return !_ && !_
-    ? ``
-    : _
-      ? _ == _
-        ? _.Localize(`#Workshop_ChangeLog_AuthorSnapshot_Single`, _(_))
-        : _
-          ? _.Localize(`#Workshop_ChangeLog_AuthorSnapshot_Range`, _(_), _(_))
-          : _.Localize(`#Workshop_ChangeLog_AuthorSnapshot_AndNewer`, _(_))
-      : _.Localize(`#Workshop_ChangeLog_AuthorSnapshot_AndOlder`, _(_));
+function _(_, _, _) {
+  if (!_ && !_) return ``;
+  let _ = _
+    ? `#Workshop_ChangeLog_AuthorSnapshot_`
+    : `#Workshop_ItemDetails_AuthorSnapshot_`;
+  return _
+    ? _ == _
+      ? _.Localize(_ + `Single`, _(_))
+      : _
+        ? _.Localize(_ + `Range`, _(_), _(_))
+        : _.Localize(_ + `AndNewer`, _(_))
+    : _.Localize(_ + `AndOlder`, _(_));
 }
 function _(_) {
   return _ == `public`

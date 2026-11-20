@@ -2123,8 +2123,28 @@ var _ = [`axis`],
       categoricalChartProps: _,
       ref: _,
     }),
-  ),
-  _ = _();
+  );
+function _(_, _, _ = NaN) {
+  let { strSymbol: _, strDecimalSymbol: _, strThousandsSeparator: _ } = _(_);
+  ((_ = _.replace(_, ``)
+    .replace(`.--`, `.00`)
+    .replace(/ /g, ``)
+    .replace(_(_), ``)),
+    _ !== `.` && (_ = _.replace(_(_), `.`)));
+  let _ = _.indexOf(`.`),
+    _ = _.lastIndexOf(`.`);
+  if (_ !== -1 && _ !== _) {
+    let _ = _.split(`.`);
+    _[_.length - 1].length > 0 &&
+      (_ = `${_.slice(0, -1).join(``)}.${_[_.length - 1]}`);
+  }
+  let _ = parseFloat(_) * 100;
+  return isNaN(_) ? _ : Math.floor(_ + 1e-6);
+}
+function _(_) {
+  return _ === `.` ? /\./g : new RegExp(_, `g`);
+}
+var _ = _();
 function _(_) {
   let { children: _ } = _;
   return (0, _.jsx)(_, {
@@ -2601,6 +2621,10 @@ function _(_) {
         ],
       }),
       (0, _.jsx)(_, {
+        dataKey: `purchases`,
+        scale: _,
+      }),
+      (0, _.jsx)(_, {
         dataKey: `price`,
         yAxisId: `price`,
         stroke: `none`,
@@ -2611,10 +2635,6 @@ function _(_) {
         tooltipType: `none`,
         isAnimationActive: !1,
         connectNulls: !0,
-      }),
-      (0, _.jsx)(_, {
-        dataKey: `purchases`,
-        scale: _,
       }),
       (0, _.jsx)(_, {
         dataKey: `price`,
@@ -2642,7 +2662,7 @@ function _(_) {
       height: _,
     } = _,
     _ = _ === `week` || _ === `month`,
-    _ = new Intl.DateTimeFormat(void 0, {
+    _ = new Intl.DateTimeFormat(_(), {
       year: `numeric`,
       month: `numeric`,
       day: `numeric`,
@@ -2732,12 +2752,10 @@ function _(_) {
           data: _,
           responsive: !0,
           ..._,
-          margin: _
-            ? void 0
-            : {
-                left: 20,
-                right: 20,
-              },
+          margin: {
+            left: 20,
+            right: 20,
+          },
           children: [
             (0, _.jsx)(_, {
               currency: _,
@@ -3205,21 +3223,49 @@ function _(_) {
     }),
   });
 }
+function _(_) {
+  let { children: _, type: _ } = _;
+  return _ == `warning`
+    ? (0, _.jsx)(_, {
+        background: `dull-5`,
+        padding: {
+          initial: `3`,
+          _: `5`,
+        },
+        width: `100%`,
+        children: (0, _.jsx)(_, {
+          _: `div`,
+          size: `3`,
+          align: `center`,
+          color: `text-warning`,
+          whiteSpace: `pre-wrap`,
+          children: _,
+        }),
+      })
+    : (0, _.jsx)(_, {
+        size: `3`,
+        align: `end`,
+        color: _ == `error` ? `red-10` : `green-11`,
+        whiteSpace: `pre-wrap`,
+        children: _,
+      });
+}
 var _ = `Xice-lU-2-8-`,
+  _ = `Pv3PuwbbHSo-`,
   _ = `oZO2DSFoyy4-`;
 function _(_) {
   let {
       onClose: _,
       children: _,
-      fillHeight: _,
+      capHeight: _,
       fitContent: _,
       onSubmit: _,
       ..._
     } = _,
     _ = _(
       _,
-      _ && `mJrSMtK3PnM-`,
       _ && `wr8reWdSeMQ-`,
+      _ && `_5ODqSmieNFc-`,
       `noOpinionatedGlobalStyles`,
     );
   return (0, _.jsxs)(_, {
@@ -3237,6 +3283,7 @@ function _(_) {
         onSubmit: (_) => {
           (_.preventDefault(), _ && _());
         },
+        className: _(_, _ && `ELsvkQVzGqY-`),
         children: (0, _.jsx)(_, {
           direction: `column`,
           gap: `4`,
@@ -3244,8 +3291,8 @@ function _(_) {
             initial: `3`,
             _: `5`,
           },
-          height: _ ? `100%` : void 0,
           minHeight: _ ? `0` : void 0,
+          flexGrow: _ ? `1` : void 0,
           ..._,
           children: _,
         }),
@@ -3261,8 +3308,12 @@ function _(_) {
     checked: _,
     onChange: _,
     disabled: _,
+    align: `start`,
     children: (0, _.jsx)(_, {
       size: `3`,
+      style: {
+        paddingTop: `2px`,
+      },
       children: _.LocalizeReact(
         `#PurchaseDialog_SSA_Link`,
         (0, _.jsx)(_, {
@@ -4181,7 +4232,14 @@ function _(_) {
     [_, _] = (0, _.useState)(null),
     _ = _ && _ ? _(_, _, _) : void 0,
     _ = parseInt(_.wallet_market_minimum) || 1,
-    _ = _({
+    _ = (0, _.useRef)(!1);
+  (0, _.useEffect)(() => {
+    if (_.current || !_ || !_) return;
+    _.current = !0;
+    let _ = _(_, _);
+    _ === void 0 && _ > 0 && _(_(_, _, _));
+  }, [_, _, _, _, _]);
+  let _ = _({
       mutationFn: _,
       onSuccess: (_, _) => {
         if (!_.success) return;
@@ -4698,13 +4756,29 @@ function _(_) {
 }
 function _(_) {
   let { children: _, type: _ } = _;
-  return (0, _.jsx)(_, {
-    size: `3`,
-    align: `center`,
-    color: _ == `error` ? `text-error` : `text-warning`,
-    whiteSpace: `pre-wrap`,
-    children: _,
-  });
+  return _ == `warning`
+    ? (0, _.jsx)(_, {
+        type: `warning`,
+        children: _,
+      })
+    : (0, _.jsx)(_, {
+        radius: `sm`,
+        background: `red-3`,
+        outline: `red-5`,
+        padding: {
+          initial: `3`,
+          _: `5`,
+        },
+        width: `100%`,
+        children: (0, _.jsx)(_, {
+          _: `div`,
+          size: `3`,
+          align: `center`,
+          color: `red-10`,
+          whiteSpace: `pre-wrap`,
+          children: _,
+        }),
+      });
 }
 function _(_) {
   let {

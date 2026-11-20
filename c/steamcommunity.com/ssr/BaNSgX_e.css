@@ -46,29 +46,31 @@ footer {
   }
 }
 .gXydmc2EKLk- {
-  z-index: 1;
-  background: linear-gradient(#384a44, #333742);
-  border-radius: 6px;
+  border-image: linear-gradient(#384a44, #333742) 0 fill/0/0 100vw;
   justify-content: space-between;
   gap: 20px;
   width: 100%;
   max-width: 1300px;
-  padding: 25px 50px 30px;
+  padding: 40px 20px;
   display: flex;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 1px 1px 0.5px #e0e0e01f;
 }
 @media screen and (width <= 910px) {
   .gXydmc2EKLk- {
-    padding: 20px;
+    padding: 30px 20px;
+  }
+}
+@media screen and (width <= 374px) {
+  .gXydmc2EKLk- {
+    padding: 20px 12px;
   }
 }
 .gXydmc2EKLk- .iNExQPvZ9a4- {
   cursor: pointer;
   top: 0;
-  width: 176px;
-  height: 100px;
+  width: 229px;
+  height: 130px;
   position: absolute;
   inset-inline-start: 0;
 }
@@ -77,14 +79,15 @@ footer {
     opacity: 0.5;
   }
 }
-.gXydmc2EKLk-:has(.f4-Ngdme-HE-:hover),
-.gXydmc2EKLk-:has(.iNExQPvZ9a4-:hover) {
-  background: linear-gradient(#40534d, #333742);
-  box-shadow: inset 1px 1px 0.5px #e0e0e047;
+.gXydmc2EKLk- .IItWQm6FhQA- {
+  --block-opacity: 0.066;
+  zoom: 1.3;
+  inset: 0;
 }
 .f4-Ngdme-HE- {
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
+  position: relative;
 }
 .f4-Ngdme-HE-:hover {
   filter: drop-shadow(1px 1px 2px #000);
@@ -99,6 +102,7 @@ footer {
   }
 }
 .FNhAUA3fabk- {
+  isolation: isolate;
   background:
     radial-gradient(59% 150% at 65% -45%, #82b46185, #38484300 60%),
     radial-gradient(
@@ -106,12 +110,26 @@ footer {
       #54664c 0%,
       #384843 20%,
       #21262f00 100%
-    ),
-    radial-gradient(15% 100% at 0 0, #6e6e6e4d 0%, #38484300 100%),
-    radial-gradient(15% 100% at 100% 0, #6e6e6e4d 0%, #38484300 100%);
+    );
   flex-direction: column;
   align-items: center;
   display: flex;
+  overflow-x: clip;
+}
+.iWbDyHn7DNA- {
+  position: relative;
+}
+.iWbDyHn7DNA-:before {
+  content: "";
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(15% 100% at 0 0, #6e6e6e4d 0%, #38484300 100%),
+    radial-gradient(15% 100% at 100% 0, #6e6e6e4d 0%, #38484300 100%);
+  height: 200px;
+  position: absolute;
+  inset-inline: calc(50% - 50vw);
 }
 ._4BshMU0n9Pg- {
   --color-dull-6: var(--color-dull-8);
@@ -123,10 +141,8 @@ footer {
   position: absolute;
   inset: 0;
 }
-.IItWQm6FhQA- {
-  inset: 0;
-}
 .L-Af45tZ0Rk- {
+  z-index: 1;
   top: 0;
   width: 200px;
   height: 150px;

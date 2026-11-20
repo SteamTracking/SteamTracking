@@ -48,7 +48,14 @@ function _(_) {
         ],
       }),
       (0, _.jsxs)(_, {
-        align: `center`,
+        direction: {
+          initial: `column`,
+          _: `row`,
+        },
+        align: {
+          initial: `end`,
+          _: `center`,
+        },
         gap: `2`,
         wrap: `wrap`,
         children: [

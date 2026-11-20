@@ -754,6 +754,10 @@ a.market_dialog_title_cancel:hover .market_dialog_title_cancel_X {
 
 #market_sell_dialog_error {
 	margin-top: 12px;
+	padding: 12px 16px;
+	background: #2f2121;
+	border: 1px solid #8c333a;
+	border-radius: 4px;
 }
 
 .market_dialog_content_dark {
@@ -762,6 +766,13 @@ a.market_dialog_title_cancel:hover .market_dialog_title_cancel_X {
 
 .market_dialog_content_darker {
 	background: #1D1D1D;
+}
+
+.market_sell_dialog_confirmation {
+	max-width: 800px;
+	padding: 12px 24px;
+	border-radius: 4px;
+	text-align: center;
 }
 
 .market_dialog_content_spacer {

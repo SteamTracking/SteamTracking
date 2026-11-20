@@ -98,7 +98,8 @@
 }
 .tTW8H6l2CzQ- {
   isolation: isolate;
-  padding: 10px 20px 15px 10px;
+  padding-block: 8px;
+  padding-inline: var(--spacing-3);
   transition: transform 0.15s ease-in-out;
   position: relative;
 }
@@ -108,8 +109,19 @@
   background-size: contain;
   background-image: var(--bg-image);
   border-radius: var(--radius-sm);
-  width: 100px;
-  height: 75px;
+  width: 80px;
+  height: 60px;
+}
+@media screen and (width <= 767px) {
+  .tTW8H6l2CzQ- .NiiZNQWFFJM- {
+    width: 56px;
+    height: 42px;
+  }
+  .tTW8H6l2CzQ- .NiiZNQWFFJM-.rvsNJdWnyl8- {
+    align-self: start;
+    width: 60px;
+    height: 45px;
+  }
 }
 .tTW8H6l2CzQ- .NiiZNQWFFJM-.LG7ujKf6P-c- {
   opacity: 0.3;
@@ -138,7 +150,9 @@
   transition:
     --item-color-strength 0.15s ease-in-out,
     --item-color-x 0.15s ease-in-out,
-    transform 0.15s ease-in-out;
+    transform 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out;
   position: absolute;
   inset: 0;
   transform: scale(1);
@@ -146,7 +160,13 @@
 .tTW8H6l2CzQ-:hover .iKQ8iZU8-LI-,
 .gpfocus > .tTW8H6l2CzQ- .iKQ8iZU8-LI- {
   --item-color-strength: 70%;
-  --item-color-x: -50px;
+  --item-color-x: -90px;
+  border-color: color-mix(in srgb, var(--item-color) 70%, transparent);
+  background-color: color-mix(
+    in srgb,
+    var(--color-dull-7) 50%,
+    var(--color-dull-6)
+  );
   transform: scale(1.01);
 }
 .p1A9ehO7yF0- {
@@ -334,4 +354,27 @@
     opacity: 1;
     transform: none;
   }
+}
+.RzhwUBJyXOs- {
+  padding: var(--spacing-3);
+  background-color: var(--color-dull-6);
+  box-shadow: inset 0 0 0 1px
+    color-mix(in srgb, var(--color-dull-10) 40%, transparent);
+  transition:
+    box-shadow 0.15s ease-in-out,
+    background-color 0.15s ease-in-out;
+}
+.RzhwUBJyXOs-:hover {
+  box-shadow: inset 0 0 0 1px
+    color-mix(in srgb, var(--color-dull-10) 70%, transparent);
+  background-color: color-mix(
+    in srgb,
+    var(--color-dull-7) 50%,
+    var(--color-dull-6)
+  );
+}
+.fmItvUY1U90-:not(:first-child):before {
+  content: "|";
+  color: var(--color-dull-8);
+  margin-inline-end: var(--spacing-2);
 }

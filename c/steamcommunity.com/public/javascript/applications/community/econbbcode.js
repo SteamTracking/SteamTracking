@@ -491,7 +491,7 @@ function _(_) {
     }, [_]);
   return (0, _.jsxs)(_.Fragment, {
     children: [
-      _ &&
+      _.length > 0 &&
         (0, _.jsx)(_, {
           wrap: `wrap`,
           gap: `2`,
@@ -840,6 +840,7 @@ var _ = `wAh8JbvC0H0-`,
   _ = `Rtks4145anw-`,
   _ = `_8pjoM5Ojtyk-`,
   _ = `bcj1tMFXpQk-`,
+  _ = `C9wW-Rgfrl4-`,
   _ = {
     Root: _,
     Container: _,
@@ -1039,12 +1040,13 @@ function _(_) {
       });
 }
 function _(_) {
-  let _ = _(),
-    { gameURL: _, strName: _, iconURL: _ } = _(_.hrefGame);
+  let { hrefGame: _, compact: _ } = _,
+    _ = _(),
+    { gameURL: _, strName: _, iconURL: _ } = _(_);
   return (0, _.jsxs)(_, {
     direction: `row`,
     gapX: `2`,
-    align: `center`,
+    align: _ ? `start` : `center`,
     children: [
       (0, _.jsx)(_, {
         href: _,
@@ -1052,17 +1054,17 @@ function _(_) {
           ? (0, _.jsx)(_, {
               alt: _ ?? ``,
               src: _,
-              className: _,
+              className: _ ? _ : _,
             })
           : (0, _.jsx)(_, {
-              className: _,
+              className: _ ? _ : _,
             }),
       }),
       (0, _.jsxs)(_, {
         direction: `column`,
         children: [
           (0, _.jsx)(_, {
-            ..._,
+            hrefGame: _,
           }),
           (0, _.jsx)(_, {
             size: `3`,
