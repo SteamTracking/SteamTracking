@@ -70,7 +70,6 @@ function _(_) {
         ? _(_)
         : null;
 }
-_();
 var _ = [
   `children`,
   `width`,
@@ -16346,7 +16345,7 @@ var _ = (_) => {
         : !1;
     },
   );
-_.displayName = `YAxis`;
+((_.displayName = `YAxis`), _());
 function _(_) {
   _();
 }

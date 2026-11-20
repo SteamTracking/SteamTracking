@@ -297,6 +297,10 @@ function SubmitReplyForm( form, bHeldTicket = false )
 	SubmitReplyForm_Internal( form, '' );
 }
 
+// ⭈⭊ around report items and >>> <<< around a quick text's optional text, for the agent to fill in, keep or remove before
+// a reply or the store page review Pass/Fail response is sent
+var g_regexUnresolvedResponseMarkers = /[⭈⭊]|>>>|<<</u;
+
 function SubmitReplyForm_Internal( form, extraFormData )
 {
 	var $Form = $J( form );
@@ -310,9 +314,7 @@ function SubmitReplyForm_Internal( form, extraFormData )
 		return;
 	}
 
-	var regexProcessReplacementText = /[⭈⭊]/u;
-
-	if ( regexProcessReplacementText.exec( strReply ) )
+	if ( g_regexUnresolvedResponseMarkers.test( strReply ) )
 	{
 		ShowAlertDialog( 'Ticketmaster', 'There is still incomplete replacement text in your reply.  Please remove or correct the replacement text.' );
 		return;
@@ -2872,6 +2874,8 @@ function InitReportPanel( strReferenceCode, strAssetBaseURL )
 	});
 	$J( document ).off( 'change.reportPanel' ).on( 'change.reportPanel', '.reportOutcome', function() { ReportPanel.OnOutcomeChanged( this ); } );
 	$J( document ).off( 'mouseup.reportPanel' ).on( 'mouseup.reportPanel', ReportPanel.OnMouseUp );
+	// in the reply box and the Pass/Fail dialog
+	$J( document ).off( 'click.reportPanel' ).on( 'click.reportPanel', '.reportOptionalKeep, .reportOptionalRemove', function() { ReportPanel.OnOptionalTextControl( this ); } );
 
 	// the page is rendered from the last save, so that's what the report is compared against. Unsaved changes kept from
 	// earlier in this tab then go back on top. Attachments are added and removed by the shared upload code, so their list
@@ -3489,22 +3493,48 @@ var ReportPanel = {
 			var strTargets = entry[1].map( ReportPanel.FormatTargetForReply ).join( '<br>' );
 			return strResponse.replace( /⭈[^⭊]*⭊/u, function() { return strTargets; } );
 		});
-		return rgResponses.join( '<br><br>' );
+		// highlight >>>optional text<<< (escaped in the quick texts' HTML), with controls to keep or remove it. The markers
+		// stay until the agent picks, so a reply can't go out undecided. The controls are drawn by CSS, so no text of
+		// theirs gets sent.
+		return rgResponses.join( '<br><br>' ).replace( /&gt;&gt;&gt;[\s\S]*?&lt;&lt;&lt;/g, function( strOptional ) {
+			return '<span class="reportOptionalText">' + strOptional +
+				'<span class="reportOptionalControls" contenteditable="false">' +
+					'<span class="reportOptionalKeep" title="Keep this text"></span>' +
+					'<span class="reportOptionalRemove" title="Remove this text"></span>' +
+				'</span></span>';
+		});
 	},
 
-	// GetResponseHTML as plain text, for fields that don't take HTML. Links keep their address. Parsed into an inert
-	// document so nothing in the responses loads.
-	GetResponseText: function( $Form )
+	OnOptionalTextControl: function( elControl )
 	{
-		var elBody = new DOMParser().parseFromString( ReportPanel.GetResponseHTML( $Form ), 'text/html' ).body;
-		$J( elBody ).find( 'a[href]' ).each( function() {
-			var strURL = this.getAttribute( 'href' );
-			if ( this.textContent.trim() !== strURL )
-				this.append( ' (' + strURL + ')' );
-		});
-		$J( elBody ).find( 'br' ).each( function() { this.replaceWith( '\n' ); } );
-		$J( elBody ).find( 'p, div, li' ).each( function() { this.after( '\n' ); } );
-		return elBody.textContent.trim();
+		var $Optional = $J( elControl ).closest( '.reportOptionalText' );
+		if ( $J( elControl ).hasClass( 'reportOptionalKeep' ) )
+		{
+			$Optional.find( '.reportOptionalControls' ).remove();
+			$Optional.replaceWith( $Optional.html().replace( /^\s*&gt;&gt;&gt;\s*|\s*&lt;&lt;&lt;\s*$/g, '' ) );
+			return;
+		}
+
+		// the line breaks either side merge into the larger of the two, so removing a line or a whole paragraph leaves no
+		// blank lines behind. None are kept at the start or end of the text.
+		var fnBreaks = function( node, strSibling ) {
+			var rgBreaks = [];
+			for ( ; node; node = node[ strSibling ] )
+			{
+				if ( node.nodeName === 'BR' )
+					rgBreaks.push( node );
+				else if ( node.nodeType !== Node.TEXT_NODE || node.textContent.trim() )
+					return { rgBreaks: rgBreaks, bContent: true };
+			}
+			return { rgBreaks: rgBreaks, bContent: false };
+		};
+		var before = fnBreaks( $Optional[0].previousSibling, 'previousSibling' );
+		var after = fnBreaks( $Optional[0].nextSibling, 'nextSibling' );
+		$Optional.remove();
+
+		var nKeep = before.bContent && after.bContent ? Math.max( before.rgBreaks.length, after.rgBreaks.length ) : 0;
+		var rgBreaks = after.rgBreaks.concat( before.rgBreaks );
+		$J( rgBreaks.slice( 0, rgBreaks.length - nKeep ) ).remove();
 	},
 
 	FormatTargetForReply: function( target )

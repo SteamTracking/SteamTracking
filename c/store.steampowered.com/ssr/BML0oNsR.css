@@ -435,6 +435,20 @@ html.responsive.touch .fiveElementEightGap {
 .OUCdd9zQ3NI- {
   padding-top: var(--pill-pips-background-gap, 0px);
 }
+html:not(.GamepadMode) .PaginationPillsPage .OUCdd9zQ3NI-.OUCdd9zQ3NI- {
+  margin-top: 8px;
+}
+html:not(.GamepadMode)
+  .PaginationPillsPage
+  .SaleSectionForCustomCSS:has(.OUCdd9zQ3NI-) {
+  --sale-section-background-inset-bottom: 36px;
+  padding-bottom: 8px;
+}
+html:not(.GamepadMode)
+  .PaginationPillsPage
+  .SaleSectionCtn:has(.SaleSectionForCustomCSS):not(:has(.OUCdd9zQ3NI-)) {
+  margin-bottom: 20px;
+}
 .SaleSectionCarousel:has(.OUCdd9zQ3NI-) .SaleSectionContainer:last-child {
   padding-bottom: 0;
 }

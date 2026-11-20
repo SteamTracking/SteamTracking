@@ -9501,6 +9501,52 @@ function _(_) {
       nTagID: _.tagid,
     };
 }
+function _(_, _) {
+  let _ = _(_),
+    _ = {
+      contentHub: _,
+      listStoreFilter: _,
+      bTabTagHub: !1,
+    };
+  if (!_ || _) return _;
+  let _ = _(_);
+  if (!_) return _;
+  let _ = _(_[_.length - 1]);
+  return _
+    ? {
+        contentHub: {
+          strHubType: `tags`,
+          nTagID: _,
+        },
+        listStoreFilter: _(_.slice(0, -1)),
+        bTabTagHub: !0,
+      }
+    : _;
+}
+function _(_) {
+  if (_.type !== _.k_EStoreFilterClauseTypeStoreTag || _.bNegated) return;
+  let _ = Number(_.value);
+  if (!(!Number.isSafeInteger(_) || _ <= 0)) return _;
+}
+function _(_) {
+  return _.length <= 1
+    ? _[0]
+    : {
+        type: _.k_EStoreFilterClauseTypeAnd,
+        rgSubexpressions: _,
+      };
+}
+function _(_) {
+  if (_.type !== _.k_EStoreFilterClauseTypeAnd) return [_];
+  if (_.bNegated || !_.rgSubexpressions?.length) return;
+  let _ = [];
+  for (let _ of _.rgSubexpressions) {
+    let _ = _(_);
+    if (!_) return;
+    _.push(..._);
+  }
+  return _;
+}
 function _(_, _, _) {
   if (_)
     return _.smart_section_discount_reason === void 0
@@ -9863,6 +9909,8 @@ function _(_, _, _) {
     { storeBrowseContext: _, dataLoader: _ } = _(),
     _ = _(_, _),
     _ = _(_),
+    _ = (0, _.useMemo)(() => _(_, _), [_, _]),
+    _ = _ === `discount_reason` ? _.listStoreFilter : _,
     { data: _ } = _({
       ..._(_(_)),
       enabled: _ && _ === `popularity`,
@@ -9901,7 +9949,7 @@ function _(_, _, _) {
     }),
     _ = _(_, _),
     { data: _ } = _({
-      ..._(_, _, _.accountid, _(_)),
+      ..._(_, _, _.accountid, _.contentHub),
       enabled: _ && _ === `discount_reason`,
     }),
     { data: _ } = _({
