@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { st as t, tt as n } from "./chunk~01cfc309bf.js";
-import { Jy as r, cx as i } from "./main.js";
+import { _x as r, rb as i } from "./main.js";
 var a = e(n()),
   o = [5, 2, 1, 4, 3];
 function s(e) {
@@ -42,7 +42,7 @@ function u(e) {
         t.append(`json`, `1`),
         (
           await (0, a.default)({
-            url: `${i.STORE_BASE_URL}search/results/?${t.toString()}`,
+            url: `${r.STORE_BASE_URL}search/results/?${t.toString()}`,
             method: `GET`,
             responseType: `json`,
           })
@@ -72,25 +72,25 @@ function d(e) {
     default:
       throw `Invalid content descriptor.`;
   }
-  return r(t);
+  return i(t);
 }
 function f(e, t = !1) {
   let n = ``;
   switch (e) {
     case 5:
-      n += r(`#ContentDescriptor_GeneralMatureContent_Description`);
+      n += i(`#ContentDescriptor_GeneralMatureContent_Description`);
       break;
     case 2:
-      n += r(`#ContentDescriptor_FrequentViolenceOrGore_Description`);
+      n += i(`#ContentDescriptor_FrequentViolenceOrGore_Description`);
       break;
     case 1:
-      n += r(`#ContentDescriptor_NudityOrSexualContent_Description`);
+      n += i(`#ContentDescriptor_NudityOrSexualContent_Description`);
       break;
     case 4:
-      n += r(`#ContentDescriptor_GratuitousNudityOrSexualContent_Description`);
+      n += i(`#ContentDescriptor_GratuitousNudityOrSexualContent_Description`);
       break;
     case 3:
-      n += r(`#ContentDescriptor_AdultOnlySexualContent_Description`);
+      n += i(`#ContentDescriptor_AdultOnlySexualContent_Description`);
       break;
     default:
       throw `Invalid content descriptor.`;
@@ -98,7 +98,7 @@ function f(e, t = !1) {
   return (
     t &&
       (e === 4 || e === 3) &&
-      (n += ` ` + r(`#ContentDescriptor_Affirm18YearsOld`)),
+      (n += ` ` + i(`#ContentDescriptor_Affirm18YearsOld`)),
     n
   );
 }

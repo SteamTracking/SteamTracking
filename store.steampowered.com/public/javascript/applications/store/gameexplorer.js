@@ -12,20 +12,20 @@ import {
 } from "./chunk~01cfc309bf.js";
 import { n as s, r as c } from "./chunk~16aefcf65f.js";
 import { n as l } from "./chunk~3ea79bd96d.js";
-import { n as u, t as d } from "./chunk~a7c5e71e12.js";
-import { r as f } from "./chunk~a243b6a34b.js";
+import { r as u } from "./chunk~a243b6a34b.js";
+import { n as d, t as f } from "./chunk~a7c5e71e12.js";
 import {
-  Ed as p,
-  Jy as m,
-  Ni as h,
-  Qb as g,
-  cx as _,
-  jc as v,
-  ji as ee,
-  pt as y,
-  ua as b,
-  ux as x,
-  wc as S,
+  Bc as p,
+  Bi as m,
+  Fd as h,
+  Hi as g,
+  Nc as _,
+  _x as v,
+  gt as ee,
+  rb as y,
+  sx as b,
+  ya as x,
+  yx as S,
 } from "./main.js";
 import { t as C } from "./chunk~85f65a382b.js";
 var w = e(o());
@@ -39,7 +39,7 @@ function ne(e, t, n, r, i) {
       let a = {
           appids: e.join(`,`),
           appweights: t.join(`,`),
-          sessionid: g(),
+          sessionid: b(),
           selffactor: n,
           popularity: i ? 0 : r,
           scoperange: i ? 100 : 0,
@@ -47,7 +47,7 @@ function ne(e, t, n, r, i) {
           scopedecaystrength: i ? 20 : 0,
         },
         o = await w.default.get(
-          `${_.STORE_BASE_URL}gameexplorer/exploreapplist`,
+          `${v.STORE_BASE_URL}gameexplorer/exploreapplist`,
           { params: a, withCredentials: !0, timeout: 1e4 },
         );
       if (o.data)
@@ -67,9 +67,9 @@ function T() {
   return {
     queryKey: [`gamemixerplayed`],
     queryFn: async () => {
-      let e = { sessionid: g() },
+      let e = { sessionid: b() },
         t = await w.default.get(
-          `${_.STORE_BASE_URL}gameexplorer/exploreplayedlist`,
+          `${v.STORE_BASE_URL}gameexplorer/exploreplayedlist`,
           { params: e, withCredentials: !0, timeout: 1e4 },
         );
       if (t.data) return t.data;
@@ -133,18 +133,18 @@ function se() {
       a.nPopularity,
       a.bSimilar,
     );
-  return (0, Z.jsx)(y, {
+  return (0, Z.jsx)(ee, {
     controller: `gameexplorer`,
     method: `default`,
     feature: `capsule`,
-    children: (0, Z.jsx)(ee, {
-      children: (0, Z.jsx)(v, {
-        className: S(D, c.isFetching && void 0),
-        children: (0, Z.jsxs)(v, {
+    children: (0, Z.jsx)(m, {
+      children: (0, Z.jsx)(p, {
+        className: _(D, c.isFetching && void 0),
+        children: (0, Z.jsxs)(p, {
           className: O,
           children: [
             (0, Z.jsx)(ce, {}),
-            !x.steamid && (0, Z.jsx)(me, {}),
+            !S.steamid && (0, Z.jsx)(me, {}),
             (0, Z.jsx)(fe, {
               state: r,
               onChange: (e, t) => {
@@ -170,16 +170,16 @@ function se() {
   });
 }
 function ce() {
-  return (0, Z.jsxs)(v, {
+  return (0, Z.jsxs)(p, {
     className: k,
     children: [
-      (0, Z.jsx)(v, { className: A, children: `Game Explorer` }),
-      (0, Z.jsx)(v, { className: j, children: `Explore and Mix Games` }),
+      (0, Z.jsx)(p, { className: A, children: `Game Explorer` }),
+      (0, Z.jsx)(p, { className: j, children: `Explore and Mix Games` }),
     ],
   });
 }
 function le(e) {
-  let [t] = u(e.selectedAppInfo.nAppID, {
+  let [t] = d(e.selectedAppInfo.nAppID, {
     include_basic_info: !0,
     include_assets_without_overrides: !0,
   });
@@ -190,7 +190,7 @@ function le(e) {
     children: [
       (0, Z.jsx)(`div`, {
         className: J,
-        children: (0, Z.jsx)(b, {
+        children: (0, Z.jsx)(x, {
           size: `1`,
           color: `red`,
           onClick: () => e.onRemove(e.selectedAppInfo.nAppID),
@@ -400,7 +400,7 @@ function fe(e) {
   });
 }
 function pe(e) {
-  let [t] = d(e.nAppID, 0, f);
+  let [t] = f(e.nAppID, 0, u);
   return t
     ? (0, Z.jsxs)(`div`, {
         className: X,
@@ -423,7 +423,7 @@ function pe(e) {
               `${(e.fDistance * 100).toFixed(2)}%`,
               (0, Z.jsx)(`div`, {
                 className: ae,
-                children: (0, Z.jsx)(b, {
+                children: (0, Z.jsx)(x, {
                   size: `1`,
                   color: `green`,
                   onClick: () => e.fnSetApp(e.nAppID),
@@ -440,7 +440,7 @@ function $(e) {
   return e.arrNearApps.length == 0
     ? null
     : (0, Z.jsx)(`div`, {
-        className: S(Y, e.bIsPending && `r9iZqJcYbak-`),
+        className: _(Y, e.bIsPending && `r9iZqJcYbak-`),
         children: e.arrNearApps?.map((t) =>
           (0, Z.jsx)(
             pe,
@@ -451,20 +451,20 @@ function $(e) {
       });
 }
 function me() {
-  return (0, Z.jsxs)(v, {
+  return (0, Z.jsxs)(p, {
     className: void 0,
     children: [
-      m(`#PersonalCalendar_LoginPrompt`),
+      y(`#PersonalCalendar_LoginPrompt`),
       (0, Z.jsx)(`button`, {
         onClick: C,
         className: void 0,
-        children: m(`#Login_SignIn`),
+        children: y(`#Login_SignIn`),
       }),
     ],
   });
 }
 function he(e) {
-  let [t] = u(e.nAppID, {
+  let [t] = d(e.nAppID, {
     include_basic_info: !0,
     include_assets_without_overrides: !0,
   });
@@ -480,14 +480,14 @@ function he(e) {
   });
 }
 var ge = E.forwardRef(function (e, t) {
-    let n = p(e.strSearch, null, 10),
+    let n = h(e.strSearch, null, 10),
       r = e.fnSetResultApps;
     return (
       E.useEffect(() => {
         r(n.data?.rgItemIDs.map((e) => e.appid));
       }, [r, n.data]),
       (0, Z.jsx)(`div`, {
-        className: S(F, n.data?.rgItemIDs.length > 0 && `g6SP7v41-Kc-`),
+        className: _(F, n.data?.rgItemIDs.length > 0 && `g6SP7v41-Kc-`),
         ref: t,
         children: n.data?.rgItemIDs
           .filter((t) => !e.arrIgnoreAppIDs.includes(t.appid))
@@ -531,7 +531,7 @@ var ge = E.forwardRef(function (e, t) {
       children: [
         (0, Z.jsx)(`input`, {
           type: `text`,
-          className: S(P, h && `TAlX1lcqH8Y-`),
+          className: _(P, h && `TAlX1lcqH8Y-`),
           value: t,
           onChange: (e) => f(e.target.value),
           onKeyDown: (e) => m(e.key),
@@ -555,7 +555,7 @@ var ge = E.forwardRef(function (e, t) {
       n = t?.appids ?? [];
     return (0, Z.jsx)(`div`, {
       className: void 0,
-      children: (0, Z.jsx)(h, {
+      children: (0, Z.jsx)(g, {
         options: n,
         size: `1`,
         selectedValue: 0,

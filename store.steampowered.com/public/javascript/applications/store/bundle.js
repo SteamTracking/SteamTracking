@@ -4,7 +4,7 @@
 import "./chunk~f025431ab0.js";
 import { Lt as e, P as t, ft as n, l as r } from "./chunk~01cfc309bf.js";
 import "./chunk~4e18b7e430.js";
-import { Jy as i, Vu as a, wc as o } from "./main.js";
+import { Nc as i, Xu as a, rb as o } from "./main.js";
 import { t as s } from "./chunk~915930a63a.js";
 import {
   c,
@@ -64,7 +64,7 @@ var y = `YUOqKgPXmCU-`,
   }),
   E = r(({ bundle: e, offer: t }) => {
     let n = g(e),
-      r = i(`#RewardBundle_OfferDescription`, t.discount);
+      r = o(`#RewardBundle_OfferDescription`, t.discount);
     return (0, C.jsx)(s, {
       paddingBottom: `xlarge`,
       children: (0, C.jsx)(c, { title: n, subtitle: r }),
@@ -72,19 +72,19 @@ var y = `YUOqKgPXmCU-`,
   }),
   D = ({ className: e }) =>
     (0, C.jsxs)(`div`, {
-      className: o(e, x),
+      className: i(e, x),
       children: [
         (0, C.jsx)(p, { className: b }),
         (0, C.jsx)(`span`, {
           className: S,
-          children: i(`#Redeem_BundleItemOwned`),
+          children: o(`#Redeem_BundleItemOwned`),
         }),
       ],
     }),
   O = r((e) => {
     let { offer: t } = e;
     return (0, C.jsx)(d, {
-      title: i(`#RewardBundle_BundleContentsSection_Title`),
+      title: o(`#RewardBundle_BundleContentsSection_Title`),
       children: (0, C.jsx)(f, {
         getItems: (e, n) => ({
           rewards: t.items.slice(e, n),

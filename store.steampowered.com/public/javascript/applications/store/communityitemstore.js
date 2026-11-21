@@ -2,14 +2,14 @@
  ****/
 
 import { At as e, kt as t } from "./chunk~01cfc309bf.js";
-import { Lb as n, Qx as r, qb as i } from "./main.js";
+import { Kb as n, nx as r, sS as i } from "./main.js";
 var a = class {
   m_ItemDefinition = {};
   m_ItemKV = {};
   constructor(e) {
     t(this);
-    let { itemDef: n, communityItemDef: i } = e;
-    (r(
+    let { itemDef: n, communityItemDef: r } = e;
+    (i(
       e.itemDef || e.communityItemDef,
       `CCommunityItem must be initialized by an itemDef or a communityItemDef`,
     ),
@@ -36,11 +36,11 @@ var a = class {
             item_last_changed: n.item_last_changed,
             broadcast_channel_id: n.broadcast_channel_id,
           })
-        : (r(
-            !!i,
+        : (i(
+            !!r,
             `Managed to get into LoadItemDefinition with neither itemDef nor communityItemDef`,
           ),
-          (this.m_ItemDefinition = i)),
+          (this.m_ItemDefinition = r)),
       this.m_ItemDefinition.item_key_values &&
         (this.m_ItemKV = JSON.parse(this.m_ItemDefinition.item_key_values)));
   }
@@ -66,6 +66,6 @@ var a = class {
 (n([e], a.prototype, `m_ItemDefinition`, void 0),
   n([e], a.prototype, `m_ItemKV`, void 0));
 function o(e, t) {
-  return `${i.MEDIA_CDN_COMMUNITY_URL}images/items/${e}/${t}`;
+  return `${r.MEDIA_CDN_COMMUNITY_URL}images/items/${e}/${t}`;
 }
 export { o as t };

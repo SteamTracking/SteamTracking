@@ -467,7 +467,7 @@ html:not(.GamepadMode)
 }
 .xAhUZDLR-Fs- {
   white-space: nowrap;
-  color: #8f98a0;
+  color: #ffffff80;
   font-size: 12px;
 }
 .I5j74q712SQ- {
@@ -484,11 +484,11 @@ html:not(.GamepadMode)
   display: flex;
 }
 .FStnZRH332A-:hover .eqYBsdUkt5U-:not(.bY2thn3lfUw-) {
-  opacity: 0.6;
+  opacity: 0.3;
 }
 .eqYBsdUkt5U- {
-  opacity: 0.3;
-  background-color: #606974;
+  opacity: 0.15;
+  background-color: #fff;
   border-radius: 4px;
   flex-shrink: 0;
   width: 16px;

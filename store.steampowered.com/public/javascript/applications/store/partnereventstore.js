@@ -17,22 +17,22 @@ import { t as l } from "./chunk~92931c6310.js";
 import { l as u } from "./chunk~e867464c75.js";
 import { n as d, t as f } from "./chunk~593a6b8ddc.js";
 import {
-  Bu as p,
-  Hx as m,
-  Lb as h,
-  Nb as g,
-  Qb as _,
-  Qx as v,
-  Tu as y,
-  Ux as b,
-  Vy as x,
-  Wy as S,
-  Xx as C,
-  cx as w,
-  ex as T,
-  wl as E,
-  yS as D,
-  zb as O,
+  $y as p,
+  Hb as m,
+  Jb as h,
+  Kb as g,
+  Nl as _,
+  OS as v,
+  Pu as y,
+  Qx as b,
+  Xy as x,
+  Yu as S,
+  Zx as C,
+  _x as w,
+  aS as T,
+  lx as E,
+  sS as D,
+  sx as O,
 } from "./main.js";
 function k(e) {
   return window.StoreDefaults ? window.StoreDefaults[e] : void 0;
@@ -93,7 +93,7 @@ function N(e, t, n) {
 }
 function P(e) {
   let t = `` + e,
-    n = S.GetELanguageFallback(e);
+    n = p.GetELanguageFallback(e);
   return (e != n && (t += `_` + n), t);
 }
 var F = class {
@@ -103,7 +103,7 @@ var F = class {
     playtime;
     announcementid;
     constructor(e) {
-      (v(
+      (D(
         typeof e.appid == `number`,
         `AJAX updated app returned a non-numeric AppID! Did the PHP change?`,
       ),
@@ -130,7 +130,7 @@ var F = class {
     m_rgQueuedEventsClanIDs = [];
     m_rgQueuedEventsUniqueIDs = [];
     m_rgQueuedEventsForEditFlags = [];
-    m_QueuedEventTimeout = new g();
+    m_QueuedEventTimeout = new m();
     m_PendingInfoPromise;
     m_PendingInfoResolve;
     m_bLoadedFromConfig = !1;
@@ -146,7 +146,7 @@ var F = class {
                 this.m_mapExistingEvents.set(c + e.announcement_body.gid, n);
             }
           });
-        let t = T(`partnereventstore`, `application_config`);
+        let t = E(`partnereventstore`, `application_config`);
         this.ValidateStoreDefault(t) &&
           t.forEach((e) => {
             if (e) {
@@ -159,7 +159,7 @@ var F = class {
                 this.m_mapExistingEvents.set(c + e.announcement_body.gid, n);
             }
           });
-        let n = T(`partnereventadjacents`, `application_config`);
+        let n = E(`partnereventadjacents`, `application_config`);
         (this.ValidateAdjacentEvent(n) &&
           n.forEach((e) => {
             e &&
@@ -195,7 +195,7 @@ var F = class {
       let t = this.m_mapEventUpdateCallback.get(e);
       return (
         (t ||=
-          (this.m_mapEventUpdateCallback.set(e, new m()),
+          (this.m_mapEventUpdateCallback.set(e, new C()),
           this.m_mapEventUpdateCallback.get(e))),
         t
       );
@@ -269,7 +269,7 @@ var F = class {
       if ((e.jsondata.sale_num_headers ?? 0) > 1) {
         e.jsondata.localized_per_day_sales_header = [];
         for (let t = 0; t < (e.jsondata.sale_num_headers ?? 0); ++t)
-          e.jsondata.localized_per_day_sales_header.push(C([], 32, null));
+          e.jsondata.localized_per_day_sales_header.push(T([], 32, null));
         e.m_overrideCurrentDay = 0;
       } else e.m_overrideCurrentDay = void 0;
     }
@@ -319,7 +319,7 @@ var F = class {
           (r
             ? `events/ajaxgeteventdetailsforedit/`
             : `events/ajaxgeteventdetails/`),
-        a = P(D(w.LANGUAGE)),
+        a = P(v(w.LANGUAGE)),
         o = {
           clanid_list: e.join(`,`),
           uniqueid_list: t.join(`,`),
@@ -330,7 +330,7 @@ var F = class {
         let e = await j.default.get(i, { params: o, withCredentials: r });
         this.RegisterClanEvents(e.data.events);
       } catch (e) {
-        let t = p(e);
+        let t = S(e);
         console.error(`GetEventDetails hit error ` + t.strErrorMsg, t);
       }
     }
@@ -386,15 +386,15 @@ var F = class {
       let l = [];
       if (!t || !this.m_mapAdjacentAnnouncementGIDs.has(t)) {
         let u = w.STORE_BASE_URL + `events/ajaxgetadjacentpartnerevents/`,
-          d = P(D(w.LANGUAGE));
+          d = P(v(w.LANGUAGE));
         s?.only_summaries &&
           !this.m_bOnlySummary &&
-          (v(
+          (D(
             this.m_bOnlySummary,
             `Only Summary: Incorrect parameter passed in, unsetting`,
           ),
           (s.only_summaries = void 0));
-        let m = {
+        let p = {
           clan_accountid: n ? n.GetAccountID() : void 0,
           appid: r,
           count_before: i,
@@ -416,7 +416,7 @@ var F = class {
           origin: self.origin,
         };
         try {
-          let i = await j.default.get(u, { params: m, cancelToken: c?.token });
+          let i = await j.default.get(u, { params: p, cancelToken: c?.token });
           if (i?.data?.success == 1)
             a(() => {
               for (let e of i.data.events) {
@@ -438,7 +438,7 @@ var F = class {
               }
             });
           else {
-            let e = p(i?.data);
+            let e = S(i?.data);
             console.error(
               `LoadAdjacentPartnerEvents Success but empty response:` +
                 r +
@@ -450,7 +450,7 @@ var F = class {
             );
           }
         } catch (e) {
-          let t = p(e);
+          let t = S(e);
           t.errorCode != 52 &&
             console.error(
               `LoadAdjacentPartnerEvents hit error on appid:` +
@@ -509,7 +509,7 @@ var F = class {
           }
         });
       } catch (e) {
-        console.error(`LoadClanEventInDateRange hit error ` + p(e).strErrorMsg);
+        console.error(`LoadClanEventInDateRange hit error ` + S(e).strErrorMsg);
       }
       return o;
     }
@@ -594,7 +594,7 @@ var F = class {
       this.m_mapExistingEvents.has(t) &&
         (this.m_mapExistingEvents.get(t).deleteInProgress = !0);
       let n = new URLSearchParams();
-      (n.append(`sessionid`, _()),
+      (n.append(`sessionid`, O()),
         n.append(`bDelete`, `1`),
         n.append(`gid`, t));
       let r = await j.default.post(
@@ -642,7 +642,7 @@ var F = class {
       i,
       a = !1,
     ) {
-      let o = P(a ? 0 : D(w.LANGUAGE)),
+      let o = P(a ? 0 : v(w.LANGUAGE)),
         s = {
           appid: t,
           clan_accountid: e ? e.GetAccountID() : void 0,
@@ -657,7 +657,7 @@ var F = class {
         c = null,
         l = null;
       if (a) {
-        let n = O();
+        let n = h();
         (n === `community`
           ? ((l = w.COMMUNITY_BASE_URL),
             (l += e ? `gid/` + e.ConvertTo64BitString() : `ogg/` + t),
@@ -683,7 +683,7 @@ var F = class {
           (this.m_mapExistingEvents.get(n).rtime32_moderator_reviewed ?? 0) <
             (t.rtime_mod_reviewed ?? 0)
         ) {
-          v(t.clan_steamid, `ClanSteamID is missing from data we received`);
+          D(t.clan_steamid, `ClanSteamID is missing from data we received`);
           let e = new x(t.clan_steamid);
           this.InsertEventModelFromClanEventData(e, t);
         }
@@ -825,7 +825,7 @@ var F = class {
     async LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(e, t, n) {
       let r = [],
         i = w.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/`,
-        o = P(D(w.LANGUAGE)),
+        o = P(v(w.LANGUAGE)),
         s = null,
         c = null;
       if (e) {
@@ -888,7 +888,7 @@ var F = class {
                 r.push(this.m_mapExistingEvents.get(e));
               }
             else {
-              let t = p(e);
+              let t = S(e);
               console.error(
                 `LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs partial processing hit error ` +
                   t.strErrorMsg,
@@ -899,7 +899,7 @@ var F = class {
           }),
         );
       } catch (e) {
-        let t = p(e);
+        let t = S(e);
         console.error(
           `LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs hit error ` +
             t.strErrorMsg,
@@ -914,7 +914,7 @@ var F = class {
       try {
         let a = `${w.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
           o = new FormData();
-        (o.append(`sessionid`, _()),
+        (o.append(`sessionid`, O()),
           o.append(`gidclanevent`, t),
           o.append(`json`, JSON.stringify(n)),
           o.append(`pageStyles`, JSON.stringify(r)));
@@ -931,9 +931,9 @@ var F = class {
           }
           return (this.GetPartnerEventChangeCallback(t).Dispatch(e), !0);
         }
-        i = p(s);
+        i = S(s);
       } catch (e) {
-        i = p(e);
+        i = S(e);
       }
       return (
         console.error(
@@ -948,19 +948,19 @@ var F = class {
       return this.m_bOnlySummary;
     }
   };
-(h([t], I.prototype, `m_mapExistingEvents`, void 0),
-  h([t], I.prototype, `m_mapAnnouncementBodyToEvent`, void 0),
-  h([t], I.prototype, `m_mapClanToGIDs`, void 0),
-  h([t], I.prototype, `m_mapAppIDToGIDs`, void 0),
-  h([t], I.prototype, `m_mapUpdatedApps`, void 0),
-  h([n], I.prototype, `Init`, null),
-  h([b], I.prototype, `GetPartnerEventChangeCallback`, null),
-  h([n], I.prototype, `RegisterClanEvents`, null),
-  h([n], I.prototype, `InsertEventModelFromClanEventData`, null),
-  h([n], I.prototype, `DeleteClanEvent`, null),
-  h([n], I.prototype, `RemoveGIDFromList`, null),
-  h([n], I.prototype, `FlushEventFromCache`, null),
-  h([b], I.prototype, `SavePartnerEventSaleAssets`, null));
+(g([t], I.prototype, `m_mapExistingEvents`, void 0),
+  g([t], I.prototype, `m_mapAnnouncementBodyToEvent`, void 0),
+  g([t], I.prototype, `m_mapClanToGIDs`, void 0),
+  g([t], I.prototype, `m_mapAppIDToGIDs`, void 0),
+  g([t], I.prototype, `m_mapUpdatedApps`, void 0),
+  g([n], I.prototype, `Init`, null),
+  g([b], I.prototype, `GetPartnerEventChangeCallback`, null),
+  g([n], I.prototype, `RegisterClanEvents`, null),
+  g([n], I.prototype, `InsertEventModelFromClanEventData`, null),
+  g([n], I.prototype, `DeleteClanEvent`, null),
+  g([n], I.prototype, `RemoveGIDFromList`, null),
+  g([n], I.prototype, `FlushEventFromCache`, null),
+  g([b], I.prototype, `SavePartnerEventSaleAssets`, null));
 var L = new I();
 y(`g_PartnerEventStore`, L);
 var R = new I(!0);
@@ -978,7 +978,7 @@ function z(e, t, n = !1) {
           .then(i)
           .finally(() => o(!1)));
     }, [s, t, r, e, n]),
-    E(n ? L.GetPartnerEventChangeCallback(t) : void 0, i),
+    _(n ? L.GetPartnerEventChangeCallback(t) : void 0, i),
     { eventModel: r, bLoading: a }
   );
 }

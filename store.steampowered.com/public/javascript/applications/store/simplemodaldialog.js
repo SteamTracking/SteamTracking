@@ -4,12 +4,12 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, N as n, ft as r } from "./chunk~01cfc309bf.js";
 import {
-  Sc as i,
-  Wb as a,
-  hl as o,
-  ja as s,
+  $b as i,
+  Ba as a,
+  Bc as o,
+  Cl as s,
   jc as c,
-  ml as l,
+  wl as l,
 } from "./main.js";
 var u = e(t(), 1),
   d = e(n(), 1),
@@ -30,8 +30,8 @@ function _(e) {
       className: n,
       navID: r,
       children: i,
-      allowScrollBehind: a,
-      onPointerDown: o,
+      allowScrollBehind: o,
+      onPointerDown: s,
       onPointerUp: c,
       ...l
     } = e,
@@ -48,9 +48,9 @@ function _(e) {
     _ = u.useRef(!1),
     y = u.useCallback(
       (e) => {
-        ((_.current = e.target == e.currentTarget), o?.(e));
+        ((_.current = e.target == e.currentTarget), s?.(e));
       },
-      [o],
+      [s],
     ),
     b = u.useCallback(
       (e) => {
@@ -69,28 +69,28 @@ function _(e) {
     onClose: t,
     children: (0, m.jsx)(`dialog`, {
       ref: g,
-      className: (0, d.default)(f, !a && p && `egtbEvvs2Oc-`, n),
+      className: (0, d.default)(f, !o && p && `egtbEvvs2Oc-`, n),
       onClose: () => t(`onclose`),
       onClick: x,
       ...l,
       onPointerDown: y,
       onPointerUp: b,
-      children: (0, m.jsx)(s, { children: i }),
+      children: (0, m.jsx)(a, { children: i }),
     }),
   });
 }
 function v(e) {
   let { navID: t, onClose: n, children: r } = e,
-    i = u.useCallback(() => n(`cancelbutton`), [n]),
-    s = u.useRef(void 0);
+    a = u.useCallback(() => n(`cancelbutton`), [n]),
+    o = u.useRef(void 0);
   return (
-    l(s, !0, !0),
-    a()
-      ? (0, m.jsx)(o, {
+    s(o, !0, !0),
+    i()
+      ? (0, m.jsx)(l, {
           navID: t ?? `ModalDialog`,
-          onCancelButton: i,
+          onCancelButton: a,
           modal: !0,
-          navTreeRef: s,
+          navTreeRef: o,
           children: r,
         })
       : (0, m.jsx)(m.Fragment, { children: r })
@@ -113,8 +113,8 @@ function w(e) {
     onClose: t,
     className: n,
     navID: r,
-    children: a,
-    strTitle: o,
+    children: i,
+    strTitle: a,
     wideMode: s,
     ...l
   } = e;
@@ -126,18 +126,18 @@ function w(e) {
       className: (0, d.default)(n, b, s && `GJxb9L6ppZw-`),
       children: [
         ` `,
-        (0, m.jsxs)(c, {
+        (0, m.jsxs)(o, {
           className: x,
           children: [
-            o && (0, m.jsx)(`div`, { className: `pxN-7GRnbkY-`, children: o }),
+            a && (0, m.jsx)(`div`, { className: `pxN-7GRnbkY-`, children: a }),
             (0, m.jsx)(`button`, {
               onClick: (e) => (t(`xclick`), e.preventDefault(), !1),
               className: S,
-              children: (0, m.jsx)(i, {}),
+              children: (0, m.jsx)(c, {}),
             }),
           ],
         }),
-        (0, m.jsx)(`div`, { className: C, children: a }),
+        (0, m.jsx)(`div`, { className: C, children: i }),
       ],
     }),
   });

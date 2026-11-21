@@ -5,12 +5,12 @@ import { o as e } from "./chunk~f025431ab0.js";
 import { At as t, Lt as n, kt as r, tt as i } from "./chunk~01cfc309bf.js";
 import "./chunk~5214caf193.js";
 import {
-  $b as a,
-  Bu as o,
-  Lb as s,
-  Qb as c,
-  cx as l,
-  ux as u,
+  Kb as a,
+  Yu as o,
+  _x as s,
+  cx as c,
+  sx as l,
+  yx as u,
 } from "./main.js";
 var d = e(i()),
   f = e(n()),
@@ -25,7 +25,7 @@ var d = e(i()),
     }
     constructor() {
       r(this);
-      let e = a(`summerstory`, `application_config`);
+      let e = c(`summerstory`, `application_config`);
       if (e) {
         if (e.story_choices) {
           let t = e.story_choices;
@@ -61,7 +61,7 @@ var d = e(i()),
       let n = null;
       try {
         let r = await d.default.get(
-          l.STORE_BASE_URL + `promotion/ajaxhasclaimedgenresticker`,
+          s.STORE_BASE_URL + `promotion/ajaxhasclaimedgenresticker`,
           { params: { genre: e }, cancelToken: t?.token },
         );
         if (r?.status == 200 && r.data?.success == 1 && r.data?.results) {
@@ -81,11 +81,11 @@ var d = e(i()),
       let r = new FormData();
       (r.append(`genre`, e.toString()),
         r.append(`choice`, t.toString()),
-        r.append(`sessionid`, c()));
+        r.append(`sessionid`, l()));
       let i = null;
       try {
         let a = await d.default.post(
-          l.STORE_BASE_URL + `promotion/ajaxclaimstickerforgenre`,
+          s.STORE_BASE_URL + `promotion/ajaxclaimstickerforgenre`,
           r,
           { withCredentials: !0, cancelToken: n?.token },
         );
@@ -110,8 +110,8 @@ var d = e(i()),
       );
     }
   };
-(s([t], p.prototype, `m_mapGenreToStickerResponse`, void 0),
-  s([t], p.prototype, `m_eStoryBadgeGranted`, void 0));
+(a([t], p.prototype, `m_mapGenreToStickerResponse`, void 0),
+  a([t], p.prototype, `m_eStoryBadgeGranted`, void 0));
 function m() {
   return p.Get().GetStoryBadgeGranted();
 }
@@ -144,7 +144,7 @@ var y = 1658760;
 function b(e) {
   let [t] = v(e);
   return t?.sticker_def
-    ? `${l.MEDIA_CDN_COMMUNITY_URL}images/items/${y}/${t.sticker_def.item_image_small}`
+    ? `${s.MEDIA_CDN_COMMUNITY_URL}images/items/${y}/${t.sticker_def.item_image_small}`
     : null;
 }
 function x(e) {

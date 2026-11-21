@@ -11,45 +11,45 @@ import {
 } from "./chunk~01cfc309bf.js";
 import { n as s, t as c } from "./chunk~eefd71512b.js";
 import {
-  Aa as l,
-  Eb as u,
-  Fy as d,
-  Il as f,
-  Jb as p,
+  Bc as l,
+  Fb as u,
+  Gl as d,
+  Hy as f,
+  Jy as p,
   Kb as m,
-  Lb as h,
-  Ny as g,
-  Qx as _,
-  Sl as v,
-  TS as y,
-  Ux as b,
-  Xc as x,
-  Yb as S,
-  ea as C,
-  jc as w,
-  ll as T,
-  qb as E,
-  ua as D,
-  wx as O,
-  yS as ee,
-  yx as k,
-  zy as te,
+  Nx as h,
+  OS as g,
+  Ox as _,
+  PS as v,
+  Qx as y,
+  Wy as b,
+  al as x,
+  ix as S,
+  jl as C,
+  la as w,
+  nx as T,
+  rx as E,
+  sS as D,
+  tx as ee,
+  vl as te,
+  ya as ne,
+  za as re,
 } from "./main.js";
 import {
-  a as ne,
-  c as re,
-  i as A,
-  l as ie,
-  n as ae,
-  o as oe,
-  r as se,
-  s as ce,
-  t as le,
-  u as ue,
+  a as ie,
+  c as ae,
+  i as O,
+  l as oe,
+  n as se,
+  o as ce,
+  r as le,
+  s as ue,
+  t as de,
+  u as fe,
 } from "./chunk~7cbe6011f7.js";
-var j,
-  de = !0;
-function M(e, t, n) {
+var k,
+  pe = !0;
+function A(e, t, n) {
   e != null &&
     (typeof e == `number`
       ? this.fromNumber(e, t, n)
@@ -57,17 +57,17 @@ function M(e, t, n) {
         ? this.fromString(e, 256)
         : this.fromString(e, t));
 }
-function N() {
-  return new M(null);
+function j() {
+  return new A(null);
 }
-function fe(e, t, n, r, i, a) {
+function me(e, t, n, r, i, a) {
   for (; --a >= 0;) {
     var o = t * this[e++] + n[r] + i;
     ((i = Math.floor(o / 67108864)), (n[r++] = o & 67108863));
   }
   return i;
 }
-function pe(e, t, n, r, i, a) {
+function he(e, t, n, r, i, a) {
   for (var o = t & 32767, s = t >> 15; --a >= 0;) {
     var c = this[e] & 32767,
       l = this[e++] >> 15,
@@ -78,7 +78,7 @@ function pe(e, t, n, r, i, a) {
   }
   return i;
 }
-function me(e, t, n, r, i, a) {
+function ge(e, t, n, r, i, a) {
   for (var o = t & 16383, s = t >> 14; --a >= 0;) {
     var c = this[e] & 16383,
       l = this[e++] >> 14,
@@ -89,46 +89,46 @@ function me(e, t, n, r, i, a) {
   }
   return i;
 }
-(de && navigator.appName == `Microsoft Internet Explorer`
-  ? ((M.prototype.am = pe), (j = 30))
-  : de && navigator.appName != `Netscape`
-    ? ((M.prototype.am = fe), (j = 26))
-    : ((M.prototype.am = me), (j = 28)),
-  (M.prototype.DB = j),
-  (M.prototype.DM = (1 << j) - 1),
-  (M.prototype.DV = 1 << j));
-var he = 52;
-((M.prototype.FV = 2 ** he),
-  (M.prototype.F1 = he - j),
-  (M.prototype.F2 = 2 * j - he));
+(pe && navigator.appName == `Microsoft Internet Explorer`
+  ? ((A.prototype.am = he), (k = 30))
+  : pe && navigator.appName != `Netscape`
+    ? ((A.prototype.am = me), (k = 26))
+    : ((A.prototype.am = ge), (k = 28)),
+  (A.prototype.DB = k),
+  (A.prototype.DM = (1 << k) - 1),
+  (A.prototype.DV = 1 << k));
+var _e = 52;
+((A.prototype.FV = 2 ** _e),
+  (A.prototype.F1 = _e - k),
+  (A.prototype.F2 = 2 * k - _e));
 for (
-  var ge = `0123456789abcdefghijklmnopqrstuvwxyz`, _e = [], P = 48, F = 0;
-  F <= 9;
-  ++F
+  var ve = `0123456789abcdefghijklmnopqrstuvwxyz`, ye = [], M = 48, N = 0;
+  N <= 9;
+  ++N
 )
-  _e[P++] = F;
-for (P = 97, F = 10; F < 36; ++F) _e[P++] = F;
-for (P = 65, F = 10; F < 36; ++F) _e[P++] = F;
-function ve(e) {
-  return ge.charAt(e);
-}
-function ye(e, t) {
-  return _e[e.charCodeAt(t)] ?? -1;
-}
+  ye[M++] = N;
+for (M = 97, N = 10; N < 36; ++N) ye[M++] = N;
+for (M = 65, N = 10; N < 36; ++N) ye[M++] = N;
 function be(e) {
+  return ve.charAt(e);
+}
+function xe(e, t) {
+  return ye[e.charCodeAt(t)] ?? -1;
+}
+function Se(e) {
   for (var t = this.t - 1; t >= 0; --t) e[t] = this[t];
   ((e.t = this.t), (e.s = this.s));
 }
-function xe(e) {
+function Ce(e) {
   ((this.t = 1),
     (this.s = e < 0 ? -1 : 0),
     e > 0 ? (this[0] = e) : e < -1 ? (this[0] = e + DV) : (this.t = 0));
 }
-function I(e) {
-  var t = N();
+function P(e) {
+  var t = j();
   return (t.fromInt(e), t);
 }
-function Se(e, t) {
+function we(e, t) {
   var n;
   if (t == 16) n = 4;
   else if (t == 8) n = 3;
@@ -142,7 +142,7 @@ function Se(e, t) {
   }
   ((this.t = 0), (this.s = 0));
   for (var r = e.length, i = !1, a = 0; --r >= 0;) {
-    var o = n == 8 ? e[r] & 255 : ye(e, r);
+    var o = n == 8 ? e[r] & 255 : xe(e, r);
     o < 0
       ? e.charAt(r) == `-` && (i = !0)
       : ((i = !1),
@@ -160,12 +160,12 @@ function Se(e, t) {
     ((this.s = -1),
     a > 0 && (this[this.t - 1] |= ((1 << (this.DB - a)) - 1) << a)),
     this.clamp(),
-    i && M.ZERO.subTo(this, this));
+    i && A.ZERO.subTo(this, this));
 }
-function Ce() {
+function Te() {
   for (var e = this.s & this.DM; this.t > 0 && this[this.t - 1] == e;) --this.t;
 }
-function we(e) {
+function Ee(e) {
   if (this.s < 0) return `-` + this.negate().toString(e);
   var t;
   if (e == 16) t = 4;
@@ -182,7 +182,7 @@ function we(e) {
     s = this.DB - ((o * this.DB) % t);
   if (o-- > 0)
     for (
-      s < this.DB && (r = this[o] >> s) > 0 && ((i = !0), (a = ve(r)));
+      s < this.DB && (r = this[o] >> s) > 0 && ((i = !0), (a = be(r)));
       o >= 0;
     )
       (s < t
@@ -190,17 +190,17 @@ function we(e) {
           (r |= this[--o] >> (s += this.DB - t)))
         : ((r = (this[o] >> (s -= t)) & n), s <= 0 && ((s += this.DB), --o)),
         r > 0 && (i = !0),
-        i && (a += ve(r)));
+        i && (a += be(r)));
   return i ? a : `0`;
 }
-function Te() {
-  var e = N();
-  return (M.ZERO.subTo(this, e), e);
+function De() {
+  var e = j();
+  return (A.ZERO.subTo(this, e), e);
 }
-function Ee() {
+function Oe() {
   return this.s < 0 ? this.negate() : this;
 }
-function De(e) {
+function ke(e) {
   var t = this.s - e.s;
   if (t != 0) return t;
   var n = this.t;
@@ -208,7 +208,7 @@ function De(e) {
   for (; --n >= 0;) if ((t = this[n] - e[n]) != 0) return t;
   return 0;
 }
-function Oe(e) {
+function Ae(e) {
   var t = 1,
     n;
   return (
@@ -220,21 +220,21 @@ function Oe(e) {
     t
   );
 }
-function ke() {
+function je() {
   return this.t <= 0
     ? 0
-    : this.DB * (this.t - 1) + Oe(this[this.t - 1] ^ (this.s & this.DM));
+    : this.DB * (this.t - 1) + Ae(this[this.t - 1] ^ (this.s & this.DM));
 }
-function Ae(e, t) {
+function Me(e, t) {
   for (var n = this.t - 1; n >= 0; --n) t[n + e] = this[n];
   for (n = e - 1; n >= 0; --n) t[n] = 0;
   ((t.t = this.t + e), (t.s = this.s));
 }
-function je(e, t) {
+function Ne(e, t) {
   for (var n = e; n < this.t; ++n) t[n - e] = this[n];
   ((t.t = Math.max(this.t - e, 0)), (t.s = this.s));
 }
-function Me(e, t) {
+function Pe(e, t) {
   for (
     var n = e % this.DB,
       r = this.DB - n,
@@ -249,7 +249,7 @@ function Me(e, t) {
   for (s = a - 1; s >= 0; --s) t[s] = 0;
   ((t[a] = o), (t.t = this.t + a + 1), (t.s = this.s), t.clamp());
 }
-function Ne(e, t) {
+function Fe(e, t) {
   t.s = this.s;
   var n = Math.floor(e / this.DB);
   if (n >= this.t) t.t = 0;
@@ -265,7 +265,7 @@ function Ne(e, t) {
       t.clamp());
   }
 }
-function Pe(e, t) {
+function Ie(e, t) {
   for (var n = 0, r = 0, i = Math.min(e.t, this.t); n < i;)
     ((r += this[n] - e[n]), (t[n++] = r & this.DM), (r >>= this.DB));
   if (e.t < this.t) {
@@ -282,15 +282,15 @@ function Pe(e, t) {
     (t.t = n),
     t.clamp());
 }
-function Fe(e, t) {
+function Le(e, t) {
   var n = this.abs(),
     r = e.abs(),
     i = n.t;
   for (t.t = i + r.t; --i >= 0;) t[i] = 0;
   for (i = 0; i < r.t; ++i) t[i + n.t] = n.am(0, r[i], t, i, 0, n.t);
-  ((t.s = 0), t.clamp(), this.s != e.s && M.ZERO.subTo(t, t));
+  ((t.s = 0), t.clamp(), this.s != e.s && A.ZERO.subTo(t, t));
 }
-function Ie(e) {
+function Re(e) {
   for (var t = this.abs(), n = (e.t = 2 * t.t); --n >= 0;) e[n] = 0;
   for (n = 0; n < t.t - 1; ++n) {
     var r = t.am(n, t[n], e, 2 * n, 0, 1);
@@ -301,17 +301,17 @@ function Ie(e) {
     (e.s = 0),
     e.clamp());
 }
-function Le(e, t, n) {
+function ze(e, t, n) {
   var r = e.abs();
   if (!(r.t <= 0)) {
     var i = this.abs();
     if (i.t < r.t) (t?.fromInt(0), n != null && this.copyTo(n));
     else {
-      n ??= N();
-      var a = N(),
+      n ??= j();
+      var a = j(),
         o = this.s,
         s = e.s,
-        c = this.DB - Oe(r[r.t - 1]);
+        c = this.DB - Ae(r[r.t - 1]);
       c > 0 ? (r.lShiftTo(c, a), i.lShiftTo(c, n)) : (r.copyTo(a), i.copyTo(n));
       var l = a.t,
         u = a[l - 1];
@@ -322,11 +322,11 @@ function Le(e, t, n) {
           m = 1 << this.F2,
           h = n.t,
           g = h - l,
-          _ = t ?? N();
+          _ = t ?? j();
         for (
           a.dlShiftTo(g, _),
             n.compareTo(_) >= 0 && ((n[n.t++] = 1), n.subTo(_, n)),
-            M.ONE.dlShiftTo(l, _),
+            A.ONE.dlShiftTo(l, _),
             _.subTo(a, a);
           a.t < l;
         )
@@ -337,47 +337,47 @@ function Le(e, t, n) {
           if ((n[h] += a.am(0, v, n, g, 0, l)) < v)
             for (a.dlShiftTo(g, _), n.subTo(_, n); n[h] < --v;) n.subTo(_, n);
         }
-        (t != null && (n.drShiftTo(l, t), o != s && M.ZERO.subTo(t, t)),
+        (t != null && (n.drShiftTo(l, t), o != s && A.ZERO.subTo(t, t)),
           (n.t = l),
           n.clamp(),
           c > 0 && n.rShiftTo(c, n),
-          o < 0 && M.ZERO.subTo(n, n));
+          o < 0 && A.ZERO.subTo(n, n));
       }
     }
   }
 }
-function Re(e) {
-  var t = N();
+function Be(e) {
+  var t = j();
   return (
     this.abs().divRemTo(e, null, t),
-    this.s < 0 && t.compareTo(M.ZERO) > 0 && e.subTo(t, t),
+    this.s < 0 && t.compareTo(A.ZERO) > 0 && e.subTo(t, t),
     t
   );
 }
-function L(e) {
+function F(e) {
   this.m = e;
 }
-function ze(e) {
+function Ve(e) {
   return e.s < 0 || e.compareTo(this.m) >= 0 ? e.mod(this.m) : e;
 }
-function Be(e) {
+function He(e) {
   return e;
 }
-function Ve(e) {
+function Ue(e) {
   e.divRemTo(this.m, null, e);
 }
-function He(e, t, n) {
+function We(e, t, n) {
   (e.multiplyTo(t, n), this.reduce(n));
 }
-function Ue(e, t) {
+function Ge(e, t) {
   (e.squareTo(t), this.reduce(t));
 }
-((L.prototype.convert = ze),
-  (L.prototype.revert = Be),
-  (L.prototype.reduce = Ve),
-  (L.prototype.mulTo = He),
-  (L.prototype.sqrTo = Ue));
-function We() {
+((F.prototype.convert = Ve),
+  (F.prototype.revert = He),
+  (F.prototype.reduce = Ue),
+  (F.prototype.mulTo = We),
+  (F.prototype.sqrTo = Ge));
+function Ke() {
   if (this.t < 1) return 0;
   var e = this[0];
   if (!(e & 1)) return 0;
@@ -390,7 +390,7 @@ function We() {
     t > 0 ? this.DV - t : -t
   );
 }
-function R(e) {
+function I(e) {
   ((this.m = e),
     (this.mp = e.invDigit()),
     (this.mpl = this.mp & 32767),
@@ -398,20 +398,20 @@ function R(e) {
     (this.um = (1 << (e.DB - 15)) - 1),
     (this.mt2 = 2 * e.t));
 }
-function Ge(e) {
-  var t = N();
+function qe(e) {
+  var t = j();
   return (
     e.abs().dlShiftTo(this.m.t, t),
     t.divRemTo(this.m, null, t),
-    e.s < 0 && t.compareTo(M.ZERO) > 0 && this.m.subTo(t, t),
+    e.s < 0 && t.compareTo(A.ZERO) > 0 && this.m.subTo(t, t),
     t
   );
 }
-function Ke(e) {
-  var t = N();
+function Je(e) {
+  var t = j();
   return (e.copyTo(t), this.reduce(t), t);
 }
-function qe(e) {
+function Ye(e) {
   for (; e.t <= this.mt2;) e[e.t++] = 0;
   for (var t = 0; t < this.m.t; ++t) {
     var n = e[t] & 32767,
@@ -429,26 +429,26 @@ function qe(e) {
     e.drShiftTo(this.m.t, e),
     e.compareTo(this.m) >= 0 && e.subTo(this.m, e));
 }
-function Je(e, t) {
+function Xe(e, t) {
   (e.squareTo(t), this.reduce(t));
 }
-function Ye(e, t, n) {
+function Ze(e, t, n) {
   (e.multiplyTo(t, n), this.reduce(n));
 }
-((R.prototype.convert = Ge),
-  (R.prototype.revert = Ke),
-  (R.prototype.reduce = qe),
-  (R.prototype.mulTo = Ye),
-  (R.prototype.sqrTo = Je));
-function Xe() {
+((I.prototype.convert = qe),
+  (I.prototype.revert = Je),
+  (I.prototype.reduce = Ye),
+  (I.prototype.mulTo = Ze),
+  (I.prototype.sqrTo = Xe));
+function Qe() {
   return (this.t > 0 ? this[0] & 1 : this.s) == 0;
 }
-function Ze(e, t) {
-  if (e > 4294967295 || e < 1) return M.ONE;
-  var n = N(),
-    r = N(),
+function $e(e, t) {
+  if (e > 4294967295 || e < 1) return A.ONE;
+  var n = j(),
+    r = j(),
     i = t.convert(this),
-    a = Oe(e) - 1;
+    a = Ae(e) - 1;
   for (i.copyTo(n); --a >= 0;)
     if ((t.sqrTo(n, r), (e & (1 << a)) > 0)) t.mulTo(r, i, n);
     else {
@@ -457,39 +457,39 @@ function Ze(e, t) {
     }
   return t.revert(n);
 }
-function Qe(e, t) {
-  var n = e < 256 || t.isEven() ? new L(t) : new R(t);
+function et(e, t) {
+  var n = e < 256 || t.isEven() ? new F(t) : new I(t);
   return this.exp(e, n);
 }
-((M.prototype.copyTo = be),
-  (M.prototype.fromInt = xe),
-  (M.prototype.fromString = Se),
-  (M.prototype.clamp = Ce),
-  (M.prototype.dlShiftTo = Ae),
-  (M.prototype.drShiftTo = je),
-  (M.prototype.lShiftTo = Me),
-  (M.prototype.rShiftTo = Ne),
-  (M.prototype.subTo = Pe),
-  (M.prototype.multiplyTo = Fe),
-  (M.prototype.squareTo = Ie),
-  (M.prototype.divRemTo = Le),
-  (M.prototype.invDigit = We),
-  (M.prototype.isEven = Xe),
-  (M.prototype.exp = Ze),
-  (M.prototype.toString = we),
-  (M.prototype.negate = Te),
-  (M.prototype.abs = Ee),
-  (M.prototype.compareTo = De),
-  (M.prototype.bitLength = ke),
-  (M.prototype.mod = Re),
-  (M.prototype.modPowInt = Qe),
-  (M.ZERO = I(0)),
-  (M.ONE = I(1)));
-function $e() {
-  var e = N();
+((A.prototype.copyTo = Se),
+  (A.prototype.fromInt = Ce),
+  (A.prototype.fromString = we),
+  (A.prototype.clamp = Te),
+  (A.prototype.dlShiftTo = Me),
+  (A.prototype.drShiftTo = Ne),
+  (A.prototype.lShiftTo = Pe),
+  (A.prototype.rShiftTo = Fe),
+  (A.prototype.subTo = Ie),
+  (A.prototype.multiplyTo = Le),
+  (A.prototype.squareTo = Re),
+  (A.prototype.divRemTo = ze),
+  (A.prototype.invDigit = Ke),
+  (A.prototype.isEven = Qe),
+  (A.prototype.exp = $e),
+  (A.prototype.toString = Ee),
+  (A.prototype.negate = De),
+  (A.prototype.abs = Oe),
+  (A.prototype.compareTo = ke),
+  (A.prototype.bitLength = je),
+  (A.prototype.mod = Be),
+  (A.prototype.modPowInt = et),
+  (A.ZERO = P(0)),
+  (A.ONE = P(1)));
+function tt() {
+  var e = j();
   return (this.copyTo(e), e);
 }
-function et() {
+function nt() {
   if (this.s < 0) {
     if (this.t == 1) return this[0] - this.DV;
     if (this.t == 0) return -1;
@@ -497,38 +497,38 @@ function et() {
   else if (this.t == 0) return 0;
   return ((this[1] & ((1 << (32 - this.DB)) - 1)) << this.DB) | this[0];
 }
-function tt() {
+function rt() {
   return this.t == 0 ? this.s : (this[0] << 24) >> 24;
 }
-function nt() {
+function it() {
   return this.t == 0 ? this.s : (this[0] << 16) >> 16;
 }
-function rt(e) {
+function at(e) {
   return Math.floor((Math.LN2 * this.DB) / Math.log(e));
 }
-function it() {
+function ot() {
   return this.s < 0 ? -1 : this.t <= 0 || (this.t == 1 && this[0] <= 0) ? 0 : 1;
 }
-function at(e) {
+function st(e) {
   if (((e ??= 10), this.signum() == 0 || e < 2 || e > 36)) return `0`;
   var t = this.chunkSize(e),
     n = e ** +t,
-    r = I(n),
-    i = N(),
-    a = N(),
+    r = P(n),
+    i = j(),
+    a = j(),
     o = ``;
   for (this.divRemTo(r, i, a); i.signum() > 0;)
     ((o = (n + a.intValue()).toString(e).substr(1) + o), i.divRemTo(r, i, a));
   return a.intValue().toString(e) + o;
 }
-function ot(e, t) {
+function ct(e, t) {
   (this.fromInt(0), (t ??= 10));
   for (
     var n = this.chunkSize(t), r = t ** +n, i = !1, a = 0, o = 0, s = 0;
     s < e.length;
     ++s
   ) {
-    var c = ye(e, s);
+    var c = xe(e, s);
     c < 0
       ? e.charAt(s) == `-` && this.signum() == 0 && (i = !0)
       : ((o = t * o + c),
@@ -536,21 +536,21 @@ function ot(e, t) {
           (this.dMultiply(r), this.dAddOffset(o, 0), (a = 0), (o = 0)));
   }
   (a > 0 && (this.dMultiply(t ** +a), this.dAddOffset(o, 0)),
-    i && M.ZERO.subTo(this, this));
+    i && A.ZERO.subTo(this, this));
 }
-function st(e, t, n) {
+function lt(e, t, n) {
   if (typeof t == `number`) {
     if (e < 2) this.fromInt(1);
     else
       for (
         this.fromNumber(e, n),
           this.testBit(e - 1) ||
-            this.bitwiseTo(M.ONE.shiftLeft(e - 1), ht, this),
+            this.bitwiseTo(A.ONE.shiftLeft(e - 1), _t, this),
           this.isEven() && this.dAddOffset(1, 0);
         !this.isProbablePrime(t);
       )
         (this.dAddOffset(2, 0),
-          this.bitLength() > e && this.subTo(M.ONE.shiftLeft(e - 1), this));
+          this.bitLength() > e && this.subTo(A.ONE.shiftLeft(e - 1), this));
   } else {
     var r = [],
       i = e & 7;
@@ -560,7 +560,7 @@ function st(e, t, n) {
       this.fromString(r, 256));
   }
 }
-function ct() {
+function ut() {
   var e = this.t,
     t = [];
   t[0] = this.s;
@@ -583,16 +583,16 @@ function ct() {
         (i > 0 || r != this.s) && (t[i++] = r));
   return t;
 }
-function lt(e) {
+function dt(e) {
   return this.compareTo(e) == 0;
 }
-function ut(e) {
+function ft(e) {
   return this.compareTo(e) < 0 ? this : e;
 }
-function dt(e) {
+function pt(e) {
   return this.compareTo(e) > 0 ? this : e;
 }
-function ft(e, t, n) {
+function mt(e, t, n) {
   var r,
     i,
     a = Math.min(e.t, this.t);
@@ -606,47 +606,47 @@ function ft(e, t, n) {
   }
   ((n.s = t(this.s, e.s)), n.clamp());
 }
-function pt(e, t) {
+function ht(e, t) {
   return e & t;
 }
-function mt(e) {
-  var t = N();
-  return (this.bitwiseTo(e, pt, t), t);
-}
-function ht(e, t) {
-  return e | t;
-}
 function gt(e) {
-  var t = N();
+  var t = j();
   return (this.bitwiseTo(e, ht, t), t);
 }
 function _t(e, t) {
-  return e ^ t;
+  return e | t;
 }
 function vt(e) {
-  var t = N();
+  var t = j();
   return (this.bitwiseTo(e, _t, t), t);
 }
 function yt(e, t) {
-  return e & ~t;
+  return e ^ t;
 }
 function bt(e) {
-  var t = N();
+  var t = j();
   return (this.bitwiseTo(e, yt, t), t);
 }
-function xt() {
-  for (var e = N(), t = 0; t < this.t; ++t) e[t] = this.DM & ~this[t];
-  return ((e.t = this.t), (e.s = ~this.s), e);
+function xt(e, t) {
+  return e & ~t;
 }
 function St(e) {
-  var t = N();
-  return (e < 0 ? this.rShiftTo(-e, t) : this.lShiftTo(e, t), t);
+  var t = j();
+  return (this.bitwiseTo(e, xt, t), t);
 }
-function Ct(e) {
-  var t = N();
-  return (e < 0 ? this.lShiftTo(-e, t) : this.rShiftTo(e, t), t);
+function Ct() {
+  for (var e = j(), t = 0; t < this.t; ++t) e[t] = this.DM & ~this[t];
+  return ((e.t = this.t), (e.s = ~this.s), e);
 }
 function wt(e) {
+  var t = j();
+  return (e < 0 ? this.rShiftTo(-e, t) : this.lShiftTo(e, t), t);
+}
+function Tt(e) {
+  var t = j();
+  return (e < 0 ? this.lShiftTo(-e, t) : this.rShiftTo(e, t), t);
+}
+function Et(e) {
   if (e == 0) return -1;
   var t = 0;
   return (
@@ -658,38 +658,38 @@ function wt(e) {
     t
   );
 }
-function Tt() {
+function Dt() {
   for (var e = 0; e < this.t; ++e)
-    if (this[e] != 0) return e * this.DB + wt(this[e]);
+    if (this[e] != 0) return e * this.DB + Et(this[e]);
   return this.s < 0 ? this.t * this.DB : -1;
 }
-function Et(e) {
+function Ot(e) {
   for (var t = 0; e != 0;) ((e &= e - 1), ++t);
   return t;
 }
-function Dt() {
+function kt() {
   for (var e = 0, t = this.s & this.DM, n = 0; n < this.t; ++n)
-    e += Et(this[n] ^ t);
+    e += Ot(this[n] ^ t);
   return e;
 }
-function Ot(e) {
+function At(e) {
   var t = Math.floor(e / this.DB);
   return t >= this.t ? this.s != 0 : !!(this[t] & (1 << (e % this.DB)));
 }
-function kt(e, t) {
-  var n = M.ONE.shiftLeft(e);
+function jt(e, t) {
+  var n = A.ONE.shiftLeft(e);
   return (this.bitwiseTo(n, t, n), n);
-}
-function At(e) {
-  return this.changeBit(e, ht);
-}
-function jt(e) {
-  return this.changeBit(e, yt);
 }
 function Mt(e) {
   return this.changeBit(e, _t);
 }
-function Nt(e, t) {
+function Nt(e) {
+  return this.changeBit(e, xt);
+}
+function Pt(e) {
+  return this.changeBit(e, yt);
+}
+function Ft(e, t) {
   for (var n = 0, r = 0, i = Math.min(e.t, this.t); n < i;)
     ((r += this[n] + e[n]), (t[n++] = r & this.DM), (r >>= this.DB));
   if (e.t < this.t) {
@@ -706,59 +706,59 @@ function Nt(e, t) {
     (t.t = n),
     t.clamp());
 }
-function Pt(e) {
-  var t = N();
+function It(e) {
+  var t = j();
   return (this.addTo(e, t), t);
 }
-function Ft(e) {
-  var t = N();
+function Lt(e) {
+  var t = j();
   return (this.subTo(e, t), t);
 }
-function It(e) {
-  var t = N();
+function Rt(e) {
+  var t = j();
   return (this.multiplyTo(e, t), t);
 }
-function Lt(e) {
-  var t = N();
+function zt(e) {
+  var t = j();
   return (this.divRemTo(e, t, null), t);
 }
-function Rt(e) {
-  var t = N();
+function Bt(e) {
+  var t = j();
   return (this.divRemTo(e, null, t), t);
 }
-function zt(e) {
-  var t = N(),
-    n = N();
+function Vt(e) {
+  var t = j(),
+    n = j();
   return (this.divRemTo(e, t, n), [t, n]);
 }
-function Bt(e) {
+function Ht(e) {
   ((this[this.t] = this.am(0, e - 1, this, 0, 0, this.t)),
     ++this.t,
     this.clamp());
 }
-function Vt(e, t) {
+function Ut(e, t) {
   for (; this.t <= t;) this[this.t++] = 0;
   for (this[t] += e; this[t] >= this.DV;)
     ((this[t] -= this.DV), ++t >= this.t && (this[this.t++] = 0), ++this[t]);
 }
-function z() {}
-function Ht(e) {
+function L() {}
+function Wt(e) {
   return e;
 }
-function Ut(e, t, n) {
+function Gt(e, t, n) {
   e.multiplyTo(t, n);
 }
-function Wt(e, t) {
+function Kt(e, t) {
   e.squareTo(t);
 }
-((z.prototype.convert = Ht),
-  (z.prototype.revert = Ht),
-  (z.prototype.mulTo = Ut),
-  (z.prototype.sqrTo = Wt));
-function Gt(e) {
-  return this.exp(e, new z());
+((L.prototype.convert = Wt),
+  (L.prototype.revert = Wt),
+  (L.prototype.mulTo = Gt),
+  (L.prototype.sqrTo = Kt));
+function qt(e) {
+  return this.exp(e, new L());
 }
-function Kt(e, t, n) {
+function Jt(e, t, n) {
   var r = Math.min(this.t + e.t, t);
   for (n.s = 0, n.t = r; r > 0;) n[--r] = 0;
   for (var i = n.t - this.t; r < i; ++r)
@@ -766,7 +766,7 @@ function Kt(e, t, n) {
   for (i = Math.min(e.t, t); r < i; ++r) this.am(0, e[r], n, r, 0, t - r);
   n.clamp();
 }
-function qt(e, t, n) {
+function Yt(e, t, n) {
   --t;
   var r = (n.t = this.t + e.t - t);
   for (n.s = 0; --r >= 0;) n[r] = 0;
@@ -774,23 +774,23 @@ function qt(e, t, n) {
     n[this.t + r - t] = this.am(t - r, e[r], n, 0, 0, this.t + r - t);
   (n.clamp(), n.drShiftTo(1, n));
 }
-function B(e) {
-  ((this.r2 = N()),
-    (this.q3 = N()),
-    M.ONE.dlShiftTo(2 * e.t, this.r2),
+function R(e) {
+  ((this.r2 = j()),
+    (this.q3 = j()),
+    A.ONE.dlShiftTo(2 * e.t, this.r2),
     (this.mu = this.r2.divide(e)),
     (this.m = e));
 }
-function Jt(e) {
+function Xt(e) {
   if (e.s < 0 || e.t > 2 * this.m.t) return e.mod(this.m);
   if (e.compareTo(this.m) < 0) return e;
-  var t = N();
+  var t = j();
   return (e.copyTo(t), this.reduce(t), t);
 }
-function Yt(e) {
+function Zt(e) {
   return e;
 }
-function Xt(e) {
+function Qt(e) {
   for (
     e.drShiftTo(this.m.t - 1, this.r2),
       e.t > this.m.t + 1 && ((e.t = this.m.t + 1), e.clamp()),
@@ -801,40 +801,40 @@ function Xt(e) {
     e.dAddOffset(1, this.m.t + 1);
   for (e.subTo(this.r2, e); e.compareTo(this.m) >= 0;) e.subTo(this.m, e);
 }
-function Zt(e, t) {
+function $t(e, t) {
   (e.squareTo(t), this.reduce(t));
 }
-function Qt(e, t, n) {
+function en(e, t, n) {
   (e.multiplyTo(t, n), this.reduce(n));
 }
-((B.prototype.convert = Jt),
-  (B.prototype.revert = Yt),
-  (B.prototype.reduce = Xt),
-  (B.prototype.mulTo = Qt),
-  (B.prototype.sqrTo = Zt));
-function $t(e, t) {
+((R.prototype.convert = Xt),
+  (R.prototype.revert = Zt),
+  (R.prototype.reduce = Qt),
+  (R.prototype.mulTo = en),
+  (R.prototype.sqrTo = $t));
+function tn(e, t) {
   var n = e.bitLength(),
     r,
-    i = I(1),
+    i = P(1),
     a;
   if (n <= 0) return i;
   ((r = n < 18 ? 1 : n < 48 ? 3 : n < 144 ? 4 : n < 768 ? 5 : 6),
-    (a = n < 8 ? new L(t) : t.isEven() ? new B(t) : new R(t)));
+    (a = n < 8 ? new F(t) : t.isEven() ? new R(t) : new I(t)));
   var o = [],
     s = 3,
     c = r - 1,
     l = (1 << r) - 1;
   if (((o[1] = a.convert(this)), r > 1)) {
-    var u = N();
+    var u = j();
     for (a.sqrTo(o[1], u); s <= l;)
-      ((o[s] = N()), a.mulTo(u, o[s - 2], o[s]), (s += 2));
+      ((o[s] = j()), a.mulTo(u, o[s - 2], o[s]), (s += 2));
   }
   var d = e.t - 1,
     f,
     p = !0,
-    m = N(),
+    m = j(),
     h;
-  for (n = Oe(e[d]) - 1; d >= 0;) {
+  for (n = Ae(e[d]) - 1; d >= 0;) {
     for (
       n >= c
         ? (f = (e[d] >> (n - c)) & l)
@@ -859,7 +859,7 @@ function $t(e, t) {
   }
   return a.revert(i);
 }
-function en(e) {
+function nn(e) {
   var t = this.s < 0 ? this.negate() : this.clone(),
     n = e.s < 0 ? e.negate() : e.clone();
   if (t.compareTo(n) < 0) {
@@ -880,7 +880,7 @@ function en(e) {
         : (n.subTo(t, n), n.rShiftTo(1, n)));
   return (a > 0 && n.lShiftTo(a, n), n);
 }
-function tn(e) {
+function rn(e) {
   if (e <= 0) return 0;
   var t = this.DV % e,
     n = this.s < 0 ? e - 1 : 0;
@@ -890,11 +890,11 @@ function tn(e) {
   }
   return n;
 }
-function nn(e) {
+function an(e) {
   var t = e.isEven();
-  if ((this.isEven() && t) || e.signum() == 0) return M.ZERO;
+  if ((this.isEven() && t) || e.signum() == 0) return A.ZERO;
   for (
-    var n = e.clone(), r = this.clone(), i = I(1), a = I(0), o = I(0), s = I(1);
+    var n = e.clone(), r = this.clone(), i = P(1), a = P(0), o = P(0), s = P(1);
     n.signum() != 0;
   ) {
     for (; n.isEven();)
@@ -915,13 +915,13 @@ function nn(e) {
       ? (n.subTo(r, n), t && i.subTo(o, i), a.subTo(s, a))
       : (r.subTo(n, r), t && o.subTo(i, o), s.subTo(a, s));
   }
-  if (r.compareTo(M.ONE) != 0) return M.ZERO;
+  if (r.compareTo(A.ONE) != 0) return A.ZERO;
   if (s.compareTo(e) >= 0) return s.subtract(e);
   if (s.signum() < 0) s.addTo(e, s);
   else return s;
   return s.signum() < 0 ? s.add(e) : s;
 }
-var V = [
+var z = [
     2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
     73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151,
     157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233,
@@ -930,88 +930,88 @@ var V = [
     421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503,
     509,
   ],
-  rn = (1 << 26) / V[V.length - 1];
-function an(e) {
+  on = (1 << 26) / z[z.length - 1];
+function sn(e) {
   var t,
     n = this.abs();
-  if (n.t == 1 && n[0] <= V[V.length - 1]) {
-    for (t = 0; t < V.length; ++t) if (n[0] == V[t]) return !0;
+  if (n.t == 1 && n[0] <= z[z.length - 1]) {
+    for (t = 0; t < z.length; ++t) if (n[0] == z[t]) return !0;
     return !1;
   }
   if (n.isEven()) return !1;
-  for (t = 1; t < V.length;) {
-    for (var r = V[t], i = t + 1; i < V.length && r < rn;) r *= V[i++];
-    for (r = n.modInt(r); t < i;) if (r % V[t++] == 0) return !1;
+  for (t = 1; t < z.length;) {
+    for (var r = z[t], i = t + 1; i < z.length && r < on;) r *= z[i++];
+    for (r = n.modInt(r); t < i;) if (r % z[t++] == 0) return !1;
   }
   return n.millerRabin(e);
 }
-function on(e) {
-  var t = this.subtract(M.ONE),
+function cn(e) {
+  var t = this.subtract(A.ONE),
     n = t.getLowestSetBit();
   if (n <= 0) return !1;
   var r = t.shiftRight(n);
-  ((e = (e + 1) >> 1), e > V.length && (e = V.length));
-  for (var i = N(), a = 0; a < e; ++a) {
-    i.fromInt(V[a]);
+  ((e = (e + 1) >> 1), e > z.length && (e = z.length));
+  for (var i = j(), a = 0; a < e; ++a) {
+    i.fromInt(z[a]);
     var o = i.modPow(r, this);
-    if (o.compareTo(M.ONE) != 0 && o.compareTo(t) != 0) {
+    if (o.compareTo(A.ONE) != 0 && o.compareTo(t) != 0) {
       for (var s = 1; s++ < n && o.compareTo(t) != 0;)
-        if (((o = o.modPowInt(2, this)), o.compareTo(M.ONE) == 0)) return !1;
+        if (((o = o.modPowInt(2, this)), o.compareTo(A.ONE) == 0)) return !1;
       if (o.compareTo(t) != 0) return !1;
     }
   }
   return !0;
 }
-((M.prototype.chunkSize = rt),
-  (M.prototype.toRadix = at),
-  (M.prototype.fromRadix = ot),
-  (M.prototype.fromNumber = st),
-  (M.prototype.bitwiseTo = ft),
-  (M.prototype.changeBit = kt),
-  (M.prototype.addTo = Nt),
-  (M.prototype.dMultiply = Bt),
-  (M.prototype.dAddOffset = Vt),
-  (M.prototype.multiplyLowerTo = Kt),
-  (M.prototype.multiplyUpperTo = qt),
-  (M.prototype.modInt = tn),
-  (M.prototype.millerRabin = on),
-  (M.prototype.clone = $e),
-  (M.prototype.intValue = et),
-  (M.prototype.byteValue = tt),
-  (M.prototype.shortValue = nt),
-  (M.prototype.signum = it),
-  (M.prototype.toByteArray = ct),
-  (M.prototype.equals = lt),
-  (M.prototype.min = ut),
-  (M.prototype.max = dt),
-  (M.prototype.and = mt),
-  (M.prototype.or = gt),
-  (M.prototype.xor = vt),
-  (M.prototype.andNot = bt),
-  (M.prototype.not = xt),
-  (M.prototype.shiftLeft = St),
-  (M.prototype.shiftRight = Ct),
-  (M.prototype.getLowestSetBit = Tt),
-  (M.prototype.bitCount = Dt),
-  (M.prototype.testBit = Ot),
-  (M.prototype.setBit = At),
-  (M.prototype.clearBit = jt),
-  (M.prototype.flipBit = Mt),
-  (M.prototype.add = Pt),
-  (M.prototype.subtract = Ft),
-  (M.prototype.multiply = It),
-  (M.prototype.divide = Lt),
-  (M.prototype.remainder = Rt),
-  (M.prototype.divideAndRemainder = zt),
-  (M.prototype.modPow = $t),
-  (M.prototype.modInverse = nn),
-  (M.prototype.pow = Gt),
-  (M.prototype.gcd = en),
-  (M.prototype.isProbablePrime = an));
-var sn = function (e, t) {
-    ((this.modulus = new M(e, 16)), (this.encryptionExponent = new M(t, 16)));
+((A.prototype.chunkSize = at),
+  (A.prototype.toRadix = st),
+  (A.prototype.fromRadix = ct),
+  (A.prototype.fromNumber = lt),
+  (A.prototype.bitwiseTo = mt),
+  (A.prototype.changeBit = jt),
+  (A.prototype.addTo = Ft),
+  (A.prototype.dMultiply = Ht),
+  (A.prototype.dAddOffset = Ut),
+  (A.prototype.multiplyLowerTo = Jt),
+  (A.prototype.multiplyUpperTo = Yt),
+  (A.prototype.modInt = rn),
+  (A.prototype.millerRabin = cn),
+  (A.prototype.clone = tt),
+  (A.prototype.intValue = nt),
+  (A.prototype.byteValue = rt),
+  (A.prototype.shortValue = it),
+  (A.prototype.signum = ot),
+  (A.prototype.toByteArray = ut),
+  (A.prototype.equals = dt),
+  (A.prototype.min = ft),
+  (A.prototype.max = pt),
+  (A.prototype.and = gt),
+  (A.prototype.or = vt),
+  (A.prototype.xor = bt),
+  (A.prototype.andNot = St),
+  (A.prototype.not = Ct),
+  (A.prototype.shiftLeft = wt),
+  (A.prototype.shiftRight = Tt),
+  (A.prototype.getLowestSetBit = Dt),
+  (A.prototype.bitCount = kt),
+  (A.prototype.testBit = At),
+  (A.prototype.setBit = Mt),
+  (A.prototype.clearBit = Nt),
+  (A.prototype.flipBit = Pt),
+  (A.prototype.add = It),
+  (A.prototype.subtract = Lt),
+  (A.prototype.multiply = Rt),
+  (A.prototype.divide = zt),
+  (A.prototype.remainder = Bt),
+  (A.prototype.divideAndRemainder = Vt),
+  (A.prototype.modPow = tn),
+  (A.prototype.modInverse = an),
+  (A.prototype.pow = qt),
+  (A.prototype.gcd = nn),
+  (A.prototype.isProbablePrime = sn));
+var ln = function (e, t) {
+    ((this.modulus = new A(e, 16)), (this.encryptionExponent = new A(t, 16)));
   },
-  cn = {
+  un = {
     base64: `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=`,
     encode: function (e) {
       if (!e) return !1;
@@ -1062,7 +1062,7 @@ var sn = function (e, t) {
       return t;
     },
   },
-  ln = {
+  dn = {
     hex: `0123456789abcdef`,
     encode: function (e) {
       if (!e) return !1;
@@ -1089,9 +1089,9 @@ var sn = function (e, t) {
       return t;
     },
   },
-  un = {
+  fn = {
     getPublicKey: function (e, t) {
-      return new sn(e, t);
+      return new ln(e, t);
     },
     encrypt: function (e, t) {
       return !t ||
@@ -1100,29 +1100,29 @@ var sn = function (e, t) {
         ? !1
         : ((e = e.toString(16)),
           (e.length & 1) == 1 && (e = `0` + e),
-          cn.encode(ln.decode(e)));
+          un.encode(dn.decode(e)));
     },
     pkcs1pad2: function (e, t) {
       if (t < e.length + 11) return null;
       for (var n = [], r = e.length - 1; r >= 0 && t > 0;)
         n[--t] = e.charCodeAt(r--);
       for (n[--t] = 0; t > 2;) n[--t] = Math.floor(Math.random() * 254) + 1;
-      return ((n[--t] = 2), (n[--t] = 0), new M(n));
+      return ((n[--t] = 2), (n[--t] = 0), new A(n));
     },
   },
-  dn = new v(`Login`),
-  fn = dn.Info;
-dn.Debug;
-var pn = dn.Warning,
-  H = dn.Error;
-function mn(e, t) {
-  let n = un.getPublicKey(t.publickey_mod, t.publickey_exp),
-    r = un.encrypt(e, n);
+  pn = new C(`Login`),
+  mn = pn.Info;
+pn.Debug;
+var hn = pn.Warning,
+  B = pn.Error;
+function gn(e, t) {
+  let n = fn.getPublicKey(t.publickey_mod, t.publickey_exp),
+    r = fn.encrypt(e, n);
   return r === !1 ? null : r;
 }
-var U = e(o(), 1),
-  hn = e(a(), 1),
-  W = (function (e) {
+var V = e(o(), 1),
+  _n = e(a(), 1),
+  H = (function (e) {
     return (
       (e[(e.None = 0)] = `None`),
       (e[(e.Generic = 1)] = `Generic`),
@@ -1134,7 +1134,7 @@ var U = e(o(), 1),
       e
     );
   })({});
-function gn(e, t) {
+function vn(e, t) {
   if (e !== 1) return e;
   switch (t) {
     case 84:
@@ -1147,7 +1147,7 @@ function gn(e, t) {
   }
   return e;
 }
-function _n(e) {
+function yn(e) {
   let {
     shared_secret: t,
     identity_secret: n,
@@ -1158,13 +1158,13 @@ function _n(e) {
     ...s
   } = e;
   return {
-    shared_secret: hn.fromByteArray(t),
-    identity_secret: hn.fromByteArray(n),
-    secret_1: hn.fromByteArray(r),
+    shared_secret: _n.fromByteArray(t),
+    identity_secret: _n.fromByteArray(n),
+    secret_1: _n.fromByteArray(r),
     ...s,
   };
 }
-var vn = (function (e) {
+var bn = (function (e) {
   return (
     (e[(e.k_Success = 0)] = `k_Success`),
     (e[(e.k_PrimaryDomainFail = 1)] = `k_PrimaryDomainFail`),
@@ -1172,13 +1172,13 @@ var vn = (function (e) {
     e
   );
 })({});
-function yn(e, t) {
+function xn(e, t) {
   let n = Object.keys(e);
   return (
     n.length === Object.keys(t).length && n.every((n) => Object.is(e[n], t[n]))
   );
 }
-var G = class {
+var U = class {
   m_setListeners = new Set();
   m_snapshot;
   m_bNotifyPending = !1;
@@ -1236,7 +1236,7 @@ var G = class {
   GetSnapshot() {
     let e = this.BuildSnapshot();
     return (
-      (this.m_snapshot && yn(this.m_snapshot, e)) || (this.m_snapshot = e),
+      (this.m_snapshot && xn(this.m_snapshot, e)) || (this.m_snapshot = e),
       this.m_snapshot
     );
   }
@@ -1263,19 +1263,19 @@ var G = class {
   }
   async PollForUpdate() {
     try {
-      let e = k.Init(ie);
-      (e.SetEMsg(O),
+      let e = _.Init(oe);
+      (e.SetEMsg(h),
         e.Body().set_client_id(this.m_strClientID),
         e.Body().set_request_id(this.m_rgRequestID),
         this.m_strTokenToRevoke &&
           e.Body().set_token_to_revoke(this.m_strTokenToRevoke));
-      let t = await A.PollAuthSessionStatus(this.m_transport, e),
+      let t = await O.PollAuthSessionStatus(this.m_transport, e),
         n = t.GetEResult();
       if (n !== 1) {
         if (n === 2) {
           let e = t.Hdr().transport_error();
           if (
-            (H(
+            (B(
               `Failed to poll auth session. Result ${n}. Transport Error: ${e}`,
             ),
             e === 2 || e === 3)
@@ -1287,7 +1287,7 @@ var G = class {
         else if (n == 118) {
           let e = t.Body().agreement_session_url();
           if (
-            (_(!!e, `Missing agreement session URL for result`, n),
+            (D(!!e, `Missing agreement session URL for result`, n),
             this.m_onShowAgreement)
           )
             this.m_onShowAgreement(e);
@@ -1297,8 +1297,8 @@ var G = class {
           }
           return (this.m_onCompleteCallback({ bSuccess: !1 }), n);
         } else
-          (H(`Failed to poll auth session. Result: ${n}`),
-            (this.m_eFailureState = gn(1, n)));
+          (B(`Failed to poll auth session. Result: ${n}`),
+            (this.m_eFailureState = vn(1, n)));
         return (this.m_onCompleteCallback({ bSuccess: !1 }), n);
       }
       let {
@@ -1313,7 +1313,7 @@ var G = class {
       return (
         (this.m_bRemoteInteraction = !!c),
         a
-          ? (_(
+          ? (D(
               !!o && !!s,
               `Missing access token or account name with refresh token`,
             ),
@@ -1332,7 +1332,7 @@ var G = class {
       );
     } catch (e) {
       return (
-        H(`Failed to poll auth session. ${e}`),
+        B(`Failed to poll auth session. ${e}`),
         (this.m_eFailureState = 1),
         this.m_onCompleteCallback({ bSuccess: !1 }),
         2
@@ -1353,23 +1353,23 @@ var G = class {
   }
   async GetDeviceDetails() {
     let e = await this.m_onDeviceDetailsCallback();
-    return ce.fromObject(e);
+    return ue.fromObject(e);
   }
 };
-(h([b], G.prototype, `Subscribe`, null),
-  h([b], G.prototype, `GetSnapshot`, null),
-  h([b], G.prototype, `PollForUpdate`, null),
-  h([b], G.prototype, `SetTokenToRevoke`, null));
-function bn(e) {
+(m([y], U.prototype, `Subscribe`, null),
+  m([y], U.prototype, `GetSnapshot`, null),
+  m([y], U.prototype, `PollForUpdate`, null),
+  m([y], U.prototype, `SetTokenToRevoke`, null));
+function Sn(e) {
   let t = new FormData();
-  (t.append(`nonce`, e), t.append(`sessionid`, d(te) ?? ``));
+  (t.append(`nonce`, e), t.append(`sessionid`, b(p) ?? ``));
   let n = new URL(location.href),
     r = new URLSearchParams(n.search);
   (r.has(`need_password`) &&
     (r.delete(`need_password`), (n.search = r.toString())),
     t.append(`redir`, n.toString()));
-  let i = `${E.LOGIN_BASE_URL}jwt/finalizelogin`;
-  return U.default.post(i, t, { withCredentials: !0 }).then(
+  let i = `${T.LOGIN_BASE_URL}jwt/finalizelogin`;
+  return V.default.post(i, t, { withCredentials: !0 }).then(
     (e) => {
       let { data: t } = e;
       if (
@@ -1378,19 +1378,19 @@ function bn(e) {
         !t.steamID ||
         !Array.isArray(t.transfer_info)
       )
-        return (H(`Result of finalizelogin does not match expectations!`), 1);
+        return (B(`Result of finalizelogin does not match expectations!`), 1);
       let { transfer_info: n, steamID: r, primary_domain: i } = t;
       return Promise.all(
-        n.map(({ url: e, params: t }) => Sn(e, { ...t, steamID: r })),
+        n.map(({ url: e, params: t }) => wn(e, { ...t, steamID: r })),
       ).then(
-        (e) => xn(e, i),
+        (e) => Cn(e, i),
         () => 2,
       );
     },
-    () => (H(`Failed to finalize login. Initial call failed.`), 1),
+    () => (B(`Failed to finalize login. Initial call failed.`), 1),
   );
 }
-function xn(e, t) {
+function Cn(e, t) {
   let n = 0;
   return (
     e.forEach((e) => {
@@ -1402,26 +1402,26 @@ function xn(e, t) {
     n
   );
 }
-async function Sn(e, t) {
+async function wn(e, t) {
   let n = new URL(e),
     r = !0;
   try {
     let i = new FormData();
     Object.keys(t).forEach((e) => i.append(e, t[e]));
-    let a = await U.default.post(e, i, { withCredentials: !0, timeout: 1e4 });
+    let a = await V.default.post(e, i, { withCredentials: !0, timeout: 1e4 });
     a.status === 200
       ? a.data.result !== 1 &&
-        (H(`Transfer login to ${n.host} failed with result: ${a.data.result}`),
+        (B(`Transfer login to ${n.host} failed with result: ${a.data.result}`),
         (r = !1))
-      : (H(`Transfer login to ${n.host} failed with status code: ${a.status}`),
+      : (B(`Transfer login to ${n.host} failed with status code: ${a.status}`),
         (r = !1));
   } catch (e) {
-    (H(`Transfer login to ${n.host} failed: "${e}"`), (r = !1));
+    (B(`Transfer login to ${n.host} failed: "${e}"`), (r = !1));
   }
   return { bSuccess: r, domain: n.host };
 }
-var K = e(n(), 1),
-  q = class extends G {
+var W = e(n(), 1),
+  G = class extends U {
     m_eStatusValue = 0;
     get m_eStatus() {
       return this.m_eStatusValue;
@@ -1472,7 +1472,7 @@ var K = e(n(), 1),
     async Start(e, t, n) {
       if (this.m_eStatus !== 0 && this.m_eStatus !== 2)
         return (
-          H(
+          B(
             `Cannot start an already started auth session. Create a new session instance.`,
           ),
           29
@@ -1485,18 +1485,18 @@ var K = e(n(), 1),
         (this.m_bUsingCodeOverride = !1),
         e == `anonymous`)
       )
-        return (this.SetFailureState(W.AnonymousLogin, J.EResult(12)), 12);
+        return (this.SetFailureState(H.AnonymousLogin, K.EResult(12)), 12);
       try {
-        let t = await Cn(this.m_transport, r);
+        let t = await Tn(this.m_transport, r);
         if (!t)
           return (
-            H(`Cannot start auth session without a valid RSA key`),
-            this.SetFailureState(W.Network, J.EResult(20)),
+            B(`Cannot start auth session without a valid RSA key`),
+            this.SetFailureState(H.Network, K.EResult(20)),
             20
           );
-        let a = mn(i, t),
-          o = k.Init(ne);
-        (o.SetEMsg(O),
+        let a = gn(i, t),
+          o = _.Init(ie);
+        (o.SetEMsg(h),
           o.Body().set_account_name(r),
           o.Body().set_encrypted_password(a ?? void 0),
           o.Body().set_encryption_timestamp(t.timestamp),
@@ -1507,17 +1507,17 @@ var K = e(n(), 1),
         try {
           o.Body().set_device_details(await this.GetDeviceDetails());
         } catch (e) {
-          (H(`Failed to GetDeviceDetails`), H(e));
+          (B(`Failed to GetDeviceDetails`), B(e));
         }
         if (
-          (o.Body().set_language(ee(E.LANGUAGE)),
+          (o.Body().set_language(g(T.LANGUAGE)),
           this.m_onGetMachineAuth != null)
         ) {
           let e = await this.m_onGetMachineAuth(r);
           e.eresult == 1 && o.Body().set_guard_data(e.data);
         }
         await this.m_transport.MakeReady();
-        let c = await A.BeginAuthSessionViaCredentials(this.m_transport, o);
+        let c = await O.BeginAuthSessionViaCredentials(this.m_transport, o);
         c.DEBUG_LogToConsole();
         let l = c.GetEResult(),
           u = c.Hdr().transport_error();
@@ -1527,15 +1527,15 @@ var K = e(n(), 1),
               return ((this.m_eStatus = 2), l);
             case 20:
             case 3:
-              return (this.SetFailureState(W.Network, J.EResult(20)), l);
+              return (this.SetFailureState(H.Network, K.EResult(20)), l);
             case 84:
               return (
-                this.SetFailureStateWithEResult(W.RateLimitExceeded, l), l
+                this.SetFailureStateWithEResult(H.RateLimitExceeded, l), l
               );
             case 118: {
               let e = c.Body().agreement_session_url();
               if (
-                (_(!!e, `Missing agreement session URL for result`, l),
+                (D(!!e, `Missing agreement session URL for result`, l),
                 this.m_onShowAgreement)
               )
                 this.m_onShowAgreement(e);
@@ -1551,9 +1551,9 @@ var K = e(n(), 1),
             }
             default:
               return (
-                H(`Failed to start auth session. Result: ${l} Transport: ${u}`),
+                B(`Failed to start auth session. Result: ${l} Transport: ${u}`),
                 this.SetFailureStateWithEResult(
-                  W.Generic,
+                  H.Generic,
                   l,
                   c.Body().extended_error_message(),
                 ),
@@ -1567,29 +1567,29 @@ var K = e(n(), 1),
           request_id: f,
           interval: p,
           allowed_confirmations: m = [],
-          steamid: h,
-          weak_token: g,
+          steamid: v,
+          weak_token: y,
         } = c.Body().toObject();
         if (
-          (_(
-            p !== void 0 && !!d && !!h,
+          (D(
+            p !== void 0 && !!d && !!v,
             `Missing poll interval, client ID, or steamid for result`,
             l,
           ),
           (this.m_msPollInterval = p * 1e3),
           (this.m_strClientID = d),
           (this.m_rgRequestID = f),
-          (this.m_steamid = h),
-          (this.m_strWeakAuthToken = g ?? ``),
+          (this.m_steamid = v),
+          (this.m_strWeakAuthToken = y ?? ``),
           m.find(({ confirmation_type: e }) => e === 6))
         ) {
           let e = new FormData();
-          (e.append(`clientid`, d), e.append(`steamid`, h));
-          let t = `${E.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
+          (e.append(`clientid`, d), e.append(`steamid`, v));
+          let t = `${T.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
           try {
             if (
               (
-                await U.default.post(t, e, {
+                await V.default.post(t, e, {
                   headers: { "Content-Type": `multipart/form-data` },
                   withCredentials: !0,
                 })
@@ -1598,25 +1598,25 @@ var K = e(n(), 1),
               return ((this.m_eStatus = 4), this.StartPolling(!0), 1);
           } catch (e) {
             if (
-              (fn(`checkdevice ajax to ${t} failed: ${e.message}`),
-              e instanceof U.AxiosError)
+              (mn(`checkdevice ajax to ${t} failed: ${e.message}`),
+              e instanceof V.AxiosError)
             ) {
               let t = e;
               return t.response
                 ? (this.SetFailureState(
-                    W.Network,
-                    J.AjaxFailureWithCode(t.response.status),
+                    H.Network,
+                    K.AjaxFailureWithCode(t.response.status),
                   ),
                   20)
-                : (this.SetFailureState(W.Network, J.AjaxFailureNoCode()), 20);
+                : (this.SetFailureState(H.Network, K.AjaxFailureNoCode()), 20);
             }
-            return (this.SetFailureState(W.Network, J.EResult(79)), 79);
+            return (this.SetFailureState(H.Network, K.EResult(79)), 79);
           }
         }
-        let v = Tn(
+        let b = Dn(
             m.map(
               ({ confirmation_type: e }) => (
-                _(
+                D(
                   e !== void 0,
                   `Missing confirmation type in allowed confirmations`,
                 ),
@@ -1624,12 +1624,12 @@ var K = e(n(), 1),
               ),
             ),
           ),
-          y = m.find(({ confirmation_type: e }) => e === v);
+          x = m.find(({ confirmation_type: e }) => e === b);
         switch (
-          (y &&
-            y.associated_message &&
-            (this.m_strConfirmationAssociatedMessage = y.associated_message),
-          v)
+          (x &&
+            x.associated_message &&
+            (this.m_strConfirmationAssociatedMessage = x.associated_message),
+          b)
         ) {
           case 1:
             return ((this.m_eStatus = 13), this.StartPolling(), l);
@@ -1648,9 +1648,9 @@ var K = e(n(), 1),
         return l;
       } catch (e) {
         return (
-          H(`Failed to start auth session. Exception: ${JSON.stringify(e)}`),
-          fn(e),
-          this.SetFailureState(W.Generic, J.FailedToStart()),
+          B(`Failed to start auth session. Exception: ${JSON.stringify(e)}`),
+          mn(e),
+          this.SetFailureState(H.Generic, K.FailedToStart()),
           this.m_onCompleteCallback({ bSuccess: !1 }),
           2
         );
@@ -1697,13 +1697,13 @@ var K = e(n(), 1),
       try {
         await this.m_transport.MakeReady();
         let n = this.m_eStatus === 3 || this.m_eStatus === 10,
-          r = k.Init(ue);
-        (r.SetEMsg(O),
+          r = _.Init(fe);
+        (r.SetEMsg(h),
           r.Body().set_client_id(this.m_strClientID),
           r.Body().set_steamid(this.m_steamid),
           r.Body().set_code(e),
           r.Body().set_code_type(n ? 2 : 3));
-        let i = await A.UpdateAuthSessionWithSteamGuardCode(
+        let i = await O.UpdateAuthSessionWithSteamGuardCode(
             this.m_transport,
             r,
           ),
@@ -1711,7 +1711,7 @@ var K = e(n(), 1),
         if (a !== 1) {
           if (!t)
             return (
-              H(
+              B(
                 `Failed to automatically update session with local SG info. Result ${a}. Transport ${i.Hdr().transport_error()}`,
               ),
               a
@@ -1722,20 +1722,20 @@ var K = e(n(), 1),
               return ((this.m_eStatus = n ? 10 : 11), a);
             case 27:
               return (
-                this.SetFailureStateWithEResult(W.Expired, a),
+                this.SetFailureStateWithEResult(H.Expired, a),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 a
               );
             case 84:
               return (
-                this.SetFailureStateWithEResult(W.RateLimitExceeded, a),
+                this.SetFailureStateWithEResult(H.RateLimitExceeded, a),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 a
               );
             case 118: {
               let e = i.Body().agreement_session_url();
               if (
-                (_(!!e, `Missing agreement session URL for result`, a),
+                (D(!!e, `Missing agreement session URL for result`, a),
                 this.m_onShowAgreement)
               )
                 this.m_onShowAgreement(e);
@@ -1751,8 +1751,8 @@ var K = e(n(), 1),
             }
             default:
               return (
-                H(`Failed to update auth session with SG code. Result: ${a}`),
-                this.SetFailureStateWithEResult(W.Generic, a),
+                B(`Failed to update auth session with SG code. Result: ${a}`),
+                this.SetFailureStateWithEResult(H.Generic, a),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 a
               );
@@ -1761,8 +1761,8 @@ var K = e(n(), 1),
         return ((this.m_eStatus = 13), this.StartPolling(), a);
       } catch (e) {
         return (
-          H(`Failed to update auth session with SG code. ${e}`),
-          this.SetFailureState(W.Generic, J.FailedToAddCode()),
+          B(`Failed to update auth session with SG code. ${e}`),
+          this.SetFailureState(H.Generic, K.FailedToAddCode()),
           this.m_onCompleteCallback({ bSuccess: !1 }),
           2
         );
@@ -1777,7 +1777,7 @@ var K = e(n(), 1),
           ((this.m_bUsingCodeOverride = !0), (this.m_eStatus = 3));
           return;
         default:
-          H(
+          B(
             `Don't know how to UseCodeOverride from login session status ${this.m_eStatus}`,
           );
           return;
@@ -1787,13 +1787,13 @@ var K = e(n(), 1),
       this.m_eStatus = 7;
     }
     async StartMoveAuthenticator() {
-      this.m_weakAuthWebInterface = new g(
-        E.WEBAPI_BASE_URL,
+      this.m_weakAuthWebInterface = new f(
+        T.WEBAPI_BASE_URL,
         this.m_strWeakAuthToken,
       );
       try {
-        let e = k.Init(ae),
-          t = await se.RemoveAuthenticatorViaChallengeStart(
+        let e = _.Init(se),
+          t = await le.RemoveAuthenticatorViaChallengeStart(
             this.m_weakAuthWebInterface.GetServiceTransport(),
             e,
           );
@@ -1801,68 +1801,68 @@ var K = e(n(), 1),
           t.GetEResult() == 1
             ? (this.m_eStatus = 8)
             : (t.DEBUG_LogToConsole(),
-              H(
+              B(
                 `An unexpected error occured while adding an authenticator`,
                 t.GetEResult(),
               ),
               this.SetFailureStateWithEResult(
-                W.MoveAuthenticator,
+                H.MoveAuthenticator,
                 t.GetEResult(),
               )),
           t.GetEResult()
         );
       } catch (e) {
         return (
-          H(`An unexpected error occured while moving an authenticator`, e),
-          this.SetFailureStateWithEResult(W.MoveAuthenticator, 2),
+          B(`An unexpected error occured while moving an authenticator`, e),
+          this.SetFailureStateWithEResult(H.MoveAuthenticator, 2),
           2
         );
       }
     }
     async ResendMoveCode() {
-      _(
+      D(
         !!this.m_weakAuthWebInterface,
         `Resending move code before StartMoveAuthenticator`,
       );
-      let e = k.Init(ae),
-        t = await se.RemoveAuthenticatorViaChallengeStart(
+      let e = _.Init(se),
+        t = await le.RemoveAuthenticatorViaChallengeStart(
           this.m_weakAuthWebInterface.GetServiceTransport(),
           e,
         );
       (t.GetEResult() != 1 &&
         (t.DEBUG_LogToConsole(),
-        H(
+        B(
           `An unexpected error occured while adding an authenticator`,
           t.GetEResult(),
         )),
         (this.m_eStatus = 8));
     }
     async FinishMoveAuthenticator(e) {
-      _(
+      D(
         !!this.m_weakAuthWebInterface,
         `Finishing authenticator move before StartMoveAuthenticator`,
       );
-      let t = k.Init(le);
+      let t = _.Init(de);
       (t.Body().set_sms_code(e),
         t.Body().set_generate_new_token(!0),
         t.Body().set_version(2));
-      let n = await se.RemoveAuthenticatorViaChallengeContinue(
+      let n = await le.RemoveAuthenticatorViaChallengeContinue(
         this.m_weakAuthWebInterface.GetServiceTransport(),
         t,
       );
       if (n.GetEResult() == 94) this.m_eStatus = 12;
       else if (!n.Body().success())
         (n.DEBUG_LogToConsole(),
-          H(
+          B(
             `Error when calling RemoveAuthenticatorViaChallengeContinue`,
             n.GetEResult(),
           ),
-          this.SetFailureStateWithEResult(W.MoveAuthenticator, n.GetEResult()));
+          this.SetFailureStateWithEResult(H.MoveAuthenticator, n.GetEResult()));
       else {
         n.DEBUG_LogToConsole();
         let e = n.Body().replacement_token();
-        (_(!!e, `Missing replacement token on successful authenticator move`),
-          (this.m_replacementAuthenticator = _n(e.toObject())),
+        (D(!!e, `Missing replacement token on successful authenticator move`),
+          (this.m_replacementAuthenticator = yn(e.toObject())),
           (this.m_eStatus = 9),
           (this.m_bUsingCodeOverride = !1));
       }
@@ -1907,7 +1907,7 @@ var K = e(n(), 1),
           this.m_eStatus = this.m_bUsingCodeOverride ? 4 : 0;
           break;
         default:
-          H(
+          B(
             `Don't know how to GoBack from login session status ${this.m_eStatus}`,
           );
           return;
@@ -1920,13 +1920,13 @@ var K = e(n(), 1),
         (this.m_strExtendedErrorMessage = n));
     }
     SetFailureStateWithEResult(e, t, n = ``) {
-      this.SetFailureState(gn(e, t), J.EResult(t), n);
+      this.SetFailureState(vn(e, t), K.EResult(t), n);
     }
     onAuthComplete = (e) => {
       this.m_eStatus = e.bSuccess ? 14 : 15;
       let t;
       (e.bSuccess
-        ? (_(
+        ? (D(
             !!this.m_strAccountName && !!this.m_steamid,
             `Missing account name or steamid on auth success`,
           ),
@@ -1942,52 +1942,52 @@ var K = e(n(), 1),
       this.m_onLoginComplete = e;
     }
   };
-(h([b], q.prototype, `Start`, null),
-  h([b], q.prototype, `SendSteamGuardCode`, null),
-  h([b], q.prototype, `UseCodeOverride`, null),
-  h([b], q.prototype, `CantAccessCode`, null),
-  h([b], q.prototype, `StartMoveAuthenticator`, null),
-  h([b], q.prototype, `ResendMoveCode`, null),
-  h([b], q.prototype, `FinishMoveAuthenticator`, null),
-  h([b], q.prototype, `FinishMoveRecovery`, null),
-  h([b], q.prototype, `GoBack`, null),
-  h([b], q.prototype, `SetOnLoginComplete`, null));
-async function Cn(e, t) {
-  let n = k.Init(re);
-  (n.Body().set_account_name(t), n.SetEMsg(O));
+(m([y], G.prototype, `Start`, null),
+  m([y], G.prototype, `SendSteamGuardCode`, null),
+  m([y], G.prototype, `UseCodeOverride`, null),
+  m([y], G.prototype, `CantAccessCode`, null),
+  m([y], G.prototype, `StartMoveAuthenticator`, null),
+  m([y], G.prototype, `ResendMoveCode`, null),
+  m([y], G.prototype, `FinishMoveAuthenticator`, null),
+  m([y], G.prototype, `FinishMoveRecovery`, null),
+  m([y], G.prototype, `GoBack`, null),
+  m([y], G.prototype, `SetOnLoginComplete`, null));
+async function Tn(e, t) {
+  let n = _.Init(ae);
+  (n.Body().set_account_name(t), n.SetEMsg(h));
   try {
     await e.MakeReady();
-    let t = await A.GetPasswordRSAPublicKey(e, n);
+    let t = await O.GetPasswordRSAPublicKey(e, n);
     if ((t.DEBUG_LogToConsole(), t.GetEResult() !== 1))
-      return (H(`Failed to get RSA key with EResult: ${t.GetEResult()}`), null);
+      return (B(`Failed to get RSA key with EResult: ${t.GetEResult()}`), null);
     let {
       publickey_exp: r,
       publickey_mod: i,
       timestamp: a,
     } = t.Body().toObject();
     return !r || !i || !a
-      ? (H(
+      ? (B(
           `Missing expected field in RSA Key: ${JSON.stringify({ publickey_exp: r, publickey_mod: i, timestamp: a })}`,
         ),
         null)
       : { publickey_exp: r, publickey_mod: i, timestamp: a };
   } catch (e) {
-    return (H(`Failed to get RSA key: ${JSON.stringify(e)}`), null);
+    return (B(`Failed to get RSA key: ${JSON.stringify(e)}`), null);
   }
 }
-var wn = [4, 3, 2, 1, 0, 5].reduce((e, t, n) => ((e[t] = n), e), {});
-function Tn(e) {
+var En = [4, 3, 2, 1, 0, 5].reduce((e, t, n) => ((e[t] = n), e), {});
+function Dn(e) {
   let t = e[0] || 0;
-  return (e.length > 1 && (t = e.sort((e, t) => wn[e] - wn[t])[0]), t);
+  return (e.length > 1 && (t = e.sort((e, t) => En[e] - En[t])[0]), t);
 }
-function En(e) {
-  let [t, n] = (0, K.useState)(() => new q(e));
+function On(e) {
+  let [t, n] = (0, W.useState)(() => new G(e));
   return (
-    (0, K.useEffect)(() => {
+    (0, W.useEffect)(() => {
       t?.SetOnLoginComplete(e.onComplete);
     }, [t, e.onComplete]),
     {
-      ...(0, K.useSyncExternalStore)(t.Subscribe, t.GetSnapshot, t.GetSnapshot),
+      ...(0, W.useSyncExternalStore)(t.Subscribe, t.GetSnapshot, t.GetSnapshot),
       start: t.Start,
       addCode: t.SendSteamGuardCode,
       useCodeOverride: t.UseCodeOverride,
@@ -1996,29 +1996,29 @@ function En(e) {
       resendMoveCode: t.ResendMoveCode,
       finishMoveAuthenticator: t.FinishMoveAuthenticator,
       finishMoveRecovery: t.FinishMoveRecovery,
-      reset: () => n(new q(e)),
+      reset: () => n(new G(e)),
       goBack: t.GoBack,
       setTokenToRevoke: t.SetTokenToRevoke,
     }
   );
 }
-function Dn(e) {
+function kn(e) {
   return e ? 7 : 5;
 }
-function On(e, t) {
-  return /[23456789BCDFGHJKMNPQRTVWXY]*/g.test(e) && e.length <= Dn(t);
+function An(e, t) {
+  return /[23456789BCDFGHJKMNPQRTVWXY]*/g.test(e) && e.length <= kn(t);
 }
-function kn(e, t) {
-  return On(e, t) && e.length === Dn(t);
+function jn(e, t) {
+  return An(e, t) && e.length === kn(t);
 }
-var J = {
+var K = {
     EResult: (e) => `e${e}`,
     FailedToStart: () => `c-fts`,
     FailedToAddCode: () => `c-ftac`,
     AjaxFailureNoCode: () => `af`,
     AjaxFailureWithCode: (e) => `af-${e}`,
   },
-  An = class extends G {
+  Mn = class extends U {
     m_eStatusValue = 0;
     get m_eStatus() {
       return this.m_eStatusValue;
@@ -2070,8 +2070,8 @@ var J = {
       this.m_eStatus = 1;
       try {
         await this.m_transport.MakeReady();
-        let e = k.Init(oe);
-        e.SetEMsg(O);
+        let e = _.Init(ce);
+        e.SetEMsg(h);
         try {
           e.Body().set_device_details(await this.GetDeviceDetails());
         } catch (e) {
@@ -2079,7 +2079,7 @@ var J = {
         }
         let t = S();
         t && e.Body().set_website_id(t.WEBSITE_ID);
-        let n = await A.BeginAuthSessionViaQR(this.m_transport, e),
+        let n = await O.BeginAuthSessionViaQR(this.m_transport, e),
           r = n.GetEResult(),
           i = n.Hdr().transport_error();
         if (r !== 1)
@@ -2087,7 +2087,7 @@ var J = {
             console.error(
               `Failed to start auth session. Result: ${r} Transport: ${i}`,
             ),
-            (this.m_eFailureState = W.Generic),
+            (this.m_eFailureState = H.Generic),
             this.m_onCompleteCallback({ bSuccess: !1 }),
             r
           );
@@ -2098,7 +2098,7 @@ var J = {
           request_id: c,
         } = n.Body().toObject();
         return (
-          _(s !== void 0, `Missing poll interval for QR auth session`),
+          D(s !== void 0, `Missing poll interval for QR auth session`),
           (this.m_strClientID = a),
           (this.m_strChallengeURL = o),
           (this.m_msPollInterval = s * 1e3),
@@ -2110,7 +2110,7 @@ var J = {
       } catch (e) {
         return (
           console.error(`Failed to start auth session: ${JSON.stringify(e)}`),
-          (this.m_eFailureState = W.Generic),
+          (this.m_eFailureState = H.Generic),
           this.m_onCompleteCallback({ bSuccess: !1 }),
           2
         );
@@ -2129,10 +2129,10 @@ var J = {
       return this.m_eStatus;
     }
   };
-function jn(e) {
-  let [t, n] = (0, K.useState)(() => new An(e));
+function Nn(e) {
+  let [t, n] = (0, W.useState)(() => new Mn(e));
   return (
-    (0, K.useEffect)(
+    (0, W.useEffect)(
       () => (
         t.Start(),
         () => {
@@ -2142,13 +2142,13 @@ function jn(e) {
       [t],
     ),
     {
-      ...(0, K.useSyncExternalStore)(t.Subscribe, t.GetSnapshot, t.GetSnapshot),
-      reset: () => n(new An({ ...e, preloaded: void 0 })),
+      ...(0, W.useSyncExternalStore)(t.Subscribe, t.GetSnapshot, t.GetSnapshot),
+      reset: () => n(new Mn({ ...e, preloaded: void 0 })),
       setTokenToRevoke: t.SetTokenToRevoke,
     }
   );
 }
-async function Mn() {
+async function Pn() {
   let [e, t, n, r] = await Promise.all([
     SteamClient.System.GetOSType(),
     SteamClient.System.GetSystemInfo(),
@@ -2163,13 +2163,13 @@ async function Mn() {
     gaming_device_type: t.eGamingDeviceType,
   };
 }
-async function Nn() {
+async function Fn() {
   return { device_friendly_name: window.navigator.userAgent, platform_type: 2 };
 }
-var Pn = `Login_RememberMeSetting`;
-function Fn(e) {
+var In = `Login_RememberMeSetting`;
+function Ln(e) {
   let { onSuccess: t, secureComputer: n = !0, isProbablySharedPC: r = !1 } = e,
-    i = (0, K.useCallback)(
+    i = (0, W.useCallback)(
       (e) => {
         if (e.bSuccess) {
           let {
@@ -2188,25 +2188,25 @@ function Fn(e) {
       },
       [t],
     ),
-    a = En({
+    a = On({
       transport: e.transport,
       onComplete: i,
       onDeviceDetails: e.onDeviceDetails,
       onGetMachineAuth: e.onGetMachineAuth,
       onShowAgreement: e.onShowAgreement,
     }),
-    [o, s] = (0, K.useState)(0),
-    [c, l] = (0, K.useState)(
+    [o, s] = (0, W.useState)(0),
+    [c, l] = (0, W.useState)(
       e.refreshInfo?.account_name ?? e.defaultAccountName ?? ``,
     ),
-    [u, d] = (0, K.useState)(``),
-    [f, p] = (0, K.useState)(n && !r);
-  (0, K.useLayoutEffect)(() => {
-    typeof localStorage < `u` && localStorage.getItem(Pn) == `0` && p(!1);
+    [u, d] = (0, W.useState)(``),
+    [f, p] = (0, W.useState)(n && !r);
+  (0, W.useLayoutEffect)(() => {
+    typeof localStorage < `u` && localStorage.getItem(In) == `0` && p(!1);
   }, []);
   let m = a.eStatus !== 0 && a.eStatus !== 1 && a.eStatus !== 2;
   return (
-    (0, K.useEffect)(() => {
+    (0, W.useEffect)(() => {
       e.refreshInfo?.login_token_id &&
         a.setTokenToRevoke(e.refreshInfo.login_token_id);
     }, [e.refreshInfo, a]),
@@ -2221,55 +2221,55 @@ function Fn(e) {
       onPasswordChange: d,
       bRememberMe: f,
       onRememberMeChange: (e) => {
-        (p(e), localStorage?.setItem(Pn, e ? `1` : `0`));
+        (p(e), localStorage?.setItem(In, e ? `1` : `0`));
       },
       onPasswordSubmit: () =>
         !c || !u ? Promise.resolve(8) : a.start(c, u, f),
       bInPasswordFlow: m,
       onTryOffline: () => {
-        (fn(`Logging in offline with username ${c}`),
+        (mn(`Logging in offline with username ${c}`),
           SteamClient.User.SetLoginCredentials(c, u, f),
           SteamClient.User.StartOffline(!0));
       },
     }
   );
 }
-function In(e, t = ``) {
+function Rn(e, t = ``) {
   let n = { title: ``, description: `` };
   switch (e) {
-    case W.None:
+    case H.None:
       return { title: ``, description: `` };
-    case W.Expired:
+    case H.Expired:
       n = {
         title: u.Localize(`#Login_Error_Expired_Title`),
         description: u.Localize(`#Login_Error_Expired_Description`),
       };
       break;
-    case W.Network:
+    case H.Network:
       n = {
         title: u.Localize(`#Login_Error_Network_Title`),
         description: u.Localize(`#Login_Error_Network_Description`),
       };
       break;
-    case W.MoveAuthenticator:
+    case H.MoveAuthenticator:
       n = {
         title: u.Localize(`#Error_Generic`),
         description: u.Localize(`#Login_Error_MoveAuthenticator_Description`),
       };
       break;
-    case W.RateLimitExceeded:
+    case H.RateLimitExceeded:
       n = {
         title: u.Localize(`#Login_Error_RateLimit_Title`),
         description: u.Localize(`#Login_Error_RateLimit_Description`),
       };
       break;
-    case W.AnonymousLogin:
+    case H.AnonymousLogin:
       n = {
         title: u.Localize(`#Login_Error_Anonymous_Title`),
         description: u.Localize(`#Login_Error_Anonymous_Description`),
       };
       break;
-    case W.Generic:
+    case H.Generic:
     default:
       n = {
         title: u.Localize(`#Error_Generic`),
@@ -2278,82 +2278,82 @@ function In(e, t = ``) {
   }
   return (t && (n.description = t), n);
 }
-var Ln = `ZhRwp4aSW-8-`,
-  Rn = `QV15rhpdkBI-`,
-  zn = `StondD-Afl4-`,
-  Bn = `zENCcMUG1lQ-`,
-  Vn = `_3M1tVbU6uAM-`,
-  Hn = `rQS7qJ7cGq8-`,
-  Un = `WlYK7flUyzk-`,
-  Wn = `p0lt1P2vwbI-`,
-  Gn = `Lw5H9Bgq0ww-`,
-  Kn = `HD-XkY2oIS0-`,
-  qn = `t972389vN-Y-`,
-  Jn = `_5U7-qgmzcvo-`,
-  Yn = `-HdQ6mrZKtA-`,
-  Xn = `Tr28R97XrnU-`,
-  Zn = `_17vA1ePJ-dw-`,
-  Qn = `hYiUBswjB8E-`,
-  $n = `l-m0O8YsKvg-`,
-  er = `WNU0cJCzPqA-`,
-  tr = `sljnSz9B7VM-`,
-  nr = `KE-CI3fCrt4-`,
-  rr = `F2-23fRyFdg-`,
-  ir = `_9ehBJOSNpjY-`,
-  ar = `H2e67uoFTZo-`,
-  or = `_0O9XQ4NvNgg-`,
-  sr = `SJJMt5-Nlqc-`,
-  cr = `_5HbDhenxKKA-`,
-  lr = `JRre8-r--eY-`,
-  ur = `-wYn7tUZ-Qc-`,
-  dr = `Y0ZBzWFxTiU-`,
-  fr = `_7xRNYgociu0-`,
-  pr = `Rq9MD5lNpxw-`,
-  mr = `aDxXoSR2-2M-`,
-  hr = `A44IVG2oXaA-`,
-  gr = `DJzHz8vrR58-`,
-  _r = `_6uA-qQnXgqs-`,
-  vr = `zS2JKIAoqLs-`,
-  yr = `g2m1tomZf5Y-`,
-  br = `DSy9L5eaj5o-`,
-  xr = `riI5q82cESo-`,
-  Sr = `gjs7dr1G9B4-`,
-  Cr = `_8tHxNur8iVQ-`,
-  wr = `QDXFvQ1VRGs-`,
-  Tr = `iI4-KPYmClQ-`,
-  Er = `FCVI1-X5QXI-`,
-  Dr = `_-7t7WL8ib4U-`,
-  Or = `_4cSRMvOczro-`,
-  kr = `urTXd9G8cNM-`,
-  Ar = `tk1GT5on9gQ-`,
-  jr = `EUZmbwRThEY-`,
-  Mr = `koI0X-poWGo-`,
-  Nr = `ik9s3tnOv3M-`,
-  Pr = `e5FVer86lmY-`,
-  Fr = `O8iS-RxIxMc-`,
-  Ir = `EWu0dHs0CgM-`,
-  Lr = `G3u-Es6yEe8-`,
-  Rr = `nr0J1UoEl8s-`,
-  zr = `_19NDBszdpt8-`,
-  Br = `_4p53BqicMtw-`,
-  Vr = `LJXTU0Fs0Mc-`,
-  Hr = `NoRFObwpjo0-`,
-  Ur = `u95III-ojfU-`,
-  Wr = `dfnWU-vLcuI-`,
-  Gr = `-iy7zxvavFA-`,
-  Kr = `_0wUoYmLYupw-`,
-  qr = `V6VD9IECTcA-`,
-  Jr = `eDuVIFYKU84-`,
-  Yr = `sH-b0kW7QCY-`,
-  Xr = `z8NjGLKg3z0-`,
-  Zr = `_4pLGekYMMsE-`,
-  Qr = `X1k4Ip6MIC8-`,
-  $r = `qeijEUL7oHU-`,
-  ei = `SoYZJobaqlk-`,
-  ti = `KQdWHvm1kCY-`,
-  Y = e(r(), 1),
-  X = i();
-function ni(e) {
+var zn = `ZhRwp4aSW-8-`,
+  Bn = `QV15rhpdkBI-`,
+  Vn = `StondD-Afl4-`,
+  Hn = `zENCcMUG1lQ-`,
+  Un = `_3M1tVbU6uAM-`,
+  Wn = `rQS7qJ7cGq8-`,
+  Gn = `WlYK7flUyzk-`,
+  Kn = `p0lt1P2vwbI-`,
+  qn = `Lw5H9Bgq0ww-`,
+  Jn = `HD-XkY2oIS0-`,
+  Yn = `t972389vN-Y-`,
+  Xn = `_5U7-qgmzcvo-`,
+  Zn = `-HdQ6mrZKtA-`,
+  Qn = `Tr28R97XrnU-`,
+  $n = `_17vA1ePJ-dw-`,
+  er = `hYiUBswjB8E-`,
+  tr = `l-m0O8YsKvg-`,
+  nr = `WNU0cJCzPqA-`,
+  rr = `sljnSz9B7VM-`,
+  ir = `KE-CI3fCrt4-`,
+  ar = `F2-23fRyFdg-`,
+  or = `_9ehBJOSNpjY-`,
+  sr = `H2e67uoFTZo-`,
+  cr = `_0O9XQ4NvNgg-`,
+  lr = `SJJMt5-Nlqc-`,
+  ur = `_5HbDhenxKKA-`,
+  dr = `JRre8-r--eY-`,
+  fr = `-wYn7tUZ-Qc-`,
+  pr = `Y0ZBzWFxTiU-`,
+  mr = `_7xRNYgociu0-`,
+  hr = `Rq9MD5lNpxw-`,
+  gr = `aDxXoSR2-2M-`,
+  _r = `A44IVG2oXaA-`,
+  vr = `DJzHz8vrR58-`,
+  yr = `_6uA-qQnXgqs-`,
+  br = `zS2JKIAoqLs-`,
+  xr = `g2m1tomZf5Y-`,
+  Sr = `DSy9L5eaj5o-`,
+  Cr = `riI5q82cESo-`,
+  wr = `gjs7dr1G9B4-`,
+  Tr = `_8tHxNur8iVQ-`,
+  Er = `QDXFvQ1VRGs-`,
+  Dr = `iI4-KPYmClQ-`,
+  Or = `FCVI1-X5QXI-`,
+  kr = `_-7t7WL8ib4U-`,
+  Ar = `_4cSRMvOczro-`,
+  jr = `urTXd9G8cNM-`,
+  Mr = `tk1GT5on9gQ-`,
+  Nr = `EUZmbwRThEY-`,
+  Pr = `koI0X-poWGo-`,
+  Fr = `ik9s3tnOv3M-`,
+  Ir = `e5FVer86lmY-`,
+  Lr = `O8iS-RxIxMc-`,
+  Rr = `EWu0dHs0CgM-`,
+  zr = `G3u-Es6yEe8-`,
+  Br = `nr0J1UoEl8s-`,
+  Vr = `_19NDBszdpt8-`,
+  Hr = `_4p53BqicMtw-`,
+  Ur = `LJXTU0Fs0Mc-`,
+  Wr = `NoRFObwpjo0-`,
+  Gr = `u95III-ojfU-`,
+  Kr = `dfnWU-vLcuI-`,
+  qr = `-iy7zxvavFA-`,
+  Jr = `_0wUoYmLYupw-`,
+  Yr = `V6VD9IECTcA-`,
+  Xr = `eDuVIFYKU84-`,
+  Zr = `sH-b0kW7QCY-`,
+  Qr = `z8NjGLKg3z0-`,
+  $r = `_4pLGekYMMsE-`,
+  ei = `X1k4Ip6MIC8-`,
+  ti = `qeijEUL7oHU-`,
+  ni = `SoYZJobaqlk-`,
+  ri = `KQdWHvm1kCY-`,
+  q = e(r(), 1),
+  J = i();
+function ii(e) {
   let {
     length: t,
     value: n,
@@ -2363,30 +2363,30 @@ function ni(e) {
     autoFocus: o,
     disabled: s,
     loading: c,
-    backupCode: l,
-    allowCharacter: u,
+    backupCode: u,
+    allowCharacter: d,
   } = e;
-  (0, K.useEffect)(() => {
-    o && h();
+  (0, W.useEffect)(() => {
+    o && g();
   }, []);
-  let d = (0, K.useRef)([]),
-    f = () => r(d.current.map((e) => e.value)),
-    p = (e) => {
-      let t = e.target.value;
-      if (t && u && !u(t)) return;
-      let n = e.target.nextElementSibling;
-      (e.target.value && n && n.focus(), f());
-    },
+  let f = (0, W.useRef)([]),
+    p = () => r(f.current.map((e) => e.value)),
     m = (e) => {
-      d.current.findIndex((e) => !!e.value) === -1
-        ? d.current[0]?.select()
+      let t = e.target.value;
+      if (t && d && !d(t)) return;
+      let n = e.target.nextElementSibling;
+      (e.target.value && n && n.focus(), p());
+    },
+    h = (e) => {
+      f.current.findIndex((e) => !!e.value) === -1
+        ? f.current[0]?.select()
         : e.target.select();
     },
-    h = () => {
-      let e = d.current.find((e) => !e.value);
-      e ? e.focus() : d.current[d.current.length - 1].focus();
+    g = () => {
+      let e = f.current.find((e) => !e.value);
+      e ? e.focus() : f.current[f.current.length - 1].focus();
     },
-    g = (e) => {
+    _ = (e) => {
       let t = e.target;
       if (e.key === `Backspace` || e.key === `Delete`) {
         let n =
@@ -2395,7 +2395,7 @@ function ni(e) {
             : t.nextElementSibling;
         t.value === `` &&
           n &&
-          ((n.value = ``), n.focus(), e.preventDefault(), f());
+          ((n.value = ``), n.focus(), e.preventDefault(), p());
       } else if (
         e.key === `ArrowLeft` ||
         e.key === `ArrowRight` ||
@@ -2409,83 +2409,83 @@ function ni(e) {
         n && (n.focus(), e.preventDefault());
       }
     },
-    _ = (e) => {
+    v = (e) => {
       let t = e.clipboardData.getData(`Text`),
         n = e.target,
         r = 0;
       for (; n && r < t.length;)
         (n.focus(), (n.value = t.charAt(r)), (n = n.nextElementSibling), r++);
-      (f(), e.preventDefault(), i && i());
+      (p(), e.preventDefault(), i && i());
     },
-    v = [];
+    y = [];
   for (let e = 0; e < t; e++)
-    v.push(
-      (0, X.jsx)(
-        T,
+    y.push(
+      (0, J.jsx)(
+        te,
         {
           noFocusRing: !0,
           type: `text`,
           maxLength: 1,
           ref: (t) => {
-            t && (d.current[e] = t);
+            t && (f.current[e] = t);
           },
-          onChange: p,
-          onFocus: m,
+          onChange: m,
+          onFocus: h,
           onClick: (e) => e.stopPropagation(),
-          onKeyDown: g,
-          onPaste: _,
+          onKeyDown: _,
+          onPaste: v,
           value: n[e] ? n[e][0] : ``,
           autoComplete: `none`,
           autoFocus: e === 0 && o,
           disabled: s || c,
-          className: ti,
+          className: ri,
         },
         e,
       ),
     );
-  return (0, X.jsxs)(w, {
-    className: (0, Y.default)(
-      ei,
+  return (0, J.jsxs)(l, {
+    className: (0, q.default)(
+      ni,
       a === `danger` && `faQ-XEuPsJg-`,
       s && `mIAxC7mq9-I-`,
-      l && `eQsO7wBQCBc-`,
+      u && `eQsO7wBQCBc-`,
     ),
-    onClick: h,
+    onClick: g,
     children: [
       c &&
-        (0, X.jsx)(`div`, {
+        (0, J.jsx)(`div`, {
           className: `_4vkP-m3oW-0-`,
-          children: (0, X.jsx)(pa, { size: `small` }),
+          children: (0, J.jsx)(ma, { size: `small` }),
         }),
-      v,
+      y,
     ],
   });
 }
-function ri() {
-  let e = `svgid_` + (0, K.useId)().replace(/[^A-Za-z0-9_-]/g, ``);
+function ai() {
+  let e = `svgid_` + (0, W.useId)().replace(/[^A-Za-z0-9_-]/g, ``);
   return [e, `url(#${e})`];
 }
-function ii(e) {
-  let [t, n] = ri();
-  return (0, X.jsxs)(`svg`, {
+function oi(e) {
+  let [t, n] = ai();
+  return (0, J.jsxs)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 15 23`,
     fill: `none`,
     ...e,
     children: [
-      (0, X.jsx)(`g`, {
+      (0, J.jsx)(`g`, {
         clipPath: n,
-        children: (0, X.jsx)(`path`, {
+        children: (0, J.jsx)(`path`, {
           fill: `currentColor`,
           fillRule: `evenodd`,
           clipRule: `evenodd`,
           d: `M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z`,
         }),
       }),
-      (0, X.jsx)(`defs`, {
-        children: (0, X.jsx)(`clipPath`, {
+      (0, J.jsx)(`defs`, {
+        children: (0, J.jsx)(`clipPath`, {
           id: t,
-          children: (0, X.jsx)(`rect`, {
+          children: (0, J.jsx)(`rect`, {
             fill: `currentColor`,
             width: `15`,
             height: `23`,
@@ -2495,9 +2495,9 @@ function ii(e) {
     ],
   });
 }
-function ai(e) {
+function si(e) {
   let { color: t = `#fff`, ...n } = e;
-  return (0, X.jsx)(`svg`, {
+  return (0, J.jsx)(`svg`, {
     version: `1.1`,
     xmlns: `http://www.w3.org/2000/svg`,
     x: `0px`,
@@ -2512,17 +2512,17 @@ function ai(e) {
     strokeLinejoin: `round`,
     strokeMiterlimit: `10`,
     ...n,
-    children: (0, X.jsx)(`polyline`, {
+    children: (0, J.jsx)(`polyline`, {
       fill: `none`,
       points: `49.5,147.75 95,210.75 206.5,45.25 `,
     }),
   });
 }
-var oi = new URL(
+var ci = new URL(
     `../../../images/applications/store/login_mobile_auth.png?v=valveisgoodatcaching`,
     import.meta.url,
   ).href,
-  si = t((e, t) => {
+  li = t((e, t) => {
     t.exports = {
       MODE_NUMBER: 1,
       MODE_ALPHA_NUM: 2,
@@ -2530,8 +2530,8 @@ var oi = new URL(
       MODE_KANJI: 8,
     };
   }),
-  ci = t((e, t) => {
-    var n = si();
+  ui = t((e, t) => {
+    var n = li();
     function r(e) {
       ((this.mode = n.MODE_8BIT_BYTE), (this.data = e));
     }
@@ -2546,11 +2546,11 @@ var oi = new URL(
     }),
       (t.exports = r));
   }),
-  li = t((e, t) => {
+  di = t((e, t) => {
     t.exports = { L: 1, M: 0, Q: 3, H: 2 };
   }),
-  ui = t((e, t) => {
-    var n = li();
+  fi = t((e, t) => {
+    var n = di();
     function r(e, t) {
       ((this.totalCount = e), (this.dataCount = t));
     }
@@ -2747,7 +2747,7 @@ var oi = new URL(
       }),
       (t.exports = r));
   }),
-  di = t((e, t) => {
+  pi = t((e, t) => {
     function n() {
       ((this.buffer = []), (this.length = 0));
     }
@@ -2771,7 +2771,7 @@ var oi = new URL(
     }),
       (t.exports = n));
   }),
-  fi = t((e, t) => {
+  mi = t((e, t) => {
     for (
       var n = {
           glog: function (e) {
@@ -2800,8 +2800,8 @@ var oi = new URL(
     for (var r = 0; r < 255; r++) n.LOG_TABLE[n.EXP_TABLE[r]] = r;
     t.exports = n;
   }),
-  pi = t((e, t) => {
-    var n = fi();
+  hi = t((e, t) => {
+    var n = mi();
     function r(e, t) {
       if (e.length == null) throw Error(e.length + `/` + t);
       for (var n = 0; n < e.length && e[n] == 0;) n++;
@@ -2842,10 +2842,10 @@ var oi = new URL(
     }),
       (t.exports = r));
   }),
-  mi = t((e, t) => {
-    var n = si(),
-      r = pi(),
-      i = fi(),
+  gi = t((e, t) => {
+    var n = li(),
+      r = hi(),
+      i = mi(),
       a = {
         PATTERN000: 0,
         PATTERN001: 1,
@@ -3038,12 +3038,12 @@ var oi = new URL(
       };
     t.exports = o;
   }),
-  hi = t((e, t) => {
-    var n = ci(),
-      r = ui(),
-      i = di(),
-      a = mi(),
-      o = pi();
+  _i = t((e, t) => {
+    var n = ui(),
+      r = fi(),
+      i = pi(),
+      a = gi(),
+      o = hi();
     function s(e, t) {
       ((this.typeNumber = e),
         (this.errorCorrectLevel = t),
@@ -3302,9 +3302,9 @@ var oi = new URL(
       }),
       (t.exports = s));
   }),
-  gi = t((e, t) => {
-    var n = hi(),
-      r = li(),
+  vi = t((e, t) => {
+    var n = _i(),
+      r = di(),
       i = function (e, t) {
         t ||= {};
         var i = new n(t.typeNumber || -1, t.errorCorrectLevel || r.H);
@@ -3312,10 +3312,10 @@ var oi = new URL(
       };
     ((i.ErrorCorrectLevel = r), (t.exports = i));
   }),
-  _i = `RuVnOcF9yRI-`,
-  vi = `QhysrBJX1dU-`,
-  yi = e(gi(), 1),
-  bi = (function (e) {
+  yi = `RuVnOcF9yRI-`,
+  bi = `QhysrBJX1dU-`,
+  xi = e(vi(), 1),
+  Si = (function (e) {
     return (
       (e[(e.L = 1)] = `L`),
       (e[(e.M = 0)] = `M`),
@@ -3324,7 +3324,7 @@ var oi = new URL(
       e
     );
   })({});
-function xi(e, t, n) {
+function Ci(e, t, n) {
   let r = e.length,
     i = e[0].length,
     a = (r + 2) * i,
@@ -3340,7 +3340,7 @@ function xi(e, t, n) {
     (o[s++] = 0),
     (o[s++] = i),
     (o[s++] = 0),
-    _(
+    D(
       t != `transparent` || n != `transparent`,
       `Trying to use transparent for both colors in QR`,
     ),
@@ -3385,7 +3385,7 @@ function xi(e, t, n) {
   }
   return ((o[s++] = 1), (o[s++] = 129), (o[s++] = 0), (o[s++] = 59), o);
 }
-function Si(
+function wi(
   e,
   {
     activeBitColor: t = [33, 35, 40],
@@ -3394,7 +3394,7 @@ function Si(
   } = {},
   i = {},
 ) {
-  let a = (0, yi.default)(e, i).modules;
+  let a = (0, xi.default)(e, i).modules;
   if (!a) return null;
   let o = [];
   for (let e = 0; e < r; e++) o.push(Array(a.length + r * 2).fill(!1));
@@ -3405,9 +3405,9 @@ function Si(
       ...Array.from({ length: r }, () => !1),
     ]);
   for (let e = 0; e < r; e++) o.push(Array(a.length + r * 2).fill(!1));
-  return xi(o, t, n);
+  return Ci(o, t, n);
 }
-function Ci(e) {
+function Ti(e) {
   let {
       quality: t = 0,
       children: n,
@@ -3417,7 +3417,7 @@ function Ci(e) {
       borderWidth: o = 3,
       typeNumber: s = 6,
     } = e,
-    c = wi(n, {
+    c = Ei(n, {
       typeNumber: s,
       errorCorrectLevel: t,
       activeBitColor: i,
@@ -3426,13 +3426,13 @@ function Ci(e) {
     });
   if (!c) return null;
   let l = `rgb(${a[0]}, ${a[1]}, ${a[2]})`;
-  return (0, X.jsx)(`div`, {
-    className: (0, Y.default)(_i, r),
+  return (0, J.jsx)(`div`, {
+    className: (0, q.default)(yi, r),
     style: { "--qr-bright-color": l },
-    children: (0, X.jsx)(`img`, { className: vi, src: c, alt: `` }),
+    children: (0, J.jsx)(`img`, { className: bi, src: c, alt: `` }),
   });
 }
-function wi(e, t) {
+function Ei(e, t) {
   let {
     typeNumber: n,
     errorCorrectLevel: r,
@@ -3440,19 +3440,19 @@ function wi(e, t) {
     inactiveBitColor: a,
     borderWidth: o,
   } = t;
-  return (0, K.useMemo)(() => {
-    let t = Si(
+  return (0, W.useMemo)(() => {
+    let t = wi(
       e,
       { activeBitColor: i, inactiveBitColor: a, borderWidth: o },
       { typeNumber: n, errorCorrectLevel: r },
     );
-    return t ? `data:image/gif;base64,${(0, hn.fromByteArray)(t)}` : null;
+    return t ? `data:image/gif;base64,${(0, _n.fromByteArray)(t)}` : null;
   }, [e, n, r, i, a, o]);
 }
-var Ti = `WrkY9vjgO-o-`,
-  Ei = `S5cukRF3668-`,
-  Di = `_-8GxbX7BdEU-`;
-function Oi(e) {
+var Di = `WrkY9vjgO-o-`,
+  Oi = `S5cukRF3668-`,
+  ki = `_-8GxbX7BdEU-`;
+function Ai(e) {
   let {
       transport: t,
       onComplete: n,
@@ -3469,42 +3469,42 @@ function Oi(e) {
       bHadRemoteInteraction: d,
       reset: f,
       setTokenToRevoke: p,
-    } = jn({
+    } = Nn({
       transport: t,
       onComplete: n,
-      onDeviceDetails: E.IN_STEAMUI ? Mn : Nn,
+      onDeviceDetails: T.IN_STEAMUI ? Pn : Fn,
       preloaded: s,
     });
-  (0, K.useEffect)(() => r && r(c), [r, c]);
-  let m = c === 2 && l ? l : E.STORE_BASE_URL,
+  (0, W.useEffect)(() => r && r(c), [r, c]);
+  let m = c === 2 && l ? l : T.STORE_BASE_URL,
     h = c === 0 || c === 1 || d,
     g = c === 4,
     _ = c === 3,
     v = _
-      ? (0, X.jsx)(Ni, {})
+      ? (0, J.jsx)(Fi, {})
       : g
-        ? (0, X.jsx)(ji, { reset: f })
+        ? (0, J.jsx)(Ni, { reset: f })
         : h
-          ? (0, X.jsx)(Ai, { size: `small` })
+          ? (0, J.jsx)(Mi, { size: `small` })
           : null,
     y = h || g || _;
-  (0, K.useEffect)(() => {
+  (0, W.useEffect)(() => {
     e.refreshInfo?.login_token_id && p(e.refreshInfo.login_token_id);
   }, [e.refreshInfo, p]);
-  let b = E.EUNIVERSE !== 1,
+  let b = T.EUNIVERSE !== 1,
     x = `rgb(${o}, ${o}, ${o})`;
-  return (0, X.jsx)(`div`, {
-    className: Ei,
-    children: (0, X.jsxs)(`div`, {
+  return (0, J.jsx)(`div`, {
+    className: Oi,
+    children: (0, J.jsxs)(`div`, {
       style: { position: `relative` },
       children: [
-        (0, X.jsx)(Ci, {
+        (0, J.jsx)(Ti, {
           borderWidth: 0,
           activeBitColor: [21, 23, 28],
           inactiveBitColor: b ? [o, 0, o] : [o, o, o],
-          quality: ki(m),
-          className: (0, Y.default)(
-            Ti,
+          quality: ji(m),
+          className: (0, q.default)(
+            Di,
             a == `deck` && `LfwdeqflbQQ-`,
             a == `vr` && `DlrZAVV1kSM-`,
             y && `AME4jRbjhDs-`,
@@ -3513,9 +3513,9 @@ function Oi(e) {
           children: m,
         }),
         y &&
-          (0, X.jsx)(`div`, {
+          (0, J.jsx)(`div`, {
             className: `rAodxgQ4uTs-`,
-            children: (0, X.jsx)(`div`, {
+            children: (0, J.jsx)(`div`, {
               className: `TxzArhnTYjU-`,
               style: { "--qr-bright-color": x },
               children: v,
@@ -3525,30 +3525,30 @@ function Oi(e) {
     }),
   });
 }
-function ki(e) {
-  return e.length <= 90 ? bi.Q : void 0;
+function ji(e) {
+  return e.length <= 90 ? Si.Q : void 0;
 }
-function Ai(e) {
+function Mi(e) {
   let { size: t } = e;
-  return (0, X.jsx)(`div`, {
-    className: (0, Y.default)(
-      Di,
+  return (0, J.jsx)(`div`, {
+    className: (0, q.default)(
+      ki,
       t == `small` && `UmXCdAcOnc0-`,
       (t == `medium` || !t) && `dkcbyneVVOc-`,
       t == `large` && `y6M90bbs5Os-`,
     ),
   });
 }
-function ji(e) {
-  return (0, X.jsx)(D, {
+function Ni(e) {
+  return (0, J.jsx)(ne, {
     color: `dull`,
     variant: `ghost`,
     onClick: e.reset,
-    children: (0, X.jsx)(Mi, {}),
+    children: (0, J.jsx)(Pi, {}),
   });
 }
-function Mi(e) {
-  return (0, X.jsxs)(`svg`, {
+function Pi(e) {
+  return (0, J.jsxs)(`svg`, {
     version: `1.1`,
     id: `Layer_2`,
     xmlns: `http://www.w3.org/2000/svg`,
@@ -3559,7 +3559,7 @@ function Mi(e) {
     height: `256px`,
     viewBox: `0 0 256 256`,
     children: [
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         fill: `none`,
         stroke: `#fff`,
         strokeWidth: `30`,
@@ -3567,15 +3567,15 @@ function Mi(e) {
         strokeMiterlimit: `10`,
         d: `M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895`,
       }),
-      (0, X.jsx)(`polygon`, {
+      (0, J.jsx)(`polygon`, {
         points: `147.639,108.361 245.755,10.166 245.834,108.361`,
         fill: `#fff`,
       }),
     ],
   });
 }
-function Ni() {
-  return (0, X.jsx)(`svg`, {
+function Fi() {
+  return (0, J.jsx)(`svg`, {
     version: `1.1`,
     id: `base`,
     xmlns: `http://www.w3.org/2000/svg`,
@@ -3585,7 +3585,7 @@ function Ni() {
     width: `256px`,
     height: `256px`,
     viewBox: `0 0 256 256`,
-    children: (0, X.jsx)(`polyline`, {
+    children: (0, J.jsx)(`polyline`, {
       fill: `none`,
       stroke: `#fff`,
       strokeWidth: `24`,
@@ -3596,59 +3596,59 @@ function Ni() {
     }),
   });
 }
-var Pi = (0, K.createContext)(!1),
-  Fi = () => (0, K.useContext)(Pi);
-function Ii() {
-  return (0, X.jsx)(`div`, {
-    className: Ln,
-    children: (0, X.jsx)(ha, {
+var Ii = (0, W.createContext)(!1),
+  Y = () => (0, W.useContext)(Ii);
+function Li() {
+  return (0, J.jsx)(`div`, {
+    className: zn,
+    children: (0, J.jsx)(X, {
       reset: () => window.location.reload(),
-      failure: W.Generic,
+      failure: H.Generic,
     }),
   });
 }
-function Li(e) {
+function Ri(e) {
   Ia(e.redirectUrl);
   let t = (t) => {
     let { strRefreshToken: n } = t;
-    bn(n).then(
+    Sn(n).then(
       (t) => e.onComplete(t),
-      () => e.onComplete(vn.k_PrimaryDomainFail),
+      () => e.onComplete(bn.k_PrimaryDomainFail),
     );
   };
-  return (0, X.jsx)(Ri, {
+  return (0, J.jsx)(zi, {
     ...e,
     creationRedirectUrl: e.redirectUrl,
     onSuccess: t,
     embedded: e.theme === `modal`,
   });
 }
-function Ri(e) {
+function zi(e) {
   let { embedded: t, children: n, ...r } = e;
-  return (0, X.jsx)(x, {
-    children: (0, X.jsx)(Pi.Provider, {
+  return (0, J.jsx)(x, {
+    children: (0, J.jsx)(Ii.Provider, {
       value: t ?? !1,
-      children: (0, X.jsxs)(`div`, {
-        className: Ln,
-        children: [(0, X.jsx)(Ui, { ...r }), n],
+      children: (0, J.jsxs)(`div`, {
+        className: zn,
+        children: [(0, J.jsx)(Wi, { ...r }), n],
       }),
     }),
   });
 }
-function zi(e) {
+function Bi(e) {
   if (s()) return null;
   let { variant: t } = e;
   return typeof t == `function`
-    ? (0, X.jsx)(Z, { onClick: t, children: u.Localize(`#Login_Help_SignIn`) })
-    : (0, X.jsx)(Z, {
-        href: `${E.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(location.href)}`,
+    ? (0, J.jsx)(Z, { onClick: t, children: u.Localize(`#Login_Help_SignIn`) })
+    : (0, J.jsx)(Z, {
+        href: `${T.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(location.href)}`,
         children: u.Localize(`#Login_Help_SignIn`),
       });
 }
-function Bi(e) {
+function Vi(e) {
   let { variant: t, redirectUrl: n } = e;
   if (typeof t == `function`)
-    return (0, X.jsx)(Z, {
+    return (0, J.jsx)(Z, {
       inline: !0,
       onClick: t,
       children: u.Localize(`#Login_CreateAccount`),
@@ -3658,15 +3658,15 @@ function Bi(e) {
     switch (t ?? `normal`) {
       default:
       case `normal`:
-        return (0, X.jsx)(Z, {
+        return (0, J.jsx)(Z, {
           inline: !0,
-          href: `${E.STORE_BASE_URL}join/${e}`,
+          href: `${T.STORE_BASE_URL}join/${e}`,
           children: u.Localize(`#Login_CreateAccount`),
         });
       case `partner`:
-        return (0, X.jsx)(Z, {
+        return (0, J.jsx)(Z, {
           inline: !0,
-          href: `${E.PARTNER_BASE_URL}${e}`,
+          href: `${T.PARTNER_BASE_URL}${e}`,
           children: u.Localize(`#Login_CreateSteamworksAccount`),
         });
       case `none`:
@@ -3674,7 +3674,7 @@ function Bi(e) {
     }
   }
 }
-function Vi(e) {
+function Hi(e) {
   let { launcherType: t, variant: n, redirectUrl: r } = e;
   if (t === 8 || n == `none`) return null;
   let i = t !== void 0,
@@ -3687,120 +3687,120 @@ function Vi(e) {
     case `partner`:
       a = `#Login_NoSteamworksAccount`;
   }
-  return (0, X.jsxs)(`div`, {
-    className: (0, Y.default)(Kr, i && `Kv7QdVcb2UI-`),
+  return (0, J.jsxs)(`div`, {
+    className: (0, q.default)(Jr, i && `Kv7QdVcb2UI-`),
     children: [
-      (0, X.jsx)(`span`, { className: qr, children: u.Localize(a) }),
-      (0, X.jsx)(Bi, { variant: n, redirectUrl: r }),
+      (0, J.jsx)(`span`, { className: Yr, children: u.Localize(a) }),
+      (0, J.jsx)(Vi, { variant: n, redirectUrl: r }),
     ],
   });
 }
-function Hi() {
+function Ui() {
   let e =
     window?.location &&
     new URLSearchParams(window.location.search).getAll(`need_password`).pop();
   return e !== void 0 && e !== `false` && e !== `0`;
 }
-function Ui(e) {
+function Wi(e) {
   let {
       transport: t,
       onSuccess: n,
       platform: r,
       autoFocus: i,
       refreshInfo: a,
-      renderSuccess: o = () => (0, X.jsx)(Fa, {}),
+      renderSuccess: o = () => (0, J.jsx)(Fa, {}),
       lastResult: s,
       joinLinkVariant: c,
       defaultAccountName: l,
       secureComputer: d = !0,
       isProbablySharedPC: f = !1,
-      onShowAgreement: m,
-      creationRedirectUrl: h,
-      preloadedQRSession: g,
+      onShowAgreement: p,
+      creationRedirectUrl: m,
+      preloadedQRSession: h,
     } = e,
-    v = E.IN_STEAMUI ? Mn : Nn,
-    b = E.IN_STEAMUI ? (e) => SteamClient.Auth.GetSteamGuardData(e) : null,
-    x = Hi(),
-    S = Fn({
+    g = T.IN_STEAMUI ? Pn : Fn,
+    _ = T.IN_STEAMUI ? (e) => SteamClient.Auth.GetSteamGuardData(e) : null,
+    y = Ui(),
+    b = Ln({
       transport: t,
       platform: r,
       onSuccess: n,
       refreshInfo: a,
-      onDeviceDetails: v,
-      onGetMachineAuth: b,
+      onDeviceDetails: g,
+      onGetMachineAuth: _,
       defaultAccountName: l,
       secureComputer: d,
       isProbablySharedPC: f,
-      onShowAgreement: m,
+      onShowAgreement: p,
     }),
-    C = Fi(),
-    w = (0, K.useId)();
+    x = Y(),
+    S = (0, W.useId)();
   if (s != null && s != 1)
-    return (0, X.jsx)(`div`, {
-      className: Ln,
-      children: (0, X.jsx)(ha, {
+    return (0, J.jsx)(`div`, {
+      className: zn,
+      children: (0, J.jsx)(X, {
         reset: () => window.location.reload(),
-        failure: W.Generic,
+        failure: H.Generic,
         errorReference: s.toString(),
-        extendedErrorMessage: S.password.strExtendedErrorMessage,
+        extendedErrorMessage: b.password.strExtendedErrorMessage,
       }),
     });
-  let T = E.EREALM !== y.k_ESteamRealmChina;
-  if (!S.bInPasswordFlow) {
-    let n = (0, X.jsxs)(`div`, {
-      className: (0, Y.default)(Rn, C && `rvRWTXNBcK4-`),
+  let C = T.EREALM !== v.k_ESteamRealmChina;
+  if (!b.bInPasswordFlow) {
+    let n = (0, J.jsxs)(`div`, {
+      className: (0, q.default)(Bn, x && `rvRWTXNBcK4-`),
       children: [
-        (0, X.jsx)(Ki, {
-          strAccountName: S.strAccountName,
-          onAccountNameChange: S.onAccountNameChange,
-          strPassword: S.strPassword,
-          onPasswordChange: S.onPasswordChange,
-          bRememberMe: S.bRememberMe,
-          onRememberMeChange: S.onRememberMeChange,
-          onSubmit: S.onPasswordSubmit,
-          status: S.password.eStatus,
+        (0, J.jsx)(qi, {
+          strAccountName: b.strAccountName,
+          onAccountNameChange: b.onAccountNameChange,
+          strPassword: b.strPassword,
+          onPasswordChange: b.onPasswordChange,
+          bRememberMe: b.bRememberMe,
+          onRememberMeChange: b.onRememberMeChange,
+          onSubmit: b.onPasswordSubmit,
+          status: b.password.eStatus,
           autoFocus: i,
           secureComputer: d,
           refreshInfo: e.refreshInfo,
         }),
-        T &&
-          (0, X.jsx)(Ji, {
+        C &&
+          (0, J.jsx)(Yi, {
             transport: t,
-            onQRStatusChange: S.onQRStatusChange,
-            onComplete: S.onComplete,
+            onQRStatusChange: b.onQRStatusChange,
+            onComplete: b.onComplete,
             platform: r,
             refreshInfo: a,
-            preloadedQRSession: g,
+            preloadedQRSession: h,
           }),
       ],
     });
-    if (C) {
-      let t = E.IN_STEAMUI,
-        r = p()?.LAUNCHER_TYPE;
-      return (0, X.jsxs)(Q, {
-        className: (0, Y.default)(Ur, t && `Kv7QdVcb2UI-`),
+    if (x) {
+      let t = T.IN_STEAMUI,
+        r = E()?.LAUNCHER_TYPE;
+      return (0, J.jsxs)(Q, {
+        className: (0, q.default)(Gr, t && `Kv7QdVcb2UI-`),
         children: [
           !t && !1,
           !e.refreshInfo &&
-            (0, X.jsx)(ja, {
-              realm: E.EREALM,
+            (0, J.jsx)(ja, {
+              realm: T.EREALM,
               launcherType: r,
               className: `_19NDBszdpt8-`,
               onBack: e.onBack,
             }),
-          (0, X.jsx)(Wi, { refreshInfo: a }),
+          (0, J.jsx)(Gi, { refreshInfo: a }),
           n,
-          (0, X.jsxs)(`div`, {
-            className: (0, Y.default)(Gr, t && `Kv7QdVcb2UI-`),
+          (0, J.jsxs)(`div`, {
+            className: (0, q.default)(qr, t && `Kv7QdVcb2UI-`),
             children: [
-              (0, X.jsx)(zi, { variant: e.helpLinkVariant }),
-              (0, X.jsx)(Vi, { launcherType: r, variant: c, redirectUrl: h }),
+              (0, J.jsx)(Bi, { variant: e.helpLinkVariant }),
+              (0, J.jsx)(Hi, { launcherType: r, variant: c, redirectUrl: m }),
             ],
           }),
         ],
       });
     }
-    let o = (0, X.jsxs)(`div`, {
+    let o = (0, J.jsxs)(`div`, {
       style: {
         display: `flex`,
         flexDirection: `column`,
@@ -3809,89 +3809,89 @@ function Ui(e) {
       },
       children: [
         !1,
-        (0, X.jsx)(`h2`, {
-          className: Lr,
-          id: w,
+        (0, J.jsx)(`h2`, {
+          className: zr,
+          id: S,
           children: e.refreshInfo
             ? u.Localize(`#Login_RefreshSignIn`)
             : u.Localize(`#Login_SignInTitle`),
         }),
-        (0, X.jsx)(Wi, { refreshInfo: e.refreshInfo }),
+        (0, J.jsx)(Gi, { refreshInfo: e.refreshInfo }),
       ],
     });
-    return (0, X.jsxs)($, {
+    return (0, J.jsxs)($, {
       title: o,
-      titleId: w,
-      children: [x && (0, X.jsx)(Gi, {}), n],
+      titleId: S,
+      children: [y && (0, J.jsx)(Ki, {}), n],
     });
   }
-  let D = S.password.eStatus;
-  switch (D) {
+  let w = b.password.eStatus;
+  switch (w) {
     case 13:
       return e.renderLoading
-        ? (0, X.jsx)(X.Fragment, { children: e.renderLoading() })
-        : (0, X.jsx)(fa, {});
+        ? (0, J.jsx)(J.Fragment, { children: e.renderLoading() })
+        : (0, J.jsx)(pa, {});
     case 5:
     case 11:
     case 3:
     case 10:
       return (
-        _(
-          !!S.password.strAccountName,
+        D(
+          !!b.password.strAccountName,
           `Missing account name in login session for status`,
-          D,
+          w,
         ),
-        (0, X.jsx)(_a, {
-          type: D === 5 || D === 11 ? `mobile` : `email`,
-          onSubmitCode: S.password.addCode,
-          status: D,
-          associatedLabel: S.password.strConfirmationAssociatedMessage,
-          accountName: S.password.strAccountName,
-          onBack: S.password.goBack,
+        (0, J.jsx)(_a, {
+          type: w === 5 || w === 11 ? `mobile` : `email`,
+          onSubmitCode: b.password.addCode,
+          status: w,
+          associatedLabel: b.password.strConfirmationAssociatedMessage,
+          accountName: b.password.strAccountName,
+          onBack: b.password.goBack,
           onCodeHelp: e.onCodeHelp,
         })
       );
     case 6:
     case 4:
       return (
-        _(
-          !!S.password.strAccountName,
+        D(
+          !!b.password.strAccountName,
           `Missing account name in login session for status`,
-          D,
+          w,
         ),
-        (0, X.jsx)(Ea, {
-          type: D === 6 ? `mobile` : `email`,
-          accountName: S.password.strAccountName,
-          onUseCodeOverride: S.password.useCodeOverride,
+        (0, J.jsx)(Ea, {
+          type: w === 6 ? `mobile` : `email`,
+          accountName: b.password.strAccountName,
+          onUseCodeOverride: b.password.useCodeOverride,
           onCodeHelp: e.onCodeHelp,
         })
       );
     case 16:
-      return (0, X.jsx)(ga, { reset: S.password.reset });
+      return (0, J.jsx)(ga, { reset: b.password.reset });
     case 15:
-      return (0, X.jsx)(ha, {
-        reset: S.password.reset,
-        failure: S.password.eFailureState,
-        onRequestOffline: S.onTryOffline,
-        errorReference: S.password.strErrorReference,
-        extendedErrorMessage: S.password.strExtendedErrorMessage,
+      return (0, J.jsx)(X, {
+        reset: b.password.reset,
+        failure: b.password.eFailureState,
+        onRequestOffline: b.onTryOffline,
+        errorReference: b.password.strErrorReference,
+        extendedErrorMessage: b.password.strExtendedErrorMessage,
       });
     case 14:
-      return (0, X.jsx)($, { compact: !0, children: o() });
+      return (0, J.jsx)($, { compact: !0, children: o() });
     default:
       return (
-        H(`Unknown Phase: ${D}`),
-        (0, X.jsx)(ha, {
-          reset: S.password.reset,
-          failure: W.Generic,
-          onRequestOffline: S.onTryOffline,
-          errorReference: S.password.strErrorReference,
-          extendedErrorMessage: S.password.strExtendedErrorMessage,
+        B(`Unknown Phase: ${w}`),
+        (0, J.jsx)(X, {
+          reset: b.password.reset,
+          failure: H.Generic,
+          onRequestOffline: b.onTryOffline,
+          errorReference: b.password.strErrorReference,
+          extendedErrorMessage: b.password.strExtendedErrorMessage,
         })
       );
   }
 }
-function Wi(e) {
+function Gi(e) {
   if (!e.refreshInfo) return null;
   let t;
   switch (e.refreshInfo?.reason ?? 2) {
@@ -3927,24 +3927,24 @@ function Wi(e) {
     case 84:
       t = `#Login_RefreshReason_RateLimitExceeded`;
   }
-  return (0, X.jsxs)(`div`, {
-    className: Wr,
+  return (0, J.jsxs)(`div`, {
+    className: Kr,
     children: [
-      (0, X.jsx)(`div`, {
-        className: Pr,
+      (0, J.jsx)(`div`, {
+        className: Ir,
         children: u.Localize(`#Login_RefreshSignIn`),
       }),
-      (0, X.jsx)(`div`, { className: Fr, children: u.Localize(t) }),
+      (0, J.jsx)(`div`, { className: Lr, children: u.Localize(t) }),
     ],
   });
 }
-function Gi() {
-  return (0, X.jsx)(`div`, {
-    className: Wn,
+function Ki() {
+  return (0, J.jsx)(`div`, {
+    className: Kn,
     children: u.Localize(`#Login_ConfirmCredentials`),
   });
 }
-function Ki(e) {
+function qi(e) {
   let {
       onSubmit: t,
       status: n,
@@ -3958,8 +3958,8 @@ function Ki(e) {
       onRememberMeChange: d,
       secureComputer: f = !0,
     } = e,
-    [p, m] = (0, K.useState)(!1),
-    h = Fi(),
+    [p, m] = (0, W.useState)(!1),
+    h = Y(),
     g = Ra(),
     _ = () => {
       t().then(() => {
@@ -3969,20 +3969,20 @@ function Ki(e) {
     v = n === 1 || n === 13,
     y = n === 2 && !p,
     b = y
-      ? (0, X.jsx)(da, { children: u.Localize(`#Login_CheckCredentials`) })
-      : (0, X.jsx)(da, { children: `\xA0` }),
+      ? (0, J.jsx)(fa, { children: u.Localize(`#Login_CheckCredentials`) })
+      : (0, J.jsx)(fa, { children: `\xA0` }),
     x = r && !a,
     S = r && !!a,
     C = !!e.refreshInfo,
-    w = (0, K.useId)(),
-    T = (0, K.useId)();
-  return (0, X.jsxs)(Da, {
+    w = (0, W.useId)(),
+    E = (0, W.useId)();
+  return (0, J.jsxs)(Da, {
     onSubmit: _,
-    className: nr,
+    className: ir,
     children: [
-      (0, X.jsx)(ea, {
+      (0, J.jsx)(ta, {
         tone: y ? `danger` : void 0,
-        label: (0, X.jsx)(ta, {
+        label: (0, J.jsx)(na, {
           highlight: !0,
           inputId: w,
           children: u.Localize(`#Login_SignIn_WithAccountName`),
@@ -3995,10 +3995,10 @@ function Ki(e) {
         disabled: C,
         id: w,
       }),
-      (0, X.jsx)(ea, {
+      (0, J.jsx)(ta, {
         tone: y ? `danger` : void 0,
-        label: (0, X.jsx)(ta, {
-          inputId: T,
+        label: (0, J.jsx)(na, {
+          inputId: E,
           children: u.Localize(`#Login_Password`),
         }),
         value: s,
@@ -4007,74 +4007,74 @@ function Ki(e) {
         },
         type: `password`,
         autoFocus: S,
-        id: T,
+        id: E,
       }),
       f
-        ? (0, X.jsx)(ia, {
+        ? (0, J.jsx)(aa, {
             label: u.Localize(`#Login_RememberMe_Short`),
             title: u.Localize(`#Login_RememberMe_Tooltip`),
             value: l,
             onChange: d,
           })
-        : (0, X.jsx)(`div`, {
-            className: Ir,
+        : (0, J.jsx)(`div`, {
+            className: Rr,
             children: u.Localize(`#Login_InsecureComputer`),
           }),
-      (0, X.jsx)(oa, { loading: v, refreshLogin: C }),
+      (0, J.jsx)(sa, { loading: v, refreshLogin: C }),
       b,
       !h &&
-        (0, X.jsx)(Z, {
-          href: `${E.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(location.href)}`,
+        (0, J.jsx)(Z, {
+          href: `${T.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(location.href)}`,
           align: `center`,
           children: u.Localize(`#Login_Help_SignIn`),
         }),
     ],
   });
 }
-var qi = 700;
-function Ji(e) {
-  let t = l(),
-    [n, r] = (0, K.useState)(!1);
+var Ji = 700;
+function Yi(e) {
+  let t = re(),
+    [n, r] = (0, W.useState)(!1);
   return (
-    (0, K.useLayoutEffect)(() => {
-      r(t.ownerWindow.screen.width < qi);
+    (0, W.useLayoutEffect)(() => {
+      r(t.ownerWindow.screen.width < Ji);
     }, [t.ownerWindow]),
-    f(t.ownerWindow, `resize`, () => {
-      r(t.ownerWindow.screen.width < qi);
+    d(t.ownerWindow, `resize`, () => {
+      r(t.ownerWindow.screen.width < Ji);
     }),
-    (0, X.jsx)(`div`, {
-      className: Gn,
-      children: n ? (0, X.jsx)(Zi, { ...e }) : (0, X.jsx)(Xi, { ...e }),
+    (0, J.jsx)(`div`, {
+      className: qn,
+      children: n ? (0, J.jsx)(Qi, { ...e }) : (0, J.jsx)(Zi, { ...e }),
     })
   );
 }
-function Yi(e) {
+function Xi(e) {
   let t =
-    E.STORE_BASE_URL +
+    T.STORE_BASE_URL +
     `join/?guest=1&purchaseType=gift&checkout=1&redir=` +
     encodeURIComponent(e.redirectURL);
-  return (0, X.jsx)(`div`, {
-    className: Bn,
-    children: (0, X.jsx)($, {
+  return (0, J.jsx)(`div`, {
+    className: Hn,
+    children: (0, J.jsx)($, {
       compact: !0,
-      children: (0, X.jsxs)(`div`, {
-        className: zn,
+      children: (0, J.jsxs)(`div`, {
+        className: Vn,
         children: [
-          (0, X.jsx)(`div`, {
-            className: Hn,
-            children: C(
+          (0, J.jsx)(`div`, {
+            className: Wn,
+            children: w(
               u.Localize(`#Login_Guest`),
-              (0, X.jsx)(`a`, {
+              (0, J.jsx)(`a`, {
                 href: `${t}`,
                 style: { textDecoration: `underline` },
               }),
             ),
           }),
-          (0, X.jsx)(`a`, {
-            className: Un,
+          (0, J.jsx)(`a`, {
+            className: Gn,
             href: `${t}`,
-            children: (0, X.jsx)(`button`, {
-              className: fr,
+            children: (0, J.jsx)(`button`, {
+              className: mr,
               children: u.Localize(`#Login_GuestContinue`),
             }),
           }),
@@ -4083,45 +4083,45 @@ function Yi(e) {
     }),
   });
 }
-function Xi(e) {
-  return (0, X.jsx)($i, { ...e });
-}
 function Zi(e) {
-  let [t, n] = (0, K.useState)(!1);
-  return t
-    ? (0, X.jsx)($i, { ...e, bShowHideButton: !0, setShowQR: n })
-    : (0, X.jsx)(Qi, { setShowQR: n });
+  return (0, J.jsx)(ea, { ...e });
 }
 function Qi(e) {
-  return (0, X.jsxs)(`div`, {
-    className: Kn,
+  let [t, n] = (0, W.useState)(!1);
+  return t
+    ? (0, J.jsx)(ea, { ...e, bShowHideButton: !0, setShowQR: n })
+    : (0, J.jsx)($i, { setShowQR: n });
+}
+function $i(e) {
+  return (0, J.jsxs)(`div`, {
+    className: Jn,
     children: [
-      (0, X.jsx)(`div`, {
-        className: qn,
+      (0, J.jsx)(`div`, {
+        className: Yn,
         children: u.Localize(`#Login_MobileFlow_New`),
       }),
-      (0, X.jsx)(`div`, {
-        className: Jn,
-        children: (0, X.jsx)(`div`, {
-          className: Jn,
+      (0, J.jsx)(`div`, {
+        className: Xn,
+        children: (0, J.jsx)(`div`, {
+          className: Xn,
           children: u.Localize(`#Login_MobileFlow_SignIn_ScanQR`),
         }),
       }),
-      (0, X.jsx)(`button`, {
+      (0, J.jsx)(`button`, {
         type: `button`,
-        className: Yn,
+        className: Zn,
         onClick: () => e.setShowQR(!0),
         children: u.Localize(`#Login_MobileFlow_ShowMeQR_Button`),
       }),
-      (0, X.jsx)(`a`, {
-        href: `${E.STORE_BASE_URL}mobile`,
-        className: Xn,
+      (0, J.jsx)(`a`, {
+        href: `${T.STORE_BASE_URL}mobile`,
+        className: Qn,
         children: u.Localize(`#Login_JoinBeta_Button`),
       }),
     ],
   });
 }
-function $i(e) {
+function ea(e) {
   let {
     onQRStatusChange: t,
     transport: n,
@@ -4132,16 +4132,16 @@ function $i(e) {
     bShowHideButton: s = !1,
     setShowQR: c,
   } = e;
-  return (0, X.jsxs)(`div`, {
-    className: Zn,
+  return (0, J.jsxs)(`div`, {
+    className: $n,
     children: [
-      (0, X.jsx)(ta, {
+      (0, J.jsx)(na, {
         highlight: !0,
         children: u.Localize(`#Login_SignIn_OrWithQRCode`),
       }),
-      (0, X.jsx)(`div`, {
-        className: Qn,
-        children: (0, X.jsx)(Oi, {
+      (0, J.jsx)(`div`, {
+        className: er,
+        children: (0, J.jsx)(Ai, {
           onStatusChange: t,
           transport: n,
           onComplete: r,
@@ -4152,43 +4152,43 @@ function $i(e) {
       }),
       s &&
         c &&
-        (0, X.jsx)(`button`, {
+        (0, J.jsx)(`button`, {
           type: `button`,
           className: `X1WW6U5nVKQ-`,
           onClick: () => c(!1),
           children: u.Localize(`#Button_Hide`),
         }),
-      (0, X.jsx)(`div`, {
-        className: $n,
-        children: C(
+      (0, J.jsx)(`div`, {
+        className: tr,
+        children: w(
           u.Localize(`#Login_UseMobileAppForQR_Inline`),
-          (0, X.jsx)(Z, { href: `${E.STORE_BASE_URL}mobile`, align: `center` }),
+          (0, J.jsx)(Z, { href: `${T.STORE_BASE_URL}mobile`, align: `center` }),
         ),
       }),
     ],
   });
 }
-function ea(e) {
+function ta(e) {
   let { label: t, error: n, tone: r, autoFocus: i, id: a, ...o } = e,
     s = r ?? (n ? `danger` : void 0);
-  return (0, X.jsxs)(`div`, {
-    className: er,
+  return (0, J.jsxs)(`div`, {
+    className: nr,
     children: [
-      typeof t == `string` ? (0, X.jsx)(ta, { inputId: a, children: t }) : t,
-      n && (0, X.jsx)(ra, { type: `error`, children: n }),
-      (0, X.jsx)(na, { autoFocus: i, tone: s, id: a, ...o }),
+      typeof t == `string` ? (0, J.jsx)(na, { inputId: a, children: t }) : t,
+      n && (0, J.jsx)(ia, { type: `error`, children: n }),
+      (0, J.jsx)(ra, { autoFocus: i, tone: s, id: a, ...o }),
     ],
   });
 }
-function ta(e) {
+function na(e) {
   let { children: t, inputId: n, highlight: r } = e;
-  return (0, X.jsx)(`label`, {
-    className: (0, Y.default)(rr, r && `jAjiX6ujKzY-`),
+  return (0, J.jsx)(`label`, {
+    className: (0, q.default)(ar, r && `jAjiX6ujKzY-`),
     htmlFor: n,
     children: t,
   });
 }
-function na(e) {
+function ra(e) {
   let {
     value: t,
     onChange: n,
@@ -4199,127 +4199,127 @@ function na(e) {
     disabled: s,
     id: c,
   } = e;
-  return (0, X.jsx)(`input`, {
+  return (0, J.jsx)(`input`, {
     value: t,
     type: r,
     autoFocus: o,
     onChange: (e) => n(e.target.value),
-    className: (0, Y.default)(tr, i === `danger` && `kbZo38RXgJ0-`, a),
+    className: (0, q.default)(rr, i === `danger` && `kbZo38RXgJ0-`, a),
     disabled: s,
     id: c,
   });
 }
-function ra(e) {
+function ia(e) {
   let { children: t, type: n } = e;
-  return (0, X.jsx)(`div`, {
-    className: (0, Y.default)(void 0, n === `error` && void 0),
+  return (0, J.jsx)(`div`, {
+    className: (0, q.default)(void 0, n === `error` && void 0),
     children: t,
   });
 }
-function ia(e) {
+function aa(e) {
   let { label: t, title: n, onChange: r, value: i } = e,
     a = () => {
       r && r(!i);
     },
-    o = (0, K.useId)();
-  return (0, X.jsxs)(`div`, {
+    o = (0, W.useId)();
+  return (0, J.jsxs)(`div`, {
     role: `presentation`,
-    className: ir,
+    className: or,
     title: n,
     onClick: a,
     onKeyPress: (e) => {
       e.key == ` ` && (a(), e.preventDefault());
     },
     children: [
-      (0, X.jsx)(aa, { labelledBy: o, value: i }),
-      (0, X.jsx)(`label`, { id: o, className: ar, children: t }),
+      (0, J.jsx)(oa, { labelledBy: o, value: i }),
+      (0, J.jsx)(`label`, { id: o, className: sr, children: t }),
     ],
   });
 }
-function aa(e) {
+function oa(e) {
   let { value: t, labelledBy: n } = e;
-  return (0, X.jsx)(`div`, {
+  return (0, J.jsx)(`div`, {
     tabIndex: 0,
-    className: or,
+    className: cr,
     "aria-labelledby": n,
     role: `checkbox`,
     "aria-checked": t,
     children:
       t &&
-      (0, X.jsx)(`div`, {
+      (0, J.jsx)(`div`, {
         className: `GHsuNp6HqyY-`,
-        children: (0, X.jsx)(ai, { strokeWidth: 35 }),
+        children: (0, J.jsx)(si, { strokeWidth: 35 }),
       }),
   });
 }
-function oa(e) {
+function sa(e) {
   let { refreshLogin: t, ...n } = e;
   return t &&
     `SteamClient` in globalThis &&
     `User` in SteamClient &&
     `StartShutdown` in SteamClient.User
-    ? (0, X.jsx)(ca, {})
-    : (0, X.jsx)(sa, { ...n });
+    ? (0, J.jsx)(la, {})
+    : (0, J.jsx)(ca, { ...n });
 }
-function sa(e) {
-  return (0, X.jsx)(`div`, {
-    className: cr,
-    children: (0, X.jsx)(la, { ...e, children: u.Localize(`#Login_SignIn`) }),
+function ca(e) {
+  return (0, J.jsx)(`div`, {
+    className: ur,
+    children: (0, J.jsx)(ua, { ...e, children: u.Localize(`#Login_SignIn`) }),
   });
 }
-function ca() {
-  return (0, X.jsxs)(`div`, {
-    className: sr,
+function la() {
+  return (0, J.jsxs)(`div`, {
+    className: lr,
     children: [
-      (0, X.jsx)(`button`, {
-        className: pr,
+      (0, J.jsx)(`button`, {
+        className: hr,
         type: `submit`,
         children: u.Localize(`#Login_SignIn`),
       }),
-      (0, X.jsx)(`button`, {
-        className: lr,
+      (0, J.jsx)(`button`, {
+        className: dr,
         onClick: () => SteamClient.User.StartShutdown(!0),
         children: u.Localize(`#Login_ExitSteam`),
       }),
     ],
   });
 }
-function la(e) {
-  return (0, X.jsx)(ua, { type: `submit`, ...e });
-}
 function ua(e) {
+  return (0, J.jsx)(da, { type: `submit`, ...e });
+}
+function da(e) {
   let { className: t, loading: n, disabled: r, children: i, ...a } = e,
     o = r || n;
-  return (0, X.jsxs)(`button`, {
-    className: (0, Y.default)(pr, n && `QAA-fChDQFA-`, t),
+  return (0, J.jsxs)(`button`, {
+    className: (0, q.default)(hr, n && `QAA-fChDQFA-`, t),
     disabled: o,
     ...a,
     children: [
       i,
       n &&
-        (0, X.jsx)(`div`, {
+        (0, J.jsx)(`div`, {
           className: `_7C2-lQ9GWRA-`,
-          children: (0, X.jsx)(pa, { size: `small` }),
+          children: (0, J.jsx)(ma, { size: `small` }),
         }),
     ],
   });
 }
-function da(e) {
+function fa(e) {
   let t = e.children || `\xA0`;
-  return (0, X.jsx)(`div`, { className: hr, children: t });
+  return (0, J.jsx)(`div`, { className: _r, children: t });
 }
-function fa() {
-  return (0, X.jsx)($, {
+function pa() {
+  return (0, J.jsx)($, {
     compact: !0,
-    children: (0, X.jsxs)(Q, {
+    children: (0, J.jsxs)(Q, {
       alignItems: `center`,
-      className: (0, Y.default)($r, E.IN_STEAMUI && `ZV64fnc7PdA-`),
+      className: (0, q.default)(ti, T.IN_STEAMUI && `ZV64fnc7PdA-`),
       children: [
-        (0, X.jsx)(c, { size: `xlarge` }),
-        (0, X.jsx)(`div`, {
-          className: (0, Y.default)(br),
+        (0, J.jsx)(c, { size: `xlarge` }),
+        (0, J.jsx)(`div`, {
+          className: (0, q.default)(Sr),
           children: u.Localize(
-            E.IN_STEAMUI
+            T.IN_STEAMUI
               ? `#Login_ConnectingToSteam`
               : `#Login_LoadingAccountInfo`,
           ),
@@ -4328,28 +4328,28 @@ function fa() {
     }),
   });
 }
-function pa(e) {
+function ma(e) {
   let { size: t } = e;
-  return (0, X.jsx)(`div`, {
-    className: (0, Y.default)(
-      Qr,
+  return (0, J.jsx)(`div`, {
+    className: (0, q.default)(
+      ei,
       t == `small` && `-GciojHJFJo-`,
       (t == `medium` || !t) && `aNnjBlEgXeE-`,
       t == `large` && `SkijseWcXzM-`,
     ),
   });
 }
-function ma(e) {
-  return (0, X.jsx)(`div`, {
-    className: Zr,
-    children: (0, X.jsx)(`button`, {
-      className: ur,
+function ha(e) {
+  return (0, J.jsx)(`div`, {
+    className: $r,
+    children: (0, J.jsx)(`button`, {
+      className: fr,
       onClick: e.onRequestOffline,
       children: u.Localize(`#Login_GoOffline_Button`),
     }),
   });
 }
-function ha(e) {
+function X(e) {
   let {
       reset: t,
       failure: n,
@@ -4357,37 +4357,37 @@ function ha(e) {
       errorReference: i,
       extendedErrorMessage: a,
     } = e,
-    { title: o, description: s } = In(n, a),
-    c = E.IN_STEAMUI && n == W.Network;
-  return (0, X.jsxs)($, {
+    { title: o, description: s } = Rn(n, a),
+    c = T.IN_STEAMUI && n == H.Network;
+  return (0, J.jsxs)($, {
     compact: !0,
     children: [
-      (0, X.jsxs)(Q, {
+      (0, J.jsxs)(Q, {
         alignItems: `center`,
         gap: 12,
         children: [
-          (0, X.jsx)(`div`, { className: Jr, children: o }),
-          (0, X.jsx)(`div`, { className: Yr, children: s }),
+          (0, J.jsx)(`div`, { className: Xr, children: o }),
+          (0, J.jsx)(`div`, { className: Zr, children: s }),
           c &&
-            (0, X.jsx)(`div`, {
+            (0, J.jsx)(`div`, {
               className: `sH-b0kW7QCY-`,
               children: u.Localize(`#Login_GoOffline_Description`),
             }),
-          (0, X.jsxs)(Oa, {
-            className: Xr,
+          (0, J.jsxs)(Oa, {
+            className: Qr,
             children: [
-              (0, X.jsx)(ua, {
-                className: dr,
+              (0, J.jsx)(da, {
+                className: pr,
                 onClick: t,
                 children: u.Localize(`#Button_Retry`),
               }),
-              c && r && (0, X.jsx)(ma, { onRequestOffline: r }),
+              c && r && (0, J.jsx)(ha, { onRequestOffline: r }),
             ],
           }),
         ],
       }),
       i &&
-        (0, X.jsx)(`div`, {
+        (0, J.jsx)(`div`, {
           className: `La0SBF0lXr0-`,
           children: u.Localize(`#Login_Error_Reference`, i),
         }),
@@ -4396,7 +4396,7 @@ function ha(e) {
 }
 function ga(e) {
   let { reset: t } = e;
-  return (0, X.jsx)(ha, { reset: t, failure: W.Generic });
+  return (0, J.jsx)(X, { reset: t, failure: H.Generic });
 }
 function _a(e) {
   let {
@@ -4407,14 +4407,14 @@ function _a(e) {
       associatedLabel: a,
       onBack: o,
     } = e,
-    [s, c] = (0, K.useState)([]),
-    [l, d] = (0, K.useState)(!1),
-    [f, p] = (0, K.useState)(!1),
-    [m, h] = (0, K.useState)(!1),
-    [g, _] = (0, K.useState)(0),
+    [s, c] = (0, W.useState)([]),
+    [l, d] = (0, W.useState)(!1),
+    [f, p] = (0, W.useState)(!1),
+    [m, h] = (0, W.useState)(!1),
+    [g, _] = (0, W.useState)(0),
     v = t === `mobile`,
     y = s.join(``),
-    b = kn(y, m),
+    b = jn(y, m),
     x = (e) => {
       (p(!0),
         n(e).then(() => {
@@ -4424,7 +4424,7 @@ function _a(e) {
     S = (e) => {
       (l || d(!0), c(e));
       let t = e.join(``);
-      kn(t, m) && x(t);
+      jn(t, m) && x(t);
     },
     C = () => {
       b && x(y);
@@ -4438,35 +4438,35 @@ function _a(e) {
   return (
     m
       ? t === `mobile`
-        ? ((D = (0, X.jsx)(ya, {})), (E = `#Login_UseMobileCode`))
-        : ((D = (0, X.jsx)(ya, {})), (E = `#Login_UseEmailCode`))
+        ? ((D = (0, J.jsx)(ya, {})), (E = `#Login_UseMobileCode`))
+        : ((D = (0, J.jsx)(ya, {})), (E = `#Login_UseEmailCode`))
       : ((D =
           t === `mobile`
-            ? (0, X.jsx)(ba, {})
-            : (0, X.jsx)(xa, { emailAddress: a })),
+            ? (0, J.jsx)(ba, {})
+            : (0, J.jsx)(xa, { emailAddress: a })),
         (E = `#Login_UseBackupCode`)),
-    (0, X.jsx)($, {
-      title: (0, X.jsx)(ja, {}),
+    (0, J.jsx)($, {
+      title: (0, J.jsx)(ja, {}),
       compact: !0,
-      children: (0, X.jsx)(Da, {
+      children: (0, J.jsx)(Da, {
         onSubmit: C,
-        children: (0, X.jsxs)(Q, {
+        children: (0, J.jsxs)(Q, {
           alignItems: `center`,
           gap: 14,
           children: [
-            (0, X.jsx)(Sa, { type: t, accountName: i }),
-            (0, X.jsxs)(`div`, {
-              className: Cr,
+            (0, J.jsx)(Sa, { type: t, accountName: i }),
+            (0, J.jsxs)(`div`, {
+              className: Tr,
               children: [
-                (0, X.jsxs)(Q, {
+                (0, J.jsxs)(Q, {
                   alignItems: `center`,
                   gap: 2,
                   children: [
                     T &&
-                      (0, X.jsx)(da, {
+                      (0, J.jsx)(fa, {
                         children: u.Localize(`#Login_IncorrectSteamGuard`),
                       }),
-                    (0, X.jsx)(
+                    (0, J.jsx)(
                       ka,
                       {
                         value: s,
@@ -4483,12 +4483,12 @@ function _a(e) {
               ],
             }),
             v &&
-              (0, X.jsx)(Z, {
+              (0, J.jsx)(Z, {
                 onClick: w,
                 align: `center`,
                 children: u.Localize(E),
               }),
-            (0, X.jsx)(va, { type: t, onCodeHelp: e.onCodeHelp }),
+            (0, J.jsx)(va, { type: t, onCodeHelp: e.onCodeHelp }),
           ],
         }),
       }),
@@ -4500,32 +4500,32 @@ function va(e) {
   let t, n;
   return (
     e.type === `mobile`
-      ? ((t = `${E.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`),
+      ? ((t = `${T.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`),
         (n = u.Localize(`#Login_Help_AccessMobileApp`)))
-      : ((t = `${E.HELP_BASE_URL}wizard/HelpWithSteamGuardCode`),
+      : ((t = `${T.HELP_BASE_URL}wizard/HelpWithSteamGuardCode`),
         (n = u.Localize(`#Login_Help_AccessEmail`))),
     e.onCodeHelp
-      ? (0, X.jsx)(Z, {
+      ? (0, J.jsx)(Z, {
           onClick: () => e.onCodeHelp(t),
           align: `center`,
           children: n,
         })
-      : (0, X.jsx)(Z, { href: t, align: `center`, children: n })
+      : (0, J.jsx)(Z, { href: t, align: `center`, children: n })
   );
 }
 function ya() {
-  return (0, X.jsx)(Oa, {
+  return (0, J.jsx)(Oa, {
     justifyContent: `space-evenly`,
     alignItems: `center`,
-    className: Or,
-    children: (0, X.jsxs)(Q, {
+    className: Ar,
+    children: (0, J.jsxs)(Q, {
       children: [
-        (0, X.jsx)(`div`, {
-          className: jr,
+        (0, J.jsx)(`div`, {
+          className: Nr,
           children: u.Localize(`#Login_EnterBackupCode`),
         }),
-        (0, X.jsx)(`div`, {
-          className: vr,
+        (0, J.jsx)(`div`, {
+          className: br,
           children: u.Localize(`#Login_EnterBackupCodeDescription`),
         }),
       ],
@@ -4533,37 +4533,37 @@ function ya() {
   });
 }
 function ba() {
-  return (0, X.jsxs)(Oa, {
+  return (0, J.jsxs)(Oa, {
     justifyContent: `space-evenly`,
     alignItems: `center`,
-    className: kr,
+    className: jr,
     children: [
-      (0, X.jsx)(`div`, {
-        className: jr,
+      (0, J.jsx)(`div`, {
+        className: Nr,
         children: u.Localize(`#Login_EnterMobileCode`),
       }),
-      (0, X.jsx)(wa, { className: wr }),
+      (0, J.jsx)(wa, { className: Er }),
     ],
   });
 }
 function xa(e) {
-  return (0, X.jsxs)(Oa, {
+  return (0, J.jsxs)(Oa, {
     justifyContent: `space-evenly`,
     alignItems: `center`,
-    className: Ar,
+    className: Mr,
     children: [
-      (0, X.jsx)(Aa, {
+      (0, J.jsx)(Aa, {
         align: `center`,
         spacing: 6,
-        children: (0, X.jsx)(`div`, {
-          className: Mr,
+        children: (0, J.jsx)(`div`, {
+          className: Pr,
           children: u.LocalizeReact(
             `#Login_EnterEmailCode`,
-            (0, X.jsx)(`span`, { className: Nr, children: e.emailAddress }),
+            (0, J.jsx)(`span`, { className: Fr, children: e.emailAddress }),
           ),
         }),
       }),
-      (0, X.jsx)(Ta, { className: Tr }),
+      (0, J.jsx)(Ta, { className: Dr }),
     ],
   });
 }
@@ -4573,65 +4573,65 @@ function Sa(e) {
       n === `mobile`
         ? u.Localize(`#Login_MobileProtectingAccount`)
         : u.Localize(`#Login_EmailProtectingAccount`),
-    i = Fi();
-  return (0, X.jsxs)(`div`, {
-    className: _r,
+    i = Y();
+  return (0, J.jsxs)(`div`, {
+    className: yr,
     children: [
-      (0, X.jsx)(`div`, {
-        className: vr,
+      (0, J.jsx)(`div`, {
+        className: br,
         children: u.LocalizeReact(
           `#Login_ActiveAccountName`,
-          (0, X.jsx)(`span`, { className: yr, children: t }),
+          (0, J.jsx)(`span`, { className: xr, children: t }),
         ),
       }),
-      !i && (0, X.jsx)(`div`, { className: `DSy9L5eaj5o-`, children: r }),
+      !i && (0, J.jsx)(`div`, { className: `DSy9L5eaj5o-`, children: r }),
     ],
   });
 }
 function Ca() {
-  return (0, X.jsx)(Q, {
+  return (0, J.jsx)(Q, {
     alignItems: `center`,
-    children: (0, X.jsxs)(`div`, {
-      className: xr,
+    children: (0, J.jsxs)(`div`, {
+      className: Cr,
       children: [
-        (0, X.jsx)(`img`, { src: m(oi), alt: `` }),
-        (0, X.jsx)(`div`, {
-          className: Sr,
-          children: C(u.Localize(`#Login_AwaitingMobileConfirmation`)),
+        (0, J.jsx)(`img`, { src: ee(ci), alt: `` }),
+        (0, J.jsx)(`div`, {
+          className: wr,
+          children: w(u.Localize(`#Login_AwaitingMobileConfirmation`)),
         }),
       ],
     }),
   });
 }
 function wa(e) {
-  return (0, X.jsxs)(`svg`, {
+  return (0, J.jsxs)(`svg`, {
     viewBox: `0 0 33 49`,
     fill: `currentColor`,
     className: e.className,
     children: [
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         fill: `currentColor`,
         fillRule: `evenodd`,
         clipRule: `evenodd`,
         d: `M28 47.1106C29.1046 47.1106 30 46.2151 30 45.1106L30 3.72705C30 2.62248 29.1046 1.72705 28 1.72705L5 1.72705C3.89544 1.72705 3 2.62248 3 3.72705L3 45.1106C3 46.2151 3.89543 47.1106 5 47.1106L28 47.1106ZM5.68119 5.82741L27.3188 5.82741L27.3188 42.7772H5.68119L5.68119 5.82741ZM20.9999 44.944C20.9999 45.3429 20.6766 45.6662 20.2777 45.6662L12.7221 45.6662C12.3233 45.6662 11.9999 45.3429 11.9999 44.944C11.9999 44.5451 12.3233 44.2218 12.7221 44.2218H20.2777C20.6766 44.2218 20.9999 44.5451 20.9999 44.944ZM17.2778 4.44406C17.6767 4.44406 18 4.12071 18 3.72184C18 3.32296 17.6767 2.99962 17.2778 2.99962L15.7222 2.99962C15.3233 2.99962 15 3.32296 15 3.72184C15 4.12071 15.3233 4.44406 15.7222 4.44406L17.2778 4.44406Z`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         fill: `currentColor`,
         d: `M22.2456 22.4164C22.2456 21.6666 22.8127 21.0002 23.6228 21.0002C24.3519 21.0002 25 21.6666 25 22.4164C25 23.1661 24.3519 23.8325 23.6228 23.8325C22.8937 23.8325 22.2456 23.1661 22.2456 22.4164Z`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         fill: `currentColor`,
         d: `M18.6812 22.4164C18.6812 21.6666 19.2483 21.0002 20.0584 21.0002C20.8685 21.0002 21.5166 21.6666 21.4355 22.4164C21.4355 23.1661 20.8685 23.8325 20.0584 23.8325C19.3293 23.8325 18.6812 23.1661 18.6812 22.4164Z`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         fill: `currentColor`,
         d: `M15.1977 22.4164C15.1977 21.6666 15.7648 21.0002 16.5749 21.0002C17.304 21.0002 17.9521 21.6666 17.9521 22.4164C17.9521 23.1661 17.385 23.8325 16.5749 23.8325C15.8458 23.8325 15.1977 23.1661 15.1977 22.4164Z`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         fill: `currentColor`,
         d: `M11.7143 22.4164C11.7143 21.6666 12.2814 21.0002 13.0915 21.0002C13.8206 21.0002 14.4686 21.6666 14.4686 22.4164C14.4686 23.1661 13.9016 23.8325 13.0915 23.8325C12.3624 23.8325 11.7143 23.1661 11.7143 22.4164Z`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         fill: `currentColor`,
         d: `M8.14983 22.4164C8.14983 21.6666 8.7169 21.0002 9.527 21.0002C10.3371 21.0002 10.9852 21.6666 10.9042 22.4164C10.9042 23.1661 10.3371 23.8325 9.527 23.8325C8.79791 23.8325 8.14983 23.1661 8.14983 22.4164Z`,
       }),
@@ -4639,11 +4639,11 @@ function wa(e) {
   });
 }
 function Ta(e) {
-  return (0, X.jsx)(`svg`, {
+  return (0, J.jsx)(`svg`, {
     viewBox: `0 0 58 56`,
     fill: `none`,
     className: e.className,
-    children: (0, X.jsx)(`path`, {
+    children: (0, J.jsx)(`path`, {
       d: `M57.9352 24.5887C57.8463 24.233 57.8463 23.8774 57.6684 23.5217C57.4017 22.8993 57.046 22.4547 56.5125 22.0101L49.577 16.4083V10.9844C49.577 8.85041 47.8876 7.16098 45.7536 7.16098H38.1956L31.5269 1.73706C30.1042 0.581137 28.0591 0.581137 26.6364 1.73706L19.9677 7.16098H12.4097C10.2757 7.16098 8.58631 8.93932 8.58631 10.9844V16.4083L1.56188 22.0101C1.02838 22.3658 0.672713 22.8993 0.405962 23.5217V23.6106C0.228128 24.1441 0.050293 24.5887 0.050293 25.1222V52.1529C0.050293 53.2199 0.494878 54.1091 1.1173 54.8204C1.82863 55.5318 2.80672 55.8874 3.7848 55.8874H54.0228C55.0898 55.8874 55.979 55.4428 56.6903 54.8204C57.4017 54.1091 57.7573 53.131 57.7573 52.1529V25.1222C57.9352 24.8554 57.9352 24.7665 57.9352 24.5887ZM49.577 19.7872L54.7342 23.9663L49.577 28.9456V19.7872ZM28.148 3.60431C28.4148 3.42648 28.6815 3.24864 28.9483 3.24864C29.3039 3.24864 29.5707 3.33756 29.7485 3.60431L34.0165 7.07207H23.9689L28.148 3.60431ZM10.9871 10.9844C10.9871 10.2731 11.5206 9.73958 12.2319 9.73958H45.6646C46.376 9.73958 46.9095 10.362 46.9095 10.9844V31.4353L46.8206 31.5242L40.2407 37.9262H17.6558L11.076 31.5242L10.9871 31.4353V10.9844ZM8.40848 19.7872V28.9456L3.34022 23.9663L8.40848 19.7872ZM2.62888 51.6194V26.9005L15.2551 39.26L2.62888 51.6194ZM4.49614 53.3088L17.6558 40.5048H40.2407L53.4004 53.3088H4.49614ZM55.3566 51.6194L42.6415 39.1711L55.2677 26.8116V51.6194H55.3566ZM29.0372 35.3476C30.5488 35.3476 31.9715 35.0809 33.3941 34.5474C34.0165 34.2806 34.3722 33.4804 34.1055 32.858C33.8387 32.2355 33.0385 31.8799 32.416 32.1466C31.349 32.5912 30.1931 32.769 29.0372 32.769C27.3478 32.769 25.7473 32.3245 24.4135 31.5242C21.746 29.9237 20.0566 27.0784 20.0566 23.7884C20.0566 18.8091 24.0579 14.8078 29.0372 14.8078C34.0165 14.8078 38.0178 18.8091 38.0178 23.7884V24.4109C38.0178 25.4779 37.2175 26.367 36.0616 26.367C34.9946 26.367 34.1055 25.4779 34.1055 24.4109V23.7884C34.1055 20.9431 31.7936 18.6313 28.9483 18.6313C26.1029 18.6313 23.7911 20.9431 23.7911 23.7884C23.7911 26.6338 26.1029 28.9456 28.9483 28.9456C30.3709 28.9456 31.7047 28.3232 32.5939 27.434C33.3941 28.4121 34.639 28.9456 35.9727 28.9456C38.4624 28.9456 40.5075 26.9894 40.5075 24.4109V23.7884C40.5075 17.3864 35.2614 12.2292 28.9483 12.2292C22.6352 12.2292 17.3891 17.4753 17.3891 23.7884C17.3891 26.7227 18.545 29.4791 20.3233 31.5242C22.5463 33.925 25.5694 35.3476 29.0372 35.3476ZM29.0372 26.367C27.6145 26.367 26.4586 25.2111 26.4586 23.7884C26.4586 22.3658 27.6145 21.2098 29.0372 21.2098C30.4599 21.2098 31.6158 22.3658 31.6158 23.7884C31.5269 25.2111 30.371 26.367 29.0372 26.367Z`,
       fill: `#1A99FF`,
     }),
@@ -4651,46 +4651,46 @@ function Ta(e) {
 }
 function Ea(e) {
   let { type: t, accountName: n, onUseCodeOverride: r } = e,
-    i = Fi(),
-    a = (0, X.jsx)(va, { type: `mobile`, onCodeHelp: e.onCodeHelp }),
+    i = Y(),
+    a = (0, J.jsx)(va, { type: `mobile`, onCodeHelp: e.onCodeHelp }),
     o = i
-      ? (0, X.jsx)(`div`, {
+      ? (0, J.jsx)(`div`, {
           style: { paddingBottom: `20px` },
-          children: (0, X.jsx)(Z, {
+          children: (0, J.jsx)(Z, {
             align: `center`,
             onClick: r,
             children: u.Localize(`#Login_EnterCodeInstead`),
           }),
         })
-      : (0, X.jsx)(`div`, {
-          className: Dr,
-          children: (0, X.jsx)(Z, {
+      : (0, J.jsx)(`div`, {
+          className: kr,
+          children: (0, J.jsx)(Z, {
             align: `center`,
             onClick: r,
             children: u.Localize(`#Login_EnterCodeInstead`),
           }),
         });
-  return (0, X.jsx)($, {
-    title: (0, X.jsx)(ja, {}),
+  return (0, J.jsx)($, {
+    title: (0, J.jsx)(ja, {}),
     compact: !0,
-    children: (0, X.jsxs)(Q, {
-      gap: E.IN_STEAMUI ? 24 : 40,
+    children: (0, J.jsxs)(Q, {
+      gap: T.IN_STEAMUI ? 24 : 40,
       children: [
-        (0, X.jsx)(Sa, { type: t, accountName: n }),
-        (0, X.jsx)(Ca, {}),
-        (0, X.jsxs)(`div`, { className: Er, children: [o, a] }),
+        (0, J.jsx)(Sa, { type: t, accountName: n }),
+        (0, J.jsx)(Ca, {}),
+        (0, J.jsxs)(`div`, { className: Or, children: [o, a] }),
       ],
     }),
   });
 }
 function Z(e) {
   let { children: t, align: n, inline: r } = e,
-    i = (0, Y.default)(mr, n === `center` && `p1pxbjr1kTM-`);
+    i = (0, q.default)(gr, n === `center` && `p1pxbjr1kTM-`);
   if (`href` in e) {
-    let n = E.IN_STEAMUI ? `steam://openurl_external/${e.href}` : e.href;
-    return (0, X.jsx)(`a`, { className: i, href: n, children: t });
+    let n = T.IN_STEAMUI ? `steam://openurl_external/${e.href}` : e.href;
+    return (0, J.jsx)(`a`, { className: i, href: n, children: t });
   }
-  return (0, X.jsx)(r ? `span` : `div`, {
+  return (0, J.jsx)(r ? `span` : `div`, {
     className: i,
     onClick: e.onClick,
     children: t,
@@ -4698,7 +4698,7 @@ function Z(e) {
 }
 function Da(e) {
   let { onSubmit: t, children: n, className: r } = e;
-  return (0, X.jsx)(`form`, {
+  return (0, J.jsx)(`form`, {
     onSubmit: (e) => (e.preventDefault(), t(), !1),
     className: r,
     children: n,
@@ -4713,14 +4713,14 @@ function Q(e) {
       ariaLabelledBy: a,
       children: o,
     } = e,
-    s = (0, Y.default)(
-      gr,
+    s = (0, q.default)(
+      vr,
       t === `center` && `mQfJWqZo0U8-`,
       n === `center` && `h53Pyn--gk4-`,
       i,
     ),
     c = r ? { gap: typeof r == `number` ? `${r}px` : r } : void 0;
-  return (0, X.jsx)(`section`, {
+  return (0, J.jsx)(`section`, {
     className: s,
     style: c,
     "aria-labelledby": a,
@@ -4729,7 +4729,7 @@ function Q(e) {
 }
 function Oa(e) {
   let { children: t, justifyContent: n, alignItems: r, className: i } = e;
-  return (0, X.jsx)(`div`, {
+  return (0, J.jsx)(`div`, {
     style: {
       display: `flex`,
       flexDirection: `row`,
@@ -4742,11 +4742,11 @@ function Oa(e) {
 }
 function ka(e) {
   let { onChange: t, backupCode: n = !1, ...r } = e;
-  return (0, X.jsx)(ni, {
-    length: Dn(n),
+  return (0, J.jsx)(ii, {
+    length: kn(n),
     backupCode: n,
     onChange: (e) => {
-      ((e = e.map((e) => e.toUpperCase())), On(e.join(``).trim(), n) && t(e));
+      ((e = e.map((e) => e.toUpperCase())), An(e.join(``).trim(), n) && t(e));
     },
     autoFocus: !0,
     ...r,
@@ -4755,11 +4755,11 @@ function ka(e) {
 }
 function Aa(e) {
   let { children: t, spacing: n = 0, align: r } = e;
-  return (0, X.jsx)(Q, {
+  return (0, J.jsx)(Q, {
     alignItems: r,
-    children: K.Children.map(t, (e, t) =>
+    children: W.Children.map(t, (e, t) =>
       e
-        ? (0, X.jsx)(`div`, {
+        ? (0, J.jsx)(`div`, {
             style: t > 0 ? { paddingTop: `${n}px` } : void 0,
             children: e,
           })
@@ -4769,95 +4769,95 @@ function Aa(e) {
 }
 function $(e) {
   let { title: t, titleId: n, children: r, compact: i } = e,
-    a = Fi(),
-    o = (0, K.useId)();
-  return (0, X.jsxs)(Q, {
-    gap: E.IN_STEAMUI ? 0 : 32,
-    className: (0, Y.default)(
-      Vn,
+    a = Y(),
+    o = (0, W.useId)();
+  return (0, J.jsxs)(Q, {
+    gap: T.IN_STEAMUI ? 0 : 32,
+    className: (0, q.default)(
+      Un,
       a && `rvRWTXNBcK4-`,
       i && `L35Fcv9fbYo-`,
-      E.IN_STEAMUI && `IN_CLIENT`,
+      T.IN_STEAMUI && `IN_CLIENT`,
     ),
     ariaLabelledBy: n ?? o,
     children: [
       typeof t == `string`
-        ? (0, X.jsx)(`div`, { className: Lr, id: n ?? o, children: t })
+        ? (0, J.jsx)(`div`, { className: zr, id: n ?? o, children: t })
         : t,
-      (0, X.jsx)(`div`, { className: Rr, children: r }),
+      (0, J.jsx)(`div`, { className: Br, children: r }),
     ],
   });
 }
 function ja(e) {
   let {
-    realm: t = E.EREALM,
-    launcherType: n = p()?.LAUNCHER_TYPE,
-    className: r = zr,
+    realm: t = T.EREALM,
+    launcherType: n = E()?.LAUNCHER_TYPE,
+    className: r = Vr,
   } = e;
   return n === 8
-    ? (0, X.jsx)(`div`, { className: r })
-    : (0, X.jsxs)(`div`, {
-        className: Br,
+    ? (0, J.jsx)(`div`, { className: r })
+    : (0, J.jsxs)(`div`, {
+        className: Hr,
         children: [
-          (0, X.jsx)(Ma, { onBack: e.onBack }),
-          t === y.k_ESteamRealmChina
-            ? (0, X.jsx)(Pa, { className: r })
-            : (0, X.jsx)(Na, { className: r }),
+          (0, J.jsx)(Ma, { onBack: e.onBack }),
+          t === v.k_ESteamRealmChina
+            ? (0, J.jsx)(Pa, { className: r })
+            : (0, J.jsx)(Na, { className: r }),
           ` `,
         ],
       });
 }
 function Ma(e) {
   return e.onBack
-    ? (0, X.jsx)(`button`, {
+    ? (0, J.jsx)(`button`, {
         type: `button`,
-        className: Vr,
+        className: Ur,
         onClick: e.onBack,
         "aria-label": u.Localize(`#Button_Back`),
-        children: (0, X.jsx)(ii, { className: Hr }),
+        children: (0, J.jsx)(oi, { className: Wr }),
       })
     : null;
 }
 function Na(e) {
-  return (0, X.jsxs)(`svg`, {
+  return (0, J.jsxs)(`svg`, {
     viewBox: `0 0 153 46`,
     fill: `none`,
     xmlns: `http://www.w3.org/2000/svg`,
     className: e.className,
     children: [
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         d: `M22.9891 0C10.8429 0 0.93833 9.30396 0 21.1548L12.3547 26.2486C13.3973 25.5209 14.6484 25.1051 16.0037 25.1051C16.108 25.1051 16.2644 25.1051 16.3687 25.1051L21.8944 17.2045C21.8944 17.1525 21.8944 17.1525 21.8944 17.1006C21.8944 12.3186 25.8041 8.42034 30.6 8.42034C35.3959 8.42034 39.3056 12.3186 39.3056 17.1006C39.3056 21.8825 35.3959 25.7808 30.6 25.7808C30.5479 25.7808 30.4436 25.7808 30.3915 25.7808L22.5721 31.3424C22.5721 31.4463 22.5721 31.5503 22.5721 31.6542C22.5721 35.2407 19.6528 38.1514 16.0559 38.1514C12.876 38.1514 10.2695 35.9164 9.64395 32.9017L0.781942 29.2633C3.5448 38.9311 12.4068 46 22.9891 46C35.7087 46 46.0303 35.7085 46.0303 23.026C46.0303 10.2915 35.7087 0 22.9891 0Z`,
         fill: `#E0E1E6`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         d: `M14.44 34.8766L11.625 33.7331C12.1463 34.7726 12.9804 35.6562 14.1272 36.124C16.6294 37.1636 19.4966 35.9681 20.5391 33.4732C21.0604 32.2777 21.0604 30.9263 20.5391 29.7308C20.0178 28.5353 19.0795 27.5997 17.8805 27.08C16.6816 26.5602 15.3783 26.6122 14.2836 27.028L17.2029 28.2235C19.0274 29.0031 19.9136 31.0822 19.1316 32.9014C18.4018 34.7726 16.2645 35.6562 14.44 34.8766Z`,
         fill: `#E0E1E6`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         d: `M36.3857 17.0488C36.3857 13.8782 33.7793 11.2793 30.5994 11.2793C27.4195 11.2793 24.813 13.8782 24.813 17.0488C24.813 20.2194 27.4195 22.8703 30.5994 22.8703C33.7793 22.8703 36.3857 20.2714 36.3857 17.0488ZM26.2205 17.0488C26.2205 14.6578 28.1493 12.6827 30.5994 12.6827C32.9973 12.6827 34.9782 14.6058 34.9782 17.0488C34.9782 19.4397 33.0495 21.3629 30.5994 21.3629C28.2014 21.4149 26.2205 19.4397 26.2205 17.0488Z`,
         fill: `#E0E1E6`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         d: `M70.6879 15.7489L69.1241 18.4517C67.9251 17.6201 66.3091 17.1003 64.9016 17.1003C63.2856 17.1003 62.2951 17.776 62.2951 18.9715C62.2951 20.4269 64.0675 20.7387 66.674 21.6743C69.489 22.6619 71.105 23.8574 71.105 26.4043C71.105 29.9387 68.3421 31.9139 64.3282 31.9139C62.3994 31.9139 60.0014 31.3941 58.229 30.3026L59.3759 27.2879C60.8355 28.0675 62.6079 28.5353 64.1718 28.5353C66.3091 28.5353 67.2995 27.7557 67.2995 26.6122C67.2995 25.3127 65.7878 24.8969 63.2856 24.0653C60.4706 23.1297 58.5418 21.8822 58.5418 19.0235C58.5418 15.8009 61.1483 13.9297 64.8494 13.9297C67.4038 14.0336 69.489 14.8653 70.6879 15.7489Z`,
         fill: `#E0E1E6`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         d: `M82.7305 17.4643V31.6542H79.0815V17.4643H73.8164V14.3457H87.9956V17.4643H82.7305Z`,
         fill: `#E0E1E6`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         d: `M95.6574 17.4124V21.3107H102.643V24.4293H95.6574V28.4836H103.737V31.6022H92.0083V14.3457H103.737V17.4643H95.6574V17.4124Z`,
         fill: `#E0E1E6`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         d: `M111.87 28.2756L110.723 31.6542H106.917L113.434 14.3457H117.083L123.755 31.6542H119.793L118.594 28.2756H111.87ZM115.258 18.4519L112.912 25.3649H117.708L115.258 18.4519Z`,
         fill: `#E0E1E6`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         d: `M142.47 21.0508L137.726 31.1864H135.693L131.001 21.1547V31.7062H127.509V14.3457H131.001L136.84 26.8723L142.47 14.3457H145.963V31.6542H142.47V21.0508Z`,
         fill: `#E0E1E6`,
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         d: `M153 16.5288C153 18.0361 151.905 18.9197 150.602 18.9197C149.299 18.9197 148.204 17.9841 148.204 16.5288C148.204 15.0214 149.351 14.1378 150.602 14.1378C151.853 14.0858 153 15.0214 153 16.5288ZM148.569 16.5288C148.569 17.7762 149.455 18.5559 150.55 18.5559C151.645 18.5559 152.531 17.7762 152.531 16.5288C152.531 15.2813 151.645 14.5016 150.55 14.5016C149.455 14.5016 148.569 15.2813 148.569 16.5288ZM150.602 15.2813C151.228 15.2813 151.436 15.5932 151.436 15.957C151.436 16.2689 151.228 16.4768 151.019 16.6327L151.593 17.6723H151.123L150.654 16.7367H150.133V17.6723H149.768V15.2813H150.602ZM150.185 16.3728H150.602C150.863 16.3728 151.019 16.2169 151.019 16.009C151.019 15.8011 150.915 15.6451 150.602 15.6451H150.185V16.3728Z`,
         fill: `#E0E1E6`,
       }),
@@ -4865,67 +4865,67 @@ function Na(e) {
   });
 }
 function Pa(e) {
-  return (0, X.jsxs)(`svg`, {
+  return (0, J.jsxs)(`svg`, {
     viewBox: `0 0 232.73 46.07`,
     xmlns: `http://www.w3.org/2000/svg`,
     className: e.className,
     fill: `#E0E1E6`,
     children: [
-      (0, X.jsxs)(`g`, {
+      (0, J.jsxs)(`g`, {
         stroke: `null`,
         id: `svg_2`,
         children: [
-          (0, X.jsx)(`path`, {
+          (0, J.jsx)(`path`, {
             stroke: `null`,
             id: `svg_3`,
             d: `m21.73862,4.25158c-10.07896,0 -18.33997,7.77507 -19.12529,17.65445l10.28722,4.25199c0.87209,-0.59441 1.92641,-0.94585 3.05883,-0.94585c0.09979,0 0.20392,0.00434 0.30371,0.00868l4.57306,-6.62964c0,-0.03037 0,-0.06074 0,-0.09545c0,-3.99167 3.2454,-7.23707 7.23707,-7.23707c3.99167,0 7.23707,3.2454 7.23707,7.23707c0,3.99167 -3.2454,7.23707 -7.23707,7.23707c-0.0564,0 -0.10847,0 -0.16487,-0.00434l-6.52551,4.65984c0.00434,0.08678 0.00868,0.16921 0.00868,0.25599c0,2.99809 -2.43839,5.43214 -5.43214,5.43214c-2.62929,0 -4.82905,-1.87869 -5.32801,-4.36046l-7.35855,-3.04148c2.27785,8.05709 9.67979,13.96216 18.4658,13.96216c10.59961,0 19.19471,-8.5951 19.19471,-19.19471c0,-10.59527 -8.5951,-19.19037 -19.19471,-19.19037`,
           }),
-          (0, X.jsx)(`path`, {
+          (0, J.jsx)(`path`, {
             stroke: `null`,
             id: `svg_4`,
             d: `m14.64039,33.37339l-2.35595,-0.97622c0.41652,0.86775 1.1411,1.59667 2.09996,2.00017c2.07393,0.86341 4.46459,-0.12149 5.33235,-2.19542c0.41652,-1.00226 0.42086,-2.11298 0.00434,-3.11957c-0.41652,-1.00659 -1.1975,-1.79191 -2.19976,-2.21277c-0.99792,-0.41652 -2.06525,-0.39917 -3.00677,-0.04773l2.43405,1.00659c1.53159,0.6378 2.25182,2.395 1.61836,3.92659c-0.6378,1.53592 -2.395,2.25616 -3.92659,1.61836`,
           }),
-          (0, X.jsx)(`path`, {
+          (0, J.jsx)(`path`, {
             stroke: `null`,
             id: `svg_5`,
             d: `m32.89793,18.49576c0,-2.65966 -2.16505,-4.82471 -4.82471,-4.82471c-2.65966,0 -4.82471,2.16505 -4.82471,4.82471c0,2.65966 2.16505,4.82037 4.82471,4.82037c2.65966,0.00434 4.82471,-2.16071 4.82471,-4.82037m-8.4389,-0.00434c0,-2.00017 1.6227,-3.62287 3.62287,-3.62287c2.00017,0 3.62287,1.6227 3.62287,3.62287c0,2.00017 -1.6227,3.62287 -3.62287,3.62287c-2.00017,0 -3.62287,-1.6227 -3.62287,-3.62287`,
           }),
         ],
       }),
-      (0, X.jsx)(`path`, {
+      (0, J.jsx)(`path`, {
         stroke: `null`,
         id: `svg_6`,
         d: `m46.71333,8.08293c0,2.23529 -1.67014,3.62707 -3.5849,3.62707c-1.91476,0 -3.60177,-1.39178 -3.60177,-3.62707c0,-2.23529 1.68701,-3.6102 3.60177,-3.6102c1.91476,-0.00844 3.5849,1.37491 3.5849,3.6102m-6.64682,0c0,1.90632 1.39178,3.1041 3.05349,3.1041c1.66171,0 3.04505,-1.19778 3.04505,-3.1041c0,-1.91476 -1.38335,-3.09566 -3.04505,-3.09566c-1.65327,0 -3.05349,1.18934 -3.05349,3.09566m3.09566,-1.84728c0.95316,0 1.23152,0.49767 1.23152,1.01221c0,0.48923 -0.29523,0.8182 -0.64106,0.9869l0.83507,1.57736l-0.63263,0l-0.71698,-1.40865l-0.76759,0l0,1.40865l-0.52297,0l0,-3.56803l1.21465,0l0,-0.00844zm-0.69167,1.67858l0.65793,0c0.43019,0 0.70011,-0.27836 0.70011,-0.61576c0,-0.3374 -0.17714,-0.56515 -0.69167,-0.56515l-0.66637,0l0,1.18091z`,
       }),
-      (0, X.jsxs)(`g`, {
+      (0, J.jsxs)(`g`, {
         id: `svg_7`,
         children: [
-          (0, X.jsx)(`path`, {
+          (0, J.jsx)(`path`, {
             id: `svg_8`,
             d: `m77.46999,20.31667c-2.27,6.12 -7.24,10.13 -13.11,12.2c-0.54,-1.12 -1.7,-2.9 -2.65,-3.76c3.6,-1.03 6.95,-3.06 9.14,-5.63l-7.24,0l0,-3.89l10.05,0l0.79,-0.12l3.02,1.2zm-15.02,20.43c1.7,-1.57 3.39,-4.01 4.47,-6l4.22,2.11c-1.2,2.03 -2.73,4.55 -4.34,6.29l-4.35,-2.4zm8.57,-29.9l-8.23,0l0,-4.26l8.23,0l0,-2.28l5.01,0l0,2.28l10.42,0l0,-2.28l5.01,0l0,2.28l8.15,0l0,4.26l-8.15,0l0,2.15l-5.01,0l0,-2.15l-10.42,0l0,2.15l-5.01,0l0,-2.15zm-2.57,19.85l24.53,0l0,4.1l-24.53,0l0,-4.1zm28.71,-9.8c-1.86,1.45 -3.85,2.81 -5.59,3.81c2.52,1.24 5.46,2.19 8.48,2.77c-1.03,0.95 -2.4,2.9 -3.1,4.14c-5.29,-1.41 -10.05,-4.14 -13.44,-7.82l0,1.99c0,2.03 -0.33,2.94 -1.78,3.52c-1.32,0.54 -3.14,0.58 -5.46,0.58c-0.25,-1.2 -0.87,-2.69 -1.41,-3.76c1.37,0.08 2.85,0.08 3.27,0.08c0.46,-0.04 0.62,-0.12 0.62,-0.58l0,-5.83c1.41,-0.62 2.85,-1.45 4.26,-2.32l-14.23,0l0,-3.72l19.28,0l0.99,-0.25l2.98,2.52c-1.9,1.49 -4.18,3.06 -6.58,4.38c0.7,0.79 1.57,1.53 2.52,2.23c1.78,-1.28 3.97,-3.06 5.25,-4.38l3.94,2.64zm-19.11,14.89c0.7,1.99 1.24,4.63 1.28,6.29l-4.88,0.75c0.04,-1.66 -0.37,-4.34 -0.95,-6.41l4.55,-0.63zm8.65,-0.54c1.16,1.86 2.27,4.3 2.61,6l-4.51,1.41c-0.29,-1.65 -1.28,-4.22 -2.36,-6.12l4.26,-1.29zm8.39,-0.54c1.86,1.82 4.05,4.38 5.09,6.21l-4.43,2.07c-0.91,-1.78 -2.98,-4.47 -4.8,-6.37l4.14,-1.91z`,
           }),
-          (0, X.jsx)(`path`, {
+          (0, J.jsx)(`path`, {
             id: `svg_9`,
             d: `m110.14999,23.78667c-1.57,-1.12 -4.84,-2.9 -7.16,-4.09l2.61,-3.64c2.23,0.91 5.58,2.56 7.32,3.64l-2.77,4.09zm-5.79,15.14c2.03,-3.06 4.92,-8.07 7.16,-12.74l3.72,3.19c-1.94,4.22 -4.34,8.81 -6.58,12.74l-4.3,-3.19zm8.02,-26.02c-1.49,-1.28 -4.67,-3.14 -6.95,-4.38l2.73,-3.56c2.23,1.03 5.46,2.73 7.07,3.93l-2.85,4.01zm7.62,2.15c-0.91,1.32 -1.86,2.48 -2.81,3.52c-0.91,-0.87 -2.85,-2.36 -3.93,-3.02c2.98,-2.69 5.63,-6.99 7.07,-11.34l4.72,1.28c-0.41,0.99 -0.83,2.03 -1.32,3.06l18.08,0l0,4.22l-20.31,0c-0.46,0.74 -0.91,1.45 -1.41,2.15l17.95,0l0,3.97l-18.04,0l0,-3.84zm17.33,6.17c-0.08,10.05 -0.04,17.13 1.41,17.13c0.5,0 0.66,-2.23 0.7,-5.29c0.83,1.08 1.99,2.32 2.9,3.06c-0.33,4.67 -1.12,6.83 -3.97,6.87c-4.96,-0.04 -5.63,-6.87 -5.79,-17.5l-16.59,0l0,-4.3l19.28,0l0,0.04l2.06,0l0,-0.01z`,
           }),
-          (0, X.jsx)(`path`, {
+          (0, J.jsx)(`path`, {
             id: `svg_10`,
             d: `m182.70999,29.24667l-16.26,0l0,13.65l-5.13,0l0,-13.65l-16.09,0l0,-5.01l16.09,0l0,-12.53l-13.94,0l0,-4.88l32.93,0l0,4.88l-13.86,0l0,12.53l16.26,0l0,5.01zm-28.3,-16.21c1.37,2.65 2.85,6.12 3.31,8.44l-4.8,1.49c-0.41,-2.19 -1.7,-5.83 -3.02,-8.6l4.51,-1.33zm15.35,8.6c1.32,-2.4 2.81,-6.04 3.6,-8.73l5.25,1.32c-1.49,3.19 -3.19,6.54 -4.55,8.65l-4.3,-1.24z`,
           }),
-          (0, X.jsx)(`path`, {
+          (0, J.jsx)(`path`, {
             id: `svg_11`,
             d: `m212.48999,8.06667c3.81,3.56 8.73,8.65 10.88,12.12l-4.18,3.02c-0.54,-0.91 -1.28,-1.99 -2.15,-3.14c-21.97,1.08 -24.9,1.16 -27.09,1.9c-0.25,-0.99 -1.03,-3.43 -1.61,-4.72c1.08,-0.29 2.07,-1.08 3.43,-2.4c1.45,-1.28 5.96,-6.29 8.77,-11.25l4.96,2.11c-2.61,3.85 -5.87,7.53 -9.02,10.55l16.96,-0.54c-1.61,-1.82 -3.27,-3.56 -4.8,-5.09l3.85,-2.56zm-21.18,16.63l27.88,0l0,18.12l-5.29,0l0,-2.07l-17.54,0l0,2.11l-5.05,0l0,-18.16zm5.04,4.72l0,6.62l17.54,0l0,-6.62l-17.54,0z`,
           }),
         ],
       }),
-      (0, X.jsxs)(`g`, {
+      (0, J.jsxs)(`g`, {
         id: `svg_12`,
         children: [
-          (0, X.jsx)(`path`, {
+          (0, J.jsx)(`path`, {
             id: `svg_13`,
             d: `m224.05999,2.64667l-1.2,0l0,-0.43l2.92,0l0,0.43l-1.21,0l0,3.52l-0.52,0l0,-3.52l0.01,0z`,
           }),
-          (0, X.jsx)(`path`, {
+          (0, J.jsx)(`path`, {
             id: `svg_14`,
             d: `m229.54999,4.42667c-0.03,-0.55 -0.06,-1.21 -0.06,-1.71l-0.02,0c-0.13,0.46 -0.3,0.96 -0.5,1.5l-0.7,1.92l-0.39,0l-0.64,-1.88c-0.19,-0.56 -0.35,-1.07 -0.46,-1.54l-0.01,0c-0.01,0.49 -0.04,1.15 -0.08,1.75l-0.11,1.69l-0.49,0l0.28,-3.95l0.65,0l0.67,1.91c0.16,0.49 0.3,0.92 0.4,1.33l0.02,0c0.1,-0.4 0.24,-0.83 0.42,-1.33l0.7,-1.91l0.65,0l0.25,3.95l-0.5,0l-0.08,-1.73z`,
           }),
@@ -4935,46 +4935,46 @@ function Pa(e) {
   });
 }
 function Fa() {
-  return (0, X.jsx)(Q, {
+  return (0, J.jsx)(Q, {
     alignItems: `center`,
     justifyContent: `center`,
-    children: (0, X.jsx)(c, {}),
+    children: (0, J.jsx)(c, {}),
   });
 }
 function Ia(e) {
-  let t = (0, K.useRef)(e);
+  let t = (0, W.useRef)(e);
   ((t.current = e),
-    (0, K.useEffect)(() => {
+    (0, W.useEffect)(() => {
       new URLSearchParams(location.search).get(`need_password`) ||
         (t.current &&
           La(t.current).catch((e) => {
-            pn(`PerformRefresh exception`, e);
+            hn(`PerformRefresh exception`, e);
           }));
     }, [t]));
 }
 async function La(e) {
   let t = new FormData();
   t.append(`redir`, e);
-  let n = `${E.LOGIN_BASE_URL}jwt/ajaxrefresh`,
-    r = await U.default.post(n, t, { timeout: 1e4, withCredentials: !0 });
+  let n = `${T.LOGIN_BASE_URL}jwt/ajaxrefresh`,
+    r = await V.default.post(n, t, { timeout: 1e4, withCredentials: !0 });
   if (r.status !== 200 || !r?.data?.success) return !1;
   let { success: i, login_url: a, error: o, ...s } = r.data,
     c = new FormData();
   Object.entries(s).forEach(([e, t]) => c.append(e, t));
-  let l = await U.default.post(a, c),
+  let l = await V.default.post(a, c),
     u = l.status === 200 && l.data.result === 1;
   return (u && window.location.assign(e), u);
 }
 function Ra() {
-  let e = (0, K.useRef)(!0);
+  let e = (0, W.useRef)(!0);
   return (
-    (0, K.useEffect)(
+    (0, W.useEffect)(
       () => () => {
         e.current = !1;
       },
       [e],
     ),
-    (0, K.useCallback)(() => e.current, [e])
+    (0, W.useCallback)(() => e.current, [e])
   );
 }
-export { vn as i, Ii as n, Yi as r, Li as t };
+export { bn as i, Li as n, Xi as r, Ri as t };

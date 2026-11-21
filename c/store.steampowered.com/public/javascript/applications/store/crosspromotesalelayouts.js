@@ -2,7 +2,7 @@ import { _ } from "./chunk~f025431ab0.js";
 import { _, _ } from "./chunk~01cfc309bf.js";
 import { _, _, _, _, _ } from "./chunk~6b8ddcaac8.js";
 import { _, _ } from "./chunk~f57d770d64.js";
-import { _, _, _ } from "./chunk~ffe4581a06.js";
+import { _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _, _ } from "./chunk~b980924b6a.js";
 import { _ } from "./chunk~7b4b9eb713.js";
 import { _ } from "./chunk~618fb52a90.js";
@@ -81,6 +81,7 @@ function _(_) {
   }));
 }
 var _ = `Es-UANTRhdg-`,
+  _ = `dv9UZEOxkuA-`,
   _ = `KNEaTOnJJWw-`,
   _ = `FsYxDNcAXaI-`,
   _ = `cSFkUHyVW24-`,
@@ -207,26 +208,31 @@ function _(_) {
       : void 0;
   return (0, _.jsxs)(_.Fragment, {
     children: [
-      _ &&
-        !_ &&
-        (0, _.jsx)(`div`, {
-          className: `qbRGxo4aWcc-`,
-          style: {
-            backgroundImage: `url(${_})`,
-          },
-        }),
-      _ &&
-        (0, _.jsx)(`div`, {
-          className: _(`HgvxVtFlDis-`, _ && `Lp2CuPiW8Lo-`),
-          style: {
-            backgroundImage: `url(${_})`,
-          },
-        }),
-      _ &&
-        (0, _.jsx)(_, {
-          rgAppIDs: _?.rgCreatorAppIDs,
-          strAvatarURL: _,
-        }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          _ &&
+            !_ &&
+            (0, _.jsx)(`div`, {
+              className: `qbRGxo4aWcc-`,
+              style: {
+                backgroundImage: `url(${_})`,
+              },
+            }),
+          _ &&
+            (0, _.jsx)(`div`, {
+              className: _(`HgvxVtFlDis-`, _ && `Lp2CuPiW8Lo-`),
+              style: {
+                backgroundImage: `url(${_})`,
+              },
+            }),
+          _ &&
+            (0, _.jsx)(_, {
+              rgAppIDs: _?.rgCreatorAppIDs,
+              strAvatarURL: _,
+            }),
+        ],
+      }),
       (0, _.jsxs)(`div`, {
         className: _(_, _ && `-NAWu4CYrl8-`),
         children: [

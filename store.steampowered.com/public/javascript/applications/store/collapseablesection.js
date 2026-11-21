@@ -5,14 +5,14 @@ import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n, u as r } from "./chunk~01cfc309bf.js";
 import { s as i } from "./chunk~2f8c67b4de.js";
 import {
-  Br as a,
-  Jy as o,
-  Ko as s,
-  Xc as c,
-  Yo as l,
-  ar as u,
-  wc as d,
-  xr as f,
+  Jr as a,
+  Nc as o,
+  Or as s,
+  al as c,
+  fr as l,
+  is as u,
+  rb as d,
+  ts as f,
 } from "./main.js";
 var p = e(t()),
   m = `-POP4zTRo6U-`,
@@ -25,31 +25,31 @@ function y(e) {
       title: t,
       tooltip: n,
       getMinimized: a,
-      toggleMinimized: o,
-      className: s,
-      children: l,
-      elAdditionalButtons: u,
+      toggleMinimized: l,
+      className: u,
+      children: d,
+      elAdditionalButtons: f,
     } = e,
     p = r(() => a());
   return (0, v.jsxs)(v.Fragment, {
     children: [
       (0, v.jsxs)(`div`, {
-        className: d(s, m, g, `SectionTitleHeader`),
+        className: o(u, m, g, `SectionTitleHeader`),
         children: [
           (0, v.jsxs)(`div`, {
-            className: d(i, `EventEditorTextTitle`),
-            children: [t, !!n && (0, v.jsx)(f, { tooltip: n })],
+            className: o(i, `EventEditorTextTitle`),
+            children: [t, !!n && (0, v.jsx)(s, { tooltip: n })],
           }),
           (0, v.jsxs)(`div`, {
             className: h,
             children: [
-              u,
-              (0, v.jsx)(x, { bIsMinimized: p, fnToggleMinimize: o }),
+              f,
+              (0, v.jsx)(x, { bIsMinimized: p, fnToggleMinimize: l }),
             ],
           }),
         ],
       }),
-      !p && (0, v.jsx)(c, { children: l }),
+      !p && (0, v.jsx)(c, { children: d }),
     ],
   });
 }
@@ -65,13 +65,13 @@ function b(e) {
 function x(e) {
   let { bIsMinimized: t, fnToggleMinimize: n } = e;
   return (0, v.jsx)(a, {
-    toolTipContent: o(
+    toolTipContent: d(
       t ? `#Section_Maximize_Tooltip` : `#Section_Minimize_Tooltip`,
     ),
-    children: (0, v.jsx)(u, {
+    children: (0, v.jsx)(l, {
       className: _,
       onClick: n,
-      children: e.bIsMinimized ? (0, v.jsx)(s, {}) : (0, v.jsx)(l, {}),
+      children: e.bIsMinimized ? (0, v.jsx)(f, {}) : (0, v.jsx)(u, {}),
     }),
   });
 }

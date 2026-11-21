@@ -7,13 +7,13 @@ import { t as r } from "./chunk~684e72ad45.js";
 import "./chunk~8681f5c764.js";
 import { i } from "./chunk~2f085f1384.js";
 import {
-  Jy as a,
-  Mn as o,
-  as as s,
-  bc as c,
-  fn as l,
-  ko as u,
-  wc as d,
+  Nc as a,
+  Ro as o,
+  kc as s,
+  ms as c,
+  rb as l,
+  yn as u,
+  zn as d,
 } from "./main.js";
 var f = e(t(), 1),
   p = n(),
@@ -28,7 +28,7 @@ function b() {
     n = f.useCallback(() => t(void 0), []);
   return [
     t,
-    (0, p.jsx)(l, {
+    (0, p.jsx)(u, {
       active: e !== void 0,
       children: (0, p.jsx)(x, { closeModal: n, rgImageURL: e }),
     }),
@@ -37,15 +37,15 @@ function b() {
 function x(e) {
   let { closeModal: t, rgImageURL: n } = e,
     [r, i] = f.useState(0),
-    s = n?.length ?? 0,
-    c = f.useCallback(() => {
-      i(r == 0 ? s - 1 : r - 1);
-    }, [r, s]),
-    l = f.useCallback(() => {
-      n && r + 1 >= s ? i(0) : i(r + 1);
-    }, [r, n, s]);
-  return (0, p.jsxs)(o, {
-    title: a(`#SaleTech_Screenshot_Viewer`),
+    a = n?.length ?? 0,
+    o = f.useCallback(() => {
+      i(r == 0 ? a - 1 : r - 1);
+    }, [r, a]),
+    s = f.useCallback(() => {
+      n && r + 1 >= a ? i(0) : i(r + 1);
+    }, [r, n, a]);
+  return (0, p.jsxs)(d, {
+    title: l(`#SaleTech_Screenshot_Viewer`),
     bAllowFullSize: !0,
     bOKDisabled: !0,
     closeModal: t,
@@ -55,8 +55,8 @@ function x(e) {
       (0, p.jsx)(S, {
         index: r,
         numElements: n?.length || 0,
-        fnForward: l,
-        fnBackwards: c,
+        fnForward: s,
+        fnBackwards: o,
         fnClose: t,
         bCircular: !0,
       }),
@@ -72,16 +72,16 @@ function S(e) {
     index: t,
     numElements: n,
     fnForward: i,
-    fnBackwards: o,
-    fnClose: s,
-    bCircular: l,
+    fnBackwards: c,
+    fnClose: u,
+    bCircular: d,
   } = e;
-  (r(`ArrowLeft`, () => o?.(), !0, !0),
-    r(`Left`, () => o?.(), !0, !0),
+  (r(`ArrowLeft`, () => c?.(), !0, !0),
+    r(`Left`, () => c?.(), !0, !0),
     r(`ArrowRight`, () => i?.(), !0, !0),
     r(`Right`, () => i?.(), !0, !0),
-    r(`Escape`, () => s && s(), !0, !0),
-    r(`Esc`, () => s && s(), !0, !0));
+    r(`Escape`, () => u && u(), !0, !0),
+    r(`Esc`, () => u && u(), !0, !0));
   let f = n > 1;
   return (0, p.jsxs)(`div`, {
     className: v,
@@ -91,32 +91,32 @@ function S(e) {
           children: [
             (0, p.jsx)(`button`, {
               type: `button`,
-              className: d(
+              className: a(
                 `-WD8g17w7iA-`,
-                t === 0 && !l ? `apJ9YvEIT9k-` : null,
+                t === 0 && !d ? `apJ9YvEIT9k-` : null,
               ),
-              onClick: o,
-              "aria-label": a(`#Carousel_Prev`),
-              children: (0, p.jsx)(u, { angle: 270 }),
+              onClick: c,
+              "aria-label": l(`#Carousel_Prev`),
+              children: (0, p.jsx)(o, { angle: 270 }),
             }),
             (0, p.jsx)(`button`, {
               type: `button`,
-              className: d(
+              className: a(
                 `-WD8g17w7iA-`,
-                t === n - 1 && !l ? `apJ9YvEIT9k-` : null,
+                t === n - 1 && !d ? `apJ9YvEIT9k-` : null,
               ),
               onClick: i,
-              "aria-label": a(`#Carousel_Next`),
-              children: (0, p.jsx)(u, { angle: 90 }),
+              "aria-label": l(`#Carousel_Next`),
+              children: (0, p.jsx)(o, { angle: 90 }),
             }),
           ],
         }),
       (0, p.jsx)(`button`, {
         type: `button`,
         className: y,
-        onClick: s,
-        "aria-label": a(`#Button_Close`),
-        children: (0, p.jsx)(c, {}),
+        onClick: u,
+        "aria-label": l(`#Button_Close`),
+        children: (0, p.jsx)(s, {}),
       }),
     ],
   });
@@ -128,14 +128,14 @@ var C = `xq-I5249Blg-`,
   D = 256;
 function O(e) {
   let [t, n] = (0, f.useState)(!1),
-    [r, a] = (0, f.useState)({
+    [r, o] = (0, f.useState)({
       naturalWidth: 0,
       naturalHeight: 0,
       displayWidth: 0,
       displayHeight: 0,
     }),
-    o = (0, f.useRef)(null),
-    [c, l] = b();
+    s = (0, f.useRef)(null),
+    [l, u] = b();
   return (
     (0, f.useEffect)(() => {
       r.naturalWidth > r.displayWidth * T &&
@@ -148,20 +148,20 @@ function O(e) {
       ? (0, p.jsxs)(`span`, {
           className: C,
           children: [
-            l,
-            (0, p.jsx)(`span`, { className: w, children: (0, p.jsx)(s, {}) }),
+            u,
+            (0, p.jsx)(`span`, { className: w, children: (0, p.jsx)(c, {}) }),
             (0, p.jsx)(`img`, {
               ...e,
-              className: d({ ...(e.className && { [e.className]: !0 }) }),
+              className: a({ ...(e.className && { [e.className]: !0 }) }),
               onClick: (t) => {
-                e.src && c([e.src]);
+                e.src && l([e.src]);
               },
             }),
           ],
         })
       : (0, p.jsx)(`img`, {
           ...e,
-          ref: o,
+          ref: s,
           onLoad: (e) => {
             if (!e.currentTarget.closest(`a`) && !i()) {
               let {
@@ -170,7 +170,7 @@ function O(e) {
                 width: r,
                 height: i,
               } = e.currentTarget;
-              a({
+              o({
                 naturalWidth: t,
                 naturalHeight: n,
                 displayWidth: r,
@@ -218,21 +218,21 @@ function A(e) {
     {
       className: r,
       src: i,
-      lazyLoad: o,
-      width: s,
-      height: c,
-      alt: l,
+      lazyLoad: a,
+      width: o,
+      height: s,
+      alt: c,
       crossOrigin: u,
     } = e;
   return t
     ? (0, p.jsxs)(`div`, {
         className: m,
         children: [
-          (0, p.jsx)(`p`, { children: a(`#Image_ErrorTitle`, i) }),
+          (0, p.jsx)(`p`, { children: l(`#Image_ErrorTitle`, i) }),
           (0, p.jsx)(`ul`, {
-            children: (0, p.jsx)(`li`, { children: a(`#Image_Error_msg1`) }),
+            children: (0, p.jsx)(`li`, { children: l(`#Image_Error_msg1`) }),
           }),
-          (0, p.jsx)(`p`, { children: a(`#Image_Error_suggestion`) }),
+          (0, p.jsx)(`p`, { children: l(`#Image_Error_suggestion`) }),
         ],
       })
     : (0, p.jsx)(O, {
@@ -240,10 +240,10 @@ function A(e) {
         src: i,
         onError: () => n(!0),
         crossOrigin: u,
-        loading: o ? `lazy` : void 0,
-        width: s,
-        height: c,
-        alt: l,
+        loading: a ? `lazy` : void 0,
+        width: o,
+        height: s,
+        alt: c,
       });
 }
 export { b as a, S as i, k as n, m as o, O as r, A as t };

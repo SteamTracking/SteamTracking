@@ -4,144 +4,144 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, dt as n, ft as r, st as i } from "./chunk~01cfc309bf.js";
 import {
-  Ms as a,
-  Qn as o,
-  Rn as s,
-  Vs as c,
-  er as l,
-  j as u,
-  qt as ee,
-  zn as d,
+  Ds as a,
+  Gt as o,
+  In as s,
+  Is as c,
+  Ln as l,
+  Qn as u,
+  Xn as d,
+  j as ee,
 } from "./chunk~6b8ddcaac8.js";
 import { at as f, ct as p } from "./chunk~f57d770d64.js";
-import { d as m, u as te } from "./chunk~8c66e1c7a5.js";
-import { t as h } from "./chunk~f0141d9521.js";
-import { n as ne, r as re } from "./chunk~673650a653.js";
-import { o as g, r as _, t as ie } from "./chunk~5adf866415.js";
-import { c as ae } from "./chunk~ffe4581a06.js";
-import { t as oe } from "./chunk~f4c928a27a.js";
-import { t as v } from "./chunk~eefd71512b.js";
+import { d as m, u as h } from "./chunk~8c66e1c7a5.js";
+import { t as g } from "./chunk~f0141d9521.js";
+import { n as te, r as ne } from "./chunk~673650a653.js";
+import { o as _, r as v, t as re } from "./chunk~5adf866415.js";
+import { l as ie } from "./chunk~4eed35ad1f.js";
+import { t as ae } from "./chunk~f4c928a27a.js";
+import { t as y } from "./chunk~eefd71512b.js";
 import {
-  $ as se,
-  B as ce,
-  C as le,
-  D as ue,
-  E as de,
-  F as y,
-  G as fe,
-  I as pe,
-  K as me,
-  L as he,
-  M as ge,
-  N as _e,
-  O as ve,
-  P as ye,
-  Q as be,
-  R as xe,
-  T as Se,
-  W as Ce,
-  Y as b,
-  _ as we,
-  a as Te,
-  b as Ee,
-  et as x,
-  g as S,
-  j as De,
-  k as Oe,
-  nt as ke,
-  r as Ae,
-  t as je,
-  tt as Me,
-  v as C,
-  w as Ne,
-  x as Pe,
-  y as Fe,
-  z as w,
+  $ as oe,
+  B as se,
+  C as ce,
+  D as le,
+  E as ue,
+  F as b,
+  G as de,
+  I as fe,
+  K as pe,
+  L as me,
+  M as he,
+  N as ge,
+  O as _e,
+  P as ve,
+  Q as ye,
+  R as be,
+  T as xe,
+  W as Se,
+  Y as x,
+  _ as Ce,
+  a as we,
+  b as Te,
+  et as S,
+  g as C,
+  j as Ee,
+  k as De,
+  nt as Oe,
+  r as ke,
+  t as Ae,
+  tt as je,
+  v as w,
+  w as Me,
+  x as Ne,
+  y as Pe,
+  z as T,
 } from "./chunk~a19d1add1e.js";
-import { l as Ie } from "./chunk~6cf3fe3e07.js";
+import { l as Fe } from "./chunk~6cf3fe3e07.js";
 import {
-  a as Le,
-  h as Re,
-  i as ze,
-  l as Be,
-  m as Ve,
-  n as He,
-  o as Ue,
-  p as We,
-  r as Ge,
-  s as Ke,
-  t as qe,
-  u as Je,
+  a as Ie,
+  h as Le,
+  i as Re,
+  l as ze,
+  m as Be,
+  n as Ve,
+  o as He,
+  p as Ue,
+  r as We,
+  s as Ge,
+  t as Ke,
+  u as qe,
 } from "./chunk~618fb52a90.js";
-import { r as Ye, t as T } from "./chunk~e70aabe4d7.js";
-import { r as Xe } from "./chunk~38061b7abb.js";
-import { m as Ze, n as Qe } from "./chunk~7dcf2f426f.js";
-import { r as $e } from "./chunk~21cdc464a1.js";
-import { h as et } from "./chunk~4e18b7e430.js";
+import { r as Je, t as E } from "./chunk~e70aabe4d7.js";
+import { r as Ye } from "./chunk~38061b7abb.js";
+import { m as Xe, n as Ze } from "./chunk~7dcf2f426f.js";
+import { r as Qe } from "./chunk~21cdc464a1.js";
+import { h as $e } from "./chunk~4e18b7e430.js";
 import {
-  $y as tt,
-  Ay as nt,
-  Bc as E,
-  Cr as rt,
-  Jl as it,
-  Jy as D,
-  Kc as O,
-  Ny as at,
-  Pv as k,
-  Px as ot,
-  TS as st,
-  Tx as ct,
-  Us as lt,
-  Vc as A,
-  Vr as ut,
-  Vy as j,
-  Wb as dt,
-  Yl as ft,
-  Yv as pt,
-  Yy as M,
-  Zl as mt,
-  ac as ht,
-  es as gt,
-  eu as _t,
-  oc as N,
-  ol as vt,
-  qb as P,
+  $b as et,
+  Ar as tt,
+  Du as nt,
+  Hy as rt,
+  Nc as D,
+  OS as O,
+  PS as it,
+  Px as at,
+  Qs as ot,
+  Uv as k,
+  Ux as st,
+  Xc as A,
+  Xy as j,
+  Yc as M,
+  Yr as ct,
+  cb as lt,
+  fu as ut,
+  gb as dt,
+  hc as N,
+  hl as ft,
+  ib as P,
+  iu as pt,
+  iy as mt,
+  ls as ht,
+  lu as gt,
+  mc as _t,
+  nx as F,
+  ou as vt,
+  rb as I,
   ru as yt,
-  sb as bt,
-  uv as xt,
-  vu as St,
-  wc as F,
-  yS as I,
+  tl as L,
+  yv as bt,
+  zy as xt,
 } from "./main.js";
-var L = e(t(), 1),
-  R = r();
-function z(e) {
-  return (0, R.jsxs)(`a`, {
+var R = e(t(), 1),
+  z = r();
+function B(e) {
+  return (0, z.jsxs)(`a`, {
     href: e.strURL,
-    className: y.Box,
+    className: b.Box,
     "data-modal-content-sizetofit": !!e.bSizeToFit,
     "data-appid": e.appid,
     "data-publishedfileid": e.publishedfileid,
     children: [
-      (0, R.jsx)(ce, { strURL: e.strPreviewURL }),
-      (0, R.jsxs)(pe, {
+      (0, z.jsx)(se, { strURL: e.strPreviewURL }),
+      (0, z.jsxs)(fe, {
         children: [
-          (0, R.jsx)(w, { children: e.strTitle }),
-          (0, R.jsx)(`div`, {
-            children: (0, R.jsx)(`span`, {
-              className: y.Type,
+          (0, z.jsx)(T, { children: e.strTitle }),
+          (0, z.jsx)(`div`, {
+            children: (0, z.jsx)(`span`, {
+              className: b.Type,
               children: e.strType,
             }),
           }),
-          e.author && (0, R.jsx)(_e, { children: e.author }),
-          (0, R.jsx)(xe, { children: e.strDescription }),
+          e.author && (0, z.jsx)(ge, { children: e.author }),
+          (0, z.jsx)(be, { children: e.strDescription }),
         ],
       }),
     ],
   });
 }
-var Ct = class extends x {
-    m_LinkFilter = ct;
+var St = class extends S {
+    m_LinkFilter = at;
     m_parentNode = void 0;
     m_mapHostToComponent;
     m_globalStoreLink;
@@ -186,9 +186,9 @@ var Ct = class extends x {
       n.length > 0 && super.AppendText(n, t);
     }
   },
-  wt = `[ː:]([a-zA-Z0-9_]+)[ː:]`,
-  Tt = class extends x {
-    m_EmoteRegex = new RegExp(wt);
+  Ct = `[ː:]([a-zA-Z0-9_]+)[ː:]`,
+  wt = class extends S {
+    m_EmoteRegex = new RegExp(Ct);
     AppendText(e, t = !1) {
       let n = e;
       if (e.length >= 3) {
@@ -199,7 +199,7 @@ var Ct = class extends x {
             super.AppendText(n, t);
           }
           let r = e[1];
-          (super.AppendNode(L.createElement(Te, { emoticon: r }, [])),
+          (super.AppendNode(R.createElement(we, { emoticon: r }, [])),
             (n = e.input.substring(e.index + r.length + 2)),
             (e = this.m_EmoteRegex.exec(n)));
         }
@@ -207,7 +207,7 @@ var Ct = class extends x {
       n.length > 0 && super.AppendText(n, t);
     }
   },
-  Et = class extends x {
+  Tt = class extends S {
     m_parentNode = void 0;
     constructor(e, t) {
       (super(e), (this.m_parentNode = t));
@@ -216,36 +216,36 @@ var Ct = class extends x {
       let n = e;
       (this.m_parentNode &&
         this.m_parentNode.tag == `img` &&
-        !Dt(n) &&
-        (n = O(n)),
+        !Et(n) &&
+        (n = L(n)),
         super.AppendText(n, t));
     }
   };
-function Dt(e) {
+function Et(e) {
   let t = e.trim();
   return (
     t.startsWith(`{STEAM_CLAN_IMAGE}`) || t.startsWith(`{STEAM_CLAN_LOC_IMAGE}`)
   );
 }
-var Ot =
+var Dt =
   /^(#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})|[a-z-]+\([^;{}]*\)|[a-z]+)$/i;
-function kt(e) {
-  return e ? Ot.test(e.trim()) : !1;
+function Ot(e) {
+  return e ? Dt.test(e.trim()) : !1;
 }
-function B(e, t) {
-  return kt(e) ? e : t;
+function V(e, t) {
+  return Ot(e) ? e : t;
 }
-var V = `NiXfRuagfO4-`;
+var kt = `NiXfRuagfO4-`;
 function At(e) {
   let { inputType: t, id: n, bApplyUserContentPref: r } = e,
     i = t == `bundle` ? `bundle` : t == `sub` ? `sub` : `game`,
-    a = o(n, i),
-    { data: s } = k(a),
-    { data: c, isPending: l } = pt(r ? a : void 0);
-  if (!s) return null;
+    a = d(n, i),
+    { data: o } = k(a),
+    { data: s, isPending: c } = mt(r ? a : void 0);
+  if (!o) return null;
   if (r) {
-    if (l) return null;
-    if (c?.filter_failure == 40 || c?.filter_failure == 50) {
+    if (c) return null;
+    if (s?.filter_failure == 40 || s?.filter_failure == 50) {
       let e = `#StoreCapsule_App_Excluded`;
       switch (t) {
         case `sub`:
@@ -254,21 +254,21 @@ function At(e) {
         case `bundle`:
           e = `#StoreCapsule_Bundle_Excluded`;
       }
-      return (0, R.jsx)(`div`, {
-        className: F(V, `AppSummaryWidgetCtn`),
-        children: M(
+      return (0, z.jsx)(`div`, {
+        className: D(kt, `AppSummaryWidgetCtn`),
+        children: P(
           e,
-          (0, R.jsx)(`a`, { href: P.STORE_BASE_URL + `account/preferences/` }),
+          (0, z.jsx)(`a`, { href: F.STORE_BASE_URL + `account/preferences/` }),
         ),
       });
     }
   }
-  return (0, R.jsx)(`div`, {
-    className: F(V, `AppSummaryWidgetCtn`),
-    children: (0, R.jsx)(oe, {
+  return (0, z.jsx)(`div`, {
+    className: D(kt, `AppSummaryWidgetCtn`),
+    children: (0, z.jsx)(ae, {
       id: n,
       type: i,
-      bShowDemoButton: s.type == 1,
+      bShowDemoButton: o.type == 1,
       bAllowTwoLinesForHeader: !0,
       bPreferAssetWithoutOverride: !1,
     }),
@@ -300,7 +300,7 @@ function jt(e, t) {
 }
 function Mt(e, t, r, a, o) {
   let s = n(),
-    c = xt();
+    c = bt();
   return i(Pt(s, c, e, t, r, a, o)).data ?? void 0;
 }
 function Nt(e, t, n, r, i) {
@@ -314,14 +314,14 @@ function Pt(e, t, n, r, i, a, o) {
       if (!n) return null;
       let s = [];
       if (!n.BImageNeedScreenshotFallback(r, i)) {
-        let o = await e.ensureQueryData(T(e, t, n, r, i, a));
+        let o = await e.ensureQueryData(E(e, t, n, r, i, a));
         if ((o && s.push(o), a != f.full)) {
-          let a = await e.ensureQueryData(T(e, t, n, r, i, f.full));
+          let a = await e.ensureQueryData(E(e, t, n, r, i, f.full));
           a && s.push(a);
         }
       }
       if (!o && s.length == 0) {
-        let r = await e.ensureQueryData(Ye(e, t, n));
+        let r = await e.ensureQueryData(Je(e, t, n));
         r && s.push(r);
       }
       return s;
@@ -340,13 +340,13 @@ function Ft({ clanSteamID: e, strVanity: t, strGroupVanity: n }) {
 function It(e) {
   let { appid: t, announcementGID: n, eventGID: r, strURL: i } = e,
     a = Ft(e),
-    o = a === null,
+    l = a === null,
     {
-      data: l,
-      isPending: u,
-      isError: d,
-    } = ee(
-      o
+      data: u,
+      isPending: d,
+      isError: ee,
+    } = o(
+      l
         ? void 0
         : {
             clanAccountID: a ?? void 0,
@@ -355,40 +355,40 @@ function It(e) {
             announcementGID: n,
           },
     ),
-    f = c(t || l?.appid || void 0),
+    f = c(t || u?.appid || void 0),
     { data: p } = k(f);
-  if (o || d || l === null) return s(i);
-  if (u || !l) return (0, R.jsx)(v, {});
-  let m = I(P.LANGUAGE),
-    te = l.GetNameWithFallback(m),
-    h = l.GetSubTitleWithSummaryFallback(m),
-    g = p?.name,
-    _ = bt(l.GetStartTimeAndDateUnixSeconds());
-  return (0, R.jsxs)(re, {
-    eventModel: l,
-    route: ne.k_eView,
-    className: y.Box,
+  if (l || ee || u === null) return s(i);
+  if (d || !u) return (0, z.jsx)(y, {});
+  let m = O(F.LANGUAGE),
+    h = u.GetNameWithFallback(m),
+    g = u.GetSubTitleWithSummaryFallback(m),
+    _ = p?.name,
+    v = dt(u.GetStartTimeAndDateUnixSeconds());
+  return (0, z.jsxs)(ne, {
+    eventModel: u,
+    route: te.k_eView,
+    className: b.Box,
     "data-modal-content-sizetofit": !0,
     "data-appid": t,
     children: [
-      (0, R.jsx)(Lt, { ...e, event: l }),
-      (0, R.jsxs)(pe, {
+      (0, z.jsx)(Lt, { ...e, event: u }),
+      (0, z.jsxs)(fe, {
         children: [
-          (0, R.jsxs)(_e, {
+          (0, z.jsxs)(ge, {
             children: [
-              D(
-                l.type == 28
+              I(
+                u.type == 28
                   ? `#EventDisplay_Share_Announcement`
                   : `#EventDisplay_Share_Event`,
-                g ?? ``,
+                _ ?? ``,
               ),
-              (0, R.jsx)(he, { children: _ }),
+              (0, z.jsx)(me, { children: v }),
             ],
           }),
-          (0, R.jsx)(w, {
-            children: (0, R.jsx)(`div`, { className: y.Type, children: te }),
+          (0, z.jsx)(T, {
+            children: (0, z.jsx)(`div`, { className: b.Type, children: h }),
           }),
-          (0, R.jsx)(xe, { children: h }),
+          (0, z.jsx)(be, { children: g }),
         ],
       }),
     ],
@@ -400,11 +400,11 @@ function Lt(e) {
       fnFilterImageURLsForKnownFailures: n,
       fnImageFailureCallback: r,
     } = e,
-    i = Mt(t, `capsule`, I(P.LANGUAGE), f.capsule_main) ?? [];
+    i = Mt(t, `capsule`, O(F.LANGUAGE), f.capsule_main) ?? [];
   return (
     i && n && (i = n(i)),
-    (0, R.jsx)(h, {
-      className: y.Preview,
+    (0, z.jsx)(g, {
+      className: b.Preview,
       rgSources: i ?? [],
       onIncrementalError: (e, t, n) => r && r(t),
     })
@@ -421,8 +421,8 @@ function q(e, t) {
 }
 function J(e) {
   let t = A(e).toLocaleLowerCase(),
-    n = A(P.STORE_BASE_URL).toLocaleLowerCase(),
-    r = A(P.COMMUNITY_BASE_URL).toLocaleLowerCase();
+    n = A(F.STORE_BASE_URL).toLocaleLowerCase(),
+    r = A(F.COMMUNITY_BASE_URL).toLocaleLowerCase();
   return t == n || t == r
     ? !0
     : Rt.includes(n)
@@ -437,7 +437,7 @@ function Ht(e) {
   if (!t || t.length <= 2) return;
   let n = t[1].toLowerCase(),
     r = Number(t[2]);
-  if (r > 0 && yt(n))
+  if (r > 0 && ut(n))
     return {
       id: r,
       strItemType: n,
@@ -455,10 +455,10 @@ function Ut(e) {
 function Wt(e) {
   let t = Ut(e),
     n = t ? e.clanSteamID.GetAccountID() : void 0,
-    { data: r, isLoading: i } = te(n),
+    { data: r, isLoading: i } = h(n),
     { data: o, isLoading: s } = a(n);
   if (!t) return null;
-  if (!(i || s)) return !o || !r || !u(e, r) ? null : (o.appids ?? []);
+  if (!(i || s)) return !o || !r || !ee(e, r) ? null : (o.appids ?? []);
 }
 function Gt(e, t) {
   return e === null || (t.length > 0 && t.every((t) => e.includes(t)));
@@ -477,9 +477,9 @@ function qt({ link: e, strURL: t, eventModel: n, bAnnouncement: r }) {
     e.strClanSteamID64 === void 0
       ? e.clanAccountID === void 0
         ? void 0
-        : j.InitFromClanID(e.clanAccountID, P.EUNIVERSE)
+        : j.InitFromClanID(e.clanAccountID, F.EUNIVERSE)
       : new j(e.strClanSteamID64);
-  return (0, R.jsx)(It, {
+  return (0, z.jsx)(It, {
     appid: e.appid,
     clanSteamID: a,
     strVanity: e.strOGGVanity,
@@ -493,7 +493,7 @@ function Y(e, t, n, r = !1) {
   if (J(t)) {
     let i = jt(e, t);
     if (i)
-      return (0, R.jsx)(qt, {
+      return (0, z.jsx)(qt, {
         link: i,
         strURL: t,
         eventModel: n?.event,
@@ -519,20 +519,20 @@ function Qt(e) {
 }
 function $t(e) {
   let { sharedFileID: t } = e,
-    { data: n } = ge(t),
-    r = P.COMMUNITY_BASE_URL + `sharedfiles/filedetails/?id=`,
+    { data: n } = he(t),
+    r = F.COMMUNITY_BASE_URL + `sharedfiles/filedetails/?id=`,
     i = n ?? {
       sharedfileid: t,
-      title: D(`#Loading`),
+      title: I(`#Loading`),
       description: ``,
       type: ``,
       previewurl: ``,
       appid: 0,
       url: r + t,
     },
-    a = ot(i.url) ? r + i.url : i.url,
+    a = st(i.url) ? r + i.url : i.url,
     o = i.personnaname !== void 0 && i.personnaname.length > 0;
-  return (0, R.jsx)(z, {
+  return (0, z.jsx)(B, {
     strURL: a,
     strTitle: i.title,
     strPreviewURL: i.previewurl,
@@ -540,7 +540,7 @@ function $t(e) {
     strDescription: i.description,
     author:
       o &&
-      tt(`#EventEditor_Author`, (0, R.jsx)(ye, { children: i.personnaname })),
+      lt(`#EventEditor_Author`, (0, z.jsx)(ve, { children: i.personnaname })),
     publishedfileid: t,
     appid: i.appid,
     bSizeToFit: i.bSizeToFit,
@@ -578,11 +578,11 @@ function dn(e) {
 }
 function fn(e) {
   let { modelID: t } = e,
-    [n, r] = L.useState(!0),
+    [n, r] = R.useState(!0),
     { data: i } = dn(t);
   if (n) {
     let e = () => r(!1);
-    return (0, R.jsxs)(`div`, {
+    return (0, z.jsxs)(`div`, {
       className: nn,
       role: `button`,
       tabIndex: 0,
@@ -592,27 +592,27 @@ function fn(e) {
       },
       children: [
         i?.thumbnail_url &&
-          (0, R.jsx)(`img`, {
+          (0, z.jsx)(`img`, {
             className: `FFbDls5-Ssk-`,
             src: i.thumbnail_url,
             alt: i.title,
           }),
-        (0, R.jsx)(`img`, { className: en, alt: `` }),
-        (0, R.jsxs)(`div`, {
+        (0, z.jsx)(`img`, { className: en, alt: `` }),
+        (0, z.jsxs)(`div`, {
           className: rn,
           children: [
-            (0, R.jsxs)(`div`, {
+            (0, z.jsxs)(`div`, {
               className: an,
               children: [
-                (0, R.jsx)(`span`, {
+                (0, z.jsx)(`span`, {
                   className: on,
-                  children: D(`#EventDisplay_Sketchfab`),
+                  children: I(`#EventDisplay_Sketchfab`),
                 }),
-                i?.title && (0, R.jsxs)(`div`, { children: [i.title, `\xA0`] }),
+                i?.title && (0, z.jsxs)(`div`, { children: [i.title, `\xA0`] }),
               ],
             }),
             i?.author_name &&
-              (0, R.jsx)(`div`, {
+              (0, z.jsx)(`div`, {
                 className: `-r4s23p52-0-`,
                 children: i.author_name,
               }),
@@ -621,9 +621,9 @@ function fn(e) {
       ],
     });
   }
-  return (0, R.jsx)(`div`, {
+  return (0, z.jsx)(`div`, {
     className: tn,
-    children: (0, R.jsx)(`iframe`, {
+    children: (0, z.jsx)(`iframe`, {
       className: tn,
       title: i?.title ?? t,
       src: `https://sketchfab.com/models/${encodeURIComponent(t)}/embed?autostart=1`,
@@ -649,12 +649,12 @@ function _n(e) {
   if (!n || !n.community_item_data) return null;
   let r = n.appid,
     i = n.community_item_data.item_image_large,
-    a = `${P.MEDIA_CDN_COMMUNITY_URL}images/items/${r}/${i}`;
-  return (0, R.jsx)(`div`, {
+    a = `${F.MEDIA_CDN_COMMUNITY_URL}images/items/${r}/${i}`;
+  return (0, z.jsx)(`div`, {
     className: gn,
-    children: (0, R.jsx)(ut, {
+    children: (0, z.jsx)(ct, {
       toolTipContent: n.community_item_data.item_description,
-      children: (0, R.jsx)(`img`, {
+      children: (0, z.jsx)(`img`, {
         src: a,
         alt: n.community_item_data.item_title,
       }),
@@ -668,11 +668,11 @@ var vn = /:\/\/medal.tv\/(?:clip|clips)\/([a-z0-9]+)/i,
   Sn =
     /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i;
 function X() {
-  return P.EREALM === st.k_ESteamRealmChina;
+  return F.EREALM === it.k_ESteamRealmChina;
 }
 var Cn = new Map();
 function wn() {
-  let e = P.EREALM,
+  let e = F.EREALM,
     t = Cn.get(e);
   return (
     t ||
@@ -687,7 +687,7 @@ function wn() {
         : [
             {
               urlRegExp: new RegExp(/youtu.be|youtube.com/i),
-              fnBBComponent: De,
+              fnBBComponent: Ee,
             },
             { urlRegExp: new RegExp(Zt), fnBBComponent: kn },
             { urlRegExp: new RegExp(G), fnBBComponent: An },
@@ -710,7 +710,7 @@ function Tn(e) {
   return wn().find((t) => !!t.urlRegExp.exec(e));
 }
 function En(e) {
-  return L.useMemo(() => Tn(e), [e]);
+  return R.useMemo(() => Tn(e), [e]);
 }
 function Dn(e, t) {
   if (X()) return null;
@@ -723,8 +723,8 @@ function Dn(e, t) {
         e +
         `/?autoplay=0&donate=0` +
         (t && t.event ? `&steamappid=` + t.event.appid : ``);
-      return (0, R.jsx)(`iframe`, {
-        className: Je,
+      return (0, z.jsx)(`iframe`, {
+        className: qe,
         src: n,
         title: e,
         frameBorder: 0,
@@ -738,18 +738,18 @@ function On(e, t) {
   let n = new RegExp(sn).exec(e);
   if (n && n.length > 1) {
     let e = n[1];
-    if (e && e.length > 1) return (0, R.jsx)(fn, { modelID: e });
+    if (e && e.length > 1) return (0, z.jsx)(fn, { modelID: e });
   }
   return s(e, t?.event);
 }
 function kn(e, t) {
   let n = Qt(e);
-  return n === void 0 ? s(e, t?.event) : (0, R.jsx)($t, { sharedFileID: n });
+  return n === void 0 ? s(e, t?.event) : (0, z.jsx)($t, { sharedFileID: n });
 }
 function An(e, t) {
   let n = Vt(e);
   return n
-    ? (0, R.jsx)(jn, {
+    ? (0, z.jsx)(jn, {
         eventModel: t?.event,
         inputID: n.id,
         inputType: n.strItemType,
@@ -759,41 +759,41 @@ function An(e, t) {
 }
 function jn(e) {
   let { inputID: t, inputType: n, eventModel: r, fallbackUrl: i } = e,
-    a = l(t, n),
+    a = u(t, n),
     { data: o } = k(a),
     c = Wt(r),
-    u;
+    l;
   return (
     c === null
-      ? (u = !0)
-      : c && o && (u = Gt(c, o.appid ? [o.appid] : (o.included_appids ?? []))),
-    u === void 0
+      ? (l = !0)
+      : c && o && (l = Gt(c, o.appid ? [o.appid] : (o.included_appids ?? []))),
+    l === void 0
       ? null
-      : u
-        ? (0, R.jsx)(At, { id: t, inputType: n, bApplyUserContentPref: !0 })
+      : l
+        ? (0, z.jsx)(At, { id: t, inputType: n, bApplyUserContentPref: !0 })
         : s(i, r)
   );
 }
 function Mn(e, t) {
   let n = hn(e);
   return n
-    ? (0, R.jsx)(`div`, {
-        className: F(Be),
-        children: (0, R.jsx)(_n, { defid: n, url: e }),
+    ? (0, z.jsx)(`div`, {
+        className: D(ze),
+        children: (0, z.jsx)(_n, { defid: n, url: e }),
       })
     : s(e, t?.event);
 }
 function Nn(e, t) {
-  return X() ? null : Z(e, (0, R.jsx)(N, {}), `@`, t);
+  return X() ? null : Z(e, (0, z.jsx)(N, {}), `@`, t);
 }
 function Pn(e, t) {
-  return X() ? null : Z(e, (0, R.jsx)(N, {}), `#`, t);
+  return X() ? null : Z(e, (0, z.jsx)(N, {}), `#`, t);
 }
 function Fn(e, t) {
-  return X() ? null : Z(e, (0, R.jsx)(ht, {}), void 0, t);
+  return X() ? null : Z(e, (0, z.jsx)(_t, {}), void 0, t);
 }
 function In(e, t) {
-  return Z(e, (0, R.jsx)(lt, {}), void 0, t);
+  return Z(e, (0, z.jsx)(ot, {}), void 0, t);
 }
 function Z(e, t, n, r) {
   let i,
@@ -802,19 +802,19 @@ function Z(e, t, n, r) {
   (o != -1 && o + 1 < e.length && (i = e.substring(o + 1, a)),
     n && i && (i = n + i));
   let c = s(e, r?.event, i ?? e);
-  return (0, R.jsxs)(`div`, {
-    className: Re,
-    children: [(0, R.jsx)(`div`, { className: Ve, children: t }), c],
+  return (0, z.jsxs)(`div`, {
+    className: Le,
+    children: [(0, z.jsx)(`div`, { className: Be, children: t }), c],
   });
 }
 function Ln(e) {
   switch (e) {
     case `button`:
-      return F(Ue, `LinkButton`);
+      return D(He, `LinkButton`);
     case `pill`:
-      return F(Ke, `LinkPill`);
+      return D(Ge, `LinkPill`);
     default:
-      return F(Le, `Link`);
+      return D(Ie, `Link`);
   }
 }
 function Rn(e, t, n) {
@@ -836,42 +836,42 @@ function zn(e, t) {
   return !n || !t || n != t.trim();
 }
 function Bn(e) {
-  let t = be(C(e.args) || C(e.args, `href`)),
-    n = C(e.args, `style`),
-    r = C(e.args, `id`),
-    i = B(C(e.args, `buttoncolor`) || C(e.args, `bgcolor`), void 0),
-    a = B(C(e.args, `labelcolor`) || C(e.args, `color`), void 0),
+  let t = ye(w(e.args) || w(e.args, `href`)),
+    n = w(e.args, `style`),
+    r = w(e.args, `id`),
+    i = V(w(e.args, `buttoncolor`) || w(e.args, `bgcolor`), void 0),
+    a = V(w(e.args, `labelcolor`) || w(e.args, `color`), void 0),
     o = Ln(n),
     s = e.context.event,
     c = p(t, e.language, s?.rtime32_last_modified),
-    l = En(zn(e.children, t) ? `` : (t ?? ``));
-  if (l && t) return l.fnBBComponent(t, { event: e.context.event });
+    u = En(zn(e.children, t) ? `` : (t ?? ``));
+  if (u && t) return u.fnBBComponent(t, { event: e.context.event });
   if (c === void 0 || c == null) return e.children || ``;
   t = typeof c == `string` ? c : c[1];
-  let u = Rn(n, i, a);
+  let d = Rn(n, i, a);
   return typeof t == `string` && t.length > 0 && t[0] == `#`
-    ? (0, R.jsx)(vt, { className: o, href: t, style: u, children: e.children })
+    ? (0, z.jsx)(ft, { className: o, href: t, style: d, children: e.children })
     : t == `steam://settings/account`
-      ? (0, R.jsx)(rt, {
+      ? (0, z.jsx)(tt, {
           className: o,
           href: `steam://settings/account`,
           children: e.children,
         })
-      : (0, R.jsx)(d, {
+      : (0, z.jsx)(l, {
           className: o,
           url: t,
           event: e.context.event,
           id: r,
-          style: u,
+          style: d,
           children: e.children,
         });
 }
 function Vn(e) {
-  let t = C(e.args, `href`),
+  let t = w(e.args, `href`),
     n = En(t);
   return n
     ? n.fnBBComponent(t, { event: e.context.event })
-    : (0, R.jsx)(Bn, { ...e });
+    : (0, z.jsx)(Bn, { ...e });
 }
 var Hn = `v87a6zGhXmo-`,
   Un = `XkrNZp-zaXw-`,
@@ -895,21 +895,21 @@ function Wn(e) {
       trailerBaseID: o,
       subtitles: s,
     } = e,
-    [c, l] = (0, L.useState)(!1),
-    u = (0, L.useMemo)(() => ({ appid: n }), [n]);
+    [c, l] = (0, R.useState)(!1),
+    u = (0, R.useMemo)(() => ({ appid: n }), [n]);
   switch (t) {
     case `button`:
     case `pill`:
-      return (0, R.jsxs)(R.Fragment, {
+      return (0, z.jsxs)(z.Fragment, {
         children: [
-          (0, R.jsxs)(`button`, {
+          (0, z.jsxs)(`button`, {
             type: `button`,
-            className: F({ [Hn]: t == `pill`, [Un]: t == `button` }),
+            className: D({ [Hn]: t == `pill`, [Un]: t == `button` }),
             onClick: () => l(!0),
             style: { color: r, backgroundColor: i },
-            children: [(0, R.jsx)(gt, {}), a || D(`#EventEmail_WatchNow`)],
+            children: [(0, z.jsx)(ht, {}), a || I(`#EventEmail_WatchNow`)],
           }),
-          (0, R.jsx)(Qe, {
+          (0, z.jsx)(Ze, {
             id: u,
             bShowModal: c,
             trailerBaseID: o,
@@ -919,28 +919,28 @@ function Wn(e) {
       });
     default:
     case `full`:
-      return (0, R.jsx)(Gn, { ...e });
+      return (0, z.jsx)(Gn, { ...e });
   }
 }
 function Gn(e) {
   let { appid: t, trailerBaseID: n } = e,
     r = c(t),
     { data: i } = k(r),
-    [a, o] = (0, L.useState)(() =>
-      !t || !n ? D(`#TrailerPlayer_ID_NotProvided`) : null,
+    [a, o] = (0, R.useState)(() =>
+      !t || !n ? I(`#TrailerPlayer_ID_NotProvided`) : null,
     ),
-    s = _t(r),
-    l = (0, L.useMemo)(
+    s = gt(r),
+    l = (0, R.useMemo)(
       () => (s ? s.find((e) => e.trailer_base_id === n) : null),
       [s, n],
     );
   return (
-    (0, L.useEffect)(() => {
+    (0, R.useEffect)(() => {
       (i?.unvailable_for_country_restriction &&
-        o(D(`#TrailerPlayer_CouldNotLoad`, t, n)),
+        o(I(`#TrailerPlayer_CouldNotLoad`, t, n)),
         s &&
           !l &&
-          o(D(`#TrailerPlayer_CouldNotLoad`, e.appid, e.trailerBaseID)));
+          o(I(`#TrailerPlayer_CouldNotLoad`, e.appid, e.trailerBaseID)));
     }, [
       t,
       e.appid,
@@ -952,11 +952,11 @@ function Gn(e) {
     ]),
     a
       ? e.bIsPreviewMode
-        ? (0, R.jsx)(`div`, { className: g, children: a })
+        ? (0, z.jsx)(`div`, { className: _, children: a })
         : null
       : l
-        ? (0, R.jsx)(Kn, { trailerToPlay: l })
-        : (0, R.jsx)(v, { string: D(`#Loading`), size: `small` })
+        ? (0, z.jsx)(Kn, { trailerToPlay: l })
+        : (0, z.jsx)(y, { string: I(`#Loading`), size: `small` })
   );
 }
 function Kn(e) {
@@ -965,18 +965,18 @@ function Kn(e) {
       rgDashTrailers: n,
       rgHlsTrailers: r,
       strCaptionManufest: i,
-    } = (0, L.useMemo)(() => {
-      let { rgDashTrailers: e, rgHlsTrailers: n } = mt(t);
-      return { rgDashTrailers: e, rgHlsTrailers: n, strCaptionManufest: it(t) };
+    } = (0, R.useMemo)(() => {
+      let { rgDashTrailers: e, rgHlsTrailers: n } = vt(t);
+      return { rgDashTrailers: e, rgHlsTrailers: n, strCaptionManufest: yt(t) };
     }, [t]);
   return n?.length == 0
     ? null
-    : (0, R.jsx)(`div`, {
-        className: Ze,
-        children: (0, R.jsx)(Xe, {
+    : (0, z.jsx)(`div`, {
+        className: Xe,
+        children: (0, z.jsx)(Ye, {
           dashManifests: n || [],
           hlsManifest: (r.length > 0 && r?.[0]) || ``,
-          screenshot: ft(t),
+          screenshot: pt(t),
           altText: t.trailer_name,
           muteWhenAutoplayBlocked: !0,
           captionManifest: i,
@@ -984,10 +984,10 @@ function Kn(e) {
       });
 }
 function qn(e) {
-  let t = dt(),
-    n = ae(940),
-    r = String(C(e.args, `autoadvance`)).toLowerCase() === `true`;
-  return (0, R.jsx)($e, {
+  let t = et(),
+    n = ie(940),
+    r = String(w(e.args, `autoadvance`)).toLowerCase() === `true`;
+  return (0, z.jsx)(Qe, {
     hideArrows: !n,
     hidePips: t,
     visibleElements: 1,
@@ -995,27 +995,27 @@ function qn(e) {
     bLazyRenderChildren: !0,
     screenIsWide: n,
     bAutoAdvance: r,
-    className: We,
+    className: Ue,
     children: e.children,
   });
 }
 var Jn = `FQV2hlT8BYs-`;
 function Yn(e) {
   let { strURL: t, children: n } = e;
-  return (typeof t == `string` ? !E(t) : t.some((e) => !E(e)))
-    ? (0, R.jsx)(Xn, { children: n })
-    : (0, R.jsx)(R.Fragment, { children: n });
+  return (typeof t == `string` ? !M(t) : t.some((e) => !M(e)))
+    ? (0, z.jsx)(Xn, { children: n })
+    : (0, z.jsx)(z.Fragment, { children: n });
 }
 function Xn(e) {
   let { children: t } = e;
-  return Ie()
-    ? (0, R.jsx)(R.Fragment, { children: t })
-    : (0, R.jsx)(`div`, {
+  return Fe()
+    ? (0, z.jsx)(z.Fragment, { children: t })
+    : (0, z.jsx)(`div`, {
         className: Jn,
-        children: M(
+        children: P(
           `#Image_Externally_Hosted_Hidden`,
-          (0, R.jsx)(`a`, {
-            href: P.STORE_BASE_URL + `account/cookiepreferences`,
+          (0, z.jsx)(`a`, {
+            href: F.STORE_BASE_URL + `account/cookiepreferences`,
           }),
         ),
       });
@@ -1028,26 +1028,26 @@ function Qn() {
       [`dynamiclink`, { Constructor: Vn, autocloses: !1 }],
       [
         `h1`,
-        { Constructor: S(Fe, He), autocloses: !1, skipFollowingNewline: !0 },
+        { Constructor: C(Pe, Ve), autocloses: !1, skipFollowingNewline: !0 },
       ],
       [
         `h2`,
-        { Constructor: S(Ee, Ge), autocloses: !1, skipFollowingNewline: !0 },
+        { Constructor: C(Te, We), autocloses: !1, skipFollowingNewline: !0 },
       ],
       [
         `h3`,
-        { Constructor: S(Pe, ze), autocloses: !1, skipFollowingNewline: !0 },
+        { Constructor: C(Ne, Re), autocloses: !1, skipFollowingNewline: !0 },
       ],
-      [`quote`, { Constructor: S(ue, qe), autocloses: !1 }],
-      [`list`, { Constructor: le, autocloses: !1, skipInternalNewline: !0 }],
-      [`olist`, { Constructor: Se, autocloses: !1, skipInternalNewline: !0 }],
-      [`*`, { Constructor: Ne, autocloses: !0, skipInternalNewline: !0 }],
-      [`p`, { Constructor: de, autocloses: !1, skipFollowingNewline: !0 }],
+      [`quote`, { Constructor: C(le, Ke), autocloses: !1 }],
+      [`list`, { Constructor: ce, autocloses: !1, skipInternalNewline: !0 }],
+      [`olist`, { Constructor: xe, autocloses: !1, skipInternalNewline: !0 }],
+      [`*`, { Constructor: Me, autocloses: !0, skipInternalNewline: !0 }],
+      [`p`, { Constructor: ue, autocloses: !1, skipFollowingNewline: !0 }],
       [`img`, { Constructor: $n, autocloses: !1 }],
-      [`previewyoutube`, { Constructor: ve, autocloses: !1 }],
-      [`looping_media`, { Constructor: Ce, autocloses: !1 }],
-      [`video`, { Constructor: me, autocloses: !1 }],
-      [`youtubeorvideo`, { Constructor: Oe, autocloses: !1 }],
+      [`previewyoutube`, { Constructor: _e, autocloses: !1 }],
+      [`looping_media`, { Constructor: Se, autocloses: !1 }],
+      [`video`, { Constructor: pe, autocloses: !1 }],
+      [`youtubeorvideo`, { Constructor: De, autocloses: !1 }],
       [`trailer`, { Constructor: tr, autocloses: !1 }],
       [
         `speaker`,
@@ -1066,62 +1066,62 @@ function Qn() {
 }
 function $n(e) {
   let { showErrorInfo: t, event: n } = e.context,
-    r = C(e.args, `src`) || e.children?.toString();
-  ((r ||= C(e.args)), (r = be(r ?? ``) || void 0));
-  let i = C(e.args, `style`) === `inline`,
+    r = w(e.args, `src`) || e.children?.toString();
+  ((r ||= w(e.args)), (r = ye(r ?? ``) || void 0));
+  let i = w(e.args, `style`) === `inline`,
     a = p(r, e.language, n?.rtime32_last_modified);
   if (a == null) return null;
   if (typeof a == `string`) {
     r = a;
     let e;
     return (
-      (e = !E(r)),
+      (e = !M(r)),
       n?.BHasTag(`auto_rssfeed`) && (e = !1),
       t
-        ? (0, R.jsx)(ie, {
-            className: F({ [b]: i }),
+        ? (0, z.jsx)(re, {
+            className: D({ [x]: i }),
             src: r,
             crossOrigin: e ? `anonymous` : void 0,
           })
-        : ((r = O(r)),
-          (0, R.jsx)(Yn, {
+        : ((r = L(r)),
+          (0, z.jsx)(Yn, {
             strURL: r,
-            children: (0, R.jsx)(_, {
-              className: F({ [b]: i }),
+            children: (0, z.jsx)(v, {
+              className: D({ [x]: i }),
               src: r,
               crossOrigin: e ? `anonymous` : void 0,
             }),
           }))
     );
   }
-  return (0, R.jsx)(Yn, {
+  return (0, z.jsx)(Yn, {
     strURL: a,
-    children: (0, R.jsx)(h, { rgSources: a }),
+    children: (0, z.jsx)(g, { rgSources: a }),
   });
 }
 function er(e) {
-  let t = C(e.args);
+  let t = w(e.args);
   if (t == null || t == null || t.length == 0) return ``;
   let n = e.children?.toString(),
     r = [];
   return (
     r.push(
-      `${P.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${P.LANGUAGE}/${t}`,
+      `${F.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${F.LANGUAGE}/${t}`,
     ),
-    P.LANGUAGE != `english` &&
-      r.push(`${P.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${t}`),
-    (0, R.jsx)(h, { rgSources: r, alt: n })
+    F.LANGUAGE != `english` &&
+      r.push(`${F.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${t}`),
+    (0, z.jsx)(g, { rgSources: r, alt: n })
   );
 }
 function tr(e) {
   let t = $(e.args, `appid`, e.context.event?.appid ?? 0),
     n = $(e.args, `trailerid`, 0),
-    r = C(e.args, `style`)?.toLocaleLowerCase() ?? Q.k_TrailerAsFull;
+    r = w(e.args, `style`)?.toLocaleLowerCase() ?? Q.k_TrailerAsFull;
   r = Object.values(Q).includes(r) ? r : Q.k_TrailerAsFull;
-  let i = B(e.args.color, `black`),
-    a = B(e.args.bgcolor, `white`),
-    o = fe(e.args);
-  return (0, R.jsx)(Wn, {
+  let i = V(e.args.color, `black`),
+    a = V(e.args.bgcolor, `white`),
+    o = de(e.args);
+  return (0, z.jsx)(Wn, {
     appid: t,
     trailerBaseID: n,
     bIsPreviewMode: e.context.showErrorInfo,
@@ -1133,19 +1133,19 @@ function tr(e) {
   });
 }
 function nr(e) {
-  let t = C(e.args, `name`),
-    n = C(e.args, `title`),
-    r = C(e.args, `company`),
-    i = C(e.args, `photo`);
+  let t = w(e.args, `name`),
+    n = w(e.args, `title`),
+    r = w(e.args, `company`),
+    i = w(e.args, `photo`);
   return e.context.bShowShortSpeakerInfo
-    ? (0, R.jsx)(Ae, {
+    ? (0, z.jsx)(ke, {
         name: t,
         title: n,
         company: r,
         photo: i,
         bio: e.children,
       })
-    : (0, R.jsx)(je, {
+    : (0, z.jsx)(Ae, {
         name: t,
         title: n,
         company: r,
@@ -1154,26 +1154,26 @@ function nr(e) {
       });
 }
 function $(e, t, n) {
-  let r = C(e, t);
+  let r = w(e, t);
   return r === void 0 || r == null ? n : Number.parseInt(r);
 }
 var rr = null;
 function ir() {
   return (
     (rr ??= new Map([
-      ...Array.from(we.entries()),
+      ...Array.from(Ce.entries()),
       ...Array.from(Qn().entries()),
     ])),
     rr
   );
 }
-var ar = L.createContext(null);
+var ar = R.createContext(null);
 function or() {
-  return L.useContext(ar) ?? ir();
+  return R.useContext(ar) ?? ir();
 }
 function sr(e) {
   let t = or(),
-    n = L.useMemo(
+    n = R.useMemo(
       () =>
         new Map([
           ...Array.from(t.entries()),
@@ -1181,7 +1181,7 @@ function sr(e) {
         ]),
       [t, e.dictionary],
     );
-  return (0, R.jsx)(ar.Provider, { value: n, children: e.children });
+  return (0, z.jsx)(ar.Provider, { value: n, children: e.children });
 }
 function cr(e) {
   let {
@@ -1192,19 +1192,19 @@ function cr(e) {
       bShowShortSpeakerInfo: a,
     } = e,
     o = wn(),
-    s = L.useCallback(
-      (e) => new Et(new Tt(new Ct(new ke(new Me()), e, o, { event: r })), e),
+    s = R.useCallback(
+      (e) => new Tt(new wt(new St(new Oe(new je()), e, o, { event: r })), e),
       [r, o],
     ),
     c = or();
-  return L.useMemo(() => new se(c, s, n || P.LANGUAGE), [c, s, n]).ParseBBCode(
+  return R.useMemo(() => new oe(c, s, n || F.LANGUAGE), [c, s, n]).ParseBBCode(
     t,
     { showErrorInfo: i, event: r, bShowShortSpeakerInfo: a, bbcode: t },
   );
 }
 async function lr(e, t) {
   let { rgDefIDs: n, strCategory: r, itemClass: i } = t,
-    a = await et.QueryRewardItems(e, {
+    a = await $e.QueryRewardItems(e, {
       definitionids: n,
       community_item_classes: i ? [i] : void 0,
       filter_match_any_category_tags: r ? [r] : void 0,
@@ -1215,10 +1215,10 @@ async function lr(e, t) {
 }
 var ur;
 function dr() {
-  let e = St();
+  let e = nt();
   return e
     ? e.GetAnonymousServiceTransport()
-    : ((ur ||= nt(new at(P.WEBAPI_BASE_URL))),
+    : ((ur ||= xt(new rt(F.WEBAPI_BASE_URL))),
       ur.GetAnonymousServiceTransport());
 }
 async function fr(e) {
@@ -1265,7 +1265,7 @@ function yr(e, t) {
   let r = n(),
     { data: a } = i(_r(e, t));
   return (
-    (0, L.useEffect)(() => {
+    (0, R.useEffect)(() => {
       a?.forEach((e) => {
         e.defid !== void 0 && r.setQueryData(mr(e.defid), e);
       });
@@ -1273,4 +1273,4 @@ function yr(e, t) {
     a
   );
 }
-export { Mt as a, z as c, $ as i, sr as n, At as o, cr as r, B as s, yr as t };
+export { Mt as a, B as c, $ as i, sr as n, At as o, cr as r, V as s, yr as t };

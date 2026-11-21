@@ -3,31 +3,31 @@
 /* Third-party software licenses can be found at licenses.txt */
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, N as n, ft as r } from "./chunk~01cfc309bf.js";
-import { d as i } from "./chunk~ffe4581a06.js";
+import { f as i } from "./chunk~4eed35ad1f.js";
 import { n as a } from "./chunk~710e3cfd2f.js";
 import {
-  El as o,
-  Ga as s,
-  Jy as c,
-  La as l,
-  Qs as u,
-  Qy as d,
-  Ua as f,
-  Wa as p,
-  Wb as m,
-  ax as h,
-  fo as g,
-  ho as _,
-  ht as v,
-  ja as y,
-  jc as b,
-  ko as x,
-  nx as S,
-  or as C,
-  rl as w,
-  tx as T,
-  vt as E,
-  wc as D,
+  $a as o,
+  $b as s,
+  Ba as c,
+  Bc as l,
+  Fl as u,
+  Ka as d,
+  Nc as f,
+  Qa as p,
+  Ro as m,
+  dx as h,
+  eo as g,
+  fl as _,
+  mx as v,
+  pr as y,
+  rb as b,
+  sb as x,
+  sc as S,
+  ux as C,
+  vt as w,
+  wo as T,
+  xo as E,
+  xt as D,
 } from "./main.js";
 var O = e(t());
 function ee(e, t) {
@@ -3471,13 +3471,13 @@ var It = {
   $t = new Set();
 function en() {
   if (Qt === void 0) {
-    let e = T(Zt);
+    let e = C(Zt);
     Qt = !e || e.toLowerCase() === `true`;
   }
   return Qt;
 }
 function tn(e) {
-  (S(Zt, String(e), 3650), (Qt = e), $t.forEach((e) => e()));
+  (h(Zt, String(e), 3650), (Qt = e), $t.forEach((e) => e()));
 }
 function nn(e) {
   return ($t.add(e), () => $t.delete(e));
@@ -3488,12 +3488,12 @@ function rn() {
 function an(e) {
   let [t, n] = rn();
   return (0, X.jsx)(`div`, {
-    className: D(Xt, e.bPhoneOnly && `fvIP8xIxKbo-`),
-    children: (0, X.jsx)(C, {
+    className: f(Xt, e.bPhoneOnly && `fvIP8xIxKbo-`),
+    children: (0, X.jsx)(y, {
       className: Yt,
       controlled: !0,
       checked: t,
-      label: c(`#SaleTrailerCarousel_AutoAdvanceEnabled`),
+      label: b(`#SaleTrailerCarousel_AutoAdvanceEnabled`),
       onChange: n,
     }),
   });
@@ -3506,45 +3506,45 @@ function sn(e) {
       autoAdvanceMsec: r,
       fnAdvance: i,
       enabled: a,
-      pauseReason: s,
-      countdownToken: c = `#SaleTrailerCarousel_NextGameInSeconds`,
-      progressTarget: l,
+      pauseReason: o,
+      countdownToken: s = `#SaleTrailerCarousel_NextGameInSeconds`,
+      progressTarget: c,
     } = e,
-    [u] = rn(),
-    f = r === void 0 ? on : r,
-    [p, m] = O.useState(f),
-    h = s !== void 0,
-    g = cn(s);
-  (o(
+    [l] = rn(),
+    d = r === void 0 ? on : r,
+    [p, m] = O.useState(d),
+    h = o !== void 0,
+    g = cn(o);
+  (u(
     () => {
       let e = p - 30;
-      e <= 0 ? (i(), m(f)) : m(Math.max(e, 0));
+      e <= 0 ? (i(), m(d)) : m(Math.max(e, 0));
     },
     30,
-    [f],
-    a && u && !h && f > 0 && p > 0,
+    [d],
+    a && l && !h && d > 0 && p > 0,
   ),
     O.useEffect(() => {
-      m(f);
-    }, [n, f, u]));
-  let _ = `${100 - (p / f) * 100}%`,
-    v = !a || !u ? `off` : h ? `paused` : `running`;
+      m(d);
+    }, [n, d, l]));
+  let _ = `${100 - (p / d) * 100}%`,
+    v = !a || !l ? `off` : h ? `paused` : `running`;
   return (
     O.useEffect(() => {
-      let e = l?.current;
+      let e = c?.current;
       e &&
         (e.style.setProperty(`--auto-advance-ratio`, _),
         (e.dataset.autoAdvance = v));
-    }, [l, _, v]),
+    }, [c, _, v]),
     (0, X.jsxs)(`div`, {
       className: t,
       children: [
         (0, X.jsxs)(`div`, {
-          className: D(Kt, (!a || !u) && `X8q-iPdWKKw-`, h && `_3E-10Et-w2o-`),
+          className: f(Kt, (!a || !l) && `X8q-iPdWKKw-`, h && `_3E-10Et-w2o-`),
           children: [
             (0, X.jsx)(`div`, {
               className: qt,
-              children: !h || !g ? d(c, Math.ceil(p / 1e3)) : g,
+              children: !h || !g ? x(s, Math.ceil(p / 1e3)) : g,
             }),
             (0, X.jsx)(`div`, {
               className: Jt,
@@ -3560,10 +3560,10 @@ function sn(e) {
 function cn(e) {
   switch (e) {
     case 4:
-      return c(`#SaleTrailerCarousel_AutoAdvanceVideoPaused`);
+      return b(`#SaleTrailerCarousel_AutoAdvanceVideoPaused`);
     case 3:
     case 5:
-      return c(`#SaleTrailerCarousel_AutoAdvanceHover`);
+      return b(`#SaleTrailerCarousel_AutoAdvanceHover`);
   }
 }
 function ln() {
@@ -3580,7 +3580,7 @@ function ln() {
   return {
     bTabHidden: e,
     bOffscreen: n,
-    refIntersection: w(i, { threshold: 0.5 }),
+    refIntersection: _(i, { threshold: 0.5 }),
   };
 }
 var un = `_--jO3lLROzo-`,
@@ -3637,10 +3637,10 @@ function jn(e) {
       t.bWindowed &&
         (0, X.jsx)(`span`, {
           className: `xAhUZDLR-Fs-`,
-          children: c(
+          children: b(
             `#Sale_Carousel_PageOfPages`,
-            E(t.nSelectedPage + 1),
-            E(t.nPages),
+            D(t.nSelectedPage + 1),
+            D(t.nPages),
           ),
         }),
     ],
@@ -3653,16 +3653,16 @@ function Nn(e) {
   let { bSelected: t, bCountdown: n } = e,
     r = t && n;
   return (0, X.jsx)(`span`, {
-    className: D(kn, t && `bY2thn3lfUw-`, r && `D6a-33r-4xk-`),
+    className: f(kn, t && `bY2thn3lfUw-`, r && `D6a-33r-4xk-`),
     children: r && (0, X.jsx)(`span`, { className: `NItUkZKCFW8-` }),
   });
 }
 function Pn(e) {
   let { count: t, selectedIndex: n, fnNavigate: r, bCountdown: i } = e,
     a = An(t, n);
-  return (0, X.jsx)(b, {
+  return (0, X.jsx)(l, {
     "flow-children": `row`,
-    className: D(Tn, wn),
+    className: f(Tn, wn),
     children: (0, X.jsx)(jn, {
       pillWindow: a,
       children: a.rgPills.map((e) =>
@@ -3802,83 +3802,83 @@ function Wn(e) {
       gap: n,
       children: r,
       bLazyRenderChildren: o,
-      lazyRenderPlaceholderWidth: s,
-      lazyRenderPlaceholderHeight: c,
-      startingSlide: l,
-      onSlide: u,
+      lazyRenderPlaceholderWidth: c,
+      lazyRenderPlaceholderHeight: u,
+      startingSlide: d,
+      onSlide: p,
     } = e,
-    d = O.useRef(null),
-    f = O.useRef(null),
-    p = m(),
-    h = O.Children.count(r),
-    [g, _] = O.useState(null),
-    v = O.useCallback((e) => {
-      ((d.current = e), _(e));
+    m = O.useRef(null),
+    h = O.useRef(null),
+    g = s(),
+    _ = O.Children.count(r),
+    [v, y] = O.useState(null),
+    b = O.useCallback((e) => {
+      ((m.current = e), y(e));
     }, []);
-  Rn(g, u, h);
-  let y = O.useContext(i) && !p && h > 1,
-    [x, S, C] = Hn(g, h, y);
+  Rn(v, p, _);
+  let x = O.useContext(i) && !g && _ > 1,
+    [S, C, w] = Hn(v, _, x);
   O.useLayoutEffect(() => {
-    d.current &&
-      f.current &&
-      (d.current.scrollLeft +=
-        f.current.getBoundingClientRect().left -
-        d.current.getBoundingClientRect().left);
-  }, [l]);
-  let w = O.Children.map(r, (e, t) =>
+    m.current &&
+      h.current &&
+      (m.current.scrollLeft +=
+        h.current.getBoundingClientRect().left -
+        m.current.getBoundingClientRect().left);
+  }, [d]);
+  let T = O.Children.map(r, (e, t) =>
       o
         ? (0, X.jsx)(a, {
             rootMargin: `0px 50% 0px 50%`,
             horizontal: !0,
-            placeholderWidth: s ?? 1,
+            placeholderWidth: c ?? 1,
             placeholderHeight: 1,
-            holdGamepadFocus: p,
+            holdGamepadFocus: g,
             children: (0, X.jsx)(Un, {
               nSlideIndex: t,
-              nStartingSlideIndex: l,
-              ref: f,
+              nStartingSlideIndex: d,
+              ref: h,
               children: e,
             }),
           })
         : (0, X.jsx)(Un, {
             nSlideIndex: t,
-            nStartingSlideIndex: l,
-            ref: f,
+            nStartingSlideIndex: d,
+            ref: h,
             children: e,
           }),
     ),
-    T = (0, X.jsx)(b, {
+    E = (0, X.jsx)(l, {
       "flow-children": `row`,
       style: { gap: n ? n + `px` : void 0 },
-      className: D(
+      className: f(
         { SaleSectionCarouselPadding: t },
         `ScrollSnapCarousel`,
         `SaleSectionCarousel`,
         Fn,
-        y && `DE3YQ2XTqZE-`,
+        x && `DE3YQ2XTqZE-`,
         e.className,
       ),
-      ref: v,
-      children: w,
+      ref: b,
+      children: T,
     }),
-    E = y
+    D = x
       ? (0, X.jsxs)(`div`, {
-          className: D(In, `PillScrollRowCtn`),
+          className: f(In, `PillScrollRowCtn`),
           children: [
-            T,
-            (0, X.jsx)(Pn, { count: C, selectedIndex: x, fnNavigate: S }),
+            E,
+            (0, X.jsx)(Pn, { count: w, selectedIndex: S, fnNavigate: C }),
           ],
         })
-      : T;
+      : E;
   return o
     ? (0, X.jsx)(a, {
         rootMargin: `50% 0px 50% 0px`,
         horizontal: !1,
         placeholderWidth: 1,
-        placeholderHeight: c ?? 1,
-        children: E,
+        placeholderHeight: u ?? 1,
+        children: D,
       })
-    : E;
+    : D;
 }
 var Gn = e(n());
 function Kn(e, t) {
@@ -3981,7 +3981,7 @@ var qn = H(
             (0, X.jsx)(Q, {
               eDirection: `previous`,
               onNavIntent: r,
-              className: D(`iqx2UWGqqKU-`, `oKffwUnx6co-`, `_--jO3lLROzo-`),
+              className: f(`iqx2UWGqqKU-`, `oKffwUnx6co-`, `_--jO3lLROzo-`),
               children: (0, X.jsx)($, {
                 arrowFill: t,
                 arrowStyle: n,
@@ -4002,7 +4002,7 @@ var qn = H(
                 children: (0, X.jsx)(Q, {
                   eDirection: `previous`,
                   onNavIntent: r,
-                  className: D(un, vn),
+                  className: f(un, vn),
                   style: { color: `red` },
                   children: (0, X.jsx)(`div`, {}),
                 }),
@@ -4013,7 +4013,7 @@ var qn = H(
                 children: (0, X.jsx)(Q, {
                   eDirection: `next`,
                   onNavIntent: r,
-                  className: D(un, vn),
+                  className: f(un, vn),
                   children: (0, X.jsx)(`div`, {}),
                 }),
               }),
@@ -4023,7 +4023,7 @@ var qn = H(
             (0, X.jsx)(Q, {
               eDirection: `next`,
               onNavIntent: r,
-              className: D(`iqx2UWGqqKU-`, `O2Vg9rmPwSE-`, `_--jO3lLROzo-`),
+              className: f(`iqx2UWGqqKU-`, `O2Vg9rmPwSE-`, `_--jO3lLROzo-`),
               children: (0, X.jsx)($, {
                 arrowFill: t,
                 arrowStyle: n,
@@ -4042,19 +4042,19 @@ var qn = H(
 );
 function Jn(e) {
   let { bForceSimpleCarousel: t, screenIsWide: n, children: r } = e,
-    i = m();
+    i = s();
   return (n || i) && !t
     ? (0, X.jsx)(Yn, { ...e, children: r })
     : (0, X.jsx)(Wn, { ...e, children: r });
 }
 function Yn(e) {
-  let t = m(),
+  let t = s(),
     n = O.useContext(i),
     [r, o] = O.useState(!1),
-    { bTabHidden: s, bOffscreen: c, refIntersection: l } = ln(),
-    u = () => O.Children.count(e.children),
-    d = () => Math.min(u(), e.visibleElements),
-    f = () =>
+    { bTabHidden: c, bOffscreen: u, refIntersection: d } = ln(),
+    p = () => O.Children.count(e.children),
+    m = () => Math.min(p(), e.visibleElements),
+    h = () =>
       O.Children.map(e.children, (n, r) => {
         let i =
           e.bLazyRenderChildren && !t
@@ -4078,34 +4078,34 @@ function Yn(e) {
           `slide_` + r,
         );
       }),
-    p = u(),
-    g = d();
-  if (!p || !g) return null;
-  let _ = g < p,
-    v = e.hideArrows || !_,
-    y = !_ || e.hidePips,
-    x = !!e.bAutoAdvance && _ && !t,
-    S;
-  r && !h() ? (S = 5) : s ? (S = 1) : c && (S = 2);
-  let C = 4 / 3,
-    w = !0;
-  e.slideAspectRatio && ((C = e.slideAspectRatio), (w = !1));
-  let T = `items_in_row_${e.visibleElements}`;
-  return (0, X.jsx)(b, {
+    g = p(),
+    _ = m();
+  if (!g || !_) return null;
+  let y = _ < g,
+    b = e.hideArrows || !y,
+    x = !y || e.hidePips,
+    S = !!e.bAutoAdvance && y && !t,
+    C;
+  r && !v() ? (C = 5) : c ? (C = 1) : u && (C = 2);
+  let w = 4 / 3,
+    T = !0;
+  e.slideAspectRatio && ((w = e.slideAspectRatio), (T = !1));
+  let E = `items_in_row_${e.visibleElements}`;
+  return (0, X.jsx)(l, {
     "flow-children": `row`,
-    className: D(dn, e.className, T),
+    className: f(dn, e.className, E),
     navKey: e.navKey,
-    ref: l,
+    ref: d,
     onMouseEnter: () => o(!0),
     onMouseLeave: () => o(!1),
     children: (0, X.jsxs)(et, {
       visibleSlides: e.visibleElements,
-      totalSlides: u(),
-      naturalSlideWidth: 100 * C,
+      totalSlides: p(),
+      naturalSlideWidth: 100 * w,
       naturalSlideHeight: 100,
       step: e.visibleElements,
       infinite: !e.disableEdgeWrap,
-      isIntrinsicHeight: w,
+      isIntrinsicHeight: T,
       dragEnabled: !1,
       touchEnabled: !1,
       lockOnWindowScroll: !0,
@@ -4114,17 +4114,17 @@ function Yn(e) {
       currentSlide: e.startingSlide,
       children: [
         (0, X.jsx)($n, {
-          bHideArrows: v,
+          bHideArrows: b,
           onSlide: e.onSlide,
           onNavIntent: e.onNavIntent,
           arrowFill: e.arrowFill,
           arrowStyle: e.arrowStyle,
-          children: f(),
+          children: h(),
         }),
-        !y &&
+        !x &&
           (e.useTestScrollbar && !n
             ? (0, X.jsx)(qn, {
-                showArrows: v,
+                showArrows: b,
                 onNavIntent: e.onNavIntent,
                 carouselStore: null,
               })
@@ -4136,11 +4136,11 @@ function Yn(e) {
                 }),
                 children: (0, X.jsx)(Xn, {
                   ...e,
-                  nPageSize: g,
+                  nPageSize: _,
                   children: e.children,
                 }),
               })),
-        x && (0, X.jsx)(Qn, { pauseReason: S }),
+        S && (0, X.jsx)(Qn, { pauseReason: C }),
       ],
     }),
   });
@@ -4238,41 +4238,41 @@ function $n(e) {
     s = O.useContext(K),
     l = O.useRef(s.state.currentSlide),
     [u, d] = O.useState(null),
-    f = O.useRef(null);
+    p = O.useRef(null);
   O.useEffect(() => {
     let e = () => {
       let e = l.current,
         t = s.state.currentSlide;
       (r && r(t),
         d(t > e ? `Right` : t < e ? `Left` : null),
-        Zn(f),
-        (f.current = window.setTimeout(() => {
-          f.current && (d(null), Zn(f));
+        Zn(p),
+        (p.current = window.setTimeout(() => {
+          p.current && (d(null), Zn(p));
         }, 1e3)),
         (l.current = t));
     };
     return (
       s.subscribe(e),
       () => {
-        (s.unsubscribe(e), Zn(f));
+        (s.unsubscribe(e), Zn(p));
       }
     );
   }, [s]);
-  let p = !!u && `CarouselSliding` + u;
+  let m = !!u && `CarouselSliding` + u;
   return (0, X.jsxs)(`div`, {
-    className: D(fn, `SliderBody`, p),
+    className: f(fn, `SliderBody`, m),
     children: [
       !t &&
         (0, X.jsx)(Q, {
           eDirection: `previous`,
           onNavIntent: i,
-          className: D(
+          className: f(
             `_6KbJ1ZwTIeY-`,
             `oKffwUnx6co-`,
             `_--jO3lLROzo-`,
             `CarouselBtnLeft`,
           ),
-          "aria-label": c(`#Carousel_Prev`),
+          "aria-label": b(`#Carousel_Prev`),
           children: (0, X.jsx)($, {
             arrowFill: a,
             arrowStyle: o,
@@ -4280,23 +4280,23 @@ function $n(e) {
           }),
         }),
       (0, X.jsx)(Gt, {
-        className: v.GetScrollableClassname(),
+        className: w.GetScrollableClassname(),
         classNameTray: pn,
         classNameAnimation: Cn,
         role: `list`,
-        children: (0, X.jsx)(y, { children: n }),
+        children: (0, X.jsx)(c, { children: n }),
       }),
       !t &&
         (0, X.jsx)(Q, {
           eDirection: `next`,
           onNavIntent: i,
-          className: D(
+          className: f(
             `_6KbJ1ZwTIeY-`,
             `O2Vg9rmPwSE-`,
             `_--jO3lLROzo-`,
             `CarouselBtnRight`,
           ),
-          "aria-label": c(`#Carousel_Next`),
+          "aria-label": b(`#Carousel_Next`),
           children: (0, X.jsx)($, {
             arrowFill: a,
             arrowStyle: o,
@@ -4330,7 +4330,7 @@ function $(e) {
     default:
     case er.k_ECutArrowStyle: {
       let e = r == `right` ? 0 : 180;
-      return (0, X.jsx)(g, {
+      return (0, X.jsx)(E, {
         fill: t || `white`,
         role: `presentation`,
         angle: e,
@@ -4338,7 +4338,7 @@ function $(e) {
     }
     case er.k_EDoubleArrowStyle: {
       let e = r == `right` ? 180 : 0;
-      return (0, X.jsx)(_, {
+      return (0, X.jsx)(T, {
         fill: t || `white`,
         role: `presentation`,
         angle: e,
@@ -4346,7 +4346,7 @@ function $(e) {
     }
     case er.k_EThickChevron: {
       let e = r == `right` ? 0 : 180;
-      return (0, X.jsx)(u, {
+      return (0, X.jsx)(S, {
         fill: t || `white`,
         role: `presentation`,
         angle: e,
@@ -4354,14 +4354,14 @@ function $(e) {
     }
     case er.k_EFilledArrow: {
       let e = r == `right` ? 90 : 270;
-      return (0, X.jsx)(x, {
+      return (0, X.jsx)(m, {
         fill: t || `white`,
         role: `presentation`,
         angle: e,
       });
     }
     case er.k_EPointyArrow:
-      return (0, X.jsx)(l, {
+      return (0, X.jsx)(d, {
         fill: t || `white`,
         role: `presentation`,
         direction: r || `left`,
@@ -4379,11 +4379,11 @@ function nr(e) {
   switch (i) {
     default:
     case tr.k_EPillCrumb:
-      return (0, X.jsx)(p, { fill: a, role: `presentation` });
+      return (0, X.jsx)(o, { fill: a, role: `presentation` });
     case tr.k_ECircularCrumb:
-      return (0, X.jsx)(f, { fill: a, role: `presentation` });
+      return (0, X.jsx)(p, { fill: a, role: `presentation` });
     case tr.k_ESquareCrumb:
-      return (0, X.jsx)(s, { fill: a, role: `presentation` });
+      return (0, X.jsx)(g, { fill: a, role: `presentation` });
   }
 }
 export { ln as a, sn as i, nr as n, Jn as r, $ as t };

@@ -22,7 +22,7 @@ import {
 } from "./chunk~6b8ddcaac8.js";
 import { _, _ } from "./chunk~f57d770d64.js";
 import { _, _, _, _ } from "./chunk~cbbb6ae37c.js";
-import { _, _, _, _ } from "./chunk~ffe4581a06.js";
+import { _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~b980924b6a.js";
 import "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~710e3cfd2f.js";
@@ -156,6 +156,7 @@ function _(_, _) {
       : _(_, !1);
 }
 var _ = _(_(), 1),
+  _ = _.createContext(void 0),
   _ = _.createContext(void 0);
 function _(_) {
   return (
@@ -174,9 +175,11 @@ function _(_, _, _, _) {
 function _(_, _, _, _) {
   let _ = _.useContext(_),
     _ = _.useContext(_),
+    _ = _.useContext(_),
     _ = _.useMemo(
-      () => (_ ? _.GetSaleSectionIncludingFooterSections().indexOf(_) : -1),
-      [_, _],
+      () =>
+        _ ?? (_ ? _.GetSaleSectionIncludingFooterSections().indexOf(_) : -1),
+      [_, _, _],
     ),
     _ = _.useId(),
     _ = _(_, 0, _) || _?.length || 0,

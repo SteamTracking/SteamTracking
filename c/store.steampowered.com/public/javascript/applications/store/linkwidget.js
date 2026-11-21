@@ -30,7 +30,7 @@ import { _, _, _, _, _, _, _, _, _ } from "./chunk~f57d770d64.js";
 import { _ } from "./chunk~961c06e93e.js";
 import { _ } from "./chunk~5adf866415.js";
 import { _ } from "./chunk~2f085f1384.js";
-import { _, _, _, _ } from "./chunk~ffe4581a06.js";
+import { _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _, _ } from "./chunk~f4c928a27a.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~e867464c75.js";
@@ -108,82 +108,6 @@ function _(_, _) {
           _?.BFilterRequiresSteamMachineVerifiedOrPlayable()
         ? 3
         : 0;
-}
-var _ = `partnereventaction/eventsummary`;
-function _(_) {
-  let _ = new URLSearchParams();
-  return (
-    _.set(`clan_account_id`, String(_.clanAccountID)),
-    _.set(`event_gid`, _.strEventGID),
-    _.set(`language`, String(_.eLanguage)),
-    _.toString()
-  );
-}
-var _ = `partnereventaction/eventsummaries`;
-function _(_) {
-  let _ = new Map();
-  for (let _ of _)
-    _.has(_.strEventGID) ||
-      _.set(_.strEventGID, {
-        clanAccountID: _.clanAccountID,
-        strEventGID: _.strEventGID,
-      });
-  return [..._.values()].sort(
-    (_, _) =>
-      _.strEventGID.length - _.strEventGID.length ||
-      (_.strEventGID < _.strEventGID ? -1 : +(_.strEventGID > _.strEventGID)),
-  );
-}
-function _(_) {
-  return _(_)
-    .map((_) => `${_.clanAccountID}:${_.strEventGID}`)
-    .join(`,`);
-}
-function _(_) {
-  let _ = new URLSearchParams();
-  return (
-    _.set(`events`, _(_.rgEvents)),
-    _.set(`language`, String(_.eLanguage)),
-    _.toString()
-  );
-}
-async function _(_) {
-  let _ = `${_.STORE_BASE_URL}${_}?${_(_)}`,
-    _ = await fetch(_);
-  if (!_._) throw Error(`${_} answered ${_.status}`);
-  let _ = await _.json();
-  if (_?.success !== 1) throw Error(`${_} answered EResult ${_?.success}`);
-  return _.summary ?? null;
-}
-async function _(_) {
-  if (_.rgEvents.length === 0) return [];
-  let _ = `${_.STORE_BASE_URL}${_}?${_(_)}`,
-    _ = await fetch(_);
-  if (!_._) throw Error(`${_} answered ${_.status}`);
-  let _ = await _.json();
-  if (_?.success !== 1) throw Error(`${_} answered EResult ${_?.success}`);
-  return _.summaries ?? [];
-}
-function _(_, _, _) {
-  return [`PartnerEventSummary`, _, _, _];
-}
-function _(_, _) {
-  return {
-    queryKey: _(_.clanAccountID, _.strEventGID, _.eLanguage),
-    queryFn: () => _(_),
-    select: _,
-    staleTime: 6e5,
-  };
-}
-function _(_) {
-  return [`PartnerEventSummaries`, _.eLanguage, _(_.rgEvents)];
-}
-function _(_) {
-  return {
-    queryKey: _(_),
-    queryFn: () => _(_),
-    staleTime: 3e5,
-  };
 }
 function _(_, _, _) {
   let _ = _,
@@ -616,10 +540,18 @@ function _(_, _, _, _, _, _, _, _, _, _) {
     _ = null,
     _ = !1,
     _ = _ ? [1] : _,
-    _ = _;
-  _ && (_ > 1 || _[0] == `tall`)
-    ? (_ = [`fullrow`])
-    : _ && _.length === 2 && _[0] === `tall` && (_ = [`grid`]);
+    _ = _,
+    _ = _.length;
+  (_ &&
+    _ &&
+    _ > 1 &&
+    _ <= Math.min(4, _) &&
+    _ > _[0] &&
+    (!_ || _ > 1) &&
+    ((_ = [_]), (_ = [`grid`])),
+    _ && (_ > 1 || _[0] == `tall`)
+      ? (_ = [`fullrow`])
+      : _ && _.length === 2 && _[0] === `tall` && (_ = [`grid`]));
   let _ = _ && (_ <= 1 || (!!_ && !_)),
     _ = Math.min(_[0], _);
   if (_ && _) {
@@ -855,55 +787,6 @@ function _(_) {
           _,
         ),
     ),
-  });
-}
-function _(_) {
-  let { event: _, section: _, rgSlides: _, onSlide: _, onNavIntent: _ } = _,
-    _ = _(),
-    { bScreenIsWide: _ } = _(_.section_type);
-  return _.length === 0
-    ? null
-    : _.length === 1
-      ? (0, _.jsx)(_.Fragment, {
-          children: _[0],
-        })
-      : !_ || _
-        ? (0, _.jsx)(`div`, {
-            className: _,
-            children: _.map((_, _) =>
-              (0, _.jsx)(
-                _,
-                {
-                  nSlide: _,
-                  onSlide: _,
-                  children: _,
-                },
-                _,
-              ),
-            ),
-          })
-        : (0, _.jsx)(`div`, {
-            className: _(_, _),
-            children: (0, _.jsx)(_, {
-              ..._(_.jsondata),
-              visibleElements: 1,
-              screenIsWide: !0,
-              useTestScrollbar: !0,
-              navKey: _.unique_id,
-              onSlide: _,
-              onNavIntent: _,
-              children: _,
-            }),
-          });
-}
-function _(_) {
-  let { nSlide: _, onSlide: _, children: _ } = _,
-    _ = _({
-      onEnter: () => _?.(_),
-    });
-  return (0, _.jsx)(`div`, {
-    ref: _,
-    children: _,
   });
 }
 function _(_) {
@@ -1175,6 +1058,131 @@ function _(_, _, _ = ``, _ = 0) {
   return {
     feature: `salesection` + _,
   };
+}
+var _ = `partnereventaction/eventsummary`;
+function _(_) {
+  let _ = new URLSearchParams();
+  return (
+    _.set(`clan_account_id`, String(_.clanAccountID)),
+    _.set(`event_gid`, _.strEventGID),
+    _.set(`language`, String(_.eLanguage)),
+    _.toString()
+  );
+}
+var _ = `partnereventaction/eventsummaries`;
+function _(_) {
+  let _ = new Map();
+  for (let _ of _)
+    _.has(_.strEventGID) ||
+      _.set(_.strEventGID, {
+        clanAccountID: _.clanAccountID,
+        strEventGID: _.strEventGID,
+      });
+  return [..._.values()].sort(
+    (_, _) =>
+      _.strEventGID.length - _.strEventGID.length ||
+      (_.strEventGID < _.strEventGID ? -1 : +(_.strEventGID > _.strEventGID)),
+  );
+}
+function _(_) {
+  return _(_)
+    .map((_) => `${_.clanAccountID}:${_.strEventGID}`)
+    .join(`,`);
+}
+function _(_) {
+  let _ = new URLSearchParams();
+  return (
+    _.set(`events`, _(_.rgEvents)),
+    _.set(`language`, String(_.eLanguage)),
+    _.toString()
+  );
+}
+async function _(_) {
+  let _ = `${_.STORE_BASE_URL}${_}?${_(_)}`,
+    _ = await fetch(_);
+  if (!_._) throw Error(`${_} answered ${_.status}`);
+  let _ = await _.json();
+  if (_?.success !== 1) throw Error(`${_} answered EResult ${_?.success}`);
+  return _.summary ?? null;
+}
+async function _(_) {
+  if (_.rgEvents.length === 0) return [];
+  let _ = `${_.STORE_BASE_URL}${_}?${_(_)}`,
+    _ = await fetch(_);
+  if (!_._) throw Error(`${_} answered ${_.status}`);
+  let _ = await _.json();
+  if (_?.success !== 1) throw Error(`${_} answered EResult ${_?.success}`);
+  return _.summaries ?? [];
+}
+function _(_, _, _) {
+  return [`PartnerEventSummary`, _, _, _];
+}
+function _(_, _) {
+  return {
+    queryKey: _(_.clanAccountID, _.strEventGID, _.eLanguage),
+    queryFn: () => _(_),
+    select: _,
+    staleTime: 6e5,
+  };
+}
+function _(_) {
+  return [`PartnerEventSummaries`, _.eLanguage, _(_.rgEvents)];
+}
+function _(_) {
+  return {
+    queryKey: _(_),
+    queryFn: () => _(_),
+    staleTime: 3e5,
+  };
+}
+function _(_) {
+  let { event: _, section: _, rgSlides: _, onSlide: _, onNavIntent: _ } = _,
+    _ = _(),
+    { bScreenIsWide: _ } = _(_.section_type);
+  return _.length === 0
+    ? null
+    : _.length === 1
+      ? (0, _.jsx)(_.Fragment, {
+          children: _[0],
+        })
+      : !_ || _
+        ? (0, _.jsx)(`div`, {
+            className: _,
+            children: _.map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  nSlide: _,
+                  onSlide: _,
+                  children: _,
+                },
+                _,
+              ),
+            ),
+          })
+        : (0, _.jsx)(`div`, {
+            className: _(_, _),
+            children: (0, _.jsx)(_, {
+              ..._(_.jsondata),
+              visibleElements: 1,
+              screenIsWide: !0,
+              useTestScrollbar: !0,
+              navKey: _.unique_id,
+              onSlide: _,
+              onNavIntent: _,
+              children: _,
+            }),
+          });
+}
+function _(_) {
+  let { nSlide: _, onSlide: _, children: _ } = _,
+    _ = _({
+      onEnter: () => _?.(_),
+    });
+  return (0, _.jsx)(`div`, {
+    ref: _,
+    children: _,
+  });
 }
 function _(_) {
   let { language: _, link: _ } = _,

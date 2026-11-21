@@ -1,7 +1,7 @@
 import { _ } from "./chunk~f025431ab0.js";
 import { _, _, _, _ } from "./chunk~01cfc309bf.js";
 import { _ } from "./chunk~6b8ddcaac8.js";
-import { _, _, _, _ } from "./chunk~ffe4581a06.js";
+import { _, _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~56437c278a.js";
 import { _ } from "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~710e3cfd2f.js";
@@ -25,7 +25,9 @@ import {
   _,
   _,
   _,
+  _,
 } from "./main.js";
+import { _ } from "./chunk~6417efccc1.js";
 var _ = _(_(), 1),
   _ = _(_(), 1),
   _ = `911px`,
@@ -341,11 +343,13 @@ function _(_) {
     _ = _?.preferences?.disable_microtrailers,
     [_, _] = _.useState(!1),
     [_, _] = _.useState(!1),
+    [_, _] = _.useState(!1),
     _ = _(_),
-    _ = !!_ && !_ && !_.sale_page && !_,
-    _ = _ && (_ || _),
+    _ = !!_ && !_.sale_page && !_,
+    _ = _ && (_ || _ || _),
     _ = _(_),
     _ = _(_.url, _, _),
+    _ = _(_, _),
     _ = _(_, _, _),
     _ = _.image || (_ ? _(_, `hero_capsule`, `header`) : _(_, `header`)),
     _ = _(_),
@@ -367,6 +371,7 @@ function _(_) {
                 _: _,
                 active: _,
                 bIsHoverMode: !0,
+                eGrowOnActivate: _ ? _.k_ETrailerGrowAmount_Implicit : void 0,
               }),
             _ &&
               (0, _.jsx)(`div`, {
@@ -408,35 +413,45 @@ function _(_) {
       className: _,
       children: _,
     });
-  let _ = (0, _.jsx)(_, {
+  let _ = (0, _.jsxs)(_, {
     className: (0, _.default)(
       _,
       _ ? _ : _,
       _.banner === `daily_deal` && `-xyaBPF0Lno-`,
+      _ && `i6bxdYcZVss-`,
       _ && `l6QUbDlbEUk-`,
     ),
     onGamepadFocus: () => _(!0),
     onGamepadBlur: () => _(!1),
     ..._,
-    children: _
-      ? _
-        ? (0, _.jsx)(_, {
-            _: _,
+    children: [
+      _
+        ? _
+          ? (0, _.jsx)(_, {
+              _: _,
+              className: _,
+              strChildLinkURL: _ ?? _,
+              children: _,
+            })
+          : (0, _.jsx)(_, {
+              _: _,
+              hoverClassName: _,
+              fnHoverState: _,
+              disableScreenshots: !0,
+              children: _,
+            })
+        : (0, _.jsx)(`div`, {
             className: _,
-            strChildLinkURL: _ ?? _,
             children: _,
-          })
-        : (0, _.jsx)(_, {
-            _: _,
-            hoverClassName: _,
-            fnHoverState: _,
-            disableScreenshots: !0,
-            children: _,
-          })
-      : (0, _.jsx)(`div`, {
-          className: _,
-          children: _,
+          }),
+      _ &&
+        !_.sale_page &&
+        (0, _.jsx)(_, {
+          appid: _.appid,
+          snr: _,
+          onActiveChange: _,
         }),
+    ],
   });
   return _
     ? (0, _.jsx)(_, {

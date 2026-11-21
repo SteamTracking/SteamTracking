@@ -4,7 +4,7 @@
 import { At as e, St as t, kt as n } from "./chunk~01cfc309bf.js";
 import { n as r, r as i } from "./chunk~0278ae6236.js";
 import { t as a } from "./chunk~c55d6473b2.js";
-import { Jy as o, Lb as s, cx as c, vb as l } from "./main.js";
+import { Db as o, Kb as s, _x as c, rb as l } from "./main.js";
 function u(e) {
   let t = `offline`;
   return (
@@ -155,7 +155,7 @@ var d = class {
         return e.Localize(t, this.m_mapRichPresence);
       }
     } else if (this.HasStateFlag(8))
-      return o(`#PersonaStateRemotePlayTogether`);
+      return l(`#PersonaStateRemotePlayTogether`);
     return ``;
   }
   GetCurrentGameStatus() {
@@ -173,13 +173,13 @@ var d = class {
     return ((t *= n > 86400 ? e : n > 2 * e ? 60 : 15), t);
   }
   GetOfflineStatusTime() {
-    if (this.last_seen_online == 0) return o(`#PersonaStateOffline`);
+    if (this.last_seen_online == 0) return l(`#PersonaStateOffline`);
     let e = this.GetOfflineStatusUpdateRate();
     (!c.IN_MOBILE || e <= 60) && t(e);
     let n = a.CMInterface.GetServerRTime32() - this.last_seen_online;
     return n < 60
-      ? o(`#PersonaStateLastSeen_JustNow`)
-      : o(`#PersonaStateLastSeen`, l(n));
+      ? l(`#PersonaStateLastSeen_JustNow`)
+      : l(`#PersonaStateLastSeen`, o(n));
   }
   GetLocalizedOnlineStatus() {
     switch (this.m_ePersonaState) {
@@ -187,17 +187,17 @@ var d = class {
       case 7:
         return this.GetOfflineStatusTime();
       case 1:
-        return o(`#PersonaStateOnline`);
+        return l(`#PersonaStateOnline`);
       case 2:
-        return o(`#PersonaStateBusy`);
+        return l(`#PersonaStateBusy`);
       case 3:
-        return o(`#PersonaStateAway`);
+        return l(`#PersonaStateAway`);
       case 4:
-        return o(`#PersonaStateSnooze`);
+        return l(`#PersonaStateSnooze`);
       case 5:
-        return o(`#PersonaStateLookingToTrade`);
+        return l(`#PersonaStateLookingToTrade`);
       case 6:
-        return o(`#PersonaStateLookingToPlay`);
+        return l(`#PersonaStateLookingToPlay`);
       default:
         return ``;
     }

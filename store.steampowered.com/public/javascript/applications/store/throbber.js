@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
-import { Jb as r, Kb as i, dS as a, wc as o } from "./main.js";
+import { Nc as r, bS as i, rx as a, tx as o } from "./main.js";
 var s = e(t()),
   c = `_5ZSIN7wAn6E-`,
   l = `zuEsqPx3FlM-`,
@@ -38,15 +38,15 @@ var s = e(t()),
     import.meta.url,
   ).href;
 function L() {
-  let e = r();
-  return e ? a(e.LAUNCHER_TYPE) : !1;
+  let e = a();
+  return e ? i(e.LAUNCHER_TYPE) : !1;
 }
 var R = n(),
   z = s.memo(function (e) {
     let {
         className: t,
         size: n,
-        string: r,
+        string: i,
         position: a,
         static: u,
         msDelayAppear: f,
@@ -60,11 +60,11 @@ var R = n(),
         let e = setTimeout(() => h(!0), f);
         return () => clearTimeout(e);
       }, [f, m]),
-      r === void 0 && p.push(d),
+      i === void 0 && p.push(d),
       t && p.push(t),
       u && p.push(l),
       (0, R.jsxs)(`div`, {
-        className: o(
+        className: r(
           a == `center` && `CnlxA61G8kY-`,
           !!f && `VF2yNCE0Yms-`,
           m && `uALx1rZZEbE-`,
@@ -76,10 +76,10 @@ var R = n(),
               className: p.join(` `),
               children: (0, R.jsx)(`div`, {
                 className: `Laj-8wPgPBM-`,
-                children: (0, R.jsx)(`img`, { src: i(I) }),
+                children: (0, R.jsx)(`img`, { src: o(I) }),
               }),
             }),
-          !!r && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: r }),
+          !!i && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: i }),
         ],
       })
     );
@@ -88,9 +88,9 @@ s.memo(function (e) {
   let {
       className: t,
       size: n,
-      string: r,
-      position: i,
-      static: a,
+      string: i,
+      position: a,
+      static: o,
       msDelayAppear: u,
     } = e,
     f = [c, `SteamLogoThrobber`, B(n)],
@@ -101,12 +101,12 @@ s.memo(function (e) {
       let e = setTimeout(() => m(!0), u);
       return () => clearTimeout(e);
     }, [u, p]),
-    r === void 0 && f.push(d),
+    i === void 0 && f.push(d),
     t && f.push(t),
-    a && f.push(l),
+    o && f.push(l),
     (0, R.jsxs)(`div`, {
-      className: o(
-        i == `center` && `CnlxA61G8kY-`,
+      className: r(
+        a == `center` && `CnlxA61G8kY-`,
         !!u && `VF2yNCE0Yms-`,
         p && `uALx1rZZEbE-`,
       ),
@@ -122,7 +122,7 @@ s.memo(function (e) {
               ],
             }),
           }),
-        !!r && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: r }),
+        !!i && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: i }),
       ],
     })
   );

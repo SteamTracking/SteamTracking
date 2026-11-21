@@ -12,17 +12,17 @@ import {
 import { t as o } from "./chunk~eefd71512b.js";
 import { r as s, t as c } from "./chunk~f162f235ea.js";
 import {
-  $b as l,
-  Jc as u,
-  Jy as d,
-  Yc as f,
-  ar as p,
-  cx as m,
-  dr as h,
-  fy as g,
-  ly as _,
-  ux as v,
-  yS as y,
+  OS as l,
+  Ox as u,
+  _x as d,
+  cx as f,
+  fr as p,
+  il as m,
+  rb as h,
+  rl as g,
+  vr as _,
+  vy as v,
+  xy as y,
   yx as b,
 } from "./main.js";
 import { t as x } from "./chunk~85f65a382b.js";
@@ -60,7 +60,7 @@ var w = `HQgdwH5tXUk-`,
   I,
   L = 864e5;
 function R(e) {
-  return `appinfo_${e}_${m.LANGUAGE}`;
+  return `appinfo_${e}_${d.LANGUAGE}`;
 }
 function z(e) {
   return !!(e && Date.now() - e.timeCached < L);
@@ -75,9 +75,9 @@ function B(e, t) {
           .forEach(({ value: e }) => r.set(e.appid, e));
         let i = n.slice().filter((e) => !r.has(e));
         if (i.length) {
-          let n = b.Init(u);
-          (n.Body().set_language(y(m.LANGUAGE)), n.Body().set_appids(i));
-          let a = await f.GetApps(e, n);
+          let n = u.Init(g);
+          (n.Body().set_language(l(d.LANGUAGE)), n.Body().set_appids(i));
+          let a = await m.GetApps(e, n);
           if (a.GetEResult() != 1) throw a.GetErrorMessage();
           a.Body()
             .toObject()
@@ -94,8 +94,8 @@ function B(e, t) {
   );
 }
 function V(e) {
-  let t = _(),
-    n = g();
+  let t = v(),
+    n = y();
   return a({
     queryKey: [`appinfo`, e],
     queryFn: async () => B(t, n).load(e),
@@ -118,12 +118,12 @@ function W(e) {
 }
 function G(e) {
   let t = s(),
-    n = _();
+    n = v();
   return t.isSuccess
     ? t.data?.sessions?.length > 0
       ? (0, H.jsxs)(H.Fragment, {
           children: [
-            (0, H.jsx)(h, {
+            (0, H.jsx)(_, {
               className: M,
               children: `Available Steam Sessions:`,
             }),
@@ -188,7 +188,7 @@ function K(e) {
             className: T,
             children: (0, H.jsx)(`iframe`, { src: e.sessionLiveDataUrl }),
           }),
-          m.IN_CLIENT
+          d.IN_CLIENT
             ? (0, H.jsx)(`div`, {
                 className: E,
                 children: (0, H.jsx)(W, { ...e, children: `Launch Game` }),
@@ -197,25 +197,25 @@ function K(e) {
                 children: [
                   (0, H.jsx)(`div`, {
                     className: E,
-                    children: v.logged_in
+                    children: b.logged_in
                       ? (0, H.jsx)(G, { ...e })
                       : (0, H.jsxs)(H.Fragment, {
                           children: [
-                            (0, H.jsx)(h, {
+                            (0, H.jsx)(_, {
                               children: `Login to join on another device`,
                             }),
                             (0, H.jsx)(p, {
                               onClick: x,
-                              children: d(`#Login_SignIn`),
+                              children: h(`#Login_SignIn`),
                             }),
                           ],
                         }),
                   }),
-                  !m.IN_MOBILE_WEBVIEW &&
+                  !d.IN_MOBILE_WEBVIEW &&
                     (0, H.jsxs)(`div`, {
                       className: `SqHuEyf-R0c-`,
                       children: [
-                        (0, H.jsx)(h, { children: `Or launch on this PC` }),
+                        (0, H.jsx)(_, { children: `Or launch on this PC` }),
                         (0, H.jsx)(W, { ...e, children: `Launch Game Here` }),
                       ],
                     }),
@@ -226,7 +226,7 @@ function K(e) {
     : (0, H.jsx)(o, {});
 }
 function q() {
-  let e = l(`multiplayersession_join`, `application_config`),
+  let e = f(`multiplayersession_join`, `application_config`),
     { header: t, body: r } = S(new URLSearchParams(n().search).get(`jws`)) || {
       header: {},
       body: {},

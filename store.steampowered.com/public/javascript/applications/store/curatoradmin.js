@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { F as t, L as n, Lt as r, ft as i } from "./chunk~01cfc309bf.js";
-import { Xc as a } from "./main.js";
+import { al as a } from "./main.js";
 import { n as o, r as s } from "./chunk~5d95ff6b7f.js";
 var c = e(r()),
   l = i(),

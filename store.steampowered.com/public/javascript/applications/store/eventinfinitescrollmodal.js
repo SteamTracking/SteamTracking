@@ -7,26 +7,26 @@ import { i as a } from "./chunk~cf3721cc1c.js";
 import "./chunk~8681f5c764.js";
 import { t as o } from "./chunk~eefd71512b.js";
 import {
-  Bu as s,
-  Cu as c,
-  L as l,
-  Lb as u,
-  Tr as d,
-  Vn as f,
-  Wb as p,
-  Xc as m,
-  fn as h,
-  i as g,
-  qb as _,
-  t as v,
+  $b as s,
+  Jn as c,
+  Kb as l,
+  L as u,
+  Mr as d,
+  Mu as f,
+  Yu as p,
+  al as m,
+  i as h,
+  nx as g,
+  t as _,
+  yn as v,
 } from "./main.js";
 var y = e(i()),
   b = e(t()),
   x = n(),
   S = (e) => {
     let { bShowOnlyInitialEvent: t } = e,
-      n = p(),
-      r = l();
+      n = s(),
+      r = u();
     return (0, x.jsx)(m, {
       children: (0, x.jsx)(C, {
         ...e,
@@ -42,12 +42,12 @@ var y = e(i()),
     componentDidMount() {
       this.state.eventModel || this.setState({ bLoading: !0 }, this.LoadEvent);
       let e = this.GetBodyElement();
-      e && this.props.bPrimaryPageFeature && e.classList.add(f);
+      e && this.props.bPrimaryPageFeature && e.classList.add(c);
     }
     componentWillUnmount() {
       this.m_cancelSignal.cancel(`EventInfiniteScrollModal unmounting`);
       let e = this.GetBodyElement();
-      e && this.props.bPrimaryPageFeature && e.classList.remove(f);
+      e && this.props.bPrimaryPageFeature && e.classList.remove(c);
     }
     GetBodyElement() {
       return this.m_refParent.current
@@ -81,7 +81,7 @@ var y = e(i()),
               this.setState({ bLoading: !1 }));
         })
         .catch((e) => {
-          let t = s(e);
+          let t = p(e);
           (console.error(`EventInfiniteScrollModal failed ` + t.strErrorMsg, t),
             this.setState({ bLoading: !1 }));
         });
@@ -95,10 +95,10 @@ var y = e(i()),
       let { bShowOnlyInitialEvent: e } = this.props,
         { bLoading: t, eventModel: n } = this.state;
       if (t)
-        return (0, x.jsx)(h, {
+        return (0, x.jsx)(v, {
           active: !0,
           children: (0, x.jsx)(`div`, {
-            className: v,
+            className: _,
             style: { height: `400px` },
             children: (0, x.jsx)(o, {}),
           }),
@@ -107,29 +107,29 @@ var y = e(i()),
           closeModal: r,
           appid: i,
           clanSteamID: s,
-          className: l,
-          partnerEventStore: u,
-          showAppHeader: f,
+          className: c,
+          partnerEventStore: l,
+          showAppHeader: u,
           bPrimaryPageFeature: p,
           additionalParams: m,
           eventClassName: y,
         } = this.props,
         b;
-      _.IN_CLIENT &&
+      g.IN_CLIENT &&
         n?.appid &&
-        (c.Get().HintLoad(),
-        c.Get().BOwnsApp(n.appid) &&
+        (f.Get().HintLoad(),
+        f.Get().BOwnsApp(n.appid) &&
           (b = (e) => d(e, `steam://nav/games/details/` + n.appid)));
-      let S = (0, x.jsx)(g, {
+      let S = (0, x.jsx)(h, {
         children: (t) =>
           (0, x.jsx)(a, {
             initialEvent: n,
             appid: i,
             clanSteamID: s,
-            partnerEventStore: u,
+            partnerEventStore: l,
             emoticonStore: t,
             closeModal: p ? void 0 : r,
-            showAppHeader: f,
+            showAppHeader: u,
             bShowOnlyInitialEvent: e,
             additionalParams: m,
             eventClassName: y,
@@ -138,11 +138,11 @@ var y = e(i()),
       });
       return p
         ? S
-        : (0, x.jsx)(h, {
+        : (0, x.jsx)(v, {
             active: !0,
-            children: (0, x.jsx)(`div`, { className: l, children: S }),
+            children: (0, x.jsx)(`div`, { className: c, children: S }),
           });
     }
   };
-C = u([r], C);
+C = l([r], C);
 export { S as t };

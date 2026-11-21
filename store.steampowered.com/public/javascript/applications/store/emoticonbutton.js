@@ -13,27 +13,27 @@ import {
   m as te,
   o as u,
   p as d,
-  s as ne,
-  u as re,
+  s as f,
+  u as ne,
 } from "./chunk~a19d1add1e.js";
-import { n as f } from "./chunk~a7c5e71e12.js";
+import { n as re } from "./chunk~a7c5e71e12.js";
 import { t as ie } from "./chunk~e3c69795ea.js";
 import {
-  $y as p,
-  Ar as ae,
-  Cr as m,
-  G as h,
-  Jy as g,
-  Lb as _,
-  Mr as v,
-  Ux as oe,
-  Vr as y,
-  cx as b,
-  er as se,
-  jc as x,
-  sl as ce,
-  wc as S,
-  xl as C,
+  Al as p,
+  Ar as m,
+  Bc as h,
+  G as g,
+  Kb as _,
+  Lr as ae,
+  Nc as v,
+  Qx as oe,
+  Yr as y,
+  _x as b,
+  cb as x,
+  gl as se,
+  rb as S,
+  sr as ce,
+  zr as C,
 } from "./main.js";
 var w = e(t());
 function T(e, t, n = !1) {
@@ -64,11 +64,11 @@ var le = `_6Ymd3Ej4NCU-`,
         i = e.length > 1,
         a = i
           ? ({ detail: { button: t } }) => {
-              t === C.BUMPER_LEFT
+              t === p.BUMPER_LEFT
                 ? this.setState({
                     activeIndex: Math.max(0, this.state.activeIndex - 1),
                   })
-                : t === C.BUMPER_RIGHT &&
+                : t === p.BUMPER_RIGHT &&
                   this.setState({
                     activeIndex: Math.min(
                       e.length - 1,
@@ -77,7 +77,7 @@ var le = `_6Ymd3Ej4NCU-`,
                   });
             }
           : void 0;
-      return (0, E.jsxs)(x, {
+      return (0, E.jsxs)(h, {
         className: le,
         onButtonDown: a,
         children: [i && (0, E.jsx)(xe, { children: this.RenderTabs() }), r],
@@ -99,7 +99,7 @@ var le = `_6Ymd3Ej4NCU-`,
     }
   };
 function xe(e) {
-  return (0, E.jsx)(x, {
+  return (0, E.jsx)(h, {
     className: ue,
     "flow-children": `row`,
     children: e.children,
@@ -110,12 +110,12 @@ function O(e) {
 }
 function Se(e) {
   let { active: t, children: n, onClick: r } = e;
-  return (0, E.jsx)(x, {
-    className: S(de, t && `f-iRFuUHuSo-`),
+  return (0, E.jsx)(h, {
+    className: v(de, t && `f-iRFuUHuSo-`),
     focusClassName: fe,
     onActivate: r,
     children: (0, E.jsx)(`div`, {
-      className: S(pe, t && `f-iRFuUHuSo-`),
+      className: v(pe, t && `f-iRFuUHuSo-`),
       children: n,
     }),
   });
@@ -130,7 +130,7 @@ function k(e) {
     } = e,
     o = t.map((e, a) =>
       (0, E.jsx)(
-        x,
+        h,
         {
           className: ge,
           onActivate: () => r(t[a]),
@@ -143,7 +143,7 @@ function k(e) {
     );
   return (
     t.length === 0 && a && (o = a()),
-    (0, E.jsx)(x, { "flow-children": `grid`, className: he, children: o })
+    (0, E.jsx)(h, { "flow-children": `grid`, className: he, children: o })
   );
 }
 function A(e) {
@@ -189,9 +189,9 @@ function N(e) {
   let { value: t, onChange: n, onSubmit: r } = e;
   return (0, E.jsx)(`div`, {
     className: ve,
-    children: (0, E.jsx)(se, {
+    children: (0, E.jsx)(ce, {
       type: `text`,
-      placeholder: g(`#AddonPicker_Search`),
+      placeholder: S(`#AddonPicker_Search`),
       className: ye,
       value: t,
       onChange: (e) => n(e.target.value),
@@ -201,7 +201,7 @@ function N(e) {
 }
 function P(e) {
   let { className: t, ...n } = e;
-  return (0, E.jsx)(`div`, { className: S(t, be), ...n });
+  return (0, E.jsx)(`div`, { className: v(t, be), ...n });
 }
 var F = 1e3;
 function I(e) {
@@ -246,8 +246,8 @@ var we = i((e) => {
         s.push({
           renderTab: (e) =>
             (0, E.jsx)(`span`, {
-              title: g(`#AddonPicker_RecentlyUsed`),
-              className: S(d, ne, e && void 0),
+              title: S(`#AddonPicker_RecentlyUsed`),
+              className: v(d, f, e && void 0),
               children: (0, E.jsx)(Z, {}),
             }),
           renderContent: () =>
@@ -258,15 +258,15 @@ var we = i((e) => {
               flairGroupID: r,
             }),
         }),
-      (0, E.jsx)(v, {
+      (0, E.jsx)(C, {
         children: (0, E.jsx)(D, {
           config: [
             ...s,
             {
               renderTab: (e) =>
                 (0, E.jsx)(`span`, {
-                  title: g(`#AddonPicker_Emoticons`),
-                  className: S(d, e && void 0),
+                  title: S(`#AddonPicker_Emoticons`),
+                  className: v(d, e && void 0),
                   children: (0, E.jsx)(X, {}),
                 }),
               renderContent: () =>
@@ -279,8 +279,8 @@ var we = i((e) => {
             {
               renderTab: (e) =>
                 (0, E.jsx)(`span`, {
-                  title: g(`#AddonPicker_Stickers`),
-                  className: S(d, e && void 0),
+                  title: S(`#AddonPicker_Stickers`),
+                  className: v(d, e && void 0),
                   children: (0, E.jsx)(Y, {}),
                 }),
               renderContent: () =>
@@ -289,8 +289,8 @@ var we = i((e) => {
             {
               renderTab: (e) =>
                 (0, E.jsx)(`span`, {
-                  title: g(`#AddonPicker_RoomEffects`),
-                  className: S(d, e && void 0),
+                  title: S(`#AddonPicker_RoomEffects`),
+                  className: v(d, e && void 0),
                   children: (0, E.jsx)(je, {}),
                 }),
               renderContent: () =>
@@ -333,8 +333,8 @@ var we = i((e) => {
           i.push({
             renderTab: (e) =>
               (0, E.jsx)(`span`, {
-                title: g(`#AddonPicker_RecentlyUsed`),
-                className: S(d, ne, e && void 0),
+                title: S(`#AddonPicker_RecentlyUsed`),
+                className: v(d, f, e && void 0),
                 children: (0, E.jsx)(Z, {}),
               }),
             renderContent: () =>
@@ -345,15 +345,15 @@ var we = i((e) => {
                 flairGroupID: r,
               }),
           }),
-        (0, E.jsx)(v, {
+        (0, E.jsx)(C, {
           children: (0, E.jsx)(D, {
             config: [
               ...i,
               {
                 renderTab: (e) =>
                   (0, E.jsx)(`span`, {
-                    title: g(`#AddonPicker_Emoticons`),
-                    className: S(d, e && void 0),
+                    title: S(`#AddonPicker_Emoticons`),
+                    className: v(d, e && void 0),
                     children: (0, E.jsx)(X, {}),
                   }),
                 renderContent: () =>
@@ -366,8 +366,8 @@ var we = i((e) => {
               {
                 renderTab: (e) =>
                   (0, E.jsx)(`span`, {
-                    title: g(`#AddonPicker_Stickers`),
-                    className: S(d, e && void 0),
+                    title: S(`#AddonPicker_Stickers`),
+                    className: v(d, e && void 0),
                     children: (0, E.jsx)(Y, {}),
                   }),
                 renderContent: () =>
@@ -396,13 +396,13 @@ var Te = class extends w.Component {
       this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
     }
     render() {
-      return (0, E.jsx)(v, {
+      return (0, E.jsx)(C, {
         children: (0, E.jsx)(D, {
           config: [
             {
               renderTab: () =>
                 (0, E.jsx)(`span`, {
-                  title: g(`#AddonPicker_Emoticons`),
+                  title: S(`#AddonPicker_Emoticons`),
                   className: d,
                   children: (0, E.jsx)(X, {}),
                 }),
@@ -434,13 +434,13 @@ var Te = class extends w.Component {
       this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
     }
     render() {
-      return (0, E.jsx)(v, {
+      return (0, E.jsx)(C, {
         children: (0, E.jsx)(D, {
           config: [
             {
               renderTab: () =>
                 (0, E.jsx)(`span`, {
-                  title: g(`#AddonPicker_Emoticons`),
+                  title: S(`#AddonPicker_Emoticons`),
                   className: d,
                   children: (0, E.jsx)(X, {}),
                 }),
@@ -465,30 +465,30 @@ var Te = class extends w.Component {
       return (
         I(e) &&
           i.push({
-            title: g(`#AddonPicker_RecentEmoticons`),
-            items: h.FilterEmoticons(I(e), r),
+            title: S(`#AddonPicker_RecentEmoticons`),
+            items: g.FilterEmoticons(I(e), r),
             onItemSelect: t,
             renderItem: (e) => (0, E.jsx)(K, { emoticon: e }),
             keyExtractor: (e) => e.name,
             renderEmpty: () =>
               (0, E.jsx)(P, {
                 children: r
-                  ? g(`#AddonPicker_NoResults`)
-                  : g(`#AddonPicker_NoRecent`, g(`#AddonPicker_Emoticons`)),
+                  ? S(`#AddonPicker_NoResults`)
+                  : S(`#AddonPicker_NoRecent`, S(`#AddonPicker_Emoticons`)),
               }),
           }),
         L(e).length &&
           i.push({
-            title: g(`#AddonPicker_RecentStickers`),
-            items: h.FilterStickers(L(e), r),
+            title: S(`#AddonPicker_RecentStickers`),
+            items: g.FilterStickers(L(e), r),
             onItemSelect: n,
             renderItem: (e) => (0, E.jsx)(q, { sticker: e }),
             keyExtractor: ({ name: e }) => e,
             renderEmpty: () =>
               (0, E.jsx)(P, {
                 children: r
-                  ? g(`#AddonPicker_NoResults`)
-                  : g(`#AddonPicker_NoRecent`, g(`#AddonPicker_Stickers`)),
+                  ? S(`#AddonPicker_NoResults`)
+                  : S(`#AddonPicker_NoRecent`, S(`#AddonPicker_Stickers`)),
               }),
           }),
         (0, E.jsx)(j, {
@@ -505,9 +505,9 @@ var Te = class extends w.Component {
       let { store: e, onItemSelect: t, flairGroupID: n } = this.props,
         { filter: r } = this.state,
         i = !r && n ? e.GetFlairListByGroupID(n) : e.emoticon_list,
-        a = h.FilterEmoticons(i, r).slice(0, F);
+        a = g.FilterEmoticons(i, r).slice(0, F);
       return (0, E.jsx)(A, {
-        title: g(`#AddonPicker_Emoticons`),
+        title: S(`#AddonPicker_Emoticons`),
         items: a,
         onItemSelect: t,
         renderItem: (e) => (0, E.jsx)(K, { emoticon: e }),
@@ -517,7 +517,7 @@ var Te = class extends w.Component {
         onSubmit: () => t(a[0]),
         renderEmpty: () =>
           r
-            ? (0, E.jsx)(P, { children: g(`#AddonPicker_NoResults`) })
+            ? (0, E.jsx)(P, { children: S(`#AddonPicker_NoResults`) })
             : (0, E.jsx)(H, {}),
       });
     }
@@ -526,18 +526,18 @@ function H() {
   return (0, E.jsxs)(E.Fragment, {
     children: [
       (0, E.jsx)(P, {
-        children: g(`#AddonPicker_NoneOwned`, g(`#AddonPicker_Emoticons`)),
+        children: S(`#AddonPicker_NoneOwned`, S(`#AddonPicker_Emoticons`)),
       }),
       (0, E.jsx)(P, {
-        children: p(
+        children: x(
           `#AddonPicker_AcquireAtPointsShopOrMarket`,
           (0, E.jsx)(m, {
             href: `${b.STORE_BASE_URL}points/shop/c/emoticons`,
-            children: g(`#AddonPicker_AcquireAtPointsShop_Link`),
+            children: S(`#AddonPicker_AcquireAtPointsShop_Link`),
           }),
           (0, E.jsx)(m, {
             href: `${b.COMMUNITY_BASE_URL}market`,
-            children: g(`#AddonPicker_AcquireAtPointsShopOrMarket_Link`),
+            children: S(`#AddonPicker_AcquireAtPointsShopOrMarket_Link`),
           }),
         ),
       }),
@@ -549,9 +549,9 @@ var U = class extends w.Component {
     render() {
       let { store: e, onItemSelect: t } = this.props,
         { filter: n } = this.state,
-        r = h.FilterStickers(e.GetStickerList(), n);
+        r = g.FilterStickers(e.GetStickerList(), n);
       return (0, E.jsx)(A, {
-        title: g(`#EmoticonPicker_StickerHeading`),
+        title: S(`#EmoticonPicker_StickerHeading`),
         items: r,
         onItemSelect: t,
         renderItem: (e) => (0, E.jsx)(q, { sticker: e }),
@@ -561,21 +561,21 @@ var U = class extends w.Component {
         onSubmit: () => t(r[0]),
         renderEmpty: () =>
           n
-            ? (0, E.jsx)(P, { children: g(`#AddonPicker_NoResults`) })
+            ? (0, E.jsx)(P, { children: S(`#AddonPicker_NoResults`) })
             : (0, E.jsxs)(E.Fragment, {
                 children: [
                   (0, E.jsx)(P, {
-                    children: g(
+                    children: S(
                       `#AddonPicker_NoneOwned`,
-                      g(`#AddonPicker_Stickers`),
+                      S(`#AddonPicker_Stickers`),
                     ),
                   }),
                   (0, E.jsx)(P, {
-                    children: p(
+                    children: x(
                       `#AddonPicker_AcquireAtPointsShop`,
                       (0, E.jsx)(m, {
                         href: `${b.STORE_BASE_URL}points/shop/c/stickers`,
-                        children: g(`#AddonPicker_AcquireAtPointsShop_Link`),
+                        children: S(`#AddonPicker_AcquireAtPointsShop_Link`),
                       }),
                     ),
                   }),
@@ -591,7 +591,7 @@ var U = class extends w.Component {
         { filter: r } = this.state,
         i = e.GetEffectList().filter(({ name: e }) => e.indexOf(r) > -1);
       return (0, E.jsx)(A, {
-        title: g(`#EmoticonPicker_EffectHeading`),
+        title: S(`#EmoticonPicker_EffectHeading`),
         items: i,
         onItemSelect: n,
         renderItem: (e) => (0, E.jsx)(ke, { effect: e, roomEffectSettings: t }),
@@ -601,21 +601,21 @@ var U = class extends w.Component {
         onSubmit: () => n(i[0]),
         renderEmpty: () =>
           r
-            ? (0, E.jsx)(P, { children: g(`#AddonPicker_NoResults`) })
+            ? (0, E.jsx)(P, { children: S(`#AddonPicker_NoResults`) })
             : (0, E.jsxs)(E.Fragment, {
                 children: [
                   (0, E.jsx)(P, {
-                    children: g(
+                    children: S(
                       `#AddonPicker_NoneOwned`,
-                      g(`#AddonPicker_RoomEffects`),
+                      S(`#AddonPicker_RoomEffects`),
                     ),
                   }),
                   (0, E.jsx)(P, {
-                    children: p(
+                    children: x(
                       `#AddonPicker_AcquireAtPointsShop`,
                       (0, E.jsx)(m, {
                         href: `${b.STORE_BASE_URL}points/shop/c/chateffects`,
-                        children: g(`#AddonPicker_AcquireAtPointsShop_Link`),
+                        children: S(`#AddonPicker_AcquireAtPointsShop_Link`),
                       }),
                     ),
                   }),
@@ -633,16 +633,16 @@ var U = class extends w.Component {
       return (
         I(e).length &&
           i.push({
-            title: g(`#AddonPicker_RecentEmoticons`),
-            items: h.FilterEmoticons(I(e), r),
+            title: S(`#AddonPicker_RecentEmoticons`),
+            items: g.FilterEmoticons(I(e), r),
             onItemSelect: t,
             renderItem: (e) => (0, E.jsx)(K, { emoticon: e }),
             keyExtractor: (e) => e.name,
             renderEmpty: () =>
               (0, E.jsx)(P, {
                 children: r
-                  ? g(`#AddonPicker_NoResults`)
-                  : g(`#AddonPicker_NoRecent`, g(`#AddonPicker_Emoticons`)),
+                  ? S(`#AddonPicker_NoResults`)
+                  : S(`#AddonPicker_NoRecent`, S(`#AddonPicker_Emoticons`)),
               }),
           }),
         (0, E.jsx)(j, {
@@ -651,14 +651,14 @@ var U = class extends w.Component {
           sections: [
             ...i,
             {
-              title: g(`#AddonPicker_AllEmoticons`),
-              items: h.FilterStickers(e.emoticon_list, r).slice(0, F),
+              title: S(`#AddonPicker_AllEmoticons`),
+              items: g.FilterStickers(e.emoticon_list, r).slice(0, F),
               onItemSelect: t,
               renderItem: (e) => (0, E.jsx)(K, { emoticon: e }),
               keyExtractor: (e) => e.name,
               renderEmpty: () =>
                 r
-                  ? (0, E.jsx)(P, { children: g(`#AddonPicker_NoResults`) })
+                  ? (0, E.jsx)(P, { children: S(`#AddonPicker_NoResults`) })
                   : (0, E.jsx)(H, {}),
             },
           ],
@@ -677,14 +677,14 @@ var G = class extends w.Component {
       filter: r,
       sections: [
         {
-          title: g(`#ChatEntryButton_Flair`),
-          items: h.FilterStickers(e.GetFlairListByGroupID(n), r),
+          title: S(`#ChatEntryButton_Flair`),
+          items: g.FilterStickers(e.GetFlairListByGroupID(n), r),
           onItemSelect: t,
           renderItem: (e) => (0, E.jsx)(K, { emoticon: e }),
           keyExtractor: (e) => e.name,
           renderEmpty: () =>
             r
-              ? (0, E.jsx)(P, { children: g(`#AddonPicker_NoResults`) })
+              ? (0, E.jsx)(P, { children: S(`#AddonPicker_NoResults`) })
               : (0, E.jsx)(H, {}),
         },
       ],
@@ -696,7 +696,7 @@ var K = (e) => {
     let { emoticon: t, large: n } = e,
       r = !t.last_used && t.time_received;
     return (0, E.jsxs)(`div`, {
-      className: re,
+      className: ne,
       children: [
         (0, E.jsx)(a, { emoticon: t.name, large: n }),
         r && (0, E.jsx)(J, {}),
@@ -711,7 +711,7 @@ var K = (e) => {
         r = T(b.COMMUNITY_CDN_URL, e.name);
       return (0, E.jsxs)(`div`, {
         ref: this.m_ref,
-        className: S(t, te),
+        className: v(t, te),
         onMouseOver: () => this.setState({ showHover: !0 }),
         onFocus: () => this.setState({ showHover: !0 }),
         onMouseLeave: () => this.setState({ showHover: !1 }),
@@ -731,7 +731,7 @@ var K = (e) => {
         target: t,
         sticker: { name: n, appid: r },
       } = e,
-      [i] = f(r, {});
+      [i] = re(r, {});
     return (0, E.jsx)(u, {
       target: t,
       title: n,
@@ -754,7 +754,7 @@ var K = (e) => {
         onFocus: () => this.setState({ showHover: !0 }),
         onMouseLeave: () => this.setState({ showHover: !1 }),
         onBlur: () => this.setState({ showHover: !1 }),
-        className: S(n, o),
+        className: v(n, o),
         ...r,
         children: [
           i.renderEffectIcon(),
@@ -776,7 +776,7 @@ var K = (e) => {
         roomEffectSettings: i,
       } = e,
       a = i[n],
-      [o] = f(r, {});
+      [o] = re(r, {});
     return (0, E.jsx)(u, {
       target: t,
       title: n,
@@ -878,7 +878,7 @@ function je(e) {
 function Z(e) {
   let { className: t, ...n } = e;
   return (0, E.jsx)(`svg`, {
-    className: S(`SVGIcon_Button SVGIcon_Clock`, t),
+    className: v(`SVGIcon_Button SVGIcon_Clock`, t),
     version: `1.1`,
     x: `0px`,
     y: `0px`,
@@ -973,26 +973,26 @@ var Me = `pvP8JT4e7EA-`,
         e ? i.push(`disabled`) : this.BHaveUnseenEmoticons() && (a = !0),
         n && i.push(`ttip`),
         r
-          ? (0, E.jsx)(x, {
+          ? (0, E.jsx)(h, {
               onClick: this.OnEmoticonClick,
-              onOKActionDescription: g(`#ChatEntryButton_Emoticon`),
+              onOKActionDescription: S(`#ChatEntryButton_Emoticon`),
               focusable: !0,
               children: (0, E.jsx)(y, {
                 toolTipContent: n,
                 children: (0, E.jsx)(`img`, {
                   src: this.props.useImg,
-                  className: S(...i),
-                  title: this.props.title || g(`#ChatEntryButton_Emoticon`),
+                  className: v(...i),
+                  title: this.props.title || S(`#ChatEntryButton_Emoticon`),
                 }),
               }),
             })
           : (i.push(Le, Re),
-            (0, E.jsx)(ce, {
-              className: S(...i),
-              onOKActionDescription: g(`#ChatEntryButton_Emoticon`),
+            (0, E.jsx)(se, {
+              className: v(...i),
+              onOKActionDescription: S(`#ChatEntryButton_Emoticon`),
               type: `button`,
               onClick: this.OnEmoticonClick,
-              title: this.props.title || g(`#ChatEntryButton_Emoticon`),
+              title: this.props.title || S(`#ChatEntryButton_Emoticon`),
               disabled: e,
               children: (0, E.jsxs)(y, {
                 toolTipContent: n,

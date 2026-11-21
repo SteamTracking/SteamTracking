@@ -8,14 +8,14 @@ import { t as i } from "./chunk~eefd71512b.js";
 import { t as a } from "./chunk~0111fcd096.js";
 import { n as o } from "./chunk~379edc388d.js";
 import { i as s } from "./chunk~fc8a9e4879.js";
-import { cx as c, yS as l } from "./main.js";
+import { OS as c, _x as l } from "./main.js";
 import u from "./chunk~658231aff7.js";
 var d = e(t()),
   f = n();
 function p(e) {
   let { clanAccountID: t, gidEvent: n } = e,
     { eventModel: p, bLoading: m } = s(t, n),
-    h = l(c.LANGUAGE),
+    h = c(l.LANGUAGE),
     [g] = r(`livepreview`);
   return (
     g && (p = o(t, 36, `creatorhome_fake`, a())),

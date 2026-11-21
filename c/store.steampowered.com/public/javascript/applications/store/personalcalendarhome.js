@@ -1,6 +1,6 @@
 import { _ } from "./chunk~f025431ab0.js";
 import { _, _ } from "./chunk~01cfc309bf.js";
-import { _, _, _, _ } from "./chunk~ffe4581a06.js";
+import { _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~710e3cfd2f.js";
 import { _ } from "./chunk~4d16ce5d1a.js";
@@ -26,7 +26,10 @@ import {
   _,
   _,
   _,
+  _,
+  _,
 } from "./main.js";
+import { _ } from "./chunk~6417efccc1.js";
 import { _, _ } from "./chunk~06708cbb41.js";
 import { _ } from "./chunk~4d6f892b8c.js";
 var _ = _(_(), 1),
@@ -38,6 +41,7 @@ var _ = _(_(), 1),
   _ = `maxz19gKOQc-`,
   _ = `CAnATFwmik4-`,
   _ = `N83ri6QShHM-`,
+  _ = `yD3gdO7T1NY-`,
   _ = `-UQT03dsikU-`,
   _ = `e217oOT2n-w-`,
   _ = `ojxRGZ9ipx0-`,
@@ -303,6 +307,7 @@ function _(_) {
     })
   );
 }
+var _ = `personalcalendar-homepage`;
 function _(_) {
   let _ = _({
       appid: _.nAppID,
@@ -311,70 +316,71 @@ function _(_) {
     _ = _(),
     [_, _] = _.useState(!1),
     [_, _] = _.useState(!1),
-    _ = _.useRef(null),
+    [_, _] = _.useState(!1),
+    _ = _(_),
     _ = _.data === null ? void 0 : _.data,
     _ = _(_, _ || _ ? `main_capsule` : `hero_capsule`),
     { data: _ } = _(),
     _ = _?.preferences?.disable_microtrailers,
-    _ = _ || _;
-  return (
-    _.useEffect(() => {
-      if (
-        (_.current &&
-          _.current.setAttribute(`data-ds-appid`, _.nAppID.toString() ?? ``),
-        window.GDynamicStore && window._)
-      ) {
-        let _ = window._(_.current);
-        window.GDynamicStore.DecorateDynamicItems(_);
-      }
-    }, [_.nAppID, _]),
-    (0, _.jsx)(_, {
-      feature: `personalcalendar-homepage`,
-      children: (0, _.jsx)(_, {
+    _ = _ || _ || _;
+  return (0, _.jsx)(_, {
+    feature: _,
+    children: (0, _.jsx)(_, {
+      itemid: {
+        appid: _.nAppID,
+      },
+      children: (0, _.jsxs)(_, {
+        className: _,
         onGamepadFocus: () => _(!0),
         onGamepadBlur: () => _(!1),
-        children: (0, _.jsx)(_, {
-          _: {
-            appid: _.nAppID,
-          },
-          hoverClassName: _,
-          disableScreenshots: !0,
-          children: (0, _.jsx)(_, {
-            appID: _.nAppID,
-            children: (0, _.jsxs)(_, {
-              ref: _,
-              className: _(_, _ && `T5zU104tmR0-`),
-              onMouseOver: () => _(!0),
-              onMouseOut: () => _(!1),
-              children: [
-                (0, _.jsx)(`img`, {
-                  className: _,
-                  src: _,
-                  alt: ``,
-                }),
-                _ &&
+        children: [
+          (0, _.jsx)(_, {
+            _: {
+              appid: _.nAppID,
+            },
+            hoverClassName: _,
+            disableScreenshots: !0,
+            children: (0, _.jsx)(_, {
+              appID: _.nAppID,
+              children: (0, _.jsxs)(_, {
+                className: _(_, (_ || _) && `T5zU104tmR0-`),
+                onMouseOver: () => _(!0),
+                onMouseOut: () => _(!1),
+                children: [
+                  (0, _.jsx)(`img`, {
+                    className: _,
+                    src: _,
+                    alt: ``,
+                  }),
                   _ &&
-                  (0, _.jsx)(_, {
-                    _: {
-                      appid: _.nAppID,
-                    },
-                    nIntervalMS: 1e3,
-                  }),
-                !_ &&
-                  (0, _.jsx)(_, {
-                    _: {
-                      appid: _.nAppID,
-                    },
-                    active: _,
-                    bIsHoverMode: !0,
-                  }),
-              ],
+                    _ &&
+                    (0, _.jsx)(_, {
+                      _: {
+                        appid: _.nAppID,
+                      },
+                      nIntervalMS: 1e3,
+                    }),
+                  !_ &&
+                    (0, _.jsx)(_, {
+                      _: {
+                        appid: _.nAppID,
+                      },
+                      active: _,
+                      bIsHoverMode: !0,
+                    }),
+                ],
+              }),
             }),
           }),
-        }),
+          (0, _.jsx)(_, {
+            appid: _.nAppID,
+            snr: _,
+            onActiveChange: _,
+          }),
+        ],
       }),
-    })
-  );
+    }),
+  });
 }
 function _(_) {
   let _ = _(_._) ?? [],

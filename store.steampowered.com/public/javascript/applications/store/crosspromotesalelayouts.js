@@ -5,32 +5,32 @@ import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
 import {
   U as r,
-  Zt as i,
-  gn as a,
-  i as o,
+  Yt as i,
+  i as a,
+  mn as o,
   u as s,
 } from "./chunk~6b8ddcaac8.js";
 import { A as c, st as l } from "./chunk~f57d770d64.js";
-import { n as u, o as d, t as f } from "./chunk~ffe4581a06.js";
+import { n as u, r as d, s as f } from "./chunk~4eed35ad1f.js";
 import { n as p, r as m } from "./chunk~b980924b6a.js";
 import { c as h } from "./chunk~7b4b9eb713.js";
 import { f as g } from "./chunk~618fb52a90.js";
-import { n as ee } from "./chunk~e70aabe4d7.js";
-import { n as te } from "./chunk~710e3cfd2f.js";
+import { n as _ } from "./chunk~e70aabe4d7.js";
+import { n as ee } from "./chunk~710e3cfd2f.js";
 import {
-  $i as _,
-  Ac as v,
-  Eb as y,
-  Jy as b,
-  Rr as x,
-  Vi as ne,
-  Wb as S,
-  Xb as re,
-  Zi as C,
-  _l as ie,
-  jc as w,
-  qb as T,
-  wc as E,
+  $b as v,
+  Bc as y,
+  El as b,
+  Fb as x,
+  Kr as S,
+  Nc as C,
+  Xi as te,
+  ax as w,
+  ca as ne,
+  nx as T,
+  oa as re,
+  rb as E,
+  zc as ie,
 } from "./main.js";
 var D = e(t(), 1);
 function O(e, t) {
@@ -65,7 +65,7 @@ function se(e) {
   };
 }
 function j(e, t) {
-  let n = ee(e ?? void 0, `capsule`, t);
+  let n = _(e ?? void 0, `capsule`, t);
   if (!e) return;
   let i = e.clanSteamID.GetAccountID();
   return {
@@ -102,26 +102,27 @@ function N(e) {
   return (e ?? []).slice(0, 48).map((e) => ({ appid: e }));
 }
 var P = `Es-UANTRhdg-`,
-  F = `KNEaTOnJJWw-`,
-  I = `FsYxDNcAXaI-`,
-  L = `cSFkUHyVW24-`,
-  R = `oztjxXYIBAk-`,
-  z = `yT92BfNEvpw-`,
-  B = `_6jMisrq5Zfo-`,
-  V = `XBv92QzB8Xc-`,
-  H = `_6iUHDist0Jc-`,
-  U = `gxh8RxFKhr8-`,
-  W = `tYvCiFSJDdI-`,
-  G = `AZSEWyNPfhc-`,
-  le = `gZNFN-cKUHw-`,
-  ue = `VCRuNjWNqVc-`,
-  de = `AmB85SkEC3Q-`,
-  fe = `P5j4maR0i14-`,
+  F = `dv9UZEOxkuA-`,
+  I = `KNEaTOnJJWw-`,
+  L = `FsYxDNcAXaI-`,
+  R = `cSFkUHyVW24-`,
+  z = `oztjxXYIBAk-`,
+  B = `yT92BfNEvpw-`,
+  V = `_6jMisrq5Zfo-`,
+  H = `XBv92QzB8Xc-`,
+  U = `_6iUHDist0Jc-`,
+  W = `gxh8RxFKhr8-`,
+  G = `tYvCiFSJDdI-`,
+  le = `AZSEWyNPfhc-`,
+  ue = `gZNFN-cKUHw-`,
+  de = `VCRuNjWNqVc-`,
+  fe = `AmB85SkEC3Q-`,
+  pe = `P5j4maR0i14-`,
   K = n(),
-  pe = D.createContext(!1),
+  me = D.createContext(!1),
   q = D.createContext(null);
-function me(e, t, n) {
-  let { bShowSeeMoreHint: r, panelProps: i } = u(n ? e : void 0, `X`),
+function he(e, t, n) {
+  let { bShowSeeMoreHint: r, panelProps: i } = d(n ? e : void 0, `X`),
     a = D.useContext(q),
     o = !!a && n && !!e;
   return (
@@ -131,7 +132,7 @@ function me(e, t, n) {
     { bShowSeeMoreHint: r, panelProps: i, bHintInHeading: o }
   );
 }
-function he(e) {
+function ge(e) {
   let {
       promotedSaleEvent: t,
       children: n,
@@ -144,12 +145,12 @@ function he(e) {
       bShowSeeMoreHint: s,
       panelProps: c,
       bHintInHeading: l,
-    } = me(t?.strSaleURL, o, i);
+    } = he(t?.strSaleURL, o, i);
   return (0, K.jsx)(Q, {
     ...e,
-    className: I,
+    className: L,
     "flow-children": `row`,
-    panelProps: { ...c, navEntryPreferPosition: ie.PREFERRED_CHILD },
+    panelProps: { ...c, navEntryPreferPosition: b.PREFERRED_CHILD },
     children: (0, K.jsx)(J, {
       saleEvent: t,
       bShowExploreHint: s,
@@ -158,19 +159,19 @@ function he(e) {
       children: (0, K.jsx)(Z, {
         nItemsToFeature: r,
         eCreatorRole: t?.eCreatorRole,
-        children: (0, K.jsx)(w, { preferredFocus: !0, children: n }),
+        children: (0, K.jsx)(y, { preferredFocus: !0, children: n }),
       }),
     }),
   });
 }
-function ge(e) {
+function _e(e) {
   let { event: t, language: n, strSaleURL: r } = e,
     i = j(t, n);
   if (!i) return null;
   let a = r ? { ...i, strSaleURL: r } : i;
   return a.strSaleURL
-    ? (0, K.jsx)(w, {
-        className: E(P, I, L),
+    ? (0, K.jsx)(y, {
+        className: C(P, L, R),
         "flow-children": `row`,
         children: (0, K.jsx)(J, { saleEvent: a, bExploreButtonBelow: !0 }),
       })
@@ -182,18 +183,18 @@ function J(e) {
       bExploreButtonBelow: n,
       bShowExploreHint: r,
       bExploreHintInHeading: i,
-      children: a,
+      children: o,
     } = e,
     s = t?.strSaleURL,
     c = t?.eCreatorRole,
     l = c || !e.strExploreLabel ? X(c) : e.strExploreLabel,
-    u = t?.strCapsuleURL,
-    d = t?.strSummary,
-    p = _(),
-    m = S(),
+    d = t?.strCapsuleURL,
+    f = t?.strSummary,
+    p = ne(),
+    m = v(),
     h = m && r !== void 0,
     g = t?.rtEndTime
-      ? ne(t.rtEndTime, {
+      ? te(t.rtEndTime, {
           weekday: void 0,
           year: void 0,
           month: `short`,
@@ -203,28 +204,34 @@ function J(e) {
       : void 0;
   return (0, K.jsxs)(K.Fragment, {
     children: [
-      u &&
-        !c &&
-        (0, K.jsx)(`div`, {
-          className: `qbRGxo4aWcc-`,
-          style: { backgroundImage: `url(${u})` },
-        }),
-      u &&
-        (0, K.jsx)(`div`, {
-          className: E(`HgvxVtFlDis-`, c && `Lp2CuPiW8Lo-`),
-          style: { backgroundImage: `url(${u})` },
-        }),
-      c && (0, K.jsx)(ye, { rgAppIDs: t?.rgCreatorAppIDs, strAvatarURL: u }),
       (0, K.jsxs)(`div`, {
-        className: E(z, c && `-NAWu4CYrl8-`),
+        className: F,
+        children: [
+          d &&
+            !c &&
+            (0, K.jsx)(`div`, {
+              className: `qbRGxo4aWcc-`,
+              style: { backgroundImage: `url(${d})` },
+            }),
+          d &&
+            (0, K.jsx)(`div`, {
+              className: C(`HgvxVtFlDis-`, c && `Lp2CuPiW8Lo-`),
+              style: { backgroundImage: `url(${d})` },
+            }),
+          c &&
+            (0, K.jsx)(be, { rgAppIDs: t?.rgCreatorAppIDs, strAvatarURL: d }),
+        ],
+      }),
+      (0, K.jsxs)(`div`, {
+        className: C(B, c && `-NAWu4CYrl8-`),
         children: [
           c &&
-            u &&
-            (0, K.jsx)(o, {
+            d &&
+            (0, K.jsx)(a, {
               url: s,
               className: `X4LW9zxgdTo-`,
               bFocusable: !1,
-              children: (0, K.jsx)(`img`, { src: u, alt: `` }),
+              children: (0, K.jsx)(`img`, { src: d, alt: `` }),
             }),
           !c &&
             (0, K.jsxs)(`div`, {
@@ -232,7 +239,7 @@ function J(e) {
               children: [
                 (0, K.jsx)(`div`, {
                   className: `XBv92QzB8Xc-`,
-                  children: (0, K.jsx)(o, {
+                  children: (0, K.jsx)(a, {
                     url: s,
                     className: `NjUCqxvhkHk-`,
                     bFocusable: !1,
@@ -242,7 +249,7 @@ function J(e) {
                 g &&
                   (0, K.jsx)(`div`, {
                     className: `_6iUHDist0Jc-`,
-                    children: b(`#Sale_CrossPromoSale_NowThrough`, g),
+                    children: E(`#Sale_CrossPromoSale_NowThrough`, g),
                   }),
               ],
             }),
@@ -250,68 +257,68 @@ function J(e) {
             !n &&
             !h &&
             !c &&
-            (0, K.jsx)(o, {
+            (0, K.jsx)(a, {
               url: s,
-              className: E(`_6O6T0vupYYc-`, `DuNM8zA4oz0-`),
-              fnCanTakeFocus: x,
+              className: C(`_6O6T0vupYYc-`, `DuNM8zA4oz0-`),
+              fnCanTakeFocus: S,
               children: l,
             }),
-          s && h && !i && (0, K.jsx)(f, { label: l, shown: !!r, button: `X` }),
+          s && h && !i && (0, K.jsx)(u, { label: l, shown: !!r, button: `X` }),
         ],
       }),
       (0, K.jsxs)(`div`, {
-        className: E(U, c && `ZONqp3dzTMI-`),
+        className: C(W, c && `ZONqp3dzTMI-`),
         children: [
-          u &&
-            (0, K.jsxs)(o, {
+          d &&
+            (0, K.jsxs)(a, {
               url: s,
-              className: E(`oztjxXYIBAk-`, c && `CDF-2WDX3lg-`),
+              className: C(`oztjxXYIBAk-`, c && `CDF-2WDX3lg-`),
               bFocusable: !!m,
               children: [
-                (0, K.jsx)(`img`, { src: u, alt: `` }),
-                d &&
+                (0, K.jsx)(`img`, { src: d, alt: `` }),
+                f &&
                   (0, K.jsx)(`div`, {
                     className: `_7CUHH8Trg28-`,
                     children: (0, K.jsx)(`div`, {
                       className: `ZMGnYjKDOEI-`,
-                      children: d,
+                      children: f,
                     }),
                   }),
               ],
             }),
-          a,
+          o,
         ],
       }),
       s &&
         !h &&
         !c &&
         (0, K.jsx)(`div`, {
-          className: E(`T1fHkhyvNkM-`, n && `SAqjQ-F71kA-`),
-          children: (0, K.jsx)(o, {
+          className: C(`T1fHkhyvNkM-`, n && `SAqjQ-F71kA-`),
+          children: (0, K.jsx)(a, {
             url: s,
             className: `_6O6T0vupYYc-`,
-            fnCanTakeFocus: x,
+            fnCanTakeFocus: S,
             children: l,
           }),
         }),
     ],
   });
 }
-var _e = 60,
-  ve = 4;
-function ye(e) {
+var ve = 60,
+  ye = 4;
+function be(e) {
   let { rgAppIDs: t, strAvatarURL: n } = e,
     r = D.useMemo(() => N(t), [t]),
     i = s(r, !1),
     a = D.useMemo(() => {
       let e = (i ?? []).slice(0, 24);
-      return e.length < ve
+      return e.length < ye
         ? []
-        : Array.from({ length: _e }, (t, n) => e[n % e.length]);
+        : Array.from({ length: ve }, (t, n) => e[n % e.length]);
     }, [i]);
   return a.length
     ? (0, K.jsxs)(`div`, {
-        className: G,
+        className: le,
         "aria-hidden": !0,
         children: [
           n &&
@@ -320,41 +327,41 @@ function ye(e) {
               style: { backgroundImage: `url(${n})` },
             }),
           (0, K.jsx)(`div`, {
-            className: le,
-            children: a.map((e, t) => (0, K.jsx)(be, { id: e }, t)),
+            className: ue,
+            children: a.map((e, t) => (0, K.jsx)(xe, { id: e }, t)),
           }),
         ],
       })
     : null;
 }
-function be(e) {
-  let t = v(e.id, `header`);
+function xe(e) {
+  let t = ie(e.id, `header`);
   return t
     ? (0, K.jsx)(`img`, { src: t, alt: ``, loading: `lazy` })
     : (0, K.jsx)(`div`, {});
 }
-function xe(e) {
+function Se(e) {
   let { children: t, nItemsToFeature: n } = e;
   return (0, K.jsxs)(Q, {
     ...e,
-    className: I,
+    className: L,
     children: [
       (0, K.jsx)(p, {
-        className: z,
+        className: B,
         children: (0, K.jsxs)(`div`, {
-          className: B,
+          className: V,
           children: [
-            (0, K.jsx)(`div`, { className: E(V, m), children: `\xA0` }),
-            (0, K.jsx)(`div`, { className: E(H, m), children: `\xA0` }),
+            (0, K.jsx)(`div`, { className: C(H, m), children: `\xA0` }),
+            (0, K.jsx)(`div`, { className: C(U, m), children: `\xA0` }),
           ],
         }),
       }),
       (0, K.jsxs)(`div`, {
-        className: U,
+        className: W,
         children: [
           (0, K.jsx)(p, {
-            className: R,
-            children: (0, K.jsx)(`div`, { className: E(m, W) }),
+            className: z,
+            children: (0, K.jsx)(`div`, { className: C(m, G) }),
           }),
           (0, K.jsx)(Z, { nItemsToFeature: n, children: t }),
         ],
@@ -367,7 +374,7 @@ var Y = {
   strSignedOut: `#Sale_CrossPromoSale_RecommendedFromEvent_notloggedin`,
 };
 function X(e) {
-  return b(
+  return E(
     e
       ? `#Sale_CrossPromoCreator_Visit_${e}`
       : `#Sale_CrossPromoSale_ExploreEvent`,
@@ -379,37 +386,37 @@ function Z(e) {
       nItemsToFeature: n,
       strSaleURL: r,
       eCreatorRole: i,
-      exploreHint: a,
+      exploreHint: o,
     } = e,
-    s = !!r && !a,
-    c = D.useContext(pe),
+    s = !!r && !o,
+    c = D.useContext(me),
     l = !i && !c,
-    u = i || !e.strExploreLabel ? X(i) : e.strExploreLabel,
-    d = re.logged_in
-      ? y.Localize(Y.strSignedIn)
-      : y.LocalizePlural(Y.strSignedOut, n ?? 0);
+    d = i || !e.strExploreLabel ? X(i) : e.strExploreLabel,
+    f = w.logged_in
+      ? x.Localize(Y.strSignedIn)
+      : x.LocalizePlural(Y.strSignedOut, n ?? 0);
   return (0, K.jsxs)(`div`, {
-    className: F,
+    className: I,
     children: [
-      (l || s || (a && !a.bInHeading)) &&
+      (l || s || (o && !o.bInHeading)) &&
         (0, K.jsxs)(`div`, {
           className: `ypQ9RrTsvmE-`,
           children: [
-            l && (0, K.jsx)(`div`, { className: `aMHZOpwLiBw-`, children: d }),
+            l && (0, K.jsx)(`div`, { className: `aMHZOpwLiBw-`, children: f }),
             s &&
-              (0, K.jsx)(o, {
+              (0, K.jsx)(a, {
                 url: r,
-                className: E(`_6O6T0vupYYc-`, `DuNM8zA4oz0-`),
-                fnCanTakeFocus: x,
-                children: u,
+                className: C(`_6O6T0vupYYc-`, `DuNM8zA4oz0-`),
+                fnCanTakeFocus: S,
+                children: d,
               }),
-            a &&
-              !a.bInHeading &&
+            o &&
+              !o.bInHeading &&
               (0, K.jsx)(`div`, {
                 className: `Ri7uYDYJ-bo-`,
-                children: (0, K.jsx)(f, {
-                  label: u,
-                  shown: a.bShown,
+                children: (0, K.jsx)(u, {
+                  label: d,
+                  shown: o.bShown,
                   button: `X`,
                 }),
               }),
@@ -419,11 +426,11 @@ function Z(e) {
       s &&
         (0, K.jsx)(`div`, {
           className: `T1fHkhyvNkM-`,
-          children: (0, K.jsx)(o, {
+          children: (0, K.jsx)(a, {
             url: r,
             className: `_6O6T0vupYYc-`,
-            fnCanTakeFocus: x,
-            children: u,
+            fnCanTakeFocus: S,
+            children: d,
           }),
         }),
     ],
@@ -434,46 +441,46 @@ function Q(e) {
     section: t,
     bInGamepadUI: n,
     placeholderHeight: r,
-    className: o,
+    className: a,
     "flow-children": s,
     panelProps: l,
     children: u,
   } = e;
-  return (0, K.jsx)(te, {
+  return (0, K.jsx)(ee, {
     placeholderHeight: r,
-    className: E({
-      [a]: !0,
+    className: C({
+      [o]: !0,
       [i]: c(t),
       [g]: !0,
       SaleSectionForCustomCSS: !0,
       [P]: !0,
-      [o]: !0,
+      [a]: !0,
     }),
-    rootMargin: d,
+    rootMargin: f,
     holdGamepadFocus: n,
     "flow-children": s,
     ...l,
     children: u,
   });
 }
-var Se = [1e3, 500, 250, 100, 50, 20];
+var Ce = [1e3, 500, 250, 100, 50, 20];
 function $(e) {
   let t = e.sale_page_cross_promo_sales?.[0]?.total_items ?? 0,
-    n = Se.find((e) => t >= e);
+    n = Ce.find((e) => t >= e);
   return n
-    ? b(`#Sale_CrossPromoSale_ExploreItems`, C(n))
-    : b(`#Sale_CrossPromoSale_ExploreEvent`);
+    ? E(`#Sale_CrossPromoSale_ExploreItems`, re(n))
+    : E(`#Sale_CrossPromoSale_ExploreEvent`);
 }
 export {
-  de as a,
+  fe as a,
   se as c,
   oe as d,
-  xe as i,
+  Se as i,
   j as l,
-  he as n,
-  ue as o,
-  ge as r,
-  fe as s,
+  ge as n,
+  de as o,
+  _e as r,
+  pe as s,
   q as t,
   O as u,
 };

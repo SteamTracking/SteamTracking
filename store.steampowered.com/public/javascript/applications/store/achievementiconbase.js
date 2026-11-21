@@ -3,12 +3,12 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
-import { Db as r, Ob as i, qb as a, wc as o } from "./main.js";
+import { Ib as r, Lb as i, Nc as a, nx as o } from "./main.js";
 function s(e) {
   let { appid: t, profileUrl: n, dlc: r } = e,
     i = n
       ? `${n}/achievements/${t}`
-      : `${a.COMMUNITY_BASE_URL}achievements/${t}`;
+      : `${o.COMMUNITY_BASE_URL}achievements/${t}`;
   return r === void 0 ? i : `${i}?dlc=${r}`;
 }
 function c(e) {
@@ -100,7 +100,7 @@ function y(e) {
       glow: n,
       pauseAnimation: r,
       hidden: i,
-      alt: a,
+      alt: o,
       hideNativeTooltip: s = !1,
       className: c,
       size: p,
@@ -118,7 +118,7 @@ function y(e) {
     b = n && (i || h),
     x = v(p);
   return (0, _.jsxs)(`div`, {
-    className: o(d, c, r && `QitWOKeXzIo-`),
+    className: a(d, c, r && `QitWOKeXzIo-`),
     style: x,
     ...m,
     children: [
@@ -132,16 +132,16 @@ function y(e) {
         }),
       i
         ? (0, _.jsx)(`div`, {
-            className: o(f, b && `HTU-WDYrxMw-`),
+            className: a(f, b && `HTU-WDYrxMw-`),
             children: `?`,
           })
         : (0, _.jsx)(`img`, {
             ref: y,
-            className: o(u, b && `HTU-WDYrxMw-`),
+            className: a(u, b && `HTU-WDYrxMw-`),
             src: t == `` ? void 0 : t,
             loading: `lazy`,
-            alt: a,
-            title: s ? void 0 : a,
+            alt: o,
+            title: s ? void 0 : o,
           }),
     ],
   });

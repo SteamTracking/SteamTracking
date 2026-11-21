@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { Cu as e, Gl as t, cu as n, cx as r, yS as i } from "./main.js";
+import { Mu as e, OS as t, _u as n, _x as r, eu as i } from "./main.js";
 var a = {
     include_assets: !0,
     include_release: !0,
@@ -46,7 +46,7 @@ var a = {
       }
     }
   };
-function s(e, r, i, a, o, s) {
+function s(e, t, r, a, o, s) {
   let l = [],
     u = [],
     f = [],
@@ -62,17 +62,17 @@ function s(e, r, i, a, o, s) {
       c = n.k_NotRejected;
     switch (s.item_type) {
       case `sub`:
-        let n = t.Get().GetPackage(e);
+        let n = i.Get().GetPackage(e);
         if (n?.GetIncludedAppIDs()?.length !== 1) {
-          c = p(e, r, a, !0);
+          c = p(e, t, a, !0);
           break;
         }
         e = n.GetIncludedAppIDs()[0];
       case `app`:
-        c = d(e, r, i, a, !0);
+        c = d(e, t, r, a, !0);
         break;
       case `bundle`:
-        c = m(e, r, a, !0);
+        c = m(e, t, a, !0);
     }
     if (
       (c == n.k_NotRejected
@@ -88,7 +88,7 @@ function s(e, r, i, a, o, s) {
   return (
     l.length < o &&
       (c(l, u, s, 2),
-      l.length < s && r.enforce_minimum && (c(l, f, s, 3), c(l, h, s, 4))),
+      l.length < s && t.enforce_minimum && (c(l, f, s, 3), c(l, h, s, 4))),
     l
   );
 }
@@ -116,50 +116,50 @@ function l(t, r) {
       ? n.k_RejectCreatorClan
       : n.k_NotRejected;
 }
-function u(e, t) {
-  if (t.localized) {
-    let t = i(r.LANGUAGE);
-    if (!e.GetAllLanguagesWithSomeSupport()?.includes(t))
+function u(e, i) {
+  if (i.localized) {
+    let i = t(r.LANGUAGE);
+    if (!e.GetAllLanguagesWithSomeSupport()?.includes(i))
       return n.k_RejectSupportedLanguage;
   }
   return n.k_NotRejected;
 }
-function d(r, i, a, o, s) {
-  let c = t.Get().GetApp(r);
+function d(t, r, a, o, s) {
+  let c = i.Get().GetApp(t);
   if (!c) return n.k_RejectNotLoaded;
-  let d = l(c, i);
+  let d = l(c, r);
   if (d != n.k_NotRejected) return d;
   let f = e.Get();
-  if (f.BIsGameIgnored(r)) return n.k_RejectIgnoredGame;
+  if (f.BIsGameIgnored(t)) return n.k_RejectIgnoredGame;
   if (f.BExcludeTagIDs(c.GetTagIDs())) return n.k_RejectIgnoreGameTags;
   if (f.BExcludesContentDescriptor(c.GetContentDescriptorIDs()))
     return n.k_RejectIgnoreContentDescriptors;
-  if (!i.early_access && c.BIsEarlyAccess()) return n.k_RejectEarlyAccess;
+  if (!r.early_access && c.BIsEarlyAccess()) return n.k_RejectEarlyAccess;
   let p = c.GetAppType();
-  if (!i.software && p == 6) return n.k_RejectSoftware;
-  if (i.games_already_in_library && f.BIsGameOwned(r))
+  if (!r.software && p == 6) return n.k_RejectSoftware;
+  if (r.games_already_in_library && f.BIsGameOwned(t))
     return n.k_RejectInLibrary;
-  if (i.games_not_in_library && !f.BIsGameOwned(r))
+  if (r.games_not_in_library && !f.BIsGameOwned(t))
     return n.k_RejectNotInLibrary;
-  if (!i.video && [7, 8, 9].includes(p)) return n.k_RejectVideo;
-  if (i.has_discount) {
+  if (!r.video && [7, 8, 9].includes(p)) return n.k_RejectVideo;
+  if (r.has_discount) {
     let e = c.GetBestPurchaseOption();
     if (!e || !e.discount_pct) return n.k_RejectNoDiscount;
   }
   return a != `adultonly` &&
-    i.no_ao_content &&
+    r.no_ao_content &&
     (c.HasContentDescriptorID(3) || c.HasContentDescriptorID(4))
     ? n.k_RejectAO
     : p == 1 &&
-        i.games_already_in_library &&
+        r.games_already_in_library &&
         f.BIsGameOwned(c.GetParentAppID() || 0)
       ? n.k_RejectInLibrary
       : s
-        ? (p == 1 && o.BHasAppID(c.GetParentAppID() || 0)) || o.BHasAppID(r)
+        ? (p == 1 && o.BHasAppID(c.GetParentAppID() || 0)) || o.BHasAppID(t)
           ? n.k_RejectAlreadyDisplayed
-          : i.has_trailer && !c.BHasTrailers(!1)
+          : r.has_trailer && !c.BHasTrailers(!1)
             ? n.k_RejectNoTrailer
-            : u(c, i)
+            : u(c, r)
         : n.k_NotRejected;
 }
 function f(t, r) {
@@ -175,35 +175,35 @@ function f(t, r) {
       ? n.k_RejectNotInLibrary
       : n.k_NotRejected;
 }
-function p(r, i, a, o) {
-  let s = t.Get().GetPackage(r);
+function p(t, r, a, o) {
+  let s = i.Get().GetPackage(t);
   if (!s) return n.k_RejectNotLoaded;
-  let c = l(s, i);
+  let c = l(s, r);
   if (c != n.k_NotRejected) return c;
-  let d = f(s.GetIncludedAppIDs(), i);
+  let d = f(s.GetIncludedAppIDs(), r);
   if (d != n.k_NotRejected) return d;
   let p = e.Get();
-  return i.games_already_in_library && p.BOwnsPackage(r)
+  return r.games_already_in_library && p.BOwnsPackage(t)
     ? n.k_RejectInLibrary
-    : p.BIsPackageIgnored(r)
+    : p.BIsPackageIgnored(t)
       ? n.k_RejectIgnoredGame
       : o
-        ? a.BHasPackageID(r)
+        ? a.BHasPackageID(t)
           ? n.k_RejectAlreadyDisplayed
-          : u(s, i)
+          : u(s, r)
         : n.k_NotRejected;
 }
-function m(e, r, i, a) {
-  let o = t.Get().GetBundle(e);
+function m(e, t, r, a) {
+  let o = i.Get().GetBundle(e);
   if (!o) return n.k_RejectNotLoaded;
-  let s = l(o, r);
+  let s = l(o, t);
   if (s != n.k_NotRejected) return s;
-  let c = f(o.GetIncludedAppIDs(), r);
+  let c = f(o.GetIncludedAppIDs(), t);
   return c == n.k_NotRejected
     ? a
-      ? i.BHasBundleID(e)
+      ? r.BHasBundleID(e)
         ? n.k_RejectAlreadyDisplayed
-        : u(o, r)
+        : u(o, t)
       : n.k_NotRejected
     : c;
 }

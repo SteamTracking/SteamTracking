@@ -1101,7 +1101,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	gap: 6px;
 }
 
-.game_area_purchase_game .game_area_purchase_platform img, 
+.game_area_purchase_game .game_area_purchase_platform img,
 .game_area_purchase_game .master_sub_trial_header_row img {
 	max-height: 30px;
 }
@@ -7233,3 +7233,8 @@ body.v6 .game_area_already_owned.page_content {
         margin-bottom: 10px;
     }
 
+
+.steam_awards_app_banner_reserved {
+	display: flow-root;
+	min-height: 140px;
+}

@@ -2,7 +2,7 @@
  ****/
 
 import { dt as e, st as t } from "./chunk~01cfc309bf.js";
-import { Vy as n, qb as r } from "./main.js";
+import { Xy as n, nx as r } from "./main.js";
 async function i(e) {
   return c(
     `${r.COMMUNITY_BASE_URL}ogg/${e}/ajaxgetvanityandclanid/?origin=${location.origin}`,

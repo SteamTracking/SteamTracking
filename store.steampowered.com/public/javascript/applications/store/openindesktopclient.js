@@ -4,14 +4,14 @@
 import { o as e, r as t } from "./chunk~f025431ab0.js";
 import { Lt as n, ft as r } from "./chunk~01cfc309bf.js";
 import {
-  Bb as i,
-  Xb as a,
-  _a as o,
-  b as s,
-  ca as c,
-  ga as l,
-  tx as u,
-  ua as d,
+  Ea as i,
+  Ta as a,
+  Yb as o,
+  _a as s,
+  ax as c,
+  b as l,
+  ux as u,
+  ya as d,
 } from "./main.js";
 var f = e(n(), 1),
   p = `Y6jQLvaUs3E-`,
@@ -19,7 +19,7 @@ var f = e(n(), 1),
   h = r();
 function g(e) {
   let { children: t, ...n } = e;
-  return (0, h.jsx)(o, {
+  return (0, h.jsx)(i, {
     className: p,
     ...n,
     children: (0, h.jsx)(`div`, { className: m, children: e.children }),
@@ -53,38 +53,38 @@ var b = `oQvwi1Y4MaQ-`,
     useShowOpenInSteamBanner: () => T,
   });
 function T() {
-  return !a.logged_in && !v() && !y();
+  return !c.logged_in && !v() && !y();
 }
 function E() {
   let { fnOpenInSteamClient: e } = D();
   return T()
-    ? (0, h.jsx)(o, {
+    ? (0, h.jsx)(i, {
         className: b,
         children: (0, h.jsx)(g, {
-          children: (0, h.jsxs)(l, {
+          children: (0, h.jsxs)(a, {
             align: `center`,
             gap: `5`,
             padding: `3`,
             children: [
-              (0, h.jsx)(o, {
+              (0, h.jsx)(i, {
                 className: C,
                 children: (0, h.jsx)(d, {
                   onClick: e,
-                  children: s.Localize(`#OpenInDesktopAppBanner_OpenAppButton`),
+                  children: l.Localize(`#OpenInDesktopAppBanner_OpenAppButton`),
                 }),
               }),
-              (0, h.jsxs)(c, {
+              (0, h.jsxs)(s, {
                 as: `div`,
                 size: `4`,
                 className: x,
                 children: [
-                  (0, h.jsx)(c, {
+                  (0, h.jsx)(s, {
                     weight: `heavy`,
                     className: S,
-                    children: s.Localize(`#OpenInDesktopAppBanner_NotSignedIn`),
+                    children: l.Localize(`#OpenInDesktopAppBanner_NotSignedIn`),
                   }),
                   (0, h.jsx)(`br`, {}),
-                  s.Localize(`#OpenInDesktopAppBanner_Body`),
+                  l.Localize(`#OpenInDesktopAppBanner_Body`),
                 ],
               }),
             ],
@@ -96,7 +96,7 @@ function E() {
 function D() {
   return {
     fnOpenInSteamClient: f.useCallback(() => {
-      let e = `${i()}//openurl/`,
+      let e = `${o()}//openurl/`,
         t = u(`browserid`);
       if (t) {
         let n = new URL(window.location.href),

@@ -17,55 +17,55 @@ import { t as u } from "./chunk~eefd71512b.js";
 import { t as d } from "./chunk~c55d6473b2.js";
 import { n as f } from "./chunk~a7c5e71e12.js";
 import {
-  Gl as p,
-  Hx as m,
-  Lb as h,
-  TS as g,
-  Ux as _,
-  Vu as ee,
-  Vy as te,
-  Xc as v,
-  Xn as y,
-  _x as ne,
-  aS as b,
-  ar as re,
-  bx as ie,
-  cx as x,
-  cy as ae,
-  dy as oe,
-  eS as S,
-  er as C,
-  gu as se,
-  hu as ce,
-  hx as le,
-  iS as w,
-  mb as ue,
-  mx as de,
-  nS as T,
-  nl as fe,
-  nr as pe,
-  oS as E,
-  rS as D,
-  sS as O,
-  tS as k,
-  ux as A,
-  vx as j,
-  wc as me,
-  xu as he,
-  yx as ge,
+  Au as p,
+  Cb as m,
+  Cx as h,
+  Dx as g,
+  Ex as _,
+  Kb as v,
+  Nc as ee,
+  Ox as te,
+  PS as ne,
+  Qx as y,
+  Tu as re,
+  Xu as ie,
+  Xy as ae,
+  Zx as oe,
+  _x as b,
+  _y as se,
+  al as x,
+  by as ce,
+  dS as S,
+  dl as le,
+  eu as ue,
+  fS as C,
+  fr as de,
+  gS as w,
+  hS as T,
+  kx as fe,
+  lS as E,
+  lr as pe,
+  mS as D,
+  pS as O,
+  rr as k,
+  sr as A,
+  uS as j,
+  wu as me,
+  wx as he,
+  yx as M,
 } from "./main.js";
 import "./chunk~7cbe6011f7.js";
-import { t as _e } from "./chunk~2e8feda0b1.js";
-var M = e(l()),
-  N = class {
+import { t as ge } from "./chunk~2e8feda0b1.js";
+var N = e(l()),
+  P = class {
     rgModelNames = [];
     constructor() {
       s(this);
     }
     Init(e) {
       d.Init(e);
-      let t = `${x.STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames`;
-      M.default.get(t).then((e) => {
+      let t = `${b.STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames`;
+      N.default.get(t).then((e) => {
         if (e.data) {
           let t = [];
           for (let n of e.data) n != "default" && t.push(n);
@@ -75,7 +75,7 @@ var M = e(l()),
     }
     async ComputePathBetweenApps(e, t, n, r, i, a, o) {
       let s = Math.acos(n),
-        c = await new ye(
+        c = await new ve(
           async (e) => {
             let t = await this.GetNeighbors(e),
               n = [];
@@ -104,8 +104,8 @@ var M = e(l()),
       throw Error(`Unable to compute path.`);
     }
     async GetNeighbors(e) {
-      let t = `${x.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}`,
-        n = await M.default.get(t),
+      let t = `${b.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}`,
+        n = await N.default.get(t),
         r = [];
       if (n.data && n.data.appid == e)
         for (let e = 0; e < n.data.similar_appids.length; e++)
@@ -116,17 +116,17 @@ var M = e(l()),
       return r;
     }
     async EstimateCosts(e, t) {
-      let n = `${x.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${t}&${e.map((e) => `appid[]=` + e.toString()).join(`&`)}`,
-        r = await M.default.get(n);
+      let n = `${b.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${t}&${e.map((e) => `appid[]=` + e.toString()).join(`&`)}`,
+        r = await N.default.get(n);
       if (r.data && r.data.similarity_scores)
         return r.data.similarity_scores.map((e) => Math.acos(parseFloat(e)));
       throw Error(`Unable to fetch cost estimates`);
     }
   };
-(h([t], N.prototype, `rgModelNames`, void 0),
-  h([_], N.prototype, `GetNeighbors`, null),
-  h([_], N.prototype, `EstimateCosts`, null));
-var ve = class {
+(v([t], P.prototype, `rgModelNames`, void 0),
+  v([y], P.prototype, `GetNeighbors`, null),
+  v([y], P.prototype, `EstimateCosts`, null));
+var _e = class {
     m_fnCompare;
     m_Heap = [];
     m_Length = 0;
@@ -198,7 +198,7 @@ var ve = class {
       }
     }
   },
-  ye = class {
+  ve = class {
     m_fnGetNeighbors;
     m_fnEstimateCosts;
     m_fnEquality;
@@ -210,7 +210,7 @@ var ve = class {
         (this.m_fnIterationCallback = r));
     }
     async FindPath(e, t, n) {
-      let r = new ve((e, t) => e.cost - t.cost),
+      let r = new _e((e, t) => e.cost - t.cost),
         i = new Set();
       r.Push({ node: e, cost: 0 });
       let a = new Map(),
@@ -269,41 +269,41 @@ var ve = class {
       throw Error(`No path found.`);
     }
   },
-  P = new N();
-window.g_LabsSandbox = P;
-var F = e(i()),
-  be = `WVhYXTPPa5Q-`,
-  xe = `x3LMY1wB7Z8-`,
-  I = `n0-NbgKnVgg-`,
-  Se = `_72I-MQtMZj8-`,
-  Ce = `MtuwGZaUAng-`,
-  L = `CvXL-Wwt9TQ-`,
-  R = `rCcaMabbZx4-`,
-  z = `ddPMSRBRHGw-`,
-  B = `_8cUEY8q0nYU-`,
-  we = `NgWhKdDUzuY-`,
-  Te = `lgXtUsuljdc-`,
-  Ee = `_-5Y-zHiqGtQ-`,
-  De = `ZUZRryOqfLs-`,
-  Oe = `QlNwd-gOVoA-`,
-  ke = `LEzgtgE3TQM-`,
-  V = `BrotS3tOfxw-`,
-  Ae = `AkJ02HXKMhs-`,
-  H = `TauA-sfyWB8-`,
-  je = `HHHUlYd80sY-`,
-  Me = `UiEMtH5V5hM-`,
-  U = `_0xUYDLGHKic-`,
-  W = `oMov3TXH87I-`,
-  Ne = `Q7tllLDG5wk-`,
-  Pe = `N27spIgX8-A-`,
-  Fe = `fgvlHXQJgVM-`,
-  Ie = `z3E2YTZo-D4-`,
-  Le = `AVkSlVChUus-`,
-  Re = `-tfmW4i7r-U-`,
-  ze = `_8NYUdIS8vVE-`,
-  Be = `c7rqBghcJoQ-`,
-  G = o(),
-  K = class extends F.Component {
+  F = new P();
+window.g_LabsSandbox = F;
+var I = e(i()),
+  ye = `WVhYXTPPa5Q-`,
+  be = `x3LMY1wB7Z8-`,
+  L = `n0-NbgKnVgg-`,
+  xe = `_72I-MQtMZj8-`,
+  Se = `MtuwGZaUAng-`,
+  R = `CvXL-Wwt9TQ-`,
+  z = `rCcaMabbZx4-`,
+  B = `ddPMSRBRHGw-`,
+  V = `_8cUEY8q0nYU-`,
+  Ce = `NgWhKdDUzuY-`,
+  we = `lgXtUsuljdc-`,
+  Te = `_-5Y-zHiqGtQ-`,
+  Ee = `ZUZRryOqfLs-`,
+  De = `QlNwd-gOVoA-`,
+  Oe = `LEzgtgE3TQM-`,
+  H = `BrotS3tOfxw-`,
+  ke = `AkJ02HXKMhs-`,
+  U = `TauA-sfyWB8-`,
+  Ae = `HHHUlYd80sY-`,
+  je = `UiEMtH5V5hM-`,
+  W = `_0xUYDLGHKic-`,
+  G = `oMov3TXH87I-`,
+  Me = `Q7tllLDG5wk-`,
+  Ne = `N27spIgX8-A-`,
+  Pe = `fgvlHXQJgVM-`,
+  Fe = `z3E2YTZo-D4-`,
+  Ie = `AVkSlVChUus-`,
+  Le = `-tfmW4i7r-U-`,
+  Re = `_8NYUdIS8vVE-`,
+  ze = `c7rqBghcJoQ-`,
+  K = o(),
+  q = class extends I.Component {
     state = {
       appid: 0,
       appinfo: null,
@@ -333,9 +333,9 @@ var F = e(i()),
         ? (window.clearTimeout(this.m_currentRequest),
           (this.m_currentRequest = window.setTimeout(async () => {
             let e = {
-                cc: x.COUNTRY,
-                l: x.LANGUAGE,
-                realm: g.k_ESteamRealmGlobal,
+                cc: b.COUNTRY,
+                l: b.LANGUAGE,
+                realm: ne.k_ESteamRealmGlobal,
                 origin: self.origin,
                 f: `jsonfull`,
                 term: t.replace(` `, `+`),
@@ -343,20 +343,20 @@ var F = e(i()),
                 excluded_tags: [],
                 excluded_content_descriptors: [],
               },
-              n = `${x.STORE_BASE_URL}search/suggest`,
-              r = await M.default.get(n, { params: e, withCredentials: !0 }),
+              n = `${b.STORE_BASE_URL}search/suggest`,
+              r = await N.default.get(n, { params: e, withCredentials: !0 }),
               i;
             ((i = r?.data?.length
               ? r.data.map((e) =>
-                  (0, G.jsxs)(
+                  (0, K.jsxs)(
                     `div`,
                     {
-                      className: Ce,
+                      className: Se,
                       onClickCapture: () => this.SetSelectedApp(parseInt(e.id)),
                       children: [
-                        (0, G.jsx)(`img`, { src: e.img, className: xe }),
-                        (0, G.jsx)(`div`, {
-                          className: I,
+                        (0, K.jsx)(`img`, { src: e.img, className: be }),
+                        (0, K.jsx)(`div`, {
+                          className: L,
                           children:
                             e.name +
                             (this.props.showAppIds ? ` (${e.id})` : ``),
@@ -390,7 +390,7 @@ var F = e(i()),
     render() {
       let e = this.props.classOverride ?? `gekZDtV16Ho-`,
         t = null,
-        n = (0, G.jsx)(C, {
+        n = (0, K.jsx)(A, {
           type: `text`,
           onChange: this.UpdateAppSuggestions,
         });
@@ -399,25 +399,25 @@ var F = e(i()),
           ? this.state.appinfo.name +
             (this.props.showAppIds ? ` (${this.state.appid})` : ``)
           : (this.props.strPrompt ?? `Select game`);
-        t = (0, G.jsx)(`div`, {
-          className: be,
-          children: (0, G.jsx)(`div`, { className: I, children: e }),
+        t = (0, K.jsx)(`div`, {
+          className: ye,
+          children: (0, K.jsx)(`div`, { className: L, children: e }),
         });
       } else if (this.state.mode == `select`) {
         let e = this.state.strSearch.length > 0;
-        t = (0, G.jsxs)(`div`, {
-          className: Se,
+        t = (0, K.jsxs)(`div`, {
+          className: xe,
           children: [
             n,
             e &&
-              (0, G.jsx)(`div`, {
+              (0, K.jsx)(`div`, {
                 className: `u6Os1UrBFLs-`,
                 children: this.state.rgSuggestions,
               }),
           ],
         });
       }
-      return (0, G.jsx)(`div`, {
+      return (0, K.jsx)(`div`, {
         className: e,
         onClick: this.OnDisplayClicked,
         onKeyUpCapture: this.OnKeyUp,
@@ -425,37 +425,37 @@ var F = e(i()),
       });
     }
   };
-(h([_], K.prototype, `OnDisplayClicked`, null),
-  h([_], K.prototype, `UpdateAppSuggestions`, null),
-  h([_], K.prototype, `OnKeyUp`, null));
-var q = class extends F.Component {
+(v([y], q.prototype, `OnDisplayClicked`, null),
+  v([y], q.prototype, `UpdateAppSuggestions`, null),
+  v([y], q.prototype, `OnKeyUp`, null));
+var J = class extends I.Component {
     render() {
-      if (this.props.appid == 0) return (0, G.jsx)(`div`, { className: L });
+      if (this.props.appid == 0) return (0, K.jsx)(`div`, { className: R });
       {
         let e = d.GetAppInfo(this.props.appid);
-        if (!e || !e.is_valid) return (0, G.jsx)(`div`, { className: L });
+        if (!e || !e.is_valid) return (0, K.jsx)(`div`, { className: R });
         let t = [];
         if (this.props.score) {
-          t.push((0, G.jsx)(`div`, { className: R }, `score-spacer`));
+          t.push((0, K.jsx)(`div`, { className: z }, `score-spacer`));
           let e = Math.round(this.props.score * 100).toString() + `%`;
           t.push(
-            (0, G.jsx)(`div`, { className: z, children: e }, `score-value`),
+            (0, K.jsx)(`div`, { className: B, children: e }, `score-value`),
           );
         }
         let n = e.name + ` (` + this.props.appid.toString() + `)`,
           r = this.props.fnOnSelected ? this.props.fnOnSelected : (e) => {};
-        return (0, G.jsxs)(`div`, {
-          className: L,
+        return (0, K.jsxs)(`div`, {
+          className: R,
           onClick: () => r(this.props.appid),
-          children: [(0, G.jsx)(`div`, { className: I, children: n }), t],
+          children: [(0, K.jsx)(`div`, { className: L, children: n }), t],
         });
       }
     }
   },
-  J = class extends F.Component {
+  Be = class extends I.Component {
     state = {};
-    ref_app_a = F.createRef();
-    ref_app_b = F.createRef();
+    ref_app_a = I.createRef();
+    ref_app_b = I.createRef();
     componentDidMount() {
       this.OnAppSelected();
     }
@@ -468,8 +468,8 @@ var q = class extends F.Component {
       ) {
         let e = this.ref_app_a.current.state.appid,
           t = this.ref_app_b.current.state.appid,
-          n = `${x.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${e}&appid[]=${t}`;
-        M.default.get(n).then((e) => {
+          n = `${b.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${e}&appid[]=${t}`;
+        N.default.get(n).then((e) => {
           e.data && e.data.similarity_scores
             ? this.setState({ score: e.data.similarity_scores[0] })
             : this.setState({ score: null });
@@ -478,11 +478,11 @@ var q = class extends F.Component {
     }
     render() {
       let e = this.state.score ? (this.state.score * 100).toFixed(1) + `%` : ``;
-      return (0, G.jsxs)(`div`, {
-        className: Ae,
+      return (0, K.jsxs)(`div`, {
+        className: ke,
         children: [
-          (0, G.jsx)(
-            K,
+          (0, K.jsx)(
+            q,
             {
               fnOnSelection: this.OnAppSelected,
               ref: this.ref_app_a,
@@ -491,11 +491,11 @@ var q = class extends F.Component {
             },
             `similar_app_a`,
           ),
-          (0, G.jsx)(`div`, { className: H }),
-          (0, G.jsx)(`div`, { className: z, children: e }),
-          (0, G.jsx)(`div`, { className: H }),
-          (0, G.jsx)(
-            K,
+          (0, K.jsx)(`div`, { className: U }),
+          (0, K.jsx)(`div`, { className: B, children: e }),
+          (0, K.jsx)(`div`, { className: U }),
+          (0, K.jsx)(
+            q,
             {
               fnOnSelection: this.OnAppSelected,
               ref: this.ref_app_b,
@@ -508,13 +508,13 @@ var q = class extends F.Component {
       });
     }
   };
-h([_], J.prototype, `OnAppSelected`, null);
-var Y = class extends F.Component {
+v([y], Be.prototype, `OnAppSelected`, null);
+var Y = class extends I.Component {
   selected_app = 0;
   similar_apps = [];
   similarity_scores = [];
   similarity_model = `default`;
-  app_selector_ref = F.createRef();
+  app_selector_ref = I.createRef();
   constructor(e) {
     (super(e), s(this), e.default_app && this.SetSelectedApp(e.default_app));
   }
@@ -531,8 +531,8 @@ var Y = class extends F.Component {
         (this.selected_app = e),
         this.app_selector_ref.current &&
           this.app_selector_ref.current.SetSelectedApp(e));
-      let t = `${x.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}&model=${this.similarity_model}`;
-      M.default.get(t).then((e) => {
+      let t = `${b.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}&model=${this.similarity_model}`;
+      N.default.get(t).then((e) => {
         if (e.data && e.data.appid == this.selected_app) {
           let t = new Set(
             e.data.similar_appids.slice(0, this.props.max_similar),
@@ -562,47 +562,47 @@ var Y = class extends F.Component {
       let n = this.similar_apps[t],
         r = this.similarity_scores[t];
       e.push(
-        (0, G.jsx)(
-          q,
+        (0, K.jsx)(
+          J,
           { appid: n, score: r, fnOnSelected: this.SetSelectedApp },
           n,
         ),
       );
     }
     let r = [];
-    for (let e of P.rgModelNames) {
-      let t = { label: (0, G.jsx)(`div`, { children: e }, e), data: e };
+    for (let e of F.rgModelNames) {
+      let t = { label: (0, K.jsx)(`div`, { children: e }, e), data: e };
       r.push(t);
     }
-    return (0, G.jsxs)(`div`, {
-      className: ke,
+    return (0, K.jsxs)(`div`, {
+      className: Oe,
       children: [
-        (0, G.jsx)(y, {
+        (0, K.jsx)(k, {
           rgOptions: r,
           onChange: this.OnModelChanged,
           selectedOption: `default`,
         }),
-        (0, G.jsx)(`h1`, { children: `Games similar to:` }),
-        (0, G.jsx)(K, {
+        (0, K.jsx)(`h1`, { children: `Games similar to:` }),
+        (0, K.jsx)(q, {
           fnOnSelection: this.OnSelectedApp,
           ref: this.app_selector_ref,
           appidInitial: 268500,
           showAppIds: !0,
         }),
-        (0, G.jsx)(`div`, { className: V, children: e }),
+        (0, K.jsx)(`div`, { className: H, children: e }),
       ],
     });
   }
 };
-(h([t], Y.prototype, `selected_app`, void 0),
-  h([t], Y.prototype, `similar_apps`, void 0),
-  h([t], Y.prototype, `similarity_scores`, void 0),
-  h([t], Y.prototype, `similarity_model`, void 0),
-  h([_], Y.prototype, `OnSelectedApp`, null),
-  h([_], Y.prototype, `SetSelectedApp`, null),
-  h([_], Y.prototype, `OnModelChanged`, null),
-  (Y = h([c], Y)));
-var X = class extends F.Component {
+(v([t], Y.prototype, `selected_app`, void 0),
+  v([t], Y.prototype, `similar_apps`, void 0),
+  v([t], Y.prototype, `similarity_scores`, void 0),
+  v([t], Y.prototype, `similarity_model`, void 0),
+  v([y], Y.prototype, `OnSelectedApp`, null),
+  v([y], Y.prototype, `SetSelectedApp`, null),
+  v([y], Y.prototype, `OnModelChanged`, null),
+  (Y = v([c], Y)));
+var X = class extends I.Component {
   selected_app = void 0;
   selected_operator = void 0;
   constructor(e) {
@@ -623,34 +623,34 @@ var X = class extends F.Component {
   }
   render() {
     let e = [
-      { label: (0, G.jsx)(`div`, { children: `Plus` }, `Plus`), data: `Plus` },
+      { label: (0, K.jsx)(`div`, { children: `Plus` }, `Plus`), data: `Plus` },
       {
-        label: (0, G.jsx)(`div`, { children: `Minus` }, `Minus`),
+        label: (0, K.jsx)(`div`, { children: `Minus` }, `Minus`),
         data: `Minus`,
       },
     ];
-    return (0, G.jsxs)(`div`, {
-      className: Fe,
+    return (0, K.jsxs)(`div`, {
+      className: Pe,
       children: [
-        (0, G.jsx)(`div`, {
-          className: Ie,
-          children: (0, G.jsx)(y, {
+        (0, K.jsx)(`div`, {
+          className: Fe,
+          children: (0, K.jsx)(k, {
             rgOptions: e,
             onChange: this.OnSelectedOperator,
             selectedOption: `Plus`,
           }),
         }),
-        (0, G.jsx)(K, { fnOnSelection: this.OnSelectedApp }),
+        (0, K.jsx)(q, { fnOnSelection: this.OnSelectedApp }),
       ],
     });
   }
 };
-(h([t], X.prototype, `selected_app`, void 0),
-  h([t], X.prototype, `selected_operator`, void 0),
-  h([_], X.prototype, `OnSelectedApp`, null),
-  h([_], X.prototype, `OnSelectedOperator`, null),
-  (X = h([c], X)));
-var Z = class extends F.Component {
+(v([t], X.prototype, `selected_app`, void 0),
+  v([t], X.prototype, `selected_operator`, void 0),
+  v([y], X.prototype, `OnSelectedApp`, null),
+  v([y], X.prototype, `OnSelectedOperator`, null),
+  (X = v([c], X)));
+var Z = class extends I.Component {
   operands = [];
   similarity_model = `default`;
   similar_apps = [];
@@ -659,7 +659,7 @@ var Z = class extends F.Component {
   constructor(e) {
     (super(e), s(this), (this.operand_refs = []));
     for (let t = 0; t < e.max_operands; t++)
-      this.operand_refs.push(F.createRef());
+      this.operand_refs.push(I.createRef());
   }
   OnModelChanged(e, t) {
     ((this.similarity_model = e.data), this.RecomputeExpression());
@@ -682,8 +682,8 @@ var Z = class extends F.Component {
   RecomputeExpression() {
     if (this.operands.length == 0) return;
     let e = this.operands.map((e) => `appid[]=` + e.app.toString()),
-      t = `${x.STORE_BASE_URL}labs/ajaxgetappvectors?${e.join(`&`)}&model=${this.similarity_model}`;
-    M.default.get(t).then((e) => {
+      t = `${b.STORE_BASE_URL}labs/ajaxgetappvectors?${e.join(`&`)}&model=${this.similarity_model}`;
+    N.default.get(t).then((e) => {
       if (
         ((this.similar_apps = []),
         (this.similarity_scores = []),
@@ -705,8 +705,8 @@ var Z = class extends F.Component {
               .map((e) => e / r)
               .map((e) => `x[]=` + e)
               .join(`&`),
-            n = `${x.STORE_BASE_URL}labs/ajaxgetmostsimilarappstovector?${e}&model=${this.similarity_model}`;
-          M.default.get(n).then((e) => {
+            n = `${b.STORE_BASE_URL}labs/ajaxgetmostsimilarappstovector?${e}&model=${this.similarity_model}`;
+          N.default.get(n).then((e) => {
             let t = new Set(
               e.data.similar_appids.slice(0, this.props.max_similar),
             );
@@ -721,15 +721,15 @@ var Z = class extends F.Component {
   }
   render() {
     let e = [];
-    for (let t of P.rgModelNames) {
-      let n = { label: (0, G.jsx)(`div`, { children: t }, t), data: t };
+    for (let t of F.rgModelNames) {
+      let n = { label: (0, K.jsx)(`div`, { children: t }, t), data: t };
       e.push(n);
     }
     let t = [],
       n = 0;
     for (let e of this.operands)
       (t.push(
-        (0, G.jsx)(
+        (0, K.jsx)(
           X,
           {
             app: e.app,
@@ -743,8 +743,8 @@ var Z = class extends F.Component {
         n++);
     let r = null;
     this.operands.length < this.props.max_operands &&
-      (r = (0, G.jsx)(`div`, {
-        className: Le,
+      (r = (0, K.jsx)(`div`, {
+        className: Ie,
         onClick: this.OnAddOperand,
         children: `+`,
       }));
@@ -757,34 +757,34 @@ var Z = class extends F.Component {
     for (let e = 0; e < a; e++) {
       let t = this.similar_apps[e],
         n = this.similarity_scores[e];
-      i.push((0, G.jsx)(q, { appid: t, score: n }, t));
+      i.push((0, K.jsx)(J, { appid: t, score: n }, t));
     }
-    return (0, G.jsxs)(`div`, {
-      className: Pe,
+    return (0, K.jsxs)(`div`, {
+      className: Ne,
       children: [
-        (0, G.jsx)(y, {
+        (0, K.jsx)(k, {
           rgOptions: e,
           onChange: this.OnModelChanged,
           selectedOption: `default`,
         }),
-        (0, G.jsx)(`h1`, { children: `Mixture` }),
+        (0, K.jsx)(`h1`, { children: `Mixture` }),
         t,
         r,
-        (0, G.jsx)(`h1`, { children: `Games similar to mixture` }),
-        (0, G.jsx)(`div`, { className: V, children: i }),
+        (0, K.jsx)(`h1`, { children: `Games similar to mixture` }),
+        (0, K.jsx)(`div`, { className: H, children: i }),
       ],
     });
   }
 };
-(h([t], Z.prototype, `operands`, void 0),
-  h([t], Z.prototype, `similarity_model`, void 0),
-  h([t], Z.prototype, `similar_apps`, void 0),
-  h([t], Z.prototype, `similarity_scores`, void 0),
-  h([_], Z.prototype, `OnModelChanged`, null),
-  h([_], Z.prototype, `OnAddOperand`, null),
-  h([_], Z.prototype, `OnOperandChanged`, null),
-  (Z = h([c], Z)));
-var Q = class extends F.Component {
+(v([t], Z.prototype, `operands`, void 0),
+  v([t], Z.prototype, `similarity_model`, void 0),
+  v([t], Z.prototype, `similar_apps`, void 0),
+  v([t], Z.prototype, `similarity_scores`, void 0),
+  v([y], Z.prototype, `OnModelChanged`, null),
+  v([y], Z.prototype, `OnAddOperand`, null),
+  v([y], Z.prototype, `OnOperandChanged`, null),
+  (Z = v([c], Z)));
+var Q = class extends I.Component {
   constructor(e) {
     (super(e), s(this));
   }
@@ -801,7 +801,7 @@ var Q = class extends F.Component {
       ((this.in_progress = !0),
       (this.progress_iteration = 0),
       (this.found_path = void 0),
-      P.ComputePathBetweenApps(
+      F.ComputePathBetweenApps(
         this.app_start,
         this.app_end,
         0.75,
@@ -838,79 +838,79 @@ var Q = class extends F.Component {
         this.app_end != 0 &&
         !this.in_progress &&
         this.app_start != this.app_end,
-      t = e ? U : me(U, void 0),
+      t = e ? W : ee(W, void 0),
       n = null;
     n = this.in_progress
-      ? (0, G.jsx)(`div`, {
-          className: W,
+      ? (0, K.jsx)(`div`, {
+          className: G,
           children: `Finding path, step ` + this.progress_iteration,
         })
       : this.found_path
-        ? (0, G.jsx)(`div`, { className: W, children: `Found path` })
-        : (0, G.jsx)(`div`, { className: W, children: `No path found` });
+        ? (0, K.jsx)(`div`, { className: G, children: `Found path` })
+        : (0, K.jsx)(`div`, { className: G, children: `No path found` });
     let r = [];
     if (this.found_path)
       for (let e = 0; e < this.found_path.length; e++) {
         let t = this.found_path[e];
         r.push(
-          (0, G.jsx)(
-            q,
+          (0, K.jsx)(
+            J,
             { appid: t.appid, score: t.similarity },
             `pathstep` + e,
           ),
         );
       }
-    return (0, G.jsxs)(`div`, {
-      className: je,
+    return (0, K.jsxs)(`div`, {
+      className: Ae,
       children: [
-        (0, G.jsxs)(`div`, {
-          className: Me,
+        (0, K.jsxs)(`div`, {
+          className: je,
           children: [
-            (0, G.jsx)(K, {
+            (0, K.jsx)(q, {
               fnOnSelection: this.OnSelectedStartApp,
               strPrompt: `Select start game`,
             }),
-            (0, G.jsx)(K, {
+            (0, K.jsx)(q, {
               fnOnSelection: this.OnSelectedEndApp,
               strPrompt: `Select end game`,
             }),
           ],
         }),
-        (0, G.jsx)(`div`, {
+        (0, K.jsx)(`div`, {
           className: t,
           onClick: e ? this.Pathfind : () => {},
           children: `Pathfind!`,
         }),
         n,
-        (0, G.jsx)(`div`, { className: Ne, children: r }),
+        (0, K.jsx)(`div`, { className: Me, children: r }),
       ],
     });
   }
 };
-(h([t], Q.prototype, `app_start`, void 0),
-  h([t], Q.prototype, `app_end`, void 0),
-  h([t], Q.prototype, `in_progress`, void 0),
-  h([t], Q.prototype, `progress_iteration`, void 0),
-  h([t], Q.prototype, `found_path`, void 0),
-  h([_], Q.prototype, `IterationCallback`, null),
-  h([_], Q.prototype, `Pathfind`, null),
-  h([_], Q.prototype, `OnSelectedStartApp`, null),
-  h([_], Q.prototype, `OnSelectedEndApp`, null),
-  (Q = h([c], Q)));
+(v([t], Q.prototype, `app_start`, void 0),
+  v([t], Q.prototype, `app_end`, void 0),
+  v([t], Q.prototype, `in_progress`, void 0),
+  v([t], Q.prototype, `progress_iteration`, void 0),
+  v([t], Q.prototype, `found_path`, void 0),
+  v([y], Q.prototype, `IterationCallback`, null),
+  v([y], Q.prototype, `Pathfind`, null),
+  v([y], Q.prototype, `OnSelectedStartApp`, null),
+  v([y], Q.prototype, `OnSelectedEndApp`, null),
+  (Q = v([c], Q)));
 function Ve() {
-  return (0, G.jsxs)(G.Fragment, {
+  return (0, K.jsxs)(K.Fragment, {
     children: [
-      (0, G.jsx)(`h1`, { children: `Similar Games` }),
-      (0, G.jsx)(Y, { max_similar: 10 }),
-      (0, G.jsx)(`div`, { className: R }),
-      (0, G.jsx)(`h1`, { children: `Similarity` }),
-      (0, G.jsx)(J, {}),
-      (0, G.jsx)(`div`, { className: R }),
-      (0, G.jsx)(`h1`, { children: `Mixer` }),
-      (0, G.jsx)(Z, { max_similar: 10, max_operands: 6 }),
-      (0, G.jsx)(`div`, { className: R }),
-      (0, G.jsx)(`h1`, { children: `Pathfinder` }),
-      (0, G.jsx)(Q, {}),
+      (0, K.jsx)(`h1`, { children: `Similar Games` }),
+      (0, K.jsx)(Y, { max_similar: 10 }),
+      (0, K.jsx)(`div`, { className: z }),
+      (0, K.jsx)(`h1`, { children: `Similarity` }),
+      (0, K.jsx)(Be, {}),
+      (0, K.jsx)(`div`, { className: z }),
+      (0, K.jsx)(`h1`, { children: `Mixer` }),
+      (0, K.jsx)(Z, { max_similar: 10, max_operands: 6 }),
+      (0, K.jsx)(`div`, { className: z }),
+      (0, K.jsx)(`h1`, { children: `Pathfinder` }),
+      (0, K.jsx)(Q, {}),
     ],
   });
 }
@@ -919,7 +919,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.tag_score_factor || S(e.M()),
+        e.prototype.tag_score_factor || E(e.M()),
         $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -932,57 +932,57 @@ var $ = e(a(), 1),
             tag_score_factor: {
               n: 1,
               d: 1,
-              br: D.readDouble,
-              bw: O.writeDouble,
+              br: C.readDouble,
+              bw: w.writeDouble,
             },
             playtime_max_seconds: {
               n: 10,
               d: 36e4,
-              br: D.readInt32,
-              bw: O.writeInt32,
+              br: C.readInt32,
+              bw: w.writeInt32,
             },
             playtime_max_games: {
               n: 11,
               d: 3,
-              br: D.readInt32,
-              bw: O.writeInt32,
+              br: C.readInt32,
+              bw: w.writeInt32,
             },
             playtime_score_factor: {
               n: 12,
               d: 0.9,
-              br: D.readDouble,
-              bw: O.writeDouble,
+              br: C.readDouble,
+              bw: w.writeDouble,
             },
-            popularity_factor: { n: 20, d: 5, br: D.readEnum, bw: O.writeEnum },
+            popularity_factor: { n: 20, d: 5, br: C.readEnum, bw: w.writeEnum },
             popularity_reciprocal: {
               n: 21,
               d: 1e4,
-              br: D.readInt32,
-              bw: O.writeInt32,
+              br: C.readInt32,
+              bw: w.writeInt32,
             },
             popularity_base_score: {
               n: 22,
               d: `5000000`,
-              br: D.readInt64String,
-              bw: O.writeInt64String,
+              br: C.readInt64String,
+              bw: w.writeInt64String,
             },
-            played_since: { n: 23, br: D.readUint32, bw: O.writeUint32 },
+            played_since: { n: 23, br: C.readUint32, bw: w.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return E(e.M(), t, n);
+      return T(e.M(), t, n);
     }
     static fromObject(t) {
-      return T(e.M(), t);
+      return S(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -990,14 +990,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return k(e.MBF(), t, n);
+      return j(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      b(e.M(), t, n);
+      D(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1011,7 +1011,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || S(e.M()),
+        e.prototype.steamid || E(e.M()),
         $.Message.initialize(this, t, 0, -1, [3], null));
     }
     static sm_m;
@@ -1023,30 +1023,30 @@ var $ = e(a(), 1),
           fields: {
             steamid: {
               n: 1,
-              br: D.readFixed64String,
-              bw: O.writeFixed64String,
+              br: C.readFixed64String,
+              bw: w.writeFixed64String,
             },
-            country_code: { n: 2, br: D.readString, bw: O.writeString },
-            ids: { n: 3, c: j, r: !0, q: !0 },
+            country_code: { n: 2, br: C.readString, bw: w.writeString },
+            ids: { n: 3, c: g, r: !0, q: !0 },
             options: { n: 4, c: He },
-            debug: { n: 5, br: D.readBool, bw: O.writeBool },
-            include_owned_games: { n: 6, br: D.readBool, bw: O.writeBool },
+            debug: { n: 5, br: C.readBool, bw: w.writeBool },
+            include_owned_games: { n: 6, br: C.readBool, bw: w.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return E(e.M(), t, n);
+      return T(e.M(), t, n);
     }
     static fromObject(t) {
-      return T(e.M(), t);
+      return S(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1054,14 +1054,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return k(e.MBF(), t, n);
+      return j(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      b(e.M(), t, n);
+      D(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1075,7 +1075,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.items || S(e.M()),
+        e.prototype.items || E(e.M()),
         $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -1090,16 +1090,16 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return E(e.M(), t, n);
+      return T(e.M(), t, n);
     }
     static fromObject(t) {
-      return T(e.M(), t);
+      return S(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1107,14 +1107,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return k(e.MBF(), t, n);
+      return j(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      b(e.M(), t, n);
+      D(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1128,7 +1128,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.id || S(e.M()),
+        e.prototype.id || E(e.M()),
         $.Message.initialize(this, t, 0, -1, [50], null));
     }
     static sm_m;
@@ -1138,10 +1138,10 @@ var $ = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            id: { n: 1, c: j },
-            already_owned: { n: 2, br: D.readBool, bw: O.writeBool },
-            weight: { n: 3, br: D.readDouble, bw: O.writeDouble },
-            weight_before_dedupe: { n: 4, br: D.readDouble, bw: O.writeDouble },
+            id: { n: 1, c: g },
+            already_owned: { n: 2, br: C.readBool, bw: w.writeBool },
+            weight: { n: 3, br: C.readDouble, bw: w.writeDouble },
+            weight_before_dedupe: { n: 4, br: C.readDouble, bw: w.writeDouble },
             debug_matches: { n: 50, c: Ke, r: !0, q: !0 },
             debug_popularity: { n: 51, c: qe },
           },
@@ -1150,16 +1150,16 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return E(e.M(), t, n);
+      return T(e.M(), t, n);
     }
     static fromObject(t) {
-      return T(e.M(), t);
+      return S(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1167,14 +1167,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return k(e.MBF(), t, n);
+      return j(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      b(e.M(), t, n);
+      D(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1188,7 +1188,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.source_app || S(e.M()),
+        e.prototype.source_app || E(e.M()),
         $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1198,25 +1198,25 @@ var $ = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            source_app: { n: 1, br: D.readInt32, bw: O.writeInt32 },
-            weight: { n: 2, br: D.readDouble, bw: O.writeDouble },
-            similarity: { n: 3, br: D.readDouble, bw: O.writeDouble },
+            source_app: { n: 1, br: C.readInt32, bw: w.writeInt32 },
+            weight: { n: 2, br: C.readDouble, bw: w.writeDouble },
+            similarity: { n: 3, br: C.readDouble, bw: w.writeDouble },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return E(e.M(), t, n);
+      return T(e.M(), t, n);
     }
     static fromObject(t) {
-      return T(e.M(), t);
+      return S(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1224,14 +1224,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return k(e.MBF(), t, n);
+      return j(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      b(e.M(), t, n);
+      D(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1245,7 +1245,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.rank || S(e.M()),
+        e.prototype.rank || E(e.M()),
         $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1255,12 +1255,12 @@ var $ = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            rank: { n: 1, br: D.readUint32, bw: O.writeUint32 },
-            popularity_factor: { n: 2, br: D.readDouble, bw: O.writeDouble },
+            rank: { n: 1, br: C.readUint32, bw: w.writeUint32 },
+            popularity_factor: { n: 2, br: C.readDouble, bw: w.writeDouble },
             weight_before_popularity: {
               n: 3,
-              br: D.readDouble,
-              bw: O.writeDouble,
+              br: C.readDouble,
+              bw: w.writeDouble,
             },
           },
         }),
@@ -1268,16 +1268,16 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return E(e.M(), t, n);
+      return T(e.M(), t, n);
     }
     static fromObject(t) {
-      return T(e.M(), t);
+      return S(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1285,14 +1285,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return k(e.MBF(), t, n);
+      return j(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      b(e.M(), t, n);
+      D(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1306,7 +1306,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || S(e.M()),
+        e.prototype.steamid || E(e.M()),
         $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1318,30 +1318,30 @@ var $ = e(a(), 1),
           fields: {
             steamid: {
               n: 1,
-              br: D.readFixed64String,
-              bw: O.writeFixed64String,
+              br: C.readFixed64String,
+              bw: w.writeFixed64String,
             },
-            sort: { n: 2, d: 1, br: D.readEnum, bw: O.writeEnum },
-            clusters_to_return: { n: 3, br: D.readInt32, bw: O.writeInt32 },
-            cluster_index: { n: 4, br: D.readInt32, bw: O.writeInt32 },
-            context: { n: 10, c: de },
-            data_request: { n: 11, c: le },
+            sort: { n: 2, d: 1, br: C.readEnum, bw: w.writeEnum },
+            clusters_to_return: { n: 3, br: C.readInt32, bw: w.writeInt32 },
+            cluster_index: { n: 4, br: C.readInt32, bw: w.writeInt32 },
+            context: { n: 10, c: h },
+            data_request: { n: 11, c: he },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return E(e.M(), t, n);
+      return T(e.M(), t, n);
     }
     static fromObject(t) {
-      return T(e.M(), t);
+      return S(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1349,14 +1349,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return k(e.MBF(), t, n);
+      return j(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      b(e.M(), t, n);
+      D(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1370,7 +1370,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.clusters || S(e.M()),
+        e.prototype.clusters || E(e.M()),
         $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -1385,16 +1385,16 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return E(e.M(), t, n);
+      return T(e.M(), t, n);
     }
     static fromObject(t) {
-      return T(e.M(), t);
+      return S(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1402,14 +1402,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return k(e.MBF(), t, n);
+      return j(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      b(e.M(), t, n);
+      D(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1423,7 +1423,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.cluster_id || S(e.M()),
+        e.prototype.cluster_id || E(e.M()),
         $.Message.initialize(this, t, 0, -1, [5, 6, 7], null));
     }
     static sm_m;
@@ -1433,31 +1433,31 @@ var $ = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            cluster_id: { n: 1, br: D.readInt32, bw: O.writeInt32 },
-            playtime_forever: { n: 2, br: D.readInt32, bw: O.writeInt32 },
-            playtime_2weeks: { n: 3, br: D.readInt32, bw: O.writeInt32 },
-            last_played: { n: 4, br: D.readUint32, bw: O.writeUint32 },
+            cluster_id: { n: 1, br: C.readInt32, bw: w.writeInt32 },
+            playtime_forever: { n: 2, br: C.readInt32, bw: w.writeInt32 },
+            playtime_2weeks: { n: 3, br: C.readInt32, bw: w.writeInt32 },
+            last_played: { n: 4, br: C.readUint32, bw: w.writeUint32 },
             played_appids: {
               n: 5,
               r: !0,
               q: !0,
-              br: D.readInt32,
-              pbr: D.readPackedInt32,
-              bw: O.writeRepeatedInt32,
+              br: C.readInt32,
+              pbr: C.readPackedInt32,
+              bw: w.writeRepeatedInt32,
             },
             similar_items_appids: {
               n: 6,
               r: !0,
               q: !0,
-              br: D.readInt32,
-              pbr: D.readPackedInt32,
-              bw: O.writeRepeatedInt32,
+              br: C.readInt32,
+              pbr: C.readPackedInt32,
+              bw: w.writeRepeatedInt32,
             },
-            similar_items: { n: 7, c: ne, r: !0, q: !0 },
+            similar_items: { n: 7, c: _, r: !0, q: !0 },
             similar_item_popularity_score: {
               n: 8,
-              br: D.readDouble,
-              bw: O.writeDouble,
+              br: C.readDouble,
+              bw: w.writeDouble,
             },
           },
         }),
@@ -1465,16 +1465,16 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= w(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return E(e.M(), t, n);
+      return T(e.M(), t, n);
     }
     static fromObject(t) {
-      return T(e.M(), t);
+      return S(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1482,14 +1482,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return k(e.MBF(), t, n);
+      return j(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      b(e.M(), t, n);
+      D(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1504,7 +1504,7 @@ var $ = e(a(), 1),
   function t(e, t, n) {
     return e.SendMsg(
       `StoreAppSimilarity.PrioritizeAppsForUser#1`,
-      ie(Ue, t, n),
+      fe(Ue, t, n),
       We,
       { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
     );
@@ -1513,7 +1513,7 @@ var $ = e(a(), 1),
   function n(e, t, n) {
     return e.SendMsg(
       `StoreAppSimilarity.IdentifyClustersFromPlaytime#1`,
-      ie(Je, t, n),
+      fe(Je, t, n),
       Ye,
       { ePrivilege: 2, eWebAPIKeyRequirement: 2, rgBrowserAPISites: [`store`] },
     );
@@ -1530,13 +1530,13 @@ var Qe = class {
     }
   },
   $e = class {
-    m_callbacksLoaded = new m();
+    m_callbacksLoaded = new oe();
     m_rgClusters;
     constructor(e, t, n, r, i) {
-      let a = ge.Init(Je);
-      (ce(a),
-        i && se(a, i),
-        a.Body().set_steamid(t || A.steamid),
+      let a = te.Init(Je);
+      (me(a),
+        i && re(a, i),
+        a.Body().set_steamid(t || M.steamid),
         r && a.Body().set_clusters_to_return(r),
         a.Body().set_sort(n),
         Ze.IdentifyClustersFromPlaytime(e.GetServiceTransport(), a).then(
@@ -1552,7 +1552,7 @@ var Qe = class {
     ReadCluster(e, t) {
       let n = [];
       return (
-        t && (n = e.similar_items().map((e) => p.Get().ReadItem(e, t))),
+        t && (n = e.similar_items().map((e) => ue.Get().ReadItem(e, t))),
         {
           nClusterID: e.cluster_id(),
           nPlaytimeMinutes: e.playtime_forever(),
@@ -1575,9 +1575,9 @@ var Qe = class {
     }
   };
 function et(e, t, n, r = 1, i = null, a = []) {
-  let [o, s] = F.useState(null);
+  let [o, s] = I.useState(null);
   return (
-    F.useEffect(() => {
+    I.useEffect(() => {
       if ((s(null), n))
         return e.LoadPlaytimeClusters(n, r, i, t).RegisterOnReadyCallback(s)
           .Unregister;
@@ -1592,20 +1592,20 @@ var tt = `U1eVOPgq7Qs-`,
   at = `sxMHArvxX2E-`;
 function ot(e) {
   let { SteamInterface: t } = e,
-    n = F.useRef(void 0);
+    n = I.useRef(void 0);
   return (
     (n.current ||= new Qe(t)),
-    (0, G.jsxs)(G.Fragment, {
+    (0, K.jsxs)(K.Fragment, {
       children: [
-        (0, G.jsxs)(`div`, {
+        (0, K.jsxs)(`div`, {
           children: [
-            (0, G.jsx)(`p`, {
+            (0, K.jsx)(`p`, {
               children: `This data is generated by analyzing games based on similar tags, and generating clusters from that.  We then look at your playtime history to see what games are in clusters together, and suggest other popular games in those clusters.`,
             }),
-            (0, G.jsxs)(`p`, {
+            (0, K.jsxs)(`p`, {
               children: [
                 `You can also `,
-                (0, G.jsx)(`a`, {
+                (0, K.jsx)(`a`, {
                   href: `http://store-tc.k.steam.net/graph`,
                   target: `_blank`,
                   children: `browse the cluster data graphically`,
@@ -1615,7 +1615,7 @@ function ot(e) {
             }),
           ],
         }),
-        (0, G.jsx)(ct, { SimilarityStore: n.current }),
+        (0, K.jsx)(ct, { SimilarityStore: n.current }),
       ],
     })
   );
@@ -1627,46 +1627,46 @@ var st = {
 };
 function ct(e) {
   let { SimilarityStore: t } = e,
-    [n, r] = F.useState(A.steamid),
-    [i, a] = F.useState(`10`),
-    [o, s] = F.useState(1),
-    c = F.useCallback((e) => r(e.currentTarget.value), [r]),
-    l = F.useCallback((e) => a(e.currentTarget.value), [a]),
-    d = F.useCallback((e) => s(e.data), [s]),
+    [n, r] = I.useState(M.steamid),
+    [i, a] = I.useState(`10`),
+    [o, s] = I.useState(1),
+    c = I.useCallback((e) => r(e.currentTarget.value), [r]),
+    l = I.useCallback((e) => a(e.currentTarget.value), [a]),
+    d = I.useCallback((e) => s(e.data), [s]),
     f = !1,
-    p = F.useRef(A.steamid),
-    m = n && new te(n);
+    p = I.useRef(M.steamid),
+    m = n && new ae(n);
   m &&
     m.BIsValid() &&
     m.BIsIndividualAccount() &&
     ((p.current = m.ConvertTo64BitString()), (f = !0));
   let h;
   i && !isNaN(parseInt(i)) && (h = parseInt(i));
-  let g = F.useMemo(() => {
+  let g = I.useMemo(() => {
       let e = [];
       for (let t in st) e.push({ data: Number(t), label: st[t] });
       return e;
     }, []),
     _ = et(t, { include_assets: !0, include_basic_info: !0 }, p.current, o, h);
-  return (0, G.jsxs)(`div`, {
+  return (0, K.jsxs)(`div`, {
     children: [
-      (0, G.jsxs)(pe, {
+      (0, K.jsxs)(pe, {
         className: tt,
         children: [
-          (0, G.jsx)(C, {
+          (0, K.jsx)(A, {
             label: `SteamID`,
             type: `text`,
             value: n,
             onChange: c,
             description: !f && `Invalid SteamID`,
           }),
-          (0, G.jsx)(C, {
+          (0, K.jsx)(A, {
             label: `Clusters to return (Set to blank for all clusters)`,
             type: `text`,
             value: i,
             onChange: l,
           }),
-          (0, G.jsx)(y, {
+          (0, K.jsx)(k, {
             label: `Sort clusters by`,
             rgOptions: g,
             selectedOption: o,
@@ -1674,75 +1674,75 @@ function ct(e) {
           }),
         ],
       }),
-      f && !_ && (0, G.jsx)(u, {}),
-      _ && (0, G.jsx)(lt, { rgPlaytimeClusters: _ }),
+      f && !_ && (0, K.jsx)(u, {}),
+      _ && (0, K.jsx)(lt, { rgPlaytimeClusters: _ }),
     ],
   });
 }
 function lt(e) {
   let { rgPlaytimeClusters: t } = e;
-  return (0, G.jsx)(`div`, {
+  return (0, K.jsx)(`div`, {
     children: t.map((e) =>
-      (0, G.jsx)(v, { children: (0, G.jsx)(ut, { cluster: e }) }, e.nClusterID),
+      (0, K.jsx)(x, { children: (0, K.jsx)(ut, { cluster: e }) }, e.nClusterID),
     ),
   });
 }
 function ut(e) {
   let { cluster: t } = e,
-    [n, r] = F.useState(!1),
-    i = F.useCallback(() => r(!0), [r]),
-    [a, o] = F.useState(!1),
-    s = F.useCallback(() => o(!0), [o]),
-    c = fe({ onEnter: s });
-  return (0, G.jsxs)(`div`, {
+    [n, r] = I.useState(!1),
+    i = I.useCallback(() => r(!0), [r]),
+    [a, o] = I.useState(!1),
+    s = I.useCallback(() => o(!0), [o]),
+    c = le({ onEnter: s });
+  return (0, K.jsxs)(`div`, {
     ref: c,
     className: nt,
     children: [
-      (0, G.jsxs)(`div`, {
+      (0, K.jsxs)(`div`, {
         className: rt,
         children: [
-          (0, G.jsxs)(`h1`, { children: [`Cluster `, t.nClusterID] }),
-          (0, G.jsx)(v, {
-            children: (0, G.jsxs)(`div`, {
+          (0, K.jsxs)(`h1`, { children: [`Cluster `, t.nClusterID] }),
+          (0, K.jsx)(x, {
+            children: (0, K.jsxs)(`div`, {
               className: void 0,
               children: [
-                (0, G.jsxs)(`div`, {
+                (0, K.jsxs)(`div`, {
                   children: [
-                    (0, G.jsx)(`b`, { children: `Total Playtime:` }),
+                    (0, K.jsx)(`b`, { children: `Total Playtime:` }),
                     ` `,
                     Math.floor(t.nPlaytimeMinutes / 6) / 10,
                     `hr`,
                   ],
                 }),
-                (0, G.jsxs)(`div`, {
+                (0, K.jsxs)(`div`, {
                   children: [
-                    (0, G.jsx)(`b`, { children: `Last Played:` }),
+                    (0, K.jsx)(`b`, { children: `Last Played:` }),
                     ` `,
-                    ue(t.rtLastPlayed),
+                    m(t.rtLastPlayed),
                     ` `,
                   ],
                 }),
-                (0, G.jsxs)(`div`, {
+                (0, K.jsxs)(`div`, {
                   children: [
-                    (0, G.jsx)(`b`, { children: `Games played:` }),
+                    (0, K.jsx)(`b`, { children: `Games played:` }),
                     ` `,
                     a &&
                       t.rgAppIDsPlayed.map((e) =>
-                        (0, G.jsxs)(
-                          F.Fragment,
-                          { children: [(0, G.jsx)(ft, { appid: e }), `, `] },
+                        (0, K.jsxs)(
+                          I.Fragment,
+                          { children: [(0, K.jsx)(ft, { appid: e }), `, `] },
                           e,
                         ),
                       ),
                   ],
                 }),
-                (0, G.jsxs)(`div`, {
+                (0, K.jsxs)(`div`, {
                   children: [
-                    (0, G.jsx)(`b`, { children: `Popularity Score:` }),
+                    (0, K.jsx)(`b`, { children: `Popularity Score:` }),
                     ` `,
                     Math.floor(t.flPopularityScore * 100),
                     `% \xA0`,
-                    (0, G.jsx)(`span`, {
+                    (0, K.jsx)(`span`, {
                       title: `Based on the top four items; we might decide not to show clusters if this score is less than some threshold, maybe 90%`,
                       style: { cursor: `default` },
                       children: `(?)`,
@@ -1754,17 +1754,17 @@ function ut(e) {
           }),
         ],
       }),
-      (0, G.jsxs)(`div`, {
+      (0, K.jsxs)(`div`, {
         className: it,
         children: [
-          (0, G.jsx)(`h3`, { children: `Similar titles:` }),
-          (0, G.jsx)(v, {
-            children: (0, G.jsx)(`ul`, {
+          (0, K.jsx)(`h3`, { children: `Similar titles:` }),
+          (0, K.jsx)(x, {
+            children: (0, K.jsx)(`ul`, {
               children: t.rgSimilarItems.map((e, t) =>
                 n || t < 4
-                  ? (0, G.jsx)(
+                  ? (0, K.jsx)(
                       `li`,
-                      { children: (0, G.jsx)(pt, { item: e }) },
+                      { children: (0, K.jsx)(pt, { item: e }) },
                       e.GetUniqueID(),
                     )
                   : null,
@@ -1772,7 +1772,7 @@ function ut(e) {
             }),
           }),
           !n &&
-            (0, G.jsxs)(re, {
+            (0, K.jsxs)(de, {
               onClick: i,
               children: [`Show all `, t.rgSimilarItems.length],
             }),
@@ -1786,7 +1786,7 @@ function ft(e) {
   let { appid: t } = e,
     [n] = f(t, dt);
   return n
-    ? (0, G.jsx)(`a`, {
+    ? (0, K.jsx)(`a`, {
         className: void 0,
         href: n.GetStorePageURL(),
         children: n.GetName(),
@@ -1795,11 +1795,11 @@ function ft(e) {
 }
 function pt(e) {
   let { item: t } = e;
-  return (0, G.jsxs)(`a`, {
+  return (0, K.jsxs)(`a`, {
     className: at,
     href: t.GetStorePageURL(),
     children: [
-      (0, G.jsx)(`img`, {
+      (0, K.jsx)(`img`, {
         src: t.GetAssets().GetSmallCapsuleURL(),
         loading: `lazy`,
       }),
@@ -1810,71 +1810,71 @@ function pt(e) {
 var mt = [
   {
     path: `similarity`,
-    render: () => (0, G.jsx)(Ve, {}),
+    render: () => (0, K.jsx)(Ve, {}),
     name: `ML Similarity`,
   },
   {
     path: `clustering`,
-    render: (e) => (0, G.jsx)(ot, { SteamInterface: e.SteamInterface }),
+    render: (e) => (0, K.jsx)(ot, { SteamInterface: e.SteamInterface }),
     name: `Tag Clustering`,
     requires_login: !0,
   },
 ];
 function ht(e) {
-  let [t, i] = F.useState(!1),
-    a = A.logged_in,
-    o = oe();
+  let [t, i] = I.useState(!1),
+    a = M.logged_in,
+    o = ce();
   if (
-    ((0, F.useEffect)(() => {
-      (P.Init(o), i(!0));
+    ((0, I.useEffect)(() => {
+      (F.Init(o), i(!0));
     }, [o]),
     !t)
   )
-    return (0, G.jsx)(`div`, { className: B });
+    return (0, K.jsx)(`div`, { className: V });
   let s = { SteamInterface: o };
-  return (0, G.jsx)(`div`, {
-    className: B,
-    children: (0, G.jsxs)(`div`, {
-      className: we,
+  return (0, K.jsx)(`div`, {
+    className: V,
+    children: (0, K.jsxs)(`div`, {
+      className: Ce,
       children: [
-        (0, G.jsxs)(`div`, {
-          className: Te,
+        (0, K.jsxs)(`div`, {
+          className: we,
           children: [
-            (0, G.jsx)(`div`, { className: Ee, children: `Labs Sandbox` }),
-            (0, G.jsx)(`div`, {
-              className: De,
+            (0, K.jsx)(`div`, { className: Te, children: `Labs Sandbox` }),
+            (0, K.jsx)(`div`, {
+              className: Ee,
               children: `Internal testbed page for Steam Labs experiments`,
             }),
           ],
         }),
-        (0, G.jsx)(`div`, {
-          className: Re,
+        (0, K.jsx)(`div`, {
+          className: Le,
           children: mt.map((e) =>
-            (0, G.jsx)(
-              he,
+            (0, K.jsx)(
+              p,
               {
-                to: `${ee.LabsSandbox()}/${e.path}`,
-                className: ze,
-                activeClassName: Be,
+                to: `${ie.LabsSandbox()}/${e.path}`,
+                className: Re,
+                activeClassName: ze,
                 children: e.name,
               },
               e.path,
             ),
           ),
         }),
-        (0, G.jsx)(`div`, {
-          className: Oe,
-          children: (0, G.jsx)(v, {
-            children: (0, G.jsx)(r, {
+        (0, K.jsx)(`div`, {
+          className: De,
+          children: (0, K.jsx)(x, {
+            children: (0, K.jsx)(r, {
               children: mt.map((e, t) =>
-                (0, G.jsx)(
+                (0, K.jsx)(
                   n,
                   {
-                    path: `${ee.LabsSandbox()}/${e.path}`,
+                    path: `${ie.LabsSandbox()}/${e.path}`,
                     render: (t) =>
                       !e.requires_login || a
                         ? e.render({ ...t, ...s })
-                        : (0, G.jsx)(gt, {}),
+                        : (0, K.jsx)(gt, {}),
                   },
                   e.path,
                 ),
@@ -1887,11 +1887,11 @@ function ht(e) {
   });
 }
 function gt() {
-  let e = ae();
-  return (0, G.jsxs)(`div`, {
+  let e = se();
+  return (0, K.jsxs)(`div`, {
     children: [
-      (0, G.jsx)(`h3`, { children: `Please login to view this page.` }),
-      (0, G.jsx)(_e, {
+      (0, K.jsx)(`h3`, { children: `Please login to view this page.` }),
+      (0, K.jsx)(ge, {
         transport: e,
         platform: 2,
         onComplete: () => window.location.reload(),

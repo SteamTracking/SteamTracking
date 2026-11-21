@@ -6,13 +6,13 @@ import { st as t, u as n } from "./chunk~01cfc309bf.js";
 import { t as r } from "./chunk~93fc7377c2.js";
 import { t as i } from "./chunk~429133cc70.js";
 import {
-  $i as a,
-  ab as o,
-  db as s,
-  ib as c,
-  qb as l,
-  ub as u,
-  wb as d,
+  Nb as a,
+  bb as o,
+  ca as s,
+  mb as c,
+  nx as l,
+  pb as u,
+  yb as d,
 } from "./main.js";
 var f = `meetsteam/updateregistration`,
   p = `meetsteam/attendance_qrcode`;
@@ -67,7 +67,7 @@ function C(e, t) {
     queryKey: T(e, t),
     queryFn: () => h(t),
     enabled: r() == e,
-    staleTime: d.PerMinute * 10,
+    staleTime: a.PerMinute * 10,
   };
 }
 function w(e, n) {
@@ -93,7 +93,7 @@ function k(e) {
     queryKey: [`MeetSteamRegistrantInfo`, e],
     queryFn: () => v(),
     enabled: !!e,
-    staleTime: d.PerMinute * 10,
+    staleTime: a.PerMinute * 10,
   };
 }
 function A(e) {
@@ -104,7 +104,7 @@ function j(e, t) {
     queryKey: [`useMeetSteamQRCode`, e, t],
     queryFn: () => y(e, t),
     enabled: !!t && !0,
-    staleTime: d.PerMinute * 10,
+    staleTime: a.PerMinute * 10,
   };
 }
 function M(e, n) {
@@ -116,7 +116,7 @@ function N(e, t = Intl.DateTimeFormat().resolvedOptions().timeZone) {
     : t;
 }
 function P(e) {
-  let t = a();
+  let t = s();
   return n(() => ({
     rtime_start: e.rtime_start,
     rtime_end: e.rtime_end,
@@ -131,20 +131,20 @@ function F(e, t) {
 function I(e, t) {
   let n = F(e, t),
     r = new Date();
-  return n.getFullYear() == r.getFullYear() ? c(n) : o(n);
+  return n.getFullYear() == r.getFullYear() ? u(n) : c(n);
 }
 function L(e, t) {
   let n = x.default.unix(e),
     r = x.default.unix(e).tz(t).utcOffset() - n.utcOffset();
-  return u(e + r * 60);
+  return d(e + r * 60);
 }
 function R(e, t, n, r) {
   let i = x.default.unix(e),
     a = x.default.unix(e).tz(n).utcOffset() - i.utcOffset(),
-    o = x.default.unix(t),
+    s = x.default.unix(t),
     c = x.default.unix(t).tz(n),
-    l = c.utcOffset() - o.utcOffset();
-  return s(e + a * 60, t + l * 60, !0) + (r ? `` : ` ` + c.format(`z`));
+    l = c.utcOffset() - s.utcOffset();
+  return o(e + a * 60, t + l * 60, !0) + (r ? `` : ` ` + c.format(`z`));
 }
 export {
   L as a,

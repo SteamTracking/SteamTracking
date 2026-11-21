@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n, l as r, tt as i } from "./chunk~01cfc309bf.js";
-import { $n as a, tr as o } from "./chunk~6b8ddcaac8.js";
+import { $n as a, Zn as o } from "./chunk~6b8ddcaac8.js";
 import { f as s, s as c } from "./chunk~961c06e93e.js";
 import { i as l } from "./chunk~2f085f1384.js";
 import { t as u } from "./chunk~92931c6310.js";
@@ -11,41 +11,41 @@ import { t as d } from "./chunk~eefd71512b.js";
 import { c as f } from "./chunk~7b4b9eb713.js";
 import { c as p, s as m } from "./chunk~6cf3fe3e07.js";
 import { n as h, t as g } from "./chunk~3ea79bd96d.js";
-import { n as ee } from "./chunk~a7c5e71e12.js";
-import { a as _ } from "./chunk~fc8a9e4879.js";
+import { n as _ } from "./chunk~a7c5e71e12.js";
+import { a as v } from "./chunk~fc8a9e4879.js";
 import {
-  $b as v,
-  $y as y,
-  Bu as b,
-  Cd as x,
-  Cu as S,
-  Dr as C,
-  Ec as w,
-  Gl as T,
-  Jy as E,
+  Bc as y,
+  Cb as b,
+  Fc as x,
+  Md as S,
+  Mu as C,
+  Nc as w,
+  OS as T,
+  Pr as E,
   Qy as D,
-  Rb as te,
-  Rc as ne,
-  Uy as O,
-  Vc as k,
-  Vy as A,
-  cx as j,
-  iu as M,
-  jc as N,
-  kv as re,
-  mb as ie,
-  ol as P,
-  pc as ae,
-  pt as oe,
-  wc as F,
-  yS as se,
+  Rv as O,
+  Sc as ee,
+  Xc as te,
+  Xy as ne,
+  Yu as k,
+  _x as A,
+  cb as j,
+  cx as M,
+  eu as N,
+  gt as re,
+  hl as P,
+  pu as ie,
+  qb as ae,
+  qc as oe,
+  rb as F,
+  sb as se,
 } from "./main.js";
 import { a as ce, i as I, r as L, t as R } from "./chunk~86e787bf6a.js";
 import { i as z, r as B, t as V } from "./chunk~7b1a6a633b.js";
 var H = e(t()),
   U = e(i());
 async function W(e, t) {
-  let n = j.STORE_BASE_URL + `contenthub/ajaxfilterappsbycontenthub`,
+  let n = A.STORE_BASE_URL + `contenthub/ajaxfilterappsbycontenthub`,
     r = {
       hubtype: e.GetContentHubType(),
       category: e.GetContentHubCategory(),
@@ -62,9 +62,9 @@ async function W(e, t) {
     let e = await U.default.get(n, { params: r });
     if (e?.data?.success == 1)
       return (e.data.appids.forEach((e) => a.add(e)), a);
-    i = b(e);
+    i = k(e);
   } catch (e) {
-    i = b(e);
+    i = k(e);
   }
   return (
     console.error(`LoadContentHubFilteredApps failed: ` + i?.strErrorMsg, i), a
@@ -108,23 +108,23 @@ function J(e) {
     d = i == null || i == null ? !1 : i;
   if (l)
     return (0, K.jsxs)(`div`, {
-      className: F(`YoutubePreviewContainer`, z, e.imageClassnames),
+      className: w(`YoutubePreviewContainer`, z, e.imageClassnames),
       onClick: () => u(!1),
       children: [
         (0, K.jsx)(`img`, {
-          className: F(`YoutubePreviewImage`, z),
+          className: w(`YoutubePreviewImage`, z),
           src:
             t ||
-            j.COMMUNITY_CDN_URL +
+            A.COMMUNITY_CDN_URL +
               `public/shared/images/responsive/youtube_16x9_placeholder.gif`,
         }),
         (0, K.jsx)(`div`, {
           className: `YoutubePreviewPlay`,
-          children: (0, K.jsx)(ae, {}),
+          children: (0, K.jsx)(ee, {}),
         }),
       ],
     });
-  let f = te().replace(`https://`, ``),
+  let f = ae().replace(`https://`, ``),
     p = f.indexOf(`/`);
   p >= 0 && (f = f.substring(0, p));
   let m = a
@@ -134,12 +134,12 @@ function J(e) {
     (m += `&parent=${f}&autoplay=${d}&muted=${!!r}`),
     o && (m += `&time=${de(o)}`),
     (0, K.jsxs)(`div`, {
-      className: F(`YoutubePlayer`, le),
+      className: w(`YoutubePlayer`, le),
       children: [
         (0, K.jsx)(`img`, {
-          className: F(`YoutubePreviewContainer`, z, e.imageClassnames),
+          className: w(`YoutubePreviewContainer`, z, e.imageClassnames),
           src:
-            j.COMMUNITY_CDN_URL +
+            A.COMMUNITY_CDN_URL +
             `public/shared/images/responsive/youtube_16x9_placeholder.gif`,
         }),
         (0, K.jsx)(`iframe`, {
@@ -186,11 +186,11 @@ var fe = `ZJL8xBrL2zY-`,
   Fe = `_-2HaCIOBhIc-`;
 function Ie(e) {
   let { clanInfo: t } = e,
-    { curator_link: n, curator_medium_avatar: r } = v(
+    { curator_link: n, curator_medium_avatar: r } = M(
       `curator_header`,
       `application_config`,
     );
-  return (0, K.jsx)(N, {
+  return (0, K.jsx)(y, {
     className: `page_content_ctn`,
     "flow-children": `column`,
     autoFocus: !0,
@@ -199,9 +199,9 @@ function Ie(e) {
       children: [
         (0, K.jsx)(V, {
           className: Pe,
-          crumbs: v(`breadcrumbs`, `application_config`),
+          crumbs: M(`breadcrumbs`, `application_config`),
         }),
-        (0, K.jsxs)(N, {
+        (0, K.jsxs)(y, {
           className: `list_header_area`,
           "flow-children": `row`,
           children: [
@@ -220,7 +220,7 @@ function Ie(e) {
               children: (0, K.jsx)(P, {
                 className: `pageheader curator_name`,
                 href: n,
-                children: E(`#SteamCurator_List_Header_List`, t.group_name),
+                children: F(`#SteamCurator_List_Header_List`, t.group_name),
               }),
             }),
           ],
@@ -233,10 +233,10 @@ function Le(e) {
   return (0, K.jsx)(X, { listid: e.listid });
 }
 function X(e) {
-  let t = parseInt(v(`curator_account_id`, `application_config`)),
+  let t = parseInt(M(`curator_account_id`, `application_config`)),
     n = I(t),
     r = ce(n?.clanSteamID, e.listid);
-  if ((x(j.LANGUAGE), !r)) return null;
+  if ((S(A.LANGUAGE), !r)) return null;
   let i = n.is_ogg,
     a = n.is_creator_home && !n.is_ogg,
     o = i
@@ -244,7 +244,7 @@ function X(e) {
       : a
         ? `#SteamCurator_MoreProducts`
         : `#SteamCurator_MoreReviews`;
-  return (0, K.jsxs)(oe, {
+  return (0, K.jsxs)(re, {
     feature: `curatorlistcapsule`,
     children: [
       (0, K.jsx)(Ie, { clanInfo: n }),
@@ -263,11 +263,11 @@ function X(e) {
                 className: pe,
                 children: [
                   (0, K.jsx)(`h2`, {
-                    children: E(`#SteamCurator_ExploreMoreTitle`),
+                    children: F(`#SteamCurator_ExploreMoreTitle`),
                   }),
                   (0, K.jsx)(P, {
                     href: n.vanity_url,
-                    children: y(o, n.group_name),
+                    children: j(o, n.group_name),
                   }),
                 ],
               }),
@@ -281,8 +281,8 @@ function X(e) {
 function Re(e) {
   let { listDetails: t } = e,
     [n, r] = (0, H.useState)(null),
-    i = new A(t.sale_clan_steamid),
-    { eventModel: a } = _(i.GetAccountID(), t.sale_clan_event_gid),
+    i = new ne(t.sale_clan_steamid),
+    { eventModel: a } = v(i.GetAccountID(), t.sale_clan_event_gid),
     o = G(
       a,
       (0, H.useMemo)(
@@ -313,17 +313,17 @@ function Z(e) {
     (H.useEffect(() => {
       n &&
         (i(n?.length || 0),
-        S.Get()
+        C.Get()
           .HintLoad()
           .then(() => {
             let e = n.map((e) => e.recommended_app.appid);
-            T.Get()
+            N.Get()
               .QueueMultipleAppRequests(e, s)
               .then(() => {
                 l.token.reason ||
                   o(
                     n.filter(
-                      (e) => !c(T.Get().GetApp(e.recommended_app.appid)),
+                      (e) => !c(N.Get().GetApp(e.recommended_app.appid)),
                     ),
                   );
               })
@@ -335,15 +335,15 @@ function Z(e) {
     a == null)
   )
     return (0, K.jsx)(d, {
-      string: E(`#Loading`),
+      string: F(`#Loading`),
       position: `center`,
       size: `medium`,
     });
   let f = t.list_type == 1;
   return (0, K.jsxs)(K.Fragment, {
     children: [
-      (0, K.jsx)(N, {
-        className: F(he, f && `qSW80bsfZvg-`),
+      (0, K.jsx)(y, {
+        className: w(he, f && `qSW80bsfZvg-`),
         "flow-children": `grid`,
         children: a.map((e, n) =>
           (0, K.jsx)(
@@ -357,11 +357,11 @@ function Z(e) {
         (0, K.jsxs)(`div`, {
           children: [
             (0, K.jsxs)(`span`, {
-              children: [D(`#SteamCurator_Hidden`, r - a.length), ` `],
+              children: [se(`#SteamCurator_Hidden`, r - a.length), ` `],
             }),
             (0, K.jsx)(P, {
-              href: j.STORE_BASE_URL + `account/preferences/`,
-              children: E(`#SteamCurator_Setting`),
+              href: A.STORE_BASE_URL + `account/preferences/`,
+              children: F(`#SteamCurator_Setting`),
             }),
           ],
         }),
@@ -371,14 +371,14 @@ function Z(e) {
 function Q(e) {
   let { listDetails: t } = e,
     n = L(t),
-    r = v(`showlisttitle`, `application_config`),
-    i = v(`titleareaheight`, `application_config`),
+    r = M(`showlisttitle`, `application_config`),
+    i = M(`titleareaheight`, `application_config`),
     a = t.list_jsondata.youtube_link && p(t.list_jsondata.youtube_link),
     o = t.list_jsondata.youtube_link && q(t.list_jsondata.youtube_link),
-    s = se(j.LANGUAGE),
-    c = O.GetWithFallback(t.localized_flat_title, s),
-    u = O.GetWithFallback(t.localized_flat_blurb, s),
-    d = O.GetWithFallback(t.localized_flat_link, s),
+    s = T(A.LANGUAGE),
+    c = D.GetWithFallback(t.localized_flat_title, s),
+    u = D.GetWithFallback(t.localized_flat_blurb, s),
+    d = D.GetWithFallback(t.localized_flat_link, s),
     m = n && n.GetImageURL(l() ? `product_mobile_banner` : `product_banner`, s);
   return (0, K.jsxs)(`div`, {
     className: me,
@@ -421,21 +421,21 @@ function Q(e) {
 }
 var ze = r((e) => {
   let { item: t, listDetails: n, bAutoFocus: r } = e,
-    i = parseInt(v(`curator_account_id`, `application_config`)),
-    o = I(i),
-    [s] = ee(t?.recommended_app?.appid, {
+    i = parseInt(M(`curator_account_id`, `application_config`)),
+    a = I(i),
+    [s] = _(t?.recommended_app?.appid, {
       include_assets: !0,
       include_release: !0,
     }),
     c = (0, H.useMemo)(
       () => ({
         id: s?.GetID(),
-        type: M(s?.GetStoreItemType(), s?.GetAppType()),
+        type: ie(s?.GetStoreItemType(), s?.GetAppType()),
       }),
       [s],
     ),
-    l = a(c);
-  if (!o || !s) return null;
+    l = o(c);
+  if (!a || !s) return null;
   let {
       appid: u,
       link_url: d,
@@ -443,44 +443,44 @@ var ze = r((e) => {
       time_recommended: m,
       recommendation_state: g,
     } = t.recommended_app,
-    _ = o.is_creator_home && !o.is_ogg,
-    y = n.list_jsondata.app_data?.[u],
-    b = d && p(d),
-    x = d && q(d),
-    S = f != `0` && f,
-    C = s.BHasDemo(),
-    w = y?.img_url,
-    T = `curator_clanid=${o.clanAccountID}&curator_listid=${n.listid}`,
-    D = s.GetStorePageURL() + `/?curator_clanid=` + o.clanAccountID;
-  return (0, K.jsxs)(N, {
+    v = a.is_creator_home && !a.is_ogg,
+    x = n.list_jsondata.app_data?.[u],
+    S = d && p(d),
+    C = d && q(d),
+    w = f != `0` && f,
+    T = s.BHasDemo(),
+    E = x?.img_url,
+    D = `curator_clanid=${a.clanAccountID}&curator_listid=${n.listid}`,
+    O = s.GetStorePageURL() + `/?curator_clanid=` + a.clanAccountID;
+  return (0, K.jsxs)(y, {
     className: ge,
     autoFocus: r,
     children: [
       (0, K.jsx)(`div`, {
         className: _e,
         children:
-          b || x
+          S || C
             ? (0, K.jsx)(Be, {
-                strVideoID: b?.strVideoID || x,
-                nStartSeconds: b?.nStartSeconds,
+                strVideoID: S?.strVideoID || C,
+                nStartSeconds: S?.nStartSeconds,
                 id: l,
-                strImgOverrideUrl: w,
-                bShowDemoButton: C,
-                strExtraParams: T,
-                bTwitchVideo: !!x,
+                strImgOverrideUrl: E,
+                bShowDemoButton: T,
+                strExtraParams: D,
+                bTwitchVideo: !!C,
               })
             : (0, K.jsx)(h, {
                 imageType: `header`,
                 capsule: c,
-                bShowDemoButton: C,
-                strExtraParams: T,
+                bShowDemoButton: T,
+                strExtraParams: D,
                 bPreferAssetWithoutOverride: !1,
               }),
       }),
       (0, K.jsxs)(`div`, {
         className: we,
         children: [
-          (0, K.jsx)(`a`, { className: Te, href: D, children: s.GetName() }),
+          (0, K.jsx)(`a`, { className: Te, href: O, children: s.GetName() }),
           (0, K.jsxs)(`div`, {
             className: Ee,
             children: [
@@ -488,19 +488,19 @@ var ze = r((e) => {
               (0, K.jsx)(`div`, {
                 className: Ae,
                 children:
-                  _ || !m
-                    ? E(
+                  v || !m
+                    ? F(
                         `#EventModTile_ReleaseDate`,
                         s.GetFormattedSteamReleaseDate(),
                       )
-                    : ie(m),
+                    : b(m),
               }),
             ],
           }),
-          !!S &&
+          !!w &&
             (0, K.jsx)(`div`, {
               className: `ovSTFS3FlJQ-`,
-              children: E(`#SteamCurator_ReviewTextQuoted`, S),
+              children: F(`#SteamCurator_ReviewTextQuoted`, w),
             }),
           !!d && (0, K.jsx)($, { url: d }),
         ],
@@ -514,11 +514,11 @@ function Be(e) {
       nStartSeconds: n,
       id: r,
       strImgOverrideUrl: i,
-      bShowDemoButton: a,
+      bShowDemoButton: o,
       strExtraParams: s,
       bTwitchVideo: c,
     } = e,
-    { data: l } = re(r);
+    { data: l } = O(r);
   return (0, K.jsxs)(`div`, {
     className: ve,
     children: [
@@ -527,7 +527,7 @@ function Be(e) {
         children: c
           ? (0, K.jsx)(J, {
               videoid: t,
-              posterURL: l ? w(l, `header`) : void 0,
+              posterURL: l ? x(l, `header`) : void 0,
               imageClassnames: Y,
               autoplay: !0,
             })
@@ -549,9 +549,9 @@ function Be(e) {
         children: [
           (0, K.jsx)(`div`, {
             className: xe,
-            children: (0, K.jsx)(o, {
+            children: (0, K.jsx)(a, {
               id: r,
-              bShowDemoButton: a,
+              bShowDemoButton: o,
               nDelayShowMs: 300,
               strExtraParams: s,
               hoverProps: {
@@ -560,7 +560,7 @@ function Be(e) {
               },
               children: (0, K.jsx)(`img`, {
                 className: Se,
-                src: l ? w(l, `library_capsule`) : void 0,
+                src: l ? x(l, `library_capsule`) : void 0,
               }),
             }),
           }),
@@ -575,31 +575,31 @@ function Ve(e) {
     case 0:
       return (0, K.jsx)(`div`, {
         className: De,
-        children: E(`#SteamCurator_Recommended`),
+        children: F(`#SteamCurator_Recommended`),
       });
     case 1:
       return (0, K.jsx)(`div`, {
         className: Oe,
-        children: E(`#SteamCurator_NotRecommended`),
+        children: F(`#SteamCurator_NotRecommended`),
       });
     case 2:
       return (0, K.jsx)(`div`, {
         className: ke,
-        children: E(`#SteamCurator_Informational`),
+        children: F(`#SteamCurator_Informational`),
       });
     default:
       return null;
   }
 }
 function $(e) {
-  let t = ne(e.url);
-  C(t) &&
+  let t = oe(e.url);
+  E(t) &&
     (t =
-      (j.IN_CLIENT ? `steam://openurl_external/` : ``) +
-      j.COMMUNITY_BASE_URL +
+      (A.IN_CLIENT ? `steam://openurl_external/` : ``) +
+      A.COMMUNITY_BASE_URL +
       `linkfilter/?url=` +
       t);
-  let n = k(e.url),
+  let n = te(e.url),
     r = m(e.url);
   return (0, K.jsxs)(`div`, {
     className: je,
@@ -610,13 +610,13 @@ function $(e) {
         rel: `noopener nofollow`,
         preferredFocus: !1,
         autoFocus: !1,
-        children: E(
+        children: F(
           r ? `#SteamCurator_WatchFullReview` : `#SteamCurator_ReadFullReview`,
         ),
       }),
       (0, K.jsx)(`div`, {
         className: Ne,
-        children: E(`#SteamCurator_ReviewLinkHostnameBracketed`, n),
+        children: F(`#SteamCurator_ReviewLinkHostnameBracketed`, n),
       }),
     ],
   });

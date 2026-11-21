@@ -6,13 +6,13 @@ import { Lt as t, dt as n, ot as r, st as i } from "./chunk~01cfc309bf.js";
 import { r as a } from "./chunk~5214caf193.js";
 import { r as o } from "./chunk~9e9562d60b.js";
 import {
-  Ay as s,
-  My as c,
-  Ny as l,
-  ex as u,
-  ly as d,
-  qb as f,
-  vu as p,
+  Du as s,
+  Hy as c,
+  Vy as l,
+  lx as u,
+  nx as d,
+  vy as f,
+  zy as p,
 } from "./main.js";
 var m = e(t(), 1),
   h = { bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !1 };
@@ -83,11 +83,11 @@ async function b(e, t, n, r) {
 }
 var x;
 function S() {
-  let e = p();
+  let e = s();
   if (e) return e.GetServiceTransport();
   if (!x) {
     let e = u(`loyalty_webapi_token`, `application_config`);
-    x = s(e ? new l(f.WEBAPI_BASE_URL, e) : c());
+    x = p(e ? new c(d.WEBAPI_BASE_URL, e) : l());
   }
   return x.GetServiceTransport();
 }
@@ -117,7 +117,7 @@ function j(e) {
   };
 }
 function M() {
-  let e = f.LANGUAGE,
+  let e = d.LANGUAGE,
     t = n(),
     { data: r, isLoading: a } = i(j(e)),
     o = r?.rtNextClaimTime;
@@ -147,10 +147,10 @@ function N() {
           return ((O = null), Promise.resolve(e));
         }
         return D
-          ? Promise.resolve(e.getQueryData(A(f.LANGUAGE)) ?? h)
-          : w(f.LANGUAGE);
+          ? Promise.resolve(e.getQueryData(A(d.LANGUAGE)) ?? h)
+          : w(d.LANGUAGE);
       },
-      onSuccess: (t) => e.setQueryData(A(f.LANGUAGE), t),
+      onSuccess: (t) => e.setQueryData(A(d.LANGUAGE), t),
     });
   return { fnClaimItem: (0, m.useCallback)(() => t(), [t]) };
 }
@@ -171,7 +171,7 @@ function F() {
                 ...k,
               }
             : null),
-          e.setQueryData(A(f.LANGUAGE), t));
+          e.setQueryData(A(d.LANGUAGE), t));
       },
       [e],
     ),
@@ -188,7 +188,7 @@ function L(e, t, n, r) {
   };
 }
 function R(e, t, n) {
-  let r = d();
+  let r = f();
   return i(L(r, e, t, n));
 }
 function z(e, t, n, r) {
@@ -202,7 +202,7 @@ function B(e, t, n, r, i) {
   };
 }
 function V(e, t, n, r) {
-  let a = d();
+  let a = f();
   return i(B(a, e, t, n, r));
 }
 export { M as a, N as i, V as n, F as o, R as r, P as t };

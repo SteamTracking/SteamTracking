@@ -18,8 +18,8 @@ const __vite__mapDeps = (
       "./chunk~8681f5c764.js",
       "./chunk~2f085f1384.js",
       "../../../css/applications/store/chunk~504d82f1b0.css",
-      "./chunk~ffe4581a06.js",
-      "../../../css/applications/store/chunk~97629f3858.css",
+      "./chunk~4eed35ad1f.js",
+      "../../../css/applications/store/chunk~0c0e8c89c4.css",
       "./chunk~92931c6310.js",
       "./chunk~af36c62e9f.js",
       "./chunk~eefd71512b.js",
@@ -108,8 +108,6 @@ const __vite__mapDeps = (
       "./chunk~de7a25f8e2.js",
       "../../../css/applications/store/chunk~ba5a40c901.css",
       "../../../css/applications/store/chunk~1e9bb01655.css",
-      "./chunk~6e5c04e057.js",
-      "../../../css/applications/store/chunk~6e5c04e057.css",
       "./chunk~60675c9a27.js",
       "./chunk~b8ca037aae.js",
       "./chunk~961c06e93e.js",
@@ -186,6 +184,7 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~6b8ddcaac8.js";
 import { _ } from "./chunk~f57d770d64.js";
 import {
@@ -209,7 +208,7 @@ import {
   _,
 } from "./chunk~2185942436.js";
 import { _ } from "./chunk~8c66e1c7a5.js";
-import { _, _, _ } from "./chunk~cf3721cc1c.js";
+import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~cf3721cc1c.js";
 import { _, _ } from "./chunk~4c13037b22.js";
 import { _, _, _ } from "./chunk~673650a653.js";
 import { _ } from "./chunk~5adf866415.js";
@@ -220,7 +219,7 @@ import { _, _ } from "./chunk~cfd048ddd7.js";
 import { _ } from "./chunk~7e995db925.js";
 import "./chunk~19394a4118.js";
 import { _, _ } from "./chunk~8681f5c764.js";
-import { _, _, _ } from "./chunk~ffe4581a06.js";
+import { _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~3135e25ddf.js";
 import { _, _, _, _, _, _ } from "./chunk~a19d1add1e.js";
 import { _ } from "./chunk~7b4b9eb713.js";
@@ -244,9 +243,9 @@ import {
 } from "./chunk~38061b7abb.js";
 import { _ } from "./chunk~710e3cfd2f.js";
 import { _ } from "./chunk~0278ae6236.js";
+import { _ } from "./chunk~a243b6a34b.js";
 import { _ } from "./chunk~a7c5e71e12.js";
 import { _, _ } from "./chunk~221bff5eed.js";
-import { _ } from "./chunk~a243b6a34b.js";
 import { _ } from "./chunk~d8bbc3d946.js";
 import { _ } from "./chunk~5e5f1b9ccf.js";
 import { _ } from "./chunk~d902bc74d6.js";
@@ -813,6 +812,128 @@ function _(_) {
             onClick: _,
           }),
         }),
+    ],
+  });
+}
+var _ = `BedOijc5U30-`,
+  _ = `f-g7wEuNEAA-`,
+  _ = `iqSc52XeIiY-`,
+  _ = `v3DSmoZ30uU-`,
+  _ = `BpmyfBjit88-`,
+  _ = `HnHHU4PawTU-`,
+  _ = `AT8xNGEDAkc-`,
+  _ = `BjZvuPglN8o-`,
+  _ = `oUvs8MpUwjU-`,
+  _ = `qITTYY7kjz4-`,
+  _ = `DSFU798iR-I-`;
+function _(_) {
+  let _ = _(),
+    _ = _(_);
+  if (_(_)) return `nominations`;
+  if (_) return `voting`;
+}
+function _(_) {
+  let { appID: _ } = _,
+    _ = _(_);
+  if (!_) return null;
+  let _ = {
+    "--banner-art": `url( ${_(`steamawards2026/sa2026_header_static.webp?v=1`)} )`,
+    "--banner-tile": `url( ${_(`steamawards2026/page_tile.svg?v=1`)} )`,
+  };
+  return (0, _.jsx)(_, {
+    href: _(_ == `nominations` ? `nominations` : ``),
+    className: _,
+    style: _,
+    children: (0, _.jsx)(_, {
+      appID: _,
+      ePhase: _,
+    }),
+  });
+}
+var _ = 24,
+  _ = {
+    weekday: void 0,
+    year: void 0,
+    month: `short`,
+    day: `numeric`,
+    hour: `numeric`,
+    timeZoneName: `short`,
+    timeZone: `America/Los_Angeles`,
+  };
+function _(_) {
+  let { appID: _, ePhase: _ } = _,
+    { data: _ } = _({
+      appid: _,
+    }),
+    _ = _ == `nominations`,
+    _ = _?.name,
+    _ =
+      _ &&
+      (0, _.jsx)(`span`, {
+        className: _(`q3-ToRSptfI-`, _.length <= _ && `dJXhUVaEHbE-`),
+        children: _,
+      }),
+    _ = _
+      ? _
+        ? _.LocalizeReact(`#SteamAwards_AppBanner_Nominate`, _)
+        : _.Localize(`#SteamAwards_AppBanner_Nominate_NoName`)
+      : _
+        ? _.LocalizeReact(`#SteamAwards_AppBanner_Vote`, _)
+        : _.Localize(`#SteamAwards_AppBanner_Vote_NoName`),
+    _ = _.Localize(
+      _
+        ? `#SteamAwards_AppBanner_NominateUntil`
+        : `#SteamAwards_AppBanner_VoteUntil`,
+      _(_ ? _ : _, _),
+    );
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    children: [
+      (0, _.jsx)(`div`, {
+        className: _,
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsxs)(`div`, {
+            className: _,
+            children: [_.Localize(`#SteamAwards_EventMainTitle`), ` `, _()],
+          }),
+          (0, _.jsx)(`div`, {
+            className: _,
+            children: _,
+          }),
+          (0, _.jsx)(`div`, {
+            className: _,
+            children: _,
+          }),
+        ],
+      }),
+      (0, _.jsx)(`div`, {
+        className: _,
+        children: _.Localize(
+          _
+            ? `#SteamAwards_AppBanner_NominateBtn`
+            : `#SteamAwards_AppBanner_VoteBtn`,
+        ),
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        "aria-hidden": !0,
+        children: [
+          (0, _.jsx)(`img`, {
+            className: _,
+            src: _(`steamawards2026/trophy_220.png?v=1`),
+            alt: ``,
+          }),
+          (0, _.jsx)(`span`, {
+            className: _,
+          }),
+          (0, _.jsx)(`span`, {
+            className: _,
+          }),
+        ],
+      }),
     ],
   });
 }
@@ -19483,37 +19604,14 @@ var _ = _({
       )
     ).SeasonPassDisplayFromStoreBrowse,
   })),
-  _ = _.lazy(async () => ({
-    default: (
-      await _(
-        async () => {
-          let { SteamAwardAppBanner: _ } = await import(
-            `./chunk~6e5c04e057.js`
-          );
-          return {
-            SteamAwardAppBanner: _,
-          };
-        },
-        __vite__mapDeps([
-          105, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
-          19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 51, 52, 53, 54, 45,
-          46, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 33,
-          34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85,
-          86, 87, 88, 89, 90, 91, 92, 93, 47, 94, 95, 96, 97, 98, 48, 49, 99,
-          100, 101, 102, 103, 106,
-        ]),
-        import.meta.url,
-      )
-    ).SteamAwardAppBanner,
-  })),
   _ = _.lazy(() =>
     _(
       () => import(`./chunk~60675c9a27.js`),
       __vite__mapDeps([
-        107, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+        105, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 69, 64, 65, 66, 33, 34, 70,
-        71, 72, 83, 84, 85, 108, 109, 68, 110, 67, 73, 74, 111, 81, 78, 79, 80,
-        82, 88, 75, 76, 112, 98, 113, 96, 77, 97, 114, 115, 116,
+        71, 72, 83, 84, 85, 106, 107, 68, 108, 67, 73, 74, 109, 81, 78, 79, 80,
+        82, 88, 75, 76, 110, 98, 111, 96, 77, 97, 112, 113, 114,
       ]),
       import.meta.url,
     ),
@@ -19521,7 +19619,7 @@ var _ = _({
   _ = _.lazy(() =>
     _(
       () => import(`./chunk~432f9c68b6.js`),
-      __vite__mapDeps([117, 1, 2, 18, 8, 9, 118, 6, 119, 120]),
+      __vite__mapDeps([115, 1, 2, 18, 8, 9, 116, 6, 117, 118]),
       import.meta.url,
     ),
   ),
@@ -19529,11 +19627,11 @@ var _ = _({
     _(
       () => import(`./chunk~404eafa76f.js`),
       __vite__mapDeps([
-        121, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-        20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 122, 64, 65, 66, 69, 33, 34,
-        70, 67, 68, 71, 72, 73, 74, 55, 56, 57, 84, 88, 92, 93, 47, 123, 124,
-        125, 126, 127, 128, 79, 129, 59, 58, 48, 49, 130, 131, 132, 133, 134,
-        135, 136, 137, 96, 75, 76, 77, 97, 138, 139,
+        119, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+        20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 120, 64, 65, 66, 69, 33, 34,
+        70, 67, 68, 71, 72, 73, 74, 55, 56, 57, 84, 88, 92, 93, 47, 121, 122,
+        123, 124, 125, 126, 79, 127, 59, 58, 48, 49, 128, 129, 130, 131, 132,
+        133, 134, 135, 96, 75, 76, 77, 97, 136, 137,
       ]),
       import.meta.url,
     ),

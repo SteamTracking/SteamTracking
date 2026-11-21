@@ -12,11 +12,11 @@ import {
   u as s,
 } from "./chunk~01cfc309bf.js";
 import {
-  $b as c,
-  Hx as l,
-  Lb as u,
-  Tl as d,
-  Ux as f,
+  Kb as c,
+  Pl as l,
+  Qx as u,
+  Zx as d,
+  _x as f,
   cx as p,
 } from "./main.js";
 var m = e(o()),
@@ -54,12 +54,12 @@ var m = e(o()),
       );
     }
   };
-(u([t], g.prototype, `giveaway_id`, void 0),
-  u([t], g.prototype, `seconds_until_drawing`, void 0),
-  u([t], g.prototype, `rtime_start`, void 0),
-  u([t], g.prototype, `rtime_end`, void 0),
-  u([t], g.prototype, `closed`, void 0),
-  u([t], g.prototype, `winner_count`, void 0));
+(c([t], g.prototype, `giveaway_id`, void 0),
+  c([t], g.prototype, `seconds_until_drawing`, void 0),
+  c([t], g.prototype, `rtime_start`, void 0),
+  c([t], g.prototype, `rtime_end`, void 0),
+  c([t], g.prototype, `closed`, void 0),
+  c([t], g.prototype, `winner_count`, void 0));
 var _ = class e {
   constructor() {
     a(this);
@@ -77,7 +77,7 @@ var _ = class e {
   GetNextDrawChangeCallback(e) {
     let t = this.m_mapNextDrawChangeCallback.get(e);
     return (
-      t || ((t = new l()), this.m_mapNextDrawChangeCallback.set(e, t)), t
+      t || ((t = new d()), this.m_mapNextDrawChangeCallback.set(e, t)), t
     );
   }
   CopyToGiveaway(e, t) {
@@ -91,7 +91,7 @@ var _ = class e {
   }
   async ReloadGiveaway(e, t) {
     if (!e) return null;
-    let n = p.STORE_BASE_URL + `prizes/nextdraw/` + e,
+    let n = f.STORE_BASE_URL + `prizes/nextdraw/` + e,
       r = { origin: self.origin },
       a = await m.default.get(n, { params: r }),
       o = i(() => {
@@ -121,7 +121,7 @@ var _ = class e {
   }
   Init() {
     if (!this.m_bLoadedFromConfig) {
-      let e = c(`giveawaynextdraw`, `application_config`);
+      let e = p(`giveawaynextdraw`, `application_config`);
       if (e && e.giveaway_id) {
         let t = new g();
         (this.CopyToGiveaway(e, t),
@@ -131,8 +131,8 @@ var _ = class e {
     }
   }
 };
-(u([t], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
-  u([n], _.prototype, `CopyToGiveaway`, null));
+(c([t], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
+  c([n], _.prototype, `CopyToGiveaway`, null));
 var v = class e {
   m_intervalID;
   m_intervalCountDownID;
@@ -165,10 +165,10 @@ var v = class e {
       (this.m_intervalCountDownID = window.setInterval(t, 1e3));
   }
 };
-(u([f], v.prototype, `ClearRefreshInterval`, null),
-  u([f], v.prototype, `ClearCountDown`, null),
-  u([f], v.prototype, `SetupRefreshDataInterval`, null),
-  u([f], v.prototype, `SetupCountDown`, null));
+(c([u], v.prototype, `ClearRefreshInterval`, null),
+  c([u], v.prototype, `ClearCountDown`, null),
+  c([u], v.prototype, `SetupRefreshDataInterval`, null),
+  c([u], v.prototype, `SetupCountDown`, null));
 function y(e, t) {
   let n = _.Get().GetInfoByInstance(e, t.m_myInstanceNumber);
   n &&
@@ -192,7 +192,7 @@ function b(e, t) {
 }
 function x(e) {
   let [t] = (0, h.useState)(new v()),
-    n = d();
+    n = l();
   (0, h.useEffect)(
     () => (
       _.Get()

@@ -4,11 +4,47 @@
   position: relative;
   overflow: hidden;
 }
+html:not(.GamepadMode) .Es-UANTRhdg- {
+  overflow: visible;
+}
+.Es-UANTRhdg- .SaleSectionCarousel,
+.Es-UANTRhdg- .SliderBody {
+  position: static;
+}
+html:not(.GamepadMode)
+  .Es-UANTRhdg-.Es-UANTRhdg-.Es-UANTRhdg-:has(.carousel > :not(.SliderBody)) {
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+}
+@media screen and (width <= 939px) {
+  html:not(.GamepadMode)
+    .Es-UANTRhdg-.Es-UANTRhdg-.Es-UANTRhdg-:has(.carousel > :not(.SliderBody)) {
+    padding-bottom: 16px;
+  }
+}
+html:not(.GamepadMode)
+  .Es-UANTRhdg-.Es-UANTRhdg-.Es-UANTRhdg-:has(.carousel > :not(.SliderBody))
+  .carousel
+  > :not(.SliderBody) {
+  top: 100%;
+  position: absolute;
+  inset-inline: 0;
+}
+.dv9UZEOxkuA- {
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
 .DsfJ3U7A71o- {
   z-index: -1;
+  border-radius: inherit;
   background-color: #1b2129;
   position: absolute;
   inset: 0;
+  overflow: hidden;
 }
 .hcF0Za7ucCA- {
   background-position: 50%;
@@ -498,6 +534,15 @@ html:not(.GamepadMode) .gxh8RxFKhr8- {
 .gxh8RxFKhr8- .KNEaTOnJJWw- {
   flex: 72%;
 }
+@media screen and (width >= 940px) {
+  html:not(.GamepadMode)
+    .gxh8RxFKhr8-
+    .KNEaTOnJJWw-
+    .SaleSectionCarousel
+    .carousel__slider {
+    margin-bottom: -10px;
+  }
+}
 .gxh8RxFKhr8- .KNEaTOnJJWw- .SaleSectionContainer {
   padding-inline: 0;
   padding-bottom: 0;
@@ -620,6 +665,18 @@ html:not(.GamepadMode) .gxh8RxFKhr8-.ZONqp3dzTMI- {
 @media screen and (width <= 939px) {
   html:not(.GamepadMode) .gxh8RxFKhr8- .oztjxXYIBAk-.CDF-2WDX3lg- {
     display: none;
+  }
+}
+@media screen and (width >= 940px) {
+  html:not(.GamepadMode) .gxh8RxFKhr8- .oztjxXYIBAk-.CDF-2WDX3lg- {
+    align-self: stretch;
+  }
+  html:not(.GamepadMode) .gxh8RxFKhr8- .oztjxXYIBAk-.CDF-2WDX3lg- img {
+    aspect-ratio: auto;
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    inset: 0;
   }
 }
 .X4LW9zxgdTo- {

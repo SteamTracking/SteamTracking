@@ -4,15 +4,15 @@
 import { o as e, r as t } from "./chunk~f025431ab0.js";
 import { Lt as n, ft as r, l as i } from "./chunk~01cfc309bf.js";
 import {
-  Jy as a,
-  Lb as o,
-  Pb as s,
-  Ux as c,
-  Zo as l,
-  ar as u,
-  er as d,
-  jx as f,
-  xc as p,
+  Ac as a,
+  Bx as o,
+  Kb as s,
+  Qx as c,
+  Ub as l,
+  fr as u,
+  os as d,
+  rb as f,
+  sr as p,
 } from "./main.js";
 var m = e(n()),
   h = t({
@@ -112,7 +112,7 @@ var m = e(n()),
     m_nLocalOffsetYPct;
     m_fnMouseUp = null;
     m_fnMouseMove = null;
-    m_listeners = new s();
+    m_listeners = new l();
     m_strDescription = ``;
     m_aspectRatio = 1;
     componentWillUnmount() {
@@ -219,13 +219,13 @@ var m = e(n()),
             });
             break;
           case `middle`: {
-            let t = f(
+            let t = o(
                 this.CalcLeftEdge(e.clientX),
                 0,
                 100 - this.state.curWidthPct,
               ),
               n = 100 - (t + this.state.curWidthPct),
-              r = f(
+              r = o(
                 this.CalcTopEdge(e.clientY),
                 0,
                 100 - this.state.curHeightPct,
@@ -261,30 +261,30 @@ var m = e(n()),
           e.curRightPosPct === void 0
             ? this.state.curRightPosPct
             : e.curRightPosPct,
-        a = f(
+        a = o(
           100 - i - r,
           this.props.widthMinPct || 0,
           this.props.widthMaxPct || 100,
         ),
-        o = f(
+        s = o(
           100 - n - t,
           this.props.heightMinPct || 0,
           this.props.heightMaxPct || 100,
         );
       (this.props.bLockAspectRatio &&
         (e.curLeftPosPct !== void 0 || e.curRightPosPct !== void 0
-          ? (o = a / this.m_aspectRatio)
-          : (a = o * this.m_aspectRatio)),
+          ? (s = a / this.m_aspectRatio)
+          : (a = s * this.m_aspectRatio)),
         e.curLeftPosPct === void 0 ? (i = 100 - (r + a)) : (r = 100 - i - a),
-        e.curTopPosPct === void 0 ? (n = 100 - (t + o)) : (t = 100 - n - o));
-      let s = 100 - i - r,
-        c = 100 - n - t;
+        e.curTopPosPct === void 0 ? (n = 100 - (t + s)) : (t = 100 - n - s));
+      let c = 100 - i - r,
+        l = 100 - n - t;
       this.IsValidPct(r) &&
         this.IsValidPct(i) &&
         this.IsValidPct(t) &&
         this.IsValidPct(n) &&
-        this.IsValidPct(s) &&
         this.IsValidPct(c) &&
+        this.IsValidPct(l) &&
         this.setState({
           curLeftPosPct: r,
           curRightPosPct: i,
@@ -309,16 +309,16 @@ var m = e(n()),
         : 0;
     }
     CalcLeftEdge(e) {
-      return f(this.GetXPercent(e), 0, 100);
+      return o(this.GetXPercent(e), 0, 100);
     }
     CalcRightEdge(e) {
-      return f(100 - (this.GetXPercent(e) + this.state.curWidthPct), 0, 100);
+      return o(100 - (this.GetXPercent(e) + this.state.curWidthPct), 0, 100);
     }
     CalcTopEdge(e) {
-      return f(this.GetYPercent(e), 0, 100);
+      return o(this.GetYPercent(e), 0, 100);
     }
     CalcBottomEdge(e) {
-      return f(100 - (this.GetYPercent(e) + this.state.curHeightPct), 0, 100);
+      return o(100 - (this.GetYPercent(e) + this.state.curHeightPct), 0, 100);
     }
     OnMouseUp(e, t) {
       (this.setState({
@@ -431,13 +431,13 @@ var m = e(n()),
                       (0, G.jsx)(`div`, {
                         className: `o5BUe1m-4BM-`,
                         onClick: this.HandleDelete,
-                        children: (0, G.jsx)(p, {}),
+                        children: (0, G.jsx)(a, {}),
                       }),
                     !this.props.bDisableLink &&
                       (0, G.jsx)(`div`, {
                         className: `-e4w8MaVU8k-`,
                         onClick: this.OnEditLink,
-                        children: (0, G.jsx)(l, {}),
+                        children: (0, G.jsx)(d, {}),
                       }),
                     (0, G.jsxs)(`div`, {
                       className: U,
@@ -479,23 +479,23 @@ var m = e(n()),
               (0, G.jsxs)(`div`, {
                 className: `_1Be3592R7Ao-`,
                 children: [
-                  (0, G.jsx)(d, {
+                  (0, G.jsx)(p, {
                     className: void 0,
                     type: `text`,
                     name: `link_url`,
                     value: this.state.text_link_url,
-                    label: a(`#SteamTV_LinkURL`),
+                    label: f(`#SteamTV_LinkURL`),
                     placeholder: `https://www.example.com`,
                     onChange: this.OnSetLinkURLChange,
                     mustBeURL: !0,
                   }),
-                  (0, G.jsx)(d, {
+                  (0, G.jsx)(p, {
                     className: void 0,
                     type: `text`,
                     name: `link_description`,
                     value: this.state.text_link_description,
-                    label: a(`#SteamTV_LinkDescription`),
-                    placeholder: a(`#SteamTV_LinkDescription_Placeholder`),
+                    label: f(`#SteamTV_LinkDescription`),
+                    placeholder: f(`#SteamTV_LinkDescription_Placeholder`),
                     onChange: this.OnSetLinkDescriptionChange,
                   }),
                   (0, G.jsxs)(`div`, {
@@ -504,11 +504,11 @@ var m = e(n()),
                       (0, G.jsxs)(u, {
                         disabled: !this.state.valid_link,
                         onClick: this.OnSaveLink,
-                        children: [` `, a(`#Button_OK`), ` `],
+                        children: [` `, f(`#Button_OK`), ` `],
                       }),
                       (0, G.jsxs)(u, {
                         onClick: this.OnEditLink,
-                        children: [` `, a(`#Button_Cancel`)],
+                        children: [` `, f(`#Button_Cancel`)],
                       }),
                     ],
                   }),
@@ -519,14 +519,14 @@ var m = e(n()),
       );
     }
   };
-(o([c], K.prototype, `LinkRegionBoxRef`, null),
-  o([c], K.prototype, `OnMouseDown`, null),
-  o([c], K.prototype, `OnMouseMove`, null),
-  o([c], K.prototype, `OnMouseUp`, null),
-  o([c], K.prototype, `HandleDelete`, null),
-  o([c], K.prototype, `OnSetLinkURLChange`, null),
-  o([c], K.prototype, `OnSetLinkDescriptionChange`, null),
-  o([c], K.prototype, `OnSaveLink`, null),
-  o([c], K.prototype, `OnEditLink`, null),
-  (K = o([i], K)));
+(s([c], K.prototype, `LinkRegionBoxRef`, null),
+  s([c], K.prototype, `OnMouseDown`, null),
+  s([c], K.prototype, `OnMouseMove`, null),
+  s([c], K.prototype, `OnMouseUp`, null),
+  s([c], K.prototype, `HandleDelete`, null),
+  s([c], K.prototype, `OnSetLinkURLChange`, null),
+  s([c], K.prototype, `OnSetLinkDescriptionChange`, null),
+  s([c], K.prototype, `OnSaveLink`, null),
+  s([c], K.prototype, `OnEditLink`, null),
+  (K = s([i], K)));
 export { K as t };

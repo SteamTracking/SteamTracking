@@ -4,7 +4,7 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, dt as n, st as r, tt as i } from "./chunk~01cfc309bf.js";
 import { Et as a, Tt as o } from "./chunk~d8bbc3d946.js";
-import { Xb as s, ly as c, qb as l, yx as u } from "./main.js";
+import { Ox as s, ax as c, nx as l, vy as u } from "./main.js";
 import { n as d } from "./chunk~65d992238f.js";
 var f = e(i()),
   p = e(t());
@@ -12,8 +12,8 @@ function m(e) {
   return [`AppRelevanceStore`, `FriendsRecommended`, e];
 }
 function h(e) {
-  let t = c();
-  return r({ ...g(t, e), enabled: s.logged_in });
+  let t = u();
+  return r({ ...g(t, e), enabled: c.logged_in });
 }
 function g(e, t) {
   return { queryKey: m(t), queryFn: () => x(e, t) };
@@ -31,7 +31,7 @@ function v(e) {
   return r({
     queryKey: [`AppRelevanceStore`, `StoreRelevance`, e],
     queryFn: () => S(e),
-    enabled: s.logged_in,
+    enabled: c.logged_in,
   });
 }
 function y() {
@@ -46,7 +46,7 @@ function b() {
   return e;
 }
 async function x(e, t) {
-  let n = u.Init(o);
+  let n = s.Init(o);
   n.Body().set_appid(t);
   let r = await a.GetFriendsRecommendedApp(e, n),
     i = r.GetEResult();

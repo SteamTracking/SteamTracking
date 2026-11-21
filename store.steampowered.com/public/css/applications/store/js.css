@@ -10563,6 +10563,7 @@ html.touch .eRszG1u51Rs- {
 }
 .UcrgejVf5aA- {
   inset-inline-start: 0;
+  top: var(--user-item-flag-top, 14px);
   color: #111;
   z-index: 5;
   flex-direction: row;
@@ -10573,7 +10574,6 @@ html.touch .eRszG1u51Rs- {
   line-height: 19px;
   display: flex;
   position: absolute;
-  top: 14px;
   overflow: hidden;
   box-shadow: 0 0 4px #000000e6;
 }

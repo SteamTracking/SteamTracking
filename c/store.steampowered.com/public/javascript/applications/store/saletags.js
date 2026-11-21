@@ -6,7 +6,7 @@ import { _, _ } from "./chunk~8c66e1c7a5.js";
 import { _, _, _ } from "./chunk~4c13037b22.js";
 import "./chunk~8681f5c764.js";
 import { _, _, _ } from "./chunk~2f085f1384.js";
-import { _, _ } from "./chunk~ffe4581a06.js";
+import { _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~92931c6310.js";
 import { _, _ } from "./chunk~af36c62e9f.js";
 import { _ } from "./chunk~eefd71512b.js";
@@ -19,6 +19,9 @@ import { _ } from "./chunk~0278ae6236.js";
 import { _, _ } from "./chunk~90b9831ad2.js";
 import { _, _ } from "./chunk~f162f235ea.js";
 import {
+  _,
+  _,
+  _,
   _,
   _,
   _,
@@ -1050,82 +1053,6 @@ function _(_) {
 }
 function _(_) {
   return _ === void 0 || _ === 0 || _ === 2;
-}
-async function _(_, _) {
-  let _ = _(_.STORE_BASE_URL, _, _.country_code);
-  return (await (await fetch(_)).json()).rgWishlist || [];
-}
-function _() {
-  let _ = _(),
-    _ = _.accountid;
-  return _(_(_, _));
-}
-function _(_, _) {
-  return {
-    queryKey: _(_),
-    queryFn: async () => {
-      if (!_) return new Set();
-      let _ = await _(_, _);
-      return new Set(_);
-    },
-    staleTime: 6e5,
-  };
-}
-function _(_) {
-  let { data: _ } = _();
-  return _ === void 0 || _ == null ? void 0 : _.has(_);
-}
-function _() {
-  let _ = _(),
-    _ = _.accountid;
-  return (_, _) => {
-    _.setQueryData(_(_), (_) => {
-      if (!_) return;
-      let _ = new Set(_);
-      if (_) for (let _ of _) _.delete(_);
-      if (_) for (let _ of _) _.add(_);
-      return _;
-    });
-  };
-}
-function _(_) {
-  return [`AccountWishlistApps`, _ ?? 0];
-}
-function _(_, _, _) {
-  let _ = _(),
-    _ = _.accountid;
-  return _({
-    mutationKey: [`useUpdateWishlist`, _, _, _],
-    mutationFn: async () => {
-      if (_ == null) return;
-      let _ =
-          _.STORE_BASE_URL +
-          `api/` +
-          (_ ? `addtowishlist` : `removefromwishlist`),
-        _ = new FormData();
-      (_.append(`appid`, `` + _),
-        _.append(`sessionid`, _()),
-        _ && _.append(`snr`, _));
-      let _ = await fetch(_, {
-        method: `POST`,
-        body: _,
-        credentials: `include`,
-      });
-      if (!_._)
-        throw Error(
-          `Wishlist ${_ ? `add` : `remove`} of appid ${_} failed (${_.status})`,
-        );
-    },
-    onMutate: () => {
-      _ != null && _(_ ? [_] : void 0, _ ? void 0 : [_]);
-    },
-    onError: () => {
-      _ != null && _(_ ? void 0 : [_], _ ? [_] : void 0);
-    },
-    onSuccess: () => {
-      _();
-    },
-  });
 }
 function _(_) {
   let {
@@ -28157,7 +28084,7 @@ function _(_, _, _, _) {
       case `creator_list`:
         return _();
       case `discount_reason`:
-        return _(_) ?? null;
+        return _(_);
     }
   else if (_.section_type === `tabs`) return ``;
   else if (_.section_type === `curator`) {
@@ -28241,6 +28168,8 @@ function _(_, _, _) {
         return _ ? _(`#Sale_PersonalizedCarousel_Section_subtitle`, _) : null;
       case `creator_list`:
         return _(_.smart_section_creator_listid) ?? null;
+      case `discount_reason`:
+        return _(_);
     }
   return null;
 }
@@ -28702,89 +28631,14 @@ function _(_, _, _) {
 }
 var _ = `VULTMp1PCTw-`,
   _ = `_2vLXBykr6zc-`;
-async function _(_, _) {
-  let _ = _(_.STORE_BASE_URL, _, _.country_code),
-    _ = await (await fetch(_)).json();
-  return Object.keys(_.rgIgnoredApps).map(Number) || [];
-}
-function _() {
-  let _ = _(),
-    _ = _.accountid;
-  return _(_(_, _));
-}
-function _(_, _) {
-  return {
-    queryKey: _(_),
-    queryFn: async () => {
-      if (!_) return new Set();
-      let _ = await _(_, _);
-      return new Set(_);
-    },
-    staleTime: 6e5,
-  };
-}
-function _(_) {
-  let { data: _ } = _();
-  return _ === void 0 || _ == null ? void 0 : _.has(_);
-}
-function _() {
-  let _ = _(),
-    _ = _.accountid;
-  return (_, _) => {
-    _.setQueryData(_(_), (_) => {
-      if (!_) return;
-      let _ = new Set(_);
-      if (_) for (let _ of _) _.delete(_);
-      if (_) for (let _ of _) _.add(_);
-      return _;
-    });
-  };
-}
-function _(_) {
-  return [`AccountIgnoreApps`, _ ?? 0];
-}
-function _(_, _, _, _ = 0) {
-  let _ = _(),
-    _ = _.accountid;
-  return _({
-    mutationKey: [`useUpdateAppIgnore`, _, _, _],
-    mutationFn: async () => {
-      if (_ == null) return;
-      let _ = _.STORE_BASE_URL + `recommended/ignorerecommendation`,
-        _ = new FormData();
-      (_.append(`appid`, `` + _),
-        _.append(`sessionid`, _()),
-        _.append(`remove`, _ ? `0` : `1`),
-        _ && _.append(`snr`, _),
-        _.append(`ignore_reason`, `` + _));
-      let _ = await fetch(_, {
-        method: `POST`,
-        body: _,
-        credentials: `include`,
-      });
-      if (!_._)
-        throw Error(
-          `Ignore App ${_ ? `add` : `remove`} of appid ${_} failed (${_.status})`,
-        );
-    },
-    onMutate: () => {
-      _ != null && _(_ ? [_] : void 0, _ ? void 0 : [_]);
-    },
-    onError: () => {
-      _ != null && _(_ ? void 0 : [_], _ ? [_] : void 0);
-    },
-    onSuccess: () => {
-      _();
-    },
-  });
-}
 function _(_) {
   let { _: _, snr: _, classOverride: _ } = _,
     [_, _] = (0, _.useState)(!1),
     _ = _(`GameHoverIgnoreButton`),
     { elDialogElement: _, fnShowLogonDialog: _ } = _(),
     _ = _ && `appid` in _ ? _.appid : void 0,
-    { mutateAsync: _ } = _(_, !_(_), _),
+    _ = _(_),
+    { mutateAsync: _ } = _(_, !_, _),
     _ = _ && `appid` in _ && _.Get().BIsGameIgnored(_.appid);
   return (0, _.jsxs)(_, {
     className: _(_, _),
@@ -30437,9 +30291,18 @@ function _(_) {
   };
 }
 function _(_, _, _) {
-  if (!_) return;
+  let _ = () => {
+    if (!_?.bNoAllOption) return;
+    let _ = _(_).find(_);
+    return _
+      ? {
+          strParentKey: _(_),
+        }
+      : void 0;
+  };
+  if (!_) return _();
   let _ = _(_(_), _.strParentKey);
-  if (!_ || !_(_)) return;
+  if (!_ || !_(_)) return _();
   if (!_.strChildKey) return _;
   let _ = _(_.rgChildren ?? [], _.strChildKey);
   return !_ || !_(_)
@@ -30510,9 +30373,12 @@ function _(_) {
   return _ === null ? 0 : Number(_);
 }
 function _(_) {
-  let [_] = _();
-  return _(_, _);
+  let _ = _.useContext(_),
+    [_] = _();
+  return _(_, _?.nTabUniqueID ?? _);
 }
+var _ = _.createContext(void 0);
+(_.createContext(void 0), _.createContext(void 0));
 function _(_, _) {
   let _ = _(_);
   return _.find((_) => _.unique_id === _) ?? _[0];
@@ -30569,7 +30435,8 @@ function _(_) {
   _.href !== window.location.href && _((_) => _, _);
 }
 function _(_) {
-  let _ = _(_),
+  let _ = _.useContext(_),
+    _ = _(_),
     _ = _(),
     [_] = _(_),
     [_] = _(_),
@@ -30581,7 +30448,7 @@ function _(_) {
         }),
       [],
     );
-  return [_(_(_, _), _?.tab_tag_filter, _), _];
+  return [_(_ ? _.tagSelection : _(_, _), _?.tab_tag_filter, _), _];
 }
 function _() {
   let { data: _ } = _();
@@ -31469,22 +31336,66 @@ function _(_, _, _) {
       ? []
       : _(_, _.smart_section_discount_reason).slice(0, _);
 }
-var _ = {
-  1: `#Sale_default_label_OnYourWishlist`,
-  2: `#Sale_DiscountReason_Section_FirstTimeOnSale`,
-  3: `#Sale_DiscountReason_Section_LargestDiscount`,
-  4: `#Sale_DiscountReason_Section_EndingSoon`,
-  5: `#Sale_DiscountReason_Section_NewlyOnSale`,
-  6: `#Sale_DiscountReason_Section_WellReviewed`,
-  7: `#Sale_DiscountReason_Section_TopSeller`,
-  8: `#Sale_DiscountReason_Section_HotDeal`,
-  9: `#Sale_DiscountReason_Section_DeepDiscount`,
-  10: `#Sale_DiscountReason_Section_PopularInRegion`,
-};
+var _ = [
+  {
+    eReason: 1,
+    strTitleToken: `#Sale_default_label_OnYourWishlist`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_Wishlist`,
+  },
+  {
+    eReason: 2,
+    strTitleToken: `#Sale_DiscountReason_Section_FirstTimeOnSale`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_FirstTimeOnSale`,
+  },
+  {
+    eReason: 3,
+    strTitleToken: `#Sale_DiscountReason_Section_LargestDiscount`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_LargestDiscount`,
+  },
+  {
+    eReason: 4,
+    strTitleToken: `#Sale_DiscountReason_Section_EndingSoon`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_EndingSoon`,
+  },
+  {
+    eReason: 5,
+    strTitleToken: `#Sale_DiscountReason_Section_NewlyOnSale`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_NewlyOnSale`,
+  },
+  {
+    eReason: 6,
+    strTitleToken: `#Sale_DiscountReason_Section_WellReviewed`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_WellReviewed`,
+  },
+  {
+    eReason: 7,
+    strTitleToken: `#Sale_DiscountReason_Section_TopSeller`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_TopSeller`,
+  },
+  {
+    eReason: 8,
+    strTitleToken: `#Sale_DiscountReason_Section_HotDeal`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_HotDeal`,
+  },
+  {
+    eReason: 9,
+    strTitleToken: `#Sale_DiscountReason_Section_DeepDiscount`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_DeepDiscount`,
+  },
+  {
+    eReason: 10,
+    strTitleToken: `#Sale_DiscountReason_Section_PopularInRegion`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_PopularInRegion`,
+  },
+];
 function _(_) {
-  return _.smart_section_discount_reason === void 0
-    ? void 0
-    : _[_.smart_section_discount_reason];
+  return _.find((_) => _.eReason === _.smart_section_discount_reason);
+}
+function _(_) {
+  return _(_)?.strTitleToken ?? ``;
+}
+function _(_) {
+  return _(_)?.strSubtitleToken ?? ``;
 }
 function _(_, _) {
   return _.BUsesContentHubForItemSource() || !!_.hide_owned_items;

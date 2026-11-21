@@ -16,27 +16,27 @@ import { i as l, r as u } from "./chunk~0111fcd096.js";
 import { n as d, t as f } from "./chunk~95ecbf576c.js";
 import { o as p } from "./chunk~fc8a9e4879.js";
 import {
-  $b as m,
-  Dl as h,
-  Jy as g,
-  Qb as _,
-  Vu as v,
-  Vy as y,
-  Xc as b,
-  ar as x,
-  cx as S,
-  er as C,
-  fn as w,
-  fo as T,
-  ib as E,
-  kn as D,
-  mb as O,
-  mr as ee,
-  or as k,
-  wc as A,
+  Ab as m,
+  Cb as h,
+  Il as g,
+  In as _,
+  Nc as v,
+  OS as y,
+  Xu as b,
+  Xy as x,
+  _x as S,
+  al as C,
+  cx as w,
+  fr as T,
+  pb as ee,
+  pr as E,
+  rb as D,
+  sr as O,
+  sx as k,
   x as te,
-  xb as j,
-  yS as M,
+  xo as A,
+  xr as j,
+  yn as M,
 } from "./main.js";
 import {
   a as ne,
@@ -55,7 +55,7 @@ function oe(e, t, n, r) {
   return a({
     mutationFn: async ({ bIncludeSelf: i, rgGuests: a }) => {
       let o = new FormData();
-      (o.append(`sessionid`, _()),
+      (o.append(`sessionid`, k()),
         o.append(`gid`, e),
         o.append(`accountid`, `` + t),
         o.append(`meetsteam_group_id`, `` + n),
@@ -74,7 +74,7 @@ function se(e, t, n) {
   return a({
     mutationFn: async ({ nCapacity: r }) => {
       let i = new FormData();
-      (i.append(`sessionid`, _()),
+      (i.append(`sessionid`, k()),
         i.append(`gid`, e),
         i.append(`meetsteam_group_id`, `` + t),
         i.append(`meetsteam_session_id`, `` + n),
@@ -108,7 +108,7 @@ function B(e, t, n) {
 function V(e, t) {
   let n = l(),
     [r] = (0, z.useState)(() =>
-      m(`registrations`, `application_config`)
+      w(`registrations`, `application_config`)
         .map((e) => ((e.userReg = JSON.parse(e.jsondata)), e))
         .sort((t, n) => {
           let r = B(e.jsondata.meet_steam_groups, t.group_id, t.session_id);
@@ -168,7 +168,7 @@ var W = `qp3ftpND5iU-`,
 function _e(e) {
   let [t] = s(`gid`),
     n = p(t),
-    r = M(S.LANGUAGE),
+    r = y(S.LANGUAGE),
     i = (0, z.useCallback)(
       () =>
         window.location.assign(
@@ -193,10 +193,10 @@ function _e(e) {
           }),
           (0, J.jsx)(`div`, {
             className: K,
-            children: (0, J.jsxs)(x, {
+            children: (0, J.jsxs)(T, {
               onClick: i,
               children: [
-                (0, J.jsx)(T, { angle: 180, className: q }),
+                (0, J.jsx)(A, { angle: 180, className: q }),
                 `Back to full list`,
               ],
             }),
@@ -204,7 +204,7 @@ function _e(e) {
           (0, J.jsx)(ve, { eventModel: n }),
         ],
       })
-    : (0, J.jsx)(c, { string: g(`#Loading`) });
+    : (0, J.jsx)(c, { string: D(`#Loading`) });
 }
 function ve(e) {
   let { eventModel: t } = e,
@@ -220,7 +220,7 @@ function ve(e) {
       (0, J.jsx)(Y, {
         eventModel: t,
         rgUserRegs: n.today,
-        strTitle: `Today ` + O(i),
+        strTitle: `Today ` + h(i),
       }),
       (0, J.jsx)(Y, {
         eventModel: t,
@@ -265,7 +265,7 @@ function ye(e) {
     [n, r] = (0, z.useState)(!1),
     i = (0, z.useCallback)(() => r((e) => !e), []);
   return (0, J.jsx)(`div`, {
-    className: A({ [ge]: !0, [void 0]: n }),
+    className: v({ [ge]: !0, [void 0]: n }),
     onClick: i,
     onMouseEnter: () => r(!0),
     onMouseLeave: () => r(!1),
@@ -274,7 +274,7 @@ function ye(e) {
 }
 function be(e) {
   let { reg: t, eventModel: n } = e,
-    r = new y(t.steamid).GetAccountID(),
+    r = new x(t.steamid).GetAccountID(),
     [i] = ie(t.userReg.accountid),
     [a, o] = (0, z.useState)(!0),
     [s, c] = (0, z.useState)([]),
@@ -285,13 +285,13 @@ function be(e) {
       t.group_id,
       t.session_id,
     ),
-    [m, g, _] = h(),
+    [m, h, _] = g(),
     v = oe(n.GID, r, t.group_id, t.session_id),
-    x = new Set(
+    y = new Set(
       t.guests_attendance?.length > 0 ? t.guests_attendance.split(`|`) : [],
     ),
-    S = t.attendance_count > x.size,
-    C = (e, t, n, r) =>
+    b = t.attendance_count > y.size,
+    S = (e, t, n, r) =>
       (0, J.jsxs)(J.Fragment, {
         children: [
           (0, J.jsxs)(`span`, { className: he, children: [e, `:`, `\xA0`] }),
@@ -328,13 +328,13 @@ function be(e) {
         : (0, J.jsxs)(`div`, {
             className: pe,
             children: [
-              (0, J.jsx)(k, {
+              (0, J.jsx)(E, {
                 label: (0, J.jsx)(J.Fragment, {
-                  children: C(
+                  children: S(
                     `Attendee`,
                     d.name || i.persona_name,
                     d.email_override,
-                    S,
+                    b,
                   ),
                 }),
                 checked: a,
@@ -344,10 +344,10 @@ function be(e) {
                 (0, J.jsx)(J.Fragment, {
                   children: d.guest_names.map((e) =>
                     (0, J.jsx)(
-                      k,
+                      E,
                       {
                         label: (0, J.jsx)(J.Fragment, {
-                          children: C(`Guest`, e, void 0, x.has(e)),
+                          children: S(`Guest`, e, void 0, y.has(e)),
                         }),
                         checked: s.includes(e),
                         onChange: (t) => {
@@ -364,15 +364,15 @@ function be(e) {
                     ),
                   ),
                 }),
-              (0, J.jsx)(ee, {
-                onClick: g,
+              (0, J.jsx)(j, {
+                onClick: h,
                 children: `Check in selected people`,
               }),
             ],
           }),
-      (0, J.jsx)(w, {
+      (0, J.jsx)(M, {
         active: m,
-        children: (0, J.jsx)(b, {
+        children: (0, J.jsx)(C, {
           children: (0, J.jsx)(xe, {
             closeModal: _,
             bIncludeSelf: a,
@@ -395,10 +395,10 @@ function xe(e) {
     } = e,
     o = d();
   return o.bLoading
-    ? (0, J.jsx)(f, { state: o, strDialogTitle: g(`#Saving`), closeModal: t })
-    : (0, J.jsx)(D, {
+    ? (0, J.jsx)(f, { state: o, strDialogTitle: D(`#Saving`), closeModal: t })
+    : (0, J.jsx)(_, {
         onCancel: t,
-        strTitle: g(`#Button_Submit`),
+        strTitle: D(`#Button_Submit`),
         bAllowFullSize: !0,
         onOK: async () => {
           (o.fnSetLoading(!0),
@@ -410,10 +410,10 @@ function xe(e) {
                     o.fnSetStrSuccess(
                       `Success! This person has been checked in.`,
                     ))
-                  : o.fnSetStrError(g(`#Login_Error_Network_Description`));
+                  : o.fnSetStrError(D(`#Login_Error_Network_Description`));
               })
               .catch(() =>
-                o.fnSetStrError(g(`#Login_Error_Network_Description`)),
+                o.fnSetStrError(D(`#Login_Error_Network_Description`)),
               ));
         },
         children: `Mark as checked in?`,
@@ -479,7 +479,7 @@ function Be(e, t) {
 function Ve(e) {
   let [t] = s(`gid`),
     n = p(t),
-    r = M(S.LANGUAGE),
+    r = y(S.LANGUAGE),
     [i, a] = (0, z.useState)(``);
   return n
     ? (0, J.jsxs)(`div`, {
@@ -499,7 +499,7 @@ function Ve(e) {
           (0, J.jsx)(We, { eventModel: n }),
           (0, J.jsx)(`div`, {
             className: Te,
-            children: (0, J.jsx)(C, {
+            children: (0, J.jsx)(O, {
               type: `text`,
               label: `Search for an attendee`,
               value: i,
@@ -511,7 +511,7 @@ function Ve(e) {
           (0, J.jsx)(He, { eventModel: n, strSearch: i.toLowerCase() }),
         ],
       })
-    : (0, J.jsx)(c, { string: g(`#Loading`) });
+    : (0, J.jsx)(c, { string: D(`#Loading`) });
 }
 function He(e) {
   let { eventModel: t, strSearch: n } = e,
@@ -551,7 +551,7 @@ function He(e) {
                     `div`,
                     {
                       className: Ee,
-                      children: (0, J.jsx)(x, {
+                      children: (0, J.jsx)(T, {
                         onClick: () => a(o.get(e.toLowerCase())),
                         children: e,
                       }),
@@ -572,10 +572,10 @@ function Ue(e) {
     children: [
       (0, J.jsx)(`div`, {
         className: K,
-        children: (0, J.jsxs)(x, {
+        children: (0, J.jsxs)(T, {
           onClick: i,
           children: [
-            (0, J.jsx)(T, { angle: 180, className: q }),
+            (0, J.jsx)(A, { angle: 180, className: q }),
             `Back to full list`,
           ],
         }),
@@ -583,7 +583,7 @@ function Ue(e) {
       (0, J.jsx)(Y, {
         eventModel: t,
         rgUserRegs: o.today,
-        strTitle: `Today ` + O(a),
+        strTitle: `Today ` + h(a),
       }),
       (0, J.jsx)(Y, {
         eventModel: t,
@@ -619,7 +619,7 @@ function We(e) {
       };
     }, [t?.jsondata?.meet_steam_groups, n, r]),
     s = z.useMemo(() => {
-      let e = m(`registrations`, `application_config`);
+      let e = w(`registrations`, `application_config`);
       if (e && typeof e == `object`)
         return e.reduce((e, t) => {
           let n = `${t.group_id}_${t.session_id}`,
@@ -633,12 +633,12 @@ function We(e) {
         (e, t) => (e == null || (t * 1e3 > n.getTime() && t < e) ? t : e),
         void 0,
       ) ?? 0,
-    l = Array.from(a.keys()).some((e) => j(n, new Date(e * 1e3)));
+    l = Array.from(a.keys()).some((e) => m(n, new Date(e * 1e3)));
   return (0, J.jsxs)(`div`, {
     className: De,
     children: [
       o &&
-        (0, J.jsx)(k, { label: `Show past events`, checked: r, onChange: i }),
+        (0, J.jsx)(E, { label: `Show past events`, checked: r, onChange: i }),
       (0, J.jsx)(`div`, {
         className: Oe,
         children: Array.from(a.keys()).map((e) =>
@@ -649,7 +649,7 @@ function We(e) {
               date: new Date(e * 1e3),
               sessionsAndGroups: a.get(e),
               rgRegistrationInfo: s,
-              isToday: j(l ? n : new Date(c * 1e3), new Date(e * 1e3)),
+              isToday: m(l ? n : new Date(c * 1e3), new Date(e * 1e3)),
             },
             e,
           ),
@@ -667,9 +667,9 @@ function Ge(e) {
     isToday: a,
   } = e;
   return (0, J.jsxs)(`div`, {
-    className: A(Ae, !a && `dfDPmr4MFBA-`),
+    className: v(Ae, !a && `dfDPmr4MFBA-`),
     children: [
-      (0, J.jsx)(`div`, { className: ke, children: E(n) }),
+      (0, J.jsx)(`div`, { className: ke, children: ee(n) }),
       (0, J.jsx)(`div`, {
         className: je,
         children: r.map((e) =>
@@ -691,7 +691,7 @@ function Ge(e) {
 }
 function Ke(e) {
   let { eventModel: t, date: n, group: r, session: i, registrations: a } = e,
-    o = M(S.LANGUAGE),
+    o = y(S.LANGUAGE),
     s = u(),
     { sDisplayTimeZone: c, rtime_start: l } = N(i),
     d = ne(l, c),
@@ -704,9 +704,9 @@ function Ke(e) {
           : 0),
       0,
     ),
-    [m, g, _] = h(),
-    v = se(t.GID, r.group_id, i.id),
-    y = () => window.location.reload();
+    [m, h, _] = g(),
+    b = se(t.GID, r.group_id, i.id),
+    x = () => window.location.reload();
   return (0, J.jsxs)(`div`, {
     className: Me,
     children: [
@@ -734,19 +734,19 @@ function Ke(e) {
       Z(n) >= Z(s) &&
         (0, J.jsxs)(J.Fragment, {
           children: [
-            (0, J.jsx)(x, {
-              className: A(`-nD2J-ewBfk-`),
-              onClick: g,
+            (0, J.jsx)(T, {
+              className: v(`-nD2J-ewBfk-`),
+              onClick: h,
               children: `Update capacity...`,
             }),
-            (0, J.jsx)(w, {
+            (0, J.jsx)(M, {
               active: m,
-              children: (0, J.jsx)(b, {
+              children: (0, J.jsx)(C, {
                 children: (0, J.jsx)(qe, {
                   closeModal: _,
                   nCapacity: i.max_capacity ?? 0,
-                  fnUpdateCapacity: v,
-                  fnOnSuccess: () => y(),
+                  fnUpdateCapacity: b,
+                  fnOnSuccess: () => x(),
                 }),
               }),
             }),
@@ -760,10 +760,10 @@ function qe(e) {
     [a, o] = z.useState(n.toString()),
     s = d();
   return s.bLoading
-    ? (0, J.jsx)(f, { state: s, strDialogTitle: g(`#Saving`), closeModal: t })
-    : (0, J.jsx)(D, {
+    ? (0, J.jsx)(f, { state: s, strDialogTitle: D(`#Saving`), closeModal: t })
+    : (0, J.jsx)(_, {
         onCancel: t,
-        strTitle: g(`Update Capacity`),
+        strTitle: D(`Update Capacity`),
         bAllowFullSize: !0,
         onOK: async () => {
           s.fnSetLoading(!0);
@@ -774,13 +774,13 @@ function qe(e) {
             .then((e) => {
               e
                 ? (i(), s.fnSetStrSuccess(`Max capacity updated.`))
-                : s.fnSetStrError(g(`#Login_Error_Network_Description`));
+                : s.fnSetStrError(D(`#Login_Error_Network_Description`));
             })
             .catch(() =>
-              s.fnSetStrError(g(`#Login_Error_Network_Description`)),
+              s.fnSetStrError(D(`#Login_Error_Network_Description`)),
             );
         },
-        children: (0, J.jsx)(C, {
+        children: (0, J.jsx)(O, {
           className: ze,
           label: `New capacity`,
           type: `text`,
@@ -802,7 +802,7 @@ function Q(e) {
       (0, J.jsx)(`div`, {
         className: Le,
         children: (0, J.jsx)(`div`, {
-          className: A(X, i ? Re : ``),
+          className: v(X, i ? Re : ``),
           style: { width: o },
         }),
       }),
@@ -810,8 +810,8 @@ function Q(e) {
   });
 }
 var $ = {
-  MeetSteamAttendance: () => `${v.MeetSteamRoute()}attendance`,
-  MeetSteamAttendeeList: () => `${v.MeetSteamRoute()}attendeelist`,
+  MeetSteamAttendance: () => `${b.MeetSteamRoute()}attendance`,
+  MeetSteamAttendeeList: () => `${b.MeetSteamRoute()}attendeelist`,
 };
 function Je(e) {
   return (0, J.jsxs)(n, {

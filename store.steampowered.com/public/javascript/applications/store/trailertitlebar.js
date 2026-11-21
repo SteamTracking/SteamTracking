@@ -16,55 +16,55 @@ import { t as l } from "./chunk~eefd71512b.js";
 import { r as u } from "./chunk~e867464c75.js";
 import { n as d, r as f, t as p } from "./chunk~b980797e15.js";
 import {
-  Ai as m,
-  Bn as h,
-  Di as g,
-  Du as _,
-  Eb as v,
-  Gb as y,
-  Lb as b,
-  Ll as x,
-  Lu as ee,
-  Lx as S,
-  Ml as C,
-  Mu as te,
-  Oi as ne,
-  Pb as w,
-  Pl as re,
-  Qx as T,
-  Rx as E,
-  Tl as ie,
-  Ul as ae,
-  Ux as D,
-  Vr as oe,
-  Wb as se,
-  Wl as O,
-  Xr as ce,
-  Yx as le,
-  Zr as ue,
-  ax as de,
-  cb as k,
-  gt as A,
-  il as fe,
-  jc as pe,
-  ju as me,
-  jx as j,
-  ki as he,
-  ku as ge,
-  mn as _e,
-  po as ve,
-  qb as ye,
-  si as be,
-  vi as xe,
-  wc as M,
-  xl as Se,
-  yS as Ce,
-  zl as we,
+  $b as m,
+  $l as h,
+  Al as g,
+  Bc as _,
+  Bu as v,
+  Bx as y,
+  Di as ee,
+  Fb as b,
+  Ii as x,
+  Iu as S,
+  Jl as te,
+  Kb as C,
+  Kl as ne,
+  Ku as w,
+  Kx as re,
+  Li as T,
+  Nc as E,
+  OS as D,
+  Pl as ie,
+  Ql as ae,
+  Qx as O,
+  Ri as oe,
+  Ru as se,
+  So as ce,
+  Ub as le,
+  Ul as ue,
+  Vl as de,
+  Vu as fe,
+  Yr as pe,
+  _b as k,
+  ai as me,
+  ex as A,
+  gi as he,
+  iS as ge,
+  ii as _e,
+  mx as ve,
+  nx as ye,
+  pl as be,
+  qn as xe,
+  qx as Se,
+  sS as Ce,
+  xn as we,
+  yt as j,
+  zi as Te,
 } from "./main.js";
-var N = e(i()),
-  P = a();
-function F(e) {
-  return (0, P.jsx)(`svg`, {
+var M = e(i()),
+  N = a();
+function P(e) {
+  return (0, N.jsx)(`svg`, {
     className: `SVGIcon_Button`,
     width: `36`,
     height: `36`,
@@ -72,14 +72,14 @@ function F(e) {
     fill: `none`,
     xmlns: `http://www.w3.org/2000/svg`,
     ...e,
-    children: (0, P.jsx)(`path`, {
+    children: (0, N.jsx)(`path`, {
       d: `M31.3137 19.5299L10.0583 32.3788C9.77894 32.5477 9.45165 32.6083 9.13395 32.5496C8.81603 32.4909 8.52835 32.3169 8.32083 32.0582C8.11354 31.7995 8 31.4723 8 31.1346V5.4368C8 5.09914 8.11354 4.77196 8.32083 4.51325C8.52833 4.25455 8.81604 4.08049 9.13395 4.02181C9.45165 3.96313 9.77896 4.02377 10.0583 4.19261L31.3137 17.0415C31.593 17.2103 31.8068 17.4769 31.9172 17.7942C32.0276 18.1116 32.0276 18.4598 31.9172 18.7772C31.8068 19.0945 31.593 19.3611 31.3137 19.5299Z`,
       fill: `currentColor`,
     }),
   });
 }
-function Te(e) {
-  return (0, P.jsx)(`svg`, {
+function F(e) {
+  return (0, N.jsx)(`svg`, {
     className: `SVGIcon_Button`,
     width: `36`,
     height: `36`,
@@ -87,14 +87,14 @@ function Te(e) {
     fill: `none`,
     xmlns: `http://www.w3.org/2000/svg`,
     ...e,
-    children: (0, P.jsx)(`path`, {
+    children: (0, N.jsx)(`path`, {
       d: `M14.3333 30C14.3333 30.5523 13.8856 31 13.3333 31H8C7.44772 31 7 30.5523 7 30V6C7 5.44772 7.44772 5 8 5H13.3333C13.8856 5 14.3333 5.44772 14.3333 6V30ZM29 6C29 5.44772 28.5523 5 28 5H22.6667C22.1144 5 21.6667 5.44772 21.6667 6V30C21.6667 30.5523 22.1144 31 22.6667 31H28C28.5523 31 29 30.5523 29 30V6Z`,
       fill: `currentColor`,
     }),
   });
 }
 function Ee(e) {
-  return (0, P.jsx)(`svg`, {
+  return (0, N.jsx)(`svg`, {
     className: `SVGIcon_Button`,
     width: `36`,
     height: `36`,
@@ -102,33 +102,33 @@ function Ee(e) {
     fill: `none`,
     xmlns: `http://www.w3.org/2000/svg`,
     ...e,
-    children: (0, P.jsx)(`path`, {
+    children: (0, N.jsx)(`path`, {
       d: `M4 4H14V8H8V14H4V4ZM22 4V8H28V14H32V4H22ZM28 28H22V32H32V22H28V28ZM8 22H4V32H14V28H8V22Z`,
       fill: `currentColor`,
     }),
   });
 }
 function De(e) {
-  return (0, P.jsx)(`svg`, {
+  return (0, N.jsx)(`svg`, {
     width: `128`,
     height: `128`,
     viewBox: `0 0 128 128`,
     fill: `none`,
     xmlns: `http://www.w3.org/2000/svg`,
-    children: (0, P.jsx)(`path`, {
+    children: (0, N.jsx)(`path`, {
       d: `M12 88H116V40H12V88ZM128 94C128 97.3137 125.314 100 122 100H6C2.78979 100 0.168429 97.4789 0.0078125 94.3086L0 94V34C0 30.6863 2.68629 28 6 28H122C125.314 28 128 30.6863 128 34V94Z`,
       fill: `currentColor`,
     }),
   });
 }
 function Oe(e) {
-  return (0, P.jsx)(`svg`, {
+  return (0, N.jsx)(`svg`, {
     width: `128`,
     height: `128`,
     viewBox: `0 0 128 128`,
     fill: `none`,
     xmlns: `http://www.w3.org/2000/svg`,
-    children: (0, P.jsx)(`path`, {
+    children: (0, N.jsx)(`path`, {
       d: `M12 88H116V40H12V88ZM128 94C128 97.3137 125.314 100 122 100H6C2.78979 100 0.168429 97.4789 0.0078125 94.3086L0 94V34C0 30.6863 2.68629 28 6 28H122C125.314 28 128 30.6863 128 34V94Z`,
       fill: `currentColor`,
     }),
@@ -138,7 +138,7 @@ var ke = `hPeepTEP2A0-`,
   Ae = `RzxfM12jbio-`,
   je = `kQJ64kMGQbg-`,
   Me = `_74WMutU3Gxc-`,
-  Ne = (0, N.createContext)({});
+  Ne = (0, M.createContext)({});
 function Pe(e) {
   let {
       autoplayEnabled: t,
@@ -149,7 +149,7 @@ function Pe(e) {
       setAudioMuted: o,
       children: s,
     } = e,
-    c = (0, N.useMemo)(
+    c = (0, M.useMemo)(
       () => ({
         m_bAutoplayEnabled: t,
         m_fnSetAutoplayEnabled: n,
@@ -160,10 +160,10 @@ function Pe(e) {
       }),
       [t, n, r, i, a, o],
     );
-  return (0, P.jsx)(Ne.Provider, { value: c, children: s });
+  return (0, N.jsx)(Ne.Provider, { value: c, children: s });
 }
 function I() {
-  return (0, N.useContext)(Ne);
+  return (0, M.useContext)(Ne);
 }
 var Fe = 5,
   Ie = (function (e) {
@@ -177,7 +177,7 @@ var Fe = 5,
   L = class {
     m_elVideo = null;
     m_player = null;
-    m_listeners = new w();
+    m_listeners = new le();
     m_persistState = {};
     m_fnOnPlaybackEnd;
     m_fnOnPlayPauseChange;
@@ -482,54 +482,54 @@ var Fe = 5,
         (this.m_bSentStats = !0));
     }
   };
-(b([t], L.prototype, `m_bPaused`, void 0),
-  b([t], L.prototype, `m_bUserInputNeeded`, void 0),
-  b([t], L.prototype, `m_bMuted`, void 0),
-  b([t], L.prototype, `m_nVolume`, void 0),
-  b([t], L.prototype, `m_eFailureReason`, void 0),
-  b([t], L.prototype, `m_maxDimensions`, void 0),
-  b([t], L.prototype, `m_bPlaybackStarted`, void 0),
-  b([t], L.prototype, `m_bBuffering`, void 0),
-  b([t], L.prototype, `m_bHasCaptions`, void 0),
-  b([t], L.prototype, `m_bShowingCaption`, void 0),
-  b([t], L.prototype, `m_nPlaybackTime`, void 0),
-  b([t], L.prototype, `m_nVideoStartTime`, void 0),
-  b([t], L.prototype, `m_nVideoDuration`, void 0),
-  b([t], L.prototype, `m_nBufferedEndTime`, void 0),
-  b([n.bound], L.prototype, `OnVideoPlaying`, null),
-  b([D], L.prototype, `OnVideoPause`, null),
-  b([n.bound], L.prototype, `OnVideoTimeUpdate`, null),
-  b([D], L.prototype, `OnVolumeChange`, null),
-  b([D], L.prototype, `OnVideoEnd`, null),
-  b([D], L.prototype, `OnVideoValveEnded`, null),
-  b([D], L.prototype, `OnDownloadFailed`, null),
-  b([D], L.prototype, `OnUserInputNeeded`, null),
-  b([n.bound], L.prototype, `OnMetadataChanged`, null),
-  b([n.bound], L.prototype, `OnCaptionsChange`, null),
-  b([D], L.prototype, `UserInputReceived`, null),
-  b([n.bound], L.prototype, `SetMuteInternal`, null),
-  b([D], L.prototype, `SendStats`, null));
+(C([t], L.prototype, `m_bPaused`, void 0),
+  C([t], L.prototype, `m_bUserInputNeeded`, void 0),
+  C([t], L.prototype, `m_bMuted`, void 0),
+  C([t], L.prototype, `m_nVolume`, void 0),
+  C([t], L.prototype, `m_eFailureReason`, void 0),
+  C([t], L.prototype, `m_maxDimensions`, void 0),
+  C([t], L.prototype, `m_bPlaybackStarted`, void 0),
+  C([t], L.prototype, `m_bBuffering`, void 0),
+  C([t], L.prototype, `m_bHasCaptions`, void 0),
+  C([t], L.prototype, `m_bShowingCaption`, void 0),
+  C([t], L.prototype, `m_nPlaybackTime`, void 0),
+  C([t], L.prototype, `m_nVideoStartTime`, void 0),
+  C([t], L.prototype, `m_nVideoDuration`, void 0),
+  C([t], L.prototype, `m_nBufferedEndTime`, void 0),
+  C([n.bound], L.prototype, `OnVideoPlaying`, null),
+  C([O], L.prototype, `OnVideoPause`, null),
+  C([n.bound], L.prototype, `OnVideoTimeUpdate`, null),
+  C([O], L.prototype, `OnVolumeChange`, null),
+  C([O], L.prototype, `OnVideoEnd`, null),
+  C([O], L.prototype, `OnVideoValveEnded`, null),
+  C([O], L.prototype, `OnDownloadFailed`, null),
+  C([O], L.prototype, `OnUserInputNeeded`, null),
+  C([n.bound], L.prototype, `OnMetadataChanged`, null),
+  C([n.bound], L.prototype, `OnCaptionsChange`, null),
+  C([O], L.prototype, `UserInputReceived`, null),
+  C([n.bound], L.prototype, `SetMuteInternal`, null),
+  C([O], L.prototype, `SendStats`, null));
 function Le(e, t, n, r, i, a, o) {
   let s = I(),
-    c = (0, N.useRef)(void 0);
+    c = (0, M.useRef)(void 0);
   c.current ||= new L(s);
-  let l = O(
+  let l = h(
     (i) => {
       if (i) return (c.current.Start(i, e, t, n, r), () => c.current.Stop());
     },
     [c, e, t, r],
   );
   return (
-    (0, N.useEffect)(() => {
+    (0, M.useEffect)(() => {
       c.current.UpdatePersistState(s);
     }, [s]),
-    (0, N.useEffect)(() => {
+    (0, M.useEffect)(() => {
       c.current.SetPlaybackEndCallback(i);
     }, [i]),
-    (0, N.useEffect)(() => {
+    (0, M.useEffect)(() => {
       c.current.SetOnPlayPauseChangeCallback(a);
     }, [a]),
-    (0, N.useEffect)(() => {
+    (0, M.useEffect)(() => {
       (c.current.SetOnMuteChangeCallback(o), o && o(c.current.GetMuted()));
     }, [o]),
     [l, c.current]
@@ -537,16 +537,16 @@ function Le(e, t, n, r, i, a, o) {
 }
 function Re(e, t) {
   ((t = !!t),
-    (0, N.useEffect)(() => {
+    (0, M.useEffect)(() => {
       e.SetMuteWhenAutoplayBlocked(t);
     }, [e, t]));
 }
 function ze(e, t) {
-  let n = (0, N.useRef)(!1),
-    r = (0, N.useRef)(!1),
-    i = (0, N.useRef)(!1);
+  let n = (0, M.useRef)(!1),
+    r = (0, M.useRef)(!1),
+    i = (0, M.useRef)(!1);
   return (
-    (0, N.useEffect)(() => {
+    (0, M.useEffect)(() => {
       n.current != t &&
         (t ? ((r.current = e.IsPaused()), e.Pause()) : r.current || e.Play(),
         (n.current = t));
@@ -571,20 +571,20 @@ function Be(e, t, n) {
   (s.append(`stats`, o), navigator.sendBeacon(t, s));
 }
 function Ve(e, t) {
-  if (!e || _(e) || ee(e) || !t) return;
+  if (!e || S(e) || w(e) || !t) return;
   let n = e.getElementsByTagName(`video`);
   if (n.length == 0) return;
   let r = n[0];
   r.webkitSetPresentationMode && r.webkitSetPresentationMode(`fullscreen`);
 }
-(0, N.createContext)(void 0);
+(0, M.createContext)(void 0);
 function R(e) {
   return e ? e instanceof HTMLDialogElement : !1;
 }
 function He(e) {
   return e ? e.hasAttribute(`popover`) : !1;
 }
-var z = (0, N.createContext)(void 0);
+var z = (0, M.createContext)(void 0);
 function Ue(e) {
   let {
       iosVideoFallback: t,
@@ -592,15 +592,15 @@ function Ue(e) {
       supportsFullscreen: r,
       children: i,
     } = e,
-    a = (0, N.useRef)(null),
-    o = (0, N.useRef)(null),
-    [s, c] = (0, N.useState)(`none`);
-  (h(s == `theater`), (n = !!n), (r = !!r));
-  let l = O(
+    a = (0, M.useRef)(null),
+    o = (0, M.useRef)(null),
+    [s, c] = (0, M.useState)(`none`);
+  (xe(s == `theater`), (n = !!n), (r = !!r));
+  let l = h(
       (e) => {
         if (((o.current = e), !e)) return;
         let t = () => {
-          c((t) => (_(e) ? `fullscreen` : t == `fullscreen` ? `none` : t));
+          c((t) => (S(e) ? `fullscreen` : t == `fullscreen` ? `none` : t));
         };
         return (
           e.addEventListener(`fullscreenchange`, t),
@@ -609,7 +609,7 @@ function Ue(e) {
       },
       [c],
     ),
-    u = O(
+    u = h(
       (e) => {
         if (((a.current = e), !e)) return;
         let t = () => {
@@ -621,25 +621,25 @@ function Ue(e) {
           r = (e) => {
             e.newState == `close` && t();
           },
-          i = new w();
+          i = new le();
         return (
           R(e)
             ? (i.AddEventListener(e, `close`, t),
               i.AddEventListener(e, `click`, n))
             : He(e)
               ? i.AddEventListener(e, `beforetoggle`, r)
-              : T(!1, `Was expecting a dialog or popover`),
+              : Ce(!1, `Was expecting a dialog or popover`),
           () => i.Unregister()
         );
       },
       [c],
     ),
-    d = (0, N.useCallback)(
+    d = (0, M.useCallback)(
       (e) => {
         let n = o.current,
           r = a.current;
         (n &&
-          (e != `fullscreen` && _(n) && me(n), e == `fullscreen` && Ve(n, !!t)),
+          (e != `fullscreen` && S(n) && v(n), e == `fullscreen` && Ve(n, !!t)),
           R(r) &&
             (e != `theater` && r.open && r.close(),
             e == `theater` && r.showModal()),
@@ -650,10 +650,10 @@ function Ue(e) {
       },
       [t],
     );
-  (0, N.useEffect)(() => {
+  (0, M.useEffect)(() => {
     s == `theater` && !n && d(`none`);
   }, [d, s, n]);
-  let f = (0, N.useMemo)(
+  let f = (0, M.useMemo)(
     () => ({
       refFullscreen: l,
       refTheater: u,
@@ -664,17 +664,17 @@ function Ue(e) {
     }),
     [l, u, s, n, r, d],
   );
-  return (0, P.jsx)(z.Provider, { value: f, children: i });
+  return (0, N.jsx)(z.Provider, { value: f, children: i });
 }
 function We(e) {
   let { drop: t, children: n } = e;
-  return t ? (0, P.jsx)(z.Provider, { value: void 0, children: n }) : n;
+  return t ? (0, N.jsx)(z.Provider, { value: void 0, children: n }) : n;
 }
 function B() {
-  return (0, N.useContext)(z);
+  return (0, M.useContext)(z);
 }
 function V(e, t) {
-  return (0, N.useCallback)(() => {
+  return (0, M.useCallback)(() => {
     e && (e.strMode == t ? e.fnSetMode(`none`) : e.fnSetMode(t));
   }, [e, t]);
 }
@@ -691,7 +691,7 @@ var Ge = `A5RRwjvEUvY-`,
   tt = `ntDKWvpd0tk-`,
   nt = `m9RGLw-x46M-`;
 function rt() {
-  return O((e) => {
+  return h((e) => {
     if (!e) return;
     let t = (t) => {
         t.target == e && (e.style.pointerEvents = `none`);
@@ -711,107 +711,107 @@ function rt() {
     );
   }, []);
 }
-var it = (0, N.forwardRef)(function (e, t) {
+var it = (0, M.forwardRef)(function (e, t) {
     let { children: n, ...r } = e,
       i = rt(),
       a = ae(i, t);
-    return (0, P.jsx)(`div`, { ref: a, ...r, children: n });
+    return (0, N.jsx)(`div`, { ref: a, ...r, children: n });
   }),
-  at = 2e3,
-  ot = 500,
-  st = 4e3,
-  ct = -1,
-  H = N.createContext(void 0);
-function lt() {
-  return (0, N.useContext)(H);
+  H = 2e3,
+  at = 500,
+  ot = 4e3,
+  U = -1,
+  W = M.createContext(void 0);
+function st() {
+  return (0, M.useContext)(W);
 }
-function U(e, t, n) {
-  return (0, N.useMemo)(
+function G(e, t, n) {
+  return (0, M.useMemo)(
     () => ({ m_bMenuVisible: e, m_fnSetMenuVisible: t, m_refMenuLayer: n }),
     [e, t, n],
   );
 }
-function ut() {
-  let e = lt();
+function ct() {
+  let e = st();
   return e ? e.m_bMenuVisible : !1;
 }
-function dt() {
-  let e = lt();
-  T(e, `Missing controls context`);
+function lt() {
+  let e = st();
+  Ce(e, `Missing controls context`);
   let t = e.m_fnSetMenuVisible;
-  return ((0, N.useEffect)(() => (t(!0), () => t(!1)), [t]), e.m_refMenuLayer);
+  return ((0, M.useEffect)(() => (t(!0), () => t(!1)), [t]), e.m_refMenuLayer);
 }
-function ft(e, t) {
-  let [n, r] = mt(e);
+function ut(e, t) {
+  let [n, r] = ft(e);
   return [n || t, r];
 }
-function W(e) {
-  return e.pointerType == `touch` ? st : at;
+function K(e) {
+  return e.pointerType == `touch` ? ot : H;
 }
-function pt() {
-  return ot;
+function dt() {
+  return at;
 }
-function mt(e) {
-  let [t, n] = K(),
-    r = (0, N.useRef)(void 0),
-    i = (0, N.useRef)(!1),
-    a = (0, N.useRef)({ element: void 0, bKeepControls: !1 }),
-    o = (0, N.useCallback)(
+function ft(e) {
+  let [t, n] = J(),
+    r = (0, M.useRef)(void 0),
+    i = (0, M.useRef)(!1),
+    a = (0, M.useRef)({ element: void 0, bKeepControls: !1 }),
+    o = (0, M.useCallback)(
       (e) => {
         if (e.target == a.current.element) return;
-        let t = ht(e);
+        let t = pt(e);
         a.current = { element: e.target, bKeepControls: t };
       },
       [a],
     ),
-    s = (0, N.useCallback)(
+    s = (0, M.useCallback)(
       (e) => {
         a.current.bKeepControls || i.current ? n(!0, 0) : n(!0, e);
       },
       [a, i, n],
     );
-  (J(e),
-    gt(
+  (X(e),
+    mt(
       e,
-      (0, N.useCallback)(
+      (0, M.useCallback)(
         (e) => {
-          ((i.current = e), s(at));
+          ((i.current = e), s(H));
         },
         [i, s],
       ),
     ),
-    _t(
+    ht(
       e,
-      (0, N.useCallback)(() => {
-        s(at);
+      (0, M.useCallback)(() => {
+        s(H);
       }, [s]),
     ));
-  let c = (0, N.useCallback)(
+  let c = (0, M.useCallback)(
       (e) => {
-        e.pointerType != `touch` && (o(e), s(W(e)));
+        e.pointerType != `touch` && (o(e), s(K(e)));
       },
       [s, o],
     ),
-    l = (0, N.useCallback)(
+    l = (0, M.useCallback)(
       (e) => {
-        e.pointerType != `touch` && (o(e), s(W(e)));
+        e.pointerType != `touch` && (o(e), s(K(e)));
       },
       [o, s],
     ),
-    u = (0, N.useCallback)(
+    u = (0, M.useCallback)(
       (e) => {
         e.pointerType != `touch` &&
-          ((a.current = { element: void 0, bKeepControls: !1 }), s(pt()));
+          ((a.current = { element: void 0, bKeepControls: !1 }), s(dt()));
       },
       [a, s],
     ),
-    d = (0, N.useCallback)(
+    d = (0, M.useCallback)(
       (e) => {
         r.current = e.currentTarget;
       },
       [r],
     ),
-    f = (0, N.useCallback)(
+    f = (0, M.useCallback)(
       (e) => {
         r.current = void 0;
       },
@@ -824,10 +824,10 @@ function mt(e) {
       onPointerMove: l,
       onPointerLeave: u,
       onPointerDown: d,
-      onPointerUp: (0, N.useCallback)(
+      onPointerUp: (0, M.useCallback)(
         (e) => {
           let t = r.current;
-          ((r.current = void 0), e.currentTarget == t && s(W(e)));
+          ((r.current = void 0), e.currentTarget == t && s(K(e)));
         },
         [s],
       ),
@@ -835,7 +835,7 @@ function mt(e) {
     },
   ];
 }
-function ht(e) {
+function pt(e) {
   let t = e.target,
     n = e.currentTarget;
   for (; t && t != n;) {
@@ -844,10 +844,10 @@ function ht(e) {
   }
   return !1;
 }
-function G(e) {
-  let t = (0, N.useRef)(ct);
+function q(e) {
+  let t = (0, M.useRef)(U);
   return {
-    onPointerDown: (0, N.useCallback)(
+    onPointerDown: (0, M.useCallback)(
       (e) => {
         (e.pointerType !== `mouse` || e.button == 0) &&
           (e.currentTarget.setPointerCapture(e.pointerId),
@@ -855,16 +855,16 @@ function G(e) {
       },
       [t],
     ),
-    onPointerCancel: (0, N.useCallback)(
+    onPointerCancel: (0, M.useCallback)(
       (e) => {
-        t.current == e.pointerId && (t.current = ct);
+        t.current == e.pointerId && (t.current = U);
       },
       [t],
     ),
-    onPointerUp: (0, N.useCallback)(
+    onPointerUp: (0, M.useCallback)(
       (n) => {
         if (t.current != n.pointerId) return;
-        (n.currentTarget.releasePointerCapture(n.pointerId), (t.current = ct));
+        (n.currentTarget.releasePointerCapture(n.pointerId), (t.current = U));
         let r = n.currentTarget.getBoundingClientRect(),
           { clientX: i, clientY: a } = n;
         i >= r.left && i <= r.right && a >= r.top && a <= r.bottom && e(n);
@@ -873,10 +873,10 @@ function G(e) {
     ),
   };
 }
-function K() {
-  let [e, t] = (0, N.useState)(!1),
-    n = (0, N.useRef)(void 0),
-    r = (0, N.useCallback)(
+function J() {
+  let [e, t] = (0, M.useState)(!1),
+    n = (0, M.useRef)(void 0),
+    r = (0, M.useCallback)(
       (e, r) => {
         ((n.current &&= (window.clearTimeout(n.current), void 0)),
           t(e),
@@ -885,7 +885,7 @@ function K() {
       [t],
     );
   return (
-    (0, N.useEffect)(
+    (0, M.useEffect)(
       () => () => {
         n.current && window.clearTimeout(n.current);
       },
@@ -894,56 +894,56 @@ function K() {
     [e, r]
   );
 }
-function gt(e, t) {
-  let n = (0, N.useRef)(!0),
-    r = J(e);
-  (0, N.useEffect)(() => {
+function mt(e, t) {
+  let n = (0, M.useRef)(!0),
+    r = X(e);
+  (0, M.useEffect)(() => {
     let e = n.current;
     ((n.current = !1), (!e || r) && t(r));
   }, [r, t, n]);
 }
-function _t(e, t) {
-  let n = (0, N.useRef)(!0),
+function ht(e, t) {
+  let n = (0, M.useRef)(!0),
     r = s(() => e.GetMuted());
-  (0, N.useEffect)(() => {
+  (0, M.useEffect)(() => {
     let e = n.current;
     ((n.current = !1), !e && t());
   }, [r, t, n]);
 }
-function q(e) {
+function Y(e) {
   let [t, n] = s(() => [e.GetMuted(), e.GetVolume()]);
   return [
     t,
     n,
-    (0, N.useCallback)(
+    (0, M.useCallback)(
       (t) => {
         (e.SetMute(!1), e.SetVolume(t));
       },
       [e],
     ),
-    (0, N.useCallback)(() => e.SetMute(!t), [t, e]),
+    (0, M.useCallback)(() => e.SetMute(!t), [t, e]),
   ];
 }
-function vt(e) {
+function gt(e) {
   return s(() => [
     e.GetPlaybackTime(),
     e.GetTimelineDuration(),
     e.GetBufferedEndTime(),
   ]);
 }
-function yt(e) {
+function _t(e) {
   return s(() => e.GetFailureReason());
 }
-function J(e) {
+function X(e) {
   return s(() => e.IsPaused());
 }
-function Y(e) {
-  return (0, N.useCallback)(() => {
+function Z(e) {
+  return (0, M.useCallback)(() => {
     e.TogglePlayPause();
   }, [e]);
 }
-function bt(e, t) {
-  (0, N.useEffect)(() => {
+function vt(e, t) {
+  (0, M.useEffect)(() => {
     let n = c(() => {
       let n = e.GetMaxVideoDimensions();
       t(n ? { nWidth: n.nWidth, nHeight: n.nHeight } : null);
@@ -951,67 +951,67 @@ function bt(e, t) {
     return () => n();
   }, [e, t]);
 }
-function xt(e) {
+function yt(e) {
   return s(() => e.HasPlaybackStarted());
 }
-function St(e) {
+function bt(e) {
   return s(() => ({
     bHasCaptions: e.HasCaptions(),
     bShowingCaption: e.IsShowingCaption(),
   }));
 }
-var Ct = `cOcEiRe-dIg-`,
-  wt = `QkF4JCVWpWw-`,
-  Tt = `_8RH876Wgr7A-`,
-  Et = `b0G5PgYKHAM-`,
-  Dt = `_68B-8ItOIlc-`,
-  Ot = `GsDewiltMCM-`,
-  kt = `BffT7IQWKYg-`,
-  At = `aejFKWIp7Dg-`,
-  jt = `eBjRkRA8NpA-`,
-  Mt = `RrXwg35xzWc-`,
-  Nt = `_98b2uQrBfN4-`,
-  Pt = `LCeQJ5hJTnk-`,
-  Ft = `OPuK3adv80Y-`,
-  It = `qFZtjvdCOxo-`,
-  Lt = `vzX4l4uGgUg-`,
-  Rt = `HOEA4Jz0kQU-`,
-  zt = `AAuicaihzn0-`;
-function Bt(e) {
+var xt = `cOcEiRe-dIg-`,
+  St = `QkF4JCVWpWw-`,
+  Ct = `_8RH876Wgr7A-`,
+  wt = `b0G5PgYKHAM-`,
+  Tt = `_68B-8ItOIlc-`,
+  Et = `GsDewiltMCM-`,
+  Dt = `BffT7IQWKYg-`,
+  Ot = `aejFKWIp7Dg-`,
+  kt = `eBjRkRA8NpA-`,
+  At = `RrXwg35xzWc-`,
+  jt = `_98b2uQrBfN4-`,
+  Mt = `LCeQJ5hJTnk-`,
+  Nt = `OPuK3adv80Y-`,
+  Pt = `qFZtjvdCOxo-`,
+  Ft = `vzX4l4uGgUg-`,
+  It = `HOEA4Jz0kQU-`,
+  Lt = `AAuicaihzn0-`;
+function Rt(e) {
   switch (e) {
     case 1:
-      return A.Localize(`#StoreTrailer_Title_Category_Gameplay`);
+      return j.Localize(`#StoreTrailer_Title_Category_Gameplay`);
     case 2:
-      return A.Localize(`#StoreTrailer_Title_Category_Teaser`);
+      return j.Localize(`#StoreTrailer_Title_Category_Teaser`);
     case 3:
-      return A.Localize(`#StoreTrailer_Title_Category_Cinematic`);
+      return j.Localize(`#StoreTrailer_Title_Category_Cinematic`);
     case 4:
-      return A.Localize(`#StoreTrailer_Title_Category_Update`);
+      return j.Localize(`#StoreTrailer_Title_Category_Update`);
     case 5:
-      return A.Localize(`#StoreTrailer_Title_Category_Accolades`);
+      return j.Localize(`#StoreTrailer_Title_Category_Accolades`);
     case 6:
-      return A.Localize(`#StoreTrailer_Title_Category_Interview`);
+      return j.Localize(`#StoreTrailer_Title_Category_Interview`);
   }
-  return A.Localize(`#StoreTrailer_Title_Category_Unknown`);
+  return j.Localize(`#StoreTrailer_Title_Category_Unknown`);
 }
-var Vt = e(r(), 1),
-  Ht = `12px`,
-  Ut = `LzRinklSJ-4-`,
-  Wt = `_2uk-hbrhKFI-`,
-  Gt = `Y9S-qDK8XPE-`,
-  Kt = 4,
-  qt = parseInt(Ht);
-function Jt(e) {
+var zt = e(r(), 1),
+  Bt = `12px`,
+  Vt = `LzRinklSJ-4-`,
+  Ht = `_2uk-hbrhKFI-`,
+  Ut = `Y9S-qDK8XPE-`,
+  Wt = 4,
+  Gt = parseInt(Bt);
+function Kt(e) {
   let { refButton: t, onClose: n, scroll: r, children: i } = e,
-    a = (0, N.useRef)(null),
-    [o, s] = (0, N.useState)({ nLeft: 0, nTop: 0 }),
-    c = dt(),
-    l = O(
+    a = (0, M.useRef)(null),
+    [o, s] = (0, M.useState)({ nLeft: 0, nTop: 0 }),
+    c = lt(),
+    l = h(
       (e) => {
         if (((a.current = e), !e)) return;
         let r = (r) => {
-          let i = ge(e, r.target),
-            a = ge(t.current, r.target);
+          let i = se(e, r.target),
+            a = se(t.current, r.target);
           !i && !a && n();
         };
         if (e.ownerDocument.defaultView)
@@ -1023,7 +1023,7 @@ function Jt(e) {
       [a, n, t],
     );
   if (
-    ((0, N.useLayoutEffect)(() => {
+    ((0, M.useLayoutEffect)(() => {
       if (!a.current || !t.current || !c.current) return;
       let e = a.current.getBoundingClientRect(),
         n = c.current.getBoundingClientRect(),
@@ -1032,37 +1032,37 @@ function Jt(e) {
         o = r.right - r.left,
         l = r.left - n.left + o / 2,
         u = e.right - e.left,
-        d = j(l - u / 2, 0 + Kt, i - u - Kt),
+        d = y(l - u / 2, 0 + Wt, i - u - Wt),
         f = e.bottom - e.top,
-        p = r.top - qt - f - n.top;
+        p = r.top - Gt - f - n.top;
       s({ nLeft: d, nTop: p });
     }, [a, t, c]),
     !c.current || !i)
   )
     return null;
   let u = { left: o.nLeft, top: o.nTop },
-    d = M(Ut, !!r && `kaHR0KlvcO4-`),
-    f = (0, P.jsx)(`div`, {
+    d = E(Vt, !!r && `kaHR0KlvcO4-`),
+    f = (0, N.jsx)(`div`, {
       ref: l,
       style: u,
       className: d,
       role: `menu`,
       children: i,
     });
-  return Vt.createPortal(f, c.current);
+  return zt.createPortal(f, c.current);
 }
-function Yt(e) {
-  return (0, P.jsx)(`div`, { className: Gt, role: `separator` });
+function qt(e) {
+  return (0, N.jsx)(`div`, { className: Ut, role: `separator` });
 }
-function X(e) {
+function Jt(e) {
   let { onClick: t, checked: n, children: r } = e,
-    [i, a] = x(),
-    o = M(Wt, n && `vi2dzrdIGJY-`),
+    [i, a] = ne(),
+    o = E(Ht, n && `vi2dzrdIGJY-`),
     s = `#2d73ff`,
     c = `#00ccff`;
   return (
     i && ((s = `#eeeeee`), (c = `#ffffff`)),
-    (0, P.jsxs)(`div`, {
+    (0, N.jsxs)(`div`, {
       className: o,
       role: `menuitemcheckbox`,
       "aria-checked": n,
@@ -1072,20 +1072,20 @@ function X(e) {
         (e.key === `Enter` || e.key === ` `) && (e.preventDefault(), t());
       },
       ...a,
-      children: [r, n && (0, P.jsx)(ve, { color: s, highlightColor: c })],
+      children: [r, n && (0, N.jsx)(ce, { color: s, highlightColor: c })],
     })
   );
 }
-function Xt(e) {
+function Yt(e) {
   let { player: t, refButton: n, onClose: r } = e,
     i = I(),
     a = t.GetVideoRepresentations().map((e) => {
       let n = () => {
           (t.SetVideoRepresentation(e), r());
         },
-        i = Qt(e);
-      return (0, P.jsx)(
-        X,
+        i = Zt(e);
+      return (0, N.jsx)(
+        Jt,
         { onClick: n, checked: e.selected, children: i },
         e.id,
       );
@@ -1093,52 +1093,52 @@ function Xt(e) {
     o = a.length > 1,
     s = !!i.m_fnSetAutoplayEnabled,
     c = o || !s;
-  return (0, P.jsxs)(Jt, {
+  return (0, N.jsxs)(Kt, {
     refButton: n,
     onClose: r,
     children: [
       c && a,
-      s && c && (0, P.jsx)(Yt, {}),
-      s && (0, P.jsx)(Zt, { onClose: r }),
+      s && c && (0, N.jsx)(qt, {}),
+      s && (0, N.jsx)(Xt, { onClose: r }),
     ],
   });
 }
-function Zt(e) {
+function Xt(e) {
   let { onClose: t } = e,
     n = I(),
     r = n.m_bAutoplayEnabled == 1,
-    i = (0, N.useCallback)(() => {
+    i = (0, M.useCallback)(() => {
       (n.m_fnSetAutoplayEnabled && n.m_fnSetAutoplayEnabled(!r), t());
     }, [r, n, t]);
   return (
-    N.use(A.Ready()),
-    (0, P.jsx)(X, {
+    M.use(j.Ready()),
+    (0, N.jsx)(Jt, {
       onClick: i,
       checked: r,
-      children: A.Localize(`#StoreTrailer_AutoPlayVideos`),
+      children: j.Localize(`#StoreTrailer_AutoPlayVideos`),
     })
   );
 }
-function Qt(e) {
+function Zt(e) {
   return f(e)
-    ? A.Localize(`#TrailerPlayer_Quality_Auto`)
+    ? j.Localize(`#TrailerPlayer_Quality_Auto`)
     : e.height == 2160
       ? `2160p (4k)`
       : `${e.height}p`;
 }
-function $t(e) {
+function Qt(e) {
   let { player: t, refButton: n, onClose: r } = e,
-    i = Ce(ye.LANGUAGE),
-    a = (0, N.useMemo)(() => {
+    i = D(ye.LANGUAGE),
+    a = (0, M.useMemo)(() => {
       let e = [...t.GetCaptionRepresentations()],
         n = e.findIndex((e) => e.m_eLanguage == i);
-      return (n > 0 && le(e, n, 0), e);
+      return (n > 0 && ge(e, n, 0), e);
     }, [i, t]),
     o = [];
   for (let e of a)
     (o.push(
-      (0, P.jsx)(
-        X,
+      (0, N.jsx)(
+        Jt,
         {
           onClick: () => {
             (t.SetCaptionRepresentation(e.m_eLanguage), r());
@@ -1149,14 +1149,14 @@ function $t(e) {
         e.m_eLanguage,
       ),
     ),
-      e.m_eLanguage == i && o.push((0, P.jsx)(Yt, {})));
+      e.m_eLanguage == i && o.push((0, N.jsx)(qt, {})));
   return o.length == 0
     ? null
-    : (0, P.jsx)(Jt, { refButton: n, onClose: r, scroll: !0, children: o });
+    : (0, N.jsx)(Kt, { refButton: n, onClose: r, scroll: !0, children: o });
 }
-var en = 4,
-  tn = 130,
-  Z = N.forwardRef(function (e, t) {
+var $t = 4,
+  en = 130,
+  Q = M.forwardRef(function (e, t) {
     let {
         tooltip: n,
         onActivate: r,
@@ -1164,33 +1164,33 @@ var en = 4,
         children: a,
         disableTooltip: o,
       } = e,
-      s = ut(),
-      c = G(r);
-    return (0, P.jsx)(oe, {
+      s = ct(),
+      c = q(r);
+    return (0, N.jsx)(pe, {
       toolTipContent: n,
       direction: `top`,
       usePointerEvents: !0,
       bDisabled: s || o,
-      children: (0, P.jsx)(`div`, {
+      children: (0, N.jsx)(`div`, {
         ref: t,
-        className: Ct,
+        className: xt,
         ...c,
         "data-keepcontrols": !0,
         children: a,
       }),
     });
   });
-function Q(e) {
+function tn(e) {
   let { player: t } = e,
-    [n, r] = vt(t),
+    [n, r] = gt(t),
     i = k(n, !1),
     a = k(r, !1);
-  return (0, P.jsxs)(`div`, {
-    className: wt,
+  return (0, N.jsxs)(`div`, {
+    className: St,
     children: [
-      (0, P.jsx)(`span`, { children: i }),
-      (0, P.jsx)(`span`, { className: Tt, children: `/` }),
-      (0, P.jsx)(`span`, { children: a }),
+      (0, N.jsx)(`span`, { children: i }),
+      (0, N.jsx)(`span`, { className: Ct, children: `/` }),
+      (0, N.jsx)(`span`, { children: a }),
     ],
   });
 }
@@ -1198,96 +1198,96 @@ function nn(e) {
   let t = B(),
     n = V(t, `theater`);
   if (!t || !t.bSupportsTheater) return null;
-  N.use(A.Ready());
+  M.use(j.Ready());
   let r = t.strMode == `theater`,
-    i = r ? (0, P.jsx)(De, {}) : (0, P.jsx)(Oe, {}),
-    a = A.Localize(
+    i = r ? (0, N.jsx)(De, {}) : (0, N.jsx)(Oe, {}),
+    a = j.Localize(
       r
         ? `#TrailerPlayer_ExitTheater_Tooltip`
         : `#TrailerPlayer_EnterTheater_Tooltip`,
     );
-  return (0, P.jsx)(Z, { onActivate: n, tooltip: a, children: i });
+  return (0, N.jsx)(Q, { onActivate: n, tooltip: a, children: i });
 }
 function rn(e) {
   let t = B(),
     n = V(t, `fullscreen`);
   if (!t || !t.bSupportsFullscreen) return null;
-  N.use(A.Ready());
+  M.use(j.Ready());
   let r = t.strMode == `fullscreen`,
-    i = r ? (0, P.jsx)(be, {}) : (0, P.jsx)(Ee, {}),
-    a = A.Localize(
+    i = r ? (0, N.jsx)(he, {}) : (0, N.jsx)(Ee, {}),
+    a = j.Localize(
       r
         ? `#TrailerPlayer_ExitFullScreen_Tooltip`
         : `#TrailerPlayer_FullScreen_Tooltip`,
     );
-  return (0, P.jsx)(Z, { onActivate: n, tooltip: a, children: i });
+  return (0, N.jsx)(Q, { onActivate: n, tooltip: a, children: i });
 }
 function an(e) {
   let { player: t } = e,
-    [n, r] = (0, N.useState)(!1),
-    i = (0, N.useCallback)(() => r(!1), [r]),
-    a = (0, N.useRef)(null),
-    o = y(),
-    s = (0, N.useCallback)(() => {
+    [n, r] = (0, M.useState)(!1),
+    i = (0, M.useCallback)(() => r(!1), [r]),
+    a = (0, M.useRef)(null),
+    o = A(),
+    s = (0, M.useCallback)(() => {
       r((e) => !e);
     }, [r]),
-    c = M(Et, n && `cXAaD-hLPZ0-`);
+    c = E(wt, n && `cXAaD-hLPZ0-`);
   return (
-    N.use(A.Ready()),
-    (0, P.jsxs)(P.Fragment, {
+    M.use(j.Ready()),
+    (0, N.jsxs)(N.Fragment, {
       children: [
-        (0, P.jsx)(Z, {
+        (0, N.jsx)(Q, {
           ref: a,
           onActivate: s,
-          tooltip: A.Localize(`#TrailerPlayer_Settings_Tooltip`),
+          tooltip: j.Localize(`#TrailerPlayer_Settings_Tooltip`),
           disableTooltip: o,
-          children: (0, P.jsx)(xe, { className: c }),
+          children: (0, N.jsx)(ee, { className: c }),
         }),
-        n && (0, P.jsx)(Xt, { player: t, refButton: a, onClose: i }),
+        n && (0, N.jsx)(Yt, { player: t, refButton: a, onClose: i }),
       ],
     })
   );
 }
 function on(e) {
   let { player: t } = e,
-    [n, r] = (0, N.useState)(!1),
-    i = (0, N.useCallback)(() => r(!1), [r]),
-    a = (0, N.useRef)(null),
-    { bHasCaptions: o, bShowingCaption: s } = St(t),
-    c = (0, N.useCallback)(() => {
+    [n, r] = (0, M.useState)(!1),
+    i = (0, M.useCallback)(() => r(!1), [r]),
+    a = (0, M.useRef)(null),
+    { bHasCaptions: o, bShowingCaption: s } = bt(t),
+    c = (0, M.useCallback)(() => {
       s ? t.DisableCaptions() : r((e) => !e);
     }, [r, t, s]);
   return (
-    N.use(A.Ready()),
+    M.use(j.Ready()),
     o
-      ? (0, P.jsxs)(P.Fragment, {
+      ? (0, N.jsxs)(N.Fragment, {
           children: [
-            (0, P.jsxs)(Z, {
+            (0, N.jsxs)(Q, {
               ref: a,
               onActivate: c,
-              tooltip: A.Localize(`#TrailerPlayer_Captions_Tooltip`),
-              children: [s && (0, P.jsx)(ue, {}), !s && (0, P.jsx)(ce, {})],
+              tooltip: j.Localize(`#TrailerPlayer_Captions_Tooltip`),
+              children: [s && (0, N.jsx)(me, {}), !s && (0, N.jsx)(_e, {})],
             }),
-            n && (0, P.jsx)($t, { player: t, refButton: a, onClose: i }),
+            n && (0, N.jsx)(Qt, { player: t, refButton: a, onClose: i }),
           ],
         })
       : null
   );
 }
-function $(e) {
+function sn(e) {
   let { player: t, showHoverThumb: n, onTouchSeek: r } = e;
-  N.use(A.Ready());
-  let i = (0, N.useRef)(null),
-    [a, o, s] = vt(t),
+  M.use(j.Ready());
+  let i = (0, M.useRef)(null),
+    [a, o, s] = gt(t),
     [c, l] = dn(t, r),
-    u = sn();
-  ut() && (l = null);
-  let d = ln(t);
+    u = cn();
+  ct() && (l = null);
+  let d = un(t);
   l || (d = void 0);
   let f = { display: `none` };
   l && ((f.left = l.nTickOffset), (f.display = `block`));
-  let p = S(a, 0, o, 0, 100),
-    m = S(s, 0, o, 0, 100),
+  let p = re(a, 0, o, 0, 100),
+    m = re(s, 0, o, 0, 100),
     h = { width: `${p.toFixed(1)}%` },
     g = { width: `${m.toFixed(1)}%` },
     _ = (e) => {
@@ -1296,14 +1296,14 @@ function $(e) {
         : e.key === `End` &&
           (e.preventDefault(), t.Seek(t.GetTimelineDuration()));
     },
-    v = M(Dt, l && `OXlEV5w6w1E-`);
-  return (0, P.jsxs)(`div`, {
+    v = E(Tt, l && `OXlEV5w6w1E-`);
+  return (0, N.jsxs)(`div`, {
     ref: u,
     className: v,
     "data-keepcontrols": !!l,
     role: `slider`,
     tabIndex: 0,
-    "aria-label": A.Localize(`#TrailerPlayer_Seek_Label`),
+    "aria-label": j.Localize(`#TrailerPlayer_Seek_Label`),
     "aria-valuemin": 0,
     "aria-valuemax": Math.round(o),
     "aria-valuenow": Math.round(a),
@@ -1315,22 +1315,22 @@ function $(e) {
     onPointerDown: c.onPointerDown,
     onLostPointerCapture: c.onLostPointerCapture,
     children: [
-      (0, P.jsxs)(`div`, {
+      (0, N.jsxs)(`div`, {
         ref: i,
-        className: Ot,
+        className: Et,
         onPointerEnter: c.onPointerEnter,
         children: [
-          (0, P.jsx)(`div`, { className: M(kt, At), style: g }),
-          (0, P.jsx)(`div`, { className: M(kt, jt), style: h }),
-          (0, P.jsx)(`div`, { className: M(Mt), style: f }),
+          (0, N.jsx)(`div`, { className: E(Dt, Ot), style: g }),
+          (0, N.jsx)(`div`, { className: E(Dt, kt), style: h }),
+          (0, N.jsx)(`div`, { className: E(At), style: f }),
         ],
       }),
-      (0, P.jsx)(cn, { refTimeline: i, hoverState: l, showHoverThumb: n }),
+      (0, N.jsx)(ln, { refTimeline: i, hoverState: l, showHoverThumb: n }),
     ],
   });
 }
-function sn() {
-  return O((e) => {
+function cn() {
+  return h((e) => {
     if (!e) return;
     let t = (e) => {
         e.stopPropagation();
@@ -1348,19 +1348,19 @@ function sn() {
     );
   }, []);
 }
-function cn(e) {
+function ln(e) {
   let { refTimeline: t, hoverState: n, showHoverThumb: r } = e,
-    i = (0, N.useRef)(null),
-    [a, o] = (0, N.useState)({ nHoverLeft: 0, bFitsInParent: !1 });
+    i = (0, M.useRef)(null),
+    [a, o] = (0, M.useState)({ nHoverLeft: 0, bFitsInParent: !1 });
   if (
-    ((0, N.useLayoutEffect)(() => {
+    ((0, M.useLayoutEffect)(() => {
       if (!n || !i.current || !t.current) return;
       let e = t.current.getBoundingClientRect(),
         r = i.current.getBoundingClientRect(),
         a = e.right - e.left,
         s = r.right - r.left,
-        c = j(n.nTickOffset - s / 2, 0 + en, a - s - en),
-        l = te(
+        c = y(n.nTickOffset - s / 2, 0 + $t, a - s - $t),
+        l = fe(
           i.current.ownerDocument.documentElement,
           i.current,
           `data-trailer-player`,
@@ -1386,7 +1386,7 @@ function cn(e) {
     c,
     l = r ? n.thumbnail : null;
   if (l) {
-    let e = tn / l.nThumbnailHeight;
+    let e = en / l.nThumbnailHeight;
     c = {
       width: `${l.nThumbnailWidth * e}px`,
       height: `${l.nThumbnailHeight * e}px`,
@@ -1396,21 +1396,21 @@ function cn(e) {
       backgroundRepeat: `no-repeat`,
     };
   }
-  return (0, P.jsxs)(`div`, {
+  return (0, N.jsxs)(`div`, {
     ref: i,
     style: s,
-    className: Nt,
+    className: jt,
     children: [
-      !!l && (0, P.jsx)(`div`, { style: c, className: `nCXGrQlbkbg-` }),
-      (0, P.jsx)(`span`, {
-        className: Pt,
+      !!l && (0, N.jsx)(`div`, { style: c, className: `nCXGrQlbkbg-` }),
+      (0, N.jsx)(`span`, {
+        className: Mt,
         children: u(n.nPlaybackSeconds, !0),
       }),
     ],
   });
 }
-function ln(e) {
-  return (0, N.useCallback)(
+function un(e) {
+  return (0, M.useCallback)(
     (t) => {
       let n = t.currentTarget.getBoundingClientRect(),
         r = (t.pageX - n.left) / (n.right - n.left);
@@ -1421,35 +1421,35 @@ function ln(e) {
     [e],
   );
 }
-function un(e, t, n) {
+function $(e, t, n) {
   let r = n - t.left,
     i = t.right - t.left;
-  r = j(r, 0, i);
+  r = y(r, 0, i);
   let a = r / i,
     o = Math.floor(e.GetTimelineDuration() * a),
     s = e.GetThumbnail(o);
   return s ? { nTickOffset: r, nPlaybackSeconds: o, thumbnail: s } : null;
 }
 function dn(e, t) {
-  let [n, r] = (0, N.useState)(null),
-    i = (0, N.useRef)(null),
-    a = (0, N.useRef)(null);
+  let [n, r] = (0, M.useState)(null),
+    i = (0, M.useRef)(null),
+    a = (0, M.useRef)(null);
   return [
     {
-      onPointerEnter: (0, N.useCallback)(
+      onPointerEnter: (0, M.useCallback)(
         (t) => {
           if (t.pointerType != `mouse` && t.pointerType != `pen`) return;
           i.current = t.currentTarget;
-          let n = un(e, i.current.getBoundingClientRect(), t.clientX);
+          let n = $(e, i.current.getBoundingClientRect(), t.clientX);
           r(n);
         },
         [i, r, e],
       ),
-      onPointerMove: (0, N.useCallback)(
+      onPointerMove: (0, M.useCallback)(
         (n) => {
           let o = i.current;
           if (((o ||= a.current), !o)) return;
-          let s = un(e, o.getBoundingClientRect(), n.clientX);
+          let s = $(e, o.getBoundingClientRect(), n.clientX);
           (r(s),
             a.current &&
               t &&
@@ -1464,18 +1464,18 @@ function dn(e, t) {
         },
         [i, a, e, r, t],
       ),
-      onPointerLeave: (0, N.useCallback)(
+      onPointerLeave: (0, M.useCallback)(
         (e) => {
           i.current && ((i.current = null), r((e) => null));
         },
         [r],
       ),
-      onPointerDown: (0, N.useCallback)(
+      onPointerDown: (0, M.useCallback)(
         (n) => {
           ((a.current = n.currentTarget),
             a.current.setPointerCapture(n.pointerId),
             (document.body.style.userSelect = `none`));
-          let i = un(e, a.current.getBoundingClientRect(), n.clientX);
+          let i = $(e, a.current.getBoundingClientRect(), n.clientX);
           (r(i),
             t &&
               t(
@@ -1489,7 +1489,7 @@ function dn(e, t) {
         },
         [a, t, e],
       ),
-      onLostPointerCapture: (0, N.useCallback)(
+      onLostPointerCapture: (0, M.useCallback)(
         (e) => {
           a.current &&
             ((a.current = null),
@@ -1505,31 +1505,31 @@ function dn(e, t) {
 }
 function fn(e) {
   let { player: t } = e,
-    n = yt(t);
-  N.use(A.Ready());
+    n = _t(t);
+  M.use(j.Ready());
   let r = ``;
   return (
     n == d.UnsupportedMediaType
-      ? (r = A.Localize(`#TrailerPlayer_Error_UnsupportedCodec`))
-      : n != d.Invalid && (r = A.Localize(`#TrailerPlayer_Error_Playback`)),
+      ? (r = j.Localize(`#TrailerPlayer_Error_UnsupportedCodec`))
+      : n != d.Invalid && (r = j.Localize(`#TrailerPlayer_Error_Playback`)),
     r
-      ? (0, P.jsx)(`div`, {
-          className: Ft,
-          children: (0, P.jsx)(`span`, { children: r }),
+      ? (0, N.jsx)(`div`, {
+          className: Nt,
+          children: (0, N.jsx)(`span`, { children: r }),
         })
       : null
   );
 }
 function pn(e) {
   let { player: t } = e,
-    [n, r, i, a] = q(t);
-  N.use(A.Ready());
-  let o = y(),
-    s = n ? (0, P.jsx)(m, {}) : (0, P.jsx)(g, {}),
-    c = A.Localize(
+    [n, r, i, a] = Y(t);
+  M.use(j.Ready());
+  let o = A(),
+    s = n ? (0, N.jsx)(Te, {}) : (0, N.jsx)(x, {}),
+    c = j.Localize(
       n ? `#TrailerPlayer_Unmute_Tooltip` : `#TrailerPlayer_Mute_Tooltip`,
     );
-  return (0, P.jsx)(Z, {
+  return (0, N.jsx)(Q, {
     onActivate: a,
     tooltip: c,
     disableTooltip: o,
@@ -1538,42 +1538,42 @@ function pn(e) {
 }
 function mn(e) {
   let { player: t } = e,
-    n = J(t);
-  N.use(A.Ready());
-  let r = n ? (0, P.jsx)(F, {}) : (0, P.jsx)(Te, {}),
-    i = A.Localize(
+    n = X(t);
+  M.use(j.Ready());
+  let r = n ? (0, N.jsx)(P, {}) : (0, N.jsx)(F, {}),
+    i = j.Localize(
       n ? `#TrailerPlayer_Play_Tooltip` : `#TrailerPlayer_Pause_Tooltip`,
     ),
-    a = Y(t);
-  return (0, P.jsx)(Z, { onActivate: a, tooltip: i, children: r });
+    a = Z(t);
+  return (0, N.jsx)(Q, { onActivate: a, tooltip: i, children: r });
 }
 function hn(e) {
   let { category: t, title: n } = e,
-    r = Bt(t);
-  return (0, P.jsxs)(`div`, {
-    className: It,
+    r = Rt(t);
+  return (0, N.jsxs)(`div`, {
+    className: Pt,
     children: [
-      (0, P.jsx)(`span`, { className: Lt, children: r }),
-      (0, P.jsx)(`span`, { className: Rt }),
-      (0, P.jsx)(`span`, { className: zt, children: n }),
+      (0, N.jsx)(`span`, { className: Ft, children: r }),
+      (0, N.jsx)(`span`, { className: It }),
+      (0, N.jsx)(`span`, { className: Lt, children: n }),
     ],
   });
 }
 function gn(e, t, n) {
-  let r = xt(t),
-    [i, a] = (0, N.useState)(``),
-    o = (0, N.useRef)(0);
-  ((0, N.useEffect)(() => {
+  let r = yt(t),
+    [i, a] = (0, M.useState)(``),
+    o = (0, M.useRef)(0);
+  ((0, M.useEffect)(() => {
     r &&
       !n &&
       i == `` &&
       (a(`active`), (o.current = window.setTimeout(() => a(`complete`), 4e3)));
   }, [r, n, i, o, a]),
-    (0, N.useEffect)(() => {
+    (0, M.useEffect)(() => {
       n && (a(`complete`), window.clearTimeout(o.current));
     }, [n]),
-    (0, N.useEffect)(() => () => window.clearTimeout(o.current), []));
-  let s = (0, N.useRef)(!1);
+    (0, M.useEffect)(() => () => window.clearTimeout(o.current), []));
+  let s = (0, M.useRef)(!1);
   return (
     i == `complete` && !n && (s.current = !0),
     e == `once` && s.current ? !1 : i == `active` || n
@@ -1583,52 +1583,52 @@ var _n = 200,
   vn = 5e3;
 function yn(e) {
   let { player: t, category: n, title: r, focus: i } = e,
-    a = (0, N.useRef)(null),
-    o = (0, N.useRef)(null),
-    [s, c] = ft(t, !1),
-    [l, u] = (0, N.useState)(!1),
-    d = U(l, u, a);
+    a = (0, M.useRef)(null),
+    o = (0, M.useRef)(null),
+    [s, c] = ut(t, !1),
+    [l, u] = (0, M.useState)(!1),
+    d = G(l, u, a);
   s ||= l;
   let f = bn(t),
-    p = we(!!i),
-    m = M(qe, s && `YnJEGhfB0wI-`);
-  return (0, P.jsx)(H.Provider, {
+    p = te(!!i),
+    m = E(qe, s && `YnJEGhfB0wI-`);
+  return (0, N.jsx)(W.Provider, {
     value: d,
-    children: (0, P.jsxs)(`div`, {
+    children: (0, N.jsxs)(`div`, {
       ref: p,
       className: m,
       ...c,
       onKeyDown: f,
       tabIndex: 0,
       children: [
-        (0, P.jsxs)(`div`, {
+        (0, N.jsxs)(`div`, {
           className: Je,
           children: [
-            (0, P.jsx)(Cn, { player: t, enabled: s && !l }),
-            (0, P.jsx)(Tn, {}),
-            (0, P.jsxs)(it, {
+            (0, N.jsx)(Cn, { player: t, enabled: s && !l }),
+            (0, N.jsx)(Tn, {}),
+            (0, N.jsxs)(it, {
               ref: o,
               className: Ze,
               children: [
-                (0, P.jsx)($, { player: t, showHoverThumb: !0 }),
-                (0, P.jsxs)(`div`, {
+                (0, N.jsx)(sn, { player: t, showHoverThumb: !0 }),
+                (0, N.jsxs)(`div`, {
                   className: Qe,
                   children: [
-                    (0, P.jsxs)(`div`, {
+                    (0, N.jsxs)(`div`, {
                       className: $e,
                       children: [
-                        (0, P.jsx)(mn, { player: t }),
-                        (0, P.jsx)(En, { player: t, refControlsHover: o }),
-                        (0, P.jsx)(Q, { player: t }),
+                        (0, N.jsx)(mn, { player: t }),
+                        (0, N.jsx)(En, { player: t, refControlsHover: o }),
+                        (0, N.jsx)(tn, { player: t }),
                       ],
                     }),
-                    (0, P.jsxs)(`div`, {
+                    (0, N.jsxs)(`div`, {
                       className: et,
                       children: [
-                        (0, P.jsx)(on, { player: t }),
-                        (0, P.jsx)(an, { player: t }),
-                        (0, P.jsx)(nn, {}),
-                        (0, P.jsx)(rn, {}),
+                        (0, N.jsx)(on, { player: t }),
+                        (0, N.jsx)(an, { player: t }),
+                        (0, N.jsx)(nn, {}),
+                        (0, N.jsx)(rn, {}),
                       ],
                     }),
                   ],
@@ -1637,20 +1637,20 @@ function yn(e) {
             }),
           ],
         }),
-        (0, P.jsx)(Sn, {
+        (0, N.jsx)(Sn, {
           player: t,
           controlsVisible: s,
           category: n,
           title: r,
         }),
-        (0, P.jsx)(`div`, { ref: a, className: nt }),
+        (0, N.jsx)(`div`, { ref: a, className: nt }),
       ],
     }),
   });
 }
 function bn(e) {
   let t = V(B(), `fullscreen`);
-  return (0, N.useCallback)(
+  return (0, M.useCallback)(
     (n) => {
       n.repeat ||
         (n.code == `Space`
@@ -1668,11 +1668,11 @@ function bn(e) {
   );
 }
 function xn(e, t) {
-  let n = (0, N.useRef)(null),
-    r = (0, N.useRef)(1),
-    i = (0, N.useRef)(0),
-    [a, o] = (0, N.useState)([]),
-    s = (0, N.useCallback)(
+  let n = (0, M.useRef)(null),
+    r = (0, M.useRef)(1),
+    i = (0, M.useRef)(0),
+    [a, o] = (0, M.useState)([]),
+    s = (0, M.useCallback)(
       (a) => {
         if (a.target != n.current) return;
         let s = e.TogglePlayPauseState(),
@@ -1689,30 +1689,30 @@ function xn(e, t) {
       },
       [n, i, e, o, t],
     ),
-    c = (0, N.useCallback)(
+    c = (0, M.useCallback)(
       (e) => {
         o((t) => t.filter((t) => t.nID != e));
       },
       [o],
     );
   return (
-    (0, N.useEffect)(
+    (0, M.useEffect)(
       () => () => {
         (window.clearTimeout(i.current), (i.current = 0));
       },
       [i],
     ),
-    { refBackground: n, inputEvents: G(s), clickEvents: a, fnRemoveEvent: c }
+    { refBackground: n, inputEvents: q(s), clickEvents: a, fnRemoveEvent: c }
   );
 }
 function Sn(e) {
   let { player: t, controlsVisible: n, category: r, title: i } = e,
     a = gn(`once`, t, n);
   if (r == 0 || !i) return null;
-  let o = M(Xe, a && `YnJEGhfB0wI-`);
-  return (0, P.jsx)(`div`, {
+  let o = E(Xe, a && `YnJEGhfB0wI-`);
+  return (0, N.jsx)(`div`, {
     className: o,
-    children: (0, P.jsx)(hn, { category: r, title: i }),
+    children: (0, N.jsx)(hn, { category: r, title: i }),
   });
 }
 function Cn(e) {
@@ -1723,59 +1723,59 @@ function Cn(e) {
       clickEvents: a,
       fnRemoveEvent: o,
     } = xn(t, V(B(), `fullscreen`)),
-    s = M(Ge, n && `T3UUyZ88ees-`);
-  return (0, P.jsx)(`div`, {
+    s = E(Ge, n && `T3UUyZ88ees-`);
+  return (0, N.jsx)(`div`, {
     ref: r,
     className: s,
     ...i,
     children: a.map((e) =>
-      (0, P.jsx)(wn, { event: e, removeEvent: o }, `icon_${e.nID}`),
+      (0, N.jsx)(wn, { event: e, removeEvent: o }, `icon_${e.nID}`),
     ),
   });
 }
 function wn(e) {
   let { event: t, removeEvent: n } = e,
     r = t.nID,
-    i = (0, N.useCallback)(() => {
+    i = (0, M.useCallback)(() => {
       n(r);
     }, [r, n]),
     a = null;
   return (
     t.eState == Ie.Play
-      ? (a = (0, P.jsx)(F, {}))
-      : t.eState == Ie.Pause && (a = (0, P.jsx)(Te, {})),
-    (0, P.jsx)(`div`, { className: Ke, onAnimationEnd: i, children: a })
+      ? (a = (0, N.jsx)(P, {}))
+      : t.eState == Ie.Pause && (a = (0, N.jsx)(F, {})),
+    (0, N.jsx)(`div`, { className: Ke, onAnimationEnd: i, children: a })
   );
 }
 function Tn(e) {
-  return (0, P.jsx)(`div`, { className: Ye });
+  return (0, N.jsx)(`div`, { className: Ye });
 }
 function En(e) {
   let { player: t, refControlsHover: n } = e,
-    [r, i, a, o] = q(t),
+    [r, i, a, o] = Y(t),
     [s, c] = Dn(n),
     l;
   l =
     r || i === 0
-      ? (0, P.jsx)(m, {})
+      ? (0, N.jsx)(Te, {})
       : i < 0.3
-        ? (0, P.jsx)(ne, {})
+        ? (0, N.jsx)(T, {})
         : i < 0.6
-          ? (0, P.jsx)(he, {})
-          : (0, P.jsx)(g, {});
-  let u = A.Localize(
+          ? (0, N.jsx)(oe, {})
+          : (0, N.jsx)(x, {});
+  let u = j.Localize(
     r ? `#TrailerPlayer_Unmute_Tooltip` : `#TrailerPlayer_Mute_Tooltip`,
   );
-  return (0, P.jsxs)(`div`, {
+  return (0, N.jsxs)(`div`, {
     className: tt,
     onMouseEnter: c,
     "data-keepcontrols": !0,
     children: [
-      (0, P.jsx)(Z, { onActivate: o, tooltip: u, children: l }),
+      (0, N.jsx)(Q, { onActivate: o, tooltip: u, children: l }),
       s &&
-        (0, P.jsx)(`div`, {
+        (0, N.jsx)(`div`, {
           className: `KiYQJsCfGxI-`,
-          children: (0, P.jsx)(_e, {
+          children: (0, N.jsx)(we, {
             min: 0,
             max: 1,
             value: r ? 0 : i,
@@ -1788,10 +1788,10 @@ function En(e) {
   });
 }
 function Dn(e) {
-  let [t, n] = (0, N.useState)(!1),
-    r = (0, N.useCallback)(() => n(!0), [n]);
+  let [t, n] = (0, M.useState)(!1),
+    r = (0, M.useCallback)(() => n(!0), [n]);
   return (
-    re(e, `mouseleave`, (e) => {
+    ue(e, `mouseleave`, (e) => {
       e.target == e.currentTarget && n(!1);
     }),
     [t, r]
@@ -1812,53 +1812,53 @@ var On = `WRCisr6uZYw-`,
   Bn = 1e3;
 function Vn(e) {
   let { player: t, category: n, title: r } = e,
-    i = (0, N.useRef)(null),
+    i = (0, M.useRef)(null),
     [a, o] = Hn(i, t, !1),
-    s = (0, N.useRef)(null),
-    [c, l] = (0, N.useState)(!1),
-    u = U(c, l, s);
+    s = (0, M.useRef)(null),
+    [c, l] = (0, M.useState)(!1),
+    u = G(c, l, s);
   a ||= c;
   let [d, f] = qn(t),
-    p = M(kn, a && `CjbQpCvOpk4-`),
-    m = M(Nn, !!d && `X3KS6LYOx9o-`);
-  return (0, P.jsx)(H.Provider, {
+    p = E(kn, a && `CjbQpCvOpk4-`),
+    m = E(Nn, !!d && `X3KS6LYOx9o-`);
+  return (0, N.jsx)(W.Provider, {
     value: u,
-    children: (0, P.jsxs)(`div`, {
+    children: (0, N.jsxs)(`div`, {
       className: On,
       ...o,
       children: [
-        (0, P.jsxs)(`div`, {
+        (0, N.jsxs)(`div`, {
           ref: i,
           className: p,
           children: [
-            (0, P.jsx)(Kn, { thumbnail: d }),
-            (0, P.jsx)(Gn, {}),
-            (0, P.jsx)(`div`, {
+            (0, N.jsx)(Kn, { thumbnail: d }),
+            (0, N.jsx)(Gn, {}),
+            (0, N.jsx)(`div`, {
               className: m,
-              children: (0, P.jsx)(Jn, { player: t }),
+              children: (0, N.jsx)(Jn, { player: t }),
             }),
-            (0, P.jsxs)(`div`, {
+            (0, N.jsxs)(`div`, {
               className: Fn,
               children: [
-                (0, P.jsx)($, {
+                (0, N.jsx)(sn, {
                   player: t,
                   onTouchSeek: f,
                   showHoverThumb: !1,
                 }),
-                (0, P.jsxs)(`div`, {
+                (0, N.jsxs)(`div`, {
                   className: In,
                   children: [
-                    (0, P.jsx)(`div`, {
+                    (0, N.jsx)(`div`, {
                       className: Ln,
-                      children: (0, P.jsx)(Q, { player: t }),
+                      children: (0, N.jsx)(tn, { player: t }),
                     }),
-                    (0, P.jsxs)(`div`, {
+                    (0, N.jsxs)(`div`, {
                       className: Rn,
                       children: [
-                        (0, P.jsx)(pn, { player: t }),
-                        (0, P.jsx)(on, { player: t }),
-                        (0, P.jsx)(an, { player: t }),
-                        (0, P.jsx)(rn, {}),
+                        (0, N.jsx)(pn, { player: t }),
+                        (0, N.jsx)(on, { player: t }),
+                        (0, N.jsx)(an, { player: t }),
+                        (0, N.jsx)(rn, {}),
                       ],
                     }),
                   ],
@@ -1867,13 +1867,13 @@ function Vn(e) {
             }),
           ],
         }),
-        (0, P.jsx)(Wn, {
+        (0, N.jsx)(Wn, {
           player: t,
           controlsVisible: a,
           category: n,
           title: r,
         }),
-        (0, P.jsx)(`div`, { ref: s, className: void 0 }),
+        (0, N.jsx)(`div`, { ref: s, className: void 0 }),
       ],
     }),
   });
@@ -1883,31 +1883,31 @@ function Hn(e, t, n) {
   return ((r ||= n), [r, i]);
 }
 function Un(e, t) {
-  let [n, r] = K(),
-    i = (0, N.useRef)(null),
-    a = (0, N.useRef)(!0),
-    o = J(t);
+  let [n, r] = J(),
+    i = (0, M.useRef)(null),
+    a = (0, M.useRef)(!0),
+    o = X(t);
   return (
-    (0, N.useEffect)(() => {
+    (0, M.useEffect)(() => {
       let e = a.current;
       ((a.current = !1), (!e || o) && r(!0, o ? 0 : Bn));
     }, [o, r, a]),
     [
       n,
       {
-        onPointerDown: (0, N.useCallback)(
+        onPointerDown: (0, M.useCallback)(
           (e) => {
             i.current = e.target;
           },
           [i],
         ),
-        onPointerCancel: (0, N.useCallback)(
+        onPointerCancel: (0, M.useCallback)(
           (e) => {
             i.current = null;
           },
           [i],
         ),
-        onPointerUp: (0, N.useCallback)(
+        onPointerUp: (0, M.useCallback)(
           (t) => {
             let a = i.current;
             if (((i.current = null), a == null)) return;
@@ -1924,19 +1924,19 @@ function Wn(e) {
   let { player: t, controlsVisible: n, category: r, title: i } = e,
     a = gn(`standard`, t, n);
   if (r == 0 || !i) return null;
-  let o = M(Mn, a && !n && `lwGDx-ob6f4-`, n && `FEfadjF0-XY-`);
-  return (0, P.jsx)(`div`, {
+  let o = E(Mn, a && !n && `lwGDx-ob6f4-`, n && `FEfadjF0-XY-`);
+  return (0, N.jsx)(`div`, {
     className: o,
-    children: (0, P.jsx)(hn, { category: r, title: i }),
+    children: (0, N.jsx)(hn, { category: r, title: i }),
   });
 }
 function Gn(e) {
-  return (0, P.jsx)(`div`, { className: An });
+  return (0, N.jsx)(`div`, { className: An });
 }
 function Kn(e) {
   let { thumbnail: t } = e,
-    [n, r] = (0, N.useState)(null),
-    i = (0, N.useCallback)(
+    [n, r] = (0, M.useState)(null),
+    i = (0, M.useCallback)(
       (e) => {
         if (!e) {
           r(null);
@@ -1964,19 +1964,19 @@ function Kn(e) {
       backgroundRepeat: `no-repeat`,
     };
   }
-  return (0, P.jsx)(`div`, {
+  return (0, N.jsx)(`div`, {
     ref: i,
     className: jn,
-    children: (0, P.jsx)(`div`, { style: a, className: void 0 }),
+    children: (0, N.jsx)(`div`, { style: a, className: void 0 }),
   });
 }
 function qn(e) {
-  let [t, n] = (0, N.useState)(null),
-    r = (0, N.useRef)(!1),
-    i = (0, N.useRef)(null);
+  let [t, n] = (0, M.useState)(null),
+    r = (0, M.useRef)(!1),
+    i = (0, M.useRef)(null);
   return [
     t,
-    N.useCallback(
+    M.useCallback(
       (t) => {
         let a = t ? t.thumbnail : null;
         (!e.IsPaused() && a && ((r.current = !0), e.Pause()),
@@ -1991,10 +1991,10 @@ function qn(e) {
 }
 function Jn(e) {
   let { player: t } = e,
-    n = J(t),
-    r = G(Y(t)),
-    i = n ? (0, P.jsx)(F, {}) : (0, P.jsx)(Te, {});
-  return (0, P.jsx)(`div`, { className: Pn, ...r, children: i });
+    n = X(t),
+    r = q(Z(t)),
+    i = n ? (0, N.jsx)(P, {}) : (0, N.jsx)(F, {});
+  return (0, N.jsx)(`div`, { className: Pn, ...r, children: i });
 }
 var Yn = `_3uW6UUMmrCg-`,
   Xn = `fqgqcMMEHV0-`,
@@ -2010,58 +2010,58 @@ var Yn = `_3uW6UUMmrCg-`,
 function or(e) {
   let { player: t, category: n, title: r } = e,
     [i, a] = sr(t, !1),
-    o = J(t),
+    o = X(t),
     s = cr(t, a),
-    c = Y(t),
-    [l, u, d, f] = q(t),
-    p = (0, N.useCallback)(() => {
+    c = Z(t),
+    [l, u, d, f] = Y(t),
+    p = (0, M.useCallback)(() => {
       (f(), a());
     }, [f, a]),
-    m = (0, N.useCallback)(
+    m = (0, M.useCallback)(
       (e) => {
         !t.IsPaused() && e.currentTarget == e.target && t.TogglePlayPause();
       },
       [t],
     ),
-    h = (0, N.useRef)(null),
-    [g, _] = (0, N.useState)(!1),
-    v = U(g, _, h),
-    y = l ? `#TrailerPlayer_Unmute_Tooltip` : `#TrailerPlayer_Mute_Tooltip`,
+    h = (0, M.useRef)(null),
+    [g, v] = (0, M.useState)(!1),
+    y = G(g, v, h),
+    ee = l ? `#TrailerPlayer_Unmute_Tooltip` : `#TrailerPlayer_Mute_Tooltip`,
     b = o ? `#TrailerPlayer_Play_Tooltip` : `#TrailerPlayer_Pause_Tooltip`,
-    x = M(Xn, i && `wXx6UBVpmP0-`);
-  return (0, P.jsx)(H.Provider, {
-    value: v,
-    children: (0, P.jsxs)(pe, {
+    x = E(Xn, i && `wXx6UBVpmP0-`);
+  return (0, N.jsx)(W.Provider, {
+    value: y,
+    children: (0, N.jsxs)(_, {
       className: Yn,
       focusable: !0,
       onClick: m,
-      onOKActionDescription: A.Localize(b),
+      onOKActionDescription: j.Localize(b),
       onOKButton: c,
       onSecondaryButton: p,
-      onSecondaryActionDescription: A.Localize(y),
+      onSecondaryActionDescription: j.Localize(ee),
       onButtonDown: s,
       children: [
-        (0, P.jsxs)(`div`, {
+        (0, N.jsxs)(`div`, {
           className: x,
           children: [
-            (0, P.jsx)(ur, {}),
-            (0, P.jsxs)(`div`, {
+            (0, N.jsx)(ur, {}),
+            (0, N.jsxs)(`div`, {
               className: $n,
               children: [
-                (0, P.jsx)($, { player: t, showHoverThumb: !1 }),
-                (0, P.jsxs)(`div`, {
+                (0, N.jsx)(sn, { player: t, showHoverThumb: !1 }),
+                (0, N.jsxs)(`div`, {
                   className: er,
                   children: [
-                    (0, P.jsxs)(`div`, {
+                    (0, N.jsxs)(`div`, {
                       className: tr,
                       children: [
-                        (0, P.jsx)(mn, { player: t }),
-                        (0, P.jsx)(Q, { player: t }),
+                        (0, N.jsx)(mn, { player: t }),
+                        (0, N.jsx)(tn, { player: t }),
                       ],
                     }),
-                    (0, P.jsx)(`div`, {
+                    (0, N.jsx)(`div`, {
                       className: nr,
-                      children: (0, P.jsx)(pn, { player: t }),
+                      children: (0, N.jsx)(pn, { player: t }),
                     }),
                   ],
                 }),
@@ -2069,41 +2069,41 @@ function or(e) {
             }),
           ],
         }),
-        (0, P.jsx)(lr, {
+        (0, N.jsx)(lr, {
           player: t,
           controlsVisible: i,
           category: n,
           title: r,
         }),
-        (0, P.jsx)(`div`, { ref: h, className: void 0 }),
+        (0, N.jsx)(`div`, { ref: h, className: void 0 }),
       ],
     }),
   });
 }
 function sr(e, t) {
-  let [n, r] = K(),
-    i = (0, N.useRef)(!0),
-    a = J(e);
+  let [n, r] = J(),
+    i = (0, M.useRef)(!0),
+    a = X(e);
   return (
-    (0, N.useEffect)(() => {
+    (0, M.useEffect)(() => {
       let e = i.current;
       ((i.current = !1), (!e || a) && r(!0, a ? 0 : ar));
     }, [a, r, i]),
     [
       n,
-      (0, N.useCallback)(() => {
+      (0, M.useCallback)(() => {
         r(!0, ir);
       }, [r]),
     ]
   );
 }
 function cr(e, t) {
-  return (0, N.useCallback)(
+  return (0, M.useCallback)(
     (n) => {
-      if (n.detail.button == Se.TRIGGER_LEFT && e) {
+      if (n.detail.button == g.TRIGGER_LEFT && e) {
         let r = Math.max(0, e.GetPlaybackTime() - 10);
         (e.Seek(r), t(), n.preventDefault(), n.stopPropagation());
-      } else if (n.detail.button == Se.TRIGGER_RIGHT && e) {
+      } else if (n.detail.button == g.TRIGGER_RIGHT && e) {
         let r = Math.min(e.GetTimelineDuration(), e.GetPlaybackTime() + 10);
         (e.Seek(r), t(), n.preventDefault(), n.stopPropagation());
       }
@@ -2115,31 +2115,31 @@ function lr(e) {
   let { player: t, controlsVisible: n, category: r, title: i } = e,
     a = gn(`standard`, t, n);
   if (r == 0 || !i) return null;
-  let o = M(Zn, a && `wXx6UBVpmP0-`);
-  return (0, P.jsx)(`div`, {
+  let o = E(Zn, a && `wXx6UBVpmP0-`);
+  return (0, N.jsx)(`div`, {
     className: o,
-    children: (0, P.jsx)(`div`, {
+    children: (0, N.jsx)(`div`, {
       className: Qn,
-      children: (0, P.jsx)(hn, { category: r, title: i }),
+      children: (0, N.jsx)(hn, { category: r, title: i }),
     }),
   });
 }
 function ur(e) {
-  return (0, P.jsx)(`div`, { className: rr });
+  return (0, N.jsx)(`div`, { className: rr });
 }
 var dr = 500,
   fr = `responsive_menu_ignore_touch`;
 function pr(e) {
   return B()
-    ? (0, P.jsx)(N.Suspense, {
-        children: (0, P.jsx)(mr, { ...e, localContext: !1 }),
+    ? (0, N.jsx)(M.Suspense, {
+        children: (0, N.jsx)(mr, { ...e, localContext: !1 }),
       })
-    : (0, P.jsx)(N.Suspense, {
-        children: (0, P.jsx)(Ue, {
+    : (0, N.jsx)(M.Suspense, {
+        children: (0, N.jsx)(Ue, {
           iosVideoFallback: !0,
           supportsTheater: !1,
           supportsFullscreen: !0,
-          children: (0, P.jsx)(mr, { ...e, localContext: !0 }),
+          children: (0, N.jsx)(mr, { ...e, localContext: !0 }),
         }),
       });
 }
@@ -2165,28 +2165,28 @@ function mr(e) {
     focus: y,
   } = e;
   ((m ||= ``), (h ||= 0));
-  let [b, x] = Le(n, r, i, g, l, u, d);
-  (hr(t, x), Re(x, !!_));
-  let [ee, S] = gr(x),
-    C = B(),
-    te = v && C ? C.refFullscreen : null,
-    ne = ae(ee, te),
-    w = ze(x, !!o),
-    re = w ? void 0 : b,
+  let [ee, b] = Le(n, r, i, g, l, u, d);
+  (hr(t, b), Re(b, !!_));
+  let [x, S] = gr(b),
+    te = B(),
+    C = v && te ? te.refFullscreen : null,
+    ne = ae(x, C),
+    w = ze(b, !!o),
+    re = w ? void 0 : ee,
     T = {};
   S && ((T.width = `${S.nWidth}px`), (T.height = `${S.nHeight}px`));
-  let E = s(() => x.IsBuffering());
-  (N.useEffect(() => {
-    E || (c && c());
-  }, [E, c]),
-    N.use(A.Ready()));
-  let ie = M(ke, fr);
-  return (0, P.jsxs)(`div`, {
+  let D = s(() => b.IsBuffering());
+  (M.useEffect(() => {
+    D || (c && c());
+  }, [D, c]),
+    M.use(j.Ready()));
+  let ie = E(ke, fr);
+  return (0, N.jsxs)(`div`, {
     ref: ne,
     className: ie,
     "data-trailer-player": !0,
     children: [
-      (0, P.jsx)(`video`, {
+      (0, N.jsx)(`video`, {
         ref: re,
         style: T,
         controls: !1,
@@ -2194,15 +2194,15 @@ function mr(e) {
         "aria-label": p,
         crossOrigin: `anonymous`,
       }),
-      (0, P.jsx)(_r, { player: x, uiMode: f, category: h, title: m, focus: y }),
-      (0, P.jsx)(vr, { player: x }),
-      !w && (0, P.jsx)(yr, { player: x, screenshot: a }),
-      !w && (0, P.jsx)(fn, { player: x }),
+      (0, N.jsx)(_r, { player: b, uiMode: f, category: h, title: m, focus: y }),
+      (0, N.jsx)(vr, { player: b }),
+      !w && (0, N.jsx)(yr, { player: b, screenshot: a }),
+      !w && (0, N.jsx)(fn, { player: b }),
     ],
   });
 }
 function hr(e, t) {
-  (0, N.useImperativeHandle)(
+  (0, M.useImperativeHandle)(
     e,
     () => ({
       Play() {
@@ -2228,31 +2228,31 @@ function hr(e, t) {
   );
 }
 function gr(e) {
-  let t = (0, N.useRef)(null),
-    n = (0, N.useRef)(null),
-    r = (0, N.useRef)(null),
+  let t = (0, M.useRef)(null),
+    n = (0, M.useRef)(null),
+    r = (0, M.useRef)(null),
     i = ie(),
-    a = (0, N.useCallback)(() => {
+    a = (0, M.useCallback)(() => {
       let e = n.current,
         a = t.current;
       if (!e || !a) return;
-      let [o, s] = E(a.nWidth, a.nHeight, e.nWidth, e.nHeight);
+      let [o, s] = Se(a.nWidth, a.nHeight, e.nWidth, e.nHeight);
       ((o = e.nWidth - o < 2 ? e.nWidth : Math.ceil(o)),
         (s = e.nHeight - s < 2 ? e.nHeight : Math.ceil(s)));
       let c = r.current;
       (c && c.nWidth == o && c.nHeight == s) ||
         ((r.current = { nWidth: o, nHeight: s }), i());
     }, [t, n, r, i]);
-  bt(
+  vt(
     e,
-    (0, N.useCallback)(
+    (0, M.useCallback)(
       (e) => {
         ((t.current = e), a());
       },
       [t, a],
     ),
   );
-  let o = (0, N.useCallback)(
+  let o = (0, M.useCallback)(
     (e) => {
       ((n.current = {
         nWidth: e.contentRect.width,
@@ -2262,55 +2262,55 @@ function gr(e) {
     },
     [n, a],
   );
-  return [fe(o), r.current];
+  return [be(o), r.current];
 }
 function _r(e) {
   let { player: t, uiMode: n, category: r, title: i, focus: a } = e,
-    o = se(),
-    s = y();
+    o = m(),
+    s = A();
   return (
-    (n && n != `auto`) || (n = de() || s ? `touch` : o ? `gamepad` : `desktop`),
+    (n && n != `auto`) || (n = ve() || s ? `touch` : o ? `gamepad` : `desktop`),
     n == `touch`
-      ? (0, P.jsx)(Vn, { player: t, category: r, title: i })
+      ? (0, N.jsx)(Vn, { player: t, category: r, title: i })
       : n == `gamepad`
-        ? (0, P.jsx)(or, { player: t, category: r, title: i })
-        : (0, P.jsx)(yn, { player: t, category: r, title: i, focus: a })
+        ? (0, N.jsx)(or, { player: t, category: r, title: i })
+        : (0, N.jsx)(yn, { player: t, category: r, title: i, focus: a })
   );
 }
 function vr(e) {
   let { player: t } = e,
-    [n, r] = (0, N.useState)(`norender`),
+    [n, r] = (0, M.useState)(`norender`),
     i = s(() => t.IsBuffering());
-  ((0, N.useEffect)(() => {
+  ((0, M.useEffect)(() => {
     if (!i) return;
     let e = window.setTimeout(() => r(`fadein`), 1e3);
     return () => {
       e && window.clearTimeout(e);
     };
   }, [i, r]),
-    (0, N.useEffect)(() => {
+    (0, M.useEffect)(() => {
       if (i) return;
       r(`fadeout`);
       let e = window.setTimeout(() => r(`norender`), 300);
       return () => window.clearTimeout(e);
     }, [i, r]));
   let a = n != `norender`,
-    o = M(Ae, n == `fadein` && `ZxF0VUYsuGU-`);
-  return (0, P.jsx)(`div`, {
+    o = E(Ae, n == `fadein` && `ZxF0VUYsuGU-`);
+  return (0, N.jsx)(`div`, {
     className: o,
-    children: a && (0, P.jsx)(l, { size: `large`, position: `center` }),
+    children: a && (0, N.jsx)(l, { size: `large`, position: `center` }),
   });
 }
 function yr(e) {
   let { player: t, screenshot: n } = e,
     r = s(() => t.GetUserInputNeeded()),
-    i = C(r, dr),
-    [a, o] = (0, N.useState)(!1),
-    c = N.useCallback(() => {
+    i = de(r, dr),
+    [a, o] = (0, M.useState)(!1),
+    c = M.useCallback(() => {
       (t.UserInputReceived(), o(!0));
     }, [t]);
   if (
-    (N.useEffect(() => {
+    (M.useEffect(() => {
       if (!a) return;
       let e = setTimeout(() => o(!1), 500);
       return () => clearTimeout(e);
@@ -2318,23 +2318,23 @@ function yr(e) {
     !i)
   )
     return null;
-  N.use(A.Ready());
+  M.use(j.Ready());
   let l = {};
   return (
     n && (l.backgroundImage = `url('${n}')`),
-    (0, P.jsx)(`div`, {
+    (0, N.jsx)(`div`, {
       style: l,
       className: je,
       role: `button`,
       tabIndex: 0,
-      "aria-label": A.Localize(`#TrailerPlayer_Play_Tooltip`),
+      "aria-label": j.Localize(`#TrailerPlayer_Play_Tooltip`),
       onClick: c,
       onKeyDown: (e) => {
         (e.key === `Enter` || e.key === ` `) && (e.preventDefault(), c());
       },
-      children: (0, P.jsx)(`div`, {
-        className: M(Me, a && `_5fVtqw5G7SE-`),
-        children: (0, P.jsx)(F, {}),
+      children: (0, N.jsx)(`div`, {
+        className: E(Me, a && `_5fVtqw5G7SE-`),
+        children: (0, N.jsx)(P, {}),
       }),
     })
   );
@@ -2347,12 +2347,12 @@ var xr = `rs5MCL6BI2A-`,
   Cr = `_5yccD-xlOTc-`;
 function wr(e) {
   let { name: t, trailerCategory: n, trailerDisplay: r, mouseOver: i } = e,
-    [a, o] = N.useState(!1);
+    [a, o] = M.useState(!1);
   if (
-    (N.useEffect(() => {
+    (M.useEffect(() => {
       r != 0 && o(!0);
     }, [r]),
-    N.useEffect(() => {
+    M.useEffect(() => {
       if (i) {
         o(!0);
         return;
@@ -2364,31 +2364,31 @@ function wr(e) {
     n == null || r == 0)
   )
     return;
-  let s = r == 1 ? v.Localize(`#StoreTrailer_Title_TrailerPreview`) : Bt(n);
-  return (0, P.jsx)(`div`, {
-    className: M({ [xr]: !0, [Cr]: a }),
-    children: v.LocalizeReact(
+  let s = r == 1 ? b.Localize(`#StoreTrailer_Title_TrailerPreview`) : Rt(n);
+  return (0, N.jsx)(`div`, {
+    className: E({ [xr]: !0, [Cr]: a }),
+    children: b.LocalizeReact(
       `#StoreTrailer_Title_Combiner`,
-      (0, P.jsx)(`span`, { className: Sr, children: s }),
+      (0, N.jsx)(`span`, { className: Sr, children: s }),
       t,
     ),
   });
 }
 export {
   nn as a,
-  pt as c,
+  dt as c,
   Ue as d,
   B as f,
-  F as g,
+  P as g,
   I as h,
   rn as i,
-  K as l,
+  J as l,
   Pe as m,
   br as n,
-  ht as o,
+  pt as o,
   V as p,
   pr as r,
-  W as s,
+  K as s,
   wr as t,
   We as u,
 };

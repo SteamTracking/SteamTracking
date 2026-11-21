@@ -2,7 +2,7 @@
  ****/
 
 import { n as e } from "./chunk~0278ae6236.js";
-import { Qx as t, cx as n } from "./main.js";
+import { _x as t, sS as n } from "./main.js";
 var r = `061818254b2c99ac49e6626adb128ed1282a392f`,
   i = class {
     m_unAppID;
@@ -41,13 +41,13 @@ var r = `061818254b2c99ac49e6626adb128ed1282a392f`,
     BIsApplicationOrTool() {
       return this.apptype == 4 || this.apptype == 2;
     }
-    BuildAppURL(t, r) {
-      return t
-        ? n.MEDIA_CDN_COMMUNITY_URL +
+    BuildAppURL(n, r) {
+      return n
+        ? t.MEDIA_CDN_COMMUNITY_URL +
             `images/apps/` +
             this.appid +
             `/` +
-            t +
+            n +
             `.jpg`
         : e(r, `small`, `web`);
     }
@@ -78,7 +78,7 @@ var r = `061818254b2c99ac49e6626adb128ed1282a392f`,
     }
     SerializeToCacheObject() {
       return (
-        t(
+        n(
           this.m_bInitialized,
           `Attempting to serialize an uninitialized AppInfo object for caching!`,
         ),

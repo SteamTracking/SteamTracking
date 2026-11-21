@@ -22,27 +22,27 @@ import "./chunk~8681f5c764.js";
 import { t as p } from "./chunk~92931c6310.js";
 import { t as m } from "./chunk~874b4cd3a1.js";
 import {
-  Au as h,
-  Bu as ee,
-  Hx as te,
-  In as ne,
-  Jy as g,
-  Lb as _,
-  Qb as v,
-  Qx as y,
-  TS as re,
-  Ux as b,
-  Vy as ie,
-  Wy as x,
-  _r as ae,
-  cx as S,
-  hS as oe,
-  kl as se,
-  mS as ce,
-  mr as le,
-  ux as ue,
-  wc as C,
-  wl as de,
+  $y as ee,
+  CS as te,
+  Kb as h,
+  Nc as g,
+  Nl as ne,
+  PS as re,
+  Qx as _,
+  Rl as ie,
+  Un as ae,
+  Xy as v,
+  Yu as oe,
+  Zx as se,
+  _x as y,
+  rb as b,
+  sS as x,
+  sx as S,
+  wS as ce,
+  wr as le,
+  xr as ue,
+  yx as de,
+  zu as C,
 } from "./main.js";
 var w = e(o()),
   T = e(n()),
@@ -67,7 +67,7 @@ var w = e(o()),
     GetImageListCallbackForClanAccountIDInternal(e) {
       return (
         this.m_imageListChangeCallback.has(e) ||
-          this.m_imageListChangeCallback.set(e, new te()),
+          this.m_imageListChangeCallback.set(e, new se()),
         this.m_imageListChangeCallback.get(e)
       );
     }
@@ -100,13 +100,13 @@ var w = e(o()),
     async InternalLoadClanImages(e, t, n) {
       let r = e.GetAccountID();
       if (
-        (y(e && r != 0, `ClanSteamID missing:` + e),
+        (x(e && r != 0, `ClanSteamID missing:` + e),
         e && (!this.m_mapClanToImages.has(r) || t))
       ) {
         let t = {},
           a,
           o =
-            S.COMMUNITY_BASE_URL +
+            y.COMMUNITY_BASE_URL +
             `/gid/` +
             e.ConvertTo64BitString() +
             `/getimages/`;
@@ -174,10 +174,10 @@ var w = e(o()),
       return r ? r.find((e) => e.image_hash == t) : void 0;
     }
     async DeleteClanImageByID(e, t) {
-      let n = { sessionid: v(), imageid: t },
+      let n = { sessionid: S(), imageid: t },
         r = e.GetAccountID(),
         i = await w.default.get(
-          S.COMMUNITY_BASE_URL +
+          y.COMMUNITY_BASE_URL +
             `/gid/` +
             e.ConvertTo64BitString() +
             `/deleteimage/`,
@@ -199,20 +199,20 @@ var w = e(o()),
       return this.DeleteClanImageByID(e, t.imageid);
     }
   };
-(_([t], E.prototype, `m_mapClanToImages`, void 0),
-  _([t], E.prototype, `m_mapClanImageLoadState`, void 0));
+(h([t], E.prototype, `m_mapClanToImages`, void 0),
+  h([t], E.prototype, `m_mapClanImageLoadState`, void 0));
 var D = new E();
 function fe(e) {
   let [t, n] = (0, T.useState)(D.GetClanImagesByAccount(e));
-  return (de(D.GetImageListCallbackForClanAccountID(e), n), t);
+  return (ne(D.GetImageListCallbackForClanAccountID(e), n), t);
 }
 function pe(e) {
-  let t = ie.InitFromClanID(e, S.EUNIVERSE),
+  let t = v.InitFromClanID(e, y.EUNIVERSE),
     n = p(`useLoadClanImages`),
     [r, i] = (0, T.useState)(() => D.BHasLoadedClanImages(t));
   return (
     (0, T.useEffect)(() => {
-      let t = ie.InitFromClanID(e, S.EUNIVERSE);
+      let t = v.InitFromClanID(e, y.EUNIVERSE);
       return (
         D.BHasLoadedClanImages(t) ||
           D.LoadClanImages(t, !1, n.token).then(() => i(!0)),
@@ -606,22 +606,22 @@ var je = `A5DZIArSiNc-`,
           800,
           500,
         );
-      return (0, K.jsx)(ne, {
+      return (0, K.jsx)(ae, {
         onEscKeypress: this.props.closeModal,
         bDisableBackgroundDismiss: !0,
         children: (0, K.jsxs)(`div`, {
-          className: C(`DialogContent`, `_DialogCenterVertically`),
+          className: g(`DialogContent`, `_DialogCenterVertically`),
           children: [
-            (0, K.jsx)(ae, {
-              children: g(
+            (0, K.jsx)(le, {
+              children: b(
                 `#ImageUpload_CropModalTitleDims`,
                 this.GetDestWidth(),
                 this.GetDestHeight(),
               ),
             }),
             (0, K.jsx)(`div`, {
-              className: C(`DialogBodyText`),
-              children: g(`#ImageUpload_CropModalDescription`),
+              className: g(`DialogBodyText`),
+              children: b(`#ImageUpload_CropModalDescription`),
             }),
             (0, K.jsxs)(`div`, {
               className: je,
@@ -654,21 +654,21 @@ var je = `A5DZIArSiNc-`,
               children: [
                 (0, K.jsx)(`div`, {
                   className: Ne,
-                  children: g(`#ImageUpload_CropPreview`),
+                  children: b(`#ImageUpload_CropPreview`),
                 }),
                 (0, K.jsx)(`div`, { style: this.GetPreviewWindowStyle() }),
               ],
             }),
-            (0, K.jsx)(le, {
+            (0, K.jsx)(ue, {
               onClick: this.OnCrop,
-              children: g(`#ImageUpload_CropAndContinue`),
+              children: b(`#ImageUpload_CropAndContinue`),
             }),
           ],
         }),
       });
     }
   };
-(_([b], q.prototype, `OnCrop`, null), _([b], q.prototype, `UpdateCrop`, null));
+(h([_], q.prototype, `OnCrop`, null), h([_], q.prototype, `UpdateCrop`, null));
 async function Pe(e, t, n, r, i, a, o, s, c) {
   return new Promise((l, u) => {
     let d = J(c);
@@ -685,7 +685,7 @@ async function Pe(e, t, n, r, i, a, o, s, c) {
         c !== 3 && n.startsWith(`data:image/png`)
           ? u(`Unable to encode into the requested file format`)
           : t
-            ? ((e.file = h(t, e.filename)),
+            ? ((e.file = C(t, e.filename)),
               (e.width = o),
               (e.height = s),
               (e.dataUrl = n),
@@ -755,12 +755,12 @@ var X = class {
   }
   GetImageOptionLabel() {}
 };
-(_([t], X.prototype, `dataUrl`, void 0),
-  _([t], X.prototype, `width`, void 0),
-  _([t], X.prototype, `height`, void 0),
-  _([t], X.prototype, `status`, void 0),
-  _([t.ref], X.prototype, `message`, void 0),
-  _([t], X.prototype, `language`, void 0));
+(h([t], X.prototype, `dataUrl`, void 0),
+  h([t], X.prototype, `width`, void 0),
+  h([t], X.prototype, `height`, void 0),
+  h([t], X.prototype, `status`, void 0),
+  h([t.ref], X.prototype, `message`, void 0),
+  h([t], X.prototype, `language`, void 0));
 var Ie = 960,
   Le = 311,
   Re = 480,
@@ -805,21 +805,21 @@ var Ie = 960,
       return (
         a
           ? u
-            ? (f = g(`#ImageUpload_InvalidFileType`))
+            ? (f = b(`#ImageUpload_InvalidFileType`))
             : l
-              ? (f = g(`#ImageUpload_InvalidFormat`, s(t) ?? ``))
+              ? (f = b(`#ImageUpload_InvalidFormat`, s(t) ?? ``))
               : !c && !d
-                ? (f = g(`#ImageUpload_InvalidResolution`, F(n), F(r)))
+                ? (f = b(`#ImageUpload_InvalidResolution`, F(n), F(r)))
                 : o
                   ? !c && d
-                    ? ((f = g(`#ImageUpload_InvalidDimensions`, F(n), F(r))),
+                    ? ((f = b(`#ImageUpload_InvalidDimensions`, F(n), F(r))),
                       (p = !0))
                     : ((Array.isArray(n) && this.width != F(n)) ||
                         (Array.isArray(r) && this.height != F(r))) &&
                       ((m ??= []),
-                      m.push(g(`#ImageUpload_PreferredDimension`, F(n), F(r))))
-                  : (f = g(`#ImageUpload_TooSmall`, F(n), F(r)))
-          : (f = g(`#ImageUpload_InvalidFormatSelected`)),
+                      m.push(b(`#ImageUpload_PreferredDimension`, F(n), F(r))))
+                  : (f = b(`#ImageUpload_TooSmall`, F(n), F(r)))
+          : (f = b(`#ImageUpload_InvalidFormatSelected`)),
         {
           error: f,
           warnings: m,
@@ -863,8 +863,8 @@ var Ie = 960,
         (this.m_currentImageOptionKey = e?.sKey));
     }
   };
-(_([t], Z.prototype, `m_currentImageOption`, void 0),
-  _([t], Z.prototype, `m_currentImageOptionKey`, void 0));
+(h([t], Z.prototype, `m_currentImageOption`, void 0),
+  h([t], Z.prototype, `m_currentImageOptionKey`, void 0));
 var Q = class extends Z {
   bCropped = !1;
   localizedImageGroupPrimaryImage;
@@ -897,7 +897,7 @@ var Q = class extends Z {
     return Be(this.GetCurrentImageOption()?.artworkType);
   }
 };
-_([t], Q.prototype, `bCropped`, void 0);
+h([t], Q.prototype, `bCropped`, void 0);
 function Be(e) {
   if (e === `background`)
     return [
@@ -978,13 +978,13 @@ var Ke = class extends He {
     );
   }
   CancelAllUploads() {
-    this.m_cancel?.cancel(g(`#ImageUpload_CancelRequest`));
+    this.m_cancel?.cancel(b(`#ImageUpload_CancelRequest`));
   }
 };
 function qe(e, t, n) {
   if (((e == null || e == null) && (e = t), !n || n.length === 0)) return e;
-  for (let t of n) if (x.IsELanguageValidInRealm(e, t)) return e;
-  for (let e of n) if (x.IsELanguageValidInRealm(t, e)) return t;
+  for (let t of n) if (ee.IsELanguageValidInRealm(e, t)) return e;
+  for (let e of n) if (ee.IsELanguageValidInRealm(t, e)) return t;
   return n.includes(re.k_ESteamRealmGlobal) ? 0 : 29;
 }
 function Je(e, t = 0) {
@@ -994,13 +994,13 @@ function Je(e, t = 0) {
     i = 0;
   e.endsWith(`korean`) && ((r = 4), (i = 6));
   for (let t = 0; t < 32; ++t) {
-    let n = oe(t);
+    let n = ce(t);
     if (n.length <= i) continue;
     if (e.endsWith(n) && e.length > n.length + 2) {
       let a = e[e.length - n.length - 1];
       /\p{Alphabetic}|\p{Number}/u.test(a) || ((r = t), (i = n.length));
     }
-    let a = ce(t);
+    let a = te(t);
     a.length <= i || (e.endsWith(a) && ((r = t), (i = a.length)));
   }
   return {
@@ -1024,8 +1024,8 @@ function Ye(e, t, n) {
     bDeprecated: (n ?? 0) >= 1,
     fnGetLabelText() {
       return this.artworkType == `spotlight`
-        ? g(`#EventEditor_ArtworkType_store_spotlight`)
-        : g(`#EventEditor_ArtworkType_` + this.artworkType);
+        ? b(`#EventEditor_ArtworkType_store_spotlight`)
+        : b(`#EventEditor_ArtworkType_` + this.artworkType);
     },
   };
 }
@@ -1033,7 +1033,7 @@ function Xe(e) {
   return e?.flatMap((e) => {
     let t = B[e];
     if (
-      (y(!!t, `Artwork Type not in Map ${e}`),
+      (x(!!t, `Artwork Type not in Map ${e}`),
       typeof t.width == `number` && typeof t.height == `number`)
     )
       return [Ye(e, t)];
@@ -1070,7 +1070,7 @@ var $ = class extends Ke {
     return this.AddImageForLanguage(e, n);
   }
   async AddImageForLanguage(e, t) {
-    if (!l(e.type) && !(ue.is_support && f(e.type))) return !1;
+    if (!l(e.type) && !(de.is_support && f(e.type))) return !1;
     let n = await c(e, f(e.type));
     if (!n) return !1;
     let r = new Q(
@@ -1090,7 +1090,7 @@ var $ = class extends Ke {
     if (!n) return !1;
     let r = d.GenerateEditableURLFromHashAndExt(this.m_clanSteamID, n),
       i = await (0, w.default)({ url: r, method: `GET`, responseType: `blob` }),
-      a = h(i.data, e.file_name);
+      a = C(i.data, e.file_name);
     return await this.AddImage(a, t);
   }
   DeleteUploadImageByIndex(e) {
@@ -1151,7 +1151,7 @@ var $ = class extends Ke {
       o = e.GetResizeDimension(),
       s = new FormData();
     (s.append(`clanimage`, i, t),
-      s.append(`sessionid`, v()),
+      s.append(`sessionid`, S()),
       this.m_clanImagesV2 && s.append(`clan_images_v2`, `1`),
       a?.artworkType && s.append(`arttype`, a.artworkType),
       o &&
@@ -1170,7 +1170,7 @@ var $ = class extends Ke {
       (s.append(`video_width`, `` + e.width),
       s.append(`video_height`, `` + e.height));
     let d =
-        S.COMMUNITY_BASE_URL +
+        y.COMMUNITY_BASE_URL +
         `/gid/` +
         this.m_clanSteamID.ConvertTo64BitString() +
         c,
@@ -1188,7 +1188,7 @@ var $ = class extends Ke {
         (this.m_lastError = {
           file: i,
           status: e.response ? e.response.status : 500,
-          message: ee(e).strErrorMsg,
+          message: oe(e).strErrorMsg,
         }),
         (p = e.response));
     }
@@ -1197,14 +1197,14 @@ var $ = class extends Ke {
     );
   }
 };
-(_([t], $.prototype, `m_filesToUpload`, void 0),
-  _([t], $.prototype, `m_filesCompleted`, void 0),
-  _([t], $.prototype, `m_lastError`, void 0),
-  _([b], $.prototype, `AddImage`, null),
-  _([b], $.prototype, `AddExistingClanImage`, null),
-  _([b], $.prototype, `DeleteUploadImageByIndex`, null),
-  _([b], $.prototype, `DeleteUploadImage`, null),
-  _([b], $.prototype, `ClearImages`, null));
+(h([t], $.prototype, `m_filesToUpload`, void 0),
+  h([t], $.prototype, `m_filesCompleted`, void 0),
+  h([t], $.prototype, `m_lastError`, void 0),
+  h([_], $.prototype, `AddImage`, null),
+  h([_], $.prototype, `AddExistingClanImage`, null),
+  h([_], $.prototype, `DeleteUploadImageByIndex`, null),
+  h([_], $.prototype, `DeleteUploadImage`, null),
+  h([_], $.prototype, `ClearImages`, null));
 var Ze = class extends $ {
   constructor(e, t, n) {
     super(e, t, n, !1);
@@ -1212,7 +1212,7 @@ var Ze = class extends $ {
 };
 async function Qe(e, t, n, r, i) {
   let a =
-      S.COMMUNITY_BASE_URL +
+      y.COMMUNITY_BASE_URL +
       `/gid/` +
       t.ConvertTo64BitString() +
       `/resizeimage/`,
@@ -1221,12 +1221,12 @@ async function Qe(e, t, n, r, i) {
     o.append(`imagehash`, n),
     o.append(`extension`, r),
     o.append(`resize`, i.map((e) => e.width + `x` + e.height).join(`,`)),
-    o.append(`sessionid`, v()),
+    o.append(`sessionid`, S()),
     (await w.default.post(a, o, { cancelToken: e })).data.count
   );
 }
 function $e(e, t, n) {
-  let r = se(t instanceof Array ? t : [t]),
+  let r = ie(t instanceof Array ? t : [t]),
     i = e.ConvertTo64BitString();
   return T.useMemo(() => new Ze(e, r, n), [i, r]);
 }

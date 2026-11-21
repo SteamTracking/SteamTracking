@@ -6,30 +6,30 @@ import "./chunk~d382bdf2cf.js";
 import { n as t, t as n } from "./chunk~73f829e6f9.js";
 import {
   J as r,
-  Vy as i,
-  X as a,
-  ly as o,
-  py as s,
+  Ox as i,
+  Sy as a,
+  X as o,
+  Xy as s,
   ut as c,
-  yx as l,
+  vy as l,
 } from "./main.js";
 function u() {
-  let t = o(),
-    n = s();
+  let t = l(),
+    n = a();
   return e(d(t, n));
 }
 function d(e, r) {
   return {
     queryKey: [`GetFriendsList`, r],
     queryFn: async () => {
-      let r = l.Init(n),
+      let r = i.Init(n),
         a = await t.GetFriendsList(e, r),
         o = [];
       for (let e of a.Body().friendslist()?.friends() ?? []) {
         let t = e.ulfriendid();
         t &&
           (e.efriendrelationship() == 3 || e.efriendrelationship() == 6) &&
-          new i(t).BIsIndividualAccount() &&
+          new s(t).BIsIndividualAccount() &&
           o.push(t);
       }
       return o;
@@ -37,18 +37,18 @@ function d(e, r) {
   };
 }
 function f() {
-  let r = o(),
-    a = s();
+  let r = l(),
+    o = a();
   return e({
-    queryKey: [`GetIgnoredAccounts`, a],
+    queryKey: [`GetIgnoredAccounts`, o],
     queryFn: async () => {
-      let e = l.Init(n);
+      let e = i.Init(n);
       return (await t.GetFriendsList(r, e))
         .Body()
         .friendslist()
         ?.friends()
         ?.filter((e) => {
-          let t = new i(e.ulfriendid());
+          let t = new s(e.ulfriendid());
           return (
             (e.efriendrelationship() == 5 || e.efriendrelationship() == 6) &&
             t.BIsIndividualAccount()
@@ -62,14 +62,14 @@ function p(e, t) {
   return {
     queryKey: [`GetFriendNicknameList`, t],
     queryFn: async () => {
-      let t = l.Init(a);
+      let t = i.Init(o);
       return (await c.GetNicknameList(e, t)).Body().toObject();
     },
   };
 }
 function m(t = {}) {
-  let n = o(),
-    r = s();
+  let n = l(),
+    r = a();
   return e({ ...p(n, r), ...t, select: (e) => h(e.nicknames) });
 }
 function h(e) {
@@ -81,18 +81,18 @@ function h(e) {
   return t;
 }
 async function g(e, t) {
-  let n = l.Init(r);
+  let n = i.Init(r);
   n.Body().set_appid(t);
-  let i = await c.GetFriendsGameplayInfo(e, n);
+  let a = await c.GetFriendsGameplayInfo(e, n);
   return (
-    i.BSuccess() ||
-      console.warn(`Failed to get gameplay info: ${i.GetEResult()}`),
-    i.Body().toObject()
+    a.BSuccess() ||
+      console.warn(`Failed to get gameplay info: ${a.GetEResult()}`),
+    a.Body().toObject()
   );
 }
 function _(t, n = {}) {
-  let r = o(),
-    i = s();
+  let r = l(),
+    i = a();
   return e({
     queryKey: [`GameplayInfo_${i}_${t}`],
     queryFn: async () => await g(r, t),

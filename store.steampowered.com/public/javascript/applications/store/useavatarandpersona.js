@@ -10,29 +10,29 @@ import {
   tt as a,
 } from "./chunk~01cfc309bf.js";
 import {
-  Bu as o,
-  Vy as s,
+  Jb as o,
+  Ox as s,
   X as c,
-  cx as l,
-  ly as u,
-  ut as d,
-  ux as f,
-  yx as p,
-  zb as m,
+  Xy as l,
+  Yu as u,
+  _x as d,
+  ut as f,
+  vy as p,
+  yx as m,
 } from "./main.js";
 var h = e(a()),
   g = e(r()),
   _ = e(t()),
   v = `nicknames`;
 function y(e) {
-  let t = u(),
+  let t = p(),
     { data: n, isLoading: r } = i({
       queryKey: [v],
       queryFn: async () => {
         let e = new Map();
-        if (f.logged_in) {
-          let n = p.Init(c),
-            r = (await d.GetNicknameList(t, n)).Body().toObject();
+        if (m.logged_in) {
+          let n = s.Init(c),
+            r = (await f.GetNicknameList(t, n)).Body().toObject();
           r?.nicknames &&
             r.nicknames.length > 0 &&
             r.nicknames.forEach((t) => {
@@ -46,14 +46,14 @@ function y(e) {
 }
 async function b(e) {
   if (!e || e.length == 0) return [];
-  let t = m() == `community` ? l.COMMUNITY_BASE_URL : l.STORE_BASE_URL;
+  let t = o() == `community` ? d.COMMUNITY_BASE_URL : d.STORE_BASE_URL;
   if (e.length == 1) {
     let n = { accountid: e[0], origin: self.origin },
       r = await h.default.get(`${t}actions/ajaxgetavatarpersona`, {
         params: n,
       });
     if (!r || r.status != 200 || r.data?.success != 1 || !r.data?.userinfo)
-      throw `Load single avatar/persona failed ${o(r).strErrorMsg}`;
+      throw `Load single avatar/persona failed ${u(r).strErrorMsg}`;
     return [r.data.userinfo];
   }
   {
@@ -62,11 +62,11 @@ async function b(e) {
         params: n,
       });
     if (!r || r.status != 200 || r.data?.success != 1 || !r.data?.userinfos)
-      throw `Load single avatar/persona failed ${o(r).strErrorMsg}`;
+      throw `Load single avatar/persona failed ${u(r).strErrorMsg}`;
     let i = new Map();
     return (
       r.data.userinfos.forEach((e) =>
-        i.set(new s(e.steamid).GetAccountID(), e),
+        i.set(new l(e.steamid).GetAccountID(), e),
       ),
       e.map((e) => i.get(e))
     );
@@ -93,7 +93,7 @@ function T(e) {
         return (
           n.forEach((e) => {
             if (e instanceof Error) return;
-            let n = [S, new s(e.steamid).GetAccountID()];
+            let n = [S, new l(e.steamid).GetAccountID()];
             t.setQueryData(n, e);
           }),
           n

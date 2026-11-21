@@ -4,7 +4,7 @@
 import "./chunk~f025431ab0.js";
 import { Lt as e, ft as t } from "./chunk~01cfc309bf.js";
 import "./chunk~5214caf193.js";
-import { $y as n, Jy as r, cx as i, wc as a } from "./main.js";
+import { Nc as n, _x as r, cb as i, rb as a } from "./main.js";
 import {
   a as o,
   c as s,
@@ -58,17 +58,17 @@ var p = `lzdS-shJ99Q-`,
       y = [],
       T = [];
     t.forEach((t) => {
-      let a = t.eGenre,
-        o = i.STORE_BASE_URL + `sale/` + t.strSalePage,
-        s = n(
+      let n = t.eGenre,
+        o = r.STORE_BASE_URL + `sale/` + t.strSalePage,
+        s = i(
           `#Summer_21_Story_Enter`,
-          (0, K.jsx)(`span`, { children: r(t.strGenreName) }),
+          (0, K.jsx)(`span`, { children: a(t.strGenreName) }),
         );
-      if (e.has(a)) {
-        let n = ``;
-        (e.get(a).choice == 1
-          ? (n = t.strResultA + `_Summary`)
-          : e.get(a).choice == 2 && (n = t.strResultB + `_Summary`),
+      if (e.has(n)) {
+        let r = ``;
+        (e.get(n).choice == 1
+          ? (r = t.strResultA + `_Summary`)
+          : e.get(n).choice == 2 && (r = t.strResultB + `_Summary`),
           y.push(
             (0, K.jsx)(
               Y,
@@ -79,9 +79,9 @@ var p = `lzdS-shJ99Q-`,
                 eGenre: t.eGenre,
                 strTitle: t.strPageTitle,
                 strSaleURL: o,
-                strSummary: n,
+                strSummary: r,
               },
-              a,
+              n,
             ),
           ));
       } else {
@@ -100,19 +100,19 @@ var p = `lzdS-shJ99Q-`,
                 strSaleURL: o,
                 strSummary: `#Summer_21_Story_Next_Intro`,
               },
-              a,
+              n,
             ),
           ));
       }
     });
     let E = y.concat(T);
     return (0, K.jsx)(`div`, {
-      className: a(p, i.LANGUAGE),
+      className: n(p, r.LANGUAGE),
       children: (0, K.jsxs)(`div`, {
         className: void 0,
         children: [
           (0, K.jsxs)(`a`, {
-            href: i.STORE_BASE_URL,
+            href: r.STORE_BASE_URL,
             children: [
               c && (0, K.jsx)(`img`, { className: `BsHO-XUsE9Y-`, src: c }),
               u && (0, K.jsx)(`img`, { className: `RonG1NGMvmU-`, src: u }),
@@ -129,44 +129,44 @@ var p = `lzdS-shJ99Q-`,
                     children: [
                       (0, K.jsx)(`div`, {
                         className: v,
-                        children: r(`#Summer_21_Overview_Title_Prefix`),
+                        children: a(`#Summer_21_Overview_Title_Prefix`),
                       }),
-                      r(`#Summer_21_Overview_Title`),
+                      a(`#Summer_21_Overview_Title`),
                     ],
                   }),
                   (0, K.jsx)(`div`, {
-                    className: a(S, w),
-                    children: r(`#Summer_21_Overview_Description1`),
+                    className: n(S, w),
+                    children: a(`#Summer_21_Overview_Description1`),
                   }),
                   (0, K.jsx)(`div`, {
-                    className: a(S, w),
-                    children: r(`#Summer_21_Overview_Description3`),
+                    className: n(S, w),
+                    children: a(`#Summer_21_Overview_Description3`),
                   }),
                   (0, K.jsx)(`div`, {
-                    className: a(S, w),
-                    children: r(`#Summer_21_Overview_Description4`),
+                    className: n(S, w),
+                    children: a(`#Summer_21_Overview_Description4`),
                   }),
                   (0, K.jsxs)(`a`, {
                     id: `wallpapers`,
                     href:
-                      i.MEDIA_CDN_URL +
+                      r.MEDIA_CDN_URL +
                       `store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip`,
-                    className: a(S, w, C),
-                    children: [`*`, r(`#Summer21_Story_DownloadWallpaper`)],
+                    className: n(S, w, C),
+                    children: [`*`, a(`#Summer21_Story_DownloadWallpaper`)],
                   }),
                   (0, K.jsx)(`div`, {
-                    className: a(x, w),
-                    children: r(`#Summer_21_Overview_Description2`),
+                    className: n(x, w),
+                    children: a(`#Summer_21_Overview_Description2`),
                   }),
                   (0, K.jsx)(`div`, {
-                    className: a(x, w),
-                    children: r(`#Summer_21_Story_Intro`),
+                    className: n(x, w),
+                    children: a(`#Summer_21_Story_Intro`),
                   }),
                   (0, K.jsx)(`div`, {
-                    className: a(b, w),
-                    children: r(`#Summer_21_Story_Next`),
+                    className: n(b, w),
+                    children: a(`#Summer_21_Story_Next`),
                   }),
-                  (0, K.jsx)(`div`, { className: a(g), children: E }),
+                  (0, K.jsx)(`div`, { className: n(g), children: E }),
                 ],
               }),
               (0, K.jsx)(J, {}),
@@ -178,33 +178,33 @@ var p = `lzdS-shJ99Q-`,
   },
   J = (e) => {
     let t = u(),
-      n;
+      i;
     if (t == 51)
-      n = {
+      i = {
         badge_name: `#Summer21_Badge_Outcome1_Title`,
         badge_desc: `#Summer21_Badge_Outcome1_Description`,
         badge_class: B,
       };
     else if (t == 52)
-      n = {
+      i = {
         badge_name: `#Summer21_Badge_Outcome2_Title`,
         badge_desc: `#Summer21_Badge_Outcome2_Description`,
         badge_class: V,
       };
     else if (t == 53)
-      n = {
+      i = {
         badge_name: `#Summer21_Badge_Outcome3_Title`,
         badge_desc: `#Summer21_Badge_Outcome3_Description`,
         badge_class: H,
       };
     else if (t == 54)
-      n = {
+      i = {
         badge_name: `#Summer21_Badge_Outcome4_Title`,
         badge_desc: `#Summer21_Badge_Outcome4_Description`,
         badge_class: U,
       };
     else if (t == 55)
-      n = {
+      i = {
         badge_name: `#Summer21_Badge_Outcome5_Title`,
         badge_desc: `#Summer21_Badge_Outcome5_Description`,
         badge_class: W,
@@ -213,55 +213,55 @@ var p = `lzdS-shJ99Q-`,
     return (0, K.jsxs)(K.Fragment, {
       children: [
         (0, K.jsx)(`div`, {
-          className: a(S, w, A),
-          children: r(`#Summer21_Badge_Unlocked_Description`),
+          className: n(S, w, A),
+          children: a(`#Summer21_Badge_Unlocked_Description`),
         }),
         (0, K.jsxs)(`div`, {
           id: `badge`,
-          className: a(M, w),
+          className: n(M, w),
           children: [
             (0, K.jsxs)(`div`, {
               className: G,
               children: [
                 (0, K.jsx)(`div`, {
                   className: P,
-                  children: r(`#Summer21_Badge_Prelude`),
+                  children: a(`#Summer21_Badge_Prelude`),
                 }),
-                (0, K.jsx)(`div`, { className: N, children: r(n.badge_name) }),
-                (0, K.jsx)(`div`, { className: I, children: r(n.badge_desc) }),
+                (0, K.jsx)(`div`, { className: N, children: a(i.badge_name) }),
+                (0, K.jsx)(`div`, { className: I, children: a(i.badge_desc) }),
               ],
             }),
             (0, K.jsxs)(`div`, {
               className: G,
               children: [
                 (0, K.jsx)(`a`, {
-                  className: a(L, n.badge_class),
-                  href: i.COMMUNITY_BASE_URL + `my/badges/` + t,
+                  className: n(L, i.badge_class),
+                  href: r.COMMUNITY_BASE_URL + `my/badges/` + t,
                 }),
                 (0, K.jsx)(`div`, {
                   className: F,
-                  children: r(`#Summer21_Badge_Congrats1`),
+                  children: a(`#Summer21_Badge_Congrats1`),
                 }),
                 (0, K.jsx)(`div`, {
                   className: F,
-                  children: r(`#Summer21_Badge_Congrats2`),
+                  children: a(`#Summer21_Badge_Congrats2`),
                 }),
                 (0, K.jsx)(`a`, {
                   className: R,
-                  href: i.COMMUNITY_BASE_URL + `my/edit/avatar/` + t,
-                  children: r(`#Summer21_Badge_View`),
+                  href: r.COMMUNITY_BASE_URL + `my/edit/avatar/` + t,
+                  children: a(`#Summer21_Badge_View`),
                 }),
                 (0, K.jsx)(`a`, {
                   className: z,
-                  href: i.COMMUNITY_BASE_URL + `my/edit/avatar/` + t,
+                  href: r.COMMUNITY_BASE_URL + `my/edit/avatar/` + t,
                 }),
               ],
             }),
           ],
         }),
         (0, K.jsx)(`div`, {
-          className: a(j, w),
-          children: r(`#Summer21_Story_End`),
+          className: n(j, w),
+          children: a(`#Summer21_Story_End`),
         }),
       ],
     });
@@ -272,16 +272,16 @@ var p = `lzdS-shJ99Q-`,
       id: e.strID,
       href: e.strSaleURL,
       style: { backgroundColor: `${e.strBackgroundColor}` },
-      className: a(T, void 0),
+      className: n(T, void 0),
       children: [
         (0, K.jsxs)(`div`, {
           className: D,
           children: [
-            (0, K.jsx)(`div`, { className: a(E, w), children: e.strSubheader }),
-            (0, K.jsx)(`div`, { className: y, children: r(e.strTitle) }),
+            (0, K.jsx)(`div`, { className: n(E, w), children: e.strSubheader }),
+            (0, K.jsx)(`div`, { className: y, children: a(e.strTitle) }),
             (0, K.jsx)(`div`, {
-              className: a(k, w),
-              children: r(e.strSummary),
+              className: n(k, w),
+              children: a(e.strSummary),
             }),
           ],
         }),
@@ -295,7 +295,7 @@ var p = `lzdS-shJ99Q-`,
               }),
             !e.bClaimed &&
               (0, K.jsx)(`div`, {
-                className: a(`_9BmNqAzIk7s-`, `TYimPHbowxs-`),
+                className: n(`_9BmNqAzIk7s-`, `TYimPHbowxs-`),
               }),
           ],
         }),

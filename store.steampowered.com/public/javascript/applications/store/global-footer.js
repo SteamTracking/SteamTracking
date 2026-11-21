@@ -3,34 +3,34 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, N as n, ft as r } from "./chunk~01cfc309bf.js";
-import { n as ee, r as i, t as a } from "./chunk~2cd73352d8.js";
+import { n as i, r as ee, t as a } from "./chunk~2cd73352d8.js";
 import { t as o } from "./chunk~cfd048ddd7.js";
 import {
-  Db as s,
-  Fy as c,
-  Hu as l,
-  Ku as u,
-  Mi as d,
-  Ob as f,
-  Py as p,
-  Ry as m,
-  Ta as h,
-  Uu as g,
-  Wb as _,
-  _a as v,
-  ca as y,
-  da as b,
-  ga as x,
-  qb as S,
-  ta as C,
+  $b as s,
+  Ea as c,
+  Ib as l,
+  Lb as u,
+  NS as d,
+  Pa as f,
+  Qu as p,
+  Ta as m,
+  Uy as h,
+  Vi as g,
+  Wy as _,
+  Zu as v,
+  _a as y,
+  ba as b,
+  nx as x,
+  qy as S,
+  td as C,
   ua as te,
-  wS as w,
+  ya as w,
 } from "./main.js";
 function T() {
-  return c(m) === `desktop`;
+  return _(S) === `desktop`;
 }
 function E() {
-  (T() && p(m), `location` in window && location.reload());
+  (T() && h(S), `location` in window && location.reload());
 }
 var D = e(t(), 1),
   O = e(n(), 1),
@@ -130,9 +130,9 @@ function z() {
 }
 function B(e) {
   let { href: t, ...n } = e,
-    r = u();
+    r = C();
   return (
-    t?.startsWith(S.STORE_BASE_URL) && (t = l(r, t)),
+    t?.startsWith(x.STORE_BASE_URL) && (t = v(r, t)),
     (0, I.jsx)(o, {
       href: t,
       color: `dull-11`,
@@ -143,23 +143,23 @@ function B(e) {
   );
 }
 function V(e) {
-  let t = h();
+  let t = f();
   return t === `initial` || t === `sm`
     ? null
     : (0, I.jsx)(`footer`, {
         className: (0, O.default)(N, e.className),
-        children: (0, I.jsxs)(v, {
+        children: (0, I.jsxs)(c, {
           className: P,
           children: [
-            (0, I.jsxs)(x, {
+            (0, I.jsxs)(m, {
               align: `center`,
               justify: `between`,
               children: [
                 (0, I.jsx)(B, {
-                  href: S.STORE_BASE_URL,
+                  href: x.STORE_BASE_URL,
                   children: (0, I.jsx)(L, {}),
                 }),
-                (0, I.jsxs)(v, {
+                (0, I.jsxs)(c, {
                   className: F,
                   children: [
                     (0, I.jsx)(B, {
@@ -168,27 +168,27 @@ function V(e) {
                     }),
                     `\xA0 | \xA0`,
                     (0, I.jsx)(B, {
-                      href: S.STORE_BASE_URL + `about`,
+                      href: x.STORE_BASE_URL + `about`,
                       children: `关于蒸汽平台`,
                     }),
                     `\xA0 | \xA0`,
                     (0, I.jsx)(B, {
-                      href: S.STORE_BASE_URL + `steam_refunds`,
+                      href: x.STORE_BASE_URL + `steam_refunds`,
                       children: `退款政策`,
                     }),
                     `\xA0 | \xA0`,
                     (0, I.jsx)(B, {
-                      href: S.STORE_BASE_URL + `subscriber_agreement`,
+                      href: x.STORE_BASE_URL + `subscriber_agreement`,
                       children: `软件许可服务协议`,
                     }),
                     `\xA0 | \xA0`,
                     (0, I.jsx)(B, {
-                      href: S.STORE_BASE_URL + `privacy_agreement`,
+                      href: x.STORE_BASE_URL + `privacy_agreement`,
                       children: `个人信息保护政策`,
                     }),
                     `\xA0 | \xA0`,
                     (0, I.jsx)(B, {
-                      href: S.STORE_BASE_URL + `data_outbound`,
+                      href: x.STORE_BASE_URL + `data_outbound`,
                       children: `个人信息出境告知书`,
                     }),
                     `\xA0 | \xA0`,
@@ -212,11 +212,11 @@ function V(e) {
               ],
             }),
             (0, I.jsx)(`hr`, {}),
-            (0, I.jsxs)(x, {
+            (0, I.jsxs)(m, {
               align: `center`,
               justify: `between`,
               children: [
-                (0, I.jsxs)(x, {
+                (0, I.jsxs)(m, {
                   gap: `2`,
                   children: [
                     (0, I.jsx)(B, {
@@ -229,23 +229,23 @@ function V(e) {
                     }),
                   ],
                 }),
-                (0, I.jsxs)(x, {
+                (0, I.jsxs)(m, {
                   gap: `5`,
                   children: [
                     (0, I.jsx)(a, {
                       hoverContent: (0, I.jsx)(`img`, {
                         alt: ``,
                         src:
-                          S.STORE_CDN_URL +
+                          x.STORE_CDN_URL +
                           `public/shared/images/footer/Weibo-QR.png?v=2`,
                       }),
-                      children: (0, I.jsxs)(x, {
+                      children: (0, I.jsxs)(m, {
                         align: `center`,
                         children: [
                           (0, I.jsx)(`img`, {
                             alt: `微博`,
                             src:
-                              S.STORE_CDN_URL +
+                              x.STORE_CDN_URL +
                               `public/shared/images/footer/weibo_logo.svg?v=1`,
                           }),
                           (0, I.jsx)(y, { children: `微博` }),
@@ -256,16 +256,16 @@ function V(e) {
                       hoverContent: (0, I.jsx)(`img`, {
                         alt: ``,
                         src:
-                          S.STORE_CDN_URL +
+                          x.STORE_CDN_URL +
                           `public/shared/images/footer/WeChat-QR.png?v=2`,
                       }),
-                      children: (0, I.jsxs)(x, {
+                      children: (0, I.jsxs)(m, {
                         align: `center`,
                         children: [
                           (0, I.jsx)(`img`, {
                             alt: `微信`,
                             src:
-                              S.STORE_CDN_URL +
+                              x.STORE_CDN_URL +
                               `public/shared/images/footer/wechat_logo.svg?v=1`,
                           }),
                           (0, I.jsx)(y, { children: `微信` }),
@@ -276,12 +276,12 @@ function V(e) {
                 }),
               ],
             }),
-            (0, I.jsxs)(x, {
+            (0, I.jsxs)(m, {
               align: `center`,
               justify: `between`,
               marginTop: `5`,
               children: [
-                (0, I.jsxs)(v, {
+                (0, I.jsxs)(c, {
                   children: [
                     `© `,
                     new Date().getFullYear(),
@@ -290,7 +290,7 @@ function V(e) {
                     `所有商标均属于其在美国或其他国家的拥有者。`,
                   ],
                 }),
-                (0, I.jsxs)(v, {
+                (0, I.jsxs)(c, {
                   children: [
                     `© 完美世界征奇(上海)多媒体科技有限公司 版权所有。`,
                     (0, I.jsx)(`br`, {}),
@@ -316,73 +316,73 @@ function V(e) {
 }
 var H = {};
 ((H.arabic = () =>
-  s(() => import(`./chunk~f2f6d936ec.js`), [], import.meta.url)),
+  l(() => import(`./chunk~f2f6d936ec.js`), [], import.meta.url)),
   (H.brazilian = () =>
-    s(() => import(`./chunk~54779765f7.js`), [], import.meta.url)),
+    l(() => import(`./chunk~54779765f7.js`), [], import.meta.url)),
   (H.bulgarian = () =>
-    s(() => import(`./chunk~29ec33c827.js`), [], import.meta.url)),
+    l(() => import(`./chunk~29ec33c827.js`), [], import.meta.url)),
   (H.czech = () =>
-    s(() => import(`./chunk~6088e010d8.js`), [], import.meta.url)),
+    l(() => import(`./chunk~6088e010d8.js`), [], import.meta.url)),
   (H.danish = () =>
-    s(() => import(`./chunk~5b579c807c.js`), [], import.meta.url)),
+    l(() => import(`./chunk~5b579c807c.js`), [], import.meta.url)),
   (H.dutch = () =>
-    s(() => import(`./chunk~37cc7674c2.js`), [], import.meta.url)),
+    l(() => import(`./chunk~37cc7674c2.js`), [], import.meta.url)),
   (H.english = () =>
-    s(() => import(`./chunk~af09d38f94.js`), [], import.meta.url)),
+    l(() => import(`./chunk~af09d38f94.js`), [], import.meta.url)),
   (H.finnish = () =>
-    s(() => import(`./chunk~d44641df95.js`), [], import.meta.url)),
+    l(() => import(`./chunk~d44641df95.js`), [], import.meta.url)),
   (H.french = () =>
-    s(() => import(`./chunk~526ebc05ad.js`), [], import.meta.url)),
+    l(() => import(`./chunk~526ebc05ad.js`), [], import.meta.url)),
   (H.german = () =>
-    s(() => import(`./chunk~475646af8c.js`), [], import.meta.url)),
+    l(() => import(`./chunk~475646af8c.js`), [], import.meta.url)),
   (H.greek = () =>
-    s(() => import(`./chunk~eb7f16e98f.js`), [], import.meta.url)),
+    l(() => import(`./chunk~eb7f16e98f.js`), [], import.meta.url)),
   (H.hungarian = () =>
-    s(() => import(`./chunk~4f3b70792a.js`), [], import.meta.url)),
+    l(() => import(`./chunk~4f3b70792a.js`), [], import.meta.url)),
   (H.indonesian = () =>
-    s(() => import(`./chunk~0ae890f363.js`), [], import.meta.url)),
+    l(() => import(`./chunk~0ae890f363.js`), [], import.meta.url)),
   (H.italian = () =>
-    s(() => import(`./chunk~dde7a28b21.js`), [], import.meta.url)),
+    l(() => import(`./chunk~dde7a28b21.js`), [], import.meta.url)),
   (H.japanese = () =>
-    s(() => import(`./chunk~eb25c20816.js`), [], import.meta.url)),
+    l(() => import(`./chunk~eb25c20816.js`), [], import.meta.url)),
   (H.koreana = () =>
-    s(() => import(`./chunk~87a178d790.js`), [], import.meta.url)),
+    l(() => import(`./chunk~87a178d790.js`), [], import.meta.url)),
   (H.latam = () =>
-    s(() => import(`./chunk~07a4111442.js`), [], import.meta.url)),
+    l(() => import(`./chunk~07a4111442.js`), [], import.meta.url)),
   (H.malay = () =>
-    s(() => import(`./chunk~80159ad62f.js`), [], import.meta.url)),
+    l(() => import(`./chunk~80159ad62f.js`), [], import.meta.url)),
   (H.norwegian = () =>
-    s(() => import(`./chunk~baab7cb0b5.js`), [], import.meta.url)),
+    l(() => import(`./chunk~baab7cb0b5.js`), [], import.meta.url)),
   (H.polish = () =>
-    s(() => import(`./chunk~fd0cb9e207.js`), [], import.meta.url)),
+    l(() => import(`./chunk~fd0cb9e207.js`), [], import.meta.url)),
   (H.portuguese = () =>
-    s(() => import(`./chunk~46ae1a0ddf.js`), [], import.meta.url)),
+    l(() => import(`./chunk~46ae1a0ddf.js`), [], import.meta.url)),
   (H.romanian = () =>
-    s(() => import(`./chunk~54d6580800.js`), [], import.meta.url)),
+    l(() => import(`./chunk~54d6580800.js`), [], import.meta.url)),
   (H.russian = () =>
-    s(() => import(`./chunk~410059aa66.js`), [], import.meta.url)),
+    l(() => import(`./chunk~410059aa66.js`), [], import.meta.url)),
   (H.sc_schinese = () =>
-    s(() => import(`./chunk~b75733002e.js`), [], import.meta.url)),
+    l(() => import(`./chunk~b75733002e.js`), [], import.meta.url)),
   (H.schinese = () =>
-    s(() => import(`./chunk~5daf3c4742.js`), [], import.meta.url)),
+    l(() => import(`./chunk~5daf3c4742.js`), [], import.meta.url)),
   (H.spanish = () =>
-    s(() => import(`./chunk~49d060b799.js`), [], import.meta.url)),
+    l(() => import(`./chunk~49d060b799.js`), [], import.meta.url)),
   (H.swedish = () =>
-    s(() => import(`./chunk~0a541f04f7.js`), [], import.meta.url)),
+    l(() => import(`./chunk~0a541f04f7.js`), [], import.meta.url)),
   (H.tchinese = () =>
-    s(() => import(`./chunk~05e0264473.js`), [], import.meta.url)),
+    l(() => import(`./chunk~05e0264473.js`), [], import.meta.url)),
   (H.thai = () =>
-    s(() => import(`./chunk~b37e4c7d0f.js`), [], import.meta.url)),
+    l(() => import(`./chunk~b37e4c7d0f.js`), [], import.meta.url)),
   (H.turkish = () =>
-    s(() => import(`./chunk~29713ab7f5.js`), [], import.meta.url)),
+    l(() => import(`./chunk~29713ab7f5.js`), [], import.meta.url)),
   (H.ukrainian = () =>
-    s(() => import(`./chunk~34516b2e08.js`), [], import.meta.url)),
+    l(() => import(`./chunk~34516b2e08.js`), [], import.meta.url)),
   (H.vietnamese = () =>
-    s(() => import(`./chunk~00cfea4007.js`), [], import.meta.url)));
+    l(() => import(`./chunk~00cfea4007.js`), [], import.meta.url)));
 async function U(e) {
   if (H[e]) return await H[e]();
 }
-var W = f(U);
+var W = u(U);
 function G() {
   return (0, I.jsxs)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
@@ -506,10 +506,10 @@ function X() {
   });
 }
 function Z(e) {
-  return (0, I.jsx)(x, { direction: `column`, gap: `4`, ...e });
+  return (0, I.jsx)(m, { direction: `column`, gap: `4`, ...e });
 }
 function Q(e) {
-  return (0, I.jsx)(i, {
+  return (0, I.jsx)(ee, {
     level: `3`,
     color: `dull-12`,
     weight: `heavy`,
@@ -519,9 +519,9 @@ function Q(e) {
 }
 function $(e) {
   let { href: t, ...n } = e,
-    r = u();
+    r = C();
   return (
-    t?.startsWith(S.STORE_BASE_URL) && (t = l(r, t)),
+    t?.startsWith(x.STORE_BASE_URL) && (t = v(r, t)),
     (0, I.jsx)(o, {
       href: t,
       color: `dull-11`,
@@ -532,19 +532,19 @@ function $(e) {
   );
 }
 function ne() {
-  let e = h();
-  return (0, I.jsxs)(x, {
+  let e = f();
+  return (0, I.jsxs)(m, {
     gridArea: `main`,
     direction: `column`,
     gap: `5`,
     align: `start`,
     children: [
-      (0, I.jsxs)(x, {
+      (0, I.jsxs)(m, {
         gap: `6`,
         align: `center`,
         children: [
           (0, I.jsx)($, {
-            href: S.STORE_BASE_URL,
+            href: x.STORE_BASE_URL,
             children: (0, I.jsx)(G, {}),
           }),
           (0, I.jsx)($, {
@@ -557,11 +557,11 @@ function ne() {
         as: `p`,
         size: `1`,
         className: A,
-        children: C(
+        children: te(
           W.Localize(`#footer_legal_notice`, new Date().getFullYear()),
         ),
       }),
-      (0, I.jsxs)(x, {
+      (0, I.jsxs)(m, {
         gap: `6`,
         align: `center`,
         className: j,
@@ -584,17 +584,17 @@ function ne() {
           }),
         ],
       }),
-      (0, I.jsxs)(x, {
+      (0, I.jsxs)(m, {
         gap: `5`,
         children: [
           e === `initial` &&
-            !S.IN_MOBILE_WEBVIEW &&
+            !x.IN_MOBILE_WEBVIEW &&
             (0, I.jsx)(b, {
-              href: S.STORE_BASE_URL + `mobile/`,
+              href: x.STORE_BASE_URL + `mobile/`,
               children: W.Localize(`#footer_link_get_mobile_apps`),
             }),
           T() &&
-            (0, I.jsx)(te, {
+            (0, I.jsx)(w, {
               color: `dull`,
               onClick: E,
               children: W.Localize(`#footer_view_mobile_website`),
@@ -607,9 +607,9 @@ function ne() {
 function re(e) {
   return (
     (0, D.use)(W.Ready()),
-    (0, I.jsx)(d, {
+    (0, I.jsx)(g, {
       breakpoints: { sm: 700 },
-      children: (0, I.jsxs)(ee, {
+      children: (0, I.jsxs)(i, {
         as: `footer`,
         areas: {
           initial: `"steam valve" "legal more" "main main"`,
@@ -637,23 +637,23 @@ function re(e) {
                 children: W.Localize(`#footer_link_header_steam`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `about/`,
+                href: x.STORE_BASE_URL + `about/`,
                 children: W.Localize(`#footer_link_about_steam`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `subscriber_agreement/`,
+                href: x.STORE_BASE_URL + `subscriber_agreement/`,
                 children: W.Localize(`#footer_link_steam_ssa`),
               }),
               (0, I.jsx)($, {
-                href: S.PARTNER_BASE_URL,
+                href: x.PARTNER_BASE_URL,
                 children: W.Localize(`#footer_link_steamworks`),
               }),
               (0, I.jsx)($, {
-                href: S.PARTNER_BASE_URL + `steamdirect`,
+                href: x.PARTNER_BASE_URL + `steamdirect`,
                 children: W.Localize(`#footer_link_steam_distribution`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `digitalgiftcards/`,
+                href: x.STORE_BASE_URL + `digitalgiftcards/`,
                 children: W.Localize(`#footer_link_gift_cards`),
               }),
             ],
@@ -673,11 +673,11 @@ function re(e) {
                 children: W.Localize(`#footer_link_jobs`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `hardware/`,
+                href: x.STORE_BASE_URL + `hardware/`,
                 children: W.Localize(`#footer_link_hardware`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `hardware_recycling/`,
+                href: x.STORE_BASE_URL + `hardware_recycling/`,
                 children: W.Localize(`#footer_link_recycling`),
               }),
             ],
@@ -689,7 +689,7 @@ function re(e) {
                 children: W.Localize(`#footer_link_header_legal`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `privacy_agreement/`,
+                href: x.STORE_BASE_URL + `privacy_agreement/`,
                 children: W.Localize(`#footer_link_privacy`),
               }),
               (0, I.jsx)($, {
@@ -697,15 +697,15 @@ function re(e) {
                 children: W.Localize(`#footer_link_accessibility`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `legal/`,
+                href: x.STORE_BASE_URL + `legal/`,
                 children: W.Localize(`#footer_link_notices_and_policies`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `account/cookiepreferences/`,
+                href: x.STORE_BASE_URL + `account/cookiepreferences/`,
                 children: W.Localize(`#footer_link_cookies`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `steam_refunds/`,
+                href: x.STORE_BASE_URL + `steam_refunds/`,
                 children: W.Localize(`#footer_link_refunds`),
               }),
             ],
@@ -717,19 +717,19 @@ function re(e) {
                 children: W.Localize(`#footer_link_header_more`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `about/`,
+                href: x.STORE_BASE_URL + `about/`,
                 children: W.Localize(`#footer_link_get_steam`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `mobile/`,
+                href: x.STORE_BASE_URL + `mobile/`,
                 children: W.Localize(`#footer_link_get_mobile_apps`),
               }),
               (0, I.jsx)($, {
-                href: S.HELP_BASE_URL,
+                href: x.HELP_BASE_URL,
                 children: W.Localize(`#footer_link_get_support`),
               }),
               (0, I.jsx)($, {
-                href: S.STORE_BASE_URL + `account/`,
+                href: x.STORE_BASE_URL + `account/`,
                 children: W.Localize(`#footer_link_my_account`),
               }),
             ],
@@ -740,8 +740,8 @@ function re(e) {
   );
 }
 function ie(e) {
-  if (_()) return null;
-  let t = w(S.EREALM) ? (0, I.jsx)(V, { ...e }) : (0, I.jsx)(re, { ...e });
-  return (0, I.jsx)(g, { controller: `footer`, method: `footer`, children: t });
+  if (s()) return null;
+  let t = d(x.EREALM) ? (0, I.jsx)(V, { ...e }) : (0, I.jsx)(re, { ...e });
+  return (0, I.jsx)(p, { controller: `footer`, method: `footer`, children: t });
 }
 export { ie as GlobalFooter };

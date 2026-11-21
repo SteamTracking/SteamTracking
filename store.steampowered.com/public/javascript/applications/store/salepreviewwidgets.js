@@ -4,84 +4,84 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, dt as n, ft as r } from "./chunk~01cfc309bf.js";
 import {
-  $a as i,
-  An as a,
-  Ba as o,
-  Bn as s,
-  Bo as c,
-  Bs as l,
-  Es as u,
-  Fs as d,
-  Ho as f,
-  Ka as p,
-  Ko as m,
-  Ln as ee,
-  Ma as te,
-  Mo as h,
-  Oa as ne,
-  Po as re,
-  Ps as ie,
-  Qn as ae,
-  Ss as g,
-  Ua as _,
-  Un as v,
-  Va as y,
-  Vo as b,
-  Yn as oe,
-  Yo as x,
-  Za as se,
-  _s as ce,
-  as as le,
-  bs as S,
-  cs as ue,
-  kn as C,
-  lr as w,
-  mo as T,
+  $n as i,
+  As as a,
+  Da as o,
+  Dn as s,
+  Do as c,
+  Ea as l,
+  Fa as u,
+  Fn as d,
+  Fo as f,
+  Fs as p,
+  Ia as m,
+  Io as h,
+  Ja as g,
+  Ka as ee,
+  Lo as _,
+  On as v,
+  Po as y,
+  Ra as b,
+  Rn as x,
+  Va as S,
+  Vn as te,
+  Vo as ne,
+  Wo as C,
+  Xn as re,
+  _s as ie,
+  as as ae,
+  cs as oe,
+  er as se,
+  es as w,
+  fs as ce,
+  gs as T,
+  hs as E,
+  ko as le,
+  ks as D,
+  lo as O,
+  ls as ue,
   ms as de,
-  nr as fe,
-  ps as pe,
-  rr as me,
-  t as E,
-  tr as D,
-  us as he,
-  vs as ge,
-  ws as _e,
-  xs as O,
+  ps as fe,
+  qn as pe,
+  rs as me,
+  sr as k,
+  t as he,
+  tr as ge,
+  xs as _e,
   ys as ve,
-  zo as k,
 } from "./chunk~6b8ddcaac8.js";
 import { n as A } from "./chunk~751f63337e.js";
 import { i as ye, r as be } from "./chunk~4c13037b22.js";
 import { d as xe, p as j, r as Se } from "./chunk~cbbb6ae37c.js";
-import { f as Ce, p as we } from "./chunk~ffe4581a06.js";
+import { h as Ce, m as we } from "./chunk~4eed35ad1f.js";
 import { t as Te } from "./chunk~b980924b6a.js";
 import { n as Ee, t as De } from "./chunk~56437c278a.js";
 import {
-  $v as M,
-  Bv as N,
-  Eb as P,
-  Ec as F,
-  Jy as I,
-  Ku as Oe,
-  Mv as L,
-  Pv as R,
-  Tv as ke,
-  Vv as z,
-  Wb as Ae,
-  Yy as B,
+  $b as Oe,
+  Bc as ke,
+  Bv as M,
+  Cb as N,
+  El as Ae,
+  Fb as P,
+  Fc as F,
+  Jv as I,
+  Nc as L,
+  Or as R,
+  Pv as z,
+  Uv as B,
+  Vv as V,
+  Xv as H,
+  Yv as U,
   _l as je,
-  cl as Me,
-  cx as Ne,
-  in as Pe,
-  jc as Fe,
-  jv as V,
-  mb as Ie,
-  qv as Le,
-  ub as H,
-  uv as Re,
-  wc as U,
-  xr as ze,
-  zv as W,
+  _x as Me,
+  cy as Ne,
+  dn as Pe,
+  ib as Fe,
+  ny as Ie,
+  rb as W,
+  td as Le,
+  yb as Re,
+  yv as ze,
 } from "./main.js";
 var G = e(t(), 1),
   K = `x33TRfA9NLE-`,
@@ -90,35 +90,35 @@ var G = e(t(), 1),
   Ve = 6;
 function He(e) {
   let { id: t, bHideInLibraryApps: n } = e,
-    { data: r } = R(t),
-    a = r?.item_type == 2,
-    { data: o } = d(),
+    { data: r } = B(t),
+    i = r?.item_type == 2,
+    { data: o } = a(),
     s = G.useMemo(() => {
       if (r)
         return r.item_type === 1 || r.item_type === 2
           ? (r.included_appids || [])
-              .filter((e) => !a || !n || !o?.has(e))
+              .filter((e) => !i || !n || !o?.has(e))
               .map((e) => ({ appid: e }))
           : (console.error(
               `ContentsPreviewList unexpected store item type:`,
               r.item_type,
             ),
             null);
-    }, [r, n, a, o]);
+    }, [r, n, i, o]);
   if (!s || s.length == 0) return null;
   let c = s.length,
     l = P.LocalizePlural(`#Sale_ContentPreview`, c);
-  if (a && r) {
+  if (i && r) {
     let e = r.included_appids?.length || 0;
     e != c && (l = P.Localize(`#Sale_Bundle_CompletePartialSet`, e - c, e));
   }
   return (0, q.jsxs)(`div`, {
-    className: i,
+    className: g,
     children: [
       (0, q.jsxs)(`div`, {
-        className: T,
+        className: O,
         children: [
-          a &&
+          i &&
             (0, q.jsx)(`span`, {
               className: `_8o-dkC5O1co-`,
               children: P.Localize(`#AppType_bundle`),
@@ -127,27 +127,27 @@ function He(e) {
         ],
       }),
       (0, q.jsx)(`div`, {
-        className: k,
+        className: y,
         children: s
           .slice(0, Ve)
-          .map((e) => (0, q.jsx)(J, { id: e }, `preview${M(e)}`)),
+          .map((e) => (0, q.jsx)(J, { id: e }, `preview${Ne(e)}`)),
       }),
     ],
   });
 }
 function J(e) {
   let { id: t } = e,
-    { data: n } = N(t),
-    { data: r } = W(t);
+    { data: n } = U(t),
+    { data: r } = I(t);
   if (!n || !r) return null;
-  let i = F(n, `small_capsule`);
-  return (0, q.jsx)(D, {
+  let a = F(n, `small_capsule`);
+  return (0, q.jsx)(i, {
     id: t,
-    className: b,
+    className: h,
     hoverProps: { direction: `right`, style: { minWidth: `350px` } },
     children: (0, q.jsx)(`img`, {
-      src: i,
-      className: c,
+      src: a,
+      className: f,
       loading: `lazy`,
       alt: r.name || ``,
     }),
@@ -155,10 +155,10 @@ function J(e) {
 }
 function Y(e) {
   let [t, r] = (0, G.useState)(void 0),
-    { data: i } = R(e),
-    { data: a } = Le(e),
+    { data: i } = B(e),
+    { data: a } = Ie(e),
     o = n(),
-    s = Re();
+    s = ze();
   return (
     (0, G.useEffect)(() => {
       if (i) {
@@ -166,7 +166,7 @@ function Y(e) {
         else if (i.related_items?.parent_appid) {
           let e = { appid: i.related_items?.parent_appid };
           (async () => {
-            let t = await o.fetchQuery(ke(s, e));
+            let t = await o.fetchQuery(z(s, e));
             t && t.length > 0 && r(t);
           })();
         }
@@ -184,11 +184,11 @@ function X(e) {
     n = Y(t);
   return n
     ? (0, q.jsx)(`div`, {
-        className: O,
+        className: T,
         children: n
           .slice(0, 10)
           .map((e) =>
-            (0, q.jsx)(E, { tagid: e.tagid, className: p }, `tag_` + e.tagid),
+            (0, q.jsx)(he, { tagid: e.tagid, className: S }, `tag_` + e.tagid),
           ),
       })
     : null;
@@ -199,60 +199,60 @@ function Z(e) {
       bShowDemoButton: n,
       bShowPurchaseOptionsButton: r,
       fnOnPurchaseOptionsClick: i,
-      bHidePrice: o,
-      bShowDeckCompatibilityDialog: s,
+      bHidePrice: a,
+      bShowDeckCompatibilityDialog: o,
       eHardwareCompatibilityDisplay: c,
       className: l,
       bShowCartButton: u,
     } = e,
-    { data: d } = R(t),
-    { data: p } = z(t),
-    { data: m } = L(t),
-    { bIsOwned: ee } = ie(t),
-    [te, h] = me(s, c);
+    { data: d } = B(t),
+    { data: f } = H(t),
+    { data: p } = V(t),
+    { bIsOwned: m } = D(t),
+    [h, g] = ge(o, c);
   if (!d) return null;
-  let ne =
-      (d.type === 1 && !p?.is_coming_soon) ||
+  let ee =
+      (d.type === 1 && !f?.is_coming_soon) ||
       (d.related_items?.demo_appid && d.related_items?.demo_appid.length > 0),
-    re = A(d.type),
-    ae = n && re && ne,
-    g = null;
-  if (!ee && m?.is_free_to_keep && m?.free_to_keep_ends) {
-    let e = m.free_to_keep_ends,
-      t = I(
+    y = A(d.type),
+    b = n && y && ee,
+    x = null;
+  if (!m && p?.is_free_to_keep && p?.free_to_keep_ends) {
+    let e = p.free_to_keep_ends,
+      t = W(
         `#Sale_default_label_Free_Promo_Description_Short`,
-        Ie(e) + ` @ ` + H(e, { bForce24HourClock: !1 }),
+        N(e) + ` @ ` + Re(e, { bForce24HourClock: !1 }),
       );
-    g = (0, q.jsxs)(`div`, {
-      className: f,
+    x = (0, q.jsxs)(`div`, {
+      className: _,
       children: [
         t,
-        (0, q.jsx)(ze, {
-          tooltip: I(`#Sale_default_Tooltip_Free_Promo_Limitation`),
+        (0, q.jsx)(R, {
+          tooltip: W(`#Sale_default_Tooltip_Free_Promo_Limitation`),
         }),
       ],
     });
   }
   return (0, q.jsxs)(`div`, {
-    className: U(x, l),
+    className: L(C, l),
     children: [
-      g,
+      x,
       (0, q.jsxs)(`div`, {
-        className: le,
+        className: w,
         children: [
-          !!ae && (0, q.jsx)(C, { id: t, className: `R0sGSaFdUWo-` }),
-          !o &&
+          !!b && (0, q.jsx)(s, { id: t, className: `R0sGSaFdUWo-` }),
+          !a &&
             d.type !== 1 &&
             (0, q.jsxs)(q.Fragment, {
               children: [
                 !(!r || d.is_free) &&
                   (0, q.jsx)(Q, { fnOnPurchaseOptionsClick: i }),
                 !(!u || d.is_free) &&
-                  (0, q.jsx)(a, { id: t, className: `CartBtn` }),
+                  (0, q.jsx)(v, { id: t, className: `CartBtn` }),
               ],
             }),
-          !o && (0, q.jsx)(v, { id: t }),
-          te && (0, q.jsx)(w, { id: t, compatibility: h }),
+          !a && (0, q.jsx)(te, { id: t }),
+          h && (0, q.jsx)(k, { id: t, compatibility: g }),
         ],
       }),
     ],
@@ -260,10 +260,10 @@ function Z(e) {
 }
 function Q(e) {
   return (0, q.jsx)(`div`, {
-    className: _,
+    className: b,
     onClick: e.fnOnPurchaseOptionsClick,
     children: (0, q.jsx)(`span`, {
-      children: I(`#EventDisplay_CallToAction_ShowPurchaseOptions_Button`),
+      children: W(`#EventDisplay_CallToAction_ShowPurchaseOptions_Button`),
     }),
   });
 }
@@ -273,193 +273,193 @@ function We(e) {
       type: n,
       bShowDemoButton: r,
       bPreferDemoStorePage: i,
-      bHidePrice: a,
+      bHidePrice: s,
       bUseSubscriptionLayout: c,
       bHidePlatforms: f,
-      bHideContainedApps: p,
+      bHideContainedApps: m,
       bAllowTwoLinesForHeader: h,
-      bShowReviewSummary: ie,
+      bShowReviewSummary: g,
       bShowDeckCompatibilityDialog: _,
-      eHardwareCompatibilityDisplay: y,
-      bAutoFocus: b,
-      fnOnClickOverride: S,
-      bIsMarketingMessage: C,
-      bPreferAssetWithoutOverride: w,
+      eHardwareCompatibilityDisplay: v,
+      bAutoFocus: y,
+      fnOnClickOverride: b,
+      bIsMarketingMessage: S,
+      bPreferAssetWithoutOverride: T,
     } = e,
-    T = ae(t, n),
-    [E, D] = (0, G.useState)(!1),
-    ge = Oe(),
-    { data: O, isPending: k } = W(T),
-    { data: A } = L(T),
-    { data: N } = z(T),
-    { data: P } = d(),
-    F = l(T),
-    I = (0, G.useRef)(null),
-    [R, ke] = (0, G.useState)(!1),
-    B = Ae(),
-    [V, Ie] = (0, G.useState)(!1);
+    E = re(t, n),
+    [D, O] = (0, G.useState)(!1),
+    fe = Le(),
+    { data: k, isPending: he } = I(E),
+    { data: A } = V(E),
+    { data: M } = H(E),
+    { data: N } = a(),
+    P = p(E),
+    F = (0, G.useRef)(null),
+    [R, z] = (0, G.useState)(!1),
+    B = Oe(),
+    [U, Fe] = (0, G.useState)(!1);
   ((0, G.useEffect)(() => {
-    if (!V) {
-      D(!1);
+    if (!U) {
+      O(!1);
       return;
     }
-    let e = window.setTimeout(() => D(!0), 500);
+    let e = window.setTimeout(() => O(!0), 500);
     return () => window.clearTimeout(e);
-  }, [V]),
+  }, [U]),
     (0, G.useEffect)(() => {
-      I.current && ke(I.current.offsetWidth < 370);
-    }, [I]));
-  let Le = (0, G.useMemo)(
-      () => (i && O && be(O) ? { appid: ye(O)[0] } : T),
-      [i, T, O],
+      F.current && z(F.current.offsetWidth < 370);
+    }, [F]));
+  let Ie = (0, G.useMemo)(
+      () => (i && k && be(k) ? { appid: ye(k)[0] } : E),
+      [i, E, k],
     ),
-    { strStoreURL: H, snr: Re } = ee(O, i),
-    ze = Ee(C ? void 0 : T);
-  if (!O)
-    return k
+    { strStoreURL: W, snr: Re } = d(k, i),
+    ze = Ee(S ? void 0 : E);
+  if (!k)
+    return he
       ? (0, q.jsx)(Te, { capsules_per_row: [1], is_item_browser: !0 })
       : null;
-  let K = O.included_appids?.length || 0,
-    Be = O.included_appids?.filter((e) => P?.has(e))?.length || 0,
-    Ve = O.item_type == 2 && !!A?.must_purchase_as_set,
-    J = !p && K > 1,
-    Y = O.item_type == 1 && K == 1,
-    X = O.item_type == 0 || Y,
-    Q = Y && O.appid,
-    We = O.name || ``,
-    Je = o(N, A),
-    Ye = B || !N?.is_coming_soon || Je,
-    [Xe, $] = me(_, y);
-  return (0, q.jsxs)(Fe, {
-    className: U({ [ce]: !0, [void 0]: h, StoreSaleWidgetOuterContainer: !0 }),
+  let K = k.included_appids?.length || 0,
+    Be = k.included_appids?.filter((e) => N?.has(e))?.length || 0,
+    Ve = k.item_type == 2 && !!A?.must_purchase_as_set,
+    J = !m && K > 1,
+    Y = k.item_type == 1 && K == 1,
+    X = k.item_type == 0 || Y,
+    Q = Y && k.appid,
+    We = k.name || ``,
+    Je = u(M, A),
+    Ye = B || !M?.is_coming_soon || Je,
+    [Xe, $] = ge(_, v);
+  return (0, q.jsxs)(ke, {
+    className: L({ [ce]: !0, [void 0]: h, StoreSaleWidgetOuterContainer: !0 }),
     "flow-children": `grid`,
-    navEntryPreferPosition: je.PREFERRED_CHILD,
-    autoFocus: b,
-    navKey: `preview_widget_` + M(T),
+    navEntryPreferPosition: Ae.PREFERRED_CHILD,
+    autoFocus: y,
+    navKey: `preview_widget_` + Ne(E),
     ...ze,
     children: [
-      (0, q.jsx)(fe, {
-        appid: X && `appid` in T ? T.appid : void 0,
-        children: (0, q.jsxs)(Me, {
-          onClick: C ? S : void 0,
-          className: U({ [he]: !0, [m]: !0, [re]: C }),
-          ...De(O, ge, B, !!i, void 0, S),
+      (0, q.jsx)(se, {
+        appid: X && `appid` in E ? E.appid : void 0,
+        children: (0, q.jsxs)(je, {
+          onClick: S ? b : void 0,
+          className: L({ [ae]: !0, [ne]: !0, [le]: S }),
+          ...De(k, fe, B, !!i, void 0, b),
           preferredFocus: J,
-          onFocusWithin: B ? Ie : void 0,
+          onFocusWithin: B ? Fe : void 0,
           children: [
             (0, q.jsx)(`div`, {
-              className: U(pe),
+              className: L(oe),
               children: (0, q.jsx)(Ge, {
-                id: Le,
-                strURL: H,
+                id: Ie,
+                strURL: W,
                 children: (0, q.jsxs)(`div`, {
-                  className: de,
+                  className: ue,
                   children: [
-                    (0, q.jsx)(Se, { appids: F }),
+                    (0, q.jsx)(Se, { appids: P }),
                     (0, q.jsx)(j, {
-                      id: T,
+                      id: E,
                       imageType: `header`,
-                      bPreferAssetWithoutOverride: w,
+                      bPreferAssetWithoutOverride: T,
                     }),
-                    (0, q.jsx)(xe, { id: T }),
-                    (0, q.jsx)(Ce, {
-                      id: T,
-                      active: T && E,
+                    (0, q.jsx)(xe, { id: E }),
+                    (0, q.jsx)(we, {
+                      id: E,
+                      active: E && D,
                       bIsHoverMode: !0,
                       eGrowOnActivate: B
                         ? void 0
-                        : we.k_ETrailerGrowAmount_Medium,
+                        : Ce.k_ETrailerGrowAmount_Medium,
                     }),
                   ],
                 }),
               }),
             }),
             (0, q.jsxs)(`div`, {
-              className: U({ [ve]: !0, [se]: J }),
+              className: L({ [de]: !0, [ee]: J }),
               children: [
-                !(!X || S) &&
-                  (0, q.jsx)(ne, {
-                    id: T,
-                    classOverride: U(`x33TRfA9NLE-`, `WishlistButton`),
+                !(!X || b) &&
+                  (0, q.jsx)(l, {
+                    id: E,
+                    classOverride: L(`x33TRfA9NLE-`, `WishlistButton`),
                     snr: Re,
                   }),
                 (0, q.jsx)(`div`, {
-                  className: _e,
+                  className: ve,
                   children: (0, q.jsx)(`a`, {
-                    href: S ? void 0 : H,
-                    target: Ne.IN_CLIENT ? void 0 : `_blank`,
-                    onClick: S,
+                    href: b ? void 0 : W,
+                    target: Me.IN_CLIENT ? void 0 : `_blank`,
+                    onClick: b,
                     children: (0, q.jsx)(`div`, {
-                      className: U(g, `StoreSaleWidgetTitle`),
+                      className: L(ie, `StoreSaleWidgetTitle`),
                       children: We,
                     }),
                   }),
                 }),
-                !J && (0, q.jsx)(Ue, { id: T }),
+                !J && (0, q.jsx)(Ue, { id: E }),
                 (0, q.jsxs)(`div`, {
-                  className: u,
-                  ref: I,
+                  className: _e,
+                  ref: F,
                   children: [
-                    X && (0, q.jsx)(Ke, { id: T }),
+                    X && (0, q.jsx)(Ke, { id: E }),
                     !J &&
                       !f &&
-                      T &&
+                      E &&
                       (0, q.jsxs)(q.Fragment, {
                         children: [
-                          (0, q.jsx)(oe, {
-                            id: T,
+                          (0, q.jsx)(pe, {
+                            id: E,
                             bMinimizePlatforms: R,
                             bHideWindows: R,
                           }),
-                          !!(Xe && O.item_type == 0) &&
+                          !!(Xe && k.item_type == 0) &&
                             (0, q.jsx)(Pe, {
                               eHWCompat: $,
                               className: `tUIs-i3NWoU-`,
-                              id: T,
+                              id: E,
                             }),
                         ],
                       }),
                   ],
                 }),
                 !J &&
-                  ie &&
-                  T &&
+                  g &&
+                  E &&
                   (0, q.jsx)(`div`, {
                     className: `BZ9dZKOmXqE-`,
-                    children: (0, q.jsx)(te, { id: T }),
+                    children: (0, q.jsx)(o, { id: E }),
                   }),
                 J &&
-                  T &&
+                  E &&
                   (0, q.jsx)(He, {
-                    id: T,
-                    bHideInLibraryApps: !Ve && O.item_type == 2 && Be < K,
+                    id: E,
+                    bHideInLibraryApps: !Ve && k.item_type == 2 && Be < K,
                   }),
-                !!X && (0, q.jsx)(qe, { id: T }),
-                S
+                !!X && (0, q.jsx)(qe, { id: E }),
+                b
                   ? (0, q.jsx)(`div`, {
-                      className: x,
+                      className: C,
                       children: (0, q.jsx)(`div`, {
-                        className: le,
-                        children: (0, q.jsx)(v, { id: T }),
+                        className: w,
+                        children: (0, q.jsx)(te, { id: E }),
                       }),
                     })
                   : (0, q.jsx)(q.Fragment, {
                       children:
                         c && X && Q
-                          ? (0, q.jsx)(s, { appid: Q, bIsMuted: !!E })
+                          ? (0, q.jsx)(x, { appid: Q, bIsMuted: !!D })
                           : (0, q.jsx)(Z, {
-                              id: T,
+                              id: E,
                               bShowDemoButton: r,
-                              bHidePrice: a,
+                              bHidePrice: s,
                               bHideWishlistButton: Ye,
                               eHardwareCompatibilityDisplay: $,
                             }),
                     }),
                 (0, q.jsx)(`div`, {
-                  className: ue,
+                  className: me,
                   children: (0, q.jsx)(j, {
-                    id: T,
-                    bPreferAssetWithoutOverride: w,
+                    id: E,
+                    bPreferAssetWithoutOverride: T,
                     imageType: `header`,
                   }),
                 }),
@@ -476,50 +476,50 @@ function We(e) {
 function Ge(e) {
   let { id: t, strURL: n, children: r } = e;
   return `appid` in t
-    ? (0, q.jsxs)(D, { id: t, children: [r, ` `] })
+    ? (0, q.jsxs)(i, { id: t, children: [r, ` `] })
     : (0, q.jsx)(`a`, { href: n, children: r });
 }
 function Ke(e) {
   let { id: t } = e,
-    { data: n } = z(t);
-  return n ? (0, q.jsx)(`div`, { className: ge, children: y(n) }) : null;
+    { data: n } = H(t);
+  return n ? (0, q.jsx)(`div`, { className: fe, children: m(n) }) : null;
 }
 function qe(e) {
   let { id: t } = e,
-    { data: n } = W(t),
-    { data: r } = L(t),
-    { data: i } = V(t),
-    { data: a } = d();
-  if (!n || !i || !i.short_description || !a) return null;
-  let o = r?.discount_pct || 0,
-    s = n.included_appids?.length || 0,
-    c = n.included_appids?.filter((e) => a?.has(e))?.length || 0,
-    l = i.short_description,
-    u = n.item_type == 1 && s == 1,
-    f = n.item_type == 2 && !!r?.must_purchase_as_set;
+    { data: n } = I(t),
+    { data: r } = V(t),
+    { data: i } = M(t),
+    { data: o } = a();
+  if (!n || !i || !i.short_description || !o) return null;
+  let s = r?.discount_pct || 0,
+    l = n.included_appids?.length || 0,
+    u = n.included_appids?.filter((e) => o?.has(e))?.length || 0,
+    d = i.short_description,
+    f = n.item_type == 1 && l == 1,
+    p = n.item_type == 2 && !!r?.must_purchase_as_set;
   return (
-    (n.item_type == 2 || (n.item_type == 1 && !u)) &&
-      (l =
-        !f && c > 0 && c < s
-          ? I(`#Sale_Bundle_CompletePartialSet`, c, s)
-          : o > 0
-            ? I(`#Sale_BundleSave_WithDiscount`, o, s)
-            : I(`#Sale_BundleSave`, s)),
+    (n.item_type == 2 || (n.item_type == 1 && !f)) &&
+      (d =
+        !p && u > 0 && u < l
+          ? W(`#Sale_Bundle_CompletePartialSet`, u, l)
+          : s > 0
+            ? W(`#Sale_BundleSave_WithDiscount`, s, l)
+            : W(`#Sale_BundleSave`, l)),
     (0, q.jsx)(`div`, {
-      className: U(S, `StoreSaleWidgetShortDesc`),
+      className: L(E, `StoreSaleWidgetShortDesc`),
       children:
-        l.startsWith(`#`) && l.indexOf(` `) == -1
+        d.startsWith(`#`) && d.indexOf(` `) == -1
           ? (0, q.jsx)(`span`, {
-              className: h,
-              children: B(
-                l,
+              className: c,
+              children: Fe(
+                d,
                 (0, q.jsx)(`i`, {}),
                 (0, q.jsx)(`i`, {}),
                 (0, q.jsx)(`i`, {}),
                 (0, q.jsx)(`i`, {}),
               ),
             })
-          : l,
+          : d,
     })
   );
 }

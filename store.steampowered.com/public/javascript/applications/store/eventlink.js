@@ -7,16 +7,16 @@ import { Q as a } from "./chunk~f57d770d64.js";
 import { t as o } from "./chunk~93fc7377c2.js";
 import { t as s } from "./chunk~4c13037b22.js";
 import {
-  Eb as c,
-  Fc as l,
-  Ku as u,
-  Mc as d,
-  Pv as f,
-  Qx as p,
-  Uc as m,
-  ol as h,
-  qb as g,
-  sx as _,
+  Fb as c,
+  Qc as l,
+  Uv as u,
+  Vc as d,
+  Wc as f,
+  gx as p,
+  hl as m,
+  nx as h,
+  sS as g,
+  td as _,
 } from "./main.js";
 var v = e(n(), 1),
   y = i(),
@@ -77,12 +77,12 @@ function C(e, t) {
     case `hardwarepreview`:
       return !1;
     default:
-      return (p(!1, `Unknown route specified for link: ` + e), !1);
+      return (g(!1, `Unknown route specified for link: ` + e), !1);
   }
 }
 function w(e) {
   let t =
-    g.COMMUNITY_BASE_URL +
+    h.COMMUNITY_BASE_URL +
     `gid/` +
     e.clanSteamID.ConvertTo64BitString() +
     `/announcements/share/` +
@@ -100,9 +100,9 @@ function E(e) {
   return j(e, `storeview`, `absolute`);
 }
 function D(e, t, n) {
-  if (n) return (e ? `/games/` + _.VANITY_ID : `/groups/` + _.VANITY_ID) + `/`;
+  if (n) return (e ? `/games/` + p.VANITY_ID : `/groups/` + p.VANITY_ID) + `/`;
   let r = e ? `ogg/` + e : `gid/` + t.ConvertTo64BitString();
-  return g.COMMUNITY_BASE_URL + r + `/`;
+  return h.COMMUNITY_BASE_URL + r + `/`;
 }
 function O() {
   return `news`;
@@ -114,18 +114,18 @@ function A(e) {
   return e.clanSteamID.GetAccountID() === 45479024 && !1;
 }
 function j(e, t, n) {
-  let { data: r } = f(e?.appid ? { appid: e.appid } : void 0);
+  let { data: r } = u(e?.appid ? { appid: e.appid } : void 0);
   if (e) return M(e, r, t, n);
 }
 function M(e, t, n, r) {
   let i = r === `relative`,
-    c = i ? `/` : g.STORE_BASE_URL,
+    c = i ? `/` : h.STORE_BASE_URL,
     l = D(e.appid, e.clanSteamID, i);
   n === `view` ? (n = `storeview`) : n === `websitehub` && (n = `newshub`);
   let u = e.GID ? e.GID : ``,
     d = e.AnnouncementGID ? e.AnnouncementGID : ``,
     f = e.BIsOGGEvent() && e.appid && t && e.BHasSaleUpdateLandingPageVanity(),
-    m = e.GetEventType() == 36;
+    p = e.GetEventType() == 36;
   switch (n) {
     case `publish`:
       return (
@@ -152,7 +152,7 @@ function M(e, t, n, r) {
     case `migrate`:
       return l + `partnerevents/migrate_announcement/` + d;
     case `preview`:
-      return m
+      return p
         ? l + `partnerevents/previewsale/` + u
         : l +
             (e.bOldAnnouncement
@@ -161,7 +161,7 @@ function M(e, t, n, r) {
     case `previewsale`:
       return l + `partnerevents/previewsale/` + u;
     case `admin`:
-      return m
+      return p
         ? `${c}curator/${e.clanSteamID.GetAccountID()}/admin/creatorhome_link`
         : l + `partnerevents`;
     case `community_announcehub`:
@@ -181,7 +181,7 @@ function M(e, t, n, r) {
       return e.jsondata.bSaleEnabled
         ? f
           ? `${s(t)}/${e.GetSaleUpdateLandingPageVanity()}`
-          : m
+          : p
             ? `${c}curator/${e.clanSteamID.GetAccountID()}`
             : c +
               a(
@@ -196,9 +196,9 @@ function M(e, t, n, r) {
       return l + `announcements/detail/` + d;
     case `storeview`:
       if (e.clanSteamID.GetAccountID() == o())
-        return `${g.STORE_BASE_URL}meetsteam/${u}`;
+        return `${h.STORE_BASE_URL}meetsteam/${u}`;
       if (f) return `${s(t)}/${e.GetSaleUpdateLandingPageVanity()}`;
-      if (m) return `${c}curator/${e.clanSteamID.GetAccountID()}`;
+      if (p) return `${c}curator/${e.clanSteamID.GetAccountID()}`;
       {
         let t = e.appid
             ? `app/${e.appid}`
@@ -210,7 +210,7 @@ function M(e, t, n, r) {
     case `usernewshub`:
       return `${c}${O()}/`;
     default:
-      return (p(!1, `Unknown route specified for link`), ``);
+      return (g(!1, `Unknown route specified for link`), ``);
   }
 }
 function N(e, t, n) {
@@ -239,33 +239,33 @@ function F(e, t, n) {
 function I(e) {
   let { eventModel: n, preferredFocus: r } = e,
     { bCanUseLink: i } = v.useContext(d),
-    a = u(),
+    a = _(),
     o = t(),
     s = i && C(e.route, n),
-    f = j(n, e.route, s ? `relative` : `absolute`),
-    p = !s && f ? m(f) : f,
-    g = s || !p ? p : l(p, a),
-    _ = j(n, `websitehub`, `absolute`),
+    u = j(n, e.route, s ? `relative` : `absolute`),
+    p = !s && u ? l(u) : u,
+    h = s || !p ? p : f(p, a),
+    g = j(n, `websitehub`, `absolute`),
     b = e.route == `websitehub` ? `` : c.Localize(`#EventBrowse_MoreEventsBtn`),
     x = v.useCallback(() => {
-      _ && window.location.assign(_);
-    }, [_]);
+      g && window.location.assign(g);
+    }, [g]);
   return n
     ? s
-      ? (0, y.jsx)(h, {
+      ? (0, y.jsx)(m, {
           style: e.style,
           className: e.className,
-          href: o.createHref({ pathname: g }),
+          href: o.createHref({ pathname: h }),
           onClick: (t) => {
-            g && (e.onClick?.(t), o.push(g), t.preventDefault());
+            h && (e.onClick?.(t), o.push(h), t.preventDefault());
           },
           onOptionsActionDescription: b,
           onOptionsButton: b ? x : void 0,
           preferredFocus: r,
           children: e.children,
         })
-      : (0, y.jsx)(h, {
-          href: g,
+      : (0, y.jsx)(m, {
+          href: h,
           style: e.style,
           className: e.className,
           onClick: e.onClick,

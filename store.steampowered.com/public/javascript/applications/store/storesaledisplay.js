@@ -10,14 +10,14 @@ import { n as s, t as c } from "./chunk~3135e25ddf.js";
 import { t as l } from "./chunk~eefd71512b.js";
 import { n as u } from "./chunk~fc8a9e4879.js";
 import {
-  Jy as d,
-  Vy as f,
-  _d as p,
-  lx as m,
-  mt as h,
-  pt as g,
-  sx as _,
-  t as v,
+  Ed as d,
+  Xy as f,
+  _t as p,
+  gt as m,
+  gx as h,
+  rb as g,
+  t as _,
+  vx as v,
 } from "./main.js";
 var y = e(t()),
   b = n();
@@ -30,26 +30,26 @@ function x(e) {
 }
 function S(e) {
   let { promotionName: t, language: n, overrideEventModel: c } = e,
-    [p, x] = y.useState(
-      c ?? u.GetClanEventFromAnnouncementGID(m.ANNOUNCEMENT_GID),
+    [d, x] = y.useState(
+      c ?? u.GetClanEventFromAnnouncementGID(v.ANNOUNCEMENT_GID),
     );
   y.useEffect(() => {
-    if (!c && p?.AnnouncementGID != m.ANNOUNCEMENT_GID) {
-      let e = new f(_.CLANSTEAMID);
+    if (!c && d?.AnnouncementGID != v.ANNOUNCEMENT_GID) {
+      let e = new f(h.CLANSTEAMID);
       u.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
         e,
-        m.ANNOUNCEMENT_GID,
+        v.ANNOUNCEMENT_GID,
         null,
       ).then(x);
     }
-  }, [p, c]);
-  let S = a() ?? p,
+  }, [d, c]);
+  let S = a() ?? d,
     w = i();
   if ((s(1500), !S))
     return (0, b.jsx)(`div`, {
-      className: v,
+      className: _,
       style: { height: `500px` },
-      children: (0, b.jsx)(l, { size: `medium`, string: d(`#Loading`) }),
+      children: (0, b.jsx)(l, { size: `medium`, string: g(`#Loading`) }),
     });
   let T =
     (S.visibility_state !== r.k_EEventStateVisible &&
@@ -57,8 +57,8 @@ function S(e) {
     w;
   return (0, b.jsx)(C, {
     eventModel: S,
-    children: (0, b.jsx)(h, {
-      children: (0, b.jsx)(g, {
+    children: (0, b.jsx)(p, {
+      children: (0, b.jsx)(m, {
         curator_clanid: S?.clanSteamID?.GetAccountID(),
         children: (0, b.jsx)(o, {
           promotionName: t,
@@ -73,7 +73,7 @@ function S(e) {
 function C(e) {
   let { eventModel: t, children: n } = e,
     r = t.GetContentHubType() == `adultonly`;
-  return (0, b.jsx)(p, {
+  return (0, b.jsx)(d, {
     eAdultOnlyMediaBehavior: r ? `allowed` : `masked`,
     children: n,
   });

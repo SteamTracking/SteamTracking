@@ -11,27 +11,27 @@ import {
 } from "./chunk~01cfc309bf.js";
 import { u as o } from "./chunk~e867464c75.js";
 import {
-  C as s,
-  Jy as c,
-  P as l,
-  Vy as ee,
-  cx as u,
+  C as ee,
+  Ox as s,
+  P as c,
+  Sy as l,
+  Xy as te,
+  _x as u,
   et as d,
-  j as f,
-  ly as p,
-  py as m,
-  sb as h,
-  tx as g,
-  ut as _,
-  yx as v,
+  gb as f,
+  j as p,
+  rb as m,
+  ut as h,
+  ux as g,
+  vy as _,
 } from "./main.js";
 import {
-  _ as y,
-  a as b,
-  c as x,
-  d as te,
-  f as S,
-  g as ne,
+  _ as v,
+  a as y,
+  c as b,
+  d as ne,
+  f as x,
+  g as S,
   h as C,
   i as w,
   l as T,
@@ -72,32 +72,32 @@ function B(e) {
   return j.createElement(z.Provider, { value: r }, n);
 }
 function V(e = !1) {
-  return H(m(), e);
+  return H(l(), e);
 }
 function H(e, t = !1) {
-  let n = p(),
+  let n = _(),
     r = (0, j.useContext)(z).staleTimeMs;
   return i({
     queryKey: M(e, t),
     queryFn: async () => {
-      let r = v.Init(ie);
+      let r = s.Init(ie);
       (r.Body().set_steamid(e), r.Body().set_include_family_group_response(t));
       let i = await A.GetFamilyGroupForUser(n, r);
       return (R(i.GetEResult(), `GetFamilyGroupForUser`), i.Body());
     },
     staleTime: r,
     enabled: !!e,
-    placeholderData: e ? void 0 : new x(),
+    placeholderData: e ? void 0 : new b(),
   });
 }
 function U(e) {
-  let t = p(),
+  let t = _(),
     n = (0, j.useContext)(z).staleTimeMs;
   return i({
     queryKey: N(e),
     queryFn: async () => {
       if (e) {
-        let n = v.Init(T);
+        let n = s.Init(T);
         n.Body().set_family_groupid(e);
         let r = await A.GetFamilyGroup(t, n);
         return (R(r.GetEResult(), `GetFamilyGroup`), r.Body());
@@ -108,12 +108,12 @@ function U(e) {
   });
 }
 function W() {
-  let e = p(),
+  let e = _(),
     t = n(),
-    i = m();
+    i = l();
   return r({
     mutationFn: async (t) => {
-      let n = v.Init(w);
+      let n = s.Init(w);
       n.Body().set_name(t);
       let r = await A.CreateFamilyGroup(e, n);
       return (R(r.GetEResult(), `CreateFamilyGroup`), r.Body());
@@ -124,12 +124,12 @@ function W() {
   });
 }
 function G(e) {
-  let t = p(),
+  let t = _(),
     i = n(),
-    a = m();
+    a = l();
   return r({
     mutationFn: async () => {
-      let n = v.Init(b);
+      let n = s.Init(y);
       n.Body().set_family_groupid(e);
       let r = await A.DeleteFamilyGroup(t, n);
       return (R(r.GetEResult(), `DeleteFamilyGroup`), r.Body());
@@ -142,11 +142,11 @@ function G(e) {
   });
 }
 function K(e) {
-  let t = p(),
+  let t = _(),
     i = n();
   return r({
     mutationFn: async (n) => {
-      let r = v.Init(C);
+      let r = s.Init(C);
       (r.Body().set_family_groupid(e), r.Body().set_name(n));
       let i = await A.ModifyFamilyGroupDetails(t, r);
       return (R(i.GetEResult(), `ModifyFamilyGroupDetails`), i.Body());
@@ -158,11 +158,11 @@ function K(e) {
   });
 }
 function ce(e, t, i) {
-  let a = p(),
+  let a = _(),
     o = n();
   return r({
     mutationFn: async () => {
-      let n = v.Init(k);
+      let n = s.Init(k);
       (n.Body().set_family_groupid(e),
         n.Body().set_receiver_steamid(t),
         n.Body().set_receiver_role(i));
@@ -177,12 +177,12 @@ function ce(e, t, i) {
   });
 }
 function le(e) {
-  let t = p(),
-    i = m(),
+  let t = _(),
+    i = l(),
     a = n();
   return r({
     mutationFn: async () => {
-      let n = v.Init(E);
+      let n = s.Init(E);
       n.Body().set_family_groupid(e);
       let r = await A.JoinFamilyGroup(t, n);
       return (R(r.GetEResult(), `JoinFamilyGroup`), r.Body());
@@ -195,11 +195,11 @@ function le(e) {
   });
 }
 function ue(e, t) {
-  let i = p(),
+  let i = _(),
     a = n();
   return r({
     mutationFn: async () => {
-      let n = v.Init(ae);
+      let n = s.Init(ae);
       (n.Body().set_family_groupid(e), n.Body().set_steamid_to_cancel(t));
       let r = await A.CancelFamilyGroupInvite(i, n);
       return (R(r.GetEResult(), `CancelFamilyGroupInvite`), r.Body());
@@ -212,11 +212,11 @@ function ue(e, t) {
   });
 }
 function q(e, t) {
-  let i = p(),
+  let i = _(),
     a = n();
   return r({
     mutationFn: async () => {
-      let n = v.Init(ne);
+      let n = s.Init(S);
       (n.Body().set_family_groupid(e), n.Body().set_steamid_to_remove(t));
       let r = await A.RemoveFromFamilyGroup(i, n);
       return (R(r.GetEResult(), `RemoveFromFamilyGroup`), r.Body());
@@ -229,13 +229,13 @@ function q(e, t) {
   });
 }
 function de(e) {
-  let t = p();
+  let t = _();
   return i({
     queryKey: F(e),
     queryFn: async () => {
       let n = g(`clientsessionid`),
         r = n && BigInt(`0x` + n).toString(),
-        i = v.Init(S);
+        i = s.Init(x);
       (i.Body().set_family_groupid(e),
         i.Body().set_client_instance_id(r ?? void 0));
       let a = await A.GetUsersSharingDevice(t, i);
@@ -244,19 +244,19 @@ function de(e) {
   });
 }
 function fe(e) {
-  let t = m();
+  let t = l();
   return U(e)
     .data?.members()
     .find((e) => e.steamid() == t)
     ?.role();
 }
 function pe(e, t) {
-  let n = p(),
-    r = m();
+  let n = _(),
+    r = l();
   return i({
     queryKey: L(e, r),
     queryFn: async () => {
-      let r = v.Init(oe);
+      let r = s.Init(oe);
       (r.Body().set_family_groupid(e),
         t !== void 0 && r.Body().set_rt_include_completed_since(t));
       let i = await A.GetPurchaseRequests(n, r);
@@ -265,11 +265,11 @@ function pe(e, t) {
   });
 }
 function me(e, t, i) {
-  let a = p(),
+  let a = _(),
     o = n();
   return r({
     mutationFn: async () => {
-      let n = v.Init(y);
+      let n = s.Init(v);
       (n.Body().set_family_groupid(e),
         n.Body().set_request_id(t),
         n.Body().set_action(i));
@@ -354,13 +354,13 @@ function _e(e, t, n, r) {
   let i = ``;
   if (e in Y) {
     let t = Y[e];
-    if (typeof t == `string`) i = c(t, ...r);
+    if (typeof t == `string`) i = m(t, ...r);
     else {
       let e = t;
-      n in e && (i = c(e[n], ...r));
+      n in e && (i = m(e[n], ...r));
     }
   }
-  return he(c(t, i), e);
+  return he(m(t, i), e);
 }
 function X() {
   let { setErrorMessage: e } = (0, j.useContext)(J);
@@ -385,26 +385,26 @@ function ve(e, t, n) {
 }
 function ye(e) {
   return e
-    ? h(Date.now() / 1e3 + e, {
+    ? f(Date.now() / 1e3 + e, {
         month: `long`,
         day: `numeric`,
         year: `numeric`,
         weekday: void 0,
       })
-    : c(`#FamilyManagement_LoadingPlaceholder`);
+    : m(`#FamilyManagement_LoadingPlaceholder`);
 }
 function be(e, t) {
   let { setErrorMessage: n } = X();
   (0, j.useEffect)(() => {
-    e.isError && n(c(t));
+    e.isError && n(m(t));
   }, [n, e.isError, t]);
 }
 function xe(e) {
-  let t = p();
+  let t = _();
   return i({
     queryKey: P(e),
     queryFn: async () => {
-      let n = v.Init(O);
+      let n = s.Init(O);
       n.Body().set_family_groupid(e);
       let r = await A.GetChangeLog(t, n);
       return (R(r.GetEResult(), `GetFamilyGroupChangeLog`), r.Body().changes());
@@ -428,54 +428,54 @@ function Z(e, t, n, r) {
   ];
 }
 function Ce(e, t) {
-  let n = m(),
-    { settings: r, mapAppsAllowed: o } = l(n).data,
-    c = f(),
+  let n = l(),
+    { settings: r, mapAppsAllowed: o } = c(n).data,
     d = p(),
+    f = _(),
     {
-      bIncludeOwn: h,
-      bIncludeExcluded: g,
-      bIncludeNonGames: _,
-      for_account_id: y,
+      bIncludeOwn: m,
+      bIncludeExcluded: h,
+      bIncludeNonGames: g,
+      for_account_id: v,
     } = t ?? {},
-    b = t?.enabled === void 0 || t.enabled,
-    x = Z(e, t, r, c),
-    S = (e) => !s(e.appid(), c, r, o);
+    y = t?.enabled === void 0 || t.enabled,
+    b = Z(e, t, r, d),
+    x = (e) => !ee(e.appid(), d, r, o);
   return i({
-    queryKey: x,
+    queryKey: b,
     queryFn: async () => {
-      let t = v.Init(te);
+      let t = s.Init(ne);
       if (
         (t.Body().set_family_groupid(e),
-        t.Body().set_include_own(h),
-        t.Body().set_include_excluded(g),
+        t.Body().set_include_own(m),
+        t.Body().set_include_excluded(h),
         t.Body().set_language(u.LANGUAGE),
-        t.Body().set_include_non_games(_),
-        y)
+        t.Body().set_include_non_games(g),
+        v)
       ) {
-        let e = ee.InitFromAccountID(y, u.EUNIVERSE);
+        let e = te.InitFromAccountID(v, u.EUNIVERSE);
         t.Body().set_steamid(e.ConvertTo64BitString());
       }
-      let n = await A.GetSharedLibraryApps(d, t);
+      let n = await A.GetSharedLibraryApps(f, t);
       return (
         R(n.GetEResult(), `GetSharedLibraryApps`),
         n
           .Body()
           .apps()
-          .filter(S)
+          .filter(x)
           .map((e) => e.toObject())
       );
     },
-    enabled: !!r && b,
+    enabled: !!r && y,
     placeholderData: a,
     select: t?.select,
   });
 }
 function we(e, t) {
   let r = n(),
-    i = m(),
-    { settings: a } = l(i).data ?? {},
-    o = Z(e, t, a, f());
+    i = l(),
+    { settings: a } = c(i).data ?? {},
+    o = Z(e, t, a, p());
   return (0, j.useCallback)(() => {
     r.invalidateQueries({ queryKey: o });
   }, [r, o]);
@@ -528,12 +528,12 @@ function Ee(e, t, n, r = []) {
   return (0, j.useMemo)(() => i.slice().sort(a), [i, a]);
 }
 function De(e, t) {
-  let i = p(),
+  let i = _(),
     a = n(),
-    o = m();
+    o = l();
   return r({
     mutationFn: async (n) => {
-      let r = v.Init(re);
+      let r = s.Init(re);
       (r.Body().set_family_groupid(e),
         r.Body().set_invite_id(t),
         r.Body().set_nonce(n));
@@ -548,11 +548,11 @@ function De(e, t) {
   });
 }
 function Oe(e, t, i) {
-  let a = p(),
+  let a = _(),
     o = n();
   return r({
     mutationFn: async () => {
-      let n = v.Init(D);
+      let n = s.Init(D);
       (n.Body().set_family_groupid(e),
         n.Body().set_invite_id(t),
         n.Body().set_nonce(i));
@@ -581,13 +581,13 @@ function ke(e) {
   return (t.sort((e, t) => e.time_start - t.time_start), t);
 }
 function Ae(e) {
-  let t = p();
+  let t = _();
   return i({
     queryKey: I(e),
     queryFn: async () => {
-      let n = v.Init(d);
+      let n = s.Init(d);
       n.Body().set_steamid(e);
-      let r = await _.GetRecentPlaytimeSessionsForChild(t, n);
+      let r = await h.GetRecentPlaytimeSessionsForChild(t, n);
       return (
         R(r.GetEResult(), `GetRecentPlaytimeSessionsForChild`),
         ke(r.Body().toObject().sessions || [])
@@ -596,12 +596,12 @@ function Ae(e) {
   });
 }
 function je(e) {
-  let t = p(),
-    i = m(),
+  let t = _(),
+    i = l(),
     a = n();
   return r({
     mutationFn: async () => {
-      let n = v.Init(se);
+      let n = s.Init(se);
       n.Body().set_family_groupid(e);
       let r = await A.UndeleteFamilyGroup(t, n);
       return (R(r.GetEResult(), `UndeleteFamilyGroup`), r);

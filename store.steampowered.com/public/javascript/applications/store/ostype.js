@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t } from "./chunk~01cfc309bf.js";
-import { Tl as n } from "./main.js";
+import { Pl as n } from "./main.js";
 var ee = e(t()),
   r = `700px`,
   i = {

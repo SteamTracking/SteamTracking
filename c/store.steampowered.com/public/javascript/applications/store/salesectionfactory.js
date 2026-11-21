@@ -21,8 +21,8 @@ const __vite__mapDeps = (
       "./chunk~4c13037b22.js",
       "./chunk~2f085f1384.js",
       "../../../css/applications/store/chunk~504d82f1b0.css",
-      "./chunk~ffe4581a06.js",
-      "../../../css/applications/store/chunk~97629f3858.css",
+      "./chunk~4eed35ad1f.js",
+      "../../../css/applications/store/chunk~0c0e8c89c4.css",
       "./chunk~92931c6310.js",
       "./chunk~af36c62e9f.js",
       "./chunk~593a6b8ddc.js",
@@ -244,7 +244,6 @@ import {
   _,
   _,
   _,
-  _,
 } from "./chunk~6b8ddcaac8.js";
 import {
   _,
@@ -326,7 +325,7 @@ import "./chunk~19394a4118.js";
 import { _ } from "./chunk~8681f5c764.js";
 import { _, _ } from "./chunk~2f085f1384.js";
 import { _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
-import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~ffe4581a06.js";
+import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import "./chunk~f4c928a27a.js";
 import { _ } from "./chunk~92931c6310.js";
 import { _, _, _, _, _, _ } from "./chunk~af36c62e9f.js";
@@ -422,9 +421,9 @@ import {
   _,
   _,
 } from "./chunk~b8ca037aae.js";
+import { _, _, _ } from "./chunk~a243b6a34b.js";
 import { _, _, _ } from "./chunk~a7c5e71e12.js";
 import { _ } from "./chunk~221bff5eed.js";
-import { _, _, _ } from "./chunk~a243b6a34b.js";
 import { _, _ } from "./chunk~3720b337f3.js";
 import { _ } from "./chunk~166d91af35.js";
 import { _ } from "./chunk~aeb15068c6.js";
@@ -434,6 +433,7 @@ import { _ } from "./chunk~5e5f1b9ccf.js";
 import { _ } from "./chunk~d902bc74d6.js";
 import { _ } from "./chunk~fc8a9e4879.js";
 import {
+  _,
   _,
   _,
   _,
@@ -5544,571 +5544,6 @@ function _(_) {
       _.Get().ClearJumpToSubectionID();
   }, [_, _]);
 }
-var _ = `d3elVPeljM8-`,
-  _ = `AkJq5-NyPT8-`,
-  _ = `mlr-XtYml6w-`,
-  _ = `_433qsTJ1vj4-`,
-  _ = `evupCqakxxU-`,
-  _ = `bHMnTP9zceY-`,
-  _ = `Eh-pLRQbf0Y-`;
-function _(_) {
-  let { eventModel: _, titleOverride: _ } = _,
-    [_, _, _] = _(),
-    _ = _(_) ?? ``,
-    { gidClanEvent: _, rgSocialShare: _ } = _(() => ({
-      gidClanEvent: _.GID,
-      rgSocialShare: _.jsondata.sale_social_media_items,
-    })),
-    _ = !!_?.length;
-  return _.BHasTag(`contenthub`)
-    ? null
-    : (0, _.jsxs)(_.Fragment, {
-        children: [
-          (0, _.jsx)(`div`, {
-            className: _,
-            children: _ ?? _(`#EventDisplay_Share_WithFriendsHeader`),
-          }),
-          (0, _.jsxs)(_, {
-            focusable: !0,
-            className: _(_, _, _, `SocialShareButton`),
-            onActivate: _,
-            children: [
-              (0, _.jsx)(_, {
-                className: _(_, `SocialShareIcon`),
-              }),
-              (0, _.jsx)(`span`, {
-                className: _(_, `SocialShareText`),
-                children: _(`#Button_Share`),
-              }),
-            ],
-          }),
-          (0, _.jsx)(`div`, {
-            className: _,
-            children:
-              _ &&
-              (0, _.jsx)(_, {
-                gidClanEvent: _ ?? ``,
-                rgSocial: _,
-                bIsCreatorHomeEvent: !0,
-              }),
-          }),
-          (0, _.jsx)(_, {
-            eventModel: _,
-            strEventLink: _,
-            bActive: _,
-            closeModal: _,
-          }),
-        ],
-      });
-}
-function _(_, _) {
-  return `[` + _ + `] ` + _;
-}
-function _(_) {
-  let _ = /^\[(.+)\]/.exec(_);
-  return _ ? _[1] : void 0;
-}
-function _(_) {
-  return _.replace(/^\[(.+)\]/, ``).trim();
-}
-function _() {
-  return [`game`, `software`, `dlc`, `demo`, `music`, `video`, `hardware`];
-}
-function _(_) {
-  let _ = (_) => new Map(Object.entries(_).map(([_, _]) => [Number(_), _]));
-  return {
-    mapCategoriesForTagID: _(_.rgCategoriesByTag),
-    mapTagNameForTagID: _(_.rgTagNames),
-    mapLocalizedCategoryNames: new Map(
-      Object.entries(_.rgLocalizedCategoryNames),
-    ),
-    mapLocalizedTagNames: _(_.rgLocalizedTagNames),
-    rgLanguages: Array.from(_.rgLanguages),
-  };
-}
-function _(_, _) {
-  let _ = _(_);
-  if (
-    (_(_, _.mapTagNameForTagID),
-    _.bForceFeatureTagForFullController && _(_),
-    _(_),
-    _(_),
-    _(_),
-    _(_),
-    _(_),
-    _(_),
-    _(_),
-    _(_),
-    _.only_facets)
-  ) {
-    let _ = new Map(
-        _.only_facets.map((_) => [
-          _.loc_token,
-          _.only_values?.map((_) => ({
-            value: _,
-            selected: _.initially_selected_values?.includes(_) ?? !1,
-          })),
-        ]),
-      ),
-      _ = _(
-        _.map((_) => {
-          let _ = _.name.find((_) => _.has(_));
-          return _
-            ? {
-                facet: _,
-                values: _.get(_),
-              }
-            : null;
-        }),
-      );
-    for (let _ of _)
-      if (_.values) {
-        let _ = new Set(_.values.map((_) => _.value));
-        _.facet.facetValues = _.facet.facetValues.filter((_) =>
-          _.name.some((_) => _.has(_)),
-        );
-        let _ = new Set(_.values.filter((_) => _.selected).map((_) => _.value));
-        _.facet.facetValues.forEach(
-          (_) => (_.bEnabledByDefault = _.name.some((_) => _.has(_))),
-        );
-      }
-    _ = _.map((_) => _.facet);
-  }
-  if (_.initially_expanded_facets) {
-    let _ = new Set(_.initially_expanded_facets);
-    for (let _ of _) _.bInitiallyExpanded ||= _.name.some((_) => _.has(_));
-  }
-  if (_.prioritized_facets) {
-    let _ = new Map(_.prioritized_facets.map((_, _) => [_, _])),
-      _ = _.map((_) => {
-        let _ = _.name.find((_) => _.has(_));
-        return {
-          facet: _,
-          pri: _ ? _.get(_) : void 0,
-        };
-      });
-    (_.sort(
-      (_, _) => (_.pri ?? Number.MAX_VALUE) - (_.pri ?? Number.MAX_VALUE),
-    ),
-      (_ = _.map((_) => _.facet)));
-  }
-  return _;
-}
-function _(_) {
-  let _ = _(_),
-    _ = _(_);
-  return _(_(_(_)), _, _);
-}
-function _(_) {
-  let _ = new Map();
-  return (
-    _.mapCategoriesForTagID.forEach((_, _) => {
-      if (_)
-        for (let _ of _) {
-          let _ = _.get(_);
-          (_ || ((_ = []), _.set(_, _)), _.push(_));
-        }
-    }),
-    _
-  );
-}
-function _(_) {
-  let _ = [
-      `supergenre`,
-      `genre`,
-      `subgenre`,
-      `visuals`,
-      `theme_mood`,
-      `feature`,
-      `players`,
-    ],
-    _ = new Set(),
-    _ = new Map(),
-    _ = (_, _) => {
-      let _ = _.get(_) ?? [];
-      for (let _ of _) _.has(_) || (_.add(_), _.push(_));
-    };
-  for (let _ of _) {
-    let _ = [];
-    (_.set(_, _), _ === `theme_mood` ? (_(_, `theme`), _(_, `mood`)) : _(_, _));
-  }
-  return _;
-}
-function _(_) {
-  let _ = new Map();
-  (_.set(`supergenre`, `#App_Taxonomy_Survey_QSuperGenreTitle`),
-    _.set(`genre`, `#App_Taxonomy_Survey_QGenreTitle`),
-    _.set(`subgenre`, `#App_Taxonomy_Survey_QSubGenreTitle`),
-    _.set(`visuals`, `#App_Taxonomy_Survey_QVisualsTitle`),
-    _.set(`theme_mood`, `#App_Taxonomy_Survey_QThemeMoodTitle`),
-    _.set(`feature`, `#App_Taxonomy_Survey_QFeaturesTitle`),
-    _.set(`players`, `#App_Taxonomy_Survey_QPlayersTitle`));
-  let _ = new Map();
-  return (
-    _.mapLocalizedCategoryNames.forEach((_, _) => {
-      let _ = Array(32);
-      ((_[0] = _.get(_) ?? ``), _.set(_, _));
-    }),
-    _
-  );
-}
-function _(_) {
-  let _ = new Map();
-  return (
-    _.mapLocalizedTagNames.forEach((_, _) => {
-      let _ = _,
-        _ = Array(32);
-      (_.fill(``),
-        _.rgLanguages.forEach((_, _) => {
-          let _ = _(_, -1);
-          _ === -1
-            ? console.warn(`Unrecognized language: ` + _)
-            : 0 <= _ && _ < 32 && (_[_] = _[_]);
-        }),
-        _.set(_, _));
-    }),
-    _
-  );
-}
-function _(_, _, _) {
-  let _ = [];
-  return (
-    _.forEach((_, _) => {
-      let _ = {
-          name: _.get(_) ?? [],
-          facetValues: [],
-          logical_and: !0,
-        },
-        _ = [];
-      for (let _ of _) {
-        let _ = _.get(_);
-        if (!_) {
-          _.push(_);
-          continue;
-        }
-        let _ = {
-          name: _,
-          subtitle: [],
-          rgStoreTagFilter: {
-            type: _.k_EStoreFilterClauseTypeAnd,
-            rgSubexpressions: [
-              {
-                type: _.k_EStoreFilterClauseTypeOr,
-                rgSubexpressions: [
-                  {
-                    type: _.k_EStoreFilterClauseTypeStoreTag,
-                    value: _,
-                  },
-                ],
-              },
-            ],
-          },
-          nAtomicStoreTagID: _,
-          filter: null,
-        };
-        _.facetValues.push(_);
-      }
-      (_.length > 0 &&
-        console.warn(
-          `No name information found for tag count ` + _.length + `, skipping.`,
-          _,
-        ),
-        _.push(_));
-    }),
-    _
-  );
-}
-function _(_) {
-  return _(_, `Store`);
-}
-function _(_, _) {
-  for (let _ of _)
-    for (let _ of _.facetValues) {
-      let _ = _.nAtomicStoreTagID ?? 0,
-        _ = [_(String(_.get(_)))];
-      ((_.type = _.k_ESaleTagFilter),
-        (_.filter = {
-          clauses: [
-            {
-              type: `Must have`,
-              or_tags: _,
-            },
-          ],
-        }));
-    }
-}
-function _(_) {
-  _.forEach((_) => {
-    _.facetValues.forEach((_) => {
-      _.type === _.k_ESaleTagFilter &&
-        _.filter &&
-        _.filter.clauses.forEach((_) => {
-          _.or_tags.forEach((_, _) => {
-            let _ = _(_),
-              _ = _(_).toLocaleLowerCase();
-            _ === `Store` &&
-              _ === `controller` &&
-              (_.or_tags[_] = _(`Full Controller`, `Feature`));
-          });
-        });
-    });
-  });
-}
-function _(_) {
-  for (let _ of _)
-    if (_.name[0] === `#App_Taxonomy_Survey_QVisualsTitle`) {
-      _.facetValues.push({
-        name: [`#Store_HDRSupported`],
-        type: _.k_ESaleTagFilter,
-        filter: {
-          clauses: [
-            {
-              type: `Must have`,
-              or_tags: [_(`HDR`, `Feature`)],
-            },
-          ],
-        },
-        rgStoreTagFilter: null,
-      });
-      break;
-    }
-}
-function _(_) {
-  let _ = {
-    name: [`#Platform`],
-    facetValues: [],
-    logical_and: !1,
-    single_selection: !0,
-  };
-  (_.facetValues.push({
-    name: [`#Platform_Windows`],
-    type: _.k_ESaleTagFilter,
-    filter: {
-      clauses: [
-        {
-          type: `Must have`,
-          or_tags: [`[Feature] Windows`],
-        },
-      ],
-    },
-    rgStoreTagFilter: null,
-  }),
-    _.facetValues.push({
-      name: [`#Platform_Linux`],
-      type: _.k_ESaleTagFilter,
-      filter: {
-        clauses: [
-          {
-            type: `Must have`,
-            or_tags: [`[Feature] Linux`],
-          },
-        ],
-      },
-      rgStoreTagFilter: null,
-    }),
-    _.facetValues.push({
-      name: [`#Platform_Mac`],
-      type: _.k_ESaleTagFilter,
-      filter: {
-        clauses: [
-          {
-            type: `Must have`,
-            or_tags: [`[Feature] Mac`],
-          },
-        ],
-      },
-      rgStoreTagFilter: null,
-    }),
-    _.push(_));
-}
-function _(_) {
-  let _ = {
-    name: [`#LanguageTitle`],
-    facetValues: [],
-    logical_and: !1,
-  };
-  for (let _ = 0; _ < 32; ++_)
-    _.facetValues.push({
-      name: [`#language_selection_` + _(_)],
-      type: _.k_ELanguage,
-      language: _,
-      filter: null,
-      rgStoreTagFilter: null,
-    });
-  _.push(_);
-}
-function _(_) {
-  let _ = {
-    name: [`#ContentDescriptor`],
-    facetValues: [],
-    logical_and: !1,
-  };
-  (_.facetValues.push({
-    name: [`#ContentDescriptor_GeneralMatureContent`],
-    type: _.k_EContentDescriptor,
-    contentDescriptor: 5,
-    filter: null,
-    rgStoreTagFilter: null,
-  }),
-    _.facetValues.push({
-      name: [`#ContentDescriptor_FrequentViolenceOrGore`],
-      type: _.k_EContentDescriptor,
-      contentDescriptor: 2,
-      filter: null,
-      rgStoreTagFilter: null,
-    }),
-    _.facetValues.push({
-      name: [`#ContentDescriptor_NudityOrSexualContent`],
-      type: _.k_EContentDescriptor,
-      contentDescriptor: 1,
-      filter: null,
-      rgStoreTagFilter: null,
-    }),
-    _.facetValues.push({
-      name: [`#ContentDescriptor_GratuitousNudityOrSexualContent`],
-      type: _.k_EContentDescriptor,
-      contentDescriptor: 4,
-      filter: null,
-      rgStoreTagFilter: null,
-    }),
-    _.facetValues.push({
-      name: [`#ContentDescriptor_AdultOnlySexualContent`],
-      type: _.k_EContentDescriptor,
-      contentDescriptor: 3,
-      filter: null,
-      rgStoreTagFilter: null,
-    }),
-    _.push(_));
-}
-function _(_) {
-  let _ = {
-    name: [`#Sale_Preferences`],
-    facetValues: [],
-  };
-  (_.facetValues.push({
-    name: [`#UserPreference_HideOwnedItems`],
-    type: _.k_EUserPreference,
-    userPreference: _.k_EHideOwnedItems,
-    filter: null,
-    rgStoreTagFilter: null,
-  }),
-    _.facetValues.push({
-      name: [`#UserPreference_HideWishlistedItems`],
-      type: _.k_EUserPreference,
-      userPreference: _.k_EHideWishlistedItems,
-      filter: null,
-      rgStoreTagFilter: null,
-    }),
-    _.facetValues.push({
-      name: [`#UserPreference_HideIgnoredItems`],
-      type: _.k_EUserPreference,
-      userPreference: _.k_EHideIgnoredItems,
-      bEnabledByDefault: !0,
-      filter: null,
-      rgStoreTagFilter: null,
-    }),
-    _.push(_));
-}
-function _(_) {
-  let _ = {
-      name: [`#AppTypeLabelTitle`],
-      facetValues: [],
-      logical_and: !1,
-      single_selection: !0,
-    },
-    _ = _();
-  for (let _ of _)
-    _.facetValues.push({
-      name: [`#AppTypeLabel_` + _],
-      type: _.k_EAppType,
-      filter: {
-        clauses: [
-          {
-            type: `Must have`,
-            or_tags: [_(_, `AppType`)],
-          },
-        ],
-      },
-      rgStoreTagFilter: {
-        type: _.k_EStoreFilterClauseTypeAppType,
-        value: _,
-      },
-    });
-  _.push(_);
-}
-function _(_) {
-  let _ = {
-    name: [`#ControllerSupportLabelTitle`],
-    facetValues: [],
-    logical_and: !1,
-  };
-  for (let _ of [
-    {
-      name: `#Store_ControllerSupport_FullController`,
-      value: `Full Controller`,
-    },
-    {
-      name: `#Store_ControllerSupport_Xbox`,
-      value: `Xbox Controller`,
-    },
-    {
-      name: `#Store_ControllerSupport_PS4`,
-      value: `PS4 Controller`,
-    },
-    {
-      name: `#Store_ControllerSupport_PS5`,
-      value: `PS5 Controller`,
-    },
-    {
-      name: `#Store_ControllerSupport_SIAPI`,
-      value: `Steam Input API`,
-    },
-    {
-      name: `#Store_ControllerSupport_GamepadRequired`,
-      value: `Gamepad Preferred`,
-    },
-  ])
-    _.facetValues.push({
-      name: [_.name],
-      type: _.k_ESaleTagFilter,
-      filter: {
-        clauses: [
-          {
-            type: `Must have`,
-            or_tags: [_(_.value, `Feature`)],
-          },
-        ],
-      },
-      rgStoreTagFilter: null,
-    });
-  _.push(_);
-}
-function _(_) {
-  _.push({
-    name: [`#Sale_BrowserSortOption_Price`],
-    facetValues: [
-      {
-        name: [`#Sale_BrowserSortOption_Price`],
-        type: _.k_EPrice,
-        filter: null,
-        rgStoreTagFilter: null,
-      },
-      {
-        name: [`#Sale_BrowserSortOption_PopularPurchasedDiscounted`],
-        type: _.k_ESaleTagFilter,
-        filter: {
-          clauses: [
-            {
-              type: `Must have`,
-              or_tags: [_(`Discounted`, `Feature`)],
-            },
-          ],
-        },
-        rgStoreTagFilter: null,
-      },
-    ],
-  });
-}
 var _ = 36e5;
 function _(_, _, _, _) {
   return _(_, _, _) ? 1e4 : Math.floor(_ * 1.1);
@@ -6687,6 +6122,571 @@ function _(_, _) {
     ),
       _.SetFromURLParam(void 0));
   }
+}
+function _(_, _) {
+  return `[` + _ + `] ` + _;
+}
+function _(_) {
+  let _ = /^\[(.+)\]/.exec(_);
+  return _ ? _[1] : void 0;
+}
+function _(_) {
+  return _.replace(/^\[(.+)\]/, ``).trim();
+}
+function _() {
+  return [`game`, `software`, `dlc`, `demo`, `music`, `video`, `hardware`];
+}
+function _(_) {
+  let _ = (_) => new Map(Object.entries(_).map(([_, _]) => [Number(_), _]));
+  return {
+    mapCategoriesForTagID: _(_.rgCategoriesByTag),
+    mapTagNameForTagID: _(_.rgTagNames),
+    mapLocalizedCategoryNames: new Map(
+      Object.entries(_.rgLocalizedCategoryNames),
+    ),
+    mapLocalizedTagNames: _(_.rgLocalizedTagNames),
+    rgLanguages: Array.from(_.rgLanguages),
+  };
+}
+function _(_, _) {
+  let _ = _(_);
+  if (
+    (_(_, _.mapTagNameForTagID),
+    _.bForceFeatureTagForFullController && _(_),
+    _(_),
+    _(_),
+    _(_),
+    _(_),
+    _(_),
+    _(_),
+    _(_),
+    _(_),
+    _.only_facets)
+  ) {
+    let _ = new Map(
+        _.only_facets.map((_) => [
+          _.loc_token,
+          _.only_values?.map((_) => ({
+            value: _,
+            selected: _.initially_selected_values?.includes(_) ?? !1,
+          })),
+        ]),
+      ),
+      _ = _(
+        _.map((_) => {
+          let _ = _.name.find((_) => _.has(_));
+          return _
+            ? {
+                facet: _,
+                values: _.get(_),
+              }
+            : null;
+        }),
+      );
+    for (let _ of _)
+      if (_.values) {
+        let _ = new Set(_.values.map((_) => _.value));
+        _.facet.facetValues = _.facet.facetValues.filter((_) =>
+          _.name.some((_) => _.has(_)),
+        );
+        let _ = new Set(_.values.filter((_) => _.selected).map((_) => _.value));
+        _.facet.facetValues.forEach(
+          (_) => (_.bEnabledByDefault = _.name.some((_) => _.has(_))),
+        );
+      }
+    _ = _.map((_) => _.facet);
+  }
+  if (_.initially_expanded_facets) {
+    let _ = new Set(_.initially_expanded_facets);
+    for (let _ of _) _.bInitiallyExpanded ||= _.name.some((_) => _.has(_));
+  }
+  if (_.prioritized_facets) {
+    let _ = new Map(_.prioritized_facets.map((_, _) => [_, _])),
+      _ = _.map((_) => {
+        let _ = _.name.find((_) => _.has(_));
+        return {
+          facet: _,
+          pri: _ ? _.get(_) : void 0,
+        };
+      });
+    (_.sort(
+      (_, _) => (_.pri ?? Number.MAX_VALUE) - (_.pri ?? Number.MAX_VALUE),
+    ),
+      (_ = _.map((_) => _.facet)));
+  }
+  return _;
+}
+function _(_) {
+  let _ = _(_),
+    _ = _(_);
+  return _(_(_(_)), _, _);
+}
+function _(_) {
+  let _ = new Map();
+  return (
+    _.mapCategoriesForTagID.forEach((_, _) => {
+      if (_)
+        for (let _ of _) {
+          let _ = _.get(_);
+          (_ || ((_ = []), _.set(_, _)), _.push(_));
+        }
+    }),
+    _
+  );
+}
+function _(_) {
+  let _ = [
+      `supergenre`,
+      `genre`,
+      `subgenre`,
+      `visuals`,
+      `theme_mood`,
+      `feature`,
+      `players`,
+    ],
+    _ = new Set(),
+    _ = new Map(),
+    _ = (_, _) => {
+      let _ = _.get(_) ?? [];
+      for (let _ of _) _.has(_) || (_.add(_), _.push(_));
+    };
+  for (let _ of _) {
+    let _ = [];
+    (_.set(_, _), _ === `theme_mood` ? (_(_, `theme`), _(_, `mood`)) : _(_, _));
+  }
+  return _;
+}
+function _(_) {
+  let _ = new Map();
+  (_.set(`supergenre`, `#App_Taxonomy_Survey_QSuperGenreTitle`),
+    _.set(`genre`, `#App_Taxonomy_Survey_QGenreTitle`),
+    _.set(`subgenre`, `#App_Taxonomy_Survey_QSubGenreTitle`),
+    _.set(`visuals`, `#App_Taxonomy_Survey_QVisualsTitle`),
+    _.set(`theme_mood`, `#App_Taxonomy_Survey_QThemeMoodTitle`),
+    _.set(`feature`, `#App_Taxonomy_Survey_QFeaturesTitle`),
+    _.set(`players`, `#App_Taxonomy_Survey_QPlayersTitle`));
+  let _ = new Map();
+  return (
+    _.mapLocalizedCategoryNames.forEach((_, _) => {
+      let _ = Array(32);
+      ((_[0] = _.get(_) ?? ``), _.set(_, _));
+    }),
+    _
+  );
+}
+function _(_) {
+  let _ = new Map();
+  return (
+    _.mapLocalizedTagNames.forEach((_, _) => {
+      let _ = _,
+        _ = Array(32);
+      (_.fill(``),
+        _.rgLanguages.forEach((_, _) => {
+          let _ = _(_, -1);
+          _ === -1
+            ? console.warn(`Unrecognized language: ` + _)
+            : 0 <= _ && _ < 32 && (_[_] = _[_]);
+        }),
+        _.set(_, _));
+    }),
+    _
+  );
+}
+function _(_, _, _) {
+  let _ = [];
+  return (
+    _.forEach((_, _) => {
+      let _ = {
+          name: _.get(_) ?? [],
+          facetValues: [],
+          logical_and: !0,
+        },
+        _ = [];
+      for (let _ of _) {
+        let _ = _.get(_);
+        if (!_) {
+          _.push(_);
+          continue;
+        }
+        let _ = {
+          name: _,
+          subtitle: [],
+          rgStoreTagFilter: {
+            type: _.k_EStoreFilterClauseTypeAnd,
+            rgSubexpressions: [
+              {
+                type: _.k_EStoreFilterClauseTypeOr,
+                rgSubexpressions: [
+                  {
+                    type: _.k_EStoreFilterClauseTypeStoreTag,
+                    value: _,
+                  },
+                ],
+              },
+            ],
+          },
+          nAtomicStoreTagID: _,
+          filter: null,
+        };
+        _.facetValues.push(_);
+      }
+      (_.length > 0 &&
+        console.warn(
+          `No name information found for tag count ` + _.length + `, skipping.`,
+          _,
+        ),
+        _.push(_));
+    }),
+    _
+  );
+}
+function _(_) {
+  return _(_, `Store`);
+}
+function _(_, _) {
+  for (let _ of _)
+    for (let _ of _.facetValues) {
+      let _ = _.nAtomicStoreTagID ?? 0,
+        _ = [_(String(_.get(_)))];
+      ((_.type = _.k_ESaleTagFilter),
+        (_.filter = {
+          clauses: [
+            {
+              type: `Must have`,
+              or_tags: _,
+            },
+          ],
+        }));
+    }
+}
+function _(_) {
+  _.forEach((_) => {
+    _.facetValues.forEach((_) => {
+      _.type === _.k_ESaleTagFilter &&
+        _.filter &&
+        _.filter.clauses.forEach((_) => {
+          _.or_tags.forEach((_, _) => {
+            let _ = _(_),
+              _ = _(_).toLocaleLowerCase();
+            _ === `Store` &&
+              _ === `controller` &&
+              (_.or_tags[_] = _(`Full Controller`, `Feature`));
+          });
+        });
+    });
+  });
+}
+function _(_) {
+  for (let _ of _)
+    if (_.name[0] === `#App_Taxonomy_Survey_QVisualsTitle`) {
+      _.facetValues.push({
+        name: [`#Store_HDRSupported`],
+        type: _.k_ESaleTagFilter,
+        filter: {
+          clauses: [
+            {
+              type: `Must have`,
+              or_tags: [_(`HDR`, `Feature`)],
+            },
+          ],
+        },
+        rgStoreTagFilter: null,
+      });
+      break;
+    }
+}
+function _(_) {
+  let _ = {
+    name: [`#Platform`],
+    facetValues: [],
+    logical_and: !1,
+    single_selection: !0,
+  };
+  (_.facetValues.push({
+    name: [`#Platform_Windows`],
+    type: _.k_ESaleTagFilter,
+    filter: {
+      clauses: [
+        {
+          type: `Must have`,
+          or_tags: [`[Feature] Windows`],
+        },
+      ],
+    },
+    rgStoreTagFilter: null,
+  }),
+    _.facetValues.push({
+      name: [`#Platform_Linux`],
+      type: _.k_ESaleTagFilter,
+      filter: {
+        clauses: [
+          {
+            type: `Must have`,
+            or_tags: [`[Feature] Linux`],
+          },
+        ],
+      },
+      rgStoreTagFilter: null,
+    }),
+    _.facetValues.push({
+      name: [`#Platform_Mac`],
+      type: _.k_ESaleTagFilter,
+      filter: {
+        clauses: [
+          {
+            type: `Must have`,
+            or_tags: [`[Feature] Mac`],
+          },
+        ],
+      },
+      rgStoreTagFilter: null,
+    }),
+    _.push(_));
+}
+function _(_) {
+  let _ = {
+    name: [`#LanguageTitle`],
+    facetValues: [],
+    logical_and: !1,
+  };
+  for (let _ = 0; _ < 32; ++_)
+    _.facetValues.push({
+      name: [`#language_selection_` + _(_)],
+      type: _.k_ELanguage,
+      language: _,
+      filter: null,
+      rgStoreTagFilter: null,
+    });
+  _.push(_);
+}
+function _(_) {
+  let _ = {
+    name: [`#ContentDescriptor`],
+    facetValues: [],
+    logical_and: !1,
+  };
+  (_.facetValues.push({
+    name: [`#ContentDescriptor_GeneralMatureContent`],
+    type: _.k_EContentDescriptor,
+    contentDescriptor: 5,
+    filter: null,
+    rgStoreTagFilter: null,
+  }),
+    _.facetValues.push({
+      name: [`#ContentDescriptor_FrequentViolenceOrGore`],
+      type: _.k_EContentDescriptor,
+      contentDescriptor: 2,
+      filter: null,
+      rgStoreTagFilter: null,
+    }),
+    _.facetValues.push({
+      name: [`#ContentDescriptor_NudityOrSexualContent`],
+      type: _.k_EContentDescriptor,
+      contentDescriptor: 1,
+      filter: null,
+      rgStoreTagFilter: null,
+    }),
+    _.facetValues.push({
+      name: [`#ContentDescriptor_GratuitousNudityOrSexualContent`],
+      type: _.k_EContentDescriptor,
+      contentDescriptor: 4,
+      filter: null,
+      rgStoreTagFilter: null,
+    }),
+    _.facetValues.push({
+      name: [`#ContentDescriptor_AdultOnlySexualContent`],
+      type: _.k_EContentDescriptor,
+      contentDescriptor: 3,
+      filter: null,
+      rgStoreTagFilter: null,
+    }),
+    _.push(_));
+}
+function _(_) {
+  let _ = {
+    name: [`#Sale_Preferences`],
+    facetValues: [],
+  };
+  (_.facetValues.push({
+    name: [`#UserPreference_HideOwnedItems`],
+    type: _.k_EUserPreference,
+    userPreference: _.k_EHideOwnedItems,
+    filter: null,
+    rgStoreTagFilter: null,
+  }),
+    _.facetValues.push({
+      name: [`#UserPreference_HideWishlistedItems`],
+      type: _.k_EUserPreference,
+      userPreference: _.k_EHideWishlistedItems,
+      filter: null,
+      rgStoreTagFilter: null,
+    }),
+    _.facetValues.push({
+      name: [`#UserPreference_HideIgnoredItems`],
+      type: _.k_EUserPreference,
+      userPreference: _.k_EHideIgnoredItems,
+      bEnabledByDefault: !0,
+      filter: null,
+      rgStoreTagFilter: null,
+    }),
+    _.push(_));
+}
+function _(_) {
+  let _ = {
+      name: [`#AppTypeLabelTitle`],
+      facetValues: [],
+      logical_and: !1,
+      single_selection: !0,
+    },
+    _ = _();
+  for (let _ of _)
+    _.facetValues.push({
+      name: [`#AppTypeLabel_` + _],
+      type: _.k_EAppType,
+      filter: {
+        clauses: [
+          {
+            type: `Must have`,
+            or_tags: [_(_, `AppType`)],
+          },
+        ],
+      },
+      rgStoreTagFilter: {
+        type: _.k_EStoreFilterClauseTypeAppType,
+        value: _,
+      },
+    });
+  _.push(_);
+}
+function _(_) {
+  let _ = {
+    name: [`#ControllerSupportLabelTitle`],
+    facetValues: [],
+    logical_and: !1,
+  };
+  for (let _ of [
+    {
+      name: `#Store_ControllerSupport_FullController`,
+      value: `Full Controller`,
+    },
+    {
+      name: `#Store_ControllerSupport_Xbox`,
+      value: `Xbox Controller`,
+    },
+    {
+      name: `#Store_ControllerSupport_PS4`,
+      value: `PS4 Controller`,
+    },
+    {
+      name: `#Store_ControllerSupport_PS5`,
+      value: `PS5 Controller`,
+    },
+    {
+      name: `#Store_ControllerSupport_SIAPI`,
+      value: `Steam Input API`,
+    },
+    {
+      name: `#Store_ControllerSupport_GamepadRequired`,
+      value: `Gamepad Preferred`,
+    },
+  ])
+    _.facetValues.push({
+      name: [_.name],
+      type: _.k_ESaleTagFilter,
+      filter: {
+        clauses: [
+          {
+            type: `Must have`,
+            or_tags: [_(_.value, `Feature`)],
+          },
+        ],
+      },
+      rgStoreTagFilter: null,
+    });
+  _.push(_);
+}
+function _(_) {
+  _.push({
+    name: [`#Sale_BrowserSortOption_Price`],
+    facetValues: [
+      {
+        name: [`#Sale_BrowserSortOption_Price`],
+        type: _.k_EPrice,
+        filter: null,
+        rgStoreTagFilter: null,
+      },
+      {
+        name: [`#Sale_BrowserSortOption_PopularPurchasedDiscounted`],
+        type: _.k_ESaleTagFilter,
+        filter: {
+          clauses: [
+            {
+              type: `Must have`,
+              or_tags: [_(`Discounted`, `Feature`)],
+            },
+          ],
+        },
+        rgStoreTagFilter: null,
+      },
+    ],
+  });
+}
+var _ = `d3elVPeljM8-`,
+  _ = `AkJq5-NyPT8-`,
+  _ = `mlr-XtYml6w-`,
+  _ = `_433qsTJ1vj4-`,
+  _ = `evupCqakxxU-`,
+  _ = `bHMnTP9zceY-`,
+  _ = `Eh-pLRQbf0Y-`;
+function _(_) {
+  let { eventModel: _, titleOverride: _ } = _,
+    [_, _, _] = _(),
+    _ = _(_) ?? ``,
+    { gidClanEvent: _, rgSocialShare: _ } = _(() => ({
+      gidClanEvent: _.GID,
+      rgSocialShare: _.jsondata.sale_social_media_items,
+    })),
+    _ = !!_?.length;
+  return _.BHasTag(`contenthub`)
+    ? null
+    : (0, _.jsxs)(_.Fragment, {
+        children: [
+          (0, _.jsx)(`div`, {
+            className: _,
+            children: _ ?? _(`#EventDisplay_Share_WithFriendsHeader`),
+          }),
+          (0, _.jsxs)(_, {
+            focusable: !0,
+            className: _(_, _, _, `SocialShareButton`),
+            onActivate: _,
+            children: [
+              (0, _.jsx)(_, {
+                className: _(_, `SocialShareIcon`),
+              }),
+              (0, _.jsx)(`span`, {
+                className: _(_, `SocialShareText`),
+                children: _(`#Button_Share`),
+              }),
+            ],
+          }),
+          (0, _.jsx)(`div`, {
+            className: _,
+            children:
+              _ &&
+              (0, _.jsx)(_, {
+                gidClanEvent: _ ?? ``,
+                rgSocial: _,
+                bIsCreatorHomeEvent: !0,
+              }),
+          }),
+          (0, _.jsx)(_, {
+            eventModel: _,
+            strEventLink: _,
+            bActive: _,
+            closeModal: _,
+          }),
+        ],
+      });
 }
 var _ = `BEJJ0zhyKjM-`,
   _ = `hKkjz-K347w-`,
@@ -7473,6 +7473,7 @@ function _(_) {
       section: _,
       selected: _,
       bShowMenuChevron: _,
+      bOutsideBar: _,
     } = _,
     [_] = _(() => [_?.tab_highlight_label_color]);
   _.useEffect(() => {
@@ -7485,7 +7486,7 @@ function _(_) {
         className: _(_, _ && `f1tg24vfjWA-`, _),
         onClick: () => _(_),
         onOKButton: () => _(_),
-        _: `Tab_` + _.unique_id,
+        _: _ ? void 0 : `Tab_` + _.unique_id,
         children: (0, _.jsxs)(`div`, {
           className: _(_),
           children: [
@@ -7675,17 +7676,22 @@ function _(_) {
       };
     }),
     _ = (_) => _?.(_),
+    _ = !_.tab_tag_filter?.bNoAllOption,
     _ = (_) => _(_ && (() => _(_)), _);
   if (!_ || _.length === 0) return null;
   if (_) {
     let _ = [
-        {
-          strKey: `all`,
-          strName: _(`#Sale_Tabs_TagFilter_All`),
-          bSelected: !_,
-          fnOnClick: () => _(void 0),
-          intentHandlers: _(void 0),
-        },
+        ...(_
+          ? [
+              {
+                strKey: `all`,
+                strName: _(`#Sale_Tabs_TagFilter_All`),
+                bSelected: !_,
+                fnOnClick: () => _(void 0),
+                intentHandlers: _(void 0),
+              },
+            ]
+          : []),
         ..._.map((_) => ({
           strKey: _(_),
           strName: _(_, _, _),
@@ -7744,12 +7750,13 @@ function _(_) {
         className: _,
         "flow-children": `row`,
         children: [
-          (0, _.jsx)(_, {
-            strName: _(`#Sale_Tabs_TagFilter_All`),
-            bSelected: !_,
-            fnOnClick: () => _(void 0),
-            intentHandlers: _(void 0),
-          }),
+          _ &&
+            (0, _.jsx)(_, {
+              strName: _(`#Sale_Tabs_TagFilter_All`),
+              bSelected: !_,
+              fnOnClick: () => _(void 0),
+              intentHandlers: _(void 0),
+            }),
           _.map((_) =>
             (0, _.jsx)(
               _,
@@ -9900,7 +9907,7 @@ function _(_, _, _) {
     _ = _.filter((_) => _.name && !_.has(_.tagid)).slice(0, _),
     _ = _.recommended_tag_tab_as_menu
       ? _.length
-        ? [_(_, _.unique_id)]
+        ? [_(_, _)]
         : []
       : _.map((_) => _(_, _.unique_id, _));
   return _.length == 0 ? _ : [..._.slice(0, _ + 1), ..._, ..._.slice(_ + 1)];
@@ -9949,8 +9956,9 @@ function _(_, _) {
       rgNodes: _.map((_) => ({
         nTagID: _.tagid,
       })),
+      bNoAllOption: _.tab_tag_filter?.bNoAllOption,
     },
-    template_tab_id: _,
+    template_tab_id: _.unique_id,
   };
 }
 function _(_, _) {

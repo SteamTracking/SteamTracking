@@ -5,20 +5,20 @@ import { o as e } from "./chunk~f025431ab0.js";
 import { At as t, Lt as n, kt as r } from "./chunk~01cfc309bf.js";
 import { n as i, t as a } from "./chunk~e867464c75.js";
 import {
-  $b as o,
-  Hx as s,
-  Hy as c,
-  Ib as l,
-  Lb as u,
-  Sy as d,
-  _y as f,
-  dt as p,
-  ft as m,
-  jl as h,
-  ux as g,
-  wl as _,
-  yx as v,
-  yy as y,
+  Bl as o,
+  Ey as s,
+  Gb as c,
+  Kb as l,
+  Nl as u,
+  Ox as d,
+  Oy as f,
+  Zx as p,
+  Zy as m,
+  cx as h,
+  dt as g,
+  ft as _,
+  jy as v,
+  yx as y,
 } from "./main.js";
 var b = e(n());
 function x(e, t) {
@@ -82,7 +82,7 @@ var w = class e {
     let n = x(e, t);
     return (
       this.m_mapInClientCompletedCallback.has(n) ||
-        this.m_mapInClientCompletedCallback.set(n, new s()),
+        this.m_mapInClientCompletedCallback.set(n, new p()),
       this.m_mapInClientCompletedCallback.get(n)
     );
   }
@@ -90,7 +90,7 @@ var w = class e {
     let n = x(e, t);
     return (
       this.m_mapExhuastedCallback.has(n) ||
-        this.m_mapExhuastedCallback.set(n, l(!1)),
+        this.m_mapExhuastedCallback.set(n, c(!1)),
       this.m_mapExhuastedCallback.get(n)
     );
   }
@@ -102,9 +102,9 @@ var w = class e {
     let r = x(e, n);
     if (!this.m_transport) return 2;
     try {
-      let i = p(this.m_transport, e, t, n);
-      t && (await c.invalidateQueries({ queryKey: i.queryKey }));
-      let a = await c.fetchQuery(i);
+      let i = g(this.m_transport, e, t, n);
+      t && (await m.invalidateQueries({ queryKey: i.queryKey }));
+      let a = await m.fetchQuery(i);
       return (
         this.m_mapDiscoveryQueues.set(r, a),
         a.exhausted
@@ -151,12 +151,12 @@ var w = class e {
           i,
           (this.m_mapSkippedAppCount.get(i) || 0) + 1,
         ));
-      let s = v.Init(y);
+      let s = d.Init(f);
       if (
         (s.Body().set_appid(e),
         s.Body().set_queue_type(t),
         (n?.nSaleTagID || n?.strContentHubType) &&
-          s.Body().set_store_page_filter(m(n, !0)),
+          s.Body().set_store_page_filter(_(n, !0)),
         !this.m_transport)
       ) {
         (console.warn(`Error`, `no transport`, `failed to skip appid `, e),
@@ -164,7 +164,7 @@ var w = class e {
         return;
       }
       let c = (
-        await d.SkipDiscoveryQueueItem(this.m_transport, s)
+        await v.SkipDiscoveryQueueItem(this.m_transport, s)
       ).GetEResult();
       c != 1 && c != 29
         ? (console.warn(`Error`, c, `failed to skip appid `, e),
@@ -184,12 +184,12 @@ var w = class e {
   }
   async LoadSkippedApps(e, t) {
     x(e, t);
-    let n = v.Init(f);
+    let n = d.Init(s);
     if (
-      (n.Body().set_steamid(g.steamid),
+      (n.Body().set_steamid(y.steamid),
       n.Body().set_queue_type(e),
       (t?.nSaleTagID || t?.strContentHubType) &&
-        n.Body().set_store_page_filter(m(t, !0)),
+        n.Body().set_store_page_filter(_(t, !0)),
       !this.m_transport)
     )
       return (
@@ -200,7 +200,7 @@ var w = class e {
         ),
         []
       );
-    let r = await d.GetDiscoveryQueueSkippedApps(this.m_transport, n);
+    let r = await v.GetDiscoveryQueueSkippedApps(this.m_transport, n);
     return r.GetEResult() === 1
       ? r.Body().appids() || []
       : (console.warn(
@@ -227,16 +227,16 @@ var w = class e {
     r(this);
   }
 };
-u([t], w.prototype, `m_mapDiscoveryQueues`, void 0);
+l([t], w.prototype, `m_mapDiscoveryQueues`, void 0);
 function T(e, t) {
   let [n, r] = (0, b.useState)(w.Get().GetInClientCompletedQueues(e, t));
-  return (_(w.Get().GetInClientCompletedQueuesCallback(e, t), r), n);
+  return (u(w.Get().GetInClientCompletedQueuesCallback(e, t), r), n);
 }
 function E(e, t) {
-  return h(w.Get().GetExhaustedCallback(e, t));
+  return o(w.Get().GetExhaustedCallback(e, t));
 }
 function D(e, t) {
-  let n = b.useMemo(() => o(`discovery_queue_name`, `application_config`), []);
+  let n = b.useMemo(() => h(`discovery_queue_name`, `application_config`), []);
   return typeof n == `string` && n.length > 0 ? n : ``;
 }
 export { T as a, D as i, w as n, E as o, C as r, S as t };

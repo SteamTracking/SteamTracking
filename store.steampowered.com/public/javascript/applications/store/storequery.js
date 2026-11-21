@@ -4,15 +4,15 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { Lt as t, ft as n, st as r } from "./chunk~01cfc309bf.js";
 import {
-  Gl as i,
-  Qx as a,
-  ay as o,
-  gu as s,
-  hu as c,
-  ly as l,
-  ry as u,
-  sy as d,
-  yx as f,
+  Ox as i,
+  Tu as a,
+  eu as o,
+  fy as s,
+  gy as c,
+  my as l,
+  sS as u,
+  vy as d,
+  wu as f,
 } from "./main.js";
 var p = e(t()),
   m = n(),
@@ -25,45 +25,45 @@ function _(e) {
 }
 var v = `StoreQueryStore`;
 function y(e, t, n, i) {
-  let o = g(),
-    s = l();
-  o || a(!1, `useStoreQuery called outside of a <StoreQueryRoot>`);
-  let c = o.defaultOptions,
-    u = p.useMemo(() => {
+  let a = g(),
+    o = d();
+  a || u(!1, `useStoreQuery called outside of a <StoreQueryRoot>`);
+  let s = a.defaultOptions,
+    c = p.useMemo(() => {
       let e = [];
       return (
         i?.content_descriptors_excluded
           ? (e = i.content_descriptors_excluded)
-          : c?.content_descriptors_excluded &&
-            (e = c.content_descriptors_excluded),
+          : s?.content_descriptors_excluded &&
+            (e = s.content_descriptors_excluded),
         { ...t, filters: { content_descriptors_excluded: e, ...t.filters } }
       );
-    }, [t, i, c]),
-    d;
+    }, [t, i, s]),
+    l;
   i?.override_country_code === void 0
-    ? c?.override_country_code !== void 0 && (d = c.override_country_code)
-    : (d = i.override_country_code);
+    ? s?.override_country_code !== void 0 && (l = s.override_country_code)
+    : (l = i.override_country_code);
   let f = { staleTime: 36e5 };
   return (
     i?.reactQuery && (f = { ...f, ...i.reactQuery }),
     r({
-      queryKey: [v, u, n ?? {}, i ?? {}],
-      queryFn: () => b(s, e, u, n ?? {}, d),
+      queryKey: [v, c, n ?? {}, i ?? {}],
+      queryFn: () => b(o, e, c, n ?? {}, l),
       ...f,
     })
   );
 }
-async function b(e, t, n, r, i) {
-  let a = f.Init(o);
-  (c(a),
-    r && s(a, r),
-    i && a.Body().set_override_country_code(i),
-    a.Body().set_query(u.fromObject(n)),
-    a.Body().set_query_name(t));
-  let l = await d.Query(e, a);
-  if (l.GetEResult() != 1)
-    throw `Error executing StoreQuery "${t}", EResult: ${l.GetEResult()}`;
-  return new x(l, r);
+async function b(e, t, n, r, o) {
+  let u = i.Init(l);
+  (f(u),
+    r && a(u, r),
+    o && u.Body().set_override_country_code(o),
+    u.Body().set_query(s.fromObject(n)),
+    u.Body().set_query_name(t));
+  let d = await c.Query(e, u);
+  if (d.GetEResult() != 1)
+    throw `Error executing StoreQuery "${t}", EResult: ${d.GetEResult()}`;
+  return new x(d, r);
 }
 var x = class {
   m_Items = void 0;
@@ -83,7 +83,7 @@ var x = class {
   }
   ReadResults(e, t) {
     this.m_Items ||=
-      (a(
+      (u(
         e.Body().metadata().start() == 0,
         `Empty item list - expected to start at 0`,
       ),
@@ -93,7 +93,7 @@ var x = class {
       ((this.m_rgItemIDs = n.map((e) => e.toObject())), e.Body().store_items())
     )
       for (let n of e.Body().store_items()) {
-        let e = i.Get().ReadItem(n, t);
+        let e = o.Get().ReadItem(n, t);
         e && this.m_Items.push(e);
       }
     this.m_metadata = e.Body().metadata().toObject();
