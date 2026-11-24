@@ -7925,6 +7925,7 @@ button.DialogButton._1k0t2Q-C2OU-._1k0t2Q-C2OU-:enabled:active:hover {
   letter-spacing: var(--letter-spacing);
   line-height: var(--line-height);
   border-radius: var(--control-radius);
+  height: fit-content;
   position: relative;
 }
 :where(.SPBgilcrPoU-).tV5yUd0n1-I- {

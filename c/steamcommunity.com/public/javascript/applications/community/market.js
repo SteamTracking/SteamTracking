@@ -49,7 +49,6 @@ import {
   _,
   _,
   _,
-  _,
 } from "./main.js";
 var _ = _(_(), 1),
   _ = _();
@@ -511,19 +510,8 @@ function _(_) {
     },
   };
 }
-var _ = {
-  name: `bMarketOptOut`,
-  preferenceControls: {
-    isTechnicallyNecessary: !0,
-  },
-  options: {
-    path: `/market`,
-    maxAge: 2592e6,
-    httpOnly: !1,
-  },
-};
 function _() {
-  return _(_) === `1`;
+  return !1;
 }
 var _ = `4`,
   _ = (0, _.createContext)({});

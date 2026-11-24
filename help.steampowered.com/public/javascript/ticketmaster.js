@@ -2834,7 +2834,10 @@ function ShowCompletedProcesses( strReferenceCode )
 	})
 	.done( function( results )
 	{
-		ShowAlertDialog( "Previously Completed", results.html );
+		// the page only sets up the tooltips it loaded with, so the history previews need theirs
+		var $Processes = $J( '<div/>' ).html( results.html );
+		BindHelpTooltip( $Processes.find( '[data-help-tooltip]' ) );
+		ShowAlertDialog( "Previously Completed", $Processes );
 	})
 	.fail( function( data )
 	{

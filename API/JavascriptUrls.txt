@@ -282,7 +282,6 @@ ${COMMUNITY_BASE_URL}linkfilter/?u=${}
 ${COMMUNITY_BASE_URL}login/home/?goto=${}
 ${COMMUNITY_BASE_URL}login/home/?goto=%2Fmy%2Fworkshoppaymentinfo
 ${COMMUNITY_BASE_URL}market
-${COMMUNITY_BASE_URL}market/
 ${COMMUNITY_BASE_URL}market/${}${_ ? _ : ``}
 ${COMMUNITY_BASE_URL}market/ajaxfeestructure/?${}
 ${COMMUNITY_BASE_URL}market/appaccessories/${}

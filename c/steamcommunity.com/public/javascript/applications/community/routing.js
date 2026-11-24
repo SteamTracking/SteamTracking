@@ -895,6 +895,7 @@ function _(_) {
               align: `center`,
               children: [
                 (0, _.jsx)(_, {
+                  active: !_,
                   currency: _,
                   value: _,
                   onValueChange: _(0),
@@ -908,6 +909,7 @@ function _(_) {
                   children: `-`,
                 }),
                 (0, _.jsx)(_, {
+                  active: !_,
                   currency: _,
                   value: _,
                   onValueChange: _(1),
@@ -927,8 +929,11 @@ function _(_) {
   );
 }
 function _(_) {
+  let { active: _, ..._ } = _;
   return (0, _.jsx)(_, {
     flexGrow: `1`,
+    radius: `sm`,
+    outline: _ ? `accent-8` : void 0,
     children: (0, _.jsx)(_, {
       variant: `inset-focus`,
       ..._,

@@ -705,22 +705,24 @@ function _() {
     _ = !!_.sealed && _.sealed_type == 1;
   if (!_.marketable && _.sealed_type != 1) return null;
   let _ = _.market_hash_name || _.market_name || _.name;
-  return _
-    ? (0, _.jsx)(_, {
-        eWalletCurrency: _,
-        appid: _.appid,
-        hashName: _,
-        bCanInteract: _,
-        bItemSealed: _,
-        assetid: _?.assetid,
-      })
-    : null;
+  if (!_) return null;
+  let _ = _.market_bucket_group_id || _;
+  return (0, _.jsx)(_, {
+    eWalletCurrency: _,
+    appid: _.appid,
+    hashName: _,
+    listingName: _,
+    bCanInteract: _,
+    bItemSealed: _,
+    assetid: _?.assetid,
+  });
 }
 function _(_) {
   let {
       eWalletCurrency: _,
       appid: _,
       hashName: _,
+      listingName: _,
       bCanInteract: _,
       bItemSealed: _,
       assetid: _,

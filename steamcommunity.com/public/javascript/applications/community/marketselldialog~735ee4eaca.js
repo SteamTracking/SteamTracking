@@ -2192,7 +2192,7 @@ function Sr() {
 function Cr(e) {
   let [t, n] = Sr();
   return [
-    e === `resultsView` ? `grid` : t[e],
+    t[e],
     (0, K.useCallback)((t) => n((n) => ({ ...n, [e]: t })), [n, e]),
   ];
 }
@@ -2246,7 +2246,7 @@ function Ar(e) {
         children: [
           (0, Z.jsx)(fr, {
             id: `${s}price`,
-            color: `var(--color-green-9)`,
+            color: `var(--color-green-7)`,
             stops: [
               [`0%`, 0.5],
               [`90%`, 0],
@@ -2295,7 +2295,7 @@ function Ar(e) {
       }),
       (0, Z.jsx)(pr, {
         dataKey: `price`,
-        color: `var(--color-green-9)`,
+        color: `var(--color-green-7)`,
         numPoints: o,
         strokeWidth: 1.5,
         className: wr,
@@ -2470,7 +2470,7 @@ var Mr = K.memo(function (e) {
             angle: -90,
             position: `left`,
             offset: 10,
-            fill: `var(--color-green-8)`,
+            fill: `var(--color-green-7)`,
             children: d.Localize(`#Graph_Label_Price`),
           }),
         }),
@@ -2539,7 +2539,7 @@ function Pr(e) {
         gap: `2`,
         children: [
           (0, Z.jsx)(R, { weight: `medium`, contrast: `title`, children: p }),
-          (0, Z.jsx)(R, { color: `green-9`, children: u }),
+          (0, Z.jsx)(R, { color: `green-7`, children: u }),
           (0, Z.jsx)(R, { color: `blue-9`, children: f }),
         ],
       });
@@ -2815,18 +2815,34 @@ function ai(e) {
           as: `div`,
           size: `3`,
           align: `center`,
-          color: `text-warning`,
+          color: `amber-9`,
           whiteSpace: `pre-wrap`,
           children: t,
         }),
       })
-    : (0, Z.jsx)(R, {
-        size: `3`,
-        align: `end`,
-        color: n == `error` ? `red-10` : `green-11`,
-        whiteSpace: `pre-wrap`,
-        children: t,
-      });
+    : n == `error`
+      ? (0, Z.jsx)(z, {
+          radius: `sm`,
+          background: `red-3`,
+          outline: `red-5`,
+          padding: { initial: `3`, sm: `5` },
+          width: `100%`,
+          children: (0, Z.jsx)(R, {
+            as: `div`,
+            size: `3`,
+            align: `center`,
+            color: `red-10`,
+            whiteSpace: `pre-wrap`,
+            children: t,
+          }),
+        })
+      : (0, Z.jsx)(R, {
+          size: `3`,
+          align: `end`,
+          color: `green-11`,
+          whiteSpace: `pre-wrap`,
+          children: t,
+        });
 }
 var oi = `Xice-lU-2-8-`,
   si = `Pv3PuwbbHSo-`,
@@ -3655,7 +3671,7 @@ function Oi(e) {
     E === void 0 && e > 0 && ee(ni(e, C, b));
   }, [C, S, g, b, E]);
   let O = n({
-      mutationFn: Vi,
+      mutationFn: Bi,
       onSuccess: (e, t) => {
         if (!e.success) return;
         let n = !!e.requires_confirmation;
@@ -3709,15 +3725,15 @@ function Oi(e) {
     w === `confirm` && O.data
       ? (j = (0, Z.jsx)(Li, { result: O.data }))
       : O.isError || (O.isSuccess && !O.data.success)
-        ? (j = (0, Z.jsx)(zi, {
+        ? (j = (0, Z.jsx)(ai, {
             type: `error`,
             children:
               O.data?.message || d.Localize(`#SellDialog_Error_Generic`),
           }))
         : D
-          ? (j = (0, Z.jsx)(zi, { type: `error`, children: D }))
+          ? (j = (0, Z.jsx)(ai, { type: `error`, children: D }))
           : (x.isError || (x.isSuccess && !C)) &&
-            (j = (0, Z.jsx)(zi, {
+            (j = (0, Z.jsx)(ai, {
               type: `error`,
               children: d.Localize(`#SellDialog_PriceEntryUnavailable`),
             })),
@@ -3753,7 +3769,7 @@ function Oi(e) {
         }),
         (0, Z.jsx)(Ri, {
           message: j,
-          prices: (0, Z.jsx)(Bi, {
+          prices: (0, Z.jsx)(zi, {
             currency: g,
             marketLow: w === `confirm` ? void 0 : S,
             buyerPrice: oe,
@@ -4093,7 +4109,7 @@ function Li(e) {
     n = t.needs_mobile_confirmation
       ? `${d.Localize(`#SellDialog_MobileConfirmation`)}\n\n${d.Localize(`#SellDialog_MobileConfirmation_CheckVersion`)}`
       : d.Localize(`#SellDialog_EmailConfirmation`, t.email_domain ?? ``);
-  return (0, Z.jsx)(zi, { type: `warning`, children: n });
+  return (0, Z.jsx)(ai, { type: `warning`, children: n });
 }
 function Ri(e) {
   let { message: t, prices: n, children: r } = e,
@@ -4119,26 +4135,6 @@ function Ri(e) {
   );
 }
 function zi(e) {
-  let { children: t, type: n } = e;
-  return n == `warning`
-    ? (0, Z.jsx)(ai, { type: `warning`, children: t })
-    : (0, Z.jsx)(z, {
-        radius: `sm`,
-        background: `red-3`,
-        outline: `red-5`,
-        padding: { initial: `3`, sm: `5` },
-        width: `100%`,
-        children: (0, Z.jsx)(R, {
-          as: `div`,
-          size: `3`,
-          align: `center`,
-          color: `red-10`,
-          whiteSpace: `pre-wrap`,
-          children: t,
-        }),
-      });
-}
-function Bi(e) {
   let {
       currency: t,
       marketLow: n,
@@ -4251,7 +4247,7 @@ function Bi(e) {
     ],
   });
 }
-async function Vi(e) {
+async function Bi(e) {
   let t = new URLSearchParams({
       sessionid: lt(),
       appid: e.appid.toString(),

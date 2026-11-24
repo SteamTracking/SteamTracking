@@ -127,6 +127,8 @@ function ye(e) {
       return x.Localize(`#DiscountsAndEvents_Banner_DeepDiscount`);
     case `popular_in_region`:
       return x.Localize(`#DiscountsAndEvents_Banner_PopularInRegion`);
+    case `just_updated`:
+      return x.Localize(`#DiscountsAndEvents_Banner_JustUpdated`);
     case `custom`:
       return e.title || void 0;
     default:

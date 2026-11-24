@@ -737,6 +737,7 @@ function rt(e) {
               align: `center`,
               children: [
                 (0, A.jsx)(it, {
+                  active: !g,
                   currency: a,
                   value: y,
                   onValueChange: u(0),
@@ -746,6 +747,7 @@ function rt(e) {
                 }),
                 (0, A.jsx)(p, { size: `4`, weight: `medium`, children: `-` }),
                 (0, A.jsx)(it, {
+                  active: !_,
                   currency: a,
                   value: b,
                   onValueChange: u(1),
@@ -762,9 +764,12 @@ function rt(e) {
   );
 }
 function it(e) {
+  let { active: t, ...n } = e;
   return (0, A.jsx)(m, {
     flexGrow: `1`,
-    children: (0, A.jsx)(Se, { variant: `inset-focus`, ...e }),
+    radius: `sm`,
+    outline: t ? `accent-8` : void 0,
+    children: (0, A.jsx)(Se, { variant: `inset-focus`, ...n }),
   });
 }
 function at(e) {

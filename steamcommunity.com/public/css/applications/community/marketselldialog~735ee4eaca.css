@@ -1,6 +1,6 @@
 .VJlhvA2sWGg- .recharts-line-curve {
   filter: drop-shadow(
-    0 0 6px color-mix(in srgb, var(--color-green-9) 60%, transparent)
+    0 0 6px color-mix(in srgb, var(--color-green-7) 60%, transparent)
   );
 }
 ._37rzH4CvbMw- {
@@ -44,7 +44,7 @@
   display: block;
 }
 .wr8reWdSeMQ- {
-  width: min(600px, 90vw);
+  width: min(700px, 90vw);
   height: auto;
   max-height: 90vh;
 }

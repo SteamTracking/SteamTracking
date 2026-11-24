@@ -130,6 +130,8 @@ function _(_) {
       return _.Localize(`#DiscountsAndEvents_Banner_DeepDiscount`);
     case `popular_in_region`:
       return _.Localize(`#DiscountsAndEvents_Banner_PopularInRegion`);
+    case `just_updated`:
+      return _.Localize(`#DiscountsAndEvents_Banner_JustUpdated`);
     case `custom`:
       return _.title || void 0;
     default:

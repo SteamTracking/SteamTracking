@@ -2515,7 +2515,7 @@ function _() {
 function _(_) {
   let [_, _] = _();
   return [
-    _ === `resultsView` ? `grid` : _[_],
+    _[_],
     (0, _.useCallback)(
       (_) =>
         _((_) => ({
@@ -2586,7 +2586,7 @@ function _(_) {
         children: [
           (0, _.jsx)(_, {
             _: `${_}price`,
-            color: `var(--color-green-9)`,
+            color: `var(--color-green-7)`,
             stops: [
               [`0%`, 0.5],
               [`90%`, 0],
@@ -2638,7 +2638,7 @@ function _(_) {
       }),
       (0, _.jsx)(_, {
         dataKey: `price`,
-        color: `var(--color-green-9)`,
+        color: `var(--color-green-7)`,
         numPoints: _,
         strokeWidth: 1.5,
         className: _,
@@ -2830,7 +2830,7 @@ var _ = _.memo(function (_) {
             angle: -90,
             position: `left`,
             offset: 10,
-            fill: `var(--color-green-8)`,
+            fill: `var(--color-green-7)`,
             children: _.Localize(`#Graph_Label_Price`),
           }),
         }),
@@ -2907,7 +2907,7 @@ function _(_) {
             children: _,
           }),
           (0, _.jsx)(_, {
-            color: `green-9`,
+            color: `green-7`,
             children: _,
           }),
           (0, _.jsx)(_, {
@@ -3237,18 +3237,37 @@ function _(_) {
           _: `div`,
           size: `3`,
           align: `center`,
-          color: `text-warning`,
+          color: `amber-9`,
           whiteSpace: `pre-wrap`,
           children: _,
         }),
       })
-    : (0, _.jsx)(_, {
-        size: `3`,
-        align: `end`,
-        color: _ == `error` ? `red-10` : `green-11`,
-        whiteSpace: `pre-wrap`,
-        children: _,
-      });
+    : _ == `error`
+      ? (0, _.jsx)(_, {
+          radius: `sm`,
+          background: `red-3`,
+          outline: `red-5`,
+          padding: {
+            initial: `3`,
+            _: `5`,
+          },
+          width: `100%`,
+          children: (0, _.jsx)(_, {
+            _: `div`,
+            size: `3`,
+            align: `center`,
+            color: `red-10`,
+            whiteSpace: `pre-wrap`,
+            children: _,
+          }),
+        })
+      : (0, _.jsx)(_, {
+          size: `3`,
+          align: `end`,
+          color: `green-11`,
+          whiteSpace: `pre-wrap`,
+          children: _,
+        });
 }
 var _ = `Xice-lU-2-8-`,
   _ = `Pv3PuwbbHSo-`,
@@ -4753,32 +4772,6 @@ function _(_) {
       ],
     })
   );
-}
-function _(_) {
-  let { children: _, type: _ } = _;
-  return _ == `warning`
-    ? (0, _.jsx)(_, {
-        type: `warning`,
-        children: _,
-      })
-    : (0, _.jsx)(_, {
-        radius: `sm`,
-        background: `red-3`,
-        outline: `red-5`,
-        padding: {
-          initial: `3`,
-          _: `5`,
-        },
-        width: `100%`,
-        children: (0, _.jsx)(_, {
-          _: `div`,
-          size: `3`,
-          align: `center`,
-          color: `red-10`,
-          whiteSpace: `pre-wrap`,
-          children: _,
-        }),
-      });
 }
 function _(_) {
   let {

@@ -5256,13 +5256,37 @@ var _ = `FCDwJOWV1GM-`,
   _ = `MjUEpAp0LdA-`,
   _ = `iMj27DR-pkY-`,
   _ = {};
+_[2026] = {
+  strTileAssetDir: `steamawards2026/tiles/`,
+  nTileVersion: 1,
+  strPageTileAsset: `steamawards2026/page_tile.svg?v=1`,
+  strCategoryColor: `#1e1e1e`,
+  mapCategoryColors: {
+    BestGameYouSuckAt: `#521437`,
+    BestHandheldGame: `#452138`,
+    BestSoundtrack: `#521422`,
+    BetterWithFriends: `#521514`,
+    DefiesDescription: `#194d39`,
+    GOTY: `#17464f`,
+    HallOfFame: `#862e30`,
+    JustFiveMoreMinutes: `#281452`,
+    LaborOfLove: `#61132b`,
+    OutstandingStoryRichGame: `#183e4e`,
+    OutstandingVisualStyle: `#222344`,
+    SitBackAndRelax: `#1e2d5c`,
+    ThisIsMyJobNow: `#4c1a30`,
+    VRGOTY: `#3b5e3e`,
+  },
+  nCategoryEdgeDarkenPercent: 35,
+  mapCategoryEdgeColors: {},
+};
 function _(_) {
   return _[_];
 }
 var _ = (0, _.default)(`2026-11-23T09:30:00-08:00`).unix(),
   _ = (0, _.default)(`2026-11-30T10:00:00-08:00`).unix();
 function _() {
-  return 2025;
+  return 2026;
 }
 function _(_) {
   return `${_.MEDIA_CDN_URL}store/promo/${_}`;

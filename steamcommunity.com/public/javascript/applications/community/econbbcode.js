@@ -583,30 +583,32 @@ function G() {
     i = !!e.sealed && e.sealed_type == 1;
   if (!e.marketable && e.sealed_type != 1) return null;
   let a = e.market_hash_name || e.market_name || e.name;
-  return a
-    ? (0, T.jsx)(qe, {
-        eWalletCurrency: r,
-        appid: e.appid,
-        hashName: a,
-        bCanInteract: n,
-        bItemSealed: i,
-        assetid: t?.assetid,
-      })
-    : null;
+  if (!a) return null;
+  let o = e.market_bucket_group_id || a;
+  return (0, T.jsx)(qe, {
+    eWalletCurrency: r,
+    appid: e.appid,
+    hashName: a,
+    listingName: o,
+    bCanInteract: n,
+    bItemSealed: i,
+    assetid: t?.assetid,
+  });
 }
 function qe(e) {
   let {
       eWalletCurrency: t,
       appid: n,
       hashName: r,
-      bCanInteract: i,
-      bItemSealed: a,
-      assetid: o,
+      listingName: i,
+      bCanInteract: a,
+      bItemSealed: o,
+      assetid: s,
     } = e,
-    { data: s, isLoading: c } = Xe(t, n, r);
-  return !i && !s?.lowest_price && !s?.volume && !c
+    { data: c, isLoading: l } = Xe(t, n, r);
+  return !a && !c?.lowest_price && !c?.volume && !l
     ? null
-    : a
+    : o
       ? (0, T.jsx)(f, {
           background: `greyneutral-3`,
           padding: `4`,
@@ -614,7 +616,7 @@ function qe(e) {
           direction: `column`,
           children: (0, T.jsx)(x, {
             color: `dull`,
-            href: `${_.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(r)}${o ? `?sellorderassetid=${o}` : ``}`,
+            href: `${_.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(i)}${s ? `?sellorderassetid=${s}` : ``}`,
             size: `1`,
             children: A(`#SellOnMarket_ViewListing`),
           }),
@@ -625,15 +627,15 @@ function qe(e) {
           gapY: `3`,
           direction: `column`,
           children: [
-            (0, T.jsx)(Je, { isLoading: c, priceOverview: s }),
-            i &&
+            (0, T.jsx)(Je, { isLoading: l, priceOverview: c }),
+            a &&
               (0, T.jsx)(x, {
                 size: `1`,
                 color: `dull`,
-                href: `${_.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(r)}`,
+                href: `${_.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(i)}`,
                 children: A(`#SellOnMarket_View`),
               }),
-            i && !a && (0, T.jsx)(Ye, {}),
+            a && !o && (0, T.jsx)(Ye, {}),
           ],
         });
 }
