@@ -333,7 +333,6 @@ $ORIGIN
 /tmp/dumps
 /usr
 /usr/bin/crosdisk %s
-00:21:02
 0123456789
 0123456789ABCDEF
 0123456789ABCDEFN15google_breakpad11LinuxDumperE
@@ -365,6 +364,7 @@ $ORIGIN
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
+22:23:24
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -592,7 +592,7 @@ No Error
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-Nov 19 2026
+Nov 24 2026
 OUT OF MEMORY
 Object
 Only thread can stop self: Use a higher-level protocol
@@ -1341,7 +1341,7 @@ sched_get_priority_min
 sched_setaffinity
 sched_yield
 script
-sdk32
+sdk64
 secblock.h
 section_size
 section_start

@@ -18466,6 +18466,11 @@ var CCallbackList = class {
               _: ReaderProto.readBool,
               _: WriterProto.writeBool,
             },
+            screen_refresh_rate: {
+              _: 21,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
           },
         }),
         _.sm_m

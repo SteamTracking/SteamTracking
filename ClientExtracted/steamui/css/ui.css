@@ -27827,9 +27827,17 @@ body.in_global_drag.drag_type_chatroomgroup
   .chatWindow.MultiUserChat
   .dropTargetBox,
 body.in_global_drag.drag_type_chattab .chatRoomVoiceChannel .dropTargetBox,
-body.in_global_drag.drag_type_chattab .friendGroup.taggedGroup .dropTargetBox,
+body.in_global_drag:not(.drag_type_friend)
+  .friendGroup.taggedGroup
+  .dropTargetBox,
+body.in_global_drag:not(.drag_type_friend):not(.drag_type_chatroomgroup):not(
+    .drag_type_clan
+  ):not(.drag_type_chattab)
+  .quickAccessFriends
+  .dropTargetBox,
 body.in_global_drag.drag_type_chattab .chatBody .dropTargetBox,
-body.in_global_drag.drag_source_chatmemberlist .chatBody .dropTargetBox {
+body.in_global_drag.drag_source_chatmemberlist .chatBody .dropTargetBox,
+body.in_global_drag.drag_type_rptcontroller .dropTargetBox {
   opacity: 0;
 }
 .favoriteElement {
@@ -27885,7 +27893,10 @@ body.in_global_drag.drag_source_chatmemberlist .chatBody .dropTargetBox {
   transition: all 0.32s ease-in-out;
   display: flex;
 }
-body.in_global_drag .quickAccessFriendsMessage {
+body.in_global_drag.drag_type_friend .quickAccessFriendsMessage,
+body.in_global_drag.drag_type_chatroomgroup .quickAccessFriendsMessage,
+body.in_global_drag.drag_type_clan .quickAccessFriendsMessage,
+body.in_global_drag.drag_type_chattab .quickAccessFriendsMessage {
   border: 1px dashed #00d9ff00;
 }
 .quickAccessFriends.emptyQuickAccess .quickAccessFriendsMessageDismiss {
@@ -27919,7 +27930,11 @@ body.in_global_drag .quickAccessFriendsMessage {
   height: 0;
   margin-top: -6px;
 }
-body.in_global_drag .quickAccessFriends.emptyQuickAccess {
+body.in_global_drag.drag_type_friend .quickAccessFriends.emptyQuickAccess,
+body.in_global_drag.drag_type_chatroomgroup
+  .quickAccessFriends.emptyQuickAccess,
+body.in_global_drag.drag_type_clan .quickAccessFriends.emptyQuickAccess,
+body.in_global_drag.drag_type_chattab .quickAccessFriends.emptyQuickAccess {
   height: 48px;
   margin-top: 0;
 }
@@ -67203,6 +67218,9 @@ button.oBYoSZy2Olg- svg {
   to {
     opacity: 0;
   }
+}
+.BKIqsFqO4Xs- {
+  color: #ffc82c;
 }
 .iuLDuU0AzVE- {
   align-items: center;

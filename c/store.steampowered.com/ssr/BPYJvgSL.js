@@ -5194,7 +5194,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Store.GetRecommendedTagsForUser#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   _.GetRecommendedTagsForUser = _;

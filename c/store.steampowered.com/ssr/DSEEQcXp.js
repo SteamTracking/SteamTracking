@@ -4391,7 +4391,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`store`],
+        rgBrowserAPISites: [`store`, `checkout`],
       },
     );
   }
@@ -4405,7 +4405,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`store`],
+        rgBrowserAPISites: [`store`, `checkout`],
       },
     );
   }

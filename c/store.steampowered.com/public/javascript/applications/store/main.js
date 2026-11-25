@@ -22530,7 +22530,7 @@ var _ = _(),
     return _.SendMsg(`Store.GetRecommendedTagsForUser#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   _.GetRecommendedTagsForUser = _;
@@ -86412,26 +86412,6 @@ var _ = 50,
   _([_], _.prototype, `m_rtMostRecentEmoticon`, void 0),
   _([_], _.prototype, `m_rtLastStickerOrEffect`, void 0),
   _([_], _.prototype, `TrackEmoticonUsage`, null));
-function _(_) {
-  let { tagid: _, language: _ = _.LANGUAGE } = _;
-  return _(_, _) || String(_);
-}
-function _(_, _ = _.LANGUAGE) {
-  let _ = _(_, _);
-  return `${_.STORE_BASE_URL}tags/${_(_)}/${_}`;
-}
-function _(_) {
-  let { tagID: _, className: _ } = _,
-    _ = _(_(_));
-  return (0, _.jsx)(_, {
-    className: _,
-    href: _,
-    role: `listitem`,
-    children: (0, _.jsx)(_, {
-      tagid: _,
-    }),
-  });
-}
 var _ = `fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb`;
 function _(_, _) {
   let _ = `0000000000000000000000000000000000000000`;
@@ -86470,6 +86450,26 @@ function _(_) {
         .map((_) => _.toString(16).padStart(2, `0`))
         .join(``)
     : ``;
+}
+function _(_) {
+  let { tagid: _, language: _ = _.LANGUAGE } = _;
+  return _(_, _) || String(_);
+}
+function _(_, _ = _.LANGUAGE) {
+  let _ = _(_, _);
+  return `${_.STORE_BASE_URL}tags/${_(_)}/${_}`;
+}
+function _(_) {
+  let { tagID: _, className: _ } = _,
+    _ = _(_(_));
+  return (0, _.jsx)(_, {
+    className: _,
+    href: _,
+    role: `listitem`,
+    children: (0, _.jsx)(_, {
+      tagid: _,
+    }),
+  });
 }
 function _(_) {
   return _;
@@ -92598,7 +92598,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`store`],
+        rgBrowserAPISites: [`store`, `checkout`],
       },
     );
   }
@@ -92612,7 +92612,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`store`],
+        rgBrowserAPISites: [`store`, `checkout`],
       },
     );
   }
@@ -94575,7 +94575,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   _.GetItemsToFeature = _;

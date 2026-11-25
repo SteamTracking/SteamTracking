@@ -2,7 +2,7 @@ import {
   Bn as e,
   Ma as t,
   fi as n,
-} from "./chunk~3126832f23.js?contenthash=Bx8rJGPC";
+} from "./chunk~3126832f23.js?contenthash=B40GC_DU";
 function r(e) {
   if (e === void 0)
     return (console.error(`Cannot GetHostname on empty URL`), ``);

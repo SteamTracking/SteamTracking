@@ -10580,6 +10580,7 @@ CClientJobPostLogon
 CClientJobPrepareForSuspend
 CClientJobPurchaseWithActivationCode
 CClientJobReadAppInfoLocCacheFromDisk
+CClientJobRecordRemotePlayStarted
 CClientJobRedeemGuestPass
 CClientJobRegisterController
 CClientJobRegisterOEMMachine
@@ -12883,6 +12884,7 @@ Client requested VirtualHere support, but isn't on the same network, ignoring
 Client requested VirtualHere support, installing application
 Client requested VirtualHere support, redirecting to Steam Store
 Client requested VirtualHere support, starting application
+Client resolution: %ux%u, maximum capture: %ux%u %.2f FPS
 ClientAPI_Init(GlobalInstance): GetIClientAppManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientAudio returned NULL.
@@ -18314,7 +18316,6 @@ MaxResults
 MaxServerBrowserPingsPerMin
 MaxUseCount
 Maximize
-Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
 MaybeAllocateAligned cannot fail here.
@@ -19961,7 +19962,7 @@ NotifyText: %s
 NotifyTouchDown
 NotifyTouchMotion
 NotifyTouchUp
-Nov 19 2026 00:21:11
+Nov 24 2026 22:23:33
 November
 NullMetrics()
 Num Lock

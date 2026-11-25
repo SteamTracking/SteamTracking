@@ -1352,7 +1352,6 @@ ${STORE_BASE_URL}${_ ? "events/ajaxgeteventdetailsforedit/" : "events/ajaxgeteve
 ${STORE_BASE_URL}${_ ? `events/ajaxgeteventdetailsforedit/` : `events/ajaxgeteventdetails/`}
 ${STORE_BASE_URL}${_ ? `saleaction/ajaxpreviewgetsaledynamicappqueryforuser` : `saleaction/ajaxgetsaledynamicappqueryforuser`}
 ${STORE_BASE_URL}${_ ? `saleaction/ajaxpreviewsaledynamicappquery` : `saleaction/ajaxgetsaledynamicappquery`}
-${STORE_BASE_URL}${_yi}
 ${STORE_BASE_URL}${image_url}
 ${STORE_BASE_URL}${m_strStoreURLPath}
 ${STORE_BASE_URL}${newshubUrl}
@@ -1365,6 +1364,7 @@ ${STORE_BASE_URL}${type}
 ${STORE_BASE_URL}${url_path}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${v8e}?gid=${}
+${STORE_BASE_URL}${xyi}
 ${STORE_BASE_URL}${y8e}
 ${STORE_BASE_URL}${}
 ${STORE_BASE_URL}${}${_ ? `?${}` : ``}

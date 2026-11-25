@@ -291,9 +291,9 @@ import { n as an } from "./chunk~0278ae6236.js";
 import { r as on } from "./chunk~a243b6a34b.js";
 import { a as sn } from "./chunk~a7c5e71e12.js";
 import { i as cn, o as ln } from "./chunk~221bff5eed.js";
-import { Et as un } from "./chunk~d8bbc3d946.js";
-import { t as dn } from "./chunk~5e5f1b9ccf.js";
-import { n as fn } from "./chunk~d902bc74d6.js";
+import { n as un } from "./chunk~d902bc74d6.js";
+import { Et as dn } from "./chunk~d8bbc3d946.js";
+import { t as fn } from "./chunk~5e5f1b9ccf.js";
 import {
   a as pn,
   i as mn,
@@ -2666,7 +2666,7 @@ function Ml(e) {
                 className: Al,
                 children: [
                   (0, J.jsx)(h, { id: n }),
-                  (0, J.jsx)(fn, { appid: t, className: jl, bTextMode: !0 }),
+                  (0, J.jsx)(un, { appid: t, className: jl, bTextMode: !0 }),
                 ],
               }),
             ],
@@ -8773,7 +8773,7 @@ function qg(e) {
     } = e.stats,
     { data: a } = Rt(B.steamid);
   q.use(Z.Ready());
-  let o = `${dn(a, B.steamid)}/stats/appid/${i}`,
+  let o = `${fn(a, B.steamid)}/stats/appid/${i}`,
     s = co({ appid: i });
   return (0, J.jsxs)(C, {
     direction: `column`,
@@ -11648,13 +11648,13 @@ var $b = `aixRG9poJe8-`,
 function tx(e) {
   let t = Pn(),
     { data: n } = Rt(t);
-  return dn(n, t) + `/friendsthatplay/${e}`;
+  return fn(n, t) + `/friendsthatplay/${e}`;
 }
 function nx(e) {
   let { accountid: t, appid: n, bLinkToReview: r, bShowName: i, friend: a } = e,
     o = Rt(t);
   if (!o.data || !o.data.public_data) return null;
-  let s = r ? `${dn(o.data)}/recommended/${n}` : dn(o.data),
+  let s = r ? `${fn(o.data)}/recommended/${n}` : fn(o.data),
     c = o.data.public_data.persona_name;
   return (0, J.jsx)(Qb, {
     steamid: o.data.public_data.steamid,
@@ -12479,7 +12479,7 @@ function CS(e, t, n) {
   return {
     queryKey: xS(t, n),
     queryFn: async () => {
-      let r = await un.GetIndividualRecommendations(e, {
+      let r = await dn.GetIndividualRecommendations(e, {
         requests: [{ steamid: t, appid: n }],
       });
       if (r.GetEResult() == 42) return null;
@@ -12505,7 +12505,7 @@ function ES(e) {
   let { review: t, eAppType: n, nSteamworksAppid: r, onEdit: i } = e,
     { data: a } = Rt(B.steamid);
   q.use(Z.Ready());
-  let o = Ie(dn(a, B.steamid), r),
+  let o = Ie(fn(a, B.steamid), r),
     s = t.is_public
       ? `#AppPage_OwnReview_PostedPublic`
       : `#AppPage_OwnReview_PostedFriendsOnly`;

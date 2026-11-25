@@ -12844,6 +12844,7 @@ var uu;
     return e.SendMsg(`ChatRoom.ResolveReport#1`, x(Kl, t, n), ql, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
+      rgBrowserAPISites: [`community`],
     });
   }
   e.ResolveReport = we;
@@ -32579,6 +32580,7 @@ var wm = class e extends G.Message {
     return e.SendMsg(`FriendMessages.ResolveReport#1`, x(Hre, t, n), Ure, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
+      rgBrowserAPISites: [`community`],
     });
   }
   e.ResolveReport = l;

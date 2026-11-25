@@ -16,7 +16,11 @@
   font-size: 16px;
   font-weight: 700;
 }
-.KEbr-r5C7cE-:empty {
+.KEbr-r5C7cE-:empty,
+.KEbr-r5C7cE-:has(
+  > .s6hecFdeZa0-:empty:not([style]),
+  > :not(.KEbr-r5C7cE-) > .s6hecFdeZa0-:empty:not([style])
+) {
   display: none;
 }
 /*$vite$:1*/

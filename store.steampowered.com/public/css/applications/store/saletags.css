@@ -1211,6 +1211,13 @@ html.responsive.touch:not(.GamepadMode) .-Rv33oXsbT0- .raYV6Y-MQ7I- {
     box-shadow: unset;
     align-content: center;
   }
+  .PaginationPillsPage .DfwzMU92EL4- {
+    position: absolute;
+    top: -18px;
+  }
+  .PaginationPillsPage .DfwzMU92EL4- span {
+    box-shadow: 1px 1px 3px #000a;
+  }
 }
 .lOHW8g-YyoY- .DfwzMU92EL4- {
   top: 50%;

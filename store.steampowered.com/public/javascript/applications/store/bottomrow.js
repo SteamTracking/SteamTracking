@@ -38,11 +38,11 @@ import {
   $c as N,
   Dl as P,
   Ed as F,
-  H as ee,
-  Ic as te,
-  Kc as I,
-  Pc as L,
-  Vc as R,
+  Ic as ee,
+  Kc as te,
+  Pc as I,
+  Vc as L,
+  W as R,
   Wv as z,
   Zt as ne,
   Zv as re,
@@ -137,8 +137,8 @@ function Pe(e) {
       bShowEarlyAccessBanner: u,
       bUsePanel: !o && !f,
     });
-  return (0, Z.jsxs)(R, {
-    className: L({ [s]: !0, [Q + i]: i == 0 }),
+  return (0, Z.jsxs)(L, {
+    className: I({ [s]: !0, [Q + i]: i == 0 }),
     navEntryPreferPosition: P.PREFERRED_CHILD,
     navKey: a,
     onFocusWithin: v,
@@ -219,7 +219,7 @@ function Fe(e) {
                 loading: `lazy`,
                 className: Y,
                 alt: r.name || ``,
-                src: te(l, `small_capsule`),
+                src: ee(l, `small_capsule`),
                 ...G(),
               }),
             }),
@@ -249,15 +249,15 @@ function Ie(e) {
     g = y(t),
     { data: _ } = z(t);
   if (!_) return null;
-  let v = r ? void 0 : N(I(`${T(_, u)}${i ? `?${i}` : ``}`, p, m)),
-    b = r ? R : ie,
+  let v = r ? void 0 : N(te(`${T(_, u)}${i ? `?${i}` : ``}`, p, m)),
+    b = r ? L : ie,
     S = c && h,
     C = S && o == `library`,
     k = !!l;
   return (0, Z.jsxs)(Z.Fragment, {
     children: [
       (0, Z.jsxs)(`div`, {
-        className: L({ [Oe]: k }),
+        className: I({ [Oe]: k }),
         children: [
           (0, Z.jsxs)(b, {
             href: v,
@@ -266,7 +266,7 @@ function Ie(e) {
               cursor: `pointer`,
               position: h ? `relative` : void 0,
             },
-            className: L({ [ke]: k }),
+            className: I({ [ke]: k }),
             preferredFocus: s,
             focusable: !0,
             children: [
@@ -283,7 +283,7 @@ function Ie(e) {
                 }),
               (0, Z.jsx)(E, { id: t }),
               (0, Z.jsx)(`div`, {
-                className: L({ [Me]: S, [Ne]: C }),
+                className: I({ [Me]: S, [Ne]: C }),
                 children: (0, Z.jsx)(x, {
                   id: t,
                   active: c,
@@ -305,7 +305,7 @@ function Le(e) {
     { data: i } = re(t),
     { data: o } = H(t);
   return (0, Z.jsxs)(`div`, {
-    className: L(Ae, `TwoWidthSideInfo`),
+    className: I(Ae, `TwoWidthSideInfo`),
     children: [
       (0, Z.jsx)(`div`, { className: X, children: n }),
       (0, Z.jsx)(`div`, {
@@ -380,19 +380,19 @@ function $(e) {
       !(!c && !f && !v && o && n) &&
         (0, Z.jsxs)(`div`, {
           ref: m,
-          className: L(`fNtXEMzHz58-`, `CapsuleBottomBar`, s),
+          className: I(`fNtXEMzHz58-`, `CapsuleBottomBar`, s),
           children: [
             c && (0, Z.jsx)(Be, { creatorAccountID: c, ...e }),
             f &&
               (0, Z.jsx)(i, {
                 id: t,
-                className: L(`RAahmG4F6sc-`, `oqhyMK1Krt0-`),
+                className: I(`RAahmG4F6sc-`, `oqhyMK1Krt0-`),
               }),
             v &&
               `appid` in t &&
               (0, Z.jsx)(M, {
                 appid: t.appid,
-                className: L(`RAahmG4F6sc-`, `GRw4r5TpD5s-`),
+                className: I(`RAahmG4F6sc-`, `GRw4r5TpD5s-`),
               }),
             !o &&
               (0, Z.jsx)(l, { id: t, bMinimizePlatforms: h, bHideWindows: !0 }),
@@ -422,12 +422,12 @@ function Be(e) {
     { data: i } = z(r),
     { data: a } = W(r);
   if (!i) return null;
-  let o = ee(a?.clan_avatar, `Medium`),
+  let o = R(a?.clan_avatar, `Medium`),
     s = i.name || ``;
   return (0, Z.jsxs)(`div`, {
-    className: L(f, n),
+    className: I(f, n),
     children: [
-      (0, Z.jsx)(`img`, { className: L(v), src: o, alt: s }),
+      (0, Z.jsx)(`img`, { className: I(v), src: o, alt: s }),
       (0, Z.jsx)(`span`, { className: u, children: s }),
     ],
   });

@@ -33,6 +33,7 @@ import {
   _,
   _,
   _,
+  _,
 } from "./main.js";
 import { _ } from "./chunk~6417efccc1.js";
 var _ = _(_(), 1),
@@ -122,6 +123,8 @@ function _(_) {
 var _ = 3,
   _ = 6,
   _ = 2,
+  _ = 1,
+  _ = 3,
   _ = 2,
   _ = parseInt(_),
   _ = parseInt(_),
@@ -229,19 +232,21 @@ function _(_) {
     _ = _(_),
     _ = _(),
     _ = _ && !_,
-    _ =
-      _.strSeeMoreURL === null
-        ? void 0
-        : (_.strSeeMoreURL ?? `${_.STORE_BASE_URL}specials`),
-    _ = _(_),
+    _ = _ && _.EREALM != _.k_ESteamRealmChina,
     _ = _.Localize(
       _
         ? `#DiscountsAndEvents_ExploreSpecialsPage`
         : `#DiscountsAndEvents_SeeMore`,
     ),
+    _ =
+      _.strSeeMoreURL === null
+        ? void 0
+        : (_.strSeeMoreURL ?? `${_.STORE_BASE_URL}specials`),
+    _ = _(_),
     { bShowSeeMoreHint: _, panelProps: _ } = _(_, `X`),
     { rgPages: _, rgColumns: _ } = _.useMemo(() => {
-      let _ = _(_ ?? [], _, _, _, _);
+      let _ = _ && _.EREALM == _.k_ESteamRealmChina,
+        _ = _(_ ?? [], _, _ ? _ : _, _, _ ? _ : _);
       return (
         _ && _.length > 1 && _[_.length - 1].length < _ && (_ = _.slice(0, -1)),
         {

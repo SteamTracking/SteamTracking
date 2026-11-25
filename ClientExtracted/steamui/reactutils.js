@@ -8,7 +8,7 @@ import {
   fi as a,
   rt as o,
   v as s,
-} from "./chunk~3126832f23.js?contenthash=Bx8rJGPC";
+} from "./chunk~3126832f23.js?contenthash=B40GC_DU";
 var c = null;
 try {
   c = new WebAssembly.Instance(

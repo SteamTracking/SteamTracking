@@ -483,20 +483,20 @@ import { a as Co, n as wo, t as To } from "./chunk~a7c5e71e12.js";
 import { r as Eo } from "./chunk~221bff5eed.js";
 import { v as Do, y as Oo } from "./chunk~3720b337f3.js";
 import { t as ko } from "./chunk~166d91af35.js";
-import { i as Ao } from "./chunk~aeb15068c6.js";
+import { t as Ao } from "./chunk~d902bc74d6.js";
+import { i as jo } from "./chunk~aeb15068c6.js";
 import {
-  At as jo,
-  Dt as Mo,
-  Mt as No,
-  Ot as Po,
-  jt as Fo,
-  t as Io,
-  vt as Lo,
-  yt as Ro,
+  At as Mo,
+  Dt as No,
+  Mt as Po,
+  Ot as Fo,
+  jt as Io,
+  t as Lo,
+  vt as Ro,
+  yt as zo,
 } from "./chunk~d8bbc3d946.js";
-import { n as zo, r as Bo, t as Vo } from "./chunk~9e9862dda3.js";
-import { t as Ho } from "./chunk~5e5f1b9ccf.js";
-import { t as Uo } from "./chunk~d902bc74d6.js";
+import { n as Bo, r as Vo, t as Ho } from "./chunk~9e9862dda3.js";
+import { t as Uo } from "./chunk~5e5f1b9ccf.js";
 import { n as Wo } from "./chunk~fc8a9e4879.js";
 import {
   $c as Go,
@@ -7135,7 +7135,7 @@ function ab(e) {
 function ob(e, t, n) {
   let r = e.nTagID || e.nOptInTagID;
   if (r) return t[r];
-  if (e.eContentDescriptor) return Ao(e.eContentDescriptor);
+  if (e.eContentDescriptor) return jo(e.eContentDescriptor);
   let i = Xt(e);
   return i ? V(i) : (Jo.GetWithFallback(e.rgLocalizedNames, n) ?? ``);
 }
@@ -8616,7 +8616,7 @@ function ES(e) {
   J.useEffect(() => {
     t && se.AddImpression(t, oe);
   }, [t, se, oe]);
-  let { bIsWishlisted: ce, fnUpdateWishlist: le } = jo(t);
+  let { bIsWishlisted: ce, fnUpdateWishlist: le } = Mo(t);
   J.useEffect(() => {
     ae.current !== void 0 && ae.current !== t && ((ae.current = void 0), ne(0));
   }, [t]);
@@ -8720,7 +8720,7 @@ function ES(e) {
                         "--fade-in-time": `${500 / 1e3}s`,
                       },
                     }),
-                    (0, Y.jsx)(Mo, {
+                    (0, Y.jsx)(No, {
                       appID: _e,
                       trailerBaseID: l,
                       focused: x,
@@ -8904,10 +8904,10 @@ function DS(e) {
 }
 function OS(e) {
   let { rgTagIDs: t } = e,
-    n = Po(t);
+    n = Fo(t);
   return (0, Y.jsx)(`div`, {
     className: SS,
-    children: n.map((e) => (0, Y.jsx)(Pc, { className: CS, tagID: e }, e)),
+    children: n.map((e) => (0, Y.jsx)(ks, { className: CS, tagID: e }, e)),
   });
 }
 async function kS(e, t, n, r) {
@@ -9021,7 +9021,7 @@ function IS(e, t) {
 function LS(e, t) {
   let n = ld(),
     r = NS(e) > 0 && !!Su.logged_in,
-    { data: i } = k({ ...Fo(n, Su.accountid), enabled: r }),
+    { data: i } = k({ ...Io(n, Su.accountid), enabled: r }),
     a = e?.tabs,
     o = a?.length,
     s = e?.recommended_tag_tab_count,
@@ -9658,7 +9658,7 @@ function qC(e) {
     className: rC,
     active: t,
     onDismiss: s,
-    children: [f && (0, Y.jsx)(zo, { eType: Bo.Default }), ne],
+    children: [f && (0, Y.jsx)(Bo, { eType: Vo.Default }), ne],
   });
 }
 var JC = ({ description: e }) =>
@@ -9738,7 +9738,7 @@ var XC = () => (0, Y.jsx)(`div`, { className: TC }),
         awardConfig: a,
         ...o
       } = this.props;
-      return (0, Y.jsxs)(Vo, {
+      return (0, Y.jsxs)(Ho, {
         type: `button`,
         onMouseEnter: this.handleMouseOver,
         onMouseLeave: this.handleMouseOut,
@@ -10144,7 +10144,7 @@ function DT(e) {
   if (!t.avatar) return null;
   let n = `FillArea`,
     r = new ol(t.steamid),
-    i = ks(t.avatar, n);
+    i = Uc(t.avatar, n);
   return (0, Y.jsx)(Hl, {
     className: Qw,
     "data-miniprofile": r.GetAccountID(),
@@ -21472,7 +21472,7 @@ var mP = `w45dtUVUINY-`,
 function vP(e) {
   let { nLinkAppID: t, bHasOwnReview: n } = e,
     r = Qi(n ? Su.steamid : void 0),
-    i = n ? BS(Ho(r.data, Su.steamid), t) : void 0;
+    i = n ? BS(Uo(r.data, Su.steamid), t) : void 0;
   return (0, Y.jsxs)(`div`, {
     className: mP,
     children: [
@@ -24339,10 +24339,10 @@ function oI(e) {
     let e = o[0],
       t = r?.levels?.[r.levels.length - 1].level || 1;
     return (0, Y.jsxs)(`div`, {
-      className: Lo,
+      className: Ro,
       children: [
         (0, Y.jsx)(`img`, {
-          className: Ro,
+          className: zo,
           src: e.badge_icon_url ? gu(e.badge_icon_url) : void 0,
         }),
         (0, Y.jsx)(`div`, {
@@ -27988,7 +27988,7 @@ function cR(e) {
           showDemoInfo: !0,
         }),
         (i || Yl() || m) &&
-          (0, Y.jsx)(No, { count: l, selectedIndex: a, fnNavigate: u }),
+          (0, Y.jsx)(Po, { count: l, selectedIndex: a, fnNavigate: u }),
       ],
     })
   );
@@ -34633,7 +34633,7 @@ function _U(e) {
                   })
                 : (0, Y.jsx)(`div`, {
                     className: PH,
-                    children: (0, Y.jsx)(Uo, {
+                    children: (0, Y.jsx)(Ao, {
                       appid: n.appid,
                       bIsFree: !!n.is_free,
                       bIsComingSoon: !!n.is_coming_soon,
@@ -34662,7 +34662,7 @@ function vU(e) {
                 `div`,
                 {
                   className: `pNXxwljIaD8-`,
-                  children: (0, Y.jsx)(Uc, { tagid: e.tagid }),
+                  children: (0, Y.jsx)(Pc, { tagid: e.tagid }),
                 },
                 e.tagid,
               ),
@@ -36786,7 +36786,7 @@ function sG(e, t, n, r, i, a, o, s, c, l) {
             )));
         let y = p.slice(c, c + aG).map((e) => e.id);
         (await Promise.all([
-          G.Get().QueueMultipleAppRequests(y, Io),
+          G.Get().QueueMultipleAppRequests(y, Lo),
           kS(_, v, y, t.prefer_demo_store_page),
         ]),
           !d.signal.aborted && (m((l ?? []).concat(p)), f(!1)));

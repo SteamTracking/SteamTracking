@@ -523,7 +523,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button a"
+							"binding"		"xinput_button x"
 						}
 					}
 				}
@@ -536,7 +536,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"xinput_button x"
+							"binding"		"xinput_button a"
 						}
 					}
 				}

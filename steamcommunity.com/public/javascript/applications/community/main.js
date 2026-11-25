@@ -77950,6 +77950,7 @@ var kQ;
     return e.SendMsg(`ChatRoom.ResolveReport#1`, F(dQ, t, n), fQ, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
+      rgBrowserAPISites: [`community`],
     });
   }
   e.ResolveReport = C;
@@ -79566,6 +79567,7 @@ var PQ = class e extends T.Message {
     return e.SendMsg(`FriendMessages.ResolveReport#1`, F(t$, t, n), n$, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
+      rgBrowserAPISites: [`community`],
     });
   }
   e.ResolveReport = l;

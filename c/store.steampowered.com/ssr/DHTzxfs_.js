@@ -7064,7 +7064,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`StoreCatalog.GetDevPageAllAppsLinked#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`, `help`],
+      rgBrowserAPISites: [`partner`, `community`, `store`, `help`, `checkout`],
     });
   }
   _.GetDevPageAllAppsLinked = _;

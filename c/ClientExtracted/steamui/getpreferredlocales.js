@@ -1,4 +1,4 @@
-import { _, _ } from "./chunk~3126832f23.js?contenthash=Bx8rJGPC";
+import { _, _ } from "./chunk~3126832f23.js?contenthash=B40GC_DU";
 function _() {
   return _().languages.map((_) => _(_.strISOCode));
 }

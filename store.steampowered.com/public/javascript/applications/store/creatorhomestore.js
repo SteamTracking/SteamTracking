@@ -840,7 +840,7 @@ var k = e(n(), 1),
   function r(e, t, n) {
     return e.SendMsg(`StoreCatalog.GetDevPageAllAppsLinked#1`, c(F, t, n), I, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`, `help`],
+      rgBrowserAPISites: [`partner`, `community`, `store`, `help`, `checkout`],
     });
   }
   e.GetDevPageAllAppsLinked = r;

@@ -382,6 +382,7 @@ message UserSystemInformation {
 	optional uint32 screen_width = 18;
 	optional uint32 screen_height = 19;
 	optional bool precise_frame_rate = 20;
+	optional uint32 screen_refresh_rate = 21;
 }
 
 message GamePerformanceSettings {

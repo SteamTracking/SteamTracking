@@ -13,7 +13,7 @@ import {
   _,
   _,
   _,
-} from "./chunk~3126832f23.js?contenthash=Bx8rJGPC";
+} from "./chunk~3126832f23.js?contenthash=B40GC_DU";
 var _ = _(_(), 1),
   _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}

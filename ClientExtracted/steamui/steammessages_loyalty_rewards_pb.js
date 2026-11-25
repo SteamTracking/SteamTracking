@@ -10,7 +10,7 @@ import {
   vi as c,
   xi as l,
   yi as u,
-} from "./chunk~3126832f23.js?contenthash=Bx8rJGPC";
+} from "./chunk~3126832f23.js?contenthash=B40GC_DU";
 var d = e(t(), 1),
   f = class e extends d.Message {
     static ImplementsStaticInterface() {}

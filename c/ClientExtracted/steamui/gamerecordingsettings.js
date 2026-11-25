@@ -10,4 +10,4 @@ export {
   _ as useGameRecordingSetting,
   _ as useGameRecordingShortcuts,
   _ as useToggleForegroundRecordingShortcut,
-} from "./chunk~5ad53110ba.js?contenthash=1ilwDMsN";
+} from "./chunk~5ad53110ba.js?contenthash=haYcbzyQ";

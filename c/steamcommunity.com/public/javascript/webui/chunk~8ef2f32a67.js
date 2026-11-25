@@ -14895,6 +14895,7 @@ var _;
     return _.SendMsg(`ChatRoom.ResolveReport#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.ResolveReport = _;
@@ -37016,6 +37017,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FriendMessages.ResolveReport#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.ResolveReport = _;

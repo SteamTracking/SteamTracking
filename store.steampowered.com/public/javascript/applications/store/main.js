@@ -18571,7 +18571,7 @@ var W = he(),
     return e.SendMsg(`Store.GetRecommendedTagsForUser#1`, I(Ks, t, n), qs, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   e.GetRecommendedTagsForUser = n;
@@ -75168,30 +75168,12 @@ var n2 = 50,
   B([we], i2.prototype, `m_rtMostRecentEmoticon`, void 0),
   B([we], i2.prototype, `m_rtLastStickerOrEffect`, void 0),
   B([ae], i2.prototype, `TrackEmoticonUsage`, null));
-function a2(e) {
-  let { tagid: t, language: n = R.LANGUAGE } = e;
-  return Jv(t, n) || String(t);
-}
-function o2(e, t = R.LANGUAGE) {
-  let n = Jv(e, t);
-  return `${R.STORE_BASE_URL}tags/${ro(t)}/${n}`;
-}
-function s2(e) {
-  let { tagID: t, className: n } = e,
-    r = sx(o2(t));
-  return (0, W.jsx)(JE, {
-    className: n,
-    href: r,
-    role: `listitem`,
-    children: (0, W.jsx)(a2, { tagid: t }),
-  });
-}
-var c2 = `fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb`;
-function l2(e, t) {
+var a2 = `fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb`;
+function o2(e, t) {
   let n = `0000000000000000000000000000000000000000`;
-  typeof e == `string` ? (n = e) : e && (n = u2(e) || n);
+  typeof e == `string` ? (n = e) : e && (n = s2(e) || n);
   let r = `.jpg`;
-  (n === `0000000000000000000000000000000000000000` && (n = c2),
+  (n === `0000000000000000000000000000000000000000` && (n = a2),
     n.length == 44 && ((r = n.slice(-4)), (n = n.slice(0, 40))));
   let i = R.AVATAR_BASE_URL;
   switch (
@@ -75215,7 +75197,7 @@ function l2(e, t) {
   }
   return ((i += r), i);
 }
-function u2(e) {
+function s2(e) {
   return e
     ? (typeof e[Symbol.iterator] == `function`
         ? Array.from(e)
@@ -75224,6 +75206,24 @@ function u2(e) {
         .map((e) => e.toString(16).padStart(2, `0`))
         .join(``)
     : ``;
+}
+function c2(e) {
+  let { tagid: t, language: n = R.LANGUAGE } = e;
+  return Jv(t, n) || String(t);
+}
+function l2(e, t = R.LANGUAGE) {
+  let n = Jv(e, t);
+  return `${R.STORE_BASE_URL}tags/${ro(t)}/${n}`;
+}
+function u2(e) {
+  let { tagID: t, className: n } = e,
+    r = sx(l2(t));
+  return (0, W.jsx)(JE, {
+    className: n,
+    href: r,
+    role: `listitem`,
+    children: (0, W.jsx)(c2, { tagid: t }),
+  });
 }
 function d2(e) {
   return rs;
@@ -80702,7 +80702,11 @@ var W5 = class e extends w.Message {
       `UserStoreVisit.GetFrequentlyVisitedPages#1`,
       I(K5, t, n),
       q5,
-      { bConstMethod: !0, ePrivilege: 1, rgBrowserAPISites: [`store`] },
+      {
+        bConstMethod: !0,
+        ePrivilege: 1,
+        rgBrowserAPISites: [`store`, `checkout`],
+      },
     );
   }
   e.GetFrequentlyVisitedPages = t;
@@ -80715,7 +80719,7 @@ var W5 = class e extends w.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`store`],
+        rgBrowserAPISites: [`store`, `checkout`],
       },
     );
   }
@@ -80941,9 +80945,9 @@ function xne(e) {
 function Sne(e) {
   let { featuredTag: t } = e,
     { unTagID: n } = t,
-    r = sx(o2(n), `big-category-link`);
+    r = sx(l2(n), `big-category-link`);
   return (0, W.jsx)(i7, {
-    title: (0, W.jsx)(a2, { tagid: n }),
+    title: (0, W.jsx)(c2, { tagid: n }),
     href: r,
     children: (0, W.jsx)(H5, { tagid: n, className: e7 }),
   });
@@ -80965,12 +80969,12 @@ function i7(e) {
 }
 function Cne(e) {
   let { featuredLink: t } = e,
-    n = sx(o2(t.unTagID), `small-category-link`);
+    n = sx(l2(t.unTagID), `small-category-link`);
   return (0, W.jsx)(JE, {
     className: t7,
     href: n,
     fnCanTakeFocus: a7,
-    children: (0, W.jsx)(a2, { tagid: t.unTagID }),
+    children: (0, W.jsx)(c2, { tagid: t.unTagID }),
   });
 }
 function wne(e) {
@@ -82306,7 +82310,7 @@ var W7 = class e extends w.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   e.GetItemsToFeature = t;
@@ -84146,7 +84150,7 @@ function Uae(e) {
       r?.clan_avatar &&
         (0, W.jsx)(`img`, {
           className: `_3w9iIyazVV4-`,
-          src: l2(r.clan_avatar, `Medium`),
+          src: o2(r.clan_avatar, `Medium`),
           alt: ``,
         }),
       (0, W.jsx)(`div`, { className: wae, children: n?.name }),
@@ -87124,7 +87128,7 @@ export {
   Xu as Gv,
   Hn as Gx,
   Ts as Gy,
-  l2 as H,
+  u2 as H,
   V_ as H_,
   VA as Ha,
   eo as Hb,
@@ -87418,7 +87422,7 @@ export {
   Zu as Tv,
   mi as Tx,
   ol as Ty,
-  s2 as U,
+  c2 as U,
   Pf as U_,
   Gk as Ua,
   Za as Ub,
@@ -87462,7 +87466,7 @@ export {
   Mu as Vv,
   Un as Vx,
   Ns as Vy,
-  a2 as W,
+  o2 as W,
   om as W_,
   XA as Wa,
   Qa as Wb,

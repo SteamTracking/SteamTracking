@@ -23308,6 +23308,11 @@ var CMsgGCRoutingProtoBufHeader = class t
               br: ReaderProto.readBool,
               bw: WriterProto.writeBool,
             },
+            screen_refresh_rate: {
+              n: 21,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
           },
         }),
         t.sm_m

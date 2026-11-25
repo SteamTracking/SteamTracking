@@ -31,92 +31,92 @@ import {
   At as D,
   D as O,
   Dt as ee,
-  F as te,
-  H as ne,
-  I as re,
-  J as ie,
-  L as ae,
-  M as k,
-  Mt as oe,
-  N as A,
-  O as se,
-  Ot as ce,
-  P as j,
-  R as M,
-  S as le,
-  T as ue,
-  U as de,
-  V as fe,
-  W as pe,
-  X as me,
-  Z as he,
-  _ as ge,
-  _t as _e,
-  a as ve,
-  at as ye,
-  b as be,
-  bt as xe,
-  ct as Se,
-  d as Ce,
-  et as N,
-  f as we,
-  ft as Te,
-  g as Ee,
-  gt as De,
-  ht as Oe,
-  it as ke,
-  j as P,
-  kt as Ae,
-  lt as je,
-  mt as Me,
-  nt as Ne,
-  o as Pe,
-  ot as Fe,
-  p as Ie,
-  pt as Le,
-  q as Re,
-  rt as ze,
-  s as Be,
-  st as Ve,
-  t as F,
-  u as He,
-  ut as Ue,
-  w as We,
-  wt as Ge,
-  x as Ke,
-  y as qe,
-  z as Je,
+  F as k,
+  H as te,
+  I as ne,
+  J as re,
+  L as ie,
+  M as A,
+  Mt as ae,
+  N as j,
+  O as oe,
+  Ot as se,
+  P as M,
+  R as N,
+  S as ce,
+  T as le,
+  U as ue,
+  V as de,
+  W as fe,
+  X as pe,
+  Z as me,
+  _ as he,
+  _t as ge,
+  a as _e,
+  at as ve,
+  b as ye,
+  bt as be,
+  ct as xe,
+  d as Se,
+  et as P,
+  f as Ce,
+  ft as we,
+  g as Te,
+  gt as Ee,
+  ht as De,
+  it as Oe,
+  j as F,
+  kt as ke,
+  lt as Ae,
+  mt as je,
+  nt as Me,
+  o as Ne,
+  ot as Pe,
+  p as Fe,
+  pt as Ie,
+  q as Le,
+  rt as Re,
+  s as ze,
+  st as Be,
+  t as I,
+  u as Ve,
+  ut as He,
+  w as Ue,
+  wt as We,
+  x as Ge,
+  y as Ke,
+  z as qe,
 } from "./chunk~d8bbc3d946.js";
 import {
-  $c as I,
-  Ac as Ye,
-  Ba as L,
-  Dl as Xe,
+  $c as L,
+  Ac as Je,
+  Ba as R,
+  Dl as Ye,
+  H as Xe,
   Hx as Ze,
-  Ml as R,
-  Nu as z,
+  Ml as z,
+  Nu as B,
   Oc as Qe,
-  Pc as B,
+  Pc as V,
   Qu as $e,
   Sn as et,
-  U as tt,
-  Ux as nt,
-  Vc as V,
-  Vx as rt,
-  Xr as it,
-  Yo as at,
-  Zy as H,
-  ab as ot,
-  ad as st,
-  an as ct,
-  cc as lt,
-  ed as ut,
-  ex as U,
-  gl as W,
-  gt as dt,
-  hx as ft,
-  ib as G,
-  id as K,
+  Ux as tt,
+  Vc as H,
+  Vx as nt,
+  Xr as rt,
+  Yo as it,
+  Zy as U,
+  ab as at,
+  ad as ot,
+  an as st,
+  cc as ct,
+  ed as lt,
+  ex as W,
+  gl as G,
+  gt as ut,
+  hx as dt,
+  ib as K,
+  id as ft,
   kc as pt,
   lb as mt,
   m as ht,
@@ -145,7 +145,7 @@ var X = e(t()),
       a = i - (e / 100) * i,
       o = e == 100;
     return (0, Z.jsx)(`div`, {
-      className: B({ [Mt]: !0, [Nt]: o }),
+      className: V({ [Mt]: !0, [Nt]: o }),
       children: (0, Z.jsxs)(`svg`, {
         width: t,
         height: t,
@@ -174,10 +174,10 @@ var X = e(t()),
       }),
     });
   },
-  Ft = new R(`AppRelevance`).Debug;
+  Ft = new z(`AppRelevance`).Debug;
 function It(e, t) {
   let n = (0, X.useMemo)(
-    () => z.Get().GetRecommendingCuratorsForApp(e) || [],
+    () => B.Get().GetRecommendingCuratorsForApp(e) || [],
     [e],
   );
   return r({
@@ -229,7 +229,7 @@ function Lt(e) {
               .GetAllPublisherCreatorClans()
               .map((e) => ({ nAccountID: e, type: `publisher` })),
           )),
-          (e = e.filter((e) => z.Get().BIsFollowingCurator(e.nAccountID)))),
+          (e = e.filter((e) => B.Get().BIsFollowingCurator(e.nAccountID)))),
         e
       );
     }, [i]),
@@ -256,7 +256,7 @@ function Lt(e) {
           t < i;
           t++
         ) {
-          let n = H.InitFromAccountID(
+          let n = U.InitFromAccountID(
             l.data.accountids_recommended[t],
             J.EUNIVERSE,
           );
@@ -267,11 +267,11 @@ function Lt(e) {
           c.data.in_wishlist && e < c.data.in_wishlist.length && e < i;
           e++
         ) {
-          let n = new H(c.data.in_wishlist[e].steamid);
+          let n = new U(c.data.in_wishlist[e].steamid);
           t.push(n.ConvertTo64BitString());
         }
         for (let e = 0; c.data.owns && e < c.data.owns.length && e < i; e++) {
-          let t = new H(c.data.owns[e].steamid);
+          let t = new U(c.data.owns[e].steamid);
           r.push(t.ConvertTo64BitString());
         }
         return {
@@ -332,7 +332,7 @@ function Lt(e) {
             children: [
               (0, Z.jsx)(`div`, {
                 className: `Hw5Md-rtn-k-`,
-                children: G(`#DiscoveryQueue_WhyRelevant`),
+                children: K(`#DiscoveryQueue_WhyRelevant`),
               }),
               (0, Z.jsxs)(`div`, {
                 role: `list`,
@@ -340,7 +340,7 @@ function Lt(e) {
                 children: [
                   x &&
                     (0, Z.jsx)(Q, {
-                      header: G(`#DiscoveryQueue_SimilarGames`),
+                      header: K(`#DiscoveryQueue_SimilarGames`),
                       children: (0, Z.jsx)(`div`, {
                         className: `d7rsPMqqO4s-`,
                         children: v,
@@ -349,9 +349,9 @@ function Lt(e) {
                   o &&
                     !!p?.data?.length &&
                     (0, Z.jsx)(Q, {
-                      header: G(`#ContentHub_Recommendation_Curators`),
+                      header: K(`#ContentHub_Recommendation_Curators`),
                       children: (0, Z.jsx)(`div`, {
-                        className: B(`d7rsPMqqO4s-`, `GQ2d2HGUoPA-`),
+                        className: V(`d7rsPMqqO4s-`, `GQ2d2HGUoPA-`),
                         children: p.data
                           .filter(Boolean)
                           .map((e) =>
@@ -375,7 +375,7 @@ function Lt(e) {
                   b &&
                     !x &&
                     (0, Z.jsx)(Q, {
-                      header: G(`#DiscoveryQueue_RecommendedByIR`),
+                      header: K(`#DiscoveryQueue_RecommendedByIR`),
                     }),
                   (0, Z.jsx)(Vt, {
                     bShowAvatars: n,
@@ -401,7 +401,7 @@ function Lt(e) {
           }),
         !a || E == 0
           ? (0, Z.jsx)(`div`, {
-              className: B(ve, E && void 0),
+              className: V(_e, E && void 0),
               children: i.GetShortDescription(),
             })
           : (0, Z.jsx)(`div`, { "aria-label": i.GetShortDescription() }),
@@ -428,7 +428,7 @@ function Rt(e) {
         header: mt(
           n,
           (0, Z.jsx)(`span`, {
-            className: N,
+            className: P,
             children: t.clanInfo?.group_name,
           }),
         ),
@@ -440,7 +440,7 @@ function zt(e) {
     { creatorHome: n } = _(t?.clanAccountID);
   return !t || !n
     ? null
-    : (0, Z.jsx)(W, {
+    : (0, Z.jsx)(G, {
         href: n.GetCreatorHomeURL(null),
         children: (0, Z.jsx)(`img`, { src: t.avatar_medium_url }),
       });
@@ -449,7 +449,7 @@ function Bt(e) {
   let { lifetimePlaytime: t, storeItem: n } = e,
     r = _t(n);
   return (0, Z.jsx)(`div`, {
-    className: je,
+    className: Ae,
     children: (0, Z.jsx)(l, {
       id: r,
       bHidePrice: !0,
@@ -459,7 +459,7 @@ function Bt(e) {
         style: { minWidth: `320px`, zIndex: 5e3 },
       },
       children: (0, Z.jsx)(`img`, {
-        className: Ue,
+        className: He,
         alt: n.GetName(),
         src: n.GetAssets().GetSmallCapsuleURL(),
       }),
@@ -474,7 +474,7 @@ function Vt(e) {
           header: mt(r + `_Single`, (0, Z.jsx)(Ht, { steamid: t[0] })),
         })
       : (0, Z.jsx)(Q, {
-          header: vt(r, n, (0, Z.jsx)(`span`, { className: N })),
+          header: vt(r, n, (0, Z.jsx)(`span`, { className: P })),
           children:
             i &&
             t.length > 0 &&
@@ -495,7 +495,7 @@ function Ht(e) {
     ? null
     : (0, Z.jsx)(`span`, {
         "data-miniprofile": `s` + n.m_steamid.ConvertTo64BitString(),
-        className: N,
+        className: P,
         children: n.m_strPlayerName,
       });
 }
@@ -523,7 +523,7 @@ function Wt(e) {
   let { steamid: t } = e,
     { data: n } = x(t);
   return n
-    ? (0, Z.jsxs)(V, {
+    ? (0, Z.jsxs)(H, {
         className: E,
         "data-miniprofile": `s` + t,
         children: [
@@ -533,7 +533,7 @@ function Wt(e) {
             statusPosition: `right`,
           }),
           (0, Z.jsx)(Ot, {
-            className: pe,
+            className: fe,
             persona: n,
             eFriendRelationship: 3,
             bIsSelf: !1,
@@ -551,15 +551,15 @@ function Q(e) {
   return (0, Z.jsxs)(`div`, {
     className: T,
     children: [
-      (0, Z.jsx)(`div`, { className: me, children: (0, Z.jsx)(yt, {}) }),
+      (0, Z.jsx)(`div`, { className: pe, children: (0, Z.jsx)(yt, {}) }),
       (0, Z.jsxs)(`div`, {
-        className: he,
+        className: me,
         children: [(0, Z.jsx)(`div`, { className: void 0, children: n }), t],
       }),
     ],
   });
 }
-new R(`DiscoveryQueueApp`).Debug;
+new z(`DiscoveryQueueApp`).Debug;
 function Gt(e) {
   let {
       appID: t,
@@ -574,11 +574,11 @@ function Gt(e) {
       elDetails: m,
       appAriaIDs: h,
     } = e,
-    [g] = C(t, F),
-    _ = U(),
-    y = L()?.ownerWindow || window,
+    [g] = C(t, I),
+    _ = W(),
+    y = R()?.ownerWindow || window,
     b = Kt(g, l, d, f),
-    { bIsIgnored: x, fnUpdateIgnored: S } = Ae(t),
+    { bIsIgnored: x, fnUpdateIgnored: S } = ke(t),
     { bIsWishlisted: w, fnUpdateWishlist: T } = D(t),
     E = X.useRef(null);
   if (
@@ -589,7 +589,7 @@ function Gt(e) {
   )
     return (console.warn(`Error: missing store item for appid `, t), null);
   let O = { width: r || void 0, height: n || void 0 };
-  return (0, Z.jsxs)(V, {
+  return (0, Z.jsxs)(H, {
     "aria-labelledby": v(
       h.nameId,
       h.tagsId,
@@ -599,43 +599,43 @@ function Gt(e) {
     ),
     ref: E,
     style: O,
-    className: B(qe, i && `vyD3DBFIFUc-`),
-    onOptionsActionDescription: G(
+    className: V(Ke, i && `vyD3DBFIFUc-`),
+    onOptionsActionDescription: K(
       w
         ? `#DiscoveryQueue_RemoveFromWishlist`
         : `#DiscoveryQueue_AddToWishlist`,
     ),
     onOptionsButton: T,
-    onOKActionDescription: G(`#DiscoveryQueue_ViewStorePage`),
+    onOKActionDescription: K(`#DiscoveryQueue_ViewStorePage`),
     onOKButton: () => {
       y.location.href = b;
     },
-    onSecondaryActionDescription: G(
+    onSecondaryActionDescription: K(
       x ? `#DiscoveryQueue_Undo` : `#DiscoveryQueue_IgnoreLink`,
     ),
     onSecondaryButton: S,
     fnScrollIntoViewHandler: () => (o(), !0),
     children: [
       (0, Z.jsx)(`div`, {
-        className: B(te, x && `_3ZYr-Efwvg8-`),
+        className: V(k, x && `_3ZYr-Efwvg8-`),
         children: (0, Z.jsxs)(`div`, {
-          className: B(ae, x && `_3ZYr-Efwvg8-`),
+          className: V(ie, x && `_3ZYr-Efwvg8-`),
           children: [
             (0, Z.jsx)(`div`, {
-              className: M,
-              children: G(`#DiscoveryQueue_Ignored`),
+              className: N,
+              children: K(`#DiscoveryQueue_Ignored`),
             }),
             (0, Z.jsx)(`div`, {
-              className: re,
-              children: G(`#DiscoveryQueue_IgnoredConfirmation`),
+              className: ne,
+              children: K(`#DiscoveryQueue_IgnoredConfirmation`),
             }),
-            (0, Z.jsxs)(V, {
-              className: B(Re, xe),
+            (0, Z.jsxs)(H, {
+              className: V(Le, be),
               onClick: S,
               children: [
                 _ &&
                   (0, Z.jsx)(a, { button: s.X, type: c.Light, size: u.Medium }),
-                G(`#DiscoveryQueue_Undo`),
+                K(`#DiscoveryQueue_Undo`),
               ],
             }),
           ],
@@ -653,7 +653,7 @@ function Kt(e, t, n, r) {
     let a = Tt(n),
       o = t >= 0 ? `?inqueue=` + t + (n ? `_` + a : ``) : ``,
       s = $e(i, e.GetStorePageURL(r) + o);
-    return I(s);
+    return L(s);
   }, [r, t, i, e, n]);
 }
 function qt(e) {
@@ -665,25 +665,25 @@ function qt(e) {
       bPreferDemoStorePage: p,
       appAriaIDs: m,
     } = e,
-    [h] = C(t, F),
+    [h] = C(t, I),
     g = f(t),
-    { bIsIgnored: _, fnUpdateIgnored: v } = Ae(t),
+    { bIsIgnored: _, fnUpdateIgnored: v } = ke(t),
     { bIsWishlisted: y, fnUpdateWishlist: b } = D(t),
     x = Kt(h, r, l, p),
-    S = U(),
+    S = W(),
     w = S;
   if (!h) return;
   let T = h.GetAssets().GetLibraryCapsuleURL(),
     E = h.GetAssets().GetHeaderURL();
-  return (0, Z.jsxs)(V, {
-    className: Pe,
+  return (0, Z.jsxs)(H, {
+    className: Ne,
     children: [
       (0, Z.jsxs)(`div`, {
-        className: Be,
+        className: ze,
         children: [
           T &&
             (0, Z.jsxs)(`a`, {
-              className: B(`_-6qCNJHr4Z0-`),
+              className: V(`_-6qCNJHr4Z0-`),
               href: x,
               children: [
                 (0, Z.jsx)(`img`, { className: `Q3mOh913Yuw-`, src: T }),
@@ -692,10 +692,10 @@ function qt(e) {
             }),
           (0, Z.jsxs)(`div`, {
             id: m.nameId,
-            className: ye,
+            className: ve,
             children: [
               (0, Z.jsx)(`a`, {
-                className: B(He),
+                className: V(Ve),
                 href: x,
                 children: h.GetName(),
               }),
@@ -704,7 +704,7 @@ function qt(e) {
           }),
           (0, Z.jsx)(Jt, { rgTagIDs: h.GetTagIDs(), ariaLabelID: m.tagsId }),
           (0, Z.jsx)(`div`, {
-            className: we,
+            className: Ce,
             id: m.reviewId,
             children: (0, Z.jsx)(o, {
               bShowTooltip: !0,
@@ -714,7 +714,7 @@ function qt(e) {
           }),
           (0, Z.jsx)(`div`, {
             id: m.relevanceId,
-            className: Ce,
+            className: Se,
             children: (0, Z.jsx)(Lt, {
               bHideDescription: S,
               bShowAvatars: !n,
@@ -736,14 +736,14 @@ function qt(e) {
                 h.BHasDemo() &&
                   (0, Z.jsx)(d, {
                     id: g,
-                    className: B(
+                    className: V(
                       `BxLuFJsRaUQ-`,
                       `VE8INnFzaCw-`,
                       `enD9-bmgGhA-`,
                     ),
                   }),
                 (0, Z.jsxs)(`a`, {
-                  className: B(`BxLuFJsRaUQ-`, `VE8INnFzaCw-`),
+                  className: V(`BxLuFJsRaUQ-`, `VE8INnFzaCw-`),
                   href: x,
                   children: [
                     w &&
@@ -754,19 +754,19 @@ function qt(e) {
                         additionalClassName: `a-wHbIOxF8U-`,
                       }),
                     ` `,
-                    G(`#DiscoveryQueue_ViewStorePage`),
+                    K(`#DiscoveryQueue_ViewStorePage`),
                   ],
                 }),
-                (0, Z.jsx)(it, {
-                  toolTipContent: G(
+                (0, Z.jsx)(rt, {
+                  toolTipContent: K(
                     y ? `#RemoveFromWishlist_ttip` : `#AddToWishlist_ttip`,
                   ),
-                  children: (0, Z.jsxs)(V, {
-                    "aria-label": G(
+                  children: (0, Z.jsxs)(H, {
+                    "aria-label": K(
                       y ? `#Sale_RemoveFromWishlist` : `#Sale_AddToWishlist`,
                     ),
                     focusable: !0,
-                    className: B(`BxLuFJsRaUQ-`, y && `_3ZYr-Efwvg8-`),
+                    className: V(`BxLuFJsRaUQ-`, y && `_3ZYr-Efwvg8-`),
                     onClick: b,
                     children: [
                       w &&
@@ -780,14 +780,14 @@ function qt(e) {
                     ],
                   }),
                 }),
-                (0, Z.jsx)(it, {
-                  toolTipContent: G(`#SaleTrailerCarousel_IgnoreLink_ttip`),
-                  children: (0, Z.jsx)(V, {
-                    "aria-label": G(`#DiscoveryQueue_IgnoreLink`),
+                (0, Z.jsx)(rt, {
+                  toolTipContent: K(`#SaleTrailerCarousel_IgnoreLink_ttip`),
+                  children: (0, Z.jsx)(H, {
+                    "aria-label": K(`#DiscoveryQueue_IgnoreLink`),
                     focusable: !0,
-                    className: B(`BxLuFJsRaUQ-`, _ && `_3ZYr-Efwvg8-`),
+                    className: V(`BxLuFJsRaUQ-`, _ && `_3ZYr-Efwvg8-`),
                     onClick: v,
-                    children: (0, Z.jsx)(at, {}),
+                    children: (0, Z.jsx)(it, {}),
                   }),
                 }),
               ],
@@ -799,12 +799,12 @@ function qt(e) {
 }
 function Jt(e) {
   let { rgTagIDs: t, ariaLabelID: n } = e,
-    r = [...ce(t)].slice(0, 8);
+    r = [...se(t)].slice(0, 8);
   return (0, Z.jsx)(`div`, {
     id: n,
     role: `list`,
-    className: Ie,
-    children: r.map((e) => (0, Z.jsx)(tt, { className: Oe, tagID: e }, e)),
+    className: Fe,
+    children: r.map((e) => (0, Z.jsx)(Xe, { className: De, tagID: e }, e)),
   });
 }
 function Yt() {
@@ -816,7 +816,7 @@ function Yt() {
     buttonsId: X.useId(),
   };
 }
-var Xt = new R(`DiscoveryQueueWizard`).Debug,
+var Xt = new z(`DiscoveryQueueWizard`).Debug,
   $ = 1,
   Zt = 1400,
   Qt = `discoveryqueue2022`;
@@ -832,7 +832,7 @@ async function $t(e, t, n, r) {
     ((i = [...o]),
       (a = s),
       n && i.findIndex((e) => e === n) === -1 && i.unshift(n),
-      await xt.Get().QueueMultipleAppRequests(i, { ...F, ...ht }));
+      await xt.Get().QueueMultipleAppRequests(i, { ...I, ...ht }));
   } catch (e) {
     console.error(`Failed getting discovery queue apps`, e);
   }
@@ -860,8 +860,8 @@ function tn(e) {
     [s, c] = X.useState(0),
     [l, u] = X.useState(void 0),
     [d, f] = X.useState(0),
-    h = L()?.ownerWindow || window,
-    g = st(Qt),
+    h = R()?.ownerWindow || window,
+    g = ot(Qt),
     [_, v] = X.useState(0),
     y = bt();
   (p(`ArrowLeft`, () => C(!1), !0, !0),
@@ -873,14 +873,14 @@ function tn(e) {
   let b = X.useMemo(() => h.innerWidth < Zt, [h]),
     { fnGetDiscoveryQueue: x, rgAppIDs: S } = on(t, i, r);
   (X.useEffect(() => {
-    (x(!0), z.Get().HintLoad());
+    (x(!0), B.Get().HintLoad());
   }, []),
     X.useEffect(() => {
       let e = S[s];
       e != l && (e && e != $ && y.AddImpression(e, g), u(e));
     }, [y, s, l, S, g]));
   let C = (e) => {
-    let t = rt(s + (e ? 1 : -1), 0, S.length - 1);
+    let t = nt(s + (e ? 1 : -1), 0, S.length - 1);
     t != s &&
       (c(t), Xt(`New selected index: `, t, ` Prev selected index: `, s));
   };
@@ -901,113 +901,113 @@ function tn(e) {
     D = !m() && s < S.length - 1,
     {
       refContainer: ee,
-      bIsDragging: te,
-      nDragOffset: re,
-      nDragSelectedOffsetIndex: ae,
-      handleTouchStart: k,
-      handleTouchMove: A,
-      handleTouchEnd: ce,
+      bIsDragging: k,
+      nDragOffset: ne,
+      nDragSelectedOffsetIndex: ie,
+      handleTouchStart: A,
+      handleTouchMove: j,
+      handleTouchEnd: se,
     } = rn((e) => c(e), S.length),
-    j = (e) => {
+    M = (e) => {
       e.target == e.currentTarget && (n?.(), e.stopPropagation());
     },
-    M = (e) => Ze(s + e, S) && (nt(e, -1, 1) || te),
-    pe = K(J.STORE_BASE_URL + `explore?dq=widget`),
-    me = !U() && !ft() && t === 0,
-    he = K(J.STORE_BASE_URL + `explore/next/0`),
-    ve = S[s] !== $,
-    { nQueueStart: ye, nCount: xe } = nn(s, S);
-  return (0, Z.jsx)(dt, {
+    N = (e) => Ze(s + e, S) && (tt(e, -1, 1) || k),
+    fe = ft(J.STORE_BASE_URL + `explore?dq=widget`),
+    pe = !W() && !dt() && t === 0,
+    me = ft(J.STORE_BASE_URL + `explore/next/0`),
+    _e = S[s] !== $,
+    { nQueueStart: ve, nCount: be } = nn(s, S);
+  return (0, Z.jsx)(ut, {
     feature: Qt,
-    children: (0, Z.jsx)(V, {
+    children: (0, Z.jsx)(H, {
       role: `dialog`,
       focusable: !1,
       "flow-children": `column`,
-      className: be,
-      navEntryPreferPosition: Xe.LAST,
+      className: ye,
+      navEntryPreferPosition: Ye.LAST,
       onCancelButton: () => n?.(),
-      onCancelActionDescription: G(`#Button_Close`),
+      onCancelActionDescription: K(`#Button_Close`),
       children: (0, Z.jsxs)(`div`, {
-        className: We,
-        onClick: j,
+        className: Ue,
+        onClick: M,
         children: [
           T.length > 0 &&
-            (0, Z.jsx)(V, {
+            (0, Z.jsx)(H, {
               "flow-children": `row`,
               className: `Wp-fkK6n2-I-`,
               children: T,
             }),
-          (0, Z.jsxs)(V, {
+          (0, Z.jsxs)(H, {
             "flow-children": `row`,
-            className: _e,
+            className: ge,
             children: [
-              (0, Z.jsx)(V, {
+              (0, Z.jsx)(H, {
                 className: void 0,
-                children: ot(
+                children: at(
                   `#DiscoveryQueue_LearnMore_Default`,
-                  (0, Z.jsx)(W, { className: fe, href: I(pe) }),
+                  (0, Z.jsx)(G, { className: de, href: L(fe) }),
                 ),
               }),
-              me &&
-                (0, Z.jsx)(V, {
+              pe &&
+                (0, Z.jsx)(H, {
                   className: void 0,
-                  children: ot(
+                  children: at(
                     `#DiscoveryQueue_ClassicQueue_Link`,
-                    (0, Z.jsx)(W, { className: `naQ5--hS5ms-`, href: I(he) }),
+                    (0, Z.jsx)(G, { className: `naQ5--hS5ms-`, href: L(me) }),
                   ),
                 }),
-              (0, Z.jsx)(V, {
-                className: Ee,
-                children: (0, Z.jsx)(V, {
+              (0, Z.jsx)(H, {
+                className: Te,
+                children: (0, Z.jsx)(H, {
                   focusable: !0,
-                  className: Re,
+                  className: Le,
                   onClick: n,
-                  "aria-label": G(`#Button_Close`),
+                  "aria-label": K(`#Button_Close`),
                   onActivate: () => n && n(),
-                  children: (0, Z.jsx)(Ye, {}),
+                  children: (0, Z.jsx)(Je, {}),
                 }),
               }),
             ],
           }),
-          (0, Z.jsx)(V, {
+          (0, Z.jsx)(H, {
             role: `button`,
-            "aria-label": G(`#Carousel_Next`),
+            "aria-label": K(`#Carousel_Next`),
             onClick: () => C(!1),
-            className: B(ie, de, E && `_4dyYanLcAPg-`),
-            children: (0, Z.jsx)(lt, { angle: 180 }),
+            className: V(re, ue, E && `_4dyYanLcAPg-`),
+            children: (0, Z.jsx)(ct, { angle: 180 }),
           }),
-          (0, Z.jsx)(V, {
+          (0, Z.jsx)(H, {
             role: `button`,
-            "aria-label": G(`#Carousel_Prev`),
+            "aria-label": K(`#Carousel_Prev`),
             onClick: () => C(!0),
-            className: B(ie, ke, D && `_4dyYanLcAPg-`),
-            children: (0, Z.jsx)(lt, { angle: 0 }),
+            className: V(re, Oe, D && `_4dyYanLcAPg-`),
+            children: (0, Z.jsx)(ct, { angle: 0 }),
           }),
-          (0, Z.jsx)(V, {
+          (0, Z.jsx)(H, {
             ref: ee,
-            className: le,
+            className: ce,
             focusable: !1,
-            onTouchStart: k,
-            onTouchMove: A,
-            onTouchEnd: ce,
+            onTouchStart: A,
+            onTouchMove: j,
+            onTouchEnd: se,
             children: [-2, -1, 0, 1, 2].map((e) =>
               (0, Z.jsx)(
                 `div`,
                 {
-                  className: B({
-                    [Ke]: !0,
-                    [ue]: te,
-                    [Je]: M(e),
+                  className: V({
+                    [Ge]: !0,
+                    [le]: k,
+                    [qe]: N(e),
                     [O]: e == -2,
-                    [ne]: e == -1,
-                    [ge]: e == 0,
-                    [ze]: e == 1,
-                    [se]: e == 2,
-                    [Se]: e + ae == 0,
+                    [te]: e == -1,
+                    [he]: e == 0,
+                    [Re]: e == 1,
+                    [oe]: e == 2,
+                    [xe]: e + ie == 0,
                   }),
-                  style: { "--dragOffsetX": `${re}px` },
+                  style: { "--dragOffsetX": `${ne}px` },
                   children:
-                    M(e) &&
+                    N(e) &&
                     (0, Z.jsx)(an, {
                       eStoreDiscoveryQueueType: t,
                       storePageFilter: i,
@@ -1028,11 +1028,11 @@ function tn(e) {
               ),
             ),
           }),
-          (0, Z.jsx)(oe, {
-            className: B(!ve && `x7yACsfXkig-`),
+          (0, Z.jsx)(ae, {
+            className: V(!_e && `x7yACsfXkig-`),
             showPriorAsActive: !0,
-            count: xe,
-            selectedIndex: s - ye,
+            count: be,
+            selectedIndex: s - ve,
           }),
         ],
       }),
@@ -1199,17 +1199,16 @@ function sn(e) {
       bSkipAppRequestPending: f,
     } = e,
     [p, m] = X.useState(!1),
-    g = U(),
+    g = W(),
     _ = b(2, J.LANGUAGE, !1),
     [v, y] = X.useState(0),
     [x, S] = X.useState(0),
-    { data: C } = ct();
+    { data: C } = st();
   X.useEffect(() => {
     a &&
       !p &&
       C &&
-      z
-        .Get()
+      B.Get()
         .HintLoad()
         .then(() => {
           Y.Get()
@@ -1218,7 +1217,7 @@ function sn(e) {
               (y(e.reduce((e, t) => (C.has(t) ? e + 1 : e), 0)),
                 S(
                   e.reduce(
-                    (e, t) => (z.Get().BIsGameIgnored(t) ? e + 1 : e),
+                    (e, t) => (B.Get().BIsGameIgnored(t) ? e + 1 : e),
                     0,
                   ),
                 ),
@@ -1240,89 +1239,89 @@ function sn(e) {
     bLoaded: p,
     children: [
       (0, Z.jsxs)(`div`, {
-        className: Te,
+        className: we,
         children: [
           (0, Z.jsx)(`div`, {
-            className: Me,
-            children: G(`#DiscoveryQueue_SummaryTitle`),
+            className: je,
+            children: K(`#DiscoveryQueue_SummaryTitle`),
           }),
           !E &&
             a &&
             _.data?.definition &&
             (0, Z.jsx)(un, { bSkipAppRequestPending: f, summaryCardIdx: r }),
           (0, Z.jsx)(`div`, {
-            className: Ge,
-            children: G(`#DiscoveryQueue_YourStats`),
+            className: We,
+            children: K(`#DiscoveryQueue_YourStats`),
           }),
-          (0, Z.jsxs)(V, {
+          (0, Z.jsxs)(H, {
             "flow-children": `row`,
-            className: Le,
+            className: Ie,
             children: [
               (0, Z.jsxs)(`div`, {
-                className: P,
+                className: F,
                 children: [
                   (0, Z.jsx)(`div`, {
-                    className: j,
-                    children: G(`#DiscoveryQueue_ViewedCaps`),
+                    className: M,
+                    children: K(`#DiscoveryQueue_ViewedCaps`),
                   }),
-                  (0, Z.jsx)(`div`, { className: k, children: q(l) }),
+                  (0, Z.jsx)(`div`, { className: A, children: q(l) }),
                   (0, Z.jsx)(`div`, {
-                    className: A,
-                    children: G(`#DiscoveryQueue_Titles`),
+                    className: j,
+                    children: K(`#DiscoveryQueue_Titles`),
                   }),
                 ],
               }),
               (0, Z.jsxs)(`div`, {
-                className: P,
+                className: F,
                 children: [
                   (0, Z.jsx)(`div`, {
-                    className: j,
-                    children: G(`#DiscoveryQueue_WishlistedCaps`),
+                    className: M,
+                    children: K(`#DiscoveryQueue_WishlistedCaps`),
                   }),
-                  (0, Z.jsx)(`div`, { className: k, children: q(v) }),
-                  (0, Z.jsx)(ut, {
-                    className: B(A, De),
-                    href: I(J.STORE_BASE_URL + `wishlist`),
-                    children: G(`#DiscoveryQueue_ViewWishlist`),
+                  (0, Z.jsx)(`div`, { className: A, children: q(v) }),
+                  (0, Z.jsx)(lt, {
+                    className: V(j, Ee),
+                    href: L(J.STORE_BASE_URL + `wishlist`),
+                    children: K(`#DiscoveryQueue_ViewWishlist`),
                   }),
                 ],
               }),
               (0, Z.jsxs)(`div`, {
-                className: P,
+                className: F,
                 children: [
                   (0, Z.jsx)(`div`, {
-                    className: j,
-                    children: G(`#DiscoveryQueue_IgnoredCaps`),
+                    className: M,
+                    children: K(`#DiscoveryQueue_IgnoredCaps`),
                   }),
-                  (0, Z.jsx)(`div`, { className: k, children: q(x) }),
-                  (0, Z.jsx)(ut, {
-                    className: B(A, De),
-                    href: I(J.STORE_BASE_URL + `account/notinterested`),
-                    children: G(`#DiscoveryQueue_ViewIgnored`),
+                  (0, Z.jsx)(`div`, { className: A, children: q(x) }),
+                  (0, Z.jsx)(lt, {
+                    className: V(j, Ee),
+                    href: L(J.STORE_BASE_URL + `account/notinterested`),
+                    children: K(`#DiscoveryQueue_ViewIgnored`),
                   }),
                 ],
               }),
             ],
           }),
           !g &&
-            (0, Z.jsxs)(V, {
+            (0, Z.jsxs)(H, {
               className: `V-tCdhirF0E-`,
               children: [
-                (0, Z.jsx)(V, {
-                  className: B(`BxLuFJsRaUQ-`, `_5spq1pOe-Sg-`),
+                (0, Z.jsx)(H, {
+                  className: V(`BxLuFJsRaUQ-`, `_5spq1pOe-Sg-`),
                   onClick: n,
-                  children: G(`#ActionButtonLabelDone`),
+                  children: K(`#ActionButtonLabelDone`),
                 }),
                 !E &&
-                  (0, Z.jsx)(V, {
-                    className: B(
+                  (0, Z.jsx)(H, {
+                    className: V(
                       w && `RJg7ZyjyMZk-`,
                       `BxLuFJsRaUQ-`,
                       `VE8INnFzaCw-`,
                       `_5spq1pOe-Sg-`,
                     ),
                     onClick: O,
-                    children: G(w ? `#Loading` : `#Button_Continue`),
+                    children: K(w ? `#Loading` : `#Button_Continue`),
                   }),
               ],
             }),
@@ -1341,10 +1340,10 @@ function cn(e) {
       fnFocused: a,
       bLoaded: o,
     } = e,
-    s = K(J.STORE_BASE_URL + `wishlist`),
-    c = L()?.ownerWindow || window,
+    s = ft(J.STORE_BASE_URL + `wishlist`),
+    c = R()?.ownerWindow || window,
     l = () => {
-      c.location.href = I(s);
+      c.location.href = L(s);
     },
     u = X.useRef(null);
   return (
@@ -1354,14 +1353,14 @@ function cn(e) {
     (0, Z.jsx)(et, {
       ref: u,
       "aria-live": `polite`,
-      className: B(void 0, qe, n && `vyD3DBFIFUc-`),
-      onOptionsActionDescription: G(`#DiscoveryQueue_ViewWishlist`),
+      className: V(void 0, Ke, n && `vyD3DBFIFUc-`),
+      onOptionsActionDescription: K(`#DiscoveryQueue_ViewWishlist`),
       onOptionsButton: l,
-      onOKActionDescription: G(`#Button_Continue`),
+      onOKActionDescription: K(`#Button_Continue`),
       onOKButton: () => {
         r();
       },
-      onCancelActionDescription: G(`#ActionButtonLabelDone`),
+      onCancelActionDescription: K(`#ActionButtonLabelDone`),
       onCancelButton: () => i && i(),
       fnScrollIntoViewHandler: () => (a(), !0),
       children: o
@@ -1376,8 +1375,8 @@ function cn(e) {
   );
 }
 function ln() {
-  return (0, Z.jsx)(V, {
-    className: Ve,
+  return (0, Z.jsx)(H, {
+    className: Be,
     children: (0, Z.jsx)(g, { size: `large`, position: `center` }),
   });
 }
@@ -1389,22 +1388,22 @@ function dn(e) {
   let { summaryCardIdx: t } = e,
     n = y(2, J.LANGUAGE, !1, t.toString()),
     [r] = C(n?.data?.current_def?.appid, {}),
-    i = U();
+    i = W();
   if (!n?.data?.current_def || !r?.GetName().length) return (0, Z.jsx)(ln, {});
   let a = n.data.num_items_earned,
     o = n.data.current_def.num_items_per_def,
     s = o - a,
     c = (a / o) * 100;
-  return (0, Z.jsxs)(V, {
-    className: Ve,
+  return (0, Z.jsxs)(H, {
+    className: Be,
     children: [
       (0, Z.jsx)(Pt, { nPercent: c, size: 70, strokeWidth: 12 }),
-      (0, Z.jsxs)(V, {
-        className: Ne,
+      (0, Z.jsxs)(H, {
+        className: Me,
         children: [
           (0, Z.jsx)(`div`, {
-            className: Fe,
-            children: G(
+            className: Pe,
+            children: K(
               `#DiscoveryQueue_SaleStatus_Title${s ? `` : `_Complete`}`,
               q(a),
               r.GetName(),
@@ -1413,12 +1412,12 @@ function dn(e) {
           s > 0 &&
             (0, Z.jsx)(`div`, {
               className: `u6sC2PhNZss-`,
-              children: G(`#DiscoveryQueue_SaleStatus_Desc`, q(s), r.GetName()),
+              children: K(`#DiscoveryQueue_SaleStatus_Desc`, q(s), r.GetName()),
             }),
           !i &&
             (0, Z.jsx)(`a`, {
-              href: I(J.COMMUNITY_BASE_URL + `my/itemcollection`),
-              children: G(`#DiscoveryQueue_SaleStatus_Link`),
+              href: L(J.COMMUNITY_BASE_URL + `my/itemcollection`),
+              children: K(`#DiscoveryQueue_SaleStatus_Link`),
             }),
         ],
       }),

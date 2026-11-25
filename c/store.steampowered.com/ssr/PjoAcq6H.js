@@ -814,7 +814,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   _.GetItemsToFeature = _;

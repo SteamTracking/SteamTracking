@@ -1,4 +1,4 @@
-import { Bn as e, in as t } from "./chunk~3126832f23.js?contenthash=Bx8rJGPC";
+import { Bn as e, in as t } from "./chunk~3126832f23.js?contenthash=B40GC_DU";
 function n() {
   return t().languages.map((e) => r(e.strISOCode));
 }

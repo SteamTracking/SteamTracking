@@ -1,4 +1,4 @@
-import { _, _, _ } from "./chunk~3126832f23.js?contenthash=Bx8rJGPC";
+import { _, _, _ } from "./chunk~3126832f23.js?contenthash=B40GC_DU";
 function _(_) {
   if (_ === void 0)
     return (console.error(`Cannot GetHostname on empty URL`), ``);

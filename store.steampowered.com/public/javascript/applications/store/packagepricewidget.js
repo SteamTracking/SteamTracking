@@ -7,11 +7,11 @@ import { Rs as a } from "./chunk~6b8ddcaac8.js";
 import { n as o } from "./chunk~cc40f6af5e.js";
 import {
   $t as s,
-  H as c,
-  Hv as l,
-  Ib as u,
-  Jr as d,
-  Pc as f,
+  Hv as c,
+  Ib as l,
+  Jr as u,
+  Pc as d,
+  W as f,
   Wo as p,
   Zy as m,
   ib as h,
@@ -146,7 +146,7 @@ function V(e) {
       size: i,
       ...a
     } = e,
-    o = c(t.public_data?.sha_digest_avatar, i);
+    o = f(t.public_data?.sha_digest_avatar, i);
   return (
     n?.image_small?.length &&
       (o = _.MEDIA_CDN_COMMUNITY_URL + `images/` + n.image_small),
@@ -292,14 +292,14 @@ function Q(e) {
     o = !!i && !a,
     c = s(!!i, a, !0);
   return (0, E.jsxs)(`span`, {
-    className: f({ [Y]: !0, [e.className ?? ``]: !!e.className, [void 0]: t }),
+    className: d({ [Y]: !0, [e.className ?? ``]: !!e.className, [void 0]: t }),
     children: [
       !(!e.discount_percent || n) &&
-        (0, E.jsx)(d, {
+        (0, E.jsx)(u, {
           bPortalToBody: !0,
-          toolTipContent: e.bDiscountFromCoupon ? void 0 : u.Localize(c),
+          toolTipContent: e.bDiscountFromCoupon ? void 0 : l.Localize(c),
           children: (0, E.jsxs)(`span`, {
-            className: f(
+            className: d(
               `zEr0qFYkPLI-`,
               `StoreSaleDiscountBox`,
               e.bDiscountFromCoupon && `bj6o1vGfmqA-`,
@@ -318,16 +318,16 @@ function Q(e) {
         }),
       !!(e.discount_percent && n) &&
         (0, E.jsx)(`div`, {
-          className: f({ [void 0]: !0, bbcode_price_discount: r }),
+          className: d({ [void 0]: !0, bbcode_price_discount: r }),
           children: (0, E.jsx)(p, {}),
         }),
       !!e.formatted_final_price &&
         (e.discount_percent && e.formatted_orig_price
           ? (0, E.jsxs)(`div`, {
-              className: f({ "BvS0aUMElHI-": !0, bbcode_price_ctn: r }),
+              className: d({ "BvS0aUMElHI-": !0, bbcode_price_ctn: r }),
               children: [
                 (0, E.jsx)(`div`, {
-                  className: f({
+                  className: d({
                     "_8k9wXjxVA-4-": !0,
                     StoreOriginalPrice: !0,
                     bbcode_price_orig: r,
@@ -335,7 +335,7 @@ function Q(e) {
                   children: e.formatted_orig_price,
                 }),
                 (0, E.jsx)(`div`, {
-                  className: f({
+                  className: d({
                     "Rj6X0djBIxk-": !0,
                     bbcode_price_box: r,
                     "f1Ud3-FysgI-": t,
@@ -346,7 +346,7 @@ function Q(e) {
               ],
             })
           : (0, E.jsx)(`div`, {
-              className: f({
+              className: d({
                 "Rj6X0djBIxk-": !0,
                 bbcode_price_box: r,
                 "f1Ud3-FysgI-": t,
@@ -358,7 +358,7 @@ function Q(e) {
   });
 }
 function $(e) {
-  let { data: t } = l({ packageid: e.packageID });
+  let { data: t } = c({ packageid: e.packageID });
   return t
     ? (0, E.jsx)(Q, {
         formatted_final_price: t.formatted_final_price,
@@ -382,8 +382,8 @@ function te(e, t) {
     );
 }
 function ne(e) {
-  let { data: t } = l({ packageid: e.packageID }),
-    { data: n } = l({ packageid: e.compareID }),
+  let { data: t } = c({ packageid: e.packageID }),
+    { data: n } = c({ packageid: e.compareID }),
     r = te(t, n);
   return r === void 0
     ? null
