@@ -61,6 +61,7 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~d3515eca4e.js";
 import {
   _,
@@ -696,6 +697,237 @@ var _ = class _ extends _.Message {
     constructor(_ = null) {
       (super(),
         _.prototype.steamid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [6, 8, 12, 13, 14], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            steamid: {
+              _: 1,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            clan_event_gid: {
+              _: 2,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            clan_announcement_gid: {
+              _: 3,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            count_earlier: {
+              _: 4,
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            count_later: {
+              _: 5,
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            required_tags: {
+              _: 6,
+              _: !0,
+              _: !0,
+              _: _.readString,
+              _: _.writeRepeatedString,
+            },
+            require_no_tags: {
+              _: 7,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            language_preference: {
+              _: 8,
+              _: !0,
+              _: !0,
+              _: _.readUint32,
+              pbr: _.readPackedUint32,
+              _: _.writeRepeatedUint32,
+            },
+            rtime_oldest_date: {
+              _: 9,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            include_old_announcements: {
+              _: 10,
+              _: !0,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            include_old_events: {
+              _: 11,
+              _: !1,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            exclude_tags: {
+              _: 12,
+              _: !0,
+              _: !0,
+              _: _.readString,
+              _: _.writeRepeatedString,
+            },
+            event_type_filter: {
+              _: 13,
+              _: !0,
+              _: !0,
+              _: _.readEnum,
+              pbr: _.readPackedEnum,
+              _: _.writeRepeatedEnum,
+            },
+            exclude_event_types: {
+              _: 14,
+              _: !0,
+              _: !0,
+              _: _.readEnum,
+              pbr: _.readPackedEnum,
+              _: _.writeRepeatedEnum,
+            },
+            only_summaries: {
+              _: 15,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CClan_GetAdjacentPartnerEvents_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.event_data || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            event_data: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            more_before: {
+              _: 2,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            more_after: {
+              _: 3,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            clan_is_creator_home: {
+              _: 4,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            clan_is_ogg: {
+              _: 5,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            clan_is_ovg: {
+              _: 6,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CClan_GetAdjacentPartnerEvents_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.steamid || _(_._()),
         _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1209,10 +1441,19 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Clan.GetPartnerEventSummaries#1`, _(_, _, _), _, {
       ePrivilege: 2,
-      rgBrowserAPISites: [`store`, `community`, `partner`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetPartnerEventSummaries = _;
+  function _(_, _, _) {
+    return _.SendMsg(`Clan.GetAdjacentPartnerEvents#1`, _(_, _, _), _, {
+      bConstMethod: !0,
+      ePrivilege: 2,
+      eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`all`],
+    });
+  }
+  _.GetAdjacentPartnerEvents = _;
   function _(_, _, _) {
     return _.SendMsg(
       `Clan.GetDraftAndRecentPartnerEventSnippet#1`,
@@ -1230,7 +1471,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetPartnerEventsByBuildIDRange = _;
@@ -6430,7 +6671,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Store.GetRecommendedTagsForUser#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetRecommendedTagsForUser = _;
@@ -6455,7 +6696,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetTagList = _;
@@ -6463,7 +6704,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Store.GetDiscoveryQueue#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetDiscoveryQueue = _;
@@ -6477,7 +6718,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Store.SkipDiscoveryQueueItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SkipDiscoveryQueueItem = _;
@@ -6492,7 +6733,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetGamesFollowed = _;
@@ -6501,7 +6742,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetGamesFollowedCount = _;
@@ -6509,7 +6750,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Store.GetDiscoveryQueueSkippedApps#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetDiscoveryQueueSkippedApps = _;
@@ -6523,7 +6764,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Store.GetStorePreferences#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetStorePreferences = _;
@@ -6543,7 +6784,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Store.UpdatePackageReservations#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UpdatePackageReservations = _;
@@ -6633,39 +6874,42 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.RequestInvite#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.RequestInvite = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.UpdateInvites#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`store`],
     });
   }
   _.UpdateInvites = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetInvites#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetInvites = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetInviteHistory#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetInviteHistory = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetUserStatus#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetUserStatus = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetInviteOptions#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetInviteOptions = _;
@@ -7265,7 +7509,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`PartnerStoreBrowse.GetItems#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`partner`, `community`, `store`, `support`, `help`],
     });
   }
   _.GetItems = _;
@@ -9744,7 +9988,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.Query = _;
@@ -9753,7 +9997,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SearchSuggestions = _;
@@ -9773,7 +10017,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -9794,7 +10038,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`StoreQuery.GetSaleBrowserItems#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 0,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetSaleBrowserItems = _;
@@ -12703,7 +12947,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -12729,7 +12973,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -12742,7 +12986,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -12762,7 +13006,7 @@ var _ = class _ extends _.Message {
   function _(_, _) {
     return _.SendNotification(`MarketingMessages.MarkMessageSeen#1`, _(_, _), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.MarkMessageSeen = _;
@@ -12772,7 +13016,7 @@ var _ = class _ extends _.Message {
       _(_, _),
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -13431,26 +13675,26 @@ function _(_, _, _, _, _ = !1) {
       if (_ && !_.BSuccess())
         throw `Error loading store items: ${_.GetErrorMessage()}`;
       let _ = new Map();
-      return (
-        _.Body()
-          .store_items()
-          .forEach((_, _) => {
-            let _ = _.item_type(),
-              _ = _ === void 0 ? _[_] : _(_, _.gid() ?? _._());
-            _ && _.set(_, _);
-          }),
-        _ && _(_, _, _, _.included_item_data_request, _),
-        _.map((_) => {
-          let [_] = _(_, `|`),
-            _ = _.get(_);
-          return _
-            ? _.toObject()
-            : {
-                ..._(_),
-                success: 2,
-              };
-        })
-      );
+      (_.Body()
+        .store_items()
+        .forEach((_, _) => {
+          let _ = _.item_type(),
+            _ = _ === void 0 ? _[_] : _(_, _.gid() ?? _._());
+          _ && _.set(_, _);
+        }),
+        _ && _(_, _, _, _.included_item_data_request, _));
+      let _ = new Map();
+      return _.map((_) => {
+        let [_] = _(_, `|`),
+          _ = _.get(_);
+        if (!_)
+          return {
+            ..._(_),
+            success: 2,
+          };
+        let _ = _.get(_);
+        return (_ || ((_ = _.toObject()), _.set(_, _)), _);
+      });
     },
     {
       maxBatchSize: 500,
@@ -16647,6 +16891,17 @@ var _ = {
   greatonframe: 100804,
   salesmartsale_events_only: 100805,
   salesmartdiscountreason: 100806,
+  "salesmartdiscountreason-wishlist": 100807,
+  "salesmartdiscountreason-firsttimeonsale": 100808,
+  "salesmartdiscountreason-largestdiscount": 100809,
+  "salesmartdiscountreason-endingsoon": 100810,
+  "salesmartdiscountreason-newlyonsale": 100811,
+  "salesmartdiscountreason-wellreviewed": 100812,
+  "salesmartdiscountreason-topseller": 100813,
+  "salesmartdiscountreason-hotdeal": 100814,
+  "salesmartdiscountreason-deepdiscount": 100815,
+  "salesmartdiscountreason-popularinregion": 100816,
+  "salesmartdiscountreason-justupdated": 100817,
 };
 function _(_) {
   return _ in _;
@@ -18761,14 +19016,14 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetVoteDefinitions = _;
   function _(_, _, _) {
     return _.SendMsg(`StoreSales.SetVote#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetVote = _;
@@ -18776,7 +19031,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`StoreSales.GetUserVotes#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetUserVotes = _;
@@ -18787,7 +19042,7 @@ var _;
     return _.SendMsg(`SteamAwards.GetUserNominations#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetUserNominations = _;
@@ -18795,7 +19050,7 @@ var _;
     return _.SendMsg(`SteamAwards.GetOtherUserNominations#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 2,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetOtherUserNominations = _;
@@ -18803,7 +19058,7 @@ var _;
     return _.SendMsg(`SteamAwards.Nominate#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.Nominate = _;
@@ -18815,7 +19070,7 @@ var _;
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -18823,7 +19078,7 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`SteamAwards.GetNominationShareLink#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetNominationShareLink = _;
@@ -18901,6 +19156,32 @@ function _(_) {
       return !0;
   }
   return !1;
+}
+function _(_) {
+  switch (_) {
+    case `items`:
+    case `trailercarousel`:
+    case `crosspromotesalepage`:
+    case `creator_list`:
+    case `calendar`:
+    case `events`:
+    case `sale_events`:
+    case `contenthubspecials`:
+      return !0;
+  }
+  return !1;
+}
+function _(_, _ = !1) {
+  return !_ || !_(_.section_type)
+    ? !1
+    : _
+      ? _.sale_tag_filter?.clauses?.length
+        ? !0
+        : !!_.smart_section
+      : !!_.smart_section && _.smart_section_type != null;
+}
+function _(_) {
+  return _(_) ? _?.smart_section_type : void 0;
 }
 var _ = {
   capsules: [],
@@ -19287,22 +19568,25 @@ var _ = [
             ? (_ = this.jsondata.localized_sale_overlay)
             : _ === `sale_cross_promo_logo`
               ? (_ = this.jsondata.localized_sale_cross_promo_logo_image)
-              : _.includes(_)
-                ? (_ = this.fnGetLocalizedGroupImages?.())
-                : _ === `product_banner`
-                  ? (_ = this.jsondata.localized_sale_product_banner)
-                  : _ === `product_mobile_banner`
-                    ? (_ = this.jsondata.localized_sale_product_mobile_banner)
-                    : _ === `bestofyear_banner`
-                      ? (_ = this.jsondata.localized_bestofyear_banner)
-                      : _ === `bestofyear_banner_mobile`
-                        ? (_ = this.jsondata.localized_bestofyear_banner_mobile)
-                        : _ === `localized_store_app_spotlight`
-                          ? (_ = this.jsondata.localized_store_app_spotlight)
-                          : _ === `localized_store_app_spotlight_mobile` &&
-                            (_ =
-                              this.jsondata
-                                .localized_store_app_spotlight_mobile);
+              : _ === `sale_secondary_background`
+                ? (_ = this.jsondata.localized_sale_secondary_background_image)
+                : _.includes(_)
+                  ? (_ = this.fnGetLocalizedGroupImages?.())
+                  : _ === `product_banner`
+                    ? (_ = this.jsondata.localized_sale_product_banner)
+                    : _ === `product_mobile_banner`
+                      ? (_ = this.jsondata.localized_sale_product_mobile_banner)
+                      : _ === `bestofyear_banner`
+                        ? (_ = this.jsondata.localized_bestofyear_banner)
+                        : _ === `bestofyear_banner_mobile`
+                          ? (_ =
+                              this.jsondata.localized_bestofyear_banner_mobile)
+                          : _ === `localized_store_app_spotlight`
+                            ? (_ = this.jsondata.localized_store_app_spotlight)
+                            : _ === `localized_store_app_spotlight_mobile` &&
+                              (_ =
+                                this.jsondata
+                                  .localized_store_app_spotlight_mobile);
       return _;
     }
     GetImageURL(_, _ = 0, _ = _.full) {

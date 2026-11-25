@@ -6,11 +6,13 @@ const __vite__mapDeps = (
       "./chunk~e97d53a9c62.js",
       "./chunk~e97d53a9c6.js",
       "./chunk~de7f2df91c.js",
-      "./chunk~25a6634263.js",
+      "./chunk~bd90a5fce7.js",
       "./chunk~b4171a8747.js",
       "./chunk~ca0c999570.js",
       "./chunk~1fa4b8f2ff.js",
       "./chunk~44f252525d.js",
+      "./chunk~96e60d7578.js",
+      "./chunk~25a6634263.js",
       "../../../css/applications/appmgmt/chunk~1fc66b8190.css",
       "./chunk~6257ebd2d4.js",
       "./chunk~8fb30ea08b.js",
@@ -30,9 +32,9 @@ const __vite__mapDeps = (
       "./chunk~f4e4ed5c17.js",
       "./chunk~eefd71512b.js",
       "../../../css/applications/appmgmt/chunk~73d2876771.css",
-      "./chunk~802e967112.js",
       "./chunk~2f8c67b4de.js",
       "../../../css/applications/appmgmt/chunk~bc10934db3.css",
+      "./chunk~802e967112.js",
       "./chunk~d6693aba87.js",
       "./chunk~874b4cd3a1.js",
       "../../../css/applications/appmgmt/chunk~12e15c8243.css",
@@ -80,7 +82,6 @@ import {
   _,
   _,
   _,
-  _,
 } from "./chunk~de7f2df91c.js";
 import {
   _,
@@ -97,8 +98,7 @@ import {
   _,
   _,
   _,
-  _,
-} from "./chunk~25a6634263.js";
+} from "./chunk~bd90a5fce7.js";
 import { _, _ } from "./chunk~68b7e78d68.js";
 import {
   _,
@@ -197,8 +197,11 @@ import { _ } from "./chunk~6257ebd2d4.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~03224452d3.js";
 import { _ } from "./chunk~4406a7b793.js";
 import { _ } from "./chunk~a825a84845.js";
+import { _, _, _, _, _, _ } from "./chunk~7b4b9eb713.js";
 import { _, _ } from "./chunk~b390ee0f78.js";
 import { _ } from "./chunk~fa5480ab25.js";
+import { _ } from "./chunk~96e60d7578.js";
+import { _ } from "./chunk~25a6634263.js";
 import { _ } from "./chunk~e29b7ee76a.js";
 import { _, _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
 import { _, _ } from "./chunk~971d501580.js";
@@ -219,12 +222,11 @@ import { _ } from "./chunk~af36c62e9f.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _, _, _, _, _, _, _ } from "./chunk~38a44beba7.js";
 import { _, _ } from "./chunk~8ceeb46076.js";
+import "./chunk~a6b9ae1345.js";
+import { _, _ } from "./chunk~2f8c67b4de.js";
 import { _, _ } from "./chunk~0111fcd096.js";
 import { _, _ } from "./chunk~802e967112.js";
-import { _, _ } from "./chunk~2f8c67b4de.js";
-import "./chunk~a6b9ae1345.js";
 import { _, _ } from "./chunk~739842ca30.js";
-import { _, _, _, _, _, _ } from "./chunk~7b4b9eb713.js";
 import { _ } from "./chunk~4d16ce5d1a.js";
 import { _, _ } from "./chunk~95ecbf576c.js";
 import { _ } from "./chunk~3ee5188744.js";
@@ -1174,6 +1176,8 @@ function _(_) {
       currentValues: _,
       setCurrentValues: _,
       setSkipToEnd: _,
+      selectedOption: _,
+      setSelectedOption: _,
     } = _,
     _ = [
       {
@@ -1223,31 +1227,20 @@ function _(_) {
         },
       },
     ],
-    _ = () =>
-      _.bNoKeyboardSupport
-        ? 3
-        : _.bGamepadPreferred
-          ? 2
-          : _.bFullXboxControllerSupport || _.bPartialXboxControllerSupport
-            ? 1
-            : 0,
-    _ = _(),
-    _ = (_) => {
-      let _ = _.find((_) => _._ == _);
-      (_({
-        ..._,
-        ..._?.settings,
-      }),
-        _(_.bSkipToEnd ?? !1));
-    };
-  _.useEffect(() => {
-    _ == 0 && _(!0);
-  }, [_, _]);
-  let _ = (0, _.jsx)(`div`, {
+    _ = _,
+    _ = (0, _.jsx)(`div`, {
       children: (0, _.jsx)(_, {
         labelId: null,
-        value: _(),
-        onChange: _,
+        value: _,
+        onChange: (_) => {
+          let _ = _.find((_) => _._ == _);
+          (_({
+            ..._,
+            ..._?.settings,
+          }),
+            _(_?.bSkipToEnd ?? !1),
+            _(_));
+        },
         children: _.map((_) =>
           (0, _.jsxs)(
             _,
@@ -1292,6 +1285,8 @@ function _(_) {
       currentValues: _,
       setCurrentValues: _,
       setSkipToEnd: _,
+      selectedOption: _,
+      setSelectedOption: _,
     } = _,
     _ = _.useMemo(
       () => [
@@ -1315,7 +1310,6 @@ function _(_) {
       ],
       [],
     ),
-    _ = _.useCallback(() => +!_.bFullXboxControllerSupport, [_]),
     _ = _.useCallback(
       (_) => {
         let _ = _.find((_) => _._ == _);
@@ -1323,15 +1317,16 @@ function _(_) {
           ..._,
           ..._?.settings,
         }),
-          _(_.bSkipToEnd ?? !1));
+          _(_?.bSkipToEnd ?? !1),
+          _(_));
       },
-      [_, _, _, _],
+      [_, _, _, _, _],
     ),
-    _ = _(),
+    _ = _,
     _ = (0, _.jsx)(`div`, {
       children: (0, _.jsx)(_, {
         labelId: null,
-        value: _(),
+        value: _,
         onChange: _,
         children: _.map((_) =>
           (0, _.jsxs)(
@@ -1515,6 +1510,8 @@ function _(_) {
       currentValues: _,
       setCurrentValues: _,
       setSkipToEnd: _,
+      selectedOption: _,
+      setSelectedOption: _,
     } = _,
     _ = [
       {
@@ -1534,16 +1531,16 @@ function _(_) {
         bSkipToEnd: !1,
       },
     ],
-    _ = () => +!_.bSteamInputAPISupport,
     _ = (_) => {
       let _ = _.find((_) => _._ == _);
       (_({
         ..._,
         ..._?.settings,
       }),
-        _(_.bSkipToEnd ?? !1));
+        _(_?.bSkipToEnd ?? !1),
+        _(_));
     },
-    _ = _(),
+    _ = _,
     _ = (0, _.jsx)(`div`, {
       children: (0, _.jsx)(_, {
         labelId: null,
@@ -1622,17 +1619,48 @@ function _(_) {
     leftColumnContent: _,
   });
 }
+function _(_, _) {
+  let _ = _.bFullXboxControllerSupport || _.bPartialXboxControllerSupport;
+  switch (_) {
+    case 0:
+      return _.bNoKeyboardSupport ? 3 : _.bGamepadPreferred ? 2 : +!!_;
+    case 1:
+      return _ ? +!_.bFullXboxControllerSupport : void 0;
+    case 3:
+      return _ ? +!_.bSteamInputAPISupport : void 0;
+    default:
+      return;
+  }
+}
 function _(_) {
   let { appid: _, onClose: _, onCommit: _, params: _ } = _,
     [_, _] = _.useState(_),
     [_, _] = _.useState(_),
-    [_, _] = _.useState(!1),
+    [_, _] = _.useState(
+      () => !!_.bControllerSupportWizardComplete && _(0, _) == 0,
+    ),
     [_, _] = _.useState(0),
+    [_, _] = _.useState({}),
+    _ = _.useCallback(
+      (_) =>
+        _((_) => ({
+          ..._,
+          [_]: _,
+        })),
+      [_],
+    ),
+    _ = !!_.bControllerSupportWizardComplete,
+    _ = _[_] ?? (_ ? _(_, _) : void 0),
+    _ = (_ == 0 || _ == 1 || _ == 3) && _ === void 0,
     _ = _.useCallback(() => {
       (_(_), _(!1));
     }, [_, _]),
     _ = () => {
-      _(_);
+      (_(_),
+        _((_) => {
+          let { [_]: _, ..._ } = _;
+          return _;
+        }));
       let _ = _ - 1;
       (_ && _ == 4 && (_ = 0), _(_));
     },
@@ -1648,6 +1676,8 @@ function _(_) {
         currentValues: _,
         setCurrentValues: _,
         setSkipToEnd: _,
+        selectedOption: _,
+        setSelectedOption: _,
       });
       break;
     case 1:
@@ -1656,6 +1686,8 @@ function _(_) {
         currentValues: _,
         setCurrentValues: _,
         setSkipToEnd: _,
+        selectedOption: _,
+        setSelectedOption: _,
       });
       break;
     case 2:
@@ -1672,6 +1704,8 @@ function _(_) {
         currentValues: _,
         setCurrentValues: _,
         setSkipToEnd: _,
+        selectedOption: _,
+        setSelectedOption: _,
       });
       break;
     case 4:
@@ -1692,6 +1726,7 @@ function _(_) {
       fnBack: _ > 0 ? _ : _,
       header: _,
       strOkButtonLabel: _ ? `Save and Exit` : `Next`,
+      bNextDisabled: _,
       children: _,
     }),
   });
@@ -1784,7 +1819,14 @@ var _ = _.memo(function (_) {
   });
 });
 function _(_) {
-  let { fnNext: _, fnBack: _, children: _, header: _, strOkButtonLabel: _ } = _;
+  let {
+    fnNext: _,
+    fnBack: _,
+    children: _,
+    header: _,
+    strOkButtonLabel: _,
+    bNextDisabled: _,
+  } = _;
   return (0, _.jsxs)(_, {
     active: !0,
     className: _,
@@ -1801,6 +1843,7 @@ function _(_) {
         strCancelText: `Back`,
         onOK: _,
         strOKText: _,
+        bOKDisabled: _,
       }),
     ],
   });
@@ -2102,7 +2145,7 @@ var _ = _.lazy(() =>
     __vite__mapDeps([
       0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
       21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
-      39, 40, 41, 42, 43, 44,
+      39, 40, 41, 42, 43, 44, 45, 46,
     ]),
     import.meta.url,
   ),
@@ -4570,6 +4613,11 @@ var _ = `q-hOeY9tNP0-`,
             english_reference: {
               _: 2,
               _: _,
+            },
+            localization_url: {
+              _: 3,
+              _: _.readString,
+              _: _.writeString,
             },
           },
         }),
@@ -12139,6 +12187,7 @@ var _ = `ut9Zlzvv8tU-`,
     bAccessibilitySurroundSound: `#Accessibility_Feature_SurroundSound`,
     bAccessibilityResizableUI: `#Accessibility_Feature_AdjustableTextSize`,
     bAccessibilitySubtitles: `#Accessibility_Feature_SubtitleOptions`,
+    bAccessibilityCaptions: `#Accessibility_Feature_Captions`,
     bAccessibilityColorAlternatives: `#Accessibility_Feature_ColorAlternatives`,
     bAccessibilityCameraComfort: `#Accessibility_Feature_CameraComfort`,
     bAccessibilityKeyboardOnlyOption: `#Accessibility_Feature_KeyboardOnlyOption`,
@@ -12160,6 +12209,7 @@ var _ = `ut9Zlzvv8tU-`,
     bAccessibilitySurroundSound: `surround_sound`,
     bAccessibilityResizableUI: `adjustable_text_size`,
     bAccessibilitySubtitles: `subtitle_options`,
+    bAccessibilityCaptions: `captions`,
     bAccessibilityColorAlternatives: `color_alternatives`,
     bAccessibilityCameraComfort: `camera_comfort`,
     bAccessibilityKeyboardOnlyOption: `keyboard_only_option`,
@@ -12181,6 +12231,7 @@ var _ = `ut9Zlzvv8tU-`,
     bAccessibilitySurroundSound: `audio`,
     bAccessibilityResizableUI: `visual`,
     bAccessibilitySubtitles: `visual`,
+    bAccessibilityCaptions: `visual`,
     bAccessibilityColorAlternatives: `visual`,
     bAccessibilityCameraComfort: `visual`,
     bAccessibilityPlayableWithoutVision: `visual`,
@@ -12714,6 +12765,13 @@ function _() {
         _: `bAccessibilityResizableUI`,
       }),
       (0, _.jsx)(_, {
+        name: _(`#App_Landing_AccessibilityFeatures_Wizard_Feature_Captions`),
+        description: _(
+          `#App_Landing_AccessibilityFeatures_Wizard_Feature_Captions_Desc`,
+        ),
+        _: `bAccessibilityCaptions`,
+      }),
+      (0, _.jsx)(_, {
         name: _(
           `#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions`,
         ),
@@ -13011,6 +13069,15 @@ function _() {
               }),
               (0, _.jsx)(_, {
                 name: _(
+                  `#App_Landing_AccessibilityFeatures_Wizard_Feature_Captions`,
+                ),
+                description: _(
+                  `#App_Landing_AccessibilityFeatures_Wizard_Feature_Captions_Desc`,
+                ),
+                _: `bAccessibilityCaptions`,
+              }),
+              (0, _.jsx)(_, {
+                name: _(
                   `#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions`,
                 ),
                 description: _(
@@ -13027,6 +13094,10 @@ function _() {
                 ),
                 _: `bAccessibilityColorAlternatives`,
               }),
+            ],
+          }),
+          (0, _.jsxs)(_, {
+            children: [
               (0, _.jsx)(_, {
                 name: _(
                   `#App_Landing_AccessibilityFeatures_Wizard_Feature_ContrastControls`,
@@ -13036,10 +13107,6 @@ function _() {
                 ),
                 _: `bAccessibilityContrastControls`,
               }),
-            ],
-          }),
-          (0, _.jsxs)(_, {
-            children: [
               (0, _.jsx)(_, {
                 name: _(
                   `#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort`,
@@ -13331,6 +13398,7 @@ function _(_, _) {
 function _(_) {
   (_(64, _.bAccessibilityResizableUI),
     _(65, _.bAccessibilitySubtitles),
+    _(13, _.bAccessibilityCaptions),
     _(66, _.bAccessibilityColorAlternatives),
     _(67, _.bAccessibilityCameraComfort),
     _(68, _.bAccessibilityBackgroundVolumeControls),

@@ -2,21 +2,21 @@
  ****/
 
 import {
-  At as e,
-  en as t,
-  sn as n,
-  vt as r,
-  wt as i,
+  Dt as e,
+  Pt as t,
+  W as n,
+  X as r,
+  nt as i,
 } from "./chunk~de7f2df91c.js";
 import { n as a, o } from "./chunk~5f339e9a5f.js";
 import { t as s } from "./chunk~0c46413ed4.js";
-var c = n(e(), 1),
+var c = t(i(), 1),
   l = `_0hkFFtEKd8o-`,
   u = `_7oKujRBWBjo-`,
   d = `SfXKOOd0Sto-`,
   f = `KqhOexCat44-`,
   p = `GQmysqJfjG0-`,
-  m = r(),
+  m = n(),
   h = Object.assign(g, { Root: y, Track: C, Range: w, Handle: T });
 function g(e) {
   let { value: t, onValueChange: n, onValueSettled: r, min: i, ...a } = e,
@@ -146,10 +146,10 @@ function C(e) {
   let { render: t, ...n } = e;
   return s(t, (0, m.jsx)(`div`, { className: d }), n, void 0);
 }
-function w(e) {
-  let { start: n, end: r, render: i } = e,
+function w(t) {
+  let { start: n, end: r, render: i } = t,
     a = (0, c.useContext)(v);
-  t(a, `SliderRange must be used within a SliderRoot!`);
+  e(a, `SliderRange must be used within a SliderRoot!`);
   let { min: o, max: l } = a,
     u = O(n, o, l),
     d = 100 - O(r, o, l);
@@ -163,10 +163,10 @@ function w(e) {
     void 0,
   );
 }
-function T(e) {
-  let { render: n } = e,
+function T(t) {
+  let { render: n } = t,
     r = (0, c.useContext)(v);
-  t(r, `SliderHandle must be used within a SliderRoot!`);
+  e(r, `SliderHandle must be used within a SliderRoot!`);
   let {
       min: i,
       max: a,
@@ -235,13 +235,13 @@ function T(e) {
 }
 function E(e, t, n) {
   if (t[0] === t[1] || n[0] === n[1]) return n[0];
-  let r = ((n[1] - n[0]) / (t[1] - t[0])) * (e - t[0]) + n[0];
-  return i(r, n[0], n[1]);
+  let i = ((n[1] - n[0]) / (t[1] - t[0])) * (e - t[0]) + n[0];
+  return r(i, n[0], n[1]);
 }
 function D(e) {
-  let { value: t, min: n, max: r, step: a } = e,
+  let { value: t, min: n, max: i, step: a } = e,
     o = Math.round((t - n) / a) / (1 / a);
-  return i(o + n, n, r);
+  return r(o + n, n, i);
 }
 function O(e, t, n) {
   return ((e - t) / (n - t)) * 100;

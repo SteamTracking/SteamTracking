@@ -2,14 +2,14 @@
  ****/
 
 import {
-  A as e,
-  At as t,
-  in as n,
-  sn as r,
-  vt as i,
-  wt as a,
+  Pt as e,
+  W as t,
+  X as n,
+  jt as r,
+  n as i,
+  nt as a,
 } from "./chunk~de7f2df91c.js";
-import { It as o, gt as s } from "./chunk~25a6634263.js";
+import { Pt as o, mt as s } from "./chunk~bd90a5fce7.js";
 import {
   $i as c,
   Bt as l,
@@ -18,8 +18,8 @@ import {
   da as f,
 } from "./chunk~1fa4b8f2ff.js";
 import { C as p } from "./chunk~44f252525d.js";
-var m = r(t()),
-  h = n({
+var m = e(a()),
+  h = r({
     Bottom: () => k,
     BottomLeft: () => O,
     BottomRight: () => A,
@@ -108,7 +108,7 @@ var m = r(t()),
     LinkRegionInfo: H,
     LinkText: U,
   },
-  G = i(),
+  G = t(),
   K = class extends m.Component {
     m_rectLinkRegion;
     m_elLinkRegionBox;
@@ -223,24 +223,24 @@ var m = r(t()),
             });
             break;
           case `middle`: {
-            let t = a(
+            let t = n(
                 this.CalcLeftEdge(e.clientX),
                 0,
                 100 - this.state.curWidthPct,
               ),
-              n = 100 - (t + this.state.curWidthPct),
-              r = a(
+              r = 100 - (t + this.state.curWidthPct),
+              i = n(
                 this.CalcTopEdge(e.clientY),
                 0,
                 100 - this.state.curHeightPct,
               ),
-              i = {
+              a = {
                 curLeftPosPct: t,
-                curRightPosPct: n,
-                curTopPosPct: r,
-                curBottomPosPct: 100 - (r + this.state.curHeightPct),
+                curRightPosPct: r,
+                curTopPosPct: i,
+                curBottomPosPct: 100 - (i + this.state.curHeightPct),
               };
-            this.setState(i);
+            this.setState(a);
             break;
           }
         }
@@ -253,25 +253,25 @@ var m = r(t()),
     UpdateState(e) {
       let t =
           e.curTopPosPct === void 0 ? this.state.curTopPosPct : e.curTopPosPct,
-        n =
+        r =
           e.curBottomPosPct === void 0
             ? this.state.curBottomPosPct
             : e.curBottomPosPct,
-        r =
+        i =
           e.curLeftPosPct === void 0
             ? this.state.curLeftPosPct
             : e.curLeftPosPct,
-        i =
+        a =
           e.curRightPosPct === void 0
             ? this.state.curRightPosPct
             : e.curRightPosPct,
-        o = a(
-          100 - i - r,
+        o = n(
+          100 - a - i,
           this.props.widthMinPct || 0,
           this.props.widthMaxPct || 100,
         ),
-        s = a(
-          100 - n - t,
+        s = n(
+          100 - r - t,
           this.props.heightMinPct || 0,
           this.props.heightMaxPct || 100,
         );
@@ -279,21 +279,21 @@ var m = r(t()),
         (e.curLeftPosPct !== void 0 || e.curRightPosPct !== void 0
           ? (s = o / this.m_aspectRatio)
           : (o = s * this.m_aspectRatio)),
-        e.curLeftPosPct === void 0 ? (i = 100 - (r + o)) : (r = 100 - i - o),
-        e.curTopPosPct === void 0 ? (n = 100 - (t + s)) : (t = 100 - n - s));
-      let c = 100 - i - r,
-        l = 100 - n - t;
-      this.IsValidPct(r) &&
-        this.IsValidPct(i) &&
+        e.curLeftPosPct === void 0 ? (a = 100 - (i + o)) : (i = 100 - a - o),
+        e.curTopPosPct === void 0 ? (r = 100 - (t + s)) : (t = 100 - r - s));
+      let c = 100 - a - i,
+        l = 100 - r - t;
+      this.IsValidPct(i) &&
+        this.IsValidPct(a) &&
         this.IsValidPct(t) &&
-        this.IsValidPct(n) &&
+        this.IsValidPct(r) &&
         this.IsValidPct(c) &&
         this.IsValidPct(l) &&
         this.setState({
-          curLeftPosPct: r,
-          curRightPosPct: i,
+          curLeftPosPct: i,
+          curRightPosPct: a,
           curTopPosPct: t,
-          curBottomPosPct: n,
+          curBottomPosPct: r,
         });
     }
     GetXPercent(e) {
@@ -313,16 +313,16 @@ var m = r(t()),
         : 0;
     }
     CalcLeftEdge(e) {
-      return a(this.GetXPercent(e), 0, 100);
+      return n(this.GetXPercent(e), 0, 100);
     }
     CalcRightEdge(e) {
-      return a(100 - (this.GetXPercent(e) + this.state.curWidthPct), 0, 100);
+      return n(100 - (this.GetXPercent(e) + this.state.curWidthPct), 0, 100);
     }
     CalcTopEdge(e) {
-      return a(this.GetYPercent(e), 0, 100);
+      return n(this.GetYPercent(e), 0, 100);
     }
     CalcBottomEdge(e) {
-      return a(100 - (this.GetYPercent(e) + this.state.curHeightPct), 0, 100);
+      return n(100 - (this.GetYPercent(e) + this.state.curHeightPct), 0, 100);
     }
     OnMouseUp(e, t) {
       (this.setState({
@@ -523,14 +523,14 @@ var m = r(t()),
       );
     }
   };
-(e([o], K.prototype, `LinkRegionBoxRef`, null),
-  e([o], K.prototype, `OnMouseDown`, null),
-  e([o], K.prototype, `OnMouseMove`, null),
-  e([o], K.prototype, `OnMouseUp`, null),
-  e([o], K.prototype, `HandleDelete`, null),
-  e([o], K.prototype, `OnSetLinkURLChange`, null),
-  e([o], K.prototype, `OnSetLinkDescriptionChange`, null),
-  e([o], K.prototype, `OnSaveLink`, null),
-  e([o], K.prototype, `OnEditLink`, null),
-  (K = e([p], K)));
+(i([o], K.prototype, `LinkRegionBoxRef`, null),
+  i([o], K.prototype, `OnMouseDown`, null),
+  i([o], K.prototype, `OnMouseMove`, null),
+  i([o], K.prototype, `OnMouseUp`, null),
+  i([o], K.prototype, `HandleDelete`, null),
+  i([o], K.prototype, `OnSetLinkURLChange`, null),
+  i([o], K.prototype, `OnSetLinkDescriptionChange`, null),
+  i([o], K.prototype, `OnSaveLink`, null),
+  i([o], K.prototype, `OnEditLink`, null),
+  (K = i([p], K)));
 export { K as t };

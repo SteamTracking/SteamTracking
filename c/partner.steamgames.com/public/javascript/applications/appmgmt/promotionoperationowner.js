@@ -37,13 +37,6 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
 } from "./chunk~de7f2df91c.js";
 import {
   _,
@@ -62,12 +55,10 @@ import {
   _,
   _,
   _,
-  _,
-} from "./chunk~25a6634263.js";
-import { _, _ } from "./chunk~68b7e78d68.js";
+} from "./chunk~bd90a5fce7.js";
+import { _ } from "./chunk~68b7e78d68.js";
 import { _, _, _, _, _, _, _ } from "./chunk~b4171a8747.js";
 import {
-  _,
   _,
   _,
   _,
@@ -182,9 +173,15 @@ import {
   _,
   _,
   _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
 } from "./chunk~6b8ddcaac8.js";
 import {
-  _,
   _,
   _,
   _,
@@ -212,6 +209,7 @@ import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~03224452d3.js";
 import { _ } from "./chunk~4406a7b793.js";
 import { _ } from "./chunk~e70aabe4d7.js";
 import { _, _ } from "./chunk~428594b857.js";
+import { _, _ } from "./chunk~70c16cc80c.js";
 import {
   _,
   _,
@@ -245,11 +243,14 @@ import {
   _,
   _,
 } from "./chunk~a825a84845.js";
+import { _, _, _ } from "./chunk~7b4b9eb713.js";
 import { _ } from "./chunk~b390ee0f78.js";
 import { _, _, _, _ } from "./chunk~9fc22a4638.js";
 import { _, _ } from "./chunk~b0a84aab1b.js";
 import { _, _, _, _, _ } from "./chunk~43407e91ef.js";
+import { _, _, _, _, _, _, _ } from "./chunk~96e60d7578.js";
 import "./chunk~19394a4118.js";
+import { _ } from "./chunk~25a6634263.js";
 import { _ } from "./chunk~aae8417744.js";
 import { _, _ } from "./chunk~2e8feda0b1.js";
 import { _, _, _, _ } from "./chunk~fc8a9e4879.js";
@@ -371,8 +372,11 @@ import {
 } from "./chunk~bd435de487.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _, _ } from "./chunk~e867464c75.js";
+import { _ } from "./chunk~05a38bc848.js";
+import "./chunk~a6b9ae1345.js";
+import "./chunk~ca0c999570.js";
+import { _ } from "./chunk~f0141d9521.js";
 import {
-  _,
   _,
   _,
   _,
@@ -389,37 +393,12 @@ import {
   _,
   _,
 } from "./chunk~fd80c4b5eb.js";
+import { _, _, _, _, _, _ } from "./chunk~3f2c78281d.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~2f8c67b4de.js";
 import { _, _, _, _ } from "./chunk~0111fcd096.js";
 import { _ } from "./chunk~429133cc70.js";
 import { _, _ } from "./chunk~802e967112.js";
-import {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./chunk~2f8c67b4de.js";
-import { _ } from "./chunk~05a38bc848.js";
-import { _, _, _, _, _, _, _, _ } from "./chunk~2bee5a7d08.js";
-import "./chunk~a6b9ae1345.js";
-import "./chunk~ca0c999570.js";
-import { _ } from "./chunk~f0141d9521.js";
-import { _, _, _, _, _, _, _ } from "./chunk~3f2c78281d.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk~739842ca30.js";
-import { _, _, _, _, _ } from "./chunk~3f4314f3b4.js";
-import { _, _, _, _, _ } from "./chunk~7b4b9eb713.js";
-import { _, _ } from "./chunk~70c16cc80c.js";
 import { _, _ } from "./chunk~95ecbf576c.js";
 import { _ } from "./chunk~3ee5188744.js";
 import { _, _, _, _ } from "./chunk~d382bdf2cf.js";
@@ -2485,1009 +2464,7 @@ var _ = `ub-F6ByWbWM-`,
       })
     );
   },
-  _ = _(_(), 1),
-  _ = _(_()),
-  _ = _(_(), 1);
-function _(_) {
-  return _?.clan_steamid ? _(new _(_.clan_steamid), _) : null;
-}
-var _ = 100;
-async function _(_, _) {
-  let _ = new URLSearchParams();
-  (_.set(`event_gids`, [...new Set(_)].sort().join(`,`)),
-    _.set(`lang_list`, _(_)),
-    _.set(`origin`, location.origin));
-  let _ =
-      _.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + _.toString(),
-    _ = await fetch(_);
-  if (_.status === 204) return _.map(() => null);
-  if (!_._) throw Error(`${_} answered ${_.status}`);
-  let _ = await _.json(),
-    _ = new Map((_.events ?? []).map((_) => [_.gid, _]));
-  return _.map((_) => _.get(_) ?? null);
-}
-function _(_) {
-  return _(
-    [`PublicPartnerEventBrowser`, _],
-    () =>
-      new _.default((_) => _(_, _), {
-        maxBatchSize: _,
-        cache: !1,
-      }),
-  );
-}
-function _(_, _) {
-  return [`PublicPartnerEvent`, _, _];
-}
-function _(_, _, _) {
-  return {
-    queryKey: _(_, _),
-    queryFn: async () => (_ ? _.load(_) : (await _([_], _))[0]),
-    select: _,
-    enabled: !!_,
-    staleTime: 6e5,
-  };
-}
-function _(_) {
-  let _ = _(_.LANGUAGE),
-    _ = _(_);
-  return _(_(_, _, _));
-}
-function _(_, _, _) {
-  return _(_, _, _)?.strTagName || void 0;
-}
-function _(_, _, _, _) {
-  let _ = _ == 1 || _ == 3 || _ == 4,
-    _ = () => {
-      let _ = _(_.smart_section_creator_listid);
-      return _
-        ? _
-          ? _(`#Sale_CreatorList_Section_Editor_title`, _)
-          : _
-        : null;
-    };
-  if (_.section_type === `items`)
-    switch (_(_)) {
-      case `wishlist`:
-        return `#Sale_default_label_OnYourWishlist`;
-      case `interactive_recommender`:
-        return `#Sale_default_label_RecommendedForYou`;
-      case `tag_recommender`:
-        return `#Sale_default_label_RecommendedForYou`;
-      case `deck_topplayed`:
-        return `#Sale_TopPlayedOnDeckSection`;
-      case `personalized_carousel`:
-        if (_) {
-          let { nSectionIndex: _, nNumSections: _ } = _(_, _);
-          return _(`#Sale_PersonalizedCarousel_Section_Editor_title`, _ + 1, _);
-        }
-        let _ = _(_, _, _);
-        if (!_ && _ == 2) {
-          let { nSectionIndex: _, nNumSections: _ } = _(_, _);
-          return _(`#Sale_PersonalizedCarousel_Section_Editor_title`, _ + 1, _);
-        }
-        return _ ? _(`#Sale_PersonalizedCarousel_Section_title`, _) : null;
-      case `creator_list`:
-        return _();
-      case `discount_reason`:
-        return _(_) ?? null;
-    }
-  else if (_.section_type === `tabs`) return ``;
-  else if (_.section_type === `curator`) {
-    if (_.curator_clan_id) {
-      let _ = _.InitFromClanID(_.curator_clan_id, _.EUNIVERSE),
-        _ = _.GetCreatorHome(_);
-      if (_) return _(`#Sale_CuratorSection_Name`, _.GetName());
-    }
-    return `#Sale_CuratorSection`;
-  } else if (_.section_type === `event_schedule`) return `#Sale_EventSchedule`;
-  else if (_.section_type === `curator_recommendation`)
-    return `#Sale_CuratorRecommendation_title`;
-  else if (_.section_type === `discoveryqueue`) return `#DiscoveryQueue_Title`;
-  else if (_.section_type === `sale_events`) return `#Sale_SaleEvent_Section`;
-  else if (_.section_type === `calendar`) return `#Sale_SectionType_Calendar`;
-  else if (_.section_type === `crosspromotesalepage` && _ == 1)
-    return `#Sale_CrossPromoSale_DefaultSectionTitle`;
-  else if (_.section_type === `creator_list`) return _();
-  return null;
-}
-function _(_, _, _, _) {
-  let _ = _(_, _, _, _);
-  return _ === null ? null : _ && _.startsWith(`#`) ? _(_) : _;
-}
-function _(_, _, _, _, _, _, _, _) {
-  if (!_) return ``;
-  if (_.section_type === `crosspromotesalepage`) return _(_, _);
-  let _ = _(_, _, _, _),
-    _ = _.GetWithFallback(_.localized_label, _),
-    _ =
-      _ ||
-      _ ||
-      (_.default_label === `#Sale_default_label` ? `` : _(_.default_label)),
-    _ = _.internal_section_title?.trim();
-  if ((_?.length ?? 0) > 0) {
-    if (_ == 3 || _ == 4)
-      return _?.trim().length == 0 || _
-        ? _
-        : (0, _.jsxs)(_.Fragment, {
-            children: [
-              _,
-              ` `,
-              (0, _.jsx)(_, {
-                tooltip: _(
-                  `#Sale_Section_InternalTitle_Note`,
-                  (0, _.jsx)(`br`, {}),
-                  _,
-                ),
-              }),
-            ],
-          });
-    if (_ == 1)
-      return _?.trim().length == 0 || _
-        ? _
-        : (0, _.jsxs)(_.Fragment, {
-            children: [
-              _,
-              ` `,
-              (0, _.jsx)(`span`, {
-                children: _(`#Sale_Section_InternalTitle_Actual`, _),
-              }),
-            ],
-          });
-  }
-  let _ = _.GetWithFallback(_.localized_label_image, _);
-  if (!_ && _) {
-    let _ = _.GenerateURLFromHashAndExt(_, _);
-    return (0, _.jsx)(`img`, {
-      loading: `lazy`,
-      src: _,
-      alt: _,
-    });
-  }
-  return _;
-}
-function _(_, _, _) {
-  if (_(_.section_type))
-    switch (_(_)) {
-      case `personalized_carousel`:
-        let _ = _(_, _, _);
-        return _ ? _(`#Sale_PersonalizedCarousel_Section_subtitle`, _) : null;
-      case `creator_list`:
-        return _(_.smart_section_creator_listid) ?? null;
-    }
-  return null;
-}
-function _(_, _, _, _) {
-  let _ = _(_, _, _);
-  return _ === null
-    ? _.GetWithFallback(_.localized_subtitle, _) ||
-        (!_.default_subtitle || _.default_subtitle === `#Sale_default_subtitle`
-          ? ``
-          : _(_.default_subtitle))
-    : _ && _.startsWith(`#`)
-      ? _(_)
-      : _;
-}
-var _ = `dYYkud-Jf3s-`,
-  _ = `zZo1XshRYmQ-`,
-  _ = `RfHJSn8AdQE-`,
-  _ = `D8GFuSKNhX0-`,
-  _ = `woc2JepJIek-`;
-function _(_, _) {
-  return (
-    _.GetWithFallback(_.localized_label, _) ||
-    (_.default_label === `#Sale_default_label` ? `` : _(_.default_label))
-  );
-}
-function _(_) {
-  if (_(_.section_type))
-    switch (_(_)) {
-      case `deck_topplayed`:
-        return _.STORE_BASE_URL + `charts/steamdecktopplayed`;
-    }
-  return _.label_link;
-}
-function _(_) {
-  let _,
-    _,
-    _ = !1;
-  return (
-    _.label_link_style === `button`
-      ? ((_ = _(`#Sale_SectionLink_BrowseAll`)), (_ = !0))
-      : _.label_link_style === `browseall`
-        ? ((_ = _(`#Sale_SectionLink_BrowseAll`)),
-          (_ = _(_, `SaleSectionLabelLinkButton`)))
-        : _(_) === `deck_topplayed` &&
-          ((_ = _(`#EventBrowse_MoreEventsBtn`)),
-          (_ = _(_, `SaleSectionLabelLinkButton`))),
-    {
-      strLinkButtonLabel: _,
-      strLinkButtonClasses: _,
-      bSmallButton: _,
-    }
-  );
-}
-_((_) => {
-  let {
-      section: _,
-      event: _,
-      language: _,
-      nHiddenCapsules: _,
-      title: _,
-      subtitle: _,
-      bShowSeeMoreHint: _,
-      bUseGamepadLinkHint: _,
-      eGamepadLinkHintButton: _,
-      onLinkResolved: _,
-      personalizedCarousels: _,
-      promotedSale: _,
-    } = _,
-    _ = _(),
-    _ = _(),
-    _ = _ !== void 0,
-    { data: _ } = _(_ ? void 0 : _(_)),
-    _ = (_ ? _ : _) ?? void 0,
-    _ = _.link || _(_) || _(_);
-  if (
-    (_.useEffect(() => {
-      _?.(_);
-    }, [_, _]),
-    _.section_type == `title_image` && _.title_image_selected === `image`)
-  )
-    return null;
-  let _ = _ || _(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation, !1, _, _);
-  if (!_) return null;
-  let _ = _ || _(_, _, _, _),
-    _ = (0, _.jsxs)(`div`, {
-      className: _(_, `SaleSectionHeader`),
-      style: _(_, _, _),
-      children: [
-        _.test_show_on_valve_ip_only &&
-          (0, _.jsx)(`div`, {
-            className: `JrlXbYAw30w-`,
-            children: `(VO)\xA0`,
-          }),
-        _,
-      ],
-    }),
-    _ = (0, _.jsx)(`div`, {
-      className: _(_, _, `SaleSectionSubtitle`),
-      style: _(_, _, _),
-      children: _,
-    }),
-    _ = null;
-  if ((_?.length ?? 0) > 0) {
-    let {
-      strLinkButtonLabel: _,
-      strLinkButtonClasses: _,
-      bSmallButton: _,
-    } = _(_);
-    (_ &&
-      (_ =
-        _ && _
-          ? (0, _.jsx)(_, {
-              label: _,
-              shown: !!_,
-              button: _,
-            })
-          : _
-            ? (0, _.jsx)(`div`, {
-                className: _(_, _),
-                children: (0, _.jsx)(_, {
-                  url: _,
-                  children: (0, _.jsx)(_, {
-                    children: _,
-                  }),
-                }),
-              })
-            : (0, _.jsx)(_, {
-                url: _,
-                className: _,
-                children: _,
-              })),
-      (_ = (0, _.jsx)(_, {
-        url: _,
-        bFocusable: !_,
-        children: _,
-      })));
-  }
-  return (0, _.jsxs)(`div`, {
-    className: _(_, `SaleSectionLabelCtn`),
-    children: [
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [_, !!_ && _],
-      }),
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [
-          !!_ &&
-            (0, _.jsx)(_, {
-              className: `pL8IDIWBDg8-`,
-              toolTipContent: _(`#Sale_HiddenItem_Tooltip`),
-              children: (0, _.jsx)(`a`, {
-                href: _.STORE_BASE_URL + `account/preferences`,
-                children: _(
-                  _ == 1
-                    ? `#Sale_HiddenItem_Single_Short`
-                    : `#Sale_HiddenItems_Short`,
-                  _,
-                ),
-              }),
-            }),
-          _,
-        ],
-      }),
-    ],
-  });
-});
-function _(_, _, _) {
-  return {
-    fontFamily: _.jsondata.sale_font ? _(_.jsondata.sale_font, _) : void 0,
-    fontWeight: _.jsondata.sale_font_weight,
-    fontSize: `${_.jsondata.sale_section_font_size}px`,
-    textTransform: _.jsondata.sale_section_disable_capitalize
-      ? `initial`
-      : void 0,
-    color: _.label_color,
-  };
-}
-function _(_, _, _) {
-  return {
-    fontFamily: _.jsondata.sale_font ? _(_.jsondata.sale_font, _) : void 0,
-    fontWeight: 300,
-    fontSize: `${_.jsondata.sale_section_font_size && _.jsondata.sale_section_font_size - 3}px`,
-    letterSpacing: 0,
-    lineHeight: `${_.jsondata.sale_section_font_size}px`,
-    textTransform: _.jsondata.sale_section_disable_capitalize
-      ? `initial`
-      : void 0,
-    color: _.label_color,
-    opacity: `50%`,
-  };
-}
-function _(_, _) {
-  return (
-    (_ ||= ``),
-    _ === 12
-      ? _.replace(`Jolly Lodger`, `New Rocker`)
-      : _ === 23 || _ === 19 || _ === 24 || _ === 18 || _ === 8 || _ === 26
-        ? _.replace(`Sigmar One`, `Play`)
-        : _ === 6
-          ? _.replace(`Sigmar One`, `Noto Serif SC`)
-          : _ === 7
-            ? _.replace(`Sigmar One`, `Noto Serif TC`)
-            : _ === 10
-              ? _.replace(`Sigmar One`, `M PLUS Rounded 1c`)
-              : _ === 4
-                ? _.replace(`Sigmar One`, `Black Han Sans`)
-                : _ === 9
-                  ? _.replace(`Sigmar One`, `Prompt`)
-                  : _
-  );
-}
-var _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.count || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            count: {
-              _: 1,
-              _: _.readInt32,
-              _: _.writeInt32,
-            },
-            additional_source_items: {
-              _: 2,
-              _: _,
-              _: !0,
-              _: !0,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Request`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.recommendations || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            recommendations: {
-              _: 1,
-              _: _,
-              _: !0,
-              _: !0,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.item_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            item_id: {
-              _: 1,
-              _: _,
-            },
-            weight: {
-              _: 2,
-              _: _.readFloat,
-              _: _.writeFloat,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response_Recommendation`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.count || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            count: {
-              _: 1,
-              _: _.readInt32,
-              _: _.writeInt32,
-            },
-            item_ids: {
-              _: 2,
-              _: _,
-              _: !0,
-              _: !0,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Request`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.recommendations || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            recommendations: {
-              _: 1,
-              _: _,
-              _: !0,
-              _: !0,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.item_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            item_id: {
-              _: 1,
-              _: _,
-            },
-            weight: {
-              _: 2,
-              _: _.readFloat,
-              _: _.writeFloat,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response_Recommendation`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.start || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            start: {
-              _: 1,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-            count: {
-              _: 2,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetLiveSales_Request`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.sales || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            sales: {
-              _: 1,
-              _: _,
-              _: !0,
-              _: !0,
-            },
-            total_count: {
-              _: 2,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetLiveSales_Response`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.clan_account_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            clan_account_id: {
-              _: 1,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-            clan_event_gid: {
-              _: 2,
-              _: _.readFixed64String,
-              _: _.writeFixed64String,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetLiveSales_Response_Sale`;
-    }
-  },
-  _;
-(function (_) {
-  function _(_, _, _) {
-    return _.SendMsg(
-      `StoreRecommendations.GetPackagePurchaseRecommendations#1`,
-      _(_, _, _),
-      _,
-      {
-        bConstMethod: !0,
-        ePrivilege: 1,
-      },
-    );
-  }
-  _.GetPackagePurchaseRecommendations = _;
-  function _(_, _, _) {
-    return _.SendMsg(
-      `StoreRecommendations.GetPackagePurchaseRecommendationsForItems#1`,
-      _(_, _, _),
-      _,
-      {
-        bConstMethod: !0,
-        ePrivilege: 0,
-        eWebAPIKeyRequirement: 1,
-      },
-    );
-  }
-  _.GetPackagePurchaseRecommendationsForItems = _;
-  function _(_, _, _) {
-    return _.SendMsg(`StoreRecommendations.GetLiveSales#1`, _(_, _, _), _, {
-      bConstMethod: !0,
-      ePrivilege: 0,
-      eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`],
-    });
-  }
-  _.GetLiveSales = _;
-})((_ ||= {}));
-var _ = {
-  1: `#Sale_default_label_OnYourWishlist`,
-  2: `#Sale_DiscountReason_Section_FirstTimeOnSale`,
-  3: `#Sale_DiscountReason_Section_LargestDiscount`,
-  4: `#Sale_DiscountReason_Section_EndingSoon`,
-  5: `#Sale_DiscountReason_Section_NewlyOnSale`,
-  6: `#Sale_DiscountReason_Section_WellReviewed`,
-  7: `#Sale_DiscountReason_Section_TopSeller`,
-  8: `#Sale_DiscountReason_Section_HotDeal`,
-  9: `#Sale_DiscountReason_Section_DeepDiscount`,
-};
-function _(_) {
-  return _.smart_section_discount_reason === void 0
-    ? void 0
-    : _[_.smart_section_discount_reason];
-}
+  _ = _(_());
 function _(_) {
   return !!(
     _.show_on_tabs &&
@@ -4779,6 +3756,7 @@ var _ = [`satisfied`, `neutral`, `unsatisfied`],
   _ = 1024,
   _ = 2048,
   _ = 4096,
+  _ = 16384,
   _ = 8192,
   _ = 1024,
   _ = 2048,
@@ -4842,7 +3820,8 @@ function _(_) {
 function _(_, _, _) {
   return _(_, _, _);
 }
-var _ = class _ extends _.Message {
+var _ = _(_(), 1),
+  _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       (super(),
@@ -18966,6 +17945,7 @@ function _(_) {
     ],
   });
 }
+var _ = _(_());
 function _(_, _) {
   let _ = _(),
     _ = _.useMemo(
@@ -43585,10 +42565,11 @@ var _ = `pv3JganX-qA-`,
       (_[(_.k_SteamAwardFinalists = 10)] = `k_SteamAwardFinalists`),
       (_[(_.k_MediaUsageConfirmation = 11)] = `k_MediaUsageConfirmation`),
       (_[(_.k_RemovedIneligible = 12)] = `k_RemovedIneligible`),
+      (_[(_.k_OptInCancelled = 13)] = `k_OptInCancelled`),
       _
     );
   })({}),
-  _ = [2, 5, 0, 6, 1, 4, 3, 7, 8, 11, 9, 10, 12];
+  _ = [2, 5, 0, 6, 1, 4, 3, 7, 8, 11, 9, 10, 12, 13];
 function _(_) {
   switch (_) {
     case 2:
@@ -43617,6 +42598,8 @@ function _(_) {
       return `Steam Awards Finalists Notification`;
     case 12:
       return `Removed From Event - No Longer Eligible`;
+    case 13:
+      return `Removed From Event - Event Cancelled`;
   }
   return `unknown`;
 }
@@ -43648,6 +42631,8 @@ function _(_) {
       return `Here's how to get the most out of the Steam Awards`;
     case 12:
       return `This event is for games that have not yet released. Because your game is now available on Steam, we've removed it from the event. No action is needed.`;
+    case 13:
+      return null;
   }
   return `unknown`;
 }
@@ -44954,6 +43939,22 @@ var _ = `section_`,
         !!this.m_model.opt_in_registration_checkbox
       );
     }
+    GetCancelledTime() {
+      return this.m_model.rtime_optin_cancelled || 0;
+    }
+    RecordServerCancellation(_) {
+      ((this.m_model.rtime_optin_cancelled = _),
+        _.Get().SetOptInDefinition(this.m_model));
+    }
+    GetCancelledAnnouncementURL() {
+      return this.m_model.cancelled_announcement_url || ``;
+    }
+    SetCancelledAnnouncementURL(_) {
+      let _ = _.trim();
+      _ != this.GetCancelledAnnouncementURL() &&
+        ((this.m_model.cancelled_announcement_url = _ || void 0),
+        this.SetDirty(!0));
+    }
     BIsOptInEnabled() {
       return this.m_model.sale_optin_enabled;
     }
@@ -46176,6 +45177,10 @@ var _ = `section_`,
   _([_], _.prototype, `SetCurOptInRegistrationCheckbox`, null),
   _([_.bound], _.prototype, `SetOptInRegistrationCheckbox`, null),
   _([_], _.prototype, `BHasOptInRegistrationTitleOrCheckbox`, null),
+  _([_], _.prototype, `GetCancelledTime`, null),
+  _([_.bound], _.prototype, `RecordServerCancellation`, null),
+  _([_], _.prototype, `GetCancelledAnnouncementURL`, null),
+  _([_.bound], _.prototype, `SetCancelledAnnouncementURL`, null),
   _([_], _.prototype, `BIsOptInEnabled`, null),
   _([_.bound], _.prototype, `SetOptInEnabled`, null),
   _([_], _.prototype, `GetOptInType`, null),
@@ -46803,6 +45808,7 @@ var _ = `OptInEdit_BasicInfo`,
   _ = `OptInEdit_MediaPermissions`,
   _ = `OptInEdit_TextOverride`,
   _ = `OptInEdit_Delete`,
+  _ = `OptInEdit_Cancel`,
   _ = `OptInEdit_PartnerRequestInfo`,
   _ = `OptInEdit_PartnerTargetDate`,
   _ = `OptInEdit_ShippingCountries`,
@@ -46829,7 +45835,7 @@ function _(_) {
 function _(_, _, _) {
   return _(_) ? _.has(_) : _.has(_) && _ !== `OptInEdit_Delete` ? !1 : _(_, _);
 }
-var _ = new Map([[_.DeepestDiscount, new Set([_, _, _, _, _, _])]]),
+var _ = new Map([[_.DeepestDiscount, new Set([_, _, _, _, _, _, _])]]),
   _ = new Map([[_, _.DeepestDiscount]]),
   _ = [
     {
@@ -56143,6 +55149,137 @@ function _(_) {
     }),
   });
 }
+async function _(_, _) {
+  let _ = await fetch(`${_.PARTNER_BASE_URL}optin/admin/canceloptin`, {
+    method: `POST`,
+    headers: {
+      "Content-Type": `application/json`,
+    },
+    body: JSON.stringify({
+      pageid: _,
+      dry_run: _,
+    }),
+    credentials: `include`,
+  });
+  if (!_._) throw Error(`Cancel request failed: status ` + _.status);
+  let _ = await _.json();
+  return {
+    success: _.success,
+    msg: _.msg,
+    removed_appids: _.removed_appids || [],
+    failed_appids: _.failed_appids || [],
+    has_cancelled_email: !!_.has_cancelled_email,
+  };
+}
+function _(_, _) {
+  return _(
+    {
+      queryKey: [`OptInCancelDryRun`, _],
+      queryFn: async () => {
+        let _ = await _(_, !0);
+        if (_.success != 1)
+          throw Error(
+            `Dry run failed (EResult ${_.success})${_.msg ? `: ` + _.msg : ``}`,
+          );
+        return _;
+      },
+      enabled: !!_ && _,
+      staleTime: 0,
+      gcTime: 0,
+      retry: !1,
+    },
+    _,
+  );
+}
+var _ = [
+    {
+      strField: `asset_kit_url`,
+      strLabel: `Asset Kit URL`,
+      fnGetURL: (_) => _.GetAssetKitURL(),
+    },
+    {
+      strField: `sale_preview_page`,
+      strLabel: `Sale Event Preview Page`,
+      fnGetURL: (_) => _.GetSalePreviewPage(),
+    },
+    {
+      strField: `qasession_link`,
+      strLabel: `Q&A Session URL`,
+      fnGetURL: (_) => _.GetQASessionLink(),
+    },
+    {
+      strField: `recorded_qa_session_link`,
+      strLabel: `Recorded Q&A YouTube URL`,
+      fnGetURL: (_) => _.GetRecordedQASessionLink(),
+    },
+    {
+      strField: `trailer_demo_reg_link`,
+      strLabel: `Permission Registration URL`,
+      fnGetURL: (_) => _.GetDemoTrailerRegLink(),
+    },
+    {
+      strField: `wiki_doc_url`,
+      strLabel: `Event Wiki documentation`,
+      fnGetURL: (_) => _.GetWikiDocURL(),
+    },
+    {
+      strField: `survey_link_url`,
+      strLabel: `Event Survey link`,
+      fnGetURL: (_) => _.GetSurveyLinkURL(),
+    },
+    {
+      strField: `generic_action_link`,
+      strLabel: `Action URL`,
+      fnGetURL: (_) => _.GetGenericActionLink(),
+    },
+    {
+      strField: `generic_button_link`,
+      strLabel: `Action Button URL`,
+      fnGetURL: (_) => _.GetGenericActionButtonLink(),
+    },
+  ],
+  _ = 3e5;
+function _(_) {
+  if (!_ || _.trim() !== _) return !1;
+  try {
+    let _ = new URL(_);
+    return (_.protocol == `https:` || _.protocol == `http:`) && !!_.hostname;
+  } catch {
+    return !1;
+  }
+}
+function _(_, _, _) {
+  let _ = _.GetUniqueID(),
+    _ = _.map((_) => _.fnGetURL(_) || ``);
+  return _(
+    {
+      queryKey: [`OptInEmailLinkCheck`, _, _, _],
+      queryFn: () => _(_, _),
+      enabled: !!(_ && _) && !_ && _.some(Boolean),
+      staleTime: _,
+      retry: !1,
+    },
+    _,
+  );
+}
+async function _(_, _) {
+  let _ = await fetch(`${_.PARTNER_BASE_URL}optin/admin/checkemaillinks`, {
+      method: `POST`,
+      headers: {
+        "Content-Type": `application/json`,
+      },
+      body: JSON.stringify({
+        pageid: _,
+        emailid: _,
+        fields: _.map((_) => _.strField),
+      }),
+      credentials: `include`,
+    }),
+    _ = _._ ? await _.json() : null;
+  if (_?.success != 1 || !_.results)
+    throw Error(`Link check failed: ` + (_?.msg ?? `status ` + _.status));
+  return _.results;
+}
 function _(_) {
   let _ = _.Get(),
     [_, _, _, _, _, _, _, _] = _(() => [
@@ -56251,6 +55388,11 @@ function _(_) {
       {
         _: _,
         label: `Delete Opt-In`,
+        _: (0, _.jsx)(_, {}),
+      },
+      {
+        _: _,
+        label: `Cancel Opt-In`,
         _: (0, _.jsx)(_, {}),
       },
     ],
@@ -57504,6 +56646,276 @@ function _() {
       ],
     })
   );
+}
+function _() {
+  let _ = _.Get(),
+    [_, _, _, _, _] = _(() => [
+      _.GetFullName(),
+      _.BIsOptInEnabled(),
+      _.BIsDirty(),
+      _.GetCancelledTime(),
+      _.GetCancelledAnnouncementURL(),
+    ]),
+    [_, _] = (0, _.useState)(`none`),
+    _ = null;
+  _
+    ? (_ = `Uncheck "Enable Partners to opt-in" and save before cancelling. The server will not cancel an opt-in that is switched on.`)
+    : _ && (_ = `Save or discard your changes before cancelling.`);
+  let _ = !!_ && !_(_);
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsx)(`h3`, {
+            children: `Cancel Opt-In`,
+          }),
+          (0, _.jsx)(`p`, {
+            children: `Use this when the event will not take place. It cannot be undone. Every registered game is removed from the opt-in, its Steam Fest deadlines are cleared from the partner's dashboard, and each partner is sent the "opt-in cancelled" automatic email if one is primed in the Emails tab. The opt-in then refuses all registrations, even if it is switched back on, and partner pages show it as cancelled.`,
+          }),
+          (0, _.jsx)(`h3`, {
+            children: `Cancellation Announcement URL:`,
+          }),
+          (0, _.jsx)(`p`, {
+            children: `A public post explaining why the event was cancelled, usually a Steamworks blog post. Partner pages and the cancellation email link to it. It can be added or changed after cancelling; save the opt-in to publish it.`,
+          }),
+          (0, _.jsx)(_, {
+            type: `text`,
+            onChange: (_) => _.SetCancelledAnnouncementURL(_.target.value),
+            value: _,
+            placeholder: `https://store.steampowered.com/news/...`,
+            className: _,
+          }),
+          _ &&
+            (0, _.jsx)(`div`, {
+              className: `n7RXDTH-Wf8-`,
+              children: `This is not a full http(s) link, so partners could not open it.`,
+            }),
+          (0, _.jsx)(`br`, {}),
+          !!_ &&
+            (0, _.jsxs)(`div`, {
+              className: `n7RXDTH-Wf8-`,
+              children: [
+                `This opt-in was cancelled on `,
+                _(_),
+                `. Run the cancel again only to retry games that failed to be removed.`,
+              ],
+            }),
+          !!_ &&
+            (0, _.jsx)(`p`, {
+              children: _,
+            }),
+          (0, _.jsx)(_, {
+            className: _,
+            disabled: !!_,
+            onClick: () => _(`review`),
+            children: _ ? `Retry Cancel...` : `Cancel Opt-In...`,
+          }),
+        ],
+      }),
+      (0, _.jsx)(_, {
+        active: _ == `review`,
+        children: (0, _.jsx)(_, {
+          strOptInName: _,
+          strAnnouncementURL: _ ? `` : _,
+          onContinue: () => _(`confirm`),
+          closeModal: () => _(`none`),
+        }),
+      }),
+      (0, _.jsx)(_, {
+        active: _ == `confirm`,
+        children: (0, _.jsx)(_, {
+          strOptInName: _,
+          closeModal: () => _(`none`),
+        }),
+      }),
+    ],
+  });
+}
+function _(_) {
+  let {
+      strOptInName: _,
+      strAnnouncementURL: _,
+      onContinue: _,
+      closeModal: _,
+    } = _,
+    { data: _, isLoading: _, error: _ } = _(_, !0),
+    _ = _(() =>
+      _.Get()
+        .GetEmailDefinitions()
+        ?.find((_) => !_.BIsDraftEmail() && _.GetEmailTargeting() == 16384)
+        ?.GetInternalName(),
+    );
+  return (0, _.jsxs)(_, {
+    strTitle: `Cancel Opt-In: Step 1 of 2`,
+    strDescription: (0, _.jsxs)(`span`, {
+      children: [
+        `Review what cancelling `,
+        (0, _.jsx)(`b`, {
+          children: _,
+        }),
+        ` will do. Nothing has changed yet.`,
+      ],
+    }),
+    strOKButtonText: `Continue`,
+    bOKDisabled: !_,
+    onOK: _,
+    onCancel: _,
+    children: [
+      _ &&
+        (0, _.jsx)(_, {
+          size: `medium`,
+          position: `center`,
+          string: `Checking registrations...`,
+        }),
+      !!_ &&
+        (0, _.jsx)(`div`, {
+          className: `wizbFzhGtBc-`,
+          children: String(_.message || _),
+        }),
+      !!_ &&
+        (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(`p`, {
+              children: [
+                (0, _.jsx)(`b`, {
+                  children: _.removed_appids.length,
+                }),
+                ` registered game`,
+                _.removed_appids.length == 1 ? `` : `s`,
+                ` will be removed from the opt-in.`,
+              ],
+            }),
+            _.has_cancelled_email
+              ? (0, _.jsxs)(`div`, {
+                  className: `j-YX1O7pXw0-`,
+                  children: [
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsxs)(`span`, {
+                      children: [
+                        `The "opt-in cancelled" email`,
+                        _ ? ` "${_}"` : ``,
+                        ` is primed and ready to send. The partner user who registered each game, and its last editor if that is someone else, will be emailed once per game.`,
+                      ],
+                    }),
+                  ],
+                })
+              : (0, _.jsx)(`div`, {
+                  className: `n7RXDTH-Wf8-`,
+                  children: `No "opt-in cancelled" email is primed, so partners will not be told their game was removed. We recommend stopping here and creating one first: in the Emails tab, under Automatic Emails, use "Create Draft From Preset" on the Opt-in cancelled row, save the opt-in, then prime the draft.`,
+                }),
+            _
+              ? (0, _.jsxs)(`div`, {
+                  className: `j-YX1O7pXw0-`,
+                  children: [
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsxs)(`span`, {
+                      children: [
+                        `The email and partner pages will link to the announcement: `,
+                        _,
+                      ],
+                    }),
+                  ],
+                })
+              : (0, _.jsx)(`div`, {
+                  className: `n7RXDTH-Wf8-`,
+                  children: `No cancellation announcement URL is set, so the email and partner pages cannot link to an explanation. You can add one later.`,
+                }),
+          ],
+        }),
+    ],
+  });
+}
+function _(_) {
+  let { strOptInName: _, closeModal: _ } = _,
+    [_, _] = (0, _.useState)(!1),
+    [_, _] = (0, _.useState)(null),
+    [_, _] = (0, _.useState)(null),
+    _ = async () => {
+      (_(!0), _(null));
+      try {
+        let _ = await _(_, !1);
+        (_(_),
+          (_.success == 1 || _.removed_appids.length > 0) &&
+            _.Get().RecordServerCancellation(
+              _.Get().GetCancelledTime() || Math.floor(Date.now() / 1e3),
+            ),
+          _.success != 1 &&
+            _(
+              `The cancel did not complete (EResult ${_.success})${_.msg ? `: ` + _.msg : ``}.`,
+            ));
+      } catch (_) {
+        _(`The cancel request failed: ` + String(_?.message || _));
+      }
+      _(!1);
+    },
+    _ = !!_ && !_;
+  return (0, _.jsxs)(_, {
+    strTitle: `Cancel Opt-In: Step 2 of 2`,
+    strDescription: _
+      ? null
+      : (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(`span`, {
+              children: [
+                `Are you sure you want to cancel `,
+                (0, _.jsx)(`b`, {
+                  children: _,
+                }),
+                `?`,
+              ],
+            }),
+            (0, _.jsx)(`br`, {}),
+            (0, _.jsx)(`br`, {}),
+            (0, _.jsx)(`span`, {
+              children: `This cannot be undone. Every registered game is removed right away, partners are emailed if the cancellation email is primed, and the opt-in can never take registrations again.`,
+            }),
+          ],
+        }),
+    bDestructiveWarning: !0,
+    strOKButtonText: _ ? `Close` : `Cancel This Opt-In`,
+    strCancelButtonText: _ ? void 0 : `Keep It`,
+    bOKDisabled: _,
+    bCancelDisabled: _,
+    onOK: _ ? _ : _,
+    onCancel: _,
+    children: [
+      _ &&
+        (0, _.jsx)(_, {
+          size: `medium`,
+          position: `center`,
+          string: `Cancelling...`,
+        }),
+      _ &&
+        (0, _.jsxs)(`p`, {
+          children: [
+            `Removed `,
+            _.removed_appids.length,
+            ` game`,
+            _.removed_appids.length == 1 ? `` : `s`,
+            `.`,
+            _.has_cancelled_email
+              ? ` Their partners are being emailed.`
+              : ` No cancellation email was sent.`,
+          ],
+        }),
+      _ &&
+        _.failed_appids.length > 0 &&
+        (0, _.jsxs)(`div`, {
+          className: `wizbFzhGtBc-`,
+          children: [
+            `These games could not be removed: `,
+            _.failed_appids.join(`, `),
+            `. Run the cancel again to retry them.`,
+          ],
+        }),
+      !!_ &&
+        (0, _.jsx)(`div`, {
+          className: `vq3QPUTkA0g-`,
+          children: _,
+        }),
+    ],
+  });
 }
 var _ = 20;
 function _() {
@@ -60635,11 +60047,16 @@ function _(_) {
     case _:
       return `Automatic: sent when a game is removed as no longer eligible`;
     case _:
+      return `Automatic: sent when the opt-in is cancelled and a game is removed`;
+    case _:
       return `Invited partners that have not answered (Actual Authority and Manage Users)`;
   }
   return `Unknown target: ` + _;
 }
-var _ = [_, _];
+var _ = [_, _, _];
+function _(_) {
+  return _ == _;
+}
 function _(_) {
   return _.includes(_);
 }
@@ -60649,6 +60066,8 @@ function _(_) {
       return `Registration confirmation`;
     case _:
       return `Removed as ineligible`;
+    case _:
+      return `Opt-in cancelled`;
   }
   return _(_);
 }
@@ -60658,6 +60077,8 @@ function _(_) {
       return `registering partners`;
     case _:
       return `partners whose game is removed as no longer eligible`;
+    case _:
+      return `partners whose game is removed because the opt-in was cancelled`;
   }
   return `partners`;
 }
@@ -62861,95 +62282,6 @@ function _(_) {
     },
   });
 }
-var _ = [
-    {
-      strField: `asset_kit_url`,
-      strLabel: `Asset Kit URL`,
-      fnGetURL: (_) => _.GetAssetKitURL(),
-    },
-    {
-      strField: `sale_preview_page`,
-      strLabel: `Sale Event Preview Page`,
-      fnGetURL: (_) => _.GetSalePreviewPage(),
-    },
-    {
-      strField: `qasession_link`,
-      strLabel: `Q&A Session URL`,
-      fnGetURL: (_) => _.GetQASessionLink(),
-    },
-    {
-      strField: `recorded_qa_session_link`,
-      strLabel: `Recorded Q&A YouTube URL`,
-      fnGetURL: (_) => _.GetRecordedQASessionLink(),
-    },
-    {
-      strField: `trailer_demo_reg_link`,
-      strLabel: `Permission Registration URL`,
-      fnGetURL: (_) => _.GetDemoTrailerRegLink(),
-    },
-    {
-      strField: `wiki_doc_url`,
-      strLabel: `Event Wiki documentation`,
-      fnGetURL: (_) => _.GetWikiDocURL(),
-    },
-    {
-      strField: `survey_link_url`,
-      strLabel: `Event Survey link`,
-      fnGetURL: (_) => _.GetSurveyLinkURL(),
-    },
-    {
-      strField: `generic_action_link`,
-      strLabel: `Action URL`,
-      fnGetURL: (_) => _.GetGenericActionLink(),
-    },
-    {
-      strField: `generic_button_link`,
-      strLabel: `Action Button URL`,
-      fnGetURL: (_) => _.GetGenericActionButtonLink(),
-    },
-  ],
-  _ = 3e5;
-function _(_) {
-  if (!_ || _.trim() !== _) return !1;
-  try {
-    let _ = new URL(_);
-    return (_.protocol == `https:` || _.protocol == `http:`) && !!_.hostname;
-  } catch {
-    return !1;
-  }
-}
-function _(_, _, _) {
-  let _ = _.GetUniqueID(),
-    _ = _.map((_) => _.fnGetURL(_) || ``);
-  return _(
-    {
-      queryKey: [`OptInEmailLinkCheck`, _, _, _],
-      queryFn: () => _(_, _),
-      enabled: !!(_ && _) && !_ && _.some(Boolean),
-      staleTime: _,
-      retry: !1,
-    },
-    _,
-  );
-}
-async function _(_, _) {
-  let _ = await fetch(`${_.PARTNER_BASE_URL}optin/admin/checkemaillinks`, {
-      method: `POST`,
-      headers: {
-        "Content-Type": `application/json`,
-      },
-      body: JSON.stringify({
-        pageid: _,
-        emailid: _,
-        fields: _.map((_) => _.strField),
-      }),
-      credentials: `include`,
-    }),
-    _ = _._ ? await _.json() : null;
-  if (_?.success != 1 || !_.results)
-    throw Error(`Link check failed: ` + (_?.msg ?? `status ` + _.status));
-  return _.results;
-}
 function _(_) {
   switch (_.GetType()) {
     case _.k_Invite:
@@ -62978,12 +62310,15 @@ function _(_) {
       return null;
     case _.k_RemovedIneligible:
       return `NO LONGER ELIGIBLE`;
+    case _.k_OptInCancelled:
+      return null;
     default:
       return `unknown type: ` + _.GetType();
   }
 }
 var _ = (_) => {
-  let { emailDef: _, storeItem: _ } = _;
+  let { emailDef: _, storeItem: _ } = _,
+    _ = _(() => _.Get().GetCurEventTitle());
   switch (_.GetType()) {
     case _.k_Invite:
     case _.k_InviteReminder:
@@ -63117,12 +62452,53 @@ var _ = (_) => {
           ` is now available on Steam, we've removed it from the event. No action is needed. Released games can take part in other Steam events and sales; see the Steamworks documentation for what's coming up.`,
         ],
       });
+    case _.k_OptInCancelled:
+      return (0, _.jsxs)(_.Fragment, {
+        children: [
+          (0, _.jsx)(`a`, {
+            href: _.GetStorePageURL(),
+            children: _.GetName(),
+          }),
+          ` was registered for `,
+          _,
+          `, but we've made the difficult decision to cancel it.`,
+        ],
+      });
     default:
       return (0, _.jsxs)(`div`, {
         children: [`unknown type: `, _.GetType()],
       });
   }
 };
+function _(_) {
+  let { emailDef: _ } = _,
+    _ = _.Get(),
+    [_, _, _] = _(() => [
+      _.GetCurEventTitle(),
+      _.GetEventStartTime(),
+      _.GetEventEndTime(),
+    ]),
+    _ = null;
+  return (
+    _.GetType() == _.k_OptInCancelled
+      ? (_ = `Event Cancelled`)
+      : _.GetType() != _.k_PermissionRequest && (_ = `${_(_)} - ${_(_)}`),
+    (0, _.jsxs)(`div`, {
+      className: _,
+      children: [
+        (0, _.jsx)(`div`, {
+          className: _,
+          children: _,
+        }),
+        !!_ &&
+          (0, _.jsx)(`div`, {
+            className: `QusNmUiSsPE-`,
+            children: _,
+          }),
+      ],
+    })
+  );
+}
 function _(_) {
   let { partnerInfo: _ } = _,
     _ = _.Get(),
@@ -63264,6 +62640,10 @@ var _ = _((_) => {
                       : (0, _.jsxs)(`div`, {
                           className: _(_),
                           children: [
+                            _.GetType() == _.k_OptInCancelled &&
+                              (0, _.jsx)(_, {
+                                emailDef: _,
+                              }),
                             (0, _.jsx)(`div`, {
                               className: _,
                               children: _(_),
@@ -63276,23 +62656,9 @@ var _ = _((_) => {
                               }),
                             }),
                             _.GetType() != _.k_GeneralCommunication &&
-                              (0, _.jsxs)(`div`, {
-                                className: `ZJNxTDHez88-`,
-                                children: [
-                                  (0, _.jsx)(`div`, {
-                                    className: `pFDm6U4Iqjc-`,
-                                    children: _.GetCurEventTitle(),
-                                  }),
-                                  _.GetType() != _.k_PermissionRequest &&
-                                    (0, _.jsxs)(`div`, {
-                                      className: `QusNmUiSsPE-`,
-                                      children: [
-                                        _(_.GetEventStartTime()),
-                                        ` - `,
-                                        _(_.GetEventEndTime()),
-                                      ],
-                                    }),
-                                ],
+                              _.GetType() != _.k_OptInCancelled &&
+                              (0, _.jsx)(_, {
+                                emailDef: _,
                               }),
                             (0, _.jsx)(`div`, {
                               className: void 0,
@@ -63329,6 +62695,7 @@ var _ = _((_) => {
                           _.GetType() != _.k_PermissionRequest &&
                           _.GetType() != _.k_GeneralCommunication &&
                           _.GetType() != _.k_SteamAwardFinalists &&
+                          _.GetType() != _.k_OptInCancelled &&
                           (0, _.jsxs)(`div`, {
                             className: void 0,
                             children: [
@@ -63411,7 +62778,7 @@ var _ = _((_) => {
                           `You are receiving this email because you registered `,
                           _.GetName(),
                           ` for the `,
-                          _.GetName(),
+                          _.GetCurEventTitle(),
                           ` event on Steamworks.`,
                         ],
                       }),
@@ -63525,6 +62892,7 @@ var _ = _((_) => {
     `#OptIn_EmailSubject_NF_Thanks`,
     `#OptIn_EmailSubject_TrailerPermissions`,
     `#OptIn_EmailSubject_NoLongerEligible`,
+    `#OptIn_EmailSubject_OptInCancelled`,
     `#OptIn_EmailSubject_DeepestDiscount_Invite`,
     `#OptIn_EmailSubject_DeepestDiscount_DecideReminder`,
     `#OptIn_EmailSubject_DeepestDiscount_EnterDiscount`,
@@ -63641,6 +63009,7 @@ function _(_) {
         .map((_) => _.email_def_id),
     ),
     _ = _.find((_) => !_.BIsDraftEmail() && _.has(_.GetServerEmailDefID())),
+    _ = _ == _,
     _ = _ == _;
   return (0, _.jsxs)(_.Fragment, {
     children: [
@@ -63675,8 +63044,80 @@ function _(_) {
           (0, _.jsx)(`p`, {
             children: `The Steam server sends this email on its own, one game at a time, to the account that registered the game. It is primed rather than staged: it cannot be scheduled or sent in bulk, the reach estimate is always zero, and it is never marked complete. Deactivating it in the dashboard's Automatic Emails section is the off switch. Each account gets it at most once per game, so a partner who opts out and back in is not emailed again.`,
           }),
+          _ &&
+            (0, _.jsx)(`p`, {
+              children: `This email goes out only when an admin cancels the opt-in from the editor's Cancel Opt-In section. It is optional; an opt-in that is never cancelled never sends it.`,
+            }),
         ],
       }),
+      _ &&
+        (0, _.jsx)(_, {
+          emailDef: _,
+        }),
+    ],
+  });
+}
+function _(_) {
+  let { emailDef: _ } = _,
+    _ = _.Get(),
+    [_, _] = _(() => [_.GetFullName(), _.BIsDraftEmail()]),
+    [_, _] = (0, _.useState)(!1),
+    _ = !_ || _,
+    { data: _, isFetching: _, error: _, refetch: _ } = _(_, _);
+  return (0, _.jsxs)(`div`, {
+    className: _,
+    children: [
+      (0, _.jsx)(`div`, {
+        className: _,
+        children: `Reach If Cancelled Now`,
+      }),
+      !_ &&
+        (0, _.jsx)(_, {
+          className: `VdKslHqsKJU-`,
+          onClick: () => _(!0),
+          children: `Estimate Reach (Dry Run)`,
+        }),
+      _ &&
+        _ &&
+        (0, _.jsx)(_, {
+          size: `small`,
+          string: `Running a cancel dry run...`,
+        }),
+      _ &&
+        !_ &&
+        !!_ &&
+        (0, _.jsx)(`div`, {
+          className: _(`wizbFzhGtBc-`),
+          children: String(_.message || _),
+        }),
+      _ &&
+        !_ &&
+        !!_ &&
+        (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(`p`, {
+              children: [
+                `Cancelling now would remove `,
+                (0, _.jsx)(`b`, {
+                  children: _.removed_appids.length,
+                }),
+                ` registered game`,
+                _.removed_appids.length == 1 ? `` : `s`,
+                `. Each game's registering user is emailed, and its last editor too when that is someone else.`,
+              ],
+            }),
+            (0, _.jsx)(`p`, {
+              children: _.has_cancelled_email
+                ? `The server sees a primed "opt-in cancelled" email, so these partners would be emailed.`
+                : `The server sees no primed "opt-in cancelled" email yet, so nobody would be emailed until this one is primed.`,
+            }),
+            (0, _.jsx)(_, {
+              className: `VdKslHqsKJU-`,
+              onClick: () => _(),
+              children: `Refresh`,
+            }),
+          ],
+        }),
     ],
   });
 }
@@ -64692,6 +64133,10 @@ var _ = (_) => {
         label: _(_),
         data: _,
       },
+      {
+        label: _(_),
+        data: _,
+      },
     ];
   return (0, _.jsxs)(`div`, {
     children: [
@@ -65011,8 +64456,31 @@ function _() {
     _ = _.Get().AddEmailDraft(_);
   return (_.AddSection(_.k_LearnMore), _);
 }
+function _() {
+  let _ = {
+      unique_id: _(),
+      type: _.k_OptInCancelled,
+      internal_name: `Event Cancelled - Removed`,
+      sections: [],
+      subject_token: `#OptIn_EmailSubject_OptInCancelled`,
+      targeting: _,
+    },
+    _ = _.Get().AddEmailDraft(_);
+  _.AddSection(_.k_Custom);
+  let _ = _.GetSection(_.GetSections().length - 1);
+  return (
+    _.SetTitle(`What Happens Next?`, 0),
+    _.SetDescription(
+      `We've automatically deregistered your game from this event, so it remains eligible to register for a future one. There's no action needed on your part.`,
+      0,
+    ),
+    _
+  );
+}
 function _(_) {
   switch (_) {
+    case _:
+      return _();
     case _:
       return _();
     case _:
@@ -65259,7 +64727,7 @@ var _ = _((_) => {
     : (0, _.jsxs)(`div`, {
         children: [
           _ &&
-            _.filter((_) => _.status != `primed`).map((_) =>
+            _.filter((_) => _.status != `primed` && !_(_.targeting)).map((_) =>
               (0, _.jsx)(
                 `div`,
                 {
@@ -65495,7 +64963,7 @@ function _(_) {
           _.GetUniqueID(),
         ),
       ),
-      _.BIsNextFestOptInName() &&
+      (_.BIsNextFestOptInName() || _(_.targeting)) &&
         (0, _.jsx)(_, {
           className: `VdKslHqsKJU-`,
           onClick: _,
@@ -89329,7 +88797,7 @@ var _ = `_8R-vFXPq55U-`,
   _ = `_0OoyXZePW7I-`,
   _ = `w0qNWg-lQUo-`;
 function _(_) {
-  let { setting: _, fnUpdateSetting: _, label: _ } = _,
+  let { setting: _, fnUpdateSetting: _, label: _, bHideBlur: _ } = _,
     _ = _.useMemo(() => {
       let _ = [];
       return (
@@ -89349,13 +88817,14 @@ function _(_) {
           label: _(`#EventEditor_Tile_Repeat`),
           data: `repeat`,
         }),
-        _.push({
-          label: _(`#EventEditor_Tile_NoRepeatAndBlur`),
-          data: `coverBlur`,
-        }),
+        _ ||
+          _.push({
+            label: _(`#EventEditor_Tile_NoRepeatAndBlur`),
+            data: `coverBlur`,
+          }),
         _
       );
-    }, []);
+    }, [_]);
   return (0, _.jsxs)(_.Fragment, {
     children: [
       (0, _.jsx)(_, {

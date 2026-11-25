@@ -24,12 +24,8 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
 } from "./chunk~de7f2df91c.js";
-import { _, _, _, _, _ } from "./chunk~25a6634263.js";
+import { _, _, _, _, _ } from "./chunk~bd90a5fce7.js";
 import { _, _, _, _, _, _ } from "./chunk~b4171a8747.js";
 import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~1fa4b8f2ff.js";
 import { _, _ } from "./chunk~0a99e05c44.js";
@@ -40,6 +36,7 @@ import { _ } from "./chunk~9aa05d2c7d.js";
 import { _, _, _ } from "./chunk~428594b857.js";
 import { _ } from "./chunk~b390ee0f78.js";
 import { _ } from "./chunk~b0a84aab1b.js";
+import { _, _, _, _ } from "./chunk~96e60d7578.js";
 import { _ } from "./chunk~726542bc75.js";
 import { _ } from "./chunk~a6402cc243.js";
 import { _ } from "./chunk~8681f5c764.js";
@@ -2751,7 +2748,7 @@ var _ = `tPLTOu9ePPk-`,
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 2,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -2782,7 +2779,7 @@ var _ = `tPLTOu9ePPk-`,
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetAssetPropertySchema = _;
@@ -10994,7 +10991,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 2,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -11198,7 +11195,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetAssetPropertySchema = _;

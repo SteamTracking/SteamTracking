@@ -14097,16 +14097,15 @@ async function _() {
     return !1;
   }
 }
-function _(_) {
-  return _(_.rgBrowserAPISites, `help`);
-}
 var _ = class {
   m_ServiceTransport;
   m_AnonymousServiceTransport;
   m_fallbackInterface;
+  m_strSiteName;
   m_refreshLoginCookiePromise;
-  constructor(_) {
+  constructor(_, _ = `help`) {
     ((this.m_fallbackInterface = _),
+      (this.m_strSiteName = _),
       (this.m_ServiceTransport = {
         SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
           bSendAuth: !0,
@@ -14127,7 +14126,7 @@ var _ = class {
       }));
   }
   async SendMsgAndAwaitResponse(_, _, _, _, _) {
-    if (!_(_)) {
+    if (!this.BCanSendMessageViaBrowserAPI(_)) {
       if (this.m_fallbackInterface)
         return _.bSendAuth
           ? this.m_fallbackInterface?.GetServiceTransport().SendMsg(_, _, _, _)
@@ -14142,6 +14141,9 @@ var _ = class {
       !(await this.BEnsureLoginCookieRefreshed())
       ? _.msgResult
       : (await this.SendMsgOnce(_, _, _, _, _)).msgResult;
+  }
+  BCanSendMessageViaBrowserAPI(_) {
+    return _(_.rgBrowserAPISites, this.m_strSiteName);
   }
   BEnsureLoginCookieRefreshed() {
     return (
@@ -14178,7 +14180,7 @@ var _ = class {
     };
   }
   SendNotification(_, _, _, _) {
-    if (!_(_)) {
+    if (!this.BCanSendMessageViaBrowserAPI(_)) {
       if (this.m_fallbackInterface)
         return _.bSendAuth
           ? this.m_fallbackInterface
@@ -14271,12 +14273,9 @@ var _ = class {
     return new Date(_ * 1e3);
   }
 };
-function _() {
-  return [_.HELP_BASE_URL];
-}
 function _(_) {
   let _ = _();
-  return _ && _().includes(_) ? new _(_) : _;
+  return _ && _ === _.STORE_CHECKOUT_BASE_URL ? new _(_, `checkout`) : new _(_);
 }
 var _ = null;
 try {
@@ -15188,8 +15187,9 @@ var _ = class {
       } catch {}
       let _ = _ === 401;
       if (!_) {
-        let _ = _ ? `Unauthorized` : void 0;
-        _ = this.CreateFailedMsgProtobuf(_, 3, _);
+        let _ = _ ? `Unauthorized` : void 0,
+          _ = _ === 429 ? 84 : 2;
+        _ = this.CreateFailedMsgProtobuf(_, 3, _, _);
       }
       return (
         _ &&
@@ -15254,10 +15254,10 @@ var _ = class {
       if (!_ || _.length != 4) throw `Invalid service name: ${_}`;
       return `${this.m_strWebAPIBaseURL}I${_[1]}Service/${_[2]}/v${_[3]}`;
     }
-    CreateFailedMsgProtobuf(_, _, _) {
+    CreateFailedMsgProtobuf(_, _, _, _) {
       let _ = _.Init(_);
       return (
-        _.Hdr().set_eresult(2),
+        _.Hdr().set_eresult(_),
         _.Hdr().set_transport_error(_),
         _ && _.Hdr().set_error_message(_),
         _
@@ -22904,49 +22904,49 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.Create#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.Create = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.Delete#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.Delete = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.UpdateInternalName#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UpdateInternalName = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.UpdateJsonData#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UpdateJsonData = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.SetVisibility#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetVisibility = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.UpdateDraft#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UpdateDraft = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.PublishDraft#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.PublishDraft = _;
@@ -22967,14 +22967,14 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.GetFAQVersion#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFAQVersion = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.GetAllDrafts#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetAllDrafts = _;
@@ -23006,7 +23006,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`help`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SearchFAQs = _;
@@ -27996,7 +27996,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.Query = _;
@@ -28005,7 +28005,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SearchSuggestions = _;
@@ -28025,7 +28025,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -28046,7 +28046,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`StoreQuery.GetSaleBrowserItems#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 0,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetSaleBrowserItems = _;
@@ -28341,7 +28341,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`PartnerStoreBrowse.GetItems#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`partner`, `community`, `store`, `support`, `help`],
     });
   }
   _.GetItems = _;
@@ -28813,26 +28813,26 @@ function _(_, _, _, _, _ = !1) {
       if (_ && !_.BSuccess())
         throw `Error loading store items: ${_.GetErrorMessage()}`;
       let _ = new Map();
-      return (
-        _.Body()
-          .store_items()
-          .forEach((_, _) => {
-            let _ = _.item_type(),
-              _ = _ === void 0 ? _[_] : _(_, _.gid() ?? _._());
-            _ && _.set(_, _);
-          }),
-        _ && _(_, _, _, _.included_item_data_request, _),
-        _.map((_) => {
-          let [_] = _(_, `|`),
-            _ = _.get(_);
-          return _
-            ? _.toObject()
-            : {
-                ..._(_),
-                success: 2,
-              };
-        })
-      );
+      (_.Body()
+        .store_items()
+        .forEach((_, _) => {
+          let _ = _.item_type(),
+            _ = _ === void 0 ? _[_] : _(_, _.gid() ?? _._());
+          _ && _.set(_, _);
+        }),
+        _ && _(_, _, _, _.included_item_data_request, _));
+      let _ = new Map();
+      return _.map((_) => {
+        let [_] = _(_, `|`),
+          _ = _.get(_);
+        if (!_)
+          return {
+            ..._(_),
+            success: 2,
+          };
+        let _ = _.get(_);
+        return (_ || ((_ = _.toObject()), _.set(_, _)), _);
+      });
     },
     {
       maxBatchSize: 500,
@@ -32142,7 +32142,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -32168,7 +32168,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -32181,7 +32181,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -32201,7 +32201,7 @@ var _ = class _ extends _.Message {
   function _(_, _) {
     return _.SendNotification(`MarketingMessages.MarkMessageSeen#1`, _(_, _), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.MarkMessageSeen = _;
@@ -32211,7 +32211,7 @@ var _ = class _ extends _.Message {
       _(_, _),
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -47040,7 +47040,7 @@ function _(_) {
   }
 }
 function _(_, _, _, _, _, _, _) {
-  let _ = _.innerWidth,
+  let _ = _.document.documentElement.clientWidth,
     _ = _.innerHeight,
     _,
     _,
@@ -60555,7 +60555,7 @@ var _ = `tx9MNKWLI1w-`,
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetApps = _;
@@ -60568,7 +60568,7 @@ var _ = `tx9MNKWLI1w-`,
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -60585,6 +60585,7 @@ var _ = `tx9MNKWLI1w-`,
     return _.SendMsg(`Community.GetComment#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetComment = _;
@@ -60630,7 +60631,7 @@ var _ = `tx9MNKWLI1w-`,
   function _(_, _, _) {
     return _.SendMsg(`Community.RateClanAnnouncement#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.RateClanAnnouncement = _;
@@ -60641,7 +60642,7 @@ var _ = `tx9MNKWLI1w-`,
       _,
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -60650,7 +60651,7 @@ var _ = `tx9MNKWLI1w-`,
     return _.SendMsg(`Community.GetClanMetadata#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetClanMetadata = _;
@@ -60694,7 +60695,7 @@ var _ = `tx9MNKWLI1w-`,
   function _(_, _, _) {
     return _.SendMsg(`Community.HideAndReportComment#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.HideAndReportComment = _;
@@ -60717,7 +60718,7 @@ var _ = `tx9MNKWLI1w-`,
   function _(_, _, _) {
     return _.SendMsg(`Community.MarkPartnerEventsForUser#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.MarkPartnerEventsForUser = _;
@@ -72499,7 +72500,7 @@ var _ = `a2UdikiVkck-`,
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -72509,7 +72510,7 @@ var _ = `a2UdikiVkck-`,
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetPlayerLinkDetails = _;
@@ -72530,7 +72531,7 @@ var _ = `a2UdikiVkck-`,
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetOwnedGames = _;
@@ -72545,7 +72546,7 @@ var _ = `a2UdikiVkck-`,
     return _.SendMsg(`Player.GetFriendsGameplayInfo#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFriendsGameplayInfo = _;
@@ -72567,7 +72568,7 @@ var _ = `a2UdikiVkck-`,
   function _(_, _, _) {
     return _.SendMsg(`Player.SetProfileBackground#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetProfileBackground = _;
@@ -72582,7 +72583,7 @@ var _ = `a2UdikiVkck-`,
   function _(_, _, _) {
     return _.SendMsg(`Player.SetMiniProfileBackground#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetMiniProfileBackground = _;
@@ -72597,7 +72598,7 @@ var _ = `a2UdikiVkck-`,
   function _(_, _, _) {
     return _.SendMsg(`Player.SetAvatarFrame#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetAvatarFrame = _;
@@ -72612,7 +72613,7 @@ var _ = `a2UdikiVkck-`,
   function _(_, _, _) {
     return _.SendMsg(`Player.SetAnimatedAvatar#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetAnimatedAvatar = _;
@@ -72644,7 +72645,7 @@ var _ = `a2UdikiVkck-`,
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetProfileItemsEquipped = _;
@@ -72667,7 +72668,7 @@ var _ = `a2UdikiVkck-`,
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCommunityBadgeProgress = _;
@@ -72676,7 +72677,7 @@ var _ = `a2UdikiVkck-`,
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetTopAchievementsForGames = _;
@@ -72684,7 +72685,7 @@ var _ = `a2UdikiVkck-`,
     return _.SendMsg(`Player.GetAchievementsProgress#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetAchievementsProgress = _;
@@ -72693,7 +72694,7 @@ var _ = `a2UdikiVkck-`,
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetGameAchievements = _;
@@ -72702,7 +72703,7 @@ var _ = `a2UdikiVkck-`,
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetUserAchievements = _;
@@ -72715,7 +72716,7 @@ var _ = `a2UdikiVkck-`,
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -72813,7 +72814,7 @@ var _ = `a2UdikiVkck-`,
   function _(_, _, _) {
     return _.SendMsg(`Player.PostStatusToFriends#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.PostStatusToFriends = _;
@@ -72856,7 +72857,7 @@ var _ = `a2UdikiVkck-`,
     return _.SendMsg(`Player.GetNicknameList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetNicknameList = _;
@@ -72894,7 +72895,7 @@ var _ = `a2UdikiVkck-`,
   function _(_, _, _) {
     return _.SendMsg(`Player.GetCommunityPreferences#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCommunityPreferences = _;
@@ -72907,7 +72908,7 @@ var _ = `a2UdikiVkck-`,
   function _(_, _, _) {
     return _.SendMsg(`Player.GetTextFilterWords#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetTextFilterWords = _;
@@ -76833,6 +76834,7 @@ var _;
       {
         bConstMethod: !0,
         ePrivilege: 5,
+        rgBrowserAPISites: [`support`],
       },
     );
   }
@@ -76852,6 +76854,7 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`AuthenticationSupport.RevokeToken#1`, _(_, _, _), _, {
       ePrivilege: 5,
+      rgBrowserAPISites: [`support`],
     });
   }
   _.RevokeToken = _;
@@ -76859,6 +76862,7 @@ var _;
     return _.SendMsg(`AuthenticationSupport.GetTokenHistory#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`support`],
     });
   }
   _.GetTokenHistory = _;
@@ -76869,6 +76873,7 @@ var _;
       _,
       {
         ePrivilege: 5,
+        rgBrowserAPISites: [`support`],
       },
     );
   }
@@ -79691,7 +79696,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`TwoFactor.QueryTime#1`, _(_, _, _), _, {
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`help`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.QueryTime = _;
@@ -79749,6 +79754,95 @@ var _ = class _ extends _.Message {
   }
   _.RemoveAuthenticatorViaChallengeContinue = _;
 })((_ ||= {}));
+var _ = 1,
+  _ = 2,
+  _ = (function (_) {
+    return (
+      (_[(_.RetryCode = 0)] = `RetryCode`),
+      (_[(_.MoveComplete = 1)] = `MoveComplete`),
+      (_[(_.Failed = 2)] = `Failed`),
+      _
+    );
+  })({});
+async function _(_) {
+  try {
+    let _ = _.Init(_),
+      _ = await _.RemoveAuthenticatorViaChallengeStart(_, _),
+      _ = _.GetEResult();
+    return (
+      _ !== 1 &&
+        (_.DEBUG_LogToConsole(),
+        _(`RemoveAuthenticatorViaChallengeStart failed`, _)),
+      _
+    );
+  } catch (_) {
+    return (
+      _(`Unexpected error from RemoveAuthenticatorViaChallengeStart`, _), 2
+    );
+  }
+}
+async function _(_, _, _) {
+  let _, _;
+  try {
+    let _ = _.Init(_);
+    (_.Body().set_sms_code(_),
+      _.Body().set_generate_new_token(!0),
+      _.Body().set_version(_),
+      _.Body().set_caller_version(_));
+    let _ = await _.RemoveAuthenticatorViaChallengeContinue(_, _);
+    _ = _.GetEResult();
+    let _ = _.Body().replacement_token();
+    _ === 1 && _.Body().success() && _
+      ? (_ = _(_.toObject()))
+      : (_.DEBUG_LogToConsole(),
+        _(
+          `RemoveAuthenticatorViaChallengeContinue failed, eresult: ${_}, success: ${_.Body().success()}`,
+        ),
+        _ === 1 && (_ = 2));
+  } catch (_) {
+    return (
+      _(`Unexpected error from RemoveAuthenticatorViaChallengeContinue`, _),
+      {
+        eNextStep: 2,
+        eResult: 2,
+      }
+    );
+  }
+  if (_) {
+    let _ = _ ? await _(_, _) : void 0;
+    return {
+      eNextStep: 1,
+      eResult: _,
+      guardData: _,
+      eSaveResult: _,
+    };
+  }
+  switch (_) {
+    case 94:
+    case 27:
+    case 10:
+    case 20:
+    case 16:
+    case 3:
+      return {
+        eNextStep: 0,
+        eResult: _,
+      };
+    default:
+      return {
+        eNextStep: 2,
+        eResult: _,
+      };
+  }
+}
+async function _(_, _) {
+  try {
+    let _ = await _(_);
+    return (_ !== 1 && _(`Failed to save the moved authenticator`, _), _);
+  } catch (_) {
+    return (_(`Unexpected error saving the moved authenticator`, _), 2);
+  }
+}
 var _ = class extends _ {
   m_eStatusValue = 0;
   get m_eStatus() {
@@ -79765,6 +79859,8 @@ var _ = class extends _ {
   m_weakAuthWebInterface;
   m_onGetMachineAuth;
   m_replacementAuthenticator;
+  m_eMoveResult;
+  m_eMoveSaveResult;
   m_strErrorReferenceValue = ``;
   get m_strErrorReference() {
     return this.m_strErrorReferenceValue;
@@ -79794,6 +79890,8 @@ var _ = class extends _ {
       eStatus: this.GetStatus(),
       bCanGoBack: this.BCanGoBack(),
       replacementAuthenticator: this.GetReplacementAuthenticator(),
+      eMoveResult: this.m_eMoveResult,
+      eMoveSaveResult: this.m_eMoveSaveResult,
     };
   }
   async Start(_, _, _) {
@@ -80128,82 +80226,45 @@ var _ = class extends _ {
       _.WEBAPI_BASE_URL,
       this.m_strWeakAuthToken,
     );
-    try {
-      let _ = _.Init(_),
-        _ = await _.RemoveAuthenticatorViaChallengeStart(
-          this.m_weakAuthWebInterface.GetServiceTransport(),
-          _,
-        );
-      return (
-        _.GetEResult() == 1
-          ? (this.m_eStatus = 8)
-          : (_.DEBUG_LogToConsole(),
-            _(
-              `An unexpected error occured while adding an authenticator`,
-              _.GetEResult(),
-            ),
-            this.SetFailureStateWithEResult(
-              _.MoveAuthenticator,
-              _.GetEResult(),
-            )),
-        _.GetEResult()
-      );
-    } catch (_) {
-      return (
-        _(`An unexpected error occured while moving an authenticator`, _),
-        this.SetFailureStateWithEResult(_.MoveAuthenticator, 2),
-        2
-      );
-    }
+    let _ = await _(this.m_weakAuthWebInterface.GetServiceTransport());
+    return (
+      (this.m_eMoveResult = _),
+      _ === 1
+        ? (this.m_eStatus = 8)
+        : this.SetFailureStateWithEResult(_.MoveAuthenticator, _),
+      _
+    );
   }
   async ResendMoveCode() {
-    _(
+    (_(
       !!this.m_weakAuthWebInterface,
       `Resending move code before StartMoveAuthenticator`,
-    );
-    let _ = _.Init(_),
-      _ = await _.RemoveAuthenticatorViaChallengeStart(
-        this.m_weakAuthWebInterface.GetServiceTransport(),
-        _,
-      );
-    (_.GetEResult() != 1 &&
-      (_.DEBUG_LogToConsole(),
-      _(
-        `An unexpected error occured while adding an authenticator`,
-        _.GetEResult(),
-      )),
+    ),
+      await _(this.m_weakAuthWebInterface.GetServiceTransport()),
+      (this.m_eMoveResult = void 0),
       (this.m_eStatus = 8));
   }
-  async FinishMoveAuthenticator(_) {
+  async FinishMoveAuthenticator(_, _) {
     _(
       !!this.m_weakAuthWebInterface,
       `Finishing authenticator move before StartMoveAuthenticator`,
     );
-    let _ = _.Init(_);
-    (_.Body().set_sms_code(_),
-      _.Body().set_generate_new_token(!0),
-      _.Body().set_version(2));
-    let _ = await _.RemoveAuthenticatorViaChallengeContinue(
-      this.m_weakAuthWebInterface.GetServiceTransport(),
-      _,
-    );
-    if (_.GetEResult() == 94) this.m_eStatus = 12;
-    else if (!_.Body().success())
-      (_.DEBUG_LogToConsole(),
-        _(
-          `Error when calling RemoveAuthenticatorViaChallengeContinue`,
-          _.GetEResult(),
-        ),
-        this.SetFailureStateWithEResult(_.MoveAuthenticator, _.GetEResult()));
-    else {
-      _.DEBUG_LogToConsole();
-      let _ = _.Body().replacement_token();
-      (_(!!_, `Missing replacement token on successful authenticator move`),
-        (this.m_replacementAuthenticator = _(_.toObject())),
-        (this.m_eStatus = 9),
-        (this.m_bUsingCodeOverride = !1));
+    let _ = await _(this.m_weakAuthWebInterface.GetServiceTransport(), _, _);
+    switch (((this.m_eMoveResult = _.eResult), _.eNextStep)) {
+      case _.MoveComplete:
+        ((this.m_replacementAuthenticator = _.guardData),
+          (this.m_eMoveSaveResult = _.eSaveResult),
+          (this.m_bUsingCodeOverride = !1),
+          (this.m_eStatus = 9));
+        break;
+      case _.RetryCode:
+        this.m_eStatus = 12;
+        break;
+      case _.Failed:
+      default:
+        this.SetFailureStateWithEResult(_.MoveAuthenticator, _.eResult);
     }
-    return _.GetEResult();
+    return _.eResult;
   }
   FinishMoveRecovery() {
     this.m_eStatus = 5;
@@ -83691,8 +83752,7 @@ function _(_) {
   });
 }
 function _() {
-  let _ = _(`help_user_config`, `application_config`);
-  return _(new _(_.WEBAPI_BASE_URL, _?.webapi_token));
+  return _(new _(_.WEBAPI_BASE_URL));
 }
 function _(_) {
   let _ = _(_),

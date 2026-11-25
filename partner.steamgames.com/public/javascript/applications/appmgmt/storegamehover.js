@@ -1,15 +1,15 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { At as e, W as t, sn as n, vt as r } from "./chunk~de7f2df91c.js";
-import { s as i } from "./chunk~25a6634263.js";
+import { Pt as e, W as t, g as n, nt as r } from "./chunk~de7f2df91c.js";
+import { a as i } from "./chunk~bd90a5fce7.js";
 import { In as a } from "./chunk~1fa4b8f2ff.js";
 import { O as o } from "./chunk~0a99e05c44.js";
-import { X as s } from "./chunk~6b8ddcaac8.js";
+import { Et as s } from "./chunk~6b8ddcaac8.js";
 import { r as c } from "./chunk~9a06851bec.js";
 import { c as l } from "./chunk~8ceeb46076.js";
-var u = n(e(), 1),
-  d = r();
+var u = e(r(), 1),
+  d = t();
 function f(e) {
   if (e) {
     if (`appid` in e) return `app`;
@@ -64,15 +64,15 @@ function p(e) {
   });
 }
 function m(e) {
-  let { id: n, strExtraParams: r, fnOnClickOverride: u, strOverrideURL: m } = e,
+  let { id: t, strExtraParams: r, fnOnClickOverride: u, strOverrideURL: m } = e,
     h = c(),
     g = s(),
     _ = a(
       m ||
-        (n && `creatorid` in n
-          ? l(`${t.STORE_BASE_URL}curator/${o(n).id}${r ? `?${r}` : ``}`, h, g)
+        (t && `creatorid` in t
+          ? l(`${n.STORE_BASE_URL}curator/${o(t).id}${r ? `?${r}` : ``}`, h, g)
           : l(
-              `${t.STORE_BASE_URL}${f(n)}/${o(n).id}${r ? `?${r}` : ``}`,
+              `${n.STORE_BASE_URL}${f(t)}/${o(t).id}${r ? `?${r}` : ``}`,
               h,
               g,
             )),
@@ -82,7 +82,7 @@ function m(e) {
     children: (0, d.jsx)(i, {
       className: e.className,
       href: u ? void 0 : _,
-      target: t.IN_CLIENT || u ? void 0 : `_blank`,
+      target: n.IN_CLIENT || u ? void 0 : `_blank`,
       rel: `noopener noreferrer`,
       onClick: u,
       children: e.children,

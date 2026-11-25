@@ -2,345 +2,365 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
+import { Pt as t, at as n } from "./chunk~01cfc309bf.js";
 import { t as r } from "./chunk~5412a9f1de.js";
 import { t as i } from "./chunk~91ffd0567f.js";
-import { t as a } from "./chunk~62cf132e0e.js";
-import { n as o, r as s } from "./chunk~75db1bf948.js";
+import { n as a, t as o } from "./chunk~62cf132e0e.js";
+import { n as s, r as c } from "./chunk~75db1bf948.js";
 import {
-  $ as c,
-  B as l,
-  Cf as u,
+  $ as l,
+  B as u,
   G as d,
-  Gt as f,
-  It as p,
-  Rt as m,
-  b as h,
-  bm as g,
-  ep as _,
-  rt as v,
-  wf as y,
+  Nt as f,
+  Yf as p,
+  b as m,
+  hm as h,
+  jt as g,
+  tt as _,
+  vf as v,
+  yf as y,
+  zt as b,
 } from "./main.js";
-var b = {};
-((b.arabic = () =>
-  _(() => import(`./chunk~95d786be91.js`), [], import.meta.url)),
-  (b.brazilian = () =>
-    _(() => import(`./chunk~dfa4978ea4.js`), [], import.meta.url)),
-  (b.bulgarian = () =>
-    _(() => import(`./chunk~be9cef9ce0.js`), [], import.meta.url)),
-  (b.czech = () =>
-    _(() => import(`./chunk~ff406c26c2.js`), [], import.meta.url)),
-  (b.danish = () =>
-    _(() => import(`./chunk~6faba78d92.js`), [], import.meta.url)),
-  (b.dutch = () =>
-    _(() => import(`./chunk~cabf7c4dda.js`), [], import.meta.url)),
-  (b.english = () =>
-    _(() => import(`./chunk~926d337c98.js`), [], import.meta.url)),
-  (b.finnish = () =>
-    _(() => import(`./chunk~d1b17adbd0.js`), [], import.meta.url)),
-  (b.french = () =>
-    _(() => import(`./chunk~4bf1d2292c.js`), [], import.meta.url)),
-  (b.german = () =>
-    _(() => import(`./chunk~065ae91bd4.js`), [], import.meta.url)),
-  (b.greek = () =>
-    _(() => import(`./chunk~67c921ccbb.js`), [], import.meta.url)),
-  (b.hungarian = () =>
-    _(() => import(`./chunk~310d1ff6b2.js`), [], import.meta.url)),
-  (b.indonesian = () =>
-    _(() => import(`./chunk~e71c459a7f.js`), [], import.meta.url)),
-  (b.italian = () =>
-    _(() => import(`./chunk~ea397e3eb7.js`), [], import.meta.url)),
-  (b.japanese = () =>
-    _(() => import(`./chunk~5fa3b8e767.js`), [], import.meta.url)),
-  (b.koreana = () =>
-    _(() => import(`./chunk~8f1c0a797a.js`), [], import.meta.url)),
-  (b.latam = () =>
-    _(() => import(`./chunk~da45a491dd.js`), [], import.meta.url)),
-  (b.malay = () =>
-    _(() => import(`./chunk~101e172848.js`), [], import.meta.url)),
-  (b.norwegian = () =>
-    _(() => import(`./chunk~236883e4cc.js`), [], import.meta.url)),
-  (b.polish = () =>
-    _(() => import(`./chunk~e76d643d11.js`), [], import.meta.url)),
-  (b.portuguese = () =>
-    _(() => import(`./chunk~cf8d3212f3.js`), [], import.meta.url)),
-  (b.romanian = () =>
-    _(() => import(`./chunk~75c2101ce6.js`), [], import.meta.url)),
-  (b.russian = () =>
-    _(() => import(`./chunk~5f7c391bd2.js`), [], import.meta.url)),
-  (b.sc_schinese = () =>
-    _(() => import(`./chunk~7703ab2410.js`), [], import.meta.url)),
-  (b.schinese = () =>
-    _(() => import(`./chunk~844f8c9321.js`), [], import.meta.url)),
-  (b.spanish = () =>
-    _(() => import(`./chunk~b4481dcece.js`), [], import.meta.url)),
-  (b.swedish = () =>
-    _(() => import(`./chunk~182ba78061.js`), [], import.meta.url)),
-  (b.tchinese = () =>
-    _(() => import(`./chunk~57e7fe1d51.js`), [], import.meta.url)),
-  (b.thai = () =>
-    _(() => import(`./chunk~7d99898a32.js`), [], import.meta.url)),
-  (b.turkish = () =>
-    _(() => import(`./chunk~5f9949cdb0.js`), [], import.meta.url)),
-  (b.ukrainian = () =>
-    _(() => import(`./chunk~990d663337.js`), [], import.meta.url)),
-  (b.vietnamese = () =>
-    _(() => import(`./chunk~6e86d06f0b.js`), [], import.meta.url)));
-async function x(e) {
-  if (b[e]) return await b[e]();
+var x = {};
+((x.arabic = () =>
+  p(() => import(`./chunk~95d786be91.js`), [], import.meta.url)),
+  (x.brazilian = () =>
+    p(() => import(`./chunk~dfa4978ea4.js`), [], import.meta.url)),
+  (x.bulgarian = () =>
+    p(() => import(`./chunk~be9cef9ce0.js`), [], import.meta.url)),
+  (x.czech = () =>
+    p(() => import(`./chunk~ff406c26c2.js`), [], import.meta.url)),
+  (x.danish = () =>
+    p(() => import(`./chunk~6faba78d92.js`), [], import.meta.url)),
+  (x.dutch = () =>
+    p(() => import(`./chunk~cabf7c4dda.js`), [], import.meta.url)),
+  (x.english = () =>
+    p(() => import(`./chunk~926d337c98.js`), [], import.meta.url)),
+  (x.finnish = () =>
+    p(() => import(`./chunk~d1b17adbd0.js`), [], import.meta.url)),
+  (x.french = () =>
+    p(() => import(`./chunk~4bf1d2292c.js`), [], import.meta.url)),
+  (x.german = () =>
+    p(() => import(`./chunk~065ae91bd4.js`), [], import.meta.url)),
+  (x.greek = () =>
+    p(() => import(`./chunk~67c921ccbb.js`), [], import.meta.url)),
+  (x.hungarian = () =>
+    p(() => import(`./chunk~310d1ff6b2.js`), [], import.meta.url)),
+  (x.indonesian = () =>
+    p(() => import(`./chunk~e71c459a7f.js`), [], import.meta.url)),
+  (x.italian = () =>
+    p(() => import(`./chunk~ea397e3eb7.js`), [], import.meta.url)),
+  (x.japanese = () =>
+    p(() => import(`./chunk~5fa3b8e767.js`), [], import.meta.url)),
+  (x.koreana = () =>
+    p(() => import(`./chunk~8f1c0a797a.js`), [], import.meta.url)),
+  (x.latam = () =>
+    p(() => import(`./chunk~da45a491dd.js`), [], import.meta.url)),
+  (x.malay = () =>
+    p(() => import(`./chunk~101e172848.js`), [], import.meta.url)),
+  (x.norwegian = () =>
+    p(() => import(`./chunk~236883e4cc.js`), [], import.meta.url)),
+  (x.polish = () =>
+    p(() => import(`./chunk~e76d643d11.js`), [], import.meta.url)),
+  (x.portuguese = () =>
+    p(() => import(`./chunk~cf8d3212f3.js`), [], import.meta.url)),
+  (x.romanian = () =>
+    p(() => import(`./chunk~75c2101ce6.js`), [], import.meta.url)),
+  (x.russian = () =>
+    p(() => import(`./chunk~5f7c391bd2.js`), [], import.meta.url)),
+  (x.sc_schinese = () =>
+    p(() => import(`./chunk~7703ab2410.js`), [], import.meta.url)),
+  (x.schinese = () =>
+    p(() => import(`./chunk~844f8c9321.js`), [], import.meta.url)),
+  (x.spanish = () =>
+    p(() => import(`./chunk~b4481dcece.js`), [], import.meta.url)),
+  (x.swedish = () =>
+    p(() => import(`./chunk~182ba78061.js`), [], import.meta.url)),
+  (x.tchinese = () =>
+    p(() => import(`./chunk~57e7fe1d51.js`), [], import.meta.url)),
+  (x.thai = () =>
+    p(() => import(`./chunk~7d99898a32.js`), [], import.meta.url)),
+  (x.turkish = () =>
+    p(() => import(`./chunk~5f9949cdb0.js`), [], import.meta.url)),
+  (x.ukrainian = () =>
+    p(() => import(`./chunk~990d663337.js`), [], import.meta.url)),
+  (x.vietnamese = () =>
+    p(() => import(`./chunk~6e86d06f0b.js`), [], import.meta.url)));
+async function S(e) {
+  if (x[e]) return await x[e]();
 }
-var S = y(x),
-  C = `ZIf4FUEhPes-`,
-  w = e(t(), 1),
-  T = n(),
-  E = [
-    { labelToken: `#Workshop_ItemAdmin_Ban_Preset_None` },
+var C = y(S),
+  w = `ZIf4FUEhPes-`,
+  T = e(t(), 1),
+  E = n(),
+  D = [
+    { strLabel: `Dev Reported`, nQuickTextID: 5871 },
+    { strLabel: `Anti-virus Flagged`, nQuickTextID: 5872 },
+    { strLabel: `General`, nQuickTextID: 5873 },
+  ];
+function O(e) {
+  return typeof e.label == `string` ? C.Localize(e.label) : e.label.str;
+}
+var k = [
+    { label: `#Workshop_ItemAdmin_Ban_Preset_None` },
     {
-      labelToken: `#Workshop_ItemAdmin_Ban_Preset_Copyright`,
+      label: `#Workshop_ItemAdmin_Ban_Preset_Copyright`,
       reasonToken: `#Workshop_ItemAdmin_Ban_Preset_CopyrightReason`,
       eModerationReason: 2,
     },
+    ...D.map((e) => ({
+      label: { str: `Malware: ${e.strLabel}` },
+      nQuickTextID: e.nQuickTextID,
+      eModerationReason: 70,
+    })),
   ],
-  D = [
-    { labelToken: `#Workshop_ItemAdmin_Ban_Preset_None` },
+  A = [
+    { label: `#Workshop_ItemAdmin_Ban_Preset_None` },
     {
-      labelToken: `#Workshop_ItemAdmin_Ban_Preset_NoCounterNotice`,
+      label: `#Workshop_ItemAdmin_Ban_Preset_NoCounterNotice`,
       reasonToken: `#Workshop_ItemAdmin_Ban_Preset_NoCounterNoticeReason`,
     },
   ],
-  O = [`copyright`, `other`],
-  k = [`copyright`, `malware`, `other`],
-  A = {
+  j = [`copyright`, `other`],
+  M = [`copyright`, `malware`, `other`],
+  N = {
     copyright: `#Workshop_ItemAdmin_Ban_Preset_Copyright`,
     malware: `#Workshop_ItemAdmin_Ban_Category_Malware`,
     other: `#Workshop_ItemAdmin_Ban_Category_Other`,
   };
-function j(e) {
-  return c.Localize(`#moderation_ugcban_default_note`, l(e));
+function P(e) {
+  return l.Localize(`#moderation_ugcban_default_note`, u(e));
 }
-function M(e, t) {
+function F(e, t) {
   let n = `Details: ${e.trim()}`;
   return t.trim() ? `${n}\n -- \nPrevention: ${t.trim()}` : n;
 }
-var N = 1023;
-function P(e) {
-  return new TextEncoder().encode(e).length > N;
+var I = 1023;
+function L(e) {
+  return new TextEncoder().encode(e).length > I;
 }
-function F(e) {
+function R(e) {
   let { onReasonChange: t } = e,
-    [n, r] = (0, w.useState)(``),
-    [a, o] = (0, w.useState)(``),
-    s = P(M(n, a)),
+    [n, r] = (0, T.useState)(``),
+    [a, o] = (0, T.useState)(``),
+    s = L(F(n, a)),
     c = (e, n) => {
-      (r(e), o(n), t(e.trim().length > 1 ? M(e, n) : null));
+      (r(e), o(n), t(e.trim().length > 1 ? F(e, n) : null));
     };
-  return (0, T.jsxs)(f, {
+  return (0, E.jsxs)(b, {
     direction: `column`,
     gap: `2`,
     children: [
-      (0, T.jsx)(p, {
-        children: S.Localize(`#Workshop_ItemAdmin_Ban_Category_MalwareDesc`),
+      (0, E.jsx)(g, {
+        children: C.Localize(`#Workshop_ItemAdmin_Ban_Category_MalwareDesc`),
       }),
-      (0, T.jsx)(p, {
-        children: S.Localize(`#Workshop_ItemAdmin_Ban_Category_MalwareDetails`),
+      (0, E.jsx)(g, {
+        children: C.Localize(`#Workshop_ItemAdmin_Ban_Category_MalwareDetails`),
       }),
-      (0, T.jsx)(i, {
+      (0, E.jsx)(i, {
         value: n,
         onTextChange: (e) => c(e, a),
-        maxLength: N,
+        maxLength: I,
         rows: 4,
         resize: `vertical`,
       }),
-      (0, T.jsx)(p, {
-        children: S.Localize(
+      (0, E.jsx)(g, {
+        children: C.Localize(
           `#Workshop_ItemAdmin_Ban_Category_MalwarePrevention`,
         ),
       }),
-      (0, T.jsx)(i, {
+      (0, E.jsx)(i, {
         value: a,
         onTextChange: (e) => c(n, e),
-        maxLength: N,
+        maxLength: I,
         rows: 4,
         resize: `vertical`,
       }),
       s &&
-        (0, T.jsx)(p, {
+        (0, E.jsx)(g, {
           color: `text-warning`,
-          children: S.Localize(
+          children: C.Localize(
             `#Workshop_ItemAdmin_Ban_Category_MalwareTooLong`,
           ),
         }),
     ],
   });
 }
-function I(e) {
+function z(e) {
   let {
       bBanned: t,
-      bIsSupport: n,
-      bWorkshopContent: c,
-      onConfirm: g,
-      onError: _,
-      onClose: y,
+      steamIDOwner: n,
+      bIsSupport: l,
+      bWorkshopContent: p,
+      onConfirm: h,
+      onError: y,
+      onClose: x,
     } = e,
-    b = n && !t,
-    x = !n && !t,
-    [M, N] = (0, w.useState)(e.strBanReason),
-    [P, I] = (0, w.useState)(null),
-    [L, R] = (0, w.useState)(!1),
-    [z, B] = (0, w.useState)(null),
-    [V, H] = (0, w.useState)(null),
-    [U, W] = (0, w.useState)(!1),
-    G = t ? D : E,
-    K = S.Localize(
+    S = l && !t,
+    D = !l && !t,
+    [F, I] = (0, T.useState)(e.strBanReason),
+    [L, z] = (0, T.useState)(null),
+    [B, V] = (0, T.useState)(!1),
+    [H, U] = (0, T.useState)(null),
+    [W, G] = (0, T.useState)(null),
+    [K, q] = (0, T.useState)(!1),
+    [J, Y] = (0, T.useState)(null),
+    X = a(J, n);
+  (0, T.useEffect)(() => {
+    X && I(X);
+  }, [X]);
+  let Z = t ? A : k,
+    Q = C.Localize(
       t ? `#Workshop_ItemAdmin_Ban_Unset` : `#Workshop_ItemAdmin_Ban_Set`,
     ),
-    q = x && z == `malware`,
-    J = q ? (V ?? ``) : M.trim(),
-    Y = q ? V !== null : M.trim().length > 1,
-    X = !U && Y && !(b && P === null) && !(x && c && z === null);
-  return L
-    ? (0, T.jsx)(h, {
-        className: C,
-        strTitle: K,
-        onClose: y,
-        children: (0, T.jsx)(a, {
-          reasons: d(c),
+    $ = D && H == `malware`,
+    ee = $ ? (W ?? ``) : F.trim(),
+    te = $ ? W !== null : F.trim().length > 1,
+    ne = !K && te && !(S && L === null) && !(D && p && H === null);
+  return B
+    ? (0, E.jsx)(m, {
+        className: w,
+        strTitle: Q,
+        onClose: x,
+        children: (0, E.jsx)(o, {
+          reasons: d(p),
           onSelect: (e) => {
             (e !== null &&
-              ((!M.trim() || (P !== null && M === j(P))) && N(j(e)), I(e)),
-              R(!1));
+              ((!F.trim() || (L !== null && F === P(L))) && I(P(e)), z(e)),
+              V(!1));
           },
         }),
       })
-    : (0, T.jsxs)(h, {
-        className: C,
-        strTitle: K,
-        onClose: y,
+    : (0, E.jsxs)(m, {
+        className: w,
+        strTitle: Q,
+        onClose: x,
         children: [
-          n &&
-            (0, T.jsxs)(f, {
+          l &&
+            (0, E.jsxs)(b, {
               direction: `column`,
               gap: `2`,
               marginBottom: `2`,
               children: [
-                b &&
-                  (0, T.jsxs)(f, {
+                S &&
+                  (0, E.jsxs)(b, {
                     direction: `row`,
                     gap: `2`,
                     align: `center`,
                     children: [
-                      (0, T.jsx)(p, {
-                        children: S.Localize(`#Workshop_ItemAdmin_Ban_Reason`),
+                      (0, E.jsx)(g, {
+                        children: C.Localize(`#Workshop_ItemAdmin_Ban_Reason`),
                       }),
-                      (0, T.jsx)(m, {
+                      (0, E.jsx)(f, {
                         size: `1`,
                         color: `dull`,
-                        onClick: () => R(!0),
+                        onClick: () => V(!0),
                         children:
-                          P === null
-                            ? S.Localize(
+                          L === null
+                            ? C.Localize(
                                 `#Workshop_ItemAdmin_Ban_Reason_Unselected`,
                               )
-                            : l(P),
+                            : u(L),
                       }),
                     ],
                   }),
-                (0, T.jsxs)(f, {
+                (0, E.jsxs)(b, {
                   direction: `row`,
                   gap: `2`,
                   align: `center`,
                   children: [
-                    (0, T.jsx)(p, {
-                      children: S.Localize(`#Workshop_ItemAdmin_Ban_Presets`),
+                    (0, E.jsx)(g, {
+                      children: C.Localize(`#Workshop_ItemAdmin_Ban_Presets`),
                     }),
-                    (0, T.jsx)(v, {
-                      options: G,
-                      getOptionLabel: (e) => S.Localize(e.labelToken),
+                    (0, E.jsx)(_, {
+                      options: Z,
+                      getOptionLabel: O,
                       selectedValue: null,
-                      placeholder: S.Localize(G[0].labelToken),
+                      placeholder: O(Z[0]),
                       onSelectionChange: (e) => {
-                        (N(e.reasonToken ? S.Localize(e.reasonToken) : ``),
+                        (e.nQuickTextID === void 0 &&
+                          I(e.reasonToken ? C.Localize(e.reasonToken) : ``),
+                          Y(e.nQuickTextID ?? null),
                           e.eModerationReason !== void 0 &&
-                            P === null &&
-                            I(e.eModerationReason));
+                            z(e.eModerationReason));
                       },
                     }),
                   ],
                 }),
               ],
             }),
-          x &&
-            (0, T.jsxs)(f, {
+          D &&
+            (0, E.jsxs)(b, {
               direction: `column`,
               gap: `2`,
               marginBottom: `2`,
               children: [
-                (0, T.jsxs)(f, {
+                (0, E.jsxs)(b, {
                   direction: `row`,
                   gap: `2`,
                   align: `center`,
                   children: [
-                    (0, T.jsx)(p, {
-                      children: S.Localize(`#Workshop_ItemAdmin_Ban_Reason`),
+                    (0, E.jsx)(g, {
+                      children: C.Localize(`#Workshop_ItemAdmin_Ban_Reason`),
                     }),
-                    (0, T.jsx)(r, {
-                      options: c ? k : O,
-                      getOptionLabel: (e) => S.Localize(A[e]),
-                      value: z,
+                    (0, E.jsx)(r, {
+                      options: p ? M : j,
+                      getOptionLabel: (e) => C.Localize(N[e]),
+                      value: H,
                       onValueChange: (e) => {
-                        let t = S.Localize(
+                        let t = C.Localize(
                           `#Workshop_ItemAdmin_Ban_Preset_CopyrightReason`,
                         );
-                        (e == `copyright` && M.trim().length === 0
-                          ? N(t)
-                          : M === t && N(``),
-                          B(e));
+                        (e == `copyright` && F.trim().length === 0
+                          ? I(t)
+                          : F === t && I(``),
+                          U(e));
                       },
                     }),
                   ],
                 }),
-                z == `other` &&
-                  (0, T.jsx)(p, {
-                    children: S.Localize(
+                H == `other` &&
+                  (0, E.jsx)(g, {
+                    children: C.Localize(
                       `#Workshop_ItemAdmin_Ban_Category_OtherDesc`,
                     ),
                   }),
-                (0, T.jsx)(`div`, {
-                  hidden: !q,
-                  children: (0, T.jsx)(F, { onReasonChange: H }),
+                (0, E.jsx)(`div`, {
+                  hidden: !$,
+                  children: (0, E.jsx)(R, { onReasonChange: G }),
                 }),
               ],
             }),
-          !q &&
-            (0, T.jsx)(i, {
-              value: M,
-              onTextChange: N,
+          !$ &&
+            (0, E.jsx)(i, {
+              value: F,
+              onTextChange: I,
               maxLength: 256,
               rows: 6,
               resize: `vertical`,
             }),
-          (0, T.jsxs)(f, {
+          (0, E.jsxs)(b, {
             justify: `end`,
             gap: `3`,
             align: `center`,
             marginTop: `3`,
             children: [
-              (0, T.jsx)(o, {
-                disabled: !X,
+              (0, E.jsx)(s, {
+                disabled: !ne,
                 onClick: () => {
-                  W(!0);
-                  let e = q ? 70 : (P ?? 0);
-                  Promise.resolve(g(J, e)).then(y, (e) => {
-                    (W(!1), _?.(e));
+                  q(!0);
+                  let e = $ ? 70 : (L ?? 0);
+                  Promise.resolve(h(ee, e)).then(x, (e) => {
+                    (q(!1), y?.(e));
                   });
                 },
                 autoFocus: !0,
-                children: u.Localize(`#Button_OK`),
+                children: v.Localize(`#Button_OK`),
               }),
-              (0, T.jsx)(s, {
-                onClick: y,
-                children: (0, T.jsx)(`span`, {
-                  children: u.Localize(`#Button_Cancel`),
+              (0, E.jsx)(c, {
+                onClick: x,
+                children: (0, E.jsx)(`span`, {
+                  children: v.Localize(`#Button_Cancel`),
                 }),
               }),
             ],
@@ -348,10 +368,10 @@ function I(e) {
         ],
       });
 }
-function L() {
-  let [e, t] = w.useState(null);
+function B() {
+  let [e, t] = T.useState(null);
   return (
-    w.useEffect(
+    T.useEffect(
       () => (
         (window.ShowUGCBanDialog = (e, n) => {
           t({ ...n, key: Date.now(), fnOnConfirm: e });
@@ -363,12 +383,12 @@ function L() {
       [],
     ),
     e
-      ? (0, T.jsx)(
-          I,
+      ? (0, E.jsx)(
+          z,
           {
             bBanned: !1,
             strBanReason: ``,
-            bIsSupport: !!g.is_support,
+            bIsSupport: !!h.is_support,
             bWorkshopContent: !!e.bWorkshopContent,
             onConfirm: (t, n) => e.fnOnConfirm(n, t),
             onClose: () => t(null),
@@ -378,4 +398,4 @@ function L() {
       : null
   );
 }
-export { L as UGCBanDialogOnGlobalVariable };
+export { B as UGCBanDialogOnGlobalVariable };

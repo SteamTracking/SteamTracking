@@ -2,16 +2,16 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n } from "./chunk~01cfc309bf.js";
 import "./chunk~8681f5c764.js";
 import {
-  Bc as r,
-  Hn as i,
-  Ln as a,
-  _x as o,
+  Hn as r,
+  Ln as i,
+  Vc as a,
+  bx as o,
   h as s,
-  rb as c,
-  yx as l,
+  ib as c,
+  vx as l,
 } from "./main.js";
 import { t as u } from "./chunk~237be05bcf.js";
 var d = e(t()),
@@ -20,12 +20,12 @@ function p(e) {
   let t = u(),
     { showDiscoveryQueue: n } = s(0),
     p = d.useCallback(() => {
-      l.logged_in
+      o.logged_in
         ? n()
-        : i(
-            (0, f.jsx)(a, {
+        : r(
+            (0, f.jsx)(i, {
               onOK: () => {
-                window.location.href = `${o.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
+                window.location.href = `${l.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
               },
               strOKButtonText: c(`#DiscoveryQueue_Error_Login_Title`),
               strDescription: c(`#DiscoveryQueue_Error_Login`),
@@ -35,7 +35,7 @@ function p(e) {
           );
     }, [n]);
   return t
-    ? (0, f.jsx)(r, {
+    ? (0, f.jsx)(a, {
         children: (0, f.jsx)(`a`, {
           onClick: p,
           className: `experiment-button`,

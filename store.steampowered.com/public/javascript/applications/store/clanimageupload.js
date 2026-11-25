@@ -4,11 +4,11 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import {
   At as t,
-  Lt as n,
-  ft as r,
-  jt as i,
-  kt as a,
-  tt as o,
+  It as n,
+  Ot as r,
+  dt as i,
+  et as a,
+  kt as o,
 } from "./chunk~01cfc309bf.js";
 import {
   dt as s,
@@ -22,33 +22,33 @@ import "./chunk~8681f5c764.js";
 import { t as p } from "./chunk~92931c6310.js";
 import { t as m } from "./chunk~874b4cd3a1.js";
 import {
-  $y as ee,
-  CS as te,
-  Kb as h,
-  Nc as g,
-  Nl as ne,
-  PS as re,
-  Qx as _,
-  Rl as ie,
+  $x as ee,
+  Bu as h,
+  ES as te,
+  IS as ne,
+  Pc as g,
+  Pl as re,
+  TS as ie,
   Un as ae,
-  Xy as v,
-  Yu as oe,
-  Zx as se,
-  _x as y,
-  rb as b,
-  sS as x,
-  sx as S,
-  wS as ce,
+  Xu as oe,
+  Zy as se,
+  bx as ce,
+  cx as _,
+  eS as v,
+  eb as y,
+  ib as b,
+  lS as x,
+  qb as S,
+  vx as C,
   wr as le,
   xr as ue,
-  yx as de,
-  zu as C,
+  zl as de,
 } from "./main.js";
-var w = e(o()),
+var w = e(a()),
   T = e(n()),
   E = class {
     constructor() {
-      a(this);
+      r(this);
     }
     m_mapClanToImages = new Map();
     m_mapClanImageLoadPromises = new Map();
@@ -67,7 +67,7 @@ var w = e(o()),
     GetImageListCallbackForClanAccountIDInternal(e) {
       return (
         this.m_imageListChangeCallback.has(e) ||
-          this.m_imageListChangeCallback.set(e, new se()),
+          this.m_imageListChangeCallback.set(e, new ee()),
         this.m_imageListChangeCallback.get(e)
       );
     }
@@ -97,38 +97,38 @@ var w = e(o()),
       }
       return this.m_mapClanImageLoadPromises.get(r);
     }
-    async InternalLoadClanImages(e, t, n) {
-      let r = e.GetAccountID();
+    async InternalLoadClanImages(e, n, r) {
+      let i = e.GetAccountID();
       if (
-        (x(e && r != 0, `ClanSteamID missing:` + e),
-        e && (!this.m_mapClanToImages.has(r) || t))
+        (x(e && i != 0, `ClanSteamID missing:` + e),
+        e && (!this.m_mapClanToImages.has(i) || n))
       ) {
-        let t = {},
+        let n = {},
           a,
           o =
-            y.COMMUNITY_BASE_URL +
+            C.COMMUNITY_BASE_URL +
             `/gid/` +
             e.ConvertTo64BitString() +
             `/getimages/`;
         if (
           ((a = await w.default.get(o, {
-            params: t,
+            params: n,
             withCredentials: !0,
-            cancelToken: n,
+            cancelToken: r,
           })),
           a)
         ) {
-          for (let e of a.data.images) e.clanAccountID = r;
-          i(() => {
-            (this.m_mapClanImageLoadState.set(r, { loaded: !0 }),
-              this.m_mapClanToImages.set(r, a.data.images),
-              this.GetImageListCallbackForClanAccountIDInternal(r).Dispatch(
+          for (let e of a.data.images) e.clanAccountID = i;
+          t(() => {
+            (this.m_mapClanImageLoadState.set(i, { loaded: !0 }),
+              this.m_mapClanToImages.set(i, a.data.images),
+              this.GetImageListCallbackForClanAccountIDInternal(i).Dispatch(
                 a.data.images,
               ));
           });
         }
       }
-      return this.m_mapClanToImages.get(r);
+      return this.m_mapClanToImages.get(i);
     }
     GetLoadState(e) {
       return this.m_mapClanImageLoadState.get(e.GetAccountID());
@@ -174,10 +174,10 @@ var w = e(o()),
       return r ? r.find((e) => e.image_hash == t) : void 0;
     }
     async DeleteClanImageByID(e, t) {
-      let n = { sessionid: S(), imageid: t },
+      let n = { sessionid: _(), imageid: t },
         r = e.GetAccountID(),
         i = await w.default.get(
-          y.COMMUNITY_BASE_URL +
+          C.COMMUNITY_BASE_URL +
             `/gid/` +
             e.ConvertTo64BitString() +
             `/deleteimage/`,
@@ -199,20 +199,20 @@ var w = e(o()),
       return this.DeleteClanImageByID(e, t.imageid);
     }
   };
-(h([t], E.prototype, `m_mapClanToImages`, void 0),
-  h([t], E.prototype, `m_mapClanImageLoadState`, void 0));
+(S([o], E.prototype, `m_mapClanToImages`, void 0),
+  S([o], E.prototype, `m_mapClanImageLoadState`, void 0));
 var D = new E();
 function fe(e) {
   let [t, n] = (0, T.useState)(D.GetClanImagesByAccount(e));
-  return (ne(D.GetImageListCallbackForClanAccountID(e), n), t);
+  return (re(D.GetImageListCallbackForClanAccountID(e), n), t);
 }
 function pe(e) {
-  let t = v.InitFromClanID(e, y.EUNIVERSE),
+  let t = se.InitFromClanID(e, C.EUNIVERSE),
     n = p(`useLoadClanImages`),
     [r, i] = (0, T.useState)(() => D.BHasLoadedClanImages(t));
   return (
     (0, T.useEffect)(() => {
-      let t = v.InitFromClanID(e, y.EUNIVERSE);
+      let t = se.InitFromClanID(e, C.EUNIVERSE);
       return (
         D.BHasLoadedClanImages(t) ||
           D.LoadClanImages(t, !1, n.token).then(() => i(!0)),
@@ -449,6 +449,12 @@ var ke = [1, 3, 2, 10],
       height: [460, 460],
       rgAcceptableTypes: z,
     },
+    sale_secondary_background: {
+      width: 0,
+      height: 0,
+      bDisableEnforceDimensions: !0,
+      rgAcceptableTypes: R,
+    },
     spotlight_art: { width: 306, height: 260, rgAcceptableTypes: R },
     spotlight_art_hero: { width: 748, height: 896, rgAcceptableTypes: z },
     old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: R },
@@ -520,7 +526,7 @@ function G(e, t) {
 var je = `A5DZIArSiNc-`,
   Me = `VdxYwmaL6i4-`,
   Ne = `_3PNPGWpNrDs-`,
-  K = r(),
+  K = i(),
   q = class extends T.Component {
     state = {
       region: {
@@ -668,7 +674,7 @@ var je = `A5DZIArSiNc-`,
       });
     }
   };
-(h([_], q.prototype, `OnCrop`, null), h([_], q.prototype, `UpdateCrop`, null));
+(S([v], q.prototype, `OnCrop`, null), S([v], q.prototype, `UpdateCrop`, null));
 async function Pe(e, t, n, r, i, a, o, s, c) {
   return new Promise((l, u) => {
     let d = J(c);
@@ -685,7 +691,7 @@ async function Pe(e, t, n, r, i, a, o, s, c) {
         c !== 3 && n.startsWith(`data:image/png`)
           ? u(`Unable to encode into the requested file format`)
           : t
-            ? ((e.file = C(t, e.filename)),
+            ? ((e.file = h(t, e.filename)),
               (e.width = o),
               (e.height = s),
               (e.dataUrl = n),
@@ -734,19 +740,19 @@ var X = class {
   filename;
   uploadTime;
   fileType;
-  constructor(e, t, n, r, i) {
-    (a(this),
+  constructor(e, t, n, i, a) {
+    (r(this),
       (this.file = e),
       (this.filename = t),
       (this.fileType = Y(t) ?? 0),
       (this.language = n),
       (this.uploadTime = Date.now()),
       (this.status = `pending`),
-      (this.m_originalSize = i),
-      (this.height = i.height),
-      (this.width = i.width),
-      (this.m_originalDataUrl = r),
-      (this.dataUrl = r));
+      (this.m_originalSize = a),
+      (this.height = a.height),
+      (this.width = a.width),
+      (this.m_originalDataUrl = i),
+      (this.dataUrl = i));
   }
   ResetImage() {
     ((this.height = this.m_originalSize.height),
@@ -755,12 +761,12 @@ var X = class {
   }
   GetImageOptionLabel() {}
 };
-(h([t], X.prototype, `dataUrl`, void 0),
-  h([t], X.prototype, `width`, void 0),
-  h([t], X.prototype, `height`, void 0),
-  h([t], X.prototype, `status`, void 0),
-  h([t.ref], X.prototype, `message`, void 0),
-  h([t], X.prototype, `language`, void 0));
+(S([o], X.prototype, `dataUrl`, void 0),
+  S([o], X.prototype, `width`, void 0),
+  S([o], X.prototype, `height`, void 0),
+  S([o], X.prototype, `status`, void 0),
+  S([o.ref], X.prototype, `message`, void 0),
+  S([o], X.prototype, `language`, void 0));
 var Ie = 960,
   Le = 311,
   Re = 480,
@@ -769,8 +775,8 @@ var Ie = 960,
     m_rgImageOptions;
     m_currentImageOption = void 0;
     m_currentImageOptionKey = void 0;
-    constructor(e, t, n, r, i, o) {
-      (super(e, t, n, i, o), a(this), (this.m_rgImageOptions = r));
+    constructor(e, t, n, i, a, o) {
+      (super(e, t, n, a, o), r(this), (this.m_rgImageOptions = i));
     }
     IsValidAssetType(e, t) {
       let n = 0,
@@ -863,15 +869,15 @@ var Ie = 960,
         (this.m_currentImageOptionKey = e?.sKey));
     }
   };
-(h([t], Z.prototype, `m_currentImageOption`, void 0),
-  h([t], Z.prototype, `m_currentImageOptionKey`, void 0));
+(S([o], Z.prototype, `m_currentImageOption`, void 0),
+  S([o], Z.prototype, `m_currentImageOptionKey`, void 0));
 var Q = class extends Z {
   bCropped = !1;
   localizedImageGroupPrimaryImage;
   media;
-  constructor(e, t, n, r, i, o, s, c) {
-    (super(e, t, n, r, i, o),
-      a(this),
+  constructor(e, t, n, i, a, o, s, c) {
+    (super(e, t, n, i, a, o),
+      r(this),
       (this.media = s),
       (this.localizedImageGroupPrimaryImage = c));
   }
@@ -897,7 +903,7 @@ var Q = class extends Z {
     return Be(this.GetCurrentImageOption()?.artworkType);
   }
 };
-h([t], Q.prototype, `bCropped`, void 0);
+S([o], Q.prototype, `bCropped`, void 0);
 function Be(e) {
   if (e === `background`)
     return [
@@ -983,9 +989,9 @@ var Ke = class extends He {
 };
 function qe(e, t, n) {
   if (((e == null || e == null) && (e = t), !n || n.length === 0)) return e;
-  for (let t of n) if (ee.IsELanguageValidInRealm(e, t)) return e;
-  for (let e of n) if (ee.IsELanguageValidInRealm(t, e)) return t;
-  return n.includes(re.k_ESteamRealmGlobal) ? 0 : 29;
+  for (let t of n) if (y.IsELanguageValidInRealm(e, t)) return e;
+  for (let e of n) if (y.IsELanguageValidInRealm(t, e)) return t;
+  return n.includes(ne.k_ESteamRealmGlobal) ? 0 : 29;
 }
 function Je(e, t = 0) {
   let n = e.lastIndexOf(`.`);
@@ -994,13 +1000,13 @@ function Je(e, t = 0) {
     i = 0;
   e.endsWith(`korean`) && ((r = 4), (i = 6));
   for (let t = 0; t < 32; ++t) {
-    let n = ce(t);
+    let n = te(t);
     if (n.length <= i) continue;
     if (e.endsWith(n) && e.length > n.length + 2) {
       let a = e[e.length - n.length - 1];
       /\p{Alphabetic}|\p{Number}/u.test(a) || ((r = t), (i = n.length));
     }
-    let a = te(t);
+    let a = ie(t);
     a.length <= i || (e.endsWith(a) && ((r = t), (i = a.length)));
   }
   return {
@@ -1047,20 +1053,20 @@ function Xe(e) {
   });
 }
 var $ = class extends Ke {
-  m_filesToUpload = t.array();
-  m_filesCompleted = t.array();
+  m_filesToUpload = o.array();
+  m_filesCompleted = o.array();
   m_clanImagesV2;
   m_clanSteamID;
   m_rgImageOptions;
   m_localizedImageGroupPrimaryImage;
   m_lastError = void 0;
-  constructor(e, t, n, r) {
+  constructor(e, t, n, i) {
     (super(),
-      a(this),
+      r(this),
       (this.m_clanSteamID = e),
       (this.m_rgImageOptions = Xe(t)),
       (this.m_localizedImageGroupPrimaryImage = n),
-      (this.m_clanImagesV2 = r ?? !1));
+      (this.m_clanImagesV2 = i ?? !1));
   }
   GetClanSteamID() {
     return this.m_clanSteamID;
@@ -1070,7 +1076,7 @@ var $ = class extends Ke {
     return this.AddImageForLanguage(e, n);
   }
   async AddImageForLanguage(e, t) {
-    if (!l(e.type) && !(de.is_support && f(e.type))) return !1;
+    if (!l(e.type) && !(ce.is_support && f(e.type))) return !1;
     let n = await c(e, f(e.type));
     if (!n) return !1;
     let r = new Q(
@@ -1090,7 +1096,7 @@ var $ = class extends Ke {
     if (!n) return !1;
     let r = d.GenerateEditableURLFromHashAndExt(this.m_clanSteamID, n),
       i = await (0, w.default)({ url: r, method: `GET`, responseType: `blob` }),
-      a = C(i.data, e.file_name);
+      a = h(i.data, e.file_name);
     return await this.AddImage(a, t);
   }
   DeleteUploadImageByIndex(e) {
@@ -1104,7 +1110,7 @@ var $ = class extends Ke {
     t >= 0 && this.DeleteUploadImageByIndex(t);
   }
   ClearImages() {
-    this.m_filesToUpload = t.array();
+    this.m_filesToUpload = o.array();
   }
   GetFilesUploaded() {
     return this.m_filesCompleted;
@@ -1151,7 +1157,7 @@ var $ = class extends Ke {
       o = e.GetResizeDimension(),
       s = new FormData();
     (s.append(`clanimage`, i, t),
-      s.append(`sessionid`, S()),
+      s.append(`sessionid`, _()),
       this.m_clanImagesV2 && s.append(`clan_images_v2`, `1`),
       a?.artworkType && s.append(`arttype`, a.artworkType),
       o &&
@@ -1170,7 +1176,7 @@ var $ = class extends Ke {
       (s.append(`video_width`, `` + e.width),
       s.append(`video_height`, `` + e.height));
     let d =
-        y.COMMUNITY_BASE_URL +
+        C.COMMUNITY_BASE_URL +
         `/gid/` +
         this.m_clanSteamID.ConvertTo64BitString() +
         c,
@@ -1197,14 +1203,14 @@ var $ = class extends Ke {
     );
   }
 };
-(h([t], $.prototype, `m_filesToUpload`, void 0),
-  h([t], $.prototype, `m_filesCompleted`, void 0),
-  h([t], $.prototype, `m_lastError`, void 0),
-  h([_], $.prototype, `AddImage`, null),
-  h([_], $.prototype, `AddExistingClanImage`, null),
-  h([_], $.prototype, `DeleteUploadImageByIndex`, null),
-  h([_], $.prototype, `DeleteUploadImage`, null),
-  h([_], $.prototype, `ClearImages`, null));
+(S([o], $.prototype, `m_filesToUpload`, void 0),
+  S([o], $.prototype, `m_filesCompleted`, void 0),
+  S([o], $.prototype, `m_lastError`, void 0),
+  S([v], $.prototype, `AddImage`, null),
+  S([v], $.prototype, `AddExistingClanImage`, null),
+  S([v], $.prototype, `DeleteUploadImageByIndex`, null),
+  S([v], $.prototype, `DeleteUploadImage`, null),
+  S([v], $.prototype, `ClearImages`, null));
 var Ze = class extends $ {
   constructor(e, t, n) {
     super(e, t, n, !1);
@@ -1212,7 +1218,7 @@ var Ze = class extends $ {
 };
 async function Qe(e, t, n, r, i) {
   let a =
-      y.COMMUNITY_BASE_URL +
+      C.COMMUNITY_BASE_URL +
       `/gid/` +
       t.ConvertTo64BitString() +
       `/resizeimage/`,
@@ -1221,12 +1227,12 @@ async function Qe(e, t, n, r, i) {
     o.append(`imagehash`, n),
     o.append(`extension`, r),
     o.append(`resize`, i.map((e) => e.width + `x` + e.height).join(`,`)),
-    o.append(`sessionid`, S()),
+    o.append(`sessionid`, _()),
     (await w.default.post(a, o, { cancelToken: e })).data.count
   );
 }
 function $e(e, t, n) {
-  let r = ie(t instanceof Array ? t : [t]),
+  let r = de(t instanceof Array ? t : [t]),
     i = e.ConvertTo64BitString();
   return T.useMemo(() => new Ze(e, r, n), [i, r]);
 }

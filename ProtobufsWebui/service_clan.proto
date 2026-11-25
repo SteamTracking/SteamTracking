@@ -1,5 +1,32 @@
 import "common_base.proto";
 
+message CClan_GetAdjacentPartnerEvents_Request {
+	optional fixed64 steamid = 1;
+	optional fixed64 clan_event_gid = 2;
+	optional fixed64 clan_announcement_gid = 3;
+	optional uint32 count_earlier = 4 [default = 1];
+	optional uint32 count_later = 5 [default = 1];
+	repeated string required_tags = 6;
+	optional bool require_no_tags = 7;
+	repeated uint32 language_preference = 8;
+	optional uint32 rtime_oldest_date = 9;
+	optional bool include_old_announcements = 10 [default = true];
+	optional bool include_old_events = 11 [default = false];
+	repeated string exclude_tags = 12;
+	repeated int32 event_type_filter = 13 [(.description) = "enum"];
+	repeated int32 exclude_event_types = 14 [(.description) = "enum"];
+	optional bool only_summaries = 15;
+}
+
+message CClan_GetAdjacentPartnerEvents_Response {
+	repeated .CClanEventData event_data = 1;
+	optional bool more_before = 2;
+	optional bool more_after = 3;
+	optional bool clan_is_creator_home = 4;
+	optional bool clan_is_ogg = 5;
+	optional bool clan_is_ovg = 6;
+}
+
 message CClan_GetDraftAndRecentPartnerEventSnippet_Request {
 	optional fixed64 steamid = 1;
 	optional uint32 rtime_oldest_date = 2;
@@ -70,6 +97,61 @@ message CClan_RespondToClanInvite_Request {
 message CClan_RespondToClanInvite_Response {
 }
 
+message CClanEventData {
+	optional fixed64 gid = 1;
+	optional fixed64 clan_steamid = 2;
+	optional string event_name = 3;
+	optional int32 event_type = 4 [(.description) = "enum"];
+	optional uint32 appid = 5;
+	optional string server_address = 6;
+	optional string server_password = 7;
+	optional uint32 rtime32_start_time = 8;
+	optional uint32 rtime32_end_time = 9;
+	optional int32 comment_count = 10;
+	optional fixed64 creator_steamid = 11;
+	optional fixed64 last_update_steamid = 12;
+	optional string event_notes = 13;
+	optional string jsondata = 14;
+	optional .CCommunity_ClanAnnouncementInfo announcement_body = 15;
+	optional bool published = 16;
+	optional bool hidden = 17;
+	optional uint32 rtime32_visibility_start = 18;
+	optional uint32 rtime32_visibility_end = 19;
+	optional uint32 broadcaster_accountid = 20;
+	optional uint32 follower_count = 21;
+	optional uint32 ignore_count = 22;
+	optional fixed64 forum_topic_id = 23;
+	optional uint32 rtime32_last_modified = 24;
+	optional fixed64 news_post_gid = 25;
+	optional uint32 rtime_mod_reviewed = 26;
+	optional uint32 featured_app_tagid = 27;
+	repeated uint32 referenced_appids = 28;
+	optional uint32 build_id = 29;
+	optional string build_branch = 30;
+	optional bool unlisted = 31;
+	optional uint32 rtime_created = 32;
+}
+
+message CCommunity_ClanAnnouncementInfo {
+	optional uint64 gid = 1;
+	optional uint64 clanid = 2;
+	optional uint64 posterid = 3;
+	optional string headline = 4;
+	optional uint32 posttime = 5;
+	optional uint32 updatetime = 6;
+	optional string body = 7;
+	optional int32 commentcount = 8;
+	repeated string tags = 9;
+	optional int32 language = 10;
+	optional bool hidden = 11;
+	optional fixed64 forum_topic_id = 12;
+	optional fixed64 event_gid = 13;
+	optional int32 voteupcount = 14;
+	optional int32 votedowncount = 15;
+	optional int32 ban_check_result = 16 [(.description) = "enum"];
+	optional bool banned = 17;
+}
+
 message CPartnerEventSummary {
 	optional uint32 clan_accountid = 1;
 	optional fixed64 clan_event_gid = 2;
@@ -105,6 +187,8 @@ message CPartnerEventSummary_Image {
 }
 
 service Clan {
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
+	rpc GetAdjacentPartnerEvents (.CClan_GetAdjacentPartnerEvents_Request) returns (.CClan_GetAdjacentPartnerEvents_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetDraftAndRecentPartnerEventSnippet (.CClan_GetDraftAndRecentPartnerEventSnippet_Request) returns (.CClan_GetDraftAndRecentPartnerEventSnippet_Response);
 	// bConstMethod=true, ePrivilege=1, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression

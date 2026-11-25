@@ -1,27 +1,20 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import {
-  A as e,
-  At as t,
-  C as n,
-  S as r,
-  rt as i,
-  sn as a,
-  xt as o,
-} from "./chunk~de7f2df91c.js";
-import { t as s } from "./chunk~25a6634263.js";
-import { a as c, t as l } from "./chunk~68b7e78d68.js";
-import { Ra as u, Va as d, da as f } from "./chunk~1fa4b8f2ff.js";
-import { n as p } from "./chunk~f8b6a4beb3.js";
-import { t as m } from "./chunk~ede3e357a2.js";
-import { t as h } from "./chunk~9aa05d2c7d.js";
-import { t as g } from "./chunk~4406a7b793.js";
+import { Pt as e, k as t, n, nt as r, q as i } from "./chunk~de7f2df91c.js";
+import { a, t as o } from "./chunk~68b7e78d68.js";
+import { Ra as s, Va as c, da as l } from "./chunk~1fa4b8f2ff.js";
+import { n as u } from "./chunk~f8b6a4beb3.js";
+import { t as d } from "./chunk~ede3e357a2.js";
+import { t as f } from "./chunk~9aa05d2c7d.js";
+import { t as p } from "./chunk~4406a7b793.js";
+import { S as m, x as h } from "./chunk~96e60d7578.js";
+import { t as g } from "./chunk~25a6634263.js";
 import "./chunk~a6b9ae1345.js";
 import { n as _, t as v } from "./chunk~0278ae6236.js";
 import { c as y } from "./chunk~f25232ab1e.js";
 import { t as b } from "./chunk~c55d6473b2.js";
-var x = a(t()),
+var x = e(r()),
   S = class {
     m_steamid;
     m_bInitialized = !1;
@@ -46,12 +39,12 @@ var x = a(t()),
     m_strBroadcastTitle = void 0;
     m_bCommunityBanned = void 0;
     m_eGamingDeviceType = 0;
-    m_mapRichPresence = n.map();
+    m_mapRichPresence = m.map();
     m_bNameInitialized = !1;
     m_bStatusInitialized = !1;
     m_strProfileURL = void 0;
     constructor(e) {
-      (r(this), (this.m_steamid = e));
+      (h(this), (this.m_steamid = e));
     }
     Reset() {
       ((this.m_ePersonaState = 0),
@@ -160,7 +153,7 @@ var x = a(t()),
           return e.Localize(t, this.m_mapRichPresence);
         }
       } else if (this.HasStateFlag(8))
-        return f(`#PersonaStateRemotePlayTogether`);
+        return l(`#PersonaStateRemotePlayTogether`);
       return ``;
     }
     GetCurrentGameStatus() {
@@ -178,13 +171,13 @@ var x = a(t()),
       return ((t *= n > 86400 ? e : n > 2 * e ? 60 : 15), t);
     }
     GetOfflineStatusTime() {
-      if (this.last_seen_online == 0) return f(`#PersonaStateOffline`);
+      if (this.last_seen_online == 0) return l(`#PersonaStateOffline`);
       let e = this.GetOfflineStatusUpdateRate();
-      (!i.IN_MOBILE || e <= 60) && d(e);
-      let t = b.CMInterface.GetServerRTime32() - this.last_seen_online;
-      return t < 60
-        ? f(`#PersonaStateLastSeen_JustNow`)
-        : f(`#PersonaStateLastSeen`, u(t));
+      (!t.IN_MOBILE || e <= 60) && c(e);
+      let n = b.CMInterface.GetServerRTime32() - this.last_seen_online;
+      return n < 60
+        ? l(`#PersonaStateLastSeen_JustNow`)
+        : l(`#PersonaStateLastSeen`, s(n));
     }
     GetLocalizedOnlineStatus() {
       switch (this.m_ePersonaState) {
@@ -192,17 +185,17 @@ var x = a(t()),
         case 7:
           return this.GetOfflineStatusTime();
         case 1:
-          return f(`#PersonaStateOnline`);
+          return l(`#PersonaStateOnline`);
         case 2:
-          return f(`#PersonaStateBusy`);
+          return l(`#PersonaStateBusy`);
         case 3:
-          return f(`#PersonaStateAway`);
+          return l(`#PersonaStateAway`);
         case 4:
-          return f(`#PersonaStateSnooze`);
+          return l(`#PersonaStateSnooze`);
         case 5:
-          return f(`#PersonaStateLookingToTrade`);
+          return l(`#PersonaStateLookingToTrade`);
         case 6:
-          return f(`#PersonaStateLookingToPlay`);
+          return l(`#PersonaStateLookingToPlay`);
         default:
           return ``;
       }
@@ -265,34 +258,34 @@ var x = a(t()),
     }
     GetCommunityProfileURL() {
       return this.m_strProfileURL
-        ? `${i.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-        : `${i.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+        ? `${t.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
+        : `${t.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
     }
   };
-(e([n], S.prototype, `m_bInitialized`, void 0),
-  e([n], S.prototype, `m_ePersonaState`, void 0),
-  e([n], S.prototype, `m_unGamePlayedAppID`, void 0),
-  e([n], S.prototype, `m_gameid`, void 0),
-  e([n], S.prototype, `m_unPersonaStateFlags`, void 0),
-  e([n], S.prototype, `m_strPlayerName`, void 0),
-  e([n], S.prototype, `m_strAvatarHash`, void 0),
-  e([n], S.prototype, `m_strAccountName`, void 0),
-  e([n], S.prototype, `m_rtLastSeenOnline`, void 0),
-  e([n], S.prototype, `m_strGameExtraInfo`, void 0),
-  e([n], S.prototype, `m_unGameServerIP`, void 0),
-  e([n], S.prototype, `m_unGameServerPort`, void 0),
-  e([n], S.prototype, `m_game_lobby_id`, void 0),
-  e([n], S.prototype, `m_bPlayerNamePending`, void 0),
-  e([n], S.prototype, `m_bAvatarPending`, void 0),
-  e([n], S.prototype, `m_broadcastId`, void 0),
-  e([n], S.prototype, `m_broadcastAccountId`, void 0),
-  e([n], S.prototype, `m_broadcastAppId`, void 0),
-  e([n], S.prototype, `m_broadcastViewerCount`, void 0),
-  e([n], S.prototype, `m_strBroadcastTitle`, void 0),
-  e([n], S.prototype, `m_bCommunityBanned`, void 0),
-  e([n], S.prototype, `m_eGamingDeviceType`, void 0),
-  e([n], S.prototype, `m_bNameInitialized`, void 0));
-var C = a(g(), 1);
+(n([m], S.prototype, `m_bInitialized`, void 0),
+  n([m], S.prototype, `m_ePersonaState`, void 0),
+  n([m], S.prototype, `m_unGamePlayedAppID`, void 0),
+  n([m], S.prototype, `m_gameid`, void 0),
+  n([m], S.prototype, `m_unPersonaStateFlags`, void 0),
+  n([m], S.prototype, `m_strPlayerName`, void 0),
+  n([m], S.prototype, `m_strAvatarHash`, void 0),
+  n([m], S.prototype, `m_strAccountName`, void 0),
+  n([m], S.prototype, `m_rtLastSeenOnline`, void 0),
+  n([m], S.prototype, `m_strGameExtraInfo`, void 0),
+  n([m], S.prototype, `m_unGameServerIP`, void 0),
+  n([m], S.prototype, `m_unGameServerPort`, void 0),
+  n([m], S.prototype, `m_game_lobby_id`, void 0),
+  n([m], S.prototype, `m_bPlayerNamePending`, void 0),
+  n([m], S.prototype, `m_bAvatarPending`, void 0),
+  n([m], S.prototype, `m_broadcastId`, void 0),
+  n([m], S.prototype, `m_broadcastAccountId`, void 0),
+  n([m], S.prototype, `m_broadcastAppId`, void 0),
+  n([m], S.prototype, `m_broadcastViewerCount`, void 0),
+  n([m], S.prototype, `m_strBroadcastTitle`, void 0),
+  n([m], S.prototype, `m_bCommunityBanned`, void 0),
+  n([m], S.prototype, `m_eGamingDeviceType`, void 0),
+  n([m], S.prototype, `m_bNameInitialized`, void 0));
+var C = e(p(), 1);
 function w(e, t) {
   return new C.default(
     async (t) => {
@@ -314,42 +307,42 @@ function w(e, t) {
   );
 }
 function T(e) {
-  return l(`PlayerLinkDetails`, () => w(e));
+  return o(`PlayerLinkDetails`, () => w(e));
 }
 function E(e) {
-  let t = p(),
+  let t = u(),
     n = x.useContext(A);
-  return m(j(n, t, e));
+  return d(j(n, t, e));
 }
 function D(e) {
-  let t = x.useRef(void 0),
-    n = E(e);
-  return n.data
-    ? n
-    : ((t.current ||= new S(
-        typeof e == `string` ? new s(e) : s.InitFromAccountID(e, i.EUNIVERSE),
+  let n = x.useRef(void 0),
+    r = E(e);
+  return r.data
+    ? r
+    : ((n.current ||= new S(
+        typeof e == `string` ? new g(e) : g.InitFromAccountID(e, t.EUNIVERSE),
       )),
-      { ...n, data: t.current });
+      { ...r, data: n.current });
 }
 function O(e) {
-  let t = p(),
+  let t = u(),
     n = x.useContext(A);
-  return c({ queries: e.map((e) => j(n, t, e)) });
+  return a({ queries: e.map((e) => j(n, t, e)) });
 }
 function k(e) {
-  return h.getQueryData([`PlayerSummary`, e]);
+  return f.getQueryData([`PlayerSummary`, e]);
 }
 var A = x.createContext({
-  loadPersonaState: async (e, t) => {
+  loadPersonaState: async (e, n) => {
     if (e == null) return null;
-    let n = await N(t).load(
-      s.InitFromAccountID(e, i.EUNIVERSE).ConvertTo64BitString(),
+    let r = await N(n).load(
+      g.InitFromAccountID(e, t.EUNIVERSE).ConvertTo64BitString(),
     );
-    return P(s.InitFromAccountID(e, i.EUNIVERSE), n);
+    return P(g.InitFromAccountID(e, t.EUNIVERSE), r);
   },
 });
 function j(e, t, n) {
-  let r = typeof n == `string` ? new s(n).GetAccountID() : n;
+  let r = typeof n == `string` ? new g(n).GetAccountID() : n;
   return {
     queryKey: [`PlayerSummary`, r],
     queryFn: () => e.loadPersonaState(r, t),
@@ -363,20 +356,20 @@ function N(e) {
 function P(e, t) {
   let n = new S(e),
     r = t?.public_data,
-    i = t?.private_data;
+    a = t?.private_data;
   return (
     (n.m_bInitialized = !!t),
-    (n.m_ePersonaState = i?.persona_state ?? 0),
-    (n.m_strAvatarHash = r?.sha_digest_avatar ? o(r.sha_digest_avatar) : _),
+    (n.m_ePersonaState = a?.persona_state ?? 0),
+    (n.m_strAvatarHash = r?.sha_digest_avatar ? i(r.sha_digest_avatar) : _),
     (n.m_strPlayerName = r?.persona_name ?? e.ConvertTo64BitString()),
-    (n.m_strAccountName = i?.account_name),
-    i?.persona_state_flags &&
-      (n.m_unPersonaStateFlags = i?.persona_state_flags),
-    i?.game_id && (n.m_gameid = i?.game_id),
-    i?.game_server_ip_address &&
-      (n.m_unGameServerIP = i?.game_server_ip_address),
-    i?.lobby_steam_id && (n.m_game_lobby_id = i?.lobby_steam_id),
-    i?.game_extra_info && (n.m_strGameExtraInfo = i?.game_extra_info),
+    (n.m_strAccountName = a?.account_name),
+    a?.persona_state_flags &&
+      (n.m_unPersonaStateFlags = a?.persona_state_flags),
+    a?.game_id && (n.m_gameid = a?.game_id),
+    a?.game_server_ip_address &&
+      (n.m_unGameServerIP = a?.game_server_ip_address),
+    a?.lobby_steam_id && (n.m_game_lobby_id = a?.lobby_steam_id),
+    a?.game_extra_info && (n.m_strGameExtraInfo = a?.game_extra_info),
     r?.profile_url && (n.m_strProfileURL = r.profile_url),
     n
   );

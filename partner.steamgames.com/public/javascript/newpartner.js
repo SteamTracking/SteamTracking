@@ -267,9 +267,7 @@ function ValidateCompanyInfo( bTransition, bRequireVATForEU, nextSection )
 	bHasRequiredFields &= IsValidOptionalField( "[name='partner_info[fax]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= HasRequiredField( "[name='partner_info[finance_email]']" );
 	bHasRequiredFields &= IsValidVatIdField( bRequireVAT, "[name='partner_info[vat_id]']", "[name='partner_info[country_code]']", gValidFieldAlphaNumericRegex );
-
-// bugbug: yosefd to enable when UX is ready
-//	bHasRequiredFields &= HasRequiredRadio( "[name='partner_info[partner_kyc_type]']", "#partner_kyc_type_container" );
+	bHasRequiredFields &= HasRequiredRadio( "[name='partner_info[partner_kyc_type]']", "#partner_kyc_type_container" );
 
 	if ( !bHasRequiredFields )
 	{
@@ -333,7 +331,38 @@ function ValidateSigneeInfo( bTransition, nextSection )
 	return true;
 }
 
+function UpdateLegalNameContent()
+{
+	var companyFormInput = $J( "#companyFormInput" );
+	var bCanEditCompanyForm = !companyFormInput.prop( 'disabled' ); // don't touch the company form if the input is disabled
+	var checkedRadio = $J( "[name='partner_info[partner_kyc_type]']" ).filter( ':checked' )[0]; // get the current Company or Individual setting
+	if ( !checkedRadio )
+	{
+		// for new partners: hide company specific content until Individual or Company is selected
+		// for returning partners: show everything including the saved company form
+		var strDefaultDisplay = bCanEditCompanyForm ? "none" : "block";
+		$J( ".registrationIntro" ).css( "display", bCanEditCompanyForm ? "block" : "none" );
+		$J( ".registrationCompany" ).css( "display", strDefaultDisplay );
+		$J( ".companyFormInputContainer" ).css( "display", strDefaultDisplay );
+		$J( ".registrationIndividual" ).css( "display", "none" );
+		return;
+	}
 
+	// toggle company / individual specific UX based on registering as Individual or Company
+	$J( ".registrationIntro" ).css( "display", "none" );
+	$J( ".registrationCompany" ).css( "display", checkedRadio.value == 1 ? "block" : "none" );
+	$J( ".companyFormInputContainer" ).css( "display", checkedRadio.value == 1 ? "block" : "none" );
+	$J( ".registrationIndividual" ).css( "display", checkedRadio.value == 2 ? "block" : "none" );
+
+	// fill in the company form as 'individual' if partner is registering as an individual
+	if ( bCanEditCompanyForm )
+	{
+		if ( checkedRadio.value == 2 )
+			companyFormInput.val( 'individual' );
+		else if ( checkedRadio.value == 1 && companyFormInput.val() == 'individual' )
+			companyFormInput.val( '' ); // clear the value we auto-filled for individuals
+	}
+}
 
 function UpdateSigneeText( elemID )
 {

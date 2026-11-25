@@ -24,6 +24,7 @@ import {
   _,
   _,
   _,
+  _,
 } from "./main.js";
 var _ = _(_()),
   _ = _(_(), 1),
@@ -645,7 +646,7 @@ var _ = _(_()),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetLists = _;
@@ -654,7 +655,7 @@ var _ = _(_()),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetListDetails = _;
@@ -2937,7 +2938,7 @@ var _ = () => (_.EUNIVERSE === 2 ? 2581 : 45267781),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetShoppingCartContents = _;
@@ -2966,7 +2967,7 @@ var _ = () => (_.EUNIVERSE === 2 ? 2581 : 45267781),
     return _.SendMsg(`ShoppingCart.ModifyLineItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   _.ModifyLineItem = _;
@@ -2974,7 +2975,7 @@ var _ = () => (_.EUNIVERSE === 2 ? 2581 : 45267781),
     return _.SendMsg(`ShoppingCart.RemoveLineItems#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`partner`, `store`, `checkout`],
     });
   }
   _.RemoveLineItems = _;
@@ -3896,7 +3897,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`StoreCatalog.GetDevPageAllAppsLinked#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`partner`, `community`, `store`, `help`],
     });
   }
   _.GetDevPageAllAppsLinked = _;
@@ -3905,7 +3906,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetDevPageListApps = _;
@@ -4512,6 +4513,237 @@ var _ = _(_()),
     constructor(_ = null) {
       (super(),
         _.prototype.steamid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [6, 8, 12, 13, 14], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            steamid: {
+              _: 1,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            clan_event_gid: {
+              _: 2,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            clan_announcement_gid: {
+              _: 3,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            count_earlier: {
+              _: 4,
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            count_later: {
+              _: 5,
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            required_tags: {
+              _: 6,
+              _: !0,
+              _: !0,
+              _: _.readString,
+              _: _.writeRepeatedString,
+            },
+            require_no_tags: {
+              _: 7,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            language_preference: {
+              _: 8,
+              _: !0,
+              _: !0,
+              _: _.readUint32,
+              pbr: _.readPackedUint32,
+              _: _.writeRepeatedUint32,
+            },
+            rtime_oldest_date: {
+              _: 9,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            include_old_announcements: {
+              _: 10,
+              _: !0,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            include_old_events: {
+              _: 11,
+              _: !1,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            exclude_tags: {
+              _: 12,
+              _: !0,
+              _: !0,
+              _: _.readString,
+              _: _.writeRepeatedString,
+            },
+            event_type_filter: {
+              _: 13,
+              _: !0,
+              _: !0,
+              _: _.readEnum,
+              pbr: _.readPackedEnum,
+              _: _.writeRepeatedEnum,
+            },
+            exclude_event_types: {
+              _: 14,
+              _: !0,
+              _: !0,
+              _: _.readEnum,
+              pbr: _.readPackedEnum,
+              _: _.writeRepeatedEnum,
+            },
+            only_summaries: {
+              _: 15,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CClan_GetAdjacentPartnerEvents_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.event_data || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            event_data: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            more_before: {
+              _: 2,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            more_after: {
+              _: 3,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            clan_is_creator_home: {
+              _: 4,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            clan_is_ogg: {
+              _: 5,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            clan_is_ovg: {
+              _: 6,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CClan_GetAdjacentPartnerEvents_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.steamid || _(_._()),
         _.Message.initialize(this, _, 0, -1, void 0, null));
     }
     static sm_m;
@@ -5025,10 +5257,19 @@ var _ = _(_()),
   function _(_, _, _) {
     return _.SendMsg(`Clan.GetPartnerEventSummaries#1`, _(_, _, _), _, {
       ePrivilege: 2,
-      rgBrowserAPISites: [`store`, `community`, `partner`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetPartnerEventSummaries = _;
+  function _(_, _, _) {
+    return _.SendMsg(`Clan.GetAdjacentPartnerEvents#1`, _(_, _, _), _, {
+      bConstMethod: !0,
+      ePrivilege: 2,
+      eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`all`],
+    });
+  }
+  _.GetAdjacentPartnerEvents = _;
   function _(_, _, _) {
     return _.SendMsg(
       `Clan.GetDraftAndRecentPartnerEventSnippet#1`,
@@ -5046,7 +5287,7 @@ var _ = _(_()),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetPartnerEventsByBuildIDRange = _;

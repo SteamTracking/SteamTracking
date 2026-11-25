@@ -2,21 +2,21 @@
  ****/
 
 import {
-  At as e,
-  Q as t,
-  j as n,
-  rt as r,
-  sn as i,
-  vt as a,
+  Pt as e,
+  W as t,
+  k as n,
+  nt as r,
+  r as i,
+  w as a,
 } from "./chunk~de7f2df91c.js";
 import { _n as o, da as s } from "./chunk~1fa4b8f2ff.js";
 import { _ as c, p as l } from "./chunk~0a99e05c44.js";
 import { a as u, r as d } from "./chunk~0aa5028ef4.js";
-var f = i(e());
+var f = e(r());
 function p(e, t) {
   if (e?.asset_url_format && typeof e[t] == `string`)
     return (
-      r.BASE_URL_SHARED_CDN +
+      n.BASE_URL_SHARED_CDN +
       `/store_item_assets/` +
       e.asset_url_format.replace("${FILENAME}", e[t])
     );
@@ -34,7 +34,7 @@ var m = `IcywFuw-MuY-`,
   w = `_9-r47MFrlOU-`,
   T = `EWAV3iEkmAQ-`,
   E = `OHjadihoFPE-`,
-  D = a(),
+  D = t(),
   O = f.forwardRef((e, t) => {
     let {
       title: n,
@@ -84,7 +84,7 @@ function k(e) {
   });
 }
 function A(e) {
-  let t = r.PARTNER_BASE_URL + `apps/`;
+  let t = n.PARTNER_BASE_URL + `apps/`;
   return (0, D.jsxs)(`div`, {
     className: h,
     children: [
@@ -99,7 +99,7 @@ function A(e) {
   });
 }
 function j(e) {
-  let t = r.PARTNER_BASE_URL + `apps/`;
+  let t = n.PARTNER_BASE_URL + `apps/`;
   return (0, D.jsx)(`div`, {
     className: g,
     children: (0, D.jsx)(`div`, {
@@ -113,9 +113,9 @@ function j(e) {
 }
 function M(e) {
   let { app: t } = e,
-    n = t.appid,
-    { data: i } = l({ appid: n }),
-    a = r.PARTNER_BASE_URL + `apps/landing/` + n,
+    r = t.appid,
+    { data: i } = l({ appid: r }),
+    a = n.PARTNER_BASE_URL + `apps/landing/` + r,
     s = p(i, `header`);
   return (0, D.jsxs)(`div`, {
     className: v,
@@ -159,35 +159,35 @@ function N(e) {
 }
 function P(e) {
   let { appType: t } = e,
-    r = null,
-    i = null;
+    n = null,
+    r = null;
   return (
     t == `Game`
-      ? (r = s(`#Dashboard_RecentApps_Game`))
+      ? (n = s(`#Dashboard_RecentApps_Game`))
       : t == `DLC`
-        ? ((r = s(`#Dashboard_RecentApps_DLC`)), (i = b))
+        ? ((n = s(`#Dashboard_RecentApps_DLC`)), (r = b))
         : t == `Beta`
-          ? ((r = s(`#Dashboard_RecentApps_Playtest`)), (i = x))
+          ? ((n = s(`#Dashboard_RecentApps_Playtest`)), (r = x))
           : t == `Demo`
-            ? ((r = s(`#Dashboard_RecentApps_Demo`)), (i = S))
-            : t == `Music` && ((r = s(`#Dashboard_RecentApps_Music`)), (i = C)),
-    !!r && (0, D.jsx)(`div`, { className: n(`HhP0AqYyACA-`, i), children: r })
+            ? ((n = s(`#Dashboard_RecentApps_Demo`)), (r = S))
+            : t == `Music` && ((n = s(`#Dashboard_RecentApps_Music`)), (r = C)),
+    !!n && (0, D.jsx)(`div`, { className: i(`HhP0AqYyACA-`, r), children: n })
   );
 }
 function F(e) {
-  let { releaseState: t, hasStoreItem: r } = e,
-    i = d(t, r);
+  let { releaseState: t, hasStoreItem: n } = e,
+    r = d(t, n);
   return (
     t != `released` &&
-    (0, D.jsx)(`div`, { className: n(`_7hIsoSqJWdo-`), children: i.sText })
+    (0, D.jsx)(`div`, { className: i(`_7hIsoSqJWdo-`), children: r.sText })
   );
 }
 function I() {
-  let e = t(`rgRecentApps`, `application_config`),
-    n = e ? Object.keys(e).map((t) => e[t]) : [],
-    r = t(`rgRecentUnreleasedApps`, `application_config`),
-    i = r ? Object.keys(r).map((e) => r[e]) : [],
-    a = u(n, i);
-  return (a.sort((e, t) => e.nOrder - t.nOrder), a);
+  let e = a(`rgRecentApps`, `application_config`),
+    t = e ? Object.keys(e).map((t) => e[t]) : [],
+    n = a(`rgRecentUnreleasedApps`, `application_config`),
+    r = n ? Object.keys(n).map((e) => n[e]) : [],
+    i = u(t, r);
+  return (i.sort((e, t) => e.nOrder - t.nOrder), i);
 }
 export { k as n, O as r, N as t };

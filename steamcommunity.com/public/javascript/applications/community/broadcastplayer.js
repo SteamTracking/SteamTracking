@@ -3,69 +3,69 @@
 /* Third-party software licenses can be found at licenses.txt */
 import { o as e, r as t } from "./chunk~f025431ab0.js";
 import {
-  C as n,
-  Ft as r,
-  L as i,
-  Mt as a,
-  P as o,
-  R as s,
-  j as c,
-  jt as l,
-  kt as u,
-  ot as d,
+  A as n,
+  At as r,
+  I as i,
+  L as a,
+  N as o,
+  Ot as s,
+  Pt as c,
+  S as l,
+  at as u,
+  jt as d,
 } from "./chunk~01cfc309bf.js";
 import {
-  D as f,
-  Jo as p,
-  g as m,
-  p as h,
-  qo as g,
-  yi as _,
+  T as f,
+  Wi as p,
+  bs as m,
+  g as h,
+  p as g,
+  ys as _,
 } from "./chunk~3f4314f3b4.js";
 import { a as v, n as y, o as ee, r as b, t as x } from "./chunk~10c934b72c.js";
 import { t as te } from "./chunk~eefd71512b.js";
 import { t as ne } from "./chunk~9d71b14b50.js";
 import { f as re } from "./chunk~95ecbf576c.js";
 import {
-  $c as S,
-  Ac as ie,
-  As as ae,
-  Cu as oe,
-  Ds as se,
-  Hh as C,
-  Jr as ce,
-  Js as le,
-  Mf as w,
-  Of as T,
-  Qu as ue,
-  Su as E,
-  Tu as de,
-  Xs as fe,
-  Ys as pe,
-  bl as me,
-  cm as he,
-  dl as ge,
+  Cf as S,
+  Df as C,
+  Gs as ie,
+  Hs as ae,
+  Jc as w,
+  Pd as oe,
+  Qd as T,
+  Rh as E,
+  Ss as se,
+  Tc as ce,
+  Ts as le,
+  Ur as ue,
+  Us as de,
+  Ws as fe,
+  Xm as pe,
+  Yu as me,
+  Zu as he,
+  _u as D,
+  bu as ge,
   du as _e,
-  ed as ve,
-  fl as ye,
-  gu as be,
-  hh as D,
-  kf as xe,
-  ld as Se,
-  lu as Ce,
-  nd as we,
-  of as Te,
-  qs as O,
-  rf as k,
-  th as Ee,
-  vh as De,
-  vl as Oe,
-  xc as ke,
-  yl as Ae,
-  ym as je,
-  zd as Me,
+  gc as ve,
+  hl as ye,
+  id as be,
+  iu as xe,
+  ml as Se,
+  mm as Ce,
+  ol as we,
+  ou as Te,
+  ph as Ee,
+  pl as De,
+  qu as O,
+  rm as Oe,
+  sl as ke,
+  tf as Ae,
+  uh as k,
+  vu as je,
+  wf as Me,
 } from "./main.js";
-var A = e(r());
+var A = e(c());
 function j(e, t) {
   var n = function (e) {
       return t && (0, A.isValidElement)(e) ? t(e) : e;
@@ -164,7 +164,7 @@ var Ie =
     },
   },
   N = (function (e) {
-    a(t, e);
+    d(t, e);
     function t(t, n) {
       var r = e.call(this, t, n) || this;
       return (
@@ -199,7 +199,7 @@ var Ie =
           (e.props.onExited && e.props.onExited(t),
           this.mounted &&
             this.setState(function (t) {
-              var n = l({}, t.children);
+              var n = r({}, t.children);
               return (delete n[e.key], { children: n });
             }));
       }),
@@ -207,7 +207,7 @@ var Ie =
         var e = this.props,
           t = e.component,
           n = e.childFactory,
-          r = u(e, [`component`, `childFactory`]),
+          r = s(e, [`component`, `childFactory`]),
           i = this.state.contextValue,
           a = Ie(this.state.children).map(n);
         return (
@@ -215,9 +215,9 @@ var Ie =
           delete r.enter,
           delete r.exit,
           t === null
-            ? A.createElement(p.Provider, { value: i }, a)
+            ? A.createElement(m.Provider, { value: i }, a)
             : A.createElement(
-                p.Provider,
+                m.Provider,
                 { value: i },
                 A.createElement(t, r, a),
               )
@@ -227,11 +227,11 @@ var Ie =
     );
   })(A.Component);
 ((N.propTypes = {}), (N.defaultProps = Le));
-var P = d(),
+var P = u(),
   F = class extends A.Component {
     m_elCanvas = null;
     m_Context = null;
-    m_schUpdate = new T();
+    m_schUpdate = new S();
     m_bSetupComplete = !1;
     componentDidMount() {
       this.props.updateRate == 0 && this.updateCanvas();
@@ -284,8 +284,8 @@ var P = d(),
       });
     }
   };
-(w([C], F.prototype, `BindCanvasRef`, null),
-  w([C], F.prototype, `updateCanvas`, null));
+(C([E], F.prototype, `BindCanvasRef`, null),
+  C([E], F.prototype, `updateCanvas`, null));
 var Re = 500,
   ze = class extends A.Component {
     render() {
@@ -301,9 +301,9 @@ var Re = 500,
         s = { ...(t || {}), transitionDuration: `${n / 1e3}s` };
       return (0, P.jsx)(N, {
         ...o,
-        className: de(`crossfade`, r),
+        className: ge(`crossfade`, r),
         children: (0, P.jsx)(
-          g,
+          _,
           {
             nodeRef: a,
             classNames: `crossfade-anim`,
@@ -330,16 +330,16 @@ function Be(e) {
 }
 function Ve(e) {
   let { gidEvent: t } = e,
-    n = h(t);
-  return n ? (0, P.jsx)(m, { event: n, language: Ee(he.LANGUAGE) }) : null;
+    n = g(t);
+  return n ? (0, P.jsx)(h, { event: n, language: pe(Oe.LANGUAGE) }) : null;
 }
 function He() {
   return (0, P.jsx)(`div`, {
     className: `STV_ReplayBanner`,
-    children: k(`#DASHPlayerControls_IsReplay`),
+    children: T(`#DASHPlayerControls_IsReplay`),
   });
 }
-var Ue = n((e) => {
+var Ue = l((e) => {
     let t = e.video;
     if (t && (t.IsBroadcastClip() || t.IsBroadcastVOD())) return null;
     let n = y.Loading,
@@ -375,15 +375,15 @@ var Ue = n((e) => {
         className: `BroadcastVideoUserInputNeeded`,
         onClick: this.OnClick,
         children: [
-          (0, P.jsx)(ye, {}),
+          (0, P.jsx)(ke, {}),
           (0, P.jsx)(`span`, {
-            children: k(`#DASHPlayerControls_ClickToPlay`),
+            children: T(`#DASHPlayerControls_ClickToPlay`),
           }),
         ],
       });
     }
   };
-w([C], We.prototype, `OnClick`, null);
+C([E], We.prototype, `OnClick`, null);
 var I = class extends A.Component {
   constructor(e) {
     super(e);
@@ -399,11 +399,11 @@ var I = class extends A.Component {
         (0, P.jsx)(`button`, {
           className: `dash_stat_close_button`,
           onClick: this.HideStats,
-          children: (0, P.jsx)(be, {}),
+          children: (0, P.jsx)(_e, {}),
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_BufferingResolution`),
+            T(`#DASHPlayerStats_BufferingResolution`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -413,7 +413,7 @@ var I = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_PlaybackResolution`),
+            T(`#DASHPlayerStats_PlaybackResolution`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -423,7 +423,7 @@ var I = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_HtmlResolution`),
+            T(`#DASHPlayerStats_HtmlResolution`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -433,7 +433,7 @@ var I = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_ContentServer`),
+            T(`#DASHPlayerStats_ContentServer`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -443,7 +443,7 @@ var I = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_StallEvents`),
+            T(`#DASHPlayerStats_StallEvents`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -453,7 +453,7 @@ var I = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_FailedDownloads`),
+            T(`#DASHPlayerStats_FailedDownloads`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -463,7 +463,7 @@ var I = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_TimeToFirstFrame`),
+            T(`#DASHPlayerStats_TimeToFirstFrame`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -473,7 +473,7 @@ var I = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_PlaybackRate`),
+            T(`#DASHPlayerStats_PlaybackRate`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -486,7 +486,7 @@ var I = class extends A.Component {
     });
   }
 };
-(w([C], I.prototype, `HideStats`, null), (I = w([n], I)));
+(C([E], I.prototype, `HideStats`, null), (I = C([l], I)));
 var L = class extends A.Component {
   constructor(e) {
     super(e);
@@ -498,7 +498,7 @@ var L = class extends A.Component {
       i = e ? t.GetNumBufferedVideoRanges() : t.GetNumBufferedAudioRanges();
     if (i > 0)
       for (let a = 0; a < i; ++a) {
-        let i = k(
+        let i = T(
             e
               ? `#DASHPlayerStats_VideoBufferRange`
               : `#DASHPlayerStats_AudioBufferRange`,
@@ -525,7 +525,7 @@ var L = class extends A.Component {
         );
       }
     else {
-      let t = k(
+      let t = T(
         e
           ? `#DASHPlayerStats_VideoNoRangeInformation`
           : `#DASHPlayerStats_AudioNoRangeInformation`,
@@ -541,7 +541,7 @@ var L = class extends A.Component {
       children: [
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_BytesReceived`),
+            T(`#DASHPlayerStats_BytesReceived`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -552,7 +552,7 @@ var L = class extends A.Component {
         this.props.stats.BHasFrameInformation() &&
           (0, P.jsxs)(`div`, {
             children: [
-              k(`#DASHPlayerStats_DroppedFrames`),
+              T(`#DASHPlayerStats_DroppedFrames`),
               ` `,
               (0, P.jsx)(`span`, {
                 className: `videoStatsValue`,
@@ -562,7 +562,7 @@ var L = class extends A.Component {
           }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_VideoBuffered`),
+            T(`#DASHPlayerStats_VideoBuffered`),
             ` `,
             (0, P.jsxs)(`span`, {
               className: `videoStatsValue`,
@@ -572,7 +572,7 @@ var L = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_AudioBuffered`),
+            T(`#DASHPlayerStats_AudioBuffered`),
             ` `,
             (0, P.jsxs)(`span`, {
               className: `videoStatsValue`,
@@ -584,7 +584,7 @@ var L = class extends A.Component {
         this.createBufferedRange(!1),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_BandwidthRequired`),
+            T(`#DASHPlayerStats_BandwidthRequired`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -594,7 +594,7 @@ var L = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_BandwidthVideo`),
+            T(`#DASHPlayerStats_BandwidthVideo`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -604,7 +604,7 @@ var L = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_BandwidthNums`),
+            T(`#DASHPlayerStats_BandwidthNums`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -614,7 +614,7 @@ var L = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_DownloadNums`),
+            T(`#DASHPlayerStats_DownloadNums`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -624,7 +624,7 @@ var L = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_ActiveDownloads`),
+            T(`#DASHPlayerStats_ActiveDownloads`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -634,7 +634,7 @@ var L = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_VideoDownloadProgress`),
+            T(`#DASHPlayerStats_VideoDownloadProgress`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -644,7 +644,7 @@ var L = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_DroppingFrames`),
+            T(`#DASHPlayerStats_DroppingFrames`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -654,7 +654,7 @@ var L = class extends A.Component {
         }),
         (0, P.jsxs)(`div`, {
           children: [
-            k(`#DASHPlayerStats_CurrentFPS`),
+            T(`#DASHPlayerStats_CurrentFPS`),
             ` `,
             (0, P.jsx)(`span`, {
               className: `videoStatsValue`,
@@ -666,7 +666,7 @@ var L = class extends A.Component {
     });
   }
 };
-L = w([n], L);
+L = C([l], L);
 var R = class extends A.Component {
   m_elSettingsButton;
   m_SettingsButtonPos;
@@ -698,9 +698,9 @@ var R = class extends A.Component {
   }
   OnMouseUp(e) {
     (this.m_elClickListener?.removeEventListener(`mouseup`, this.OnMouseUp, !0),
-      ve(this.m_elSettingsPanel, e.target) ||
+      me(this.m_elSettingsPanel, e.target) ||
         this.setState({ bSettingsOpen: !1 }),
-      ve(this.m_elSubtitlesPanel.current, e.target) ||
+      me(this.m_elSubtitlesPanel.current, e.target) ||
         this.setState({ bSubtitlesOpen: !1 }));
   }
   bindSettingsButton(e) {
@@ -731,7 +731,7 @@ var R = class extends A.Component {
         (i = this.props.video.GetVideoRepresentations()),
         (a = i.map((e) =>
           (0, P.jsx)(
-            E,
+            D,
             {
               onClick: () => {
                 (this.props.video.SetVideoRepresentation(e),
@@ -746,10 +746,10 @@ var R = class extends A.Component {
         a.push(s),
         a.push(
           (0, P.jsxs)(
-            oe,
+            je,
             {
               onClick: this.OnShowStats,
-              children: [k(`#Broadcast_VideoContext_ToggleStats`), `	`],
+              children: [T(`#Broadcast_VideoContext_ToggleStats`), `	`],
             },
             `statsToggle`,
           ),
@@ -761,7 +761,7 @@ var R = class extends A.Component {
         (a = []),
         a.push(
           (0, P.jsx)(
-            E,
+            D,
             {
               onClick: () => {
                 (this.props.video.SetSubtitles(null),
@@ -771,7 +771,7 @@ var R = class extends A.Component {
               },
               className: `NoSubtitles`,
               bChecked: !1,
-              children: k(`#Broadcast_None`),
+              children: T(`#Broadcast_None`),
             },
             `none`,
           ),
@@ -780,7 +780,7 @@ var R = class extends A.Component {
         let t = this.props.video.ListSubtitles()[e];
         a.push(
           (0, P.jsx)(
-            E,
+            D,
             {
               onClick: () => {
                 (this.props.video.SetSubtitles(t.language),
@@ -807,7 +807,7 @@ var R = class extends A.Component {
               `videoControlButton` + (c ? ` ClosedCaptionsActive` : ``),
             onClick: this.OnSubtitlesClick,
             ref: this.m_elSubtitlesButton,
-            children: (0, P.jsx)(ke, {}),
+            children: (0, P.jsx)(ve, {}),
           }),
         (0, P.jsx)(`div`, {
           className:
@@ -815,7 +815,7 @@ var R = class extends A.Component {
             (e ? ` VideoSettingsOpen` : ``),
           onClick: this.OnVideoControlClick,
           ref: this.bindSettingsButton,
-          children: (0, P.jsx)(me, {}),
+          children: (0, P.jsx)(ye, {}),
         }),
         (0, P.jsx)(z, { video: n }),
         r &&
@@ -862,12 +862,12 @@ var R = class extends A.Component {
     });
   }
 };
-(w([C], R.prototype, `OnVideoControlClick`, null),
-  w([C], R.prototype, `OnSubtitlesClick`, null),
-  w([C], R.prototype, `OnMouseUp`, null),
-  w([C], R.prototype, `bindSettingsButton`, null),
-  w([C], R.prototype, `BindSettingsPanel`, null),
-  w([C], R.prototype, `OnShowStats`, null));
+(C([E], R.prototype, `OnVideoControlClick`, null),
+  C([E], R.prototype, `OnSubtitlesClick`, null),
+  C([E], R.prototype, `OnMouseUp`, null),
+  C([E], R.prototype, `bindSettingsButton`, null),
+  C([E], R.prototype, `BindSettingsPanel`, null),
+  C([E], R.prototype, `OnShowStats`, null));
 var Ge = !0,
   z = class extends A.Component {
     constructor(e) {
@@ -875,7 +875,7 @@ var Ge = !0,
     }
     k_nHideSliderTimeout = 1500;
     m_bShowSlider = Ge;
-    m_schHideSlider = new T();
+    m_schHideSlider = new S();
     m_bChildDragging = !1;
     m_bMouseOver = !1;
     componentWillUnmount() {
@@ -931,7 +931,7 @@ var Ge = !0,
               (0, P.jsx)(`div`, {
                 className: r,
                 onClick: this.ToggleMute,
-                children: (0, P.jsx)(_e, {}),
+                children: (0, P.jsx)(Te, {}),
               }),
               (0, P.jsx)(B, { video: e, onDrag: this.OnChildDrag }),
             ],
@@ -940,12 +940,12 @@ var Ge = !0,
       );
     }
   };
-(w([s], z.prototype, `m_bShowSlider`, void 0),
-  w([C], z.prototype, `ToggleMute`, null),
-  w([C], z.prototype, `OnMouseEnter`, null),
-  w([C], z.prototype, `OnMouseLeave`, null),
-  w([C], z.prototype, `OnChildDrag`, null),
-  (z = w([n], z)));
+(C([a], z.prototype, `m_bShowSlider`, void 0),
+  C([E], z.prototype, `ToggleMute`, null),
+  C([E], z.prototype, `OnMouseEnter`, null),
+  C([E], z.prototype, `OnMouseLeave`, null),
+  C([E], z.prototype, `OnChildDrag`, null),
+  (z = C([l], z)));
 var B = class extends A.Component {
   constructor(e) {
     (super(e), i(this));
@@ -986,8 +986,8 @@ var B = class extends A.Component {
   }
   SetVolumeWithCoord(e, t) {
     let n = e.getBoundingClientRect(),
-      r = De(t, n.left, n.right, 0, 1),
-      i = D(r, 0, 1),
+      r = Ee(t, n.left, n.right, 0, 1),
+      i = k(r, 0, 1),
       a = this.props.video;
     (a.SetMute(r < 0.01), a.SetVolume(i));
   }
@@ -1014,11 +1014,11 @@ var B = class extends A.Component {
     });
   }
 };
-(w([C], B.prototype, `OnMouseDown`, null),
-  w([C], B.prototype, `OnMouseMove`, null),
-  w([C], B.prototype, `OnMouseUp`, null),
-  w([c], B.prototype, `SetVolumeWithCoord`, null),
-  (B = w([n], B)));
+(C([E], B.prototype, `OnMouseDown`, null),
+  C([E], B.prototype, `OnMouseMove`, null),
+  C([E], B.prototype, `OnMouseUp`, null),
+  C([n], B.prototype, `SetVolumeWithCoord`, null),
+  (B = C([l], B)));
 var Ke = t({
     BroadcastDetails: () => Z,
     LinkOverlay: () => $,
@@ -1027,13 +1027,13 @@ var Ke = t({
   qe = 3200,
   V = 15,
   H = class extends A.Component {
-    m_schHideControls = new T();
-    m_schUnmountControls = new T();
+    m_schHideControls = new S();
+    m_schUnmountControls = new S();
     m_elVideo = null;
     m_elBroadcastPlayer = null;
     m_bMouseDown = !1;
     m_elMouseDown = null;
-    m_listeners = new xe();
+    m_listeners = new Me();
     constructor(e) {
       (super(e),
         (this.state = {
@@ -1075,10 +1075,11 @@ var Ke = t({
       let n = this.props.nAppIDVOD;
       n &&
         (t.strInitialCapsuleImageUrl === void 0 || e.nAppIDVOD != n) &&
-        Me.Get()
+        oe
+          .Get()
           .QueueAppRequest(n, { include_assets: !0, include_trailers: !0 })
           .then(() => {
-            let e = Me.Get().GetApp(n)?.GetAssets()?.GetMainCapsuleURL() || ``;
+            let e = oe.Get().GetApp(n)?.GetAssets()?.GetMainCapsuleURL() || ``;
             this.setState({ strInitialCapsuleImageUrl: e });
           });
     }
@@ -1194,7 +1195,7 @@ var Ke = t({
     }
     OnContextMenu(e) {
       this.state.bFullscreen ||
-        (O((0, P.jsx)(pe, { children: this.GetContextMenuItems() }), e),
+        (ae((0, P.jsx)(fe, { children: this.GetContextMenuItems() }), e),
         e.preventDefault());
     }
     ToggleStatsView(e) {
@@ -1208,7 +1209,7 @@ var Ke = t({
       if (!t || !this.props.onOpenLinkInNewWindow) return;
       let n = t.GetBroadcastInfo();
       if (!n) return;
-      let r = ce(`${je.STORE_BASE_URL}app/${n.m_strAppId}`);
+      let r = ue(`${Ce.STORE_BASE_URL}app/${n.m_strAppId}`);
       (this.props.onOpenLinkInNewWindow(e, r), e.stopPropagation());
     }
     GetContextMenuItems() {
@@ -1219,13 +1220,13 @@ var Ke = t({
       return (
         e.push(
           (0, P.jsx)(
-            le,
+            de,
             {
               bChecked: this.state.bShowStats,
               onSelected: (e) => {
                 this.ToggleStatsView(e);
               },
-              children: k(`#Broadcast_VideoContext_ToggleStats`),
+              children: T(`#Broadcast_VideoContext_ToggleStats`),
             },
             `togglestats`,
           ),
@@ -1235,12 +1236,12 @@ var Ke = t({
           Number.parseInt(n.m_strAppId) != 7 &&
           e.push(
             (0, P.jsx)(
-              fe,
+              ie,
               {
                 onSelected: (e) => {
                   this.ShowStorePage(e);
                 },
-                children: k(`#Broadcast_VideoContext_OpenStore`),
+                children: T(`#Broadcast_VideoContext_OpenStore`),
               },
               `visitstore`,
             ),
@@ -1256,13 +1257,13 @@ var Ke = t({
     }
     OnToggleFullscreen() {
       this.m_elBroadcastPlayer &&
-        (ue(this.m_elBroadcastPlayer)
-          ? we(this.m_elBroadcastPlayer)
-          : Se(this.m_elBroadcastPlayer, this.m_elVideo ?? void 0));
+        (O(this.m_elBroadcastPlayer)
+          ? he(this.m_elBroadcastPlayer)
+          : be(this.m_elBroadcastPlayer, this.m_elVideo ?? void 0));
     }
     OnFullscreenChange(e) {
       if (!this.m_elBroadcastPlayer) return;
-      let t = ue(this.m_elBroadcastPlayer);
+      let t = O(this.m_elBroadcastPlayer);
       this.setState({ bFullscreen: t });
     }
     BHideVideoControls() {
@@ -1297,7 +1298,7 @@ var Ke = t({
               `div`,
               {
                 onClick: this.props.onTheaterMode,
-                title: k(`#Broadcast_View_Theater`),
+                title: T(`#Broadcast_View_Theater`),
                 className: `BroadcastTheaterToggle`,
               },
               `ChatPosToggle ChatTheaterToggle`,
@@ -1307,7 +1308,7 @@ var Ke = t({
           (0, P.jsx)(
             `div`,
             {
-              title: k(`#Broadcast_View_Fullscreen`),
+              title: T(`#Broadcast_View_Fullscreen`),
               onClick: this.OnToggleFullscreen,
               className: `BroadcastFullscreenToggle`,
             },
@@ -1362,7 +1363,7 @@ var Ke = t({
           c &&
             (0, P.jsx)(`img`, {
               loading: `lazy`,
-              className: de(`eyYzaS8MDnA-`, `BroadcastPlaceholderImg`),
+              className: ge(`eyYzaS8MDnA-`, `BroadcastPlaceholderImg`),
               src: this.state.strInitialCapsuleImageUrl,
             }),
           d &&
@@ -1382,22 +1383,22 @@ var Ke = t({
       });
     }
   };
-(w([C], H.prototype, `BindBroadcastPlayerRef`, null),
-  w([C], H.prototype, `BindVideoRef`, null),
-  w([C], H.prototype, `OnMouseDown`, null),
-  w([C], H.prototype, `OnMouseUp`, null),
-  w([C], H.prototype, `OnMouseMove`, null),
-  w([C], H.prototype, `OnMouseLeave`, null),
-  w([C], H.prototype, `HideControls`, null),
-  w([C], H.prototype, `UmountControls`, null),
-  w([C], H.prototype, `ShowStatsView`, null),
-  w([C], H.prototype, `OnContextMenu`, null),
-  w([C], H.prototype, `ToggleStatsView`, null),
-  w([C], H.prototype, `ShowStorePage`, null),
-  w([C], H.prototype, `CloseStats`, null),
-  w([C], H.prototype, `OnToggleFullscreen`, null),
-  w([C], H.prototype, `OnFullscreenChange`, null),
-  (H = w([n], H)));
+(C([E], H.prototype, `BindBroadcastPlayerRef`, null),
+  C([E], H.prototype, `BindVideoRef`, null),
+  C([E], H.prototype, `OnMouseDown`, null),
+  C([E], H.prototype, `OnMouseUp`, null),
+  C([E], H.prototype, `OnMouseMove`, null),
+  C([E], H.prototype, `OnMouseLeave`, null),
+  C([E], H.prototype, `HideControls`, null),
+  C([E], H.prototype, `UmountControls`, null),
+  C([E], H.prototype, `ShowStatsView`, null),
+  C([E], H.prototype, `OnContextMenu`, null),
+  C([E], H.prototype, `ToggleStatsView`, null),
+  C([E], H.prototype, `ShowStorePage`, null),
+  C([E], H.prototype, `CloseStats`, null),
+  C([E], H.prototype, `OnToggleFullscreen`, null),
+  C([E], H.prototype, `OnFullscreenChange`, null),
+  (H = C([l], H)));
 var U = H,
   W = class extends A.Component {
     render() {
@@ -1441,14 +1442,14 @@ var U = H,
       });
     }
   };
-W = w([n], W);
+W = C([l], W);
 var Je = class extends A.PureComponent {
     render() {
       return this.props.onClick
         ? (0, P.jsx)(`div`, {
             className: `STV_BroadcastClose`,
             onClick: this.props.onClick,
-            children: (0, P.jsx)(be, {}),
+            children: (0, P.jsx)(_e, {}),
           })
         : null;
     }
@@ -1472,7 +1473,7 @@ var Je = class extends A.PureComponent {
               className: `videoControlButton videoControlJump controlFlip`,
               onClick: this.OnJumpBackward,
               children: [
-                (0, P.jsx)(S, {
+                (0, P.jsx)(w, {
                   bHidePostArrow: !0,
                   bHidePreArrow: !0,
                   bShowJumpAheadBox: !0,
@@ -1487,7 +1488,7 @@ var Je = class extends A.PureComponent {
               className: `videoControlButton videoControlJump`,
               onClick: this.OnJumpForward,
               children: [
-                (0, P.jsx)(S, {
+                (0, P.jsx)(w, {
                   bHidePostArrow: !0,
                   bHidePreArrow: !0,
                   bShowJumpAheadBox: !0,
@@ -1501,9 +1502,9 @@ var Je = class extends A.PureComponent {
       });
     }
   };
-(w([C], G.prototype, `OnJumpBackward`, null),
-  w([C], G.prototype, `OnJumpForward`, null));
-var Ye = n((e) => {
+(C([E], G.prototype, `OnJumpBackward`, null),
+  C([E], G.prototype, `OnJumpForward`, null));
+var Ye = l((e) => {
     if (e.video.IsBroadcastClip() || e.video.IsBroadcastVOD()) return null;
     let t = (t) => {
         e.video.JumpToLiveEdge();
@@ -1516,14 +1517,14 @@ var Ye = n((e) => {
           `videoControlButton videoControlGoLive` + (n ? ` isLiveEdge` : ``),
         onClick: n ? void 0 : t,
         children: [
-          (0, P.jsx)(S, {
+          (0, P.jsx)(w, {
             bHidePreArrow: !0,
             bHidePostArrow: !0,
             bFlipHorizontal: !1,
           }),
           (0, P.jsx)(`div`, {
             className: `jumpGoLive`,
-            children: k(
+            children: T(
               n ? `#DASHPlayerControls_IsLive` : `#DASHPlayerControls_GoLive`,
             ),
           }),
@@ -1540,11 +1541,11 @@ var Ye = n((e) => {
       return (0, P.jsx)(`div`, {
         className: `videoControlButton buttonPlayPause`,
         onClick: this.OnTogglePlayPause,
-        children: e ? (0, P.jsx)(ye, {}) : (0, P.jsx)(ge, {}),
+        children: e ? (0, P.jsx)(ke, {}) : (0, P.jsx)(we, {}),
       });
     }
   };
-(w([C], K.prototype, `OnTogglePlayPause`, null), (K = w([n], K)));
+(C([E], K.prototype, `OnTogglePlayPause`, null), (K = C([l], K)));
 var q = class extends A.Component {
   constructor(e) {
     (super(e), i(this), (this.video = e.video));
@@ -1576,14 +1577,14 @@ var q = class extends A.Component {
         (e ? `` : ` noMarkersOrSegments`) +
         (this.has_previous_marker ? `` : ` noMarkersInDirection`),
       onClick: this.OnJumpToPreviousMarkerClicked,
-      children: (0, P.jsx)(S, { bHidePostArrow: !0, bFlipHorizontal: !0 }),
+      children: (0, P.jsx)(w, { bHidePostArrow: !0, bFlipHorizontal: !0 }),
     });
   }
 };
-(w([s], q.prototype, `video`, void 0),
-  w([o], q.prototype, `has_previous_marker`, null),
-  w([C], q.prototype, `OnJumpToPreviousMarkerClicked`, null),
-  (q = w([n], q)));
+(C([a], q.prototype, `video`, void 0),
+  C([o], q.prototype, `has_previous_marker`, null),
+  C([E], q.prototype, `OnJumpToPreviousMarkerClicked`, null),
+  (q = C([l], q)));
 var J = class extends A.Component {
   constructor(e) {
     (super(e), i(this), (this.video = e.video));
@@ -1615,14 +1616,14 @@ var J = class extends A.Component {
         (e ? `` : ` noMarkersOrSegments`) +
         (this.has_next_marker ? `` : ` noMarkersInDirection`),
       onClick: this.OnJumpToNextMarkerClicked,
-      children: (0, P.jsx)(S, { bHidePostArrow: !0, bFlipHorizontal: !1 }),
+      children: (0, P.jsx)(w, { bHidePostArrow: !0, bFlipHorizontal: !1 }),
     });
   }
 };
-(w([s], J.prototype, `video`, void 0),
-  w([o], J.prototype, `has_next_marker`, null),
-  w([C], J.prototype, `OnJumpToNextMarkerClicked`, null),
-  (J = w([n], J)));
+(C([a], J.prototype, `video`, void 0),
+  C([o], J.prototype, `has_next_marker`, null),
+  C([E], J.prototype, `OnJumpToNextMarkerClicked`, null),
+  (J = C([l], J)));
 var Y = (e) =>
   (0, P.jsx)(`div`, {
     className: `timelineMarker`,
@@ -1633,7 +1634,7 @@ var Y = (e) =>
     onMouseDown: e.onMouseDown ? e.onMouseDown : void 0,
     children: (0, P.jsx)(`div`, {
       className: `timelineMarkerIcon`,
-      children: (0, P.jsx)(Ae, {}),
+      children: (0, P.jsx)(Se, {}),
     }),
   });
 function Xe(e) {
@@ -1734,9 +1735,9 @@ var X = class extends A.Component {
       i = n.GetTimelineStartPos() + n.GetTimelineDuration(),
       a = n.GetTimeAtMousePosition(e, t, r, i);
     this.state.bStartMouseDown
-      ? (n.m_editorStartTime = D(a, r, n.m_editorEndTime - 5))
+      ? (n.m_editorStartTime = k(a, r, n.m_editorEndTime - 5))
       : this.state.bEndMouseDown
-        ? (n.m_editorEndTime = D(a, n.m_editorStartTime + 5, i))
+        ? (n.m_editorEndTime = k(a, n.m_editorStartTime + 5, i))
         : a != this.state.nGrabberMouseDownTime &&
           this.setState({ nGrabberMouseDownTime: a });
   }
@@ -1776,9 +1777,9 @@ var X = class extends A.Component {
         b.Timeline,
       );
     i < 0.05 && (i = 0);
-    let a = D(n, 0, 100).toFixed(1) + `%`,
-      o = D(r, 0, 100).toFixed(1) + `%`,
-      s = D(i, 0, 100).toFixed(1) + `%`,
+    let a = k(n, 0, 100).toFixed(1) + `%`,
+      o = k(r, 0, 100).toFixed(1) + `%`,
+      s = k(i, 0, 100).toFixed(1) + `%`,
       c = {},
       l = {},
       u = {},
@@ -1842,7 +1843,7 @@ var X = class extends A.Component {
               Y,
               {
                 pos: v,
-                label: k(`#DASHPlayerControls_Start`),
+                label: T(`#DASHPlayerControls_Start`),
                 onMouseEnter: this.OnMarkerMouseEnter,
                 onMouseLeave: this.OnMarkerMouseLeave,
                 onMouseDown: (e) => this.OnMouseDown(e, `start`),
@@ -1853,7 +1854,7 @@ var X = class extends A.Component {
               Y,
               {
                 pos: y,
-                label: k(`#DASHPlayerControls_End`),
+                label: T(`#DASHPlayerControls_End`),
                 onMouseEnter: this.OnMarkerMouseEnter,
                 onMouseLeave: this.OnMarkerMouseLeave,
                 onMouseDown: (e) => this.OnMouseDown(e, `end`),
@@ -1931,7 +1932,7 @@ var X = class extends A.Component {
                     className: `STV_timelineGrabber` + h,
                     children: (0, P.jsx)(`div`, {
                       className: `STV_timelineGrabberArrow`,
-                      children: (0, P.jsx)(Oe, {}),
+                      children: (0, P.jsx)(De, {}),
                     }),
                   }),
                 }),
@@ -1943,17 +1944,17 @@ var X = class extends A.Component {
     });
   }
 };
-(w([C], X.prototype, `OnMouseDown`, null),
-  w([C], X.prototype, `OnMouseMove`, null),
-  w([C], X.prototype, `OnMouseUp`, null),
-  w([C], X.prototype, `OnKeyDown`, null),
-  w([C], X.prototype, `OnMouseHoverMove`, null),
-  w([C], X.prototype, `OnMouseHoverLeave`, null),
-  w([C], X.prototype, `AdjustHoverForClientX`, null),
-  w([C], X.prototype, `OnSegmentClick`, null),
-  w([C], X.prototype, `OnMarkerMouseEnter`, null),
-  w([C], X.prototype, `OnMarkerMouseLeave`, null),
-  (X = w([n], X)));
+(C([E], X.prototype, `OnMouseDown`, null),
+  C([E], X.prototype, `OnMouseMove`, null),
+  C([E], X.prototype, `OnMouseUp`, null),
+  C([E], X.prototype, `OnKeyDown`, null),
+  C([E], X.prototype, `OnMouseHoverMove`, null),
+  C([E], X.prototype, `OnMouseHoverLeave`, null),
+  C([E], X.prototype, `AdjustHoverForClientX`, null),
+  C([E], X.prototype, `OnSegmentClick`, null),
+  C([E], X.prototype, `OnMarkerMouseEnter`, null),
+  C([E], X.prototype, `OnMarkerMouseLeave`, null),
+  (X = C([l], X)));
 var Z = class extends A.Component {
   state = { info: null };
   static getDerivedStateFromProps(e, t) {
@@ -2025,8 +2026,8 @@ var Z = class extends A.Component {
                     (0, P.jsxs)(`div`, {
                       className: `BroadcastDetailsHeader_ViewerCount`,
                       children: [
-                        (0, P.jsx)(Ce, {}),
-                        Te(`#Broadcast_ViewerCount`, t),
+                        (0, P.jsx)(xe, {}),
+                        Ae(`#Broadcast_ViewerCount`, t),
                       ],
                     }),
                 ],
@@ -2045,7 +2046,7 @@ var Z = class extends A.Component {
         }),
         i && (0, P.jsx)(Ve, { gidEvent: v.gidEvent }),
         r &&
-          (0, P.jsx)(_, {
+          (0, P.jsx)(p, {
             id:
               v.bValid && v.stream && v.stream[e.m_steamIDBroadcast]
                 ? v.appID
@@ -2057,18 +2058,18 @@ var Z = class extends A.Component {
     });
   }
 };
-Z = w([n], Z);
+Z = C([l], Z);
 var Q = class extends A.Component {
   showContextMenu(e) {
     let { options: t, value: n, onChange: r } = this.props,
       i = Object.keys(t).map((e) =>
         (0, P.jsx)(
-          le,
-          { onSelected: () => r(e), bChecked: e === n, children: k(t[e]) },
+          de,
+          { onSelected: () => r(e), bChecked: e === n, children: T(t[e]) },
           e,
         ),
       );
-    O((0, P.jsx)(pe, { children: i }), e);
+    ae((0, P.jsx)(fe, { children: i }), e);
   }
   render() {
     let { value: e, options: t } = this.props,
@@ -2077,16 +2078,16 @@ var Q = class extends A.Component {
       className: `BroadcastLanguage`,
       onClick: this.showContextMenu,
       children: [
-        (0, P.jsxs)(`span`, { children: [`\xA0- `, k(n)] }),
+        (0, P.jsxs)(`span`, { children: [`\xA0- `, T(n)] }),
         (0, P.jsx)(`div`, {
           className: `ContextMenuButton`,
-          children: (0, P.jsx)(ie, {}),
+          children: (0, P.jsx)(ce, {}),
         }),
       ],
     });
   }
 };
-w([C], Q.prototype, `showContextMenu`, null);
+C([E], Q.prototype, `showContextMenu`, null);
 var $ = class extends A.Component {
   constructor(e) {
     (super(e), (this.state = { sizableRegion: [] }));
@@ -2160,7 +2161,7 @@ var $ = class extends A.Component {
           children: [
             !this.props.editMode && this.props.linkRegions
               ? this.props.linkRegions.map((e) => {
-                  let t = ae(e.url);
+                  let t = le(e.url);
                   return (0, P.jsx)(
                     se,
                     {
@@ -2207,24 +2208,24 @@ var $ = class extends A.Component {
               (0, P.jsx)(`div`, {
                 className: `AddLinkRegion`,
                 onClick: this.AddLinkRegion,
-                children: k(`#SteamTV_AddLinkRegion`),
+                children: T(`#SteamTV_AddLinkRegion`),
               }),
           ],
         }),
         (0, P.jsx)(`div`, {
           className: `LinkOverlayInvalidRegion`,
           children: (0, P.jsx)(`div`, {
-            children: k(`#SteamTV_LinkRegionReserved`),
+            children: T(`#SteamTV_LinkRegionReserved`),
           }),
         }),
       ],
     });
   }
 };
-(w([C], $.prototype, `AddLinkRegion`, null),
-  w([C], $.prototype, `LoadLinkRegion`, null),
-  w([C], $.prototype, `OnSaveRegions`, null),
-  w([C], $.prototype, `DeleteRegion`, null),
-  w([C], $.prototype, `UpdatePanel`, null),
-  ($ = w([n], $)));
+(C([E], $.prototype, `AddLinkRegion`, null),
+  C([E], $.prototype, `LoadLinkRegion`, null),
+  C([E], $.prototype, `OnSaveRegions`, null),
+  C([E], $.prototype, `DeleteRegion`, null),
+  C([E], $.prototype, `UpdatePanel`, null),
+  ($ = C([l], $)));
 export { Ke as n, U as t };

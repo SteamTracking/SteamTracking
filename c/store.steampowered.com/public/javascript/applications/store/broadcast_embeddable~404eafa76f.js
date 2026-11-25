@@ -1,8 +1,9 @@
 import { _ } from "./chunk~f025431ab0.js";
 import { _, _, _, _, _, _, _, _, _ } from "./chunk~01cfc309bf.js";
-import { _, _, _, _ } from "./chunk~6b8ddcaac8.js";
+import { _, _, _ } from "./chunk~6b8ddcaac8.js";
 import { _ } from "./chunk~f57d770d64.js";
 import { _, _ } from "./chunk~a0dd05a569.js";
+import { _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~4c13037b22.js";
 import { _ } from "./chunk~5adf866415.js";
 import "./chunk~8681f5c764.js";
@@ -5656,7 +5657,7 @@ var _ = _(_()),
     return _.SendMsg(`SteamTV.AddChatBan#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.AddChatBan = _;
@@ -5672,7 +5673,7 @@ var _ = _(_()),
     return _.SendMsg(`SteamTV.AddChatModerator#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.AddChatModerator = _;
@@ -5680,7 +5681,7 @@ var _ = _(_()),
     return _.SendMsg(`SteamTV.GetChatModerators#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 0,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetChatModerators = _;
@@ -5703,7 +5704,7 @@ var _ = _(_()),
     return _.SendMsg(`SteamTV.JoinChat#1`, _(_, _, _), _, {
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.JoinChat = _;

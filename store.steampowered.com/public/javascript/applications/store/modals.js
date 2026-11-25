@@ -2,27 +2,27 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n } from "./chunk~01cfc309bf.js";
 import {
-  $b as r,
-  $n as i,
-  Bi as a,
-  Gn as o,
-  Hr as s,
-  Ir as c,
-  Ju as l,
-  Kn as u,
-  Nc as d,
-  Qn as f,
-  Ra as p,
-  Un as m,
-  Xn as h,
-  Yn as g,
-  Zl as _,
-  hr as v,
-  mr as y,
-  pl as b,
-  sl as x,
+  $n as r,
+  Ba as i,
+  Gn as a,
+  Hr as o,
+  Ir as s,
+  Kn as c,
+  Pc as l,
+  Ql as u,
+  Qn as d,
+  Un as f,
+  Vi as p,
+  Xn as m,
+  Yn as h,
+  Yu as g,
+  cl as _,
+  ex as v,
+  hr as y,
+  ml as b,
+  mr as x,
   yn as S,
   za as C,
 } from "./main.js";
@@ -30,12 +30,12 @@ var w = e(t()),
   T = n();
 function E(e) {
   let { popup: t, className: n, ...r } = e,
-    i = h(t),
+    i = m(t),
     a = w.useRef(null);
   return (
     w.useEffect(() => {
       let e = a.current;
-      if (e && l(t, `Window.SetResizeGrip`)) {
+      if (e && g(t, `Window.SetResizeGrip`)) {
         let n = 0,
           r = 0,
           a = e.getBoundingClientRect(),
@@ -48,14 +48,14 @@ function E(e) {
           t.SteamClient.Window.SetResizeGrip(n, r));
       }
       return () => {
-        l(t, `Window.SetResizeGrip`) &&
+        g(t, `Window.SetResizeGrip`) &&
           t.SteamClient.Window.SetResizeGrip(0, 0);
       };
     }, [t, i]),
     i
       ? null
       : (0, T.jsx)(`div`, {
-          className: d(`window_resize_grip`, n),
+          className: l(`window_resize_grip`, n),
           ref: a,
           ...r,
         })
@@ -63,9 +63,9 @@ function E(e) {
 }
 var D = (e) => O({ modal: !0, ...e });
 function O(e) {
-  let t = C().ownerWindow,
-    n = r(),
-    [i, a] = w.useState(() =>
+  let t = i().ownerWindow,
+    n = v(),
+    [r, a] = w.useState(() =>
       n ||
       (e.onlyPopoutIfNeeded === !0 &&
         e.popupHeight < t.innerHeight * 0.9 &&
@@ -74,9 +74,9 @@ function O(e) {
         ? `inline`
         : `popout`,
     );
-  return i === `inline`
+  return r === `inline`
     ? (0, T.jsx)(S, { active: !0, children: e.children })
-    : i === `popout`
+    : r === `popout`
       ? (0, T.jsx)(A, { ...e })
       : null;
 }
@@ -92,7 +92,7 @@ function k(e) {
     ),
     s = b(o);
   return (0, T.jsx)(`div`, {
-    className: d(`PopupFullWindow`, r && `FitToContent`, i),
+    className: l(`PopupFullWindow`, r && `FitToContent`, i),
     ref: r ? s : void 0,
     ...a,
     children: n,
@@ -102,33 +102,33 @@ function A(e) {
   let {
       strName: t,
       strTitle: n,
-      popupWidth: r,
-      popupHeight: l,
-      browserType: d,
-      onDismiss: m,
-      bFitToContent: h,
-      refPopup: v,
-      children: y,
-      titleBarClassName: b,
+      popupWidth: l,
+      popupHeight: f,
+      browserType: m,
+      onDismiss: g,
+      bFitToContent: v,
+      refPopup: y,
+      children: b,
+      titleBarClassName: x,
       saveDimensionsKey: S,
     } = e,
-    D = C()?.ownerWindow,
-    O = u(),
-    A = { ...i(S), onClose: m },
+    D = i()?.ownerWindow,
+    O = c(),
+    A = { ...r(S), onClose: g },
     M = 0;
-  (e.resizable && (M |= c.Resizable),
-    (e.minWidth || e.minHeight) && (M |= c.ApplyBrowserScaleToDimensions),
-    e.fullscreen && (M |= c.FullScreen));
+  (e.resizable && (M |= s.Resizable),
+    (e.minWidth || e.minHeight) && (M |= s.ApplyBrowserScaleToDimensions),
+    e.fullscreen && (M |= s.FullScreen));
   let N = `PopupWindow_` + (t ? `${t}_` : ``) + w.useId(),
-    { popup: P, element: F } = f(
+    { popup: P, element: F } = d(
       N,
       {
         title: n,
-        dimensions: { width: r, height: l },
+        dimensions: { width: l, height: f },
         html_class: `client_chat_frame fullheight ModalDialogPopup`,
         body_class: `fullheight ModalDialogBody`,
         popup_class: `fullheight`,
-        browserType: d,
+        browserType: m,
         minWidth: e.minWidth,
         minHeight: e.minHeight,
         replace_existing_popup: !0,
@@ -139,7 +139,7 @@ function A(e) {
       A,
     );
   if (
-    (w.useEffect(() => (_(v, P), () => _(v, void 0)), [v, P]),
+    (w.useEffect(() => (u(y, P), () => u(y, void 0)), [y, P]),
     w.useEffect(() => {
       P && (P.document.title = n ?? t);
     }, [P, n, t]),
@@ -151,34 +151,34 @@ function A(e) {
   return (0, T.jsxs)(T.Fragment, {
     children: [
       I && (0, T.jsx)(j, { popup: P }),
-      x(
-        (0, T.jsx)(p, {
+      _(
+        (0, T.jsx)(C, {
           ownerWindow: P,
-          children: (0, T.jsxs)(a, {
+          children: (0, T.jsxs)(p, {
             children: [
               (0, T.jsxs)(k, {
                 popup: P,
-                bFitToContent: h,
-                onContextMenu: s,
+                bFitToContent: v,
+                onContextMenu: o,
                 children: [
-                  (0, T.jsx)(g, {
-                    className: b,
+                  (0, T.jsx)(h, {
+                    className: x,
                     hideMin: L,
                     hideMax: L,
                     popup: P,
-                    hideActions: !m,
+                    hideActions: !g,
                   }),
-                  (0, T.jsx)(o, {
+                  (0, T.jsx)(a, {
                     bCenterPopupsOnWindow: O?.BCenterPopupsOnWindow(),
                     browserInfo: O?.GetBrowserInfo(),
                     children: (0, T.jsx)(w.Suspense, {
                       fallback: null,
-                      children: y,
+                      children: b,
                     }),
                   }),
                 ],
               }),
-              e.resizable && !h && (0, T.jsx)(E, { popup: P }),
+              e.resizable && !v && (0, T.jsx)(E, { popup: P }),
             ],
           }),
         }),
@@ -220,15 +220,15 @@ function N(e) {
       ...s
     } = e,
     { headerId: c, context: l } = M({ labelledBy: e[`aria-labelledby`] });
-  return (0, T.jsx)(v.Provider, {
+  return (0, T.jsx)(y.Provider, {
     value: l,
     children: (0, T.jsx)(S, {
       active: t,
-      children: (0, T.jsx)(m, {
+      children: (0, T.jsx)(f, {
         onEscKeypress: n,
         className: i,
         bGamepadUIScrollWithin: a,
-        children: (0, T.jsx)(y, {
+        children: (0, T.jsx)(x, {
           role: `dialog`,
           "aria-labelledby": c,
           className: r,

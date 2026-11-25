@@ -1,24 +1,24 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { At as e, rt as t, sn as n, vt as r } from "./chunk~de7f2df91c.js";
+import { Pt as e, W as t, k as n, nt as r } from "./chunk~de7f2df91c.js";
 import { t as i } from "./chunk~25a6634263.js";
 import "./chunk~a6b9ae1345.js";
 import { a, o } from "./chunk~ec644f97c6.js";
-var s = n(e()),
+var s = e(r()),
   c = `w1edBej-iT4-`,
-  l = r();
+  l = t();
 function u(e) {
   let {
-      accountID: n,
+      accountID: t,
       bHideWhenNotAvailable: r,
       bHideName: u,
       bLink: d = !0,
     } = e,
-    [f] = a(n),
-    p = o(n),
-    m = s.useMemo(() => i.InitFromAccountID(n, t.EUNIVERSE), [n]),
-    h = `${t.COMMUNITY_BASE_URL}profiles/${m.ConvertTo64BitString()}`;
+    [f] = a(t),
+    p = o(t),
+    m = s.useMemo(() => i.InitFromAccountID(t, n.EUNIVERSE), [t]),
+    h = `${n.COMMUNITY_BASE_URL}profiles/${m.ConvertTo64BitString()}`;
   return (0, l.jsx)(l.Fragment, {
     children: f
       ? (0, l.jsxs)(d ? `a` : `span`, {
@@ -36,7 +36,7 @@ function u(e) {
           ],
         })
       : (0, l.jsx)(l.Fragment, {
-          children: !r && (0, l.jsx)(`span`, { children: n }),
+          children: !r && (0, l.jsx)(`span`, { children: t }),
         }),
   });
 }

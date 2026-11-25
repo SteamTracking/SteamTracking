@@ -4,7 +4,11 @@ import { _, _, _ } from "./chunk~0111fcd096.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./main.js";
 var _ = _(_(), 1),
   _ = _(),
-  _ = _({
+  _ = _.createContext(void 0);
+function _() {
+  return _.useContext(_) ?? _();
+}
+var _ = _({
     ActiveEvent: () => _,
     ActiveEventCallOut: () => _,
     _: () => _,
@@ -36,11 +40,7 @@ var _ = _(_(), 1),
     ShortDateAndTime: _,
     ShortDateRange: _,
   },
-  _ = _.createContext(void 0);
-function _() {
-  return _.useContext(_) ?? _();
-}
-var _ = _((_, _, _) => {
+  _ = _((_, _, _) => {
     (function (_, _) {
       typeof _ == `object` && _.exports
         ? (_.exports = _(_()))

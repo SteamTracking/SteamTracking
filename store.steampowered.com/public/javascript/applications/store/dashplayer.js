@@ -2,31 +2,31 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { At as t, Ct as n, kt as r, tt as i } from "./chunk~01cfc309bf.js";
+import { Ot as t, St as n, et as r, kt as i } from "./chunk~01cfc309bf.js";
 import {
-  $c as a,
-  Bx as o,
-  CS as s,
-  Hb as c,
-  Jb as l,
-  Kb as u,
-  OS as d,
-  Pb as f,
-  Qx as p,
-  St as ee,
-  Ub as m,
-  Ux as h,
-  Xy as te,
-  _x as g,
-  jl as ne,
-  rb as _,
-  sS as v,
-  sx as re,
-  tb as y,
-  ul as ie,
+  AS as a,
+  Fb as o,
+  Ml as s,
+  St as c,
+  TS as l,
+  Ub as u,
+  Vx as d,
+  Wb as f,
+  Wx as p,
+  Yb as ee,
+  Zy as te,
+  cx as ne,
+  dl as re,
+  eS as m,
+  el as ie,
+  ib as h,
+  lS as g,
+  nb as _,
+  qb as v,
+  vx as y,
 } from "./main.js";
-var b = e(i(), 1),
-  x = new ne(`video`);
+var b = e(r(), 1),
+  x = new s(`video`);
 x.Info;
 var S = x.Debug,
   C = x.Error;
@@ -145,13 +145,13 @@ var se = 5,
     m_nTimeToFirstFrameMS = T;
     m_fpsMonitor = new j();
     constructor() {
-      r(this);
+      t(this);
     }
     StartingPlayback() {
       this.m_nPerfTimeCreated = performance.now();
     }
     GetBytesReceivedToDisplay() {
-      return ee(this.m_allTimeSnapshot.m_nBytesReceived, 1);
+      return c(this.m_allTimeSnapshot.m_nBytesReceived, 1);
     }
     GetBufferingResolutionToDisplay() {
       return this.m_strBufferingVideoResolution;
@@ -186,14 +186,14 @@ var se = 5,
         ? w(this.m_videoBufferedRanges.start(e)) +
             ` - ` +
             w(this.m_videoBufferedRanges.end(e))
-        : _(`#DASHPlayerStats_VideoNoRangeInformation`);
+        : h(`#DASHPlayerStats_VideoNoRangeInformation`);
     }
     GetBufferedAudioSegmentForDisplay(e) {
       return this.m_audioBufferedRanges && e < this.m_audioBufferedRanges.length
         ? w(this.m_audioBufferedRanges.start(e)) +
             ` - ` +
             w(this.m_audioBufferedRanges.end(e))
-        : _(`#DASHPlayerStats_AudioNoRangeInformation`);
+        : h(`#DASHPlayerStats_AudioNoRangeInformation`);
     }
     GetBandwidthStatsToDisplay() {
       if (this.m_rgSnapShots.length < 2)
@@ -294,7 +294,7 @@ var se = 5,
     GetCurrentFPSForDisplay() {
       return this.m_fpsMonitor.BHasCurrentFPS()
         ? this.m_fpsMonitor.GetCurrentFPS().toFixed(1)
-        : _(`#DASHPlayerStats_Tracking`);
+        : h(`#DASHPlayerStats_Tracking`);
     }
     GetPlaybackRateForDisplay() {
       return this.m_nPlaybackRate.toFixed(1) + `x`;
@@ -584,31 +584,31 @@ var se = 5,
           ? new te(this.m_steamIDBroadcast).GetAccountID()
           : 0),
         (e.useragent = window.navigator.userAgent),
-        (e.sessionid = re()),
+        (e.sessionid = ne()),
         (e.broadcast_origin = this.m_strBroadcastOrigin));
     }
   };
-(u([t], k.prototype, `m_allTimeSnapshot`, void 0),
-  u([t], k.prototype, `m_strBufferingVideoResolution`, void 0),
-  u([t], k.prototype, `m_strPlaybackVideoResolution`, void 0),
-  u([t], k.prototype, `m_strHtmlVideoDisplay`, void 0),
-  u([t], k.prototype, `m_nBandwidthRequired`, void 0),
-  u([t], k.prototype, `m_nCurBandwidthVideo`, void 0),
-  u([t], k.prototype, `m_nAudioBufferedMS`, void 0),
-  u([t], k.prototype, `m_nVideoBufferedMS`, void 0),
-  u([t], k.prototype, `m_nActiveDownloads`, void 0),
-  u([t], k.prototype, `m_nVideoDownloadProgress`, void 0),
-  u([t], k.prototype, `m_videoBufferedRanges`, void 0),
-  u([t], k.prototype, `m_audioBufferedRanges`, void 0),
-  u([t], k.prototype, `m_nPlaybackRate`, void 0),
-  u([n], k.prototype, `SetVideoPlaybackResolution`, null),
-  u([n], k.prototype, `SetRepresentation`, null),
-  u([n], k.prototype, `SetCurrentVideoBandwidth`, null),
-  u([n], k.prototype, `CaptureFrequentlyUpdatingInformation`, null),
-  u([n], k.prototype, `LogDownload`, null),
-  u([n], k.prototype, `LogSegmentDownloadFailure`, null),
-  u([n], k.prototype, `LogFrameInfo`, null),
-  u([n], k.prototype, `LogBufferDuration`, null));
+(v([i], k.prototype, `m_allTimeSnapshot`, void 0),
+  v([i], k.prototype, `m_strBufferingVideoResolution`, void 0),
+  v([i], k.prototype, `m_strPlaybackVideoResolution`, void 0),
+  v([i], k.prototype, `m_strHtmlVideoDisplay`, void 0),
+  v([i], k.prototype, `m_nBandwidthRequired`, void 0),
+  v([i], k.prototype, `m_nCurBandwidthVideo`, void 0),
+  v([i], k.prototype, `m_nAudioBufferedMS`, void 0),
+  v([i], k.prototype, `m_nVideoBufferedMS`, void 0),
+  v([i], k.prototype, `m_nActiveDownloads`, void 0),
+  v([i], k.prototype, `m_nVideoDownloadProgress`, void 0),
+  v([i], k.prototype, `m_videoBufferedRanges`, void 0),
+  v([i], k.prototype, `m_audioBufferedRanges`, void 0),
+  v([i], k.prototype, `m_nPlaybackRate`, void 0),
+  v([n], k.prototype, `SetVideoPlaybackResolution`, null),
+  v([n], k.prototype, `SetRepresentation`, null),
+  v([n], k.prototype, `SetCurrentVideoBandwidth`, null),
+  v([n], k.prototype, `CaptureFrequentlyUpdatingInformation`, null),
+  v([n], k.prototype, `LogDownload`, null),
+  v([n], k.prototype, `LogSegmentDownloadFailure`, null),
+  v([n], k.prototype, `LogFrameInfo`, null),
+  v([n], k.prototype, `LogBufferDuration`, null));
 var A = class {
   m_timeMS = Date.now();
   m_nBytesReceived = 0;
@@ -626,7 +626,7 @@ var A = class {
   m_nFramesDecoded = 0;
   m_nFramesDropped = 0;
   constructor(e) {
-    (r(this), (this.m_nInitialVideoResolution = e));
+    (t(this), (this.m_nInitialVideoResolution = e));
   }
   GetAverageBandwidth() {
     return this.m_nBandwidthTotal / Math.max(1, this.m_nEntries);
@@ -666,16 +666,16 @@ var A = class {
       (this.m_nEntries += 1));
   }
 };
-(u([t], A.prototype, `m_nBytesReceived`, void 0),
-  u([t], A.prototype, `m_nFailedSegments`, void 0),
-  u([t], A.prototype, `m_nStallEvents`, void 0),
-  u([t], A.prototype, `m_nSegmentDownloadTimeMaxMS`, void 0),
-  u([t], A.prototype, `m_nSegmentDownloadTimeMinMS`, void 0),
-  u([t], A.prototype, `m_nBandwidthMin`, void 0),
-  u([t], A.prototype, `m_nBandwidthMax`, void 0),
-  u([t], A.prototype, `m_nFramesDecoded`, void 0),
-  u([t], A.prototype, `m_nFramesDropped`, void 0),
-  u([n], A.prototype, `SegmentReceived`, null));
+(v([i], A.prototype, `m_nBytesReceived`, void 0),
+  v([i], A.prototype, `m_nFailedSegments`, void 0),
+  v([i], A.prototype, `m_nStallEvents`, void 0),
+  v([i], A.prototype, `m_nSegmentDownloadTimeMaxMS`, void 0),
+  v([i], A.prototype, `m_nSegmentDownloadTimeMinMS`, void 0),
+  v([i], A.prototype, `m_nBandwidthMin`, void 0),
+  v([i], A.prototype, `m_nBandwidthMax`, void 0),
+  v([i], A.prototype, `m_nFramesDecoded`, void 0),
+  v([i], A.prototype, `m_nFramesDropped`, void 0),
+  v([n], A.prototype, `SegmentReceived`, null));
 var fe = class {
     bDropReading = !1;
     nTotalDecodedFrames = 0;
@@ -685,14 +685,14 @@ var fe = class {
   },
   j = class {
     constructor() {
-      r(this);
+      t(this);
     }
     k_nTestFrequencyMS = 1e3;
     k_nSlidingWindow = 6;
     k_nDroppedFramesThreshold = 1;
     k_nFailThreshold = 3;
     k_nIgnoreReadingAroundResizeMS = 2e3;
-    m_schTracker = new c();
+    m_schTracker = new u();
     m_rgResultsWindow = [];
     m_nLastResizeMS = 0;
     m_lastFrameInfo = { framesDecoded: 0, framesDropped: 0 };
@@ -766,27 +766,27 @@ var fe = class {
         this.m_rgResultsWindow.push(n));
     }
   };
-(u([t], j.prototype, `m_bDroppingFrameDetected`, void 0),
-  u([t], j.prototype, `m_nCurrentFPS`, void 0),
-  u([n.bound], j.prototype, `TakeReading`, null));
-function M(e, t) {
+(v([i], j.prototype, `m_bDroppingFrameDetected`, void 0),
+  v([i], j.prototype, `m_nCurrentFPS`, void 0),
+  v([n.bound], j.prototype, `TakeReading`, null));
+function pe(e, t) {
   let n = e.getElementsByTagName(`MPD`);
   return !n || n.length != 1 ? null : n[0];
 }
-function N(e, t) {
+function M(e, t) {
   for (let n = 0; n < e.children.length; n++) {
     let r = e.children[n];
     if (r.tagName == t) return r;
   }
   return null;
 }
-function P(e, t) {
+function N(e, t) {
   let n = e.getAttribute(t);
   if (!n) return null;
   let r = new Date(n);
   return Object.prototype.toString.call(r) === `[object Date]` ? r : null;
 }
-function F(e, t) {
+function P(e, t) {
   let n = e.getAttribute(t);
   if (!n) return null;
   let r = 0,
@@ -800,39 +800,39 @@ function F(e, t) {
     r
   );
 }
-function pe(e, t) {
+function me(e, t) {
   let n = e.getAttribute(t);
   return n
     ? ((n = n.toLowerCase()), n == `true` || (n != `false` && null))
     : null;
 }
-function I(e, t) {
+function F(e, t) {
   let n = e.getAttribute(t);
   return n ? parseInt(n) : null;
 }
-function L(e, t) {
+function I(e, t) {
   return e.getAttribute(t) || ``;
 }
-function R(e, t, n) {
-  let r = I(e, `timescale`);
+function L(e, t, n) {
+  let r = F(e, `timescale`);
   if ((t.bContainsThumbnails && (r ??= 1), !r)) return null;
   let i = {
     nTimeScale: r,
-    nDuration: I(e, `duration`) || 0,
-    nStartNumber: I(e, `startNumber`) || 0,
-    strMedia: L(e, `media`),
-    strInitialization: L(e, `initialization`),
+    nDuration: F(e, `duration`) || 0,
+    nStartNumber: F(e, `startNumber`) || 0,
+    strMedia: I(e, `media`),
+    strInitialization: I(e, `initialization`),
   };
   return !i.nDuration ||
     !i.nStartNumber ||
     !i.strMedia ||
     (!t.bContainsThumbnails && !i.strInitialization)
     ? null
-    : ((i.strMedia = he(i.strMedia, n)),
-      (i.strInitialization = he(i.strInitialization, n)),
+    : ((i.strMedia = ge(i.strMedia, n)),
+      (i.strInitialization = ge(i.strInitialization, n)),
       i);
 }
-function z(e, t, n) {
+function R(e, t, n) {
   return (
     (e = e.replace(`$RepresentationID$`, t)),
     (e = e.replace(`$Number$`, n.toString())),
@@ -846,74 +846,74 @@ function z(e, t, n) {
     e
   );
 }
-function B(e) {
-  return a(e);
+function z(e) {
+  return ie(e);
 }
-function V(e, t) {
+function B(e, t) {
   let n = e;
   n.endsWith(`/`) || (n += `/`);
   let r = +!!t.startsWith(`/`);
   return n + t.substring(r);
 }
-function me(e) {
-  if (!B(e)) return ``;
+function he(e) {
+  if (!z(e)) return ``;
   let t = new URL(e),
     n = t.pathname;
   return (
     (n.indexOf(`.mpd`) >= 0 || n.endsWith(`/`)) &&
       (n = n.substring(0, n.lastIndexOf(`/`))),
-    V(t.origin, n) + `/`
+    B(t.origin, n) + `/`
   );
 }
-function he(e, t) {
-  return !e || B(e) || !B(t) ? e : V(t, e);
+function ge(e, t) {
+  return !e || z(e) || !z(t) ? e : B(t, e);
 }
-function H(e) {
+function V(e) {
   return e.rgRoles.length == 0 || e.rgRoles.findIndex((e) => e == `main`) >= 0;
 }
-function U(e) {
+function H(e) {
   if (!e) return 0;
   let t = e.segmentTemplate;
   return t.nTimeScale == 1e3 ? t.nDuration : (t.nDuration / t.nTimeScale) * 1e3;
 }
-function W(e, t, n) {
+function U(e, t, n) {
   n -= e.GetStartTime() * 1e3;
-  let r = U(t),
-    i = ve(e, r, n);
+  let r = H(t),
+    i = ye(e, r, n);
   return Math.floor(i / r) + t.segmentTemplate.nStartNumber;
 }
-function ge(e, t) {
-  return (t - e.segmentTemplate.nStartNumber) * (U(e) / 1e3);
-}
 function _e(e, t) {
+  return (t - e.segmentTemplate.nStartNumber) * (H(e) / 1e3);
+}
+function ve(e, t) {
   if (e.IsLiveContent()) return Number.MAX_VALUE;
   let n = (e.GetEndTime() - e.GetStartTime()) * 1e3,
-    r = U(t),
-    i = ve(e, r, n);
+    r = H(t),
+    i = ye(e, r, n);
   return Math.ceil(i / r) + t.segmentTemplate.nStartNumber - 1;
 }
-function ve(e, t, n) {
+function ye(e, t, n) {
   return n + ((e.GetStartTime() * 1e3) % t);
 }
-function ye(e) {
+function be(e) {
   let t = e.segmentTemplate.strInitialization;
-  return z(t, e.strID, 0);
+  return R(t, e.strID, 0);
 }
-function be(e, t) {
+function xe(e, t) {
   let n = e.segmentTemplate.strMedia;
-  return z(n, e.strID, t);
+  return R(n, e.strID, t);
 }
-function xe(e, t, n) {
+function Se(e, t, n) {
   if (!e.IsLiveContent()) return 0;
-  let r = U(t),
+  let r = H(t),
     i = n - t.segmentTemplate.nStartNumber,
     a = e.GetDurationSinceStarted();
   return (i + 1) * r - a;
 }
-function Se(e) {
+function Ce(e) {
   return [`image/jpeg`, `image/jpg`, `image/avif`, `image/webp`].includes(e);
 }
-var Ce = class {
+var we = class {
     m_strType = `static`;
     m_nMinBufferTime = 0;
     m_dtAvailabilityStartTime = null;
@@ -967,13 +967,13 @@ var Ce = class {
     GetMainVideoAdaption() {
       if (this.m_rgPeriods.length == 0) return null;
       let e = this.m_rgPeriods[0];
-      for (let t of e.rgAdaptationSets) if (H(t) && t.bContainsVideo) return t;
+      for (let t of e.rgAdaptationSets) if (V(t) && t.bContainsVideo) return t;
       return null;
     }
     GetMainAudioAdaption() {
       if (this.m_rgPeriods.length == 0) return null;
       let e = this.m_rgPeriods[0];
-      for (let t of e.rgAdaptationSets) if (H(t) && t.bContainsAudio) return t;
+      for (let t of e.rgAdaptationSets) if (V(t) && t.bContainsAudio) return t;
       return null;
     }
     GetThumbnailAdaptation() {
@@ -988,7 +988,7 @@ var Ce = class {
       let t = e.rgRepresentations[0];
       return !t.nTileWidthCount || !t.nTileHeightCount
         ? 0
-        : U(t) / (t.nTileWidthCount * t.nTileHeightCount);
+        : H(t) / (t.nTileWidthCount * t.nTileHeightCount);
     }
     GetStartTime() {
       return !this.IsLiveContent() && this.m_rgPeriods.length > 0
@@ -1024,7 +1024,7 @@ var Ce = class {
       let t = this.GetThumbnailAdaptation();
       if (!t || t.rgRepresentations.length == 0) return null;
       let n = t.rgRepresentations[0],
-        r = W(this, n, e);
+        r = U(this, n, e);
       if (
         n.nTileWidthCount === void 0 ||
         n.nTileHeightCount === void 0 ||
@@ -1032,7 +1032,7 @@ var Ce = class {
         n.nHeight === void 0
       )
         return null;
-      let i = U(n),
+      let i = H(n),
         a = i * (r - n.segmentTemplate.nStartNumber),
         o = i / (n.nTileWidthCount * n.nTileHeightCount),
         s = Math.floor((e - a) / o),
@@ -1046,7 +1046,7 @@ var Ce = class {
       let u = n.nWidth / n.nTileWidthCount,
         d = n.nHeight / n.nTileHeightCount;
       return {
-        strTileURL: z(n.segmentTemplate.strMedia, n.strID, r),
+        strTileURL: R(n.segmentTemplate.strMedia, n.strID, r),
         x: l * u,
         y: c * d,
         nThumbnailWidth: u,
@@ -1063,24 +1063,24 @@ var Ce = class {
     }
     ParseRepresentation(e, t, n, r, i) {
       let a = null,
-        o = N(e, `SegmentTemplate`);
+        o = M(e, `SegmentTemplate`);
       if (o) {
-        let e = R(o, t, r);
+        let e = L(o, t, r);
         e && (a = e);
       } else n && (a = { ...n });
       if (!a) return (S(`MPD - No segment template for representation`), null);
       let s = {
-        strID: L(e, `id`),
-        strMimeType: L(e, `mimeType`),
-        strCodecs: L(e, `codecs`),
-        nBandwidth: I(e, `bandwidth`) || 0,
+        strID: I(e, `id`),
+        strMimeType: I(e, `mimeType`),
+        strCodecs: I(e, `codecs`),
+        nBandwidth: F(e, `bandwidth`) || 0,
         segmentTemplate: a,
       };
       if ((!s.strMimeType && i && (s.strMimeType = i), t.bContainsVideo)) {
         if (
-          ((s.nWidth = I(e, `width`) || 0),
-          (s.nHeight = I(e, `height`) || 0),
-          (s.nFrameRate = I(e, `frameRate`) || 0),
+          ((s.nWidth = F(e, `width`) || 0),
+          (s.nHeight = F(e, `height`) || 0),
+          (s.nFrameRate = F(e, `frameRate`) || 0),
           S(
             `representation: ${s.nWidth}w x ${s.nHeight}h x ${s.nFrameRate} fps`,
           ),
@@ -1088,10 +1088,10 @@ var Ce = class {
         )
           return (S(`MPD - Representation Video Data Missing`), null);
       } else if (t.bContainsAudio) {
-        s.nAudioSamplingRate = I(e, `audioSamplingRate`) || 0;
-        let t = N(e, `AudioChannelConfiguration`);
+        s.nAudioSamplingRate = F(e, `audioSamplingRate`) || 0;
+        let t = M(e, `AudioChannelConfiguration`);
         if (
-          (t && (s.nAudioChannels = I(t, `value`) || 0),
+          (t && (s.nAudioChannels = F(t, `value`) || 0),
           (s.nAudioChannels ||= 2),
           !s.strID ||
             !s.strMimeType ||
@@ -1101,7 +1101,7 @@ var Ce = class {
         )
           return (S(`MPD - Representation Audio Data Missing`), null);
       } else if (t.bContainsThumbnails) {
-        if (!Se(s.strMimeType))
+        if (!Ce(s.strMimeType))
           return (
             S(
               `MPD - Representation Thumbnail MimeType not supported`,
@@ -1109,17 +1109,17 @@ var Ce = class {
             ),
             null
           );
-        ((s.nWidth = I(e, `width`) || 0), (s.nHeight = I(e, `height`) || 0));
-        let t = N(e, `EssentialProperty`);
+        ((s.nWidth = F(e, `width`) || 0), (s.nHeight = F(e, `height`) || 0));
+        let t = M(e, `EssentialProperty`);
         if (!t)
           return (
             S(`MPD - Representation Thumbnail missing EssentialProperty`), null
           );
-        let n = L(t, `schemeIdUri`);
+        let n = I(t, `schemeIdUri`);
         if (!n || n != `http://dashif.org/guidelines/thumbnail_tile`)
           return (S(`MPD - Representation Thumbnail has invalid schema`), null);
-        let r = (L(t, `value`) || ``).split(`x`);
-        if (r.length != 2 || !h(r[0]) || !h(r[1]))
+        let r = (I(t, `value`) || ``).split(`x`);
+        if (r.length != 2 || !p(r[0]) || !p(r[1]))
           return (
             S(`MPD - Representation Thumbnail has invalid tile property`), null
           );
@@ -1132,15 +1132,15 @@ var Ce = class {
       e.rgRoles.push(`subtitle`);
       let n = t.getElementsByTagName(`Role`);
       for (let t = 0; t < n.length; t++) {
-        let r = L(n[t], `value`);
+        let r = I(n[t], `value`);
         r && r != `subtitle` && e.rgRoles.push(r);
       }
       let r = t.getElementsByTagName(`Representation`);
       for (let t = 0; t < r.length; t++) {
         let n = r[t],
           i = {
-            strID: L(n, `id`),
-            nBandwidth: I(n, `bandwidth`) || 0,
+            strID: I(n, `id`),
+            nBandwidth: F(n, `bandwidth`) || 0,
             strClosedCaptionFile: ``,
             strMimeType: `text/vtt`,
             segmentTemplate: {
@@ -1151,43 +1151,43 @@ var Ce = class {
               strInitialization: ``,
             },
           },
-          a = N(n, `BaseURL`),
+          a = M(n, `BaseURL`),
           o = a ? a.textContent : ``;
         if (!o) {
           S(`Closed Caption File has no BaseURL for (id): ` + i.strID);
           continue;
         }
-        ((i.strClosedCaptionFile = z(o, i.strID, 0)),
+        ((i.strClosedCaptionFile = R(o, i.strID, 0)),
           i.strClosedCaptionFile.startsWith(`http`) ||
             (i.strClosedCaptionFile =
               this.m_strBaseURL + i.strClosedCaptionFile));
-        let s = l();
+        let s = ee();
         if (s == `community`) {
           let e = new URL(i.strClosedCaptionFile).pathname.split(`/video/`)[1];
           i.strClosedCaptionFile = e
-            ? g.COMMUNITY_BASE_URL + `vtt/video/` + e
+            ? y.COMMUNITY_BASE_URL + `vtt/video/` + e
             : ``;
         } else if (s == `store`) {
           let e = new URL(i.strClosedCaptionFile).pathname.split(`/video/`)[1];
-          i.strClosedCaptionFile = e ? g.STORE_BASE_URL + `vtt/video/` + e : ``;
+          i.strClosedCaptionFile = e ? y.STORE_BASE_URL + `vtt/video/` + e : ``;
         }
         i.strClosedCaptionFile && e.rgRepresentations.push(i);
       }
     }
     BParse(e, t) {
       let n = new DOMParser().parseFromString(e, `application/xml`),
-        r = M(n, `MPD`);
+        r = pe(n, `MPD`);
       if (!r) return !1;
       let i = r.getAttribute(`type`);
       if (
-        ((this.m_nMinBufferTime = F(r, `minBufferTime`) || 0), i == `dynamic`)
+        ((this.m_nMinBufferTime = P(r, `minBufferTime`) || 0), i == `dynamic`)
       ) {
         if (
           ((this.m_strType = `dynamic`),
-          (this.m_dtAvailabilityStartTime = P(r, `availabilityStartTime`)),
-          (this.m_dtPublishTime = P(r, `publishTime`)),
-          (this.m_nMinimumUpdatePeriod = F(r, `minimumUpdatePeriod`) || 0),
-          (this.m_nTimeShiftBufferDepth = F(r, `timeShiftBufferDepth`) || 0),
+          (this.m_dtAvailabilityStartTime = N(r, `availabilityStartTime`)),
+          (this.m_dtPublishTime = N(r, `publishTime`)),
+          (this.m_nMinimumUpdatePeriod = P(r, `minimumUpdatePeriod`) || 0),
+          (this.m_nTimeShiftBufferDepth = P(r, `timeShiftBufferDepth`) || 0),
           !this.m_dtAvailabilityStartTime ||
             !this.m_dtPublishTime ||
             !this.m_nMinimumUpdatePeriod ||
@@ -1198,59 +1198,59 @@ var Ce = class {
         if (
           ((this.m_strType = `static`),
           (this.m_nMediaPresentationDuration =
-            F(r, `mediaPresentationDuration`) || 0),
+            P(r, `mediaPresentationDuration`) || 0),
           !this.m_nMinBufferTime || !this.m_nMediaPresentationDuration)
         )
           return (S(`MPD - Missing Buffer Time or Presentation Duration`), !1);
       } else return (S(`MPD - Unknown type`), !1);
-      let a = N(r, `BaseURL`);
-      this.m_strBaseURL = a && a.textContent ? a.textContent : me(t);
-      let o = N(r, `Analytics`);
+      let a = M(r, `BaseURL`);
+      this.m_strBaseURL = a && a.textContent ? a.textContent : he(t);
+      let o = M(r, `Analytics`);
       o &&
-        ((this.m_strStatsLink = L(o, `statslink`)),
-        (this.m_strStalledLink = L(o, `stalledlink`)),
-        (this.m_strEventLogLink = L(o, `eventlink`)));
+        ((this.m_strStatsLink = I(o, `statslink`)),
+        (this.m_strStalledLink = I(o, `stalledlink`)),
+        (this.m_strEventLogLink = I(o, `eventlink`)));
       let s = n.getElementsByTagName(`Period`);
       if (s.length == 0) return (S(`MPD - Missing Periods`), !1);
       let c = s[0],
-        l = L(c, `id`),
-        u = F(c, `start`);
+        l = I(c, `id`),
+        u = P(c, `start`);
       if (!l || u === null) return (S(`MPD - Missing Period Information`), !1);
       let d = {
         strID: l,
         nStart: u,
-        nDuration: F(c, `duration`) || 0,
+        nDuration: P(c, `duration`) || 0,
         rgAdaptationSets: [],
       };
       ((this.m_rgPeriods = []), this.m_rgPeriods.push(d));
       let f = c.getElementsByTagName(`AdaptationSet`);
       for (let e = 0; e < f.length; e++) {
         let t = f[e],
-          n = L(t, `description`),
-          r = L(t, `lang`),
+          n = I(t, `description`),
+          r = I(t, `lang`),
           i = {
-            bSegmentAlignment: pe(t, `segmentAlignment`) || !1,
-            bIsTimedText: L(t, `mimeType`) == `text/vtt`,
-            strLanguage: L(t, `lang`),
+            bSegmentAlignment: me(t, `segmentAlignment`) || !1,
+            bIsTimedText: I(t, `mimeType`) == `text/vtt`,
+            strLanguage: I(t, `lang`),
             bContainsVideo: !1,
             bContainsAudio: !1,
             bContainsThumbnails: !1,
             strDescription: n || r,
-            strForceSub: L(t, `forceSub`),
-            strID: L(t, `id`),
+            strForceSub: I(t, `forceSub`),
+            strID: I(t, `id`),
             rgRoles: [],
             rgRepresentations: [],
           };
         d.rgAdaptationSets.push(i);
         let a = t.getElementsByTagName(`ContentComponent`);
         for (let e = 0; e < a.length; e++) {
-          let t = L(a[e], `contentType`);
+          let t = I(a[e], `contentType`);
           (t == `video` && (i.bContainsVideo = !0),
             t == `audio` && (i.bContainsAudio = !0),
             t == `image` && (i.bContainsThumbnails = !0));
         }
         if (a.length == 0) {
-          let e = L(t, `contentType`);
+          let e = I(t, `contentType`);
           (e == `video` && (i.bContainsVideo = !0),
             e == `audio` && (i.bContainsAudio = !0),
             e == `image` && (i.bContainsThumbnails = !0));
@@ -1265,18 +1265,18 @@ var Ce = class {
           );
         let o = t.getElementsByTagName(`Role`);
         for (let e = 0; e < o.length; e++) {
-          let t = L(o[e], `value`);
+          let t = I(o[e], `value`);
           t && i.rgRoles.push(t);
         }
         let s = null,
-          c = N(t, `SegmentTemplate`);
+          c = M(t, `SegmentTemplate`);
         if (c) {
-          let e = R(c, i, this.m_strBaseURL);
+          let e = L(c, i, this.m_strBaseURL);
           if (!e)
             return (S(`MPD - Failed to parse found Adaptation template`), !1);
           s = e;
         }
-        let l = L(t, `mimeType`),
+        let l = I(t, `mimeType`),
           u = t.getElementsByTagName(`Representation`);
         for (let e = 0; e < u.length; e++) {
           let t = u[e],
@@ -1289,18 +1289,18 @@ var Ce = class {
     }
     BUpdate(e) {
       let t = new DOMParser().parseFromString(e, `application/xml`),
-        n = M(t, `MPD`);
+        n = pe(t, `MPD`);
       if (!n) return !1;
       if (this.IsLiveContent()) {
-        switch (L(n, `type`)) {
+        switch (I(n, `type`)) {
           case `dynamic`:
             break;
           case `static`:
             (S(`Converting MPD from dynamic to static`),
               (this.m_strType = `static`),
               (this.m_nMediaPresentationDuration =
-                F(n, `mediaPresentationDuration`) || 0),
-              (this.m_nMinBufferTime = F(n, `minBufferTime`) || 0),
+                P(n, `mediaPresentationDuration`) || 0),
+              (this.m_nMinBufferTime = P(n, `minBufferTime`) || 0),
               (this.m_dtAvailabilityStartTime = null),
               (this.m_dtPublishTime = null));
         }
@@ -1309,20 +1309,20 @@ var Ce = class {
         let r = e[0].getElementsByTagName(`AdaptationSet`);
         for (let e = 0; e < r.length; e++) {
           let t = r[e],
-            n = L(t, `id`),
+            n = I(t, `id`),
             i = this.GetAdaptationByTrackID(n);
           if (i) {
             let e = null,
-              n = N(t, `SegmentTemplate`);
+              n = M(t, `SegmentTemplate`);
             if (n) {
-              let t = R(n, i, this.m_strBaseURL);
+              let t = L(n, i, this.m_strBaseURL);
               if (!t)
                 return (
                   S(`MPD - Failed to parse found Adaptation template`), !1
                 );
               e = t;
             }
-            let r = L(t, `mimeType`),
+            let r = I(t, `mimeType`),
               a = t.getElementsByTagName(`Representation`);
             if (a.length > 1)
               for (let t = 0; t < a.length; t++) {
@@ -1343,17 +1343,17 @@ var Ce = class {
           }
         }
       }
-      let r = N(n, `Analytics`);
+      let r = M(n, `Analytics`);
       return (
         r &&
-          ((this.m_strStatsLink = L(r, `statslink`)),
-          (this.m_strStalledLink = L(r, `stalledlink`)),
-          (this.m_strEventLogLink = L(r, `eventlink`))),
+          ((this.m_strStatsLink = I(r, `statslink`)),
+          (this.m_strStalledLink = I(r, `stalledlink`)),
+          (this.m_strEventLogLink = I(r, `eventlink`))),
         !0
       );
     }
   },
-  G = (function (e) {
+  W = (function (e) {
     return (
       (e[(e.None = 0)] = `None`),
       (e[(e.Append = 1)] = `Append`),
@@ -1361,10 +1361,10 @@ var Ce = class {
       e
     );
   })({});
-function we(e) {
+function Te(e) {
   return e && e.name == `QuotaExceededError`;
 }
-var Te = class {
+var Ee = class {
     m_eBufferUpdate = 0;
     m_sourceBuffer = null;
     Attach(e) {
@@ -1411,8 +1411,8 @@ var Te = class {
       return Math.floor(n * 1e3);
     }
     AppendBuffer(e) {
-      (v(this.m_sourceBuffer != null, `Invalid source buffer`),
-        v(
+      (g(this.m_sourceBuffer != null, `Invalid source buffer`),
+        g(
           this.m_eBufferUpdate == 0,
           `Appending to source buffer with operation in flight`,
         ));
@@ -1424,8 +1424,8 @@ var Te = class {
       return null;
     }
     Remove(e, t) {
-      (v(this.m_sourceBuffer != null, `Invalid source buffer`),
-        v(
+      (g(this.m_sourceBuffer != null, `Invalid source buffer`),
+        g(
           this.m_eBufferUpdate == 0,
           `Removing from source buffer with operation in flight`,
         ),
@@ -1445,22 +1445,22 @@ var Te = class {
           !0);
     }
   },
-  Ee = 500,
-  De = 3e3,
-  Oe = 9e3,
-  ke = 4,
-  Ae = 15e3,
-  je = -1,
-  Me = 30,
-  K = 6,
-  Ne = 1,
-  Pe = 10,
-  q = class {
+  De = 500,
+  Oe = 3e3,
+  ke = 9e3,
+  Ae = 4,
+  je = 15e3,
+  Me = -1,
+  Ne = 30,
+  G = 6,
+  Pe = 1,
+  Fe = 10,
+  K = class {
     m_callbacks;
     m_mpd;
     m_adaptation;
     m_mediaSource = null;
-    m_sourceBuffer = new Te();
+    m_sourceBuffer = new Ee();
     m_nTrackBufferMS = 0;
     m_representation = null;
     m_rgBufferedSegments = [];
@@ -1470,9 +1470,9 @@ var Te = class {
     m_bRemoveBufferState = !1;
     m_bSeekInProgress = !1;
     m_bSourceBufferQuotaExceeded = !1;
-    m_schNextDownload = new c();
+    m_schNextDownload = new u();
     m_xhrDownload = null;
-    m_listeners = new m();
+    m_listeners = new f();
     m_rgDownloadLog = [];
     m_nCurDownloadProgress = 0;
     m_nCurDownloadBitrate = 0;
@@ -1514,10 +1514,10 @@ var Te = class {
       return this.m_representation?.nBandwidth || 0;
     }
     GetCurrentSegmentDurationMS() {
-      return U(this.m_representation);
+      return H(this.m_representation);
     }
     GetCurrentSegmentInitializationURL() {
-      return this.m_representation ? ye(this.m_representation) : ``;
+      return this.m_representation ? be(this.m_representation) : ``;
     }
     BIsCurrentRepresentation(e) {
       return (
@@ -1544,7 +1544,7 @@ var Te = class {
       );
     }
     GetMaxSegment() {
-      return this.m_representation ? _e(this.m_mpd, this.m_representation) : 0;
+      return this.m_representation ? ve(this.m_mpd, this.m_representation) : 0;
     }
     GetBufferedStart() {
       return this.m_sourceBuffer.GetBufferedStartSec();
@@ -1649,9 +1649,9 @@ var Te = class {
       );
       let n = this.m_sourceBuffer.GetBufferState();
       (this.m_sourceBuffer.BufferUpdateComplete(),
-        n == G.Append && this.m_callbacks.OnSegmentBuffered(this),
+        n == W.Append && this.m_callbacks.OnSegmentBuffered(this),
         this.m_bSeekInProgress &&
-          n == G.Remove &&
+          n == W.Remove &&
           !this.m_bRemoveBufferState &&
           this.ContinueSeek(),
         this.UpdateBuffer());
@@ -1660,7 +1660,7 @@ var Te = class {
       if (!this.m_representation) return;
       let e = this.m_callbacks.GetCurrentPlayTime(),
         t = `[`,
-        n = W(this.m_mpd, this.m_representation, e * 1e3);
+        n = U(this.m_mpd, this.m_representation, e * 1e3);
       for (let e of this.m_rgBufferedSegments)
         ((t += e.representation.strID),
           e.nSegmentIndex == n && (t += `|`),
@@ -1706,7 +1706,7 @@ var Te = class {
           this.DownloadInitSegment(this.m_representation));
         return;
       }
-      let e = xe(this.m_mpd, this.m_representation, this.m_nNextSegment);
+      let e = Se(this.m_mpd, this.m_representation, this.m_nNextSegment);
       if (e > 0) {
         (S(`${this.GetDebugName()} ScheduleNextDownload - segment in future`),
           this.m_schNextDownload.Schedule(e, this.ScheduleNextDownload));
@@ -1722,14 +1722,14 @@ var Te = class {
         return;
       }
       let r = this.GetAmountBufferedMS(t);
-      if ((n > 1 && (r /= n), r < Me * 1e3)) {
+      if ((n > 1 && (r /= n), r < Ne * 1e3)) {
         (S(
-          `${this.GetDebugName()} ScheduleNextDownload - have ${r} buffered, desire ${Me * 1e3} - downloading now`,
+          `${this.GetDebugName()} ScheduleNextDownload - have ${r} buffered, desire ${Ne * 1e3} - downloading now`,
         ),
           this.DownloadNextSegment());
         return;
       }
-      let i = U(this.m_representation) * 1.1,
+      let i = H(this.m_representation) * 1.1,
         a = this.m_sourceBuffer.GetAmountBufferedInPlayerMS(
           this.m_callbacks.GetCurrentPlayTime(),
         );
@@ -1740,8 +1740,8 @@ var Te = class {
     }
     DownloadInitSegment(e) {
       this.m_schNextDownload.Cancel();
-      let t = ye(e);
-      this.DownloadSegment(e, je, t);
+      let t = be(e);
+      this.DownloadSegment(e, Me, t);
     }
     DownloadNextSegment() {
       if ((this.m_schNextDownload.Cancel(), this.m_nNextSegment < 0)) {
@@ -1758,11 +1758,11 @@ var Te = class {
         );
         return;
       }
-      let e = be(this.m_representation, this.m_nNextSegment);
+      let e = xe(this.m_representation, this.m_nNextSegment);
       this.DownloadSegment(this.m_representation, this.m_nNextSegment, e);
     }
     async DownloadSegment(e, t, n, r = performance.now()) {
-      (v(
+      (g(
         this.m_xhrDownload === null,
         `Trying to download another segment while a download is already in flight`,
       ),
@@ -1778,7 +1778,7 @@ var Te = class {
         ((this.m_nCurDownloadProgress = 0), (this.m_xhrDownload = c));
         let e = {
           cancelToken: this.m_xhrDownload.token,
-          timeout: Ae,
+          timeout: je,
           responseType: `arraybuffer`,
           onDownloadProgress: (e) => {
             ((this.m_nCurDownloadProgress = e.loaded / e.total),
@@ -1805,8 +1805,8 @@ var Te = class {
       }
       if (!o || o.status != 200) {
         this.m_stats.LogSegmentDownloadFailure(d, o ? o.status : 444);
-        let i = Ee;
-        if (u - r > Oe) {
+        let i = De;
+        if (u - r > ke) {
           if (this.m_callbacks.GetTimeoutAfterFailedDownload()) {
             (S(
               `${this.GetDebugName()} HTTP download failed.. stopping loader: ${u - r}ms`,
@@ -1814,7 +1814,7 @@ var Te = class {
               this.DownloadFailed());
             return;
           }
-          i = De;
+          i = Oe;
         }
         if (f == 410) {
           ((this.m_nNumConsecutiveDownloadGones += 1),
@@ -1831,7 +1831,7 @@ var Te = class {
       }
       this.m_nNumConsecutiveDownloadGones = 0;
       let p = new Uint8Array(o.data);
-      if (t == je) this.m_mapInitSegments.set(e.strID, p);
+      if (t == Me) this.m_mapInitSegments.set(e.strID, p);
       else {
         let n = this.m_rgBufferedSegments.find((e) => e.nSegmentIndex == t);
         if (!this.BAdvanceNextSegment(t, n)) {
@@ -1843,9 +1843,9 @@ var Te = class {
         }
         if (n) ((n.representation = e), (n.data = p));
         else {
-          let n = ge(e, t),
+          let n = _e(e, t),
             r = this.m_mpd.GetEndTime(),
-            i = U(e);
+            i = H(e);
           ((i = Math.min((r - n) * 1e3, i)),
             this.m_rgBufferedSegments.push({
               representation: e,
@@ -1889,7 +1889,7 @@ var Te = class {
       this.UpdateBuffer();
     }
     UpdateBuffer() {
-      if (this.m_sourceBuffer.GetBufferState() != G.None) return;
+      if (this.m_sourceBuffer.GetBufferState() != W.None) return;
       if (this.m_bRemoveBufferState) {
         this.RemoveAllBuffers();
         return;
@@ -1904,11 +1904,11 @@ var Te = class {
       }
       let e = this.m_callbacks.GetCurrentPlayTime(),
         t = this.m_sourceBuffer.GetAmountBufferedInPlayerMS(e) / 1e3,
-        n = W(this.m_mpd, this.m_representation, e * 1e3),
+        n = U(this.m_mpd, this.m_representation, e * 1e3),
         r = this.m_rgBufferedSegments.find(
           (e) => e.data && e.nSegmentIndex >= n,
         ),
-        i = r && (t < K || r.nStartPTS - e < K);
+        i = r && (t < G || r.nStartPTS - e < G);
       if (!this.m_bSourceBufferQuotaExceeded && i && r) {
         let e = r.data,
           t = r.representation.strID;
@@ -1925,7 +1925,7 @@ var Te = class {
         }
         let n = this.m_sourceBuffer.AppendBuffer(e);
         if (
-          ((this.m_bSourceBufferQuotaExceeded = we(n)),
+          ((this.m_bSourceBufferQuotaExceeded = Te(n)),
           n && !this.m_bSourceBufferQuotaExceeded)
         ) {
           S(`${this.GetDebugName()} MSE Buffer - Exception`, n);
@@ -1936,13 +1936,13 @@ var Te = class {
           return;
         }
       }
-      let a = this.m_bSourceBufferQuotaExceeded ? Ne : Pe,
+      let a = this.m_bSourceBufferQuotaExceeded ? Pe : Fe,
         o = this.m_sourceBuffer.GetBufferedStartSec(),
         s = this.m_sourceBuffer.GetBufferedEndSec() - o,
         c = e - o;
       if (s && c >= a) {
-        let t = W(this.m_mpd, this.m_representation, (e - a) * 1e3),
-          n = ge(this.m_representation, t) - 0.01;
+        let t = U(this.m_mpd, this.m_representation, (e - a) * 1e3),
+          n = _e(this.m_representation, t) - 0.01;
         if (n > o) {
           (this.m_sourceBuffer.Remove(0, n),
             (this.m_rgBufferedSegments = this.m_rgBufferedSegments.filter(
@@ -1990,7 +1990,7 @@ var Te = class {
         C(`Seek without representation?`);
         return;
       }
-      let i = W(this.m_mpd, this.m_representation, e * 1e3),
+      let i = U(this.m_mpd, this.m_representation, e * 1e3),
         a = this.m_rgBufferedSegments.findIndex(
           (e) => e.data && e.nSegmentIndex == i,
         );
@@ -2009,7 +2009,7 @@ var Te = class {
           ));
       else {
         (this.ForceStopDownloads(), (this.m_rgBufferedSegments = []));
-        let t = W(this.m_mpd, this.m_representation, e * 1e3);
+        let t = U(this.m_mpd, this.m_representation, e * 1e3);
         ((this.m_nNextSegment = Math.min(t, this.GetMaxSegment())),
           S(
             `Seek To Next Segment: ` +
@@ -2029,15 +2029,15 @@ var Te = class {
     }
     ContinueSeek() {
       this.m_bSeekInProgress &&
-        (this.m_sourceBuffer.GetBufferState() == G.Remove ||
+        (this.m_sourceBuffer.GetBufferState() == W.Remove ||
           this.m_bRemoveBufferState ||
           ((this.m_bSeekInProgress = !1), this.ScheduleNextDownload()));
     }
     UpgradeBufferedVideo() {
       if (!this.m_representation) return;
-      let e = U(this.m_representation),
+      let e = H(this.m_representation),
         t = this.m_callbacks.GetCurrentPlayTime() * 1e3,
-        n = W(this.m_mpd, this.m_representation, t + e),
+        n = U(this.m_mpd, this.m_representation, t + e),
         r = this.m_rgBufferedSegments.find(
           (e) => e.nSegmentIndex >= n && this.BCanUpgradeBufferedSegment(e),
         );
@@ -2066,10 +2066,10 @@ var Te = class {
       let t = this.m_sourceBuffer.GetAmountBufferedInPlayerMS(e);
       if (t > this.m_nTrackBufferMS) return !0;
       let n = this.GetAmountBufferedMS(e);
-      return t >= K * 1e3 && n >= this.m_nTrackBufferMS;
+      return t >= G * 1e3 && n >= this.m_nTrackBufferMS;
     }
     LogDownload(e, t) {
-      this.m_rgDownloadLog.length >= ke && this.m_rgDownloadLog.shift();
+      this.m_rgDownloadLog.length >= Ae && this.m_rgDownloadLog.shift();
       let n = performance.now() - e;
       n <= 0 ||
         (this.m_rgDownloadLog.push({ cubData: t, nDownloadMS: n }),
@@ -2093,37 +2093,37 @@ var Te = class {
       return this.m_rgDownloadLog.length;
     }
   };
-(u([p], q.prototype, `OnSourceBufferUpdateEnd`, null),
-  u([p], q.prototype, `OnMediaUnsupportedError`, null),
-  u([p], q.prototype, `OnSourceBufferError`, null),
-  u([p], q.prototype, `OnSourceBufferAbort`, null),
-  u([p], q.prototype, `ScheduleNextDownload`, null),
-  u([p], q.prototype, `DownloadInitSegment`, null),
-  u([p], q.prototype, `DownloadNextSegment`, null),
-  u([p], q.prototype, `DownloadFailed`, null),
-  u([p], q.prototype, `DownloadGone`, null),
-  u([p], q.prototype, `CurrentTimeChanged`, null));
-var J = `auto`;
-function Y(e) {
-  return e.id == J;
+(v([m], K.prototype, `OnSourceBufferUpdateEnd`, null),
+  v([m], K.prototype, `OnMediaUnsupportedError`, null),
+  v([m], K.prototype, `OnSourceBufferError`, null),
+  v([m], K.prototype, `OnSourceBufferAbort`, null),
+  v([m], K.prototype, `ScheduleNextDownload`, null),
+  v([m], K.prototype, `DownloadInitSegment`, null),
+  v([m], K.prototype, `DownloadNextSegment`, null),
+  v([m], K.prototype, `DownloadFailed`, null),
+  v([m], K.prototype, `DownloadGone`, null),
+  v([m], K.prototype, `CurrentTimeChanged`, null));
+var q = `auto`;
+function J(e) {
+  return e.id == q;
 }
-var Fe = 3e4,
-  Ie = 8e3,
-  Le = 30,
-  Re = 6e4,
-  ze = 5,
-  Be = 300,
-  Ve = 250,
-  He = 0.55,
-  Ue = 30,
-  We = 10,
-  Ge = 4.5,
-  Ke = 1,
-  X = 1.1,
-  Z = 1,
-  qe = 3,
-  Je = 250,
-  Ye = (function (e) {
+var Ie = 3e4,
+  Le = 8e3,
+  Re = 30,
+  ze = 6e4,
+  Be = 5,
+  Ve = 300,
+  He = 250,
+  Ue = 0.55,
+  We = 30,
+  Ge = 10,
+  Ke = 4.5,
+  qe = 1,
+  Y = 1.1,
+  X = 1,
+  Je = 3,
+  Ye = 250,
+  Xe = (function (e) {
     return (
       (e[(e.Invalid = 0)] = `Invalid`),
       (e[(e.StreamGone = 1)] = `StreamGone`),
@@ -2132,10 +2132,10 @@ var Fe = 3e4,
       e
     );
   })({});
-function Q(e) {
-  v(e, `MPD assert failed`);
+function Z(e) {
+  g(e, `MPD assert failed`);
 }
-var $ = class {
+var Q = class {
   m_elVideo;
   m_strMPD = ``;
   m_strHLS = ``;
@@ -2144,7 +2144,7 @@ var $ = class {
   m_bTimeoutAfterFailedDownload = !0;
   m_bAlwaysStartWithSubtitles = !1;
   m_bMuteOnAutoplayBlocked = !1;
-  m_schUpdateMPD = new c();
+  m_schUpdateMPD = new u();
   m_xhrUpdateMPD = null;
   m_xhrCaptionManifest = null;
   m_mpd = null;
@@ -2157,9 +2157,9 @@ var $ = class {
   m_nLimitFPS = 0;
   m_bIsBuffering = !0;
   m_seekingToTime = null;
-  m_listeners = new m();
+  m_listeners = new f();
   m_resizeObserver = null;
-  m_schPlayerResizeDelay = new c();
+  m_schPlayerResizeDelay = new u();
   m_nPlayerHeightForAuto = 0;
   m_bFirstPlay = !0;
   m_bPlaybackStarted = !1;
@@ -2167,9 +2167,9 @@ var $ = class {
   m_nLastPlaytimeLoaders = 0;
   m_nTimedText = 0;
   m_strActiveTextTrack = null;
-  m_schReportPlayerTrigger = new c();
+  m_schReportPlayerTrigger = new u();
   m_bStatsViewVisible = !1;
-  m_schCaptureDisplayStatsTrigger = new c();
+  m_schCaptureDisplayStatsTrigger = new u();
   m_videoRepSelected = null;
   m_rgCaptions = null;
   m_stats = new k();
@@ -2177,20 +2177,20 @@ var $ = class {
   m_hlsTimeOffset = 0;
   m_bUserPlayChoice = !0;
   m_bUserLiveEdgeChoice = !0;
-  m_schFirstFrameThrottler = new c();
+  m_schFirstFrameThrottler = new u();
   m_bookMarkAdapter = null;
-  m_schBookmarkUpdater = new c();
+  m_schBookmarkUpdater = new u();
   m_watchedIntervals = new nt();
   constructor(e) {
-    (r(this),
+    (t(this),
       (this.m_elVideo = e),
-      this.m_schReportPlayerTrigger.Schedule(Le * 1e3, this.ReportPlayerStats));
+      this.m_schReportPlayerTrigger.Schedule(Re * 1e3, this.ReportPlayerStats));
   }
   BInitialized() {
     return !!this.m_strMPD;
   }
   CalcVideoStartRelativeToSystemClock(e) {
-    Q(this.m_mpd);
+    Z(this.m_mpd);
     let t =
       (e ? new Date(e).getTime() : Date.now()) -
       this.m_mpd.GetAvailabilityStartTime().getTime();
@@ -2216,7 +2216,7 @@ var $ = class {
   }
   async PlayMPD(e, t, n, r) {
     if (this.m_bClosing) {
-      v(!1, `PlayMPD called on a closed CDASHPlayer`);
+      g(!1, `PlayMPD called on a closed CDASHPlayer`);
       return;
     }
     ((e = Array.isArray(e) ? e : [e]),
@@ -2233,13 +2233,13 @@ var $ = class {
         this.CloseWithError(2, t);
         return;
       }
-      let r = new Ce();
+      let r = new we();
       if (!r.BParse(n.data, t)) {
         this.CloseWithError(2, `Failed to parse MPD file`, this.m_strMPD);
         return;
       }
-      let a = Ze(r),
-        o = Qe(a);
+      let a = Qe(r),
+        o = $e(a);
       if (
         ((i = {
           strMPD: t,
@@ -2255,7 +2255,7 @@ var $ = class {
     if (!i) this.CloseWithError(2, `Invalid manifest`);
     else {
       if (((this.m_strMPD = i.strMPD), (this.m_mpd = i.mpd), !i.bCanPlay)) {
-        if (!t || !$e(this.m_elVideo)) {
+        if (!t || !et(this.m_elVideo)) {
           (this.OnMediaUnsupportedError(), this.Close());
           return;
         }
@@ -2327,20 +2327,20 @@ var $ = class {
     }
   }
   InitTimedText() {
-    Q(this.m_mpd);
+    Z(this.m_mpd);
     let e = [];
     if (this.m_rgCaptions) e = this.m_rgCaptions;
     else
       for (let t of this.m_mpd.GetTimedTextAdaptionSet(0))
         t.rgRepresentations.length != 0 &&
           t.rgRepresentations[0].strClosedCaptionFile &&
-          t.strLanguage in y &&
+          t.strLanguage in _ &&
           e.push({
             m_strURL: t.rgRepresentations[0].strClosedCaptionFile,
             m_strLanguageBCP47: t.strLanguage,
           });
     this.m_nTimedText = 0;
-    let t = d(g.LANGUAGE);
+    let t = a(y.LANGUAGE);
     for (let n of e) {
       let e = document.createElement(`track`);
       ((e.kind = `captions`),
@@ -2348,7 +2348,7 @@ var $ = class {
         (e.srclang = n.m_strLanguageBCP47),
         (e.src = n.m_strURL),
         (this.m_bAlwaysStartWithSubtitles || t != 0) &&
-          y[n.m_strLanguageBCP47] == t &&
+          _[n.m_strLanguageBCP47] == t &&
           (e.default = !0),
         this.m_elVideo.appendChild(e),
         (this.m_nTimedText += 1));
@@ -2357,7 +2357,7 @@ var $ = class {
   SetSubtitles(e) {
     for (let t = 0; t < this.m_elVideo.textTracks.length; t++) {
       let n = this.m_elVideo.textTracks[t];
-      n.mode = y[n.language] == e ? `showing` : `disabled`;
+      n.mode = _[n.language] == e ? `showing` : `disabled`;
     }
   }
   CheckActiveTextTrack() {
@@ -2441,7 +2441,7 @@ var $ = class {
       this.m_schCaptureDisplayStatsTrigger.Cancel(),
       this.m_schFirstFrameThrottler.Cancel(),
       this.m_schBookmarkUpdater.Cancel(),
-      this.m_elVideo.playbackRate != Z && (this.m_elVideo.playbackRate = Z));
+      this.m_elVideo.playbackRate != X && (this.m_elVideo.playbackRate = X));
     for (let e of this.m_rgLoaders) e.Close();
     ((this.m_rgLoaders = []), (this.m_bIsBuffering = !0));
   }
@@ -2453,9 +2453,9 @@ var $ = class {
   }
   async DownloadMPD(e, t) {
     if (((t ||= ``), this.m_xhrUpdateMPD))
-      return (v(!1, `Multiple MPD download requests`), [2, null]);
+      return (g(!1, `Multiple MPD download requests`), [2, null]);
     let n = performance.now();
-    for (; performance.now() - n < Fe;) {
+    for (; performance.now() - n < Ie;) {
       let n = null;
       try {
         this.m_xhrUpdateMPD = b.default.CancelToken.source();
@@ -2465,12 +2465,12 @@ var $ = class {
       if (((this.m_xhrUpdateMPD = null), this.m_bClosing)) return [4, null];
       if (n && n.status == 200) return [1, n];
       if (n && n.status == 410) return [3, null];
-      (S(`Failed to download, will retry: ` + this.m_strMPD), await f(200));
+      (S(`Failed to download, will retry: ` + this.m_strMPD), await o(200));
     }
     return (S(`Failed to download: ` + this.m_strMPD), [2, null]);
   }
   async UpdateMPD() {
-    (Q(this.m_mpd), S(`Updating MPD in player from: ` + this.m_strMPD));
+    (Z(this.m_mpd), S(`Updating MPD in player from: ` + this.m_strMPD));
     let [e, t] = await this.DownloadMPD(
       this.m_strMPD,
       this.m_strCDNAuthURLParameters,
@@ -2508,7 +2508,7 @@ var $ = class {
     if (n && Array.isArray(n.captions)) {
       this.m_rgCaptions = [];
       for (let t of n.captions) {
-        if (!t.url || !t.lang || !(t.lang in y)) continue;
+        if (!t.url || !t.lang || !(t.lang in _)) continue;
         let n = new URL(t.url, e).href;
         this.m_rgCaptions.push({ m_strURL: n, m_strLanguageBCP47: t.lang });
       }
@@ -2520,7 +2520,7 @@ var $ = class {
       (this.DispatchEvent(`valve-downloadfailed`, e), this.Close(), S(...t));
   }
   BCreateLoaders() {
-    Q(this.m_mpd);
+    Z(this.m_mpd);
     let e = this.m_mpd.GetPeriods();
     if (e.length == 0) return !1;
     let t = e[0];
@@ -2530,15 +2530,15 @@ var $ = class {
       if (
         (!this.m_strVideoAdaptationID &&
           e.bContainsVideo &&
-          H(e) &&
+          V(e) &&
           ((t = e), (this.m_strVideoAdaptationID = e.strID)),
         !this.m_strAudioAdaptationID &&
           e.bContainsAudio &&
-          H(e) &&
+          V(e) &&
           ((t = e), (this.m_strAudioAdaptationID = e.strID)),
         t)
       ) {
-        let e = new q(this, this.m_mpd, t, this.m_stats);
+        let e = new K(this, this.m_mpd, t, this.m_stats);
         this.m_rgLoaders.push(e);
       }
     }
@@ -2627,18 +2627,18 @@ var $ = class {
         this.OnLoadedMetadata,
       ),
       (this.m_nPlayerHeightForAuto = this.GetVideoPlayerHeight()),
-      (this.m_resizeObserver = ie(this.m_elVideo, this.OnPlayerResize)));
+      (this.m_resizeObserver = re(this.m_elVideo, this.OnPlayerResize)));
   }
   OnPlayerResize(e, t) {
     (this.m_schPlayerResizeDelay.Cancel(),
-      this.m_schPlayerResizeDelay.Schedule(Je, () => {
+      this.m_schPlayerResizeDelay.Schedule(Ye, () => {
         this.GetVideoPlayerHeight() != this.m_nPlayerHeightForAuto &&
           ((this.m_nPlayerHeightForAuto = this.GetVideoPlayerHeight()),
           this.UpdateVideoRepresentation(!0));
       }));
   }
   OnMediaSourceOpen(e) {
-    (v(this.m_mediaSource, `Missing Media Source`), S(`OnMediaSourceOpen`));
+    (g(this.m_mediaSource, `Missing Media Source`), S(`OnMediaSourceOpen`));
     for (let e of this.m_rgLoaders) e.SetMediaSource(this.m_mediaSource);
     this.BeginPlayback();
   }
@@ -2789,21 +2789,21 @@ var $ = class {
     if (this.m_bUserLiveEdgeChoice && this.IsLiveContent()) {
       let e = this.GetBufferedLiveEdgeTime();
       if (
-        this.m_elVideo.playbackRate == Z &&
-        this.m_elVideo.currentTime <= e - Ge &&
+        this.m_elVideo.playbackRate == X &&
+        this.m_elVideo.currentTime <= e - Ke &&
         this.BIsPlayerBufferedBetween(this.m_elVideo.currentTime, e)
       ) {
         let t = e - this.m_elVideo.currentTime;
-        ((this.m_elVideo.playbackRate = X),
+        ((this.m_elVideo.playbackRate = Y),
           S(
             `User is behind by ` +
               t.toFixed(2) +
               ` seconds, increasing playback speed to catch-up to live edge.`,
           ));
       } else
-        this.m_elVideo.playbackRate == X &&
-          this.m_elVideo.currentTime >= e - Ke &&
-          ((this.m_elVideo.playbackRate = Z),
+        this.m_elVideo.playbackRate == Y &&
+          this.m_elVideo.currentTime >= e - qe &&
+          ((this.m_elVideo.playbackRate = X),
           S(`User is caught up, returning to normal playrate`));
     } else {
       let e = this.GetAvailableVideoStartTime(),
@@ -2826,7 +2826,7 @@ var $ = class {
         this.IsPaused()
           ? this.m_schBookmarkUpdater.Cancel()
           : this.m_schBookmarkUpdater.Schedule(
-              Re,
+              ze,
               this.SendUpdateToBookmarkServiceIfNeeded,
             ));
     }
@@ -2867,7 +2867,7 @@ var $ = class {
       let t = Math.floor(this.m_mpd.GetDurationSinceStarted() / 1e3),
         n = this.GetBufferedLiveEdgeTime(),
         r = this.m_mpd.GetTimeShiftBufferDepth();
-      ((e = r ? t - r + We : 0), (e = o(e, 0, n)));
+      ((e = r ? t - r + Ge : 0), (e = d(e, 0, n)));
     } else e = this.m_mpd.GetStartTime();
     return e;
   }
@@ -2904,7 +2904,7 @@ var $ = class {
   }
   Pause() {
     ((this.m_bUserLiveEdgeChoice = !1),
-      this.m_elVideo.playbackRate == X && (this.m_elVideo.playbackRate = Z),
+      this.m_elVideo.playbackRate == Y && (this.m_elVideo.playbackRate = X),
       this.SetUserPlayChoice(!1),
       this.m_elVideo.pause());
   }
@@ -2937,18 +2937,18 @@ var $ = class {
       ((t = e), S(`Failed to play video`, e));
     }
     let n = this.BHasTimedText() || this.m_bMuteOnAutoplayBlocked;
-    if (et(t) && !this.m_elVideo.muted && n) {
+    if ($(t) && !this.m_elVideo.muted && n) {
       (S(`Trying to play again, this time muted with subtitles`),
         (t = void 0),
         (this.m_elVideo.muted = !0),
-        this.SetSubtitles(d(g.LANGUAGE)));
+        this.SetSubtitles(a(y.LANGUAGE)));
       try {
         await this.m_elVideo.play();
       } catch (e) {
         ((t = e), S(`Failed to play video when muted`, e));
       }
     }
-    e && et(t) && this.DispatchEvent(`valve-userinputneeded`);
+    e && $(t) && this.DispatchEvent(`valve-userinputneeded`);
   }
   OnVideoBufferProgress() {
     if (!this.IsBuffering()) return;
@@ -2975,7 +2975,7 @@ var $ = class {
     (this.StopDownloads(), this.DispatchEvent(`valve-downloadfailed`, t));
   }
   OnSegmentDownloadGone(e) {
-    this.m_bIsBuffering && e.GetNumConsecutiveDownloadGones() <= qe
+    this.m_bIsBuffering && e.GetNumConsecutiveDownloadGones() <= Je
       ? this.Seek(
           this.GetCurrentPlayTime() + e.GetCurrentSegmentDurationMS() / 1e3,
         )
@@ -3020,7 +3020,7 @@ var $ = class {
       this.Seek(0));
   }
   BeginPlayback() {
-    Q(this.m_mpd);
+    Z(this.m_mpd);
     let e = this.GetVideoLoader();
     if (!e || this.m_bUseHLSManifest) {
       S(`No video loader for playback?`);
@@ -3055,11 +3055,11 @@ var $ = class {
           `Begin playback of live content [this.buffer=${this.m_nTrackBufferMS}][nStartTime=${n}][nLiveEdge=${a}]`,
         ));
     } else
-      (this.SetTrackBufferMS(Ie),
+      (this.SetTrackBufferMS(Le),
         (n = this.GetPlaybackStartTime(0)),
         this.m_bookMarkAdapter &&
           ((n = this.m_bookMarkAdapter.GetBeginPlaytime()),
-          this.m_mpd.GetEndTime() - n < ze && (n = 0)),
+          this.m_mpd.GetEndTime() - n < Be && (n = 0)),
         S(
           `Begin playback of non-live content [this.buffer=${this.m_nTrackBufferMS}][nStartTime=${n}]`,
         ));
@@ -3083,7 +3083,7 @@ var $ = class {
       e &&
       e.GetDownloadHistory().length == 0 &&
       e.GetActiveDownloads() > 0 &&
-      e.GetActiveDownloadProgress() < He
+      e.GetActiveDownloadProgress() < Ue
     ) {
       let t = this.DetermineBestVideoRepresentation();
       t &&
@@ -3103,11 +3103,11 @@ var $ = class {
   }
   DetermineBestVideoRepresentation() {
     let e = this.GetVideoLoader();
-    v(e, `Missing video loader`);
+    g(e, `Missing video loader`);
     let t = this.GetAudioLoader(),
       n = t && t != e ? t.GetEstimatedAudioRate() : 0,
       r = e.GetAvgDownloadRateSampleCount() > 0 ? e.GetAvgDownloadRate() : -1,
-      i = Xe(this.m_nPlayerHeightForAuto),
+      i = Ze(this.m_nPlayerHeightForAuto),
       a = e.GetRepresentationsCount() - 1,
       o = e.GetAdaptation().rgRepresentations[a];
     for (let t = a - 1; t >= 0; t--) {
@@ -3118,7 +3118,7 @@ var $ = class {
         continue;
       }
       let c = a.nFrameRate || 0;
-      if (this.IsLiveContent() && c > Ue) {
+      if (this.IsLiveContent() && c > We) {
         let e = this.m_stats.GetFPSMonitor(),
           n = e.BHasCurrentFPS() && Math.ceil(e.GetCurrentFPS()) < 29;
         if (e.BIsDroppingFrames() || n) {
@@ -3151,7 +3151,7 @@ var $ = class {
   }
   GetPlaybackStartTime(e) {
     if (!this.m_seekingToTime) return e;
-    v(this.m_bPlaybackStarted, `Missing mpd info to calculate seek time`);
+    g(this.m_bPlaybackStarted, `Missing mpd info to calculate seek time`);
     let t =
       this.m_seekingToTime.eSeekType == 1
         ? this.GetAvailableVideoStartTime()
@@ -3171,7 +3171,7 @@ var $ = class {
     let n = this.GetAvailableVideoStartTime(),
       r = this.GetBufferedLiveEdgeTime(),
       i = e;
-    ((e = o(e, n, r)),
+    ((e = d(e, n, r)),
       e != i && S(`Seek time ${i} was clamped to the range ${n} to ${r}`),
       (this.m_bUserLiveEdgeChoice = e >= r - 5));
     let a = this.m_elVideo.paused;
@@ -3205,7 +3205,7 @@ var $ = class {
     this.m_elVideo.muted = e;
   }
   SetVolume(e) {
-    ((e = o(e, 0, 1)), (this.m_elVideo.volume = e));
+    ((e = d(e, 0, 1)), (this.m_elVideo.volume = e));
   }
   GetVolume() {
     return this.m_elVideo.volume;
@@ -3221,13 +3221,13 @@ var $ = class {
   }
   ReportPlayerStats() {
     (this.m_stats.ReportPlayerStats(this.m_rgLoaders, this.m_elVideo),
-      this.m_schReportPlayerTrigger.Schedule(Be * 1e3, this.ReportPlayerStats));
+      this.m_schReportPlayerTrigger.Schedule(Ve * 1e3, this.ReportPlayerStats));
   }
   SetStatsViewIsVisible(e) {
     (e && !this.m_bStatsViewVisible
       ? (this.CaptureStatsForDisplay(),
         this.m_schCaptureDisplayStatsTrigger.Schedule(
-          Ve,
+          He,
           this.CaptureStatsForDisplay,
         ))
       : !e &&
@@ -3247,7 +3247,7 @@ var $ = class {
         this.m_rgLoaders,
       ),
       this.m_schCaptureDisplayStatsTrigger.Schedule(
-        Ve,
+        He,
         this.CaptureStatsForDisplay,
       ));
   }
@@ -3255,7 +3255,7 @@ var $ = class {
     let e = [];
     if (
       (e.push({
-        id: J,
+        id: q,
         displayName: `Auto`,
         selected: this.m_videoRepSelected === null,
       }),
@@ -3286,9 +3286,9 @@ var $ = class {
       e.sort((e, t) =>
         e.id == t.id
           ? 0
-          : Y(e)
+          : J(e)
             ? -1
-            : Y(t)
+            : J(t)
               ? 1
               : e.width === t.width
                 ? t.fps - e.fps
@@ -3300,7 +3300,7 @@ var $ = class {
   SetVideoRepresentation(e) {
     let t = !0,
       n = this.GetVideoLoader();
-    if (n && e && !Y(e)) {
+    if (n && e && !J(e)) {
       let r = n.GetRepresentationByID(e.id);
       r &&
         ((t = !1),
@@ -3319,7 +3319,7 @@ var $ = class {
       (e += Math.floor(this.m_mpd.GetThumbnailDurationMS() / 1e3)));
     let t = this.GetAvailableVideoStartTime(),
       n = this.GetBufferedLiveEdgeTime();
-    return ((e = o(e, t, n)), this.m_mpd.GetThumbnail(e * 1e3));
+    return ((e = d(e, t, n)), this.m_mpd.GetThumbnail(e * 1e3));
   }
   BHasTimedText() {
     return this.m_nTimedText > 0;
@@ -3331,7 +3331,7 @@ var $ = class {
     if (!this.m_mpd) return [];
     let e = [];
     for (let t of this.m_elVideo.textTracks)
-      e.push({ m_eLanguage: y[t.language], m_strLabel: t.label });
+      e.push({ m_eLanguage: _[t.language], m_strLabel: t.label });
     return e;
   }
   GetMaxWidthAndHeight() {
@@ -3342,49 +3342,49 @@ var $ = class {
     return { nWidth: t.nWidth || 0, nHeight: t.nHeight || 0 };
   }
 };
-(u([t], $.prototype, `m_nTimedText`, void 0),
-  u([n], $.prototype, `InitTimedText`, null),
-  u([p], $.prototype, `CheckActiveTextTrack`, null),
-  u([p], $.prototype, `OnLoadedMetadataForHLS`, null),
-  u([p], $.prototype, `OnVisibilityChangeForHLS`, null),
-  u([p], $.prototype, `OnEndedForHLS`, null),
-  u([p], $.prototype, `UpdateMPD`, null),
-  u([p], $.prototype, `OnPlayerResize`, null),
-  u([p], $.prototype, `OnMediaSourceOpen`, null),
-  u([p], $.prototype, `HandleMediaSourceError`, null),
-  u([p], $.prototype, `OnMediaSourceEnded`, null),
-  u([p], $.prototype, `OnMediaSourceClose`, null),
-  u([p], $.prototype, `OnVideoWaiting`, null),
-  u([p], $.prototype, `OnVideoPause`, null),
-  u([p], $.prototype, `OnVideoResize`, null),
-  u([p], $.prototype, `OnVideoError`, null),
-  u([p], $.prototype, `OnVideoCanPlay`, null),
-  u([p], $.prototype, `OnVideoCanPlayHLS`, null),
-  u([p], $.prototype, `OnLoadedMetadata`, null),
-  u([p], $.prototype, `GetCurrentPlayTime`, null),
-  u([p], $.prototype, `GetBufferedEndTime`, null),
-  u([p], $.prototype, `OnVideoTimeUpdate`, null),
-  u([p], $.prototype, `SendUpdateToBookmarkServiceIfNeeded`, null),
-  u([p], $.prototype, `OnVideoPlay`, null),
-  u([p], $.prototype, `OnVideoSeeking`, null),
-  u([p], $.prototype, `OnVideoSeeked`, null),
-  u([p], $.prototype, `GetPlaybackRate`, null),
-  u([p], $.prototype, `GetTimeoutAfterFailedDownload`, null),
-  u([p], $.prototype, `GetCDNAuthURLParameter`, null),
-  u([p], $.prototype, `OnSegmentDownloaded`, null),
-  u([p], $.prototype, `OnSegmentBuffered`, null),
-  u([p], $.prototype, `PlayOnElement`, null),
-  u([p], $.prototype, `OnSegmentDownloadFailed`, null),
-  u([p], $.prototype, `OnSegmentDownloadGone`, null),
-  u([p], $.prototype, `OnMediaUnsupportedError`, null),
-  u([p], $.prototype, `OnMediaSourceError`, null),
-  u([p], $.prototype, `VerifyFirstSegmentDownloadProgress`, null),
-  u([p], $.prototype, `ReportPlayerStats`, null),
-  u([n.bound], $.prototype, `CaptureStatsForDisplay`, null));
-function Xe(e) {
+(v([i], Q.prototype, `m_nTimedText`, void 0),
+  v([n], Q.prototype, `InitTimedText`, null),
+  v([m], Q.prototype, `CheckActiveTextTrack`, null),
+  v([m], Q.prototype, `OnLoadedMetadataForHLS`, null),
+  v([m], Q.prototype, `OnVisibilityChangeForHLS`, null),
+  v([m], Q.prototype, `OnEndedForHLS`, null),
+  v([m], Q.prototype, `UpdateMPD`, null),
+  v([m], Q.prototype, `OnPlayerResize`, null),
+  v([m], Q.prototype, `OnMediaSourceOpen`, null),
+  v([m], Q.prototype, `HandleMediaSourceError`, null),
+  v([m], Q.prototype, `OnMediaSourceEnded`, null),
+  v([m], Q.prototype, `OnMediaSourceClose`, null),
+  v([m], Q.prototype, `OnVideoWaiting`, null),
+  v([m], Q.prototype, `OnVideoPause`, null),
+  v([m], Q.prototype, `OnVideoResize`, null),
+  v([m], Q.prototype, `OnVideoError`, null),
+  v([m], Q.prototype, `OnVideoCanPlay`, null),
+  v([m], Q.prototype, `OnVideoCanPlayHLS`, null),
+  v([m], Q.prototype, `OnLoadedMetadata`, null),
+  v([m], Q.prototype, `GetCurrentPlayTime`, null),
+  v([m], Q.prototype, `GetBufferedEndTime`, null),
+  v([m], Q.prototype, `OnVideoTimeUpdate`, null),
+  v([m], Q.prototype, `SendUpdateToBookmarkServiceIfNeeded`, null),
+  v([m], Q.prototype, `OnVideoPlay`, null),
+  v([m], Q.prototype, `OnVideoSeeking`, null),
+  v([m], Q.prototype, `OnVideoSeeked`, null),
+  v([m], Q.prototype, `GetPlaybackRate`, null),
+  v([m], Q.prototype, `GetTimeoutAfterFailedDownload`, null),
+  v([m], Q.prototype, `GetCDNAuthURLParameter`, null),
+  v([m], Q.prototype, `OnSegmentDownloaded`, null),
+  v([m], Q.prototype, `OnSegmentBuffered`, null),
+  v([m], Q.prototype, `PlayOnElement`, null),
+  v([m], Q.prototype, `OnSegmentDownloadFailed`, null),
+  v([m], Q.prototype, `OnSegmentDownloadGone`, null),
+  v([m], Q.prototype, `OnMediaUnsupportedError`, null),
+  v([m], Q.prototype, `OnMediaSourceError`, null),
+  v([m], Q.prototype, `VerifyFirstSegmentDownloadProgress`, null),
+  v([m], Q.prototype, `ReportPlayerStats`, null),
+  v([n.bound], Q.prototype, `CaptureStatsForDisplay`, null));
+function Ze(e) {
   return e < 410 ? 480 : e < 600 ? 720 : e < 910 ? 1080 : 2 ** 53 - 1;
 }
-function Ze(e) {
+function Qe(e) {
   let t = ``,
     n = ``,
     r = ``,
@@ -3401,24 +3401,24 @@ function Ze(e) {
     !t || !n ? `` : r ? `${t}; codecs="${n}, ${r}` : `${t}; codecs="${n}`
   );
 }
-function Qe(e) {
+function $e(e) {
   let t = !1;
   try {
     t = MediaSource.isTypeSupported(e);
   } catch {}
   return t;
 }
-function $e(e) {
+function et(e) {
   let t = e.canPlayType(
     `application/vnd.apple.mpegurl;codecs="avc1.64001f, mp4a.40.02"`,
   );
   return t === `probably` || t === `maybe`;
 }
-function et(e) {
+function $(e) {
   return !!e && e instanceof Error && e.name == `NotAllowedError`;
 }
 function tt(e) {
-  return e in y ? _(`#Language_` + s(y[e])) : ``;
+  return e in _ ? h(`#Language_` + l(_[e])) : ``;
 }
 var nt = class {
   m_bEnabled = !1;
@@ -3483,4 +3483,4 @@ var nt = class {
     this.m_rgIntervals.splice(t, a, [n, r]);
   }
 };
-export { k as a, w as c, J as i, Ye as n, ae as o, Y as r, oe as s, $ as t };
+export { k as a, w as c, q as i, Xe as n, ae as o, J as r, oe as s, Q as t };

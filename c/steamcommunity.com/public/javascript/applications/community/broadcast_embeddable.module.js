@@ -5613,7 +5613,7 @@ var _ = _(_()),
     return _.SendMsg(`SteamTV.AddChatBan#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.AddChatBan = _;
@@ -5629,7 +5629,7 @@ var _ = _(_()),
     return _.SendMsg(`SteamTV.AddChatModerator#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.AddChatModerator = _;
@@ -5637,7 +5637,7 @@ var _ = _(_()),
     return _.SendMsg(`SteamTV.GetChatModerators#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 0,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetChatModerators = _;
@@ -5660,7 +5660,7 @@ var _ = _(_()),
     return _.SendMsg(`SteamTV.JoinChat#1`, _(_, _, _), _, {
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.JoinChat = _;

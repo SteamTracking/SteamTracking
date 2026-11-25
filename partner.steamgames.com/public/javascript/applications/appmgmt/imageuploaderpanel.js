@@ -2,16 +2,16 @@
  ****/
 
 import {
-  At as e,
-  _t as t,
-  j as n,
-  lt as r,
-  sn as i,
-  t as a,
-  vt as o,
-  wt as s,
+  F as e,
+  Pt as t,
+  U as n,
+  W as r,
+  X as i,
+  nt as a,
+  r as o,
+  t as s,
 } from "./chunk~de7f2df91c.js";
-import { Ft as c, M as l, X as u, ct as d } from "./chunk~25a6634263.js";
+import { A as c, J as l, Nt as u, ot as d } from "./chunk~bd90a5fce7.js";
 import {
   $i as f,
   Bn as p,
@@ -33,9 +33,9 @@ import { n as S } from "./chunk~16aefcf65f.js";
 import "./chunk~8681f5c764.js";
 import { t as C } from "./chunk~c55709d290.js";
 import { t as w } from "./chunk~eefd71512b.js";
-import { t as oe } from "./chunk~802e967112.js";
-import { m as se } from "./chunk~2f8c67b4de.js";
 import "./chunk~ca0c999570.js";
+import { m as oe } from "./chunk~2f8c67b4de.js";
+import { t as se } from "./chunk~802e967112.js";
 import {
   f as ce,
   i as le,
@@ -44,7 +44,7 @@ import {
   r as fe,
 } from "./chunk~d6693aba87.js";
 import "./chunk~166eab4331.js";
-var T = i(e()),
+var T = t(a()),
   E = (e) => e != null;
 function D(e, t) {
   let [n, r] = T.useState(() => window.localStorage.getItem(e) ?? void 0),
@@ -73,7 +73,7 @@ function D(e, t) {
           ? (s = t.constructor(o !== `false`))
           : t != null && t != null && (s = t.constructor(o))
         : (s = o)),
-    l(O.Get().GetLocalStoreChangeCallback(e), r),
+    c(O.Get().GetLocalStoreChangeCallback(e), r),
     [s, a]
   );
 }
@@ -82,7 +82,7 @@ var O = class e {
   GetLocalStoreChangeCallback(e) {
     return (
       this.m_mapChangeCallback.has(e) ||
-        this.m_mapChangeCallback.set(e, new c()),
+        this.m_mapChangeCallback.set(e, new u()),
       this.m_mapChangeCallback.get(e)
     );
   }
@@ -227,15 +227,15 @@ function be(e) {
       e,
     );
   if (!t) return;
-  let [, n, r, i, a, o] = t,
-    c = a === void 0 ? 1 : parseFloat(a);
+  let [, n, r, a, o, s] = t,
+    c = o === void 0 ? 1 : parseFloat(o);
   return (
-    o && (c /= 100),
+    s && (c /= 100),
     {
-      r: s(Math.round(parseFloat(n)), 0, 255),
-      g: s(Math.round(parseFloat(r)), 0, 255),
-      b: s(Math.round(parseFloat(i)), 0, 255),
-      a: s(c, 0, 1),
+      r: i(Math.round(parseFloat(n)), 0, 255),
+      g: i(Math.round(parseFloat(r)), 0, 255),
+      b: i(Math.round(parseFloat(a)), 0, 255),
+      a: i(c, 0, 1),
     }
   );
 }
@@ -282,7 +282,7 @@ var Ce = `FcfcNn7MYQM-`,
   Le = `CJ0nwSBwrpE-`,
   R = `pS4NM2hdvRk-`,
   Re = `VSND6o6qGDA-`,
-  z = o(),
+  z = r(),
   ze =
     `#000000.#1b1b1b.#333333.#4d4d4d.#666666.#808080.#999999.#b3b3b3.#d9d9d9.#ffffff.#e53935.#fb8c00.#fdd835.#7cb342.#43a047.#00897b.#00acc1.#1e88e5.#8e24aa.#d81b60.#ef9a9a.#ffcc80.#fff59d.#c5e1a5.#a5d6a7.#80cbc4.#80deea.#90caf9.#ce93d8.#f48fb1.#b71c1c.#e65100.#f57f17.#33691e.#1b5e20.#004d40.#006064.#0d47a1.#4a148c.#880e4f`.split(
       `.`,
@@ -295,39 +295,39 @@ var Ce = `FcfcNn7MYQM-`,
 function We(e) {
   let {
       color: t,
-      onChange: r,
-      strTitle: i,
-      disableAlpha: a,
-      onSubmit: o,
+      onChange: n,
+      strTitle: r,
+      disableAlpha: i,
+      onSubmit: a,
       children: s,
     } = e,
-    [c, l] = (0, T.useState)(() => Ke(t, a)),
+    [c, l] = (0, T.useState)(() => Ke(t, i)),
     u = (0, T.useRef)(void 0);
   (0, T.useEffect)(() => {
     let e = I(t);
-    !e || (u.current && Ge(e, u.current, a)) || l((e) => V(t, e.h, a) ?? e);
-  }, [t, a]);
+    !e || (u.current && Ge(e, u.current, i)) || l((e) => V(t, e.h, i) ?? e);
+  }, [t, i]);
   let d = (0, T.useCallback)(
       (e) => {
-        let t = a ? { ...e, a: 1 } : e;
+        let t = i ? { ...e, a: 1 } : e;
         l(t);
-        let n = j(t);
-        ((u.current = n), r(N(n)));
+        let r = j(t);
+        ((u.current = r), n(N(r)));
       },
-      [a, r],
+      [i, n],
     ),
     f = j(c),
     p = M({ ...f, a: 1 }, `hex`),
     m = N(f);
   return (0, z.jsxs)(`div`, {
-    className: n(Ce, `noOpinionatedGlobalStyles`),
+    className: o(Ce, `noOpinionatedGlobalStyles`),
     style: {
       "--colorpicker-hue": `hsl( ${c.h}deg 100% 50% )`,
       "--colorpicker-opaque": p,
       "--colorpicker-current": m,
     },
     children: [
-      !!i && (0, z.jsx)(`div`, { className: `GEaX-EfeXNg-`, children: i }),
+      !!r && (0, z.jsx)(`div`, { className: `GEaX-EfeXNg-`, children: r }),
       (0, z.jsx)(Je, { hsva: c, fnSetColor: d }),
       (0, z.jsx)(U, {
         className: De,
@@ -337,7 +337,7 @@ function We(e) {
         strValueText: `${Math.round(c.h)}°`,
         fnSetValue: (e) => d({ ...c, h: e }),
       }),
-      !a &&
+      !i &&
         (0, z.jsx)(U, {
           className: `xV4lUfTUFc4-`,
           strLabel: g.Localize(`#ColorPicker_Opacity`),
@@ -346,12 +346,12 @@ function We(e) {
           strValueText: `${Math.round(c.a * 100)}%`,
           fnSetValue: (e) => d({ ...c, a: e / 100 }),
         }),
-      (0, z.jsx)(Ye, { hsva: c, disableAlpha: a, fnSetColor: d, onSubmit: o }),
+      (0, z.jsx)(Ye, { hsva: c, disableAlpha: i, fnSetColor: d, onSubmit: a }),
       (0, z.jsx)(Ze, {
         strCurrentHex: p,
         bOpaque: f.a >= 1,
         fnPick: (e) => {
-          let t = V(e, c.h, a);
+          let t = V(e, c.h, i);
           t && d(t);
         },
       }),
@@ -380,8 +380,8 @@ function qe(e) {
   let t = (t) => {
     let n = t.currentTarget.getBoundingClientRect(),
       r = n.width ? (t.clientX - n.left) / n.width : 0,
-      i = n.height ? (t.clientY - n.top) / n.height : 0;
-    e(s(r, 0, 1), s(i, 0, 1));
+      a = n.height ? (t.clientY - n.top) / n.height : 0;
+    e(i(r, 0, 1), i(a, 0, 1));
   };
   return {
     onPointerDown: (e) => {
@@ -415,10 +415,10 @@ function Je(e) {
     "aria-valuetext": `${Math.round(t.s * 100)}%, ${Math.round(t.v * 100)}%`,
     onKeyDown: (e) => {
       let r = H(e, `ArrowRight`, `ArrowLeft`),
-        i = H(e, `ArrowUp`, `ArrowDown`);
-      (r !== void 0 || i !== void 0) &&
+        a = H(e, `ArrowUp`, `ArrowDown`);
+      (r !== void 0 || a !== void 0) &&
         (e.preventDefault(),
-        n({ ...t, s: s(t.s + (r ?? 0), 0, 1), v: s(t.v + (i ?? 0), 0, 1) }));
+        n({ ...t, s: i(t.s + (r ?? 0), 0, 1), v: i(t.v + (a ?? 0), 0, 1) }));
     },
     ...r,
     children: (0, z.jsx)(`div`, {
@@ -430,29 +430,29 @@ function Je(e) {
 function U(e) {
   let {
     className: t,
-    strLabel: r,
-    nMax: i,
-    nValue: a,
-    strValueText: o,
+    strLabel: n,
+    nMax: r,
+    nValue: i,
+    strValueText: a,
     fnSetValue: s,
   } = e;
   return (0, z.jsx)(`div`, {
     className: Te,
     children: (0, z.jsx)(S.Root, {
       min: 0,
-      max: i,
-      value: [a],
+      max: r,
+      value: [i],
       onValueChange: (e) => s(e[0]),
       children: (0, z.jsx)(S.Track, {
-        render: (0, z.jsx)(`div`, { className: n(Ee, t) }),
+        render: (0, z.jsx)(`div`, { className: o(Ee, t) }),
         children: (0, z.jsx)(S.Handle, {
           render: (e) =>
             (0, z.jsx)(`span`, {
               ...e,
               className: L,
-              style: { insetInlineStart: `${(a / i) * 100}%` },
-              "aria-label": r,
-              "aria-valuetext": o,
+              style: { insetInlineStart: `${(i / r) * 100}%` },
+              "aria-label": n,
+              "aria-valuetext": a,
             }),
         }),
       }),
@@ -460,16 +460,16 @@ function U(e) {
   });
 }
 function Ye(e) {
-  let { hsva: t, disableAlpha: r, fnSetColor: i, onSubmit: a } = e,
-    [o, s] = D(Ve),
-    c = k.find((e) => e === o) ?? `hex`,
+  let { hsva: t, disableAlpha: n, fnSetColor: r, onSubmit: i } = e,
+    [a, s] = D(Ve),
+    c = k.find((e) => e === a) ?? `hex`,
     [l, u] = (0, T.useState)(void 0),
     d = M(j(t), c),
     f = l !== void 0 && l.trim() !== `` && !I(l),
     p = (e) => {
       u(e);
-      let n = V(e, t.h, r);
-      n && i(n);
+      let i = V(e, t.h, n);
+      i && r(i);
     },
     m = (e) => {
       (s(e), u(void 0));
@@ -482,7 +482,7 @@ function Ye(e) {
         children: [
           (0, z.jsx)(`div`, { className: Ae, "aria-hidden": !0 }),
           (0, z.jsx)(`input`, {
-            className: n(je, f && `_5Zk11eFAaLo-`),
+            className: o(je, f && `_5Zk11eFAaLo-`),
             type: `text`,
             spellCheck: !1,
             autoComplete: `off`,
@@ -492,10 +492,10 @@ function Ye(e) {
             onChange: (e) => p(e.currentTarget.value),
             onBlur: () => u(void 0),
             onKeyDown: (e) => {
-              e.key === `Enter` && (e.preventDefault(), u(void 0), a?.());
+              e.key === `Enter` && (e.preventDefault(), u(void 0), i?.());
             },
           }),
-          (0, z.jsx)(Xe, { hsva: t, disableAlpha: r, fnSetColor: i }),
+          (0, z.jsx)(Xe, { hsva: t, disableAlpha: n, fnSetColor: r }),
         ],
       }),
       f &&
@@ -513,7 +513,7 @@ function Ye(e) {
               type: `button`,
               role: `radio`,
               "aria-checked": e === c,
-              className: n(Pe, e === c && `wBwV8sUsuTo-`),
+              className: o(Pe, e === c && `wBwV8sUsuTo-`),
               onClick: () => m(e),
               children: e.toUpperCase(),
             },
@@ -554,23 +554,23 @@ function Xe(e) {
   });
 }
 function Ze(e) {
-  let { strCurrentHex: t, bOpaque: r, fnPick: i } = e;
+  let { strCurrentHex: t, bOpaque: n, fnPick: r } = e;
   return (0, z.jsx)(`div`, {
     className: Fe,
     role: `group`,
     "aria-label": g.Localize(`#ColorPicker_Palette`),
     children: ze.map((e) => {
-      let a = r && e === t;
+      let i = n && e === t;
       return (0, z.jsx)(
         `button`,
         {
           type: `button`,
-          className: n(Ie, a && `wBwV8sUsuTo-`),
+          className: o(Ie, i && `wBwV8sUsuTo-`),
           style: { background: e },
           "aria-label": e,
-          "aria-pressed": a,
+          "aria-pressed": i,
           title: e,
-          onClick: () => i(e),
+          onClick: () => r(e),
         },
         e,
       );
@@ -589,10 +589,10 @@ function Qe(e, t) {
 function $e(e) {
   let {
       color: t,
-      onChange: r,
-      onRequestClose: i,
-      disableAlpha: a,
-      strTitle: o,
+      onChange: n,
+      onRequestClose: r,
+      disableAlpha: i,
+      strTitle: a,
       bLivePreview: s = !0,
       fnRestoreChanges: c,
     } = e,
@@ -601,20 +601,20 @@ function $e(e) {
     d = (0, T.useRef)(!1),
     f = (0, T.useRef)({
       color: t,
-      onChange: r,
+      onChange: n,
       fnRestoreChanges: c,
       bLivePreview: s,
     });
-  f.current = { color: t, onChange: r, fnRestoreChanges: c, bLivePreview: s };
+  f.current = { color: t, onChange: n, fnRestoreChanges: c, bLivePreview: s };
   let p = (0, T.useCallback)(
       (e) => {
-        ((u.current = e), s && r(e));
+        ((u.current = e), s && n(e));
       },
-      [s, r],
+      [s, n],
     ),
     m = (0, T.useCallback)(() => {
-      ((d.current = !0), !s && u.current !== void 0 && r(u.current), i());
-    }, [s, r, i]);
+      ((d.current = !0), !s && u.current !== void 0 && n(u.current), r());
+    }, [s, n, r]);
   return (
     (0, T.useEffect)(
       () => () => {
@@ -631,10 +631,10 @@ function $e(e) {
     (0, T.useEffect)(() => {
       let e = l.current?.ownerDocument ?? document,
         t = (e) => {
-          l.current && !l.current.contains(e.target) && i();
+          l.current && !l.current.contains(e.target) && r();
         },
         n = (e) => {
-          e.key === `Escape` && (e.stopPropagation(), e.preventDefault(), i());
+          e.key === `Escape` && (e.stopPropagation(), e.preventDefault(), r());
         };
       return (
         e.addEventListener(`pointerdown`, t, !0),
@@ -644,13 +644,13 @@ function $e(e) {
             e.removeEventListener(`keydown`, n, !0));
         }
       );
-    }, [i]),
+    }, [r]),
     (0, z.jsx)(`div`, {
       ref: l,
       children: (0, z.jsx)(We, {
         color: t,
-        disableAlpha: a,
-        strTitle: o ?? g.Localize(`#Button_Color`),
+        disableAlpha: i,
+        strTitle: a ?? g.Localize(`#Button_Color`),
         onChange: p,
         onSubmit: m,
         children: (0, z.jsxs)(`div`, {
@@ -658,14 +658,14 @@ function $e(e) {
           children: [
             (0, z.jsx)(`button`, {
               type: `button`,
-              className: n(R, Re),
+              className: o(R, Re),
               onClick: m,
               children: g.Localize(`#Button_Save`),
             }),
             (0, z.jsx)(`button`, {
               type: `button`,
               className: R,
-              onClick: i,
+              onClick: r,
               children: g.Localize(`#Button_Cancel`),
             }),
           ],
@@ -696,7 +696,7 @@ function et() {
   let e = (0, T.useContext)(W);
   return { openColorPicker: (0, T.useCallback)((t, n) => G(t, n, e), [e]) };
 }
-var tt = i(a());
+var tt = t(s());
 function K(e, t) {
   let n = T.useRef(null),
     r = T.useCallback(
@@ -734,7 +734,7 @@ function q(e) {
           n(!0);
       }, []),
       onDragLeave: T.useCallback((e) => {
-        u(e) && n(!1);
+        l(e) && n(!1);
       }, []),
       onDragEnd: T.useCallback(() => n(!1), []),
       onDragOver: t ? J : void 0,
@@ -762,21 +762,21 @@ var nt = `wxWVRBKbQ6Y-`,
 function Y(e) {
   let {
       onDropFiles: t,
-      renderDesciption: r,
-      elAdditonalButtons: i,
-      elOverrideDragAndDropText: a,
+      renderDesciption: n,
+      elAdditonalButtons: r,
+      elOverrideDragAndDropText: i,
     } = e,
-    [o, s] = q(t),
+    [a, s] = q(t),
     [c, l] = K(t, {
       accept: `image/png, image/jpeg, image/gif, image/webp`,
       multiple: !0,
     });
   return (0, z.jsxs)(`div`, {
-    ...o,
-    className: n(s ? rt : nt, `DragAndDropContainer`),
+    ...a,
+    className: o(s ? rt : nt, `DragAndDropContainer`),
     children: [
-      r?.(),
-      (0, z.jsx)(`div`, { children: a || _(`#ImagePicker_DragAndDrop`) }),
+      n?.(),
+      (0, z.jsx)(`div`, { children: i || _(`#ImagePicker_DragAndDrop`) }),
       (0, z.jsxs)(`div`, {
         className: it,
         children: [
@@ -795,7 +795,7 @@ function Y(e) {
           }),
         ],
       }),
-      i,
+      r,
       e.children,
     ],
   });
@@ -817,7 +817,7 @@ function dt(e) {
       elAdditonalButtons: a,
       rgRealmList: o,
     } = e,
-    [s, c] = x(() => [t.GetUploadImages(), oe.Get().GetCurEditLanguage()]),
+    [s, c] = x(() => [t.GetUploadImages(), se.Get().GetCurEditLanguage()]),
     l = T.useCallback(
       async (e) => {
         let n = Array.from(e),
@@ -934,7 +934,7 @@ function ft(e) {
 }
 var pt = ae(mt);
 function mt(e) {
-  let r = (t) => {
+  let t = (t) => {
       if (t instanceof de) {
         t.ResetImage();
         let n = window,
@@ -952,19 +952,19 @@ function mt(e) {
           JSON.stringify(t.GetCurrentImageOption()),
         );
     },
-    { asset: i, fnOnRemove: a, languageRealms: o } = e,
-    s = i.ImageOptions?.map((e) => {
+    { asset: r, fnOnRemove: i, languageRealms: a } = e,
+    s = r.ImageOptions?.map((e) => {
       let t = e?.fnGetLabelText(),
         n;
       (e.bEnforceDimensions && (t += ` - ${e.width}x${e.height}`),
         e.bDeprecated &&
           ((t += ` ${_(`#ImageUpload_Deprecated`)}`),
           (n = _(`#ImageUpload_Deprecated_ttip`))));
-      let r;
+      let i;
       return (
-        (i.BIsOriginalMinimumDimensions(e) && i.FileTypeMatchesImageTypes(e)) ||
-          (r = ot),
-        { label: t, data: e, strOptionClass: r, tooltip: n }
+        (r.BIsOriginalMinimumDimensions(e) && r.FileTypeMatchesImageTypes(e)) ||
+          (i = ot),
+        { label: t, data: e, strOptionClass: i, tooltip: n }
       );
     }).filter((e) => !e.data.bHiddenFromDropdown),
     c = {
@@ -975,18 +975,18 @@ function mt(e) {
       success: _(`#ImageUpload_SuccessCard`),
       failed: _(`#ImageUpload_Failed`),
     },
-    l = i.BSupportsLanguages()
-      ? $(ee.GetLanguageListForRealms(o ?? [t.k_ESteamRealmGlobal]))
+    l = r.BSupportsLanguages()
+      ? $(ee.GetLanguageListForRealms(a ?? [n.k_ESteamRealmGlobal]))
       : null,
-    u = i.IsValidAssetType(e.forceResolution, e.forceFileType),
-    d = i.status == `pending`,
-    p = c[i.status];
-  i.status == `pending` &&
+    u = r.IsValidAssetType(e.forceResolution, e.forceFileType),
+    d = r.status == `pending`,
+    p = c[r.status];
+  r.status == `pending` &&
     (u.needsCrop
       ? (p = _(`#ImageUpload_NeedsCrop`))
       : u.error && (p = _(`#ImageUpload_Invalid`)));
   let h,
-    g = i.GetCurrentImageOption();
+    g = r.GetCurrentImageOption();
   return (
     g && (h = s?.find((e) => e.data.sKey == g.sKey)?.data),
     (h ||= s?.[0]?.data),
@@ -995,25 +995,25 @@ function mt(e) {
       children: [
         (0, z.jsx)(`div`, {
           className: lt,
-          onClick: () => a(i),
+          onClick: () => i(r),
           children: (0, z.jsx)(f, {}),
         }),
-        (0, z.jsx)(ht, { asset: i }),
+        (0, z.jsx)(ht, { asset: r }),
         l &&
           (0, z.jsx)(m, {
             strDropDownClassName: `ZsXFGEgobIY-`,
             rgOptions: l,
-            selectedOption: i.language,
-            onChange: (e) => (i.language = e.data),
+            selectedOption: r.language,
+            onChange: (e) => (r.language = e.data),
             disabled: !d,
           }),
         s &&
           s?.length > 1 &&
           (0, z.jsx)(m, {
-            label: i.GetImageOptionLabel(),
+            label: r.GetImageOptionLabel(),
             rgOptions: s,
             selectedOption: h,
-            onChange: (e) => i.SetCurrentImageOption(e.data),
+            onChange: (e) => r.SetCurrentImageOption(e.data),
             disabled: !d,
           }),
         d &&
@@ -1033,24 +1033,24 @@ function mt(e) {
             ),
           ),
         (0, z.jsxs)(`div`, {
-          className: n({ [se]: !0, [X]: i.status == `failed` }),
+          className: o({ [oe]: !0, [X]: r.status == `failed` }),
           children: [
             p,
-            ue(i.status) &&
+            ue(r.status) &&
               (0, z.jsx)(`div`, {
                 className: `RPxGbDpMPvc-`,
                 children: (0, z.jsx)(w, { size: `small` }),
               }),
           ],
         }),
-        (0, z.jsx)(`div`, { className: X, children: i.message }),
+        (0, z.jsx)(`div`, { className: X, children: r.message }),
         d &&
           u.error &&
           (0, z.jsx)(`div`, { className: `_4l0OY5qTFkk-`, children: u.error }),
         d &&
           u.needsCrop &&
           (0, z.jsx)(re, {
-            onClick: () => r(i),
+            onClick: () => t(r),
             children: _(`#ImageUpload_OpenEditor`),
           }),
       ],
@@ -1102,18 +1102,18 @@ function gt(e) {
     }),
   });
 }
-function $(e) {
-  let t = [],
-    n = [];
-  for (let t of e) {
-    if (t == 25) continue;
-    let e = _(`#Language_` + r(t));
-    n.push({ label: e, data: t });
+function $(t) {
+  let n = [],
+    r = [];
+  for (let n of t) {
+    if (n == 25) continue;
+    let t = _(`#Language_` + e(n));
+    r.push({ label: t, data: n });
   }
   return (
-    n.sort((e, t) => e.label.localeCompare(t.label)),
-    n.forEach((e) => t.push({ label: e.label, data: e.data })),
-    n
+    r.sort((e, t) => e.label.localeCompare(t.label)),
+    r.forEach((e) => n.push({ label: e.label, data: e.data })),
+    r
   );
 }
 export {

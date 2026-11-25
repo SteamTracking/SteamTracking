@@ -2,34 +2,33 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, dt as n, ft as r, st as i } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n, ot as r, ut as i } from "./chunk~01cfc309bf.js";
 import {
-  Ds as a,
-  Gt as o,
-  In as s,
-  Is as c,
-  Ln as l,
-  Qn as u,
-  Xn as d,
-  j as ee,
+  Jn as a,
+  Ls as o,
+  M as s,
+  Yn as c,
+  cr as l,
+  rn as u,
+  ur as d,
 } from "./chunk~6b8ddcaac8.js";
 import { at as f, ct as p } from "./chunk~f57d770d64.js";
-import { d as m, u as h } from "./chunk~8c66e1c7a5.js";
-import { t as g } from "./chunk~f0141d9521.js";
-import { n as te, r as ne } from "./chunk~673650a653.js";
-import { o as _, r as v, t as re } from "./chunk~5adf866415.js";
-import { l as ie } from "./chunk~4eed35ad1f.js";
+import { k as m, l as h } from "./chunk~4eed35ad1f.js";
+import { d as g, u as _ } from "./chunk~8c66e1c7a5.js";
+import { t as v } from "./chunk~f0141d9521.js";
+import { n as ee, r as te } from "./chunk~673650a653.js";
+import { o as ne, r as re, t as ie } from "./chunk~5adf866415.js";
 import { t as ae } from "./chunk~f4c928a27a.js";
-import { t as y } from "./chunk~eefd71512b.js";
+import { t as oe } from "./chunk~eefd71512b.js";
 import {
-  $ as oe,
-  B as se,
-  C as ce,
-  D as le,
-  E as ue,
-  F as b,
-  G as de,
-  I as fe,
+  $ as se,
+  B as ce,
+  C as le,
+  D as ue,
+  E as de,
+  F as y,
+  G as fe,
+  I as b,
   K as pe,
   L as me,
   M as he,
@@ -79,57 +78,57 @@ import { m as Xe, n as Ze } from "./chunk~7dcf2f426f.js";
 import { r as Qe } from "./chunk~21cdc464a1.js";
 import { h as $e } from "./chunk~4e18b7e430.js";
 import {
-  $b as et,
+  $s as et,
+  AS as D,
   Ar as tt,
-  Du as nt,
-  Hy as rt,
-  Nc as D,
-  OS as O,
-  PS as it,
-  Px as at,
-  Qs as ot,
-  Uv as k,
-  Ux as st,
+  By as nt,
+  Fx as rt,
+  IS as it,
+  Ou as at,
+  Pc as O,
+  Uy as ot,
+  Wv as k,
+  Wx as st,
   Xc as A,
-  Xy as j,
-  Yc as M,
-  Yr as ct,
-  cb as lt,
-  fu as ut,
-  gb as dt,
-  hc as N,
-  hl as ft,
-  ib as P,
-  iu as pt,
-  iy as mt,
-  ls as ht,
-  lu as gt,
-  mc as _t,
-  nx as F,
-  ou as vt,
-  rb as I,
-  ru as yt,
-  tl as L,
-  yv as bt,
-  zy as xt,
+  Xr as ct,
+  Zc as j,
+  Zy as M,
+  _b as lt,
+  ab as N,
+  au as ut,
+  ay as dt,
+  bv as ft,
+  ex as pt,
+  gc as P,
+  gl as mt,
+  hc as ht,
+  ib as F,
+  iu as gt,
+  lb as _t,
+  nl as I,
+  pu as vt,
+  rx as L,
+  su as yt,
+  us as bt,
+  uu as xt,
 } from "./main.js";
 var R = e(t(), 1),
-  z = r();
-function B(e) {
+  z = n();
+function St(e) {
   return (0, z.jsxs)(`a`, {
     href: e.strURL,
-    className: b.Box,
+    className: y.Box,
     "data-modal-content-sizetofit": !!e.bSizeToFit,
     "data-appid": e.appid,
     "data-publishedfileid": e.publishedfileid,
     children: [
-      (0, z.jsx)(se, { strURL: e.strPreviewURL }),
-      (0, z.jsxs)(fe, {
+      (0, z.jsx)(ce, { strURL: e.strPreviewURL }),
+      (0, z.jsxs)(b, {
         children: [
           (0, z.jsx)(T, { children: e.strTitle }),
           (0, z.jsx)(`div`, {
             children: (0, z.jsx)(`span`, {
-              className: b.Type,
+              className: y.Type,
               children: e.strType,
             }),
           }),
@@ -140,8 +139,8 @@ function B(e) {
     ],
   });
 }
-var St = class extends S {
-    m_LinkFilter = at;
+var Ct = class extends S {
+    m_LinkFilter = rt;
     m_parentNode = void 0;
     m_mapHostToComponent;
     m_globalStoreLink;
@@ -178,7 +177,7 @@ var St = class extends S {
                 break;
               }
           }
-          (i || super.AppendNode(s(r)),
+          (i || super.AppendNode(a(r)),
             (n = e.input.substring(e.index + r.length)),
             (e = this.m_LinkFilter.exec(n)));
         }
@@ -186,9 +185,9 @@ var St = class extends S {
       n.length > 0 && super.AppendText(n, t);
     }
   },
-  Ct = `[ː:]([a-zA-Z0-9_]+)[ː:]`,
-  wt = class extends S {
-    m_EmoteRegex = new RegExp(Ct);
+  wt = `[ː:]([a-zA-Z0-9_]+)[ː:]`,
+  Tt = class extends S {
+    m_EmoteRegex = new RegExp(wt);
     AppendText(e, t = !1) {
       let n = e;
       if (e.length >= 3) {
@@ -207,7 +206,7 @@ var St = class extends S {
       n.length > 0 && super.AppendText(n, t);
     }
   },
-  Tt = class extends S {
+  Et = class extends S {
     m_parentNode = void 0;
     constructor(e, t) {
       (super(e), (this.m_parentNode = t));
@@ -216,32 +215,32 @@ var St = class extends S {
       let n = e;
       (this.m_parentNode &&
         this.m_parentNode.tag == `img` &&
-        !Et(n) &&
-        (n = L(n)),
+        !Dt(n) &&
+        (n = I(n)),
         super.AppendText(n, t));
     }
   };
-function Et(e) {
+function Dt(e) {
   let t = e.trim();
   return (
     t.startsWith(`{STEAM_CLAN_IMAGE}`) || t.startsWith(`{STEAM_CLAN_LOC_IMAGE}`)
   );
 }
-var Dt =
+var Ot =
   /^(#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})|[a-z-]+\([^;{}]*\)|[a-z]+)$/i;
-function Ot(e) {
-  return e ? Dt.test(e.trim()) : !1;
+function kt(e) {
+  return e ? Ot.test(e.trim()) : !1;
 }
-function V(e, t) {
-  return Ot(e) ? e : t;
+function B(e, t) {
+  return kt(e) ? e : t;
 }
-var kt = `NiXfRuagfO4-`;
-function At(e) {
+var At = `NiXfRuagfO4-`;
+function jt(e) {
   let { inputType: t, id: n, bApplyUserContentPref: r } = e,
     i = t == `bundle` ? `bundle` : t == `sub` ? `sub` : `game`,
-    a = d(n, i),
+    a = l(n, i),
     { data: o } = k(a),
-    { data: s, isPending: c } = mt(r ? a : void 0);
+    { data: s, isPending: c } = dt(r ? a : void 0);
   if (!o) return null;
   if (r) {
     if (c) return null;
@@ -255,16 +254,16 @@ function At(e) {
           e = `#StoreCapsule_Bundle_Excluded`;
       }
       return (0, z.jsx)(`div`, {
-        className: D(kt, `AppSummaryWidgetCtn`),
-        children: P(
+        className: O(At, `AppSummaryWidgetCtn`),
+        children: N(
           e,
-          (0, z.jsx)(`a`, { href: F.STORE_BASE_URL + `account/preferences/` }),
+          (0, z.jsx)(`a`, { href: L.STORE_BASE_URL + `account/preferences/` }),
         ),
       });
     }
   }
   return (0, z.jsx)(`div`, {
-    className: D(kt, `AppSummaryWidgetCtn`),
+    className: O(At, `AppSummaryWidgetCtn`),
     children: (0, z.jsx)(ae, {
       id: n,
       type: i,
@@ -274,13 +273,13 @@ function At(e) {
     }),
   });
 }
-var H =
+var V =
     /(?:steamcommunity\.com|valve\.org\/community|community\.\S+\.steam\.dev|steam\.dev\/community)\/(games|app|ogg|gid|groups)\/(\w+)\/partnerevents\/view\/(\d+)/i,
-  U =
+  H =
     /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|steam\.dev\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
-  W =
+  U =
     /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/(games|app|ogg|gid|groups)\/(\w+)\/(?:announcements\/detail|partnerevents\/view_old_announcement)\/(\d+)/i;
-function jt(e, t) {
+function Mt(e, t) {
   let n = new RegExp(e).exec(t);
   if (!n || n.length <= 3) return;
   let r = n[3];
@@ -298,17 +297,17 @@ function jt(e, t) {
           : { eventGID: r, appid: Number(n[2]) };
     }
 }
-function Mt(e, t, r, a, o) {
-  let s = n(),
-    c = bt();
-  return i(Pt(s, c, e, t, r, a, o)).data ?? void 0;
+function Nt(e, t, n, a, o) {
+  let s = i(),
+    c = ft();
+  return r(Ft(s, c, e, t, n, a, o)).data ?? void 0;
 }
-function Nt(e, t, n, r, i) {
+function Pt(e, t, n, r, i) {
   return [`useEventImageForSizeAsArrayWithFallback`, e?.GID, t, n, r, i];
 }
-function Pt(e, t, n, r, i, a, o) {
+function Ft(e, t, n, r, i, a, o) {
   return {
-    queryKey: Nt(n, r, i, a, o),
+    queryKey: Pt(n, r, i, a, o),
     enabled: n && !!n.GID,
     queryFn: async () => {
       if (!n) return null;
@@ -328,116 +327,116 @@ function Pt(e, t, n, r, i, a, o) {
     },
   };
 }
-function Ft({ clanSteamID: e, strVanity: t, strGroupVanity: n }) {
+function It({ clanSteamID: e, strVanity: t, strGroupVanity: n }) {
   let r = t !== void 0 || n !== void 0,
-    { data: i, isPending: a } = m(
+    { data: i, isPending: a } = g(
       r ? (t ?? n ?? ``) : ``,
       t === void 0 ? `group` : `store`,
     );
   if (!r) return e?.GetAccountID();
   if (!a) return i?.clanAccountID ?? null;
 }
-function It(e) {
+function Lt(e) {
   let { appid: t, announcementGID: n, eventGID: r, strURL: i } = e,
-    a = Ft(e),
-    l = a === null,
+    o = It(e),
+    s = o === null,
     {
-      data: u,
-      isPending: d,
-      isError: ee,
-    } = o(
-      l
+      data: c,
+      isPending: l,
+      isError: d,
+    } = u(
+      s
         ? void 0
         : {
-            clanAccountID: a ?? void 0,
+            clanAccountID: o ?? void 0,
             appid: t,
             eventGID: r,
             announcementGID: n,
           },
     ),
-    f = c(t || u?.appid || void 0),
+    f = m(t || c?.appid || void 0),
     { data: p } = k(f);
-  if (l || ee || u === null) return s(i);
-  if (d || !u) return (0, z.jsx)(y, {});
-  let m = O(F.LANGUAGE),
-    h = u.GetNameWithFallback(m),
-    g = u.GetSubTitleWithSummaryFallback(m),
-    _ = p?.name,
-    v = dt(u.GetStartTimeAndDateUnixSeconds());
-  return (0, z.jsxs)(ne, {
-    eventModel: u,
-    route: te.k_eView,
-    className: b.Box,
+  if (s || d || c === null) return a(i);
+  if (l || !c) return (0, z.jsx)(oe, {});
+  let h = D(L.LANGUAGE),
+    g = c.GetNameWithFallback(h),
+    _ = c.GetSubTitleWithSummaryFallback(h),
+    v = p?.name,
+    ne = lt(c.GetStartTimeAndDateUnixSeconds());
+  return (0, z.jsxs)(te, {
+    eventModel: c,
+    route: ee.k_eView,
+    className: y.Box,
     "data-modal-content-sizetofit": !0,
     "data-appid": t,
     children: [
-      (0, z.jsx)(Lt, { ...e, event: u }),
-      (0, z.jsxs)(fe, {
+      (0, z.jsx)(Rt, { ...e, event: c }),
+      (0, z.jsxs)(b, {
         children: [
           (0, z.jsxs)(ge, {
             children: [
-              I(
-                u.type == 28
+              F(
+                c.type == 28
                   ? `#EventDisplay_Share_Announcement`
                   : `#EventDisplay_Share_Event`,
-                _ ?? ``,
+                v ?? ``,
               ),
-              (0, z.jsx)(me, { children: v }),
+              (0, z.jsx)(me, { children: ne }),
             ],
           }),
           (0, z.jsx)(T, {
-            children: (0, z.jsx)(`div`, { className: b.Type, children: h }),
+            children: (0, z.jsx)(`div`, { className: y.Type, children: g }),
           }),
-          (0, z.jsx)(be, { children: g }),
+          (0, z.jsx)(be, { children: _ }),
         ],
       }),
     ],
   });
 }
-function Lt(e) {
+function Rt(e) {
   let {
       event: t,
       fnFilterImageURLsForKnownFailures: n,
       fnImageFailureCallback: r,
     } = e,
-    i = Mt(t, `capsule`, O(F.LANGUAGE), f.capsule_main) ?? [];
+    i = Nt(t, `capsule`, D(L.LANGUAGE), f.capsule_main) ?? [];
   return (
     i && n && (i = n(i)),
-    (0, z.jsx)(g, {
-      className: b.Preview,
+    (0, z.jsx)(v, {
+      className: y.Preview,
       rgSources: i ?? [],
       onIncrementalError: (e, t, n) => r && r(t),
     })
   );
 }
-var G =
+var W =
     /(?:steampowered\.com|store\.steamchina\.com|store[\w-]*\.(?:[\w.-]+\.)?(?:steam\.dev|valve\.org)|valve\.org\/store)\/(app|bundle|sub)\/(\d+)/i,
-  Rt = [`store.steampowered.com`, `store.steamchina.com`],
-  zt = [`steampowered.com`, `steamcommunity.com`],
-  K = [`steamchina.com`],
-  Bt = [`steam.dev`, `valve.org`];
-function q(e, t) {
+  zt = [`store.steampowered.com`, `store.steamchina.com`],
+  Bt = [`steampowered.com`, `steamcommunity.com`],
+  G = [`steamchina.com`],
+  Vt = [`steam.dev`, `valve.org`];
+function K(e, t) {
   return t.some((t) => e == t || e.endsWith(`.${t}`));
 }
-function J(e) {
-  let t = A(e).toLocaleLowerCase(),
-    n = A(F.STORE_BASE_URL).toLocaleLowerCase(),
-    r = A(F.COMMUNITY_BASE_URL).toLocaleLowerCase();
+function q(e) {
+  let t = j(e).toLocaleLowerCase(),
+    n = j(L.STORE_BASE_URL).toLocaleLowerCase(),
+    r = j(L.COMMUNITY_BASE_URL).toLocaleLowerCase();
   return t == n || t == r
     ? !0
-    : Rt.includes(n)
-      ? q(t, q(n, K) ? K : zt)
-      : q(t, [...zt, ...K, ...Bt]);
-}
-function Vt(e) {
-  if (J(e)) return Ht(e);
+    : zt.includes(n)
+      ? K(t, K(n, G) ? G : Bt)
+      : K(t, [...Bt, ...G, ...Vt]);
 }
 function Ht(e) {
-  let t = new RegExp(G).exec(e);
+  if (q(e)) return Ut(e);
+}
+function Ut(e) {
+  let t = new RegExp(W).exec(e);
   if (!t || t.length <= 2) return;
   let n = t[1].toLowerCase(),
     r = Number(t[2]);
-  if (r > 0 && ut(n))
+  if (r > 0 && vt(n))
     return {
       id: r,
       strItemType: n,
@@ -449,39 +448,39 @@ function Ht(e) {
             : { appid: r },
     };
 }
-function Ut(e) {
+function Wt(e) {
   return !!e && (e.GetEventType() == 36 || e.GetEventType() == 20);
 }
-function Wt(e) {
-  let t = Ut(e),
+function Gt(e) {
+  let t = Wt(e),
     n = t ? e.clanSteamID.GetAccountID() : void 0,
-    { data: r, isLoading: i } = h(n),
-    { data: o, isLoading: s } = a(n);
+    { data: r, isLoading: i } = _(n),
+    { data: a, isLoading: c } = o(n);
   if (!t) return null;
-  if (!(i || s)) return !o || !r || !ee(e, r) ? null : (o.appids ?? []);
-}
-function Gt(e, t) {
-  return e === null || (t.length > 0 && t.every((t) => e.includes(t)));
+  if (!(i || c)) return !a || !r || !s(e, r) ? null : (a.appids ?? []);
 }
 function Kt(e, t) {
-  let n = Wt(t);
+  return e === null || (t.length > 0 && t.every((t) => e.includes(t)));
+}
+function qt(e, t) {
+  let n = Gt(t);
   if (e.appid === void 0) return !0;
   if (!(e.appid > 0)) return !1;
-  if (n !== void 0) return Gt(n, [e.appid]);
+  if (n !== void 0) return Kt(n, [e.appid]);
 }
-function qt({ link: e, strURL: t, eventModel: n, bAnnouncement: r }) {
-  let i = Kt(e, n);
+function Jt({ link: e, strURL: t, eventModel: n, bAnnouncement: r }) {
+  let i = qt(e, n);
   if (i === void 0) return null;
-  if (!i) return s(t, n);
-  let a =
+  if (!i) return a(t, n);
+  let o =
     e.strClanSteamID64 === void 0
       ? e.clanAccountID === void 0
         ? void 0
-        : j.InitFromClanID(e.clanAccountID, F.EUNIVERSE)
-      : new j(e.strClanSteamID64);
-  return (0, z.jsx)(It, {
+        : M.InitFromClanID(e.clanAccountID, L.EUNIVERSE)
+      : new M(e.strClanSteamID64);
+  return (0, z.jsx)(Lt, {
     appid: e.appid,
-    clanSteamID: a,
+    clanSteamID: o,
     strVanity: e.strOGGVanity,
     strGroupVanity: e.strGroupVanity,
     eventGID: r ? void 0 : e.eventGID,
@@ -489,27 +488,27 @@ function qt({ link: e, strURL: t, eventModel: n, bAnnouncement: r }) {
     strURL: t,
   });
 }
-function Y(e, t, n, r = !1) {
-  if (J(t)) {
-    let i = jt(e, t);
+function J(e, t, n, r = !1) {
+  if (q(t)) {
+    let i = Mt(e, t);
     if (i)
-      return (0, z.jsx)(qt, {
+      return (0, z.jsx)(Jt, {
         link: i,
         strURL: t,
         eventModel: n?.event,
         bAnnouncement: r,
       });
   }
-  return s(t, n?.event);
+  return a(t, n?.event);
 }
-function Jt(e, t) {
-  return Y(U, e, t);
+function Y(e, t) {
+  return J(H, e, t);
 }
 function Yt(e, t) {
-  return Y(H, e, t);
+  return J(V, e, t);
 }
 function Xt(e, t) {
-  return Y(W, e, t, !0);
+  return J(U, e, t, !0);
 }
 var Zt = /community.+sharedfiles\/filedetails\/\?id=\d+/i;
 function Qt(e) {
@@ -520,10 +519,10 @@ function Qt(e) {
 function $t(e) {
   let { sharedFileID: t } = e,
     { data: n } = he(t),
-    r = F.COMMUNITY_BASE_URL + `sharedfiles/filedetails/?id=`,
+    r = L.COMMUNITY_BASE_URL + `sharedfiles/filedetails/?id=`,
     i = n ?? {
       sharedfileid: t,
-      title: I(`#Loading`),
+      title: F(`#Loading`),
       description: ``,
       type: ``,
       previewurl: ``,
@@ -532,7 +531,7 @@ function $t(e) {
     },
     a = st(i.url) ? r + i.url : i.url,
     o = i.personnaname !== void 0 && i.personnaname.length > 0;
-  return (0, z.jsx)(B, {
+  return (0, z.jsx)(St, {
     strURL: a,
     strTitle: i.title,
     strPreviewURL: i.previewurl,
@@ -540,7 +539,7 @@ function $t(e) {
     strDescription: i.description,
     author:
       o &&
-      lt(`#EventEditor_Author`, (0, z.jsx)(ve, { children: i.personnaname })),
+      _t(`#EventEditor_Author`, (0, z.jsx)(ve, { children: i.personnaname })),
     publishedfileid: t,
     appid: i.appid,
     bSizeToFit: i.bSizeToFit,
@@ -574,7 +573,7 @@ function un(e) {
   };
 }
 function dn(e) {
-  return i(un(e));
+  return r(un(e));
 }
 function fn(e) {
   let { modelID: t } = e,
@@ -606,7 +605,7 @@ function fn(e) {
               children: [
                 (0, z.jsx)(`span`, {
                   className: on,
-                  children: I(`#EventDisplay_Sketchfab`),
+                  children: F(`#EventDisplay_Sketchfab`),
                 }),
                 i?.title && (0, z.jsxs)(`div`, { children: [i.title, `\xA0`] }),
               ],
@@ -640,7 +639,7 @@ function mn(e) {
   return n > 0 ? n : void 0;
 }
 function hn(e) {
-  return J(e) ? mn(e) : void 0;
+  return q(e) ? mn(e) : void 0;
 }
 var gn = `_8mFolns3-hw-`;
 function _n(e) {
@@ -649,7 +648,7 @@ function _n(e) {
   if (!n || !n.community_item_data) return null;
   let r = n.appid,
     i = n.community_item_data.item_image_large,
-    a = `${F.MEDIA_CDN_COMMUNITY_URL}images/items/${r}/${i}`;
+    a = `${L.MEDIA_CDN_COMMUNITY_URL}images/items/${r}/${i}`;
   return (0, z.jsx)(`div`, {
     className: gn,
     children: (0, z.jsx)(ct, {
@@ -668,20 +667,20 @@ var vn = /:\/\/medal.tv\/(?:clip|clips)\/([a-z0-9]+)/i,
   Sn =
     /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i;
 function X() {
-  return F.EREALM === it.k_ESteamRealmChina;
+  return L.EREALM === it.k_ESteamRealmChina;
 }
 var Cn = new Map();
 function wn() {
-  let e = F.EREALM,
+  let e = L.EREALM,
     t = Cn.get(e);
   return (
     t ||
       ((t = X()
         ? [
-            { urlRegExp: new RegExp(G), fnBBComponent: An },
-            { urlRegExp: new RegExp(H), fnBBComponent: Yt },
-            { urlRegExp: new RegExp(U), fnBBComponent: Jt },
-            { urlRegExp: new RegExp(W), fnBBComponent: Xt },
+            { urlRegExp: new RegExp(W), fnBBComponent: An },
+            { urlRegExp: new RegExp(V), fnBBComponent: Yt },
+            { urlRegExp: new RegExp(H), fnBBComponent: Y },
+            { urlRegExp: new RegExp(U), fnBBComponent: Xt },
             { urlRegExp: new RegExp(Sn), fnBBComponent: In },
           ]
         : [
@@ -690,10 +689,10 @@ function wn() {
               fnBBComponent: Ee,
             },
             { urlRegExp: new RegExp(Zt), fnBBComponent: kn },
-            { urlRegExp: new RegExp(G), fnBBComponent: An },
-            { urlRegExp: new RegExp(H), fnBBComponent: Yt },
-            { urlRegExp: new RegExp(U), fnBBComponent: Jt },
-            { urlRegExp: new RegExp(W), fnBBComponent: Xt },
+            { urlRegExp: new RegExp(W), fnBBComponent: An },
+            { urlRegExp: new RegExp(V), fnBBComponent: Yt },
+            { urlRegExp: new RegExp(H), fnBBComponent: Y },
+            { urlRegExp: new RegExp(U), fnBBComponent: Xt },
             { urlRegExp: new RegExp(vn), fnBBComponent: Dn },
             { urlRegExp: new RegExp(sn), fnBBComponent: On },
             { urlRegExp: new RegExp(yn), fnBBComponent: Nn },
@@ -732,7 +731,7 @@ function Dn(e, t) {
       });
     }
   }
-  return s(e, t?.event);
+  return a(e, t?.event);
 }
 function On(e, t) {
   let n = new RegExp(sn).exec(e);
@@ -740,14 +739,14 @@ function On(e, t) {
     let e = n[1];
     if (e && e.length > 1) return (0, z.jsx)(fn, { modelID: e });
   }
-  return s(e, t?.event);
+  return a(e, t?.event);
 }
 function kn(e, t) {
   let n = Qt(e);
-  return n === void 0 ? s(e, t?.event) : (0, z.jsx)($t, { sharedFileID: n });
+  return n === void 0 ? a(e, t?.event) : (0, z.jsx)($t, { sharedFileID: n });
 }
 function An(e, t) {
-  let n = Vt(e);
+  let n = Ht(e);
   return n
     ? (0, z.jsx)(jn, {
         eventModel: t?.event,
@@ -755,53 +754,53 @@ function An(e, t) {
         inputType: n.strItemType,
         fallbackUrl: e,
       })
-    : s(e, t?.event);
+    : a(e, t?.event);
 }
 function jn(e) {
   let { inputID: t, inputType: n, eventModel: r, fallbackUrl: i } = e,
-    a = u(t, n),
-    { data: o } = k(a),
-    c = Wt(r),
+    o = d(t, n),
+    { data: s } = k(o),
+    c = Gt(r),
     l;
   return (
     c === null
       ? (l = !0)
-      : c && o && (l = Gt(c, o.appid ? [o.appid] : (o.included_appids ?? []))),
+      : c && s && (l = Kt(c, s.appid ? [s.appid] : (s.included_appids ?? []))),
     l === void 0
       ? null
       : l
-        ? (0, z.jsx)(At, { id: t, inputType: n, bApplyUserContentPref: !0 })
-        : s(i, r)
+        ? (0, z.jsx)(jt, { id: t, inputType: n, bApplyUserContentPref: !0 })
+        : a(i, r)
   );
 }
 function Mn(e, t) {
   let n = hn(e);
   return n
     ? (0, z.jsx)(`div`, {
-        className: D(ze),
+        className: O(ze),
         children: (0, z.jsx)(_n, { defid: n, url: e }),
       })
-    : s(e, t?.event);
+    : a(e, t?.event);
 }
 function Nn(e, t) {
-  return X() ? null : Z(e, (0, z.jsx)(N, {}), `@`, t);
+  return X() ? null : Z(e, (0, z.jsx)(P, {}), `@`, t);
 }
 function Pn(e, t) {
-  return X() ? null : Z(e, (0, z.jsx)(N, {}), `#`, t);
+  return X() ? null : Z(e, (0, z.jsx)(P, {}), `#`, t);
 }
 function Fn(e, t) {
-  return X() ? null : Z(e, (0, z.jsx)(_t, {}), void 0, t);
+  return X() ? null : Z(e, (0, z.jsx)(ht, {}), void 0, t);
 }
 function In(e, t) {
-  return Z(e, (0, z.jsx)(ot, {}), void 0, t);
+  return Z(e, (0, z.jsx)(et, {}), void 0, t);
 }
 function Z(e, t, n, r) {
   let i,
-    a = e.endsWith(`/`) ? e.length - 1 : e.length,
-    o = e.lastIndexOf(`/`, a - 1);
-  (o != -1 && o + 1 < e.length && (i = e.substring(o + 1, a)),
+    o = e.endsWith(`/`) ? e.length - 1 : e.length,
+    s = e.lastIndexOf(`/`, o - 1);
+  (s != -1 && s + 1 < e.length && (i = e.substring(s + 1, o)),
     n && i && (i = n + i));
-  let c = s(e, r?.event, i ?? e);
+  let c = a(e, r?.event, i ?? e);
   return (0, z.jsxs)(`div`, {
     className: Le,
     children: [(0, z.jsx)(`div`, { className: Be, children: t }), c],
@@ -810,11 +809,11 @@ function Z(e, t, n, r) {
 function Ln(e) {
   switch (e) {
     case `button`:
-      return D(He, `LinkButton`);
+      return O(He, `LinkButton`);
     case `pill`:
-      return D(Ge, `LinkPill`);
+      return O(Ge, `LinkPill`);
     default:
-      return D(Ie, `Link`);
+      return O(Ie, `Link`);
   }
 }
 function Rn(e, t, n) {
@@ -839,25 +838,25 @@ function Bn(e) {
   let t = ye(w(e.args) || w(e.args, `href`)),
     n = w(e.args, `style`),
     r = w(e.args, `id`),
-    i = V(w(e.args, `buttoncolor`) || w(e.args, `bgcolor`), void 0),
-    a = V(w(e.args, `labelcolor`) || w(e.args, `color`), void 0),
+    i = B(w(e.args, `buttoncolor`) || w(e.args, `bgcolor`), void 0),
+    a = B(w(e.args, `labelcolor`) || w(e.args, `color`), void 0),
     o = Ln(n),
     s = e.context.event,
-    c = p(t, e.language, s?.rtime32_last_modified),
+    l = p(t, e.language, s?.rtime32_last_modified),
     u = En(zn(e.children, t) ? `` : (t ?? ``));
   if (u && t) return u.fnBBComponent(t, { event: e.context.event });
-  if (c === void 0 || c == null) return e.children || ``;
-  t = typeof c == `string` ? c : c[1];
+  if (l === void 0 || l == null) return e.children || ``;
+  t = typeof l == `string` ? l : l[1];
   let d = Rn(n, i, a);
   return typeof t == `string` && t.length > 0 && t[0] == `#`
-    ? (0, z.jsx)(ft, { className: o, href: t, style: d, children: e.children })
+    ? (0, z.jsx)(mt, { className: o, href: t, style: d, children: e.children })
     : t == `steam://settings/account`
       ? (0, z.jsx)(tt, {
           className: o,
           href: `steam://settings/account`,
           children: e.children,
         })
-      : (0, z.jsx)(l, {
+      : (0, z.jsx)(c, {
           className: o,
           url: t,
           event: e.context.event,
@@ -904,10 +903,10 @@ function Wn(e) {
         children: [
           (0, z.jsxs)(`button`, {
             type: `button`,
-            className: D({ [Hn]: t == `pill`, [Un]: t == `button` }),
+            className: O({ [Hn]: t == `pill`, [Un]: t == `button` }),
             onClick: () => l(!0),
             style: { color: r, backgroundColor: i },
-            children: [(0, z.jsx)(ht, {}), a || I(`#EventEmail_WatchNow`)],
+            children: [(0, z.jsx)(bt, {}), a || F(`#EventEmail_WatchNow`)],
           }),
           (0, z.jsx)(Ze, {
             id: u,
@@ -924,39 +923,39 @@ function Wn(e) {
 }
 function Gn(e) {
   let { appid: t, trailerBaseID: n } = e,
-    r = c(t),
+    r = m(t),
     { data: i } = k(r),
     [a, o] = (0, R.useState)(() =>
-      !t || !n ? I(`#TrailerPlayer_ID_NotProvided`) : null,
+      !t || !n ? F(`#TrailerPlayer_ID_NotProvided`) : null,
     ),
-    s = gt(r),
-    l = (0, R.useMemo)(
+    s = xt(r),
+    c = (0, R.useMemo)(
       () => (s ? s.find((e) => e.trailer_base_id === n) : null),
       [s, n],
     );
   return (
     (0, R.useEffect)(() => {
       (i?.unvailable_for_country_restriction &&
-        o(I(`#TrailerPlayer_CouldNotLoad`, t, n)),
+        o(F(`#TrailerPlayer_CouldNotLoad`, t, n)),
         s &&
-          !l &&
-          o(I(`#TrailerPlayer_CouldNotLoad`, e.appid, e.trailerBaseID)));
+          !c &&
+          o(F(`#TrailerPlayer_CouldNotLoad`, e.appid, e.trailerBaseID)));
     }, [
       t,
       e.appid,
       e.trailerBaseID,
       i?.unvailable_for_country_restriction,
       n,
-      l,
+      c,
       s,
     ]),
     a
       ? e.bIsPreviewMode
-        ? (0, z.jsx)(`div`, { className: _, children: a })
+        ? (0, z.jsx)(`div`, { className: ne, children: a })
         : null
-      : l
-        ? (0, z.jsx)(Kn, { trailerToPlay: l })
-        : (0, z.jsx)(y, { string: I(`#Loading`), size: `small` })
+      : c
+        ? (0, z.jsx)(Kn, { trailerToPlay: c })
+        : (0, z.jsx)(oe, { string: F(`#Loading`), size: `small` })
   );
 }
 function Kn(e) {
@@ -966,8 +965,8 @@ function Kn(e) {
       rgHlsTrailers: r,
       strCaptionManufest: i,
     } = (0, R.useMemo)(() => {
-      let { rgDashTrailers: e, rgHlsTrailers: n } = vt(t);
-      return { rgDashTrailers: e, rgHlsTrailers: n, strCaptionManufest: yt(t) };
+      let { rgDashTrailers: e, rgHlsTrailers: n } = yt(t);
+      return { rgDashTrailers: e, rgHlsTrailers: n, strCaptionManufest: gt(t) };
     }, [t]);
   return n?.length == 0
     ? null
@@ -976,7 +975,7 @@ function Kn(e) {
         children: (0, z.jsx)(Ye, {
           dashManifests: n || [],
           hlsManifest: (r.length > 0 && r?.[0]) || ``,
-          screenshot: pt(t),
+          screenshot: ut(t),
           altText: t.trailer_name,
           muteWhenAutoplayBlocked: !0,
           captionManifest: i,
@@ -984,8 +983,8 @@ function Kn(e) {
       });
 }
 function qn(e) {
-  let t = et(),
-    n = ie(940),
+  let t = pt(),
+    n = h(940),
     r = String(w(e.args, `autoadvance`)).toLowerCase() === `true`;
   return (0, z.jsx)(Qe, {
     hideArrows: !n,
@@ -1002,7 +1001,7 @@ function qn(e) {
 var Jn = `FQV2hlT8BYs-`;
 function Yn(e) {
   let { strURL: t, children: n } = e;
-  return (typeof t == `string` ? !M(t) : t.some((e) => !M(e)))
+  return (typeof t == `string` ? !A(t) : t.some((e) => !A(e)))
     ? (0, z.jsx)(Xn, { children: n })
     : (0, z.jsx)(z.Fragment, { children: n });
 }
@@ -1012,10 +1011,10 @@ function Xn(e) {
     ? (0, z.jsx)(z.Fragment, { children: t })
     : (0, z.jsx)(`div`, {
         className: Jn,
-        children: P(
+        children: N(
           `#Image_Externally_Hosted_Hidden`,
           (0, z.jsx)(`a`, {
-            href: F.STORE_BASE_URL + `account/cookiepreferences`,
+            href: L.STORE_BASE_URL + `account/cookiepreferences`,
           }),
         ),
       });
@@ -1038,11 +1037,11 @@ function Qn() {
         `h3`,
         { Constructor: C(Ne, Re), autocloses: !1, skipFollowingNewline: !0 },
       ],
-      [`quote`, { Constructor: C(le, Ke), autocloses: !1 }],
-      [`list`, { Constructor: ce, autocloses: !1, skipInternalNewline: !0 }],
+      [`quote`, { Constructor: C(ue, Ke), autocloses: !1 }],
+      [`list`, { Constructor: le, autocloses: !1, skipInternalNewline: !0 }],
       [`olist`, { Constructor: xe, autocloses: !1, skipInternalNewline: !0 }],
       [`*`, { Constructor: Me, autocloses: !0, skipInternalNewline: !0 }],
-      [`p`, { Constructor: ue, autocloses: !1, skipFollowingNewline: !0 }],
+      [`p`, { Constructor: de, autocloses: !1, skipFollowingNewline: !0 }],
       [`img`, { Constructor: $n, autocloses: !1 }],
       [`previewyoutube`, { Constructor: _e, autocloses: !1 }],
       [`looping_media`, { Constructor: Se, autocloses: !1 }],
@@ -1075,19 +1074,19 @@ function $n(e) {
     r = a;
     let e;
     return (
-      (e = !M(r)),
+      (e = !A(r)),
       n?.BHasTag(`auto_rssfeed`) && (e = !1),
       t
-        ? (0, z.jsx)(re, {
-            className: D({ [x]: i }),
+        ? (0, z.jsx)(ie, {
+            className: O({ [x]: i }),
             src: r,
             crossOrigin: e ? `anonymous` : void 0,
           })
-        : ((r = L(r)),
+        : ((r = I(r)),
           (0, z.jsx)(Yn, {
             strURL: r,
-            children: (0, z.jsx)(v, {
-              className: D({ [x]: i }),
+            children: (0, z.jsx)(re, {
+              className: O({ [x]: i }),
               src: r,
               crossOrigin: e ? `anonymous` : void 0,
             }),
@@ -1096,7 +1095,7 @@ function $n(e) {
   }
   return (0, z.jsx)(Yn, {
     strURL: a,
-    children: (0, z.jsx)(g, { rgSources: a }),
+    children: (0, z.jsx)(v, { rgSources: a }),
   });
 }
 function er(e) {
@@ -1106,11 +1105,11 @@ function er(e) {
     r = [];
   return (
     r.push(
-      `${F.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${F.LANGUAGE}/${t}`,
+      `${L.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${L.LANGUAGE}/${t}`,
     ),
-    F.LANGUAGE != `english` &&
-      r.push(`${F.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${t}`),
-    (0, z.jsx)(g, { rgSources: r, alt: n })
+    L.LANGUAGE != `english` &&
+      r.push(`${L.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${t}`),
+    (0, z.jsx)(v, { rgSources: r, alt: n })
   );
 }
 function tr(e) {
@@ -1118,9 +1117,9 @@ function tr(e) {
     n = $(e.args, `trailerid`, 0),
     r = w(e.args, `style`)?.toLocaleLowerCase() ?? Q.k_TrailerAsFull;
   r = Object.values(Q).includes(r) ? r : Q.k_TrailerAsFull;
-  let i = V(e.args.color, `black`),
-    a = V(e.args.bgcolor, `white`),
-    o = de(e.args);
+  let i = B(e.args.color, `black`),
+    a = B(e.args.bgcolor, `white`),
+    o = fe(e.args);
   return (0, z.jsx)(Wn, {
     appid: t,
     trailerBaseID: n,
@@ -1193,11 +1192,11 @@ function cr(e) {
     } = e,
     o = wn(),
     s = R.useCallback(
-      (e) => new Tt(new wt(new St(new Oe(new je()), e, o, { event: r })), e),
+      (e) => new Et(new Tt(new Ct(new Oe(new je()), e, o, { event: r })), e),
       [r, o],
     ),
     c = or();
-  return R.useMemo(() => new oe(c, s, n || F.LANGUAGE), [c, s, n]).ParseBBCode(
+  return R.useMemo(() => new se(c, s, n || L.LANGUAGE), [c, s, n]).ParseBBCode(
     t,
     { showErrorInfo: i, event: r, bShowShortSpeakerInfo: a, bbcode: t },
   );
@@ -1215,10 +1214,10 @@ async function lr(e, t) {
 }
 var ur;
 function dr() {
-  let e = nt();
+  let e = at();
   return e
     ? e.GetAnonymousServiceTransport()
-    : ((ur ||= xt(new rt(F.WEBAPI_BASE_URL))),
+    : ((ur ||= nt(new ot(L.WEBAPI_BASE_URL))),
       ur.GetAnonymousServiceTransport());
 }
 async function fr(e) {
@@ -1258,19 +1257,19 @@ function _r(e, t) {
   };
 }
 function vr(e) {
-  let { data: t } = i(gr(e));
+  let { data: t } = r(gr(e));
   return t;
 }
 function yr(e, t) {
-  let r = n(),
-    { data: a } = i(_r(e, t));
+  let n = i(),
+    { data: a } = r(_r(e, t));
   return (
     (0, R.useEffect)(() => {
       a?.forEach((e) => {
-        e.defid !== void 0 && r.setQueryData(mr(e.defid), e);
+        e.defid !== void 0 && n.setQueryData(mr(e.defid), e);
       });
-    }, [a, r]),
+    }, [a, n]),
     a
   );
 }
-export { Mt as a, B as c, $ as i, sr as n, At as o, cr as r, V as s, yr as t };
+export { Nt as a, St as c, $ as i, sr as n, jt as o, cr as r, B as s, yr as t };

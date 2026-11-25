@@ -1,14 +1,14 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { At as e, W as t, sn as n, vt as r } from "./chunk~de7f2df91c.js";
+import { Pt as e, W as t, g as n, nt as r } from "./chunk~de7f2df91c.js";
 var i =
     /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\^-~]+[.,](?:(?:[a-zA-Z]{2,4}[.?]*[/\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>[\]]*[^\s"<>[\],.ː:])?)/,
   a = /^(steam|ftp|https?):\/\//;
 function o(e) {
   return a.test(e) ? e : `https://` + e;
 }
-var s = n(e(), 1),
+var s = e(r(), 1),
   c = {
     unknown: 0,
     "store.steampowered.com": 1,
@@ -705,6 +705,17 @@ var s = n(e(), 1),
     greatonframe: 100804,
     salesmartsale_events_only: 100805,
     salesmartdiscountreason: 100806,
+    "salesmartdiscountreason-wishlist": 100807,
+    "salesmartdiscountreason-firsttimeonsale": 100808,
+    "salesmartdiscountreason-largestdiscount": 100809,
+    "salesmartdiscountreason-endingsoon": 100810,
+    "salesmartdiscountreason-newlyonsale": 100811,
+    "salesmartdiscountreason-wellreviewed": 100812,
+    "salesmartdiscountreason-topseller": 100813,
+    "salesmartdiscountreason-hotdeal": 100814,
+    "salesmartdiscountreason-deepdiscount": 100815,
+    "salesmartdiscountreason-popularinregion": 100816,
+    "salesmartdiscountreason-justupdated": 100817,
   };
 function l(e) {
   return e in c;
@@ -792,7 +803,7 @@ function d(e) {
     depth: e.depth || 0,
   };
 }
-var f = r(),
+var f = t(),
   p = s.createContext({});
 s.createContext(void 0);
 function m(e) {
@@ -819,13 +830,13 @@ function h() {
 function g(e, t) {
   return _(h(), e, t);
 }
-function _(e, n, r) {
+function _(e, t, r) {
   return {
     ...e,
-    feature: n || e.feature,
+    feature: t || e.feature,
     depth: r || e.depth,
-    countrycode: t.COUNTRY,
-    is_client: t.IN_CLIENT,
+    countrycode: n.COUNTRY,
+    is_client: n.IN_CLIENT,
   };
 }
 function v(e, t, n) {

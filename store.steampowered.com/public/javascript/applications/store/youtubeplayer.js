@@ -2,23 +2,23 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n, st as r } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n, ot as r } from "./chunk~01cfc309bf.js";
 import { t as i } from "./chunk~eefd71512b.js";
 import {
-  Kb as a,
-  Ky as o,
-  NS as s,
-  Nc as c,
-  Ql as l,
-  Qx as u,
-  Wy as d,
-  Yy as f,
-  ax as p,
-  dl as m,
-  nS as h,
-  nx as g,
-  rb as _,
-  vy as v,
+  $l as a,
+  FS as o,
+  Gy as s,
+  Pc as c,
+  Xy as l,
+  eS as u,
+  fl as d,
+  iS as f,
+  ib as p,
+  ox as m,
+  qb as h,
+  qy as g,
+  rx as _,
+  yy as v,
 } from "./main.js";
 var y = {
   countrycodes: {
@@ -393,13 +393,13 @@ function x(e) {
   }
 }
 async function S(e, t, n, r) {
-  if (s(r)) return { version: 1, preference_state: 0 };
+  if (o(r)) return { version: 1, preference_state: 0 };
   if (t) {
-    let t = (await f.GetCookiePreferences(e, {})).Body().toObject().preferences;
+    let t = (await l.GetCookiePreferences(e, {})).Body().toObject().preferences;
     if (t && t.version !== void 0 && t.version != 0) return t;
   }
   try {
-    let e = d(o);
+    let e = s(g);
     if (e) {
       let t = JSON.parse(e);
       if (t && t.version !== void 0 && t.version != 0) return t;
@@ -412,7 +412,7 @@ async function S(e, t, n, r) {
 function C(e) {
   return {
     queryKey: [`CookiePreferences`],
-    queryFn: () => S(e, p.logged_in, g.COUNTRY, g.EREALM),
+    queryFn: () => S(e, m.logged_in, _.COUNTRY, _.EREALM),
   };
 }
 function w() {
@@ -463,14 +463,14 @@ function L(e) {
 var R = e(t(), 1),
   z = n();
 function B(e) {
-  let t = m(e, e.options);
+  let t = d(e, e.options);
   return (0, z.jsx)(`span`, { ref: t, style: { fontSize: 0 } });
 }
 var V = R.forwardRef(function (e, t) {
-    let { onLeave: n, onEnter: r, options: i, ...a } = e,
-      o = m(e, e.options),
-      s = l(o, t);
-    return (0, z.jsx)(`div`, { ref: s, ...a });
+    let { onLeave: n, onEnter: r, options: i, ...o } = e,
+      s = d(e, e.options),
+      c = a(s, t);
+    return (0, z.jsx)(`div`, { ref: c, ...o });
   }),
   H = 0,
   U = [];
@@ -493,7 +493,7 @@ function G(e = !0) {
   }, [t, e]);
 }
 function K(e) {
-  h(U, e);
+  f(U, e);
 }
 function q() {
   H = 2;
@@ -662,21 +662,21 @@ var J = class e extends R.Component {
     });
   }
 };
-(a([u], J.prototype, `BindPlayerContainer`, null),
-  a([u], J.prototype, `OnYoutubeScriptsReady`, null),
-  a([u], J.prototype, `CreatePlayer`, null),
-  a([u], J.prototype, `OnPlayerReady`, null),
-  a([u], J.prototype, `OnPlayerStateChange`, null),
-  a([u], J.prototype, `OnError`, null),
-  a([u], J.prototype, `OnPlayerLeftView`, null),
-  a([u], J.prototype, `PlayVideo`, null));
+(h([u], J.prototype, `BindPlayerContainer`, null),
+  h([u], J.prototype, `OnYoutubeScriptsReady`, null),
+  h([u], J.prototype, `CreatePlayer`, null),
+  h([u], J.prototype, `OnPlayerReady`, null),
+  h([u], J.prototype, `OnPlayerStateChange`, null),
+  h([u], J.prototype, `OnError`, null),
+  h([u], J.prototype, `OnPlayerLeftView`, null),
+  h([u], J.prototype, `PlayVideo`, null));
 function Y(e) {
   let { video: t, children: n } = e;
   return T(`youtube`)
     ? n
     : (0, z.jsx)(`a`, {
         href: `https://www.youtube.com/watch?v=${t}`,
-        children: _(`#EventCalendar_WatchYouTubeVideo`),
+        children: p(`#EventCalendar_WatchYouTubeVideo`),
       });
 }
 function X(e) {
@@ -698,24 +698,24 @@ function X(e) {
 function Z(e) {
   let { video: t, autopause: n, className: r } = e,
     i = R.useRef(null),
-    a = R.useRef(null),
-    o = R.useRef(void 0),
-    s = R.useCallback(() => {
+    o = R.useRef(null),
+    s = R.useRef(void 0),
+    c = R.useCallback(() => {
       typeof i.current?.pauseVideo == `function` && i.current.pauseVideo();
     }, []),
-    c = R.useCallback((e) => {
-      o.current = e.isIntersecting;
+    l = R.useCallback((e) => {
+      s.current = e.isIntersecting;
     }, []),
-    u = m({ onLeave: n ? s : void 0, onIntersectionChange: c }),
-    d = l(a, u);
+    u = d({ onLeave: n ? c : void 0, onIntersectionChange: l }),
+    f = a(o, u);
   return (
     R.useEffect(() => {
       let e = () => {
-          o.current === !1 && s();
+          s.current === !1 && c();
         },
         t = () => {
-          a.current &&
-            (i.current = new YT.Player(a.current, { events: { onReady: e } }));
+          o.current &&
+            (i.current = new YT.Player(o.current, { events: { onReady: e } }));
         };
       return (
         n && W(t),
@@ -723,9 +723,9 @@ function Z(e) {
           (K(t), (i.current = null));
         }
       );
-    }, [n, s]),
+    }, [n, c]),
     (0, z.jsx)(`iframe`, {
-      ref: d,
+      ref: f,
       className: r,
       src: X(e),
       title: t,

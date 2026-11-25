@@ -1,15 +1,15 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { At as e, Q as t, vt as n } from "./chunk~de7f2df91c.js";
+import { W as e, nt as t, w as n } from "./chunk~de7f2df91c.js";
 import { C as r, E as i } from "./chunk~54f70c90c1.js";
 import { a, r as o } from "./chunk~44f252525d.js";
 import { i as s, n as c, r as l, t as u } from "./chunk~9fc22a4638.js";
 import { t as d } from "./chunk~eefd71512b.js";
-import { h as f } from "./chunk~fd80c4b5eb.js";
+import { p as f } from "./chunk~fd80c4b5eb.js";
 import { n as p, t as m } from "./chunk~59af5622dd.js";
 import { t as h } from "./chunk~58c6c52d52.js";
-e();
+t();
 var g = class e {
     static s_PageStore;
     m_mapSalePage = new Map();
@@ -30,7 +30,7 @@ var g = class e {
       );
     }
     Init() {
-      let e = t(`old_sale_pages`, `application_config`);
+      let e = n(`old_sale_pages`, `application_config`);
       this.ValidateStoreDefault(e) &&
         e.forEach((e) => {
           (this.m_mapSalePage.set(e.pageid, e),
@@ -44,7 +44,7 @@ var g = class e {
         : !1;
     }
   },
-  _ = n();
+  _ = e();
 function v(e) {
   return (0, _.jsxs)(`div`, {
     children: [

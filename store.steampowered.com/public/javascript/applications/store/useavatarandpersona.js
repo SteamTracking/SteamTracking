@@ -3,35 +3,35 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import {
-  Lt as t,
-  dt as n,
-  nt as r,
-  st as i,
-  tt as a,
+  It as t,
+  et as n,
+  ot as r,
+  tt as i,
+  ut as a,
 } from "./chunk~01cfc309bf.js";
 import {
-  Jb as o,
-  Ox as s,
-  X as c,
-  Xy as l,
-  Yu as u,
-  _x as d,
+  X as o,
+  Xu as s,
+  Yb as c,
+  Zy as l,
+  bx as u,
+  kx as d,
   ut as f,
-  vy as p,
-  yx as m,
+  vx as p,
+  yy as m,
 } from "./main.js";
-var h = e(a()),
-  g = e(r()),
+var h = e(n()),
+  g = e(i()),
   _ = e(t()),
   v = `nicknames`;
 function y(e) {
-  let t = p(),
-    { data: n, isLoading: r } = i({
+  let t = m(),
+    { data: n, isLoading: i } = r({
       queryKey: [v],
       queryFn: async () => {
         let e = new Map();
-        if (m.logged_in) {
-          let n = s.Init(c),
+        if (u.logged_in) {
+          let n = d.Init(o),
             r = (await f.GetNicknameList(t, n)).Body().toObject();
           r?.nicknames &&
             r.nicknames.length > 0 &&
@@ -46,14 +46,14 @@ function y(e) {
 }
 async function b(e) {
   if (!e || e.length == 0) return [];
-  let t = o() == `community` ? d.COMMUNITY_BASE_URL : d.STORE_BASE_URL;
+  let t = c() == `community` ? p.COMMUNITY_BASE_URL : p.STORE_BASE_URL;
   if (e.length == 1) {
     let n = { accountid: e[0], origin: self.origin },
       r = await h.default.get(`${t}actions/ajaxgetavatarpersona`, {
         params: n,
       });
     if (!r || r.status != 200 || r.data?.success != 1 || !r.data?.userinfo)
-      throw `Load single avatar/persona failed ${u(r).strErrorMsg}`;
+      throw `Load single avatar/persona failed ${s(r).strErrorMsg}`;
     return [r.data.userinfo];
   }
   {
@@ -62,7 +62,7 @@ async function b(e) {
         params: n,
       });
     if (!r || r.status != 200 || r.data?.success != 1 || !r.data?.userinfos)
-      throw `Load single avatar/persona failed ${u(r).strErrorMsg}`;
+      throw `Load single avatar/persona failed ${s(r).strErrorMsg}`;
     let i = new Map();
     return (
       r.data.userinfos.forEach((e) =>
@@ -78,15 +78,15 @@ function C(e) {
   return [S, e];
 }
 function w(e) {
-  let { data: t, isLoading: n } = i({
+  let { data: t, isLoading: n } = r({
     queryKey: C(e),
     queryFn: () => x.load(e),
   });
   return [t, n];
 }
 function T(e) {
-  let t = n(),
-    { data: r, isLoading: a } = i({
+  let t = a(),
+    { data: n, isLoading: i } = r({
       queryKey: [S, e],
       queryFn: async () => {
         let n = await x.loadMany(e);
@@ -104,12 +104,12 @@ function T(e) {
     o = (0, _.useMemo)(() => {
       let e = [];
       return (
-        r?.forEach((t) => {
+        n?.forEach((t) => {
           t instanceof Error || e.push(t);
         }),
         e
       );
-    }, [r]);
-  return a ? null : o;
+    }, [n]);
+  return i ? null : o;
 }
 export { y as n, T as r, w as t };

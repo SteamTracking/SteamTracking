@@ -1513,7 +1513,7 @@ function ReloadGiveawayOverviewPage()
 // Remove the entire giveaway. This will no longer appear on the users list.
 function RemoveGiveawayAdmin( giveawayname, giveawayid )
 {
-	var dialog = ShowConfirmDialog( "Are you sure?", "Are you sure you want to remove this package prize? (package id: %1$s)".replace('%1$s', giveawayname ) );
+	var dialog = ShowConfirmDialog( "Are you sure?", "Are you sure you want to remove this package prize? (package id: %1$s)".replace('%1$s', V_EscapeHTML( giveawayname ) ) );
 	dialog.done( function() {
 		var dialogWait = ShowBlockingWaitDialog( "Please Wait", "Removing giveaway..." );
 
@@ -1535,7 +1535,7 @@ function RemoveGiveawayAdmin( giveawayname, giveawayid )
 // Set the giveaway to a delete state, we are are permitted
 function SetGiveawayToDeletedState( giveawayname, giveawayid )
 {
-	var dialog = ShowConfirmDialog( "Are you sure?", "Delete the giveaway '%1$s'. Allowed before prizes have been awarded. Once deleted it is no longer visible in the partner site (it's gone forever)".replace('%1$s', giveawayname ) );
+	var dialog = ShowConfirmDialog( "Are you sure?", "Delete the giveaway '%1$s'. Allowed before prizes have been awarded. Once deleted it is no longer visible in the partner site (it's gone forever)".replace('%1$s', V_EscapeHTML( giveawayname ) ) );
 	dialog.done( function() {
 		var dialogWait = ShowBlockingWaitDialog( "Please Wait", "Removing giveaway..." );
 
@@ -1557,7 +1557,7 @@ function SetGiveawayToDeletedState( giveawayname, giveawayid )
 // Duplicate the giveaway admin. If you own the giveaway then you get to keep the prizes. If it is cloning someone else, then you get an empty version.
 function CloneGiveawayAdmin( giveawayname, giveawayid )
 {
-	var dialog = ShowConfirmDialog( "Are you sure?", "Clone '%1$s' and make a new editable version of this Giveaway.".replace('%1$s', giveawayname ) );
+	var dialog = ShowConfirmDialog( "Are you sure?", "Clone '%1$s' and make a new editable version of this Giveaway.".replace('%1$s', V_EscapeHTML( giveawayname ) ) );
 	dialog.done( function() {
 		var dialogWait = ShowBlockingWaitDialog( "Please Wait", "Cloning giveaway..." );
 

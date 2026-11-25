@@ -2579,6 +2579,7 @@ var _ = `xON8oDeeQhs-`,
   function _(_, _, _) {
     return _.SendMsg(`UserAccount.GetClientWalletDetails#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetClientWalletDetails = _;

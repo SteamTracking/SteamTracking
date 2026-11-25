@@ -2,24 +2,24 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { B as t, Lt as n, P as r, ft as i } from "./chunk~01cfc309bf.js";
+import { It as t, N as n, dt as r, z as i } from "./chunk~01cfc309bf.js";
 import { Q as a } from "./chunk~f57d770d64.js";
 import { t as o } from "./chunk~93fc7377c2.js";
 import { t as s } from "./chunk~4c13037b22.js";
 import {
-  Fb as c,
-  Qc as l,
-  Uv as u,
-  Vc as d,
-  Wc as f,
-  gx as p,
-  hl as m,
-  nx as h,
-  sS as g,
-  td as _,
+  $c as c,
+  Gc as l,
+  Hc as u,
+  Ib as d,
+  Wv as f,
+  _x as p,
+  gl as m,
+  lS as h,
+  nd as g,
+  rx as _,
 } from "./main.js";
-var v = e(n(), 1),
-  y = i(),
+var v = e(t(), 1),
+  y = r(),
   b = (function (e) {
     return (
       (e.k_eView = `view`),
@@ -77,12 +77,12 @@ function C(e, t) {
     case `hardwarepreview`:
       return !1;
     default:
-      return (g(!1, `Unknown route specified for link: ` + e), !1);
+      return (h(!1, `Unknown route specified for link: ` + e), !1);
   }
 }
 function w(e) {
   let t =
-    h.COMMUNITY_BASE_URL +
+    _.COMMUNITY_BASE_URL +
     `gid/` +
     e.clanSteamID.ConvertTo64BitString() +
     `/announcements/share/` +
@@ -102,7 +102,7 @@ function E(e) {
 function D(e, t, n) {
   if (n) return (e ? `/games/` + p.VANITY_ID : `/groups/` + p.VANITY_ID) + `/`;
   let r = e ? `ogg/` + e : `gid/` + t.ConvertTo64BitString();
-  return h.COMMUNITY_BASE_URL + r + `/`;
+  return _.COMMUNITY_BASE_URL + r + `/`;
 }
 function O() {
   return `news`;
@@ -114,12 +114,12 @@ function A(e) {
   return e.clanSteamID.GetAccountID() === 45479024 && !1;
 }
 function j(e, t, n) {
-  let { data: r } = u(e?.appid ? { appid: e.appid } : void 0);
+  let { data: r } = f(e?.appid ? { appid: e.appid } : void 0);
   if (e) return M(e, r, t, n);
 }
 function M(e, t, n, r) {
   let i = r === `relative`,
-    c = i ? `/` : h.STORE_BASE_URL,
+    c = i ? `/` : _.STORE_BASE_URL,
     l = D(e.appid, e.clanSteamID, i);
   n === `view` ? (n = `storeview`) : n === `websitehub` && (n = `newshub`);
   let u = e.GID ? e.GID : ``,
@@ -196,7 +196,7 @@ function M(e, t, n, r) {
       return l + `announcements/detail/` + d;
     case `storeview`:
       if (e.clanSteamID.GetAccountID() == o())
-        return `${h.STORE_BASE_URL}meetsteam/${u}`;
+        return `${_.STORE_BASE_URL}meetsteam/${u}`;
       if (f) return `${s(t)}/${e.GetSaleUpdateLandingPageVanity()}`;
       if (p) return `${c}curator/${e.clanSteamID.GetAccountID()}`;
       {
@@ -210,21 +210,21 @@ function M(e, t, n, r) {
     case `usernewshub`:
       return `${c}${O()}/`;
     default:
-      return (g(!1, `Unknown route specified for link`), ``);
+      return (h(!1, `Unknown route specified for link`), ``);
   }
 }
 function N(e, t, n) {
   return j(e, t, n === `forceAbsolute` || !C(t, e) ? `absolute` : `relative`);
 }
 function P(e) {
-  let { eventModel: t, route: n, bPopup: i = !0 } = e,
-    a = C(n, t),
-    o = j(t, n, a ? `relative` : `absolute`);
+  let { eventModel: t, route: r, bPopup: i = !0 } = e,
+    a = C(r, t),
+    o = j(t, r, a ? `relative` : `absolute`);
   return (
     v.useEffect(() => {
       o && (i ? window.open(o) : window.location.assign(o));
     }, [i, o]),
-    a && o ? (0, y.jsx)(r, { push: !0, to: o }) : null
+    a && o ? (0, y.jsx)(n, { push: !0, to: o }) : null
   );
 }
 function F(e, t, n) {
@@ -237,20 +237,20 @@ function F(e, t, n) {
   }
 }
 function I(e) {
-  let { eventModel: n, preferredFocus: r } = e,
-    { bCanUseLink: i } = v.useContext(d),
-    a = _(),
-    o = t(),
-    s = i && C(e.route, n),
-    u = j(n, e.route, s ? `relative` : `absolute`),
-    p = !s && u ? l(u) : u,
-    h = s || !p ? p : f(p, a),
-    g = j(n, `websitehub`, `absolute`),
-    b = e.route == `websitehub` ? `` : c.Localize(`#EventBrowse_MoreEventsBtn`),
+  let { eventModel: t, preferredFocus: n } = e,
+    { bCanUseLink: r } = v.useContext(u),
+    a = g(),
+    o = i(),
+    s = r && C(e.route, t),
+    f = j(t, e.route, s ? `relative` : `absolute`),
+    p = !s && f ? c(f) : f,
+    h = s || !p ? p : l(p, a),
+    _ = j(t, `websitehub`, `absolute`),
+    b = e.route == `websitehub` ? `` : d.Localize(`#EventBrowse_MoreEventsBtn`),
     x = v.useCallback(() => {
-      g && window.location.assign(g);
-    }, [g]);
-  return n
+      _ && window.location.assign(_);
+    }, [_]);
+  return t
     ? s
       ? (0, y.jsx)(m, {
           style: e.style,
@@ -261,7 +261,7 @@ function I(e) {
           },
           onOptionsActionDescription: b,
           onOptionsButton: b ? x : void 0,
-          preferredFocus: r,
+          preferredFocus: n,
           children: e.children,
         })
       : (0, y.jsx)(m, {
@@ -269,7 +269,7 @@ function I(e) {
           style: e.style,
           className: e.className,
           onClick: e.onClick,
-          preferredFocus: r,
+          preferredFocus: n,
           onOptionsActionDescription: b,
           onOptionsButton: b ? x : void 0,
           children: e.children,

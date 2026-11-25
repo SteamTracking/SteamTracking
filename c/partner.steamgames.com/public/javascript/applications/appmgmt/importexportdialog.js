@@ -6,9 +6,11 @@ const __vite__mapDeps = (
       "./chunk~eee3bbd4cd2.js",
       "./chunk~eee3bbd4cd.js",
       "./chunk~de7f2df91c.js",
-      "./chunk~25a6634263.js",
+      "./chunk~bd90a5fce7.js",
       "./chunk~1fa4b8f2ff.js",
       "./chunk~44f252525d.js",
+      "./chunk~96e60d7578.js",
+      "./chunk~25a6634263.js",
       "../../../css/applications/appmgmt/chunk~1fc66b8190.css",
       "./chunk~9aa05d2c7d.js",
       "./chunk~8fb30ea08b.js",
@@ -20,18 +22,23 @@ const __vite__mapDeps = (
       "./chunk~4406a7b793.js",
       "./chunk~6b8ddcaac8.js",
       "./chunk~68b7e78d68.js",
+      "./chunk~b4171a8747.js",
+      "./chunk~ca0c999570.js",
       "./chunk~9a06851bec.js",
       "./chunk~6257ebd2d4.js",
       "./chunk~428594b857.js",
-      "./chunk~d9c3dab17a.js",
+      "./chunk~70c16cc80c.js",
+      "./chunk~4571d27d07.js",
       "./chunk~a825a84845.js",
-      "./chunk~b7c2818157.js",
+      "./chunk~7b4b9eb713.js",
+      "./chunk~f4e4ed5c17.js",
+      "./chunk~a6b9ae1345.js",
+      "./chunk~f3a565e188.js",
       "./chunk~b390ee0f78.js",
       "./chunk~90b9831ad2.js",
       "./chunk~e29b7ee76a.js",
       "./chunk~8681f5c764.js",
       "./chunk~2201b8cb3d.js",
-      "./chunk~f4e4ed5c17.js",
       "./chunk~c55709d290.js",
       "./chunk~af36c62e9f.js",
       "./chunk~b00bc5ccc1.js",
@@ -43,35 +50,26 @@ const __vite__mapDeps = (
       "./chunk~92931c6310.js",
       "./chunk~38a44beba7.js",
       "./chunk~8ceeb46076.js",
+      "./chunk~521597d5f9.js",
       "./chunk~2f8c67b4de.js",
       "../../../css/applications/appmgmt/chunk~bc10934db3.css",
-      "./chunk~a6b9ae1345.js",
       "./chunk~0278ae6236.js",
       "./chunk~ada233e34d.js",
       "../../../css/applications/appmgmt/chunk~2854714fbb.css",
       "../../../css/applications/appmgmt/chunk~7e3e341a02.css",
       "./chunk~cbbb6ae37c.js",
       "../../../css/applications/appmgmt/chunk~9f001c4d7c.css",
-      "./chunk~2bee5a7d08.js",
-      "./chunk~b4171a8747.js",
-      "./chunk~ca0c999570.js",
-      "./chunk~521597d5f9.js",
       "../../../css/applications/appmgmt/chunk~6e16192cd9.css",
       "./chunk~aae8417744.js",
       "./chunk~fc8a9e4879.js",
       "./chunk~19394a4118.js",
-      "./chunk~f3a565e188.js",
       "./chunk~9d71b14b50.js",
       "./chunk~b980797e15.js",
-      "./chunk~3f4314f3b4.js",
-      "../../../css/applications/appmgmt/chunk~863c097d06.css",
-      "./chunk~70c16cc80c.js",
-      "./chunk~4571d27d07.js",
       "./chunk~3ee5188744.js",
       "./chunk~874b4cd3a1.js",
       "../../../css/applications/appmgmt/chunk~12e15c8243.css",
+      "./chunk~3f4314f3b4.js",
       "./chunk~3720b337f3.js",
-      "./chunk~7b4b9eb713.js",
       "../../../css/applications/appmgmt/chunk~b3cb27b5e1.css",
       "./chunk~9a3ef4764b.js",
       "../../../css/applications/appmgmt/chunk~6bd2e40da3.css",
@@ -105,13 +103,8 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
 } from "./chunk~de7f2df91c.js";
-import { _, _, _, _, _, _, _ } from "./chunk~25a6634263.js";
+import { _, _, _, _, _, _ } from "./chunk~bd90a5fce7.js";
 import {
   _,
   _,
@@ -159,14 +152,17 @@ import {
   _,
 } from "./chunk~1fa4b8f2ff.js";
 import { _ } from "./chunk~0a99e05c44.js";
-import { _, _, _ } from "./chunk~6b8ddcaac8.js";
+import { _, _, _, _, _, _, _, _ } from "./chunk~6b8ddcaac8.js";
 import { _, _, _ } from "./chunk~44f252525d.js";
 import { _ } from "./chunk~f8b6a4beb3.js";
 import { _ } from "./chunk~8fb30ea08b.js";
 import { _ } from "./chunk~ede3e357a2.js";
 import { _ } from "./chunk~6257ebd2d4.js";
 import { _ } from "./chunk~e70aabe4d7.js";
+import { _, _ } from "./chunk~70c16cc80c.js";
 import { _, _ } from "./chunk~b390ee0f78.js";
+import { _, _, _, _, _ } from "./chunk~96e60d7578.js";
+import { _ } from "./chunk~25a6634263.js";
 import { _, _ } from "./chunk~fc8a9e4879.js";
 import { _ } from "./chunk~e29b7ee76a.js";
 import { _ } from "./chunk~726542bc75.js";
@@ -176,30 +172,109 @@ import { _ } from "./chunk~8681f5c764.js";
 import { _ } from "./chunk~f4e4ed5c17.js";
 import { _ } from "./chunk~c55709d290.js";
 import { _ } from "./chunk~eefd71512b.js";
-import { _ } from "./chunk~0111fcd096.js";
-import { _ } from "./chunk~521597d5f9.js";
-import { _ } from "./chunk~429133cc70.js";
-import { _ } from "./chunk~2f8c67b4de.js";
 import { _ } from "./chunk~05a38bc848.js";
-import { _, _ } from "./chunk~2bee5a7d08.js";
 import "./chunk~a6b9ae1345.js";
-import { _, _, _, _, _, _, _, _ } from "./chunk~3f2c78281d.js";
+import { _ } from "./chunk~521597d5f9.js";
+import { _, _, _, _, _, _, _ } from "./chunk~3f2c78281d.js";
+import { _ } from "./chunk~2f8c67b4de.js";
+import { _ } from "./chunk~0111fcd096.js";
+import { _ } from "./chunk~429133cc70.js";
 import { _, _ } from "./chunk~739842ca30.js";
 import { _ } from "./chunk~93fc7377c2.js";
-import { _, _ } from "./chunk~3f4314f3b4.js";
-import { _, _ } from "./chunk~70c16cc80c.js";
 import { _, _ } from "./chunk~95ecbf576c.js";
 import { _ } from "./chunk~3ee5188744.js";
 import { _, _ } from "./chunk~5243628dd6.js";
 import "./chunk~f25232ab1e.js";
 import { _ } from "./chunk~d6693aba87.js";
+import { _, _ } from "./chunk~3f4314f3b4.js";
 import { _, _ } from "./chunk~f8f9713b0c.js";
 import { _, _, _, _, _, _, _, _, _ } from "./chunk~de7a25f8e2.js";
+function _(_, _) {
+  return {
+    clanid: _,
+    appid: _,
+    can_edit: !1,
+    owns_app: !1,
+    event_followed: [],
+    event_followed_flags: [],
+    event_ignored: [],
+    follows_app: !1,
+    valve_admin: !1,
+    support_user: !1,
+    limited_user: !0,
+  };
+}
+function _(_, _) {
+  return !_ || !(_.support_user || _.valve_admin)
+    ? _
+    : {
+        ..._,
+        can_edit: !0,
+        support_user: !1,
+        valve_admin: !1,
+      };
+}
+async function _(_, _, _) {
+  let _ = _(),
+    _ = _(`partnereventpermissions`, `application_config`);
+  if (_(_)) {
+    let _ = _.find((_) => _.clanid == _);
+    if (_) {
+      let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
+      return _(_, _);
+    }
+  }
+  if (_.logged_in) {
+    let _ = _.InitFromClanID(_, _.EUNIVERSE),
+      _ = `${_.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetpartnereventpermissions/`;
+    _() == `partner`
+      ? (_ = `${_.PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions?clanaccountid=${_}`)
+      : _() == `store` &&
+        (_ = `${_.STORE_BASE_URL}events/ajaxgetpartnereventpermissions?clanaccountid=${_}`);
+    let _ = await fetch(_, {
+      method: `GET`,
+      credentials: `include`,
+    });
+    if (_.status == 200) {
+      let _ = await _.json();
+      if (_) {
+        let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
+        return _(_, _);
+      }
+    }
+  }
+  return _(_, void 0);
+}
+function _(_) {
+  let _ = _;
+  return _ && Array.isArray(_) && _.length > 0 && typeof _[0] == `object`
+    ? typeof _[0].clanid == `number` && typeof _[0].appid == `number`
+    : !1;
+}
+function _(_) {
+  let _ = _(),
+    _ = _();
+  return _(_(_, _, _));
+}
+function _(_, _, _) {
+  return {
+    queryKey: _(_),
+    queryFn: async () => await _(_, _, _),
+    enabled: !!_,
+  };
+}
+function _(_) {
+  return [`useEventUserPermissions`, _.accountid, _];
+}
 var _ = _(_(), 1),
   _ = _(_(), 1),
-  _ = _(),
   _ = _(_(), 1),
-  _ = _({
+  _ = _(),
+  _ = _.createContext(void 0);
+function _() {
+  return _.useContext(_) ?? _();
+}
+var _ = _({
     ActiveEvent: () => _,
     ActiveEventCallOut: () => _,
     _: () => _,
@@ -231,11 +306,7 @@ var _ = _(_(), 1),
     ShortDateAndTime: _,
     ShortDateRange: _,
   },
-  _ = _.createContext(void 0);
-function _() {
-  return _.useContext(_) ?? _();
-}
-var _ = _(_());
+  _ = _(_());
 function _(_, _) {
   let _ = _ ?? _.default._.guess(),
     _ = _.default.unix(_)._(_),
@@ -592,96 +663,6 @@ function _(_) {
     className: _,
     children: [_(_, _, _), ` `],
   });
-}
-function _(_, _) {
-  return {
-    clanid: _,
-    appid: _,
-    can_edit: !1,
-    owns_app: !1,
-    event_followed: [],
-    event_followed_flags: [],
-    event_ignored: [],
-    follows_app: !1,
-    valve_admin: !1,
-    support_user: !1,
-    limited_user: !0,
-  };
-}
-function _(_, _) {
-  return !_ || !(_.support_user || _.valve_admin)
-    ? _
-    : {
-        ..._,
-        can_edit: !0,
-        support_user: !1,
-        valve_admin: !1,
-      };
-}
-async function _(_, _, _) {
-  let _ = _(),
-    _ = _(`partnereventpermissions`, `application_config`);
-  if (_(_)) {
-    let _ = _.find((_) => _.clanid == _);
-    if (_) {
-      let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
-      return _(_, _);
-    }
-  }
-  if (_.logged_in) {
-    let _ = _.InitFromClanID(_, _.EUNIVERSE),
-      _ = `${_.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetpartnereventpermissions/`;
-    _() == `partner`
-      ? (_ = `${_.PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions?clanaccountid=${_}`)
-      : _() == `store` &&
-        (_ = `${_.STORE_BASE_URL}events/ajaxgetpartnereventpermissions?clanaccountid=${_}`);
-    let _ = await fetch(_, {
-      method: `GET`,
-      credentials: `include`,
-    });
-    if (_.status == 200) {
-      let _ = await _.json();
-      if (_) {
-        let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
-        return _(_, _);
-      }
-    }
-  }
-  return _(_, void 0);
-}
-function _(_) {
-  let _ = _;
-  return _ && Array.isArray(_) && _.length > 0 && typeof _[0] == `object`
-    ? typeof _[0].clanid == `number` && typeof _[0].appid == `number`
-    : !1;
-}
-function _(_) {
-  let _ = _(),
-    _ = _();
-  return _(_(_, _, _));
-}
-function _(_, _, _) {
-  return {
-    queryKey: _(_),
-    queryFn: async () => await _(_, _, _),
-    enabled: !!_,
-  };
-}
-function _(_) {
-  return [`useEventUserPermissions`, _.accountid, _];
-}
-var _ = _.createContext({
-  eLocation: 0,
-});
-function _() {
-  return _.useContext(_);
-}
-function _() {
-  return _().eLocation == 2;
-}
-function _() {
-  let _ = _();
-  return _.eLocation == 2 || _.eLocation == 1;
 }
 function _() {
   let _ = window;
@@ -1891,7 +1872,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Quest.GetCommunityInventory#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCommunityInventory = _;
@@ -1900,14 +1881,14 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCommunityItemDefinitions = _;
   function _(_, _, _) {
     return _.SendMsg(`Quest.ActivateProfileModifierItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ActivateProfileModifierItem = _;
@@ -3263,7 +3244,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`SaleItemRewards.ClaimItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ClaimItem = _;
@@ -3271,7 +3252,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`SaleItemRewards.CanClaimItem#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.CanClaimItem = _;
@@ -3294,7 +3275,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`SaleItemRewards.GetClaimedSaleRewards#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetClaimedSaleRewards = _;
@@ -3303,7 +3284,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCurrentDefinition = _;
@@ -7114,7 +7095,7 @@ var _ = `_8eEm0FMiv8s-`,
                       17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
                       31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44,
                       45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58,
-                      59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71,
+                      59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
                     ]),
                     import.meta.url,
                   )

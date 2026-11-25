@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 /* Third-party software licenses can be found at licenses.txt */
-import { At as e, rt as t, sn as n } from "./chunk~de7f2df91c.js";
+import { Pt as e, k as t, nt as n } from "./chunk~de7f2df91c.js";
 import {
   S as r,
   _ as i,
@@ -52,6 +52,7 @@ var p = {
   PackageLanding: (e = `:packageid`) => `/store/packagelanding/${e}`,
   PackageAdminRoot: () => `/packages/`,
   AchievementsEditor: () => `/apps/achievements/:appid(\\d+)`,
+  SumsubRequirement: () => `/kycrequirement`,
 };
 function m() {
   let e = document.createElement(`a`);
@@ -59,7 +60,7 @@ function m() {
   let n = e.pathname;
   return (n.endsWith(`/`) || (n += `/`), n);
 }
-var h = n(e()),
+var h = e(n()),
   g = (function (e) {
     f(t, e);
     function t() {

@@ -2,15 +2,15 @@
  ****/
 
 import {
-  At as e,
-  G as t,
-  U as n,
-  j as r,
-  ot as i,
-  sn as a,
-  vt as o,
+  M as e,
+  Pt as t,
+  W as n,
+  _ as r,
+  h as i,
+  nt as a,
+  r as o,
 } from "./chunk~de7f2df91c.js";
-var s = a(e()),
+var s = t(a()),
   c = `_5ZSIN7wAn6E-`,
   l = `zuEsqPx3FlM-`,
   u = `lSX5-sK13fE-`,
@@ -44,20 +44,20 @@ var s = a(e()),
     import.meta.url,
   ).href;
 function L() {
-  let e = t();
-  return e ? i(e.LAUNCHER_TYPE) : !1;
+  let t = r();
+  return t ? e(t.LAUNCHER_TYPE) : !1;
 }
-var R = o(),
+var R = n(),
   z = s.memo(function (e) {
     let {
         className: t,
-        size: i,
-        string: a,
-        position: o,
+        size: n,
+        string: r,
+        position: a,
         static: u,
         msDelayAppear: f,
       } = e,
-      p = [c, `SteamLogoThrobber`, B(i)],
+      p = [c, `SteamLogoThrobber`, B(n)],
       [m, h] = s.useState(!f),
       g = !L();
     return (
@@ -66,12 +66,12 @@ var R = o(),
         let e = setTimeout(() => h(!0), f);
         return () => clearTimeout(e);
       }, [f, m]),
-      a === void 0 && p.push(d),
+      r === void 0 && p.push(d),
       t && p.push(t),
       u && p.push(l),
       (0, R.jsxs)(`div`, {
-        className: r(
-          o == `center` && `CnlxA61G8kY-`,
+        className: o(
+          a == `center` && `CnlxA61G8kY-`,
           !!f && `VF2yNCE0Yms-`,
           m && `uALx1rZZEbE-`,
         ),
@@ -82,10 +82,10 @@ var R = o(),
               className: p.join(` `),
               children: (0, R.jsx)(`div`, {
                 className: `Laj-8wPgPBM-`,
-                children: (0, R.jsx)(`img`, { src: n(I) }),
+                children: (0, R.jsx)(`img`, { src: i(I) }),
               }),
             }),
-          !!a && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: a }),
+          !!r && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: r }),
         ],
       })
     );
@@ -94,9 +94,9 @@ s.memo(function (e) {
   let {
       className: t,
       size: n,
-      string: i,
-      position: a,
-      static: o,
+      string: r,
+      position: i,
+      static: a,
       msDelayAppear: u,
     } = e,
     f = [c, `SteamLogoThrobber`, B(n)],
@@ -107,12 +107,12 @@ s.memo(function (e) {
       let e = setTimeout(() => m(!0), u);
       return () => clearTimeout(e);
     }, [u, p]),
-    i === void 0 && f.push(d),
+    r === void 0 && f.push(d),
     t && f.push(t),
-    o && f.push(l),
+    a && f.push(l),
     (0, R.jsxs)(`div`, {
-      className: r(
-        a == `center` && `CnlxA61G8kY-`,
+      className: o(
+        i == `center` && `CnlxA61G8kY-`,
         !!u && `VF2yNCE0Yms-`,
         p && `uALx1rZZEbE-`,
       ),
@@ -128,7 +128,7 @@ s.memo(function (e) {
               ],
             }),
           }),
-        !!i && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: i }),
+        !!r && (0, R.jsx)(`div`, { className: `flvSd6Licro-`, children: r }),
       ],
     })
   );

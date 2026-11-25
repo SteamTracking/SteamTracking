@@ -2,15 +2,15 @@
  ****/
 
 import {
-  A as e,
-  At as t,
-  _t as n,
-  j as r,
-  lt as i,
-  sn as a,
-  vt as o,
+  F as e,
+  Pt as t,
+  U as n,
+  W as r,
+  n as i,
+  nt as a,
+  r as o,
 } from "./chunk~de7f2df91c.js";
-import { It as s } from "./chunk~25a6634263.js";
+import { Pt as s } from "./chunk~bd90a5fce7.js";
 import {
   Aa as c,
   Pa as l,
@@ -19,21 +19,21 @@ import {
   da as f,
 } from "./chunk~1fa4b8f2ff.js";
 import { C as p, w as m } from "./chunk~44f252525d.js";
-import { t as h } from "./chunk~802e967112.js";
-import { D as g, b as _ } from "./chunk~2f8c67b4de.js";
-var v = a(t()),
-  y = o(),
+import { D as h, b as g } from "./chunk~2f8c67b4de.js";
+import { t as _ } from "./chunk~802e967112.js";
+var v = t(a()),
+  y = r(),
   b = class extends v.Component {
     GenerateLanguageOptions() {
-      let e = [],
+      let t = [],
         {
-          fnFilterLanguage: t,
-          fnLangHasData: a,
-          fnLastUpdateRTime: o,
+          fnFilterLanguage: r,
+          fnLangHasData: i,
+          fnLastUpdateRTime: a,
           fnIsLangSupported: s,
         } = this.props;
       this.props.bAllowUnsetOption &&
-        e.push(
+        t.push(
           (0, y.jsx)(
             `option`,
             { value: -1, children: f(`#language_selection_none`) },
@@ -42,12 +42,12 @@ var v = a(t()),
         );
       let u = [],
         p = this.props.realms || [n.k_ESteamRealmGlobal];
-      for (let e of d.GetLanguageListForRealms(p)) {
-        if (t && !t(e)) continue;
-        let n = i(e),
-          r = f(`#Language_` + n),
-          a = !!(s && s(e));
-        u.push({ eLang: e, sLocName: r, bSupported: a });
+      for (let t of d.GetLanguageListForRealms(p)) {
+        if (r && !r(t)) continue;
+        let n = e(t),
+          i = f(`#Language_` + n),
+          a = !!(s && s(t));
+        u.push({ eLang: t, sLocName: i, bSupported: a });
       }
       u.sort((e, t) =>
         e.bSupported == t.bSupported
@@ -57,47 +57,47 @@ var v = a(t()),
             : 1,
       );
       let m = !1;
-      for (let t of u) {
-        t.bSupported != m &&
-          (e.push(
+      for (let e of u) {
+        e.bSupported != m &&
+          (t.push(
             (0, y.jsx)(
               `option`,
               {
-                className: g,
+                className: h,
                 disabled: !0,
                 children: f(
-                  t.bSupported
+                  e.bSupported
                     ? `#LanguageGroup_Supported`
                     : `#LanguageGroup_Unsupported`,
                 ),
               },
-              t.bSupported ? `SupportedGroup` : `UnsupportedGroup`,
+              e.bSupported ? `SupportedGroup` : `UnsupportedGroup`,
             ),
           ),
-          (m = t.bSupported));
-        let n = a && a(t.eLang),
-          i = o && o(t.eLang),
-          s = t.sLocName;
-        (i &&
-          i !== 0 &&
+          (m = e.bSupported));
+        let n = i && i(e.eLang),
+          r = a && a(e.eLang),
+          s = e.sLocName;
+        (r &&
+          r !== 0 &&
           ((s += ` `),
           (s += f(
             `#Language_Last_Update`,
-            l(i) + ` @ ` + c(i, { bForce24HourClock: !1 }),
+            l(r) + ` @ ` + c(r, { bForce24HourClock: !1 }),
           ))),
-          e.push(
+          t.push(
             (0, y.jsx)(
               `option`,
               {
-                value: t.eLang,
-                className: r({ [_]: n }, (t.bSupported, void 0)),
+                value: e.eLang,
+                className: o({ [g]: n }, (e.bSupported, void 0)),
                 children: s,
               },
-              `langpicker` + t.eLang + (n ? `_hasdata` : ``),
+              `langpicker` + e.eLang + (n ? `_hasdata` : ``),
             ),
           ));
       }
-      return e;
+      return t;
     }
     OnLanguageChange(e) {
       let { fnOnLanguageChanged: t, selectedLang: n } = this.props,
@@ -118,16 +118,16 @@ var v = a(t()),
       });
     }
   };
-(e([s], b.prototype, `OnLanguageChange`, null), (b = e([p], b)));
+(i([s], b.prototype, `OnLanguageChange`, null), (b = i([p], b)));
 function x(e) {
   let [t, n] = m(() => [
-    h.Get().GetHasLocalizationContext(),
-    h.Get().GetCurEditLanguage(),
+    _.Get().GetHasLocalizationContext(),
+    _.Get().GetCurEditLanguage(),
   ]);
   return (0, y.jsx)(b, {
     selectedLang: n,
-    fnLangHasData: h.Get().BHasLanguageData,
-    fnOnLanguageChanged: h.Get().SetCurEditLanguage,
+    fnLangHasData: _.Get().BHasLanguageData,
+    fnOnLanguageChanged: _.Get().SetCurEditLanguage,
     bDisabled: !t,
     strTooltip: t ? void 0 : f(`#Localization_EditorNotInFocus`),
   });
@@ -136,8 +136,8 @@ function S(e) {
   let { fnLangHasData: t } = e;
   v.useEffect(
     () => (
-      h.Get().SetHasLocalizationContext(!0),
-      () => h.Get().SetHasLocalizationContext(!1)
+      _.Get().SetHasLocalizationContext(!0),
+      () => _.Get().SetHasLocalizationContext(!1)
     ),
     [],
   );
@@ -147,7 +147,7 @@ function S(e) {
     return e;
   });
   return (
-    v.useEffect(() => h.Get().SetHasLanguage(n), [n]),
+    v.useEffect(() => _.Get().SetHasLanguage(n), [n]),
     (0, y.jsx)(y.Fragment, {})
   );
 }

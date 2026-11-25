@@ -20,10 +20,7 @@ import {
   _,
   _,
   _,
-  _,
-  _,
 } from "./chunk~01cfc309bf.js";
-import { _ } from "./chunk~cc40f6af5e.js";
 import {
   _,
   _,
@@ -287,24 +284,26 @@ import {
   _,
 } from "./chunk~3f4314f3b4.js";
 import { _, _, _, _, _ } from "./chunk~6eb508043a.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~437071091c.js";
+import { _, _, _, _, _, _, _, _ } from "./chunk~437071091c.js";
 import { _ } from "./chunk~e53a8c8667.js";
-import { _, _, _, _, _ } from "./chunk~6e8a72cfb5.js";
+import { _, _, _ } from "./chunk~6e8a72cfb5.js";
 import { _ } from "./chunk~5412a9f1de.js";
+import { _, _, _ } from "./chunk~018ae802ee.js";
 import { _ } from "./chunk~91ffd0567f.js";
 import { _ } from "./chunk~c17e16859d.js";
 import { _ } from "./chunk~eefd71512b.js";
-import { _, _, _ } from "./chunk~018ae802ee.js";
 import { _, _, _, _, _, _ } from "./chunk~05a38bc848.js";
-import { _, _, _, _, _, _, _, _, _ } from "./chunk~77ea210942.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~21cdc464a1.js";
+import { _, _, _, _, _, _, _ } from "./chunk~77ea210942.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~2e61cac879.js";
 import { _ } from "./chunk~92931c6310.js";
 import { _ } from "./chunk~af36c62e9f.js";
 import { _ } from "./chunk~37e5316e27.js";
 import { _ } from "./chunk~cfb555d6e5.js";
-import { _, _, _, _, _ } from "./chunk~0111fcd096.js";
+import { _, _, _, _ } from "./chunk~0111fcd096.js";
 import { _, _ } from "./chunk~79ae1444d5.js";
+import { _, _, _ } from "./chunk~d6c6ad29fc.js";
+import { _, _ } from "./chunk~af1574091f.js";
 import { _, _, _, _, _, _ } from "./chunk~ec644f97c6.js";
 import {
   _,
@@ -332,14 +331,10 @@ import {
   _,
   _,
 } from "./chunk~91ae5e1167.js";
-import { _, _, _ } from "./chunk~d6c6ad29fc.js";
-import { _, _ } from "./chunk~af1574091f.js";
 import { _, _, _, _, _, _ } from "./chunk~739842ca30.js";
 import { _, _, _, _ } from "./chunk~50a4210268.js";
 import { _ } from "./chunk~9d71b14b50.js";
 import { _, _, _ } from "./chunk~95ecbf576c.js";
-import { _ } from "./chunk~d382bdf2cf.js";
-import { _, _ } from "./chunk~a7c5e71e12.js";
 import {
   _,
   _,
@@ -366,11 +361,9 @@ import {
   _,
   _,
 } from "./chunk~2bb3c0c267.js";
+import { _ } from "./chunk~d382bdf2cf.js";
+import { _, _ } from "./chunk~a7c5e71e12.js";
 import {
-  _,
-  _,
-  _,
-  _,
   _,
   _,
   _,
@@ -644,83 +637,1301 @@ async function _(_, _ = 1e3) {
       _ > 0 && window.setTimeout(() => _(`timeout`), _));
   });
 }
-function _(_) {
-  return () => (
-    (_ = (_ * 1664525 + 1013904223) % 4294967296),
-    (_ >>> 0) / 4294967296
-  );
-}
-function _() {
-  return Math.floor(Math.random() * 4294967296);
-}
 var _ = _(_(), 1),
-  _ = new Set();
-function _() {
-  for (let _ of _) _(location.search);
-}
-function _() {
-  let [_, _] = (0, _.useState)(location.search);
-  return (
-    (0, _.useEffect)(() => {
-      function _() {
-        _(location.search);
-      }
-      return (
-        _.add(_),
-        window.addEventListener(`popstate`, _),
-        _(location.search),
-        () => {
-          (_.delete(_), window.removeEventListener(`popstate`, _));
-        }
+  _ = _(_(), 1);
+function _(_, _, _) {
+  let _ = _.initialDeps ?? [],
+    _;
+  function _() {
+    var _;
+    let _;
+    _.key && _.debug?.call(_) && (_ = Date.now());
+    let _ = _();
+    if (!(_.length !== _.length || _.some((_, _) => _[_] !== _))) return _;
+    _ = _;
+    let _;
+    if (
+      (_.key && _.debug?.call(_) && (_ = Date.now()),
+      (_ = _(..._)),
+      _.key && _.debug?.call(_))
+    ) {
+      let _ = Math.round((Date.now() - _) * 100) / 100,
+        _ = Math.round((Date.now() - _) * 100) / 100,
+        _ = _ / 16,
+        _ = (_, _) => {
+          for (_ = String(_); _.length < _;) _ = ` ` + _;
+          return _;
+        };
+      console.info(
+        `%c⏱ ${_(_, 5)} /${_(_, 5)} ms`,
+        `
+            font-size: .6rem;
+            font-weight: bold;
+            color: hsl(${Math.max(0, Math.min(120 - 120 * _, 120))}deg 100% 31%);`,
+        _?.key,
       );
-    }, []),
+    }
+    return ((_ = _?.onChange) == null || _.call(_, _), _);
+  }
+  return (
+    (_.updateDeps = (_) => {
+      _ = _;
+    }),
     _
   );
 }
 function _(_, _) {
-  let _ = _();
-  return [
-    (0, _.useMemo)(() => {
-      let _ = new URLSearchParams(_.substring(1)).get(_);
-      return _ == null
-        ? _
-        : _ == null
-          ? _
-          : typeof _ == `boolean`
-            ? _.constructor(_ !== `false`)
-            : _.constructor(_);
-    }, [_, _, _]),
-    _.useCallback(
-      (_, _ = !1) => {
-        let _ = new URLSearchParams(location.search.substring(1));
-        if (_ != null) {
-          if (_.get(_) == _) return;
-          _.set(_, String(_));
-        } else {
-          if (!_.has(_)) return;
-          _.delete(_);
+  if (_ === void 0) throw Error(`Unexpected undefined${_ ? `: ${_}` : ``}`);
+  return _;
+}
+var _ = (_, _) => Math.abs(_ - _) < 1.01,
+  _ = (_, _, _) => {
+    let _;
+    return function (..._) {
+      (_.clearTimeout(_), (_ = _.setTimeout(() => _.apply(this, _), _)));
+    };
+  },
+  _ = (_) => {
+    let { offsetWidth: _, offsetHeight: _ } = _;
+    return {
+      width: _,
+      height: _,
+    };
+  },
+  _ = (_) => _,
+  _ = (_) => {
+    let _ = Math.max(_.startIndex - _.overscan, 0),
+      _ = Math.min(_.endIndex + _.overscan, _.count - 1),
+      _ = [];
+    for (let _ = _; _ <= _; _++) _.push(_);
+    return _;
+  },
+  _ = (_, _) => {
+    let _ = _.scrollElement;
+    if (!_) return;
+    let _ = _.targetWindow;
+    if (!_) return;
+    let _ = (_) => {
+      let { width: _, height: _ } = _;
+      _({
+        width: Math.round(_),
+        height: Math.round(_),
+      });
+    };
+    if ((_(_(_)), !_.ResizeObserver)) return () => {};
+    let _ = new _.ResizeObserver((_) => {
+      let _ = () => {
+        let _ = _[0];
+        if (_?.borderBoxSize) {
+          let _ = _.borderBoxSize[0];
+          if (_) {
+            _({
+              width: _.inlineSize,
+              height: _.blockSize,
+            });
+            return;
+          }
         }
-        (_
-          ? history.replaceState(
-              history.state,
-              ``,
-              decodeURIComponent(`${window.location.pathname}?${_}`),
-            )
-          : history.pushState(
-              history.state,
-              ``,
-              decodeURIComponent(`${window.location.pathname}?${_}`),
+        _(_(_));
+      };
+      _.options.useAnimationFrameWithResizeObserver
+        ? requestAnimationFrame(_)
+        : _();
+    });
+    return (
+      _.observe(_, {
+        box: `border-box`,
+      }),
+      () => {
+        _.unobserve(_);
+      }
+    );
+  },
+  _ = {
+    passive: !0,
+  },
+  _ = typeof window > `u` || `onscrollend` in window,
+  _ = (_, _) => {
+    let _ = _.scrollElement;
+    if (!_) return;
+    let _ = _.targetWindow;
+    if (!_) return;
+    let _ = 0,
+      _ =
+        _.options.useScrollendEvent && _
+          ? () => void 0
+          : _(
+              _,
+              () => {
+                _(_, !1);
+              },
+              _.options.isScrollingResetDelay,
             ),
-          (0, _.startTransition)(_));
+      _ = (_) => () => {
+        let { horizontal: _, isRtl: _ } = _.options;
+        ((_ = _ ? _.scrollLeft * ((_ && -1) || 1) : _.scrollTop), _(), _(_, _));
+      },
+      _ = _(!0),
+      _ = _(!1);
+    (_(), _.addEventListener(`scroll`, _, _));
+    let _ = _.options.useScrollendEvent && _;
+    return (
+      _ && _.addEventListener(`scrollend`, _, _),
+      () => {
+        (_.removeEventListener(`scroll`, _),
+          _ && _.removeEventListener(`scrollend`, _));
+      }
+    );
+  },
+  _ = (_, _, _) => {
+    if (_?.borderBoxSize) {
+      let _ = _.borderBoxSize[0];
+      if (_)
+        return Math.round(_[_.options.horizontal ? `inlineSize` : `blockSize`]);
+    }
+    return _[_.options.horizontal ? `offsetWidth` : `offsetHeight`];
+  },
+  _ = (_, { adjustments: _ = 0, behavior: _ }, _) => {
+    var _, _;
+    let _ = _ + _;
+    (_ = (_ = _.scrollElement)?.scrollTo) == null ||
+      _.call(_, {
+        [_.options.horizontal ? `left` : `top`]: _,
+        behavior: _,
+      });
+  },
+  _ = class {
+    constructor(_) {
+      ((this.unsubs = []),
+        (this.scrollElement = null),
+        (this.targetWindow = null),
+        (this.isScrolling = !1),
+        (this.measurementsCache = []),
+        (this.itemSizeCache = new Map()),
+        (this.pendingMeasuredCacheIndexes = []),
+        (this.scrollRect = null),
+        (this.scrollOffset = null),
+        (this.scrollDirection = null),
+        (this.scrollAdjustments = 0),
+        (this.elementsCache = new Map()),
+        (this.observer = (() => {
+          let _ = null,
+            _ = () =>
+              _ ||
+              (!this.targetWindow || !this.targetWindow.ResizeObserver
+                ? null
+                : (_ = new this.targetWindow.ResizeObserver((_) => {
+                    _.forEach((_) => {
+                      let _ = () => {
+                        this._measureElement(_.target, _);
+                      };
+                      this.options.useAnimationFrameWithResizeObserver
+                        ? requestAnimationFrame(_)
+                        : _();
+                    });
+                  })));
+          return {
+            disconnect: () => {
+              var _;
+              ((_ = _()) == null || _.disconnect(), (_ = null));
+            },
+            observe: (_) =>
+              _()?.observe(_, {
+                box: `border-box`,
+              }),
+            unobserve: (_) => _()?.unobserve(_),
+          };
+        })()),
+        (this.range = null),
+        (this.setOptions = (_) => {
+          (Object.entries(_).forEach(([_, _]) => {
+            _ === void 0 && delete _[_];
+          }),
+            (this.options = {
+              debug: !1,
+              initialOffset: 0,
+              overscan: 1,
+              paddingStart: 0,
+              paddingEnd: 0,
+              scrollPaddingStart: 0,
+              scrollPaddingEnd: 0,
+              horizontal: !1,
+              getItemKey: _,
+              rangeExtractor: _,
+              onChange: () => {},
+              measureElement: _,
+              initialRect: {
+                width: 0,
+                height: 0,
+              },
+              scrollMargin: 0,
+              gap: 0,
+              indexAttribute: `data-index`,
+              initialMeasurementsCache: [],
+              lanes: 1,
+              isScrollingResetDelay: 150,
+              enabled: !0,
+              isRtl: !1,
+              useScrollendEvent: !1,
+              useAnimationFrameWithResizeObserver: !1,
+              ..._,
+            }));
+        }),
+        (this.notify = (_) => {
+          var _, _;
+          (_ = (_ = this.options).onChange) == null || _.call(_, this, _);
+        }),
+        (this.maybeNotify = _(
+          () => (
+            this.calculateRange(),
+            [
+              this.isScrolling,
+              this.range ? this.range.startIndex : null,
+              this.range ? this.range.endIndex : null,
+            ]
+          ),
+          (_) => {
+            this.notify(_);
+          },
+          {
+            key: !1,
+            debug: () => this.options.debug,
+            initialDeps: [
+              this.isScrolling,
+              this.range ? this.range.startIndex : null,
+              this.range ? this.range.endIndex : null,
+            ],
+          },
+        )),
+        (this.cleanup = () => {
+          (this.unsubs.filter(Boolean).forEach((_) => _()),
+            (this.unsubs = []),
+            this.observer.disconnect(),
+            (this.scrollElement = null),
+            (this.targetWindow = null));
+        }),
+        (this._didMount = () => () => {
+          this.cleanup();
+        }),
+        (this._willUpdate = () => {
+          let _ = this.options.enabled ? this.options.getScrollElement() : null;
+          if (this.scrollElement !== _) {
+            if ((this.cleanup(), !_)) {
+              this.maybeNotify();
+              return;
+            }
+            ((this.scrollElement = _),
+              (this.targetWindow =
+                this.scrollElement && `ownerDocument` in this.scrollElement
+                  ? this.scrollElement.ownerDocument.defaultView
+                  : (this.scrollElement?.window ?? null)),
+              this.elementsCache.forEach((_) => {
+                this.observer.observe(_);
+              }),
+              this._scrollToOffset(this.getScrollOffset(), {
+                adjustments: void 0,
+                behavior: void 0,
+              }),
+              this.unsubs.push(
+                this.options.observeElementRect(this, (_) => {
+                  ((this.scrollRect = _), this.maybeNotify());
+                }),
+              ),
+              this.unsubs.push(
+                this.options.observeElementOffset(this, (_, _) => {
+                  ((this.scrollAdjustments = 0),
+                    (this.scrollDirection = _
+                      ? this.getScrollOffset() < _
+                        ? `forward`
+                        : `backward`
+                      : null),
+                    (this.scrollOffset = _),
+                    (this.isScrolling = _),
+                    this.maybeNotify());
+                }),
+              ));
+          }
+        }),
+        (this.getSize = () =>
+          this.options.enabled
+            ? ((this.scrollRect = this.scrollRect ?? this.options.initialRect),
+              this.scrollRect[this.options.horizontal ? `width` : `height`])
+            : ((this.scrollRect = null), 0)),
+        (this.getScrollOffset = () =>
+          this.options.enabled
+            ? ((this.scrollOffset =
+                this.scrollOffset ??
+                (typeof this.options.initialOffset == `function`
+                  ? this.options.initialOffset()
+                  : this.options.initialOffset)),
+              this.scrollOffset)
+            : ((this.scrollOffset = null), 0)),
+        (this.getFurthestMeasurement = (_, _) => {
+          let _ = new Map(),
+            _ = new Map();
+          for (let _ = _ - 1; _ >= 0; _--) {
+            let _ = _[_];
+            if (_.has(_.lane)) continue;
+            let _ = _.get(_.lane);
+            if (
+              (_ == null || _.end > _.end
+                ? _.set(_.lane, _)
+                : _.end < _.end && _.set(_.lane, !0),
+              _.size === this.options.lanes)
+            )
+              break;
+          }
+          return _.size === this.options.lanes
+            ? Array.from(_.values()).sort((_, _) =>
+                _.end === _.end ? _.index - _.index : _.end - _.end,
+              )[0]
+            : void 0;
+        }),
+        (this.getMeasurementOptions = _(
+          () => [
+            this.options.count,
+            this.options.paddingStart,
+            this.options.scrollMargin,
+            this.options.getItemKey,
+            this.options.enabled,
+          ],
+          (_, _, _, _, _) => (
+            (this.pendingMeasuredCacheIndexes = []),
+            {
+              count: _,
+              paddingStart: _,
+              scrollMargin: _,
+              getItemKey: _,
+              enabled: _,
+            }
+          ),
+          {
+            key: !1,
+          },
+        )),
+        (this.getMeasurements = _(
+          () => [this.getMeasurementOptions(), this.itemSizeCache],
+          (
+            {
+              count: _,
+              paddingStart: _,
+              scrollMargin: _,
+              getItemKey: _,
+              enabled: _,
+            },
+            _,
+          ) => {
+            if (!_)
+              return (
+                (this.measurementsCache = []), this.itemSizeCache.clear(), []
+              );
+            this.measurementsCache.length === 0 &&
+              ((this.measurementsCache = this.options.initialMeasurementsCache),
+              this.measurementsCache.forEach((_) => {
+                this.itemSizeCache.set(_.key, _.size);
+              }));
+            let _ =
+              this.pendingMeasuredCacheIndexes.length > 0
+                ? Math.min(...this.pendingMeasuredCacheIndexes)
+                : 0;
+            this.pendingMeasuredCacheIndexes = [];
+            let _ = this.measurementsCache.slice(0, _);
+            for (let _ = _; _ < _; _++) {
+              let _ = _(_),
+                _ =
+                  this.options.lanes === 1
+                    ? _[_ - 1]
+                    : this.getFurthestMeasurement(_, _),
+                _ = _ ? _.end + this.options.gap : _ + _,
+                _ = _.get(_),
+                _ = typeof _ == `number` ? _ : this.options.estimateSize(_),
+                _ = _ + _,
+                _ = _ ? _.lane : _ % this.options.lanes;
+              _[_] = {
+                index: _,
+                start: _,
+                size: _,
+                end: _,
+                key: _,
+                lane: _,
+              };
+            }
+            return ((this.measurementsCache = _), _);
+          },
+          {
+            key: !1,
+            debug: () => this.options.debug,
+          },
+        )),
+        (this.calculateRange = _(
+          () => [
+            this.getMeasurements(),
+            this.getSize(),
+            this.getScrollOffset(),
+            this.options.lanes,
+          ],
+          (_, _, _, _) =>
+            (this.range =
+              _.length > 0 && _ > 0
+                ? _({
+                    measurements: _,
+                    outerSize: _,
+                    scrollOffset: _,
+                    lanes: _,
+                  })
+                : null),
+          {
+            key: !1,
+            debug: () => this.options.debug,
+          },
+        )),
+        (this.getVirtualIndexes = _(
+          () => {
+            let _ = null,
+              _ = null,
+              _ = this.calculateRange();
+            return (
+              _ && ((_ = _.startIndex), (_ = _.endIndex)),
+              this.maybeNotify.updateDeps([this.isScrolling, _, _]),
+              [
+                this.options.rangeExtractor,
+                this.options.overscan,
+                this.options.count,
+                _,
+                _,
+              ]
+            );
+          },
+          (_, _, _, _, _) =>
+            _ === null || _ === null
+              ? []
+              : _({
+                  startIndex: _,
+                  endIndex: _,
+                  overscan: _,
+                  count: _,
+                }),
+          {
+            key: !1,
+            debug: () => this.options.debug,
+          },
+        )),
+        (this.indexFromElement = (_) => {
+          let _ = this.options.indexAttribute,
+            _ = _.getAttribute(_);
+          return _
+            ? parseInt(_, 10)
+            : (console.warn(
+                `Missing attribute name '${_}={index}' on measured element.`,
+              ),
+              -1);
+        }),
+        (this._measureElement = (_, _) => {
+          let _ = this.indexFromElement(_),
+            _ = this.measurementsCache[_];
+          if (!_) return;
+          let _ = _.key,
+            _ = this.elementsCache.get(_);
+          (_ !== _ &&
+            (_ && this.observer.unobserve(_),
+            this.observer.observe(_),
+            this.elementsCache.set(_, _)),
+            _.isConnected &&
+              this.resizeItem(_, this.options.measureElement(_, _, this)));
+        }),
+        (this.resizeItem = (_, _) => {
+          let _ = this.measurementsCache[_];
+          if (!_) return;
+          let _ = _ - (this.itemSizeCache.get(_.key) ?? _.size);
+          _ !== 0 &&
+            ((this.shouldAdjustScrollPositionOnItemSizeChange === void 0
+              ? _.start < this.getScrollOffset() + this.scrollAdjustments
+              : this.shouldAdjustScrollPositionOnItemSizeChange(_, _, this)) &&
+              this._scrollToOffset(this.getScrollOffset(), {
+                adjustments: (this.scrollAdjustments += _),
+                behavior: void 0,
+              }),
+            this.pendingMeasuredCacheIndexes.push(_.index),
+            (this.itemSizeCache = new Map(this.itemSizeCache.set(_.key, _))),
+            this.notify(!1));
+        }),
+        (this.measureElement = (_) => {
+          _
+            ? this._measureElement(_, void 0)
+            : this.elementsCache.forEach((_, _) => {
+                _.isConnected ||
+                  (this.observer.unobserve(_), this.elementsCache.delete(_));
+              });
+        }),
+        (this.getVirtualItems = _(
+          () => [this.getVirtualIndexes(), this.getMeasurements()],
+          (_, _) => {
+            let _ = [];
+            for (let _ = 0, _ = _.length; _ < _; _++) {
+              let _ = _[_[_]];
+              _.push(_);
+            }
+            return _;
+          },
+          {
+            key: !1,
+            debug: () => this.options.debug,
+          },
+        )),
+        (this.getVirtualItemForOffset = (_) => {
+          let _ = this.getMeasurements();
+          if (_.length !== 0)
+            return _(_[_(0, _.length - 1, (_) => _(_[_]).start, _)]);
+        }),
+        (this.getOffsetForAlignment = (_, _, _ = 0) => {
+          let _ = this.getSize(),
+            _ = this.getScrollOffset();
+          (_ === `auto` && (_ = _ >= _ + _ ? `end` : `start`),
+            _ === `center` ? (_ += (_ - _) / 2) : _ === `end` && (_ -= _));
+          let _ = this.getTotalSize() + this.options.scrollMargin - _;
+          return Math.max(Math.min(_, _), 0);
+        }),
+        (this.getOffsetForIndex = (_, _ = `auto`) => {
+          _ = Math.max(0, Math.min(_, this.options.count - 1));
+          let _ = this.measurementsCache[_];
+          if (!_) return;
+          let _ = this.getSize(),
+            _ = this.getScrollOffset();
+          if (_ === `auto`) {
+            if (_.end >= _ + _ - this.options.scrollPaddingEnd) _ = `end`;
+            else if (_.start <= _ + this.options.scrollPaddingStart)
+              _ = `start`;
+            else return [_, _];
+          }
+          let _ =
+            _ === `end`
+              ? _.end + this.options.scrollPaddingEnd
+              : _.start - this.options.scrollPaddingStart;
+          return [this.getOffsetForAlignment(_, _, _.size), _];
+        }),
+        (this.isDynamicMode = () => this.elementsCache.size > 0),
+        (this.scrollToOffset = (
+          _,
+          { align: _ = `start`, behavior: _ } = {},
+        ) => {
+          (_ === `smooth` &&
+            this.isDynamicMode() &&
+            console.warn(
+              "The `smooth` scroll behavior is not fully supported with dynamic size.",
+            ),
+            this._scrollToOffset(this.getOffsetForAlignment(_, _), {
+              adjustments: void 0,
+              behavior: _,
+            }));
+        }),
+        (this.scrollToIndex = (_, { align: _ = `auto`, behavior: _ } = {}) => {
+          (_ === `smooth` &&
+            this.isDynamicMode() &&
+            console.warn(
+              "The `smooth` scroll behavior is not fully supported with dynamic size.",
+            ),
+            (_ = Math.max(0, Math.min(_, this.options.count - 1))));
+          let _ = 0,
+            _ = (_) => {
+              if (!this.targetWindow) return;
+              let _ = this.getOffsetForIndex(_, _);
+              if (!_) {
+                console.warn(`Failed to get offset for index:`, _);
+                return;
+              }
+              let [_, _] = _;
+              (this._scrollToOffset(_, {
+                adjustments: void 0,
+                behavior: _,
+              }),
+                this.targetWindow.requestAnimationFrame(() => {
+                  let _ = this.getScrollOffset(),
+                    _ = this.getOffsetForIndex(_, _);
+                  _
+                    ? _(_[0], _) || _(_)
+                    : console.warn(`Failed to get offset for index:`, _);
+                }));
+            },
+            _ = (_) => {
+              this.targetWindow &&
+                (_++,
+                _ < 10
+                  ? this.targetWindow.requestAnimationFrame(() => _(_))
+                  : console.warn(
+                      `Failed to scroll to index ${_} after 10 attempts.`,
+                    ));
+            };
+          _(_);
+        }),
+        (this.scrollBy = (_, { behavior: _ } = {}) => {
+          (_ === `smooth` &&
+            this.isDynamicMode() &&
+            console.warn(
+              "The `smooth` scroll behavior is not fully supported with dynamic size.",
+            ),
+            this._scrollToOffset(this.getScrollOffset() + _, {
+              adjustments: void 0,
+              behavior: _,
+            }));
+        }),
+        (this.getTotalSize = () => {
+          let _ = this.getMeasurements(),
+            _;
+          if (_.length === 0) _ = this.options.paddingStart;
+          else if (this.options.lanes === 1) _ = _[_.length - 1]?.end ?? 0;
+          else {
+            let _ = Array(this.options.lanes).fill(null),
+              _ = _.length - 1;
+            for (; _ >= 0 && _.some((_) => _ === null);) {
+              let _ = _[_];
+              (_[_.lane] === null && (_[_.lane] = _.end), _--);
+            }
+            _ = Math.max(..._.filter((_) => _ !== null));
+          }
+          return Math.max(
+            _ - this.options.scrollMargin + this.options.paddingEnd,
+            0,
+          );
+        }),
+        (this._scrollToOffset = (_, { adjustments: _, behavior: _ }) => {
+          this.options.scrollToFn(
+            _,
+            {
+              behavior: _,
+              adjustments: _,
+            },
+            this,
+          );
+        }),
+        (this.measure = () => {
+          ((this.itemSizeCache = new Map()), this.notify(!1));
+        }),
+        this.setOptions(_));
+    }
+  },
+  _ = (_, _, _, _) => {
+    for (; _ <= _;) {
+      let _ = ((_ + _) / 2) | 0,
+        _ = _(_);
+      if (_ < _) _ = _ + 1;
+      else if (_ > _) _ = _ - 1;
+      else return _;
+    }
+    return _ > 0 ? _ - 1 : 0;
+  };
+function _({ measurements: _, outerSize: _, scrollOffset: _, lanes: _ }) {
+  let _ = _.length - 1,
+    _ = (_) => _[_].start;
+  if (_.length <= _)
+    return {
+      startIndex: 0,
+      endIndex: _,
+    };
+  let _ = _(0, _, _, _),
+    _ = _;
+  if (_ === 1) for (; _ < _ && _[_].end < _ + _;) _++;
+  else if (_ > 1) {
+    let _ = Array(_).fill(0);
+    for (; _ < _ && _.some((_) => _ < _ + _);) {
+      let _ = _[_];
+      ((_[_.lane] = _.end), _++);
+    }
+    let _ = Array(_).fill(_ + _);
+    for (; _ >= 0 && _.some((_) => _ >= _);) {
+      let _ = _[_];
+      ((_[_.lane] = _.start), _--);
+    }
+    ((_ = Math.max(0, _ - (_ % _))), (_ = Math.min(_, _ + (_ - 1 - (_ % _)))));
+  }
+  return {
+    startIndex: _,
+    endIndex: _,
+  };
+}
+var _ = typeof document < `u` ? _.useLayoutEffect : _.useEffect;
+function _(_) {
+  let _ = _.useReducer(() => ({}), {})[1],
+    _ = {
+      ..._,
+      onChange: (_, _) => {
+        var _;
+        (_ ? (0, _.flushSync)(_) : _(),
+          (_ = _.onChange) == null || _.call(_, _, _));
+      },
+    },
+    [_] = _.useState(() => new _(_));
+  return (
+    _.setOptions(_), _(() => _._didMount(), []), _(() => _._willUpdate()), _
+  );
+}
+function _(_) {
+  return _({
+    observeElementRect: _,
+    observeElementOffset: _,
+    scrollToFn: _,
+    ..._,
+  });
+}
+var _ = `fS9t6DH7Z-U-`,
+  _ = `nu0EdzsNfaM-`,
+  _ = `Ti-54apdb-E-`,
+  _ = _();
+function _(_) {
+  let {
+      children: _,
+      state: _,
+      placement: _ = `bottom-end`,
+      popoverWidth: _ = `dropdown`,
+      popoverMaxHeight: _,
+      popoverPresentation: _,
+      popoverLabel: _,
+      ..._
+    } = _,
+    [_, _] = (0, _.useState)(void 0);
+  (0, _.useEffect)(() => _(void 0), [_.bOpen]);
+  let _ = _(),
+    _ = (0, _.useRef)(null),
+    _ = (0, _.useRef)(null),
+    _ = (0, _.useMemo)(
+      () => _.rgFilteredOptions.findIndex((_) => _ === _.selectedValue),
+      [_.selectedValue, _.rgFilteredOptions],
+    ),
+    _ = _({
+      open: _.bOpen,
+      onOpenChange: _.setOpen,
+      width: _,
+      maxHeight: _,
+      placement: _,
+      presentation: _,
+      gutter: `4`,
+      activeIndex: _.activeIndex,
+      setActiveIndex: _.setActiveIndex,
+      selectedIndex: _,
+      setSelectedIndex: (_) => _.onItemSelectionChange(_.rgFilteredOptions[_]),
+      interactions: {
+        click: !0,
+        virtualItemFocus: !_,
+      },
+      role: `combobox`,
+      scroll: !1,
+    }),
+    _ = {
+      ..._,
+      ..._,
+      focusedValue: _,
+      onFocusChange: _,
+      refPopover: _,
+      refScrollElement: _,
+      setOpen: (_) => {
+        if (_) {
+          let _ = null;
+          ((_ = _.multiselect
+            ? Array.isArray(_.selectedValue)
+              ? _.selectedValue[0]
+              : null
+            : _.selectedValue),
+            _(_),
+            _.onInputChange(``));
+        }
+        _.setOpen(_);
+      },
+      onIndexSelected: (_) => {
+        let _ = _.elementsRef.current;
+        _ && _[_] && _[_].click();
+      },
+      popoverPlacement: _.floating.placement,
+      popoverPresentation: _.presentation,
+      popoverLabel: _,
+    };
+  return (0, _.jsx)(_.Provider, {
+    value: _,
+    children: (0, _.jsx)(_.Root, {
+      state: _,
+      children: _,
+    }),
+  });
+}
+function _(_) {
+  let {
+      refPopover: _,
+      inputValue: _,
+      onInputChange: _,
+      activeIndex: _,
+      popoverPlacement: _,
+      popoverPresentation: _,
+      popoverLabel: _,
+      multiselect: _,
+      setActiveIndex: _,
+      setOpen: _,
+      filterPlaceholder: _,
+      onIndexSelected: _,
+      refScrollElement: _,
+    } = _(`<Combobox.Options>`),
+    _ = (0, _.useCallback)((_) => {
+      _ &&
+        _.focus({
+          preventScroll: !0,
+        });
+    }, []),
+    _ = (_) => {
+      _.key === `Enter` &&
+        _ !== null &&
+        (_(_), _ || (_(null), _(!1)), _.preventDefault(), _.stopPropagation());
+    },
+    _ = _ === `anchor` && _.startsWith(`top`),
+    _ = (0, _.jsx)(_, {
+      overflow: `auto`,
+      ref: _,
+      style: {
+        overscrollBehavior: `contain`,
+      },
+      children: _.children,
+    });
+  return (0, _.jsx)(_.Positioner, {
+    ref: _,
+    label: _,
+    children: (0, _.jsxs)(_, {
+      direction: `column`,
+      maxHeight: `var(--popover-max-height)`,
+      children: [
+        _ && _,
+        (0, _.jsx)(_, {
+          flexShrink: `0`,
+          className: _(_, _ ? _ : _),
+          children: (0, _.jsx)(_, {
+            margin: `3`,
+            variant: `inset`,
+            radius: `sm`,
+            value: _,
+            onTextChange: _,
+            onKeyDown: _,
+            onKeyDownCapture: (_) => {
+              (_.key === `Home` || _.key === `End`) && _.stopPropagation();
+            },
+            placeholder: _,
+            inputRef: _,
+            autoComplete: `off`,
+          }),
+        }),
+        !_ && _,
+      ],
+    }),
+  });
+}
+var _ = (0, _.createContext)(null);
+function _(_) {
+  let { items: _, renderItem: _, overscan: _ = 5, ..._ } = _,
+    {
+      bOpen: _,
+      refPopover: _,
+      refScrollElement: _,
+    } = _(`<ComboboxVirtualizedOptions>`),
+    [_, _] = (0, _.useState)(!1),
+    _ = _ && !!_.current && !!_.current;
+  (0, _.useEffect)(() => {
+    _ !== _ && _(_);
+  }, [_, _]);
+  let _ = _({
+    count: _ ? _.length : Math.min(_.length, 3),
+    getScrollElement: () => _.current,
+    enabled: _,
+    measureElement: _,
+    ..._,
+  });
+  return (0, _.jsx)(_, {
+    children: (0, _.jsx)(_, {
+      value: _,
+      children: (0, _.jsx)(_, {
+        height: `${_.getTotalSize()}px`,
+        position: `relative`,
+        width: `100%`,
+        children: _.getVirtualItems().map((_) => _(_[_.index], _, _)),
+      }),
+    }),
+  });
+}
+function _(_) {
+  let { virtualItem: _, children: _ } = _,
+    _ = (0, _.useContext)(_);
+  return (
+    _(_, `Virtual item rendered outside of a virtualizer!`),
+    (0, _.jsx)(_, {
+      position: `absolute`,
+      width: `100%`,
+      style: {
+        top: 0,
+        left: 0,
+        transform: `translateY(${_.start}px)`,
+      },
+      ref: _.measureElement,
+      "data-index": _.index,
+      children: _,
+    })
+  );
+}
+function _(_) {
+  let { virtualItem: _, ..._ } = _;
+  return (0, _.jsx)(_, {
+    virtualItem: _,
+    children: (0, _.jsx)(_, {
+      ..._,
+    }),
+  });
+}
+function _(_) {
+  let { virtualItem: _, children: _ } = _;
+  return (0, _.jsx)(_, {
+    virtualItem: _,
+    children: _,
+  });
+}
+function _(_) {
+  let { value: _, children: _, disabled: _ } = _,
+    {
+      onItemSelectionChange: _,
+      selectedValue: _,
+      multiselect: _,
+      maxSelected: _,
+    } = _(`<Combobox.Option>`),
+    _ = !1,
+    _ = !1;
+  _
+    ? ((_ = Array.isArray(_) && _.includes(_)),
+      (_ = !!_ && Array.isArray(_) && _.length >= _))
+    : (_ = _ === _);
+  let _ = _ || (_ && !_);
+  return (0, _.jsxs)(_.Item, {
+    onSelect: () => _(_),
+    selected: _,
+    disabled: _,
+    children: [
+      _ &&
+        (0, _.jsxs)(_, {
+          gap: `2`,
+          align: `center`,
+          children: [
+            (0, _.jsx)(_, {
+              checked: _,
+              variant: `dark`,
+            }),
+            _,
+          ],
+        }),
+      !_ && _,
+    ],
+  });
+}
+function _(_) {
+  let { children: _, beforeContent: _, render: _ } = _,
+    {
+      bOpen: _,
+      setOpen: _,
+      inputValue: _,
+      onInputChange: _,
+      selectedValue: _,
+      focusedValue: _,
+      refScrollElement: _,
+      onItemSelectionChange: _,
+      activeIndex: _,
+      setActiveIndex: _,
+      onFocusChange: _,
+      rgFilteredOptions: _,
+      onSelectionChange: _,
+      multiselect: _,
+      onClear: _,
+      refPopover: _,
+      clearable: _,
+      filterPlaceholder: _,
+      onIndexSelected: _,
+      popoverPlacement: _,
+      popoverPresentation: _,
+      popoverLabel: _,
+      maxSelected: _,
+      variant: _,
+      ..._
+    } = _(`<ComboboxTrigger>`),
+    _ = {
+      tabIndex: 0,
+      children: _,
+    },
+    _ = _ ? Array.isArray(_) && _.length > 0 : _ != null,
+    _ = _ && _,
+    _ = _
+      ? (0, _.jsx)(_, {
+          onClick: _,
+          cursor: `pointer`,
+          hitSlop: !0,
+        })
+      : (0, _.jsx)(_, {}),
+    _ = _
+      ? {
+          onSecondaryButton: _,
+          actionDescriptionMap: {
+            [_.SECONDARY]: _.Localize(`#Clear`),
+          },
+        }
+      : void 0,
+    _ = _(`Combobox`, _),
+    _ = (0, _.jsx)(_, {
+      beforeContent: _,
+      afterContent: _,
+      hasValue: _,
+      cursor: `pointer`,
+      tabIndex: 0,
+      variant: _,
+      navProps: _,
+      ..._,
+    }),
+    _ = _(_, _, _, void 0);
+  return (0, _.jsx)(_.Anchor, {
+    children: _,
+  });
+}
+function _(_) {
+  return (0, _.jsx)(_, {
+    weight: `medium`,
+    truncate: !0,
+    contrast: `title`,
+    ..._,
+  });
+}
+function _(_) {
+  return (0, _.jsx)(_, {
+    contrast: `description`,
+    truncate: !0,
+    ..._,
+  });
+}
+function _(_, _) {
+  if (typeof _ == `string`)
+    return _.toLocaleLowerCase().includes(_.toLocaleLowerCase());
+  try {
+    return JSON.stringify(_)
+      .toLocaleLowerCase()
+      .includes(_.toLocaleLowerCase());
+  } catch {}
+  return (
+    console.error(
+      `Could not use default option filter on provided Comboxbox option. Custom filter function required.`,
+    ),
+    !1
+  );
+}
+function _(_) {
+  return _(_, !1);
+}
+function _(_, _) {
+  let {
+      rgOptions: _,
+      filter: _ = _,
+      filterPlaceholder: _,
+      selectedValue: _,
+      onSelectionChange: _,
+      maxSelected: _,
+    } = _,
+    [_, _] = (0, _.useState)(``),
+    [_, _] = (0, _.useState)(!1),
+    [_, _] = (0, _.useState)(null),
+    _ = (0, _.useMemo)(() => _.filter((_) => _(_, _)), [_, _, _]),
+    _ = typeof _ == `number`,
+    _ = _.length > 0,
+    _ = (0, _.useCallback)(
+      (_) => {
+        (_ && !_ && _ && _(0), _(_));
+      },
+      [_, _],
+    ),
+    _ = (0, _.useCallback)(
+      (_) => {
+        (_ || _(``), _(_));
       },
       [_],
     ),
-  ];
+    _ = (0, _.useCallback)(
+      (_) => {
+        (_(_), _ || _(!1));
+      },
+      [_, _, _],
+    );
+  return {
+    activeIndex: _,
+    setActiveIndex: _,
+    rgFilteredOptions: _,
+    selectedValue: _,
+    onSelectionChange: _,
+    onItemSelectionChange: (0, _.useCallback)(
+      (_) => {
+        if (!_) _(_);
+        else if (!_) _([_]);
+        else {
+          let _ = _,
+            _ = _.indexOf(_);
+          if (_ === -1) _(_.concat(_));
+          else return _(_.slice(0, _).concat(_.slice(_ + 1)));
+        }
+      },
+      [_, _, _],
+    ),
+    onClear: (_) => {
+      (_(_ ? [] : null), _?.stopPropagation(), _?.preventDefault());
+    },
+    inputValue: _,
+    onInputChange: _,
+    bOpen: _,
+    setOpen: _,
+    filterPlaceholder: _,
+    multiselect: _,
+    maxSelected: _,
+  };
+}
+var _ = {
+  Root: _,
+  Option: _,
+  Options: _,
+  VirtualizedOptions: _,
+  VirtualizedOption: _,
+  VirtualizedContent: _,
+  Trigger: _,
+  DefaultOptionFilter: _,
+  Value: _,
+  Placeholder: _,
+};
+function _(_) {
+  return _
+    ? typeof _ == `string`
+      ? _
+      : typeof _ == `number`
+        ? _.toString()
+        : (console.error(
+            `Could not use default option labeler on Combobox option value. Custom labeler requried`,
+            _,
+          ),
+          ``)
+    : ``;
+}
+function _(_) {
+  let {
+      selectedValue: _,
+      onSelectionChange: _,
+      options: _,
+      filter: _,
+      filterPlaceholder: _,
+      placeholder: _,
+      getOptionLabel: _ = _,
+      ..._
+    } = _,
+    _ = _({
+      onSelectionChange: _,
+      selectedValue: _,
+      rgOptions: _,
+      filter: (0, _.useCallback)((_, _) => (_ ? _(_, _) : _(_, _(_))), [_, _]),
+      filterPlaceholder: _,
+    }),
+    _ = _ != null;
+  return (0, _.jsxs)(_.Root, {
+    state: _,
+    ..._,
+    children: [
+      (0, _.jsxs)(_.Trigger, {
+        children: [
+          _ &&
+            (0, _.jsx)(_.Value, {
+              children: _(_),
+            }),
+          !_ &&
+            (0, _.jsx)(_.Placeholder, {
+              children: _,
+            }),
+        ],
+      }),
+      (0, _.jsx)(_.Options, {
+        children: _.rgFilteredOptions.map((_) =>
+          (0, _.jsx)(
+            _,
+            {
+              value: _,
+              children: _(_),
+            },
+            _(_),
+          ),
+        ),
+      }),
+    ],
+  });
+}
+var _ = Object.assign(_, _);
+function _(_) {
+  return _(_, !0);
+}
+function _(_) {
+  let {
+      selectedValue: _,
+      onSelectionChange: _,
+      options: _,
+      filter: _,
+      filterPlaceholder: _,
+      placeholder: _,
+      getOptionLabel: _ = _,
+      maxSelected: _,
+      ..._
+    } = _,
+    _ = _({
+      onSelectionChange: _,
+      selectedValue: _,
+      rgOptions: _,
+      filter: (0, _.useCallback)((_, _) => (_ ? _(_, _) : _(_, _(_))), [_, _]),
+      filterPlaceholder: _,
+      maxSelected: _,
+    }),
+    _ = Array.isArray(_) && _.length > 0,
+    _ = ``;
+  if (_) {
+    let _ = _.map((_) => _(_));
+    _ =
+      `ListFormat` in Intl
+        ? new Intl.ListFormat(_().strISOCode).format(_)
+        : _.join(`, `);
+  }
+  return (0, _.jsxs)(_.Root, {
+    state: _,
+    ..._,
+    children: [
+      (0, _.jsxs)(_.Trigger, {
+        children: [
+          _ &&
+            (0, _.jsx)(_.Value, {
+              children: _,
+            }),
+          !_ &&
+            (0, _.jsx)(_.Placeholder, {
+              children: _,
+            }),
+        ],
+      }),
+      (0, _.jsx)(_.Options, {
+        children: _.rgFilteredOptions.map((_) =>
+          (0, _.jsx)(
+            _.Option,
+            {
+              value: _,
+              children: _(_),
+            },
+            _(_),
+          ),
+        ),
+      }),
+    ],
+  });
+}
+Object.assign(_, _);
+var _ = (0, _.createContext)(null);
+function _(_) {
+  let _ = (0, _.useContext)(_);
+  return (_ || console.error(`${_} must be used within a <Combobox>!`), _);
 }
 var _ = _(_(), 1),
   _ = `-x0pInEBhX4-`,
-  _ = `KYFjrdxYAEg-`,
-  _ = _();
+  _ = `KYFjrdxYAEg-`;
 function _(_) {
   let {
     value: _,
@@ -885,7 +2096,6 @@ function _({ fnOnSetDirty: _, section: _, property: _, color: _ }) {
     });
   };
 }
-var _ = _(_(), 1);
 function _(_) {
   let {
       _: _,
@@ -1557,65 +2767,6 @@ function _(_) {
     }),
   });
 }
-function _(_, _, _) {
-  return `linear-gradient(${_ ?? 0}deg, ${_ || `transparent`} 0%, ${_ || `transparent`} 100%)`;
-}
-function _(_) {
-  return _(
-    _.background_gradient_bottom,
-    _.background_gradient_top,
-    _.background_gradient_angle,
-  );
-}
-function _(_, _, _) {
-  if (_.disable_background)
-    return {
-      paddingLeft: 0,
-      paddingRight: 0,
-    };
-  let _ = ``;
-  if (_.background_image) {
-    let _ = _.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image);
-    _ += `,url(${_})`;
-  }
-  return _.background_gradient_bottom ||
-    _.background_gradient_top ||
-    _.length > 0 ||
-    _.background_repeat ||
-    _.border_color ||
-    _.border_width
-    ? {
-        backgroundImage: _(_) + _,
-        backgroundRepeat: _.background_repeat,
-        backgroundSize: _.background_repeat == `coverBlur` ? `cover` : ``,
-        outlineStyle: _.border_color && _.border_width ? `solid` : void 0,
-        outlineColor: _.border_color,
-        outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
-      }
-    : {};
-}
-function _(_, _) {
-  return _
-    ? _.disable_background && !_
-      ? {
-          paddingLeft: 0,
-          paddingRight: 0,
-        }
-      : _.background_gradient_bottom ||
-          _.background_gradient_top ||
-          _.background_repeat ||
-          _.border_color ||
-          _.border_width
-        ? {
-            background: _(_),
-            backgroundRepeat: _.background_repeat,
-            outlineStyle: _.border_color && _.border_width ? `solid` : void 0,
-            outlineColor: _.border_color,
-            outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
-          }
-        : {}
-    : {};
-}
 function _(_) {
   let { text: _ } = _;
   return _
@@ -1641,413 +2792,6 @@ function _(_) {
   return (0, _.jsx)(_.Fragment, {
     children: _.ParseBBCode(_, void 0),
   });
-}
-var _ = _(_(), 1);
-function _(_) {
-  return _?.clan_steamid ? _(new _(_.clan_steamid), _) : null;
-}
-var _ = 100;
-async function _(_, _) {
-  let _ = new URLSearchParams();
-  (_.set(`event_gids`, [...new Set(_)].sort().join(`,`)),
-    _.set(`lang_list`, _(_)),
-    _.set(`origin`, location.origin));
-  let _ =
-      _.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + _.toString(),
-    _ = await fetch(_);
-  if (_.status === 204) return _.map(() => null);
-  if (!_._) throw Error(`${_} answered ${_.status}`);
-  let _ = await _.json(),
-    _ = new Map((_.events ?? []).map((_) => [_.gid, _]));
-  return _.map((_) => _.get(_) ?? null);
-}
-function _(_) {
-  return _(
-    [`PublicPartnerEventBrowser`, _],
-    () =>
-      new _.default((_) => _(_, _), {
-        maxBatchSize: _,
-        cache: !1,
-      }),
-  );
-}
-function _(_, _) {
-  return [`PublicPartnerEvent`, _, _];
-}
-function _(_, _, _) {
-  return {
-    queryKey: _(_, _),
-    queryFn: async () => (_ ? _.load(_) : (await _([_], _))[0]),
-    select: _,
-    enabled: !!_,
-    staleTime: 6e5,
-  };
-}
-function _(_) {
-  let _ = _(_.LANGUAGE),
-    _ = _(_);
-  return _(_(_, _, _));
-}
-function _(_, _, _) {
-  return _(_, _, _)?.strTagName || void 0;
-}
-function _(_, _, _, _) {
-  let _ = _ == 1 || _ == 3 || _ == 4,
-    _ = () => {
-      let _ = _(_.smart_section_creator_listid);
-      return _
-        ? _
-          ? _(`#Sale_CreatorList_Section_Editor_title`, _)
-          : _
-        : null;
-    };
-  if (_.section_type === `items`)
-    switch (_(_)) {
-      case `wishlist`:
-        return `#Sale_default_label_OnYourWishlist`;
-      case `interactive_recommender`:
-        return `#Sale_default_label_RecommendedForYou`;
-      case `tag_recommender`:
-        return `#Sale_default_label_RecommendedForYou`;
-      case `deck_topplayed`:
-        return `#Sale_TopPlayedOnDeckSection`;
-      case `personalized_carousel`:
-        if (_) {
-          let { nSectionIndex: _, nNumSections: _ } = _(_, _);
-          return _(`#Sale_PersonalizedCarousel_Section_Editor_title`, _ + 1, _);
-        }
-        let _ = _(_, _, _);
-        if (!_ && _ == 2) {
-          let { nSectionIndex: _, nNumSections: _ } = _(_, _);
-          return _(`#Sale_PersonalizedCarousel_Section_Editor_title`, _ + 1, _);
-        }
-        return _ ? _(`#Sale_PersonalizedCarousel_Section_title`, _) : null;
-      case `creator_list`:
-        return _();
-      case `discount_reason`:
-        return _(_) ?? null;
-    }
-  else if (_.section_type === `tabs`) return ``;
-  else if (_.section_type === `curator`) {
-    if (_.curator_clan_id) {
-      let _ = _.InitFromClanID(_.curator_clan_id, _.EUNIVERSE),
-        _ = _.GetCreatorHome(_);
-      if (_) return _(`#Sale_CuratorSection_Name`, _.GetName());
-    }
-    return `#Sale_CuratorSection`;
-  } else if (_.section_type === `event_schedule`) return `#Sale_EventSchedule`;
-  else if (_.section_type === `curator_recommendation`)
-    return `#Sale_CuratorRecommendation_title`;
-  else if (_.section_type === `discoveryqueue`) return `#DiscoveryQueue_Title`;
-  else if (_.section_type === `sale_events`) return `#Sale_SaleEvent_Section`;
-  else if (_.section_type === `calendar`) return `#Sale_SectionType_Calendar`;
-  else if (_.section_type === `crosspromotesalepage` && _ == 1)
-    return `#Sale_CrossPromoSale_DefaultSectionTitle`;
-  else if (_.section_type === `creator_list`) return _();
-  return null;
-}
-function _(_, _, _, _) {
-  let _ = _(_, _, _, _);
-  return _ === null ? null : _ && _.startsWith(`#`) ? _(_) : _;
-}
-function _(_, _, _, _, _, _, _, _) {
-  if (!_) return ``;
-  if (_.section_type === `crosspromotesalepage`) return _(_, _);
-  let _ = _(_, _, _, _),
-    _ = _.GetWithFallback(_.localized_label, _),
-    _ =
-      _ ||
-      _ ||
-      (_.default_label === `#Sale_default_label` ? `` : _(_.default_label)),
-    _ = _.internal_section_title?.trim();
-  if ((_?.length ?? 0) > 0) {
-    if (_ == 3 || _ == 4)
-      return _?.trim().length == 0 || _
-        ? _
-        : (0, _.jsxs)(_.Fragment, {
-            children: [
-              _,
-              ` `,
-              (0, _.jsx)(_, {
-                tooltip: _(
-                  `#Sale_Section_InternalTitle_Note`,
-                  (0, _.jsx)(`br`, {}),
-                  _,
-                ),
-              }),
-            ],
-          });
-    if (_ == 1)
-      return _?.trim().length == 0 || _
-        ? _
-        : (0, _.jsxs)(_.Fragment, {
-            children: [
-              _,
-              ` `,
-              (0, _.jsx)(`span`, {
-                children: _(`#Sale_Section_InternalTitle_Actual`, _),
-              }),
-            ],
-          });
-  }
-  let _ = _.GetWithFallback(_.localized_label_image, _);
-  if (!_ && _) {
-    let _ = _.GenerateURLFromHashAndExt(_, _);
-    return (0, _.jsx)(`img`, {
-      loading: `lazy`,
-      src: _,
-      alt: _,
-    });
-  }
-  return _;
-}
-function _(_, _, _) {
-  if (_(_.section_type))
-    switch (_(_)) {
-      case `personalized_carousel`:
-        let _ = _(_, _, _);
-        return _ ? _(`#Sale_PersonalizedCarousel_Section_subtitle`, _) : null;
-      case `creator_list`:
-        return _(_.smart_section_creator_listid) ?? null;
-    }
-  return null;
-}
-function _(_, _, _, _) {
-  let _ = _(_, _, _);
-  return _ === null
-    ? _.GetWithFallback(_.localized_subtitle, _) ||
-        (!_.default_subtitle || _.default_subtitle === `#Sale_default_subtitle`
-          ? ``
-          : _(_.default_subtitle))
-    : _ && _.startsWith(`#`)
-      ? _(_)
-      : _;
-}
-var _ = `dYYkud-Jf3s-`,
-  _ = `zZo1XshRYmQ-`,
-  _ = `RfHJSn8AdQE-`,
-  _ = `D8GFuSKNhX0-`,
-  _ = `woc2JepJIek-`;
-function _(_, _) {
-  return (
-    _.GetWithFallback(_.localized_label, _) ||
-    (_.default_label === `#Sale_default_label` ? `` : _(_.default_label))
-  );
-}
-function _(_) {
-  if (_(_.section_type))
-    switch (_(_)) {
-      case `deck_topplayed`:
-        return _.STORE_BASE_URL + `charts/steamdecktopplayed`;
-    }
-  return _.label_link;
-}
-function _(_) {
-  let _,
-    _,
-    _ = !1;
-  return (
-    _.label_link_style === `button`
-      ? ((_ = _(`#Sale_SectionLink_BrowseAll`)), (_ = !0))
-      : _.label_link_style === `browseall`
-        ? ((_ = _(`#Sale_SectionLink_BrowseAll`)),
-          (_ = _(_, `SaleSectionLabelLinkButton`)))
-        : _(_) === `deck_topplayed` &&
-          ((_ = _(`#EventBrowse_MoreEventsBtn`)),
-          (_ = _(_, `SaleSectionLabelLinkButton`))),
-    {
-      strLinkButtonLabel: _,
-      strLinkButtonClasses: _,
-      bSmallButton: _,
-    }
-  );
-}
-var _ = _((_) => {
-  let {
-      section: _,
-      event: _,
-      language: _,
-      nHiddenCapsules: _,
-      title: _,
-      subtitle: _,
-      bShowSeeMoreHint: _,
-      bUseGamepadLinkHint: _,
-      eGamepadLinkHintButton: _,
-      onLinkResolved: _,
-      personalizedCarousels: _,
-      promotedSale: _,
-    } = _,
-    _ = _(),
-    _ = _(),
-    _ = _ !== void 0,
-    { data: _ } = _(_ ? void 0 : _(_)),
-    _ = (_ ? _ : _) ?? void 0,
-    _ = _.link || _(_) || _(_);
-  if (
-    (_.useEffect(() => {
-      _?.(_);
-    }, [_, _]),
-    _.section_type == `title_image` && _.title_image_selected === `image`)
-  )
-    return null;
-  let _ = _ || _(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation, !1, _, _);
-  if (!_) return null;
-  let _ = _ || _(_, _, _, _),
-    _ = (0, _.jsxs)(`div`, {
-      className: _(_, `SaleSectionHeader`),
-      style: _(_, _, _),
-      children: [
-        _.test_show_on_valve_ip_only &&
-          (0, _.jsx)(`div`, {
-            className: `JrlXbYAw30w-`,
-            children: `(VO)\xA0`,
-          }),
-        _,
-      ],
-    }),
-    _ = (0, _.jsx)(`div`, {
-      className: _(_, _, `SaleSectionSubtitle`),
-      style: _(_, _, _),
-      children: _,
-    }),
-    _ = null;
-  if ((_?.length ?? 0) > 0) {
-    let {
-      strLinkButtonLabel: _,
-      strLinkButtonClasses: _,
-      bSmallButton: _,
-    } = _(_);
-    (_ &&
-      (_ =
-        _ && _
-          ? (0, _.jsx)(_, {
-              label: _,
-              shown: !!_,
-              button: _,
-            })
-          : _
-            ? (0, _.jsx)(`div`, {
-                className: _(_, _),
-                children: (0, _.jsx)(_, {
-                  url: _,
-                  children: (0, _.jsx)(_, {
-                    children: _,
-                  }),
-                }),
-              })
-            : (0, _.jsx)(_, {
-                url: _,
-                className: _,
-                children: _,
-              })),
-      (_ = (0, _.jsx)(_, {
-        url: _,
-        bFocusable: !_,
-        children: _,
-      })));
-  }
-  return (0, _.jsxs)(`div`, {
-    className: _(_, `SaleSectionLabelCtn`),
-    children: [
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [_, !!_ && _],
-      }),
-      (0, _.jsxs)(`div`, {
-        className: _,
-        children: [
-          !!_ &&
-            (0, _.jsx)(_, {
-              className: `pL8IDIWBDg8-`,
-              toolTipContent: _(`#Sale_HiddenItem_Tooltip`),
-              children: (0, _.jsx)(`a`, {
-                href: _.STORE_BASE_URL + `account/preferences`,
-                children: _(
-                  _ == 1
-                    ? `#Sale_HiddenItem_Single_Short`
-                    : `#Sale_HiddenItems_Short`,
-                  _,
-                ),
-              }),
-            }),
-          _,
-        ],
-      }),
-    ],
-  });
-});
-function _(_, _, _) {
-  return {
-    fontFamily: _.jsondata.sale_font ? _(_.jsondata.sale_font, _) : void 0,
-    fontWeight: _.jsondata.sale_font_weight,
-    fontSize: `${_.jsondata.sale_section_font_size}px`,
-    textTransform: _.jsondata.sale_section_disable_capitalize
-      ? `initial`
-      : void 0,
-    color: _.label_color,
-  };
-}
-function _(_, _, _) {
-  return {
-    fontFamily: _.jsondata.sale_font ? _(_.jsondata.sale_font, _) : void 0,
-    fontWeight: 300,
-    fontSize: `${_.jsondata.sale_section_font_size && _.jsondata.sale_section_font_size - 3}px`,
-    letterSpacing: 0,
-    lineHeight: `${_.jsondata.sale_section_font_size}px`,
-    textTransform: _.jsondata.sale_section_disable_capitalize
-      ? `initial`
-      : void 0,
-    color: _.label_color,
-    opacity: `50%`,
-  };
-}
-function _(_, _) {
-  return (
-    (_ ||= ``),
-    _ === 12
-      ? _.replace(`Jolly Lodger`, `New Rocker`)
-      : _ === 23 || _ === 19 || _ === 24 || _ === 18 || _ === 8 || _ === 26
-        ? _.replace(`Sigmar One`, `Play`)
-        : _ === 6
-          ? _.replace(`Sigmar One`, `Noto Serif SC`)
-          : _ === 7
-            ? _.replace(`Sigmar One`, `Noto Serif TC`)
-            : _ === 10
-              ? _.replace(`Sigmar One`, `M PLUS Rounded 1c`)
-              : _ === 4
-                ? _.replace(`Sigmar One`, `Black Han Sans`)
-                : _ === 9
-                  ? _.replace(`Sigmar One`, `Prompt`)
-                  : _
-  );
-}
-function _(_) {
-  let { saleSection: _, editLanguage: _, eventModel: _, index: _ } = _,
-    _ = _(),
-    _;
-  ((_ = _(() => _(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation))),
-    (_ ||= _(`#Sale_Section_Header`, _ + 1)));
-  let _ = `#Sale_Section_Type_` + _.section_type,
-    _ = _(_);
-  return _ === _
-    ? _
-    : (0, _.jsxs)(_.Fragment, {
-        children: [
-          _,
-          ` `,
-          (0, _.jsxs)(`span`, {
-            children: [`(`, _, `)`],
-          }),
-        ],
-      });
-}
-function _(_, _, _, _, _) {
-  let _ = _(_, _, _, _.clanSteamID.GetAccountID(), _);
-  if (_) return _;
-  let _ = _(`#Sale_Section_Header`, _ + 1),
-    _ = `#Sale_Section_Type_` + (_?.section_type || `unknowntype`),
-    _ = _(_);
-  if (_ !== _) return `${_} (${_})`;
 }
 function _(_) {
   return _.map((_) => _.unique_id)
@@ -2250,27 +2994,8 @@ var _ = `terminal`,
       _
     );
   })({}),
-  _ = `questdoor_`;
-function _(_) {
-  return _.type !== `sub` && _.type !== `bundle`;
-}
-function _(_, _, _, _) {
-  let _ = [];
-  for (let _ of _)
-    if ((!_ || _.has(_)) && !_(_) && (_.push(_), _.length >= _)) break;
-  return _;
-}
-function _(_, _, _, _ = new Set()) {
-  for (let _ of _.GetSaleSections())
-    if (!(!_(_.section_type) || (_ && !_.BIncludeSection(_))))
-      for (let _ of _.capsules) _(_) && _.add(_._);
-  for (let _ of _ ?? []) {
-    let _ = _.capsule;
-    _(_) && (!_ || _.BIncludeLinkedCapsule(_)) && _.add(_._);
-  }
-  return _;
-}
-var _ = [
+  _ = `questdoor_`,
+  _ = [
     {
       nOptInTagID: 9,
       rgChildren: [
@@ -2842,9 +3567,18 @@ function _(_) {
   };
 }
 function _(_, _, _) {
-  if (!_) return;
+  let _ = () => {
+    if (!_?.bNoAllOption) return;
+    let _ = _(_).find(_);
+    return _
+      ? {
+          strParentKey: _(_),
+        }
+      : void 0;
+  };
+  if (!_) return _();
   let _ = _(_(_), _.strParentKey);
-  if (!_ || !_(_)) return;
+  if (!_ || !_(_)) return _();
   if (!_.strChildKey) return _;
   let _ = _(_.rgChildren ?? [], _.strChildKey);
   return !_ || !_(_)
@@ -2898,688 +3632,6 @@ function _(_, _, _) {
       type: _.k_EStoreFilterClauseTypeAnd,
       rgSubexpressions: [_(_, _), _(_, _)],
     };
-}
-var _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.count || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            count: {
-              _: 1,
-              _: _.readInt32,
-              _: _.writeInt32,
-            },
-            additional_source_items: {
-              _: 2,
-              _: _,
-              _: !0,
-              _: !0,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Request`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.recommendations || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            recommendations: {
-              _: 1,
-              _: _,
-              _: !0,
-              _: !0,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.item_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            item_id: {
-              _: 1,
-              _: _,
-            },
-            weight: {
-              _: 2,
-              _: _.readFloat,
-              _: _.writeFloat,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response_Recommendation`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.count || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            count: {
-              _: 1,
-              _: _.readInt32,
-              _: _.writeInt32,
-            },
-            item_ids: {
-              _: 2,
-              _: _,
-              _: !0,
-              _: !0,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Request`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.recommendations || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            recommendations: {
-              _: 1,
-              _: _,
-              _: !0,
-              _: !0,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.item_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            item_id: {
-              _: 1,
-              _: _,
-            },
-            weight: {
-              _: 2,
-              _: _.readFloat,
-              _: _.writeFloat,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response_Recommendation`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.start || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            start: {
-              _: 1,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-            count: {
-              _: 2,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetLiveSales_Request`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.sales || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            sales: {
-              _: 1,
-              _: _,
-              _: !0,
-              _: !0,
-            },
-            total_count: {
-              _: 2,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetLiveSales_Response`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.clan_account_id || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            clan_account_id: {
-              _: 1,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-            clan_event_gid: {
-              _: 2,
-              _: _.readFixed64String,
-              _: _.writeFixed64String,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStoreRecommendations_GetLiveSales_Response_Sale`;
-    }
-  },
-  _;
-(function (_) {
-  function _(_, _, _) {
-    return _.SendMsg(
-      `StoreRecommendations.GetPackagePurchaseRecommendations#1`,
-      _(_, _, _),
-      _,
-      {
-        bConstMethod: !0,
-        ePrivilege: 1,
-      },
-    );
-  }
-  _.GetPackagePurchaseRecommendations = _;
-  function _(_, _, _) {
-    return _.SendMsg(
-      `StoreRecommendations.GetPackagePurchaseRecommendationsForItems#1`,
-      _(_, _, _),
-      _,
-      {
-        bConstMethod: !0,
-        ePrivilege: 0,
-        eWebAPIKeyRequirement: 1,
-      },
-    );
-  }
-  _.GetPackagePurchaseRecommendationsForItems = _;
-  function _(_, _, _) {
-    return _.SendMsg(`StoreRecommendations.GetLiveSales#1`, _(_, _, _), _, {
-      bConstMethod: !0,
-      ePrivilege: 0,
-      eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`],
-    });
-  }
-  _.GetLiveSales = _;
-})((_ ||= {}));
-var _ = `saleaction/recommendeddiscounts`;
-function _(_) {
-  let _ = new URLSearchParams(),
-    { contentHub: _ } = _;
-  return (
-    _ &&
-      (_.set(`hub_type`, _.strHubType),
-      _.strCategory && _.set(`hub_category`, _.strCategory),
-      _.nTagID && _.set(`hub_tagid`, String(_.nTagID))),
-    _.toString()
-  );
-}
-async function _(_, _, _) {
-  let _ = _(_),
-    _ = `${_.STORE_BASE_URL}${_}${_ ? `?${_}` : ``}`,
-    _ = await fetch(_, {
-      credentials: `include`,
-    });
-  if (!_._) throw Error(`${_} answered ${_.status}`);
-  let _ = await _.json();
-  if (_?.success !== 1 || !_.discounts)
-    throw Error(`${_} answered EResult ${_?.success}`);
-  return _.discounts;
-}
-var _ = 6e5;
-function _(_, _, _, _) {
-  return {
-    queryKey: [
-      `RecommendedDiscounts`,
-      _ ?? 0,
-      _.country,
-      _ ? JSON.stringify(_) : null,
-    ],
-    queryFn: () =>
-      _(_, _.country, {
-        contentHub: _,
-      }),
-    staleTime: _,
-  };
-}
-function _(_, _) {
-  return _.rgReasonLists.find((_) => _.eReason === _)?.rgAppIDs ?? [];
-}
-function _(_) {
-  if (_.jsondata.item_source_type !== _.k_EContentHub) return;
-  let _ = _.GetContentHub();
-  if (_?.type)
-    return {
-      strHubType: _.type,
-      strCategory: _.category,
-      nTagID: _.tagid,
-    };
-}
-function _(_, _, _) {
-  if (_)
-    return _.smart_section_discount_reason === void 0
-      ? []
-      : _(_, _.smart_section_discount_reason).slice(0, _);
-}
-var _ = {
-  1: `#Sale_default_label_OnYourWishlist`,
-  2: `#Sale_DiscountReason_Section_FirstTimeOnSale`,
-  3: `#Sale_DiscountReason_Section_LargestDiscount`,
-  4: `#Sale_DiscountReason_Section_EndingSoon`,
-  5: `#Sale_DiscountReason_Section_NewlyOnSale`,
-  6: `#Sale_DiscountReason_Section_WellReviewed`,
-  7: `#Sale_DiscountReason_Section_TopSeller`,
-  8: `#Sale_DiscountReason_Section_HotDeal`,
-  9: `#Sale_DiscountReason_Section_DeepDiscount`,
-  10: `#Sale_DiscountReason_Section_PopularInRegion`,
-};
-function _(_) {
-  return _.smart_section_discount_reason === void 0
-    ? void 0
-    : _[_.smart_section_discount_reason];
 }
 function _(_, _) {
   return _ == null || _ == null || !_(_)
@@ -3838,6 +3890,32 @@ var _ = `sale`,
   _ = `view_jump_to_section`;
 function _(_) {
   return !!_ && typeof _ == `object`;
+}
+function _(_) {
+  let _ = {
+    ..._,
+  };
+  if (!_) return _;
+  if (
+    _.type === _.k_EStoreFilterClauseTypeOr ||
+    _.type === _.k_EStoreFilterClauseTypeAnd
+  ) {
+    if (!_.rgSubexpressions || _.rgSubexpressions.length === 0) return null;
+    if (
+      ((_.rgSubexpressions = _(_.rgSubexpressions.map((_) => _(_)))),
+      !_.bNegated && _.rgSubexpressions.length === 1)
+    )
+      return _.rgSubexpressions[0];
+    if (!_.bNegated) {
+      let _ = [];
+      for (let _ of _.rgSubexpressions)
+        !_.bNegated && _.type === _.type
+          ? (_ = _.concat(_.rgSubexpressions ?? []))
+          : _.push(_);
+      _.rgSubexpressions = _;
+    }
+  }
+  return _;
 }
 var _ = `_1i4D-abW7us-`,
   _ = `InaZA4MxyUE-`,
@@ -4655,62 +4733,6 @@ function _(_) {
     ],
   });
 }
-function _(_, _, _) {
-  let _ = _,
-    _ = 0;
-  for (_ = 0; _ < _; _++) {
-    let _ = _[_ % _.length];
-    if (_ < _) break;
-    _ -= _;
-  }
-  return _;
-}
-function _(_, _) {
-  if (_(_)) return 0;
-  let _ = _(_);
-  return _ <= 0 ? 0 : _ + _;
-}
-function _(_, _, _, _, _) {
-  let _ =
-    `section_` +
-    _ +
-    `_` +
-    _.GID +
-    (_ || 0) +
-    _(_.unique_id ? _.unique_id.toString() : JSON.stringify(_)).toString();
-  return (
-    _ &&
-      _.rtime32_last_local_modification &&
-      (_ += `_` + _.rtime32_last_local_modification),
-    _
-  );
-}
-function _(_) {
-  let _ = {
-    ..._,
-  };
-  if (!_) return _;
-  if (
-    _.type === _.k_EStoreFilterClauseTypeOr ||
-    _.type === _.k_EStoreFilterClauseTypeAnd
-  ) {
-    if (!_.rgSubexpressions || _.rgSubexpressions.length === 0) return null;
-    if (
-      ((_.rgSubexpressions = _(_.rgSubexpressions.map((_) => _(_)))),
-      !_.bNegated && _.rgSubexpressions.length === 1)
-    )
-      return _.rgSubexpressions[0];
-    if (!_.bNegated) {
-      let _ = [];
-      for (let _ of _.rgSubexpressions)
-        !_.bNegated && _.type === _.type
-          ? (_ = _.concat(_.rgSubexpressions ?? []))
-          : _.push(_);
-      _.rgSubexpressions = _;
-    }
-  }
-  return _;
-}
 function _(_) {
   let { _: _, type: _ } = _,
     _ = _({
@@ -4920,6 +4942,15 @@ function _(_, _) {
     _.unique_id + `_` + _,
   );
 }
+var _ = _.createContext(void 0);
+function _(_) {
+  let _ = _.useContext(_)?.(_.capsule);
+  return _ === void 0
+    ? (0, _.jsx)(_, {
+        ..._,
+      })
+    : _;
+}
 function _(_, _) {
   let {
     capsuleStyle: _,
@@ -5099,13 +5130,34 @@ function _(_, _, _, _, _, _, _, _, _, _) {
     _ = null,
     _ = !1,
     _ = _ ? [1] : _,
-    _ = _;
-  _ && (_ > 1 || _[0] == `tall`) && (_ = [`fullrow`]);
+    _ = _,
+    _ = _.length;
+  (_ &&
+  _ &&
+  _ > 1 &&
+  _ <= Math.min(4, _) &&
+  (_ < _[0] || (_ > _[0] && (!_ || _ > 1)))
+    ? ((_ = [_]), (_ = [`grid`]))
+    : _ &&
+      _ &&
+      _ &&
+      _ > 1 &&
+      _ > _[0] &&
+      _ < _(_, _, _, _, _) &&
+      (_ = Array.from(
+        {
+          length: _,
+        },
+        (_, _) => Math.floor((_ + _) / _),
+      )),
+    _ && (_ > 1 || _[0] == `tall`)
+      ? (_ = [`fullrow`])
+      : _ && _.length === 2 && _[0] === `tall` && (_ = [`grid`]));
   let _ = _ && (_ <= 1 || (!!_ && !_)),
     _ = Math.min(_[0], _);
   if (_ && _) {
     let _ = _ ? _ : _(_, _, _, _, _);
-    _ = _(_, _);
+    _ = _(_, _, !_);
   }
   if (_ && _.length > _)
     _ = (0, _.createElement)(
@@ -5231,9 +5283,9 @@ function _(_, _, _, _, _) {
   }
   return _;
 }
-function _(_, _) {
+function _(_, _, _) {
   if (_.length <= _) return _;
-  let _ = Math.min(_ - 2, _),
+  let _ = _ ? _ - 1 : Math.min(_ - 2, _),
     _ = _.length % _;
   return _ === 0 || _ > _ ? _ : _.slice(0, _.length - _);
 }
@@ -5643,7 +5695,7 @@ function _(_, _, _) {
     _ = _.filter((_) => _.name && !_.has(_.tagid)).slice(0, _),
     _ = _.recommended_tag_tab_as_menu
       ? _.length
-        ? [_(_, _.unique_id)]
+        ? [_(_, _)]
         : []
       : _.map((_) => _(_, _.unique_id, _));
   return _.length == 0 ? _ : [..._.slice(0, _ + 1), ..._, ..._.slice(_ + 1)];
@@ -5683,25 +5735,18 @@ function _(_, _, _) {
   );
 }
 function _(_, _) {
-  let _ = _.map((_) => ({
-    nTagID: _.tagid,
-  }));
   return {
     unique_id: _,
     default_label: `#Sale_Tabs_RecommendedTagsMenu`,
     localized_label: [],
     capsules: [],
-    store_filter: {
-      type: _.k_EStoreFilterClauseTypeOr,
-      rgSubexpressions: _.map((_) => ({
-        type: _.k_EStoreFilterClauseTypeStoreTag,
-        value: _.tagid,
-      })),
-    },
     tab_tag_filter: {
-      rgNodes: _,
+      rgNodes: _.map((_) => ({
+        nTagID: _.tagid,
+      })),
+      bNoAllOption: _.tab_tag_filter?.bNoAllOption,
     },
-    template_tab_id: _,
+    template_tab_id: _.unique_id,
   };
 }
 function _(_, _) {
@@ -7139,8 +7184,7 @@ var _ = _,
       }),
       _
     );
-  },
-  _ = _(_());
+  };
 function _(_, _) {}
 (_.bind(null, `warn`), _.bind(null, `error`));
 function _() {}
@@ -31412,281 +31456,6 @@ function _() {
 function _() {
   return !!_().bHideDLC;
 }
-var _ = 1,
-  _ = _.PerHour;
-function _(_, _, _, _) {
-  let _ = _(
-      _,
-      _.rtime32_last_modified,
-      (_) => `groups` in _ && Array.isArray(_.groups),
-    ),
-    _ = [],
-    _ = [],
-    _ = _ > 0 ? Math.min(_, _.length) : _.length;
-  if (_)
-    for (let _ of _.data.groups) {
-      let _ = _.splice(0, _.nCount),
-        _ = _(_.nSeed);
-      (_(_, Math.min(_, _.length), _),
-        (_ -= Math.min(_, _.length)),
-        _.push(..._),
-        _.push(_));
-    }
-  if (_.length > 0) {
-    if (_ > 0) {
-      let _ = {
-          nCount: _,
-          nSeed: _(),
-        },
-        _ = _(_.nSeed);
-      (_(_, _, _),
-        _.push(..._),
-        _.push(_),
-        _(_, _.rtime32_last_modified, {
-          groups: _,
-        }));
-    } else _.push(..._);
-  }
-  return _;
-}
-function _(_, _, _, _, _) {
-  return !_(_, _, _) || _.length <= 1 ? _ : _(_, _, _, _.random_order_top_x);
-}
-function _(_, _, _) {
-  let [_] = _(_, void 0);
-  return _.useMemo(() => _(_, _, _, _), [_, _, _, _]);
-}
-function _(_, _, _, _) {
-  if (!_(_, _, _) || !window.sessionStorage) return _;
-  let _ = _(_, _, _, `section`),
-    _ = _(
-      _,
-      _.rtime32_last_modified,
-      (_) => `nSeed` in _ && Number.isInteger(_.nSeed),
-    ),
-    _ = _ ? _.data.nSeed : _(),
-    _ = _(_),
-    _ = _.random_order_top_x ?? 0,
-    _ = JSON.parse(JSON.stringify(_));
-  return (
-    _(_.links, _, _),
-    _(_, _.rtime32_last_modified, {
-      nSeed: _,
-    }),
-    _
-  );
-}
-function _(_) {
-  let _ = `nextfest_personalized_` + _.GID,
-    _ = _(
-      _,
-      _.rtime32_last_modified,
-      (_) => `nSeed` in _ && Number.isInteger(_.nSeed),
-    );
-  if (_) return _.data.nSeed;
-  let _ = _();
-  try {
-    _(
-      _,
-      _.rtime32_last_modified,
-      {
-        nSeed: _,
-      },
-      _,
-    );
-  } catch {}
-  return _;
-}
-function _(_, _) {
-  let _ = (_ ^ Math.imul(_, 2654435761)) >>> 0;
-  return (
-    (_ = Math.imul(_ ^ (_ >>> 16), 2246822507)),
-    (_ = Math.imul(_ ^ (_ >>> 13), 3266489909)),
-    (_ = (_ ^ (_ >>> 16)) >>> 0),
-    (_ + 0.5) / 4294967296
-  );
-}
-function _(_, _, _) {
-  let _;
-  try {
-    let _ = window.sessionStorage.getItem(_);
-    _ = _ && JSON.parse(_);
-  } catch {}
-  if (
-    _ &&
-    _.nVersion == _ &&
-    _.rtLastModified == _ &&
-    !(_.rtExpires && _.rtExpires < Date.now() / 1e3) &&
-    (!_ || _(_.data))
-  )
-    return _;
-}
-function _(_, _, _, _) {
-  let _ = {
-    nVersion: _,
-    rtLastModified: _,
-    data: _,
-  };
-  (_ > 0 && (_.rtExpires = Math.floor(Date.now() / 1e3) + _),
-    window.sessionStorage.setItem(_, JSON.stringify(_)));
-}
-function _(_) {
-  return (_.IN_CLIENT ? `library-` : _() + `-`) + _;
-}
-function _(_) {
-  let _ = _(_);
-  return !!(
-    _.section_type == `discoveryqueue` ||
-    _.section_type == `dlc_for_you` ||
-    _.section_type == `claim_item` ||
-    (_(_.section_type) &&
-      _(_) &&
-      (_ == `wishlist` ||
-        _ == `interactive_recommender` ||
-        _ == `personalized_carousel` ||
-        _ == `dlc_music_onsale` ||
-        _ == `ir_subscription` ||
-        ((_ == `deck_compatibility` || _ == `frame_compatibility`) &&
-          _.smart_section_data_source != `popularity`) ||
-        (_ == `wishlist_onsale` && !_()) ||
-        (_ == `dlc_onsale` && !_()) ||
-        (_ == `interactive_recommender_onsale` && !_())))
-  );
-}
-function _(_) {
-  let { section: _, event: _, language: _ } = _,
-    _ = _();
-  return (0, _.jsxs)(_, {
-    className: _,
-    style: _(_, _, _),
-    children: [
-      (0, _.jsx)(_, {
-        ..._,
-      }),
-      (0, _.jsxs)(_, {
-        className: _,
-        children: [_(`#SalePage_LoginPrompt`), (0, _.jsx)(_, {})],
-      }),
-    ],
-  });
-}
-function _() {
-  let { elDialogElement: _, fnShowLogonDialog: _ } = _();
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      (0, _.jsx)(`button`, {
-        onClick: _,
-        className: _,
-        children: _(`#Login_SignIn`),
-      }),
-      _,
-    ],
-  });
-}
-function _(_, _, _) {
-  let _ = _(_, _),
-    _ = 0;
-  for (; _ > 0;) ((_ -= _[_ % _.length]), _++);
-  return _;
-}
-function _(_, _, _) {
-  let _ = _(_, _),
-    _ = 0;
-  for (let _ = 0; _ < _; _++) _ += _[_ % _.length];
-  return _;
-}
-async function _(_) {
-  let _ = _.clanSteamID.GetAccountID(),
-    _ = _.jsondata.sale_creator_home_filter_listid;
-  return _
-    ? ((await _.fetchQuery(_(_, _))) ?? [])
-    : ((await _.fetchQuery(_(_)))?.GetAppIDList() ?? []);
-}
-async function _(_, _, _) {
-  let _ = _(
-      _,
-      _,
-      {
-        BIncludeSection: (_) =>
-          _.ShouldShowSection(_) &&
-          (!!_.diable_tab_id_filtering || !_.BIsTabFilteringEnabled()),
-        BIncludeLinkedCapsule: (_) =>
-          !_.BIsTabFilteringEnabled() || _.ShouldShowCapsule(_),
-      },
-      new Set(_.GetTabAppIDs()),
-    ),
-    _ = _.clanSteamID.GetAccountID(),
-    _ = _.GetClanInfoByClanAccountID(_);
-  return (
-    _(_, _) &&
-      (await _(_)).forEach((_) => {
-        (!_.BIsTabFilteringEnabled() ||
-          _.ShouldShowCapsule({
-            type: `game`,
-            _: _,
-          })) &&
-          _.add(_);
-      }),
-    _
-  );
-}
-function _(_, _, _, _) {
-  if (_?.length > 0 && _.BIsNextFest() && !_(_, _, _)) {
-    let _ = _(`rgMLRecommenderWishlist`, `application_config`);
-    if (Array.isArray(_) && _.length > 0 && Number.isInteger(_[0])) {
-      let _ = _.jsondata.sale_ml_recommender_weight_exponent || 2.5;
-      _ = _(_, _, (_) => _._, _(_), _);
-    }
-  }
-  return _;
-}
-async function _(_, _, _, _) {
-  if (!_?.length) return _;
-  _ && (_ = _.filter((_) => _.BCapsulePassesTagFilter(_)));
-  let _ = _.clanSteamID.GetAccountID(),
-    _ = _.GetClanInfoByClanAccountID(_);
-  if (_(_, _)) {
-    let _ = new Set(await _(_));
-    _ = _.filter((_) => {
-      if (_) {
-        if (_.type == `sub` || _.type == `bundle`) {
-          let _ = _.Get().GetStoreItem(_._, _(_.type)),
-            _ = _.GetEventType() == 36;
-          return _
-            ? _
-              ? _.GetIncludedAppIDs().every((_) => _.has(_))
-              : _.GetIncludedAppIDs().some((_) => _.has(_))
-            : !1;
-        }
-        return _.has(_._);
-      }
-      return !1;
-    });
-  }
-  return _;
-}
-function _(_, _, _, _, _) {
-  let _ = new Map(_.map((_, _) => [_, _])),
-    _ = _ >= 0,
-    _ = [],
-    _ = [];
-  for (let _ of _) {
-    let _ = _(_),
-      _ = _(_, _),
-      _ = _.get(_);
-    _ === void 0
-      ? _.push({
-          item: _,
-          flSortKey: _ ? _ : 0,
-        })
-      : _.push({
-          item: _,
-          flSortKey: _ ? Math.log(_) * (_ + 1) ** +_ : -_,
-        });
-  }
-  let _ = (_, _) => _.flSortKey - _.flSortKey;
-  return [..._.sort(_), ..._.sort(_)].map((_) => _.item);
-}
 var _ = `W1h-HVvj740-`,
   _ = `_1scrqu9PqmI-`,
   _ = `EOZK-r1nqgU-`,
@@ -31763,7 +31532,7 @@ function _(_) {
       event_count: _.events?.length ?? 0,
       link_count: _.links?.length ?? 0,
       itemdef_count: _.itemdefs?.length ?? 0,
-      requires_login: _(_),
+      requires_login: _(_, _()),
       smart_section: _(_),
       carousel: _(_),
       faceted_browsing: !!_.enable_faceted_browsing,
@@ -35119,7 +34888,7 @@ function _(_, _) {
             {
               data: `discount_reason`,
               label: `Discounts by reason`,
-              tooltip: `Shows the apps on sale for one reason (on the wishlist, first time on sale, largest discount, ending soon, newly on sale, well reviewed, top seller), ranked for the signed-in user. Not limited to the games featured on this sale page; on a content hub page, limited to the hub. Pick the reason below.`,
+              tooltip: `Shows the apps on sale for one compelling discount related reason `,
             },
             _ && {
               data: `contenthub_popular`,
@@ -35293,55 +35062,41 @@ function _(_) {
     }),
   });
 }
-var _ = [
-  {
-    label: `On the user's wishlist`,
-    data: 1,
-  },
-  {
-    label: `First time on sale`,
-    data: 2,
-  },
-  {
-    label: `Largest discount yet`,
-    data: 3,
-  },
-  {
-    label: `Ending soon`,
-    data: 4,
-  },
-  {
-    label: `Newly on sale`,
-    data: 5,
-  },
-  {
-    label: `Well reviewed`,
-    data: 6,
-  },
-  {
-    label: `Top seller`,
-    data: 7,
-  },
-];
 function _(_) {
   let { editModel: _, saleSection: _ } = _,
-    _ = _(() => _.smart_section_discount_reason);
-  return (0, _.jsx)(_, {
+    _ = _(() => _.smart_section_discount_reason),
+    _ = _(() => _(_.GetEventModel())),
+    _ = (0, _.useMemo)(
+      () =>
+        _().map((_) => ({
+          label: _(_.strTitleToken),
+          data: _.eReason,
+        })),
+      [],
+    );
+  return (0, _.jsxs)(_, {
     clanSteamID: _.GetClanSteamID(),
-    children: (0, _.jsx)(_, {
-      label: `(VO) Discount reason`,
-      tooltip: `Shows the apps on sale StoreRecommendations.GetRecommendedDiscounts lists for this reason, ranked for the signed-in user, or by popularity when signed out. On a content hub page only the hub's apps are picked.`,
-      strDropDownClassName: _,
-      rgOptions: _,
-      selectedOption: _,
-      onChange: (_) => {
-        ((_.smart_section_discount_reason = _.data),
-          _.SetDirty(_.jsondata_sales));
-      },
-      contextMenuPositionOptions: {
-        bDisablePopTop: !0,
-      },
-    }),
+    children: [
+      (0, _.jsx)(_, {
+        label: `(VO) Discount reason`,
+        tooltip: `Shows the apps on sale StoreRecommendations.GetRecommendedDiscounts lists for this reason, ranked for the signed-in user, or by popularity when signed out. On a content hub page only the hub's apps are picked. The reason also sets the section's title and subtitle.`,
+        strDropDownClassName: _,
+        rgOptions: _,
+        selectedOption: _,
+        onChange: (_) => {
+          ((_.smart_section_discount_reason = _.data),
+            _.SetDirty(_.jsondata_sales));
+        },
+        contextMenuPositionOptions: {
+          bDisablePopTop: !0,
+        },
+      }),
+      _ &&
+        (0, _.jsx)(`div`, {
+          className: `QNb3vHdws-s-`,
+          children: _,
+        }),
+    ],
   });
 }
 function _(_) {
@@ -41121,7 +40876,7 @@ function _(_, _) {
   );
 }
 function _(_) {
-  let { setting: _, fnUpdateSetting: _, label: _ } = _,
+  let { setting: _, fnUpdateSetting: _, label: _, bHideBlur: _ } = _,
     _ = _.useMemo(() => {
       let _ = [];
       return (
@@ -41141,13 +40896,14 @@ function _(_) {
           label: _(`#EventEditor_Tile_Repeat`),
           data: `repeat`,
         }),
-        _.push({
-          label: _(`#EventEditor_Tile_NoRepeatAndBlur`),
-          data: `coverBlur`,
-        }),
+        _ ||
+          _.push({
+            label: _(`#EventEditor_Tile_NoRepeatAndBlur`),
+            data: `coverBlur`,
+          }),
         _
       );
-    }, []);
+    }, [_]);
   return (0, _.jsxs)(_.Fragment, {
     children: [
       (0, _.jsx)(_, {
@@ -54555,6 +54311,10 @@ var _ = _((_) => {
           label: `Testing the Great on Deck grid display`,
           data: `greatondeck_librarygrid`,
         },
+        {
+          label: _(`#Sale_VOInternalSection_JustUpdated`),
+          data: `just_updated`,
+        },
       ],
       _ = _?.internal_type,
       _ = [];
@@ -54578,6 +54338,7 @@ var _ = _((_) => {
         _ !== `cyoa_story` &&
           _ !== `reservation_widget` &&
           _ !== `while_supplies_last` &&
+          _ !== `just_updated` &&
           (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {
@@ -56063,7 +55824,8 @@ var _ = `ASrRByRF-bQ-`,
     let _ = _(),
       _ =
         !!_(_, _.GetEventModel(), _.eLocation) ||
-        _.section_type == `title_image`,
+        _.section_type == `title_image` ||
+        _(_) === `discount_reason`,
       _ = _ === `crosspromotesalepage`;
     return (0, _.jsxs)(_.Fragment, {
       children: [
@@ -56612,7 +56374,7 @@ var _ = _((_) => {
     } = _.GetEventModel().jsondata,
     _ = _.section_type || _[0].data,
     _ = _(_),
-    _ = _.GetClanSteamID().GetAccountID() == _,
+    _ = _(_.GetClanSteamID().GetAccountID()),
     _ = _(_.section_type),
     _ = _(_, _),
     _ = _(
@@ -57042,7 +56804,7 @@ function _() {
   return _(new _(_.WEBAPI_BASE_URL, _));
 }
 function _(_) {
-  return _(`partnerbrowse_webapi_token`, `application_config`)
+  return _(`use_partner_store_browse`, `application_config`)
     ? (0, _.jsx)(_, {
         children: _.children,
       })
@@ -62692,47 +62454,59 @@ var _ = class _ {
               _,
             )),
             this.SetDirty(64))
-          : _ === `sale_overlay` && _.localized_sale_overlay[_] !== _
-            ? ((_.localized_sale_overlay[_] = _), this.SetDirty(64))
-            : _ === `product_banner` &&
-                _.Get(_.localized_sale_product_banner, _) !== _
-              ? ((_.localized_sale_product_banner = _.Set(
-                  _.localized_sale_product_banner || [],
-                  _,
-                  _,
-                )),
-                this.SetDirty(64))
-              : _ === `product_mobile_banner` &&
-                  _.Get(_.localized_sale_product_mobile_banner, _) !== _
-                ? ((_.localized_sale_product_mobile_banner = _.Set(
-                    _.localized_sale_product_mobile_banner || [],
+          : _ === `sale_secondary_background` &&
+              _.Get(_.localized_sale_secondary_background_image, _) !== _
+            ? ((_.localized_sale_secondary_background_image = _.Set(
+                _.localized_sale_secondary_background_image || [],
+                _,
+                _,
+              )),
+              this.SetDirty(64))
+            : _ === `sale_overlay` && _.localized_sale_overlay[_] !== _
+              ? ((_.localized_sale_overlay[_] = _), this.SetDirty(64))
+              : _ === `product_banner` &&
+                  _.Get(_.localized_sale_product_banner, _) !== _
+                ? ((_.localized_sale_product_banner = _.Set(
+                    _.localized_sale_product_banner || [],
                     _,
                     _,
                   )),
                   this.SetDirty(64))
-                : _.includes(_)
-                  ? (_ &&
-                      _.GetAllLocalizedGroupImages().length == 0 &&
-                      _.SetPrimaryImageForImageGroup(_, _),
-                    _.SetLocalizedImageGroupAtLang(_, this.GetClanSteamID(), _))
-                  : _ === `bestofyear_banner`
-                    ? ((_.localized_bestofyear_banner = _.Set(
-                        _.localized_bestofyear_banner || [],
+                : _ === `product_mobile_banner` &&
+                    _.Get(_.localized_sale_product_mobile_banner, _) !== _
+                  ? ((_.localized_sale_product_mobile_banner = _.Set(
+                      _.localized_sale_product_mobile_banner || [],
+                      _,
+                      _,
+                    )),
+                    this.SetDirty(64))
+                  : _.includes(_)
+                    ? (_ &&
+                        _.GetAllLocalizedGroupImages().length == 0 &&
+                        _.SetPrimaryImageForImageGroup(_, _),
+                      _.SetLocalizedImageGroupAtLang(
                         _,
+                        this.GetClanSteamID(),
                         _,
-                      )),
-                      this.SetDirty(64))
-                    : _ === `bestofyear_banner_mobile`
-                      ? ((_.localized_bestofyear_banner_mobile = _.Set(
-                          _.localized_bestofyear_banner_mobile || [],
+                      ))
+                    : _ === `bestofyear_banner`
+                      ? ((_.localized_bestofyear_banner = _.Set(
+                          _.localized_bestofyear_banner || [],
                           _,
                           _,
                         )),
                         this.SetDirty(64))
-                      : _ === `localized_image_group` &&
-                        console.error(
-                          `Attempting to save localized image via editor model, not supported, it belong to the store itself`,
-                        );
+                      : _ === `bestofyear_banner_mobile`
+                        ? ((_.localized_bestofyear_banner_mobile = _.Set(
+                            _.localized_bestofyear_banner_mobile || [],
+                            _,
+                            _,
+                          )),
+                          this.SetDirty(64))
+                        : _ === `localized_image_group` &&
+                          console.error(
+                            `Attempting to save localized image via editor model, not supported, it belong to the store itself`,
+                          );
   }
   GetImageURL(_, _ = 0, _ = _.full) {
     return this.m_curModel.GetImageURL(_, _, _);

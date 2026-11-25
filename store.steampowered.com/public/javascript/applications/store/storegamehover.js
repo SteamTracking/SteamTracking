@@ -2,15 +2,15 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n } from "./chunk~01cfc309bf.js";
 import {
-  Gc as r,
-  Qc as i,
+  $c as r,
+  Kc as i,
   Zt as a,
-  hl as o,
-  nx as s,
-  oy as c,
-  td as l,
+  gl as o,
+  nd as s,
+  rx as c,
+  sy as l,
 } from "./main.js";
 var u = e(t(), 1),
   d = n();
@@ -31,7 +31,7 @@ function p(e) {
       children: o,
     } = e,
     s = u.useRef(null),
-    l = u.useCallback(
+    c = u.useCallback(
       (e) => {
         let n = f(t);
         n &&
@@ -42,7 +42,7 @@ function p(e) {
               (s.current.dataset.hoverDisableScreenshots = `true`),
             window.GameHover(r ? r() : s.current, e, `global_hover`, {
               type: n,
-              id: c(t).id,
+              id: l(t).id,
               v6: 1,
             })));
       },
@@ -60,23 +60,23 @@ function p(e) {
   return (0, d.jsx)(`div`, {
     ref: s,
     className: n,
-    onMouseEnter: l,
+    onMouseEnter: c,
     onMouseLeave: p,
-    onFocus: l,
+    onFocus: c,
     onBlur: p,
     children: o,
   });
 }
 function m(e) {
   let { id: t, strExtraParams: n, fnOnClickOverride: u, strOverrideURL: m } = e,
-    h = l(),
+    h = s(),
     g = a(),
-    _ = i(
+    _ = r(
       m ||
         (t && `creatorid` in t
-          ? r(`${s.STORE_BASE_URL}curator/${c(t).id}${n ? `?${n}` : ``}`, h, g)
-          : r(
-              `${s.STORE_BASE_URL}${f(t)}/${c(t).id}${n ? `?${n}` : ``}`,
+          ? i(`${c.STORE_BASE_URL}curator/${l(t).id}${n ? `?${n}` : ``}`, h, g)
+          : i(
+              `${c.STORE_BASE_URL}${f(t)}/${l(t).id}${n ? `?${n}` : ``}`,
               h,
               g,
             )),
@@ -86,7 +86,7 @@ function m(e) {
     children: (0, d.jsx)(o, {
       className: e.className,
       href: u ? void 0 : _,
-      target: s.IN_CLIENT || u ? void 0 : `_blank`,
+      target: c.IN_CLIENT || u ? void 0 : `_blank`,
       rel: `noopener noreferrer`,
       onClick: u,
       children: e.children,

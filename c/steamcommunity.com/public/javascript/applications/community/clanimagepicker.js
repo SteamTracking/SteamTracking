@@ -1,10 +1,10 @@
 import { _, _ } from "./chunk~f025431ab0.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~01cfc309bf.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~3f4314f3b4.js";
-import { _ } from "./chunk~eefd71512b.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~3f4314f3b4.js";
 import { _, _, _ } from "./chunk~018ae802ee.js";
+import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~05a38bc848.js";
-import { _, _, _, _ } from "./chunk~77ea210942.js";
+import { _, _, _ } from "./chunk~77ea210942.js";
 import { _, _, _ } from "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~2e61cac879.js";
 import { _ } from "./chunk~79ae1444d5.js";
@@ -3441,6 +3441,10 @@ function _(_) {
             (0, _.jsx)(_, {
               imgURL: _,
             }),
+          _ === `sale_secondary_background` &&
+            (0, _.jsx)(_, {
+              imgURL: _,
+            }),
           _ === `sale_overlay` &&
             (0, _.jsx)(_, {
               imgURL: _,
@@ -4064,29 +4068,53 @@ function _(_) {
                                   }),
                                 ],
                               }))
-                            : (_ === `bestofyear_banner` ||
-                                _ === `bestofyear_banner_mobile`) &&
-                              (_ = (0, _.jsxs)(_.Fragment, {
-                                children: [
-                                  (0, _.jsx)(`div`, {
-                                    className: _,
-                                    children: _(
-                                      `#selectimage_tip_required_title`,
-                                    ),
-                                  }),
-                                  (0, _.jsxs)(`p`, {
-                                    children: [
-                                      (0, _.jsx)(`b`, {
-                                        children: _(
-                                          `#selectimage_tip_usage_title`,
+                            : _ === `sale_secondary_background`
+                              ? (_ = (0, _.jsxs)(_.Fragment, {
+                                  children: [
+                                    (0, _.jsx)(`div`, {
+                                      className: _,
+                                      children: _(
+                                        `#selectimage_tip_optional_title`,
+                                      ),
+                                    }),
+                                    (0, _.jsxs)(`p`, {
+                                      children: [
+                                        (0, _.jsx)(`b`, {
+                                          children: _(
+                                            `#selectimage_tip_usage_title`,
+                                          ),
+                                        }),
+                                        `: `,
+                                        _(
+                                          `#selectimage_tip_sale_secondary_background`,
                                         ),
-                                      }),
-                                      `: `,
-                                      _(`#selectimage_tip_bestofyear`),
-                                    ],
-                                  }),
-                                ],
-                              }));
+                                      ],
+                                    }),
+                                  ],
+                                }))
+                              : (_ === `bestofyear_banner` ||
+                                  _ === `bestofyear_banner_mobile`) &&
+                                (_ = (0, _.jsxs)(_.Fragment, {
+                                  children: [
+                                    (0, _.jsx)(`div`, {
+                                      className: _,
+                                      children: _(
+                                        `#selectimage_tip_required_title`,
+                                      ),
+                                    }),
+                                    (0, _.jsxs)(`p`, {
+                                      children: [
+                                        (0, _.jsx)(`b`, {
+                                          children: _(
+                                            `#selectimage_tip_usage_title`,
+                                          ),
+                                        }),
+                                        `: `,
+                                        _(`#selectimage_tip_bestofyear`),
+                                      ],
+                                    }),
+                                  ],
+                                }));
   let _ = _[_.artworkType].width,
     _ = _[_.artworkType].height;
   return (0, _.jsxs)(`div`, {
@@ -4133,21 +4161,25 @@ function _(_) {
                 }),
               }),
             _.elEventArtworkExample,
-            `\xA0`,
-            (0, _.jsx)(`br`, {}),
-            _.elAdditionalControls,
-            !!_.fnRemoveAllArtwork &&
-              (0, _.jsx)(_, {
-                className: `_1k0t2Q-C2OU-`,
-                onClick: (_) => {
-                  _(
+            !!(_.elAdditionalControls || _.fnRemoveAllArtwork) &&
+              (0, _.jsxs)(`div`, {
+                className: `WWzuGfx5KX0-`,
+                children: [
+                  _.elAdditionalControls,
+                  !!_.fnRemoveAllArtwork &&
                     (0, _.jsx)(_, {
-                      fnRemoveAllArtwork: _.fnRemoveAllArtwork,
+                      className: `_1k0t2Q-C2OU-`,
+                      onClick: (_) => {
+                        _(
+                          (0, _.jsx)(_, {
+                            fnRemoveAllArtwork: _.fnRemoveAllArtwork,
+                          }),
+                          _(_) ?? window,
+                        );
+                      },
+                      children: _(`#Sale_RemoveAll`),
                     }),
-                    _(_) ?? window,
-                  );
-                },
-                children: _(`#Sale_RemoveAll`),
+                ],
               }),
           ],
         }),

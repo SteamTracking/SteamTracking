@@ -1,127 +1,6 @@
-import {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./chunk~de7f2df91c.js";
-import { _ } from "./chunk~25a6634263.js";
-import { _ } from "./chunk~68b7e78d68.js";
-import { _, _, _ } from "./chunk~1fa4b8f2ff.js";
-import { _, _ } from "./chunk~0a99e05c44.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~de7f2df91c.js";
+import "./chunk~1fa4b8f2ff.js";
 import { _ } from "./chunk~ede3e357a2.js";
-import { _, _ } from "./chunk~2bee5a7d08.js";
-var _ = _(_(), 1),
-  _ = _(_(), 1),
-  _ = `ewL7epZsubk-`,
-  _ = `data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M30.5%2016C30.5%2024.0081%2024.0081%2030.5%2016%2030.5C7.99187%2030.5%201.5%2024.0081%201.5%2016C1.5%207.99187%207.99187%201.5%2016%201.5C24.0081%201.5%2030.5%207.99187%2030.5%2016Z'%20fill='white'/%3e%3cpath%20d='M17.3817%2022.5H14.6183V17.1193L10%209H13.2177L16.0946%2014.4L18.9905%209H22L17.3817%2017.1386V22.5Z'%20fill='%230E141B'/%3e%3c/svg%3e`,
-  _ = _();
-function _(_) {
-  let { label: _, shown: _, button: _ = `Y` } = _;
-  return (0, _.jsxs)(`div`, {
-    className: (0, _.default)(_, _ && `lDd-amB-eCU-`),
-    children: [
-      _ == `X`
-        ? (0, _.jsx)(_, {
-            button: `X`,
-            "aria-label": `X`,
-          })
-        : (0, _.jsx)(`img`, {
-            src: _,
-            alt: `Y`,
-          }),
-      (0, _.jsx)(`div`, {
-        children: _,
-      }),
-    ],
-  });
-}
-function _(_) {
-  return _.section_type === `crosspromotesalepage`
-    ? (_.sale_page_cross_promo_sales ?? [])
-    : [];
-}
-function _(_) {
-  return _(_)[0]?.event_gid || void 0;
-}
-function _(_, _) {
-  return _
-    ? _(`#Sale_CrossPromoSale_SectionTitle`, _.GetNameWithFallback(_) ?? ``)
-    : _(`#Sale_CrossPromoSale_DefaultSectionTitle`);
-}
-function _(_, _) {
-  let _ = _.GetELanguageFallback(_),
-    _ =
-      _.jsondata.localized_sale_cross_promo_logo_image?.findIndex((_) => !!_) ??
-      -1;
-  return (
-    _.GetImageURL(`sale_cross_promo_logo`, _) ||
-    _.GetImageURL(`sale_cross_promo_logo`, _) ||
-    (_ >= 0 ? _.GetImageURL(`sale_cross_promo_logo`, _) : void 0) ||
-    _.GetImageURL(`sale_logo`, _) ||
-    _.GetImageURL(`sale_logo`, _)
-  );
-}
-function _(_, _) {
-  let _ = _.GetSaleSections().filter(
-    (_) => _(_.section_type) && _(_) == `personalized_carousel`,
-  );
-  if (_.length == 0)
-    return {
-      nNumSections: 0,
-      nSectionIndex: -1,
-    };
-  let _ = _.findIndex((_) => _.unique_id == _.unique_id);
-  return {
-    nNumSections: _.length,
-    nSectionIndex: _,
-  };
-}
-function _(_, _, _) {
-  if (!_) return !1;
-  let _ = !_?.bHasHideIgnoredValue || _.bHideIgnored;
-  return (_.ignored && _) ||
-    (_.excluded_tagids?.length ?? 0) > 0 ||
-    (_.excluded_content_descriptorids?.length ?? 0) > 0 ||
-    (_?.bHideOwned && _.already_owned) ||
-    (_?.bHideWishlisted && _.on_wishlist)
-    ? !0
-    : _ && !!(_.already_owned || _.demo_for_owned_game);
-}
-function _(_, _, _) {
-  if (_) return _[_(_, _).nSectionIndex] ?? null;
-}
-function _(_, _) {
-  let _ = _(),
-    _ = _({
-      queries: _.map((_) => {
-        let _ = _(_, _);
-        return _
-          ? {
-              ..._,
-              enabled: !1,
-            }
-          : _;
-      }),
-      combine: _,
-    });
-  return (0, _.useMemo)(() => {
-    if (_ || !_.some((_) => _ === void 0))
-      return _.filter((_, _) => !_(_[_], !1));
-  }, [_, _, _]);
-}
-function _(_) {
-  return _.map((_) => _.data);
-}
 function _(_, _) {
   return !_ || _.startsWith(`https://`) || _.startsWith(`http://`)
     ? _
@@ -5781,28 +5660,28 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.PostChatMessage#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.PostChatMessage = _;
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.UpdateChatMessageFlair#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UpdateChatMessageFlair = _;
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.MuteBroadcastChatUser#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.MuteBroadcastChatUser = _;
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.RemoveUserChatText#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.RemoveUserChatText = _;

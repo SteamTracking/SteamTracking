@@ -3,57 +3,57 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import {
-  Lt as t,
-  ft as n,
-  it as r,
-  l as i,
-  st as a,
+  It as t,
+  c as n,
+  dt as r,
+  ot as i,
+  rt as a,
 } from "./chunk~01cfc309bf.js";
-import { In as o } from "./chunk~6b8ddcaac8.js";
+import { Jn as o } from "./chunk~6b8ddcaac8.js";
 import { ct as s } from "./chunk~f57d770d64.js";
 import { t as c } from "./chunk~eefd71512b.js";
 import { c as l, n as u, t as d } from "./chunk~6cf3fe3e07.js";
 import {
   $c as f,
   $r as p,
-  $y as m,
-  Bc as h,
-  Fr as g,
+  AS as m,
+  ES as h,
+  Fr as ee,
+  IS as g,
   Jc as _,
-  Jr as ee,
-  Kb as v,
-  Kl as te,
-  Lx as ne,
-  Nc as y,
-  OS as b,
-  PS as x,
+  Jr as te,
+  Mo as ne,
+  Pc as v,
   Pr as re,
   Qc as ie,
-  Qx as S,
-  Yc as C,
-  Zc as ae,
-  _x as w,
-  bt as oe,
-  hl as se,
-  jo as ce,
-  nx as T,
-  ob as le,
-  qc as ue,
-  rb as E,
-  sS as de,
-  tl as D,
-  tr as fe,
-  wS as O,
-  xt as pe,
+  Rx as ae,
+  Vc as oe,
+  Xc as y,
+  Yc as b,
+  bt as se,
+  eS as x,
+  eb as S,
+  el as ce,
+  gl as le,
+  ib as C,
+  lS as ue,
+  nl as w,
+  qb as T,
+  ql as de,
+  rx as E,
+  sb as fe,
+  tr as pe,
+  vx as D,
+  xt as me,
 } from "./main.js";
-var k = e(t(), 1),
-  A = class {
+var O = e(t(), 1),
+  k = class {
     reactNodes = [];
     AppendText(e, t = !1) {
       e.length &&
         (t
           ? this.reactNodes.push(
-              k.createElement(
+              O.createElement(
                 `span`,
                 {
                   "data-copytext": ``,
@@ -72,10 +72,10 @@ var k = e(t(), 1),
       return this.reactNodes;
     }
   },
-  me = class {
+  he = class {
     m_decoratedAccumulator;
     constructor(e) {
-      (de(e, `decorated accumulator cannot be null`),
+      (ue(e, `decorated accumulator cannot be null`),
         (this.m_decoratedAccumulator = e));
     }
     AppendText(e, t = !1) {
@@ -88,7 +88,7 @@ var k = e(t(), 1),
       return this.m_decoratedAccumulator.GetElements();
     }
   },
-  he = class extends me {
+  A = class extends he {
     constructor(e) {
       super(e);
     }
@@ -103,7 +103,7 @@ var k = e(t(), 1),
 `)
       )
         (n.push(t.substr(0, e)),
-          n.push(k.createElement(`br`)),
+          n.push(O.createElement(`br`)),
           (t = t.substr(e + 1)));
       (t.length && n.push(t),
         n.forEach((e) => {
@@ -318,8 +318,8 @@ function ve(e) {
 var ye = class extends ge {
   m_renderingLanguage;
   constructor(e, t, n) {
-    (super(e, t ?? (() => new A())),
-      (this.m_renderingLanguage = typeof n == `string` ? b(n) : n));
+    (super(e, t ?? (() => new k())),
+      (this.m_renderingLanguage = typeof n == `string` ? m(n) : n));
   }
   UpdateOverrideLanguage(e) {
     this.m_renderingLanguage = e;
@@ -329,7 +329,7 @@ var ye = class extends ge {
       i = this.Parse(
         e,
         (e, n, ...i) =>
-          k.createElement(
+          O.createElement(
             e,
             {
               ...n,
@@ -342,7 +342,7 @@ var ye = class extends ge {
         n,
       );
     return i.length > 1
-      ? k.createElement(k.Fragment, null, ...i)
+      ? O.createElement(O.Fragment, null, ...i)
       : i.length == 1
         ? i[0]
         : null;
@@ -361,7 +361,7 @@ function N(e) {
     ? ``
     : t;
 }
-var P = n(),
+var P = r(),
   be = `DGBHQeifcPs-`,
   xe = `dYxCj-H04rc-`,
   Se = `JHqvAwJwrJY-`,
@@ -400,9 +400,9 @@ var P = n(),
   et = `C-B3bdlHS0I-`;
 function tt(e) {
   return !(
-    (!_(e.sPoster) && !C(e.sPoster)) ||
-    (e.rgVideoSources && e.rgVideoSources.some((e) => !C(e.sURL))) ||
-    (e.rgVideoTracks && e.rgVideoTracks.some((e) => !C(e.sURL)))
+    (!b(e.sPoster) && !y(e.sPoster)) ||
+    (e.rgVideoSources && e.rgVideoSources.some((e) => !y(e.sURL))) ||
+    (e.rgVideoTracks && e.rgVideoTracks.some((e) => !y(e.sURL)))
   );
 }
 var I = class e {
@@ -425,7 +425,7 @@ var I = class e {
       return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
   },
-  L = (0, k.forwardRef)(function (e, t) {
+  L = (0, O.forwardRef)(function (e, t) {
     let {
         video: n,
         bAutoPlay: r,
@@ -438,31 +438,31 @@ var I = class e {
         onClick: u,
         altText: d,
       } = e,
-      f = (0, k.useMemo)(
+      f = (0, O.useMemo)(
         () =>
           !!n.rgVideoTracks?.some(
             (e) => e.sKind == `subtitles` || e.sKind == `captions`,
           ),
         [n.rgVideoTracks],
       ),
-      [p, m] = k.useState(!1),
+      [p, m] = O.useState(!1),
       h = nt();
     if (!n.rgVideoSources || !n.rgVideoSources.length) return null;
-    let g = tt(n),
-      _;
-    (!g || (f && T.EUNIVERSE == 1)) && (_ = `anonymous`);
-    let ee = o || (r && I.Get().BVolumePreferenceMuted()),
-      v = n.sPoster ? R(n.sPoster, h) : ``;
+    let ee = tt(n),
+      g;
+    (!ee || (f && E.EUNIVERSE == 1)) && (g = `anonymous`);
+    let _ = o || (r && I.Get().BVolumePreferenceMuted()),
+      te = n.sPoster ? R(n.sPoster, h) : ``;
     return (0, P.jsxs)(`video`, {
       width: `100%`,
       height: `auto`,
       autoPlay: r,
-      muted: ee,
+      muted: _,
       playsInline: !0,
       controls: i,
-      poster: v,
+      poster: te,
       loop: a,
-      crossOrigin: _,
+      crossOrigin: g,
       onVolumeChange: (e) => {
         let t = e.target,
           n = t.muted ? 0 : t.volume;
@@ -505,12 +505,12 @@ var I = class e {
 function nt() {
   let e = window.location.href,
     t = [
-      T.STORE_BASE_URL,
-      T.COMMUNITY_BASE_URL,
-      T.PARTNER_BASE_URL,
-      T.HELP_BASE_URL,
-      T.STATS_BASE_URL,
-      T.STORE_CHECKOUT_BASE_URL,
+      E.STORE_BASE_URL,
+      E.COMMUNITY_BASE_URL,
+      E.PARTNER_BASE_URL,
+      E.HELP_BASE_URL,
+      E.STATS_BASE_URL,
+      E.STORE_CHECKOUT_BASE_URL,
     ].find((t) => t && e.startsWith(t));
   if (t) return t;
   try {
@@ -521,7 +521,7 @@ function nt() {
 }
 function R(e, t) {
   if (e) {
-    if (_(e)) return e;
+    if (b(e)) return e;
     try {
       let n = new URL(e);
       return (
@@ -556,48 +556,48 @@ function it(e) {
 function at(e) {
   let { track: t, rgVideoTracks: n, strCacheBreakOrigin: r } = e,
     i = t.eLanguage;
-  if (T.EREALM == x.k_ESteamRealmChina) {
-    if (m.IsELanguageValidInRealm(i, x.k_ESteamRealmChina))
-      i = m.GetELanguageFallback(i);
+  if (E.EREALM == g.k_ESteamRealmChina) {
+    if (S.IsELanguageValidInRealm(i, g.k_ESteamRealmChina))
+      i = S.GetELanguageFallback(i);
     else if (i === 6) {
-      if (n.find((e) => m.GetELanguageFallback(e.eLanguage) === i)) return null;
+      if (n.find((e) => S.GetELanguageFallback(e.eLanguage) === i)) return null;
     } else return null;
-  } else if (!m.IsELanguageValidInRealm(i, x.k_ESteamRealmGlobal)) return null;
+  } else if (!S.IsELanguageValidInRealm(i, g.k_ESteamRealmGlobal)) return null;
   return (0, P.jsx)(`track`, {
     src: R(t.sURL, r),
     kind: t.sKind,
     default: t.bDefault,
-    srcLang: O(i),
-    label: le(i),
+    srcLang: h(i),
+    label: fe(i),
   });
 }
-var ot = e(r());
+var ot = e(a());
 function z(e) {
   let t = X(e, `poster`);
-  t &&= D(t);
+  t &&= w(t);
   let n = [];
   {
     let t = X(e, `mp4`);
-    t && n.push({ sURL: D(t), sFormat: `video/mp4` });
+    t && n.push({ sURL: w(t), sFormat: `video/mp4` });
     let r = X(e, `webm`);
-    r && n.push({ sURL: D(r), sFormat: `video/webm` });
+    r && n.push({ sURL: w(r), sFormat: `video/webm` });
   }
-  let r = b(w.LANGUAGE),
+  let r = m(D.LANGUAGE),
     i = r != 0,
     a = [];
   for (let t = 0; t < 32; t++) {
-    let n = X(e, `sub_` + O(t));
+    let n = X(e, `sub_` + h(t));
     n &&
       a.push({
-        sURL: D(n),
+        sURL: w(n),
         eLanguage: t,
         sKind: `subtitles`,
         bDefault: i && t == r,
       });
-    let o = X(e, `cap_` + O(t));
+    let o = X(e, `cap_` + h(t));
     o &&
       a.push({
-        sURL: D(o),
+        sURL: w(o),
         eLanguage: t,
         sKind: `captions`,
         bDefault: i && t == r,
@@ -614,7 +614,7 @@ function B(e) {
     n = e.children ? e.children.toString() : void 0;
   n &&
     n.startsWith(`http`) &&
-    t.rgVideoSources.push({ sURL: D(n), sFormat: `video/webm` });
+    t.rgVideoSources.push({ sURL: w(n), sFormat: `video/webm` });
   let r = X(e.args, `autoplay`),
     i = r !== `0` && r !== `off` && r !== `false`,
     a = X(e.args, `controls`),
@@ -680,7 +680,7 @@ function q(e) {
 }
 async function J(e) {
   let t =
-      T.STORE_BASE_URL +
+      E.STORE_BASE_URL +
       `events/ajaxgetdynamiceventmetadata?` +
       new URLSearchParams(e).toString(),
     n = await fetch(t, { credentials: `include` });
@@ -705,7 +705,7 @@ function Tt(e, t = !0) {
   };
 }
 function Et(e, t = !0) {
-  return a(Tt(e, t));
+  return i(Tt(e, t));
 }
 function Dt(e) {
   return [`DynamicEventMetadata`, `sharedfile`, e];
@@ -731,7 +731,7 @@ function Ot(e) {
   };
 }
 function kt(e) {
-  return a(Ot(e));
+  return i(Ot(e));
 }
 var At = `brm0OeRsTm4-`,
   jt = `pcxkPBR3wVQ-`,
@@ -749,7 +749,7 @@ var At = `brm0OeRsTm4-`,
     );
   })({});
 function Lt(e) {
-  return e == `full` ? Mt : y(jt, e == `leftthumb` ? Pt : Ft);
+  return e == `full` ? Mt : v(jt, e == `leftthumb` ? Pt : Ft);
 }
 function Y(e) {
   let {
@@ -759,10 +759,10 @@ function Y(e) {
       nStartSeconds: i,
       align: a = `full`,
     } = e,
-    [o, s] = (0, k.useState)(!n),
+    [o, s] = (0, O.useState)(!n),
     { data: l, isSuccess: f } = Et(t, o);
   if (o) {
-    let e = l?.title ?? E(`#Loading`),
+    let e = l?.title ?? C(`#Loading`),
       n = l?.views ?? `0`,
       r = l?.description ?? ``,
       i = () => s(!1);
@@ -778,9 +778,9 @@ function Y(e) {
         (0, P.jsx)(U, { strURL: `https://img.youtube.com/vi/` + t + `/0.jpg` }),
         (0, P.jsxs)(W, {
           children: [
-            (0, P.jsx)(G, { children: E(`#EventEditor_YouTubeVideoTitle`, e) }),
+            (0, P.jsx)(G, { children: C(`#EventEditor_YouTubeVideoTitle`, e) }),
             (0, P.jsx)(K, {
-              children: E(`#EventEditor_YouTubeVideoViews`, pe(Number(n))),
+              children: C(`#EventEditor_YouTubeVideoViews`, me(Number(n))),
             }),
             (0, P.jsxs)(Ct, {
               children: [f && r, !f && (0, P.jsx)(c, { size: `medium` })],
@@ -793,14 +793,14 @@ function Y(e) {
   return (0, P.jsx)(d, {
     video: t,
     children: (0, P.jsxs)(`div`, {
-      className: y(At, Lt(a)),
+      className: v(At, Lt(a)),
       id: t,
       children: [
         (0, P.jsx)(`img`, {
           className: Nt,
           alt: ``,
           src:
-            T.COMMUNITY_CDN_URL +
+            E.COMMUNITY_CDN_URL +
             `public/shared/images/responsive/youtube_16x9_placeholder.gif`,
         }),
         (0, P.jsx)(u, {
@@ -817,7 +817,7 @@ function Y(e) {
   });
 }
 function Rt(e, t) {
-  if (T.EREALM === x.k_ESteamRealmChina) return null;
+  if (E.EREALM === g.k_ESteamRealmChina) return null;
   let n = l(e);
   return n?.strVideoID === void 0
     ? o(e, t?.event)
@@ -828,7 +828,7 @@ function Rt(e, t) {
       });
 }
 function zt() {
-  return T.EREALM === x.k_ESteamRealmChina;
+  return E.EREALM === g.k_ESteamRealmChina;
 }
 function Bt(e) {
   if (zt()) return null;
@@ -841,10 +841,10 @@ function Bt(e) {
       return (0, P.jsx)(Y, { videoID: t, align: n, bShowVideoImmediately: !0 });
     }
   }
-  return (0, P.jsx)(k.Fragment, {});
+  return (0, P.jsx)(O.Fragment, {});
 }
 function Vt(e) {
-  if (zt() || T.COUNTRY.toLocaleUpperCase() == `CN`) return B(e);
+  if (zt() || E.COUNTRY.toLocaleUpperCase() == `CN`) return B(e);
   let t = X(e.args, `youtubeid`),
     n = X(e.args, `size`),
     r = X(e.args, `seconds`);
@@ -932,7 +932,7 @@ function Wt(e) {
 }
 function Gt(e) {
   return (0, P.jsx)(`i`, {
-    className: y(xe, `BB_Italic`),
+    className: v(xe, `BB_Italic`),
     children: e.children,
   });
 }
@@ -966,25 +966,25 @@ function Z(e, t, n) {
       (r = r.substring(1)),
     (0, P.jsx)(e, {
       id: r || void 0,
-      className: y(n, t.className),
+      className: v(n, t.className),
       children: t.children,
     })
   );
 }
 function Xt(e) {
-  return Z(`h1`, e, y(Ee, `BB_Header1`));
+  return Z(`h1`, e, v(Ee, `BB_Header1`));
 }
 function Zt(e) {
-  return Z(`h2`, e, y(De, `BB_Header2`));
+  return Z(`h2`, e, v(De, `BB_Header2`));
 }
 function Qt(e) {
-  return Z(`h3`, e, y(Oe, `BB_Header3`));
+  return Z(`h3`, e, v(Oe, `BB_Header3`));
 }
 function $t(e) {
-  return Z(`h4`, e, y(ke, `BB_Header4`));
+  return Z(`h4`, e, v(ke, `BB_Header4`));
 }
 function en(e) {
-  return Z(`h5`, e, y(Ae, `BB_Header5`));
+  return Z(`h5`, e, v(Ae, `BB_Header5`));
 }
 function tn(e) {
   let t = X(e.args, `id`);
@@ -996,24 +996,24 @@ function tn(e) {
       (t = t.substring(1)),
     (0, P.jsx)(`span`, {
       id: t || void 0,
-      className: y(je, `BB_Center`),
+      className: v(je, `BB_Center`),
       children: e.children,
     })
   );
 }
 function nn(e) {
-  return Z(`div`, e, y(Me, `BB_SmallText`));
+  return Z(`div`, e, v(Me, `BB_SmallText`));
 }
 function rn(e) {
-  let [t, n] = k.useState(!1),
-    r = k.useCallback(() => {
+  let [t, n] = O.useState(!1),
+    r = O.useCallback(() => {
       n(!t);
     }, [t]);
-  return (0, P.jsx)(h, {
-    className: y(Fe, t && `YDb-da9VezY-`),
+  return (0, P.jsx)(oe, {
+    className: v(Fe, t && `YDb-da9VezY-`),
     focusable: !0,
     onActivate: r,
-    onOKActionDescription: E(
+    onOKActionDescription: C(
       t ? `#Bbcode_Spoiler_Hide` : `#Bbcode_Spoiler_Show`,
     ),
     children: (0, P.jsx)(`span`, { className: Ie, children: e.children }),
@@ -1037,7 +1037,7 @@ function cn(e) {
   let t = N(X(e.args));
   if (!t) {
     let n = e.children;
-    typeof n == `string` && f(n) && (t = N(n));
+    typeof n == `string` && ce(n) && (t = N(n));
   }
   let n = X(e.args, `style`) == `button` ? F : void 0,
     r = n && X(e.args, `buttoncolor`),
@@ -1068,41 +1068,41 @@ function ln(e) {
   return (0, P.jsx)(Q, {
     className: n,
     style: { backgroundColor: r },
-    href: `${w.PARTNER_BASE_URL}doc/${t}`,
+    href: `${D.PARTNER_BASE_URL}doc/${t}`,
     children: e.children,
   });
 }
 var Q = (e) => {
   let { href: t, ...n } = e,
-    r = ue(t ?? ``),
+    r = _(t ?? ``),
     i;
   re(r)
-    ? ((r = (w.IN_CLIENT ? `steam://openurl_external/` : ``) + g(r)),
+    ? ((r = (D.IN_CLIENT ? `steam://openurl_external/` : ``) + ee(r)),
       (i = `noopener nofollow`))
-    : (r = ie(r));
+    : (r = f(r));
   let a =
     typeof e.children == `string` &&
     e.children.length > 0 &&
     t &&
     !t.startsWith(`steam://`)
-      ? ae(t)
+      ? ie(t)
       : void 0;
-  return (0, P.jsx)(ee, {
+  return (0, P.jsx)(te, {
     toolTipContent: a,
     direction: `top`,
-    children: (0, P.jsx)(se, { ...n, href: r, rel: i, children: e.children }),
+    children: (0, P.jsx)(le, { ...n, href: r, rel: i, children: e.children }),
   });
 };
 function un(e) {
   let t = X(e.args, `author`);
   return (0, P.jsxs)(`blockquote`, {
-    className: y(Le, e.className),
+    className: v(Le, e.className),
     children: [
       !!t &&
         (0, P.jsxs)(`div`, {
           className: `iZjggU7O-fs-`,
           children: [
-            E(`#Bbcode_Originally_Posted_By`) + ` `,
+            C(`#Bbcode_Originally_Posted_By`) + ` `,
             ` `,
             (0, P.jsx)(`b`, { children: t + `:` }),
           ],
@@ -1122,7 +1122,7 @@ function pn(e) {
 }
 function mn(e) {
   return (0, P.jsx)(`ul`, {
-    className: y(Ve, `bullets`),
+    className: v(Ve, `bullets`),
     children: e.children,
   });
 }
@@ -1148,7 +1148,7 @@ function vn(e) {
     n = X(e.args, `equalcells`),
     r = X(e.args, `colwidth`);
   return (0, P.jsxs)(`table`, {
-    className: y(Ge, `BB_Table`, t && `b20E2IrghSY-`, n && `zJnyxE63CCk-`),
+    className: v(Ge, `BB_Table`, t && `b20E2IrghSY-`, n && `zJnyxE63CCk-`),
     children: [
       r &&
         (0, P.jsx)(`colgroup`, {
@@ -1168,7 +1168,7 @@ function yn(e) {
 }
 function bn(e) {
   return (0, P.jsx)(`tr`, {
-    className: y(Ke, `BB_TableRow`),
+    className: v(Ke, `BB_TableRow`),
     children: e.children,
   });
 }
@@ -1181,7 +1181,7 @@ function xn(e, t) {
     r && parseInt(r) > 1 && (a.colSpan = parseInt(r)),
     i && parseInt(i) > 1 && (a.rowSpan = parseInt(i)),
     (0, P.jsx)(e, {
-      className: y(qe, e == `td` && `BB_TableData`),
+      className: v(qe, e == `td` && `BB_TableData`),
       ...a,
       style: n ? { width: n } : void 0,
       children: t.children,
@@ -1225,13 +1225,13 @@ function wn(e, t, n, r) {
 }
 function Tn(e) {
   let t = !!X(e.args, `expanded`),
-    [n, r] = k.useState(t),
+    [n, r] = O.useState(t),
     i = X(e.args, `title`),
     a = X(e.args, `collapsed_str`),
     o = X(e.args, `expanded_str`),
     s = wn(X(e.args, `type`), i, a, o);
   return (0, P.jsxs)(`div`, {
-    className: y({
+    className: v({
       [Je]: !0,
       [s.style ?? ``]: s.style != null,
       [void 0]: n,
@@ -1244,10 +1244,10 @@ function Tn(e) {
         className: Ye,
         onClick: () => r(!n),
         children: [
-          E(n ? s.expanded : s.collapsed),
+          C(n ? s.expanded : s.collapsed),
           (0, P.jsx)(`div`, {
             className: Xe,
-            children: (0, P.jsx)(ce, { angle: n ? 180 : 0 }),
+            children: (0, P.jsx)(ne, { angle: n ? 180 : 0 }),
           }),
         ],
       }),
@@ -1321,25 +1321,25 @@ function En(e) {
     }
   };
   return (0, P.jsxs)(`div`, {
-    className: y(`SaleSectionCalendarEventContainer`, $e),
+    className: v(`SaleSectionCalendarEventContainer`, $e),
     id: o,
     children: [
       d &&
         (0, P.jsx)(`a`, {
-          className: y(`SaleSectionCalendarEventLink`, `C-B3bdlHS0I-`),
+          className: v(`SaleSectionCalendarEventLink`, `C-B3bdlHS0I-`),
           href: d,
           onClick: p,
           download: `calendar.ics`,
           children: `Apple`,
         }),
       (0, P.jsx)(`a`, {
-        className: y(`SaleSectionCalendarEventLink`, et),
+        className: v(`SaleSectionCalendarEventLink`, et),
         href: f,
         children: `Google`,
       }),
       d &&
         (0, P.jsx)(`a`, {
-          className: y(`SaleSectionCalendarEventLink`, `C-B3bdlHS0I-`),
+          className: v(`SaleSectionCalendarEventLink`, `C-B3bdlHS0I-`),
           href: d,
           onClick: p,
           download: `calendar.ics`,
@@ -1350,7 +1350,7 @@ function En(e) {
 }
 function Dn(e) {
   let { text: t = ``, style: n, children: r } = e;
-  if (t == null) return (0, P.jsx)(k.Fragment, { children: r });
+  if (t == null) return (0, P.jsx)(O.Fragment, { children: r });
   let i;
   if (
     ((i =
@@ -1359,16 +1359,16 @@ function Dn(e) {
             .join(`
 `)
         : t.toString()),
-    k.Children.count(r) == 1)
+    O.Children.count(r) == 1)
   ) {
-    let e = k.Children.only(r);
-    return k.cloneElement(e, { "data-copystyle": n, "data-copytext": i });
+    let e = O.Children.only(r);
+    return O.cloneElement(e, { "data-copystyle": n, "data-copytext": i });
   }
   return (
     console.log(
       `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${n} copytext=${i}`,
     ),
-    (0, P.jsx)(k.Fragment, { children: r })
+    (0, P.jsx)(O.Fragment, { children: r })
   );
 }
 var On = `EYdF9T-t7r0-`,
@@ -1388,10 +1388,10 @@ var On = `EYdF9T-t7r0-`,
   Hn = `_7tqUEqEzFXI-`;
 function Un(e) {
   let { emoticon: t, large: n } = e,
-    [r, i] = te(),
-    [a, o] = k.useState(null),
+    [r, i] = de(),
+    [a, o] = O.useState(null),
     s = `:${t}:`,
-    c = oe(t, n);
+    c = se(t, n);
   return (0, P.jsxs)(P.Fragment, {
     children: [
       (0, P.jsx)(Dn, {
@@ -1400,7 +1400,7 @@ function Un(e) {
         children: (0, P.jsx)(`img`, {
           ...i,
           src: c,
-          className: y(An, n ? jn : void 0),
+          className: v(An, n ? jn : void 0),
           "data-emoticon": t,
           alt: t,
           ref: o,
@@ -1421,10 +1421,10 @@ function Wn(e) {
   });
 }
 function Gn(e) {
-  return a({
+  return i({
     queryKey: [`EmoticonHover`, e],
     queryFn: async () => {
-      let t = `${T.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(T.LANGUAGE)}&origin=${self.origin}`,
+      let t = `${E.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(E.LANGUAGE)}&origin=${self.origin}`,
         n = await fetch(t);
       if (n.status != 200)
         throw `Error fetching emoticon: ${n.status} ${n.statusText}`;
@@ -1455,14 +1455,14 @@ var Kn = ({ target: e, title: t, subtitle: n, children: r }) =>
     ],
   });
 function qn(e) {
-  return new he(new A());
+  return new A(new k());
 }
 function Jn() {
   return new Map([...Array.from(Ht.entries())]);
 }
 function Yn(e) {
   let { text: t, languageOverride: n } = e,
-    [r] = (0, k.useState)(new ye(Jn(), qn, n ?? T.LANGUAGE));
+    [r] = (0, O.useState)(new ye(Jn(), qn, n ?? E.LANGUAGE));
   return (0, P.jsx)(P.Fragment, { children: r.ParseBBCode(t, {}) });
 }
 var Xn = `L3HaktJsWWA-`,
@@ -1471,8 +1471,8 @@ var Xn = `L3HaktJsWWA-`,
   $n = `_7-cDUja4KeQ-`,
   er = `PBXxHejQZTU-`,
   tr = `JX6irDhLeng-`,
-  nr = i((e) => {
-    let t = s(e.photo, b(T.LANGUAGE)),
+  nr = n((e) => {
+    let t = s(e.photo, m(E.LANGUAGE)),
       n = t ? (typeof t == `string` ? t : t[1]) : void 0,
       r = !!e.title,
       i = !!e.company;
@@ -1515,13 +1515,13 @@ var Xn = `L3HaktJsWWA-`,
       ],
     });
   }),
-  $ = class e extends k.Component {
-    static sm_embeddedElements = new fe(`presenter-hover-source-elements`);
-    m_refAnchor = k.createRef();
+  $ = class e extends O.Component {
+    static sm_embeddedElements = new pe(`presenter-hover-source-elements`);
+    m_refAnchor = O.createRef();
     m_fnHidePopup = null;
     m_nScrollPosAtHoverStart = 0;
     ClosePopup() {
-      ne() ||
+      ae() ||
         (this.m_fnHidePopup &&
           (this.m_fnHidePopup(),
           (this.m_fnHidePopup = null),
@@ -1573,10 +1573,10 @@ var Xn = `L3HaktJsWWA-`,
       });
     }
   };
-(v([S], $.prototype, `ClosePopup`, null),
-  v([S], $.prototype, `OnScroll`, null),
-  v([S], $.prototype, `OnHover`, null),
-  v([S], $.prototype, `OnLeave`, null));
+(T([x], $.prototype, `ClosePopup`, null),
+  T([x], $.prototype, `OnScroll`, null),
+  T([x], $.prototype, `OnHover`, null),
+  T([x], $.prototype, `OnLeave`, null));
 function rr(e) {
   let {
       photo: t,
@@ -1585,7 +1585,7 @@ function rr(e) {
       company: i,
       hidePhotoInCompactView: a,
     } = e,
-    o = s(t, b(T.LANGUAGE)),
+    o = s(t, m(E.LANGUAGE)),
     c = o && !a ? (typeof o == `string` ? o : o[1]) : null,
     l = !!r,
     u = !!i;
@@ -1656,7 +1656,7 @@ export {
   Zt as b,
   Nn as c,
   kn as d,
-  me as et,
+  he as et,
   On as f,
   Ut as g,
   Rn as h,
@@ -1666,14 +1666,14 @@ export {
   zn as l,
   Mn as m,
   $ as n,
-  he as nt,
+  A as nt,
   Kn as o,
   Bn as p,
   L as q,
   rr as r,
   Vn as s,
   nr as t,
-  A as tt,
+  k as tt,
   Hn as u,
   X as v,
   gn as w,

@@ -38,6 +38,7 @@ var _ = {
   PackageLanding: (_ = `:packageid`) => `/store/packagelanding/${_}`,
   PackageAdminRoot: () => `/packages/`,
   AchievementsEditor: () => `/apps/achievements/:appid(\\d+)`,
+  SumsubRequirement: () => `/kycrequirement`,
 };
 function _() {
   let _ = document.createElement(`a`);

@@ -2,18 +2,18 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n } from "./chunk~01cfc309bf.js";
 import { t as r } from "./chunk~684e72ad45.js";
 import "./chunk~8681f5c764.js";
 import { i } from "./chunk~2f085f1384.js";
 import {
-  Nc as a,
-  Ro as o,
-  kc as s,
-  ms as c,
-  rb as l,
-  yn as u,
-  zn as d,
+  Ac as a,
+  Pc as o,
+  hs as s,
+  ib as c,
+  yn as l,
+  zn as u,
+  zo as d,
 } from "./main.js";
 var f = e(t(), 1),
   p = n(),
@@ -28,7 +28,7 @@ function b() {
     n = f.useCallback(() => t(void 0), []);
   return [
     t,
-    (0, p.jsx)(u, {
+    (0, p.jsx)(l, {
       active: e !== void 0,
       children: (0, p.jsx)(x, { closeModal: n, rgImageURL: e }),
     }),
@@ -44,8 +44,8 @@ function x(e) {
     s = f.useCallback(() => {
       n && r + 1 >= a ? i(0) : i(r + 1);
     }, [r, n, a]);
-  return (0, p.jsxs)(d, {
-    title: l(`#SaleTech_Screenshot_Viewer`),
+  return (0, p.jsxs)(u, {
+    title: c(`#SaleTech_Screenshot_Viewer`),
     bAllowFullSize: !0,
     bOKDisabled: !0,
     closeModal: t,
@@ -72,16 +72,16 @@ function S(e) {
     index: t,
     numElements: n,
     fnForward: i,
-    fnBackwards: c,
-    fnClose: u,
-    bCircular: d,
+    fnBackwards: s,
+    fnClose: l,
+    bCircular: u,
   } = e;
-  (r(`ArrowLeft`, () => c?.(), !0, !0),
-    r(`Left`, () => c?.(), !0, !0),
+  (r(`ArrowLeft`, () => s?.(), !0, !0),
+    r(`Left`, () => s?.(), !0, !0),
     r(`ArrowRight`, () => i?.(), !0, !0),
     r(`Right`, () => i?.(), !0, !0),
-    r(`Escape`, () => u && u(), !0, !0),
-    r(`Esc`, () => u && u(), !0, !0));
+    r(`Escape`, () => l && l(), !0, !0),
+    r(`Esc`, () => l && l(), !0, !0));
   let f = n > 1;
   return (0, p.jsxs)(`div`, {
     className: v,
@@ -91,32 +91,32 @@ function S(e) {
           children: [
             (0, p.jsx)(`button`, {
               type: `button`,
-              className: a(
+              className: o(
                 `-WD8g17w7iA-`,
-                t === 0 && !d ? `apJ9YvEIT9k-` : null,
+                t === 0 && !u ? `apJ9YvEIT9k-` : null,
               ),
-              onClick: c,
-              "aria-label": l(`#Carousel_Prev`),
-              children: (0, p.jsx)(o, { angle: 270 }),
+              onClick: s,
+              "aria-label": c(`#Carousel_Prev`),
+              children: (0, p.jsx)(d, { angle: 270 }),
             }),
             (0, p.jsx)(`button`, {
               type: `button`,
-              className: a(
+              className: o(
                 `-WD8g17w7iA-`,
-                t === n - 1 && !d ? `apJ9YvEIT9k-` : null,
+                t === n - 1 && !u ? `apJ9YvEIT9k-` : null,
               ),
               onClick: i,
-              "aria-label": l(`#Carousel_Next`),
-              children: (0, p.jsx)(o, { angle: 90 }),
+              "aria-label": c(`#Carousel_Next`),
+              children: (0, p.jsx)(d, { angle: 90 }),
             }),
           ],
         }),
       (0, p.jsx)(`button`, {
         type: `button`,
         className: y,
-        onClick: u,
-        "aria-label": l(`#Button_Close`),
-        children: (0, p.jsx)(s, {}),
+        onClick: l,
+        "aria-label": c(`#Button_Close`),
+        children: (0, p.jsx)(a, {}),
       }),
     ],
   });
@@ -128,13 +128,13 @@ var C = `xq-I5249Blg-`,
   D = 256;
 function O(e) {
   let [t, n] = (0, f.useState)(!1),
-    [r, o] = (0, f.useState)({
+    [r, a] = (0, f.useState)({
       naturalWidth: 0,
       naturalHeight: 0,
       displayWidth: 0,
       displayHeight: 0,
     }),
-    s = (0, f.useRef)(null),
+    c = (0, f.useRef)(null),
     [l, u] = b();
   return (
     (0, f.useEffect)(() => {
@@ -149,10 +149,10 @@ function O(e) {
           className: C,
           children: [
             u,
-            (0, p.jsx)(`span`, { className: w, children: (0, p.jsx)(c, {}) }),
+            (0, p.jsx)(`span`, { className: w, children: (0, p.jsx)(s, {}) }),
             (0, p.jsx)(`img`, {
               ...e,
-              className: a({ ...(e.className && { [e.className]: !0 }) }),
+              className: o({ ...(e.className && { [e.className]: !0 }) }),
               onClick: (t) => {
                 e.src && l([e.src]);
               },
@@ -161,7 +161,7 @@ function O(e) {
         })
       : (0, p.jsx)(`img`, {
           ...e,
-          ref: s,
+          ref: c,
           onLoad: (e) => {
             if (!e.currentTarget.closest(`a`) && !i()) {
               let {
@@ -170,7 +170,7 @@ function O(e) {
                 width: r,
                 height: i,
               } = e.currentTarget;
-              o({
+              a({
                 naturalWidth: t,
                 naturalHeight: n,
                 displayWidth: r,
@@ -221,18 +221,18 @@ function A(e) {
       lazyLoad: a,
       width: o,
       height: s,
-      alt: c,
+      alt: l,
       crossOrigin: u,
     } = e;
   return t
     ? (0, p.jsxs)(`div`, {
         className: m,
         children: [
-          (0, p.jsx)(`p`, { children: l(`#Image_ErrorTitle`, i) }),
+          (0, p.jsx)(`p`, { children: c(`#Image_ErrorTitle`, i) }),
           (0, p.jsx)(`ul`, {
-            children: (0, p.jsx)(`li`, { children: l(`#Image_Error_msg1`) }),
+            children: (0, p.jsx)(`li`, { children: c(`#Image_Error_msg1`) }),
           }),
-          (0, p.jsx)(`p`, { children: l(`#Image_Error_suggestion`) }),
+          (0, p.jsx)(`p`, { children: c(`#Image_Error_suggestion`) }),
         ],
       })
     : (0, p.jsx)(O, {
@@ -243,7 +243,7 @@ function A(e) {
         loading: a ? `lazy` : void 0,
         width: o,
         height: s,
-        alt: c,
+        alt: l,
       });
 }
 export { b as a, S as i, k as n, m as o, O as r, A as t };

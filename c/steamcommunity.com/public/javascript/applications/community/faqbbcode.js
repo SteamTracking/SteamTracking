@@ -2635,49 +2635,49 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.Create#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.Create = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.Delete#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.Delete = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.UpdateInternalName#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UpdateInternalName = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.UpdateJsonData#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UpdateJsonData = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.SetVisibility#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetVisibility = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.UpdateDraft#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UpdateDraft = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.PublishDraft#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.PublishDraft = _;
@@ -2698,14 +2698,14 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.GetFAQVersion#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFAQVersion = _;
   function _(_, _, _) {
     return _.SendMsg(`ClanFAQS.GetAllDrafts#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetAllDrafts = _;
@@ -2737,7 +2737,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`help`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SearchFAQs = _;

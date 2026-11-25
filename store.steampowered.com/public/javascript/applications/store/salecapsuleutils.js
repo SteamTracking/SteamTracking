@@ -1,26 +1,26 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { jt as e, st as t } from "./chunk~01cfc309bf.js";
+import { At as e, ot as t } from "./chunk~01cfc309bf.js";
 import { _ as n, v as r } from "./chunk~f57d770d64.js";
 import { t as i } from "./chunk~751f63337e.js";
 import { r as a } from "./chunk~a243b6a34b.js";
 import {
-  Mu as o,
-  Ox as s,
-  Qy as c,
-  Sx as l,
-  Tx as u,
-  Zy as d,
-  _x as f,
-  _y as p,
-  cx as m,
-  eu as h,
-  hu as g,
-  rb as _,
-  sS as v,
-  vv as y,
-  yx as b,
+  $y as o,
+  Cx as s,
+  Ex as c,
+  Nu as l,
+  Qy as u,
+  bx as d,
+  gu as f,
+  ib as p,
+  kx as m,
+  lS as h,
+  lx as g,
+  tu as _,
+  vx as v,
+  vy as y,
+  yv as b,
 } from "./main.js";
 function x(e) {
   return [`StoreBrowsePriceStops`, e];
@@ -30,27 +30,27 @@ function S(e, t) {
   return { queryKey: x(n), queryFn: async () => C(e, n), staleTime: 864e5 };
 }
 async function C(e, t) {
-  let n = s.Init(l);
+  let n = m.Init(s);
   n.Body().set_country_code(t);
-  let r = await u.GetPriceStops(e, n);
+  let r = await c.GetPriceStops(e, n);
   if (!r.BSuccess()) throw `Error loading price stops: ${r.GetErrorMessage()}`;
   return r.Body().toObject().price_stops || [];
 }
 function w(e) {
   return e?.length
     ? [
-        { price: 0, label: _(`#FacetedBrowse_Price_Free`) },
+        { price: 0, label: p(`#FacetedBrowse_Price_Free`) },
         ...e.map((e) => ({
           price: Number(e.amount_in_cents ?? 0) / 100,
-          label: _(`#FacetedBrowse_Price_Under`, e.formatted_amount ?? ``),
+          label: p(`#FacetedBrowse_Price_Under`, e.formatted_amount ?? ``),
         })),
-        { price: void 0, label: _(`#FacetedBrowse_Price_Any`) },
+        { price: void 0, label: p(`#FacetedBrowse_Price_Any`) },
       ]
     : [];
 }
 function T() {
-  let e = y(),
-    n = p(),
+  let e = b(),
+    n = y(),
     { data: r } = t({ ...S(n, e), select: w });
   return r ?? [];
 }
@@ -63,7 +63,7 @@ function D(e, t, n) {
     let e = parseInt(r[0].substring(7));
     if (e > 0) return n && n[e];
   }
-  return _((c.GetWithFallback(r, t) || ``).trim());
+  return p((o.GetWithFallback(r, t) || ``).trim());
 }
 function O(e) {
   return String(e.type) + e.id;
@@ -83,7 +83,7 @@ function A(e) {
   return !1;
 }
 function j(e) {
-  v(!0, `Unexpected code running in SSR Server: ` + e);
+  h(!0, `Unexpected code running in SSR Server: ` + e);
 }
 var M = class e {
   m_HomeView = void 0;
@@ -102,9 +102,9 @@ var M = class e {
     );
   }
   constructor() {
-    let e = m(`home_view_setting`, `application_config`);
+    let e = g(`home_view_setting`, `application_config`);
     this.ValidateHomeViewData(e) && this.SetHomeViewSetting(e);
-    let t = m(`home_view_setting_override`, `application_config`);
+    let t = g(`home_view_setting_override`, `application_config`);
     this.ValidateHomeViewDataOverride(t) && this.SetHomeViewSettingOverride(t);
   }
   ValidateHomeViewData(e) {
@@ -133,7 +133,7 @@ var M = class e {
   }
 };
 function N(e) {
-  return h.Get().BIsStoreItemMissing(e.id, g(e.type));
+  return _.Get().BIsStoreItemMissing(e.id, f(e.type));
 }
 function P(e, t, n) {
   let r = [];
@@ -146,15 +146,15 @@ function P(e, t, n) {
 }
 function F(e) {
   return (
-    (h.Get().GetStoreItem(e.id, g(e.type))?.GetBestPurchaseOption()
+    (_.Get().GetStoreItem(e.id, f(e.type))?.GetBestPurchaseOption()
       ?.discount_pct ?? 0) > 0
   );
 }
 function I(e) {
   if (!M.Get().GetHomeView()?.localized) return !0;
-  let t = h.Get().GetStoreItem(e.id, g(e.type));
+  let t = _.Get().GetStoreItem(e.id, f(e.type));
   return (
-    !t || o.Get().BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport())
+    !t || l.Get().BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport())
   );
 }
 async function L(e, t, n) {
@@ -163,46 +163,46 @@ async function L(e, t, n) {
     a = e.filter((e) => e.type === `sub`).map((e) => e.id),
     o = e.filter((e) => e.type === `bundle`).map((e) => e.id);
   {
-    let e = r.filter((e) => !h.Get().BHasApp(e, t)),
-      n = a.filter((e) => !h.Get().BHasApp(e, t)),
-      i = o.filter((e) => !h.Get().BHasApp(e, t));
+    let e = r.filter((e) => !_.Get().BHasApp(e, t)),
+      n = a.filter((e) => !_.Get().BHasApp(e, t)),
+      i = o.filter((e) => !_.Get().BHasApp(e, t));
     (e.length > 0 || n.length > 0 || i.length > 0) &&
       (await Promise.all([
-        h.Get().QueueMultipleAppRequests(e, t),
-        h.Get().QueueMultiplePackageRequests(n, t),
-        h.Get().QueueMultipleBundleRequests(i, t),
+        _.Get().QueueMultipleAppRequests(e, t),
+        _.Get().QueueMultiplePackageRequests(n, t),
+        _.Get().QueueMultipleBundleRequests(i, t),
       ]));
   }
   let s = new Set();
   (o?.forEach((e) => {
-    h.Get()
+    _.Get()
       .GetBundle(e)
       ?.GetIncludedAppIDs()
       .forEach((e) => s.add(e));
   }),
     a?.forEach((e) => {
-      h.Get()
+      _.Get()
         .GetPackage(e)
         ?.GetIncludedAppIDs()
         .forEach((e) => s.add(e));
     }));
-  let c = Array.from(s).filter((e) => !h.Get().BHasApp(e, t));
+  let c = Array.from(s).filter((e) => !_.Get().BHasApp(e, t));
   if (
-    (c.length > 0 && (await h.Get().QueueMultipleAppRequests(c, t)),
+    (c.length > 0 && (await _.Get().QueueMultipleAppRequests(c, t)),
     r.forEach((e) => s.add(e)),
     n)
   ) {
     let e = Array.from(s)
       .map((e) => {
-        let t = h.Get().GetApp(e)?.GetParentAppID();
+        let t = _.Get().GetApp(e)?.GetParentAppID();
         return t ? (s.add(t), t) : null;
       })
       .filter((e) => e !== null)
-      .filter((e) => !h.Get().BHasApp(e, t));
-    e.length > 0 && (await h.Get().QueueMultipleAppRequests(e, t));
+      .filter((e) => !_.Get().BHasApp(e, t));
+    e.length > 0 && (await _.Get().QueueMultipleAppRequests(e, t));
   }
   return Array.from(s).filter((e) => {
-    let t = h.Get().GetApp(e);
+    let t = _.Get().GetApp(e);
     return t && !t.GetParentAppID();
   });
 }
@@ -213,9 +213,9 @@ var R = {
 };
 function z(e, t = !1) {
   if (!e) return !0;
-  let n = o.Get();
+  let n = l.Get();
   if (
-    (v(n.BIsLoaded(), `Dynamic Store not loaded`),
+    (h(n.BIsLoaded(), `Dynamic Store not loaded`),
     !t && e.GetStoreItemType() == 0)
   ) {
     let t = e.GetParentAppID();
@@ -241,69 +241,69 @@ function z(e, t = !1) {
 }
 async function B(e, t, n, r) {
   let i = 0,
-    s = 0,
-    c = [];
+    o = 0,
+    s = [];
   await L(e, a, t);
   for (let a of e) {
-    let e = h.Get().GetStoreItem(a.id, g(a.type));
+    let e = _.Get().GetStoreItem(a.id, f(a.type));
     if (!e) {
       i++;
       continue;
     }
-    let l = e
+    let c = e
       .GetIncludedAppIDs()
-      .map((e) => h.Get().GetApp(e))
+      .map((e) => _.Get().GetApp(e))
       .filter((e) => !!e);
-    if ((l.push(e), t)) {
-      let e = new Set(l.map((e) => e.GetParentAppID()).filter((e) => !!e)),
+    if ((c.push(e), t)) {
+      let e = new Set(c.map((e) => e.GetParentAppID()).filter((e) => !!e)),
         t = Array.from(e)
-          .map((e) => h.Get().GetApp(e))
+          .map((e) => _.Get().GetApp(e))
           .filter((e) => !!e);
-      t && l.push(...t);
+      t && c.push(...t);
     }
-    l.some((e) => (r || z)(e))
-      ? (s++, n && (o.Get().BIsStoreItemOwned(e) || n.push(a)))
-      : c.push(a);
+    c.some((e) => (r || z)(e))
+      ? (o++, n && (l.Get().BIsStoreItemOwned(e) || n.push(a)))
+      : s.push(a);
   }
-  return c;
+  return s;
 }
-async function V(e, t, n, r, i, a, s) {
-  let c = await B(
+async function V(e, t, n, r, i, a, o) {
+  let s = await B(
       e,
       t,
-      s,
+      o,
       i
         ? (e) =>
             !e ||
-            o.Get().BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
-            o.Get().BExcludeTagIDs(e.GetTagIDs())
+            l.Get().BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
+            l.Get().BExcludeTagIDs(e.GetTagIDs())
         : z,
     ),
-    l = [];
-  for (let e of c) {
-    let t = h.Get().GetStoreItem(e.id, g(e.type));
+    c = [];
+  for (let e of s) {
+    let t = _.Get().GetStoreItem(e.id, f(e.type));
     if (!t) continue;
     let i = t?.GetIncludedAppIDsOrSelf(),
-      c = !1;
-    (n && (c ||= i.every((e) => o.Get().BIsGameOwned(e))),
-      r && (c ||= i.every((e) => o.Get().BIsGameWishlisted(e))),
-      a && (c ||= i.every((e) => o.Get().BIsGameIgnored(e))),
-      c ? s && s.push(e) : l.push(e));
+      s = !1;
+    (n && (s ||= i.every((e) => l.Get().BIsGameOwned(e))),
+      r && (s ||= i.every((e) => l.Get().BIsGameWishlisted(e))),
+      a && (s ||= i.every((e) => l.Get().BIsGameIgnored(e))),
+      s ? o && o.push(e) : c.push(e));
   }
-  return l;
+  return c;
 }
 function H() {
-  let e = o.Get();
+  let e = l.Get();
   if (e.BIsLoaded())
     return {
-      bSignedIn: !!b.logged_in,
+      bSignedIn: !!d.logged_in,
       ePrimaryLanguage: e.GetPrimaryLanguage(),
       setSecondaryLanguages: e.GetSecondaryLanguages(),
       setExcludedContentDescriptors: new Set(e.ExcludedContentDescriptor),
     };
 }
 function U() {
-  return E(d, f.COUNTRY);
+  return E(u, v.COUNTRY);
 }
 function W(e) {
   return !(

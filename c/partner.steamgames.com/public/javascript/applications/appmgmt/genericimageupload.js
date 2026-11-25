@@ -1,7 +1,8 @@
-import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~de7f2df91c.js";
-import { _, _ } from "./chunk~25a6634263.js";
+import { _, _, _, _, _, _, _, _ } from "./chunk~de7f2df91c.js";
+import { _, _ } from "./chunk~bd90a5fce7.js";
 import { _ } from "./chunk~b4171a8747.js";
 import { _, _, _, _, _ } from "./chunk~1fa4b8f2ff.js";
+import { _, _ } from "./chunk~96e60d7578.js";
 import "./chunk~8681f5c764.js";
 import { _ } from "./chunk~f4e4ed5c17.js";
 import "./chunk~ca0c999570.js";
@@ -300,6 +301,12 @@ var _ = [1, 3, 2, 10],
     sale_cross_promo_logo: {
       width: [1200, 940],
       height: [460, 460],
+      rgAcceptableTypes: _,
+    },
+    sale_secondary_background: {
+      width: 0,
+      height: 0,
+      bDisableEnforceDimensions: !0,
       rgAcceptableTypes: _,
     },
     spotlight_art: {

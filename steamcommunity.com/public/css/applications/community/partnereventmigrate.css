@@ -1,3 +1,19 @@
+.RTyw40qgE3M- {
+  --bg-color: rgb(from var(--color-dull-10) r g b / 60%);
+  background-color: var(--bg-color);
+  animation: 2s ease-in-out infinite XwKPddwB6Dg-;
+}
+@keyframes XwKPddwB6Dg- {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
 @media only screen and (width <= 768px) {
   .hts1AEUagvA- {
     display: grid;
@@ -968,6 +984,44 @@ html.responsive.touch .tk4p68PGj1I- {
   inset: 0;
   transform: scaleY(-1);
 }
+.NQebVMQULto- {
+  justify-content: center;
+  margin-top: 14px;
+  display: flex;
+}
+.NQebVMQULto- .XQ46KRNpLMk- {
+  cursor: pointer;
+  color: #222;
+  background: #ffffffb3;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  display: inline-block;
+}
+.BasicUI .NQebVMQULto- .XQ46KRNpLMk- {
+  background: unset;
+  color: #fff;
+  font: var(--gpText-BodyLarge);
+  background-color: #ffffff1f;
+  min-width: 32%;
+  padding: 10px 20px;
+  transition: background-color 0.2s;
+}
+.BasicUI .NQebVMQULto- .XQ46KRNpLMk-.gpfocus {
+  color: #000;
+  background-color: #fff;
+  border-radius: 0;
+}
+.NQebVMQULto- .XQ46KRNpLMk-:hover {
+  color: #222;
+  background: #fff;
+  box-shadow: 0 0 10px #000000b3;
+}
+.BasicUI .NQebVMQULto- .XQ46KRNpLMk-:hover {
+  color: #fff;
+  box-shadow: unset;
+  background-color: #ffffff3d;
+}
 .d3elVPeljM8- > :first-child {
   flex-direction: column;
   align-items: center;
@@ -1011,44 +1065,6 @@ html.responsive.touch .tk4p68PGj1I- {
   margin-top: 12px;
   padding: 0 25px;
   display: flex;
-}
-.NQebVMQULto- {
-  justify-content: center;
-  margin-top: 14px;
-  display: flex;
-}
-.NQebVMQULto- .XQ46KRNpLMk- {
-  cursor: pointer;
-  color: #222;
-  background: #ffffffb3;
-  border: none;
-  border-radius: 2px;
-  padding: 10px;
-  display: inline-block;
-}
-.BasicUI .NQebVMQULto- .XQ46KRNpLMk- {
-  background: unset;
-  color: #fff;
-  font: var(--gpText-BodyLarge);
-  background-color: #ffffff1f;
-  min-width: 32%;
-  padding: 10px 20px;
-  transition: background-color 0.2s;
-}
-.BasicUI .NQebVMQULto- .XQ46KRNpLMk-.gpfocus {
-  color: #000;
-  background-color: #fff;
-  border-radius: 0;
-}
-.NQebVMQULto- .XQ46KRNpLMk-:hover {
-  color: #222;
-  background: #fff;
-  box-shadow: 0 0 10px #000000b3;
-}
-.BasicUI .NQebVMQULto- .XQ46KRNpLMk-:hover {
-  color: #fff;
-  box-shadow: unset;
-  background-color: #ffffff3d;
 }
 .XQCbpyNssck- {
   flex-shrink: 0;
@@ -1246,6 +1262,20 @@ html:not(.GamepadMode)
   box-shadow: unset;
   margin-bottom: unset;
   padding: 0;
+}
+html:not(.GamepadMode)
+  .carousel__slider-tray:has(
+    > .carousel__slide > .carousel__inner-slide > .BEJJ0zhyKjM-
+  ) {
+  align-items: flex-start !important;
+}
+html:not(.GamepadMode)
+  .carousel__slider-tray:has(
+    > .carousel__slide > .carousel__inner-slide > .BEJJ0zhyKjM-
+  )
+  > .carousel__slide--hidden {
+  visibility: hidden;
+  height: 0 !important;
 }
 ._0AL4AZNHxZA- {
   padding-bottom: 20px;
@@ -2162,6 +2192,11 @@ html.responsive.touch .i8Nz35tfmTA- .lCddIzY8s9c- {
 }
 .i8Nz35tfmTA- .IfKYdvlkwj4- {
   text-align: center;
+}
+.i8Nz35tfmTA-.sQ-QnJ1ISSo- {
+  z-index: auto;
+  position: relative;
+  top: auto;
 }
 .i8Nz35tfmTA-.jIobwgHlqR8- .nVdaSJgIKUI- {
   --scroll-edge-fade-start: 1;

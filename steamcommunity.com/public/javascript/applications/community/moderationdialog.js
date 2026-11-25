@@ -2,673 +2,123 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Ft as t, It as n, K as r, ot as i } from "./chunk~01cfc309bf.js";
-import { n as a } from "./chunk~cfd048ddd7.js";
-import { m as o, o as s, p as c } from "./chunk~1e67c3e4e4.js";
-import { t as l } from "./chunk~eefd71512b.js";
-import { i as u, n as d, r as f, t as p } from "./chunk~0f9e58b0a5.js";
-import { t as m } from "./chunk~62cf132e0e.js";
-import { r as h, t as g } from "./chunk~75db1bf948.js";
-import { t as _ } from "./chunk~37e5316e27.js";
+import { Pt as t, at as n } from "./chunk~01cfc309bf.js";
+import { n as r } from "./chunk~cfd048ddd7.js";
+import { m as i, o as a, p as o } from "./chunk~1e67c3e4e4.js";
+import { t as s } from "./chunk~eefd71512b.js";
+import { i as c, n as l, r as u, t as d } from "./chunk~0f9e58b0a5.js";
+import { n as f, t as p } from "./chunk~62cf132e0e.js";
+import { r as m, t as h } from "./chunk~75db1bf948.js";
+import { t as g } from "./chunk~37e5316e27.js";
 import {
+  $h as _,
   B as v,
-  Bh as y,
-  Du as b,
-  Fh as x,
-  Gh as S,
-  Gt as C,
-  Ih as w,
-  It as T,
-  K as E,
-  Lh as D,
-  Mc as O,
-  Nh as k,
-  Ou as A,
-  Ph as j,
-  Q as M,
-  Qo as N,
-  Rh as P,
-  Rt as F,
-  Tu as I,
-  Xi as L,
-  Xm as R,
-  Zo as z,
-  _a as B,
-  bc as V,
-  hu as H,
-  oh as ee,
-  q as te,
-  rg as ne,
-  sh as U,
-  tm as re,
-  y as ie,
-  ym as W,
-  ys as ae,
-  zh as G,
-  zu as K,
+  Cu as y,
+  Dc as b,
+  Gi as x,
+  K as S,
+  Ko as C,
+  Nt as w,
+  Pu as T,
+  Q as E,
+  Su as D,
+  Vh as O,
+  bu as k,
+  fa as A,
+  hc as j,
+  jt as M,
+  mm as N,
+  ms as P,
+  q as F,
+  qo as I,
+  uu as L,
+  y as R,
+  zt as z,
 } from "./main.js";
-var q = e(n(), 1),
-  oe = class e extends q.Message {
-    static ImplementsStaticInterface() {}
-    constructor(t = null) {
-      (super(),
-        e.prototype.quicktext_id || k(e.M()),
-        q.Message.initialize(this, t, 0, -1, [6, 10, 11], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (e.sm_m ||= {
-          proto: e,
-          fields: {
-            quicktext_id: { n: 1, br: w.readUint32, bw: y.writeUint32 },
-            requires_update: { n: 2, br: w.readBool, bw: y.writeBool },
-            title: { n: 3, br: w.readString, bw: y.writeString },
-            hidden: { n: 4, br: w.readBool, bw: y.writeBool },
-            approved: { n: 5, br: w.readBool, bw: y.writeBool },
-            help_request_types: {
-              n: 6,
-              r: !0,
-              q: !0,
-              br: w.readUint32,
-              pbr: w.readPackedUint32,
-              bw: y.writeRepeatedUint32,
-            },
-            content: { n: 7, c: J },
-            button_text: { n: 8, br: w.readString, bw: y.writeString },
-            replacement: { n: 9, br: w.readBool, bw: y.writeBool },
-            payment_methods: {
-              n: 10,
-              r: !0,
-              q: !0,
-              br: w.readUint32,
-              pbr: w.readPackedUint32,
-              bw: y.writeRepeatedUint32,
-            },
-            appids: {
-              n: 11,
-              r: !0,
-              q: !0,
-              br: w.readUint32,
-              pbr: w.readPackedUint32,
-              bw: y.writeRepeatedUint32,
-            },
-            escalation_level: { n: 12, br: w.readEnum, bw: y.writeEnum },
-            partner_only: { n: 13, br: w.readBool, bw: y.writeBool },
-          },
-        }),
-        e.sm_m
-      );
-    }
-    static MBF() {
-      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
-    }
-    toObject(t = !1) {
-      return e.toObject(t, this);
-    }
-    static toObject(t, n) {
-      return G(e.M(), t, n);
-    }
-    static fromObject(t) {
-      return x(e.M(), t);
-    }
-    static deserializeBinary(t) {
-      let n = new q.BinaryReader(t),
-        r = new e();
-      return e.deserializeBinaryFromReader(r, n);
-    }
-    static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
-    }
-    serializeBinary() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
-    }
-    static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
-    }
-    serializeBase64String() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
-    }
-    getClassName() {
-      return `CSupportData_QuickText`;
-    }
-  },
-  J = class e extends q.Message {
-    static ImplementsStaticInterface() {}
-    constructor(t = null) {
-      (super(),
-        e.prototype.content || k(e.M()),
-        q.Message.initialize(this, t, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (e.sm_m ||= {
-          proto: e,
-          fields: {
-            content: { n: 1, br: w.readString, bw: y.writeString },
-            major_revision: { n: 2, br: w.readUint32, bw: y.writeUint32 },
-            minor_revision: { n: 3, br: w.readUint32, bw: y.writeUint32 },
-            author: { n: 4, br: w.readUint32, bw: y.writeUint32 },
-            last_update: { n: 5, br: w.readUint32, bw: y.writeUint32 },
-            language: { n: 6, br: w.readInt32, bw: y.writeInt32 },
-          },
-        }),
-        e.sm_m
-      );
-    }
-    static MBF() {
-      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
-    }
-    toObject(t = !1) {
-      return e.toObject(t, this);
-    }
-    static toObject(t, n) {
-      return G(e.M(), t, n);
-    }
-    static fromObject(t) {
-      return x(e.M(), t);
-    }
-    static deserializeBinary(t) {
-      let n = new q.BinaryReader(t),
-        r = new e();
-      return e.deserializeBinaryFromReader(r, n);
-    }
-    static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
-    }
-    serializeBinary() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
-    }
-    static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
-    }
-    serializeBase64String() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
-    }
-    getClassName() {
-      return `CSupportData_QuickTextContent`;
-    }
-  },
-  Y = class e extends q.Message {
-    static ImplementsStaticInterface() {}
-    constructor(t = null) {
-      (super(),
-        e.prototype.quicktext_id || k(e.M()),
-        q.Message.initialize(this, t, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (e.sm_m ||= {
-          proto: e,
-          fields: {
-            quicktext_id: { n: 1, br: w.readUint32, bw: y.writeUint32 },
-            language: { n: 2, br: w.readString, bw: y.writeString },
-            from_sql: { n: 3, br: w.readBool, bw: y.writeBool },
-          },
-        }),
-        e.sm_m
-      );
-    }
-    static MBF() {
-      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
-    }
-    toObject(t = !1) {
-      return e.toObject(t, this);
-    }
-    static toObject(t, n) {
-      return G(e.M(), t, n);
-    }
-    static fromObject(t) {
-      return x(e.M(), t);
-    }
-    static deserializeBinary(t) {
-      let n = new q.BinaryReader(t),
-        r = new e();
-      return e.deserializeBinaryFromReader(r, n);
-    }
-    static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
-    }
-    serializeBinary() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
-    }
-    static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
-    }
-    serializeBase64String() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
-    }
-    getClassName() {
-      return `CSupportAgents_GetQuickText_Request`;
-    }
-  },
-  se = class e extends q.Message {
-    static ImplementsStaticInterface() {}
-    constructor(t = null) {
-      (super(),
-        e.prototype.quicktext || k(e.M()),
-        q.Message.initialize(this, t, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (e.sm_m ||= {
-          proto: e,
-          fields: {
-            quicktext: { n: 1, c: oe },
-            english_reference: { n: 2, c: J },
-          },
-        }),
-        e.sm_m
-      );
-    }
-    static MBF() {
-      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
-    }
-    toObject(t = !1) {
-      return e.toObject(t, this);
-    }
-    static toObject(t, n) {
-      return G(e.M(), t, n);
-    }
-    static fromObject(t) {
-      return x(e.M(), t);
-    }
-    static deserializeBinary(t) {
-      let n = new q.BinaryReader(t),
-        r = new e();
-      return e.deserializeBinaryFromReader(r, n);
-    }
-    static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
-    }
-    serializeBinary() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
-    }
-    static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
-    }
-    serializeBase64String() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
-    }
-    getClassName() {
-      return `CSupportAgents_GetQuickText_Response`;
-    }
-  },
-  ce = class e extends q.Message {
-    static ImplementsStaticInterface() {}
-    constructor(t = null) {
-      (super(),
-        e.prototype.appid || k(e.M()),
-        q.Message.initialize(this, t, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (e.sm_m ||= {
-          proto: e,
-          fields: {
-            appid: { n: 1, br: w.readUint32, bw: y.writeUint32 },
-            log_type: { n: 2, br: w.readString, bw: y.writeString },
-            version_string: { n: 3, br: w.readString, bw: y.writeString },
-            log_contents: { n: 4, br: w.readString, bw: y.writeString },
-            request_id: {
-              n: 5,
-              br: w.readUint64String,
-              bw: y.writeUint64String,
-            },
-          },
-        }),
-        e.sm_m
-      );
-    }
-    static MBF() {
-      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
-    }
-    toObject(t = !1) {
-      return e.toObject(t, this);
-    }
-    static toObject(t, n) {
-      return G(e.M(), t, n);
-    }
-    static fromObject(t) {
-      return x(e.M(), t);
-    }
-    static deserializeBinary(t) {
-      let n = new q.BinaryReader(t),
-        r = new e();
-      return e.deserializeBinaryFromReader(r, n);
-    }
-    static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
-    }
-    serializeBinary() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
-    }
-    static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
-    }
-    serializeBase64String() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
-    }
-    getClassName() {
-      return `CHelpRequestLogs_UploadUserApplicationLog_Request`;
-    }
-  },
-  le = class e extends q.Message {
-    static ImplementsStaticInterface() {}
-    constructor(t = null) {
-      (super(),
-        e.prototype.id || k(e.M()),
-        q.Message.initialize(this, t, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (e.sm_m ||= {
-          proto: e,
-          fields: {
-            id: { n: 1, br: w.readUint64String, bw: y.writeUint64String },
-          },
-        }),
-        e.sm_m
-      );
-    }
-    static MBF() {
-      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
-    }
-    toObject(t = !1) {
-      return e.toObject(t, this);
-    }
-    static toObject(t, n) {
-      return G(e.M(), t, n);
-    }
-    static fromObject(t) {
-      return x(e.M(), t);
-    }
-    static deserializeBinary(t) {
-      let n = new q.BinaryReader(t),
-        r = new e();
-      return e.deserializeBinaryFromReader(r, n);
-    }
-    static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
-    }
-    serializeBinary() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
-    }
-    static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
-    }
-    serializeBase64String() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
-    }
-    getClassName() {
-      return `CHelpRequestLogs_UploadUserApplicationLog_Response`;
-    }
-  },
-  ue = class e extends q.Message {
-    static ImplementsStaticInterface() {}
-    constructor(t = null) {
-      (super(),
-        e.prototype.appid || k(e.M()),
-        q.Message.initialize(this, t, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (e.sm_m ||= {
-          proto: e,
-          fields: { appid: { n: 1, br: w.readUint32, bw: y.writeUint32 } },
-        }),
-        e.sm_m
-      );
-    }
-    static MBF() {
-      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
-    }
-    toObject(t = !1) {
-      return e.toObject(t, this);
-    }
-    static toObject(t, n) {
-      return G(e.M(), t, n);
-    }
-    static fromObject(t) {
-      return x(e.M(), t);
-    }
-    static deserializeBinary(t) {
-      let n = new q.BinaryReader(t),
-        r = new e();
-      return e.deserializeBinaryFromReader(r, n);
-    }
-    static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
-    }
-    serializeBinary() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
-    }
-    static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
-    }
-    serializeBase64String() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
-    }
-    getClassName() {
-      return `CHelpRequestLogs_GetApplicationLogDemand_Request`;
-    }
-  },
-  de = class e extends q.Message {
-    static ImplementsStaticInterface() {}
-    constructor(t = null) {
-      (super(),
-        e.prototype.request_id || k(e.M()),
-        q.Message.initialize(this, t, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (e.sm_m ||= {
-          proto: e,
-          fields: {
-            request_id: {
-              n: 1,
-              br: w.readUint64String,
-              bw: y.writeUint64String,
-            },
-          },
-        }),
-        e.sm_m
-      );
-    }
-    static MBF() {
-      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
-    }
-    toObject(t = !1) {
-      return e.toObject(t, this);
-    }
-    static toObject(t, n) {
-      return G(e.M(), t, n);
-    }
-    static fromObject(t) {
-      return x(e.M(), t);
-    }
-    static deserializeBinary(t) {
-      let n = new q.BinaryReader(t),
-        r = new e();
-      return e.deserializeBinaryFromReader(r, n);
-    }
-    static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
-    }
-    serializeBinary() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
-    }
-    static serializeBinaryToWriter(t, n) {
-      P(e.M(), t, n);
-    }
-    serializeBase64String() {
-      var t = new q.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
-    }
-    getClassName() {
-      return `CHelpRequestLogs_GetApplicationLogDemand_Response`;
-    }
-  },
-  X;
-(function (e) {
-  function t(e, t, n) {
-    return e.SendMsg(`SupportAgents.GetQuickText#1`, U(Y, t, n), se, {
-      bConstMethod: !0,
-      ePrivilege: 5,
-      rgBrowserAPISites: [`community`],
-    });
-  }
-  e.GetQuickText = t;
-})((X ||= {}));
-var fe;
-(function (e) {
-  function t(e, t, n) {
-    return e.SendMsg(
-      `HelpRequestLogs.UploadUserApplicationLog#1`,
-      U(ce, t, n),
-      le,
-      { ePrivilege: 1 },
-    );
-  }
-  e.UploadUserApplicationLog = t;
-  function n(e, t, n) {
-    return e.SendMsg(
-      `HelpRequestLogs.GetApplicationLogDemand#1`,
-      U(ue, t, n),
-      de,
-      { ePrivilege: 1 },
-    );
-  }
-  e.GetApplicationLogDemand = n;
-})((fe ||= {}));
-var Z = e(t(), 1),
-  Q = i(),
-  pe = { 1: [62, 20, 28, 25, 22], 2: [35, 3, 20, 21, 22] };
-function me(e) {
-  let [t, n] = (0, Z.useState)(null),
-    [r, i] = (0, Z.useState)(`main`),
-    [a, o] = (0, Z.useState)(!1),
-    [s, c] = (0, Z.useState)(!1),
-    [u, d] = (0, Z.useState)(null),
-    [f, p] = (0, Z.useState)(null),
-    [_, y] = (0, Z.useState)(null),
-    [x, S] = (0, Z.useState)(!1),
-    [C, w] = (0, Z.useState)(!1),
-    [T, D] = (0, Z.useState)(0),
-    [O, k] = (0, Z.useState)(``),
-    A =
+var B = e(t(), 1),
+  V = n(),
+  H = { 1: [62, 20, 28, 25, 22], 2: [35, 3, 20, 21, 22] };
+function U(e) {
+  let [t, n] = (0, B.useState)(null),
+    [r, i] = (0, B.useState)(`main`),
+    [a, o] = (0, B.useState)(!1),
+    [c, l] = (0, B.useState)(!1),
+    [u, d] = (0, B.useState)(null),
+    [g, y] = (0, B.useState)(null),
+    [b, x] = (0, B.useState)(null),
+    [C, T] = (0, B.useState)(!1),
+    [O, j] = (0, B.useState)(!1),
+    [M, N] = (0, B.useState)(0),
+    [P, I] = (0, B.useState)(``),
+    L =
       !!e.rtContentCreatedAt &&
       Date.now() / 1e3 - e.rtContentCreatedAt > 2592e3,
-    j = (e.subject.subject_type ? pe[e.subject.subject_type] : void 0) ?? [],
-    N = a || s || u || f || _ || x || C,
-    P = ge(e.authorSteamID),
-    L = 0;
-  if (P.isSuccess) {
-    let e = P.data;
-    e.pref_primary_language !== void 0 && e.pref_primary_language !== -1
-      ? (L = e.pref_primary_language)
-      : e.last_logon_langauge !== void 0 &&
-        e.last_logon_langauge !== -1 &&
-        (L = e.last_logon_langauge);
-  }
-  let R = he(E(t), L);
-  (0, Z.useEffect)(() => {
-    k(
-      R.data?.quicktext?.content?.content ??
-        R.data?.english_reference?.content ??
-        ``,
-    );
-  }, [R.data, P.data]);
-  let z = async () => {
-      ne(t !== null, `eReason must be non-null to sanction`);
+    R = (e.subject.subject_type ? H[e.subject.subject_type] : void 0) ?? [],
+    z = a || c || u || g || b || C || O,
+    U = f(S(t), e.authorSteamID);
+  (0, B.useEffect)(() => {
+    I(U ?? ``);
+  }, [U]);
+  let W = async () => {
+      _(t !== null, `eReason must be non-null to sanction`);
       let n = [];
       (a && n.push({ sanction: 1 }),
-        s && n.push({ sanction: 8 }),
+        c && n.push({ sanction: 8 }),
         u && n.push({ sanction: 3, days: u }),
-        f && n.push({ sanction: 2, days: f }),
-        _ && n.push({ sanction: 5, days: _ }),
-        x && n.push({ sanction: 4, days: -1 }),
-        C && n.push({ sanction: 7 }),
-        T === 1
+        g && n.push({ sanction: 2, days: g }),
+        b && n.push({ sanction: 5, days: b }),
+        C && n.push({ sanction: 4, days: -1 }),
+        O && n.push({ sanction: 7 }),
+        M === 1
           ? n.push({ sanction: 12, escalate_to: 1 })
-          : T === 10 && n.push({ sanction: 12, escalate_to: 10 }),
+          : M === 10 && n.push({ sanction: 12, escalate_to: 10 }),
         await e.sanctionMutation.mutateAsync({
           sanctions: n,
-          message: O.trim(),
+          message: P.trim(),
           reason: t,
         }),
         e.onSanction());
     },
-    V = (e) => {
+    G = (e) => {
       (n(e), i(`main`));
     },
-    H = (e) => {
-      e ? (w(!0), y(7), n(16)) : (w(!1), y(-1));
+    K = (e) => {
+      e ? (j(!0), x(7), n(16)) : (j(!1), x(-1));
     };
-  return (0, Q.jsxs)(Q.Fragment, {
+  return (0, V.jsxs)(V.Fragment, {
     children: [
-      r === `reason` && (0, Q.jsx)(m, { reasons: te, onSelect: V }),
+      r === `reason` && (0, V.jsx)(p, { reasons: F, onSelect: G }),
       r === `main` &&
-        (0, Q.jsxs)(b, {
+        (0, V.jsxs)(D, {
           children: [
-            (0, Q.jsxs)(b, {
+            (0, V.jsxs)(D, {
               className: `gDpRvQSyEhc-`,
               children: [
                 e.sanctionMutation.isError &&
-                  (0, Q.jsxs)(`div`, {
-                    className: I(`_0Aus5xkg4rs-`, `WfjrnpAtOos-`),
+                  (0, V.jsxs)(`div`, {
+                    className: k(`_0Aus5xkg4rs-`, `WfjrnpAtOos-`),
                     children: [
-                      (0, Q.jsx)(B, {}),
+                      (0, V.jsx)(A, {}),
                       ` Error: `,
                       e.sanctionMutation.error.message,
                     ],
                   }),
-                (0, Q.jsx)(`label`, { htmlFor: `reason`, children: `Reason:` }),
-                (0, Q.jsx)(`button`, {
+                (0, V.jsx)(`label`, { htmlFor: `reason`, children: `Reason:` }),
+                (0, V.jsx)(`button`, {
                   id: `reason`,
                   className: void 0,
                   onClick: () => i(`reason`),
                   children:
                     t === null
-                      ? M.Localize(`#commentsanctiondialog_selectreason`)
+                      ? E.Localize(`#commentsanctiondialog_selectreason`)
                       : v(t),
                 }),
-                j.length > 0 &&
-                  (0, Q.jsx)(`div`, {
+                R.length > 0 &&
+                  (0, V.jsx)(`div`, {
                     className: `M5MEiztLFqg-`,
-                    children: j.map((e) =>
-                      (0, Q.jsx)(
-                        F,
+                    children: R.map((e) =>
+                      (0, V.jsx)(
+                        w,
                         {
                           onClick: () => n(t === e ? null : e),
                           size: `1`,
@@ -679,10 +129,10 @@ function me(e) {
                       ),
                     ),
                   }),
-                (0, Q.jsxs)(`label`, {
+                (0, V.jsxs)(`label`, {
                   className: `_0Aus5xkg4rs-`,
                   children: [
-                    (0, Q.jsx)(`input`, {
+                    (0, V.jsx)(`input`, {
                       type: `checkbox`,
                       checked: a,
                       onChange: (e) => o(e.target.checked),
@@ -690,34 +140,34 @@ function me(e) {
                     ` Delete`,
                   ],
                 }),
-                (0, Q.jsxs)(`label`, {
+                (0, V.jsxs)(`label`, {
                   className: `_0Aus5xkg4rs-`,
                   children: [
-                    (0, Q.jsx)(`input`, {
+                    (0, V.jsx)(`input`, {
                       type: `checkbox`,
-                      checked: s,
-                      onChange: (e) => c(e.target.checked),
+                      checked: c,
+                      onChange: (e) => l(e.target.checked),
                     }),
                     ` Issue Warning`,
                   ],
                 }),
-                A &&
+                L &&
                   !!u &&
-                  (0, Q.jsxs)(`div`, {
-                    className: I(`_0Aus5xkg4rs-`, `WfjrnpAtOos-`),
+                  (0, V.jsxs)(`div`, {
+                    className: k(`_0Aus5xkg4rs-`, `WfjrnpAtOos-`),
                     children: [
-                      (0, Q.jsx)(B, {}),
+                      (0, V.jsx)(A, {}),
                       ` Content is older than 30 days. Are you sure you want to ban?`,
                     ],
                   }),
                 e.clanSteamID &&
-                  (0, Q.jsxs)(Q.Fragment, {
+                  (0, V.jsxs)(V.Fragment, {
                     children: [
-                      (0, Q.jsx)(`label`, {
+                      (0, V.jsx)(`label`, {
                         htmlFor: `hubban`,
                         children: `Ban from hub:`,
                       }),
-                      (0, Q.jsxs)(`select`, {
+                      (0, V.jsxs)(`select`, {
                         id: `hubban`,
                         onChange: (e) =>
                           d(
@@ -727,39 +177,39 @@ function me(e) {
                           ),
                         value: u ?? 0,
                         children: [
-                          (0, Q.jsx)(`option`, {
+                          (0, V.jsx)(`option`, {
                             value: `0`,
                             children: `Do not ban`,
                           }),
-                          (0, Q.jsx)(`option`, {
+                          (0, V.jsx)(`option`, {
                             value: `1`,
                             children: `1 day`,
                           }),
-                          (0, Q.jsx)(`option`, {
+                          (0, V.jsx)(`option`, {
                             value: `3`,
                             children: `3 days`,
                           }),
-                          (0, Q.jsx)(`option`, {
+                          (0, V.jsx)(`option`, {
                             value: `7`,
                             children: `7 days`,
                           }),
-                          (0, Q.jsx)(`option`, {
+                          (0, V.jsx)(`option`, {
                             value: `14`,
                             children: `14 days`,
                           }),
-                          (0, Q.jsx)(`option`, {
+                          (0, V.jsx)(`option`, {
                             value: `30`,
                             children: `30 days`,
                           }),
-                          (0, Q.jsx)(`option`, {
+                          (0, V.jsx)(`option`, {
                             value: `90`,
                             children: `3 months`,
                           }),
-                          (0, Q.jsx)(`option`, {
+                          (0, V.jsx)(`option`, {
                             value: `365`,
                             children: `1 year`,
                           }),
-                          (0, Q.jsx)(`option`, {
+                          (0, V.jsx)(`option`, {
                             value: `-1`,
                             children: `Permanent`,
                           }),
@@ -768,133 +218,133 @@ function me(e) {
                       !1,
                     ],
                   }),
-                A &&
-                  !!f &&
-                  (0, Q.jsxs)(`div`, {
-                    className: I(`_0Aus5xkg4rs-`, `WfjrnpAtOos-`),
+                L &&
+                  !!g &&
+                  (0, V.jsxs)(`div`, {
+                    className: k(`_0Aus5xkg4rs-`, `WfjrnpAtOos-`),
                     children: [
-                      (0, Q.jsx)(B, {}),
+                      (0, V.jsx)(A, {}),
                       ` Content is older than 30 days. Are you sure you want to ban?`,
                     ],
                   }),
-                (0, Q.jsx)(`label`, {
+                (0, V.jsx)(`label`, {
                   htmlFor: `communityban`,
                   children: `Ban from community:`,
                 }),
-                (0, Q.jsxs)(`select`, {
+                (0, V.jsxs)(`select`, {
                   id: `communityban`,
                   onChange: (e) =>
-                    p(e.target.value === `0` ? null : parseInt(e.target.value)),
-                  value: f ?? 0,
+                    y(e.target.value === `0` ? null : parseInt(e.target.value)),
+                  value: g ?? 0,
                   children: [
-                    (0, Q.jsx)(`option`, {
+                    (0, V.jsx)(`option`, {
                       value: `0`,
                       children: `Do not ban`,
                     }),
-                    (0, Q.jsx)(`option`, { value: `1`, children: `1 day` }),
-                    (0, Q.jsx)(`option`, { value: `3`, children: `3 days` }),
-                    (0, Q.jsx)(`option`, { value: `7`, children: `7 days` }),
-                    (0, Q.jsx)(`option`, { value: `14`, children: `14 days` }),
-                    (0, Q.jsx)(`option`, { value: `30`, children: `30 days` }),
-                    (0, Q.jsx)(`option`, { value: `90`, children: `3 months` }),
-                    (0, Q.jsx)(`option`, { value: `365`, children: `1 year` }),
-                    (0, Q.jsx)(`option`, {
+                    (0, V.jsx)(`option`, { value: `1`, children: `1 day` }),
+                    (0, V.jsx)(`option`, { value: `3`, children: `3 days` }),
+                    (0, V.jsx)(`option`, { value: `7`, children: `7 days` }),
+                    (0, V.jsx)(`option`, { value: `14`, children: `14 days` }),
+                    (0, V.jsx)(`option`, { value: `30`, children: `30 days` }),
+                    (0, V.jsx)(`option`, { value: `90`, children: `3 months` }),
+                    (0, V.jsx)(`option`, { value: `365`, children: `1 year` }),
+                    (0, V.jsx)(`option`, {
                       value: `-1`,
                       children: `Permanent`,
                     }),
                   ],
                 }),
                 !1,
-                (0, Q.jsx)(`label`, {
+                (0, V.jsx)(`label`, {
                   htmlFor: `deletecomments`,
                   children: `Delete comments since:`,
                 }),
-                (0, Q.jsxs)(`select`, {
+                (0, V.jsxs)(`select`, {
                   id: `deletecomments`,
-                  disabled: C,
+                  disabled: O,
                   onChange: (e) =>
-                    y(
+                    x(
                       e.target.value === `-1` ? null : parseInt(e.target.value),
                     ),
-                  value: _ ?? -1,
+                  value: b ?? -1,
                   children: [
-                    (0, Q.jsx)(`option`, {
+                    (0, V.jsx)(`option`, {
                       value: `-1`,
                       children: `Do not delete`,
                     }),
-                    (0, Q.jsx)(`option`, { value: `1`, children: `1 day` }),
-                    (0, Q.jsx)(`option`, { value: `7`, children: `7 days` }),
-                    (0, Q.jsx)(`option`, { value: `14`, children: `14 days` }),
-                    (0, Q.jsx)(`option`, { value: `30`, children: `30 days` }),
-                    (0, Q.jsx)(`option`, {
+                    (0, V.jsx)(`option`, { value: `1`, children: `1 day` }),
+                    (0, V.jsx)(`option`, { value: `7`, children: `7 days` }),
+                    (0, V.jsx)(`option`, { value: `14`, children: `14 days` }),
+                    (0, V.jsx)(`option`, { value: `30`, children: `30 days` }),
+                    (0, V.jsx)(`option`, {
                       value: `0`,
                       children: `All comments`,
                     }),
                   ],
                 }),
-                (0, Q.jsxs)(`span`, {
+                (0, V.jsxs)(`span`, {
                   className: `_0Aus5xkg4rs-`,
                   children: [
-                    (0, Q.jsx)(`input`, {
+                    (0, V.jsx)(`input`, {
                       type: `checkbox`,
-                      checked: x,
-                      onChange: (e) => S(e.target.checked),
+                      checked: C,
+                      onChange: (e) => T(e.target.checked),
                     }),
                     `\xA0Permanent trade ban`,
                   ],
                 }),
                 !1,
-                (0, Q.jsxs)(`span`, {
+                (0, V.jsxs)(`span`, {
                   className: `_0Aus5xkg4rs-`,
                   children: [
-                    (0, Q.jsx)(`input`, {
+                    (0, V.jsx)(`input`, {
                       type: `checkbox`,
-                      checked: C,
-                      onChange: (e) => H(e.target.checked),
+                      checked: O,
+                      onChange: (e) => K(e.target.checked),
                     }),
                     `\xA0Mark as suspicious`,
                   ],
                 }),
-                (0, Q.jsx)(`label`, {
+                (0, V.jsx)(`label`, {
                   htmlFor: `escalateto`,
                   children: `Escalate to`,
                 }),
-                (0, Q.jsxs)(`select`, {
+                (0, V.jsxs)(`select`, {
                   id: `escalateto`,
-                  onChange: (e) => D(parseInt(e.target.value)),
-                  value: T,
+                  onChange: (e) => N(parseInt(e.target.value)),
+                  value: M,
                   children: [
-                    (0, Q.jsx)(`option`, {
+                    (0, V.jsx)(`option`, {
                       value: 0,
                       children: `Do not escalate`,
                     }),
-                    (0, Q.jsx)(`option`, { value: 1, children: `Supervisor` }),
-                    (0, Q.jsx)(`option`, { value: 10, children: `Valve` }),
+                    (0, V.jsx)(`option`, { value: 1, children: `Supervisor` }),
+                    (0, V.jsx)(`option`, { value: 10, children: `Valve` }),
                   ],
                 }),
-                (0, Q.jsx)(`textarea`, {
-                  className: I(`_0Aus5xkg4rs-`, `Obo5tCs0Dgo-`),
+                (0, V.jsx)(`textarea`, {
+                  className: k(`_0Aus5xkg4rs-`, `Obo5tCs0Dgo-`),
                   placeholder: `Message to send (required)`,
-                  value: O,
-                  onChange: (e) => k(e.target.value),
+                  value: P,
+                  onChange: (e) => I(e.target.value),
                 }),
               ],
             }),
-            (0, Q.jsxs)(b, {
+            (0, V.jsxs)(D, {
               className: `iummRPlc5UA-`,
               children: [
                 e.sanctionMutation.isPending &&
-                  (0, Q.jsx)(l, { size: `small` }),
+                  (0, V.jsx)(s, { size: `small` }),
                 !e.sanctionMutation.isPending &&
-                  (0, Q.jsxs)(Q.Fragment, {
+                  (0, V.jsxs)(V.Fragment, {
                     children: [
-                      (0, Q.jsx)(h, {
+                      (0, V.jsx)(m, {
                         onClick: e.onCancel,
                         children: `Cancel`,
                       }),
-                      (0, Q.jsx)(g, {
-                        onClick: z,
-                        disabled: t === null || !N || O.trim().length === 0,
+                      (0, V.jsx)(h, {
+                        onClick: W,
+                        disabled: t === null || !z || P.trim().length === 0,
                         children: `Sanction`,
                       }),
                     ],
@@ -906,79 +356,48 @@ function me(e) {
     ],
   });
 }
-function he(e, t) {
-  let n = re();
-  return r({
-    queryKey: [`get_quick_text`, e, t],
-    queryFn: async () => {
-      if (e == null || t === void 0) return null;
-      let r = ee.Init(Y);
-      (r.Body().set_quicktext_id(e), r.Body().set_language(R(t)));
-      let i = await X.GetQuickText(n, r);
-      if (i.GetEResult() !== 1)
-        throw Error(`useQuickText failed with EResult ` + i.GetEResult());
-      return i.Body().toObject();
-    },
-    enabled: e !== void 0,
-  });
-}
-function ge(e) {
-  return r({
-    queryKey: [`get_primary_language_for_user`, e],
-    queryFn: async () => {
-      if (e === `0` || !e) throw Error(`Invalid steamid`);
-      let t = await (
-        await fetch(
-          `${W.COMMUNITY_BASE_URL}profiles/${e}/ajaxlanguagepreferences`,
-        )
-      ).json();
-      if (t.success === 1) return t.preferences;
-      throw Error(`Failed GetPrimaryLanguageForUser. EResult: ` + t.success);
-    },
-  });
-}
-var _e = `qJiMpgjUBmw-`,
-  ve = `TMrWHSfHqDs-`,
-  ye = `RxrRIG6Jn9o-`;
-function be(e) {
+var W = `qJiMpgjUBmw-`,
+  G = `TMrWHSfHqDs-`,
+  K = `RxrRIG6Jn9o-`;
+function q(e) {
   let { subject: t } = e,
-    [n, r] = (0, Z.useState)(!1),
-    i = t && (t.unresolved_report_count > 0 || t.unresolved_dispute_count > 0),
-    o = (0, Q.jsx)(a, {
-      onClick: () => r(!0),
-      children: (0, Q.jsxs)(C, {
+    [n, i] = (0, B.useState)(!1),
+    a = t && (t.unresolved_report_count > 0 || t.unresolved_dispute_count > 0),
+    o = (0, V.jsx)(r, {
+      onClick: () => i(!0),
+      children: (0, V.jsxs)(z, {
         direction: `row`,
         justify: `between`,
         align: `baseline`,
         gap: `1`,
         children: [
-          i &&
-            (0, Q.jsx)(`img`, {
+          a &&
+            (0, V.jsx)(`img`, {
               className: `tPmeaVOVhvg-`,
-              src: `${W.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+              src: `${N.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
             }),
-          M.Localize(`#commentsanctiondialog_moderate`),
+          E.Localize(`#commentsanctiondialog_moderate`),
           t &&
             t.required_moderator_level === 10 &&
-            (0, Q.jsx)(`span`, {
+            (0, V.jsx)(`span`, {
               className: `_2T5Cy4opNNw-`,
               children: `(VO)`,
             }),
           t &&
             t.required_moderator_level === 1 &&
-            (0, Q.jsx)(`span`, {
+            (0, V.jsx)(`span`, {
               className: `WUCJ-cE1nNQ-`,
               children: `(Supervisor)`,
             }),
         ],
       }),
     });
-  return (0, Q.jsxs)(Q.Fragment, {
+  return (0, V.jsxs)(V.Fragment, {
     children: [
-      n && (0, Q.jsx)(xe, { onClose: () => r(!1), ...e }),
+      n && (0, V.jsx)(Y, { onClose: () => i(!1), ...e }),
       t &&
-        (0, Q.jsx)(ae, {
-          toolTipContent: (0, Q.jsx)($, { subject: t }),
+        (0, V.jsx)(P, {
+          toolTipContent: (0, V.jsx)(J, { subject: t }),
           direction: `bottom`,
           nDelayShowMS: 0,
           children: o,
@@ -987,28 +406,28 @@ function be(e) {
     ],
   });
 }
-function $(e) {
+function J(e) {
   let { subject: t } = e,
-    n = (0, Z.useMemo)(() => {
-      let e = S(t?.reports ?? [], (e) => e.report_reason);
+    n = (0, B.useMemo)(() => {
+      let e = O(t?.reports ?? [], (e) => e.report_reason);
       return (e.sort((e, t) => e[1] - t[1]), e);
     }, [t.reports]);
   return n.length === 0
     ? null
-    : (0, Q.jsxs)(Q.Fragment, {
+    : (0, V.jsxs)(V.Fragment, {
         children: [
-          (0, Q.jsx)(`div`, { children: M.Localize(`#reasonlist_title`) }),
+          (0, V.jsx)(`div`, { children: E.Localize(`#reasonlist_title`) }),
           n.map(([e, t]) =>
-            (0, Q.jsx)(
+            (0, V.jsx)(
               `div`,
-              { children: M.Localize(`#reasonlist_reasonwithcount`, v(e), t) },
+              { children: E.Localize(`#reasonlist_reasonwithcount`, v(e), t) },
               e,
             ),
           ),
         ],
       });
 }
-function xe(e) {
+function Y(e) {
   let {
       sanctionMutation: t,
       acquitMutation: n,
@@ -1017,27 +436,27 @@ function xe(e) {
       gidComment: a,
       clanSteamID: o,
       authorSteamID: s,
-      onClose: c,
+      onClose: f,
     } = e,
-    l = r?.reported_content_id,
-    [m, h] = (0, Z.useState)(`main`),
-    g = [
+    p = r?.reported_content_id,
+    [m, h] = (0, B.useState)(`main`),
+    _ = [
       {
         name: `Reports`,
         key: `reports`,
-        contents: (0, Q.jsx)(A, { children: (0, Q.jsx)(u, { subject: r }) }),
+        contents: (0, V.jsx)(y, { children: (0, V.jsx)(c, { subject: r }) }),
       },
       {
         name: `History`,
         key: `history`,
-        contents: (0, Q.jsx)(A, {
-          children: (0, Q.jsx)(f, { reportedContentID: l }),
+        contents: (0, V.jsx)(y, {
+          children: (0, V.jsx)(u, { reportedContentID: p }),
         }),
       },
       {
         name: `Details`,
         key: `details`,
-        contents: (0, Q.jsx)(A, { children: e.children }),
+        contents: (0, V.jsx)(y, { children: e.children }),
       },
     ],
     v = () => {
@@ -1047,108 +466,108 @@ function xe(e) {
           (window.location.href += `#c` + a),
         window.location.reload());
     },
-    y = 0,
-    b = 0;
+    S = 0,
+    w = 0;
   if (r)
     for (let e of r.reports)
-      (e.time_resolved && !e.time_disputed && y++,
-        e.time_dispute_resolved && b++);
-  let x =
+      (e.time_resolved && !e.time_disputed && S++,
+        e.time_dispute_resolved && w++);
+  let D =
       !!r?.reported_content_id && !r.owner_dispute_time && r.resolved === 14,
-    S = r !== void 0 && !!r.owner_dispute_time;
-  return (0, Q.jsx)(ie, {
+    O = r !== void 0 && !!r.owner_dispute_time;
+  return (0, V.jsx)(R, {
     onlyPopoutIfNeeded: !0,
     popupHeight: 340,
     popupWidth: 640,
     strTitle: `Moderate subject`,
-    children: (0, Q.jsx)(L, {
+    children: (0, V.jsx)(x, {
       bAllowFullSize: !0,
       title: `Moderate`,
       "aria-describedby": `moderate`,
       onCancel: e.onClose,
       className: void 0,
-      children: (0, Q.jsx)(z, {
-        children: (0, Q.jsx)(N, {
-          children: (0, Q.jsxs)(`div`, {
-            className: _e,
+      children: (0, V.jsx)(C, {
+        children: (0, V.jsx)(I, {
+          children: (0, V.jsxs)(`div`, {
+            className: W,
             children: [
               m === `main` &&
-                (0, Q.jsxs)(`div`, {
+                (0, V.jsxs)(`div`, {
                   className: `Wgs3U5MVZxE-`,
                   children: [
-                    (0, Q.jsxs)(`div`, {
+                    (0, V.jsxs)(`div`, {
                       className: void 0,
                       children: [
-                        (0, Q.jsxs)(T, {
+                        (0, V.jsxs)(M, {
                           as: `div`,
                           size: `3`,
                           contrast: `description`,
                           children: [
                             r?.unresolved_report_count ?? 0,
                             ` unresolved / `,
-                            y,
+                            S,
                             ` resolved / `,
                             r?.unresolved_dispute_count ?? 0,
                             ` disputed / `,
-                            b,
+                            w,
                             ` disputes resolved`,
                           ],
                         }),
-                        (0, Q.jsx)(_, { tabs: g, bDisableRouting: !0 }),
+                        (0, V.jsx)(g, { tabs: _, bDisableRouting: !0 }),
                       ],
                     }),
-                    (0, Q.jsxs)(`div`, {
+                    (0, V.jsxs)(`div`, {
                       className: `XevVgxU7JM8-`,
                       children: [
-                        (0, Q.jsx)(`button`, {
+                        (0, V.jsx)(`button`, {
                           onClick: () => h(`sanction`),
-                          children: (0, Q.jsxs)(C, {
+                          children: (0, V.jsxs)(z, {
                             direction: `row`,
                             justify: `center`,
                             align: `center`,
                             children: [
-                              (0, Q.jsx)(H, { className: `Pk8e-JCMLtM-` }),
+                              (0, V.jsx)(L, { className: `Pk8e-JCMLtM-` }),
                               ` Sanction`,
                             ],
                           }),
                         }),
-                        (0, Q.jsx)(we, {
+                        (0, V.jsx)(Q, {
                           subject: r,
                           acquitMutation: n,
-                          onClose: c,
+                          onClose: f,
                         }),
-                        (0, Q.jsx)(Te, { subject: r, onClose: c }),
-                        p(r) &&
-                          (0, Q.jsx)(K, {
-                            disabled: !l,
+                        (0, V.jsx)($, { subject: r, onClose: f }),
+                        d(r) &&
+                          (0, V.jsx)(T, {
+                            disabled: !p,
                             onClick: () => h(`escalate`),
-                            children: M.Localize(
+                            children: E.Localize(
                               `#moderation_escalation_escalate`,
                             ),
                           }),
-                        !S &&
-                          (0, Q.jsx)(`button`, {
-                            disabled: !x,
+                        !O &&
+                          (0, V.jsx)(`button`, {
+                            disabled: !D,
                             onClick: () => h(`ownerdispute`),
                             children: `Owner Dispute`,
                           }),
-                        S &&
-                          (0, Q.jsxs)(`span`, {
+                        O &&
+                          (0, V.jsxs)(`span`, {
                             children: [
-                              (0, Q.jsx)(`a`, {
-                                href: `${W.HELP_BASE_URL}ticketmaster/ticket/${r.owner_dispute_details}`,
-                                children: (0, Q.jsx)(T, {
+                              (0, V.jsx)(`a`, {
+                                href: `${N.HELP_BASE_URL}ticketmaster/ticket/${r.owner_dispute_details}`,
+                                children: (0, V.jsx)(M, {
                                   size: `2`,
-                                  children: M.Localize(
+                                  children: E.Localize(
                                     `#moderation_already_owner_disputed`,
                                   ),
                                 }),
                               }),
-                              (0, Q.jsx)(`button`, {
-                                disabled: !l,
+                              (0, V.jsx)(`button`, {
+                                disabled: !p,
                                 onClick: () => h(`editownerdisputedetails`),
                                 className: `VDTUVdDNhUU-`,
-                                children: (0, Q.jsx)(O, {}),
+                                children: (0, V.jsx)(b, {}),
                               }),
                             ],
                           }),
@@ -1157,14 +576,14 @@ function xe(e) {
                   ],
                 }),
               m === `escalate` &&
-                !!l &&
-                (0, Q.jsx)(d, {
-                  reportedContentID: l,
+                !!p &&
+                (0, V.jsx)(l, {
+                  reportedContentID: p,
                   eCurrentLevel: r?.required_moderator_level,
                   onClose: () => h(`main`),
                 }),
               m === `sanction` &&
-                (0, Q.jsx)(me, {
+                (0, V.jsx)(U, {
                   subject: r ?? { subject_type: i },
                   clanSteamID: o,
                   authorSteamID: s,
@@ -1173,15 +592,15 @@ function xe(e) {
                   onCancel: () => h(`main`),
                 }),
               m === `ownerdispute` &&
-                !!l &&
-                (0, Q.jsx)(Ce, {
-                  reportedContentID: l,
+                !!p &&
+                (0, V.jsx)(Z, {
+                  reportedContentID: p,
                   onClose: () => h(`main`),
                 }),
               m === `editownerdisputedetails` &&
-                !!l &&
-                (0, Q.jsx)(Se, {
-                  reportedContentID: l,
+                !!p &&
+                (0, V.jsx)(X, {
+                  reportedContentID: p,
                   onClose: () => h(`main`),
                   currentDetails: r?.owner_dispute_details ?? ``,
                 }),
@@ -1192,125 +611,125 @@ function xe(e) {
     }),
   });
 }
-function Se(e) {
+function X(e) {
   let { reportedContentID: t, onClose: n, currentDetails: r } = e,
-    [i, a] = (0, Z.useState)(r),
-    s = o(t, i);
-  return (0, Q.jsxs)(Q.Fragment, {
+    [a, o] = (0, B.useState)(r),
+    s = i(t, a);
+  return (0, V.jsxs)(V.Fragment, {
     children: [
-      (0, Q.jsxs)(`label`, {
+      (0, V.jsxs)(`label`, {
         children: [
-          (0, Q.jsx)(T, {
+          (0, V.jsx)(M, {
             size: `2`,
-            children: M.Localize(`#moderation_editownerdisputedetails_label`),
+            children: E.Localize(`#moderation_editownerdisputedetails_label`),
           }),
-          (0, Q.jsx)(`input`, {
+          (0, V.jsx)(`input`, {
             type: `text`,
-            value: i,
-            onChange: (e) => a(e.target.value),
+            value: a,
+            onChange: (e) => o(e.target.value),
           }),
         ],
       }),
-      (0, Q.jsxs)(C, {
+      (0, V.jsxs)(z, {
         justify: `between`,
         direction: `row`,
         children: [
-          (0, Q.jsx)(K, {
+          (0, V.jsx)(T, {
             onClick: async () => {
               (await s.mutateAsync(), n());
             },
-            children: M.Localize(`#moderation_editownerdisputedetails_save`),
+            children: E.Localize(`#moderation_editownerdisputedetails_save`),
           }),
-          (0, Q.jsx)(F, {
+          (0, V.jsx)(w, {
             onClick: n,
             loading: s.isPending,
-            children: M.Localize(`#moderation_ownerdispute_cancel`),
+            children: E.Localize(`#moderation_ownerdispute_cancel`),
           }),
         ],
       }),
     ],
   });
 }
-function Ce(e) {
+function Z(e) {
   let { reportedContentID: t, onClose: n } = e,
-    [r, i] = (0, Z.useState)(``),
-    a = s(t, r);
-  return (0, Q.jsxs)(b, {
-    className: ve,
+    [r, i] = (0, B.useState)(``),
+    o = a(t, r);
+  return (0, V.jsxs)(D, {
+    className: G,
     children: [
-      (0, Q.jsx)(T, {
+      (0, V.jsx)(M, {
         as: `div`,
         size: `2`,
-        children: M.Localize(`#moderation_ownerdispute_description`),
+        children: E.Localize(`#moderation_ownerdispute_description`),
       }),
-      (0, Q.jsxs)(`label`, {
+      (0, V.jsxs)(`label`, {
         children: [
-          (0, Q.jsx)(T, {
+          (0, V.jsx)(M, {
             size: `2`,
-            children: M.Localize(`#moderation_ownerdispute_ticketmastercode`),
+            children: E.Localize(`#moderation_ownerdispute_ticketmastercode`),
           }),
           ` `,
-          (0, Q.jsx)(`input`, {
+          (0, V.jsx)(`input`, {
             type: `text`,
             value: r,
             onChange: (e) => i(e.target.value),
           }),
         ],
       }),
-      (0, Q.jsxs)(C, {
+      (0, V.jsxs)(z, {
         justify: `between`,
         direction: `row`,
         children: [
-          (0, Q.jsx)(K, {
+          (0, V.jsx)(T, {
             onClick: async () => {
-              (await a.mutateAsync(), n());
+              (await o.mutateAsync(), n());
             },
-            children: M.Localize(`#moderation_ownerdispute_dispute`),
+            children: E.Localize(`#moderation_ownerdispute_dispute`),
           }),
-          (0, Q.jsx)(K, {
+          (0, V.jsx)(T, {
             onClick: n,
-            children: M.Localize(`#moderation_ownerdispute_cancel`),
+            children: E.Localize(`#moderation_ownerdispute_cancel`),
           }),
         ],
       }),
     ],
   });
 }
-function we(e) {
+function Q(e) {
   let { acquitMutation: t, onClose: n, subject: r } = e,
     i = r && (r.unresolved_report_count > 0 || r.unresolved_dispute_count > 0);
-  return (0, Q.jsx)(`button`, {
+  return (0, V.jsx)(`button`, {
     onClick: async () => {
       (await t.mutateAsync(void 0), n());
     },
     disabled: !i,
-    children: (0, Q.jsxs)(C, {
+    children: (0, V.jsxs)(z, {
       direction: `row`,
       justify: `center`,
       align: `center`,
       children: [
-        (0, Q.jsx)(V, { className: ye }),
+        (0, V.jsx)(j, { className: K }),
         ` `,
-        M.Localize(`#moderation_actions_acquit`),
+        E.Localize(`#moderation_actions_acquit`),
       ],
     }),
   });
 }
-function Te(e) {
+function $(e) {
   let { subject: t, onClose: n } = e,
     r =
       !!t?.reported_content_id &&
       t.resolved !== 0 &&
       (t.unresolved_dispute_count > 0 || t.unresolved_report_count > 0),
-    i = c();
-  return (0, Q.jsx)(`button`, {
+    i = o();
+  return (0, V.jsx)(`button`, {
     onClick: async () => {
       t?.reported_content_id &&
         (await i.mutateAsync({ reportedContentID: t.reported_content_id }),
         n());
     },
     disabled: !r,
-    children: M.Localize(`#moderation_actions_sustain`),
+    children: E.Localize(`#moderation_actions_sustain`),
   });
 }
-export { be as t };
+export { q as t };

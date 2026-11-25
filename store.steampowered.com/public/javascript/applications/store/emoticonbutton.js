@@ -2,7 +2,7 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, Nt as n, ft as r, l as i } from "./chunk~01cfc309bf.js";
+import { It as t, Mt as n, c as r, dt as i } from "./chunk~01cfc309bf.js";
 import {
   a,
   c as o,
@@ -16,23 +16,23 @@ import {
   s as f,
   u as ne,
 } from "./chunk~a19d1add1e.js";
-import { n as re } from "./chunk~a7c5e71e12.js";
-import { t as ie } from "./chunk~e3c69795ea.js";
+import { n as p } from "./chunk~a7c5e71e12.js";
+import { t as re } from "./chunk~e3c69795ea.js";
 import {
-  Al as p,
   Ar as m,
-  Bc as h,
-  G as g,
-  Kb as _,
-  Lr as ae,
-  Nc as v,
-  Qx as oe,
-  Yr as y,
-  _x as b,
-  cb as x,
-  gl as se,
-  rb as S,
+  G as h,
+  Lr as ie,
+  Pc as g,
+  Vc as _,
+  Xr as ae,
+  _l as oe,
+  eS as se,
+  ib as v,
+  jl as y,
+  lb as b,
+  qb as x,
   sr as ce,
+  vx as S,
   zr as C,
 } from "./main.js";
 var w = e(t());
@@ -42,17 +42,17 @@ function T(e, t, n = !1) {
 var le = `_6Ymd3Ej4NCU-`,
   ue = `nnMTzvpAu6Y-`,
   de = `plDm7MqblvA-`,
-  fe = `_0SYoz2hcxOY-`,
-  pe = `_6gRC1q99lWw-`,
-  me = `a1l1nhz8GFU-`,
-  he = `wfpm6FahiQY-`,
-  ge = `G30RxXBSXck-`,
-  _e = `Mw7bdt52AuY-`,
-  ve = `_0ZS8IEfJKto-`,
-  ye = `R-BER3-p7c8-`,
-  be = `nCS2TzxRijY-`,
-  E = r(),
-  D = class extends w.Component {
+  E = `_0SYoz2hcxOY-`,
+  fe = `_6gRC1q99lWw-`,
+  pe = `a1l1nhz8GFU-`,
+  me = `wfpm6FahiQY-`,
+  he = `G30RxXBSXck-`,
+  ge = `Mw7bdt52AuY-`,
+  _e = `_0ZS8IEfJKto-`,
+  ve = `R-BER3-p7c8-`,
+  ye = `nCS2TzxRijY-`,
+  D = i(),
+  O = class extends w.Component {
     constructor(e) {
       (super(e), (this.state = { activeIndex: e.initialActiveIndex || 0 }));
     }
@@ -64,11 +64,11 @@ var le = `_6Ymd3Ej4NCU-`,
         i = e.length > 1,
         a = i
           ? ({ detail: { button: t } }) => {
-              t === p.BUMPER_LEFT
+              t === y.BUMPER_LEFT
                 ? this.setState({
                     activeIndex: Math.max(0, this.state.activeIndex - 1),
                   })
-                : t === p.BUMPER_RIGHT &&
+                : t === y.BUMPER_RIGHT &&
                   this.setState({
                     activeIndex: Math.min(
                       e.length - 1,
@@ -77,17 +77,17 @@ var le = `_6Ymd3Ej4NCU-`,
                   });
             }
           : void 0;
-      return (0, E.jsxs)(h, {
+      return (0, D.jsxs)(_, {
         className: le,
         onButtonDown: a,
-        children: [i && (0, E.jsx)(xe, { children: this.RenderTabs() }), r],
+        children: [i && (0, D.jsx)(be, { children: this.RenderTabs() }), r],
       });
     }
     RenderTabs() {
       return this.props.config.map(({ renderTab: e }, t) => {
         let n = this.state.activeIndex === t;
-        return (0, E.jsx)(
-          Se,
+        return (0, D.jsx)(
+          xe,
           {
             active: n,
             onClick: () => this.setState({ activeIndex: t }),
@@ -98,29 +98,29 @@ var le = `_6Ymd3Ej4NCU-`,
       });
     }
   };
-function xe(e) {
-  return (0, E.jsx)(h, {
+function be(e) {
+  return (0, D.jsx)(_, {
     className: ue,
     "flow-children": `row`,
     children: e.children,
   });
 }
-function O(e) {
-  return (0, E.jsx)(`div`, { className: me, children: e.children });
+function k(e) {
+  return (0, D.jsx)(`div`, { className: pe, children: e.children });
 }
-function Se(e) {
+function xe(e) {
   let { active: t, children: n, onClick: r } = e;
-  return (0, E.jsx)(h, {
-    className: v(de, t && `f-iRFuUHuSo-`),
-    focusClassName: fe,
+  return (0, D.jsx)(_, {
+    className: g(de, t && `f-iRFuUHuSo-`),
+    focusClassName: E,
     onActivate: r,
-    children: (0, E.jsx)(`div`, {
-      className: v(pe, t && `f-iRFuUHuSo-`),
+    children: (0, D.jsx)(`div`, {
+      className: g(fe, t && `f-iRFuUHuSo-`),
       children: n,
     }),
   });
 }
-function k(e) {
+function A(e) {
   let {
       items: t,
       renderItem: n,
@@ -129,13 +129,13 @@ function k(e) {
       renderEmpty: a,
     } = e,
     o = t.map((e, a) =>
-      (0, E.jsx)(
-        h,
+      (0, D.jsx)(
+        _,
         {
-          className: ge,
+          className: he,
           onActivate: () => r(t[a]),
           autoFocus: a === 0,
-          focusClassName: fe,
+          focusClassName: E,
           children: n(t[a]),
         },
         i(e),
@@ -143,67 +143,67 @@ function k(e) {
     );
   return (
     t.length === 0 && a && (o = a()),
-    (0, E.jsx)(h, { "flow-children": `grid`, className: he, children: o })
+    (0, D.jsx)(_, { "flow-children": `grid`, className: me, children: o })
   );
 }
-function A(e) {
+function j(e) {
   let { title: t, onFilterChange: n, filter: r, onSubmit: i, ...a } = e;
-  return (0, E.jsxs)(E.Fragment, {
+  return (0, D.jsxs)(D.Fragment, {
     children: [
-      (0, E.jsx)(O, {
-        children: (0, E.jsx)(M, {
+      (0, D.jsx)(k, {
+        children: (0, D.jsx)(N, {
           title: t,
-          children: (0, E.jsx)(k, { ...a }),
+          children: (0, D.jsx)(A, { ...a }),
         }),
       }),
-      (0, E.jsx)(N, { value: r, onChange: n, onSubmit: i }),
-    ],
-  });
-}
-function j(e) {
-  let { onFilterChange: t, filter: n, sections: r, title: i } = e;
-  return (0, E.jsxs)(E.Fragment, {
-    children: [
-      (0, E.jsxs)(O, {
-        children: [
-          i && (0, E.jsx)(`div`, { className: `Zcgr0x6gQMc-`, children: i }),
-          r.map(({ title: e, ...t }) =>
-            (0, E.jsx)(M, { title: e, children: (0, E.jsx)(k, { ...t }) }, e),
-          ),
-        ],
-      }),
-      (0, E.jsx)(N, { value: n, onChange: t }),
+      (0, D.jsx)(P, { value: r, onChange: n, onSubmit: i }),
     ],
   });
 }
 function M(e) {
-  return (0, E.jsxs)(`div`, {
-    className: void 0,
+  let { onFilterChange: t, filter: n, sections: r, title: i } = e;
+  return (0, D.jsxs)(D.Fragment, {
     children: [
-      (0, E.jsx)(`div`, { className: _e, children: e.title }),
-      (0, E.jsx)(`div`, { className: void 0, children: e.children }),
+      (0, D.jsxs)(k, {
+        children: [
+          i && (0, D.jsx)(`div`, { className: `Zcgr0x6gQMc-`, children: i }),
+          r.map(({ title: e, ...t }) =>
+            (0, D.jsx)(N, { title: e, children: (0, D.jsx)(A, { ...t }) }, e),
+          ),
+        ],
+      }),
+      (0, D.jsx)(P, { value: n, onChange: t }),
     ],
   });
 }
 function N(e) {
+  return (0, D.jsxs)(`div`, {
+    className: void 0,
+    children: [
+      (0, D.jsx)(`div`, { className: ge, children: e.title }),
+      (0, D.jsx)(`div`, { className: void 0, children: e.children }),
+    ],
+  });
+}
+function P(e) {
   let { value: t, onChange: n, onSubmit: r } = e;
-  return (0, E.jsx)(`div`, {
-    className: ve,
-    children: (0, E.jsx)(ce, {
+  return (0, D.jsx)(`div`, {
+    className: _e,
+    children: (0, D.jsx)(ce, {
       type: `text`,
-      placeholder: S(`#AddonPicker_Search`),
-      className: ye,
+      placeholder: v(`#AddonPicker_Search`),
+      className: ve,
       value: t,
       onChange: (e) => n(e.target.value),
       onSubmit: r,
     }),
   });
 }
-function P(e) {
+function F(e) {
   let { className: t, ...n } = e;
-  return (0, E.jsx)(`div`, { className: v(t, be), ...n });
+  return (0, D.jsx)(`div`, { className: g(t, ye), ...n });
 }
-var F = 1e3;
+var Se = 1e3;
 function I(e) {
   return e.recent_emoticons;
 }
@@ -230,7 +230,7 @@ function Ce(e) {
     t
   );
 }
-var we = i((e) => {
+var we = r((e) => {
     let {
       emoticonStore: t,
       roomEffectSettings: n,
@@ -245,32 +245,32 @@ var we = i((e) => {
       R(t) &&
         s.push({
           renderTab: (e) =>
-            (0, E.jsx)(`span`, {
-              title: S(`#AddonPicker_RecentlyUsed`),
-              className: v(d, f, e && void 0),
-              children: (0, E.jsx)(Z, {}),
+            (0, D.jsx)(`span`, {
+              title: v(`#AddonPicker_RecentlyUsed`),
+              className: g(d, f, e && void 0),
+              children: (0, D.jsx)(Z, {}),
             }),
           renderContent: () =>
-            (0, E.jsx)(B, {
+            (0, D.jsx)(B, {
               store: t,
               onEmoticonSelect: (e) => i(e.name),
               onStickerSelect: (e) => o(e.name),
               flairGroupID: r,
             }),
         }),
-      (0, E.jsx)(C, {
-        children: (0, E.jsx)(D, {
+      (0, D.jsx)(C, {
+        children: (0, D.jsx)(O, {
           config: [
             ...s,
             {
               renderTab: (e) =>
-                (0, E.jsx)(`span`, {
-                  title: S(`#AddonPicker_Emoticons`),
-                  className: v(d, e && void 0),
-                  children: (0, E.jsx)(X, {}),
+                (0, D.jsx)(`span`, {
+                  title: v(`#AddonPicker_Emoticons`),
+                  className: g(d, e && void 0),
+                  children: (0, D.jsx)(X, {}),
                 }),
               renderContent: () =>
-                (0, E.jsx)(V, {
+                (0, D.jsx)(V, {
                   store: t,
                   onItemSelect: (e) => i(e.name),
                   flairGroupID: r,
@@ -278,23 +278,23 @@ var we = i((e) => {
             },
             {
               renderTab: (e) =>
-                (0, E.jsx)(`span`, {
-                  title: S(`#AddonPicker_Stickers`),
-                  className: v(d, e && void 0),
-                  children: (0, E.jsx)(Y, {}),
+                (0, D.jsx)(`span`, {
+                  title: v(`#AddonPicker_Stickers`),
+                  className: g(d, e && void 0),
+                  children: (0, D.jsx)(Y, {}),
                 }),
               renderContent: () =>
-                (0, E.jsx)(U, { store: t, onItemSelect: (e) => o(e.name) }),
+                (0, D.jsx)(U, { store: t, onItemSelect: (e) => o(e.name) }),
             },
             {
               renderTab: (e) =>
-                (0, E.jsx)(`span`, {
-                  title: S(`#AddonPicker_RoomEffects`),
-                  className: v(d, e && void 0),
-                  children: (0, E.jsx)(je, {}),
+                (0, D.jsx)(`span`, {
+                  title: v(`#AddonPicker_RoomEffects`),
+                  className: g(d, e && void 0),
+                  children: (0, D.jsx)(je, {}),
                 }),
               renderContent: () =>
-                (0, E.jsx)(De, {
+                (0, D.jsx)(De, {
                   store: t,
                   effectSettings: n,
                   onItemSelect: (e) => a(e.name),
@@ -332,32 +332,32 @@ var we = i((e) => {
         R(e) &&
           i.push({
             renderTab: (e) =>
-              (0, E.jsx)(`span`, {
-                title: S(`#AddonPicker_RecentlyUsed`),
-                className: v(d, f, e && void 0),
-                children: (0, E.jsx)(Z, {}),
+              (0, D.jsx)(`span`, {
+                title: v(`#AddonPicker_RecentlyUsed`),
+                className: g(d, f, e && void 0),
+                children: (0, D.jsx)(Z, {}),
               }),
             renderContent: () =>
-              (0, E.jsx)(B, {
+              (0, D.jsx)(B, {
                 store: e,
                 onEmoticonSelect: (e) => t(e.name),
                 onStickerSelect: (e) => n(e.name),
                 flairGroupID: r,
               }),
           }),
-        (0, E.jsx)(C, {
-          children: (0, E.jsx)(D, {
+        (0, D.jsx)(C, {
+          children: (0, D.jsx)(O, {
             config: [
               ...i,
               {
                 renderTab: (e) =>
-                  (0, E.jsx)(`span`, {
-                    title: S(`#AddonPicker_Emoticons`),
-                    className: v(d, e && void 0),
-                    children: (0, E.jsx)(X, {}),
+                  (0, D.jsx)(`span`, {
+                    title: v(`#AddonPicker_Emoticons`),
+                    className: g(d, e && void 0),
+                    children: (0, D.jsx)(X, {}),
                   }),
                 renderContent: () =>
-                  (0, E.jsx)(V, {
+                  (0, D.jsx)(V, {
                     store: e,
                     onItemSelect: (e) => t(e.name),
                     flairGroupID: r,
@@ -365,13 +365,13 @@ var we = i((e) => {
               },
               {
                 renderTab: (e) =>
-                  (0, E.jsx)(`span`, {
-                    title: S(`#AddonPicker_Stickers`),
-                    className: v(d, e && void 0),
-                    children: (0, E.jsx)(Y, {}),
+                  (0, D.jsx)(`span`, {
+                    title: v(`#AddonPicker_Stickers`),
+                    className: g(d, e && void 0),
+                    children: (0, D.jsx)(Y, {}),
                   }),
                 renderContent: () =>
-                  (0, E.jsx)(U, { store: e, onItemSelect: (e) => n(e.name) }),
+                  (0, D.jsx)(U, { store: e, onItemSelect: (e) => n(e.name) }),
               },
             ],
           }),
@@ -379,7 +379,7 @@ var we = i((e) => {
       );
     }
   };
-z = _([i], z);
+z = x([r], z);
 var Te = class extends w.Component {
     m_disposeEmoticonStore;
     constructor(e) {
@@ -396,18 +396,18 @@ var Te = class extends w.Component {
       this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
     }
     render() {
-      return (0, E.jsx)(C, {
-        children: (0, E.jsx)(D, {
+      return (0, D.jsx)(C, {
+        children: (0, D.jsx)(O, {
           config: [
             {
               renderTab: () =>
-                (0, E.jsx)(`span`, {
-                  title: S(`#AddonPicker_Emoticons`),
+                (0, D.jsx)(`span`, {
+                  title: v(`#AddonPicker_Emoticons`),
                   className: d,
-                  children: (0, E.jsx)(X, {}),
+                  children: (0, D.jsx)(X, {}),
                 }),
               renderContent: () =>
-                (0, E.jsx)(W, {
+                (0, D.jsx)(W, {
                   store: this.props.emoticonStore,
                   onItemSelect: (e) => this.props.OnSelected(e.name, !1),
                   flairGroupID: this.props.strFlairGroupID,
@@ -434,18 +434,18 @@ var Te = class extends w.Component {
       this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
     }
     render() {
-      return (0, E.jsx)(C, {
-        children: (0, E.jsx)(D, {
+      return (0, D.jsx)(C, {
+        children: (0, D.jsx)(O, {
           config: [
             {
               renderTab: () =>
-                (0, E.jsx)(`span`, {
-                  title: S(`#AddonPicker_Emoticons`),
+                (0, D.jsx)(`span`, {
+                  title: v(`#AddonPicker_Emoticons`),
                   className: d,
-                  children: (0, E.jsx)(X, {}),
+                  children: (0, D.jsx)(X, {}),
                 }),
               renderContent: () =>
-                (0, E.jsx)(G, {
+                (0, D.jsx)(G, {
                   store: this.props.emoticonStore,
                   onItemSelect: (e) => this.props.OnSelected(e.name, !1),
                   flairGroupID: this.props.strFlairGroupID,
@@ -465,33 +465,33 @@ var Te = class extends w.Component {
       return (
         I(e) &&
           i.push({
-            title: S(`#AddonPicker_RecentEmoticons`),
-            items: g.FilterEmoticons(I(e), r),
+            title: v(`#AddonPicker_RecentEmoticons`),
+            items: h.FilterEmoticons(I(e), r),
             onItemSelect: t,
-            renderItem: (e) => (0, E.jsx)(K, { emoticon: e }),
+            renderItem: (e) => (0, D.jsx)(K, { emoticon: e }),
             keyExtractor: (e) => e.name,
             renderEmpty: () =>
-              (0, E.jsx)(P, {
+              (0, D.jsx)(F, {
                 children: r
-                  ? S(`#AddonPicker_NoResults`)
-                  : S(`#AddonPicker_NoRecent`, S(`#AddonPicker_Emoticons`)),
+                  ? v(`#AddonPicker_NoResults`)
+                  : v(`#AddonPicker_NoRecent`, v(`#AddonPicker_Emoticons`)),
               }),
           }),
         L(e).length &&
           i.push({
-            title: S(`#AddonPicker_RecentStickers`),
-            items: g.FilterStickers(L(e), r),
+            title: v(`#AddonPicker_RecentStickers`),
+            items: h.FilterStickers(L(e), r),
             onItemSelect: n,
-            renderItem: (e) => (0, E.jsx)(q, { sticker: e }),
+            renderItem: (e) => (0, D.jsx)(q, { sticker: e }),
             keyExtractor: ({ name: e }) => e,
             renderEmpty: () =>
-              (0, E.jsx)(P, {
+              (0, D.jsx)(F, {
                 children: r
-                  ? S(`#AddonPicker_NoResults`)
-                  : S(`#AddonPicker_NoRecent`, S(`#AddonPicker_Stickers`)),
+                  ? v(`#AddonPicker_NoResults`)
+                  : v(`#AddonPicker_NoRecent`, v(`#AddonPicker_Stickers`)),
               }),
           }),
-        (0, E.jsx)(j, {
+        (0, D.jsx)(M, {
           onFilterChange: (e) => this.setState({ filter: e }),
           filter: r,
           sections: i,
@@ -505,39 +505,39 @@ var Te = class extends w.Component {
       let { store: e, onItemSelect: t, flairGroupID: n } = this.props,
         { filter: r } = this.state,
         i = !r && n ? e.GetFlairListByGroupID(n) : e.emoticon_list,
-        a = g.FilterEmoticons(i, r).slice(0, F);
-      return (0, E.jsx)(A, {
-        title: S(`#AddonPicker_Emoticons`),
+        a = h.FilterEmoticons(i, r).slice(0, Se);
+      return (0, D.jsx)(j, {
+        title: v(`#AddonPicker_Emoticons`),
         items: a,
         onItemSelect: t,
-        renderItem: (e) => (0, E.jsx)(K, { emoticon: e }),
+        renderItem: (e) => (0, D.jsx)(K, { emoticon: e }),
         keyExtractor: (e) => e.name,
         onFilterChange: (e) => this.setState({ filter: e }),
         filter: r,
         onSubmit: () => t(a[0]),
         renderEmpty: () =>
           r
-            ? (0, E.jsx)(P, { children: S(`#AddonPicker_NoResults`) })
-            : (0, E.jsx)(H, {}),
+            ? (0, D.jsx)(F, { children: v(`#AddonPicker_NoResults`) })
+            : (0, D.jsx)(H, {}),
       });
     }
   };
 function H() {
-  return (0, E.jsxs)(E.Fragment, {
+  return (0, D.jsxs)(D.Fragment, {
     children: [
-      (0, E.jsx)(P, {
-        children: S(`#AddonPicker_NoneOwned`, S(`#AddonPicker_Emoticons`)),
+      (0, D.jsx)(F, {
+        children: v(`#AddonPicker_NoneOwned`, v(`#AddonPicker_Emoticons`)),
       }),
-      (0, E.jsx)(P, {
-        children: x(
+      (0, D.jsx)(F, {
+        children: b(
           `#AddonPicker_AcquireAtPointsShopOrMarket`,
-          (0, E.jsx)(m, {
-            href: `${b.STORE_BASE_URL}points/shop/c/emoticons`,
-            children: S(`#AddonPicker_AcquireAtPointsShop_Link`),
+          (0, D.jsx)(m, {
+            href: `${S.STORE_BASE_URL}points/shop/c/emoticons`,
+            children: v(`#AddonPicker_AcquireAtPointsShop_Link`),
           }),
-          (0, E.jsx)(m, {
-            href: `${b.COMMUNITY_BASE_URL}market`,
-            children: S(`#AddonPicker_AcquireAtPointsShopOrMarket_Link`),
+          (0, D.jsx)(m, {
+            href: `${S.COMMUNITY_BASE_URL}market`,
+            children: v(`#AddonPicker_AcquireAtPointsShopOrMarket_Link`),
           }),
         ),
       }),
@@ -549,33 +549,33 @@ var U = class extends w.Component {
     render() {
       let { store: e, onItemSelect: t } = this.props,
         { filter: n } = this.state,
-        r = g.FilterStickers(e.GetStickerList(), n);
-      return (0, E.jsx)(A, {
-        title: S(`#EmoticonPicker_StickerHeading`),
+        r = h.FilterStickers(e.GetStickerList(), n);
+      return (0, D.jsx)(j, {
+        title: v(`#EmoticonPicker_StickerHeading`),
         items: r,
         onItemSelect: t,
-        renderItem: (e) => (0, E.jsx)(q, { sticker: e }),
+        renderItem: (e) => (0, D.jsx)(q, { sticker: e }),
         keyExtractor: ({ name: e }) => e,
         onFilterChange: (e) => this.setState({ filter: e }),
         filter: n,
         onSubmit: () => t(r[0]),
         renderEmpty: () =>
           n
-            ? (0, E.jsx)(P, { children: S(`#AddonPicker_NoResults`) })
-            : (0, E.jsxs)(E.Fragment, {
+            ? (0, D.jsx)(F, { children: v(`#AddonPicker_NoResults`) })
+            : (0, D.jsxs)(D.Fragment, {
                 children: [
-                  (0, E.jsx)(P, {
-                    children: S(
+                  (0, D.jsx)(F, {
+                    children: v(
                       `#AddonPicker_NoneOwned`,
-                      S(`#AddonPicker_Stickers`),
+                      v(`#AddonPicker_Stickers`),
                     ),
                   }),
-                  (0, E.jsx)(P, {
-                    children: x(
+                  (0, D.jsx)(F, {
+                    children: b(
                       `#AddonPicker_AcquireAtPointsShop`,
-                      (0, E.jsx)(m, {
-                        href: `${b.STORE_BASE_URL}points/shop/c/stickers`,
-                        children: S(`#AddonPicker_AcquireAtPointsShop_Link`),
+                      (0, D.jsx)(m, {
+                        href: `${S.STORE_BASE_URL}points/shop/c/stickers`,
+                        children: v(`#AddonPicker_AcquireAtPointsShop_Link`),
                       }),
                     ),
                   }),
@@ -590,32 +590,32 @@ var U = class extends w.Component {
       let { store: e, effectSettings: t, onItemSelect: n } = this.props,
         { filter: r } = this.state,
         i = e.GetEffectList().filter(({ name: e }) => e.indexOf(r) > -1);
-      return (0, E.jsx)(A, {
-        title: S(`#EmoticonPicker_EffectHeading`),
+      return (0, D.jsx)(j, {
+        title: v(`#EmoticonPicker_EffectHeading`),
         items: i,
         onItemSelect: n,
-        renderItem: (e) => (0, E.jsx)(ke, { effect: e, roomEffectSettings: t }),
+        renderItem: (e) => (0, D.jsx)(ke, { effect: e, roomEffectSettings: t }),
         keyExtractor: ({ name: e }) => e,
         onFilterChange: (e) => this.setState({ filter: e }),
         filter: r,
         onSubmit: () => n(i[0]),
         renderEmpty: () =>
           r
-            ? (0, E.jsx)(P, { children: S(`#AddonPicker_NoResults`) })
-            : (0, E.jsxs)(E.Fragment, {
+            ? (0, D.jsx)(F, { children: v(`#AddonPicker_NoResults`) })
+            : (0, D.jsxs)(D.Fragment, {
                 children: [
-                  (0, E.jsx)(P, {
-                    children: S(
+                  (0, D.jsx)(F, {
+                    children: v(
                       `#AddonPicker_NoneOwned`,
-                      S(`#AddonPicker_RoomEffects`),
+                      v(`#AddonPicker_RoomEffects`),
                     ),
                   }),
-                  (0, E.jsx)(P, {
-                    children: x(
+                  (0, D.jsx)(F, {
+                    children: b(
                       `#AddonPicker_AcquireAtPointsShop`,
-                      (0, E.jsx)(m, {
-                        href: `${b.STORE_BASE_URL}points/shop/c/chateffects`,
-                        children: S(`#AddonPicker_AcquireAtPointsShop_Link`),
+                      (0, D.jsx)(m, {
+                        href: `${S.STORE_BASE_URL}points/shop/c/chateffects`,
+                        children: v(`#AddonPicker_AcquireAtPointsShop_Link`),
                       }),
                     ),
                   }),
@@ -633,73 +633,73 @@ var U = class extends w.Component {
       return (
         I(e).length &&
           i.push({
-            title: S(`#AddonPicker_RecentEmoticons`),
-            items: g.FilterEmoticons(I(e), r),
+            title: v(`#AddonPicker_RecentEmoticons`),
+            items: h.FilterEmoticons(I(e), r),
             onItemSelect: t,
-            renderItem: (e) => (0, E.jsx)(K, { emoticon: e }),
+            renderItem: (e) => (0, D.jsx)(K, { emoticon: e }),
             keyExtractor: (e) => e.name,
             renderEmpty: () =>
-              (0, E.jsx)(P, {
+              (0, D.jsx)(F, {
                 children: r
-                  ? S(`#AddonPicker_NoResults`)
-                  : S(`#AddonPicker_NoRecent`, S(`#AddonPicker_Emoticons`)),
+                  ? v(`#AddonPicker_NoResults`)
+                  : v(`#AddonPicker_NoRecent`, v(`#AddonPicker_Emoticons`)),
               }),
           }),
-        (0, E.jsx)(j, {
+        (0, D.jsx)(M, {
           onFilterChange: (e) => this.setState({ filter: e }),
           filter: r,
           sections: [
             ...i,
             {
-              title: S(`#AddonPicker_AllEmoticons`),
-              items: g.FilterStickers(e.emoticon_list, r).slice(0, F),
+              title: v(`#AddonPicker_AllEmoticons`),
+              items: h.FilterStickers(e.emoticon_list, r).slice(0, Se),
               onItemSelect: t,
-              renderItem: (e) => (0, E.jsx)(K, { emoticon: e }),
+              renderItem: (e) => (0, D.jsx)(K, { emoticon: e }),
               keyExtractor: (e) => e.name,
               renderEmpty: () =>
                 r
-                  ? (0, E.jsx)(P, { children: S(`#AddonPicker_NoResults`) })
-                  : (0, E.jsx)(H, {}),
+                  ? (0, D.jsx)(F, { children: v(`#AddonPicker_NoResults`) })
+                  : (0, D.jsx)(H, {}),
             },
           ],
         })
       );
     }
   };
-W = _([i], W);
+W = x([r], W);
 var G = class extends w.Component {
   state = { filter: `` };
   render() {
     let { store: e, onItemSelect: t, flairGroupID: n } = this.props,
       { filter: r } = this.state;
-    return (0, E.jsx)(j, {
+    return (0, D.jsx)(M, {
       onFilterChange: (e) => this.setState({ filter: e }),
       filter: r,
       sections: [
         {
-          title: S(`#ChatEntryButton_Flair`),
-          items: g.FilterStickers(e.GetFlairListByGroupID(n), r),
+          title: v(`#ChatEntryButton_Flair`),
+          items: h.FilterStickers(e.GetFlairListByGroupID(n), r),
           onItemSelect: t,
-          renderItem: (e) => (0, E.jsx)(K, { emoticon: e }),
+          renderItem: (e) => (0, D.jsx)(K, { emoticon: e }),
           keyExtractor: (e) => e.name,
           renderEmpty: () =>
             r
-              ? (0, E.jsx)(P, { children: S(`#AddonPicker_NoResults`) })
-              : (0, E.jsx)(H, {}),
+              ? (0, D.jsx)(F, { children: v(`#AddonPicker_NoResults`) })
+              : (0, D.jsx)(H, {}),
         },
       ],
     });
   }
 };
-G = _([i], G);
+G = x([r], G);
 var K = (e) => {
     let { emoticon: t, large: n } = e,
       r = !t.last_used && t.time_received;
-    return (0, E.jsxs)(`div`, {
+    return (0, D.jsxs)(`div`, {
       className: ne,
       children: [
-        (0, E.jsx)(a, { emoticon: t.name, large: n }),
-        r && (0, E.jsx)(J, {}),
+        (0, D.jsx)(a, { emoticon: t.name, large: n }),
+        r && (0, D.jsx)(J, {}),
       ],
     });
   },
@@ -708,36 +708,36 @@ var K = (e) => {
     m_ref = w.createRef();
     render() {
       let { sticker: e, className: t, ...n } = this.props,
-        r = T(b.COMMUNITY_CDN_URL, e.name);
-      return (0, E.jsxs)(`div`, {
+        r = T(S.COMMUNITY_CDN_URL, e.name);
+      return (0, D.jsxs)(`div`, {
         ref: this.m_ref,
-        className: v(t, te),
+        className: g(t, te),
         onMouseOver: () => this.setState({ showHover: !0 }),
         onFocus: () => this.setState({ showHover: !0 }),
         onMouseLeave: () => this.setState({ showHover: !1 }),
         onBlur: () => this.setState({ showHover: !1 }),
         ...n,
         children: [
-          (0, E.jsx)(`img`, { style: { width: `100%` }, src: r }),
+          (0, D.jsx)(`img`, { style: { width: `100%` }, src: r }),
           this.state.showHover &&
             this.m_ref.current &&
-            (0, E.jsx)(Oe, { target: this.m_ref.current, sticker: e }),
+            (0, D.jsx)(Oe, { target: this.m_ref.current, sticker: e }),
         ],
       });
     }
   },
-  Oe = i((e) => {
+  Oe = r((e) => {
     let {
         target: t,
         sticker: { name: n, appid: r },
       } = e,
-      [i] = re(r, {});
-    return (0, E.jsx)(u, {
+      [i] = p(r, {});
+    return (0, D.jsx)(u, {
       target: t,
       title: n,
       subtitle: i?.GetName(),
-      children: (0, E.jsx)(`img`, {
-        src: T(b.COMMUNITY_CDN_URL, n),
+      children: (0, D.jsx)(`img`, {
+        src: T(S.COMMUNITY_CDN_URL, n),
         className: l,
       }),
     });
@@ -748,19 +748,19 @@ var K = (e) => {
     render() {
       let { effect: e, roomEffectSettings: t, className: n, ...r } = this.props,
         i = t[e.name];
-      return (0, E.jsxs)(`div`, {
+      return (0, D.jsxs)(`div`, {
         ref: this.m_ref,
         onMouseOver: () => this.setState({ showHover: !0 }),
         onFocus: () => this.setState({ showHover: !0 }),
         onMouseLeave: () => this.setState({ showHover: !1 }),
         onBlur: () => this.setState({ showHover: !1 }),
-        className: v(n, o),
+        className: g(n, o),
         ...r,
         children: [
           i.renderEffectIcon(),
           this.state.showHover &&
             this.m_ref.current &&
-            (0, E.jsx)(Ae, {
+            (0, D.jsx)(Ae, {
               target: this.m_ref.current,
               effect: e,
               roomEffectSettings: t,
@@ -769,62 +769,62 @@ var K = (e) => {
       });
     }
   },
-  Ae = i((e) => {
+  Ae = r((e) => {
     let {
         target: t,
         effect: { name: n, appid: r },
         roomEffectSettings: i,
       } = e,
       a = i[n],
-      [o] = re(r, {});
-    return (0, E.jsx)(u, {
+      [o] = p(r, {});
+    return (0, D.jsx)(u, {
       target: t,
       title: n,
       subtitle: o?.GetName(),
-      children: (0, E.jsx)(`div`, {
+      children: (0, D.jsx)(`div`, {
         className: ee,
         children: a.renderEffectIcon(),
       }),
     });
   });
 function J() {
-  return (0, E.jsx)(`div`, {
+  return (0, D.jsx)(`div`, {
     className: c,
-    children: (0, E.jsx)(`div`, { className: s }),
+    children: (0, D.jsx)(`div`, { className: s }),
   });
 }
 function Y(e) {
-  return (0, E.jsxs)(`svg`, {
+  return (0, D.jsxs)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 36 36`,
     fill: `none`,
     ...e,
     children: [
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M8 4C5.79086 4 4 5.79086 4 8V27C4 29.2091 5.79086 31 8 31H13V20C13 16.134 16.134 13 20 13H31V8C31 5.79086 29.2091 4 27 4H8Z`,
       }),
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M16 20C16 17.7909 17.7909 16 20 16H31L16 31V20Z`,
       }),
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M29 24.0625V25C29 25.2671 28.9738 25.5282 28.9239 25.7806L30.8858 26.1688C30.9609 25.7892 31 25.3982 31 25V24.0625H29Z`,
       }),
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M28.3263 27.2225C28.0342 27.6587 27.6587 28.0342 27.2225 28.3263L28.3351 29.9882C28.9885 29.5507 29.5507 28.9885 29.9882 28.3351L28.3263 27.2225Z`,
       }),
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M21 29H22.1875V31H19L21 29Z`,
       }),
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M24.0625 29H25C25.2671 29 25.5282 28.9738 25.7806 28.9239L26.1688 30.8858C25.7892 30.9609 25.3982 31 25 31H24.0625V29Z`,
       }),
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M29 22.1875V21L31 19V22.1875H29Z`,
       }),
@@ -832,12 +832,12 @@ function Y(e) {
   });
 }
 function X(e) {
-  return (0, E.jsx)(`svg`, {
+  return (0, D.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 36 36`,
     fill: `none`,
     ...e,
-    children: (0, E.jsx)(`path`, {
+    children: (0, D.jsx)(`path`, {
       fill: `currentColor`,
       fillRule: `evenodd`,
       clipRule: `evenodd`,
@@ -846,29 +846,29 @@ function X(e) {
   });
 }
 function je(e) {
-  return (0, E.jsxs)(`svg`, {
+  return (0, D.jsxs)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 36 36`,
     fill: `none`,
     ...e,
     children: [
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M14.7163 7.6875L17.2476 15.5344C17.564 16.6102 18.4499 17.4328 19.5257 17.8125L27.3726 20.3438L19.5257 22.875C18.4499 23.1914 17.6273 24.0773 17.2476 25.1531L14.7163 33L12.1851 25.1531C11.8687 24.0773 10.9827 23.2547 9.90696 22.875L2.06009 20.3438L9.90696 17.8125C10.9827 17.4961 11.8054 16.6102 12.1851 15.5344L14.7163 7.6875Z`,
       }),
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M24.488 3L25.7861 7.06499C25.9591 7.63321 26.3918 8.07031 26.9543 8.24514L30.9784 9.55643L26.9543 10.8677C26.3918 11.0426 25.9591 11.4796 25.7861 12.0479L24.488 16.1129L23.1899 12.0479C23.0168 11.4796 22.5841 11.0426 22.0216 10.8677L17.9976 9.55643L22.0216 8.24514C22.5841 8.07031 23.0168 7.63321 23.1899 7.06499L24.488 3Z`,
       }),
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M8.11778 3.9375L8.76682 5.99185C8.85336 6.25411 9.0697 6.47265 9.32932 6.56007L11.363 7.21571L9.32932 7.87136C9.0697 7.95878 8.85336 8.17732 8.76682 8.43958L8.11778 10.4939L7.46874 8.43958C7.3822 8.17732 7.16586 7.95878 6.90624 7.87136L4.87259 7.21571L6.90624 6.56007C7.16586 6.47265 7.3822 6.25411 7.46874 5.99185L8.11778 3.9375Z`,
       }),
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M30.6178 12.375L31.2668 14.4293C31.3534 14.6916 31.5697 14.9102 31.8293 14.9976L33.863 15.6532L31.8293 16.3089C31.5697 16.3963 31.3534 16.6148 31.2668 16.8771L30.6178 18.9314L29.9687 16.8771C29.8822 16.6148 29.6659 16.3963 29.4062 16.3089L27.3726 15.6532L29.4062 14.9976C29.6659 14.9102 29.8822 14.6916 29.9687 14.4293L30.6178 12.375Z`,
       }),
-      (0, E.jsx)(`path`, {
+      (0, D.jsx)(`path`, {
         fill: `currentColor`,
         d: `M25.9303 24.5625L26.5793 26.6168C26.6659 26.8791 26.8822 27.0977 27.1418 27.1851L29.1755 27.8407L27.1418 28.4964C26.8822 28.5838 26.6659 28.8023 26.5793 29.0646L25.9303 31.1189L25.2812 29.0646C25.1947 28.8023 24.9784 28.5838 24.7187 28.4964L22.6851 27.8407L24.7187 27.1851C24.9784 27.0977 25.1947 26.8791 25.2812 26.6168L25.9303 24.5625Z`,
       }),
@@ -877,8 +877,8 @@ function je(e) {
 }
 function Z(e) {
   let { className: t, ...n } = e;
-  return (0, E.jsx)(`svg`, {
-    className: v(`SVGIcon_Button SVGIcon_Clock`, t),
+  return (0, D.jsx)(`svg`, {
+    className: g(`SVGIcon_Button SVGIcon_Clock`, t),
     version: `1.1`,
     x: `0px`,
     y: `0px`,
@@ -886,7 +886,7 @@ function Z(e) {
     height: `20px`,
     viewBox: `0 0 24 24`,
     ...n,
-    children: (0, E.jsx)(`path`, {
+    children: (0, D.jsx)(`path`, {
       d: `M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z`,
     }),
   });
@@ -918,7 +918,7 @@ var Me = `pvP8JT4e7EA-`,
       if (
         ((l =
           a && o && s && c
-            ? (0, E.jsx)(we, {
+            ? (0, D.jsx)(we, {
                 emoticonStore: this.props.emoticonStore,
                 strFlairGroupID: this.props.strFlairGroupID,
                 onEmoticonSelected: (e) => this.props.OnEmoticonSelected(e, !1),
@@ -927,17 +927,17 @@ var Me = `pvP8JT4e7EA-`,
                 onStickerSelected: c,
               })
             : n && t.flair_list && t.GetFlairListByGroupID(n)?.length > 0
-              ? (0, E.jsx)(Ee, {
+              ? (0, D.jsx)(Ee, {
                   emoticonStore: this.props.emoticonStore,
                   strFlairGroupID: this.props.strFlairGroupID,
                   OnSelected: this.props.OnEmoticonSelected,
                 })
-              : (0, E.jsx)(Te, {
+              : (0, D.jsx)(Te, {
                   emoticonStore: this.props.emoticonStore,
                   strFlairGroupID: this.props.strFlairGroupID,
                   OnSelected: this.props.OnEmoticonSelected,
                 })),
-        ae(
+        ie(
           l,
           e,
           i || {
@@ -973,39 +973,39 @@ var Me = `pvP8JT4e7EA-`,
         e ? i.push(`disabled`) : this.BHaveUnseenEmoticons() && (a = !0),
         n && i.push(`ttip`),
         r
-          ? (0, E.jsx)(h, {
+          ? (0, D.jsx)(_, {
               onClick: this.OnEmoticonClick,
-              onOKActionDescription: S(`#ChatEntryButton_Emoticon`),
+              onOKActionDescription: v(`#ChatEntryButton_Emoticon`),
               focusable: !0,
-              children: (0, E.jsx)(y, {
+              children: (0, D.jsx)(ae, {
                 toolTipContent: n,
-                children: (0, E.jsx)(`img`, {
+                children: (0, D.jsx)(`img`, {
                   src: this.props.useImg,
-                  className: v(...i),
-                  title: this.props.title || S(`#ChatEntryButton_Emoticon`),
+                  className: g(...i),
+                  title: this.props.title || v(`#ChatEntryButton_Emoticon`),
                 }),
               }),
             })
           : (i.push(Le, Re),
-            (0, E.jsx)(se, {
-              className: v(...i),
-              onOKActionDescription: S(`#ChatEntryButton_Emoticon`),
+            (0, D.jsx)(oe, {
+              className: g(...i),
+              onOKActionDescription: v(`#ChatEntryButton_Emoticon`),
               type: `button`,
               onClick: this.OnEmoticonClick,
-              title: this.props.title || S(`#ChatEntryButton_Emoticon`),
+              title: this.props.title || v(`#ChatEntryButton_Emoticon`),
               disabled: e,
-              children: (0, E.jsxs)(y, {
+              children: (0, D.jsxs)(ae, {
                 toolTipContent: n,
                 children: [
-                  this.props.buttonIcon || (0, E.jsx)(ie, {}),
-                  a && (0, E.jsx)(J, {}),
+                  this.props.buttonIcon || (0, D.jsx)(re, {}),
+                  a && (0, D.jsx)(J, {}),
                 ],
               }),
             }))
       );
     }
   };
-(_([oe], $.prototype, `OnEmoticonClick`, null), ($ = _([i], $)));
+(x([se], $.prototype, `OnEmoticonClick`, null), ($ = x([r], $)));
 var Be = $;
 export {
   Le as a,

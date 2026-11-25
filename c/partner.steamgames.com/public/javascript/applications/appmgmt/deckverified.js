@@ -22,7 +22,7 @@ import {
   _,
   _,
 } from "./chunk~de7f2df91c.js";
-import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~25a6634263.js";
+import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~bd90a5fce7.js";
 import {
   _,
   _,
@@ -2321,7 +2321,7 @@ var _ = _(_(), 1),
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `store`, `community`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }

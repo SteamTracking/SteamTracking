@@ -4,32 +4,32 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import {
   At as t,
-  Lt as n,
-  jt as r,
-  kt as i,
-  tt as a,
+  It as n,
+  Ot as r,
+  et as i,
+  kt as a,
 } from "./chunk~01cfc309bf.js";
 import { d as o, f as s } from "./chunk~961c06e93e.js";
 import { n as c } from "./chunk~fc8a9e4879.js";
 import {
-  Kb as l,
-  Mu as u,
-  Pl as d,
-  Xy as f,
-  Yu as p,
-  _x as m,
-  aS as h,
-  cx as g,
+  Fl as l,
+  Nu as u,
+  Xu as d,
+  Zy as f,
+  bx as p,
+  lS as m,
+  lx as h,
+  qb as g,
   sS as _,
-  yx as v,
+  vx as v,
 } from "./main.js";
 import { t as y } from "./chunk~437071091c.js";
-var b = e(a()),
+var b = e(i()),
   x = e(n());
 function S(e) {
   e.list_jsondata && typeof e.list_jsondata == `string`
     ? (e.list_jsondata = JSON.parse(e.list_jsondata))
-    : (_(
+    : (m(
         !e.list_jsondata,
         `Found unexpected ListDetails_t.list_jsondata type: ` +
           typeof e.list_jsondata,
@@ -37,9 +37,9 @@ function S(e) {
       (e.list_jsondata = {}));
 }
 function C(e, t) {
-  ((t.localized_flat_title = h([], 32, null)),
-    (t.localized_flat_blurb = h([], 32, null)),
-    (t.localized_flat_link = h([], 32, null)),
+  ((t.localized_flat_title = _([], 32, null)),
+    (t.localized_flat_blurb = _([], 32, null)),
+    (t.localized_flat_link = _([], 32, null)),
     t.title !== `0` && (t.localized_flat_title[e] = t.title),
     t.blurb !== `0` && (t.localized_flat_blurb[e] = t.blurb),
     t.link !== `0` && (t.localized_flat_link[e] = t.link),
@@ -73,7 +73,7 @@ var w = class e {
     let r = this.m_mapList.get(t);
     if (r !== void 0) return r;
     let i =
-        m.STORE_BASE_URL +
+        v.STORE_BASE_URL +
         `curator/` +
         e.GetAccountID() +
         `/admin/ajaxgetlistdetails`,
@@ -83,7 +83,7 @@ var w = class e {
       if (r?.data?.success == 1) {
         let n = { ...r.data.list_details };
         return (
-          _(t == n?.listid, `Wanted` + t + `but got` + n?.listid),
+          m(t == n?.listid, `Wanted` + t + `but got` + n?.listid),
           S(n),
           C(r.data.curation_language, n),
           this.m_mapList.set(t, n),
@@ -92,7 +92,7 @@ var w = class e {
         );
       }
     } catch (e) {
-      let t = p(e);
+      let t = d(e);
       console.error(
         `CCuratorListStore.LoadListDetails: error on load: ` + t.strErrorMsg,
         t,
@@ -102,11 +102,11 @@ var w = class e {
   }
   async LoadMyFollowedSaleCurationLists(e, t, n) {
     if (
-      !v.logged_in ||
+      !p.logged_in ||
       (u.Get().BIsLoaded() && u.Get().GetFollowedCuratorCount() == 0)
     )
       return [];
-    let r = m.STORE_BASE_URL + `curators/ajaxgetmycuratorsalelists`,
+    let r = v.STORE_BASE_URL + `curators/ajaxgetmycuratorsalelists`,
       i = {
         clan_account_id: e.GetAccountID(),
         clan_event_gid: t,
@@ -127,7 +127,7 @@ var w = class e {
   async LoadAllSaleCurationLists(e, t, n) {
     let r = this.m_mapEventGIDToLists.get(t);
     if (r !== void 0) return r;
-    let i = m.STORE_BASE_URL + `curators/ajaxfindcuratorlists`,
+    let i = v.STORE_BASE_URL + `curators/ajaxfindcuratorlists`,
       a = {
         clan_account_id: e.GetAccountID(),
         clan_event_gid: t,
@@ -142,15 +142,15 @@ var w = class e {
       n,
     );
   }
-  async InternalLoadSaleCuratorLists(e, t, n, i, a, o) {
+  async InternalLoadSaleCuratorLists(e, n, r, i, a, o) {
     try {
-      let n = await b.default.get(e, { params: t, cancelToken: o?.token });
-      if (n?.data?.success == 1) {
+      let r = await b.default.get(e, { params: n, cancelToken: o?.token });
+      if (r?.data?.success == 1) {
         let e = [];
         return (
-          r(() => {
-            (n.data.matches &&
-              n.data.matches.forEach((t) => {
+          t(() => {
+            (r.data.matches &&
+              r.data.matches.forEach((t) => {
                 t.multi_detail_lists.forEach((n) => {
                   (this.m_mapListIDToClanAccount.set(
                     n.listid,
@@ -168,8 +168,8 @@ var w = class e {
         );
       }
     } catch (e) {
-      let t = p(e);
-      console.error(n + `: error on load: ` + t.strErrorMsg, t);
+      let t = d(e);
+      console.error(r + `: error on load: ` + t.strErrorMsg, t);
     }
     return [];
   }
@@ -178,10 +178,10 @@ var w = class e {
     return ((e.s_Singleton ||= new e()), e.s_Singleton);
   }
   constructor() {
-    i(this);
-    let e = g(`curatorlistdata`, `application_config`);
+    r(this);
+    let e = h(`curatorlistdata`, `application_config`);
     this.ValidateStoreDefault(e) &&
-      r(() => {
+      t(() => {
         e.forEach((e) => {
           e.multi_detail_lists.forEach((t) => {
             (S(t), C(e.curation_language, t), this.m_mapList.set(t.listid, t));
@@ -201,9 +201,9 @@ var w = class e {
       : t && Array.isArray(t) && t.length == 0;
   }
 };
-l([t], w.prototype, `m_mapList`, void 0);
+g([a], w.prototype, `m_mapList`, void 0);
 function T(e, t) {
-  let n = d();
+  let n = l();
   return (
     (0, x.useEffect)(() => {
       if (w.Get().GetListDetails(t) || !e) return;
@@ -234,7 +234,7 @@ function E(e) {
   return (
     (0, x.useEffect)(() => {
       if (n && e) {
-        let t = f.InitFromClanID(e, m.EUNIVERSE);
+        let t = f.InitFromClanID(e, v.EUNIVERSE);
         y.LoadClanInfoForClanSteamID(t).finally(() => {
           r(!0);
         });
@@ -247,7 +247,7 @@ function D(e) {
   return !!e?.sale_clan_event_gid && !!e?.sale_clan_steamid;
 }
 function O(e) {
-  let t = d(),
+  let t = l(),
     n = D(e) ? e.sale_clan_event_gid : null,
     r = n && c.GetClanEventModel(n);
   return (

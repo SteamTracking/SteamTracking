@@ -5905,28 +5905,28 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.PostChatMessage#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.PostChatMessage = _;
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.UpdateChatMessageFlair#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UpdateChatMessageFlair = _;
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.MuteBroadcastChatUser#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.MuteBroadcastChatUser = _;
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.RemoveUserChatText#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.RemoveUserChatText = _;

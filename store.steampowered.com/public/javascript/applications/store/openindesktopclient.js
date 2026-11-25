@@ -2,16 +2,16 @@
  ****/
 
 import { o as e, r as t } from "./chunk~f025431ab0.js";
-import { Lt as n, ft as r } from "./chunk~01cfc309bf.js";
+import { It as n, dt as r } from "./chunk~01cfc309bf.js";
 import {
-  Ea as i,
-  Ta as a,
-  Yb as o,
-  _a as s,
-  ax as c,
-  b as l,
-  ux as u,
-  ya as d,
+  Da as i,
+  Ea as a,
+  Xb as o,
+  b as s,
+  ba as c,
+  dx as l,
+  ox as u,
+  va as d,
 } from "./main.js";
 var f = e(n(), 1),
   p = `Y6jQLvaUs3E-`,
@@ -53,7 +53,7 @@ var b = `oQvwi1Y4MaQ-`,
     useShowOpenInSteamBanner: () => T,
   });
 function T() {
-  return !c.logged_in && !v() && !y();
+  return !u.logged_in && !v() && !y();
 }
 function E() {
   let { fnOpenInSteamClient: e } = D();
@@ -68,23 +68,23 @@ function E() {
             children: [
               (0, h.jsx)(i, {
                 className: C,
-                children: (0, h.jsx)(d, {
+                children: (0, h.jsx)(c, {
                   onClick: e,
-                  children: l.Localize(`#OpenInDesktopAppBanner_OpenAppButton`),
+                  children: s.Localize(`#OpenInDesktopAppBanner_OpenAppButton`),
                 }),
               }),
-              (0, h.jsxs)(s, {
+              (0, h.jsxs)(d, {
                 as: `div`,
                 size: `4`,
                 className: x,
                 children: [
-                  (0, h.jsx)(s, {
+                  (0, h.jsx)(d, {
                     weight: `heavy`,
                     className: S,
-                    children: l.Localize(`#OpenInDesktopAppBanner_NotSignedIn`),
+                    children: s.Localize(`#OpenInDesktopAppBanner_NotSignedIn`),
                   }),
                   (0, h.jsx)(`br`, {}),
-                  l.Localize(`#OpenInDesktopAppBanner_Body`),
+                  s.Localize(`#OpenInDesktopAppBanner_Body`),
                 ],
               }),
             ],
@@ -97,7 +97,7 @@ function D() {
   return {
     fnOpenInSteamClient: f.useCallback(() => {
       let e = `${o()}//openurl/`,
-        t = u(`browserid`);
+        t = l(`browserid`);
       if (t) {
         let n = new URL(window.location.href),
           r = new URLSearchParams(n.search);

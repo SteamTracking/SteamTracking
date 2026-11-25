@@ -3074,7 +3074,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`LoyaltyRewards.GetSummary#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetSummary = _;
@@ -3146,7 +3146,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`LoyaltyRewards.AddReaction#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.AddReaction = _;
@@ -3154,7 +3154,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`LoyaltyRewards.GetReactions#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetReactions = _;
@@ -3176,7 +3176,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetReactionConfig = _;
@@ -3221,7 +3221,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.QueryRewardItems = _;

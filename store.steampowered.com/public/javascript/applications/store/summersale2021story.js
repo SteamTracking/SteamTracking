@@ -2,9 +2,9 @@
  ****/
 
 import "./chunk~f025431ab0.js";
-import { Lt as e, ft as t } from "./chunk~01cfc309bf.js";
+import { It as e, dt as t } from "./chunk~01cfc309bf.js";
 import "./chunk~5214caf193.js";
-import { Nc as n, _x as r, cb as i, rb as a } from "./main.js";
+import { Pc as n, ib as r, lb as i, vx as a } from "./main.js";
 import {
   a as o,
   c as s,
@@ -59,10 +59,10 @@ var p = `lzdS-shJ99Q-`,
       T = [];
     t.forEach((t) => {
       let n = t.eGenre,
-        o = r.STORE_BASE_URL + `sale/` + t.strSalePage,
+        o = a.STORE_BASE_URL + `sale/` + t.strSalePage,
         s = i(
           `#Summer_21_Story_Enter`,
-          (0, K.jsx)(`span`, { children: a(t.strGenreName) }),
+          (0, K.jsx)(`span`, { children: r(t.strGenreName) }),
         );
       if (e.has(n)) {
         let r = ``;
@@ -107,12 +107,12 @@ var p = `lzdS-shJ99Q-`,
     });
     let E = y.concat(T);
     return (0, K.jsx)(`div`, {
-      className: n(p, r.LANGUAGE),
+      className: n(p, a.LANGUAGE),
       children: (0, K.jsxs)(`div`, {
         className: void 0,
         children: [
           (0, K.jsxs)(`a`, {
-            href: r.STORE_BASE_URL,
+            href: a.STORE_BASE_URL,
             children: [
               c && (0, K.jsx)(`img`, { className: `BsHO-XUsE9Y-`, src: c }),
               u && (0, K.jsx)(`img`, { className: `RonG1NGMvmU-`, src: u }),
@@ -129,42 +129,42 @@ var p = `lzdS-shJ99Q-`,
                     children: [
                       (0, K.jsx)(`div`, {
                         className: v,
-                        children: a(`#Summer_21_Overview_Title_Prefix`),
+                        children: r(`#Summer_21_Overview_Title_Prefix`),
                       }),
-                      a(`#Summer_21_Overview_Title`),
+                      r(`#Summer_21_Overview_Title`),
                     ],
                   }),
                   (0, K.jsx)(`div`, {
                     className: n(S, w),
-                    children: a(`#Summer_21_Overview_Description1`),
+                    children: r(`#Summer_21_Overview_Description1`),
                   }),
                   (0, K.jsx)(`div`, {
                     className: n(S, w),
-                    children: a(`#Summer_21_Overview_Description3`),
+                    children: r(`#Summer_21_Overview_Description3`),
                   }),
                   (0, K.jsx)(`div`, {
                     className: n(S, w),
-                    children: a(`#Summer_21_Overview_Description4`),
+                    children: r(`#Summer_21_Overview_Description4`),
                   }),
                   (0, K.jsxs)(`a`, {
                     id: `wallpapers`,
                     href:
-                      r.MEDIA_CDN_URL +
+                      a.MEDIA_CDN_URL +
                       `store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip`,
                     className: n(S, w, C),
-                    children: [`*`, a(`#Summer21_Story_DownloadWallpaper`)],
+                    children: [`*`, r(`#Summer21_Story_DownloadWallpaper`)],
                   }),
                   (0, K.jsx)(`div`, {
                     className: n(x, w),
-                    children: a(`#Summer_21_Overview_Description2`),
+                    children: r(`#Summer_21_Overview_Description2`),
                   }),
                   (0, K.jsx)(`div`, {
                     className: n(x, w),
-                    children: a(`#Summer_21_Story_Intro`),
+                    children: r(`#Summer_21_Story_Intro`),
                   }),
                   (0, K.jsx)(`div`, {
                     className: n(b, w),
-                    children: a(`#Summer_21_Story_Next`),
+                    children: r(`#Summer_21_Story_Next`),
                   }),
                   (0, K.jsx)(`div`, { className: n(g), children: E }),
                 ],
@@ -214,7 +214,7 @@ var p = `lzdS-shJ99Q-`,
       children: [
         (0, K.jsx)(`div`, {
           className: n(S, w, A),
-          children: a(`#Summer21_Badge_Unlocked_Description`),
+          children: r(`#Summer21_Badge_Unlocked_Description`),
         }),
         (0, K.jsxs)(`div`, {
           id: `badge`,
@@ -225,10 +225,10 @@ var p = `lzdS-shJ99Q-`,
               children: [
                 (0, K.jsx)(`div`, {
                   className: P,
-                  children: a(`#Summer21_Badge_Prelude`),
+                  children: r(`#Summer21_Badge_Prelude`),
                 }),
-                (0, K.jsx)(`div`, { className: N, children: a(i.badge_name) }),
-                (0, K.jsx)(`div`, { className: I, children: a(i.badge_desc) }),
+                (0, K.jsx)(`div`, { className: N, children: r(i.badge_name) }),
+                (0, K.jsx)(`div`, { className: I, children: r(i.badge_desc) }),
               ],
             }),
             (0, K.jsxs)(`div`, {
@@ -236,24 +236,24 @@ var p = `lzdS-shJ99Q-`,
               children: [
                 (0, K.jsx)(`a`, {
                   className: n(L, i.badge_class),
-                  href: r.COMMUNITY_BASE_URL + `my/badges/` + t,
+                  href: a.COMMUNITY_BASE_URL + `my/badges/` + t,
                 }),
                 (0, K.jsx)(`div`, {
                   className: F,
-                  children: a(`#Summer21_Badge_Congrats1`),
+                  children: r(`#Summer21_Badge_Congrats1`),
                 }),
                 (0, K.jsx)(`div`, {
                   className: F,
-                  children: a(`#Summer21_Badge_Congrats2`),
+                  children: r(`#Summer21_Badge_Congrats2`),
                 }),
                 (0, K.jsx)(`a`, {
                   className: R,
-                  href: r.COMMUNITY_BASE_URL + `my/edit/avatar/` + t,
-                  children: a(`#Summer21_Badge_View`),
+                  href: a.COMMUNITY_BASE_URL + `my/edit/avatar/` + t,
+                  children: r(`#Summer21_Badge_View`),
                 }),
                 (0, K.jsx)(`a`, {
                   className: z,
-                  href: r.COMMUNITY_BASE_URL + `my/edit/avatar/` + t,
+                  href: a.COMMUNITY_BASE_URL + `my/edit/avatar/` + t,
                 }),
               ],
             }),
@@ -261,7 +261,7 @@ var p = `lzdS-shJ99Q-`,
         }),
         (0, K.jsx)(`div`, {
           className: n(j, w),
-          children: a(`#Summer21_Story_End`),
+          children: r(`#Summer21_Story_End`),
         }),
       ],
     });
@@ -278,10 +278,10 @@ var p = `lzdS-shJ99Q-`,
           className: D,
           children: [
             (0, K.jsx)(`div`, { className: n(E, w), children: e.strSubheader }),
-            (0, K.jsx)(`div`, { className: y, children: a(e.strTitle) }),
+            (0, K.jsx)(`div`, { className: y, children: r(e.strTitle) }),
             (0, K.jsx)(`div`, {
               className: n(k, w),
-              children: a(e.strSummary),
+              children: r(e.strSummary),
             }),
           ],
         }),

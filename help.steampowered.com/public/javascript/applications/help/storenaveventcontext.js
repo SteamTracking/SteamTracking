@@ -13176,6 +13176,362 @@ var CCallbackList = class {
       return `CClanMatchEventByRange`;
     }
   },
+  CCommunity_ClanAnnouncementInfo = class t
+    extends import_google_protobuf.Message
+  {
+    static ImplementsStaticInterface() {}
+    constructor(n = null) {
+      (super(),
+        t.prototype.gid || AddAccessors(t.M()),
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [9], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            gid: {
+              n: 1,
+              br: ReaderProto.readUint64String,
+              bw: WriterProto.writeUint64String,
+            },
+            clanid: {
+              n: 2,
+              br: ReaderProto.readUint64String,
+              bw: WriterProto.writeUint64String,
+            },
+            posterid: {
+              n: 3,
+              br: ReaderProto.readUint64String,
+              bw: WriterProto.writeUint64String,
+            },
+            headline: {
+              n: 4,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            posttime: {
+              n: 5,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            updatetime: {
+              n: 6,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            body: {
+              n: 7,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            commentcount: {
+              n: 8,
+              br: ReaderProto.readInt32,
+              bw: WriterProto.writeInt32,
+            },
+            tags: {
+              n: 9,
+              r: !0,
+              q: !0,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeRepeatedString,
+            },
+            language: {
+              n: 10,
+              br: ReaderProto.readInt32,
+              bw: WriterProto.writeInt32,
+            },
+            hidden: {
+              n: 11,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
+            forum_topic_id: {
+              n: 12,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            event_gid: {
+              n: 13,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            voteupcount: {
+              n: 14,
+              br: ReaderProto.readInt32,
+              bw: WriterProto.writeInt32,
+            },
+            votedowncount: {
+              n: 15,
+              br: ReaderProto.readInt32,
+              bw: WriterProto.writeInt32,
+            },
+            ban_check_result: {
+              n: 16,
+              br: ReaderProto.readEnum,
+              bw: WriterProto.writeEnum,
+            },
+            banned: {
+              n: 17,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
+    }
+    toObject(n = !1) {
+      return t.toObject(n, this);
+    }
+    static toObject(n, r) {
+      return ToObject(t.M(), n, r);
+    }
+    static fromObject(n) {
+      return FromObject(t.M(), n);
+    }
+    static deserializeBinary(n) {
+      let r = new import_google_protobuf.BinaryReader(n),
+        i = new t();
+      return t.deserializeBinaryFromReader(i, r);
+    }
+    static deserializeBinaryFromReader(n, r) {
+      return DeserializeBinary(t.MBF(), n, r);
+    }
+    serializeBinary() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
+    }
+    static serializeBinaryToWriter(n, r) {
+      SerializeBinary(t.M(), n, r);
+    }
+    serializeBase64String() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
+    }
+    getClassName() {
+      return `CCommunity_ClanAnnouncementInfo`;
+    }
+  },
+  CClanEventData = class t extends import_google_protobuf.Message {
+    static ImplementsStaticInterface() {}
+    constructor(n = null) {
+      (super(),
+        t.prototype.gid || AddAccessors(t.M()),
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [28], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            gid: {
+              n: 1,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            clan_steamid: {
+              n: 2,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            event_name: {
+              n: 3,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            event_type: {
+              n: 4,
+              br: ReaderProto.readEnum,
+              bw: WriterProto.writeEnum,
+            },
+            appid: {
+              n: 5,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            server_address: {
+              n: 6,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            server_password: {
+              n: 7,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            rtime32_start_time: {
+              n: 8,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            rtime32_end_time: {
+              n: 9,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            comment_count: {
+              n: 10,
+              br: ReaderProto.readInt32,
+              bw: WriterProto.writeInt32,
+            },
+            creator_steamid: {
+              n: 11,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            last_update_steamid: {
+              n: 12,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            event_notes: {
+              n: 13,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            jsondata: {
+              n: 14,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            announcement_body: { n: 15, c: CCommunity_ClanAnnouncementInfo },
+            published: {
+              n: 16,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
+            hidden: {
+              n: 17,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
+            rtime32_visibility_start: {
+              n: 18,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            rtime32_visibility_end: {
+              n: 19,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            broadcaster_accountid: {
+              n: 20,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            follower_count: {
+              n: 21,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            ignore_count: {
+              n: 22,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            forum_topic_id: {
+              n: 23,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            rtime32_last_modified: {
+              n: 24,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            news_post_gid: {
+              n: 25,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            rtime_mod_reviewed: {
+              n: 26,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            featured_app_tagid: {
+              n: 27,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            referenced_appids: {
+              n: 28,
+              r: !0,
+              q: !0,
+              br: ReaderProto.readUint32,
+              pbr: ReaderProto.readPackedUint32,
+              bw: WriterProto.writeRepeatedUint32,
+            },
+            build_id: {
+              n: 29,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            build_branch: {
+              n: 30,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            unlisted: {
+              n: 31,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
+            rtime_created: {
+              n: 32,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
+    }
+    toObject(n = !1) {
+      return t.toObject(n, this);
+    }
+    static toObject(n, r) {
+      return ToObject(t.M(), n, r);
+    }
+    static fromObject(n) {
+      return FromObject(t.M(), n);
+    }
+    static deserializeBinary(n) {
+      let r = new import_google_protobuf.BinaryReader(n),
+        i = new t();
+      return t.deserializeBinaryFromReader(i, r);
+    }
+    static deserializeBinaryFromReader(n, r) {
+      return DeserializeBinary(t.MBF(), n, r);
+    }
+    serializeBinary() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
+    }
+    static serializeBinaryToWriter(n, r) {
+      SerializeBinary(t.M(), n, r);
+    }
+    serializeBase64String() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
+    }
+    getClassName() {
+      return `CClanEventData`;
+    }
+  },
   UserContentDescriptorPreferences = class t
     extends import_google_protobuf.Message
   {
@@ -13426,6 +13782,11 @@ var CCallbackList = class {
               n: 20,
               br: ReaderProto.readBool,
               bw: WriterProto.writeBool,
+            },
+            screen_refresh_rate: {
+              n: 21,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
             },
           },
         }),
@@ -16052,11 +16413,7 @@ var CCallbackList = class {
         CClientMetrics_ReportReactUsage_Notification,
         n,
       ),
-      {
-        ePrivilege: 2,
-        eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
-      },
+      { ePrivilege: 2, eWebAPIKeyRequirement: 1, rgBrowserAPISites: [`all`] },
     );
   }
   t.ReportReactUsage = o;
@@ -19548,11 +19905,6 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
               d: !1,
               br: ReaderProto.readBool,
               bw: WriterProto.writeBool,
-            },
-            price_to_base_discount_on: {
-              n: 53,
-              br: ReaderProto.readInt64String,
-              bw: WriterProto.writeInt64String,
             },
             free_with_master_sub_appid: {
               n: 54,
@@ -25196,7 +25548,7 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 1,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25227,7 +25579,7 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25241,7 +25593,7 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25268,7 +25620,7 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25286,7 +25638,7 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -26105,11 +26457,7 @@ var CAccountPrivacyCookiePreferences = class t
         r,
       ),
       CAccountPrivacy_GetCookiePreferences_Response,
-      {
-        bConstMethod: !0,
-        ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
-      },
+      { bConstMethod: !0, ePrivilege: 1, rgBrowserAPISites: [`all`] },
     );
   }
   t.GetCookiePreferences = n;
@@ -31073,6 +31421,17 @@ var unknown = 0,
     greatonframe,
     salesmartsale_events_only,
     salesmartdiscountreason,
+    "salesmartdiscountreason-wishlist": 100807,
+    "salesmartdiscountreason-firsttimeonsale": 100808,
+    "salesmartdiscountreason-largestdiscount": 100809,
+    "salesmartdiscountreason-endingsoon": 100810,
+    "salesmartdiscountreason-newlyonsale": 100811,
+    "salesmartdiscountreason-wellreviewed": 100812,
+    "salesmartdiscountreason-topseller": 100813,
+    "salesmartdiscountreason-hotdeal": 100814,
+    "salesmartdiscountreason-deepdiscount": 100815,
+    "salesmartdiscountreason-popularinregion": 100816,
+    "salesmartdiscountreason-justupdated": 100817,
   },
   naveventdictionary_default = naveventdictionary_default$1;
 function BIsKnownEventComponent(t) {
@@ -31198,65 +31557,66 @@ export {
   useCallbackList as $,
   initProtoBufMsgForServiceMethod as $t,
   ENavPreferPosition as A,
-  BIsReducedUILauncher as An,
+  BIsEFriendRelationshipFriend as An,
   AssetURL as At,
   AddMissingStylesheetsToWindow as B,
-  ESteamRealm as Bn,
+  BIsChinaRealm as Bn,
   CommunityConfig as Bt,
   useActiveFocusNavTreeContext as C,
-  ReaderProto as Cn,
+  FromObject as Cn,
   GET_BASE_URL as Ct,
   GetNavTreeBridgeGlobal as D,
-  WriterProto as Dn,
+  ToObject as Dn,
   IsSteamChina as Dt,
   PanelFlowChildrenToNavLayout as E,
-  ToObject as En,
+  SerializeBinary as En,
   IsPlatformWindows as Et,
   FindAncestrally as F,
-  EWindowBringToFront as Fn,
+  EUIModeToString as Fn,
   GetSessionID as Ft,
   GetOwningWindowForElement$1 as G,
   EStoreItemTypeToString as Gt,
   BIsParentOrSelf as H,
-  require_react as Hn,
+  require_react_dom as Hn,
   UserConfig$1 as Ht,
   useGamepadEvents as I,
-  MapKoreanaToKorean as In,
+  EWindowBringToFront as In,
   InitConfig as It,
   HandleMutationAddAndRemove as J,
   StoreBrowseService as Jt,
   GetOwningWindowForEvent as K,
   StoreBrowseContext as Kt,
   EFocusSource as L,
-  PchLanguageToELanguage as Ln,
+  MapKoreanaToKorean as Ln,
   GetConfigJSON as Lt,
   DeltaVec2 as M,
-  ELanguagePchWebLanguageCode as Mn,
+  ELanguagePchLanguage as Mn,
   GetSteamUIConfig as Mt,
   Dist2 as N,
-  ENotificationLocationToString as Nn,
+  ELanguagePchWebLanguageCode as Nn,
   GetWebConfig as Nt,
   EFlowDir as O,
-  require_google_protobuf as On,
+  WriterProto as On,
   UNKNOWN_BASE_URL as Ot,
   OriginPos2 as P,
-  EUIModeToString as Pn,
+  ENotificationLocationToString as Pn,
   UserConfig as Pt,
   require_classnames as Q,
   CProtoBufMsg as Qt,
   EGamepadButton as R,
-  k_GIDNil as Rn,
+  PchLanguageToELanguage as Rn,
   GetOptionalConfigJSON as Rt,
   FocusNavigationRoot as S,
-  FromObject as Sn,
+  DeserializeBinary as Sn,
   ConfigContextRoot as St,
   useShowDebugFocusRing as T,
-  SerializeBinary as Tn,
+  RemapMetadataByField as Tn,
   IsPlatformMac as Tt,
   ClientRectToScreenCoords as U,
+  require_react as Un,
   CStoreBrowse_GetItems_Request as Ut,
   AddStylesheetsToDocument as V,
-  require_react_dom as Vn,
+  ESteamRealm as Vn,
   Config$1 as Vt,
   ComputeZoomForElement as W,
   CStoreBrowse_GetItems_Response as Wt,
@@ -31267,45 +31627,45 @@ export {
   ENavigationSoundType as Z,
   CStorePageFilter as Zt,
   FocusRingNavigationContext as _,
-  MoveElement as _n,
+  FindAndRemoveWhere as _n,
   k_preferencesCookie as _t,
   CStoreNavEvents as a,
   RemapVal as an,
   useMultipleRefs as at,
   useHandleRequestFocusEvent as b,
-  AddAccessors as bn,
+  AssertNever as bn,
   k_spoofedSteamIDCookie as bt,
   FocusableButton as c,
   CCDDBAppDetailCommon as cn,
   useSetRef as ct,
   FocusableTextarea as d,
-  CMsgIPAddress as dn,
+  CLocalizationToken as dn,
   BShouldLanguageUseRTL as dt,
   BinaryToHex as en,
   useForceUpdate as et,
   useActivateNavTree as f,
-  UserContentDescriptorPreferences as fn,
+  CMsgIPAddress as fn,
   __vitePreload as ft,
   FocusReactiveDiv as g,
-  FindAndRemoveWhere as gn,
+  FindAndRemove as gn,
   ReadCookie as gt,
   ExpandNavProps as h,
-  FindAndRemove as hn,
+  bind as hn,
   ClearCookie as ht,
   useStoreNavLink as i,
   Clamp as in,
   setRef as it,
   EScrollIntoViewType as j,
-  ELanguagePchLanguage as jn,
+  BIsReducedUILauncher as jn,
   Config as jt,
   ENavLayout as k,
-  BIsEFriendRelationshipFriend as kn,
+  require_google_protobuf as kn,
   useInGamepadUI as kt,
   FocusableDiv as l,
-  CClanMatchEventByRange as ln,
+  CClanEventData as ln,
   CreateProjectLocalization as lt,
   ExpandGamepadEventProps as m,
-  bind as mn,
+  CCallbackList as mn,
   __decorate as mt,
   NavEventContext as n,
   k_EMsgServiceMethodCallFromClientNonAuthed as nn,
@@ -31314,7 +31674,7 @@ export {
   RemapValClamped as on,
   useRefAndShareWith as ot,
   DefaultOKHandler as p,
-  CCallbackList as pn,
+  UserContentDescriptorPreferences as pn,
   require_jsx_runtime as pt,
   GetStyleSheetLinks as q,
   StoreBrowseItemDataRequest as qt,
@@ -31328,21 +31688,21 @@ export {
   CUtlBuffer as tn,
   useLazyMemoizedValue as tt,
   FocusableInput as u,
-  CLocalizationToken as un,
+  CClanMatchEventByRange as un,
   CurrentLocalizationSettings as ut,
   GamepadNavigationContext as v,
-  AssertMsg as vn,
+  MoveElement as vn,
   k_responsiveViewPrefsCookie as vt,
   useNavigationSourceSupportsFocus as w,
-  RemapMetadataByField as wn,
+  ReaderProto as wn,
   GET_BASE_WEB_PROPERTY as wt,
   FocusNavRootContainer as x,
-  DeserializeBinary as xn,
+  AddAccessors as xn,
   AccountPrivacyService as xt,
   useFocusNavRef as y,
-  AssertNever as yn,
+  AssertMsg as yn,
   k_sessionIDCookie as yt,
   CLog as z,
-  BIsChinaRealm as zn,
+  k_GIDNil as zn,
   GetCookie as zt,
 };

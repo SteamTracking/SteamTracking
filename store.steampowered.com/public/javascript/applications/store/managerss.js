@@ -4,79 +4,79 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import {
   At as t,
-  Lt as n,
-  Pt as r,
-  ft as i,
-  jt as a,
-  kt as o,
-  l as s,
-  tt as ee,
+  It as n,
+  Nt as r,
+  Ot as i,
+  c as a,
+  dt as o,
+  et as s,
+  kt as c,
 } from "./chunk~01cfc309bf.js";
-import { C as c } from "./chunk~f57d770d64.js";
-import { n as te } from "./chunk~cf3721cc1c.js";
-import { n as ne } from "./chunk~8681f5c764.js";
-import { t as l } from "./chunk~eefd71512b.js";
-import { a as re } from "./chunk~e867464c75.js";
-import { T as ie, i as u, y as ae } from "./chunk~2f8c67b4de.js";
+import { C as l } from "./chunk~f57d770d64.js";
+import { n as ee } from "./chunk~cf3721cc1c.js";
+import { n as te } from "./chunk~8681f5c764.js";
+import { t as u } from "./chunk~eefd71512b.js";
+import { a as ne } from "./chunk~e867464c75.js";
+import { T as re, i as d, y as ie } from "./chunk~2f8c67b4de.js";
 import "./chunk~95ecbf576c.js";
 import "./chunk~21654e981a.js";
-import { n as d } from "./chunk~fc8a9e4879.js";
+import { n as f } from "./chunk~fc8a9e4879.js";
 import {
-  Ar as f,
-  CS as p,
-  Cb as oe,
-  DS as se,
-  Er as ce,
-  Hn as m,
-  Hy as le,
-  In as h,
-  Kb as g,
-  Ln as ue,
-  Mx as de,
-  Nc as _,
-  Ox as v,
-  Qx as y,
-  Wu as b,
-  Xy as fe,
-  Yu as x,
-  _x as S,
-  aS as pe,
-  cb as me,
+  Ar as p,
+  Ax as m,
+  By as ae,
+  Er as oe,
+  Gu as h,
+  Hn as g,
+  In as _,
+  Ln as se,
+  Nx as ce,
+  Pc as v,
+  TS as le,
+  Uy as ue,
+  Xu as y,
+  Zy as de,
+  _S as b,
+  _b as fe,
+  bb as pe,
+  bx as me,
   cx as he,
-  dS as C,
-  dr as w,
-  el as ge,
-  fS as T,
-  fr as _e,
-  gS as E,
-  gb as ve,
-  gr as D,
-  hS as O,
+  dS as x,
+  dr as S,
+  eS as C,
+  fS as w,
+  fr as ge,
+  gS as T,
+  gr as E,
+  hS as D,
+  ib as O,
+  kS as _e,
   kx as k,
-  lS as A,
-  lr as j,
-  mS as M,
-  pS as N,
-  pr as P,
-  rb as F,
-  sS as ye,
-  sr as be,
-  sx as xe,
-  uS as I,
-  yb as L,
-  yr as R,
-  yx as Se,
-  zn as z,
-  zy as Ce,
+  lS as ve,
+  lb as ye,
+  lr as A,
+  lx as be,
+  mS as j,
+  pS as M,
+  pr as N,
+  qb as P,
+  sS as xe,
+  sr as Se,
+  tl as Ce,
+  vS as F,
+  vx as I,
+  wb as we,
+  yr as L,
+  zn as R,
 } from "./main.js";
-var B = e(ee()),
-  V = e(r(), 1),
-  we = class e extends V.Message {
+var z = e(s()),
+  B = e(r(), 1),
+  Te = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.gid || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, [5], null));
+        e.prototype.gid || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, [5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -85,81 +85,81 @@ var B = e(ee()),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            gid: { n: 1, br: T.readFixed64String, bw: E.writeFixed64String },
-            name: { n: 2, br: T.readString, bw: E.writeString },
-            type: { n: 3, d: 0, br: T.readUint32, bw: E.writeUint32 },
-            url: { n: 4, br: T.readString, bw: E.writeString },
+            gid: { n: 1, br: j.readFixed64String, bw: F.writeFixed64String },
+            name: { n: 2, br: j.readString, bw: F.writeString },
+            type: { n: 3, d: 0, br: j.readUint32, bw: F.writeUint32 },
+            url: { n: 4, br: j.readString, bw: F.writeString },
             associated_apps: {
               n: 5,
               r: !0,
               q: !0,
-              br: T.readUint32,
-              pbr: T.readPackedUint32,
-              bw: E.writeRepeatedUint32,
+              br: j.readUint32,
+              pbr: j.readPackedUint32,
+              bw: F.writeRepeatedUint32,
             },
             poll_interval: {
               n: 6,
               d: 300,
-              br: T.readUint32,
-              bw: E.writeUint32,
+              br: j.readUint32,
+              bw: F.writeUint32,
             },
-            kv_description: { n: 7, br: T.readString, bw: E.writeString },
-            kv_filter: { n: 8, br: T.readString, bw: E.writeString },
+            kv_description: { n: 7, br: j.readString, bw: F.writeString },
+            kv_filter: { n: 8, br: j.readString, bw: F.writeString },
             publish_to_clan_account_id: {
               n: 9,
-              br: T.readUint32,
-              bw: E.writeUint32,
+              br: j.readUint32,
+              bw: F.writeUint32,
             },
-            language: { n: 10, br: T.readUint32, bw: E.writeUint32 },
-            last_error: { n: 11, br: T.readUint32, bw: E.writeUint32 },
-            last_update: { n: 12, br: T.readUint32, bw: E.writeUint32 },
-            last_checked: { n: 13, br: T.readUint32, bw: E.writeUint32 },
+            language: { n: 10, br: j.readUint32, bw: F.writeUint32 },
+            last_error: { n: 11, br: j.readUint32, bw: F.writeUint32 },
+            last_update: { n: 12, br: j.readUint32, bw: F.writeUint32 },
+            last_checked: { n: 13, br: j.readUint32, bw: F.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNewsFeedDef`;
     }
   },
-  H = class e extends V.Message {
+  V = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.gid || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, [11], null));
+        e.prototype.gid || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, [11], null));
     }
     static sm_m;
     static sm_mbf;
@@ -168,80 +168,80 @@ var B = e(ee()),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            gid: { n: 1, br: T.readFixed64String, bw: E.writeFixed64String },
+            gid: { n: 1, br: j.readFixed64String, bw: F.writeFixed64String },
             news_feed_gid: {
               n: 2,
-              br: T.readFixed64String,
-              bw: E.writeFixed64String,
+              br: j.readFixed64String,
+              bw: F.writeFixed64String,
             },
-            title: { n: 3, br: T.readString, bw: E.writeString },
-            url: { n: 4, br: T.readString, bw: E.writeString },
-            author: { n: 5, br: T.readString, bw: E.writeString },
-            rtime_date: { n: 6, br: T.readUint32, bw: E.writeUint32 },
-            contents: { n: 7, br: T.readString, bw: E.writeString },
-            commited: { n: 8, br: T.readBool, bw: E.writeBool },
-            deleted: { n: 9, br: T.readBool, bw: E.writeBool },
-            tags: { n: 10, br: T.readString, bw: E.writeString },
+            title: { n: 3, br: j.readString, bw: F.writeString },
+            url: { n: 4, br: j.readString, bw: F.writeString },
+            author: { n: 5, br: j.readString, bw: F.writeString },
+            rtime_date: { n: 6, br: j.readUint32, bw: F.writeUint32 },
+            contents: { n: 7, br: j.readString, bw: F.writeString },
+            commited: { n: 8, br: j.readBool, bw: F.writeBool },
+            deleted: { n: 9, br: j.readBool, bw: F.writeBool },
+            tags: { n: 10, br: j.readString, bw: F.writeString },
             appids: {
               n: 11,
               r: !0,
               q: !0,
-              br: T.readUint32,
-              pbr: T.readPackedUint32,
-              bw: E.writeRepeatedUint32,
+              br: j.readUint32,
+              pbr: j.readPackedUint32,
+              bw: F.writeRepeatedUint32,
             },
-            recommendation_state: { n: 12, br: T.readEnum, bw: E.writeEnum },
-            received_compensation: { n: 13, br: T.readBool, bw: E.writeBool },
-            received_for_free: { n: 14, br: T.readBool, bw: E.writeBool },
-            blurb: { n: 15, br: T.readString, bw: E.writeString },
-            event_subtitle: { n: 16, br: T.readString, bw: E.writeString },
-            event_summary: { n: 17, br: T.readString, bw: E.writeString },
+            recommendation_state: { n: 12, br: j.readEnum, bw: F.writeEnum },
+            received_compensation: { n: 13, br: j.readBool, bw: F.writeBool },
+            received_for_free: { n: 14, br: j.readBool, bw: F.writeBool },
+            blurb: { n: 15, br: j.readString, bw: F.writeString },
+            event_subtitle: { n: 16, br: j.readString, bw: F.writeString },
+            event_summary: { n: 17, br: j.readString, bw: F.writeString },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNewsFeedPostDef`;
     }
   },
-  Te = class e extends V.Message {
+  Ee = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.content || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.content || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -250,54 +250,54 @@ var B = e(ee()),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            content: { n: 1, br: T.readString, bw: E.writeString },
-            preserve_newlines: { n: 2, d: !1, br: T.readBool, bw: E.writeBool },
+            content: { n: 1, br: j.readString, bw: F.writeString },
+            preserve_newlines: { n: 2, d: !1, br: j.readBool, bw: F.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_ConvertHTMLToBBCode_Request`;
     }
   },
-  Ee = class e extends V.Message {
+  De = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.converted_content || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.converted_content || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -306,54 +306,54 @@ var B = e(ee()),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            converted_content: { n: 1, br: T.readString, bw: E.writeString },
-            found_html: { n: 2, br: T.readBool, bw: E.writeBool },
+            converted_content: { n: 1, br: j.readString, bw: F.writeString },
+            found_html: { n: 2, br: j.readBool, bw: F.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_ConvertHTMLToBBCode_Response`;
     }
   },
-  De = class e extends V.Message {
+  Oe = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.rss_message || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.rss_message || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -362,60 +362,60 @@ var B = e(ee()),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            rss_message: { n: 1, br: T.readString, bw: E.writeString },
-            unique_id: { n: 2, br: T.readString, bw: E.writeString },
-            title: { n: 3, br: T.readString, bw: E.writeString },
-            desc: { n: 4, br: T.readString, bw: E.writeString },
-            jsondata: { n: 5, br: T.readString, bw: E.writeString },
-            post: { n: 6, c: H },
-            valid_post: { n: 7, br: T.readBool, bw: E.writeBool },
-            post_error_msg: { n: 8, br: T.readString, bw: E.writeString },
+            rss_message: { n: 1, br: j.readString, bw: F.writeString },
+            unique_id: { n: 2, br: j.readString, bw: F.writeString },
+            title: { n: 3, br: j.readString, bw: F.writeString },
+            desc: { n: 4, br: j.readString, bw: F.writeString },
+            jsondata: { n: 5, br: j.readString, bw: F.writeString },
+            post: { n: 6, c: V },
+            valid_post: { n: 7, br: j.readBool, bw: F.writeBool },
+            post_error_msg: { n: 8, br: j.readString, bw: F.writeString },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNewsPartnerEventPreview`;
     }
   },
-  Oe = class e extends V.Message {
+  H = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.rss_url || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.rss_url || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -424,55 +424,55 @@ var B = e(ee()),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            rss_url: { n: 1, br: T.readString, bw: E.writeString },
-            lang: { n: 2, br: T.readUint32, bw: E.writeUint32 },
-            clan_account_id: { n: 3, br: T.readUint32, bw: E.writeUint32 },
+            rss_url: { n: 1, br: j.readString, bw: F.writeString },
+            lang: { n: 2, br: j.readUint32, bw: F.writeUint32 },
+            clan_account_id: { n: 3, br: j.readUint32, bw: F.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_PreviewPartnerEvents_Request`;
     }
   },
-  ke = class e extends V.Message {
+  ke = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.rss_url || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, [2], null));
+        e.prototype.rss_url || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -481,55 +481,55 @@ var B = e(ee()),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            rss_url: { n: 1, br: T.readString, bw: E.writeString },
-            results: { n: 2, c: De, r: !0, q: !0 },
-            error_msg: { n: 3, br: T.readString, bw: E.writeString },
+            rss_url: { n: 1, br: j.readString, bw: F.writeString },
+            results: { n: 2, c: Oe, r: !0, q: !0 },
+            error_msg: { n: 3, br: j.readString, bw: F.writeString },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_PreviewPartnerEvents_Response`;
     }
   },
-  Ae = class e extends V.Message {
+  Ae = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.clan_account_id || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.clan_account_id || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -538,53 +538,53 @@ var B = e(ee()),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            clan_account_id: { n: 1, br: T.readUint32, bw: E.writeUint32 },
+            clan_account_id: { n: 1, br: j.readUint32, bw: F.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_GetNewsFeedByRepublishClan_Request`;
     }
   },
-  je = class e extends V.Message {
+  je = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.feeds || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, [1], null));
+        e.prototype.feeds || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -592,52 +592,52 @@ var B = e(ee()),
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { feeds: { n: 1, c: we, r: !0, q: !0 } },
+          fields: { feeds: { n: 1, c: Te, r: !0, q: !0 } },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_GetNewsFeedByRepublishClan_Response`;
     }
   },
-  Me = class e extends V.Message {
+  Me = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.post || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.post || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -646,54 +646,54 @@ var B = e(ee()),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            post: { n: 1, c: H },
-            draft: { n: 2, br: T.readBool, bw: E.writeBool },
+            post: { n: 1, c: V },
+            draft: { n: 2, br: j.readBool, bw: F.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_PublishPartnerEvent_Request`;
     }
   },
-  Ne = class e extends V.Message {
+  Ne = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.clan_event_gid || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.clan_event_gid || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -704,13 +704,13 @@ var B = e(ee()),
           fields: {
             clan_event_gid: {
               n: 1,
-              br: T.readFixed64String,
-              bw: E.writeFixed64String,
+              br: j.readFixed64String,
+              bw: F.writeFixed64String,
             },
             news_post_gid: {
               n: 2,
-              br: T.readFixed64String,
-              bw: E.writeFixed64String,
+              br: j.readFixed64String,
+              bw: F.writeFixed64String,
             },
           },
         }),
@@ -718,46 +718,46 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_PublishPartnerEvent_Response`;
     }
   },
-  Pe = class e extends V.Message {
+  Pe = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.news_feed_gid || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.news_feed_gid || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -768,57 +768,57 @@ var B = e(ee()),
           fields: {
             news_feed_gid: {
               n: 1,
-              br: T.readFixed64String,
-              bw: E.writeFixed64String,
+              br: j.readFixed64String,
+              bw: F.writeFixed64String,
             },
-            start_index: { n: 2, d: 0, br: T.readUint32, bw: E.writeUint32 },
-            amount: { n: 3, d: 100, br: T.readUint32, bw: E.writeUint32 },
+            start_index: { n: 2, d: 0, br: j.readUint32, bw: F.writeUint32 },
+            amount: { n: 3, d: 100, br: j.readUint32, bw: F.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CNews_GetBatchPublishedPartnerEvent_Request`;
     }
   },
-  Fe = class e extends V.Message {
+  Fe = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.clan_account_id || A(e.M()),
-        V.Message.initialize(this, t, 0, -1, [3, 4, 5], null));
+        e.prototype.clan_account_id || x(e.M()),
+        B.Message.initialize(this, t, 0, -1, [3, 4, 5], null));
     }
     static sm_m;
     static sm_mbf;
@@ -827,34 +827,34 @@ var B = e(ee()),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            clan_account_id: { n: 1, br: T.readUint32, bw: E.writeUint32 },
+            clan_account_id: { n: 1, br: j.readUint32, bw: F.writeUint32 },
             news_feed_gid: {
               n: 2,
-              br: T.readFixed64String,
-              bw: E.writeFixed64String,
+              br: j.readFixed64String,
+              bw: F.writeFixed64String,
             },
             clan_event_gid: {
               n: 3,
               r: !0,
               q: !0,
-              br: T.readFixed64String,
-              pbr: T.readPackedFixed64String,
-              bw: E.writeRepeatedFixed64String,
+              br: j.readFixed64String,
+              pbr: j.readPackedFixed64String,
+              bw: F.writeRepeatedFixed64String,
             },
             news_post_gid: {
               n: 4,
               r: !0,
               q: !0,
-              br: T.readFixed64String,
-              pbr: T.readPackedFixed64String,
-              bw: E.writeRepeatedFixed64String,
+              br: j.readFixed64String,
+              pbr: j.readPackedFixed64String,
+              bw: F.writeRepeatedFixed64String,
             },
             news_url: {
               n: 5,
               r: !0,
               q: !0,
-              br: T.readString,
-              bw: E.writeRepeatedString,
+              br: j.readString,
+              bw: F.writeRepeatedString,
             },
           },
         }),
@@ -862,34 +862,34 @@ var B = e(ee()),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= N(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= D(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return O(e.M(), t, n);
+      return b(e.M(), t, n);
     }
     static fromObject(t) {
-      return C(e.M(), t);
+      return M(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new V.BinaryReader(t),
+      let n = new B.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return I(e.MBF(), t, n);
+      return w(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      M(e.M(), t, n);
+      T(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new V.BinaryWriter();
+      var t = new B.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
@@ -899,7 +899,7 @@ var B = e(ee()),
   U;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`News.ConvertHTMLToBBCode#1`, k(Te, t, n), Ee, {
+    return e.SendMsg(`News.ConvertHTMLToBBCode#1`, m(Ee, t, n), De, {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
@@ -907,7 +907,7 @@ var B = e(ee()),
   }
   e.ConvertHTMLToBBCode = t;
   function n(e, t, n) {
-    return e.SendMsg(`News.PreviewPartnerEvents#1`, k(Oe, t, n), ke, {
+    return e.SendMsg(`News.PreviewPartnerEvents#1`, m(H, t, n), ke, {
       bConstMethod: !0,
       ePrivilege: 1,
       rgBrowserAPISites: [`store`],
@@ -915,21 +915,21 @@ var B = e(ee()),
   }
   e.PreviewPartnerEvents = n;
   function r(e, t, n) {
-    return e.SendMsg(`News.GetNewsFeedByRepublishClan#1`, k(Ae, t, n), je, {
+    return e.SendMsg(`News.GetNewsFeedByRepublishClan#1`, m(Ae, t, n), je, {
       bConstMethod: !0,
       ePrivilege: 1,
     });
   }
   e.GetNewsFeedByRepublishClan = r;
   function i(e, t, n) {
-    return e.SendMsg(`News.PublishPartnerEvent#1`, k(Me, t, n), Ne, {
+    return e.SendMsg(`News.PublishPartnerEvent#1`, m(Me, t, n), Ne, {
       ePrivilege: 1,
       rgBrowserAPISites: [`store`],
     });
   }
   e.PublishPartnerEvent = i;
   function a(e, t, n) {
-    return e.SendMsg(`News.GetBatchPublishedPartnerEvent#1`, k(Pe, t, n), Fe, {
+    return e.SendMsg(`News.GetBatchPublishedPartnerEvent#1`, m(Pe, t, n), Fe, {
       bConstMethod: !0,
       ePrivilege: 1,
       rgBrowserAPISites: [`store`],
@@ -948,11 +948,11 @@ var W = class {
   m_eCuratorLanguage = void 0;
   m_mapURLToPosted = new Map();
   constructor(e) {
-    (o(this),
+    (i(this),
       (this.m_clanAccountID = e.clanid),
-      (this.m_clanSteamID = fe.InitFromClanID(
+      (this.m_clanSteamID = de.InitFromClanID(
         this.m_clanAccountID,
-        S.EUNIVERSE,
+        I.EUNIVERSE,
       )),
       (this.m_strRSSFeedURL = e.rss_feed_url),
       (this.m_strRSSGID = e.rss_feed_gid),
@@ -1001,7 +1001,7 @@ var W = class {
         console.error(`PreviewPartnerEventsFromRSSFeed: User not logged in`),
         null
       );
-    let t = v.Init(Oe);
+    let t = k.Init(H);
     (t.Body().set_rss_url(e),
       t.Body().set_lang(this.GetFeedLanguageHandleUnset()),
       t.Body().set_clan_account_id(this.GetClanAccountID()));
@@ -1025,33 +1025,33 @@ var W = class {
         console.error(`FetchPublishedEvents: Need to create a news feed first`),
         null
       );
-    let t = v.Init(Pe);
-    (t.Body().set_news_feed_gid(this.m_strRSSGID), t.Body().set_amount(e));
-    let n = await U.GetBatchPublishedPartnerEvent(
+    let n = k.Init(Pe);
+    (n.Body().set_news_feed_gid(this.m_strRSSGID), n.Body().set_amount(e));
+    let r = await U.GetBatchPublishedPartnerEvent(
       G.Get().GetCuratorTransport(),
-      t,
+      n,
     );
     return (
-      n.GetEResult() == 1
-        ? a(() => {
-            for (let e = 0; e < n.Body().clan_event_gid().length; ++e) {
+      r.GetEResult() == 1
+        ? t(() => {
+            for (let e = 0; e < r.Body().clan_event_gid().length; ++e) {
               let t = {
-                url: n.Body().news_url()[e],
-                clan_event_gid: n.Body().clan_event_gid()[e],
-                news_post_gid: n.Body().news_post_gid()[e],
+                url: r.Body().news_url()[e],
+                clan_event_gid: r.Body().clan_event_gid()[e],
+                news_post_gid: r.Body().news_post_gid()[e],
               };
               this.m_mapURLToPosted.set(t.url, t);
             }
           })
         : console.error(
             `FetchPublishedEvents error: EMsg:` +
-              de(n.GetEMsg()) +
+              ce(r.GetEMsg()) +
               ` EResult:` +
-              n.GetEResult() +
+              r.GetEResult() +
               ` msg:` +
-              n.Hdr().error_message(),
+              r.Hdr().error_message(),
           ),
-      n
+      r
     );
   }
   MapArticleURLToClanEventGID(e) {
@@ -1059,29 +1059,29 @@ var W = class {
     if (t) return t.clan_event_gid;
   }
   BIsLoggedIn() {
-    return Se.logged_in;
+    return me.logged_in;
   }
-  async CreateOrUpdateRSSNewFeed(e, t = 0) {
-    let n = new FormData();
-    (n.append(`sessionid`, xe()),
-      n.append(`gid`, this.m_strRSSGID),
-      n.append(`lang`, `` + this.GetCuratorLanguage()),
-      n.append(`rss_url`, e),
-      n.append(`polling_interval`, `` + t));
-    let r =
-        S.STORE_BASE_URL +
+  async CreateOrUpdateRSSNewFeed(e, n = 0) {
+    let r = new FormData();
+    (r.append(`sessionid`, he()),
+      r.append(`gid`, this.m_strRSSGID),
+      r.append(`lang`, `` + this.GetCuratorLanguage()),
+      r.append(`rss_url`, e),
+      r.append(`polling_interval`, `` + n));
+    let i =
+        I.STORE_BASE_URL +
         `curator/` +
         this.m_clanAccountID +
         `/admin/ajaxmanagerssfeed`,
-      i = await B.default.post(r, n, { withCredentials: !0 });
+      a = await z.default.post(i, r, { withCredentials: !0 });
     return (
-      i.data.success == 1 &&
-        a(() => {
-          ((this.m_strRSSGID = i.data.gid),
+      a.data.success == 1 &&
+        t(() => {
+          ((this.m_strRSSGID = a.data.gid),
             (this.m_strRSSFeedURL = e),
-            (this.m_nPollIntervalSeconds = t));
+            (this.m_nPollIntervalSeconds = n));
         }),
-      i.data
+      a.data
     );
   }
   async UpdateAutomation(e) {
@@ -1090,16 +1090,16 @@ var W = class {
   async CheckForNewUpdate() {
     if (this.m_strRSSGID) {
       let e = new FormData();
-      (e.append(`sessionid`, xe()), e.append(`gid`, this.m_strRSSGID));
+      (e.append(`sessionid`, he()), e.append(`gid`, this.m_strRSSGID));
       let t =
-        S.STORE_BASE_URL +
+        I.STORE_BASE_URL +
         `curator/` +
         this.m_clanAccountID +
         `/admin/ajaxcheckfornews`;
-      await B.default.post(t, e, { withCredentials: !0 });
+      await z.default.post(t, e, { withCredentials: !0 });
     }
   }
-  async CreatePost(e, t) {
+  async CreatePost(e, n) {
     if (!this.BIsLoggedIn())
       return (
         console.error(`CreatePartnerFromPreviewPost: User not logged in`), null
@@ -1111,57 +1111,57 @@ var W = class {
         ),
         null
       );
-    let n = new H();
-    (n.set_gid(e.post.gid),
-      n.set_news_feed_gid(this.m_strRSSGID),
-      n.set_title(e.post.title),
-      n.set_url(e.post.url),
-      n.set_author(e.post.author),
-      n.set_rtime_date(e.post.rtime_date),
-      n.set_contents(e.post.contents),
-      n.set_commited(e.post.commited),
-      n.set_deleted(e.post.deleted),
-      n.set_tags(e.post.tags),
-      n.set_appids(e.post.appids),
-      n.set_recommendation_state(e.post.recommendation_state),
-      n.set_received_for_free(e.post.received_for_free),
-      n.set_received_compensation(e.post.received_compensation),
-      n.set_blurb(e.post.blurb));
-    let r = v.Init(Me);
-    (r.Body().set_post(n), r.Body().set_draft(t));
-    let i = await U.PublishPartnerEvent(G.Get().GetCuratorTransport(), r);
+    let r = new V();
+    (r.set_gid(e.post.gid),
+      r.set_news_feed_gid(this.m_strRSSGID),
+      r.set_title(e.post.title),
+      r.set_url(e.post.url),
+      r.set_author(e.post.author),
+      r.set_rtime_date(e.post.rtime_date),
+      r.set_contents(e.post.contents),
+      r.set_commited(e.post.commited),
+      r.set_deleted(e.post.deleted),
+      r.set_tags(e.post.tags),
+      r.set_appids(e.post.appids),
+      r.set_recommendation_state(e.post.recommendation_state),
+      r.set_received_for_free(e.post.received_for_free),
+      r.set_received_compensation(e.post.received_compensation),
+      r.set_blurb(e.post.blurb));
+    let i = k.Init(Me);
+    (i.Body().set_post(r), i.Body().set_draft(n));
+    let a = await U.PublishPartnerEvent(G.Get().GetCuratorTransport(), i);
     return (
-      i.GetEResult() == 1
-        ? (a(() => {
+      a.GetEResult() == 1
+        ? (t(() => {
             let t = {
               url: e.post.url,
-              clan_event_gid: i.Body().clan_event_gid(),
-              news_post_gid: i.Body().news_post_gid(),
+              clan_event_gid: a.Body().clan_event_gid(),
+              news_post_gid: a.Body().news_post_gid(),
             };
             this.m_mapURLToPosted.set(e.post.url, t);
           }),
-          d.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+          f.LoadPartnerEventFromClanEventGIDAndClanSteamID(
             this.m_clanSteamID,
-            i.Body().clan_event_gid(),
+            a.Body().clan_event_gid(),
             0,
           ))
         : console.error(
-            `CreatePost error: ` + i.GetEMsg() + ` ` + i.GetEResult(),
+            `CreatePost error: ` + a.GetEMsg() + ` ` + a.GetEResult(),
           ),
-      i
+      a
     );
   }
 };
-(g([t], W.prototype, `m_strRSSFeedURL`, void 0),
-  g([t], W.prototype, `m_strRSSGID`, void 0),
-  g([t], W.prototype, `m_rtimeRSSLastChecked`, void 0),
-  g([t], W.prototype, `m_nPollIntervalSeconds`, void 0),
-  g([t], W.prototype, `m_eRSSFeedLanguage`, void 0),
-  g([t], W.prototype, `m_eCuratorLanguage`, void 0),
-  g([t], W.prototype, `m_mapURLToPosted`, void 0));
+(P([c], W.prototype, `m_strRSSFeedURL`, void 0),
+  P([c], W.prototype, `m_strRSSGID`, void 0),
+  P([c], W.prototype, `m_rtimeRSSLastChecked`, void 0),
+  P([c], W.prototype, `m_nPollIntervalSeconds`, void 0),
+  P([c], W.prototype, `m_eRSSFeedLanguage`, void 0),
+  P([c], W.prototype, `m_eCuratorLanguage`, void 0),
+  P([c], W.prototype, `m_mapURLToPosted`, void 0));
 var G = class e {
   constructor() {
-    o(this);
+    i(this);
   }
   static s_CuratorAdminStore;
   m_transport;
@@ -1174,7 +1174,7 @@ var G = class e {
   m_cClanInfoRequestsInFlight = 0;
   GetCuratorTransport() {
     return (
-      ye(
+      ve(
         this.m_transport,
         `Expects Transpoate to be initialized but it is now`,
       ),
@@ -1195,13 +1195,13 @@ var G = class e {
     );
   }
   Init() {
-    let e = he(`curatoradmin`, `application_config`);
+    let e = be(`curatoradmin`, `application_config`);
     (this.ValidateStoreDefault(e) &&
       ((this.m_defaultAdmin = new W(e)),
       this.m_mapClanAccountToAdmin.set(e.clanid, this.m_defaultAdmin)),
       this.ValidateWebAPI(e) &&
-        (this.m_transport = Ce(
-          new le(S.WEBAPI_BASE_URL, e.webapi_token),
+        (this.m_transport = ae(
+          new ue(I.WEBAPI_BASE_URL, e.webapi_token),
         ).GetServiceTransport()));
   }
   ValidateStoreDefault(e) {
@@ -1213,7 +1213,7 @@ var G = class e {
     return t && typeof t.webapi_token == `string`;
   }
   BIsLoggedIn() {
-    return Se.logged_in;
+    return me.logged_in;
   }
   BHavePendingInfoRequests() {
     return (
@@ -1240,7 +1240,7 @@ var G = class e {
             window.setTimeout(() => this.FlushPendingClanInfo(), 25)),
           this.m_setPendingClanInfo.add(e),
           this.m_PendingClanInfoPromise)
-      : (ye(!e, `unexpected clanid of zero or undefined: ` + e),
+      : (ve(!e, `unexpected clanid of zero or undefined: ` + e),
         Promise.resolve());
   }
   async FlushPendingClanInfo() {
@@ -1267,38 +1267,38 @@ var G = class e {
   }
   async LoadBatchedClanRSSAdminInfo(e) {
     this.m_cClanInfoRequestsInFlight++;
-    let t = e.filter((e) => !this.m_mapClanAccountToAdmin.has(e));
-    for (; t.length > 0;) {
-      let n = Math.min(50, t.length);
-      (t.slice(0, n), (t = t.slice(n)));
+    let n = e.filter((e) => !this.m_mapClanAccountToAdmin.has(e));
+    for (; n.length > 0;) {
+      let r = Math.min(50, n.length);
+      (n.slice(0, r), (n = n.slice(r)));
       try {
-        let t = S.STORE_BASE_URL + `events_admin/ajaxgetrssadmininfo`,
-          n = { clanids: e },
-          r = await B.default.get(t, { params: n, withCredentials: !0 });
+        let n = I.STORE_BASE_URL + `events_admin/ajaxgetrssadmininfo`,
+          r = { clanids: e },
+          i = await z.default.get(n, { params: r, withCredentials: !0 });
         if (
-          r &&
-          r.data &&
-          r.data.success == 1 &&
-          r.data.rss_admin_infos &&
-          Array.isArray(r.data.rss_admin_infos)
+          i &&
+          i.data &&
+          i.data.success == 1 &&
+          i.data.rss_admin_infos &&
+          Array.isArray(i.data.rss_admin_infos)
         )
-          a(() => {
-            (r.data.rss_admin_infos.forEach((e) => {
+          t(() => {
+            (i.data.rss_admin_infos.forEach((e) => {
               this.m_mapClanAccountToAdmin.set(e.clanid, new W(e));
             }),
-              r.data.rss_event_stats.forEach((e) => {
+              i.data.rss_event_stats.forEach((e) => {
                 this.m_mapClanToEventRSSStats.set(e.clan_account_id, e);
               }));
           });
         else {
-          let e = x(r.data || {});
+          let e = y(i.data || {});
           console.error(
             `LoadBatchedClanRSSAdminInfo error:` + e.strErrorMsg,
             e,
           );
         }
       } catch (e) {
-        let t = x(e);
+        let t = y(e);
         console.error(
           `LoadBatchedClanRSSAdminInfo catched error:` + t.strErrorMsg,
           t,
@@ -1308,8 +1308,8 @@ var G = class e {
     this.m_cClanInfoRequestsInFlight--;
   }
 };
-(g([t.shallow], G.prototype, `m_mapClanAccountToAdmin`, void 0),
-  g([t.shallow], G.prototype, `m_mapClanToEventRSSStats`, void 0));
+(P([c.shallow], G.prototype, `m_mapClanAccountToAdmin`, void 0),
+  P([c.shallow], G.prototype, `m_mapClanToEventRSSStats`, void 0));
 var Ie = class e {
     static s_CuratorStore;
     m_mapClanToRecommendation = new Map();
@@ -1331,7 +1331,7 @@ var Ie = class e {
       return !!this.GetReviewForApp(e, t);
     }
     BHasReviewForAppByClanAccount(e, t) {
-      let n = fe.InitFromClanID(e, S.EUNIVERSE);
+      let n = de.InitFromClanID(e, I.EUNIVERSE);
       return !!this.GetReviewForApp(n, t);
     }
     async LoadAppRecommendation(e, t) {
@@ -1346,12 +1346,12 @@ var Ie = class e {
         r.length > 0)
       ) {
         let t =
-            S.STORE_BASE_URL +
+            I.STORE_BASE_URL +
             `curator/` +
             e.GetAccountID() +
             `/admin/ajaxgetrecbyapps`,
-          i = await B.default.get(t, {
-            params: { appids: r, cc: S.COUNTRY || `US`, l: S.LANGUAGE },
+          i = await z.default.get(t, {
+            params: { appids: r, cc: I.COUNTRY || `US`, l: I.LANGUAGE },
           }),
           a = i && i.data;
         a &&
@@ -1377,7 +1377,7 @@ var Ie = class e {
   qe = `YM5m3B8SHUU-`,
   Je = `Nujwth5QyYc-`,
   Ye = `_6gxlVwgSD9c-`,
-  J = i(),
+  J = o(),
   Y = class extends K.Component {
     state = { strRssURL: G.Get().GetDefaultAdmin().GetRSSUrl() };
     m_Admin = G.Get().GetDefaultAdmin();
@@ -1386,12 +1386,12 @@ var Ie = class e {
     }
     OnCreateOrSaveFeed(e) {
       (e.preventDefault(),
-        m(
+        g(
           (0, J.jsx)($, {
             strRSSUrl: this.state.strRssURL,
             admin: this.m_Admin,
           }),
-          b(e),
+          h(e),
         ));
     }
     OnRevert(e) {
@@ -1401,39 +1401,39 @@ var Ie = class e {
     render() {
       let e = this.state.strRssURL === this.m_Admin.GetRSSUrl();
       if (window.Prototype !== void 0) return (window.location.reload(), null);
-      let t = se(p(this.m_Admin.GetFeedLanguageHandleUnset())),
+      let t = _e(le(this.m_Admin.GetFeedLanguageHandleUnset())),
         n = G.Get().GetDefaultAdmin();
       return (0, J.jsxs)(`div`, {
-        className: _(Le),
+        className: v(Le),
         children: [
           (0, J.jsxs)(`div`, {
             className: `titleframe`,
             children: [
-              (0, J.jsx)(`h4`, { children: F(`#CuratorAdmin_RSSFeed_title`) }),
+              (0, J.jsx)(`h4`, { children: O(`#CuratorAdmin_RSSFeed_title`) }),
               (0, J.jsx)(`p`, {
                 className: `subtitle`,
-                children: F(`#CuratorAdmin_RSSFeed_desc`),
+                children: O(`#CuratorAdmin_RSSFeed_desc`),
               }),
               (0, J.jsx)(`p`, {
-                children: me(
+                children: ye(
                   `#CuratorAdmin_RSSFeed_doc_link`,
                   (0, J.jsx)(`a`, {
                     href: `https://partner.steamgames.com/doc/store/news/rss`,
                     target: `_blank`,
-                    children: F(`#CuratorAdmin_RSSFeed_doc_link_text`),
+                    children: O(`#CuratorAdmin_RSSFeed_doc_link_text`),
                   }),
                 ),
               }),
               (0, J.jsx)(`p`, {
                 className: We,
-                children: (0, J.jsx)(f, {
+                children: (0, J.jsx)(p, {
                   href:
-                    S.COMMUNITY_BASE_URL +
+                    I.COMMUNITY_BASE_URL +
                     `gid/` +
                     this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                     `/partnerevents/`,
-                  className: _(u, ie),
-                  children: F(`#RSSManager_EventDashBoard`),
+                  className: v(d, re),
+                  children: O(`#RSSManager_EventDashBoard`),
                 }),
               }),
             ],
@@ -1446,45 +1446,45 @@ var Ie = class e {
                 children: [
                   (0, J.jsx)(`span`, {
                     className: Je,
-                    children: F(`#CuratorAdmin_RSSFeed_lang_only`),
+                    children: O(`#CuratorAdmin_RSSFeed_lang_only`),
                   }),
                   (0, J.jsx)(`span`, { className: Ye, children: t }),
                   (0, J.jsx)(`a`, {
                     href:
-                      S.COMMUNITY_BASE_URL +
+                      I.COMMUNITY_BASE_URL +
                       `gid/` +
                       this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                       `/edit `,
                     target: `_blank`,
-                    className: _(u, q),
-                    children: F(`#CuratorAdmin_RSSFeed_edit_language`),
+                    className: v(d, q),
+                    children: O(`#CuratorAdmin_RSSFeed_edit_language`),
                   }),
                 ],
               }),
               this.m_Admin.GetFeedLanguageHandleUnset() !=
                 this.m_Admin.GetCuratorLanguage() &&
                 (0, J.jsx)(`div`, {
-                  className: _(`YM5m3B8SHUU-`, `d1pzzsdLKFY-`),
+                  className: v(`YM5m3B8SHUU-`, `d1pzzsdLKFY-`),
                   children: (0, J.jsx)(`span`, {
                     className: `Nujwth5QyYc-`,
-                    children: F(
+                    children: O(
                       `#CuratorAdmin_Curator_lang_only`,
-                      F(`#Language_` + p(this.m_Admin.GetCuratorLanguage())),
+                      O(`#Language_` + le(this.m_Admin.GetCuratorLanguage())),
                       t,
                     ),
                   }),
                 }),
               (0, J.jsxs)(`div`, {
-                className: _(ae, He),
+                className: v(ie, He),
                 children: [
-                  (0, J.jsx)(be, {
+                  (0, J.jsx)(Se, {
                     className: void 0,
                     type: `text`,
                     name: `link_url`,
                     id: `link_url`,
                     value: this.state.strRssURL,
-                    label: F(`#CuratorAdmin_RSSFeed`),
-                    placeholder: F(`#CuratorAdmin_RSSFeed_placeholder`),
+                    label: O(`#CuratorAdmin_RSSFeed`),
+                    placeholder: O(`#CuratorAdmin_RSSFeed_placeholder`),
                     onChange: this.OnChangeActualRSSURL,
                     mustBeURL: !0,
                   }),
@@ -1492,14 +1492,14 @@ var Ie = class e {
                     className: `btn_green_white_innerfade btn_medium`,
                     onClick: this.OnCreateOrSaveFeed,
                     children: (0, J.jsx)(`span`, {
-                      children: F(e ? `#Button_Saved` : `#Button_Save`),
+                      children: O(e ? `#Button_Saved` : `#Button_Save`),
                     }),
                   }),
                   !e &&
                     (0, J.jsx)(`a`, {
                       onClick: this.OnRevert,
                       className: `btn_grey_white_innerfade btn_medium`,
-                      children: F(`#Button_Revert`),
+                      children: O(`#Button_Revert`),
                     }),
                 ],
               }),
@@ -1512,14 +1512,14 @@ var Ie = class e {
       });
     }
   };
-(g([y], Y.prototype, `OnChangeActualRSSURL`, null),
-  g([y], Y.prototype, `OnCreateOrSaveFeed`, null),
-  g([y], Y.prototype, `OnRevert`, null),
-  (Y = g([s], Y)));
+(P([C], Y.prototype, `OnChangeActualRSSURL`, null),
+  P([C], Y.prototype, `OnCreateOrSaveFeed`, null),
+  P([C], Y.prototype, `OnRevert`, null),
+  (Y = P([a], Y)));
 var Xe = Y,
   X = class extends K.Component {
     state = { strParseRssURL: this.props.strRssURL, bLoadingPreview: !1 };
-    m_cancelSignal = B.default.CancelToken.source();
+    m_cancelSignal = z.default.CancelToken.source();
     componentDidMount() {
       let { admin: e } = this.props;
       e.BHasFeedGID() &&
@@ -1540,8 +1540,8 @@ var Xe = Y,
         ((n = n.sort((t, n) => {
           let r = e.MapArticleURLToClanEventGID(t.post.url),
             i = e.MapArticleURLToClanEventGID(n.post.url),
-            a = r ? d.GetClanEventModel(r) : null,
-            o = i ? d.GetClanEventModel(i) : null;
+            a = r ? f.GetClanEventModel(r) : null,
+            o = i ? f.GetClanEventModel(i) : null;
           return a && o
             ? o.postTime - a.postTime
             : a
@@ -1602,7 +1602,7 @@ var Xe = Y,
                     r.push(n.post.appids[0]));
               }),
               t.length > 0 &&
-                (await d.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
+                (await f.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                   t,
                   null,
                   this.m_cancelSignal,
@@ -1618,7 +1618,7 @@ var Xe = Y,
       } else
         this.setState({
           bLoadingPreview: void 0,
-          strPreviewErrorMsg: F(
+          strPreviewErrorMsg: O(
             `#Error_Description`,
             t.GetEResult(),
             t.Hdr().error_message(),
@@ -1634,15 +1634,15 @@ var Xe = Y,
             this.state.strPreviewURL !== this.props.strRssURL &&
             (0, J.jsx)(`div`, {
               className: `_3MoE1wNr5W8-`,
-              children: (0, J.jsx)(_e, {
-                disabled: !be.validateUrl(this.props.strRssURL),
+              children: (0, J.jsx)(ge, {
+                disabled: !Se.validateUrl(this.props.strRssURL),
                 onClick: this.OnLoadPreview,
-                children: F(`#CuratorAdmin_RSSFeed_preview`),
+                children: O(`#CuratorAdmin_RSSFeed_preview`),
               }),
             }),
           this.state.bLoadingPreview &&
-            (0, J.jsx)(l, {
-              string: F(`#Loading`),
+            (0, J.jsx)(u, {
+              string: O(`#Loading`),
               size: `medium`,
               position: `center`,
             }),
@@ -1655,7 +1655,7 @@ var Xe = Y,
             (0, J.jsxs)(`div`, {
               children: [
                 (0, J.jsx)(`p`, {
-                  children: F(
+                  children: O(
                     `#RSSManager_PreviewInfo`,
                     this.state.strPreviewURL,
                   ),
@@ -1663,14 +1663,14 @@ var Xe = Y,
                 (0, J.jsx)(`div`, { className: `d--ExixqFcY-`, children: e }),
                 (0, J.jsx)(`p`, {
                   className: `Q6niX9kwLVE-`,
-                  children: (0, J.jsx)(f, {
+                  children: (0, J.jsx)(p, {
                     href:
-                      S.COMMUNITY_BASE_URL +
+                      I.COMMUNITY_BASE_URL +
                       `gid/` +
                       t.GetClanSteamID().ConvertTo64BitString() +
                       `/partnerevents/`,
-                    className: _(`yYL-OrX9PtQ-`, `_3UP7lu7R3VU-`),
-                    children: F(`#RSSManager_EventDashBoard`),
+                    className: v(`yYL-OrX9PtQ-`, `_3UP7lu7R3VU-`),
+                    children: O(`#RSSManager_EventDashBoard`),
                   }),
                 }),
               ],
@@ -1679,15 +1679,15 @@ var Xe = Y,
       });
     }
   };
-(g([y], X.prototype, `GetRSSPreviewURL`, null),
-  g([y], X.prototype, `OnLoadPreview`, null),
-  (X = g([s], X)));
+(P([C], X.prototype, `GetRSSPreviewURL`, null),
+  P([C], X.prototype, `OnLoadPreview`, null),
+  (X = P([a], X)));
 var Z = class extends K.Component {
   state = {};
   OnToggleChannelAutomation(e) {
     e
       ? (this.setState({ strErrorMessage: void 0 }),
-        m(
+        g(
           (0, J.jsx)($, {
             strRSSUrl: this.props.admin.GetRSSUrl(),
             admin: this.props.admin,
@@ -1696,7 +1696,7 @@ var Z = class extends K.Component {
           window,
         ))
       : this.setState(
-          { strErrorMessage: void 0, strReasonWaiting: F(`#Saving`) },
+          { strErrorMessage: void 0, strReasonWaiting: O(`#Saving`) },
           this.BDisableAutomation,
         );
   }
@@ -1705,31 +1705,31 @@ var Z = class extends K.Component {
       .UpdateAutomation(!1)
       .catch(() =>
         this.setState({
-          strErrorMessage: F(`#RSSManager_Status_Automation_DisableFailed`),
+          strErrorMessage: O(`#RSSManager_Status_Automation_DisableFailed`),
         }),
       )
       .finally(() => this.setState({ strReasonWaiting: void 0 }));
   }
   async OnQueueScan(e) {
-    (this.setState({ strReasonWaiting: F(`#CuratorAdmin_RSSFeed_scannow`) }),
+    (this.setState({ strReasonWaiting: O(`#CuratorAdmin_RSSFeed_scannow`) }),
       this.props.admin
         .CheckForNewUpdate()
         .then(() =>
-          m(
-            (0, J.jsx)(h, {
-              strTitle: F(`#CuratorAdmin_RSSFeed_scannow`),
-              strDescription: F(`#CuratorAdmin_RSSFeed_queued`),
+          g(
+            (0, J.jsx)(_, {
+              strTitle: O(`#CuratorAdmin_RSSFeed_scannow`),
+              strDescription: O(`#CuratorAdmin_RSSFeed_queued`),
             }),
-            b(e),
+            h(e),
           ),
         )
         .catch((t) =>
-          m(
-            (0, J.jsx)(ue, {
-              strTitle: F(`#CuratorAdmin_RSSFeed_scannow`),
-              strDescription: x(t).strErrorMsg,
+          g(
+            (0, J.jsx)(se, {
+              strTitle: O(`#CuratorAdmin_RSSFeed_scannow`),
+              strDescription: y(t).strErrorMsg,
             }),
-            b(e),
+            h(e),
           ),
         )
         .finally(() => this.setState({ strReasonWaiting: void 0 })));
@@ -1739,7 +1739,7 @@ var Z = class extends K.Component {
       ? (0, J.jsxs)(`div`, {
           children: [
             !!this.state.strReasonWaiting &&
-              (0, J.jsx)(l, {
+              (0, J.jsx)(u, {
                 size: `medium`,
                 string: this.state.strReasonWaiting,
               }),
@@ -1748,27 +1748,27 @@ var Z = class extends K.Component {
                 className: `wE4s0RgHgCk-`,
                 children: this.state.strErrorMessage,
               }),
-            (0, J.jsx)(ce, {
+            (0, J.jsx)(oe, {
               onChange: this.OnToggleChannelAutomation,
-              label: F(`#RSSManager_Status_Automation_Desc`),
+              label: O(`#RSSManager_Status_Automation_Desc`),
               checked: this.props.admin.BIsAutomationEnabled(),
               description: ``,
             }),
             this.props.admin.BIsAutomationEnabled() &&
               (0, J.jsxs)(`p`, {
                 children: [
-                  F(`#CuratorAdmin_RSSFeed_lastscanned`),
+                  O(`#CuratorAdmin_RSSFeed_lastscanned`),
                   `\xA0`,
-                  ve(this.props.admin.GetRSSLastRtimeChecked(), !1),
+                  fe(this.props.admin.GetRSSLastRtimeChecked(), !1),
                   `\xA0 @ `,
-                  L(this.props.admin.GetRSSLastRtimeChecked(), {
+                  pe(this.props.admin.GetRSSLastRtimeChecked(), {
                     bForce24HourClock: !1,
                   }),
                   `\xA0`,
                   (0, J.jsx)(`a`, {
                     onClick: this.OnQueueScan,
                     children: (0, J.jsx)(`span`, {
-                      children: F(`#CuratorAdmin_RSSFeed_scannow`),
+                      children: O(`#CuratorAdmin_RSSFeed_scannow`),
                     }),
                   }),
                 ],
@@ -1778,9 +1778,9 @@ var Z = class extends K.Component {
       : null;
   }
 };
-(g([y], Z.prototype, `OnToggleChannelAutomation`, null),
-  g([y], Z.prototype, `OnQueueScan`, null),
-  (Z = g([s], Z)));
+(P([C], Z.prototype, `OnToggleChannelAutomation`, null),
+  P([C], Z.prototype, `OnQueueScan`, null),
+  (Z = P([a], Z)));
 var Q = class extends K.Component {
   state = {
     clan_event_gid: this.props.admin.MapArticleURLToClanEventGID(
@@ -1796,14 +1796,14 @@ var Q = class extends K.Component {
   async DoPartnerEventLoad() {
     if (this.state.clan_event_gid) {
       let e = this.props.admin.GetClanSteamID(),
-        t = d.GetClanEventModel(this.state.clan_event_gid);
-      ((t ||= await d.LoadHiddenPartnerEvent(e, this.state.clan_event_gid)),
+        t = f.GetClanEventModel(this.state.clan_event_gid);
+      ((t ||= await f.LoadHiddenPartnerEvent(e, this.state.clan_event_gid)),
         this.setState({ bLoadingPartnerEvent: !1, existingEventModel: t }));
     }
   }
   OnOpenPreviewAsPartnerEvent(e) {
     let { newsData: t, clanSteamID: n } = this.props,
-      r = new c();
+      r = new l();
     ((r.GID = `PreviewPartnerEventRow_0`),
       (r.clanSteamID = n),
       (r.postTime = Date.now() / 1e3),
@@ -1819,7 +1819,7 @@ var Q = class extends K.Component {
     let i = this.props.admin.GetFeedLanguageHandleUnset();
     (!r.jsondata.localized_summary &&
       t.post.event_summary &&
-      ((r.jsondata.localized_summary = pe(
+      ((r.jsondata.localized_summary = xe(
         r.jsondata.localized_summary,
         32,
         null,
@@ -1828,7 +1828,7 @@ var Q = class extends K.Component {
       i != 0 && (r.jsondata.localized_summary[i] = t.post.event_summary)),
       !r.jsondata.localized_subtitle &&
         t.post.event_subtitle &&
-        ((r.jsondata.localized_subtitle = pe(
+        ((r.jsondata.localized_subtitle = xe(
           r.jsondata.localized_subtitle,
           32,
           null,
@@ -1838,7 +1838,7 @@ var Q = class extends K.Component {
       this.ShowModalEvent(r));
   }
   OnViewEvent() {
-    this.ShowModalEvent(d.GetClanEventModel(this.state.clan_event_gid));
+    this.ShowModalEvent(f.GetClanEventModel(this.state.clan_event_gid));
   }
   ShowModalEvent(e) {
     let t = document.getElementById(`curator_header_area_ctn_id`);
@@ -1854,19 +1854,19 @@ var Q = class extends K.Component {
   }
   OnPostNewsEvent(e) {
     let { newsData: t, fnGetRSSUrl: n } = this.props;
-    m(
+    g(
       (0, J.jsx)($, {
         newsData: t,
         admin: this.props.admin,
         strRSSUrl: n(),
         fnClanEventGID: this.OnClanEventCreateSuccess,
       }),
-      b(e),
+      h(e),
     );
   }
   OnUpdateNewsEvent(e) {
     let { newsData: t, fnGetRSSUrl: n } = this.props;
-    m(
+    g(
       (0, J.jsx)($, {
         newsData: t,
         strRSSUrl: n(),
@@ -1874,7 +1874,7 @@ var Q = class extends K.Component {
         fnClanEventGID: this.OnClanEventCreateSuccess,
         bUpdatePost: !0,
       }),
-      b(e),
+      h(e),
     );
   }
   HideModalEvent() {
@@ -1892,19 +1892,19 @@ var Q = class extends K.Component {
         let e = t.match(/<entry[^>]*>([\s\S]*)<\/entry>/m);
         if (!e) return t;
         let n = e[1].match(/<content[^>]*>[\s\S]*<\/content>/m);
-        return n ? re(n[0]) : e[0];
+        return n ? ne(n[0]) : e[0];
       })();
-    m(
-      (0, J.jsx)(h, {
+    g(
+      (0, J.jsx)(_, {
         bAlertDialog: !0,
-        strTitle: F(`#RSSManager_PostEvent_ViewRaw`),
+        strTitle: O(`#RSSManager_PostEvent_ViewRaw`),
         children: (0, J.jsx)(`textarea`, {
           className: Ge,
           value: n,
           disabled: !0,
         }),
       }),
-      b(e),
+      h(e),
     );
   }
   render() {
@@ -1918,19 +1918,19 @@ var Q = class extends K.Component {
       a = i.GetClanSteamID(),
       o = n && n.BIsStagedEvent(),
       s = e.post.appids && e.post.appids.length == 1 && e.post.appids[0],
-      ee =
+      c =
         e.post.recommendation_state !== 0 &&
         s &&
         Ie.Get().BHasReviewForApp(a, s),
-      c = ``;
+      l = ``;
     if (n) {
       let e =
         n.GetVisibilityStartTimeAndDateUnixSeconds() ||
         n.GetPostTimeAndDateUnixSeconds();
-      c = oe(e) + ` @ ` + L(e, { bForce24HourClock: !1 });
+      l = we(e) + ` @ ` + pe(e, { bForce24HourClock: !1 });
     }
     return (0, J.jsxs)(`div`, {
-      className: _(Re, t ? Be : ``, e.valid_post ? `` : Ve),
+      className: v(Re, t ? Be : ``, e.valid_post ? `` : Ve),
       children: [
         (0, J.jsx)(`span`, { className: ze, children: e.title }),
         (0, J.jsx)(`br`, {}),
@@ -1940,16 +1940,16 @@ var Q = class extends K.Component {
               !!n.BIsVisibleEvent() &&
                 (0, J.jsx)(`span`, {
                   className: `IP3sdUH0uro-`,
-                  children: F(`#RSSManager_PostEvent_PostedDate`, c),
+                  children: O(`#RSSManager_PostEvent_PostedDate`, l),
                 }),
               !n.BIsVisibleEvent() &&
                 (0, J.jsx)(`span`, {
-                  className: _(`_2n3sawSRISs-`, o ? `hd4if3tg5YI-` : ``),
-                  children: F(
+                  className: v(`_2n3sawSRISs-`, o ? `hd4if3tg5YI-` : ``),
+                  children: O(
                     o
                       ? `#RSSManager_PostEvent_Staged`
                       : `#RSSManager_PostEvent_Draft`,
-                    c,
+                    l,
                   ),
                 }),
             ],
@@ -1957,7 +1957,7 @@ var Q = class extends K.Component {
         !(e.valid_post || !e.post_error_msg) &&
           (0, J.jsxs)(`div`, {
             className: `_9rhLFCwqjPg-`,
-            children: [F(`#Error_Generic_Label`), ` `, F(e.post_error_msg)],
+            children: [O(`#Error_Generic_Label`), ` `, O(e.post_error_msg)],
           }),
         (0, J.jsxs)(`div`, {
           className: Ke,
@@ -1966,42 +1966,42 @@ var Q = class extends K.Component {
               ? (0, J.jsxs)(K.Fragment, {
                   children: [
                     r
-                      ? (0, J.jsx)(l, {
-                          string: F(`#Loading`),
+                      ? (0, J.jsx)(u, {
+                          string: O(`#Loading`),
                           size: `small`,
                           position: `center`,
                         })
                       : (0, J.jsx)(`div`, {
                           onClick: this.OnViewEvent,
-                          className: _(u, q),
-                          children: F(`#RSSManager_PostEvent_ViewEvent`),
+                          className: v(d, q),
+                          children: O(`#RSSManager_PostEvent_ViewEvent`),
                         }),
                     (0, J.jsx)(`a`, {
-                      className: _(u, q),
+                      className: v(d, q),
                       href:
-                        S.COMMUNITY_BASE_URL +
+                        I.COMMUNITY_BASE_URL +
                         `gid/` +
                         i.GetClanSteamID().ConvertTo64BitString() +
                         `/partnerevents/edit/` +
                         this.state.clan_event_gid,
-                      children: F(`#RSSManager_PostEvent_EditEvent`),
+                      children: O(`#RSSManager_PostEvent_EditEvent`),
                     }),
                     (0, J.jsx)(`div`, {
                       onClick: this.OnUpdateNewsEvent,
-                      className: _(u, q),
-                      children: F(`#RSSManager_PostEvent_UpdateEvent`),
+                      className: v(d, q),
+                      children: O(`#RSSManager_PostEvent_UpdateEvent`),
                     }),
-                    ee &&
+                    c &&
                       (0, J.jsx)(`a`, {
-                        className: _(`yYL-OrX9PtQ-`, `r3p-QXe2ER8-`),
-                        href: ge(
-                          S.STORE_BASE_URL +
+                        className: v(`yYL-OrX9PtQ-`, `r3p-QXe2ER8-`),
+                        href: Ce(
+                          I.STORE_BASE_URL +
                             `app/` +
                             e.post.appids[0] +
                             `/?curator_clanid=` +
                             a.GetAccountID(),
                         ),
-                        children: F(`#RSSManager_SeeReview`),
+                        children: O(`#RSSManager_SeeReview`),
                       }),
                   ],
                 })
@@ -2009,13 +2009,13 @@ var Q = class extends K.Component {
                   children: [
                     (0, J.jsx)(`div`, {
                       onClick: this.OnOpenPreviewAsPartnerEvent,
-                      className: _(u, q),
-                      children: F(`#CuratorAdmin_RSSFeed_col_preview_event`),
+                      className: v(d, q),
+                      children: O(`#CuratorAdmin_RSSFeed_col_preview_event`),
                     }),
                     (0, J.jsx)(`div`, {
                       onClick: this.OnPostNewsEvent,
-                      className: _(u, q),
-                      children: F(`#CuratorAdmin_RSSFeed_col_create_event`),
+                      className: v(d, q),
+                      children: O(`#CuratorAdmin_RSSFeed_col_create_event`),
                     }),
                   ],
                 }),
@@ -2023,13 +2023,13 @@ var Q = class extends K.Component {
               (0, J.jsx)(`div`, {
                 onClick: this.OnShowRawRSS,
                 className: `Cs-RceqqHho-`,
-                children: F(`#RSSManager_PostEvent_ViewRaw`),
+                children: O(`#RSSManager_PostEvent_ViewRaw`),
               }),
             !!this.state.eventModelForPreviewNow &&
-              (0, J.jsx)(ne, {
+              (0, J.jsx)(te, {
                 className: `k8EMgG-4Stg-`,
                 children: (0, J.jsx)(`div`, {
-                  children: (0, J.jsx)(te, {
+                  children: (0, J.jsx)(ee, {
                     event: this.state.eventModelForPreviewNow,
                     fnClose: this.HideModalEvent,
                   }),
@@ -2041,15 +2041,15 @@ var Q = class extends K.Component {
     });
   }
 };
-(g([y], Q.prototype, `DoPartnerEventLoad`, null),
-  g([y], Q.prototype, `OnOpenPreviewAsPartnerEvent`, null),
-  g([y], Q.prototype, `OnViewEvent`, null),
-  g([y], Q.prototype, `OnPostNewsEvent`, null),
-  g([y], Q.prototype, `OnUpdateNewsEvent`, null),
-  g([y], Q.prototype, `HideModalEvent`, null),
-  g([y], Q.prototype, `OnClanEventCreateSuccess`, null),
-  g([y], Q.prototype, `OnShowRawRSS`, null),
-  (Q = g([s], Q)));
+(P([C], Q.prototype, `DoPartnerEventLoad`, null),
+  P([C], Q.prototype, `OnOpenPreviewAsPartnerEvent`, null),
+  P([C], Q.prototype, `OnViewEvent`, null),
+  P([C], Q.prototype, `OnPostNewsEvent`, null),
+  P([C], Q.prototype, `OnUpdateNewsEvent`, null),
+  P([C], Q.prototype, `HideModalEvent`, null),
+  P([C], Q.prototype, `OnClanEventCreateSuccess`, null),
+  P([C], Q.prototype, `OnShowRawRSS`, null),
+  (Q = P([a], Q)));
 var $ = class e extends K.Component {
   state = {
     initialState: e.DetermineStartState(this.props),
@@ -2081,7 +2081,7 @@ var $ = class e extends K.Component {
       : this.setState({
           step: `failure`,
           eResult: e.success,
-          strErrorMessage: F(`#RSSManager_PostEvent_Failure`),
+          strErrorMessage: O(`#RSSManager_PostEvent_Failure`),
         });
   }
   OnCreatePost() {
@@ -2099,7 +2099,7 @@ var $ = class e extends K.Component {
       : this.setState({
           step: `failure`,
           eResult: e.GetEResult(),
-          strErrorMessage: F(`#RSSManager_PostEvent_Failure`),
+          strErrorMessage: O(`#RSSManager_PostEvent_Failure`),
         });
   }
   OnChangeDraftMode(e) {
@@ -2113,19 +2113,19 @@ var $ = class e extends K.Component {
   }
   GetStrTitle() {
     if (this.props.newsData)
-      return F(
+      return O(
         this.props.bUpdatePost
           ? `#RSSManager_PostEvent_UpdateEvent`
           : `#RSSManager_PostEvent_Tilte`,
       );
     switch (this.state.initialState) {
       case `feed_missing`:
-        return F(`#RSSManager_PostEvent_CreateFeedTitle`);
+        return O(`#RSSManager_PostEvent_CreateFeedTitle`);
       default:
       case `update_feed`:
-        return F(`#RSSManager_PostEvent_UpdateFeedTitle`);
+        return O(`#RSSManager_PostEvent_UpdateFeedTitle`);
       case `activate_feed`:
-        return F(`#RSSManager_Status_Automation_Activate`);
+        return O(`#RSSManager_Status_Automation_Activate`);
     }
   }
   render() {
@@ -2135,49 +2135,49 @@ var $ = class e extends K.Component {
       case `activate_feed`:
       case `update_feed`:
       default:
-        return (0, J.jsx)(z, {
+        return (0, J.jsx)(R, {
           title: this.GetStrTitle(),
-          children: (0, J.jsxs)(j, {
+          children: (0, J.jsxs)(A, {
             children: [
-              (0, J.jsxs)(w, {
+              (0, J.jsxs)(S, {
                 children: [
                   this.props.newsData &&
                     (0, J.jsx)(`div`, {
-                      children: F(
+                      children: O(
                         `#RSSManager_PostEvent_CreateFeed_DuringPost`,
                       ),
                     }),
                   this.state.step !== `activate_feed` &&
                     (0, J.jsx)(`div`, {
-                      children: F(`#RSSManager_PostEvent_CreateFeed_Desc`, e),
+                      children: O(`#RSSManager_PostEvent_CreateFeed_Desc`, e),
                     }),
                   (0, J.jsx)(`div`, {
-                    children: F(`#RSSManager_CreateFeed_Review`),
+                    children: O(`#RSSManager_CreateFeed_Review`),
                   }),
                   (0, J.jsx)(`div`, {
-                    children: (0, J.jsx)(P, {
-                      label: F(`#RSSManager_CreateFeed_Permissions_v1`),
+                    children: (0, J.jsx)(N, {
+                      label: O(`#RSSManager_CreateFeed_Permissions_v1`),
                       onChange: this.OnChangePermissionsCreateFeed,
                       checked: !!this.state.bPermissions,
                     }),
                   }),
                   (0, J.jsxs)(`div`, {
                     children: [
-                      (0, J.jsx)(P, {
-                        label: F(`#RSSManager_CreateFeed_Conduct_v1`),
+                      (0, J.jsx)(N, {
+                        label: O(`#RSSManager_CreateFeed_Conduct_v1`),
                         onChange: this.OnChangeConductCreateFeed,
                         checked: !!this.state.bConduct,
                       }),
-                      (0, J.jsx)(f, {
-                        href: S.STORE_BASE_URL + `online_conduct/`,
-                        children: F(`#RSSManager_CreateFeed_Conduct_Link`),
+                      (0, J.jsx)(p, {
+                        href: I.STORE_BASE_URL + `online_conduct/`,
+                        children: O(`#RSSManager_CreateFeed_Conduct_Link`),
                       }),
                     ],
                   }),
                 ],
               }),
-              (0, J.jsx)(D, {
-                children: (0, J.jsx)(R, {
+              (0, J.jsx)(E, {
+                children: (0, J.jsx)(L, {
                   bOKDisabled: !(
                     this.state.bPermissions && this.state.bConduct
                   ),
@@ -2189,11 +2189,11 @@ var $ = class e extends K.Component {
           }),
         });
       case `failure`:
-        return (0, J.jsx)(ue, {
-          strDescription: F(`#RSSManager_PostEvent_Failure`),
+        return (0, J.jsx)(se, {
+          strDescription: O(`#RSSManager_PostEvent_Failure`),
           closeModal: this.props.closeModal,
           children: (0, J.jsx)(`div`, {
-            children: F(
+            children: O(
               `#Error_Description`,
               this.state.eResult,
               this.state.strErrorMessage,
@@ -2202,22 +2202,22 @@ var $ = class e extends K.Component {
         });
       case `creating_feed`:
       case `waiting_post`:
-        return (0, J.jsx)(h, {
+        return (0, J.jsx)(_, {
           strTitle: this.GetStrTitle(),
-          strDescription: F(`#RSSManager_PostEvent_InFlight`),
+          strDescription: O(`#RSSManager_PostEvent_InFlight`),
           closeModal: this.props.closeModal,
-          children: (0, J.jsx)(l, { position: `center` }),
+          children: (0, J.jsx)(u, { position: `center` }),
         });
       case `create_post`:
-        return (0, J.jsx)(z, {
+        return (0, J.jsx)(R, {
           title: this.GetStrTitle(),
-          children: (0, J.jsxs)(j, {
+          children: (0, J.jsxs)(A, {
             children: [
-              (0, J.jsx)(w, {
+              (0, J.jsx)(S, {
                 children: (0, J.jsxs)(`div`, {
                   children: [
                     (0, J.jsx)(`div`, {
-                      children: F(`#RSSManager_PostEvent_CreatePost`),
+                      children: O(`#RSSManager_PostEvent_CreatePost`),
                     }),
                     (0, J.jsx)(`div`, {
                       className: Ue,
@@ -2225,8 +2225,8 @@ var $ = class e extends K.Component {
                     }),
                     (0, J.jsx)(`br`, {}),
                     (0, J.jsx)(`div`, {
-                      children: (0, J.jsx)(P, {
-                        label: F(`#RSSManager_PostEvent_CreatePost_Draft`),
+                      children: (0, J.jsx)(N, {
+                        label: O(`#RSSManager_PostEvent_CreatePost_Draft`),
                         onChange: this.OnChangeDraftMode,
                         checked: !!this.state.bDraftMode,
                       }),
@@ -2234,8 +2234,8 @@ var $ = class e extends K.Component {
                   ],
                 }),
               }),
-              (0, J.jsx)(D, {
-                children: (0, J.jsx)(R, {
+              (0, J.jsx)(E, {
+                children: (0, J.jsx)(L, {
                   onOK: this.OnCreatePost,
                   onCancel: this.props.closeModal,
                 }),
@@ -2244,15 +2244,15 @@ var $ = class e extends K.Component {
           }),
         });
       case `update_post`:
-        return (0, J.jsx)(z, {
+        return (0, J.jsx)(R, {
           title: this.GetStrTitle(),
-          children: (0, J.jsxs)(j, {
+          children: (0, J.jsxs)(A, {
             children: [
-              (0, J.jsx)(w, {
+              (0, J.jsx)(S, {
                 children: (0, J.jsxs)(`div`, {
                   children: [
                     (0, J.jsx)(`div`, {
-                      children: F(`#RSSManager_PostEvent_UpdatePost`),
+                      children: O(`#RSSManager_PostEvent_UpdatePost`),
                     }),
                     (0, J.jsx)(`br`, {}),
                     (0, J.jsx)(`div`, {
@@ -2263,8 +2263,8 @@ var $ = class e extends K.Component {
                   ],
                 }),
               }),
-              (0, J.jsx)(D, {
-                children: (0, J.jsx)(R, {
+              (0, J.jsx)(E, {
+                children: (0, J.jsx)(L, {
                   onOK: this.OnCreatePost,
                   onCancel: this.props.closeModal,
                 }),
@@ -2273,9 +2273,9 @@ var $ = class e extends K.Component {
           }),
         });
       case `success`:
-        return (0, J.jsx)(h, {
+        return (0, J.jsx)(_, {
           strTitle: this.GetStrTitle(),
-          strDescription: F(
+          strDescription: O(
             this.props.newsData
               ? `#RSSManager_PostEvent_Success`
               : `#RSSManager_PostEvent_Success_feed`,
@@ -2286,23 +2286,23 @@ var $ = class e extends K.Component {
             !!this.state.eventGID &&
             (0, J.jsx)(`a`, {
               href:
-                S.COMMUNITY_BASE_URL +
+                I.COMMUNITY_BASE_URL +
                 `gid/` +
                 this.props.admin.GetClanSteamID().ConvertTo64BitString() +
                 `/partnerevents/edit/` +
                 this.state.eventGID,
-              children: F(`#RSSManager_PostEvent_EventLink`),
+              children: O(`#RSSManager_PostEvent_EventLink`),
             }),
         });
     }
   }
 };
-(g([y], $.prototype, `OnCreateNewsFeed`, null),
-  g([y], $.prototype, `DoCreateNewsFeed`, null),
-  g([y], $.prototype, `OnCreatePost`, null),
-  g([y], $.prototype, `DoCreatePost`, null),
-  g([y], $.prototype, `OnChangeDraftMode`, null),
-  g([y], $.prototype, `OnChangePermissionsCreateFeed`, null),
-  g([y], $.prototype, `OnChangeConductCreateFeed`, null),
-  g([y], $.prototype, `GetStrTitle`, null));
+(P([C], $.prototype, `OnCreateNewsFeed`, null),
+  P([C], $.prototype, `DoCreateNewsFeed`, null),
+  P([C], $.prototype, `OnCreatePost`, null),
+  P([C], $.prototype, `DoCreatePost`, null),
+  P([C], $.prototype, `OnChangeDraftMode`, null),
+  P([C], $.prototype, `OnChangePermissionsCreateFeed`, null),
+  P([C], $.prototype, `OnChangeConductCreateFeed`, null),
+  P([C], $.prototype, `GetStrTitle`, null));
 export { Xe as n, G as r, X as t };

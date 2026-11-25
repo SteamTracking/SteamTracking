@@ -2,12 +2,12 @@
  ****/
 
 import {
-  At as e,
-  X as t,
-  j as n,
-  rt as r,
-  sn as i,
-  vt as a,
+  Pt as e,
+  S as t,
+  W as n,
+  k as r,
+  nt as i,
+  r as a,
 } from "./chunk~de7f2df91c.js";
 import {
   Aa as o,
@@ -38,9 +38,9 @@ import { t as re } from "./chunk~f4e4ed5c17.js";
 import { t as D } from "./chunk~eefd71512b.js";
 import { n as ie } from "./chunk~90fbfc6dc2.js";
 import { t as ae } from "./chunk~b3f4ae92bc.js";
-var O = i(e()),
+var O = e(i()),
   oe = `ZqSK587Dwus-`,
-  k = a();
+  k = n();
 function se(e) {
   let { rgGameProfileColorDefs: t } = e,
     n = t.map((e) =>
@@ -113,7 +113,7 @@ var ue = `Y-x6VTwvyUQ-`,
   I = `YM5o4lQjoAA-`,
   ve = `fpGGKKGNA1Y-`,
   ye = `l-KiBaPMWDY-`,
-  L = i(re()),
+  L = e(re()),
   R = 748,
   z = 896;
 function be(e, n) {
@@ -188,9 +188,9 @@ var B = class {
   }
 };
 function xe(e) {
-  let [t, i] = (0, O.useState)(`closed`),
-    a = e.rgEditions,
-    [o, s] = (0, O.useState)(new B(a)),
+  let [t, n] = (0, O.useState)(`closed`),
+    i = e.rgEditions,
+    [o, s] = (0, O.useState)(new B(i)),
     c = new Map();
   for (let t of Object.keys(e.rgEditionsComparisonGraphics))
     c.set(t, e.rgEditionsComparisonGraphics[t]);
@@ -202,7 +202,7 @@ function xe(e) {
     }),
     [d, p] = (0, O.useState)(c),
     h = Object.keys(e.rgEditionsComparisonGraphics).length > 0,
-    v = be(e.nItemId, a),
+    v = be(e.nItemId, i),
     y = new Map();
   for (let t of e.rgCandidates) y.set(t.nId, t);
   let b = null;
@@ -233,13 +233,13 @@ function xe(e) {
           mapAltText: l,
           rgGraphicsToDelete: t,
         }),
-        i(`alert`));
+        n(`alert`));
     },
     S = () => {
-      (s(new B(a)), i(`closed`));
+      (s(new B(i)), n(`closed`));
     },
     C = () => {
-      (i(`refreshing`), window.location.reload());
+      (n(`refreshing`), window.location.reload());
     },
     w = O.useId();
   return (0, k.jsxs)(k.Fragment, {
@@ -248,7 +248,7 @@ function xe(e) {
         active: t === `editor` || t === `alert`,
         children: (0, k.jsxs)(g, {
           "aria-labelledby": w,
-          closeModal: () => i(`closed`),
+          closeModal: () => n(`closed`),
           children: [
             t === `editor` &&
               (0, k.jsxs)(k.Fragment, {
@@ -369,14 +369,14 @@ function xe(e) {
       (e.rgCandidates.length > 1 || e.rgEditions.length > 0) &&
         (0, k.jsx)(k.Fragment, {
           children: (0, k.jsxs)(`div`, {
-            className: n(`-VtEdw9C43A-`, h && `pBh5PfMTwpg-`),
+            className: a(`-VtEdw9C43A-`, h && `pBh5PfMTwpg-`),
             children: [
               t === `closed` &&
                 (0, k.jsxs)(k.Fragment, {
                   children: [
                     (0, k.jsx)(`button`, {
                       className: void 0,
-                      onClick: () => i(`editor`),
+                      onClick: () => n(`editor`),
                       children: m(
                         `#StoreAdmin_EditEditions_ManageEditionsButton`,
                       ),
@@ -396,7 +396,7 @@ function xe(e) {
                     (0, k.jsx)(`span`, {
                       children: h
                         ? (0, k.jsx)(`span`, {
-                            className: n(`_6XZF74-pNFM-`, `icon_check_green`),
+                            className: a(`_6XZF74-pNFM-`, `icon_check_green`),
                             children: m(
                               `#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic`,
                             ),
@@ -420,22 +420,22 @@ function xe(e) {
 var Se = (e) =>
   e.eType === `bundle` ? { bundleid: e.nId } : { packageid: e.nId };
 function Ce(e) {
-  let { rgEditions: t, rgCandidates: i, setEditions: a } = e,
+  let { rgEditions: t, rgCandidates: n, setEditions: i } = e,
     o = new Map();
   for (let t of e.rgCandidates) o.set(t.nId, t);
   let [s, c] = (0, O.useState)(``),
     l = (e, n) => (r) => {
-      let i = new B(t);
+      let a = new B(t);
       (r.target.checked
-        ? i.add(e === `package` ? { packageid: n } : { bundleid: n })
-        : i.delete(e === `package` ? { packageid: n } : { bundleid: n }),
-        a(i));
+        ? a.add(e === `package` ? { packageid: n } : { bundleid: n })
+        : a.delete(e === `package` ? { packageid: n } : { bundleid: n }),
+        i(a));
     },
     u = (e) => {
       let t = e.target.value;
       c(t);
     },
-    d = i.filter(
+    d = n.filter(
       (e) => e.strName.toLowerCase().indexOf(s.toLowerCase()) !== -1,
     );
   return (0, k.jsxs)(`div`, {
@@ -486,24 +486,24 @@ function Ce(e) {
           }),
           (0, k.jsx)(`tbody`, {
             children: d.map((e) => {
-              let r = t.has(Se(e)),
-                i = fe;
+              let n = t.has(Se(e)),
+                r = fe;
               return (
                 e.strReleaseState === `Released`
-                  ? (i = pe)
+                  ? (r = pe)
                   : e.strReleaseState === `Prepurchase`
-                    ? (i = me)
-                    : e.strReleaseState === `Beta` && (i = he),
+                    ? (r = me)
+                    : e.strReleaseState === `Beta` && (r = he),
                 (0, k.jsxs)(
                   `tr`,
                   {
-                    className: n(i, void 0),
+                    className: a(r, void 0),
                     children: [
                       (0, k.jsx)(`td`, {
                         children: (0, k.jsx)(`input`, {
                           type: `checkbox`,
                           onChange: l(e.eType, e.nId),
-                          checked: r,
+                          checked: n,
                         }),
                       }),
                       (0, k.jsx)(`td`, { children: e.strName }),
@@ -1036,8 +1036,8 @@ var Z = {
   ],
   et = [`view`, `preparestore`, `revertstore`, `savestore`, `publish`];
 function tt(e) {
-  let { bIsGameEdit: t, unAppID: r, rgEarliestAdvancedAccessDate: i } = e,
-    [a, o] = O.useState(e.rtReleaseDate),
+  let { bIsGameEdit: t, unAppID: n, rgEarliestAdvancedAccessDate: r } = e,
+    [i, o] = O.useState(e.rtReleaseDate),
     [c, l] = O.useState(e.strComingSoonDisplay),
     [u, d] = O.useState(!1),
     [f, p] = O.useState(!1),
@@ -1048,24 +1048,24 @@ function tt(e) {
     }, []);
   return (0, k.jsxs)(k.Fragment, {
     children: [
-      u && (0, k.jsx)(We, { appid: r, onClose: g, onCommit: _ }),
+      u && (0, k.jsx)(We, { appid: n, onClose: g, onCommit: _ }),
       f &&
-        (0, k.jsx)(nt, { appid: r, bIsGameEdit: t, closeModal: () => p(!1) }),
+        (0, k.jsx)(nt, { appid: n, bIsGameEdit: t, closeModal: () => p(!1) }),
       (0, k.jsxs)(`div`, {
-        className: n(Te, t && `rWtT1JIPT9Q-`),
+        className: a(Te, t && `rWtT1JIPT9Q-`),
         children: [
           (0, k.jsxs)(`div`, {
             className: Ee,
             children: [
               (0, k.jsx)($, {
                 label: m(`#App_Landing_SpecifiedReleaseDate`),
-                children: (0, k.jsx)(Q, { rtReleaseDate: a }),
+                children: (0, k.jsx)(Q, { rtReleaseDate: i }),
               }),
               (0, k.jsx)($, {
                 label: m(`#App_Landing_CustomersSeeReleaseDate`),
                 children: (0, k.jsx)(`div`, {
-                  className: n(H, c ? U : void 0),
-                  children: c ? T(c, a) : m(`#App_Landing_UnsetReleaseDate`),
+                  className: a(H, c ? U : void 0),
+                  children: c ? T(c, i) : m(`#App_Landing_UnsetReleaseDate`),
                 }),
               }),
             ],
@@ -1074,17 +1074,17 @@ function tt(e) {
             className: De,
             onClick: h,
             children: [
-              (0, k.jsx)(`div`, { className: n(V, Oe) }),
+              (0, k.jsx)(`div`, { className: a(V, Oe) }),
               (0, k.jsx)(`div`, { className: Ae, children: (0, k.jsx)(s, {}) }),
-              (0, k.jsx)(`div`, { className: n(V, ke) }),
+              (0, k.jsx)(`div`, { className: a(V, ke) }),
             ],
           }),
         ],
       }),
-      i * 1e3 > new Date().getTime() &&
+      r * 1e3 > new Date().getTime() &&
         (0, k.jsx)($, {
           label: m(`#App_Landing_EarliestAdvancedAccessDate`),
-          children: (0, k.jsx)(Q, { rtReleaseDate: i }),
+          children: (0, k.jsx)(Q, { rtReleaseDate: r }),
         }),
     ],
   });
@@ -1094,15 +1094,15 @@ function Q(e) {
   return t
     ? (0, k.jsxs)(k.Fragment, {
         children: [
-          (0, k.jsx)(`div`, { className: n(H, U), children: u(t) }),
+          (0, k.jsx)(`div`, { className: a(H, U), children: u(t) }),
           (0, k.jsx)(`div`, {
-            className: n(void 0, U),
+            className: a(void 0, U),
             children: o(t, {}, { timeZoneName: `short` }),
           }),
         ],
       })
     : (0, k.jsx)(`div`, {
-        className: n(H, void 0),
+        className: a(H, void 0),
         children: m(`#App_Landing_UnsetReleaseDate`),
       });
 }

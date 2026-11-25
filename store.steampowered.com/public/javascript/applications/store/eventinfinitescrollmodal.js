@@ -2,31 +2,31 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n, l as r, tt as i } from "./chunk~01cfc309bf.js";
+import { It as t, c as n, dt as r, et as i } from "./chunk~01cfc309bf.js";
 import { i as a } from "./chunk~cf3721cc1c.js";
 import "./chunk~8681f5c764.js";
 import { t as o } from "./chunk~eefd71512b.js";
 import {
-  $b as s,
-  Jn as c,
-  Kb as l,
-  L as u,
-  Mr as d,
-  Mu as f,
-  Yu as p,
-  al as m,
-  i as h,
-  nx as g,
+  Jn as s,
+  L as c,
+  Mr as l,
+  Nu as u,
+  Xu as d,
+  ex as f,
+  i as p,
+  ol as m,
+  qb as h,
+  rx as g,
   t as _,
   yn as v,
 } from "./main.js";
 var y = e(i()),
   b = e(t()),
-  x = n(),
+  x = r(),
   S = (e) => {
     let { bShowOnlyInitialEvent: t } = e,
-      n = s(),
-      r = u();
+      n = f(),
+      r = c();
     return (0, x.jsx)(m, {
       children: (0, x.jsx)(C, {
         ...e,
@@ -42,12 +42,12 @@ var y = e(i()),
     componentDidMount() {
       this.state.eventModel || this.setState({ bLoading: !0 }, this.LoadEvent);
       let e = this.GetBodyElement();
-      e && this.props.bPrimaryPageFeature && e.classList.add(c);
+      e && this.props.bPrimaryPageFeature && e.classList.add(s);
     }
     componentWillUnmount() {
       this.m_cancelSignal.cancel(`EventInfiniteScrollModal unmounting`);
       let e = this.GetBodyElement();
-      e && this.props.bPrimaryPageFeature && e.classList.remove(c);
+      e && this.props.bPrimaryPageFeature && e.classList.remove(s);
     }
     GetBodyElement() {
       return this.m_refParent.current
@@ -81,7 +81,7 @@ var y = e(i()),
               this.setState({ bLoading: !1 }));
         })
         .catch((e) => {
-          let t = p(e);
+          let t = d(e);
           (console.error(`EventInfiniteScrollModal failed ` + t.strErrorMsg, t),
             this.setState({ bLoading: !1 }));
         });
@@ -108,35 +108,35 @@ var y = e(i()),
           appid: i,
           clanSteamID: s,
           className: c,
-          partnerEventStore: l,
-          showAppHeader: u,
-          bPrimaryPageFeature: p,
-          additionalParams: m,
+          partnerEventStore: d,
+          showAppHeader: f,
+          bPrimaryPageFeature: m,
+          additionalParams: h,
           eventClassName: y,
         } = this.props,
         b;
       g.IN_CLIENT &&
         n?.appid &&
-        (f.Get().HintLoad(),
-        f.Get().BOwnsApp(n.appid) &&
-          (b = (e) => d(e, `steam://nav/games/details/` + n.appid)));
-      let S = (0, x.jsx)(h, {
+        (u.Get().HintLoad(),
+        u.Get().BOwnsApp(n.appid) &&
+          (b = (e) => l(e, `steam://nav/games/details/` + n.appid)));
+      let S = (0, x.jsx)(p, {
         children: (t) =>
           (0, x.jsx)(a, {
             initialEvent: n,
             appid: i,
             clanSteamID: s,
-            partnerEventStore: l,
+            partnerEventStore: d,
             emoticonStore: t,
-            closeModal: p ? void 0 : r,
-            showAppHeader: u,
+            closeModal: m ? void 0 : r,
+            showAppHeader: f,
             bShowOnlyInitialEvent: e,
-            additionalParams: m,
+            additionalParams: h,
             eventClassName: y,
             onAppIconClick: b,
           }),
       });
-      return p
+      return m
         ? S
         : (0, x.jsx)(v, {
             active: !0,
@@ -144,5 +144,5 @@ var y = e(i()),
           });
     }
   };
-C = l([r], C);
+C = h([n], C);
 export { S as t };

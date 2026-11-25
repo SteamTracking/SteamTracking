@@ -2,37 +2,37 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { D as t, Ft as n, ot as r } from "./chunk~01cfc309bf.js";
+import { E as t, Pt as n, at as r } from "./chunk~01cfc309bf.js";
 import { t as i } from "./chunk~e53a8c8667.js";
 import { t as a } from "./chunk~cfd048ddd7.js";
 import { t as o } from "./chunk~93195fc4a9.js";
 import {
-  $r as s,
-  Cm as c,
-  Em as l,
-  Et as u,
-  Gt as d,
-  It as f,
-  Kt as p,
-  Mt as m,
-  Rt as h,
-  Sm as g,
-  Wm as ee,
-  Yf as _,
-  cm as v,
-  ei as y,
-  ep as b,
-  ri as x,
-  tn as S,
-  tt as C,
-  wf as w,
-  zt as te,
+  Bt as s,
+  Dt as c,
+  Jr as l,
+  Nt as ee,
+  Pt as u,
+  Qr as d,
+  Wf as f,
+  Yf as p,
+  Yr as m,
+  Yt as h,
+  _m as te,
+  et as g,
+  jt as _,
+  rm as v,
+  vm as y,
+  xm as b,
+  xt as x,
+  yf as S,
+  zm as C,
+  zt as w,
 } from "./main.js";
 function T() {
-  return c(l) === `desktop`;
+  return y(b) === `desktop`;
 }
 function ne() {
-  (T() && g(l), `location` in window && location.reload());
+  (T() && te(b), `location` in window && location.reload());
 }
 var E = e(n(), 1),
   D = e(t(), 1),
@@ -49,10 +49,10 @@ function N(e) {
       bTooltipMode: i,
       popoverProps: a,
     } = e,
-    [o, s] = (0, E.useState)(!1);
-  return (0, M.jsxs)(m.Root, {
+    [o, l] = (0, E.useState)(!1);
+  return (0, M.jsxs)(c.Root, {
     open: o,
-    onOpenChange: s,
+    onOpenChange: l,
     interactions: {
       hover: (e) => {
         let t = { ...e, delay: { open: r, close: 0 } };
@@ -62,8 +62,8 @@ function N(e) {
     presentation: `anchor`,
     ...a,
     children: [
-      (0, M.jsx)(m.Anchor, { children: t }),
-      (0, M.jsx)(m.Positioner, { children: (0, M.jsx)(p, { children: n }) }),
+      (0, M.jsx)(c.Anchor, { children: t }),
+      (0, M.jsx)(c.Positioner, { children: (0, M.jsx)(s, { children: n }) }),
     ],
   });
 }
@@ -158,9 +158,9 @@ function z() {
 }
 function B(e) {
   let { href: t, ...n } = e,
-    r = x();
+    r = d();
   return (
-    t?.startsWith(v.STORE_BASE_URL) && (t = s(r, t)),
+    t?.startsWith(v.STORE_BASE_URL) && (t = l(r, t)),
     (0, M.jsx)(a, {
       href: t,
       color: `dull-11`,
@@ -171,15 +171,15 @@ function B(e) {
   );
 }
 function V(e) {
-  let t = S();
+  let t = h();
   return t === `initial` || t === `sm`
     ? null
     : (0, M.jsx)(`footer`, {
         className: (0, D.default)(P, e.className),
-        children: (0, M.jsxs)(p, {
+        children: (0, M.jsxs)(s, {
           className: F,
           children: [
-            (0, M.jsxs)(d, {
+            (0, M.jsxs)(w, {
               align: `center`,
               justify: `between`,
               children: [
@@ -187,7 +187,7 @@ function V(e) {
                   href: v.STORE_BASE_URL,
                   children: (0, M.jsx)(L, {}),
                 }),
-                (0, M.jsxs)(p, {
+                (0, M.jsxs)(s, {
                   className: I,
                   children: [
                     (0, M.jsx)(B, {
@@ -240,11 +240,11 @@ function V(e) {
               ],
             }),
             (0, M.jsx)(`hr`, {}),
-            (0, M.jsxs)(d, {
+            (0, M.jsxs)(w, {
               align: `center`,
               justify: `between`,
               children: [
-                (0, M.jsxs)(d, {
+                (0, M.jsxs)(w, {
                   gap: `2`,
                   children: [
                     (0, M.jsx)(B, {
@@ -257,7 +257,7 @@ function V(e) {
                     }),
                   ],
                 }),
-                (0, M.jsxs)(d, {
+                (0, M.jsxs)(w, {
                   gap: `5`,
                   children: [
                     (0, M.jsx)(N, {
@@ -267,7 +267,7 @@ function V(e) {
                           v.STORE_CDN_URL +
                           `public/shared/images/footer/Weibo-QR.png?v=2`,
                       }),
-                      children: (0, M.jsxs)(d, {
+                      children: (0, M.jsxs)(w, {
                         align: `center`,
                         children: [
                           (0, M.jsx)(`img`, {
@@ -276,7 +276,7 @@ function V(e) {
                               v.STORE_CDN_URL +
                               `public/shared/images/footer/weibo_logo.svg?v=1`,
                           }),
-                          (0, M.jsx)(f, { children: `微博` }),
+                          (0, M.jsx)(_, { children: `微博` }),
                         ],
                       }),
                     }),
@@ -287,7 +287,7 @@ function V(e) {
                           v.STORE_CDN_URL +
                           `public/shared/images/footer/WeChat-QR.png?v=2`,
                       }),
-                      children: (0, M.jsxs)(d, {
+                      children: (0, M.jsxs)(w, {
                         align: `center`,
                         children: [
                           (0, M.jsx)(`img`, {
@@ -296,7 +296,7 @@ function V(e) {
                               v.STORE_CDN_URL +
                               `public/shared/images/footer/wechat_logo.svg?v=1`,
                           }),
-                          (0, M.jsx)(f, { children: `微信` }),
+                          (0, M.jsx)(_, { children: `微信` }),
                         ],
                       }),
                     }),
@@ -304,12 +304,12 @@ function V(e) {
                 }),
               ],
             }),
-            (0, M.jsxs)(d, {
+            (0, M.jsxs)(w, {
               align: `center`,
               justify: `between`,
               marginTop: `5`,
               children: [
-                (0, M.jsxs)(p, {
+                (0, M.jsxs)(s, {
                   children: [
                     `© `,
                     new Date().getFullYear(),
@@ -318,7 +318,7 @@ function V(e) {
                     `所有商标均属于其在美国或其他国家的拥有者。`,
                   ],
                 }),
-                (0, M.jsxs)(p, {
+                (0, M.jsxs)(s, {
                   children: [
                     `© 完美世界征奇(上海)多媒体科技有限公司 版权所有。`,
                     (0, M.jsx)(`br`, {}),
@@ -344,73 +344,73 @@ function V(e) {
 }
 var H = {};
 ((H.arabic = () =>
-  b(() => import(`./chunk~a0918515aa.js`), [], import.meta.url)),
+  p(() => import(`./chunk~a0918515aa.js`), [], import.meta.url)),
   (H.brazilian = () =>
-    b(() => import(`./chunk~682cb0b601.js`), [], import.meta.url)),
+    p(() => import(`./chunk~682cb0b601.js`), [], import.meta.url)),
   (H.bulgarian = () =>
-    b(() => import(`./chunk~e459e36f0d.js`), [], import.meta.url)),
+    p(() => import(`./chunk~e459e36f0d.js`), [], import.meta.url)),
   (H.czech = () =>
-    b(() => import(`./chunk~310fa9cff1.js`), [], import.meta.url)),
+    p(() => import(`./chunk~310fa9cff1.js`), [], import.meta.url)),
   (H.danish = () =>
-    b(() => import(`./chunk~f00d5f2fee.js`), [], import.meta.url)),
+    p(() => import(`./chunk~f00d5f2fee.js`), [], import.meta.url)),
   (H.dutch = () =>
-    b(() => import(`./chunk~cd33be7ad3.js`), [], import.meta.url)),
+    p(() => import(`./chunk~cd33be7ad3.js`), [], import.meta.url)),
   (H.english = () =>
-    b(() => import(`./chunk~ccb41f1ec6.js`), [], import.meta.url)),
+    p(() => import(`./chunk~ccb41f1ec6.js`), [], import.meta.url)),
   (H.finnish = () =>
-    b(() => import(`./chunk~f7fdbacd06.js`), [], import.meta.url)),
+    p(() => import(`./chunk~f7fdbacd06.js`), [], import.meta.url)),
   (H.french = () =>
-    b(() => import(`./chunk~42c231109a.js`), [], import.meta.url)),
+    p(() => import(`./chunk~42c231109a.js`), [], import.meta.url)),
   (H.german = () =>
-    b(() => import(`./chunk~5d56ff8732.js`), [], import.meta.url)),
+    p(() => import(`./chunk~5d56ff8732.js`), [], import.meta.url)),
   (H.greek = () =>
-    b(() => import(`./chunk~0b4c6f9883.js`), [], import.meta.url)),
+    p(() => import(`./chunk~0b4c6f9883.js`), [], import.meta.url)),
   (H.hungarian = () =>
-    b(() => import(`./chunk~37177e405b.js`), [], import.meta.url)),
+    p(() => import(`./chunk~37177e405b.js`), [], import.meta.url)),
   (H.indonesian = () =>
-    b(() => import(`./chunk~637be60a4b.js`), [], import.meta.url)),
+    p(() => import(`./chunk~637be60a4b.js`), [], import.meta.url)),
   (H.italian = () =>
-    b(() => import(`./chunk~5c839c7bc7.js`), [], import.meta.url)),
+    p(() => import(`./chunk~5c839c7bc7.js`), [], import.meta.url)),
   (H.japanese = () =>
-    b(() => import(`./chunk~faa6c0c169.js`), [], import.meta.url)),
+    p(() => import(`./chunk~faa6c0c169.js`), [], import.meta.url)),
   (H.koreana = () =>
-    b(() => import(`./chunk~a3390f0b15.js`), [], import.meta.url)),
+    p(() => import(`./chunk~a3390f0b15.js`), [], import.meta.url)),
   (H.latam = () =>
-    b(() => import(`./chunk~f261687d5b.js`), [], import.meta.url)),
+    p(() => import(`./chunk~f261687d5b.js`), [], import.meta.url)),
   (H.malay = () =>
-    b(() => import(`./chunk~1f6e95e6f1.js`), [], import.meta.url)),
+    p(() => import(`./chunk~1f6e95e6f1.js`), [], import.meta.url)),
   (H.norwegian = () =>
-    b(() => import(`./chunk~5e16c0a0c4.js`), [], import.meta.url)),
+    p(() => import(`./chunk~5e16c0a0c4.js`), [], import.meta.url)),
   (H.polish = () =>
-    b(() => import(`./chunk~5f6e1be65a.js`), [], import.meta.url)),
+    p(() => import(`./chunk~5f6e1be65a.js`), [], import.meta.url)),
   (H.portuguese = () =>
-    b(() => import(`./chunk~d75a9b48b0.js`), [], import.meta.url)),
+    p(() => import(`./chunk~d75a9b48b0.js`), [], import.meta.url)),
   (H.romanian = () =>
-    b(() => import(`./chunk~f2c62cc16f.js`), [], import.meta.url)),
+    p(() => import(`./chunk~f2c62cc16f.js`), [], import.meta.url)),
   (H.russian = () =>
-    b(() => import(`./chunk~2ad0e17b4a.js`), [], import.meta.url)),
+    p(() => import(`./chunk~2ad0e17b4a.js`), [], import.meta.url)),
   (H.sc_schinese = () =>
-    b(() => import(`./chunk~0abcca3bf3.js`), [], import.meta.url)),
+    p(() => import(`./chunk~0abcca3bf3.js`), [], import.meta.url)),
   (H.schinese = () =>
-    b(() => import(`./chunk~e215bb0548.js`), [], import.meta.url)),
+    p(() => import(`./chunk~e215bb0548.js`), [], import.meta.url)),
   (H.spanish = () =>
-    b(() => import(`./chunk~1f3f689863.js`), [], import.meta.url)),
+    p(() => import(`./chunk~1f3f689863.js`), [], import.meta.url)),
   (H.swedish = () =>
-    b(() => import(`./chunk~822e56aae0.js`), [], import.meta.url)),
+    p(() => import(`./chunk~822e56aae0.js`), [], import.meta.url)),
   (H.tchinese = () =>
-    b(() => import(`./chunk~b2bcc63baa.js`), [], import.meta.url)),
+    p(() => import(`./chunk~b2bcc63baa.js`), [], import.meta.url)),
   (H.thai = () =>
-    b(() => import(`./chunk~9d7ddf5eac.js`), [], import.meta.url)),
+    p(() => import(`./chunk~9d7ddf5eac.js`), [], import.meta.url)),
   (H.turkish = () =>
-    b(() => import(`./chunk~fd89ad3180.js`), [], import.meta.url)),
+    p(() => import(`./chunk~fd89ad3180.js`), [], import.meta.url)),
   (H.ukrainian = () =>
-    b(() => import(`./chunk~33749ae2fa.js`), [], import.meta.url)),
+    p(() => import(`./chunk~33749ae2fa.js`), [], import.meta.url)),
   (H.vietnamese = () =>
-    b(() => import(`./chunk~3f2f18d49e.js`), [], import.meta.url)));
+    p(() => import(`./chunk~3f2f18d49e.js`), [], import.meta.url)));
 async function U(e) {
   if (H[e]) return await H[e]();
 }
-var W = w(U);
+var W = S(U);
 function G() {
   return (0, M.jsxs)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
@@ -534,7 +534,7 @@ function X() {
   });
 }
 function Z(e) {
-  return (0, M.jsx)(d, { direction: `column`, gap: `4`, ...e });
+  return (0, M.jsx)(w, { direction: `column`, gap: `4`, ...e });
 }
 function Q(e) {
   return (0, M.jsx)(i, {
@@ -547,9 +547,9 @@ function Q(e) {
 }
 function $(e) {
   let { href: t, ...n } = e,
-    r = x();
+    r = d();
   return (
-    t?.startsWith(v.STORE_BASE_URL) && (t = s(r, t)),
+    t?.startsWith(v.STORE_BASE_URL) && (t = l(r, t)),
     (0, M.jsx)(a, {
       href: t,
       color: `dull-11`,
@@ -560,14 +560,14 @@ function $(e) {
   );
 }
 function re() {
-  let e = S();
-  return (0, M.jsxs)(d, {
+  let e = h();
+  return (0, M.jsxs)(w, {
     gridArea: `main`,
     direction: `column`,
     gap: `5`,
     align: `start`,
     children: [
-      (0, M.jsxs)(d, {
+      (0, M.jsxs)(w, {
         gap: `6`,
         align: `center`,
         children: [
@@ -581,15 +581,15 @@ function re() {
           }),
         ],
       }),
-      (0, M.jsx)(f, {
+      (0, M.jsx)(_, {
         as: `p`,
         size: `1`,
         className: k,
-        children: u(
+        children: x(
           W.Localize(`#footer_legal_notice`, new Date().getFullYear()),
         ),
       }),
-      (0, M.jsxs)(d, {
+      (0, M.jsxs)(w, {
         gap: `6`,
         align: `center`,
         className: A,
@@ -612,17 +612,17 @@ function re() {
           }),
         ],
       }),
-      (0, M.jsxs)(d, {
+      (0, M.jsxs)(w, {
         gap: `5`,
         children: [
           e === `initial` &&
             !v.IN_MOBILE_WEBVIEW &&
-            (0, M.jsx)(te, {
+            (0, M.jsx)(u, {
               href: v.STORE_BASE_URL + `mobile/`,
               children: W.Localize(`#footer_link_get_mobile_apps`),
             }),
           T() &&
-            (0, M.jsx)(h, {
+            (0, M.jsx)(ee, {
               color: `dull`,
               onClick: ne,
               children: W.Localize(`#footer_view_mobile_website`),
@@ -635,7 +635,7 @@ function re() {
 function ie(e) {
   return (
     (0, E.use)(W.Ready()),
-    (0, M.jsx)(C, {
+    (0, M.jsx)(g, {
       breakpoints: { sm: 700 },
       children: (0, M.jsxs)(o, {
         as: `footer`,
@@ -768,8 +768,8 @@ function ie(e) {
   );
 }
 function ae(e) {
-  if (_()) return null;
-  let t = ee(v.EREALM) ? (0, M.jsx)(V, { ...e }) : (0, M.jsx)(ie, { ...e });
-  return (0, M.jsx)(y, { controller: `footer`, method: `footer`, children: t });
+  if (f()) return null;
+  let t = C(v.EREALM) ? (0, M.jsx)(V, { ...e }) : (0, M.jsx)(ie, { ...e });
+  return (0, M.jsx)(m, { controller: `footer`, method: `footer`, children: t });
 }
 export { ae as GlobalFooter };

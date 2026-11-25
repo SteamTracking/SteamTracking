@@ -2,7 +2,7 @@ import { _ } from "./chunk~f025431ab0.js";
 import { _, _ } from "./chunk~01cfc309bf.js";
 import { _ } from "./chunk~5412a9f1de.js";
 import { _ } from "./chunk~91ffd0567f.js";
-import { _ } from "./chunk~62cf132e0e.js";
+import { _, _ } from "./chunk~62cf132e0e.js";
 import { _, _ } from "./chunk~75db1bf948.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./main.js";
 var _ = {};
@@ -79,20 +79,44 @@ var _ = _(_),
   _ = _(),
   _ = [
     {
-      labelToken: `#Workshop_ItemAdmin_Ban_Preset_None`,
+      strLabel: `Dev Reported`,
+      nQuickTextID: 5871,
     },
     {
-      labelToken: `#Workshop_ItemAdmin_Ban_Preset_Copyright`,
+      strLabel: `Anti-virus Flagged`,
+      nQuickTextID: 5872,
+    },
+    {
+      strLabel: `General`,
+      nQuickTextID: 5873,
+    },
+  ];
+function _(_) {
+  return typeof _.label == `string` ? _.Localize(_.label) : _.label.str;
+}
+var _ = [
+    {
+      label: `#Workshop_ItemAdmin_Ban_Preset_None`,
+    },
+    {
+      label: `#Workshop_ItemAdmin_Ban_Preset_Copyright`,
       reasonToken: `#Workshop_ItemAdmin_Ban_Preset_CopyrightReason`,
       eModerationReason: 2,
     },
+    ..._.map((_) => ({
+      label: {
+        str: `Malware: ${_.strLabel}`,
+      },
+      nQuickTextID: _.nQuickTextID,
+      eModerationReason: 70,
+    })),
   ],
   _ = [
     {
-      labelToken: `#Workshop_ItemAdmin_Ban_Preset_None`,
+      label: `#Workshop_ItemAdmin_Ban_Preset_None`,
     },
     {
-      labelToken: `#Workshop_ItemAdmin_Ban_Preset_NoCounterNotice`,
+      label: `#Workshop_ItemAdmin_Ban_Preset_NoCounterNotice`,
       reasonToken: `#Workshop_ItemAdmin_Ban_Preset_NoCounterNoticeReason`,
     },
   ],
@@ -164,6 +188,7 @@ function _(_) {
 function _(_) {
   let {
       bBanned: _,
+      steamIDOwner: _,
       bIsSupport: _,
       bWorkshopContent: _,
       onConfirm: _,
@@ -178,7 +203,12 @@ function _(_) {
     [_, _] = (0, _.useState)(null),
     [_, _] = (0, _.useState)(null),
     [_, _] = (0, _.useState)(!1),
-    _ = _ ? _ : _,
+    [_, _] = (0, _.useState)(null),
+    _ = _(_, _);
+  (0, _.useEffect)(() => {
+    _ && _(_);
+  }, [_]);
+  let _ = _ ? _ : _,
     _ = _.Localize(
       _ ? `#Workshop_ItemAdmin_Ban_Unset` : `#Workshop_ItemAdmin_Ban_Set`,
     ),
@@ -243,13 +273,14 @@ function _(_) {
                     }),
                     (0, _.jsx)(_, {
                       options: _,
-                      getOptionLabel: (_) => _.Localize(_.labelToken),
+                      getOptionLabel: _,
                       selectedValue: null,
-                      placeholder: _.Localize(_[0].labelToken),
+                      placeholder: _(_[0]),
                       onSelectionChange: (_) => {
-                        (_(_.reasonToken ? _.Localize(_.reasonToken) : ``),
+                        (_.nQuickTextID === void 0 &&
+                          _(_.reasonToken ? _.Localize(_.reasonToken) : ``),
+                          _(_.nQuickTextID ?? null),
                           _.eModerationReason !== void 0 &&
-                            _ === null &&
                             _(_.eModerationReason));
                       },
                     }),

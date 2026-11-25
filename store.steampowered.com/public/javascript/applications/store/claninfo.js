@@ -1,8 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { dt as e, st as t } from "./chunk~01cfc309bf.js";
-import { Xy as n, nx as r } from "./main.js";
+import { ot as e, ut as t } from "./chunk~01cfc309bf.js";
+import { Zy as n, rx as r } from "./main.js";
 async function i(e) {
   return c(
     `${r.COMMUNITY_BASE_URL}ogg/${e}/ajaxgetvanityandclanid/?origin=${location.origin}`,
@@ -87,8 +87,8 @@ function y(e, t) {
   for (let n of t) v(e, n);
 }
 function b(n) {
-  let r = e();
-  return t(x(n, r));
+  let r = t();
+  return e(x(n, r));
 }
 function x(e, t) {
   return (
@@ -133,8 +133,8 @@ function w(e) {
   return e.isPending ? void 0 : (e.data ?? null);
 }
 function T(n, r = `group`) {
-  let i = e(),
-    a = t(C(n, i, r));
+  let i = t(),
+    a = e(C(n, i, r));
   return b(n ? w(a) : void 0);
 }
 function E(e, t) {

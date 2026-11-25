@@ -3487,6 +3487,7 @@ var _;
       {
         bConstMethod: !0,
         ePrivilege: 5,
+        rgBrowserAPISites: [`support`],
       },
     );
   }
@@ -3506,6 +3507,7 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`AuthenticationSupport.RevokeToken#1`, _(_, _, _), _, {
       ePrivilege: 5,
+      rgBrowserAPISites: [`support`],
     });
   }
   _.RevokeToken = _;
@@ -3513,6 +3515,7 @@ var _;
     return _.SendMsg(`AuthenticationSupport.GetTokenHistory#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`support`],
     });
   }
   _.GetTokenHistory = _;
@@ -3523,6 +3526,7 @@ var _;
       _,
       {
         ePrivilege: 5,
+        rgBrowserAPISites: [`support`],
       },
     );
   }
@@ -4947,7 +4951,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`TwoFactor.QueryTime#1`, _(_, _, _), _, {
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`help`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.QueryTime = _;

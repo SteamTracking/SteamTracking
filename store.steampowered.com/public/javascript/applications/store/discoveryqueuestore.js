@@ -2,25 +2,25 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { At as t, Lt as n, kt as r } from "./chunk~01cfc309bf.js";
+import { It as t, Ot as n, kt as r } from "./chunk~01cfc309bf.js";
 import { n as i, t as a } from "./chunk~e867464c75.js";
 import {
-  Bl as o,
-  Ey as s,
-  Gb as c,
-  Kb as l,
-  Nl as u,
-  Ox as d,
-  Oy as f,
-  Zx as p,
-  Zy as m,
-  cx as h,
-  dt as g,
-  ft as _,
-  jy as v,
-  yx as y,
+  $x as o,
+  Dy as s,
+  Kb as c,
+  My as l,
+  Pl as u,
+  Qy as d,
+  Vl as f,
+  bx as p,
+  dt as m,
+  ft as h,
+  kx as g,
+  ky as _,
+  lx as v,
+  qb as y,
 } from "./main.js";
-var b = e(n());
+var b = e(t());
 function x(e, t) {
   let n = e.toString();
   if (
@@ -82,7 +82,7 @@ var w = class e {
     let n = x(e, t);
     return (
       this.m_mapInClientCompletedCallback.has(n) ||
-        this.m_mapInClientCompletedCallback.set(n, new p()),
+        this.m_mapInClientCompletedCallback.set(n, new o()),
       this.m_mapInClientCompletedCallback.get(n)
     );
   }
@@ -102,9 +102,9 @@ var w = class e {
     let r = x(e, n);
     if (!this.m_transport) return 2;
     try {
-      let i = g(this.m_transport, e, t, n);
-      t && (await m.invalidateQueries({ queryKey: i.queryKey }));
-      let a = await m.fetchQuery(i);
+      let i = m(this.m_transport, e, t, n);
+      t && (await d.invalidateQueries({ queryKey: i.queryKey }));
+      let a = await d.fetchQuery(i);
       return (
         this.m_mapDiscoveryQueues.set(r, a),
         a.exhausted
@@ -151,12 +151,12 @@ var w = class e {
           i,
           (this.m_mapSkippedAppCount.get(i) || 0) + 1,
         ));
-      let s = d.Init(f);
+      let s = g.Init(_);
       if (
         (s.Body().set_appid(e),
         s.Body().set_queue_type(t),
         (n?.nSaleTagID || n?.strContentHubType) &&
-          s.Body().set_store_page_filter(_(n, !0)),
+          s.Body().set_store_page_filter(h(n, !0)),
         !this.m_transport)
       ) {
         (console.warn(`Error`, `no transport`, `failed to skip appid `, e),
@@ -164,7 +164,7 @@ var w = class e {
         return;
       }
       let c = (
-        await v.SkipDiscoveryQueueItem(this.m_transport, s)
+        await l.SkipDiscoveryQueueItem(this.m_transport, s)
       ).GetEResult();
       c != 1 && c != 29
         ? (console.warn(`Error`, c, `failed to skip appid `, e),
@@ -184,12 +184,12 @@ var w = class e {
   }
   async LoadSkippedApps(e, t) {
     x(e, t);
-    let n = d.Init(s);
+    let n = g.Init(s);
     if (
-      (n.Body().set_steamid(y.steamid),
+      (n.Body().set_steamid(p.steamid),
       n.Body().set_queue_type(e),
       (t?.nSaleTagID || t?.strContentHubType) &&
-        n.Body().set_store_page_filter(_(t, !0)),
+        n.Body().set_store_page_filter(h(t, !0)),
       !this.m_transport)
     )
       return (
@@ -200,7 +200,7 @@ var w = class e {
         ),
         []
       );
-    let r = await v.GetDiscoveryQueueSkippedApps(this.m_transport, n);
+    let r = await l.GetDiscoveryQueueSkippedApps(this.m_transport, n);
     return r.GetEResult() === 1
       ? r.Body().appids() || []
       : (console.warn(
@@ -224,19 +224,19 @@ var w = class e {
     );
   }
   constructor() {
-    r(this);
+    n(this);
   }
 };
-l([t], w.prototype, `m_mapDiscoveryQueues`, void 0);
+y([r], w.prototype, `m_mapDiscoveryQueues`, void 0);
 function T(e, t) {
   let [n, r] = (0, b.useState)(w.Get().GetInClientCompletedQueues(e, t));
   return (u(w.Get().GetInClientCompletedQueuesCallback(e, t), r), n);
 }
 function E(e, t) {
-  return o(w.Get().GetExhaustedCallback(e, t));
+  return f(w.Get().GetExhaustedCallback(e, t));
 }
 function D(e, t) {
-  let n = b.useMemo(() => h(`discovery_queue_name`, `application_config`), []);
+  let n = b.useMemo(() => v(`discovery_queue_name`, `application_config`), []);
   return typeof n == `string` && n.length > 0 ? n : ``;
 }
 export { T as a, D as i, w as n, E as o, C as r, S as t };

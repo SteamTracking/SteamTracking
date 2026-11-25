@@ -23,14 +23,8 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
 } from "./chunk~de7f2df91c.js";
-import { _, _, _, _, _, _, _, _, _ } from "./chunk~25a6634263.js";
+import { _, _, _, _, _, _, _, _, _ } from "./chunk~bd90a5fce7.js";
 import {
   _,
   _,
@@ -58,6 +52,8 @@ import {
 import { _, _, _, _ } from "./chunk~44f252525d.js";
 import { _ } from "./chunk~9aa05d2c7d.js";
 import { _ } from "./chunk~e70aabe4d7.js";
+import { _, _ } from "./chunk~70c16cc80c.js";
+import { _, _, _, _, _ } from "./chunk~96e60d7578.js";
 import { _, _ } from "./chunk~90b9831ad2.js";
 import { _ } from "./chunk~aae8417744.js";
 import { _ } from "./chunk~fc8a9e4879.js";
@@ -67,10 +63,9 @@ import { _ } from "./chunk~c55709d290.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~8ceeb46076.js";
 import { _, _, _, _, _, _, _ } from "./chunk~b980797e15.js";
-import { _ } from "./chunk~3f4314f3b4.js";
-import { _, _ } from "./chunk~70c16cc80c.js";
 import { _ } from "./chunk~3ee5188744.js";
 import { _ } from "./chunk~874b4cd3a1.js";
+import { _ } from "./chunk~3f4314f3b4.js";
 import { _ } from "./chunk~3720b337f3.js";
 import { _ } from "./chunk~9a3ef4764b.js";
 var _ = _(_());
@@ -1406,7 +1401,7 @@ var _ = _(_(), 1),
   function _(_, _) {
     return _.SendNotification(`Video.SetVideoBookmark#1`, _(_, _), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetVideoBookmark = _;
@@ -1506,13 +1501,11 @@ var _ = class _ {
       );
     }
     Init() {
-      _.logged_in && this.LoadWatchVideoOAuthToken();
+      _.logged_in &&
+        (this.m_transport = _(new _(_.WEBAPI_BASE_URL)).GetServiceTransport());
     }
     async LoadWatchVideoOAuthToken() {
-      let _ =
-          _() == `community`
-            ? _.COMMUNITY_BASE_URL + `actions/ajaxgetwatchvodtoken`
-            : _.STORE_BASE_URL + `actions/ajaxgetwatchvodtoken`,
+      let _ = _.STORE_BASE_URL + `actions/ajaxgetwatchvodtoken`,
         _ = {};
       try {
         let _ = await _.default.get(_, {

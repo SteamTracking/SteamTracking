@@ -25,14 +25,13 @@ import {
   _,
   _,
 } from "./chunk~de7f2df91c.js";
-import { _, _, _, _, _ } from "./chunk~25a6634263.js";
+import { _, _, _, _, _ } from "./chunk~bd90a5fce7.js";
 import { _, _, _, _ } from "./chunk~1fa4b8f2ff.js";
-import { _, _ } from "./chunk~d9c3dab17a.js";
+import { _, _, _ } from "./chunk~70c16cc80c.js";
 import { _ } from "./chunk~baca8b8889.js";
 import { _ } from "./chunk~f4e4ed5c17.js";
 import { _, _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~4571d27d07.js";
-import { _ } from "./chunk~70c16cc80c.js";
 var _ = _(_(), 1);
 function _(_, ..._) {
   let _ = [],
@@ -3788,6 +3787,7 @@ var _;
       {
         bConstMethod: !0,
         ePrivilege: 5,
+        rgBrowserAPISites: [`support`],
       },
     );
   }
@@ -3807,6 +3807,7 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`AuthenticationSupport.RevokeToken#1`, _(_, _, _), _, {
       ePrivilege: 5,
+      rgBrowserAPISites: [`support`],
     });
   }
   _.RevokeToken = _;
@@ -3814,6 +3815,7 @@ var _;
     return _.SendMsg(`AuthenticationSupport.GetTokenHistory#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`support`],
     });
   }
   _.GetTokenHistory = _;
@@ -3824,6 +3826,7 @@ var _;
       _,
       {
         ePrivilege: 5,
+        rgBrowserAPISites: [`support`],
       },
     );
   }
@@ -6648,7 +6651,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`TwoFactor.QueryTime#1`, _(_, _, _), _, {
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`help`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.QueryTime = _;
@@ -6706,6 +6709,95 @@ var _ = class _ extends _.Message {
   }
   _.RemoveAuthenticatorViaChallengeContinue = _;
 })((_ ||= {}));
+var _ = 1,
+  _ = 2,
+  _ = (function (_) {
+    return (
+      (_[(_.RetryCode = 0)] = `RetryCode`),
+      (_[(_.MoveComplete = 1)] = `MoveComplete`),
+      (_[(_.Failed = 2)] = `Failed`),
+      _
+    );
+  })({});
+async function _(_) {
+  try {
+    let _ = _.Init(_),
+      _ = await _.RemoveAuthenticatorViaChallengeStart(_, _),
+      _ = _.GetEResult();
+    return (
+      _ !== 1 &&
+        (_.DEBUG_LogToConsole(),
+        _(`RemoveAuthenticatorViaChallengeStart failed`, _)),
+      _
+    );
+  } catch (_) {
+    return (
+      _(`Unexpected error from RemoveAuthenticatorViaChallengeStart`, _), 2
+    );
+  }
+}
+async function _(_, _, _) {
+  let _, _;
+  try {
+    let _ = _.Init(_);
+    (_.Body().set_sms_code(_),
+      _.Body().set_generate_new_token(!0),
+      _.Body().set_version(_),
+      _.Body().set_caller_version(_));
+    let _ = await _.RemoveAuthenticatorViaChallengeContinue(_, _);
+    _ = _.GetEResult();
+    let _ = _.Body().replacement_token();
+    _ === 1 && _.Body().success() && _
+      ? (_ = _(_.toObject()))
+      : (_.DEBUG_LogToConsole(),
+        _(
+          `RemoveAuthenticatorViaChallengeContinue failed, eresult: ${_}, success: ${_.Body().success()}`,
+        ),
+        _ === 1 && (_ = 2));
+  } catch (_) {
+    return (
+      _(`Unexpected error from RemoveAuthenticatorViaChallengeContinue`, _),
+      {
+        eNextStep: 2,
+        eResult: 2,
+      }
+    );
+  }
+  if (_) {
+    let _ = _ ? await _(_, _) : void 0;
+    return {
+      eNextStep: 1,
+      eResult: _,
+      guardData: _,
+      eSaveResult: _,
+    };
+  }
+  switch (_) {
+    case 94:
+    case 27:
+    case 10:
+    case 20:
+    case 16:
+    case 3:
+      return {
+        eNextStep: 0,
+        eResult: _,
+      };
+    default:
+      return {
+        eNextStep: 2,
+        eResult: _,
+      };
+  }
+}
+async function _(_, _) {
+  try {
+    let _ = await _(_);
+    return (_ !== 1 && _(`Failed to save the moved authenticator`, _), _);
+  } catch (_) {
+    return (_(`Unexpected error saving the moved authenticator`, _), 2);
+  }
+}
 var _ = class extends _ {
   m_eStatusValue = 0;
   get m_eStatus() {
@@ -6722,6 +6814,8 @@ var _ = class extends _ {
   m_weakAuthWebInterface;
   m_onGetMachineAuth;
   m_replacementAuthenticator;
+  m_eMoveResult;
+  m_eMoveSaveResult;
   m_strErrorReferenceValue = ``;
   get m_strErrorReference() {
     return this.m_strErrorReferenceValue;
@@ -6751,6 +6845,8 @@ var _ = class extends _ {
       eStatus: this.GetStatus(),
       bCanGoBack: this.BCanGoBack(),
       replacementAuthenticator: this.GetReplacementAuthenticator(),
+      eMoveResult: this.m_eMoveResult,
+      eMoveSaveResult: this.m_eMoveSaveResult,
     };
   }
   async Start(_, _, _) {
@@ -7085,82 +7181,45 @@ var _ = class extends _ {
       _.WEBAPI_BASE_URL,
       this.m_strWeakAuthToken,
     );
-    try {
-      let _ = _.Init(_),
-        _ = await _.RemoveAuthenticatorViaChallengeStart(
-          this.m_weakAuthWebInterface.GetServiceTransport(),
-          _,
-        );
-      return (
-        _.GetEResult() == 1
-          ? (this.m_eStatus = 8)
-          : (_.DEBUG_LogToConsole(),
-            _(
-              `An unexpected error occured while adding an authenticator`,
-              _.GetEResult(),
-            ),
-            this.SetFailureStateWithEResult(
-              _.MoveAuthenticator,
-              _.GetEResult(),
-            )),
-        _.GetEResult()
-      );
-    } catch (_) {
-      return (
-        _(`An unexpected error occured while moving an authenticator`, _),
-        this.SetFailureStateWithEResult(_.MoveAuthenticator, 2),
-        2
-      );
-    }
+    let _ = await _(this.m_weakAuthWebInterface.GetServiceTransport());
+    return (
+      (this.m_eMoveResult = _),
+      _ === 1
+        ? (this.m_eStatus = 8)
+        : this.SetFailureStateWithEResult(_.MoveAuthenticator, _),
+      _
+    );
   }
   async ResendMoveCode() {
-    _(
+    (_(
       !!this.m_weakAuthWebInterface,
       `Resending move code before StartMoveAuthenticator`,
-    );
-    let _ = _.Init(_),
-      _ = await _.RemoveAuthenticatorViaChallengeStart(
-        this.m_weakAuthWebInterface.GetServiceTransport(),
-        _,
-      );
-    (_.GetEResult() != 1 &&
-      (_.DEBUG_LogToConsole(),
-      _(
-        `An unexpected error occured while adding an authenticator`,
-        _.GetEResult(),
-      )),
+    ),
+      await _(this.m_weakAuthWebInterface.GetServiceTransport()),
+      (this.m_eMoveResult = void 0),
       (this.m_eStatus = 8));
   }
-  async FinishMoveAuthenticator(_) {
+  async FinishMoveAuthenticator(_, _) {
     _(
       !!this.m_weakAuthWebInterface,
       `Finishing authenticator move before StartMoveAuthenticator`,
     );
-    let _ = _.Init(_);
-    (_.Body().set_sms_code(_),
-      _.Body().set_generate_new_token(!0),
-      _.Body().set_version(2));
-    let _ = await _.RemoveAuthenticatorViaChallengeContinue(
-      this.m_weakAuthWebInterface.GetServiceTransport(),
-      _,
-    );
-    if (_.GetEResult() == 94) this.m_eStatus = 12;
-    else if (!_.Body().success())
-      (_.DEBUG_LogToConsole(),
-        _(
-          `Error when calling RemoveAuthenticatorViaChallengeContinue`,
-          _.GetEResult(),
-        ),
-        this.SetFailureStateWithEResult(_.MoveAuthenticator, _.GetEResult()));
-    else {
-      _.DEBUG_LogToConsole();
-      let _ = _.Body().replacement_token();
-      (_(!!_, `Missing replacement token on successful authenticator move`),
-        (this.m_replacementAuthenticator = _(_.toObject())),
-        (this.m_eStatus = 9),
-        (this.m_bUsingCodeOverride = !1));
+    let _ = await _(this.m_weakAuthWebInterface.GetServiceTransport(), _, _);
+    switch (((this.m_eMoveResult = _.eResult), _.eNextStep)) {
+      case _.MoveComplete:
+        ((this.m_replacementAuthenticator = _.guardData),
+          (this.m_eMoveSaveResult = _.eSaveResult),
+          (this.m_bUsingCodeOverride = !1),
+          (this.m_eStatus = 9));
+        break;
+      case _.RetryCode:
+        this.m_eStatus = 12;
+        break;
+      case _.Failed:
+      default:
+        this.SetFailureStateWithEResult(_.MoveAuthenticator, _.eResult);
     }
-    return _.GetEResult();
+    return _.eResult;
   }
   FinishMoveRecovery() {
     this.m_eStatus = 5;

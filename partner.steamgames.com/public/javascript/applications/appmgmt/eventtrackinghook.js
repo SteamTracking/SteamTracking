@@ -3,21 +3,21 @@
 
 import {
   A as e,
-  At as t,
-  N as n,
-  X as r,
-  it as i,
-  q as a,
-  sn as o,
-  vt as s,
-  yt as c,
+  G as t,
+  Pt as n,
+  S as r,
+  W as i,
+  a,
+  n as o,
+  nt as s,
+  y as c,
 } from "./chunk~de7f2df91c.js";
-import { It as l, ht as u } from "./chunk~25a6634263.js";
+import { Pt as l, pt as u } from "./chunk~bd90a5fce7.js";
 import { t as d } from "./chunk~9aa05d2c7d.js";
 import { t as f } from "./chunk~f4e4ed5c17.js";
 import { t as p } from "./chunk~c55709d290.js";
 import { a as m, i as h, r as g } from "./chunk~ca0c999570.js";
-var _ = o(f(), 1);
+var _ = n(f(), 1);
 function v(e) {
   return d;
 }
@@ -29,13 +29,13 @@ function b(e) {
 }
 function x(e, t) {
   let n = t ?? v(`BEventHasBeenRead`);
-  return n ? C(n.getQueryData(b(a.accountid)) ?? y(), e) : !1;
+  return n ? C(n.getQueryData(b(c.accountid)) ?? y(), e) : !1;
 }
 function S(e, t) {
   if (e.length == 0) return;
   let n = t ?? v(`MarkEventsAsRead`);
   n &&
-    n.setQueryData(b(a.accountid), (t) => {
+    n.setQueryData(b(c.accountid), (t) => {
       let n = new Set(t);
       return (e.forEach((e) => n.add(e)), n);
     });
@@ -116,26 +116,26 @@ var w = 60,
     async UploadPendingData() {
       if (this.m_bUploading) return;
       this.m_schUpload.Cancel();
-      let e = this.m_rgPendingUpload.splice(0, T);
-      if (e.length == 0) return;
-      let t = !1;
+      let n = this.m_rgPendingUpload.splice(0, T);
+      if (n.length == 0) return;
+      let i = !1;
       if (this.m_CMInterface) {
-        let n = c.Init(g);
-        for (let t of e) n.Body().add_markings(t);
+        let e = t.Init(g);
+        for (let t of n) e.Body().add_markings(t);
         this.m_bUploading = !0;
         let r = await m.MarkPartnerEventsForUser(
           this.m_CMInterface.GetServiceTransport(),
-          n,
+          e,
         );
-        ((this.m_bUploading = !1), (t = r.GetEResult() == 1));
+        ((this.m_bUploading = !1), (i = r.GetEResult() == 1));
       } else {
-        if (!i.logged_in) return;
-        let a = e.map((e) => e.toObject()),
-          o = n() + `actions/ajaxmarkpartnerevents`,
+        if (!e.logged_in) return;
+        let t = n.map((e) => e.toObject()),
+          o = a() + `actions/ajaxmarkpartnerevents`,
           s = new FormData();
-        (s.append(`sessionid`, r()), s.append(`request`, JSON.stringify(a)));
+        (s.append(`sessionid`, r()), s.append(`request`, JSON.stringify(t)));
         try {
-          t =
+          i =
             (await _.default.post(o, s, { withCredentials: !0 })).data
               .success == 1;
         } catch (e) {
@@ -147,20 +147,20 @@ var w = 60,
           );
         }
       }
-      t
+      i
         ? this.m_rgPendingUpload.length > 0 && this.ScheduleUpload()
         : (console.log(`Saving news event state failed. Will try again soon!`),
-          (this.m_rgPendingUpload = this.m_rgPendingUpload.concat(e)),
+          (this.m_rgPendingUpload = this.m_rgPendingUpload.concat(n)),
           this.m_schUpload.Schedule(w * 1e3, this.UploadPendingData));
     }
   };
-e([l], E.prototype, `UploadPendingData`, null);
+o([l], E.prototype, `UploadPendingData`, null);
 var D;
 function O() {
   return ((D ||= new E()), D);
 }
-var k = o(t(), 1),
-  A = s(),
+var k = n(s(), 1),
+  A = i(),
   j = k.createContext(void 0);
 function M(e) {
   let [t] = k.useState(() => new E());

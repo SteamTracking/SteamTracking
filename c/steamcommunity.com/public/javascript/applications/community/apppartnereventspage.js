@@ -132,12 +132,15 @@ import {
   _,
   _,
   _,
+  _,
+  _,
+  _,
 } from "./chunk~3f4314f3b4.js";
 import { _, _, _, _, _, _, _ } from "./chunk~437071091c.js";
 import { _ } from "./chunk~cfd048ddd7.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _, _, _, _ } from "./chunk~05a38bc848.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~21cdc464a1.js";
+import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~2e61cac879.js";
 import { _ } from "./chunk~92931c6310.js";
 import { _, _ } from "./chunk~0111fcd096.js";
@@ -356,32 +359,7 @@ function _(_, _, _) {
 function _(_) {
   return [`useEventUserPermissions`, _.accountid, _];
 }
-var _ = _(_(), 1),
-  _ = _(),
-  _ = {
-    eLocation: 0,
-  },
-  _ = _.createContext(_);
-function _(_) {
-  let { children: _, location: _ } = _;
-  return (0, _.jsx)(_.Provider, {
-    value: {
-      ..._,
-      eLocation: _ ?? 0,
-    },
-    children: _,
-  });
-}
-function _() {
-  return _.useContext(_);
-}
-function _() {
-  return _().eLocation == 2;
-}
-function _() {
-  let _ = _();
-  return _.eLocation == 2 || _.eLocation == 1;
-}
+var _ = _(_(), 1);
 async function _(_, _) {
   let _ = await _.GetCommunityInventory(_, {
     filter_appids: [_],
@@ -1646,7 +1624,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`SaleItemRewards.ClaimItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ClaimItem = _;
@@ -1654,7 +1632,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`SaleItemRewards.CanClaimItem#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.CanClaimItem = _;
@@ -1677,7 +1655,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`SaleItemRewards.GetClaimedSaleRewards#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetClaimedSaleRewards = _;
@@ -1686,7 +1664,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCurrentDefinition = _;
@@ -1878,7 +1856,8 @@ function _(_, _, _) {
 }
 var _ = `sQ3oyZUR-zg-`,
   _ = `xlE3GjrXwxc-`,
-  _ = `-kwnh0mPXe8-`;
+  _ = `-kwnh0mPXe8-`,
+  _ = _();
 function _(_) {
   let _ = _(),
     { bLoading: _ } = _,
@@ -6427,13 +6406,37 @@ var _ = `FCDwJOWV1GM-`,
   _ = `MjUEpAp0LdA-`,
   _ = `iMj27DR-pkY-`,
   _ = {};
+_[2026] = {
+  strTileAssetDir: `steamawards2026/tiles/`,
+  nTileVersion: 1,
+  strPageTileAsset: `steamawards2026/page_tile.svg?v=1`,
+  strCategoryColor: `#1e1e1e`,
+  mapCategoryColors: {
+    BestGameYouSuckAt: `#521437`,
+    BestHandheldGame: `#452138`,
+    BestSoundtrack: `#521422`,
+    BetterWithFriends: `#521514`,
+    DefiesDescription: `#194d39`,
+    GOTY: `#17464f`,
+    HallOfFame: `#862e30`,
+    JustFiveMoreMinutes: `#281452`,
+    LaborOfLove: `#61132b`,
+    OutstandingStoryRichGame: `#183e4e`,
+    OutstandingVisualStyle: `#222344`,
+    SitBackAndRelax: `#1e2d5c`,
+    ThisIsMyJobNow: `#4c1a30`,
+    VRGOTY: `#3b5e3e`,
+  },
+  nCategoryEdgeDarkenPercent: 35,
+  mapCategoryEdgeColors: {},
+};
 function _(_) {
   return _[_];
 }
 ((0, _.default)(`2026-11-23T09:30:00-08:00`).unix(),
   (0, _.default)(`2026-11-30T10:00:00-08:00`).unix());
 function _() {
-  return 2025;
+  return 2026;
 }
 function _(_) {
   return `${_.MEDIA_CDN_URL}store/promo/${_}`;

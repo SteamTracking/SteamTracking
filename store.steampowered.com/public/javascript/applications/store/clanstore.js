@@ -2,7 +2,7 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { At as t, Lt as n, dt as r, jt as i } from "./chunk~01cfc309bf.js";
+import { At as t, It as n, kt as r, ut as i } from "./chunk~01cfc309bf.js";
 import {
   a,
   i as o,
@@ -17,16 +17,16 @@ import {
 import { l as m } from "./chunk~7b4b9eb713.js";
 import "./chunk~b7c2818157.js";
 import {
-  Pu as h,
-  Xy as g,
+  Fu as h,
+  Qy as g,
   Zy as _,
-  _x as v,
-  lx as y,
-  sS as b,
+  lS as v,
+  ux as y,
+  vx as b,
 } from "./main.js";
 var x = e(n()),
   S = new WeakSet();
-function C(e = _) {
+function C(e = g) {
   if (typeof window > `u` || typeof document > `u` || S.has(e)) return;
   let t = y(`groupvanityinfo`, `application_config`);
   (t !== void 0 || document.readyState == `complete`) &&
@@ -46,8 +46,8 @@ function E(e) {
   return typeof e == `string` ? Number.parseInt(e) : e;
 }
 var D = new (class {
-  m_queryClient = _;
-  m_boxCacheVersion = t.box(0);
+  m_queryClient = g;
+  m_boxCacheVersion = r.box(0);
   m_bWatchingCache = !1;
   m_bBumpScheduled = !1;
   Init() {
@@ -70,7 +70,7 @@ var D = new (class {
       ((this.m_bBumpScheduled = !0),
       queueMicrotask(() => {
         ((this.m_bBumpScheduled = !1),
-          i(() =>
+          t(() =>
             this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1),
           ));
       }));
@@ -83,8 +83,8 @@ var D = new (class {
   }
   BHasClanInfoLoaded(e) {
     return (
-      b(e.BIsValid(), `Clan SteamID is not valid when ClanInfo`),
-      b(
+      v(e.BIsValid(), `Clan SteamID is not valid when ClanInfo`),
+      v(
         e.BIsClanAccount(),
         `Clan SteamID is not a clan account id when requesting clan info `,
       ),
@@ -101,7 +101,7 @@ var D = new (class {
     return (
       this.LazyInit(),
       (e = T(e)),
-      b(e != 0, `LoadOGGClanInfoForAppID called with appid of zero`),
+      v(e != 0, `LoadOGGClanInfoForAppID called with appid of zero`),
       e == 0 ? null : u(e, this.m_queryClient).catch(() => null)
     );
   }
@@ -123,7 +123,7 @@ var D = new (class {
   }
   GetClanSteamIDForAppID(e) {
     let t = l(T(e), this.ReadCache());
-    return t ? g.InitFromClanID(t.clanAccountID, v.EUNIVERSE) : void 0;
+    return t ? _.InitFromClanID(t.clanAccountID, b.EUNIVERSE) : void 0;
   }
   GetClanVanityForAppID(e) {
     return l(T(e), this.ReadCache())?.vanity_url;
@@ -139,7 +139,7 @@ var D = new (class {
   }
   GetClanInfoByClanAccountID(e) {
     return (
-      b(
+      v(
         !!e,
         `Unepxected clanid when requesting information. GetClanInfoByClanAccountID `,
       ),
@@ -151,7 +151,7 @@ var D = new (class {
     if (t) return t.GetCreatorHomeURL(`developer`);
     let n = this.GetClanInfoByClanAccountID(e.GetAccountID());
     return (
-      v.COMMUNITY_BASE_URL +
+      b.COMMUNITY_BASE_URL +
       (n.vanity_url
         ? `groups/` + n.vanity_url
         : `gid/` + e.ConvertTo64BitString())
@@ -160,7 +160,7 @@ var D = new (class {
 })();
 h(`g_ClanStore`, D);
 function O() {
-  let e = r();
+  let e = i();
   return (C(e), e);
 }
 function k(e) {

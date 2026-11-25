@@ -2,8 +2,8 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
-import { Du as r, Mu as i, Pd as a, qu as o } from "./main.js";
+import { Pt as t, at as n } from "./chunk~01cfc309bf.js";
+import { Du as r, Hu as i, Su as a, kd as o } from "./main.js";
 var s = e(t(), 1),
   c = n(),
   l = class e extends s.Component {
@@ -55,7 +55,7 @@ var s = e(t(), 1),
         let e = { root: this.FindScrollableAncestor(t) };
         (this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
           this.props.thresholds && (e.threshold = this.props.thresholds),
-          (this.m_observer = i(t, this.OnIntersection, e)));
+          (this.m_observer = r(t, this.OnIntersection, e)));
       }
       this.m_observer &&
         t &&
@@ -63,7 +63,7 @@ var s = e(t(), 1),
         (this.m_observer.observe(t), (this.m_elTracked = t));
     }
     FindScrollableAncestor(t) {
-      return o(t, (t) => {
+      return i(t, (t) => {
         let n = this.props.horizontal
           ? window.getComputedStyle(t).overflowX
           : window.getComputedStyle(t).overflowY;
@@ -75,8 +75,8 @@ var s = e(t(), 1),
       });
     }
     HandleRef = (e) => {
-      (a(this.m_refElement, e),
-        this.props.containerRef && a(this.props.containerRef, e));
+      (o(this.m_refElement, e),
+        this.props.containerRef && o(this.props.containerRef, e));
     };
     OnIntersection = (e) => {
       let t = !1;
@@ -95,11 +95,11 @@ var s = e(t(), 1),
         onVisibilityChange: e,
         rootMargin: t,
         trigger: n,
-        horizontal: i,
-        containerRef: a,
+        horizontal: r,
+        containerRef: i,
         ...o
       } = this.props;
-      return (0, c.jsx)(r, {
+      return (0, c.jsx)(a, {
         ref: this.HandleRef,
         ...o,
         children: this.props.children,

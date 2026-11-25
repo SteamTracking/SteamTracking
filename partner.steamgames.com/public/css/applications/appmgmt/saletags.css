@@ -741,10 +741,6 @@ a._8j-XyEfRwfE- {
   grid-template-rows: auto min-content min-content auto;
   grid-template-areas: "title title" "bundle bundle" "platform platform" "price price";
 }
-.-Rv33oXsbT0-.QwN0eH2k0O0- .ZLlm68-AqhM- {
-  color: var(--color-text-light-subtitle, #d6d9dc);
-  background: #344654b9;
-}
 .-Rv33oXsbT0-.QwN0eH2k0O0- .ncKEDk26SHQ- {
   display: flex;
 }
@@ -947,8 +943,10 @@ html.responsive.touch:not(.GamepadMode) .-Rv33oXsbT0- .raYV6Y-MQ7I- {
   padding: 0;
   line-height: normal;
 }
-.ZLlm68-AqhM-.Xk-QP-zS-18- .kjiBcsaqA8o- {
-  font-size: 1.2em;
+@media screen and (width <= 910px) {
+  .ZLlm68-AqhM-.Xk-QP-zS-18- .kjiBcsaqA8o- {
+    font-size: 1.2em;
+  }
 }
 .ZLlm68-AqhM-.I9cM1cZTYqc- {
   position: relative;
@@ -1206,7 +1204,7 @@ html.responsive.touch:not(.GamepadMode) .-Rv33oXsbT0- .raYV6Y-MQ7I- {
 @media screen and (width <= 910px) {
   .DfwzMU92EL4- {
     top: unset;
-    align-self: center;
+    align-self: stretch;
     position: relative;
   }
   .DfwzMU92EL4- span {
@@ -3748,6 +3746,60 @@ html:not(.GamepadMode) .PaginationPillsPage ._29km0evCwsI- .pL8IDIWBDg8- a {
 }
 .oh4R-N9DrSA- {
   position: relative;
+}
+.ewL7epZsubk- {
+  color: #fff;
+  opacity: 0;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+}
+.ewL7epZsubk- img,
+.ewL7epZsubk- svg {
+  width: 20px;
+  height: 20px;
+}
+.ewL7epZsubk-.lDd-amB-eCU- {
+  opacity: 1;
+}
+.dYYkud-Jf3s- {
+  flex-direction: row;
+  flex-grow: 1;
+  display: flex;
+}
+.dYYkud-Jf3s- .zZo1XshRYmQ- {
+  margin-inline-start: auto;
+  display: flex;
+}
+.dYYkud-Jf3s- .RfHJSn8AdQE- {
+  text-transform: uppercase;
+  background: #4a2a3c;
+  border: 1px solid #50484c;
+  border-radius: 3px;
+  height: fit-content;
+  padding: 4px 10px;
+  font-weight: 700;
+}
+.dYYkud-Jf3s- .RfHJSn8AdQE-:hover {
+  background: #7a5a6c;
+  border-color: #fff;
+}
+.dYYkud-Jf3s- .D8GFuSKNhX0- .DialogButton.Small {
+  width: auto;
+}
+.woc2JepJIek- {
+  margin-bottom: 10px;
+  padding-inline: 8px;
+}
+.JrlXbYAw30w- {
+  color: #f74843;
+}
+.SaleSectionHeader:has(> .JrlXbYAw30w-) {
+  justify-content: flex-start;
 }
 .VULTMp1PCTw- {
   z-index: 2;

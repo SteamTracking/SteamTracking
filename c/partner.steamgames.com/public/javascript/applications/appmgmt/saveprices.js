@@ -6,8 +6,10 @@ const __vite__mapDeps = (
       "./chunk~9e91add775.js",
       "./chunk~de7f2df91c.js",
       "./chunk~1fa4b8f2ff.js",
-      "./chunk~25a6634263.js",
+      "./chunk~bd90a5fce7.js",
       "./chunk~44f252525d.js",
+      "./chunk~96e60d7578.js",
+      "./chunk~25a6634263.js",
       "../../../css/applications/appmgmt/chunk~1fc66b8190.css",
       "./chunk~fa5480ab25.js",
       "./chunk~ede3e357a2.js",
@@ -24,7 +26,7 @@ const __vite__mapDeps = (
     ]),
 ) => _.map((_) => _[_]);
 import { _, _, _, _, _ } from "./chunk~de7f2df91c.js";
-import { _, _ } from "./chunk~25a6634263.js";
+import { _, _ } from "./chunk~bd90a5fce7.js";
 import {
   _,
   _,
@@ -83,7 +85,7 @@ var _ = _(_(), 1),
     _(
       () => import(`./chunk~9e91add775.js`),
       __vite__mapDeps([
-        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
       ]),
       import.meta.url,
     ),

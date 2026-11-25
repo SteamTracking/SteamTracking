@@ -1,12 +1,12 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { G as e, at as t, ot as n } from "./chunk~01cfc309bf.js";
+import { W as e, at as t, it as n } from "./chunk~01cfc309bf.js";
 import { l as r, r as i } from "./chunk~1e67c3e4e4.js";
 import { t as a } from "./chunk~3a8474f307.js";
-import { J as o, X as s, Y as c, Z as l, oh as u, tm as d } from "./main.js";
+import { J as o, X as s, Xp as c, Y as l, Z as u, th as d } from "./main.js";
 import { t as f } from "./chunk~f0745bb5e2.js";
-var p = n();
+var p = t();
 function m(e) {
   let t = (r({ subject_type: 1, topic: e.topicId }).data?.subjects ?? []).find(
       (t) => t.coordinates?.comment === e.subjectId,
@@ -93,44 +93,44 @@ function h(e) {
     }),
   });
 }
-function g(n, r, a, s, c) {
-  let f = d(),
-    p = t();
+function g(t, r, a, s, l) {
+  let f = c(),
+    p = n();
   return e({
     mutationFn: async () => {
-      let e = u.Init(o);
-      (e.Body().set_steamid(n),
+      let e = d.Init(o);
+      (e.Body().set_steamid(t),
         e.Body().set_gidforum(r),
         e.Body().set_gidtopic(a),
         e.Body().set_gidpost(s));
-      let t = await l.ResolveReportedPost(f, e);
-      if (!t.BSuccess())
-        throw Error(`Failed to acquit forum comment: ` + t.GetEMsg());
+      let n = await u.ResolveReportedPost(f, e);
+      if (!n.BSuccess())
+        throw Error(`Failed to acquit forum comment: ` + n.GetEMsg());
     },
     onSuccess: async (e) => {
-      await i(p, c);
+      await i(p, l);
     },
   });
 }
-function _(n, r, a, o, f) {
-  let p = d(),
-    m = t();
+function _(t, r, a, o, f) {
+  let p = c(),
+    m = n();
   return e({
     mutationFn: async (e) => {
-      let t = u.Init(c);
-      (t.Body().set_steamid(n),
-        t.Body().set_gidforum(r),
-        t.Body().set_gidtopic(a),
-        t.Body().set_gidpost(o),
-        t.Body().set_reason(e.reason),
-        t.Body().set_note(e.message));
-      for (let n of e.sanctions) {
+      let n = d.Init(l);
+      (n.Body().set_steamid(t),
+        n.Body().set_gidforum(r),
+        n.Body().set_gidtopic(a),
+        n.Body().set_gidpost(o),
+        n.Body().set_reason(e.reason),
+        n.Body().set_note(e.message));
+      for (let t of e.sanctions) {
         let e = new s();
-        (e.set_sanction(n.sanction),
-          n.days !== void 0 && e.set_days(n.days),
-          t.Body().add_sanctions(e));
+        (e.set_sanction(t.sanction),
+          t.days !== void 0 && e.set_days(t.days),
+          n.Body().add_sanctions(e));
       }
-      let i = await l.SanctionReportedPost(p, t);
+      let i = await u.SanctionReportedPost(p, n);
       if (!i.BSuccess())
         throw Error(
           `Failed to sanction forum comment: (` +

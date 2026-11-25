@@ -236,6 +236,7 @@
   letter-spacing: var(--letter-spacing);
   line-height: var(--line-height);
   border-radius: var(--control-radius);
+  height: fit-content;
   position: relative;
 }
 :where(.SPBgilcrPoU-).tV5yUd0n1-I- {

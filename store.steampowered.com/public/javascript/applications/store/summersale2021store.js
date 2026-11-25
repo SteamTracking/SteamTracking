@@ -2,18 +2,18 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { At as t, Lt as n, kt as r, tt as i } from "./chunk~01cfc309bf.js";
+import { It as t, Ot as n, et as r, kt as i } from "./chunk~01cfc309bf.js";
 import "./chunk~5214caf193.js";
 import {
-  Kb as a,
-  Yu as o,
-  _x as s,
-  cx as c,
-  sx as l,
-  yx as u,
+  Xu as a,
+  bx as o,
+  cx as s,
+  lx as c,
+  qb as l,
+  vx as u,
 } from "./main.js";
-var d = e(i()),
-  f = e(n()),
+var d = e(r()),
+  f = e(t()),
   p = class e {
     m_mapGenreToStickerResponse = new Map();
     m_eStoryBadgeGranted = 0;
@@ -24,7 +24,7 @@ var d = e(i()),
       return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
     constructor() {
-      r(this);
+      n(this);
       let e = c(`summerstory`, `application_config`);
       if (e) {
         if (e.story_choices) {
@@ -56,12 +56,12 @@ var d = e(i()),
       return this.m_mapGenreToStickerResponse.get(e);
     }
     async LoadClaimForGenre(e, t) {
-      if (this.m_mapGenreToStickerResponse.has(e) || !u.logged_in) return;
+      if (this.m_mapGenreToStickerResponse.has(e) || !o.logged_in) return;
       this.m_mapGenreToStickerResponse.set(e, {});
       let n = null;
       try {
         let r = await d.default.get(
-          s.STORE_BASE_URL + `promotion/ajaxhasclaimedgenresticker`,
+          u.STORE_BASE_URL + `promotion/ajaxhasclaimedgenresticker`,
           { params: { genre: e }, cancelToken: t?.token },
         );
         if (r?.status == 200 && r.data?.success == 1 && r.data?.results) {
@@ -73,19 +73,19 @@ var d = e(i()),
       } catch (e) {
         n = e;
       }
-      let r = o(n);
+      let r = a(n);
       console.error(`Could not check claim on genre`, e, r.strErrorMsg, r);
     }
     async MakeClaimForGenre(e, t, n) {
-      if (!u.logged_in) return 21;
+      if (!o.logged_in) return 21;
       let r = new FormData();
       (r.append(`genre`, e.toString()),
         r.append(`choice`, t.toString()),
-        r.append(`sessionid`, l()));
+        r.append(`sessionid`, s()));
       let i = null;
       try {
         let a = await d.default.post(
-          s.STORE_BASE_URL + `promotion/ajaxclaimstickerforgenre`,
+          u.STORE_BASE_URL + `promotion/ajaxclaimstickerforgenre`,
           r,
           { withCredentials: !0, cancelToken: n?.token },
         );
@@ -103,15 +103,15 @@ var d = e(i()),
       } catch (e) {
         i = e;
       }
-      let a = o(i);
+      let c = a(i);
       return (
-        console.error(`Could not make claim on genre`, e, a.strErrorMsg, a),
+        console.error(`Could not make claim on genre`, e, c.strErrorMsg, c),
         i?.data?.success || 2
       );
     }
   };
-(a([t], p.prototype, `m_mapGenreToStickerResponse`, void 0),
-  a([t], p.prototype, `m_eStoryBadgeGranted`, void 0));
+(l([i], p.prototype, `m_mapGenreToStickerResponse`, void 0),
+  l([i], p.prototype, `m_eStoryBadgeGranted`, void 0));
 function m() {
   return p.Get().GetStoryBadgeGranted();
 }
@@ -144,7 +144,7 @@ var y = 1658760;
 function b(e) {
   let [t] = v(e);
   return t?.sticker_def
-    ? `${s.MEDIA_CDN_COMMUNITY_URL}images/items/${y}/${t.sticker_def.item_image_small}`
+    ? `${u.MEDIA_CDN_COMMUNITY_URL}images/items/${y}/${t.sticker_def.item_image_small}`
     : null;
 }
 function x(e) {

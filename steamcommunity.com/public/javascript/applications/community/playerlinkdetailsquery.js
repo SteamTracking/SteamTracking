@@ -1,9 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { K as e } from "./chunk~01cfc309bf.js";
+import { G as e } from "./chunk~01cfc309bf.js";
 import { n as t } from "./chunk~cc40f6af5e.js";
-import { Am as n, cm as r, tm as i } from "./main.js";
+import { Tm as n, Xp as r, rm as i } from "./main.js";
 function a(e) {
   return (
     delete e?.private_data?.account_name,
@@ -18,19 +18,19 @@ function o(e) {
   return [`PlayerLinkDetails`, e];
 }
 function s(e, t) {
-  let i =
+  let r =
     typeof t == `number`
-      ? n.InitFromAccountID(t, r.EUNIVERSE).ConvertTo64BitString()
+      ? n.InitFromAccountID(t, i.EUNIVERSE).ConvertTo64BitString()
       : t;
   return {
-    queryKey: o(i),
-    queryFn: async () => (i ? a(await e.load(i)) : null),
-    enabled: !!i,
+    queryKey: o(r),
+    queryFn: async () => (r ? a(await e.load(r)) : null),
+    enabled: !!r,
   };
 }
 function c(n) {
-  let r = i(),
-    a = t(r);
+  let i = r(),
+    a = t(i);
   return e(s(a, n));
 }
 export { c as t };

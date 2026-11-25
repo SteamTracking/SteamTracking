@@ -19,12 +19,6 @@ message CGameAchievements {
 	repeated .CAchievementDetails achievements = 2;
 	optional uint32 all_time_unlocked_achievements = 3;
 	optional bool unlocked_more_in_future = 4;
-	repeated .CGameAchievements_CompletedSet completed_sets = 5;
-}
-
-message CGameAchievements_CompletedSet {
-	optional uint32 groupid = 1;
-	optional uint32 rtime_completed = 2;
 }
 
 message CGamePlaytimeStats {
@@ -234,7 +228,6 @@ message CSaleFeature_GetUserYearAchievements_Request {
 	optional uint32 year = 2;
 	repeated uint32 appids = 3;
 	optional bool total_only = 4;
-	optional bool include_completed_sets = 5;
 }
 
 message CSaleFeature_GetUserYearAchievements_Response {
@@ -242,7 +235,32 @@ message CSaleFeature_GetUserYearAchievements_Response {
 	optional uint32 total_achievements = 2;
 	optional uint32 total_rare_achievements = 3;
 	optional uint32 total_games_with_achievements = 4;
-	optional uint32 total_completed_sets = 5;
+}
+
+message CSaleFeature_GetUserYearAchievementSets_Request {
+	optional fixed64 steamid = 1;
+	optional uint32 year = 2;
+}
+
+message CSaleFeature_GetUserYearAchievementSets_Response {
+	repeated .CSaleFeature_GetUserYearAchievementSets_Response_Game games = 1;
+	optional uint32 total_sets = 2;
+	optional uint32 total_base_game_sets = 3;
+	optional uint32 total_dlc_sets = 4;
+	optional uint32 total_games = 5;
+}
+
+message CSaleFeature_GetUserYearAchievementSets_Response_CompletedSet {
+	optional uint32 groupid = 1;
+	optional uint32 rtime_completed = 2;
+}
+
+message CSaleFeature_GetUserYearAchievementSets_Response_Game {
+	optional uint32 appid = 1;
+	optional uint32 base_sets_completed = 2;
+	optional uint32 dlc_sets_completed = 3;
+	optional uint32 rtime_last_completed = 4;
+	repeated .CSaleFeature_GetUserYearAchievementSets_Response_CompletedSet completed_sets = 5;
 }
 
 message CSaleFeature_GetUserYearInReview_Request {
@@ -393,6 +411,8 @@ service SaleFeature {
 	rpc GetUserSharingPermissions (.CSaleFeature_GetUserSharingPermissions_Request) returns (.CSaleFeature_GetUserSharingPermissions_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetUserYearAchievements (.CSaleFeature_GetUserYearAchievements_Request) returns (.CSaleFeature_GetUserYearAchievements_Response);
+	// bConstMethod=true, ePrivilege=2, rgBrowserAPISites=ArrayExpression
+	rpc GetUserYearAchievementSets (.CSaleFeature_GetUserYearAchievementSets_Request) returns (.CSaleFeature_GetUserYearAchievementSets_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression
 	rpc GetUserYearInReview (.CSaleFeature_GetUserYearInReview_Request) returns (.CSaleFeature_GetUserYearInReview_Response);
 	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1, rgBrowserAPISites=ArrayExpression

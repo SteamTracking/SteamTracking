@@ -2,14 +2,14 @@
  ****/
 
 import {
-  At as e,
-  W as t,
-  en as n,
-  j as r,
-  sn as i,
-  vt as a,
+  Dt as e,
+  Pt as t,
+  W as n,
+  g as r,
+  nt as i,
+  r as a,
 } from "./chunk~de7f2df91c.js";
-import { I as o, N as s, Pt as c, r as l } from "./chunk~25a6634263.js";
+import { Mt as o, P as s, j as c, t as l } from "./chunk~bd90a5fce7.js";
 import { n as u } from "./chunk~68b7e78d68.js";
 import {
   Gt as d,
@@ -137,8 +137,8 @@ var q = te(je);
 function Me(e) {
   return q.Localize(`#CurrencyCodeDescription_${I(e)}`);
 }
-var J = i(e(), 1),
-  Y = a();
+var J = t(i(), 1),
+  Y = n();
 function X(e) {
   return Me(e.getValue());
 }
@@ -151,28 +151,28 @@ function Ne(e) {
   });
 }
 var Pe = { PriceEdit: (e) => `/packages/pricing/${e}` },
-  Z = i(c());
-function Fe(e, t, r) {
+  Z = t(o());
+function Fe(t, n, r) {
   let i = _(),
     a = V();
   return (0, J.useMemo)(() => {
     let o = [],
       s = [],
       c = [];
-    if (e) {
+    if (t) {
       let l = L(1).toUpperCase(),
-        u = j(t, l) || A(t, l) || M(t, l);
-      for (let n = 1; n < 48; ++n) {
-        if (!e.BIsSupportCurrencyAndOrRegion(n)) continue;
-        let s = L(n).toUpperCase(),
-          c = M(t, s),
-          l = A(t, s),
-          d = j(t, s),
-          f = e.GetScaledRecommendedPrice(u, n, void 0, i).price;
+        u = j(n, l) || A(n, l) || M(n, l);
+      for (let e = 1; e < 48; ++e) {
+        if (!t.BIsSupportCurrencyAndOrRegion(e)) continue;
+        let s = L(e).toUpperCase(),
+          c = M(n, s),
+          l = A(n, s),
+          d = j(n, s),
+          f = t.GetScaledRecommendedPrice(u, e, void 0, i).price;
         o.push({
-          packageID: t,
+          packageID: n,
           strPriceKey: s,
-          eCurrencyCode: n,
+          eCurrencyCode: e,
           eRegionCode: void 0,
           strCountryOverride: void 0,
           nPublishedPrice: c,
@@ -183,18 +183,18 @@ function Fe(e, t, r) {
           appids: r,
         });
       }
-      for (let n = 1; n < 5; ++n) {
-        if (!e.BIsSupportCurrencyAndOrRegion(1, n)) continue;
-        let a = L(1, n).toUpperCase(),
-          o = M(t, a),
-          c = A(t, a),
-          l = j(t, a),
-          d = e.GetScaledRecommendedPrice(u, 1, n, i).price;
+      for (let e = 1; e < 5; ++e) {
+        if (!t.BIsSupportCurrencyAndOrRegion(1, e)) continue;
+        let a = L(1, e).toUpperCase(),
+          o = M(n, a),
+          c = A(n, a),
+          l = j(n, a),
+          d = t.GetScaledRecommendedPrice(u, 1, e, i).price;
         s.push({
-          packageID: t,
+          packageID: n,
           strPriceKey: a,
           eCurrencyCode: 1,
-          eRegionCode: n,
+          eRegionCode: e,
           strCountryOverride: void 0,
           nPublishedPrice: o,
           nProposedPrice: c,
@@ -204,25 +204,25 @@ function Fe(e, t, r) {
           appids: r,
         });
       }
-      let d = se(t);
+      let d = se(n);
       d.length > 0 &&
-        d.forEach((e) => {
-          let { eCurrencyCode: i, strCountryCode: a } = F(e),
+        d.forEach((t) => {
+          let { eCurrencyCode: i, strCountryCode: a } = F(t),
             o = R(a);
-          n(
+          e(
             i == o,
             `Unexpected currency ${i} for country ${a} when expecting ${o} `,
           );
-          let s = A(t, e);
+          let s = A(n, t);
           c.push({
-            packageID: t,
-            strPriceKey: e,
+            packageID: n,
+            strPriceKey: t,
             eCurrencyCode: i,
             eRegionCode: void 0,
             strCountryOverride: a,
-            nPublishedPrice: de(t, e),
+            nPublishedPrice: de(n, t),
             nProposedPrice: s,
-            nLocalPrice: j(t, e),
+            nLocalPrice: j(n, t),
             nSuggestedPrice: void 0,
             bCanSetToFree: !1,
             appids: r,
@@ -230,10 +230,10 @@ function Fe(e, t, r) {
         });
     }
     return { rgCurrencyRows: o, rgRegionRows: s, rgCountryOverrideRows: c };
-  }, [e, t, a, i, r]);
+  }, [t, n, a, i, r]);
 }
 function Ie(e) {
-  let n = `${t.PARTNER_BASE_URL}doc/finance/taxfaq`;
+  let t = `${r.PARTNER_BASE_URL}doc/finance/taxfaq`;
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
       (0, Y.jsxs)(b, {
@@ -276,7 +276,7 @@ function Ie(e) {
           children: W.LocalizeReact(
             `#SinglePricingPackage_Desc_2`,
             (0, Y.jsx)(w, {
-              href: n,
+              href: t,
               children: W.LocalizeReact(`#SinglePricingPackage_Desc_2_Link`),
             }),
           ),
@@ -306,7 +306,7 @@ function Ue(e) {
   if (t.nProposedPrice == -1 || !t.nProposedPrice) return `--`;
   let n = !t.nPublishedPrice;
   return (0, Y.jsx)(`span`, {
-    className: r({
+    className: a({
       [Le]: n,
       [Re]: !n && t.nProposedPrice > t.nPublishedPrice,
       [ze]: !n && t.nProposedPrice < t.nPublishedPrice,
@@ -321,22 +321,22 @@ function Ge(e) {
   let {
       packageID: t,
       strPriceKey: n,
-      eRegionCode: i,
-      eCurrencyCode: a,
+      eRegionCode: r,
+      eCurrencyCode: i,
     } = e.row.original,
     { nPriceInCents: o, nProposedPriceInCents: s } = T(t, n),
     c = _(),
     l = v(),
     u = L(1).toUpperCase(),
     d = j(t, u) || A(t, u) || M(t, u),
-    { nGuidelinesLevel: f } = oe(l, c, d, a, i),
+    { nGuidelinesLevel: f } = oe(l, c, d, i, r),
     p = ce(n, o ?? s, f, !0);
   return p == -1 || !p
     ? `--`
-    : (0, Y.jsxs)(`span`, { className: r({}), children: [p, ` %`] });
+    : (0, Y.jsxs)(`span`, { className: a({}), children: [p, ` %`] });
 }
 function Ke(e) {
-  let { nPackageID: n } = e;
+  let { nPackageID: t } = e;
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
       (0, Y.jsxs)(x, {
@@ -345,7 +345,7 @@ function Ke(e) {
         paddingBottom: `4`,
         children: [
           (0, Y.jsx)(ie, {
-            href: `${t.PARTNER_BASE_URL}pricing/dashboard/?pn=${n}`,
+            href: `${r.PARTNER_BASE_URL}pricing/dashboard/?pn=${t}`,
             children: W.Localize(`#SinglePackagePricing_Right_Edit`),
           }),
           (0, Y.jsx)(S, {
@@ -365,7 +365,7 @@ function Ke(e) {
             children: W.Localize(`#SinglePackagePricing_Right_Help_Desc`),
           }),
           (0, Y.jsx)(w, {
-            href: `${t.PARTNER_BASE_URL}doc/store/pricing`,
+            href: `${r.PARTNER_BASE_URL}doc/store/pricing`,
             children: W.Localize(`#SinglePackagePricing_Right_Link`),
           }),
         ],
@@ -391,7 +391,7 @@ function Ke(e) {
                 children: W.LocalizeReact(
                   `#SinglePackagePricing_Right_FAQ_switching_answer`,
                   (0, Y.jsx)(w, {
-                    href: `${t.PARTNER_BASE_URL}wizard/HelpWithPublishing?issueid=915`,
+                    href: `${r.PARTNER_BASE_URL}wizard/HelpWithPublishing?issueid=915`,
                     children: W.Localize(
                       `#SinglePackagePricing_Right_FAQ_switching_answer_link`,
                     ),
@@ -408,12 +408,12 @@ function Ke(e) {
 function qe(e) {
   let { nPackageID: t } = e,
     n = D(t),
-    [i, a, s] = o(),
+    [r, i, o] = s(),
     c = ue(t),
     [l, u] = (0, J.useState)(!1);
   return n
     ? (0, Y.jsxs)(`div`, {
-        className: r(Oe, be),
+        className: a(Oe, be),
         children: [
           (0, Y.jsx)(`div`, {
             className: Se,
@@ -424,16 +424,16 @@ function qe(e) {
             children: [
               (0, Y.jsx)(xe, { packageID: t, bShowCancel: !1 }),
               (0, Y.jsx)(d, {
-                onClick: a,
-                className: r(De),
+                onClick: i,
+                className: a(De),
                 children: p(`#PricingDashboard_CancelPriceProposal`),
               }),
               (0, Y.jsx)(N, {
-                active: i,
+                active: r,
                 children: (0, Y.jsx)(ee, {
                   strTitle: p(`#PricingDashboard_CancelPriceProposal`),
                   strDescription: p(`#Dialog_AreYouSure`),
-                  closeModal: s,
+                  closeModal: o,
                   onOK: async () => {
                     (u(!0), await c(), u(!1), window.location.reload());
                   },
@@ -698,8 +698,8 @@ function Xe(e) {
 }
 function Ze(e) {
   let { nPackageID: t, oPricingGuideline: n } = e,
-    [r, i, a] = o(),
-    c = s();
+    [r, i, a] = s(),
+    o = c();
   return (0, Y.jsxs)(Y.Fragment, {
     children: [
       (0, Y.jsx)(ae, {
@@ -710,7 +710,7 @@ function Ze(e) {
         active: r,
         children: (0, Y.jsx)(Te, {
           closeModal: a,
-          fnOnApply: c,
+          fnOnApply: o,
           singlePackage: !0,
         }),
       }),

@@ -4,11 +4,11 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import {
   At as t,
-  Ct as n,
-  Pt as r,
-  jt as i,
-  kt as a,
-  tt as o,
+  Nt as n,
+  Ot as r,
+  St as i,
+  et as a,
+  kt as o,
 } from "./chunk~01cfc309bf.js";
 import {
   a as s,
@@ -20,38 +20,37 @@ import {
 } from "./chunk~b980797e15.js";
 import { t as te } from "./chunk~3f4314f3b4.js";
 import {
-  Bx as f,
-  Gx as p,
-  Hb as m,
-  Hy as ne,
-  Jb as re,
-  Kb as h,
-  Ox as ie,
-  Qx as g,
-  Ub as _,
-  Yu as v,
-  Zy as ae,
-  _x as y,
-  dS as b,
-  fS as x,
-  gS as S,
-  hS as C,
-  kx as w,
-  lS as T,
-  mS as E,
-  pS as D,
-  qu as O,
-  rS as oe,
-  rb as k,
-  sS as A,
-  sx as j,
-  tb as se,
-  uS as M,
-  yx as N,
-  zy as ce,
+  Ax as f,
+  By as p,
+  Ju as m,
+  Kx as h,
+  Qy as ne,
+  Ub as g,
+  Uy as _,
+  Vx as v,
+  Wb as y,
+  Xu as b,
+  _S as x,
+  aS as re,
+  bx as S,
+  cx as ie,
+  dS as C,
+  eS as w,
+  fS as T,
+  gS as E,
+  hS as D,
+  ib as O,
+  kx as ae,
+  lS as oe,
+  mS as k,
+  nb as se,
+  pS as A,
+  qb as j,
+  vS as M,
+  vx as N,
 } from "./main.js";
-var P = e(o()),
-  le = (function (e) {
+var P = e(a()),
+  ce = (function (e) {
     return (
       (e[(e.Chat = 0)] = `Chat`),
       (e[(e.Notification = 1)] = `Notification`),
@@ -59,8 +58,8 @@ var P = e(o()),
       e
     );
   })({}),
-  ue = class {};
-(y.CHAT_BASE_URL + ``, y.CHAT_BASE_URL + ``);
+  le = class {};
+(N.CHAT_BASE_URL + ``, N.CHAT_BASE_URL + ``);
 var F = class {
   bValid = !1;
   stream = { 0: `#Broadcast_EnglishMain` };
@@ -73,7 +72,7 @@ var F = class {
   offlineImage = ``;
   gidEvent = ``;
   constructor(e) {
-    (a(this), this.init(e));
+    (r(this), this.init(e));
   }
   init(e) {
     ((this.bValid = e.bValid),
@@ -88,16 +87,16 @@ var F = class {
       (this.gidEvent = e.gidEvent ?? ``));
   }
 };
-(h([t], F.prototype, `bValid`, void 0),
-  h([t], F.prototype, `stream`, void 0),
-  h([t], F.prototype, `name`, void 0),
-  h([t], F.prototype, `appName`, void 0),
-  h([t], F.prototype, `appID`, void 0),
-  h([t], F.prototype, `link`, void 0),
-  h([t], F.prototype, `linkName`, void 0),
-  h([t], F.prototype, `tabIcon`, void 0),
-  h([t], F.prototype, `offlineImage`, void 0),
-  h([t], F.prototype, `gidEvent`, void 0));
+(j([o], F.prototype, `bValid`, void 0),
+  j([o], F.prototype, `stream`, void 0),
+  j([o], F.prototype, `name`, void 0),
+  j([o], F.prototype, `appName`, void 0),
+  j([o], F.prototype, `appID`, void 0),
+  j([o], F.prototype, `link`, void 0),
+  j([o], F.prototype, `linkName`, void 0),
+  j([o], F.prototype, `tabIcon`, void 0),
+  j([o], F.prototype, `offlineImage`, void 0),
+  j([o], F.prototype, `gidEvent`, void 0));
 var I = new F({
   bValid: !1,
   stream: { 0: `#Broadcast_EnglishMain` },
@@ -113,7 +112,7 @@ function L(e, t, n) {
   return [e, t, n];
 }
 var R = class extends Error {},
-  de = class extends ue {
+  ue = class extends le {
     m_appid;
     constructor(e) {
       (super(), (this.m_appid = e || 0));
@@ -265,23 +264,23 @@ var R = class extends Error {},
     }
     UpdateSoundtrack(e, t) {}
   },
-  fe = 250,
+  de = 250,
   z = 250,
   B = class {
     m_elVideo;
     m_peerConnection = null;
     m_strBroadcastSteamID = ``;
     m_ulWebRTCSessionID = ``;
-    m_schCandidateTimer = new m();
+    m_schCandidateTimer = new g();
     m_nHostCandidateGeneration = 0;
     m_nCandidateUpdateIntervalMS = 0;
-    m_listeners = new _();
+    m_listeners = new y();
     m_bFirstPlay = !0;
     m_bStatsViewVisible = !1;
-    m_schCaptureDisplayStatsTrigger = new m();
+    m_schCaptureDisplayStatsTrigger = new g();
     m_stats = new s();
     constructor(e) {
-      (a(this), (this.m_elVideo = e));
+      (r(this), (this.m_elVideo = e));
     }
     async PlayMPD(e, t, n) {}
     async PlayWebRTC(e, t, n, r, i) {
@@ -328,7 +327,7 @@ var R = class extends Error {},
               t.append(`candidate`, e.candidate.candidate),
               P.default
                 .post(
-                  `${y.CHAT_BASE_URL}broadcast/addbroadcastwebrtccandidate`,
+                  `${N.CHAT_BASE_URL}broadcast/addbroadcastwebrtccandidate`,
                   t,
                 )
                 .then((e) => {
@@ -360,7 +359,7 @@ var R = class extends Error {},
             e.append(`answer`, o.localDescription?.sdp ?? ``));
           try {
             await P.default
-              .post(`${y.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`, e)
+              .post(`${N.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`, e)
               .then((e) => {
                 let t = e.data;
                 if (!(t.success && t.success == 1))
@@ -371,7 +370,7 @@ var R = class extends Error {},
               this.OnWebRTCConnectionRetry());
             return;
           }
-          ((this.m_nCandidateUpdateIntervalMS = fe),
+          ((this.m_nCandidateUpdateIntervalMS = de),
             this.m_schCandidateTimer.Schedule(
               this.m_nCandidateUpdateIntervalMS,
               () => this.GetHostCandidates(),
@@ -388,7 +387,7 @@ var R = class extends Error {},
         ));
       try {
         await P.default
-          .post(`${y.CHAT_BASE_URL}broadcast/getbroadcastwebrtccandidates`, e)
+          .post(`${N.CHAT_BASE_URL}broadcast/getbroadcastwebrtccandidates`, e)
           .then((e) => {
             let t = e.data,
               n = t.data,
@@ -496,7 +495,7 @@ var R = class extends Error {},
       this.m_elVideo.muted = e;
     }
     SetVolume(e) {
-      ((e = f(e, 0, 1)), (this.m_elVideo.volume = e));
+      ((e = v(e, 0, 1)), (this.m_elVideo.volume = e));
     }
     GetVolume() {
       return this.m_elVideo.volume;
@@ -546,16 +545,16 @@ var R = class extends Error {},
       return !1;
     }
   };
-(h([g], B.prototype, `PlayWebRTC`, null),
-  h([n.bound], B.prototype, `CaptureStatsForDisplay`, null),
-  h([g], B.prototype, `OnVideoPause`, null),
-  h([g], B.prototype, `OnVideoResize`, null));
-var V = e(r(), 1),
-  pe = class e extends V.Message {
+(j([w], B.prototype, `PlayWebRTC`, null),
+  j([i.bound], B.prototype, `CaptureStatsForDisplay`, null),
+  j([w], B.prototype, `OnVideoPause`, null),
+  j([w], B.prototype, `OnVideoResize`, null));
+var V = e(n(), 1),
+  fe = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.video_id || T(e.M()),
+        e.prototype.video_id || C(e.M()),
         V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -565,8 +564,8 @@ var V = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            video_id: { n: 1, br: x.readUint64String, bw: S.writeUint64String },
-            client_cellid: { n: 2, br: x.readUint32, bw: S.writeUint32 },
+            video_id: { n: 1, br: k.readUint64String, bw: M.writeUint64String },
+            client_cellid: { n: 2, br: k.readUint32, bw: M.writeUint32 },
           },
         }),
         e.sm_m
@@ -579,10 +578,10 @@ var V = e(r(), 1),
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return C(e.M(), t, n);
+      return x(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return A(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new V.BinaryReader(t),
@@ -590,7 +589,7 @@ var V = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return M(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
@@ -607,11 +606,11 @@ var V = e(r(), 1),
       return `CVideo_ClientGetVideoURL_Request`;
     }
   },
-  me = class e extends V.Message {
+  pe = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.video_id || T(e.M()),
+        e.prototype.video_id || C(e.M()),
         V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -621,8 +620,8 @@ var V = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            video_id: { n: 1, br: x.readUint64String, bw: S.writeUint64String },
-            video_url: { n: 2, br: x.readString, bw: S.writeString },
+            video_id: { n: 1, br: k.readUint64String, bw: M.writeUint64String },
+            video_url: { n: 2, br: k.readString, bw: M.writeString },
           },
         }),
         e.sm_m
@@ -635,10 +634,10 @@ var V = e(r(), 1),
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return C(e.M(), t, n);
+      return x(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return A(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new V.BinaryReader(t),
@@ -646,7 +645,7 @@ var V = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return M(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
@@ -663,11 +662,11 @@ var V = e(r(), 1),
       return `CVideo_ClientGetVideoURL_Response`;
     }
   },
-  he = class e extends V.Message {
+  me = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.encryption_key || T(e.M()),
+        e.prototype.encryption_key || C(e.M()),
         V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -677,7 +676,7 @@ var V = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            encryption_key: { n: 1, br: x.readBytes, bw: S.writeBytes },
+            encryption_key: { n: 1, br: k.readBytes, bw: M.writeBytes },
           },
         }),
         e.sm_m
@@ -690,10 +689,10 @@ var V = e(r(), 1),
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return C(e.M(), t, n);
+      return x(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return A(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new V.BinaryReader(t),
@@ -701,7 +700,7 @@ var V = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return M(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
@@ -718,11 +717,11 @@ var V = e(r(), 1),
       return `CVideo_UnlockedH264_Notification`;
     }
   },
-  ge = class e extends V.Message {
+  he = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.app_id || T(e.M()),
+        e.prototype.app_id || C(e.M()),
         V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -732,8 +731,8 @@ var V = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            app_id: { n: 1, br: x.readUint32, bw: S.writeUint32 },
-            client_cellid: { n: 2, br: x.readUint32, bw: S.writeUint32 },
+            app_id: { n: 1, br: k.readUint32, bw: M.writeUint32 },
+            client_cellid: { n: 2, br: k.readUint32, bw: M.writeUint32 },
           },
         }),
         e.sm_m
@@ -746,10 +745,10 @@ var V = e(r(), 1),
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return C(e.M(), t, n);
+      return x(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return A(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new V.BinaryReader(t),
@@ -757,7 +756,7 @@ var V = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return M(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
@@ -774,11 +773,11 @@ var V = e(r(), 1),
       return `CFovasVideo_ClientGetOPFSettings_Request`;
     }
   },
-  _e = class e extends V.Message {
+  ge = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.app_id || T(e.M()),
+        e.prototype.app_id || C(e.M()),
         V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -788,8 +787,8 @@ var V = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            app_id: { n: 1, br: x.readUint32, bw: S.writeUint32 },
-            opf_settings: { n: 2, br: x.readString, bw: S.writeString },
+            app_id: { n: 1, br: k.readUint32, bw: M.writeUint32 },
+            opf_settings: { n: 2, br: k.readString, bw: M.writeString },
           },
         }),
         e.sm_m
@@ -802,10 +801,10 @@ var V = e(r(), 1),
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return C(e.M(), t, n);
+      return x(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return A(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new V.BinaryReader(t),
@@ -813,7 +812,7 @@ var V = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return M(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
@@ -834,7 +833,7 @@ var V = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.app_id || T(e.M()),
+        e.prototype.app_id || C(e.M()),
         V.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -844,35 +843,35 @@ var V = e(r(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            app_id: { n: 1, br: x.readUint32, bw: S.writeUint32 },
+            app_id: { n: 1, br: k.readUint32, bw: M.writeUint32 },
             playback_position_in_seconds: {
               n: 2,
-              br: x.readUint32,
-              bw: S.writeUint32,
+              br: k.readUint32,
+              bw: M.writeUint32,
             },
             video_track_id: {
               n: 3,
-              br: x.readUint64String,
-              bw: S.writeUint64String,
+              br: k.readUint64String,
+              bw: M.writeUint64String,
             },
             audio_track_id: {
               n: 4,
-              br: x.readUint64String,
-              bw: S.writeUint64String,
+              br: k.readUint64String,
+              bw: M.writeUint64String,
             },
             timedtext_track_id: {
               n: 5,
-              br: x.readUint64String,
-              bw: S.writeUint64String,
+              br: k.readUint64String,
+              bw: M.writeUint64String,
             },
-            last_modified: { n: 6, br: x.readUint32, bw: S.writeUint32 },
+            last_modified: { n: 6, br: k.readUint32, bw: M.writeUint32 },
             hide_from_watch_history: {
               n: 7,
               d: !1,
-              br: x.readBool,
-              bw: S.writeBool,
+              br: k.readBool,
+              bw: M.writeBool,
             },
-            hide_from_library: { n: 8, d: !1, br: x.readBool, bw: S.writeBool },
+            hide_from_library: { n: 8, d: !1, br: k.readBool, bw: M.writeBool },
           },
         }),
         e.sm_m
@@ -885,10 +884,10 @@ var V = e(r(), 1),
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return C(e.M(), t, n);
+      return x(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return A(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new V.BinaryReader(t),
@@ -896,7 +895,7 @@ var V = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return M(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
@@ -917,7 +916,7 @@ var V = e(r(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.bookmarks || T(e.M()),
+        e.prototype.bookmarks || C(e.M()),
         V.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -938,10 +937,10 @@ var V = e(r(), 1),
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return C(e.M(), t, n);
+      return x(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return A(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new V.BinaryReader(t),
@@ -949,7 +948,7 @@ var V = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return M(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
@@ -966,11 +965,11 @@ var V = e(r(), 1),
       return `CVideo_SetVideoBookmark_Notification`;
     }
   },
-  ve = class e extends V.Message {
+  _e = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appids || T(e.M()),
+        e.prototype.appids || C(e.M()),
         V.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -984,11 +983,11 @@ var V = e(r(), 1),
               n: 1,
               r: !0,
               q: !0,
-              br: x.readUint32,
-              pbr: x.readPackedUint32,
-              bw: S.writeRepeatedUint32,
+              br: k.readUint32,
+              pbr: k.readPackedUint32,
+              bw: M.writeRepeatedUint32,
             },
-            updated_since: { n: 2, br: x.readUint32, bw: S.writeUint32 },
+            updated_since: { n: 2, br: k.readUint32, bw: M.writeUint32 },
           },
         }),
         e.sm_m
@@ -1001,10 +1000,10 @@ var V = e(r(), 1),
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return C(e.M(), t, n);
+      return x(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return A(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new V.BinaryReader(t),
@@ -1012,7 +1011,7 @@ var V = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return M(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
@@ -1029,11 +1028,11 @@ var V = e(r(), 1),
       return `CVideo_GetVideoBookmarks_Request`;
     }
   },
-  ye = class e extends V.Message {
+  ve = class e extends V.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.bookmarks || T(e.M()),
+        e.prototype.bookmarks || C(e.M()),
         V.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -1054,10 +1053,10 @@ var V = e(r(), 1),
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return C(e.M(), t, n);
+      return x(e.M(), t, n);
     }
     static fromObject(t) {
-      return b(e.M(), t);
+      return A(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new V.BinaryReader(t),
@@ -1065,7 +1064,7 @@ var V = e(r(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return M(e.MBF(), t, n);
+      return T(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new V.BinaryWriter();
@@ -1085,41 +1084,41 @@ var V = e(r(), 1),
   W;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`Video.ClientGetVideoURL#1`, w(pe, t, n), me, {
+    return e.SendMsg(`Video.ClientGetVideoURL#1`, f(fe, t, n), pe, {
       ePrivilege: 1,
     });
   }
   e.ClientGetVideoURL = t;
   function n(e, t) {
-    return e.SendNotification(`Video.SetVideoBookmark#1`, w(U, t), {
+    return e.SendNotification(`Video.SetVideoBookmark#1`, f(U, t), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   e.SetVideoBookmark = n;
   function r(e, t, n) {
-    return e.SendMsg(`Video.GetVideoBookmarks#1`, w(ve, t, n), ye, {
+    return e.SendMsg(`Video.GetVideoBookmarks#1`, f(_e, t, n), ve, {
       ePrivilege: 1,
     });
   }
   e.GetVideoBookmarks = r;
 })((W ||= {}));
-var be;
+var ye;
 (function (e) {
   e.NotifyUnlockedH264Handler = {
     name: `VideoClient.NotifyUnlockedH264#1`,
-    request: he,
+    request: me,
   };
-})((be ||= {}));
-var xe;
+})((ye ||= {}));
+var be;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`FovasVideo.ClientGetOPFSettings#1`, w(ge, t, n), _e, {
+    return e.SendMsg(`FovasVideo.ClientGetOPFSettings#1`, f(he, t, n), ge, {
       ePrivilege: 1,
     });
   }
   e.ClientGetOPFSettings = t;
-})((xe ||= {}));
+})((be ||= {}));
 var G = class e {
     static s_VODStore;
     m_transport = null;
@@ -1160,14 +1159,14 @@ var G = class e {
       return 0;
     }
     async SendBookMarkedTimeToServer(e, t, n, r, i) {
-      if (!N.logged_in) return;
+      if (!S.logged_in) return;
       if (!this.m_transport) {
         console.warn(
           `CVideoBookmarkStore:SetBookMark no auth token / transport`,
         );
         return;
       }
-      let a = ie.Init(U),
+      let a = ae.Init(U),
         o = this.m_mapBookmarks.get(e);
       if (o) {
         let s = !1;
@@ -1193,13 +1192,11 @@ var G = class e {
       );
     }
     Init() {
-      N.logged_in && this.LoadWatchVideoOAuthToken();
+      S.logged_in &&
+        (this.m_transport = p(new _(N.WEBAPI_BASE_URL)).GetServiceTransport());
     }
     async LoadWatchVideoOAuthToken() {
-      let e =
-          re() == `community`
-            ? y.COMMUNITY_BASE_URL + `actions/ajaxgetwatchvodtoken`
-            : y.STORE_BASE_URL + `actions/ajaxgetwatchvodtoken`,
+      let e = N.STORE_BASE_URL + `actions/ajaxgetwatchvodtoken`,
         t = {};
       try {
         let n = await P.default.get(e, { params: t, withCredentials: !0 });
@@ -1210,13 +1207,13 @@ var G = class e {
           n.data.success == 1 &&
           n.data.webapi_token
         ) {
-          this.m_transport = ce(
-            new ne(y.WEBAPI_BASE_URL, n.data.webapi_token),
+          this.m_transport = p(
+            new _(N.WEBAPI_BASE_URL, n.data.webapi_token),
           ).GetServiceTransport();
           return;
         }
       } catch (e) {
-        let t = v(e);
+        let t = b(e);
         console.error(
           `CVideoBookmarkStore:LoadWatchVideoOAuthToken: Failed ` +
             t.strErrorMsg,
@@ -1225,13 +1222,13 @@ var G = class e {
       }
     }
   },
-  Se = class {
+  xe = class {
     m_appid;
     constructor(e) {
       this.m_appid = e;
     }
     async SetBookmark(e, t, n, r) {
-      N.logged_in &&
+      S.logged_in &&
         G.Get().SendBookMarkedTimeToServer(
           this.m_appid,
           Math.floor(e),
@@ -1241,15 +1238,15 @@ var G = class e {
         );
     }
     GetBeginPlaytime() {
-      return N.logged_in
+      return S.logged_in
         ? G.Get().GetBookmarkPlayTimeInSeconds(this.m_appid)
         : 0;
     }
   },
   K = 1800,
-  Ce = 1e3,
-  we = 5e3,
-  Te = (function (e) {
+  Se = 1e3,
+  Ce = 5e3,
+  we = (function (e) {
     return (
       (e[(e.None = 0)] = `None`),
       (e[(e.Unlocking = 1)] = `Unlocking`),
@@ -1259,19 +1256,19 @@ var G = class e {
       e
     );
   })({});
-async function Ee(e, t, n) {
+async function Te(e, t, n) {
   if (!t) return;
   let r = new FormData();
   (r.append(`steamid`, e),
     r.append(`broadcastid`, t),
     r.append(`viewertoken`, n));
   try {
-    await P.default.post(y.CHAT_BASE_URL + `broadcast/stopwatching`, r);
+    await P.default.post(N.CHAT_BASE_URL + `broadcast/stopwatching`, r);
   } catch {}
 }
 var q = class {
     m_rtUnlockTime = 0;
-    m_schUnlockTimeout = new m();
+    m_schUnlockTimeout = new g();
     m_broadcast;
     m_video;
     UnlockH264(e, t) {
@@ -1283,20 +1280,20 @@ var q = class {
           (this.m_video = t),
           (this.m_rtUnlockTime = Date.now()),
           this.m_schUnlockTimeout.Schedule(100, () => this.CheckUnlockState()))
-        : e.SetState(4, k(`#BroadcastWatch_MinBrowser`));
+        : e.SetState(4, O(`#BroadcastWatch_MinBrowser`));
     }
     BCanUnlockH264() {
-      return O(`RemotePlay.UnlockH264`)
+      return m(`RemotePlay.UnlockH264`)
         ? (console.log(`Client supports direct H.264 unlock`), !0)
-        : O(`BrowserView.PostMessageToParent`)
+        : m(`BrowserView.PostMessageToParent`)
           ? (console.log(`Client supports browserview H.264 unlock`), !0)
           : (console.log(`Client does not support H.264 unlock`), !1);
     }
     RequestUnlockH264() {
-      O(`RemotePlay.UnlockH264`)
+      m(`RemotePlay.UnlockH264`)
         ? (console.log(`Requesting direct H.264 unlock`),
           SteamClient.RemotePlay.UnlockH264())
-        : O(`BrowserView.PostMessageToParent`)
+        : m(`BrowserView.PostMessageToParent`)
           ? (console.log(`Requesting browserview unlock`),
             SteamClient.BrowserView.PostMessageToParent(
               `UnlockH264Request`,
@@ -1314,7 +1311,7 @@ var q = class {
             ? (console.log(
                 `Unlocking H.264 timed out (Steam client or servers offline?)`,
               ),
-              this.m_broadcast.SetState(4, k(`#BroadcastWatch_MinBrowser`)))
+              this.m_broadcast.SetState(4, O(`#BroadcastWatch_MinBrowser`)))
             : this.m_schUnlockTimeout.Schedule(100, () =>
                 this.CheckUnlockState(),
               ));
@@ -1322,7 +1319,7 @@ var q = class {
   },
   J = class {
     constructor() {
-      a(this);
+      r(this);
     }
     m_steamIDBroadcast = ``;
     m_ulBroadcastID = ``;
@@ -1333,18 +1330,18 @@ var q = class {
     m_eWatchState = 0;
     m_strStateDescription = ``;
     m_rgVideos = [];
-    m_schManifestTimeout = new m();
-    m_schHeartbeatTimeout = new m();
+    m_schManifestTimeout = new g();
+    m_schHeartbeatTimeout = new g();
     SetState(e, t = ``) {
       ((this.m_eWatchState = e),
         (this.m_strStateDescription = t),
         e == 4 && console.log(this.m_strStateDescription));
     }
   };
-(h([t], J.prototype, `m_ulBroadcastID`, void 0),
-  h([t], J.prototype, `m_eWatchState`, void 0),
-  h([t], J.prototype, `m_strStateDescription`, void 0),
-  h([n], J.prototype, `SetState`, null));
+(j([o], J.prototype, `m_ulBroadcastID`, void 0),
+  j([o], J.prototype, `m_eWatchState`, void 0),
+  j([o], J.prototype, `m_strStateDescription`, void 0),
+  j([i], J.prototype, `SetState`, null));
 var Y = class {
   m_steamIDBroadcast = ``;
   m_bInitialized = !1;
@@ -1355,23 +1352,23 @@ var Y = class {
   m_strThumbnailUrl = ``;
   m_nViewerCount = 0;
   m_bIsOnline = !1;
-  m_schUpdateTimeout = new m();
+  m_schUpdateTimeout = new g();
   m_nRefCount = 0;
   constructor(e) {
-    (a(this), (this.m_steamIDBroadcast = e));
+    (r(this), (this.m_steamIDBroadcast = e));
   }
 };
-(h([t], Y.prototype, `m_bInitialized`, void 0),
-  h([t], Y.prototype, `m_strTitle`, void 0),
-  h([t], Y.prototype, `m_strAppId`, void 0),
-  h([t], Y.prototype, `m_nAppID`, void 0),
-  h([t], Y.prototype, `m_strAppTitle`, void 0),
-  h([t], Y.prototype, `m_strThumbnailUrl`, void 0),
-  h([t], Y.prototype, `m_nViewerCount`, void 0),
-  h([t], Y.prototype, `m_bIsOnline`, void 0));
+(j([o], Y.prototype, `m_bInitialized`, void 0),
+  j([o], Y.prototype, `m_strTitle`, void 0),
+  j([o], Y.prototype, `m_strAppId`, void 0),
+  j([o], Y.prototype, `m_nAppID`, void 0),
+  j([o], Y.prototype, `m_strAppTitle`, void 0),
+  j([o], Y.prototype, `m_strThumbnailUrl`, void 0),
+  j([o], Y.prototype, `m_nViewerCount`, void 0),
+  j([o], Y.prototype, `m_bIsOnline`, void 0));
 var X = class {
   constructor() {
-    a(this);
+    r(this);
   }
   m_eWatchState = 0;
   m_strStateDescription = ``;
@@ -1382,14 +1379,14 @@ var X = class {
       e == 4 && console.log(this.m_strStateDescription));
   }
 };
-(h([t], X.prototype, `m_eWatchState`, void 0),
-  h([t], X.prototype, `m_strStateDescription`, void 0),
-  h([n], X.prototype, `SetState`, null));
-var De = class extends X {
+(j([o], X.prototype, `m_eWatchState`, void 0),
+  j([o], X.prototype, `m_strStateDescription`, void 0),
+  j([i], X.prototype, `SetState`, null));
+var Ee = class extends X {
     m_clipID;
     m_data;
   },
-  Oe = class extends X {
+  De = class extends X {
     m_nAppIDVOD;
     m_manifestURL;
   },
@@ -1399,10 +1396,10 @@ var De = class extends X {
     m_mapVODs = new Map();
     m_activeVideo = null;
     m_broadcastSettings = { nVolume: 1, bMuted: !1, ulViewerToken: `0` };
-    m_schSaveSettings = new m();
+    m_schSaveSettings = new g();
     m_broadcastInfos = {};
     constructor() {
-      (a(this), this.LoadBroadcastSettings());
+      (r(this), this.LoadBroadcastSettings());
     }
     GetBroadcastState(e) {
       if (e.IsBroadcastClip()) {
@@ -1512,8 +1509,8 @@ var De = class extends X {
       (e.Stop(),
         n &&
           (n.m_ulBroadcastID &&
-            Ee(t, n.m_ulBroadcastID, this.m_broadcastSettings.ulViewerToken),
-          oe(n.m_rgVideos, (t) => t == e),
+            Te(t, n.m_ulBroadcastID, this.m_broadcastSettings.ulViewerToken),
+          re(n.m_rgVideos, (t) => t == e),
           this.RemoveBroadcastIfUnused(n)));
     }
     StartInfo(e) {
@@ -1531,8 +1528,8 @@ var De = class extends X {
     GetOrCreateBroadcastInfo(e) {
       if (!e) return new Y(``);
       if (!this.m_broadcastInfos[e]) {
-        let n = t(new Y(e));
-        this.m_broadcastInfos[e] = n;
+        let t = o(new Y(e));
+        this.m_broadcastInfos[e] = t;
       }
       return this.m_broadcastInfos[e];
     }
@@ -1566,7 +1563,7 @@ var De = class extends X {
       let t = this.m_mapClips.get(e);
       return (
         t ||
-        ((t = new De()),
+        ((t = new Ee()),
         (t.m_clipID = e),
         (t.m_eWatchState = 0),
         this.m_mapClips.set(e, t),
@@ -1577,7 +1574,7 @@ var De = class extends X {
       let t = this.m_mapVODs.get(e);
       return (
         t ||
-        ((t = new Oe()),
+        ((t = new De()),
         (t.m_nAppIDVOD = e),
         (t.m_eWatchState = 0),
         this.m_mapVODs.set(e, t),
@@ -1585,42 +1582,42 @@ var De = class extends X {
       );
     }
     async LoadBroadcastInfo(e) {
-      let t = `0`,
-        n = this.m_mapBroadcasts.get(e.m_steamIDBroadcast);
-      if ((n && (t = n.m_ulBroadcastID), e.m_nRefCount == 0)) return;
-      let r = {
+      let n = `0`,
+        r = this.m_mapBroadcasts.get(e.m_steamIDBroadcast);
+      if ((r && (n = r.m_ulBroadcastID), e.m_nRefCount == 0)) return;
+      let i = {
         steamid: e.m_steamIDBroadcast,
-        broadcastid: t,
+        broadcastid: n,
         location:
-          n &&
-          n.m_rgVideos &&
-          n.m_rgVideos[0] &&
-          n.m_rgVideos[0].GetWatchLocation(),
+          r &&
+          r.m_rgVideos &&
+          r.m_rgVideos[0] &&
+          r.m_rgVideos[0].GetWatchLocation(),
       };
       try {
-        let t = await P.default.get(
-          `${y.CHAT_BASE_URL}broadcast/getbroadcastinfo/`,
-          { params: r },
+        let n = await P.default.get(
+          `${N.CHAT_BASE_URL}broadcast/getbroadcastinfo/`,
+          { params: i },
         );
-        if (!t || !t.data || !t.data.success || t.data.success != 1) {
+        if (!n || !n.data || !n.data.success || n.data.success != 1) {
           e.m_bInitialized = !0;
           return;
         }
-        let n = t.data;
-        i(() => {
+        let r = n.data;
+        t(() => {
           ((e.m_bInitialized = !0),
-            (e.m_strTitle = n.title),
-            (e.m_strAppId = n.appid),
-            (e.m_nAppID = Number.parseInt(n.appid)),
-            (e.m_strAppTitle = n.app_title),
-            (e.m_strThumbnailUrl = n.thumbnail_url),
-            (e.m_nViewerCount = n.viewer_count),
-            (e.m_bIsOnline = n.is_online),
+            (e.m_strTitle = r.title),
+            (e.m_strAppId = r.appid),
+            (e.m_nAppID = Number.parseInt(r.appid)),
+            (e.m_strAppTitle = r.app_title),
+            (e.m_strThumbnailUrl = r.thumbnail_url),
+            (e.m_nViewerCount = r.viewer_count),
+            (e.m_bIsOnline = r.is_online),
             !e.m_strTitle &&
               I &&
               ((e.m_strTitle = I.name),
               (e.m_strAppTitle = I.appName || I.name)));
-          let t = n.update_interval;
+          let t = r.update_interval;
           t &&
             typeof t == `number` &&
             e.m_schUpdateTimeout.Schedule(t * 1e3, () =>
@@ -1632,7 +1629,7 @@ var De = class extends X {
       }
     }
     DelayedGetBroadcastManifest(e, t, n = Date.now()) {
-      e.m_schManifestTimeout.Schedule(we, () =>
+      e.m_schManifestTimeout.Schedule(Ce, () =>
         this.GetBroadcastManifest(e, t, n),
       );
     }
@@ -1643,21 +1640,21 @@ var De = class extends X {
           broadcastid: 0,
           viewertoken: this.m_broadcastSettings.ulViewerToken,
           watchlocation: t,
-          sessionid: j(),
+          sessionid: ie(),
           is_webrtc: e.m_bWebRTC,
         },
         i = null;
       try {
         i = await P.default.get(
-          y.CHAT_BASE_URL + `broadcast/getbroadcastmpd/`,
+          N.CHAT_BASE_URL + `broadcast/getbroadcastmpd/`,
           { params: r, withCredentials: !0 },
         );
       } catch (e) {
-        let t = v(e);
+        let t = b(e);
         console.error(`Failed to get broadcast manifest!` + t.strErrorMsg, t);
       }
       if (!i || i.status != 200) {
-        e.SetState(4, k(`#BroadcastWatch_RequestFailed`));
+        e.SetState(4, O(`#BroadcastWatch_RequestFailed`));
         return;
       }
       let a = i.data;
@@ -1678,10 +1675,10 @@ var De = class extends X {
             );
           }, Math.random() * 3e4));
       else if (o == `waiting`) {
-        e.SetState(2, k(`#BroadcastWatch_WaitingForResponse`));
+        e.SetState(2, O(`#BroadcastWatch_WaitingForResponse`));
         let r = Date.now() - n;
         if (r > 6e4) {
-          e.SetState(4, k(`#BroadcastWatch_NotAvailable`));
+          e.SetState(4, O(`#BroadcastWatch_NotAvailable`));
           return;
         }
         let i = r > 3e4 ? a.retry : 5e3;
@@ -1690,37 +1687,37 @@ var De = class extends X {
         );
       } else
         o == `waiting_for_start`
-          ? (e.SetState(2, k(`#BroadcastWatch_WaitingForStart`)),
+          ? (e.SetState(2, O(`#BroadcastWatch_WaitingForStart`)),
             e.m_schManifestTimeout.Schedule(a.retry, () =>
               this.GetBroadcastManifest(e, t, n),
             ))
           : o == `waiting_for_reconnect`
-            ? (e.SetState(2, k(`#BroadcastWatch_WaitingForReconnect`)),
+            ? (e.SetState(2, O(`#BroadcastWatch_WaitingForReconnect`)),
               e.m_schManifestTimeout.Schedule(a.retry, () =>
                 this.GetBroadcastManifest(e, t, n),
               ))
             : o == `end`
-              ? e.SetState(4, k(`#BroadcastWatch_NotAvailable`))
+              ? e.SetState(4, O(`#BroadcastWatch_NotAvailable`))
               : o == `too_many_broadcasts`
-                ? e.SetState(4, k(`#BroadcastWatch_TooManyBroadcasts`))
+                ? e.SetState(4, O(`#BroadcastWatch_TooManyBroadcasts`))
                 : o == `system_not_supported`
-                  ? e.SetState(4, k(`#BroadcastWatch_SystemNotSupported`))
+                  ? e.SetState(4, O(`#BroadcastWatch_SystemNotSupported`))
                   : o == `user_restricted`
-                    ? e.SetState(4, k(`#BroadcastWatch_UserRestricted`))
+                    ? e.SetState(4, O(`#BroadcastWatch_UserRestricted`))
                     : o == `poor_upload_quality`
-                      ? e.SetState(4, k(`#BroadcastWatch_PoorUploadQuality`))
+                      ? e.SetState(4, O(`#BroadcastWatch_PoorUploadQuality`))
                       : o == `request_failed`
-                        ? e.SetState(4, k(`#BroadcastWatch_RequestFailed`))
+                        ? e.SetState(4, O(`#BroadcastWatch_RequestFailed`))
                         : o == `too_many_viewers`
-                          ? e.SetState(4, k(`#BroadcastWatch_TooManyViewers`))
-                          : e.SetState(4, k(`#BroadcastWatch_NotAvailable`));
+                          ? e.SetState(4, O(`#BroadcastWatch_TooManyViewers`))
+                          : e.SetState(4, O(`#BroadcastWatch_NotAvailable`));
     }
     async GetClipManifest(e, t) {
       e.SetState(2, ``);
-      let n = { clipid: e.m_clipID, watchlocation: t, sessionid: j() },
+      let n = { clipid: e.m_clipID, watchlocation: t, sessionid: ie() },
         r = null;
       try {
-        r = await P.default.get(y.CHAT_BASE_URL + `broadcast/getclipdetails`, {
+        r = await P.default.get(N.CHAT_BASE_URL + `broadcast/getclipdetails`, {
           params: n,
           withCredentials: !0,
         });
@@ -1728,17 +1725,17 @@ var De = class extends X {
         (console.error(e), console.log(`Failed to get clip manifest!`));
       }
       if (!r || r.status != 200) {
-        e.SetState(4, k(`#BroadcastWatch_RequestFailed`));
+        e.SetState(4, O(`#BroadcastWatch_RequestFailed`));
         return;
       }
       let i = r.data;
       i.success == 1
         ? (e.SetState(3), (e.m_data = i), this.LoadClip(e))
-        : e.SetState(4, k(`#BroadcastWatch_RequestFailed`));
+        : e.SetState(4, O(`#BroadcastWatch_RequestFailed`));
     }
     async GetVODManifest(e, t) {
       e.SetState(2, ``);
-      let n = await ae.fetchQuery(te(e.m_nAppIDVOD)).catch((t) => {
+      let n = await ne.fetchQuery(te(e.m_nAppIDVOD)).catch((t) => {
         console.error(
           `BroadcastWatchStore:GetVODManifest: Failed to load VOD ` +
             e.m_nAppIDVOD,
@@ -1752,14 +1749,14 @@ var De = class extends X {
           e.SetState(3),
           (e.m_manifestURL = n.video_url),
           this.LoadVOD(e))
-        : e.SetState(4, k(`#BroadcastWatch_RequestFailed`));
+        : e.SetState(4, O(`#BroadcastWatch_RequestFailed`));
     }
     async HeartbeatBroadcast(e) {
       let t = new FormData();
       (t.append(`steamid`, e.m_steamIDBroadcast),
         t.append(`broadcastid`, e.m_ulBroadcastID),
         t.append(`viewertoken`, this.m_broadcastSettings.ulViewerToken),
-        P.default.post(y.CHAT_BASE_URL + `broadcast/heartbeat/`, t),
+        P.default.post(N.CHAT_BASE_URL + `broadcast/heartbeat/`, t),
         e.m_schHeartbeatTimeout.Schedule(
           e.m_data.heartbeat_interval * 1e3,
           () => this.HeartbeatBroadcast(e),
@@ -1808,12 +1805,12 @@ var De = class extends X {
       Object.assign(this.m_broadcastSettings, t);
       let n = this.m_broadcastSettings;
       ((n.bMuted = !!n.bMuted),
-        (n.nVolume = f(n.nVolume, 0, 1)),
+        (n.nVolume = v(n.nVolume, 0, 1)),
         typeof n.ulViewerToken != `string` && (n.ulViewerToken = `0`));
     }
     SaveBroadcastSettings() {
       window.localStorage &&
-        this.m_schSaveSettings.Schedule(Ce, () => {
+        this.m_schSaveSettings.Schedule(Se, () => {
           try {
             window.localStorage.setItem(
               `broadcastSettings`,
@@ -1838,8 +1835,8 @@ var De = class extends X {
         this.SaveBroadcastSettings());
     }
   };
-h([t], Z.prototype, `m_mapBroadcasts`, void 0);
-var ke = (function (e) {
+j([o], Z.prototype, `m_mapBroadcasts`, void 0);
+var Oe = (function (e) {
     return (
       (e[(e.Timeline = 1)] = `Timeline`), (e[(e.Minimap = 2)] = `Minimap`), e
     );
@@ -1847,7 +1844,7 @@ var ke = (function (e) {
   Q = class {
     m_elVideo;
     m_player = null;
-    m_listeners = new _();
+    m_listeners = new y();
     m_gameDataParser = null;
     m_eWatchLocation = 0;
     m_bStartWithSubtitles = !1;
@@ -1868,17 +1865,17 @@ var ke = (function (e) {
     m_nVideoEndPos = 0;
     m_editorStartTime = 0;
     m_editorEndTime = 0;
-    m_rgMarkers = t.array();
-    m_rgSegments = t.array();
-    m_rgRegions = t.array();
+    m_rgMarkers = o.array();
+    m_rgSegments = o.array();
+    m_rgRegions = o.array();
     m_fnOnVideoEnd;
     m_videoEndingTimer;
-    constructor(e, t, n, r) {
-      (a(this),
+    constructor(e, t, n, i) {
+      (r(this),
         (this.m_elVideo = e),
         (this.m_nVolume = t),
         (this.m_bMuted = n),
-        (this.m_eWatchLocation = r));
+        (this.m_eWatchLocation = i));
     }
     SetBroadcastSteamID(e) {
       this.m_steamIDBroadcast = e;
@@ -1988,7 +1985,7 @@ var ke = (function (e) {
       this.m_fnOnVideoEnd = e;
     }
     InitPlayer() {
-      (A(!this.m_player, `Initialized twice?`),
+      (oe(!this.m_player, `Initialized twice?`),
         this.m_listeners.AddEventListener(
           this.m_elVideo,
           `playing`,
@@ -2083,7 +2080,7 @@ var ke = (function (e) {
       (t &&
         t.SetBroadcasterAndViewerInfo(
           this.m_steamIDBroadcast,
-          N.steamid,
+          S.steamid,
           e.m_ulBroadcastID,
           e.m_ulViewerToken,
         ),
@@ -2103,9 +2100,9 @@ var ke = (function (e) {
       let t = new d(this.m_elVideo);
       (t.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
         (this.m_player = t),
-        N.logged_in &&
+        S.logged_in &&
           e.m_nAppIDVOD &&
-          t.SetBookmarkAdapter(new Se(e.m_nAppIDVOD)),
+          t.SetBookmarkAdapter(new xe(e.m_nAppIDVOD)),
         e.m_manifestURL && t.PlayMPD(e.m_manifestURL),
         this.SetVolume(this.m_nVolume),
         this.m_player?.SetMuted(this.m_bMuted));
@@ -2229,7 +2226,7 @@ var ke = (function (e) {
       if (!t || typeof t.gamedata != `object`) return;
       (this.m_gameDataParser &&
         this.m_gameDataParser.GetAppID() == t.gamedata.__appid) ||
-        (this.m_gameDataParser = new de(t.gamedata.__appid));
+        (this.m_gameDataParser = new ue(t.gamedata.__appid));
       let n = this.m_player?.GetLiveContentStartTime().getTime() ?? 0;
       if (`timelinemarkers` in t.gamedata) {
         let e = this.m_gameDataParser.UpdateMarkers(
@@ -2275,7 +2272,7 @@ var ke = (function (e) {
       return this.m_nTimelineDuration;
     }
     GetTimeAtMousePosition(e, t, n, r) {
-      let i = p(e, t.left, t.right, n, r);
+      let i = h(e, t.left, t.right, n, r);
       return Math.floor(i + 0.5);
     }
     GetPercentOffsetFromTime(e, t) {
@@ -2285,7 +2282,7 @@ var ke = (function (e) {
         t == 1
           ? ((r = this.m_nVideoEndPos), (n = r - this.m_nTimelineDuration))
           : ((n = 0), (r = 0)),
-        p(e, n, r, 0, 100)
+        h(e, n, r, 0, 100)
       );
     }
     GetTimelineMarkers() {
@@ -2307,32 +2304,32 @@ var ke = (function (e) {
       return this.m_rgSegments.length > 0;
     }
   };
-(h([t], Q.prototype, `m_player`, void 0),
-  h([t], Q.prototype, `m_bPaused`, void 0),
-  h([t], Q.prototype, `m_nPlaybackTime`, void 0),
-  h([t], Q.prototype, `m_bBuffering`, void 0),
-  h([t], Q.prototype, `m_bOnLiveEdge`, void 0),
-  h([t], Q.prototype, `m_nVolume`, void 0),
-  h([t], Q.prototype, `m_bMuted`, void 0),
-  h([t], Q.prototype, `m_bUserInputNeeded`, void 0),
-  h([t], Q.prototype, `m_bIsReplay`, void 0),
-  h([t], Q.prototype, `m_nTimelineDuration`, void 0),
-  h([t], Q.prototype, `m_nVideoStartPos`, void 0),
-  h([t], Q.prototype, `m_nVideoEndPos`, void 0),
-  h([t], Q.prototype, `m_editorStartTime`, void 0),
-  h([t], Q.prototype, `m_editorEndTime`, void 0),
-  h([n.bound], Q.prototype, `StartBroadcast`, null),
-  h([n.bound], Q.prototype, `StartClip`, null),
-  h([n.bound], Q.prototype, `StartVOD`, null),
-  h([g], Q.prototype, `OnVideoPlaying`, null),
-  h([g], Q.prototype, `OnVideoPause`, null),
-  h([n.bound], Q.prototype, `OnVideoTimeUpdate`, null),
-  h([g], Q.prototype, `OnVolumeUpdated`, null),
-  h([n.bound], Q.prototype, `OnGameDataUpdate`, null),
-  h([g], Q.prototype, `OnDownloadFailed`, null),
-  h([g], Q.prototype, `OnWebRTCRetry`, null),
-  h([g], Q.prototype, `OnWebRTCFailed`, null),
-  h([g], Q.prototype, `OnUserInputNeeded`, null));
+(j([o], Q.prototype, `m_player`, void 0),
+  j([o], Q.prototype, `m_bPaused`, void 0),
+  j([o], Q.prototype, `m_nPlaybackTime`, void 0),
+  j([o], Q.prototype, `m_bBuffering`, void 0),
+  j([o], Q.prototype, `m_bOnLiveEdge`, void 0),
+  j([o], Q.prototype, `m_nVolume`, void 0),
+  j([o], Q.prototype, `m_bMuted`, void 0),
+  j([o], Q.prototype, `m_bUserInputNeeded`, void 0),
+  j([o], Q.prototype, `m_bIsReplay`, void 0),
+  j([o], Q.prototype, `m_nTimelineDuration`, void 0),
+  j([o], Q.prototype, `m_nVideoStartPos`, void 0),
+  j([o], Q.prototype, `m_nVideoEndPos`, void 0),
+  j([o], Q.prototype, `m_editorStartTime`, void 0),
+  j([o], Q.prototype, `m_editorEndTime`, void 0),
+  j([i.bound], Q.prototype, `StartBroadcast`, null),
+  j([i.bound], Q.prototype, `StartClip`, null),
+  j([i.bound], Q.prototype, `StartVOD`, null),
+  j([w], Q.prototype, `OnVideoPlaying`, null),
+  j([w], Q.prototype, `OnVideoPause`, null),
+  j([i.bound], Q.prototype, `OnVideoTimeUpdate`, null),
+  j([w], Q.prototype, `OnVolumeUpdated`, null),
+  j([i.bound], Q.prototype, `OnGameDataUpdate`, null),
+  j([w], Q.prototype, `OnDownloadFailed`, null),
+  j([w], Q.prototype, `OnWebRTCRetry`, null),
+  j([w], Q.prototype, `OnWebRTCFailed`, null),
+  j([w], Q.prototype, `OnUserInputNeeded`, null));
 var $ = new Z();
 window.uiBroadcastWatchStore = $;
-export { le as a, I as i, Te as n, ke as r, $ as t };
+export { ce as a, I as i, we as n, Oe as r, $ as t };

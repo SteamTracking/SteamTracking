@@ -32,7 +32,6 @@ import {
   _,
   _,
   _,
-  _,
 } from "./chunk~d3515eca4e.js";
 import {
   _,
@@ -5719,28 +5718,28 @@ var _ = _(_()),
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.PostChatMessage#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.PostChatMessage = _;
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.UpdateChatMessageFlair#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UpdateChatMessageFlair = _;
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.MuteBroadcastChatUser#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.MuteBroadcastChatUser = _;
   function _(_, _, _) {
     return _.SendMsg(`Broadcast.RemoveUserChatText#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.RemoveUserChatText = _;
@@ -7963,7 +7962,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`AccountPrivacy.GetCookiePreferences#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCookiePreferences = _;
@@ -8118,8 +8117,9 @@ var _ = class {
     } catch {}
     let _ = _ === 401;
     if (!_) {
-      let _ = _ ? `Unauthorized` : void 0;
-      _ = this.CreateFailedMsgProtobuf(_, 3, _);
+      let _ = _ ? `Unauthorized` : void 0,
+        _ = _ === 429 ? 84 : 2;
+      _ = this.CreateFailedMsgProtobuf(_, 3, _, _);
     }
     return (
       _ &&
@@ -8184,10 +8184,10 @@ var _ = class {
     if (!_ || _.length != 4) throw `Invalid service name: ${_}`;
     return `${this.m_strWebAPIBaseURL}I${_[1]}Service/${_[2]}/v${_[3]}`;
   }
-  CreateFailedMsgProtobuf(_, _, _) {
+  CreateFailedMsgProtobuf(_, _, _, _) {
     let _ = _.Init(_);
     return (
-      _.Hdr().set_eresult(2),
+      _.Hdr().set_eresult(_),
       _.Hdr().set_transport_error(_),
       _ && _.Hdr().set_error_message(_),
       _
@@ -8239,16 +8239,15 @@ async function _() {
     return !1;
   }
 }
-function _(_) {
-  return _(_.rgBrowserAPISites, `community`);
-}
 var _ = class {
   m_ServiceTransport;
   m_AnonymousServiceTransport;
   m_fallbackInterface;
+  m_strSiteName;
   m_refreshLoginCookiePromise;
-  constructor(_) {
+  constructor(_, _ = `community`) {
     ((this.m_fallbackInterface = _),
+      (this.m_strSiteName = _),
       (this.m_ServiceTransport = {
         SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
           bSendAuth: !0,
@@ -8269,7 +8268,7 @@ var _ = class {
       }));
   }
   async SendMsgAndAwaitResponse(_, _, _, _, _) {
-    if (!_(_)) {
+    if (!this.BCanSendMessageViaBrowserAPI(_)) {
       if (this.m_fallbackInterface)
         return _.bSendAuth
           ? this.m_fallbackInterface?.GetServiceTransport().SendMsg(_, _, _, _)
@@ -8284,6 +8283,9 @@ var _ = class {
       !(await this.BEnsureLoginCookieRefreshed())
       ? _.msgResult
       : (await this.SendMsgOnce(_, _, _, _, _)).msgResult;
+  }
+  BCanSendMessageViaBrowserAPI(_) {
+    return _(_.rgBrowserAPISites, this.m_strSiteName);
   }
   BEnsureLoginCookieRefreshed() {
     return (
@@ -8320,7 +8322,7 @@ var _ = class {
     };
   }
   SendNotification(_, _, _, _) {
-    if (!_(_)) {
+    if (!this.BCanSendMessageViaBrowserAPI(_)) {
       if (this.m_fallbackInterface)
         return _.bSendAuth
           ? this.m_fallbackInterface
@@ -8413,12 +8415,9 @@ var _ = class {
     return new Date(_ * 1e3);
   }
 };
-function _() {
-  return [_.COMMUNITY_BASE_URL, _.STEAMTV_BASE_URL];
-}
 function _(_) {
   let _ = _();
-  return _ && _().includes(_) ? new _(_) : _;
+  return _ && _ === _.STORE_CHECKOUT_BASE_URL ? new _(_, `checkout`) : new _(_);
 }
 var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
@@ -9029,7 +9028,7 @@ var _ = class _ extends _.Message {
   function _(_, _) {
     return _.SendNotification(`Video.SetVideoBookmark#1`, _(_, _), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetVideoBookmark = _;
@@ -9129,13 +9128,11 @@ var _ = class _ {
       );
     }
     Init() {
-      _.logged_in && this.LoadWatchVideoOAuthToken();
+      _.logged_in &&
+        (this.m_transport = _(new _(_.WEBAPI_BASE_URL)).GetServiceTransport());
     }
     async LoadWatchVideoOAuthToken() {
-      let _ =
-          _() == `community`
-            ? _.COMMUNITY_BASE_URL + `actions/ajaxgetwatchvodtoken`
-            : _.STORE_BASE_URL + `actions/ajaxgetwatchvodtoken`,
+      let _ = _.STORE_BASE_URL + `actions/ajaxgetwatchvodtoken`,
         _ = {};
       try {
         let _ = await _.default.get(_, {

@@ -23,14 +23,12 @@ import {
   _,
   _,
   _,
-  _,
-  _,
 } from "./chunk~6b8ddcaac8.js";
 import { _, _, _, _, _, _, _, _, _ } from "./chunk~f57d770d64.js";
 import { _ } from "./chunk~961c06e93e.js";
+import { _, _, _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~5adf866415.js";
 import { _ } from "./chunk~2f085f1384.js";
-import { _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _, _ } from "./chunk~f4c928a27a.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~e867464c75.js";
@@ -361,6 +359,15 @@ function _(_, _) {
     _.unique_id + `_` + _,
   );
 }
+var _ = _.createContext(void 0);
+function _(_) {
+  let _ = _.useContext(_)?.(_.capsule);
+  return _ === void 0
+    ? (0, _.jsx)(_, {
+        ..._,
+      })
+    : _;
+}
 function _(_, _) {
   let {
     capsuleStyle: _,
@@ -543,12 +550,23 @@ function _(_, _, _, _, _, _, _, _, _, _) {
     _ = _,
     _ = _.length;
   (_ &&
-    _ &&
-    _ > 1 &&
-    _ <= Math.min(4, _) &&
-    _ > _[0] &&
-    (!_ || _ > 1) &&
-    ((_ = [_]), (_ = [`grid`])),
+  _ &&
+  _ > 1 &&
+  _ <= Math.min(4, _) &&
+  (_ < _[0] || (_ > _[0] && (!_ || _ > 1)))
+    ? ((_ = [_]), (_ = [`grid`]))
+    : _ &&
+      _ &&
+      _ &&
+      _ > 1 &&
+      _ > _[0] &&
+      _ < _(_, _, _, _, _) &&
+      (_ = Array.from(
+        {
+          length: _,
+        },
+        (_, _) => Math.floor((_ + _) / _),
+      )),
     _ && (_ > 1 || _[0] == `tall`)
       ? (_ = [`fullrow`])
       : _ && _.length === 2 && _[0] === `tall` && (_ = [`grid`]));
@@ -556,7 +574,7 @@ function _(_, _, _, _, _, _, _, _, _, _) {
     _ = Math.min(_[0], _);
   if (_ && _) {
     let _ = _ ? _ : _(_, _, _, _, _);
-    _ = _(_, _);
+    _ = _(_, _, !_);
   }
   if (_ && _.length > _)
     _ = (0, _.createElement)(
@@ -682,9 +700,9 @@ function _(_, _, _, _, _) {
   }
   return _;
 }
-function _(_, _) {
+function _(_, _, _) {
   if (_.length <= _) return _;
-  let _ = Math.min(_ - 2, _),
+  let _ = _ ? _ - 1 : Math.min(_ - 2, _),
     _ = _.length % _;
   return _ === 0 || _ > _ ? _ : _.slice(0, _.length - _);
 }
@@ -931,6 +949,19 @@ function _(_) {
 function _(_) {
   return Math.max(_(_, 0), 4);
 }
+var _ = {
+  1: `salesmartdiscountreason-wishlist`,
+  2: `salesmartdiscountreason-firsttimeonsale`,
+  3: `salesmartdiscountreason-largestdiscount`,
+  4: `salesmartdiscountreason-endingsoon`,
+  5: `salesmartdiscountreason-newlyonsale`,
+  6: `salesmartdiscountreason-wellreviewed`,
+  7: `salesmartdiscountreason-topseller`,
+  8: `salesmartdiscountreason-hotdeal`,
+  9: `salesmartdiscountreason-deepdiscount`,
+  10: `salesmartdiscountreason-popularinregion`,
+  11: `salesmartdiscountreason-justupdated`,
+};
 function _(_, _, _ = ``, _ = 0) {
   if (_.enable_faceted_browsing && _ > 0)
     return {
@@ -980,11 +1011,12 @@ function _(_, _, _ = ``, _ = 0) {
             feature: `salesmartpersonalizedcarousel` + _,
             depth: _(_, _).nSectionIndex,
           };
-        case `discount_reason`:
+        case `discount_reason`: {
+          let _ = _.smart_section_discount_reason;
           return {
-            feature: `salesmartdiscountreason` + _,
-            depth: _.smart_section_discount_reason ?? 0,
+            feature: ((_ !== void 0 && _[_]) || `salesmartdiscountreason`) + _,
           };
+        }
         case `tag`:
           return {
             feature: `autopopulatetag` + _,
@@ -1054,6 +1086,11 @@ function _(_, _, _ = ``, _ = 0) {
       return {
         feature: `crosspromotesalepage` + _,
       };
+    case `vo_internal`:
+      if (_.internal_section_data?.internal_type === `just_updated`)
+        return {
+          feature: _[11] + _,
+        };
   }
   return {
     feature: `salesection` + _,

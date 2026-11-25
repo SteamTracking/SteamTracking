@@ -1,24 +1,24 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 /* Third-party software licenses can be found at licenses.txt */
-import { At as e, an as t, nn as n, sn as r } from "./chunk~de7f2df91c.js";
+import { Mt as e, Pt as t, kt as n, nt as r } from "./chunk~de7f2df91c.js";
 import { t as i } from "./chunk~92931c6310.js";
 import { i as a, n as o, r as s, t as c } from "./chunk~521597d5f9.js";
 import { t as l } from "./chunk~f3a565e188.js";
-var u = n((e, n, r) => {
-  (function (t, r) {
-    typeof e == `object` && n !== void 0
+var u = n((t, n, r) => {
+  (function (e, r) {
+    typeof t == `object` && n !== void 0
       ? (n.exports = r())
       : typeof define == `function` && define.amd
         ? define(r)
-        : (t.moment = r());
+        : (e.moment = r());
   })(r, function () {
-    var e;
+    var t;
     function r() {
-      return e.apply(null, arguments);
+      return t.apply(null, arguments);
     }
-    function i(t) {
-      e = t;
+    function i(e) {
+      t = e;
     }
     function a(e) {
       return (
@@ -1420,15 +1420,15 @@ Arguments: ` +
     function Fn(e) {
       return typeof e == `string` && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(e);
     }
-    function In(e) {
+    function In(t) {
       var r = null,
         i,
         a;
-      if (s(B, e)) return B[e];
-      if (((a = Nn(e)), s(B, a))) return B[a];
+      if (s(B, t)) return B[t];
+      if (((a = Nn(t)), s(B, a))) return B[a];
       if (n !== void 0 && n && n.exports && Fn(a))
         try {
-          ((r = jn._abbr), (i = t), i(`./locale/` + a), V(r));
+          ((r = jn._abbr), (i = e), i(`./locale/` + a), V(r));
         } catch {
           B[a] = null;
         }
@@ -3675,7 +3675,7 @@ Arguments: ` +
   });
 });
 u();
-var d = r(e()),
+var d = t(r()),
   f = new (class {
     bIncludeFeaturedAsGameSource = !0;
     get nOverrideDateNow() {

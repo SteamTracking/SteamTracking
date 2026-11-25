@@ -2,17 +2,18 @@
  ****/
 
 import {
-  $ as e,
-  At as t,
-  P as n,
-  X as r,
-  rt as i,
-  sn as a,
-  vt as o,
+  Pt as e,
+  S as t,
+  T as n,
+  W as r,
+  k as i,
+  nt as a,
+  o,
 } from "./chunk~de7f2df91c.js";
-import { Kt as s, t as c } from "./chunk~25a6634263.js";
-import { i as l } from "./chunk~8fb30ea08b.js";
-import { t as u } from "./chunk~ede3e357a2.js";
+import { Wt as s } from "./chunk~bd90a5fce7.js";
+import { i as c } from "./chunk~8fb30ea08b.js";
+import { t as l } from "./chunk~ede3e357a2.js";
+import { t as u } from "./chunk~25a6634263.js";
 import { t as d } from "./chunk~726542bc75.js";
 import { t as f } from "./chunk~f4e4ed5c17.js";
 import { t as p } from "./chunk~c55709d290.js";
@@ -37,19 +38,19 @@ function v(e, t) {
     return (e.set(i, [...a, n]), e);
   }, new Map());
 }
-var y = a(f());
+var y = e(f());
 async function b(e) {
   let t = { accountid: e, origin: self.origin },
-    r = `${i.COMMUNITY_BASE_URL}actions/ajaxgetuserpartnerinfo`;
-  n() == `partner` &&
-    (r = `${i.PARTNER_BASE_URL}actions/ajaxgetuserpartnerinfo`);
-  let a = await y.default.get(r, { params: t, withCredentials: !0 });
-  if (!a || a.status != 200 || a.data?.success != 1 || !a.data?.partners)
-    throw `Load single user partner info failed ${p(a).strErrorMsg}`;
-  return a.data.partners;
+    n = `${i.COMMUNITY_BASE_URL}actions/ajaxgetuserpartnerinfo`;
+  o() == `partner` &&
+    (n = `${i.PARTNER_BASE_URL}actions/ajaxgetuserpartnerinfo`);
+  let r = await y.default.get(n, { params: t, withCredentials: !0 });
+  if (!r || r.status != 200 || r.data?.success != 1 || !r.data?.partners)
+    throw `Load single user partner info failed ${p(r).strErrorMsg}`;
+  return r.data.partners;
 }
 function x(e) {
-  let { data: t, isLoading: n } = u({
+  let { data: t, isLoading: n } = l({
     queryKey: [`PartnerInfoList`, e],
     queryFn: () => b(e),
   });
@@ -58,7 +59,7 @@ function x(e) {
 function S(e, t) {
   return x(e)?.find((e) => e.partnerid === t);
 }
-var C = a(t(), 1);
+var C = e(a(), 1);
 function w(e, t = {}) {
   let {
       nTimeoutMS: n = 350,
@@ -89,13 +90,13 @@ function w(e, t = {}) {
     a
   );
 }
-var T = class t {
+var T = class e {
   m_mapPartnerToContactInfo = new Map();
   m_mapPromisePartnerLoading = new Map();
   async FetchValvePartnerContacts(e) {
-    let t = i.PARTNER_BASE_URL + `actions/ajaxgetpartnervalvecontacts`,
-      n = { sessionid: r(), strPartnerIDs: e.join(`,`) },
-      a = await y.default.get(t, { params: n, withCredentials: !0 });
+    let n = i.PARTNER_BASE_URL + `actions/ajaxgetpartnervalvecontacts`,
+      r = { sessionid: t(), strPartnerIDs: e.join(`,`) },
+      a = await y.default.get(n, { params: r, withCredentials: !0 });
     return a?.status == 200 && a?.data.success == 1
       ? (a.data.contacts.forEach((e) => {
           (this.m_mapPartnerToContactInfo.has(e.partnerid) ||
@@ -138,7 +139,7 @@ var T = class t {
             (n == `business` && e.is_business_contact) ||
             (n == `tech` && e.is_tech_contact),
         )
-        .map((e) => new c(e.steamid).GetAccountID());
+        .map((e) => new u(e.steamid).GetAccountID());
       return s(e);
     }
     return [];
@@ -146,14 +147,14 @@ var T = class t {
   static s_Singleton;
   static Get() {
     return (
-      t.s_Singleton || ((t.s_Singleton = new t()), t.s_Singleton.Init()),
-      t.s_Singleton
+      e.s_Singleton || ((e.s_Singleton = new e()), e.s_Singleton.Init()),
+      e.s_Singleton
     );
   }
   Init() {
-    let t = e(`partner_valve_contact_list`, `application_config`);
-    t &&
-      t.forEach((e) => {
+    let e = n(`partner_valve_contact_list`, `application_config`);
+    e &&
+      e.forEach((e) => {
         this.m_mapPartnerToContactInfo.has(e.partnerid)
           ? this.m_mapPartnerToContactInfo.get(e.partnerid).push(e)
           : this.m_mapPartnerToContactInfo.set(e.partnerid, [e]);
@@ -164,7 +165,7 @@ function E(e) {
   return [`PartnerValveContactByPartnerID`, e];
 }
 function D(e) {
-  let { data: t, isLoading: n } = u({
+  let { data: t, isLoading: n } = l({
     queryKey: E(e),
     queryFn: async () => T.Get().LoadValvePartnerContact(e),
   });
@@ -193,8 +194,8 @@ function j(e, t, n) {
   );
 }
 function M(e) {
-  let t = l();
-  return u({
+  let t = c();
+  return l({
     queryKey: [`multiloadpartnerconatact`, ...(e || [])],
     queryFn: async () => {
       let n = await T.Get().InternalLoadMultiplePartnerContact(e);
@@ -210,7 +211,7 @@ function M(e) {
   });
 }
 var N = `_0vUrwCDzuXw-`,
-  P = o();
+  P = r();
 function F(e) {
   let t = e.getValue();
   return t?.length > 0 ? (0, P.jsx)(I, { text: t, regExp: /\r\n|\r|\n/ }) : ``;

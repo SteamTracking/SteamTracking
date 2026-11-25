@@ -7,6 +7,10 @@ import { _ } from "./chunk~6c2bf73948.js";
 import { _ } from "./chunk~bdc7e21194.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./main.js";
+function _(_) {
+  let { eTrustBucket: _ } = _;
+  return null;
+}
 var _ = `xLywNz6knuU-`,
   _ = `nA9MaZPmXRU-`,
   _ = `WS9SvilWIXE-`,
@@ -14,6 +18,7 @@ var _ = `xLywNz6knuU-`,
   _ = `hosEjyB9L6s-`,
   _ = `QTrmbby5x-U-`,
   _ = `U5fa7ynZKdY-`,
+  _ = `i-jXCzZsk-I-`,
   _ = `WN24eWEAUSk-`,
   _ = `Dm1bd-TdIjE-`,
   _ = _();
@@ -183,34 +188,37 @@ function _(_) {
   );
 }
 function _(_) {
-  let {
-    steamid: _,
-    strPersonaName: _,
-    bIsSupportAccount: _,
-    bIsDeveloperAccount: _,
-  } = _;
+  let { steamid: _, strPersonaName: _, status: _ } = _;
   return (0, _.jsxs)(_.Fragment, {
     children: [
-      (0, _.jsx)(`span`, {
+      (0, _.jsxs)(`div`, {
         className: _,
-        children: (0, _.jsx)(_, {
-          href: `${_.COMMUNITY_BASE_URL}profiles/${_}`,
-          children: (0, _.jsx)(_, {
-            size: `2`,
-            truncate: !0,
-            title: _,
+        children: [
+          (0, _.jsx)(`span`, {
             className: _,
-            children: _,
+            children: (0, _.jsx)(_, {
+              href: `${_.COMMUNITY_BASE_URL}profiles/${_}`,
+              children: (0, _.jsx)(_, {
+                size: `2`,
+                truncate: !0,
+                title: _,
+                className: _,
+                children: _,
+              }),
+            }),
           }),
-        }),
+          (0, _.jsx)(_, {
+            eTrustBucket: _?.trust_bucket,
+          }),
+        ],
       }),
-      _ &&
+      !!_?.is_support &&
         (0, _.jsx)(`span`, {
           className: `yMtdDuggCPo-`,
           title: `Support or Admin account`,
           children: `Mod`,
         }),
-      _ &&
+      !!_?.is_developer &&
         (0, _.jsx)(`span`, {
           className: `yMtdDuggCPo-`,
           title: `Partner account for this item's app`,
@@ -239,8 +247,7 @@ function _(_) {
             (0, _.jsx)(_, {
               steamid: _.actor_steamid,
               strPersonaName: _,
-              bIsSupportAccount: _.actor_is_support,
-              bIsDeveloperAccount: _.actor_is_developer,
+              status: _.actor_account_status,
             }),
             (0, _.jsx)(_, {
               size: `2`,
@@ -330,12 +337,7 @@ function _(_) {
       (_, _) => (_.time_reported ?? 0) - (_.time_reported ?? 0),
     ),
     _ = _(_?.reported_content_id, !0).data?.subject?.reports ?? [],
-    _ = new Set(
-      _.filter((_) => _.reporter_is_support).map((_) => _.reporter_steamid),
-    ),
-    _ = new Set(
-      _.filter((_) => _.reporter_is_developer).map((_) => _.reporter_steamid),
-    );
+    _ = new Map(_.map((_) => [_.reporter_steamid, _.reporter_account_status]));
   return (0, _.jsxs)(`table`, {
     className: _,
     children: [
@@ -409,8 +411,7 @@ function _(_) {
                 _,
                 {
                   report: _,
-                  bReporterIsSupport: _.has(_.reporter_steamid),
-                  bReporterIsDeveloper: _.has(_.reporter_steamid),
+                  reporterStatus: _.get(_.reporter_steamid),
                 },
                 _.report_id,
               ),
@@ -421,7 +422,7 @@ function _(_) {
   });
 }
 function _(_) {
-  let { report: _, bReporterIsSupport: _, bReporterIsDeveloper: _ } = _,
+  let { report: _, reporterStatus: _ } = _,
     _ = _(_.reporter_steamid);
   if (!_.isSuccess || !_.data?.public_data) return null;
   let _ = !!_.time_disputed && _.dispute_resolved === 0,
@@ -452,8 +453,7 @@ function _(_) {
             (0, _.jsx)(_, {
               steamid: _.reporter_steamid,
               strPersonaName: _,
-              bIsSupportAccount: _,
-              bIsDeveloperAccount: _,
+              status: _,
             }),
           ],
         }),

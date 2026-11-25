@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { W as e, sn as t } from "./chunk~de7f2df91c.js";
+import { Pt as e, g as t } from "./chunk~de7f2df91c.js";
 import { Ta as n, eo as r, ja as i, wa as a } from "./chunk~1fa4b8f2ff.js";
 import { w as o } from "./chunk~44f252525d.js";
 import { t as s } from "./chunk~ede3e357a2.js";
@@ -10,8 +10,8 @@ import { t as l } from "./chunk~429133cc70.js";
 import { t as u } from "./chunk~93fc7377c2.js";
 var d = `meetsteam/updateregistration`,
   f = `meetsteam/attendance_qrcode`;
-async function p(t, n) {
-  let r = new URL(e.STORE_BASE_URL + t);
+async function p(e, n) {
+  let r = new URL(t.STORE_BASE_URL + e);
   for (let [e, t] of Object.entries(n)) r.searchParams.set(e, t);
   let i = await fetch(r, { credentials: `include` });
   if (!i.ok) throw Error(`${r} answered ${i.status}`);
@@ -40,21 +40,21 @@ async function _() {
 async function v(e, t) {
   return await p(f, { gid: e, accountid: String(t) });
 }
-async function y(t) {
-  let n = e.STORE_BASE_URL + d,
+async function y(e) {
+  let n = t.STORE_BASE_URL + d,
     r = new URLSearchParams({
-      gid: t.gid,
-      group_id: String(t.group_id),
-      session_id: String(t.session_id),
-      guest_count: String(t.guest_count),
-      jsondata: t.jsondata,
-      skip_email: t.skip_email ? `1` : `0`,
+      gid: e.gid,
+      group_id: String(e.group_id),
+      session_id: String(e.session_id),
+      guest_count: String(e.guest_count),
+      jsondata: e.jsondata,
+      skip_email: e.skip_email ? `1` : `0`,
     }),
     i = await fetch(n, { method: `POST`, credentials: `include`, body: r });
   if (!i.ok) throw Error(`${n} answered ${i.status}`);
   return (await i.json()).success;
 }
-var b = t(l(), 1),
+var b = e(l(), 1),
   x = `America/Los_Angeles`;
 function S(e, t) {
   return {

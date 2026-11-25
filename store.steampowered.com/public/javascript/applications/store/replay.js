@@ -2,8 +2,8 @@
  ****/
 
 import "./chunk~f025431ab0.js";
-import { Lt as e, ft as t } from "./chunk~01cfc309bf.js";
-import { Bc as n, Nc as r, rb as i, yx as a } from "./main.js";
+import { It as e, dt as t } from "./chunk~01cfc309bf.js";
+import { Pc as n, Vc as r, bx as i, ib as a } from "./main.js";
 import { t as o } from "./chunk~f6ebb80c8b.js";
 import { n as s, r as c } from "./chunk~c0f9f0eb46.js";
 import { n as l, r as u } from "./chunk~1c004abcf4.js";
@@ -25,29 +25,29 @@ var d = `TxsjnMc7Ba4-`,
   T = t();
 function E(e) {
   let t = c(e.year),
-    n = N();
+    r = N();
   return (0, T.jsxs)(`div`, {
-    className: r(d, t.MMFrame, t.MMOverride),
-    onClick: n,
+    className: n(d, t.MMFrame, t.MMOverride),
+    onClick: r,
     children: [
       (0, T.jsxs)(`div`, {
         className: f,
         children: [
           (0, T.jsx)(A, {
-            baseClass: r(g, t.ReplayLogo),
-            accentClass: r(_, t.ReplayLogoAccent),
+            baseClass: n(g, t.ReplayLogo),
+            accentClass: n(_, t.ReplayLogoAccent),
           }),
           (0, T.jsx)(j, { year: e.year, theme: t }),
         ],
       }),
-      (0, T.jsx)(k, { className: r(h, t.SteamLogo) }),
+      (0, T.jsx)(k, { className: n(h, t.SteamLogo) }),
       (0, T.jsx)(M, { theme: t }),
       (0, T.jsxs)(`div`, {
-        className: r(y, t.Content),
+        className: n(y, t.Content),
         children: [
           (0, T.jsx)(D, { theme: t }),
           (0, T.jsx)(`div`, {
-            className: r(w, t.Description),
+            className: n(w, t.Description),
             children: s.Localize(`#YIR_MM_Generic_Desc`),
           }),
           (0, T.jsx)(O, { theme: t }),
@@ -58,24 +58,24 @@ function E(e) {
 }
 function D(e) {
   let { theme: t } = e,
-    [n] = o(a.accountid);
-  return n
+    [r] = o(i.accountid);
+  return r
     ? (0, T.jsxs)(T.Fragment, {
         children: [
           (0, T.jsx)(`div`, {
-            className: r(b, t.Avatar),
+            className: n(b, t.Avatar),
             children:
-              n &&
-              n.avatar_url &&
+              r &&
+              r.avatar_url &&
               (0, T.jsx)(`img`, {
-                src: n.avatar_url.replace(/\.jpg$/, `_full.jpg`),
+                src: r.avatar_url.replace(/\.jpg$/, `_full.jpg`),
               }),
           }),
           (0, T.jsx)(`div`, {
-            className: r(x, t.DataBlock),
+            className: n(x, t.DataBlock),
             children: (0, T.jsx)(`div`, {
-              className: r(S, t.PersonaName),
-              children: n ? n.persona_name : ``,
+              className: n(S, t.PersonaName),
+              children: r ? r.persona_name : ``,
             }),
           }),
         ],
@@ -85,8 +85,8 @@ function D(e) {
 function O(e) {
   let { theme: t } = e,
     i = N();
-  return (0, T.jsx)(n, {
-    className: r(C, t.ViewPageButton),
+  return (0, T.jsx)(r, {
+    className: n(C, t.ViewPageButton),
     onActivate: i,
     children: s.Localize(`#YIR_MM_Generic_Action`),
   });
@@ -144,22 +144,22 @@ function A(e) {
   });
 }
 function j(e) {
-  let { year: t, theme: n } = e;
+  let { year: t, theme: r } = e;
   return (0, T.jsx)(`div`, {
-    className: r(p, n.Header),
+    className: n(p, r.Header),
     children: s.LocalizeReact(
       `#YIR_MM_Header`,
       (0, T.jsx)(`br`, {}),
       (0, T.jsx)(`div`, {
-        className: r(m, n.YearSubtitle),
-        children: i(`#date_year`, t),
+        className: n(m, r.YearSubtitle),
+        children: a(`#date_year`, t),
       }),
     ),
   });
 }
 function M(e) {
   return (0, T.jsx)(`div`, {
-    className: r(v, e.theme.Hashtag),
+    className: n(v, e.theme.Hashtag),
     children: s.Localize(`#YIR_MM_HashTag`),
   });
 }

@@ -2,17 +2,17 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n, u as r } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n, l as r } from "./chunk~01cfc309bf.js";
 import { s as i } from "./chunk~2f8c67b4de.js";
 import {
   Jr as a,
-  Nc as o,
-  Or as s,
-  al as c,
+  Or as o,
+  Pc as s,
+  as as c,
   fr as l,
-  is as u,
-  rb as d,
-  ts as f,
+  ib as u,
+  ns as d,
+  ol as f,
 } from "./main.js";
 var p = e(t()),
   m = `-POP4zTRo6U-`,
@@ -25,31 +25,31 @@ function y(e) {
       title: t,
       tooltip: n,
       getMinimized: a,
-      toggleMinimized: l,
-      className: u,
-      children: d,
-      elAdditionalButtons: f,
+      toggleMinimized: c,
+      className: l,
+      children: u,
+      elAdditionalButtons: d,
     } = e,
     p = r(() => a());
   return (0, v.jsxs)(v.Fragment, {
     children: [
       (0, v.jsxs)(`div`, {
-        className: o(u, m, g, `SectionTitleHeader`),
+        className: s(l, m, g, `SectionTitleHeader`),
         children: [
           (0, v.jsxs)(`div`, {
-            className: o(i, `EventEditorTextTitle`),
-            children: [t, !!n && (0, v.jsx)(s, { tooltip: n })],
+            className: s(i, `EventEditorTextTitle`),
+            children: [t, !!n && (0, v.jsx)(o, { tooltip: n })],
           }),
           (0, v.jsxs)(`div`, {
             className: h,
             children: [
-              f,
-              (0, v.jsx)(x, { bIsMinimized: p, fnToggleMinimize: l }),
+              d,
+              (0, v.jsx)(x, { bIsMinimized: p, fnToggleMinimize: c }),
             ],
           }),
         ],
       }),
-      !p && (0, v.jsx)(c, { children: d }),
+      !p && (0, v.jsx)(f, { children: u }),
     ],
   });
 }
@@ -65,13 +65,13 @@ function b(e) {
 function x(e) {
   let { bIsMinimized: t, fnToggleMinimize: n } = e;
   return (0, v.jsx)(a, {
-    toolTipContent: d(
+    toolTipContent: u(
       t ? `#Section_Maximize_Tooltip` : `#Section_Minimize_Tooltip`,
     ),
     children: (0, v.jsx)(l, {
       className: _,
       onClick: n,
-      children: e.bIsMinimized ? (0, v.jsx)(f, {}) : (0, v.jsx)(u, {}),
+      children: e.bIsMinimized ? (0, v.jsx)(d, {}) : (0, v.jsx)(c, {}),
     }),
   });
 }

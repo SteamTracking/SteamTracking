@@ -330,7 +330,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`AccountPrivateApps.ToggleAppPrivacy#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ToggleAppPrivacy = _;
@@ -338,7 +338,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`AccountPrivateApps.GetPrivateAppList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetPrivateAppList = _;

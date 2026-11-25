@@ -127,6 +127,82 @@ function ToValidMarketPrice( nPrice, rgWallet )
 	return nPrice;
 }
 
+function CalculateSingleFee( base_amt, pct, nCap, rgWallet )
+{
+	if ( nCap <= 0 )
+	{
+		return ToValidMarketPrice(Math.floor(base_amt * pct), rgWallet);
+	}
+	return Math.min( nCap, ToValidMarketPrice(Math.floor(base_amt * pct), rgWallet) );
+}
+
+function GetPurchasePrice( base_amt, publisher_fee, platform_fee, rgWallet )
+{
+	var nBase = ToValidMarketPrice( base_amt, rgWallet );
+	var nPubFee = CalculateSingleFee( base_amt, publisher_fee.fee_rate, publisher_fee.fee_cap, rgWallet );
+	var nPlatformFee = CalculateSingleFee( base_amt, platform_fee.fee_rate, platform_fee.fee_cap, rgWallet );
+	return nBase + nPubFee + nPlatformFee;
+}
+
+function GetListingPriceFromTotal( nTotal, publisher_fee, platform_fee, rgWallet )
+{
+	var nIncrement = parseInt( rgWallet[ 'wallet_currency_increment' ] ?? 1 );
+	var nFloor = parseInt( rgWallet[ 'wallet_market_minimum' ] ?? 1 );
+	var fPubRate = parseFloat( publisher_fee.fee_rate );
+	var nPubCap = parseInt( publisher_fee.fee_cap );
+	var fPlatformRate = parseFloat( platform_fee.fee_rate );
+	var nPlatformCap = parseInt( platform_fee.fee_cap );
+
+	var nInitialGuess = Math.floor( nTotal / ( 1.0 + fPubRate + fPlatformRate )  );
+	var nMaxBase = nTotal - (2 * nFloor );
+
+	// we are at or under the right guess now
+	var nBase = ToValidMarketPrice( Math.min( nInitialGuess, nMaxBase ), rgWallet );
+	var nPlatformFee = CalculateSingleFee( nBase, fPlatformRate, nPlatformCap, rgWallet );
+	var bPlatformFeeMax = ( nPlatformCap > 0 && nPlatformFee >= nPlatformCap );
+	var nPublisherFee = CalculateSingleFee( nBase, fPubRate, nPubCap, rgWallet );
+	var bPublisherFeeMax = ( nPubCap > 0 && nPublisherFee >= nPubCap );
+
+	if ( bPlatformFeeMax != bPublisherFeeMax )
+	{
+		if ( bPlatformFeeMax )
+		{
+			nBase = Math.floor((nTotal - nPlatformFee) / (1.0 + publisher_fee.fee_rate));
+			nPublisherFee = CalculateSingleFee(nBase, fPubRate, nPubCap, rgWallet);
+			bPublisherFeeMax = ( nPubCap > 0 && nPublisherFee >= nPubCap );
+		}
+		if ( bPublisherFeeMax )
+		{
+			nBase = Math.floor(( nTotal - nPublisherFee ) / (1.0 + fPlatformRate));
+			nPlatformFee = CalculateSingleFee(nBase, fPlatformRate, nPlatformCap, rgWallet);
+			bPlatformFeeMax = ( nPlatformCap > 0 && nPlatformFee >= nPlatformCap );
+		}
+	}
+		if ( bPublisherFeeMax && bPlatformFeeMax )
+	{
+		nBase = nTotal - ( nPlatformFee + nPublisherFee );
+	}
+
+	for ( var i = 0; i < 3; i ++ )
+	{
+		var nCalculated = GetPurchasePrice( nBase, publisher_fee, platform_fee, rgWallet );
+		if ( nCalculated == nTotal )
+		{
+			return nBase;
+		}
+		if ( nCalculated < nTotal )
+		{
+			nBase += nIncrement;
+		}
+		else
+		{
+			nBase -= nIncrement;
+			break;
+		}
+	}
+
+	return Math.max( nFloor, nBase );
+}
 
 function CalculateFee( base_amt, pct, rgWallet )
 {

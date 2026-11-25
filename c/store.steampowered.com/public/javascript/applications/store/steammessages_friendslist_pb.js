@@ -754,7 +754,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`FriendsList.GetFriendsList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFriendsList = _;
@@ -762,7 +762,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`FriendsList.GetFavorites#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFavorites = _;

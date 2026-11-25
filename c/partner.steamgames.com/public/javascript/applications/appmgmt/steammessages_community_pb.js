@@ -5114,7 +5114,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetApps = _;
@@ -5127,7 +5127,7 @@ var _ = _(_(), 1),
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -5144,6 +5144,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Community.GetComment#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetComment = _;
@@ -5189,7 +5190,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Community.RateClanAnnouncement#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.RateClanAnnouncement = _;
@@ -5200,7 +5201,7 @@ var _ = _(_(), 1),
       _,
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -5209,7 +5210,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Community.GetClanMetadata#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetClanMetadata = _;
@@ -5253,7 +5254,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Community.HideAndReportComment#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.HideAndReportComment = _;
@@ -5276,7 +5277,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Community.MarkPartnerEventsForUser#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.MarkPartnerEventsForUser = _;

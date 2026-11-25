@@ -1450,6 +1450,20 @@ html.responsive.touch .fiveElementEightGap {
 ._8kxQAkw3gko- {
   padding-top: var(--pill-pips-background-gap, 0px);
 }
+html:not(.GamepadMode) .PaginationPillsPage ._8kxQAkw3gko-._8kxQAkw3gko- {
+  margin-top: 8px;
+}
+html:not(.GamepadMode)
+  .PaginationPillsPage
+  .SaleSectionForCustomCSS:has(._8kxQAkw3gko-) {
+  --sale-section-background-inset-bottom: 36px;
+  padding-bottom: 8px;
+}
+html:not(.GamepadMode)
+  .PaginationPillsPage
+  .SaleSectionCtn:has(.SaleSectionForCustomCSS):not(:has(._8kxQAkw3gko-)) {
+  margin-bottom: 20px;
+}
 .SaleSectionCarousel:has(._8kxQAkw3gko-) .SaleSectionContainer:last-child {
   padding-bottom: 0;
 }
@@ -1468,7 +1482,7 @@ html.responsive.touch .fiveElementEightGap {
 }
 .xAhUZDLR-Fs- {
   white-space: nowrap;
-  color: #8f98a0;
+  color: #ffffff80;
   font-size: 12px;
 }
 .I5j74q712SQ- {
@@ -1485,11 +1499,11 @@ html.responsive.touch .fiveElementEightGap {
   display: flex;
 }
 .FStnZRH332A-:hover .eqYBsdUkt5U-:not(.bY2thn3lfUw-) {
-  opacity: 0.6;
+  opacity: 0.3;
 }
 .eqYBsdUkt5U- {
-  opacity: 0.3;
-  background-color: #606974;
+  opacity: 0.15;
+  background-color: #fff;
   border-radius: 4px;
   flex-shrink: 0;
   width: 16px;

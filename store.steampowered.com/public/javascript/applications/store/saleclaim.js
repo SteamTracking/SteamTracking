@@ -2,17 +2,17 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, dt as n, ot as r, st as i } from "./chunk~01cfc309bf.js";
+import { It as t, at as n, ot as r, ut as i } from "./chunk~01cfc309bf.js";
 import { r as a } from "./chunk~5214caf193.js";
 import { r as o } from "./chunk~9e9562d60b.js";
 import {
-  Du as s,
+  By as s,
   Hy as c,
-  Vy as l,
-  lx as u,
-  nx as d,
-  vy as f,
-  zy as p,
+  Ou as l,
+  Uy as u,
+  rx as d,
+  ux as f,
+  yy as p,
 } from "./main.js";
 var m = e(t(), 1),
   h = { bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !1 };
@@ -83,11 +83,11 @@ async function b(e, t, n, r) {
 }
 var x;
 function S() {
-  let e = s();
+  let e = l();
   if (e) return e.GetServiceTransport();
   if (!x) {
-    let e = u(`loyalty_webapi_token`, `application_config`);
-    x = p(e ? new c(d.WEBAPI_BASE_URL, e) : l());
+    let e = f(`loyalty_webapi_token`, `application_config`);
+    x = s(e ? new u(d.WEBAPI_BASE_URL, e) : c());
   }
   return x.GetServiceTransport();
 }
@@ -118,9 +118,9 @@ function j(e) {
 }
 function M() {
   let e = d.LANGUAGE,
-    t = n(),
-    { data: r, isLoading: a } = i(j(e)),
-    o = r?.rtNextClaimTime;
+    t = i(),
+    { data: n, isLoading: a } = r(j(e)),
+    o = n?.rtNextClaimTime;
   return (
     (0, m.useEffect)(() => {
       let n = 0;
@@ -135,12 +135,12 @@ function M() {
       }
       return () => window.clearTimeout(n);
     }, [o, e, t]),
-    { ...(r ?? h), bLoading: a }
+    { ...(n ?? h), bLoading: a }
   );
 }
 function N() {
-  let e = n(),
-    { mutateAsync: t } = r({
+  let e = i(),
+    { mutateAsync: t } = n({
       mutationFn: () => {
         if (O) {
           let e = O;
@@ -155,10 +155,10 @@ function N() {
   return { fnClaimItem: (0, m.useCallback)(() => t(), [t]) };
 }
 function P() {
-  return r({ mutationFn: (e) => T(e) });
+  return n({ mutationFn: (e) => T(e) });
 }
 function F() {
-  let e = n();
+  let e = i();
   return {
     fnSetClaimState: (0, m.useCallback)(
       (t) => {
@@ -188,8 +188,8 @@ function L(e, t, n, r) {
   };
 }
 function R(e, t, n) {
-  let r = f();
-  return i(L(r, e, t, n));
+  let i = p();
+  return r(L(i, e, t, n));
 }
 function z(e, t, n, r) {
   return [`GetClaimedSaleRewards`, e, t, !!n, r];
@@ -201,8 +201,8 @@ function B(e, t, n, r, i) {
     staleTime: 1 / 0,
   };
 }
-function V(e, t, n, r) {
-  let a = f();
-  return i(B(a, e, t, n, r));
+function V(e, t, n, i) {
+  let a = p();
+  return r(B(a, e, t, n, i));
 }
 export { M as a, N as i, V as n, F as o, R as r, P as t };

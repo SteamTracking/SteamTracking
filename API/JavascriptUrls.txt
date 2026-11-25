@@ -1113,6 +1113,7 @@ ${PARTNER_BASE_URL}gfxproxy/externalgfx/
 ${PARTNER_BASE_URL}gfxproxy/gfx/apps/${}/${}
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}images/uploadachievement
+${PARTNER_BASE_URL}kycrequirement/view/${partnerid}/${gid}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&timezone=${_ ? _ : ``}&locale=${}&dlc_override=${_ ? _ : ``}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
@@ -1132,6 +1133,7 @@ ${PARTNER_BASE_URL}optin/address/${}/${}
 ${PARTNER_BASE_URL}optin/address/${}/0
 ${PARTNER_BASE_URL}optin/admin/analysis/${}
 ${PARTNER_BASE_URL}optin/admin/backfilloptindemopageviews
+${PARTNER_BASE_URL}optin/admin/canceloptin
 ${PARTNER_BASE_URL}optin/admin/checkemaillinks
 ${PARTNER_BASE_URL}optin/admin/checkpartners
 ${PARTNER_BASE_URL}optin/admin/demo_analysis/${}
@@ -2704,6 +2706,7 @@ https://steamcommunity.com/invites/ajaxrevoke
 https://steamcommunity.com/login/dologin/
 https://steamcommunity.com/login/getrsakey/
 https://steamcommunity.com/login/logout/
+https://steamcommunity.com/market/ajaxfeestructure/
 https://steamcommunity.com/market/appfilters/${unAppId}
 https://steamcommunity.com/market/buylisting/${listingid}
 https://steamcommunity.com/market/cancelbuyorder/

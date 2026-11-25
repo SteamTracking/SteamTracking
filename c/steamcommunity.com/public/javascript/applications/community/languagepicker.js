@@ -1453,7 +1453,7 @@ var _ = `AqA5yADf-5M-`,
     return _.SendMsg(`FriendsList.GetFriendsList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFriendsList = _;
@@ -1461,7 +1461,7 @@ var _ = `AqA5yADf-5M-`,
     return _.SendMsg(`FriendsList.GetFavorites#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFavorites = _;
@@ -1814,6 +1814,12 @@ var _ = [1, 3, 2, 10],
     sale_cross_promo_logo: {
       width: [1200, 940],
       height: [460, 460],
+      rgAcceptableTypes: _,
+    },
+    sale_secondary_background: {
+      width: 0,
+      height: 0,
+      bDisableEnforceDimensions: !0,
       rgAcceptableTypes: _,
     },
     spotlight_art: {

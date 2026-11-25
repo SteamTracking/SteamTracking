@@ -2,28 +2,28 @@
  ****/
 
 import {
-  At as e,
-  it as t,
-  j as n,
-  sn as r,
-  vt as i,
+  A as e,
+  Pt as t,
+  W as n,
+  nt as r,
+  r as i,
 } from "./chunk~de7f2df91c.js";
 import { Xi as a, Zi as o, _n as s, da as c } from "./chunk~1fa4b8f2ff.js";
 import { _ as l, x as u } from "./chunk~0a99e05c44.js";
 import {
-  Fn as d,
-  K as f,
-  Sn as p,
-  ct as m,
-  lt as h,
+  F as d,
+  Qn as f,
+  Rt as p,
+  dr as m,
+  zt as h,
 } from "./chunk~6b8ddcaac8.js";
 import { r as g } from "./chunk~9a06851bec.js";
 import "./chunk~44f252525d.js";
 import { r as _ } from "./chunk~b390ee0f78.js";
 import { l as v } from "./chunk~8ceeb46076.js";
 import { t as y } from "./chunk~ada233e34d.js";
-var b = r(e(), 1),
-  x = i();
+var b = t(r(), 1),
+  x = n();
 function S(e) {
   let { appid: t, className: n, bTextMode: r } = e,
     i = _(t),
@@ -37,22 +37,22 @@ function S(e) {
     className: n,
   });
 }
-function C(e) {
-  let [r, i] = b.useState(!1),
+function C(t) {
+  let [n, r] = b.useState(!1),
     l = g(),
-    { appid: u, bIsFree: S, bIsComingSoon: C, className: T, bTextMode: E } = e,
+    { appid: u, bIsFree: S, bIsComingSoon: C, className: T, bTextMode: E } = t,
     D = _(u),
-    { bIsOwned: O } = d(D),
+    { bIsOwned: O } = m(D),
     k = h(u),
-    { mutateAsync: A } = m(u, !k, v(l)),
-    { elDialogElement: j, fnShowLogonDialog: M } = f(),
+    { mutateAsync: A } = p(u, !k, v(l)),
+    { elDialogElement: j, fnShowLogonDialog: M } = d(),
     N = async () => {
-      t.logged_in ? r || (i(!0), await A(), i(!1)) : M();
+      e.logged_in ? n || (r(!0), await A(), r(!1)) : M();
     };
   if (O || (!C && S)) return S ? (0, x.jsx)(w, { possibleDemoAppID: u }) : null;
   let P = null;
   return (
-    r && !E
+    n && !E
       ? (P = (0, x.jsx)(y, { size: 18 }))
       : k
         ? k && (P = E ? c(`#OnWishlist`) : (0, x.jsx)(a, {}))
@@ -62,7 +62,7 @@ function C(e) {
         (0, x.jsx)(s, {
           toolTipContent: c(`#AddToWishlist_ttip`),
           children: (0, x.jsx)(`div`, {
-            className: n(p, T),
+            className: i(f, T),
             onClick: N,
             children: P,
           }),

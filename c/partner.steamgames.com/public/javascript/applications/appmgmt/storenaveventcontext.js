@@ -702,6 +702,17 @@ var _ = _(_(), 1),
     greatonframe: 100804,
     salesmartsale_events_only: 100805,
     salesmartdiscountreason: 100806,
+    "salesmartdiscountreason-wishlist": 100807,
+    "salesmartdiscountreason-firsttimeonsale": 100808,
+    "salesmartdiscountreason-largestdiscount": 100809,
+    "salesmartdiscountreason-endingsoon": 100810,
+    "salesmartdiscountreason-newlyonsale": 100811,
+    "salesmartdiscountreason-wellreviewed": 100812,
+    "salesmartdiscountreason-topseller": 100813,
+    "salesmartdiscountreason-hotdeal": 100814,
+    "salesmartdiscountreason-deepdiscount": 100815,
+    "salesmartdiscountreason-popularinregion": 100816,
+    "salesmartdiscountreason-justupdated": 100817,
   };
 function _(_) {
   return _ in _;

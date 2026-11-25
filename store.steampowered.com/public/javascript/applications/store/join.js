@@ -3,27 +3,27 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import {
-  Lt as t,
-  V as n,
-  ft as r,
-  nt as i,
-  st as a,
+  B as t,
+  It as n,
+  dt as r,
+  ot as i,
+  tt as a,
 } from "./chunk~01cfc309bf.js";
 import { t as o } from "./chunk~eefd71512b.js";
 import { r as s, t as c } from "./chunk~f162f235ea.js";
 import {
-  OS as l,
-  Ox as u,
-  _x as d,
-  cx as f,
+  AS as l,
+  Sy as u,
+  al as d,
+  bx as f,
   fr as p,
-  il as m,
-  rb as h,
-  rl as g,
-  vr as _,
-  vy as v,
-  xy as y,
-  yx as b,
+  ib as m,
+  il as h,
+  kx as g,
+  lx as _,
+  vr as v,
+  vx as y,
+  yy as b,
 } from "./main.js";
 import { t as x } from "./chunk~85f65a382b.js";
 function S(e) {
@@ -44,7 +44,7 @@ function S(e) {
 function C(e) {
   return atob(e.replace(/-/g, `+`).replace(/_/g, `/`));
 }
-t();
+n();
 var w = `HQgdwH5tXUk-`,
   T = `LjnhAYlhNQs-`,
   E = `SqHuEyf-R0c-`,
@@ -56,11 +56,11 @@ var w = `HQgdwH5tXUk-`,
   M = `hvRNTEhrZxc-`,
   N = `S0Tivllig-E-`,
   P = `goxfDMgh3ik-`,
-  F = e(i()),
+  F = e(a()),
   I,
   L = 864e5;
 function R(e) {
-  return `appinfo_${e}_${d.LANGUAGE}`;
+  return `appinfo_${e}_${y.LANGUAGE}`;
 }
 function z(e) {
   return !!(e && Date.now() - e.timeCached < L);
@@ -75,9 +75,9 @@ function B(e, t) {
           .forEach(({ value: e }) => r.set(e.appid, e));
         let i = n.slice().filter((e) => !r.has(e));
         if (i.length) {
-          let n = u.Init(g);
-          (n.Body().set_language(l(d.LANGUAGE)), n.Body().set_appids(i));
-          let a = await m.GetApps(e, n);
+          let n = g.Init(h);
+          (n.Body().set_language(l(y.LANGUAGE)), n.Body().set_appids(i));
+          let a = await d.GetApps(e, n);
           if (a.GetEResult() != 1) throw a.GetErrorMessage();
           a.Body()
             .toObject()
@@ -94,9 +94,9 @@ function B(e, t) {
   );
 }
 function V(e) {
-  let t = v(),
-    n = y();
-  return a({
+  let t = b(),
+    n = u();
+  return i({
     queryKey: [`appinfo`, e],
     queryFn: async () => B(t, n).load(e),
     staleTime: L,
@@ -118,12 +118,12 @@ function W(e) {
 }
 function G(e) {
   let t = s(),
-    n = v();
+    n = b();
   return t.isSuccess
     ? t.data?.sessions?.length > 0
       ? (0, H.jsxs)(H.Fragment, {
           children: [
-            (0, H.jsx)(_, {
+            (0, H.jsx)(v, {
               className: M,
               children: `Available Steam Sessions:`,
             }),
@@ -188,7 +188,7 @@ function K(e) {
             className: T,
             children: (0, H.jsx)(`iframe`, { src: e.sessionLiveDataUrl }),
           }),
-          d.IN_CLIENT
+          y.IN_CLIENT
             ? (0, H.jsx)(`div`, {
                 className: E,
                 children: (0, H.jsx)(W, { ...e, children: `Launch Game` }),
@@ -197,25 +197,25 @@ function K(e) {
                 children: [
                   (0, H.jsx)(`div`, {
                     className: E,
-                    children: b.logged_in
+                    children: f.logged_in
                       ? (0, H.jsx)(G, { ...e })
                       : (0, H.jsxs)(H.Fragment, {
                           children: [
-                            (0, H.jsx)(_, {
+                            (0, H.jsx)(v, {
                               children: `Login to join on another device`,
                             }),
                             (0, H.jsx)(p, {
                               onClick: x,
-                              children: h(`#Login_SignIn`),
+                              children: m(`#Login_SignIn`),
                             }),
                           ],
                         }),
                   }),
-                  !d.IN_MOBILE_WEBVIEW &&
+                  !y.IN_MOBILE_WEBVIEW &&
                     (0, H.jsxs)(`div`, {
                       className: `SqHuEyf-R0c-`,
                       children: [
-                        (0, H.jsx)(_, { children: `Or launch on this PC` }),
+                        (0, H.jsx)(v, { children: `Or launch on this PC` }),
                         (0, H.jsx)(W, { ...e, children: `Launch Game Here` }),
                       ],
                     }),
@@ -226,8 +226,8 @@ function K(e) {
     : (0, H.jsx)(o, {});
 }
 function q() {
-  let e = f(`multiplayersession_join`, `application_config`),
-    { header: t, body: r } = S(new URLSearchParams(n().search).get(`jws`)) || {
+  let e = _(`multiplayersession_join`, `application_config`),
+    { header: n, body: r } = S(new URLSearchParams(t().search).get(`jws`)) || {
       header: {},
       body: {},
     },

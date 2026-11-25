@@ -2,24 +2,24 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n, st as r, u as i } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n, l as r, ot as i } from "./chunk~01cfc309bf.js";
 import "./chunk~9e9562d60b.js";
 import { r as a } from "./chunk~cb3200f06e.js";
 import {
-  $b as o,
-  Nc as s,
-  Nu as c,
-  Td as l,
-  _x as u,
-  eu as d,
-  h as f,
-  m as p,
-  oS as m,
-  p as h,
-  rb as g,
-  tS as _,
-  wb as v,
-  yx as y,
+  Ed as o,
+  Pc as s,
+  Pu as c,
+  Tb as l,
+  bx as u,
+  cS as d,
+  ex as f,
+  h as p,
+  ib as m,
+  m as h,
+  p as g,
+  rS as _,
+  tu as v,
+  vx as y,
 } from "./main.js";
 import { n as b } from "./chunk~7401689b78.js";
 import { t as x } from "./chunk~237be05bcf.js";
@@ -41,65 +41,65 @@ function I(e) {
     ? (0, F.jsxs)(L, {
         children: [
           (0, F.jsx)(U, {}),
-          y.logged_in ? (0, F.jsx)(z, { ...e }) : (0, F.jsx)(V, { ...e }),
+          u.logged_in ? (0, F.jsx)(z, { ...e }) : (0, F.jsx)(V, { ...e }),
         ],
       })
     : null;
 }
 function L(e) {
   let [t, n] = c(),
-    r = i(() => n.ExcludedContentDescriptor),
-    a = w.useMemo(() => ({ content_descriptors_excluded: r }), [r]);
+    i = r(() => n.ExcludedContentDescriptor),
+    a = w.useMemo(() => ({ content_descriptors_excluded: i }), [i]);
   return t ? null : (0, F.jsx)(C, { defaultOptions: a, children: e.children });
 }
 function R(e, t) {
-  let { data: n } = r({
+  let { data: n } = i({
     queryKey: [`DiscoveryQueueLoader`, e, t],
     queryFn: async () => {
       let { appids: n, exhausted: r } = await b
           .Get()
           .GetDiscoveryQueueAppsOfType(e, !1, t),
-        i = { ...p, include_screenshots: !0 };
+        i = { ...h, include_screenshots: !0 };
       return (
-        await d.Get().QueueMultipleAppRequests(n ?? [], i),
+        await v.Get().QueueMultipleAppRequests(n ?? [], i),
         { rgDiscoveryApps: n, exhausted: r }
       );
     },
-    enabled: y.logged_in,
+    enabled: u.logged_in,
   });
   return [n?.rgDiscoveryApps, n?.exhausted];
 }
 function z(e) {
   let { eStoreDiscoveryQueueType: t, strQueueDescriptionOverride: n, ...r } = e,
-    { showDiscoveryQueue: i, bQueueVisible: a } = f(t, r),
-    o = l(),
-    [s, c] = R(t, r.storePageFilter),
-    u = a || !!o.data?.preferences?.disable_animated_marketing,
+    { showDiscoveryQueue: i, bQueueVisible: a } = p(t, r),
+    s = o(),
+    [c, l] = R(t, r.storePageFilter),
+    u = a || !!s.data?.preferences?.disable_animated_marketing,
     d = w.useCallback(() => {
-      !c && i();
-    }, [c, i]),
-    p = w.useId();
+      !l && i();
+    }, [l, i]),
+    f = w.useId();
   return (0, F.jsx)(F.Fragment, {
-    children: (0, F.jsx)(h, {
-      "aria-labelledby": p,
+    children: (0, F.jsx)(g, {
+      "aria-labelledby": f,
       onClick: d,
-      arrDiscoveryApps: s,
+      arrDiscoveryApps: c,
       bDisableAnimation: u,
       className: E,
-      children: !c && (0, F.jsx)(B, { id: p, strQueueDescriptionOverride: n }),
+      children: !l && (0, F.jsx)(B, { id: f, strQueueDescriptionOverride: n }),
     }),
   });
 }
 function B(e) {
   let { strQueueDescriptionOverride: t, id: n } = e,
-    r = t ?? g(`#DiscoveryQueue_WidgetHeader`);
+    r = t ?? m(`#DiscoveryQueue_WidgetHeader`);
   return (0, F.jsxs)(`div`, {
     id: n,
     className: s(T, `WidgetHeaderCtn`),
     children: [
       (0, F.jsx)(`div`, {
         className: D,
-        children: g(`#DiscoveryQueue_WidgetHeader_Yours`),
+        children: m(`#DiscoveryQueue_WidgetHeader_Yours`),
       }),
       (0, F.jsx)(`div`, { className: O, children: r }),
     ],
@@ -108,9 +108,9 @@ function B(e) {
 function V(e) {
   let t = H(!0),
     n = w.useCallback(() => {
-      window.location.href = `${u.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
+      window.location.href = `${y.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
     }, []);
-  return (0, F.jsx)(h, {
+  return (0, F.jsx)(g, {
     onClick: n,
     arrDiscoveryApps: t ? _(t) : void 0,
     children: (0, F.jsxs)(`div`, {
@@ -118,15 +118,15 @@ function V(e) {
       children: [
         (0, F.jsx)(`div`, {
           className: D,
-          children: g(`#DiscoveryQueue_WidgetHeader_Yours`),
+          children: m(`#DiscoveryQueue_WidgetHeader_Yours`),
         }),
         (0, F.jsx)(`div`, {
           className: O,
-          children: g(`#DiscoveryQueue_WidgetHeader_LoggedOut`),
+          children: m(`#DiscoveryQueue_WidgetHeader_LoggedOut`),
         }),
         (0, F.jsx)(`div`, {
           className: k,
-          children: g(`#DiscoveryQueue_Error_Login_Title`),
+          children: m(`#DiscoveryQueue_Error_Login_Title`),
         }),
       ],
     }),
@@ -141,29 +141,29 @@ function H(e) {
       count: 12,
       filters: { type_filters: { include_games: !0 } },
     },
-    { ...p, include_screenshots: !0 },
+    { ...h, include_screenshots: !0 },
     { reactQuery: { enabled: e, staleTime: 1 / 0 } },
   );
   return (0, w.useMemo)(() => t && t.GetItemIDs().map((e) => e.appid), [t]);
 }
 function U() {
-  let e = a(2, u.LANGUAGE, !0),
-    t = o();
+  let e = a(2, y.LANGUAGE, !0),
+    t = f();
   if (!e.data?.definition || (e.data?.reward_items?.length ?? 0) == 0)
     return null;
   let n = e?.data.reward_items ?? [];
-  m(n);
+  d(n);
   let r = n.slice(0, 3),
     i = null;
   return (
-    y.logged_in &&
+    u.logged_in &&
       !t &&
       (i = (0, F.jsxs)(F.Fragment, {
         children: [
           ` - `,
           (0, F.jsx)(`a`, {
-            href: u.COMMUNITY_BASE_URL + `my/itemcollection`,
-            children: g(`#DiscoveryQueue_SaleStatus_Link`),
+            href: y.COMMUNITY_BASE_URL + `my/itemcollection`,
+            children: m(`#DiscoveryQueue_SaleStatus_Link`),
           }),
         ],
       })),
@@ -176,13 +176,13 @@ function U() {
           children: [
             (0, F.jsx)(`div`, {
               className: P,
-              children: g(`#DiscoveryQueue_Widget_SaleDesc`),
+              children: m(`#DiscoveryQueue_Widget_SaleDesc`),
             }),
             (0, F.jsxs)(`div`, {
               children: [
-                g(
+                m(
                   `#DiscoveryQueue_Widget_SaleTitle`,
-                  v(e.data.definition.rtime_end_time ?? 0, !1, !1, !1, !1),
+                  l(e.data.definition.rtime_end_time ?? 0, !1, !1, !1, !1),
                 ),
                 i,
               ],
@@ -198,7 +198,7 @@ function W(e) {
     n = t.map((e) => {
       if (!e.community_definition || !e.community_definition.item_name)
         return null;
-      let t = `${u.MEDIA_CDN_COMMUNITY_URL}images/items/${e.appid}/${e.community_definition.item_image_small}`;
+      let t = `${y.MEDIA_CDN_COMMUNITY_URL}images/items/${e.appid}/${e.community_definition.item_image_small}`;
       return (0, F.jsx)(
         `div`,
         { className: M, children: (0, F.jsx)(`img`, { src: t }) },

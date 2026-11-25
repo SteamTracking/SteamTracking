@@ -31,7 +31,6 @@ import {
   _,
   _,
   _,
-  _,
 } from "./main.js";
 var _ = _(_()),
   _ = (function (_) {
@@ -1183,7 +1182,7 @@ var _ = _(_(), 1),
   function _(_, _) {
     return _.SendNotification(`Video.SetVideoBookmark#1`, _(_, _), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetVideoBookmark = _;
@@ -1283,13 +1282,11 @@ var _ = class _ {
       );
     }
     Init() {
-      _.logged_in && this.LoadWatchVideoOAuthToken();
+      _.logged_in &&
+        (this.m_transport = _(new _(_.WEBAPI_BASE_URL)).GetServiceTransport());
     }
     async LoadWatchVideoOAuthToken() {
-      let _ =
-          _() == `community`
-            ? _.COMMUNITY_BASE_URL + `actions/ajaxgetwatchvodtoken`
-            : _.STORE_BASE_URL + `actions/ajaxgetwatchvodtoken`,
+      let _ = _.STORE_BASE_URL + `actions/ajaxgetwatchvodtoken`,
         _ = {};
       try {
         let _ = await _.default.get(_, {

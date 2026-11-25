@@ -2,20 +2,20 @@
  ****/
 
 import {
-  Dh as e,
-  Eh as t,
-  Hh as n,
-  Mf as r,
-  Oh as i,
-  Th as a,
-  Xu as o,
-  oh as s,
-  up as c,
-  wh as l,
+  Ch as e,
+  Df as t,
+  Gu as n,
+  Rh as r,
+  Sh as i,
+  ap as a,
+  bh as o,
+  th as s,
+  xh as c,
+  yh as l,
 } from "./main.js";
-var u = new o(`ReactUsageReporting`).Debug,
+var u = new n(`ReactUsageReporting`).Debug,
   d = 100,
-  f = c.PerMinute * 1e3,
+  f = a.PerMinute * 1e3,
   p = class {
     m_strProduct;
     m_strVersion;
@@ -58,26 +58,26 @@ var u = new o(`ReactUsageReporting`).Debug,
     }
     SendMetrics() {
       if (!this.m_bInitialized) return;
-      let n = s.Init(l);
-      (n.Body().set_product(this.m_strProduct),
-        n.Body().set_version(this.m_strVersion),
-        this.m_mapRoutes.forEach((t, r) => {
-          let i = new e();
-          (i.set_route(r), i.set_count(t), n.Body().add_routes(i));
+      let t = s.Init(l);
+      (t.Body().set_product(this.m_strProduct),
+        t.Body().set_version(this.m_strVersion),
+        this.m_mapRoutes.forEach((e, n) => {
+          let r = new i();
+          (r.set_route(n), r.set_count(e), t.Body().add_routes(r));
         }),
-        this.m_mapComponents.forEach((e, r) => {
-          let i = new t();
-          (i.set_component(r), i.set_count(e), n.Body().add_components(i));
+        this.m_mapComponents.forEach((e, n) => {
+          let r = new c();
+          (r.set_component(n), r.set_count(e), t.Body().add_components(r));
         }),
-        this.m_mapActions.forEach((e, t) => {
-          let r = new a();
-          (r.set_action(t), r.set_count(e), n.Body().add_actions(r));
+        this.m_mapActions.forEach((e, n) => {
+          let r = new o();
+          (r.set_action(n), r.set_count(e), t.Body().add_actions(r));
         }),
         this.m_mapRoutes.clear(),
         this.m_mapComponents.clear(),
         this.m_mapActions.clear(),
         (this.m_reportCount = 0),
-        i.ReportReactUsage(this.m_transport, n));
+        e.ReportReactUsage(this.m_transport, t));
     }
     get version() {
       return this.m_strVersion;
@@ -86,6 +86,6 @@ var u = new o(`ReactUsageReporting`).Debug,
       return this.m_strProduct;
     }
   };
-r([n], p.prototype, `CheckSend`, null);
+t([r], p.prototype, `CheckSend`, null);
 var m = new p();
 export { m as t };

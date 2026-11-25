@@ -2,172 +2,487 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, dt as n, ft as r } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n, ut as r } from "./chunk~01cfc309bf.js";
 import {
   $n as i,
-  As as a,
-  Da as o,
-  Dn as s,
-  Do as c,
-  Ea as l,
+  $o as a,
+  As as o,
+  Bn as s,
+  Cs as c,
+  Es as l,
   Fa as u,
-  Fn as d,
-  Fo as f,
-  Fs as p,
-  Ia as m,
-  Io as h,
-  Ja as g,
-  Ka as ee,
-  Lo as _,
-  On as v,
-  Po as y,
-  Ra as b,
-  Rn as x,
-  Va as S,
-  Vn as te,
-  Vo as ne,
-  Wo as C,
+  Ga as d,
+  Go as f,
+  Ia as p,
+  Io as m,
+  Ko as ee,
+  Os as h,
+  Ro as te,
+  Ss as g,
+  Ts as _,
+  Uo as v,
+  Wa as ne,
+  Wo as y,
+  Xa as b,
   Xn as re,
-  _s as ie,
-  as as ae,
-  cs as oe,
-  er as se,
-  es as w,
+  Xo as ie,
+  _s as ae,
+  ar as oe,
+  cr as se,
+  dr as x,
   fs as ce,
-  gs as T,
-  hs as E,
-  ko as le,
-  ks as D,
-  lo as O,
-  ls as ue,
-  ms as de,
-  ps as fe,
-  qn as pe,
-  rs as me,
-  sr as k,
-  t as he,
-  tr as ge,
-  xs as _e,
-  ys as ve,
+  gr as S,
+  ls as le,
+  ms as ue,
+  qa as C,
+  qn as de,
+  ro as w,
+  t as T,
+  to as fe,
+  vo as E,
+  vs as pe,
+  ws as me,
+  xs as he,
+  zn as D,
 } from "./chunk~6b8ddcaac8.js";
-import { n as A } from "./chunk~751f63337e.js";
-import { i as ye, r as be } from "./chunk~4c13037b22.js";
-import { d as xe, p as j, r as Se } from "./chunk~cbbb6ae37c.js";
-import { h as Ce, m as we } from "./chunk~4eed35ad1f.js";
-import { t as Te } from "./chunk~b980924b6a.js";
-import { n as Ee, t as De } from "./chunk~56437c278a.js";
+import { n as ge } from "./chunk~751f63337e.js";
 import {
-  $b as Oe,
-  Bc as ke,
-  Bv as M,
-  Cb as N,
-  El as Ae,
-  Fb as P,
-  Fc as F,
-  Jv as I,
-  Nc as L,
-  Or as R,
-  Pv as z,
-  Uv as B,
-  Vv as V,
-  Xv as H,
-  Yv as U,
-  _l as je,
-  _x as Me,
-  cy as Ne,
+  C as O,
+  O as _e,
+  S as k,
+  _ as ve,
+  m as ye,
+  p as be,
+  v as xe,
+} from "./chunk~4eed35ad1f.js";
+import { i as Se, r as Ce } from "./chunk~4c13037b22.js";
+import { d as we, p as Te, r as Ee } from "./chunk~cbbb6ae37c.js";
+import { n as De, t as Oe } from "./chunk~56437c278a.js";
+import {
+  Dl as ke,
+  Fv as Ae,
+  Hv as A,
+  Ib as j,
+  Ic as je,
+  Or as M,
+  Pc as N,
+  Vc as P,
+  Vv as F,
+  Wv as I,
+  Xv as L,
+  Yv as R,
+  Zv as z,
+  ab as B,
+  bb as Me,
+  bv as Ne,
   dn as Pe,
-  ib as Fe,
-  ny as Ie,
-  rb as W,
-  td as Le,
-  yb as Re,
-  yv as ze,
+  ex as Fe,
+  ib as V,
+  ly as Ie,
+  nd as Le,
+  ry as Re,
+  vl as ze,
+  vx as Be,
+  wb as Ve,
 } from "./main.js";
-var G = e(t(), 1),
-  K = `x33TRfA9NLE-`,
-  Be = `UWpi28gEMso-`,
-  q = r(),
-  Ve = 6;
-function He(e) {
+var H = e(t(), 1),
+  U = `x33TRfA9NLE-`,
+  He = `UWpi28gEMso-`,
+  W = n(),
+  Ue = 6;
+function We(e) {
   let { id: t, bHideInLibraryApps: n } = e,
-    { data: r } = B(t),
+    { data: r } = I(t),
     i = r?.item_type == 2,
-    { data: o } = a(),
-    s = G.useMemo(() => {
+    { data: a } = O(),
+    o = H.useMemo(() => {
       if (r)
         return r.item_type === 1 || r.item_type === 2
           ? (r.included_appids || [])
-              .filter((e) => !i || !n || !o?.has(e))
+              .filter((e) => !i || !n || !a?.has(e))
               .map((e) => ({ appid: e }))
           : (console.error(
               `ContentsPreviewList unexpected store item type:`,
               r.item_type,
             ),
             null);
-    }, [r, n, i, o]);
-  if (!s || s.length == 0) return null;
-  let c = s.length,
-    l = P.LocalizePlural(`#Sale_ContentPreview`, c);
+    }, [r, n, i, a]);
+  if (!o || o.length == 0) return null;
+  let s = o.length,
+    c = j.LocalizePlural(`#Sale_ContentPreview`, s);
   if (i && r) {
     let e = r.included_appids?.length || 0;
-    e != c && (l = P.Localize(`#Sale_Bundle_CompletePartialSet`, e - c, e));
+    e != s && (c = j.Localize(`#Sale_Bundle_CompletePartialSet`, e - s, e));
   }
-  return (0, q.jsxs)(`div`, {
-    className: g,
+  return (0, W.jsxs)(`div`, {
+    className: w,
     children: [
-      (0, q.jsxs)(`div`, {
-        className: O,
+      (0, W.jsxs)(`div`, {
+        className: E,
         children: [
           i &&
-            (0, q.jsx)(`span`, {
+            (0, W.jsx)(`span`, {
               className: `_8o-dkC5O1co-`,
-              children: P.Localize(`#AppType_bundle`),
+              children: j.Localize(`#AppType_bundle`),
             }),
-          l,
+          c,
         ],
       }),
-      (0, q.jsx)(`div`, {
-        className: y,
-        children: s
-          .slice(0, Ve)
-          .map((e) => (0, q.jsx)(J, { id: e }, `preview${Ne(e)}`)),
+      (0, W.jsx)(`div`, {
+        className: v,
+        children: o
+          .slice(0, Ue)
+          .map((e) => (0, W.jsx)(G, { id: e }, `preview${Ie(e)}`)),
       }),
     ],
   });
 }
-function J(e) {
+function G(e) {
   let { id: t } = e,
-    { data: n } = U(t),
-    { data: r } = I(t);
+    { data: n } = L(t),
+    { data: r } = R(t);
   if (!n || !r) return null;
-  let a = F(n, `small_capsule`);
-  return (0, q.jsx)(i, {
+  let i = je(n, `small_capsule`);
+  return (0, W.jsx)(x, {
     id: t,
-    className: h,
+    className: f,
     hoverProps: { direction: `right`, style: { minWidth: `350px` } },
-    children: (0, q.jsx)(`img`, {
-      src: a,
-      className: f,
+    children: (0, W.jsx)(`img`, {
+      src: i,
+      className: y,
       loading: `lazy`,
       alt: r.name || ``,
     }),
   });
 }
-function Y(e) {
-  let [t, r] = (0, G.useState)(void 0),
-    { data: i } = B(e),
-    { data: a } = Ie(e),
-    o = n(),
-    s = ze();
+var K = `WYXlhoxwBlU-`,
+  q = `Ypf4QLCxqQU-`,
+  J = `rDvoly1XGQk-`,
+  Ge = `n2t7u-oXiwM-`,
+  Ke = `a1UUU8zD1Lg-`,
+  qe = `jP-Qr-tpETg-`,
+  Y = `triBTPpfZNQ-`,
+  X = `Ep0wQ-6tJLw-`,
+  Je = `-Rp0JgQXMoA-`,
+  Ye = `QWDBAVIUpho-`,
+  Xe = `JAphvRffM9M-`,
+  Ze = `FQQL32BdomI-`,
+  Qe = `xNRz-0kPOeE-`,
+  Z = `-F6L5ywkZiU-`,
+  $e = `_4eS9H8fFOdo-`,
+  Q = `_7fjzkXY-Nhs-`,
+  et = `qNcrltVSVzI-`,
+  tt = `A-4nfbw4-fY-`,
+  nt = `oe2Jr-slLMU-`,
+  rt = `DGZ5Ptl37g4-`,
+  it = `zstB61TOiBA-`,
+  at = `-ZEsfMgRePw-`,
+  ot = `P-N-CSZ-VX8-`,
+  st = `aZng9sDwNZg-`,
+  ct = `x80z1JoR9dc-`,
+  lt = `X-2r-tUH1gQ-`,
+  ut = `-A11cjkYCU8-`,
+  dt = `_10gRNaJtPOU-`,
+  ft = `UskT6FngUB8-`,
+  pt = `L03Y6ydPSDM-`,
+  mt = `rX8DGzBU5pU-`,
+  ht = `_8mKyAzWvx8I-`,
+  gt = `RfxR9kxm2-o-`,
+  _t = `_3EpVljmp8Bg-`,
+  vt = `h1-hm2PiNH0-`,
+  yt = `ruaMViMLvdA-`;
+function bt(e) {
+  let {
+    capsules_per_row: t,
+    is_generic: n,
+    is_generic_trailer: r,
+    is_event_dash_row: i,
+    is_trailer_carousel: a,
+    is_spotlights: o,
+    is_item_browser: s,
+    is_maincap: c,
+    is_expanded_maincap: l,
+    is_expanded_display: u,
+    show_auto_advance_bar: d,
+    swipe_row: f,
+  } = e;
+  if (typeof f == `string`)
+    return (0, W.jsx)($, {
+      children: (0, W.jsx)(`div`, {
+        className: N(J, Ge),
+        children: [0, 1, 2, 3, 4].map((e) =>
+          (0, W.jsx)(
+            `div`,
+            {
+              className: N(Ke, f === `tall_capsule` && `RDPLi3Xo-Mk-`),
+              children: (0, W.jsx)(`div`, { className: q }),
+            },
+            e,
+          ),
+        ),
+      }),
+    });
+  if (f)
+    return (0, W.jsx)($, {
+      children: (0, W.jsx)(`div`, {
+        className: J,
+        children: [0, 1].map((e) =>
+          (0, W.jsx)(
+            `div`,
+            { className: q, style: { width: f.width, height: f.height } },
+            e,
+          ),
+        ),
+      }),
+    });
+  if (!t) return null;
+  if (n)
+    return (0, W.jsx)($, {
+      children: (0, W.jsx)(`div`, {
+        className: qe,
+        children: (0, W.jsx)(`div`, { className: Y }),
+      }),
+    });
+  if (r)
+    return (0, W.jsx)($, {
+      children: (0, W.jsx)(`div`, {
+        className: X,
+        children: (0, W.jsx)(`div`, { className: Y }),
+      }),
+    });
+  if (a)
+    return (0, W.jsxs)($, {
+      children: [
+        (0, W.jsxs)(`div`, {
+          className: ut,
+          children: [
+            (0, W.jsx)(`div`, {
+              className: dt,
+              children: (0, W.jsx)(`div`, { className: Y }),
+            }),
+            (0, W.jsx)(`div`, {
+              className: ft,
+              children: (0, W.jsx)(`div`, { className: Y }),
+            }),
+          ],
+        }),
+        d &&
+          (0, W.jsx)(`div`, {
+            className: `lvoTx8-ZMMw-`,
+            children: (0, W.jsx)(`div`, { className: `triBTPpfZNQ-` }),
+          }),
+      ],
+    });
+  if (i)
+    return (0, W.jsx)($, {
+      children: (0, W.jsxs)(`div`, {
+        className: it,
+        children: [
+          (0, W.jsx)(`div`, { className: N(at, q) }),
+          (0, W.jsxs)(`div`, {
+            className: N(ot),
+            children: [
+              (0, W.jsx)(`div`, { className: N(st, q) }),
+              (0, W.jsx)(`div`, { className: N(ct, q) }),
+              (0, W.jsx)(`div`, { className: N(lt, q) }),
+            ],
+          }),
+        ],
+      }),
+    });
+  if (o)
+    return (0, W.jsx)($, {
+      children: (0, W.jsxs)(`div`, {
+        className: nt,
+        children: [
+          (0, W.jsx)(`div`, { className: q }),
+          (0, W.jsx)(`div`, { className: q }),
+          (0, W.jsxs)(`div`, {
+            className: rt,
+            children: [
+              (0, W.jsx)(`div`, { className: q }),
+              (0, W.jsx)(`div`, { className: q }),
+            ],
+          }),
+        ],
+      }),
+    });
+  if (c)
+    return (0, W.jsx)($, {
+      children: (0, W.jsxs)(`div`, {
+        className: N({ [gt]: !0, [void 0]: l }),
+        children: [
+          (0, W.jsx)(`div`, { className: q }),
+          (0, W.jsxs)(`div`, {
+            className: N(ot),
+            children: [
+              (0, W.jsx)(`div`, { className: N(st, q) }),
+              (0, W.jsx)(`div`, { className: N(ct, q) }),
+              (0, W.jsx)(`div`, { className: N(_t, q) }),
+              (0, W.jsx)(`div`, { className: N(vt, q) }),
+              (0, W.jsx)(`div`, { className: N(yt, q) }),
+            ],
+          }),
+        ],
+      }),
+    });
+  if (u)
+    return (0, W.jsx)($, {
+      children: (0, W.jsxs)(`div`, {
+        className: pt,
+        children: [
+          (0, W.jsx)(`div`, { className: N(mt, q) }),
+          (0, W.jsx)(`div`, { className: N(ht, q) }),
+        ],
+      }),
+    });
+  if (s) {
+    let e = [];
+    for (let n = 0; n < t[0]; n++)
+      e.push(
+        (0, W.jsx)(
+          P,
+          {
+            className: Ze,
+            focusable: !0,
+            children: (0, W.jsx)(`div`, { className: q }),
+          },
+          `item_browse_ghost_` + n,
+        ),
+      );
+    return (0, W.jsx)($, { children: e });
+  }
+  return t?.length == 1
+    ? t[0] == 1
+      ? (0, W.jsx)($, {
+          children: (0, W.jsx)(`div`, {
+            className: Xe,
+            children: (0, W.jsx)(`div`, { className: q }),
+          }),
+        })
+      : t[0] == 4
+        ? (0, W.jsx)($, {
+            children: (0, W.jsxs)(`div`, {
+              className: Ye,
+              children: [
+                (0, W.jsx)(`div`, { className: q }),
+                (0, W.jsx)(`div`, { className: q }),
+                (0, W.jsx)(`div`, { className: q }),
+                (0, W.jsx)(`div`, { className: q }),
+              ],
+            }),
+          })
+        : (0, W.jsx)($, {
+            children: (0, W.jsxs)(`div`, {
+              className: Je,
+              children: [
+                (0, W.jsx)(`div`, { className: q }),
+                (0, W.jsx)(`div`, { className: q }),
+                (0, W.jsx)(`div`, { className: q }),
+              ],
+            }),
+          })
+    : t?.length == 2
+      ? t[0] == 3 && t[1] == 3
+        ? (0, W.jsx)($, {
+            children: (0, W.jsxs)(`div`, {
+              className: Qe,
+              children: [
+                (0, W.jsxs)(`div`, {
+                  className: N(Z, Q),
+                  children: [
+                    (0, W.jsx)(`div`, { className: q }),
+                    (0, W.jsx)(`div`, { className: q }),
+                    (0, W.jsx)(`div`, { className: q }),
+                  ],
+                }),
+                (0, W.jsxs)(`div`, {
+                  className: N(Z, Q),
+                  children: [
+                    (0, W.jsx)(`div`, { className: q }),
+                    (0, W.jsx)(`div`, { className: q }),
+                    (0, W.jsx)(`div`, { className: q }),
+                  ],
+                }),
+              ],
+            }),
+          })
+        : (0, W.jsx)($, {
+            children: (0, W.jsxs)(`div`, {
+              className: Qe,
+              children: [
+                (0, W.jsxs)(`div`, {
+                  className: N(Z, $e),
+                  children: [
+                    (0, W.jsx)(`div`, { className: q }),
+                    (0, W.jsx)(`div`, { className: q }),
+                  ],
+                }),
+                (0, W.jsxs)(`div`, {
+                  className: N(Z, Q),
+                  children: [
+                    (0, W.jsx)(`div`, { className: q }),
+                    (0, W.jsx)(`div`, { className: q }),
+                    (0, W.jsx)(`div`, { className: q }),
+                  ],
+                }),
+              ],
+            }),
+          })
+      : (0, W.jsx)($, {
+          children: (0, W.jsxs)(`div`, {
+            className: et,
+            children: [
+              (0, W.jsxs)(`div`, {
+                className: N(Z, $e),
+                children: [
+                  (0, W.jsx)(`div`, { className: q }),
+                  (0, W.jsx)(`div`, { className: q }),
+                ],
+              }),
+              (0, W.jsxs)(`div`, {
+                className: N(Z, Q),
+                children: [
+                  (0, W.jsx)(`div`, { className: q }),
+                  (0, W.jsx)(`div`, { className: q }),
+                  (0, W.jsx)(`div`, { className: q }),
+                ],
+              }),
+              (0, W.jsxs)(`div`, {
+                className: N(Z, tt),
+                children: [
+                  (0, W.jsx)(`div`, { className: q }),
+                  (0, W.jsx)(`div`, { className: q }),
+                  (0, W.jsx)(`div`, { className: q }),
+                  (0, W.jsx)(`div`, { className: q }),
+                ],
+              }),
+            ],
+          }),
+        });
+}
+function $(e) {
+  return (0, W.jsx)(P, {
+    className: N(K, e.className),
+    focusableIfEmpty: !0,
+    children: e.children,
+  });
+}
+function xt(e) {
+  let [t, n] = (0, H.useState)(void 0),
+    { data: i } = I(e),
+    { data: a } = Re(e),
+    o = r(),
+    s = Ne();
   return (
-    (0, G.useEffect)(() => {
+    (0, H.useEffect)(() => {
       if (i) {
-        if (a && a.length > 0) r(a);
+        if (a && a.length > 0) n(a);
         else if (i.related_items?.parent_appid) {
           let e = { appid: i.related_items?.parent_appid };
           (async () => {
-            let t = await o.fetchQuery(z(s, e));
-            t && t.length > 0 && r(t);
+            let t = await o.fetchQuery(Ae(s, e));
+            t && t.length > 0 && n(t);
           })();
         }
       }
@@ -175,291 +490,291 @@ function Y(e) {
     t
   );
 }
-function Ue(e) {
+function St(e) {
   let { id: t } = e;
-  return t ? (0, q.jsx)(X, { id: t }) : null;
+  return t ? (0, W.jsx)(Ct, { id: t }) : null;
 }
-function X(e) {
+function Ct(e) {
   let { id: t } = e,
-    n = Y(t);
+    n = xt(t);
   return n
-    ? (0, q.jsx)(`div`, {
-        className: T,
+    ? (0, W.jsx)(`div`, {
+        className: _,
         children: n
           .slice(0, 10)
           .map((e) =>
-            (0, q.jsx)(he, { tagid: e.tagid, className: S }, `tag_` + e.tagid),
+            (0, W.jsx)(T, { tagid: e.tagid, className: b }, `tag_` + e.tagid),
           ),
       })
     : null;
 }
-function Z(e) {
+function wt(e) {
   let {
       id: t,
       bShowDemoButton: n,
       bShowPurchaseOptionsButton: r,
-      fnOnPurchaseOptionsClick: i,
-      bHidePrice: a,
-      bShowDeckCompatibilityDialog: o,
-      eHardwareCompatibilityDisplay: c,
-      className: l,
-      bShowCartButton: u,
+      fnOnPurchaseOptionsClick: o,
+      bHidePrice: c,
+      bShowDeckCompatibilityDialog: l,
+      eHardwareCompatibilityDisplay: u,
+      className: d,
+      bShowCartButton: f,
     } = e,
-    { data: d } = B(t),
-    { data: f } = H(t),
-    { data: p } = V(t),
-    { bIsOwned: m } = D(t),
-    [h, g] = ge(o, c);
-  if (!d) return null;
-  let ee =
-      (d.type === 1 && !f?.is_coming_soon) ||
-      (d.related_items?.demo_appid && d.related_items?.demo_appid.length > 0),
-    y = A(d.type),
-    b = n && y && ee,
-    x = null;
-  if (!m && p?.is_free_to_keep && p?.free_to_keep_ends) {
-    let e = p.free_to_keep_ends,
-      t = W(
+    { data: p } = I(t),
+    { data: m } = z(t),
+    { data: h } = A(t),
+    { bIsOwned: te } = k(t),
+    [g, _] = ye(l, u);
+  if (!p) return null;
+  let v =
+      (p.type === 1 && !m?.is_coming_soon) ||
+      (p.related_items?.demo_appid && p.related_items?.demo_appid.length > 0),
+    ne = ge(p.type),
+    y = n && ne && v,
+    b = null;
+  if (!te && h?.is_free_to_keep && h?.free_to_keep_ends) {
+    let e = h.free_to_keep_ends,
+      t = V(
         `#Sale_default_label_Free_Promo_Description_Short`,
-        N(e) + ` @ ` + Re(e, { bForce24HourClock: !1 }),
+        Ve(e) + ` @ ` + Me(e, { bForce24HourClock: !1 }),
       );
-    x = (0, q.jsxs)(`div`, {
-      className: _,
+    b = (0, W.jsxs)(`div`, {
+      className: ee,
       children: [
         t,
-        (0, q.jsx)(R, {
-          tooltip: W(`#Sale_default_Tooltip_Free_Promo_Limitation`),
+        (0, W.jsx)(M, {
+          tooltip: V(`#Sale_default_Tooltip_Free_Promo_Limitation`),
         }),
       ],
     });
   }
-  return (0, q.jsxs)(`div`, {
-    className: L(C, l),
+  return (0, W.jsxs)(`div`, {
+    className: N(a, d),
     children: [
-      x,
-      (0, q.jsxs)(`div`, {
-        className: w,
+      b,
+      (0, W.jsxs)(`div`, {
+        className: le,
         children: [
-          !!b && (0, q.jsx)(s, { id: t, className: `R0sGSaFdUWo-` }),
-          !a &&
-            d.type !== 1 &&
-            (0, q.jsxs)(q.Fragment, {
+          !!y && (0, W.jsx)(D, { id: t, className: `R0sGSaFdUWo-` }),
+          !c &&
+            p.type !== 1 &&
+            (0, W.jsxs)(W.Fragment, {
               children: [
-                !(!r || d.is_free) &&
-                  (0, q.jsx)(Q, { fnOnPurchaseOptionsClick: i }),
-                !(!u || d.is_free) &&
-                  (0, q.jsx)(v, { id: t, className: `CartBtn` }),
+                !(!r || p.is_free) &&
+                  (0, W.jsx)(Tt, { fnOnPurchaseOptionsClick: o }),
+                !(!f || p.is_free) &&
+                  (0, W.jsx)(s, { id: t, className: `CartBtn` }),
               ],
             }),
-          !a && (0, q.jsx)(te, { id: t }),
-          h && (0, q.jsx)(k, { id: t, compatibility: g }),
+          !c && (0, W.jsx)(i, { id: t }),
+          g && (0, W.jsx)(S, { id: t, compatibility: _ }),
         ],
       }),
     ],
   });
 }
-function Q(e) {
-  return (0, q.jsx)(`div`, {
-    className: b,
+function Tt(e) {
+  return (0, W.jsx)(`div`, {
+    className: C,
     onClick: e.fnOnPurchaseOptionsClick,
-    children: (0, q.jsx)(`span`, {
-      children: W(`#EventDisplay_CallToAction_ShowPurchaseOptions_Button`),
+    children: (0, W.jsx)(`span`, {
+      children: V(`#EventDisplay_CallToAction_ShowPurchaseOptions_Button`),
     }),
   });
 }
-function We(e) {
+function Et(e) {
   let {
       id: t,
       type: n,
       bShowDemoButton: r,
-      bPreferDemoStorePage: i,
-      bHidePrice: s,
-      bUseSubscriptionLayout: c,
-      bHidePlatforms: f,
-      bHideContainedApps: m,
-      bAllowTwoLinesForHeader: h,
-      bShowReviewSummary: g,
-      bShowDeckCompatibilityDialog: _,
-      eHardwareCompatibilityDisplay: v,
-      bAutoFocus: y,
-      fnOnClickOverride: b,
+      bPreferDemoStorePage: s,
+      bHidePrice: d,
+      bUseSubscriptionLayout: f,
+      bHidePlatforms: m,
+      bHideContainedApps: ee,
+      bAllowTwoLinesForHeader: g,
+      bShowReviewSummary: _,
+      bShowDeckCompatibilityDialog: v,
+      eHardwareCompatibilityDisplay: y,
+      bAutoFocus: b,
+      fnOnClickOverride: x,
       bIsMarketingMessage: S,
-      bPreferAssetWithoutOverride: T,
+      bPreferAssetWithoutOverride: C,
     } = e,
-    E = re(t, n),
-    [D, O] = (0, G.useState)(!1),
-    fe = Le(),
-    { data: k, isPending: he } = I(E),
-    { data: A } = V(E),
-    { data: M } = H(E),
-    { data: N } = a(),
-    P = p(E),
-    F = (0, G.useRef)(null),
-    [R, z] = (0, G.useState)(!1),
-    B = Oe(),
-    [U, Fe] = (0, G.useState)(!1);
-  ((0, G.useEffect)(() => {
-    if (!U) {
-      O(!1);
+    w = se(t, n),
+    [T, E] = (0, H.useState)(!1),
+    me = Le(),
+    { data: D, isPending: ge } = R(w),
+    { data: k } = A(w),
+    { data: Ae } = z(w),
+    { data: j } = O(),
+    je = _e(w),
+    M = (0, H.useRef)(null),
+    [F, I] = (0, H.useState)(!1),
+    L = Fe(),
+    [B, Me] = (0, H.useState)(!1);
+  ((0, H.useEffect)(() => {
+    if (!B) {
+      E(!1);
       return;
     }
-    let e = window.setTimeout(() => O(!0), 500);
+    let e = window.setTimeout(() => E(!0), 500);
     return () => window.clearTimeout(e);
-  }, [U]),
-    (0, G.useEffect)(() => {
-      F.current && z(F.current.offsetWidth < 370);
-    }, [F]));
-  let Ie = (0, G.useMemo)(
-      () => (i && k && be(k) ? { appid: ye(k)[0] } : E),
-      [i, E, k],
+  }, [B]),
+    (0, H.useEffect)(() => {
+      M.current && I(M.current.offsetWidth < 370);
+    }, [M]));
+  let Ne = (0, H.useMemo)(
+      () => (s && D && Ce(D) ? { appid: Se(D)[0] } : w),
+      [s, w, D],
     ),
-    { strStoreURL: W, snr: Re } = d(k, i),
-    ze = Ee(S ? void 0 : E);
-  if (!k)
-    return he
-      ? (0, q.jsx)(Te, { capsules_per_row: [1], is_item_browser: !0 })
+    { strStoreURL: V, snr: Re } = de(D, s),
+    Ve = De(S ? void 0 : w);
+  if (!D)
+    return ge
+      ? (0, W.jsx)(bt, { capsules_per_row: [1], is_item_browser: !0 })
       : null;
-  let K = k.included_appids?.length || 0,
-    Be = k.included_appids?.filter((e) => N?.has(e))?.length || 0,
-    Ve = k.item_type == 2 && !!A?.must_purchase_as_set,
-    J = !m && K > 1,
-    Y = k.item_type == 1 && K == 1,
-    X = k.item_type == 0 || Y,
-    Q = Y && k.appid,
-    We = k.name || ``,
-    Je = u(M, A),
-    Ye = B || !M?.is_coming_soon || Je,
-    [Xe, $] = ge(_, v);
-  return (0, q.jsxs)(ke, {
-    className: L({ [ce]: !0, [void 0]: h, StoreSaleWidgetOuterContainer: !0 }),
+  let U = D.included_appids?.length || 0,
+    He = D.included_appids?.filter((e) => j?.has(e))?.length || 0,
+    Ue = D.item_type == 2 && !!k?.must_purchase_as_set,
+    G = !ee && U > 1,
+    K = D.item_type == 1 && U == 1,
+    q = D.item_type == 0 || K,
+    J = K && D.appid,
+    Ge = D.name || ``,
+    Ke = ne(Ae, k),
+    qe = L || !Ae?.is_coming_soon || Ke,
+    [Y, X] = ye(v, y);
+  return (0, W.jsxs)(P, {
+    className: N({ [he]: !0, [void 0]: g, StoreSaleWidgetOuterContainer: !0 }),
     "flow-children": `grid`,
-    navEntryPreferPosition: Ae.PREFERRED_CHILD,
-    autoFocus: y,
-    navKey: `preview_widget_` + Ne(E),
-    ...ze,
+    navEntryPreferPosition: ke.PREFERRED_CHILD,
+    autoFocus: b,
+    navKey: `preview_widget_` + Ie(w),
+    ...Ve,
     children: [
-      (0, q.jsx)(se, {
-        appid: X && `appid` in E ? E.appid : void 0,
-        children: (0, q.jsxs)(je, {
-          onClick: S ? b : void 0,
-          className: L({ [ae]: !0, [ne]: !0, [le]: S }),
-          ...De(k, fe, B, !!i, void 0, b),
-          preferredFocus: J,
-          onFocusWithin: B ? Fe : void 0,
+      (0, W.jsx)(be, {
+        appid: q && `appid` in w ? w.appid : void 0,
+        children: (0, W.jsxs)(ze, {
+          onClick: S ? x : void 0,
+          className: N({ [ue]: !0, [ie]: !0, [te]: S }),
+          ...Oe(D, me, L, !!s, void 0, x),
+          preferredFocus: G,
+          onFocusWithin: L ? Me : void 0,
           children: [
-            (0, q.jsx)(`div`, {
-              className: L(oe),
-              children: (0, q.jsx)(Ge, {
-                id: Ie,
-                strURL: W,
-                children: (0, q.jsxs)(`div`, {
-                  className: ue,
+            (0, W.jsx)(`div`, {
+              className: N(ae),
+              children: (0, W.jsx)(Dt, {
+                id: Ne,
+                strURL: V,
+                children: (0, W.jsxs)(`div`, {
+                  className: pe,
                   children: [
-                    (0, q.jsx)(Se, { appids: P }),
-                    (0, q.jsx)(j, {
-                      id: E,
+                    (0, W.jsx)(Ee, { appids: je }),
+                    (0, W.jsx)(Te, {
+                      id: w,
                       imageType: `header`,
-                      bPreferAssetWithoutOverride: T,
+                      bPreferAssetWithoutOverride: C,
                     }),
-                    (0, q.jsx)(xe, { id: E }),
-                    (0, q.jsx)(we, {
-                      id: E,
-                      active: E && D,
+                    (0, W.jsx)(we, { id: w }),
+                    (0, W.jsx)(ve, {
+                      id: w,
+                      active: w && T,
                       bIsHoverMode: !0,
-                      eGrowOnActivate: B
+                      eGrowOnActivate: L
                         ? void 0
-                        : Ce.k_ETrailerGrowAmount_Medium,
+                        : xe.k_ETrailerGrowAmount_Medium,
                     }),
                   ],
                 }),
               }),
             }),
-            (0, q.jsxs)(`div`, {
-              className: L({ [de]: !0, [ee]: J }),
+            (0, W.jsxs)(`div`, {
+              className: N({ [c]: !0, [fe]: G }),
               children: [
-                !(!X || b) &&
-                  (0, q.jsx)(l, {
-                    id: E,
-                    classOverride: L(`x33TRfA9NLE-`, `WishlistButton`),
+                !(!q || x) &&
+                  (0, W.jsx)(u, {
+                    id: w,
+                    classOverride: N(`x33TRfA9NLE-`, `WishlistButton`),
                     snr: Re,
                   }),
-                (0, q.jsx)(`div`, {
-                  className: ve,
-                  children: (0, q.jsx)(`a`, {
-                    href: b ? void 0 : W,
-                    target: Me.IN_CLIENT ? void 0 : `_blank`,
-                    onClick: b,
-                    children: (0, q.jsx)(`div`, {
-                      className: L(ie, `StoreSaleWidgetTitle`),
-                      children: We,
+                (0, W.jsx)(`div`, {
+                  className: h,
+                  children: (0, W.jsx)(`a`, {
+                    href: x ? void 0 : V,
+                    target: Be.IN_CLIENT ? void 0 : `_blank`,
+                    onClick: x,
+                    children: (0, W.jsx)(`div`, {
+                      className: N(l, `StoreSaleWidgetTitle`),
+                      children: Ge,
                     }),
                   }),
                 }),
-                !J && (0, q.jsx)(Ue, { id: E }),
-                (0, q.jsxs)(`div`, {
-                  className: _e,
-                  ref: F,
+                !G && (0, W.jsx)(St, { id: w }),
+                (0, W.jsxs)(`div`, {
+                  className: o,
+                  ref: M,
                   children: [
-                    X && (0, q.jsx)(Ke, { id: E }),
-                    !J &&
-                      !f &&
-                      E &&
-                      (0, q.jsxs)(q.Fragment, {
+                    q && (0, W.jsx)(Ot, { id: w }),
+                    !G &&
+                      !m &&
+                      w &&
+                      (0, W.jsxs)(W.Fragment, {
                         children: [
-                          (0, q.jsx)(pe, {
-                            id: E,
-                            bMinimizePlatforms: R,
-                            bHideWindows: R,
+                          (0, W.jsx)(oe, {
+                            id: w,
+                            bMinimizePlatforms: F,
+                            bHideWindows: F,
                           }),
-                          !!(Xe && k.item_type == 0) &&
-                            (0, q.jsx)(Pe, {
-                              eHWCompat: $,
+                          !!(Y && D.item_type == 0) &&
+                            (0, W.jsx)(Pe, {
+                              eHWCompat: X,
                               className: `tUIs-i3NWoU-`,
-                              id: E,
+                              id: w,
                             }),
                         ],
                       }),
                   ],
                 }),
-                !J &&
-                  g &&
-                  E &&
-                  (0, q.jsx)(`div`, {
+                !G &&
+                  _ &&
+                  w &&
+                  (0, W.jsx)(`div`, {
                     className: `BZ9dZKOmXqE-`,
-                    children: (0, q.jsx)(o, { id: E }),
+                    children: (0, W.jsx)(p, { id: w }),
                   }),
-                J &&
-                  E &&
-                  (0, q.jsx)(He, {
-                    id: E,
-                    bHideInLibraryApps: !Ve && k.item_type == 2 && Be < K,
+                G &&
+                  w &&
+                  (0, W.jsx)(We, {
+                    id: w,
+                    bHideInLibraryApps: !Ue && D.item_type == 2 && He < U,
                   }),
-                !!X && (0, q.jsx)(qe, { id: E }),
-                b
-                  ? (0, q.jsx)(`div`, {
-                      className: C,
-                      children: (0, q.jsx)(`div`, {
-                        className: w,
-                        children: (0, q.jsx)(te, { id: E }),
+                !!q && (0, W.jsx)(kt, { id: w }),
+                x
+                  ? (0, W.jsx)(`div`, {
+                      className: a,
+                      children: (0, W.jsx)(`div`, {
+                        className: le,
+                        children: (0, W.jsx)(i, { id: w }),
                       }),
                     })
-                  : (0, q.jsx)(q.Fragment, {
+                  : (0, W.jsx)(W.Fragment, {
                       children:
-                        c && X && Q
-                          ? (0, q.jsx)(x, { appid: Q, bIsMuted: !!D })
-                          : (0, q.jsx)(Z, {
-                              id: E,
+                        f && q && J
+                          ? (0, W.jsx)(re, { appid: J, bIsMuted: !!T })
+                          : (0, W.jsx)(wt, {
+                              id: w,
                               bShowDemoButton: r,
-                              bHidePrice: s,
-                              bHideWishlistButton: Ye,
-                              eHardwareCompatibilityDisplay: $,
+                              bHidePrice: d,
+                              bHideWishlistButton: qe,
+                              eHardwareCompatibilityDisplay: X,
                             }),
                     }),
-                (0, q.jsx)(`div`, {
-                  className: me,
-                  children: (0, q.jsx)(j, {
-                    id: E,
-                    bPreferAssetWithoutOverride: T,
+                (0, W.jsx)(`div`, {
+                  className: ce,
+                  children: (0, W.jsx)(Te, {
+                    id: w,
+                    bPreferAssetWithoutOverride: C,
                     imageType: `header`,
                   }),
                 }),
@@ -469,58 +784,58 @@ function We(e) {
         }),
       }),
       !!(e.strReason && e.strReason.length > 0) &&
-        (0, q.jsx)(`div`, { className: `-cW4bgqyLAo-`, children: e.strReason }),
+        (0, W.jsx)(`div`, { className: `-cW4bgqyLAo-`, children: e.strReason }),
     ],
   });
 }
-function Ge(e) {
+function Dt(e) {
   let { id: t, strURL: n, children: r } = e;
   return `appid` in t
-    ? (0, q.jsxs)(i, { id: t, children: [r, ` `] })
-    : (0, q.jsx)(`a`, { href: n, children: r });
+    ? (0, W.jsxs)(x, { id: t, children: [r, ` `] })
+    : (0, W.jsx)(`a`, { href: n, children: r });
 }
-function Ke(e) {
+function Ot(e) {
   let { id: t } = e,
-    { data: n } = H(t);
-  return n ? (0, q.jsx)(`div`, { className: fe, children: m(n) }) : null;
+    { data: n } = z(t);
+  return n ? (0, W.jsx)(`div`, { className: g, children: d(n) }) : null;
 }
-function qe(e) {
+function kt(e) {
   let { id: t } = e,
-    { data: n } = I(t),
-    { data: r } = V(t),
-    { data: i } = M(t),
-    { data: o } = a();
-  if (!n || !i || !i.short_description || !o) return null;
-  let s = r?.discount_pct || 0,
-    l = n.included_appids?.length || 0,
-    u = n.included_appids?.filter((e) => o?.has(e))?.length || 0,
-    d = i.short_description,
-    f = n.item_type == 1 && l == 1,
-    p = n.item_type == 2 && !!r?.must_purchase_as_set;
+    { data: n } = R(t),
+    { data: r } = A(t),
+    { data: i } = F(t),
+    { data: a } = O();
+  if (!n || !i || !i.short_description || !a) return null;
+  let o = r?.discount_pct || 0,
+    s = n.included_appids?.length || 0,
+    c = n.included_appids?.filter((e) => a?.has(e))?.length || 0,
+    l = i.short_description,
+    u = n.item_type == 1 && s == 1,
+    d = n.item_type == 2 && !!r?.must_purchase_as_set;
   return (
-    (n.item_type == 2 || (n.item_type == 1 && !f)) &&
-      (d =
-        !p && u > 0 && u < l
-          ? W(`#Sale_Bundle_CompletePartialSet`, u, l)
-          : s > 0
-            ? W(`#Sale_BundleSave_WithDiscount`, s, l)
-            : W(`#Sale_BundleSave`, l)),
-    (0, q.jsx)(`div`, {
-      className: L(E, `StoreSaleWidgetShortDesc`),
+    (n.item_type == 2 || (n.item_type == 1 && !u)) &&
+      (l =
+        !d && c > 0 && c < s
+          ? V(`#Sale_Bundle_CompletePartialSet`, c, s)
+          : o > 0
+            ? V(`#Sale_BundleSave_WithDiscount`, o, s)
+            : V(`#Sale_BundleSave`, s)),
+    (0, W.jsx)(`div`, {
+      className: N(me, `StoreSaleWidgetShortDesc`),
       children:
-        d.startsWith(`#`) && d.indexOf(` `) == -1
-          ? (0, q.jsx)(`span`, {
-              className: c,
-              children: Fe(
-                d,
-                (0, q.jsx)(`i`, {}),
-                (0, q.jsx)(`i`, {}),
-                (0, q.jsx)(`i`, {}),
-                (0, q.jsx)(`i`, {}),
+        l.startsWith(`#`) && l.indexOf(` `) == -1
+          ? (0, W.jsx)(`span`, {
+              className: m,
+              children: B(
+                l,
+                (0, W.jsx)(`i`, {}),
+                (0, W.jsx)(`i`, {}),
+                (0, W.jsx)(`i`, {}),
+                (0, W.jsx)(`i`, {}),
               ),
             })
-          : d,
+          : l,
     })
   );
 }
-export { K as i, Z as n, Be as r, We as t };
+export { q as a, $ as i, wt as n, He as o, bt as r, U as s, Et as t };

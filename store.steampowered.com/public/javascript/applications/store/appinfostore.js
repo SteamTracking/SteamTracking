@@ -1,19 +1,19 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { At as e, Ct as t, kt as n } from "./chunk~01cfc309bf.js";
+import { Ot as e, St as t, kt as n } from "./chunk~01cfc309bf.js";
 import { t as r } from "./chunk~19394a4118.js";
 import {
-  Kb as i,
-  OS as a,
-  Ox as o,
-  Zx as s,
-  _x as c,
-  il as l,
-  nl as u,
-  nx as d,
-  rl as f,
-  sS as p,
+  $x as i,
+  AS as a,
+  al as o,
+  il as s,
+  kx as c,
+  lS as l,
+  qb as u,
+  rl as d,
+  rx as f,
+  vx as p,
 } from "./main.js";
 function m(e, t) {
   return e.replace(/%[A-Za-z0-9_:]+%/g, (e) => {
@@ -25,7 +25,7 @@ function m(e, t) {
   });
 }
 function h() {
-  return d.EUNIVERSE != 1;
+  return f.EUNIVERSE != 1;
 }
 function g(e, t, n, r) {
   let i = !1,
@@ -65,7 +65,7 @@ function y(e, t, n, r) {
 }
 var b = class {
     m_nLastUpdated = 0;
-    m_mapLanguages = e.map();
+    m_mapLanguages = n.map();
     m_appid;
     m_fetching = null;
     constructor(e) {
@@ -78,7 +78,7 @@ var b = class {
       return this.m_mapLanguages.has(e) ? this.m_mapLanguages.get(e) : null;
     }
     GetTokenLists() {
-      let e = c.LANGUAGE;
+      let e = p.LANGUAGE;
       return (e == `english` ? [e] : [e, `english`])
         .map((e) => this.GetTokenList(e))
         .filter((e) => !!e);
@@ -94,16 +94,16 @@ var b = class {
   x = 1209600,
   S = class {
     m_CMInterface;
-    m_mapAppInfo = e.map();
-    m_mapRichPresenceLoc = e.map();
+    m_mapAppInfo = n.map();
+    m_mapRichPresenceLoc = n.map();
     m_cAppInfoRequestsInFlight = 0;
     m_setPendingAppInfo = new Set();
     m_PendingAppInfoPromise;
     m_PendingAppInfoResolve;
     m_CacheStorage = null;
-    m_fnCallbackOnAppInfoLoaded = new s();
+    m_fnCallbackOnAppInfoLoaded = new i();
     constructor() {
-      n(this);
+      e(this);
     }
     Init(e) {
       this.m_CMInterface = e;
@@ -119,7 +119,7 @@ var b = class {
     RegisterCallbackOnLoad(e) {
       this.BHavePendingAppInfoRequests()
         ? this.m_fnCallbackOnAppInfoLoaded.Register(e)
-        : (p(
+        : (l(
             !1,
             `Registering for callback on appinfo load, but nothing queued`,
           ),
@@ -130,7 +130,7 @@ var b = class {
     }
     GetAppInfo(e) {
       if (
-        (p(this.m_CMInterface, `CAppInfoStore.GetAppInfo called before Init`),
+        (l(this.m_CMInterface, `CAppInfoStore.GetAppInfo called before Init`),
         !this.m_mapAppInfo.has(e))
       ) {
         let t = new r(e);
@@ -164,12 +164,12 @@ var b = class {
       if (t.length) {
         (console.log(`Loading batch of App Info from Steam: `, t),
           await this.m_CMInterface?.WaitUntilLoggedOn());
-        let e = o.Init(f);
-        for (e.Body().set_language(a(c.LANGUAGE)); t.length > 0;) {
+        let e = c.Init(s);
+        for (e.Body().set_language(a(p.LANGUAGE)); t.length > 0;) {
           let n = Math.min(50, t.length),
             r = t.slice(0, n);
           ((t = t.slice(n)), e.Body().set_appids(r));
-          let i = await l.GetApps(this.m_CMInterface.GetServiceTransport(), e);
+          let i = await o.GetApps(this.m_CMInterface.GetServiceTransport(), e);
           i.GetEResult() == 1
             ? this.OnGetAppsResponse(i)
             : console.error(
@@ -187,7 +187,7 @@ var b = class {
       let t = [];
       for (let n of e.Body().apps()) {
         let e = this.m_mapAppInfo.get(n.appid());
-        (p(e, `Got AppInfo response for unrequested AppID: ${n.appid()}`),
+        (l(e, `Got AppInfo response for unrequested AppID: ${n.appid()}`),
           e &&
             ((e = new r(n.appid())),
             e.DeserializeFromMessage(n),
@@ -237,7 +237,7 @@ var b = class {
           if (!n) return e;
           let i = this.m_mapAppInfo.get(e);
           return (
-            p(
+            l(
               i,
               `Didn't find AppInfo in our map when loading from cache but it should've been there?`,
             ),
@@ -279,7 +279,7 @@ var b = class {
       let r = this.GetRichPresenceLoc(e);
       return r
         ? r.Localize(t, n)
-        : c.EUNIVERSE == 1
+        : p.EUNIVERSE == 1
           ? ``
           : (console.log(
               `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
@@ -323,11 +323,11 @@ var b = class {
           ((e.m_fetching = this.m_CMInterface
             .WaitUntilLoggedOn()
             .then(() => {
-              let t = o.Init(u);
+              let t = c.Init(d);
               return (
                 t.Body().set_appid(e.GetAppID()),
-                t.Body().set_language(c.LANGUAGE),
-                l.GetAppRichPresenceLocalization(
+                t.Body().set_language(p.LANGUAGE),
+                o.GetAppRichPresenceLocalization(
                   this.m_CMInterface.GetServiceTransport(),
                   t,
                 )
@@ -349,7 +349,7 @@ var b = class {
       );
     }
   };
-(i([t], S.prototype, `OnGetAppsResponse`, null),
-  i([t], S.prototype, `OnRichPresenceLocUpdate`, null));
+(u([t], S.prototype, `OnGetAppsResponse`, null),
+  u([t], S.prototype, `OnRichPresenceLocUpdate`, null));
 var C = new S();
 export { C as t };

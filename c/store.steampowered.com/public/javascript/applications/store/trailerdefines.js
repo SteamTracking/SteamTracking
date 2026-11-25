@@ -1,7 +1,7 @@
 import { _ } from "./chunk~f025431ab0.js";
 import { _, _, _, _ } from "./chunk~01cfc309bf.js";
-import { _, _, _, _, _ } from "./chunk~6b8ddcaac8.js";
-import { _, _, _ } from "./chunk~4eed35ad1f.js";
+import { _, _, _, _ } from "./chunk~6b8ddcaac8.js";
+import { _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _, _ } from "./chunk~38061b7abb.js";
 import { _ } from "./chunk~4dd1695ad6.js";
 import {
@@ -1753,7 +1753,7 @@ var _ = _(_(), 1),
         bConstMethod: !0,
         ePrivilege: 1,
         eWebAPIKeyRequirement: 2,
-        rgBrowserAPISites: [`store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }

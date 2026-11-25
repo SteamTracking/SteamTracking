@@ -11,8 +11,8 @@ const __vite__mapDeps = (
       "../../../css/applications/community/chunk~9d9747f239.css",
       "./chunk~550dc8d464.js",
       "./chunk~35b0bf48ef.js",
-      "./chunk~cc40f6af5e.js",
       "./chunk~3f4314f3b4.js",
+      "./chunk~cc40f6af5e.js",
       "./chunk~437071091c.js",
       "./chunk~eefd71512b.js",
       "../../../css/applications/community/chunk~73d2876771.css",
@@ -59,15 +59,12 @@ const __vite__mapDeps = (
       "./chunk~6e8a72cfb5.js",
       "./chunk~e625c3ac3e.js",
       "../../../css/applications/community/chunk~ad91017565.css",
-      "../../../css/applications/community/chunk~505ee6152f.css",
       "./chunk~5412a9f1de.js",
       "../../../css/applications/community/chunk~68fae779af.css",
+      "./chunk~018ae802ee.js",
+      "../../../css/applications/community/chunk~bd1005d448.css",
       "./chunk~91ffd0567f.js",
       "./chunk~c17e16859d.js",
-      "./chunk~018ae802ee.js",
-      "./chunk~16aefcf65f.js",
-      "../../../css/applications/community/chunk~65c4848332.css",
-      "../../../css/applications/community/chunk~bd1005d448.css",
       "./chunk~91ae5e1167.js",
       "./chunk~d382bdf2cf.js",
       "./chunk~a35e3605eb.js",
@@ -105,9 +102,6 @@ import {
   _,
 } from "./chunk~01cfc309bf.js";
 import {
-  _,
-  _,
-  _,
   _,
   _,
   _,
@@ -335,12 +329,19 @@ import {
   _,
   _,
   _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
 } from "./chunk~3f4314f3b4.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk~437071091c.js";
-import { _ } from "./chunk~eefd71512b.js";
 import { _, _ } from "./chunk~018ae802ee.js";
+import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~05a38bc848.js";
-import { _, _, _, _, _, _, _ } from "./chunk~77ea210942.js";
+import { _, _, _, _, _ } from "./chunk~77ea210942.js";
 import {
   _,
   _,
@@ -367,10 +368,6 @@ import { _, _, _, _, _, _, _ } from "./chunk~91ae5e1167.js";
 import { _, _, _ } from "./chunk~739842ca30.js";
 import { _, _ } from "./chunk~95ecbf576c.js";
 import { _ } from "./chunk~395a1fb77b.js";
-import { _ } from "./chunk~c55d6473b2.js";
-import { _ } from "./chunk~d382bdf2cf.js";
-import { _ } from "./chunk~a7c5e71e12.js";
-import { _ } from "./chunk~f4fcdebd85.js";
 import {
   _,
   _,
@@ -405,6 +402,10 @@ import {
   _,
   _,
 } from "./chunk~2bb3c0c267.js";
+import { _ } from "./chunk~c55d6473b2.js";
+import { _ } from "./chunk~d382bdf2cf.js";
+import { _ } from "./chunk~a7c5e71e12.js";
+import { _ } from "./chunk~f4fcdebd85.js";
 import {
   _,
   _,
@@ -6120,7 +6121,8 @@ function _(_) {
     ],
   });
 }
-var _ = _((_) => {
+var _ = [`sale_secondary_background`],
+  _ = _((_) => {
     let { editModel: _ } = _,
       [_, _] = _(() => [_.GetAppID(), _.GetEventType()]),
       _ = _ == 36,
@@ -6158,6 +6160,17 @@ var _ = _((_) => {
               fnToggleMinimize: () => _(`sale_header`),
               partnerEventStore: _,
               elAdditionalControls: (0, _.jsx)(_, {
+                editModel: _,
+              }),
+            }),
+          }),
+          (0, _.jsx)(_, {
+            strSectionId: `SalePageEdit_SecondaryBg`,
+            children: (0, _.jsx)(_, {
+              clanSteamID: _.GetClanSteamID(),
+              requireAdmin: !0,
+              className: _,
+              children: (0, _.jsx)(_, {
                 editModel: _,
               }),
             }),
@@ -6209,6 +6222,57 @@ var _ = _((_) => {
         ],
       })
     );
+  }),
+  _ = _((_) => {
+    let { editModel: _ } = _,
+      _ = _.GetEventModel(),
+      _ = _.BHasSomeImage(`sale_secondary_background`);
+    return (0, _.jsx)(_, {
+      _: `SalePageEdit_SecondaryBg`,
+      appid: _.GetAppID(),
+      eventModel: _,
+      clanSteamID: _.GetClanSteamID(),
+      title: _(`#EventEditor_ArtworkType_sale_secondary_background`),
+      artworkType: `sale_secondary_background`,
+      bIsMinimized: _(`sale_secondary_background`),
+      fnToggleMinimize: () => _(`sale_secondary_background`),
+      fnLangHasData: (_) => _.BHasImage(`sale_secondary_background`, _),
+      fnSetImageURL: _.SetImageURL,
+      fnGetImageHashAndExt: _.GetImageHashAndExt,
+      partnerEventStore: _,
+      elAdditionalControls: (0, _.jsxs)(_.Fragment, {
+        children: [
+          (0, _.jsx)(_, {
+            clanSteamID: _.GetClanSteamID(),
+            rgSupportArtwork: _,
+            fnSetImageURL: _.SetImageURL,
+            bAllowPreviousClanImageSelection: !0,
+            rgRealmList: _.GetIncludedRealmList(),
+          }),
+          (0, _.jsx)(`div`, {
+            children: (0, _.jsx)(_, {
+              bHideBlur: !0,
+              setting: _.jsondata.sale_secondary_background_repeat,
+              fnUpdateSetting: (_) => {
+                _(() => {
+                  ((_.jsondata.sale_secondary_background_repeat =
+                    _ === `coverBlur` ? `no-repeat` : _),
+                    _.SetDirty(_.jsondata_sales));
+                });
+              },
+            }),
+          }),
+        ],
+      }),
+      fnRemoveAllArtwork: _
+        ? () => {
+            _(() => {
+              (delete _.jsondata.localized_sale_secondary_background_image,
+                _.SetDirty(_.jsondata_image));
+            });
+          }
+        : void 0,
+    });
   }),
   _ = _((_) => {
     let { editModel: _ } = _,
@@ -11144,11 +11208,10 @@ var _ = _.lazy(() =>
   _(
     () => import(`./chunk~550dc8d464.js`),
     __vite__mapDeps([
-      6, 1, 2, 7, 8, 3, 4, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+      6, 1, 2, 7, 8, 9, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
       22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
       40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57,
       58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75,
-      76, 77, 78,
     ]),
     import.meta.url,
   ),
@@ -16338,7 +16401,7 @@ var _ = _((_) => {
                 checked: _.GetEventModel().BHasTag(`seasonal_sale_featuring`),
                 description: `Add the 'seasonal_sale_featuring' tag to this post. This will push the event to appear on the front page during a seasonal sale. This assume the content is specific to in-game items on sale for the underlying game`,
               }),
-            _.GetClanAccountID() == 41316928 &&
+            _(_.GetClanAccountID()) &&
               (0, _.jsx)(_, {
                 onChange: (_) => _.SetTag(`contenthub`, _),
                 checked: _.GetEventModel().BHasTag(`contenthub`),

@@ -2,15 +2,15 @@
  ****/
 /* Third-party software licenses can be found at licenses.txt */
 import {
-  At as e,
-  sn as t,
-  t as n,
-  vt as r,
-  z as i,
+  Pt as e,
+  W as t,
+  d as n,
+  nt as r,
+  t as i,
 } from "./chunk~de7f2df91c.js";
-import { Pt as a } from "./chunk~25a6634263.js";
+import { Mt as a } from "./chunk~bd90a5fce7.js";
 import { a as o } from "./chunk~a292304e38.js";
-var s = t(e(), 1);
+var s = e(r(), 1);
 function c() {
   return typeof window < `u`;
 }
@@ -358,7 +358,7 @@ function ke(e) {
     y: n,
   };
 }
-var Y = r(),
+var Y = t(),
   Ae = `input:not([inert]),select:not([inert]),textarea:not([inert]),a[href]:not([inert]),button:not([inert]),[tabindex]:not(slot):not([inert]),audio[controls]:not([inert]),video[controls]:not([inert]),[contenteditable]:not([contenteditable="false"]):not([inert]),details>summary:first-of-type:not([inert]),details:not([inert])`,
   je = typeof Element > `u`,
   Me = je
@@ -618,7 +618,7 @@ var Y = r(),
     if (((t ||= {}), !e)) throw Error(`No node provided`);
     return Me.call(e, Ae) !== !1 && et(t, e);
   },
-  at = t(n(), 1);
+  at = e(i(), 1);
 function ot(e, t, n) {
   let { reference: r, floating: i } = e,
     a = he(t),
@@ -3581,7 +3581,7 @@ function Ur(e, t) {
     );
   return s.useMemo(() => (l ? { reference: w, floating: T } : {}), [l, w, T]);
 }
-var Wr = t(a(), 1),
+var Wr = e(a(), 1),
   Gr = `a7R7ZlNGFnc-`,
   Kr = (0, s.createContext)(`auto`);
 function qr(e) {
@@ -3590,10 +3590,10 @@ function qr(e) {
 }
 function Jr(e = `auto`) {
   let t = (0, s.useContext)(Kr),
-    n = i();
+    r = n();
   if (e !== `auto`) return e;
-  let r = t;
-  return r === `auto` ? (n ? `modal` : `anchor`) : r;
+  let i = t;
+  return i === `auto` ? (r ? `modal` : `anchor`) : i;
 }
 var Yr = `80vh`,
   Xr = `var( --popover-modal-width, clamp( 280px, 40vw, 480px ) )`;

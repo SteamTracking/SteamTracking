@@ -361,6 +361,7 @@ function CalculateLocalTax( amtWithFee, quantity, flRate )
 function GetPublisherFee( dialogHandle )
 {
 	dialogHandle.m_fPubFee_Rate = parseFloat( g_fPubFee_Rate );
+		this.m_nPubFee_Cap = parseInt( g_nPubFee_Cap );
 	}
 
 CreateBuyOrderDialog = {
@@ -379,7 +380,7 @@ CreateBuyOrderDialog = {
 	m_confirmationTries: 0,
 	m_nMinPrice: 3,
 	m_fPubFee_Rate: 0.10,
-	
+	 m_nPubFee_Cap: 0, 
 	Initialize: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		this.m_bInitialized = true;
 		this.m_divContents = divPopup;

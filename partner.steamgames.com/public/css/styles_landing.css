@@ -711,6 +711,7 @@ p {
 	.landingTable .td.controls {
 		padding: 2px 7px 2px 2px;
 		text-align: right;
+		min-width: 93px;
 	}
 
 	.landingTable .td.controls a {

@@ -332,6 +332,12 @@
 	margin-inline-end: 12px;
 }
 
+/* full-size (184px) avatar for high DPI, displayed at medium size */
+.ban_row .group_avatar_img {
+	width: 64px;
+	height: 64px;
+}
+
 .ban_row .unban_action {
 	float: inline-end;
 	padding: 12px;

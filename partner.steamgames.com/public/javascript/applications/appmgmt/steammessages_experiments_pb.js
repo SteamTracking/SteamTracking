@@ -2,29 +2,29 @@
  ****/
 
 import {
-  At as e,
-  Gt as t,
-  Jt as n,
-  Kt as r,
-  Ut as i,
-  W as a,
-  Wt as o,
-  Xt as s,
-  Yt as c,
-  Zt as l,
-  bt as u,
-  q as d,
-  qt as f,
-  sn as p,
+  Ct as e,
+  K as t,
+  Pt as n,
+  St as r,
+  _t as i,
+  bt as a,
+  g as o,
+  gt as s,
+  nt as c,
+  vt as l,
+  wt as u,
+  xt as d,
+  y as f,
+  yt as p,
 } from "./chunk~de7f2df91c.js";
 import { i as m } from "./chunk~8fb30ea08b.js";
 import { t as h } from "./chunk~ede3e357a2.js";
 import { t as g } from "./chunk~6257ebd2d4.js";
-var _ = p(e(), 1),
+var _ = n(c(), 1),
   v = `saleaction/creategiveawayregistration`;
 async function y(e) {
   let t =
-    a.STORE_BASE_URL +
+    o.STORE_BASE_URL +
     `saleaction/giveawayregistration?name=` +
     encodeURIComponent(e);
   return await x(
@@ -35,7 +35,7 @@ async function y(e) {
   );
 }
 async function b(e) {
-  let t = a.STORE_BASE_URL + v;
+  let t = o.STORE_BASE_URL + v;
   return await x(
     `UpdateUserGiveawayRegistration`,
     e,
@@ -62,14 +62,14 @@ function w(e, t) {
   return { queryKey: C(e, t), queryFn: () => y(e), enabled: !!e, retry: !1 };
 }
 function T(e) {
-  let { data: t, isError: n } = h(w(e, d.accountid));
+  let { data: t, isError: n } = h(w(e, f.accountid));
   return n ? S : t;
 }
 function E() {
   let e = m(),
     { mutateAsync: t } = g({
       mutationFn: b,
-      onSuccess: (t, n) => e.setQueryData(C(n, d.accountid), t),
+      onSuccess: (t, n) => e.setQueryData(C(n, f.accountid), t),
     });
   return {
     fnCreateRegistration: (0, _.useCallback)(
@@ -86,12 +86,12 @@ function E() {
     ),
   };
 }
-var D = p(l(), 1),
+var D = n(u(), 1),
   O = class e extends D.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.impressions || i(e.M()),
+        e.prototype.impressions || s(e.M()),
         D.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -106,16 +106,16 @@ var D = p(l(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= f(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= a(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return c(e.M(), t, n);
+      return r(e.M(), t, n);
     }
-    static fromObject(n) {
-      return t(e.M(), n);
+    static fromObject(t) {
+      return l(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new D.BinaryReader(t),
@@ -123,14 +123,14 @@ var D = p(l(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return o(e.MBF(), t, n);
+      return i(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new D.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
-    static serializeBinaryToWriter(t, r) {
-      n(e.M(), t, r);
+    static serializeBinaryToWriter(t, n) {
+      d(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new D.BinaryWriter();
@@ -140,58 +140,58 @@ var D = p(l(), 1),
       return `CProductImpressionsFromClient_Notification`;
     }
   },
-  k = class e extends D.Message {
+  k = class t extends D.Message {
     static ImplementsStaticInterface() {}
-    constructor(t = null) {
+    constructor(e = null) {
       (super(),
-        e.prototype.type || i(e.M()),
-        D.Message.initialize(this, t, 0, -1, void 0, null));
+        t.prototype.type || s(t.M()),
+        D.Message.initialize(this, e, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
     static M() {
       return (
-        (e.sm_m ||= {
-          proto: e,
+        (t.sm_m ||= {
+          proto: t,
           fields: {
-            type: { n: 1, br: r.readEnum, bw: s.writeEnum },
-            appid: { n: 2, br: r.readUint32, bw: s.writeUint32 },
-            num_impressions: { n: 3, br: r.readUint32, bw: s.writeUint32 },
+            type: { n: 1, br: p.readEnum, bw: e.writeEnum },
+            appid: { n: 2, br: p.readUint32, bw: e.writeUint32 },
+            num_impressions: { n: 3, br: p.readUint32, bw: e.writeUint32 },
           },
         }),
-        e.sm_m
+        t.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= f(e.M())), e.sm_mbf);
+      return ((t.sm_mbf ||= a(t.M())), t.sm_mbf);
     }
-    toObject(t = !1) {
-      return e.toObject(t, this);
+    toObject(e = !1) {
+      return t.toObject(e, this);
     }
-    static toObject(t, n) {
-      return c(e.M(), t, n);
+    static toObject(e, n) {
+      return r(t.M(), e, n);
     }
-    static fromObject(n) {
-      return t(e.M(), n);
+    static fromObject(e) {
+      return l(t.M(), e);
     }
-    static deserializeBinary(t) {
-      let n = new D.BinaryReader(t),
-        r = new e();
-      return e.deserializeBinaryFromReader(r, n);
+    static deserializeBinary(e) {
+      let n = new D.BinaryReader(e),
+        r = new t();
+      return t.deserializeBinaryFromReader(r, n);
     }
-    static deserializeBinaryFromReader(t, n) {
-      return o(e.MBF(), t, n);
+    static deserializeBinaryFromReader(e, n) {
+      return i(t.MBF(), e, n);
     }
     serializeBinary() {
-      var t = new D.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
+      var e = new D.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBuffer());
     }
-    static serializeBinaryToWriter(t, r) {
-      n(e.M(), t, r);
+    static serializeBinaryToWriter(e, n) {
+      d(t.M(), e, n);
     }
     serializeBase64String() {
-      var t = new D.BinaryWriter();
-      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
+      var e = new D.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBase64String());
     }
     getClassName() {
       return `CProductImpressionsFromClient_Notification_Impression`;
@@ -199,13 +199,13 @@ var D = p(l(), 1),
   },
   A;
 (function (e) {
-  function t(e, t) {
+  function n(e, n) {
     return e.SendNotification(
       `ExperimentService.ReportProductImpressionsFromClient#1`,
-      u(O, t),
+      t(O, n),
       { ePrivilege: 1 },
     );
   }
-  e.ReportProductImpressionsFromClient = t;
+  e.ReportProductImpressionsFromClient = n;
 })((A ||= {}));
 export { T as n, E as t };

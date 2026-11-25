@@ -2,14 +2,14 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
+import { Pt as t, at as n } from "./chunk~01cfc309bf.js";
 import {
-  $i as r,
-  Hs as i,
-  Qf as a,
-  rf as o,
-  xm as s,
-  ym as c,
+  Ji as r,
+  Ls as i,
+  Qd as a,
+  gm as o,
+  mm as s,
+  qf as c,
 } from "./main.js";
 import { i as l, n as u, r as d, t as f } from "./chunk~2e8feda0b1.js";
 var p = e(t()),
@@ -28,15 +28,15 @@ function g() {
   r(
     (0, m.jsx)(h, { ownerWin: window, redirectURL: window.location.href }),
     window,
-    { strTitle: o(`#Login_SignInTitle`) },
+    { strTitle: a(`#Login_SignInTitle`) },
   );
 }
 function _(e) {
   let { redirectURL: t, guestOption: n } = e,
     [r] = (0, p.useState)(
-      new a(new s(c.WEBAPI_BASE_URL)).GetAnonymousServiceTransport(),
+      new c(new o(s.WEBAPI_BASE_URL)).GetAnonymousServiceTransport(),
     ),
-    [i, o] = (0, p.useState)(!1);
+    [i, a] = (0, p.useState)(!1);
   return (0, m.jsx)(`div`, {
     children: i
       ? (0, m.jsx)(u, {})
@@ -45,7 +45,7 @@ function _(e) {
           transport: r,
           platform: 2,
           onComplete: (e) => {
-            e == l.k_PrimaryDomainFail ? o(!0) : window.location.assign(t);
+            e == l.k_PrimaryDomainFail ? a(!0) : window.location.assign(t);
           },
           redirectUrl: t,
           theme: `modal`,

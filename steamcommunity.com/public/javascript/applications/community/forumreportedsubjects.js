@@ -2,25 +2,25 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Ft as t, K as n, ot as r } from "./chunk~01cfc309bf.js";
+import { G as t, Pt as n, at as r } from "./chunk~01cfc309bf.js";
 import { l as i } from "./chunk~1e67c3e4e4.js";
 import { t as a } from "./chunk~eefd71512b.js";
 import {
   N as o,
   Q as s,
-  Tu as c,
-  k as l,
-  ml as u,
-  oh as d,
-  tm as f,
-  ym as p,
+  Xp as c,
+  bu as l,
+  k as u,
+  ll as d,
+  mm as f,
+  th as p,
 } from "./main.js";
 var m = `_9-W7SdmsKXY-`,
   h = `ek4QiIo5ajA-`,
   g = `kJDQZr8W-ho-`,
   _ = `-LcpvovFNxA-`,
   v = `fMQqI-SP2pY-`,
-  y = e(t()),
+  y = e(n()),
   b = r();
 function x(e) {
   let t = i({ subject_type: 1, topic: e.gidTopic }),
@@ -45,7 +45,7 @@ function S(e) {
   let o = () => {
       (r ? localStorage.removeItem(n) : localStorage.setItem(n, `1`), i(!r));
     },
-    l = 0;
+    c = 0;
   return (0, b.jsx)(`div`, {
     className: r ? m : (e.inlineClassNames ?? ``),
     children: (0, b.jsx)(`div`, {
@@ -65,7 +65,7 @@ function S(e) {
                 (0, b.jsx)(`button`, {
                   className: g,
                   onClick: o,
-                  children: (0, b.jsx)(u, {}),
+                  children: (0, b.jsx)(d, {}),
                 }),
               ],
             }),
@@ -89,10 +89,10 @@ function S(e) {
                   : (0, b.jsx)(
                       `div`,
                       {
-                        className: c(`moderatorToolLink`, `-LcpvovFNxA-`),
+                        className: l(`moderatorToolLink`, `-LcpvovFNxA-`),
                         children: `Bug - inform Valve`,
                       },
-                      `bad-${l++}`,
+                      `bad-${c++}`,
                     ),
               ),
             }),
@@ -156,34 +156,34 @@ function E(e) {
   t.subject_type === 1
     ? (o = r === `0` ? `#forum_op_${t.coordinates?.topic}` : `#c${r}`)
     : t.subject_type === 2 && (o = `#comment_${r}`);
-  let l = t.unresolved_dispute_count > 0 || t.unresolved_report_count > 0,
+  let c = t.unresolved_dispute_count > 0 || t.unresolved_report_count > 0,
     u = t.required_moderator_level === 10,
     d = t.required_moderator_level === 1;
   return (0, b.jsxs)(`div`, {
-    className: c(`moderatorToolLink`, _),
+    className: l(`moderatorToolLink`, _),
     children: [
       (0, b.jsxs)(`a`, {
         href: o,
         children: [
-          l &&
+          c &&
             !u &&
             !d &&
             (0, b.jsx)(`img`, {
               className: `pSFLKLsjgbM-`,
-              src: `${p.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+              src: `${f.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
             }),
-          !l &&
+          !c &&
             (0, b.jsx)(`span`, { className: `pSFLKLsjgbM-`, children: `\xA0` }),
-          l &&
+          c &&
             u &&
             (0, b.jsx)(`span`, {
-              className: c(`pSFLKLsjgbM-`, `W8Ft0tBdYIM-`),
+              className: l(`pSFLKLsjgbM-`, `W8Ft0tBdYIM-`),
               children: `VO`,
             }),
-          l &&
+          c &&
             d &&
             (0, b.jsx)(`span`, {
-              className: c(`pSFLKLsjgbM-`, `sERoHMrC-4o-`),
+              className: l(`pSFLKLsjgbM-`, `sERoHMrC-4o-`),
               children: `▲`,
             }),
           `\xA0`,
@@ -206,20 +206,20 @@ function E(e) {
     ],
   });
 }
-function D(e, t, r, i) {
-  let a = f();
-  return n({
-    queryKey: [`comment_thread`, e, t, r, i],
+function D(e, n, r, i) {
+  let a = c();
+  return t({
+    queryKey: [`comment_thread`, e, n, r, i],
     queryFn: async () => {
-      let n = d.Init(l);
+      let t = p.Init(u);
       return (
-        n.Body().set_steamid(e),
-        n.Body().set_comment_thread_type(t),
-        r !== -1 && n.Body().set_gidfeature(r),
-        i !== -1 && n.Body().set_gidfeature2(i),
-        n.Body().set_include_deleted(!0),
-        n.Body().set_oldest_first(!0),
-        (await o.GetCommentThread(a, n)).Body().toObject()
+        t.Body().set_steamid(e),
+        t.Body().set_comment_thread_type(n),
+        r !== -1 && t.Body().set_gidfeature(r),
+        i !== -1 && t.Body().set_gidfeature2(i),
+        t.Body().set_include_deleted(!0),
+        t.Body().set_oldest_first(!0),
+        (await o.GetCommentThread(a, t)).Body().toObject()
       );
     },
   });

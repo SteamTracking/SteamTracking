@@ -52,12 +52,12 @@ import {
   _,
   _,
 } from "./chunk~2185942436.js";
+import { _, _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~f0141d9521.js";
 import { _, _, _ } from "./chunk~cf3721cc1c.js";
 import { _ } from "./chunk~16aefcf65f.js";
 import "./chunk~8681f5c764.js";
 import { _ } from "./chunk~2f085f1384.js";
-import { _, _ } from "./chunk~4eed35ad1f.js";
 import { _, _ } from "./chunk~af36c62e9f.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~2f8c67b4de.js";
@@ -1002,6 +1002,7 @@ function _(_) {
     } = _,
     _ = _.useRef(null),
     _ = _(_, `sale_header`, _),
+    _ = _(_, `sale_secondary_background`, _),
     [_] = _(() => [_.jsondata.sale_sub_menu]);
   _.useEffect(() => {
     if (!_) return;
@@ -1072,6 +1073,15 @@ function _(_) {
               event: _,
               bIsPreview: _,
             }),
+            _ &&
+              (0, _.jsx)(`div`, {
+                className: _(`I8KIyXU8ZWk-`, `SaleSecondaryBackground`),
+                style: {
+                  backgroundImage: `url(${_})`,
+                  backgroundRepeat:
+                    _.jsondata.sale_secondary_background_repeat || `no-repeat`,
+                },
+              }),
             (0, _.jsx)(_.Fragment, {
               children: _,
             }),
@@ -3252,6 +3262,10 @@ function _(_) {
             (0, _.jsx)(_, {
               imgURL: _,
             }),
+          _ === `sale_secondary_background` &&
+            (0, _.jsx)(_, {
+              imgURL: _,
+            }),
           _ === `sale_overlay` &&
             (0, _.jsx)(_, {
               imgURL: _,
@@ -3866,29 +3880,53 @@ function _(_) {
                                   }),
                                 ],
                               }))
-                            : (_ === `bestofyear_banner` ||
-                                _ === `bestofyear_banner_mobile`) &&
-                              (_ = (0, _.jsxs)(_.Fragment, {
-                                children: [
-                                  (0, _.jsx)(`div`, {
-                                    className: _,
-                                    children: _(
-                                      `#selectimage_tip_required_title`,
-                                    ),
-                                  }),
-                                  (0, _.jsxs)(`p`, {
-                                    children: [
-                                      (0, _.jsx)(`b`, {
-                                        children: _(
-                                          `#selectimage_tip_usage_title`,
+                            : _ === `sale_secondary_background`
+                              ? (_ = (0, _.jsxs)(_.Fragment, {
+                                  children: [
+                                    (0, _.jsx)(`div`, {
+                                      className: _,
+                                      children: _(
+                                        `#selectimage_tip_optional_title`,
+                                      ),
+                                    }),
+                                    (0, _.jsxs)(`p`, {
+                                      children: [
+                                        (0, _.jsx)(`b`, {
+                                          children: _(
+                                            `#selectimage_tip_usage_title`,
+                                          ),
+                                        }),
+                                        `: `,
+                                        _(
+                                          `#selectimage_tip_sale_secondary_background`,
                                         ),
-                                      }),
-                                      `: `,
-                                      _(`#selectimage_tip_bestofyear`),
-                                    ],
-                                  }),
-                                ],
-                              }));
+                                      ],
+                                    }),
+                                  ],
+                                }))
+                              : (_ === `bestofyear_banner` ||
+                                  _ === `bestofyear_banner_mobile`) &&
+                                (_ = (0, _.jsxs)(_.Fragment, {
+                                  children: [
+                                    (0, _.jsx)(`div`, {
+                                      className: _,
+                                      children: _(
+                                        `#selectimage_tip_required_title`,
+                                      ),
+                                    }),
+                                    (0, _.jsxs)(`p`, {
+                                      children: [
+                                        (0, _.jsx)(`b`, {
+                                          children: _(
+                                            `#selectimage_tip_usage_title`,
+                                          ),
+                                        }),
+                                        `: `,
+                                        _(`#selectimage_tip_bestofyear`),
+                                      ],
+                                    }),
+                                  ],
+                                }));
   let _ = _[_.artworkType].width,
     _ = _[_.artworkType].height;
   return (0, _.jsxs)(`div`, {
@@ -3935,21 +3973,25 @@ function _(_) {
                 }),
               }),
             _.elEventArtworkExample,
-            `\xA0`,
-            (0, _.jsx)(`br`, {}),
-            _.elAdditionalControls,
-            !!_.fnRemoveAllArtwork &&
-              (0, _.jsx)(_, {
-                className: `_1k0t2Q-C2OU-`,
-                onClick: (_) => {
-                  _(
+            !!(_.elAdditionalControls || _.fnRemoveAllArtwork) &&
+              (0, _.jsxs)(`div`, {
+                className: `WWzuGfx5KX0-`,
+                children: [
+                  _.elAdditionalControls,
+                  !!_.fnRemoveAllArtwork &&
                     (0, _.jsx)(_, {
-                      fnRemoveAllArtwork: _.fnRemoveAllArtwork,
+                      className: `_1k0t2Q-C2OU-`,
+                      onClick: (_) => {
+                        _(
+                          (0, _.jsx)(_, {
+                            fnRemoveAllArtwork: _.fnRemoveAllArtwork,
+                          }),
+                          _(_) ?? window,
+                        );
+                      },
+                      children: _(`#Sale_RemoveAll`),
                     }),
-                    _(_) ?? window,
-                  );
-                },
-                children: _(`#Sale_RemoveAll`),
+                ],
               }),
           ],
         }),
@@ -4251,7 +4293,7 @@ function _(_) {
   });
 }
 function _(_) {
-  let { setting: _, fnUpdateSetting: _, label: _ } = _,
+  let { setting: _, fnUpdateSetting: _, label: _, bHideBlur: _ } = _,
     _ = _.useMemo(() => {
       let _ = [];
       return (
@@ -4271,13 +4313,14 @@ function _(_) {
           label: _(`#EventEditor_Tile_Repeat`),
           data: `repeat`,
         }),
-        _.push({
-          label: _(`#EventEditor_Tile_NoRepeatAndBlur`),
-          data: `coverBlur`,
-        }),
+        _ ||
+          _.push({
+            label: _(`#EventEditor_Tile_NoRepeatAndBlur`),
+            data: `coverBlur`,
+          }),
         _
       );
-    }, []);
+    }, [_]);
   return (0, _.jsxs)(_.Fragment, {
     children: [
       (0, _.jsx)(_, {

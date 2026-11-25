@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 /* Third-party software licenses can be found at licenses.txt */
-import { At as e, sn as t } from "./chunk~de7f2df91c.js";
+import { Pt as e, nt as t } from "./chunk~de7f2df91c.js";
 import {
   A as n,
   C as r,
@@ -477,7 +477,7 @@ var D = class {
       (this.#e.clear(), this.#t.clear());
     }
   },
-  O = t(e(), 1),
+  O = e(t(), 1),
   k = function () {
     return null;
   };

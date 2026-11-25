@@ -2,13 +2,13 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, N as n, ft as r } from "./chunk~01cfc309bf.js";
+import { It as t, M as n, dt as r } from "./chunk~01cfc309bf.js";
 import {
-  $b as i,
-  Ba as a,
-  Bc as o,
-  Cl as s,
-  jc as c,
+  Mc as i,
+  Tl as a,
+  Va as o,
+  Vc as s,
+  ex as c,
   wl as l,
 } from "./main.js";
 var u = e(t(), 1),
@@ -30,7 +30,7 @@ function _(e) {
       className: n,
       navID: r,
       children: i,
-      allowScrollBehind: o,
+      allowScrollBehind: a,
       onPointerDown: s,
       onPointerUp: c,
       ...l
@@ -69,26 +69,26 @@ function _(e) {
     onClose: t,
     children: (0, m.jsx)(`dialog`, {
       ref: g,
-      className: (0, d.default)(f, !o && p && `egtbEvvs2Oc-`, n),
+      className: (0, d.default)(f, !a && p && `egtbEvvs2Oc-`, n),
       onClose: () => t(`onclose`),
       onClick: x,
       ...l,
       onPointerDown: y,
       onPointerUp: b,
-      children: (0, m.jsx)(a, { children: i }),
+      children: (0, m.jsx)(o, { children: i }),
     }),
   });
 }
 function v(e) {
   let { navID: t, onClose: n, children: r } = e,
-    a = u.useCallback(() => n(`cancelbutton`), [n]),
+    i = u.useCallback(() => n(`cancelbutton`), [n]),
     o = u.useRef(void 0);
   return (
-    s(o, !0, !0),
-    i()
-      ? (0, m.jsx)(l, {
+    l(o, !0, !0),
+    c()
+      ? (0, m.jsx)(a, {
           navID: t ?? `ModalDialog`,
-          onCancelButton: a,
+          onCancelButton: i,
           modal: !0,
           navTreeRef: o,
           children: r,
@@ -113,9 +113,9 @@ function w(e) {
     onClose: t,
     className: n,
     navID: r,
-    children: i,
-    strTitle: a,
-    wideMode: s,
+    children: a,
+    strTitle: o,
+    wideMode: c,
     ...l
   } = e;
   return (0, m.jsx)(h, {
@@ -123,21 +123,21 @@ function w(e) {
     navID: r ?? `SimpleModalDialog`,
     ...l,
     children: (0, m.jsxs)(`div`, {
-      className: (0, d.default)(n, b, s && `GJxb9L6ppZw-`),
+      className: (0, d.default)(n, b, c && `GJxb9L6ppZw-`),
       children: [
         ` `,
-        (0, m.jsxs)(o, {
+        (0, m.jsxs)(s, {
           className: x,
           children: [
-            a && (0, m.jsx)(`div`, { className: `pxN-7GRnbkY-`, children: a }),
+            o && (0, m.jsx)(`div`, { className: `pxN-7GRnbkY-`, children: o }),
             (0, m.jsx)(`button`, {
               onClick: (e) => (t(`xclick`), e.preventDefault(), !1),
               className: S,
-              children: (0, m.jsx)(c, {}),
+              children: (0, m.jsx)(i, {}),
             }),
           ],
         }),
-        (0, m.jsx)(`div`, { className: C, children: i }),
+        (0, m.jsx)(`div`, { className: C, children: a }),
       ],
     }),
   });

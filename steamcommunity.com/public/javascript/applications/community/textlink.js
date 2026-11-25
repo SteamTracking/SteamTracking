@@ -2,8 +2,8 @@
  ****/
 
 import { r as e } from "./chunk~f025431ab0.js";
-import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
-import { Bt as r, Lt as i, Qt as a, Yf as o, en as s } from "./main.js";
+import { Pt as t, at as n } from "./chunk~01cfc309bf.js";
+import { Ft as r, Jt as i, Kt as a, Mt as o, Wf as s } from "./main.js";
 t();
 var c = e({
     TextLink: () => l,
@@ -37,17 +37,17 @@ function v(e) {
     i = a({ ...n, underline: t, className: l }, y);
   return (0, _.jsx)(r, { ...i });
 }
-var y = [...i, { prop: `underline`, className: (e) => c[`Underline-${e}`] }];
+var y = [...o, { prop: `underline`, className: (e) => c[`Underline-${e}`] }];
 function b(e) {
-  let { underline: t = `auto`, focusable: n, navProps: r, ...i } = e,
-    c = o(),
-    l = n ?? r?.focusable ?? !!i.onClick,
+  let { underline: t = `auto`, focusable: n, navProps: r, ...o } = e,
+    c = s(),
+    l = n ?? r?.focusable ?? !!o.onClick,
     d = (0, _.jsx)(`span`, {
       role: `button`,
-      ...a({ ...i, underline: t, className: u }, y),
+      ...a({ ...o, underline: t, className: u }, y),
     });
   return c && (l || r)
-    ? (0, _.jsx)(s, { ...(r || {}), focusable: l, children: d })
+    ? (0, _.jsx)(i, { ...(r || {}), focusable: l, children: d })
     : d;
 }
 export { b as n, v as t };

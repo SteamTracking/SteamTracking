@@ -13,13 +13,13 @@ const __vite__mapDeps = (
       "./chunk~521597d5f9.js",
       "./main.js",
       "../../../css/applications/store/chunk~bcf59b1f6b.css",
+      "./chunk~4eed35ad1f.js",
+      "../../../css/applications/store/chunk~0c0e8c89c4.css",
       "./chunk~8c66e1c7a5.js",
       "./chunk~4c13037b22.js",
       "./chunk~8681f5c764.js",
       "./chunk~2f085f1384.js",
       "../../../css/applications/store/chunk~504d82f1b0.css",
-      "./chunk~4eed35ad1f.js",
-      "../../../css/applications/store/chunk~0c0e8c89c4.css",
       "./chunk~92931c6310.js",
       "./chunk~af36c62e9f.js",
       "./chunk~eefd71512b.js",
@@ -33,7 +33,7 @@ const __vite__mapDeps = (
       "./chunk~90b9831ad2.js",
       "../../../css/applications/store/chunk~0e41f12ba5.css",
       "./chunk~f162f235ea.js",
-      "../../../css/applications/store/chunk~7e3e341a022.css",
+      "../../../css/applications/store/chunk~7e3e341a02.css",
       "./chunk~b7e6359825.js",
       "../../../css/applications/store/chunk~876d56b556.css",
       "./chunk~034b02d99f.js",
@@ -74,8 +74,6 @@ const __vite__mapDeps = (
       "./chunk~751f63337e.js",
       "./chunk~cbbb6ae37c.js",
       "../../../css/applications/store/chunk~9f001c4d7c.css",
-      "./chunk~b980924b6a.js",
-      "../../../css/applications/store/chunk~fd36211970.css",
       "./chunk~56437c278a.js",
       "../../../css/applications/store/chunk~eabb00f56a.css",
       "./chunk~618fb52a90.js",
@@ -109,6 +107,7 @@ const __vite__mapDeps = (
       "../../../css/applications/store/chunk~ba5a40c901.css",
       "../../../css/applications/store/chunk~1e9bb01655.css",
       "./chunk~60675c9a27.js",
+      "./chunk~f3699411bf.js",
       "./chunk~b8ca037aae.js",
       "./chunk~961c06e93e.js",
       "./chunk~a243b6a34b.js",
@@ -117,6 +116,7 @@ const __vite__mapDeps = (
       "../../../css/applications/store/chunk~ea6751f6d0.css",
       "../../../css/applications/store/chunk~f852ef005f.css",
       "./chunk~379edc388d.js",
+      "../../../css/applications/store/chunk~bbf4f5dc0e2.css",
       "../../../css/applications/store/chunk~60675c9a27.css",
       "./chunk~432f9c68b6.js",
       "./chunk~7401689b78.js",
@@ -180,11 +180,6 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
 } from "./chunk~6b8ddcaac8.js";
 import { _ } from "./chunk~f57d770d64.js";
 import {
@@ -207,6 +202,7 @@ import {
   _,
   _,
 } from "./chunk~2185942436.js";
+import { _, _, _, _, _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~8c66e1c7a5.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~cf3721cc1c.js";
 import { _, _ } from "./chunk~4c13037b22.js";
@@ -219,7 +215,6 @@ import { _, _ } from "./chunk~cfd048ddd7.js";
 import { _ } from "./chunk~7e995db925.js";
 import "./chunk~19394a4118.js";
 import { _, _ } from "./chunk~8681f5c764.js";
-import { _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~3135e25ddf.js";
 import { _, _, _, _, _, _ } from "./chunk~a19d1add1e.js";
 import { _ } from "./chunk~7b4b9eb713.js";
@@ -476,7 +471,7 @@ import { _ } from "./chunk~f169880238.js";
 import { _, _ } from "./chunk~15f90ada43.js";
 import _, { _, _ } from "./chunk~04e3a455a5.js";
 import { _, _ } from "./chunk~9eea33c2a2.js";
-import { _, _, _ } from "./chunk~4c65b375ad.js";
+import { _, _, _, _ } from "./chunk~4c65b375ad.js";
 import { _ } from "./chunk~71ac6b59f3.js";
 var _ = _(_(), 1);
 function _(_) {
@@ -1116,6 +1111,7 @@ var _ = `ut9Zlzvv8tU-`,
     bAccessibilitySurroundSound: `#Accessibility_Feature_SurroundSound`,
     bAccessibilityResizableUI: `#Accessibility_Feature_AdjustableTextSize`,
     bAccessibilitySubtitles: `#Accessibility_Feature_SubtitleOptions`,
+    bAccessibilityCaptions: `#Accessibility_Feature_Captions`,
     bAccessibilityColorAlternatives: `#Accessibility_Feature_ColorAlternatives`,
     bAccessibilityCameraComfort: `#Accessibility_Feature_CameraComfort`,
     bAccessibilityKeyboardOnlyOption: `#Accessibility_Feature_KeyboardOnlyOption`,
@@ -1137,6 +1133,7 @@ var _ = `ut9Zlzvv8tU-`,
     bAccessibilitySurroundSound: `surround_sound`,
     bAccessibilityResizableUI: `adjustable_text_size`,
     bAccessibilitySubtitles: `subtitle_options`,
+    bAccessibilityCaptions: `captions`,
     bAccessibilityColorAlternatives: `color_alternatives`,
     bAccessibilityCameraComfort: `camera_comfort`,
     bAccessibilityKeyboardOnlyOption: `keyboard_only_option`,
@@ -1158,6 +1155,7 @@ var _ = `ut9Zlzvv8tU-`,
     bAccessibilitySurroundSound: `audio`,
     bAccessibilityResizableUI: `visual`,
     bAccessibilitySubtitles: `visual`,
+    bAccessibilityCaptions: `visual`,
     bAccessibilityColorAlternatives: `visual`,
     bAccessibilityCameraComfort: `visual`,
     bAccessibilityPlayableWithoutVision: `visual`,
@@ -1180,6 +1178,7 @@ function _(_) {
   return {
     bAccessibilityResizableUI: _.includes(64),
     bAccessibilitySubtitles: _.includes(65),
+    bAccessibilityCaptions: _.includes(13),
     bAccessibilityColorAlternatives: _.includes(66),
     bAccessibilityCameraComfort: _.includes(67),
     bAccessibilityBackgroundVolumeControls: _.includes(68),
@@ -9288,8 +9287,8 @@ function _(_) {
   let {
     appid: _,
     rgTags: _,
+    reviewSummaryAllTime: _,
     reviewSummaryRecent: _,
-    strIdForReviewSummary: _,
   } = _;
   return (
     _.useLayoutEffect(() => {
@@ -9305,9 +9304,8 @@ function _(_) {
         resetNavOnEntry: !0,
         children: [
           (0, _.jsx)(_, {
-            appid: _,
+            allTime: _,
             recent: _,
-            strIdForReviewSummary: _,
           }),
           (0, _.jsx)(_, {
             appid: _,
@@ -9443,16 +9441,14 @@ function _(_) {
       });
 }
 function _(_) {
-  let { appid: _, recent: _, strIdForReviewSummary: _ } = _,
-    { data: _ } = _({
-      appid: _,
-    }),
+  let { allTime: _, recent: _ } = _,
     _ = _.useCallback(() => {
-      _ && window.MoveFocusToId(_);
-    }, [_]);
-  return !_ || !_.summary_filtered?.review_count
-    ? null
-    : (_.use(_.Ready()),
+      window.postMessage({
+        method: `FocusAppReviews`,
+      });
+    }, []);
+  return _?.nReviews
+    ? (_.use(_.Ready()),
       (0, _.jsxs)(_, {
         className: _,
         onActivate: _,
@@ -9462,9 +9458,9 @@ function _(_) {
           }),
           (0, _.jsx)(_, {
             label: `#AppPage_Reviews_AllTime`,
-            reviewScoreDescription: _.summary_filtered?.review_score_label,
-            percentage: _.summary_filtered.percent_positive,
-            count: _.summary_filtered.review_count,
+            reviewScoreDescription: _(_.eReviewScore, _.nReviews),
+            percentage: _(_),
+            count: _.nReviews,
           }),
           _ &&
             (0, _.jsx)(_, {
@@ -9474,7 +9470,8 @@ function _(_) {
               count: _.nReviews,
             }),
         ],
-      }));
+      }))
+    : null;
 }
 function _(_) {
   let { appid: _ } = _,
@@ -11616,7 +11613,13 @@ function _(_) {
   }
 }
 function _(_) {
-  return _ == 18 || _ == 28 || (_ >= 55 && _ <= 60) || (_ >= 64 && _ <= 82);
+  return (
+    _ == 18 ||
+    _ == 28 ||
+    (_ >= 55 && _ <= 60) ||
+    (_ >= 64 && _ <= 82) ||
+    _ == 13
+  );
 }
 function _(_) {
   let { category: _ } = _,
@@ -18884,217 +18887,6 @@ function _(_) {
       : null
   );
 }
-var _ = `steamQueryPersist`,
-  _ = _.createContext(void 0);
-_.Provider;
-function _(_) {
-  let { area: _, maxAgeSeconds: _, meta: _, ..._ } = _,
-    _ = _.useContext(_),
-    _ = _.useMemo(() => _(_, _, _), [_, _, _]);
-  return _({
-    ..._,
-    meta: _,
-    persister: _?.GetPersister(_),
-  });
-}
-function _(_, _, _) {
-  return {
-    ..._,
-    [_]: {
-      area: _,
-      maxAgeSeconds: _,
-    },
-  };
-}
-function _(_, ..._) {
-  return [`achievements`, _, ..._];
-}
-var _ = (_) => _(_, `schema_v2`);
-async function _(_, _, _, _) {
-  return (await _?.(_)) ?? _(_, _, _);
-}
-async function _(_, _, _) {
-  let _ = await _.GetGameAchievements(_, {
-    appid: _,
-    language: _,
-  });
-  if (_.GetEResult() === 42)
-    return {
-      appid: _,
-      language: _,
-      groups: [],
-      schema_hash: 0,
-      schema_version: 0,
-    };
-  if (_(_)) throw new _();
-  if (_.GetEResult() !== 1)
-    throw (
-      console.error(`Received error from GetGameAchievements`, _.GetEResult()),
-      Error(`Error from GetGameAchievements: ${_.GetEResult()}`)
-    );
-  let _ = {};
-  return (
-    (_[0] = {
-      _: 0,
-      archived: !1,
-      developeronly: !1,
-      ispublic: !0,
-      dlcappid: 0,
-      order: -1,
-      achievements: [],
-    }),
-    _.Body().groups().toString(),
-    _.Body()
-      .groups()
-      .forEach((_) => {
-        let _ = _.groupid();
-        _[_] = {
-          _: _,
-          name: _.localized_name(),
-          archived: _.archived() ?? !1,
-          ispublic: _.ispublic() ?? !0,
-          developeronly: _.developeronly() ?? !1,
-          dlcappid: _.dlcappid() ?? 0,
-          order: _.order() ?? 0,
-          achievements: [],
-        };
-      }),
-    _.Body()
-      .toObject()
-      ?.achievements?.forEach((_) => {
-        let _ = _.groupid ?? 0;
-        _[_].achievements.push({
-          internal_key: _.internal_key ?? 0,
-          api_name: _.internal_name ?? ``,
-          name: _.localized_name,
-          description: _.localized_desc,
-          hidden: _.hidden ?? !1,
-          archived: _.archived ?? !1,
-          icon_achieved: _.icon || void 0,
-          icon_unachieved: _.icon_gray || void 0,
-          groupid: _.groupid ?? 0,
-          min_progress: _.min_progress_int ?? _.min_progress_float,
-          max_progress: _.max_progress_int ?? _.max_progress_float,
-        });
-      }),
-    {
-      appid: _,
-      language: _,
-      groups: Object.values(_)
-        .filter((_) => _.achievements.length > 0)
-        .sort((_, _) => _.order - _.order),
-      schema_hash: _.Body()?.schema_hash() ?? 0,
-      schema_version: _.Body()?.schema_version() ?? 0,
-    }
-  );
-}
-var _ = (_) => _(_, `globalpercentages`);
-async function _(_, _) {
-  let _ = await _.GetGlobalAchievementPercentages(_, {
-    appid: _,
-  });
-  if (_.GetEResult() === 42)
-    return {
-      percentages: {},
-    };
-  if (_(_)) throw new _();
-  if (_.GetEResult() !== 1)
-    throw (
-      console.error(
-        `Received error from GetGlobalAchievementPercentages`,
-        _.GetEResult(),
-      ),
-      Error(`Error from GetGlobalAchievementPercentages: ${_.GetEResult()}`)
-    );
-  return {
-    percentages: _.Body()
-      .achievements()
-      .reduce((_, _) => {
-        let _ = _.internal_key();
-        return (_ === void 0 || (_[_] = _.player_percent_unlocked() ?? 0.1), _);
-      }, {}),
-  };
-}
-var _ = class extends Error {
-  constructor() {
-    super(`Achievements request: server unreachable`);
-  }
-};
-function _(_) {
-  let _ = _.Hdr().transport_error();
-  return _ === 2 || _ === 3 || _.GetEResult() === 3;
-}
-var _ = (0, _.createContext)({});
-function _() {
-  return (0, _.useContext)(_);
-}
-function _(_) {
-  return _?.bNoRetryOnError
-    ? {
-        retry: !1,
-        retryOnMount: !1,
-        refetchOnWindowFocus: !1,
-        refetchOnReconnect: !1,
-      }
-    : {};
-}
-function _(_, _) {
-  return !(_ instanceof _) && _ < 3;
-}
-function _(_, _) {
-  return `${_.BASE_URL_SHARED_CDN}community_assets/images/apps/${_}/${_}`;
-}
-function _(_, _, _) {
-  return {
-    ..._,
-    icon_achieved: _.icon_achieved ? _(_, _.icon_achieved) : void 0,
-    icon_unachieved: _.icon_unachieved ? _(_, _.icon_unachieved) : void 0,
-  };
-}
-function _(_, _) {
-  return {
-    ..._,
-    groups: _.groups.map((_) => ({
-      ..._,
-      name: _._ === 0 ? _.Localize(`#Achievements_Set_BaseGame`) : _.name,
-      achievements: _.achievements.map((_) => _(_.appid, _, _)),
-    })),
-  };
-}
-function _(_, _, _) {
-  return {
-    queryKey: _(_),
-    queryFn: () => _(_, _, _.LANGUAGE, _),
-    staleTime: 864e5,
-    retry: _,
-    area: `achievements`,
-  };
-}
-function _(_, _) {
-  let _ = _(),
-    { fnGetAchievementIconURL: _ = _, fnFetchLocalGameAchievements: _ } = _(),
-    _ = (0, _.useCallback)((_) => _(_, _), [_]);
-  return _({
-    ..._(_, _, _),
-    select: _,
-    ..._(_),
-  });
-}
-function _(_, _) {
-  return {
-    queryKey: _(_),
-    queryFn: async () => _(_, _),
-    staleTime: 864e5,
-    retry: _,
-    area: `achievements`,
-  };
-}
-function _(_, _) {
-  return _({
-    ..._(_(), _),
-    ..._(_),
-  });
-}
 function _(_, _) {
   let { data: _ } = _(_);
   if (!_) return;
@@ -19571,12 +19363,12 @@ var _ = _({
     _(
       () => import(`./chunk~1e9bb01655.js`),
       __vite__mapDeps([
-        42, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-        20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 43, 44, 45, 46, 47, 48, 49,
-        50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67,
+        42, 1, 2, 10, 5, 6, 7, 8, 9, 11, 13, 43, 44, 45, 46, 47, 48, 49, 26, 17,
+        21, 50, 51, 3, 4, 12, 14, 15, 16, 18, 19, 20, 22, 23, 24, 25, 27, 28,
+        29, 30, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67,
         68, 69, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83,
         84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100,
-        101, 102, 103, 104,
+        101, 102,
       ]),
       import.meta.url,
     ),
@@ -19593,12 +19385,12 @@ var _ = _({
           };
         },
         __vite__mapDeps([
-          42, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-          20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 43, 44, 45, 46, 47, 48,
-          49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65,
+          42, 1, 2, 10, 5, 6, 7, 8, 9, 11, 13, 43, 44, 45, 46, 47, 48, 49, 26,
+          17, 21, 50, 51, 3, 4, 12, 14, 15, 16, 18, 19, 20, 22, 23, 24, 25, 27,
+          28, 29, 30, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65,
           66, 67, 68, 69, 33, 34, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
           81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97,
-          98, 99, 100, 101, 102, 103, 104,
+          98, 99, 100, 101, 102,
         ]),
         import.meta.url,
       )
@@ -19608,10 +19400,10 @@ var _ = _({
     _(
       () => import(`./chunk~60675c9a27.js`),
       __vite__mapDeps([
-        105, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-        20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 69, 64, 65, 66, 33, 34, 70,
-        71, 72, 83, 84, 85, 106, 107, 68, 108, 67, 73, 74, 109, 81, 78, 79, 80,
-        82, 88, 75, 76, 110, 98, 111, 96, 77, 97, 112, 113, 114,
+        103, 1, 2, 104, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+        19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 69, 64, 65, 66, 33, 34,
+        70, 67, 68, 71, 72, 81, 82, 83, 105, 106, 107, 108, 79, 76, 77, 78, 80,
+        86, 73, 74, 109, 96, 110, 94, 75, 95, 111, 112, 113, 114,
       ]),
       import.meta.url,
     ),
@@ -19629,9 +19421,9 @@ var _ = _({
       __vite__mapDeps([
         119, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 120, 64, 65, 66, 69, 33, 34,
-        70, 67, 68, 71, 72, 73, 74, 55, 56, 57, 84, 88, 92, 93, 47, 121, 122,
-        123, 124, 125, 126, 79, 127, 59, 58, 48, 49, 128, 129, 130, 131, 132,
-        133, 134, 135, 96, 75, 76, 77, 97, 136, 137,
+        70, 67, 68, 71, 72, 55, 56, 57, 82, 86, 90, 91, 47, 121, 122, 123, 124,
+        125, 126, 77, 127, 59, 58, 48, 49, 128, 129, 130, 131, 132, 133, 134,
+        135, 94, 73, 74, 75, 95, 136, 137,
       ]),
       import.meta.url,
     ),

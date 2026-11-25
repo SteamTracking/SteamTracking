@@ -2,8 +2,8 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n, l as r } from "./chunk~01cfc309bf.js";
-import { Kb as i, rb as a } from "./main.js";
+import { It as t, c as n, dt as r } from "./chunk~01cfc309bf.js";
+import { ib as i, qb as a } from "./main.js";
 import { o, t as s } from "./chunk~915930a63a.js";
 import {
   _ as c,
@@ -23,7 +23,7 @@ var v = e(t()),
     `../../../images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching`,
     import.meta.url,
   ).href,
-  x = n(),
+  x = r(),
   S = (e) =>
     (0, x.jsx)(d, {
       ...e,
@@ -48,16 +48,16 @@ var v = e(t()),
     }),
   T = (e) => {
     let { point_cost: t, upgradable_showcases: n, purchased_upgrades: r } = e,
-      i = new Map();
+      a = new Map();
     (n.forEach((e) => {
-      i.set(e, 1);
+      a.set(e, 1);
     }),
       r &&
         r.forEach((e) => {
-          i.set(e.customization_type, e.level);
+          a.set(e.customization_type, e.level);
         }));
     let s = n.map((e) => {
-      let n = i.get(e),
+      let n = a.get(e),
         r = n + 1;
       return (0, x.jsx)(
         S,
@@ -75,8 +75,8 @@ var v = e(t()),
       itemClassName: _,
       spacing: `xlarge`,
       children: (0, x.jsx)(p, {
-        title: a(`#ProfileShowcases_Upgrades_Title`),
-        subtitle: a(`#ProfileShowcases_Upgrades_Subtitle`),
+        title: i(`#ProfileShowcases_Upgrades_Title`),
+        subtitle: i(`#ProfileShowcases_Upgrades_Subtitle`),
         children: s,
       }),
     });
@@ -86,7 +86,7 @@ var v = e(t()),
         point_cost: t,
         purchasable_showcases: n,
         purchased_showcases: r,
-        purchased_upgrades: i,
+        purchased_upgrades: a,
       } = e,
       s = new Map(),
       l = new Map();
@@ -97,8 +97,8 @@ var v = e(t()),
         r.forEach((e) => {
           s.set(e.customization_type, e.count);
         }),
-      i &&
-        i.forEach((e) => {
+      a &&
+        a.forEach((e) => {
           l.set(e.customization_type, e.level);
         }));
     let u = n.map((e) =>
@@ -118,8 +118,8 @@ var v = e(t()),
       itemClassName: _,
       spacing: `xlarge`,
       children: (0, x.jsx)(p, {
-        title: a(`#ProfileShowcases_Slots_Title`),
-        subtitle: a(`#ProfileShowcases_Slots_Subtitle`),
+        title: i(`#ProfileShowcases_Slots_Title`),
+        subtitle: i(`#ProfileShowcases_Slots_Subtitle`),
         children: u,
       }),
     });
@@ -130,7 +130,7 @@ var v = e(t()),
         t = f.Get().GetUpgradableProfileShowcases(),
         n = f.Get().GetUpgradedProfileCustomizations(),
         r = f.Get().GetPurchasableProfileShowcaseSlotCost(),
-        i = f.Get().GetPurchasableProfileShowcaseSlots(),
+        a = f.Get().GetPurchasableProfileShowcaseSlots(),
         s = f.Get().GetPurchasedProfileCustomizations();
       return (0, x.jsx)(h, {
         children: (0, x.jsxs)(o, {
@@ -140,7 +140,7 @@ var v = e(t()),
           children: [
             (0, x.jsx)(`div`, {
               children: (0, x.jsx)(u, {
-                title: a(`#ShopPageTitle_ProfileShowcases`),
+                title: i(`#ShopPageTitle_ProfileShowcases`),
               }),
             }),
             (0, x.jsx)(w, {}),
@@ -151,7 +151,7 @@ var v = e(t()),
             }),
             (0, x.jsx)(E, {
               point_cost: r,
-              purchasable_showcases: i,
+              purchasable_showcases: a,
               purchased_showcases: s,
               purchased_upgrades: n,
             }),
@@ -161,6 +161,6 @@ var v = e(t()),
       });
     }
   };
-D = i([r], D);
+D = a([n], D);
 var O = D;
 export { D as ProfileShowcasesPage, O as default };

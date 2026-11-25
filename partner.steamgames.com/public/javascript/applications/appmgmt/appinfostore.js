@@ -2,17 +2,15 @@
  ****/
 
 import {
-  A as e,
-  C as t,
-  S as n,
-  W as r,
-  a as i,
-  en as a,
-  pt as o,
-  rt as s,
-  yt as c,
+  Dt as e,
+  G as t,
+  g as n,
+  k as r,
+  n as i,
+  z as a,
 } from "./chunk~de7f2df91c.js";
-import { Ft as l } from "./chunk~25a6634263.js";
+import { Nt as o } from "./chunk~bd90a5fce7.js";
+import { S as s, i as c, x as l } from "./chunk~96e60d7578.js";
 import { t as u } from "./chunk~19394a4118.js";
 import { a as d, n as f, t as p } from "./chunk~ca0c999570.js";
 function m(e, t) {
@@ -25,7 +23,7 @@ function m(e, t) {
   });
 }
 function h() {
-  return r.EUNIVERSE != 1;
+  return n.EUNIVERSE != 1;
 }
 function g(e, t, n, r) {
   let i = !1,
@@ -65,7 +63,7 @@ function y(e, t, n, r) {
 }
 var b = class {
     m_nLastUpdated = 0;
-    m_mapLanguages = t.map();
+    m_mapLanguages = s.map();
     m_appid;
     m_fetching = null;
     constructor(e) {
@@ -78,7 +76,7 @@ var b = class {
       return this.m_mapLanguages.has(e) ? this.m_mapLanguages.get(e) : null;
     }
     GetTokenLists() {
-      let e = s.LANGUAGE;
+      let e = r.LANGUAGE;
       return (e == `english` ? [e] : [e, `english`])
         .map((e) => this.GetTokenList(e))
         .filter((e) => !!e);
@@ -94,16 +92,16 @@ var b = class {
   x = 1209600,
   S = class {
     m_CMInterface;
-    m_mapAppInfo = t.map();
-    m_mapRichPresenceLoc = t.map();
+    m_mapAppInfo = s.map();
+    m_mapRichPresenceLoc = s.map();
     m_cAppInfoRequestsInFlight = 0;
     m_setPendingAppInfo = new Set();
     m_PendingAppInfoPromise;
     m_PendingAppInfoResolve;
     m_CacheStorage = null;
-    m_fnCallbackOnAppInfoLoaded = new l();
+    m_fnCallbackOnAppInfoLoaded = new o();
     constructor() {
-      n(this);
+      l(this);
     }
     Init(e) {
       this.m_CMInterface = e;
@@ -116,27 +114,27 @@ var b = class {
     get CMInterface() {
       return this.m_CMInterface;
     }
-    RegisterCallbackOnLoad(e) {
+    RegisterCallbackOnLoad(t) {
       this.BHavePendingAppInfoRequests()
-        ? this.m_fnCallbackOnAppInfoLoaded.Register(e)
-        : (a(
+        ? this.m_fnCallbackOnAppInfoLoaded.Register(t)
+        : (e(
             !1,
             `Registering for callback on appinfo load, but nothing queued`,
           ),
-          e());
+          t());
     }
     IsLoadingAppID(e) {
       return this.m_setPendingAppInfo.has(e);
     }
-    GetAppInfo(e) {
+    GetAppInfo(t) {
       if (
-        (a(this.m_CMInterface, `CAppInfoStore.GetAppInfo called before Init`),
-        !this.m_mapAppInfo.has(e))
+        (e(this.m_CMInterface, `CAppInfoStore.GetAppInfo called before Init`),
+        !this.m_mapAppInfo.has(t))
       ) {
-        let t = new u(e);
-        (this.m_mapAppInfo.set(e, t), this.QueueAppInfoRequest(e));
+        let e = new u(t);
+        (this.m_mapAppInfo.set(t, e), this.QueueAppInfoRequest(t));
       }
-      return this.m_mapAppInfo.get(e);
+      return this.m_mapAppInfo.get(t);
     }
     QueueAppInfoRequest(e) {
       return e
@@ -160,15 +158,15 @@ var b = class {
     }
     async LoadAppInfoBatch(e) {
       this.m_cAppInfoRequestsInFlight++;
-      let t = await this.LoadAppInfoBatchFromLocalCache(e);
-      if (t.length) {
-        (console.log(`Loading batch of App Info from Steam: `, t),
+      let n = await this.LoadAppInfoBatchFromLocalCache(e);
+      if (n.length) {
+        (console.log(`Loading batch of App Info from Steam: `, n),
           await this.m_CMInterface?.WaitUntilLoggedOn());
-        let e = c.Init(f);
-        for (e.Body().set_language(o(s.LANGUAGE)); t.length > 0;) {
-          let n = Math.min(50, t.length),
-            r = t.slice(0, n);
-          ((t = t.slice(n)), e.Body().set_appids(r));
+        let e = t.Init(f);
+        for (e.Body().set_language(a(r.LANGUAGE)); n.length > 0;) {
+          let t = Math.min(50, n.length),
+            r = n.slice(0, t);
+          ((n = n.slice(t)), e.Body().set_appids(r));
           let i = await d.GetApps(this.m_CMInterface.GetServiceTransport(), e);
           i.GetEResult() == 1
             ? this.OnGetAppsResponse(i)
@@ -183,18 +181,18 @@ var b = class {
         (this.m_fnCallbackOnAppInfoLoaded.Dispatch(),
         this.m_fnCallbackOnAppInfoLoaded.ClearAllCallbacks());
     }
-    OnGetAppsResponse(e) {
-      let t = [];
-      for (let n of e.Body().apps()) {
-        let e = this.m_mapAppInfo.get(n.appid());
-        (a(e, `Got AppInfo response for unrequested AppID: ${n.appid()}`),
-          e &&
-            ((e = new u(n.appid())),
-            e.DeserializeFromMessage(n),
-            this.m_mapAppInfo.set(n.appid(), e),
-            t.push(e)));
+    OnGetAppsResponse(t) {
+      let n = [];
+      for (let r of t.Body().apps()) {
+        let t = this.m_mapAppInfo.get(r.appid());
+        (e(t, `Got AppInfo response for unrequested AppID: ${r.appid()}`),
+          t &&
+            ((t = new u(r.appid())),
+            t.DeserializeFromMessage(r),
+            this.m_mapAppInfo.set(r.appid(), t),
+            n.push(t)));
       }
-      this.SaveAppInfoBatchToLocalCache(t);
+      this.SaveAppInfoBatchToLocalCache(n);
     }
     OnAppOverviewChange(e) {
       for (let t of e) {
@@ -226,38 +224,38 @@ var b = class {
     GetCacheKeyForAppID(e) {
       return `APPINFO_` + e;
     }
-    async LoadAppInfoBatchFromLocalCache(e) {
-      if (!this.m_CacheStorage) return e;
-      console.log(`Loading batch of App Info from Local Cache: `, e);
-      let t = new Date(new Date().getTime() - x * 1e3),
-        n = async (e) => {
-          let n = await this.m_CacheStorage?.GetObject(
-            this.GetCacheKeyForAppID(e),
+    async LoadAppInfoBatchFromLocalCache(t) {
+      if (!this.m_CacheStorage) return t;
+      console.log(`Loading batch of App Info from Local Cache: `, t);
+      let n = new Date(new Date().getTime() - x * 1e3),
+        r = async (t) => {
+          let r = await this.m_CacheStorage?.GetObject(
+            this.GetCacheKeyForAppID(t),
           );
-          if (!n) return e;
-          let r = this.m_mapAppInfo.get(e);
+          if (!r) return t;
+          let i = this.m_mapAppInfo.get(t);
           return (
-            a(
-              r,
+            e(
+              i,
               `Didn't find AppInfo in our map when loading from cache but it should've been there?`,
             ),
-            r
-              ? ((r = new u(e)),
-                r.DeserializeFromCacheObject(n),
-                r.is_initialized
-                  ? (this.m_mapAppInfo.set(e, r),
-                    r.time_updated_from_server < t ? e : null)
+            i
+              ? ((i = new u(t)),
+                i.DeserializeFromCacheObject(r),
+                i.is_initialized
+                  ? (this.m_mapAppInfo.set(t, i),
+                    i.time_updated_from_server < n ? t : null)
                   : (console.warn(
                       `Failed to deserialize cached App Info: `,
-                      e,
-                      n,
+                      t,
+                      r,
                     ),
-                    e))
-              : e
+                    t))
+              : t
           );
         },
-        r = e.map((e) => n(e));
-      return (await Promise.all(r)).filter((e) => e !== null);
+        i = t.map((e) => r(e));
+      return (await Promise.all(i)).filter((e) => e !== null);
     }
     async SaveAppInfoBatchToLocalCache(e) {
       if (this.m_CacheStorage) {
@@ -276,10 +274,10 @@ var b = class {
       }
     }
     Localize(e, t, n) {
-      let r = this.GetRichPresenceLoc(e);
-      return r
-        ? r.Localize(t, n)
-        : s.EUNIVERSE == 1
+      let i = this.GetRichPresenceLoc(e);
+      return i
+        ? i.Localize(t, n)
+        : r.EUNIVERSE == 1
           ? ``
           : (console.log(
               `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
@@ -323,13 +321,13 @@ var b = class {
           ((e.m_fetching = this.m_CMInterface
             .WaitUntilLoggedOn()
             .then(() => {
-              let t = c.Init(p);
+              let n = t.Init(p);
               return (
-                t.Body().set_appid(e.GetAppID()),
-                t.Body().set_language(s.LANGUAGE),
+                n.Body().set_appid(e.GetAppID()),
+                n.Body().set_language(r.LANGUAGE),
                 d.GetAppRichPresenceLocalization(
                   this.m_CMInterface.GetServiceTransport(),
-                  t,
+                  n,
                 )
               );
             })
@@ -349,7 +347,7 @@ var b = class {
       );
     }
   };
-(e([i], S.prototype, `OnGetAppsResponse`, null),
-  e([i], S.prototype, `OnRichPresenceLocUpdate`, null));
+(i([c], S.prototype, `OnGetAppsResponse`, null),
+  i([c], S.prototype, `OnRichPresenceLocUpdate`, null));
 var C = new S();
 export { C as t };

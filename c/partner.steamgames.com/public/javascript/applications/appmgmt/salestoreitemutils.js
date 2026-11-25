@@ -1,20 +1,5 @@
-import {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./chunk~de7f2df91c.js";
-import { _, _ } from "./chunk~25a6634263.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~de7f2df91c.js";
+import { _, _ } from "./chunk~bd90a5fce7.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk~1fa4b8f2ff.js";
 import { _, _, _, _, _ } from "./chunk~0a99e05c44.js";
 import {
@@ -45,6 +30,7 @@ import "./chunk~44f252525d.js";
 import { _ } from "./chunk~8fb30ea08b.js";
 import { _ } from "./chunk~ede3e357a2.js";
 import { _ } from "./chunk~b390ee0f78.js";
+import { _, _ } from "./chunk~96e60d7578.js";
 import { _ } from "./chunk~8681f5c764.js";
 import { _ } from "./chunk~2201b8cb3d.js";
 import { _ } from "./chunk~8ceeb46076.js";
@@ -1007,7 +993,7 @@ function _(_) {
     _ = _.useContext(_),
     _ = _ && _ ? _(_, _) : void 0,
     _ = _ && !_,
-    _ = _ && !_,
+    _ = _ && !_ && !_?.bReplacesWishlistBanner,
     _ = !_ && _;
   return (0, _.jsxs)(`div`, {
     className: _(_, `CapsuleDecorators`, _ && `HasReasonBanner`),

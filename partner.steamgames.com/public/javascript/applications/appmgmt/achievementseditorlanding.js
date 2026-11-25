@@ -2,19 +2,19 @@
  ****/
 /* Third-party software licenses can be found at licenses.txt */
 import {
-  At as e,
-  Q as t,
-  W as n,
-  in as r,
-  j as i,
-  nn as a,
-  q as o,
-  rt as s,
-  sn as c,
-  vt as l,
-  wt as u,
+  Pt as e,
+  W as t,
+  X as n,
+  g as r,
+  jt as i,
+  k as a,
+  kt as o,
+  nt as s,
+  r as c,
+  w as l,
+  y as u,
 } from "./chunk~de7f2df91c.js";
-import { Pt as d } from "./chunk~25a6634263.js";
+import { Mt as d } from "./chunk~bd90a5fce7.js";
 import {
   $r as f,
   Cr as p,
@@ -85,9 +85,9 @@ var $e = `sgMEGCsNg7c-`,
   et = `zSTkW-sxkis-`,
   tt = `s682fjGpPIQ-`,
   nt = `_3FHQnSAvzY8-`,
-  N = c(e(), 1),
-  rt = c(d(), 1),
-  P = l();
+  N = e(s(), 1),
+  rt = e(d(), 1),
+  P = t();
 function it(e) {
   let {
     onClose: t,
@@ -160,7 +160,7 @@ function ot(e) {
     ...c,
   });
 }
-var st = a((e) => {
+var st = o((e) => {
     ((e.read = function (e, t, n, r, i) {
       var a,
         o,
@@ -221,7 +221,7 @@ var st = a((e) => {
         e[n + p - m] |= h * 128;
       }));
   }),
-  ct = a((e) => {
+  ct = o((e) => {
     var t = He(),
       n = st(),
       r =
@@ -11099,7 +11099,7 @@ var uc = () => {
 function dc() {
   return { localeError: uc() };
 }
-var fc = r({
+var fc = i({
     ar: () => Wa,
     az: () => Ka,
     be: () => Ya,
@@ -13278,7 +13278,7 @@ var ef = (...e) => bl({ Codec: qd, Boolean: fd, String: Lu }, ...e);
 function tf(e) {
   return Kc(cd, e);
 }
-var nf = c(Be()),
+var nf = e(Be()),
   rf = ct(),
   af = { "es-419": `es`, "pt-br": `pt`, "zh-cn": `zhCN`, "zh-tw": `zhTW` };
 async function of() {
@@ -13316,7 +13316,7 @@ function pf(e, t = !1) {
     queryKey: [Z, ff, e, t],
     queryFn: async () => {
       let n = t ? { version: `live` } : {},
-        r = `${s.PARTNER_BASE_URL}achievements/ajaxgetstatsschema/${e}`,
+        r = `${a.PARTNER_BASE_URL}achievements/ajaxgetstatsschema/${e}`,
         i = await nf.default.get(r, { params: n, withCredentials: !0 });
       if (i?.data?.success == 1) return i.data;
       throw Error(
@@ -13400,7 +13400,7 @@ function Tf(e) {
   let t = we({
     queryKey: [Z, wf, e],
     queryFn: async () => {
-      let t = `${s.PARTNER_BASE_URL}achievements/ajaxgetlanguagelist/${e}`,
+      let t = `${a.PARTNER_BASE_URL}achievements/ajaxgetlanguagelist/${e}`,
         n = await nf.default.get(t, { withCredentials: !0 });
       if (n?.data?.success == 1)
         return n.data.languages.sort((e, t) => e.localeCompare(t));
@@ -13410,7 +13410,7 @@ function Tf(e) {
   return t.isLoading ? [`english`] : t.data;
 }
 async function Ef(e, t) {
-  let n = `${s.PARTNER_BASE_URL}achievements/ajaxsetlanguagelist/${e}`,
+  let n = `${a.PARTNER_BASE_URL}achievements/ajaxsetlanguagelist/${e}`,
     r = new FormData();
   return (
     r.append(`languages`, JSON.stringify(t)),
@@ -13432,7 +13432,7 @@ function kf(e) {
   let t = we({
     queryKey: [Z, Of, e],
     queryFn: async () => {
-      let t = `${s.PARTNER_BASE_URL}achievements/ajaxgetlanguageoptionslist/${e}`,
+      let t = `${a.PARTNER_BASE_URL}achievements/ajaxgetlanguageoptionslist/${e}`,
         n = await nf.default.get(t, { withCredentials: !0 });
       if (n?.data?.success == 1)
         return n.data.languages.sort((e, t) => e.localeCompare(t));
@@ -13450,7 +13450,7 @@ function Mf(e) {
   return we({
     queryKey: [Z, Af, e],
     queryFn: async () => {
-      let t = `${s.PARTNER_BASE_URL}achievements/ajaxgetdlc/${e}`,
+      let t = `${a.PARTNER_BASE_URL}achievements/ajaxgetdlc/${e}`,
         n = await nf.default.get(t, { withCredentials: !0 });
       if (n?.data?.success == 1) return n.data.dlc;
       throw Error(`failed to load dlc for app id ${e}`);
@@ -13462,7 +13462,7 @@ function Pf(e) {
   let t = we({
     queryKey: [Z, Nf, e],
     queryFn: async () => {
-      let t = `${s.PARTNER_BASE_URL}achievements/ajaxgetappinfo/${e}`,
+      let t = `${a.PARTNER_BASE_URL}achievements/ajaxgetappinfo/${e}`,
         n = await nf.default.get(t, { withCredentials: !0 });
       if (n?.data?.success == 1) return n.data.app;
       if (n?.data?.success == 9)
@@ -13506,7 +13506,7 @@ async function If(e, t, n) {
   return r.data;
 }
 async function Lf(e, t, n) {
-  let r = `${s.PARTNER_BASE_URL}achievements/ajaxcreateorupdategroup/${e}`,
+  let r = `${a.PARTNER_BASE_URL}achievements/ajaxcreateorupdategroup/${e}`,
     i = new FormData();
   return (
     i.append(`groupid`, t),
@@ -13548,7 +13548,7 @@ function Bf(e, t) {
   let n = k();
   return Te({
     mutationFn: async () => {
-      let n = `${s.PARTNER_BASE_URL}achievements/ajaxdeletegroup/${e}`,
+      let n = `${a.PARTNER_BASE_URL}achievements/ajaxdeletegroup/${e}`,
         r = new FormData();
       return (
         r.append(`appid`, e.toString()),
@@ -13569,7 +13569,7 @@ async function Vf(e, t) {
     n.append(`groupids`, JSON.stringify(t)),
     await If(
       `reorderGroups`,
-      `${s.PARTNER_BASE_URL}achievements/ajaxreordergroups/${e}`,
+      `${a.PARTNER_BASE_URL}achievements/ajaxreordergroups/${e}`,
       n,
     ),
     !0
@@ -13593,7 +13593,7 @@ async function Uf(e, t, n) {
     r.append(`names`, JSON.stringify(n)),
     await If(
       `moveAchievementsGroup`,
-      `${s.PARTNER_BASE_URL}achievements/ajaxmoveachievements/${e}`,
+      `${a.PARTNER_BASE_URL}achievements/ajaxmoveachievements/${e}`,
       r,
     ),
     !0
@@ -13612,11 +13612,11 @@ function Wf(e) {
   });
 }
 async function Gf(e, t, n, r, i) {
-  let [a, o, c] = i.match(/data:(image\/\w+);base64,(.*)/),
+  let [o, s, c] = i.match(/data:(image\/\w+);base64,(.*)/),
     l = rf.Buffer.from(c, `base64`),
-    u = o === `image/png` ? `png` : `jpg`,
+    u = s === `image/png` ? `png` : `jpg`,
     d = `${e.toString()}_${t}_${n}_${r == `achievement` ? `a` : `g`}.${u}`,
-    f = new File([l], d, { type: o }),
+    f = new File([l], d, { type: s }),
     p = new FormData();
   (p.append(`appID`, e.toString()),
     p.append(`statID`, t),
@@ -13625,7 +13625,7 @@ async function Gf(e, t, n, r, i) {
     p.append(`image`, f),
     await If(
       `AchievementImageUpload`,
-      `${s.PARTNER_BASE_URL}images/uploadachievement`,
+      `${a.PARTNER_BASE_URL}images/uploadachievement`,
       p,
     ));
 }
@@ -13640,29 +13640,29 @@ function Jf(e) {
   return +!!e.achievement + +!!Kf(e.icon) + +!!Kf(e.icon_gray);
 }
 async function Yf(e, t, n) {
-  let { statID: r, bitID: i, achievement: a, icon: o, icon_gray: c } = t;
-  if (!a && r && i)
-    return (await qf(e, r, i, o, c, n), { success: 1, statid: r, bitid: i });
+  let { statID: r, bitID: i, achievement: o, icon: s, icon_gray: c } = t;
+  if (!o && r && i)
+    return (await qf(e, r, i, s, c, n), { success: 1, statid: r, bitid: i });
   let l = new FormData();
   (r && l.append(`statid`, r),
     i && l.append(`bitid`, i),
-    a.groupid && l.append(`groupid`, a.groupid),
-    l.append(`name`, a.name),
-    a.progress &&
-      (l.append(`progressstat`, a.progress.value.operand1),
-      l.append(`progressmin`, a.progress.min_val),
-      l.append(`progressmax`, a.progress.max_val)),
-    a.permission && l.append(`setby`, a.permission.toString()),
-    a.archived == `1` && l.append(`isarchived`, `true`),
-    a.display &&
-      (a.display.hidden == `1` && l.append(`hidden`, `true`),
-      a.display.name && l.append(`displayname`, JSON.stringify(a.display.name)),
-      a.display.desc &&
-        l.append(`displaydesc`, JSON.stringify(a.display.desc))));
-  let u = `${s.PARTNER_BASE_URL}achievements/ajaxcreateorupdateachievement/${e}`;
+    o.groupid && l.append(`groupid`, o.groupid),
+    l.append(`name`, o.name),
+    o.progress &&
+      (l.append(`progressstat`, o.progress.value.operand1),
+      l.append(`progressmin`, o.progress.min_val),
+      l.append(`progressmax`, o.progress.max_val)),
+    o.permission && l.append(`setby`, o.permission.toString()),
+    o.archived == `1` && l.append(`isarchived`, `true`),
+    o.display &&
+      (o.display.hidden == `1` && l.append(`hidden`, `true`),
+      o.display.name && l.append(`displayname`, JSON.stringify(o.display.name)),
+      o.display.desc &&
+        l.append(`displaydesc`, JSON.stringify(o.display.desc))));
+  let u = `${a.PARTNER_BASE_URL}achievements/ajaxcreateorupdateachievement/${e}`;
   n?.(`achievement`);
   let d = await If(`addOrUpdateAchievement`, u, l);
-  return (await qf(e, d.statid, d.bitid, o, c, n), d);
+  return (await qf(e, d.statid, d.bitid, s, c, n), d);
 }
 function Xf(e, t, n) {
   let r = k();
@@ -13675,13 +13675,13 @@ function Xf(e, t, n) {
 }
 async function Zf(e, t) {
   let { statID: n, bitID: r } = t,
-    i = `${s.PARTNER_BASE_URL}achievements/ajaxdeleteachievement/${e}`,
-    a = new FormData();
+    i = `${a.PARTNER_BASE_URL}achievements/ajaxdeleteachievement/${e}`,
+    o = new FormData();
   return (
-    a.append(`appid`, e.toString()),
-    a.append(`statid`, n),
-    a.append(`bitid`, r),
-    await If(`deleteAchievement`, i, a),
+    o.append(`appid`, e.toString()),
+    o.append(`statid`, n),
+    o.append(`bitid`, r),
+    await If(`deleteAchievement`, i, o),
     !0
   );
 }
@@ -13755,8 +13755,8 @@ var tp = `ppeoOC-Bbh8-`,
   Mp = `_4k0uWmAz8gE-`,
   Np = `SpcSSTlGcnk-`,
   Pp = `cSFNR3wWbY0-`,
-  Fp = c(
-    a((e, t) => {
+  Fp = e(
+    o((e, t) => {
       t.exports = function e(t, n) {
         if (t === n) return !0;
         if (t && n && typeof t == `object` && typeof n == `object`) {
@@ -13831,16 +13831,16 @@ function $p() {
 function em(e) {
   let { locstring: t } = e,
     { appID: n, localization: r } = X(),
-    { currentLanguage: a, setCurrentLanguage: o } = r,
-    s = Tf(n),
-    c = t === void 0,
+    { currentLanguage: i, setCurrentLanguage: a } = r,
+    o = Tf(n),
+    s = t === void 0,
     l = $p(),
-    u = c ? l : {},
-    d = Pe({ rgOptions: s, selectedValue: a, onSelectionChange: o }),
+    u = s ? l : {},
+    d = Pe({ rgOptions: o, selectedValue: i, onSelectionChange: a }),
     f = (e, n = !1) => {
-      let r = c ? u[e].set === u[e].total : (Q(t, e)?.length ?? 0) > 0,
+      let r = s ? u[e].set === u[e].total : (Q(t, e)?.length ?? 0) > 0,
         i = r ? Zp : Qp,
-        a = c ? ` (${u[e].set} / ${u[e].total})` : ``;
+        a = s ? ` (${u[e].set} / ${u[e].total})` : ``;
       return (0, P.jsxs)(`span`, {
         className: i,
         children: [
@@ -13855,13 +13855,13 @@ function em(e) {
       });
     };
   return (0, P.jsx)(`div`, {
-    className: i(Kp, t ? qp : null),
+    className: c(Kp, t ? qp : null),
     children: (0, P.jsxs)(Ne.Root, {
       variant: t ? `underline` : `default`,
       size: `2`,
       state: d,
       children: [
-        (0, P.jsx)(Ne.Trigger, { children: f(a) }),
+        (0, P.jsx)(Ne.Trigger, { children: f(i) }),
         (0, P.jsx)(Ne.Options, {
           children: d.rgOptions.map((e) =>
             (0, P.jsx)(
@@ -13886,24 +13886,24 @@ function tm(e, t) {
     : {};
 }
 function nm(e) {
-  let { value: t, setValue: n, multiline: r = !1, autofocus: a = !1 } = e,
-    { currentLanguage: o } = X().localization,
-    { appID: s } = X(),
-    c = tm(t, Tf(s)),
+  let { value: t, setValue: n, multiline: r = !1, autofocus: i = !1 } = e,
+    { currentLanguage: a } = X().localization,
+    { appID: o } = X(),
+    s = tm(t, Tf(o)),
     l = (e) => {
-      let t = { ...c, [o]: e };
+      let t = { ...s, [a]: e };
       n(t);
     };
   return (0, P.jsx)(`div`, {
-    className: i(Yp, c[o] ? void 0 : Xp),
+    className: c(Yp, s[a] ? void 0 : Xp),
     children: r
       ? (0, P.jsx)(ke, {
-          autoFocus: a,
+          autoFocus: i,
           resize: `vertical`,
-          value: c[o],
+          value: s[a],
           onTextChange: l,
         })
-      : (0, P.jsx)(Ie, { autoFocus: a, value: c[o], onTextChange: l }),
+      : (0, P.jsx)(Ie, { autoFocus: i, value: s[a], onTextChange: l }),
   });
 }
 function Q(e, t) {
@@ -13922,7 +13922,7 @@ function rm(e) {
   return (
     Q(t, r) ||
     (0, P.jsxs)(`span`, {
-      className: i(Qp, Jp),
+      className: c(Qp, Jp),
       children: [
         (0, P.jsx)(y, { color: `var(--text-color)` }),
         ` `,
@@ -14089,7 +14089,7 @@ function sm(e) {
 }
 function cm(e) {
   let { className: t } = e;
-  return (0, P.jsx)(Ae, { className: i(Wp, t), children: (0, P.jsx)(b, {}) });
+  return (0, P.jsx)(Ae, { className: c(Wp, t), children: (0, P.jsx)(b, {}) });
 }
 function lm(e) {
   let { color: t = `currentColor` } = e;
@@ -14142,7 +14142,7 @@ function mm(e) {
   let { title: t, onClick: n, className: r } = e;
   return (0, P.jsx)(`div`, {
     title: t,
-    className: i(Ip, Lp, r),
+    className: c(Ip, Lp, r),
     children: (0, P.jsx)(j, {
       variant: `ghost`,
       icon: !0,
@@ -14155,7 +14155,7 @@ function hm(e) {
   let { title: t, onClick: n } = e;
   return (0, P.jsx)(`div`, {
     title: t,
-    className: i(Ip, Rp),
+    className: c(Ip, Rp),
     children: (0, P.jsx)(j, {
       variant: `ghost`,
       icon: !0,
@@ -14795,23 +14795,23 @@ function Oh(e) {
       size: t = 64,
       achievement: n,
       achieved: r = !0,
-      showWarningOnEmpty: a = !0,
-      children: o,
-      className: s,
+      showWarningOnEmpty: i = !0,
+      children: a,
+      className: o,
     } = e,
-    { cdnRoot: c } = X(),
+    { cdnRoot: s } = X(),
     l = r ? n?.display?.icon : n?.display?.icon_gray,
     u = Dh[t],
-    d = i(u, Eh, !l && `tAcftwLfwQA-`, s);
+    d = c(u, Eh, !l && `tAcftwLfwQA-`, o);
   return l
     ? (0, P.jsxs)(`div`, {
         className: d,
-        children: [(0, P.jsx)(`img`, { src: c + l }), o],
+        children: [(0, P.jsx)(`img`, { src: s + l }), a],
       })
     : (0, P.jsx)(`div`, {
         className: d,
         title: E(`#AchievementEditor_AchievementImage_WarningMissingImage`),
-        children: (0, P.jsx)(`div`, { children: a && (0, P.jsx)(f, {}) }),
+        children: (0, P.jsx)(`div`, { children: i && (0, P.jsx)(f, {}) }),
       });
 }
 function kh(e) {
@@ -14819,16 +14819,16 @@ function kh(e) {
       size: t = 64,
       image: n,
       showNewIcon: r = !1,
-      children: a,
-      className: o,
+      children: i,
+      className: a,
     } = e,
-    s = Dh[t];
+    o = Dh[t];
   return (0, P.jsxs)(`div`, {
-    className: i(s, Eh, o),
+    className: c(o, Eh, a),
     children: [
       (0, P.jsx)(`img`, { src: n.image, alt: n.filenameWithoutExtension }),
       r && (0, P.jsx)(m, { className: `SGjZ-MjAel4-` }),
-      a,
+      i,
     ],
   });
 }
@@ -14838,29 +14838,29 @@ function jh(e) {
       className: t,
       onUpload: n,
       accept: r,
-      multiple: a = !1,
-      fileInputRef: o,
-      onError: s,
-      children: c,
+      multiple: i = !1,
+      fileInputRef: a,
+      onError: o,
+      children: s,
     } = e,
     [l, u] = (0, N.useState)(!1),
     [d, f] = (0, N.useState)(!1),
     p = (e) =>
-      !a && e.length > 1 ? !1 : Array.from(e).every((e) => r.includes(e.type)),
+      !i && e.length > 1 ? !1 : Array.from(e).every((e) => r.includes(e.type)),
     m = (e) => {
-      s &&
-        s(
-          !a && e.length > 1
+      o &&
+        o(
+          !i && e.length > 1
             ? E(`#AchievementEditor_Upload_Error_SingleFileOnly`)
             : E(`#AchievementEditor_Image_Error_UnknownContentType`),
         );
     };
   return (0, P.jsxs)(`div`, {
-    className: i(Ah, l && `CYhFhtLoPvo-`, d && `_3IZV8ZJ3zR0-`, t),
+    className: c(Ah, l && `CYhFhtLoPvo-`, d && `_3IZV8ZJ3zR0-`, t),
     onDragEnter: (e) => {
       (e.preventDefault(), u(!0));
       let t = [...e.dataTransfer.items];
-      if (!a && t.length > 1) (f(!0), (e.dataTransfer.effectAllowed = `none`));
+      if (!i && t.length > 1) (f(!0), (e.dataTransfer.effectAllowed = `none`));
       else
         for (let n of t)
           if (!r.includes(n.type)) {
@@ -14882,15 +14882,15 @@ function jh(e) {
       (f(!1), t ? m(e.dataTransfer.files) : n(e.dataTransfer.files));
     },
     children: [
-      c,
-      o &&
+      s,
+      a &&
         (0, P.jsx)(`input`, {
           type: `file`,
           style: { display: `none` },
           name: `upload`,
           accept: r.join(`,`),
-          multiple: a,
-          ref: o,
+          multiple: i,
+          ref: a,
           onChange: async (e) => {
             p(e.target.files) ? n(e.target.files) : m(e.target.files);
           },
@@ -15685,10 +15685,10 @@ function pg() {
       hasData: t,
       acceptedTypes: n,
       fileInputRef: r,
-      uploadFiles: a,
-      openFilePicker: o,
-      save: s,
-      isSaving: c,
+      uploadFiles: i,
+      openFilePicker: a,
+      save: o,
+      isSaving: s,
       saveProgress: l,
       saveError: u,
       saveSucceeded: d,
@@ -15696,7 +15696,7 @@ function pg() {
     } = sg(),
     [p, m] = (0, N.useState)(void 0);
   return (0, P.jsxs)(`div`, {
-    className: i(ip, op),
+    className: c(ip, op),
     children: [
       d &&
         (0, P.jsx)(wm, {
@@ -15713,7 +15713,7 @@ function pg() {
             accept: n,
             multiple: !0,
             fileInputRef: r,
-            onUpload: a,
+            onUpload: i,
             onError: m,
             children: (0, P.jsx)(`div`, {
               className: void 0,
@@ -15725,7 +15725,7 @@ function pg() {
             className: void 0,
             children: (0, P.jsx)(j, {
               color: `dull`,
-              onClick: o,
+              onClick: a,
               children: E(`#AchievementEditor_Bulk_Upload_SelectFiles`),
             }),
           }),
@@ -15754,11 +15754,11 @@ function pg() {
       }),
       t &&
         (0, P.jsx)(dm, {
-          pending: c,
+          pending: s,
           progress: l,
           error: u,
           hideCancel: !0,
-          onSave: s,
+          onSave: o,
         }),
     ],
   });
@@ -15780,12 +15780,12 @@ function gg() {
       localization: t,
       images: n,
       confirmDelete: r,
-      setConfirmDelete: a,
+      setConfirmDelete: i,
     } = sg(),
     {
-      csv: o,
-      achievements: s,
-      added: c,
+      csv: a,
+      achievements: o,
+      added: s,
       modified: l,
       unmodified: u,
       deleted: d,
@@ -15793,7 +15793,7 @@ function gg() {
     { localization: f } = t ?? {},
     { appID: p } = X(),
     m = Tf(p),
-    h = (e) => lg(e, s, f, n, m),
+    h = (e) => lg(e, o, f, n, m),
     g = [...l, ...u.filter(h)],
     _ = u.filter((e) => !h(e));
   return (0, P.jsxs)(`div`, {
@@ -15806,21 +15806,21 @@ function gg() {
       (0, P.jsxs)(`div`, {
         className: fp,
         children: [
-          c &&
-            !!c.length &&
+          s &&
+            !!s.length &&
             (0, P.jsx)(xg, {
-              className: i(`zmvKraoT-x8-`, `FSJWpY2GglM-`),
+              className: c(`zmvKraoT-x8-`, `FSJWpY2GglM-`),
               title: E(
                 `#AchievementEditor_AchievementCsvImport_Added_Title`,
-                c.length,
+                s.length,
               ),
               description: E(
                 `#AchievementEditor_AchievementCsvImport_Added_Description`,
               ),
-              children: c.map((e, t) =>
+              children: s.map((e, t) =>
                 (0, P.jsx)(
                   wg,
-                  { data: o[e], localization: f?.[e], images: n?.[e] },
+                  { data: a[e], localization: f?.[e], images: n?.[e] },
                   t,
                 ),
               ),
@@ -15828,7 +15828,7 @@ function gg() {
           g &&
             !!g.length &&
             (0, P.jsx)(xg, {
-              className: i(`zmvKraoT-x8-`, `njE0VV2yPWw-`),
+              className: c(`zmvKraoT-x8-`, `njE0VV2yPWw-`),
               title: E(
                 `#AchievementEditor_AchievementCsvImport_Modified_Title`,
                 g.length,
@@ -15840,8 +15840,8 @@ function gg() {
                 (0, P.jsx)(
                   wg,
                   {
-                    achievement: s[e],
-                    data: o?.[e] || Lm(s[e]),
+                    achievement: o[e],
+                    data: a?.[e] || Lm(o[e]),
                     localization: f?.[e],
                     images: n?.[e],
                   },
@@ -15852,7 +15852,7 @@ function gg() {
           d &&
             !!d.length &&
             (0, P.jsx)(xg, {
-              className: i(`zmvKraoT-x8-`, `Pu-itazQ9U4-`),
+              className: c(`zmvKraoT-x8-`, `Pu-itazQ9U4-`),
               title: E(
                 `#AchievementEditor_AchievementCsvImport_Removed_Title`,
                 d.length,
@@ -15863,12 +15863,12 @@ function gg() {
               headerChildren: (0, P.jsx)(Me, {
                 cursor: `pointer`,
                 maxWidth: `max-content`,
-                onClick: () => a(!r),
+                onClick: () => i(!r),
                 children: (0, P.jsx)(je, {
                   variant: `dark`,
                   color: `red`,
                   checked: r,
-                  onChange: (e) => a(e),
+                  onChange: (e) => i(e),
                   children: E(
                     `#AchievementEditor_AchievementCsvImport_Removed_Confirm`,
                   ),
@@ -15878,8 +15878,8 @@ function gg() {
                 (0, P.jsx)(
                   wg,
                   {
-                    achievement: s[e],
-                    data: Lm(s[e]),
+                    achievement: o[e],
+                    data: Lm(o[e]),
                     localization: f?.[e],
                     images: n?.[e],
                   },
@@ -15901,8 +15901,8 @@ function gg() {
                 (0, P.jsx)(
                   wg,
                   {
-                    achievement: s[e],
-                    data: Lm(s[e]),
+                    achievement: o[e],
+                    data: Lm(o[e]),
                     localization: f?.[e],
                     images: n?.[e],
                   },
@@ -15929,9 +15929,9 @@ function _g() {
 function vg() {
   let { groupLocalization: e } = sg(),
     { currentLanguage: t } = X().localization,
-    { csv: n, groups: r, modified: a, unmodified: o } = e ?? {};
+    { csv: n, groups: r, modified: i, unmodified: a } = e ?? {};
   if (!n) return null;
-  let s = (e) =>
+  let o = (e) =>
     (0, P.jsxs)(`div`, {
       className: Tp,
       children: [
@@ -15947,16 +15947,16 @@ function vg() {
           ],
         }),
         e.map((e) => {
-          let a = hh(n[e], r[e]),
-            o = Q(r[e]?.name, t) != Q(a, t);
+          let i = hh(n[e], r[e]),
+            a = Q(r[e]?.name, t) != Q(i, t);
           return (0, P.jsxs)(
             `div`,
             {
               children: [
                 (0, P.jsx)(`div`, { children: e }),
                 (0, P.jsx)(`div`, {
-                  className: i(o && `Fb9jyZHfoV0-`),
-                  children: (0, P.jsx)(rm, { text: a }),
+                  className: c(a && `Fb9jyZHfoV0-`),
+                  children: (0, P.jsx)(rm, { text: i }),
                 }),
               ],
             },
@@ -15976,29 +15976,29 @@ function vg() {
         direction: `column`,
         gap: `2`,
         children: [
-          !!a?.length &&
+          !!i?.length &&
             (0, P.jsx)(Eg, {
-              className: i(`zmvKraoT-x8-`, `njE0VV2yPWw-`),
+              className: c(`zmvKraoT-x8-`, `njE0VV2yPWw-`),
               title: E(
                 `#AchievementEditor_AchievementCsvImport_Modified_Title`,
-                a.length,
+                i.length,
               ),
               description: E(
                 `#AchievementEditor_GroupCsvImport_Modified_Description`,
               ),
-              children: s(a),
+              children: o(i),
             }),
-          !!o?.length &&
+          !!a?.length &&
             (0, P.jsx)(Eg, {
               collapsible: !0,
               title: E(
                 `#AchievementEditor_AchievementCsvImport_Unmodified_Title`,
-                o.length,
+                a.length,
               ),
               description: E(
                 `#AchievementEditor_GroupCsvImport_Unmodified_Description`,
               ),
-              children: s(o),
+              children: o(a),
             }),
         ],
       }),
@@ -16017,7 +16017,7 @@ function yg(e) {
 }
 function bg(e) {
   let { className: t, children: n } = e;
-  return (0, P.jsx)(`div`, { className: i(hp, t), children: n });
+  return (0, P.jsx)(`div`, { className: c(hp, t), children: n });
 }
 function xg(e) {
   let { children: t, className: n, ...r } = e;
@@ -16031,25 +16031,25 @@ function xg(e) {
 }
 function Sg(e) {
   let { children: t, className: n, ...r } = e,
-    [a, o] = (0, N.useState)(!0);
+    [i, a] = (0, N.useState)(!0);
   return (0, P.jsxs)(bg, {
     ...e,
     children: [
       (0, P.jsxs)(`div`, {
-        className: i(_p, vp),
+        className: c(_p, vp),
         children: [
           (0, P.jsx)(`div`, { children: (0, P.jsx)(yg, { ...r }) }),
           (0, P.jsx)(`div`, {
             children: (0, P.jsx)(`div`, {
               className: yp,
-              onClick: () => o(!a),
-              children: (0, P.jsx)(me, { angle: a ? 90 : 0 }),
+              onClick: () => a(!i),
+              children: (0, P.jsx)(me, { angle: i ? 90 : 0 }),
             }),
           }),
         ],
       }),
       (0, P.jsxs)(`div`, {
-        className: i(bp, a && `ovrT8DFQsuw-`),
+        className: c(bp, i && `ovrT8DFQsuw-`),
         children: [(0, P.jsx)(Cg, {}), t],
       }),
     ],
@@ -16081,11 +16081,11 @@ function Cg() {
   });
 }
 function wg(e) {
-  let { achievement: t, data: n, localization: r, images: a } = e,
+  let { achievement: t, data: n, localization: r, images: i } = e,
     {
-      api_name: o,
-      setid: s,
-      archived: c,
+      api_name: a,
+      setid: o,
+      archived: s,
       spoiler: l,
       permission: u,
       progress_stat_name: d,
@@ -16103,7 +16103,7 @@ function wg(e) {
     { localization: g } = X(),
     { currentLanguage: _ } = g;
   function v(e, n, r) {
-    return i(r, e == n && t !== void 0 ? void 0 : gp);
+    return c(r, e == n && t !== void 0 ? void 0 : gp);
   }
   let y = t?.display?.hidden == `1`,
     b = t?.archived == `1`,
@@ -16114,16 +16114,16 @@ function wg(e) {
     children: [
       (0, P.jsxs)(`div`, {
         children: [
-          a?.achieved?.image
+          i?.achieved?.image
             ? (0, P.jsx)(kh, {
-                image: a?.achieved?.image,
+                image: i?.achieved?.image,
                 size: 32,
                 className: mp,
               })
             : (0, P.jsx)(Oh, { achievement: t, size: 32, className: pp }),
-          a?.unachieved?.image
+          i?.unachieved?.image
             ? (0, P.jsx)(kh, {
-                image: a?.unachieved?.image,
+                image: i?.unachieved?.image,
                 size: 32,
                 className: mp,
               })
@@ -16151,7 +16151,7 @@ function wg(e) {
       (0, P.jsxs)(`div`, {
         className: Cp,
         children: [
-          (0, P.jsx)(`div`, { className: v(o, t?.name), children: o }),
+          (0, P.jsx)(`div`, { className: v(a, t?.name), children: a }),
           d &&
             (0, P.jsxs)(`div`, {
               className: `L0LRlt43P7k-`,
@@ -16175,9 +16175,9 @@ function wg(e) {
         ],
       }),
       (0, P.jsx)(`div`, {
-        className: v(s, t?.groupid ?? ``),
+        className: v(o, t?.groupid ?? ``),
         children: (0, P.jsx)(Tg, {
-          groupid: s,
+          groupid: o,
           oldgroupid: t?.groupid,
           isnew: !t,
         }),
@@ -16208,10 +16208,10 @@ function wg(e) {
                     ],
                   }),
             }),
-          (c || b) &&
+          (s || b) &&
             (0, P.jsx)(`div`, {
-              className: v(c, b),
-              children: c
+              className: v(s, b),
+              children: s
                 ? (0, P.jsxs)(P.Fragment, {
                     children: [
                       (0, P.jsx)(Ig, {}),
@@ -16273,16 +16273,16 @@ function Eg(e) {
       title: t,
       description: n,
       icon: r,
-      collapsible: a = !1,
-      className: o,
-      children: s,
+      collapsible: i = !1,
+      className: a,
+      children: o,
     } = e,
-    [c, l] = (0, N.useState)(a);
+    [s, l] = (0, N.useState)(i);
   return (0, P.jsxs)(`div`, {
-    className: i(Ep, o),
+    className: c(Ep, a),
     children: [
       (0, P.jsxs)(`div`, {
-        className: i(Dp, a && `igyCtMxWpXw-`),
+        className: c(Dp, i && `igyCtMxWpXw-`),
         children: [
           (0, P.jsxs)(`div`, {
             children: [
@@ -16298,17 +16298,17 @@ function Eg(e) {
               (0, P.jsx)(M, { children: n }),
             ],
           }),
-          a &&
+          i &&
             (0, P.jsx)(`div`, {
               children: (0, P.jsx)(`div`, {
                 className: `l23xX77jc24-`,
-                onClick: () => l(!c),
-                children: (0, P.jsx)(me, { angle: c ? 90 : 0 }),
+                onClick: () => l(!s),
+                children: (0, P.jsx)(me, { angle: s ? 90 : 0 }),
               }),
             }),
         ],
       }),
-      (0, P.jsx)(`div`, { className: i(Op, c && `ovrT8DFQsuw-`), children: s }),
+      (0, P.jsx)(`div`, { className: c(Op, s && `ovrT8DFQsuw-`), children: o }),
     ],
   });
 }
@@ -16482,21 +16482,21 @@ function jg(e) {
 function Mg(e) {
   let { className: t } = e;
   return (0, P.jsx)(`div`, {
-    className: i(up, t),
+    className: c(up, t),
     children: (0, P.jsx)(be, {}),
   });
 }
 function Ng(e) {
   let { className: t } = e;
   return (0, P.jsx)(`div`, {
-    className: i(up, t),
+    className: c(up, t),
     children: (0, P.jsx)(g, {}),
   });
 }
 function Pg(e) {
   let { className: t, hideTitle: n = !1 } = e;
   return (0, P.jsx)(`div`, {
-    className: i(up, t),
+    className: c(up, t),
     title: n ? void 0 : E(`#AchievementEditor_Achievement_Edit_Hidden`),
     children: (0, P.jsx)(x, {}),
   });
@@ -16504,7 +16504,7 @@ function Pg(e) {
 function Fg(e) {
   let { className: t, hideTitle: n = !1 } = e;
   return (0, P.jsx)(`div`, {
-    className: i(up, t),
+    className: c(up, t),
     title: n ? void 0 : E(`#AchievementEditor_Achievement_Edit_Visible`),
     children: (0, P.jsx)(ie, {}),
   });
@@ -16512,7 +16512,7 @@ function Fg(e) {
 function Ig(e) {
   let { className: t, hideTitle: n = !1 } = e;
   return (0, P.jsx)(`div`, {
-    className: i(up, t),
+    className: c(up, t),
     title: n ? void 0 : E(`#AchievementEditor_Achievement_Edit_Archived`),
     children: (0, P.jsx)(_, {}),
   });
@@ -16520,14 +16520,14 @@ function Ig(e) {
 function Lg(e) {
   let { className: t } = e;
   return (0, P.jsx)(`div`, {
-    className: i(up, t),
+    className: c(up, t),
     children: (0, P.jsx)(re, {}),
   });
 }
 function Rg(e) {
   let { className: t } = e;
   return (0, P.jsx)(`div`, {
-    className: i(up, t),
+    className: c(up, t),
     children: (0, P.jsx)(he, { color: `var(--color-error)` }),
   });
 }
@@ -16637,26 +16637,26 @@ function S_(e) {
     label: t,
     description: n,
     labelId: r,
-    issues: a,
-    isValid: o,
-    children: s,
+    issues: i,
+    isValid: a,
+    children: o,
   } = e;
   return (0, P.jsxs)(`div`, {
-    className: i(m_, o ? void 0 : h_),
+    className: c(m_, a ? void 0 : h_),
     children: [
-      (0, P.jsx)(x_, { label: t, description: n, labelId: r, children: s }),
-      !o &&
-        a !== void 0 &&
-        (typeof a == `string`
+      (0, P.jsx)(x_, { label: t, description: n, labelId: r, children: o }),
+      !a &&
+        i !== void 0 &&
+        (typeof i == `string`
           ? (0, P.jsxs)(`span`, {
               className: `tEufAkxnSTo-`,
               children: [
                 (0, P.jsx)(he, { color: `var(--color-invalid)` }),
                 ` `,
-                a,
+                i,
               ],
             })
-          : a.map((e, t) =>
+          : i.map((e, t) =>
               (0, P.jsxs)(
                 `span`,
                 {
@@ -16798,14 +16798,14 @@ function j_(e) {
   });
 }
 function M_(e) {
-  let { min: t, max: n, integer: r, value: i, setValue: a } = e,
-    o = r ? 1 : 0.1,
-    s = [u(i[0], t, n), u(i[1], t, n)];
+  let { min: t, max: r, integer: i, value: a, setValue: o } = e,
+    s = i ? 1 : 0.1,
+    c = [n(a[0], t, r), n(a[1], t, r)];
   return (0, P.jsxs)(`div`, {
     className: f_,
     children: [
       (0, P.jsx)(N_, { ...e }),
-      (0, P.jsx)(Re, { value: s, onValueChange: a, min: t, max: n, step: o }),
+      (0, P.jsx)(Re, { value: c, onValueChange: o, min: t, max: r, step: s }),
     ],
   });
 }
@@ -16857,22 +16857,22 @@ function F_(e) {
       achievements: t,
       compact: n = !1,
       editable: r = !0,
-      contentBefore: a,
-      headerContentBefore: o,
-      setBulkMove: s,
+      contentBefore: i,
+      headerContentBefore: a,
+      setBulkMove: o,
     } = e,
-    c = R_(),
-    l = i(Jg, n ? Yg : void 0, a === void 0 ? void 0 : Xg);
+    s = R_(),
+    l = c(Jg, n ? Yg : void 0, i === void 0 ? void 0 : Xg);
   return (0, P.jsxs)(`div`, {
     className: l,
     children: [
       (0, P.jsxs)(`div`, {
         className: e_,
         children: [
-          a !== void 0 &&
+          i !== void 0 &&
             (0, P.jsx)(`div`, {
               className: `Jt028pd0CaM-`,
-              children: o !== void 0 && o(),
+              children: a !== void 0 && a(),
             }),
           (0, P.jsx)(`div`, {
             children:
@@ -16880,7 +16880,7 @@ function F_(e) {
               (0, P.jsx)(P.Fragment, {
                 children: (0, P.jsx)(j, {
                   size: `1`,
-                  onClick: s,
+                  onClick: o,
                   children: (0, P.jsxs)(A, {
                     direction: `row`,
                     gap: `2`,
@@ -16932,10 +16932,10 @@ function F_(e) {
           H_,
           {
             achievement: e,
-            nameDescCounts: c,
+            nameDescCounts: s,
             compact: n,
             editable: r,
-            contentBefore: a,
+            contentBefore: i,
           },
           `ach_${e.statID}_${e.bitID}`,
         ),
@@ -18135,7 +18135,7 @@ function kv(e) {
 }
 function Av(e) {
   let { className: t, ...n } = e;
-  return (0, P.jsx)(Mv, { className: i(vv, t), ...n });
+  return (0, P.jsx)(Mv, { className: c(vv, t), ...n });
 }
 function jv(e) {
   return `group-${e}`;
@@ -18145,16 +18145,16 @@ function Mv(e) {
       groupid: t,
       group: n,
       actions: r,
-      children: a,
-      className: o,
-      collapsed: s,
-      setCollapsed: c,
+      children: i,
+      className: a,
+      collapsed: o,
+      setCollapsed: s,
       ...l
     } = e,
     u = Tm(t, n).visible ? Y_ : Z_;
   return (0, P.jsx)(`div`, {
     id: jv(t),
-    className: i(av, o, u),
+    className: c(av, a, u),
     ...l,
     children: (0, P.jsxs)(`div`, {
       className: ov,
@@ -18163,10 +18163,10 @@ function Mv(e) {
           groupid: t,
           group: n,
           actions: r,
-          collapsed: s,
-          setCollapsed: c,
+          collapsed: o,
+          setCollapsed: s,
         }),
-        a,
+        i,
       ],
     }),
   });
@@ -18457,13 +18457,13 @@ function Iv(e) {
       (0, P.jsx)(Ne.Trigger, {
         render: (e) =>
           (0, P.jsxs)(`div`, {
-            className: i(tv),
+            className: c(tv),
             ...e,
             children: [
               E(`#AchievementEditor_Options`),
               `\xA0`,
               (0, P.jsx)(`div`, {
-                className: i(ev, fv),
+                className: c(ev, fv),
                 children: (0, P.jsx)(te, {}),
               }),
             ],
@@ -18508,7 +18508,7 @@ function Lv(e) {
 function Rv(e) {
   let { hidden: t, className: n, omitText: r = !1 } = e;
   return (0, P.jsx)(`div`, {
-    className: i(bv, t ? Q_ : X_, n),
+    className: c(bv, t ? Q_ : X_, n),
     children: t
       ? (0, P.jsxs)(P.Fragment, {
           children: [
@@ -18529,18 +18529,18 @@ function zv(e) {
       archived: t,
       developeronly: n,
       app: r,
-      baseApp: a,
-      noStorePage: o,
-      notDLCOfApp: s,
-      dlcappid: c,
+      baseApp: i,
+      noStorePage: a,
+      notDLCOfApp: o,
+      dlcappid: s,
     } = e,
     l = t || n || !r?.is_released_somewhere,
-    u = i(Z_, $_);
+    u = c(Z_, $_);
   return (0, P.jsxs)(`div`, {
     className: yv,
     children: [
       (0, P.jsx)(`div`, {
-        className: i(bv, l ? Q_ : X_),
+        className: c(bv, l ? Q_ : X_),
         children: (0, P.jsx)(Rv, { hidden: l }),
       }),
       l &&
@@ -18588,20 +18588,20 @@ function zv(e) {
               }),
           ],
         }),
-      o &&
+      a &&
         (0, P.jsx)(_m, {
           text: E(
             `#AchievementEditor_Group_Warn_NoStorePage`,
             r?.name ?? ``,
-            a?.name ?? ``,
+            i?.name ?? ``,
           ),
         }),
-      s &&
+      o &&
         (0, P.jsx)(_m, {
           text: E(
             `#AchievementEditor_Group_Warn_NotDLCOfApp`,
-            c ?? ``,
-            a?.name ?? ``,
+            s ?? ``,
+            i?.name ?? ``,
           ),
         }),
     ],
@@ -18708,11 +18708,11 @@ function Gv(e) {
       state: t,
       groupid: n,
       bHideSaveCancelButtons: r,
-      onSave: a,
-      onCancel: o,
-      ref: s,
+      onSave: i,
+      onCancel: a,
+      ref: o,
     } = e,
-    { appID: c } = X(),
+    { appID: s } = X(),
     l = (0, N.useRef)(null);
   (0, N.useEffect)(() => {
     l?.current?.focus();
@@ -18733,18 +18733,18 @@ function Gv(e) {
     x = t.editAppID !== void 0,
     S = async () => {
       try {
-        (await t.save(), a && a());
+        (await t.save(), i && i());
       } catch {}
     },
     C = () => {
-      (t.reset(), o && o());
+      (t.reset(), a && a());
     },
     w = y.visible ? Y_ : Z_;
   return (0, P.jsxs)(`div`, {
-    ref: s,
-    className: i(av, pv, w),
+    ref: o,
+    className: c(av, pv, w),
     children: [
-      (0, P.jsx)(`div`, { className: i(void 0, w) }),
+      (0, P.jsx)(`div`, { className: c(void 0, w) }),
       (0, P.jsx)(`div`, {
         className: ov,
         children: (0, P.jsx)(`div`, {
@@ -19224,7 +19224,7 @@ function uy(e, t) {
   return !(t instanceof ay) && e < 3;
 }
 function dy(e, t) {
-  return `${n.BASE_URL_SHARED_CDN}community_assets/images/apps/${e}/${t}`;
+  return `${r.BASE_URL_SHARED_CDN}community_assets/images/apps/${e}/${t}`;
 }
 function fy(e, t, n) {
   return {
@@ -19243,10 +19243,10 @@ function py(e, t) {
     })),
   };
 }
-function my(e, t, r) {
+function my(e, t, n) {
   return {
     queryKey: ey(t),
-    queryFn: () => ty(e, t, n.LANGUAGE, r),
+    queryFn: () => ty(e, t, r.LANGUAGE, n),
     staleTime: 864e5,
     retry: uy,
     area: `achievements`,
@@ -19271,20 +19271,20 @@ function _y(e, t) {
   return Zv({ ...gy(Ce(), e), ...ly(t) });
 }
 function vy(e) {
-  let { appId: n } = e,
-    r = t(`icon_cdn_root`, `application_config`),
-    [a, o] = (0, N.useState)(`english`),
-    [s, c] = (0, N.useState)(``),
-    [l, u] = (0, N.useState)(!1),
+  let { appId: t } = e,
+    n = l(`icon_cdn_root`, `application_config`),
+    [r, i] = (0, N.useState)(`english`),
+    [a, o] = (0, N.useState)(``),
+    [s, u] = (0, N.useState)(!1),
     [d, f] = (0, N.useState)(!1),
-    p = hy(n, { bNoRetryOnError: !0 }),
-    { data: m } = _y(n, { bNoRetryOnError: !0 });
-  kf(n);
+    p = hy(t, { bNoRetryOnError: !0 }),
+    { data: m } = _y(t, { bNoRetryOnError: !0 });
+  kf(t);
   let h = {
-      appID: n,
-      cdnRoot: r,
-      localization: { currentLanguage: a, setCurrentLanguage: o },
-      filter: s,
+      appID: t,
+      cdnRoot: n,
+      localization: { currentLanguage: r, setCurrentLanguage: i },
+      filter: a,
       existingAchievements: p.data,
       existingAchievementUnlockPercentages: m,
     },
@@ -19297,7 +19297,7 @@ function vy(e) {
         label: E(`#AchievementEditor_Tab_ManageAchievements`),
         render: () =>
           (0, P.jsx)(Dv, {
-            reordering: l,
+            reordering: s,
             setReordering: u,
             creatingNewGroup: d,
             setCreatingNewGroup: f,
@@ -19313,7 +19313,7 @@ function vy(e) {
     value: h,
     children: [
       (0, P.jsxs)(`div`, {
-        className: i(Hg, `noOpinionatedGlobalStyles`),
+        className: c(Hg, `noOpinionatedGlobalStyles`),
         children: [
           (0, P.jsx)(xy, {}),
           (0, P.jsx)(yy, {
@@ -19326,10 +19326,10 @@ function vy(e) {
           }),
           S == `main` &&
             (0, P.jsx)(by, {
-              filter: s,
-              setFilter: c,
+              filter: a,
+              setFilter: o,
               showFilter: S == `main`,
-              reordering: l,
+              reordering: s,
               setReordering: u,
               showReorder: S == `main`,
               creatingNewGroup: d,
@@ -19489,13 +19489,13 @@ function by(e) {
 }
 function xy(e) {
   let { appID: t } = X(),
-    n = o.steamid,
-    r = `${s.COMMUNITY_BASE_URL}profiles/${n}/achievements/${t}`,
-    i = `${s.PARTNER_BASE_URL}doc/features/achievements`,
-    a = `${i}#5`,
-    c = hf(t),
-    l = Sf(t)?.length ?? 0,
-    u = gf(t);
+    n = u.steamid,
+    r = `${a.COMMUNITY_BASE_URL}profiles/${n}/achievements/${t}`,
+    i = `${a.PARTNER_BASE_URL}doc/features/achievements`,
+    o = `${i}#5`,
+    s = hf(t),
+    c = Sf(t)?.length ?? 0,
+    l = gf(t);
   return (0, P.jsxs)(`div`, {
     className: Ug,
     children: [
@@ -19573,7 +19573,7 @@ function xy(e) {
               }),
             ],
           }),
-          !!c &&
+          !!s &&
             (0, P.jsxs)(`div`, {
               children: [
                 (0, P.jsxs)(`div`, {
@@ -19586,27 +19586,27 @@ function xy(e) {
                   children: [
                     E(
                       `#AchievementEditor_Description_Limit`,
-                      l,
-                      c.max_achievements,
+                      c,
+                      s.max_achievements,
                     ),
-                    !c.vetted &&
+                    !s.vetted &&
                       (0, P.jsxs)(P.Fragment, {
                         children: [
                           ` `,
                           _e(
                             E(
                               `#AchievementEditor_Description_Limit_Unvetted`,
-                              c.max_achievements,
+                              s.max_achievements,
                             ),
-                            (0, P.jsx)(`a`, { href: a }),
+                            (0, P.jsx)(`a`, { href: o }),
                           ),
                         ],
                       }),
                     ` `,
                     E(
                       `#AchievementEditor_Description_Limit_Groups`,
-                      u,
-                      c.max_groups,
+                      l,
+                      s.max_groups,
                     ),
                   ],
                 }),
@@ -19640,7 +19640,7 @@ function xy(e) {
                 children: D(
                   `#AchievementEditor_Description_Releasing`,
                   (0, P.jsx)(`a`, {
-                    href: `${s.PARTNER_BASE_URL}admin/game/editbyappid/${t}?activetab=tab_basic#feature_section`,
+                    href: `${a.PARTNER_BASE_URL}admin/game/editbyappid/${t}?activetab=tab_basic#feature_section`,
                   }),
                 ),
               }),

@@ -65,6 +65,7 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~d3515eca4e.js";
 import {
   _,
@@ -181,8 +182,13 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~e464778a03.js";
 import {
+  _,
+  _,
+  _,
+  _,
   _,
   _,
   _,
@@ -1429,7 +1435,7 @@ var _ = _(_()),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetLists = _;
@@ -1438,7 +1444,7 @@ var _ = _(_()),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetListDetails = _;
@@ -2585,7 +2591,7 @@ var _ = class _ extends _.Message {
           fields: {
             context: {
               _: 2,
-              _: _,
+              _,
             },
             data_request: {
               _: 3,
@@ -3603,7 +3609,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`community`, `store`, `checkout`],
     });
   }
   _.ValidateCart = _;
@@ -3611,13 +3617,14 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Checkout.GetFriendOwnershipForGifting#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   _.GetFriendOwnershipForGifting = _;
   function _(_, _, _) {
     return _.SendMsg(`Checkout.AddFreeLicense#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`community`, `store`, `checkout`],
     });
   }
   _.AddFreeLicense = _;
@@ -6370,7 +6377,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `store`, `community`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -29416,10 +29423,9 @@ function _(_) {
       price_before_bundle_discount: _,
       formatted_price_before_bundle_discount: _,
       final_price_in_cents: _,
-      price_to_base_discount_on: _,
     } = _,
     _ = Number.parseInt(_ || `0`);
-  if (!(_ <= 0 || _ <= 0 || !_) && !(Number.parseInt(_ || `0`) > 0))
+  if (!(_ <= 0 || _ <= 0 || !_))
     return _ <= 0
       ? {
           nDiscountPct: _,
@@ -31107,14 +31113,20 @@ var _ = _.createContext({});
 function _() {
   return _.useContext(_);
 }
-function _(_, _) {
+function _(_, _, _) {
   let _ = _(),
     _ = _(),
-    _ = _(_(_, _));
+    _ = _(_(_(_, _), _));
   return {
     snr: _(_),
     strStoreURL: _(_, _, _),
   };
+}
+function _(_, _) {
+  if (!_ || !_) return _;
+  let _ = new URL(_);
+  for (let [_, _] of Object.entries(_)) _.searchParams.set(_, _);
+  return _.toString();
 }
 function _(_) {
   return _
@@ -32449,28 +32461,28 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`AccountCart.GetCart#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCart = _;
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.AddItemsToCart#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`community`, `store`, `checkout`],
     });
   }
   _.AddItemsToCart = _;
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.ModifyLineItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   _.ModifyLineItem = _;
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.RemoveItemFromCart#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   _.RemoveItemFromCart = _;
@@ -32483,13 +32495,14 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.DeleteCart#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   _.DeleteCart = _;
   function _(_, _, _) {
     return _.SendMsg(`AccountCart.GetRelevantCoupons#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   _.GetRelevantCoupons = _;
@@ -34305,7 +34318,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetShoppingCartContents = _;
@@ -34334,7 +34347,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ShoppingCart.ModifyLineItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`store`, `checkout`],
     });
   }
   _.ModifyLineItem = _;
@@ -34342,7 +34355,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ShoppingCart.RemoveLineItems#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`partner`, `store`, `checkout`],
     });
   }
   _.RemoveLineItems = _;
@@ -35370,561 +35383,62 @@ var _ = {};
 async function _(_) {
   if (_[_]) return await _[_]();
 }
-var _ = _(_);
+var _ = _(_),
+  _ = `JuZBiq95wYE-`;
 function _(_) {
-  let { closeModal: _, strDescOverride: _ } = _;
-  return (0, _.jsx)(_, {
-    strTitle: _.Localize(`#LoginRedirect_Dialog_Title`),
-    strDescription: _ || _.Localize(`#LoginRedirect_Dialog_Description`),
-    onCancel: _,
-    strOKButtonText: _.Localize(`#Button_OK`),
-    onOK: () => {
-      (_(), _());
-    },
-  });
+  let _ = _.GetELanguageFallback(_);
+  return _ == _ ? `${_}` : `${_}_${_}`;
 }
 function _(_) {
-  let [_, _, _] = _();
-  return {
-    elDialogElement: (0, _.jsx)(_, {
-      active: _,
-      children: (0, _.jsx)(_, {
-        closeModal: _,
-        strDescOverride: _,
-      }),
-    }),
-    fnShowLogonDialog: _,
-  };
+  return _?.clan_steamid ? _(new _(_.clan_steamid), _) : null;
 }
-var _ = `yYL-OrX9PtQ-`,
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _
-        ? {
-            $jspbMessageInstance: _,
-          }
-        : {};
-    }
-    static fromObject(_) {
-      return new _();
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _;
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {}
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStorePreferences_GetIgnoreList_Request`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.ignore_list || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            ignore_list: {
-              _: 1,
-              _: _,
-              _: !0,
-              _: !0,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStorePreferences_GetIgnoreList_Response`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            appid: {
-              _: 1,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-            packageid: {
-              _: 2,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-            reason: {
-              _: 3,
-              _: _.readEnum,
-              _: _.writeEnum,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CStorePreferences_GetIgnoreList_Response_IgnoreListEntry`;
-    }
-  },
-  _;
-(function (_) {
-  function _(_, _, _) {
-    return _.SendMsg(`StorePreferences.GetIgnoreList#1`, _(_, _, _), _, {
-      bConstMethod: !0,
-      ePrivilege: 1,
-    });
-  }
-  _.GetIgnoreList = _;
-})((_ ||= {}));
-var _ = class _ {
-  m_queryClient = _;
-  m_boxCacheVersion = _.box(0);
-  m_bInitialized = !1;
-  m_boxAjaxInFlight = _.box(!1);
-  LazyInit() {
-    this.m_bInitialized ||
-      ((this.m_bInitialized = !0),
-      this.m_queryClient.getQueryCache().subscribe((_) => {
-        (_?.type == `added` || _?.type == `updated` || _?.type == `removed`) &&
-          _(_.query?.queryKey) &&
-          _(() => this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1));
-      }));
-  }
-  ReadData() {
-    return (
-      this.LazyInit(), this.m_boxCacheVersion.get(), _(this.m_queryClient)
-    );
-  }
-  BIsLoaded() {
-    return this.ReadData().bLoaded;
-  }
-  GetWishlistGamesInUserOrder() {
-    return this.ReadData().rgWishlistInOrder;
-  }
-  GetRecommendedGamesInIRPriorityOrder() {
-    return this.ReadData().rgRecommendedAppsInOrder;
-  }
-  GetFollowedCuratorCount() {
-    return this.ReadData().setCuratorsFollowed.size;
-  }
-  GetFollowedCuratorsAccountID() {
-    return this.ReadData().rgCuratorsFollowed;
-  }
-  BIsFollowingCurator(_) {
-    return this.ReadData().setCuratorsFollowed.has(_(_));
-  }
-  BIsIgnoringCurator(_) {
-    return this.ReadData().setCuratorsIgnored.has(_(_));
-  }
-  get ExcludedContentDescriptor() {
-    return this.ReadData().rgExcludedContentDescriptors;
-  }
-  BExcludeTagIDs(_) {
-    let _ = this.ReadData().setExcludedTagIDs;
-    return _.some((_) => _.has(_));
-  }
-  GetExcludedTagsSortedByID() {
-    return this.ReadData().rgExcludedTagIDsSorted;
-  }
-  BExcludesContentDescriptor(_) {
-    let _ = this.ReadData().setExcludedContentDescriptors;
-    return _.some((_) => _.has(_));
-  }
-  BIncludesContentDescriptor(_) {
-    return !this.ReadData().setExcludedContentDescriptors.has(_);
-  }
-  BIsGameWishlisted(_) {
-    return this.ReadData().setWishlist.has(Number(_));
-  }
-  BIsGameRecommended(_) {
-    return this.ReadData().setRecommendedApps.has(Number(_));
-  }
-  BIsGameIgnored(_) {
-    return !!_ && this.ReadData().mapIgnoredApps.has(Number(_));
-  }
-  BIsPackageIgnored(_) {
-    return !!_ && this.ReadData().mapIgnoredPackages.has(Number(_));
-  }
-  BIsGameOwned(_) {
-    return !!_ && this.ReadData().setOwnedApps.has(Number(_));
-  }
-  BIsStoreItemOwned(_) {
-    switch (_.GetStoreItemType()) {
-      case 0:
-        if (this.BIsGameOwned(_.GetAppID())) return !0;
-        break;
-      case 1:
-      case 2:
-        if (_.GetIncludedAppIDs().every((_) => this.BIsGameOwned(_))) return !0;
-    }
-    return !1;
-  }
-  BOwnsApp(_) {
-    return !!_ && this.ReadData().setOwnedApps.has(Number(_));
-  }
-  BOwnsPackage(_) {
-    return this.ReadData().setOwnedPackages.has(Number(_));
-  }
-  BHasUsedHardware(_) {
-    return this.ReadData().setHardwareUsed.has(_);
-  }
-  BShowFilteredUserReviewScores() {
-    return this.ReadData().bShowFilteredUserReviewScores;
-  }
-  BAppImpressionsAllowed() {
-    return this.ReadData().bAllowAppImpressions;
-  }
-  GetPrimaryLanguage() {
-    return this.ReadData().ePrimaryLanguage;
-  }
-  GetSecondaryLanguages() {
-    return this.ReadData().setSecondaryLanguages;
-  }
-  BIsAnyLanguageEnabled(_) {
-    let { ePrimaryLanguage: _, setSecondaryLanguages: _ } = this.ReadData();
-    return (
-      _ == null || _ <= -1 || 32 <= _ || _.some((_) => _ === _ || _.has(_))
-    );
-  }
-  GetRecommendedTags() {
-    return this.ReadData().rgRecommendedTags;
-  }
-  BIsAjaxInFlight() {
-    return this.m_boxAjaxInFlight.get();
-  }
-  BIsAppRecommendedBySomeCurator(_) {
-    return this.ReadData().mapRecommendingCuratorsForApp.has(Number(_));
-  }
-  GetRecommendingCuratorsForApp(_) {
-    return this.ReadData().mapRecommendingCuratorsForApp.get(Number(_));
-  }
-  BHasPlatformPreferenceSet() {
-    let _ = this.ReadData().setPreferredPlatforms.size;
-    return _ > 0 && _ < 3;
-  }
-  BIsPreferredPlatform(_) {
-    return this.ReadData().setPreferredPlatforms.has(_);
-  }
-  async HintLoad() {
-    return (this.LazyInit(), await _(this.m_queryClient), this);
-  }
-  async UpdateFollowOrIgnoreCurator(_, _, _) {
-    this.LazyInit();
-    let _ =
-        _.STORE_BASE_URL + `curators/` + (_ ? `ajaxfollow/` : `ajaxignore/`),
-      _ = _.GetAccountID(),
-      _ = new FormData();
-    (_.append(`clanid`, `` + _),
-      _.append(`sessionid`, _()),
-      _.append(_ ? `follow` : `ignore`, _ ? `1` : `0`));
-    let _ = await _.default.post(_, _, {
-      withCredentials: !0,
-    });
-    return (
-      _ &&
-        _.status == 200 &&
-        (this.InvalidateCache(),
-        _(this.m_queryClient, (_) => {
-          let _ = new Set(_ ? _.setCuratorsFollowed : _.setCuratorsIgnored);
-          return (
-            _ ? _.add(_) : _.delete(_),
-            _
-              ? {
-                  setCuratorsFollowed: _,
-                  rgCuratorsFollowed: Array.from(_),
-                }
-              : {
-                  setCuratorsIgnored: _,
-                }
-          );
-        })),
-      _.data
-    );
-  }
-  async UpdateAppIgnore(_, _, _, _ = 0) {
-    this.LazyInit();
-    let _ = _.STORE_BASE_URL + `recommended/ignorerecommendation`,
-      _ = new FormData();
-    (_.append(`sessionid`, _()),
-      _.append(`appid`, `` + _),
-      _.append(`remove`, _ ? `0` : `1`),
-      _.append(`snr`, _),
-      _.append(`ignore_reason`, `` + _));
-    try {
-      _(() => this.m_boxAjaxInFlight.set(!0));
-      let _ = await _.default.post(_, _, {
-        withCredentials: !0,
-      });
-      return (
-        _ &&
-          _.status == 200 &&
-          (this.InvalidateCache(),
-          _(this.m_queryClient, (_) => {
-            let _ = new Map(_.mapIgnoredApps);
-            return (
-              _ ? _.set(Number(_), _) : _.delete(Number(_)),
-              {
-                mapIgnoredApps: _,
-              }
-            );
-          })),
-        _.data
-      );
-    } catch (_) {
-      let _ = _(_);
-      console.error(`UpdateAppIgnore`, _.strErrorMsg, _);
-    } finally {
-      _(() => this.m_boxAjaxInFlight.set(!1));
-    }
-    return {
-      success: 2,
-    };
-  }
-  async AddToCart(_, _, _, _, _, _, _) {
-    if (
-      window.g_bUseNewCartAPI !== void 0 &&
-      window.g_bUseNewCartAPI &&
-      typeof window.AddItemToCart == `function`
-    ) {
-      let _;
-      return (_ && (_ = _.ParseSNR(_)), window.AddItemToCart(_, _, _), !0);
-    }
-    let _ = new FormData();
-    (_.append(`action`, `add_to_cart`),
-      _ ? _.append(`bundleid`, _.toString()) : _.append(`subid`, `` + _),
-      _ && _.append(`snr`, _),
-      _.append(`sessionid`, _()),
-      _.append(`quantity`, `1`));
-    let _ = _(_);
-    _.preventDefault();
-    try {
-      (await _.default.post(_, _, {
-        withCredentials: !0,
-      }),
-        this.InvalidateCache(),
-        _?.fnSetURL ? _.fnSetURL(_) : (_.location.href = _));
-    } catch (_) {
-      return (console.log(`HandleOnAddToCart`, _), !1);
-    }
-    return !0;
-  }
-  InvalidateCache() {
-    _();
-  }
-  static s_globalSingletonStore;
-  static Get() {
-    return ((_.s_globalSingletonStore ||= new _()), _.s_globalSingletonStore);
-  }
-  static BConfirmedAdultContentAgeGate() {
-    return _();
-  }
-  constructor() {}
-};
+var _ = 100;
+async function _(_, _) {
+  let _ = new URLSearchParams();
+  (_.set(`event_gids`, [...new Set(_)].sort().join(`,`)),
+    _.set(`lang_list`, _(_)),
+    _.set(`origin`, location.origin));
+  let _ =
+      _.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + _.toString(),
+    _ = await fetch(_);
+  if (_.status === 204) return _.map(() => null);
+  if (!_._) throw Error(`${_} answered ${_.status}`);
+  let _ = await _.json(),
+    _ = new Map((_.events ?? []).map((_) => [_.gid, _]));
+  return _.map((_) => _.get(_) ?? null);
+}
 function _(_) {
-  return typeof _ == `object` && `GetAccountID` in _
-    ? _.GetAccountID()
-    : Number(_);
+  return _(
+    [`PublicPartnerEventBrowser`, _],
+    () =>
+      new _.default((_) => _(_, _), {
+        maxBatchSize: _,
+        cache: !1,
+      }),
+  );
+}
+function _(_, _) {
+  return [`PublicPartnerEvent`, _, _];
 }
 function _(_, _, _) {
   return {
-    queryKey: _(_),
-    enabled: !!_?.GID,
-    queryFn: async () => {
-      if (!_) return null;
-      let _ = _.appid
-          ? await _.ensureQueryData(
-              _(_, {
-                appid: _.appid,
-              }),
-            )
-          : null,
-        _ = await _.ensureQueryData(_(_.clanSteamID.GetAccountID(), _));
-      if (_.appid) {
-        if (_) {
-          if (_.all_ages_screenshots && _.all_ages_screenshots.length > 0) {
-            let _ = Number(
-              _.bOldAnnouncement
-                ? _.AnnouncementGID
-                : _.GID == null
-                  ? 0
-                  : _.GID,
-            );
-            return (
-              (_ %= _.all_ages_screenshots.length),
-              `${_.STORE_ITEM_BASE_URL}${_.all_ages_screenshots[_].filename}`
-            );
-          }
-        } else return ``;
-      }
-      return _.GetEventType() != 36 &&
-        _ &&
-        ((_.is_creator_home && !_.is_ogg) || _.is_curator)
-        ? (_.avatar_full_url ?? null)
-        : null;
-    },
+    queryKey: _(_, _),
+    queryFn: async () => (_ ? _.load(_) : (await _([_], _))[0]),
+    select: _,
+    enabled: !!_,
+    staleTime: 6e5,
   };
 }
 function _(_) {
-  return [`useFallbackArtworkScreenshot`, _?.GID];
+  let _ = _(_.LANGUAGE),
+    _ = _(_);
+  return _(_(_, _, _));
 }
-function _(_, _, _, _ = _.full, _ = !0) {
-  let _ = _(),
-    _ = _();
-  return _(_(_, _, _, _, _, _, _)).data ?? void 0;
-}
-function _(_, _, _, _ = _.full, _ = !0) {
-  return [`useEventImageURLWithFallback`, _?.GID, _, _, _, _];
-}
-function _(_, _, _, _, _, _ = _.full, _ = !0) {
-  return {
-    queryKey: _(_, _, _, _, _),
-    enabled: !!_?.GID,
-    initialData: () => _(_, _, _, _, _),
-    queryFn: async () => {
-      if (!_) return null;
-      let _ = _(_, _, _, _, _);
-      if (_) return _;
-      let _ = await _.ensureQueryData(_(_.clanSteamID.GetAccountID(), _));
-      if (_ == `capsule`) {
-        let _ = _.appid;
-        if (!_ && _ && ((_.is_creator_home && !_.is_ogg) || _.is_curator)) {
-          if (_.jsondata?.referenced_appids?.length)
-            _ = _.jsondata.referenced_appids[0];
-          else return _.avatar_full_url ?? null;
-        }
-        let _ = await _.ensureQueryData(
-          _(_, {
-            appid: _,
-          }),
-        );
-        return _
-          ? (_(_, `main_capsule`) ?? null)
-          : _?.avatar_full_url
-            ? _.avatar_full_url
-            : `${_.STORE_ITEM_BASE_URL}steam/apps/${_}/header.jpg`;
-      }
-      return _ == `background` &&
-        _ &&
-        ((_.is_creator_home && !_.is_ogg) || _.is_curator)
-        ? (_.creator_page_bg_url ?? null)
-        : await _.ensureQueryData(_(_, _, _));
-    },
-  };
-}
-function _(_, _, _, _ = _.full, _ = !0) {
-  if (!_) return;
-  let _ = _.GetImageURL(_, _, _);
-  if (_ && _.trim().length > 0) return _;
-  let _ = _.GetELanguageFallback(_);
-  if (_ != _) {
-    let _ = _.GetImageURL(_, _, _);
-    if (_ && _.trim().length > 0) return _;
-  }
-  if (_ == `capsule`) {
-    let _ = _.GetImageFromBeginningOfDescription(_, Number.MAX_VALUE);
-    if (_ && (_ || _(_))) return _;
-  }
-}
-var _ = `ewL7epZsubk-`,
+var _ = `kmwFKDlqNZM-`,
+  _ = `yYL-OrX9PtQ-`,
+  _ = `fUnUYx6wf8w-`,
+  _ = `QHCzNft3fEc-`,
+  _ = `ewL7epZsubk-`,
   _ = `data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M30.5%2016C30.5%2024.0081%2024.0081%2030.5%2016%2030.5C7.99187%2030.5%201.5%2024.0081%201.5%2016C1.5%207.99187%207.99187%201.5%2016%201.5C24.0081%201.5%2030.5%207.99187%2030.5%2016Z'%20fill='white'/%3e%3cpath%20d='M17.3817%2022.5H14.6183V17.1193L10%209H13.2177L16.0946%2014.4L18.9905%209H22L17.3817%2017.1386V22.5Z'%20fill='%230E141B'/%3e%3c/svg%3e`;
 function _(_) {
   let { label: _, shown: _, button: _ = `Y` } = _;
@@ -36863,7 +36377,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`StoreCatalog.GetDevPageAllAppsLinked#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`partner`, `community`, `store`, `help`],
     });
   }
   _.GetDevPageAllAppsLinked = _;
@@ -36872,7 +36386,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetDevPageListApps = _;
@@ -37188,6 +36702,911 @@ function _(_) {
     ? _.GetCreatorHome(_.clanSteamID)
     : void 0;
   return _.GetSaleURL(_?.GetCreatorHomeURL(`developer`));
+}
+function _(_) {
+  if (!_) return;
+  let _ = _(`creator_home_list_info`, `application_config`);
+  if (typeof _ != `object` || !_ || Array.isArray(_)) return;
+  let _ = _[_];
+  if (_ && _.title)
+    return {
+      title: _.title,
+      description: _.description?.length ? _.description : void 0,
+      imageUrl: _.listtileimage?.length ? _.listtileimage : void 0,
+    };
+}
+function _(_) {
+  return _(_)?.title;
+}
+function _(_) {
+  return _(_)?.description;
+}
+function _(_, _, _) {
+  return _(_, _, _)?.strTagName || void 0;
+}
+function _(_, _, _, _) {
+  let _ = _ == 1 || _ == 3 || _ == 4,
+    _ = () => {
+      let _ = _(_.smart_section_creator_listid);
+      return _
+        ? _
+          ? _(`#Sale_CreatorList_Section_Editor_title`, _)
+          : _
+        : null;
+    };
+  if (_.section_type === `items`)
+    switch (_(_)) {
+      case `wishlist`:
+        return `#Sale_default_label_OnYourWishlist`;
+      case `interactive_recommender`:
+        return `#Sale_default_label_RecommendedForYou`;
+      case `tag_recommender`:
+        return `#Sale_default_label_RecommendedForYou`;
+      case `deck_topplayed`:
+        return `#Sale_TopPlayedOnDeckSection`;
+      case `personalized_carousel`:
+        if (_) {
+          let { nSectionIndex: _, nNumSections: _ } = _(_, _);
+          return _(`#Sale_PersonalizedCarousel_Section_Editor_title`, _ + 1, _);
+        }
+        let _ = _(_, _, _);
+        if (!_ && _ == 2) {
+          let { nSectionIndex: _, nNumSections: _ } = _(_, _);
+          return _(`#Sale_PersonalizedCarousel_Section_Editor_title`, _ + 1, _);
+        }
+        return _ ? _(`#Sale_PersonalizedCarousel_Section_title`, _) : null;
+      case `creator_list`:
+        return _();
+      case `discount_reason`:
+        return _(_);
+    }
+  else if (_.section_type === `tabs`) return ``;
+  else if (_.section_type === `curator`) {
+    if (_.curator_clan_id) {
+      let _ = _.InitFromClanID(_.curator_clan_id, _.EUNIVERSE),
+        _ = _.GetCreatorHome(_);
+      if (_) return _(`#Sale_CuratorSection_Name`, _.GetName());
+    }
+    return `#Sale_CuratorSection`;
+  } else if (_.section_type === `event_schedule`) return `#Sale_EventSchedule`;
+  else if (_.section_type === `curator_recommendation`)
+    return `#Sale_CuratorRecommendation_title`;
+  else if (_.section_type === `discoveryqueue`) return `#DiscoveryQueue_Title`;
+  else if (_.section_type === `sale_events`) return `#Sale_SaleEvent_Section`;
+  else if (_.section_type === `calendar`) return `#Sale_SectionType_Calendar`;
+  else if (_.section_type === `crosspromotesalepage` && _ == 1)
+    return `#Sale_CrossPromoSale_DefaultSectionTitle`;
+  else if (_.section_type === `creator_list`) return _();
+  return null;
+}
+function _(_, _, _, _) {
+  let _ = _(_, _, _, _);
+  return _ === null ? null : _ && _.startsWith(`#`) ? _(_) : _;
+}
+function _(_, _, _, _, _, _, _, _) {
+  if (!_) return ``;
+  if (_.section_type === `crosspromotesalepage`) return _(_, _);
+  let _ = _(_, _, _, _),
+    _ = _.GetWithFallback(_.localized_label, _),
+    _ =
+      _ ||
+      _ ||
+      (_.default_label === `#Sale_default_label` ? `` : _(_.default_label)),
+    _ = _.internal_section_title?.trim();
+  if ((_?.length ?? 0) > 0) {
+    if (_ == 3 || _ == 4)
+      return _?.trim().length == 0 || _
+        ? _
+        : (0, _.jsxs)(_.Fragment, {
+            children: [
+              _,
+              ` `,
+              (0, _.jsx)(_, {
+                tooltip: _(
+                  `#Sale_Section_InternalTitle_Note`,
+                  (0, _.jsx)(`br`, {}),
+                  _,
+                ),
+              }),
+            ],
+          });
+    if (_ == 1)
+      return _?.trim().length == 0 || _
+        ? _
+        : (0, _.jsxs)(_.Fragment, {
+            children: [
+              _,
+              ` `,
+              (0, _.jsx)(`span`, {
+                children: _(`#Sale_Section_InternalTitle_Actual`, _),
+              }),
+            ],
+          });
+  }
+  let _ = _.GetWithFallback(_.localized_label_image, _);
+  if (!_ && _) {
+    let _ = _.GenerateURLFromHashAndExt(_, _);
+    return (0, _.jsx)(`img`, {
+      loading: `lazy`,
+      src: _,
+      alt: _,
+    });
+  }
+  return _;
+}
+function _(_, _, _) {
+  if (_(_.section_type))
+    switch (_(_)) {
+      case `personalized_carousel`:
+        let _ = _(_, _, _);
+        return _ ? _(`#Sale_PersonalizedCarousel_Section_subtitle`, _) : null;
+      case `creator_list`:
+        return _(_.smart_section_creator_listid) ?? null;
+      case `discount_reason`:
+        return _(_);
+    }
+  return null;
+}
+function _(_, _, _, _) {
+  let _ = _(_, _, _);
+  return _ === null
+    ? _.GetWithFallback(_.localized_subtitle, _) ||
+        (!_.default_subtitle || _.default_subtitle === `#Sale_default_subtitle`
+          ? ``
+          : _(_.default_subtitle))
+    : _ && _.startsWith(`#`)
+      ? _(_)
+      : _;
+}
+var _ = `dYYkud-Jf3s-`,
+  _ = `zZo1XshRYmQ-`,
+  _ = `RfHJSn8AdQE-`,
+  _ = `D8GFuSKNhX0-`,
+  _ = `woc2JepJIek-`;
+function _(_) {
+  if (_(_.section_type))
+    switch (_(_)) {
+      case `deck_topplayed`:
+        return _.STORE_BASE_URL + `charts/steamdecktopplayed`;
+    }
+  return _.label_link;
+}
+function _(_) {
+  let _,
+    _,
+    _ = !1;
+  return (
+    _.label_link_style === `button`
+      ? ((_ = _(`#Sale_SectionLink_BrowseAll`)), (_ = !0))
+      : _.label_link_style === `browseall`
+        ? ((_ = _(`#Sale_SectionLink_BrowseAll`)),
+          (_ = _(_, `SaleSectionLabelLinkButton`)))
+        : _(_) === `deck_topplayed` &&
+          ((_ = _(`#EventBrowse_MoreEventsBtn`)),
+          (_ = _(_, `SaleSectionLabelLinkButton`))),
+    {
+      strLinkButtonLabel: _,
+      strLinkButtonClasses: _,
+      bSmallButton: _,
+    }
+  );
+}
+_((_) => {
+  let {
+      section: _,
+      event: _,
+      language: _,
+      nHiddenCapsules: _,
+      title: _,
+      subtitle: _,
+      bShowSeeMoreHint: _,
+      bUseGamepadLinkHint: _,
+      eGamepadLinkHintButton: _,
+      onLinkResolved: _,
+      personalizedCarousels: _,
+      promotedSale: _,
+    } = _,
+    _ = _(),
+    _ = _(),
+    _ = _ !== void 0,
+    { data: _ } = _(_ ? void 0 : _(_)),
+    _ = (_ ? _ : _) ?? void 0,
+    _ = _.link || _(_) || _(_);
+  if (
+    (_.useEffect(() => {
+      _?.(_);
+    }, [_, _]),
+    _.section_type == `title_image` && _.title_image_selected === `image`)
+  )
+    return null;
+  let _ = _ || _(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation, !1, _, _);
+  if (!_) return null;
+  let _ = _ || _(_, _, _, _),
+    _ = (0, _.jsxs)(`div`, {
+      className: _(_, `SaleSectionHeader`),
+      style: _(_, _, _),
+      children: [
+        _.test_show_on_valve_ip_only &&
+          (0, _.jsx)(`div`, {
+            className: `JrlXbYAw30w-`,
+            children: `(VO)\xA0`,
+          }),
+        _,
+      ],
+    }),
+    _ = (0, _.jsx)(`div`, {
+      className: _(_, _, `SaleSectionSubtitle`),
+      style: _(_, _, _),
+      children: _,
+    }),
+    _ = null;
+  if ((_?.length ?? 0) > 0) {
+    let {
+      strLinkButtonLabel: _,
+      strLinkButtonClasses: _,
+      bSmallButton: _,
+    } = _(_);
+    (_ &&
+      (_ =
+        _ && _
+          ? (0, _.jsx)(_, {
+              label: _,
+              shown: !!_,
+              button: _,
+            })
+          : _
+            ? (0, _.jsx)(`div`, {
+                className: _(_, _),
+                children: (0, _.jsx)(_, {
+                  url: _,
+                  children: (0, _.jsx)(_, {
+                    children: _,
+                  }),
+                }),
+              })
+            : (0, _.jsx)(_, {
+                url: _,
+                className: _,
+                children: _,
+              })),
+      (_ = (0, _.jsx)(_, {
+        url: _,
+        bFocusable: !_,
+        children: _,
+      })));
+  }
+  return (0, _.jsxs)(`div`, {
+    className: _(_, `SaleSectionLabelCtn`),
+    children: [
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [_, !!_ && _],
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          !!_ &&
+            (0, _.jsx)(_, {
+              className: `pL8IDIWBDg8-`,
+              toolTipContent: _(`#Sale_HiddenItem_Tooltip`),
+              children: (0, _.jsx)(`a`, {
+                href: _.STORE_BASE_URL + `account/preferences`,
+                children: _(
+                  _ == 1
+                    ? `#Sale_HiddenItem_Single_Short`
+                    : `#Sale_HiddenItems_Short`,
+                  _,
+                ),
+              }),
+            }),
+          _,
+        ],
+      }),
+    ],
+  });
+});
+function _(_, _, _) {
+  return {
+    fontFamily: _.jsondata.sale_font ? _(_.jsondata.sale_font, _) : void 0,
+    fontWeight: _.jsondata.sale_font_weight,
+    fontSize: `${_.jsondata.sale_section_font_size}px`,
+    textTransform: _.jsondata.sale_section_disable_capitalize
+      ? `initial`
+      : void 0,
+    color: _.label_color,
+  };
+}
+function _(_, _, _) {
+  return {
+    fontFamily: _.jsondata.sale_font ? _(_.jsondata.sale_font, _) : void 0,
+    fontWeight: 300,
+    fontSize: `${_.jsondata.sale_section_font_size && _.jsondata.sale_section_font_size - 3}px`,
+    letterSpacing: 0,
+    lineHeight: `${_.jsondata.sale_section_font_size}px`,
+    textTransform: _.jsondata.sale_section_disable_capitalize
+      ? `initial`
+      : void 0,
+    color: _.label_color,
+    opacity: `50%`,
+  };
+}
+function _(_, _) {
+  return (
+    (_ ||= ``),
+    _ === 12
+      ? _.replace(`Jolly Lodger`, `New Rocker`)
+      : _ === 23 || _ === 19 || _ === 24 || _ === 18 || _ === 8 || _ === 26
+        ? _.replace(`Sigmar One`, `Play`)
+        : _ === 6
+          ? _.replace(`Sigmar One`, `Noto Serif SC`)
+          : _ === 7
+            ? _.replace(`Sigmar One`, `Noto Serif TC`)
+            : _ === 10
+              ? _.replace(`Sigmar One`, `M PLUS Rounded 1c`)
+              : _ === 4
+                ? _.replace(`Sigmar One`, `Black Han Sans`)
+                : _ === 9
+                  ? _.replace(`Sigmar One`, `Prompt`)
+                  : _
+  );
+}
+function _(_) {
+  let { closeModal: _, strDescOverride: _ } = _;
+  return (0, _.jsx)(_, {
+    strTitle: _.Localize(`#LoginRedirect_Dialog_Title`),
+    strDescription: _ || _.Localize(`#LoginRedirect_Dialog_Description`),
+    onCancel: _,
+    strOKButtonText: _.Localize(`#Button_OK`),
+    onOK: () => {
+      (_(), _());
+    },
+  });
+}
+function _(_) {
+  let [_, _, _] = _();
+  return {
+    elDialogElement: (0, _.jsx)(_, {
+      active: _,
+      children: (0, _.jsx)(_, {
+        closeModal: _,
+        strDescOverride: _,
+      }),
+    }),
+    fnShowLogonDialog: _,
+  };
+}
+var _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(), _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _
+        ? {
+            $jspbMessageInstance: _,
+          }
+        : {};
+    }
+    static fromObject(_) {
+      return new _();
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _;
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {}
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStorePreferences_GetIgnoreList_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.ignore_list || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            ignore_list: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStorePreferences_GetIgnoreList_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.appid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            appid: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            packageid: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            reason: {
+              _: 3,
+              _: _.readEnum,
+              _: _.writeEnum,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStorePreferences_GetIgnoreList_Response_IgnoreListEntry`;
+    }
+  },
+  _;
+(function (_) {
+  function _(_, _, _) {
+    return _.SendMsg(`StorePreferences.GetIgnoreList#1`, _(_, _, _), _, {
+      bConstMethod: !0,
+      ePrivilege: 1,
+    });
+  }
+  _.GetIgnoreList = _;
+})((_ ||= {}));
+var _ = class _ {
+  m_queryClient = _;
+  m_boxCacheVersion = _.box(0);
+  m_bInitialized = !1;
+  m_boxAjaxInFlight = _.box(!1);
+  LazyInit() {
+    this.m_bInitialized ||
+      ((this.m_bInitialized = !0),
+      this.m_queryClient.getQueryCache().subscribe((_) => {
+        (_?.type == `added` || _?.type == `updated` || _?.type == `removed`) &&
+          _(_.query?.queryKey) &&
+          _(() => this.m_boxCacheVersion.set(this.m_boxCacheVersion.get() + 1));
+      }));
+  }
+  ReadData() {
+    return (
+      this.LazyInit(), this.m_boxCacheVersion.get(), _(this.m_queryClient)
+    );
+  }
+  BIsLoaded() {
+    return this.ReadData().bLoaded;
+  }
+  GetWishlistGamesInUserOrder() {
+    return this.ReadData().rgWishlistInOrder;
+  }
+  GetRecommendedGamesInIRPriorityOrder() {
+    return this.ReadData().rgRecommendedAppsInOrder;
+  }
+  GetFollowedCuratorCount() {
+    return this.ReadData().setCuratorsFollowed.size;
+  }
+  GetFollowedCuratorsAccountID() {
+    return this.ReadData().rgCuratorsFollowed;
+  }
+  BIsFollowingCurator(_) {
+    return this.ReadData().setCuratorsFollowed.has(_(_));
+  }
+  BIsIgnoringCurator(_) {
+    return this.ReadData().setCuratorsIgnored.has(_(_));
+  }
+  get ExcludedContentDescriptor() {
+    return this.ReadData().rgExcludedContentDescriptors;
+  }
+  BExcludeTagIDs(_) {
+    let _ = this.ReadData().setExcludedTagIDs;
+    return _.some((_) => _.has(_));
+  }
+  GetExcludedTagsSortedByID() {
+    return this.ReadData().rgExcludedTagIDsSorted;
+  }
+  BExcludesContentDescriptor(_) {
+    let _ = this.ReadData().setExcludedContentDescriptors;
+    return _.some((_) => _.has(_));
+  }
+  BIncludesContentDescriptor(_) {
+    return !this.ReadData().setExcludedContentDescriptors.has(_);
+  }
+  BIsGameWishlisted(_) {
+    return this.ReadData().setWishlist.has(Number(_));
+  }
+  BIsGameRecommended(_) {
+    return this.ReadData().setRecommendedApps.has(Number(_));
+  }
+  BIsGameIgnored(_) {
+    return !!_ && this.ReadData().mapIgnoredApps.has(Number(_));
+  }
+  BIsPackageIgnored(_) {
+    return !!_ && this.ReadData().mapIgnoredPackages.has(Number(_));
+  }
+  BIsGameOwned(_) {
+    return !!_ && this.ReadData().setOwnedApps.has(Number(_));
+  }
+  BIsStoreItemOwned(_) {
+    switch (_.GetStoreItemType()) {
+      case 0:
+        if (this.BIsGameOwned(_.GetAppID())) return !0;
+        break;
+      case 1:
+      case 2:
+        if (_.GetIncludedAppIDs().every((_) => this.BIsGameOwned(_))) return !0;
+    }
+    return !1;
+  }
+  BOwnsApp(_) {
+    return !!_ && this.ReadData().setOwnedApps.has(Number(_));
+  }
+  BOwnsPackage(_) {
+    return this.ReadData().setOwnedPackages.has(Number(_));
+  }
+  BHasUsedHardware(_) {
+    return this.ReadData().setHardwareUsed.has(_);
+  }
+  BShowFilteredUserReviewScores() {
+    return this.ReadData().bShowFilteredUserReviewScores;
+  }
+  BAppImpressionsAllowed() {
+    return this.ReadData().bAllowAppImpressions;
+  }
+  GetPrimaryLanguage() {
+    return this.ReadData().ePrimaryLanguage;
+  }
+  GetSecondaryLanguages() {
+    return this.ReadData().setSecondaryLanguages;
+  }
+  BIsAnyLanguageEnabled(_) {
+    let { ePrimaryLanguage: _, setSecondaryLanguages: _ } = this.ReadData();
+    return (
+      _ == null || _ <= -1 || 32 <= _ || _.some((_) => _ === _ || _.has(_))
+    );
+  }
+  GetRecommendedTags() {
+    return this.ReadData().rgRecommendedTags;
+  }
+  BIsAjaxInFlight() {
+    return this.m_boxAjaxInFlight.get();
+  }
+  BIsAppRecommendedBySomeCurator(_) {
+    return this.ReadData().mapRecommendingCuratorsForApp.has(Number(_));
+  }
+  GetRecommendingCuratorsForApp(_) {
+    return this.ReadData().mapRecommendingCuratorsForApp.get(Number(_));
+  }
+  BHasPlatformPreferenceSet() {
+    let _ = this.ReadData().setPreferredPlatforms.size;
+    return _ > 0 && _ < 3;
+  }
+  BIsPreferredPlatform(_) {
+    return this.ReadData().setPreferredPlatforms.has(_);
+  }
+  async HintLoad() {
+    return (this.LazyInit(), await _(this.m_queryClient), this);
+  }
+  async UpdateFollowOrIgnoreCurator(_, _, _) {
+    this.LazyInit();
+    let _ =
+        _.STORE_BASE_URL + `curators/` + (_ ? `ajaxfollow/` : `ajaxignore/`),
+      _ = _.GetAccountID(),
+      _ = new FormData();
+    (_.append(`clanid`, `` + _),
+      _.append(`sessionid`, _()),
+      _.append(_ ? `follow` : `ignore`, _ ? `1` : `0`));
+    let _ = await _.default.post(_, _, {
+      withCredentials: !0,
+    });
+    return (
+      _ &&
+        _.status == 200 &&
+        (this.InvalidateCache(),
+        _(this.m_queryClient, (_) => {
+          let _ = new Set(_ ? _.setCuratorsFollowed : _.setCuratorsIgnored);
+          return (
+            _ ? _.add(_) : _.delete(_),
+            _
+              ? {
+                  setCuratorsFollowed: _,
+                  rgCuratorsFollowed: Array.from(_),
+                }
+              : {
+                  setCuratorsIgnored: _,
+                }
+          );
+        })),
+      _.data
+    );
+  }
+  async UpdateAppIgnore(_, _, _, _ = 0) {
+    this.LazyInit();
+    let _ = _.STORE_BASE_URL + `recommended/ignorerecommendation`,
+      _ = new FormData();
+    (_.append(`sessionid`, _()),
+      _.append(`appid`, `` + _),
+      _.append(`remove`, _ ? `0` : `1`),
+      _.append(`snr`, _),
+      _.append(`ignore_reason`, `` + _));
+    try {
+      _(() => this.m_boxAjaxInFlight.set(!0));
+      let _ = await _.default.post(_, _, {
+        withCredentials: !0,
+      });
+      return (
+        _ &&
+          _.status == 200 &&
+          (this.InvalidateCache(),
+          _(this.m_queryClient, (_) => {
+            let _ = new Map(_.mapIgnoredApps);
+            return (
+              _ ? _.set(Number(_), _) : _.delete(Number(_)),
+              {
+                mapIgnoredApps: _,
+              }
+            );
+          })),
+        _.data
+      );
+    } catch (_) {
+      let _ = _(_);
+      console.error(`UpdateAppIgnore`, _.strErrorMsg, _);
+    } finally {
+      _(() => this.m_boxAjaxInFlight.set(!1));
+    }
+    return {
+      success: 2,
+    };
+  }
+  async AddToCart(_, _, _, _, _, _, _) {
+    if (
+      window.g_bUseNewCartAPI !== void 0 &&
+      window.g_bUseNewCartAPI &&
+      typeof window.AddItemToCart == `function`
+    ) {
+      let _;
+      return (_ && (_ = _.ParseSNR(_)), window.AddItemToCart(_, _, _), !0);
+    }
+    let _ = new FormData();
+    (_.append(`action`, `add_to_cart`),
+      _ ? _.append(`bundleid`, _.toString()) : _.append(`subid`, `` + _),
+      _ && _.append(`snr`, _),
+      _.append(`sessionid`, _()),
+      _.append(`quantity`, `1`));
+    let _ = _(_);
+    _.preventDefault();
+    try {
+      (await _.default.post(_, _, {
+        withCredentials: !0,
+      }),
+        this.InvalidateCache(),
+        _?.fnSetURL ? _.fnSetURL(_) : (_.location.href = _));
+    } catch (_) {
+      return (console.log(`HandleOnAddToCart`, _), !1);
+    }
+    return !0;
+  }
+  InvalidateCache() {
+    _();
+  }
+  static s_globalSingletonStore;
+  static Get() {
+    return ((_.s_globalSingletonStore ||= new _()), _.s_globalSingletonStore);
+  }
+  static BConfirmedAdultContentAgeGate() {
+    return _();
+  }
+  constructor() {}
+};
+function _(_) {
+  return typeof _ == `object` && `GetAccountID` in _
+    ? _.GetAccountID()
+    : Number(_);
+}
+function _(_, _, _) {
+  return {
+    queryKey: _(_),
+    enabled: !!_?.GID,
+    queryFn: async () => {
+      if (!_) return null;
+      let _ = _.appid
+          ? await _.ensureQueryData(
+              _(_, {
+                appid: _.appid,
+              }),
+            )
+          : null,
+        _ = await _.ensureQueryData(_(_.clanSteamID.GetAccountID(), _));
+      if (_.appid) {
+        if (_) {
+          if (_.all_ages_screenshots && _.all_ages_screenshots.length > 0) {
+            let _ = Number(
+              _.bOldAnnouncement
+                ? _.AnnouncementGID
+                : _.GID == null
+                  ? 0
+                  : _.GID,
+            );
+            return (
+              (_ %= _.all_ages_screenshots.length),
+              `${_.STORE_ITEM_BASE_URL}${_.all_ages_screenshots[_].filename}`
+            );
+          }
+        } else return ``;
+      }
+      return _.GetEventType() != 36 &&
+        _ &&
+        ((_.is_creator_home && !_.is_ogg) || _.is_curator)
+        ? (_.avatar_full_url ?? null)
+        : null;
+    },
+  };
+}
+function _(_) {
+  return [`useFallbackArtworkScreenshot`, _?.GID];
+}
+function _(_, _, _, _ = _.full, _ = !0) {
+  let _ = _(),
+    _ = _();
+  return _(_(_, _, _, _, _, _, _)).data ?? void 0;
+}
+function _(_, _, _, _ = _.full, _ = !0) {
+  return [`useEventImageURLWithFallback`, _?.GID, _, _, _, _];
+}
+function _(_, _, _, _, _, _ = _.full, _ = !0) {
+  return {
+    queryKey: _(_, _, _, _, _),
+    enabled: !!_?.GID,
+    initialData: () => _(_, _, _, _, _),
+    queryFn: async () => {
+      if (!_) return null;
+      let _ = _(_, _, _, _, _);
+      if (_) return _;
+      let _ = await _.ensureQueryData(_(_.clanSteamID.GetAccountID(), _));
+      if (_ == `capsule`) {
+        let _ = _.appid;
+        if (!_ && _ && ((_.is_creator_home && !_.is_ogg) || _.is_curator)) {
+          if (_.jsondata?.referenced_appids?.length)
+            _ = _.jsondata.referenced_appids[0];
+          else return _.avatar_full_url ?? null;
+        }
+        let _ = await _.ensureQueryData(
+          _(_, {
+            appid: _,
+          }),
+        );
+        return _
+          ? (_(_, `main_capsule`) ?? null)
+          : _?.avatar_full_url
+            ? _.avatar_full_url
+            : `${_.STORE_ITEM_BASE_URL}steam/apps/${_}/header.jpg`;
+      }
+      return _ == `background` &&
+        _ &&
+        ((_.is_creator_home && !_.is_ogg) || _.is_curator)
+        ? (_.creator_page_bg_url ?? null)
+        : await _.ensureQueryData(_(_, _, _));
+    },
+  };
+}
+function _(_, _, _, _ = _.full, _ = !0) {
+  if (!_) return;
+  let _ = _.GetImageURL(_, _, _);
+  if (_ && _.trim().length > 0) return _;
+  let _ = _.GetELanguageFallback(_);
+  if (_ != _) {
+    let _ = _.GetImageURL(_, _, _);
+    if (_ && _.trim().length > 0) return _;
+  }
+  if (_ == `capsule`) {
+    let _ = _.GetImageFromBeginningOfDescription(_, Number.MAX_VALUE);
+    if (_ && (_ || _(_))) return _;
+  }
+}
+var _ = _.createContext({
+  eLocation: 0,
+});
+function _() {
+  return _.useContext(_);
 }
 var _ = `VULTMp1PCTw-`,
   _ = `_2vLXBykr6zc-`;
@@ -38045,6 +38464,19 @@ function _(_) {
   window.sessionStorage.setItem(_, _);
 }
 window.SetHoverPresentation = _;
+function _(_) {
+  return _.section_type === `crosspromotesalepage`
+    ? (_.sale_page_cross_promo_sales ?? [])
+    : [];
+}
+function _(_) {
+  return _(_)[0]?.event_gid || void 0;
+}
+function _(_, _) {
+  return _
+    ? _(`#Sale_CrossPromoSale_SectionTitle`, _.GetNameWithFallback(_) ?? ``)
+    : _(`#Sale_CrossPromoSale_DefaultSectionTitle`);
+}
 function _(_, _) {
   let _ = _.GetELanguageFallback(_),
     _ =
@@ -38058,6 +38490,688 @@ function _(_, _) {
     _.GetImageURL(`sale_logo`, _)
   );
 }
+function _(_, _) {
+  let _ = _.GetSaleSections().filter(
+    (_) => _(_.section_type) && _(_) == `personalized_carousel`,
+  );
+  if (_.length == 0)
+    return {
+      nNumSections: 0,
+      nSectionIndex: -1,
+    };
+  let _ = _.findIndex((_) => _.unique_id == _.unique_id);
+  return {
+    nNumSections: _.length,
+    nSectionIndex: _,
+  };
+}
+var _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.count || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [2], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            count: {
+              _: 1,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            additional_source_items: {
+              _: 2,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.recommendations || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            recommendations: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.item_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            item_id: {
+              _: 1,
+              _: _,
+            },
+            weight: {
+              _: 2,
+              _: _.readFloat,
+              _: _.writeFloat,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response_Recommendation`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.count || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [2], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            count: {
+              _: 1,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            item_ids: {
+              _: 2,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.recommendations || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            recommendations: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.item_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            item_id: {
+              _: 1,
+              _: _,
+            },
+            weight: {
+              _: 2,
+              _: _.readFloat,
+              _: _.writeFloat,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response_Recommendation`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.start || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            start: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            count: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.sales || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            sales: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            total_count: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.clan_account_id || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            clan_account_id: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            clan_event_gid: {
+              _: 2,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CStoreRecommendations_GetLiveSales_Response_Sale`;
+    }
+  },
+  _;
+(function (_) {
+  function _(_, _, _) {
+    return _.SendMsg(
+      `StoreRecommendations.GetPackagePurchaseRecommendations#1`,
+      _(_, _, _),
+      _,
+      {
+        bConstMethod: !0,
+        ePrivilege: 1,
+      },
+    );
+  }
+  _.GetPackagePurchaseRecommendations = _;
+  function _(_, _, _) {
+    return _.SendMsg(
+      `StoreRecommendations.GetPackagePurchaseRecommendationsForItems#1`,
+      _(_, _, _),
+      _,
+      {
+        bConstMethod: !0,
+        ePrivilege: 0,
+        eWebAPIKeyRequirement: 1,
+      },
+    );
+  }
+  _.GetPackagePurchaseRecommendationsForItems = _;
+  function _(_, _, _) {
+    return _.SendMsg(`StoreRecommendations.GetLiveSales#1`, _(_, _, _), _, {
+      bConstMethod: !0,
+      ePrivilege: 0,
+      eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`all`],
+    });
+  }
+  _.GetLiveSales = _;
+})((_ ||= {}));
+var _ = [
+  {
+    eReason: 1,
+    strTitleToken: `#Sale_default_label_OnYourWishlist`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_Wishlist`,
+  },
+  {
+    eReason: 2,
+    strTitleToken: `#Sale_DiscountReason_Section_FirstTimeOnSale`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_FirstTimeOnSale`,
+  },
+  {
+    eReason: 3,
+    strTitleToken: `#Sale_DiscountReason_Section_LargestDiscount`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_LargestDiscount`,
+  },
+  {
+    eReason: 4,
+    strTitleToken: `#Sale_DiscountReason_Section_EndingSoon`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_EndingSoon`,
+  },
+  {
+    eReason: 5,
+    strTitleToken: `#Sale_DiscountReason_Section_NewlyOnSale`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_NewlyOnSale`,
+  },
+  {
+    eReason: 6,
+    strTitleToken: `#Sale_DiscountReason_Section_WellReviewed`,
+    strSubtitleToken: ``,
+  },
+  {
+    eReason: 7,
+    strTitleToken: `#Sale_DiscountReason_Section_TopSeller`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_TopSeller`,
+  },
+  {
+    eReason: 8,
+    strTitleToken: `#Sale_DiscountReason_Section_HotDeal`,
+    strSubtitleToken: `#Sale_Specials_Subtitle_HotDeal`,
+  },
+  {
+    eReason: 9,
+    strTitleToken: `#Sale_DiscountReason_Section_DeepDiscount`,
+    strSubtitleToken: ``,
+  },
+  {
+    eReason: 10,
+    strTitleToken: `#Sale_DiscountReason_Section_PopularInRegion`,
+    strSubtitleToken: ``,
+  },
+];
+function _(_) {
+  return _.find((_) => _.eReason === _.smart_section_discount_reason);
+}
+function _(_) {
+  return _(_)?.strTitleToken ?? ``;
+}
+function _(_) {
+  return _(_)?.strSubtitleToken ?? ``;
+}
 function _(_, _, _) {
   if (!_) return !1;
   let _ = !_?.bHasHideIgnoredValue || _.bHideIgnored;
@@ -38068,6 +39182,9 @@ function _(_, _, _) {
     (_?.bHideWishlisted && _.on_wishlist)
     ? !0
     : _ && !!(_.already_owned || _.demo_for_owned_game);
+}
+function _(_, _, _) {
+  if (_) return _[_(_, _).nSectionIndex] ?? null;
 }
 function _(_, _) {
   let _ = _(),
@@ -38090,6 +39207,45 @@ function _(_, _) {
 }
 function _(_) {
   return _.map((_) => _.data);
+}
+function _(_) {
+  let {
+      className: _,
+      url: _,
+      style: _,
+      children: _,
+      bSkipForcingStoreLink: _,
+      bOpenInline: _,
+      bFocusable: _ = !0,
+      fnCanTakeFocus: _,
+    } = _,
+    _ = _ ? _ : _ ? _(_, _.STORE_BASE_URL) : void 0,
+    _ = _(_);
+  return _
+    ? (0, _.jsx)(_, {
+        href: _,
+        target: _.IN_CLIENT || _ ? void 0 : `_blank`,
+        className: _,
+        style: _,
+        rel: `noopener noreferrer`,
+        focusable: _,
+        fnCanTakeFocus: _,
+        children: _,
+      })
+    : (0, _.jsx)(`span`, {
+        style: _,
+        className: _,
+        children: _,
+      });
+}
+function _(_, _) {
+  try {
+    let _ = new URL(_),
+      _ = new URL(_);
+    return _.href.replace(/\/$/, ``) + _.pathname + _.search + _.hash;
+  } catch {
+    return ``;
+  }
 }
 var _ = _({
     Bottom: () => _,
@@ -38658,45 +39814,6 @@ function _(_, _) {
       return (_(_, `Unhandled imageType: ${_}`), !1);
   }
 }
-function _(_) {
-  let {
-      className: _,
-      url: _,
-      style: _,
-      children: _,
-      bSkipForcingStoreLink: _,
-      bOpenInline: _,
-      bFocusable: _ = !0,
-      fnCanTakeFocus: _,
-    } = _,
-    _ = _ ? _ : _ ? _(_, _.STORE_BASE_URL) : void 0,
-    _ = _(_);
-  return _
-    ? (0, _.jsx)(_, {
-        href: _,
-        target: _.IN_CLIENT || _ ? void 0 : `_blank`,
-        className: _,
-        style: _,
-        rel: `noopener noreferrer`,
-        focusable: _,
-        fnCanTakeFocus: _,
-        children: _,
-      })
-    : (0, _.jsx)(`span`, {
-        style: _,
-        className: _,
-        children: _,
-      });
-}
-function _(_, _) {
-  try {
-    let _ = new URL(_),
-      _ = new URL(_);
-    return _.href.replace(/\/$/, ``) + _.pathname + _.search + _.hash;
-  } catch {
-    return ``;
-  }
-}
 function _(_, _) {
   return !_ || _.startsWith(`https://`) || _.startsWith(`http://`)
     ? _
@@ -38732,12 +39849,15 @@ function _(_) {
   }));
 }
 var _ = `Es-UANTRhdg-`,
+  _ = `dv9UZEOxkuA-`,
   _ = `FsYxDNcAXaI-`,
   _ = `cSFkUHyVW24-`,
   _ = `yT92BfNEvpw-`,
   _ = `gxh8RxFKhr8-`,
   _ = `AZSEWyNPfhc-`,
   _ = `gZNFN-cKUHw-`;
+_.createContext(!1);
+var _ = _.createContext(void 0);
 (_.createContext(!1), _.createContext(null));
 function _(_) {
   let { event: _, language: _, strSaleURL: _ } = _,
@@ -38776,6 +39896,7 @@ function _(_) {
     _ = _(),
     _ = _(),
     _ = _ && _ !== void 0,
+    _ = _.useContext(_),
     _ = _?.rtEndTime
       ? _(_.rtEndTime, {
           weekday: void 0,
@@ -38787,26 +39908,31 @@ function _(_) {
       : void 0;
   return (0, _.jsxs)(_.Fragment, {
     children: [
-      _ &&
-        !_ &&
-        (0, _.jsx)(`div`, {
-          className: `qbRGxo4aWcc-`,
-          style: {
-            backgroundImage: `url(${_})`,
-          },
-        }),
-      _ &&
-        (0, _.jsx)(`div`, {
-          className: _(`HgvxVtFlDis-`, _ && `Lp2CuPiW8Lo-`),
-          style: {
-            backgroundImage: `url(${_})`,
-          },
-        }),
-      _ &&
-        (0, _.jsx)(_, {
-          rgAppIDs: _?.rgCreatorAppIDs,
-          strAvatarURL: _,
-        }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          _ &&
+            !_ &&
+            (0, _.jsx)(`div`, {
+              className: `qbRGxo4aWcc-`,
+              style: {
+                backgroundImage: `url(${_})`,
+              },
+            }),
+          _ &&
+            (0, _.jsx)(`div`, {
+              className: _(`HgvxVtFlDis-`, _ && `Lp2CuPiW8Lo-`),
+              style: {
+                backgroundImage: `url(${_})`,
+              },
+            }),
+          _ &&
+            (0, _.jsx)(_, {
+              rgAppIDs: _?.rgCreatorAppIDs,
+              strAvatarURL: _,
+            }),
+        ],
+      }),
       (0, _.jsxs)(`div`, {
         className: _(_, _ && `-NAWu4CYrl8-`),
         children: [
@@ -38834,11 +39960,17 @@ function _(_) {
                     children: _?.strName,
                   }),
                 }),
-                _ &&
-                  (0, _.jsx)(`div`, {
-                    className: `_6iUHDist0Jc-`,
-                    children: _(`#Sale_CrossPromoSale_NowThrough`, _),
-                  }),
+                _ === void 0
+                  ? _ &&
+                    (0, _.jsx)(`div`, {
+                      className: `_6iUHDist0Jc-`,
+                      children: _(`#Sale_CrossPromoSale_NowThrough`, _),
+                    })
+                  : _ &&
+                    (0, _.jsx)(`div`, {
+                      className: `_6iUHDist0Jc-`,
+                      children: _,
+                    }),
               ],
             }),
           _ &&
@@ -40831,7 +41963,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ClientComm.GetAllClientLogonInfo#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetAllClientLogonInfo = _;
@@ -40846,42 +41978,42 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`ClientComm.GetClientAppList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetClientAppList = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.InstallClientApp#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.InstallClientApp = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.UninstallClientApp#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UninstallClientApp = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.LaunchClientApp#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.LaunchClientApp = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.SetClientAppUpdateState#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetClientAppUpdateState = _;
   function _(_, _, _) {
     return _.SendMsg(`ClientComm.EnableOrDisableDownloads#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.EnableOrDisableDownloads = _;

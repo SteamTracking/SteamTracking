@@ -3237,7 +3237,16 @@ function renderNeighbors(neighborData)
 		var data = neighborData[i];
 		if(data == null) break;
 		var el = document.getElementById("neighbor_"+i);
-		el.innerHTML = "<a href='" + data.url + "' target='_blank'><img src='" + data.image + "' alt='" + data.title + "' title='"+data.title+"' /></a>";
+		var link = document.createElement("a");
+		link.href = data.url;
+		link.target = "_blank";
+		var img = document.createElement("img");
+		img.src = data.image;
+		img.alt = data.title;
+		img.title = data.title;
+		link.appendChild(img);
+		el.innerHTML = "";
+		el.appendChild(link);
 	}
 }
 

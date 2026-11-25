@@ -17,12 +17,12 @@ const __vite__mapDeps = (
       "./chunk~f57d770d64.js",
       "./chunk~e867464c75.js",
       "./chunk~521597d5f9.js",
+      "./chunk~4eed35ad1f.js",
+      "../../../css/applications/store/chunk~0c0e8c89c4.css",
       "./chunk~8c66e1c7a5.js",
       "./chunk~4c13037b22.js",
       "./chunk~2f085f1384.js",
       "../../../css/applications/store/chunk~504d82f1b0.css",
-      "./chunk~4eed35ad1f.js",
-      "../../../css/applications/store/chunk~0c0e8c89c4.css",
       "./chunk~92931c6310.js",
       "./chunk~af36c62e9f.js",
       "./chunk~593a6b8ddc.js",
@@ -34,7 +34,7 @@ const __vite__mapDeps = (
       "./chunk~90b9831ad2.js",
       "../../../css/applications/store/chunk~0e41f12ba5.css",
       "./chunk~f162f235ea.js",
-      "../../../css/applications/store/chunk~7e3e341a022.css",
+      "../../../css/applications/store/chunk~7e3e341a02.css",
       "./chunk~6cf3fe3e07.js",
       "../../../css/applications/store/chunk~3a19a61cd4.css",
       "./chunk~d8bbc3d946.js",
@@ -55,8 +55,6 @@ const __vite__mapDeps = (
       "../../../css/applications/store/chunk~9f001c4d7c.css",
       "./chunk~f4c928a27a.js",
       "./chunk~751f63337e.js",
-      "./chunk~b980924b6a.js",
-      "../../../css/applications/store/chunk~fd36211970.css",
       "./chunk~56437c278a.js",
       "../../../css/applications/store/chunk~eabb00f56a.css",
       "./chunk~710e3cfd2f.js",
@@ -238,12 +236,6 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
 } from "./chunk~6b8ddcaac8.js";
 import {
   _,
@@ -297,6 +289,24 @@ import {
   _,
   _,
 } from "./chunk~961c06e93e.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./chunk~4eed35ad1f.js";
 import { _, _ } from "./chunk~8c66e1c7a5.js";
 import { _ } from "./chunk~f0141d9521.js";
 import { _ } from "./chunk~6bf4d41b04.js";
@@ -325,13 +335,11 @@ import "./chunk~19394a4118.js";
 import { _ } from "./chunk~8681f5c764.js";
 import { _, _ } from "./chunk~2f085f1384.js";
 import { _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
-import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~4eed35ad1f.js";
-import "./chunk~f4c928a27a.js";
+import { _ } from "./chunk~f4c928a27a.js";
 import { _ } from "./chunk~92931c6310.js";
 import { _, _, _, _, _, _ } from "./chunk~af36c62e9f.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _, _, _ } from "./chunk~e867464c75.js";
-import { _ } from "./chunk~b980924b6a.js";
 import { _, _ } from "./chunk~56437c278a.js";
 import {
   _,
@@ -23818,7 +23826,8 @@ function _(_) {
     { appid: _, steamworks_appid: _, summary_options: _ } = _.useContext(_),
     [_, _] = _.useState(!1),
     _ = _(),
-    _ = !_(),
+    _ = _(),
+    _ = !_,
     _ = _(_, 0),
     _ = _(_),
     [_, _] = _.useState(void 0),
@@ -23833,7 +23842,19 @@ function _(_) {
         rootMargin: `0px 0px 1000px 0px`,
       },
     ),
-    [_, _] = _.useState({
+    _ = _.useRef(null),
+    _ = _.useCallback((_) => {
+      _.data?.method == `FocusAppReviews` &&
+        (_(!0), _.current?.NavTree().Activate(), _.current?.TakeFocus(_._));
+    }, []);
+  _.useEffect(
+    () => (
+      window.addEventListener(`message`, _),
+      () => window.removeEventListener(`message`, _)
+    ),
+    [_],
+  );
+  let [_, _] = _.useState({
       ..._(),
       language: _(_),
       filter_offtopic_activity:
@@ -23953,20 +23974,26 @@ function _(_) {
           }),
         ],
       }),
-      _?.reviewFilter == `summary` &&
-        (0, _.jsx)(_, {
-          summary: _,
-          mapTags: _,
-        }),
-      _?.reviewFilter != `summary` &&
-        (0, _.jsx)(_, {
-          queryReviews: _,
-          mapTags: _,
-        }),
-      _.isError &&
-        (0, _.jsx)(_, {
-          error: _.error,
-        }),
+      (0, _.jsxs)(_, {
+        navRef: _,
+        focusableIfEmpty: _,
+        children: [
+          _?.reviewFilter == `summary` &&
+            (0, _.jsx)(_, {
+              summary: _,
+              mapTags: _,
+            }),
+          _?.reviewFilter != `summary` &&
+            (0, _.jsx)(_, {
+              queryReviews: _,
+              mapTags: _,
+            }),
+          _.isError &&
+            (0, _.jsx)(_, {
+              error: _.error,
+            }),
+        ],
+      }),
     ],
   });
 }
@@ -29086,6 +29113,7 @@ var _ = class _ {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetMostPlayedGames = _;
@@ -29098,6 +29126,7 @@ var _ = class _ {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
       },
     );
   }
@@ -29127,7 +29156,7 @@ var _ = class _ {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -31443,11 +31472,11 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~404eafa76f.js`),
       __vite__mapDeps([
-        41, 1, 2, 9, 10, 11, 12, 13, 4, 5, 14, 15, 3, 16, 17, 18, 19, 20, 21, 6,
+        41, 1, 2, 9, 10, 11, 12, 13, 4, 5, 14, 15, 16, 17, 3, 18, 19, 20, 21, 6,
         7, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 42, 43, 44, 45, 46, 47, 48,
-        49, 50, 51, 52, 53, 54, 55, 8, 32, 33, 56, 57, 58, 59, 60, 61, 62, 63,
-        64, 65, 66, 36, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
-        81, 82, 83, 84, 85, 86,
+        49, 50, 51, 52, 53, 8, 32, 33, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
+        64, 36, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+        81, 82, 83, 84,
       ]),
       import.meta.url,
     ),

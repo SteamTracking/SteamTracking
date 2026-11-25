@@ -134,11 +134,6 @@ html.GamepadMode h2 {
 	font-size: 16px;
 }
 
-/* hide because we instead create a Y button action for this link */
-html.GamepadMode .deck_view_all_action_link {
-	display: none;
-}
-
 /* hide sections */
 html.GamepadMode #votingImage,
 html.GamepadMode .breadcrumbs,

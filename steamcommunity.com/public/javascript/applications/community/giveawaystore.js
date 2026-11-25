@@ -4,26 +4,26 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import {
   A as t,
-  B as n,
-  Ft as r,
+  C as n,
+  I as r,
   L as i,
-  R as a,
-  j as o,
-  w as s,
+  Pt as a,
+  k as o,
+  z as s,
 } from "./chunk~01cfc309bf.js";
 import {
-  Hh as c,
-  Mf as l,
-  Vh as u,
-  md as d,
-  mm as f,
-  ym as p,
+  Df as c,
+  Lh as l,
+  Rh as u,
+  ld as d,
+  lm as f,
+  mm as p,
 } from "./main.js";
-var m = e(t()),
-  h = e(r()),
+var m = e(o()),
+  h = e(a()),
   g = class e {
     constructor() {
-      i(this);
+      r(this);
     }
     giveaway_id = void 0;
     seconds_until_drawing = void 0;
@@ -54,15 +54,15 @@ var m = e(t()),
       );
     }
   };
-(l([a], g.prototype, `giveaway_id`, void 0),
-  l([a], g.prototype, `seconds_until_drawing`, void 0),
-  l([a], g.prototype, `rtime_start`, void 0),
-  l([a], g.prototype, `rtime_end`, void 0),
-  l([a], g.prototype, `closed`, void 0),
-  l([a], g.prototype, `winner_count`, void 0));
+(c([i], g.prototype, `giveaway_id`, void 0),
+  c([i], g.prototype, `seconds_until_drawing`, void 0),
+  c([i], g.prototype, `rtime_start`, void 0),
+  c([i], g.prototype, `rtime_end`, void 0),
+  c([i], g.prototype, `closed`, void 0),
+  c([i], g.prototype, `winner_count`, void 0));
 var _ = class e {
   constructor() {
-    i(this);
+    r(this);
   }
   m_mapGiveawayIDToNextDrawInfo = new Map();
   m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map();
@@ -77,7 +77,7 @@ var _ = class e {
   GetNextDrawChangeCallback(e) {
     let t = this.m_mapNextDrawChangeCallback.get(e);
     return (
-      t || ((t = new u()), this.m_mapNextDrawChangeCallback.set(e, t)), t
+      t || ((t = new l()), this.m_mapNextDrawChangeCallback.set(e, t)), t
     );
   }
   CopyToGiveaway(e, t) {
@@ -91,14 +91,14 @@ var _ = class e {
   }
   async ReloadGiveaway(e, t) {
     if (!e) return null;
-    let r = p.STORE_BASE_URL + `prizes/nextdraw/` + e,
-      i = { origin: self.origin },
-      a = await m.default.get(r, { params: i }),
-      o = n(() => {
+    let n = p.STORE_BASE_URL + `prizes/nextdraw/` + e,
+      r = { origin: self.origin },
+      i = await m.default.get(n, { params: r }),
+      a = s(() => {
         let n = this.m_mapGiveawayIDToNextDrawInfo.get(e);
         if (
           (n || ((n = new g()), this.m_mapGiveawayIDToNextDrawInfo.set(e, n)),
-          this.CopyToGiveaway(a.data, n),
+          this.CopyToGiveaway(i.data, n),
           t !== void 0)
         ) {
           let n = this.GetKey(e, t),
@@ -106,11 +106,11 @@ var _ = class e {
           (r ||
             ((r = new g()),
             this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(n, r)),
-            this.CopyToGiveaway(a.data, r));
+            this.CopyToGiveaway(i.data, r));
         }
         return n;
       });
-    return (this.GetNextDrawChangeCallback(e).Dispatch(o), o);
+    return (this.GetNextDrawChangeCallback(e).Dispatch(a), a);
   }
   static s_Singleton;
   static Get() {
@@ -131,8 +131,8 @@ var _ = class e {
     }
   }
 };
-(l([a], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
-  l([o], _.prototype, `CopyToGiveaway`, null));
+(c([i], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
+  c([t], _.prototype, `CopyToGiveaway`, null));
 var v = class e {
   m_intervalID;
   m_intervalCountDownID;
@@ -165,10 +165,10 @@ var v = class e {
       (this.m_intervalCountDownID = window.setInterval(t, 1e3));
   }
 };
-(l([c], v.prototype, `ClearRefreshInterval`, null),
-  l([c], v.prototype, `ClearCountDown`, null),
-  l([c], v.prototype, `SetupRefreshDataInterval`, null),
-  l([c], v.prototype, `SetupCountDown`, null));
+(c([u], v.prototype, `ClearRefreshInterval`, null),
+  c([u], v.prototype, `ClearCountDown`, null),
+  c([u], v.prototype, `SetupRefreshDataInterval`, null),
+  c([u], v.prototype, `SetupCountDown`, null));
 function y(e, t) {
   let n = _.Get().GetInfoByInstance(e, t.m_myInstanceNumber);
   n &&
@@ -192,32 +192,32 @@ function b(e, t) {
 }
 function x(e) {
   let [t] = (0, h.useState)(new v()),
-    n = d();
+    r = d();
   (0, h.useEffect)(
     () => (
       _.Get()
         .ReloadGiveaway(e, t.m_myInstanceNumber)
-        .then((r) => {
-          r &&
-            (t.SetupRefreshDataInterval(r, () => b(e, t)),
-            t.SetupCountDown(r.seconds_until_drawing, () => y(e, t)),
-            n());
+        .then((n) => {
+          n &&
+            (t.SetupRefreshDataInterval(n, () => b(e, t)),
+            t.SetupCountDown(n.seconds_until_drawing, () => y(e, t)),
+            r());
         }),
       () => {
         (t.ClearRefreshInterval(), t.ClearCountDown());
       }
     ),
-    [t, e, n],
+    [t, e, r],
   );
-  let r = _.Get().GetInfoByInstance(e, t.m_myInstanceNumber),
-    [i, a, o] = s(() => [r?.winner_count, r?.closed, r?.seconds_until_drawing]);
-  return !r || r.giveaway_id == null || !r.BStarted() || i === void 0
+  let i = _.Get().GetInfoByInstance(e, t.m_myInstanceNumber),
+    [a, o, s] = n(() => [i?.winner_count, i?.closed, i?.seconds_until_drawing]);
+  return !i || i.giveaway_id == null || !i.BStarted() || a === void 0
     ? { bLoadingGiveawayInfo: !0 }
     : {
         bLoadingGiveawayInfo: !1,
-        winner_count: i,
-        closed: a ?? !1,
-        seconds_until_drawing: o ?? -1,
+        winner_count: a,
+        closed: o ?? !1,
+        seconds_until_drawing: s ?? -1,
       };
 }
 export { x as t };

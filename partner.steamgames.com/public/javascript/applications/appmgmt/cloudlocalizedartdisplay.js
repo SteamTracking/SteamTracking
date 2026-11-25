@@ -2,11 +2,11 @@
  ****/
 
 import {
-  At as e,
-  j as t,
-  lt as n,
-  sn as r,
-  vt as i,
+  F as e,
+  Pt as t,
+  W as n,
+  nt as r,
+  r as i,
 } from "./chunk~de7f2df91c.js";
 import { Qi as a, _n as o, da as s, gr as c } from "./chunk~1fa4b8f2ff.js";
 import { t as l } from "./chunk~f4e4ed5c17.js";
@@ -23,43 +23,43 @@ import {
   w as x,
   z as S,
 } from "./chunk~6110f63e8e.js";
-var C = r(e()),
-  w = r(l()),
+var C = t(r()),
+  w = t(l()),
   T = `lGLGFqOzoyQ-`,
   E = `sxnrj8ps74s-`,
   D = `PXYBAa2tYnw-`,
   O = `_3-9LVAuBDdI-`,
   k = `-Mdp9nvfCIA-`,
-  A = i();
+  A = n();
 function j(e) {
-  let { bDone: n, name: r, tooltip: i } = e;
+  let { bDone: t, name: n, tooltip: r } = e;
   return (0, A.jsxs)(`div`, {
     className: E,
     children: [
       (0, A.jsx)(`span`, {
-        className: t(D, n ? O : k),
-        children: n ? (0, A.jsx)(c, {}) : (0, A.jsx)(a, {}),
+        className: i(D, t ? O : k),
+        children: t ? (0, A.jsx)(c, {}) : (0, A.jsx)(a, {}),
       }),
-      (0, A.jsx)(o, { toolTipContent: i, children: r }),
+      (0, A.jsx)(o, { toolTipContent: r, children: n }),
     ],
   });
 }
-function M(e) {
-  let { rgAssetURL: t, rgLang: r, bIsImage: i } = e,
+function M(t) {
+  let { rgAssetURL: n, rgLang: r, bIsImage: i } = t,
     [a, o] = (0, C.useState)([]);
   if (
     ((0, C.useEffect)(() => {
       let e = !1,
-        n = i ? N : P;
+        t = i ? N : P;
       return (
-        Promise.all(t.map((e) => n(e))).then((t) => {
+        Promise.all(n.map((e) => t(e))).then((t) => {
           e || o(t);
         }),
         () => {
           e = !0;
         }
       );
-    }, [t, i]),
+    }, [n, i]),
     !a)
   )
     return (0, A.jsx)(u, { size: `small`, string: `Checking Assets...` });
@@ -77,16 +77,16 @@ function M(e) {
             name: `${s.length} Asset(s) uploaded failed to fetch`,
           }),
           s
-            .map((e) => ({ url: t[e], lang: r[e] }))
-            .map((e) =>
+            .map((e) => ({ url: n[e], lang: r[e] }))
+            .map((t) =>
               (0, A.jsx)(
                 j,
                 {
                   bDone: !1,
-                  name: `${n(e.lang)} - Not found`,
-                  tooltip: `${e.url} not downloadable from the CDN`,
+                  name: `${e(t.lang)} - Not found`,
+                  tooltip: `${t.url} not downloadable from the CDN`,
                 },
-                e.url,
+                t.url,
               ),
             ),
         ],
@@ -178,14 +178,14 @@ function F(e) {
     ],
   });
 }
-function I(e) {
+function I(t) {
   let {
-      language: t,
+      language: n,
       selectedLanguage: r,
       setSelectedLanguage: i,
       deleteLanguage: o,
-    } = e,
-    s = n(t);
+    } = t,
+    s = e(n);
   return (0, A.jsxs)(
     `div`,
     {
@@ -194,17 +194,17 @@ function I(e) {
         (0, A.jsx)(`a`, {
           href: `#`,
           onClick: (e) => {
-            (e.preventDefault(), i(t));
+            (e.preventDefault(), i(n));
           },
           children:
-            t === r
+            n === r
               ? (0, A.jsx)(`span`, { className: x, children: `` + s })
               : (0, A.jsx)(`span`, { children: `` + s }),
         }),
         (0, A.jsx)(`a`, {
           href: `#`,
           onClick: (e) => {
-            (e.preventDefault(), o(t));
+            (e.preventDefault(), o(n));
           },
           children: (0, A.jsx)(a, {}),
         }),

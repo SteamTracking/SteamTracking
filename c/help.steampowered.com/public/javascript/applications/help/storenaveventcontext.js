@@ -13317,6 +13317,365 @@ var CCallbackList = class {
       return `CClanMatchEventByRange`;
     }
   },
+  CCommunity_ClanAnnouncementInfo = class _
+    extends import_google_protobuf.Message
+  {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.gid || AddAccessors(_._()),
+        import_google_protobuf.Message.initialize(this, _, 0, -1, [9], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            gid: {
+              _: 1,
+              _: ReaderProto.readUint64String,
+              _: WriterProto.writeUint64String,
+            },
+            clanid: {
+              _: 2,
+              _: ReaderProto.readUint64String,
+              _: WriterProto.writeUint64String,
+            },
+            posterid: {
+              _: 3,
+              _: ReaderProto.readUint64String,
+              _: WriterProto.writeUint64String,
+            },
+            headline: {
+              _: 4,
+              _: ReaderProto.readString,
+              _: WriterProto.writeString,
+            },
+            posttime: {
+              _: 5,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            updatetime: {
+              _: 6,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            body: {
+              _: 7,
+              _: ReaderProto.readString,
+              _: WriterProto.writeString,
+            },
+            commentcount: {
+              _: 8,
+              _: ReaderProto.readInt32,
+              _: WriterProto.writeInt32,
+            },
+            tags: {
+              _: 9,
+              _: !0,
+              _: !0,
+              _: ReaderProto.readString,
+              _: WriterProto.writeRepeatedString,
+            },
+            language: {
+              _: 10,
+              _: ReaderProto.readInt32,
+              _: WriterProto.writeInt32,
+            },
+            hidden: {
+              _: 11,
+              _: ReaderProto.readBool,
+              _: WriterProto.writeBool,
+            },
+            forum_topic_id: {
+              _: 12,
+              _: ReaderProto.readFixed64String,
+              _: WriterProto.writeFixed64String,
+            },
+            event_gid: {
+              _: 13,
+              _: ReaderProto.readFixed64String,
+              _: WriterProto.writeFixed64String,
+            },
+            voteupcount: {
+              _: 14,
+              _: ReaderProto.readInt32,
+              _: WriterProto.writeInt32,
+            },
+            votedowncount: {
+              _: 15,
+              _: ReaderProto.readInt32,
+              _: WriterProto.writeInt32,
+            },
+            ban_check_result: {
+              _: 16,
+              _: ReaderProto.readEnum,
+              _: WriterProto.writeEnum,
+            },
+            banned: {
+              _: 17,
+              _: ReaderProto.readBool,
+              _: WriterProto.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return ToObject(_._(), _, _);
+    }
+    static fromObject(_) {
+      return FromObject(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new import_google_protobuf.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return DeserializeBinary(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new import_google_protobuf.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      SerializeBinary(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new import_google_protobuf.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CCommunity_ClanAnnouncementInfo`;
+    }
+  },
+  CClanEventData = class _ extends import_google_protobuf.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.gid || AddAccessors(_._()),
+        import_google_protobuf.Message.initialize(this, _, 0, -1, [28], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            gid: {
+              _: 1,
+              _: ReaderProto.readFixed64String,
+              _: WriterProto.writeFixed64String,
+            },
+            clan_steamid: {
+              _: 2,
+              _: ReaderProto.readFixed64String,
+              _: WriterProto.writeFixed64String,
+            },
+            event_name: {
+              _: 3,
+              _: ReaderProto.readString,
+              _: WriterProto.writeString,
+            },
+            event_type: {
+              _: 4,
+              _: ReaderProto.readEnum,
+              _: WriterProto.writeEnum,
+            },
+            appid: {
+              _: 5,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            server_address: {
+              _: 6,
+              _: ReaderProto.readString,
+              _: WriterProto.writeString,
+            },
+            server_password: {
+              _: 7,
+              _: ReaderProto.readString,
+              _: WriterProto.writeString,
+            },
+            rtime32_start_time: {
+              _: 8,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            rtime32_end_time: {
+              _: 9,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            comment_count: {
+              _: 10,
+              _: ReaderProto.readInt32,
+              _: WriterProto.writeInt32,
+            },
+            creator_steamid: {
+              _: 11,
+              _: ReaderProto.readFixed64String,
+              _: WriterProto.writeFixed64String,
+            },
+            last_update_steamid: {
+              _: 12,
+              _: ReaderProto.readFixed64String,
+              _: WriterProto.writeFixed64String,
+            },
+            event_notes: {
+              _: 13,
+              _: ReaderProto.readString,
+              _: WriterProto.writeString,
+            },
+            jsondata: {
+              _: 14,
+              _: ReaderProto.readString,
+              _: WriterProto.writeString,
+            },
+            announcement_body: {
+              _: 15,
+              _: CCommunity_ClanAnnouncementInfo,
+            },
+            published: {
+              _: 16,
+              _: ReaderProto.readBool,
+              _: WriterProto.writeBool,
+            },
+            hidden: {
+              _: 17,
+              _: ReaderProto.readBool,
+              _: WriterProto.writeBool,
+            },
+            rtime32_visibility_start: {
+              _: 18,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            rtime32_visibility_end: {
+              _: 19,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            broadcaster_accountid: {
+              _: 20,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            follower_count: {
+              _: 21,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            ignore_count: {
+              _: 22,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            forum_topic_id: {
+              _: 23,
+              _: ReaderProto.readFixed64String,
+              _: WriterProto.writeFixed64String,
+            },
+            rtime32_last_modified: {
+              _: 24,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            news_post_gid: {
+              _: 25,
+              _: ReaderProto.readFixed64String,
+              _: WriterProto.writeFixed64String,
+            },
+            rtime_mod_reviewed: {
+              _: 26,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            featured_app_tagid: {
+              _: 27,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            referenced_appids: {
+              _: 28,
+              _: !0,
+              _: !0,
+              _: ReaderProto.readUint32,
+              pbr: ReaderProto.readPackedUint32,
+              _: WriterProto.writeRepeatedUint32,
+            },
+            build_id: {
+              _: 29,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+            build_branch: {
+              _: 30,
+              _: ReaderProto.readString,
+              _: WriterProto.writeString,
+            },
+            unlisted: {
+              _: 31,
+              _: ReaderProto.readBool,
+              _: WriterProto.writeBool,
+            },
+            rtime_created: {
+              _: 32,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= RemapMetadataByField(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return ToObject(_._(), _, _);
+    }
+    static fromObject(_) {
+      return FromObject(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new import_google_protobuf.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return DeserializeBinary(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new import_google_protobuf.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      SerializeBinary(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new import_google_protobuf.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CClanEventData`;
+    }
+  },
   UserContentDescriptorPreferences = class _
     extends import_google_protobuf.Message
   {
@@ -13567,6 +13926,11 @@ var CCallbackList = class {
               _: 20,
               _: ReaderProto.readBool,
               _: WriterProto.writeBool,
+            },
+            screen_refresh_rate: {
+              _: 21,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
             },
           },
         }),
@@ -16218,7 +16582,7 @@ var CCallbackList = class {
       {
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -19902,11 +20266,6 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
               _: !1,
               _: ReaderProto.readBool,
               _: WriterProto.writeBool,
-            },
-            price_to_base_discount_on: {
-              _: 53,
-              _: ReaderProto.readInt64String,
-              _: WriterProto.writeInt64String,
             },
             free_with_master_sub_appid: {
               _: 54,
@@ -25662,7 +26021,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 1,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25697,7 +26056,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25711,7 +26070,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25741,7 +26100,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25759,7 +26118,7 @@ var StoreGameRating = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -26603,7 +26962,7 @@ var CAccountPrivacyCookiePreferences = class _
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -31799,6 +32158,17 @@ var unknown = 0,
     greatonframe,
     salesmartsale_events_only,
     salesmartdiscountreason,
+    "salesmartdiscountreason-wishlist": 100807,
+    "salesmartdiscountreason-firsttimeonsale": 100808,
+    "salesmartdiscountreason-largestdiscount": 100809,
+    "salesmartdiscountreason-endingsoon": 100810,
+    "salesmartdiscountreason-newlyonsale": 100811,
+    "salesmartdiscountreason-wellreviewed": 100812,
+    "salesmartdiscountreason-topseller": 100813,
+    "salesmartdiscountreason-hotdeal": 100814,
+    "salesmartdiscountreason-deepdiscount": 100815,
+    "salesmartdiscountreason-popularinregion": 100816,
+    "salesmartdiscountreason-justupdated": 100817,
   },
   naveventdictionary_default = naveventdictionary_default$1;
 function BIsKnownEventComponent(_) {

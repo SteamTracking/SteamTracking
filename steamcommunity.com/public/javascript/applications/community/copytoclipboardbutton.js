@@ -2,8 +2,8 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
-import { Tu as r, Va as i, ws as a } from "./main.js";
+import { Pt as t, at as n } from "./chunk~01cfc309bf.js";
+import { Ia as r, bu as i, ys as a } from "./main.js";
 var o = e(t()),
   s = `_22H1cFqJ3Xo-`,
   c = `ILRTOLQcXtQ-`,
@@ -21,7 +21,7 @@ function d(e) {
         setTimeout(() => n(!1), 1e3),
         !1
       ),
-      className: r(s, e.size === `large` ? c : l),
+      className: i(s, e.size === `large` ? c : l),
       ref: d,
       title: e.text,
       children: [
@@ -35,7 +35,7 @@ function d(e) {
               children: `Copied.`,
             }),
           }),
-        (0, u.jsx)(i, {}),
+        (0, u.jsx)(r, {}),
       ],
     }),
   });

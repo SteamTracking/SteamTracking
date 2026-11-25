@@ -2,56 +2,54 @@
  ****/
 
 import {
-  A as e,
-  At as t,
-  C as n,
-  S as r,
-  X as i,
-  b as a,
-  j as o,
-  rt as s,
-  sn as c,
-  vt as l,
+  Pt as e,
+  S as t,
+  W as n,
+  k as r,
+  n as i,
+  nt as a,
+  r as o,
 } from "./chunk~de7f2df91c.js";
-import { Ft as u, It as d, M as f } from "./chunk~25a6634263.js";
-import { Gt as p, da as m } from "./chunk~1fa4b8f2ff.js";
-import { _ as ee, p as h } from "./chunk~0a99e05c44.js";
-import { Dn as te, Z as ne, rt as re } from "./chunk~6b8ddcaac8.js";
-import { t as g } from "./chunk~ede3e357a2.js";
-import { r as ie } from "./chunk~b390ee0f78.js";
+import { A as s, Nt as c, Pt as l } from "./chunk~bd90a5fce7.js";
+import { Gt as u, da as d } from "./chunk~1fa4b8f2ff.js";
+import { _ as ee, p as f } from "./chunk~0a99e05c44.js";
+import { Dt as te, Nt as p, rr as ne } from "./chunk~6b8ddcaac8.js";
+import { t as m } from "./chunk~ede3e357a2.js";
+import { r as h } from "./chunk~b390ee0f78.js";
+import { S as re, x as ie, y as g } from "./chunk~96e60d7578.js";
 import { n as _ } from "./chunk~9d71b14b50.js";
 import { t as ae } from "./chunk~710e3cfd2f.js";
 import { t as v } from "./chunk~f4e4ed5c17.js";
 import { t as y } from "./chunk~c55709d290.js";
 import { t as b } from "./chunk~eefd71512b.js";
 import { n as oe } from "./chunk~f8f9713b0c.js";
-var x = c(v()),
-  S = c(t());
+var x = e(v()),
+  S = e(a());
 async function C() {
   let e =
-      s.PARTNER_BASE_URL +
+      r.PARTNER_BASE_URL +
       `admin/store/contenthub/ajaxgetcontenthubcategorieskv`,
-    t = { origin: self.origin, sessionid: i() },
-    n = null;
+    n = { origin: self.origin, sessionid: t() },
+    i = null;
   try {
-    let r = await x.default.get(e, { params: t, withCredentials: !0 });
-    if (r.status === 200 && r.data?.success === 1) {
+    let t = await x.default.get(e, { params: n, withCredentials: !0 });
+    if (t.status === 200 && t.data?.success === 1) {
       let e = { rgCategories: [], bHasUnpublishedChanges: !1 };
       return (
-        r.data.in_progress
-          ? ((e.rgCategories = w(JSON.parse(r.data.in_progress).categories)),
+        t.data.in_progress
+          ? ((e.rgCategories = w(JSON.parse(t.data.in_progress).categories)),
             (e.bHasUnpublishedChanges = !0))
-          : r.data.active &&
-            (e.rgCategories = w(JSON.parse(r.data.active).categories)),
+          : t.data.active &&
+            (e.rgCategories = w(JSON.parse(t.data.active).categories)),
         e
       );
     }
-    n = y(r);
+    i = y(t);
   } catch (e) {
-    n = y(e);
+    i = y(e);
   }
   return (
-    console.error(`GetCategoriesKV failed: ` + n.strErrorMsg, n),
+    console.error(`GetCategoriesKV failed: ` + i.strErrorMsg, i),
     { rgCategories: [] }
   );
 }
@@ -110,66 +108,66 @@ function T() {
     e
   );
 }
-async function E(e) {
-  let t = {};
-  for (let n of e)
-    ((t[n.handle] = {
-      handle: n.handle,
-      type: n.type,
-      loc_token: n.loc_token,
-      description_loc_token: n.description_loc_token,
-      must: n.must?.map((e) => e.id) || void 0,
-      any: n.any?.map((e) => e.id) || void 0,
-      mustnot: n.mustnot?.map((e) => e.id) || void 0,
-      replaces_tags: n.replaces_tags?.map((e) => e.id) || void 0,
-      heading: n.heading || void 0,
-      id: n.id,
-      exclude_from_search: n.exclude_from_search,
-      search_alias: n.search_alias,
-      content_descriptors: n.content_descriptors?.length
-        ? n.content_descriptors.join(`,`)
+async function se(e) {
+  let n = {};
+  for (let t of e)
+    ((n[t.handle] = {
+      handle: t.handle,
+      type: t.type,
+      loc_token: t.loc_token,
+      description_loc_token: t.description_loc_token,
+      must: t.must?.map((e) => e.id) || void 0,
+      any: t.any?.map((e) => e.id) || void 0,
+      mustnot: t.mustnot?.map((e) => e.id) || void 0,
+      replaces_tags: t.replaces_tags?.map((e) => e.id) || void 0,
+      heading: t.heading || void 0,
+      id: t.id,
+      exclude_from_search: t.exclude_from_search,
+      search_alias: t.search_alias,
+      content_descriptors: t.content_descriptors?.length
+        ? t.content_descriptors.join(`,`)
         : void 0,
     }),
-      t[n.handle].must?.length === 1 &&
-        (t[n.handle].must = t[n.handle].must[0]),
-      t[n.handle].mustnot?.length === 1 &&
-        (t[n.handle].mustnot = t[n.handle].mustnot[0]),
-      t[n.handle].replaces_tags?.length === 1 &&
-        (t[n.handle].replaces_tags = t[n.handle].replaces_tags[0]));
-  let n =
-      s.PARTNER_BASE_URL +
+      n[t.handle].must?.length === 1 &&
+        (n[t.handle].must = n[t.handle].must[0]),
+      n[t.handle].mustnot?.length === 1 &&
+        (n[t.handle].mustnot = n[t.handle].mustnot[0]),
+      n[t.handle].replaces_tags?.length === 1 &&
+        (n[t.handle].replaces_tags = n[t.handle].replaces_tags[0]));
+  let i =
+      r.PARTNER_BASE_URL +
       `admin/store/contenthub/ajaxsavecontenthubcategorieskv`,
-    r = new FormData();
-  (r.append(`sessionid`, i()),
-    r.append(`origin`, self.origin),
-    r.append(`json`, JSON.stringify(t)));
-  let a = null;
+    a = new FormData();
+  (a.append(`sessionid`, t()),
+    a.append(`origin`, self.origin),
+    a.append(`json`, JSON.stringify(n)));
+  let o = null;
   try {
-    let e = await x.default.post(n, r, { withCredentials: !0 });
+    let e = await x.default.post(i, a, { withCredentials: !0 });
     if (e.status === 200 && e.data?.success === 1)
-      return (D.Get().ClearDirty(), null);
-    a = y(e);
+      return (E.Get().ClearDirty(), null);
+    o = y(e);
   } catch (e) {
-    a = y(e);
+    o = y(e);
   }
-  return (console.error(`SaveCategoriesKV failed: ` + a.strErrorMsg, a), a);
+  return (console.error(`SaveCategoriesKV failed: ` + o.strErrorMsg, o), o);
 }
-async function se() {
+async function ce() {
   let e =
-      s.PARTNER_BASE_URL +
+      r.PARTNER_BASE_URL +
       `admin/store/contenthub/ajaxpublishcontenthubcategorieskv`,
-    t = { origin: self.origin, sessionid: i() };
+    n = { origin: self.origin, sessionid: t() };
   try {
-    let n = await x.default.get(e, { params: t, withCredentials: !0 });
-    if (n.status !== 200 || n.data?.success !== 1) return y(n);
+    let t = await x.default.get(e, { params: n, withCredentials: !0 });
+    if (t.status !== 200 || t.data?.success !== 1) return y(t);
   } catch (e) {
     return y(e);
   }
   return null;
 }
-var D = class e {
+var E = class e {
   constructor() {
-    r(this);
+    ie(this);
   }
   m_rgTags;
   m_rgCategories;
@@ -207,15 +205,15 @@ var D = class e {
   }
   async Load() {
     let e =
-        s.PARTNER_BASE_URL +
+        r.PARTNER_BASE_URL +
         `admin/store/contenthub/ajaxgetstoretagsandcategories`,
-      t = { origin: self.origin, sessionid: i(), l: s.LANGUAGE },
-      n = null;
+      n = { origin: self.origin, sessionid: t(), l: r.LANGUAGE },
+      i = null;
     try {
-      let r = await x.default.get(e, { params: t });
-      if (r.status === 200 && r.data?.success === 1) {
-        ((this.m_rgTags = r.data.tags),
-          (this.m_rgCategories = r.data.categories),
+      let t = await x.default.get(e, { params: n });
+      if (t.status === 200 && t.data?.success === 1) {
+        ((this.m_rgTags = t.data.tags),
+          (this.m_rgCategories = t.data.categories),
           (this.m_mapStoreTags = new Map()),
           this.m_rgTags.forEach((e) => this.m_mapStoreTags.set(e.tagid, e)),
           (this.m_mapStoreCategories = new Map()),
@@ -224,56 +222,56 @@ var D = class e {
           ));
         return;
       }
-      ((this.m_promise = null), (n = y(r)));
+      ((this.m_promise = null), (i = y(t)));
     } catch (e) {
-      ((this.m_promise = null), (n = y(e)));
+      ((this.m_promise = null), (i = y(e)));
     }
     console.error(
-      `CStoreTagsAndCategoriesStore.Load failed: ` + n.strErrorMsg,
-      n,
+      `CStoreTagsAndCategoriesStore.Load failed: ` + i.strErrorMsg,
+      i,
     );
   }
   static Get() {
     return ((e.s_singleton ||= new e()), e.s_singleton);
   }
 };
-(e([n], D.prototype, `m_bDirty`, void 0),
-  e([d], D.prototype, `SetDirty`, null));
-function ce() {
-  return D.Get().BIsDirty();
-}
+(i([re], E.prototype, `m_bDirty`, void 0),
+  i([l], E.prototype, `SetDirty`, null));
 function le() {
-  let [e, t] = S.useState(D.Get().GetTags()),
-    [n, r] = S.useState(D.Get().GetCategories());
+  return E.Get().BIsDirty();
+}
+function ue() {
+  let [e, t] = S.useState(E.Get().GetTags()),
+    [n, r] = S.useState(E.Get().GetCategories());
   return (
     S.useEffect(() => {
       (e === void 0 || n === void 0) &&
-        D.Get()
+        E.Get()
           .HintLoad()
           .then(() => {
-            (t(D.Get().GetTags()), r(D.Get().GetCategories()));
+            (t(E.Get().GetTags()), r(E.Get().GetCategories()));
           });
     }, [n, e]),
     { rgTags: e, rgCategories: n }
   );
 }
-function O() {
-  let [e, t] = S.useState(D.Get().GetStoreTagMap()),
-    [n, r] = S.useState(D.Get().GetStoreCategoryMap());
+function D() {
+  let [e, t] = S.useState(E.Get().GetStoreTagMap()),
+    [n, r] = S.useState(E.Get().GetStoreCategoryMap());
   return (
     S.useEffect(() => {
       (e === void 0 || n === void 0) &&
-        D.Get()
+        E.Get()
           .HintLoad()
           .then(() => {
-            (t(D.Get().GetStoreTagMap()), r(D.Get().GetStoreCategoryMap()));
+            (t(E.Get().GetStoreTagMap()), r(E.Get().GetStoreCategoryMap()));
           });
     }, [n, e]),
     { mapStoreTags: e, mapStoreCategories: n }
   );
 }
-var ue = 5e3,
-  k = class {
+var de = 5e3,
+  O = class {
     m_rtStartTime;
     m_rtEndTime;
     m_totalSummary;
@@ -294,7 +292,7 @@ var ue = 5e3,
     GetAppSaleSummaryChangeCallback(e) {
       return (
         this.m_mapAppSaleSummaryChange.has(e) ||
-          this.m_mapAppSaleSummaryChange.set(e, new u()),
+          this.m_mapAppSaleSummaryChange.set(e, new c()),
         this.m_mapAppSaleSummaryChange.get(e)
       );
     }
@@ -341,7 +339,7 @@ var ue = 5e3,
             !this.m_mapAppToLoadPromises.has(e) ||
             (n.push(this.m_mapAppToLoadPromises.get(e)), !1),
         );
-        let e = t.splice(0, ue),
+        let e = t.splice(0, de),
           i = this.InternalLoadAppBatch(e);
         (n.push(i),
           r.push(i),
@@ -350,21 +348,21 @@ var ue = 5e3,
       await Promise.all(n);
     }
     async InternalLoadAppBatch(e) {
-      let t;
+      let n;
       try {
-        let n = new FormData();
-        (n.append(`sessionid`, i()),
-          n.append(`rgAppIDs`, e.join(`,`)),
-          n.append(`rtimeStart`, `` + this.m_rtStartTime),
-          n.append(`rtimeEnd`, `` + this.m_rtEndTime));
-        let r = `${s.PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries`,
-          a = await x.default.post(r, n, { withCredentials: !0 });
-        if (a.status == 200 && a.data?.apps_to_packages?.length > 0)
+        let i = new FormData();
+        (i.append(`sessionid`, t()),
+          i.append(`rgAppIDs`, e.join(`,`)),
+          i.append(`rtimeStart`, `` + this.m_rtStartTime),
+          i.append(`rtimeEnd`, `` + this.m_rtEndTime));
+        let a = `${r.PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries`,
+          o = await x.default.post(a, i, { withCredentials: !0 });
+        if (o.status == 200 && o.data?.apps_to_packages?.length > 0)
           return (
-            a.data.package_summaries.forEach((e) => {
+            o.data.package_summaries.forEach((e) => {
               this.m_mapPackageSummary.set(e.packageid, e);
             }),
-            a.data.apps_to_packages.forEach((e) => {
+            o.data.apps_to_packages.forEach((e) => {
               let t = e.subs || [];
               this.m_mapAppPackageList.set(e.appid, t);
               let n = {
@@ -388,14 +386,14 @@ var ue = 5e3,
             }),
             !0
           );
-        t = y(a);
+        n = y(o);
       } catch (e) {
-        t = y(e);
+        n = y(e);
       }
       return (
         console.error(
-          `CSaleRankStore::InternalLoadAppBatch failed with ` + t.strErrorMsg,
-          t,
+          `CSaleRankStore::InternalLoadAppBatch failed with ` + n.strErrorMsg,
+          n,
         ),
         !1
       );
@@ -414,8 +412,8 @@ var ue = 5e3,
       }
     }
   },
-  A = class e {
-    m_appAndPackagesSummuries = new k(120);
+  k = class e {
+    m_appAndPackagesSummuries = new O(120);
     m_mapContentHubSummary = new Map();
     m_mapContentHubToAppCount = new Map();
     m_mapContentHubSummaryPromises = new Map();
@@ -423,7 +421,7 @@ var ue = 5e3,
     m_mapContentHubTopAppSaleSummaryChange = new Map();
     m_mapContentHubTopAppSaleSummary = new Map();
     m_rgSummaries = null;
-    m_summaryAnalysisChange = new u();
+    m_summaryAnalysisChange = new c();
     m_loadSummaryCache;
     GetSummaryAnalysis() {
       return this.m_rgSummaries;
@@ -438,7 +436,7 @@ var ue = 5e3,
       let t = this.GetKey(e);
       return (
         this.m_mapContentHubTopAppSaleSummaryChange.has(t) ||
-          this.m_mapContentHubTopAppSaleSummaryChange.set(t, new u()),
+          this.m_mapContentHubTopAppSaleSummaryChange.set(t, new c()),
         this.m_mapContentHubTopAppSaleSummaryChange.get(t)
       );
     }
@@ -450,7 +448,7 @@ var ue = 5e3,
       let t = this.GetKey(e);
       return (
         this.m_mapContentHubSummaryChange.has(t) ||
-          this.m_mapContentHubSummaryChange.set(t, new u()),
+          this.m_mapContentHubSummaryChange.set(t, new c()),
         this.m_mapContentHubSummaryChange.get(t)
       );
     }
@@ -530,13 +528,13 @@ var ue = 5e3,
       let e = {
           rtStartTime: this.m_appAndPackagesSummuries.GetRTStartTime(),
           rtEndTime: this.m_appAndPackagesSummuries.GetRTEndTime(),
-          sessionid: i(),
+          sessionid: t(),
         },
-        t = `${s.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubstats`,
-        n = await x.default.get(t, { params: e });
-      if (n.status == 200 && n.data?.cache?.length > 0) {
+        n = `${r.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubstats`,
+        i = await x.default.get(n, { params: e });
+      if (i.status == 200 && i.data?.cache?.length > 0) {
         let e = [];
-        (n.data.cache.forEach((t) => {
+        (i.data.cache.forEach((t) => {
           let n = JSON.parse(t),
             r = { handle: n.handle, type: n.type },
             i = this.GetKey(r);
@@ -577,83 +575,83 @@ var ue = 5e3,
             : `NA`,
       };
     }
-    async SaveToCacheSaleSummary(e, t, n, r, o) {
+    async SaveToCacheSaleSummary(e, n, i, a, o) {
       if (e.type === `category_editor`) return;
-      let c = {
+      let s = {
           type: e.type,
           handle: e.handle,
-          topAppSummary: n,
-          hubSummary: t,
-          topApps: r,
+          topAppSummary: i,
+          hubSummary: n,
+          topApps: a,
           appCount: o,
         },
-        l = new FormData();
-      (l.append(`sessionid`, i()),
-        l.append(
+        c = new FormData();
+      (c.append(`sessionid`, t()),
+        c.append(
           `rtStartTime`,
           `` + this.m_appAndPackagesSummuries.GetRTStartTime(),
         ),
-        l.append(
+        c.append(
           `rtEndTime`,
           `` + this.m_appAndPackagesSummuries.GetRTEndTime(),
         ),
-        l.append(`bClear`, `false`),
-        l.append(`key`, this.GetKey(e)),
-        l.append(`rgStats`, JSON.stringify(c)));
-      let u = `${s.PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats`,
-        d = await x.default.post(u, l, { withCredentials: !0 });
-      d.status != 200 &&
-        console.error(`SaveToCacheSaleSummary failed to save ` + a, d);
+        c.append(`bClear`, `false`),
+        c.append(`key`, this.GetKey(e)),
+        c.append(`rgStats`, JSON.stringify(s)));
+      let l = `${r.PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats`,
+        u = await x.default.post(l, c, { withCredentials: !0 });
+      u.status != 200 &&
+        console.error(`SaveToCacheSaleSummary failed to save ` + g, u);
     }
     static s_Singleton;
     static Get() {
       return ((e.s_Singleton ||= new e()), e.s_Singleton);
     }
   };
-e([d], A.prototype, `LoadCachedSaleSummaries`, null);
-function de(e) {
+i([l], k.prototype, `LoadCachedSaleSummaries`, null);
+function A(e) {
   let {
-    data: t,
-    isLoading: n,
-    isError: r,
-  } = g({
+    data: n,
+    isLoading: i,
+    isError: a,
+  } = m({
     queryKey: [`contenthubsummary`, e.type, e.handle],
     queryFn: async () => {
-      let t = {
+      let n = {
           contenthubcategorytype: e.type,
           handle: e.handle,
-          sessionid: i(),
+          sessionid: t(),
         },
-        n = `${s.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubsummary`,
-        r = await x.default.get(n, { params: t });
-      return r.status == 200 && r.data?.top_apps?.length > 0 ? r.data : null;
+        i = `${r.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubsummary`,
+        a = await x.default.get(i, { params: n });
+      return a.status == 200 && a.data?.top_apps?.length > 0 ? a.data : null;
     },
   });
   return {
-    rgTopApps: n || r || !t ? null : t?.top_apps,
-    nTotalGames: n || r || !t ? null : t?.total_games,
-    isError: r,
+    rgTopApps: i || a || !n ? null : n?.top_apps,
+    nTotalGames: i || a || !n ? null : n?.total_games,
+    isError: a,
   };
 }
 function j(e) {
   let {
-    data: t,
-    isLoading: n,
-    isError: r,
-  } = g({
+    data: n,
+    isLoading: i,
+    isError: a,
+  } = m({
     queryKey: [`contenthubapplist`, e.type, e.handle],
     queryFn: async () => {
-      let t = {
+      let n = {
           contenthubcategorytype: e.type,
           handle: e.handle,
-          sessionid: i(),
+          sessionid: t(),
         },
-        n = `${s.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist`,
-        r = await x.default.get(n, { params: t });
-      return r.status == 200 && r.data?.apps?.length > 0 ? r.data : null;
+        i = `${r.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist`,
+        a = await x.default.get(i, { params: n });
+      return a.status == 200 && a.data?.apps?.length > 0 ? a.data : null;
     },
   });
-  return t?.apps || null;
+  return n?.apps || null;
 }
 function M(e, t, n) {
   return {
@@ -675,28 +673,28 @@ function M(e, t, n) {
   };
 }
 var N = { total_games: 0, all_appid: [], top_games: [] };
-function P(e, t, n) {
-  let { musthaveall: r, musthaveany: a, mustnothaveany: o } = M(e, t, n),
+function P(e, n, i) {
+  let { musthaveall: a, musthaveany: o, mustnothaveany: s } = M(e, n, i),
     {
       data: c,
       isLoading: l,
       isError: u,
-    } = g({
-      queryKey: [`useContentHubCategoryEditorFullAppList`, r, a, o],
+    } = m({
+      queryKey: [`useContentHubCategoryEditorFullAppList`, a, o, s],
       queryFn: async () => {
         let e = {
-            musthaveall: r,
-            musthaveany: a,
-            mustnothaveany: o,
-            sessionid: i(),
+            musthaveall: a,
+            musthaveany: o,
+            mustnothaveany: s,
+            sessionid: t(),
           },
-          t = `${s.PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist`,
-          n = await x.default.get(t, { params: e });
-        return n.status == 200 && n.data?.top_games?.length > 0 ? n.data : null;
+          n = `${r.PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist`,
+          i = await x.default.get(n, { params: e });
+        return i.status == 200 && i.data?.top_games?.length > 0 ? i.data : null;
       },
-      enabled: r.length != 0 || a.length != 0 || o.length != 0,
+      enabled: a.length != 0 || o.length != 0 || s.length != 0,
     });
-  return r.length == 0 && a.length == 0 && o.length == 0 ? N : c || null;
+  return a.length == 0 && o.length == 0 && s.length == 0 ? N : c || null;
 }
 function F(e, t, n) {
   let r = P(e, t, n),
@@ -704,14 +702,14 @@ function F(e, t, n) {
       let { musthaveall: r, musthaveany: i, mustnothaveany: a } = M(e, t, n);
       return { type: `category_editor`, handle: r + `_` + i + `_` + a };
     }, [e, t, n]),
-    [a, o] = (0, S.useState)(A.Get().GetContentHubSaleSummary(i));
+    [a, o] = (0, S.useState)(k.Get().GetContentHubSaleSummary(i));
   return (
     (0, S.useEffect)(() => {
       r?.all_appid?.length &&
         !a &&
-        A.Get().LoadContentHubSaleSummary(i, r.all_appid);
+        k.Get().LoadContentHubSaleSummary(i, r.all_appid);
     }, [i, r, a]),
-    f(A.Get().GetContentHubSummaryChangeCallback(i), o),
+    s(k.Get().GetContentHubSummaryChangeCallback(i), o),
     a
   );
 }
@@ -720,43 +718,43 @@ function I(e, t, n) {
       let { musthaveall: r, musthaveany: i, mustnothaveany: a } = M(e, t, n);
       return { type: `category_editor`, handle: r + `_` + i + `_` + a };
     }, [e, t, n]),
-    [i, a] = (0, S.useState)(A.Get().GetTopAppSummary(r));
-  return (f(A.Get().GetContentHubTopAppSaleSummaryChangeCallback(r), a), i);
+    [i, a] = (0, S.useState)(k.Get().GetTopAppSummary(r));
+  return (s(k.Get().GetContentHubTopAppSaleSummaryChangeCallback(r), a), i);
 }
 function L(e) {
   let t = j(e),
-    [n, r] = (0, S.useState)(A.Get().GetContentHubSaleSummary(e));
+    [n, r] = (0, S.useState)(k.Get().GetContentHubSaleSummary(e));
   return (
     (0, S.useEffect)(() => {
-      t?.length && !n && A.Get().LoadContentHubSaleSummary(e, t);
+      t?.length && !n && k.Get().LoadContentHubSaleSummary(e, t);
     }, [e, e.type, e.handle, t, n]),
-    f(A.Get().GetContentHubSummaryChangeCallback(e), r),
+    s(k.Get().GetContentHubSummaryChangeCallback(e), r),
     n
   );
 }
 function R(e) {
   let [t, n] = (0, S.useState)(
-    A.Get().GetAppSummaryObject().GetAppSaleSummary(e),
+    k.Get().GetAppSummaryObject().GetAppSaleSummary(e),
   );
   return (
-    f(A.Get().GetAppSummaryObject().GetAppSaleSummaryChangeCallback(e), n), t
+    s(k.Get().GetAppSummaryObject().GetAppSaleSummaryChangeCallback(e), n), t
   );
 }
 function z(e) {
-  let [t, n] = (0, S.useState)(A.Get().GetTopAppSummary(e));
-  return (f(A.Get().GetContentHubTopAppSaleSummaryChangeCallback(e), n), t);
+  let [t, n] = (0, S.useState)(k.Get().GetTopAppSummary(e));
+  return (s(k.Get().GetContentHubTopAppSaleSummaryChangeCallback(e), n), t);
 }
 function B() {
-  let [e, t] = (0, S.useState)(A.Get().GetSummaryAnalysis());
+  let [e, t] = (0, S.useState)(k.Get().GetSummaryAnalysis());
   return (
     (0, S.useEffect)(() => {
-      A.Get().LoadCachedSaleSummaries();
+      k.Get().LoadCachedSaleSummaries();
     }, []),
-    f(A.Get().GetSummaryAnalysisChange(), t),
+    s(k.Get().GetSummaryAnalysisChange(), t),
     e
   );
 }
-var V = c(oe()),
+var V = e(oe()),
   H = `zDqf95flXsQ-`,
   fe = `NubtcOb7MrQ-`,
   pe = `VMmPDg-0ono-`,
@@ -775,18 +773,18 @@ var V = c(oe()),
   K = `NOL8XDNbcWM-`,
   Ce = `vRby4-J8FJY-`,
   q = `_5JKZLtgwSTE-`,
-  J = l(),
+  J = n(),
   we = `0px 0px 100% 0px`,
   Y = 5e3;
 function Te(e) {
   let [t, n] = (0, S.useState)(!0),
-    r = T(),
-    i = (0, S.useMemo)(
-      () => (r?.length > 0 ? r.filter((e) => !!e.type) : null),
-      [r],
+    i = T(),
+    a = (0, S.useMemo)(
+      () => (i?.length > 0 ? i.filter((e) => !!e.type) : null),
+      [i],
     );
-  return !i || i.length == 0
-    ? (0, J.jsx)(b, { string: m(`#Loading`) })
+  return !a || a.length == 0
+    ? (0, J.jsx)(b, { string: d(`#Loading`) })
     : (0, J.jsxs)(`div`, {
         children: [
           (0, J.jsxs)(`div`, {
@@ -801,7 +799,7 @@ function Te(e) {
                     className: Ce,
                     children: [
                       !t &&
-                        (0, J.jsxs)(p, {
+                        (0, J.jsxs)(u, {
                           onClick: () => n(!0),
                           children: [`Load `, 120, ` Days of Sale Summaries`],
                         }),
@@ -819,7 +817,7 @@ function Te(e) {
                         `Themes are currently make from all of the categories that are defined on this`,
                         ` `,
                         (0, J.jsx)(`a`, {
-                          href: `${s.PARTNER_BASE_URL}admin/store/contenthub/categories`,
+                          href: `${r.PARTNER_BASE_URL}admin/store/contenthub/categories`,
                           children: `categories editor page.`,
                         }),
                       ],
@@ -842,7 +840,7 @@ function Te(e) {
               }),
             ],
           }),
-          i.map((e, n) => (0, J.jsx)(Ee, { category: e, bSaleSummary: t }, n)),
+          a.map((e, n) => (0, J.jsx)(Ee, { category: e, bSaleSummary: t }, n)),
         ],
       });
 }
@@ -872,8 +870,8 @@ function X(e) {
 }
 function De(e) {
   let { category: t, bSaleSummary: n } = e,
-    { rgTopApps: r, nTotalGames: i } = de(t),
-    a = i > 500 && i <= 5e3;
+    { rgTopApps: i, nTotalGames: a } = A(t),
+    o = a > 500 && a <= 5e3;
   return (0, J.jsxs)(`div`, {
     className: H,
     children: [
@@ -881,14 +879,14 @@ function De(e) {
         className: U,
         children: [
           (0, J.jsx)(`a`, {
-            href: `${s.STORE_BASE_URL}category/${t.handle}`,
+            href: `${r.STORE_BASE_URL}category/${t.handle}`,
             className: xe,
-            children: t.loc_token ? m(t.loc_token) : t.handle,
+            children: t.loc_token ? d(t.loc_token) : t.handle,
           }),
-          (0, J.jsx)(X, { nTotalGames: i }),
+          (0, J.jsx)(X, { nTotalGames: a }),
           (0, J.jsx)(`div`, {
             className: void 0,
-            children: !!(n && a) && (0, J.jsx)(Ae, { category: t }),
+            children: !!(n && o) && (0, J.jsx)(Ae, { category: t }),
           }),
         ],
       }),
@@ -898,12 +896,12 @@ function De(e) {
           (0, J.jsx)(`div`, { children: `Top 10 Games non-F2P:` }),
           (0, J.jsx)(`div`, {
             className: ve,
-            children: r
+            children: i
               ?.slice(0, 10)
               .map((e) =>
                 (0, J.jsx)(
                   Z,
-                  { info: e, category: t, bSaleSummary: n && a },
+                  { info: e, category: t, bSaleSummary: n && o },
                   e.appid,
                 ),
               ),
@@ -919,14 +917,14 @@ function De(e) {
 }
 function Z(e) {
   let { info: t, bSaleSummary: n } = e,
-    r = ie(t.appid),
-    { data: i } = h(r),
+    r = h(t.appid),
+    { data: i } = f(r),
     { data: a } = ee(r);
   return a && i
     ? (0, J.jsxs)(`div`, {
         className: G,
         children: [
-          (0, J.jsx)(re, {
+          (0, J.jsx)(p, {
             id: r,
             hoverProps: {
               direction: `overlay`,
@@ -934,9 +932,9 @@ function Z(e) {
             },
             className: be,
             children: (0, J.jsx)(`a`, {
-              href: ne(a),
+              href: te(a),
               children: (0, J.jsx)(`img`, {
-                src: te(i, `header`),
+                src: ne(i, `header`),
                 alt: a.name,
               }),
             }),
@@ -978,7 +976,7 @@ function Oe(e) {
   });
 }
 function ke(e) {
-  let { mapStoreTags: t, mapStoreCategories: n } = O(),
+  let { mapStoreTags: t, mapStoreCategories: n } = D(),
     { category: r } = e;
   return !t || !n || (!r.any && !r.must && !r.mustnot)
     ? null
@@ -1040,7 +1038,7 @@ function ke(e) {
       });
 }
 function Q(e) {
-  let { mapStoreTags: t, mapStoreCategories: n } = O(),
+  let { mapStoreTags: t, mapStoreCategories: n } = D(),
     { type: r, id: i } = e;
   return r == `tagids`
     ? (0, J.jsxs)(`span`, {
@@ -1136,13 +1134,13 @@ function je(e) {
   });
 }
 export {
-  ce as _,
+  le as _,
   Y as a,
-  E as b,
+  se as b,
   G as c,
   H as d,
   W as f,
-  k as g,
+  O as g,
   I as h,
   Te as i,
   ye as l,
@@ -1155,6 +1153,6 @@ export {
   $ as t,
   U as u,
   C as v,
-  le as x,
-  se as y,
+  ue as x,
+  ce as y,
 };

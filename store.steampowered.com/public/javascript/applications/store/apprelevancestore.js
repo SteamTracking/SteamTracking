@@ -2,11 +2,11 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, dt as n, st as r, tt as i } from "./chunk~01cfc309bf.js";
+import { It as t, et as n, ot as r, ut as i } from "./chunk~01cfc309bf.js";
 import { Et as a, Tt as o } from "./chunk~d8bbc3d946.js";
-import { Ox as s, ax as c, nx as l, vy as u } from "./main.js";
+import { kx as s, ox as c, rx as l, yy as u } from "./main.js";
 import { n as d } from "./chunk~65d992238f.js";
-var f = e(i()),
+var f = e(n()),
   p = e(t());
 function m(e) {
   return [`AppRelevanceStore`, `FriendsRecommended`, e];
@@ -19,7 +19,7 @@ function g(e, t) {
   return { queryKey: m(t), queryFn: () => x(e, t) };
 }
 function _() {
-  let e = n();
+  let e = i();
   return p.useCallback(
     (t, n) => {
       e.setQueryData(m(t), n);

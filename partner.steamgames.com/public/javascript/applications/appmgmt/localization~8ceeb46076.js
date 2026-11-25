@@ -2,14 +2,14 @@
  ****/
 
 import {
-  At as e,
-  W as t,
-  en as n,
-  rt as r,
-  sn as i,
-  vt as a,
+  Dt as e,
+  Pt as t,
+  W as n,
+  g as r,
+  k as i,
+  nt as a,
 } from "./chunk~de7f2df91c.js";
-import { s as o } from "./chunk~25a6634263.js";
+import { a as o } from "./chunk~bd90a5fce7.js";
 import {
   Fn as s,
   In as c,
@@ -21,18 +21,18 @@ import {
 } from "./chunk~1fa4b8f2ff.js";
 import { l as m, r as h, s as g, t as _ } from "./chunk~9a06851bec.js";
 import { E as v } from "./chunk~44f252525d.js";
-var y = i(e());
+var y = t(a());
 function b(e, t = ``, n = null) {
   return T.InstrumentLink(e, t, n);
 }
-function x(e, n, r) {
+function x(e, t, n) {
   let i = h();
   return y.useMemo(() => {
     let a = u(e).toLowerCase(),
-      o = u(t.COMMUNITY_BASE_URL).toLowerCase(),
-      s = u(t.STORE_BASE_URL).toLowerCase();
-    return a === o || a === s ? _(i, e, n, r) : e;
-  }, [i, e, n, r]);
+      o = u(r.COMMUNITY_BASE_URL).toLowerCase(),
+      s = u(r.STORE_BASE_URL).toLowerCase();
+    return a === o || a === s ? _(i, e, t, n) : e;
+  }, [i, e, t, n]);
 }
 function S(e, t, n = null) {
   let r = w(t, n),
@@ -55,64 +55,64 @@ function C(e, t, n, r = null) {
   return i;
 }
 function w(e, t = null) {
-  return e?.domain ? T.GetLinkParam(e, t) : r.SNR;
+  return e?.domain ? T.GetLinkParam(e, t) : i.SNR;
 }
-var T = class e {
+var T = class t {
     static sm_strDomain;
     static sm_strController;
     static sm_strMethod;
     static sm_strSubmethod;
     static sm_strComputedLinkPrefix;
-    static SetNavEventParams(t, n, r = null, i = null) {
-      ((e.sm_strDomain = t),
-        (e.sm_strController = n),
-        (e.sm_strMethod = r),
-        (e.sm_strSubmethod = i),
-        (e.sm_strComputedLinkPrefix = null));
+    static SetNavEventParams(e, n, r = null, i = null) {
+      ((t.sm_strDomain = e),
+        (t.sm_strController = n),
+        (t.sm_strMethod = r),
+        (t.sm_strSubmethod = i),
+        (t.sm_strComputedLinkPrefix = null));
     }
     static GetDefaultParams() {
-      let t = { domain: e.sm_strDomain, controller: e.sm_strController };
+      let e = { domain: t.sm_strDomain, controller: t.sm_strController };
       return (
-        e.sm_strMethod && (t.method = e.sm_strMethod),
-        e.sm_strSubmethod && (t.submethod = e.sm_strSubmethod),
-        t
+        t.sm_strMethod && (e.method = t.sm_strMethod),
+        t.sm_strSubmethod && (e.submethod = t.sm_strSubmethod),
+        e
       );
     }
-    static InstrumentLink(t, n, r = null) {
-      let i = e.GetLinkParam(n, r),
+    static InstrumentLink(e, n, r = null) {
+      let i = t.GetLinkParam(n, r),
         a = typeof n == `string` ? null : g.GetCuratorClanIDParam(n);
-      return g.AddNavParamToURL(t, i, a);
+      return g.AddNavParamToURL(e, i, a);
     }
-    static GetLinkParam(t, n = null) {
+    static GetLinkParam(e, n = null) {
       let r;
-      if (typeof t != `string`) {
-        if (t.domain) return g.GetSNRLinkParam(t, n);
-        r = t.feature || ``;
+      if (typeof e != `string`) {
+        if (e.domain) return g.GetSNRLinkParam(e, n);
+        r = e.feature || ``;
       }
       let i;
-      if (!e.sm_strComputedLinkPrefix && !e.ComputeStaticLinkPrefix())
+      if (!t.sm_strComputedLinkPrefix && !t.ComputeStaticLinkPrefix())
         return null;
-      i = e.sm_strComputedLinkPrefix;
+      i = t.sm_strComputedLinkPrefix;
       let a = g.EncodeEventComponent(r);
       return (a && ((i += `_` + a), n && (i += `_` + n)), i);
     }
     static ComputeStaticLinkPrefix() {
-      return e.sm_strDomain
-        ? ((e.sm_strComputedLinkPrefix = g.ComputeLinkPrefix(
-            e.sm_strDomain,
-            e.sm_strController,
-            e.sm_strMethod,
-            e.sm_strSubmethod,
+      return t.sm_strDomain
+        ? ((t.sm_strComputedLinkPrefix = g.ComputeLinkPrefix(
+            t.sm_strDomain,
+            t.sm_strController,
+            t.sm_strMethod,
+            t.sm_strSubmethod,
           )),
           !0)
-        : (n(
+        : (e(
             !1,
             `CStoreNavEvents::SetNavEventParams was not called before calling InstrumentLink!`,
           ),
           !1);
     }
   },
-  E = a();
+  E = n();
 function D(e) {
   let t = e?.jsondata?.read_more_link;
   if (!t) return;
@@ -122,11 +122,11 @@ function D(e) {
 function O(e, t) {
   return l(e, D(t));
 }
-function k(e, n) {
+function k(e, t) {
   if (!e) return ``;
   if (!l(e)) return c(e);
-  let r = O(e, n) ? p(e) : e;
-  return (t.IN_CLIENT ? `steam://openurl_external/` : ``) + r;
+  let n = O(e, t) ? p(e) : e;
+  return (r.IN_CLIENT ? `steam://openurl_external/` : ``) + n;
 }
 function A(e, t, n) {
   let r = e.toLowerCase().startsWith(`http`) ? e : `http://` + e;

@@ -2,28 +2,25 @@
  ****/
 
 import {
-  A as e,
-  At as t,
-  C as n,
-  S as r,
-  W as i,
-  a,
-  k as o,
-  rt as s,
-  sn as c,
+  Pt as e,
+  g as t,
+  k as n,
+  n as r,
+  nt as i,
 } from "./chunk~de7f2df91c.js";
+import { O as a, S as o, i as s, x as c } from "./chunk~96e60d7578.js";
 import { t as l } from "./chunk~f4e4ed5c17.js";
-function u(e, t) {
-  return t
-    ? i.COMMUNITY_CDN_URL + `economy/emoticonlarge/` + e
-    : i.COMMUNITY_CDN_URL + `economy/emoticon/` + e;
+function u(e, n) {
+  return n
+    ? t.COMMUNITY_CDN_URL + `economy/emoticonlarge/` + e
+    : t.COMMUNITY_CDN_URL + `economy/emoticon/` + e;
 }
-t();
+i();
 var d = 50,
   f = 604800,
   p = class e {
     constructor() {
-      r(this);
+      c(this);
     }
     m_bEmoticonListRequested = !1;
     m_bInitialized = !1;
@@ -101,7 +98,7 @@ var d = 50,
     async BAwaitInitialized() {
       return (
         this.m_bInitialized ||
-          (this.UpdateEmoticonList(), await o(() => this.m_bInitialized)),
+          (this.UpdateEmoticonList(), await a(() => this.m_bInitialized)),
         this.m_bInitialized
       );
     }
@@ -258,11 +255,11 @@ var d = 50,
         (this.m_bEmoticonListRequested = !1));
     }
   };
-(e([n], p.prototype, `m_bInitialized`, void 0),
-  e([n], p.prototype, `m_rtMostRecentEmoticon`, void 0),
-  e([n], p.prototype, `m_rtLastStickerOrEffect`, void 0),
-  e([a], p.prototype, `TrackEmoticonUsage`, null));
-var m = c(l()),
+(r([o], p.prototype, `m_bInitialized`, void 0),
+  r([o], p.prototype, `m_rtMostRecentEmoticon`, void 0),
+  r([o], p.prototype, `m_rtLastStickerOrEffect`, void 0),
+  r([s], p.prototype, `TrackEmoticonUsage`, null));
+var m = e(l()),
   h = class extends p {
     constructor() {
       super();
@@ -271,12 +268,12 @@ var m = c(l()),
       return !0;
     }
     GetServerTime() {
-      return s.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
+      return n.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
     }
     async RequestEmoticonListInternal() {
       let e = [];
       try {
-        let t = await m.default.get(s.CHAT_BASE_URL + `actions/EmoticonData`, {
+        let t = await m.default.get(n.CHAT_BASE_URL + `actions/EmoticonData`, {
           withCredentials: !0,
         });
         if (t.data.emoticons)

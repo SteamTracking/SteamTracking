@@ -2,42 +2,42 @@
  ****/
 
 import {
-  At as e,
-  sn as t,
-  t as n,
-  vt as r,
-  z as i,
+  Pt as e,
+  W as t,
+  d as n,
+  nt as r,
+  t as i,
 } from "./chunk~de7f2df91c.js";
 import {
-  C as a,
-  H as o,
-  N as s,
-  Ot as c,
-  Rt as l,
-  r as u,
-  ut as d,
-} from "./chunk~25a6634263.js";
+  B as a,
+  Et as o,
+  It as s,
+  ct as c,
+  j as l,
+  t as u,
+  x as d,
+} from "./chunk~bd90a5fce7.js";
 import { Wa as f } from "./chunk~1fa4b8f2ff.js";
-var p = t(e(), 1),
-  m = r(),
+var p = e(r(), 1),
+  m = t(),
   h = p.forwardRef(function (e, t) {
-    let { children: n, navTreeRef: r, ...s } = e,
-      l = p.useRef(void 0),
-      u = c(l, r),
-      d = i(),
-      h = o(`__nav_tree_root`);
-    return (0, m.jsx)(a, {
+    let { children: r, navTreeRef: i, ...s } = e,
+      c = p.useRef(void 0),
+      l = o(c, i),
+      u = n(),
+      h = a(`__nav_tree_root`);
+    return (0, m.jsx)(d, {
       ...s,
-      navTreeRef: u,
+      navTreeRef: l,
       ref: t,
       parentEmbeddedNavTree: h,
-      disabledRoot: !d,
+      disabledRoot: !u,
       historyMode: `navigationapi`,
       "flow-children": `column`,
-      children: (0, m.jsx)(f, { disableFocusRing: !d, children: n }),
+      children: (0, m.jsx)(f, { disableFocusRing: !u, children: r }),
     });
   }),
-  g = t(n());
+  g = e(i());
 function _({
   config: e,
   isDynamic: t,
@@ -74,7 +74,7 @@ function v(e) {
 }
 function y(e) {
   let { featureName: t } = e,
-    n = s(),
+    n = l(),
     r = p.useRef([]),
     i = p.useRef(0);
   return (
@@ -82,12 +82,12 @@ function y(e) {
       let e = `[data-featuretarget=${t}]`;
       ((r.current = []), (i.current = 0));
       let a = (e) => r.current.push({ key: i.current++, elem: e }),
-        o = (e) => l(r.current, (t) => t.elem == e);
+        o = (e) => s(r.current, (t) => t.elem == e);
       (document.querySelectorAll(e).forEach(a), r.current.length && n());
-      let s = new MutationObserver((t) => {
+      let l = new MutationObserver((t) => {
         let r = !1;
         for (let n of t)
-          d(
+          c(
             n,
             (t) => {
               S(t, e).forEach((e) => {
@@ -103,8 +103,8 @@ function y(e) {
         r && n();
       });
       return (
-        s.observe(document, { childList: !0, subtree: !0 }),
-        () => s.disconnect()
+        l.observe(document, { childList: !0, subtree: !0 }),
+        () => l.disconnect()
       );
     }, [t, n]),
     (0, m.jsx)(m.Fragment, {

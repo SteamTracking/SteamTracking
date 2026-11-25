@@ -1,54 +1,54 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { st as e } from "./chunk~01cfc309bf.js";
+import { ot as e } from "./chunk~01cfc309bf.js";
 import "./chunk~d382bdf2cf.js";
 import { n as t, t as n } from "./chunk~73f829e6f9.js";
 import {
-  J as r,
-  Ox as i,
-  Sy as a,
-  X as o,
-  Xy as s,
+  Cy as r,
+  J as i,
+  X as a,
+  Zy as o,
+  kx as s,
   ut as c,
-  vy as l,
+  yy as l,
 } from "./main.js";
 function u() {
   let t = l(),
-    n = a();
+    n = r();
   return e(d(t, n));
 }
 function d(e, r) {
   return {
     queryKey: [`GetFriendsList`, r],
     queryFn: async () => {
-      let r = i.Init(n),
-        a = await t.GetFriendsList(e, r),
-        o = [];
-      for (let e of a.Body().friendslist()?.friends() ?? []) {
+      let r = s.Init(n),
+        i = await t.GetFriendsList(e, r),
+        a = [];
+      for (let e of i.Body().friendslist()?.friends() ?? []) {
         let t = e.ulfriendid();
         t &&
           (e.efriendrelationship() == 3 || e.efriendrelationship() == 6) &&
-          new s(t).BIsIndividualAccount() &&
-          o.push(t);
+          new o(t).BIsIndividualAccount() &&
+          a.push(t);
       }
-      return o;
+      return a;
     },
   };
 }
 function f() {
-  let r = l(),
-    o = a();
+  let i = l(),
+    a = r();
   return e({
-    queryKey: [`GetIgnoredAccounts`, o],
+    queryKey: [`GetIgnoredAccounts`, a],
     queryFn: async () => {
-      let e = i.Init(n);
-      return (await t.GetFriendsList(r, e))
+      let e = s.Init(n);
+      return (await t.GetFriendsList(i, e))
         .Body()
         .friendslist()
         ?.friends()
         ?.filter((e) => {
-          let t = new s(e.ulfriendid());
+          let t = new o(e.ulfriendid());
           return (
             (e.efriendrelationship() == 5 || e.efriendrelationship() == 6) &&
             t.BIsIndividualAccount()
@@ -62,15 +62,15 @@ function p(e, t) {
   return {
     queryKey: [`GetFriendNicknameList`, t],
     queryFn: async () => {
-      let t = i.Init(o);
+      let t = s.Init(a);
       return (await c.GetNicknameList(e, t)).Body().toObject();
     },
   };
 }
 function m(t = {}) {
   let n = l(),
-    r = a();
-  return e({ ...p(n, r), ...t, select: (e) => h(e.nicknames) });
+    i = r();
+  return e({ ...p(n, i), ...t, select: (e) => h(e.nicknames) });
 }
 function h(e) {
   let t = new Map();
@@ -81,21 +81,21 @@ function h(e) {
   return t;
 }
 async function g(e, t) {
-  let n = i.Init(r);
+  let n = s.Init(i);
   n.Body().set_appid(t);
-  let a = await c.GetFriendsGameplayInfo(e, n);
+  let r = await c.GetFriendsGameplayInfo(e, n);
   return (
-    a.BSuccess() ||
-      console.warn(`Failed to get gameplay info: ${a.GetEResult()}`),
-    a.Body().toObject()
+    r.BSuccess() ||
+      console.warn(`Failed to get gameplay info: ${r.GetEResult()}`),
+    r.Body().toObject()
   );
 }
 function _(t, n = {}) {
-  let r = l(),
-    i = a();
+  let i = l(),
+    a = r();
   return e({
-    queryKey: [`GameplayInfo_${i}_${t}`],
-    queryFn: async () => await g(r, t),
+    queryKey: [`GameplayInfo_${a}_${t}`],
+    queryFn: async () => await g(i, t),
     ...n,
   });
 }

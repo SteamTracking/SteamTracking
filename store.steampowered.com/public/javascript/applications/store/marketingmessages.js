@@ -19,34 +19,32 @@ const __vite__mapDeps = (
 
 import { o as e, r as t } from "./chunk~f025431ab0.js";
 import {
-  At as n,
-  B as r,
-  F as i,
-  L as a,
-  Lt as o,
-  P as s,
-  U as c,
-  V as l,
-  ft as u,
-  i as d,
-  kt as f,
-  st as p,
-  tt as ee,
-  u as te,
+  B as n,
+  H as r,
+  I as i,
+  It as a,
+  N as o,
+  Ot as s,
+  P as c,
+  dt as l,
+  et as u,
+  kt as d,
+  l as f,
+  ot as p,
+  r as ee,
+  z as te,
 } from "./chunk~01cfc309bf.js";
 import {
-  Ho as ne,
-  Os as re,
-  St as ie,
-  Vn as ae,
-  ao as oe,
-  er as se,
-  ks as ce,
+  $n as ne,
+  Ds as re,
+  Pt as ie,
+  Zo as ae,
+  go as oe,
+  ho as se,
+  mo as ce,
   n as le,
-  oo as ue,
-  so as de,
-  vs as fe,
 } from "./chunk~6b8ddcaac8.js";
+import { S as ue, p as de, x as fe } from "./chunk~4eed35ad1f.js";
 import { t as m } from "./chunk~4c13037b22.js";
 import "./chunk~19394a4118.js";
 import { n as pe } from "./chunk~cbbb6ae37c.js";
@@ -69,74 +67,74 @@ import { n as De } from "./chunk~3ea79bd96d.js";
 import { t as Oe } from "./chunk~166d91af35.js";
 import { a as ke } from "./chunk~fc8a9e4879.js";
 import {
-  $b as h,
-  $y as g,
-  Bc as _,
-  Bv as Ae,
-  CS as v,
-  Fc as je,
-  Gl as Me,
-  Ib as Ne,
-  Kb as Pe,
-  Kl as Fe,
-  Nc as y,
-  OS as b,
-  Ox as x,
-  Qv as Ie,
-  Rv as Le,
-  Sc as Re,
-  Su as S,
-  Tu as ze,
-  Uv as C,
-  Vv as Be,
-  Wu as Ve,
-  Xb as He,
-  Xu as w,
-  Yr as Ue,
-  Z as We,
-  _r as Ge,
-  _x as T,
-  al as Ke,
-  bu as qe,
-  by as Je,
-  cx as E,
-  gb as Ye,
-  gt as D,
-  gv as Xe,
-  hl as Ze,
-  hu as Qe,
-  hx as $e,
-  kb as et,
-  lr as tt,
-  lu as nt,
-  mr as rt,
-  nb as it,
-  ny as at,
-  oa as ot,
-  qu as st,
-  rb as O,
-  rd as ct,
-  rn as lt,
-  sS as ut,
-  sb as dt,
-  sc as ft,
-  sy as pt,
-  tl as mt,
-  ut as ht,
-  vb as gt,
-  vu as _t,
-  vy as vt,
-  wS as yt,
-  wb as bt,
-  wu as xt,
-  xu as St,
-  yu as Ct,
-  yx as k,
+  $v as Ae,
+  AS as h,
+  Ab as je,
+  Cc as Me,
+  Cu as g,
+  ES as Ne,
+  Eu as Pe,
+  Gu as Fe,
+  Hv as Ie,
+  Ic as Le,
+  Ju as Re,
+  Kl as ze,
+  Lb as Be,
+  Pc as _,
+  Su as Ve,
+  TS as v,
+  Tb as He,
+  Tu as Ue,
+  Vc as y,
+  Vv as We,
+  Wv as b,
+  Xr as Ge,
+  Z as Ke,
+  Zb as qe,
+  Zu as x,
+  _b as Je,
+  _r as Ye,
+  _v as Xe,
+  bu as Ze,
+  bx as S,
+  cb as Qe,
+  cc as $e,
+  cy as et,
+  eb as C,
+  ex as w,
+  gl as T,
+  gt as E,
+  gu as tt,
+  gx as nt,
+  ib as D,
+  id as rt,
+  kx as O,
+  lS as it,
+  lr as at,
+  lx as ot,
+  mr as st,
+  nl as ct,
+  ol as lt,
+  qb as ut,
+  ql as dt,
+  rb as ft,
+  rn as pt,
+  ry as mt,
+  sa as ht,
+  ut as gt,
+  uu as _t,
+  vx as k,
+  xu as vt,
+  xy as yt,
+  yb as bt,
+  yu as xt,
+  yy as St,
+  zv as Ct,
 } from "./main.js";
 import { t as wt } from "./chunk~d7992cfd18.js";
 import { t as Tt } from "./chunk~c20130a1f0.js";
-var A = u(),
-  j = e(o()),
+var A = l(),
+  j = e(a()),
   M = class e {
     m_SteamInterface;
     m_setMessagesSeen = new Set();
@@ -150,21 +148,21 @@ var A = u(),
     }
     static Get() {
       return (
-        ut(e.sm_Instance, `MarketingMessages store not initialized`),
+        it(e.sm_Instance, `MarketingMessages store not initialized`),
         e.sm_Instance
       );
     }
     async GetMessageList(t, n = !1) {
-      if (!k.logged_in) return [];
-      let r = x.Init(Ct);
-      (r.Body().set_country_code(T.COUNTRY),
-        r.Body().set_elanguage(b(T.LANGUAGE)),
+      if (!S.logged_in) return [];
+      let r = O.Init(Ze);
+      (r.Body().set_country_code(k.COUNTRY),
+        r.Body().set_elanguage(h(k.LANGUAGE)),
         r.Body().set_client_package_version(t.nClientPackageVersion),
         r.Body().set_operating_system(t.eOSType),
         n && r.Body().set_include_seen_messages(!0),
-        xt(r),
-        ze(r, e.sm_DefaultDataRequest));
-      let i = await S.GetMarketingMessagesForUser(
+        Ue(r),
+        Pe(r, e.sm_DefaultDataRequest));
+      let i = await g.GetMarketingMessagesForUser(
         this.m_SteamInterface.GetServiceTransport(),
         r,
       );
@@ -178,17 +176,17 @@ var A = u(),
       return i.Body().messages();
     }
     async GetSingleMessage(t, n) {
-      let r = x.Init(_t);
-      (r.Body().set_gid(t), xt(r), ze(r, e.sm_DefaultDataRequest));
+      let r = O.Init(xt);
+      (r.Body().set_gid(t), Ue(r), Pe(r, e.sm_DefaultDataRequest));
       let i;
       if (
         ((i =
-          n || k.logged_in
-            ? await S.GetDisplayMarketingMessageForUser(
+          n || S.logged_in
+            ? await g.GetDisplayMarketingMessageForUser(
                 this.m_SteamInterface.GetServiceTransport(),
                 r,
               )
-            : await S.GetDisplayMarketingMessage(
+            : await g.GetDisplayMarketingMessage(
                 this.m_SteamInterface.GetAnonymousServiceTransport(),
                 r,
               )),
@@ -199,11 +197,11 @@ var A = u(),
     }
     MarkMessageSeen(e, t, n) {
       if (this.m_setMessagesSeen.has(e)) return;
-      let r = x.Init(St);
+      let r = O.Init(Ve);
       (r.Body().set_gid(e),
         r.Body().set_display_index(t),
         r.Body().set_template_type(n),
-        S.MarkMessageSeen(this.m_SteamInterface.GetServiceTransport(), r),
+        g.MarkMessageSeen(this.m_SteamInterface.GetServiceTransport(), r),
         this.m_setMessagesSeen.add(e));
     }
     BIsMessageSeen(e) {
@@ -236,12 +234,12 @@ var N = class {
   m_rgRecommendedAppIDs;
   m_nSaleItemCount;
   constructor(e) {
-    (f(this),
+    (s(this),
       (this.m_message = e),
       (this.m_templateVars = Et(e.template_vars_json()) ?? { ll_image: {} }));
     let t = e.associated_item(!1);
     ((this.m_associatedItemKey = t
-      ? pt({ item_type: t.item_type(), id: t.id() })
+      ? et({ item_type: t.item_type(), id: t.id() })
       : void 0),
       (this.m_rgRecommendedAppIDs = e
         .recommended_items()
@@ -258,31 +256,31 @@ var N = class {
   static GetTypeAsLocalizedString(e) {
     switch (e) {
       case 2:
-        return O(`#spotlight_weekend_deal`);
+        return D(`#spotlight_weekend_deal`);
       case 11:
-        return O(`#spotlight_midweek_madness`);
+        return D(`#spotlight_midweek_madness`);
       case 12:
-        return O(`#spotlight_daily_deal`);
+        return D(`#spotlight_daily_deal`);
       case 1:
-        return O(`#msg_available_everywhere`);
+        return D(`#msg_available_everywhere`);
       case 17:
-        return O(`#msg_new_game`);
+        return D(`#msg_new_game`);
       case 3:
-        return O(`#msg_prepurchase_now`);
+        return D(`#msg_prepurchase_now`);
       case 4:
-        return O(`#msg_play_now`);
+        return D(`#msg_play_now`);
       case 5:
-        return O(`#label_pre_load_now`);
+        return D(`#label_pre_load_now`);
       case 10:
-        return O(`#label_just_updated`);
+        return D(`#label_just_updated`);
       case 13:
-        return O(`#label_new_dlc_available`);
+        return D(`#label_new_dlc_available`);
       case 14:
-        return O(`#label_free_weekend`);
+        return D(`#label_free_weekend`);
       case 15:
-        return O(`#msg_on_sale_now`);
+        return D(`#msg_on_sale_now`);
       case 16:
-        return O(`#msg_play_beta_now`);
+        return D(`#msg_play_beta_now`);
     }
     return null;
   }
@@ -313,24 +311,24 @@ var N = class {
   GetLocalizedAltText(e) {
     return (
       this.m_templateVars?.localized_alt_text?.[e] ||
-      this.m_templateVars?.localized_alt_text?.[g.GetELanguageFallback(e)] ||
+      this.m_templateVars?.localized_alt_text?.[C.GetELanguageFallback(e)] ||
       void 0
     );
   }
   GetTemplateImage() {
-    let e = this.m_templateVars.ll_image?.[T.LANGUAGE],
-      t = b(T.LANGUAGE);
+    let e = this.m_templateVars.ll_image?.[k.LANGUAGE],
+      t = h(k.LANGUAGE);
     return (
       !e &&
-        T.LANGUAGE == v(27) &&
+        k.LANGUAGE == v(27) &&
         ((e = this.m_templateVars.ll_image?.LATAM), (t = 27)),
       e || ((e = this.m_templateVars.ll_image?.english), (t = 0)),
       [e?.path, t]
     );
   }
   GetTemplateBackgroundImage() {
-    let e = this.m_templateVars.background?.[T.LANGUAGE],
-      t = b(T.LANGUAGE);
+    let e = this.m_templateVars.background?.[k.LANGUAGE],
+      t = h(k.LANGUAGE);
     return (
       e || ((e = this.m_templateVars.background?.english), (t = 0)),
       [e?.path, t]
@@ -349,8 +347,8 @@ var N = class {
     return !!this.m_templateVars.featured_video_loop;
   }
   GetPosterImage() {
-    let e = this.m_templateVars.poster?.[T.LANGUAGE],
-      t = b(T.LANGUAGE);
+    let e = this.m_templateVars.poster?.[k.LANGUAGE],
+      t = h(k.LANGUAGE);
     return (
       e || ((e = this.m_templateVars.poster?.english), (t = 0)), [e?.path, t]
     );
@@ -409,7 +407,7 @@ var N = class {
     let t = v(e),
       n = this.m_templateVars.webm?.[t]?.path;
     if (n) return [n, e];
-    let r = g.GetELanguageFallback(e),
+    let r = C.GetELanguageFallback(e),
       i = v(r);
     return [this.m_templateVars.webm?.[i]?.path, r];
   }
@@ -421,7 +419,7 @@ var N = class {
     let t = v(e),
       n = this.m_templateVars.mp4?.[t]?.path;
     if (n) return [n, e];
-    let r = g.GetELanguageFallback(e),
+    let r = C.GetELanguageFallback(e),
       i = v(r);
     return [this.m_templateVars.mp4?.[i]?.path, r];
   }
@@ -440,7 +438,7 @@ var N = class {
     return this.m_message.associated_item(!1);
   }
 };
-Pe([n], N.prototype, `m_templateVars`, void 0);
+ut([d], N.prototype, `m_templateVars`, void 0);
 var Ot = `^(replay)([0-9]{4})`;
 function kt(e) {
   return e.match(Ot)?.[2];
@@ -487,7 +485,7 @@ function Mt(e, t, n) {
       if (r) {
         let e = new N(r);
         if (n) {
-          let t = E(`marketingmessage_preview_config`, `application_config`);
+          let t = ot(`marketingmessage_preview_config`, `application_config`);
           (t?.dlc_appid_overrides?.length &&
             e.SetDLCAppIDOverride(t.dlc_appid_overrides),
             t?.recommended_appid_overrides?.length &&
@@ -506,12 +504,12 @@ function Mt(e, t, n) {
   return { message: a, isError: i };
 }
 function Nt(e, t, n, r, i) {
-  let a = x.Init(qe);
+  let a = O.Init(vt);
   (a.Body().set_gid(t),
     a.Body().set_display_index(n),
     a.Body().set_template_type(r),
     a.Body().set_click_location(i),
-    S.MarkMessageClicked(e, a));
+    g.MarkMessageClicked(e, a));
 }
 var P = j.createContext({ setLegalText: void 0 });
 function Pt() {
@@ -522,8 +520,8 @@ function Ft() {
 }
 function It(e) {
   let [t, n] = j.useState(),
-    r = st(`BrowserView.RegisterForMessageFromParent`),
-    i = h(),
+    r = Re(`BrowserView.RegisterForMessageFromParent`),
+    i = w(),
     a = j.useMemo(() => ({ setLegalText: r && !i ? n : void 0 }), [r, n, i]);
   return (0, A.jsxs)(P.Provider, {
     value: a,
@@ -556,7 +554,7 @@ function Lt(e) {
   );
 }
 function Rt() {
-  let e = l();
+  let e = n();
   return j.useMemo(() => {
     let t = new URLSearchParams(e.search);
     return {
@@ -580,7 +578,7 @@ function zt(e) {
 }
 function Bt(e, t, n) {
   if (!n && e.BHasTemplateAnimatedAssets()) {
-    let n = g.GetELanguageFallback(t);
+    let n = C.GetELanguageFallback(t);
     return (
       e.BHasTemplateAnimatedAssetForLanguage(t) ||
       e.BHasTemplateAnimatedAssetForLanguage(n)
@@ -592,8 +590,8 @@ function F(e, t, n, r) {
   if (!r || !r.path) return null;
   let i = n ? `?t=` + n : ``;
   return r.path.startsWith(`images`)
-    ? `${T.MEDIA_CDN_URL}steam/marketing/${e}/${r.path}${i}`
-    : `${T.BASE_URL_SHARED_CDN}store_item_assets/mm/${e}/${t}/${r.path}${i}`;
+    ? `${k.MEDIA_CDN_URL}steam/marketing/${e}/${r.path}${i}`
+    : `${k.BASE_URL_SHARED_CDN}store_item_assets/mm/${e}/${t}/${r.path}${i}`;
 }
 function Vt(e) {
   let { path: t, message: n, eLanguage: r, ...i } = e,
@@ -617,7 +615,7 @@ function Ht(e) {
           : l.current.paused || (l.current.pause(), (u.current = !0)));
     }, []);
   return (
-    Me(document, `visibilitychange`, d),
+    ze(document, `visibilitychange`, d),
     (0, j.useEffect)(() => d(), [d]),
     (0, A.jsxs)(`video`, {
       ...a,
@@ -668,10 +666,10 @@ function R(e) {
     r = X(),
     i = Q(r.GetTemplateVars().linkurl, 1),
     [a, o] = n ? r.GetTemplateBackgroundImage() : r.GetTemplateImage();
-  return (0, A.jsx)(_, {
+  return (0, A.jsx)(y, {
     focusable: !0,
     noFocusRing: !0,
-    className: y(tn, t && `_0b6eHRCoMso-`),
+    className: _(tn, t && `_0b6eHRCoMso-`),
     onActivate: i,
     children: a && (0, A.jsx)(Vt, { message: r, path: a, eLanguage: o }),
   });
@@ -679,20 +677,20 @@ function R(e) {
 function hn(e) {
   let { fnOnClick: t } = e,
     n = X(),
-    r = b(T.LANGUAGE),
+    r = h(k.LANGUAGE),
     [i, a] = n.GetTemplateMP4WithFallback(r),
     [o, s] = n.GetTemplateWebMWithFallback(r);
   return (
-    ut(
+    it(
       a == s,
       `GameAnimatedImageViaVideo mismatch fallback languages eLang ${r} mp4 ${a} webm ${s}`,
     ),
     (0, A.jsx)(`div`, {
       className: nn,
-      children: (0, A.jsx)(_, {
+      children: (0, A.jsx)(y, {
         focusable: !0,
         noFocusRing: !0,
-        className: y(tn),
+        className: _(tn),
         onActivate: t,
         children: (0, A.jsx)(Ht, {
           muted: !0,
@@ -702,7 +700,7 @@ function hn(e) {
           mp4Path: i,
           message: n,
           webmPath: o,
-          language: T.IN_CLIENT ? s : a,
+          language: k.IN_CLIENT ? s : a,
         }),
       }),
     })
@@ -710,13 +708,13 @@ function hn(e) {
 }
 function z(e) {
   let { id: t } = e,
-    { data: n } = Le(t),
-    r = n ? je(n, `main_capsule`) : void 0;
+    { data: n } = Ct(t),
+    r = n ? Le(n, `main_capsule`) : void 0;
   return r ? (0, A.jsx)(gn, { strImageURL: r }) : null;
 }
 function gn(e) {
   return (0, A.jsx)(`div`, {
-    className: y(tn, rn, $t),
+    className: _(tn, rn, $t),
     children: (0, A.jsx)(`img`, { src: e.strImageURL }),
   });
 }
@@ -725,17 +723,17 @@ function _n(e) {
   return (0, A.jsxs)(A.Fragment, {
     children: [
       (0, A.jsx)(`div`, { className: an, children: t }),
-      (0, A.jsx)(`div`, { className: y(on, r && `RhkqxwedI4w-`), children: n }),
+      (0, A.jsx)(`div`, { className: _(on, r && `RhkqxwedI4w-`), children: n }),
     ],
   });
 }
 function vn(e) {
   let { id: t, bPreview: n, bPreferAssetWithoutOverride: r } = e,
-    { data: i } = C(t),
+    { data: i } = b(t),
     a = i?.appid,
-    o = h(),
-    { bIsOwned: s } = ce(t),
-    c = lt(a),
+    o = w(),
+    { bIsOwned: s } = ue(t),
+    c = pt(a),
     l = ie(a),
     u = Hr(a ?? 0),
     d = (0, j.useMemo)(
@@ -758,7 +756,7 @@ function vn(e) {
   return (0, A.jsxs)(`div`, {
     className: sn,
     children: [
-      (0, A.jsx)(Ze, {
+      (0, A.jsx)(T, {
         className: cn,
         onClick: p,
         children: (0, A.jsx)(pe, {
@@ -772,7 +770,7 @@ function vn(e) {
         children: [
           (0, A.jsx)(`div`, {
             className: un,
-            children: (0, A.jsx)(Ze, {
+            children: (0, A.jsx)(T, {
               className: dn,
               onClick: p,
               children: i?.name,
@@ -781,10 +779,10 @@ function vn(e) {
           (0, A.jsxs)(`div`, {
             className: fn,
             children: [
-              (0, A.jsx)(Ze, {
+              (0, A.jsx)(T, {
                 onClick: p,
-                className: y(pn, mn),
-                children: O(
+                className: _(pn, mn),
+                children: D(
                   s
                     ? `#EventDisplay_ViewInLibrary`
                     : `#EventDisplay_ViewStorePage`,
@@ -797,12 +795,12 @@ function vn(e) {
                     children: [
                       c &&
                         (0, A.jsx)(`span`, {
-                          children: O(`#EventDisplay_OnWishlist`),
+                          children: D(`#EventDisplay_OnWishlist`),
                         }),
                       !c &&
                         l &&
                         (0, A.jsx)(`span`, {
-                          children: O(`#EventDisplay_Follow`),
+                          children: D(`#EventDisplay_Follow`),
                         }),
                     ],
                   }),
@@ -815,9 +813,9 @@ function vn(e) {
                         className: `RGk4BbX6ZEc-`,
                         children: [
                           (0, A.jsx)(`span`, {
-                            children: O(`#MarketingMessages_DLC_lastplayed`),
+                            children: D(`#MarketingMessages_DLC_lastplayed`),
                           }),
-                          bt(d.rtime_last_played),
+                          He(d.rtime_last_played),
                         ],
                       }),
                     !!d?.playtime_forever &&
@@ -825,7 +823,7 @@ function vn(e) {
                         className: `RGk4BbX6ZEc-`,
                         children: [
                           (0, A.jsx)(`span`, {
-                            children: O(`#MarketingMessages_DLC_hours`),
+                            children: D(`#MarketingMessages_DLC_hours`),
                           }),
                           Oe(d.playtime_forever),
                         ],
@@ -846,25 +844,25 @@ function B(e) {
 function V(e) {
   let { bHidePrice: t, fnOnClickButton: n } = e,
     r = X(),
-    [i, a] = te(() => [
+    [i, a] = f(() => [
       r.GetTemplateVars().button_text_custom || r.GetTemplateVars().button_text,
       !!r.GetTemplateVars().hide_price,
     ]),
     o = !!(t || a);
   return (0, A.jsxs)(`div`, {
-    className: y(Kt, !1),
+    className: _(Kt, !1),
     children: [
       (0, A.jsxs)(`div`, {
         className: qt,
         children: [
-          (0, A.jsx)(_, {
+          (0, A.jsx)(y, {
             focusable: !0,
             noFocusRing: !0,
             className: Yt,
             onActivate: n,
             children: i,
           }),
-          !o && (0, A.jsx)(Ke, { children: (0, A.jsx)(yn, {}) }),
+          !o && (0, A.jsx)(lt, { children: (0, A.jsx)(yn, {}) }),
         ],
       }),
       (0, A.jsx)(bn, {}),
@@ -873,10 +871,10 @@ function V(e) {
 }
 function yn() {
   let e = X().associated_item_key,
-    { data: t } = Be(e);
+    { data: t } = Ie(e);
   return !t || !t.formatted_final_price
     ? (0, A.jsx)(`div`, { className: Zt })
-    : (0, A.jsx)(`div`, { className: Xt, children: (0, A.jsx)(ae, { id: e }) });
+    : (0, A.jsx)(`div`, { className: Xt, children: (0, A.jsx)(ne, { id: e }) });
 }
 function bn(e) {
   let t = X();
@@ -926,11 +924,11 @@ function xn(e) {
 function Sn(e) {
   let { bPreview: t, bUseAnimated: n } = e,
     { message: r, eventModel: i } = xn(t),
-    { data: a } = C(r.associated_item_key),
+    { data: a } = b(r.associated_item_key),
     o = m(a) ?? ``,
     s = wn(i, o, 1),
     c = wn(i, o, 2);
-  return (0, A.jsx)(D, {
+  return (0, A.jsx)(E, {
     submethod: `partner_event`,
     children: (0, A.jsxs)(I, {
       children: [
@@ -958,18 +956,18 @@ function Sn(e) {
 function Cn(e) {
   let { message: t, fnOnClickButton: n, eventModel: r, bUseAnimated: i } = e,
     [a, o] = t.GetTemplateImage(),
-    s = b(T.LANGUAGE);
+    s = h(k.LANGUAGE);
   return (0, A.jsxs)(`div`, {
     className: Ut,
     children: [
       (0, A.jsx)(_n, {
-        strType: O(`#MarketingMessages_MajorUpdate`),
+        strType: D(`#MarketingMessages_MajorUpdate`),
         strTitle: r?.GetNameWithFallback(s),
       }),
-      (0, A.jsxs)(_, {
+      (0, A.jsxs)(y, {
         focusable: !0,
         noFocusRing: !0,
-        className: y(Wt),
+        className: _(Wt),
         onActivate: n,
         children: [
           a && !i && (0, A.jsx)(Vt, { message: t, path: a, eLanguage: o }),
@@ -980,21 +978,21 @@ function Cn(e) {
   });
 }
 function wn(e, t, n) {
-  let r = re(e?.appid),
-    i = ct(Wr(t), `partner_event`);
-  if (e?.BIsVisibleEvent() && r && e.BIsValidForRealm(T.EREALM)) {
-    let n = $e();
-    T.IN_CLIENT && (n > 1726604483 || n == 0)
+  let r = fe(e?.appid),
+    i = rt(Wr(t), `partner_event`);
+  if (e?.BIsVisibleEvent() && r && e.BIsValidForRealm(k.EREALM)) {
+    let n = nt();
+    k.IN_CLIENT && (n > 1726604483 || n == 0)
       ? (t = `steam://open/library/event/${e.appid}|${e.GID}`)
-      : ((t = `${T.STORE_BASE_URL}news/app/${e.appid}?emclan=${e.clanSteamID.ConvertTo64BitString()}&emgid=${e.GID}`),
-        T.IN_CLIENT && (t = `steam://openurl/${t}`));
+      : ((t = `${k.STORE_BASE_URL}news/app/${e.appid}?emclan=${e.clanSteamID.ConvertTo64BitString()}&emgid=${e.GID}`),
+        k.IN_CLIENT && (t = `steam://openurl/${t}`));
   } else
     ((t = i),
       e && (t += `${i.includes(`?`) ? `&` : `?`}emgid=${e.GID}`),
-      T.IN_CLIENT && (t = `steam://openurl/${t}`));
+      k.IN_CLIENT && (t = `steam://openurl/${t}`));
   return Q(t, n, !0);
 }
-var Tn = e(ee());
+var Tn = e(u());
 function En(e) {
   let {
     isLoading: t,
@@ -1008,7 +1006,7 @@ function En(e) {
   return t || n ? null : r;
 }
 async function Dn(e) {
-  let t = `${T.STORE_BASE_URL}dlc/${e}/ajaxgetdlccount`,
+  let t = `${k.STORE_BASE_URL}dlc/${e}/ajaxgetdlccount`,
     n = { origin: self.origin },
     r = await Tn.default.get(t, { params: n, withCredentials: !1 });
   if (r.status !== 200 || r.data.success !== 1)
@@ -1034,13 +1032,13 @@ function jn(e) {
     (0, j.useEffect)(() => {
       if (n) {
         let e = i
-          ? dt(`#MarketingMessages_See_Count_Items`, i)
-          : O(`#MarketingMessages_See_All_Items`);
+          ? Qe(`#MarketingMessages_See_Count_Items`, i)
+          : D(`#MarketingMessages_See_All_Items`);
         (n.OverrideCustomText(e),
-          n.OverrideURL(`${T.STORE_BASE_URL}dlc/${n.associated_item_appid}`));
+          n.OverrideURL(`${k.STORE_BASE_URL}dlc/${n.associated_item_appid}`));
       }
     }, [n, i]),
-    (0, A.jsx)(D, {
+    (0, A.jsx)(E, {
       submethod: `dlc_override`,
       children: (0, A.jsxs)(I, {
         children: [
@@ -1071,8 +1069,8 @@ function K(e) {
     children: [
       !!r && (0, A.jsx)(`div`, { className: `w00lHTKEq4I-`, children: r }),
       n == 1
-        ? (0, A.jsx)(q, { strDesc: O(`#MarketingMessages_DLC_desc_singular`) })
-        : (0, A.jsx)(q, { strDesc: O(`#MarketingMessages_DLC_desc`) }),
+        ? (0, A.jsx)(q, { strDesc: D(`#MarketingMessages_DLC_desc_singular`) })
+        : (0, A.jsx)(q, { strDesc: D(`#MarketingMessages_DLC_desc`) }),
     ],
   });
 }
@@ -1195,8 +1193,8 @@ function Rn(e) {
     i = (0, j.useRef)(null);
   wt(i);
   let a = Q(t.GetTemplateVars().linkurl, 1),
-    o = h();
-  return (0, A.jsx)(_, {
+    o = w();
+  return (0, A.jsx)(y, {
     focusable: !0,
     noFocusRing: !0,
     onActivate: (e) => (!o && t.GetFeaturedVideoAutoPlay() ? a(e) : r(!0)),
@@ -1212,12 +1210,12 @@ function Rn(e) {
           crossOrigin: `anonymous`,
           children: [
             (0, A.jsx)(`source`, {
-              src: mt(t.GetFeaturedVideoWebMURL()),
+              src: ct(t.GetFeaturedVideoWebMURL()),
               type: `video/webm`,
             }),
-            !T.IN_CLIENT &&
+            !k.IN_CLIENT &&
               (0, A.jsx)(`source`, {
-                src: mt(t.GetFeaturedVideoMP4URL()),
+                src: ct(t.GetFeaturedVideoMP4URL()),
                 type: `video/mp4`,
               }),
             (0, A.jsx)(Bn, { message: t }),
@@ -1234,7 +1232,7 @@ function zn(e) {
   return (0, A.jsxs)(A.Fragment, {
     children: [
       (0, A.jsx)(`img`, { src: a, className: In }),
-      (0, A.jsx)(Re, {}),
+      (0, A.jsx)(Me, {}),
     ],
   });
 }
@@ -1245,7 +1243,7 @@ function Bn(e) {
         n = t.GetTemplateVars()?.last_asset_mtime,
         r = [];
       for (let i = 0; i < 32; ++i) {
-        if (!g.IsELanguageValidInRealm(i, T.EREALM)) continue;
+        if (!C.IsELanguageValidInRealm(i, k.EREALM)) continue;
         let a = v(i);
         if (e && e[a]) {
           let o = e[a].path,
@@ -1256,9 +1254,9 @@ function Bn(e) {
               {
                 src: s,
                 kind: `subtitles`,
-                srcLang: yt(i),
-                default: T.LANGUAGE == a,
-                label: O(`#language_selection_` + v(i)),
+                srcLang: Ne(i),
+                default: k.LANGUAGE == a,
+                label: D(`#language_selection_` + v(i)),
               },
               t.id + ` ` + i,
             ),
@@ -1273,7 +1271,7 @@ function Vn(e) {
   let { bLowBandwidthMode: t } = e,
     n = X(),
     r = !t && n.GetTemplateVars().custom_display === `featured_video`;
-  return (0, A.jsx)(D, {
+  return (0, A.jsx)(E, {
     children: (0, A.jsxs)(I, {
       children: [
         (0, A.jsx)(R, { isBackgroundBlur: !0, bOverrideUseBackgroundImage: r }),
@@ -1290,7 +1288,7 @@ function Vn(e) {
 }
 function Hn(e) {
   let t = Q(X().GetTemplateVars().linkurl, 6);
-  return (0, A.jsx)(D, {
+  return (0, A.jsx)(E, {
     children: (0, A.jsxs)(I, {
       children: [
         (0, A.jsx)(R, { isBackgroundBlur: !0 }),
@@ -1303,7 +1301,7 @@ function Hn(e) {
 var Un = e(_e());
 function Wn(e) {
   let { id: t } = e,
-    { data: n } = C(t),
+    { data: n } = b(t),
     r = (0, j.useMemo)(() => {
       if (!n) return [];
       let e = n.categories?.supported_player_categoryids?.slice(0, 1) || [];
@@ -1319,22 +1317,22 @@ function Wn(e) {
   return !r || r.length == 0
     ? null
     : (0, A.jsx)(`div`, {
-        className: y(ne, `SaleTagBlockCtn`),
+        className: _(ae, `SaleTagBlockCtn`),
         children:
           r?.length > 0
             ? (0, A.jsx)(`div`, {
-                className: y(fe, oe),
+                className: _(re, ce),
                 children: r.map((e) =>
                   (0, A.jsx)(Kn, { categoryID: e }, `cat_` + e),
                 ),
               })
-            : (0, A.jsx)(`div`, { children: O(`#Broadcast_None`) }),
+            : (0, A.jsx)(`div`, { children: D(`#Broadcast_None`) }),
       });
 }
 var Gn = class e {
   m_rgCategories;
   constructor() {
-    this.m_rgCategories = E(`feature_categories`, `application_config`);
+    this.m_rgCategories = ot(`feature_categories`, `application_config`);
   }
   static g_Self = null;
   static Get() {
@@ -1346,13 +1344,13 @@ function Kn(e) {
     n = Gn.Get().m_rgCategories.find((e) => e.categoryid == t);
   return n
     ? (0, A.jsx)(`div`, {
-        className: ue,
-        children: (0, A.jsx)(Ue, {
+        className: se,
+        children: (0, A.jsx)(Ge, {
           toolTipContent: n.display_name,
           children: (0, A.jsx)(`div`, {
-            className: de,
+            className: oe,
             style: {
-              background: `url(${T.STORE_CDN_URL}${n.image_url}) no-repeat center center/cover`,
+              background: `url(${k.STORE_CDN_URL}${n.image_url}) no-repeat center center/cover`,
             },
           }),
         }),
@@ -1366,16 +1364,16 @@ function qn(e) {
       bLowBandwidthMode: r,
       bUseAssetWithoutOverride: i,
     } = e,
-    { data: a } = Ie(t),
-    { data: o } = C(t),
-    s = nt(t);
+    { data: a } = Ae(t),
+    { data: o } = b(t),
+    s = _t(t);
   return !a || !o
     ? (0, A.jsx)(`div`, {
-        className: y(Te, xe),
+        className: _(Te, xe),
         children: (0, A.jsx)(ge, { size: `medium` }),
       })
     : (0, A.jsx)(`div`, {
-        className: y(Te, xe),
+        className: _(Te, xe),
         children: (0, A.jsx)(Ee, {
           id: t,
           elFeaturedInCenter: (0, A.jsx)(Jn, {
@@ -1392,14 +1390,14 @@ function qn(e) {
 }
 function Jn(e) {
   let { id: t, fnOnClickButton: n, bUseAssetWithoutOverride: r } = e,
-    [, i] = Fe(),
-    { data: a } = Le(t, r),
-    { data: o } = C(t),
-    { data: s } = Ae(t),
-    { data: c } = at(t);
+    [, i] = dt(),
+    { data: a } = Ct(t, r),
+    { data: o } = b(t),
+    { data: s } = We(t),
+    { data: c } = mt(t);
   if (!a || !s || !o) return null;
-  let l = je(a, `main_capsule`);
-  return (0, A.jsxs)(_, {
+  let l = Le(a, `main_capsule`);
+  return (0, A.jsxs)(y, {
     focusable: !0,
     noFocusRing: !0,
     className: Se,
@@ -1410,7 +1408,7 @@ function Jn(e) {
       (0, A.jsxs)(`div`, {
         className: ye,
         children: [
-          (0, A.jsx)(`div`, { className: y(Ce), children: o.name || `` }),
+          (0, A.jsx)(`div`, { className: _(Ce), children: o.name || `` }),
           (0, A.jsxs)(`div`, {
             className: we,
             children: [s.short_description, ` `],
@@ -1437,7 +1435,7 @@ function Qn(e) {
     r = X(),
     i = Q(r.GetTemplateVars().linkurl, 5),
     a = r.associated_item_key;
-  return (0, A.jsx)(D, {
+  return (0, A.jsx)(E, {
     submethod: `mm-auto-render`,
     children: (0, A.jsxs)(I, {
       children: [
@@ -1456,7 +1454,7 @@ function Qn(e) {
                   (0, A.jsx)($n, { message: r, id: a }),
                 ],
               }),
-              (0, A.jsx)(se, {
+              (0, A.jsx)(de, {
                 appid: r.associated_item_appid,
                 children: (0, A.jsx)(qn, {
                   id: a,
@@ -1479,14 +1477,14 @@ function Qn(e) {
 }
 function $n(e) {
   let { message: t, id: n } = e,
-    { data: r } = C(n),
+    { data: r } = b(n),
     i = r?.free_weekend,
     [a] = he(`timezone`),
     [o] = he(`locale`);
   if (t.GetType() == 14) {
     if (i?.text) return (0, A.jsx)(`div`, { className: Y, children: i.text });
     if (i?.end_time) {
-      o && it.SetPreferredLocales([o]);
+      o && ft.SetPreferredLocales([o]);
       let e = a || Intl.DateTimeFormat().resolvedOptions().timeZone,
         t = i.end_time,
         n = Un.unix(t).tz(e),
@@ -1494,19 +1492,19 @@ function $n(e) {
         s = r.match(/^-?\d/)
           ? `UTC${Un.unix(t).tz(e).format(`Z`).replace(`:00`, ``)}`
           : r,
-        c = gt(n.unix(), !1, s, a);
+        c = bt(n.unix(), !1, s, a);
       return (0, A.jsx)(`div`, {
         className: Y,
-        children: O(`#msg_free_play_until`, c),
+        children: D(`#msg_free_play_until`, c),
       });
     }
     return (0, A.jsx)(`div`, {
       className: Y,
-      children: O(`#msg_free_play_weekend`),
+      children: D(`#msg_free_play_weekend`),
     });
   }
   let s = t.GetTemplateVars()?.autorender_subtitle_token;
-  return s ? (0, A.jsx)(`div`, { className: Y, children: O(s) }) : null;
+  return s ? (0, A.jsx)(`div`, { className: Y, children: D(s) }) : null;
 }
 var er = `OdjDhjB2yrA-`,
   tr = `YOmAhzZv9RQ-`,
@@ -1518,7 +1516,7 @@ function or() {
   let e = X(),
     { sale_clan_account: t, sale_clan_event_gid: n } = e.GetTemplateVars(),
     { eventModel: r, bLoading: i } = ke(t ? Number(t) : void 0, n),
-    a = ve(r, `capsule`, b(T.LANGUAGE)),
+    a = ve(r, `capsule`, h(k.LANGUAGE)),
     o = e.GetRecommendedAppIDs().length >= 4,
     s = (0, j.useMemo)(
       () =>
@@ -1532,9 +1530,9 @@ function or() {
     (0, j.useEffect)(() => {
       let t = sr(e.GetSaleItemCount());
       t &&
-        e.OverrideCustomText(O(`#MarketingMessages_See_AtLeast_Items`, ot(t)));
+        e.OverrideCustomText(D(`#MarketingMessages_See_AtLeast_Items`, ht(t)));
     }, [e]),
-    (0, A.jsx)(D, {
+    (0, A.jsx)(E, {
       submethod: `sale_items`,
       children: (0, A.jsxs)(I, {
         children: [
@@ -1551,14 +1549,14 @@ function or() {
                       rgSaleCapsules: s,
                       eClickLocation: 5,
                       children: (0, A.jsx)(q, {
-                        strDesc: O(`#MarketingMessages_SaleItems_Label`),
+                        strDesc: D(`#MarketingMessages_SaleItems_Label`),
                       }),
                     })
                   : (0, A.jsx)(Pn, {
                       rgSaleCapsules: s,
                       eClickLocation: 5,
                       children: (0, A.jsx)(q, {
-                        strDesc: O(`#MarketingMessages_SaleItems_Label`),
+                        strDesc: D(`#MarketingMessages_SaleItems_Label`),
                       }),
                     }),
               }),
@@ -1579,10 +1577,10 @@ function cr(e) {
     a = Q(i, 1);
   if (r) return (0, A.jsx)(`div`, { className: er });
   if (!t || !n) return (0, A.jsx)(R, {});
-  let o = t.GetNameWithFallback(b(T.LANGUAGE)),
+  let o = t.GetNameWithFallback(h(k.LANGUAGE)),
     s = t.endTime,
-    c = !!s && s > et();
-  return (0, A.jsxs)(_, {
+    c = !!s && s > je();
+  return (0, A.jsxs)(y, {
     focusable: !0,
     noFocusRing: !0,
     className: er,
@@ -1593,14 +1591,14 @@ function cr(e) {
         className: nr,
         children: [
           (0, A.jsx)(_n, {
-            strType: O(`#MarketingMessages_SaleEvent`),
+            strType: D(`#MarketingMessages_SaleEvent`),
             strTitle: o,
             bSmallTitle: !0,
           }),
           c &&
             (0, A.jsx)(`div`, {
               className: `HY39mN5xR8M-`,
-              children: O(`#MarketingMessages_SaleEvent_Through`, Ye(s, ir)),
+              children: D(`#MarketingMessages_SaleEvent_Through`, Je(s, ir)),
             }),
         ],
       }),
@@ -1629,7 +1627,7 @@ function ur(e) {
   );
 }
 var dr = j.lazy(() =>
-  Ne(
+  Be(
     () => import(`./chunk~035fbeff8f.js`),
     __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8]),
     import.meta.url,
@@ -1637,9 +1635,9 @@ var dr = j.lazy(() =>
 );
 function fr(e) {
   let { message: t, active: n, preview: r } = e,
-    i = b(T.LANGUAGE),
+    i = h(k.LANGUAGE),
     { bLowBandwidthMode: a } = Rt();
-  if (At(t.GetTemplateVars().custom_display || ``) && k.logged_in) {
+  if (At(t.GetTemplateVars().custom_display || ``) && S.logged_in) {
     let e = Number(kt(t.GetTemplateVars().custom_display || ``));
     return isNaN(e) ? null : (0, A.jsx)(dr, { active: n, year: e });
   }
@@ -1688,31 +1686,31 @@ function Pr() {
 function Fr(e) {
   let { MarketingMessagesStore: t } = e,
     n = Rt(),
-    { rgMessages: i, isError: a } = jt(t, n),
-    [o, s] = j.useState(!1),
-    [c, l] = j.useState(0);
+    { rgMessages: r, isError: i } = jt(t, n),
+    [a, o] = j.useState(!1),
+    [s, c] = j.useState(0);
   Tt(pr);
-  let u = r();
+  let l = te();
   if (
     (j.useEffect(() => {
-      i &&
-        !i.length &&
-        !a &&
+      r &&
+        !r.length &&
+        !i &&
         (n.bIncludeSeenMessages
-          ? s(!0)
-          : u.replace({
-              ...u.location,
+          ? o(!0)
+          : l.replace({
+              ...l.location,
               search: zt({ ...n, bIncludeSeenMessages: !0 }),
             }));
-    }, [i, n, u, a]),
-    a)
+    }, [r, n, l, i]),
+    i)
   )
     return (0, A.jsx)(Z, {
-      children: O(`#Error_ErrorCommunicatingWithNetwork`),
+      children: D(`#Error_ErrorCommunicatingWithNetwork`),
     });
-  if (o)
-    return (0, A.jsx)(Z, { children: O(`#MarketingMessages_NoneAvailable`) });
-  let d = n.bIncludeSeenMessages ? i : i?.slice(0, Mr);
+  if (a)
+    return (0, A.jsx)(Z, { children: D(`#MarketingMessages_NoneAvailable`) });
+  let u = n.bIncludeSeenMessages ? r : r?.slice(0, Mr);
   return (0, A.jsxs)(`div`, {
     className: mr,
     children: [
@@ -1720,11 +1718,11 @@ function Fr(e) {
         className: hr,
         children: (0, A.jsx)(Ir, {
           MarketingMessagesStore: t,
-          rgMessages: d,
-          iActiveMessage: c,
+          rgMessages: u,
+          iActiveMessage: s,
         }),
       }),
-      (0, A.jsx)(Lr, { cMessages: d?.length, iMessage: c, setMessage: l }),
+      (0, A.jsx)(Lr, { cMessages: u?.length, iMessage: s, setMessage: c }),
     ],
   });
 }
@@ -1748,7 +1746,7 @@ function Ir(e) {
         ),
       })
     : (0, A.jsx)(`div`, {
-        className: y(Cr, wr),
+        className: _(Cr, wr),
         children: (0, A.jsx)(ge, { size: `xxlarge`, msDelayAppear: 500 }),
       });
 }
@@ -1770,9 +1768,9 @@ function Lr(e) {
           className: _r,
           children: [
             (0, A.jsx)(`div`, {
-              className: y(vr, s && `gHoA3r84Hvo-`),
+              className: _(vr, s && `gHoA3r84Hvo-`),
               onClick: s,
-              children: (0, A.jsx)(ft, { angle: 180 }),
+              children: (0, A.jsx)($e, { angle: 180 }),
             }),
             (0, A.jsx)(`div`, { className: yr }),
             (0, A.jsx)(`div`, {
@@ -1781,9 +1779,9 @@ function Lr(e) {
             }),
             (0, A.jsx)(`div`, { className: yr }),
             (0, A.jsx)(`div`, {
-              className: y(vr, c && `gHoA3r84Hvo-`),
+              className: _(vr, c && `gHoA3r84Hvo-`),
               onClick: c,
-              children: (0, A.jsx)(ft, { angle: 0 }),
+              children: (0, A.jsx)($e, { angle: 0 }),
             }),
           ],
         }),
@@ -1795,31 +1793,31 @@ function Rr(e) {
   let { active: t, iMessage: n, setMessage: r } = e,
     i = j.useCallback(() => r(n), [r, n]);
   return (0, A.jsx)(`div`, {
-    className: y(Sr, t && `gHoA3r84Hvo-`),
+    className: _(Sr, t && `gHoA3r84Hvo-`),
     onClick: i,
   });
 }
 function zr(e) {
   let { MarketingMessagesStore: t, preview: n } = e,
-    r = c(),
-    { message: i, isError: a } = Mt(t, r.params.messageid, n);
+    i = r(),
+    { message: a, isError: o } = Mt(t, i.params.messageid, n);
   return (
     Tt(pr),
-    a
-      ? (0, A.jsx)(Z, { children: O(`#Error_ErrorCommunicatingWithNetwork`) })
-      : r.params.messageid
-        ? i
-          ? (0, A.jsx)(ur, { message: i, preview: n })
+    o
+      ? (0, A.jsx)(Z, { children: D(`#Error_ErrorCommunicatingWithNetwork`) })
+      : i.params.messageid
+        ? a
+          ? (0, A.jsx)(ur, { message: a, preview: n })
           : null
-        : (0, A.jsx)(Z, { children: O(`#MarketingMessages_NoneAvailable`) })
+        : (0, A.jsx)(Z, { children: D(`#MarketingMessages_NoneAvailable`) })
   );
 }
 function Z(e) {
-  return (0, A.jsxs)(rt, {
+  return (0, A.jsxs)(st, {
     style: { maxWidth: `400px`, margin: `0 auto` },
     children: [
-      (0, A.jsxs)(Ge, { children: [O(`#Error_Generic`), ` `] }),
-      (0, A.jsx)(tt, { children: e.children }),
+      (0, A.jsxs)(Ye, { children: [D(`#Error_Generic`), ` `] }),
+      (0, A.jsx)(at, { children: e.children }),
     ],
   });
 }
@@ -1848,7 +1846,7 @@ function Vr(e) {
     exitActive: Ar,
     exitDone: jr,
   };
-  return (0, A.jsx)(d, {
+  return (0, A.jsx)(ee, {
     in: r,
     nodeRef: o,
     classNames: c,
@@ -1858,7 +1856,7 @@ function Vr(e) {
     children: (0, A.jsx)(Nr.Provider, {
       value: a,
       children: (0, A.jsx)(`div`, {
-        className: y(Tr, r && `gHoA3r84Hvo-`),
+        className: _(Tr, r && `gHoA3r84Hvo-`),
         ref: o,
         children: (0, A.jsx)(ur, { message: t, active: r }),
       }),
@@ -1866,7 +1864,7 @@ function Vr(e) {
   });
 }
 function Hr(e) {
-  let t = vt(),
+  let t = St(),
     n = p({
       queryKey: [`useGamePlaytimeInfo`, e],
       queryFn: async () => Ur(e, t),
@@ -1875,21 +1873,21 @@ function Hr(e) {
   return n.isSuccess ? n.data : null;
 }
 async function Ur(e, t) {
-  let n = x.Init(We);
-  (n.Body().set_steamid(k.steamid),
+  let n = O.Init(Ke);
+  (n.Body().set_steamid(S.steamid),
     n.Body().set_appids_filter([e]),
     n.Body().set_include_played_free_games(!0),
-    n.Body().set_language(T.LANGUAGE));
-  let r = await ht.GetOwnedGames(t, n);
+    n.Body().set_language(k.LANGUAGE));
+  let r = await gt.GetOwnedGames(t, n);
   return r.Body().games().length > 0 ? r.Body().games()[0].toObject() : {};
 }
 function Wr(e) {
-  return He() && e?.startsWith(`https://store.steampowered.com/`)
-    ? e.replace(`https://store.steampowered.com/`, T.STORE_BASE_URL)
+  return qe() && e?.startsWith(`https://store.steampowered.com/`)
+    ? e.replace(`https://store.steampowered.com/`, k.STORE_BASE_URL)
     : e;
 }
 function Gr(e) {
-  let t = vt(),
+  let t = St(),
     n = X(),
     r = Pr();
   return (
@@ -1913,14 +1911,14 @@ function Q(e, t, n = !1) {
           : t == 5
             ? (i = `game_capsule`)
             : t == 6 && (i = `partner_event`);
-  let a = ct(Wr(e), i);
+  let a = rt(Wr(e), i);
   return (
     n && (a = e),
     a.startsWith(`steam://`) || (a = `steam://openurl/${a}`),
     (0, j.useCallback)(
       (e) => {
         r();
-        let t = Ve(e);
+        let t = Fe(e);
         t.location.href = a;
       },
       [a, r],
@@ -1928,19 +1926,19 @@ function Q(e, t, n = !1) {
   );
 }
 function Kr(e, t, n) {
-  let r = pt({ item_type: Qe(t), id: e }),
-    { data: i } = C(r);
-  return Q(m(i) ?? T.STORE_BASE_URL, n);
+  let r = et({ item_type: tt(t), id: e }),
+    { data: i } = b(r);
+  return Q(m(i) ?? k.STORE_BASE_URL, n);
 }
 var qr = j.createContext({ prioritized_list: !1 });
 function Jr(e) {
-  let [t, n] = j.useState(),
-    r = l(),
-    i = j.useMemo(() => (new URLSearchParams(r.search), {}), [r.search]);
+  let [t, r] = j.useState(),
+    i = n(),
+    a = j.useMemo(() => (new URLSearchParams(i.search), {}), [i.search]);
   return (
     j.useEffect(() => {
-      (E(`marketingmessage_config`, `application_config`), n({}));
-    }, [i]),
+      (ot(`marketingmessage_config`, `application_config`), r({}));
+    }, [a]),
     t
       ? (0, A.jsxs)(qr.Provider, { value: t, children: [e.children, ` `] })
       : null
@@ -1948,38 +1946,38 @@ function Jr(e) {
 }
 var Yr = t({ MarketingMessageRoutes: () => $, default: () => Xr }),
   $ = {
-    List: () => `${w.MarketingMessages()}list/`,
-    Message: (e) => `${w.MarketingMessages()}${e}`,
-    MessagePreview: (e) => `${w.MarketingMessages()}preview/${e}`,
+    List: () => `${x.MarketingMessages()}list/`,
+    Message: (e) => `${x.MarketingMessages()}${e}`,
+    MessagePreview: (e) => `${x.MarketingMessages()}preview/${e}`,
   };
 function Xr(e) {
   let t = $r();
   return t
-    ? (0, A.jsx)(D, {
+    ? (0, A.jsx)(E, {
         domain: `store.steampowered.com`,
         controller: `message`,
         method: `default`,
         children: (0, A.jsx)(Jr, {
           children: (0, A.jsx)(It, {
-            children: (0, A.jsxs)(a, {
+            children: (0, A.jsxs)(i, {
               children: [
-                (0, A.jsx)(i, {
+                (0, A.jsx)(c, {
                   path: `${$.List()}`,
                   children: (0, A.jsx)(Fr, { MarketingMessagesStore: t }),
                 }),
-                (0, A.jsx)(i, {
+                (0, A.jsx)(c, {
                   path: `${$.MessagePreview(`:messageid`)}`,
                   children: (0, A.jsx)(zr, {
                     MarketingMessagesStore: t,
                     preview: !0,
                   }),
                 }),
-                (0, A.jsx)(i, {
+                (0, A.jsx)(c, {
                   path: `${$.Message(`:messageid`)}`,
                   children: (0, A.jsx)(zr, { MarketingMessagesStore: t }),
                 }),
-                (0, A.jsx)(i, {
-                  children: (0, A.jsx)(s, { to: `${$.List()}` }),
+                (0, A.jsx)(c, {
+                  children: (0, A.jsx)(o, { to: `${$.List()}` }),
                 }),
               ],
             }),
@@ -1994,7 +1992,7 @@ function Qr(e) {
 }
 function $r() {
   let [e, t] = j.useState(null),
-    n = Je();
+    n = yt();
   return (
     j.useEffect(() => {
       e || t(Qr(n));

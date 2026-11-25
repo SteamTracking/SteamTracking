@@ -1,6 +1,13 @@
 
 const k_rgClientSideFilterNames = [ 'hide_owned', 'hide_ignored', 'hide_wishlist' ];
 
+const k_mapLinkedFilterValues = {
+  'supportedlang': {
+		'spanish': [ 'latam' ],
+		'latam': [ 'spanish' ],
+	},
+};
+
 InitializeGPFocusRestoreTimeout( false );
 
 function DisplayAdvancedSearch()
@@ -793,6 +800,19 @@ function DecorateFilterControls()
 				}
 				else {
 					finalValue = strArrayAdd( strValues, value );
+
+          					var rgLinkedValues = ( k_mapLinkedFilterValues[ strParam ] && k_mapLinkedFilterValues[ strParam ][ value ] ) || [];
+					for ( var i = 0; i < rgLinkedValues.length; i++ )
+					{
+						var $LinkedControl = $J( "span.tab_filter_control_include[data-param='" + jqEscapeSelectorAttribute( strParam ) + "'][data-value='" + jqEscapeSelectorAttribute( rgLinkedValues[ i ] ) + "']" );
+						if ( !$LinkedControl.length )
+							continue;
+
+						finalValue = strArrayAdd( finalValue, rgLinkedValues[ i ] );
+						$LinkedControl.addClass( 'checked' );
+						$LinkedControl.parent().addClass( 'checked' );
+					}
+
 					if ( $antiStore ) {
 						$antiStore.val( strArrayDel( $antiStore.val(), value ) );
 

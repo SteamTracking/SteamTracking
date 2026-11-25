@@ -2,21 +2,21 @@
  ****/
 
 import {
-  At as e,
+  Pt as e,
   W as t,
-  q as n,
-  sn as r,
-  vt as i,
+  g as n,
+  nt as r,
+  y as i,
 } from "./chunk~de7f2df91c.js";
 import { Pt as a } from "./chunk~1fa4b8f2ff.js";
 import { a as o } from "./chunk~fa5480ab25.js";
 import { k as s } from "./chunk~2f8c67b4de.js";
 import { t as c } from "./chunk~74d773532d.js";
 import { n as l, t as u } from "./chunk~c627bf7efa.js";
-var d = r(e(), 1),
-  f = i();
+var d = e(r(), 1),
+  f = t();
 function p(e) {
-  let { bHideTour: r, fnConversionMethodSelected: i } = e,
+  let { bHideTour: t, fnConversionMethodSelected: r } = e,
     {
       eConversionMethod: p,
       setConversionMethod: h,
@@ -35,7 +35,7 @@ function p(e) {
       );
     }, [g]);
   return _.length <= 1
-    ? n.is_support
+    ? i.is_support
       ? (0, f.jsxs)(`div`, {
           className: s,
           children: [
@@ -48,14 +48,14 @@ function p(e) {
     : (0, f.jsx)(u, {
         name: `conversion_method`,
         stops: m(),
-        active: r === void 0 || !r,
+        active: t === void 0 || !t,
         children: (0, f.jsxs)(`div`, {
           children: [
             (0, f.jsx)(`div`, {
               children: c.LocalizeReact(
                 `#ConversionMethod_Title`,
                 (0, f.jsx)(`a`, {
-                  href: `${t.PARTNER_BASE_URL}pricing/explorer`,
+                  href: `${n.PARTNER_BASE_URL}pricing/explorer`,
                   target: `_blank`,
                   rel: `noreferrer`,
                   children: c.Localize(`#ConversionMethod_Link`),
@@ -72,7 +72,7 @@ function p(e) {
                   contextMenuPositionOptions: { bMatchWidth: !1 },
                   selectedOption: p,
                   onChange: (e) => {
-                    (h(e.data), i && i(e.data));
+                    (h(e.data), r && r(e.data));
                   },
                 }),
               }),
@@ -101,7 +101,7 @@ function m() {
               c.LocalizeReact(
                 `#Tour_ConversionMethod_Desc3`,
                 (0, f.jsx)(`a`, {
-                  href: `${t.PARTNER_BASE_URL}pricing/explorer`,
+                  href: `${n.PARTNER_BASE_URL}pricing/explorer`,
                   children: c.Localize(`#Tour_ConversionMethod_Link`),
                 }),
               ),

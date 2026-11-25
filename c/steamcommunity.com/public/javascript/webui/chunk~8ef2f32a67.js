@@ -28234,7 +28234,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -28244,7 +28244,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetPlayerLinkDetails = _;
@@ -28265,7 +28265,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetOwnedGames = _;
@@ -28280,7 +28280,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Player.GetFriendsGameplayInfo#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFriendsGameplayInfo = _;
@@ -28302,7 +28302,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.SetProfileBackground#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetProfileBackground = _;
@@ -28317,7 +28317,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.SetMiniProfileBackground#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetMiniProfileBackground = _;
@@ -28332,7 +28332,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.SetAvatarFrame#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetAvatarFrame = _;
@@ -28347,7 +28347,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.SetAnimatedAvatar#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetAnimatedAvatar = _;
@@ -28379,7 +28379,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetProfileItemsEquipped = _;
@@ -28402,7 +28402,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCommunityBadgeProgress = _;
@@ -28411,7 +28411,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetTopAchievementsForGames = _;
@@ -28419,7 +28419,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Player.GetAchievementsProgress#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetAchievementsProgress = _;
@@ -28428,7 +28428,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetGameAchievements = _;
@@ -28437,7 +28437,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetUserAchievements = _;
@@ -28450,7 +28450,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -28548,7 +28548,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.PostStatusToFriends#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.PostStatusToFriends = _;
@@ -28591,7 +28591,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Player.GetNicknameList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetNicknameList = _;
@@ -28629,7 +28629,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.GetCommunityPreferences#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCommunityPreferences = _;
@@ -28642,7 +28642,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.GetTextFilterWords#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetTextFilterWords = _;
@@ -30735,7 +30735,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FriendsList.GetFriendsList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFriendsList = _;
@@ -30743,7 +30743,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FriendsList.GetFavorites#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFavorites = _;
@@ -47295,7 +47295,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 2,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -47326,7 +47326,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetAssetPropertySchema = _;
@@ -47395,7 +47395,8 @@ var _ = class {
               : _.AppInfoStore.GetAppInfo(this.m_id).is_initialized
                 ? ((this.m_strName = _.AppInfoStore.GetAppInfo(this.m_id).name),
                   this.m_strName)
-                : (_.AppInfoStore.RegisterCallbackOnLoad(this.OnAppInfoLoaded),
+                : (_.AppInfoStore.BHavePendingAppInfoRequests() &&
+                    _.AppInfoStore.RegisterCallbackOnLoad(this.OnAppInfoLoaded),
                   ``);
     }
     OnAppInfoLoaded() {
@@ -50454,14 +50455,14 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Parental.EnableParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.EnableParentalSettings = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.DisableParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.DisableParentalSettings = _;
@@ -50483,14 +50484,14 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Parental.SetParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetParentalSettings = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ValidateToken#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ValidateToken = _;
@@ -50515,28 +50516,28 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Parental.RequestFeatureAccess#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.RequestFeatureAccess = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ApproveFeatureAccess#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ApproveFeatureAccess = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.RequestPlaytime#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.RequestPlaytime = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ApprovePlaytime#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ApprovePlaytime = _;
@@ -50544,7 +50545,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Parental.GetRequests#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetRequests = _;
@@ -84784,7 +84785,7 @@ var _ = `u-hyk5J5tIY-`,
     return _.SendMsg(`SteamTV.AddChatBan#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.AddChatBan = _;
@@ -84800,7 +84801,7 @@ var _ = `u-hyk5J5tIY-`,
     return _.SendMsg(`SteamTV.AddChatModerator#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.AddChatModerator = _;
@@ -84808,7 +84809,7 @@ var _ = `u-hyk5J5tIY-`,
     return _.SendMsg(`SteamTV.GetChatModerators#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 0,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetChatModerators = _;
@@ -84831,7 +84832,7 @@ var _ = `u-hyk5J5tIY-`,
     return _.SendMsg(`SteamTV.JoinChat#1`, _(_, _, _), _, {
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.JoinChat = _;
@@ -92900,6 +92901,7 @@ var _;
       {
         bConstMethod: !0,
         ePrivilege: 5,
+        rgBrowserAPISites: [`support`],
       },
     );
   }
@@ -92919,6 +92921,7 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`AuthenticationSupport.RevokeToken#1`, _(_, _, _), _, {
       ePrivilege: 5,
+      rgBrowserAPISites: [`support`],
     });
   }
   _.RevokeToken = _;
@@ -92926,6 +92929,7 @@ var _;
     return _.SendMsg(`AuthenticationSupport.GetTokenHistory#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`support`],
     });
   }
   _.GetTokenHistory = _;
@@ -92936,6 +92940,7 @@ var _;
       _,
       {
         ePrivilege: 5,
+        rgBrowserAPISites: [`support`],
       },
     );
   }
@@ -95758,7 +95763,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`TwoFactor.QueryTime#1`, _(_, _, _), _, {
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`help`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.QueryTime = _;
@@ -95816,6 +95821,95 @@ var _ = class _ extends _.Message {
   }
   _.RemoveAuthenticatorViaChallengeContinue = _;
 })((_ ||= {}));
+var _ = 1,
+  _ = 2,
+  _ = (function (_) {
+    return (
+      (_[(_.RetryCode = 0)] = `RetryCode`),
+      (_[(_.MoveComplete = 1)] = `MoveComplete`),
+      (_[(_.Failed = 2)] = `Failed`),
+      _
+    );
+  })({});
+async function _(_) {
+  try {
+    let _ = _.Init(_),
+      _ = await _.RemoveAuthenticatorViaChallengeStart(_, _),
+      _ = _.GetEResult();
+    return (
+      _ !== 1 &&
+        (_.DEBUG_LogToConsole(),
+        _(`RemoveAuthenticatorViaChallengeStart failed`, _)),
+      _
+    );
+  } catch (_) {
+    return (
+      _(`Unexpected error from RemoveAuthenticatorViaChallengeStart`, _), 2
+    );
+  }
+}
+async function _(_, _, _) {
+  let _, _;
+  try {
+    let _ = _.Init(_);
+    (_.Body().set_sms_code(_),
+      _.Body().set_generate_new_token(!0),
+      _.Body().set_version(_),
+      _.Body().set_caller_version(_));
+    let _ = await _.RemoveAuthenticatorViaChallengeContinue(_, _);
+    _ = _.GetEResult();
+    let _ = _.Body().replacement_token();
+    _ === 1 && _.Body().success() && _
+      ? (_ = _(_.toObject()))
+      : (_.DEBUG_LogToConsole(),
+        _(
+          `RemoveAuthenticatorViaChallengeContinue failed, eresult: ${_}, success: ${_.Body().success()}`,
+        ),
+        _ === 1 && (_ = 2));
+  } catch (_) {
+    return (
+      _(`Unexpected error from RemoveAuthenticatorViaChallengeContinue`, _),
+      {
+        eNextStep: 2,
+        eResult: 2,
+      }
+    );
+  }
+  if (_) {
+    let _ = _ ? await _(_, _) : void 0;
+    return {
+      eNextStep: 1,
+      eResult: _,
+      guardData: _,
+      eSaveResult: _,
+    };
+  }
+  switch (_) {
+    case 94:
+    case 27:
+    case 10:
+    case 20:
+    case 16:
+    case 3:
+      return {
+        eNextStep: 0,
+        eResult: _,
+      };
+    default:
+      return {
+        eNextStep: 2,
+        eResult: _,
+      };
+  }
+}
+async function _(_, _) {
+  try {
+    let _ = await _(_);
+    return (_ !== 1 && _(`Failed to save the moved authenticator`, _), _);
+  } catch (_) {
+    return (_(`Unexpected error saving the moved authenticator`, _), 2);
+  }
+}
 var _ = class extends _ {
   m_eStatusValue = 0;
   get m_eStatus() {
@@ -95832,6 +95926,8 @@ var _ = class extends _ {
   m_weakAuthWebInterface;
   m_onGetMachineAuth;
   m_replacementAuthenticator;
+  m_eMoveResult;
+  m_eMoveSaveResult;
   m_strErrorReferenceValue = ``;
   get m_strErrorReference() {
     return this.m_strErrorReferenceValue;
@@ -95861,6 +95957,8 @@ var _ = class extends _ {
       eStatus: this.GetStatus(),
       bCanGoBack: this.BCanGoBack(),
       replacementAuthenticator: this.GetReplacementAuthenticator(),
+      eMoveResult: this.m_eMoveResult,
+      eMoveSaveResult: this.m_eMoveSaveResult,
     };
   }
   async Start(_, _, _) {
@@ -96195,82 +96293,45 @@ var _ = class extends _ {
       _.WEBAPI_BASE_URL,
       this.m_strWeakAuthToken,
     );
-    try {
-      let _ = _.Init(_),
-        _ = await _.RemoveAuthenticatorViaChallengeStart(
-          this.m_weakAuthWebInterface.GetServiceTransport(),
-          _,
-        );
-      return (
-        _.GetEResult() == 1
-          ? (this.m_eStatus = 8)
-          : (_.DEBUG_LogToConsole(),
-            _(
-              `An unexpected error occured while adding an authenticator`,
-              _.GetEResult(),
-            ),
-            this.SetFailureStateWithEResult(
-              _.MoveAuthenticator,
-              _.GetEResult(),
-            )),
-        _.GetEResult()
-      );
-    } catch (_) {
-      return (
-        _(`An unexpected error occured while moving an authenticator`, _),
-        this.SetFailureStateWithEResult(_.MoveAuthenticator, 2),
-        2
-      );
-    }
+    let _ = await _(this.m_weakAuthWebInterface.GetServiceTransport());
+    return (
+      (this.m_eMoveResult = _),
+      _ === 1
+        ? (this.m_eStatus = 8)
+        : this.SetFailureStateWithEResult(_.MoveAuthenticator, _),
+      _
+    );
   }
   async ResendMoveCode() {
-    _(
+    (_(
       !!this.m_weakAuthWebInterface,
       `Resending move code before StartMoveAuthenticator`,
-    );
-    let _ = _.Init(_),
-      _ = await _.RemoveAuthenticatorViaChallengeStart(
-        this.m_weakAuthWebInterface.GetServiceTransport(),
-        _,
-      );
-    (_.GetEResult() != 1 &&
-      (_.DEBUG_LogToConsole(),
-      _(
-        `An unexpected error occured while adding an authenticator`,
-        _.GetEResult(),
-      )),
+    ),
+      await _(this.m_weakAuthWebInterface.GetServiceTransport()),
+      (this.m_eMoveResult = void 0),
       (this.m_eStatus = 8));
   }
-  async FinishMoveAuthenticator(_) {
+  async FinishMoveAuthenticator(_, _) {
     _(
       !!this.m_weakAuthWebInterface,
       `Finishing authenticator move before StartMoveAuthenticator`,
     );
-    let _ = _.Init(_);
-    (_.Body().set_sms_code(_),
-      _.Body().set_generate_new_token(!0),
-      _.Body().set_version(2));
-    let _ = await _.RemoveAuthenticatorViaChallengeContinue(
-      this.m_weakAuthWebInterface.GetServiceTransport(),
-      _,
-    );
-    if (_.GetEResult() == 94) this.m_eStatus = 12;
-    else if (!_.Body().success())
-      (_.DEBUG_LogToConsole(),
-        _(
-          `Error when calling RemoveAuthenticatorViaChallengeContinue`,
-          _.GetEResult(),
-        ),
-        this.SetFailureStateWithEResult(_.MoveAuthenticator, _.GetEResult()));
-    else {
-      _.DEBUG_LogToConsole();
-      let _ = _.Body().replacement_token();
-      (_(!!_, `Missing replacement token on successful authenticator move`),
-        (this.m_replacementAuthenticator = _(_.toObject())),
-        (this.m_eStatus = 9),
-        (this.m_bUsingCodeOverride = !1));
+    let _ = await _(this.m_weakAuthWebInterface.GetServiceTransport(), _, _);
+    switch (((this.m_eMoveResult = _.eResult), _.eNextStep)) {
+      case _.MoveComplete:
+        ((this.m_replacementAuthenticator = _.guardData),
+          (this.m_eMoveSaveResult = _.eSaveResult),
+          (this.m_bUsingCodeOverride = !1),
+          (this.m_eStatus = 9));
+        break;
+      case _.RetryCode:
+        this.m_eStatus = 12;
+        break;
+      case _.Failed:
+      default:
+        this.SetFailureStateWithEResult(_.MoveAuthenticator, _.eResult);
     }
-    return _.GetEResult();
+    return _.eResult;
   }
   FinishMoveRecovery() {
     this.m_eStatus = 5;
@@ -100457,7 +100518,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`AccountPrivateApps.ToggleAppPrivacy#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ToggleAppPrivacy = _;
@@ -100465,7 +100526,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`AccountPrivateApps.GetPrivateAppList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetPrivateAppList = _;
@@ -111158,6 +111219,7 @@ var _ = _(_),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetTopicDetails = _;

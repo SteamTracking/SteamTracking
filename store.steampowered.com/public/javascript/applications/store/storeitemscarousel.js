@@ -2,23 +2,23 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n } from "./chunk~01cfc309bf.js";
 import { l as r, n as i, r as a } from "./chunk~4eed35ad1f.js";
 import { r as o } from "./chunk~21cdc464a1.js";
 import { n as s } from "./chunk~3ea79bd96d.js";
 import { r as c } from "./chunk~a243b6a34b.js";
 import { a as l, t as u } from "./chunk~a7c5e71e12.js";
 import {
-  $b as d,
-  Ba as f,
-  Bc as p,
-  El as m,
-  Nc as h,
-  Nu as g,
-  eu as _,
-  hl as v,
-  pu as y,
-  rb as b,
+  Dl as d,
+  Pc as f,
+  Pu as p,
+  Va as m,
+  Vc as h,
+  ex as g,
+  gl as _,
+  ib as v,
+  mu as y,
+  tu as b,
 } from "./main.js";
 var x = `OmrgUJdrKyI-`,
   S = `nKsKxQO2ePs-`,
@@ -44,36 +44,36 @@ function L(e) {
       sortOrder: a,
       scorePenaltyIfOwned: s,
       capsuleSize: u,
-      maxItemCount: f,
-      mapAppToCreatorClan: p,
-      strFeatureFirstAppMsg: m,
-      setNumberVisibleItems: v,
+      maxItemCount: d,
+      mapAppToCreatorClan: m,
+      strFeatureFirstAppMsg: h,
+      setNumberVisibleItems: _,
     } = e,
-    y = r(910),
-    b = d(),
-    [x, S] = g(),
+    v = r(910),
+    y = g(),
+    [x, S] = p(),
     [C, w] = T.useState(i),
     E = l(i, c),
     [O, k] = T.useState(null);
   T.useEffect(() => {
     if (E == 1) return;
-    let e = i.filter((e) => !_.Get().BIsStoreItemMissing(e, 0));
-    if (m && y && !b && e.length > 0 && e[0] == i[0]) {
+    let e = i.filter((e) => !b.Get().BIsStoreItemMissing(e, 0));
+    if (h && v && !y && e.length > 0 && e[0] == i[0]) {
       let t = [e[0], P, ...e.slice(1)];
-      (w(t), k(m), v?.(t.length));
-    } else (w(e), v?.(e.length));
-  }, [i, b, y, E, v, m]);
-  let A = b;
+      (w(t), k(h), _?.(t.length));
+    } else (w(e), _?.(e.length));
+  }, [i, y, v, E, _, h]);
+  let A = y;
   return (0, N.jsx)(o, {
-    className: h(n, { SaleSectionCarousel: !0, [D]: !0 }),
-    visibleElements: f,
+    className: f(n, { SaleSectionCarousel: !0, [D]: !0 }),
+    visibleElements: d,
     useTestScrollbar: !0,
     bLazyRenderChildren: !0,
     lazyRenderPlaceholderHeight: F,
     lazyRenderPlaceholderWidth: I,
     gap: 12,
     hideArrows: !1,
-    screenIsWide: y,
+    screenIsWide: v,
     navKey: t,
     bForceSimpleCarousel: A,
     children: z(S, C, a ?? `none`, s ?? 3).map((e, t) =>
@@ -82,7 +82,7 @@ function L(e) {
         {
           appID: e,
           size: u,
-          creatorClanAccountID: p?.get(e),
+          creatorClanAccountID: m?.get(e),
           strFeaturingMsg: t == 0 && O ? O : void 0,
         },
         e,
@@ -94,20 +94,20 @@ function R(e) {
   let { appID: t, size: n, creatorClanAccountID: r, strFeaturingMsg: i } = e,
     [a] = u(t, 0, c);
   if (t == P)
-    return (0, N.jsx)(`div`, { className: h({ [O]: !0, [k]: n == `small` }) });
-  if (!a) return (0, N.jsx)(`div`, { className: h(O, j) });
+    return (0, N.jsx)(`div`, { className: f({ [O]: !0, [k]: n == `small` }) });
+  if (!a) return (0, N.jsx)(`div`, { className: f(O, j) });
   let o = y(a.GetStoreItemType(), a.GetAppType()),
     l = { id: a.GetID(), type: o },
     d = !!i;
   return (0, N.jsx)(`div`, {
-    className: h({ [O]: !0, [A]: d, [k]: n == `small` }),
+    className: f({ [O]: !0, [A]: d, [k]: n == `small` }),
     children: (0, N.jsx)(s, {
       capsule: l,
       imageType: `header`,
       bHidePlatforms: !0,
       bHideStoreHover: d,
       creatorAccountID: r,
-      strDoubleCapsuleMessage: d ? b(i) : void 0,
+      strDoubleCapsuleMessage: d ? v(i) : void 0,
       bPreferAssetWithoutOverride: !1,
     }),
   });
@@ -139,10 +139,10 @@ function z(e, t, n, r) {
 function B(e) {
   let { url: t } = e;
   return t
-    ? (0, N.jsx)(v, {
+    ? (0, N.jsx)(_, {
         href: t,
-        className: h(M, `btnv6_grey_black btn_medium`),
-        children: (0, N.jsx)(`span`, { children: b(`#StoreApp_SeeAll`) }),
+        className: f(M, `btnv6_grey_black btn_medium`),
+        children: (0, N.jsx)(`span`, { children: v(`#StoreApp_SeeAll`) }),
       })
     : void 0;
 }
@@ -157,23 +157,23 @@ function V(e) {
       capsuleSize: l,
       bFullWidth: u,
     } = e,
-    g = d(),
-    { bShowSeeMoreHint: _, panelProps: v } = a(r);
-  return (0, N.jsx)(p, {
-    className: h(S, u && `YmSKmufcDTw-`),
-    navEntryPreferPosition: m.PREFERRED_CHILD,
-    ...v,
-    children: (0, N.jsxs)(f, {
+    p = g(),
+    { bShowSeeMoreHint: _, panelProps: y } = a(r);
+  return (0, N.jsx)(h, {
+    className: f(S, u && `YmSKmufcDTw-`),
+    navEntryPreferPosition: d.PREFERRED_CHILD,
+    ...y,
+    children: (0, N.jsxs)(m, {
       children: [
         (0, N.jsxs)(`div`, {
           className: x,
           children: [
             (0, N.jsx)(`div`, { className: w, children: t }),
-            !g && (0, N.jsx)(B, { url: r }),
-            g && (0, N.jsx)(i, { label: b(`#StoreApp_SeeAll`), shown: _ }),
+            !p && (0, N.jsx)(B, { url: r }),
+            p && (0, N.jsx)(i, { label: v(`#StoreApp_SeeAll`), shown: _ }),
           ],
         }),
-        (0, N.jsx)(p, {
+        (0, N.jsx)(h, {
           preferredFocus: !0,
           children: (0, N.jsx)(L, {
             navKey: n,

@@ -2,17 +2,17 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
+import { Pt as t, at as n } from "./chunk~01cfc309bf.js";
 import { i as r, t as i } from "./chunk~af36c62e9f.js";
 import {
-  Bi as a,
-  Du as o,
-  Es as s,
-  Gu as c,
-  Tu as l,
-  Vi as u,
-  bs as d,
-  rf as f,
+  Bu as a,
+  Fi as o,
+  Ii as s,
+  Qd as c,
+  Su as l,
+  bu as u,
+  hs as d,
+  xs as f,
 } from "./main.js";
 var p = e(t()),
   m = `_5YxPcG58GcM-`,
@@ -30,7 +30,7 @@ function T(e) {
   let {
       tabs: t,
       bDisableRouting: n,
-      startingTab: s,
+      startingTab: c,
       controlledTab: d,
       OnTabChanged: f,
       classNameCtn: h,
@@ -42,10 +42,10 @@ function T(e) {
       bSticky: S,
       bChecklistMode: C,
     } = e,
-    T = u(),
-    E = a(),
+    T = s(),
+    E = o(),
     [O, k] = (0, p.useState)(
-      () => s || (!n && i(T, `tab`) ? (i(T, `tab`) ?? ``) : ``),
+      () => c || (!n && i(T, `tab`) ? (i(T, `tab`) ?? ``) : ``),
     );
   (0, p.useEffect)(() => {
     if (!e.bDisableRouting && T) {
@@ -66,18 +66,18 @@ function T(e) {
   if (!j.length) return null;
   let M = d ?? O,
     N = j.find((e) => e.key === M) || j[0],
-    P = b ? (s ?? j[0].key) : void 0,
+    P = b ? (c ?? j[0].key) : void 0,
     F = (0, w.jsxs)(w.Fragment, {
       children: [
-        (0, w.jsx)(o, {
-          className: l(
+        (0, w.jsx)(l, {
+          className: u(
             m,
             x && `iBLrw-7gAIM-`,
             C && `dLhmGXBhTkM-`,
             S && `ShXw34CXvuE-`,
             h,
           ),
-          navEntryPreferPosition: b ? c.PREFERRED_CHILD : c.FIRST,
+          navEntryPreferPosition: b ? a.PREFERRED_CHILD : a.FIRST,
           children: j.map((e, t) =>
             (0, w.jsx)(
               D,
@@ -93,10 +93,10 @@ function T(e) {
             ),
           ),
         }),
-        N && (0, w.jsx)(o, { className: y, children: N.contents }),
+        N && (0, w.jsx)(l, { className: y, children: N.contents }),
       ],
     });
-  return x ? (0, w.jsx)(o, { className: l(g), children: F }) : F;
+  return x ? (0, w.jsx)(l, { className: u(g), children: F }) : F;
 }
 function E(e) {
   let { statusType: t = `success`, bShowStatusBox: n, children: r } = e,
@@ -111,7 +111,7 @@ function E(e) {
           : t === `info`
             ? (i = S)
             : t === `incomplete` && (i = C),
-    (0, w.jsx)(`div`, { className: l(_, i, n ? v : ``), children: r })
+    (0, w.jsx)(`div`, { className: u(_, i, n ? v : ``), children: r })
   );
 }
 function D(e) {
@@ -121,19 +121,19 @@ function D(e) {
     classNameTab: r,
     focusRingHasBorderRadius: i,
     active: a,
-    preferredFocus: c,
+    preferredFocus: o,
   } = e;
-  return (0, w.jsx)(s, {
+  return (0, w.jsx)(f, {
     condition: !!(t.statusToolTip || t.tooltip),
     wrap: (e) =>
       (0, w.jsx)(d, {
         toolTipContent: t.statusToolTip || t.tooltip,
         children: e,
       }),
-    children: (0, w.jsxs)(o, {
-      className: l(h, a && `Tw-TchJW1T8-`, a && `ActiveTab`, r),
+    children: (0, w.jsxs)(l, {
+      className: u(h, a && `Tw-TchJW1T8-`, a && `ActiveTab`, r),
       onActivate: () => n(t),
-      preferredFocus: c,
+      preferredFocus: o,
       focusRingHasBorderRadius: i,
       children: [
         !!t.vo_warning &&
@@ -141,7 +141,7 @@ function D(e) {
             toolTipContent: t.vo_warning,
             children: (0, w.jsx)(`div`, {
               className: `OpvmjD098-U-`,
-              children: f(`#EventEditor_VOWarning`),
+              children: c(`#EventEditor_VOWarning`),
             }),
           }),
         t.status,

@@ -4,124 +4,124 @@
 import { o as e, r as t } from "./chunk~f025431ab0.js";
 import {
   C as n,
-  Dt as r,
-  Ft as i,
-  R as a,
-  St as o,
-  ot as s,
-  w as c,
+  Et as r,
+  L as i,
+  Pt as a,
+  S as o,
+  at as s,
+  bt as c,
   xt as l,
 } from "./chunk~01cfc309bf.js";
 import {
-  Ao as u,
-  Bn as d,
-  Gt as f,
-  Hn as p,
-  In as m,
-  No as h,
-  Vr as ee,
-  Zo as te,
-  _o as g,
-  ar as _,
-  gi as v,
+  An as u,
+  Cs as d,
+  Ho as f,
+  In as p,
+  Wo as m,
+  Yt as h,
+  as as g,
+  cn as _,
+  dn as ee,
+  ki as v,
   l as y,
-  ni as ne,
-  yo as re,
+  mi as te,
+  ns as b,
+  pn as ne,
 } from "./chunk~3f4314f3b4.js";
-import { t as ie } from "./chunk~6eb508043a.js";
-import { t as ae } from "./chunk~404eafa76f.js";
-import { a as b, s as oe } from "./chunk~437071091c.js";
-import { t as se } from "./chunk~eee3bbd4cd.js";
-import { t as ce } from "./chunk~eefd71512b.js";
+import { t as re } from "./chunk~6eb508043a.js";
+import { t as x } from "./chunk~404eafa76f.js";
+import { a as S, s as ie } from "./chunk~437071091c.js";
+import { t as ae } from "./chunk~eee3bbd4cd.js";
+import { t as oe } from "./chunk~eefd71512b.js";
 import {
-  F as le,
-  G as ue,
-  K as de,
-  R as fe,
-  dt as x,
-  z as pe,
+  F as se,
+  G as ce,
+  K as le,
+  R as ue,
+  dt as de,
+  z as fe,
 } from "./chunk~05a38bc848.js";
 import {
-  It as S,
-  Nt as me,
-  gt as he,
-  mt as ge,
-  zt as _e,
+  It as C,
+  Nt as pe,
+  gt as me,
+  mt as he,
+  zt as ge,
 } from "./chunk~77ea210942.js";
 import {
-  G as ve,
-  K as ye,
-  W as be,
-  X as C,
-  k as xe,
+  D as _e,
+  H as ve,
+  J as ye,
+  U as be,
+  W as xe,
 } from "./chunk~21cdc464a1.js";
-import { t as w } from "./chunk~92931c6310.js";
-import { o as T } from "./chunk~af36c62e9f.js";
-import { t as Se } from "./chunk~37e5316e27.js";
-import { i as E, n as Ce, r as D } from "./chunk~0111fcd096.js";
-import { l as we, o as O, u as k } from "./chunk~ec644f97c6.js";
+import { t as Se } from "./chunk~92931c6310.js";
+import { o as w } from "./chunk~af36c62e9f.js";
+import { t as Ce } from "./chunk~37e5316e27.js";
+import { i as T, n as we, r as E } from "./chunk~0111fcd096.js";
+import { l as D, o as O, u as k } from "./chunk~ec644f97c6.js";
 import { t as A } from "./chunk~9d71b14b50.js";
 import {
-  $i as j,
-  $o as Te,
-  Am as M,
-  Cc as N,
-  Ki as P,
-  Oc as Ee,
-  Ou as F,
-  Sl as De,
-  Tu as I,
-  Vh as Oe,
-  Wr as ke,
-  Xs as L,
-  Ys as Ae,
-  Zl as je,
-  _f as Me,
-  bf as Ne,
-  bm as R,
-  bs as z,
-  cu as Pe,
-  df as Fe,
-  f as Ie,
-  gc as Le,
-  il as Re,
-  kp as ze,
-  li as Be,
-  mf as Ve,
-  ml as He,
-  mm as Ue,
-  pd as We,
-  qf as Ge,
-  qs as Ke,
-  rf as B,
-  sd as qe,
-  sf as Je,
-  sp as Ye,
-  th as V,
-  ul as Xe,
-  up as Ze,
-  vm as Qe,
-  xf as $e,
-  ym as H,
-  zs as et,
+  $c as Te,
+  Cc as Ee,
+  Cu as j,
+  Gs as M,
+  Hf as N,
+  Hs as De,
+  Ji as P,
+  Jo as Oe,
+  Kl as ke,
+  Lh as Ae,
+  Ps as je,
+  Qd as F,
+  Tm as I,
+  Vi as L,
+  Ws as Me,
+  Xm as R,
+  _l as Ne,
+  al as Pe,
+  ap as Fe,
+  bu as z,
+  cd as Ie,
+  dc as Le,
+  f as Re,
+  ff as ze,
+  gf as B,
+  hf as Be,
+  hm as V,
+  hs as H,
+  ii as Ve,
+  lf as He,
+  ll as Ue,
+  lm as We,
+  mm as U,
+  nd as Ge,
+  nf as Ke,
+  np as qe,
+  of as Je,
+  pm as Ye,
+  ru as Xe,
+  vc as Ze,
+  wp as Qe,
+  zr as $e,
 } from "./main.js";
-import { Q as tt, S as nt } from "./chunk~750c562b0a.js";
-import { c as rt, s as it } from "./chunk~cadb22900a.js";
-import { i as at, n as ot, t as st } from "./chunk~f17215eefb.js";
-import { r as ct } from "./chunk~eb66d0e2b2.js";
+import { Q as et, S as tt } from "./chunk~750c562b0a.js";
+import { c as nt, s as rt } from "./chunk~cadb22900a.js";
+import { i as it, n as at, t as ot } from "./chunk~f17215eefb.js";
+import { r as st } from "./chunk~eb66d0e2b2.js";
 import {
-  a as U,
-  c as W,
-  i as lt,
-  l as G,
-  o as ut,
-  r as dt,
-  s as ft,
-  t as pt,
+  a as W,
+  c as G,
+  i as ct,
+  l as K,
+  o as lt,
+  r as ut,
+  s as dt,
+  t as ft,
 } from "./chunk~dd13412f72.js";
-var K = e(i()),
-  mt = class e {
-    m_mapConferences = a.map();
+var q = e(a()),
+  pt = class e {
+    m_mapConferences = i.map();
     GetConferenceInfo(e) {
       return this.m_mapConferences.get(e);
     }
@@ -133,17 +133,17 @@ var K = e(i()),
       );
     }
     async Init() {
-      let e = Ue(`conferenceinfo`, `application_config`);
+      let e = We(`conferenceinfo`, `application_config`);
       if (this.ValidateStoreDefault(e)) {
-        let t = V(H.LANGUAGE),
-          n = at(e.clan_faq_about_page),
-          r = ot.Get().GetFAQPublishedContent(n, t),
+        let t = R(U.LANGUAGE),
+          n = it(e.clan_faq_about_page),
+          r = at.Get().GetFAQPublishedContent(n, t),
           i = {
             strConferenceID: e.vanity,
             rtStartTime: e.start_rtime,
             rtEndTime: e.end_rtime,
-            clanSteamID: new M(e.event_group_steamid),
-            broadcastSteamID: new M(e.broadcast_steamid),
+            clanSteamID: new I(e.event_group_steamid),
+            broadcastSteamID: new I(e.broadcast_steamid),
             bPartnerOnly: e.partner_only,
             faqAboutPage: r,
             strLocalizedLogos: null,
@@ -152,8 +152,8 @@ var K = e(i()),
             youtubeVideoID: e.youtubeVideoID,
           };
         this.m_mapConferences.set(e.vanity, i);
-        let a = await h(e.localized_logo, t, r?.timestamp),
-          o = await h(e.localized_mobile_logo, t, r?.timestamp);
+        let a = await g(e.localized_logo, t, r?.timestamp),
+          o = await g(e.localized_mobile_logo, t, r?.timestamp);
         this.m_mapConferences.set(e.vanity, {
           ...i,
           strLocalizedLogos: typeof a == `string` ? [a] : a,
@@ -170,29 +170,29 @@ var K = e(i()),
         : !1;
     }
   },
-  ht = `rSAA9RImaO0-`,
-  q = s();
-function gt(e) {
+  mt = `rSAA9RImaO0-`,
+  J = s();
+function ht(e) {
   let { conferenceInfo: t } = e,
     n = t.broadcastSteamID.ConvertTo64BitString();
-  return (0, q.jsx)(F, {
-    children: (0, q.jsx)(se, {
+  return (0, J.jsx)(j, {
+    children: (0, J.jsx)(ae, {
       steamIDBroadcast: n,
       watchLocation: 5,
       bStartMuted: !0,
     }),
   });
 }
-function _t(e) {
+function gt(e) {
   let { conferenceInfo: t } = e,
-    n = c(() => t.broadcastSteamID.ConvertTo64BitString());
-  return (0, q.jsx)(`div`, {
-    className: I(ht, e.className ? `${e.className}` : ``),
-    children: (0, q.jsx)(F, {
-      children: (0, q.jsx)(tt, {
-        emoticonStore: it,
+    r = n(() => t.broadcastSteamID.ConvertTo64BitString());
+  return (0, J.jsx)(`div`, {
+    className: z(mt, e.className ? `${e.className}` : ``),
+    children: (0, J.jsx)(j, {
+      children: (0, J.jsx)(et, {
+        emoticonStore: rt,
         watchLocation: 5,
-        steamID: n,
+        steamID: r,
         globalChat: !0,
         bPartnerMemberOnlyChat: t.bPartnerOnly,
         bInvertLayout: !0,
@@ -200,27 +200,27 @@ function _t(e) {
     }),
   });
 }
-function vt(e) {
+function _t(e) {
   let { conferenceInfo: t } = e,
-    [n, r] = K.useState(!1);
+    [n, r] = q.useState(!1);
   return n
     ? null
-    : (0, q.jsxs)(`div`, {
-        className: nt,
+    : (0, J.jsxs)(`div`, {
+        className: tt,
         children: [
-          (0, q.jsx)(ae, {
+          (0, J.jsx)(x, {
             steamIDBroadcast: t.broadcastSteamID.ConvertTo64BitString(),
             OnPreventPopup: () => r(!0),
           }),
-          (0, q.jsx)(gt, { conferenceInfo: t }),
+          (0, J.jsx)(ht, { conferenceInfo: t }),
         ],
       });
 }
-function yt(e) {
+function vt(e) {
   let { conferenceInfo: t } = e;
   return null;
 }
-var bt = class e {
+var yt = class e {
     m_inFlight = null;
     async LoadInitialCalendarData(e, t) {
       return (
@@ -229,9 +229,9 @@ var bt = class e {
       );
     }
     async InternalLoadInitialCalendarData(e, t) {
-      ut({ collectionid: t, bSectionByDay: !0, rtCalendarEnd: e });
-      let n = U(),
-        r = Ue(`conference_calendar`, `application_config`);
+      lt({ collectionid: t, bSectionByDay: !0, rtCalendarEnd: e });
+      let n = W(),
+        r = We(`conference_calendar`, `application_config`);
       (r && (await n.RegisterCalendarEventsAndModels(r)),
         n.SetFilteredView((e) => !0));
     }
@@ -241,70 +241,70 @@ var bt = class e {
     }
     constructor() {}
   },
-  J = t({
-    AppBannerLogo: () => nn,
+  Y = t({
+    AppBannerLogo: () => rn,
     AppIcon: () => St,
     CarouselMode: () => An,
-    ClanSource: () => an,
+    ClanSource: () => on,
     CommentIcon: () => Dn,
     CommentIconCtn: () => On,
     CoverImageCtn: () => Tt,
-    DateAndSourceLine: () => Ft,
+    DateAndSourceLine: () => It,
     DateAndTime: () => Nn,
     EnableHovers: () => X,
     EventCapsuleCtn: () => un,
-    EventName: () => $t,
-    EventSubTitle: () => en,
+    EventName: () => en,
+    EventSubTitle: () => tn,
     EventSummaryDefault: () => _n,
-    EventTitleCtn: () => cn,
-    EventType10: () => Vt,
-    EventType11: () => Ht,
-    EventType12: () => Qt,
-    EventType13: () => Gt,
-    EventType14: () => Kt,
-    EventType15: () => qt,
-    EventType23: () => Ut,
-    EventType28: () => Bt,
-    EventType35: () => Wt,
-    EventTypeAndDateCtn: () => It,
-    FallbackImage: () => rn,
+    EventTitleCtn: () => Q,
+    EventType10: () => Ht,
+    EventType11: () => Ut,
+    EventType12: () => $t,
+    EventType13: () => Kt,
+    EventType14: () => qt,
+    EventType15: () => Jt,
+    EventType23: () => Wt,
+    EventType28: () => Vt,
+    EventType35: () => Gt,
+    EventTypeAndDateCtn: () => Lt,
+    FallbackImage: () => an,
     Footer: () => ln,
     FooterRightSide: () => wn,
     FooterStat: () => $,
-    FutureDateText: () => Z,
-    GameCapsuleCtn: () => tn,
+    FutureDateText: () => kt,
+    GameCapsuleCtn: () => nn,
     GameShortDescription: () => Et,
-    GameSource: () => At,
-    GameTitleContainer: () => Y,
+    GameSource: () => jt,
+    GameTitleContainer: () => xt,
     HasVideo: () => Pn,
-    LeaveRoomForReminder: () => Lt,
+    LeaveRoomForReminder: () => Rt,
     LiveBroadcastPreview: () => dn,
     LiveNow: () => Ot,
     LiveText: () => Dt,
     LoadingTile: () => kn,
-    MainContentContainer: () => Yt,
+    MainContentContainer: () => Xt,
     OnlyIcon: () => gn,
     Options: () => Tn,
-    PastDateText: () => kt,
-    PatchIconCtn: () => sn,
+    PastDateText: () => At,
+    PatchIconCtn: () => cn,
     RateIcon: () => xn,
-    RecommendedSource: () => Nt,
+    RecommendedSource: () => Pt,
     ReminderContainer: () => hn,
-    SmallAppName: () => Rt,
-    Source: () => Mt,
-    SourceList: () => jt,
-    SourceRecommended: () => Pt,
+    SmallAppName: () => zt,
+    Source: () => Nt,
+    SourceList: () => Mt,
+    SourceRecommended: () => Ft,
     SubTitleShown: () => Fn,
-    Tile: () => Jt,
+    Tile: () => Yt,
     TileBackgroundImage: () => fn,
     TileContainer: () => wt,
     TileCoverImagePlayable: () => pn,
     TileCoverLiveIcon: () => mn,
-    TileImage: () => Xt,
+    TileImage: () => Zt,
     TileTextAppName: () => Ct,
-    TileTextCategoryType: () => zt,
-    TileTextContainer: () => Zt,
-    TileTextHeader: () => on,
+    TileTextCategoryType: () => Bt,
+    TileTextContainer: () => Qt,
+    TileTextHeader: () => sn,
     TileVideoIcon: () => Mn,
     TileViewerCount: () => En,
     UpcomingMode: () => jn,
@@ -314,12 +314,12 @@ var bt = class e {
     Vote_NotLoggedIn: () => vn,
     Vote_Positive: () => bn,
     Vote_Ready: () => Cn,
-    YoutubePreviewImage: () => Q,
+    YoutubePreviewImage: () => Z,
     default: () => Ln,
-    narrowWidth: () => xt,
+    narrowWidth: () => bt,
   }),
-  xt = `500px`,
-  Y = `Zlty4OIYdk8-`,
+  bt = `500px`,
+  xt = `Zlty4OIYdk8-`,
   St = `go8QhZVoiDg-`,
   Ct = `C2L2kTp8KYY-`,
   X = `cJRhUD4vyks-`,
@@ -328,41 +328,41 @@ var bt = class e {
   Et = `NH4KbTPWsVo-`,
   Dt = `oKFVegN0DBM-`,
   Ot = `b6-KxfcdLaA-`,
-  Z = `fTNya0ypDaA-`,
-  kt = `xsBu3BpyRkM-`,
-  At = `HcQu8--ilOI-`,
-  jt = `Posg84PD4bE-`,
-  Mt = `k2N88JaY6V0-`,
-  Nt = `ZoGr1X5RSXM-`,
-  Pt = `EQ3XQ1YOQmQ-`,
-  Ft = `C0xcw-dBN9k-`,
-  It = `IF22HifrVkU-`,
-  Lt = `_6qTH13L4IdM-`,
-  Rt = `_3tNrYR8q4PM-`,
-  zt = `ohvlfUuwWIg-`,
-  Bt = `mo9oCL-5zMc-`,
-  Vt = `ZN1vuColBC4-`,
-  Ht = `icDmaRX1BV0-`,
-  Ut = `optYdsri3U8-`,
-  Wt = `_5zGVMek4WGM-`,
-  Gt = `KdEmVjNtWfQ-`,
-  Kt = `LnEJdWlC4Ss-`,
-  qt = `NG3wNiIIJXs-`,
-  Jt = `bOEXfqM27eQ-`,
-  Yt = `o-fQFsyOEMY-`,
-  Q = `q8QvDCYSn5E-`,
-  Xt = `_1ZYmIx0m7bo-`,
-  Zt = `OHAAoz1G1I4-`,
-  Qt = `k1akHy9HHzA-`,
-  $t = `SlFMYJwWSU4-`,
-  en = `_9lDmRzgjqs4-`,
-  tn = `E-S8WDov49g-`,
-  nn = `fzWS9zjHBQA-`,
-  rn = `yI-XQCfZhjU-`,
-  an = `zEB6Vo-lSoU-`,
-  on = `hG0eaq6y-C8-`,
-  sn = `wdp2jpfiGas-`,
-  cn = `ym2tgXthxzw-`,
+  kt = `fTNya0ypDaA-`,
+  At = `xsBu3BpyRkM-`,
+  jt = `HcQu8--ilOI-`,
+  Mt = `Posg84PD4bE-`,
+  Nt = `k2N88JaY6V0-`,
+  Pt = `ZoGr1X5RSXM-`,
+  Ft = `EQ3XQ1YOQmQ-`,
+  It = `C0xcw-dBN9k-`,
+  Lt = `IF22HifrVkU-`,
+  Rt = `_6qTH13L4IdM-`,
+  zt = `_3tNrYR8q4PM-`,
+  Bt = `ohvlfUuwWIg-`,
+  Vt = `mo9oCL-5zMc-`,
+  Ht = `ZN1vuColBC4-`,
+  Ut = `icDmaRX1BV0-`,
+  Wt = `optYdsri3U8-`,
+  Gt = `_5zGVMek4WGM-`,
+  Kt = `KdEmVjNtWfQ-`,
+  qt = `LnEJdWlC4Ss-`,
+  Jt = `NG3wNiIIJXs-`,
+  Yt = `bOEXfqM27eQ-`,
+  Xt = `o-fQFsyOEMY-`,
+  Z = `q8QvDCYSn5E-`,
+  Zt = `_1ZYmIx0m7bo-`,
+  Qt = `OHAAoz1G1I4-`,
+  $t = `k1akHy9HHzA-`,
+  en = `SlFMYJwWSU4-`,
+  tn = `_9lDmRzgjqs4-`,
+  nn = `E-S8WDov49g-`,
+  rn = `fzWS9zjHBQA-`,
+  an = `yI-XQCfZhjU-`,
+  on = `zEB6Vo-lSoU-`,
+  sn = `hG0eaq6y-C8-`,
+  cn = `wdp2jpfiGas-`,
+  Q = `ym2tgXthxzw-`,
   ln = `KQCQvl8Sul0-`,
   un = `iogiG-p5PHg-`,
   dn = `e2Xhb-5xMvY-`,
@@ -393,8 +393,8 @@ var bt = class e {
   Fn = `h-oZBBAdgfo-`,
   In = `utI2vL1PRLs-`,
   Ln = {
-    narrowWidth: xt,
-    GameTitleContainer: Y,
+    narrowWidth: bt,
+    GameTitleContainer: xt,
     AppIcon: St,
     TileTextAppName: Ct,
     EnableHovers: X,
@@ -403,41 +403,41 @@ var bt = class e {
     GameShortDescription: Et,
     LiveText: Dt,
     LiveNow: Ot,
-    FutureDateText: Z,
-    PastDateText: kt,
-    GameSource: At,
-    SourceList: jt,
-    Source: Mt,
-    RecommendedSource: Nt,
-    SourceRecommended: Pt,
-    DateAndSourceLine: Ft,
-    EventTypeAndDateCtn: It,
-    LeaveRoomForReminder: Lt,
-    SmallAppName: Rt,
-    TileTextCategoryType: zt,
-    EventType28: Bt,
-    EventType10: Vt,
-    EventType11: Ht,
-    EventType23: Ut,
-    EventType35: Wt,
-    EventType13: Gt,
-    EventType14: Kt,
-    EventType15: qt,
-    Tile: Jt,
-    MainContentContainer: Yt,
-    YoutubePreviewImage: Q,
-    TileImage: Xt,
-    TileTextContainer: Zt,
-    EventType12: Qt,
-    EventName: $t,
-    EventSubTitle: en,
-    GameCapsuleCtn: tn,
-    AppBannerLogo: nn,
-    FallbackImage: rn,
-    ClanSource: an,
-    TileTextHeader: on,
-    PatchIconCtn: sn,
-    EventTitleCtn: cn,
+    FutureDateText: kt,
+    PastDateText: At,
+    GameSource: jt,
+    SourceList: Mt,
+    Source: Nt,
+    RecommendedSource: Pt,
+    SourceRecommended: Ft,
+    DateAndSourceLine: It,
+    EventTypeAndDateCtn: Lt,
+    LeaveRoomForReminder: Rt,
+    SmallAppName: zt,
+    TileTextCategoryType: Bt,
+    EventType28: Vt,
+    EventType10: Ht,
+    EventType11: Ut,
+    EventType23: Wt,
+    EventType35: Gt,
+    EventType13: Kt,
+    EventType14: qt,
+    EventType15: Jt,
+    Tile: Yt,
+    MainContentContainer: Xt,
+    YoutubePreviewImage: Z,
+    TileImage: Zt,
+    TileTextContainer: Qt,
+    EventType12: $t,
+    EventName: en,
+    EventSubTitle: tn,
+    GameCapsuleCtn: nn,
+    AppBannerLogo: rn,
+    FallbackImage: an,
+    ClanSource: on,
+    TileTextHeader: sn,
+    PatchIconCtn: cn,
+    EventTitleCtn: Q,
     Footer: ln,
     EventCapsuleCtn: un,
     LiveBroadcastPreview: dn,
@@ -470,132 +470,132 @@ var bt = class e {
   };
 function Rn(e) {
   let { closeModal: t } = e;
-  return (0, q.jsx)(P, {
-    strTitle: B(`#EventCalendar_GameSource_UnhideCuratorsDialog_Title`),
-    strDescription: B(
+  return (0, J.jsx)(L, {
+    strTitle: F(`#EventCalendar_GameSource_UnhideCuratorsDialog_Title`),
+    strDescription: F(
       `#EventCalendar_GameSource_UnhideCuratorsDialog_Description`,
     ),
-    strOKButtonText: B(
+    strOKButtonText: F(
       `#EventCalendar_GameSource_UnhideCuratorsDialog_OKButton`,
     ),
-    strCancelButtonText: B(
+    strCancelButtonText: F(
       `#EventCalendar_GameSource_UnhideCuratorsDialog_CancelButton`,
     ),
     onOK: () => {
-      (U().m_visibilityStore.SetGameSourceAllowed(W.k_ECurator, !0), t && t());
+      (W().m_visibilityStore.SetGameSourceAllowed(G.k_ECurator, !0), t && t());
     },
     onCancel: () => {
-      (U().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(!0),
+      (W().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(!0),
         t && t());
     },
   });
 }
 function zn(e) {
   e ||
-    (lt() &&
-      (U().m_visibilityStore.BCuratorUnhideOnFollowDialogDismissed() ||
-        U().m_visibilityStore.BIsGameSourceAllowed(W.k_ECurator) ||
-        j((0, q.jsx)(Rn, {}), window)));
+    (ct() &&
+      (W().m_visibilityStore.BCuratorUnhideOnFollowDialogDismissed() ||
+        W().m_visibilityStore.BIsGameSourceAllowed(G.k_ECurator) ||
+        P((0, J.jsx)(Rn, {}), window)));
 }
-var Bn = n((e) => {
+var Bn = o((e) => {
   let { eventModel: t, calendarEvent: n, history: r } = e,
     i = (e) => {
       let t = n.GetEntityName();
-      j(
-        (0, q.jsx)(P, {
-          strTitle: B(`#EventCalendar_MuteApp_Title`, t),
-          strDescription: B(`#EventCalendar_MuteApp_details`, t),
-          onOK: () => U().UpdateEventBlockFromCalendarEvent(n, !1),
-          children: (0, q.jsx)(`a`, {
-            href: H.STORE_BASE_URL + `account/emailoptout/app`,
-            target: H.IN_CLIENT ? void 0 : `_blank`,
-            children: B(`#EventCalendar_ManageMutedSources`),
+      P(
+        (0, J.jsx)(L, {
+          strTitle: F(`#EventCalendar_MuteApp_Title`, t),
+          strDescription: F(`#EventCalendar_MuteApp_details`, t),
+          onOK: () => W().UpdateEventBlockFromCalendarEvent(n, !1),
+          children: (0, J.jsx)(`a`, {
+            href: U.STORE_BASE_URL + `account/emailoptout/app`,
+            target: U.IN_CLIENT ? void 0 : `_blank`,
+            children: F(`#EventCalendar_ManageMutedSources`),
           }),
         }),
-        qe(e),
+        Ge(e),
       );
     },
     a = () => {
-      U().UpdateEventBlockFromCalendarEvent(n, !0);
+      W().UpdateEventBlockFromCalendarEvent(n, !0);
     },
     o = () => {
       let e = s().MapClanEventTypeToGroup(t.GetEventType());
       s().SetEventTypeGroupAllowed(e, !1);
     },
-    s = () => U().m_visibilityStore,
+    s = () => W().m_visibilityStore,
     c = (e, t, n, r = !0) => {
       s().BIsGameSourceAllowed(t) &&
         (r &&
           e.push(
-            (0, q.jsx)(
-              L,
+            (0, J.jsx)(
+              M,
               {
                 disabled: !0,
                 onSelected: () => {},
-                children: B(`#EventCalender_Reason_` + t),
+                children: F(`#EventCalender_Reason_` + t),
               },
               `item-source-${n}-${t}`,
             ),
           ),
         e.push(
-          (0, q.jsx)(
-            L,
+          (0, J.jsx)(
+            M,
             {
               onSelected: () => {
                 s().SetGameSourceAllowed(t, !1);
               },
-              children: B(`#EventCalender_Hide_Reason_` + t),
+              children: F(`#EventCalender_Hide_Reason_` + t),
             },
             `item-hidesource-${n}-${t}`,
           ),
         ));
     },
-    l = C(t, ve.k_eStoreNewsHub, `allowRelative`),
+    l = ye(t, be.k_eStoreNewsHub, `allowRelative`),
     u = () => {
       l.startsWith(`http`) ? (window.location.href = l) : r.push(l);
     };
-  return (0, q.jsx)(`div`, {
-    className: I($, Tn),
+  return (0, J.jsx)(`div`, {
+    className: z($, Tn),
     onClick: (e) => {
       let r = [],
         l = n.GetSource(),
         d = n.unique_id,
-        f = Ge(),
-        p = U();
+        f = N(),
+        p = W();
       (p.BIsGlobalCalendar() &&
         (l &&
-          l & G.k_eLibrary &&
-          (s().BIsGameSourceAllowed(W.k_ERecent) && n.appInfo
+          l & K.k_eLibrary &&
+          (s().BIsGameSourceAllowed(G.k_ERecent) && n.appInfo
             ? (r.push(
-                (0, q.jsx)(
-                  L,
+                (0, J.jsx)(
+                  M,
                   {
                     disabled: !0,
                     onSelected: () => {},
-                    children: B(
+                    children: F(
                       `#EventCalender_LastPlayed`,
-                      $e(Ce.GetTimeNowWithOverride() - n.appInfo.last_played),
+                      B(we.GetTimeNowWithOverride() - n.appInfo.last_played),
                     ),
                   },
                   `item-source-${d}-lastplayed`,
                 ),
               ),
-              c(r, W.k_ERecent, d, !1))
-            : c(r, W.k_ELibrary, d)),
-        l && l & G.k_eWishlist && c(r, W.k_EWishlist, d),
-        l && l & G.k_eFollowing && c(r, W.k_EFollowing, d),
-        !f && l && l & G.k_eCurator && c(r, W.k_ECurator, d),
-        l && l & G.k_eRecommended && c(r, W.k_ERecommended, d),
-        l && l & G.k_eSteam && c(r, W.k_ESteam, d),
-        l && l & G.k_eFeatured && c(r, W.k_EFeatured, d)),
+              c(r, G.k_ERecent, d, !1))
+            : c(r, G.k_ELibrary, d)),
+        l && l & K.k_eWishlist && c(r, G.k_EWishlist, d),
+        l && l & K.k_eFollowing && c(r, G.k_EFollowing, d),
+        !f && l && l & K.k_eCurator && c(r, G.k_ECurator, d),
+        l && l & K.k_eRecommended && c(r, G.k_ERecommended, d),
+        l && l & K.k_eSteam && c(r, G.k_ESteam, d),
+        l && l & K.k_eFeatured && c(r, G.k_EFeatured, d)),
         r.push(
-          (0, q.jsx)(
-            L,
+          (0, J.jsx)(
+            M,
             {
               onSelected: o,
-              children: B(
+              children: F(
                 `#EVentCalendar_Hide_EventType`,
-                B(
+                F(
                   `#EventCalendar_EventTypeGroup_` +
                     s().MapClanEventTypeToGroup(t.GetEventType()),
                 ),
@@ -604,16 +604,16 @@ var Bn = n((e) => {
             t.GID + `hidetype`,
           ),
         ),
-        R.logged_in &&
-          (ft.Get().BIsEventBlocked(n)
+        V.logged_in &&
+          (dt.Get().BIsEventBlocked(n)
             ? r.push(
-                (0, q.jsx)(
-                  L,
+                (0, J.jsx)(
+                  M,
                   {
                     onSelected: a,
-                    children: (0, q.jsx)(z, {
-                      toolTipContent: B(`#EventCalendar_UnMuteApp_ttip`),
-                      children: B(
+                    children: (0, J.jsx)(H, {
+                      toolTipContent: F(`#EventCalendar_UnMuteApp_ttip`),
+                      children: F(
                         `#EventCalendar_UnMuteApp_Title`,
                         n.GetEntityName(),
                       ),
@@ -623,13 +623,13 @@ var Bn = n((e) => {
                 ),
               )
             : r.push(
-                (0, q.jsx)(
-                  L,
+                (0, J.jsx)(
+                  M,
                   {
                     onSelected: i,
-                    children: (0, q.jsx)(z, {
-                      toolTipContent: B(`#EventCalendar_MuteApp_ttip`),
-                      children: B(
+                    children: (0, J.jsx)(H, {
+                      toolTipContent: F(`#EventCalendar_MuteApp_ttip`),
+                      children: F(
                         `#EventCalendar_MuteApp_Title`,
                         n.GetEntityName(),
                       ),
@@ -640,14 +640,14 @@ var Bn = n((e) => {
               )),
         !t.BIsOGGEvent() &&
           !f &&
-          r.push((0, q.jsx)(Vn, { eventModel: t, calendarEvent: n })),
+          r.push((0, J.jsx)(Vn, { eventModel: t, calendarEvent: n })),
         p.BIsSingleSourceCalendar() ||
           r.push(
-            (0, q.jsx)(
-              L,
+            (0, J.jsx)(
+              M,
               {
                 onSelected: u,
-                children: B(
+                children: F(
                   `#EventCalendar_Goto_SpecificCalendar`,
                   n.GetEntityName(),
                 ),
@@ -657,46 +657,46 @@ var Bn = n((e) => {
           ),
         t.appid &&
           r.push(
-            (0, q.jsx)(
-              L,
+            (0, J.jsx)(
+              M,
               {
                 onSelected: () =>
-                  (window.location.href = et(
-                    H.STORE_BASE_URL + `app/` + t.appid,
+                  (window.location.href = je(
+                    U.STORE_BASE_URL + `app/` + t.appid,
                   )),
-                children: B(`#EventDisplay_ViewStorePage`),
+                children: F(`#EventDisplay_ViewStorePage`),
               },
               t.GID + `goto`,
             ),
           ),
-        Ke((0, q.jsx)(Ae, { children: r }), e));
+        De((0, J.jsx)(Me, { children: r }), e));
     },
-    children: (0, q.jsx)(Re, {}),
+    children: (0, J.jsx)(Te, {}),
   });
 });
 function Vn(e) {
   let { eventModel: t, calendarEvent: n } = e,
-    r = f(t.clanSteamID.GetAccountID()),
-    { elDialogElement: i, fnShowLogonDialog: a } = v(),
-    o = K.useCallback(async () => {
-      R.logged_in
-        ? (await _.Get().UpdateFollowOrIgnoreCurator(t.clanSteamID, !0, !r),
+    r = h(t.clanSteamID.GetAccountID()),
+    { elDialogElement: i, fnShowLogonDialog: a } = p(),
+    o = q.useCallback(async () => {
+      V.logged_in
+        ? (await u.Get().UpdateFollowOrIgnoreCurator(t.clanSteamID, !0, !r),
           zn(!!r))
         : a();
     }, [r, t.clanSteamID, a]);
-  return (0, q.jsxs)(q.Fragment, {
+  return (0, J.jsxs)(J.Fragment, {
     children: [
-      (0, q.jsx)(
-        L,
+      (0, J.jsx)(
+        M,
         {
           onSelected: o,
-          children: (0, q.jsx)(z, {
-            toolTipContent: B(
+          children: (0, J.jsx)(H, {
+            toolTipContent: F(
               r
                 ? `#EventCalendar_UnFollowCurator_ttip`
                 : `#EventCalendar_FollowCurator_ttip`,
             ),
-            children: B(
+            children: F(
               r
                 ? `#EventCalendar_UnFollowCurator`
                 : `#EventCalendar_FollowCurator`,
@@ -715,39 +715,39 @@ var Hn = r(Bn),
   Wn = `kcXPMd3IHiw-`,
   Gn = (e) => {
     let t = [`maxresdefault`, `mqdefault`, `default`],
-      [n, r] = K.useState(0);
-    K.useEffect(() => r(0), [e.video]);
-    let i = K.useRef(null);
+      [n, r] = q.useState(0);
+    q.useEffect(() => r(0), [e.video]);
+    let i = q.useRef(null);
     if (e.altImgWithFallback && e.altImgWithFallback.length > 0)
-      return (0, q.jsx)(g, {
+      return (0, J.jsx)(f, {
         className: e.className,
         srcs: e.altImgWithFallback,
       });
     if (e.altImg)
-      return (0, q.jsx)(`img`, { src: e.altImg, className: e.className });
+      return (0, J.jsx)(`img`, { src: e.altImg, className: e.className });
     {
       let a = `https://img.youtube.com/vi/` + e.video + `/` + t[n] + `.jpg`,
         o = () => {
           n + 1 < t.length && r(n + 1);
         };
-      return (0, q.jsx)(`img`, {
+      return (0, J.jsx)(`img`, {
         ref: i,
         onLoad: () => {
           i.current && i.current.naturalHeight < 91 && o();
         },
         onError: o,
         src: a,
-        className: I(Un, e.className),
+        className: z(Un, e.className),
       });
     }
   },
   Kn = (e) => {
-    let [t, n] = K.useState(!1);
-    pe(!!e.preloadYoutubeScripts);
-    let r = de(`youtube`);
+    let [t, n] = q.useState(!1);
+    fe(!!e.preloadYoutubeScripts);
+    let r = le(`youtube`);
     return !t || !r
-      ? (0, q.jsxs)(`div`, {
-          className: I(`YoutubePreviewContainer`, Un, e.imageClassnames),
+      ? (0, J.jsxs)(`div`, {
+          className: z(`YoutubePreviewContainer`, Un, e.imageClassnames),
           onClick: r
             ? (t) => {
                 (e.onPlayerActivated && e.onPlayerActivated(),
@@ -757,185 +757,185 @@ var Hn = r(Bn),
               }
             : void 0,
           children: [
-            (0, q.jsx)(Gn, {
+            (0, J.jsx)(Gn, {
               className: `YoutubePreviewImage`,
               altImgWithFallback: e.altImgWithFallback,
               altImg: e.altImg,
               video: e.video,
             }),
             r &&
-              (0, q.jsxs)(q.Fragment, {
+              (0, J.jsxs)(J.Fragment, {
                 children: [
-                  (0, q.jsx)(`div`, {
+                  (0, J.jsx)(`div`, {
                     className: `YoutubePreviewPlay`,
-                    children: (0, q.jsx)(Pe, {}),
+                    children: (0, J.jsx)(Xe, {}),
                   }),
-                  (0, q.jsx)(`div`, {
+                  (0, J.jsx)(`div`, {
                     className: `VideoHintText`,
-                    children: B(`#EventCalendar_WatchYouTubeVideo`),
+                    children: F(`#EventCalendar_WatchYouTubeVideo`),
                   }),
                 ],
               }),
           ],
         })
-      : (0, q.jsx)(fe, { ...e, classnames: I(Wn, e.classnames) });
+      : (0, J.jsx)(ue, { ...e, classnames: z(Wn, e.classnames) });
   };
 function qn(e) {
   let {
       eventModel: t,
-      calendarEvent: n,
-      bSuppressHoverEffects: r,
-      mode: i,
-      bHideGameTitle: a,
-      fnOnClicked: o,
+      calendarEvent: r,
+      bSuppressHoverEffects: i,
+      mode: a,
+      bHideGameTitle: o,
+      fnOnClicked: s,
     } = e,
-    [s, l] = K.useState(!1),
-    f = _e(),
-    m = te(t.GetAppIDOrReferenceAppID());
-  ze(m);
-  let h = p(t);
-  oe(n.clanInfo?.clanid);
-  let g = V(H.LANGUAGE),
-    _ = `capsule`,
-    [v, y, ne, ie, ae, b, se, ce, le, de, fe] = c(() => [
+    [c, l] = q.useState(!1),
+    u = ge(),
+    f = d(t.GetAppIDOrReferenceAppID());
+  Qe(f);
+  let p = ne(t);
+  ie(r.clanInfo?.clanid);
+  let h = R(U.LANGUAGE),
+    g = `capsule`,
+    [_, v, y, re, x, S, ae, oe, se, le, ue] = n(() => [
       t.has_live_stream,
       t.GetEventType(),
       t.GetAllTags(),
       t.GetCategoryAsString(),
-      t.GetNameWithFallback(g),
-      t.BImageNeedScreenshotFallback(_, g),
+      t.GetNameWithFallback(h),
+      t.BImageNeedScreenshotFallback(g, h),
       t.appid,
       t.GID,
       t.GetStartTimeAndDateUnixSeconds(),
-      t.GetSubTitleWithLanguageFallback(g),
-      t.GetSummaryWithFallback(g),
+      t.GetSubTitleWithLanguageFallback(h),
+      t.GetSummaryWithFallback(h),
     ]),
-    [x, pe] = K.useState(() => (re() && y == 14 ? u.full : u.capsule_main)),
-    he = ue(),
-    ge = d(b && se && h ? void 0 : t, _, g, x, he) ?? h,
-    C = Yn(t, i),
-    xe = Ie(ce),
-    w = J[`EventType${y}`],
-    T = ne.map((e) => J[`Tag-${e}`]),
-    Se = I(
+    [de, fe] = q.useState(() => (m() && v == 14 ? b.full : b.capsule_main)),
+    me = ce(),
+    he = ee(S && ae && p ? void 0 : t, g, h, de, me) ?? p,
+    _e = Yn(t, a),
+    ye = Re(oe),
+    Se = Y[`EventType${v}`],
+    w = y.map((e) => Y[`Tag-${e}`]),
+    Ce = z(
       wt,
-      w,
-      v && `MVfZPnoopw0-`,
-      r ? void 0 : X,
-      s && `utI2vL1PRLs-`,
-      C && `_4wxMhjLGDEo-`,
-      xe && void 0,
-      i === `wide` && void 0,
-      i === `carousel` && `_6IHSOcZWQTI-`,
-      i === `upcoming` && `i7ABr2eulso-`,
-      ...T,
+      Se,
+      _ && `MVfZPnoopw0-`,
+      i ? void 0 : X,
+      c && `utI2vL1PRLs-`,
+      _e && `_4wxMhjLGDEo-`,
+      ye && void 0,
+      a === `wide` && void 0,
+      a === `carousel` && `_6IHSOcZWQTI-`,
+      a === `upcoming` && `i7ABr2eulso-`,
+      ...w,
     ),
-    E = de,
-    D = fe;
-  (E === D && (D = void 0), E === ae && (E = void 0));
-  let we = ee(ge),
-    O = (0, q.jsx)(Zn, {
+    T = le,
+    E = ue;
+  (T === E && (E = void 0), T === x && (T = void 0));
+  let D = te(he),
+    O = (0, J.jsx)(Zn, {
       setVideoPlayerReady: l,
-      calendarEvent: n,
+      calendarEvent: r,
       eventModel: t,
-      mode: i,
-      artworkType: _,
-      strCapsuleImgURLForBackground: we,
-      fnSetCoverSize: pe,
+      mode: a,
+      artworkType: g,
+      strCapsuleImgURLForBackground: D,
+      fnSetCoverSize: fe,
     }),
-    k = r && y != 14 && !(s && i !== `carousel`),
+    k = i && v != 14 && !(c && a !== `carousel`),
     A = k && O,
-    j = !k && O,
-    Te = y !== 28 && y !== 12 && Ce.GetTimeNowWithOverride() < le,
-    M = i !== `wide` || r,
-    N =
-      Te &&
-      (0, q.jsx)(`div`, {
-        className: I(`-VpcmDHYJBs-`, M && `_8hZf0ZZtftA-`),
-        children: (0, q.jsx)(me, {
+    Te = !k && O,
+    Ee = v !== 28 && v !== 12 && we.GetTimeNowWithOverride() < se,
+    j = a !== `wide` || i,
+    M =
+      Ee &&
+      (0, J.jsx)(`div`, {
+        className: z(`-VpcmDHYJBs-`, j && `_8hZf0ZZtftA-`),
+        children: (0, J.jsx)(pe, {
           eventModel: t,
-          lang: g,
+          lang: h,
           bShowStartTime: !0,
-          bOnlyShowIcon: M,
-          bExpandLeft: M,
+          bOnlyShowIcon: j,
+          bExpandLeft: j,
         }),
       }),
-    P = !!(y !== 12 && D),
-    Ee = !(!E || (P && Jn(E, D)));
-  return (0, q.jsxs)(`div`, {
-    className: Se,
+    N = !!(v !== 12 && E),
+    De = !(!T || (N && Jn(T, E)));
+  return (0, J.jsxs)(`div`, {
+    className: Ce,
     children: [
-      (0, q.jsx)(pt, { event: t, recordNewsHubStats: !0 }),
-      (0, q.jsx)(ye, {
+      (0, J.jsx)(ft, { event: t, recordNewsHubStats: !0 }),
+      (0, J.jsx)(xe, {
         eventModel: t,
-        route: ve.k_eView,
-        children: (0, q.jsxs)(`div`, {
-          className: Jt,
+        route: be.k_eView,
+        children: (0, J.jsxs)(`div`, {
+          className: Yt,
           onClick: (e) => {
-            (f.RecordInteraction(S.k_eClickThrough),
-              !be() && (o(t), e.stopPropagation(), e.preventDefault()));
+            (u.RecordInteraction(C.k_eClickThrough),
+              !ve() && (s(t), e.stopPropagation(), e.preventDefault()));
           },
           children: [
-            y === 14 &&
-              (0, q.jsx)(`div`, {
-                className: I(`TtzbM79RcOo-`, b && `yI-XQCfZhjU-`),
-                style: { backgroundImage: `url(${we})` },
+            v === 14 &&
+              (0, J.jsx)(`div`, {
+                className: z(`TtzbM79RcOo-`, S && `yI-XQCfZhjU-`),
+                style: { backgroundImage: `url(${D})` },
               }),
-            (0, q.jsxs)(`div`, {
-              className: Yt,
+            (0, J.jsxs)(`div`, {
+              className: Xt,
               children: [
-                j,
-                (0, q.jsxs)(`div`, {
-                  className: Zt,
+                Te,
+                (0, J.jsxs)(`div`, {
+                  className: Qt,
                   children: [
-                    y == 12 &&
-                      (0, q.jsx)(`div`, {
+                    v == 12 &&
+                      (0, J.jsx)(`div`, {
                         className: `wdp2jpfiGas-`,
-                        children: (0, q.jsx)(Xe, {}),
+                        children: (0, J.jsx)(Pe, {}),
                       }),
-                    (0, q.jsxs)(`div`, {
-                      className: cn,
+                    (0, J.jsxs)(`div`, {
+                      className: Q,
                       children: [
                         A,
-                        !a &&
-                          (0, q.jsxs)(`div`, {
+                        !o &&
+                          (0, J.jsxs)(`div`, {
                             className: `HcQu8--ilOI-`,
                             children: [
-                              (0, q.jsx)($n, { ...e }),
-                              n && (0, q.jsx)(tr, { calendarEvent: n }),
+                              (0, J.jsx)($n, { ...e }),
+                              r && (0, J.jsx)(tr, { calendarEvent: r }),
                             ],
                           }),
-                        (0, q.jsx)(`div`, { className: $t, children: ae }),
-                        (0, q.jsxs)(`div`, {
-                          className: It,
+                        (0, J.jsx)(`div`, { className: en, children: x }),
+                        (0, J.jsxs)(`div`, {
+                          className: Lt,
                           children: [
-                            (0, q.jsx)(`div`, {
-                              className: I(zt, w),
-                              children: ie,
+                            (0, J.jsx)(`div`, {
+                              className: z(Bt, Se),
+                              children: re,
                             }),
-                            (0, q.jsx)(er, {
+                            (0, J.jsx)(er, {
                               eventModel: t,
-                              className: I(M && `_6qTH13L4IdM-`),
+                              className: z(j && `_6qTH13L4IdM-`),
                             }),
-                            M && N,
+                            j && M,
                           ],
                         }),
-                        Ee &&
-                          (0, q.jsx)(`div`, {
+                        De &&
+                          (0, J.jsx)(`div`, {
                             className: `_9lDmRzgjqs4-`,
-                            children: E,
+                            children: T,
                           }),
-                        P &&
-                          (0, q.jsx)(`div`, {
-                            className: I(
+                        N &&
+                          (0, J.jsx)(`div`, {
+                            className: z(
                               `O79JneSzM9g-`,
-                              E ? `h-oZBBAdgfo-` : ``,
+                              T ? `h-oZBBAdgfo-` : ``,
                             ),
-                            children: D,
+                            children: E,
                           }),
                       ],
                     }),
-                    !M && N,
+                    !j && M,
                   ],
                 }),
               ],
@@ -943,7 +943,7 @@ function qn(e) {
           ],
         }),
       }),
-      (0, q.jsx)(ir, { ...e }),
+      (0, J.jsx)(ir, { ...e }),
     ],
   });
 }
@@ -959,22 +959,22 @@ function Yn(e, t) {
 function Xn(e) {
   let { eventModel: t, fnSetVideoStateReady: n, mode: r } = e,
     { video_preview_id: i, type: a } = e.eventModel,
-    o = _e(),
-    s = V(H.LANGUAGE),
-    c = re() && a == 14 ? u.full : u.capsule_main,
-    l = xe(t, `capsule`, s, c, !0);
+    o = ge(),
+    s = R(U.LANGUAGE),
+    c = m() && a == 14 ? b.full : b.capsule_main,
+    l = _e(t, `capsule`, s, c, !0);
   return r === `carousel`
-    ? (0, q.jsx)(Gn, { altImgWithFallback: l, video: i, className: Q })
-    : (0, q.jsx)(Kn, {
+    ? (0, J.jsx)(Gn, { altImgWithFallback: l, video: i, className: Z })
+    : (0, J.jsx)(Kn, {
         video: i,
         altImgWithFallback: l,
         autoplay: !0,
         autopause: !0,
         showFullscreenBtn: !0,
         controls: !0,
-        imageClassnames: Q,
+        imageClassnames: Z,
         onPlayerActivated: () => {
-          (o.RecordInteraction(S.k_ePlayedVideo), n(!0));
+          (o.RecordInteraction(C.k_ePlayedVideo), n(!0));
         },
         preloadYoutubeScripts: !0,
         playsInline: !0,
@@ -983,93 +983,93 @@ function Xn(e) {
 function Zn(e) {
   let {
       eventModel: t,
-      calendarEvent: n,
-      mode: r,
-      artworkType: i,
-      strCapsuleImgURLForBackground: a,
-      setVideoPlayerReady: o,
-      fnSetCoverSize: s,
+      calendarEvent: r,
+      mode: i,
+      artworkType: a,
+      strCapsuleImgURLForBackground: o,
+      setVideoPlayerReady: s,
+      fnSetCoverSize: c,
     } = e,
-    l = V(H.LANGUAGE),
-    d = Yn(t, r),
-    f = !Yn(t, r) && r !== `upcoming`,
-    [p, m, h, ee, te, g] = c(() => [
+    l = R(U.LANGUAGE),
+    u = Yn(t, i),
+    d = !Yn(t, i) && i !== `upcoming`,
+    [f, p, m, h, g, _] = n(() => [
       t.GetEventType(),
       t.has_live_stream,
       t.has_live_stream,
       t.clanSteamID.GetAccountID(),
-      n.GetGameCapsule(),
-      t.BImageNeedScreenshotFallback(i, l),
+      r.GetGameCapsule(),
+      t.BImageNeedScreenshotFallback(a, l),
     ]);
-  K.useEffect(() => {
-    if (a) {
+  q.useEffect(() => {
+    if (o) {
       let e = new Image();
-      ((e.src = a),
+      ((e.src = o),
         (e.onerror = () => {
-          s(u.full);
+          c(b.full);
         }));
     }
-  }, [a, s]);
-  let [, _] = b(ee),
-    v = _ && !_.is_ogg,
+  }, [o, c]);
+  let [, ee] = S(h),
+    v = ee && !ee.is_ogg,
     y = t.GetSummaryWithFallback(l);
   return (
     t.GetSubTitleWithLanguageFallback(l) === y && (y = void 0),
-    (0, q.jsxs)(`div`, {
+    (0, J.jsxs)(`div`, {
       className: Tt,
       children: [
-        d &&
-          (0, q.jsx)(Xn, {
+        u &&
+          (0, J.jsx)(Xn, {
             eventModel: t,
-            mode: r,
-            calendarEvent: n,
-            fnSetVideoStateReady: o,
+            mode: i,
+            calendarEvent: r,
+            fnSetVideoStateReady: s,
           }),
-        f &&
-          (0, q.jsxs)(q.Fragment, {
+        d &&
+          (0, J.jsxs)(J.Fragment, {
             children: [
-              p === 12 &&
-                (0, q.jsxs)(q.Fragment, {
+              f === 12 &&
+                (0, J.jsxs)(J.Fragment, {
                   children: [
-                    (0, q.jsx)(`div`, {
+                    (0, J.jsx)(`div`, {
                       className: `E-S8WDov49g-`,
-                      children: (0, q.jsx)(`div`, {
-                        className: I({
+                      children: (0, J.jsx)(`div`, {
+                        className: z({
                           "fzWS9zjHBQA-": !0,
-                          "yI-XQCfZhjU-": g,
+                          "yI-XQCfZhjU-": _,
                           "zEB6Vo-lSoU-": v,
                         }),
-                        style: { backgroundImage: `url(${te})` },
+                        style: { backgroundImage: `url(${g})` },
                       }),
                     }),
-                    (0, q.jsx)(`div`, {
+                    (0, J.jsx)(`div`, {
                       className: `NH4KbTPWsVo-`,
                       children: y,
                     }),
                   ],
                 }),
-              p !== 12 &&
-                (0, q.jsxs)(`div`, {
-                  className: I({ "iogiG-p5PHg-": !0, "e2Xhb-5xMvY-": h }),
+              f !== 12 &&
+                (0, J.jsxs)(`div`, {
+                  className: z({ "iogiG-p5PHg-": !0, "e2Xhb-5xMvY-": m }),
                   children: [
-                    (0, q.jsx)(`div`, {
-                      className: I({
+                    (0, J.jsx)(`div`, {
+                      className: z({
                         "_1ZYmIx0m7bo-": !0,
-                        "yI-XQCfZhjU-": g,
+                        "yI-XQCfZhjU-": _,
                         "zEB6Vo-lSoU-": v,
                       }),
-                      style: { backgroundImage: `url(${a})` },
+                      style: { backgroundImage: `url(${o})` },
                     }),
-                    h && (0, q.jsx)(`div`, { className: `-y6T-NRjq1Q-` }),
-                    m &&
-                      (0, q.jsx)(`div`, {
+                    m && (0, J.jsx)(`div`, { className: `-y6T-NRjq1Q-` }),
+                    p &&
+                      (0, J.jsx)(`div`, {
                         className: `_0hsSPkL5myo-`,
-                        children: B(`#home_page_live_broadcast`),
+                        children: F(`#home_page_live_broadcast`),
                       }),
-                    h &&
-                      (0, q.jsx)(`div`, {
+                    m &&
+                      (0, J.jsx)(`div`, {
                         className: `VideoHintText`,
-                        children: B(`#EventCalendar_WatchLiveBroadcast`),
+                        children: F(`#EventCalendar_WatchLiveBroadcast`),
                       }),
                   ],
                 }),
@@ -1079,14 +1079,14 @@ function Zn(e) {
     })
   );
 }
-var Qn = n((e) => {
+var Qn = o((e) => {
     let {
         eventModel: t,
         calendarEvent: n,
         bSuppressHoverEffects: r,
         history: i,
       } = e,
-      a = C(t, ve.k_eStoreNewsHub, `allowRelative`),
+      a = ye(t, be.k_eStoreNewsHub, `allowRelative`),
       o = (e) => {
         (a.startsWith(`http`) ? (window.location.href = a) : i.push(a),
           e.stopPropagation(),
@@ -1094,57 +1094,57 @@ var Qn = n((e) => {
       },
       s = n.GetEntityName(),
       c = n.GetGameIcon(),
-      l = I(Y, r ? void 0 : X);
-    return (0, q.jsx)(F, {
-      children: (0, q.jsx)(`div`, {
-        className: on,
-        children: (0, q.jsxs)(`div`, {
+      l = z(xt, r ? void 0 : X);
+    return (0, J.jsx)(j, {
+      children: (0, J.jsx)(`div`, {
+        className: sn,
+        children: (0, J.jsxs)(`div`, {
           className: l,
           onClick: o,
           children: [
-            (0, q.jsx)(`img`, { className: St, src: c }),
-            (0, q.jsxs)(`div`, { className: Ct, children: [s, ` `] }),
+            (0, J.jsx)(`img`, { className: St, src: c }),
+            (0, J.jsxs)(`div`, { className: Ct, children: [s, ` `] }),
           ],
         }),
       }),
     });
   }),
   $n = r(Qn),
-  er = n((e) => {
+  er = o((e) => {
     let { eventModel: t, calendarEvent: n, className: r } = e,
-      i = U().GetStoreInitializationTimestamp().getTime() / 1e3,
+      i = W().GetStoreInitializationTimestamp().getTime() / 1e3,
       a = t ? t.GetStartTimeAndDateUnixSeconds() : n.start_time,
-      o = t && ne(t.type) && t.GetEndTimeAndDateUnixSeconds();
+      o = t && v(t.type) && t.GetEndTimeAndDateUnixSeconds();
     if (o && a < i && i < o) {
       let e = o - i,
-        t = $e(e, !0);
-      return (0, q.jsxs)(`div`, {
-        className: I(Dt, r),
+        t = B(e, !0);
+      return (0, J.jsxs)(`div`, {
+        className: z(Dt, r),
         children: [
-          (0, q.jsx)(k, {
+          (0, J.jsx)(k, {
             rtFullDate: a,
-            stylesmodule: J,
-            children: (0, q.jsx)(`div`, {
+            stylesmodule: Y,
+            children: (0, J.jsx)(`div`, {
               className: Ot,
-              children: B(`#EventCalendar_LiveNow`),
+              children: F(`#EventCalendar_LiveNow`),
             }),
           }),
-          (0, q.jsx)(k, {
+          (0, J.jsx)(k, {
             rtFullDate: o,
-            stylesmodule: J,
-            children: B(`#EventCalendar_TimeLeft`, t),
+            stylesmodule: Y,
+            children: F(`#EventCalendar_TimeLeft`, t),
           }),
         ],
       });
     }
     if (a < i) {
       let e = i - a,
-        t = e < 86400 ? $e(e, !1, !0) : Ne(a);
-      return (0, q.jsx)(k, {
+        t = e < 86400 ? B(e, !1, !0) : Be(a);
+      return (0, J.jsx)(k, {
         className: r,
         rtFullDate: a,
-        stylesmodule: J,
-        children: (0, q.jsx)(`div`, { className: kt, children: t }),
+        stylesmodule: Y,
+        children: (0, J.jsx)(`div`, { className: At, children: t }),
       });
     }
     {
@@ -1152,56 +1152,56 @@ var Qn = n((e) => {
       e.setHours(0, 0, 0, 1);
       let t = e.getTime() / 1e3,
         n = Math.floor((a - t) / 86400),
-        o = n > 1 && n <= 5 ? Fe(new Date(a * 1e3)) : Ne(a),
-        s = we(a);
-      return (0, q.jsx)(k, {
+        o = n > 1 && n <= 5 ? Je(new Date(a * 1e3)) : Be(a),
+        s = D(a);
+      return (0, J.jsx)(k, {
         className: r,
         rtFullDate: a,
-        stylesmodule: J,
-        children: (0, q.jsx)(`div`, {
-          className: Z,
-          children: B(`#EventCalendar_WillStartAtDateTime`, o, s),
+        stylesmodule: Y,
+        children: (0, J.jsx)(`div`, {
+          className: kt,
+          children: F(`#EventCalendar_WillStartAtDateTime`, o, s),
         }),
       });
     }
   }),
-  tr = n((e) => {
+  tr = o((e) => {
     let t = e.calendarEvent.GetSource(),
       n = [],
-      r = U().m_visibilityStore;
-    (t & G.k_eLibrary && r.BIsGameSourceAllowed(W.k_ELibrary)
+      r = W().m_visibilityStore;
+    (t & K.k_eLibrary && r.BIsGameSourceAllowed(G.k_ELibrary)
       ? n.push({
-          id: G.k_eLibrary,
+          id: K.k_eLibrary,
           name: `#EventCalendar_GameSource_inLibrary`,
           ttip: `#EventCalendar_GameSource_EventExplanation_ttip_library`,
           styles: void 0,
         })
-      : t & G.k_eWishlist && r.BIsGameSourceAllowed(W.k_EWishlist)
+      : t & K.k_eWishlist && r.BIsGameSourceAllowed(G.k_EWishlist)
         ? n.push({
-            id: G.k_eWishlist,
+            id: K.k_eWishlist,
             name: `#EventCalendar_GameSource_onWishlist`,
             ttip: `#EventCalendar_GameSource_EventExplanation_ttip_wishlist`,
             styles: void 0,
           })
-        : t & G.k_eRecommended && r.BIsGameSourceAllowed(W.k_ERecommended)
+        : t & K.k_eRecommended && r.BIsGameSourceAllowed(G.k_ERecommended)
           ? n.push({
-              id: G.k_eRecommended,
+              id: K.k_eRecommended,
               name: `#EventCalendar_GameSource_recommended_Verbose`,
               ttip: `#EventCalendar_GameSource_EventExplanation_ttip_recommended`,
-              styles: Nt,
+              styles: Pt,
             })
-          : t & G.k_eFeatured &&
-            r.BIsGameSourceAllowed(W.k_EFeatured) &&
+          : t & K.k_eFeatured &&
+            r.BIsGameSourceAllowed(G.k_EFeatured) &&
             n.push({
-              id: G.k_eFeatured,
+              id: K.k_eFeatured,
               name: `#EventCalendar_GameSource_featured`,
               ttip: `#EventCalendar_GameSource_ttip_featured`,
               styles: void 0,
             }),
-      t & G.k_eFollowing &&
-        r.BIsGameSourceAllowed(W.k_EFollowing) &&
+      t & K.k_eFollowing &&
+        r.BIsGameSourceAllowed(G.k_EFollowing) &&
         n.push({
-          id: G.k_eFollowing,
+          id: K.k_eFollowing,
           name: `#EventCalendar_GameSource_followed`,
           ttip: `#EventCalendar_GameSource_EventExplanation_ttip_following`,
           styles: void 0,
@@ -1216,21 +1216,21 @@ var Qn = n((e) => {
         r + 1 < n.length,
       );
     });
-    return (0, q.jsx)(`div`, { className: jt, children: i });
+    return (0, J.jsx)(`div`, { className: Mt, children: i });
   }),
   nr = (e, t, n, r, i) =>
-    (0, q.jsx)(
-      z,
+    (0, J.jsx)(
+      H,
       {
-        className: I(Mt, r),
-        toolTipContent: B(n),
-        children: B(t) + (i ? `, ` : ``),
+        className: z(Nt, r),
+        toolTipContent: F(n),
+        children: F(t) + (i ? `, ` : ``),
       },
       e,
     );
 function rr(e) {
-  return R.logged_in
-    ? R.is_limited
+  return V.logged_in
+    ? V.is_limited
       ? yn
       : e === `up`
         ? bn
@@ -1241,52 +1241,52 @@ function rr(e) {
 }
 function ir(e) {
   let { eventModel: t } = e,
-    n = _e(),
-    { myVote: r, Vote: i } = he(t, { bAsk: !1 }),
-    [, a] = b(t.clanSteamID.GetAccountID()),
-    o = () => {
-      r !== `up` && ge() && (i(`up`), n.RecordInteraction(S.k_eThumbsUp));
-    },
+    r = ge(),
+    { myVote: i, Vote: a } = me(t, { bAsk: !1 }),
+    [, o] = S(t.clanSteamID.GetAccountID()),
     s = () => {
-      n.RecordInteraction(S.k_eDiscussions);
+      i !== `up` && he() && (a(`up`), r.RecordInteraction(C.k_eThumbsUp));
     },
-    [l, u, d] = c(() => [
+    c = () => {
+      r.RecordInteraction(C.k_eDiscussions);
+    },
+    [l, u, d] = n(() => [
       Math.max(0, t.nVotesUp - t.nVotesDown),
-      t.GetDiscussionURL(a?.vanity_url),
+      t.GetDiscussionURL(o?.vanity_url),
       t.nCommentCount,
     ]),
-    f = rr(r),
-    p = !Ge() && u,
+    f = rr(i),
+    p = !N() && u,
     m = t.live_stream_viewer_count > 0 ? t.live_stream_viewer_count : void 0;
-  return (0, q.jsx)(`div`, {
+  return (0, J.jsx)(`div`, {
     className: ln,
-    children: (0, q.jsxs)(`div`, {
+    children: (0, J.jsxs)(`div`, {
       className: wn,
       children: [
-        !!m && (0, q.jsx)(`div`, { className: `zxaNRVKQnTM-`, children: A(m) }),
-        (0, q.jsxs)(`div`, {
-          className: I($, void 0, f),
-          onClick: o,
+        !!m && (0, J.jsx)(`div`, { className: `zxaNRVKQnTM-`, children: A(m) }),
+        (0, J.jsxs)(`div`, {
+          className: z($, void 0, f),
+          onClick: s,
           children: [
-            (0, q.jsx)(je, { className: xn }),
-            (0, q.jsx)(`span`, { children: A(Number(l)) }),
+            (0, J.jsx)(ke, { className: xn }),
+            (0, J.jsx)(`span`, { children: A(Number(l)) }),
           ],
         }),
         p &&
-          (0, q.jsx)(`div`, {
+          (0, J.jsx)(`div`, {
             className: `CakmFSjnZaQ-`,
-            children: (0, q.jsxs)(`a`, {
+            children: (0, J.jsxs)(`a`, {
               href: u,
               className: `_2aS2MHSUX-U-`,
               target: `_blank`,
-              onClick: s,
+              onClick: c,
               children: [
-                (0, q.jsx)(N, { className: `Ilo9d6Bcf60-` }),
-                (0, q.jsx)(`span`, { children: A(Number(d)) }),
+                (0, J.jsx)(Ze, { className: `Ilo9d6Bcf60-` }),
+                (0, J.jsx)(`span`, { children: A(Number(d)) }),
               ],
             }),
           }),
-        (0, q.jsx)(Hn, { ...e }),
+        (0, J.jsx)(Hn, { ...e }),
       ],
     }),
   });
@@ -1295,21 +1295,21 @@ var ar = `emclan`,
   or = `emgid`;
 function sr(e) {
   let { displayLocation: t, fnChangeModalEvent: n } = e,
-    [r, i] = K.useState(null),
-    [a, o] = T(or, null),
-    [s, c] = T(ar, null);
+    [r, i] = q.useState(null),
+    [a, o] = w(or, null),
+    [s, c] = w(ar, null);
   return (
-    We(n, (e, t) => {
-      (o(e), c(M.InitFromClanID(t, H.EUNIVERSE).ConvertTo64BitString()));
+    Ie(n, (e, t) => {
+      (o(e), c(I.InitFromClanID(t, U.EUNIVERSE).ConvertTo64BitString()));
     }),
-    K.useEffect(() => {
+    q.useEffect(() => {
       if (a != null && s != null) {
-        let e = new M(s);
+        let e = new I(s);
         y.LoadPartnerEventFromClanEventGIDAndClanSteamID(e, a, 0).then(i);
       }
     }, [a, s]),
     r
-      ? (0, q.jsx)(ie, {
+      ? (0, J.jsx)(re, {
           appid: r.appid,
           trackingLocation: t,
           announcementGID: r.GetAnnouncementGID(),
@@ -1342,54 +1342,54 @@ var cr = `_9ldA8d1EI20-`,
   wr = `RiHHUUkg-WU-`,
   Tr = 10;
 function Er(e) {
-  let t = U(),
-    n = E(Tr),
+  let t = W(),
+    n = T(Tr),
     r = t.GetActiveEventsAt(n) || [],
-    [i] = K.useState(new Oe()),
-    a = K.useCallback((e, t) => dt(y.GetClanEventModel(e), window), []);
+    [i] = q.useState(new Ae()),
+    a = q.useCallback((e, t) => ut(y.GetClanEventModel(e), window), []);
   return t.GetNumEventsLoaded() == 0
-    ? (0, q.jsx)(`div`, { children: B(`#Conference_No_Schedule_Yet`) })
-    : (0, q.jsxs)(`div`, {
+    ? (0, J.jsx)(`div`, { children: F(`#Conference_No_Schedule_Yet`) })
+    : (0, J.jsxs)(`div`, {
         className: yr,
         children: [
-          (0, q.jsx)(sr, { displayLocation: 6, fnChangeModalEvent: i }),
-          (0, q.jsx)(Ar, { rgActiveEvents: r, fnDisplayModalEvent: a }),
-          (0, q.jsx)(Or, {
+          (0, J.jsx)(sr, { displayLocation: 6, fnChangeModalEvent: i }),
+          (0, J.jsx)(Ar, { rgActiveEvents: r, fnDisplayModalEvent: a }),
+          (0, J.jsx)(Or, {
             rgActiveEvents: r,
             fnDisplayModalEvent: a,
             rtNow: n,
           }),
-          (0, q.jsx)(`br`, {}),
-          (0, q.jsx)(`br`, {}),
-          (0, q.jsx)(Te, {
-            onClick: (e) => j((0, q.jsx)(Pr, {}), qe(e)),
-            children: B(`#Conference_NeedHelp`),
+          (0, J.jsx)(`br`, {}),
+          (0, J.jsx)(`br`, {}),
+          (0, J.jsx)(Oe, {
+            onClick: (e) => P((0, J.jsx)(Pr, {}), Ge(e)),
+            children: F(`#Conference_NeedHelp`),
           }),
         ],
       });
 }
 function Dr(e) {
-  return (0, q.jsx)(Nr, { ...e, children: (0, q.jsx)(Er, { ...e }) });
+  return (0, J.jsx)(Nr, { ...e, children: (0, J.jsx)(Er, { ...e }) });
 }
 function Or(e) {
   let { rgActiveEvents: t, rtNow: n } = e,
-    r = U()
+    r = W()
       .GetCalendarItemsInTimeRange(n + 1)
       .rgCalendarItems.filter((e) => !t.some((t) => t.GID == e.unique_id))
       .sort((e, t) => e.start_time - t.start_time);
   return r.length == 0
-    ? (0, q.jsx)(`div`, { children: B(`#Conference_No_More_Schedule`) })
-    : (0, q.jsxs)(`div`, {
+    ? (0, J.jsx)(`div`, { children: F(`#Conference_No_More_Schedule`) })
+    : (0, J.jsxs)(`div`, {
         className: cr,
         children: [
-          (0, q.jsx)(`div`, {
+          (0, J.jsx)(`div`, {
             className: lr,
-            children: B(`#Conference_ScheduleNext`),
+            children: F(`#Conference_ScheduleNext`),
           }),
-          (0, q.jsx)(`div`, {
+          (0, J.jsx)(`div`, {
             className: ur,
             children: r.map((r, i) =>
-              (0, q.jsx)(
+              (0, J.jsx)(
                 kr,
                 {
                   bDisplayAsUpNext: i == 0 && t.length >= 1,
@@ -1412,32 +1412,32 @@ function kr(e) {
       rtNow: i,
     } = e,
     a = y.GetClanEventModel(t.unique_id),
-    o = V(H.LANGUAGE),
+    o = R(U.LANGUAGE),
     s = a.GetStartTimeAndDateUnixSeconds(),
-    c = Ye(new Date(i * 1e3), new Date(s * 1e3));
-  return (0, q.jsxs)(`div`, {
+    c = qe(new Date(i * 1e3), new Date(s * 1e3));
+  return (0, J.jsxs)(`div`, {
     className: dr,
     onClick: () => r(a.GID, a.clanSteamID.GetAccountID()),
     children: [
-      (0, q.jsx)(`div`, { className: fr, children: a.GetNameWithFallback(o) }),
-      (0, q.jsxs)(`div`, {
+      (0, J.jsx)(`div`, { className: fr, children: a.GetNameWithFallback(o) }),
+      (0, J.jsxs)(`div`, {
         className: pr,
         children: [
-          !c && (0, q.jsx)(`div`, { children: Ve(s, !0) }),
-          (0, q.jsx)(`div`, {
+          !c && (0, J.jsx)(`div`, { children: He(s, !0) }),
+          (0, J.jsx)(`div`, {
             children:
               n && c
-                ? B(
+                ? F(
                     `#Conference_StartInMin`,
                     Math.max(1, Math.floor((s - i) / 60)),
                   )
-                : B(`#Conference_StartsAt`, Me(s, { bForce24HourClock: !1 })),
+                : F(`#Conference_StartsAt`, ze(s, { bForce24HourClock: !1 })),
           }),
         ],
       }),
-      (0, q.jsx)(`div`, {
-        className: I(br, xr),
-        children: (0, q.jsx)(me, {
+      (0, J.jsx)(`div`, {
+        className: z(br, xr),
+        children: (0, J.jsx)(pe, {
           eventModel: a,
           lang: o,
           bOnlyShowIcon: !0,
@@ -1452,62 +1452,62 @@ function Ar(e) {
   let { rgActiveEvents: t, fnDisplayModalEvent: n } = e;
   if (!t || t.length == 0) return null;
   let r = t[0],
-    i = V(H.LANGUAGE),
-    a = rt.ParseEventModelPresenters(r, i);
-  return (0, q.jsxs)(`div`, {
+    i = R(U.LANGUAGE),
+    a = nt.ParseEventModelPresenters(r, i);
+  return (0, J.jsxs)(`div`, {
     className: mr,
     children: [
-      (0, q.jsxs)(`div`, {
+      (0, J.jsxs)(`div`, {
         className: hr,
-        children: [(0, q.jsx)(`div`, { className: gr }), `Live Now!`],
+        children: [(0, J.jsx)(`div`, { className: gr }), `Live Now!`],
       }),
-      (0, q.jsx)(`div`, { className: fr, children: r.GetNameWithFallback(i) }),
+      (0, J.jsx)(`div`, { className: fr, children: r.GetNameWithFallback(i) }),
       !!a &&
         a.map((e) =>
-          (0, q.jsx)(
-            m,
+          (0, J.jsx)(
+            _,
             {
               name: e.name,
               title: e.title,
               photo: e.photo,
               company: e.company,
               bioString: e.bio,
-              children: (0, q.jsx)(`div`, { children: e.name }),
+              children: (0, J.jsx)(`div`, { children: e.name }),
             },
             `presenter_` + e.name,
           ),
         ),
-      (0, q.jsx)(`div`, {
+      (0, J.jsx)(`div`, {
         className: _r,
         children: r.GetSummaryWithFallback(i),
       }),
-      (0, q.jsx)(`div`, {
+      (0, J.jsx)(`div`, {
         className: vr,
         onClick: () => n(r.GID, r.clanSteamID.GetAccountID()),
-        children: B(`#EventEmail_Button_ClickForMoreDetails`),
+        children: F(`#EventEmail_Button_ClickForMoreDetails`),
       }),
     ],
   });
 }
 function jr(e) {
   let { conferenceInfo: t } = e,
-    n = U(),
-    r = E(Tr),
+    n = W(),
+    r = T(Tr),
     i = n.GetActiveEventsAt(r) || [],
-    [a] = K.useState(new Oe()),
+    [a] = q.useState(new Ae()),
     o = n
       .GetCalendarItemsInTimeRange(t.rtStartTime - 1, r)
       .rgCalendarItems.filter((e) => i.length == 0 || i[0].GID != e.unique_id)
       .sort((e, t) => e.start_time - t.start_time);
   return o.length == 0
-    ? (0, q.jsx)(`div`, { children: B(`#Conference_NoPastEvents`) })
-    : (0, q.jsxs)(`div`, {
+    ? (0, J.jsx)(`div`, { children: F(`#Conference_NoPastEvents`) })
+    : (0, J.jsxs)(`div`, {
         className: Sr,
         children: [
-          (0, q.jsx)(sr, { displayLocation: 6, fnChangeModalEvent: a }),
+          (0, J.jsx)(sr, { displayLocation: 6, fnChangeModalEvent: a }),
           o.map((e) => {
             let t = y.GetClanEventModel(e.unique_id);
-            return (0, q.jsx)(
+            return (0, J.jsx)(
               qn,
               {
                 eventModel: t,
@@ -1524,54 +1524,54 @@ function jr(e) {
       });
 }
 function Mr(e) {
-  return (0, q.jsx)(Nr, { ...e, children: (0, q.jsx)(jr, { ...e }) });
+  return (0, J.jsx)(Nr, { ...e, children: (0, J.jsx)(jr, { ...e }) });
 }
 function Nr(e) {
   let { conferenceInfo: t } = e,
-    n = w(`WithCalendarStore`),
-    [r, i] = (0, K.useState)(!0);
+    n = Se(`WithCalendarStore`),
+    [r, i] = (0, q.useState)(!0);
   return (
-    (0, K.useEffect)(() => {
+    (0, q.useEffect)(() => {
       n.token.reason ||
-        bt
+        yt
           .Get()
           .LoadInitialCalendarData(t.rtEndTime, t.strConferenceID)
           .finally(() => {
             n.token.reason || i(!1);
           });
     }, [t.rtEndTime, t.strConferenceID, n]),
-    r ? (0, q.jsx)(ce, {}) : (0, q.jsx)(q.Fragment, { children: e.children })
+    r ? (0, J.jsx)(oe, {}) : (0, J.jsx)(J.Fragment, { children: e.children })
   );
 }
 function Pr(e) {
   let { closeModal: t } = e;
-  return (0, q.jsxs)(P, {
-    strTitle: B(`#Conference_NeedHelp`),
+  return (0, J.jsxs)(L, {
+    strTitle: F(`#Conference_NeedHelp`),
     bAlertDialog: !0,
     onCancel: t,
     onOK: t,
     children: [
-      (0, q.jsx)(`div`, { children: B(`#Conference_NeedHelp_Desc1`) }),
-      (0, q.jsxs)(`div`, {
+      (0, J.jsx)(`div`, { children: F(`#Conference_NeedHelp_Desc1`) }),
+      (0, J.jsxs)(`div`, {
         children: [
-          (0, q.jsxs)(`div`, {
+          (0, J.jsxs)(`div`, {
             className: Cr,
             children: [
-              (0, q.jsx)(`div`, {
-                children: B(`#Conference_NeedHelp_BroadcastChatQ`),
+              (0, J.jsx)(`div`, {
+                children: F(`#Conference_NeedHelp_BroadcastChatQ`),
               }),
-              (0, q.jsxs)(`ul`, {
+              (0, J.jsxs)(`ul`, {
                 className: wr,
                 children: [
-                  (0, q.jsx)(`li`, {
-                    children: B(`#Conference_NeedHelp_ChatA1`),
+                  (0, J.jsx)(`li`, {
+                    children: F(`#Conference_NeedHelp_ChatA1`),
                   }),
-                  (0, q.jsx)(`li`, {
-                    children: Je(
+                  (0, J.jsx)(`li`, {
+                    children: Ke(
                       `#Conference_NeedHelp_BroadcastChatA1`,
-                      (0, q.jsx)(`a`, {
+                      (0, J.jsx)(`a`, {
                         href: `https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A`,
-                        children: B(`#Conferenec_NeedHelp_LimitedAccounts`),
+                        children: F(`#Conferenec_NeedHelp_LimitedAccounts`),
                       }),
                     ),
                   }),
@@ -1579,26 +1579,26 @@ function Pr(e) {
               }),
             ],
           }),
-          (0, q.jsxs)(`div`, {
+          (0, J.jsxs)(`div`, {
             className: Cr,
             children: [
-              (0, q.jsx)(`div`, { children: B(`#Conference_NeedHelp_QandAQ`) }),
-              (0, q.jsx)(`ul`, {
-                children: (0, q.jsx)(`li`, {
-                  children: B(`#Conference_NeedHelp_ChatA1`),
+              (0, J.jsx)(`div`, { children: F(`#Conference_NeedHelp_QandAQ`) }),
+              (0, J.jsx)(`ul`, {
+                children: (0, J.jsx)(`li`, {
+                  children: F(`#Conference_NeedHelp_ChatA1`),
                 }),
               }),
             ],
           }),
-          (0, q.jsxs)(`div`, {
+          (0, J.jsxs)(`div`, {
             className: Cr,
             children: [
-              (0, q.jsx)(`span`, {
-                children: B(`#Conference_NeedHelp_StillHaveQuestions`),
+              (0, J.jsx)(`span`, {
+                children: F(`#Conference_NeedHelp_StillHaveQuestions`),
               }),
-              (0, q.jsx)(`a`, {
+              (0, J.jsx)(`a`, {
                 href: `https://help.steampowered.com/wizard/HelpWithPublishing?issueid=933`,
-                children: B(`#Conference_NeedHelp_CreateTicket`),
+                children: F(`#Conference_NeedHelp_CreateTicket`),
               }),
             ],
           }),
@@ -1629,37 +1629,37 @@ var Fr = `CosXX3EOimc-`,
   ei = 30;
 function ti(e) {
   let { conferenceInfo: t, bShowYouTube: n } = e,
-    [r, i] = K.useState(!1),
-    a = E(Ze.PerMinute) < t.rtStartTime - ei * Ze.PerMinute;
-  return (0, q.jsxs)(`div`, {
+    [r, i] = q.useState(!1),
+    a = T(Fe.PerMinute) < t.rtStartTime - ei * Fe.PerMinute;
+  return (0, J.jsxs)(`div`, {
     className: Fr,
     children: [
-      (0, q.jsx)(`div`, {
-        className: I(Ir, r ? `Active` : `Hidden`),
-        children: (0, q.jsxs)(`div`, {
+      (0, J.jsx)(`div`, {
+        className: z(Ir, r ? `Active` : `Hidden`),
+        children: (0, J.jsxs)(`div`, {
           className: void 0,
           children: [
-            (0, q.jsx)(Dr, { conferenceInfo: t }),
-            (0, q.jsxs)(`div`, {
+            (0, J.jsx)(Dr, { conferenceInfo: t }),
+            (0, J.jsxs)(`div`, {
               className: Lr,
               onClick: () => {
                 i(!r);
               },
               children: [
-                (0, q.jsx)(z, {
-                  toolTipContent: B(`#QAndA_HideSchedule`),
-                  children: (0, q.jsx)(`div`, {
+                (0, J.jsx)(H, {
+                  toolTipContent: F(`#QAndA_HideSchedule`),
+                  children: (0, J.jsx)(`div`, {
                     className: Rr,
-                    children: (0, q.jsx)(Ee, { angle: 0 }),
+                    children: (0, J.jsx)(Ee, { angle: 0 }),
                   }),
                 }),
-                (0, q.jsx)(z, {
-                  toolTipContent: B(`#QAndA_ShowSchedule`),
-                  children: (0, q.jsxs)(`div`, {
+                (0, J.jsx)(H, {
+                  toolTipContent: F(`#QAndA_ShowSchedule`),
+                  children: (0, J.jsxs)(`div`, {
                     className: zr,
                     children: [
-                      (0, q.jsx)(Le, {}),
-                      (0, q.jsx)(`div`, {
+                      (0, J.jsx)(Le, {}),
+                      (0, J.jsx)(`div`, {
                         className: Br,
                         children: `See Event Schedule`,
                       }),
@@ -1671,24 +1671,24 @@ function ti(e) {
           ],
         }),
       }),
-      (0, q.jsxs)(`div`, {
+      (0, J.jsxs)(`div`, {
         className: Vr,
         children: [
           n &&
-            (0, q.jsx)(le, {
+            (0, J.jsx)(se, {
               videoID: t.youtubeVideoID,
               bAutoPlay: !0,
               bShowVideoImmediately: !0,
             }),
           a
-            ? (0, q.jsx)(`div`, {
+            ? (0, J.jsx)(`div`, {
                 className: Hr,
-                children: (0, q.jsx)(`div`, {
+                children: (0, J.jsx)(`div`, {
                   className: Ur,
-                  children: B(`#Conference_ChatHidden`, ei),
+                  children: F(`#Conference_ChatHidden`, ei),
                 }),
               })
-            : (0, q.jsx)(ni, { conferenceInfo: t }),
+            : (0, J.jsx)(ni, { conferenceInfo: t }),
         ],
       }),
     ],
@@ -1696,102 +1696,102 @@ function ti(e) {
 }
 function ni(e) {
   let { conferenceInfo: t } = e,
-    [n, r] = K.useState(window.innerWidth > 910),
-    [i, a] = K.useState(!0),
+    [n, r] = q.useState(window.innerWidth > 910),
+    [i, a] = q.useState(!0),
     o =
-      H.COMMUNITY_BASE_URL +
+      U.COMMUNITY_BASE_URL +
       `broadcast/chatonly/` +
       t.broadcastSteamID.ConvertTo64BitString(),
     s =
-      H.COMMUNITY_BASE_URL +
+      U.COMMUNITY_BASE_URL +
       `questions/` +
-      Qe.VANITY_ID +
+      Ye.VANITY_ID +
       `/view/` +
       t.globalQandASessionID;
-  return (0, q.jsxs)(`div`, {
+  return (0, J.jsxs)(`div`, {
     className: Hr,
     children: [
-      (0, q.jsxs)(`div`, {
+      (0, J.jsxs)(`div`, {
         className: Wr,
         children: [
-          (0, q.jsxs)(`div`, {
-            className: I(Jr, Kr, n ? Zr : ``),
+          (0, J.jsxs)(`div`, {
+            className: z(Jr, Kr, n ? Zr : ``),
             children: [
-              (0, q.jsx)(`div`, {
+              (0, J.jsx)(`div`, {
                 className: Yr,
                 onClick: () => {
                   (r(!0), a(!1));
                 },
-                children: B(`#Conference_Tab_Chat`),
+                children: F(`#Conference_Tab_Chat`),
               }),
-              (0, q.jsx)(z, {
-                toolTipContent: B(`#QAndA_PopOutChat_ttip`),
-                children: (0, q.jsx)(`a`, {
+              (0, J.jsx)(H, {
+                toolTipContent: F(`#QAndA_PopOutChat_ttip`),
+                children: (0, J.jsx)(`a`, {
                   className: Xr,
                   href: o,
                   target: `_blank`,
-                  children: (0, q.jsx)(He, {}),
+                  children: (0, J.jsx)(Ue, {}),
                 }),
               }),
             ],
           }),
-          (0, q.jsxs)(`div`, {
-            className: I(Jr, qr, i ? Zr : ``),
+          (0, J.jsxs)(`div`, {
+            className: z(Jr, qr, i ? Zr : ``),
             children: [
-              (0, q.jsx)(`div`, {
+              (0, J.jsx)(`div`, {
                 className: Yr,
                 onClick: () => {
                   (r(!1), a(!0));
                 },
-                children: B(`#Conference_Tab_QandA`),
+                children: F(`#Conference_Tab_QandA`),
               }),
-              (0, q.jsx)(z, {
-                toolTipContent: B(`#QAndA_PopOutQAndA_ttip`),
-                children: (0, q.jsx)(`a`, {
+              (0, J.jsx)(H, {
+                toolTipContent: F(`#QAndA_PopOutQAndA_ttip`),
+                children: (0, J.jsx)(`a`, {
                   className: Xr,
                   href: s,
                   target: `_blank`,
-                  children: (0, q.jsx)(He, {}),
+                  children: (0, J.jsx)(Ue, {}),
                 }),
               }),
             ],
           }),
-          (0, q.jsx)(z, {
-            toolTipContent: B(`#QAndA_ChatToggle_ShowBoth`),
-            children: (0, q.jsx)(`div`, {
+          (0, J.jsx)(H, {
+            toolTipContent: F(`#QAndA_ChatToggle_ShowBoth`),
+            children: (0, J.jsx)(`div`, {
               className: Gr,
               onClick: () => {
                 (r(!0), a(!0));
               },
-              children: (0, q.jsx)(De, {}),
+              children: (0, J.jsx)(Ne, {}),
             }),
           }),
         ],
       }),
-      (0, q.jsxs)(`div`, {
+      (0, J.jsxs)(`div`, {
         className: Qr,
         children: [
           !!((n && i) || (!i && !n)) &&
-            (0, q.jsxs)(q.Fragment, {
+            (0, J.jsxs)(J.Fragment, {
               children: [
-                (0, q.jsx)(`div`, {
+                (0, J.jsx)(`div`, {
                   className: `udjEFKIUdiE-`,
-                  children: (0, q.jsx)(_t, {
+                  children: (0, J.jsx)(gt, {
                     conferenceInfo: t,
                     className: void 0,
                   }),
                 }),
-                (0, q.jsx)(`div`, {
+                (0, J.jsx)(`div`, {
                   className: `DIG-5XDM5sY-`,
-                  children: (0, q.jsx)(ct, {
+                  children: (0, J.jsx)(st, {
                     gidSession: t.globalQandASessionID,
                   }),
                 }),
               ],
             }),
           !(!n || i) &&
-            (0, q.jsx)(_t, { conferenceInfo: t, className: void 0 }),
-          !(n || !i) && (0, q.jsx)(ct, { gidSession: t.globalQandASessionID }),
+            (0, J.jsx)(gt, { conferenceInfo: t, className: void 0 }),
+          !(n || !i) && (0, J.jsx)(st, { gidSession: t.globalQandASessionID }),
         ],
       }),
     ],
@@ -1800,18 +1800,18 @@ function ni(e) {
 function ri(e) {
   let { conferenceInfo: t } = e;
   if (!t.faqAboutPage)
-    return (0, q.jsx)(`div`, { children: B(`#Conference_NoAbout`) });
+    return (0, J.jsx)(`div`, { children: F(`#Conference_NoAbout`) });
   let { title: n, content: r, timestamp: i } = t.faqAboutPage;
-  return (0, q.jsxs)(`div`, {
+  return (0, J.jsxs)(`div`, {
     children: [
-      (0, q.jsx)(`div`, { className: $r, children: n }),
-      (0, q.jsx)(st, { text: r, bShowErrorInfo: !1, version: `0` }),
+      (0, J.jsx)(`div`, { className: $r, children: n }),
+      (0, J.jsx)(ot, { text: r, bShowErrorInfo: !1, version: `0` }),
     ],
   });
 }
 function ii(e) {
   let { conferenceInfo: t } = e;
-  return (0, q.jsx)(Mr, { conferenceInfo: t });
+  return (0, J.jsx)(Mr, { conferenceInfo: t });
 }
 var ai = `M42gpbQtAZI-`,
   oi = `hdKB5VYayBQ-`,
@@ -1821,29 +1821,29 @@ var ai = `M42gpbQtAZI-`,
   ui = `oAPQHisXVV4-`;
 function di(e) {
   let { strVanity: t } = e,
-    n = mt.Get().GetConferenceInfo(t);
+    n = pt.Get().GetConferenceInfo(t);
   return n
-    ? (0, q.jsx)(F, {
-        children: (0, q.jsx)(`div`, {
+    ? (0, J.jsx)(j, {
+        children: (0, J.jsx)(`div`, {
           className: ai,
-          children: (0, q.jsx)(fi, { conferenceInfo: n }),
+          children: (0, J.jsx)(fi, { conferenceInfo: n }),
         }),
       })
-    : (0, q.jsx)(`div`, { children: B(`#Conference_Invalid`) });
+    : (0, J.jsx)(`div`, { children: F(`#Conference_Invalid`) });
 }
 function fi(e) {
   let { conferenceInfo: t } = e,
     n = (e) =>
       window.sessionStorage.setItem(`conferenceCurrentTab`, `?tab=${e.key}`),
     r = [],
-    i = D();
+    i = E();
   return (
     i < t.rtEndTime &&
       r.push({
-        name: B(`#Conference_tab_Home`),
+        name: F(`#Conference_tab_Home`),
         key: `live`,
-        contents: (0, q.jsx)(F, {
-          children: (0, q.jsx)(ti, {
+        contents: (0, J.jsx)(j, {
+          children: (0, J.jsx)(ti, {
             bShowYouTube: !!t.youtubeVideoID,
             conferenceInfo: t,
           }),
@@ -1851,27 +1851,27 @@ function fi(e) {
         onClick: n,
       }),
     r.push({
-      name: B(`#Conference_tab_Past`),
+      name: F(`#Conference_tab_Past`),
       key: `past`,
-      contents: (0, q.jsxs)(F, {
+      contents: (0, J.jsxs)(j, {
         children: [
-          (0, q.jsx)(ii, { conferenceInfo: t }),
+          (0, J.jsx)(ii, { conferenceInfo: t }),
           !t.youtubeVideoID &&
             i < t.rtEndTime &&
-            (0, q.jsx)(vt, { conferenceInfo: t }),
+            (0, J.jsx)(_t, { conferenceInfo: t }),
         ],
       }),
       onClick: n,
     }),
     r.push({
-      name: B(`#Conference_tab_Info`),
+      name: F(`#Conference_tab_Info`),
       key: `about`,
-      contents: (0, q.jsxs)(F, {
+      contents: (0, J.jsxs)(j, {
         children: [
-          (0, q.jsx)(ri, { conferenceInfo: t }),
+          (0, J.jsx)(ri, { conferenceInfo: t }),
           !t.youtubeVideoID &&
             i < t.rtEndTime &&
-            (0, q.jsx)(vt, { conferenceInfo: t }),
+            (0, J.jsx)(_t, { conferenceInfo: t }),
         ],
       }),
       onClick: n,
@@ -1880,32 +1880,32 @@ function fi(e) {
       name: `(VO/Internal) Debug`,
       key: `debug`,
       hidden: !0,
-      contents: (0, q.jsx)(F, {
-        children: (0, q.jsx)(yt, { conferenceInfo: t }),
+      contents: (0, J.jsx)(j, {
+        children: (0, J.jsx)(vt, { conferenceInfo: t }),
       }),
       onClick: n,
     }),
-    (0, q.jsxs)(`div`, {
+    (0, J.jsxs)(`div`, {
       className: oi,
       children: [
-        (0, q.jsxs)(`div`, {
+        (0, J.jsxs)(`div`, {
           className: si,
           children: [
-            (0, q.jsx)(x, { className: ci, rgSources: t.strLocalizedLogos }),
-            (0, q.jsx)(x, {
+            (0, J.jsx)(de, { className: ci, rgSources: t.strLocalizedLogos }),
+            (0, J.jsx)(de, {
               className: li,
               rgSources: t.strLocalizedMobileLogos,
             }),
-            (0, q.jsx)(`div`, {
+            (0, J.jsx)(`div`, {
               className: ui,
-              children: (0, q.jsx)(O, {
+              children: (0, J.jsx)(O, {
                 rtStartDate: t.rtStartTime,
                 rtEndDate: t.rtEndTime,
               }),
             }),
           ],
         }),
-        (0, q.jsx)(Se, { tabs: r }),
+        (0, J.jsx)(Ce, { tabs: r }),
       ],
     })
   );
@@ -1914,21 +1914,21 @@ var pi = {
   LandingPage: (e) => `/(conference|steamworksvirtualconference)/${e}`,
 };
 function mi(e) {
-  return (0, q.jsxs)(o, {
+  return (0, J.jsxs)(l, {
     children: [
-      (0, q.jsx)(l, {
+      (0, J.jsx)(c, {
         path: pi.LandingPage(`:vanity_str`),
         render: (e) =>
-          (0, q.jsx)(Be, {
+          (0, J.jsx)(Ve, {
             config: {
               "conference-root": () => {
                 let { vanity_str: t } = e.match.params;
-                return (0, q.jsx)(di, { strVanity: t.toLocaleLowerCase() });
+                return (0, J.jsx)(di, { strVanity: t.toLocaleLowerCase() });
               },
             },
           }),
       }),
-      (0, q.jsx)(l, { component: ke }),
+      (0, J.jsx)(c, { component: $e }),
     ],
   });
 }

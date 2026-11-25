@@ -689,6 +689,13 @@ span.BIn0SMiIGQE- {
     background-size: var(--background-scale, 150%);
   }
 }
+.I8KIyXU8ZWk- {
+  z-index: 0;
+  pointer-events: none;
+  background-position: top;
+  position: absolute;
+  inset: 0;
+}
 .fUnUYx6wf8w- {
   letter-spacing: 0.05em;
   color: #fff;

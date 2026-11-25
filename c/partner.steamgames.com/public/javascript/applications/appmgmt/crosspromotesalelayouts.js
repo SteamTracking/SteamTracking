@@ -1,11 +1,10 @@
 import { _, _, _, _, _ } from "./chunk~de7f2df91c.js";
 import { _, _, _ } from "./chunk~1fa4b8f2ff.js";
-import { _, _, _ } from "./chunk~6b8ddcaac8.js";
+import { _, _, _, _, _, _ } from "./chunk~6b8ddcaac8.js";
 import { _ } from "./chunk~e70aabe4d7.js";
-import { _ } from "./chunk~fc8a9e4879.js";
-import "./chunk~2bee5a7d08.js";
-import { _, _, _, _ } from "./chunk~3f4314f3b4.js";
 import { _ } from "./chunk~7b4b9eb713.js";
+import { _ } from "./chunk~fc8a9e4879.js";
+import { _ } from "./chunk~3f4314f3b4.js";
 var _ = _(_(), 1);
 function _(_, _) {
   let _ = _(_ ?? void 0, `capsule`, _);
@@ -37,6 +36,7 @@ function _(_) {
   }));
 }
 var _ = `Es-UANTRhdg-`,
+  _ = `dv9UZEOxkuA-`,
   _ = `FsYxDNcAXaI-`,
   _ = `cSFkUHyVW24-`,
   _ = `yT92BfNEvpw-`,
@@ -45,6 +45,8 @@ var _ = `Es-UANTRhdg-`,
   _ = `gZNFN-cKUHw-`,
   _ = _();
 _.createContext(!1);
+var _ = _.createContext(void 0);
+(_.createContext(!1), _.createContext(null));
 function _(_) {
   let { event: _, language: _, strSaleURL: _ } = _,
     _ = _(_, _);
@@ -71,6 +73,7 @@ function _(_) {
       saleEvent: _,
       bExploreButtonBelow: _,
       bShowExploreHint: _,
+      bExploreHintInHeading: _,
       children: _,
     } = _,
     _ = _?.strSaleURL,
@@ -81,6 +84,7 @@ function _(_) {
     _ = _(),
     _ = _(),
     _ = _ && _ !== void 0,
+    _ = _.useContext(_),
     _ = _?.rtEndTime
       ? _(_.rtEndTime, {
           weekday: void 0,
@@ -92,26 +96,31 @@ function _(_) {
       : void 0;
   return (0, _.jsxs)(_.Fragment, {
     children: [
-      _ &&
-        !_ &&
-        (0, _.jsx)(`div`, {
-          className: `qbRGxo4aWcc-`,
-          style: {
-            backgroundImage: `url(${_})`,
-          },
-        }),
-      _ &&
-        (0, _.jsx)(`div`, {
-          className: _(`HgvxVtFlDis-`, _ && `Lp2CuPiW8Lo-`),
-          style: {
-            backgroundImage: `url(${_})`,
-          },
-        }),
-      _ &&
-        (0, _.jsx)(_, {
-          rgAppIDs: _?.rgCreatorAppIDs,
-          strAvatarURL: _,
-        }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          _ &&
+            !_ &&
+            (0, _.jsx)(`div`, {
+              className: `qbRGxo4aWcc-`,
+              style: {
+                backgroundImage: `url(${_})`,
+              },
+            }),
+          _ &&
+            (0, _.jsx)(`div`, {
+              className: _(`HgvxVtFlDis-`, _ && `Lp2CuPiW8Lo-`),
+              style: {
+                backgroundImage: `url(${_})`,
+              },
+            }),
+          _ &&
+            (0, _.jsx)(_, {
+              rgAppIDs: _?.rgCreatorAppIDs,
+              strAvatarURL: _,
+            }),
+        ],
+      }),
       (0, _.jsxs)(`div`, {
         className: _(_, _ && `-NAWu4CYrl8-`),
         children: [
@@ -139,11 +148,17 @@ function _(_) {
                     children: _?.strName,
                   }),
                 }),
-                _ &&
-                  (0, _.jsx)(`div`, {
-                    className: `_6iUHDist0Jc-`,
-                    children: _(`#Sale_CrossPromoSale_NowThrough`, _),
-                  }),
+                _ === void 0
+                  ? _ &&
+                    (0, _.jsx)(`div`, {
+                      className: `_6iUHDist0Jc-`,
+                      children: _(`#Sale_CrossPromoSale_NowThrough`, _),
+                    })
+                  : _ &&
+                    (0, _.jsx)(`div`, {
+                      className: `_6iUHDist0Jc-`,
+                      children: _,
+                    }),
               ],
             }),
           _ &&
@@ -158,6 +173,7 @@ function _(_) {
             }),
           _ &&
             _ &&
+            !_ &&
             (0, _.jsx)(_, {
               label: _,
               shown: !!_,

@@ -3,24 +3,24 @@
 
 import { i as e } from "./chunk~f025431ab0.js";
 import {
-  G as t,
-  Gn as n,
-  In as r,
-  Kn as i,
-  N as a,
-  Sr as o,
-  W as s,
-  Wn as c,
+  Bn as t,
+  Cr as n,
+  G as r,
+  Gn as i,
+  Kn as a,
+  Ln as o,
+  N as s,
+  W as c,
   a as l,
   b as u,
   k as d,
-  zn as f,
+  qn as f,
 } from "./chunk~d3515eca4e.js";
-import { Ns as p, Rs as m, n as h } from "./chunk~e464778a03.js";
+import { Ps as p, n as m, zs as h } from "./chunk~e464778a03.js";
 import { u as g } from "./chunk~0ef0cd2c00.js";
 import { t as _ } from "./chunk~198b531c82.js";
 var v = e(g(), 1),
-  y = new m(`GR`);
+  y = new h(`GR`);
 function b(e) {
   return (...t) => {
     e(`[${(performance.now() / 1e3).toFixed(3)}]`, ...t);
@@ -133,13 +133,13 @@ function z(e) {
 function B(e) {
   return { type: `scrollWindow`, valPX: e };
 }
-o();
+n();
 var V = 1e4,
   H = 3e3,
   U = 4e3,
   W = class e {
     constructor() {
-      s(this);
+      c(this);
     }
     m_bInitialized = !1;
     m_rgListeners = [];
@@ -177,7 +177,7 @@ var V = 1e4,
       return this.m_mapRunningTimelines.has(e);
     }
     AddEventListener(e) {
-      return (this.m_rgListeners.push(e), () => f(this.m_rgListeners, e));
+      return (this.m_rgListeners.push(e), () => t(this.m_rgListeners, e));
     }
     async LoadTimelinesForBackgroundVideo(e) {
       this.m_gameID = e;
@@ -572,32 +572,32 @@ var V = 1e4,
     GetClosestPreviousEntryInTimeline(e, t) {
       let n = this.GetTimelineMetadata(e),
         r = this.GetTimelineStartBeforeGlobalZeroMS(e),
-        i = this.GetTimelineDataOrStartLoad(e),
-        a = null;
-      if (i && i.m_strState === `loaded`) {
-        let e = i.m_rgEntries.filter((e) => {
+        a = this.GetTimelineDataOrStartLoad(e),
+        o = null;
+      if (a && a.m_strState === `loaded`) {
+        let e = a.m_rgEntries.filter((e) => {
             let t = parseInt(e.time);
             return t < r + parseInt(n.metadata.duration_ms) && t > r;
           }),
-          o = c(e, (e) => t.valMS - 1 - parseInt(e.time));
-        o !== -1 && (a = e[o]);
+          s = i(e, (e) => t.valMS - 1 - parseInt(e.time));
+        s !== -1 && (o = e[s]);
       }
-      return { entry: a, timelineState: i?.m_strState };
+      return { entry: o, timelineState: a?.m_strState };
     }
     GetClosestNextEntryInTimeline(e, t) {
       let n = this.GetTimelineMetadata(e),
         r = this.GetTimelineStartBeforeGlobalZeroMS(e),
-        i = this.GetTimelineDataOrStartLoad(e),
-        a = null;
-      if (i && i.m_strState === `loaded`) {
-        let e = i.m_rgEntries.filter((e) => {
+        a = this.GetTimelineDataOrStartLoad(e),
+        o = null;
+      if (a && a.m_strState === `loaded`) {
+        let e = a.m_rgEntries.filter((e) => {
             let t = parseInt(e.time);
             return t < r + parseInt(n.metadata.duration_ms) && t > r;
           }),
-          o = c(e, (e) => t.valMS - parseInt(e.time));
-        o < e.length - 1 && (a = e[o + 1]);
+          s = i(e, (e) => t.valMS - parseInt(e.time));
+        s < e.length - 1 && (o = e[s + 1]);
       }
-      return { entry: a, timelineState: i?.m_strState };
+      return { entry: o, timelineState: a?.m_strState };
     }
     GetClosestPreviousEntryInGlobalTimeline(e) {
       let t = this.GetTimelineOffsetFromGlobal(e, 0),
@@ -610,10 +610,10 @@ var V = 1e4,
           globalMS: null,
         };
       let r = this.GetTimelineStartBeforeGlobalZeroMS(t.strTimelineID),
-        i = t.nTimelineOffsetMS.valMS + r,
-        a = c(n.m_rgEntries, (e) => i - parseInt(e.time));
-      if (a !== -1) {
-        let e = n.m_rgEntries[a],
+        a = t.nTimelineOffsetMS.valMS + r,
+        o = i(n.m_rgEntries, (e) => a - parseInt(e.time));
+      if (o !== -1) {
+        let e = n.m_rgEntries[o],
           i =
             this.GetTimelineMetadata(t.strTimelineID).nGlobalOffsetMS.valMS -
             r +
@@ -632,15 +632,15 @@ var V = 1e4,
               globalMS: L(i),
             };
       }
-      let o = this.GetTimelineMetadataIndex(t.strTimelineID);
-      if (o < 1)
+      let s = this.GetTimelineMetadataIndex(t.strTimelineID);
+      if (s < 1)
         return {
           timelineID: t.strTimelineID,
           timelineState: n.m_strState,
           entry: null,
           globalMS: null,
         };
-      for (let e = o - 1; e >= 0; e--) {
+      for (let e = s - 1; e >= 0; e--) {
         let t = this.m_rgTimelineMetadata[e],
           n = this.GetTimelineData(t.metadata.timeline_id);
         if (n) {
@@ -691,10 +691,10 @@ var V = 1e4,
           globalMS: null,
         };
       let r = this.GetTimelineStartBeforeGlobalZeroMS(t.strTimelineID),
-        i = t.nTimelineOffsetMS.valMS + r,
-        a = c(n.m_rgEntries, (e) => i - parseInt(e.time)) + 1;
-      if (a <= n.m_rgEntries.length - 1) {
-        let e = n.m_rgEntries[a],
+        a = t.nTimelineOffsetMS.valMS + r,
+        o = i(n.m_rgEntries, (e) => a - parseInt(e.time)) + 1;
+      if (o <= n.m_rgEntries.length - 1) {
+        let e = n.m_rgEntries[o],
           i =
             this.GetTimelineMetadata(t.strTimelineID).nGlobalOffsetMS.valMS -
             r +
@@ -713,16 +713,16 @@ var V = 1e4,
               globalMS: null,
             };
       }
-      let o = this.m_rgTimelineMetadata.length,
-        s = this.GetTimelineMetadataIndex(t.strTimelineID);
-      if (s === -1 || s === o - 1)
+      let s = this.m_rgTimelineMetadata.length,
+        c = this.GetTimelineMetadataIndex(t.strTimelineID);
+      if (c === -1 || c === s - 1)
         return {
           timelineID: t.strTimelineID,
           timelineState: n.m_strState,
           entry: null,
           globalMS: null,
         };
-      for (let e = s + 1; e < o; e++) {
+      for (let e = c + 1; e < s; e++) {
         let t = this.m_rgTimelineMetadata[e],
           n = this.GetTimelineData(t.metadata.timeline_id);
         if (n) {
@@ -756,7 +756,7 @@ var V = 1e4,
         }
       }
       return {
-        timelineID: this.m_rgTimelineMetadata[o - 1].metadata.timeline_id,
+        timelineID: this.m_rgTimelineMetadata[s - 1].metadata.timeline_id,
         timelineState: `loaded`,
         entry: null,
         globalMS: null,
@@ -782,7 +782,7 @@ var V = 1e4,
       let t = this.GetTimelineOffsetFromGlobal(e.valMS, 0),
         n = this.GetTimelineDataOrStartLoad(t.strTimelineID);
       if (!n || n.m_strState !== `loaded`) return null;
-      let r = c(
+      let r = i(
         n.m_rgStateDescriptions,
         (e) => t.nTimelineOffsetMS.valMS - parseInt(e.time),
       );
@@ -818,20 +818,20 @@ var V = 1e4,
           m_iEntries: -1,
         };
       let r = this.GetTimelineDataOrStartLoad(n.timeline.metadata.timeline_id),
-        i = -1,
-        a = -1;
+        a = -1,
+        o = -1;
       if (r?.m_strState == `loaded`) {
         let e = (e) => n.ulGlobalToTimelineOffset - parseInt(e.time);
-        ((i = c(r.m_rgGameModeChanges, e)), (a = c(r.m_rgEntries, e)));
+        ((a = i(r.m_rgGameModeChanges, e)), (o = i(r.m_rgEntries, e)));
       }
-      let o = {
+      let s = {
         m_timeline: n.timeline.metadata,
         m_data: r,
         m_nTimelineOffsetMS: Math.max(n.ulGlobalToTimelineOffset, 0),
-        m_iGameModeChanges: i,
-        m_iEntries: a,
+        m_iGameModeChanges: a,
+        m_iEntries: o,
       };
-      return (this.AdvanceEntriesIndex(o), this.AdvanceGameModeIndex(o), o);
+      return (this.AdvanceEntriesIndex(s), this.AdvanceGameModeIndex(s), s);
     }
     HasIteratorReachedEnd(e) {
       return !e.m_timeline;
@@ -923,7 +923,7 @@ var V = 1e4,
         : 0;
     }
     InsertEntryIntoTimelineSorted(e, t) {
-      n(e.m_rgEntries, t, (e, t) => parseInt(e.time) - parseInt(t.time));
+      a(e.m_rgEntries, t, (e, t) => parseInt(e.time) - parseInt(t.time));
     }
     AddEventToTimeline(e, t, n, r, i, a, o, s) {
       if (!this.m_bInitialized)
@@ -1012,15 +1012,15 @@ var V = 1e4,
         ? (w(`failed to find entry by id: ${t}`), !1)
         : (n.m_rgEntries.splice(r, 1), this.FireEvent(`OnInvalidate`, e), !0);
     }
-    AddRunningTimeline(e, t, r) {
+    AddRunningTimeline(e, t, n) {
       if (this.m_rgTimelineMetadata.find((t) => t.metadata.timeline_id == e))
         return;
-      let i = { timeline_id: e, game_id: t, date_recorded: r, recordings: [] },
-        a = this.m_rgTimelineMetadata[this.m_rgTimelineMetadata.length - 1],
-        o = a ? a.nGlobalOffsetMS.valMS + parseInt(a.metadata.duration_ms) : 0;
-      (n(
+      let r = { timeline_id: e, game_id: t, date_recorded: n, recordings: [] },
+        i = this.m_rgTimelineMetadata[this.m_rgTimelineMetadata.length - 1],
+        o = i ? i.nGlobalOffsetMS.valMS + parseInt(i.metadata.duration_ms) : 0;
+      (a(
         this.m_rgTimelineMetadata,
-        { nGlobalOffsetMS: L(o), metadata: i },
+        { nGlobalOffsetMS: L(o), metadata: r },
         (e, t) => e.metadata.date_recorded - t.metadata.date_recorded,
       ),
         this.m_mapTimelineData.set(e, {
@@ -1031,10 +1031,10 @@ var V = 1e4,
           m_rgPhases: [],
         }));
       let s = {
-        m_metadata: i,
+        m_metadata: r,
         m_globalStartMS: o,
         m_perfCounterStart: performance.now(),
-        m_nPerfCounterOffsetMS: Math.max(0, u() - r) * 1e3,
+        m_nPerfCounterOffsetMS: Math.max(0, u() - n) * 1e3,
         m_runningRecording: null,
       };
       (this.m_mapRunningTimelines.set(e, s),
@@ -1064,26 +1064,26 @@ var V = 1e4,
     }
     AddRunningTimelineEntry(e) {
       let t = this.m_mapRunningTimelines.get(e.timeline_id),
-        r = this.m_mapTimelineData.get(e.timeline_id);
-      if (!t || !r) return;
-      let i = I(e);
-      if (!i) return;
-      O(i)
-        ? n(
-            r.m_rgGameModeChanges,
-            i,
+        n = this.m_mapTimelineData.get(e.timeline_id);
+      if (!t || !n) return;
+      let r = I(e);
+      if (!r) return;
+      O(r)
+        ? a(
+            n.m_rgGameModeChanges,
+            r,
             (e, t) => parseInt(e.time) - parseInt(t.time),
           )
-        : k(i)
-          ? n(
-              r.m_rgStateDescriptions,
-              i,
+        : k(r)
+          ? a(
+              n.m_rgStateDescriptions,
+              r,
               (e, t) => parseInt(e.time) - parseInt(t.time),
             )
-          : n(r.m_rgEntries, i, (e, t) => parseInt(e.time) - parseInt(t.time));
-      let a = parseInt(t.m_metadata.duration_ms) || 0,
+          : a(n.m_rgEntries, r, (e, t) => parseInt(e.time) - parseInt(t.time));
+      let i = parseInt(t.m_metadata.duration_ms) || 0,
         o = parseInt(e.time);
-      (a < o && (t.m_metadata.duration_ms = o.toString()),
+      (i < o && (t.m_metadata.duration_ms = o.toString()),
         this.FireEvent(`OnInvalidate`, e.timeline_id));
     }
     TimelineDeleted(e) {
@@ -1101,7 +1101,7 @@ var V = 1e4,
         let n = this.m_mapRunningTimelines.get(e.timeline_id);
         if (!n) {
           (this.FireEvent(`OnInvalidateRecording`, e.timeline_id, t),
-            i(!1, `Received recording started message before timeline info`));
+            f(!1, `Received recording started message before timeline info`));
           return;
         }
         let r = {
@@ -1221,7 +1221,7 @@ var V = 1e4,
         if (f) break;
       }
       let u = i?.strTitle ?? o?.title,
-        d = new h(this.GetGameID());
+        d = new m(this.GetGameID());
       return {
         strTimelinePart: u,
         strAppNamePart: p.GetAppInfo(d.GetInternalAppID())?.name,
@@ -1243,8 +1243,8 @@ var V = 1e4,
       return (x(`Generated clip name "${s}"`), s);
     }
   };
-(a([t], W.prototype, `m_bInitialized`, void 0),
-  a([r], W.prototype, `UpdateRunningTimelines`, null));
+(s([r], W.prototype, `m_bInitialized`, void 0),
+  s([o], W.prototype, `UpdateRunningTimelines`, null));
 function G(e) {
   switch (e.type) {
     case `event`:

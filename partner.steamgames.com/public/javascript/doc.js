@@ -62,13 +62,8 @@ function updateSelectedSection()
 		var $link = $toc.find( 'a[href=' + location.hash + ']' );
 		$link.parents( 'li' ).addClass( 'currentpath' );
 
-		if ( $link[0] )
-		{
-			if ( $link[ 0 ].scrollIntoViewIfNeeded )
-				$link[ 0 ].scrollIntoViewIfNeeded();
-			else
-				$link[ 0 ].scrollIntoView( { behavior: "smooth" } );
-		}
+				if ( $link[0] )
+			$link[0].scrollIntoView( { block: 'nearest', behavior: 'smooth' } );
 
 		var $section = $link.closest( 'li.navSection:has(span.icon_single_angle_right)' );
 

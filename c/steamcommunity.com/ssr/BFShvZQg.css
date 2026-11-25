@@ -1,0 +1,31 @@
+.lSuSz70k1sA- {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  min-width: 250px;
+  margin-bottom: 8px;
+  display: flex;
+}
+.PlrF-I56esA- {
+  color: #fff;
+  cursor: pointer;
+  background-color: #777;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 12px;
+  display: flex;
+}
+.PlrF-I56esA- a {
+  text-decoration: none;
+}
+.PlrF-I56esA-:hover {
+  background-color: #7779;
+  transition: background-color 0.15s ease-in;
+}
+.PlrF-I56esA-.VycuY4AQED0- {
+  background-color: #0056d6;
+}
+.PlrF-I56esA-.VycuY4AQED0-:hover {
+  background-color: #0056d666;
+}

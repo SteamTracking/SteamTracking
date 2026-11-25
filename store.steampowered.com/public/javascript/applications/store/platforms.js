@@ -2,8 +2,8 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, N as n, ft as r } from "./chunk~01cfc309bf.js";
-import { Fb as i, cS as a, sS as o, ty as s } from "./main.js";
+import { It as t, M as n, dt as r } from "./chunk~01cfc309bf.js";
+import { Ib as i, lS as a, ny as o, uS as s } from "./main.js";
 var c = e(t(), 1),
   l = e(n(), 1),
   u = `-a-3HG4gESE-`,
@@ -21,12 +21,12 @@ var c = e(t(), 1),
   S = `otywAXtYosA-`,
   C = r();
 function w(e) {
-  let { data: t } = s(e.id);
+  let { data: t } = o(e.id);
   return (0, C.jsx)(E, { platforms: t });
 }
 function T(e) {
   let { id: t, ...n } = e,
-    { data: r } = s(t);
+    { data: r } = o(t);
   return (0, C.jsx)(D, { ...n, platforms: r });
 }
 var E = c.memo(function (e) {
@@ -48,7 +48,7 @@ var E = c.memo(function (e) {
       i;
     if (n == 0)
       return (
-        o(!1, `SteamHWCompatIndicator called for k_ESteamHWCompatibility_None`),
+        a(!1, `SteamHWCompatIndicator called for k_ESteamHWCompatibility_None`),
         null
       );
     if (n == 2) {
@@ -65,7 +65,7 @@ var E = c.memo(function (e) {
           i = H;
           break;
         default:
-          return (a(e, `Unhandled steam os category: ${e}`), null);
+          return (s(e, `Unhandled steam os category: ${e}`), null);
       }
     } else {
       let e;
@@ -93,7 +93,7 @@ var E = c.memo(function (e) {
           i = H;
           break;
         default:
-          return (a(e, `Unhandled deck compat category: ${e}`), null);
+          return (s(e, `Unhandled deck compat category: ${e}`), null);
       }
     }
     return (0, C.jsxs)(`span`, {

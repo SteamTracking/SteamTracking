@@ -1,21 +1,13 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import {
-  A as e,
-  At as t,
-  C as n,
-  S as r,
-  a as i,
-  sn as a,
-  t as o,
-  vt as s,
-} from "./chunk~de7f2df91c.js";
-import { Ot as c } from "./chunk~25a6634263.js";
-import { $i as l, T as u, da as d, on as f } from "./chunk~1fa4b8f2ff.js";
-import { w as p } from "./chunk~44f252525d.js";
-import { a as m } from "./chunk~f8b6a4beb3.js";
-var h = a(t()),
+import { Pt as e, W as t, n, nt as r, t as i } from "./chunk~de7f2df91c.js";
+import { Et as a } from "./chunk~bd90a5fce7.js";
+import { $i as o, T as s, da as c, on as l } from "./chunk~1fa4b8f2ff.js";
+import { w as u } from "./chunk~44f252525d.js";
+import { a as d } from "./chunk~f8b6a4beb3.js";
+import { S as f, i as p, x as m } from "./chunk~96e60d7578.js";
+var h = e(r()),
   g = `PnqfSYRVFFE-`,
   _ = `SmIdDo8BaVc-`,
   v = `GMLvP3ZFHIM-`,
@@ -24,15 +16,15 @@ var h = a(t()),
   x = `IHFgWI28RyQ-`,
   S = `A4MFF8rl-ys-`,
   C = `adOdkeorCF8-`,
-  w = a(o()),
-  T = s(),
+  w = e(i()),
+  T = t(),
   E = class {
     m_tours = {};
     m_strActiveTour = ``;
     m_storage = void 0;
     m_bReady = !1;
     constructor() {
-      r(this);
+      m(this);
     }
     async Init(e) {
       if (this.m_storage) return;
@@ -73,12 +65,12 @@ var h = a(t()),
       return k(this.m_storage, e, void 0);
     }
   };
-(e([n], E.prototype, `m_tours`, void 0),
-  e([n], E.prototype, `m_strActiveTour`, void 0),
-  e([n], E.prototype, `m_bReady`, void 0),
-  e([i.bound], E.prototype, `UpdateStop`, null),
-  e([i], E.prototype, `ActivateTour`, null),
-  e([i], E.prototype, `DismissTour`, null));
+(n([f], E.prototype, `m_tours`, void 0),
+  n([f], E.prototype, `m_strActiveTour`, void 0),
+  n([f], E.prototype, `m_bReady`, void 0),
+  n([p.bound], E.prototype, `UpdateStop`, null),
+  n([p], E.prototype, `ActivateTour`, null),
+  n([p], E.prototype, `DismissTour`, null));
 var D = `tour_history`;
 async function O(e) {
   let t = await e.GetObject(D);
@@ -90,7 +82,7 @@ async function k(e, t, n) {
 }
 var A = new E();
 function j() {
-  let e = m();
+  let e = d();
   return (
     (0, h.useEffect)(() => {
       A.Init(e);
@@ -100,7 +92,7 @@ function j() {
 }
 function M(e) {
   let t = j(),
-    { bShowTour: n, stopElems: r } = p(() => ({
+    { bShowTour: n, stopElems: r } = u(() => ({
       bShowTour: !t.BHasSeenTour(e),
       stopElems: t.GetTrackedStops(e),
     }));
@@ -120,12 +112,12 @@ function N(e) {
 function P(e) {
   let { active: t, name: n, stops: r } = e,
     { bShowTour: i, onInteraction: a, onDismiss: o, stopElems: s } = M(n),
-    [c, l] = (0, h.useState)(0);
-  if (!i || !t || c >= r.length) return null;
-  let u = () => {
-      (l(c + 1), a());
+    [u, d] = (0, h.useState)(0);
+  if (!i || !t || u >= r.length) return null;
+  let f = () => {
+      (d(u + 1), a());
     },
-    { id: p, title: m, content: g } = r[c],
+    { id: p, title: m, content: g } = r[u],
     _ = s[p];
   if (!_ || !_.elem) return null;
   let v = g;
@@ -146,11 +138,11 @@ function P(e) {
               r.length > 1 &&
                 (0, T.jsx)(`div`, {
                   className: `heY0SzmLbNE-`,
-                  children: d(`#Tour_TipCount`, c + 1, r.length),
+                  children: c(`#Tour_TipCount`, u + 1, r.length),
                 }),
-              c < r.length - 1
-                ? (0, T.jsx)(f, { onClick: u, children: d(`#Button_Next`) })
-                : (0, T.jsx)(f, { onClick: o, children: d(`#Button_Done`) }),
+              u < r.length - 1
+                ? (0, T.jsx)(l, { onClick: f, children: c(`#Button_Next`) })
+                : (0, T.jsx)(l, { onClick: o, children: c(`#Button_Done`) }),
             ],
           }),
         ],
@@ -160,15 +152,15 @@ function P(e) {
 }
 function F(e) {
   let { elem: t, options: n, children: r } = e,
-    { ownerWindow: i } = u(),
+    { ownerWindow: i } = s(),
     a = t.getBoundingClientRect(),
-    { style: o, position: s } = I(i, a, n.position, n.offset);
+    { style: o, position: c } = I(i, a, n.position, n.offset);
   return (0, w.createPortal)(
     (0, T.jsxs)(`div`, {
       className: g,
       style: o,
-      "data-position": s,
-      children: [(0, T.jsx)(z, { position: s, targetRect: a }), r],
+      "data-position": c,
+      children: [(0, T.jsx)(z, { position: c, targetRect: a }), r],
     }),
     i.document.body,
   );
@@ -244,7 +236,7 @@ function L(e) {
         (0, T.jsx)(`div`, {
           onClick: r,
           className: v,
-          children: (0, T.jsx)(l, { className: y }),
+          children: (0, T.jsx)(o, { className: y }),
         }),
         (0, T.jsx)(`div`, { className: b, children: n }),
         (0, T.jsx)(`div`, { className: x, children: i }),
@@ -254,10 +246,10 @@ function L(e) {
 }
 function R(e) {
   let { name: t, tour: n, options: r, children: i } = e,
-    { updateStop: a } = M(n),
-    o = (0, h.useCallback)((e) => a(n, t, r, e), [a, n, t]),
-    s = h.Children.only(i),
-    l = c(o, s.props.ref);
+    { updateStop: o } = M(n),
+    s = (0, h.useCallback)((e) => o(n, t, r, e), [o, n, t]),
+    c = h.Children.only(i),
+    l = a(s, c.props.ref);
   return (0, h.cloneElement)(h.Children.only(i), { ref: l });
 }
 function z(e) {

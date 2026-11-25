@@ -1,25 +1,25 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { ap as e, cm as t, ig as n, kp as r, zp as i } from "./main.js";
-function a(e, n) {
-  if (e[n]) {
-    if (n == `community_icon`) {
-      let r = e.asset_url_format
+import { Pp as e, eg as t, ep as n, rm as r, wp as i } from "./main.js";
+function a(e, t) {
+  if (e[t]) {
+    if (t == `community_icon`) {
+      let n = e.asset_url_format
         .replace(/^steam\//, `images/`)
-        .replace("${FILENAME}", `${e[n]}.jpg`)
+        .replace("${FILENAME}", `${e[t]}.jpg`)
         .replace(/\?.*$/, ``);
-      return `${t.MEDIA_CDN_COMMUNITY_URL}${r}`;
+      return `${r.MEDIA_CDN_COMMUNITY_URL}${n}`;
     }
-    if (typeof e[n] == `string`) {
-      let r = e.asset_url_format.replace("${FILENAME}", e[n]);
-      return `${t.STORE_ITEM_BASE_URL}${r}`;
+    if (typeof e[t] == `string`) {
+      let n = e.asset_url_format.replace("${FILENAME}", e[t]);
+      return `${r.STORE_ITEM_BASE_URL}${n}`;
     }
   }
 }
-function o(e, r = `full`) {
+function o(e, n = `full`) {
   let i = ``;
-  switch (r) {
+  switch (n) {
     case `thumb`:
       i = `.116x65`;
       break;
@@ -33,36 +33,36 @@ function o(e, r = `full`) {
       i = ``;
       break;
     default:
-      n(r, `Invalid size: ${r}`);
+      t(n, `Invalid size: ${n}`);
   }
   return (
-    t.STORE_ITEM_BASE_URL + e.filename.replace(/\.([^.]+)(\?.*)?$/, `${i}.$1$2`)
+    r.STORE_ITEM_BASE_URL + e.filename.replace(/\.([^.]+)(\?.*)?$/, `${i}.$1$2`)
   );
 }
 function s(t) {
-  let { data: n } = i(t),
-    r = e();
-  if (n)
+  let { data: r } = e(t),
+    i = n();
+  if (r)
     return [
-      ...(n.all_ages_screenshots || []),
-      ...(!r && n.mature_content_screenshots
-        ? n.mature_content_screenshots
+      ...(r.all_ages_screenshots || []),
+      ...(!i && r.mature_content_screenshots
+        ? r.mature_content_screenshots
         : []),
     ].sort((e, t) => e.ordinal - t.ordinal);
 }
-function c(e, n = !1) {
-  let { data: i } = r({ appid: e });
-  if (i !== void 0)
-    return i === null
+function c(e, t = !1) {
+  let { data: n } = i({ appid: e });
+  if (n !== void 0)
+    return n === null
       ? null
-      : n && i.library_capsule_2x
-        ? a(i, `library_capsule_2x`)
-        : i.library_capsule
-          ? a(i, `library_capsule`)
-          : `${t.STORE_ITEM_BASE_URL}steam/apps/${e}/portrait.png`;
+      : t && n.library_capsule_2x
+        ? a(n, `library_capsule_2x`)
+        : n.library_capsule
+          ? a(n, `library_capsule`)
+          : `${r.STORE_ITEM_BASE_URL}steam/apps/${e}/portrait.png`;
 }
 function l(e, ...t) {
-  let { data: n } = r(e);
+  let { data: n } = i(e);
   return u(n, ...t);
 }
 function u(e, ...t) {

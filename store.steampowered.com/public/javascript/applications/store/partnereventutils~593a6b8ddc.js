@@ -2,7 +2,7 @@
  ****/
 
 import { B as e, C as t, P as n, m as r, p as i } from "./chunk~f57d770d64.js";
-import { Xy as a, Yu as o, _x as s, aS as c, sS as l } from "./main.js";
+import { Xu as a, Zy as o, lS as s, sS as c, vx as l } from "./main.js";
 function u(e) {
   return (
     (e.gid == null || e.gid == null || e.gid == `0`) &&
@@ -17,12 +17,12 @@ function f(e, f) {
   let p = new t();
   if (
     ((p.clanSteamID = e),
-    l(
+    s(
       p.clanSteamID && p.clanSteamID.BIsValid(),
       `Invalid Clan SteamID: ` +
         p.clanSteamID.ConvertTo64BitString() +
         ` ` +
-        s.EUNIVERSE,
+        l.EUNIVERSE,
     ),
     (p.GID = d(f)),
     (p.bOldAnnouncement = u(f)),
@@ -62,7 +62,7 @@ function f(e, f) {
       (p.nCommentCount = e.commentcount),
       (p.postTime = e.posttime),
       p.bOldAnnouncement && !e.hidden && (p.startTime = e.posttime),
-      (p.announcementClanSteamID = new a(e.clanid)),
+      (p.announcementClanSteamID = new o(e.clanid)),
       e.tags && e.tags.length > 0 && e.tags.forEach((e) => p.vecTags.push(e)),
       !p.rtime32_last_solr_search_col_updated &&
         p.rtime32_last_modified &&
@@ -78,12 +78,12 @@ function f(e, f) {
       (p.nCommentCount = f.comment_count ?? 0),
       p.name.set(0, f.event_name ?? ``),
       p.description.set(0, f.event_notes ?? ``));
-  f.broadcaster_accountid && (p.broadcaster = new a(f.broadcaster_accountid));
+  f.broadcaster_accountid && (p.broadcaster = new o(f.broadcaster_accountid));
   let m = i;
   try {
     p.jsondata = { ...m, ...(f.jsondata ? JSON.parse(f.jsondata) : void 0) };
   } catch (e) {
-    let t = o(e);
+    let t = a(e);
     throw (
       console.error(
         `PartnerEventStore::InsertEventModelFromClanEventData: failed to parse embedded json model` +

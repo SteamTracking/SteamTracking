@@ -1,5 +1,5 @@
 import { _, _ } from "./chunk~f025431ab0.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~01cfc309bf.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~01cfc309bf.js";
 import {
   _,
   _,
@@ -111,15 +111,12 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
 } from "./chunk~6b8ddcaac8.js";
+import { _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~4c13037b22.js";
 import { _, _ } from "./chunk~5adf866415.js";
 import { _ } from "./chunk~684e72ad45.js";
 import "./chunk~8681f5c764.js";
-import { _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~2f8c67b4de.js";
 import { _ } from "./chunk~91ae5e1167.js";
@@ -554,11 +551,12 @@ import {
   _,
   _,
   _,
+  _,
 } from "./main.js";
 import { _ } from "./chunk~ec93a260ba.js";
 import { _ } from "./chunk~65da1d3223.js";
 import { _ } from "./chunk~d7992cfd18.js";
-import { _, _ } from "./chunk~4c65b375ad.js";
+import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~4c65b375ad.js";
 import { _, _ } from "./chunk~f6ebb80c8b.js";
 import { _, _, _ } from "./chunk~c0f9f0eb46.js";
 import { _ } from "./chunk~10ec219681.js";
@@ -5189,7 +5187,7 @@ var _ = {
     constructor(_ = null) {
       (super(),
         _.prototype.appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [2, 5], null));
+        _.Message.initialize(this, _, 0, -1, [2], null));
     }
     static sm_m;
     static sm_mbf;
@@ -5218,12 +5216,6 @@ var _ = {
               _: 4,
               _: _.readBool,
               _: _.writeBool,
-            },
-            completed_sets: {
-              _: 5,
-              _: _,
-              _: !0,
-              _: !0,
             },
           },
         }),
@@ -5263,70 +5255,6 @@ var _ = {
     }
     getClassName() {
       return `CGameAchievements`;
-    }
-  },
-  _ = class _ extends _.Message {
-    static ImplementsStaticInterface() {}
-    constructor(_ = null) {
-      (super(),
-        _.prototype.groupid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null));
-    }
-    static sm_m;
-    static sm_mbf;
-    static M() {
-      return (
-        (_.sm_m ||= {
-          proto: _,
-          fields: {
-            groupid: {
-              _: 1,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-            rtime_completed: {
-              _: 2,
-              _: _.readUint32,
-              _: _.writeUint32,
-            },
-          },
-        }),
-        _.sm_m
-      );
-    }
-    static MBF() {
-      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
-    }
-    toObject(_ = !1) {
-      return _.toObject(_, this);
-    }
-    static toObject(_, _) {
-      return _(_._(), _, _);
-    }
-    static fromObject(_) {
-      return _(_._(), _);
-    }
-    static deserializeBinary(_) {
-      let _ = new _.BinaryReader(_),
-        _ = new _();
-      return _.deserializeBinaryFromReader(_, _);
-    }
-    static deserializeBinaryFromReader(_, _) {
-      return _(_.MBF(), _, _);
-    }
-    serializeBinary() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
-    }
-    static serializeBinaryToWriter(_, _) {
-      _(_._(), _, _);
-    }
-    serializeBase64String() {
-      var _ = new _.BinaryWriter();
-      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
-    }
-    getClassName() {
-      return `CGameAchievements_CompletedSet`;
     }
   },
   _ = class _ extends _.Message {
@@ -5998,11 +5926,6 @@ var _ = {
               _: _.readBool,
               _: _.writeBool,
             },
-            include_completed_sets: {
-              _: 5,
-              _: _.readBool,
-              _: _.writeBool,
-            },
           },
         }),
         _.sm_m
@@ -6078,7 +6001,146 @@ var _ = {
               _: _.readUint32,
               _: _.writeUint32,
             },
-            total_completed_sets: {
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CSaleFeature_GetUserYearAchievements_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.steamid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            steamid: {
+              _: 1,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            year: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CSaleFeature_GetUserYearAchievementSets_Request`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.games || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [1], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            games: {
+              _: 1,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+            total_sets: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            total_base_game_sets: {
+              _: 3,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            total_dlc_sets: {
+              _: 4,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            total_games: {
               _: 5,
               _: _.readUint32,
               _: _.writeUint32,
@@ -6120,7 +6182,151 @@ var _ = {
       return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
     }
     getClassName() {
-      return `CSaleFeature_GetUserYearAchievements_Response`;
+      return `CSaleFeature_GetUserYearAchievementSets_Response`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.groupid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            groupid: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            rtime_completed: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CSaleFeature_GetUserYearAchievementSets_Response_CompletedSet`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.appid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [5], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            appid: {
+              _: 1,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            base_sets_completed: {
+              _: 2,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            dlc_sets_completed: {
+              _: 3,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            rtime_last_completed: {
+              _: 4,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            completed_sets: {
+              _: 5,
+              _: _,
+              _: !0,
+              _: !0,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CSaleFeature_GetUserYearAchievementSets_Response_Game`;
     }
   },
   _ = class _ extends _.Message {
@@ -7541,6 +7747,19 @@ var _ = {
   }
   _.GetUserYearAchievements = _;
   function _(_, _, _) {
+    return _.SendMsg(
+      `SaleFeature.GetUserYearAchievementSets#1`,
+      _(_, _, _),
+      _,
+      {
+        bConstMethod: !0,
+        ePrivilege: 2,
+        rgBrowserAPISites: [`all`],
+      },
+    );
+  }
+  _.GetUserYearAchievementSets = _;
+  function _(_, _, _) {
     return _.SendMsg(`SaleFeature.GetUserYearScreenshots#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 2,
@@ -7554,7 +7773,7 @@ var _ = {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetUserActionData = _;
@@ -7621,6 +7840,167 @@ var _ = {
   }
   _.GetYIRCurrentMonthlySummary = _;
 })((_ ||= {}));
+var _ = `GwOTkls9wBU-`,
+  _ = `_2KGKjN-sgQI-`,
+  _ = `s5xhgmFvlcc-`,
+  _ = `RT0zcREZx6Q-`,
+  _ = `okfAhWg-xsA-`,
+  _ = _();
+function _(_) {
+  return _.isHidden === void 0 && _.achievement.hidden
+    ? (0, _.jsx)(_, {
+        ..._,
+      })
+    : (0, _.jsx)(_, {
+        ..._,
+        isHidden: _.isHidden ?? !1,
+      });
+}
+function _(_) {
+  let { appid: _, achievement: _ } = _,
+    _ = _(_, _.logged_in ? _.steamid : ``),
+    _ = _.isSuccess && _.data?.achievements?.[_.internal_key]?.unlocked === !0;
+  return (0, _.jsx)(_, {
+    ..._,
+    isHidden: !_,
+  });
+}
+function _(_) {
+  return _.globalUnlockPercent === void 0
+    ? (0, _.jsx)(_, {
+        ..._,
+      })
+    : (0, _.jsx)(_, {
+        ..._,
+      });
+}
+function _(_) {
+  let _ = _(_.appid, _.achievement.internal_key);
+  return (0, _.jsx)(_, {
+    ..._,
+    globalUnlockPercent: _,
+  });
+}
+function _(_) {
+  let {
+      achievement: _,
+      progress: _,
+      isHidden: _,
+      globalUnlockPercent: _,
+      hideUnlockLine: _,
+    } = _,
+    { bForce24HourClock: _ } = _(),
+    _ = _?.unlocked,
+    _ = (_ ? _.icon_achieved : _.icon_unachieved) ?? ``,
+    _ = _(_),
+    _ = _?.unlock_time
+      ? _.Localize(`#Achievements_Row_UnlockedOnDate`, _(_.unlock_time, _))
+      : _.Localize(`#Achievements_Row_UnlockedNoDate`),
+    _ = _(`96`),
+    { name: _, description: _ } = _(_, _);
+  return (0, _.jsxs)(_, {
+    direction: `column`,
+    background: `dull-8`,
+    className: _,
+    style: _,
+    children: [
+      (0, _.jsx)(`div`, {
+        className: _,
+        children: (0, _.jsx)(`div`, {
+          className: _,
+          children: (0, _.jsx)(_, {
+            imgURL: _,
+            hidden: _,
+          }),
+        }),
+      }),
+      (0, _.jsxs)(_, {
+        direction: `row`,
+        padding: `3`,
+        gap: `3`,
+        minWidth: `calc(4 * var(--icon-size))`,
+        maxWidth: `calc(4 * var(--icon-size))`,
+        children: [
+          (0, _.jsx)(_, {
+            style: {
+              flexShrink: `0`,
+            },
+            imgURL: _,
+            glow: _ && _,
+            hidden: _,
+          }),
+          (0, _.jsxs)(_, {
+            direction: `column`,
+            justify: `start`,
+            gap: `3`,
+            flexGrow: `1`,
+            children: [
+              (0, _.jsx)(_, {
+                contrast: `title`,
+                size: `4`,
+                children: _,
+              }),
+              (0, _.jsx)(_, {
+                contrast: `subtitle`,
+                children: _,
+              }),
+            ],
+          }),
+        ],
+      }),
+      (0, _.jsxs)(_, {
+        direction: `column`,
+        padding: `3`,
+        gap: `2`,
+        className: _,
+        children: [
+          _ &&
+            !_ &&
+            (0, _.jsx)(_, {
+              contrast: `description`,
+              children: _,
+            }),
+          _ !== void 0 &&
+            (0, _.jsx)(_, {
+              contrast: _ ? void 0 : `subtitle`,
+              color: _ ? `amber-9` : void 0,
+              children: _(_),
+            }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
+  let {
+      appid: _,
+      achievement: _,
+      progress: _,
+      globalUnlockPercent: _,
+      isHidden: _,
+      hideUnlockLine: _,
+      direction: _ = `bottom`,
+      strTooltipClassname: _,
+      bNavStop: _ = !0,
+      ..._
+    } = _,
+    _ = (0, _.jsx)(_, {
+      appid: _,
+      achievement: _,
+      progress: _,
+      globalUnlockPercent: _,
+      isHidden: _,
+      hideUnlockLine: _,
+    }),
+    _ = _(_, _);
+  return (0, _.jsx)(_, {
+    direction: _,
+    strTooltipClassname: _,
+    toolTipContent: _,
+    bNavStop: _,
+    ..._,
+  });
+}
 var _ = {
     19: [19, _, _, _, _, _],
     [_]: [_, _, _, _, _, _, _],
@@ -8781,7 +9161,10 @@ function _(_) {
   };
 }
 function _(_, _ = !1) {
-  return _(_(_(), _(), _, _));
+  return _({
+    ..._(_(), _(), _, _),
+    placeholderData: _,
+  });
 }
 function _(_, _, _, _ = !1) {
   return {
@@ -9403,8 +9786,7 @@ function _() {
     [_, _],
   );
 }
-var _ = _(),
-  _ = {
+var _ = {
     index: void 0,
     appids: [],
   },
@@ -10237,8 +10619,8 @@ function _(_) {
       _ &&
         (0, _.jsx)(`div`, {
           className: `z4JPVbkRELk-`,
-          children: (0, _.jsx)(`a`, {
-            href: `#`,
+          children: (0, _.jsx)(`button`, {
+            type: `button`,
             className: `dUBouRPf5BM-`,
             onClick: () => _(!0),
             children: _.Localize(`#YIR_ShowMore`),
@@ -10326,8 +10708,8 @@ function _(_) {
         _ &&
           (0, _.jsx)(`div`, {
             className: `z4JPVbkRELk-`,
-            children: (0, _.jsx)(`a`, {
-              href: `#`,
+            children: (0, _.jsx)(`button`, {
+              type: `button`,
               className: `dUBouRPf5BM-`,
               onClick: () => _(!0),
               children: _.Localize(`#YIR_ShowMore`),
@@ -10451,12 +10833,18 @@ function _(_) {
   });
 }
 var _ = `-mIgF6AA5LY-`,
+  _ = `_6-qe6OwxbGw-`,
   _ = `Vi83-LkMtoI-`,
   _ = `YXohyZxdvfQ-`,
   _ = `-XC-c1uz0Ko-`,
   _ = `zZFozEpTZI0-`,
   _ = `xUqkAY4Oj3o-`,
   _ = `rwGMj4tdqJs-`,
+  _ = `j0W76427BJs-`,
+  _ = `-F6YVRDK5LU-`,
+  _ = `Y--QEtA1ZRM-`,
+  _ = `vhVXp-NJd5Y-`,
+  _ = `yqFgGpjFdcE-`,
   _ = `-ZlfMJZNVtw-`,
   _ = `F6KTgf9lssw-`,
   _ = 9e3,
@@ -10576,8 +10964,11 @@ function _(_) {
   return _
     ? (0, _.jsxs)(_.Fragment, {
         children: [
-          (0, _.jsx)(_, {
+          (0, _.jsx)(`div`, {
             className: (0, _.default)(_, _.ImagesCtn),
+          }),
+          (0, _.jsx)(_, {
+            className: _,
             squareClassName: _,
             gridClassName: (0, _.default)({
               [_]: !0,
@@ -10597,6 +10988,20 @@ function _(_) {
                 _,
               ),
             ),
+          }),
+          (0, _.jsxs)(`div`, {
+            className: _,
+            children: [
+              (0, _.jsx)(`div`, {
+                className: (0, _.default)(_, _, _.ImagesCtn),
+              }),
+              (0, _.jsx)(`div`, {
+                className: (0, _.default)(_, _, _.ImagesCtn),
+              }),
+              (0, _.jsx)(`div`, {
+                className: (0, _.default)(_, _, _.ImagesCtn),
+              }),
+            ],
           }),
           _,
         ],
@@ -12490,8 +12895,8 @@ function _(_) {
           _ &&
             (0, _.jsx)(`div`, {
               className: `z4JPVbkRELk-`,
-              children: (0, _.jsx)(`a`, {
-                href: `#`,
+              children: (0, _.jsx)(`button`, {
+                type: `button`,
                 className: `dUBouRPf5BM-`,
                 onClick: () => _(!0),
                 children: _.Localize(`#YIR_ShowMore`),
@@ -14678,49 +15083,44 @@ var _ = 10;
 function _(_) {
   let { display: _, appid: _ } = _,
     _ = `${_.MEDIA_CDN_COMMUNITY_URL}images/apps/${_}/${_.icon}`,
-    _ = Number.parseFloat(`` + _.player_percent_unlocked) < _;
+    _ = Number.parseFloat(`` + _.player_percent_unlocked),
+    _ = _ < _,
+    _ = _.internal_key ?? 0,
+    _ = {
+      internal_key: _,
+      api_name: _.internal_name ?? ``,
+      name: _.localized_name ?? _.internal_name,
+      description: _.localized_desc,
+      hidden: !!_.hidden,
+      archived: !!_.archived,
+      icon_achieved: _,
+      groupid: _.groupid,
+    };
   return (0, _.jsx)(_, {
-    toolTipContent: (0, _.jsx)(_, {
-      display: _,
-    }),
-    className: (0, _.default)({
-      [_]: _,
-      [_]: !0,
-    }),
-    children: (0, _.jsx)(_, {
-      imgURL: _,
-      className: _,
-      alt: _.localized_name ?? _.internal_name,
-      glow: _,
-      hideNativeTooltip: !0,
+    appid: _,
+    achievement: _,
+    progress: {
+      internal_key: _,
+      unlocked: !0,
+      unlock_time: 0,
+    },
+    globalUnlockPercent: Number.isNaN(_) ? void 0 : _,
+    isHidden: !1,
+    hideUnlockLine: !0,
+    children: (0, _.jsx)(`div`, {
+      className: (0, _.default)({
+        [_]: _,
+        [_]: !0,
+      }),
+      children: (0, _.jsx)(_, {
+        imgURL: _,
+        className: _,
+        alt: _.localized_name ?? _.internal_name,
+        glow: _,
+        hideNativeTooltip: !0,
+      }),
     }),
   });
-}
-function _(_) {
-  let { display: _ } = _,
-    _;
-  return (
-    _.localized_desc && _.localized_name
-      ? (_ = `${_?.localized_name}: ${_.localized_desc}`)
-      : _.localized_name
-        ? (_ = _.localized_name)
-        : _.internal_name && (_ = _.internal_name),
-    (0, _.jsxs)(`div`, {
-      className: _,
-      children: [
-        (0, _.jsx)(`div`, {
-          children: _,
-        }),
-        (0, _.jsx)(`br`, {}),
-        (0, _.jsx)(`div`, {
-          children: _.Localize(
-            `#YIR_Achievement_ttip`,
-            _(Math.max(0.1, Number.parseFloat(`` + _.player_percent_unlocked))),
-          ),
-        }),
-      ],
-    })
-  );
 }
 var _ = `l-51YapU23U-`,
   _ = `MFK0ZYn4p8Y-`,

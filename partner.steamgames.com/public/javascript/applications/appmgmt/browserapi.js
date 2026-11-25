@@ -2,28 +2,449 @@
  ****/
 
 import {
-  N as e,
-  St as t,
-  W as n,
-  Zt as r,
-  kt as i,
-  rt as a,
-  sn as o,
-  yt as s,
+  Ct as e,
+  G as t,
+  J as n,
+  K as r,
+  Pt as i,
+  St as a,
+  _t as o,
+  a as s,
+  bt as c,
+  g as l,
+  gt as u,
+  k as d,
+  tt as f,
+  vt as p,
+  wt as m,
+  xt as h,
+  yt as g,
 } from "./chunk~de7f2df91c.js";
-import { t as c } from "./chunk~25a6634263.js";
-import { a as l, t as u } from "./chunk~d9c3dab17a.js";
-import { t as d } from "./chunk~4571d27d07.js";
-var f = o(d(), 1);
-r();
-function p(e) {
+import { t as _ } from "./chunk~25a6634263.js";
+import { t as v } from "./chunk~4571d27d07.js";
+var y = i(m(), 1),
+  b = class t extends y.Message {
+    static ImplementsStaticInterface() {}
+    constructor(e = null) {
+      (super(),
+        t.prototype.version || u(t.M()),
+        y.Message.initialize(this, e, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            version: { n: 1, br: g.readEnum, bw: e.writeEnum },
+            preference_state: { n: 2, br: g.readEnum, bw: e.writeEnum },
+            content_customization: { n: 3, c: x },
+            valve_analytics: { n: 4, c: S },
+            third_party_analytics: { n: 5, c: C },
+            third_party_content: { n: 6, c: w },
+            utm_enabled: { n: 7, d: !0, br: g.readBool, bw: e.writeBool },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= c(t.M())), t.sm_mbf);
+    }
+    toObject(e = !1) {
+      return t.toObject(e, this);
+    }
+    static toObject(e, n) {
+      return a(t.M(), e, n);
+    }
+    static fromObject(e) {
+      return p(t.M(), e);
+    }
+    static deserializeBinary(e) {
+      let n = new y.BinaryReader(e),
+        r = new t();
+      return t.deserializeBinaryFromReader(r, n);
+    }
+    static deserializeBinaryFromReader(e, n) {
+      return o(t.MBF(), e, n);
+    }
+    serializeBinary() {
+      var e = new y.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBuffer());
+    }
+    static serializeBinaryToWriter(e, n) {
+      h(t.M(), e, n);
+    }
+    serializeBase64String() {
+      var e = new y.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBase64String());
+    }
+    getClassName() {
+      return `CAccountPrivacyCookiePreferences`;
+    }
+  },
+  x = class t extends y.Message {
+    static ImplementsStaticInterface() {}
+    constructor(e = null) {
+      (super(),
+        t.prototype.recentapps || u(t.M()),
+        y.Message.initialize(this, e, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: { recentapps: { n: 1, br: g.readBool, bw: e.writeBool } },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= c(t.M())), t.sm_mbf);
+    }
+    toObject(e = !1) {
+      return t.toObject(e, this);
+    }
+    static toObject(e, n) {
+      return a(t.M(), e, n);
+    }
+    static fromObject(e) {
+      return p(t.M(), e);
+    }
+    static deserializeBinary(e) {
+      let n = new y.BinaryReader(e),
+        r = new t();
+      return t.deserializeBinaryFromReader(r, n);
+    }
+    static deserializeBinaryFromReader(e, n) {
+      return o(t.MBF(), e, n);
+    }
+    serializeBinary() {
+      var e = new y.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBuffer());
+    }
+    static serializeBinaryToWriter(e, n) {
+      h(t.M(), e, n);
+    }
+    serializeBase64String() {
+      var e = new y.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBase64String());
+    }
+    getClassName() {
+      return `CAccountPrivacyCookiePreferences_ContentCustomization`;
+    }
+  },
+  S = class t extends y.Message {
+    static ImplementsStaticInterface() {}
+    constructor(e = null) {
+      (super(),
+        t.prototype.product_impressions_tracking || u(t.M()),
+        y.Message.initialize(this, e, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            product_impressions_tracking: {
+              n: 1,
+              br: g.readBool,
+              bw: e.writeBool,
+            },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= c(t.M())), t.sm_mbf);
+    }
+    toObject(e = !1) {
+      return t.toObject(e, this);
+    }
+    static toObject(e, n) {
+      return a(t.M(), e, n);
+    }
+    static fromObject(e) {
+      return p(t.M(), e);
+    }
+    static deserializeBinary(e) {
+      let n = new y.BinaryReader(e),
+        r = new t();
+      return t.deserializeBinaryFromReader(r, n);
+    }
+    static deserializeBinaryFromReader(e, n) {
+      return o(t.MBF(), e, n);
+    }
+    serializeBinary() {
+      var e = new y.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBuffer());
+    }
+    static serializeBinaryToWriter(e, n) {
+      h(t.M(), e, n);
+    }
+    serializeBase64String() {
+      var e = new y.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBase64String());
+    }
+    getClassName() {
+      return `CAccountPrivacyCookiePreferences_ValveAnalytics`;
+    }
+  },
+  C = class t extends y.Message {
+    static ImplementsStaticInterface() {}
+    constructor(e = null) {
+      (super(),
+        t.prototype.google_analytics || u(t.M()),
+        y.Message.initialize(this, e, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            google_analytics: { n: 1, br: g.readBool, bw: e.writeBool },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= c(t.M())), t.sm_mbf);
+    }
+    toObject(e = !1) {
+      return t.toObject(e, this);
+    }
+    static toObject(e, n) {
+      return a(t.M(), e, n);
+    }
+    static fromObject(e) {
+      return p(t.M(), e);
+    }
+    static deserializeBinary(e) {
+      let n = new y.BinaryReader(e),
+        r = new t();
+      return t.deserializeBinaryFromReader(r, n);
+    }
+    static deserializeBinaryFromReader(e, n) {
+      return o(t.MBF(), e, n);
+    }
+    serializeBinary() {
+      var e = new y.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBuffer());
+    }
+    static serializeBinaryToWriter(e, n) {
+      h(t.M(), e, n);
+    }
+    serializeBase64String() {
+      var e = new y.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBase64String());
+    }
+    getClassName() {
+      return `CAccountPrivacyCookiePreferences_ThirdPartyAnalytics`;
+    }
+  },
+  w = class t extends y.Message {
+    static ImplementsStaticInterface() {}
+    constructor(e = null) {
+      (super(),
+        t.prototype.youtube || u(t.M()),
+        y.Message.initialize(this, e, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            youtube: { n: 1, br: g.readBool, bw: e.writeBool },
+            vimeo: { n: 2, br: g.readBool, bw: e.writeBool },
+            sketchfab: { n: 3, br: g.readBool, bw: e.writeBool },
+            twitter: { n: 4, br: g.readBool, bw: e.writeBool },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= c(t.M())), t.sm_mbf);
+    }
+    toObject(e = !1) {
+      return t.toObject(e, this);
+    }
+    static toObject(e, n) {
+      return a(t.M(), e, n);
+    }
+    static fromObject(e) {
+      return p(t.M(), e);
+    }
+    static deserializeBinary(e) {
+      let n = new y.BinaryReader(e),
+        r = new t();
+      return t.deserializeBinaryFromReader(r, n);
+    }
+    static deserializeBinaryFromReader(e, n) {
+      return o(t.MBF(), e, n);
+    }
+    serializeBinary() {
+      var e = new y.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBuffer());
+    }
+    static serializeBinaryToWriter(e, n) {
+      h(t.M(), e, n);
+    }
+    serializeBase64String() {
+      var e = new y.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, e), e.getResultBase64String());
+    }
+    getClassName() {
+      return `CAccountPrivacyCookiePreferences_ThirdPartyContent`;
+    }
+  },
+  T = class e extends y.Message {
+    static ImplementsStaticInterface() {}
+    constructor(e = null) {
+      (super(), y.Message.initialize(this, e, 0, -1, void 0, null));
+    }
+    toObject(t = !1) {
+      return e.toObject(t, this);
+    }
+    static toObject(e, t) {
+      return e ? { $jspbMessageInstance: t } : {};
+    }
+    static fromObject(t) {
+      return new e();
+    }
+    static deserializeBinary(t) {
+      let n = new y.BinaryReader(t),
+        r = new e();
+      return e.deserializeBinaryFromReader(r, n);
+    }
+    static deserializeBinaryFromReader(e, t) {
+      return e;
+    }
+    serializeBinary() {
+      var t = new y.BinaryWriter();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
+    }
+    static serializeBinaryToWriter(e, t) {}
+    serializeBase64String() {
+      var t = new y.BinaryWriter();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
+    }
+    getClassName() {
+      return `CAccountPrivacy_GetCookiePreferences_Request`;
+    }
+  },
+  E = class e extends y.Message {
+    static ImplementsStaticInterface() {}
+    constructor(t = null) {
+      (super(),
+        e.prototype.preferences || u(e.M()),
+        y.Message.initialize(this, t, 0, -1, void 0, null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (e.sm_m ||= { proto: e, fields: { preferences: { n: 1, c: b } } }),
+        e.sm_m
+      );
+    }
+    static MBF() {
+      return ((e.sm_mbf ||= c(e.M())), e.sm_mbf);
+    }
+    toObject(t = !1) {
+      return e.toObject(t, this);
+    }
+    static toObject(t, n) {
+      return a(e.M(), t, n);
+    }
+    static fromObject(t) {
+      return p(e.M(), t);
+    }
+    static deserializeBinary(t) {
+      let n = new y.BinaryReader(t),
+        r = new e();
+      return e.deserializeBinaryFromReader(r, n);
+    }
+    static deserializeBinaryFromReader(t, n) {
+      return o(e.MBF(), t, n);
+    }
+    serializeBinary() {
+      var t = new y.BinaryWriter();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
+    }
+    static serializeBinaryToWriter(t, n) {
+      h(e.M(), t, n);
+    }
+    serializeBase64String() {
+      var t = new y.BinaryWriter();
+      return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
+    }
+    getClassName() {
+      return `CAccountPrivacy_GetCookiePreferences_Response`;
+    }
+  },
+  D;
+(function (e) {
+  function t(e, t, n) {
+    return e.SendMsg(`AccountPrivacy.GetCookiePreferences#1`, r(T, t, n), E, {
+      bConstMethod: !0,
+      ePrivilege: 1,
+      rgBrowserAPISites: [`all`],
+    });
+  }
+  e.GetCookiePreferences = t;
+})((D ||= {}));
+var O = {
+    name: `cookieSettings`,
+    options: {
+      secure: !0,
+      httpOnly: !1,
+      path: `/`,
+      sameSite: `none`,
+      maxAge: 31536e6,
+    },
+    preferenceControls: { isTechnicallyNecessary: !0 },
+  },
+  k = {
+    name: `sessionid`,
+    options: { secure: !0, path: `/`, sameSite: `none` },
+    preferenceControls: { isTechnicallyNecessary: !0 },
+  },
+  A = {
+    name: `shoppingCartGID`,
+    options: { path: `/`, secure: !0, maxAge: 6048e5 },
+    preferenceControls: { isTechnicallyNecessary: !0 },
+  },
+  j = {
+    name: `steamLoginSpoofSteamID`,
+    options: { path: `/`, secure: !0 },
+    preferenceControls: { isTechnicallyNecessary: !0 },
+  };
+function M(e) {
+  if (!(`document` in globalThis) || !document.cookie) return;
+  let t = document.cookie.match(`(^|; )` + e.name + `=([^;]*)`);
+  if (t && t[2]) return decodeURIComponent(t[2]);
+}
+var N = i(v(), 1);
+function P(e) {
   try {
     if (!e || typeof e != `string`) return null;
     let t = e.split(`.`);
     if (t.length !== 3) return null;
     let [n, r] = t,
-      i = _(n),
-      a = _(r);
+      i = R(n),
+      a = R(r);
     return !i || !a ? null : { header: JSON.parse(i), body: JSON.parse(a) };
   } catch (e) {
     return (
@@ -31,23 +452,23 @@ function p(e) {
     );
   }
 }
-function m(e) {
+function F(e) {
   return e ? e.body.exp : 0;
 }
-function h(e) {
+function I(e) {
   return e ? e.body.nbf || e.body.iat : 0;
 }
-function g(e) {
-  let t = m(e),
-    n = h(e),
+function L(e) {
+  let t = F(e),
+    n = I(e),
     r = 900,
     i = t - n;
-  return (i < 1350 && (r = i <= 60 ? 0 : 60), m(e) - r < Date.now() / 1e3);
+  return (i < 1350 && (r = i <= 60 ? 0 : 60), F(e) - r < Date.now() / 1e3);
 }
-function _(e) {
+function R(e) {
   return atob(e.replace(/-/g, `+`).replace(/_/g, `/`));
 }
-var v = class {
+var z = class {
   m_ServiceTransport;
   m_AnonymousServiceTransport;
   m_strWebAPIBaseURL;
@@ -63,7 +484,7 @@ var v = class {
       (this.m_webApiAccessToken = t),
       (this.m_bJsonMode = n),
       (this.m_fnRequestNewAccessToken = r),
-      (this.m_bJWTToken = p(t) != null),
+      (this.m_bJWTToken = P(t) != null),
       (this.m_ServiceTransport = {
         SendMsg: this.SendMsgAndAwaitResponse.bind(this, { bSendAuth: !0 }),
         SendNotification: this.SendNotification.bind(this, { bSendAuth: !0 }),
@@ -74,7 +495,7 @@ var v = class {
         SendNotification: this.SendNotification.bind(this, { bSendAuth: !1 }),
         MakeReady: this.MakeReady.bind(this),
       }));
-    let i = u(l);
+    let i = M(j);
     i && /[0-9]+/g.test(i) && (this.m_strSpoofedSteamID = i);
   }
   WaitUntilLoggedOn() {
@@ -84,7 +505,7 @@ var v = class {
     return Number(new Date());
   }
   get steamid() {
-    return new c();
+    return new _();
   }
   RTime32ToDate(e) {
     return new Date(e * 1e3);
@@ -101,8 +522,8 @@ var v = class {
   GetAnonymousServiceTransport() {
     return this.m_AnonymousServiceTransport;
   }
-  async SendMsgAndAwaitResponse(e, n, r, i, a) {
-    let o,
+  async SendMsgAndAwaitResponse(e, r, i, a, o) {
+    let s,
       c = 0;
     try {
       if (this.m_bJWTToken && e.bSendAuth && this.m_webApiAccessToken) {
@@ -113,31 +534,32 @@ var v = class {
               (this.m_fnRequestNewAccessToken &&
                 e - this.m_dtLastExpireCheck > 60)) &&
             ((this.m_dtLastExpireCheck = e),
-            g(p(this.m_webApiAccessToken)) &&
+            L(P(this.m_webApiAccessToken)) &&
               (await this.AttemptTokenRefresh()));
       }
-      let l = await this.Send(e, n, r, a);
+      let l = await this.Send(e, r, i, o);
       if (((c = l.status), c == 200)) {
         if (
-          ((o = s.Init(i, 147)),
+          ((s = t.Init(a, 147)),
           l.headers &&
             (l.headers.get(`x-eresult`) &&
-              o.Hdr().set_eresult(parseInt(l.headers.get(`x-eresult`))),
+              s.Hdr().set_eresult(parseInt(l.headers.get(`x-eresult`))),
             l.headers.get(`x-error_message`) &&
-              o.Hdr().set_error_message(l.headers.get(`x-error_message`))),
+              s.Hdr().set_error_message(l.headers.get(`x-error_message`))),
           this.m_bJsonMode)
         )
-          o.SetBodyJSON(await l.json());
+          s.SetBodyJSON(await l.json());
         else {
-          let e = new t(await l.arrayBuffer());
-          o.ReadBodyFromBuffer(i, e);
+          let e = new n(await l.arrayBuffer());
+          s.ReadBodyFromBuffer(a, e);
         }
       }
     } catch {}
     let l = c === 401;
-    if (!o) {
-      let e = l ? `Unauthorized` : void 0;
-      o = this.CreateFailedMsgProtobuf(i, 3, e);
+    if (!s) {
+      let e = l ? `Unauthorized` : void 0,
+        t = c === 429 ? 84 : 2;
+      s = this.CreateFailedMsgProtobuf(a, 3, t, e);
     }
     return (
       l &&
@@ -147,55 +569,55 @@ var v = class {
         this.m_fnRequestNewAccessToken &&
         this.m_webApiAccessToken &&
         (await this.AttemptTokenRefresh()),
-      o
+      s
     );
   }
   SendNotification(e, t, n, r) {
     return (this.Send(e, t, n, r), !0);
   }
   Send(e, t, n, r) {
-    let a = this.CreateWebAPIURL(t),
-      o = n.SerializeBody(),
-      s = f.fromByteArray(o),
-      c = r.eWebAPIKeyRequirement,
-      l = r.ePrivilege == 0 && c == 1,
-      u = {},
-      d = new URLSearchParams();
+    let i = this.CreateWebAPIURL(t),
+      a = n.SerializeBody(),
+      o = N.fromByteArray(a),
+      s = r.eWebAPIKeyRequirement,
+      c = r.ePrivilege == 0 && s == 1,
+      l = {},
+      u = new URLSearchParams();
     if (
       (!e.bSendAuth &&
-        c != 1 &&
+        s != 1 &&
         console.error(
           `Attempting to invoke service ${t} without auth, but auth is required.`,
         ),
-      e.bSendAuth && !l)
+      e.bSendAuth && !c)
     ) {
       let e = `${t} was called over WebAPI with auth`;
       (console.warn(e),
-        i().ReportError(Error(e), { bIncludeMessageInIdentifier: !0 }));
+        f().ReportError(Error(e), { bIncludeMessageInIdentifier: !0 }));
     }
     if (
       (this.m_webApiAccessToken &&
         e.bSendAuth &&
-        !l &&
-        (d.append(`access_token`, this.m_webApiAccessToken),
+        !c &&
+        (u.append(`access_token`, this.m_webApiAccessToken),
         this.m_strSpoofedSteamID &&
-          d.append(`spoof_steamid`, this.m_strSpoofedSteamID)),
+          u.append(`spoof_steamid`, this.m_strSpoofedSteamID)),
       r.bConstMethod)
     )
       return (
-        typeof self < `u` && self.origin && d.append(`origin`, self.origin),
+        typeof self < `u` && self.origin && u.append(`origin`, self.origin),
         this.m_bJsonMode
-          ? d.append(`input_json`, JSON.stringify(n.Body().toObject()))
-          : d.append(`input_protobuf_encoded`, s),
-        fetch(`${a}?${d.toString()}`, u)
+          ? u.append(`input_json`, JSON.stringify(n.Body().toObject()))
+          : u.append(`input_protobuf_encoded`, o),
+        fetch(`${i}?${u.toString()}`, l)
       );
     {
       let e = new FormData();
       return (
         this.m_bJsonMode
           ? e.append(`input_json`, JSON.stringify(n.Body().toObject()))
-          : e.append(`input_protobuf_encoded`, s),
-        fetch(`${a}?${d.toString()}`, { ...u, method: `POST`, body: e })
+          : e.append(`input_protobuf_encoded`, o),
+        fetch(`${i}?${u.toString()}`, { ...l, method: `POST`, body: e })
       );
     }
   }
@@ -204,13 +626,13 @@ var v = class {
     if (!t || t.length != 4) throw `Invalid service name: ${e}`;
     return `${this.m_strWebAPIBaseURL}I${t[1]}Service/${t[2]}/v${t[3]}`;
   }
-  CreateFailedMsgProtobuf(e, t, n) {
-    let r = s.Init(e);
+  CreateFailedMsgProtobuf(e, n, r, i) {
+    let a = t.Init(e);
     return (
-      r.Hdr().set_eresult(2),
-      r.Hdr().set_transport_error(t),
-      n && r.Hdr().set_error_message(n),
-      r
+      a.Hdr().set_eresult(r),
+      a.Hdr().set_transport_error(n),
+      i && a.Hdr().set_error_message(i),
+      a
     );
   }
   async AttemptTokenRefresh() {
@@ -230,12 +652,12 @@ var v = class {
       }
   }
 };
-function y(e, t) {
+function B(e, t) {
   return !!e && (e.includes(`all`) || e.includes(t));
 }
-async function b() {
+async function V() {
   try {
-    let e = await fetch(`${n.LOGIN_BASE_URL}jwt/ajaxrefresh`, {
+    let e = await fetch(`${l.LOGIN_BASE_URL}jwt/ajaxrefresh`, {
       method: `POST`,
       credentials: `include`,
       body: new URLSearchParams({ redir: window.location.href }),
@@ -243,30 +665,29 @@ async function b() {
     if (!e.ok) return !1;
     let t = await e.json();
     if (!t.success || !t.login_url) return !1;
-    let r = new URLSearchParams();
-    for (let [e, n] of Object.entries(t))
-      typeof n == `string` && r.append(e, n);
+    let n = new URLSearchParams();
+    for (let [e, r] of Object.entries(t))
+      typeof r == `string` && n.append(e, r);
     return (
       await fetch(t.login_url, {
         method: `POST`,
         credentials: `include`,
-        body: r,
+        body: n,
       })
     ).ok;
   } catch {
     return !1;
   }
 }
-function x(e) {
-  return y(e.rgBrowserAPISites, `partner`);
-}
-var S = class {
+var H = class {
   m_ServiceTransport;
   m_AnonymousServiceTransport;
   m_fallbackInterface;
+  m_strSiteName;
   m_refreshLoginCookiePromise;
-  constructor(e) {
+  constructor(e, t = `partner`) {
     ((this.m_fallbackInterface = e),
+      (this.m_strSiteName = t),
       (this.m_ServiceTransport = {
         SendMsg: this.SendMsgAndAwaitResponse.bind(this, { bSendAuth: !0 }),
         SendNotification: this.SendNotification.bind(this, { bSendAuth: !0 }),
@@ -279,7 +700,7 @@ var S = class {
       }));
   }
   async SendMsgAndAwaitResponse(e, t, n, r, i) {
-    if (!x(i)) {
+    if (!this.BCanSendMessageViaBrowserAPI(i)) {
       if (this.m_fallbackInterface)
         return e.bSendAuth
           ? this.m_fallbackInterface?.GetServiceTransport().SendMsg(t, n, r, i)
@@ -295,39 +716,42 @@ var S = class {
       ? a.msgResult
       : (await this.SendMsgOnce(e, t, n, r, i)).msgResult;
   }
+  BCanSendMessageViaBrowserAPI(e) {
+    return B(e.rgBrowserAPISites, this.m_strSiteName);
+  }
   BEnsureLoginCookieRefreshed() {
     return (
-      (this.m_refreshLoginCookiePromise ??= b().finally(() => {
+      (this.m_refreshLoginCookiePromise ??= V().finally(() => {
         this.m_refreshLoginCookiePromise = void 0;
       })),
       this.m_refreshLoginCookiePromise
     );
   }
-  async SendMsgOnce(e, n, r, i, a) {
-    let o,
+  async SendMsgOnce(e, r, i, a, o) {
+    let s,
       c = 0;
     try {
-      let l = await this.Send(e, n, r, a);
+      let l = await this.Send(e, r, i, o);
       if (((c = l.status), c == 200)) {
-        ((o = s.Init(i, 147)),
+        ((s = t.Init(a, 147)),
           l.headers &&
             (l.headers.get(`x-eresult`) &&
-              o.Hdr().set_eresult(parseInt(l.headers.get(`x-eresult`))),
+              s.Hdr().set_eresult(parseInt(l.headers.get(`x-eresult`))),
             l.headers.get(`x-error_message`) &&
-              o.Hdr().set_error_message(l.headers.get(`x-error_message`))));
-        let e = new t(await l.arrayBuffer());
-        o.ReadBodyFromBuffer(i, e);
+              s.Hdr().set_error_message(l.headers.get(`x-error_message`))));
+        let e = new n(await l.arrayBuffer());
+        s.ReadBodyFromBuffer(a, e);
       }
     } catch {}
     let l = c === 401;
-    if (!o) {
+    if (!s) {
       let e = l ? `Unauthorized` : void 0;
-      o = this.CreateFailedMsgProtobuf(i, 3, e);
+      s = this.CreateFailedMsgProtobuf(a, 3, e);
     }
-    return { msgResult: o, status: c };
+    return { msgResult: s, status: c };
   }
   SendNotification(e, t, n, r) {
-    if (!x(r)) {
+    if (!this.BCanSendMessageViaBrowserAPI(r)) {
       if (this.m_fallbackInterface)
         return e.bSendAuth
           ? this.m_fallbackInterface
@@ -366,7 +790,7 @@ var S = class {
       r.bConstMethod)
     )
       return (
-        l.append(`input_protobuf_encoded`, f.fromByteArray(a)),
+        l.append(`input_protobuf_encoded`, N.fromByteArray(a)),
         fetch(`${i}?${l.toString()}`, c)
       );
     {
@@ -384,13 +808,13 @@ var S = class {
     if (!t || t.length != 4) throw `Invalid service name: ${e}`;
     return `/um/${t[1]}/${t[2]}/`;
   }
-  CreateFailedMsgProtobuf(e, t, n) {
-    let r = s.Init(e);
+  CreateFailedMsgProtobuf(e, n, r) {
+    let i = t.Init(e);
     return (
-      r.Hdr().set_eresult(2),
-      r.Hdr().set_transport_error(t),
-      n && r.Hdr().set_error_message(n),
-      r
+      i.Hdr().set_eresult(2),
+      i.Hdr().set_transport_error(n),
+      r && i.Hdr().set_error_message(r),
+      i
     );
   }
   MakeReady() {
@@ -412,11 +836,8 @@ var S = class {
     return new Date(e * 1e3);
   }
 };
-function C() {
-  return [a.PARTNER_BASE_URL];
+function U(e) {
+  let t = s();
+  return t && t === d.STORE_CHECKOUT_BASE_URL ? new H(e, `checkout`) : new H(e);
 }
-function w(t) {
-  let n = e();
-  return n && C().includes(n) ? new S(t) : t;
-}
-export { S as n, v as r, w as t };
+export { O as a, D as c, M as i, H as n, k as o, z as r, A as s, U as t };

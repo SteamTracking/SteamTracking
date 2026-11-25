@@ -13,13 +13,13 @@ const __vite__mapDeps = (
       "./chunk~521597d5f9.js",
       "./main.js",
       "../../../css/applications/store/chunk~bcf59b1f6b.css",
+      "./chunk~4eed35ad1f.js",
+      "../../../css/applications/store/chunk~0c0e8c89c4.css",
       "./chunk~8c66e1c7a5.js",
       "./chunk~4c13037b22.js",
       "./chunk~8681f5c764.js",
       "./chunk~2f085f1384.js",
       "../../../css/applications/store/chunk~504d82f1b0.css",
-      "./chunk~4eed35ad1f.js",
-      "../../../css/applications/store/chunk~0c0e8c89c4.css",
       "./chunk~92931c6310.js",
       "./chunk~af36c62e9f.js",
       "./chunk~eefd71512b.js",
@@ -33,7 +33,7 @@ const __vite__mapDeps = (
       "./chunk~90b9831ad2.js",
       "../../../css/applications/store/chunk~0e41f12ba5.css",
       "./chunk~f162f235ea.js",
-      "../../../css/applications/store/chunk~7e3e341a022.css",
+      "../../../css/applications/store/chunk~7e3e341a02.css",
       "./chunk~466a63c735.js",
       "./chunk~c0171774da.js",
       "./chunk~d382bdf2cf.js",
@@ -73,6 +73,7 @@ import { _ } from "./chunk~0111fcd096.js";
 import { _ } from "./chunk~d382bdf2cf.js";
 import { _ } from "./chunk~a7c5e71e12.js";
 import {
+  _,
   _,
   _,
   _,
@@ -2776,6 +2777,10 @@ function _(_) {
       : (0, _.jsx)(_, {
           className: _,
         });
+  else if (_.platform_type == 4)
+    _ = (0, _.jsx)(_, {
+      className: _,
+    });
   else if (
     _.platform_type == 1 &&
     (_.gaming_device_type === 544 ||
@@ -2847,7 +2852,7 @@ function _(_) {
 function _(_) {
   let _ = _.last_seen ?? _.first_seen;
   if (_) {
-    if (!_(_.EREALM))
+    if (_.country && !_(_.EREALM))
       return {
         location: `${_.city ? _.city + `, ` : ``}${_.country}`,
         country: _.country,

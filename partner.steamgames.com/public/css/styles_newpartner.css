@@ -142,22 +142,24 @@ p {
 }
 
 /* company info */
-
 .companyNameArea {
     border: 1px solid #ff9d35;
     padding: 12px;
     border-radius: 3px;
 }
-    .companyNameArea .section_title {
-        padding-bottom: 8px;
-		border-bottom: none;
-    }
-    .companyNameArea .field_title, .companyNameArea .full_input {
-        margin-left: 0px;
-    }
-    .companyNameArea .notice {
-        color: #ff9d35;
-    }
+.companyNameArea .section_title {
+	padding-bottom: 8px;
+	border-bottom: none;
+}
+.companyNameArea .field_title, .companyNameArea .full_input {
+	margin-left: 0px;
+}
+.companyNameArea .notice {
+	color: #ff9d35;
+}
+.companyNameArea .notice.bold {
+	font-weight: bold;
+}
 
 .signee_fields
 {
@@ -362,6 +364,12 @@ select.errorRequiredField
 #partner_kyc_type_container.errorRequiredField
 {
 	outline: 1px solid red;
+}
+
+.registrationCompany,
+.registrationIndividual
+{
+	display: none;
 }
 
 .AdminPageContent ul

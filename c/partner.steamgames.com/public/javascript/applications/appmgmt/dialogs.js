@@ -23,27 +23,6 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
 } from "./chunk~de7f2df91c.js";
 import {
   _,
@@ -102,8 +81,32 @@ import {
   _,
   _,
   _,
-} from "./chunk~25a6634263.js";
+} from "./chunk~bd90a5fce7.js";
 import { _, _, _, _, _, _, _ } from "./chunk~44f252525d.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./chunk~96e60d7578.js";
+import "./chunk~25a6634263.js";
 function _() {
   return !1;
 }
@@ -6789,7 +6792,7 @@ function _(_) {
   }
 }
 function _(_, _, _, _, _, _, _) {
-  let _ = _.innerWidth,
+  let _ = _.document.documentElement.clientWidth,
     _ = _.innerHeight,
     _,
     _,

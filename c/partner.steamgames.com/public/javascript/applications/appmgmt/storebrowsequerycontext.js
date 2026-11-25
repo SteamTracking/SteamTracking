@@ -2486,7 +2486,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.Query = _;
@@ -2495,7 +2495,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SearchSuggestions = _;
@@ -2515,7 +2515,7 @@ var _ = _(_(), 1),
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -2536,7 +2536,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`StoreQuery.GetSaleBrowserItems#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 0,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetSaleBrowserItems = _;
@@ -2831,7 +2831,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`PartnerStoreBrowse.GetItems#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`partner`, `community`, `store`, `support`, `help`],
     });
   }
   _.GetItems = _;
@@ -3105,26 +3105,26 @@ function _(_, _, _, _, _ = !1) {
       if (_ && !_.BSuccess())
         throw `Error loading store items: ${_.GetErrorMessage()}`;
       let _ = new Map();
-      return (
-        _.Body()
-          .store_items()
-          .forEach((_, _) => {
-            let _ = _.item_type(),
-              _ = _ === void 0 ? _[_] : _(_, _.gid() ?? _._());
-            _ && _.set(_, _);
-          }),
-        _ && _(_, _, _, _.included_item_data_request, _),
-        _.map((_) => {
-          let [_] = _(_, `|`),
-            _ = _.get(_);
-          return _
-            ? _.toObject()
-            : {
-                ..._(_),
-                success: 2,
-              };
-        })
-      );
+      (_.Body()
+        .store_items()
+        .forEach((_, _) => {
+          let _ = _.item_type(),
+            _ = _ === void 0 ? _[_] : _(_, _.gid() ?? _._());
+          _ && _.set(_, _);
+        }),
+        _ && _(_, _, _, _.included_item_data_request, _));
+      let _ = new Map();
+      return _.map((_) => {
+        let [_] = _(_, `|`),
+          _ = _.get(_);
+        if (!_)
+          return {
+            ..._(_),
+            success: 2,
+          };
+        let _ = _.get(_);
+        return (_ || ((_ = _.toObject()), _.set(_, _)), _);
+      });
     },
     {
       maxBatchSize: 500,

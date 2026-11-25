@@ -2,31 +2,31 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Ft as t, ot as n, w as r } from "./chunk~01cfc309bf.js";
+import { C as t, Pt as n, at as r } from "./chunk~01cfc309bf.js";
 import { t as i } from "./chunk~395a1fb77b.js";
 import {
-  Ia as a,
-  Ll as o,
-  Nl as s,
-  Pa as c,
-  Ql as l,
-  Sc as u,
-  Tu as d,
-  Wc as f,
-  Yc as p,
-  ac as m,
-  am as h,
-  bm as g,
-  fi as _,
-  ku as v,
-  mi as y,
-  of as b,
-  qs as x,
-  rf as S,
-  tc as ee,
-  th as te,
-  tm as C,
-  ym as w,
+  Hs as a,
+  Ml as o,
+  Ol as s,
+  Qd as c,
+  Wc as l,
+  Xm as u,
+  Xp as ee,
+  Xs as d,
+  _c as f,
+  bu as p,
+  ec as m,
+  em as h,
+  hm as g,
+  ja as _,
+  ka as v,
+  li as y,
+  mm as b,
+  ql as x,
+  si as te,
+  tf as S,
+  wu as C,
+  zc as w,
 } from "./main.js";
 import {
   a as T,
@@ -36,7 +36,7 @@ import {
   o as k,
   r as A,
 } from "./chunk~61f3bc8fe4.js";
-var j = e(t()),
+var j = e(n()),
   M = `wiJqXTPU468-`,
   N = `hioRg1nXJCQ-`,
   P = `_0aFiUekNE6I-`,
@@ -53,14 +53,14 @@ var j = e(t()),
   W = `GDByqt7FPpw-`,
   G = `wDxGI9lKYwM-`,
   K = `bhbnhf7x6FA-`,
-  q = n(),
+  q = r(),
   J = new k(),
-  Y = v(function (e) {
+  Y = C(function (e) {
     let { bResponsiveHeader: t, notifications: n } = e;
     j.useEffect(() => {
       n && !J.m_bLoaded && J.ProcessNewNotificationPayload(n);
     }, [n]);
-    let r = C();
+    let r = ee();
     (0, j.useEffect)(() => {
       (J.setTransport(r), (window.RefreshSteamNotifications = () => ue(r)));
     }, [r]);
@@ -72,7 +72,7 @@ var j = e(t()),
       : (0, q.jsx)(re, { nTotalUnviewed: i.nUnviewed });
   });
 function X() {
-  return r(() => ({
+  return t(() => ({
     notifications: J.m_rgNotificationRollups,
     summary: J.m_summary,
     loaded: J.m_bLoaded,
@@ -83,7 +83,7 @@ function Z() {
   let e = X(),
     t = h(),
     { data: n } = y(t),
-    r = _(),
+    r = te(),
     i = n?.settings;
   return e.notifications.filter((e) => !D(e.type, i, r) && !T(e.item));
 }
@@ -94,7 +94,7 @@ function re(e) {
     [o, s] = j.useState(U);
   j.useEffect(() => {
     n.current ||
-      ((n.current = x(
+      ((n.current = a(
         (0, q.jsx)(ie, { popupRef: n }),
         document.getElementById(`green_envelope_menu_root`),
         {
@@ -108,12 +108,12 @@ function re(e) {
     (e && (e.style.cssText = `background-color: rgba(0,0,0,0)`),
       window.setTimeout(() => s(null), 2e3));
   }, []);
-  let c = () => {
+  let l = () => {
       n.current?.visible ||
         (n.current?.Show(),
         r.findIndex((e) => !e.item.viewed) != -1 && J.MarkAllItemsViewed());
     },
-    l = j.useCallback(
+    u = j.useCallback(
       (e) => {
         !e && n.current?.visible && n.current.Hide();
       },
@@ -121,14 +121,14 @@ function re(e) {
     );
   return (0, q.jsx)(i, {
     trigger: `repeated`,
-    onVisibilityChange: l,
+    onVisibilityChange: u,
     children: (0, q.jsx)(`button`, {
-      onClick: c,
+      onClick: l,
       id: `green_envelope_menu_root`,
-      className: d(B, t ? ne : H, o),
-      children: (0, q.jsx)(a, {
+      className: p(B, t ? ne : H, o),
+      children: (0, q.jsx)(_, {
         className: V,
-        "aria-label": S(`#NotificationsMenu_Title`),
+        "aria-label": c(`#NotificationsMenu_Title`),
       }),
     }),
   });
@@ -147,7 +147,7 @@ var ie = (e) => {
       children: [
         (0, q.jsx)(ae, {}),
         (0, q.jsxs)(`div`, {
-          className: d(P, a),
+          className: p(P, a),
           ref: n,
           children: [(0, q.jsx)($, {}), (0, q.jsx)(Q, {}), (0, q.jsx)(le, {})],
         }),
@@ -155,33 +155,33 @@ var ie = (e) => {
     });
   },
   ae = () => {
-    let e = `${w.COMMUNITY_BASE_URL}profiles/${g.steamid}/notifications`;
+    let e = `${b.COMMUNITY_BASE_URL}profiles/${g.steamid}/notifications`;
     return (0, q.jsxs)(`div`, {
-      className: d(I),
+      className: p(I),
       children: [
         (0, q.jsx)(`div`, {
           className: R,
-          children: S(`#NotificationsMenu_Title`),
+          children: c(`#NotificationsMenu_Title`),
         }),
         (0, q.jsx)(`a`, {
           href: e,
           children: (0, q.jsx)(`div`, {
             className: z,
-            children: S(`#NotificationsMenu_ViewAll`),
+            children: c(`#NotificationsMenu_ViewAll`),
           }),
         }),
       ],
     });
   },
   oe = () => {
-    let e = `${w.COMMUNITY_BASE_URL}profiles/${g.steamid}/notifications`;
+    let e = `${b.COMMUNITY_BASE_URL}profiles/${g.steamid}/notifications`;
     return (0, q.jsx)(`div`, {
-      className: d(I, L),
+      className: p(I, L),
       children: (0, q.jsx)(`a`, {
         href: e,
         children: (0, q.jsx)(`div`, {
           className: z,
-          children: S(`#NotificationsMenu_ViewAll`),
+          children: c(`#NotificationsMenu_ViewAll`),
         }),
       }),
     });
@@ -211,68 +211,68 @@ function Q() {
 var ce = [
   {
     fnUrl: () =>
-      `${w.COMMUNITY_BASE_URL}profiles/${g.steamid}/inventory/#pending_gifts`,
+      `${b.COMMUNITY_BASE_URL}profiles/${g.steamid}/inventory/#pending_gifts`,
     countItem: `pending_gifts`,
-    icon: f,
-    fnLocalizeBody: (e) => b(`#Notification_NewGiftsPinned_Body`, e),
+    icon: w,
+    fnLocalizeBody: (e) => S(`#Notification_NewGiftsPinned_Body`, e),
     feature: 1,
   },
   {
-    fnUrl: () => `${w.COMMUNITY_BASE_URL}profiles/${g.steamid}/home/invites`,
+    fnUrl: () => `${b.COMMUNITY_BASE_URL}profiles/${g.steamid}/home/invites`,
     countItem: `pending_invites`,
-    icon: ee,
-    fnLocalizeBody: (e) => b(`#Notification_FriendInvitePinned_Body`, e),
+    icon: d,
+    fnLocalizeBody: (e) => S(`#Notification_FriendInvitePinned_Body`, e),
     feature: 4,
   },
   {
     fnUrl: () =>
-      `${w.COMMUNITY_BASE_URL}profiles/${g.steamid}/notifications#comments`,
+      `${b.COMMUNITY_BASE_URL}profiles/${g.steamid}/notifications#comments`,
     countItem: `comments`,
-    icon: u,
-    fnLocalizeBody: (e) => b(`#Notification_NewCommentPinned_Body`, e),
+    icon: f,
+    fnLocalizeBody: (e) => S(`#Notification_NewCommentPinned_Body`, e),
     feature: 2,
   },
   {
-    fnUrl: () => `${w.COMMUNITY_BASE_URL}profiles/${g.steamid}/inventory`,
+    fnUrl: () => `${b.COMMUNITY_BASE_URL}profiles/${g.steamid}/inventory`,
     countItem: `inventory_items`,
-    icon: p,
-    fnLocalizeBody: (e) => b(`#Notification_NewItemAnnouncementPinned_Body`, e),
+    icon: l,
+    fnLocalizeBody: (e) => S(`#Notification_NewItemAnnouncementPinned_Body`, e),
     feature: 3,
   },
   {
-    fnUrl: () => `${w.COMMUNITY_BASE_URL}profiles/${g.steamid}/tradeoffers`,
+    fnUrl: () => `${b.COMMUNITY_BASE_URL}profiles/${g.steamid}/tradeoffers`,
     countItem: `trade_offers`,
-    icon: l,
-    fnLocalizeBody: (e) => b(`#Notification_NewTradeOffersPinned_Body`, e),
+    icon: x,
+    fnLocalizeBody: (e) => S(`#Notification_NewTradeOffersPinned_Body`, e),
     feature: 6,
   },
   {
     fnUrl: () =>
-      `${w.COMMUNITY_BASE_URL}profiles/${g.steamid}/gamenotifications`,
+      `${b.COMMUNITY_BASE_URL}profiles/${g.steamid}/gamenotifications`,
     countItem: `async_game_updates`,
     icon: m,
-    fnLocalizeBody: (e) => b(`#Notification_NewAsyncGamePinned_Body`, e),
+    fnLocalizeBody: (e) => S(`#Notification_NewAsyncGamePinned_Body`, e),
   },
   {
-    fnUrl: () => `${w.COMMUNITY_BASE_URL}my/moderatormessages`,
+    fnUrl: () => `${b.COMMUNITY_BASE_URL}my/moderatormessages`,
     countItem: `moderator_messages`,
-    icon: c,
-    fnLocalizeBody: (e) => b(`#Notification_NewModeratorMessagePinned_Body`, e),
+    icon: v,
+    fnLocalizeBody: (e) => S(`#Notification_NewModeratorMessagePinned_Body`, e),
     feature: 2,
   },
   {
-    fnUrl: () => `${w.HELP_BASE_URL}wizard/HelpRequests`,
+    fnUrl: () => `${b.HELP_BASE_URL}wizard/HelpRequests`,
     countItem: `help_request_replies`,
     icon: o,
     fnLocalizeBody: (e) =>
-      b(`#Notification_NewHelpRequestRepliesPinned_Body`, e),
+      S(`#Notification_NewHelpRequestRepliesPinned_Body`, e),
   },
   {
     fnUrl: () =>
-      `${w.STORE_BASE_URL}account/familymanagement/join?ft=${g.steamid}`,
+      `${b.STORE_BASE_URL}account/familymanagement/join?ft=${g.steamid}`,
     countItem: `family_invites`,
     icon: s,
-    fnLocalizeBody: (e) => b(`#Notification_FamilyInvitePinned_Body`, e),
+    fnLocalizeBody: (e) => S(`#Notification_FamilyInvitePinned_Body`, e),
   },
 ];
 function $() {
@@ -299,11 +299,11 @@ function le() {
     children: [
       (0, q.jsx)(`div`, {
         className: G,
-        children: S(`#NotificationsList_EmptyTitle_New`),
+        children: c(`#NotificationsList_EmptyTitle_New`),
       }),
       (0, q.jsx)(`div`, {
         className: K,
-        children: S(`#NotificationsList_EmptyBody`),
+        children: c(`#NotificationsList_EmptyBody`),
       }),
     ],
   });
@@ -311,7 +311,7 @@ function le() {
 async function ue(e) {
   let t = null;
   try {
-    t = await E(e, g.steamid, te(w.LANGUAGE), void 0, !1, !1);
+    t = await E(e, g.steamid, u(b.LANGUAGE), void 0, !1, !1);
   } catch {}
   t && J.ProcessNewNotificationPayload(t);
 }

@@ -2,14 +2,14 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { A as t, Ft as n } from "./chunk~01cfc309bf.js";
-import { md as r, zd as i } from "./main.js";
-var a = e(t()),
-  o = e(n());
+import { Pt as t, k as n } from "./chunk~01cfc309bf.js";
+import { Pd as r, ld as i } from "./main.js";
+var a = e(n()),
+  o = e(t());
 function s(e, t, n, s) {
   let c = (0, o.useRef)(void 0),
     l = (0, o.useRef)(void 0),
-    u = r();
+    u = i();
   c.current = e;
   let [d, f] = (0, o.useState)(void 0),
     {
@@ -54,29 +54,29 @@ function s(e, t, n, s) {
           include_extra_details: k,
           include_optin_registration_tags: A,
         },
-        r = null;
+        i = null;
       return (
         !e ||
           e < 0 ||
-          i.Get().BHasStoreItem(e, t, n) ||
+          r.Get().BHasStoreItem(e, t, n) ||
           (d !== void 0 && s && s == l.current) ||
           (s !== l.current && (f(void 0), (l.current = s)),
-          (r = a.default.CancelToken.source()),
-          i
+          (i = a.default.CancelToken.source()),
+          r
             .Get()
             .QueueStoreItemRequest(e, t, n)
             .then((t) => {
-              (!r?.token.reason && c.current === e && f(t == 1), u());
+              (!i?.token.reason && c.current === e && f(t == 1), u());
             })),
-        () => r?.cancel(`useStoreItemCache: unmounting`)
+        () => i?.cancel(`useStoreItemCache: unmounting`)
       );
     }, [e, t, s, d, p, m, h, g, _, v, y, b, x, S, C, w, T, E, D, O, k, A, u]),
     !e)
   )
     return [null, 2];
-  if (d === !1 || i.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
-  if (!i.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-  let j = i.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+  if (d === !1 || r.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
+  if (!r.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
+  let j = r.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
   return j ? [j, 3] : [null, 2];
 }
 function c(e, t, n) {
@@ -86,7 +86,7 @@ function l(e, t, n) {
   return s(e, 1, t, n);
 }
 function u(e, t, n, s) {
-  let c = r(),
+  let c = i(),
     {
       include_assets: l,
       include_release: u,
@@ -130,16 +130,16 @@ function u(e, t, n, s) {
           include_extra_details: T,
           include_optin_registration_tags: E,
         },
-        r = e.filter(
+        i = e.filter(
           (e) =>
             !(
-              i.Get().BHasStoreItem(e, t, n) ||
-              i.Get().BIsStoreItemMissing(e, t)
+              r.Get().BHasStoreItem(e, t, n) ||
+              r.Get().BIsStoreItemMissing(e, t)
             ),
         );
-      if (r.length == 0) return;
+      if (i.length == 0) return;
       let o = a.default.CancelToken.source(),
-        s = r.map((e) => i.Get().QueueStoreItemRequest(e, t, n));
+        s = i.map((e) => r.Get().QueueStoreItemRequest(e, t, n));
       return (
         Promise.all(s).then(() => {
           o.token.reason || c();
@@ -150,9 +150,9 @@ function u(e, t, n, s) {
     e
       ? e.every(
           (e) =>
-            i.Get().BHasStoreItem(e, t, n) || i.Get().BIsStoreItemMissing(e, t),
+            r.Get().BHasStoreItem(e, t, n) || r.Get().BIsStoreItemMissing(e, t),
         )
-        ? e.every((e) => i.Get().GetStoreItemWithLegacyVisibilityCheck(e, t))
+        ? e.every((e) => r.Get().GetStoreItemWithLegacyVisibilityCheck(e, t))
           ? 3
           : 2
         : 1

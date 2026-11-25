@@ -17,13 +17,8 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
 } from "./chunk~de7f2df91c.js";
+import { _, _, _, _, _, _ } from "./chunk~96e60d7578.js";
 var _ = _(_(), 1),
   _ = _(_(), 1),
   _ = class _ extends _.Message {
@@ -2663,11 +2658,6 @@ var _ = class _ extends _.Message {
               _: !1,
               _: _.readBool,
               _: _.writeBool,
-            },
-            price_to_base_discount_on: {
-              _: 53,
-              _: _.readInt64String,
-              _: _.writeInt64String,
             },
             free_with_master_sub_appid: {
               _: 54,
@@ -7990,7 +7980,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetItems = _;
@@ -8007,7 +7997,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetContentHubConfig = _;
@@ -8016,7 +8006,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetPriceStops = _;
@@ -8032,7 +8022,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetDLCForAppsSolr = _;
@@ -8041,7 +8031,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetHardwareItems = _;

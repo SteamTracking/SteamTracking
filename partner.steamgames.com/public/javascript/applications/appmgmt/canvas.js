@@ -1,10 +1,10 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { A as e, At as t, sn as n, vt as r } from "./chunk~de7f2df91c.js";
-import { It as i, ht as a } from "./chunk~25a6634263.js";
-var o = n(t()),
-  s = r(),
+import { Pt as e, W as t, n, nt as r } from "./chunk~de7f2df91c.js";
+import { Pt as i, pt as a } from "./chunk~bd90a5fce7.js";
+var o = e(r()),
+  s = t(),
   c = class extends o.Component {
     m_elCanvas = null;
     m_Context = null;
@@ -61,6 +61,6 @@ var o = n(t()),
       });
     }
   };
-(e([i], c.prototype, `BindCanvasRef`, null),
-  e([i], c.prototype, `updateCanvas`, null));
+(n([i], c.prototype, `BindCanvasRef`, null),
+  n([i], c.prototype, `updateCanvas`, null));
 export { c as t };

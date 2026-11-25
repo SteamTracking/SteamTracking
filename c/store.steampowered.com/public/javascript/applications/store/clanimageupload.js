@@ -507,6 +507,12 @@ var _ = [1, 3, 2, 10],
       height: [460, 460],
       rgAcceptableTypes: _,
     },
+    sale_secondary_background: {
+      width: 0,
+      height: 0,
+      bDisableEnforceDimensions: !0,
+      rgAcceptableTypes: _,
+    },
     spotlight_art: {
       width: 306,
       height: 260,

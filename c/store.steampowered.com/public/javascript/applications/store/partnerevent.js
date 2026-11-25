@@ -1989,14 +1989,14 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetVoteDefinitions = _;
   function _(_, _, _) {
     return _.SendMsg(`StoreSales.SetVote#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetVote = _;
@@ -2004,7 +2004,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`StoreSales.GetUserVotes#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetUserVotes = _;
@@ -2015,7 +2015,7 @@ var _;
     return _.SendMsg(`SteamAwards.GetUserNominations#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetUserNominations = _;
@@ -2023,7 +2023,7 @@ var _;
     return _.SendMsg(`SteamAwards.GetOtherUserNominations#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 2,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetOtherUserNominations = _;
@@ -2031,7 +2031,7 @@ var _;
     return _.SendMsg(`SteamAwards.Nominate#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.Nominate = _;
@@ -2043,7 +2043,7 @@ var _;
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -2051,7 +2051,7 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`SteamAwards.GetNominationShareLink#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetNominationShareLink = _;
@@ -2813,22 +2813,25 @@ var _ = [
             ? (_ = this.jsondata.localized_sale_overlay)
             : _ === `sale_cross_promo_logo`
               ? (_ = this.jsondata.localized_sale_cross_promo_logo_image)
-              : _.includes(_)
-                ? (_ = this.fnGetLocalizedGroupImages?.())
-                : _ === `product_banner`
-                  ? (_ = this.jsondata.localized_sale_product_banner)
-                  : _ === `product_mobile_banner`
-                    ? (_ = this.jsondata.localized_sale_product_mobile_banner)
-                    : _ === `bestofyear_banner`
-                      ? (_ = this.jsondata.localized_bestofyear_banner)
-                      : _ === `bestofyear_banner_mobile`
-                        ? (_ = this.jsondata.localized_bestofyear_banner_mobile)
-                        : _ === `localized_store_app_spotlight`
-                          ? (_ = this.jsondata.localized_store_app_spotlight)
-                          : _ === `localized_store_app_spotlight_mobile` &&
-                            (_ =
-                              this.jsondata
-                                .localized_store_app_spotlight_mobile);
+              : _ === `sale_secondary_background`
+                ? (_ = this.jsondata.localized_sale_secondary_background_image)
+                : _.includes(_)
+                  ? (_ = this.fnGetLocalizedGroupImages?.())
+                  : _ === `product_banner`
+                    ? (_ = this.jsondata.localized_sale_product_banner)
+                    : _ === `product_mobile_banner`
+                      ? (_ = this.jsondata.localized_sale_product_mobile_banner)
+                      : _ === `bestofyear_banner`
+                        ? (_ = this.jsondata.localized_bestofyear_banner)
+                        : _ === `bestofyear_banner_mobile`
+                          ? (_ =
+                              this.jsondata.localized_bestofyear_banner_mobile)
+                          : _ === `localized_store_app_spotlight`
+                            ? (_ = this.jsondata.localized_store_app_spotlight)
+                            : _ === `localized_store_app_spotlight_mobile` &&
+                              (_ =
+                                this.jsondata
+                                  .localized_store_app_spotlight_mobile);
       return _;
     }
     GetImageURL(_, _ = 0, _ = _.full) {

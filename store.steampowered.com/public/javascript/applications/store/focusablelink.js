@@ -2,8 +2,8 @@
  ****/
 
 import "./chunk~f025431ab0.js";
-import { Lt as e, ft as t } from "./chunk~01cfc309bf.js";
-import { Au as n, hl as r, ku as i } from "./main.js";
+import { It as e, dt as t } from "./chunk~01cfc309bf.js";
+import { Au as n, gl as r, ju as i } from "./main.js";
 e();
 var a = t();
 function o(e) {
@@ -27,9 +27,9 @@ function s(e) {
   return (0, a.jsx)(r, { ...i, onClick: c });
 }
 function c(e) {
-  return (0, a.jsx)(n, { component: s, ...e });
+  return (0, a.jsx)(i, { component: s, ...e });
 }
 function l(e) {
-  return (0, a.jsx)(i, { component: s, ...e });
+  return (0, a.jsx)(n, { component: s, ...e });
 }
 export { c as n, l as t };

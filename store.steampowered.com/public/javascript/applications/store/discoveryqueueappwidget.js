@@ -2,9 +2,9 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n } from "./chunk~01cfc309bf.js";
 import { o as r } from "./chunk~af36c62e9f.js";
-import { $b as i, Bc as a, Ho as o, h as s, kc as c, rb as l } from "./main.js";
+import { Ac as i, Uo as a, Vc as o, ex as s, h as c, ib as l } from "./main.js";
 import { i as u, r as d } from "./chunk~7401689b78.js";
 import { t as f } from "./chunk~237be05bcf.js";
 var p = e(t(), 1),
@@ -16,7 +16,7 @@ function _(e) {
     n = f(),
     [_] = r(`inqueue`, `0`),
     [v, y] = (0, p.useState)(!1),
-    b = i(),
+    b = s(),
     { eStoreDiscoveryQueueType: x, storePageFilter: S } = p.useMemo(() => {
       if (_?.length > 0) {
         let e = _.split(`_`),
@@ -29,14 +29,14 @@ function _(e) {
       }
       return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
     }, [_]),
-    { showDiscoveryQueue: C } = s(x, { includeAppID: t, storePageFilter: S }),
+    { showDiscoveryQueue: C } = c(x, { includeAppID: t, storePageFilter: S }),
     w = p.useCallback(() => {
       y(!0);
     }, []),
     T = u(x, S);
   return !n || v
     ? null
-    : (0, g.jsxs)(a, {
+    : (0, g.jsxs)(o, {
         focusable: !0,
         className: m,
         onSecondaryButton: w,
@@ -48,7 +48,7 @@ function _(e) {
             onClick: C,
             className: h,
             children: [
-              (0, g.jsx)(o, {}),
+              (0, g.jsx)(a, {}),
               l(`#DiscoveryQueue_ResumeWizard`),
               T?.length > 0 && `: ` + T,
             ],
@@ -57,7 +57,7 @@ function _(e) {
             (0, g.jsx)(`div`, {
               className: `CqOWAiNFmcU-`,
               onClick: w,
-              children: (0, g.jsx)(c, {}),
+              children: (0, g.jsx)(i, {}),
             }),
         ],
       });

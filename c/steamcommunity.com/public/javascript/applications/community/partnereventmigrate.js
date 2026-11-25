@@ -214,44 +214,32 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
 } from "./chunk~35b0bf48ef.js";
 import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
   _,
   _,
   _,
@@ -430,16 +418,29 @@ import {
   _,
   _,
 } from "./chunk~6eb508043a.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~437071091c.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./chunk~437071091c.js";
 import { _, _ } from "./chunk~10c934b72c.js";
 import { _ } from "./chunk~5412a9f1de.js";
-import { _ } from "./chunk~4239b66179.js";
-import { _ } from "./chunk~16aefcf65f.js";
+import { _, _, _ } from "./chunk~018ae802ee.js";
 import { _ } from "./chunk~6c2bf73948.js";
 import { _ } from "./chunk~c17e16859d.js";
 import { _ } from "./chunk~bdc7e21194.js";
 import { _ } from "./chunk~eefd71512b.js";
-import { _, _ } from "./chunk~018ae802ee.js";
 import {
   _,
   _,
@@ -457,10 +458,6 @@ import {
   _,
 } from "./chunk~05a38bc848.js";
 import {
-  _,
-  _,
-  _,
-  _,
   _,
   _,
   _,
@@ -566,18 +563,16 @@ import { _, _, _ } from "./chunk~cfb555d6e5.js";
 import { _, _, _, _, _, _, _ } from "./chunk~0111fcd096.js";
 import { _, _, _ } from "./chunk~79ae1444d5.js";
 import { _ } from "./chunk~8d2b90a325.js";
-import { _, _, _ } from "./chunk~ec644f97c6.js";
-import { _, _, _ } from "./chunk~91ae5e1167.js";
 import { _, _, _, _ } from "./chunk~d6c6ad29fc.js";
 import { _, _, _ } from "./chunk~af1574091f.js";
+import { _, _, _ } from "./chunk~ec644f97c6.js";
+import { _, _, _ } from "./chunk~91ae5e1167.js";
 import { _, _, _, _ } from "./chunk~739842ca30.js";
 import { _, _, _, _, _, _, _ } from "./chunk~50a4210268.js";
 import { _, _ } from "./chunk~9d71b14b50.js";
 import { _, _ } from "./chunk~95ecbf576c.js";
 import { _ } from "./chunk~395a1fb77b.js";
 import "./chunk~4e18b7e430.js";
-import "./chunk~c55d6473b2.js";
-import { _, _, _ } from "./chunk~a7c5e71e12.js";
 import {
   _,
   _,
@@ -602,9 +597,12 @@ import {
   _,
   _,
 } from "./chunk~2bb3c0c267.js";
+import "./chunk~c55d6473b2.js";
+import { _, _, _ } from "./chunk~a7c5e71e12.js";
 import { _, _, _, _ } from "./chunk~bc8f991cc0.js";
 import { _ } from "./chunk~5e5f1b9ccf.js";
 import {
+  _,
   _,
   _,
   _,
@@ -918,6 +916,78 @@ var _ = class extends Error {
   _ = _(_(), 1),
   _ = _(_(), 1);
 function _(_) {
+  return () => (
+    (_ = (_ * 1664525 + 1013904223) % 4294967296),
+    (_ >>> 0) / 4294967296
+  );
+}
+function _() {
+  return Math.floor(Math.random() * 4294967296);
+}
+var _ = new Set();
+function _() {
+  for (let _ of _) _(location.search);
+}
+function _() {
+  let [_, _] = (0, _.useState)(location.search);
+  return (
+    (0, _.useEffect)(() => {
+      function _() {
+        _(location.search);
+      }
+      return (
+        _.add(_),
+        window.addEventListener(`popstate`, _),
+        _(location.search),
+        () => {
+          (_.delete(_), window.removeEventListener(`popstate`, _));
+        }
+      );
+    }, []),
+    _
+  );
+}
+function _(_, _) {
+  let _ = _();
+  return [
+    (0, _.useMemo)(() => {
+      let _ = new URLSearchParams(_.substring(1)).get(_);
+      return _ == null
+        ? _
+        : _ == null
+          ? _
+          : typeof _ == `boolean`
+            ? _.constructor(_ !== `false`)
+            : _.constructor(_);
+    }, [_, _, _]),
+    _.useCallback(
+      (_, _ = !1) => {
+        let _ = new URLSearchParams(location.search.substring(1));
+        if (_ != null) {
+          if (_.get(_) == _) return;
+          _.set(_, String(_));
+        } else {
+          if (!_.has(_)) return;
+          _.delete(_);
+        }
+        (_
+          ? history.replaceState(
+              history.state,
+              ``,
+              decodeURIComponent(`${window.location.pathname}?${_}`),
+            )
+          : history.pushState(
+              history.state,
+              ``,
+              decodeURIComponent(`${window.location.pathname}?${_}`),
+            ),
+          (0, _.startTransition)(_));
+      },
+      [_],
+    ),
+  ];
+}
+function _(_) {
   switch (_) {
     case 0:
       return `game`;
@@ -943,7 +1013,14 @@ function _(_) {
 function _(_) {
   return _;
 }
-var _ = _();
+var _ = `RTyw40qgE3M-`,
+  _ = _();
+function _(_) {
+  return (0, _.jsx)(_, {
+    ..._,
+    className: _,
+  });
+}
 function _(_) {
   let { strImageToken: _, language: _, strAltText: _ } = _,
     _ = _(_, _);
@@ -5005,6 +5082,7 @@ function _(_) {
     } = _,
     _ = _.useRef(null),
     _ = _(_, `sale_header`, _),
+    _ = _(_, `sale_secondary_background`, _),
     [_] = _(() => [_.jsondata.sale_sub_menu]);
   _.useEffect(() => {
     if (!_) return;
@@ -5075,6 +5153,15 @@ function _(_) {
               event: _,
               bIsPreview: _,
             }),
+            _ &&
+              (0, _.jsx)(`div`, {
+                className: _(`I8KIyXU8ZWk-`, `SaleSecondaryBackground`),
+                style: {
+                  backgroundImage: `url(${_})`,
+                  backgroundRepeat:
+                    _.jsondata.sale_secondary_background_repeat || `no-repeat`,
+                },
+              }),
             (0, _.jsx)(_.Fragment, {
               children: _,
             }),
@@ -5089,6 +5176,25 @@ var _ = _(_()),
 function _(_) {
   let _ = _.useContext(_);
   return _ && _?.strPosterFile === _ ? _.strDataURI : void 0;
+}
+function _(_) {
+  return _.type !== `sub` && _.type !== `bundle`;
+}
+function _(_, _, _, _) {
+  let _ = [];
+  for (let _ of _)
+    if ((!_ || _.has(_)) && !_(_) && (_.push(_), _.length >= _)) break;
+  return _;
+}
+function _(_, _, _, _ = new Set()) {
+  for (let _ of _.GetSaleSections())
+    if (!(!_(_.section_type) || (_ && !_.BIncludeSection(_))))
+      for (let _ of _.capsules) _(_) && _.add(_._);
+  for (let _ of _ ?? []) {
+    let _ = _.capsule;
+    _(_) && (!_ || _.BIncludeLinkedCapsule(_)) && _.add(_._);
+  }
+  return _;
 }
 function _(_, _, _ = !1, _ = void 0) {
   return {
@@ -5470,109 +5576,35 @@ function _(_) {
     })
   );
 }
-var _ = `d3elVPeljM8-`,
-  _ = `AkJq5-NyPT8-`,
-  _ = `mlr-XtYml6w-`,
-  _ = `_433qsTJ1vj4-`,
-  _ = `evupCqakxxU-`,
-  _ = `bHMnTP9zceY-`,
-  _ = `Eh-pLRQbf0Y-`;
-function _(_) {
-  let { eventModel: _, titleOverride: _ } = _,
-    [_, _, _] = _(),
-    _ = _(_) ?? ``,
-    { gidClanEvent: _, rgSocialShare: _ } = _(() => ({
-      gidClanEvent: _.GID,
-      rgSocialShare: _.jsondata.sale_social_media_items,
-    })),
-    _ = !!_?.length;
-  return _.BHasTag(`contenthub`)
-    ? null
-    : (0, _.jsxs)(_.Fragment, {
-        children: [
-          (0, _.jsx)(`div`, {
-            className: _,
-            children: _ ?? _(`#EventDisplay_Share_WithFriendsHeader`),
-          }),
-          (0, _.jsxs)(_, {
-            focusable: !0,
-            className: _(_, _, _, `SocialShareButton`),
-            onActivate: _,
-            children: [
-              (0, _.jsx)(_, {
-                className: _(_, `SocialShareIcon`),
-              }),
-              (0, _.jsx)(`span`, {
-                className: _(_, `SocialShareText`),
-                children: _(`#Button_Share`),
-              }),
-            ],
-          }),
-          (0, _.jsx)(`div`, {
-            className: _,
-            children:
-              _ &&
-              (0, _.jsx)(_, {
-                gidClanEvent: _ ?? ``,
-                rgSocial: _,
-                bIsCreatorHomeEvent: !0,
-              }),
-          }),
-          (0, _.jsx)(_, {
-            eventModel: _,
-            strEventLink: _,
-            bActive: _,
-            closeModal: _,
-          }),
-        ],
-      });
+function _(_, _, _) {
+  let _ = _,
+    _ = 0;
+  for (_ = 0; _ < _; _++) {
+    let _ = _[_ % _.length];
+    if (_ < _) break;
+    _ -= _;
+  }
+  return _;
 }
-var _ = `partnereventaction/eventsummaries`;
-function _(_) {
-  let _ = new Map();
-  for (let _ of _)
-    _.has(_.strEventGID) ||
-      _.set(_.strEventGID, {
-        clanAccountID: _.clanAccountID,
-        strEventGID: _.strEventGID,
-      });
-  return [..._.values()].sort(
-    (_, _) =>
-      _.strEventGID.length - _.strEventGID.length ||
-      (_.strEventGID < _.strEventGID ? -1 : +(_.strEventGID > _.strEventGID)),
-  );
+function _(_, _) {
+  if (_(_)) return 0;
+  let _ = _(_);
+  return _ <= 0 ? 0 : _ + _;
 }
-function _(_) {
-  return _(_)
-    .map((_) => `${_.clanAccountID}:${_.strEventGID}`)
-    .join(`,`);
-}
-function _(_) {
-  let _ = new URLSearchParams();
+function _(_, _, _, _, _) {
+  let _ =
+    `section_` +
+    _ +
+    `_` +
+    _.GID +
+    (_ || 0) +
+    _(_.unique_id ? _.unique_id.toString() : JSON.stringify(_)).toString();
   return (
-    _.set(`events`, _(_.rgEvents)),
-    _.set(`language`, String(_.eLanguage)),
-    _.toString()
+    _ &&
+      _.rtime32_last_local_modification &&
+      (_ += `_` + _.rtime32_last_local_modification),
+    _
   );
-}
-async function _(_) {
-  if (_.rgEvents.length === 0) return [];
-  let _ = `${_.STORE_BASE_URL}${_}?${_(_)}`,
-    _ = await fetch(_);
-  if (!_._) throw Error(`${_} answered ${_.status}`);
-  let _ = await _.json();
-  if (_?.success !== 1) throw Error(`${_} answered EResult ${_?.success}`);
-  return _.summaries ?? [];
-}
-function _(_) {
-  return [`PartnerEventSummaries`, _.eLanguage, _(_.rgEvents)];
-}
-function _(_) {
-  return {
-    queryKey: _(_),
-    queryFn: () => _(_),
-    staleTime: 3e5,
-  };
 }
 var _ = 36e5;
 function _(_, _, _, _) {
@@ -6128,55 +6160,6 @@ function _(_, _) {
   }
 }
 function _(_) {
-  let { event: _, section: _, rgSlides: _, onSlide: _, onNavIntent: _ } = _,
-    _ = _(),
-    { bScreenIsWide: _ } = _(_.section_type);
-  return _.length === 0
-    ? null
-    : _.length === 1
-      ? (0, _.jsx)(_.Fragment, {
-          children: _[0],
-        })
-      : !_ || _
-        ? (0, _.jsx)(`div`, {
-            className: _,
-            children: _.map((_, _) =>
-              (0, _.jsx)(
-                _,
-                {
-                  nSlide: _,
-                  onSlide: _,
-                  children: _,
-                },
-                _,
-              ),
-            ),
-          })
-        : (0, _.jsx)(`div`, {
-            className: _(_, _),
-            children: (0, _.jsx)(_, {
-              ..._(_.jsondata),
-              visibleElements: 1,
-              screenIsWide: !0,
-              useTestScrollbar: !0,
-              navKey: _.unique_id,
-              onSlide: _,
-              onNavIntent: _,
-              children: _,
-            }),
-          });
-}
-function _(_) {
-  let { nSlide: _, onSlide: _, children: _ } = _,
-    _ = _({
-      onEnter: () => _?.(_),
-    });
-  return (0, _.jsx)(`div`, {
-    ref: _,
-    children: _,
-  });
-}
-function _(_) {
   let {
       event: _,
       section: _,
@@ -6318,6 +6301,19 @@ function _(_) {
 function _(_) {
   return Math.max(_(_, 0), 4);
 }
+var _ = {
+  1: `salesmartdiscountreason-wishlist`,
+  2: `salesmartdiscountreason-firsttimeonsale`,
+  3: `salesmartdiscountreason-largestdiscount`,
+  4: `salesmartdiscountreason-endingsoon`,
+  5: `salesmartdiscountreason-newlyonsale`,
+  6: `salesmartdiscountreason-wellreviewed`,
+  7: `salesmartdiscountreason-topseller`,
+  8: `salesmartdiscountreason-hotdeal`,
+  9: `salesmartdiscountreason-deepdiscount`,
+  10: `salesmartdiscountreason-popularinregion`,
+  11: `salesmartdiscountreason-justupdated`,
+};
 function _(_, _, _ = ``, _ = 0) {
   if (_.enable_faceted_browsing && _ > 0)
     return {
@@ -6367,11 +6363,12 @@ function _(_, _, _ = ``, _ = 0) {
             feature: `salesmartpersonalizedcarousel` + _,
             depth: _(_, _).nSectionIndex,
           };
-        case `discount_reason`:
+        case `discount_reason`: {
+          let _ = _.smart_section_discount_reason;
           return {
-            feature: `salesmartdiscountreason` + _,
-            depth: _.smart_section_discount_reason ?? 0,
+            feature: ((_ !== void 0 && _[_]) || `salesmartdiscountreason`) + _,
           };
+        }
         case `tag`:
           return {
             feature: `autopopulatetag` + _,
@@ -6441,10 +6438,168 @@ function _(_, _, _ = ``, _ = 0) {
       return {
         feature: `crosspromotesalepage` + _,
       };
+    case `vo_internal`:
+      if (_.internal_section_data?.internal_type === `just_updated`)
+        return {
+          feature: _[11] + _,
+        };
   }
   return {
     feature: `salesection` + _,
   };
+}
+var _ = `d3elVPeljM8-`,
+  _ = `AkJq5-NyPT8-`,
+  _ = `mlr-XtYml6w-`,
+  _ = `_433qsTJ1vj4-`,
+  _ = `evupCqakxxU-`,
+  _ = `bHMnTP9zceY-`,
+  _ = `Eh-pLRQbf0Y-`;
+function _(_) {
+  let { eventModel: _, titleOverride: _ } = _,
+    [_, _, _] = _(),
+    _ = _(_) ?? ``,
+    { gidClanEvent: _, rgSocialShare: _ } = _(() => ({
+      gidClanEvent: _.GID,
+      rgSocialShare: _.jsondata.sale_social_media_items,
+    })),
+    _ = !!_?.length;
+  return _.BHasTag(`contenthub`)
+    ? null
+    : (0, _.jsxs)(_.Fragment, {
+        children: [
+          (0, _.jsx)(`div`, {
+            className: _,
+            children: _ ?? _(`#EventDisplay_Share_WithFriendsHeader`),
+          }),
+          (0, _.jsxs)(_, {
+            focusable: !0,
+            className: _(_, _, _, `SocialShareButton`),
+            onActivate: _,
+            children: [
+              (0, _.jsx)(_, {
+                className: _(_, `SocialShareIcon`),
+              }),
+              (0, _.jsx)(`span`, {
+                className: _(_, `SocialShareText`),
+                children: _(`#Button_Share`),
+              }),
+            ],
+          }),
+          (0, _.jsx)(`div`, {
+            className: _,
+            children:
+              _ &&
+              (0, _.jsx)(_, {
+                gidClanEvent: _ ?? ``,
+                rgSocial: _,
+                bIsCreatorHomeEvent: !0,
+              }),
+          }),
+          (0, _.jsx)(_, {
+            eventModel: _,
+            strEventLink: _,
+            bActive: _,
+            closeModal: _,
+          }),
+        ],
+      });
+}
+var _ = `partnereventaction/eventsummaries`;
+function _(_) {
+  let _ = new Map();
+  for (let _ of _)
+    _.has(_.strEventGID) ||
+      _.set(_.strEventGID, {
+        clanAccountID: _.clanAccountID,
+        strEventGID: _.strEventGID,
+      });
+  return [..._.values()].sort(
+    (_, _) =>
+      _.strEventGID.length - _.strEventGID.length ||
+      (_.strEventGID < _.strEventGID ? -1 : +(_.strEventGID > _.strEventGID)),
+  );
+}
+function _(_) {
+  return _(_)
+    .map((_) => `${_.clanAccountID}:${_.strEventGID}`)
+    .join(`,`);
+}
+function _(_) {
+  let _ = new URLSearchParams();
+  return (
+    _.set(`events`, _(_.rgEvents)),
+    _.set(`language`, String(_.eLanguage)),
+    _.toString()
+  );
+}
+async function _(_) {
+  if (_.rgEvents.length === 0) return [];
+  let _ = `${_.STORE_BASE_URL}${_}?${_(_)}`,
+    _ = await fetch(_);
+  if (!_._) throw Error(`${_} answered ${_.status}`);
+  let _ = await _.json();
+  if (_?.success !== 1) throw Error(`${_} answered EResult ${_?.success}`);
+  return _.summaries ?? [];
+}
+function _(_) {
+  return [`PartnerEventSummaries`, _.eLanguage, _(_.rgEvents)];
+}
+function _(_) {
+  return {
+    queryKey: _(_),
+    queryFn: () => _(_),
+    staleTime: 3e5,
+  };
+}
+function _(_) {
+  let { event: _, section: _, rgSlides: _, onSlide: _, onNavIntent: _ } = _,
+    _ = _(),
+    { bScreenIsWide: _ } = _(_.section_type);
+  return _.length === 0
+    ? null
+    : _.length === 1
+      ? (0, _.jsx)(_.Fragment, {
+          children: _[0],
+        })
+      : !_ || _
+        ? (0, _.jsx)(`div`, {
+            className: _,
+            children: _.map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  nSlide: _,
+                  onSlide: _,
+                  children: _,
+                },
+                _,
+              ),
+            ),
+          })
+        : (0, _.jsx)(`div`, {
+            className: _(_, _),
+            children: (0, _.jsx)(_, {
+              ..._(_.jsondata),
+              visibleElements: 1,
+              screenIsWide: !0,
+              useTestScrollbar: !0,
+              navKey: _.unique_id,
+              onSlide: _,
+              onNavIntent: _,
+              children: _,
+            }),
+          });
+}
+function _(_) {
+  let { nSlide: _, onSlide: _, children: _ } = _,
+    _ = _({
+      onEnter: () => _?.(_),
+    });
+  return (0, _.jsx)(`div`, {
+    ref: _,
+    children: _,
+  });
 }
 function _(_, _ = `#Played_`, _ = !1) {
   if (_ >= 120) {
@@ -7106,6 +7261,7 @@ function _(_) {
       section: _,
       selected: _,
       bShowMenuChevron: _,
+      bOutsideBar: _,
     } = _,
     [_] = _(() => [_?.tab_highlight_label_color]);
   _.useEffect(() => {
@@ -7118,7 +7274,7 @@ function _(_) {
         className: _(_, _ && `f1tg24vfjWA-`, _),
         onClick: () => _(_),
         onOKButton: () => _(_),
-        _: `Tab_` + _.unique_id,
+        _: _ ? void 0 : `Tab_` + _.unique_id,
         children: (0, _.jsxs)(`div`, {
           className: _(_),
           children: [
@@ -7314,6 +7470,8 @@ function _(_) {
       fnBIsNodeShown: _,
       selection: _,
       setSelection: _,
+      onSelectionIntent: _,
+      onSelectionIntentEnd: _,
     } = _,
     { data: _ } = _(_(_)),
     _ = _.useContext(_),
@@ -7330,16 +7488,23 @@ function _(_) {
         rgChildren: _?.rgChildren?.filter(_) ?? [],
       };
     }),
-    _ = (_) => _?.(_);
+    _ = (_) => _?.(_),
+    _ = !_.tab_tag_filter?.bNoAllOption,
+    _ = (_) => _(_ && (() => _(_)), _);
   if (!_ || _.length === 0) return null;
   if (_) {
     let _ = [
-        {
-          strKey: `all`,
-          strName: _(`#Sale_Tabs_TagFilter_All`),
-          bSelected: !_,
-          fnOnClick: () => _(void 0),
-        },
+        ...(_
+          ? [
+              {
+                strKey: `all`,
+                strName: _(`#Sale_Tabs_TagFilter_All`),
+                bSelected: !_,
+                fnOnClick: () => _(void 0),
+                intentHandlers: _(void 0),
+              },
+            ]
+          : []),
         ..._.map((_) => ({
           strKey: _(_),
           strName: _(_, _, _),
@@ -7348,6 +7513,9 @@ function _(_) {
             _({
               strParentKey: _(_),
             }),
+          intentHandlers: _({
+            strParentKey: _(_),
+          }),
         })),
       ],
       _ = [];
@@ -7361,19 +7529,23 @@ function _(_) {
             _({
               strParentKey: _.strParentKey,
             }),
+          intentHandlers: _({
+            strParentKey: _.strParentKey,
+          }),
         });
       for (let _ of _) {
         let _ = _(_),
-          _ = _ === _.strChildKey;
+          _ = _ === _.strChildKey,
+          _ = {
+            strParentKey: _.strParentKey,
+            strChildKey: _ ? void 0 : _,
+          };
         _.push({
           strKey: _,
           strName: _(_, _, _),
           bSelected: _,
-          fnOnClick: () =>
-            _({
-              strParentKey: _.strParentKey,
-              strChildKey: _ ? void 0 : _,
-            }),
+          fnOnClick: () => _(_),
+          intentHandlers: _(_),
         });
       }
     }
@@ -7391,11 +7563,13 @@ function _(_) {
         className: _,
         "flow-children": `row`,
         children: [
-          (0, _.jsx)(_, {
-            strName: _(`#Sale_Tabs_TagFilter_All`),
-            bSelected: !_,
-            fnOnClick: () => _(void 0),
-          }),
+          _ &&
+            (0, _.jsx)(_, {
+              strName: _(`#Sale_Tabs_TagFilter_All`),
+              bSelected: !_,
+              fnOnClick: () => _(void 0),
+              intentHandlers: _(void 0),
+            }),
           _.map((_) =>
             (0, _.jsx)(
               _,
@@ -7406,6 +7580,9 @@ function _(_) {
                   _({
                     strParentKey: _(_),
                   }),
+                intentHandlers: _({
+                  strParentKey: _(_),
+                }),
               },
               `tagfilterparent_` + _(_),
             ),
@@ -7426,20 +7603,24 @@ function _(_) {
                   _({
                     strParentKey: _.strParentKey,
                   }),
+                intentHandlers: _({
+                  strParentKey: _.strParentKey,
+                }),
               }),
             _.map((_) => {
               let _ = _(_),
-                _ = _ === _.strChildKey;
+                _ = _ === _.strChildKey,
+                _ = {
+                  strParentKey: _.strParentKey,
+                  strChildKey: _ ? void 0 : _,
+                };
               return (0, _.jsx)(
                 _,
                 {
                   strName: _(_, _, _),
                   bSelected: _,
-                  fnOnClick: () =>
-                    _({
-                      strParentKey: _.strParentKey,
-                      strChildKey: _ ? void 0 : _,
-                    }),
+                  fnOnClick: () => _(_),
+                  intentHandlers: _(_),
                 },
                 `tagfilterchild_` + _,
               );
@@ -7456,8 +7637,18 @@ function _(_, _, _) {
   let _ = _(_);
   return _ ? _(_) : (_.GetWithFallback(_.rgLocalizedNames, _) ?? ``);
 }
+function _(_, _) {
+  return _
+    ? {
+        onPointerEnter: _,
+        onPointerLeave: _,
+        onFocus: _,
+        onBlur: _,
+      }
+    : {};
+}
 function _(_) {
-  let { strName: _, bSelected: _, fnOnClick: _ } = _;
+  let { strName: _, bSelected: _, fnOnClick: _, intentHandlers: _ } = _;
   return _
     ? (0, _.jsx)(_, {
         focusable: !0,
@@ -7467,6 +7658,7 @@ function _(_) {
         }),
         onClick: _,
         onOKButton: _,
+        ..._,
         children: _,
       })
     : null;
@@ -7560,6 +7752,7 @@ function _(_) {
               },
               onClick: _.fnOnClick,
               onOKButton: _.fnOnClick,
+              ..._.intentHandlers,
               children: (0, _.jsx)(`span`, {
                 className: void 0,
                 children: _.strName,
@@ -11281,7 +11474,7 @@ var _ = `qXOh-7nWDCE-`,
         bConstMethod: !0,
         ePrivilege: 1,
         eWebAPIKeyRequirement: 2,
-        rgBrowserAPISites: [`store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -24280,7 +24473,8 @@ function _(_) {
     { appid: _, steamworks_appid: _, summary_options: _ } = _.useContext(_),
     [_, _] = _.useState(!1),
     _ = _(),
-    _ = !_(),
+    _ = _(),
+    _ = !_,
     _ = _(_, 0),
     _ = _(_),
     [_, _] = _.useState(void 0),
@@ -24295,7 +24489,19 @@ function _(_) {
         rootMargin: `0px 0px 1000px 0px`,
       },
     ),
-    [_, _] = _.useState({
+    _ = _.useRef(null),
+    _ = _.useCallback((_) => {
+      _.data?.method == `FocusAppReviews` &&
+        (_(!0), _.current?.NavTree().Activate(), _.current?.TakeFocus(_._));
+    }, []);
+  _.useEffect(
+    () => (
+      window.addEventListener(`message`, _),
+      () => window.removeEventListener(`message`, _)
+    ),
+    [_],
+  );
+  let [_, _] = _.useState({
       ..._(),
       language: _(_),
       filter_offtopic_activity:
@@ -24415,20 +24621,26 @@ function _(_) {
           }),
         ],
       }),
-      _?.reviewFilter == `summary` &&
-        (0, _.jsx)(_, {
-          summary: _,
-          mapTags: _,
-        }),
-      _?.reviewFilter != `summary` &&
-        (0, _.jsx)(_, {
-          queryReviews: _,
-          mapTags: _,
-        }),
-      _.isError &&
-        (0, _.jsx)(_, {
-          error: _.error,
-        }),
+      (0, _.jsxs)(_, {
+        navRef: _,
+        focusableIfEmpty: _,
+        children: [
+          _?.reviewFilter == `summary` &&
+            (0, _.jsx)(_, {
+              summary: _,
+              mapTags: _,
+            }),
+          _?.reviewFilter != `summary` &&
+            (0, _.jsx)(_, {
+              queryReviews: _,
+              mapTags: _,
+            }),
+          _.isError &&
+            (0, _.jsx)(_, {
+              error: _.error,
+            }),
+        ],
+      }),
     ],
   });
 }
@@ -30508,6 +30720,9 @@ function _(_, _) {
     (_.sale_section_disable_capitalize = _.sale_section_disable_capitalize),
     (_.sale_section_font_size = _.sale_section_font_size),
     (_.localized_sale_logo = _.localized_sale_logo),
+    (_.localized_sale_secondary_background_image =
+      _.localized_sale_secondary_background_image),
+    (_.sale_secondary_background_repeat = _.sale_secondary_background_repeat),
     (_.sale_custom_css =
       _.sale_custom_css +
       `
@@ -37186,6 +37401,231 @@ function _(_) {
       }),
   });
 }
+var _ = 1,
+  _ = _.PerHour;
+function _(_, _, _, _) {
+  let _ = _(
+      _,
+      _.rtime32_last_modified,
+      (_) => `groups` in _ && Array.isArray(_.groups),
+    ),
+    _ = [],
+    _ = [],
+    _ = _ > 0 ? Math.min(_, _.length) : _.length;
+  if (_)
+    for (let _ of _.data.groups) {
+      let _ = _.splice(0, _.nCount),
+        _ = _(_.nSeed);
+      (_(_, Math.min(_, _.length), _),
+        (_ -= Math.min(_, _.length)),
+        _.push(..._),
+        _.push(_));
+    }
+  if (_.length > 0) {
+    if (_ > 0) {
+      let _ = {
+          nCount: _,
+          nSeed: _(),
+        },
+        _ = _(_.nSeed);
+      (_(_, _, _),
+        _.push(..._),
+        _.push(_),
+        _(_, _.rtime32_last_modified, {
+          groups: _,
+        }));
+    } else _.push(..._);
+  }
+  return _;
+}
+function _(_, _, _, _, _) {
+  return !_(_, _, _) || _.length <= 1 ? _ : _(_, _, _, _.random_order_top_x);
+}
+function _(_, _, _) {
+  let [_] = _(_, void 0);
+  return _.useMemo(() => _(_, _, _, _), [_, _, _, _]);
+}
+function _(_, _, _, _) {
+  if (!_(_, _, _) || !window.sessionStorage) return _;
+  let _ = _(_, _, _, `section`),
+    _ = _(
+      _,
+      _.rtime32_last_modified,
+      (_) => `nSeed` in _ && Number.isInteger(_.nSeed),
+    ),
+    _ = _ ? _.data.nSeed : _(),
+    _ = _(_),
+    _ = _.random_order_top_x ?? 0,
+    _ = JSON.parse(JSON.stringify(_));
+  return (
+    _(_.links, _, _),
+    _(_, _.rtime32_last_modified, {
+      nSeed: _,
+    }),
+    _
+  );
+}
+function _(_) {
+  let _ = `nextfest_personalized_` + _.GID,
+    _ = _(
+      _,
+      _.rtime32_last_modified,
+      (_) => `nSeed` in _ && Number.isInteger(_.nSeed),
+    );
+  if (_) return _.data.nSeed;
+  let _ = _();
+  try {
+    _(
+      _,
+      _.rtime32_last_modified,
+      {
+        nSeed: _,
+      },
+      _,
+    );
+  } catch {}
+  return _;
+}
+function _(_, _) {
+  let _ = (_ ^ Math.imul(_, 2654435761)) >>> 0;
+  return (
+    (_ = Math.imul(_ ^ (_ >>> 16), 2246822507)),
+    (_ = Math.imul(_ ^ (_ >>> 13), 3266489909)),
+    (_ = (_ ^ (_ >>> 16)) >>> 0),
+    (_ + 0.5) / 4294967296
+  );
+}
+function _(_, _, _) {
+  let _;
+  try {
+    let _ = window.sessionStorage.getItem(_);
+    _ = _ && JSON.parse(_);
+  } catch {}
+  if (
+    _ &&
+    _.nVersion == _ &&
+    _.rtLastModified == _ &&
+    !(_.rtExpires && _.rtExpires < Date.now() / 1e3) &&
+    (!_ || _(_.data))
+  )
+    return _;
+}
+function _(_, _, _, _) {
+  let _ = {
+    nVersion: _,
+    rtLastModified: _,
+    data: _,
+  };
+  (_ > 0 && (_.rtExpires = Math.floor(Date.now() / 1e3) + _),
+    window.sessionStorage.setItem(_, JSON.stringify(_)));
+}
+function _(_) {
+  return (_.IN_CLIENT ? `library-` : _() + `-`) + _;
+}
+function _(_, _, _) {
+  let _ = _(_, _),
+    _ = 0;
+  for (; _ > 0;) ((_ -= _[_ % _.length]), _++);
+  return _;
+}
+function _(_, _, _) {
+  let _ = _(_, _),
+    _ = 0;
+  for (let _ = 0; _ < _; _++) _ += _[_ % _.length];
+  return _;
+}
+async function _(_) {
+  let _ = _.clanSteamID.GetAccountID(),
+    _ = _.jsondata.sale_creator_home_filter_listid;
+  return _
+    ? ((await _.fetchQuery(_(_, _))) ?? [])
+    : ((await _.fetchQuery(_(_)))?.GetAppIDList() ?? []);
+}
+async function _(_, _, _) {
+  let _ = _(
+      _,
+      _,
+      {
+        BIncludeSection: (_) =>
+          _.ShouldShowSection(_) &&
+          (!!_.diable_tab_id_filtering || !_.BIsTabFilteringEnabled()),
+        BIncludeLinkedCapsule: (_) =>
+          !_.BIsTabFilteringEnabled() || _.ShouldShowCapsule(_),
+      },
+      new Set(_.GetTabAppIDs()),
+    ),
+    _ = _.clanSteamID.GetAccountID(),
+    _ = _.GetClanInfoByClanAccountID(_);
+  return (
+    _(_, _) &&
+      (await _(_)).forEach((_) => {
+        (!_.BIsTabFilteringEnabled() ||
+          _.ShouldShowCapsule({
+            type: `game`,
+            _: _,
+          })) &&
+          _.add(_);
+      }),
+    _
+  );
+}
+function _(_, _, _, _) {
+  if (_?.length > 0 && _.BIsNextFest() && !_(_, _, _)) {
+    let _ = _(`rgMLRecommenderWishlist`, `application_config`);
+    if (Array.isArray(_) && _.length > 0 && Number.isInteger(_[0])) {
+      let _ = _.jsondata.sale_ml_recommender_weight_exponent || 2.5;
+      _ = _(_, _, (_) => _._, _(_), _);
+    }
+  }
+  return _;
+}
+async function _(_, _, _, _) {
+  if (!_?.length) return _;
+  _ && (_ = _.filter((_) => _.BCapsulePassesTagFilter(_)));
+  let _ = _.clanSteamID.GetAccountID(),
+    _ = _.GetClanInfoByClanAccountID(_);
+  if (_(_, _)) {
+    let _ = new Set(await _(_));
+    _ = _.filter((_) => {
+      if (_) {
+        if (_.type == `sub` || _.type == `bundle`) {
+          let _ = _.Get().GetStoreItem(_._, _(_.type)),
+            _ = _.GetEventType() == 36;
+          return _
+            ? _
+              ? _.GetIncludedAppIDs().every((_) => _.has(_))
+              : _.GetIncludedAppIDs().some((_) => _.has(_))
+            : !1;
+        }
+        return _.has(_._);
+      }
+      return !1;
+    });
+  }
+  return _;
+}
+function _(_, _, _, _, _) {
+  let _ = new Map(_.map((_, _) => [_, _])),
+    _ = _ >= 0,
+    _ = [],
+    _ = [];
+  for (let _ of _) {
+    let _ = _(_),
+      _ = _(_, _),
+      _ = _.get(_);
+    _ === void 0
+      ? _.push({
+          item: _,
+          flSortKey: _ ? _ : 0,
+        })
+      : _.push({
+          item: _,
+          flSortKey: _ ? Math.log(_) * (_ + 1) ** +_ : -_,
+        });
+  }
+  let _ = (_, _) => _.flSortKey - _.flSortKey;
+  return [..._.sort(_), ..._.sort(_)].map((_) => _.item);
+}
 var _ = `Fh-jFuR9Yvo-`,
   _ = `_4rNPfhfRBrc-`,
   _ = `Bc2anSpsdzg-`,
@@ -40243,6 +40683,7 @@ var _ = class _ {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetMostPlayedGames = _;
@@ -40255,6 +40696,7 @@ var _ = class _ {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
+        rgBrowserAPISites: [`store`],
       },
     );
   }
@@ -40284,7 +40726,7 @@ var _ = class _ {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -43500,7 +43942,7 @@ function _(_) {
         onGamepadBlur: () => _(!1),
         onMouseLeave: () => _ && _(!1),
         onActivate: _,
-        onOKActionDescription: _(`#DiscoveryQueue_OpenWizard`),
+        onOKActionDescription: _(`#DiscoveryQueue_Open`),
         className: _(_, _, _ !== void 0 && `XXXE46GLJ04-`),
         ..._,
         children: [
@@ -46046,22 +46488,19 @@ async function _(_, _, _, _, _, _, _, _, _, _, _ = 0) {
       appid: _.recommended_app().appid(),
       sortOrder: _.sort_order(),
     }));
-    if (
+    return (
       (await _.LoadCreatorHome(_.clanSteamID))?.GetListInfo().get(_.listid())
         ?.order == `specified`
-    )
-      _.sort((_, _) => _.sortOrder - _.sortOrder);
-    else {
-      let _ = _(_, _, _, `creator_list`, _?.GetActiveTabUniqueID());
-      _ = _(_, _, _);
-    }
-    return {
-      capsules: _.map((_) => ({
-        _: _.appid,
-        type: `game`,
-      })),
-      bMoreRemaining: !1,
-    };
+        ? _.sort((_, _) => _.sortOrder - _.sortOrder)
+        : (_ = _(_, _(_, _, _, `creator_list`, _?.GetActiveTabUniqueID()), _)),
+      {
+        capsules: _.map((_) => ({
+          _: _.appid,
+          type: `game`,
+        })),
+        bMoreRemaining: !1,
+      }
+    );
   }
   if (_ == `nearby_recommended`)
     return {
@@ -46171,9 +46610,8 @@ async function _(_, _, _, _, _, _, _, _, _, _, _ = 0) {
       case `interactive_recommender`:
         _ = _.Get().GetRecommendedGamesInIRPriorityOrder();
     }
-    let _ = _(_, _);
     return {
-      capsules: _(_, _, (_) => _.Get().BOwnsApp(_), _).map((_) => ({
+      capsules: _(_(_, _), _, (_) => _.Get().BOwnsApp(_), _).map((_) => ({
         _: _,
         type: `game`,
       })),
@@ -46533,11 +46971,10 @@ async function _(_, _, _, _, _, _) {
   let _ = await _(_, _, _, _),
     _ = await _.Get().GetEventSummaries(_, _),
     _ = new Map(_.map((_) => [_.clan_event_gid, _])),
-    _ = _(_, _, _, `events` + _.length, _?.GetActiveTabUniqueID()),
     _ = _(
       _,
       _,
-      _,
+      _(_, _, _, `events` + _.length, _?.GetActiveTabUniqueID()),
       _,
       _.map((_) => _.clan_event_gid),
     )
@@ -46576,9 +47013,15 @@ async function _(_, _, _, _, _) {
       null,
       _.events.filter((_) => !!_).map((_) => _.announcement_gid),
     );
-  let _ = _.map((_) => _.GID),
-    _ = _(_, _, _, `events` + _.length, _?.GetActiveTabUniqueID());
-  ((_ = _(_, _, _, _, _)), (_ = _.map((_) => _.GetClanEventModel(_))));
+  let _ = _.map((_) => _.GID);
+  ((_ = _(
+    _,
+    _,
+    _(_, _, _, `events` + _.length, _?.GetActiveTabUniqueID()),
+    _,
+    _,
+  )),
+    (_ = _.map((_) => _.GetClanEventModel(_))));
   let _ = _.filter(
     (_) => !!_ && (_.BUsesContentHubForItemSource() || _.ShouldShowEvent(_)),
   );
@@ -46607,16 +47050,16 @@ async function _(_, _, _, _, _) {
 }
 async function _(_, _, _, _, _) {
   let _ = _.links;
-  if (_(_) === `sale_tabhub`) {
-    _ = (await _.Get().GetSaleTags()).map((_) => ({
-      url: _.url,
-      localized_link_capsule: void 0,
-      materialized_link_capsule: _.square,
-    }));
-    let _ = _(_, _, _, `links`, _?.GetActiveTabUniqueID());
-    _ = _(_, _, _, _, _);
-  }
-  return _;
+  return (
+    _(_) === `sale_tabhub` &&
+      ((_ = (await _.Get().GetSaleTags()).map((_) => ({
+        url: _.url,
+        localized_link_capsule: void 0,
+        materialized_link_capsule: _.square,
+      }))),
+      (_ = _(_, _, _(_, _, _, `links`, _?.GetActiveTabUniqueID()), _, _))),
+    _
+  );
 }
 async function _(_, _) {
   let _ = _.clanSteamID.GetAccountID();
@@ -53615,7 +54058,7 @@ function _(_) {
       _ = _(_, _, _, _, _, _, _(_));
     if (_ === void 0) return;
     if (!_) {
-      if (_(_) && !_.logged_in)
+      if (_(_, _()) && !_.logged_in)
         _ ||=
           ((_ = (0, _.jsx)(_, {
             section: _,

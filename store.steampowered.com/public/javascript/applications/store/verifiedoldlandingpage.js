@@ -2,8 +2,9 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
-import { En as r, Is as i } from "./chunk~6b8ddcaac8.js";
+import { It as t, dt as n } from "./chunk~01cfc309bf.js";
+import { Rn as r } from "./chunk~6b8ddcaac8.js";
+import { k as i } from "./chunk~4eed35ad1f.js";
 import { t as a } from "./chunk~6bf4d41b04.js";
 import { a as o, i as s } from "./chunk~2f085f1384.js";
 import { t as c } from "./chunk~f4c928a27a.js";
@@ -11,23 +12,23 @@ import { t as l } from "./chunk~4e9767668d.js";
 import { r as u } from "./chunk~38061b7abb.js";
 import { t as d } from "./chunk~4dd1695ad6.js";
 import {
-  $b as f,
-  Fc as p,
-  Nc as m,
-  OS as h,
-  Rv as g,
-  Uv as _,
-  al as v,
+  AS as f,
+  Ic as p,
+  Pc as m,
+  Wv as h,
+  cu as g,
+  ex as _,
+  gl as v,
   gt as y,
-  hl as b,
-  nx as x,
-  ou as S,
-  rd as C,
-  su as w,
+  id as b,
+  ol as x,
+  rx as S,
+  su as C,
+  zv as w,
 } from "./main.js";
 var T = n();
 function E(e) {
-  return f()
+  return _()
     ? (0, T.jsx)(c, { ...e })
     : s()
       ? (0, T.jsx)(c, { ...e, bShowReviewSummary: !0 })
@@ -50,11 +51,11 @@ var D = `eNekHvzmFIU-`,
 function V(e) {
   let { appid: t, strUrlOverride: n } = e,
     r = i(t),
-    { data: a } = _(r);
+    { data: a } = h(r);
   return (
     (0, B.useEffect)(() => {
       if (a) {
-        let e = `${x.STORE_BASE_URL}${a.store_url_path}`.replace(
+        let e = `${S.STORE_BASE_URL}${a.store_url_path}`.replace(
           `/app/`,
           n ?? `/verified/`,
         );
@@ -65,14 +66,14 @@ function V(e) {
       ? null
       : (0, T.jsx)(y, {
           method: `verifiedprogram`,
-          children: (0, T.jsx)(v, { children: (0, T.jsx)(U, { id: r }) }),
+          children: (0, T.jsx)(x, { children: (0, T.jsx)(U, { id: r }) }),
         })
   );
 }
 function H(e) {
   let { id: t } = e,
-    { data: n } = _(t),
-    i = `${x.CLAN_CDN_ASSET_URL}images/41316928/846f603df6057b070667f2741730c2038648955d.png`;
+    { data: n } = h(t),
+    i = `${S.CLAN_CDN_ASSET_URL}images/41316928/846f603df6057b070667f2741730c2038648955d.png`;
   return (0, T.jsxs)(T.Fragment, {
     children: [
       (0, T.jsx)(`div`, {
@@ -96,9 +97,9 @@ function H(e) {
         className: N,
         children: r.LocalizeReact(
           `#VerifiedProgram_DeckSubTitle`,
-          (0, T.jsx)(b, {
+          (0, T.jsx)(v, {
             className: O,
-            href: `${x.STORE_BASE_URL}greatondeck`,
+            href: `${S.STORE_BASE_URL}greatondeck`,
             children: r.Localize(`#VerifiedProgram_GreatOnDeck`),
           }),
         ),
@@ -126,7 +127,7 @@ function U(e) {
 }
 function W(e) {
   let { id: t } = e,
-    { data: n } = g(t);
+    { data: n } = w(t);
   if (!n) return null;
   let r = p(n, `library_hero_2x`) ?? p(n, `library_hero`);
   return (0, T.jsxs)(T.Fragment, {
@@ -157,8 +158,8 @@ function G(e) {
   });
 }
 function K(e) {
-  let t = C(`${x.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`, `banner`);
-  return (0, T.jsx)(b, {
+  let t = b(`${S.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`, `banner`);
+  return (0, T.jsx)(v, {
     href: t,
     className: m(R),
     children: (0, T.jsx)(J, {}),
@@ -166,11 +167,11 @@ function K(e) {
 }
 function q(e) {
   let { id: t } = e,
-    { data: n } = _(t),
-    i = w(t);
+    { data: n } = h(t),
+    i = g(t);
   if (!i) return null;
-  let a = `${x.CLAN_CDN_ASSET_URL}images/39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png`,
-    { rgDashTrailers: o, rgHlsTrailers: s } = S(i);
+  let a = `${S.CLAN_CDN_ASSET_URL}images/39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png`,
+    { rgDashTrailers: o, rgHlsTrailers: s } = C(i);
   return (0, T.jsxs)(`div`, {
     className: P,
     children: [
@@ -204,7 +205,7 @@ function q(e) {
 }
 function J(e) {
   let t = o(),
-    n = h(x.LANGUAGE);
+    n = f(S.LANGUAGE);
   return (0, T.jsx)(a, {
     language: n,
     strAltText: r.Localize(`#VerifiedProgram_DeckShopBannerAlt`),

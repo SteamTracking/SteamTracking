@@ -2,11 +2,11 @@ import { _, _, _ } from "./chunk~f025431ab0.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~01cfc309bf.js";
 import { _ } from "./chunk~68b7e78d68.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk~f57d770d64.js";
+import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _, _ } from "./chunk~8c66e1c7a5.js";
 import { _, _, _ } from "./chunk~4c13037b22.js";
 import "./chunk~8681f5c764.js";
 import { _, _, _ } from "./chunk~2f085f1384.js";
-import { _, _, _, _ } from "./chunk~4eed35ad1f.js";
 import { _ } from "./chunk~92931c6310.js";
 import { _, _ } from "./chunk~af36c62e9f.js";
 import { _ } from "./chunk~eefd71512b.js";
@@ -19,7 +19,6 @@ import { _ } from "./chunk~0278ae6236.js";
 import { _, _ } from "./chunk~90b9831ad2.js";
 import { _, _ } from "./chunk~f162f235ea.js";
 import {
-  _,
   _,
   _,
   _,
@@ -433,124 +432,6 @@ function _(_, _, _, _) {
     staleTime: 6e5,
   };
 }
-var _ = _(_(), 1);
-function _(_) {
-  let { data: _ } = _(_);
-  return (0, _.useMemo)(
-    () => (_ ? (_.item_type == 0 ? [_.appid] : _.included_appids || []) : []),
-    [_],
-  );
-}
-function _(_) {
-  if (!_?.length) return [];
-  let _ = _.map((_) => _.creator_clan_account_id).filter((_) => !!_);
-  return Array.from(new Set(_));
-}
-function _(_) {
-  let { data: _ } = _({
-    appid: _,
-  });
-  return _?.appid || _;
-}
-function _(_) {
-  let { data: _ } = _(_);
-  return (0, _.useMemo)(() => {
-    if (_ && _.related_items && _.related_items.parent_appid)
-      return {
-        appid: _.related_items.parent_appid,
-      };
-  }, [_]);
-}
-function _(_) {
-  return (0, _.useMemo)(
-    () =>
-      _
-        ? {
-            appid: _,
-          }
-        : void 0,
-    [_],
-  );
-}
-function _(_) {
-  return (0, _.useMemo)(
-    () =>
-      _
-        ? {
-            packageid: _,
-          }
-        : void 0,
-    [_],
-  );
-}
-async function _(_, _) {
-  let _ = _(_.STORE_BASE_URL, _, _.country_code);
-  return (await (await fetch(_)).json()).rgOwnedApps || [];
-}
-async function _(_, _, _) {
-  return (await _(_, _)).includes(_);
-}
-function _() {
-  let _ = _(),
-    _ = _.accountid;
-  return _(_(_, _));
-}
-function _(_, _) {
-  return {
-    queryKey: _(_),
-    queryFn: async () => {
-      if (!_) return new Set();
-      let _ = await _(_, _);
-      return new Set(_);
-    },
-    staleTime: 6e5,
-  };
-}
-function _(_, _, _) {
-  return {
-    queryKey: [`AccountOwnsApp`, _, _],
-    queryFn: async () => (_ ? await _(_, _, _) : !1),
-    staleTime: 6e5,
-  };
-}
-function _(_) {
-  let _ = _(),
-    _ = _.accountid,
-    { data: _ } = _(_(_, _, _));
-  return _ === void 0 ? void 0 : _;
-}
-function _(_) {
-  let _ = _(),
-    _ = _.accountid;
-  return _.useCallback(
-    (_) => {
-      _.setQueryData(_(_), (_) =>
-        _ ? new Set([..._.values(), ..._]) : _ ? new Set(_) : void 0,
-      );
-    },
-    [_, _, _],
-  );
-}
-function _(_) {
-  return [`AccountOwnedApps`, _ ?? 0];
-}
-function _(_) {
-  let { data: _ } = _(_ && `appid` in _ ? void 0 : _),
-    { data: _ } = _(),
-    _;
-  return (
-    _ && `appid` in _ ? (_ = [_.appid]) : _ && (_ = _.included_appids),
-    _ === void 0 || _ === void 0 || _.length == 0
-      ? {
-          bIsOwned: void 0,
-          unAppID: void 0,
-        }
-      : {
-          bIsOwned: !_.some((_) => !_.has(_)),
-          unAppID: _[0],
-        }
-  );
-}
 var _ = 500,
   _ = 100;
 function _(_, _, _, _, _, _ = 1) {
@@ -677,7 +558,8 @@ function _(_) {
     }),
   });
 }
-var _ = _(_()),
+var _ = _(_(), 1),
+  _ = _(_()),
   _ = _(_(), 1),
   _ = _(_()),
   _ = `_8Wp5WbqAbJA-`,
@@ -3236,7 +3118,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `store`, `community`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25798,26 +25680,6 @@ function _(_) {
   }
 }
 function _(_) {
-  return _ == 2 ? `bundle` : _ == 1 ? `sub` : `app`;
-}
-function _(_, _) {
-  let _ = _ || +!!_;
-  return [!!_, _];
-}
-var _ = (_) => {
-  let { appid: _ } = _,
-    _ = (0, _.jsx)(`div`, {
-      className: `ImpressionTrackedElement`,
-      children: _.children,
-    });
-  return _
-    ? (0, _.jsx)(_, {
-        appID: _,
-        children: _,
-      })
-    : _;
-};
-function _(_) {
   let { _: _ } = _,
     { data: _ } = _(_);
   return _
@@ -27330,14 +27192,20 @@ var _ = (_) => {
     }),
   });
 };
-function _(_, _) {
+function _(_, _, _) {
   let _ = _(),
     _ = _(),
-    _ = _(_(_, _));
+    _ = _(_(_(_, _), _));
   return {
     snr: _(_),
     strStoreURL: _(_, _, _),
   };
+}
+function _(_, _) {
+  if (!_ || !_) return _;
+  let _ = new URL(_);
+  for (let [_, _] of Object.entries(_)) _.searchParams.set(_, _);
+  return _.toString();
 }
 function _(_, _, _, _, _) {
   return _(
@@ -29504,7 +29372,25 @@ function _(_) {
   return _(_).flatMap((_) => _.event_gid || []);
 }
 function _(_) {
+  return _(_)[0]?.creator_clan_account_id || void 0;
+}
+function _(_) {
+  return _(_) !== void 0;
+}
+function _(_) {
   return _(_)[0]?.featured_app_tagid || void 0;
+}
+function _(_) {
+  return (
+    _.section_type === `crosspromotesalepage` &&
+    !!_.sale_page_cross_promo_side_by_side
+  );
+}
+function _(_) {
+  return (
+    _.section_type === `crosspromotesalepage` &&
+    !!_.sale_page_cross_promo_in_sale_events
+  );
 }
 function _(_) {
   let _ = _(_);
@@ -29513,6 +29399,13 @@ function _(_) {
 function _(_, _) {
   return _(_) ? (_?.BIsVisibleEvent() ? null : `missing`) : `setup`;
 }
+function _(_, _) {
+  return !_(_) || (!_(_) && !_(_)[0]?.clan_account_id)
+    ? `setup`
+    : _
+      ? null
+      : `missing`;
+}
 function _(_) {
   let _ = _(_)[0];
   return _?.creator_clan_account_id
@@ -29520,9 +29413,45 @@ function _(_) {
     : !!_?.event_gid && (!!_.featured_app_tagid || !!_.capsules?.length);
 }
 function _(_, _) {
+  if (!_.length) return `creator`;
+  let _ = (_) =>
+    _.every((_) => !!_ && !!_(_)?.some((_) => _.creator_clan_account_id === _));
+  return _((_) => _.franchises)
+    ? `franchise`
+    : _((_) => _.developers)
+      ? `developer`
+      : _((_) => _.publishers)
+        ? `publisher`
+        : `creator`;
+}
+function _(_, _) {
   return _
     ? _(`#Sale_CrossPromoSale_SectionTitle`, _.GetNameWithFallback(_) ?? ``)
     : _(`#Sale_CrossPromoSale_DefaultSectionTitle`);
+}
+function _(_, _) {
+  let _ = _.GetWithFallback(_.localized_label, _);
+  if (_) return _;
+  if (_.default_label && _.default_label !== `#Sale_default_label`)
+    return _(_.default_label);
+}
+var _ = [`logo_left`, `logo_top`, `event_capsule`],
+  _ = `crosspromo_layout`;
+function _(_, _, _) {
+  let _ = _(_, _);
+  if (_ && (_ === `logo_left` || _ === `logo_top`)) {
+    if (!_.strBackgroundURL || !_.strLogoURL) return `event_capsule`;
+    if (!_(_)) return _.eDesktopLayout ?? `logo_left`;
+  }
+  return _;
+}
+function _(_) {
+  return _.some((_) => _ === _);
+}
+function _(_, _) {
+  let _ = _(_) ? _ : void 0,
+    _ = _.sale_page_cross_promo_layout;
+  return _ ?? (_ && _ !== `sale_banner` ? _ : `event_capsule`);
 }
 function _(_, _) {
   let _ = _.GetELanguageFallback(_),
@@ -29539,6 +29468,12 @@ function _(_, _) {
 }
 function _(_) {
   return 3;
+}
+function _(_) {
+  return !0;
+}
+function _(_) {
+  return _ === `event_capsule`;
 }
 function _(_) {
   return _.type !== `sub` && _.type !== `bundle`;
@@ -31226,7 +31161,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetLiveSales = _;
@@ -31365,7 +31300,7 @@ var _ = [
   {
     eReason: 6,
     strTitleToken: `#Sale_DiscountReason_Section_WellReviewed`,
-    strSubtitleToken: `#Sale_Specials_Subtitle_WellReviewed`,
+    strSubtitleToken: ``,
   },
   {
     eReason: 7,
@@ -31380,12 +31315,12 @@ var _ = [
   {
     eReason: 9,
     strTitleToken: `#Sale_DiscountReason_Section_DeepDiscount`,
-    strSubtitleToken: `#Sale_Specials_Subtitle_DeepDiscount`,
+    strSubtitleToken: ``,
   },
   {
     eReason: 10,
     strTitleToken: `#Sale_DiscountReason_Section_PopularInRegion`,
-    strSubtitleToken: `#Sale_Specials_Subtitle_PopularInRegion`,
+    strSubtitleToken: ``,
   },
 ];
 function _(_) {

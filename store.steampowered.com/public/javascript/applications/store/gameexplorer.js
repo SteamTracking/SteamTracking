@@ -3,32 +3,32 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import {
-  B as t,
-  H as n,
-  Lt as r,
-  ft as i,
-  st as a,
-  tt as o,
+  It as t,
+  V as n,
+  dt as r,
+  et as i,
+  ot as a,
+  z as o,
 } from "./chunk~01cfc309bf.js";
 import { n as s, r as c } from "./chunk~16aefcf65f.js";
 import { n as l } from "./chunk~3ea79bd96d.js";
 import { r as u } from "./chunk~a243b6a34b.js";
 import { n as d, t as f } from "./chunk~a7c5e71e12.js";
 import {
-  Bc as p,
-  Bi as m,
-  Fd as h,
-  Hi as g,
-  Nc as _,
-  _x as v,
+  Id as p,
+  Pc as m,
+  Ui as h,
+  Vc as g,
+  Vi as _,
+  ba as v,
+  bx as y,
+  cx as b,
   gt as ee,
-  rb as y,
-  sx as b,
-  ya as x,
-  yx as S,
+  ib as x,
+  vx as S,
 } from "./main.js";
 import { t as C } from "./chunk~85f65a382b.js";
-var w = e(o());
+var w = e(i());
 function te(e, t, n, r, i) {
   return a(ne(e, t, n, r, i));
 }
@@ -47,7 +47,7 @@ function ne(e, t, n, r, i) {
           scopedecaystrength: i ? 20 : 0,
         },
         o = await w.default.get(
-          `${v.STORE_BASE_URL}gameexplorer/exploreapplist`,
+          `${S.STORE_BASE_URL}gameexplorer/exploreapplist`,
           { params: a, withCredentials: !0, timeout: 1e4 },
         );
       if (o.data)
@@ -69,7 +69,7 @@ function T() {
     queryFn: async () => {
       let e = { sessionid: b() },
         t = await w.default.get(
-          `${v.STORE_BASE_URL}gameexplorer/exploreplayedlist`,
+          `${S.STORE_BASE_URL}gameexplorer/exploreplayedlist`,
           { params: e, withCredentials: !0, timeout: 1e4 },
         );
       if (t.data) return t.data;
@@ -78,7 +78,7 @@ function T() {
     placeholderData: (e) => e,
   };
 }
-var E = e(r()),
+var E = e(t()),
   D = `NWE3szrfD3A-`,
   O = `V5XyNQcfwrE-`,
   k = `VH0u0ICJIG4-`,
@@ -105,7 +105,7 @@ var E = e(r()),
   X = `mAG3BrWx38U-`,
   ie = `XQjixtYnexw-`,
   ae = `b2P8TJ-H27k-`,
-  Z = i();
+  Z = r();
 function Q(e) {
   return `/gameexplorer/${e.arrSelectedAppInfos.length == 0 ? `0` : e.arrSelectedAppInfos.map((e) => e.nAppID).join()}/${e.arrSelectedAppInfos.length == 0 ? `0` : e.arrSelectedAppInfos.map((e) => e.nWeight.toFixed(0)).join()}/${e.nSelfFactor}/${e.nPopularity}/${e.bSimilar}`;
 }
@@ -123,32 +123,32 @@ function oe(e) {
 }
 function se() {
   let e = oe(n()),
-    [r, i] = E.useState(e),
-    [a, o] = E.useState(e),
-    s = t(),
+    [t, r] = E.useState(e),
+    [i, a] = E.useState(e),
+    s = o(),
     c = te(
-      a.arrSelectedAppInfos.map((e) => e.nAppID),
-      a.arrSelectedAppInfos.map((e) => e.nWeight),
-      a.nSelfFactor,
-      a.nPopularity,
-      a.bSimilar,
+      i.arrSelectedAppInfos.map((e) => e.nAppID),
+      i.arrSelectedAppInfos.map((e) => e.nWeight),
+      i.nSelfFactor,
+      i.nPopularity,
+      i.bSimilar,
     );
   return (0, Z.jsx)(ee, {
     controller: `gameexplorer`,
     method: `default`,
     feature: `capsule`,
-    children: (0, Z.jsx)(m, {
-      children: (0, Z.jsx)(p, {
-        className: _(D, c.isFetching && void 0),
-        children: (0, Z.jsxs)(p, {
+    children: (0, Z.jsx)(_, {
+      children: (0, Z.jsx)(g, {
+        className: m(D, c.isFetching && void 0),
+        children: (0, Z.jsxs)(g, {
           className: O,
           children: [
             (0, Z.jsx)(ce, {}),
-            !S.steamid && (0, Z.jsx)(me, {}),
+            !y.steamid && (0, Z.jsx)(me, {}),
             (0, Z.jsx)(fe, {
-              state: r,
+              state: t,
               onChange: (e, t) => {
-                (i(e), t && (s.push(Q(e)), o(e)));
+                (r(e), t && (s.push(Q(e)), a(e)));
               },
             }),
             c.data &&
@@ -157,10 +157,10 @@ function se() {
                 bIsPending: c.isFetching,
                 fnSetApp: (e) => {
                   let t = {
-                    ...a,
+                    ...i,
                     arrSelectedAppInfos: [{ nAppID: e, nWeight: 100 }],
                   };
-                  (i(t), s.push(Q(t)), o(t));
+                  (r(t), s.push(Q(t)), a(t));
                 },
               }),
           ],
@@ -170,11 +170,11 @@ function se() {
   });
 }
 function ce() {
-  return (0, Z.jsxs)(p, {
+  return (0, Z.jsxs)(g, {
     className: k,
     children: [
-      (0, Z.jsx)(p, { className: A, children: `Game Explorer` }),
-      (0, Z.jsx)(p, { className: j, children: `Explore and Mix Games` }),
+      (0, Z.jsx)(g, { className: A, children: `Game Explorer` }),
+      (0, Z.jsx)(g, { className: j, children: `Explore and Mix Games` }),
     ],
   });
 }
@@ -190,7 +190,7 @@ function le(e) {
     children: [
       (0, Z.jsx)(`div`, {
         className: J,
-        children: (0, Z.jsx)(x, {
+        children: (0, Z.jsx)(v, {
           size: `1`,
           color: `red`,
           onClick: () => e.onRemove(e.selectedAppInfo.nAppID),
@@ -423,7 +423,7 @@ function pe(e) {
               `${(e.fDistance * 100).toFixed(2)}%`,
               (0, Z.jsx)(`div`, {
                 className: ae,
-                children: (0, Z.jsx)(x, {
+                children: (0, Z.jsx)(v, {
                   size: `1`,
                   color: `green`,
                   onClick: () => e.fnSetApp(e.nAppID),
@@ -440,7 +440,7 @@ function $(e) {
   return e.arrNearApps.length == 0
     ? null
     : (0, Z.jsx)(`div`, {
-        className: _(Y, e.bIsPending && `r9iZqJcYbak-`),
+        className: m(Y, e.bIsPending && `r9iZqJcYbak-`),
         children: e.arrNearApps?.map((t) =>
           (0, Z.jsx)(
             pe,
@@ -451,14 +451,14 @@ function $(e) {
       });
 }
 function me() {
-  return (0, Z.jsxs)(p, {
+  return (0, Z.jsxs)(g, {
     className: void 0,
     children: [
-      y(`#PersonalCalendar_LoginPrompt`),
+      x(`#PersonalCalendar_LoginPrompt`),
       (0, Z.jsx)(`button`, {
         onClick: C,
         className: void 0,
-        children: y(`#Login_SignIn`),
+        children: x(`#Login_SignIn`),
       }),
     ],
   });
@@ -480,14 +480,14 @@ function he(e) {
   });
 }
 var ge = E.forwardRef(function (e, t) {
-    let n = h(e.strSearch, null, 10),
+    let n = p(e.strSearch, null, 10),
       r = e.fnSetResultApps;
     return (
       E.useEffect(() => {
         r(n.data?.rgItemIDs.map((e) => e.appid));
       }, [r, n.data]),
       (0, Z.jsx)(`div`, {
-        className: _(F, n.data?.rgItemIDs.length > 0 && `g6SP7v41-Kc-`),
+        className: m(F, n.data?.rgItemIDs.length > 0 && `g6SP7v41-Kc-`),
         ref: t,
         children: n.data?.rgItemIDs
           .filter((t) => !e.arrIgnoreAppIDs.includes(t.appid))
@@ -516,7 +516,7 @@ var ge = E.forwardRef(function (e, t) {
       p = (t) => {
         (e.fnSelectAppID(t), n(``), o(0), c([]), i(Date.now()));
       },
-      m = (e) => {
+      h = (e) => {
         switch (e) {
           case `Enter`:
             s.length > 0 && p(s[0]);
@@ -525,19 +525,19 @@ var ge = E.forwardRef(function (e, t) {
             n(``);
         }
       },
-      h = e.arrSelectedAppIDs.length >= 3;
+      g = e.arrSelectedAppIDs.length >= 3;
     return (0, Z.jsxs)(`div`, {
       className: N,
       children: [
         (0, Z.jsx)(`input`, {
           type: `text`,
-          className: _(P, h && `TAlX1lcqH8Y-`),
+          className: m(P, g && `TAlX1lcqH8Y-`),
           value: t,
           onChange: (e) => f(e.target.value),
-          onKeyDown: (e) => m(e.key),
+          onKeyDown: (e) => h(e.key),
           onBlur: (e) => n(``),
-          placeholder: h ? `Max three games` : `Type any game name`,
-          disabled: h,
+          placeholder: g ? `Max three games` : `Type any game name`,
+          disabled: g,
         }),
         (0, Z.jsx)(ge, {
           strSearch: t,
@@ -555,7 +555,7 @@ var ge = E.forwardRef(function (e, t) {
       n = t?.appids ?? [];
     return (0, Z.jsx)(`div`, {
       className: void 0,
-      children: (0, Z.jsx)(g, {
+      children: (0, Z.jsx)(h, {
         options: n,
         size: `1`,
         selectedValue: 0,

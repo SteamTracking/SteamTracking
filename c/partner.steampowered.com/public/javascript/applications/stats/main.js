@@ -14750,6 +14750,11 @@ var CMsgIPAddress = class _ extends import_google_protobuf.Message {
               _: ReaderProto.readBool,
               _: WriterProto.writeBool,
             },
+            screen_refresh_rate: {
+              _: 21,
+              _: ReaderProto.readUint32,
+              _: WriterProto.writeUint32,
+            },
           },
         }),
         _.sm_m
@@ -18094,7 +18099,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class _
       {
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -24966,11 +24971,6 @@ var SteamAward_Localization = class _ extends import_google_protobuf.Message {
               _: ReaderProto.readBool,
               _: WriterProto.writeBool,
             },
-            price_to_base_discount_on: {
-              _: 53,
-              _: ReaderProto.readInt64String,
-              _: WriterProto.writeInt64String,
-            },
             free_with_master_sub_appid: {
               _: 54,
               _: ReaderProto.readUint32,
@@ -30725,7 +30725,7 @@ var SteamAward_Localization = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 1,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -30760,7 +30760,7 @@ var SteamAward_Localization = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -30774,7 +30774,7 @@ var SteamAward_Localization = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -30804,7 +30804,7 @@ var SteamAward_Localization = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -30822,7 +30822,7 @@ var SteamAward_Localization = class _ extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -38604,7 +38604,7 @@ function GetAltDirection(_) {
   }
 }
 function ComputePlacement(_, _, _, _, _, _, _) {
-  let _ = _.innerWidth,
+  let _ = _.document.documentElement.clientWidth,
     _ = _.innerHeight,
     _ = 0,
     _ = 0,
@@ -60029,7 +60029,7 @@ var CAccountPrivacyCookiePreferences = class _
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -62026,16 +62026,15 @@ async function BRefreshLoginCookie() {
     return !1;
   }
 }
-function BCanSendMessageViaBrowserAPI(_) {
-  return BExposedToSite(_.rgBrowserAPISites, `stats`);
-}
 var CBrowserAPIInterface = class {
   m_ServiceTransport;
   m_AnonymousServiceTransport;
   m_fallbackInterface;
+  m_strSiteName;
   m_refreshLoginCookiePromise;
-  constructor(_) {
+  constructor(_, _ = `stats`) {
     ((this.m_fallbackInterface = _),
+      (this.m_strSiteName = _),
       (this.m_ServiceTransport = {
         SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
           bSendAuth: !0,
@@ -62056,7 +62055,7 @@ var CBrowserAPIInterface = class {
       }));
   }
   async SendMsgAndAwaitResponse(_, _, _, _, _) {
-    if (!BCanSendMessageViaBrowserAPI(_)) {
+    if (!this.BCanSendMessageViaBrowserAPI(_)) {
       if (this.m_fallbackInterface)
         return _.bSendAuth
           ? this.m_fallbackInterface?.GetServiceTransport().SendMsg(_, _, _, _)
@@ -62071,6 +62070,9 @@ var CBrowserAPIInterface = class {
       !(await this.BEnsureLoginCookieRefreshed())
       ? _.msgResult
       : (await this.SendMsgOnce(_, _, _, _, _)).msgResult;
+  }
+  BCanSendMessageViaBrowserAPI(_) {
+    return BExposedToSite(_.rgBrowserAPISites, this.m_strSiteName);
   }
   BEnsureLoginCookieRefreshed() {
     return (
@@ -62109,7 +62111,7 @@ var CBrowserAPIInterface = class {
     };
   }
   SendNotification(_, _, _, _) {
-    if (!BCanSendMessageViaBrowserAPI(_)) {
+    if (!this.BCanSendMessageViaBrowserAPI(_)) {
       if (this.m_fallbackInterface)
         return _.bSendAuth
           ? this.m_fallbackInterface
@@ -62202,12 +62204,11 @@ var CBrowserAPIInterface = class {
     return new Date(_ * 1e3);
   }
 };
-function GetSiteBaseURLs() {
-  return [Config$1.STATS_BASE_URL];
-}
 function WithSiteBrowserAPI(_) {
   let _ = GET_BASE_URL();
-  return _ && GetSiteBaseURLs().includes(_) ? new CBrowserAPIInterface(_) : _;
+  return _ && _ === Config$1.STORE_CHECKOUT_BASE_URL
+    ? new CBrowserAPIInterface(_, `checkout`)
+    : new CBrowserAPIInterface(_);
 }
 var k_unSecTokenExpiryRefreshBuffer = 900;
 function DecodeToken(_) {
@@ -62348,8 +62349,9 @@ var CWebAPIInterface = class {
       } catch {}
       let _ = _ === 401;
       if (!_) {
-        let _ = _ ? `Unauthorized` : void 0;
-        _ = this.CreateFailedMsgProtobuf(_, 3, _);
+        let _ = _ ? `Unauthorized` : void 0,
+          _ = _ === 429 ? 84 : 2;
+        _ = this.CreateFailedMsgProtobuf(_, 3, _, _);
       }
       return (
         _ &&
@@ -62414,10 +62416,10 @@ var CWebAPIInterface = class {
       if (!_ || _.length != 4) throw `Invalid service name: ${_}`;
       return `${this.m_strWebAPIBaseURL}I${_[1]}Service/${_[2]}/v${_[3]}`;
     }
-    CreateFailedMsgProtobuf(_, _, _) {
+    CreateFailedMsgProtobuf(_, _, _, _) {
       let _ = CProtoBufMsg.Init(_);
       return (
-        _.Hdr().set_eresult(2),
+        _.Hdr().set_eresult(_),
         _.Hdr().set_transport_error(_),
         _ && _.Hdr().set_error_message(_),
         _
@@ -62495,8 +62497,7 @@ var _ = `Dkzap317Nac-`,
     document.getElementById(`application_config`)
       ? InitConfig(`application_config`)
       : InitConfig();
-    let _ = GetConfigJSON(`support_oauth_token`, `application_config`),
-      _ = WithSiteBrowserAPI(new CWebAPIInterface(Config$1.WEBAPI_BASE_URL, _));
+    let _ = WithSiteBrowserAPI(new CWebAPIInterface(Config$1.WEBAPI_BASE_URL));
     (ErrorReportingStore().Init(`Support`, CLSTAMP, _.GetServiceTransport(), {
       fnGetReportTags: GetDefaultWebErrorReportingTags,
     }),

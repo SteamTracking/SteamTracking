@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { G as e, K as t, at as n } from "./chunk~01cfc309bf.js";
+import { G as e, W as t, it as n } from "./chunk~01cfc309bf.js";
 import {
   c as r,
   d as i,
@@ -22,9 +22,9 @@ import {
   N as _,
   P as v,
   S as y,
-  j as b,
-  oh as x,
-  tm as S,
+  Xp as b,
+  j as x,
+  th as S,
 } from "./main.js";
 var C = `get_reported_content`,
   w = `get_reported_content_by_id`,
@@ -44,7 +44,7 @@ function A(e, t) {
     queryKey: E(t),
     enabled: v(t),
     queryFn: async () => {
-      let n = x.Init(o);
+      let n = S.Init(o);
       n.Body().set_coordinates(c.fromObject(t));
       let r = await a.GetReportedContent(e, n);
       if (!r.BSuccess())
@@ -53,9 +53,9 @@ function A(e, t) {
     },
   };
 }
-function j(e) {
-  let n = S();
-  return t(A(n, e));
+function j(t) {
+  let n = b();
+  return e(A(n, t));
 }
 function M(e) {
   return { subject_type: 3, published_file_id: e };
@@ -68,7 +68,7 @@ function P(e, t, n = !1) {
     queryKey: [...D(t), n],
     enabled: !!t,
     queryFn: async () => {
-      let r = x.Init(f);
+      let r = S.Init(f);
       (r.Body().set_reported_content_id(t),
         n && r.Body().set_include_reporter_account_status(!0));
       let i = await a.GetReportedContentByID(e, r);
@@ -80,16 +80,16 @@ function P(e, t, n = !1) {
     },
   };
 }
-function F(e, n = !1) {
-  let r = S();
-  return t(P(r, e, n));
+function F(t, n = !1) {
+  let r = b();
+  return e(P(r, t, n));
 }
 function I(e, t) {
   return {
     queryKey: O(t),
     queryFn: async () => {
       if (!t) return;
-      let n = x.Init(l);
+      let n = S.Init(l);
       return (
         n.Body().set_reported_content_id(t),
         (await a.GetAuditLogByID(e, n)).Body().toObject()
@@ -97,27 +97,27 @@ function I(e, t) {
     },
   };
 }
-function L(e) {
-  let n = S();
-  return t(I(n, e));
+function L(t) {
+  let n = b();
+  return e(I(n, t));
 }
-function R(t) {
-  let r = S(),
+function R(e) {
+  let r = b(),
     i = n();
-  return e({
-    mutationFn: async (e) => {
-      let n = x.Init(m);
-      (n.Body().set_reported_content_id(t),
-        n.Body().set_new_level(e.eNewLevel),
-        e.eReason && n.Body().set_reason(e.eReason),
-        e.strNote && n.Body().set_note(e.strNote));
+  return t({
+    mutationFn: async (t) => {
+      let n = S.Init(m);
+      (n.Body().set_reported_content_id(e),
+        n.Body().set_new_level(t.eNewLevel),
+        t.eReason && n.Body().set_reason(t.eReason),
+        t.strNote && n.Body().set_note(t.strNote));
       let i = await a.EscalateSubjectByID(r, n);
       if (i.GetEResult() !== 1)
         throw Error(`Failed to escalate subject: ${i.GetEMsg()}`);
     },
     onSuccess: async () => {
       await Promise.all([
-        k(i, t),
+        k(i, e),
         i.invalidateQueries({ queryKey: [`get_claimed`] }),
         i.invalidateQueries({ queryKey: [`get_subject_overview`] }),
       ]);
@@ -125,13 +125,13 @@ function R(t) {
   });
 }
 function z() {
-  let t = S(),
+  let e = b(),
     r = n();
-  return e({
-    mutationFn: async (e) => {
-      let n = x.Init(s);
-      n.Body().set_reported_content_id(e.reportedContentID);
-      let r = await a.SustainModerationByID(t, n);
+  return t({
+    mutationFn: async (t) => {
+      let n = S.Init(s);
+      n.Body().set_reported_content_id(t.reportedContentID);
+      let r = await a.SustainModerationByID(e, n);
       if (!r.BSuccess()) throw Error(`EResult ` + r.GetEResult());
     },
     onSuccess: async (e, t) => {
@@ -140,57 +140,57 @@ function z() {
     },
   });
 }
-function B(t) {
+function B(e) {
   let i = n(),
-    o = S();
-  return e({
-    mutationKey: [`release_subject`, ...t],
+    o = b();
+  return t({
+    mutationKey: [`release_subject`, ...e],
     mutationFn: async () => {
-      let e = x.Init(r);
-      for (let n of t) {
-        let t = new d();
-        (t.set_reported_content_id(n), e.Body().add_subjects_to_release(t));
+      let t = S.Init(r);
+      for (let n of e) {
+        let e = new d();
+        (e.set_reported_content_id(n), t.Body().add_subjects_to_release(e));
       }
-      let n = await a.ReleaseSubjects(o, e);
+      let n = await a.ReleaseSubjects(o, t);
       if (!n.BSuccess()) throw Error(`EResult ` + n.GetEResult());
     },
     onSuccess: async () => {
       await Promise.all([
         i.invalidateQueries({ queryKey: [`get_claimed`] }),
         i.invalidateQueries({ queryKey: [`get_subject_overview`] }),
-        ...t.map((e) => k(i, e)),
+        ...e.map((e) => k(i, e)),
       ]);
     },
   });
 }
-function V(t, r) {
-  let i = S(),
+function V(e, r) {
+  let i = b(),
     o = n();
-  return e({
+  return t({
     mutationFn: async () => {
-      let e = x.Init(p);
-      (e.Body().set_reported_content_id(t), e.Body().set_details(r));
-      let n = await a.OwnerDisputeModeration(i, e);
+      let t = S.Init(p);
+      (t.Body().set_reported_content_id(e), t.Body().set_details(r));
+      let n = await a.OwnerDisputeModeration(i, t);
       if (!n.BSuccess()) throw Error(`EResult ` + n.GetEResult());
     },
     onSuccess: async () => {
-      await k(o, t);
+      await k(o, e);
     },
   });
 }
-function H(t, r) {
+function H(e, r) {
   let o = n(),
-    s = S();
-  return e({
+    s = b();
+  return t({
     mutationFn: async () => {
-      let e = x.Init(i);
-      (e.Body().set_reported_content_id(t),
-        e.Body().set_owner_dispute_details(r));
-      let n = await a.UpdateSubjectByID(s, e);
+      let t = S.Init(i);
+      (t.Body().set_reported_content_id(e),
+        t.Body().set_owner_dispute_details(r));
+      let n = await a.UpdateSubjectByID(s, t);
       if (!n.BSuccess()) throw Error(`EResult ` + n.GetEResult());
     },
     onSuccess: async () => {
-      await k(o, t);
+      await k(o, e);
     },
   });
 }
@@ -198,7 +198,7 @@ function U(e, t) {
   return {
     queryKey: [`reporterstats`, t],
     queryFn: async () => {
-      let n = x.Init(u);
+      let n = S.Init(u);
       n.Body().set_steamid(t);
       let r = await a.GetReporterStats(e, n);
       if (!r.BSuccess()) throw Error(`EResult ` + r.GetEResult());
@@ -206,26 +206,26 @@ function U(e, t) {
     },
   };
 }
-function W(e) {
-  let n = S();
-  return t(U(n, e));
+function W(t) {
+  let n = b();
+  return e(U(n, t));
 }
-function G(t, r, i) {
-  let a = S(),
+function G(e, r, i) {
+  let a = b(),
     o = n();
-  return e({
-    mutationFn: async (e) => {
-      let n = x.Init(h);
-      (n.Body().set_steamid(t),
+  return t({
+    mutationFn: async (t) => {
+      let n = S.Init(h);
+      (n.Body().set_steamid(e),
         n.Body().set_comment_thread_id(r),
         n.Body().set_gidcomment(i),
-        n.Body().set_reason(e.reason),
-        n.Body().set_note(e.message));
-      for (let t of e.sanctions) {
-        let e = new b();
-        (e.set_sanction(t.sanction),
-          t.days && e.set_days(t.days),
-          n.Body().add_sanctions(e));
+        n.Body().set_reason(t.reason),
+        n.Body().set_note(t.message));
+      for (let e of t.sanctions) {
+        let t = new x();
+        (t.set_sanction(e.sanction),
+          e.days && t.set_days(e.days),
+          n.Body().add_sanctions(t));
       }
       let o = await _.SanctionComment(a, n);
       if (!o.BSuccess())
@@ -238,18 +238,18 @@ function G(t, r, i) {
     },
   });
 }
-function K(t, r, i) {
-  let a = S(),
+function K(e, r, i) {
+  let a = b(),
     o = n();
-  return e({
+  return t({
     mutationFn: async () => {
-      let e = x.Init(y);
-      (e.Body().set_steamid(t),
-        e.Body().set_comment_thread_id(r),
-        e.Body().set_gidcomment(i),
-        e.Body().set_report_action(1),
-        e.Body().set_resolve(!0),
-        await g.UpdateCommentReportState(a, e));
+      let t = S.Init(y);
+      (t.Body().set_steamid(e),
+        t.Body().set_comment_thread_id(r),
+        t.Body().set_gidcomment(i),
+        t.Body().set_report_action(1),
+        t.Body().set_resolve(!0),
+        await g.UpdateCommentReportState(a, t));
     },
     onSuccess: async () => {
       await o.invalidateQueries({ queryKey: [`get_claimed`] });

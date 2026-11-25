@@ -2,10 +2,10 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { F as t, L as n, Lt as r, ft as i } from "./chunk~01cfc309bf.js";
-import { al as a } from "./main.js";
+import { I as t, It as n, P as r, dt as i } from "./chunk~01cfc309bf.js";
+import { ol as a } from "./main.js";
 import { n as o, r as s } from "./chunk~5d95ff6b7f.js";
-var c = e(r()),
+var c = e(n()),
   l = i(),
   u = class extends c.Component {
     state = { bIsLoading: !0 };
@@ -16,14 +16,14 @@ var c = e(r()),
       return this.state.bIsLoading
         ? null
         : (0, l.jsx)(a, {
-            children: (0, l.jsxs)(n, {
+            children: (0, l.jsxs)(t, {
               children: [
-                (0, l.jsx)(t, {
+                (0, l.jsx)(r, {
                   exact: !0,
                   path: `/:prefix(curator|pub|publisher|dev|developer|franchise)/:curatorVanity/admin/manage_rss`,
                   component: o,
                 }),
-                (0, l.jsx)(t, { children: !1 }),
+                (0, l.jsx)(r, { children: !1 }),
               ],
             }),
           });

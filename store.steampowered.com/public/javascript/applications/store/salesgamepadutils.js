@@ -1,34 +1,33 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { Is as e, ks as t, nr as n } from "./chunk~6b8ddcaac8.js";
-import { t as r } from "./chunk~4c13037b22.js";
-import { p as i } from "./chunk~4eed35ad1f.js";
+import { S as e, g as t, h as n, k as r } from "./chunk~4eed35ad1f.js";
+import { t as i } from "./chunk~4c13037b22.js";
 import {
-  $b as a,
-  Fb as o,
-  Qc as s,
-  Uv as c,
-  Wc as l,
-  Wu as u,
-  ax as d,
-  id as f,
-  rn as p,
-  sS as m,
+  $c as a,
+  Gc as o,
+  Gu as s,
+  Ib as c,
+  Wv as l,
+  ad as u,
+  ex as d,
+  lS as f,
+  ox as p,
+  rn as m,
 } from "./main.js";
-function h(e, t, i, a, c, d) {
-  if (!i) return;
+function h(e, t, r, l, u, d) {
+  if (!r) return;
   if (!n(e.item_type)) {
-    m(!1, `StoreItemWidgetSalePageAction: unexpected type: ` + e.item_type);
+    f(!1, `StoreItemWidgetSalePageAction: unexpected type: ` + e.item_type);
     return;
   }
-  let f = l(`${r(e, a)}${c ? `?${c}` : ``}`, t);
+  let p = o(`${i(e, l)}${u ? `?${u}` : ``}`, t);
   return {
     onClick: (e) => {
-      let t = u(e) || window;
-      d ? d(e) : f.startsWith(`steam://`) || (t.location.href = s(f));
+      let t = s(e) || window;
+      d ? d(e) : p.startsWith(`steam://`) || (t.location.href = a(p));
     },
-    onOKActionDescription: o.Localize(`#Sale_Gamepad_Action_Select`),
+    onOKActionDescription: c.Localize(`#Sale_Gamepad_Action_Select`),
   };
 }
 function g(e) {
@@ -44,20 +43,20 @@ function g(e) {
     }
 }
 function _(n) {
-  let r = a(),
-    { data: s } = c(r ? n : void 0),
-    l = g(s),
-    u = !!p(l),
-    { bIsOwned: m } = t(e(l)),
-    h = f(),
-    { mutate: _ } = i(l, !u, h),
-    v = !!m && s?.type != 10;
-  return !r || !d.logged_in || !l || v
+  let i = d(),
+    { data: a } = l(i ? n : void 0),
+    o = g(a),
+    s = !!m(o),
+    { bIsOwned: f } = e(r(o)),
+    h = u(),
+    { mutate: _ } = t(o, !s, h),
+    v = !!f && a?.type != 10;
+  return !i || !p.logged_in || !o || v
     ? {}
     : {
         onOptionsButton: () => _(),
-        onOptionsActionDescription: o.Localize(
-          u ? `#Sale_RemoveFromWishlist` : `#Sale_AddToWishlist`,
+        onOptionsActionDescription: c.Localize(
+          s ? `#Sale_RemoveFromWishlist` : `#Sale_AddToWishlist`,
         ),
       };
 }

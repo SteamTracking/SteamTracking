@@ -4,26 +4,26 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import {
   At as t,
-  Ct as n,
-  Lt as r,
-  jt as i,
-  kt as a,
-  tt as o,
-  u as s,
+  It as n,
+  Ot as r,
+  St as i,
+  et as a,
+  kt as o,
+  l as s,
 } from "./chunk~01cfc309bf.js";
 import {
-  Kb as c,
-  Pl as l,
-  Qx as u,
-  Zx as d,
-  _x as f,
-  cx as p,
+  $x as c,
+  Fl as l,
+  eS as u,
+  lx as d,
+  qb as f,
+  vx as p,
 } from "./main.js";
-var m = e(o()),
-  h = e(r()),
+var m = e(a()),
+  h = e(n()),
   g = class e {
     constructor() {
-      a(this);
+      r(this);
     }
     giveaway_id = void 0;
     seconds_until_drawing = void 0;
@@ -54,15 +54,15 @@ var m = e(o()),
       );
     }
   };
-(c([t], g.prototype, `giveaway_id`, void 0),
-  c([t], g.prototype, `seconds_until_drawing`, void 0),
-  c([t], g.prototype, `rtime_start`, void 0),
-  c([t], g.prototype, `rtime_end`, void 0),
-  c([t], g.prototype, `closed`, void 0),
-  c([t], g.prototype, `winner_count`, void 0));
+(f([o], g.prototype, `giveaway_id`, void 0),
+  f([o], g.prototype, `seconds_until_drawing`, void 0),
+  f([o], g.prototype, `rtime_start`, void 0),
+  f([o], g.prototype, `rtime_end`, void 0),
+  f([o], g.prototype, `closed`, void 0),
+  f([o], g.prototype, `winner_count`, void 0));
 var _ = class e {
   constructor() {
-    a(this);
+    r(this);
   }
   m_mapGiveawayIDToNextDrawInfo = new Map();
   m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map();
@@ -77,7 +77,7 @@ var _ = class e {
   GetNextDrawChangeCallback(e) {
     let t = this.m_mapNextDrawChangeCallback.get(e);
     return (
-      t || ((t = new d()), this.m_mapNextDrawChangeCallback.set(e, t)), t
+      t || ((t = new c()), this.m_mapNextDrawChangeCallback.set(e, t)), t
     );
   }
   CopyToGiveaway(e, t) {
@@ -89,26 +89,26 @@ var _ = class e {
       t.seconds_until_drawing != e.seconds_until_drawing &&
         (t.seconds_until_drawing = e.seconds_until_drawing));
   }
-  async ReloadGiveaway(e, t) {
+  async ReloadGiveaway(e, n) {
     if (!e) return null;
-    let n = f.STORE_BASE_URL + `prizes/nextdraw/` + e,
-      r = { origin: self.origin },
-      a = await m.default.get(n, { params: r }),
-      o = i(() => {
-        let n = this.m_mapGiveawayIDToNextDrawInfo.get(e);
+    let r = p.STORE_BASE_URL + `prizes/nextdraw/` + e,
+      i = { origin: self.origin },
+      a = await m.default.get(r, { params: i }),
+      o = t(() => {
+        let t = this.m_mapGiveawayIDToNextDrawInfo.get(e);
         if (
-          (n || ((n = new g()), this.m_mapGiveawayIDToNextDrawInfo.set(e, n)),
-          this.CopyToGiveaway(a.data, n),
-          t !== void 0)
+          (t || ((t = new g()), this.m_mapGiveawayIDToNextDrawInfo.set(e, t)),
+          this.CopyToGiveaway(a.data, t),
+          n !== void 0)
         ) {
-          let n = this.GetKey(e, t),
-            r = this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(n);
+          let t = this.GetKey(e, n),
+            r = this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(t);
           (r ||
             ((r = new g()),
-            this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(n, r)),
+            this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(t, r)),
             this.CopyToGiveaway(a.data, r));
         }
-        return n;
+        return t;
       });
     return (this.GetNextDrawChangeCallback(e).Dispatch(o), o);
   }
@@ -121,7 +121,7 @@ var _ = class e {
   }
   Init() {
     if (!this.m_bLoadedFromConfig) {
-      let e = p(`giveawaynextdraw`, `application_config`);
+      let e = d(`giveawaynextdraw`, `application_config`);
       if (e && e.giveaway_id) {
         let t = new g();
         (this.CopyToGiveaway(e, t),
@@ -131,8 +131,8 @@ var _ = class e {
     }
   }
 };
-(c([t], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
-  c([n], _.prototype, `CopyToGiveaway`, null));
+(f([o], _.prototype, `m_mapGiveawayIDToNextDrawInfo`, void 0),
+  f([i], _.prototype, `CopyToGiveaway`, null));
 var v = class e {
   m_intervalID;
   m_intervalCountDownID;
@@ -165,10 +165,10 @@ var v = class e {
       (this.m_intervalCountDownID = window.setInterval(t, 1e3));
   }
 };
-(c([u], v.prototype, `ClearRefreshInterval`, null),
-  c([u], v.prototype, `ClearCountDown`, null),
-  c([u], v.prototype, `SetupRefreshDataInterval`, null),
-  c([u], v.prototype, `SetupCountDown`, null));
+(f([u], v.prototype, `ClearRefreshInterval`, null),
+  f([u], v.prototype, `ClearCountDown`, null),
+  f([u], v.prototype, `SetupRefreshDataInterval`, null),
+  f([u], v.prototype, `SetupCountDown`, null));
 function y(e, t) {
   let n = _.Get().GetInfoByInstance(e, t.m_myInstanceNumber);
   n &&

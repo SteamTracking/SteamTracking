@@ -29,8 +29,8 @@ const __vite__mapDeps = (
       "../../../css/applications/community/chunk~42ec0f569d.css",
       "./chunk~3056eb587a.js",
       "./chunk~35b0bf48ef.js",
-      "./chunk~cc40f6af5e.js",
       "./chunk~3f4314f3b4.js",
+      "./chunk~cc40f6af5e.js",
       "./chunk~437071091c.js",
       "./chunk~75db1bf948.js",
       "../../../css/applications/community/chunk~12fdcf9214.css",
@@ -64,15 +64,12 @@ const __vite__mapDeps = (
       "./chunk~6e8a72cfb5.js",
       "./chunk~e625c3ac3e.js",
       "../../../css/applications/community/chunk~ad91017565.css",
-      "../../../css/applications/community/chunk~505ee6152f.css",
       "./chunk~5412a9f1de.js",
       "../../../css/applications/community/chunk~68fae779af.css",
+      "./chunk~018ae802ee.js",
+      "../../../css/applications/community/chunk~bd1005d448.css",
       "./chunk~91ffd0567f.js",
       "./chunk~c17e16859d.js",
-      "./chunk~018ae802ee.js",
-      "./chunk~16aefcf65f.js",
-      "../../../css/applications/community/chunk~65c4848332.css",
-      "../../../css/applications/community/chunk~bd1005d448.css",
       "./chunk~91ae5e1167.js",
       "./chunk~d382bdf2cf.js",
       "../../../css/applications/community/chunk~3360c4795c.css",
@@ -85,8 +82,6 @@ const __vite__mapDeps = (
       "../../../css/applications/community/chunk~01477faa052.css",
       "./chunk~b986e50637.js",
       "./chunk~10c934b72c.js",
-      "./chunk~4239b66179.js",
-      "../../../css/applications/community/chunk~4ea55b4917.css",
       "./chunk~6c2bf73948.js",
       "../../../css/applications/community/chunk~64876e5ad6.css",
       "./chunk~bdc7e21194.js",
@@ -155,16 +150,12 @@ const __vite__mapDeps = (
       "../../../css/applications/community/chunk~a5ef2be4d8.css",
       "./chunk~0cfd989355.js",
       "../../../css/applications/community/chunk~0cfd989355.css",
-      "./chunk~6b2e92847b.js",
-      "./chunk~e8ef2e6942.js",
-      "./chunk~93195fc4a9.js",
-      "../../../css/applications/community/chunk~142e655cd6.css",
-      "../../../css/applications/community/chunk~e6a35d8a25.css",
-      "./chunk~1136f5743b.js",
       "./chunk~8dc488a70b.js",
       "./chunk~bb87983663.js",
       "../../../css/applications/community/chunk~ed7f2451e5.css",
       "./chunk~735ee4eaca.js",
+      "./chunk~93195fc4a9.js",
+      "../../../css/applications/community/chunk~142e655cd6.css",
       "../../../css/applications/community/chunk~735ee4eaca.css",
       "./chunk~6183326f73.js",
       "../../../css/applications/community/chunk~6183326f73.css",
@@ -190,7 +181,6 @@ const __vite__mapDeps = (
 ) => _.map((_) => _[_]);
 import { _, _ } from "./chunk~f025431ab0.js";
 import {
-  _,
   _,
   _,
   _,
@@ -1799,6 +1789,363 @@ var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       (super(),
+        _.prototype.gid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [9], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            gid: {
+              _: 1,
+              _: _.readUint64String,
+              _: _.writeUint64String,
+            },
+            clanid: {
+              _: 2,
+              _: _.readUint64String,
+              _: _.writeUint64String,
+            },
+            posterid: {
+              _: 3,
+              _: _.readUint64String,
+              _: _.writeUint64String,
+            },
+            headline: {
+              _: 4,
+              _: _.readString,
+              _: _.writeString,
+            },
+            posttime: {
+              _: 5,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            updatetime: {
+              _: 6,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            body: {
+              _: 7,
+              _: _.readString,
+              _: _.writeString,
+            },
+            commentcount: {
+              _: 8,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            tags: {
+              _: 9,
+              _: !0,
+              _: !0,
+              _: _.readString,
+              _: _.writeRepeatedString,
+            },
+            language: {
+              _: 10,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            hidden: {
+              _: 11,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            forum_topic_id: {
+              _: 12,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            event_gid: {
+              _: 13,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            voteupcount: {
+              _: 14,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            votedowncount: {
+              _: 15,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            ban_check_result: {
+              _: 16,
+              _: _.readEnum,
+              _: _.writeEnum,
+            },
+            banned: {
+              _: 17,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CCommunity_ClanAnnouncementInfo`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
+        _.prototype.gid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [28], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (_.sm_m ||= {
+          proto: _,
+          fields: {
+            gid: {
+              _: 1,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            clan_steamid: {
+              _: 2,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            event_name: {
+              _: 3,
+              _: _.readString,
+              _: _.writeString,
+            },
+            event_type: {
+              _: 4,
+              _: _.readEnum,
+              _: _.writeEnum,
+            },
+            appid: {
+              _: 5,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            server_address: {
+              _: 6,
+              _: _.readString,
+              _: _.writeString,
+            },
+            server_password: {
+              _: 7,
+              _: _.readString,
+              _: _.writeString,
+            },
+            rtime32_start_time: {
+              _: 8,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            rtime32_end_time: {
+              _: 9,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            comment_count: {
+              _: 10,
+              _: _.readInt32,
+              _: _.writeInt32,
+            },
+            creator_steamid: {
+              _: 11,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            last_update_steamid: {
+              _: 12,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            event_notes: {
+              _: 13,
+              _: _.readString,
+              _: _.writeString,
+            },
+            jsondata: {
+              _: 14,
+              _: _.readString,
+              _: _.writeString,
+            },
+            announcement_body: {
+              _: 15,
+              _: _,
+            },
+            published: {
+              _: 16,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            hidden: {
+              _: 17,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            rtime32_visibility_start: {
+              _: 18,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            rtime32_visibility_end: {
+              _: 19,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            broadcaster_accountid: {
+              _: 20,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            follower_count: {
+              _: 21,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            ignore_count: {
+              _: 22,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            forum_topic_id: {
+              _: 23,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            rtime32_last_modified: {
+              _: 24,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            news_post_gid: {
+              _: 25,
+              _: _.readFixed64String,
+              _: _.writeFixed64String,
+            },
+            rtime_mod_reviewed: {
+              _: 26,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            featured_app_tagid: {
+              _: 27,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            referenced_appids: {
+              _: 28,
+              _: !0,
+              _: !0,
+              _: _.readUint32,
+              pbr: _.readPackedUint32,
+              _: _.writeRepeatedUint32,
+            },
+            build_id: {
+              _: 29,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+            build_branch: {
+              _: 30,
+              _: _.readString,
+              _: _.writeString,
+            },
+            unlisted: {
+              _: 31,
+              _: _.readBool,
+              _: _.writeBool,
+            },
+            rtime_created: {
+              _: 32,
+              _: _.readUint32,
+              _: _.writeUint32,
+            },
+          },
+        }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return ((_.sm_mbf ||= _(_._())), _.sm_mbf);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBuffer());
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.BinaryWriter();
+      return (_.serializeBinaryToWriter(this, _), _.getResultBase64String());
+    }
+    getClassName() {
+      return `CClanEventData`;
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      (super(),
         _.prototype.packageid || _(_._()),
         _.Message.initialize(this, _, 0, -1, void 0, null));
     }
@@ -2166,6 +2513,11 @@ var _ = class _ extends _.Message {
               _: 20,
               _: _.readBool,
               _: _.writeBool,
+            },
+            screen_refresh_rate: {
+              _: 21,
+              _: _.readUint32,
+              _: _.writeUint32,
             },
           },
         }),
@@ -4578,7 +4930,7 @@ var _ = class _ extends _.Message {
     return _.SendNotification(`ClientMetrics.ReportReactUsage#1`, _(_, _), {
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ReportReactUsage = _;
@@ -8446,11 +8798,6 @@ var _ = class _ extends _.Message {
               _: !1,
               _: _.readBool,
               _: _.writeBool,
-            },
-            price_to_base_discount_on: {
-              _: 53,
-              _: _.readInt64String,
-              _: _.writeInt64String,
             },
             free_with_master_sub_appid: {
               _: 54,
@@ -13773,7 +14120,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetItems = _;
@@ -13790,7 +14137,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetContentHubConfig = _;
@@ -13799,7 +14146,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetPriceStops = _;
@@ -13815,7 +14162,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetDLCForAppsSolr = _;
@@ -13824,7 +14171,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetHardwareItems = _;
@@ -14477,7 +14824,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`AccountPrivacy.GetCookiePreferences#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCookiePreferences = _;
@@ -14689,8 +15036,9 @@ var _ = class {
       } catch {}
       let _ = _ === 401;
       if (!_) {
-        let _ = _ ? `Unauthorized` : void 0;
-        _ = this.CreateFailedMsgProtobuf(_, 3, _);
+        let _ = _ ? `Unauthorized` : void 0,
+          _ = _ === 429 ? 84 : 2;
+        _ = this.CreateFailedMsgProtobuf(_, 3, _, _);
       }
       return (
         _ &&
@@ -14755,10 +15103,10 @@ var _ = class {
       if (!_ || _.length != 4) throw `Invalid service name: ${_}`;
       return `${this.m_strWebAPIBaseURL}I${_[1]}Service/${_[2]}/v${_[3]}`;
     }
-    CreateFailedMsgProtobuf(_, _, _) {
+    CreateFailedMsgProtobuf(_, _, _, _) {
       let _ = _.Init(_);
       return (
-        _.Hdr().set_eresult(2),
+        _.Hdr().set_eresult(_),
         _.Hdr().set_transport_error(_),
         _ && _.Hdr().set_error_message(_),
         _
@@ -17565,7 +17913,7 @@ var _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.Query = _;
@@ -17574,7 +17922,7 @@ var _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SearchSuggestions = _;
@@ -17594,7 +17942,7 @@ var _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -17615,7 +17963,7 @@ var _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
     return _.SendMsg(`StoreQuery.GetSaleBrowserItems#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 0,
-      rgBrowserAPISites: [`store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetSaleBrowserItems = _;
@@ -17910,7 +18258,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`PartnerStoreBrowse.GetItems#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`partner`, `community`, `store`, `support`, `help`],
     });
   }
   _.GetItems = _;
@@ -18184,26 +18532,26 @@ function _(_, _, _, _, _ = !1) {
       if (_ && !_.BSuccess())
         throw `Error loading store items: ${_.GetErrorMessage()}`;
       let _ = new Map();
-      return (
-        _.Body()
-          .store_items()
-          .forEach((_, _) => {
-            let _ = _.item_type(),
-              _ = _ === void 0 ? _[_] : _(_, _.gid() ?? _._());
-            _ && _.set(_, _);
-          }),
-        _ && _(_, _, _, _.included_item_data_request, _),
-        _.map((_) => {
-          let [_] = _(_, `|`),
-            _ = _.get(_);
-          return _
-            ? _.toObject()
-            : {
-                ..._(_),
-                success: 2,
-              };
-        })
-      );
+      (_.Body()
+        .store_items()
+        .forEach((_, _) => {
+          let _ = _.item_type(),
+            _ = _ === void 0 ? _[_] : _(_, _.gid() ?? _._());
+          _ && _.set(_, _);
+        }),
+        _ && _(_, _, _, _.included_item_data_request, _));
+      let _ = new Map();
+      return _.map((_) => {
+        let [_] = _(_, `|`),
+          _ = _.get(_);
+        if (!_)
+          return {
+            ..._(_),
+            success: 2,
+          };
+        let _ = _.get(_);
+        return (_ || ((_ = _.toObject()), _.set(_, _)), _);
+      });
     },
     {
       maxBatchSize: 500,
@@ -18974,16 +19322,15 @@ async function _() {
     return !1;
   }
 }
-function _(_) {
-  return _(_.rgBrowserAPISites, `community`);
-}
 var _ = class {
     m_ServiceTransport;
     m_AnonymousServiceTransport;
     m_fallbackInterface;
+    m_strSiteName;
     m_refreshLoginCookiePromise;
-    constructor(_) {
+    constructor(_, _ = `community`) {
       ((this.m_fallbackInterface = _),
+        (this.m_strSiteName = _),
         (this.m_ServiceTransport = {
           SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
             bSendAuth: !0,
@@ -19004,7 +19351,7 @@ var _ = class {
         }));
     }
     async SendMsgAndAwaitResponse(_, _, _, _, _) {
-      if (!_(_)) {
+      if (!this.BCanSendMessageViaBrowserAPI(_)) {
         if (this.m_fallbackInterface)
           return _.bSendAuth
             ? this.m_fallbackInterface
@@ -19021,6 +19368,9 @@ var _ = class {
         !(await this.BEnsureLoginCookieRefreshed())
         ? _.msgResult
         : (await this.SendMsgOnce(_, _, _, _, _)).msgResult;
+    }
+    BCanSendMessageViaBrowserAPI(_) {
+      return _(_.rgBrowserAPISites, this.m_strSiteName);
     }
     BEnsureLoginCookieRefreshed() {
       return (
@@ -19057,7 +19407,7 @@ var _ = class {
       };
     }
     SendNotification(_, _, _, _) {
-      if (!_(_)) {
+      if (!this.BCanSendMessageViaBrowserAPI(_)) {
         if (this.m_fallbackInterface)
           return _.bSendAuth
             ? this.m_fallbackInterface
@@ -19275,12 +19625,9 @@ function _() {
 function _() {
   return `community`;
 }
-function _() {
-  return [_.COMMUNITY_BASE_URL, _.STEAMTV_BASE_URL];
-}
 function _(_) {
   let _ = _();
-  return _ && _().includes(_) ? new _(_) : _;
+  return _ && _ === _.STORE_CHECKOUT_BASE_URL ? new _(_, `checkout`) : new _(_);
 }
 function _() {}
 var _ = _(_());
@@ -22285,7 +22632,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -22311,7 +22658,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -22324,7 +22671,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -22344,7 +22691,7 @@ var _ = class _ extends _.Message {
   function _(_, _) {
     return _.SendNotification(`MarketingMessages.MarkMessageSeen#1`, _(_, _), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.MarkMessageSeen = _;
@@ -22354,7 +22701,7 @@ var _ = class _ extends _.Message {
       _(_, _),
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -40157,7 +40504,7 @@ function _(_) {
   }
 }
 function _(_, _, _, _, _, _, _) {
-  let _ = _.innerWidth,
+  let _ = _.document.documentElement.clientWidth,
     _ = _.innerHeight,
     _,
     _,
@@ -51667,14 +52014,14 @@ var _ = `xjtNhvHDYvs-`,
   function _(_, _, _) {
     return _.SendMsg(`Parental.EnableParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.EnableParentalSettings = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.DisableParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.DisableParentalSettings = _;
@@ -51696,14 +52043,14 @@ var _ = `xjtNhvHDYvs-`,
   function _(_, _, _) {
     return _.SendMsg(`Parental.SetParentalSettings#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetParentalSettings = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ValidateToken#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ValidateToken = _;
@@ -51728,28 +52075,28 @@ var _ = `xjtNhvHDYvs-`,
   function _(_, _, _) {
     return _.SendMsg(`Parental.RequestFeatureAccess#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.RequestFeatureAccess = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ApproveFeatureAccess#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ApproveFeatureAccess = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.RequestPlaytime#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.RequestPlaytime = _;
   function _(_, _, _) {
     return _.SendMsg(`Parental.ApprovePlaytime#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.ApprovePlaytime = _;
@@ -51757,7 +52104,7 @@ var _ = `xjtNhvHDYvs-`,
     return _.SendMsg(`Parental.GetRequests#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetRequests = _;
@@ -63045,7 +63392,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -63055,7 +63402,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetPlayerLinkDetails = _;
@@ -63076,7 +63423,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetOwnedGames = _;
@@ -63091,7 +63438,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Player.GetFriendsGameplayInfo#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFriendsGameplayInfo = _;
@@ -63113,7 +63460,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.SetProfileBackground#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetProfileBackground = _;
@@ -63128,7 +63475,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.SetMiniProfileBackground#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetMiniProfileBackground = _;
@@ -63143,7 +63490,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.SetAvatarFrame#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetAvatarFrame = _;
@@ -63158,7 +63505,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.SetAnimatedAvatar#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SetAnimatedAvatar = _;
@@ -63190,7 +63537,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetProfileItemsEquipped = _;
@@ -63213,7 +63560,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCommunityBadgeProgress = _;
@@ -63222,7 +63569,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetTopAchievementsForGames = _;
@@ -63230,7 +63577,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Player.GetAchievementsProgress#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`partner`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetAchievementsProgress = _;
@@ -63239,7 +63586,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetGameAchievements = _;
@@ -63248,7 +63595,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetUserAchievements = _;
@@ -63261,7 +63608,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -63359,7 +63706,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.PostStatusToFriends#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.PostStatusToFriends = _;
@@ -63402,7 +63749,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Player.GetNicknameList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetNicknameList = _;
@@ -63440,7 +63787,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.GetCommunityPreferences#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetCommunityPreferences = _;
@@ -63453,7 +63800,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Player.GetTextFilterWords#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetTextFilterWords = _;
@@ -64730,6 +65077,17 @@ var _ = {
   greatonframe: 100804,
   salesmartsale_events_only: 100805,
   salesmartdiscountreason: 100806,
+  "salesmartdiscountreason-wishlist": 100807,
+  "salesmartdiscountreason-firsttimeonsale": 100808,
+  "salesmartdiscountreason-largestdiscount": 100809,
+  "salesmartdiscountreason-endingsoon": 100810,
+  "salesmartdiscountreason-newlyonsale": 100811,
+  "salesmartdiscountreason-wellreviewed": 100812,
+  "salesmartdiscountreason-topseller": 100813,
+  "salesmartdiscountreason-hotdeal": 100814,
+  "salesmartdiscountreason-deepdiscount": 100815,
+  "salesmartdiscountreason-popularinregion": 100816,
+  "salesmartdiscountreason-justupdated": 100817,
 };
 function _(_) {
   return _ in _;
@@ -65269,6 +65627,7 @@ var _ = `Rzkafwfsmqs-`,
   _ = `UeK7easohwQ-`,
   _ = `R-Oc7EZNA2k-`,
   _ = `Pb0e9y8A1NQ-`,
+  _ = `I8KIyXU8ZWk-`,
   _ = `fUnUYx6wf8w-`,
   _ = `uiOOvMqXACw-`,
   _ = `OeL3uQRIdtI-`,
@@ -66888,93 +67247,6 @@ function _(_) {
   return _ ?? _;
 }
 var _ = _({
-    Handle: () => _,
-    Root: () => _,
-    "Size-1": () => _,
-    "Size-2": () => _,
-    "Size-3": () => _,
-    Track: () => _,
-    default: () => _,
-  }),
-  _ = `d-BLqkeCLbk-`,
-  _ = `_7hcdKp0UbyA-`,
-  _ = `MAUEgPZQNE8-`,
-  _ = `brbpWizcZX0-`,
-  _ = `Ehgs1xAPJUY-`,
-  _ = `BiPJnzSoYb4-`,
-  _ = {
-    Root: _,
-    "Size-1": `_7hcdKp0UbyA-`,
-    "Size-2": `MAUEgPZQNE8-`,
-    "Size-3": `brbpWizcZX0-`,
-    Track: _,
-    Handle: _,
-  };
-function _(_) {
-  return (0, _.jsxs)(_.Root, {
-    ..._,
-    children: [(0, _.jsx)(_.Track, {}), (0, _.jsx)(_.Handle, {})],
-  });
-}
-function _(_) {
-  let {
-      value: _,
-      onChange: _,
-      size: _,
-      color: _,
-      ref: _,
-      children: _,
-      ..._
-    } = _,
-    _ = _(_);
-  return (0, _.jsx)(_, {
-    ref: _,
-    role: `switch`,
-    "aria-checked": !!_,
-    onClick: () => _(!_),
-    onKeyDown: (_) => {
-      (_.key === ` ` || _.key === `Enter`) &&
-        (_(!_), _.preventDefault(), _.stopPropagation());
-    },
-    tabIndex: 0,
-    "data-accent-color": _,
-    ..._(
-      {
-        ..._,
-        size: _,
-        className: _,
-      },
-      _,
-    ),
-    children: _,
-  });
-}
-function _(_) {
-  return (0, _.jsx)(`div`, {
-    className: _,
-    ..._,
-  });
-}
-function _(_) {
-  return (0, _.jsx)(`div`, {
-    className: _,
-    ..._,
-  });
-}
-var _ = Object.assign(_, {
-    Root: _,
-    Track: _,
-    Handle: _,
-  }),
-  _ = [
-    ..._,
-    {
-      prop: `size`,
-      className: (_) => _[`Size-${_}`],
-      responsive: !0,
-    },
-  ],
-  _ = _({
     Button: () => _,
     Icon: () => _,
     MinWidth: () => _,
@@ -68567,39 +68839,6 @@ function _(_) {
               )
   );
 }
-function _(_, _) {
-  let _ = _.toLowerCase().replace(/[^\p{L}\p{N}\p{Z}]/gu, ``),
-    _ = _[_];
-  return (_ && (_ = _.replace(_, ``)), _.trim());
-}
-function _(_, _) {
-  let _ = _().languages[0].strLanguage,
-    _ = _.map((_) => ({
-      item: _,
-      strSort: _(_ ? _(_) : _, _),
-    })),
-    _ = new Intl.Collator(_(), {
-      numeric: !0,
-    });
-  return (
-    _.sort((_, _) => _.compare(_.strSort, _.strSort)), _.map(({ item: _ }) => _)
-  );
-}
-var _ = {
-  english: /^(the |a |an )/,
-  brazilian: /^(o |os |a |as |um |uns |uma |umas )/,
-  danish: /^(en |et |den |det |de )/,
-  dutch: /^(de |het |een )/,
-  french: /^(le |la |l'|les |un |une |des )/,
-  german: /^(der |die |das |ein |eine )/,
-  greek: /^(ο |η |το |οι |τα |ένας |μια |μία |ένα )/,
-  hungarian: /^(a |az |egy )/,
-  italian: /^(il |lo |la |l'|i |gli |le |un |uno |una |un')/,
-  portuguese: /^(o |a |os |as |um |uma |uns |umas )/,
-  romanian: /^(un |o |unii |unele )/,
-  spanish: /^(el |la |los |las |un |una |unos |unas )/,
-  latam: /^(el |la |los |las |un |una |unos |unas )/,
-};
 function _() {
   return _().languages[0];
 }
@@ -70915,6 +71154,7 @@ var _ = _(_),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetTopicDetails = _;
@@ -71561,7 +71801,7 @@ function _(_) {
     case 0:
       return _.Localize(`#moderation_resolutionstatus_pending`);
     case 1:
-      return _.Localize(`#moderation_resolutionstatus_acquitted`);
+      return _.Localize(`#moderationaction_acquitted`);
     case 14:
       return _.Localize(`#moderation_resolutionstatus_sanctioned`);
     case 2:
@@ -76872,7 +77112,7 @@ var _ = class _ extends _.Message {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetApps = _;
@@ -76885,7 +77125,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -76902,6 +77142,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Community.GetComment#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetComment = _;
@@ -76947,7 +77188,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Community.RateClanAnnouncement#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.RateClanAnnouncement = _;
@@ -76958,7 +77199,7 @@ var _ = class _ extends _.Message {
       _,
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -76967,7 +77208,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`Community.GetClanMetadata#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetClanMetadata = _;
@@ -77011,7 +77252,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Community.HideAndReportComment#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.HideAndReportComment = _;
@@ -77034,7 +77275,7 @@ var _ = class _ extends _.Message {
   function _(_, _, _) {
     return _.SendMsg(`Community.MarkPartnerEventsForUser#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.MarkPartnerEventsForUser = _;
@@ -91937,8 +92178,8 @@ var _ = _.lazy(() =>
         24, 1, 2, 25, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14, 31,
         32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 45, 46, 47,
         48, 49, 50, 51, 16, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64,
-        65, 66, 67, 68, 69, 70, 71, 18, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81,
-        82, 83, 84, 85, 86, 19, 20, 87, 88, 89, 90, 91, 92, 93, 94, 95,
+        65, 66, 67, 68, 18, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81,
+        19, 20, 82, 83, 84, 85, 86, 87, 88, 89, 90,
       ]),
       import.meta.url,
     ),
@@ -91947,12 +92188,11 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~3d19a4d13e.js`),
       __vite__mapDeps([
-        96, 1, 2, 25, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14, 31,
+        91, 1, 2, 25, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14, 31,
         32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 45, 46, 47,
         48, 49, 50, 51, 16, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64,
-        65, 66, 67, 68, 69, 70, 71, 18, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81,
-        82, 83, 84, 85, 86, 19, 20, 87, 88, 89, 90, 91, 92, 93, 94, 97, 98, 99,
-        100, 101, 102, 103, 104,
+        65, 66, 67, 68, 18, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81,
+        19, 20, 82, 83, 84, 85, 86, 87, 88, 89, 92, 93, 94, 95, 96, 97, 98, 99,
       ]),
       import.meta.url,
     ),
@@ -91961,11 +92201,11 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~b4379065c0.js`),
       __vite__mapDeps([
-        105, 1, 2, 25, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14,
+        100, 1, 2, 25, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14,
         31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 45, 46,
         47, 48, 49, 50, 51, 16, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
-        64, 65, 66, 67, 68, 69, 70, 71, 18, 72, 73, 74, 75, 76, 77, 78, 79, 80,
-        81, 82, 83, 84, 85, 86, 19, 20, 87, 88, 89, 90, 91, 92, 93, 94, 106,
+        64, 65, 66, 67, 68, 18, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+        81, 19, 20, 82, 83, 84, 85, 86, 87, 88, 89, 101,
       ]),
       import.meta.url,
     ),
@@ -91973,7 +92213,7 @@ var _ = _.lazy(() =>
   _ = _.lazy(() =>
     _(
       () => import(`./chunk~131fd42dd2.js`),
-      __vite__mapDeps([107, 1, 2, 19, 5, 6, 16, 20]),
+      __vite__mapDeps([102, 1, 2, 19, 5, 6, 16, 20]),
       import.meta.url,
     ),
   ),
@@ -91981,11 +92221,11 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~a660b35c87.js`),
       __vite__mapDeps([
-        108, 1, 2, 25, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14,
+        103, 1, 2, 25, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14,
         31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 45, 46,
         47, 48, 49, 50, 51, 16, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
-        64, 65, 66, 67, 68, 69, 70, 71, 18, 72, 73, 74, 75, 76, 77, 78, 79, 81,
-        109, 110, 111, 112, 113, 88, 114, 115, 116, 99, 117, 21, 22, 118,
+        64, 65, 66, 67, 68, 18, 69, 70, 71, 72, 73, 74, 75, 76, 78, 104, 105,
+        106, 107, 108, 83, 109, 110, 111, 94, 112, 21, 22, 113,
       ]),
       import.meta.url,
     ),
@@ -91994,8 +92234,7 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~b9c03b4bc1.js`),
       __vite__mapDeps([
-        119, 1, 2, 5, 6, 66, 67, 68, 69, 37, 10, 11, 77, 9, 78, 120, 121, 122,
-        123,
+        114, 1, 2, 63, 64, 5, 6, 37, 10, 11, 74, 9, 75, 115, 116, 117, 118,
       ]),
       import.meta.url,
     ),
@@ -92003,7 +92242,7 @@ var _ = _.lazy(() =>
   _ = _.lazy(() =>
     _(
       () => import(`./chunk~19b8772fda.js`),
-      __vite__mapDeps([124, 1, 2, 102, 15, 103]),
+      __vite__mapDeps([119, 1, 2, 97, 15, 98]),
       import.meta.url,
     ),
   ),
@@ -92011,10 +92250,10 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~084244ab43.js`),
       __vite__mapDeps([
-        125, 1, 2, 27, 26, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14, 31,
-        32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 53, 54, 70,
-        71, 18, 72, 75, 66, 67, 68, 69, 46, 47, 48, 49, 50, 51, 16, 52, 55, 76,
-        126, 127, 92, 93, 100, 101, 128,
+        120, 1, 2, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14, 31,
+        32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 53, 54, 67,
+        68, 18, 69, 72, 63, 64, 46, 47, 48, 49, 50, 51, 16, 52, 55, 73, 121,
+        122, 87, 88, 95, 96, 123,
       ]),
       import.meta.url,
     ),
@@ -92023,11 +92262,11 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~a14d6256c9.js`),
       __vite__mapDeps([
-        129, 1, 2, 27, 26, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14, 31,
+        124, 1, 2, 26, 27, 28, 5, 6, 29, 30, 7, 8, 9, 10, 11, 12, 13, 14, 31,
         32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 15, 17, 44, 45, 46, 47,
-        48, 49, 50, 51, 16, 52, 53, 54, 55, 130, 81, 109, 110, 98, 111, 112,
-        113, 88, 114, 115, 116, 99, 117, 89, 131, 132, 126, 127, 133, 71, 18,
-        134, 90, 91, 135,
+        48, 49, 50, 51, 16, 52, 53, 54, 55, 125, 78, 104, 105, 93, 106, 107,
+        108, 83, 109, 110, 111, 94, 112, 84, 126, 127, 121, 122, 128, 68, 18,
+        129, 85, 86, 130,
       ]),
       import.meta.url,
     ),
@@ -92036,8 +92275,8 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~e4e8500939.js`),
       __vite__mapDeps([
-        136, 1, 2, 133, 5, 6, 32, 38, 53, 54, 71, 26, 15, 18, 17, 114, 115, 116,
-        134,
+        131, 1, 2, 128, 5, 6, 32, 38, 53, 54, 68, 27, 15, 18, 17, 109, 110, 111,
+        129,
       ]),
       import.meta.url,
     ),
@@ -92045,21 +92284,21 @@ var _ = _.lazy(() =>
   _ = _.lazy(() =>
     _(
       () => import(`./chunk~bb3c85a45d.js`),
-      __vite__mapDeps([137, 1, 2, 115, 5, 6, 116, 138]),
+      __vite__mapDeps([132, 1, 2, 110, 5, 6, 111, 133]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
       () => import(`./chunk~c5879b2b1f.js`),
-      __vite__mapDeps([139, 1, 2, 39, 5, 6, 40, 41, 13, 140]),
+      __vite__mapDeps([134, 1, 2, 39, 5, 6, 40, 41, 13, 135]),
       import.meta.url,
     ),
   ),
   _ = _.lazy(() =>
     _(
       () => import(`./chunk~419fcc29ce.js`),
-      __vite__mapDeps([141, 1, 2, 34, 13, 142]),
+      __vite__mapDeps([136, 1, 2, 34, 13, 137]),
       import.meta.url,
     ),
   ),
@@ -92067,8 +92306,8 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~ef6e72cfc2.js`),
       __vite__mapDeps([
-        143, 1, 2, 43, 144, 28, 3, 31, 71, 26, 15, 18, 17, 145, 112, 113, 146,
-        147,
+        138, 1, 2, 43, 139, 28, 3, 31, 68, 27, 15, 18, 17, 140, 107, 108, 141,
+        142,
       ]),
       import.meta.url,
     ),
@@ -92077,7 +92316,7 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~a5ef2be4d8.js`),
       __vite__mapDeps([
-        148, 1, 2, 144, 28, 3, 31, 71, 26, 15, 18, 17, 145, 112, 113, 146, 149,
+        143, 1, 2, 139, 28, 3, 31, 68, 27, 15, 18, 17, 140, 107, 108, 141, 144,
       ]),
       import.meta.url,
     ),
@@ -92086,27 +92325,7 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~0cfd989355.js`).then((_) => _._),
       __vite__mapDeps([
-        150, 1, 2, 113, 32, 50, 5, 6, 40, 41, 12, 51, 17, 15, 122, 151,
-      ]),
-      import.meta.url,
-    ),
-  ),
-  _ = _.lazy(() =>
-    _(
-      () => import(`./chunk~6b2e92847b.js`),
-      __vite__mapDeps([
-        152, 1, 2, 56, 57, 58, 59, 60, 61, 153, 154, 155, 67, 68, 156, 62, 63,
-        82, 83,
-      ]),
-      import.meta.url,
-    ),
-  ),
-  _ = _.lazy(() =>
-    _(
-      () => import(`./chunk~1136f5743b.js`),
-      __vite__mapDeps([
-        157, 1, 2, 153, 58, 59, 60, 61, 154, 155, 67, 68, 156, 152, 56, 57, 62,
-        63, 82, 83,
+        145, 1, 2, 108, 32, 50, 5, 6, 40, 41, 12, 51, 17, 15, 117, 146,
       ]),
       import.meta.url,
     ),
@@ -92115,8 +92334,8 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~8dc488a70b.js`),
       __vite__mapDeps([
-        158, 1, 2, 159, 26, 56, 57, 47, 48, 153, 58, 59, 60, 61, 154, 155, 67,
-        68, 156, 86, 31, 42, 8, 9, 73, 74, 87, 145, 160,
+        147, 1, 2, 148, 27, 56, 57, 47, 48, 81, 31, 42, 8, 9, 70, 71, 82, 140,
+        149,
       ]),
       import.meta.url,
     ),
@@ -92125,8 +92344,8 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~735ee4eaca.js`),
       __vite__mapDeps([
-        161, 1, 2, 56, 57, 47, 48, 58, 59, 60, 61, 153, 154, 155, 67, 68, 156,
-        62, 63, 36, 37, 159, 26, 86, 31, 42, 8, 9, 73, 74, 87, 145, 160, 162,
+        150, 1, 2, 56, 57, 47, 48, 58, 59, 60, 148, 27, 81, 31, 42, 8, 9, 70,
+        71, 82, 140, 149, 61, 62, 151, 152, 36, 37, 153,
       ]),
       import.meta.url,
     ),
@@ -92140,7 +92359,7 @@ var _ = _.lazy(() =>
             GlobalFooter: _,
           };
         },
-        __vite__mapDeps([163, 1, 2, 56, 57, 47, 48, 154, 155, 164]),
+        __vite__mapDeps([154, 1, 2, 56, 57, 47, 48, 151, 152, 155]),
         import.meta.url,
       )
     ).GlobalFooter,
@@ -92148,7 +92367,7 @@ var _ = _.lazy(() =>
   _ = _.lazy(() =>
     _(
       () => import(`./chunk~a630fd1ed9.js`),
-      __vite__mapDeps([165, 1, 2, 4, 3, 5, 6, 166]),
+      __vite__mapDeps([156, 1, 2, 4, 3, 5, 6, 157]),
       import.meta.url,
     ),
   ),
@@ -92156,8 +92375,8 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~7dfa3522ea.js`),
       __vite__mapDeps([
-        167, 2, 1, 4, 3, 168, 47, 48, 5, 6, 169, 64, 59, 60, 84, 65, 85, 86, 26,
-        170, 171, 29, 30, 172, 33, 34, 35, 173, 174, 175,
+        158, 2, 1, 4, 3, 159, 47, 48, 5, 6, 160, 65, 59, 60, 79, 66, 80, 81, 27,
+        161, 162, 29, 30, 163, 33, 34, 35, 164, 165, 166,
       ]),
       import.meta.url,
     ),
@@ -92165,7 +92384,7 @@ var _ = _.lazy(() =>
   _ = _.lazy(() =>
     _(
       () => import(`./chunk~92d122cd6f.js`),
-      __vite__mapDeps([176, 1, 2, 174, 175]),
+      __vite__mapDeps([167, 1, 2, 165, 166]),
       import.meta.url,
     ),
   ),
@@ -92173,8 +92392,8 @@ var _ = _.lazy(() =>
     _(
       () => import(`./chunk~84da070c72.js`),
       __vite__mapDeps([
-        177, 2, 1, 4, 3, 168, 47, 48, 5, 6, 169, 64, 59, 60, 84, 65, 85, 86, 26,
-        170, 171, 29, 30, 172, 33, 34, 35, 173,
+        168, 2, 1, 4, 3, 159, 47, 48, 5, 6, 160, 65, 59, 60, 79, 66, 80, 81, 27,
+        161, 162, 29, 30, 163, 33, 34, 35, 164,
       ]),
       import.meta.url,
     ),
@@ -92182,7 +92401,7 @@ var _ = _.lazy(() =>
   _ = _.lazy(() =>
     _(
       () => import(`./chunk~ffbd589b71.js`),
-      __vite__mapDeps([178, 2, 1, 4, 3, 165, 5, 6, 166]),
+      __vite__mapDeps([169, 2, 1, 4, 3, 156, 5, 6, 157]),
       import.meta.url,
     ),
   ),
@@ -92197,7 +92416,7 @@ var _ = _.lazy(() =>
             UGCBanDialogOnGlobalVariable: _,
           };
         },
-        __vite__mapDeps([179, 1, 2, 62, 63, 64, 59, 60, 171, 29, 30, 172, 180]),
+        __vite__mapDeps([170, 1, 2, 61, 62, 65, 59, 60, 162, 29, 30, 163, 171]),
         import.meta.url,
       )
     ).UGCBanDialogOnGlobalVariable,
@@ -92214,8 +92433,8 @@ var _ = _.lazy(() =>
           };
         },
         __vite__mapDeps([
-          181, 1, 2, 62, 63, 4, 3, 169, 47, 48, 64, 59, 60, 84, 65, 85, 86, 26,
-          5, 6, 170, 182,
+          172, 1, 2, 61, 62, 4, 3, 160, 47, 48, 65, 59, 60, 79, 66, 80, 81, 27,
+          5, 6, 161, 173,
         ]),
         import.meta.url,
       )
@@ -92260,7 +92479,6 @@ var _ = _.lazy(() =>
     ProfileVanityNotifications: (_) => `${_.ProfileVanity(_)}/notifications`,
     ProfileSteamIDNotifications: (_) => `${_.ProfileSteamID(_)}/notifications`,
     Market: () => `/market`,
-    MarketSearch: () => `/market/search`,
     TradeOfferNew: () => `/tradeoffer/new/`,
     TradeOfferView: (_) => `/tradeoffer/${_}`,
     CommunityHomeRoot: () => `/`,
@@ -92536,21 +92754,6 @@ var _ = _.lazy(() =>
                       path: _.ConferenceApp(),
                       component: _,
                     }),
-                    (0, _.jsx)(_, {
-                      path: [_.Market(), _.MarketSearch()],
-                      children: (0, _.jsx)(_, {
-                        config: {
-                          market: (_) =>
-                            (0, _.jsx)(_, {
-                              ..._,
-                            }),
-                          marketsearchinput: (_) =>
-                            (0, _.jsx)(_, {
-                              ..._,
-                            }),
-                        },
-                      }),
-                    }),
                     !1,
                     (0, _.jsx)(_, {
                       path: _.CommunityHomeRoot(),
@@ -92739,7 +92942,6 @@ function _() {
   let _ = _.pathname;
   return (_.endsWith(`/`) || (_ += `/`), _);
 }
-_();
 function _() {
   let _ = [];
   return (

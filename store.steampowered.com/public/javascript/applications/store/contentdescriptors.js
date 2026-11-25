@@ -2,9 +2,9 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { st as t, tt as n } from "./chunk~01cfc309bf.js";
-import { _x as r, rb as i } from "./main.js";
-var a = e(n()),
+import { et as t, ot as n } from "./chunk~01cfc309bf.js";
+import { ib as r, vx as i } from "./main.js";
+var a = e(t()),
   o = [5, 2, 1, 4, 3];
 function s(e) {
   let t = [];
@@ -26,7 +26,7 @@ function l(e) {
   return (n && (t.push(n), t.push(...l(n))), t);
 }
 function u(e) {
-  return t({
+  return n({
     queryKey: [
       `examples_for_content_descriptor`,
       e === null ? null : e.valueOf(),
@@ -42,7 +42,7 @@ function u(e) {
         t.append(`json`, `1`),
         (
           await (0, a.default)({
-            url: `${r.STORE_BASE_URL}search/results/?${t.toString()}`,
+            url: `${i.STORE_BASE_URL}search/results/?${t.toString()}`,
             method: `GET`,
             responseType: `json`,
           })
@@ -72,25 +72,25 @@ function d(e) {
     default:
       throw `Invalid content descriptor.`;
   }
-  return i(t);
+  return r(t);
 }
 function f(e, t = !1) {
   let n = ``;
   switch (e) {
     case 5:
-      n += i(`#ContentDescriptor_GeneralMatureContent_Description`);
+      n += r(`#ContentDescriptor_GeneralMatureContent_Description`);
       break;
     case 2:
-      n += i(`#ContentDescriptor_FrequentViolenceOrGore_Description`);
+      n += r(`#ContentDescriptor_FrequentViolenceOrGore_Description`);
       break;
     case 1:
-      n += i(`#ContentDescriptor_NudityOrSexualContent_Description`);
+      n += r(`#ContentDescriptor_NudityOrSexualContent_Description`);
       break;
     case 4:
-      n += i(`#ContentDescriptor_GratuitousNudityOrSexualContent_Description`);
+      n += r(`#ContentDescriptor_GratuitousNudityOrSexualContent_Description`);
       break;
     case 3:
-      n += i(`#ContentDescriptor_AdultOnlySexualContent_Description`);
+      n += r(`#ContentDescriptor_AdultOnlySexualContent_Description`);
       break;
     default:
       throw `Invalid content descriptor.`;
@@ -98,7 +98,7 @@ function f(e, t = !1) {
   return (
     t &&
       (e === 4 || e === 3) &&
-      (n += ` ` + i(`#ContentDescriptor_Affirm18YearsOld`)),
+      (n += ` ` + r(`#ContentDescriptor_Affirm18YearsOld`)),
     n
   );
 }

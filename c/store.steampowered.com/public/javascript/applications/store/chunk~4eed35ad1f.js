@@ -1,9 +1,147 @@
 import { _ } from "./chunk~f025431ab0.js";
-import { _, _, _, _ } from "./chunk~01cfc309bf.js";
+import { _, _, _, _, _, _ } from "./chunk~01cfc309bf.js";
 import { _ } from "./chunk~f57d770d64.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./main.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./main.js";
+var _ = _(_(), 1);
+function _(_) {
+  let { data: _ } = _(_);
+  return (0, _.useMemo)(
+    () => (_ ? (_.item_type == 0 ? [_.appid] : _.included_appids || []) : []),
+    [_],
+  );
+}
+function _(_) {
+  if (!_?.length) return [];
+  let _ = _.map((_) => _.creator_clan_account_id).filter((_) => !!_);
+  return Array.from(new Set(_));
+}
+function _(_) {
+  let { data: _ } = _({
+    appid: _,
+  });
+  return _?.appid || _;
+}
+function _(_) {
+  let { data: _ } = _(_);
+  return (0, _.useMemo)(() => {
+    if (_ && _.related_items && _.related_items.parent_appid)
+      return {
+        appid: _.related_items.parent_appid,
+      };
+  }, [_]);
+}
+function _(_) {
+  return (0, _.useMemo)(
+    () =>
+      _
+        ? {
+            appid: _,
+          }
+        : void 0,
+    [_],
+  );
+}
+function _(_) {
+  return (0, _.useMemo)(
+    () =>
+      _
+        ? {
+            packageid: _,
+          }
+        : void 0,
+    [_],
+  );
+}
+async function _(_, _) {
+  let _ = _(_.STORE_BASE_URL, _, _.country_code);
+  return (await (await fetch(_)).json()).rgOwnedApps || [];
+}
+async function _(_, _, _) {
+  return (await _(_, _)).includes(_);
+}
+function _() {
+  let _ = _(),
+    _ = _.accountid;
+  return _(_(_, _));
+}
+function _(_, _) {
+  return {
+    queryKey: _(_),
+    queryFn: async () => {
+      if (!_) return new Set();
+      let _ = await _(_, _);
+      return new Set(_);
+    },
+    staleTime: 6e5,
+  };
+}
+function _(_, _, _) {
+  return {
+    queryKey: [`AccountOwnsApp`, _, _],
+    queryFn: async () => (_ ? await _(_, _, _) : !1),
+    staleTime: 6e5,
+  };
+}
+function _(_) {
+  let _ = _(),
+    _ = _.accountid,
+    { data: _ } = _(_(_, _, _));
+  return _ === void 0 ? void 0 : _;
+}
+function _(_) {
+  let _ = _(),
+    _ = _.accountid;
+  return _.useCallback(
+    (_) => {
+      _.setQueryData(_(_), (_) =>
+        _ ? new Set([..._.values(), ..._]) : _ ? new Set(_) : void 0,
+      );
+    },
+    [_, _, _],
+  );
+}
+function _(_) {
+  return [`AccountOwnedApps`, _ ?? 0];
+}
+function _(_) {
+  let { data: _ } = _(_ && `appid` in _ ? void 0 : _),
+    { data: _ } = _(),
+    _;
+  return (
+    _ && `appid` in _ ? (_ = [_.appid]) : _ && (_ = _.included_appids),
+    _ === void 0 || _ === void 0 || _.length == 0
+      ? {
+          bIsOwned: void 0,
+          unAppID: void 0,
+        }
+      : {
+          bIsOwned: !_.some((_) => !_.has(_)),
+          unAppID: _[0],
+        }
+  );
+}
 var _ = _(_(), 1),
-  _ = _(_(), 1),
   _ = `GL0tHV4bOk8-`,
   _ = `LPcYz6LIoNo-`,
   _ = `IPcip0GPG-I-`,
@@ -169,7 +307,27 @@ function _(_, _, _) {
     },
   });
 }
-var _ = _.createContext(!1),
+function _(_) {
+  return _ == 2 ? `bundle` : _ == 1 ? `sub` : `app`;
+}
+function _(_, _) {
+  let _ = _ || +!!_;
+  return [!!_, _];
+}
+var _ = (_) => {
+    let { appid: _ } = _,
+      _ = (0, _.jsx)(`div`, {
+        className: `ImpressionTrackedElement`,
+        children: _.children,
+      });
+    return _
+      ? (0, _.jsx)(_, {
+          appID: _,
+          children: _,
+        })
+      : _;
+  },
+  _ = _.createContext(!1),
   _ = `100% 0px 100% 0px`,
   _ = `SaleSection_`,
   _ = (0, _.createContext)(!1);

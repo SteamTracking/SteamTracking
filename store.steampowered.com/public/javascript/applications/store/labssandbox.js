@@ -3,69 +3,69 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import {
-  At as t,
-  F as n,
-  L as r,
-  Lt as i,
-  Pt as a,
-  ft as o,
-  kt as s,
-  l as c,
-  tt as l,
+  I as t,
+  It as n,
+  Nt as r,
+  Ot as i,
+  P as a,
+  c as o,
+  dt as s,
+  et as c,
+  kt as l,
 } from "./chunk~01cfc309bf.js";
 import { t as u } from "./chunk~eefd71512b.js";
 import { t as d } from "./chunk~c55d6473b2.js";
 import { n as f } from "./chunk~a7c5e71e12.js";
 import {
-  Au as p,
-  Cb as m,
-  Cx as h,
-  Dx as g,
-  Ex as _,
-  Kb as v,
-  Nc as ee,
-  Ox as te,
-  PS as ne,
-  Qx as y,
-  Tu as re,
-  Xu as ie,
-  Xy as ae,
-  Zx as oe,
-  _x as b,
-  _y as se,
-  al as x,
-  by as ce,
-  dS as S,
-  dl as le,
-  eu as ue,
+  $x as p,
+  Ax as m,
+  Dx as h,
+  Eu as g,
+  IS as _,
+  Ox as v,
+  Pc as ee,
+  Tu as te,
+  Tx as ne,
+  Zu as re,
+  Zy as ie,
+  _S as y,
+  bx as b,
+  dS as x,
+  eS as S,
   fS as C,
-  fr as de,
+  fl as ae,
+  fr as oe,
   gS as w,
   hS as T,
-  kx as fe,
-  lS as E,
-  lr as pe,
-  mS as D,
+  ju as se,
+  kx as ce,
+  lr as le,
+  mS as E,
+  ol as D,
   pS as O,
-  rr as k,
-  sr as A,
-  uS as j,
-  wu as me,
-  wx as he,
-  yx as M,
+  qb as k,
+  rr as A,
+  sr as j,
+  tu as ue,
+  vS as M,
+  vx as N,
+  vy as de,
+  wb as fe,
+  wx as pe,
+  xy as me,
 } from "./main.js";
 import "./chunk~7cbe6011f7.js";
-import { t as ge } from "./chunk~2e8feda0b1.js";
-var N = e(l()),
-  P = class {
+import { t as he } from "./chunk~2e8feda0b1.js";
+var P = e(c()),
+  F = class {
     rgModelNames = [];
     constructor() {
-      s(this);
+      i(this);
     }
     Init(e) {
       d.Init(e);
-      let t = `${b.STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames`;
-      N.default.get(t).then((e) => {
+      let t = `${N.STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames`;
+      P.default.get(t).then((e) => {
         if (e.data) {
           let t = [];
           for (let n of e.data) n != "default" && t.push(n);
@@ -75,7 +75,7 @@ var N = e(l()),
     }
     async ComputePathBetweenApps(e, t, n, r, i, a, o) {
       let s = Math.acos(n),
-        c = await new ve(
+        c = await new _e(
           async (e) => {
             let t = await this.GetNeighbors(e),
               n = [];
@@ -104,8 +104,8 @@ var N = e(l()),
       throw Error(`Unable to compute path.`);
     }
     async GetNeighbors(e) {
-      let t = `${b.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}`,
-        n = await N.default.get(t),
+      let t = `${N.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}`,
+        n = await P.default.get(t),
         r = [];
       if (n.data && n.data.appid == e)
         for (let e = 0; e < n.data.similar_appids.length; e++)
@@ -116,17 +116,17 @@ var N = e(l()),
       return r;
     }
     async EstimateCosts(e, t) {
-      let n = `${b.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${t}&${e.map((e) => `appid[]=` + e.toString()).join(`&`)}`,
-        r = await N.default.get(n);
+      let n = `${N.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${t}&${e.map((e) => `appid[]=` + e.toString()).join(`&`)}`,
+        r = await P.default.get(n);
       if (r.data && r.data.similarity_scores)
         return r.data.similarity_scores.map((e) => Math.acos(parseFloat(e)));
       throw Error(`Unable to fetch cost estimates`);
     }
   };
-(v([t], P.prototype, `rgModelNames`, void 0),
-  v([y], P.prototype, `GetNeighbors`, null),
-  v([y], P.prototype, `EstimateCosts`, null));
-var _e = class {
+(k([l], F.prototype, `rgModelNames`, void 0),
+  k([S], F.prototype, `GetNeighbors`, null),
+  k([S], F.prototype, `EstimateCosts`, null));
+var ge = class {
     m_fnCompare;
     m_Heap = [];
     m_Length = 0;
@@ -198,7 +198,7 @@ var _e = class {
       }
     }
   },
-  ve = class {
+  _e = class {
     m_fnGetNeighbors;
     m_fnEstimateCosts;
     m_fnEquality;
@@ -210,7 +210,7 @@ var _e = class {
         (this.m_fnIterationCallback = r));
     }
     async FindPath(e, t, n) {
-      let r = new _e((e, t) => e.cost - t.cost),
+      let r = new ge((e, t) => e.cost - t.cost),
         i = new Set();
       r.Push({ node: e, cost: 0 });
       let a = new Map(),
@@ -269,30 +269,30 @@ var _e = class {
       throw Error(`No path found.`);
     }
   },
-  F = new P();
-window.g_LabsSandbox = F;
-var I = e(i()),
-  ye = `WVhYXTPPa5Q-`,
-  be = `x3LMY1wB7Z8-`,
-  L = `n0-NbgKnVgg-`,
-  xe = `_72I-MQtMZj8-`,
-  Se = `MtuwGZaUAng-`,
-  R = `CvXL-Wwt9TQ-`,
-  z = `rCcaMabbZx4-`,
-  B = `ddPMSRBRHGw-`,
-  V = `_8cUEY8q0nYU-`,
-  Ce = `NgWhKdDUzuY-`,
-  we = `lgXtUsuljdc-`,
-  Te = `_-5Y-zHiqGtQ-`,
-  Ee = `ZUZRryOqfLs-`,
-  De = `QlNwd-gOVoA-`,
-  Oe = `LEzgtgE3TQM-`,
-  H = `BrotS3tOfxw-`,
-  ke = `AkJ02HXKMhs-`,
-  U = `TauA-sfyWB8-`,
-  Ae = `HHHUlYd80sY-`,
-  je = `UiEMtH5V5hM-`,
-  W = `_0xUYDLGHKic-`,
+  I = new F();
+window.g_LabsSandbox = I;
+var L = e(n()),
+  ve = `WVhYXTPPa5Q-`,
+  ye = `x3LMY1wB7Z8-`,
+  R = `n0-NbgKnVgg-`,
+  be = `_72I-MQtMZj8-`,
+  xe = `MtuwGZaUAng-`,
+  z = `CvXL-Wwt9TQ-`,
+  B = `rCcaMabbZx4-`,
+  V = `ddPMSRBRHGw-`,
+  H = `_8cUEY8q0nYU-`,
+  Se = `NgWhKdDUzuY-`,
+  Ce = `lgXtUsuljdc-`,
+  we = `_-5Y-zHiqGtQ-`,
+  Te = `ZUZRryOqfLs-`,
+  Ee = `QlNwd-gOVoA-`,
+  De = `LEzgtgE3TQM-`,
+  U = `BrotS3tOfxw-`,
+  Oe = `AkJ02HXKMhs-`,
+  W = `TauA-sfyWB8-`,
+  ke = `HHHUlYd80sY-`,
+  Ae = `UiEMtH5V5hM-`,
+  je = `_0xUYDLGHKic-`,
   G = `oMov3TXH87I-`,
   Me = `Q7tllLDG5wk-`,
   Ne = `N27spIgX8-A-`,
@@ -302,8 +302,8 @@ var I = e(i()),
   Le = `-tfmW4i7r-U-`,
   Re = `_8NYUdIS8vVE-`,
   ze = `c7rqBghcJoQ-`,
-  K = o(),
-  q = class extends I.Component {
+  K = s(),
+  q = class extends L.Component {
     state = {
       appid: 0,
       appinfo: null,
@@ -333,9 +333,9 @@ var I = e(i()),
         ? (window.clearTimeout(this.m_currentRequest),
           (this.m_currentRequest = window.setTimeout(async () => {
             let e = {
-                cc: b.COUNTRY,
-                l: b.LANGUAGE,
-                realm: ne.k_ESteamRealmGlobal,
+                cc: N.COUNTRY,
+                l: N.LANGUAGE,
+                realm: _.k_ESteamRealmGlobal,
                 origin: self.origin,
                 f: `jsonfull`,
                 term: t.replace(` `, `+`),
@@ -343,20 +343,20 @@ var I = e(i()),
                 excluded_tags: [],
                 excluded_content_descriptors: [],
               },
-              n = `${b.STORE_BASE_URL}search/suggest`,
-              r = await N.default.get(n, { params: e, withCredentials: !0 }),
+              n = `${N.STORE_BASE_URL}search/suggest`,
+              r = await P.default.get(n, { params: e, withCredentials: !0 }),
               i;
             ((i = r?.data?.length
               ? r.data.map((e) =>
                   (0, K.jsxs)(
                     `div`,
                     {
-                      className: Se,
+                      className: xe,
                       onClickCapture: () => this.SetSelectedApp(parseInt(e.id)),
                       children: [
-                        (0, K.jsx)(`img`, { src: e.img, className: be }),
+                        (0, K.jsx)(`img`, { src: e.img, className: ye }),
                         (0, K.jsx)(`div`, {
-                          className: L,
+                          className: R,
                           children:
                             e.name +
                             (this.props.showAppIds ? ` (${e.id})` : ``),
@@ -390,7 +390,7 @@ var I = e(i()),
     render() {
       let e = this.props.classOverride ?? `gekZDtV16Ho-`,
         t = null,
-        n = (0, K.jsx)(A, {
+        n = (0, K.jsx)(j, {
           type: `text`,
           onChange: this.UpdateAppSuggestions,
         });
@@ -400,13 +400,13 @@ var I = e(i()),
             (this.props.showAppIds ? ` (${this.state.appid})` : ``)
           : (this.props.strPrompt ?? `Select game`);
         t = (0, K.jsx)(`div`, {
-          className: ye,
-          children: (0, K.jsx)(`div`, { className: L, children: e }),
+          className: ve,
+          children: (0, K.jsx)(`div`, { className: R, children: e }),
         });
       } else if (this.state.mode == `select`) {
         let e = this.state.strSearch.length > 0;
         t = (0, K.jsxs)(`div`, {
-          className: xe,
+          className: be,
           children: [
             n,
             e &&
@@ -425,37 +425,37 @@ var I = e(i()),
       });
     }
   };
-(v([y], q.prototype, `OnDisplayClicked`, null),
-  v([y], q.prototype, `UpdateAppSuggestions`, null),
-  v([y], q.prototype, `OnKeyUp`, null));
-var J = class extends I.Component {
+(k([S], q.prototype, `OnDisplayClicked`, null),
+  k([S], q.prototype, `UpdateAppSuggestions`, null),
+  k([S], q.prototype, `OnKeyUp`, null));
+var J = class extends L.Component {
     render() {
-      if (this.props.appid == 0) return (0, K.jsx)(`div`, { className: R });
+      if (this.props.appid == 0) return (0, K.jsx)(`div`, { className: z });
       {
         let e = d.GetAppInfo(this.props.appid);
-        if (!e || !e.is_valid) return (0, K.jsx)(`div`, { className: R });
+        if (!e || !e.is_valid) return (0, K.jsx)(`div`, { className: z });
         let t = [];
         if (this.props.score) {
-          t.push((0, K.jsx)(`div`, { className: z }, `score-spacer`));
+          t.push((0, K.jsx)(`div`, { className: B }, `score-spacer`));
           let e = Math.round(this.props.score * 100).toString() + `%`;
           t.push(
-            (0, K.jsx)(`div`, { className: B, children: e }, `score-value`),
+            (0, K.jsx)(`div`, { className: V, children: e }, `score-value`),
           );
         }
         let n = e.name + ` (` + this.props.appid.toString() + `)`,
           r = this.props.fnOnSelected ? this.props.fnOnSelected : (e) => {};
         return (0, K.jsxs)(`div`, {
-          className: R,
+          className: z,
           onClick: () => r(this.props.appid),
-          children: [(0, K.jsx)(`div`, { className: L, children: n }), t],
+          children: [(0, K.jsx)(`div`, { className: R, children: n }), t],
         });
       }
     }
   },
-  Be = class extends I.Component {
+  Be = class extends L.Component {
     state = {};
-    ref_app_a = I.createRef();
-    ref_app_b = I.createRef();
+    ref_app_a = L.createRef();
+    ref_app_b = L.createRef();
     componentDidMount() {
       this.OnAppSelected();
     }
@@ -468,8 +468,8 @@ var J = class extends I.Component {
       ) {
         let e = this.ref_app_a.current.state.appid,
           t = this.ref_app_b.current.state.appid,
-          n = `${b.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${e}&appid[]=${t}`;
-        N.default.get(n).then((e) => {
+          n = `${N.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${e}&appid[]=${t}`;
+        P.default.get(n).then((e) => {
           e.data && e.data.similarity_scores
             ? this.setState({ score: e.data.similarity_scores[0] })
             : this.setState({ score: null });
@@ -479,7 +479,7 @@ var J = class extends I.Component {
     render() {
       let e = this.state.score ? (this.state.score * 100).toFixed(1) + `%` : ``;
       return (0, K.jsxs)(`div`, {
-        className: ke,
+        className: Oe,
         children: [
           (0, K.jsx)(
             q,
@@ -491,9 +491,9 @@ var J = class extends I.Component {
             },
             `similar_app_a`,
           ),
-          (0, K.jsx)(`div`, { className: U }),
-          (0, K.jsx)(`div`, { className: B, children: e }),
-          (0, K.jsx)(`div`, { className: U }),
+          (0, K.jsx)(`div`, { className: W }),
+          (0, K.jsx)(`div`, { className: V, children: e }),
+          (0, K.jsx)(`div`, { className: W }),
           (0, K.jsx)(
             q,
             {
@@ -508,15 +508,15 @@ var J = class extends I.Component {
       });
     }
   };
-v([y], Be.prototype, `OnAppSelected`, null);
-var Y = class extends I.Component {
+k([S], Be.prototype, `OnAppSelected`, null);
+var Y = class extends L.Component {
   selected_app = 0;
   similar_apps = [];
   similarity_scores = [];
   similarity_model = `default`;
-  app_selector_ref = I.createRef();
+  app_selector_ref = L.createRef();
   constructor(e) {
-    (super(e), s(this), e.default_app && this.SetSelectedApp(e.default_app));
+    (super(e), i(this), e.default_app && this.SetSelectedApp(e.default_app));
   }
   componentDidMount() {
     this.app_selector_ref.current &&
@@ -531,8 +531,8 @@ var Y = class extends I.Component {
         (this.selected_app = e),
         this.app_selector_ref.current &&
           this.app_selector_ref.current.SetSelectedApp(e));
-      let t = `${b.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}&model=${this.similarity_model}`;
-      N.default.get(t).then((e) => {
+      let t = `${N.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}&model=${this.similarity_model}`;
+      P.default.get(t).then((e) => {
         if (e.data && e.data.appid == this.selected_app) {
           let t = new Set(
             e.data.similar_appids.slice(0, this.props.max_similar),
@@ -570,14 +570,14 @@ var Y = class extends I.Component {
       );
     }
     let r = [];
-    for (let e of F.rgModelNames) {
+    for (let e of I.rgModelNames) {
       let t = { label: (0, K.jsx)(`div`, { children: e }, e), data: e };
       r.push(t);
     }
     return (0, K.jsxs)(`div`, {
-      className: Oe,
+      className: De,
       children: [
-        (0, K.jsx)(k, {
+        (0, K.jsx)(A, {
           rgOptions: r,
           onChange: this.OnModelChanged,
           selectedOption: `default`,
@@ -589,25 +589,25 @@ var Y = class extends I.Component {
           appidInitial: 268500,
           showAppIds: !0,
         }),
-        (0, K.jsx)(`div`, { className: H, children: e }),
+        (0, K.jsx)(`div`, { className: U, children: e }),
       ],
     });
   }
 };
-(v([t], Y.prototype, `selected_app`, void 0),
-  v([t], Y.prototype, `similar_apps`, void 0),
-  v([t], Y.prototype, `similarity_scores`, void 0),
-  v([t], Y.prototype, `similarity_model`, void 0),
-  v([y], Y.prototype, `OnSelectedApp`, null),
-  v([y], Y.prototype, `SetSelectedApp`, null),
-  v([y], Y.prototype, `OnModelChanged`, null),
-  (Y = v([c], Y)));
-var X = class extends I.Component {
+(k([l], Y.prototype, `selected_app`, void 0),
+  k([l], Y.prototype, `similar_apps`, void 0),
+  k([l], Y.prototype, `similarity_scores`, void 0),
+  k([l], Y.prototype, `similarity_model`, void 0),
+  k([S], Y.prototype, `OnSelectedApp`, null),
+  k([S], Y.prototype, `SetSelectedApp`, null),
+  k([S], Y.prototype, `OnModelChanged`, null),
+  (Y = k([o], Y)));
+var X = class extends L.Component {
   selected_app = void 0;
   selected_operator = void 0;
   constructor(e) {
     (super(e),
-      s(this),
+      i(this),
       (this.selected_app = e.app),
       (this.selected_operator = e.operator));
   }
@@ -634,7 +634,7 @@ var X = class extends I.Component {
       children: [
         (0, K.jsx)(`div`, {
           className: Fe,
-          children: (0, K.jsx)(k, {
+          children: (0, K.jsx)(A, {
             rgOptions: e,
             onChange: this.OnSelectedOperator,
             selectedOption: `Plus`,
@@ -645,21 +645,21 @@ var X = class extends I.Component {
     });
   }
 };
-(v([t], X.prototype, `selected_app`, void 0),
-  v([t], X.prototype, `selected_operator`, void 0),
-  v([y], X.prototype, `OnSelectedApp`, null),
-  v([y], X.prototype, `OnSelectedOperator`, null),
-  (X = v([c], X)));
-var Z = class extends I.Component {
+(k([l], X.prototype, `selected_app`, void 0),
+  k([l], X.prototype, `selected_operator`, void 0),
+  k([S], X.prototype, `OnSelectedApp`, null),
+  k([S], X.prototype, `OnSelectedOperator`, null),
+  (X = k([o], X)));
+var Z = class extends L.Component {
   operands = [];
   similarity_model = `default`;
   similar_apps = [];
   similarity_scores = [];
   operand_refs;
   constructor(e) {
-    (super(e), s(this), (this.operand_refs = []));
+    (super(e), i(this), (this.operand_refs = []));
     for (let t = 0; t < e.max_operands; t++)
-      this.operand_refs.push(I.createRef());
+      this.operand_refs.push(L.createRef());
   }
   OnModelChanged(e, t) {
     ((this.similarity_model = e.data), this.RecomputeExpression());
@@ -682,8 +682,8 @@ var Z = class extends I.Component {
   RecomputeExpression() {
     if (this.operands.length == 0) return;
     let e = this.operands.map((e) => `appid[]=` + e.app.toString()),
-      t = `${b.STORE_BASE_URL}labs/ajaxgetappvectors?${e.join(`&`)}&model=${this.similarity_model}`;
-    N.default.get(t).then((e) => {
+      t = `${N.STORE_BASE_URL}labs/ajaxgetappvectors?${e.join(`&`)}&model=${this.similarity_model}`;
+    P.default.get(t).then((e) => {
       if (
         ((this.similar_apps = []),
         (this.similarity_scores = []),
@@ -705,8 +705,8 @@ var Z = class extends I.Component {
               .map((e) => e / r)
               .map((e) => `x[]=` + e)
               .join(`&`),
-            n = `${b.STORE_BASE_URL}labs/ajaxgetmostsimilarappstovector?${e}&model=${this.similarity_model}`;
-          N.default.get(n).then((e) => {
+            n = `${N.STORE_BASE_URL}labs/ajaxgetmostsimilarappstovector?${e}&model=${this.similarity_model}`;
+          P.default.get(n).then((e) => {
             let t = new Set(
               e.data.similar_appids.slice(0, this.props.max_similar),
             );
@@ -721,7 +721,7 @@ var Z = class extends I.Component {
   }
   render() {
     let e = [];
-    for (let t of F.rgModelNames) {
+    for (let t of I.rgModelNames) {
       let n = { label: (0, K.jsx)(`div`, { children: t }, t), data: t };
       e.push(n);
     }
@@ -762,7 +762,7 @@ var Z = class extends I.Component {
     return (0, K.jsxs)(`div`, {
       className: Ne,
       children: [
-        (0, K.jsx)(k, {
+        (0, K.jsx)(A, {
           rgOptions: e,
           onChange: this.OnModelChanged,
           selectedOption: `default`,
@@ -771,22 +771,22 @@ var Z = class extends I.Component {
         t,
         r,
         (0, K.jsx)(`h1`, { children: `Games similar to mixture` }),
-        (0, K.jsx)(`div`, { className: H, children: i }),
+        (0, K.jsx)(`div`, { className: U, children: i }),
       ],
     });
   }
 };
-(v([t], Z.prototype, `operands`, void 0),
-  v([t], Z.prototype, `similarity_model`, void 0),
-  v([t], Z.prototype, `similar_apps`, void 0),
-  v([t], Z.prototype, `similarity_scores`, void 0),
-  v([y], Z.prototype, `OnModelChanged`, null),
-  v([y], Z.prototype, `OnAddOperand`, null),
-  v([y], Z.prototype, `OnOperandChanged`, null),
-  (Z = v([c], Z)));
-var Q = class extends I.Component {
+(k([l], Z.prototype, `operands`, void 0),
+  k([l], Z.prototype, `similarity_model`, void 0),
+  k([l], Z.prototype, `similar_apps`, void 0),
+  k([l], Z.prototype, `similarity_scores`, void 0),
+  k([S], Z.prototype, `OnModelChanged`, null),
+  k([S], Z.prototype, `OnAddOperand`, null),
+  k([S], Z.prototype, `OnOperandChanged`, null),
+  (Z = k([o], Z)));
+var Q = class extends L.Component {
   constructor(e) {
-    (super(e), s(this));
+    (super(e), i(this));
   }
   app_start = 0;
   app_end = 0;
@@ -801,7 +801,7 @@ var Q = class extends I.Component {
       ((this.in_progress = !0),
       (this.progress_iteration = 0),
       (this.found_path = void 0),
-      F.ComputePathBetweenApps(
+      I.ComputePathBetweenApps(
         this.app_start,
         this.app_end,
         0.75,
@@ -838,7 +838,7 @@ var Q = class extends I.Component {
         this.app_end != 0 &&
         !this.in_progress &&
         this.app_start != this.app_end,
-      t = e ? W : ee(W, void 0),
+      t = e ? je : ee(je, void 0),
       n = null;
     n = this.in_progress
       ? (0, K.jsx)(`div`, {
@@ -861,10 +861,10 @@ var Q = class extends I.Component {
         );
       }
     return (0, K.jsxs)(`div`, {
-      className: Ae,
+      className: ke,
       children: [
         (0, K.jsxs)(`div`, {
-          className: je,
+          className: Ae,
           children: [
             (0, K.jsx)(q, {
               fnOnSelection: this.OnSelectedStartApp,
@@ -887,39 +887,39 @@ var Q = class extends I.Component {
     });
   }
 };
-(v([t], Q.prototype, `app_start`, void 0),
-  v([t], Q.prototype, `app_end`, void 0),
-  v([t], Q.prototype, `in_progress`, void 0),
-  v([t], Q.prototype, `progress_iteration`, void 0),
-  v([t], Q.prototype, `found_path`, void 0),
-  v([y], Q.prototype, `IterationCallback`, null),
-  v([y], Q.prototype, `Pathfind`, null),
-  v([y], Q.prototype, `OnSelectedStartApp`, null),
-  v([y], Q.prototype, `OnSelectedEndApp`, null),
-  (Q = v([c], Q)));
+(k([l], Q.prototype, `app_start`, void 0),
+  k([l], Q.prototype, `app_end`, void 0),
+  k([l], Q.prototype, `in_progress`, void 0),
+  k([l], Q.prototype, `progress_iteration`, void 0),
+  k([l], Q.prototype, `found_path`, void 0),
+  k([S], Q.prototype, `IterationCallback`, null),
+  k([S], Q.prototype, `Pathfind`, null),
+  k([S], Q.prototype, `OnSelectedStartApp`, null),
+  k([S], Q.prototype, `OnSelectedEndApp`, null),
+  (Q = k([o], Q)));
 function Ve() {
   return (0, K.jsxs)(K.Fragment, {
     children: [
       (0, K.jsx)(`h1`, { children: `Similar Games` }),
       (0, K.jsx)(Y, { max_similar: 10 }),
-      (0, K.jsx)(`div`, { className: z }),
+      (0, K.jsx)(`div`, { className: B }),
       (0, K.jsx)(`h1`, { children: `Similarity` }),
       (0, K.jsx)(Be, {}),
-      (0, K.jsx)(`div`, { className: z }),
+      (0, K.jsx)(`div`, { className: B }),
       (0, K.jsx)(`h1`, { children: `Mixer` }),
       (0, K.jsx)(Z, { max_similar: 10, max_operands: 6 }),
-      (0, K.jsx)(`div`, { className: z }),
+      (0, K.jsx)(`div`, { className: B }),
       (0, K.jsx)(`h1`, { children: `Pathfinder` }),
       (0, K.jsx)(Q, {}),
     ],
   });
 }
-var $ = e(a(), 1),
+var $ = e(r(), 1),
   He = class e extends $.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.tag_score_factor || E(e.M()),
+        e.prototype.tag_score_factor || x(e.M()),
         $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -932,57 +932,57 @@ var $ = e(a(), 1),
             tag_score_factor: {
               n: 1,
               d: 1,
-              br: C.readDouble,
-              bw: w.writeDouble,
+              br: E.readDouble,
+              bw: M.writeDouble,
             },
             playtime_max_seconds: {
               n: 10,
               d: 36e4,
-              br: C.readInt32,
-              bw: w.writeInt32,
+              br: E.readInt32,
+              bw: M.writeInt32,
             },
             playtime_max_games: {
               n: 11,
               d: 3,
-              br: C.readInt32,
-              bw: w.writeInt32,
+              br: E.readInt32,
+              bw: M.writeInt32,
             },
             playtime_score_factor: {
               n: 12,
               d: 0.9,
-              br: C.readDouble,
-              bw: w.writeDouble,
+              br: E.readDouble,
+              bw: M.writeDouble,
             },
-            popularity_factor: { n: 20, d: 5, br: C.readEnum, bw: w.writeEnum },
+            popularity_factor: { n: 20, d: 5, br: E.readEnum, bw: M.writeEnum },
             popularity_reciprocal: {
               n: 21,
               d: 1e4,
-              br: C.readInt32,
-              bw: w.writeInt32,
+              br: E.readInt32,
+              bw: M.writeInt32,
             },
             popularity_base_score: {
               n: 22,
               d: `5000000`,
-              br: C.readInt64String,
-              bw: w.writeInt64String,
+              br: E.readInt64String,
+              bw: M.writeInt64String,
             },
-            played_since: { n: 23, br: C.readUint32, bw: w.writeUint32 },
+            played_since: { n: 23, br: E.readUint32, bw: M.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= T(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return T(e.M(), t, n);
+      return y(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return O(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -990,14 +990,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1011,7 +1011,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || E(e.M()),
+        e.prototype.steamid || x(e.M()),
         $.Message.initialize(this, t, 0, -1, [3], null));
     }
     static sm_m;
@@ -1023,30 +1023,30 @@ var $ = e(a(), 1),
           fields: {
             steamid: {
               n: 1,
-              br: C.readFixed64String,
-              bw: w.writeFixed64String,
+              br: E.readFixed64String,
+              bw: M.writeFixed64String,
             },
-            country_code: { n: 2, br: C.readString, bw: w.writeString },
-            ids: { n: 3, c: g, r: !0, q: !0 },
+            country_code: { n: 2, br: E.readString, bw: M.writeString },
+            ids: { n: 3, c: v, r: !0, q: !0 },
             options: { n: 4, c: He },
-            debug: { n: 5, br: C.readBool, bw: w.writeBool },
-            include_owned_games: { n: 6, br: C.readBool, bw: w.writeBool },
+            debug: { n: 5, br: E.readBool, bw: M.writeBool },
+            include_owned_games: { n: 6, br: E.readBool, bw: M.writeBool },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= T(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return T(e.M(), t, n);
+      return y(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return O(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1054,14 +1054,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1075,7 +1075,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.items || E(e.M()),
+        e.prototype.items || x(e.M()),
         $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -1090,16 +1090,16 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= T(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return T(e.M(), t, n);
+      return y(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return O(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1107,14 +1107,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1128,7 +1128,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.id || E(e.M()),
+        e.prototype.id || x(e.M()),
         $.Message.initialize(this, t, 0, -1, [50], null));
     }
     static sm_m;
@@ -1138,10 +1138,10 @@ var $ = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            id: { n: 1, c: g },
-            already_owned: { n: 2, br: C.readBool, bw: w.writeBool },
-            weight: { n: 3, br: C.readDouble, bw: w.writeDouble },
-            weight_before_dedupe: { n: 4, br: C.readDouble, bw: w.writeDouble },
+            id: { n: 1, c: v },
+            already_owned: { n: 2, br: E.readBool, bw: M.writeBool },
+            weight: { n: 3, br: E.readDouble, bw: M.writeDouble },
+            weight_before_dedupe: { n: 4, br: E.readDouble, bw: M.writeDouble },
             debug_matches: { n: 50, c: Ke, r: !0, q: !0 },
             debug_popularity: { n: 51, c: qe },
           },
@@ -1150,16 +1150,16 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= T(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return T(e.M(), t, n);
+      return y(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return O(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1167,14 +1167,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1188,7 +1188,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.source_app || E(e.M()),
+        e.prototype.source_app || x(e.M()),
         $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1198,25 +1198,25 @@ var $ = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            source_app: { n: 1, br: C.readInt32, bw: w.writeInt32 },
-            weight: { n: 2, br: C.readDouble, bw: w.writeDouble },
-            similarity: { n: 3, br: C.readDouble, bw: w.writeDouble },
+            source_app: { n: 1, br: E.readInt32, bw: M.writeInt32 },
+            weight: { n: 2, br: E.readDouble, bw: M.writeDouble },
+            similarity: { n: 3, br: E.readDouble, bw: M.writeDouble },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= T(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return T(e.M(), t, n);
+      return y(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return O(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1224,14 +1224,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1245,7 +1245,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.rank || E(e.M()),
+        e.prototype.rank || x(e.M()),
         $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1255,12 +1255,12 @@ var $ = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            rank: { n: 1, br: C.readUint32, bw: w.writeUint32 },
-            popularity_factor: { n: 2, br: C.readDouble, bw: w.writeDouble },
+            rank: { n: 1, br: E.readUint32, bw: M.writeUint32 },
+            popularity_factor: { n: 2, br: E.readDouble, bw: M.writeDouble },
             weight_before_popularity: {
               n: 3,
-              br: C.readDouble,
-              bw: w.writeDouble,
+              br: E.readDouble,
+              bw: M.writeDouble,
             },
           },
         }),
@@ -1268,16 +1268,16 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= T(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return T(e.M(), t, n);
+      return y(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return O(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1285,14 +1285,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1306,7 +1306,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.steamid || E(e.M()),
+        e.prototype.steamid || x(e.M()),
         $.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
@@ -1318,30 +1318,30 @@ var $ = e(a(), 1),
           fields: {
             steamid: {
               n: 1,
-              br: C.readFixed64String,
-              bw: w.writeFixed64String,
+              br: E.readFixed64String,
+              bw: M.writeFixed64String,
             },
-            sort: { n: 2, d: 1, br: C.readEnum, bw: w.writeEnum },
-            clusters_to_return: { n: 3, br: C.readInt32, bw: w.writeInt32 },
-            cluster_index: { n: 4, br: C.readInt32, bw: w.writeInt32 },
-            context: { n: 10, c: h },
-            data_request: { n: 11, c: he },
+            sort: { n: 2, d: 1, br: E.readEnum, bw: M.writeEnum },
+            clusters_to_return: { n: 3, br: E.readInt32, bw: M.writeInt32 },
+            cluster_index: { n: 4, br: E.readInt32, bw: M.writeInt32 },
+            context: { n: 10, c: pe },
+            data_request: { n: 11, c: ne },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= T(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return T(e.M(), t, n);
+      return y(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return O(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1349,14 +1349,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1370,7 +1370,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.clusters || E(e.M()),
+        e.prototype.clusters || x(e.M()),
         $.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
@@ -1385,16 +1385,16 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= T(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return T(e.M(), t, n);
+      return y(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return O(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1402,14 +1402,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1423,7 +1423,7 @@ var $ = e(a(), 1),
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.cluster_id || E(e.M()),
+        e.prototype.cluster_id || x(e.M()),
         $.Message.initialize(this, t, 0, -1, [5, 6, 7], null));
     }
     static sm_m;
@@ -1433,31 +1433,31 @@ var $ = e(a(), 1),
         (e.sm_m ||= {
           proto: e,
           fields: {
-            cluster_id: { n: 1, br: C.readInt32, bw: w.writeInt32 },
-            playtime_forever: { n: 2, br: C.readInt32, bw: w.writeInt32 },
-            playtime_2weeks: { n: 3, br: C.readInt32, bw: w.writeInt32 },
-            last_played: { n: 4, br: C.readUint32, bw: w.writeUint32 },
+            cluster_id: { n: 1, br: E.readInt32, bw: M.writeInt32 },
+            playtime_forever: { n: 2, br: E.readInt32, bw: M.writeInt32 },
+            playtime_2weeks: { n: 3, br: E.readInt32, bw: M.writeInt32 },
+            last_played: { n: 4, br: E.readUint32, bw: M.writeUint32 },
             played_appids: {
               n: 5,
               r: !0,
               q: !0,
-              br: C.readInt32,
-              pbr: C.readPackedInt32,
-              bw: w.writeRepeatedInt32,
+              br: E.readInt32,
+              pbr: E.readPackedInt32,
+              bw: M.writeRepeatedInt32,
             },
             similar_items_appids: {
               n: 6,
               r: !0,
               q: !0,
-              br: C.readInt32,
-              pbr: C.readPackedInt32,
-              bw: w.writeRepeatedInt32,
+              br: E.readInt32,
+              pbr: E.readPackedInt32,
+              bw: M.writeRepeatedInt32,
             },
-            similar_items: { n: 7, c: _, r: !0, q: !0 },
+            similar_items: { n: 7, c: h, r: !0, q: !0 },
             similar_item_popularity_score: {
               n: 8,
-              br: C.readDouble,
-              bw: w.writeDouble,
+              br: E.readDouble,
+              bw: M.writeDouble,
             },
           },
         }),
@@ -1465,16 +1465,16 @@ var $ = e(a(), 1),
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= O(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= T(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return T(e.M(), t, n);
+      return y(e.M(), t, n);
     }
     static fromObject(t) {
-      return S(e.M(), t);
+      return O(e.M(), t);
     }
     static deserializeBinary(t) {
       let n = new $.BinaryReader(t),
@@ -1482,14 +1482,14 @@ var $ = e(a(), 1),
       return e.deserializeBinaryFromReader(r, n);
     }
     static deserializeBinaryFromReader(t, n) {
-      return j(e.MBF(), t, n);
+      return C(e.MBF(), t, n);
     }
     serializeBinary() {
       var t = new $.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      D(e.M(), t, n);
+      w(e.M(), t, n);
     }
     serializeBase64String() {
       var t = new $.BinaryWriter();
@@ -1504,7 +1504,7 @@ var $ = e(a(), 1),
   function t(e, t, n) {
     return e.SendMsg(
       `StoreAppSimilarity.PrioritizeAppsForUser#1`,
-      fe(Ue, t, n),
+      m(Ue, t, n),
       We,
       { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
     );
@@ -1513,7 +1513,7 @@ var $ = e(a(), 1),
   function n(e, t, n) {
     return e.SendMsg(
       `StoreAppSimilarity.IdentifyClustersFromPlaytime#1`,
-      fe(Je, t, n),
+      m(Je, t, n),
       Ye,
       { ePrivilege: 2, eWebAPIKeyRequirement: 2, rgBrowserAPISites: [`store`] },
     );
@@ -1530,13 +1530,13 @@ var Qe = class {
     }
   },
   $e = class {
-    m_callbacksLoaded = new oe();
+    m_callbacksLoaded = new p();
     m_rgClusters;
     constructor(e, t, n, r, i) {
-      let a = te.Init(Je);
-      (me(a),
-        i && re(a, i),
-        a.Body().set_steamid(t || M.steamid),
+      let a = ce.Init(Je);
+      (te(a),
+        i && g(a, i),
+        a.Body().set_steamid(t || b.steamid),
         r && a.Body().set_clusters_to_return(r),
         a.Body().set_sort(n),
         Ze.IdentifyClustersFromPlaytime(e.GetServiceTransport(), a).then(
@@ -1575,9 +1575,9 @@ var Qe = class {
     }
   };
 function et(e, t, n, r = 1, i = null, a = []) {
-  let [o, s] = I.useState(null);
+  let [o, s] = L.useState(null);
   return (
-    I.useEffect(() => {
+    L.useEffect(() => {
       if ((s(null), n))
         return e.LoadPlaytimeClusters(n, r, i, t).RegisterOnReadyCallback(s)
           .Unregister;
@@ -1592,7 +1592,7 @@ var tt = `U1eVOPgq7Qs-`,
   at = `sxMHArvxX2E-`;
 function ot(e) {
   let { SteamInterface: t } = e,
-    n = I.useRef(void 0);
+    n = L.useRef(void 0);
   return (
     (n.current ||= new Qe(t)),
     (0, K.jsxs)(K.Fragment, {
@@ -1627,22 +1627,22 @@ var st = {
 };
 function ct(e) {
   let { SimilarityStore: t } = e,
-    [n, r] = I.useState(M.steamid),
-    [i, a] = I.useState(`10`),
-    [o, s] = I.useState(1),
-    c = I.useCallback((e) => r(e.currentTarget.value), [r]),
-    l = I.useCallback((e) => a(e.currentTarget.value), [a]),
-    d = I.useCallback((e) => s(e.data), [s]),
+    [n, r] = L.useState(b.steamid),
+    [i, a] = L.useState(`10`),
+    [o, s] = L.useState(1),
+    c = L.useCallback((e) => r(e.currentTarget.value), [r]),
+    l = L.useCallback((e) => a(e.currentTarget.value), [a]),
+    d = L.useCallback((e) => s(e.data), [s]),
     f = !1,
-    p = I.useRef(M.steamid),
-    m = n && new ae(n);
+    p = L.useRef(b.steamid),
+    m = n && new ie(n);
   m &&
     m.BIsValid() &&
     m.BIsIndividualAccount() &&
     ((p.current = m.ConvertTo64BitString()), (f = !0));
   let h;
   i && !isNaN(parseInt(i)) && (h = parseInt(i));
-  let g = I.useMemo(() => {
+  let g = L.useMemo(() => {
       let e = [];
       for (let t in st) e.push({ data: Number(t), label: st[t] });
       return e;
@@ -1650,23 +1650,23 @@ function ct(e) {
     _ = et(t, { include_assets: !0, include_basic_info: !0 }, p.current, o, h);
   return (0, K.jsxs)(`div`, {
     children: [
-      (0, K.jsxs)(pe, {
+      (0, K.jsxs)(le, {
         className: tt,
         children: [
-          (0, K.jsx)(A, {
+          (0, K.jsx)(j, {
             label: `SteamID`,
             type: `text`,
             value: n,
             onChange: c,
             description: !f && `Invalid SteamID`,
           }),
-          (0, K.jsx)(A, {
+          (0, K.jsx)(j, {
             label: `Clusters to return (Set to blank for all clusters)`,
             type: `text`,
             value: i,
             onChange: l,
           }),
-          (0, K.jsx)(k, {
+          (0, K.jsx)(A, {
             label: `Sort clusters by`,
             rgOptions: g,
             selectedOption: o,
@@ -1683,17 +1683,17 @@ function lt(e) {
   let { rgPlaytimeClusters: t } = e;
   return (0, K.jsx)(`div`, {
     children: t.map((e) =>
-      (0, K.jsx)(x, { children: (0, K.jsx)(ut, { cluster: e }) }, e.nClusterID),
+      (0, K.jsx)(D, { children: (0, K.jsx)(ut, { cluster: e }) }, e.nClusterID),
     ),
   });
 }
 function ut(e) {
   let { cluster: t } = e,
-    [n, r] = I.useState(!1),
-    i = I.useCallback(() => r(!0), [r]),
-    [a, o] = I.useState(!1),
-    s = I.useCallback(() => o(!0), [o]),
-    c = le({ onEnter: s });
+    [n, r] = L.useState(!1),
+    i = L.useCallback(() => r(!0), [r]),
+    [a, o] = L.useState(!1),
+    s = L.useCallback(() => o(!0), [o]),
+    c = ae({ onEnter: s });
   return (0, K.jsxs)(`div`, {
     ref: c,
     className: nt,
@@ -1702,7 +1702,7 @@ function ut(e) {
         className: rt,
         children: [
           (0, K.jsxs)(`h1`, { children: [`Cluster `, t.nClusterID] }),
-          (0, K.jsx)(x, {
+          (0, K.jsx)(D, {
             children: (0, K.jsxs)(`div`, {
               className: void 0,
               children: [
@@ -1718,7 +1718,7 @@ function ut(e) {
                   children: [
                     (0, K.jsx)(`b`, { children: `Last Played:` }),
                     ` `,
-                    m(t.rtLastPlayed),
+                    fe(t.rtLastPlayed),
                     ` `,
                   ],
                 }),
@@ -1729,7 +1729,7 @@ function ut(e) {
                     a &&
                       t.rgAppIDsPlayed.map((e) =>
                         (0, K.jsxs)(
-                          I.Fragment,
+                          L.Fragment,
                           { children: [(0, K.jsx)(ft, { appid: e }), `, `] },
                           e,
                         ),
@@ -1758,7 +1758,7 @@ function ut(e) {
         className: it,
         children: [
           (0, K.jsx)(`h3`, { children: `Similar titles:` }),
-          (0, K.jsx)(x, {
+          (0, K.jsx)(D, {
             children: (0, K.jsx)(`ul`, {
               children: t.rgSimilarItems.map((e, t) =>
                 n || t < 4
@@ -1772,7 +1772,7 @@ function ut(e) {
             }),
           }),
           !n &&
-            (0, K.jsxs)(de, {
+            (0, K.jsxs)(oe, {
               onClick: i,
               children: [`Show all `, t.rgSimilarItems.length],
             }),
@@ -1821,28 +1821,28 @@ var mt = [
   },
 ];
 function ht(e) {
-  let [t, i] = I.useState(!1),
-    a = M.logged_in,
-    o = ce();
+  let [n, r] = L.useState(!1),
+    i = b.logged_in,
+    o = me();
   if (
-    ((0, I.useEffect)(() => {
-      (F.Init(o), i(!0));
+    ((0, L.useEffect)(() => {
+      (I.Init(o), r(!0));
     }, [o]),
-    !t)
+    !n)
   )
-    return (0, K.jsx)(`div`, { className: V });
+    return (0, K.jsx)(`div`, { className: H });
   let s = { SteamInterface: o };
   return (0, K.jsx)(`div`, {
-    className: V,
+    className: H,
     children: (0, K.jsxs)(`div`, {
-      className: Ce,
+      className: Se,
       children: [
         (0, K.jsxs)(`div`, {
-          className: we,
+          className: Ce,
           children: [
-            (0, K.jsx)(`div`, { className: Te, children: `Labs Sandbox` }),
+            (0, K.jsx)(`div`, { className: we, children: `Labs Sandbox` }),
             (0, K.jsx)(`div`, {
-              className: Ee,
+              className: Te,
               children: `Internal testbed page for Steam Labs experiments`,
             }),
           ],
@@ -1851,9 +1851,9 @@ function ht(e) {
           className: Le,
           children: mt.map((e) =>
             (0, K.jsx)(
-              p,
+              se,
               {
-                to: `${ie.LabsSandbox()}/${e.path}`,
+                to: `${re.LabsSandbox()}/${e.path}`,
                 className: Re,
                 activeClassName: ze,
                 children: e.name,
@@ -1863,16 +1863,16 @@ function ht(e) {
           ),
         }),
         (0, K.jsx)(`div`, {
-          className: De,
-          children: (0, K.jsx)(x, {
-            children: (0, K.jsx)(r, {
+          className: Ee,
+          children: (0, K.jsx)(D, {
+            children: (0, K.jsx)(t, {
               children: mt.map((e, t) =>
                 (0, K.jsx)(
-                  n,
+                  a,
                   {
-                    path: `${ie.LabsSandbox()}/${e.path}`,
+                    path: `${re.LabsSandbox()}/${e.path}`,
                     render: (t) =>
-                      !e.requires_login || a
+                      !e.requires_login || i
                         ? e.render({ ...t, ...s })
                         : (0, K.jsx)(gt, {}),
                   },
@@ -1887,11 +1887,11 @@ function ht(e) {
   });
 }
 function gt() {
-  let e = se();
+  let e = de();
   return (0, K.jsxs)(`div`, {
     children: [
       (0, K.jsx)(`h3`, { children: `Please login to view this page.` }),
-      (0, K.jsx)(ge, {
+      (0, K.jsx)(he, {
         transport: e,
         platform: 2,
         onComplete: () => window.location.reload(),

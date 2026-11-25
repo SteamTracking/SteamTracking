@@ -17,12 +17,12 @@ import {
   _,
   _,
 } from "./chunk~de7f2df91c.js";
-import { _ } from "./chunk~25a6634263.js";
+import { _ } from "./chunk~bd90a5fce7.js";
 import { _, _, _, _, _, _ } from "./chunk~1fa4b8f2ff.js";
 import { _, _ } from "./chunk~0a99e05c44.js";
 import { _, _, _, _, _ } from "./chunk~44f252525d.js";
 import { _ } from "./chunk~ede3e357a2.js";
-import { _ } from "./chunk~d9c3dab17a.js";
+import { _ } from "./chunk~70c16cc80c.js";
 var _ = _(_(), 1),
   _ = _.createContext({
     eAdultOnlyMediaBehavior: `masked`,
@@ -94,7 +94,7 @@ function _(_) {
         : void 0,
     );
   return _
-    ? !_ ||
+    ? !_?.content_descriptorids ||
         _.content_descriptorids.includes(3) ||
         _.content_descriptorids.includes(4)
     : !1;
@@ -3097,7 +3097,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -3123,7 +3123,7 @@ var _ = class _ extends _.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -3136,7 +3136,7 @@ var _ = class _ extends _.Message {
       {
         bConstMethod: !0,
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -3156,7 +3156,7 @@ var _ = class _ extends _.Message {
   function _(_, _) {
     return _.SendNotification(`MarketingMessages.MarkMessageSeen#1`, _(_, _), {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.MarkMessageSeen = _;
@@ -3166,7 +3166,7 @@ var _ = class _ extends _.Message {
       _(_, _),
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }

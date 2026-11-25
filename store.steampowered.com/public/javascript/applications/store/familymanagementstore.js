@@ -3,35 +3,35 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import {
-  Lt as t,
-  dt as n,
+  It as t,
+  at as n,
   ot as r,
-  st as i,
-  yt as a,
+  ut as i,
+  vt as a,
 } from "./chunk~01cfc309bf.js";
 import { u as o } from "./chunk~e867464c75.js";
 import {
-  C as ee,
-  Ox as s,
-  P as c,
-  Sy as l,
-  Xy as te,
-  _x as u,
-  et as d,
-  gb as f,
-  j as p,
-  rb as m,
-  ut as h,
-  ux as g,
-  vy as _,
+  C as s,
+  Cy as c,
+  P as l,
+  Zy as ee,
+  _b as u,
+  dx as d,
+  et as f,
+  ib as p,
+  j as m,
+  kx as h,
+  ut as g,
+  vx as _,
+  yy as v,
 } from "./main.js";
 import {
-  _ as v,
-  a as y,
-  c as b,
-  d as ne,
-  f as x,
-  g as S,
+  _ as y,
+  a as b,
+  c as x,
+  d as te,
+  f as S,
+  g as ne,
   h as C,
   i as w,
   l as T,
@@ -72,32 +72,32 @@ function B(e) {
   return j.createElement(z.Provider, { value: r }, n);
 }
 function V(e = !1) {
-  return H(l(), e);
+  return H(c(), e);
 }
 function H(e, t = !1) {
-  let n = _(),
-    r = (0, j.useContext)(z).staleTimeMs;
-  return i({
+  let n = v(),
+    i = (0, j.useContext)(z).staleTimeMs;
+  return r({
     queryKey: M(e, t),
     queryFn: async () => {
-      let r = s.Init(ie);
+      let r = h.Init(ie);
       (r.Body().set_steamid(e), r.Body().set_include_family_group_response(t));
       let i = await A.GetFamilyGroupForUser(n, r);
       return (R(i.GetEResult(), `GetFamilyGroupForUser`), i.Body());
     },
-    staleTime: r,
+    staleTime: i,
     enabled: !!e,
-    placeholderData: e ? void 0 : new b(),
+    placeholderData: e ? void 0 : new x(),
   });
 }
 function U(e) {
-  let t = _(),
+  let t = v(),
     n = (0, j.useContext)(z).staleTimeMs;
-  return i({
+  return r({
     queryKey: N(e),
     queryFn: async () => {
       if (e) {
-        let n = s.Init(T);
+        let n = h.Init(T);
         n.Body().set_family_groupid(e);
         let r = await A.GetFamilyGroup(t, n);
         return (R(r.GetEResult(), `GetFamilyGroup`), r.Body());
@@ -108,66 +108,66 @@ function U(e) {
   });
 }
 function W() {
-  let e = _(),
-    t = n(),
-    i = l();
-  return r({
+  let e = v(),
+    t = i(),
+    r = c();
+  return n({
     mutationFn: async (t) => {
-      let n = s.Init(w);
+      let n = h.Init(w);
       n.Body().set_name(t);
       let r = await A.CreateFamilyGroup(e, n);
       return (R(r.GetEResult(), `CreateFamilyGroup`), r.Body());
     },
     onSuccess: () => {
-      t.invalidateQueries({ queryKey: M(i) });
+      t.invalidateQueries({ queryKey: M(r) });
     },
   });
 }
 function G(e) {
-  let t = _(),
-    i = n(),
-    a = l();
-  return r({
+  let t = v(),
+    r = i(),
+    a = c();
+  return n({
     mutationFn: async () => {
-      let n = s.Init(y);
+      let n = h.Init(b);
       n.Body().set_family_groupid(e);
       let r = await A.DeleteFamilyGroup(t, n);
       return (R(r.GetEResult(), `DeleteFamilyGroup`), r.Body());
     },
     onSuccess: () => {
-      (i.invalidateQueries({ queryKey: M(a) }),
-        i.invalidateQueries({ queryKey: N(e) }),
-        i.invalidateQueries({ queryKey: P(e) }));
+      (r.invalidateQueries({ queryKey: M(a) }),
+        r.invalidateQueries({ queryKey: N(e) }),
+        r.invalidateQueries({ queryKey: P(e) }));
     },
   });
 }
 function K(e) {
-  let t = _(),
-    i = n();
-  return r({
+  let t = v(),
+    r = i();
+  return n({
     mutationFn: async (n) => {
-      let r = s.Init(C);
+      let r = h.Init(C);
       (r.Body().set_family_groupid(e), r.Body().set_name(n));
       let i = await A.ModifyFamilyGroupDetails(t, r);
       return (R(i.GetEResult(), `ModifyFamilyGroupDetails`), i.Body());
     },
     onSuccess: () => {
-      (i.invalidateQueries({ queryKey: N(e) }),
-        i.invalidateQueries({ queryKey: P(e) }));
+      (r.invalidateQueries({ queryKey: N(e) }),
+        r.invalidateQueries({ queryKey: P(e) }));
     },
   });
 }
-function ce(e, t, i) {
-  let a = _(),
-    o = n();
-  return r({
+function ce(e, t, r) {
+  let a = v(),
+    o = i();
+  return n({
     mutationFn: async () => {
-      let n = s.Init(k);
+      let n = h.Init(k);
       (n.Body().set_family_groupid(e),
         n.Body().set_receiver_steamid(t),
-        n.Body().set_receiver_role(i));
-      let r = await A.InviteToFamilyGroup(a, n);
-      return (R(r.GetEResult(), `InviteToFamilyGroup`), r.Body());
+        n.Body().set_receiver_role(r));
+      let i = await A.InviteToFamilyGroup(a, n);
+      return (R(i.GetEResult(), `InviteToFamilyGroup`), i.Body());
     },
     onSuccess: () => {
       (o.invalidateQueries({ queryKey: M(t) }),
@@ -177,32 +177,32 @@ function ce(e, t, i) {
   });
 }
 function le(e) {
-  let t = _(),
-    i = l(),
-    a = n();
-  return r({
+  let t = v(),
+    r = c(),
+    a = i();
+  return n({
     mutationFn: async () => {
-      let n = s.Init(E);
+      let n = h.Init(E);
       n.Body().set_family_groupid(e);
       let r = await A.JoinFamilyGroup(t, n);
       return (R(r.GetEResult(), `JoinFamilyGroup`), r.Body());
     },
     onSuccess: () => {
-      (a.invalidateQueries({ queryKey: M(i) }),
+      (a.invalidateQueries({ queryKey: M(r) }),
         a.invalidateQueries({ queryKey: N(e) }),
         a.invalidateQueries({ queryKey: P(e) }));
     },
   });
 }
 function ue(e, t) {
-  let i = _(),
-    a = n();
-  return r({
+  let r = v(),
+    a = i();
+  return n({
     mutationFn: async () => {
-      let n = s.Init(ae);
+      let n = h.Init(ae);
       (n.Body().set_family_groupid(e), n.Body().set_steamid_to_cancel(t));
-      let r = await A.CancelFamilyGroupInvite(i, n);
-      return (R(r.GetEResult(), `CancelFamilyGroupInvite`), r.Body());
+      let i = await A.CancelFamilyGroupInvite(r, n);
+      return (R(i.GetEResult(), `CancelFamilyGroupInvite`), i.Body());
     },
     onSuccess: () => {
       (a.invalidateQueries({ queryKey: M(t) }),
@@ -212,14 +212,14 @@ function ue(e, t) {
   });
 }
 function q(e, t) {
-  let i = _(),
-    a = n();
-  return r({
+  let r = v(),
+    a = i();
+  return n({
     mutationFn: async () => {
-      let n = s.Init(S);
+      let n = h.Init(ne);
       (n.Body().set_family_groupid(e), n.Body().set_steamid_to_remove(t));
-      let r = await A.RemoveFromFamilyGroup(i, n);
-      return (R(r.GetEResult(), `RemoveFromFamilyGroup`), r.Body());
+      let i = await A.RemoveFromFamilyGroup(r, n);
+      return (R(i.GetEResult(), `RemoveFromFamilyGroup`), i.Body());
     },
     onSuccess: () => {
       (a.invalidateQueries({ queryKey: M(t) }),
@@ -229,13 +229,13 @@ function q(e, t) {
   });
 }
 function de(e) {
-  let t = _();
-  return i({
+  let t = v();
+  return r({
     queryKey: F(e),
     queryFn: async () => {
-      let n = g(`clientsessionid`),
+      let n = d(`clientsessionid`),
         r = n && BigInt(`0x` + n).toString(),
-        i = s.Init(x);
+        i = h.Init(S);
       (i.Body().set_family_groupid(e),
         i.Body().set_client_instance_id(r ?? void 0));
       let a = await A.GetUsersSharingDevice(t, i);
@@ -244,19 +244,19 @@ function de(e) {
   });
 }
 function fe(e) {
-  let t = l();
+  let t = c();
   return U(e)
     .data?.members()
     .find((e) => e.steamid() == t)
     ?.role();
 }
 function pe(e, t) {
-  let n = _(),
-    r = l();
-  return i({
-    queryKey: L(e, r),
+  let n = v(),
+    i = c();
+  return r({
+    queryKey: L(e, i),
     queryFn: async () => {
-      let r = s.Init(oe);
+      let r = h.Init(oe);
       (r.Body().set_family_groupid(e),
         t !== void 0 && r.Body().set_rt_include_completed_since(t));
       let i = await A.GetPurchaseRequests(n, r);
@@ -264,17 +264,17 @@ function pe(e, t) {
     },
   });
 }
-function me(e, t, i) {
-  let a = _(),
-    o = n();
-  return r({
+function me(e, t, r) {
+  let a = v(),
+    o = i();
+  return n({
     mutationFn: async () => {
-      let n = s.Init(v);
+      let n = h.Init(y);
       (n.Body().set_family_groupid(e),
         n.Body().set_request_id(t),
-        n.Body().set_action(i));
-      let r = await A.RespondToRequestedPurchase(a, n);
-      return (R(r.GetEResult(), `RespondToRequestedPurchase`), r.Body());
+        n.Body().set_action(r));
+      let i = await A.RespondToRequestedPurchase(a, n);
+      return (R(i.GetEResult(), `RespondToRequestedPurchase`), i.Body());
     },
     onSuccess: () => {
       (o.invalidateQueries({ queryKey: L(e) }),
@@ -354,13 +354,13 @@ function _e(e, t, n, r) {
   let i = ``;
   if (e in Y) {
     let t = Y[e];
-    if (typeof t == `string`) i = m(t, ...r);
+    if (typeof t == `string`) i = p(t, ...r);
     else {
       let e = t;
-      n in e && (i = m(e[n], ...r));
+      n in e && (i = p(e[n], ...r));
     }
   }
-  return he(m(t, i), e);
+  return he(p(t, i), e);
 }
 function X() {
   let { setErrorMessage: e } = (0, j.useContext)(J);
@@ -385,26 +385,26 @@ function ve(e, t, n) {
 }
 function ye(e) {
   return e
-    ? f(Date.now() / 1e3 + e, {
+    ? u(Date.now() / 1e3 + e, {
         month: `long`,
         day: `numeric`,
         year: `numeric`,
         weekday: void 0,
       })
-    : m(`#FamilyManagement_LoadingPlaceholder`);
+    : p(`#FamilyManagement_LoadingPlaceholder`);
 }
 function be(e, t) {
   let { setErrorMessage: n } = X();
   (0, j.useEffect)(() => {
-    e.isError && n(m(t));
+    e.isError && n(p(t));
   }, [n, e.isError, t]);
 }
 function xe(e) {
-  let t = _();
-  return i({
+  let t = v();
+  return r({
     queryKey: P(e),
     queryFn: async () => {
-      let n = s.Init(O);
+      let n = h.Init(O);
       n.Body().set_family_groupid(e);
       let r = await A.GetChangeLog(t, n);
       return (R(r.GetEResult(), `GetFamilyGroupChangeLog`), r.Body().changes());
@@ -413,7 +413,7 @@ function xe(e) {
   });
 }
 function Se(e, t) {
-  return `${u.STORE_BASE_URL}cart/purchaserequest/${e}/${t}`;
+  return `${_.STORE_BASE_URL}cart/purchaserequest/${e}/${t}`;
 }
 function Z(e, t, n, r) {
   return [
@@ -428,57 +428,57 @@ function Z(e, t, n, r) {
   ];
 }
 function Ce(e, t) {
-  let n = l(),
-    { settings: r, mapAppsAllowed: o } = c(n).data,
-    d = p(),
-    f = _(),
+  let n = c(),
+    { settings: i, mapAppsAllowed: o } = l(n).data,
+    u = m(),
+    d = v(),
     {
-      bIncludeOwn: m,
-      bIncludeExcluded: h,
+      bIncludeOwn: f,
+      bIncludeExcluded: p,
       bIncludeNonGames: g,
-      for_account_id: v,
+      for_account_id: y,
     } = t ?? {},
-    y = t?.enabled === void 0 || t.enabled,
-    b = Z(e, t, r, d),
-    x = (e) => !ee(e.appid(), d, r, o);
-  return i({
-    queryKey: b,
+    b = t?.enabled === void 0 || t.enabled,
+    x = Z(e, t, i, u),
+    S = (e) => !s(e.appid(), u, i, o);
+  return r({
+    queryKey: x,
     queryFn: async () => {
-      let t = s.Init(ne);
+      let t = h.Init(te);
       if (
         (t.Body().set_family_groupid(e),
-        t.Body().set_include_own(m),
-        t.Body().set_include_excluded(h),
-        t.Body().set_language(u.LANGUAGE),
+        t.Body().set_include_own(f),
+        t.Body().set_include_excluded(p),
+        t.Body().set_language(_.LANGUAGE),
         t.Body().set_include_non_games(g),
-        v)
+        y)
       ) {
-        let e = te.InitFromAccountID(v, u.EUNIVERSE);
+        let e = ee.InitFromAccountID(y, _.EUNIVERSE);
         t.Body().set_steamid(e.ConvertTo64BitString());
       }
-      let n = await A.GetSharedLibraryApps(f, t);
+      let n = await A.GetSharedLibraryApps(d, t);
       return (
         R(n.GetEResult(), `GetSharedLibraryApps`),
         n
           .Body()
           .apps()
-          .filter(x)
+          .filter(S)
           .map((e) => e.toObject())
       );
     },
-    enabled: !!r && y,
+    enabled: !!i && b,
     placeholderData: a,
     select: t?.select,
   });
 }
 function we(e, t) {
-  let r = n(),
-    i = l(),
-    { settings: a } = c(i).data ?? {},
-    o = Z(e, t, a, p());
+  let n = i(),
+    r = c(),
+    { settings: a } = l(r).data ?? {},
+    o = Z(e, t, a, m());
   return (0, j.useCallback)(() => {
-    r.invalidateQueries({ queryKey: o });
-  }, [r, o]);
+    n.invalidateQueries({ queryKey: o });
+  }, [n, o]);
 }
 function Q(e, t) {
   let n = e.sort_as || e.name,
@@ -528,16 +528,16 @@ function Ee(e, t, n, r = []) {
   return (0, j.useMemo)(() => i.slice().sort(a), [i, a]);
 }
 function De(e, t) {
-  let i = _(),
-    a = n(),
-    o = l();
-  return r({
+  let r = v(),
+    a = i(),
+    o = c();
+  return n({
     mutationFn: async (n) => {
-      let r = s.Init(re);
-      (r.Body().set_family_groupid(e),
-        r.Body().set_invite_id(t),
-        r.Body().set_nonce(n));
-      let a = await A.ConfirmJoinFamilyGroup(i, r);
+      let i = h.Init(re);
+      (i.Body().set_family_groupid(e),
+        i.Body().set_invite_id(t),
+        i.Body().set_nonce(n));
+      let a = await A.ConfirmJoinFamilyGroup(r, i);
       return (R(a.GetEResult(), `ConfirmJoinFamilyGroup`), a.Body());
     },
     onSuccess: () => {
@@ -547,17 +547,17 @@ function De(e, t) {
     },
   });
 }
-function Oe(e, t, i) {
-  let a = _(),
-    o = n();
-  return r({
+function Oe(e, t, r) {
+  let a = v(),
+    o = i();
+  return n({
     mutationFn: async () => {
-      let n = s.Init(D);
+      let n = h.Init(D);
       (n.Body().set_family_groupid(e),
         n.Body().set_invite_id(t),
-        n.Body().set_nonce(i));
-      let r = await A.ConfirmInviteToFamilyGroup(a, n);
-      return (R(r.GetEResult(), `ConfirmInviteToFamilyGroup`), r.Body());
+        n.Body().set_nonce(r));
+      let i = await A.ConfirmInviteToFamilyGroup(a, n);
+      return (R(i.GetEResult(), `ConfirmInviteToFamilyGroup`), i.Body());
     },
     onSuccess: () => {
       (o.invalidateQueries({ queryKey: N(e) }),
@@ -581,13 +581,13 @@ function ke(e) {
   return (t.sort((e, t) => e.time_start - t.time_start), t);
 }
 function Ae(e) {
-  let t = _();
-  return i({
+  let t = v();
+  return r({
     queryKey: I(e),
     queryFn: async () => {
-      let n = s.Init(d);
+      let n = h.Init(f);
       n.Body().set_steamid(e);
-      let r = await h.GetRecentPlaytimeSessionsForChild(t, n);
+      let r = await g.GetRecentPlaytimeSessionsForChild(t, n);
       return (
         R(r.GetEResult(), `GetRecentPlaytimeSessionsForChild`),
         ke(r.Body().toObject().sessions || [])
@@ -596,18 +596,18 @@ function Ae(e) {
   });
 }
 function je(e) {
-  let t = _(),
-    i = l(),
-    a = n();
-  return r({
+  let t = v(),
+    r = c(),
+    a = i();
+  return n({
     mutationFn: async () => {
-      let n = s.Init(se);
+      let n = h.Init(se);
       n.Body().set_family_groupid(e);
       let r = await A.UndeleteFamilyGroup(t, n);
       return (R(r.GetEResult(), `UndeleteFamilyGroup`), r);
     },
     onSuccess: () => {
-      (a.invalidateQueries({ queryKey: M(i) }),
+      (a.invalidateQueries({ queryKey: M(r) }),
         a.invalidateQueries({ queryKey: N(e) }),
         a.invalidateQueries({ queryKey: P(e) }));
     },

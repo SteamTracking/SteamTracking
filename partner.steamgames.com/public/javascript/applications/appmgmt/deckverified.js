@@ -3,75 +3,75 @@
 /* Third-party software licenses can be found at licenses.txt */
 import {
   A as e,
-  At as t,
+  Ct as t,
   G as n,
-  Gt as r,
-  Jt as i,
-  Kt as a,
-  Q as o,
-  Ut as s,
-  Wt as c,
-  Xt as l,
-  Yt as u,
-  Zt as d,
-  bt as f,
-  it as p,
-  j as m,
-  qt as h,
-  rt as g,
-  sn as _,
-  t as v,
-  vt as y,
-  yt as b,
-  z as ee,
+  K as r,
+  Pt as i,
+  St as a,
+  W as o,
+  _ as s,
+  _t as c,
+  bt as l,
+  d as u,
+  gt as d,
+  k as f,
+  n as p,
+  nt as m,
+  r as h,
+  t as g,
+  vt as _,
+  w as v,
+  wt as y,
+  xt as b,
+  yt as x,
 } from "./chunk~de7f2df91c.js";
 import {
-  Ft as x,
-  G as te,
-  I as ne,
-  It as S,
-  M as re,
-  Mt as C,
-  Nt as ie,
-  _t as ae,
-  r as w,
-  s as oe,
-  wt as se,
-} from "./chunk~25a6634263.js";
+  A as S,
+  At as C,
+  Nt as w,
+  P as ee,
+  Pt as T,
+  St as te,
+  U as ne,
+  a as re,
+  ht as ie,
+  jt as ae,
+  t as E,
+} from "./chunk~bd90a5fce7.js";
 import {
-  Ai as T,
-  Cn as ce,
-  Fi as le,
-  Ha as E,
-  Ht as ue,
-  Ii as de,
-  Li as D,
-  Mi as O,
-  Ni as fe,
-  Oi as pe,
-  Pa as me,
-  R as he,
-  Ua as k,
-  Xn as ge,
-  _n as _e,
-  da as A,
-  f as ve,
-  ji as j,
-  ki as ye,
-  na as M,
-  o as be,
-  r as xe,
-  ra as N,
-  s as Se,
+  Ai as D,
+  Cn as oe,
+  Fi as se,
+  Ha as O,
+  Ht as ce,
+  Ii as le,
+  Li as k,
+  Mi as ue,
+  Ni as de,
+  Oi as fe,
+  Pa as pe,
+  R as me,
+  Ua as A,
+  Xn as he,
+  _n as ge,
+  da as j,
+  f as _e,
+  ji as M,
+  ki as ve,
+  na as N,
+  o as ye,
+  r as be,
+  ra as P,
+  s as xe,
 } from "./chunk~1fa4b8f2ff.js";
-import { _ as Ce, w as we } from "./chunk~0a99e05c44.js";
+import { _ as Se, w as Ce } from "./chunk~0a99e05c44.js";
 import "./chunk~44f252525d.js";
-import { n as Te } from "./chunk~f8b6a4beb3.js";
-import { t as Ee } from "./chunk~ede3e357a2.js";
-import { r as De } from "./chunk~8681f5c764.js";
-import { t as Oe } from "./chunk~f4e4ed5c17.js";
-import { t as P } from "./chunk~c55709d290.js";
-import { n as ke, t as F } from "./chunk~af36c62e9f.js";
+import { n as we } from "./chunk~f8b6a4beb3.js";
+import { t as Te } from "./chunk~ede3e357a2.js";
+import { r as Ee } from "./chunk~8681f5c764.js";
+import { t as De } from "./chunk~f4e4ed5c17.js";
+import { t as F } from "./chunk~c55709d290.js";
+import { n as Oe, t as ke } from "./chunk~af36c62e9f.js";
 import {
   E as Ae,
   J as je,
@@ -84,8 +84,8 @@ import {
 } from "./chunk~b00bc5ccc1.js";
 import { t as Re } from "./chunk~eefd71512b.js";
 import { r as I } from "./chunk~e867464c75.js";
-var L = _(t(), 1),
-  R = y(),
+var L = i(m(), 1),
+  R = o(),
   ze = L.createContext({
     bForceShowCompatInfo: !1,
     bSteamOS: !1,
@@ -98,23 +98,23 @@ function Ve() {
   let {
     bForceShowCompatInfo: e,
     bSteamDeck: t,
-    bSteamOS: r,
-    bSteamMachine: i,
-    bSteamFrame: a,
+    bSteamOS: n,
+    bSteamMachine: r,
+    bSteamFrame: i,
   } = Be();
-  return (r && t) || e || n()?.FORCED_DISPLAY_MODE == `steamdeck`
+  return (n && t) || e || s()?.FORCED_DISPLAY_MODE == `steamdeck`
     ? [!0, 1]
-    : (r && i) || n()?.FORCED_DISPLAY_MODE == `steammachine`
+    : (n && r) || s()?.FORCED_DISPLAY_MODE == `steammachine`
       ? [!0, 3]
-      : r && a
+      : n && i
         ? [!0, 4]
-        : r
+        : n
           ? [!0, 2]
           : [!1, 0];
 }
 function He(e) {
   let { id: t, eHWCompat: n, className: r } = e,
-    { data: i } = we(t);
+    { data: i } = Ce(t);
   if (!i) return null;
   switch (n) {
     case 1:
@@ -145,43 +145,43 @@ var Ue = (e) => {
     let { category: t = 0, className: n } = e,
       r = z(t);
     return (0, R.jsxs)(`div`, {
-      className: m(N, n),
-      children: [(0, R.jsx)(pe, {}), (0, R.jsx)(r, { className: M })],
+      className: h(P, n),
+      children: [(0, R.jsx)(fe, {}), (0, R.jsx)(r, { className: N })],
     });
   },
   We = (e) => {
     let { category: t = 0, className: n } = e,
       r = z(t);
     return (0, R.jsxs)(`div`, {
-      className: m(N, n),
-      children: [(0, R.jsx)(le, {}), (0, R.jsx)(r, { className: M })],
+      className: h(P, n),
+      children: [(0, R.jsx)(se, {}), (0, R.jsx)(r, { className: N })],
     });
   },
   Ge = (e) => {
     let { category: t = 0, className: n } = e,
       r = z(t);
     return (0, R.jsxs)(`div`, {
-      className: m(N, n),
-      children: [(0, R.jsx)(fe, {}), (0, R.jsx)(r, { className: M })],
+      className: h(P, n),
+      children: [(0, R.jsx)(de, {}), (0, R.jsx)(r, { className: N })],
     });
   },
   Ke = (e) => {
     let { category: t = 0, elControllerSupport: n } = e,
       r = Ye(t);
     return (0, R.jsxs)(`div`, {
-      className: m(N, e.className),
-      children: [n, (0, R.jsx)(r, { className: M })],
+      className: h(P, e.className),
+      children: [n, (0, R.jsx)(r, { className: N })],
     });
   },
-  qe = { 1: j, 2: ye, 3: O, 0: T },
-  Je = { 0: T, 1: j, 2: D };
+  qe = { 1: M, 2: ve, 3: ue, 0: D },
+  Je = { 0: D, 1: M, 2: k };
 function z(e) {
-  return qe[e] || T;
+  return qe[e] || D;
 }
 function Ye(e) {
-  return Je[e] || T;
+  return Je[e] || D;
 }
-var Xe = _(Oe()),
+var Xe = i(De()),
   B = class e {
     m_mapAppResults = new Map();
     m_mapAppCallbackList = new Map();
@@ -195,7 +195,7 @@ var Xe = _(Oe()),
     GetCallbackForAppList(e) {
       return (
         this.m_mapAppCallbackList.has(e) ||
-          this.m_mapAppCallbackList.set(e, new x()),
+          this.m_mapAppCallbackList.set(e, new w()),
         this.m_mapAppCallbackList.get(e)
       );
     }
@@ -217,14 +217,14 @@ var Xe = _(Oe()),
     async InternalLoadAppCompatability(e) {
       let t = null;
       try {
-        let n = { nAppID: e, l: g.LANGUAGE, cc: g.COUNTRY },
-          r = g.STORE_BASE_URL + `saleaction/ajaxgetdeckappcompatibilityreport`,
+        let n = { nAppID: e, l: f.LANGUAGE, cc: f.COUNTRY },
+          r = f.STORE_BASE_URL + `saleaction/ajaxgetdeckappcompatibilityreport`,
           i = await Xe.default.get(r, { params: n, withCredentials: !0 });
         if (i?.status == 200 && i.data?.success == 1 && i.data?.results)
           return (this.AddCompatabilityResult(i.data.results), !0);
-        t = P(i);
+        t = F(i);
       } catch (e) {
-        t = P(e);
+        t = F(e);
       }
       return (
         console.error(
@@ -241,7 +241,7 @@ var Xe = _(Oe()),
     }
     constructor() {
       if (document.getElementById(`application_config`)) {
-        let t = o(`hardwarecompatibility`, `application_config`);
+        let t = v(`hardwarecompatibility`, `application_config`);
         e.ValidateCompatabilityResult(t) && this.AddCompatabilityResult(t);
       }
     }
@@ -255,11 +255,11 @@ var Xe = _(Oe()),
       );
     }
   };
-e([S], B.prototype, `LoadAppCompabitilityResult`, null);
+p([T], B.prototype, `LoadAppCompabitilityResult`, null);
 function Ze(e) {
   let [t, n] = L.useState(B.Get().GetCompatabilityResultForApp(e));
   return (
-    re(B.Get().GetCallbackForAppList(e), n),
+    S(B.Get().GetCallbackForAppList(e), n),
     L.useEffect(() => {
       B.Get().BHasCompatabilityResultForApp(e) ||
         B.Get()
@@ -348,15 +348,15 @@ function Qe(e) {
       return 0;
   }
 }
-var H = class e {
+var $e = class e {
   m_boundActions = new Map();
   m_defaultActions = new Map();
   m_globalActionsSubscriptions = [];
   m_actionDescriptionChangedCallbackRegistrations = [];
-  static Log = new ie(`ActionDescription`).Debug;
+  static Log = new ae(`ActionDescription`).Debug;
   m_nodeForCurrentDescriptions;
   InitContext(e) {
-    let t = new ae();
+    let t = new ie();
     return (
       t.Push(
         e.FocusChangedCallbacks.Register(this.OnFocusNavigationChanged)
@@ -470,7 +470,7 @@ var H = class e {
       if (!this.m_boundActions.has(t)) return !1;
       this.m_boundActions.delete(t);
     } else {
-      if (se(this.m_boundActions.get(t), n)) return !1;
+      if (te(this.m_boundActions.get(t), n)) return !1;
       this.m_boundActions.set(t, n);
     }
     return !0;
@@ -490,53 +490,53 @@ var H = class e {
     );
   }
 };
-(e([S], H.prototype, `OnFocusNavigationChanged`, null),
-  e([S], H.prototype, `OnActiveNavTreeChanged`, null),
-  e([S], H.prototype, `SetActionDescriptionsFromMap`, null));
-var $e = `_6t-T9facds8-`,
-  U = `_9ltdnbqRBVs-`,
-  et = `KMiaP3xxJic-`,
-  tt = `-f6--J8iYK8-`,
-  nt = `tlFgqgPT5b8-`,
-  rt = `LR3Stix-A4Y-`,
-  it = `zxsM3zpa9JU-`,
-  at = `c3ZsONtZeOk-`,
-  ot = `uboNutS5k7k-`,
-  st = `_31u9Wgg0oro-`,
-  ct = `m9cG66kvPgg-`,
-  lt = `WGUFkBLPn8E-`,
-  ut = `WFe7p-8r4T4-`,
-  dt = `_5sgfQl5H11I-`,
-  ft = `ifxfOQVR6MY-`,
-  pt = `nPQe387f344-`,
-  mt = `Z8zypUObkYE-`,
-  ht = `_1GTC22hSCmY-`,
-  gt = `toY0I97PWjg-`,
-  W = `_1ArCdbgfzNY-`,
-  _t = `IBiSpw0atyM-`,
-  vt = `mDOopKELMBg-`,
-  G = `C8-HMz-fVag-`,
-  yt = `lDDPCoGwJAU-`,
-  bt = `ZAn1-qmM-Iw-`,
-  K = `dNQ1ofH4Cbs-`,
-  xt = `rmDLW23h1zQ-`,
-  St = `CT05Js5REus-`,
-  Ct = `CAlqxCfPEko-`,
-  wt = `hH8fUDD712k-`,
-  q = `c1DR5MyoXPo-`,
-  J = `KnF9XvfALGs-`,
-  Tt = `voFKnm6BHlI-`,
-  Et = `XRBn-My-JYo-`,
-  Dt = `MnMGQkxU8KU-`,
-  Ot = `BPpr5dZdGc4-`,
-  Y = `QeQ6K92V-ik-`,
-  X = `jlNNNIYiAYQ-`,
-  kt = `dXUGCsJI9Qw-`,
-  At = `N88ag1lENrA-`,
-  jt = `-m9XoDI2d0Q-`,
-  Mt = `IulAmRs78UQ-`,
-  Nt = `X86r8MkR480-`,
-  Pt = (function (e) {
+(p([T], $e.prototype, `OnFocusNavigationChanged`, null),
+  p([T], $e.prototype, `OnActiveNavTreeChanged`, null),
+  p([T], $e.prototype, `SetActionDescriptionsFromMap`, null));
+var et = `_6t-T9facds8-`,
+  H = `_9ltdnbqRBVs-`,
+  tt = `KMiaP3xxJic-`,
+  nt = `-f6--J8iYK8-`,
+  rt = `tlFgqgPT5b8-`,
+  it = `LR3Stix-A4Y-`,
+  at = `zxsM3zpa9JU-`,
+  ot = `c3ZsONtZeOk-`,
+  st = `uboNutS5k7k-`,
+  ct = `_31u9Wgg0oro-`,
+  lt = `m9cG66kvPgg-`,
+  ut = `WGUFkBLPn8E-`,
+  dt = `WFe7p-8r4T4-`,
+  ft = `_5sgfQl5H11I-`,
+  pt = `ifxfOQVR6MY-`,
+  mt = `nPQe387f344-`,
+  ht = `Z8zypUObkYE-`,
+  gt = `_1GTC22hSCmY-`,
+  _t = `toY0I97PWjg-`,
+  U = `_1ArCdbgfzNY-`,
+  vt = `IBiSpw0atyM-`,
+  yt = `mDOopKELMBg-`,
+  W = `C8-HMz-fVag-`,
+  bt = `lDDPCoGwJAU-`,
+  xt = `ZAn1-qmM-Iw-`,
+  G = `dNQ1ofH4Cbs-`,
+  St = `rmDLW23h1zQ-`,
+  Ct = `CT05Js5REus-`,
+  wt = `CAlqxCfPEko-`,
+  Tt = `hH8fUDD712k-`,
+  K = `c1DR5MyoXPo-`,
+  q = `KnF9XvfALGs-`,
+  Et = `voFKnm6BHlI-`,
+  Dt = `XRBn-My-JYo-`,
+  Ot = `MnMGQkxU8KU-`,
+  kt = `BPpr5dZdGc4-`,
+  J = `QeQ6K92V-ik-`,
+  Y = `jlNNNIYiAYQ-`,
+  At = `dXUGCsJI9Qw-`,
+  jt = `N88ag1lENrA-`,
+  Mt = `-m9XoDI2d0Q-`,
+  Nt = `IulAmRs78UQ-`,
+  Pt = `X86r8MkR480-`,
+  Ft = (function (e) {
     return (
       (e[(e.Knockout = 0)] = `Knockout`),
       (e[(e.Light = 1)] = `Light`),
@@ -544,215 +544,215 @@ var $e = `_6t-T9facds8-`,
       e
     );
   })({});
-function Ft(e) {
+function It(e) {
+  switch (e) {
+    case 0:
+      return Mt;
+    case 1:
+      return Nt;
+    case 2:
+      return Pt;
+    default:
+      return Nt;
+  }
+}
+function Lt(e) {
   switch (e) {
     case 0:
       return jt;
     case 1:
-      return Mt;
-    case 2:
-      return Nt;
-    default:
-      return Mt;
-  }
-}
-function It(e) {
-  switch (e) {
-    case 0:
       return At;
-    case 1:
-      return kt;
     case 2:
-      return Ot;
-    default:
       return kt;
+    default:
+      return At;
   }
 }
-function Lt(e) {
-  let t = m(
-      e.size == null ? Ft(1) : Ft(e.size),
-      e.type == null ? It(1) : It(e.type),
+function Rt(e) {
+  let t = h(
+      e.size == null ? It(1) : It(e.size),
+      e.type == null ? Lt(1) : Lt(e.type),
       e.additionalClassName,
     ),
     n = e.type == 0;
   switch (e.button) {
     case V.A:
-      return (0, R.jsx)(Rt, {
-        bIsKnockout: n,
-        className: t,
-        "aria-label": A(`#ControllerButton_A`),
-      });
-    case V.B:
       return (0, R.jsx)(zt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_B`),
+        "aria-label": j(`#ControllerButton_A`),
       });
-    case V.X:
+    case V.B:
       return (0, R.jsx)(Bt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_X`),
+        "aria-label": j(`#ControllerButton_B`),
       });
-    case V.Y:
+    case V.X:
       return (0, R.jsx)(Vt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_Y`),
+        "aria-label": j(`#ControllerButton_X`),
       });
-    case V.Left:
-      return (0, R.jsx)(Wt, {
-        bIsKnockout: n,
-        className: t,
-        "aria-label": A(`#ControllerButton_DpadLeft`),
-      });
-    case V.Right:
-      return (0, R.jsx)(Gt, {
-        bIsKnockout: n,
-        className: t,
-        "aria-label": A(`#ControllerButton_DpadRight`),
-      });
-    case V.Up:
+    case V.Y:
       return (0, R.jsx)(Ht, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_DpadUp`),
+        "aria-label": j(`#ControllerButton_Y`),
       });
-    case V.Down:
-      return (0, R.jsx)(Ut, {
+    case V.Left:
+      return (0, R.jsx)(Gt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_DpadDown`),
+        "aria-label": j(`#ControllerButton_DpadLeft`),
       });
-    case V.HomeMenu:
+    case V.Right:
       return (0, R.jsx)(Kt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_Steam`),
+        "aria-label": j(`#ControllerButton_DpadRight`),
       });
-    case V.QuickMenu:
+    case V.Up:
+      return (0, R.jsx)(Ut, {
+        bIsKnockout: n,
+        className: t,
+        "aria-label": j(`#ControllerButton_DpadUp`),
+      });
+    case V.Down:
+      return (0, R.jsx)(Wt, {
+        bIsKnockout: n,
+        className: t,
+        "aria-label": j(`#ControllerButton_DpadDown`),
+      });
+    case V.HomeMenu:
       return (0, R.jsx)(qt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_QAM`),
+        "aria-label": j(`#ControllerButton_Steam`),
       });
-    case V.Select:
+    case V.QuickMenu:
       return (0, R.jsx)(Jt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_View`),
+        "aria-label": j(`#ControllerButton_QAM`),
       });
-    case V.Start:
+    case V.Select:
       return (0, R.jsx)(Yt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_Menu`),
+        "aria-label": j(`#ControllerButton_View`),
       });
-    case V.LeftBumper:
+    case V.Start:
       return (0, R.jsx)(Xt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_L1`),
+        "aria-label": j(`#ControllerButton_Menu`),
       });
-    case V.RightBumper:
+    case V.LeftBumper:
       return (0, R.jsx)(Zt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_R1`),
+        "aria-label": j(`#ControllerButton_L1`),
       });
-    case V.LeftTrigger:
+    case V.RightBumper:
       return (0, R.jsx)(Qt, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_L2`),
+        "aria-label": j(`#ControllerButton_R1`),
       });
-    case V.RightTrigger:
+    case V.LeftTrigger:
       return (0, R.jsx)($t, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_R2`),
+        "aria-label": j(`#ControllerButton_L2`),
       });
-    case V.LeftStick:
-      return (0, R.jsx)(rn, {
-        bIsKnockout: n,
-        className: t,
-        "aria-label": A(`#ControllerButton_LS`),
-      });
-    case V.RightStick:
-      return (0, R.jsx)(nn, {
-        bIsKnockout: n,
-        className: t,
-        "aria-label": A(`#ControllerButton_RS`),
-      });
-    case V.LeftStickClick:
+    case V.RightTrigger:
       return (0, R.jsx)(en, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_L3`),
+        "aria-label": j(`#ControllerButton_R2`),
       });
-    case V.RightStickClick:
-      return (0, R.jsx)(tn, {
-        bIsKnockout: n,
-        className: t,
-        "aria-label": A(`#ControllerButton_R3`),
-      });
-    case V.LeftTrackpad:
-      return (0, R.jsx)(ln, {
-        bIsKnockout: n,
-        className: t,
-        "aria-label": A(`#ControllerButton_LPad`),
-      });
-    case V.RightTrackpad:
-      return (0, R.jsx)(dn, {
-        bIsKnockout: n,
-        className: t,
-        "aria-label": A(`#ControllerButton_RPad`),
-      });
-    case V.LeftTrackpadClick:
-      return (0, R.jsx)(un, {
-        bIsKnockout: n,
-        className: t,
-        "aria-label": A(`#ControllerButton_LPad_Click`),
-      });
-    case V.RightTrackpadClick:
-      return (0, R.jsx)(fn, {
-        bIsKnockout: n,
-        className: t,
-        "aria-label": A(`#ControllerButton_RPad_Click`),
-      });
-    case V.RearLeftUpper:
+    case V.LeftStick:
       return (0, R.jsx)(an, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_L4`),
+        "aria-label": j(`#ControllerButton_LS`),
       });
-    case V.RearRightUpper:
-      return (0, R.jsx)(sn, {
+    case V.RightStick:
+      return (0, R.jsx)(rn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_R4`),
+        "aria-label": j(`#ControllerButton_RS`),
       });
-    case V.RearLeftLower:
-      return (0, R.jsx)(on, {
+    case V.LeftStickClick:
+      return (0, R.jsx)(tn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_L5`),
+        "aria-label": j(`#ControllerButton_L3`),
       });
-    case V.RearRightLower:
-      return (0, R.jsx)(cn, {
+    case V.RightStickClick:
+      return (0, R.jsx)(nn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_R5`),
+        "aria-label": j(`#ControllerButton_R3`),
       });
-    default:
+    case V.LeftTrackpad:
+      return (0, R.jsx)(un, {
+        bIsKnockout: n,
+        className: t,
+        "aria-label": j(`#ControllerButton_LPad`),
+      });
+    case V.RightTrackpad:
+      return (0, R.jsx)(fn, {
+        bIsKnockout: n,
+        className: t,
+        "aria-label": j(`#ControllerButton_RPad`),
+      });
+    case V.LeftTrackpadClick:
+      return (0, R.jsx)(dn, {
+        bIsKnockout: n,
+        className: t,
+        "aria-label": j(`#ControllerButton_LPad_Click`),
+      });
+    case V.RightTrackpadClick:
       return (0, R.jsx)(pn, {
         bIsKnockout: n,
         className: t,
-        "aria-label": A(`#ControllerButton_Default`),
+        "aria-label": j(`#ControllerButton_RPad_Click`),
+      });
+    case V.RearLeftUpper:
+      return (0, R.jsx)(on, {
+        bIsKnockout: n,
+        className: t,
+        "aria-label": j(`#ControllerButton_L4`),
+      });
+    case V.RearRightUpper:
+      return (0, R.jsx)(cn, {
+        bIsKnockout: n,
+        className: t,
+        "aria-label": j(`#ControllerButton_R4`),
+      });
+    case V.RearLeftLower:
+      return (0, R.jsx)(sn, {
+        bIsKnockout: n,
+        className: t,
+        "aria-label": j(`#ControllerButton_L5`),
+      });
+    case V.RearRightLower:
+      return (0, R.jsx)(ln, {
+        bIsKnockout: n,
+        className: t,
+        "aria-label": j(`#ControllerButton_R5`),
+      });
+    default:
+      return (0, R.jsx)(mn, {
+        bIsKnockout: n,
+        className: t,
+        "aria-label": j(`#ControllerButton_Default`),
       });
   }
 }
-function Rt({ bIsKnockout: e, ...t }) {
+function zt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -773,21 +773,21 @@ function Rt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`circle`, {
-            className: Y,
+            className: J,
             cx: `18`,
             cy: `18`,
             r: `18`,
             fill: `currentColor`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M24.1317 24H21.2697L20.4057 21.552H15.4737L14.6457 24H11.8917L16.6077 11.4H19.2717L24.1317 24ZM17.9217 14.406L16.1937 19.446H19.6857L17.9217 14.406Z`,
           }),
         ],
       });
 }
-function zt({ bIsKnockout: e, ...t }) {
+function Bt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -808,21 +808,21 @@ function zt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`circle`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             cx: `18`,
             cy: `18`,
             r: `18`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M20.761 17.286C22.369 17.778 23.173 18.81 23.173 20.382C23.173 21.522 22.759 22.41 21.931 23.046C21.103 23.682 19.993 24 18.601 24H13.435V11.4H18.097C19.573 11.4 20.665 11.676 21.373 12.228C22.081 12.78 22.435 13.56 22.435 14.568C22.435 15.132 22.303 15.648 22.039 16.116C21.775 16.584 21.349 16.974 20.761 17.286ZM16.117 13.596V16.674H17.935C18.535 16.674 18.997 16.536 19.321 16.26C19.645 15.972 19.807 15.57 19.807 15.054C19.807 14.082 19.165 13.596 17.881 13.596H16.117ZM18.331 21.822C19.003 21.822 19.507 21.672 19.843 21.372C20.191 21.072 20.365 20.676 20.365 20.184C20.365 19.656 20.197 19.26 19.861 18.996C19.525 18.72 19.039 18.582 18.403 18.582H16.117V21.822H18.331Z`,
           }),
         ],
       });
 }
-function Bt({ bIsKnockout: e, ...t }) {
+function Vt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -843,21 +843,21 @@ function Bt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`circle`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             cx: `18`,
             cy: `18`,
             r: `18`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M20.3621 11.4H23.7101L19.2821 17.394L24.1061 24H20.8661L17.9141 19.41L15.0881 24H11.9201L16.4021 17.484L12.1001 11.4H15.3581L17.8601 15.45L20.3621 11.4Z`,
           }),
         ],
       });
 }
-function Vt({ bIsKnockout: e, ...t }) {
+function Ht({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -878,21 +878,21 @@ function Vt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`circle`, {
-            className: Y,
+            className: J,
             cx: `18`,
             cy: `18`,
             r: `18`,
             fill: `currentColor`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M19.318 24H16.69V18.978L12.298 11.4H15.358L18.094 16.44L20.848 11.4H23.71L19.318 18.996V24Z`,
           }),
         ],
       });
 }
-function Ht({ bIsKnockout: e, ...t }) {
+function Ut({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -913,21 +913,21 @@ function Ht({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`circle`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             cx: `18`,
             cy: `18`,
             r: `18`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M19.5555 14.7554L25 20.1998L27.3333 17.8665L18 8.66661L8.66663 17.8665L11 20.1998L16.4444 14.7554V27.1998H19.5555V14.7554Z`,
           }),
         ],
       });
 }
-function Ut({ bIsKnockout: e, ...t }) {
+function Wt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -948,21 +948,21 @@ function Ut({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`circle`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             cx: `18`,
             cy: `18`,
             r: `18`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M16.4444 21.1111L10.9999 15.6666L8.66659 18L17.9999 27.1998L27.3333 18L24.9999 15.6666L19.5555 21.1111L19.5555 8.66663L16.4444 8.66663L16.4444 21.1111Z`,
           }),
         ],
       });
 }
-function Wt({ bIsKnockout: e, ...t }) {
+function Gt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -983,21 +983,21 @@ function Wt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`circle`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             cx: `18`,
             cy: `18`,
             r: `18`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M14.8219 16.3777L20.2664 10.9333L17.933 8.59994L8.73314 17.9332L17.933 27.2666L20.2664 24.9333L14.8219 19.4888L27.2664 19.4888L27.2664 16.3777L14.8219 16.3777Z`,
           }),
         ],
       });
 }
-function Gt({ bIsKnockout: e, ...t }) {
+function Kt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1018,21 +1018,21 @@ function Gt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`circle`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             cx: `18`,
             cy: `18`,
             r: `18`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M21.1776 19.4887L15.7332 24.9332L18.0665 27.2665L27.2664 17.9332L18.0665 8.59985L15.7332 10.9332L21.1776 16.3776L8.73315 16.3776L8.73315 19.4887L21.1776 19.4887Z`,
           }),
         ],
       });
 }
-function Kt({ bIsKnockout: e, ...t }) {
+function qt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1053,39 +1053,39 @@ function Kt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M0 18C0 8.05888 8.05888 0 18 0H82C91.9411 0 100 8.05888 100 18C100 27.9411 91.9411 36 82 36H18C8.05888 36 0 27.9411 0 18Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M21.8011 11.5C22.6531 11.5 23.4391 11.62 24.1591 11.86C24.8791 12.1 25.4851 12.394 25.9771 12.742L24.8611 14.722C24.4171 14.41 23.9191 14.158 23.3671 13.966C22.8271 13.774 22.3111 13.678 21.8191 13.678C21.2191 13.678 20.7511 13.804 20.4151 14.056C20.0791 14.296 19.9111 14.632 19.9111 15.064C19.9111 15.496 20.1091 15.838 20.5051 16.09C20.9011 16.33 21.5071 16.594 22.3231 16.882C23.1631 17.182 23.8351 17.458 24.3391 17.71C24.8431 17.962 25.2811 18.334 25.6531 18.826C26.0371 19.306 26.2291 19.924 26.2291 20.68C26.2291 21.484 26.0191 22.18 25.5991 22.768C25.1911 23.356 24.6151 23.812 23.8711 24.136C23.1271 24.448 22.2751 24.604 21.3151 24.604C20.5351 24.604 19.7371 24.502 18.9211 24.298C18.1171 24.082 17.4091 23.794 16.7971 23.434L17.6251 21.238C18.2011 21.55 18.8071 21.802 19.4431 21.994C20.0911 22.174 20.7271 22.264 21.3511 22.264C22.0351 22.264 22.5451 22.132 22.8811 21.868C23.2291 21.604 23.4031 21.256 23.4031 20.824C23.4031 20.392 23.2171 20.056 22.8451 19.816C22.4731 19.576 21.9031 19.33 21.1351 19.078C20.2711 18.802 19.5751 18.538 19.0471 18.286C18.5191 18.022 18.0631 17.644 17.6791 17.152C17.3071 16.648 17.1211 15.994 17.1211 15.19C17.1211 14.446 17.3131 13.798 17.6971 13.246C18.0931 12.682 18.6451 12.25 19.3531 11.95C20.0611 11.65 20.8771 11.5 21.8011 11.5Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M35.2486 24.388H32.6026V14.056H28.7866V11.788H39.0646V14.056H35.2486V24.388Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M42.3148 11.788H50.8108V14.038H44.9608V16.882H50.0008V19.15H44.9608V22.102H50.8108V24.388H42.3148V11.788Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M65.8582 24.388H62.9962L62.1322 21.94H57.2002L56.3722 24.388H53.6182L58.3342 11.788H60.9982L65.8582 24.388ZM59.6482 14.794L57.9202 19.834H61.4122L59.6482 14.794Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M75.8489 20.734L79.7729 11.788H82.4549V24.388H79.9169V16.378L76.5329 24.028H74.9309L71.4749 16.468V24.388H69.0629V11.788H71.6009L75.8489 20.734Z`,
           }),
         ],
       });
 }
-function qt({ bIsKnockout: e, ...t }) {
+function Jt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1106,26 +1106,26 @@ function qt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M0 18C0 8.05888 8.05888 0 18 0H61C70.9411 0 79 8.05888 79 18C79 27.9411 70.9411 36 61 36H18C8.05888 36 0 27.9411 0 18Z`,
           }),
           (0, R.jsx)(`circle`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             cx: `21.5`,
             cy: `18`,
             r: `4.5`,
           }),
           (0, R.jsx)(`circle`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             cx: `39.5`,
             cy: `18`,
             r: `4.5`,
           }),
           (0, R.jsx)(`circle`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             cx: `57.5`,
             cy: `18`,
@@ -1134,7 +1134,7 @@ function qt({ bIsKnockout: e, ...t }) {
         ],
       });
 }
-function Jt({ bIsKnockout: e, ...t }) {
+function Yt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1155,7 +1155,7 @@ function Jt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`rect`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             y: `6`,
             width: `48`,
@@ -1163,7 +1163,7 @@ function Jt({ bIsKnockout: e, ...t }) {
             rx: `12`,
           }),
           (0, R.jsx)(`rect`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             x: `17`,
             y: `11`,
@@ -1173,7 +1173,7 @@ function Jt({ bIsKnockout: e, ...t }) {
         ],
       });
 }
-function Yt({ bIsKnockout: e, ...t }) {
+function Xt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1194,7 +1194,7 @@ function Yt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`rect`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             y: `6`,
             width: `48`,
@@ -1202,7 +1202,7 @@ function Yt({ bIsKnockout: e, ...t }) {
             rx: `12`,
           }),
           (0, R.jsx)(`rect`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             x: `17`,
             y: `11`,
@@ -1210,7 +1210,7 @@ function Yt({ bIsKnockout: e, ...t }) {
             height: `2.8`,
           }),
           (0, R.jsx)(`rect`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             x: `17`,
             y: `22.2`,
@@ -1218,7 +1218,7 @@ function Yt({ bIsKnockout: e, ...t }) {
             height: `2.8`,
           }),
           (0, R.jsx)(`rect`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             x: `17`,
             y: `16.6`,
@@ -1228,7 +1228,7 @@ function Yt({ bIsKnockout: e, ...t }) {
         ],
       });
 }
-function Xt({ bIsKnockout: e, ...t }) {
+function Zt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1249,24 +1249,24 @@ function Xt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M0 10C0 4.47715 3.35786 0 7.5 0H34.5C35.3284 0 36 0.895431 36 2V30C36 31.1046 35.3284 32 34.5 32H1.5C0.671574 32 0 31.1046 0 30V10Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M17.8218 23H9.36182V10.4H12.0078V20.624H17.8218V23Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M25.7635 10.4V20.714H28.1576V23H20.1116V20.714H23.0816V13.316L20.4356 14.432L19.5896 12.452L23.7296 10.4H25.7635Z`,
           }),
         ],
       });
 }
-function Zt({ bIsKnockout: e, ...t }) {
+function Qt({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1287,24 +1287,24 @@ function Zt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M36 10C36 4.47715 32.6421 0 28.5 0H1.5C0.671574 0 0 0.895431 0 2V30C0 31.1046 0.671574 32 1.5 32H34.5C35.3284 32 36 31.1046 36 30V10Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M18.7525 23H15.8185L13.2805 18.752H12.9745H11.1025V23H8.45654V10.4H13.1725C14.9005 10.4 16.1725 10.748 16.9885 11.444C17.8045 12.128 18.2125 13.088 18.2125 14.324C18.2125 15.296 17.9965 16.106 17.5645 16.754C17.1445 17.402 16.5505 17.894 15.7825 18.23L18.7525 23ZM11.1025 12.65V16.484H13.1725C13.8685 16.484 14.4085 16.31 14.7925 15.962C15.1885 15.602 15.3865 15.11 15.3865 14.486C15.3865 13.874 15.1945 13.418 14.8105 13.118C14.4385 12.806 13.8385 12.65 13.0105 12.65H11.1025Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M26.6688 10.4V20.714H29.0628V23H21.0168V20.714H23.9868V13.316L21.3408 14.432L20.4948 12.452L24.6348 10.4H26.6688Z`,
           }),
         ],
       });
 }
-function Qt({ bIsKnockout: e, ...t }) {
+function $t({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1325,24 +1325,24 @@ function Qt({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M0 22C0 27.5228 3.35786 32 7.5 32H34.5C35.3284 32 36 31.1046 36 30V2C36 0.895432 35.3284 0 34.5 0H1.5C0.671574 0 0 0.895432 0 2V22Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M17.7846 23H9.32458V10.4H11.9706V20.624H17.7846V23Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M23.0083 20.714H29.0743V23H19.6603V20.804L23.2963 17.78L23.6023 17.51C24.1543 17.042 24.5743 16.664 24.8623 16.376C25.1623 16.088 25.4023 15.782 25.5823 15.458C25.7623 15.134 25.8523 14.78 25.8523 14.396C25.8523 13.772 25.6243 13.304 25.1683 12.992C24.7243 12.668 24.1483 12.506 23.4403 12.506C22.9123 12.506 22.3963 12.59 21.8923 12.758C21.4003 12.926 20.9683 13.136 20.5963 13.388L19.6963 11.444C20.2483 11.06 20.8783 10.754 21.5863 10.526C22.3063 10.298 23.0743 10.184 23.8903 10.184C25.3423 10.184 26.5063 10.502 27.3823 11.138C28.2583 11.774 28.6963 12.68 28.6963 13.856C28.6963 14.72 28.4443 15.506 27.9403 16.214C27.4363 16.91 26.6623 17.69 25.6183 18.554L23.0083 20.714Z`,
           }),
         ],
       });
 }
-function $t({ bIsKnockout: e, ...t }) {
+function en({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1363,24 +1363,24 @@ function $t({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M36 22C36 27.5228 32.6421 32 28.5 32H1.5C0.671574 32 0 31.1046 0 30V2C0 0.895432 0.671574 0 1.5 0H34.5C35.3284 0 36 0.895432 36 2V22Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M17.7153 23H14.7813L12.2433 18.752H11.9373H10.0653V23H7.41931V10.4H12.1353C13.8633 10.4 15.1353 10.748 15.9513 11.444C16.7673 12.128 17.1753 13.088 17.1753 14.324C17.1753 15.296 16.9593 16.106 16.5273 16.754C16.1073 17.402 15.5133 17.894 14.7453 18.23L17.7153 23ZM10.0653 12.65V16.484H12.1353C12.8313 16.484 13.3713 16.31 13.7553 15.962C14.1513 15.602 14.3493 15.11 14.3493 14.486C14.3493 13.874 14.1573 13.418 13.7733 13.118C13.4013 12.806 12.8013 12.65 11.9733 12.65H10.0653Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M22.9136 20.714H28.9796V23H19.5656V20.804L23.2016 17.78L23.5076 17.51C24.0596 17.042 24.4796 16.664 24.7676 16.376C25.0676 16.088 25.3076 15.782 25.4876 15.458C25.6676 15.134 25.7576 14.78 25.7576 14.396C25.7576 13.772 25.5296 13.304 25.0736 12.992C24.6296 12.668 24.0536 12.506 23.3456 12.506C22.8176 12.506 22.3016 12.59 21.7976 12.758C21.3056 12.926 20.8736 13.136 20.5016 13.388L19.6016 11.444C20.1536 11.06 20.7836 10.754 21.4916 10.526C22.2116 10.298 22.9796 10.184 23.7956 10.184C25.2476 10.184 26.4116 10.502 27.2876 11.138C28.1636 11.774 28.6016 12.68 28.6016 13.856C28.6016 14.72 28.3496 15.506 27.8456 16.214C27.3416 16.91 26.5676 17.69 25.5236 18.554L22.9136 20.714Z`,
           }),
         ],
       });
 }
-function en({ bIsKnockout: e, ...t }) {
+function tn({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsxs)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1411,7 +1411,7 @@ function en({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`ellipse`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             cx: `18`,
             cy: `19.5`,
@@ -1419,29 +1419,29 @@ function en({ bIsKnockout: e, ...t }) {
             ry: `11.25`,
           }),
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M11 32V33.601C11 34.926 12.0446 36 13.3333 36H22.6667C23.9554 36 25 34.926 25 33.601V32C22.7984 32.523 20.4394 32.8029 18 32.8029C15.5606 32.8029 13.2016 32.523 11 32Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M23.1111 0H12L17.5556 5.625L23.1111 0Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M17.009 24.956H9.48901V13.756H11.841V22.844H17.009V24.956Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M22.4759 13.5C23.7879 13.5 24.7852 13.7613 25.4679 14.284C26.1506 14.8067 26.4919 15.484 26.4919 16.316C26.4919 16.8813 26.3212 17.388 25.9799 17.836C25.6492 18.2733 25.1799 18.6093 24.5719 18.844V18.892C25.2866 19.0413 25.8626 19.3507 26.2999 19.82C26.7479 20.2787 26.9719 20.892 26.9719 21.66C26.9719 22.364 26.7692 22.988 26.3639 23.532C25.9586 24.0653 25.4039 24.4813 24.6999 24.78C23.9959 25.068 23.2172 25.212 22.3639 25.212C21.5532 25.212 20.7799 25.1 20.0439 24.876C19.3186 24.652 18.7052 24.3373 18.2039 23.932L19.2119 22.204C20.0439 22.876 21.0306 23.212 22.1719 23.212C22.8972 23.212 23.4626 23.0627 23.8679 22.764C24.2839 22.4653 24.4919 22.0547 24.4919 21.532C24.4919 20.508 23.7079 19.996 22.1399 19.996H20.6999V18.22H21.9959C22.6146 18.22 23.1106 18.1027 23.4839 17.868C23.8679 17.6227 24.0599 17.2813 24.0599 16.844C24.0599 16.4387 23.8786 16.1133 23.5159 15.868C23.1639 15.6227 22.6732 15.5 22.0439 15.5C21.5639 15.5 21.0999 15.58 20.6519 15.74C20.2146 15.8893 19.8199 16.0973 19.4679 16.364L18.4759 14.86C19.0092 14.4227 19.6119 14.0867 20.2839 13.852C20.9666 13.6173 21.6972 13.5 22.4759 13.5Z`,
           }),
         ],
       });
 }
-function tn({ bIsKnockout: e, ...t }) {
+function nn({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsxs)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1472,7 +1472,7 @@ function tn({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`ellipse`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             cx: `18`,
             cy: `19.5`,
@@ -1480,29 +1480,29 @@ function tn({ bIsKnockout: e, ...t }) {
             ry: `11.25`,
           }),
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M11 32V33.601C11 34.926 12.0446 36 13.3333 36H22.6667C23.9554 36 25 34.926 25 33.601V32C22.7984 32.523 20.4394 32.8029 18 32.8029C15.5606 32.8029 13.2016 32.523 11 32Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M23.1111 0H12L17.5556 5.625L23.1111 0Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M18.152 24.956H15.544L13.288 21.18H13.016H11.352V24.956H9V13.756H13.192C14.728 13.756 15.8587 14.0653 16.584 14.684C17.3093 15.292 17.672 16.1453 17.672 17.244C17.672 18.108 17.48 18.828 17.096 19.404C16.7227 19.98 16.1947 20.4173 15.512 20.716L18.152 24.956ZM11.352 15.756V19.164H13.192C13.8107 19.164 14.2907 19.0093 14.632 18.7C14.984 18.38 15.16 17.9427 15.16 17.388C15.16 16.844 14.9893 16.4387 14.648 16.172C14.3173 15.8947 13.784 15.756 13.048 15.756H11.352Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M23.5962 13.5C24.9082 13.5 25.9056 13.7613 26.5882 14.284C27.2709 14.8067 27.6122 15.484 27.6122 16.316C27.6122 16.8813 27.4416 17.388 27.1003 17.836C26.7696 18.2733 26.3002 18.6093 25.6922 18.844V18.892C26.4069 19.0413 26.9829 19.3507 27.4202 19.82C27.8682 20.2787 28.0923 20.892 28.0923 21.66C28.0923 22.364 27.8896 22.988 27.4842 23.532C27.0789 24.0653 26.5243 24.4813 25.8202 24.78C25.1162 25.068 24.3376 25.212 23.4843 25.212C22.6736 25.212 21.9003 25.1 21.1643 24.876C20.4389 24.652 19.8256 24.3373 19.3243 23.932L20.3323 22.204C21.1643 22.876 22.1509 23.212 23.2923 23.212C24.0176 23.212 24.5829 23.0627 24.9882 22.764C25.4042 22.4653 25.6122 22.0547 25.6122 21.532C25.6122 20.508 24.8283 19.996 23.2603 19.996H21.8203V18.22H23.1163C23.7349 18.22 24.2309 18.1027 24.6043 17.868C24.9883 17.6227 25.1803 17.2813 25.1803 16.844C25.1803 16.4387 24.9989 16.1133 24.6363 15.868C24.2843 15.6227 23.7936 15.5 23.1643 15.5C22.6842 15.5 22.2203 15.58 21.7723 15.74C21.3349 15.8893 20.9403 16.0973 20.5883 16.364L19.5963 14.86C20.1296 14.4227 20.7323 14.0867 21.4043 13.852C22.0869 13.6173 22.8176 13.5 23.5962 13.5Z`,
           }),
         ],
       });
 }
-function nn({ bIsKnockout: e, ...t }) {
+function rn({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsxs)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1529,7 +1529,7 @@ function nn({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`ellipse`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             cx: `18`,
             cy: `13.5`,
@@ -1537,19 +1537,19 @@ function nn({ bIsKnockout: e, ...t }) {
             ry: `11.25`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M23.6775 18.9875H20.8833L18.4661 14.9418H18.1747H16.3918V18.9875H13.8718V6.98755H18.3633C20.009 6.98755 21.2204 7.31898 21.9975 7.98184C22.7747 8.63326 23.1633 9.54755 23.1633 10.7247C23.1633 11.6504 22.9575 12.4218 22.5461 13.039C22.1461 13.6561 21.5804 14.1247 20.849 14.4447L23.6775 18.9875ZM16.3918 9.13041V12.7818H18.3633C19.0261 12.7818 19.5404 12.6161 19.9061 12.2847C20.2833 11.9418 20.4718 11.4733 20.4718 10.879C20.4718 10.2961 20.289 9.86183 19.9233 9.57612C19.569 9.27898 18.9975 9.13041 18.209 9.13041H16.3918Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M11 26V31.601C11 32.926 12.0446 34 13.3333 34H22.6667C23.9554 34 25 32.926 25 31.601V26C22.7984 26.523 20.4394 26.8029 18 26.8029C15.5606 26.8029 13.2016 26.523 11 26Z`,
           }),
         ],
       });
 }
-function rn({ bIsKnockout: e, ...t }) {
+function an({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsxs)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1576,7 +1576,7 @@ function rn({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`ellipse`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             cx: `18`,
             cy: `13.5`,
@@ -1584,19 +1584,19 @@ function rn({ bIsKnockout: e, ...t }) {
             ry: `11.25`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M23 19H14V7H16.8149V16.7371H23V19Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M11 26V31.601C11 32.926 12.0446 34 13.3333 34H22.6667C23.9554 34 25 32.926 25 31.601V26C22.7984 26.523 20.4394 26.8029 18 26.8029C15.5606 26.8029 13.2016 26.523 11 26Z`,
           }),
         ],
       });
 }
-function an({ bIsKnockout: e, ...t }) {
+function on({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1617,24 +1617,24 @@ function an({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M0 2C0 0.895431 0.895431 0 2 0H34C35.1046 0 36 0.895431 36 2V34C36 35.1046 35.1046 36 34 36H2C0.895431 36 0 35.1046 0 34V2Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M17.0834 24.75H8.62341V12.15H11.2694V22.374H17.0834V24.75Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M27.3111 12.15V19.854H29.1291V21.888H27.3111V24.75H24.6291V21.888H18.6891V20.16L24.8631 12.15H27.3111ZM24.7371 15.3L21.2631 19.854H24.7371V15.3Z`,
           }),
         ],
       });
 }
-function on({ bIsKnockout: e, ...t }) {
+function sn({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1655,24 +1655,24 @@ function on({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M0 2C0 0.895431 0.895431 0 2 0H34C35.1046 0 36 0.895431 36 2V34C36 35.1046 35.1046 36 34 36H2C0.895431 36 0 35.1046 0 34V2Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M16.6967 24.75H8.23669V12.15H10.8827V22.374H16.6967V24.75Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M27.3744 12.15V14.4H21.8664V17.352C22.2144 17.136 22.6044 16.98 23.0364 16.884C23.4804 16.776 23.9244 16.722 24.3684 16.722C25.4964 16.722 26.3964 17.046 27.0684 17.694C27.7524 18.33 28.0944 19.26 28.0944 20.484C28.0944 21.396 27.8784 22.194 27.4464 22.878C27.0264 23.562 26.4084 24.096 25.5924 24.48C24.7884 24.852 23.8344 25.038 22.7304 25.038C21.9144 25.038 21.1524 24.93 20.4444 24.714C19.7364 24.498 19.1484 24.192 18.6804 23.796L19.6164 21.78C20.5404 22.404 21.5664 22.716 22.6944 22.716C23.5464 22.716 24.2064 22.53 24.6744 22.158C25.1424 21.786 25.3764 21.252 25.3764 20.556C25.3764 19.944 25.1964 19.476 24.8364 19.152C24.4884 18.828 24.0084 18.666 23.3964 18.666C22.9404 18.666 22.5204 18.744 22.1364 18.9C21.7524 19.044 21.3744 19.266 21.0024 19.566L19.3284 18.648V12.15H27.3744Z`,
           }),
         ],
       });
 }
-function sn({ bIsKnockout: e, ...t }) {
+function cn({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1693,24 +1693,24 @@ function sn({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M0 2C0 0.895431 0.895431 0 2 0H34C35.1046 0 36 0.895431 36 2V34C36 35.1046 35.1046 36 34 36H2C0.895431 36 0 35.1046 0 34V2Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M17.4516 24.75H14.5176L11.9796 20.502H11.6736H9.80164V24.75H7.15564V12.15H11.8716C13.5996 12.15 14.8716 12.498 15.6876 13.194C16.5036 13.878 16.9116 14.838 16.9116 16.074C16.9116 17.046 16.6956 17.856 16.2636 18.504C15.8436 19.152 15.2496 19.644 14.4816 19.98L17.4516 24.75ZM9.80164 14.4V18.234H11.8716C12.5676 18.234 13.1076 18.06 13.4916 17.712C13.8876 17.352 14.0856 16.86 14.0856 16.236C14.0856 15.624 13.8936 15.168 13.5096 14.868C13.1376 14.556 12.5376 14.4 11.7096 14.4H9.80164Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M27.6539 12.15V19.854H29.4719V21.888H27.6539V24.75H24.9719V21.888H19.0319V20.16L25.2059 12.15H27.6539ZM25.0799 15.3L21.6059 19.854H25.0799V15.3Z`,
           }),
         ],
       });
 }
-function cn({ bIsKnockout: e, ...t }) {
+function ln({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1731,24 +1731,24 @@ function cn({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M0 2C0 0.895431 0.895431 0 2 0H34C35.1046 0 36 0.895431 36 2V34C36 35.1046 35.1046 36 34 36H2C0.895431 36 0 35.1046 0 34V2Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M17.6274 24.75H14.6934L12.1554 20.502H11.8494H9.97742V24.75H7.33142V12.15H12.0474C13.7754 12.15 15.0474 12.498 15.8634 13.194C16.6794 13.878 17.0874 14.838 17.0874 16.074C17.0874 17.046 16.8714 17.856 16.4394 18.504C16.0194 19.152 15.4254 19.644 14.6574 19.98L17.6274 24.75ZM9.97742 14.4V18.234H12.0474C12.7434 18.234 13.2834 18.06 13.6674 17.712C14.0634 17.352 14.2614 16.86 14.2614 16.236C14.2614 15.624 14.0694 15.168 13.6854 14.868C13.3134 14.556 12.7134 14.4 11.8854 14.4H9.97742Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M28.2797 12.15V14.4H22.7717V17.352C23.1197 17.136 23.5097 16.98 23.9417 16.884C24.3857 16.776 24.8297 16.722 25.2737 16.722C26.4017 16.722 27.3017 17.046 27.9737 17.694C28.6577 18.33 28.9997 19.26 28.9997 20.484C28.9997 21.396 28.7837 22.194 28.3517 22.878C27.9317 23.562 27.3137 24.096 26.4977 24.48C25.6937 24.852 24.7397 25.038 23.6357 25.038C22.8197 25.038 22.0577 24.93 21.3497 24.714C20.6417 24.498 20.0537 24.192 19.5857 23.796L20.5217 21.78C21.4457 22.404 22.4717 22.716 23.5997 22.716C24.4517 22.716 25.1117 22.53 25.5797 22.158C26.0477 21.786 26.2817 21.252 26.2817 20.556C26.2817 19.944 26.1017 19.476 25.7417 19.152C25.3937 18.828 24.9137 18.666 24.3017 18.666C23.8457 18.666 23.4257 18.744 23.0417 18.9C22.6577 19.044 22.2797 19.266 21.9077 19.566L20.2337 18.648V12.15H28.2797Z`,
           }),
         ],
       });
 }
-function ln({ bIsKnockout: e, ...t }) {
+function un({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1769,19 +1769,19 @@ function ln({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M1.74515 6.72713C1.88863 4.6288 3.6326 3 5.73584 3H30.2642C32.3674 3 34.1114 4.6288 34.2548 6.72713L35.7078 27.9771C35.8659 30.2883 34.0337 32.25 31.7172 32.25H4.28284C1.96629 32.25 0.134134 30.2883 0.292162 27.9771L1.74515 6.72713Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M23.2836 24.0625H14.8236V11.4625H17.4696V21.6865H23.2836V24.0625Z`,
           }),
         ],
       });
 }
-function un({ bIsKnockout: e, ...t }) {
+function dn({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsxs)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1808,24 +1808,24 @@ function un({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M2.63721 11.7308C2.77887 9.6309 4.5235 8 6.62814 8H29.3719C31.4765 8 33.2211 9.63091 33.3628 11.7308L34.712 31.7308C34.8678 34.0406 33.0362 36 30.7211 36H5.27893C2.96382 36 1.13218 34.0406 1.288 31.7308L2.63721 11.7308Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M23.2836 28.0625H14.8236V15.4625H17.4696V25.6865H23.2836V28.0625Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M24 0H12L18 6L24 0Z`,
           }),
         ],
       });
 }
-function dn({ bIsKnockout: e, ...t }) {
+function fn({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1846,19 +1846,19 @@ function dn({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M1.74515 6.72713C1.88863 4.6288 3.6326 3 5.73584 3H30.2642C32.3674 3 34.1114 4.6288 34.2548 6.72713L35.7078 27.9771C35.8659 30.2883 34.0337 32.25 31.7172 32.25H4.28284C1.96629 32.25 0.134134 30.2883 0.292162 27.9771L1.74515 6.72713Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M23.6518 24.0625H20.7178L18.1798 19.8145H17.8738H16.0018V24.0625H13.3558V11.4625H18.0718C19.7998 11.4625 21.0718 11.8105 21.8878 12.5065C22.7038 13.1905 23.1118 14.1505 23.1118 15.3865C23.1118 16.3585 22.8958 17.1685 22.4638 17.8165C22.0438 18.4645 21.4498 18.9565 20.6818 19.2925L23.6518 24.0625ZM16.0018 13.7125V17.5465H18.0718C18.7678 17.5465 19.3078 17.3725 19.6918 17.0245C20.0878 16.6645 20.2858 16.1725 20.2858 15.5485C20.2858 14.9365 20.0938 14.4805 19.7098 14.1805C19.3378 13.8685 18.7378 13.7125 17.9098 13.7125H16.0018Z`,
           }),
         ],
       });
 }
-function fn({ bIsKnockout: e, ...t }) {
+function pn({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsxs)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1885,24 +1885,24 @@ function fn({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M2.63721 11.7308C2.77887 9.6309 4.5235 8 6.62814 8H29.3719C31.4765 8 33.2211 9.63091 33.3628 11.7308L34.712 31.7308C34.8678 34.0406 33.0362 36 30.7211 36H5.27893C2.96382 36 1.13218 34.0406 1.288 31.7308L2.63721 11.7308Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M23.6518 28.0625H20.7178L18.1798 23.8145H17.8738H16.0018V28.0625H13.3558V15.4625H18.0718C19.7998 15.4625 21.0718 15.8105 21.8878 16.5065C22.7038 17.1905 23.1118 18.1505 23.1118 19.3865C23.1118 20.3585 22.8958 21.1685 22.4638 21.8165C22.0438 22.4645 21.4498 22.9565 20.6818 23.2925L23.6518 28.0625ZM16.0018 17.7125V21.5465H18.0718C18.7678 21.5465 19.3078 21.3725 19.6918 21.0245C20.0878 20.6645 20.2858 20.1725 20.2858 19.5485C20.2858 18.9365 20.0938 18.4805 19.7098 18.1805C19.3378 17.8685 18.7378 17.7125 17.9098 17.7125H16.0018Z`,
           }),
           (0, R.jsx)(`path`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             d: `M24 0H12L18 6L24 0Z`,
           }),
         ],
       });
 }
-function pn({ bIsKnockout: e, ...t }) {
+function mn({ bIsKnockout: e, ...t }) {
   return e
     ? (0, R.jsx)(`svg`, {
         xmlns: `http://www.w3.org/2000/svg`,
@@ -1923,31 +1923,31 @@ function pn({ bIsKnockout: e, ...t }) {
         ...t,
         children: [
           (0, R.jsx)(`circle`, {
-            className: Y,
+            className: J,
             fill: `currentColor`,
             cx: `18`,
             cy: `18`,
             r: `18`,
           }),
           (0, R.jsx)(`path`, {
-            className: X,
+            className: Y,
             fill: `currentColor`,
             d: `M17.8599 10.3361C18.8719 10.3361 19.7519 10.4974 20.4999 10.8201C21.2626 11.1427 21.8493 11.5974 22.2599 12.1841C22.6706 12.7561 22.8759 13.4234 22.8759 14.1861C22.8759 14.6994 22.7879 15.1541 22.6119 15.5501C22.4359 15.9461 22.2159 16.2834 21.9519 16.5621C21.7026 16.8407 21.3579 17.1781 20.9179 17.5741C20.4633 17.9701 20.0966 18.3221 19.8179 18.6301C19.5539 18.9234 19.3266 19.2901 19.1359 19.7301C18.9453 20.1554 18.8499 20.6541 18.8499 21.2261H16.1659C16.1659 20.4047 16.2686 19.7081 16.4739 19.1361C16.6793 18.5641 16.9286 18.1094 17.2219 17.7721C17.5153 17.4347 17.8893 17.0681 18.3439 16.6721C18.7693 16.3201 19.0846 16.0047 19.2899 15.7261C19.4953 15.4474 19.5979 15.1027 19.5979 14.6921C19.5979 14.1201 19.3853 13.6801 18.9599 13.3721C18.5493 13.0494 17.9699 12.8881 17.2219 12.8881C16.1073 12.8881 15.0586 13.2547 14.0759 13.9881L13.0859 11.7661C13.7166 11.3407 14.4499 10.9961 15.2859 10.7321C16.1219 10.4681 16.9799 10.3361 17.8599 10.3361ZM17.5519 22.7881C18.0653 22.7881 18.4759 22.9494 18.7839 23.2721C19.0919 23.5801 19.2459 23.9907 19.2459 24.5041C19.2459 25.0467 19.0919 25.4794 18.7839 25.8021C18.4759 26.1101 18.0653 26.2641 17.5519 26.2641C17.0386 26.2641 16.6279 26.1101 16.3199 25.8021C16.0119 25.4794 15.8579 25.0467 15.8579 24.5041C15.8579 23.9907 16.0119 23.5801 16.3199 23.2721C16.6279 22.9494 17.0386 22.7881 17.5519 22.7881Z`,
           }),
         ],
       });
 }
-var mn = `_5YxPcG58GcM-`,
-  hn = `AYShSUpazpQ-`,
-  gn = `HjTriTNInOs-`,
-  _n = `jWG83h6aX0o-`,
-  vn = `hIkabJ6m7Iw-`,
-  yn = `ruViLASsnaU-`,
-  bn = `_2u1btMDPW24-`,
-  xn = `Ps-gpwoy9Is-`,
-  Sn = `L44OviB8cOM-`,
-  Cn = `K1CYINTJapk-`;
-function wn(e) {
+var hn = `_5YxPcG58GcM-`,
+  gn = `AYShSUpazpQ-`,
+  _n = `HjTriTNInOs-`,
+  vn = `jWG83h6aX0o-`,
+  yn = `hIkabJ6m7Iw-`,
+  bn = `ruViLASsnaU-`,
+  xn = `_2u1btMDPW24-`,
+  Sn = `Ps-gpwoy9Is-`,
+  Cn = `L44OviB8cOM-`,
+  wn = `K1CYINTJapk-`;
+function Tn(e) {
   let {
       tabs: t,
       bDisableRouting: n,
@@ -1963,21 +1963,21 @@ function wn(e) {
       bSticky: f,
       bChecklistMode: p,
     } = e,
-    h = Se(),
-    g = be(),
+    m = xe(),
+    g = ye(),
     [_, v] = (0, L.useState)(
-      () => r || (!n && F(h, `tab`) ? (F(h, `tab`) ?? ``) : ``),
+      () => r || (!n && ke(m, `tab`) ? (ke(m, `tab`) ?? ``) : ``),
     );
   (0, L.useEffect)(() => {
-    if (!e.bDisableRouting && h) {
-      let e = F(h, `tab`);
+    if (!e.bDisableRouting && m) {
+      let e = ke(m, `tab`);
       e && v(e);
     }
-  }, [h, e.bDisableRouting, v]);
+  }, [m, e.bDisableRouting, v]);
   let y = L.useCallback(
       (e) => {
         (v(e.key),
-          n || ke(g, `tab`, e.key),
+          n || Oe(g, `tab`, e.key),
           a?.(e.key),
           e.onClick && e.onClick(e));
       },
@@ -1985,57 +1985,57 @@ function wn(e) {
     ),
     b = t.filter((e) => !e.hidden);
   if (!b.length) return null;
-  let ee = i ?? _,
-    x = b.find((e) => e.key === ee) || b[0],
-    ne = u ? (r ?? b[0].key) : void 0,
-    S = (0, R.jsxs)(R.Fragment, {
+  let x = i ?? _,
+    S = b.find((e) => e.key === x) || b[0],
+    C = u ? (r ?? b[0].key) : void 0,
+    w = (0, R.jsxs)(R.Fragment, {
       children: [
-        (0, R.jsx)(k, {
-          className: m(
-            mn,
+        (0, R.jsx)(A, {
+          className: h(
+            hn,
             d && `iBLrw-7gAIM-`,
             p && `dLhmGXBhTkM-`,
             f && `ShXw34CXvuE-`,
             o,
           ),
-          navEntryPreferPosition: u ? te.PREFERRED_CHILD : te.FIRST,
+          navEntryPreferPosition: u ? ne.PREFERRED_CHILD : ne.FIRST,
           children: b.map((e, t) =>
             (0, R.jsx)(
-              En,
+              Dn,
               {
                 tab: e,
                 OnTabClick: y,
                 classNameTab: s,
                 focusRingHasBorderRadius: c,
-                active: e.key === x.key,
-                preferredFocus: ne === e.key,
+                active: e.key === S.key,
+                preferredFocus: C === e.key,
               },
               e.key,
             ),
           ),
         }),
-        x && (0, R.jsx)(k, { className: l, children: x.contents }),
+        S && (0, R.jsx)(A, { className: l, children: S.contents }),
       ],
     });
-  return d ? (0, R.jsx)(k, { className: m(gn), children: S }) : S;
+  return d ? (0, R.jsx)(A, { className: h(_n), children: w }) : w;
 }
-function Tn(e) {
+function En(e) {
   let { statusType: t = `success`, bShowStatusBox: n, children: r } = e,
     i = ``;
   return (
     t === `success`
-      ? (i = yn)
+      ? (i = bn)
       : t === `danger`
-        ? (i = bn)
+        ? (i = xn)
         : t === `caution`
-          ? (i = xn)
+          ? (i = Sn)
           : t === `info`
-            ? (i = Sn)
-            : t === `incomplete` && (i = Cn),
-    (0, R.jsx)(`div`, { className: m(_n, i, n ? vn : ``), children: r })
+            ? (i = Cn)
+            : t === `incomplete` && (i = wn),
+    (0, R.jsx)(`div`, { className: h(vn, i, n ? yn : ``), children: r })
   );
 }
-function En(e) {
+function Dn(e) {
   let {
     tab: t,
     OnTabClick: n,
@@ -2044,25 +2044,25 @@ function En(e) {
     active: a,
     preferredFocus: o,
   } = e;
-  return (0, R.jsx)(ce, {
+  return (0, R.jsx)(oe, {
     condition: !!(t.statusToolTip || t.tooltip),
     wrap: (e) =>
-      (0, R.jsx)(_e, {
+      (0, R.jsx)(ge, {
         toolTipContent: t.statusToolTip || t.tooltip,
         children: e,
       }),
-    children: (0, R.jsxs)(k, {
-      className: m(hn, a && `Tw-TchJW1T8-`, a && `ActiveTab`, r),
+    children: (0, R.jsxs)(A, {
+      className: h(gn, a && `Tw-TchJW1T8-`, a && `ActiveTab`, r),
       onActivate: () => n(t),
       preferredFocus: o,
       focusRingHasBorderRadius: i,
       children: [
         !!t.vo_warning &&
-          (0, R.jsx)(_e, {
+          (0, R.jsx)(ge, {
             toolTipContent: t.vo_warning,
             children: (0, R.jsx)(`div`, {
               className: `OpvmjD098-U-`,
-              children: A(`#EventEditor_VOWarning`),
+              children: j(`#EventEditor_VOWarning`),
             }),
           }),
         t.status,
@@ -2071,13 +2071,13 @@ function En(e) {
     }),
   });
 }
-var Z = _(d(), 1),
-  Dn = class e extends Z.Message {
+var X = i(y(), 1),
+  On = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.appid || s(e.M()),
-        Z.Message.initialize(this, t, 0, -1, void 0, null));
+        e.prototype.appid || d(e.M()),
+        X.Message.initialize(this, t, 0, -1, void 0, null));
     }
     static sm_m;
     static sm_mbf;
@@ -2085,25 +2085,25 @@ var Z = _(d(), 1),
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { appid: { n: 1, br: a.readUint32, bw: l.writeUint32 } },
+          fields: { appid: { n: 1, br: x.readUint32, bw: t.writeUint32 } },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= h(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= l(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return u(e.M(), t, n);
+      return a(e.M(), t, n);
     }
     static fromObject(t) {
-      return r(e.M(), t);
+      return _(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Z.BinaryReader(t),
+      let n = new X.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -2111,26 +2111,26 @@ var Z = _(d(), 1),
       return c(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Z.BinaryWriter();
+      var t = new X.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      i(e.M(), t, n);
+      b(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Z.BinaryWriter();
+      var t = new X.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGamePerformanceStats_GetGameFrameRateStats_Request`;
     }
   },
-  On = class e extends Z.Message {
+  kn = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.frame_rates || s(e.M()),
-        Z.Message.initialize(this, t, 0, -1, [1], null));
+        e.prototype.frame_rates || d(e.M()),
+        X.Message.initialize(this, t, 0, -1, [1], null));
     }
     static sm_m;
     static sm_mbf;
@@ -2138,25 +2138,25 @@ var Z = _(d(), 1),
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { frame_rates: { n: 1, c: kn, r: !0, q: !0 } },
+          fields: { frame_rates: { n: 1, c: An, r: !0, q: !0 } },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= h(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= l(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return u(e.M(), t, n);
+      return a(e.M(), t, n);
     }
     static fromObject(t) {
-      return r(e.M(), t);
+      return _(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Z.BinaryReader(t),
+      let n = new X.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -2164,26 +2164,26 @@ var Z = _(d(), 1),
       return c(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Z.BinaryWriter();
+      var t = new X.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      i(e.M(), t, n);
+      b(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Z.BinaryWriter();
+      var t = new X.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGamePerformanceStats_GetGameFrameRateStats_Response`;
     }
   },
-  kn = class e extends Z.Message {
+  An = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
-        e.prototype.clusterid || s(e.M()),
-        Z.Message.initialize(this, t, 0, -1, [8], null));
+        e.prototype.clusterid || d(e.M()),
+        X.Message.initialize(this, t, 0, -1, [8], null));
     }
     static sm_m;
     static sm_mbf;
@@ -2194,49 +2194,49 @@ var Z = _(d(), 1),
           fields: {
             clusterid: {
               n: 1,
-              br: a.readUint64String,
-              bw: l.writeUint64String,
+              br: x.readUint64String,
+              bw: t.writeUint64String,
             },
-            report_days: { n: 4, br: a.readUint32, bw: l.writeUint32 },
+            report_days: { n: 4, br: x.readUint32, bw: t.writeUint32 },
             report_count: {
               n: 5,
-              br: a.readUint64String,
-              bw: l.writeUint64String,
+              br: x.readUint64String,
+              bw: t.writeUint64String,
             },
-            mean_frame_rate: { n: 6, br: a.readDouble, bw: l.writeDouble },
+            mean_frame_rate: { n: 6, br: x.readDouble, bw: t.writeDouble },
             frame_rate_histogram: {
               n: 8,
               r: !0,
               q: !0,
-              br: a.readDouble,
-              pbr: a.readPackedDouble,
-              bw: l.writeRepeatedDouble,
+              br: x.readDouble,
+              pbr: x.readPackedDouble,
+              bw: t.writeRepeatedDouble,
             },
             histogram_report_count: {
               n: 9,
-              br: a.readUint64String,
-              bw: l.writeUint64String,
+              br: x.readUint64String,
+              bw: t.writeUint64String,
             },
-            last_updated: { n: 10, br: a.readUint32, bw: l.writeUint32 },
+            last_updated: { n: 10, br: x.readUint32, bw: t.writeUint32 },
           },
         }),
         e.sm_m
       );
     }
     static MBF() {
-      return ((e.sm_mbf ||= h(e.M())), e.sm_mbf);
+      return ((e.sm_mbf ||= l(e.M())), e.sm_mbf);
     }
     toObject(t = !1) {
       return e.toObject(t, this);
     }
     static toObject(t, n) {
-      return u(e.M(), t, n);
+      return a(e.M(), t, n);
     }
     static fromObject(t) {
-      return r(e.M(), t);
+      return _(e.M(), t);
     }
     static deserializeBinary(t) {
-      let n = new Z.BinaryReader(t),
+      let n = new X.BinaryReader(t),
         r = new e();
       return e.deserializeBinaryFromReader(r, n);
     }
@@ -2244,95 +2244,95 @@ var Z = _(d(), 1),
       return c(e.MBF(), t, n);
     }
     serializeBinary() {
-      var t = new Z.BinaryWriter();
+      var t = new X.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBuffer());
     }
     static serializeBinaryToWriter(t, n) {
-      i(e.M(), t, n);
+      b(e.M(), t, n);
     }
     serializeBase64String() {
-      var t = new Z.BinaryWriter();
+      var t = new X.BinaryWriter();
       return (e.serializeBinaryToWriter(this, t), t.getResultBase64String());
     }
     getClassName() {
       return `CGamePerformanceStats_GetGameFrameRateStats_Response_FrameRate`;
     }
   },
-  An;
+  jn;
 (function (e) {
   function t(e, t, n) {
     return e.SendMsg(
       `GamePerformanceStats.GetGameFrameRateStats#1`,
-      f(Dn, t, n),
-      On,
+      r(On, t, n),
+      kn,
       {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `store`, `community`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
   e.GetGameFrameRateStats = t;
-})((An ||= {}));
-function jn(e) {
-  let t = Te(),
-    { data: n } = Ee({
+})((jn ||= {}));
+function Mn(e) {
+  let t = we(),
+    { data: r } = Te({
       queryKey: [`performancestats_` + e],
       queryFn: async () => {
         if (!e) return null;
-        let n = b.Init(Dn);
-        n.Body().set_appid(e);
-        let r = await An.GetGameFrameRateStats(t, n);
-        return r.BSuccess() ? r.Body().toObject() : null;
+        let r = n.Init(On);
+        r.Body().set_appid(e);
+        let i = await jn.GetGameFrameRateStats(t, r);
+        return i.BSuccess() ? i.Body().toObject() : null;
       },
     });
-  return n ?? void 0;
+  return r ?? void 0;
 }
-function Mn(e, t = !0) {
-  return Ee({
+function Nn(t, n = !0) {
+  return Te({
     queryKey: [`GetControllersUsed`],
     queryFn: async () => {
       let e;
       try {
-        let t = `${g.STORE_BASE_URL}account/ajaxgetcontrollersused`,
+        let t = `${f.STORE_BASE_URL}account/ajaxgetcontrollersused`,
           n = await Xe.default.get(t, { withCredentials: !0 });
         if (n?.status === 200 && n?.data?.success === 1) return n.data.data;
-        e = P(n);
+        e = F(n);
       } catch (t) {
-        e = P(t);
+        e = F(t);
       }
       return (console.error(`usePlayerHardwareUsed failed:`, e), null);
     },
-    select: e,
-    enabled: t && !!p.accountid,
+    select: t,
+    enabled: n && !!e.accountid,
   });
 }
-var Nn = [`axis`, `item`],
-  Pn = (0, L.forwardRef)((e, t) =>
+var Pn = [`axis`, `item`],
+  Fn = (0, L.forwardRef)((e, t) =>
     L.createElement(Ie, {
       chartName: `BarChart`,
       defaultTooltipEventType: `axis`,
-      validateTooltipEventTypes: Nn,
+      validateTooltipEventTypes: Pn,
       tooltipPayloadSearcher: Ae,
       categoricalChartProps: e,
       ref: t,
     }),
   ),
-  Fn = `nK2pFw6yu3o-`,
-  In = `nzXI4r-KhTY-`,
-  Ln = `iKEtAveWi-8-`,
-  Rn = `ZXpki9wJyL0-`,
-  zn = 5;
-function Bn({ active: e, payload: t }) {
+  In = `nK2pFw6yu3o-`,
+  Ln = `nzXI4r-KhTY-`,
+  Rn = `iKEtAveWi-8-`,
+  zn = `ZXpki9wJyL0-`,
+  Bn = 5;
+function Vn({ active: e, payload: t }) {
   if (!e || !t?.length) return null;
   let n = t[0].payload;
   return (0, R.jsx)(`div`, {
-    className: Rn,
-    children: `${E.Localize(`#GamePerformanceStats_FPS`, n.framerate ?? 0)}: ${n.percentage ?? 0}%`,
+    className: zn,
+    children: `${O.Localize(`#GamePerformanceStats_FPS`, n.framerate ?? 0)}: ${n.percentage ?? 0}%`,
   });
 }
-function Vn(e) {
+function Hn(e) {
   let { histogram: t, className: n, minWidth: r = 400, minHeight: i = 300 } = e,
     a = L.useMemo(() => {
       if (!t) return;
@@ -2347,24 +2347,24 @@ function Vn(e) {
       let n = [];
       return (
         t.slice(0, e + 1).forEach((e, t) => {
-          n.push({ framerate: t * zn, percentage: Math.round(e) });
+          n.push({ framerate: t * Bn, percentage: Math.round(e) });
         }),
         n.sort((e, t) => e.framerate - t.framerate)
       );
     }, [t]);
   return a?.length
     ? (0, R.jsxs)(`div`, {
-        className: m(Fn, n),
+        className: h(In, n),
         children: [
           (0, R.jsx)(`div`, {
-            className: In,
-            children: E.Localize(`#GamePerformanceStats_SessionLabel`),
+            className: Ln,
+            children: O.Localize(`#GamePerformanceStats_SessionLabel`),
           }),
           (0, R.jsx)(je, {
             width: `100%`,
             minWidth: r,
             minHeight: i,
-            children: (0, R.jsxs)(Pn, {
+            children: (0, R.jsxs)(Fn, {
               accessibilityLayer: !1,
               margin: { top: 35, left: 0, right: 0, bottom: 25 },
               data: a,
@@ -2378,7 +2378,7 @@ function Vn(e) {
                   dataKey: `framerate`,
                   stroke: `white`,
                   label: {
-                    value: E.Localize(`#GamePerformanceStats_Framerate`),
+                    value: O.Localize(`#GamePerformanceStats_Framerate`),
                     position: `bottom`,
                     fill: `#A9A9A9`,
                     fontSize: 14,
@@ -2389,7 +2389,7 @@ function Vn(e) {
                   domain: [() => 0, (e) => Math.max(e, 100)],
                 }),
                 (0, R.jsx)(Me, {
-                  content: Bn,
+                  content: Vn,
                   cursor: !1,
                   isAnimationActive: !1,
                 }),
@@ -2405,17 +2405,17 @@ function Vn(e) {
         ],
       })
     : (0, R.jsx)(`div`, {
-        className: m(Fn, n),
+        className: h(In, n),
         children: (0, R.jsx)(`div`, {
-          className: Ln,
-          children: E.Localize(
+          className: Rn,
+          children: O.Localize(
             `#GamePerformanceStats_StillGatheringData_NoDevice`,
           ),
         }),
       });
 }
-var Hn = _(v());
-function Un(e) {
+var Un = i(g());
+function Wn(e) {
   let {
       id: t,
       role: n,
@@ -2426,7 +2426,7 @@ function Un(e) {
       msAnimationDuration: s = 250,
       children: c,
     } = e,
-    { style: l, active: u, refDiv: d } = Wn(r, o, s);
+    { style: l, active: u, refDiv: d } = Gn(r, o, s);
   return !r && !u && !a
     ? null
     : (0, R.jsx)(`div`, {
@@ -2439,7 +2439,7 @@ function Un(e) {
         children: c,
       });
 }
-function Wn(e, t = `height`, n = 250) {
+function Gn(e, t = `height`, n = 250) {
   let r = L.useRef(null),
     i = L.useRef(!0),
     [a, o] = L.useState(`idle`),
@@ -2462,7 +2462,7 @@ function Wn(e, t = `height`, n = 250) {
       let n = r.current,
         i = t == `height` ? `scrollHeight` : `scrollWidth`,
         s = () => {
-          Hn.unstable_batchedUpdates(() => {
+          Un.unstable_batchedUpdates(() => {
             (c(e ? {} : { [t]: `0px`, overflow: `hidden` }), o(`idle`), u(e));
           });
         };
@@ -2491,7 +2491,7 @@ function Wn(e, t = `height`, n = 250) {
     { style: { ...s, transition: `${t} ${n}ms` }, active: l, refDiv: r }
   );
 }
-function Gn(e) {
+function Kn(e) {
   let {
     results: t,
     titleId: n,
@@ -2515,7 +2515,7 @@ function Gn(e) {
     p = null;
   if (
     (t.steam_deck_blog_url &&
-      ((d.onOptionsActionDescription = E.Localize(
+      ((d.onOptionsActionDescription = O.Localize(
         `#SteamDeckVerified_ViewDeveloperPost`,
       )),
       (d.onOptionsButton = u),
@@ -2537,7 +2537,7 @@ function Gn(e) {
       l = (0, R.jsx)($, { category: t.resolved_category });
     return (
       c == 3
-        ? ((e = E.Localize(
+        ? ((e = O.Localize(
             `#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI`,
           )),
           (s = (0, R.jsx)(lr, {
@@ -2547,7 +2547,7 @@ function Gn(e) {
           })),
           (l = (0, R.jsx)($, { category: t.machine_resolved_category })))
         : c == 2
-          ? ((e = E.Localize(
+          ? ((e = O.Localize(
               `#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI`,
             )),
             (s = (0, R.jsx)(cr, {
@@ -2558,7 +2558,7 @@ function Gn(e) {
             (l = (0, R.jsx)(or, { category: t.steamos_resolved_category })),
             (a = p))
           : c == 4
-            ? ((e = E.Localize(
+            ? ((e = O.Localize(
                 `#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI`,
               )),
               (s = (0, R.jsx)(ur, {
@@ -2567,7 +2567,7 @@ function Gn(e) {
                 appName: i,
               })),
               (l = (0, R.jsx)($, { category: t.frame_resolved_category })))
-            : ((e = E.Localize(
+            : ((e = O.Localize(
                 `#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI`,
               )),
               (s = (0, R.jsx)(sr, {
@@ -2575,20 +2575,20 @@ function Gn(e) {
                 appName: i,
               })),
               (a = f)),
-      (0, R.jsx)(Kn, {
-        children: (0, R.jsxs)(k, {
+      (0, R.jsx)(qn, {
+        children: (0, R.jsxs)(A, {
           autoFocus: o,
           focusableIfEmpty: o,
           noFocusRing: !0,
-          className: at,
+          className: ot,
           ...d,
           children: [
             (0, R.jsxs)(`div`, {
               id: n,
-              className: nt,
+              className: rt,
               children: [
-                (0, R.jsx)(`div`, { className: rt, children: e }),
-                (0, R.jsx)(`div`, { className: it, children: l }),
+                (0, R.jsx)(`div`, { className: it, children: e }),
+                (0, R.jsx)(`div`, { className: at, children: l }),
               ],
             }),
             s,
@@ -2607,78 +2607,78 @@ function Gn(e) {
     let t = null;
     switch (c) {
       case 3:
-        t = (0, R.jsx)(Yn, { ...e });
+        t = (0, R.jsx)(Q, { ...e });
         break;
       case 2:
       case 5:
-        t = (0, R.jsx)(qn, { ...e, deckBlogContent: p });
+        t = (0, R.jsx)(Jn, { ...e, deckBlogContent: p });
         break;
       case 4:
         t = (0, R.jsx)(Xn, { ...e });
         break;
       default:
-        t = (0, R.jsx)(Jn, { ...e, deckBlogContent: f });
+        t = (0, R.jsx)(Yn, { ...e, deckBlogContent: f });
     }
-    return (0, R.jsx)(w, { children: (0, R.jsx)(Kn, { children: t }) });
+    return (0, R.jsx)(E, { children: (0, R.jsx)(qn, { children: t }) });
   }
   let v = (e) =>
       window.sessionStorage.setItem(`steamdeckcompatibility`, `?tab=${e.key}`),
     y = [
       {
         name: (0, R.jsxs)(`div`, {
-          className: q,
+          className: K,
           children: [
-            (0, R.jsx)(pe, { className: Dt }),
-            (0, R.jsx)(m, { className: J }),
+            (0, R.jsx)(fe, { className: Ot }),
+            (0, R.jsx)(m, { className: q }),
           ],
         }),
         key: `1`,
-        contents: (0, R.jsx)(w, {
-          children: (0, R.jsx)(Jn, { ...e, deckBlogContent: f }),
+        contents: (0, R.jsx)(E, {
+          children: (0, R.jsx)(Yn, { ...e, deckBlogContent: f }),
         }),
         onClick: v,
       },
       {
         name: (0, R.jsxs)(`div`, {
-          className: q,
+          className: K,
           children: [
-            (0, R.jsx)(le, { className: Tt }),
-            (0, R.jsx)(g, { className: J }),
+            (0, R.jsx)(se, { className: Et }),
+            (0, R.jsx)(g, { className: q }),
           ],
         }),
         key: `3`,
-        contents: (0, R.jsx)(w, { children: (0, R.jsx)(Yn, { ...e }) }),
+        contents: (0, R.jsx)(E, { children: (0, R.jsx)(Q, { ...e }) }),
         onClick: v,
       },
       {
         name: (0, R.jsxs)(`div`, {
-          className: q,
-          children: [`steamos`, (0, R.jsx)(h, { className: J })],
+          className: K,
+          children: [`steamos`, (0, R.jsx)(h, { className: q })],
         }),
         key: `2`,
-        contents: (0, R.jsx)(w, {
-          children: (0, R.jsx)(qn, { ...e, deckBlogContent: p }),
+        contents: (0, R.jsx)(E, {
+          children: (0, R.jsx)(Jn, { ...e, deckBlogContent: p }),
         }),
         onClick: v,
       },
       {
         name: (0, R.jsxs)(`div`, {
-          className: q,
+          className: K,
           children: [
-            (0, R.jsx)(fe, { className: Et }),
-            (0, R.jsx)(_, { className: J }),
+            (0, R.jsx)(de, { className: Dt }),
+            (0, R.jsx)(_, { className: q }),
           ],
         }),
         key: `4`,
-        contents: (0, R.jsx)(w, { children: (0, R.jsx)(Xn, { ...e }) }),
+        contents: (0, R.jsx)(E, { children: (0, R.jsx)(Xn, { ...e }) }),
         onClick: v,
       },
     ];
-  return (0, R.jsx)(Kn, {
-    children: (0, R.jsx)(wn, {
+  return (0, R.jsx)(qn, {
+    children: (0, R.jsx)(Tn, {
       tabs: y,
-      classNameCtn: Ct,
-      classNameTabContent: St,
+      classNameCtn: wt,
+      classNameTabContent: Ct,
       startingTab: c.toString(),
       preferredFocus: !0,
       bDisableRouting: !0,
@@ -2686,27 +2686,27 @@ function Gn(e) {
     }),
   });
 }
-function Kn(e) {
+function qn(e) {
   let [t, n] = L.useState(!1),
     r = L.useRef(null),
     i = L.useCallback(() => {
       let e = r.current;
       e && n(e.scrollHeight > e.clientHeight);
     }, []),
-    a = ge(i);
-  return (0, R.jsx)(xe, {
+    a = he(i);
+  return (0, R.jsx)(be, {
     ref: r,
-    className: mt,
-    children: (0, R.jsx)(k, {
+    className: ht,
+    children: (0, R.jsx)(A, {
       ref: a,
-      className: ht,
+      className: gt,
       focusableIfEmpty: t,
       noFocusRing: !0,
       children: e.children,
     }),
   });
 }
-function Q(e) {
+function Z(e) {
   let {
       titleId: t,
       title: n,
@@ -2718,25 +2718,25 @@ function Q(e) {
       children: c,
     } = e,
     l = i ?? {};
-  return (0, R.jsxs)(k, {
-    className: at,
+  return (0, R.jsxs)(A, {
+    className: ot,
     ...l,
     children: [
       (0, R.jsxs)(`div`, {
         children: [
           (0, R.jsxs)(`div`, {
             id: t,
-            className: nt,
+            className: rt,
             children: [
-              (0, R.jsx)(`div`, { className: rt, children: n }),
-              (0, R.jsx)(`div`, { className: it, children: a }),
+              (0, R.jsx)(`div`, { className: it, children: n }),
+              (0, R.jsx)(`div`, { className: at, children: a }),
             ],
           }),
           o,
         ],
       }),
       s,
-      (0, R.jsx)(k, {
+      (0, R.jsx)(A, {
         autoFocus: r,
         focusableIfEmpty: r,
         noFocusRing: !0,
@@ -2745,7 +2745,7 @@ function Q(e) {
     ],
   });
 }
-function qn(e) {
+function Jn(e) {
   let { titleId: t, descriptionId: n, results: r, appName: i } = e,
     a =
       r.steamos_resolved_items &&
@@ -2757,9 +2757,9 @@ function qn(e) {
     }),
     s = (0, R.jsx)(or, { category: r.steamos_resolved_category }),
     c = r.steamos_resolved_items && r.steamos_resolved_items?.length > 0;
-  return (0, R.jsx)(Q, {
+  return (0, R.jsx)(Z, {
     titleId: t,
-    title: E.Localize(
+    title: O.Localize(
       `#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI`,
     ),
     ratingIcon: s,
@@ -2778,7 +2778,7 @@ function qn(e) {
                   className: `-vnBPYbU1nw-`,
                   children: [
                     (0, R.jsx)($n, { displaytype: e.display_type }),
-                    (0, R.jsx)(`span`, { children: E.Localize(e.loc_token) }),
+                    (0, R.jsx)(`span`, { children: O.Localize(e.loc_token) }),
                   ],
                 },
                 e.loc_token + e.display_type,
@@ -2796,7 +2796,7 @@ function qn(e) {
                     className: `-vnBPYbU1nw-`,
                     children: [
                       (0, R.jsx)($n, { displaytype: e.display_type }),
-                      (0, R.jsx)(`span`, { children: E.Localize(e.loc_token) }),
+                      (0, R.jsx)(`span`, { children: O.Localize(e.loc_token) }),
                     ],
                   },
                   e.loc_token + e.display_type,
@@ -2807,15 +2807,15 @@ function qn(e) {
     }),
   });
 }
-function Jn(e) {
+function Yn(e) {
   let { titleId: t, descriptionId: n, results: r, appName: i } = e,
     a = r.resolved_items?.findIndex((e) => e.display_type == 1) !== -1,
     o = (0, R.jsx)(sr, { id: n, category: r.resolved_category, appName: i }),
     s = (0, R.jsx)($, { category: r.resolved_category }),
     c = r.resolved_items && r.resolved_items?.length > 0;
-  return (0, R.jsx)(Q, {
+  return (0, R.jsx)(Z, {
     titleId: t,
-    title: E.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI`),
+    title: O.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI`),
     ratingIcon: s,
     ratingSummary: o,
     ...e,
@@ -2835,8 +2835,8 @@ function Jn(e) {
                     (0, R.jsx)(`span`, {
                       children:
                         e.loc_token.charAt(0) == `#`
-                          ? E.Localize(e.loc_token)
-                          : E.Localize(`#` + e.loc_token),
+                          ? O.Localize(e.loc_token)
+                          : O.Localize(`#` + e.loc_token),
                     }),
                   ],
                 },
@@ -2855,7 +2855,7 @@ function Jn(e) {
                   {
                     className: `_00kSG69QbjI-`,
                     children: (0, R.jsx)(`span`, {
-                      children: E.Localize(e.loc_token),
+                      children: O.Localize(e.loc_token),
                     }),
                   },
                   e.loc_token + e.display_type,
@@ -2867,7 +2867,7 @@ function Jn(e) {
     }),
   });
 }
-function Yn(e) {
+function Q(e) {
   let { titleId: t, descriptionId: n, results: r, appName: i } = e,
     a = r.machine_resolved_items?.findIndex((e) => e.display_type == 1) !== -1,
     o = (0, R.jsx)(lr, {
@@ -2877,9 +2877,9 @@ function Yn(e) {
     }),
     s = (0, R.jsx)($, { category: r.machine_resolved_category }),
     c = r.machine_resolved_items && r.machine_resolved_items?.length > 0;
-  return (0, R.jsx)(Q, {
+  return (0, R.jsx)(Z, {
     titleId: t,
-    title: E.Localize(
+    title: O.Localize(
       `#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI`,
     ),
     ratingIcon: s,
@@ -2898,7 +2898,7 @@ function Yn(e) {
                   className: `-vnBPYbU1nw-`,
                   children: [
                     (0, R.jsx)(Qn, { displaytype: e.display_type }),
-                    (0, R.jsx)(`span`, { children: E.Localize(e.loc_token) }),
+                    (0, R.jsx)(`span`, { children: O.Localize(e.loc_token) }),
                   ],
                 },
                 e.loc_token + e.display_type,
@@ -2916,7 +2916,7 @@ function Yn(e) {
                   {
                     className: `_00kSG69QbjI-`,
                     children: (0, R.jsx)(`span`, {
-                      children: E.Localize(e.loc_token),
+                      children: O.Localize(e.loc_token),
                     }),
                   },
                   e.loc_token + e.display_type,
@@ -2937,9 +2937,9 @@ function Xn(e) {
     }),
     s = (0, R.jsx)($, { category: r.frame_resolved_category ?? 0 }),
     c = r.frame_resolved_items && r.frame_resolved_items?.length > 0;
-  return (0, R.jsx)(Q, {
+  return (0, R.jsx)(Z, {
     titleId: t,
-    title: E.Localize(
+    title: O.Localize(
       `#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI`,
     ),
     ratingIcon: s,
@@ -2958,7 +2958,7 @@ function Xn(e) {
                   className: `-vnBPYbU1nw-`,
                   children: [
                     (0, R.jsx)(Qn, { displaytype: e.display_type }),
-                    (0, R.jsx)(`span`, { children: E.Localize(e.loc_token) }),
+                    (0, R.jsx)(`span`, { children: O.Localize(e.loc_token) }),
                   ],
                 },
                 e.loc_token + e.display_type,
@@ -2976,7 +2976,7 @@ function Xn(e) {
                   {
                     className: `_00kSG69QbjI-`,
                     children: (0, R.jsx)(`span`, {
-                      children: E.Localize(e.loc_token),
+                      children: O.Localize(e.loc_token),
                     }),
                   },
                   e.loc_token + e.display_type,
@@ -2989,38 +2989,38 @@ function Xn(e) {
 }
 function Zn(e) {
   let { blogURL: t, eHWCompatibiltyDisplay: n } = e,
-    r = ee();
+    r = u();
   if (!t) return null;
   if (r) {
     let e =
       n == 2
-        ? E.Localize(`#SteamOS_DescriptionHeader_DeveloperBlog`)
-        : E.Localize(`#SteamDeckVerified_DescriptionHeader_DeveloperBlog`);
+        ? O.Localize(`#SteamOS_DescriptionHeader_DeveloperBlog`)
+        : O.Localize(`#SteamDeckVerified_DescriptionHeader_DeveloperBlog`);
     return (0, R.jsxs)(`div`, {
-      className: W,
+      className: U,
       children: [
         e,
         (0, R.jsx)(`div`, {
-          className: xt,
-          children: (0, R.jsx)(Lt, { button: V.Y, type: Pt.Knockout }),
+          className: St,
+          children: (0, R.jsx)(Rt, { button: V.Y, type: Ft.Knockout }),
         }),
       ],
     });
   }
   let i =
     n == 2
-      ? E.Localize(`#SteamOS_DescriptionHeader_DeveloperBlog_Desktop`)
-      : E.Localize(
+      ? O.Localize(`#SteamOS_DescriptionHeader_DeveloperBlog_Desktop`)
+      : O.Localize(
           `#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop`,
         );
   return (0, R.jsxs)(`div`, {
-    className: W,
+    className: U,
     children: [
       i,
       (0, R.jsx)(`a`, {
         href: t,
-        className: $e,
-        children: E.Localize(`#SteamDeckVerified_ViewDeveloperPost`),
+        className: et,
+        children: O.Localize(`#SteamDeckVerified_ViewDeveloperPost`),
       }),
     ],
   });
@@ -3029,13 +3029,13 @@ function Qn(e) {
   let { displaytype: t } = e;
   switch (t) {
     case 4:
-      return (0, R.jsx)(O, { className: K });
+      return (0, R.jsx)(ue, { className: G });
     case 3:
-      return (0, R.jsx)(ye, { className: K });
+      return (0, R.jsx)(ve, { className: G });
     case 2:
-      return (0, R.jsx)(j, { className: K });
+      return (0, R.jsx)(M, { className: G });
     case 0:
-      return (0, R.jsx)(T, { className: K });
+      return (0, R.jsx)(D, { className: G });
     case 1:
       return null;
   }
@@ -3044,9 +3044,9 @@ function $n(e) {
   let { displaytype: t } = e;
   switch (t) {
     case 3:
-      return (0, R.jsx)(D, { className: K });
+      return (0, R.jsx)(k, { className: G });
     case 1:
-      return (0, R.jsx)(de, { className: K });
+      return (0, R.jsx)(le, { className: G });
     default:
       return null;
   }
@@ -3054,37 +3054,37 @@ function $n(e) {
 function er(e) {
   let { histogram: t, deviceName: n, nFrameLimit: r, appName: i } = e,
     a = i
-      ? E.Localize(`#GamePerformanceStats_FrameRateDistribution`, i, n)
-      : E.Localize(`#GamePerformanceStats_FrameRateDistribution_ThisGame`, n);
+      ? O.Localize(`#GamePerformanceStats_FrameRateDistribution`, i, n)
+      : O.Localize(`#GamePerformanceStats_FrameRateDistribution_ThisGame`, n);
   return (0, R.jsxs)(`div`, {
-    className: dt,
+    className: ft,
     children: [
       (0, R.jsxs)(`div`, {
         children: [
           (0, R.jsx)(`div`, {
-            className: ft,
-            children: E.Localize(`#GamePerformanceStats_MoreInfoTitle`),
+            className: pt,
+            children: O.Localize(`#GamePerformanceStats_MoreInfoTitle`),
           }),
           (0, R.jsx)(`div`, { children: a }),
         ],
       }),
-      (0, R.jsx)(Vn, { histogram: t, minWidth: 200, minHeight: 200 }),
+      (0, R.jsx)(Hn, { histogram: t, minWidth: 200, minHeight: 200 }),
       (0, R.jsx)(`div`, {
-        className: ft,
-        children: E.Localize(`#GamePerformanceStats_MoreDetailsTitle`),
+        className: pt,
+        children: O.Localize(`#GamePerformanceStats_MoreDetailsTitle`),
       }),
       (0, R.jsxs)(`div`, {
-        className: pt,
+        className: mt,
         children: [
           (0, R.jsx)(`div`, {
-            children: E.Localize(
+            children: O.Localize(
               `#GamePerformanceStats_MoreDetails_Filtering`,
               n,
               r,
             ),
           }),
           (0, R.jsx)(`div`, {
-            children: E.Localize(
+            children: O.Localize(
               `#GamePerformanceStats_MoreDetails_VSync`,
               r / 2,
               r,
@@ -3098,8 +3098,8 @@ function er(e) {
 var tr = [4, 3];
 function nr(e) {
   let { appid: t, appName: n } = e,
-    r = jn(t),
-    { data: i } = Mn(void 0, !!r),
+    r = Mn(t),
+    { data: i } = Nn(void 0, !!r),
     [a, o] = L.useState(!1),
     [s, c] = L.useState(void 0),
     l = L.useRef(null),
@@ -3129,29 +3129,29 @@ function nr(e) {
     f = L.useMemo(
       () =>
         new Map([
-          [3, E.Localize(`#GamePerformanceStats_SteamDeckLCD`)],
-          [4, E.Localize(`#GamePerformanceStats_SteamDeckOLED`)],
+          [3, O.Localize(`#GamePerformanceStats_SteamDeckLCD`)],
+          [4, O.Localize(`#GamePerformanceStats_SteamDeckOLED`)],
         ]),
       [],
     );
   if (!r) return null;
   if (!Array.from(u.values()).some((e) => !!e.average))
     return (0, R.jsxs)(`div`, {
-      className: ot,
+      className: st,
       children: [
-        (0, R.jsx)(`div`, { className: bt }),
+        (0, R.jsx)(`div`, { className: xt }),
         (0, R.jsx)(`div`, {
-          className: st,
-          children: E.Localize(
+          className: ct,
+          children: O.Localize(
             `#GamePerformanceStats_StillGatheringData_NoDevice`,
           ),
         }),
       ],
     });
   let p = tr.map((e) => ({
-      name: (0, R.jsx)(`div`, { className: q, children: f.get(e) }),
+      name: (0, R.jsx)(`div`, { className: K, children: f.get(e) }),
       key: e.toString(),
-      contents: (0, R.jsx)(w, {
+      contents: (0, R.jsx)(E, {
         children: (0, R.jsx)(er, {
           histogram: u.get(e)?.histogram,
           deviceName: f.get(e) ?? ``,
@@ -3168,34 +3168,34 @@ function nr(e) {
     v;
   if (g) {
     let e = (0, R.jsx)(`span`, {
-      className: lt,
-      children: E.Localize(`#GameFrameRate_FPS`, g),
+      className: ut,
+      children: O.Localize(`#GameFrameRate_FPS`, g),
     });
-    v = E.LocalizeReact(`#GameFrameRate_Description_ThisGame`, h, e);
+    v = O.LocalizeReact(`#GameFrameRate_Description_ThisGame`, h, e);
   } else
     v = n
-      ? E.Localize(`#GamePerformanceStats_StillGatheringData`, n, h)
-      : E.Localize(`#GamePerformanceStats_StillGatheringData_ThisGame`, h);
+      ? O.Localize(`#GamePerformanceStats_StillGatheringData`, n, h)
+      : O.Localize(`#GamePerformanceStats_StillGatheringData_ThisGame`, h);
   let y = !!g && !a;
   return (0, R.jsxs)(`div`, {
-    className: ot,
+    className: st,
     onTransitionEnd: (e) => {
       e.propertyName == `height` &&
         l.current?.scrollIntoView({ behavior: `smooth`, block: `nearest` });
     },
     children: [
-      (0, R.jsx)(`div`, { className: bt }),
-      (0, R.jsxs)(k, {
-        className: st,
+      (0, R.jsx)(`div`, { className: xt }),
+      (0, R.jsxs)(A, {
+        className: ct,
         onActivate: y ? () => o(!a) : void 0,
         focusable: y,
         children: [
           (0, R.jsxs)(`div`, {
-            className: ct,
+            className: lt,
             children: [
               v,
               y &&
-                (0, R.jsx)(he, {
+                (0, R.jsx)(me, {
                   className: `heKA7rr02xo-`,
                   direction: a ? `up` : `down`,
                 }),
@@ -3205,18 +3205,18 @@ function nr(e) {
             _ > 0 &&
             (0, R.jsx)(`div`, {
               className: `HKN5tcQd-XE-`,
-              children: E.Localize(`#GameFrameRate_LastUpdated`, me(_)),
+              children: O.Localize(`#GameFrameRate_LastUpdated`, pe(_)),
             }),
         ],
       }),
-      (0, R.jsx)(Un, {
+      (0, R.jsx)(Wn, {
         visible: a,
         children: (0, R.jsx)(`div`, {
           ref: l,
-          className: ut,
-          children: (0, R.jsx)(wn, {
+          className: dt,
+          children: (0, R.jsx)(Tn, {
             tabs: p,
-            classNameCtn: wt,
+            classNameCtn: Tt,
             startingTab: m.toString(),
             controlledTab: m.toString(),
             preferredFocus: !0,
@@ -3230,38 +3230,38 @@ function nr(e) {
 }
 function rr(e) {
   let { id: t, compatibility: n, onShowDialog: r } = e,
-    { data: i } = Ce(t),
-    { data: a } = we(t),
-    [o, s, c] = ne();
+    { data: i } = Se(t),
+    { data: a } = Ce(t),
+    [o, s, c] = ee();
   if (!i || !a || i.item_type !== 0) return null;
   let l = null,
     u = null;
   if (n == 4) {
     let e = a.steam_frame_compat_category || 0;
     ((l = (0, R.jsx)(Ge, { category: e })),
-      (u = E.Localize(
+      (u = O.Localize(
         `#SteamFrameCompatibility_Store_CompatSectionHeader_GamepadUI`,
       )));
   } else if (n == 3) {
     let e = a.steam_machine_compat_category || 0;
     ((l = (0, R.jsx)(We, { category: e })),
-      (u = E.Localize(
+      (u = O.Localize(
         `#SteamMachineCompatibility_Store_CompatSectionHeader_GamepadUI`,
       )));
   } else {
     let e = a.steam_deck_compat_category || 0;
     ((l = (0, R.jsx)(Ue, { category: e })),
-      (u = E.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`)));
+      (u = O.Localize(`#SteamDeckVerified_Store_CompatSectionHeader_Desktop`)));
   }
   return (0, R.jsxs)(`div`, {
-    className: m(et, `LearnMoreCtn`),
+    className: h(tt, `LearnMoreCtn`),
     children: [
       l,
-      (0, R.jsx)(oe, {
+      (0, R.jsx)(re, {
         onClick: (e) => {
           (e.preventDefault(), (r ?? s)());
         },
-        children: (0, R.jsx)(`span`, { className: tt, children: u }),
+        children: (0, R.jsx)(`span`, { className: nt, children: u }),
       }),
       !r &&
         (0, R.jsx)(ir, {
@@ -3276,7 +3276,7 @@ function rr(e) {
 }
 function ir(e) {
   let { nAppID: t, active: n, appName: r, startingTab: i, closeModal: a } = e;
-  return (0, R.jsx)(De, {
+  return (0, R.jsx)(Ee, {
     active: n,
     children: (0, R.jsx)(ar, {
       nAppID: t,
@@ -3290,18 +3290,18 @@ function ar(e) {
   let { nAppID: t, appName: n, startingTab: r, closeModal: i } = e,
     a = Ze(t),
     o = L.useId();
-  return (0, R.jsx)(ve, {
+  return (0, R.jsx)(_e, {
     "aria-labelledby": o,
     modalClassName: `DeckVerifiedModalDialog`,
     closeModal: i,
     onCancel: i,
-    children: (0, R.jsx)(ue, {
-      children: (0, R.jsx)(k, {
+    children: (0, R.jsx)(ce, {
+      children: (0, R.jsx)(A, {
         focusable: !1,
         "flow-children": `column`,
-        className: gt,
+        className: _t,
         children: a
-          ? (0, R.jsx)(Gn, {
+          ? (0, R.jsx)(Kn, {
               titleId: o,
               appName: n,
               results: a,
@@ -3310,7 +3310,7 @@ function ar(e) {
           : (0, R.jsx)(Re, {
               size: `medium`,
               position: `center`,
-              string: E.Localize(`#Loading`),
+              string: O.Localize(`#Loading`),
             }),
       }),
     }),
@@ -3320,24 +3320,24 @@ function $(e) {
   let { category: t } = e;
   switch (t) {
     case 3:
-      return (0, R.jsx)(O, { className: U, role: `presentation` });
+      return (0, R.jsx)(ue, { className: H, role: `presentation` });
     case 2:
-      return (0, R.jsx)(ye, { className: U, role: `presentation` });
+      return (0, R.jsx)(ve, { className: H, role: `presentation` });
     case 1:
-      return (0, R.jsx)(j, { className: U, role: `presentation` });
+      return (0, R.jsx)(M, { className: H, role: `presentation` });
     default:
-      return (0, R.jsx)(T, { className: U, role: `presentation` });
+      return (0, R.jsx)(D, { className: H, role: `presentation` });
   }
 }
 function or(e) {
   let { category: t } = e;
   switch (t) {
     case 2:
-      return (0, R.jsx)(D, { className: U, role: `presentation` });
+      return (0, R.jsx)(k, { className: H, role: `presentation` });
     case 1:
-      return (0, R.jsx)(j, { className: U, role: `presentation` });
+      return (0, R.jsx)(M, { className: H, role: `presentation` });
     default:
-      return (0, R.jsx)(T, { className: U, role: `presentation` });
+      return (0, R.jsx)(D, { className: H, role: `presentation` });
   }
 }
 function sr(e) {
@@ -3345,142 +3345,142 @@ function sr(e) {
   if (n == 0)
     return (0, R.jsx)(`div`, {
       id: t,
-      className: W,
+      className: U,
       children: r
-        ? E.LocalizeReact(
+        ? O.LocalizeReact(
             `#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName`,
             (0, R.jsx)(`b`, { children: I(r) }),
           )
-        : E.Localize(`#SteamDeckVerified_DescriptionHeader_Unknown`),
+        : O.Localize(`#SteamDeckVerified_DescriptionHeader_Unknown`),
     });
   let a = ``,
     o = null;
   switch (n) {
     case 3:
-      ((a = `#SteamDeckVerified_DescriptionHeader_Verified`), (o = _t));
+      ((a = `#SteamDeckVerified_DescriptionHeader_Verified`), (o = vt));
       break;
     case 2:
-      ((a = `#SteamDeckVerified_DescriptionHeader_Playable`), (o = vt));
+      ((a = `#SteamDeckVerified_DescriptionHeader_Playable`), (o = yt));
       break;
     case 1:
-      ((a = `#SteamDeckVerified_DescriptionHeader_Unsupported`), (o = G));
+      ((a = `#SteamDeckVerified_DescriptionHeader_Unsupported`), (o = W));
   }
-  let s = (0, R.jsx)(`span`, { className: o, children: E.Localize(dr(n)) }),
-    c = (0, R.jsx)(`span`, { className: W, children: E.Localize(i || a) }),
+  let s = (0, R.jsx)(`span`, { className: o, children: O.Localize(dr(n)) }),
+    c = (0, R.jsx)(`span`, { className: U, children: O.Localize(i || a) }),
     l = r
-      ? E.LocalizeReact(
+      ? O.LocalizeReact(
           `#SteamDeckVerified_DescriptionHeader_WithAppName`,
           (0, R.jsx)(`b`, { children: I(r) }),
           s,
           c,
         )
-      : E.LocalizeReact(`#SteamDeckVerified_DescriptionHeader`, s, c);
-  return (0, R.jsx)(`div`, { id: t, className: W, children: l });
+      : O.LocalizeReact(`#SteamDeckVerified_DescriptionHeader`, s, c);
+  return (0, R.jsx)(`div`, { id: t, className: U, children: l });
 }
 function cr(e) {
   let { id: t, category: n, appName: r, descriptionToken: i } = e;
   if (n == 0)
     return (0, R.jsx)(`div`, {
-      className: W,
+      className: U,
       children: r
-        ? E.LocalizeReact(
+        ? O.LocalizeReact(
             `#SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName`,
             (0, R.jsx)(`b`, { children: I(r) }),
           )
-        : E.Localize(`#SteamOSCompatibility_DescriptionHeader_Unknown`),
+        : O.Localize(`#SteamOSCompatibility_DescriptionHeader_Unknown`),
     });
   let a = ``,
     o = null;
   switch (n) {
     case 2:
-      ((a = `#SteamOSCompatibility_DescriptionHeader_Compatible`), (o = yt));
+      ((a = `#SteamOSCompatibility_DescriptionHeader_Compatible`), (o = bt));
       break;
     case 1:
-      ((a = `#SteamOSCompatibility_DescriptionHeader_Unsupported`), (o = G));
+      ((a = `#SteamOSCompatibility_DescriptionHeader_Unsupported`), (o = W));
   }
-  let s = (0, R.jsx)(`span`, { className: o, children: E.Localize(fr(n)) }),
-    c = (0, R.jsx)(`span`, { className: W, children: E.Localize(i || a) }),
+  let s = (0, R.jsx)(`span`, { className: o, children: O.Localize(fr(n)) }),
+    c = (0, R.jsx)(`span`, { className: U, children: O.Localize(i || a) }),
     l = r
-      ? E.LocalizeReact(
+      ? O.LocalizeReact(
           `#SteamOSCompatibility_DescriptionHeader_WithAppName`,
           (0, R.jsx)(`b`, { children: I(r) }),
           s,
           c,
         )
-      : E.LocalizeReact(`#SteamOSCompatibility_DescriptionHeader`, s, c);
-  return (0, R.jsx)(`div`, { id: t, className: W, children: l });
+      : O.LocalizeReact(`#SteamOSCompatibility_DescriptionHeader`, s, c);
+  return (0, R.jsx)(`div`, { id: t, className: U, children: l });
 }
 function lr(e) {
   let { id: t, category: n, appName: r, descriptionToken: i } = e;
   if (n == 0)
     return (0, R.jsx)(`div`, {
-      className: W,
+      className: U,
       children: r
-        ? E.LocalizeReact(
+        ? O.LocalizeReact(
             `#SteamMachineVerified_DescriptionHeader_Unknown_WithAppName`,
             (0, R.jsx)(`b`, { children: I(r) }),
           )
-        : E.Localize(`#SteamMachineVerified_DescriptionHeader_Unknown`),
+        : O.Localize(`#SteamMachineVerified_DescriptionHeader_Unknown`),
     });
   let a = ``,
     o = null;
   switch (n) {
     case 3:
-      ((a = `#SteamMachineVerified_DescriptionHeader_Verified`), (o = _t));
+      ((a = `#SteamMachineVerified_DescriptionHeader_Verified`), (o = vt));
       break;
     case 2:
-      ((a = `#SteamMachineVerified_DescriptionHeader_Playable`), (o = vt));
+      ((a = `#SteamMachineVerified_DescriptionHeader_Playable`), (o = yt));
       break;
     case 1:
-      ((a = `#SteamMachineVerified_DescriptionHeader_Unsupported`), (o = G));
+      ((a = `#SteamMachineVerified_DescriptionHeader_Unsupported`), (o = W));
   }
-  let s = (0, R.jsx)(`span`, { className: o, children: E.Localize(dr(n)) }),
-    c = (0, R.jsx)(`span`, { className: W, children: E.Localize(i || a) }),
+  let s = (0, R.jsx)(`span`, { className: o, children: O.Localize(dr(n)) }),
+    c = (0, R.jsx)(`span`, { className: U, children: O.Localize(i || a) }),
     l = r
-      ? E.LocalizeReact(
+      ? O.LocalizeReact(
           `#SteamMachineVerified_DescriptionHeader_WithAppName`,
           (0, R.jsx)(`b`, { children: I(r) }),
           s,
           c,
         )
-      : E.LocalizeReact(`#SteamMachineVerified_DescriptionHeader`, s, c);
-  return (0, R.jsx)(`div`, { id: t, className: W, children: l });
+      : O.LocalizeReact(`#SteamMachineVerified_DescriptionHeader`, s, c);
+  return (0, R.jsx)(`div`, { id: t, className: U, children: l });
 }
 function ur(e) {
   let { id: t, category: n, appName: r, descriptionToken: i } = e;
   if (n == 0)
     return (0, R.jsx)(`div`, {
-      className: W,
+      className: U,
       children: r
-        ? E.LocalizeReact(
+        ? O.LocalizeReact(
             `#SteamFrameVerified_DescriptionHeader_Unknown_WithAppName`,
             (0, R.jsx)(`b`, { children: I(r) }),
           )
-        : E.Localize(`#SteamFrameVerified_DescriptionHeader_Unknown`),
+        : O.Localize(`#SteamFrameVerified_DescriptionHeader_Unknown`),
     });
   let a = ``,
     o = null;
   switch (n) {
     case 3:
-      ((a = `#SteamFrameVerified_DescriptionHeader_Verified`), (o = _t));
+      ((a = `#SteamFrameVerified_DescriptionHeader_Verified`), (o = vt));
       break;
     case 2:
-      ((a = `#SteamFrameVerified_DescriptionHeader_Playable`), (o = vt));
+      ((a = `#SteamFrameVerified_DescriptionHeader_Playable`), (o = yt));
       break;
     case 1:
-      ((a = `#SteamFrameVerified_DescriptionHeader_Unsupported`), (o = G));
+      ((a = `#SteamFrameVerified_DescriptionHeader_Unsupported`), (o = W));
   }
-  let s = (0, R.jsx)(`span`, { className: o, children: E.Localize(dr(n)) }),
-    c = (0, R.jsx)(`span`, { className: W, children: E.Localize(i || a) }),
+  let s = (0, R.jsx)(`span`, { className: o, children: O.Localize(dr(n)) }),
+    c = (0, R.jsx)(`span`, { className: U, children: O.Localize(i || a) }),
     l = r
-      ? E.LocalizeReact(
+      ? O.LocalizeReact(
           `#SteamFrameVerified_DescriptionHeader_WithAppName`,
           (0, R.jsx)(`b`, { children: I(r) }),
           s,
           c,
         )
-      : E.LocalizeReact(`#SteamFrameVerified_DescriptionHeader`, s, c);
-  return (0, R.jsx)(`div`, { id: t, className: W, children: l });
+      : O.LocalizeReact(`#SteamFrameVerified_DescriptionHeader`, s, c);
+  return (0, R.jsx)(`div`, { id: t, className: U, children: l });
 }
 function dr(e) {
   switch (e) {
@@ -3506,15 +3506,15 @@ function fr(e) {
 }
 export {
   Xn as a,
-  Pn as c,
+  Fn as c,
   He as d,
   Ve as f,
-  Jn as i,
-  wn as l,
+  Yn as i,
+  Tn as l,
   rr as n,
-  Yn as o,
-  Gn as r,
-  qn as s,
+  Q as o,
+  Kn as r,
+  Jn as s,
   ir as t,
-  Tn as u,
+  En as u,
 };

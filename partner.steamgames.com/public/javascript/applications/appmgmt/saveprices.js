@@ -8,8 +8,10 @@ const __vite__mapDeps = (
       "./chunk~9e91add775.js",
       "./chunk~de7f2df91c.js",
       "./chunk~1fa4b8f2ff.js",
-      "./chunk~25a6634263.js",
+      "./chunk~bd90a5fce7.js",
       "./chunk~44f252525d.js",
+      "./chunk~96e60d7578.js",
+      "./chunk~25a6634263.js",
       "../../../css/applications/appmgmt/chunk~1fc66b8190.css",
       "./chunk~fa5480ab25.js",
       "./chunk~ede3e357a2.js",
@@ -27,13 +29,13 @@ const __vite__mapDeps = (
 ) => i.map((i) => d[i]);
 
 import {
-  At as e,
-  j as t,
-  rt as n,
-  sn as r,
-  vt as i,
+  Pt as e,
+  W as t,
+  k as n,
+  nt as r,
+  r as i,
 } from "./chunk~de7f2df91c.js";
-import { I as a, ct as o } from "./chunk~25a6634263.js";
+import { P as a, ot as o } from "./chunk~bd90a5fce7.js";
 import {
   Gt as s,
   Ht as c,
@@ -92,13 +94,13 @@ import {
 } from "./chunk~55bac8fc8b.js";
 import { dt as ge, h as _e, n as ve, pt as ye } from "./chunk~cb393b4e7b.js";
 import { t as be } from "./chunk~74d773532d.js";
-var V = r(e(), 1),
-  H = i(),
+var V = e(r(), 1),
+  H = t(),
   U = V.lazy(() =>
     p(
       () => import(`./chunk~9e91add775.js`),
       __vite__mapDeps([
-        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
       ]),
       import.meta.url,
     ),
@@ -164,30 +166,30 @@ function Ee(e) {
 var De = `CTciUzDmA1I-`,
   K = new u(`price-grid-cell-popout-elements`);
 function q(e) {
-  let { hoverKey: n, className: r, renderHover: i } = e,
-    a = t(De, r),
+  let { hoverKey: t, className: n, renderHover: r } = e,
+    a = i(De, n),
     o = V.useRef(void 0),
     s = V.useCallback(() => {
-      K.HideElement(o.current.ownerDocument, n);
-    }, [n]);
+      K.HideElement(o.current.ownerDocument, t);
+    }, [t]);
   return (0, H.jsx)(`div`, {
     ref: o,
     tabIndex: -1,
     className: a,
     onFocus: (e) => {
       e.target.focus();
-      let t = (0, H.jsx)(D, {
+      let n = (0, H.jsx)(D, {
         target: o.current,
         direction: `top`,
         bEnablePointerEvents: !0,
         nBodyDistance: 0,
         onClick: s,
-        children: i(),
+        children: r(),
       });
-      K.ShowElement(o.current.ownerDocument, t, n);
+      K.ShowElement(o.current.ownerDocument, n, t);
     },
     onBlur: () => {
-      K.HideElement(o.current.ownerDocument, n, 100);
+      K.HideElement(o.current.ownerDocument, t, 100);
     },
     children: (0, H.jsx)(l, {}),
   });
@@ -253,33 +255,33 @@ function Z(e) {
   });
 }
 function ft(e) {
-  let { override: n } = e,
-    { packageID: r, strPriceKey: i, nPriceInCents: a, nOldPriceInCents: o } = n,
-    s = j(r),
-    [c, l, u] = R(o, i),
-    [d, f, p] = R(a, i),
-    h = z(i),
-    { nMinPriceInCents: g, nMaxPriceInCents: _ } = I(r, i),
+  let { override: t } = e,
+    { packageID: n, strPriceKey: r, nPriceInCents: a, nOldPriceInCents: o } = t,
+    s = j(n),
+    [c, l, u] = R(o, r),
+    [d, f, p] = R(a, r),
+    h = z(r),
+    { nMinPriceInCents: g, nMaxPriceInCents: _ } = I(n, r),
     v = a < g || (!!_ && a > _);
   return (0, H.jsxs)(`div`, {
-    className: t(qe),
+    className: i(qe),
     children: [
       (0, H.jsx)(m, {
         toolTipContent: h,
         direction: `top`,
         className: Ze,
         strTooltipClassname: ot,
-        children: i,
+        children: r,
       }),
       (0, H.jsx)(m, {
-        toolTipContent: `${r}: ${s}`,
+        toolTipContent: `${n}: ${s}`,
         direction: `overlay`,
         className: Je,
         strTooltipClassname: ot,
         children: s,
       }),
       v
-        ? (0, H.jsx)(fe, { packageID: r, strPriceKey: i })
+        ? (0, H.jsx)(fe, { packageID: n, strPriceKey: r })
         : (0, H.jsx)(pe, { nPriceInCents: a, nSavedPriceInCents: o }),
       (0, H.jsxs)(`div`, {
         className: Ge,
@@ -483,17 +485,17 @@ function ht(e, t) {
   );
 }
 function gt(e) {
-  let { packageID: n, bShowCancel: r } = e,
-    i = A(n),
-    a = N(n),
+  let { packageID: t, bShowCancel: n } = e,
+    r = A(t),
+    a = N(t),
     o = a && me(a.rtSubmitted),
     [s, c] = ve(a?.submitterID),
     l = c ? c.persona_name : a?.submitterID,
-    u = `PackageMore_` + n,
+    u = `PackageMore_` + t,
     d = null,
     f = null,
     p = null;
-  i
+  r
     ? ((d = Me),
       (p = g(`#PricingDashboard_PriceProposal_NeedsReview_ttip`)),
       (f = g(`#PricingDashboard_PriceProposal_NeedsReview`)))
@@ -528,18 +530,18 @@ function gt(e) {
         : a?.eState == 4
           ? ((d = Fe),
             (p = g(
-              M(n)
+              M(t)
                 ? `#PricingDashboard_PriceProposal_Approved_ttip`
                 : `#PricingDashboard_PriceProposal_Approved_Stage_ttip`,
             )),
-            (f = (0, H.jsx)(bt, { packageID: n })))
+            (f = (0, H.jsx)(bt, { packageID: t })))
           : ((d = je),
             (p = g(`#PricingDashboard_PriceProposal_NoneInFlight_ttip`)),
             (f = g(`#PricingDashboard_PriceProposal_NoneInFlight`)));
-  let h = () => (0, H.jsx)(xt, { packageID: n }),
-    _ = r && (i || !!a);
+  let h = () => (0, H.jsx)(xt, { packageID: t }),
+    _ = n && (r || !!a);
   return (0, H.jsxs)(`div`, {
-    className: t(Oe, d),
+    className: i(Oe, d),
     children: [
       (0, H.jsxs)(m, {
         toolTipContent: p,
@@ -672,30 +674,30 @@ function St(e) {
 var Q = 30,
   Ct = 40;
 function wt(e) {
-  let { bReloadPageOnSave: n } = e,
-    r = F()?.length ?? 0,
-    i = r > 0,
+  let { bReloadPageOnSave: t } = e,
+    n = F()?.length ?? 0,
+    r = n > 0,
     [o, c, l] = a(),
     [u, d, f] = a();
   return (0, H.jsxs)(`div`, {
-    className: t(J, i && `wfA7TOLqp5Y-`),
+    className: i(J, r && `wfA7TOLqp5Y-`),
     children: [
       (0, H.jsx)(`div`, {
         className: Le,
-        children: b(`#PackageGrid_PendingChangeCount`, r),
+        children: b(`#PackageGrid_PendingChangeCount`, n),
       }),
       (0, H.jsxs)(`div`, {
         className: Y,
         children: [
           (0, H.jsx)(s, {
             onClick: c,
-            disabled: r == 0,
-            className: t(X, ze),
+            disabled: n == 0,
+            className: i(X, ze),
             children: g(`#PackageGrid_SaveChangesDialogButton`),
           }),
           (0, H.jsx)(B, {
             active: o,
-            children: (0, H.jsx)($, { closeModal: l, bReloadPageOnSave: n }),
+            children: (0, H.jsx)($, { closeModal: l, bReloadPageOnSave: t }),
           }),
           (0, H.jsx)(s, {
             className: X,
@@ -997,13 +999,13 @@ var Mt = {
   USD_SASIA: `#PricingDashboard_UnappliedProposal_PriceKeyName_USD_SASIA`,
 };
 function Nt(e) {
-  let { response: n, fnResolve: r } = e,
-    { unappliedProposal: i, newProposal: a } = n,
-    o = d(i.rtSubmitted),
+  let { response: t, fnResolve: n } = e,
+    { unappliedProposal: r, newProposal: a } = t,
+    o = d(r.rtSubmitted),
     s = Array.from(
       new Set([
         ...Object.keys(a?.prices ?? {}),
-        ...Object.keys(i.prices ?? {}),
+        ...Object.keys(r.prices ?? {}),
       ]),
     );
   return (0, H.jsx)(S, {
@@ -1014,7 +1016,7 @@ function Nt(e) {
         (0, H.jsx)(`p`, {
           children: g(
             `#PricingDashboard_UnappliedProposal_Description`,
-            j(i.packageID),
+            j(r.packageID),
             o,
           ),
         }),
@@ -1025,8 +1027,8 @@ function Nt(e) {
     }),
     strOKButtonText: g(`#PricingDashboard_UnappliedProposal_Proceed`),
     strCancelButtonText: g(`#Button_Cancel`),
-    onOK: () => r(!0),
-    onCancel: () => r(!1),
+    onOK: () => n(!0),
+    onCancel: () => n(!1),
     bDestructiveWarning: !0,
     children:
       s.length > 0 &&
@@ -1060,18 +1062,18 @@ function Nt(e) {
           }),
           (0, H.jsx)(`tbody`, {
             children: s.map((e) => {
-              let n = Number(i.prices?.[e] ?? 0),
-                r = Number(a?.prices?.[e] ?? 0);
+              let t = Number(r.prices?.[e] ?? 0),
+                n = Number(a?.prices?.[e] ?? 0);
               return (0, H.jsxs)(
                 `tr`,
                 {
                   children: [
                     (0, H.jsx)(`td`, { children: e }),
                     (0, H.jsx)(`td`, { children: Mt[e] ? g(Mt[e]) : z(e) }),
-                    (0, H.jsx)(`td`, { children: R(n, e).join(``) }),
+                    (0, H.jsx)(`td`, { children: R(t, e).join(``) }),
                     (0, H.jsx)(`td`, {
-                      className: t(n != r && `SDOQ9-PH82Y-`),
-                      children: R(r, e).join(``),
+                      className: i(t != n && `SDOQ9-PH82Y-`),
+                      children: R(n, e).join(``),
                     }),
                   ],
                 },

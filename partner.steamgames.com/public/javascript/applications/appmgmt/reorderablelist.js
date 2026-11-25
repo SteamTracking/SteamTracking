@@ -2,13 +2,13 @@
  ****/
 
 import {
-  At as e,
-  j as t,
-  sn as n,
-  vt as r,
-  wt as i,
+  Pt as e,
+  W as t,
+  X as n,
+  nt as r,
+  r as i,
 } from "./chunk~de7f2df91c.js";
-import { Bt as a } from "./chunk~25a6634263.js";
+import { Rt as a } from "./chunk~bd90a5fce7.js";
 import { Dr as o, Ka as s } from "./chunk~1fa4b8f2ff.js";
 import { t as c } from "./chunk~f4e4ed5c17.js";
 import {
@@ -23,13 +23,13 @@ import {
 } from "./chunk~6f51836c6e.js";
 import "./chunk~cf8a297cc4.js";
 import "./chunk~166eab4331.js";
-var _ = n(e()),
+var _ = e(r()),
   v = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC`,
-  y = n(c()),
-  b = r();
+  y = e(c()),
+  b = t();
 function x(e) {
   let {
-      items: n,
+      items: t,
       render: r,
       onDelete: c,
       onEdit: l,
@@ -108,9 +108,9 @@ function x(e) {
         K(t, e),
         e.preventDefault());
     },
-    X = (e, t) => {
-      let r = i(t > e ? t - 1 : t, 0, n.length - 1);
-      e != r && (x ? x(e, r) : a(n, e, r), $(r), h && h(n));
+    X = (e, r) => {
+      let i = n(r > e ? r - 1 : r, 0, t.length - 1);
+      e != i && (x ? x(e, i) : a(t, e, i), $(i), h && h(t));
     },
     Z = (e) => {
       T && !W.token.reason && (J(), N !== void 0 && X(j, N));
@@ -137,9 +137,9 @@ function x(e) {
   (s(window, `mousemove`, T ? ne : void 0),
     s(window, `mouseup`, T ? Z : void 0),
     _.useEffect(() => {
-      for (let e = H.current.length; e < n.length; e++)
+      for (let e = H.current.length; e < t.length; e++)
         (H.current.push(_.createRef()), U.current.push(_.createRef()));
-    }, [n.length]));
+    }, [t.length]));
   let Q = (e) => {
       R(void 0);
       let t = z?.trim(),
@@ -155,69 +155,69 @@ function x(e) {
   return (0, b.jsx)(`div`, {
     className: m,
     ref: V,
-    children: n.map((e, i) =>
+    children: t.map((e, n) =>
       (0, b.jsxs)(
         `div`,
         {
-          ref: U.current[i],
+          ref: U.current[n],
           children: [
-            i == N && (0, b.jsx)(S, { width: F }),
+            n == N && (0, b.jsx)(S, { width: F }),
             (0, b.jsx)(`div`, {
-              ref: H.current[i],
+              ref: H.current[n],
               className: p,
               children:
-                i == j &&
+                n == j &&
                 N !== void 0 &&
                 (0, b.jsxs)(`div`, {
-                  className: t(`OfpXVyFy5Fo-`, w),
+                  className: i(`OfpXVyFy5Fo-`, w),
                   children: [
                     (0, b.jsx)(`img`, {
-                      className: t(`SZCLgazwykY-`, `g3MCfqYh-Wk-`),
+                      className: i(`SZCLgazwykY-`, `g3MCfqYh-Wk-`),
                       src: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC`,
                     }),
                     (0, b.jsx)(`input`, {
-                      className: t(
+                      className: i(
                         `Z2hFr9c9Bx8-`,
                         `F7c1qF6I3Vk-`,
                         `g3MCfqYh-Wk-`,
                       ),
                       type: `text`,
-                      value: (N > i ? N - 1 : N) + 1,
+                      value: (N > n ? N - 1 : N) + 1,
                       disabled: !0,
                     }),
-                    r(e, i),
+                    r(e, n),
                   ],
                 }),
             }),
             (0, b.jsxs)(`div`, {
-              className: t(
+              className: i(
                 d,
                 w,
                 T && `hJ8eUERcJ1g-`,
-                i == j && `RSxJyqlJePw-`,
-                ie == i && `CSyJhiym-Wc-`,
+                n == j && `RSxJyqlJePw-`,
+                ie == n && `CSyJhiym-Wc-`,
               ),
               onAnimationEnd: () => $(void 0),
               children: [
                 (0, b.jsx)(`img`, {
-                  className: t(u, g, C && `CdaHiMxsOyE-`),
+                  className: i(u, g, C && `CdaHiMxsOyE-`),
                   src: v,
-                  onMouseDown: C ? void 0 : (e) => Y(e, i),
+                  onMouseDown: C ? void 0 : (e) => Y(e, n),
                 }),
                 (0, b.jsx)(`input`, {
-                  className: t(f, C && `F7c1qF6I3Vk-`),
+                  className: i(f, C && `F7c1qF6I3Vk-`),
                   type: `text`,
-                  value: L == i ? z : i + 1,
-                  disabled: C || i == j,
+                  value: L == n ? z : n + 1,
+                  disabled: C || n == j,
                   onChange: (e) => B(e.target.value),
-                  onKeyDown: (e) => re(e, i),
+                  onKeyDown: (e) => re(e, n),
                   onFocus: (e) => {
-                    (R(i), B(e.target.value));
+                    (R(n), B(e.target.value));
                   },
-                  onBlur: () => Q(i),
+                  onBlur: () => Q(n),
                 }),
-                r(e, i),
-                i != j &&
+                r(e, n),
+                n != j &&
                   !!(l || c) &&
                   (0, b.jsxs)(`div`, {
                     className: `PZ2dh9brop4-`,
@@ -225,23 +225,23 @@ function x(e) {
                       !!l &&
                         (0, b.jsx)(`div`, {
                           className: `EJE6Uh9cQZA-`,
-                          onClick: (e) => l?.(i, e),
+                          onClick: (e) => l?.(n, e),
                           children: (0, b.jsx)(o, {}),
                         }),
                       !!c &&
                         (0, b.jsx)(`img`, {
                           className: `EJE6Uh9cQZA-`,
                           src: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==`,
-                          onClick: (e) => c?.(i, e),
+                          onClick: (e) => c?.(n, e),
                         }),
                     ],
                   }),
               ],
             }),
-            N == n.length && i == n.length - 1 && (0, b.jsx)(S, { width: F }),
+            N == t.length && n == t.length - 1 && (0, b.jsx)(S, { width: F }),
           ],
         },
-        i,
+        n,
       ),
     ),
   });

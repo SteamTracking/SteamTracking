@@ -462,8 +462,6 @@ GHomepage = {
 
 		} catch( e ) { OnHomepageException(e); }
 
-		GHomepage.InitGamepadMoreSections();
-
         // this is the only time we'll execute rgfnCustomRenders, future requests will be called directly
 		GHomepage.bInitialRenderComplete = true;
 		for( var i = 0; i < GHomepage.rgfnCustomRenders.length; i++ )
@@ -506,31 +504,6 @@ GHomepage = {
 			return 'b' + rgItem.bundleid;
 
 		return 'unknown';
-	},
-
-	InitGamepadMoreSections: function()
-	{
-		if ( !window.UseGamepadScreenMode() )
-			return;
-
-		$J('[data-gp-morebutton]').each( function(index, element) {
-			let $Element = $J( element );
-			let strURL = element.getAttribute('data-gp-morebutton');
-
-			$Element.on('vgp_onfocus', function() {
-				$Element.find('.see_more_gamepad_hint').addClass('hover_active')
-			});
-
-			$Element.on('vgp_onblur', function() {
-				$Element.find('.see_more_gamepad_hint').removeClass('hover_active')
-			});
-
-			$Element.on('vgp_onoptions', function() {
-				window.location = strURL;
-			});
-
-			$Element.removeAttr( 'data-gp-morebutton' );
-		});
 	},
 
 	RenderRecentApps: function()
@@ -738,6 +711,7 @@ GHomepage = {
 			if( !$MainCap )
 				continue;
 
+			GHomepage.AddGamepadWishlistAction( $MainCap );
 			$CapTarget.append( $MainCap );
 
 			var $Thumb = $J('<div />');
@@ -2477,7 +2451,7 @@ GHomepage = {
 				continue;
 
 			let bGamepad = ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() );
-			let $Ctn = $J( '<div/>', {'class': 'home_discounts_block', 'data-gp-morebutton': TagData.url } );
+			let $Ctn = $J( '<div/>', {'class': 'home_discounts_block' } );
 
 			let $TitleCtn = $J('<div/>', { 'class': 'home_title_ctn' } ).append( $J('<div/>', { 'class': 'home_title'}).html( TagData.name ) );
 			$TitleCtn.append( $J('<div/>', { 'class': 'home_section_subtitle'} ).text( TagData.recommended ? 'Recommended tag based on what you play' : 'Featured tag' ) )
@@ -2490,14 +2464,8 @@ GHomepage = {
 
 			if ( bGamepad )
 			{
-				let $SeeMore = $J( '<div/>', { 'class' : 'see_more_gamepad_hint' } );
-				$SeeMore.append( `
-					<div class="see_more_gamepad_hint">
-						<img src="https://store.fastly.steamstatic.com/public/images/ico_gamepad/shared_button_y.svg">
-						<div>See More</div>
-					</div>
-				`);
-				$Ctn.append( $SeeMore );
+				const panelString = '{"onSecondaryActionDescription":"Browse All","onSecondaryButton":"window.location=\'%1$s\'"}';
+				$Ctn.attr( 'data-panel', panelString.replace( '%1$s', TagData.url ) );
 			}
 			else
 			{
@@ -2515,8 +2483,6 @@ GHomepage = {
 		{
 			$Parent.find( '.home_discount_games_ctn' ).addClass( 'single_row' );
 		}
-
-		this.InitGamepadMoreSections();
 
 		$Parent.css( { minHeight: '' } );
 	},
@@ -2601,6 +2567,10 @@ GHomepage = {
 
 		GDynamicStorePage.FilterCapsules( nItems, nItems, $elTabItems, $elTabSection, Settings );
 
+		GHomepage.AddGamepadWishlistAction( $elTabItems );
+				if ( typeof ForceUpdateFocusElements != 'undefined' )
+			ForceUpdateFocusElements( $elTabSection );
+
 		// the results of $elTabSection.children('.tab_item') will change after the call to FilterCapsules above
 		if ( bVersion2 )
 		{
@@ -2612,19 +2582,55 @@ GHomepage = {
 		}
 	},
 
+		AddGamepadWishlistAction: function( $Capsules )
+	{
+		if ( !g_AccountID || !( window.UseGamepadScreenMode && window.UseGamepadScreenMode() ) )
+			return;
+
+		$Capsules.each( function()
+		{
+			const $CapCtn = $J( this );
+			const $App = $CapCtn.is( '[data-ds-appid]' ) ? $CapCtn : $CapCtn.find( '[data-ds-appid]' ).first();
+			const unAppID = $App.data( 'ds-appid' );
+						if ( typeof unAppID != 'number' || GDynamicStore.BIsAppOwned( unAppID ) )
+				return;
+
+			const rgPanel = JSON.parse( $CapCtn.attr( 'data-panel' ) || '{}' );
+			const strToggle = 'GHomepage.ToggleGamepadWishlist( this, ' + unAppID + ' )';
+			if ( rgPanel.onOptionsButton && rgPanel.onOptionsButton != strToggle )
+				return;
+
+			rgPanel.onOptionsButton = strToggle;
+			$J.extend( rgPanel, GHomepage.GetGamepadWishlistActionDescriptions( unAppID ) );
+			$CapCtn.attr( 'data-panel', JSON.stringify( rgPanel ) );
+		} );
+	},
+
+		GetGamepadWishlistActionDescriptions: function( unAppID )
+	{
+		return {
+			onOptionsActionDescription: GDynamicStore.BIsAppOnWishlist( unAppID ) ? "Remove from your wishlist" : "Add to your wishlist",
+			onOKActionDescription: null,
+		};
+	},
+
+	ToggleGamepadWishlist: function( elCapsule, unAppID )
+	{
+		const $CapCtn = $J( elCapsule );
+		const fnUpdate = function()
+		{
+			GPNavUpdateActionDescriptions( $CapCtn, GHomepage.GetGamepadWishlistActionDescriptions( unAppID ) );
+			GDynamicStore.DecorateDynamicItems( $CapCtn, true );
+		};
+
+				GDynamicStore.ModifyWishlist( $CapCtn, unAppID, GDynamicStore.BIsAppOnWishlist( unAppID ), null, fnUpdate );
+		fnUpdate();
+	},
+
 	FillPagedCapsuleCarousel: function( rgCapsules, $elTarget, fnCapsule, strNavContext, nCapsules )
 	{
 		var $elCapsuleTarget = $J('.carousel_items', $elTarget);
 		var $elThumbTarget = $J('.carousel_thumbs', $elTarget);
-		var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
-		var strViewAllLink = "";
-
-				if ( bUseGamepadScreenMode )
-		{
-			var $elAnchor = $J('a.deck_view_all_action_link', $elTarget);
-			if ( $elAnchor && $elAnchor.attr('href') !== undefined )
-				strViewAllLink = $elAnchor.attr('href');
-		}
 
 		var bPaginated = !$elCapsuleTarget.hasClass('no_paging');
 
@@ -2654,11 +2660,7 @@ GHomepage = {
 				if( !$CapCtn )
 					continue;
 
-								if ( bUseGamepadScreenMode && strViewAllLink !== "" )
-				{
-					const panelString = '{"onOptionsActionDescription":"View all","onOptionsButton":"window.location=\'%1$s\'"}';
-					$CapCtn.attr( 'data-panel', panelString.replace( '%1$s', strViewAllLink ) );
-				}
+				GHomepage.AddGamepadWishlistAction( $CapCtn );
 
 				// Don't try to do automatic visibilty tracking on non-visible clusters.
 				if( j > 0 )
@@ -3237,6 +3239,7 @@ GHomepage = {
 			rgItems[2] && GHomepage.BuildHomePageCapsule( rgItems[2], strFeature, rgCapsuleOptions ),
 			rgItems[3] && GHomepage.BuildHomePageCapsule( rgItems[3], strFeature, rgCapsuleOptions )
 		);
+		GHomepage.AddGamepadWishlistAction( $Container.children() );
 
 		GDynamicStore.DecorateDynamicItems( $Container );
 		GHomepage.BindHomeCapAutoSizeEvents( $Container );
@@ -4561,6 +4564,7 @@ var g_bDisableAutoloader = false;
 							}
 						}
 
+						GHomepage.AddGamepadWishlistAction( $J( '.home_content_item', newElement ) );
 						$(ele).append(newElement);
 						ele.bTriggerActive = false;
 						var nCurrentScroll = $(window).scrollTop() + $(window).height();
@@ -4587,6 +4591,7 @@ var g_bDisableAutoloader = false;
 						// Clean out any pesky script tags that might have found their way into LS
 						var wrapped = $J("<div>" + WebStorage.GetLocal('home_content', true ) + "</div>");
 						wrapped.find('script').remove();
+												GHomepage.AddGamepadWishlistAction( wrapped.find( '.home_content_item' ) );
 
 						$(this).html( wrapped.html() );
 						ele.rgRecommendedData = WebStorage.GetLocal('home_data', true );

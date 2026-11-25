@@ -2,16 +2,16 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Ft as t, ot as n } from "./chunk~01cfc309bf.js";
-import { Qf as r, xm as i, ym as a } from "./main.js";
+import { Pt as t, at as n } from "./chunk~01cfc309bf.js";
+import { gm as r, mm as i, qf as a } from "./main.js";
 import { i as o, n as s, t as c } from "./chunk~2e8feda0b1.js";
 var l = e(t()),
   u = `_9-qRKyX6pp4-`,
   d = n();
 function f(e) {
-  let { redirectUrl: t = a.COMMUNITY_BASE_URL } = e,
+  let { redirectUrl: t = i.COMMUNITY_BASE_URL } = e,
     [n] = (0, l.useState)(
-      new r(new i(a.WEBAPI_BASE_URL)).GetAnonymousServiceTransport(),
+      new a(new r(i.WEBAPI_BASE_URL)).GetAnonymousServiceTransport(),
     ),
     [f, p] = (0, l.useState)(!1);
   return (0, d.jsx)(`div`, {

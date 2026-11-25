@@ -3,52 +3,52 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import {
-  A as t,
-  B as n,
-  C as r,
-  Ft as i,
-  K as a,
-  ot as o,
+  G as t,
+  Pt as n,
+  S as r,
+  at as i,
+  k as a,
+  z as o,
 } from "./chunk~01cfc309bf.js";
 import {
-  Cr as s,
-  Jc as c,
+  An as s,
+  Ci as c,
   Xr as l,
-  ar as u,
-  c as d,
-  wr as f,
+  Zr as u,
+  bl as d,
+  c as f,
 } from "./chunk~3f4314f3b4.js";
-import { t as p } from "./chunk~eefd71512b.js";
-import { t as m } from "./chunk~77ea210942.js";
+import { t as ee } from "./chunk~eefd71512b.js";
+import { t as p } from "./chunk~77ea210942.js";
 import {
-  $f as h,
-  Hf as g,
-  If as _,
-  Lm as v,
-  Mf as ee,
-  Os as te,
-  Ou as ne,
-  Pm as y,
-  Rf as b,
-  Vs as x,
-  Ws as S,
-  Xd as C,
-  Yf as re,
-  bm as ie,
-  cm as ae,
-  em as oe,
-  l as se,
-  mm as w,
-  mp as ce,
-  n as le,
-  o as ue,
-  oh as de,
-  pm as fe,
-  rf as T,
-  rg as E,
-  th as pe,
-  ym as D,
-  zd as O,
+  $h as m,
+  Cs as h,
+  Cu as g,
+  Df as te,
+  Gd as ne,
+  Is as _,
+  Jf as re,
+  Lf as v,
+  Mm as y,
+  Nf as b,
+  Pd as x,
+  Qd as S,
+  Wf as ie,
+  Xm as ae,
+  Yp as oe,
+  cm as se,
+  hm as ce,
+  jf as C,
+  km as le,
+  l as ue,
+  lm as w,
+  lp as de,
+  mm as T,
+  n as fe,
+  o as pe,
+  rm as E,
+  th as D,
+  zs as O,
 } from "./main.js";
 function k(e) {
   return [`StoreBrowsePriceStops`, e];
@@ -58,29 +58,29 @@ function A(e, t) {
   return { queryKey: k(n), queryFn: async () => j(e, n), staleTime: 864e5 };
 }
 async function j(e, t) {
-  let n = de.Init(y);
+  let n = D.Init(le);
   n.Body().set_country_code(t);
-  let r = await v.GetPriceStops(e, n);
+  let r = await y.GetPriceStops(e, n);
   if (!r.BSuccess()) throw `Error loading price stops: ${r.GetErrorMessage()}`;
   return r.Body().toObject().price_stops || [];
 }
 function M(e) {
   return e?.length
     ? [
-        { price: 0, label: T(`#FacetedBrowse_Price_Free`) },
+        { price: 0, label: S(`#FacetedBrowse_Price_Free`) },
         ...e.map((e) => ({
           price: Number(e.amount_in_cents ?? 0) / 100,
-          label: T(`#FacetedBrowse_Price_Under`, e.formatted_amount ?? ``),
+          label: S(`#FacetedBrowse_Price_Under`, e.formatted_amount ?? ``),
         })),
-        { price: void 0, label: T(`#FacetedBrowse_Price_Any`) },
+        { price: void 0, label: S(`#FacetedBrowse_Price_Any`) },
       ]
     : [];
 }
 function N() {
-  let e = ce(),
-    t = oe(),
-    { data: n } = a({ ...A(t, e), select: M });
-  return n ?? [];
+  let e = de(),
+    n = oe(),
+    { data: r } = t({ ...A(n, e), select: M });
+  return r ?? [];
 }
 function P(e, t) {
   return M(e.getQueryData(k(t)));
@@ -91,7 +91,7 @@ function F(e, t, n) {
     let e = parseInt(r[0].substring(7));
     if (e > 0) return n && n[e];
   }
-  return T((C.GetWithFallback(r, t) || ``).trim());
+  return S((ne.GetWithFallback(r, t) || ``).trim());
 }
 function I(e) {
   return String(e.type) + e.id;
@@ -99,7 +99,7 @@ function I(e) {
 function L(e, t) {
   return (
     e.jsondata.item_source_type != null &&
-    e.jsondata.item_source_type !== f.k_ETaggedItems
+    e.jsondata.item_source_type !== u.k_ETaggedItems
   );
 }
 function R(e) {
@@ -111,7 +111,7 @@ function R(e) {
   return !1;
 }
 function z(e) {
-  E(!0, `Unexpected code running in SSR Server: ` + e);
+  m(!0, `Unexpected code running in SSR Server: ` + e);
 }
 var B = {
     include_assets: !0,
@@ -173,7 +173,7 @@ function he(e, t, n, r, i, a) {
       d = b.k_NotRejected;
     switch (a.item_type) {
       case `sub`:
-        let i = O.Get().GetPackage(e);
+        let i = x.Get().GetPackage(e);
         if (i?.GetIncludedAppIDs()?.length !== 1) {
           d = _e(e, t, r, !0);
           break;
@@ -208,7 +208,7 @@ function V(e, t, n, r) {
     e.push({ ...t[i], priority: r });
 }
 function H(e, t) {
-  let n = u.Get();
+  let n = s.Get();
   if (
     t.only_current_platform &&
     n.BHasPlatformPreferenceSet() &&
@@ -229,30 +229,30 @@ function H(e, t) {
 }
 function U(e, t) {
   if (t.localized) {
-    let t = pe(D.LANGUAGE);
+    let t = ae(T.LANGUAGE);
     if (!e.GetAllLanguagesWithSomeSupport()?.includes(t))
       return b.k_RejectSupportedLanguage;
   }
   return b.k_NotRejected;
 }
 function ge(e, t, n, r, i) {
-  let a = O.Get().GetApp(e);
+  let a = x.Get().GetApp(e);
   if (!a) return b.k_RejectNotLoaded;
   let o = H(a, t);
   if (o != b.k_NotRejected) return o;
-  let s = u.Get();
-  if (s.BIsGameIgnored(e)) return b.k_RejectIgnoredGame;
-  if (s.BExcludeTagIDs(a.GetTagIDs())) return b.k_RejectIgnoreGameTags;
-  if (s.BExcludesContentDescriptor(a.GetContentDescriptorIDs()))
+  let c = s.Get();
+  if (c.BIsGameIgnored(e)) return b.k_RejectIgnoredGame;
+  if (c.BExcludeTagIDs(a.GetTagIDs())) return b.k_RejectIgnoreGameTags;
+  if (c.BExcludesContentDescriptor(a.GetContentDescriptorIDs()))
     return b.k_RejectIgnoreContentDescriptors;
   if (!t.early_access && a.BIsEarlyAccess()) return b.k_RejectEarlyAccess;
-  let c = a.GetAppType();
-  if (!t.software && c == 6) return b.k_RejectSoftware;
-  if (t.games_already_in_library && s.BIsGameOwned(e))
+  let l = a.GetAppType();
+  if (!t.software && l == 6) return b.k_RejectSoftware;
+  if (t.games_already_in_library && c.BIsGameOwned(e))
     return b.k_RejectInLibrary;
-  if (t.games_not_in_library && !s.BIsGameOwned(e))
+  if (t.games_not_in_library && !c.BIsGameOwned(e))
     return b.k_RejectNotInLibrary;
-  if (!t.video && [7, 8, 9].includes(c)) return b.k_RejectVideo;
+  if (!t.video && [7, 8, 9].includes(l)) return b.k_RejectVideo;
   if (t.has_discount) {
     let e = a.GetBestPurchaseOption();
     if (!e || !e.discount_pct) return b.k_RejectNoDiscount;
@@ -261,12 +261,12 @@ function ge(e, t, n, r, i) {
     t.no_ao_content &&
     (a.HasContentDescriptorID(3) || a.HasContentDescriptorID(4))
     ? b.k_RejectAO
-    : c == 1 &&
+    : l == 1 &&
         t.games_already_in_library &&
-        s.BIsGameOwned(a.GetParentAppID() || 0)
+        c.BIsGameOwned(a.GetParentAppID() || 0)
       ? b.k_RejectInLibrary
       : i
-        ? (c == 1 && r.BHasAppID(a.GetParentAppID() || 0)) || r.BHasAppID(e)
+        ? (l == 1 && r.BHasAppID(a.GetParentAppID() || 0)) || r.BHasAppID(e)
           ? b.k_RejectAlreadyDisplayed
           : t.has_trailer && !a.BHasTrailers(!1)
             ? b.k_RejectNoTrailer
@@ -274,7 +274,7 @@ function ge(e, t, n, r, i) {
         : b.k_NotRejected;
 }
 function W(e, t) {
-  let n = u.Get(),
+  let n = s.Get(),
     r = !1;
   for (let t of e) {
     if (n.BIsGameIgnored(t)) return b.k_RejectIgnoredGame;
@@ -287,16 +287,16 @@ function W(e, t) {
       : b.k_NotRejected;
 }
 function _e(e, t, n, r) {
-  let i = O.Get().GetPackage(e);
+  let i = x.Get().GetPackage(e);
   if (!i) return b.k_RejectNotLoaded;
   let a = H(i, t);
   if (a != b.k_NotRejected) return a;
   let o = W(i.GetIncludedAppIDs(), t);
   if (o != b.k_NotRejected) return o;
-  let s = u.Get();
-  return t.games_already_in_library && s.BOwnsPackage(e)
+  let c = s.Get();
+  return t.games_already_in_library && c.BOwnsPackage(e)
     ? b.k_RejectInLibrary
-    : s.BIsPackageIgnored(e)
+    : c.BIsPackageIgnored(e)
       ? b.k_RejectIgnoredGame
       : r
         ? n.BHasPackageID(e)
@@ -305,7 +305,7 @@ function _e(e, t, n, r) {
         : b.k_NotRejected;
 }
 function ve(e, t, n, r) {
-  let i = O.Get().GetBundle(e);
+  let i = x.Get().GetBundle(e);
   if (!i) return b.k_RejectNotLoaded;
   let a = H(i, t);
   if (a != b.k_NotRejected) return a;
@@ -366,7 +366,7 @@ var G = class e {
   }
 };
 function ye(e) {
-  return O.Get().BIsStoreItemMissing(e.id, _(e.type));
+  return x.Get().BIsStoreItemMissing(e.id, C(e.type));
 }
 function be(e, t, n) {
   let r = [];
@@ -379,63 +379,63 @@ function be(e, t, n) {
 }
 function xe(e) {
   return (
-    (O.Get().GetStoreItem(e.id, _(e.type))?.GetBestPurchaseOption()
+    (x.Get().GetStoreItem(e.id, C(e.type))?.GetBestPurchaseOption()
       ?.discount_pct ?? 0) > 0
   );
 }
 function Se(e) {
   if (!G.Get().GetHomeView()?.localized) return !0;
-  let t = O.Get().GetStoreItem(e.id, _(e.type));
+  let t = x.Get().GetStoreItem(e.id, C(e.type));
   return (
-    !t || u.Get().BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport())
+    !t || s.Get().BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport())
   );
 }
 async function K(e, t, n) {
   if (!e || e.length == 0) return [];
-  let r = e.filter((e) => c(e.type)).map((e) => e.id),
+  let r = e.filter((e) => d(e.type)).map((e) => e.id),
     i = e.filter((e) => e.type === `sub`).map((e) => e.id),
     a = e.filter((e) => e.type === `bundle`).map((e) => e.id);
   {
-    let e = r.filter((e) => !O.Get().BHasApp(e, t)),
-      n = i.filter((e) => !O.Get().BHasApp(e, t)),
-      o = a.filter((e) => !O.Get().BHasApp(e, t));
+    let e = r.filter((e) => !x.Get().BHasApp(e, t)),
+      n = i.filter((e) => !x.Get().BHasApp(e, t)),
+      o = a.filter((e) => !x.Get().BHasApp(e, t));
     (e.length > 0 || n.length > 0 || o.length > 0) &&
       (await Promise.all([
-        O.Get().QueueMultipleAppRequests(e, t),
-        O.Get().QueueMultiplePackageRequests(n, t),
-        O.Get().QueueMultipleBundleRequests(o, t),
+        x.Get().QueueMultipleAppRequests(e, t),
+        x.Get().QueueMultiplePackageRequests(n, t),
+        x.Get().QueueMultipleBundleRequests(o, t),
       ]));
   }
   let o = new Set();
   (a?.forEach((e) => {
-    O.Get()
+    x.Get()
       .GetBundle(e)
       ?.GetIncludedAppIDs()
       .forEach((e) => o.add(e));
   }),
     i?.forEach((e) => {
-      O.Get()
+      x.Get()
         .GetPackage(e)
         ?.GetIncludedAppIDs()
         .forEach((e) => o.add(e));
     }));
-  let s = Array.from(o).filter((e) => !O.Get().BHasApp(e, t));
+  let s = Array.from(o).filter((e) => !x.Get().BHasApp(e, t));
   if (
-    (s.length > 0 && (await O.Get().QueueMultipleAppRequests(s, t)),
+    (s.length > 0 && (await x.Get().QueueMultipleAppRequests(s, t)),
     r.forEach((e) => o.add(e)),
     n)
   ) {
     let e = Array.from(o)
       .map((e) => {
-        let t = O.Get().GetApp(e)?.GetParentAppID();
+        let t = x.Get().GetApp(e)?.GetParentAppID();
         return t ? (o.add(t), t) : null;
       })
       .filter((e) => e !== null)
-      .filter((e) => !O.Get().BHasApp(e, t));
-    e.length > 0 && (await O.Get().QueueMultipleAppRequests(e, t));
+      .filter((e) => !x.Get().BHasApp(e, t));
+    e.length > 0 && (await x.Get().QueueMultipleAppRequests(e, t));
   }
   return Array.from(o).filter((e) => {
-    let t = O.Get().GetApp(e);
+    let t = x.Get().GetApp(e);
     return t && !t.GetParentAppID();
   });
 }
@@ -446,9 +446,9 @@ var Ce = {
 };
 function q(e, t = !1) {
   if (!e) return !0;
-  let n = u.Get();
+  let n = s.Get();
   if (
-    (E(n.BIsLoaded(), `Dynamic Store not loaded`),
+    (m(n.BIsLoaded(), `Dynamic Store not loaded`),
     !t && e.GetStoreItemType() == 0)
   ) {
     let t = e.GetParentAppID();
@@ -477,102 +477,102 @@ async function J(e, t, n, r) {
     a = 0,
     o = [];
   await K(e, B, t);
-  for (let s of e) {
-    let e = O.Get().GetStoreItem(s.id, _(s.type));
+  for (let c of e) {
+    let e = x.Get().GetStoreItem(c.id, C(c.type));
     if (!e) {
       i++;
       continue;
     }
-    let c = e
+    let l = e
       .GetIncludedAppIDs()
-      .map((e) => O.Get().GetApp(e))
+      .map((e) => x.Get().GetApp(e))
       .filter((e) => !!e);
-    if ((c.push(e), t)) {
-      let e = new Set(c.map((e) => e.GetParentAppID()).filter((e) => !!e)),
+    if ((l.push(e), t)) {
+      let e = new Set(l.map((e) => e.GetParentAppID()).filter((e) => !!e)),
         t = Array.from(e)
-          .map((e) => O.Get().GetApp(e))
+          .map((e) => x.Get().GetApp(e))
           .filter((e) => !!e);
-      t && c.push(...t);
+      t && l.push(...t);
     }
-    c.some((e) => (r || q)(e))
-      ? (a++, n && (u.Get().BIsStoreItemOwned(e) || n.push(s)))
-      : o.push(s);
+    l.some((e) => (r || q)(e))
+      ? (a++, n && (s.Get().BIsStoreItemOwned(e) || n.push(c)))
+      : o.push(c);
   }
   return o;
 }
 async function we(e, t, n, r, i, a, o) {
-  let s = await J(
+  let c = await J(
       e,
       t,
       o,
       i
         ? (e) =>
             !e ||
-            u.Get().BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
-            u.Get().BExcludeTagIDs(e.GetTagIDs())
+            s.Get().BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
+            s.Get().BExcludeTagIDs(e.GetTagIDs())
         : q,
     ),
-    c = [];
-  for (let e of s) {
-    let t = O.Get().GetStoreItem(e.id, _(e.type));
+    l = [];
+  for (let e of c) {
+    let t = x.Get().GetStoreItem(e.id, C(e.type));
     if (!t) continue;
     let i = t?.GetIncludedAppIDsOrSelf(),
-      s = !1;
-    (n && (s ||= i.every((e) => u.Get().BIsGameOwned(e))),
-      r && (s ||= i.every((e) => u.Get().BIsGameWishlisted(e))),
-      a && (s ||= i.every((e) => u.Get().BIsGameIgnored(e))),
-      s ? o && o.push(e) : c.push(e));
+      c = !1;
+    (n && (c ||= i.every((e) => s.Get().BIsGameOwned(e))),
+      r && (c ||= i.every((e) => s.Get().BIsGameWishlisted(e))),
+      a && (c ||= i.every((e) => s.Get().BIsGameIgnored(e))),
+      c ? o && o.push(e) : l.push(e));
   }
-  return c;
+  return l;
 }
 function Y() {
-  let e = u.Get();
+  let e = s.Get();
   if (e.BIsLoaded())
     return {
-      bSignedIn: !!ie.logged_in,
+      bSignedIn: !!ce.logged_in,
       ePrimaryLanguage: e.GetPrimaryLanguage(),
       setSecondaryLanguages: e.GetSecondaryLanguages(),
       setExcludedContentDescriptors: new Set(e.ExcludedContentDescriptor),
     };
 }
 function Te() {
-  return P(h, D.COUNTRY);
+  return P(re, T.COUNTRY);
 }
 function Ee(e) {
   return !(
     !e?.BHasHideIgnoredItemsFacetValue() ||
-    e.BIsUserPreferenceEnabled(s.k_EHideIgnoredItems)
+    e.BIsUserPreferenceEnabled(l.k_EHideIgnoredItems)
   );
 }
-async function De(e, t, r, i) {
-  let a = e.BHasHideIgnoredItemsFacetValue(),
-    o = e.BIsUserPreferenceEnabled(s.k_EHideOwnedItems),
-    c = e.BIsUserPreferenceEnabled(s.k_EHideWishlistedItems),
-    l = e.BIsUserPreferenceEnabled(s.k_EHideIgnoredItems),
+async function De(e, t, n, r) {
+  let i = e.BHasHideIgnoredItemsFacetValue(),
+    a = e.BIsUserPreferenceEnabled(l.k_EHideOwnedItems),
+    s = e.BIsUserPreferenceEnabled(l.k_EHideWishlistedItems),
+    c = e.BIsUserPreferenceEnabled(l.k_EHideIgnoredItems),
     u = [],
-    d = await we(t, r, o, c, a, l, u);
+    d = await we(t, n, a, s, i, c, u);
   return (
-    n(() => {
+    o(() => {
       e.SetCapsulesRemovedByUserPreferenceFilters(new Set(u.map(I)));
     }),
-    i?.push(...u),
+    r?.push(...u),
     d
   );
 }
-var X = e(t()),
-  Oe = class e extends d {
+var X = e(a()),
+  Oe = class e extends f {
     async DeleteOldAnnouncement(e, t) {
       let n = new URLSearchParams();
-      n.append(`sessionid`, fe());
+      n.append(`sessionid`, se());
       let r =
-          D.COMMUNITY_BASE_URL +
+          T.COMMUNITY_BASE_URL +
           `/gid/` +
           e.ConvertTo64BitString() +
           `/announcements/ajaxdeleteannouncement/` +
           t,
         i = await X.default.post(r, n);
       if (i.data.success != 1) throw i.data;
-      return (this.RemoveGIDFromList(e, l + t), i.data);
+      return (this.RemoveGIDFromList(e, c + t), i.data);
     }
     static sm_Instance;
     static sm_SummaryInstance;
@@ -590,13 +590,13 @@ var X = e(t()),
       );
     }
   },
-  Z = e(i()),
-  Q = o(),
+  Z = e(n()),
+  Q = i(),
   ke = (e) => {
     let { bShowOnlyInitialEvent: t } = e,
-      n = re(),
-      r = se();
-    return (0, Q.jsx)(ne, {
+      n = ie(),
+      r = ue();
+    return (0, Q.jsx)(g, {
       children: (0, Q.jsx)($, {
         ...e,
         bShowOnlyInitialEvent: t || n,
@@ -611,12 +611,12 @@ var X = e(t()),
     componentDidMount() {
       this.state.eventModel || this.setState({ bLoading: !0 }, this.LoadEvent);
       let e = this.GetBodyElement();
-      e && this.props.bPrimaryPageFeature && e.classList.add(S);
+      e && this.props.bPrimaryPageFeature && e.classList.add(O);
     }
     componentWillUnmount() {
       this.m_cancelSignal.cancel(`EventInfiniteScrollModal unmounting`);
       let e = this.GetBodyElement();
-      e && this.props.bPrimaryPageFeature && e.classList.remove(S);
+      e && this.props.bPrimaryPageFeature && e.classList.remove(O);
     }
     GetBodyElement() {
       return this.m_refParent.current
@@ -650,7 +650,7 @@ var X = e(t()),
               this.setState({ bLoading: !1 }));
         })
         .catch((e) => {
-          let t = g(e);
+          let t = v(e);
           (console.error(`EventInfiniteScrollModal failed ` + t.strErrorMsg, t),
             this.setState({ bLoading: !1 }));
         });
@@ -664,12 +664,12 @@ var X = e(t()),
       let { bShowOnlyInitialEvent: e } = this.props,
         { bLoading: t, eventModel: n } = this.state;
       if (t)
-        return (0, Q.jsx)(x, {
+        return (0, Q.jsx)(_, {
           active: !0,
           children: (0, Q.jsx)(`div`, {
-            className: le,
+            className: fe,
             style: { height: `400px` },
-            children: (0, Q.jsx)(p, {}),
+            children: (0, Q.jsx)(ee, {}),
           }),
         });
       let {
@@ -677,43 +677,43 @@ var X = e(t()),
           appid: i,
           clanSteamID: a,
           className: o,
-          partnerEventStore: s,
-          showAppHeader: c,
-          bPrimaryPageFeature: l,
+          partnerEventStore: c,
+          showAppHeader: l,
+          bPrimaryPageFeature: u,
           additionalParams: d,
           eventClassName: f,
         } = this.props,
-        h;
-      ae.IN_CLIENT &&
+        m;
+      E.IN_CLIENT &&
         n?.appid &&
-        (u.Get().HintLoad(),
-        u.Get().BOwnsApp(n.appid) &&
-          (h = (e) => te(e, `steam://nav/games/details/` + n.appid)));
-      let g = (0, Q.jsx)(ue, {
+        (s.Get().HintLoad(),
+        s.Get().BOwnsApp(n.appid) &&
+          (m = (e) => h(e, `steam://nav/games/details/` + n.appid)));
+      let g = (0, Q.jsx)(pe, {
         children: (t) =>
-          (0, Q.jsx)(m, {
+          (0, Q.jsx)(p, {
             initialEvent: n,
             appid: i,
             clanSteamID: a,
-            partnerEventStore: s,
+            partnerEventStore: c,
             emoticonStore: t,
-            closeModal: l ? void 0 : r,
-            showAppHeader: c,
+            closeModal: u ? void 0 : r,
+            showAppHeader: l,
             bShowOnlyInitialEvent: e,
             additionalParams: d,
             eventClassName: f,
-            onAppIconClick: h,
+            onAppIconClick: m,
           }),
       });
-      return l
+      return u
         ? g
-        : (0, Q.jsx)(x, {
+        : (0, Q.jsx)(_, {
             active: !0,
             children: (0, Q.jsx)(`div`, { className: o, children: g }),
           });
     }
   };
-$ = ee([r], $);
+$ = te([r], $);
 export {
   N as S,
   he as _,

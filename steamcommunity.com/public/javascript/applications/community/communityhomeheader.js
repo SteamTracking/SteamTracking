@@ -2,20 +2,20 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { A as t, Ft as n, ot as r, wt as i } from "./chunk~01cfc309bf.js";
+import { Ct as t, Pt as n, at as r, k as i } from "./chunk~01cfc309bf.js";
 import { t as a } from "./chunk~af36c62e9f.js";
 import { i as o } from "./chunk~a7c5e71e12.js";
 import {
-  Du as s,
-  Jo as c,
-  Ru as l,
-  Tu as u,
-  Zc as d,
-  hm as f,
-  rf as p,
-  wl as m,
-  ym as h,
-  zd as g,
+  Kc as s,
+  Nu as c,
+  Pd as l,
+  Qd as u,
+  Su as d,
+  Uo as f,
+  bu as p,
+  mm as m,
+  um as h,
+  yl as g,
 } from "./main.js";
 var _ = e(n()),
   v = `JdaHHph2WEE-`,
@@ -35,21 +35,21 @@ var _ = e(n()),
   M = `_66NCrBN2GQg-`,
   N = `_2Rvl-pkrrEM-`,
   P = `qPEUXE973Pg-`,
-  ee = `WeNTqIr4ViU-`,
-  F = `_8n-80ldseBI-`,
+  F = `WeNTqIr4ViU-`,
+  ee = `_8n-80ldseBI-`,
   I = `_1oWdNOpnzQ8-`,
   L = `rk3AyZUUqg8-`,
   R = `Zy5KmJxsPBE-`,
   z = `Z6wvpAwZe1o-`,
   B = `PU7Ky5WGGPY-`,
   V = `_8HF2GkWbNoc-`,
-  H = e(t());
+  H = e(i());
 function U() {
   let e = (0, _.useMemo)(
-      () => f(`personalapps`, `application_config`) || [],
+      () => h(`personalapps`, `application_config`) || [],
       [],
     ),
-    t = (0, _.useMemo)(() => f(`popularapps`, `application_config`) || [], []),
+    t = (0, _.useMemo)(() => h(`popularapps`, `application_config`) || [], []),
     n = [...e, ...t];
   return n.length
     ? {
@@ -59,7 +59,7 @@ function U() {
     : { isLoading: !1, data: { personalAppIds: e, popularAppIds: t } };
 }
 async function W(e) {
-  let t = `${h.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
+  let t = `${m.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
   return (await H.default.get(t)).data;
 }
 var G = r();
@@ -69,7 +69,7 @@ function K() {
     (0, _.useEffect)(() => {
       e.current && e.current.TakeFocus();
     }, []),
-    (0, G.jsxs)(s, {
+    (0, G.jsxs)(d, {
       navRef: e,
       className: v,
       children: [
@@ -80,18 +80,18 @@ function K() {
               children: [
                 (0, G.jsx)(`div`, {
                   className: b,
-                  children: p(`#Community_Home_Header_Title`),
+                  children: u(`#Community_Home_Header_Title`),
                 }),
                 (0, G.jsx)(`div`, {
                   className: x,
-                  children: p(`#Community_Home_Header_Subtitle`),
+                  children: u(`#Community_Home_Header_Subtitle`),
                 }),
               ],
             }),
-            (0, G.jsx)(l, {
+            (0, G.jsx)(c, {
               className: S,
-              href: `${h.COMMUNITY_BASE_URL}search/users/`,
-              children: p(`#Community_Home_Header_AddFriend_Button`),
+              href: `${m.COMMUNITY_BASE_URL}search/users/`,
+              children: u(`#Community_Home_Header_AddFriend_Button`),
             }),
           ],
         }),
@@ -111,33 +111,33 @@ function q() {
     : (0, G.jsxs)(`div`, {
         className: C,
         children: [
-          (0, G.jsxs)(s, {
+          (0, G.jsxs)(d, {
             className: w,
             children: [
               (0, G.jsx)(J, {
                 appShortcuts: o.data.personalAppIds,
-                sectionTitle: p(`#Community_Home_Header_GameHubs_ForYou`),
+                sectionTitle: u(`#Community_Home_Header_GameHubs_ForYou`),
                 withDivider: o.data.popularAppIds.length > 0,
               }),
               (0, G.jsx)(J, {
                 appShortcuts: o.data.popularAppIds,
-                sectionTitle: p(`#Community_Home_Header_GameHubs_Popular`),
+                sectionTitle: u(`#Community_Home_Header_GameHubs_Popular`),
               }),
             ],
           }),
-          (0, G.jsxs)(s, {
+          (0, G.jsxs)(d, {
             onFocus: () => a(!0),
             onBlur: (e) => {
               e.currentTarget.contains(e.relatedTarget) || a(!1);
             },
             className: T,
             children: [
-              (0, G.jsxs)(s, {
+              (0, G.jsxs)(d, {
                 className: E,
                 children: [
                   (0, G.jsx)(`div`, {
                     className: D,
-                    children: (0, G.jsx)(c, {
+                    children: (0, G.jsx)(f, {
                       onChange: async (e) => {
                         t(e.target.value);
                         let n = await W(e.target.value);
@@ -145,25 +145,25 @@ function q() {
                       },
                       value: e,
                       className: O,
-                      placeholder: p(
+                      placeholder: u(
                         `#Community_Home_Header_FindGame_Placeholder`,
                       ),
                     }),
                   }),
                   (0, G.jsx)(`div`, {
                     className: k,
-                    children: (0, G.jsx)(d, {}),
+                    children: (0, G.jsx)(s, {}),
                   }),
                 ],
               }),
               i &&
-                (0, G.jsx)(s, {
+                (0, G.jsx)(d, {
                   className: `OR4eoZumqTI-`,
                   children: n.map((e) =>
                     (0, G.jsx)(
-                      l,
+                      c,
                       {
-                        href: `${h.COMMUNITY_BASE_URL}app/${e.appid}`,
+                        href: `${m.COMMUNITY_BASE_URL}app/${e.appid}`,
                         className: `-F05C2uuY7c-`,
                         children: e.name,
                       },
@@ -186,18 +186,18 @@ function J(e) {
           (0, G.jsx)(`div`, { className: j, children: n }),
           (0, G.jsx)(`div`, {
             "flow-children": `row`,
-            className: u(M, r ? ee : null),
+            className: p(M, r ? F : null),
             children: t.map((e, t) => (0, G.jsx)(Y, { appId: e }, t)),
           }),
         ],
       });
 }
 function Y(e) {
-  let t = g.Get().GetApp(e.appId);
+  let t = l.Get().GetApp(e.appId);
   return t
-    ? (0, G.jsx)(l, {
+    ? (0, G.jsx)(c, {
         className: N,
-        href: `${h.COMMUNITY_BASE_URL}app/${e.appId}`,
+        href: `${m.COMMUNITY_BASE_URL}app/${e.appId}`,
         children: (0, G.jsx)(`img`, {
           className: P,
           src: t.GetAssets().GetLibraryCapsuleURL(),
@@ -208,13 +208,13 @@ function Y(e) {
 var X = `subsection`,
   Z = `browsefilter`;
 function Q() {
-  let e = i(),
-    t = a(e, X),
-    n = a(e, Z);
+  let e = t(),
+    n = a(e, X),
+    r = a(e, Z);
   return (0, G.jsxs)(`div`, {
     children: [
-      (0, G.jsx)($, { activeTab: t, activeSort: n }),
-      (0, G.jsx)(te, { activeTab: t, activeSort: n }),
+      (0, G.jsx)($, { activeTab: n, activeSort: r }),
+      (0, G.jsx)(te, { activeTab: n, activeSort: r }),
     ],
   });
 }
@@ -229,9 +229,9 @@ function $(e) {
         t > window.innerWidth && r.current.scrollBy(t - window.innerWidth, 0);
       }
     }, [r?.current]),
-    (0, G.jsx)(s, {
+    (0, G.jsx)(d, {
       "flow-children": `row`,
-      className: F,
+      className: ee,
       ref: r,
       children: [
         { label: `#Community_Home_Header_Filter_All`, id: `` },
@@ -250,14 +250,14 @@ function $(e) {
         let i = t ? t === e.id : r === 0,
           a = e.id ? `${X}=${e.id}` : ``,
           o = n ? `${Z}=${n}` : ``,
-          s = `${h.COMMUNITY_BASE_URL}${o || a ? `?` : ``}${o}${a ? `&` : ``}${a}`;
+          s = `${m.COMMUNITY_BASE_URL}${o || a ? `?` : ``}${o}${a ? `&` : ``}${a}`;
         return (0, G.jsx)(
-          l,
+          c,
           {
             id: e.id,
             href: s,
-            className: u(I, i ? L : null),
-            children: p(e.label),
+            className: p(I, i ? L : null),
+            children: u(e.label),
           },
           e.id,
         );
@@ -267,11 +267,11 @@ function $(e) {
 }
 function te(e) {
   let { activeTab: t, activeSort: n } = e;
-  return (0, G.jsxs)(s, {
+  return (0, G.jsxs)(d, {
     "flow-children": `row`,
     className: R,
     children: [
-      (0, G.jsx)(`div`, { className: V, children: (0, G.jsx)(m, {}) }),
+      (0, G.jsx)(`div`, { className: V, children: (0, G.jsx)(g, {}) }),
       [
         { label: `#Community_Home_Header_BrowseFilter_Popular`, id: `` },
         {
@@ -282,10 +282,10 @@ function te(e) {
         let i = n ? n === e.id : r === 0,
           a = t ? `${X}=${t}` : ``,
           o = e.id ? `${Z}=${e.id}` : ``,
-          s = `${h.COMMUNITY_BASE_URL}${o || a ? `?` : ``}${o}${a ? `&` : ``}${a}`;
+          s = `${m.COMMUNITY_BASE_URL}${o || a ? `?` : ``}${o}${a ? `&` : ``}${a}`;
         return (0, G.jsx)(
-          l,
-          { href: s, className: u(z, i ? B : null), children: p(e.label) },
+          c,
+          { href: s, className: p(z, i ? B : null), children: u(e.label) },
           e.id,
         );
       }),

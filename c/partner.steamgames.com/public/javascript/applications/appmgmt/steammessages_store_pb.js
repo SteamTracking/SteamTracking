@@ -2979,7 +2979,7 @@ var _ = _(_(), 1),
           fields: {
             reservation_status: {
               _: 1,
-              _: _,
+              _,
               _: !0,
               _: !0,
             },
@@ -5196,7 +5196,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Store.GetRecommendedTagsForUser#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetRecommendedTagsForUser = _;
@@ -5221,7 +5221,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 1,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetTagList = _;
@@ -5229,7 +5229,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Store.GetDiscoveryQueue#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetDiscoveryQueue = _;
@@ -5243,7 +5243,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Store.SkipDiscoveryQueueItem#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.SkipDiscoveryQueueItem = _;
@@ -5258,7 +5258,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetGamesFollowed = _;
@@ -5267,7 +5267,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetGamesFollowedCount = _;
@@ -5275,7 +5275,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Store.GetDiscoveryQueueSkippedApps#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetDiscoveryQueueSkippedApps = _;
@@ -5289,7 +5289,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`Store.GetStorePreferences#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetStorePreferences = _;
@@ -5309,7 +5309,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`Store.UpdatePackageReservations#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.UpdatePackageReservations = _;
@@ -5399,39 +5399,42 @@ var _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.RequestInvite#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.RequestInvite = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.UpdateInvites#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`store`],
     });
   }
   _.UpdateInvites = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetInvites#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetInvites = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetInviteHistory#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetInviteHistory = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetUserStatus#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`partner`, `store`],
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetUserStatus = _;
   function _(_, _, _) {
     return _.SendMsg(`Playtest.GetInviteOptions#1`, _(_, _, _), _, {
       ePrivilege: 1,
+      rgBrowserAPISites: [`store`],
     });
   }
   _.GetInviteOptions = _;

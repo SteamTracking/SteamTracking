@@ -9,6 +9,7 @@ message CSupportAgents_GetQuickText_Request {
 message CSupportAgents_GetQuickText_Response {
 	optional .CSupportData_QuickText quicktext = 1;
 	optional .CSupportData_QuickTextContent english_reference = 2;
+	optional string localization_url = 3;
 }
 
 message CSupportData_QuickText {

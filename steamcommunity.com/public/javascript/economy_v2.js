@@ -4027,6 +4027,8 @@ SellItemDialog = {
 	m_plotPriceHistory: null,
 	m_timePriceHistoryEarliest: new Date(),
 	m_timePriceHistoryLatest: new Date(),
+		m_publisher_fee: null,
+	m_steam_fee: null,
 	
 	m_modal: null,
 	m_elDialogContent: null,
@@ -4091,6 +4093,8 @@ SellItemDialog = {
 		$('market_sell_dialog_back').style.opacity = 1;
 		$('market_sell_dialog_throbber').hide();
 
+					$('market_sell_currency_input').disable();
+			$('market_sell_buyercurrency_input').disable();
 		
 		this.m_item = item;
 		var description = item.description;
@@ -4210,7 +4214,15 @@ SellItemDialog = {
 		$J('#pricehistory_throbber').show();
 		$J('#pricehistory_notavailable').hide();
 
-				this.LoadMarketLowPrice();
+				new Ajax.Request( 'https://steamcommunity.com/market/ajaxfeestructure/', {
+			method: 'get',
+			parameters: {
+				appid: this.m_item.appid,
+			},
+			xhrFields: { withCredentials: true },
+			onSuccess: function (transport) { SellItemDialog.OnFeeStructureSuccess(transport); },
+			onFailure: function (transport) { SellItemDialog.OnFeeStructureFailure(transport); },
+		} );
 				new Ajax.Request( 'https://steamcommunity.com/market/pricehistory/', {
 			method: 'get',
 			parameters: {
@@ -4247,6 +4259,21 @@ SellItemDialog = {
 		this.OnBuyerPriceInputKeyUp();
 	},
 
+		OnFeeStructureSuccess: function( transport ) {
+		if ( transport.responseJSON && transport.responseJSON.success )
+		{
+			var feeStruct = transport.responseJSON;
+			this.m_publisher_fee = feeStruct.publisher_fee;
+			this.m_steam_fee = feeStruct.steam_fee;
+			$('market_sell_currency_input').enable();
+			$('market_sell_buyercurrency_input').enable();
+			this.LoadMarketLowPrice();
+		}
+	},
+	OnFeeStructureFailure: function( transport ) {
+		$J('#market_sell_dialog_input_boxes').hide();
+		$J('#price_entry_notavailable').show();
+	},
 	
 	OnPriceHistorySuccess: function( transport ) {
 		$J('#pricehistory_throbber').hide();
@@ -4603,6 +4630,7 @@ SellItemDialog = {
 
 	GetPublisherFeeRate() {
 		var fee_pct = parseFloat( ( g_rgAppContextData [ g_ActiveInventory.m_appid ][ 'market_pubfee_rate' ] ) ?? ( g_rgWalletInfo[ 'wallet_publisher_fee_percent_default' ] ) ?? 0.10 );
+				var fee_cap = parseInt( ( g_rgAppContextData [ g_ActiveInventory.m_appid ][ 'market_pubfee_cap' ] ) ?? 0 );
 				return fee_pct;
 	},
 
@@ -4617,12 +4645,8 @@ SellItemDialog = {
 
 				if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
-			var ppct = this.GetPublisherFeeRate();
-			var spct = this.GetSteamFeeRate();
-			var nTotalUnitPrice = GetTotalWithFees( nAmount, ppct, spct, g_rgWalletInfo );
-
+			var nTotalUnitPrice = GetPurchasePrice( nAmount, this.m_publisher_fee, this.m_steam_fee, g_rgWalletInfo );
 			$('market_sell_buyercurrency_input').value = v_currencyformat( nTotalUnitPrice, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
-
 			this.RecalculateTotal( nAmount, quantity );
 		}
 			},
@@ -4634,7 +4658,7 @@ SellItemDialog = {
 
 				if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
-			var nItemPrice = GetItemPriceFromTotal( nAmount, g_rgWalletInfo );
+			var nItemPrice = GetListingPriceFromTotal( nAmount, this.m_publisher_fee, this.m_steam_fee, g_rgWalletInfo );
 			$('market_sell_currency_input').value = v_currencyformat( nItemPrice, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
 
 			this.RecalculateTotal( nAmount, quantity );

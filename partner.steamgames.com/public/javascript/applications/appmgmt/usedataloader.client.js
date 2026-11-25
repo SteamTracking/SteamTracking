@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 /* Third-party software licenses can be found at licenses.txt */
-import { At as e, sn as t, vt as n } from "./chunk~de7f2df91c.js";
+import { Pt as e, W as t, nt as n } from "./chunk~de7f2df91c.js";
 import { E as r, M as i, i as a, o, t as s } from "./chunk~8fb30ea08b.js";
 import {
   a as c,
@@ -171,7 +171,7 @@ var C = class extends i {
         });
     }
   },
-  w = t(e(), 1);
+  w = e(n(), 1);
 function T({ queries: e, ...t }, n) {
   let r = a(n),
     i = _(),
@@ -403,7 +403,7 @@ function A(e, t) {
     m = c ? `-` : ``;
   return r ? `${m}${f}${p}${n}` : `${m}${n}${p}${f}`;
 }
-n();
+t();
 var j = (0, w.createContext)({ instances: {}, factories: {} });
 function M(e, t) {
   let n = (0, w.useContext)(j),

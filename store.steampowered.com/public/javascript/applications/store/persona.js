@@ -1,10 +1,10 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { At as e, St as t, kt as n } from "./chunk~01cfc309bf.js";
+import { Ot as e, kt as t, xt as n } from "./chunk~01cfc309bf.js";
 import { n as r, r as i } from "./chunk~0278ae6236.js";
 import { t as a } from "./chunk~c55d6473b2.js";
-import { Db as o, Kb as s, _x as c, rb as l } from "./main.js";
+import { Ob as o, ib as s, qb as c, vx as l } from "./main.js";
 function u(e) {
   let t = `offline`;
   return (
@@ -42,12 +42,12 @@ var d = class {
   m_strBroadcastTitle = void 0;
   m_bCommunityBanned = void 0;
   m_eGamingDeviceType = 0;
-  m_mapRichPresence = e.map();
+  m_mapRichPresence = t.map();
   m_bNameInitialized = !1;
   m_bStatusInitialized = !1;
   m_strProfileURL = void 0;
-  constructor(e) {
-    (n(this), (this.m_steamid = e));
+  constructor(t) {
+    (e(this), (this.m_steamid = t));
   }
   Reset() {
     ((this.m_ePersonaState = 0),
@@ -155,7 +155,7 @@ var d = class {
         return e.Localize(t, this.m_mapRichPresence);
       }
     } else if (this.HasStateFlag(8))
-      return l(`#PersonaStateRemotePlayTogether`);
+      return s(`#PersonaStateRemotePlayTogether`);
     return ``;
   }
   GetCurrentGameStatus() {
@@ -173,13 +173,13 @@ var d = class {
     return ((t *= n > 86400 ? e : n > 2 * e ? 60 : 15), t);
   }
   GetOfflineStatusTime() {
-    if (this.last_seen_online == 0) return l(`#PersonaStateOffline`);
+    if (this.last_seen_online == 0) return s(`#PersonaStateOffline`);
     let e = this.GetOfflineStatusUpdateRate();
-    (!c.IN_MOBILE || e <= 60) && t(e);
-    let n = a.CMInterface.GetServerRTime32() - this.last_seen_online;
-    return n < 60
-      ? l(`#PersonaStateLastSeen_JustNow`)
-      : l(`#PersonaStateLastSeen`, o(n));
+    (!l.IN_MOBILE || e <= 60) && n(e);
+    let t = a.CMInterface.GetServerRTime32() - this.last_seen_online;
+    return t < 60
+      ? s(`#PersonaStateLastSeen_JustNow`)
+      : s(`#PersonaStateLastSeen`, o(t));
   }
   GetLocalizedOnlineStatus() {
     switch (this.m_ePersonaState) {
@@ -187,17 +187,17 @@ var d = class {
       case 7:
         return this.GetOfflineStatusTime();
       case 1:
-        return l(`#PersonaStateOnline`);
+        return s(`#PersonaStateOnline`);
       case 2:
-        return l(`#PersonaStateBusy`);
+        return s(`#PersonaStateBusy`);
       case 3:
-        return l(`#PersonaStateAway`);
+        return s(`#PersonaStateAway`);
       case 4:
-        return l(`#PersonaStateSnooze`);
+        return s(`#PersonaStateSnooze`);
       case 5:
-        return l(`#PersonaStateLookingToTrade`);
+        return s(`#PersonaStateLookingToTrade`);
       case 6:
-        return l(`#PersonaStateLookingToPlay`);
+        return s(`#PersonaStateLookingToPlay`);
       default:
         return ``;
     }
@@ -260,31 +260,31 @@ var d = class {
   }
   GetCommunityProfileURL() {
     return this.m_strProfileURL
-      ? `${c.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-      : `${c.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+      ? `${l.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
+      : `${l.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
   }
 };
-(s([e], d.prototype, `m_bInitialized`, void 0),
-  s([e], d.prototype, `m_ePersonaState`, void 0),
-  s([e], d.prototype, `m_unGamePlayedAppID`, void 0),
-  s([e], d.prototype, `m_gameid`, void 0),
-  s([e], d.prototype, `m_unPersonaStateFlags`, void 0),
-  s([e], d.prototype, `m_strPlayerName`, void 0),
-  s([e], d.prototype, `m_strAvatarHash`, void 0),
-  s([e], d.prototype, `m_strAccountName`, void 0),
-  s([e], d.prototype, `m_rtLastSeenOnline`, void 0),
-  s([e], d.prototype, `m_strGameExtraInfo`, void 0),
-  s([e], d.prototype, `m_unGameServerIP`, void 0),
-  s([e], d.prototype, `m_unGameServerPort`, void 0),
-  s([e], d.prototype, `m_game_lobby_id`, void 0),
-  s([e], d.prototype, `m_bPlayerNamePending`, void 0),
-  s([e], d.prototype, `m_bAvatarPending`, void 0),
-  s([e], d.prototype, `m_broadcastId`, void 0),
-  s([e], d.prototype, `m_broadcastAccountId`, void 0),
-  s([e], d.prototype, `m_broadcastAppId`, void 0),
-  s([e], d.prototype, `m_broadcastViewerCount`, void 0),
-  s([e], d.prototype, `m_strBroadcastTitle`, void 0),
-  s([e], d.prototype, `m_bCommunityBanned`, void 0),
-  s([e], d.prototype, `m_eGamingDeviceType`, void 0),
-  s([e], d.prototype, `m_bNameInitialized`, void 0));
+(c([t], d.prototype, `m_bInitialized`, void 0),
+  c([t], d.prototype, `m_ePersonaState`, void 0),
+  c([t], d.prototype, `m_unGamePlayedAppID`, void 0),
+  c([t], d.prototype, `m_gameid`, void 0),
+  c([t], d.prototype, `m_unPersonaStateFlags`, void 0),
+  c([t], d.prototype, `m_strPlayerName`, void 0),
+  c([t], d.prototype, `m_strAvatarHash`, void 0),
+  c([t], d.prototype, `m_strAccountName`, void 0),
+  c([t], d.prototype, `m_rtLastSeenOnline`, void 0),
+  c([t], d.prototype, `m_strGameExtraInfo`, void 0),
+  c([t], d.prototype, `m_unGameServerIP`, void 0),
+  c([t], d.prototype, `m_unGameServerPort`, void 0),
+  c([t], d.prototype, `m_game_lobby_id`, void 0),
+  c([t], d.prototype, `m_bPlayerNamePending`, void 0),
+  c([t], d.prototype, `m_bAvatarPending`, void 0),
+  c([t], d.prototype, `m_broadcastId`, void 0),
+  c([t], d.prototype, `m_broadcastAccountId`, void 0),
+  c([t], d.prototype, `m_broadcastAppId`, void 0),
+  c([t], d.prototype, `m_broadcastViewerCount`, void 0),
+  c([t], d.prototype, `m_strBroadcastTitle`, void 0),
+  c([t], d.prototype, `m_bCommunityBanned`, void 0),
+  c([t], d.prototype, `m_eGamingDeviceType`, void 0),
+  c([t], d.prototype, `m_bNameInitialized`, void 0));
 export { u as n, d as t };

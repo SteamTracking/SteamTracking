@@ -1,8 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { At as e, sn as t, tn as n } from "./chunk~de7f2df91c.js";
-var r = t(e(), 1),
+import { Ot as e, Pt as t, nt as n } from "./chunk~de7f2df91c.js";
+var r = t(n(), 1),
   i = r.createContext(void 0),
   a = i.Provider,
   o = () => {
@@ -13,16 +13,16 @@ var r = t(e(), 1),
       );
     return e;
   };
-function s(e) {
-  let { useStorage: t, children: i } = e,
+function s(t) {
+  let { useStorage: n, children: i } = t,
     o,
     s;
-  if (`useActiveCMInterface` in e) s = o = e.useActiveCMInterface;
-  else if (`useActiveSteamInterface` in e) s = e.useActiveSteamInterface;
+  if (`useActiveCMInterface` in t) s = o = t.useActiveCMInterface;
+  else if (`useActiveSteamInterface` in t) s = t.useActiveSteamInterface;
   else
     return (
-      n(
-        e,
+      e(
+        t,
         `neither useActiveCMInterface nor useActiveSteamInterface were provided`,
       ),
       i
@@ -31,9 +31,9 @@ function s(e) {
     () => ({
       useActiveSteamInterface: s,
       useActiveCMInterface: o,
-      useStorage: t,
+      useStorage: n,
     }),
-    [s, o, t],
+    [s, o, n],
   );
   return r.createElement(a, { value: c }, i);
 }

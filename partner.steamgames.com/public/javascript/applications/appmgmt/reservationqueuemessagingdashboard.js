@@ -3,16 +3,16 @@
 
 import {
   A as e,
-  At as t,
-  Q as n,
-  it as r,
-  j as i,
-  rt as a,
-  sn as o,
-  vt as s,
-  yt as c,
+  G as t,
+  Pt as n,
+  W as r,
+  k as i,
+  n as a,
+  nt as o,
+  r as s,
+  w as c,
 } from "./chunk~de7f2df91c.js";
-import { Ft as l, It as u, M as d, ct as f } from "./chunk~25a6634263.js";
+import { A as l, Nt as u, Pt as d, ot as f } from "./chunk~bd90a5fce7.js";
 import {
   Bt as p,
   Da as m,
@@ -24,14 +24,14 @@ import {
   l as b,
   nn as x,
 } from "./chunk~1fa4b8f2ff.js";
-import { c as ee, l as S, s as te, t as C } from "./chunk~428594b857.js";
-import { t as w } from "./chunk~726542bc75.js";
+import { c as S, l as C, s as w, t as T } from "./chunk~428594b857.js";
+import { r as ee, t as te } from "./chunk~70c16cc80c.js";
+import { t as E } from "./chunk~726542bc75.js";
 import "./chunk~8681f5c764.js";
-import { t as T } from "./chunk~c55709d290.js";
-import { r as E, t as D } from "./chunk~8ceeb46076.js";
-import { n as O } from "./chunk~0111fcd096.js";
-import { o as k } from "./chunk~2f8c67b4de.js";
-import { r as A, t as j } from "./chunk~70c16cc80c.js";
+import { t as D } from "./chunk~c55709d290.js";
+import { r as O, t as k } from "./chunk~8ceeb46076.js";
+import { o as A } from "./chunk~2f8c67b4de.js";
+import { n as j } from "./chunk~0111fcd096.js";
 import { n as M, t as N } from "./chunk~95ecbf576c.js";
 import {
   A as ne,
@@ -45,8 +45,8 @@ import { t as I } from "./chunk~b3f4ae92bc.js";
 import { t as L } from "./chunk~fb7b5d9c48.js";
 import { r as R } from "./chunk~ec644f97c6.js";
 import { t as z } from "./chunk~10ec219681.js";
-var B = o(t(), 1),
-  V = s(),
+var B = n(o(), 1),
+  V = r(),
   H = `m8TRNh1e3As-`;
 function U(e, t) {
   return e > t + 1 ? e - t : e + 12 - t;
@@ -69,7 +69,7 @@ function W(e) {
       : a &&
         o &&
         !o.position_is_waitlist &&
-        ((c = D.Localize(`#Reservation_Join_Waitlist_Cancel_Reservation`)),
+        ((c = k.Localize(`#Reservation_Join_Waitlist_Cancel_Reservation`)),
         (l = !0)),
     !t || !n || l)
   )
@@ -132,7 +132,7 @@ function W(e) {
       break;
     case `#Sale_Reservation_RelativeWeekly`:
       {
-        let e = O.GetTimeNowWithOverride(),
+        let e = j.GetTimeNowWithOverride(),
           t = Math.floor((n - e) / 86400);
         t < 7 ||
           (t < 28
@@ -175,7 +175,7 @@ function K(e) {
     ? (0, V.jsxs)(V.Fragment, {
         children: [
           t,
-          (0, V.jsx)(E, {
+          (0, V.jsx)(O, {
             url: n,
             className: G,
             children: _.Localize(`#Button_Learn`),
@@ -184,7 +184,7 @@ function K(e) {
       })
     : t;
 }
-var q = n(`physical_goods`, `application_config`);
+var q = c(`physical_goods`, `application_config`);
 function J() {
   let [e] = (0, B.useState)(() => q);
   return e;
@@ -196,9 +196,9 @@ function oe(e) {
       t.product_identifier == e.product_identifier,
   );
 }
-var Y = class e {
+var Y = class n {
   m_mapProductPositionMsgList = new Map();
-  m_productListChangeCallback = new l();
+  m_productListChangeCallback = new u();
   m_messageListChangeCallback = new Map();
   m_steamInterface = null;
   GetKey(e) {
@@ -217,7 +217,7 @@ var Y = class e {
   GetPositionListViaKeyChangeCallback(e) {
     return (
       this.m_messageListChangeCallback.has(e) ||
-        this.m_messageListChangeCallback.set(e, new l()),
+        this.m_messageListChangeCallback.set(e, new u()),
       this.m_messageListChangeCallback.get(e)
     );
   }
@@ -237,44 +237,44 @@ var Y = class e {
       (this.m_mapProductPositionMsgList.set(t, []),
       this.GetProductListChangeCallback().Dispatch(this.GetAllProducts()));
   }
-  async SetPositionMessages(e) {
-    let t = c.Init(ee);
-    if (e.length == 0)
+  async SetPositionMessages(n) {
+    let r = t.Init(S);
+    if (n.length == 0)
       return (
         console.log(
           `CReservationMessagingStore.SetPositionMessages - empty list`,
         ),
         !1
       );
-    e.forEach((e) => {
-      let n = t.Body().add_settings();
-      (n.set_edistributor(e.edistributor),
-        n.set_product_identifier(e.product_identifier),
-        n.set_start_queue_position(e.start_queue_position),
-        n.set_rtime_estimated_notification(e.rtime_estimated_notification),
-        n.set_localization_token(e.localization_token));
+    n.forEach((e) => {
+      let t = r.Body().add_settings();
+      (t.set_edistributor(e.edistributor),
+        t.set_product_identifier(e.product_identifier),
+        t.set_start_queue_position(e.start_queue_position),
+        t.set_rtime_estimated_notification(e.rtime_estimated_notification),
+        t.set_localization_token(e.localization_token));
     });
-    let n = null;
+    let i = null;
     try {
-      let i = await S.SetReservationPositionMessage(
+      let t = await C.SetReservationPositionMessage(
         this.m_steamInterface.GetServiceTransport(),
-        t,
+        r,
       );
-      if (i.GetEResult() == 1) {
+      if (t.GetEResult() == 1) {
         let t = new Set(),
-          n = Math.floor(Date.now() / 1e3);
+          r = Math.floor(Date.now() / 1e3);
         return (
-          e.forEach((e) => {
-            ((e.accountid = r.accountid), (e.rtime_created = n));
-            let i = this.GetKey(e),
+          n.forEach((n) => {
+            ((n.accountid = e.accountid), (n.rtime_created = r));
+            let i = this.GetKey(n),
               a = this.m_mapProductPositionMsgList.get(i),
               o = a.findIndex(
-                (t) => t.start_queue_position == e.start_queue_position,
+                (e) => e.start_queue_position == n.start_queue_position,
               ),
               s = [...a];
-            (o >= 0 ? (s[o] = e) : (s.push(e), this.SortList(s)),
+            (o >= 0 ? (s[o] = n) : (s.push(n), this.SortList(s)),
               this.m_mapProductPositionMsgList.set(i, s),
-              t.add(this.GetKey(e)));
+              t.add(this.GetKey(n)));
           }),
           Array.from(t).forEach((e) => {
             this.GetPositionListViaKeyChangeCallback(e).Dispatch(
@@ -284,31 +284,31 @@ var Y = class e {
           !0
         );
       }
-      n = T(i);
+      i = D(t);
     } catch (e) {
-      n = T(e);
+      i = D(e);
     }
     return (
       console.error(
         `CReservationMessagingStore.SetPositionMessages failed: ` +
-          n?.strErrorMsg,
-        n,
+          i?.strErrorMsg,
+        i,
       ),
       !1
     );
   }
   async DeletePositionMessage(e) {
-    let t = c.Init(C);
-    (t.Body().set_edistributor(e.edistributor),
-      t.Body().set_product_identifier(e.product_identifier),
-      t.Body().set_start_queue_position(e.start_queue_position));
-    let n = null;
+    let n = t.Init(T);
+    (n.Body().set_edistributor(e.edistributor),
+      n.Body().set_product_identifier(e.product_identifier),
+      n.Body().set_start_queue_position(e.start_queue_position));
+    let r = null;
     try {
-      let r = await S.DeleteReservationPositionMessage(
+      let t = await C.DeleteReservationPositionMessage(
         this.m_steamInterface.GetServiceTransport(),
-        t,
+        n,
       );
-      if (r.GetEResult() == 1) {
+      if (t.GetEResult() == 1) {
         let t = this.GetKey(e),
           n = this.m_mapProductPositionMsgList.get(t),
           r = n.findIndex(
@@ -322,22 +322,22 @@ var Y = class e {
           !0
         );
       }
-      n = T(r);
+      r = D(t);
     } catch (e) {
-      n = T(e);
+      r = D(e);
     }
     return (
       console.error(
         `CReservationMessagingStore.SetPositionMessages failed: ` +
-          n?.strErrorMsg,
-        n,
+          r?.strErrorMsg,
+        r,
       ),
       !1
     );
   }
   async ReloadReservationPositionMessages() {
-    let e = c.Init(te);
-    return await S.ReloadAllReservationPositionMessages(
+    let e = t.Init(w);
+    return await C.ReloadAllReservationPositionMessages(
       this.m_steamInterface.GetServiceTransport(),
       e,
     );
@@ -345,14 +345,14 @@ var Y = class e {
   static s_Singleton;
   static Get() {
     return (
-      e.s_Singleton || ((e.s_Singleton = new e()), e.s_Singleton.Init()),
-      e.s_Singleton
+      n.s_Singleton || ((n.s_Singleton = new n()), n.s_Singleton.Init()),
+      n.s_Singleton
     );
   }
   constructor() {}
   Init() {
-    this.m_steamInterface = j(new A(a.WEBAPI_BASE_URL));
-    let e = n(`reservation_queue_position_messages`, `application_config`);
+    this.m_steamInterface = te(new ee(i.WEBAPI_BASE_URL));
+    let e = c(`reservation_queue_position_messages`, `application_config`);
     this.ValidateInputDefault(e) &&
       (e.map((e) => {
         let t = this.GetKey(e);
@@ -376,17 +376,17 @@ var Y = class e {
     );
   }
 };
-(e([u], Y.prototype, `AddProductID`, null),
-  e([u], Y.prototype, `SetPositionMessages`, null),
-  e([u], Y.prototype, `DeletePositionMessage`, null),
-  e([u], Y.prototype, `ReloadReservationPositionMessages`, null));
+(a([d], Y.prototype, `AddProductID`, null),
+  a([d], Y.prototype, `SetPositionMessages`, null),
+  a([d], Y.prototype, `DeletePositionMessage`, null),
+  a([d], Y.prototype, `ReloadReservationPositionMessages`, null));
 function X() {
   let [e, t] = (0, B.useState)(() => Y.Get().GetAllProducts());
-  return (d(Y.Get().GetProductListChangeCallback(), t), e);
+  return (l(Y.Get().GetProductListChangeCallback(), t), e);
 }
 function se(e) {
   let [t, n] = (0, B.useState)(() => Y.Get().GetPositionMessagingForProduct(e));
-  return (d(Y.Get().GetPositionListChangeCallback(e), n), t);
+  return (l(Y.Get().GetPositionListChangeCallback(e), n), t);
 }
 function Z() {
   let e = Y.Get();
@@ -583,7 +583,7 @@ function _e(e) {
   let { positionMsg: t } = e;
   return (0, V.jsxs)(`tr`, {
     children: [
-      (0, V.jsx)(`td`, { children: w(t.start_queue_position) }),
+      (0, V.jsx)(`td`, { children: E(t.start_queue_position) }),
       (0, V.jsx)(`td`, { children: m(t.rtime_estimated_notification) }),
       (0, V.jsx)(`td`, {
         children: (0, V.jsx)(W, {
@@ -690,7 +690,7 @@ function $(e) {
 function ve(e) {
   let { positionMsg: t, closeModal: n } = e,
     { fnDeletePositionMessage: r } = Z(),
-    i = `Delete Queue Position ${w(t.start_queue_position)}`,
+    i = `Delete Queue Position ${E(t.start_queue_position)}`,
     a = M();
   return a.bLoading
     ? (0, V.jsx)(N, { state: a, strDialogTitle: i, closeModal: n })
@@ -764,7 +764,7 @@ function xe(e) {
   return (0, V.jsxs)(`div`, {
     children: [
       (0, V.jsx)(h, {
-        strDropDownClassName: k,
+        strDropDownClassName: A,
         label: `Date Format`,
         rgOptions: i,
         selectedOption: t,
@@ -797,7 +797,7 @@ function xe(e) {
 }
 function Se(e) {
   return (0, V.jsxs)(`div`, {
-    className: i(void 0, F),
+    className: s(void 0, F),
     children: [
       (0, V.jsx)(`h1`, {
         className: ne,
@@ -826,7 +826,7 @@ function Se(e) {
                   (0, V.jsx)(`ul`, {
                     children: (0, V.jsx)(`li`, {
                       children: (0, V.jsx)(`a`, {
-                        href: `${a.STATS_BASE_URL}steamdeck/reservations/`,
+                        href: `${i.STATS_BASE_URL}steamdeck/reservations/`,
                         target: `_blank`,
                         children: `Steam Hardware reservation stats page`,
                       }),

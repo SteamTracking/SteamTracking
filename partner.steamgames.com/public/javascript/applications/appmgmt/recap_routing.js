@@ -1,13 +1,13 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 
-import { At as e, vt as t } from "./chunk~de7f2df91c.js";
+import { W as e, nt as t } from "./chunk~de7f2df91c.js";
 import { v as n, y as r } from "./chunk~54f70c90c1.js";
 import { a as i, r as a } from "./chunk~44f252525d.js";
 import { r as o, t as s } from "./chunk~9fc22a4638.js";
 import { t as c } from "./chunk~58c6c52d52.js";
-e();
-var l = t(),
+t();
+var l = e(),
   u = {
     NextFestRecapListPartner: (e) => `/nextfest/${e}`,
     NextFestRecapList: () => `/nextfest`,

@@ -31,11 +31,6 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
-  _,
 } from "./chunk~de7f2df91c.js";
 import {
   _,
@@ -57,8 +52,7 @@ import {
   _,
   _,
   _,
-  _,
-} from "./chunk~25a6634263.js";
+} from "./chunk~bd90a5fce7.js";
 import { _, _, _, _ } from "./chunk~b4171a8747.js";
 import {
   _,
@@ -112,10 +106,9 @@ import {
   _,
   _,
   _,
-  _,
 } from "./chunk~1fa4b8f2ff.js";
 import { _, _, _ } from "./chunk~0a99e05c44.js";
-import { _, _, _, _, _ } from "./chunk~6b8ddcaac8.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~6b8ddcaac8.js";
 import { _, _ } from "./chunk~9a06851bec.js";
 import { _, _, _, _ } from "./chunk~44f252525d.js";
 import { _ } from "./chunk~f8b6a4beb3.js";
@@ -138,9 +131,12 @@ import {
   _,
   _,
 } from "./chunk~e70aabe4d7.js";
+import { _, _ } from "./chunk~70c16cc80c.js";
 import { _, _, _, _, _ } from "./chunk~a825a84845.js";
 import { _ } from "./chunk~b390ee0f78.js";
 import { _ } from "./chunk~43407e91ef.js";
+import { _, _, _, _, _ } from "./chunk~96e60d7578.js";
+import { _ } from "./chunk~25a6634263.js";
 import { _, _, _, _, _ } from "./chunk~cbbb6ae37c.js";
 import { _ } from "./chunk~e7f5a67b58.js";
 import { _ } from "./chunk~8681f5c764.js";
@@ -150,7 +146,6 @@ import { _ } from "./chunk~c55709d290.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~e867464c75.js";
 import { _, _, _ } from "./chunk~8ceeb46076.js";
-import { _ } from "./chunk~2f8c67b4de.js";
 import {
   _,
   _,
@@ -192,20 +187,20 @@ import {
   _,
 } from "./chunk~05a38bc848.js";
 import { _, _ } from "./chunk~af1574091f.js";
-import { _, _, _, _, _, _, _ } from "./chunk~2bee5a7d08.js";
 import "./chunk~a6b9ae1345.js";
 import "./chunk~ca0c999570.js";
 import { _ } from "./chunk~f0141d9521.js";
+import { _ } from "./chunk~2f8c67b4de.js";
 import { _ } from "./chunk~93fc7377c2.js";
 import { _, _, _, _, _ } from "./chunk~9658266888.js";
 import { _, _, _ } from "./chunk~b980797e15.js";
-import { _, _ } from "./chunk~70c16cc80c.js";
 import { _ } from "./chunk~3ee5188744.js";
 import "./chunk~f25232ab1e.js";
 import { _ } from "./chunk~d382bdf2cf.js";
 import "./chunk~6f51836c6e.js";
 import { _, _, _, _, _, _ } from "./chunk~d6693aba87.js";
 var _ = _(_(), 1);
+(0, _.createContext)(!1);
 function _() {
   return window.innerWidth ?? 1920;
 }
@@ -729,65 +724,6 @@ function _(_, _, _, _, _, _, _) {
       return _;
     },
   };
-}
-function _(_) {
-  let _ = _.GetELanguageFallback(_);
-  return _ == _ ? `${_}` : `${_}_${_}`;
-}
-function _(_) {
-  return _ ? _(new _(_.clanSteamID64), _.event) : null;
-}
-async function _(_, _) {
-  let _ = new URLSearchParams();
-  (_.clanAccountID && _.set(`clan_accountid`, String(_.clanAccountID)),
-    _.appid && _.set(`appid`, String(_.appid)),
-    _.eventGID && _.set(`event_gid`, _.eventGID),
-    _.announcementGID && _.set(`announcement_gid`, _.announcementGID),
-    _.set(`lang_list`, _(_)),
-    _.set(`last_modified_time`, `0`),
-    _.set(`origin`, window.location.origin));
-  let _ = _.STORE_BASE_URL + `events/ajaxgetpartnerevent?` + _.toString(),
-    _ = await fetch(_);
-  if (!_._) throw Error(`${_} answered ${_.status}`);
-  let _ = await _.json();
-  return _.success !== 1 || !_.event?.clan_steamid
-    ? null
-    : {
-        clanSteamID64: _.event.clan_steamid,
-        event: _.event,
-      };
-}
-function _(_, _) {
-  return [
-    `LinkedPartnerEvent`,
-    _.clanAccountID,
-    _.appid,
-    _.eventGID,
-    _.announcementGID,
-    _,
-  ];
-}
-function _(_) {
-  return (
-    !!_ &&
-    (!!_.clanAccountID || !!_.appid) &&
-    (!!_.eventGID || !!_.announcementGID)
-  );
-}
-function _(_, _) {
-  let _ = _(_);
-  return {
-    queryKey: _(_ ?? {}, _),
-    queryFn: () => _(_ ?? {}, _),
-    select: _,
-    enabled: _,
-    staleTime: 36e5,
-    retry: !1,
-  };
-}
-function _(_) {
-  let _ = _(_.LANGUAGE);
-  return _(_(_, _));
 }
 function _({ clanSteamID: _, strVanity: _, strGroupVanity: _ }) {
   let _ = _ !== void 0 || _ !== void 0,
@@ -7628,7 +7564,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`LoyaltyRewards.GetSummary#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetSummary = _;
@@ -7700,7 +7636,7 @@ var _ = _(_(), 1),
   function _(_, _, _) {
     return _.SendMsg(`LoyaltyRewards.AddReaction#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.AddReaction = _;
@@ -7708,7 +7644,7 @@ var _ = _(_(), 1),
     return _.SendMsg(`LoyaltyRewards.GetReactions#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetReactions = _;
@@ -7730,7 +7666,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetReactionConfig = _;
@@ -7775,7 +7711,7 @@ var _ = _(_(), 1),
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.QueryRewardItems = _;
@@ -9325,7 +9261,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FriendsList.GetFriendsList#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFriendsList = _;
@@ -9333,7 +9269,7 @@ var _ = class _ extends _.Message {
     return _.SendMsg(`FriendsList.GetFavorites#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetFavorites = _;

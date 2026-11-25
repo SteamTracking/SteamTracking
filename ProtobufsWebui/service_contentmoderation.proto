@@ -44,7 +44,7 @@ message CContentModeration_GetAuditLogByID_Response_AuditLogEntry {
 	optional int32 action = 4 [(.description) = "enum"];
 	optional string additional_json_data = 5;
 	optional bool actor_is_support = 6;
-	optional bool actor_is_developer = 7;
+	optional .ContentModerationAccountStatus actor_account_status = 8;
 }
 
 message CContentModeration_GetClaimedSubjects_Request {
@@ -300,6 +300,12 @@ message CContentModeration_WriteToAuditLogByID_Request {
 message CContentModeration_WriteToAuditLogByID_Response {
 }
 
+message ContentModerationAccountStatus {
+	optional bool is_support = 1;
+	optional bool is_developer = 2;
+	optional uint32 trust_bucket = 3;
+}
+
 message ContentReport {
 	optional uint64 report_id = 1;
 	optional uint64 reporter_steamid = 2;
@@ -328,7 +334,7 @@ message ContentReport {
 	optional uint64 reported_content_id = 25;
 	optional .ReportedContentCoordinates coordinates = 26;
 	optional bool reporter_is_support = 27;
-	optional bool reporter_is_developer = 28;
+	optional .ContentModerationAccountStatus reporter_account_status = 29;
 }
 
 message ContentReportSubject {
@@ -393,6 +399,7 @@ message ReportedContentCoordinates {
 	optional uint32 receiver_account_id = 12;
 	optional uint64 published_file_id = 13;
 	optional uint32 ugc_content_type = 14;
+	optional uint32 appid = 15;
 }
 
 service ContentModeration {

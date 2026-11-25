@@ -2,18 +2,18 @@
  ****/
 
 import { o as e, r as t } from "./chunk~f025431ab0.js";
-import { Lt as n, N as r, ft as i } from "./chunk~01cfc309bf.js";
+import { It as n, M as r, dt as i } from "./chunk~01cfc309bf.js";
 import {
-  Bx as a,
-  Ca as o,
+  Aa as a,
+  Da as o,
   Ea as s,
   Ma as c,
-  Ta as l,
-  fa as u,
-  ha as d,
-  ja as f,
-  ka as p,
-  sS as m,
+  Na as l,
+  Ta as u,
+  Vx as d,
+  ga as f,
+  lS as p,
+  pa as m,
   wa as h,
 } from "./main.js";
 var g = e(n(), 1),
@@ -68,10 +68,10 @@ function P(e) {
       size: r,
       status: i,
       color: a,
-      children: l,
-      value: d,
-      onValueChange: f,
-      ...p
+      children: s,
+      value: c,
+      onValueChange: d,
+      ...f
     } = e,
     [b, S] = (0, g.useState)({}),
     C = (0, g.useCallback)(
@@ -101,34 +101,34 @@ function P(e) {
         let n = Object.entries(b).sort(([, e], [, t]) => R(e.node, t.node)),
           r = n.length,
           i = t > 0 ? -1 : r;
-        d !== null &&
-          ((i = n.findIndex(([e]) => e === d)),
-          m(i !== -1, `Could not find current segmented value position`));
+        c !== null &&
+          ((i = n.findIndex(([e]) => e === c)),
+          p(i !== -1, `Could not find current segmented value position`));
         for (let a = 1; a <= r; a++) {
           let [o, s] = n[(((i + t * a) % r) + r) % r];
           if (!s.bDisabled) {
-            (o !== d && f(o), e.stopPropagation(), e.preventDefault());
+            (o !== c && d(o), e.stopPropagation(), e.preventDefault());
             break;
           }
         }
       }
     },
-    E = h(`SegmentedControl`, t),
-    D = o(r),
-    O = c(D),
+    E = u(`SegmentedControl`, t),
+    D = h(r),
+    O = l(D),
     k = (0, g.useMemo)(
       () => ({
-        value: d,
-        onValueChange: f,
+        value: c,
+        onValueChange: d,
         register: C,
         unregister: w,
         radius: n,
         size: O,
       }),
-      [d, f, C, w, n, O],
+      [c, d, C, w, n, O],
     );
-  return (0, M.jsx)(u, {
-    ...p,
+  return (0, M.jsx)(m, {
+    ...f,
     clickable: !1,
     hoverable: !1,
     focusable: !1,
@@ -141,7 +141,7 @@ function P(e) {
     onKeyDown: T,
     children: (0, M.jsx)(N.Provider, {
       value: k,
-      children: (0, M.jsxs)(s, {
+      children: (0, M.jsxs)(o, {
         className: x,
         style: {
           "--outer-radius":
@@ -150,8 +150,8 @@ function P(e) {
               : `var(--control-radius)`,
         },
         children: [
-          l,
-          d !== null && (0, M.jsx)(L, { radius: n, color: a, size: O }),
+          s,
+          c !== null && (0, M.jsx)(L, { radius: n, color: a, size: O }),
         ],
       }),
     }),
@@ -161,11 +161,11 @@ function F(e) {
   let { value: t, children: n, disabled: r } = e,
     i = (0, g.useContext)(N),
     [a, o] = (0, g.useState)(),
-    { register: s, unregister: c } = i || {};
+    { register: c, unregister: l } = i || {};
   if (
     ((0, g.useEffect)(
-      () => (!a || !s || !c ? () => {} : (s(a, t, !!r), () => c(a, t))),
-      [s, c, t, a, r],
+      () => (!a || !c || !l ? () => {} : (c(a, t, !!r), () => l(a, t))),
+      [c, l, t, a, r],
     ),
     !i)
   )
@@ -176,7 +176,7 @@ function F(e) {
       (e.stopPropagation(), e.preventDefault(), !(p || r) && d(t));
     },
     h = n === void 0 ? t : n;
-  return (0, M.jsx)(l, {
+  return (0, M.jsx)(s, {
     justify: `center`,
     align: `center`,
     ref: o,
@@ -196,7 +196,7 @@ function I(e) {
 ((I.Item = F), (I.Root = P));
 function L(e) {
   let { radius: t, color: n, size: r } = e;
-  return (0, M.jsx)(s, {
+  return (0, M.jsx)(o, {
     className: (0, _.default)(S, r && v[`Size-${r}`]),
     children: (0, M.jsx)(`div`, { className: b, "data-accent-color": n }),
   });
@@ -248,38 +248,38 @@ function W(e) {
   let { children: t, color: n, ...r } = e,
     {
       min: i,
-      max: a,
-      onValueChange: o,
-      value: s,
-      step: c = 1,
-      onValueSettled: l,
-      ...u
+      max: o,
+      onValueChange: s,
+      value: l,
+      step: u = 1,
+      onValueSettled: d,
+      ...f
     } = r,
-    d = {
+    p = {
       min: i,
-      max: a,
-      step: c,
-      value: s,
-      onValueChange: o,
-      onValueSettled: l,
+      max: o,
+      step: u,
+      value: l,
+      onValueChange: s,
+      onValueSettled: d,
     },
-    m = f({ ...u, className: z }, p),
+    m = c({ ...f, className: z }, a),
     h = (0, g.useRef)(null),
     _ = (0, g.useRef)(null),
     [v] = (0, g.useState)(() => new Set()),
     [y, b] = (0, g.useState)(!1);
   return (0, M.jsx)(U.Provider, {
-    value: { ...d, handles: v, bDragActive: y },
+    value: { ...p, handles: v, bDragActive: y },
     children: (0, M.jsx)(`div`, {
       ...m,
       "data-accent-color": n,
       ref: h,
       onPointerDown: (e) => {
         if (h.current) {
-          if ((e.target.setPointerCapture(e.pointerId), typeof s != `number`)) {
+          if ((e.target.setPointerCapture(e.pointerId), typeof l != `number`)) {
             let t = h.current.getBoundingClientRect(),
-              n = Z(G(h.current, t, e.clientX), [0, t.width], [i, a]);
-            _.current = { activeValueIndex: q(s, n), bMoved: !1 };
+              n = Z(G(h.current, t, e.clientX), [0, t.width], [i, o]);
+            _.current = { activeValueIndex: q(l, n), bMoved: !1 };
           } else _.current = { activeValueIndex: 0, bMoved: !1 };
           b(!0);
         }
@@ -288,34 +288,34 @@ function W(e) {
         let t = e.target;
         t.hasPointerCapture(e.pointerId) &&
           (t.releasePointerCapture(e.pointerId),
-          l && _.current?.bMoved && l(s),
+          d && _.current?.bMoved && d(l),
           b(!1));
       },
       onPointerMove: (e) => {
         if (e.target.hasPointerCapture(e.pointerId) && h.current && _.current) {
           let t = h.current.getBoundingClientRect(),
             n = Q({
-              value: Z(G(h.current, t, e.clientX), [0, t.width], [i, a]),
+              value: Z(G(h.current, t, e.clientX), [0, t.width], [i, o]),
               min: i,
-              max: a,
-              step: c,
+              max: o,
+              step: u,
             }),
-            r = [...s];
+            r = [...l];
           ((r[_.current.activeValueIndex] = n),
             r.sort((e, t) => e - t),
             (_.current.activeValueIndex = r.indexOf(n)),
             (_.current.bMoved = !0),
-            o(r));
+            s(r));
         }
       },
       onClick: (e) => {
         if (!h.current || _.current?.bMoved) return;
         let t = h.current.getBoundingClientRect(),
-          n = Z(G(h.current, t, e.clientX), [0, t.width], [i, a]),
-          r = Q({ value: n, min: i, max: a, step: c }),
-          u = q(s, n),
-          d = [...s];
-        ((d[u] = r), o(d), l && l(d));
+          n = Z(G(h.current, t, e.clientX), [0, t.width], [i, o]),
+          r = Q({ value: n, min: i, max: o, step: u }),
+          a = q(l, n),
+          c = [...l];
+        ((c[a] = r), s(c), d && d(c));
       },
       children: (0, M.jsx)(`div`, { className: B, children: t }),
     }),
@@ -341,16 +341,16 @@ function q(e, t) {
 }
 function J(e) {
   let { render: t, ...n } = e;
-  return d(t, (0, M.jsx)(`div`, { className: V }), n, void 0);
+  return f(t, (0, M.jsx)(`div`, { className: V }), n, void 0);
 }
 function Y(e) {
   let { start: t, end: n, render: r } = e,
     i = (0, g.useContext)(U);
-  m(i, `SliderRange must be used within a SliderRoot!`);
+  p(i, `SliderRange must be used within a SliderRoot!`);
   let { min: a, max: o } = i,
     s = $(t, a, o),
     c = 100 - $(n, a, o);
-  return d(
+  return f(
     r,
     (0, M.jsx)(`div`, {
       className: H,
@@ -363,7 +363,7 @@ function Y(e) {
 function X(e) {
   let { render: t } = e,
     n = (0, g.useContext)(U);
-  m(n, `SliderHandle must be used within a SliderRoot!`);
+  p(n, `SliderHandle must be used within a SliderRoot!`);
   let {
       min: r,
       max: i,
@@ -373,14 +373,14 @@ function X(e) {
       onValueChange: c,
       onValueSettled: l,
     } = n,
-    [u, f] = (0, g.useState)(null),
-    [p, h] = (0, g.useState)(-1);
+    [u, d] = (0, g.useState)(null),
+    [m, h] = (0, g.useState)(-1);
   (0, g.useEffect)(
     () => (u ? (a.add(u), h(a.size - 1), () => a.delete(u)) : () => {}),
     [u, a],
   );
-  let _ = p > -1,
-    v = { "--handle-pct": `${$(_ ? o[p] : r, r, i)}%` },
+  let _ = m > -1,
+    v = { "--handle-pct": `${$(_ ? o[m] : r, r, i)}%` },
     y = (e) => {
       switch (e.key) {
         case `ArrowRight`:
@@ -391,9 +391,9 @@ function X(e) {
           e.currentTarget.matches(`:dir(rtl)`) && (t = `ArrowLeft`);
           let n = e.key === t || e.key === `ArrowUp`,
             a = s * (n ? 1 : -1),
-            u = Q({ value: o[p] + a, min: r, max: i, step: s }),
+            u = Q({ value: o[m] + a, min: r, max: i, step: s }),
             d = [...o];
-          ((d[p] = K(o, p, u)),
+          ((d[m] = K(o, m, u)),
             c(d),
             l && l(d),
             e.preventDefault(),
@@ -404,9 +404,9 @@ function X(e) {
         case `PageDown`: {
           let t = e.key === `PageUp`,
             n = Math.round((i - r) / 10) * (t ? 1 : -1),
-            a = Q({ value: o[p] + n, min: r, max: i, step: s }),
+            a = Q({ value: o[m] + n, min: r, max: i, step: s }),
             u = [...o];
-          ((u[p] = K(o, p, a)),
+          ((u[m] = K(o, m, a)),
             c(u),
             l && l(u),
             e.preventDefault(),
@@ -417,28 +417,28 @@ function X(e) {
     };
   _ || (v.display = `none`);
   let b = {
-    ref: f,
+    ref: d,
     role: `slider`,
-    "aria-valuenow": o[p],
+    "aria-valuenow": o[m],
     "aria-valuemin": r,
     "aria-valuemax": i,
     tabIndex: 0,
     onKeyDown: y,
   };
-  return d(t, (0, M.jsx)(`span`, { className: ee, style: v }), b, {
-    value: o[p],
+  return f(t, (0, M.jsx)(`span`, { className: ee, style: v }), b, {
+    value: o[m],
     bDragActive: n.bDragActive,
   });
 }
 function Z(e, t, n) {
   if (t[0] === t[1] || n[0] === n[1]) return n[0];
   let r = ((n[1] - n[0]) / (t[1] - t[0])) * (e - t[0]) + n[0];
-  return a(r, n[0], n[1]);
+  return d(r, n[0], n[1]);
 }
 function Q(e) {
   let { value: t, min: n, max: r, step: i } = e,
-    o = Math.round((t - n) / i) / (1 / i);
-  return a(o + n, n, r);
+    a = Math.round((t - n) / i) / (1 / i);
+  return d(a + n, n, r);
 }
 function $(e, t, n) {
   return ((e - t) / (n - t)) * 100;

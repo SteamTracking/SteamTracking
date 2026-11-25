@@ -243,6 +243,11 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 	}
 }
 
+function CancelUpdateBillingInfo()
+{
+	window.location = 'https://store.steampowered.com/account/';
+}
+
 var g_winExternal = false;
 
 var g_bcCheckoutReturn = window.BroadcastChannel ? new BroadcastChannel( 'steam_checkout_return' ) : null;
@@ -3572,9 +3577,9 @@ function UpdatePaymentInfoForm()
 			}
 			else
 			{
-				$('payment_header').innerHTML = 'Update saved payment method';
+				$('payment_header').innerHTML = 'Save A New Payment Method';
 			}
-			$('payment_info_method_label').innerHTML = 'Select your existing saved payment method or enter a new payment method for future purchases and subscription renewals.';
+			$('payment_info_method_label').innerHTML = 'Select a new payment method for future purchases and subscription renewals.';
 		}
 		else if ( g_bPurchaseContainsSubscription )
 		{
@@ -3855,9 +3860,11 @@ function UpdatePaymentInfoForm()
 		$('bank_account_id_row').style.display = strBankAccountIDDisplay;
 
 		var strAllowPaymentMethod = !bDisabledPaymentMethod ? 'block' : 'none';
-		$('youll_get_to_review').style.display = strAllowPaymentMethod;
 		$('submit_payment_info_btn').style.display = strAllowPaymentMethod;
 		$('payment_row_bank_name').style.display = ( bShowBankSelection && ( g_bHasBankDirectoryArray ) ) ? 'block' : 'none';
+
+		var strShowReviewStatement = ( g_bIsUpdateBillingInfoForm || g_bUpdateBillingFormAddressOnly ) ? 'none' : strAllowPaymentMethod;
+		$('youll_get_to_review').style.display = strShowReviewStatement;
 
 				var rgPaymentNotes = [];
 		var rgAllSections = ['payment_method_disabled_app', 'payment_method_unable_to_split', 'payment_row_not_refundable', 'payment_method_delays_in_processing', 'payment_method_cafe_funded', 'payment_method_specific_note'];

@@ -4,29 +4,29 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import {
   At as t,
-  Ct as n,
-  jt as r,
-  kt as i,
-  tt as a,
+  Ot as n,
+  St as r,
+  et as i,
+  kt as a,
 } from "./chunk~01cfc309bf.js";
 import { c as o, l as s, s as c, u as l } from "./chunk~cbbb6ae37c.js";
 import { n as u } from "./chunk~0111fcd096.js";
 import "./chunk~3f4314f3b4.js";
 import { n as d } from "./chunk~fc8a9e4879.js";
 import {
-  Kb as f,
-  Xy as p,
-  Yu as m,
-  _x as h,
-  cx as g,
-  eu as _,
-  o as v,
-  sS as y,
+  Xu as f,
+  Zy as p,
+  lS as m,
+  lx as h,
+  o as g,
+  qb as _,
+  tu as v,
+  vx as y,
 } from "./main.js";
 import { t as b } from "./chunk~10c934b72c.js";
 var x = class e {
   constructor() {
-    i(this);
+    n(this);
   }
   m_mapBroadcasterSteamIDToEvents = new Map();
   m_mapBroadcasterSteamIDData = new Map();
@@ -84,7 +84,7 @@ var x = class e {
       d.QueueLoadPartnerEvent(e.clanid, e.unique_id);
     let r = n.rgCalendarItems.map((e) =>
         d.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-          p.InitFromClanID(e.clanid, h.EUNIVERSE),
+          p.InitFromClanID(e.clanid, y.EUNIVERSE),
           e.unique_id,
           0,
         ),
@@ -156,9 +156,9 @@ var x = class e {
     return this.m_mapBroadcasterSteamIDData.get(e)?.m_rgAppIDs;
   }
 };
-f([t], x.prototype, `m_mapBroadcasterSteamIDData`, void 0);
+_([a], x.prototype, `m_mapBroadcasterSteamIDData`, void 0);
 var S = new x(),
-  C = e(a()),
+  C = e(i()),
   w = !1;
 function T(e) {
   return !!(e && e.thumbnail_http_address);
@@ -172,7 +172,7 @@ function E(e, t) {
 }
 var D = class e {
   constructor() {
-    i(this);
+    n(this);
   }
   static s_GlobalStore;
   m_inFlightRequests = new Map();
@@ -254,8 +254,8 @@ var D = class e {
     return (
       (t = e.steamid
         ? new p(e.steamid)
-        : p.InitFromAccountID(e.accountid, h.EUNIVERSE)),
-      h.COMMUNITY_BASE_URL + `broadcast/watch/` + t.ConvertTo64BitString()
+        : p.InitFromAccountID(e.accountid, y.EUNIVERSE)),
+      y.COMMUNITY_BASE_URL + `broadcast/watch/` + t.ConvertTo64BitString()
     );
   }
   BIsAppStreaming(e) {
@@ -288,20 +288,20 @@ var D = class e {
   }
   async LoadBIsEmbeddedBroadcastHidden(e) {
     if (this.m_bUserPreferenceHideBroadcastByDefault === void 0) {
-      let t = g(`broadcastuser`, `application_config`);
-      if (!t)
+      let n = h(`broadcastuser`, `application_config`);
+      if (!n)
         try {
-          let n =
-            h.STORE_BASE_URL + `broadcast/ajaxgetuserbroadcastpreferences`;
-          t = (await C.default.get(n, { params: {}, cancelToken: e.token }))
+          let t =
+            y.STORE_BASE_URL + `broadcast/ajaxgetuserbroadcastpreferences`;
+          n = (await C.default.get(t, { params: {}, cancelToken: e.token }))
             .data;
         } catch (e) {
-          (console.log(`LoadBIsEmbeddedBroadcastHidden: ` + m(e).strErrorMsg),
-            (t = { bHideStoreBroadcast: !1 }));
+          (console.log(`LoadBIsEmbeddedBroadcastHidden: ` + f(e).strErrorMsg),
+            (n = { bHideStoreBroadcast: !1 }));
         }
-      r(() => {
-        ((this.m_bUserPreferenceHideBroadcastByDefault = t.bHideStoreBroadcast),
-          (this.m_bCollapsed = t.bHideStoreBroadcast));
+      t(() => {
+        ((this.m_bUserPreferenceHideBroadcastByDefault = n.bHideStoreBroadcast),
+          (this.m_bCollapsed = n.bHideStoreBroadcast));
       });
     }
     return this.BIsEmbeddedBroadcastHiddenByDefaultUserSettings();
@@ -309,12 +309,14 @@ var D = class e {
   async SetupEmbeddableVOD(e, t) {
     ((this.m_bUseFakeData = !1),
       (this.m_streamChatStatus = `remove`),
-      y(!!e.nAppIDVOD, `SetupEmbeddableVOD requires a VOD appid`),
-      await _.Get().QueueAppRequest(e.nAppIDVOD, {
-        include_assets: !0,
-        include_trailers: !0,
-      }));
-    let n = _.Get().GetApp(e.nAppIDVOD),
+      m(!!e.nAppIDVOD, `SetupEmbeddableVOD requires a VOD appid`),
+      await v
+        .Get()
+        .QueueAppRequest(e.nAppIDVOD, {
+          include_assets: !0,
+          include_trailers: !0,
+        }));
+    let n = v.Get().GetApp(e.nAppIDVOD),
       r = new s();
     ((r.accountid = 0),
       (r.nAppIDVOD = e.nAppIDVOD),
@@ -324,7 +326,7 @@ var D = class e {
       (r.title = n?.GetName() || ``));
     let i = this.GetStreams(e);
     if (
-      (y(
+      (m(
         !!i,
         `SetupEmbeddableVOD called before the streams loaded`,
         e.nAppIDVOD,
@@ -346,12 +348,12 @@ var D = class e {
     };
     try {
       let n = await C.default.get(
-        h.STORE_BASE_URL + `broadcast/ajaxgetstreamersforpreview`,
+        y.STORE_BASE_URL + `broadcast/ajaxgetstreamersforpreview`,
         { params: t },
       );
       return this.HandleHintLoadBroadcastResponse(e, n.data);
     } catch (e) {
-      let t = m(e);
+      let t = f(e);
       console.error(
         `HintLoadEmbeddablePreviewStreams hit error loading: ` + t.strErrorMsg,
         t,
@@ -372,16 +374,16 @@ var D = class e {
     );
   }
   async InternalHintLoadEmbeddableStreams(e, t) {
-    let n = g(`broadcast_available_for_page`, `application_config`);
+    let n = h(`broadcast_available_for_page`, `application_config`);
     if (l(n)) return this.HandleHintLoadBroadcastResponse(e, n);
     try {
       let n = await C.default.get(
-        h.STORE_BASE_URL + `broadcast/ajaxgetstreamersforpage`,
+        y.STORE_BASE_URL + `broadcast/ajaxgetstreamersforpage`,
         { params: t },
       );
       return this.HandleHintLoadBroadcastResponse(e, n.data);
     } catch (e) {
-      let t = m(e);
+      let t = f(e);
       console.error(
         `HintLoadEmbeddableStreams hit error loading: ` + t.strErrorMsg,
         t,
@@ -389,16 +391,16 @@ var D = class e {
     }
     return [];
   }
-  async HandleHintLoadBroadcastResponse(e, t) {
+  async HandleHintLoadBroadcastResponse(e, n) {
     ((this.m_bUseFakeData = !1),
       e.bIsPreview &&
-        (t?.filtered?.length > 0
-          ? (y(!!e.event, `Broadcast preview requires an event`),
+        (n?.filtered?.length > 0
+          ? (m(!!e.event, `Broadcast preview requires an event`),
             this.ExtractBroadcastPrioritiesFromPartnerEventForPreview(
               e.event,
-              t.filtered,
+              n.filtered,
             ))
-          : ((t = {
+          : ((n = {
               filtered: [{}],
               success: 1,
               total_count: 1,
@@ -406,26 +408,26 @@ var D = class e {
               broadcast_chat_visibility: `hide`,
             }),
             (this.m_bUseFakeData = !0))),
-      t.broadcast_chat_visibility &&
-        (this.m_pageChatStatus = t.broadcast_chat_visibility));
-    let n = [];
-    r(() => {
-      t.filtered.forEach((e) => {
+      n.broadcast_chat_visibility &&
+        (this.m_pageChatStatus = n.broadcast_chat_visibility));
+    let r = [];
+    t(() => {
+      n.filtered.forEach((e) => {
         e.steamid ||= p
-          .InitFromAccountID(e.accountid, h.EUNIVERSE)
+          .InitFromAccountID(e.accountid, y.EUNIVERSE)
           .ConvertTo64BitString();
         let t = b.GetOrCreateBroadcastInfo(e.steamid),
-          r = e.appid ? Number(e.appid) : 7;
-        ((t.m_nAppID = r),
-          (t.m_strAppId = `` + r),
+          n = e.appid ? Number(e.appid) : 7;
+        ((t.m_nAppID = n),
+          (t.m_strAppId = `` + n),
           e.current_selection_priority === void 0 &&
             (e.current_selection_priority = e.default_selection_priority),
-          r != 7 && n.push(r));
+          n != 7 && r.push(n));
       });
     });
     let i = this.GetStreamsLookupKeyFromDef(e);
     if (
-      (this.m_lookupStreams.set(i, t.filtered), this.m_onLoadContextCall.has(i))
+      (this.m_lookupStreams.set(i, n.filtered), this.m_onLoadContextCall.has(i))
     ) {
       let e = this.m_onLoadContextCall.get(i);
       e && e.fnCallback();
@@ -502,7 +504,7 @@ var D = class e {
   async InternalAttemptToPlayStream(e, t) {
     this.GetStreamsLookupKeyFromDef(e);
     try {
-      let e = h.STORE_BASE_URL + `broadcast/ajaxcheckbroadcast`,
+      let e = y.STORE_BASE_URL + `broadcast/ajaxcheckbroadcast`,
         n = {
           broadcastaccountid: t.accountid,
           viewer_token: b.GetViewerToken(),
@@ -510,7 +512,7 @@ var D = class e {
         };
       return (await C.default.get(e, { params: n })).data;
     } catch (e) {
-      let t = m(e);
+      let t = f(e);
       console.error(`Broadcast.AttemptToPlayStream: ` + t.strErrorMsg, t);
     }
     return null;
@@ -540,8 +542,8 @@ var D = class e {
           ? e.accountIDs.slice().sort().join(`,`)
           : void 0,
       test: w,
-      cc: h.COUNTRY,
-      l: h.LANGUAGE,
+      cc: y.COUNTRY,
+      l: y.LANGUAGE,
       hubtype: e.event?.GetContentHubType(),
       hubcategory: e.event?.GetContentHubCategory(),
       hubtagid: e.event?.GetContentHubTag(),
@@ -568,15 +570,15 @@ var D = class e {
   }
   Init() {}
 };
-(f([t], D.prototype, `m_lookupStreams`, void 0),
-  f([t], D.prototype, `m_playReadyStream`, void 0),
-  f([t], D.prototype, `m_pageChatStatus`, void 0),
-  f([t], D.prototype, `m_streamChatStatus`, void 0),
-  f([t], D.prototype, `m_bUserChatExpanded`, void 0),
-  f([t], D.prototype, `m_bUserPreferenceHideBroadcastByDefault`, void 0),
-  f([t], D.prototype, `m_bCollapsed`, void 0),
-  f([n], D.prototype, `HintLoadEmbeddablePreviewStreams`, null),
-  f([n], D.prototype, `AttemptToPlayStream`, null));
+(_([a], D.prototype, `m_lookupStreams`, void 0),
+  _([a], D.prototype, `m_playReadyStream`, void 0),
+  _([a], D.prototype, `m_pageChatStatus`, void 0),
+  _([a], D.prototype, `m_streamChatStatus`, void 0),
+  _([a], D.prototype, `m_bUserChatExpanded`, void 0),
+  _([a], D.prototype, `m_bUserPreferenceHideBroadcastByDefault`, void 0),
+  _([a], D.prototype, `m_bCollapsed`, void 0),
+  _([r], D.prototype, `HintLoadEmbeddablePreviewStreams`, null),
+  _([r], D.prototype, `AttemptToPlayStream`, null));
 function O(e) {
   return e.current_selection_priority || o.k_eGeneral;
 }
@@ -595,12 +597,12 @@ async function A(e, t, n) {
     (r.append(`page_action`, `` + t),
       r.append(`snr`, n),
       C.default.post(
-        h.STORE_BASE_URL + `ajaxreportproductaction/` + e + `/`,
+        y.STORE_BASE_URL + `ajaxreportproductaction/` + e + `/`,
         r,
       ));
   }
 }
-var j = new v();
+var j = new g();
 export {
   A as a,
   x as c,

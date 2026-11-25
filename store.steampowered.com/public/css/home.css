@@ -1145,28 +1145,6 @@ body.v7 .page_content_ctn.dark {
 	width: 18px;
 }
 
-.see_more_gamepad_hint {
-	display: flex;
-	align-items: center;
-	justify-content: end;
-	gap: 5px;
-	color: rgb(255, 255, 255);
-	font-weight: 500;
-	font-size: 13px;
-
-	opacity: 0;
-	transition: opacity 300ms ease-in-out;
-}
-
-.see_more_gamepad_hint img {
-	width: 20px;
-	height: 20px;
-}
-
-.see_more_gamepad_hint.hover_active {
-	opacity: 1;
-}
-
 .see_more_link {
 	display: flex;
 	align-items: center;
@@ -3876,6 +3854,34 @@ html.GamepadMode #module_discounts_and_events:not( :has( .DiscountsAndEventsRead
 }
 
 /* Infinite Scroll */
+
+.home_page_sign_in_ctn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	padding: 32px 16px;
+	background: rgba( 0, 0, 0, 0.2 );
+	text-align: center;
+	color: #8f98a0;
+	font-size: 15px;
+}
+
+.home_page_sign_in_ctn p {
+	margin: 0;
+}
+
+.home_page_sign_in_ctn .signin_buttons_ctn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+	margin-top: 8px;
+}
+
+.home_page_sign_in_ctn .signin_join_link a {
+	color: #ffffff;
+}
 
 .home_page_content {
 	position: relative;

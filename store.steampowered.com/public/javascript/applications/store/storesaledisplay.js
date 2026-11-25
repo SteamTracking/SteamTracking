@@ -2,7 +2,7 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, ft as n } from "./chunk~01cfc309bf.js";
+import { It as t, dt as n } from "./chunk~01cfc309bf.js";
 import { m as r } from "./chunk~f57d770d64.js";
 import { et as i, tt as a } from "./chunk~2185942436.js";
 import { t as o } from "./chunk~06d7f063bc.js";
@@ -10,14 +10,14 @@ import { n as s, t as c } from "./chunk~3135e25ddf.js";
 import { t as l } from "./chunk~eefd71512b.js";
 import { n as u } from "./chunk~fc8a9e4879.js";
 import {
-  Ed as d,
-  Xy as f,
+  Dd as d,
+  Zy as f,
   _t as p,
-  gt as m,
-  gx as h,
-  rb as g,
+  _x as m,
+  gt as h,
+  ib as g,
   t as _,
-  vx as v,
+  yx as v,
 } from "./main.js";
 var y = e(t()),
   b = n();
@@ -35,7 +35,7 @@ function S(e) {
     );
   y.useEffect(() => {
     if (!c && d?.AnnouncementGID != v.ANNOUNCEMENT_GID) {
-      let e = new f(h.CLANSTEAMID);
+      let e = new f(m.CLANSTEAMID);
       u.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
         e,
         v.ANNOUNCEMENT_GID,
@@ -58,7 +58,7 @@ function S(e) {
   return (0, b.jsx)(C, {
     eventModel: S,
     children: (0, b.jsx)(p, {
-      children: (0, b.jsx)(m, {
+      children: (0, b.jsx)(h, {
         curator_clanid: S?.clanSteamID?.GetAccountID(),
         children: (0, b.jsx)(o, {
           promotionName: t,

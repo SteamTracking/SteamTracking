@@ -13105,6 +13105,362 @@ var CCallbackList = class {
       return `CClanMatchEventByRange`;
     }
   },
+  CCommunity_ClanAnnouncementInfo = class t
+    extends import_google_protobuf.Message
+  {
+    static ImplementsStaticInterface() {}
+    constructor(n = null) {
+      (super(),
+        t.prototype.gid || AddAccessors(t.M()),
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [9], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            gid: {
+              n: 1,
+              br: ReaderProto.readUint64String,
+              bw: WriterProto.writeUint64String,
+            },
+            clanid: {
+              n: 2,
+              br: ReaderProto.readUint64String,
+              bw: WriterProto.writeUint64String,
+            },
+            posterid: {
+              n: 3,
+              br: ReaderProto.readUint64String,
+              bw: WriterProto.writeUint64String,
+            },
+            headline: {
+              n: 4,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            posttime: {
+              n: 5,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            updatetime: {
+              n: 6,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            body: {
+              n: 7,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            commentcount: {
+              n: 8,
+              br: ReaderProto.readInt32,
+              bw: WriterProto.writeInt32,
+            },
+            tags: {
+              n: 9,
+              r: !0,
+              q: !0,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeRepeatedString,
+            },
+            language: {
+              n: 10,
+              br: ReaderProto.readInt32,
+              bw: WriterProto.writeInt32,
+            },
+            hidden: {
+              n: 11,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
+            forum_topic_id: {
+              n: 12,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            event_gid: {
+              n: 13,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            voteupcount: {
+              n: 14,
+              br: ReaderProto.readInt32,
+              bw: WriterProto.writeInt32,
+            },
+            votedowncount: {
+              n: 15,
+              br: ReaderProto.readInt32,
+              bw: WriterProto.writeInt32,
+            },
+            ban_check_result: {
+              n: 16,
+              br: ReaderProto.readEnum,
+              bw: WriterProto.writeEnum,
+            },
+            banned: {
+              n: 17,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
+    }
+    toObject(n = !1) {
+      return t.toObject(n, this);
+    }
+    static toObject(n, r) {
+      return ToObject(t.M(), n, r);
+    }
+    static fromObject(n) {
+      return FromObject(t.M(), n);
+    }
+    static deserializeBinary(n) {
+      let r = new import_google_protobuf.BinaryReader(n),
+        i = new t();
+      return t.deserializeBinaryFromReader(i, r);
+    }
+    static deserializeBinaryFromReader(n, r) {
+      return DeserializeBinary(t.MBF(), n, r);
+    }
+    serializeBinary() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
+    }
+    static serializeBinaryToWriter(n, r) {
+      SerializeBinary(t.M(), n, r);
+    }
+    serializeBase64String() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
+    }
+    getClassName() {
+      return `CCommunity_ClanAnnouncementInfo`;
+    }
+  },
+  CClanEventData = class t extends import_google_protobuf.Message {
+    static ImplementsStaticInterface() {}
+    constructor(n = null) {
+      (super(),
+        t.prototype.gid || AddAccessors(t.M()),
+        import_google_protobuf.Message.initialize(this, n, 0, -1, [28], null));
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        (t.sm_m ||= {
+          proto: t,
+          fields: {
+            gid: {
+              n: 1,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            clan_steamid: {
+              n: 2,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            event_name: {
+              n: 3,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            event_type: {
+              n: 4,
+              br: ReaderProto.readEnum,
+              bw: WriterProto.writeEnum,
+            },
+            appid: {
+              n: 5,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            server_address: {
+              n: 6,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            server_password: {
+              n: 7,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            rtime32_start_time: {
+              n: 8,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            rtime32_end_time: {
+              n: 9,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            comment_count: {
+              n: 10,
+              br: ReaderProto.readInt32,
+              bw: WriterProto.writeInt32,
+            },
+            creator_steamid: {
+              n: 11,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            last_update_steamid: {
+              n: 12,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            event_notes: {
+              n: 13,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            jsondata: {
+              n: 14,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            announcement_body: { n: 15, c: CCommunity_ClanAnnouncementInfo },
+            published: {
+              n: 16,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
+            hidden: {
+              n: 17,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
+            rtime32_visibility_start: {
+              n: 18,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            rtime32_visibility_end: {
+              n: 19,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            broadcaster_accountid: {
+              n: 20,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            follower_count: {
+              n: 21,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            ignore_count: {
+              n: 22,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            forum_topic_id: {
+              n: 23,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            rtime32_last_modified: {
+              n: 24,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            news_post_gid: {
+              n: 25,
+              br: ReaderProto.readFixed64String,
+              bw: WriterProto.writeFixed64String,
+            },
+            rtime_mod_reviewed: {
+              n: 26,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            featured_app_tagid: {
+              n: 27,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            referenced_appids: {
+              n: 28,
+              r: !0,
+              q: !0,
+              br: ReaderProto.readUint32,
+              pbr: ReaderProto.readPackedUint32,
+              bw: WriterProto.writeRepeatedUint32,
+            },
+            build_id: {
+              n: 29,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+            build_branch: {
+              n: 30,
+              br: ReaderProto.readString,
+              bw: WriterProto.writeString,
+            },
+            unlisted: {
+              n: 31,
+              br: ReaderProto.readBool,
+              bw: WriterProto.writeBool,
+            },
+            rtime_created: {
+              n: 32,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
+          },
+        }),
+        t.sm_m
+      );
+    }
+    static MBF() {
+      return ((t.sm_mbf ||= RemapMetadataByField(t.M())), t.sm_mbf);
+    }
+    toObject(n = !1) {
+      return t.toObject(n, this);
+    }
+    static toObject(n, r) {
+      return ToObject(t.M(), n, r);
+    }
+    static fromObject(n) {
+      return FromObject(t.M(), n);
+    }
+    static deserializeBinary(n) {
+      let r = new import_google_protobuf.BinaryReader(n),
+        i = new t();
+      return t.deserializeBinaryFromReader(i, r);
+    }
+    static deserializeBinaryFromReader(n, r) {
+      return DeserializeBinary(t.MBF(), n, r);
+    }
+    serializeBinary() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBuffer());
+    }
+    static serializeBinaryToWriter(n, r) {
+      SerializeBinary(t.M(), n, r);
+    }
+    serializeBase64String() {
+      var n = new import_google_protobuf.BinaryWriter();
+      return (t.serializeBinaryToWriter(this, n), n.getResultBase64String());
+    }
+    getClassName() {
+      return `CClanEventData`;
+    }
+  },
   CPackageReservationStatus = class t extends import_google_protobuf.Message {
     static ImplementsStaticInterface() {}
     constructor(n = null) {
@@ -13501,6 +13857,11 @@ var CCallbackList = class {
               n: 20,
               br: ReaderProto.readBool,
               bw: WriterProto.writeBool,
+            },
+            screen_refresh_rate: {
+              n: 21,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
             },
           },
         }),
@@ -16127,11 +16488,7 @@ var CCallbackList = class {
         CClientMetrics_ReportReactUsage_Notification,
         n,
       ),
-      {
-        ePrivilege: 2,
-        eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
-      },
+      { ePrivilege: 2, eWebAPIKeyRequirement: 1, rgBrowserAPISites: [`all`] },
     );
   }
   t.ReportReactUsage = o;
@@ -19663,11 +20020,6 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
               d: !1,
               br: ReaderProto.readBool,
               bw: WriterProto.writeBool,
-            },
-            price_to_base_discount_on: {
-              n: 53,
-              br: ReaderProto.readInt64String,
-              bw: WriterProto.writeInt64String,
             },
             free_with_master_sub_appid: {
               n: 54,
@@ -25311,7 +25663,7 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 1,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25342,7 +25694,7 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25356,7 +25708,7 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25383,7 +25735,7 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -25401,7 +25753,7 @@ var StoreGameRating = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -32708,16 +33060,17 @@ var LocalizationManager = new CLocalizationManager();
 window.LocalizationManager = LocalizationManager;
 export {
   require_react_dom as $,
-  SerializeBinary as $n,
+  RemapMetadataByField as $n,
   k_EMsgAMClientCreateFriendsGroup as $t,
   CTrackedEventListeners as A,
-  CLocalizationToken as An,
+  CClanMatchEventByRange as An,
   GetOptionalConfigJSON as At,
   computed as B,
-  FindAndRemoveWhere as Bn,
+  FindAndRemove as Bn,
   StoreBrowseContext as Bt,
   now as C,
   CClientMetrics_ReportReactUsage_Notification as Cn,
+  require_react as Cr,
   Config as Ct,
   CurrentLocalizationSettings as D,
   ClientMetricsService as Dn,
@@ -32726,169 +33079,169 @@ export {
   CClientMetrics_ReportReactUsage_Notification_RouteData as En,
   UserConfig as Et,
   ObservableMap as F,
-  CCallbackList as Fn,
+  UserContentDescriptorPreferences as Fn,
   UserConfig$1 as Ft,
   observable as G,
-  SortedInsert as Gn,
+  SortedFindLessOrEqual as Gn,
   CStorePageFilter as Gt,
   getDependencyTree as H,
-  PadArray as Hn,
+  MoveElement as Hn,
   StoreBrowseService as Ht,
   Reaction as I,
-  bind as In,
+  CCallbackList as In,
   CStoreBrowse_GetHardwareItems_Request as It,
   reaction as J,
-  AddAccessors as Jn,
+  AssertNever as Jn,
   initProtoBufMsgForServiceMethod as Jt,
   observe as K,
-  AssertMsg as Kn,
+  SortedInsert as Kn,
   CBaseProtoBufMsg as Kt,
   action as L,
-  ArrayWithoutElement as Ln,
+  bind as Ln,
   CStoreBrowse_GetItems_Request as Lt,
   SubscribableValue as M,
-  CMsgMulti as Mn,
+  CMsgIPAddress as Mn,
   BIsMobile as Mt,
   __decorate$2 as N,
-  CPackageReservationStatus as Nn,
+  CMsgMulti as Nn,
   BroadcastConfig as Nt,
   BShouldLanguageUseRTL as O,
   CCDDBAppDetailCommon as On,
   InitConfig as Ot,
   Long as P,
-  UserContentDescriptorPreferences as Pn,
+  CPackageReservationStatus as Pn,
   Config$1 as Pt,
   CreateWindowPortal as Q,
-  RemapMetadataByField as Qn,
+  ReaderProto as Qn,
   k_EMsgAMClientAddFriendToGroup as Qt,
   allowStateChanges as R,
-  CountMatches as Rn,
+  ArrayWithoutElement as Rn,
   CStoreBrowse_GetItems_Response as Rt,
   Sleep as S,
   CClientMetrics_ClipRange_Notification as Sn,
-  require_react as Sr,
+  ESteamRealm as Sr,
   AssetURL as St,
   __vitePreload as T,
   CClientMetrics_ReportReactUsage_Notification_ComponentData as Tn,
   GetWebConfig as Tt,
   makeAutoObservable as U,
-  ShuffleArray as Un,
+  PadArray as Un,
   StoreItem as Ut,
   configure as V,
-  MoveElement as Vn,
+  FindAndRemoveWhere as Vn,
   StoreBrowseItemDataRequest as Vt,
   makeObservable as W,
-  SortedFindLessOrEqual as Wn,
+  ShuffleArray as Wn,
   StoreItemID as Wt,
   toJS as X,
-  FromObject as Xn,
+  DeserializeBinary as Xn,
   CUtlBuffer as Xt,
   runInAction as Y,
-  DeserializeBinary as Yn,
+  AddAccessors as Yn,
   BinaryToHex as Yt,
   when as Z,
-  ReaderProto as Zn,
+  FromObject as Zn,
   HexToBinary as Zt,
   LocalizeRtime32ToShortDate as _,
   RandomInt as _n,
-  k_nGameIDSteamVRMain as _r,
+  k_nGameIDSteamVR as _r,
   IsSteamChina as _t,
   LocalizationManager as a,
   k_EMsgClientAMGetPersonaNameHistory as an,
-  BIsEFriendRelationshipFriend as ar,
+  BIsEFriendRelationshipBlocked as ar,
   MergeRefs as at,
   GetUnixTime as b,
   ScalePreserveAspectRatio as bn,
-  BIsChinaRealm as br,
+  k_nGameIDSteamVRMonitorMain as br,
   useInGamepadUI as bt,
   LocalizePlural as c,
   k_EMsgClientGetEmoticonList as cn,
-  ELanguagePchLanguage as cr,
+  EGameIDType as cr,
   useRefAndShareWith as ct,
   LocalizeCalendarMonthAndYear as d,
   k_EMsgClientMMSInviteToLobby as dn,
-  MapKoreanaToKorean as dr,
+  EWindowBringToFront as dr,
   ConfigContext as dt,
   k_EMsgAMClientDeleteFriendsGroup as en,
-  ToObject as er,
+  SerializeBinary as er,
   usePreventVerticalShrinking as et,
   LocalizeCalendarQuarter as f,
   k_EMsgClientServerTimestampRequest as fn,
-  PchLanguageToELanguage as fr,
+  MapKoreanaToKorean as fr,
   ConfigContextRoot as ft,
   LocalizeRTimeToHourAndMinutes as g,
   IsDigits as gn,
-  k_nGameIDSteamVR as gr,
+  k_RTime32Infinite as gr,
   IsPlatformWindows as gt,
   LocalizeDurationInSeconds as h,
   Clamp as hn,
-  k_RTime32Infinite as hr,
+  k_GIDNil as hr,
   IsPlatformMac as ht,
   LocaleToELanguage as i,
   k_EMsgCREUpdateUserPublishedItemVote as in,
-  BIsEFriendRelationshipBlocked as ir,
+  BIsChinaLauncher as ir,
   useResizeObserver as it,
   CUnregisterList as j,
-  CMsgIPAddress as jn,
+  CLocalizationToken as jn,
   GetCookie as jt,
   CScheduledFunc as k,
-  CClanMatchEventByRange as kn,
+  CClanEventData as kn,
   GetConfigJSON as kt,
   LocalizeReact as l,
   k_EMsgClientInviteToGame as ln,
-  ELanguagePchWebLanguageCode as lr,
+  ELanguagePchLanguage as lr,
   useRefCallbackWithCleanup as lt,
   LocalizeCalendarYear as m,
   k_EMsgServiceMethodCallFromClientNonAuthed as mn,
-  k_GIDNil as mr,
+  k_EGamingDeviceType_SteamFrame as mr,
   GET_BASE_WEB_PROPERTY as mt,
   CLocalizationManager as n,
   k_EMsgAMClientRemoveFriendFromGroup as nn,
-  require_google_protobuf as nr,
+  WriterProto as nr,
   useIntersectionEvents as nt,
   Localize as o,
   k_EMsgClientEmoticonList as on,
-  BIsReducedUILauncher as or,
+  BIsEFriendRelationshipFriend as or,
   setRef as ot,
   LocalizeCalendarTime as p,
   k_EMsgClientServersAvailable as pn,
-  k_EGamingDeviceType_SteamFrame as pr,
+  PchLanguageToELanguage as pr,
   GET_BASE_URL as pt,
   override as q,
-  AssertNever as qn,
+  AssertMsg as qn,
   CProtoBufMsg as qt,
   GetConfiguredLocale as r,
   k_EMsgCREGetUserPublishedItemVoteDetails as rn,
-  BIsChinaLauncher as rr,
+  require_google_protobuf as rr,
   useIntersectionObserver as rt,
   LocalizeInlineReact as s,
   k_EMsgClientGetClanActivityCounts as sn,
-  EGameIDType as sr,
+  BIsReducedUILauncher as sr,
   useMultipleRefs as st,
   CLocLanguageArray as t,
   k_EMsgAMClientManageFriendsGroup as tn,
-  WriterProto as tr,
+  ToObject as tr,
   CreateResizeObserver as tt,
   LocalizeAbbreviatedDurationInSeconds as u,
   k_EMsgClientLogon as un,
-  EWindowBringToFront as ur,
+  ELanguagePchWebLanguageCode as ur,
   useSetRef as ut,
   LocalizeRtime32ToShorterDate as v,
   RemapVal as vn,
-  k_nGameIDSteamVRMonitor as vr,
+  k_nGameIDSteamVRMain as vr,
   UNKNOWN_BASE_URL as vt,
   SharedLocalization as w,
   CClientMetrics_ReportReactUsage_Notification_ActionData as wn,
   GetSteamUIConfig as wt,
   Seconds as x,
   ErrorReportingStore as xn,
-  ESteamRealm as xr,
+  BIsChinaRealm as xr,
   useInVR as xt,
   LocalizeTimeSince as y,
   RemapValClamped as yn,
-  k_nGameIDSteamVRMonitorMain as yr,
+  k_nGameIDSteamVRMonitor as yr,
   useInDesktopUI as yt,
   autorun as z,
-  FindAndRemove as zn,
+  CountMatches as zn,
   EStoreItemTypeToString as zt,
 };

@@ -2,22 +2,22 @@
  ****/
 
 import "./chunk~f025431ab0.js";
-import { Ft as e, St as t, ot as n, xt as r } from "./chunk~01cfc309bf.js";
-import { Wr as i, li as a } from "./main.js";
+import { Pt as e, at as t, bt as n, xt as r } from "./chunk~01cfc309bf.js";
+import { ii as i, zr as a } from "./main.js";
 import { n as o, t as s } from "./chunk~eb66d0e2b2.js";
 e();
-var c = n(),
+var c = t(),
   l = {
     Dashboard: (e) => `/questions/${e}/dashboard`,
     FullPageView: (e, t) => `/questions/${e}/view/${t}`,
   };
 function u(e) {
-  return (0, c.jsxs)(t, {
+  return (0, c.jsxs)(r, {
     children: [
-      (0, c.jsx)(r, {
+      (0, c.jsx)(n, {
         path: l.Dashboard(`:vanity_str`),
         render: (e) =>
-          (0, c.jsx)(a, {
+          (0, c.jsx)(i, {
             config: {
               "qanda-root": () => {
                 let { vanity_str: t } = e.match.params;
@@ -26,10 +26,10 @@ function u(e) {
             },
           }),
       }),
-      (0, c.jsx)(r, {
+      (0, c.jsx)(n, {
         path: l.FullPageView(`:vanity_str`, `:session_gid`),
         render: (e) =>
-          (0, c.jsx)(a, {
+          (0, c.jsx)(i, {
             config: {
               "qanda-root": () => {
                 let { vanity_str: t, session_gid: n } = e.match.params;
@@ -38,7 +38,7 @@ function u(e) {
             },
           }),
       }),
-      (0, c.jsx)(r, { component: i }),
+      (0, c.jsx)(n, { component: a }),
     ],
   });
 }

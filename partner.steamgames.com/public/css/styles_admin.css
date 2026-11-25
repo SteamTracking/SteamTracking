@@ -548,12 +548,41 @@ textarea.gray {
 	min-width: 380px;
 }
 
+.landingTable.requirements_status_table {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	width: fit-content;
+	border: 1px solid rgba(255,255,255,0.1);
+}
+
+.requirements_status_table > div {
+	border: 1px solid rgba(255,255,255,0.2);
+	padding: 0 4px;
+}
+
 .imagerow {
-	background-color: #000000;
 	padding: 4px;
 	height: 20px;
 	margin-left: 6px;
 	margin-bottom: 4px;
+}
+
+.imageLanguageRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: #30343a;
+	padding: 2px 6px;
+	margin-bottom: 1px;
+}
+
+.image_file_name {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 select.yearselect,  select.monthselect, select.dayselect {
@@ -957,7 +986,26 @@ pre.results {
 }
 
 .screenshot_link:hover {
-    cursor: grab;
+    cursor: pointer;
+}
+
+.screenshot_thumb .screenshot_drag_handle {
+	display: inline-flex;
+	align-items: center;
+	vertical-align: top;
+	height: 140px;
+	padding: 0 6px;
+	cursor: grab;
+	opacity: 0.6;
+}
+
+.screenshot_thumb .screenshot_drag_handle:hover {
+	opacity: 1.0;
+}
+
+.screenshot_thumb .screenshot_drag_handle img {
+	width: 22px;
+	height: 30px;
 }
 
 .screenshot_thumb .imagelanguagelist {
@@ -2840,6 +2888,7 @@ html, body { height:100%; }
 	background-color: #333333;
 	border: 2px dashed #67c1f5;
 	box-shadow: inset 0px 0px 16px 0px #67c1f5;
+	border-radius: 8px;
 	color: #67c1f5;
 	padding: 8px;
 	text-align: center;
@@ -4438,7 +4487,7 @@ span.new {
     background: rgba(255,255,255,0.2);
     border-radius: 10px;
     display: inline-block;
-    width: 9px;
+    width: 15px;
     height: 13px;
     padding-left: 5px;
     margin-top: 3px;

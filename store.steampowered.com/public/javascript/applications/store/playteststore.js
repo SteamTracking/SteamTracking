@@ -2,25 +2,25 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { Lt as t, dt as n, ot as r, st as i } from "./chunk~01cfc309bf.js";
+import { It as t, at as n, ot as r, ut as i } from "./chunk~01cfc309bf.js";
 import {
-  Ay as a,
-  Cy as o,
-  Ox as s,
-  Ty as c,
-  ax as l,
-  vy as u,
-  wy as d,
+  Ey as a,
+  Ty as o,
+  jy as s,
+  kx as c,
+  ox as l,
+  wy as u,
+  yy as d,
 } from "./main.js";
 var f = e(t()),
   p = `PlaytestInvites`;
 function m() {
-  let e = u();
-  return i({
+  let e = d();
+  return r({
     queryKey: [p],
     queryFn: async () => {
-      let t = s.Init(o),
-        n = await a.GetInvites(e, t);
+      let t = c.Init(u),
+        n = await s.GetInvites(e, t);
       if (n.GetEResult() != 1)
         throw Error(
           `Error from usePlaytestInvite: ${n.GetEResult()} ${n.GetErrorMessage()}`,
@@ -30,13 +30,13 @@ function m() {
   });
 }
 function h(e) {
-  let t = u(),
-    i = n();
-  return r({
+  let t = d(),
+    r = i();
+  return n({
     mutationFn: async (n) => {
-      let r = s.Init(c);
+      let r = c.Init(a);
       (r.Body().add_invite_ids(e), r.Body().set_status(n.bAccept ? 3 : 2));
-      let i = await a.UpdateInvites(t, r);
+      let i = await s.UpdateInvites(t, r);
       if (i.GetEResult() != 1)
         throw {
           result: i.GetEResult(),
@@ -44,14 +44,14 @@ function h(e) {
         };
     },
     onSuccess: (t, n) => {
-      i.setQueryData([p], (t) =>
+      r.setQueryData([p], (t) =>
         t.map((t) =>
           t.invite_id === e ? { ...t, status: n.bAccept ? 3 : 2 } : t,
         ),
       );
     },
     onError: () => {
-      i.invalidateQueries({ queryKey: [p] });
+      r.invalidateQueries({ queryKey: [p] });
     },
   });
 }
@@ -59,14 +59,14 @@ function g(e) {
   return [`PlaytestUserStatus`, e];
 }
 function _(e) {
-  let t = u();
-  return i({
+  let t = d();
+  return r({
     queryKey: g(e),
     queryFn: async () => {
       if (l.logged_in) {
-        let n = s.Init(d);
+        let n = c.Init(o);
         e && n.Body().set_appid(e);
-        let r = await a.GetUserStatus(t, n);
+        let r = await s.GetUserStatus(t, n);
         if (r.GetEResult() != 1)
           throw Error(
             `Error from usePlaytestUserStatus: ${r.GetEResult()} ${r.GetErrorMessage()}`,
@@ -79,7 +79,7 @@ function _(e) {
   });
 }
 function v() {
-  let e = n();
+  let e = i();
   return f.useCallback(
     (t, n) => {
       e.setQueryData(g(t), n);

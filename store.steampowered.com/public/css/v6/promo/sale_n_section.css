@@ -690,6 +690,10 @@ html.force_desktop body.lny2020 {
 }
 
 
+/* min-height (promotion.php) holds space while the sale loads; once drawn, fit the content */
+.react_landing_background:has( .SaleBackgroundCtn ) {
+    min-height: 0 !important;
+}
 @media screen and (max-width: 768px) {
     .react_landing_background {
         background-size: 180%;

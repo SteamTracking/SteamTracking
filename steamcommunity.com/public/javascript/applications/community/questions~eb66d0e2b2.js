@@ -2,43 +2,43 @@
  ****/
 
 import { o as e, r as t } from "./chunk~f025431ab0.js";
-import { A as n, Ft as r, ot as i } from "./chunk~01cfc309bf.js";
+import { Pt as n, at as r, k as i } from "./chunk~01cfc309bf.js";
 import { t as a } from "./chunk~eefd71512b.js";
 import { t as o } from "./chunk~92931c6310.js";
 import { f as s, i as c } from "./chunk~0111fcd096.js";
 import { r as l, u } from "./chunk~ec644f97c6.js";
 import { t as d } from "./chunk~d382bdf2cf.js";
 import {
-  $l as ee,
-  $o as f,
-  Am as te,
-  Dc as ne,
-  Hf as p,
-  Hh as m,
-  Jo as h,
-  Ki as re,
-  Mf as ie,
-  St as ae,
-  Tu as g,
-  Vh as _,
-  Zi as oe,
-  Zl as se,
-  bf as ce,
-  bm as v,
-  bs as y,
-  gl as le,
-  pd as b,
-  pm as x,
-  rf as S,
-  up as ue,
-  us as de,
-  vm as C,
-  xf as fe,
-  ym as w,
+  Df as ee,
+  Jl as te,
+  Jo as f,
+  Ki as ne,
+  Kl as re,
+  Lf as p,
+  Lh as m,
+  Qd as h,
+  Rh as ie,
+  Sc as ae,
+  Tm as oe,
+  Uo as se,
+  Vi as ce,
+  _t as le,
+  ap as ue,
+  as as de,
+  bu as g,
+  cd as _,
+  cm as v,
+  dl as fe,
+  gf as pe,
+  hf as me,
+  hm as y,
+  hs as b,
+  mm as x,
+  pm as S,
 } from "./main.js";
-import { t as pe } from "./chunk~85f65a382b.js";
-var T = e(r()),
-  me = [
+import { t as he } from "./chunk~85f65a382b.js";
+var C = e(n()),
+  ge = [
     `mousemove`,
     `keypress`,
     `scroll`,
@@ -47,9 +47,9 @@ var T = e(r()),
     `touchstart`,
     `touchmove`,
   ],
-  he = 2e3,
-  E = class e {
-    m_callbackList = new _();
+  _e = 2e3,
+  w = class e {
+    m_callbackList = new m();
     m_timer = null;
     m_bAreEventListenersRegistered = !1;
     static s_Singleton;
@@ -62,7 +62,7 @@ var T = e(r()),
       let t = () => {
         ((this.m_timer = null), this.m_callbackList.Dispatch());
       };
-      this.m_timer = window.setTimeout(t, he);
+      this.m_timer = window.setTimeout(t, _e);
     }
     BIsUserFidgeting() {
       return !!this.m_timer;
@@ -73,38 +73,38 @@ var T = e(r()),
     BRegisterEventListeners() {
       if (this.m_bAreEventListenersRegistered) return !1;
       let e = window;
-      for (let t of me) e.addEventListener(t, this.ResetFidgetTimer);
+      for (let t of ge) e.addEventListener(t, this.ResetFidgetTimer);
       return ((this.m_bAreEventListenersRegistered = !0), !0);
     }
     BUnregisterEventListeners() {
       if (!this.m_bAreEventListenersRegistered) return !1;
       let e = window;
-      for (let t of me) e.removeEventListener(t, this.ResetFidgetTimer);
+      for (let t of ge) e.removeEventListener(t, this.ResetFidgetTimer);
       return ((this.m_bAreEventListenersRegistered = !1), !1);
     }
   };
-ie([m], E.prototype, `ResetFidgetTimer`, null);
-function ge() {
-  T.useEffect(() => {
-    let e = E.Get().BRegisterEventListeners();
+ee([ie], w.prototype, `ResetFidgetTimer`, null);
+function ve() {
+  C.useEffect(() => {
+    let e = w.Get().BRegisterEventListeners();
     return () => {
-      e && E.Get().BUnregisterEventListeners();
+      e && w.Get().BUnregisterEventListeners();
     };
   }, []);
 }
-function _e(e) {
-  let t = T.useRef(null),
-    n = T.useCallback(() => {
+function ye(e) {
+  let t = C.useRef(null),
+    n = C.useCallback(() => {
       t.current &&= (t.current(), null);
     }, []);
   return (
-    b(E.Get().GetCallbackList(), n),
-    T.useEffect(() => () => {
+    _(w.Get().GetCallbackList(), n),
+    C.useEffect(() => () => {
       t.current = null;
     }),
-    T.useCallback(
+    C.useCallback(
       (...n) => {
-        E.Get().BIsUserFidgeting()
+        w.Get().BIsUserFidgeting()
           ? (t.current = () => e(...n))
           : ((t.current = null), e(...n));
       },
@@ -112,11 +112,11 @@ function _e(e) {
     )
   );
 }
-var D = e(n()),
-  O = class e {
+var T = e(i()),
+  E = class e {
     m_mapQAndASessions = new Map();
     m_mapQAndAChangeCallbackList = new Map();
-    m_dashboardCallbackList = new _();
+    m_dashboardCallbackList = new m();
     m_mapQuestions = new Map();
     m_mapQuestionCallbackList = new Map();
     m_rgPendingQuestionGIDs = [];
@@ -128,13 +128,13 @@ var D = e(n()),
     GetQAndACallbackList(e) {
       let t = this.m_mapQAndAChangeCallbackList.get(e);
       return (
-        t || ((t = new _()), this.m_mapQAndAChangeCallbackList.set(e, t)), t
+        t || ((t = new m()), this.m_mapQAndAChangeCallbackList.set(e, t)), t
       );
     }
     GetQuestionCallbackList(e) {
       let t = this.m_mapQuestionCallbackList.get(e);
       return (
-        t || ((t = new _()), this.m_mapQuestionCallbackList.set(e, t)), t
+        t || ((t = new m()), this.m_mapQuestionCallbackList.set(e, t)), t
       );
     }
     GetDashboardCallbackList() {
@@ -150,16 +150,16 @@ var D = e(n()),
       return this.m_mapQuestions.get(e);
     }
     async LoadAllSessions(e) {
-      if (!v.logged_in || !x()) return 15;
+      if (!y.logged_in || !v()) return 15;
       let t =
-          w.COMMUNITY_BASE_URL +
+          x.COMMUNITY_BASE_URL +
           `questions/` +
-          C.VANITY_ID +
+          S.VANITY_ID +
           `/ajaxgetqandasforgroup`,
         n = {},
         r = null;
       try {
-        let i = await D.default.get(t, { params: n, cancelToken: e?.token });
+        let i = await T.default.get(t, { params: n, cancelToken: e?.token });
         if (
           (console.log(i),
           i?.status == 200 && i.data?.success == 1 && i.data.qandas)
@@ -185,17 +185,17 @@ var D = e(n()),
       );
     }
     async CreateNewSession(e, t) {
-      if (!v.logged_in || !x()) return 15;
+      if (!y.logged_in || !v()) return 15;
       let n =
-          w.COMMUNITY_BASE_URL +
+          x.COMMUNITY_BASE_URL +
           `questions/` +
-          C.VANITY_ID +
+          S.VANITY_ID +
           `/ajaxcreateqanda`,
         r = new FormData();
-      (r.append(`sessionid`, x()), r.append(`name`, e));
+      (r.append(`sessionid`, v()), r.append(`name`, e));
       let i = null;
       try {
-        let e = await D.default.post(n, r, {
+        let e = await T.default.post(n, r, {
           withCredentials: !0,
           cancelToken: t?.token,
         });
@@ -216,18 +216,18 @@ var D = e(n()),
       );
     }
     async RenameSession(e, t, n) {
-      if (!v.logged_in || !x()) return 15;
+      if (!y.logged_in || !v()) return 15;
       let r =
-          w.COMMUNITY_BASE_URL +
+          x.COMMUNITY_BASE_URL +
           `questions/` +
-          C.VANITY_ID +
+          S.VANITY_ID +
           `/ajaxrenameqanda/` +
           e,
         i = new FormData();
-      (i.append(`sessionid`, x()), i.append(`name`, t));
+      (i.append(`sessionid`, v()), i.append(`name`, t));
       let a = null;
       try {
-        let o = await D.default.post(r, i, {
+        let o = await T.default.post(r, i, {
           withCredentials: !0,
           cancelToken: n?.token,
         });
@@ -250,18 +250,18 @@ var D = e(n()),
       );
     }
     async DeleteSession(e, t) {
-      if (!v.logged_in || !x()) return 15;
+      if (!y.logged_in || !v()) return 15;
       let n =
-          w.COMMUNITY_BASE_URL +
+          x.COMMUNITY_BASE_URL +
           `questions/` +
-          C.VANITY_ID +
+          S.VANITY_ID +
           `/ajaxdeleteqanda/` +
           e,
         r = new FormData();
-      r.append(`sessionid`, x());
+      r.append(`sessionid`, v());
       let i = null;
       try {
-        let a = await D.default.post(n, r, {
+        let a = await T.default.post(n, r, {
           withCredentials: !0,
           cancelToken: t?.token,
         });
@@ -284,18 +284,18 @@ var D = e(n()),
     async LoadSession(e, t, n) {
       let r = this.m_mapQAndASessions.get(e),
         i =
-          v.logged_in &&
+          y.logged_in &&
           (!r ||
             r.bUserCanModerate ||
             this.m_rgPendingQuestionGIDs.length > 0 ||
             t)
             ? `/ajaxgetqandasessionforuser/`
             : `/ajaxgetqandasession/`,
-        a = w.COMMUNITY_BASE_URL + `questions/` + C.VANITY_ID + i + e,
+        a = x.COMMUNITY_BASE_URL + `questions/` + S.VANITY_ID + i + e,
         o = {},
         s = null;
       try {
-        let t = await D.default.get(a, { params: o, cancelToken: n?.token });
+        let t = await T.default.get(a, { params: o, cancelToken: n?.token });
         if (
           t?.status == 200 &&
           t.data?.success == 1 &&
@@ -341,7 +341,7 @@ var D = e(n()),
       let t = new Set();
       for (let n of e) {
         let e = this.m_mapQuestions.get(n);
-        e.posterAccountID == v.accountid &&
+        e.posterAccountID == y.accountid &&
           e.eState == 1 &&
           t.add(e.gidQuestion);
       }
@@ -354,22 +354,22 @@ var D = e(n()),
     }
     async AskNewQuestion(e, t, n) {
       if (
-        !v.logged_in ||
-        !x() ||
+        !y.logged_in ||
+        !v() ||
         !this.m_mapQAndASessions.get(e)?.bUserCanAskQuestions
       )
         return 15;
       let r =
-          w.COMMUNITY_BASE_URL +
+          x.COMMUNITY_BASE_URL +
           `questions/` +
-          C.VANITY_ID +
+          S.VANITY_ID +
           `/ajaxaskquestion/` +
           e,
         i = new FormData();
-      (i.append(`sessionid`, x()), i.append(`question`, t));
+      (i.append(`sessionid`, v()), i.append(`question`, t));
       let a = null;
       try {
-        let t = await D.default.post(r, i, {
+        let t = await T.default.post(r, i, {
           withCredentials: !0,
           cancelToken: n?.token,
         });
@@ -391,26 +391,26 @@ var D = e(n()),
     }
     async ModerateQuestion(e, t, n, r) {
       if (
-        !v.logged_in ||
-        !x() ||
+        !y.logged_in ||
+        !v() ||
         !this.m_mapQAndASessions.get(e)?.bUserCanModerate
       )
         return 15;
       if (n != 1 && n != 3) return 8;
       if (this.m_mapQuestions.get(t).eState == n) return 1;
       let i =
-          w.COMMUNITY_BASE_URL +
+          x.COMMUNITY_BASE_URL +
           `questions/` +
-          C.VANITY_ID +
+          S.VANITY_ID +
           `/ajaxmoderatequestion/` +
           e,
         a = new FormData();
-      (a.append(`sessionid`, x()),
+      (a.append(`sessionid`, v()),
         a.append(`gidquestion`, t),
         a.append(`action`, n == 1 ? `show` : `hide`));
       let o = null;
       try {
-        let t = await D.default.post(i, a, {
+        let t = await T.default.post(i, a, {
           withCredentials: !0,
           cancelToken: r?.token,
         });
@@ -428,24 +428,24 @@ var D = e(n()),
     }
     async AnswerQuestion(e, t, n, r) {
       if (
-        !v.logged_in ||
-        !x() ||
+        !y.logged_in ||
+        !v() ||
         !this.m_mapQAndASessions.get(e)?.bUserCanAskQuestions
       )
         return 15;
       let i =
-          w.COMMUNITY_BASE_URL +
+          x.COMMUNITY_BASE_URL +
           `questions/` +
-          C.VANITY_ID +
+          S.VANITY_ID +
           `/ajaxanswerquestion/` +
           e,
         a = new FormData();
-      (a.append(`sessionid`, x()),
+      (a.append(`sessionid`, v()),
         a.append(`gidquestion`, t),
         a.append(`answer`, n));
       let o = null;
       try {
-        let t = await D.default.post(i, a, {
+        let t = await T.default.post(i, a, {
           withCredentials: !0,
           cancelToken: r?.token,
         });
@@ -463,8 +463,8 @@ var D = e(n()),
     }
     async VoteOnQuestion(e, t, n, r) {
       if (
-        !v.logged_in ||
-        !x() ||
+        !y.logged_in ||
+        !v() ||
         !this.m_mapQAndASessions.get(e)?.bUserCanAskQuestions
       )
         return 15;
@@ -477,18 +477,18 @@ var D = e(n()),
         this.m_mapQuestions.set(t, i),
         this.GetQuestionCallbackList(t).Dispatch(i));
       let s =
-          w.COMMUNITY_BASE_URL +
+          x.COMMUNITY_BASE_URL +
           `questions/` +
-          C.VANITY_ID +
+          S.VANITY_ID +
           `/ajaxvoteforquestion/` +
           e,
         c = new FormData();
-      (c.append(`sessionid`, x()),
+      (c.append(`sessionid`, v()),
         c.append(`gidquestion`, t),
         c.append(`up`, n ? `1` : `0`));
       let l = null;
       try {
-        let e = await D.default.post(s, c, {
+        let e = await T.default.post(s, c, {
           withCredentials: !0,
           cancelToken: r?.token,
         });
@@ -507,21 +507,21 @@ var D = e(n()),
       );
     }
   };
-function k(e) {
+function be(e) {
   let t = o(`useQAndASession`),
-    n = T.useCallback(
+    n = C.useCallback(
       async (n) =>
-        O.Get().GetSession(e)?.bUserCanAskQuestions &&
-        (await O.Get().AskNewQuestion(e, n, t)),
+        E.Get().GetSession(e)?.bUserCanAskQuestions &&
+        (await E.Get().AskNewQuestion(e, n, t)),
       [e, t],
     ),
-    r = T.useCallback(
+    r = C.useCallback(
       (n, r) =>
-        O.Get().GetSession(e)?.bUserCanAskQuestions &&
-        O.Get().VoteOnQuestion(e, n, r, t),
+        E.Get().GetSession(e)?.bUserCanAskQuestions &&
+        E.Get().VoteOnQuestion(e, n, r, t),
       [e, t],
     ),
-    i = T.useCallback(
+    i = C.useCallback(
       (e) => {
         let t = !!e,
           i = e?.strName,
@@ -532,7 +532,7 @@ function k(e) {
           l = [],
           u = [];
         for (let t of e?.rgQuestionGIDs ?? [])
-          switch (O.Get().GetQuestion(t)?.eState) {
+          switch (E.Get().GetQuestion(t)?.eState) {
             case 1:
               s.push(t);
               break;
@@ -548,23 +548,23 @@ function k(e) {
         return (
           s.sort(
             (e, t) =>
-              O.Get().GetQuestion(t).nVoteCount -
-              O.Get().GetQuestion(e).nVoteCount,
+              E.Get().GetQuestion(t).nVoteCount -
+              E.Get().GetQuestion(e).nVoteCount,
           ),
           c.sort(
             (e, t) =>
-              O.Get().GetQuestion(t).rtAnswerTime -
-              O.Get().GetQuestion(e).rtAnswerTime,
+              E.Get().GetQuestion(t).rtAnswerTime -
+              E.Get().GetQuestion(e).rtAnswerTime,
           ),
           l.sort(
             (e, t) =>
-              O.Get().GetQuestion(t).rtPostTime -
-              O.Get().GetQuestion(e).rtPostTime,
+              E.Get().GetQuestion(t).rtPostTime -
+              E.Get().GetQuestion(e).rtPostTime,
           ),
           u.sort(
             (e, t) =>
-              O.Get().GetQuestion(t).rtPostTime -
-              O.Get().GetQuestion(e).rtPostTime,
+              E.Get().GetQuestion(t).rtPostTime -
+              E.Get().GetQuestion(e).rtPostTime,
           ),
           {
             bIsLoaded: t,
@@ -582,90 +582,90 @@ function k(e) {
       },
       [n, r],
     ),
-    [a, s] = T.useState(() => i(O.Get().GetSession(e))),
-    c = T.useCallback((e) => s(i(e)), [i]);
+    [a, s] = C.useState(() => i(E.Get().GetSession(e))),
+    c = C.useCallback((e) => s(i(e)), [i]);
   return (
-    b(O.Get().GetQAndACallbackList(e), c),
-    T.useEffect(() => {
-      a.bIsLoaded || O.Get().LoadSession(e);
+    _(E.Get().GetQAndACallbackList(e), c),
+    C.useEffect(() => {
+      a.bIsLoaded || E.Get().LoadSession(e);
     }, [a.bIsLoaded, e]),
     a
   );
 }
-var ve = null;
-function ye(e) {
+var D = null;
+function xe(e) {
   let t = o(`useReloadFunction`),
-    [n, r] = T.useState(!1),
-    i = T.useCallback(() => {
+    [n, r] = C.useState(!1),
+    i = C.useCallback(() => {
       r(!0);
-      let n = O.Get().LoadSession(e, !1, t);
+      let n = E.Get().LoadSession(e, !1, t);
       return (n.then(() => r(!1)), n);
     }, [e, t]),
-    a = _e(i);
+    a = ye(i);
   return (
-    T.useEffect(
+    C.useEffect(
       () =>
-        ve
+        D
           ? () => {}
-          : ((ve = window.setInterval(a, 1e4)), () => window.clearInterval(ve)),
+          : ((D = window.setInterval(a, 1e4)), () => window.clearInterval(D)),
       [a],
     ),
-    T.useMemo(() => ({ fnReload: i, bIsReloading: n }), [i, n])
+    C.useMemo(() => ({ fnReload: i, bIsReloading: n }), [i, n])
   );
 }
-function be(e) {
-  let [t, n] = T.useState(O.Get().GetQuestion(e));
-  b(O.Get().GetQuestionCallbackList(e), n);
-  let [r, i] = T.useState(!!t);
+function Se(e) {
+  let [t, n] = C.useState(E.Get().GetQuestion(e));
+  _(E.Get().GetQuestionCallbackList(e), n);
+  let [r, i] = C.useState(!!t);
   return [t, !!t || r];
 }
-function xe(e) {
+function Ce(e) {
   let t = o(`useQuestionModeratorActions`),
-    n = T.useCallback(
+    n = C.useCallback(
       (n, r) =>
-        O.Get().GetSession(e)?.bUserCanModerate &&
-        O.Get().AnswerQuestion(e, n, r, t),
+        E.Get().GetSession(e)?.bUserCanModerate &&
+        E.Get().AnswerQuestion(e, n, r, t),
       [e, t],
     ),
-    r = T.useCallback(
+    r = C.useCallback(
       (n, r) =>
-        O.Get().GetSession(e)?.bUserCanModerate &&
-        O.Get().ModerateQuestion(e, n, r, t),
+        E.Get().GetSession(e)?.bUserCanModerate &&
+        E.Get().ModerateQuestion(e, n, r, t),
       [e, t],
     );
-  return T.useMemo(
+  return C.useMemo(
     () => ({ fnAnswerQuestion: n, fnModerateQuestion: r }),
     [n, r],
   );
 }
-function Se() {
-  let [e, t] = T.useState(O.Get().GetAllSessions());
+function we() {
+  let [e, t] = C.useState(E.Get().GetAllSessions());
   return (
-    b(O.Get().GetDashboardCallbackList(), t),
-    T.useEffect(() => {
-      e.length == 0 && O.Get().LoadAllSessions();
+    _(E.Get().GetDashboardCallbackList(), t),
+    C.useEffect(() => {
+      e.length == 0 && E.Get().LoadAllSessions();
     }, [e.length]),
     e
   );
 }
-function Ce() {
-  let e = o(`useCreateQAndAFn`);
-  return T.useCallback((t) => O.Get().CreateNewSession(t, e), [e]);
-}
-function we() {
-  let e = o(`useRenameQAndAFn`);
-  return T.useCallback((t, n) => O.Get().RenameSession(t, n, e), [e]);
-}
 function Te() {
-  let e = o(`useDeleteQAndAFn`);
-  return T.useCallback((t) => O.Get().DeleteSession(t, e), [e]);
+  let e = o(`useCreateQAndAFn`);
+  return C.useCallback((t) => E.Get().CreateNewSession(t, e), [e]);
 }
-var Ee = t({
+function Ee() {
+  let e = o(`useRenameQAndAFn`);
+  return C.useCallback((t, n) => E.Get().RenameSession(t, n, e), [e]);
+}
+function De() {
+  let e = o(`useDeleteQAndAFn`);
+  return C.useCallback((t) => E.Get().DeleteSession(t, e), [e]);
+}
+var Oe = t({
     Answer: () => ot,
     AnswerCheck: () => U,
     AnswerText: () => st,
     AnswerTitle: () => H,
-    AnsweredSectionHeader: () => Oe,
+    AnsweredSectionHeader: () => F,
     ButtonCtn: () => ze,
     CreateQAndADialog: () => yt,
     DashboardColumnHeaders: () => vt,
@@ -687,21 +687,21 @@ var Ee = t({
     InsetShadowTopCtn: () => R,
     LogInPrompt: () => Re,
     ModerationHeader: () => ct,
-    ModeratorInstructions: () => De,
+    ModeratorInstructions: () => P,
     ModeratorSection: () => lt,
     NameInput: () => X,
     NoQuestions: () => Ge,
     PersonaName: () => Xe,
     PostTime: () => V,
     Prompt: () => ht,
-    QAColumns: () => M,
+    QAColumns: () => A,
     QADashboardCtn: () => dt,
-    QAFullPageView: () => A,
+    QAFullPageView: () => O,
     QAHeader: () => Me,
-    QAMainCtn: () => N,
-    QAModeratorColumn: () => P,
-    QAName: () => j,
-    QASplitColumns: () => F,
+    QAMainCtn: () => j,
+    QAModeratorColumn: () => M,
+    QAName: () => k,
+    QASplitColumns: () => N,
     QATitle: () => Ie,
     QATitleRow: () => Fe,
     QAndADeleteColumn: () => J,
@@ -733,14 +733,14 @@ var Ee = t({
     Votes: () => et,
     default: () => xt,
   }),
-  A = `XxT5V45htpY-`,
-  j = `h-RxFCB6bAs-`,
-  M = `HECwy-TVT6c-`,
-  N = `_5yVQYMxy-JU-`,
-  P = `B7Qs2tR7S98-`,
-  F = `jikb8cKLdwg-`,
-  De = `WbU1h886dW4-`,
-  Oe = `cua4C9nfXwM-`,
+  O = `XxT5V45htpY-`,
+  k = `h-RxFCB6bAs-`,
+  A = `HECwy-TVT6c-`,
+  j = `_5yVQYMxy-JU-`,
+  M = `B7Qs2tR7S98-`,
+  N = `jikb8cKLdwg-`,
+  P = `WbU1h886dW4-`,
+  F = `cua4C9nfXwM-`,
   I = `KtfZY3EXbm4-`,
   ke = `-Q501kcuUlo-`,
   Ae = `_7zP2DXBFo3Y-`,
@@ -804,14 +804,14 @@ var Ee = t({
   bt = `Xf2SPob2HOo-`,
   Z = `QZMnS8crC6E-`,
   xt = {
-    QAFullPageView: A,
-    QAName: j,
-    QAColumns: M,
-    QAMainCtn: N,
-    QAModeratorColumn: P,
-    QASplitColumns: F,
-    ModeratorInstructions: De,
-    AnsweredSectionHeader: Oe,
+    QAFullPageView: O,
+    QAName: k,
+    QAColumns: A,
+    QAMainCtn: j,
+    QAModeratorColumn: M,
+    QASplitColumns: N,
+    ModeratorInstructions: P,
+    AnsweredSectionHeader: F,
     InputButton: I,
     Reload: ke,
     Reloading: Ae,
@@ -875,9 +875,9 @@ var Ee = t({
     DeleteQAndADialog: bt,
     DeleteInfo: Z,
   },
-  Q = i();
+  Q = r();
 function St(e) {
-  let t = Se();
+  let t = we();
   return (0, Q.jsxs)(`div`, {
     className: dt,
     children: [
@@ -887,16 +887,16 @@ function St(e) {
         children: [
           (0, Q.jsx)(`div`, {
             className: Y,
-            children: S(`#QAndA_Column_Name`),
+            children: h(`#QAndA_Column_Name`),
           }),
-          (0, Q.jsx)(`div`, { className: K, children: S(`#QAndA_Column_GID`) }),
+          (0, Q.jsx)(`div`, { className: K, children: h(`#QAndA_Column_GID`) }),
           (0, Q.jsx)(`div`, {
             className: q,
-            children: S(`#QAndA_Column_QuestionCount`),
+            children: h(`#QAndA_Column_QuestionCount`),
           }),
           (0, Q.jsx)(`div`, {
             className: J,
-            children: S(`#QAndA_Column_DeleteButtons`),
+            children: h(`#QAndA_Column_DeleteButtons`),
           }),
         ],
       }),
@@ -905,22 +905,22 @@ function St(e) {
   });
 }
 function Ct(e) {
-  let t = T.useCallback(
+  let t = C.useCallback(
     () =>
-      oe((0, Q.jsx)(Tt, {}), window, {
-        strTitle: S(`#QAndA_CreateQAndA_Title`),
+      ne((0, Q.jsx)(Tt, {}), window, {
+        strTitle: h(`#QAndA_CreateQAndA_Title`),
       }),
     [],
   );
   return (0, Q.jsxs)(`div`, {
     className: ft,
     children: [
-      (0, Q.jsx)(`div`, { className: pt, children: S(`#QAndA_Dashboard`) }),
+      (0, Q.jsx)(`div`, { className: pt, children: h(`#QAndA_Dashboard`) }),
       (0, Q.jsx)(`div`, {
         className: mt,
         children: (0, Q.jsx)(f, {
           onClick: t,
-          children: S(`#QAndA_CreateQAndA_Button`),
+          children: h(`#QAndA_CreateQAndA_Button`),
         }),
       }),
     ],
@@ -928,21 +928,21 @@ function Ct(e) {
 }
 var wt = 120;
 function Tt(e) {
-  let t = Ce(),
-    [n, r] = T.useState(``);
-  return (0, Q.jsx)(re, {
-    strTitle: S(`#QAndA_CreateQAndA_Title`),
-    strDescription: S(`#QAndA_CreateQAndA_Instructions`),
-    strOKButtonText: S(`#Button_Create`),
+  let t = Te(),
+    [n, r] = C.useState(``);
+  return (0, Q.jsx)(ce, {
+    strTitle: h(`#QAndA_CreateQAndA_Title`),
+    strDescription: h(`#QAndA_CreateQAndA_Instructions`),
+    strOKButtonText: h(`#Button_Create`),
     onOK: () => t(n),
     bOKDisabled: n.length == 0,
     closeModal: e.closeModal,
     className: yt,
-    children: (0, Q.jsx)(h, {
+    children: (0, Q.jsx)(se, {
       type: `text`,
       className: X,
       value: n,
-      placeholder: S(`#QAndA_EnterNamePrompt`),
+      placeholder: h(`#QAndA_EnterNamePrompt`),
       onFocus: (e) => e.target.select(),
       onChange: (e) => r(e.currentTarget.value),
       maxLength: wt,
@@ -952,17 +952,17 @@ function Tt(e) {
 function Et(e) {
   let { qanda: t } = e,
     n =
-      w.COMMUNITY_BASE_URL +
+      x.COMMUNITY_BASE_URL +
       `questions/` +
-      C.VANITY_ID +
+      S.VANITY_ID +
       `/view/` +
       t.gidSession,
-    r = T.useCallback(
+    r = C.useCallback(
       (e) => {
         (e.stopPropagation(),
           e.preventDefault(),
-          oe((0, Q.jsx)(Ot, { qanda: t }), window, {
-            strTitle: S(`#QAndA_CreateQAndA_Title`),
+          ne((0, Q.jsx)(Ot, { qanda: t }), window, {
+            strTitle: h(`#QAndA_CreateQAndA_Title`),
           }));
       },
       [t],
@@ -979,7 +979,7 @@ function Et(e) {
         children: (0, Q.jsx)(`div`, {
           className: _t,
           onClick: r,
-          children: (0, Q.jsx)(ee, {}),
+          children: (0, Q.jsx)(te, {}),
         }),
       }),
     ],
@@ -987,9 +987,9 @@ function Et(e) {
 }
 function Dt(e) {
   let { qanda: t } = e,
-    [n, r] = T.useState(!1),
-    [i, a] = T.useState(t.strName),
-    o = we(),
+    [n, r] = C.useState(!1),
+    [i, a] = C.useState(t.strName),
+    o = Ee(),
     c = (e) => {
       (e.stopPropagation(), e.preventDefault(), n || r(!0));
     },
@@ -1003,16 +1003,16 @@ function Dt(e) {
         ? t.strName
         : (0, Q.jsx)(`span`, {
             className: ht,
-            children: S(`#QAndA_EnterNamePrompt`),
+            children: h(`#QAndA_EnterNamePrompt`),
           }),
     d = (0, Q.jsxs)(`div`, {
       className: X,
       children: [
-        (0, Q.jsx)(h, {
+        (0, Q.jsx)(se, {
           type: `text`,
           className: X,
           value: i,
-          placeholder: S(`#QAndA_EnterNamePrompt`),
+          placeholder: h(`#QAndA_EnterNamePrompt`),
           onFocus: (e) => e.target.select(),
           onChange: (e) => a(e.currentTarget.value),
           maxLength: wt,
@@ -1020,7 +1020,7 @@ function Dt(e) {
         (0, Q.jsx)(de, {
           onClick: l,
           className: I,
-          children: S(`#Button_Save`),
+          children: h(`#Button_Save`),
         }),
       ],
     });
@@ -1032,22 +1032,22 @@ function Dt(e) {
 }
 function Ot(e) {
   let { qanda: t } = e,
-    n = Te();
-  return (0, Q.jsxs)(re, {
-    strTitle: S(`#QAndA_Column_DeleteButtons`),
-    strDescription: S(`#QAndA_DeleteQAndA_Instructions`),
+    n = De();
+  return (0, Q.jsxs)(ce, {
+    strTitle: h(`#QAndA_Column_DeleteButtons`),
+    strDescription: h(`#QAndA_DeleteQAndA_Instructions`),
     onOK: () => n(t.gidSession),
     closeModal: e.closeModal,
     className: bt,
     children: [
       (0, Q.jsx)(`div`, {
         className: Z,
-        children: S(`#QAndA_Column_Name`) + `: ` + t.strName,
+        children: h(`#QAndA_Column_Name`) + `: ` + t.strName,
       }),
       (0, Q.jsx)(`div`, {
         className: Z,
         children:
-          S(`#QAndA_Column_QuestionCount`) + `: ` + t.rgQuestionGIDs.length,
+          h(`#QAndA_Column_QuestionCount`) + `: ` + t.rgQuestionGIDs.length,
       }),
     ],
   });
@@ -1061,13 +1061,13 @@ function $(e) {
       fnVoteOnQuestion: a,
       rtNow: o,
     } = e,
-    [s, c] = be(n);
+    [s, c] = Se(n);
   if (!s) return null;
   let l = o - s.rtPostTime,
-    d = l < ue.PerDay ? fe(l) : ce(s.rtPostTime),
+    d = l < ue.PerDay ? pe(l) : me(s.rtPostTime),
     ee = i ? () => a(n, !s.bUserUpVoted) : null,
-    f = i ? (s.bUserUpVoted ? nt : tt) : it,
-    te = g(
+    te = i ? (s.bUserUpVoted ? nt : tt) : it,
+    f = g(
       Ke,
       s.eState == 3 && `izbX9Bk-ctQ-`,
       s.eState == 1 && void 0,
@@ -1075,7 +1075,7 @@ function $(e) {
       s.eState == 2 && void 0,
     );
   return (0, Q.jsxs)(`div`, {
-    className: te,
+    className: f,
     children: [
       (0, Q.jsxs)(`div`, {
         className: g(Je, `questionCtn`),
@@ -1091,20 +1091,20 @@ function $(e) {
                     className: $e,
                     children: s.strQuestionText,
                   }),
-                  (0, Q.jsx)(y, {
+                  (0, Q.jsx)(b, {
                     toolTipContent:
                       i &&
                       (s.bUserUpVoted
-                        ? S(`#QAndA_VoteRemoveTooltip`)
-                        : S(`#QAndA_VoteTooltip`)),
+                        ? h(`#QAndA_VoteRemoveTooltip`)
+                        : h(`#QAndA_VoteTooltip`)),
                     children: (0, Q.jsxs)(`div`, {
-                      className: g(f, et),
+                      className: g(te, et),
                       onClick: ee,
                       children: [
-                        (0, Q.jsx)(se, { className: rt }),
+                        (0, Q.jsx)(re, { className: rt }),
                         (0, Q.jsx)(`div`, {
                           className: void 0,
-                          children: ae(Number(s.nVoteCount)),
+                          children: le(Number(s.nVoteCount)),
                         }),
                       ],
                     }),
@@ -1118,7 +1118,7 @@ function $(e) {
                   children: (0, Q.jsx)(u, {
                     rtFullDate: s.rtPostTime,
                     className: V,
-                    stylesmodule: Ee,
+                    stylesmodule: Oe,
                     children: d,
                   }),
                 }),
@@ -1135,7 +1135,7 @@ function $(e) {
 function kt(e) {
   let { question: t, rtNow: n } = e,
     r = t.rtAnswerTime && n - t.rtAnswerTime,
-    i = t.rtAnswerTime && (r < ue.PerDay ? fe(r) : ce(t.rtAnswerTime));
+    i = t.rtAnswerTime && (r < ue.PerDay ? pe(r) : me(t.rtAnswerTime));
   return t.strAnswerText
     ? (0, Q.jsxs)(`div`, {
         className: ot,
@@ -1145,9 +1145,9 @@ function kt(e) {
             children: [
               (0, Q.jsx)(`div`, {
                 className: U,
-                children: (0, Q.jsx)(ne, { color: `#67c1f5` }),
+                children: (0, Q.jsx)(ae, { color: `#67c1f5` }),
               }),
-              S(`#QAndA_ModeratorAnswerTitle`),
+              h(`#QAndA_ModeratorAnswerTitle`),
             ],
           }),
           (0, Q.jsxs)(`div`, {
@@ -1159,7 +1159,7 @@ function kt(e) {
             children: (0, Q.jsx)(u, {
               rtFullDate: t.rtAnswerTime,
               className: V,
-              stylesmodule: Ee,
+              stylesmodule: Oe,
               children: i,
             }),
           }),
@@ -1170,14 +1170,14 @@ function kt(e) {
         children: [
           (0, Q.jsx)(`div`, {
             className: U,
-            children: (0, Q.jsx)(ne, { color: `#67c1f5` }),
+            children: (0, Q.jsx)(ae, { color: `#67c1f5` }),
           }),
-          S(`#QAndA_AlreadyAnsweredTitle`),
+          h(`#QAndA_AlreadyAnsweredTitle`),
         ],
       });
 }
 function At(e) {
-  let t = te.InitFromAccountID(e.accountID, w.EUNIVERSE).ConvertTo64BitString(),
+  let t = oe.InitFromAccountID(e.accountID, x.EUNIVERSE).ConvertTo64BitString(),
     { isLoading: n, data: r } = d(e.accountID);
   return n
     ? null
@@ -1190,7 +1190,7 @@ function At(e) {
 }
 function jt(e) {
   let { gidSession: t, gidQuestion: n, eState: r } = e,
-    { fnAnswerQuestion: i, fnModerateQuestion: a } = xe(t),
+    { fnAnswerQuestion: i, fnModerateQuestion: a } = Ce(t),
     o = () => a(n, 1),
     s = () => a(n, 3),
     c = () => i(n, ``),
@@ -1200,43 +1200,43 @@ function jt(e) {
   return (0, Q.jsxs)(`div`, {
     className: lt,
     children: [
-      S(`#QAndA_ModeratorLabel`),
+      h(`#QAndA_ModeratorLabel`),
       (0, Q.jsx)(`div`, {
         className: W,
         children: (0, Q.jsx)(It, {
-          strPrompt: S(`#QAndA_AnswerPrompt`),
+          strPrompt: h(`#QAndA_AnswerPrompt`),
           fnSubmit: (e) => i(n, e),
         }),
       }),
       (0, Q.jsxs)(`div`, {
         className: W,
         children: [
-          S(`#QAndA_ModeratorOtherOptionsLabel`),
-          (0, Q.jsx)(y, {
-            toolTipContent: S(`#QAndA_ModerateApproveButton_ttip`),
+          h(`#QAndA_ModeratorOtherOptionsLabel`),
+          (0, Q.jsx)(b, {
+            toolTipContent: h(`#QAndA_ModerateApproveButton_ttip`),
             children: (0, Q.jsx)(f, {
               onClick: o,
               className: I,
               disabled: !l,
-              children: S(`#QAndA_ModerateApproveButton`),
+              children: h(`#QAndA_ModerateApproveButton`),
             }),
           }),
-          (0, Q.jsx)(y, {
-            toolTipContent: S(`#QAndA_ModerateHideButton_ttip`),
+          (0, Q.jsx)(b, {
+            toolTipContent: h(`#QAndA_ModerateHideButton_ttip`),
             children: (0, Q.jsx)(f, {
               onClick: s,
               className: I,
               disabled: !u,
-              children: S(`#QAndA_ModerateHideButton`),
+              children: h(`#QAndA_ModerateHideButton`),
             }),
           }),
-          (0, Q.jsx)(y, {
-            toolTipContent: S(`#QAndA_QuickAnswerButton_ttip`),
+          (0, Q.jsx)(b, {
+            toolTipContent: h(`#QAndA_QuickAnswerButton_ttip`),
             children: (0, Q.jsx)(f, {
               onClick: c,
               className: I,
               disabled: !d,
-              children: S(`#QAndA_QuickAnswerButton`),
+              children: h(`#QAndA_QuickAnswerButton`),
             }),
           }),
         ],
@@ -1246,17 +1246,17 @@ function jt(e) {
 }
 function Mt(e) {
   let { gidSession: t } = e;
-  ge();
-  let { strName: n, bUserCanModerate: r } = k(t);
+  ve();
+  let { strName: n, bUserCanModerate: r } = be(t);
   return (0, Q.jsxs)(`div`, {
-    className: A,
+    className: O,
     children: [
       (0, Q.jsx)(`div`, {
-        className: j,
-        children: S(`#QAndA_Header`) + (n?.length > 0 ? `: ` + n : ``),
+        className: k,
+        children: h(`#QAndA_Header`) + (n?.length > 0 ? `: ` + n : ``),
       }),
       (0, Q.jsxs)(`div`, {
-        className: M,
+        className: A,
         children: [
           (0, Q.jsx)(Pt, { gidSession: t, bHalfOfFullPage: r }),
           r && (0, Q.jsx)(Nt, { gidSession: t }),
@@ -1271,15 +1271,15 @@ function Nt(e) {
       bUserCanModerate: n,
       rgNewQuestionGIDs: r,
       rgHiddenQuestionGIDs: i,
-    } = k(t),
+    } = be(t),
     a = c(10);
   return n
     ? (0, Q.jsxs)(`div`, {
-        className: g(P, F),
+        className: g(M, N),
         children: [
           (0, Q.jsx)(l, {
-            title: S(`#QAndA_ModeratorViewHeader`),
-            className: De,
+            title: h(`#QAndA_ModeratorViewHeader`),
+            className: P,
             children: (0, Q.jsx)(`div`, {
               className: z,
               children: r.map((e) =>
@@ -1298,8 +1298,8 @@ function Nt(e) {
             }),
           }),
           (0, Q.jsx)(l, {
-            title: S(`#QAndA_HiddenQuestionsHeader`),
-            className: Oe,
+            title: h(`#QAndA_HiddenQuestionsHeader`),
+            className: F,
             bStartMinimized: !0,
             children: (0, Q.jsx)(`div`, {
               className: z,
@@ -1324,7 +1324,7 @@ function Nt(e) {
 }
 function Pt(e) {
   let { gidSession: t, bHalfOfFullPage: n } = e;
-  ge();
+  ve();
   let {
       bIsLoaded: r,
       bUserCanAskQuestions: i,
@@ -1334,16 +1334,16 @@ function Pt(e) {
       rgModeratedQuestionGIDs: u,
       rgAnsweredQuestionGIDs: d,
       rgNewQuestionGIDs: ee,
-    } = k(t),
-    { fnReload: te, bIsReloading: ne } = ye(t),
-    p = c(10),
-    m = o && n,
-    { fnModerateQuestion: h } = xe(t);
+    } = be(t),
+    { fnReload: te, bIsReloading: ne } = xe(t),
+    re = c(10),
+    p = o && n,
+    { fnModerateQuestion: m } = Ce(t);
   return (0, Q.jsxs)(`div`, {
-    className: g(N, n && `jikb8cKLdwg-`),
+    className: g(j, n && `jikb8cKLdwg-`),
     children: [
       (0, Q.jsxs)(`div`, {
-        className: g(Me, m && `YASLZpdIsfU-`),
+        className: g(Me, p && `YASLZpdIsfU-`),
         children: [
           (0, Q.jsx)(f, {
             onClick: te,
@@ -1351,22 +1351,22 @@ function Pt(e) {
             className: g(I, ke, ne && `_7zP2DXBFo3Y-`),
             children: (0, Q.jsx)(`div`, {
               className: void 0,
-              children: (0, Q.jsx)(le, {}),
+              children: (0, Q.jsx)(fe, {}),
             }),
           }),
-          m
+          p
             ? (0, Q.jsxs)(Q.Fragment, {
                 children: [
-                  S(`#QAndA_ModeratorLabelHeader`),
-                  (0, Q.jsx)(y, {
-                    toolTipContent: S(`#QAndA_ModerateHideAllButton_ttip`),
+                  h(`#QAndA_ModeratorLabelHeader`),
+                  (0, Q.jsx)(b, {
+                    toolTipContent: h(`#QAndA_ModerateHideAllButton_ttip`),
                     children: (0, Q.jsx)(f, {
                       onClick: async () => {
                         for (let e of [ee, u, d])
-                          for (let t of e) await h(t, 3);
+                          for (let t of e) await m(t, 3);
                       },
                       className: I,
-                      children: S(`#QAndA_ModerateHideAllButton`),
+                      children: h(`#QAndA_ModerateHideAllButton`),
                     }),
                   }),
                 ],
@@ -1379,7 +1379,7 @@ function Pt(e) {
       u.length + d.length == 0
         ? (0, Q.jsx)(`div`, {
             className: Ge,
-            children: S(`#QAndA_NoQuestionsYet`),
+            children: h(`#QAndA_NoQuestionsYet`),
           })
         : (0, Q.jsxs)(`div`, {
             className: Ve,
@@ -1397,10 +1397,10 @@ function Pt(e) {
                         {
                           gidSession: t,
                           gidQuestion: e,
-                          bUserCanModerate: m,
+                          bUserCanModerate: p,
                           bUserCanVote: i,
                           fnVoteOnQuestion: l,
-                          rtNow: p,
+                          rtNow: re,
                         },
                         e,
                       ),
@@ -1412,7 +1412,7 @@ function Pt(e) {
                   children: [
                     (0, Q.jsx)(`div`, {
                       className: `cua4C9nfXwM-`,
-                      children: S(`#QAndA_AnsweredQuestionsHeader`),
+                      children: h(`#QAndA_AnsweredQuestionsHeader`),
                     }),
                     (0, Q.jsx)(`div`, {
                       className: `_42oBi1K5Go4-`,
@@ -1422,10 +1422,10 @@ function Pt(e) {
                           {
                             gidSession: t,
                             gidQuestion: e,
-                            bUserCanModerate: m,
+                            bUserCanModerate: p,
                             bUserCanVote: i,
                             fnVoteOnQuestion: l,
-                            rtNow: p,
+                            rtNow: re,
                           },
                           e,
                         ),
@@ -1439,16 +1439,16 @@ function Pt(e) {
   });
 }
 function Ft(e) {
-  let [t, n] = T.useState(!1),
+  let [t, n] = C.useState(!1),
     r = o(`QuestionBox`);
   return (0, Q.jsxs)(Q.Fragment, {
     children: [
       (0, Q.jsx)(`div`, {
         className: L,
-        children: S(`#QAndA_HeaderDescription`),
+        children: h(`#QAndA_HeaderDescription`),
       }),
       (0, Q.jsx)(It, {
-        strPrompt: S(`#QAndA_QuestionPrompt`),
+        strPrompt: h(`#QAndA_QuestionPrompt`),
         fnSubmit: async (t) => {
           let i = await e.fnAskQuestion(t);
           return (
@@ -1464,20 +1464,20 @@ function Ft(e) {
       }),
       (0, Q.jsx)(`div`, {
         className: g(Ne, t && `l0ZS73yFCCg-`),
-        children: S(`#QAndA_QuestionWasPosted`),
+        children: h(`#QAndA_QuestionWasPosted`),
       }),
     ],
   });
 }
 function It(e) {
   let { strPrompt: t, fnSubmit: n } = e,
-    [r, i] = T.useState(``),
-    [o, s] = T.useState(!1);
+    [r, i] = C.useState(``),
+    [o, s] = C.useState(!1);
   return (0, Q.jsx)(Q.Fragment, {
     children: (0, Q.jsxs)(`div`, {
       className: Le,
       children: [
-        (0, Q.jsx)(h, {
+        (0, Q.jsx)(se, {
           type: `text`,
           placeholder: t,
           maxLength: 512,
@@ -1498,7 +1498,7 @@ function It(e) {
               },
               disabled: o || !r,
               className: I,
-              children: S(`#QAndA_SubmitCommentButton`),
+              children: h(`#QAndA_SubmitCommentButton`),
             }),
           ],
         }),
@@ -1510,12 +1510,12 @@ function Lt(e) {
   return (0, Q.jsxs)(`div`, {
     className: L,
     children: [
-      (0, Q.jsx)(`div`, { className: Re, children: S(`#QAndA_LogInPrompt`) }),
-      !v.logged_in &&
+      (0, Q.jsx)(`div`, { className: Re, children: h(`#QAndA_LogInPrompt`) }),
+      !y.logged_in &&
         (0, Q.jsx)(f, {
-          onClick: pe,
+          onClick: he,
           className: g(`JOMsuYcfEgE-`, `KtfZY3EXbm4-`),
-          children: S(`#Login_SignIn`),
+          children: h(`#Login_SignIn`),
         }),
     ],
   });

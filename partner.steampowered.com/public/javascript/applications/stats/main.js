@@ -14451,6 +14451,11 @@ var CMsgIPAddress = class t extends import_google_protobuf.Message {
               br: ReaderProto.readBool,
               bw: WriterProto.writeBool,
             },
+            screen_refresh_rate: {
+              n: 21,
+              br: ReaderProto.readUint32,
+              bw: WriterProto.writeUint32,
+            },
           },
         }),
         t.sm_m
@@ -17764,11 +17769,7 @@ var CClientMetrics_ClientBootstrap_RequestInfo = class t
         CClientMetrics_ReportReactUsage_Notification,
         n,
       ),
-      {
-        ePrivilege: 2,
-        eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`],
-      },
+      { ePrivilege: 2, eWebAPIKeyRequirement: 1, rgBrowserAPISites: [`all`] },
     );
   }
   t.ReportReactUsage = o;
@@ -24296,11 +24297,6 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
               br: ReaderProto.readBool,
               bw: WriterProto.writeBool,
             },
-            price_to_base_discount_on: {
-              n: 53,
-              br: ReaderProto.readInt64String,
-              bw: WriterProto.writeInt64String,
-            },
             free_with_master_sub_appid: {
               n: 54,
               br: ReaderProto.readUint32,
@@ -29943,7 +29939,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 1,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -29974,7 +29970,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -29988,7 +29984,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -30015,7 +30011,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 0,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -30033,7 +30029,7 @@ var SteamAward_Localization = class t extends import_google_protobuf.Message {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`partner`, `community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -37581,7 +37577,7 @@ function GetAltDirection(t) {
   }
 }
 function ComputePlacement(t, n, r, i, o, s, l) {
-  let u = l.innerWidth,
+  let u = l.document.documentElement.clientWidth,
     p = l.innerHeight,
     m = 0,
     h = 0,
@@ -58246,11 +58242,7 @@ var CAccountPrivacyCookiePreferences = class t
         r,
       ),
       CAccountPrivacy_GetCookiePreferences_Response,
-      {
-        bConstMethod: !0,
-        ePrivilege: 1,
-        rgBrowserAPISites: [`partner`, `help`, `community`, `store`],
-      },
+      { bConstMethod: !0, ePrivilege: 1, rgBrowserAPISites: [`all`] },
     );
   }
   t.GetCookiePreferences = n;
@@ -60009,16 +60001,15 @@ async function BRefreshLoginCookie() {
     return !1;
   }
 }
-function BCanSendMessageViaBrowserAPI(t) {
-  return BExposedToSite(t.rgBrowserAPISites, `stats`);
-}
 var CBrowserAPIInterface = class {
   m_ServiceTransport;
   m_AnonymousServiceTransport;
   m_fallbackInterface;
+  m_strSiteName;
   m_refreshLoginCookiePromise;
-  constructor(t) {
+  constructor(t, n = `stats`) {
     ((this.m_fallbackInterface = t),
+      (this.m_strSiteName = n),
       (this.m_ServiceTransport = {
         SendMsg: this.SendMsgAndAwaitResponse.bind(this, { bSendAuth: !0 }),
         SendNotification: this.SendNotification.bind(this, { bSendAuth: !0 }),
@@ -60031,7 +60022,7 @@ var CBrowserAPIInterface = class {
       }));
   }
   async SendMsgAndAwaitResponse(t, n, r, i, o) {
-    if (!BCanSendMessageViaBrowserAPI(o)) {
+    if (!this.BCanSendMessageViaBrowserAPI(o)) {
       if (this.m_fallbackInterface)
         return t.bSendAuth
           ? this.m_fallbackInterface?.GetServiceTransport().SendMsg(n, r, i, o)
@@ -60046,6 +60037,9 @@ var CBrowserAPIInterface = class {
       !(await this.BEnsureLoginCookieRefreshed())
       ? s.msgResult
       : (await this.SendMsgOnce(t, n, r, i, o)).msgResult;
+  }
+  BCanSendMessageViaBrowserAPI(t) {
+    return BExposedToSite(t.rgBrowserAPISites, this.m_strSiteName);
   }
   BEnsureLoginCookieRefreshed() {
     return (
@@ -60081,7 +60075,7 @@ var CBrowserAPIInterface = class {
     return { msgResult: s, status: l };
   }
   SendNotification(t, n, r, i) {
-    if (!BCanSendMessageViaBrowserAPI(i)) {
+    if (!this.BCanSendMessageViaBrowserAPI(i)) {
       if (this.m_fallbackInterface)
         return t.bSendAuth
           ? this.m_fallbackInterface
@@ -60166,12 +60160,11 @@ var CBrowserAPIInterface = class {
     return new Date(t * 1e3);
   }
 };
-function GetSiteBaseURLs() {
-  return [Config$1.STATS_BASE_URL];
-}
 function WithSiteBrowserAPI(t) {
   let n = GET_BASE_URL();
-  return n && GetSiteBaseURLs().includes(n) ? new CBrowserAPIInterface(t) : t;
+  return n && n === Config$1.STORE_CHECKOUT_BASE_URL
+    ? new CBrowserAPIInterface(t, `checkout`)
+    : new CBrowserAPIInterface(t);
 }
 var k_unSecTokenExpiryRefreshBuffer = 900;
 function DecodeToken(t) {
@@ -60296,8 +60289,9 @@ var CWebAPIInterface = class {
       } catch {}
       let u = l === 401;
       if (!s) {
-        let t = u ? `Unauthorized` : void 0;
-        s = this.CreateFailedMsgProtobuf(i, 3, t);
+        let t = u ? `Unauthorized` : void 0,
+          n = l === 429 ? 84 : 2;
+        s = this.CreateFailedMsgProtobuf(i, 3, n, t);
       }
       return (
         u &&
@@ -60358,13 +60352,13 @@ var CWebAPIInterface = class {
       if (!n || n.length != 4) throw `Invalid service name: ${t}`;
       return `${this.m_strWebAPIBaseURL}I${n[1]}Service/${n[2]}/v${n[3]}`;
     }
-    CreateFailedMsgProtobuf(t, n, r) {
-      let i = CProtoBufMsg.Init(t);
+    CreateFailedMsgProtobuf(t, n, r, i) {
+      let o = CProtoBufMsg.Init(t);
       return (
-        i.Hdr().set_eresult(2),
-        i.Hdr().set_transport_error(n),
-        r && i.Hdr().set_error_message(r),
-        i
+        o.Hdr().set_eresult(r),
+        o.Hdr().set_transport_error(n),
+        i && o.Hdr().set_error_message(i),
+        o
       );
     }
     async AttemptTokenRefresh() {
@@ -60437,9 +60431,8 @@ var v6 = `Dkzap317Nac-`,
     document.getElementById(`application_config`)
       ? InitConfig(`application_config`)
       : InitConfig();
-    let t = GetConfigJSON(`support_oauth_token`, `application_config`),
-      n = WithSiteBrowserAPI(new CWebAPIInterface(Config$1.WEBAPI_BASE_URL, t));
-    (ErrorReportingStore().Init(`Support`, CLSTAMP, n.GetServiceTransport(), {
+    let t = WithSiteBrowserAPI(new CWebAPIInterface(Config$1.WEBAPI_BASE_URL));
+    (ErrorReportingStore().Init(`Support`, CLSTAMP, t.GetServiceTransport(), {
       fnGetReportTags: GetDefaultWebErrorReportingTags,
     }),
       await InitLocalization(Config$1.LANGUAGE),

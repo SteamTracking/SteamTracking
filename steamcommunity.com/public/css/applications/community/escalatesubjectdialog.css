@@ -39,6 +39,21 @@
 .U5fa7ynZKdY- > a:first-child {
   flex-shrink: 0;
 }
+.i-jXCzZsk-I- {
+  flex-direction: column;
+  min-width: 0;
+  display: flex;
+}
+.jqQaOB-H9mI- {
+  opacity: 0.7;
+  white-space: nowrap;
+  font-size: 10px;
+  line-height: 12px;
+}
+.jqQaOB-H9mI-.k54a6d8CjJU- {
+  color: #e04040;
+  opacity: 1;
+}
 .WN24eWEAUSk- {
   min-width: 0;
   display: flex;

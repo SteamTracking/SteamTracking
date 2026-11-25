@@ -46,6 +46,7 @@ steamcommunity.com ^/market/advancedsearch/?$
 steamcommunity.com ^/market/app(?:/([^/]+?))/?$
 steamcommunity.com ^/market/buyorders/?$
 steamcommunity.com ^/market/history/?$
+steamcommunity.com ^/market/home/?$
 steamcommunity.com ^/market/listings(?:/([^/]+?))(?:/([^/]+?))(?:/([^/]+?))?/?$
 steamcommunity.com ^/market/search/?$
 steamcommunity.com ^/market/zoo/?$

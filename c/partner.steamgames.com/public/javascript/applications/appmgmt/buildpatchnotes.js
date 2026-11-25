@@ -5,14 +5,18 @@ const __vite__mapDeps = (
     (_._ = [
       "./chunk~1be18041c2.js",
       "./chunk~de7f2df91c.js",
-      "./chunk~25a6634263.js",
       "./chunk~1fa4b8f2ff.js",
+      "./chunk~bd90a5fce7.js",
       "./chunk~44f252525d.js",
+      "./chunk~96e60d7578.js",
+      "./chunk~25a6634263.js",
       "../../../css/applications/appmgmt/chunk~1fc66b8190.css",
       "./chunk~6b8ddcaac8.js",
       "./chunk~68b7e78d68.js",
       "./chunk~8fb30ea08b.js",
       "./chunk~ede3e357a2.js",
+      "./chunk~b4171a8747.js",
+      "./chunk~ca0c999570.js",
       "./chunk~0a99e05c44.js",
       "./chunk~f8b6a4beb3.js",
       "./chunk~4406a7b793.js",
@@ -21,15 +25,18 @@ const __vite__mapDeps = (
       "./chunk~bf46c905a4.js",
       "./chunk~6257ebd2d4.js",
       "./chunk~428594b857.js",
-      "./chunk~d9c3dab17a.js",
+      "./chunk~70c16cc80c.js",
+      "./chunk~4571d27d07.js",
       "./chunk~a825a84845.js",
-      "./chunk~b7c2818157.js",
+      "./chunk~7b4b9eb713.js",
+      "./chunk~f4e4ed5c17.js",
+      "./chunk~a6b9ae1345.js",
+      "./chunk~f3a565e188.js",
       "./chunk~b390ee0f78.js",
       "./chunk~90b9831ad2.js",
       "./chunk~e29b7ee76a.js",
       "./chunk~8681f5c764.js",
       "./chunk~2201b8cb3d.js",
-      "./chunk~f4e4ed5c17.js",
       "./chunk~c55709d290.js",
       "./chunk~af36c62e9f.js",
       "./chunk~b00bc5ccc1.js",
@@ -41,9 +48,9 @@ const __vite__mapDeps = (
       "./chunk~92931c6310.js",
       "./chunk~38a44beba7.js",
       "./chunk~8ceeb46076.js",
+      "./chunk~521597d5f9.js",
       "./chunk~2f8c67b4de.js",
       "../../../css/applications/appmgmt/chunk~bc10934db3.css",
-      "./chunk~a6b9ae1345.js",
       "./chunk~0278ae6236.js",
       "./chunk~ada233e34d.js",
       "../../../css/applications/appmgmt/chunk~2854714fbb.css",
@@ -53,10 +60,6 @@ const __vite__mapDeps = (
       "./chunk~710e3cfd2f.js",
       "./chunk~967b42dac9.js",
       "../../../css/applications/appmgmt/chunk~84f339f8d2.css",
-      "./chunk~2bee5a7d08.js",
-      "./chunk~b4171a8747.js",
-      "./chunk~ca0c999570.js",
-      "./chunk~521597d5f9.js",
       "./chunk~3f2c78281d.js",
       "./chunk~e70aabe4d7.js",
       "./chunk~cbbb6ae37c.js",
@@ -66,11 +69,8 @@ const __vite__mapDeps = (
       "./chunk~05a38bc848.js",
       "./chunk~af1574091f.js",
       "../../../css/applications/appmgmt/chunk~bc29451df5.css",
-      "./chunk~4571d27d07.js",
       "./chunk~a7c5e71e12.js",
       "./chunk~3ee5188744.js",
-      "./chunk~f3a565e188.js",
-      "./chunk~70c16cc80c.js",
       "../../../css/applications/appmgmt/chunk~d22a22fa8b.css",
       "./chunk~f0141d9521.js",
       "./chunk~93fc7377c2.js",
@@ -100,9 +100,7 @@ const __vite__mapDeps = (
       "./chunk~aae8417744.js",
       "./chunk~fc8a9e4879.js",
       "./chunk~3f4314f3b4.js",
-      "../../../css/applications/appmgmt/chunk~863c097d06.css",
       "./chunk~3720b337f3.js",
-      "./chunk~7b4b9eb713.js",
       "../../../css/applications/appmgmt/chunk~b3cb27b5e1.css",
       "./chunk~9a3ef4764b.js",
       "../../../css/applications/appmgmt/chunk~6bd2e40da3.css",
@@ -146,11 +144,8 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
 } from "./chunk~de7f2df91c.js";
-import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~25a6634263.js";
+import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~bd90a5fce7.js";
 import { _ } from "./chunk~68b7e78d68.js";
 import {
   _,
@@ -205,14 +200,32 @@ import {
   _,
 } from "./chunk~1fa4b8f2ff.js";
 import { _, _, _, _, _ } from "./chunk~0a99e05c44.js";
-import { _, _, _, _, _, _, _, _, _ } from "./chunk~6b8ddcaac8.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./chunk~6b8ddcaac8.js";
 import { _, _ } from "./chunk~44f252525d.js";
 import { _, _ } from "./chunk~f8b6a4beb3.js";
 import { _ } from "./chunk~8fb30ea08b.js";
 import { _ } from "./chunk~ede3e357a2.js";
 import { _ } from "./chunk~6257ebd2d4.js";
 import { _ } from "./chunk~a825a84845.js";
+import { _ } from "./chunk~7b4b9eb713.js";
 import { _, _ } from "./chunk~43407e91ef.js";
+import { _, _, _ } from "./chunk~96e60d7578.js";
+import { _ } from "./chunk~25a6634263.js";
 import { _ } from "./chunk~fc8a9e4879.js";
 import { _ } from "./chunk~9d71b14b50.js";
 import { _, _ } from "./chunk~8681f5c764.js";
@@ -220,16 +233,14 @@ import { _ } from "./chunk~f4e4ed5c17.js";
 import { _ } from "./chunk~92931c6310.js";
 import { _ } from "./chunk~c55709d290.js";
 import { _ } from "./chunk~eefd71512b.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~fd80c4b5eb.js";
-import { _, _ } from "./chunk~0111fcd096.js";
-import { _, _, _, _, _, _ } from "./chunk~2f8c67b4de.js";
 import { _ } from "./chunk~05a38bc848.js";
-import { _, _, _, _, _ } from "./chunk~2bee5a7d08.js";
 import "./chunk~a6b9ae1345.js";
 import { _ } from "./chunk~ca0c999570.js";
 import { _ } from "./chunk~f0141d9521.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~fd80c4b5eb.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk~3f2c78281d.js";
-import { _ } from "./chunk~7b4b9eb713.js";
+import { _, _, _, _, _, _ } from "./chunk~2f8c67b4de.js";
+import { _, _ } from "./chunk~0111fcd096.js";
 import { _ } from "./chunk~4d16ce5d1a.js";
 import { _ } from "./chunk~3ee5188744.js";
 import { _ } from "./chunk~5c6be4668b.js";
@@ -827,6 +838,30 @@ var _ = `zMH1K8bigkM-`,
   _ = `bD0kY0dKy3k-`,
   _ = `Dw62Gq5AJZE-`,
   _ = {};
+_[2026] = {
+  strTileAssetDir: `steamawards2026/tiles/`,
+  nTileVersion: 1,
+  strPageTileAsset: `steamawards2026/page_tile.svg?v=1`,
+  strCategoryColor: `#1e1e1e`,
+  mapCategoryColors: {
+    BestGameYouSuckAt: `#521437`,
+    BestHandheldGame: `#452138`,
+    BestSoundtrack: `#521422`,
+    BetterWithFriends: `#521514`,
+    DefiesDescription: `#194d39`,
+    GOTY: `#17464f`,
+    HallOfFame: `#862e30`,
+    JustFiveMoreMinutes: `#281452`,
+    LaborOfLove: `#61132b`,
+    OutstandingStoryRichGame: `#183e4e`,
+    OutstandingVisualStyle: `#222344`,
+    SitBackAndRelax: `#1e2d5c`,
+    ThisIsMyJobNow: `#4c1a30`,
+    VRGOTY: `#3b5e3e`,
+  },
+  nCategoryEdgeDarkenPercent: 35,
+  mapCategoryEdgeColors: {},
+};
 function _(_) {
   return _[_];
 }
@@ -834,7 +869,7 @@ var _ = _(_(), 1);
 ((0, _.default)(`2026-11-23T09:30:00-08:00`).unix(),
   (0, _.default)(`2026-11-30T10:00:00-08:00`).unix());
 function _() {
-  return 2025;
+  return 2026;
 }
 function _(_) {
   return `${_.MEDIA_CDN_URL}store/promo/${_}`;
@@ -1873,12 +1908,12 @@ var _ = 56,
     _(
       () => import(`./chunk~404eafa76f.js`),
       __vite__mapDeps([
-        91, 1, 2, 3, 4, 5, 10, 11, 8, 9, 12, 6, 7, 13, 14, 15, 16, 17, 18, 19,
+        91, 1, 3, 2, 4, 5, 6, 7, 14, 15, 10, 11, 16, 8, 9, 12, 13, 17, 18, 19,
         20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37,
-        38, 39, 40, 41, 42, 43, 44, 92, 55, 56, 57, 50, 51, 52, 53, 58, 93, 94,
-        95, 77, 66, 46, 73, 96, 97, 67, 63, 65, 81, 82, 98, 99, 100, 101, 102,
-        103, 104, 105, 106, 59, 107, 108, 109, 110, 111, 112, 113, 114, 115, 47,
-        116, 60, 61, 62, 48, 64, 68, 117, 118, 85, 86, 74, 87, 119, 120,
+        38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 92, 58, 59, 60,
+        61, 93, 94, 95, 77, 53, 73, 67, 81, 82, 96, 97, 98, 99, 100, 101, 102,
+        103, 104, 62, 105, 106, 107, 108, 109, 110, 111, 112, 113, 54, 63, 64,
+        65, 55, 66, 68, 114, 115, 116, 85, 86, 74, 87, 117, 118,
       ]),
       import.meta.url,
     ),

@@ -1,6 +1,7 @@
 import { _ } from "./chunk~f025431ab0.js";
 import { _, _ } from "./chunk~01cfc309bf.js";
 import { _, _, _, _ } from "./chunk~4eed35ad1f.js";
+import { _ } from "./chunk~56437c278a.js";
 import { _ } from "./chunk~21cdc464a1.js";
 import { _ } from "./chunk~710e3cfd2f.js";
 import { _ } from "./chunk~4d16ce5d1a.js";
@@ -60,7 +61,12 @@ var _ = _(_(), 1),
     },
   };
 function _(_) {
-  let { bShowNewBadge: _, bHasFooterActionLegend: _, onSeeMore: _ } = _,
+  let {
+      bShowNewBadge: _,
+      bHasFooterActionLegend: _,
+      onSeeMore: _,
+      eGamepadSeeMoreButton: _ = `Y`,
+    } = _,
     _ = _(_),
     _ = _ ? JSON.parse(_) : void 0,
     _ = _(940),
@@ -73,9 +79,20 @@ function _(_) {
     _ = _(0, _, _),
     _ = _(_, _, !0, !0).flat(),
     _ = _(`${_.STORE_BASE_URL}personalcalendar`, _, _),
-    { bShowSeeMoreHint: _, panelProps: _ } = _(_),
+    { bShowSeeMoreHint: _, panelProps: _ } = _(_, _),
     _ = _.Localize(`#PersonalCalendar_Explore`),
-    _ = _.useCallback(() => _?.(_), [_, _]);
+    _ = _.useCallback(() => _?.(_), [_, _]),
+    _ = _ ? _ : (_.onOptionsButton ?? _.onSecondaryButton),
+    _ =
+      _ == `X`
+        ? {
+            onSecondaryButton: _,
+            onSecondaryActionDescription: _,
+          }
+        : {
+            onOptionsButton: _,
+            onOptionsActionDescription: _,
+          };
   if (!_.data)
     return (0, _.jsx)(_, {
       className: _,
@@ -101,8 +118,7 @@ function _(_) {
       className: _,
       navEntryPreferPosition: _.PREFERRED_CHILD,
       ..._,
-      onOptionsButton: _ ? _ : _.onOptionsButton,
-      onOptionsActionDescription: _,
+      ..._,
       children: [
         (0, _.jsxs)(`div`, {
           className: _,
@@ -137,6 +153,7 @@ function _(_) {
               (0, _.jsx)(_, {
                 label: _,
                 shown: _,
+                button: _,
               }),
           ],
         }),
@@ -156,6 +173,7 @@ function _(_) {
                 nTimestamp: _,
                 arrAppInfos: _,
                 nRankThreshold: _?.nResultsToShow ?? 100,
+                bGamepadWishlist: _ == `X`,
               },
               _,
             ),
@@ -198,6 +216,7 @@ function _(_) {
       bInitialFocus: _,
       arrAppInfos: _,
       nRankThreshold: _,
+      bGamepadWishlist: _,
     } = _,
     _ = _(),
     _ = _(),
@@ -279,6 +298,7 @@ function _(_) {
                   _,
                   {
                     nAppID: _.nAppID,
+                    bGamepadWishlist: _,
                   },
                   _.nAppID,
                 ),
@@ -312,6 +332,13 @@ function _(_) {
   let _ = _({
       appid: _.nAppID,
     }),
+    _ = _(
+      _.bGamepadWishlist
+        ? {
+            appid: _.nAppID,
+          }
+        : void 0,
+    ),
     _ = _(940),
     _ = _(),
     [_, _] = _.useState(!1),
@@ -333,6 +360,8 @@ function _(_) {
         className: _,
         onGamepadFocus: () => _(!0),
         onGamepadBlur: () => _(!1),
+        ..._,
+        onOKActionDescription: _.onOptionsButton ? null : void 0,
         children: [
           (0, _.jsx)(_, {
             _: {
@@ -414,6 +443,8 @@ function _(_) {
         rootMargin: `100% 0px 100% 0px`,
         children: (0, _.jsx)(_, {
           ..._,
+          bHasFooterActionLegend: !0,
+          eGamepadSeeMoreButton: `X`,
         }),
       })
     : null;

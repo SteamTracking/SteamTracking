@@ -1,5 +1,5 @@
 import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~de7f2df91c.js";
-import { _, _, _, _, _, _, _ } from "./chunk~25a6634263.js";
+import { _, _, _, _, _, _ } from "./chunk~bd90a5fce7.js";
 import {
   _,
   _,
@@ -78,22 +78,22 @@ import {
   _,
 } from "./chunk~1fa4b8f2ff.js";
 import { _ } from "./chunk~0a99e05c44.js";
-import { _ } from "./chunk~6b8ddcaac8.js";
+import { _, _, _, _ } from "./chunk~6b8ddcaac8.js";
 import "./chunk~44f252525d.js";
 import { _ } from "./chunk~ede3e357a2.js";
 import "./chunk~a825a84845.js";
+import { _ } from "./chunk~7b4b9eb713.js";
 import { _ } from "./chunk~b0a84aab1b.js";
+import { _ } from "./chunk~25a6634263.js";
 import { _, _ } from "./chunk~fc8a9e4879.js";
 import { _ } from "./chunk~9d71b14b50.js";
 import { _, _, _, _, _, _ } from "./chunk~0aa5028ef4.js";
 import { _ } from "./chunk~af36c62e9f.js";
 import { _ } from "./chunk~eefd71512b.js";
-import { _ } from "./chunk~0111fcd096.js";
-import { _, _, _ } from "./chunk~2bee5a7d08.js";
 import "./chunk~a6b9ae1345.js";
 import { _, _, _ } from "./chunk~3f2c78281d.js";
+import { _ } from "./chunk~0111fcd096.js";
 import { _ } from "./chunk~93fc7377c2.js";
-import { _ } from "./chunk~7b4b9eb713.js";
 import { _, _ } from "./chunk~a7c5e71e12.js";
 import { _, _ } from "./chunk~7e6646f5a7.js";
 import { _ } from "./chunk~9b35b2d482.js";
@@ -2486,6 +2486,7 @@ function _(_) {
 }
 function _(_) {
   switch (_.type) {
+    case 11:
     case 9:
       return !0;
     case 10: {
@@ -2586,6 +2587,16 @@ function _(_, _) {
         sHeader: _(`#Dashboard_UpcomingEvents_EventType_SeasonPass`),
         sTitle: _(`#Dashboard_UpcomingEvents_EventType_SeasonPass`),
         bUrgent: _.due_date < _.GetTimeNowWithOverride() - 604800,
+        element: (0, _.jsx)(_, {
+          deadline: _,
+          json: _,
+        }),
+      };
+    case 11:
+      return {
+        sHeader: ``,
+        sTitle: ``,
+        bUrgent: !1,
         element: (0, _.jsx)(_, {
           deadline: _,
           json: _,
@@ -2769,6 +2780,24 @@ function _(_) {
       (_ += ` ` + _(`#PartnerDeadline_TaxRequirement_ActualAuthorityRequired`)),
     (0, _.jsx)(_, {
       title: _(_),
+      body: _,
+      rightCol: (0, _.jsx)(_, {
+        url: _,
+        children: _(`#PartnerDeadline_TaxRequirement_ButtonViewDetails`),
+      }),
+    })
+  );
+}
+function _(_) {
+  let { deadline: _, json: _ } = _,
+    _ = `${_.PARTNER_BASE_URL}kycrequirement/view/${_.partnerid}/${_.gid}`,
+    _ = _(),
+    _ = `You have a KYC requirement`;
+  return (
+    _ ||
+      (_ += ` ` + _(`#PartnerDeadline_TaxRequirement_ActualAuthorityRequired`)),
+    (0, _.jsx)(_, {
+      title: `KYC Requirement`,
       body: _,
       rightCol: (0, _.jsx)(_, {
         url: _,
@@ -4028,7 +4057,11 @@ function _(_) {
           (0, _.jsx)(_, {
             complete: _.bAnswered,
             urgent: _,
-            label: _(`#Dashboard_DeepestDiscount_Answer`),
+            label: _(
+              _.bAnswered
+                ? `#Dashboard_DeepestDiscount_Answer_Done`
+                : `#Dashboard_DeepestDiscount_Answer`,
+            ),
             status: _,
             actionStatus: _
               ? _(`#Dashboard_DeepestDiscount_Answer_Button`)
@@ -4038,7 +4071,12 @@ function _(_) {
           (0, _.jsx)(_, {
             complete: _.eDiscount,
             urgent: _,
-            label: _(`#Dashboard_DeepestDiscount_Discount`, _),
+            label: _(
+              _.eDiscount == 1
+                ? `#Dashboard_DeepestDiscount_Discount_Done`
+                : `#Dashboard_DeepestDiscount_Discount`,
+              _,
+            ),
             status: _,
             actionStatus: _
               ? _(`#Dashboard_DeepestDiscount_Discount_Button`)

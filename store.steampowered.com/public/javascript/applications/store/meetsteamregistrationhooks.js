@@ -2,22 +2,22 @@
  ****/
 
 import { o as e } from "./chunk~f025431ab0.js";
-import { st as t, u as n } from "./chunk~01cfc309bf.js";
+import { l as t, ot as n } from "./chunk~01cfc309bf.js";
 import { t as r } from "./chunk~93fc7377c2.js";
 import { t as i } from "./chunk~429133cc70.js";
 import {
-  Nb as a,
+  Pb as a,
   bb as o,
-  ca as s,
-  mb as c,
-  nx as l,
-  pb as u,
-  yb as d,
+  hb as s,
+  la as c,
+  mb as l,
+  rx as u,
+  xb as d,
 } from "./main.js";
 var f = `meetsteam/updateregistration`,
   p = `meetsteam/attendance_qrcode`;
 async function m(e, t) {
-  let n = new URL(l.STORE_BASE_URL + e);
+  let n = new URL(u.STORE_BASE_URL + e);
   for (let [e, r] of Object.entries(t)) n.searchParams.set(e, r);
   let r = await fetch(n, { credentials: `include` });
   if (!r.ok) throw Error(`${n} answered ${r.status}`);
@@ -47,7 +47,7 @@ async function y(e, t) {
   return await m(p, { gid: e, accountid: String(t) });
 }
 async function b(e) {
-  let t = l.STORE_BASE_URL + f,
+  let t = u.STORE_BASE_URL + f,
     n = new URLSearchParams({
       gid: e.gid,
       group_id: String(e.group_id),
@@ -70,8 +70,8 @@ function C(e, t) {
     staleTime: a.PerMinute * 10,
   };
 }
-function w(e, n) {
-  return t(C(e, n));
+function w(e, t) {
+  return n(C(e, t));
 }
 var T = (e, t) => [`useMeetSteamGetAvailability`, e, t];
 function E(e, t, n) {
@@ -84,8 +84,8 @@ function E(e, t, n) {
     enabled: r() == e && !!n,
   };
 }
-function D(e, n, r) {
-  return t(E(e, n, r));
+function D(e, t, r) {
+  return n(E(e, t, r));
 }
 var O = (e, t, n) => [`useMeetSteamGetRegistrationDetails`, e, t, n];
 function k(e) {
@@ -97,7 +97,7 @@ function k(e) {
   };
 }
 function A(e) {
-  return t(k(e));
+  return n(k(e));
 }
 function j(e, t) {
   return {
@@ -107,8 +107,8 @@ function j(e, t) {
     staleTime: a.PerMinute * 10,
   };
 }
-function M(e, n) {
-  return t(j(e, n)).data?.qrcode;
+function M(e, t) {
+  return n(j(e, t)).data?.qrcode;
 }
 function N(e, t = Intl.DateTimeFormat().resolvedOptions().timeZone) {
   return e.location_type === `in_person`
@@ -116,11 +116,11 @@ function N(e, t = Intl.DateTimeFormat().resolvedOptions().timeZone) {
     : t;
 }
 function P(e) {
-  let t = s();
-  return n(() => ({
+  let n = c();
+  return t(() => ({
     rtime_start: e.rtime_start,
     rtime_end: e.rtime_end,
-    sDisplayTimeZone: N(e, t),
+    sDisplayTimeZone: N(e, n),
   }));
 }
 function F(e, t) {
@@ -131,20 +131,20 @@ function F(e, t) {
 function I(e, t) {
   let n = F(e, t),
     r = new Date();
-  return n.getFullYear() == r.getFullYear() ? u(n) : c(n);
+  return n.getFullYear() == r.getFullYear() ? l(n) : s(n);
 }
 function L(e, t) {
   let n = x.default.unix(e),
     r = x.default.unix(e).tz(t).utcOffset() - n.utcOffset();
-  return d(e + r * 60);
+  return o(e + r * 60);
 }
 function R(e, t, n, r) {
   let i = x.default.unix(e),
     a = x.default.unix(e).tz(n).utcOffset() - i.utcOffset(),
-    s = x.default.unix(t),
-    c = x.default.unix(t).tz(n),
-    l = c.utcOffset() - s.utcOffset();
-  return o(e + a * 60, t + l * 60, !0) + (r ? `` : ` ` + c.format(`z`));
+    o = x.default.unix(t),
+    s = x.default.unix(t).tz(n),
+    c = s.utcOffset() - o.utcOffset();
+  return d(e + a * 60, t + c * 60, !0) + (r ? `` : ` ` + s.format(`z`));
 }
 export {
   L as a,

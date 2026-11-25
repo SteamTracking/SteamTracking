@@ -11677,7 +11677,7 @@ var _ = class {
       bConstMethod: !0,
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`partner`, `community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetApps = _;
@@ -11690,7 +11690,7 @@ var _ = class {
         bConstMethod: !0,
         ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
-        rgBrowserAPISites: [`community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -11707,6 +11707,7 @@ var _ = class {
     return _.SendMsg(`Community.GetComment#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 5,
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetComment = _;
@@ -11752,7 +11753,7 @@ var _ = class {
   function _(_, _, _) {
     return _.SendMsg(`Community.RateClanAnnouncement#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.RateClanAnnouncement = _;
@@ -11763,7 +11764,7 @@ var _ = class {
       _,
       {
         ePrivilege: 1,
-        rgBrowserAPISites: [`community`, `store`],
+        rgBrowserAPISites: [`all`],
       },
     );
   }
@@ -11772,7 +11773,7 @@ var _ = class {
     return _.SendMsg(`Community.GetClanMetadata#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 1,
-      rgBrowserAPISites: [`help`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.GetClanMetadata = _;
@@ -11816,7 +11817,7 @@ var _ = class {
   function _(_, _, _) {
     return _.SendMsg(`Community.HideAndReportComment#1`, _(_, _, _), _, {
       ePrivilege: 3,
-      rgBrowserAPISites: [`partner`, `community`],
+      rgBrowserAPISites: [`community`],
     });
   }
   _.HideAndReportComment = _;
@@ -11839,7 +11840,7 @@ var _ = class {
   function _(_, _, _) {
     return _.SendMsg(`Community.MarkPartnerEventsForUser#1`, _(_, _, _), _, {
       ePrivilege: 1,
-      rgBrowserAPISites: [`community`, `store`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.MarkPartnerEventsForUser = _;
@@ -23681,7 +23682,7 @@ function _(_) {
   }
 }
 function _(_, _, _, _, _, _, _) {
-  let _ = _.innerWidth,
+  let _ = _.document.documentElement.clientWidth,
     _ = _.innerHeight,
     _,
     _,
@@ -30309,30 +30310,30 @@ var _ = _.forwardRef(function (_, _) {
       className: _(_.className, `DialogButton`, `_DialogLayout`, `Secondary`),
     });
   });
-(_.forwardRef(function (_, _) {
+_.forwardRef(function (_, _) {
   return (0, _.jsx)(_, {
     type: `button`,
     ..._,
     ref: _,
     className: _(_.className, `DialogButton`, `_DialogLayout`, `EmptyButton`),
   });
-}),
-  _.forwardRef(function (_, _) {
+});
+var _ = _.forwardRef(function (_, _) {
     return (0, _.jsx)(_, {
       type: `button`,
       ..._,
       ref: _,
       className: _(_.className, `DialogButton _DialogLayout Small`),
     });
-  }));
-var _ = _.forwardRef(function (_, _) {
-  return (0, _.jsx)(_, {
-    type: `button`,
-    ..._,
-    ref: _,
-    className: _(_.className, `TextButton`),
+  }),
+  _ = _.forwardRef(function (_, _) {
+    return (0, _.jsx)(_, {
+      type: `button`,
+      ..._,
+      ref: _,
+      className: _(_.className, `TextButton`),
+    });
   });
-});
 function _(_) {
   let _ = `DialogHBar` + (_.className ? ` ` + _.className : ``);
   return (0, _.jsx)(`div`, {

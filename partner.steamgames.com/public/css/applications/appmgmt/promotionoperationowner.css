@@ -93,41 +93,6 @@ div.koPooBe-lCQ- {
   padding: 0 0 10px;
   font-size: 17px;
 }
-.dYYkud-Jf3s- {
-  flex-direction: row;
-  flex-grow: 1;
-  display: flex;
-}
-.dYYkud-Jf3s- .zZo1XshRYmQ- {
-  margin-inline-start: auto;
-  display: flex;
-}
-.dYYkud-Jf3s- .RfHJSn8AdQE- {
-  text-transform: uppercase;
-  background: #4a2a3c;
-  border: 1px solid #50484c;
-  border-radius: 3px;
-  height: fit-content;
-  padding: 4px 10px;
-  font-weight: 700;
-}
-.dYYkud-Jf3s- .RfHJSn8AdQE-:hover {
-  background: #7a5a6c;
-  border-color: #fff;
-}
-.dYYkud-Jf3s- .D8GFuSKNhX0- .DialogButton.Small {
-  width: auto;
-}
-.woc2JepJIek- {
-  margin-bottom: 10px;
-  padding-inline: 8px;
-}
-.JrlXbYAw30w- {
-  color: #f74843;
-}
-.SaleSectionHeader:has(> .JrlXbYAw30w-) {
-  justify-content: flex-start;
-}
 :root {
   --list-day-width: 0px;
   --list-day-height: 28px;
@@ -5180,6 +5145,18 @@ table.cKYrmNuEAQs- td {
   color: #c44848;
   margin-top: 20px;
 }
+.j-YX1O7pXw0- {
+  color: #5ba32b;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  display: flex;
+}
+.j-YX1O7pXw0- svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
 .YRZgc3M0MIk- {
   margin-top: 24px;
   padding-inline-start: 30px;
@@ -8021,6 +7998,12 @@ table.cKYrmNuEAQs- td {
 .XRZj1OeBHRk-.hvd5bQPy4pQ- li strong {
   color: #c9c9c9;
   font-weight: 400;
+}
+.WWzuGfx5KX0- {
+  flex-direction: column;
+  gap: 16px;
+  margin-block: 16px;
+  display: flex;
 }
 .TietGy7ORok- {
   margin-top: 20px;

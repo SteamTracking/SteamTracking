@@ -29,12 +29,8 @@ import {
   _,
   _,
   _,
-  _,
-  _,
-  _,
-  _,
 } from "./chunk~de7f2df91c.js";
-import { _, _, _, _, _, _, _ } from "./chunk~25a6634263.js";
+import { _, _, _, _, _, _ } from "./chunk~bd90a5fce7.js";
 import {
   _,
   _,
@@ -62,13 +58,17 @@ import {
   _,
 } from "./chunk~1fa4b8f2ff.js";
 import { _, _, _ } from "./chunk~0a99e05c44.js";
-import { _, _, _, _, _ } from "./chunk~6b8ddcaac8.js";
+import { _, _, _, _, _, _ } from "./chunk~6b8ddcaac8.js";
 import { _ } from "./chunk~9a06851bec.js";
 import { _, _ } from "./chunk~44f252525d.js";
 import { _ } from "./chunk~7b8a87bd30.js";
 import { _ } from "./chunk~e70aabe4d7.js";
 import "./chunk~428594b857.js";
+import { _, _, _ } from "./chunk~70c16cc80c.js";
+import { _ } from "./chunk~7b4b9eb713.js";
 import { _ } from "./chunk~b390ee0f78.js";
+import { _, _, _, _ } from "./chunk~96e60d7578.js";
+import { _ } from "./chunk~25a6634263.js";
 import { _, _, _ } from "./chunk~eee3bbd4cd.js";
 import { _, _, _, _ } from "./chunk~2e8feda0b1.js";
 import { _ } from "./chunk~fc8a9e4879.js";
@@ -80,16 +80,12 @@ import { _ } from "./chunk~f4e4ed5c17.js";
 import { _ } from "./chunk~c55709d290.js";
 import { _ } from "./chunk~eefd71512b.js";
 import { _ } from "./chunk~8ceeb46076.js";
-import { _ } from "./chunk~0111fcd096.js";
-import { _, _ } from "./chunk~2f8c67b4de.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk~05a38bc848.js";
-import { _ } from "./chunk~2bee5a7d08.js";
 import "./chunk~a6b9ae1345.js";
+import { _, _ } from "./chunk~2f8c67b4de.js";
 import { _ } from "./chunk~4571d27d07.js";
+import { _ } from "./chunk~0111fcd096.js";
 import { _ } from "./chunk~967b42dac9.js";
-import { _, _, _, _, _ } from "./chunk~3f4314f3b4.js";
-import { _ } from "./chunk~7b4b9eb713.js";
-import { _, _, _ } from "./chunk~70c16cc80c.js";
 import { _, _ } from "./chunk~4d16ce5d1a.js";
 import { _, _ } from "./chunk~3ee5188744.js";
 import { _ } from "./chunk~5243628dd6.js";
@@ -97,6 +93,7 @@ import { _, _, _, _, _, _ } from "./chunk~8628c845f2.js";
 import { _, _, _, _, _, _ } from "./chunk~f25232ab1e.js";
 import { _ } from "./chunk~a7c5e71e12.js";
 import { _, _, _ } from "./chunk~56e6a40e9e.js";
+import { _, _, _, _, _ } from "./chunk~3f4314f3b4.js";
 import { _ } from "./chunk~14243866ee.js";
 var _ = 1004,
   _ = 1005,
@@ -5668,7 +5665,7 @@ var _ = 1004,
     return _.SendMsg(`SteamTV.AddChatBan#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.AddChatBan = _;
@@ -5684,7 +5681,7 @@ var _ = 1004,
     return _.SendMsg(`SteamTV.AddChatModerator#1`, _(_, _, _), _, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.AddChatModerator = _;
@@ -5692,7 +5689,7 @@ var _ = 1004,
     return _.SendMsg(`SteamTV.GetChatModerators#1`, _(_, _, _), _, {
       bConstMethod: !0,
       ePrivilege: 0,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.GetChatModerators = _;
@@ -5715,7 +5712,7 @@ var _ = 1004,
     return _.SendMsg(`SteamTV.JoinChat#1`, _(_, _, _), _, {
       ePrivilege: 2,
       eWebAPIKeyRequirement: 1,
-      rgBrowserAPISites: [`store`, `community`],
+      rgBrowserAPISites: [`all`],
     });
   }
   _.JoinChat = _;

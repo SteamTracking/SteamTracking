@@ -1,3 +1,12 @@
+.fS9t6DH7Z-U- {
+  --border: 1px solid var(--color-dull-9);
+}
+.fS9t6DH7Z-U-.nu0EdzsNfaM- {
+  border-top: var(--border);
+}
+.fS9t6DH7Z-U-.Ti-54apdb-E- {
+  border-bottom: var(--border);
+}
 .-x0pInEBhX4- {
   --radio-size: calc(var(--spacing-2) + var(--spacing-1));
   --bg-default: var(--color-dull-8);
@@ -231,41 +240,6 @@ button.DialogButton._8HEISlPy5Qg- {
 button.DialogButton._8HEISlPy5Qg- svg {
   width: 18px;
   height: 18px;
-}
-.dYYkud-Jf3s- {
-  flex-direction: row;
-  flex-grow: 1;
-  display: flex;
-}
-.dYYkud-Jf3s- .zZo1XshRYmQ- {
-  margin-inline-start: auto;
-  display: flex;
-}
-.dYYkud-Jf3s- .RfHJSn8AdQE- {
-  text-transform: uppercase;
-  background: #4a2a3c;
-  border: 1px solid #50484c;
-  border-radius: 3px;
-  height: fit-content;
-  padding: 4px 10px;
-  font-weight: 700;
-}
-.dYYkud-Jf3s- .RfHJSn8AdQE-:hover {
-  background: #7a5a6c;
-  border-color: #fff;
-}
-.dYYkud-Jf3s- .D8GFuSKNhX0- .DialogButton.Small {
-  width: auto;
-}
-.woc2JepJIek- {
-  margin-bottom: 10px;
-  padding-inline: 8px;
-}
-.JrlXbYAw30w- {
-  color: #f74843;
-}
-.SaleSectionHeader:has(> .JrlXbYAw30w-) {
-  justify-content: flex-start;
 }
 @font-face {
   font-family: Jolly Lodger fallback;

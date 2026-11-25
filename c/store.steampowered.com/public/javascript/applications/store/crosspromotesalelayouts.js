@@ -1,14 +1,14 @@
 import { _ } from "./chunk~f025431ab0.js";
-import { _, _ } from "./chunk~01cfc309bf.js";
-import { _, _, _, _, _ } from "./chunk~6b8ddcaac8.js";
+import { _, _, _ } from "./chunk~01cfc309bf.js";
+import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk~6b8ddcaac8.js";
 import { _, _ } from "./chunk~f57d770d64.js";
 import { _, _, _ } from "./chunk~4eed35ad1f.js";
-import { _, _ } from "./chunk~b980924b6a.js";
+import { _, _ } from "./chunk~f4c928a27a.js";
 import { _ } from "./chunk~7b4b9eb713.js";
 import { _ } from "./chunk~618fb52a90.js";
 import { _ } from "./chunk~e70aabe4d7.js";
 import { _ } from "./chunk~710e3cfd2f.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./main.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./main.js";
 var _ = _(_(), 1);
 function _(_, _) {
   return !_ || _.startsWith(`https://`) || _.startsWith(`http://`)
@@ -23,6 +23,19 @@ function _(_) {
   if (!_ || _.image?.includes(`.${_}.`)) return _.image;
   let _ = _.exec(_);
   return _ ? `${_[1]}.${_}` : _.image;
+}
+function _(_, _) {
+  return !_?.creator_clan_id || !_.appids
+    ? null
+    : {
+        clanAccountID: _.creator_clan_id,
+        strEventGID: ``,
+        strName: _.name ?? ``,
+        strCapsuleURL: _.avatar_url_full_size || void 0,
+        strSaleURL: _(_, _ === `creator` ? null : _),
+        eCreatorRole: _,
+        rgCreatorAppIDs: _.appids,
+      };
 }
 function _(_) {
   if (!_?.clan_accountid || !_.clan_event_gid) return null;
@@ -80,9 +93,71 @@ function _(_) {
     appid: _,
   }));
 }
+function _(_) {
+  return _(_) ? (_(_)[0]?.capsules ?? []).flatMap((_) => _(_) ?? []) : [];
+}
+function _(_, _) {
+  let _ = _(),
+    _ = _({
+      queries: _.map((_) => {
+        let _ = _(_),
+          _ = _(_);
+        return _
+          ? {
+              ..._,
+              enabled: !1,
+            }
+          : _;
+      }),
+    }),
+    _ = _.map(_),
+    _ = _({
+      queries: _.flat().map((_) => {
+        let _ = _(_, _);
+        return _
+          ? {
+              ..._,
+              enabled: !1,
+            }
+          : _;
+      }),
+    }),
+    _ = 0;
+  return _.map((_, _) => {
+    let _ = _[_].length,
+      _ = _.slice(_, _ + _);
+    _ += _;
+    let _ = _(_);
+    if (!_)
+      return {
+        data: void 0,
+        bPending: !1,
+      };
+    let _ = _[_];
+    if (_.isPending || _.some((_) => _.isPending))
+      return {
+        data: void 0,
+        bPending: !0,
+      };
+    let _ = _(
+      _,
+      _.map((_) => _.data),
+    );
+    return {
+      data: _(_.data, _),
+      bPending: !1,
+    };
+  });
+}
 var _ = `Es-UANTRhdg-`,
   _ = `dv9UZEOxkuA-`,
+  _ = `DsfJ3U7A71o-`,
+  _ = `CUTWfXkiCwY-`,
+  _ = `KiJVH4vp4eM-`,
+  _ = `YJT5S54fzP0-`,
   _ = `KNEaTOnJJWw-`,
+  _ = `KoPPnD8UeHY-`,
+  _ = `P-rHowg9bhA-`,
   _ = `FsYxDNcAXaI-`,
   _ = `cSFkUHyVW24-`,
   _ = `oztjxXYIBAk-`,
@@ -92,12 +167,18 @@ var _ = `Es-UANTRhdg-`,
   _ = `_6iUHDist0Jc-`,
   _ = `gxh8RxFKhr8-`,
   _ = `tYvCiFSJDdI-`,
+  _ = `xKMeNFV4-6I-`,
   _ = `AZSEWyNPfhc-`,
   _ = `gZNFN-cKUHw-`,
   _ = `VCRuNjWNqVc-`,
   _ = `AmB85SkEC3Q-`,
   _ = `P5j4maR0i14-`,
+  _ = `onuExqD0nzM-`,
+  _ = `LZEiK-08jms-`,
+  _ = `P1C9O-r-7FI-`,
   _ = _(),
+  _ = _.createContext(!1),
+  _ = _.createContext(void 0),
   _ = _.createContext(!1),
   _ = _.createContext(null);
 function _(_, _, _) {
@@ -121,6 +202,97 @@ function _(_, _, _) {
       bHintInHeading: _,
     }
   );
+}
+var _ = {
+  logo_left: _,
+  logo_top: _,
+  event_capsule: _,
+};
+function _(_) {
+  let {
+      promotedSaleEvent: _,
+      children: _,
+      nItemsToFeature: _,
+      section: _,
+      bInGamepadUI: _,
+    } = _,
+    _ = _?.strSaleURL,
+    _ = _(_),
+    { bShowSeeMoreHint: _, panelProps: _, bHintInHeading: _ } = _(_, _, _);
+  return (0, _.jsxs)(_, {
+    ..._,
+    className: _,
+    panelProps: _,
+    children: [
+      (0, _.jsx)(_, {
+        promotedSaleEvent: _,
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsx)(_, {
+            promotedSaleEvent: _,
+          }),
+          (0, _.jsx)(_, {
+            nItemsToFeature: _,
+            strSaleURL: _,
+            strExploreLabel: _,
+            exploreHint:
+              _ && _
+                ? {
+                    bShown: _,
+                    bInHeading: _,
+                  }
+                : void 0,
+            children: _,
+          }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
+  let {
+      promotedSaleEvent: _,
+      children: _,
+      nItemsToFeature: _,
+      section: _,
+      bInGamepadUI: _,
+    } = _,
+    _ = _?.strSaleURL,
+    _ = _(_),
+    { bShowSeeMoreHint: _, panelProps: _, bHintInHeading: _ } = _(_, _, _);
+  return (0, _.jsxs)(_, {
+    ..._,
+    className: _,
+    panelProps: _,
+    children: [
+      (0, _.jsx)(_, {
+        promotedSaleEvent: _,
+      }),
+      (0, _.jsxs)(`div`, {
+        className: _,
+        children: [
+          (0, _.jsx)(_, {
+            promotedSaleEvent: _,
+          }),
+          (0, _.jsx)(_, {
+            nItemsToFeature: _,
+            strSaleURL: _,
+            strExploreLabel: _,
+            exploreHint:
+              _ && _
+                ? {
+                    bShown: _,
+                    bInHeading: _,
+                  }
+                : void 0,
+            children: _,
+          }),
+        ],
+      }),
+    ],
+  });
 }
 function _(_) {
   let {
@@ -197,6 +369,7 @@ function _(_) {
     _ = _(),
     _ = _(),
     _ = _ && _ !== void 0,
+    _ = _.useContext(_),
     _ = _?.rtEndTime
       ? _(_.rtEndTime, {
           weekday: void 0,
@@ -260,11 +433,17 @@ function _(_) {
                     children: _?.strName,
                   }),
                 }),
-                _ &&
-                  (0, _.jsx)(`div`, {
-                    className: `_6iUHDist0Jc-`,
-                    children: _(`#Sale_CrossPromoSale_NowThrough`, _),
-                  }),
+                _ === void 0
+                  ? _ &&
+                    (0, _.jsx)(`div`, {
+                      className: `_6iUHDist0Jc-`,
+                      children: _(`#Sale_CrossPromoSale_NowThrough`, _),
+                    })
+                  : _ &&
+                    (0, _.jsx)(`div`, {
+                      className: `_6iUHDist0Jc-`,
+                      children: _,
+                    }),
               ],
             }),
           _ &&
@@ -520,6 +699,50 @@ function _(_) {
     ..._,
     children: _,
   });
+}
+function _(_) {
+  let { promotedSaleEvent: _ } = _;
+  if (!_) return null;
+  let { strBackgroundURL: _, strScrimColor: _ } = _,
+    _ = _
+      ? {
+          backgroundImage: `url(${_})`,
+        }
+      : void 0;
+  return (0, _.jsxs)(`div`, {
+    className: _(_, _ && `Q2Etnziq-Ow-`),
+    style: _
+      ? {
+          backgroundColor: _,
+        }
+      : void 0,
+    children: [
+      _ &&
+        (0, _.jsx)(`div`, {
+          className: `hcF0Za7ucCA-`,
+          style: _,
+        }),
+      _ &&
+        (0, _.jsx)(`div`, {
+          className: `Rya5E4ml32o-`,
+          style: _,
+        }),
+    ],
+  });
+}
+function _(_) {
+  let { promotedSaleEvent: _ } = _;
+  return _?.strLogoURL
+    ? (0, _.jsx)(_, {
+        url: _.strSaleURL,
+        className: _,
+        bFocusable: !1,
+        children: (0, _.jsx)(`img`, {
+          src: _.strLogoURL,
+          alt: _.strName,
+        }),
+      })
+    : null;
 }
 var _ = [1e3, 500, 250, 100, 50, 20];
 function _(_) {
