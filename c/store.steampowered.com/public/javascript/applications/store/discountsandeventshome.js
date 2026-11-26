@@ -39,12 +39,13 @@ import { _ } from "./chunk~6417efccc1.js";
 var _ = _(_(), 1),
   _ = _();
 function _(_) {
-  let { sale: _, bValveOnly: _ } = _,
+  let { sale: _, bValveOnly: _, bLoadNow: _ } = _,
     { event: _, section: _ } = _.useMemo(() => _(_, !!_), [_, _]);
   return (0, _.jsx)(_, {
     event: _,
     section: _,
     language: _(_.LANGUAGE),
+    bLoadNow: _,
   });
 }
 function _(_, _) {
@@ -228,11 +229,13 @@ function _(_) {
       strTheme: _,
       rgPageFooters: _ = [],
       bHasFooterActionLegend: _ = !1,
+      onNavIntent: _,
     } = _,
     _ = _(_),
     _ = _(),
     _ = _ && !_,
-    _ = _ && _.EREALM != _.k_ESteamRealmChina,
+    _ = _.EREALM == _.k_ESteamRealmChina,
+    _ = _ && !_,
     _ = _.Localize(
       _
         ? `#DiscountsAndEvents_ExploreSpecialsPage`
@@ -245,7 +248,7 @@ function _(_) {
     _ = _(_),
     { bShowSeeMoreHint: _, panelProps: _ } = _(_, `X`),
     { rgPages: _, rgColumns: _ } = _.useMemo(() => {
-      let _ = _ && _.EREALM == _.k_ESteamRealmChina,
+      let _ = _ && _,
         _ = _(_ ?? [], _, _ ? _ : _, _, _ ? _ : _);
       return (
         _ && _.length > 1 && _[_.length - 1].length < _ && (_ = _.slice(0, -1)),
@@ -254,7 +257,7 @@ function _(_) {
           rgColumns: _.flat(),
         }
       );
-    }, [_, _]);
+    }, [_, _, _]);
   if (!_ && _)
     return (0, _.jsx)(_, {
       bHideTitle: _,
@@ -279,6 +282,7 @@ function _(_) {
     bForceSimpleCarousel: _,
     gap: _,
     className: (0, _.default)(_, !_ && `tvKN6VPvEYo-`),
+    onNavIntent: _ ? _ : void 0,
     children: _
       ? _.map((_, _) =>
           (0, _.jsxs)(
@@ -303,10 +307,10 @@ function _(_) {
                     ),
                   ),
                 }),
-                _[_] &&
+                _.length > 0 &&
                   (0, _.jsx)(`div`, {
                     className: `_3eoksPgeP-E-`,
-                    children: _[_],
+                    children: _[_ % _.length],
                   }),
               ],
             },
@@ -332,7 +336,7 @@ function _(_) {
           _,
           _,
           _ && `P-5zAQV9Nrw-`,
-          _ === `blackfriday` && `D7k0v382WJU-`,
+          _ && _ === `blackfriday` && `D7k0v382WJU-`,
         ),
         navEntryPreferPosition: _.PREFERRED_CHILD,
         ..._,
@@ -489,6 +493,7 @@ function _(_) {
     _ = _(_, _),
     _ = _(_, _, _),
     _ = _.image || (_ ? _(_, `hero_capsule`, `header`) : _(_, `header`)),
+    _ = _ && !!_.image_letterbox,
     _ = _(_),
     _ = _.alt ?? _?.name ?? ``;
   if (_ && ((!_ && _ === null) || (!_ && _ === null))) return null;
@@ -498,8 +503,16 @@ function _(_) {
           className: _,
           children: [
             _ &&
+              _ &&
+              (0, _.jsx)(`div`, {
+                className: `_4SKFun4gro0-`,
+                style: {
+                  backgroundImage: `url(${_})`,
+                },
+              }),
+            _ &&
               (0, _.jsx)(`img`, {
-                className: `auc77O9GIek-`,
+                className: (0, _.default)(`auc77O9GIek-`, _ && `Xu-5DhWCEgM-`),
                 src: _,
                 alt: _,
               }),
@@ -686,6 +699,26 @@ function _(_, _) {
   return _;
 }
 function _(_) {
+  return _.event_gid ?? `creator_${_.creator_clan_account_id}`;
+}
+function _(_) {
+  let [_, _] = _.useState(() => new Set()),
+    _ = _.useRef(_);
+  return (
+    (_.current = _),
+    [
+      _,
+      _.useCallback((_) => {
+        let _ = _.current,
+          _ = _.length ? _[_ % _.length] : void 0;
+        if (!_) return;
+        let _ = _(_);
+        _((_) => (_.has(_) ? _ : new Set([..._, _])));
+      }, []),
+    ]
+  );
+}
+function _(_) {
   let {
       initialData: _,
       initialDataUpdatedAt: _,
@@ -718,7 +751,9 @@ function _(_) {
         _,
         (_) => _.has(_) || (!_ && (_.BIsGameOwned(_) || _.BIsGameIgnored(_))),
       );
-    }, [_, _, _, _, _]).map((_) =>
+    }, [_, _, _, _, _]),
+    [_, _] = _(_),
+    _ = _.map((_) =>
       (0, _.jsx)(
         _,
         {
@@ -732,12 +767,13 @@ function _(_) {
                 children: (0, _.jsx)(_, {
                   sale: _,
                   bValveOnly: _,
+                  bLoadNow: _.has(_(_)),
                 }),
               }),
             }),
           }),
         },
-        _.event_gid ?? `creator_${_.creator_clan_account_id}`,
+        _(_),
       ),
     );
   return (0, _.jsx)(_, {
@@ -747,6 +783,7 @@ function _(_) {
     strTheme: _(_),
     rgPageFooters: _,
     bHasFooterActionLegend: !0,
+    onNavIntent: _,
   });
 }
 function _(_) {

@@ -15,8 +15,8 @@ import {
   k as u,
   z as d,
 } from "./chunk~01cfc309bf.js";
-import { An as f, Jt as ee, l as p, qt as te } from "./chunk~3f4314f3b4.js";
-import { l as m, m as h, n as ne } from "./chunk~6eb508043a.js";
+import { Jt as f, jn as p, l as m, qt as ee } from "./chunk~3f4314f3b4.js";
+import { l as te, m as ne, n as h } from "./chunk~6eb508043a.js";
 import { i as g } from "./chunk~437071091c.js";
 import { B as _ } from "./chunk~05a38bc848.js";
 import {
@@ -28,10 +28,10 @@ import {
   t as ce,
   zt as le,
 } from "./chunk~77ea210942.js";
-import { a as v, n as y } from "./chunk~0111fcd096.js";
+import { a as ue, n as v } from "./chunk~0111fcd096.js";
 import {
-  $h as b,
-  Cf as ue,
+  $h as y,
+  Cf as b,
   Df as x,
   Hf as S,
   Jf as de,
@@ -56,7 +56,7 @@ import {
 var j = e(o()),
   M = c(),
   N = e(u()),
-  P = e(v()),
+  P = e(ue()),
   F = (function (e) {
     return (
       (e[(e.k_eLibrary = 1)] = `k_eLibrary`),
@@ -283,7 +283,7 @@ var H = class {
     return this.m_mapEventTypeGroupsAllowed.has(e);
   }
   BIsGameSourceAllowed(e) {
-    return (e === `following` && !ee()) || (e === `curator` && !te())
+    return (e === `following` && !f()) || (e === `curator` && !ee())
       ? !1
       : this.m_mapGameSources.has(e);
   }
@@ -300,7 +300,7 @@ var H = class {
         e == `recent`
           ? this.m_mapGameSources.delete(`library`)
           : e == `library` &&
-            (b(
+            (y(
               !this.m_mapGameSources.has(`recent`),
               `Setting Library although Recent already set - illusion was broken`,
             ),
@@ -317,7 +317,7 @@ var H = class {
       n = !!(
         e.appInfo &&
         e.appInfo.last_played &&
-        e.appInfo.last_played + 15552e3 >= y.GetTimeNowWithOverride()
+        e.appInfo.last_played + 15552e3 >= v.GetTimeNowWithOverride()
       );
     return (!this.enabledEventTypeSet.has(e.event_type) &&
       !(
@@ -475,7 +475,7 @@ var Ee = (function (e) {
           i.append(`clanId`, n.toString()));
       } else
         return (
-          b(!1, `BlockEventsFromCalenderEvent: Invalid AppID and ClanID`), !1
+          y(!1, `BlockEventsFromCalenderEvent: Invalid AppID and ClanID`), !1
         );
       try {
         return (await N.default.post(r, i)).data.success == 1;
@@ -522,7 +522,7 @@ var G = class {
     (n(this),
       (this.m_key = e),
       (this.m_visibilityStore = new H(t)),
-      f.Get().HintLoad());
+      p.Get().HintLoad());
   }
   GetNumEventsLoaded() {
     return this.m_mapCalendarEventsByGid.size;
@@ -657,7 +657,7 @@ var G = class {
   }
   GetStoreInitializationTimestamp() {
     return (
-      (this.m_dtInitTime ||= y.GetTimeNowWithOverrideAsDate()),
+      (this.m_dtInitTime ||= v.GetTimeNowWithOverrideAsDate()),
       this.m_dtInitTime
     );
   }
@@ -779,12 +779,12 @@ var G = class {
           .forEach((e) => this.m_rgFutureSections.push(e));
   }
   async RegisterCalendarEventsAndModels(e) {
-    (await f.Get().HintLoad(),
+    (await p.Get().HintLoad(),
       d(() => {
         (this.RegisterCalendarApps(e.apps ?? []),
           this.RegisterCalendarClans(e.clans ?? []),
           this.RegisterCalendarEvents(e.documents ?? []),
-          p.RegisterClanEvents(e.events ?? []),
+          m.RegisterClanEvents(e.events ?? []),
           this.RegisterReadEvents(e.events_read ?? []),
           this.RegisterEventVotes(e.event_votes ?? []),
           e.forwardComplete && (this.m_bFinishedSearchingForward = !0),
@@ -881,7 +881,7 @@ var G = class {
       : this.m_backwardRequestInFlight;
   }
   SetRequestInFlight(e, t) {
-    (b(
+    (y(
       !t || !this.GetRequestInFlight(e),
       `Already have a request in flight for`,
       e,
@@ -902,7 +902,7 @@ var G = class {
       a = i < 3 ? i : 0,
       o = +(i >= 3),
       s = 250 + 50 * a,
-      c = y.GetTimeNowWithOverride(),
+      c = v.GetTimeNowWithOverride(),
       l = this.GetTimeEdgeForDirection(e, c) ?? c,
       u = {
         minTime: 0,
@@ -970,7 +970,7 @@ var G = class {
   BInternalInsertCalendarEventItem(e) {
     if (!e.unique_id)
       return (
-        b(
+        y(
           !1,
           `Attmpted to register a calendar event item with an invalid unique id!`,
         ),
@@ -1008,7 +1008,7 @@ var G = class {
     let n = e.appid || void 0,
       r = e.clanInfo ? e.clanInfo.clanid : void 0;
     n == null && r == null
-      ? b(
+      ? y(
           !1,
           `Both clan id and account id are missing, cannot change communication status`,
         )
@@ -1067,7 +1067,7 @@ var K = class {
             ((this.m_lastLoadLatch = e),
             await w
               .Get()
-              .QueueMultipleAppRequests(t, { ...h, include_assets: !0 }),
+              .QueueMultipleAppRequests(t, { ...ne, include_assets: !0 }),
             this.m_lastLoadLatch != e)
           )
             return;
@@ -1090,7 +1090,7 @@ var K = class {
         if (
           !this.m_bAllowMutedAndIgnoredSources &&
           (U.Get().BIsMutedClanID(e.clanid) ||
-            f
+            p
               .Get()
               .BIsIgnoringCurator(pe.InitFromClanID(e.clanid, k.EUNIVERSE)))
         )
@@ -1098,8 +1098,8 @@ var K = class {
       } else if (
         (!this.m_bAllowMutedAndIgnoredSources &&
           (U.Get().BIsMutedAppID(e.appid) ||
-            f.Get().BIsGameIgnored(e.appid))) ||
-        (!this.m_bSkipStorePreferenceCheck && m(w.Get().GetApp(e.appid)))
+            p.Get().BIsGameIgnored(e.appid))) ||
+        (!this.m_bSkipStorePreferenceCheck && te(w.Get().GetApp(e.appid)))
       )
         return !1;
       return !0;
@@ -1144,7 +1144,7 @@ var K = class {
   }
   GetActiveEventsAt(e) {
     return this.filteredAndCheckedEvents
-      .map((e) => p.GetClanEventModel(e.unique_id))
+      .map((e) => m.GetClanEventModel(e.unique_id))
       .filter((t) => {
         if (!t || t.startTime === void 0) return !1;
         let n = t.endTime || t.startTime + 3600;
@@ -1199,7 +1199,7 @@ function Ae(e) {
   return (0, M.jsx)(ce, {
     initialEvent: t,
     bShowOnlyInitialEvent: !0,
-    partnerEventStore: p,
+    partnerEventStore: m,
     emoticonStore: r,
     showAppHeader: !0,
     closeModal: n,
@@ -1239,7 +1239,7 @@ var Z = class extends j.Component {
             {
               event: e,
               emoticonStore: r,
-              partnerEventStore: ne.Get(),
+              partnerEventStore: h.Get(),
               langOverride: t,
               isPreview: n,
               bDisableBroadcastPlayer: !1,
@@ -1274,7 +1274,7 @@ var Q = class {
       (n || ((n = new Q()), this.m_mapEvents.set(e, n)),
         n.m_bHasBeenTracked ||
           n.m_fnSubmit ||
-          ((n.m_fnSubmit = new ue()),
+          ((n.m_fnSubmit = new b()),
           n.m_fnSubmit.Schedule(this.m_nImpressionDelayMS, () => {
             (t(), this.MarkTracked(e));
           })));

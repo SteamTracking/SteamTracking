@@ -4,16 +4,16 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { It as t, ct as n, dt as r } from "./chunk~01cfc309bf.js";
 import {
-  En as i,
-  Fs as a,
+  $ as i,
+  Dn as a,
   G as o,
   Is as s,
-  Q as c,
-  W as l,
-  i as u,
-  nt as d,
-  or as f,
-  sn as p,
+  K as c,
+  Ls as l,
+  cn as u,
+  i as d,
+  rt as f,
+  sr as p,
   u as m,
 } from "./chunk~6b8ddcaac8.js";
 import { A as h, st as g } from "./chunk~f57d770d64.js";
@@ -21,7 +21,7 @@ import { n as _, r as ee, s as te } from "./chunk~4eed35ad1f.js";
 import { a as v, i as y } from "./chunk~f4c928a27a.js";
 import { c as b } from "./chunk~7b4b9eb713.js";
 import { f as ne } from "./chunk~618fb52a90.js";
-import { n as re } from "./chunk~e70aabe4d7.js";
+import { r as re } from "./chunk~e70aabe4d7.js";
 import { n as ie } from "./chunk~710e3cfd2f.js";
 import {
   Bc as ae,
@@ -63,7 +63,7 @@ function _e(e, t) {
         strEventGID: ``,
         strName: e.name ?? ``,
         strCapsuleURL: e.avatar_url_full_size || void 0,
-        strSaleURL: s(e, t === `creator` ? null : t),
+        strSaleURL: l(e, t === `creator` ? null : t),
         eCreatorRole: t,
         rgCreatorAppIDs: e.appids,
       };
@@ -102,7 +102,7 @@ function A(e, t) {
       e.jsondata.sale_cross_promo_carousel_background?.image,
     ),
     strScrimColor: e.jsondata.sale_cross_promo_scrim_color || void 0,
-    strLogoURL: c(e, t),
+    strLogoURL: i(e, t),
     eDesktopLayout:
       e.jsondata.sale_cross_promo_desktop_layout === `logo_top`
         ? `logo_top`
@@ -123,36 +123,36 @@ function N(e) {
   return (e ?? []).slice(0, 48).map((e) => ({ appid: e }));
 }
 function P(e) {
-  return l(e) ? (d(e)[0]?.capsules ?? []).flatMap((e) => f(e) ?? []) : [];
+  return o(e) ? (f(e)[0]?.capsules ?? []).flatMap((e) => p(e) ?? []) : [];
 }
 function F(e, t) {
   let r = le(),
     i = n({
       queries: e.map((e) => {
-        let n = l(e),
-          r = a(n);
+        let n = o(e),
+          r = s(n);
         return t ? { ...r, enabled: !1 } : r;
       }),
     }),
-    s = e.map(P),
-    c = n({
-      queries: s.flat().map((e) => {
+    a = e.map(P),
+    l = n({
+      queries: a.flat().map((e) => {
         let n = se(r, e);
         return t ? { ...n, enabled: !1 } : n;
       }),
     }),
     u = 0;
   return e.map((e, t) => {
-    let n = s[t].length,
-      r = c.slice(u, u + n);
+    let n = a[t].length,
+      r = l.slice(u, u + n);
     u += n;
-    let a = l(e);
-    if (!a) return { data: void 0, bPending: !1 };
+    let s = o(e);
+    if (!s) return { data: void 0, bPending: !1 };
     let d = i[t];
     if (d.isPending || r.some((e) => e.isPending))
       return { data: void 0, bPending: !0 };
-    let f = o(
-      a,
+    let f = c(
+      s,
       r.map((e) => e.data),
     );
     return { data: _e(d.data, f), bPending: !1 };
@@ -325,7 +325,7 @@ function G(e) {
     s = t?.eCreatorRole,
     c = s || !e.strExploreLabel ? J(s) : e.strExploreLabel,
     l = t?.strCapsuleURL,
-    d = t?.strSummary,
+    u = t?.strSummary,
     f = de(),
     p = ue(),
     m = p && r !== void 0,
@@ -364,7 +364,7 @@ function G(e) {
         children: [
           s &&
             l &&
-            (0, B.jsx)(u, {
+            (0, B.jsx)(d, {
               url: o,
               className: `X4LW9zxgdTo-`,
               bFocusable: !1,
@@ -376,7 +376,7 @@ function G(e) {
               children: [
                 (0, B.jsx)(`div`, {
                   className: `XBv92QzB8Xc-`,
-                  children: (0, B.jsx)(u, {
+                  children: (0, B.jsx)(d, {
                     url: o,
                     className: `NjUCqxvhkHk-`,
                     bFocusable: !1,
@@ -400,7 +400,7 @@ function G(e) {
             !n &&
             !m &&
             !s &&
-            (0, B.jsx)(u, {
+            (0, B.jsx)(d, {
               url: o,
               className: C(`_6O6T0vupYYc-`, `DuNM8zA4oz0-`),
               fnCanTakeFocus: S,
@@ -413,18 +413,18 @@ function G(e) {
         className: C(z, s && `ZONqp3dzTMI-`),
         children: [
           l &&
-            (0, B.jsxs)(u, {
+            (0, B.jsxs)(d, {
               url: o,
               className: C(`oztjxXYIBAk-`, s && `CDF-2WDX3lg-`),
               bFocusable: !!p,
               children: [
                 (0, B.jsx)(`img`, { src: l, alt: `` }),
-                d &&
+                u &&
                   (0, B.jsx)(`div`, {
                     className: `_7CUHH8Trg28-`,
                     children: (0, B.jsx)(`div`, {
                       className: `ZMGnYjKDOEI-`,
-                      children: d,
+                      children: u,
                     }),
                   }),
               ],
@@ -437,7 +437,7 @@ function G(e) {
         !s &&
         (0, B.jsx)(`div`, {
           className: C(`T1fHkhyvNkM-`, n && `SAqjQ-F71kA-`),
-          children: (0, B.jsx)(u, {
+          children: (0, B.jsx)(d, {
             url: o,
             className: `_6O6T0vupYYc-`,
             fnCanTakeFocus: S,
@@ -535,7 +535,7 @@ function Y(e) {
     s = D.useContext(V),
     c = !i && !s,
     l = i || !e.strExploreLabel ? J(i) : e.strExploreLabel,
-    d = fe.logged_in
+    u = fe.logged_in
       ? x.Localize(q.strSignedIn)
       : x.LocalizePlural(q.strSignedOut, n ?? 0);
   return (0, B.jsxs)(`div`, {
@@ -545,9 +545,9 @@ function Y(e) {
         (0, B.jsxs)(`div`, {
           className: `ypQ9RrTsvmE-`,
           children: [
-            c && (0, B.jsx)(`div`, { className: `aMHZOpwLiBw-`, children: d }),
+            c && (0, B.jsx)(`div`, { className: `aMHZOpwLiBw-`, children: u }),
             o &&
-              (0, B.jsx)(u, {
+              (0, B.jsx)(d, {
                 url: r,
                 className: C(`_6O6T0vupYYc-`, `DuNM8zA4oz0-`),
                 fnCanTakeFocus: S,
@@ -569,7 +569,7 @@ function Y(e) {
       o &&
         (0, B.jsx)(`div`, {
           className: `T1fHkhyvNkM-`,
-          children: (0, B.jsx)(u, {
+          children: (0, B.jsx)(d, {
             url: r,
             className: `_6O6T0vupYYc-`,
             fnCanTakeFocus: S,
@@ -584,7 +584,7 @@ function X(e) {
     section: t,
     bInGamepadUI: n,
     placeholderHeight: r,
-    className: a,
+    className: i,
     "flow-children": o,
     panelProps: s,
     children: c,
@@ -592,12 +592,12 @@ function X(e) {
   return (0, B.jsx)(ie, {
     placeholderHeight: r,
     className: C({
-      [i]: !0,
-      [p]: h(t),
+      [a]: !0,
+      [u]: h(t),
       [ne]: !0,
       SaleSectionForCustomCSS: !0,
       [I]: !0,
-      [a]: !0,
+      [i]: !0,
     }),
     rootMargin: te,
     holdGamepadFocus: n,
@@ -623,7 +623,7 @@ function Z(e) {
 function Q(e) {
   let { promotedSaleEvent: t } = e;
   return t?.strLogoURL
-    ? (0, B.jsx)(u, {
+    ? (0, B.jsx)(d, {
         url: t.strSaleURL,
         className: Ce,
         bFocusable: !1,

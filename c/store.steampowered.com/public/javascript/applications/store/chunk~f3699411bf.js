@@ -30,6 +30,7 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~6b8ddcaac8.js";
 import { _, _ } from "./chunk~f57d770d64.js";
 import { _, _, _, _, _ } from "./chunk~4eed35ad1f.js";
@@ -246,7 +247,7 @@ function _(_) {
         capsules_per_row: _,
         swipe_row: _,
       });
-    if (_ === null) return null;
+    if (_ === null || (_ && _.length < _(_) && !_)) return null;
   }
   let _;
   if (!_)
@@ -327,7 +328,8 @@ function _(_, _, _) {
   return Math.max(1, _) * _;
 }
 function _(_) {
-  let { event: _, section: _ } = _,
+  let { bLoadNow: _ = !1, ..._ } = _,
+    { event: _, section: _ } = _,
     _ = _(_.LANGUAGE),
     _ = _.useMemo(() => _(_), [_]),
     [_] = _(_),
@@ -359,20 +361,23 @@ function _(_) {
             children: _,
           })
         : _,
+      _ = (0, _.jsx)(_, {
+        event: _,
+        rgSlideSections: _,
+        eLanguage: _,
+        strForcedLayout: null,
+        bSideBySide: _(_),
+      }),
       _ = _
         ? (0, _.jsxs)(_.Fragment, {
             children: [
               _,
-              (0, _.jsx)(_, {
-                rootMargin: _,
-                children: (0, _.jsx)(_, {
-                  event: _,
-                  rgSlideSections: _,
-                  eLanguage: _,
-                  strForcedLayout: null,
-                  bSideBySide: _(_),
-                }),
-              }),
+              _
+                ? _
+                : (0, _.jsx)(_, {
+                    rootMargin: _,
+                    children: _,
+                  }),
             ],
           })
         : _;

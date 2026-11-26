@@ -12,17 +12,17 @@ import {
 } from "./chunk~01cfc309bf.js";
 import {
   Ao as s,
-  Bo as c,
-  Do as l,
-  Lo as u,
-  Mo as d,
-  Oo as f,
-  Za as p,
-  do as m,
-  ko as h,
-  ks as ee,
-  uo as g,
-  wo as _,
+  As as c,
+  No as l,
+  Oo as u,
+  Qa as d,
+  Ro as f,
+  To as p,
+  Vo as m,
+  do as h,
+  fo as g,
+  jo as _,
+  ko as ee,
 } from "./chunk~6b8ddcaac8.js";
 import { C as v } from "./chunk~4eed35ad1f.js";
 import { n as y } from "./chunk~5adf866415.js";
@@ -56,32 +56,32 @@ function P(e) {
       strAdditionalClassName: i,
       bNoShadow: a,
     } = e,
-    { storeItemAsset: o, storeItemDefaultInfo: s } = Q(t, n, r);
+    { storeItemAsset: o, storeItemDefaultInfo: c } = Q(t, n, r);
   if (n === `library` || n == `vertical`)
     return (0, N.jsx)(Z, {
       id: t,
       bPreferAssetWithoutOverride: r,
       bNoShadow: a,
     });
-  let c = ``;
+  let l = ``;
   switch (n) {
     case `main`:
-      c = u;
+      l = f;
       break;
     default:
-      c = h;
+      l = s;
   }
-  if (o === void 0 || !s)
-    return (0, N.jsx)(`div`, { className: T(c, `CapsuleImageCtn`, i) });
+  if (o === void 0 || !c)
+    return (0, N.jsx)(`div`, { className: T(l, `CapsuleImageCtn`, i) });
   if (o == null) return null;
-  let l = F(o, n === `header`);
+  let u = F(o, n === `header`);
   return (0, N.jsx)(`div`, {
-    className: T(c, `CapsuleImageCtn`, i),
+    className: T(l, `CapsuleImageCtn`, i),
     children: (0, N.jsx)(y, {
       lazyLoad: !0,
-      srcs: l,
-      className: T(m),
-      alt: s.name,
+      srcs: u,
+      className: T(g),
+      alt: c.name,
     }),
   });
 }
@@ -261,7 +261,7 @@ function he(e) {
     p = s && !n && !d?.bReplacesWishlistBanner,
     m = !n && r;
   return (0, N.jsxs)(`div`, {
-    className: T(g, `CapsuleDecorators`, d && `HasReasonBanner`),
+    className: T(h, `CapsuleDecorators`, d && `HasReasonBanner`),
     children: [
       d &&
         (0, N.jsx)(`span`, {
@@ -299,7 +299,7 @@ function ge(e) {
   let { appids: t } = e;
   return _e(t)
     ? (0, N.jsx)(`span`, {
-        className: T(p, _),
+        className: T(d, p),
         children: S.Localize(`#Sale_EarlyAccess`),
       })
     : null;
@@ -328,16 +328,16 @@ function Z(e) {
       bPreferAssetWithoutOverride: r,
       bNoShadow: i,
     } = e,
-    a = i ? c : ``,
-    { storeItemDefaultInfo: o, storeItemAsset: u } = Q(t, `vertical`, r),
-    [p, h] = M.useState(0);
-  if (!o || !u) return (0, N.jsx)(`div`, { className: s });
-  let { strStoreVerticalURL: g, strLibraryVerticalURL: _ } = I(u, o);
-  if (g && (!n || !_))
+    a = i ? m : ``,
+    { storeItemDefaultInfo: o, storeItemAsset: s } = Q(t, `vertical`, r),
+    [d, f] = M.useState(0);
+  if (!o || !s) return (0, N.jsx)(`div`, { className: _ });
+  let { strStoreVerticalURL: p, strLibraryVerticalURL: h } = I(s, o);
+  if (p && (!n || !h))
     return (0, N.jsxs)(`div`, {
-      className: T(s, `HeroCapsuleImageContainer`),
+      className: T(_, `HeroCapsuleImageContainer`),
       children: [
-        (0, N.jsx)(`img`, { src: g, className: m, alt: o.name }),
+        (0, N.jsx)(`img`, { src: p, className: g, alt: o.name }),
         o.type == 4 &&
           (0, N.jsx)(`img`, {
             className: `eEjnmAoA07c-`,
@@ -346,43 +346,43 @@ function Z(e) {
           }),
       ],
     });
-  if (_)
+  if (h)
     return (0, N.jsxs)(`div`, {
-      className: T(d, ee, n ? f : ``, a),
+      className: T(l, c, n ? ee : ``, a),
       children: [
         (0, N.jsx)(`div`, {
-          className: l,
-          style: { backgroundImage: `url(${_})` },
+          className: u,
+          style: { backgroundImage: `url(${h})` },
         }),
-        (0, N.jsx)(`img`, { src: _, className: m, alt: o.name }),
+        (0, N.jsx)(`img`, { src: h, className: g, alt: o.name }),
       ],
     });
-  let v = F(u, !0),
+  let v = F(s, !0),
     b = v.length - 1,
     x = (e) => {
       let t = v.indexOf(e);
-      t >= b && t < v.length - 1 && h(t + 1);
+      t >= b && t < v.length - 1 && f(t + 1);
     };
-  if (p < v.length) {
-    let e = v[p];
+  if (d < v.length) {
+    let e = v[d];
     return (0, N.jsxs)(`div`, {
-      className: T(d, a),
+      className: T(l, a),
       children: [
         (0, N.jsx)(`div`, {
-          className: l,
+          className: u,
           style: { backgroundImage: `url(${e})` },
         }),
         (0, N.jsx)(y, {
           lazyLoad: !0,
           srcs: v,
-          className: m,
+          className: g,
           alt: o.name,
           onImageError: x,
         }),
       ],
     });
   }
-  return (0, N.jsx)(`div`, { className: s });
+  return (0, N.jsx)(`div`, { className: _ });
 }
 function Q(e, t, n = !1) {
   let { data: r } = E(e),

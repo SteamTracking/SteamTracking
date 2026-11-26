@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { Pt as t, W as n, at as r } from "./chunk~01cfc309bf.js";
-import { In as i, Vi as a, et as o } from "./chunk~3f4314f3b4.js";
+import { Hi as i, Ln as a, et as o } from "./chunk~3f4314f3b4.js";
 import { t as s } from "./chunk~eefd71512b.js";
 import { Y as c, l } from "./chunk~21cdc464a1.js";
 import { n as u, t as d } from "./chunk~91ae5e1167.js";
@@ -74,7 +74,7 @@ async function H(e, t, n) {
   if (a?.success != 1) throw Error(a?.message ?? i.statusText);
 }
 function U(e) {
-  let { appid: t, eventLink: r, emoticonStore: i, closeModal: o } = e,
+  let { appid: t, eventLink: r, emoticonStore: a, closeModal: o } = e,
     { data: c } = p(A.steamid),
     [d, f] = F.useState(``),
     m =
@@ -116,10 +116,10 @@ function U(e) {
                         fnGetCurText: () => d,
                         fnOnTextChange: (e) => f(e.currentTarget.value),
                         fnSetText: f,
-                        emoticonStore: i,
+                        emoticonStore: a,
                         bSupportHTMLImport: !1,
                         showFormatHelp: `UserStatusPublished`,
-                        limitBBCode: a,
+                        limitBBCode: i,
                         classNameForTextArea: R,
                         bEmbeddedInDialog: !0,
                       }),
@@ -184,11 +184,11 @@ function G(e) {
 }
 function K(e) {
   let { eventModel: t, strEventLink: n, closeModal: r } = e,
-    a = c(t),
+    i = c(t),
     s = M(),
     [l, u] = F.useState(() => w(j.LANGUAGE)),
     [f, p] = F.useState(!1),
-    { elDialogElement: g, fnShowLogonDialog: S } = i(
+    { elDialogElement: g, fnShowLogonDialog: S } = a(
       y(`#EventDisplay_Share_NotLoggedIn_Description`),
     ),
     T = F.useMemo(() => {
@@ -264,7 +264,7 @@ function K(e) {
                         (0, B.jsx)(k, {
                           toolTipContent: y(`#EventDisplay_Share_OnFaceBook`),
                           children: (0, B.jsx)(b, {
-                            href: a.strFacebookUrl,
+                            href: i.strFacebookUrl,
                             className: `D4J8JhjevEo-`,
                             children: (0, B.jsx)(`img`, {
                               className: E(`yYL-OrX9PtQ-`),
@@ -276,7 +276,7 @@ function K(e) {
                         (0, B.jsx)(k, {
                           toolTipContent: y(`#EventDisplay_Share_OnTwitter`),
                           children: (0, B.jsx)(b, {
-                            href: a.strTwitterUrl,
+                            href: i.strTwitterUrl,
                             className: `D4J8JhjevEo-`,
                             children: (0, B.jsx)(`img`, {
                               className: E(`yYL-OrX9PtQ-`),
@@ -288,7 +288,7 @@ function K(e) {
                         (0, B.jsx)(k, {
                           toolTipContent: y(`#EventDisplay_Share_OnReddit`),
                           children: (0, B.jsx)(b, {
-                            href: a.strRedditUrl,
+                            href: i.strRedditUrl,
                             className: `D4J8JhjevEo-`,
                             children: (0, B.jsx)(`img`, {
                               className: E(`yYL-OrX9PtQ-`),

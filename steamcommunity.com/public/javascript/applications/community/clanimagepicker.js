@@ -15,19 +15,19 @@ import {
   z as d,
 } from "./chunk~01cfc309bf.js";
 import {
-  Cs as f,
-  Gi as p,
-  Wo as m,
-  ba as h,
-  dn as g,
-  ds as _,
-  hs as v,
+  Go as f,
+  Ki as p,
+  as as m,
+  fn as h,
+  fs as g,
+  gs as _,
+  hi as v,
   is as y,
-  mi as b,
-  ns as x,
-  on as S,
-  rs as C,
-  tn as w,
+  on as b,
+  rs as x,
+  tn as S,
+  ws as C,
+  xa as w,
 } from "./chunk~3f4314f3b4.js";
 import { i as T, n as E, r as D } from "./chunk~018ae802ee.js";
 import { t as O } from "./chunk~eefd71512b.js";
@@ -252,31 +252,31 @@ function qt(e) {
     } = e,
     u = ye(t.appid),
     d = L(),
-    p = a || He(ct.LANGUAGE),
-    m = g(r === void 0 ? t : void 0, `capsule`, p, x.capsule_main) ?? r,
-    h = g(r === void 0 ? t : void 0, `capsule`, p, x.full) ?? r,
-    [_, v, y, S] = n(() => [
-      t.GetNameWithFallback(p) || ``,
+    f = a || He(ct.LANGUAGE),
+    p = h(r === void 0 ? t : void 0, `capsule`, f, x.capsule_main) ?? r,
+    m = h(r === void 0 ? t : void 0, `capsule`, f, x.full) ?? r,
+    [g, _, y, b] = n(() => [
+      t.GetNameWithFallback(f) || ``,
       t.GetCategoryAsString(),
-      t.GetSummaryWithFallback(p, l),
-      t.GetSubTitleWithLanguageFallback(p) || ``,
+      t.GetSummaryWithFallback(f, l),
+      t.GetSubTitleWithLanguageFallback(f) || ``,
     ]),
-    C = f(t.appid),
-    { data: w } = ft(C),
+    S = C(t.appid),
+    { data: w } = ft(S),
     T = [];
-  if ((m && T.push(m), h && h !== m && T.push(h), w)) {
+  if ((p && T.push(p), m && m !== p && T.push(m), w)) {
     let e = F(w, `main_capsule`);
     e && T.push(e);
   }
-  let [E, D] = (0, Y.useState)(m),
+  let [E, D] = (0, Y.useState)(p),
     O = (e, t, n) => {
       (n >= T.length && D(void 0), D(T[n + 1]));
     };
   if (!t) return (0, X.jsx)(`div`, { className: yt });
   let A = t ? t.GetStartTimeAndDateUnixSeconds() : 0,
-    j = S;
+    j = b;
   return (
-    S && (S.length > Kt || _.length > Kt) && (j = void 0),
+    b && (b.length > Kt || g.length > Kt) && (j = void 0),
     (0, X.jsxs)(`div`, {
       className: vt,
       children: [
@@ -290,7 +290,7 @@ function qt(e) {
             (0, X.jsxs)(`div`, {
               className: q(St, Ct),
               children: [
-                (0, X.jsx)(`div`, { className: At, children: v }),
+                (0, X.jsx)(`div`, { className: At, children: _ }),
                 (0, X.jsx)(`div`, { className: bt, children: y }),
               ],
             }),
@@ -298,7 +298,7 @@ function qt(e) {
               className: jt,
               style: {
                 backgroundColor: `#ffffff`,
-                backgroundImage: E ? `url(${b(E)})` : `none`,
+                backgroundImage: E ? `url(${v(E)})` : `none`,
               },
             }),
             (0, X.jsxs)(`div`, {
@@ -316,7 +316,7 @@ function qt(e) {
                 (0, X.jsxs)(`div`, {
                   className: Mt,
                   children: [
-                    (0, X.jsx)(`div`, { className: Et, children: _ }),
+                    (0, X.jsx)(`div`, { className: Et, children: g }),
                     (0, X.jsx)(`div`, {
                       className: q(Dt, !j && `R-OtVF8pTAw-`),
                       children: j,
@@ -328,7 +328,7 @@ function qt(e) {
                       children: [
                         (0, X.jsx)(`div`, {
                           className: q(Pt, xt),
-                          children: v,
+                          children: _,
                         }),
                         A > d
                           ? (0, X.jsx)(`div`, {
@@ -359,7 +359,7 @@ function qt(e) {
 }
 function Jt(e) {
   let { appid: t, bHidePrice: n } = e,
-    r = f(t),
+    r = C(t),
     { data: i } = Pe(r),
     { data: a } = ft(r),
     { data: o } = Te(r),
@@ -373,7 +373,7 @@ function Jt(e) {
       className: q(Lt, `AppCapsuleCtn`),
       ...p(i, s, c, !1),
       children: [
-        (0, X.jsx)(h, {
+        (0, X.jsx)(w, {
           id: r,
           hoverProps: { direction: `overlay`, style: { minWidth: `320px` } },
           children: (0, X.jsx)(`img`, {
@@ -422,8 +422,8 @@ var Yt = e(c()),
   })({});
 function Xt(e, t = !1) {
   return t
-    ? `${v}/${e.clanAccountID}/${y.GetThumbHashAndExt(e)}`
-    : `${v}/${e.clanAccountID}/${y.GetHashAndExt(e)}`;
+    ? `${_}/${e.clanAccountID}/${m.GetThumbHashAndExt(e)}`
+    : `${_}/${e.clanAccountID}/${m.GetHashAndExt(e)}`;
 }
 function Zt(e, t, n) {
   let r = ``,
@@ -589,14 +589,14 @@ function Sn(e) {
           e(G.InitFromClanID(t.clanAccountID, J.EUNIVERSE), !1);
         });
     },
-    m = (e) => {
+    h = (e) => {
       V(
         (0, X.jsx)(K, {
           strTitle: U(`#ImagePicker_DeleteImageTitle`),
           strDescription: ``,
-          onOK: g,
-          onCancel: _,
-          closeModal: _,
+          onOK: _,
+          onCancel: v,
+          closeModal: v,
           children: (0, X.jsxs)(Y.Fragment, {
             children: [
               (0, X.jsx)(`div`, {
@@ -611,7 +611,7 @@ function Sn(e) {
         nt(e) ?? window,
       );
     },
-    h = (e) => {
+    g = (e) => {
       (console.log(`ClanImageWrapper on delete error: ` + e),
         V(
           (0, X.jsx)(B, {
@@ -622,29 +622,29 @@ function Sn(e) {
           window,
         ));
     },
-    g = () => {
+    _ = () => {
       c(!0);
       let e = G.InitFromClanID(t.clanAccountID, J.EUNIVERSE);
       R.DeleteClanImage(e, t)
         .then((e) => {
-          (e.success != 1 && h(H(e).strErrorMsg), c(!1));
+          (e.success != 1 && g(H(e).strErrorMsg), c(!1));
         })
         .catch((e) => {
-          (h(H(e).strErrorMsg), c(!1));
+          (g(H(e).strErrorMsg), c(!1));
         });
     },
-    _ = () => {},
-    v = () => {
+    v = () => {},
+    y = () => {
       i && i(t);
     },
-    b = t.file_name ? t.file_name : ``,
-    x = ce(n, b, String(t.imageid), an),
-    C = y.BIsClanImageVideo(t),
+    x = t.file_name ? t.file_name : ``,
+    S = ce(n, x, String(t.imageid), an),
+    C = m.BIsClanImageVideo(t),
     w = a && !s && !C,
     T = a && !s && !C,
     E = a && !s && C,
     D = a && !s && !C;
-  return (0, X.jsx)(S, {
+  return (0, X.jsx)(b, {
     placeholderHeight: `100vh`,
     className: Qt,
     rootMargin: `0px 0px 100% 0px`,
@@ -658,7 +658,7 @@ function Sn(e) {
           onDragStart: f,
           onDragEnd: p,
           onDoubleClick: l,
-          onClick: v,
+          onClick: y,
           children: (0, X.jsx)(wn, { clanImage: t, className: en }),
         }),
         w &&
@@ -690,10 +690,10 @@ function Sn(e) {
         !s &&
           (0, X.jsx)(`span`, {
             className: `LzW73RDKl40-`,
-            onClick: m,
+            onClick: h,
             children: (0, X.jsx)(`img`, {}),
           }),
-        (0, X.jsx)(`div`, { className: tn, title: b, children: x }),
+        (0, X.jsx)(`div`, { className: tn, title: x, children: S }),
       ],
     }),
   });
@@ -711,7 +711,7 @@ function Cn(e) {
 }
 function wn(e) {
   let { clanImage: t, className: n } = e;
-  return y.BIsClanImageVideo(t)
+  return m.BIsClanImageVideo(t)
     ? (0, X.jsx)(`video`, {
         autoPlay: !0,
         loop: !0,
@@ -734,7 +734,7 @@ function Tn(e) {
     children: [
       (0, X.jsx)(`div`, {
         className: un,
-        children: y.BIsClanImageVideo(t)
+        children: m.BIsClanImageVideo(t)
           ? (0, X.jsx)(wn, { clanImage: t })
           : (0, X.jsx)(`img`, { src: t.url, loading: `lazy` }),
       }),
@@ -843,7 +843,7 @@ var On = class e {
       let n = this.m_curLocImageGroup.primaryImage;
       return this.m_curLocImageGroup.localized_images[t]
         ? this.m_curLocImageGroup.localized_images[t]
-        : y.GenerateURLFromHashAndExt(e, y.GetHashAndExt(n) ?? ``);
+        : m.GenerateURLFromHashAndExt(e, m.GetHashAndExt(n) ?? ``);
     }
     return null;
   }
@@ -851,7 +851,7 @@ var On = class e {
     if (!this.m_curLocImageGroup) return;
     let n = this.m_curLocImageGroup.primaryImage,
       r = G.InitFromClanID(n.clanAccountID, J.EUNIVERSE),
-      i = y.GetHashAndExt(n) ?? ``,
+      i = m.GetHashAndExt(n) ?? ``,
       a = [];
     for (let n = 0; n < 32; ++n)
       a.push(e.BDoesClanImageFileExistsOnCDNOrOrigin(t, r, i, n));
@@ -860,7 +860,7 @@ var On = class e {
       for (let e = 0; e < 32; ++e)
         o[e] &&
           (this.m_curLocImageGroup.localized_images[e] =
-            y.GenerateURLFromHashAndExtAndLang(
+            m.GenerateURLFromHashAndExtAndLang(
               r,
               i,
               x.full,
@@ -872,7 +872,7 @@ var On = class e {
   SetLocalizedImageGroupAtLang(e, t, n) {
     this.m_curLocImageGroup &&
       (this.m_curLocImageGroup.localized_images[e] = n
-        ? y.GenerateURLFromHashAndExtAndLang(
+        ? m.GenerateURLFromHashAndExtAndLang(
             t,
             n,
             x.full,
@@ -886,10 +886,10 @@ var On = class e {
     let n = this.m_curLocImageGroup.primaryImage;
     if (n?.image_hash == e) {
       let e = G.InitFromClanID(n.clanAccountID, J.EUNIVERSE),
-        r = y.GetHashAndExt(n);
+        r = m.GetHashAndExt(n);
       r &&
         (this.m_curLocImageGroup.localized_images[t] =
-          y.GenerateURLFromHashAndExtAndLang(
+          m.GenerateURLFromHashAndExtAndLang(
             e,
             r,
             x.full,
@@ -907,7 +907,7 @@ var On = class e {
   GetAllLocalizedGroupImageHashAndExts() {
     return this.GetAllLocalizedGroupImages()
       .filter(Boolean)
-      .map((e) => y.GetHashAndExtFromURL(e));
+      .map((e) => m.GetHashAndExtFromURL(e));
   }
 };
 Ce([a], On.prototype, `m_curLocImageGroup`, void 0);
@@ -949,7 +949,7 @@ function Ln(e) {
     value: { ...Pn, editModel: n, bClanImagesV2: r, setClanImagesV2: i },
     children: (0, X.jsx)(T.Provider, {
       value: a,
-      children: (0, X.jsx)(w, { location: 1, children: t }),
+      children: (0, X.jsx)(S, { location: 1, children: t }),
     }),
   });
 }
@@ -2748,7 +2748,7 @@ function Gr(e) {
     } = e,
     [c, l] = (0, Y.useState)(i),
     u = G.InitFromClanID(t.clanAccountID, J.EUNIVERSE),
-    d = n(() => y.GenerateURLFromHashAndExt(u, y.GetHashAndExt(t) ?? ``));
+    d = n(() => m.GenerateURLFromHashAndExt(u, m.GetHashAndExt(t) ?? ``));
   return (0, X.jsx)(K, {
     strTitle: U(`#selectimage_change_artwork_lang_title`),
     strDescription: U(`#selectimage_change_artworl_lang_desc`),
@@ -2862,9 +2862,9 @@ function Xr(e) {
       let e = R.GetClanImageByImageHash(t, r.imgHash),
         n = ``;
       e &&
-        (n = y.GenerateURLFromHashAndExtAndLang(
+        (n = m.GenerateURLFromHashAndExtAndLang(
           t,
-          y.GetHashAndExt(e),
+          m.GetHashAndExt(e),
           x.full,
           r.lang,
         ));
@@ -2998,7 +2998,7 @@ function li(e) {
       fnFilterImageURLsForKnownFailures: o,
       langOverride: s,
     } = e,
-    c = m(),
+    c = f(),
     l = Y.useCallback(
       (e) => {
         (e.preventDefault(), i && i(t));
@@ -3006,7 +3006,7 @@ function li(e) {
       [t, i],
     ),
     u = s || He(J.LANGUAGE),
-    [d, f, p] = n(() => [
+    [d, p, m] = n(() => [
       t.GetSummaryWithFallback(u),
       t.GetNameWithFallback(u),
       t.BShowLibrarySpotlightText(),
@@ -3050,7 +3050,7 @@ function li(e) {
               (0, X.jsx)(`div`, {
                 className: ri,
                 children:
-                  p &&
+                  m &&
                   (0, X.jsxs)(`div`, {
                     className: `Kirdf-ZVux8-`,
                     children: [
@@ -3064,7 +3064,7 @@ function li(e) {
                         children: [
                           (0, X.jsx)(`div`, {
                             className: `mTAOqZLWhOo-`,
-                            children: f,
+                            children: p,
                           }),
                           (0, X.jsx)(`div`, {
                             className: `_9RjQ-a9Uc6o-`,
@@ -3111,9 +3111,9 @@ function Ci(e) {
       fnGetImageHashAndExt: f,
     } = e,
     p = f(r, t),
-    m = p ? y.GenerateURLFromHashAndExtAndLang(a, p, x.full, t) : ``,
-    [h] = n(() => [Mi(r, f)]);
-  return h == 0
+    h = p ? m.GenerateURLFromHashAndExtAndLang(a, p, x.full, t) : ``,
+    [g] = n(() => [Mi(r, f)]);
+  return g == 0
     ? (0, X.jsxs)(`div`, {
         className: br,
         children: [
@@ -3142,38 +3142,38 @@ function Ci(e) {
         className: br,
         children: [
           r === `capsule` &&
-            (0, X.jsx)(Ei, { imgURL: m, eventModel: o, langOverride: t }),
+            (0, X.jsx)(Ei, { imgURL: h, eventModel: o, langOverride: t }),
           r === `background` &&
             (0, X.jsx)(Di, {
-              imgURL: m,
+              imgURL: h,
               lang: t,
               eventModel: o,
               partnerEventStore: s,
             }),
-          r === `spotlight` && (0, X.jsx)(Oi, { imgURL: m, event: o, lang: t }),
+          r === `spotlight` && (0, X.jsx)(Oi, { imgURL: h, event: o, lang: t }),
           r === `localized_store_app_spotlight` &&
-            (0, X.jsx)(Oi, { imgURL: m, event: o, lang: t }),
+            (0, X.jsx)(Oi, { imgURL: h, event: o, lang: t }),
           r === `localized_store_app_spotlight_mobile` &&
-            (0, X.jsx)(Oi, { imgURL: m, event: o, lang: t }),
+            (0, X.jsx)(Oi, { imgURL: h, event: o, lang: t }),
           (r === `broadcast_left` || r === `broadcast_right`) &&
             (0, X.jsx)(ki, {
-              imgURL: m,
+              imgURL: h,
               side: r === `broadcast_right` ? `right` : `left`,
             }),
-          r === `sale_header` && (0, X.jsx)(Ai, { imgURL: m }),
-          r === `sale_secondary_background` && (0, X.jsx)(Ai, { imgURL: m }),
-          r === `sale_overlay` && (0, X.jsx)(ji, { imgURL: m }),
-          C.includes(r) &&
+          r === `sale_header` && (0, X.jsx)(Ai, { imgURL: h }),
+          r === `sale_secondary_background` && (0, X.jsx)(Ai, { imgURL: h }),
+          r === `sale_overlay` && (0, X.jsx)(ji, { imgURL: h }),
+          y.includes(r) &&
             (0, X.jsx)(`img`, {
               className: `_1MBhWd0--I8-`,
               src: kn.GetLocalizedImageGroupForEditAsURL(a, t) ?? void 0,
             }),
-          r === `product_banner` && (0, X.jsx)($, { imgURL: m }),
-          r === `product_mobile_banner` && (0, X.jsx)($, { imgURL: m }),
-          r === `sale_logo` && (0, X.jsx)($, { imgURL: m }),
-          r === `sale_cross_promo_logo` && (0, X.jsx)($, { imgURL: m }),
-          r === `bestofyear_banner` && (0, X.jsx)($, { imgURL: m }),
-          r === `bestofyear_banner_mobile` && (0, X.jsx)($, { imgURL: m }),
+          r === `product_banner` && (0, X.jsx)($, { imgURL: h }),
+          r === `product_mobile_banner` && (0, X.jsx)($, { imgURL: h }),
+          r === `sale_logo` && (0, X.jsx)($, { imgURL: h }),
+          r === `sale_cross_promo_logo` && (0, X.jsx)($, { imgURL: h }),
+          r === `bestofyear_banner` && (0, X.jsx)($, { imgURL: h }),
+          r === `bestofyear_banner_mobile` && (0, X.jsx)($, { imgURL: h }),
           (0, X.jsx)(Yr, {
             langOverride: t,
             clanSteamID: a,
@@ -4006,59 +4006,59 @@ var zi = `_0K9D8c3MMwY-`,
       } = e,
       [u, d] = Y.useState(),
       [f, p] = Y.useState(!0),
-      [m, h] = Y.useState(),
-      g = tt(() => Z.default.CancelToken.source());
+      [h, _] = Y.useState(),
+      v = tt(() => Z.default.CancelToken.source());
     Y.useEffect(
-      () => () => g.cancel(`LocalizedImageDialog component unmounted`),
-      [g],
+      () => () => v.cancel(`LocalizedImageDialog component unmounted`),
+      [v],
     );
-    let v = Y.useCallback(async () => {
+    let y = Y.useCallback(async () => {
         try {
           let e = G.InitFromClanID(i.clanAccountID, J.EUNIVERSE),
-            t = await y.AsyncGetImageResolution(
+            t = await m.AsyncGetImageResolution(
               e,
               i.image_hash,
               i.file_type,
-              g,
+              v,
               !1,
             );
-          if (g.token.reason) return;
+          if (v.token.reason) return;
           if (t.success != 1 || !t.width || !t.height) {
             (console.error(
               `LocalizedImageDialog : failed to determine the primary image resolution. ` +
                 (t.err_msg ?? ``),
             ),
-              h({ strMsg: t.err_msg }));
+              _({ strMsg: t.err_msg }));
             return;
           }
-          (h(void 0), d(t));
+          (_(void 0), d(t));
         } catch (e) {
           let t = H(e);
           (console.error(`LocalizedImageDialog : ` + t.strErrorMsg, t),
-            h({ strMsg: t.strErrorMsg }));
+            _({ strMsg: t.strErrorMsg }));
         }
-      }, [g, i.clanAccountID, i.file_type, i.image_hash]),
+      }, [v, i.clanAccountID, i.file_type, i.image_hash]),
       b = Y.useCallback(async () => {
         try {
-          (await kn.DetermineAvailableLocalizationForGroup(g),
-            g.token.reason || p(!1));
+          (await kn.DetermineAvailableLocalizationForGroup(v),
+            v.token.reason || p(!1));
         } catch (e) {
           let t = H(e);
           console.error(`LocalizedImageDialog : ` + t.strErrorMsg, t);
         }
-      }, [g]),
-      x = Y.useCallback(() => v().then(b), [b, v]),
+      }, [v]),
+      x = Y.useCallback(() => y().then(b), [b, y]),
       S = Y.useCallback(() => {
-        (h(void 0), x());
+        (_(void 0), x());
       }, [x]);
     Y.useEffect(() => {
       t && (kn.SetPrimaryImageForImageGroup(i, `localized_image_group`), x());
     }, [t, x, i]);
     let C = !f && u,
       w = u ? ` - ${u.width}x${u.height}` : ``,
-      T = _(i.file_type).slice(1),
+      T = g(i.file_type).slice(1),
       E = u?.width && u?.height ? { width: u.width, height: u.height } : void 0,
-      D = y.GenerateURLFromHashAndExt(a, y.GetHashAndExt(i));
+      D = m.GenerateURLFromHashAndExt(a, m.GetHashAndExt(i));
     return (0, X.jsx)(Ee, {
       bAllowFullSize: !0,
       title: U(`#ImagePickerLoc_Title`),
@@ -4085,11 +4085,11 @@ var zi = `_0K9D8c3MMwY-`,
                 ],
               }),
             }),
-            !!m &&
+            !!h &&
               (0, X.jsxs)(`div`, {
                 children: [
                   (0, X.jsx)(`div`, { children: U(`#Error_Message`) }),
-                  !!m?.strMsg && (0, X.jsx)(`div`, { children: m.strMsg }),
+                  !!h?.strMsg && (0, X.jsx)(`div`, { children: h.strMsg }),
                   (0, X.jsx)(`div`, {
                     className: `yYL-OrX9PtQ-`,
                     onClick: S,
@@ -4098,7 +4098,7 @@ var zi = `_0K9D8c3MMwY-`,
                 ],
               }),
             !C &&
-              !m &&
+              !h &&
               (0, X.jsx)(O, { position: `center`, string: U(`#Loading`) }),
             C &&
               (0, X.jsxs)(Y.Fragment, {

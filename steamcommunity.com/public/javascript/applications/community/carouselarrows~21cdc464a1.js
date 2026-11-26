@@ -18,38 +18,38 @@ import {
   yt as p,
 } from "./chunk~01cfc309bf.js";
 import {
-  $n as m,
-  Cn as h,
-  Cs as g,
-  Dn as _,
-  En as v,
-  Ko as y,
-  On as b,
-  Sn as x,
-  Uo as ee,
-  Vo as S,
-  Wi as C,
-  Yo as te,
-  _a as ne,
-  _n as re,
-  _s as ie,
-  bn as ae,
-  fi as oe,
-  fn as se,
-  gn as ce,
-  hn as le,
-  ln as ue,
-  mn as de,
-  ns as fe,
-  on as pe,
-  os as me,
-  qo as he,
-  sn as ge,
-  un as _e,
-  vn as ve,
-  vs as ye,
-  ya as be,
-  yn as xe,
+  Cn as m,
+  Dn as h,
+  Gi as g,
+  Ho as _,
+  Jo as v,
+  On as y,
+  Wo as b,
+  Xo as x,
+  _n as ee,
+  ba as S,
+  bn as C,
+  er as te,
+  gn as ne,
+  hn as re,
+  kn as ie,
+  ln as ae,
+  on as oe,
+  pi as se,
+  pn as ce,
+  qo as le,
+  rs as ue,
+  sn as de,
+  ss as fe,
+  un as pe,
+  va as me,
+  vn as he,
+  vs as ge,
+  wn as _e,
+  ws as ve,
+  xn as ye,
+  yn as be,
+  ys as xe,
 } from "./chunk~3f4314f3b4.js";
 import { C as Se, D as Ce, E as we } from "./chunk~437071091c.js";
 import { t as Te } from "./chunk~eefd71512b.js";
@@ -377,11 +377,11 @@ function xr(e, t, n, r) {
     case `sale`:
       return e.jsondata.bSaleEnabled
         ? l
-          ? `${he(t)}/${e.GetSaleUpdateLandingPageVanity()}`
+          ? `${v(t)}/${e.GetSaleUpdateLandingPageVanity()}`
           : u
             ? `${a}curator/${e.clanSteamID.GetAccountID()}`
             : a +
-              te(
+              x(
                 e.clanSteamID.GetAccountID(),
                 e.GetSaleVanity(),
                 !!e.jsondata.sale_vanity_id_valve_approved_for_sale_subpath,
@@ -394,7 +394,7 @@ function xr(e, t, n, r) {
     case `storeview`:
       if (e.clanSteamID.GetAccountID() == Se())
         return `${M.STORE_BASE_URL}meetsteam/${s}`;
-      if (l) return `${he(t)}/${e.GetSaleUpdateLandingPageVanity()}`;
+      if (l) return `${v(t)}/${e.GetSaleUpdateLandingPageVanity()}`;
       if (u) return `${a}curator/${e.clanSteamID.GetAccountID()}`;
       {
         let t = e.appid
@@ -507,7 +507,7 @@ function Mr(e = 940) {
 function Nr(e) {
   let t = jr(),
     n = t >= ((0, P.useContext)(Er) ? 911 : 940),
-    r = oe(e);
+    r = se(e);
   return n
     ? { nMaxCapsulesPerRow: r.nMaxItemsPerRow, bScreenIsWide: n }
     : {
@@ -519,7 +519,7 @@ function Nr(e) {
       };
 }
 function Pr(e) {
-  let t = oe(e);
+  let t = se(e);
   return Ar()
     ? t.nMaxItemsPerRow
     : Math.min(
@@ -651,7 +651,7 @@ var Wr = `NiXfRuagfO4-`;
 function Gr(e) {
   let { inputType: t, id: n, bApplyUserContentPref: r } = e,
     i = t == `bundle` ? `bundle` : t == `sub` ? `sub` : `game`,
-    a = ne(n, i),
+    a = me(n, i),
     { data: o } = D(a),
     { data: s, isPending: c } = en(r ? a : void 0);
   if (!o) return null;
@@ -677,7 +677,7 @@ function Gr(e) {
   }
   return (0, N.jsx)(`div`, {
     className: j(Wr, `AppSummaryWidgetCtn`),
-    children: (0, N.jsx)(C, {
+    children: (0, N.jsx)(g, {
       id: n,
       type: i,
       bShowDemoButton: o.type == 1,
@@ -726,14 +726,14 @@ function Qr(e, t, n, r, i, a, o) {
       if (!n) return null;
       let s = [];
       if (!n.BImageNeedScreenshotFallback(r, i)) {
-        let o = await e.ensureQueryData(_e(e, t, n, r, i, a));
-        if ((o && s.push(o), a != fe.full)) {
-          let a = await e.ensureQueryData(_e(e, t, n, r, i, fe.full));
+        let o = await e.ensureQueryData(pe(e, t, n, r, i, a));
+        if ((o && s.push(o), a != ue.full)) {
+          let a = await e.ensureQueryData(pe(e, t, n, r, i, ue.full));
           a && s.push(a);
         }
       }
       if (!o && s.length == 0) {
-        let r = await e.ensureQueryData(se(e, t, n));
+        let r = await e.ensureQueryData(ce(e, t, n));
         r && s.push(r);
       }
       return s;
@@ -757,7 +757,7 @@ function ei(e) {
       data: s,
       isPending: c,
       isError: l,
-    } = m(
+    } = te(
       o
         ? void 0
         : {
@@ -767,15 +767,15 @@ function ei(e) {
             announcementGID: n,
           },
     ),
-    u = g(t || s?.appid || void 0),
+    u = ve(t || s?.appid || void 0),
     { data: d } = D(u);
   if (o || l || s === null) return T(i);
   if (c || !s) return (0, N.jsx)(Te, {});
   let f = gn(M.LANGUAGE),
     p = s.GetNameWithFallback(f),
-    h = s.GetSubTitleWithSummaryFallback(f),
-    _ = d?.name,
-    v = Vn(s.GetStartTimeAndDateUnixSeconds());
+    m = s.GetSubTitleWithSummaryFallback(f),
+    h = d?.name,
+    g = Vn(s.GetStartTimeAndDateUnixSeconds());
   return (0, N.jsxs)(Tr, {
     eventModel: s,
     route: lr.k_eView,
@@ -792,15 +792,15 @@ function ei(e) {
                 s.type == 28
                   ? `#EventDisplay_Share_Announcement`
                   : `#EventDisplay_Share_Event`,
-                _ ?? ``,
+                h ?? ``,
               ),
-              (0, N.jsx)(Ve, { children: v }),
+              (0, N.jsx)(Ve, { children: g }),
             ],
           }),
           (0, N.jsx)(Ee, {
             children: (0, N.jsx)(`div`, { className: Be.Type, children: p }),
           }),
-          (0, N.jsx)(Le, { children: h }),
+          (0, N.jsx)(Le, { children: m }),
         ],
       }),
     ],
@@ -812,7 +812,7 @@ function ti(e) {
       fnFilterImageURLsForKnownFailures: n,
       fnImageFailureCallback: r,
     } = e,
-    i = Xr(t, `capsule`, gn(M.LANGUAGE), fe.capsule_main) ?? [];
+    i = Xr(t, `capsule`, gn(M.LANGUAGE), ue.capsule_main) ?? [];
   return (
     i && n && (i = n(i)),
     (0, N.jsx)(We, {
@@ -868,7 +868,7 @@ function fi(e) {
   let t = di(e),
     n = t ? e.clanSteamID.GetAccountID() : void 0,
     { data: r, isLoading: i } = we(n),
-    { data: a, isLoading: o } = ie(n);
+    { data: a, isLoading: o } = ge(n);
   if (!t) return null;
   if (!(i || o)) return !a || !r || !Ff(e, r) ? null : (a.appids ?? []);
 }
@@ -1136,7 +1136,7 @@ function Xi(e, t) {
         `/?autoplay=0&donate=0` +
         (t && t.event ? `&steamappid=` + t.event.appid : ``);
       return (0, N.jsx)(`iframe`, {
-        className: h,
+        className: _e,
         src: n,
         title: e,
         frameBorder: 0,
@@ -1171,7 +1171,7 @@ function $i(e, t) {
 }
 function ea(e) {
   let { inputID: t, inputType: n, eventModel: r, fallbackUrl: i } = e,
-    a = be(t, n),
+    a = S(t, n),
     { data: o } = D(a),
     s = fi(r),
     c;
@@ -1190,7 +1190,7 @@ function ta(e, t) {
   let n = Li(e);
   return n
     ? (0, N.jsx)(`div`, {
-        className: j(x),
+        className: j(m),
         children: (0, N.jsx)(zi, { defid: n, url: e }),
       })
     : T(e, t?.event);
@@ -1215,18 +1215,18 @@ function oa(e, t, n, r) {
     n && i && (i = n + i));
   let s = T(e, r?.event, i ?? e);
   return (0, N.jsxs)(`div`, {
-    className: b,
-    children: [(0, N.jsx)(`div`, { className: _, children: t }), s],
+    className: ie,
+    children: [(0, N.jsx)(`div`, { className: y, children: t }), s],
   });
 }
 function sa(e) {
   switch (e) {
     case `button`:
-      return j(xe, `LinkButton`);
+      return j(C, `LinkButton`);
     case `pill`:
-      return j(ae, `LinkPill`);
+      return j(ye, `LinkPill`);
     default:
-      return j(ve, `Link`);
+      return j(be, `Link`);
   }
 }
 function ca(e, t, n) {
@@ -1263,7 +1263,7 @@ function da(e) {
     a = Ur(w(e.args, `labelcolor`) || w(e.args, `color`), void 0),
     o = sa(n),
     s = e.context.event,
-    c = me(t, e.language, s?.rtime32_last_modified),
+    c = fe(t, e.language, s?.rtime32_last_modified),
     l = Yi(ua(e.children, t) ? `` : (t ?? ``));
   if (l && t) return l.fnBBComponent(t, { event: e.context.event });
   if (c === void 0 || c == null) return e.children || ``;
@@ -1926,7 +1926,7 @@ function ao(e) {
       },
       [a, i, n],
     );
-  (I(e),
+  (ho(e),
     lo(
       e,
       (0, P.useCallback)(
@@ -2052,7 +2052,7 @@ function co() {
 }
 function lo(e, t) {
   let n = (0, P.useRef)(!0),
-    r = I(e);
+    r = ho(e);
   (0, P.useEffect)(() => {
     let e = n.current;
     ((n.current = !1), (!e || r) && t(r));
@@ -2090,15 +2090,15 @@ function po(e) {
 function mo(e) {
   return n(() => e.GetFailureReason());
 }
-function I(e) {
+function ho(e) {
   return n(() => e.IsPaused());
 }
-function ho(e) {
+function go(e) {
   return (0, P.useCallback)(() => {
     e.TogglePlayPause();
   }, [e]);
 }
-function go(e, t) {
+function _o(e, t) {
   (0, P.useEffect)(() => {
     let n = f(() => {
       let n = e.GetMaxVideoDimensions();
@@ -2107,125 +2107,125 @@ function go(e, t) {
     return () => n();
   }, [e, t]);
 }
-function _o(e) {
+function vo(e) {
   return n(() => e.HasPlaybackStarted());
 }
-function vo(e) {
+function yo(e) {
   return n(() => ({
     bHasCaptions: e.HasCaptions(),
     bShowingCaption: e.IsShowingCaption(),
   }));
 }
-var yo = `cOcEiRe-dIg-`,
-  bo = `QkF4JCVWpWw-`,
-  xo = `_8RH876Wgr7A-`,
-  So = `b0G5PgYKHAM-`,
-  Co = `_68B-8ItOIlc-`,
-  wo = `GsDewiltMCM-`,
-  To = `BffT7IQWKYg-`,
-  Eo = `aejFKWIp7Dg-`,
-  Do = `eBjRkRA8NpA-`,
-  Oo = `RrXwg35xzWc-`,
-  ko = `_98b2uQrBfN4-`,
-  Ao = `LCeQJ5hJTnk-`,
-  jo = `OPuK3adv80Y-`,
-  Mo = `qFZtjvdCOxo-`,
-  No = `vzX4l4uGgUg-`,
-  Po = `HOEA4Jz0kQU-`,
-  Fo = `AAuicaihzn0-`,
-  L = {};
-((L.arabic = () =>
+var bo = `cOcEiRe-dIg-`,
+  xo = `QkF4JCVWpWw-`,
+  So = `_8RH876Wgr7A-`,
+  Co = `b0G5PgYKHAM-`,
+  wo = `_68B-8ItOIlc-`,
+  To = `GsDewiltMCM-`,
+  Eo = `BffT7IQWKYg-`,
+  Do = `aejFKWIp7Dg-`,
+  Oo = `eBjRkRA8NpA-`,
+  ko = `RrXwg35xzWc-`,
+  Ao = `_98b2uQrBfN4-`,
+  jo = `LCeQJ5hJTnk-`,
+  Mo = `OPuK3adv80Y-`,
+  No = `qFZtjvdCOxo-`,
+  Po = `vzX4l4uGgUg-`,
+  Fo = `HOEA4Jz0kQU-`,
+  Io = `AAuicaihzn0-`,
+  I = {};
+((I.arabic = () =>
   A(() => import(`./chunk~15fc297361.js`), [], import.meta.url)),
-  (L.brazilian = () =>
+  (I.brazilian = () =>
     A(() => import(`./chunk~271b0bde8a.js`), [], import.meta.url)),
-  (L.bulgarian = () =>
+  (I.bulgarian = () =>
     A(() => import(`./chunk~1cb30bbf4f.js`), [], import.meta.url)),
-  (L.czech = () =>
+  (I.czech = () =>
     A(() => import(`./chunk~cbcc556ab5.js`), [], import.meta.url)),
-  (L.danish = () =>
+  (I.danish = () =>
     A(() => import(`./chunk~5c75804a95.js`), [], import.meta.url)),
-  (L.dutch = () =>
+  (I.dutch = () =>
     A(() => import(`./chunk~8c0c792670.js`), [], import.meta.url)),
-  (L.english = () =>
+  (I.english = () =>
     A(() => import(`./chunk~e7d89a4199.js`), [], import.meta.url)),
-  (L.finnish = () =>
+  (I.finnish = () =>
     A(() => import(`./chunk~06f7875ba1.js`), [], import.meta.url)),
-  (L.french = () =>
+  (I.french = () =>
     A(() => import(`./chunk~3e87475e99.js`), [], import.meta.url)),
-  (L.german = () =>
+  (I.german = () =>
     A(() => import(`./chunk~914182d6d9.js`), [], import.meta.url)),
-  (L.greek = () =>
+  (I.greek = () =>
     A(() => import(`./chunk~7176660b7d.js`), [], import.meta.url)),
-  (L.hungarian = () =>
+  (I.hungarian = () =>
     A(() => import(`./chunk~87b3222571.js`), [], import.meta.url)),
-  (L.indonesian = () =>
+  (I.indonesian = () =>
     A(() => import(`./chunk~5510fc6d67.js`), [], import.meta.url)),
-  (L.italian = () =>
+  (I.italian = () =>
     A(() => import(`./chunk~643e72814a.js`), [], import.meta.url)),
-  (L.japanese = () =>
+  (I.japanese = () =>
     A(() => import(`./chunk~dfdc60a744.js`), [], import.meta.url)),
-  (L.koreana = () =>
+  (I.koreana = () =>
     A(() => import(`./chunk~3b423a4cf9.js`), [], import.meta.url)),
-  (L.latam = () =>
+  (I.latam = () =>
     A(() => import(`./chunk~1e2e824c4a.js`), [], import.meta.url)),
-  (L.malay = () =>
+  (I.malay = () =>
     A(() => import(`./chunk~3770e3453d.js`), [], import.meta.url)),
-  (L.norwegian = () =>
+  (I.norwegian = () =>
     A(() => import(`./chunk~d4c8a21b7c.js`), [], import.meta.url)),
-  (L.polish = () =>
+  (I.polish = () =>
     A(() => import(`./chunk~4d4be3bbe6.js`), [], import.meta.url)),
-  (L.portuguese = () =>
+  (I.portuguese = () =>
     A(() => import(`./chunk~0145d99c18.js`), [], import.meta.url)),
-  (L.romanian = () =>
+  (I.romanian = () =>
     A(() => import(`./chunk~de571667db.js`), [], import.meta.url)),
-  (L.russian = () =>
+  (I.russian = () =>
     A(() => import(`./chunk~8d38d8594a.js`), [], import.meta.url)),
-  (L.sc_schinese = () =>
+  (I.sc_schinese = () =>
     A(() => import(`./chunk~57306d4383.js`), [], import.meta.url)),
-  (L.schinese = () =>
+  (I.schinese = () =>
     A(() => import(`./chunk~54799c0222.js`), [], import.meta.url)),
-  (L.spanish = () =>
+  (I.spanish = () =>
     A(() => import(`./chunk~853e04c5a4.js`), [], import.meta.url)),
-  (L.swedish = () =>
+  (I.swedish = () =>
     A(() => import(`./chunk~93b2fc55fc.js`), [], import.meta.url)),
-  (L.tchinese = () =>
+  (I.tchinese = () =>
     A(() => import(`./chunk~72ca3fead7.js`), [], import.meta.url)),
-  (L.thai = () =>
+  (I.thai = () =>
     A(() => import(`./chunk~9fe0450caa.js`), [], import.meta.url)),
-  (L.turkish = () =>
+  (I.turkish = () =>
     A(() => import(`./chunk~e65ab760ae.js`), [], import.meta.url)),
-  (L.ukrainian = () =>
+  (I.ukrainian = () =>
     A(() => import(`./chunk~4787f8286c.js`), [], import.meta.url)),
-  (L.vietnamese = () =>
+  (I.vietnamese = () =>
     A(() => import(`./chunk~31d1f07f01.js`), [], import.meta.url)));
-async function Io(e) {
-  if (L[e]) return await L[e]();
+async function Lo(e) {
+  if (I[e]) return await I[e]();
 }
-var R = ir(Io);
-function Lo(e) {
+var L = ir(Lo);
+function Ro(e) {
   switch (e) {
     case 1:
-      return R.Localize(`#StoreTrailer_Title_Category_Gameplay`);
+      return L.Localize(`#StoreTrailer_Title_Category_Gameplay`);
     case 2:
-      return R.Localize(`#StoreTrailer_Title_Category_Teaser`);
+      return L.Localize(`#StoreTrailer_Title_Category_Teaser`);
     case 3:
-      return R.Localize(`#StoreTrailer_Title_Category_Cinematic`);
+      return L.Localize(`#StoreTrailer_Title_Category_Cinematic`);
     case 4:
-      return R.Localize(`#StoreTrailer_Title_Category_Update`);
+      return L.Localize(`#StoreTrailer_Title_Category_Update`);
     case 5:
-      return R.Localize(`#StoreTrailer_Title_Category_Accolades`);
+      return L.Localize(`#StoreTrailer_Title_Category_Accolades`);
     case 6:
-      return R.Localize(`#StoreTrailer_Title_Category_Interview`);
+      return L.Localize(`#StoreTrailer_Title_Category_Interview`);
   }
-  return R.Localize(`#StoreTrailer_Title_Category_Unknown`);
+  return L.Localize(`#StoreTrailer_Title_Category_Unknown`);
 }
-var Ro = `12px`,
-  zo = `LzRinklSJ-4-`,
-  Bo = `_2uk-hbrhKFI-`,
-  Vo = `Y9S-qDK8XPE-`,
-  Ho = 4,
-  Uo = parseInt(Ro);
-function Wo(e) {
+var zo = `12px`,
+  Bo = `LzRinklSJ-4-`,
+  Vo = `_2uk-hbrhKFI-`,
+  Ho = `Y9S-qDK8XPE-`,
+  Uo = 4,
+  Wo = parseInt(zo);
+function Go(e) {
   let { refButton: t, onClose: n, scroll: r, children: i } = e,
     a = (0, P.useRef)(null),
     [o, s] = (0, P.useState)({ nLeft: 0, nTop: 0 }),
@@ -2256,16 +2256,16 @@ function Wo(e) {
         o = r.right - r.left,
         l = r.left - n.left + o / 2,
         u = e.right - e.left,
-        d = er(l - u / 2, 0 + Ho, i - u - Ho),
+        d = er(l - u / 2, 0 + Uo, i - u - Uo),
         f = e.bottom - e.top,
-        p = r.top - Uo - f - n.top;
+        p = r.top - Wo - f - n.top;
       s({ nLeft: d, nTop: p });
     }, [a, t, c]),
     !c.current || !i)
   )
     return null;
   let u = { left: o.nLeft, top: o.nTop },
-    d = j(zo, !!r && `kaHR0KlvcO4-`),
+    d = j(Bo, !!r && `kaHR0KlvcO4-`),
     f = (0, N.jsx)(`div`, {
       ref: l,
       style: u,
@@ -2275,13 +2275,13 @@ function Wo(e) {
     });
   return sr.createPortal(f, c.current);
 }
-function Go(e) {
-  return (0, N.jsx)(`div`, { className: Vo, role: `separator` });
-}
 function Ko(e) {
+  return (0, N.jsx)(`div`, { className: Ho, role: `separator` });
+}
+function qo(e) {
   let { onClick: t, checked: n, children: r } = e,
     [i, a] = sn(),
-    o = j(Bo, n && `vi2dzrdIGJY-`),
+    o = j(Vo, n && `vi2dzrdIGJY-`),
     s = `#2d73ff`,
     c = `#00ccff`;
   return (
@@ -2300,16 +2300,16 @@ function Ko(e) {
     })
   );
 }
-function qo(e) {
+function Jo(e) {
   let { player: t, refButton: n, onClose: r } = e,
     i = ya(),
     a = t.GetVideoRepresentations().map((e) => {
       let n = () => {
           (t.SetVideoRepresentation(e), r());
         },
-        i = Yo(e);
+        i = Xo(e);
       return (0, N.jsx)(
-        Ko,
+        qo,
         { onClick: n, checked: e.selected, children: i },
         e.id,
       );
@@ -2317,17 +2317,17 @@ function qo(e) {
     o = a.length > 1,
     s = !!i.m_fnSetAutoplayEnabled,
     c = o || !s;
-  return (0, N.jsxs)(Wo, {
+  return (0, N.jsxs)(Go, {
     refButton: n,
     onClose: r,
     children: [
       c && a,
-      s && c && (0, N.jsx)(Go, {}),
-      s && (0, N.jsx)(Jo, { onClose: r }),
+      s && c && (0, N.jsx)(Ko, {}),
+      s && (0, N.jsx)(Yo, { onClose: r }),
     ],
   });
 }
-function Jo(e) {
+function Yo(e) {
   let { onClose: t } = e,
     n = ya(),
     r = n.m_bAutoplayEnabled == 1,
@@ -2335,22 +2335,22 @@ function Jo(e) {
       (n.m_fnSetAutoplayEnabled && n.m_fnSetAutoplayEnabled(!r), t());
     }, [r, n, t]);
   return (
-    P.use(R.Ready()),
-    (0, N.jsx)(Ko, {
+    P.use(L.Ready()),
+    (0, N.jsx)(qo, {
       onClick: i,
       checked: r,
-      children: R.Localize(`#StoreTrailer_AutoPlayVideos`),
+      children: L.Localize(`#StoreTrailer_AutoPlayVideos`),
     })
   );
 }
-function Yo(e) {
+function Xo(e) {
   return vt(e)
-    ? R.Localize(`#TrailerPlayer_Quality_Auto`)
+    ? L.Localize(`#TrailerPlayer_Quality_Auto`)
     : e.height == 2160
       ? `2160p (4k)`
       : `${e.height}p`;
 }
-function Xo(e) {
+function Zo(e) {
   let { player: t, refButton: n, onClose: r } = e,
     i = gn(M.LANGUAGE),
     a = (0, P.useMemo)(() => {
@@ -2362,7 +2362,7 @@ function Xo(e) {
   for (let e of a)
     (o.push(
       (0, N.jsx)(
-        Ko,
+        qo,
         {
           onClick: () => {
             (t.SetCaptionRepresentation(e.m_eLanguage), r());
@@ -2373,14 +2373,14 @@ function Xo(e) {
         e.m_eLanguage,
       ),
     ),
-      e.m_eLanguage == i && o.push((0, N.jsx)(Go, {})));
+      e.m_eLanguage == i && o.push((0, N.jsx)(Ko, {})));
   return o.length == 0
     ? null
-    : (0, N.jsx)(Wo, { refButton: n, onClose: r, scroll: !0, children: o });
+    : (0, N.jsx)(Go, { refButton: n, onClose: r, scroll: !0, children: o });
 }
-var Zo = 4,
-  Qo = 130,
-  $o = P.forwardRef(function (e, t) {
+var Qo = 4,
+  $o = 130,
+  R = P.forwardRef(function (e, t) {
     let {
         tooltip: n,
         onActivate: r,
@@ -2397,7 +2397,7 @@ var Zo = 4,
       bDisabled: s || o,
       children: (0, N.jsx)(`div`, {
         ref: t,
-        className: yo,
+        className: bo,
         ...c,
         "data-keepcontrols": !0,
         children: a,
@@ -2410,10 +2410,10 @@ function es(e) {
     i = $n(n, !1),
     a = $n(r, !1);
   return (0, N.jsxs)(`div`, {
-    className: bo,
+    className: xo,
     children: [
       (0, N.jsx)(`span`, { children: i }),
-      (0, N.jsx)(`span`, { className: xo, children: `/` }),
+      (0, N.jsx)(`span`, { className: So, children: `/` }),
       (0, N.jsx)(`span`, { children: a }),
     ],
   });
@@ -2422,29 +2422,29 @@ function ts(e) {
   let t = ja(),
     n = Ma(t, `theater`);
   if (!t || !t.bSupportsTheater) return null;
-  P.use(R.Ready());
+  P.use(L.Ready());
   let r = t.strMode == `theater`,
     i = r ? (0, N.jsx)(ht, {}) : (0, N.jsx)(_t, {}),
-    a = R.Localize(
+    a = L.Localize(
       r
         ? `#TrailerPlayer_ExitTheater_Tooltip`
         : `#TrailerPlayer_EnterTheater_Tooltip`,
     );
-  return (0, N.jsx)($o, { onActivate: n, tooltip: a, children: i });
+  return (0, N.jsx)(R, { onActivate: n, tooltip: a, children: i });
 }
 function ns(e) {
   let t = ja(),
     n = Ma(t, `fullscreen`);
   if (!t || !t.bSupportsFullscreen) return null;
-  P.use(R.Ready());
+  P.use(L.Ready());
   let r = t.strMode == `fullscreen`,
     i = r ? (0, N.jsx)(Gn, {}) : (0, N.jsx)(dt, {}),
-    a = R.Localize(
+    a = L.Localize(
       r
         ? `#TrailerPlayer_ExitFullScreen_Tooltip`
         : `#TrailerPlayer_FullScreen_Tooltip`,
     );
-  return (0, N.jsx)($o, { onActivate: n, tooltip: a, children: i });
+  return (0, N.jsx)(R, { onActivate: n, tooltip: a, children: i });
 }
 function rs(e) {
   let { player: t } = e,
@@ -2455,19 +2455,19 @@ function rs(e) {
     s = (0, P.useCallback)(() => {
       r((e) => !e);
     }, [r]),
-    c = j(So, n && `cXAaD-hLPZ0-`);
+    c = j(Co, n && `cXAaD-hLPZ0-`);
   return (
-    P.use(R.Ready()),
+    P.use(L.Ready()),
     (0, N.jsxs)(N.Fragment, {
       children: [
-        (0, N.jsx)($o, {
+        (0, N.jsx)(R, {
           ref: a,
           onActivate: s,
-          tooltip: R.Localize(`#TrailerPlayer_Settings_Tooltip`),
+          tooltip: L.Localize(`#TrailerPlayer_Settings_Tooltip`),
           disableTooltip: o,
           children: (0, N.jsx)(Zt, { className: c }),
         }),
-        n && (0, N.jsx)(qo, { player: t, refButton: a, onClose: i }),
+        n && (0, N.jsx)(Jo, { player: t, refButton: a, onClose: i }),
       ],
     })
   );
@@ -2477,22 +2477,22 @@ function is(e) {
     [n, r] = (0, P.useState)(!1),
     i = (0, P.useCallback)(() => r(!1), [r]),
     a = (0, P.useRef)(null),
-    { bHasCaptions: o, bShowingCaption: s } = vo(t),
+    { bHasCaptions: o, bShowingCaption: s } = yo(t),
     c = (0, P.useCallback)(() => {
       s ? t.DisableCaptions() : r((e) => !e);
     }, [r, t, s]);
   return (
-    P.use(R.Ready()),
+    P.use(L.Ready()),
     o
       ? (0, N.jsxs)(N.Fragment, {
           children: [
-            (0, N.jsxs)($o, {
+            (0, N.jsxs)(R, {
               ref: a,
               onActivate: c,
-              tooltip: R.Localize(`#TrailerPlayer_Captions_Tooltip`),
+              tooltip: L.Localize(`#TrailerPlayer_Captions_Tooltip`),
               children: [s && (0, N.jsx)(Nn, {}), !s && (0, N.jsx)(Jn, {})],
             }),
-            n && (0, N.jsx)(Xo, { player: t, refButton: a, onClose: i }),
+            n && (0, N.jsx)(Zo, { player: t, refButton: a, onClose: i }),
           ],
         })
       : null
@@ -2500,7 +2500,7 @@ function is(e) {
 }
 function as(e) {
   let { player: t, showHoverThumb: n, onTouchSeek: r } = e;
-  P.use(R.Ready());
+  P.use(L.Ready());
   let i = (0, P.useRef)(null),
     [a, o, s] = po(t),
     [c, l] = us(t, r),
@@ -2520,14 +2520,14 @@ function as(e) {
         : e.key === `End` &&
           (e.preventDefault(), t.Seek(t.GetTimelineDuration()));
     },
-    v = j(Co, l && `OXlEV5w6w1E-`);
+    v = j(wo, l && `OXlEV5w6w1E-`);
   return (0, N.jsxs)(`div`, {
     ref: u,
     className: v,
     "data-keepcontrols": !!l,
     role: `slider`,
     tabIndex: 0,
-    "aria-label": R.Localize(`#TrailerPlayer_Seek_Label`),
+    "aria-label": L.Localize(`#TrailerPlayer_Seek_Label`),
     "aria-valuemin": 0,
     "aria-valuemax": Math.round(o),
     "aria-valuenow": Math.round(a),
@@ -2541,12 +2541,12 @@ function as(e) {
     children: [
       (0, N.jsxs)(`div`, {
         ref: i,
-        className: wo,
+        className: To,
         onPointerEnter: c.onPointerEnter,
         children: [
-          (0, N.jsx)(`div`, { className: j(To, Eo), style: g }),
-          (0, N.jsx)(`div`, { className: j(To, Do), style: h }),
-          (0, N.jsx)(`div`, { className: j(Oo), style: f }),
+          (0, N.jsx)(`div`, { className: j(Eo, Do), style: g }),
+          (0, N.jsx)(`div`, { className: j(Eo, Oo), style: h }),
+          (0, N.jsx)(`div`, { className: j(ko), style: f }),
         ],
       }),
       (0, N.jsx)(ss, { refTimeline: i, hoverState: l, showHoverThumb: n }),
@@ -2583,7 +2583,7 @@ function ss(e) {
         r = i.current.getBoundingClientRect(),
         a = e.right - e.left,
         s = r.right - r.left,
-        c = er(n.nTickOffset - s / 2, 0 + Zo, a - s - Zo),
+        c = er(n.nTickOffset - s / 2, 0 + Qo, a - s - Qo),
         l = wt(
           i.current.ownerDocument.documentElement,
           i.current,
@@ -2610,7 +2610,7 @@ function ss(e) {
     c,
     l = r ? n.thumbnail : null;
   if (l) {
-    let e = Qo / l.nThumbnailHeight;
+    let e = $o / l.nThumbnailHeight;
     c = {
       width: `${l.nThumbnailWidth * e}px`,
       height: `${l.nThumbnailHeight * e}px`,
@@ -2623,11 +2623,11 @@ function ss(e) {
   return (0, N.jsxs)(`div`, {
     ref: i,
     style: s,
-    className: ko,
+    className: Ao,
     children: [
       !!l && (0, N.jsx)(`div`, { style: c, className: `nCXGrQlbkbg-` }),
       (0, N.jsx)(`span`, {
-        className: Ao,
+        className: jo,
         children: rt(n.nPlaybackSeconds, !0),
       }),
     ],
@@ -2730,15 +2730,15 @@ function us(e, t) {
 function ds(e) {
   let { player: t } = e,
     n = mo(t);
-  P.use(R.Ready());
+  P.use(L.Ready());
   let r = ``;
   return (
     n == mt.UnsupportedMediaType
-      ? (r = R.Localize(`#TrailerPlayer_Error_UnsupportedCodec`))
-      : n != mt.Invalid && (r = R.Localize(`#TrailerPlayer_Error_Playback`)),
+      ? (r = L.Localize(`#TrailerPlayer_Error_UnsupportedCodec`))
+      : n != mt.Invalid && (r = L.Localize(`#TrailerPlayer_Error_Playback`)),
     r
       ? (0, N.jsx)(`div`, {
-          className: jo,
+          className: Mo,
           children: (0, N.jsx)(`span`, { children: r }),
         })
       : null
@@ -2747,13 +2747,13 @@ function ds(e) {
 function fs(e) {
   let { player: t } = e,
     [n, r, i, a] = fo(t);
-  P.use(R.Ready());
+  P.use(L.Ready());
   let o = Ft(),
     s = n ? (0, N.jsx)(Et, {}) : (0, N.jsx)(Nt, {}),
-    c = R.Localize(
+    c = L.Localize(
       n ? `#TrailerPlayer_Unmute_Tooltip` : `#TrailerPlayer_Mute_Tooltip`,
     );
-  return (0, N.jsx)($o, {
+  return (0, N.jsx)(R, {
     onActivate: a,
     tooltip: c,
     disableTooltip: o,
@@ -2762,29 +2762,29 @@ function fs(e) {
 }
 function ps(e) {
   let { player: t } = e,
-    n = I(t);
-  P.use(R.Ready());
+    n = ho(t);
+  P.use(L.Ready());
   let r = n ? (0, N.jsx)(ft, {}) : (0, N.jsx)(pt, {}),
-    i = R.Localize(
+    i = L.Localize(
       n ? `#TrailerPlayer_Play_Tooltip` : `#TrailerPlayer_Pause_Tooltip`,
     ),
-    a = ho(t);
-  return (0, N.jsx)($o, { onActivate: a, tooltip: i, children: r });
+    a = go(t);
+  return (0, N.jsx)(R, { onActivate: a, tooltip: i, children: r });
 }
 function ms(e) {
   let { category: t, title: n } = e,
-    r = Lo(t);
+    r = Ro(t);
   return (0, N.jsxs)(`div`, {
-    className: Mo,
+    className: No,
     children: [
-      (0, N.jsx)(`span`, { className: No, children: r }),
-      (0, N.jsx)(`span`, { className: Po }),
-      (0, N.jsx)(`span`, { className: Fo, children: n }),
+      (0, N.jsx)(`span`, { className: Po, children: r }),
+      (0, N.jsx)(`span`, { className: Fo }),
+      (0, N.jsx)(`span`, { className: Io, children: n }),
     ],
   });
 }
 function hs(e, t, n) {
-  let r = _o(t),
+  let r = vo(t),
     [i, a] = (0, P.useState)(``),
     o = (0, P.useRef)(0);
   ((0, P.useEffect)(() => {
@@ -2987,7 +2987,7 @@ function Ts(e) {
         : i < 0.6
           ? (0, N.jsx)(Rn, {})
           : (0, N.jsx)(Nt, {});
-  let u = R.Localize(
+  let u = L.Localize(
     r ? `#TrailerPlayer_Unmute_Tooltip` : `#TrailerPlayer_Mute_Tooltip`,
   );
   return (0, N.jsxs)(`div`, {
@@ -2995,7 +2995,7 @@ function Ts(e) {
     onMouseEnter: c,
     "data-keepcontrols": !0,
     children: [
-      (0, N.jsx)($o, { onActivate: o, tooltip: u, children: l }),
+      (0, N.jsx)(R, { onActivate: o, tooltip: u, children: l }),
       s &&
         (0, N.jsx)(`div`, {
           className: `KiYQJsCfGxI-`,
@@ -3110,7 +3110,7 @@ function Hs(e, t) {
   let [n, r] = co(),
     i = (0, P.useRef)(null),
     a = (0, P.useRef)(!0),
-    o = I(t);
+    o = ho(t);
   return (
     (0, P.useEffect)(() => {
       let e = a.current;
@@ -3215,8 +3215,8 @@ function Ks(e) {
 }
 function qs(e) {
   let { player: t } = e,
-    n = I(t),
-    r = so(ho(t)),
+    n = ho(t),
+    r = so(go(t)),
     i = n ? (0, N.jsx)(ft, {}) : (0, N.jsx)(pt, {});
   return (0, N.jsx)(`div`, { className: Ns, ...r, children: i });
 }
@@ -3234,9 +3234,9 @@ var Js = `_3uW6UUMmrCg-`,
 function ac(e) {
   let { player: t, category: n, title: r } = e,
     [i, a] = oc(t, !1),
-    o = I(t),
+    o = ho(t),
     s = sc(t, a),
-    c = ho(t),
+    c = go(t),
     [l, u, d, f] = fo(t),
     p = (0, P.useCallback)(() => {
       (f(), a());
@@ -3259,10 +3259,10 @@ function ac(e) {
       className: Js,
       focusable: !0,
       onClick: m,
-      onOKActionDescription: R.Localize(b),
+      onOKActionDescription: L.Localize(b),
       onOKButton: c,
       onSecondaryButton: p,
-      onSecondaryActionDescription: R.Localize(y),
+      onSecondaryActionDescription: L.Localize(y),
       onButtonDown: s,
       children: [
         (0, N.jsxs)(`div`, {
@@ -3307,7 +3307,7 @@ function ac(e) {
 function oc(e, t) {
   let [n, r] = co(),
     i = (0, P.useRef)(!0),
-    a = I(e);
+    a = ho(e);
   return (
     (0, P.useEffect)(() => {
       let e = i.current;
@@ -3403,7 +3403,7 @@ function pc(e) {
   (P.useEffect(() => {
     oe || (c && c());
   }, [oe, c]),
-    P.use(R.Ready()));
+    P.use(L.Ready()));
   let se = j(pa, dc);
   return (0, N.jsxs)(`div`, {
     ref: ne,
@@ -3467,7 +3467,7 @@ function hc(e) {
       (c && c.nWidth == o && c.nHeight == s) ||
         ((r.current = { nWidth: o, nHeight: s }), i());
     }, [t, n, r, i]);
-  go(
+  _o(
     e,
     (0, P.useCallback)(
       (e) => {
@@ -3542,7 +3542,7 @@ function vc(e) {
     !a)
   )
     return null;
-  P.use(R.Ready());
+  P.use(L.Ready());
   let l = {};
   return (
     r && (l.backgroundImage = `url('${r}')`),
@@ -3551,7 +3551,7 @@ function vc(e) {
       className: ha,
       role: `button`,
       tabIndex: 0,
-      "aria-label": R.Localize(`#TrailerPlayer_Play_Tooltip`),
+      "aria-label": L.Localize(`#TrailerPlayer_Play_Tooltip`),
       onClick: c,
       onKeyDown: (e) => {
         (e.key === `Enter` || e.key === ` `) && (e.preventDefault(), c());
@@ -3602,7 +3602,7 @@ function Lc(e) {
     n == null || r == 0)
   )
     return;
-  let s = r == 1 ? nr.Localize(`#StoreTrailer_Title_TrailerPreview`) : Lo(n);
+  let s = r == 1 ? nr.Localize(`#StoreTrailer_Title_TrailerPreview`) : Ro(n);
   return (0, N.jsx)(`div`, {
     className: j({ [Pc]: !0, [Ic]: a }),
     children: nr.LocalizeReact(
@@ -3667,7 +3667,7 @@ function zc(e) {
       bNoScreenShotModals: s,
     } = e,
     [c, l] = P.useState(void 0),
-    [u, d] = ye(),
+    [u, d] = xe(),
     f = tt(n),
     p = (0, P.useRef)(null),
     [m, h] = (0, P.useState)(0);
@@ -4013,7 +4013,7 @@ function Kc(e) {
 }
 function qc(e) {
   let { appid: t, trailerBaseID: n } = e,
-    r = g(t),
+    r = ve(t),
     { data: i } = D(r),
     [a, o] = (0, P.useState)(() =>
       !t || !n ? O(`#TrailerPlayer_ID_NotProvided`) : null,
@@ -4041,7 +4041,7 @@ function qc(e) {
     ]),
     a
       ? e.bIsPreviewMode
-        ? (0, N.jsx)(`div`, { className: y, children: a })
+        ? (0, N.jsx)(`div`, { className: le, children: a })
         : null
       : c
         ? (0, N.jsx)(Jc, { trailerToPlay: c })
@@ -7868,7 +7868,7 @@ function Gd(e) {
   }, [s]);
   let b = P.Children.map(r, (e, t) =>
       i
-        ? (0, N.jsx)(pe, {
+        ? (0, N.jsx)(oe, {
             rootMargin: `0px 50% 0px 50%`,
             horizontal: !0,
             placeholderWidth: a ?? 1,
@@ -7912,7 +7912,7 @@ function Gd(e) {
         })
       : x;
   return i
-    ? (0, N.jsx)(pe, {
+    ? (0, N.jsx)(oe, {
         rootMargin: `50% 0px 50% 0px`,
         horizontal: !1,
         placeholderWidth: 1,
@@ -8099,7 +8099,7 @@ function Zd(e) {
       P.Children.map(e.children, (n, r) => {
         let i =
           e.bLazyRenderChildren && !t
-            ? (0, N.jsx)(pe, {
+            ? (0, N.jsx)(oe, {
                 rootMargin: `0px 100% 0px 100%`,
                 horizontal: !0,
                 placeholderWidth: e.lazyRenderPlaceholderWidth ?? 1,
@@ -8359,7 +8359,7 @@ function nf(e) {
     bLazyRenderChildren: !0,
     screenIsWide: n,
     bAutoAdvance: r,
-    className: v,
+    className: h,
     children: e.children,
   });
 }
@@ -8392,17 +8392,17 @@ function cf() {
       [`dynamiclink`, { Constructor: fa, autocloses: !1 }],
       [
         `h1`,
-        { Constructor: et(Oe, le), autocloses: !1, skipFollowingNewline: !0 },
+        { Constructor: et(Oe, ne), autocloses: !1, skipFollowingNewline: !0 },
       ],
       [
         `h2`,
-        { Constructor: et($e, ce), autocloses: !1, skipFollowingNewline: !0 },
+        { Constructor: et($e, ee), autocloses: !1, skipFollowingNewline: !0 },
       ],
       [
         `h3`,
-        { Constructor: et(Re, re), autocloses: !1, skipFollowingNewline: !0 },
+        { Constructor: et(Re, he), autocloses: !1, skipFollowingNewline: !0 },
       ],
-      [`quote`, { Constructor: et(qe, de), autocloses: !1 }],
+      [`quote`, { Constructor: et(qe, re), autocloses: !1 }],
       [`list`, { Constructor: ke, autocloses: !1, skipInternalNewline: !0 }],
       [`olist`, { Constructor: Je, autocloses: !1, skipInternalNewline: !0 }],
       [`*`, { Constructor: Ie, autocloses: !0, skipInternalNewline: !0 }],
@@ -8433,7 +8433,7 @@ function lf(e) {
     r = w(e.args, `src`) || e.children?.toString();
   ((r ||= w(e.args)), (r = lt(r ?? ``) || void 0));
   let i = w(e.args, `style`) === `inline`,
-    a = me(r, e.language, n?.rtime32_last_modified);
+    a = fe(r, e.language, n?.rtime32_last_modified);
   if (a == null) return null;
   if (typeof a == `string`) {
     r = a;
@@ -8442,7 +8442,7 @@ function lf(e) {
       (e = !zn(r)),
       n?.BHasTag(`auto_rssfeed`) && (e = !1),
       t
-        ? (0, N.jsx)(S, {
+        ? (0, N.jsx)(_, {
             className: j({ [ct]: i }),
             src: r,
             crossOrigin: e ? `anonymous` : void 0,
@@ -8450,7 +8450,7 @@ function lf(e) {
         : ((r = Pt(r)),
           (0, N.jsx)(af, {
             strURL: r,
-            children: (0, N.jsx)(ee, {
+            children: (0, N.jsx)(b, {
               className: j({ [ct]: i }),
               src: r,
               crossOrigin: e ? `anonymous` : void 0,
@@ -8502,14 +8502,14 @@ function ff(e) {
     r = w(e.args, `company`),
     i = w(e.args, `photo`);
   return e.context.bShowShortSpeakerInfo
-    ? (0, N.jsx)(ue, {
+    ? (0, N.jsx)(ae, {
         name: t,
         title: n,
         company: r,
         photo: i,
         bio: e.children,
       })
-    : (0, N.jsx)(ge, {
+    : (0, N.jsx)(de, {
         name: t,
         title: n,
         company: r,
@@ -8804,7 +8804,7 @@ export {
   bf as u,
   wc as v,
   ca as w,
-  R as x,
+  L as x,
   Sc as y,
   jr as z,
 };

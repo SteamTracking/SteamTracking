@@ -15,12 +15,12 @@ import {
   jt as d,
 } from "./chunk~01cfc309bf.js";
 import {
-  T as f,
-  Wi as p,
+  Gi as f,
+  T as p,
   bs as m,
   g as h,
   p as g,
-  ys as _,
+  xs as _,
 } from "./chunk~3f4314f3b4.js";
 import { a as v, n as y, o as ee, r as b, t as x } from "./chunk~10c934b72c.js";
 import { t as te } from "./chunk~eefd71512b.js";
@@ -215,9 +215,9 @@ var Ie =
           delete r.enter,
           delete r.exit,
           t === null
-            ? A.createElement(m.Provider, { value: i }, a)
+            ? A.createElement(_.Provider, { value: i }, a)
             : A.createElement(
-                m.Provider,
+                _.Provider,
                 { value: i },
                 A.createElement(t, r, a),
               )
@@ -303,7 +303,7 @@ var Re = 500,
         ...o,
         className: ge(`crossfade`, r),
         children: (0, P.jsx)(
-          _,
+          m,
           {
             nodeRef: a,
             classNames: `crossfade-anim`,
@@ -2046,7 +2046,7 @@ var Z = class extends A.Component {
         }),
         i && (0, P.jsx)(Ve, { gidEvent: v.gidEvent }),
         r &&
-          (0, P.jsx)(p, {
+          (0, P.jsx)(f, {
             id:
               v.bValid && v.stream && v.stream[e.m_steamIDBroadcast]
                 ? v.appID
@@ -2189,7 +2189,7 @@ var $ = class extends A.Component {
             this.props.editMode &&
               this.state.sizableRegion.map((e, t) =>
                 (0, P.jsx)(
-                  f,
+                  p,
                   {
                     index: t,
                     deleteFn: this.DeleteRegion,

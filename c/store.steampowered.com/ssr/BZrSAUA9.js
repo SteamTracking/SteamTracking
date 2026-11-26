@@ -7774,6 +7774,9 @@ function _(_, _, _) {
 }
 var _ = 4;
 function _(_) {
+  return _.smart_section_personalized_carousel_min_items ?? _;
+}
+function _(_) {
   return _.GetSaleSections().filter(
     (_) => _(_.section_type) && _(_) === `personalized_carousel`,
   );
@@ -7803,7 +7806,7 @@ function _(_, _, _, _, _, _, _) {
     _ = {
       rgSections: _.map((_) => ({
         eSort: _.smart_section_personalized_carousel_sort ?? 13,
-        nMinItems: _.smart_section_personalized_carousel_min_items ?? _,
+        nMinItems: _(_),
         bRandomize: !!_.smart_section_personalized_carousel_randomize,
         bIncludePackages: _.smart_section_include_packages,
         bIncludeBundles: _.smart_section_include_bundles,

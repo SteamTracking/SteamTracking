@@ -4,14 +4,14 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { It as t, dt as n, ot as r } from "./chunk~01cfc309bf.js";
 import {
-  $n as i,
-  Ca as a,
-  Ia as o,
-  Pa as s,
+  Bn as i,
+  Ea as a,
+  Fa as o,
+  La as s,
   Ta as c,
-  dr as l,
-  wa as u,
-  zn as d,
+  er as l,
+  fr as u,
+  wa as d,
 } from "./chunk~6b8ddcaac8.js";
 import { k as f } from "./chunk~4eed35ad1f.js";
 import { t as p } from "./chunk~684e72ad45.js";
@@ -450,7 +450,7 @@ function Bt(e) {
     r = _t(n);
   return (0, Z.jsx)(`div`, {
     className: Ae,
-    children: (0, Z.jsx)(l, {
+    children: (0, Z.jsx)(u, {
       id: r,
       bHidePrice: !0,
       hoverProps: {
@@ -566,9 +566,9 @@ function Gt(e) {
       nItemHeight: n,
       nItemWidth: r,
       selected: i,
-      fnFocused: o,
+      fnFocused: s,
       eStoreDiscoveryQueueType: l,
-      storePageFilter: d,
+      storePageFilter: u,
       bPreferDemoStorePage: f,
       elVideo: p,
       elDetails: m,
@@ -577,7 +577,7 @@ function Gt(e) {
     [g] = C(t, I),
     _ = W(),
     y = R()?.ownerWindow || window,
-    b = Kt(g, l, d, f),
+    b = Kt(g, l, u, f),
     { bIsIgnored: x, fnUpdateIgnored: S } = ke(t),
     { bIsWishlisted: w, fnUpdateWishlist: T } = D(t),
     E = X.useRef(null);
@@ -614,7 +614,7 @@ function Gt(e) {
       x ? `#DiscoveryQueue_Undo` : `#DiscoveryQueue_IgnoreLink`,
     ),
     onSecondaryButton: S,
-    fnScrollIntoViewHandler: () => (o(), !0),
+    fnScrollIntoViewHandler: () => (s(), !0),
     children: [
       (0, Z.jsx)(`div`, {
         className: V(k, x && `_3ZYr-Efwvg8-`),
@@ -634,7 +634,7 @@ function Gt(e) {
               onClick: S,
               children: [
                 _ &&
-                  (0, Z.jsx)(a, { button: s.X, type: c.Light, size: u.Medium }),
+                  (0, Z.jsx)(d, { button: o.X, type: a.Light, size: c.Medium }),
                 K(`#DiscoveryQueue_Undo`),
               ],
             }),
@@ -661,7 +661,7 @@ function qt(e) {
       appID: t,
       bShowMinimizedDisplay: n,
       eStoreDiscoveryQueueType: r,
-      storePageFilter: l,
+      storePageFilter: u,
       bPreferDemoStorePage: p,
       appAriaIDs: m,
     } = e,
@@ -669,7 +669,7 @@ function qt(e) {
     g = f(t),
     { bIsIgnored: _, fnUpdateIgnored: v } = ke(t),
     { bIsWishlisted: y, fnUpdateWishlist: b } = D(t),
-    x = Kt(h, r, l, p),
+    x = Kt(h, r, u, p),
     S = W(),
     w = S;
   if (!h) return;
@@ -699,14 +699,14 @@ function qt(e) {
                 href: x,
                 children: h.GetName(),
               }),
-              (0, Z.jsx)(i, { bSingleLineMode: !0, id: g }),
+              (0, Z.jsx)(l, { bSingleLineMode: !0, id: g }),
             ],
           }),
           (0, Z.jsx)(Jt, { rgTagIDs: h.GetTagIDs(), ariaLabelID: m.tagsId }),
           (0, Z.jsx)(`div`, {
             className: Ce,
             id: m.reviewId,
-            children: (0, Z.jsx)(o, {
+            children: (0, Z.jsx)(s, {
               bShowTooltip: !0,
               bTruncateTotalReviews: n,
               id: g,
@@ -734,7 +734,7 @@ function qt(e) {
               className: `kjR6Qum8rRo-`,
               children: [
                 h.BHasDemo() &&
-                  (0, Z.jsx)(d, {
+                  (0, Z.jsx)(i, {
                     id: g,
                     className: V(
                       `BxLuFJsRaUQ-`,
@@ -747,10 +747,10 @@ function qt(e) {
                   href: x,
                   children: [
                     w &&
-                      (0, Z.jsx)(a, {
-                        button: s.Y,
-                        type: c.Light,
-                        size: u.Medium,
+                      (0, Z.jsx)(d, {
+                        button: o.Y,
+                        type: a.Light,
+                        size: c.Medium,
                         additionalClassName: `a-wHbIOxF8U-`,
                       }),
                     ` `,
@@ -770,10 +770,10 @@ function qt(e) {
                     onClick: b,
                     children: [
                       w &&
-                        (0, Z.jsx)(a, {
-                          button: s.Y,
-                          type: c.Light,
-                          size: u.Medium,
+                        (0, Z.jsx)(d, {
+                          button: o.Y,
+                          type: a.Light,
+                          size: c.Medium,
                           additionalClassName: `a-wHbIOxF8U-`,
                         }),
                       y ? (0, Z.jsx)(Qe, {}) : (0, Z.jsx)(pt, {}),

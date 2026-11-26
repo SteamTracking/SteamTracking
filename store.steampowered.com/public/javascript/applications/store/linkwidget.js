@@ -4,27 +4,27 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { It as t, dt as n, l as r } from "./chunk~01cfc309bf.js";
 import {
-  En as i,
-  Fo as a,
-  Jt as o,
+  $t as i,
+  Dn as a,
+  Io as o,
   N as s,
-  Nn as c,
-  On as l,
-  Qt as u,
-  Yo as d,
-  _n as f,
-  an as p,
-  ar as m,
-  cn as h,
-  dn as ee,
-  i as g,
-  in as _,
-  lo as v,
-  lr as y,
-  on as b,
-  pn as x,
-  r as S,
-  sn as C,
+  Pn as c,
+  Xo as l,
+  Yt as u,
+  an as d,
+  cn as f,
+  fn as p,
+  i as m,
+  kn as h,
+  ln as ee,
+  mn as g,
+  on as _,
+  or as v,
+  r as y,
+  sn as b,
+  uo as x,
+  ur as S,
+  vn as C,
   x as w,
 } from "./chunk~6b8ddcaac8.js";
 import {
@@ -172,10 +172,10 @@ function Ke(e, t, n, r, i) {
 }
 function qe(e) {
   let { id: t, type: n } = e,
-    r = y({ id: t, type: n }),
+    r = S({ id: t, type: n }),
     { data: i } = ke(r);
   return (0, B.jsx)(`div`, {
-    className: d,
+    className: l,
     children: (0, B.jsx)(N, {
       ...e,
       bShowReviewSummary: !0,
@@ -199,13 +199,13 @@ function Qe(e) {
       eHardwareCompatibilityDisplay: s,
       bAutoFocus: c,
     } = e,
-    l = y({ id: t, type: n }),
+    l = S({ id: t, type: n }),
     { data: u } = ke(l),
     { data: d } = Fe(l),
     [f, p] = ie(o, s),
-    h = u?.item_type == 0;
+    m = u?.item_type == 0;
   return (0, B.jsx)(oe, {
-    appid: h ? u.id : void 0,
+    appid: m ? u.id : void 0,
     children: (0, B.jsxs)(De, {
       "flow-children": `grid`,
       navEntryPreferPosition: Te.PREFERRED_CHILD,
@@ -228,7 +228,7 @@ function Qe(e) {
                   (0, B.jsxs)(`div`, {
                     className: void 0,
                     children: [
-                      (0, B.jsx)(m, { id: l }),
+                      (0, B.jsx)(v, { id: l }),
                       !!(f && u?.item_type == 0 && d) &&
                         (0, B.jsx)(Le, {
                           eDisplay: p,
@@ -341,7 +341,7 @@ function at(e, t) {
       link: e,
       language: r,
       clanAccountID: n.clanSteamID.GetAccountID(),
-      strClassName: f,
+      strClassName: C,
     },
     a.unique_id + `_` + i,
   );
@@ -364,7 +364,7 @@ function ct(e, t) {
     c = a.BUseSubscriptionLayout(),
     l = T(i) && !t.bIsSingleCapsule,
     u = We(i, t.activeTab),
-    d = i.unique_id + `_` + r + `_` + e.type + `_` + e.id;
+    f = i.unique_id + `_` + r + `_` + e.type + `_` + e.id;
   if (n !== `fullrow`) {
     let a = I(l && `FolDBzXMW2I-`, l && n === `tall` && `E6LHQcm-39c-`);
     return (0, B.jsx)(
@@ -375,7 +375,7 @@ function ct(e, t) {
           st,
           {
             imageType: n === `tall` ? `library` : `header`,
-            navKey: d,
+            navKey: f,
             capsule: e,
             bShowParentApp: s,
             bUseSubscriptionLayout: c,
@@ -388,10 +388,10 @@ function ct(e, t) {
             bPreferAssetWithoutOverride: !!i.prefer_assets_without_overrides,
             eHardwareCompatibilityDisplay: u,
           },
-          d,
+          f,
         ),
       },
-      d,
+      f,
     );
   }
   {
@@ -405,9 +405,9 @@ function ct(e, t) {
       )),
       M() && (n == `library` || n == `animated`) && (n = `bordered`));
     let o = I({
-      [_]: !l && n == `bordered`,
+      [d]: !l && n == `bordered`,
       [b]: l && n == `bordered`,
-      [p]: l && n == `animated`,
+      [_]: l && n == `animated`,
       [be + r]: r === 0,
     });
     return (0, B.jsx)(
@@ -429,7 +429,7 @@ function ct(e, t) {
           bPreferAssetWithoutOverride: !!i.prefer_assets_without_overrides,
         }),
       },
-      d,
+      f,
     );
   }
 }
@@ -487,7 +487,7 @@ function dt(e, t, n, r, i, a, o, s, c, l) {
     nShowAdditionalRows: f,
     bShowAsCarousel: p,
     bAutoAdvance: m,
-    bHideIfTooFewItems: ee,
+    bHideIfTooFewItems: h,
     strCarouselKey: g,
     bPaginationPills: _,
     bDropShortLastCarouselPage: v,
@@ -586,7 +586,7 @@ function dt(e, t, n, r, i, a, o, s, c, l) {
           r = Math.min(C[t % C.length], e),
           i = Math.min(r, n.length - l);
         if (i < r && t === 0) {
-          if (ee) return { content: null, bAdditionalContent: !1 };
+          if (h) return { content: null, bAdditionalContent: !1 };
           r = Math.max(a === `tall` ? 3 : 2, i);
         }
         (s.push(
@@ -603,7 +603,10 @@ function dt(e, t, n, r, i, a, o, s, c, l) {
       (i.push(
         (0, B.jsx)(
           `div`,
-          { className: h, children: (0, B.jsx)(Pe, { depth: o, children: s }) },
+          {
+            className: ee,
+            children: (0, B.jsx)(Pe, { depth: o, children: s }),
+          },
           `Page_${t}`,
         ),
       ),
@@ -700,7 +703,7 @@ var ht = (e) => {
   return (0, B.jsxs)(`div`, {
     className: I(
       me,
-      l,
+      h,
       `SaleSectionContainer`,
       `center_row_trgt`,
       `ItemCount_` + t,
@@ -731,60 +734,60 @@ function _t(e) {
       event: t,
       section: n,
       language: r,
-      bInGamepadUI: a,
+      bInGamepadUI: o,
       placeholderHeight: s,
       nHiddenCapsules: l,
       personalizedCarousels: d,
-      children: f,
+      children: m,
     } = e,
-    [p, m] = z.useState(void 0),
-    h = $(t, n),
-    g = a && !!h && !p,
-    { bShowSeeMoreHint: _, panelProps: v } = se(g ? h : p, `X`);
+    [h, ee] = z.useState(void 0),
+    g = $(t, n),
+    _ = o && !!g && !h,
+    { bShowSeeMoreHint: v, panelProps: b } = se(_ ? g : h, `X`);
   return (0, B.jsxs)(ve, {
     placeholderHeight: s,
     className: I({
-      [i]: !0,
-      [C]: T(n),
-      [ee]: n.disable_background,
+      [a]: !0,
+      [f]: T(n),
+      [p]: n.disable_background,
       [_e]: !0,
       SaleSectionForCustomCSS: !0,
       [n.sale_section_classname || ``]: !!n.sale_section_classname,
       [void 0]: n.background_repeat == `coverBlur`,
     }),
     rootMargin: ce,
-    holdGamepadFocus: a,
-    ...v,
+    holdGamepadFocus: o,
+    ...b,
     children: [
       (0, B.jsx)(`div`, {
         className: I(ge, n.background_repeat == `coverBlur` ? he : ``),
-        style: o(n, t, a),
+        style: u(n, t, o),
       }),
       (0, B.jsxs)(`div`, {
         className: c,
         children: [
-          (0, B.jsx)(u, {
+          (0, B.jsx)(i, {
             section: n,
             event: t,
             language: r,
             nHiddenCapsules: l,
             personalizedCarousels: d,
-            bShowSeeMoreHint: _,
+            bShowSeeMoreHint: v,
             bUseGamepadLinkHint: !0,
             eGamepadLinkHintButton: `X`,
-            onLinkResolved: (e) => m(e ?? void 0),
+            onLinkResolved: (e) => ee(e ?? void 0),
           }),
-          g
+          _
             ? (0, B.jsx)(ae, {
                 label: L(`#EventBrowse_AllEventsBtn`),
-                shown: _,
+                shown: v,
                 button: `X`,
               })
             : (0, B.jsx)(vt, { event: t, section: n }),
         ],
       }),
-      f,
-      (0, B.jsx)(S, { section: n }),
+      m,
+      (0, B.jsx)(y, { section: n }),
     ],
   });
 }
@@ -792,7 +795,7 @@ function vt(e) {
   let t = $(e.event, e.section);
   return t
     ? (0, B.jsx)(`div`, {
-        className: x,
+        className: g,
         children: (0, B.jsx)(we, {
           onClick: (e) => Ee(e, t),
           children: L(`#EventBrowse_AllEventsBtn`),
@@ -1025,7 +1028,7 @@ function It(e) {
   return { queryKey: Ft(e), queryFn: () => Mt(e), staleTime: 3e5 };
 }
 function Lt(e) {
-  let { event: t, section: n, rgSlides: r, onSlide: a, onNavIntent: o } = e,
+  let { event: t, section: n, rgSlides: r, onSlide: i, onNavIntent: o } = e,
     s = Me(),
     { bScreenIsWide: c } = le(n.section_type);
   return r.length === 0
@@ -1036,18 +1039,18 @@ function Lt(e) {
         ? (0, B.jsx)(`div`, {
             className: Se,
             children: r.map((e, t) =>
-              (0, B.jsx)(Rt, { nSlide: t, onSlide: a, children: e }, t),
+              (0, B.jsx)(Rt, { nSlide: t, onSlide: i, children: e }, t),
             ),
           })
         : (0, B.jsx)(`div`, {
-            className: I(i, xe),
+            className: I(a, xe),
             children: (0, B.jsx)(F, {
               ...A(t.jsondata),
               visibleElements: 1,
               screenIsWide: !0,
               useTestScrollbar: !0,
               navKey: n.unique_id,
-              onSlide: a,
+              onSlide: i,
               onNavIntent: o,
               children: r,
             }),
@@ -1061,19 +1064,19 @@ function Rt(e) {
 function zt(e) {
   let { language: t, link: n } = e,
     i = Ae(),
-    [o, s, c] = r(() => [
+    [a, s, c] = r(() => [
       Ce.GetWithFallback(n.localized_link_capsule, t),
       i ? n.sc_url : n.url,
       n.materialized_link_capsule,
     ]),
-    l = o ? re.GenerateURLFromHashAndExt(e.clanAccountID, o) : void 0;
-  return (0, B.jsx)(g, {
+    l = a ? re.GenerateURLFromHashAndExt(e.clanAccountID, a) : void 0;
+  return (0, B.jsx)(m, {
     url: s,
     className: e.strClassName,
     bSkipForcingStoreLink: !1,
     bOpenInline: !!n.open_in_place,
     children: (0, B.jsxs)(`div`, {
-      className: I(v, e.link.url ? a : ``),
+      className: I(x, e.link.url ? o : ``),
       children: [
         !!l && (0, B.jsx)(ue, { className: `_-4JZsb8K2FY-`, src: l }),
         !!c &&

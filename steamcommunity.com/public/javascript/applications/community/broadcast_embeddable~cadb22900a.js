@@ -4,9 +4,9 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { A as t, I as n, L as r, k as i, z as a } from "./chunk~01cfc309bf.js";
 import {
-  aa as o,
-  ca as s,
-  l as c,
+  ca as o,
+  l as s,
+  la as c,
   oa as l,
   sa as u,
 } from "./chunk~3f4314f3b4.js";
@@ -79,9 +79,9 @@ var x = class e {
     let t = f.GetTimeNowWithOverride(),
       n = e.GetCalendarItemsInTimeRange(t - 3600, t);
     for (let e of n.rgCalendarItems)
-      c.QueueLoadPartnerEvent(e.clanid, e.unique_id);
+      s.QueueLoadPartnerEvent(e.clanid, e.unique_id);
     let r = n.rgCalendarItems.map((e) =>
-        c.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+        s.LoadPartnerEventFromClanEventGIDAndClanSteamID(
           _.InitFromClanID(e.clanid, b.EUNIVERSE),
           e.unique_id,
           0,
@@ -315,11 +315,11 @@ var D = class e {
           include_trailers: !0,
         }));
     let n = g.Get().GetApp(e.nAppIDVOD),
-      r = new u();
+      r = new o();
     ((r.accountid = 0),
       (r.nAppIDVOD = e.nAppIDVOD),
-      (r.default_selection_priority = l.k_ePrimary),
-      (r.current_selection_priority = l.k_ePrimary),
+      (r.default_selection_priority = u.k_ePrimary),
+      (r.current_selection_priority = u.k_ePrimary),
       (r.thumbnail_http_address = n?.GetAssets()?.GetHeaderURL() || ``),
       (r.title = n?.GetName() || ``));
     let i = this.GetStreams(e);
@@ -373,7 +373,7 @@ var D = class e {
   }
   async InternalHintLoadEmbeddableStreams(e, t) {
     let n = y(`broadcast_available_for_page`, `application_config`);
-    if (s(n)) return this.HandleHintLoadBroadcastResponse(e, n);
+    if (c(n)) return this.HandleHintLoadBroadcastResponse(e, n);
     try {
       let n = await C.default.get(
         b.STORE_BASE_URL + `broadcast/ajaxgetstreamersforpage`,
@@ -438,7 +438,7 @@ var D = class e {
     let n = Array.from(e.jsondata.broadcast_whitelist ?? []),
       r = Array.from(e.jsondata.broadcast_priority ?? []),
       i = new Map();
-    for (let e = 0; e < n.length && !(e >= r.length); e++) i.set(n[e], o(r[e]));
+    for (let e = 0; e < n.length && !(e >= r.length); e++) i.set(n[e], l(r[e]));
     t.forEach((e) => {
       let t = Number(e.accountid);
       i.has(t) && (e.current_selection_priority = i.get(t));
@@ -452,8 +452,8 @@ var D = class e {
         let e = {
           accountid: 0,
           thumbnail_http_address: ``,
-          default_selection_priority: l.k_eGeneral,
-          current_selection_priority: l.k_eGeneral,
+          default_selection_priority: u.k_eGeneral,
+          current_selection_priority: u.k_eGeneral,
         };
         this.m_playReadyStream.set(n, e);
       }
@@ -579,7 +579,7 @@ var D = class e {
   m([t], D.prototype, `HintLoadEmbeddablePreviewStreams`, null),
   m([t], D.prototype, `AttemptToPlayStream`, null));
 function O(e) {
-  return e.current_selection_priority || l.k_eGeneral;
+  return e.current_selection_priority || u.k_eGeneral;
 }
 function k(e) {
   e.sort((e, t) =>

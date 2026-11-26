@@ -131,13 +131,13 @@ import {
   ut as h,
 } from "./chunk~01cfc309bf.js";
 import {
-  Ln as g,
-  Rt as _,
-  Wt as v,
+  Bt as g,
+  Gt as _,
+  Rn as v,
   ct as y,
-  dr as b,
-  ot as x,
-  rn as S,
+  fr as b,
+  in as x,
+  lt as S,
   st as C,
   zt as w,
 } from "./chunk~6b8ddcaac8.js";
@@ -533,7 +533,7 @@ var Ar = c((e) => {
     let { startDateAndTime: t, endDateAndTime: n = 0 } = e,
       r = e.stylesmodule ? { ...Y, ...e.stylesmodule } : Y,
       i = Cn(),
-      a = g(),
+      a = v(),
       o = e.bHideEndTime || e.endDateAndTime == null || e.endDateAndTime < 1;
     if (t == null || t == 0)
       return (0, J.jsxs)(`div`, {
@@ -623,7 +623,7 @@ var Ar = c((e) => {
     let { startDateAndTime: t, endDateAndTime: n, bHideEndTime: r } = e,
       i = e.stylesmodule ? { ...Y, ...e.stylesmodule } : Y,
       a = Cn(),
-      o = g();
+      o = v();
     if (t == null || t == 0)
       return (0, J.jsxs)(`div`, {
         className: i.DateAndTime,
@@ -1770,9 +1770,9 @@ async function ha(e, t, n) {
 }
 function ga(e) {
   let { eventModel: t, bOnlyShowIcon: n, onTrack: r } = e,
-    i = g(),
+    i = v(),
     a = fa(t.clanSteamID.GetAccountID(), t.GID),
-    { elDialogElement: o, fnShowLogonDialog: s } = v();
+    { elDialogElement: o, fnShowLogonDialog: s } = _();
   return (0, J.jsxs)(J.Fragment, {
     children: [
       (0, J.jsx)(ca, {
@@ -2134,7 +2134,7 @@ function Ya(e) {
 }
 function Xa() {
   return ln.logged_in
-    ? !ln.is_limited || (Ct((0, J.jsx)(y, {}), window), !1)
+    ? !ln.is_limited || (Ct((0, J.jsx)(S, {}), window), !1)
     : (W.IN_CLIENT
         ? console.log(
             `EventDiscussionWidget: In Client: Cannot use login widget. We expect to be already logged in.`,
@@ -2192,7 +2192,7 @@ function $a(e) {
     { event: n, showErrorInfo: r } = e.context,
     i = O(e.args),
     a = !!i && i != n?.GID,
-    { data: o, isPending: s } = S(
+    { data: o, isPending: s } = x(
       a && n
         ? { clanAccountID: n.clanSteamID.GetAccountID(), eventGID: i }
         : void 0,
@@ -2258,7 +2258,7 @@ function ao(e) {
     r = O(e.args, `successToken`),
     i = O(e.args, `failToken`),
     a = io(t),
-    { elDialogElement: o, fnShowLogonDialog: s } = v(),
+    { elDialogElement: o, fnShowLogonDialog: s } = _(),
     [c, l, u] = N();
   return !t || !n || !r || !i
     ? e.context.showErrorInfo
@@ -2351,7 +2351,7 @@ function oo(e) {
 }
 function so(e) {
   let t = !!e.context.showErrorInfo,
-    { elDialogElement: n, fnShowLogonDialog: r } = v();
+    { elDialogElement: n, fnShowLogonDialog: r } = _();
   if (!B.logged_in)
     return (0, J.jsxs)(J.Fragment, {
       children: [
@@ -2958,7 +2958,7 @@ function gs(e) {
 }
 function _s(e) {
   let { groupData: t, eventModel: n } = e,
-    r = _(),
+    r = w(),
     i = Va(),
     a = ko(),
     o = sr(n.clanSteamID.GetAccountID(), n.GID ?? ``),
@@ -2989,10 +2989,10 @@ function _s(e) {
       position: `center`,
       string: z(`#Loading`),
     });
-  let v = (e) => f(t.group_id, e),
-    y = t.group_visibility_tokens ?? [],
-    b = i !== null && y.includes(i);
-  return y.length > 0 && !b && !r
+  let _ = (e) => f(t.group_id, e),
+    v = t.group_visibility_tokens ?? [],
+    y = i !== null && v.includes(i);
+  return v.length > 0 && !y && !r
     ? null
     : (0, J.jsxs)(vs, {
         groupData: t,
@@ -3011,7 +3011,7 @@ function _s(e) {
                     className: Wo,
                     children: (0, J.jsx)(bs, {
                       sessionData: e,
-                      onClick: () => l(() => v(e.id)),
+                      onClick: () => l(() => _(e.id)),
                       nGuestReservations: r?.guest_count || 0,
                       eRegistrationStatus: i,
                       bAllowedToRegisterIfFull: h,
@@ -3034,7 +3034,7 @@ function vs(e) {
     a = k.GetWithFallback(t?.localized_session_description, r),
     o = k.GetWithFallback(t?.localized_intended_audience, r),
     s = k.GetWithFallback(t?.localized_sesssion_faq, r),
-    c = _(),
+    c = w(),
     [l, u] = (0, q.useState)(!1);
   return t
     ? (0, J.jsxs)(`div`, {
@@ -3238,7 +3238,7 @@ function Ts(e, t) {
   );
 }
 function Es() {
-  let { elDialogElement: e, fnShowLogonDialog: t } = v(
+  let { elDialogElement: e, fnShowLogonDialog: t } = _(
     z(`#EventDisplay_Share_NotLoggedIn_Description`),
   );
   return {
@@ -3305,7 +3305,7 @@ function ks(e) {
       fnOnClick: i,
       rgAvailability: a,
     } = e,
-    o = w(),
+    o = g(),
     s = Va(),
     c = Cn(),
     [l, u, d] = p(() => [
@@ -4499,7 +4499,7 @@ function Oc(e) {
 }
 function kc(e) {
   let { userPollDef: t, lang: n, eventModel: r, children: i } = e,
-    a = g(),
+    a = v(),
     [o, s] = p(() => [
       k.GetWithFallback(t.localized_poll_description, n),
       t.user_poll_background,
@@ -5031,7 +5031,7 @@ function Uu() {
   });
 }
 function Wu(e) {
-  let { elDialogElement: t, fnShowLogonDialog: n } = v(),
+  let { elDialogElement: t, fnShowLogonDialog: n } = _(),
     [r, i, a] = N();
   return {
     elDialogElement: (0, J.jsxs)(J.Fragment, {
@@ -5370,7 +5370,7 @@ function td(e) {
 function nd(e) {
   let { event: t, previewMode: n } = e,
     [r, i] = p(() => [t.GetSteamAwardCategory(), t.appid]),
-    a = nu(t, g()),
+    a = nu(t, v()),
     { widgets: o, bLoading: s } = Qu([r], Zu, a),
     { widgetStyle: c, bLoading: l } = $u(!!o?.nomination),
     u = Xu(td(n));
@@ -5657,8 +5657,8 @@ var Hd = c((e) => {
         (0, J.jsx)(`div`, {
           className: bd,
           children: t
-            ? (0, J.jsx)(x, { appid: t, className: yd })
-            : (0, J.jsx)(C, { clanAccountID: n, className: yd }),
+            ? (0, J.jsx)(C, { appid: t, className: yd })
+            : (0, J.jsx)(y, { clanAccountID: n, className: yd }),
         }),
         (0, J.jsx)(Vd, { ...e }),
       ],

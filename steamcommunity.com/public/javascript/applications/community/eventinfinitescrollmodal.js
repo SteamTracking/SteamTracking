@@ -11,12 +11,12 @@ import {
   z as o,
 } from "./chunk~01cfc309bf.js";
 import {
-  An as s,
-  Ci as c,
-  Xr as l,
-  Zr as u,
-  bl as d,
-  c as f,
+  Qr as s,
+  Zr as c,
+  c as l,
+  jn as u,
+  wi as d,
+  xl as f,
 } from "./chunk~3f4314f3b4.js";
 import { t as ee } from "./chunk~eefd71512b.js";
 import { t as p } from "./chunk~77ea210942.js";
@@ -99,7 +99,7 @@ function I(e) {
 function L(e, t) {
   return (
     e.jsondata.item_source_type != null &&
-    e.jsondata.item_source_type !== u.k_ETaggedItems
+    e.jsondata.item_source_type !== s.k_ETaggedItems
   );
 }
 function R(e) {
@@ -208,7 +208,7 @@ function V(e, t, n, r) {
     e.push({ ...t[i], priority: r });
 }
 function H(e, t) {
-  let n = s.Get();
+  let n = u.Get();
   if (
     t.only_current_platform &&
     n.BHasPlatformPreferenceSet() &&
@@ -240,19 +240,19 @@ function ge(e, t, n, r, i) {
   if (!a) return b.k_RejectNotLoaded;
   let o = H(a, t);
   if (o != b.k_NotRejected) return o;
-  let c = s.Get();
-  if (c.BIsGameIgnored(e)) return b.k_RejectIgnoredGame;
-  if (c.BExcludeTagIDs(a.GetTagIDs())) return b.k_RejectIgnoreGameTags;
-  if (c.BExcludesContentDescriptor(a.GetContentDescriptorIDs()))
+  let s = u.Get();
+  if (s.BIsGameIgnored(e)) return b.k_RejectIgnoredGame;
+  if (s.BExcludeTagIDs(a.GetTagIDs())) return b.k_RejectIgnoreGameTags;
+  if (s.BExcludesContentDescriptor(a.GetContentDescriptorIDs()))
     return b.k_RejectIgnoreContentDescriptors;
   if (!t.early_access && a.BIsEarlyAccess()) return b.k_RejectEarlyAccess;
-  let l = a.GetAppType();
-  if (!t.software && l == 6) return b.k_RejectSoftware;
-  if (t.games_already_in_library && c.BIsGameOwned(e))
+  let c = a.GetAppType();
+  if (!t.software && c == 6) return b.k_RejectSoftware;
+  if (t.games_already_in_library && s.BIsGameOwned(e))
     return b.k_RejectInLibrary;
-  if (t.games_not_in_library && !c.BIsGameOwned(e))
+  if (t.games_not_in_library && !s.BIsGameOwned(e))
     return b.k_RejectNotInLibrary;
-  if (!t.video && [7, 8, 9].includes(l)) return b.k_RejectVideo;
+  if (!t.video && [7, 8, 9].includes(c)) return b.k_RejectVideo;
   if (t.has_discount) {
     let e = a.GetBestPurchaseOption();
     if (!e || !e.discount_pct) return b.k_RejectNoDiscount;
@@ -261,12 +261,12 @@ function ge(e, t, n, r, i) {
     t.no_ao_content &&
     (a.HasContentDescriptorID(3) || a.HasContentDescriptorID(4))
     ? b.k_RejectAO
-    : l == 1 &&
+    : c == 1 &&
         t.games_already_in_library &&
-        c.BIsGameOwned(a.GetParentAppID() || 0)
+        s.BIsGameOwned(a.GetParentAppID() || 0)
       ? b.k_RejectInLibrary
       : i
-        ? (l == 1 && r.BHasAppID(a.GetParentAppID() || 0)) || r.BHasAppID(e)
+        ? (c == 1 && r.BHasAppID(a.GetParentAppID() || 0)) || r.BHasAppID(e)
           ? b.k_RejectAlreadyDisplayed
           : t.has_trailer && !a.BHasTrailers(!1)
             ? b.k_RejectNoTrailer
@@ -274,7 +274,7 @@ function ge(e, t, n, r, i) {
         : b.k_NotRejected;
 }
 function W(e, t) {
-  let n = s.Get(),
+  let n = u.Get(),
     r = !1;
   for (let t of e) {
     if (n.BIsGameIgnored(t)) return b.k_RejectIgnoredGame;
@@ -293,10 +293,10 @@ function _e(e, t, n, r) {
   if (a != b.k_NotRejected) return a;
   let o = W(i.GetIncludedAppIDs(), t);
   if (o != b.k_NotRejected) return o;
-  let c = s.Get();
-  return t.games_already_in_library && c.BOwnsPackage(e)
+  let s = u.Get();
+  return t.games_already_in_library && s.BOwnsPackage(e)
     ? b.k_RejectInLibrary
-    : c.BIsPackageIgnored(e)
+    : s.BIsPackageIgnored(e)
       ? b.k_RejectIgnoredGame
       : r
         ? n.BHasPackageID(e)
@@ -387,12 +387,12 @@ function Se(e) {
   if (!G.Get().GetHomeView()?.localized) return !0;
   let t = x.Get().GetStoreItem(e.id, C(e.type));
   return (
-    !t || s.Get().BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport())
+    !t || u.Get().BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport())
   );
 }
 async function K(e, t, n) {
   if (!e || e.length == 0) return [];
-  let r = e.filter((e) => d(e.type)).map((e) => e.id),
+  let r = e.filter((e) => f(e.type)).map((e) => e.id),
     i = e.filter((e) => e.type === `sub`).map((e) => e.id),
     a = e.filter((e) => e.type === `bundle`).map((e) => e.id);
   {
@@ -446,7 +446,7 @@ var Ce = {
 };
 function q(e, t = !1) {
   if (!e) return !0;
-  let n = s.Get();
+  let n = u.Get();
   if (
     (m(n.BIsLoaded(), `Dynamic Store not loaded`),
     !t && e.GetStoreItemType() == 0)
@@ -477,56 +477,56 @@ async function J(e, t, n, r) {
     a = 0,
     o = [];
   await K(e, B, t);
-  for (let c of e) {
-    let e = x.Get().GetStoreItem(c.id, C(c.type));
+  for (let s of e) {
+    let e = x.Get().GetStoreItem(s.id, C(s.type));
     if (!e) {
       i++;
       continue;
     }
-    let l = e
+    let c = e
       .GetIncludedAppIDs()
       .map((e) => x.Get().GetApp(e))
       .filter((e) => !!e);
-    if ((l.push(e), t)) {
-      let e = new Set(l.map((e) => e.GetParentAppID()).filter((e) => !!e)),
+    if ((c.push(e), t)) {
+      let e = new Set(c.map((e) => e.GetParentAppID()).filter((e) => !!e)),
         t = Array.from(e)
           .map((e) => x.Get().GetApp(e))
           .filter((e) => !!e);
-      t && l.push(...t);
+      t && c.push(...t);
     }
-    l.some((e) => (r || q)(e))
-      ? (a++, n && (s.Get().BIsStoreItemOwned(e) || n.push(c)))
-      : o.push(c);
+    c.some((e) => (r || q)(e))
+      ? (a++, n && (u.Get().BIsStoreItemOwned(e) || n.push(s)))
+      : o.push(s);
   }
   return o;
 }
 async function we(e, t, n, r, i, a, o) {
-  let c = await J(
+  let s = await J(
       e,
       t,
       o,
       i
         ? (e) =>
             !e ||
-            s.Get().BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
-            s.Get().BExcludeTagIDs(e.GetTagIDs())
+            u.Get().BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
+            u.Get().BExcludeTagIDs(e.GetTagIDs())
         : q,
     ),
-    l = [];
-  for (let e of c) {
+    c = [];
+  for (let e of s) {
     let t = x.Get().GetStoreItem(e.id, C(e.type));
     if (!t) continue;
     let i = t?.GetIncludedAppIDsOrSelf(),
-      c = !1;
-    (n && (c ||= i.every((e) => s.Get().BIsGameOwned(e))),
-      r && (c ||= i.every((e) => s.Get().BIsGameWishlisted(e))),
-      a && (c ||= i.every((e) => s.Get().BIsGameIgnored(e))),
-      c ? o && o.push(e) : l.push(e));
+      s = !1;
+    (n && (s ||= i.every((e) => u.Get().BIsGameOwned(e))),
+      r && (s ||= i.every((e) => u.Get().BIsGameWishlisted(e))),
+      a && (s ||= i.every((e) => u.Get().BIsGameIgnored(e))),
+      s ? o && o.push(e) : c.push(e));
   }
-  return l;
+  return c;
 }
 function Y() {
-  let e = s.Get();
+  let e = u.Get();
   if (e.BIsLoaded())
     return {
       bSignedIn: !!ce.logged_in,
@@ -541,16 +541,16 @@ function Te() {
 function Ee(e) {
   return !(
     !e?.BHasHideIgnoredItemsFacetValue() ||
-    e.BIsUserPreferenceEnabled(l.k_EHideIgnoredItems)
+    e.BIsUserPreferenceEnabled(c.k_EHideIgnoredItems)
   );
 }
 async function De(e, t, n, r) {
   let i = e.BHasHideIgnoredItemsFacetValue(),
-    a = e.BIsUserPreferenceEnabled(l.k_EHideOwnedItems),
-    s = e.BIsUserPreferenceEnabled(l.k_EHideWishlistedItems),
-    c = e.BIsUserPreferenceEnabled(l.k_EHideIgnoredItems),
+    a = e.BIsUserPreferenceEnabled(c.k_EHideOwnedItems),
+    s = e.BIsUserPreferenceEnabled(c.k_EHideWishlistedItems),
+    l = e.BIsUserPreferenceEnabled(c.k_EHideIgnoredItems),
     u = [],
-    d = await we(t, n, a, s, i, c, u);
+    d = await we(t, n, a, s, i, l, u);
   return (
     o(() => {
       e.SetCapsulesRemovedByUserPreferenceFilters(new Set(u.map(I)));
@@ -560,7 +560,7 @@ async function De(e, t, n, r) {
   );
 }
 var X = e(a()),
-  Oe = class e extends f {
+  Oe = class e extends l {
     async DeleteOldAnnouncement(e, t) {
       let n = new URLSearchParams();
       n.append(`sessionid`, se());
@@ -572,7 +572,7 @@ var X = e(a()),
           t,
         i = await X.default.post(r, n);
       if (i.data.success != 1) throw i.data;
-      return (this.RemoveGIDFromList(e, c + t), i.data);
+      return (this.RemoveGIDFromList(e, d + t), i.data);
     }
     static sm_Instance;
     static sm_SummaryInstance;
@@ -677,17 +677,17 @@ var X = e(a()),
           appid: i,
           clanSteamID: a,
           className: o,
-          partnerEventStore: c,
-          showAppHeader: l,
-          bPrimaryPageFeature: u,
+          partnerEventStore: s,
+          showAppHeader: c,
+          bPrimaryPageFeature: l,
           additionalParams: d,
           eventClassName: f,
         } = this.props,
         m;
       E.IN_CLIENT &&
         n?.appid &&
-        (s.Get().HintLoad(),
-        s.Get().BOwnsApp(n.appid) &&
+        (u.Get().HintLoad(),
+        u.Get().BOwnsApp(n.appid) &&
           (m = (e) => h(e, `steam://nav/games/details/` + n.appid)));
       let g = (0, Q.jsx)(pe, {
         children: (t) =>
@@ -695,17 +695,17 @@ var X = e(a()),
             initialEvent: n,
             appid: i,
             clanSteamID: a,
-            partnerEventStore: c,
+            partnerEventStore: s,
             emoticonStore: t,
-            closeModal: u ? void 0 : r,
-            showAppHeader: l,
+            closeModal: l ? void 0 : r,
+            showAppHeader: c,
             bShowOnlyInitialEvent: e,
             additionalParams: d,
             eventClassName: f,
             onAppIconClick: m,
           }),
       });
-      return u
+      return l
         ? g
         : (0, Q.jsx)(_, {
             active: !0,

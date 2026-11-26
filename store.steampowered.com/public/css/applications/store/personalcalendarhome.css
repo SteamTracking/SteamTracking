@@ -48,6 +48,9 @@
 .GamepadMode .nHdn-Ea4zSg- .carousel__slide {
   width: 260px !important;
 }
+.nHdn-Ea4zSg- .ScrollSnapCarousel > * {
+  scroll-snap-align: start;
+}
 .nHdn-Ea4zSg- .CarouselBtnRight {
   transform: translate(-16px);
 }

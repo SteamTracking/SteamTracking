@@ -449,6 +449,10 @@ html:not(.GamepadMode)
   .SaleSectionCtn:has(.SaleSectionForCustomCSS):not(:has(.OUCdd9zQ3NI-)) {
   margin-bottom: 20px;
 }
+html:not(.GamepadMode)
+  .PaginationPillsPage
+  .SaleSectionForCustomCSS:not(:has(.OUCdd9zQ3NI-))
+  .SaleSectionContainer:last-child,
 .SaleSectionCarousel:has(.OUCdd9zQ3NI-) .SaleSectionContainer:last-child {
   padding-bottom: 0;
 }

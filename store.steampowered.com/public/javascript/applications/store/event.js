@@ -105,14 +105,14 @@ import {
 } from "./chunk~01cfc309bf.js";
 import {
   At as g,
-  Is as _,
-  Ln as v,
-  Ls as y,
-  Mt as b,
-  Rt as ee,
-  Wt as te,
-  kt as ne,
-  st as re,
+  Gt as _,
+  Ls as v,
+  Nt as y,
+  Rn as b,
+  Rs as ee,
+  ct as te,
+  jt as ne,
+  zt as re,
 } from "./chunk~6b8ddcaac8.js";
 import {
   F as ie,
@@ -240,7 +240,7 @@ import { t as $t } from "./chunk~466a63c735.js";
 import { n as en } from "./chunk~0111fcd096.js";
 import { a as tn, o as nn } from "./chunk~5a091db425.js";
 import { l as rn } from "./chunk~6cf3fe3e07.js";
-import { i as an, n as on } from "./chunk~e70aabe4d7.js";
+import { a as an, r as on } from "./chunk~e70aabe4d7.js";
 import { r as sn } from "./chunk~21cdc464a1.js";
 import { n as cn } from "./chunk~710e3cfd2f.js";
 import { _ as ln, n as un, v as dn } from "./chunk~3ea79bd96d.js";
@@ -1182,7 +1182,7 @@ function si(e) {
 }
 var ci = d(function (e) {
     let { event: t, bIsOGG: n, summary: r } = e,
-      i = v();
+      i = b();
     return (0, K.jsxs)(z, {
       children: [
         (0, K.jsxs)(`div`, {
@@ -1242,7 +1242,7 @@ var ci = d(function (e) {
         editorInfo: o,
         meetSteamInfo: s,
       } = e,
-      c = v(),
+      c = b(),
       l = t.appid,
       u = t.clanSteamID,
       d = r || t.GetStartTimeAndDateUnixSeconds(),
@@ -1327,10 +1327,10 @@ function di(e) {
   let { clanSteamID: t } = e,
     n = t.GetAccountID(),
     { data: r } = Ee(n),
-    { data: i } = y(n);
+    { data: i } = ee(n);
   if (!r) return null;
   let a = i
-    ? _(i, `developer`)
+    ? v(i, `developer`)
     : Cr.COMMUNITY_BASE_URL +
       (r.vanity_url
         ? `groups/` + r.vanity_url
@@ -1438,8 +1438,8 @@ var hi = G.lazy(() =>
       } = e,
       l = t.appid,
       u = t.clanSteamID.GetAccountID(),
-      d = ee(),
-      f = v(),
+      d = re(),
+      f = b(),
       { data: p, isPending: m } = Yn(l ? { appid: l } : void 0),
       { data: h, isPending: g } = Ee(u);
     if (
@@ -1454,15 +1454,15 @@ var hi = G.lazy(() =>
         bPopup: !1,
       });
     let _ = Ot(t, T.k_eStoreNewsHub, `allowRelative`),
-      y = Ot(t, T.k_eStoreUsersNewsHub, `allowRelative`);
+      v = Ot(t, T.k_eStoreUsersNewsHub, `allowRelative`);
     if (!t.bLoaded || g || (l && m))
       return (0, K.jsx)(`div`, {
         className: Er,
         style: { height: `400px` },
         children: (0, K.jsx)(D, { size: `medium`, string: R(`#Loading`) }),
       });
-    let b = p?.name || h?.group_name,
-      te = t.GetDescriptionWithFallback(n);
+    let y = p?.name || h?.group_name,
+      ee = t.GetDescriptionWithFallback(n);
     return (0, K.jsx)(Kr, {
       event: t,
       lang: n,
@@ -1475,9 +1475,9 @@ var hi = G.lazy(() =>
             children: [
               (0, K.jsx)(Br, {
                 crumbs: [
-                  { name: R(`#BreadCrumbs_AllEvents`), url: y },
-                  ...(b
-                    ? [{ name: R(`#BreadCrumbs_GameEvents`, b), url: _ }]
+                  { name: R(`#BreadCrumbs_AllEvents`), url: v },
+                  ...(y
+                    ? [{ name: R(`#BreadCrumbs_GameEvents`, y), url: _ }]
                     : []),
                 ],
               }),
@@ -1527,7 +1527,7 @@ var hi = G.lazy(() =>
                       className: j(`EventDetailsBody`, _t),
                       children: [
                         (0, K.jsx)(wt, {
-                          text: te || ``,
+                          text: ee || ``,
                           showErrorInfo: d,
                           event: t,
                           languageOverride: n,
@@ -1595,7 +1595,7 @@ var hi = G.lazy(() =>
   });
 function _i(e) {
   let { event: t, bIsOGG: n } = e,
-    r = v(),
+    r = b(),
     { data: i } = Ae(t.clanSteamID.GetAccountID()),
     a = !!i?.can_edit,
     o = t.clanSteamID,
@@ -2437,7 +2437,7 @@ var qi = (e) =>
         (0, K.jsx)(`div`, { onClick: () => n(!0), children: c }),
         (0, K.jsx)(`div`, {
           className: j(Zt, Vi),
-          children: (0, K.jsx)(re, {
+          children: (0, K.jsx)(te, {
             clanAccountID: a.clanAccountID,
             className: Ui,
             fnSuccessCallback: Ki,
@@ -2887,14 +2887,14 @@ var Lo = class extends G.Component {
                     children: this.RenderGameSourceCheckbox(S.k_ERecent, !e),
                   }),
                   this.RenderGameSourceCheckbox(S.k_EWishlist, !e),
-                  g() && this.RenderGameSourceCheckbox(S.k_EFollowing, !e),
+                  ne() && this.RenderGameSourceCheckbox(S.k_EFollowing, !e),
                   this.RenderGameSourceCheckbox(S.k_ERecommended, !e),
                   this.RenderGameSourceCheckbox(S.k_ESteam),
                   en.bIncludeFeaturedAsGameSource &&
                     this.RenderGameSourceCheckbox(S.k_EFeatured),
                 ],
               }),
-            !!(ne() && (t.BIsGlobalCalendar() || t.BIsSingleAppCalendar())) &&
+            !!(g() && (t.BIsGlobalCalendar() || t.BIsSingleAppCalendar())) &&
               (0, K.jsxs)(Ro, {
                 children: [
                   (0, K.jsx)(zo, {
@@ -3227,7 +3227,7 @@ function Qo(e, t) {
 function $o(e, t) {
   (x().BIsCollectionCalendar(), Dt());
   let n = [];
-  if ((ne() && n.push(Q(w.Press, e)), t))
+  if ((g() && n.push(Q(w.Press, e)), t))
     for (let e of bo.GetVisibleSpecialEvents())
       n.push({
         name: R(e.sLocToken),
@@ -3807,8 +3807,8 @@ var os = t({
   });
 function kc(e) {
   let { eventModel: t, calendarEvent: n } = e,
-    r = b(t.clanSteamID.GetAccountID()),
-    { elDialogElement: i, fnShowLogonDialog: a } = te(),
+    r = y(t.clanSteamID.GetAccountID()),
+    { elDialogElement: i, fnShowLogonDialog: a } = _(),
     o = G.useCallback(async () => {
       I.logged_in
         ? (await Ln.Get().UpdateFollowOrIgnoreCurator(t.clanSteamID, !0, !r),
@@ -4684,7 +4684,7 @@ var vl = `_8cquMQJOr-c-`,
           i &&
             (0, K.jsx)(`div`, {
               className: `C9sbbTu0HGw-`,
-              children: (0, K.jsx)(re, { clanAccountID: r.clanid }),
+              children: (0, K.jsx)(te, { clanAccountID: r.clanid }),
             }),
         ],
       });
@@ -5461,7 +5461,7 @@ var Kl = class extends G.Component {
   }
   GetCuratorSuggestionSettings(e) {
     let t = 1e3;
-    if (I.accountid && ne()) {
+    if (I.accountid && g()) {
       if (e.BIsGlobalCalendar() && !this.props.bShowFutureViewOnly) {
         if (e.m_visibilityStore.BIsGameSourceAllowed(S.k_ECurator))
           return { nInlineOffset: t, bInlineDismissable: !0, bShowAtEnd: !0 };
@@ -5992,7 +5992,7 @@ var Zl = (e) => {
     });
   },
   Ql = (e) => {
-    let { elDialogElement: t, fnShowLogonDialog: n } = te();
+    let { elDialogElement: t, fnShowLogonDialog: n } = _();
     return (0, K.jsxs)(`div`, {
       className: j(Aa, !e.bLargeMode && `ZyWFq6-rPTk-`),
       style: { transform: `translateY(${e.nTopOffset}px)` },

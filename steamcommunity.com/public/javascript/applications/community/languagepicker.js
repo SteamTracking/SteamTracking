@@ -17,16 +17,16 @@ import {
   z as f,
 } from "./chunk~01cfc309bf.js";
 import {
-  Bi as p,
-  T as m,
-  cs as h,
-  ds as ee,
-  fs as te,
-  hs as ne,
-  is as g,
-  ls as re,
-  ps as _,
-  sn as ie,
+  T as p,
+  Vi as m,
+  as as h,
+  fs as g,
+  gs as ee,
+  ls as te,
+  ms as ne,
+  ps as re,
+  sn as _,
+  us as ie,
 } from "./chunk~3f4314f3b4.js";
 import { t as ae } from "./chunk~eefd71512b.js";
 import {
@@ -1881,7 +1881,7 @@ var Yn = `A5DZIArSiNc-`,
                   },
                   src: this.props.uploadFile.dataUrl,
                 }),
-                (0, L.jsx)(m, {
+                (0, L.jsx)(p, {
                   bLockAspectRatio: !0,
                   bDisableLink: !0,
                   index: 0,
@@ -2174,7 +2174,7 @@ var dr = 960,
           ? l
             ? (d = E(`#ImageUpload_InvalidFileType`))
             : c
-              ? (d = E(`#ImageUpload_InvalidFormat`, ee(t) ?? ``))
+              ? (d = E(`#ImageUpload_InvalidFormat`, g(t) ?? ``))
               : !s && !u
                 ? (d = E(`#ImageUpload_InvalidResolution`, H(n), H(r)))
                 : o
@@ -2468,8 +2468,8 @@ var q = class extends Tr {
     return this.AddImageForLanguage(e, n);
   }
   async AddImageForLanguage(e, t) {
-    if (!h(e.type) && !(Ge.is_support && re(e.type))) return !1;
-    let n = await te(e, re(e.type));
+    if (!te(e.type) && !(Ge.is_support && ie(e.type))) return !1;
+    let n = await re(e, ie(e.type));
     if (!n) return !1;
     let r = new vr(
       e,
@@ -2477,16 +2477,16 @@ var q = class extends Tr {
       t,
       this.m_rgImageOptions,
       n.src,
-      _(n),
+      ne(n),
       n,
       this.m_localizedImageGroupPrimaryImage,
     );
     return ((this.m_filesToUpload = [...this.m_filesToUpload, r]), !0);
   }
   async AddExistingClanImage(e, t = 0) {
-    let n = g.GetHashAndExt(e);
+    let n = h.GetHashAndExt(e);
     if (!n) return !1;
-    let r = g.GenerateEditableURLFromHashAndExt(this.m_clanSteamID, n),
+    let r = h.GenerateEditableURLFromHashAndExt(this.m_clanSteamID, n),
       i = await (0, R.default)({ url: r, method: `GET`, responseType: `blob` }),
       a = Pe(i.data, e.file_name);
     return await this.AddImage(a, t);
@@ -2650,7 +2650,7 @@ var Nr = c((e) => {
     I.useEffect(() => {
       m(n);
     }, [m, n]);
-    let h = (e) => {
+    let g = (e) => {
         let t = new O($e.CLANSTEAMID);
         Se(
           (0, L.jsx)(or, {
@@ -2684,11 +2684,11 @@ var Nr = c((e) => {
               `ClanImagePickForCertainSize expected size 1, got ` + n.length,
             );
             let e = n[0].bSuccess ? n[0].uploadResult : void 0,
-              r = g.GetHashAndExt(e ?? null),
-              i = g.GetThumbHashAndExt(e ?? null);
+              r = h.GetHashAndExt(e ?? null),
+              i = h.GetThumbHashAndExt(e ?? null);
             if (e?.image_hash && e.file_type !== void 0 && r && i) {
-              let n = g.GenerateURLFromHashAndExt(t, r),
-                o = g.GenerateURLFromHashAndExt(t, i),
+              let n = h.GenerateURLFromHashAndExt(t, r),
+                o = h.GenerateURLFromHashAndExt(t, i),
                 s = {
                   imageid: -11231412,
                   image_hash: e.image_hash,
@@ -2746,7 +2746,7 @@ var Nr = c((e) => {
                   }),
             ],
           }),
-        (0, L.jsx)(S, { onClick: h, children: E(`#BBCode_ChooseImage`, r, i) }),
+        (0, L.jsx)(S, { onClick: g, children: E(`#BBCode_ChooseImage`, r, i) }),
       ],
     });
   }),
@@ -2849,9 +2849,9 @@ var Ir,
       ) {
         let t = e.dataTransfer.getData(`text`);
         if (t && t.length > 0) {
-          for (let e of [g.GetBaseURL(), g.GetBaseURLV2()])
+          for (let e of [h.GetBaseURL(), h.GetBaseURLV2()])
             if (t.startsWith(e)) {
-              let n = `[img]` + ne + `/` + t.substr(e.length) + `[/img]`;
+              let n = `[img]` + ee + `/` + t.substr(e.length) + `[/img]`;
               Y.replaceSelection(this.GetTextAreaRef()?.current, n);
               break;
             }
@@ -2869,7 +2869,7 @@ var Ir,
               N.COMMUNITY_CDN_URL + `public/images/sharedfiles/guides/`,
             fnTextareaRef: this.GetTextAreaRef,
             emoticonStore: this.props.emoticonStore,
-            supportBBCodes: this.props.limitBBCode ? this.props.limitBBCode : p,
+            supportBBCodes: this.props.limitBBCode ? this.props.limitBBCode : m,
             bSupportHTMLImport: this.props.bSupportHTMLImport,
             showFormatHelp: this.props.showFormatHelp,
             bEmbeddedInDialog: this.props.bEmbeddedInDialog,
@@ -2901,7 +2901,7 @@ var Ir,
               fnSetText: this.props.fnSetText,
               supportBBCodes: this.props.limitBBCode
                 ? this.props.limitBBCode
-                : p,
+                : m,
             }),
           }),
         ],
@@ -3634,29 +3634,29 @@ var zr = (e) => {
     [l, u] = I.useState(void 0),
     [d, f] = I.useState(void 0),
     { data: p } = Yt(),
-    { isLoading: m, data: h } = de(d?.GetAccountID()),
-    ee = () => {
+    { isLoading: m, data: g } = de(d?.GetAccountID()),
+    te = () => {
       let n = `[speaker name="${t.trim()}"`;
       if (
         (r.trim().length > 0 && (n += ` title="${r}"`),
         a.trim().length > 0 && (n += ` company="${a}"`),
         l)
       ) {
-        let e = ne + `/` + l.clanAccountID + `/` + g.GetHashAndExt(l);
+        let e = ee + `/` + l.clanAccountID + `/` + h.GetHashAndExt(l);
         n += ` photo="${e}"`;
       }
       (d && (n += ` steamid="${d.ConvertTo64BitString()}"`),
         (n += `]${s}[/speaker]`),
         Y.replaceSelection(e.textareaRef.current, n));
     },
-    te = t.trim().length != 0 && s.trim().length != 0;
+    ne = t.trim().length != 0 && s.trim().length != 0;
   return (0, L.jsx)(k, {
     strTitle: E(`#EventEditor_AddSpeaker`),
     strDescription: E(`#EventEditor_AddSpeaker_Desc`),
     closeModal: e.closeModal,
     onCancel: e.closeModal,
-    bOKDisabled: !te,
-    onOK: ee,
+    bOKDisabled: !ne,
+    onOK: te,
     className: hn,
     children: (0, L.jsxs)(`div`, {
       className: ln,
@@ -3696,19 +3696,19 @@ var zr = (e) => {
           children: [
             m && (0, L.jsx)(ae, { string: E(`#Loading`), size: `small` }),
             d &&
-              h &&
+              g &&
               (0, L.jsxs)(`a`, {
                 href:
                   N.COMMUNITY_BASE_URL + `profiles/` + d.ConvertTo64BitString(),
                 target: `_blank`,
                 children: [
-                  h
+                  g
                     ? (0, L.jsx)(`img`, {
                         style: { marginRight: `8px` },
-                        src: h.avatar_url,
+                        src: g.avatar_url,
                       })
                     : null,
-                  h ? h.m_strPlayerName : null,
+                  g ? g.m_strPlayerName : null,
                 ],
               }),
             (0, L.jsxs)(`div`, {
@@ -3771,7 +3771,7 @@ var zr = (e) => {
               className: `DialogLabel`,
               children: E(`#Button_Preview`),
             }),
-            (0, L.jsx)(ie, {
+            (0, L.jsx)(_, {
               company: a,
               name: t,
               title: r,

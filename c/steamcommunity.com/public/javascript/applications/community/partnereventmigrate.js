@@ -396,6 +396,7 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~3f4314f3b4.js";
 import {
   _,
@@ -5082,7 +5083,7 @@ function _(_) {
     } = _,
     _ = _.useRef(null),
     _ = _(_, `sale_header`, _),
-    _ = _(_, `sale_secondary_background`, _),
+    _ = _(() => _(_, `sale_secondary_background`, _)),
     [_] = _(() => [_.jsondata.sale_sub_menu]);
   _.useEffect(() => {
     if (!_) return;

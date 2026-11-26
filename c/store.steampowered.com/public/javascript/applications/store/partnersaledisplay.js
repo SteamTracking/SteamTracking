@@ -65,7 +65,7 @@ import { _ } from "./chunk~7b4b9eb713.js";
 import { _, _, _, _ } from "./chunk~91ae5e1167.js";
 import { _, _ } from "./chunk~95ecbf576c.js";
 import { _ } from "./chunk~5a091db425.js";
-import { _ } from "./chunk~e70aabe4d7.js";
+import { _, _ } from "./chunk~e70aabe4d7.js";
 import { _, _ } from "./chunk~710e3cfd2f.js";
 import { _ } from "./chunk~b8ca037aae.js";
 import { _ } from "./chunk~a243b6a34b.js";
@@ -1002,7 +1002,7 @@ function _(_) {
     } = _,
     _ = _.useRef(null),
     _ = _(_, `sale_header`, _),
-    _ = _(_, `sale_secondary_background`, _),
+    _ = _(() => _(_, `sale_secondary_background`, _)),
     [_] = _(() => [_.jsondata.sale_sub_menu]);
   _.useEffect(() => {
     if (!_) return;

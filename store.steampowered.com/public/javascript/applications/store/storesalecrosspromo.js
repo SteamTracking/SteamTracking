@@ -17,7 +17,7 @@ import {
   s as u,
   t as d,
 } from "./chunk~f3699411bf.js";
-import { Z as f, et as p, sr as m } from "./chunk~6b8ddcaac8.js";
+import { Q as f, cr as p, tt as m } from "./chunk~6b8ddcaac8.js";
 import { r as h } from "./chunk~f4c928a27a.js";
 import { t as g } from "./chunk~710e3cfd2f.js";
 import { r as _, t as v } from "./chunk~b8ca037aae.js";
@@ -273,7 +273,7 @@ function Z(e, t) {
       `event_capsule`,
     ),
     a = {
-      ...p(i)[0],
+      ...m(i)[0],
       capsules_per_row_array: [W],
       show_as_carousel: !0,
       carousel_rows: 1,
@@ -282,7 +282,7 @@ function Z(e, t) {
 }
 function Q(e) {
   return e.flatMap((e) => {
-    let t = m(e);
+    let t = p(e);
     return t ? [t] : [];
   });
 }

@@ -26444,6 +26444,20 @@ var tx = {
   "salesmartdiscountreason-deepdiscount": 100815,
   "salesmartdiscountreason-popularinregion": 100816,
   "salesmartdiscountreason-justupdated": 100817,
+  "discounts-wishlist": 100818,
+  "discounts-firsttimeonsale": 100819,
+  "discounts-largestdiscount": 100820,
+  "discounts-endingsoon": 100821,
+  "discounts-newlyonsale": 100822,
+  "discounts-wellreviewed": 100823,
+  "discounts-topseller": 100824,
+  "discounts-hotdeal": 100825,
+  "discounts-deepdiscount": 100826,
+  "discounts-popularinregion": 100827,
+  "discounts-justupdated": 100828,
+  "discounts-none": 100829,
+  "home-sale-crosspromo": 100830,
+  "sale-crosspromo": 100831,
 };
 function ete(e) {
   return e in tx;
