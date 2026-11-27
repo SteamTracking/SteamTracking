@@ -6,96 +6,97 @@ import { It as t, dt as n, l as r } from "./chunk~01cfc309bf.js";
 import {
   $t as i,
   Dn as a,
-  Io as o,
-  N as s,
-  Pn as c,
-  Xo as l,
+  Fn as o,
+  Lo as s,
+  N as c,
+  Pn as l,
   Yt as u,
-  an as d,
-  cn as f,
-  fn as p,
-  i as m,
-  kn as h,
-  ln as ee,
-  mn as g,
-  on as _,
-  or as v,
-  r as y,
-  sn as b,
-  uo as x,
-  ur as S,
-  vn as C,
-  x as w,
+  Zo as d,
+  an as f,
+  cn as p,
+  do as m,
+  dr as h,
+  fn as g,
+  i as _,
+  kn as v,
+  ln as y,
+  mn as b,
+  on as x,
+  r as S,
+  sn as C,
+  sr as w,
+  vn as T,
+  x as E,
 } from "./chunk~6b8ddcaac8.js";
 import {
-  A as T,
-  D as E,
-  I as D,
-  O as te,
-  c as ne,
-  j as O,
-  s as k,
-  st as re,
-  w as A,
+  A as D,
+  D as O,
+  I as ee,
+  O as k,
+  c as te,
+  j as A,
+  s as j,
+  st as ne,
+  w as re,
 } from "./chunk~f57d770d64.js";
-import { o as j } from "./chunk~961c06e93e.js";
+import { o as ie } from "./chunk~961c06e93e.js";
 import {
-  m as ie,
-  n as ae,
-  p as oe,
-  r as se,
-  s as ce,
-  u as le,
+  m as ae,
+  n as oe,
+  p as se,
+  r as ce,
+  s as le,
+  u as ue,
 } from "./chunk~4eed35ad1f.js";
-import { r as ue } from "./chunk~5adf866415.js";
+import { r as de } from "./chunk~5adf866415.js";
 import { i as M } from "./chunk~2f085f1384.js";
-import { n as de, t as N } from "./chunk~f4c928a27a.js";
-import { t as fe } from "./chunk~eefd71512b.js";
-import { i as pe } from "./chunk~e867464c75.js";
-import { t as P } from "./chunk~4e9767668d.js";
-import { O as me, n as he, t as ge } from "./chunk~2f8c67b4de.js";
-import { f as _e } from "./chunk~618fb52a90.js";
-import { r as F } from "./chunk~21cdc464a1.js";
-import { n as ve } from "./chunk~710e3cfd2f.js";
-import { n as ye, r as be } from "./chunk~3ea79bd96d.js";
-import { l as xe, m as Se } from "./chunk~3720b337f3.js";
+import { n as fe, t as N } from "./chunk~f4c928a27a.js";
+import { t as pe } from "./chunk~eefd71512b.js";
+import { i as me } from "./chunk~e867464c75.js";
+import { t as he } from "./chunk~4e9767668d.js";
+import { O as ge, n as _e, t as ve } from "./chunk~2f8c67b4de.js";
+import { f as ye } from "./chunk~618fb52a90.js";
+import { r as P } from "./chunk~21cdc464a1.js";
+import { n as be } from "./chunk~710e3cfd2f.js";
+import { n as xe, r as Se } from "./chunk~3ea79bd96d.js";
+import { l as Ce, m as we } from "./chunk~3720b337f3.js";
 import {
-  $y as Ce,
-  Cr as we,
-  Dl as Te,
-  Nr as Ee,
-  Pc as I,
-  Vc as De,
-  Vx as Oe,
-  Wv as ke,
-  Zb as Ae,
-  _l as je,
-  ex as Me,
-  fl as Ne,
-  gt as Pe,
+  $y as Te,
+  Cr as Ee,
+  Dl as De,
+  Nr as Oe,
+  Pc as F,
+  Vc as I,
+  Vx as ke,
+  Wv as Ae,
+  Zb as je,
+  _l as Me,
+  ex as Ne,
+  fl as Pe,
+  gt as Fe,
   ib as L,
-  ny as Fe,
-  rx as Ie,
-  un as Le,
-  ux as Re,
+  ny as Ie,
+  rx as Le,
+  un as Re,
+  ux as ze,
   vx as R,
 } from "./main.js";
 var z = e(t()),
   B = n();
-function ze(e, t) {
-  return e == null || e == null || !Ue(t)
+function Be(e, t) {
+  return e == null || e == null || !We(t)
     ? !0
     : t.reverse_show_on_tabs
       ? !(!t.show_on_tabs || t.show_on_tabs.includes(e))
       : !!(t.show_on_tabs && t.show_on_tabs.includes(e));
 }
-function Be(e) {
+function Ve(e) {
   return e.template_tab_id ?? e.unique_id;
 }
-function Ve(e) {
+function He(e) {
   return V(e, `[Feature] Adult Only Sexual Content`);
 }
-function He(e) {
+function Ue(e) {
   return V(e, `[Feature] Coming Soon`);
 }
 function V(e, t) {
@@ -107,14 +108,14 @@ function V(e, t) {
   }
   return !1;
 }
-function Ue(e) {
+function We(e) {
   return !!(
     e.show_on_tabs &&
     e.show_on_tabs.length > 0 &&
     !e.diable_tab_id_filtering
   );
 }
-function We(e, t) {
+function Ge(e, t) {
   return e.show_deck_compability_details ||
     e.display_hw_compatibility_details == 1 ||
     t?.BFilterRequiresSteamDeckVerifiedOrPlayable()
@@ -137,7 +138,7 @@ function H(e, t, n) {
   }
   return i;
 }
-function Ge(e, t) {
+function Ke(e, t) {
   if (t === void 0 || !e.capsule_layout_by_item_count) return e;
   let n = e.capsule_layout_by_item_count.find(
     (e) => e.max_items === void 0 || t <= e.max_items,
@@ -151,18 +152,18 @@ function Ge(e, t) {
     : e;
 }
 function U(e, t) {
-  if (T(e)) return 0;
-  let n = E(e);
+  if (D(e)) return 0;
+  let n = O(e);
   return n <= 0 ? 0 : n + t;
 }
-function Ke(e, t, n, r, i) {
+function qe(e, t, n, r, i) {
   let a =
     `section_` +
     r +
     `_` +
     e.GID +
     (i || 0) +
-    pe(t.unique_id ? t.unique_id.toString() : JSON.stringify(t)).toString();
+    me(t.unique_id ? t.unique_id.toString() : JSON.stringify(t)).toString();
   return (
     n &&
       e.rtime32_last_local_modification &&
@@ -170,12 +171,12 @@ function Ke(e, t, n, r, i) {
     a
   );
 }
-function qe(e) {
+function Je(e) {
   let { id: t, type: n } = e,
-    r = S({ id: t, type: n }),
-    { data: i } = ke(r);
+    r = h({ id: t, type: n }),
+    { data: i } = Ae(r);
   return (0, B.jsx)(`div`, {
-    className: l,
+    className: d,
     children: (0, B.jsx)(N, {
       ...e,
       bShowReviewSummary: !0,
@@ -184,11 +185,11 @@ function qe(e) {
     }),
   });
 }
-var Je = `SppL95yx9BU-`,
-  Ye = `_7Na7-QNyAn4-`,
-  Xe = `zdh0LkaHoKw-`,
-  Ze = `vZlB-C6RUio-`;
-function Qe(e) {
+var Ye = `SppL95yx9BU-`,
+  Xe = `_7Na7-QNyAn4-`,
+  Ze = `zdh0LkaHoKw-`,
+  Qe = `vZlB-C6RUio-`;
+function $e(e) {
   let {
       id: t,
       type: n,
@@ -199,47 +200,47 @@ function Qe(e) {
       eHardwareCompatibilityDisplay: s,
       bAutoFocus: c,
     } = e,
-    l = S({ id: t, type: n }),
-    { data: u } = ke(l),
-    { data: d } = Fe(l),
-    [f, p] = ie(o, s),
+    l = h({ id: t, type: n }),
+    { data: u } = Ae(l),
+    { data: d } = Ie(l),
+    [f, p] = ae(o, s),
     m = u?.item_type == 0;
-  return (0, B.jsx)(oe, {
+  return (0, B.jsx)(se, {
     appid: m ? u.id : void 0,
-    children: (0, B.jsxs)(De, {
+    children: (0, B.jsxs)(I, {
       "flow-children": `grid`,
-      navEntryPreferPosition: Te.PREFERRED_CHILD,
+      navEntryPreferPosition: De.PREFERRED_CHILD,
       autoFocus: c,
       navKey: `purchase_only_` + u?.id,
       children: [
         `	`,
         (0, B.jsxs)(`div`, {
-          className: Ye,
+          className: Xe,
           children: [
             (0, B.jsx)(`div`, {
               className: void 0,
-              children: (0, B.jsx)(`div`, { className: Je, children: u?.name }),
+              children: (0, B.jsx)(`div`, { className: Ye, children: u?.name }),
             }),
             (0, B.jsxs)(`div`, {
-              className: Ze,
+              className: Qe,
               children: [
                 !a &&
                   u?.type != 10 &&
                   (0, B.jsxs)(`div`, {
                     className: void 0,
                     children: [
-                      (0, B.jsx)(v, { id: l }),
+                      (0, B.jsx)(w, { id: l }),
                       !!(f && u?.item_type == 0 && d) &&
-                        (0, B.jsx)(Le, {
+                        (0, B.jsx)(Re, {
                           eDisplay: p,
                           storeItemPlatform: d,
                           className: void 0,
                         }),
                     ],
                   }),
-                (0, B.jsx)(de, {
+                (0, B.jsx)(fe, {
                   id: l,
-                  className: Xe,
+                  className: Ze,
                   bShowDemoButton: r,
                   bShowCartButton: !0,
                   bHidePrice: i,
@@ -259,44 +260,44 @@ function W(e) {
   let { displayStyle: t, requestCompact: n, bNarrowScreen: r, ...i } = e,
     { type: a } = e,
     o = r ?? M(),
-    s = Me();
-  if (t === `purchaseonlydisplay`) return (0, B.jsx)(Qe, { ...i });
+    s = Ne();
+  if (t === `purchaseonlydisplay`) return (0, B.jsx)($e, { ...i });
   if (s) return (0, B.jsx)(N, { ...i });
-  if (n && !o) return (0, B.jsx)(qe, { ...i });
+  if (n && !o) return (0, B.jsx)(Je, { ...i });
   if (a == `bundle` || a == `sub`) return (0, B.jsx)(N, { ...i });
   if (o && (t == `library` || t == `animated`))
     return (0, B.jsx)(N, { ...i, bShowReviewSummary: !0 });
   switch (t) {
     case `library`:
-      return (0, B.jsx)(P, { ...i });
+      return (0, B.jsx)(he, { ...i });
     case `animated`:
-      return (0, B.jsx)(P, { ...i });
+      return (0, B.jsx)(he, { ...i });
     default:
       return (0, B.jsx)(N, { ...i, bShowReviewSummary: !0 });
   }
 }
-function $e(e, t, n = M()) {
+function et(e, t, n = M()) {
   return !(e === `purchaseonlydisplay` || t || n);
 }
-var et = `h4e3CZE5mfI-`,
-  tt = `lJc7R9Bil2I-`,
-  nt = `IS179RoYT1Q-`,
-  rt = `SZeormjSwYo-`,
+var tt = `h4e3CZE5mfI-`,
+  nt = `lJc7R9Bil2I-`,
+  rt = `IS179RoYT1Q-`,
+  it = `SZeormjSwYo-`,
   G = 258;
 function K(e, t) {
   return Y(e, t).every((e) => e === 1);
 }
 function q(e) {
   let t = !1,
-    n = O(e);
+    n = A(e);
   return (
     n && (t = [`dlc`, `dlc_onsale`, `dlc_music_onsale`].includes(n)),
     !!(t || e.show_parent_app)
   );
 }
 function J(e, t) {
-  if (T(e)) return 0;
-  let n = E(e);
+  if (D(e)) return 0;
+  let n = O(e);
   return n <= 0 ? 0 : n + t;
 }
 function Y(e, t) {
@@ -310,18 +311,18 @@ function Y(e, t) {
               e.capsule_style_per_row_array?.length > n
                 ? e.capsule_style_per_row_array[n]
                 : `grid`;
-            return Oe(t, 1, r == `tall` ? 4 : 3);
+            return ke(t, 1, r == `tall` ? 4 : 3);
           })
         : e.capsules_per_row_array
       : e.adaptive_capsules_per_row
         ? t
           ? [2, 3]
           : [2, 3, 4, 3]
-        : [Oe(e.capsules_per_row || 1, 1, t ? 3 : 5) || 1];
+        : [ke(e.capsules_per_row || 1, 1, t ? 3 : 5) || 1];
 }
-function it(e, t, n) {
+function at(e, t, n) {
   let r = Y(e, n),
-    i = T(e) ? te(e) : J(e, t),
+    i = D(e) ? k(e) : J(e, t),
     a = 0;
   for (let e = 0; e < i; e++) a += r[e % r.length];
   return a;
@@ -333,25 +334,25 @@ function X(e, t) {
       ? [`fullrow`]
       : [`grid`];
 }
-function at(e, t) {
+function ot(e, t) {
   let { saleEvent: n, language: r, index: i, section: a } = t;
   return (0, B.jsx)(
-    zt,
+    Vt,
     {
       link: e,
       language: r,
       clanAccountID: n.clanSteamID.GetAccountID(),
-      strClassName: C,
+      strClassName: T,
     },
     a.unique_id + `_` + i,
   );
 }
-var ot = z.createContext(void 0);
-function st(e) {
-  let t = z.useContext(ot)?.(e.capsule);
-  return t === void 0 ? (0, B.jsx)(ye, { ...e }) : t;
+var st = z.createContext(void 0);
+function ct(e) {
+  let t = z.useContext(st)?.(e.capsule);
+  return t === void 0 ? (0, B.jsx)(xe, { ...e }) : t;
 }
-function ct(e, t) {
+function lt(e, t) {
   let {
     capsuleStyle: n,
     index: r,
@@ -359,23 +360,23 @@ function ct(e, t) {
     saleEvent: a,
     rowElements: o,
   } = t;
-  if (j(e)) return null;
+  if (ie(e)) return null;
   let s = q(i),
     c = a.BUseSubscriptionLayout(),
-    l = T(i) && !t.bIsSingleCapsule,
-    u = We(i, t.activeTab),
-    f = i.unique_id + `_` + r + `_` + e.type + `_` + e.id;
+    l = D(i) && !t.bIsSingleCapsule,
+    u = Ge(i, t.activeTab),
+    d = i.unique_id + `_` + r + `_` + e.type + `_` + e.id;
   if (n !== `fullrow`) {
-    let a = I(l && `FolDBzXMW2I-`, l && n === `tall` && `E6LHQcm-39c-`);
+    let a = F(l && `FolDBzXMW2I-`, l && n === `tall` && `E6LHQcm-39c-`);
     return (0, B.jsx)(
       `div`,
       {
         className: a,
         children: (0, B.jsx)(
-          st,
+          ct,
           {
             imageType: n === `tall` ? `library` : `header`,
-            navKey: f,
+            navKey: d,
             capsule: e,
             bShowParentApp: s,
             bUseSubscriptionLayout: c,
@@ -388,14 +389,14 @@ function ct(e, t) {
             bPreferAssetWithoutOverride: !!i.prefer_assets_without_overrides,
             eHardwareCompatibilityDisplay: u,
           },
-          f,
+          d,
         ),
       },
-      f,
+      d,
     );
   }
   {
-    let n = i.single_item_style ? i.single_item_style : D,
+    let n = i.single_item_style ? i.single_item_style : ee,
       a;
     (`overrideNavigation` in e &&
       (a = (t) => (
@@ -404,11 +405,11 @@ function ct(e, t) {
         !1
       )),
       M() && (n == `library` || n == `animated`) && (n = `bordered`));
-    let o = I({
-      [d]: !l && n == `bordered`,
-      [b]: l && n == `bordered`,
-      [_]: l && n == `animated`,
-      [be + r]: r === 0,
+    let o = F({
+      [f]: !l && n == `bordered`,
+      [C]: l && n == `bordered`,
+      [x]: l && n == `animated`,
+      [Se + r]: r === 0,
     });
     return (0, B.jsx)(
       `div`,
@@ -429,48 +430,50 @@ function ct(e, t) {
           bPreferAssetWithoutOverride: !!i.prefer_assets_without_overrides,
         }),
       },
-      f,
+      d,
     );
   }
 }
-function lt(e, t, n, r, i, a, o, s, c) {
+function ut(e, t, n, r, i, a, o, s, c, l) {
   let {
-    RenderEvent: l,
-    RenderEventSummary: u,
-    RenderItemDef: d,
-    RenderLoyaltyReward: f,
-    RenderCuratorList: p,
+    RenderEvent: u,
+    RenderEventSummary: d,
+    RenderItemDef: f,
+    RenderLoyaltyReward: p,
+    RenderCuratorList: m,
   } = c || {};
   return e.section_type === `events` || e.section_type === `sale_events`
-    ? i && u
-      ? i.map((e) => ({ Render: (t) => u(e, t) }))
-      : !r || !l
+    ? i && d
+      ? i.map((e) => ({ Render: (t) => d(e, t) }))
+      : !r || !u
         ? []
-        : r.filter((e) => !!e).map((e) => ({ Render: (t) => l(e, t) }))
+        : r.filter((e) => !!e).map((e) => ({ Render: (t) => u(e, t) }))
     : e.section_type === `links` ||
         e.section_type === `title_image` ||
-        O(e) === `sale_tabhub`
+        A(e) === `sale_tabhub`
       ? (e.section_type === `title_image` &&
           e.title_image_selected === `title`) ||
         !n
         ? []
-        : n.map((e) => ({ Render: (t) => at(e, t) }))
-      : ne(e.section_type)
+        : n.map((e) => ({ Render: (t) => ot(e, t) }))
+      : te(e.section_type)
         ? t
-          ? t.filter((e) => !j(e)).map((e) => ({ Render: (t) => ct(e, t) }))
+          ? t
+              .filter((e) => !ie(e))
+              .map((e) => ({ Render: (t) => lt(e, t), bNoTallArt: l?.(e) }))
           : []
         : e.section_type === `itemdef`
-          ? !a || !d
+          ? !a || !f
             ? []
-            : a.map((e) => ({ Render: (t) => d(e, t) }))
+            : a.map((e) => ({ Render: (t) => f(e, t) }))
           : e.section_type === `point_shop_smart`
-            ? !o || !f
+            ? !o || !p
               ? []
-              : o.map((e) => ({ Render: (t) => f(e, t) }))
+              : o.map((e) => ({ Render: (t) => p(e, t) }))
             : e.section_type === `creator_list_of_lists`
-              ? !s || !p
+              ? !s || !m
                 ? []
-                : s.map((e) => ({ Render: (t) => p(e, t) }))
+                : s.map((e) => ({ Render: (t) => m(e, t) }))
               : [];
 }
 function Z(e, t) {
@@ -479,8 +482,8 @@ function Z(e, t) {
 function Q(e, t) {
   return e === `tall` ? t + 1 : t;
 }
-var ut = 3;
-function dt(e, t, n, r, i, a, o, s, c, l) {
+var dt = 3;
+function ft(e, t, n, r, i, a, o, s, c, l) {
   let {
     nMaxCapsulesPerRow: u,
     bScreenIsWide: d,
@@ -493,15 +496,15 @@ function dt(e, t, n, r, i, a, o, s, c, l) {
     bDropShortLastCarouselPage: v,
   } = t;
   if (n.length === 0) return { content: null, bAdditionalContent: !1 };
-  let y = n.length === 1,
-    b = (e, t, n, r, i) => {
+  let b = n.length === 1,
+    x = (e, t, n, r, i) => {
       let a = [];
       for (let o = t; o < n; o++) {
         let t = {
             capsuleStyle: i,
             index: o,
             rowElements: r,
-            bIsSingleCapsule: y,
+            bIsSingleCapsule: b,
             ...s,
           },
           n = e[o].Render(t);
@@ -509,46 +512,54 @@ function dt(e, t, n, r, i, a, o, s, c, l) {
       }
       return a;
     },
-    x = null,
-    S = !1,
-    C = y ? [1] : r,
-    w = i,
-    T = n.length;
+    S = null,
+    C = !1,
+    w = b ? [1] : r,
+    T = i,
+    E = n.length;
   (_ &&
   d &&
-  T > 1 &&
-  T <= Math.min(4, u) &&
-  (T < C[0] || (T > C[0] && (!p || a > 1)))
-    ? ((C = [T]), (w = [`grid`]))
+  E > 1 &&
+  E <= Math.min(4, u) &&
+  (E < w[0] || (E > w[0] && (!p || a > 1)))
+    ? ((w = [E]), (T = [`grid`]))
     : _ &&
       d &&
       p &&
       a > 1 &&
-      T > C[0] &&
-      T < ft(C, w, a, u, d) &&
-      (C = Array.from({ length: a }, (e, t) => Math.floor((T + t) / a))),
-    y && (u > 1 || w[0] == `tall`)
-      ? (w = [`fullrow`])
-      : _ && n.length === 2 && w[0] === `tall` && (w = [`grid`]));
-  let E = p && (a <= 1 || (!!_ && !d)),
-    D = Math.min(C[0], u);
-  if (p && v) {
-    let e = E ? D : ft(C, w, a, u, d);
-    n = pt(n, e, !E);
+      E > w[0] &&
+      E < pt(w, T, a, u, d) &&
+      (w = Array.from({ length: a }, (e, t) => Math.floor((E + t) / a))),
+    b && (u > 1 || T[0] == `tall`)
+      ? (T = [`fullrow`])
+      : _ && n.length === 2 && T[0] === `tall` && (T = [`grid`]));
+  let D = p && (a <= 1 || (!!_ && !d)),
+    O = Math.min(w[0], u);
+  if (
+    (D &&
+      !c &&
+      T.every((e) => e === `tall`) &&
+      n.length > O &&
+      n.some((e) => e.bNoTallArt) &&
+      (n = ht(n, d ? O : void 0)),
+    p && v)
+  ) {
+    let e = D ? O : pt(w, T, a, u, d);
+    n = mt(n, e, !D);
   }
-  if (E && n.length > D)
-    x = (0, z.createElement)(
-      F,
+  if (D && n.length > O)
+    S = (0, z.createElement)(
+      P,
       {
         ...t,
         key: g,
         hideArrows: !d,
-        visibleElements: D,
-        className: I({
+        visibleElements: O,
+        className: F({
           SaleSectionCarousel: !0,
           SaleSectionCarouselPadding: !l,
-          ItemCount_4: C[0] == 4,
-          [nt]:
+          ItemCount_4: w[0] == 4,
+          [rt]:
             t && t.section && t.section.section_type == `creator_list_of_lists`,
         }),
         useTestScrollbar: !0,
@@ -560,17 +571,17 @@ function dt(e, t, n, r, i, a, o, s, c, l) {
         navKey: e,
         lazyRenderPlaceholderWidth: G,
       },
-      b(n, 0, n.length, D, Z(0, w)),
+      x(n, 0, n.length, O, Z(0, T)),
     );
   else {
     let e = o(f),
       r = !0;
-    if (p) ((e = a), (r = E));
+    if (p) ((e = a), (r = D));
     else if (f == 0 && e > 0) {
       let t = 0,
         r = 0;
       for (; t < e && r < n.length; t++) {
-        let e = Math.min(C[t % C.length], u);
+        let e = Math.min(w[t % w.length], u);
         r += e;
       }
       e = Math.max(2, t);
@@ -579,11 +590,11 @@ function dt(e, t, n, r, i, a, o, s, c, l) {
       s = [],
       l = 0;
     for (let t = 0; l < n.length; t++) {
-      let a = Z(0, w);
+      let a = Z(0, T);
       for (let t = 0; (e == 0 || t < e) && l < n.length; t++) {
-        (t == 0 || d) && (a = Z(t, w));
+        (t == 0 || d) && (a = Z(t, T));
         let e = Q(a, u),
-          r = Math.min(C[t % C.length], e),
+          r = Math.min(w[t % w.length], e),
           i = Math.min(r, n.length - l);
         if (i < r && t === 0) {
           if (h) return { content: null, bAdditionalContent: !1 };
@@ -591,8 +602,8 @@ function dt(e, t, n, r, i, a, o, s, c, l) {
         }
         (s.push(
           (0, B.jsx)(
-            ht,
-            { nMaxItems: r, nItems: i, children: b(n, l, l + i, r, a) },
+            _t,
+            { nMaxItems: r, nItems: i, children: x(n, l, l + i, r, a) },
             `Row_` + t,
           ),
         ),
@@ -603,24 +614,21 @@ function dt(e, t, n, r, i, a, o, s, c, l) {
       (i.push(
         (0, B.jsx)(
           `div`,
-          {
-            className: ee,
-            children: (0, B.jsx)(Pe, { depth: o, children: s }),
-          },
+          { className: y, children: (0, B.jsx)(Fe, { depth: o, children: s }) },
           `Page_${t}`,
         ),
       ),
         (s = []));
     }
     i.length == 0
-      ? ((S = n.length > l),
-        (x = (0, B.jsx)(De, {
+      ? ((C = n.length > l),
+        (S = (0, B.jsx)(I, {
           "flow-children": `grid`,
           focusable: !1,
           children: s,
         })))
-      : (x = (0, z.createElement)(
-          F,
+      : (S = (0, z.createElement)(
+          P,
           {
             ...t,
             key: g,
@@ -636,9 +644,9 @@ function dt(e, t, n, r, i, a, o, s, c, l) {
           i,
         ));
   }
-  return { content: x, bAdditionalContent: S };
+  return { content: S, bAdditionalContent: C };
 }
-function ft(e, t, n, r, i) {
+function pt(e, t, n, r, i) {
   let a = 0;
   for (let o = 0; o < n; o++) {
     let n = Z(i ? o : 0, t);
@@ -646,13 +654,51 @@ function ft(e, t, n, r, i) {
   }
   return a;
 }
-function pt(e, t, n) {
+function mt(e, t, n) {
   if (e.length <= t) return e;
-  let r = n ? t - 1 : Math.min(t - 2, ut),
+  let r = n ? t - 1 : Math.min(t - 2, dt),
     i = e.length % t;
   return i === 0 || i > r ? e : e.slice(0, e.length - i);
 }
-function mt(e) {
+function ht(e, t) {
+  let n = [];
+  for (let t = 0; t < e.length; t++) {
+    let r = e[t],
+      i = r.bNoTallArt ? e[t + 1] : void 0;
+    i
+      ? (t++,
+        n.push({
+          column: {
+            Render: (e) =>
+              (0, B.jsxs)(
+                `div`,
+                {
+                  className: o,
+                  children: [
+                    r.Render({ ...e, capsuleStyle: `grid` }),
+                    i.Render({ ...e, capsuleStyle: `grid` }),
+                  ],
+                },
+                `HalfColumn_` + e.index,
+              ),
+          },
+          bHalf: !0,
+        }))
+      : n.push({ column: r, bHalf: !1 });
+  }
+  if (!t) return n.map((e) => e.column);
+  let r = n.length > t ? n.length - (n.length % t) : n.length,
+    i = [];
+  for (let e = 0; e < r; e += t)
+    i.push(
+      ...n
+        .slice(e, e + t)
+        .sort((e, t) => Number(e.bHalf) - Number(t.bHalf))
+        .map((e) => e.column),
+    );
+  return i;
+}
+function gt(e) {
   let {
     saleEvent: t,
     section: n,
@@ -663,11 +709,11 @@ function mt(e) {
   (n.carousel_rows || 0) > 1 &&
     (i && (n.carousel_rows = 1),
     (i ||
-      (!k(n) &&
+      (!j(n) &&
         n.capsules_per_row_array?.length &&
         n.capsules_per_row_array[0] >= (n.capsules?.length || 0))) &&
       (n.carousel_rows = 1));
-  let o = lt(
+  let o = ut(
     n,
     e.capsules,
     e.links,
@@ -677,17 +723,18 @@ function mt(e) {
     e.rewards,
     e.curatorLists,
     e.renderers,
+    e.fnBCapsuleHasNoTallArt,
   );
   if (o.length === 0) return { content: null, bAdditionalContent: !1 };
   let s = Y(n, i),
     c = X(n, i),
-    l = te(n),
+    l = k(n),
     u = (e) => J(n, e),
     d = { section: n, saleEvent: t, language: r, activeTab: a },
-    f = { ...e, strCarouselKey: w(a?.GetTagSelection()) };
-  return dt(n.unique_id, f, o, s, c, l, u, d, i);
+    f = { ...e, strCarouselKey: E(a?.GetTagSelection()) };
+  return ft(n.unique_id, f, o, s, c, l, u, d, i);
 }
-var ht = (e) => {
+var _t = (e) => {
   let { nMaxItems: t, nItems: n } = e,
     r = t - n,
     i = r % 2 == 0 ? `repeat(${t}, 1fr)` : `0.5fr repeat(${t - 1}, 1fr) 0.5fr`,
@@ -701,9 +748,9 @@ var ht = (e) => {
         o.push((0, B.jsx)(`div`, {}, `back_` + t)));
   }
   return (0, B.jsxs)(`div`, {
-    className: I(
-      me,
-      h,
+    className: F(
+      ge,
+      v,
       `SaleSectionContainer`,
       `center_row_trgt`,
       `ItemCount_` + t,
@@ -712,16 +759,16 @@ var ht = (e) => {
     children: [a, e.children, o],
   });
 };
-function gt(e) {
+function vt(e) {
   let { section: t, nMaxCapsulesPerRow: n, bInGamepadUI: r } = e,
     i = Z(0, X(t, r)),
     a = Math.min(Y(t, r)[0], Q(i, n)),
-    o = I(
-      rt,
+    o = F(
+      it,
       i === `tall` && `_9Xrgw1NkKg8-`,
       i === `fullrow` && `hbaqi-sk8nE-`,
     );
-  return (0, B.jsx)(ht, {
+  return (0, B.jsx)(_t, {
     nMaxItems: a,
     nItems: a,
     children: Array.from({ length: a }, (e, t) =>
@@ -729,75 +776,75 @@ function gt(e) {
     ),
   });
 }
-function _t(e) {
+function yt(e) {
   let {
       event: t,
       section: n,
       language: r,
       bInGamepadUI: o,
       placeholderHeight: s,
-      nHiddenCapsules: l,
+      nHiddenCapsules: c,
       personalizedCarousels: d,
-      children: m,
+      children: f,
     } = e,
-    [h, ee] = z.useState(void 0),
-    g = $(t, n),
-    _ = o && !!g && !h,
-    { bShowSeeMoreHint: v, panelProps: b } = se(_ ? g : h, `X`);
-  return (0, B.jsxs)(ve, {
+    [m, h] = z.useState(void 0),
+    _ = $(t, n),
+    v = o && !!_ && !m,
+    { bShowSeeMoreHint: y, panelProps: b } = ce(v ? _ : m, `X`);
+  return (0, B.jsxs)(be, {
     placeholderHeight: s,
-    className: I({
+    className: F({
       [a]: !0,
-      [f]: T(n),
-      [p]: n.disable_background,
-      [_e]: !0,
+      [p]: D(n),
+      [g]: n.disable_background,
+      [ye]: !0,
       SaleSectionForCustomCSS: !0,
       [n.sale_section_classname || ``]: !!n.sale_section_classname,
       [void 0]: n.background_repeat == `coverBlur`,
     }),
-    rootMargin: ce,
+    rootMargin: le,
     holdGamepadFocus: o,
     ...b,
     children: [
       (0, B.jsx)(`div`, {
-        className: I(ge, n.background_repeat == `coverBlur` ? he : ``),
+        className: F(ve, n.background_repeat == `coverBlur` ? _e : ``),
         style: u(n, t, o),
       }),
       (0, B.jsxs)(`div`, {
-        className: c,
+        className: l,
         children: [
           (0, B.jsx)(i, {
             section: n,
             event: t,
             language: r,
-            nHiddenCapsules: l,
+            nHiddenCapsules: c,
             personalizedCarousels: d,
-            bShowSeeMoreHint: v,
+            bShowSeeMoreHint: y,
             bUseGamepadLinkHint: !0,
             eGamepadLinkHintButton: `X`,
-            onLinkResolved: (e) => ee(e ?? void 0),
+            onLinkResolved: (e) => h(e ?? void 0),
           }),
-          _
-            ? (0, B.jsx)(ae, {
+          v
+            ? (0, B.jsx)(oe, {
                 label: L(`#EventBrowse_AllEventsBtn`),
-                shown: v,
+                shown: y,
                 button: `X`,
               })
-            : (0, B.jsx)(vt, { event: t, section: n }),
+            : (0, B.jsx)(bt, { event: t, section: n }),
         ],
       }),
-      m,
-      (0, B.jsx)(y, { section: n }),
+      f,
+      (0, B.jsx)(S, { section: n }),
     ],
   });
 }
-function vt(e) {
+function bt(e) {
   let t = $(e.event, e.section);
   return t
     ? (0, B.jsx)(`div`, {
-        className: g,
-        children: (0, B.jsx)(we, {
-          onClick: (e) => Ee(e, t),
+        className: b,
+        children: (0, B.jsx)(Ee, {
+          onClick: (e) => Oe(e, t),
           children: L(`#EventBrowse_AllEventsBtn`),
         }),
       })
@@ -807,14 +854,14 @@ function $(e, t) {
   let n = z.useMemo(
     () =>
       t.section_type == `events`
-        ? Re(`ch_newshub`, `application_config`)
+        ? ze(`ch_newshub`, `application_config`)
         : void 0,
     [t.section_type],
   );
   if (t.hide_view_all_events_link) return;
   let r = null;
   if (t.section_type == `events`) {
-    if (!n || !e.BUsesContentHubForItemSource() || !k(t)) return;
+    if (!n || !e.BUsesContentHubForItemSource() || !j(t)) return;
     r = R.STORE_BASE_URL + `news/` + n;
   } else
     t.section_type == `sale_events`
@@ -823,21 +870,21 @@ function $(e, t) {
         (r = R.STORE_BASE_URL + `personalcalendar`);
   return r ?? void 0;
 }
-function yt(e) {
+function xt(e) {
   let { saleEvent: t, section: n, bInGamepadUI: r } = e,
     i = {
       ...e,
-      bShowAsCarousel: T(n),
+      bShowAsCarousel: D(n),
       bAutoAdvance: !!n.carousel_auto_advance,
       bHideIfTooFewItems: !!n.hide_section_if_too_few_items,
-      ...A(t.jsondata),
+      ...re(t.jsondata),
     },
     a = U(n, i.nShowAdditionalRows),
     o = H(Y(n, r), a, i.capsules?.length ?? 0);
-  return (o < a && k(n) && (i.nShowAdditionalRows -= a - o), i);
+  return (o < a && j(n) && (i.nShowAdditionalRows -= a - o), i);
 }
-var bt = `NQebVMQULto-`;
-function xt(e) {
+var St = `NQebVMQULto-`;
+function Ct(e) {
   let {
       section: t,
       nRowsWithNext: n,
@@ -848,22 +895,22 @@ function xt(e) {
     } = e,
     s = H(i, n, r) < n;
   return (0, B.jsx)(`div`, {
-    className: I(bt, `ShowContentsContainer`),
+    className: F(St, `ShowContentsContainer`),
     children: a
-      ? (0, B.jsx)(fe, { size: `small`, string: L(`#Loading`) })
+      ? (0, B.jsx)(pe, { size: `small`, string: L(`#Loading`) })
       : !s &&
         t.cap_section_content &&
-        (0, B.jsx)(je, {
+        (0, B.jsx)(Me, {
           onClick: o,
-          className: I(`XQ46KRNpLMk-`, `ShowContentsButton`),
+          className: F(`XQ46KRNpLMk-`, `ShowContentsButton`),
           children: L(`#Sale_ShowMore`),
         }),
   });
 }
-function St(e) {
+function wt(e) {
   return Math.max(U(e, 0), 4);
 }
-var Ct = {
+var Tt = {
   1: `salesmartdiscountreason-wishlist`,
   2: `salesmartdiscountreason-firsttimeonsale`,
   3: `salesmartdiscountreason-largestdiscount`,
@@ -876,11 +923,11 @@ var Ct = {
   10: `salesmartdiscountreason-popularinregion`,
   11: `salesmartdiscountreason-justupdated`,
 };
-function wt(e, t, n = ``, r = 0) {
+function Et(e, t, n = ``, r = 0) {
   if (e.enable_faceted_browsing && r > 0)
     return { feature: `salefacetbrowse` + n, depth: r };
-  if (k(e) && e.section_type != `crosspromotesalepage`) {
-    let r = O(e);
+  if (j(e) && e.section_type != `crosspromotesalepage`) {
+    let r = A(e);
     if (r)
       switch (r) {
         case `wishlist`:
@@ -904,12 +951,12 @@ function wt(e, t, n = ``, r = 0) {
         case `personalized_carousel`:
           return {
             feature: `salesmartpersonalizedcarousel` + n,
-            depth: s(e, t).nSectionIndex,
+            depth: c(e, t).nSectionIndex,
           };
         case `discount_reason`: {
           let t = e.smart_section_discount_reason;
           return {
-            feature: ((t !== void 0 && Ct[t]) || `salesmartdiscountreason`) + n,
+            feature: (t !== void 0 && Tt[t]) || `salesmartdiscountreason`,
           };
         }
         case `tag`:
@@ -951,12 +998,12 @@ function wt(e, t, n = ``, r = 0) {
       return { feature: `crosspromotesalepage` + n };
     case `vo_internal`:
       if (e.internal_section_data?.internal_type === `just_updated`)
-        return { feature: Ct[11] + n };
+        return { feature: Tt[11] ?? `salesmartdiscountreason` };
   }
   return { feature: `salesection` + n };
 }
-var Tt = `partnereventaction/eventsummary`;
-function Et(e) {
+var Dt = `partnereventaction/eventsummary`;
+function Ot(e) {
   let t = new URLSearchParams();
   return (
     t.set(`clan_account_id`, String(e.clanAccountID)),
@@ -965,8 +1012,8 @@ function Et(e) {
     t.toString()
   );
 }
-var Dt = `partnereventaction/eventsummaries`;
-function Ot(e) {
+var kt = `partnereventaction/eventsummaries`;
+function At(e) {
   let t = new Map();
   for (let n of e)
     t.has(n.strEventGID) ||
@@ -980,72 +1027,72 @@ function Ot(e) {
       (e.strEventGID < t.strEventGID ? -1 : +(e.strEventGID > t.strEventGID)),
   );
 }
-function kt(e) {
-  return Ot(e)
+function jt(e) {
+  return At(e)
     .map((e) => `${e.clanAccountID}:${e.strEventGID}`)
     .join(`,`);
 }
-function At(e) {
+function Mt(e) {
   let t = new URLSearchParams();
   return (
-    t.set(`events`, kt(e.rgEvents)),
+    t.set(`events`, jt(e.rgEvents)),
     t.set(`language`, String(e.eLanguage)),
     t.toString()
   );
 }
-async function jt(e) {
-  let t = `${Ie.STORE_BASE_URL}${Tt}?${Et(e)}`,
+async function Nt(e) {
+  let t = `${Le.STORE_BASE_URL}${Dt}?${Ot(e)}`,
     n = await fetch(t);
   if (!n.ok) throw Error(`${t} answered ${n.status}`);
   let r = await n.json();
   if (r?.success !== 1) throw Error(`${t} answered EResult ${r?.success}`);
   return r.summary ?? null;
 }
-async function Mt(e) {
+async function Pt(e) {
   if (e.rgEvents.length === 0) return [];
-  let t = `${Ie.STORE_BASE_URL}${Dt}?${At(e)}`,
+  let t = `${Le.STORE_BASE_URL}${kt}?${Mt(e)}`,
     n = await fetch(t);
   if (!n.ok) throw Error(`${t} answered ${n.status}`);
   let r = await n.json();
   if (r?.success !== 1) throw Error(`${t} answered EResult ${r?.success}`);
   return r.summaries ?? [];
 }
-function Nt(e, t, n) {
+function Ft(e, t, n) {
   return [`PartnerEventSummary`, e, t, n];
 }
-function Pt(e, t) {
+function It(e, t) {
   return {
-    queryKey: Nt(e.clanAccountID, e.strEventGID, e.eLanguage),
-    queryFn: () => jt(e),
+    queryKey: Ft(e.clanAccountID, e.strEventGID, e.eLanguage),
+    queryFn: () => Nt(e),
     select: t,
     staleTime: 6e5,
   };
 }
-function Ft(e) {
-  return [`PartnerEventSummaries`, e.eLanguage, kt(e.rgEvents)];
-}
-function It(e) {
-  return { queryKey: Ft(e), queryFn: () => Mt(e), staleTime: 3e5 };
-}
 function Lt(e) {
+  return [`PartnerEventSummaries`, e.eLanguage, jt(e.rgEvents)];
+}
+function Rt(e) {
+  return { queryKey: Lt(e), queryFn: () => Pt(e), staleTime: 3e5 };
+}
+function zt(e) {
   let { event: t, section: n, rgSlides: r, onSlide: i, onNavIntent: o } = e,
-    s = Me(),
-    { bScreenIsWide: c } = le(n.section_type);
+    s = Ne(),
+    { bScreenIsWide: c } = ue(n.section_type);
   return r.length === 0
     ? null
     : r.length === 1
       ? (0, B.jsx)(B.Fragment, { children: r[0] })
       : !c || s
         ? (0, B.jsx)(`div`, {
-            className: Se,
+            className: we,
             children: r.map((e, t) =>
-              (0, B.jsx)(Rt, { nSlide: t, onSlide: i, children: e }, t),
+              (0, B.jsx)(Bt, { nSlide: t, onSlide: i, children: e }, t),
             ),
           })
         : (0, B.jsx)(`div`, {
-            className: I(a, xe),
-            children: (0, B.jsx)(F, {
-              ...A(t.jsondata),
+            className: F(a, Ce),
+            children: (0, B.jsx)(P, {
+              ...re(t.jsondata),
               visibleElements: 1,
               screenIsWide: !0,
               useTestScrollbar: !0,
@@ -1056,63 +1103,63 @@ function Lt(e) {
             }),
           });
 }
-function Rt(e) {
+function Bt(e) {
   let { nSlide: t, onSlide: n, children: r } = e,
-    i = Ne({ onEnter: () => n?.(t) });
+    i = Pe({ onEnter: () => n?.(t) });
   return (0, B.jsx)(`div`, { ref: i, children: r });
 }
-function zt(e) {
+function Vt(e) {
   let { language: t, link: n } = e,
-    i = Ae(),
-    [a, s, c] = r(() => [
-      Ce.GetWithFallback(n.localized_link_capsule, t),
+    i = je(),
+    [a, o, c] = r(() => [
+      Te.GetWithFallback(n.localized_link_capsule, t),
       i ? n.sc_url : n.url,
       n.materialized_link_capsule,
     ]),
-    l = a ? re.GenerateURLFromHashAndExt(e.clanAccountID, a) : void 0;
-  return (0, B.jsx)(m, {
-    url: s,
+    l = a ? ne.GenerateURLFromHashAndExt(e.clanAccountID, a) : void 0;
+  return (0, B.jsx)(_, {
+    url: o,
     className: e.strClassName,
     bSkipForcingStoreLink: !1,
     bOpenInline: !!n.open_in_place,
     children: (0, B.jsxs)(`div`, {
-      className: I(x, e.link.url ? o : ``),
+      className: F(m, e.link.url ? s : ``),
       children: [
-        !!l && (0, B.jsx)(ue, { className: `_-4JZsb8K2FY-`, src: l }),
+        !!l && (0, B.jsx)(de, { className: `_-4JZsb8K2FY-`, src: l }),
         !!c &&
-          (0, B.jsx)(`img`, { className: `_-4JZsb8K2FY-`, src: c, alt: s }),
+          (0, B.jsx)(`img`, { className: `_-4JZsb8K2FY-`, src: c, alt: o }),
       ],
     }),
   });
 }
 export {
-  Ge as C,
-  He as D,
-  Ve as E,
-  ze as O,
+  Ke as C,
+  Ue as D,
+  He as E,
+  Be as O,
   W as S,
   U as T,
-  dt as _,
-  St as a,
-  tt as b,
-  _t as c,
-  it as d,
+  ft as _,
+  wt as a,
+  nt as b,
+  yt as c,
+  at as d,
   X as f,
-  gt as g,
-  mt as h,
-  wt as i,
-  Be as k,
+  vt as g,
+  gt as h,
+  Et as i,
+  Ve as k,
   q as l,
   J as m,
-  It as n,
-  xt as o,
+  Rt as n,
+  Ct as o,
   Y as p,
-  Pt as r,
-  yt as s,
-  Lt as t,
+  It as r,
+  xt as s,
+  zt as t,
   K as u,
-  ot as v,
-  Ke as w,
-  $e as x,
-  et as y,
+  st as v,
+  qe as w,
+  et as x,
+  tt as y,
 };

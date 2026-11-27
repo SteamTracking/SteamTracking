@@ -23,6 +23,7 @@ import {
   _,
   _,
   _,
+  _,
 } from "./chunk~6b8ddcaac8.js";
 import { _, _, _, _, _, _, _, _, _ } from "./chunk~f57d770d64.js";
 import { _ } from "./chunk~961c06e93e.js";
@@ -450,7 +451,7 @@ function _(_, _) {
     );
   }
 }
-function _(_, _, _, _, _, _, _, _, _) {
+function _(_, _, _, _, _, _, _, _, _, _) {
   let {
     RenderEvent: _,
     RenderEventSummary: _,
@@ -482,6 +483,7 @@ function _(_, _, _, _, _, _, _, _, _) {
         ? _
           ? _.filter((_) => !_(_)).map((_) => ({
               Render: (_) => _(_, _),
+              bNoTallArt: _?.(_),
             }))
           : []
         : _.section_type === `itemdef`
@@ -572,7 +574,15 @@ function _(_, _, _, _, _, _, _, _, _, _) {
       : _ && _.length === 2 && _[0] === `tall` && (_ = [`grid`]));
   let _ = _ && (_ <= 1 || (!!_ && !_)),
     _ = Math.min(_[0], _);
-  if (_ && _) {
+  if (
+    (_ &&
+      !_ &&
+      _.every((_) => _ === `tall`) &&
+      _.length > _ &&
+      _.some((_) => _.bNoTallArt) &&
+      (_ = _(_, _ ? _ : void 0)),
+    _ && _)
+  ) {
     let _ = _ ? _ : _(_, _, _, _, _);
     _ = _(_, _, !_);
   }
@@ -706,6 +716,52 @@ function _(_, _, _) {
     _ = _.length % _;
   return _ === 0 || _ > _ ? _ : _.slice(0, _.length - _);
 }
+function _(_, _) {
+  let _ = [];
+  for (let _ = 0; _ < _.length; _++) {
+    let _ = _[_],
+      _ = _.bNoTallArt ? _[_ + 1] : void 0;
+    _
+      ? (_++,
+        _.push({
+          column: {
+            Render: (_) =>
+              (0, _.jsxs)(
+                `div`,
+                {
+                  className: _,
+                  children: [
+                    _.Render({
+                      ..._,
+                      capsuleStyle: `grid`,
+                    }),
+                    _.Render({
+                      ..._,
+                      capsuleStyle: `grid`,
+                    }),
+                  ],
+                },
+                `HalfColumn_` + _.index,
+              ),
+          },
+          bHalf: !0,
+        }))
+      : _.push({
+          column: _,
+          bHalf: !1,
+        });
+  }
+  if (!_) return _.map((_) => _.column);
+  let _ = _.length > _ ? _.length - (_.length % _) : _.length,
+    _ = [];
+  for (let _ = 0; _ < _; _ += _)
+    _.push(
+      ..._.slice(_, _ + _)
+        .sort((_, _) => Number(_.bHalf) - Number(_.bHalf))
+        .map((_) => _.column),
+    );
+  return _;
+}
 function _(_) {
   let {
     saleEvent: _,
@@ -731,6 +787,7 @@ function _(_) {
     _.rewards,
     _.curatorLists,
     _.renderers,
+    _.fnBCapsuleHasNoTallArt,
   );
   if (_.length === 0)
     return {
@@ -1014,7 +1071,7 @@ function _(_, _, _ = ``, _ = 0) {
         case `discount_reason`: {
           let _ = _.smart_section_discount_reason;
           return {
-            feature: ((_ !== void 0 && _[_]) || `salesmartdiscountreason`) + _,
+            feature: (_ !== void 0 && _[_]) || `salesmartdiscountreason`,
           };
         }
         case `tag`:
@@ -1089,7 +1146,7 @@ function _(_, _, _ = ``, _ = 0) {
     case `vo_internal`:
       if (_.internal_section_data?.internal_type === `just_updated`)
         return {
-          feature: _[11] + _,
+          feature: _[11] ?? `salesmartdiscountreason`,
         };
   }
   return {

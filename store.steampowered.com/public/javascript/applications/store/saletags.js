@@ -917,7 +917,7 @@ function Xc(e) {
       case 8:
         g = `#ReviewScore_PercentPositive_series`;
     }
-  return (0, R.jsx)(aY, {
+  return (0, R.jsx)(oY, {
     url: m,
     className: F(Vc, `ReviewScore`),
     children:
@@ -942,7 +942,7 @@ function Qc(e) {
       bShowInGamepadUI: a,
     } = e,
     { data: o } = Wn(t),
-    { elDialogElement: s, fnShowLogonDialog: c } = LW(),
+    { elDialogElement: s, fnShowLogonDialog: c } = RW(),
     [l, u] = (0, z.useState)(() => {
       if (o && (o.type == 1 || o.type == 12) && o.related_items?.parent_appid)
         return o.related_items?.parent_appid;
@@ -23615,7 +23615,7 @@ function kV(e) {
             .filter((e) => e.tagid)
             .map((e) =>
               (0, R.jsx)(
-                kY,
+                AY,
                 { tagid: e.tagid, className: zc },
                 `tag_` + e.tagid,
               ),
@@ -23642,7 +23642,7 @@ function AV(e) {
       bPreventNavigation: m,
       bShowDescription: h,
     } = e,
-    g = uK(),
+    g = dK(),
     _ =
       d &&
       (() => {
@@ -23730,7 +23730,7 @@ function AV(e) {
               `appid` in t &&
               t.appid &&
               (0, R.jsx)(fH, { appid: t.appid, bIsMuted: !1 }),
-            p && (0, R.jsx)(VG, { nCreatorAccountID: p }),
+            p && (0, R.jsx)(HG, { nCreatorAccountID: p }),
           ],
         }),
       }),
@@ -23774,8 +23774,8 @@ function NV(e) {
         className: Cc,
         children: [
           !(!s || f) && (0, R.jsx)(Qc, { id: n, snr: e.strSNR }),
-          !(!c || f) && (0, R.jsx)(rG, { id: n, snr: e.strSNR }),
-          t && (0, R.jsx)(QG, { id: t }),
+          !(!c || f) && (0, R.jsx)(iG, { id: n, snr: e.strSNR }),
+          t && (0, R.jsx)($G, { id: t }),
         ],
       }),
       (0, R.jsx)(AV, { ...e }),
@@ -23814,7 +23814,7 @@ function PV(e) {
     b.item_type == 1 &&
     b.included_appids?.length == 1 &&
     (D = { appid: b.included_appids[0] });
-  let O = mK() == `hiding`,
+  let O = hK() == `hiding`,
     k;
   r || (k = v ?? (b ? T : void 0));
   let [, A] = ee(p, m),
@@ -23843,7 +23843,7 @@ function PV(e) {
     te = k && !v ? (0, R.jsx)(`a`, { href: k, children: u }) : u;
   return (0, R.jsxs)(R.Fragment, {
     children: [
-      (0, R.jsx)(dK, {
+      (0, R.jsx)(fK, {
         hoverContent: M,
         nWidthMultiplier: f,
         ...y,
@@ -25167,7 +25167,7 @@ function RH(e) {
       let e = r.type === 1 ? r.appid : i[0];
       return (0, R.jsx)(`div`, {
         className: n,
-        children: (0, R.jsx)(CY, { appid: e }),
+        children: (0, R.jsx)(wY, { appid: e }),
       });
     }
     return null;
@@ -25261,69 +25261,70 @@ function HH() {
   return z.useContext(VH) ?? ge();
 }
 var UH = t({
-    AlbumCoverImage: () => MU,
-    AlbumTitle: () => NU,
+    AlbumCoverImage: () => NU,
+    AlbumTitle: () => PU,
     AppSummaryWidgetCtn: () => dU,
     CarouselCapsuleAnimated: () => uU,
     CarouselCapsuleBordered: () => lU,
     CarouselDisplay: () => qH,
-    CarouselPage: () => GU,
+    CarouselPage: () => KU,
     CarouselSalePageCapsule: () => fU,
     CarouselSalePageCapsuleTall: () => pU,
-    CustomStyle_together: () => _U,
-    DefaultCreatorCtn: () => YU,
-    DesktopTabs: () => zU,
+    CustomStyle_together: () => vU,
+    DefaultCreatorCtn: () => XU,
+    DesktopTabs: () => BU,
     DisabledBackground: () => ZH,
-    EmptySectionPreview: () => DU,
-    EventSectionViewAllCtn: () => XU,
-    HorizontalScrollInDragForceCursor: () => UU,
+    EmptySectionPreview: () => OU,
+    EventSectionViewAllCtn: () => ZU,
+    HorizontalScrollInDragForceCursor: () => WU,
     Hover: () => rU,
     JumpToButton: () => oU,
     JumpToSection: () => aU,
     JumpedTo: () => iU,
-    LinkCapsule: () => OU,
+    LinkCapsule: () => kU,
     LoginButton: () => tU,
-    MobileTabSelector: () => FU,
-    MobileTabSelectorButton: () => LU,
-    MobileTabSelectorDropDown: () => BU,
-    MobileTabSelectorOption: () => VU,
-    MobileTabSelectorShortcut: () => RU,
+    MobileTabSelector: () => IU,
+    MobileTabSelectorButton: () => RU,
+    MobileTabSelectorDropDown: () => VU,
+    MobileTabSelectorOption: () => HU,
+    MobileTabSelectorShortcut: () => zU,
     NoTopPadding: () => YH,
-    SaleBackground: () => bU,
-    SaleBroadcastCtn: () => mU,
-    SaleBroadcastSection: () => WU,
+    SaleBackground: () => xU,
+    SaleBroadcastCtn: () => hU,
+    SaleBroadcastSection: () => GU,
     SaleHeaderContainer: () => XH,
-    SaleNewSizing: () => vU,
-    SaleOuterContainer: () => gU,
-    SaleOuterTopMargin: () => hU,
+    SaleNewSizing: () => yU,
+    SaleOuterContainer: () => _U,
+    SaleOuterTopMargin: () => gU,
     SaleOverlay: () => cU,
     SaleOverlayCtn: () => sU,
-    SalePageBroadcastContextHover: () => jU,
-    SalePageLogoSet: () => yU,
+    SalePageBroadcastContextHover: () => MU,
+    SalePageLogoSet: () => bU,
     SaleSection: () => KH,
-    SaleSectionBackgroundImageGroupEdit: () => ZU,
-    SaleSectionContainer: () => CU,
+    SaleSectionBackgroundImageGroupEdit: () => QU,
+    SaleSectionContainer: () => wU,
     SaleSectionCtn: () => JH,
     SaleSectionLivePreview: () => nU,
     SaleSectionLoginPrompt: () => eU,
-    SaleSectionSubtext: () => SU,
-    SaleSectionTabListContainer: () => PU,
+    SaleSectionSubtext: () => CU,
+    SaleSectionTabListContainer: () => FU,
     SaleSectionTabs: () => QH,
-    SaleSectionTitleCtn: () => xU,
-    SaleTabLabel: () => JU,
+    SaleSectionTitleCtn: () => SU,
+    SaleTabLabel: () => YU,
     SaleViewAll: () => $H,
-    TabButton: () => qU,
-    TabButtonsCtn: () => KU,
-    TabContentsContainer: () => HU,
-    Visible: () => IU,
-    default: () => QU,
+    TabButton: () => JU,
+    TabButtonsCtn: () => qU,
+    TabContentsContainer: () => UU,
+    TallHalfColumn: () => mU,
+    Visible: () => LU,
+    default: () => $U,
     "duration-app-launch": () => WH,
-    fullscreen_bg: () => kU,
-    fullscreen_bg_video: () => AU,
+    fullscreen_bg: () => AU,
+    fullscreen_bg_video: () => jU,
     narrowWidth: () => GH,
-    preview_placeholder_section: () => EU,
-    vr_required: () => TU,
-    vr_supported: () => wU,
+    preview_placeholder_section: () => DU,
+    vr_required: () => EU,
+    vr_supported: () => TU,
   }),
   WH = `800ms`,
   GH = `500px`,
@@ -25349,45 +25350,46 @@ var UH = t({
   dU = `zct4M8EzfNo-`,
   fU = `FolDBzXMW2I-`,
   pU = `E6LHQcm-39c-`,
-  mU = `_0pSO3K-0Hs4-`,
-  hU = `_9D3431c8-XE-`,
-  gU = `G-t-vlNhbRM-`,
-  _U = `BFlA7ucDxBk-`,
-  vU = `_5NaHSqwUb-k-`,
-  yU = `RG63SnOtLk0-`,
-  bU = `XuI82j9l9uk-`,
-  xU = `_29km0evCwsI-`,
-  SU = `pL8IDIWBDg8-`,
-  CU = `EbBLppwfKjc-`,
-  wU = `EGwn6tH7C3A-`,
-  TU = `p8u1MHwjP-M-`,
-  EU = `h-z1TiT2EHc-`,
-  DU = `lVRRRKgBwVY-`,
-  OU = `DH6P5MgdIW4-`,
-  kU = `v-DWOHY9-II-`,
-  AU = `tXTiGEi7jtU-`,
-  jU = `v2nIqzREAqo-`,
-  MU = `YWSh4uKYrRw-`,
-  NU = `rSkuhIlNBLw-`,
-  PU = `_9tUDGLmuFv4-`,
-  FU = `_4AjIhoHXOgI-`,
-  IU = `Q-Ikm9aXlIY-`,
-  LU = `j3KNKPgNrvY-`,
-  RU = `_0TmI5Lz4Zkc-`,
-  zU = `_6VXiW9d8-lQ-`,
-  BU = `t274EZYLkbA-`,
-  VU = `gni2wFLBcSk-`,
-  HU = `Rbv-UgEUoaw-`,
-  UU = `OvCIJMOKBQ8-`,
-  WU = `_0lI2wcrU0XU-`,
-  GU = `CuZwu-t3ukQ-`,
-  KU = `bevr-bUWbuk-`,
-  qU = `yedrb7j8BiU-`,
-  JU = `hAnG1YoY-8k-`,
-  YU = `u8sMh8Um98Q-`,
-  XU = `JuZBiq95wYE-`,
-  ZU = `oh4R-N9DrSA-`,
-  QU = {
+  mU = `NubQWsrpIbw-`,
+  hU = `_0pSO3K-0Hs4-`,
+  gU = `_9D3431c8-XE-`,
+  _U = `G-t-vlNhbRM-`,
+  vU = `BFlA7ucDxBk-`,
+  yU = `_5NaHSqwUb-k-`,
+  bU = `RG63SnOtLk0-`,
+  xU = `XuI82j9l9uk-`,
+  SU = `_29km0evCwsI-`,
+  CU = `pL8IDIWBDg8-`,
+  wU = `EbBLppwfKjc-`,
+  TU = `EGwn6tH7C3A-`,
+  EU = `p8u1MHwjP-M-`,
+  DU = `h-z1TiT2EHc-`,
+  OU = `lVRRRKgBwVY-`,
+  kU = `DH6P5MgdIW4-`,
+  AU = `v-DWOHY9-II-`,
+  jU = `tXTiGEi7jtU-`,
+  MU = `v2nIqzREAqo-`,
+  NU = `YWSh4uKYrRw-`,
+  PU = `rSkuhIlNBLw-`,
+  FU = `_9tUDGLmuFv4-`,
+  IU = `_4AjIhoHXOgI-`,
+  LU = `Q-Ikm9aXlIY-`,
+  RU = `j3KNKPgNrvY-`,
+  zU = `_0TmI5Lz4Zkc-`,
+  BU = `_6VXiW9d8-lQ-`,
+  VU = `t274EZYLkbA-`,
+  HU = `gni2wFLBcSk-`,
+  UU = `Rbv-UgEUoaw-`,
+  WU = `OvCIJMOKBQ8-`,
+  GU = `_0lI2wcrU0XU-`,
+  KU = `CuZwu-t3ukQ-`,
+  qU = `bevr-bUWbuk-`,
+  JU = `yedrb7j8BiU-`,
+  YU = `hAnG1YoY-8k-`,
+  XU = `u8sMh8Um98Q-`,
+  ZU = `JuZBiq95wYE-`,
+  QU = `oh4R-N9DrSA-`,
+  $U = {
     "duration-app-launch": `800ms`,
     narrowWidth: GH,
     SaleSection: KH,
@@ -25412,59 +25414,60 @@ var UH = t({
     AppSummaryWidgetCtn: dU,
     CarouselSalePageCapsule: fU,
     CarouselSalePageCapsuleTall: pU,
-    SaleBroadcastCtn: mU,
-    SaleOuterTopMargin: hU,
-    SaleOuterContainer: gU,
-    CustomStyle_together: _U,
-    SaleNewSizing: vU,
-    SalePageLogoSet: yU,
-    SaleBackground: bU,
-    SaleSectionTitleCtn: xU,
-    SaleSectionSubtext: SU,
-    SaleSectionContainer: CU,
-    vr_supported: wU,
-    vr_required: TU,
-    preview_placeholder_section: EU,
-    EmptySectionPreview: DU,
-    LinkCapsule: OU,
-    fullscreen_bg: kU,
-    fullscreen_bg_video: AU,
-    SalePageBroadcastContextHover: jU,
-    AlbumCoverImage: MU,
-    AlbumTitle: NU,
-    SaleSectionTabListContainer: PU,
-    MobileTabSelector: FU,
-    Visible: IU,
-    MobileTabSelectorButton: LU,
-    MobileTabSelectorShortcut: RU,
-    DesktopTabs: zU,
-    MobileTabSelectorDropDown: BU,
-    MobileTabSelectorOption: VU,
-    TabContentsContainer: HU,
-    HorizontalScrollInDragForceCursor: UU,
-    SaleBroadcastSection: WU,
-    CarouselPage: GU,
-    TabButtonsCtn: KU,
-    TabButton: qU,
-    SaleTabLabel: JU,
-    DefaultCreatorCtn: YU,
-    EventSectionViewAllCtn: XU,
-    SaleSectionBackgroundImageGroupEdit: ZU,
+    TallHalfColumn: mU,
+    SaleBroadcastCtn: hU,
+    SaleOuterTopMargin: gU,
+    SaleOuterContainer: _U,
+    CustomStyle_together: vU,
+    SaleNewSizing: yU,
+    SalePageLogoSet: bU,
+    SaleBackground: xU,
+    SaleSectionTitleCtn: SU,
+    SaleSectionSubtext: CU,
+    SaleSectionContainer: wU,
+    vr_supported: TU,
+    vr_required: EU,
+    preview_placeholder_section: DU,
+    EmptySectionPreview: OU,
+    LinkCapsule: kU,
+    fullscreen_bg: AU,
+    fullscreen_bg_video: jU,
+    SalePageBroadcastContextHover: MU,
+    AlbumCoverImage: NU,
+    AlbumTitle: PU,
+    SaleSectionTabListContainer: FU,
+    MobileTabSelector: IU,
+    Visible: LU,
+    MobileTabSelectorButton: RU,
+    MobileTabSelectorShortcut: zU,
+    DesktopTabs: BU,
+    MobileTabSelectorDropDown: VU,
+    MobileTabSelectorOption: HU,
+    TabContentsContainer: UU,
+    HorizontalScrollInDragForceCursor: WU,
+    SaleBroadcastSection: GU,
+    CarouselPage: KU,
+    TabButtonsCtn: qU,
+    TabButton: JU,
+    SaleTabLabel: YU,
+    DefaultCreatorCtn: XU,
+    EventSectionViewAllCtn: ZU,
+    SaleSectionBackgroundImageGroupEdit: QU,
   };
-function $U(e) {
+function eW(e) {
   let t = Br.GetELanguageFallback(e);
   return e == t ? `${e}` : `${e}_${t}`;
 }
-function eW(e) {
+function tW(e) {
   return e ? _e(new lr(e.clanSteamID64), e.event) : null;
 }
-async function tW(e, t) {
+async function nW(e, t) {
   let n = new URLSearchParams();
   (e.clanAccountID && n.set(`clan_accountid`, String(e.clanAccountID)),
     e.appid && n.set(`appid`, String(e.appid)),
     e.eventGID && n.set(`event_gid`, e.eventGID),
     e.announcementGID && n.set(`announcement_gid`, e.announcementGID),
-    n.set(`lang_list`, $U(t)),
+    n.set(`lang_list`, eW(t)),
     n.set(`last_modified_time`, `0`),
     n.set(`origin`, window.location.origin));
   let r = L.STORE_BASE_URL + `events/ajaxgetpartnerevent?` + n.toString(),
@@ -25475,7 +25478,7 @@ async function tW(e, t) {
     ? null
     : { clanSteamID64: a.event.clan_steamid, event: a.event };
 }
-function nW(e, t) {
+function rW(e, t) {
   return [
     `LinkedPartnerEvent`,
     e.clanAccountID,
@@ -25485,36 +25488,36 @@ function nW(e, t) {
     t,
   ];
 }
-function rW(e) {
+function iW(e) {
   return (
     !!e &&
     (!!e.clanAccountID || !!e.appid) &&
     (!!e.eventGID || !!e.announcementGID)
   );
 }
-function iW(e, t) {
-  let n = rW(e);
+function aW(e, t) {
+  let n = iW(e);
   return {
-    queryKey: nW(e ?? {}, t),
-    queryFn: () => tW(e ?? {}, t),
-    select: eW,
+    queryKey: rW(e ?? {}, t),
+    queryFn: () => nW(e ?? {}, t),
+    select: tW,
     enabled: n,
     staleTime: 36e5,
     retry: !1,
   };
 }
-function aW(e) {
-  let t = Be(L.LANGUAGE);
-  return p(iW(e, t));
-}
 function oW(e) {
+  let t = Be(L.LANGUAGE);
+  return p(aW(e, t));
+}
+function sW(e) {
   return e?.clan_steamid ? _e(new lr(e.clan_steamid), e) : null;
 }
-var sW = 100;
-async function cW(e, t) {
+var cW = 100;
+async function lW(e, t) {
   let n = new URLSearchParams();
   (n.set(`event_gids`, [...new Set(e)].sort().join(`,`)),
-    n.set(`lang_list`, $U(t)),
+    n.set(`lang_list`, eW(t)),
     n.set(`origin`, location.origin));
   let r =
       L.STORE_BASE_URL + `events/ajaxgetbatchedpartnerevent/?` + n.toString(),
@@ -25525,33 +25528,33 @@ async function cW(e, t) {
     o = new Map((a.events ?? []).map((e) => [e.gid, e]));
   return e.map((e) => o.get(e) ?? null);
 }
-function lW(e) {
+function uW(e) {
   return g(
     [`PublicPartnerEventBrowser`, e],
-    () => new SH.default((t) => cW(t, e), { maxBatchSize: sW, cache: !1 }),
+    () => new SH.default((t) => lW(t, e), { maxBatchSize: cW, cache: !1 }),
   );
 }
-function uW(e, t) {
+function dW(e, t) {
   return [`PublicPartnerEvent`, e, t];
 }
-function dW(e, t, n) {
+function fW(e, t, n) {
   return {
-    queryKey: uW(e, t),
-    queryFn: async () => (n ? n.load(e) : (await cW([e], t))[0]),
-    select: oW,
+    queryKey: dW(e, t),
+    queryFn: async () => (n ? n.load(e) : (await lW([e], t))[0]),
+    select: sW,
     enabled: !!e,
     staleTime: 6e5,
   };
 }
-function fW(e) {
+function pW(e) {
   let t = Be(L.LANGUAGE),
-    n = lW(t);
-  return p(dW(e, t, n));
+    n = uW(t);
+  return p(fW(e, t, n));
 }
-function pW(e, t, n) {
-  return ZJ(t, e, n)?.strTagName || void 0;
+function mW(e, t, n) {
+  return QJ(t, e, n)?.strTagName || void 0;
 }
-function mW(e, t, n, r) {
+function hW(e, t, n, r) {
   let i = n == 1 || n == 3 || n == 4,
     a = () => {
       let t = Te(e.smart_section_creator_listid);
@@ -25573,19 +25576,19 @@ function mW(e, t, n, r) {
         return `#Sale_TopPlayedOnDeckSection`;
       case `personalized_carousel`:
         if (i) {
-          let { nSectionIndex: n, nNumSections: r } = lq(e, t);
+          let { nSectionIndex: n, nNumSections: r } = uq(e, t);
           return I(`#Sale_PersonalizedCarousel_Section_Editor_title`, n + 1, r);
         }
-        let o = pW(e, t, r);
+        let o = mW(e, t, r);
         if (!o && n == 2) {
-          let { nSectionIndex: n, nNumSections: r } = lq(e, t);
+          let { nSectionIndex: n, nNumSections: r } = uq(e, t);
           return I(`#Sale_PersonalizedCarousel_Section_Editor_title`, n + 1, r);
         }
         return o ? I(`#Sale_PersonalizedCarousel_Section_title`, o) : null;
       case `creator_list`:
         return a();
       case `discount_reason`:
-        return EJ(e);
+        return DJ(e);
     }
   else if (e.section_type === `tabs`) return ``;
   else if (e.section_type === `curator`) {
@@ -25606,14 +25609,14 @@ function mW(e, t, n, r) {
   else if (e.section_type === `creator_list`) return a();
   return null;
 }
-function hW(e, t, n, r) {
-  let i = mW(e, t, n, r);
+function gW(e, t, n, r) {
+  let i = hW(e, t, n, r);
   return i === null ? null : i && i.startsWith(`#`) ? I(i) : i;
 }
-function gW(e, t, n, r, i, a, o, s) {
+function _W(e, t, n, r, i, a, o, s) {
   if (!e) return ``;
-  if (e.section_type === `crosspromotesalepage`) return VK(s, n);
-  let c = hW(e, t, i, o),
+  if (e.section_type === `crosspromotesalepage`) return HK(s, n);
+  let c = gW(e, t, i, o),
     l = ze.GetWithFallback(e.localized_label, n),
     u =
       c ||
@@ -25657,21 +25660,21 @@ function gW(e, t, n, r, i, a, o, s) {
   }
   return u;
 }
-function _W(e, t, n) {
+function vW(e, t, n) {
   if (b(e.section_type))
     switch (y(e)) {
       case `personalized_carousel`:
-        let r = pW(e, t, n);
+        let r = mW(e, t, n);
         return r ? I(`#Sale_PersonalizedCarousel_Section_subtitle`, r) : null;
       case `creator_list`:
         return Ce(e.smart_section_creator_listid) ?? null;
       case `discount_reason`:
-        return DJ(e);
+        return OJ(e);
     }
   return null;
 }
-function vW(e, t, n, r) {
-  let i = _W(e, t, r);
+function yW(e, t, n, r) {
+  let i = vW(e, t, r);
   return i === null
     ? ze.GetWithFallback(e.localized_subtitle, n) ||
         (!e.default_subtitle || e.default_subtitle === `#Sale_default_subtitle`
@@ -25681,18 +25684,18 @@ function vW(e, t, n, r) {
       ? I(i)
       : i;
 }
-var yW = `dYYkud-Jf3s-`,
-  bW = `zZo1XshRYmQ-`,
-  xW = `RfHJSn8AdQE-`,
-  SW = `D8GFuSKNhX0-`,
-  CW = `woc2JepJIek-`;
-function wW(e, t) {
+var bW = `dYYkud-Jf3s-`,
+  xW = `zZo1XshRYmQ-`,
+  SW = `RfHJSn8AdQE-`,
+  CW = `D8GFuSKNhX0-`,
+  wW = `woc2JepJIek-`;
+function TW(e, t) {
   return (
     ze.GetWithFallback(e.localized_label, t) ||
     (e.default_label === `#Sale_default_label` ? `` : I(e.default_label))
   );
 }
-function TW(e) {
+function EW(e) {
   if (b(e.section_type))
     switch (y(e)) {
       case `deck_topplayed`:
@@ -25700,7 +25703,7 @@ function TW(e) {
     }
   return e.label_link;
 }
-function EW(e) {
+function DW(e) {
   let t,
     n,
     r = !1;
@@ -25709,14 +25712,14 @@ function EW(e) {
       ? ((t = I(`#Sale_SectionLink_BrowseAll`)), (r = !0))
       : e.label_link_style === `browseall`
         ? ((t = I(`#Sale_SectionLink_BrowseAll`)),
-          (n = F(xW, `SaleSectionLabelLinkButton`)))
+          (n = F(SW, `SaleSectionLabelLinkButton`)))
         : y(e) === `deck_topplayed` &&
           ((t = I(`#EventBrowse_MoreEventsBtn`)),
           (n = F(xe, `SaleSectionLabelLinkButton`))),
     { strLinkButtonLabel: t, strLinkButtonClasses: n, bSmallButton: r }
   );
 }
-var DW = c((e) => {
+var OW = c((e) => {
   let {
       section: t,
       event: n,
@@ -25732,11 +25735,11 @@ var DW = c((e) => {
       promotedSale: f,
     } = e,
     p = Wr(),
-    m = GW(),
+    m = KW(),
     h = f !== void 0,
-    { data: g } = fW(h ? void 0 : kK(t)),
+    { data: g } = pW(h ? void 0 : AK(t)),
     _ = (h ? f : g) ?? void 0,
-    v = e.link || TW(t) || Se(_);
+    v = e.link || EW(t) || Se(_);
   if (
     (z.useEffect(() => {
       u?.(v);
@@ -25744,12 +25747,12 @@ var DW = c((e) => {
     t.section_type == `title_image` && t.title_image_selected === `image`)
   )
     return null;
-  let y = a || gW(t, n, r, n.clanSteamID.GetAccountID(), m.eLocation, !1, d, _);
+  let y = a || _W(t, n, r, n.clanSteamID.GetAccountID(), m.eLocation, !1, d, _);
   if (!y) return null;
-  let b = o || vW(t, n, r, d),
+  let b = o || yW(t, n, r, d),
     x = (0, R.jsxs)(`div`, {
       className: F(be, `SaleSectionHeader`),
-      style: OW(t, n, r),
+      style: kW(t, n, r),
       children: [
         t.test_show_on_valve_ip_only &&
           (0, R.jsx)(`div`, {
@@ -25761,7 +25764,7 @@ var DW = c((e) => {
     }),
     S = (0, R.jsx)(`div`, {
       className: F(be, ve, `SaleSectionSubtitle`),
-      style: kW(t, n, r),
+      style: AW(t, n, r),
       children: b,
     }),
     C = null;
@@ -25770,28 +25773,28 @@ var DW = c((e) => {
       strLinkButtonLabel: e,
       strLinkButtonClasses: n,
       bSmallButton: r,
-    } = EW(t);
+    } = DW(t);
     (e &&
       (C =
         p && c
           ? (0, R.jsx)(j, { label: e, shown: !!s, button: l })
           : r
             ? (0, R.jsx)(`div`, {
-                className: F(XU, SW),
-                children: (0, R.jsx)(aY, {
+                className: F(ZU, CW),
+                children: (0, R.jsx)(oY, {
                   url: v,
                   children: (0, R.jsx)(Ye, { children: e }),
                 }),
               })
-            : (0, R.jsx)(aY, { url: v, className: n, children: e })),
-      (x = (0, R.jsx)(aY, { url: v, bFocusable: !C, children: x })));
+            : (0, R.jsx)(oY, { url: v, className: n, children: e })),
+      (x = (0, R.jsx)(oY, { url: v, bFocusable: !C, children: x })));
   }
   return (0, R.jsxs)(`div`, {
-    className: F(yW, `SaleSectionLabelCtn`),
+    className: F(bW, `SaleSectionLabelCtn`),
     children: [
-      (0, R.jsxs)(`div`, { className: CW, children: [x, !!b && S] }),
+      (0, R.jsxs)(`div`, { className: wW, children: [x, !!b && S] }),
       (0, R.jsxs)(`div`, {
-        className: bW,
+        className: xW,
         children: [
           !!i &&
             (0, R.jsx)(Jn, {
@@ -25813,9 +25816,9 @@ var DW = c((e) => {
     ],
   });
 });
-function OW(e, t, n) {
+function kW(e, t, n) {
   return {
-    fontFamily: t.jsondata.sale_font ? AW(t.jsondata.sale_font, n) : void 0,
+    fontFamily: t.jsondata.sale_font ? jW(t.jsondata.sale_font, n) : void 0,
     fontWeight: t.jsondata.sale_font_weight,
     fontSize: `${t.jsondata.sale_section_font_size}px`,
     textTransform: t.jsondata.sale_section_disable_capitalize
@@ -25824,9 +25827,9 @@ function OW(e, t, n) {
     color: e.label_color,
   };
 }
-function kW(e, t, n) {
+function AW(e, t, n) {
   return {
-    fontFamily: t.jsondata.sale_font ? AW(t.jsondata.sale_font, n) : void 0,
+    fontFamily: t.jsondata.sale_font ? jW(t.jsondata.sale_font, n) : void 0,
     fontWeight: 300,
     fontSize: `${t.jsondata.sale_section_font_size && t.jsondata.sale_section_font_size - 3}px`,
     letterSpacing: 0,
@@ -25838,7 +25841,7 @@ function kW(e, t, n) {
     opacity: `50%`,
   };
 }
-function AW(e, t) {
+function jW(e, t) {
   return (
     (e ||= ``),
     t === 12
@@ -25858,25 +25861,25 @@ function AW(e, t) {
                   : e
   );
 }
-function jW(e, t, n, r, i) {
-  let a = gW(t, r, n, r.clanSteamID.GetAccountID(), e);
+function MW(e, t, n, r, i) {
+  let a = _W(t, r, n, r.clanSteamID.GetAccountID(), e);
   if (a) return a;
   let o = I(`#Sale_Section_Header`, i + 1),
     s = `#Sale_Section_Type_` + (t?.section_type || `unknowntype`),
     c = I(s);
   if (c !== s) return `${o} (${c})`;
 }
-function MW(e, t, n) {
+function NW(e, t, n) {
   return `linear-gradient(${n ?? 0}deg, ${e || `transparent`} 0%, ${t || `transparent`} 100%)`;
 }
-function NW(e) {
-  return MW(
+function PW(e) {
+  return NW(
     e.background_gradient_bottom,
     e.background_gradient_top,
     e.background_gradient_angle,
   );
 }
-function PW(e, t, n) {
+function FW(e, t, n) {
   if (e.disable_background) return { paddingLeft: 0, paddingRight: 0 };
   let r = ``;
   if (e.background_image) {
@@ -25890,7 +25893,7 @@ function PW(e, t, n) {
     e.border_color ||
     e.border_width
     ? {
-        backgroundImage: NW(e) + r,
+        backgroundImage: PW(e) + r,
         backgroundRepeat: e.background_repeat,
         backgroundSize: e.background_repeat == `coverBlur` ? `cover` : ``,
         outlineStyle: e.border_color && e.border_width ? `solid` : void 0,
@@ -25899,7 +25902,7 @@ function PW(e, t, n) {
       }
     : {};
 }
-function FW(e, t) {
+function IW(e, t) {
   return e
     ? e.disable_background && !t
       ? { paddingLeft: 0, paddingRight: 0 }
@@ -25909,7 +25912,7 @@ function FW(e, t) {
           e.border_color ||
           e.border_width
         ? {
-            background: NW(e),
+            background: PW(e),
             backgroundRepeat: e.background_repeat,
             outlineStyle: e.border_color && e.border_width ? `solid` : void 0,
             outlineColor: e.border_color,
@@ -25918,7 +25921,7 @@ function FW(e, t) {
         : {}
     : {};
 }
-function IW(e) {
+function LW(e) {
   let { closeModal: t, strDescOverride: n } = e;
   return (0, R.jsx)(Tt, {
     strTitle: BH.Localize(`#LoginRedirect_Dialog_Title`),
@@ -25930,19 +25933,19 @@ function IW(e) {
     },
   });
 }
-function LW(e) {
+function RW(e) {
   let [t, n, r] = Rt();
   return {
     elDialogElement: (0, R.jsx)(ka, {
       active: t,
-      children: (0, R.jsx)(IW, { closeModal: r, strDescOverride: e }),
+      children: (0, R.jsx)(LW, { closeModal: r, strDescOverride: e }),
     }),
     fnShowLogonDialog: n,
   };
 }
-function RW(e) {
+function zW(e) {
   let { label: t, strDialogDesc: n } = e,
-    { elDialogElement: r, fnShowLogonDialog: i } = LW(n);
+    { elDialogElement: r, fnShowLogonDialog: i } = RW(n);
   return (0, R.jsxs)(R.Fragment, {
     children: [
       (0, R.jsx)(Sr, {
@@ -25953,7 +25956,7 @@ function RW(e) {
     ],
   });
 }
-function zW(e, t = {}) {
+function BW(e, t = {}) {
   let n = y(e);
   return !!(
     e.section_type == `discoveryqueue` ||
@@ -25973,76 +25976,76 @@ function zW(e, t = {}) {
         (n == `interactive_recommender_onsale` && !t.bHideIRList)))
   );
 }
-function BW(e) {
+function VW(e) {
   let { section: t, event: n } = e,
     r = Wr();
   return (0, R.jsxs)(In, {
     className: KH,
-    style: PW(t, n, r),
+    style: FW(t, n, r),
     children: [
-      (0, R.jsx)(DW, { ...e }),
+      (0, R.jsx)(OW, { ...e }),
       (0, R.jsxs)(In, {
         className: eU,
-        children: [I(`#SalePage_LoginPrompt`), (0, R.jsx)(VW, {})],
+        children: [I(`#SalePage_LoginPrompt`), (0, R.jsx)(HW, {})],
       }),
     ],
   });
 }
-function VW() {
+function HW() {
   return (0, R.jsx)(`button`, {
     onClick: () => ae(),
     className: tU,
     children: I(`#Login_SignIn`),
   });
 }
-var HW = { eLocation: 0 },
-  UW = z.createContext(HW);
-function WW(e) {
+var UW = { eLocation: 0 },
+  WW = z.createContext(UW);
+function GW(e) {
   let { children: t, location: n } = e;
-  return (0, R.jsx)(UW.Provider, {
-    value: { ...HW, eLocation: n ?? 0 },
+  return (0, R.jsx)(WW.Provider, {
+    value: { ...UW, eLocation: n ?? 0 },
     children: t,
   });
 }
-function GW() {
-  return z.useContext(UW);
-}
 function KW() {
-  return GW().eLocation == 2;
+  return z.useContext(WW);
 }
 function qW() {
-  let e = GW();
+  return KW().eLocation == 2;
+}
+function JW() {
+  let e = KW();
   return e.eLocation == 2 || e.eLocation == 1;
 }
-async function JW(e, t) {
+async function YW(e, t) {
   let n = Da(ba.STORE_BASE_URL, t, Dr.country_code);
   return (await (await fetch(n)).json()).rgFollowedApps || [];
 }
-function YW() {
+function XW() {
   let e = Aa(),
     t = Dr.accountid;
-  return p(XW(e, t));
+  return p(ZW(e, t));
 }
-function XW(e, t) {
+function ZW(e, t) {
   return {
-    queryKey: $W(t),
+    queryKey: eG(t),
     queryFn: async () => {
       if (!t) return new Set();
-      let n = await JW(e, t);
+      let n = await YW(e, t);
       return new Set(n);
     },
     staleTime: 6e5,
   };
 }
-function ZW(e) {
-  let { data: t } = YW();
+function QW(e) {
+  let { data: t } = XW();
   return t === void 0 || e == null ? void 0 : t.has(e);
 }
-function QW() {
+function $W() {
   let e = h(),
     t = Dr.accountid;
   return (n, r) => {
-    e.setQueryData($W(t), (e) => {
+    e.setQueryData(eG(t), (e) => {
       if (!e) return;
       let t = new Set(e);
       if (r) for (let e of r) t.delete(e);
@@ -26051,11 +26054,11 @@ function QW() {
     });
   };
 }
-function $W(e) {
+function eG(e) {
   return [`AccountFollowApps`, e ?? 0];
 }
-function eG(e, t, n) {
-  let r = QW(),
+function tG(e, t, n) {
+  let r = $W(),
     i = Dr.accountid;
   return s({
     mutationKey: [`useUpdateAppFollow`, e, i, t],
@@ -26088,19 +26091,19 @@ function eG(e, t, n) {
     },
   });
 }
-var tG = `VULTMp1PCTw-`,
-  nG = `_2vLXBykr6zc-`;
-function rG(e) {
+var nG = `VULTMp1PCTw-`,
+  rG = `_2vLXBykr6zc-`;
+function iG(e) {
   let { id: t, snr: n, classOverride: r } = e,
     [i, a] = (0, z.useState)(!1),
     o = de(`GameHoverIgnoreButton`),
-    { elDialogElement: s, fnShowLogonDialog: c } = LW(),
+    { elDialogElement: s, fnShowLogonDialog: c } = RW(),
     l = t && `appid` in t ? t.appid : void 0,
     u = Oi(l),
     { mutateAsync: d } = M(l, !u, n),
     f = t && `appid` in t && Kt.Get().BIsGameIgnored(t.appid);
   return (0, R.jsxs)(In, {
-    className: F(tG, r),
+    className: F(nG, r),
     onClick: async (e) => {
       (e.preventDefault(),
         e.stopPropagation(),
@@ -26111,14 +26114,14 @@ function rG(e) {
     children: [
       (0, R.jsx)(er, {}),
       (0, R.jsx)(`div`, {
-        className: F(nG, i && `vyz9N2LpdMs-`),
+        className: F(rG, i && `vyz9N2LpdMs-`),
         children: I(f ? `#Sale_RemoveFromIgnored` : `#Sale_Ignore`),
       }),
       s,
     ],
   });
 }
-async function iG(e, t) {
+async function aG(e, t) {
   let n = Da(ba.STORE_BASE_URL, t, Dr.country_code),
     r = await (await fetch(n)).json(),
     i = new Set();
@@ -26138,19 +26141,19 @@ async function iG(e, t) {
     })
   );
 }
-function aG() {
+function oG() {
   let e = Aa(),
     t = Wi.accountid;
-  return p(oG(e, t));
+  return p(sG(e, t));
 }
-function oG(e, t) {
+function sG(e, t) {
   return {
-    queryKey: fG(t),
+    queryKey: pG(t),
     queryFn: async () => {
       let n = new Map();
       if (t)
         try {
-          (await iG(e, t)).forEach((e) => n.set(e.clanid, e));
+          (await aG(e, t)).forEach((e) => n.set(e.clanid, e));
         } catch (e) {
           console.error(`GetCuratorAffinityQuery`, e);
         }
@@ -26159,25 +26162,25 @@ function oG(e, t) {
     enabled: !!t,
   };
 }
-function sG(e) {
-  let { data: t } = aG();
+function cG(e) {
+  let { data: t } = oG();
   return t === void 0 || e == null ? void 0 : !!t.get(e)?.followed;
 }
-function cG(e) {
-  let { data: t } = aG();
+function lG(e) {
+  let { data: t } = oG();
   return t === void 0 || e == null ? void 0 : !!t.get(e)?.ignored;
-}
-function lG() {
-  return L.EREALM != xt.k_ESteamRealmChina;
 }
 function uG() {
   return L.EREALM != xt.k_ESteamRealmChina;
 }
 function dG() {
+  return L.EREALM != xt.k_ESteamRealmChina;
+}
+function fG() {
   let e = h(),
     t = Wi.accountid;
   return (n, r, i, a) => {
-    e.setQueryData(fG(t), (e) => {
+    e.setQueryData(pG(t), (e) => {
       if (!e) return;
       let t = new Map(e);
       return (
@@ -26211,10 +26214,10 @@ function dG() {
     });
   };
 }
-function fG(e) {
+function pG(e) {
   return [`CuratorAffinityQueryKey`, e ?? 0];
 }
-var pG = (function (e) {
+var mG = (function (e) {
   return (
     (e[(e.k_ECuratorFollow = 1)] = `k_ECuratorFollow`),
     (e[(e.k_ECuratorUnfollow = 2)] = `k_ECuratorUnfollow`),
@@ -26223,15 +26226,15 @@ var pG = (function (e) {
     e
   );
 })({});
-function mG(e, t) {
-  let n = dG(),
+function hG(e, t) {
+  let n = fG(),
     r = Dr.accountid;
   return s({
     mutationKey: [`useUpdateCuratorAffinity`, e, r, t],
     mutationFn: async () => {
       if (e == null) return !1;
-      let n = t == pG.k_ECuratorFollow || t == pG.k_ECuratorUnfollow,
-        r = t == pG.k_ECuratorFollow || t == pG.k_ECuratorIgnore,
+      let n = t == mG.k_ECuratorFollow || t == mG.k_ECuratorUnfollow,
+        r = t == mG.k_ECuratorFollow || t == mG.k_ECuratorIgnore,
         i = `${ba.STORE_BASE_URL}curators/${n ? `ajaxfollow/` : `ajaxignore/`}`,
         a = new FormData();
       (a.append(`clanid`, `` + e),
@@ -26251,20 +26254,20 @@ function mG(e, t) {
     },
     onMutate: () => {
       if (e != null) {
-        let r = t == pG.k_ECuratorUnfollow || t == pG.k_ECuratorUnignore;
+        let r = t == mG.k_ECuratorUnfollow || t == mG.k_ECuratorUnignore;
         n(
-          t == pG.k_ECuratorFollow ? [{ clanAccountID: e }] : void 0,
-          t == pG.k_ECuratorIgnore ? [{ clanAccountID: e }] : void 0,
+          t == mG.k_ECuratorFollow ? [{ clanAccountID: e }] : void 0,
+          t == mG.k_ECuratorIgnore ? [{ clanAccountID: e }] : void 0,
           r ? [{ clanAccountID: e }] : void 0,
         );
       }
     },
     onError: (r) => {
       if (e != null) {
-        let i = t == pG.k_ECuratorFollow || t == pG.k_ECuratorIgnore;
+        let i = t == mG.k_ECuratorFollow || t == mG.k_ECuratorIgnore;
         n(
-          t == pG.k_ECuratorUnfollow ? [{ clanAccountID: e }] : void 0,
-          t == pG.k_ECuratorUnignore ? [{ clanAccountID: e }] : void 0,
+          t == mG.k_ECuratorUnfollow ? [{ clanAccountID: e }] : void 0,
+          t == mG.k_ECuratorUnignore ? [{ clanAccountID: e }] : void 0,
           i ? [{ clanAccountID: e }] : void 0,
           r ? [{ clanAccountID: e, is_creator: !0 }] : void 0,
         );
@@ -26278,29 +26281,29 @@ function mG(e, t) {
     },
   });
 }
-var hG = `QOSk1wMadGg-`,
-  gG = `DH1jwyMHeXo-`,
-  _G = `J5g1CfUd95U-`,
-  vG = `_3IPvWkyhZzM-`,
-  yG = `jB1S5EvgUjI-`,
-  bG = `iWO-8zu8RAA-`,
-  xG = `MTgAGoNV5vg-`,
-  SG = `LEvP9jHHfL8-`,
-  CG = `K9ZawxnkJcI-`,
-  wG = `OlPIY4AN-5s-`,
-  TG = `_7UT3Pb65ni0-`,
-  EG = `sT74IdnPxY8-`,
-  DG = `ZTz7p5tpqNU-`,
-  OG = `ct7kvDppls0-`,
-  kG = `SG9Xn5tF5a0-`,
-  AG = `clYVRh6K2Ig-`,
-  jG = `k6MwDwdCJTU-`,
-  MG = `mnFUxHcas-0-`,
-  NG = `_6lWvo8crYSU-`,
-  PG = `r3PgsXSGPho-`,
-  FG = `EWCiFLRR-T8-`,
-  IG = `GEroszngeLM-`,
-  LG = (e) => {
+var gG = `QOSk1wMadGg-`,
+  _G = `DH1jwyMHeXo-`,
+  vG = `J5g1CfUd95U-`,
+  yG = `_3IPvWkyhZzM-`,
+  bG = `jB1S5EvgUjI-`,
+  xG = `iWO-8zu8RAA-`,
+  SG = `MTgAGoNV5vg-`,
+  CG = `LEvP9jHHfL8-`,
+  wG = `K9ZawxnkJcI-`,
+  TG = `OlPIY4AN-5s-`,
+  EG = `_7UT3Pb65ni0-`,
+  DG = `sT74IdnPxY8-`,
+  OG = `ZTz7p5tpqNU-`,
+  kG = `ct7kvDppls0-`,
+  AG = `SG9Xn5tF5a0-`,
+  jG = `clYVRh6K2Ig-`,
+  MG = `k6MwDwdCJTU-`,
+  NG = `mnFUxHcas-0-`,
+  PG = `_6lWvo8crYSU-`,
+  FG = `r3PgsXSGPho-`,
+  IG = `EWCiFLRR-T8-`,
+  LG = `GEroszngeLM-`,
+  RG = (e) => {
     let t = L.HELP_BASE_URL + `wizard/HelpWithLimitedAccount`;
     return (0, R.jsx)(Tt, {
       strTitle: I(`#Informational_Message`),
@@ -26320,7 +26323,7 @@ var hG = `QOSk1wMadGg-`,
       }),
     });
   },
-  RG = (e) => {
+  zG = (e) => {
     let {
         className: t,
         bIgnored: n,
@@ -26329,8 +26332,8 @@ var hG = `QOSk1wMadGg-`,
         onFollowClick: a,
         followType: o,
       } = e,
-      { elDialogElement: s, fnShowLogonDialog: c } = LW();
-    if (!lG()) return null;
+      { elDialogElement: s, fnShowLogonDialog: c } = RW();
+    if (!uG()) return null;
     let l = null;
     switch (o) {
       case `app`:
@@ -26351,7 +26354,7 @@ var hG = `QOSk1wMadGg-`,
             (0, R.jsx)(Mt, {
               toolTipContent: !n && !i ? l : void 0,
               children: (0, R.jsxs)(va, {
-                className: F(ye, PG, `FollowButton`, t, i ? `Followed` : ``),
+                className: F(ye, FG, `FollowButton`, t, i ? `Followed` : ``),
                 onClick: () => {
                   Wi.logged_in ? a() : c();
                 },
@@ -26359,7 +26362,7 @@ var hG = `QOSk1wMadGg-`,
                   r && (0, R.jsx)(De, { size: 15 }),
                   !r && (i || n) && (0, R.jsx)(qi, {}),
                   (0, R.jsx)(`div`, {
-                    className: F(FG, `FollowBtnText`),
+                    className: F(IG, `FollowBtnText`),
                     children:
                       !r &&
                       I(
@@ -26378,7 +26381,7 @@ var hG = `QOSk1wMadGg-`,
         })
       : (console.error(`CommonFollowButton unexpected type`, o), null);
   };
-function zG(e) {
+function BG(e) {
   let {
       followType: t,
       fnSuccessCallback: n,
@@ -26387,16 +26390,16 @@ function zG(e) {
     } = e,
     [a, o] = z.useState(!1),
     { data: s } = ie(t ? void 0 : r),
-    c = sG(r),
-    l = cG(r),
-    { mutateAsync: u } = mG(r, c ? pG.k_ECuratorUnfollow : pG.k_ECuratorFollow),
+    c = cG(r),
+    l = lG(r),
+    { mutateAsync: u } = hG(r, c ? mG.k_ECuratorUnfollow : mG.k_ECuratorFollow),
     [d, f, p] = Rt(),
     m = z.useCallback(async () => {
       c != null && (o(!0), await u(), o(!1), n?.(c));
     }, [c, n, u]);
   return (0, R.jsxs)(R.Fragment, {
     children: [
-      (0, R.jsx)(RG, {
+      (0, R.jsx)(zG, {
         className: i,
         bIgnored: !!l,
         bFollowing: !!c,
@@ -26408,23 +26411,23 @@ function zG(e) {
       }),
       (0, R.jsx)(ka, {
         active: d,
-        children: (0, R.jsx)(LG, { closeModal: p }),
+        children: (0, R.jsx)(RG, { closeModal: p }),
       }),
     ],
   });
 }
-function BG(e) {
+function VG(e) {
   let { appid: t, className: n } = e,
     [r, i] = z.useState(!1),
-    a = ZW(t),
+    a = QW(t),
     o = Oi(t),
     s = Ni(),
     c = Bi.GetSNRLinkParam(s),
-    { mutateAsync: l } = eG(t, !a, c),
+    { mutateAsync: l } = tG(t, !a, c),
     u = z.useCallback(async () => {
       (i(!0), await l(), i(!1));
     }, [l]);
-  return (0, R.jsx)(RG, {
+  return (0, R.jsx)(zG, {
     className: n,
     bIgnored: !!o,
     bFollowing: !!a,
@@ -26433,7 +26436,7 @@ function BG(e) {
     followType: `app`,
   });
 }
-function VG(e) {
+function HG(e) {
   let {
       nCreatorAccountID: t,
       classOverride: n,
@@ -26454,15 +26457,15 @@ function VG(e) {
           href: qa(o, `developer`),
           children: (0, R.jsx)(`img`, { src: s, alt: a.group_name }),
         }),
-        (0, R.jsx)(zG, { clanAccountID: t, followType: i }),
+        (0, R.jsx)(BG, { clanAccountID: t, followType: i }),
       ],
     })
   );
 }
-var HG = 5500,
-  UG = 2e3,
-  WG = 10;
-function GG(e, t) {
+var UG = 5500,
+  WG = 2e3,
+  GG = 10;
+function KG(e, t) {
   return e && t && t.main_capsule
     ? {
         stringifyID: `maincap_${e.id}_${e.item_type}`,
@@ -26476,22 +26479,22 @@ function GG(e, t) {
           },
           `fallback`,
         ),
-        nDurationMs: UG,
+        nDurationMs: WG,
       }
     : null;
 }
-function KG(e, t) {
+function qG(e, t) {
   return {
     stringifyID: `vid_${Si(e)}`,
     rctImage: (0, R.jsx)(D, { id: e, active: !0 }),
-    nDurationMs: HG,
+    nDurationMs: UG,
   };
 }
-function qG(e) {
+function JG(e) {
   let t = Nr(e);
   return Ve(e) ? void 0 : t;
 }
-function JG(e, t, n, r) {
+function YG(e, t, n, r) {
   return n.slice(0, r).map((n, r) => {
     let i = Lt(n, `1920x1080`);
     return {
@@ -26506,33 +26509,33 @@ function JG(e, t, n, r) {
         },
         i,
       ),
-      nDurationMs: UG,
+      nDurationMs: WG,
     };
   });
 }
-function YG(e, t, n, r, i) {
+function XG(e, t, n, r, i) {
   let a = [];
   if (
-    (i && a.push(KG(e, i)),
-    r && r.length > 0 && a.push(...JG(e, t.name, r, WG)),
+    (i && a.push(qG(e, i)),
+    r && r.length > 0 && a.push(...YG(e, t.name, r, GG)),
     a.length == 0 && n && n.main_capsule)
   ) {
-    let e = GG(t, n);
+    let e = KG(t, n);
     e && a.push(e);
   }
   return (e && a.length, a);
 }
-function XG(e, t, n, r, i, a) {
+function ZG(e, t, n, r, i, a) {
   let o = [];
-  (a && o.push(KG(t, a)), r && r.length > 0 && o.push(...JG(e, n.name, r, WG)));
-  let s = WG - (r?.length || 0);
+  (a && o.push(qG(t, a)), r && r.length > 0 && o.push(...YG(e, n.name, r, GG)));
+  let s = GG - (r?.length || 0);
   return (
-    s > 0 && i && i.length > 0 && o.push(...JG(e, n.name, i, s)),
+    s > 0 && i && i.length > 0 && o.push(...YG(e, n.name, i, s)),
     e && o.length,
     o
   );
 }
-function ZG(e) {
+function QG(e) {
   return (0, R.jsx)(`img`, {
     className: Tc,
     loading: `lazy`,
@@ -26540,51 +26543,51 @@ function ZG(e) {
     alt: `default`,
   });
 }
-function QG(e) {
+function $G(e) {
   let { id: t } = e,
     { data: n } = nr(t);
   if (!n || n.unvailable_for_country_restriction || !n.visible)
     return (0, R.jsx)(`div`, {
       className: wc,
-      children: (0, R.jsx)(ZG, {}, `default`),
+      children: (0, R.jsx)(QG, {}, `default`),
     });
   let r = n.item_type,
     i = n.type;
   return r == 2 || r == 1
-    ? (0, R.jsx)(nK, { includeAppIDs: n.included_appids })
+    ? (0, R.jsx)(rK, { includeAppIDs: n.included_appids })
     : (i == 1 || i == 12) && n.related_items && n.related_items.parent_appid
-      ? (0, R.jsx)(eK, {
+      ? (0, R.jsx)(tK, {
           demoItemDefaultInfo: n,
           parentAppID: n.related_items.parent_appid,
         })
-      : (0, R.jsx)($G, { storeItemDefaultData: n });
-}
-function $G(e) {
-  let { storeItemDefaultData: t } = e,
-    n = ta(t),
-    r = qG(n),
-    { data: i } = Pa(n),
-    a = ja(n),
-    o = (0, z.useMemo)(() => YG(n, t, i, a, r), [n, a, r, i, t]);
-  return (0, R.jsx)(rK, { rgTrailerAndImages: o });
+      : (0, R.jsx)(eK, { storeItemDefaultData: n });
 }
 function eK(e) {
-  let { demoItemDefaultInfo: t, parentAppID: n } = e,
-    r = ta(t);
-  return qG(r)
-    ? (0, R.jsx)($G, { storeItemDefaultData: t })
-    : (0, R.jsx)(tK, { demoID: r, demoItemDefaultInfo: t, parentAppID: n });
+  let { storeItemDefaultData: t } = e,
+    n = ta(t),
+    r = JG(n),
+    { data: i } = Pa(n),
+    a = ja(n),
+    o = (0, z.useMemo)(() => XG(n, t, i, a, r), [n, a, r, i, t]);
+  return (0, R.jsx)(iK, { rgTrailerAndImages: o });
 }
 function tK(e) {
+  let { demoItemDefaultInfo: t, parentAppID: n } = e,
+    r = ta(t);
+  return JG(r)
+    ? (0, R.jsx)(eK, { storeItemDefaultData: t })
+    : (0, R.jsx)(nK, { demoID: r, demoItemDefaultInfo: t, parentAppID: n });
+}
+function nK(e) {
   let { parentAppID: t, demoID: n, demoItemDefaultInfo: r } = e,
     i = A(t),
     a = ja(n),
     o = ja(i),
-    s = qG(i),
-    c = (0, z.useMemo)(() => XG(n, i, r, a, o, s), [n, i, r, s, a, o]);
-  return (0, R.jsx)(rK, { rgTrailerAndImages: c });
+    s = JG(i),
+    c = (0, z.useMemo)(() => ZG(n, i, r, a, o, s), [n, i, r, s, a, o]);
+  return (0, R.jsx)(iK, { rgTrailerAndImages: c });
 }
-function nK(e) {
+function rK(e) {
   let { includeAppIDs: t } = e,
     n = Er(),
     r = l({ queries: t.map((e) => Xe(n, { appid: e })) }),
@@ -26595,14 +26598,14 @@ function nK(e) {
           .map((e, t) => {
             let n = i[t].data,
               r = e.data;
-            return GG(n, r);
+            return KG(n, r);
           })
           .filter((e) => !!e),
       [r, i],
     );
-  return (0, R.jsx)(rK, { rgTrailerAndImages: a });
+  return (0, R.jsx)(iK, { rgTrailerAndImages: a });
 }
-function rK(e) {
+function iK(e) {
   let { rgTrailerAndImages: t } = e,
     n = (0, z.useRef)(0),
     r = lt(),
@@ -26637,16 +26640,16 @@ function rK(e) {
     })
   );
 }
-var iK = `ghYXSqVPJ-U-`,
-  aK = `lx1fe7xI0bg-`,
-  oK = `ARp2qEoElPE-`,
-  sK = `DwDon-U2yLI-`,
-  cK = 150,
-  lK = z.createContext(void 0);
-function uK() {
-  return z.useContext(lK);
+var aK = `ghYXSqVPJ-U-`,
+  oK = `lx1fe7xI0bg-`,
+  sK = `ARp2qEoElPE-`,
+  cK = `DwDon-U2yLI-`,
+  lK = 150,
+  uK = z.createContext(void 0);
+function dK() {
+  return z.useContext(uK);
 }
-function dK(e) {
+function fK(e) {
   let {
       hoverContent: t,
       hoverProps: n,
@@ -26669,7 +26672,7 @@ function dK(e) {
     "data-key": `hover div`,
     role: `button`,
     tabIndex: 0,
-    className: F(iK, o),
+    className: F(aK, o),
     "data-hovered": u || void 0,
     onMouseEnter: m,
     onMouseLeave: h,
@@ -26680,9 +26683,9 @@ function dK(e) {
     children: [
       l &&
         f &&
-        (0, R.jsx)(lK.Provider, {
+        (0, R.jsx)(uK.Provider, {
           value: g,
-          children: (0, R.jsx)(fK, {
+          children: (0, R.jsx)(pK, {
             visible: u,
             target: f,
             nDelayShowMs: r,
@@ -26695,10 +26698,10 @@ function dK(e) {
     ],
   });
 }
-function fK(e) {
+function pK(e) {
   let {
       hoverProps: t,
-      nDelayShowMs: n = cK,
+      nDelayShowMs: n = lK,
       nWidthMultiplier: r = 1.15,
       target: i,
       visible: a,
@@ -26745,18 +26748,18 @@ function fK(e) {
         zIndex: 98,
         width: i.clientWidth * r,
         fontSize: l,
-        minHeight: mK() == `hiding` ? void 0 : 300,
-        height: mK() == `hiding` ? i.clientWidth * 1.15 * (125 / 184) : void 0,
+        minHeight: hK() == `hiding` ? void 0 : 300,
+        height: hK() == `hiding` ? i.clientWidth * 1.15 * (125 / 184) : void 0,
         ...t?.style,
       },
       target: i,
     };
-  return (0, R.jsx)(pK, {
+  return (0, R.jsx)(mK, {
     hoverProps: u,
     children: (0, R.jsx)(Hi, { children: o }),
   });
 }
-function pK(e) {
+function mK(e) {
   let { hoverProps: t, children: n } = e,
     r = z.useCallback((e) => e?.focus(), []);
   return (0, R.jsx)(Pe, {
@@ -26765,66 +26768,66 @@ function pK(e) {
       timeout: 500,
       in: !0,
       appear: !0,
-      classNames: { appearActive: F(oK, Oc), enterDone: F(sK, kc) },
+      classNames: { appearActive: F(sK, Oc), enterDone: F(cK, kc) },
       children: (e) =>
         (0, R.jsx)(`div`, {
           ref: ar(e, r),
-          className: aK,
+          className: oK,
           tabIndex: -1,
           children: n,
         }),
     }),
   });
 }
-function mK() {
-  return window.sessionStorage?.getItem(hK) || `default`;
+function hK() {
+  return window.sessionStorage?.getItem(gK) || `default`;
 }
-var hK = `DEBUG_UseNewGameHover`;
-function gK(e) {
-  window.sessionStorage.setItem(hK, e);
+var gK = `DEBUG_UseNewGameHover`;
+function _K(e) {
+  window.sessionStorage.setItem(gK, e);
 }
-window.SetHoverPresentation = gK;
-var _K = z.createContext(void 0);
-function vK() {
-  return z.useContext(_K);
+window.SetHoverPresentation = _K;
+var vK = z.createContext(void 0);
+function yK() {
+  return z.useContext(vK);
 }
-function yK(e, t, n, r) {
+function bK(e, t, n, r) {
   if (r === void 0 || n.length <= 1 || !v(e, t, void 0)) return n;
   let i = Je(r + (t.unique_id ?? 0));
   return Or([...n], t.random_order_top_x ?? 0, i);
 }
-function bK(e, t, n, r) {
+function xK(e, t, n, r) {
   if (t.length <= n) return t;
   if (r === void 0) return t.slice(0, n);
   let i = Je(r + (e.unique_id ?? 0));
   return Or([...t], 0, i).slice(0, n);
 }
-async function xK(e, t) {
+async function SK(e, t) {
   let n = Da(L.STORE_BASE_URL, t, Wi.country_code);
   return ((await (await fetch(n)).json()).rgRecommendedApps ?? []).map(Number);
 }
-function SK() {
+function CK() {
   let e = Aa(),
     t = Wi.accountid;
-  return p(CK(e, t));
+  return p(wK(e, t));
 }
-function CK(e, t) {
+function wK(e, t) {
   return {
-    queryKey: wK(t),
-    queryFn: async () => (t ? xK(e, t) : []),
+    queryKey: TK(t),
+    queryFn: async () => (t ? SK(e, t) : []),
     staleTime: 6e5,
   };
 }
-function wK(e) {
+function TK(e) {
   return [`AccountRecommendedApps`, e ?? 0];
 }
-var TK = 100;
-function EK(e, t, n, r, i = 1) {
+var EK = 100;
+function DK(e, t, n, r, i = 1) {
   return {
     queryKey: [`AccountRecommendedAppsOnSale`, r ?? 0, n.cacheScope ?? ``, i],
     queryFn: async () => {
       if (!r) return [];
-      let a = (await e.fetchQuery(CK(t, r))).slice(0, TK),
+      let a = (await e.fetchQuery(wK(t, r))).slice(0, EK),
         o = await Promise.all(a.map((t) => e.fetchQuery(at(n, { appid: t }))));
       return a.filter(
         (e, t) => (o[t]?.best_purchase_option?.discount_pct ?? 0) >= i,
@@ -26833,66 +26836,66 @@ function EK(e, t, n, r, i = 1) {
     staleTime: 6e5,
   };
 }
-function DK(e) {
+function OK(e) {
   return e.section_type === `crosspromotesalepage`
     ? (e.sale_page_cross_promo_sales ?? [])
     : [];
 }
-function OK(e) {
-  return DK(e).map((t) => ({
+function kK(e) {
+  return OK(e).map((t) => ({
     ...e,
     sale_page_cross_promo_sales: [t],
     capsules: t.capsules ?? [],
   }));
 }
-function kK(e) {
-  return DK(e)[0]?.event_gid || void 0;
-}
 function AK(e) {
-  return DK(e).flatMap((e) => e.event_gid || []);
+  return OK(e)[0]?.event_gid || void 0;
 }
 function jK(e) {
-  return DK(e)[0]?.creator_clan_account_id || void 0;
+  return OK(e).flatMap((e) => e.event_gid || []);
 }
 function MK(e) {
-  return jK(e) !== void 0;
+  return OK(e)[0]?.creator_clan_account_id || void 0;
 }
 function NK(e) {
-  return DK(e)[0]?.featured_app_tagid || void 0;
+  return MK(e) !== void 0;
 }
 function PK(e) {
+  return OK(e)[0]?.featured_app_tagid || void 0;
+}
+function FK(e) {
   return (
     e.section_type === `crosspromotesalepage` &&
     !!e.sale_page_cross_promo_side_by_side
   );
 }
-function FK(e) {
+function IK(e) {
   return (
     e.section_type === `crosspromotesalepage` &&
     !!e.sale_page_cross_promo_in_sale_events
   );
 }
-function IK(e) {
-  let t = DK(e);
+function LK(e) {
+  let t = OK(e);
   return t.length > 0 && t.every((e) => (e.capsules?.length ?? 0) > 0);
 }
-function LK(e, t) {
-  return zK(e) ? (t?.BIsVisibleEvent() ? null : `missing`) : `setup`;
-}
 function RK(e, t) {
-  return !zK(e) || (!MK(e) && !DK(e)[0]?.clan_account_id)
+  return BK(e) ? (t?.BIsVisibleEvent() ? null : `missing`) : `setup`;
+}
+function zK(e, t) {
+  return !BK(e) || (!NK(e) && !OK(e)[0]?.clan_account_id)
     ? `setup`
     : t
       ? null
       : `missing`;
 }
-function zK(e) {
-  let t = DK(e)[0];
+function BK(e) {
+  let t = OK(e)[0];
   return t?.creator_clan_account_id
     ? !!t.capsules?.length
     : !!t?.event_gid && (!!t.featured_app_tagid || !!t.capsules?.length);
 }
-function BK(e, t) {
+function VK(e, t) {
   if (!t.length) return `creator`;
   let n = (n) =>
     t.every((t) => !!t && !!n(t)?.some((t) => t.creator_clan_account_id === e));
@@ -26904,36 +26907,36 @@ function BK(e, t) {
         ? `publisher`
         : `creator`;
 }
-function VK(e, t) {
+function HK(e, t) {
   return e
     ? I(`#Sale_CrossPromoSale_SectionTitle`, e.GetNameWithFallback(t) ?? ``)
     : I(`#Sale_CrossPromoSale_DefaultSectionTitle`);
 }
-function HK(e, t) {
+function UK(e, t) {
   let n = ze.GetWithFallback(e.localized_label, t);
   if (n) return n;
   if (e.default_label && e.default_label !== `#Sale_default_label`)
     return I(e.default_label);
 }
-var UK = [`logo_left`, `logo_top`, `event_capsule`],
-  WK = `crosspromo_layout`;
-function GK(e, t, n) {
-  let r = qK(e, n);
+var WK = [`logo_left`, `logo_top`, `event_capsule`],
+  GK = `crosspromo_layout`;
+function KK(e, t, n) {
+  let r = JK(e, n);
   if (t && (r === `logo_left` || r === `logo_top`)) {
     if (!t.strBackgroundURL || !t.strLogoURL) return `event_capsule`;
-    if (!KK(n)) return t.eDesktopLayout ?? `logo_left`;
+    if (!qK(n)) return t.eDesktopLayout ?? `logo_left`;
   }
   return r;
 }
-function KK(e) {
-  return UK.some((t) => t === e);
+function qK(e) {
+  return WK.some((t) => t === e);
 }
-function qK(e, t) {
-  let n = KK(t) ? t : void 0,
+function JK(e, t) {
+  let n = qK(t) ? t : void 0,
     r = e.sale_page_cross_promo_layout;
   return n ?? (r && r !== `sale_banner` ? r : `event_capsule`);
 }
-function JK(e, t) {
+function YK(e, t) {
   let n = Br.GetELanguageFallback(t),
     r =
       e.jsondata.localized_sale_cross_promo_logo_image?.findIndex((e) => !!e) ??
@@ -26946,35 +26949,35 @@ function JK(e, t) {
     e.GetImageURL(`sale_logo`, n)
   );
 }
-function YK(e) {
+function XK(e) {
   return 3;
 }
-function XK(e) {
+function ZK(e) {
   return !0;
 }
-function ZK(e) {
+function QK(e) {
   return e === `event_capsule`;
 }
-function QK(e) {
+function $K(e) {
   return e.type !== `sub` && e.type !== `bundle`;
 }
-function $K(e, t, n, r) {
+function eq(e, t, n, r) {
   let i = [];
   for (let a of e)
     if ((!t || t.has(a)) && !n(a) && (i.push(a), i.length >= r)) break;
   return i;
 }
-function eq(e, t, n, r = new Set()) {
+function tq(e, t, n, r = new Set()) {
   for (let t of e.GetSaleSections())
     if (!(!b(t.section_type) || (n && !n.BIncludeSection(t))))
-      for (let e of t.capsules) QK(e) && r.add(e.id);
+      for (let e of t.capsules) $K(e) && r.add(e.id);
   for (let e of t ?? []) {
     let t = e.capsule;
-    QK(t) && (!n || n.BIncludeLinkedCapsule(t)) && r.add(t.id);
+    $K(t) && (!n || n.BIncludeLinkedCapsule(t)) && r.add(t.id);
   }
   return r;
 }
-function tq(e, t, n) {
+function nq(e, t, n) {
   return {
     nSaleTagID: e.BUsesContentHubForItemSource()
       ? void 0
@@ -26991,37 +26994,37 @@ function tq(e, t, n) {
     nCreatorClanAccountId: n ? e.clanSteamID.GetAccountID() : void 0,
   };
 }
-var nq = 4;
-function rq(e) {
-  return e.smart_section_personalized_carousel_min_items ?? nq;
-}
+var rq = 4;
 function iq(e) {
+  return e.smart_section_personalized_carousel_min_items ?? rq;
+}
+function aq(e) {
   return e
     .GetSaleSections()
     .filter((e) => b(e.section_type) && y(e) === `personalized_carousel`);
 }
-function aq(e) {
-  return iq(e)[0];
-}
 function oq(e) {
+  return aq(e)[0];
+}
+function sq(e) {
   if (e.appid()) return { id: e.appid(), type: `game` };
   if (e.bundleid()) return { id: e.bundleid(), type: `bundle` };
   if (e.packageid()) return { id: e.packageid(), type: `sub` };
 }
-function sq(e, t, n, r, i, a, o) {
-  let s = iq(n),
+function cq(e, t, n, r, i, a, o) {
+  let s = aq(n),
     c = {
       rgSections: s.map((e) => ({
         eSort: e.smart_section_personalized_carousel_sort ?? 13,
-        nMinItems: rq(e),
+        nMinItems: iq(e),
         bRandomize: !!e.smart_section_personalized_carousel_randomize,
         bIncludePackages: e.smart_section_include_packages,
         bIncludeBundles: e.smart_section_include_bundles,
         bIncludeDLC: e.smart_section_include_dlc,
         nMinDiscountPercent:
-          e.smart_section_min_discount_percent === void 0 ? void 0 : zJ(e),
+          e.smart_section_min_discount_percent === void 0 ? void 0 : BJ(e),
       })),
-      storePageFilter: tq(n, !!s[0]?.prioritize_discounts, r),
+      storePageFilter: nq(n, !!s[0]?.prioritize_discounts, r),
       strStoreFilterJSON: s[0] ? _(s[0]) : void 0,
       strTabStoreFilterJSON: a ? JSON.stringify(a) : void 0,
     };
@@ -27034,11 +27037,11 @@ function sq(e, t, n, r, i, a, o) {
       t.language,
       JSON.stringify(c),
     ],
-    queryFn: () => cq(e, t, c, i, o),
+    queryFn: () => lq(e, t, c, i, o),
     staleTime: 1 / 0,
   };
 }
-async function cq(e, t, n, r, i) {
+async function lq(e, t, n, r, i) {
   if (!r || n.rgSections.length === 0) return [];
   let a = hi.Init(Ai);
   for (let e of n.rgSections) {
@@ -27078,12 +27081,12 @@ async function cq(e, t, n, r, i) {
     .map((e) => ({
       strTagName: e.tag_name() ?? ``,
       rgCapsules: e.store_item_ids().flatMap((e) => {
-        let t = oq(e);
+        let t = sq(e);
         return t ? [t] : [];
       }),
     }));
 }
-function lq(e, t) {
+function uq(e, t) {
   let n = t
     .GetSaleSections()
     .filter((e) => b(e.section_type) && y(e) == `personalized_carousel`);
@@ -27091,23 +27094,23 @@ function lq(e, t) {
   let r = n.findIndex((t) => t.unique_id == e.unique_id);
   return { nNumSections: n.length, nSectionIndex: r };
 }
-var uq = 1778623200;
-function dq(e, t) {
+var dq = 1778623200;
+function fq(e, t) {
   let n = !1;
   return (
     e && e.GetEventType() == 36
       ? (n = !0)
-      : e && t && t.is_creator_home && (n = fq(e, t)),
+      : e && t && t.is_creator_home && (n = pq(e, t)),
     n
   );
 }
-function fq(e, t) {
-  return !!t && !!t.is_creator_home && (e.createTime ?? 0) > uq;
+function pq(e, t) {
+  return !!t && !!t.is_creator_home && (e.createTime ?? 0) > dq;
 }
-function pq(e) {
+function mq(e) {
   return y(e) === `frame_compatibility` ? `frame` : `deck`;
 }
-function mq(e, t) {
+function hq(e, t) {
   let n = e.smart_section_deck_compatibility ?? 3;
   switch (n) {
     case 3:
@@ -27126,7 +27129,7 @@ function mq(e, t) {
     []
   );
 }
-var hq = [
+var gq = [
     {
       nOptInTagID: 9,
       rgChildren: [
@@ -27253,7 +27256,7 @@ var hq = [
       ],
     },
   ],
-  gq = [
+  _q = [
     {
       nTagID: zn,
       rgChildren: [
@@ -27334,7 +27337,7 @@ var hq = [
       ],
     },
   ],
-  _q = [
+  vq = [
     {
       strOptInTag: `option_58733`,
       rgChildren: [
@@ -27358,7 +27361,7 @@ var hq = [
     { strFeature: `vr` },
     { strFeature: `mac` },
   ],
-  vq = {
+  yq = {
     linux: `#Platform_Linux`,
     mac: `#Platform_Mac`,
     vr: `#Platform_VR`,
@@ -27372,80 +27375,80 @@ var hq = [
     "remote play together": `#Sale_Tabs_TagFilter_Feature_RemotePlayTogether`,
     "steam deck verified": `#Sale_Tabs_TagFilter_Feature_SteamDeckVerified`,
   },
-  yq = [
+  bq = [
     {
       strClass: `genre`,
       strLocToken: `#Sale_Tabs_TagFilter_Class_Genre`,
-      rgNodes: hq,
+      rgNodes: gq,
     },
     {
       strClass: `theme`,
       strLocToken: `#Sale_Tabs_TagFilter_Class_Theme`,
-      rgNodes: gq,
+      rgNodes: _q,
     },
     {
       strClass: `feature`,
       strLocToken: `#Sale_Tabs_TagFilter_Class_Feature`,
-      rgNodes: _q,
+      rgNodes: vq,
     },
   ];
-function bq(e) {
+function xq(e) {
   return e?.rgNodes
     ? e.rgNodes
-    : (yq.find((t) => t.strClass === e?.tag_class)?.rgNodes ?? []);
+    : (bq.find((t) => t.strClass === e?.tag_class)?.rgNodes ?? []);
 }
-function xq(e) {
+function Sq(e) {
   return e.nTagID
     ? String(e.nTagID)
     : e.nOptInTagID || e.strOptInTag
-      ? `optin:` + kq(e)
+      ? `optin:` + Aq(e)
       : e.eContentDescriptor
         ? `descriptor:` + e.eContentDescriptor
         : e.strFeature
           ? `feature:` + e.strFeature
           : `apptype:` + e.strAppType;
 }
-function Sq(e) {
-  if (e.strFeature) return vq[e.strFeature];
+function Cq(e) {
+  if (e.strFeature) return yq[e.strFeature];
   if (e.strAppType) return `#AppTypeLabel_` + e.strAppType;
 }
-function Cq(e) {
+function wq(e) {
   if (e)
     return e.strChildKey
       ? e.strParentKey + `,` + e.strChildKey
       : e.strParentKey;
 }
-var wq = `tabtag`,
-  Tq = `tabsubtag`;
-function Eq(e, t) {
+var Tq = `tabtag`,
+  Eq = `tabsubtag`;
+function Dq(e, t) {
   if (e) return { strParentKey: e, strChildKey: t || void 0 };
 }
-function Dq(e) {
-  return { [wq]: e?.strParentKey ?? null, [Tq]: e?.strChildKey ?? null };
+function Oq(e) {
+  return { [Tq]: e?.strParentKey ?? null, [Eq]: e?.strChildKey ?? null };
 }
-function Oq(e, t, n) {
+function kq(e, t, n) {
   let r = () => {
     if (!t?.bNoAllOption) return;
-    let e = bq(t).find(n);
-    return e ? { strParentKey: xq(e) } : void 0;
+    let e = xq(t).find(n);
+    return e ? { strParentKey: Sq(e) } : void 0;
   };
   if (!e) return r();
-  let i = jq(bq(t), e.strParentKey);
+  let i = Mq(xq(t), e.strParentKey);
   if (!i || !n(i)) return r();
   if (!e.strChildKey) return e;
-  let a = jq(i.rgChildren ?? [], e.strChildKey);
+  let a = Mq(i.rgChildren ?? [], e.strChildKey);
   return !a || !n(a) ? { strParentKey: e.strParentKey } : e;
 }
-function kq(e) {
+function Aq(e) {
   return e.strOptInTag ?? String(e.nOptInTagID);
 }
-function Aq(e, t) {
+function jq(e, t) {
   return e.nOptInTagID || e.strOptInTag
     ? (gi(t, `Opt-in registration tag used on a sale without an opt-in`),
       {
         type: w.k_EStoreFilterClauseTypeOptInRegistrationTag,
         optin: t,
-        value: kq(e),
+        value: Aq(e),
       })
     : e.nTagID
       ? { type: w.k_EStoreFilterClauseTypeStoreTag, value: e.nTagID }
@@ -27458,49 +27461,49 @@ function Aq(e, t) {
           ? { type: w.k_EStoreFilterClauseTypeFeatureTag, value: e.strFeature }
           : { type: w.k_EStoreFilterClauseTypeAppType, value: e.strAppType };
 }
-function jq(e, t) {
-  return e.find((e) => xq(e) === t);
+function Mq(e, t) {
+  return e.find((e) => Sq(e) === t);
 }
-function Mq(e, t, n) {
+function Nq(e, t, n) {
   if (!e) return;
-  let r = jq(bq(t), e.strParentKey);
+  let r = Mq(xq(t), e.strParentKey);
   if (!r) return;
-  if (!e.strChildKey) return Aq(r, n);
-  let i = jq(r.rgChildren ?? [], e.strChildKey);
+  if (!e.strChildKey) return jq(r, n);
+  let i = Mq(r.rgChildren ?? [], e.strChildKey);
   if (i)
     return {
       type: w.k_EStoreFilterClauseTypeAnd,
-      rgSubexpressions: [Aq(r, n), Aq(i, n)],
+      rgSubexpressions: [jq(r, n), jq(i, n)],
     };
 }
-function Nq() {
-  let [e] = Hq(`tab`),
-    t = z.useCallback((e, t) => Wq({ ...t, tab: String(e) }), []);
-  return [Pq(e), t];
-}
-function Pq(e) {
-  return e === null ? 0 : Number(e);
+function Pq() {
+  let [e] = Uq(`tab`),
+    t = z.useCallback((e, t) => Gq({ ...t, tab: String(e) }), []);
+  return [Fq(e), t];
 }
 function Fq(e) {
-  let t = z.useContext(Iq),
-    [n] = Nq();
-  return Lq(e, t?.nTabUniqueID ?? n);
+  return e === null ? 0 : Number(e);
 }
-var Iq = z.createContext(void 0);
+function Iq(e) {
+  let t = z.useContext(Lq),
+    [n] = Pq();
+  return Rq(e, t?.nTabUniqueID ?? n);
+}
+var Lq = z.createContext(void 0);
 (z.createContext(void 0), z.createContext(void 0));
-function Lq(e, t) {
-  let n = Rq(e);
+function Rq(e, t) {
+  let n = zq(e);
   return n.find((e) => e.unique_id === t) ?? n[0];
 }
-function Rq(e) {
+function zq(e) {
   return (
     e.GetSaleSectionFirstMatchByType(`tabs`)?.tabs?.filter((e) => !e.hide) ?? []
   );
 }
-function zq(e, t, n, r) {
+function Bq(e, t, n, r) {
   if (!n || t.diable_tab_id_filtering) return;
   let i = e.jsondata.sale_opt_in_page_name || e.jsondata.prune_list_optin_name,
-    a = Mq(r, n.tab_tag_filter, i),
+    a = Nq(r, n.tab_tag_filter, i),
     o =
       n.store_filter && a
         ? {
@@ -27508,60 +27511,60 @@ function zq(e, t, n, r) {
             rgSubexpressions: [n.store_filter, a],
           }
         : (n.store_filter ?? a);
-  if (o) return Bq(e, t, n) ? o : void 0;
+  if (o) return Vq(e, t, n) ? o : void 0;
 }
-function Bq(e, t, n) {
+function Vq(e, t, n) {
   let r = e.GetSaleSections(),
     i = r.findIndex((e) => e.section_type === `tabs`);
   return i < 0 || !r[i].tabs?.includes(n) ? !1 : r.indexOf(t) > i;
 }
-function Vq(e, t) {
-  let n = Fq(e);
-  return !n || n === Rq(e)[0] || t.diable_tab_id_filtering || !Bq(e, t, n)
+function Hq(e, t) {
+  let n = Iq(e);
+  return !n || n === zq(e)[0] || t.diable_tab_id_filtering || !Vq(e, t, n)
     ? ``
     : `tabid${n.unique_id}`;
 }
-function Hq(e) {
-  let t = z.useSyncExternalStore(Ue, Uq, Uq);
+function Uq(e) {
+  let t = z.useSyncExternalStore(Ue, Wq, Wq);
   return [
     new URLSearchParams(t).get(e),
-    z.useCallback((t) => Wq({ [e]: t ?? null }), [e]),
+    z.useCallback((t) => Gq({ [e]: t ?? null }), [e]),
   ];
 }
-function Uq() {
+function Wq() {
   return location.search;
 }
-function Wq(e) {
+function Gq(e) {
   let t = new URL(window.location.href);
   for (let [n, r] of Object.entries(e))
     r === null ? t.searchParams.delete(n) : t.searchParams.set(n, r);
   t.href !== window.location.href && fi((e) => e, t);
 }
-function Gq(e) {
-  let t = z.useContext(Iq),
-    n = Fq(e),
-    r = Kq(),
-    [i] = Hq(wq),
-    [a] = Hq(Tq),
-    o = z.useCallback((e, t) => Wq({ ...t, ...Dq(e) }), []);
-  return [Oq(t ? t.tagSelection : Eq(i, a), n?.tab_tag_filter, r), o];
+function Kq(e) {
+  let t = z.useContext(Lq),
+    n = Iq(e),
+    r = qq(),
+    [i] = Uq(Tq),
+    [a] = Uq(Eq),
+    o = z.useCallback((e, t) => Gq({ ...t, ...Oq(e) }), []);
+  return [kq(t ? t.tagSelection : Dq(i, a), n?.tab_tag_filter, r), o];
 }
-function Kq() {
+function qq() {
   let { data: e } = rt();
-  return z.useMemo(() => qq(e), [e]);
+  return z.useMemo(() => Jq(e), [e]);
 }
-function qq(e) {
+function Jq(e) {
   let t = !!Wi.logged_in && L.EREALM !== xt.k_ESteamRealmChina && e !== void 0,
     n = new Set(Sa(e));
   return (e) => !e.eContentDescriptor || (t && !n.has(e.eContentDescriptor));
 }
-function Jq(e, t) {
-  let n = Fq(e),
-    [r] = Gq(e);
-  return zq(e, t, n, r);
+function Yq(e, t) {
+  let n = Iq(e),
+    [r] = Kq(e);
+  return Bq(e, t, n, r);
 }
-var Yq = 50;
-function Xq(e, t, n) {
+var Xq = 50;
+function Zq(e, t, n) {
   let { defaultInfo: r } = t;
   switch (e.type) {
     case w.k_EStoreFilterClauseTypeStoreTag:
@@ -27611,11 +27614,11 @@ function Xq(e, t, n) {
       );
     }
     case w.k_EStoreFilterClauseTypeOr: {
-      let r = e.rgSubexpressions?.some((e) => Xq(e, t, n)) ?? !1;
+      let r = e.rgSubexpressions?.some((e) => Zq(e, t, n)) ?? !1;
       return e.bNegated ? !r : r;
     }
     case w.k_EStoreFilterClauseTypeAnd: {
-      let r = e.rgSubexpressions?.every((e) => Xq(e, t, n)) ?? !1;
+      let r = e.rgSubexpressions?.every((e) => Zq(e, t, n)) ?? !1;
       return e.bNegated ? !r : r;
     }
     case w.k_EStoreFilterClauseTypeOptInRegistrationTag:
@@ -27629,7 +27632,7 @@ function Xq(e, t, n) {
       return !0;
   }
 }
-function Zq(e, t, n, r, i) {
+function Qq(e, t, n, r, i) {
   return {
     queryKey: [
       `StoreFilterPassingApps`,
@@ -27638,12 +27641,12 @@ function Zq(e, t, n, r, i) {
       i,
       n,
     ],
-    queryFn: () => $q(e, t, n, (e) => ({ appid: e }), r, i),
+    queryFn: () => eJ(e, t, n, (e) => ({ appid: e }), r, i),
     enabled: !!(n && r),
     staleTime: 6e5,
   };
 }
-function Qq(e, t, n, r, i) {
+function $q(e, t, n, r, i) {
   return {
     queryKey: [
       `StoreFilterPassingItems`,
@@ -27652,13 +27655,13 @@ function Qq(e, t, n, r, i) {
       i,
       n?.map(Si),
     ],
-    queryFn: () => $q(e, t, n, (e) => e, r, i),
+    queryFn: () => eJ(e, t, n, (e) => e, r, i),
     enabled: !!(n && r),
     staleTime: 6e5,
   };
 }
-async function $q(e, t, n, r, i, a) {
-  let o = eJ(i, {
+async function eJ(e, t, n, r, i, a) {
+  let o = tJ(i, {
       bTags: !1,
       bPlatforms: !1,
       bLanguages: !1,
@@ -27666,16 +27669,16 @@ async function $q(e, t, n, r, i, a) {
     }),
     s = Math.floor(Date.now() / 1e3),
     c = [];
-  for (let l = 0; l < n.length && c.length < a; l += Yq) {
-    let u = n.slice(l, l + Yq),
-      d = await Promise.all(u.map((n) => tJ(e, t, r(n), o)));
+  for (let l = 0; l < n.length && c.length < a; l += Xq) {
+    let u = n.slice(l, l + Xq),
+      d = await Promise.all(u.map((n) => nJ(e, t, r(n), o)));
     u.forEach((e, t) => {
-      c.length < a && Xq(i, d[t], s) && c.push(e);
+      c.length < a && Zq(i, d[t], s) && c.push(e);
     });
   }
   return c;
 }
-function eJ(e, t) {
+function tJ(e, t) {
   switch (e.type) {
     case w.k_EStoreFilterClauseTypeStoreTag:
       t.bTags = !0;
@@ -27691,11 +27694,11 @@ function eJ(e, t) {
       break;
     case w.k_EStoreFilterClauseTypeOr:
     case w.k_EStoreFilterClauseTypeAnd:
-      e.rgSubexpressions?.forEach((e) => eJ(e, t));
+      e.rgSubexpressions?.forEach((e) => tJ(e, t));
   }
   return t;
 }
-async function tJ(e, t, n, r) {
+async function nJ(e, t, n, r) {
   let [i, a, o, s, c] = await Promise.all([
     e.fetchQuery(at(t, n)).catch(() => void 0),
     r.bTags ? e.fetchQuery(dt(t, n)).catch(() => null) : null,
@@ -27711,7 +27714,7 @@ async function tJ(e, t, n, r) {
     optInRegistrationTags: c,
   };
 }
-var nJ = class e extends B.Message {
+var rJ = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -27767,7 +27770,7 @@ var nJ = class e extends B.Message {
       return `CStoreRecommendations_GetPackagePurchaseRecommendations_Request`;
     }
   },
-  rJ = class e extends B.Message {
+  iJ = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -27780,7 +27783,7 @@ var nJ = class e extends B.Message {
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { recommendations: { n: 1, c: iJ, r: !0, q: !0 } },
+          fields: { recommendations: { n: 1, c: aJ, r: !0, q: !0 } },
         }),
         e.sm_m
       );
@@ -27820,7 +27823,7 @@ var nJ = class e extends B.Message {
       return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response`;
     }
   },
-  iJ = class e extends B.Message {
+  aJ = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -27876,7 +27879,7 @@ var nJ = class e extends B.Message {
       return `CStoreRecommendations_GetPackagePurchaseRecommendations_Response_Recommendation`;
     }
   },
-  aJ = class e extends B.Message {
+  oJ = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -27932,7 +27935,7 @@ var nJ = class e extends B.Message {
       return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Request`;
     }
   },
-  oJ = class e extends B.Message {
+  sJ = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -27945,7 +27948,7 @@ var nJ = class e extends B.Message {
       return (
         (e.sm_m ||= {
           proto: e,
-          fields: { recommendations: { n: 1, c: sJ, r: !0, q: !0 } },
+          fields: { recommendations: { n: 1, c: cJ, r: !0, q: !0 } },
         }),
         e.sm_m
       );
@@ -27985,7 +27988,7 @@ var nJ = class e extends B.Message {
       return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response`;
     }
   },
-  sJ = class e extends B.Message {
+  cJ = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -28041,7 +28044,7 @@ var nJ = class e extends B.Message {
       return `CStoreRecommendations_GetPackagePurchaseRecommendationsForItems_Response_Recommendation`;
     }
   },
-  cJ = class e extends B.Message {
+  lJ = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -28097,7 +28100,7 @@ var nJ = class e extends B.Message {
       return `CStoreRecommendations_GetLiveSales_Request`;
     }
   },
-  lJ = class e extends B.Message {
+  uJ = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -28111,7 +28114,7 @@ var nJ = class e extends B.Message {
         (e.sm_m ||= {
           proto: e,
           fields: {
-            sales: { n: 1, c: uJ, r: !0, q: !0 },
+            sales: { n: 1, c: dJ, r: !0, q: !0 },
             total_count: { n: 2, br: Ci.readUint32, bw: ga.writeUint32 },
           },
         }),
@@ -28153,7 +28156,7 @@ var nJ = class e extends B.Message {
       return `CStoreRecommendations_GetLiveSales_Response`;
     }
   },
-  uJ = class e extends B.Message {
+  dJ = class e extends B.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -28213,13 +28216,13 @@ var nJ = class e extends B.Message {
       return `CStoreRecommendations_GetLiveSales_Response_Sale`;
     }
   },
-  dJ;
+  fJ;
 (function (e) {
   function t(e, t, n) {
     return e.SendMsg(
       `StoreRecommendations.GetPackagePurchaseRecommendations#1`,
-      We(nJ, t, n),
-      rJ,
+      We(rJ, t, n),
+      iJ,
       { bConstMethod: !0, ePrivilege: 1 },
     );
   }
@@ -28227,14 +28230,14 @@ var nJ = class e extends B.Message {
   function n(e, t, n) {
     return e.SendMsg(
       `StoreRecommendations.GetPackagePurchaseRecommendationsForItems#1`,
-      We(aJ, t, n),
-      oJ,
+      We(oJ, t, n),
+      sJ,
       { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
     );
   }
   e.GetPackagePurchaseRecommendationsForItems = n;
   function r(e, t, n) {
-    return e.SendMsg(`StoreRecommendations.GetLiveSales#1`, We(cJ, t, n), lJ, {
+    return e.SendMsg(`StoreRecommendations.GetLiveSales#1`, We(lJ, t, n), uJ, {
       bConstMethod: !0,
       ePrivilege: 0,
       eWebAPIKeyRequirement: 1,
@@ -28242,9 +28245,9 @@ var nJ = class e extends B.Message {
     });
   }
   e.GetLiveSales = r;
-})((dJ ||= {}));
-var fJ = `saleaction/recommendeddiscounts`;
-function pJ(e) {
+})((fJ ||= {}));
+var pJ = `saleaction/recommendeddiscounts`;
+function mJ(e) {
   let t = new URLSearchParams(),
     { contentHub: n } = e;
   return (
@@ -28255,9 +28258,9 @@ function pJ(e) {
     t.toString()
   );
 }
-async function mJ(e, t, n) {
-  let r = pJ(n),
-    i = `${L.STORE_BASE_URL}${fJ}${r ? `?${r}` : ``}`,
+async function hJ(e, t, n) {
+  let r = mJ(n),
+    i = `${L.STORE_BASE_URL}${pJ}${r ? `?${r}` : ``}`,
     a = await fetch(i, { credentials: `include` });
   if (!a.ok) throw Error(`${i} answered ${a.status}`);
   let o = await a.json();
@@ -28265,8 +28268,8 @@ async function mJ(e, t, n) {
     throw Error(`${i} answered EResult ${o?.success}`);
   return o.discounts;
 }
-var hJ = 6e5;
-function gJ(e, t, n, r) {
+var gJ = 6e5;
+function _J(e, t, n, r) {
   return {
     queryKey: [
       `RecommendedDiscounts`,
@@ -28274,62 +28277,62 @@ function gJ(e, t, n, r) {
       t.country,
       r ? JSON.stringify(r) : null,
     ],
-    queryFn: () => mJ(e, t.country, { contentHub: r }),
-    staleTime: hJ,
+    queryFn: () => hJ(e, t.country, { contentHub: r }),
+    staleTime: gJ,
   };
 }
-function _J(e, t) {
+function vJ(e, t) {
   return e.rgReasonLists.find((e) => e.eReason === t)?.rgAppIDs ?? [];
 }
-function vJ(e) {
+function yJ(e) {
   if (e.jsondata.item_source_type !== C.k_EContentHub) return;
   let t = e.GetContentHub();
   if (t?.type)
     return { strHubType: t.type, strCategory: t.category, nTagID: t.tagid };
 }
-function yJ(e, t) {
-  let n = vJ(e),
+function bJ(e, t) {
+  let n = yJ(e),
     r = { contentHub: n, listStoreFilter: t, bTabTagHub: !1 };
   if (!t || n) return r;
-  let i = SJ(t);
+  let i = CJ(t);
   if (!i) return r;
-  let a = bJ(i[i.length - 1]);
+  let a = xJ(i[i.length - 1]);
   return a
     ? {
         contentHub: { strHubType: `tags`, nTagID: a },
-        listStoreFilter: xJ(i.slice(0, -1)),
+        listStoreFilter: SJ(i.slice(0, -1)),
         bTabTagHub: !0,
       }
     : r;
 }
-function bJ(e) {
+function xJ(e) {
   if (e.type !== w.k_EStoreFilterClauseTypeStoreTag || e.bNegated) return;
   let t = Number(e.value);
   if (!(!Number.isSafeInteger(t) || t <= 0)) return t;
 }
-function xJ(e) {
+function SJ(e) {
   return e.length <= 1
     ? e[0]
     : { type: w.k_EStoreFilterClauseTypeAnd, rgSubexpressions: e };
 }
-function SJ(e) {
+function CJ(e) {
   if (e.type !== w.k_EStoreFilterClauseTypeAnd) return [e];
   if (e.bNegated || !e.rgSubexpressions?.length) return;
   let t = [];
   for (let n of e.rgSubexpressions) {
-    let e = SJ(n);
+    let e = CJ(n);
     if (!e) return;
     t.push(...e);
   }
   return t;
 }
-function CJ(e, t, n) {
+function wJ(e, t, n) {
   if (t)
     return e.smart_section_discount_reason === void 0
       ? []
-      : _J(t, e.smart_section_discount_reason).slice(0, n);
+      : vJ(t, e.smart_section_discount_reason).slice(0, n);
 }
-var wJ = [
+var TJ = [
   {
     eReason: 1,
     strTitleToken: `#Sale_default_label_OnYourWishlist`,
@@ -28381,19 +28384,19 @@ var wJ = [
     strSubtitleToken: ``,
   },
 ];
-function TJ(e) {
-  return wJ.find((t) => t.eReason === e.smart_section_discount_reason);
-}
 function EJ(e) {
-  return TJ(e)?.strTitleToken ?? ``;
+  return TJ.find((t) => t.eReason === e.smart_section_discount_reason);
 }
 function DJ(e) {
-  return TJ(e)?.strSubtitleToken ?? ``;
+  return EJ(e)?.strTitleToken ?? ``;
 }
-function OJ(e, t) {
+function OJ(e) {
+  return EJ(e)?.strSubtitleToken ?? ``;
+}
+function kJ(e, t) {
   return e.BUsesContentHubForItemSource() || !!t.hide_owned_items;
 }
-function kJ(e, t, n) {
+function AJ(e, t, n) {
   if (!e) return !1;
   let r = !n?.bHasHideIgnoredValue || n.bHideIgnored;
   return (e.ignored && r) ||
@@ -28404,15 +28407,15 @@ function kJ(e, t, n) {
     ? !0
     : t && !!(e.already_owned || e.demo_for_owned_game);
 }
-function AJ(e) {
+function jJ(e) {
   return e.map((e) => e.data);
 }
-function jJ(e) {
+function MJ(e) {
   return e.map((e) => e.data?.visible === !1);
 }
-function MJ(e, t, n, r, i) {
+function NJ(e, t, n, r, i) {
   let a = Er(),
-    o = OJ(e, t),
+    o = kJ(e, t),
     s = !!r?.bHideOwned,
     c = !!r?.bHideWishlisted,
     u = !!r?.bHideIgnored,
@@ -28422,11 +28425,11 @@ function MJ(e, t, n, r, i) {
         let t = Vt(a, RV(e));
         return i ? { ...t, enabled: !1 } : t;
       }),
-      combine: AJ,
+      combine: jJ,
     }),
     p = l({
       queries: (n ?? []).map((e) => ({ ...at(a, RV(e)), enabled: !1 })),
-      combine: jJ,
+      combine: MJ,
     });
   return (0, z.useMemo)(() => {
     if (!n) return { capsules: void 0, nHiddenCapsules: 0 };
@@ -28441,23 +28444,23 @@ function MJ(e, t, n, r, i) {
       capsules: n.filter((n, r) => {
         if (p[r]) return !1;
         let i = f[r];
-        return !kJ(i, o, e) || ((!i?.already_owned || s) && t++, !1);
+        return !AJ(i, o, e) || ((!i?.already_owned || s) && t++, !1);
       }),
       nHiddenCapsules: t,
     };
   }, [n, f, p, o, s, c, u, d]);
 }
-function NJ(e) {
+function PJ(e) {
   let { capsules: t } = e,
     n = Er();
   return (
-    l({ queries: (t ?? []).map((e) => Vt(n, RV(e))), combine: PJ }), null
+    l({ queries: (t ?? []).map((e) => Vt(n, RV(e))), combine: FJ }), null
   );
 }
-function PJ() {
+function FJ() {
   return null;
 }
-var FJ = {
+var IJ = {
     popularity: { eType: `game`, bDropsOwned: !1 },
     wishlist: { eType: `game`, bDropsOwned: !0 },
     interactive_recommender: { eType: `game`, bDropsOwned: !0 },
@@ -28467,28 +28470,28 @@ var FJ = {
     dlc_music_onsale: { eType: `music`, bDropsOwned: !0 },
     discount_reason: { eType: `game`, bDropsOwned: !1 },
   },
-  IJ = 24,
-  LJ = 100,
-  RJ = 500;
-function zJ(e) {
+  LJ = 24,
+  RJ = 100,
+  zJ = 500;
+function BJ(e) {
   return Math.max(1, e.smart_section_min_discount_percent ?? 1);
 }
-function BJ(e) {
-  return VJ(e) && FJ[e].bDropsOwned;
-}
 function VJ(e) {
-  return e !== void 0 && e in FJ;
+  return HJ(e) && IJ[e].bDropsOwned;
 }
-function HJ(e, t, n, r) {
+function HJ(e) {
+  return e !== void 0 && e in IJ;
+}
+function UJ(e, t, n, r) {
   let i = y(n),
     a =
       i === `tag`
         ? { tagid: n.smart_section_tag }
         : i === `top_n`
-          ? { top_n_sellers: RJ }
+          ? { top_n_sellers: zJ }
           : {};
   return (
-    (a.min_discount_percent = zJ(n)),
+    (a.min_discount_percent = BJ(n)),
     (a.include_packages = n.smart_section_include_packages),
     (a.include_bundles = n.smart_section_include_bundles),
     (a.include_dlc = n.smart_section_include_dlc),
@@ -28498,12 +28501,12 @@ function HJ(e, t, n, r) {
       t,
       a,
       i === `tag` && n.random_from_entire_set
-        ? LJ
-        : n.smart_section_max_apps || IJ,
+        ? RJ
+        : n.smart_section_max_apps || LJ,
     )
   );
 }
-function UJ(e, t, n, r) {
+function WJ(e, t, n, r) {
   return za(
     e,
     t,
@@ -28511,11 +28514,11 @@ function UJ(e, t, n, r) {
       min_discount_percent: n.smart_section_min_discount_percent || void 0,
       store_filter_json: r ? JSON.stringify(r) : void 0,
     },
-    XJ(n),
+    ZJ(n),
   );
 }
-function WJ(e, t) {
-  if (IK(t)) return `manual`;
+function GJ(e, t) {
+  if (LK(t)) return `manual`;
   if (t.section_type !== `items`) return;
   let n = y(t);
   if (t.enable_faceted_browsing) return n === void 0 ? `faceted` : void 0;
@@ -28541,30 +28544,30 @@ function WJ(e, t) {
   if (n === `personalized_carousel`) return `personalized_carousel`;
   if (n === `discount_reason`) return `discount_reason`;
 }
-function GJ(e, t, n) {
+function KJ(e, t, n) {
   let r = e.GetDayIndexFromEventStart(n);
   return t.capsules.filter(
     (e) => e.visibility_index === void 0 || e.visibility_index === r,
   );
 }
-function KJ(e, t, n) {
-  return GJ(e, t, n).flatMap((e) => {
+function qJ(e, t, n) {
+  return KJ(e, t, n).flatMap((e) => {
     let t = RV(e);
     return t ? [t] : [];
   });
 }
-function qJ(e, t, n, r, i) {
-  let a = XJ(t),
-    o = WJ(e, t);
-  if (VJ(o)) {
-    let n = FJ[o].eType;
-    return (r.tabStoreFilter ? r.tabFilteredAppIDs : JJ(e, t, r, a))?.map(
+function JJ(e, t, n, r, i) {
+  let a = ZJ(t),
+    o = GJ(e, t);
+  if (HJ(o)) {
+    let n = IJ[o].eType;
+    return (r.tabStoreFilter ? r.tabFilteredAppIDs : YJ(e, t, r, a))?.map(
       (e) => ({ id: e, type: n }),
     );
   }
   switch (o) {
     case `manual`: {
-      let i = GJ(e, t, n);
+      let i = KJ(e, t, n);
       if (!r.tabStoreFilter) return i;
       if (!r.tabFilteredItems) return;
       let a = new Set(r.tabFilteredItems.map(Si));
@@ -28579,7 +28582,7 @@ function qJ(e, t, n, r, i) {
       if (!r.discountedItems) return;
       let e = r.discountedItems.map(zV).filter((e) => !!e);
       return o === `tag` && t.random_from_entire_set
-        ? bK(t, e, a, i)
+        ? xK(t, e, a, i)
         : e.slice(0, a);
     }
     case `topwishlisted`:
@@ -28588,103 +28591,103 @@ function qJ(e, t, n, r, i) {
         .filter((e) => !!e)
         .slice(0, a);
     case `personalized_carousel`: {
-      let n = ZJ(e, t, r.personalizedCarousels)?.rgCapsules;
-      return n && YJ(t, n).slice(0, a);
+      let n = QJ(e, t, r.personalizedCarousels)?.rgCapsules;
+      return n && XJ(t, n).slice(0, a);
     }
     default:
       return;
   }
 }
-function JJ(e, t, n, r) {
-  let i = WJ(e, t);
-  if (VJ(i))
+function YJ(e, t, n, r) {
+  let i = GJ(e, t);
+  if (HJ(i))
     switch (i) {
       case `popularity`:
-        return n.compatAppList && mq(t, n.compatAppList).slice(0, r);
+        return n.compatAppList && hq(t, n.compatAppList).slice(0, r);
       case `wishlist`:
-        return eY(
+        return tY(
           t,
           n.wishlistAppIDs,
-          eq(e, e.GetTaggedItems()),
+          tq(e, e.GetTaggedItems()),
           n.ownedAppIDs,
           r,
         );
       case `interactive_recommender`:
-        return eY(
+        return tY(
           t,
           n.recommendedAppIDs,
-          eq(e, e.GetTaggedItems()),
+          tq(e, e.GetTaggedItems()),
           n.ownedAppIDs,
           r,
         );
       case `wishlist_onsale`:
-        return eY(t, n.wishlistOnSaleAppIDs, void 0, n.ownedAppIDs, r);
+        return tY(t, n.wishlistOnSaleAppIDs, void 0, n.ownedAppIDs, r);
       case `interactive_recommender_onsale`:
-        return eY(t, n.recommendedOnSaleAppIDs, void 0, n.ownedAppIDs, r);
+        return tY(t, n.recommendedOnSaleAppIDs, void 0, n.ownedAppIDs, r);
       case `dlc_onsale`:
-        return eY(t, n.ownedDLCOnSaleAppIDs, void 0, n.ownedAppIDs, r);
+        return tY(t, n.ownedDLCOnSaleAppIDs, void 0, n.ownedAppIDs, r);
       case `dlc_music_onsale`:
-        return eY(t, n.ownedSoundtracksOnSaleAppIDs, void 0, n.ownedAppIDs, r);
+        return tY(t, n.ownedSoundtracksOnSaleAppIDs, void 0, n.ownedAppIDs, r);
       case `discount_reason`:
-        return CJ(t, n.recommendedDiscounts, r);
+        return wJ(t, n.recommendedDiscounts, r);
       default:
         da(i, `GetSaleItemSectionAppList: fixed-list flavor with no list`);
         return;
     }
 }
-function YJ(e, t) {
+function XJ(e, t) {
   if (!e.smart_section_exclude_appids?.length) return t;
   let n = new Set(e.smart_section_exclude_appids);
   return t.filter((e) => e.type !== `game` || !n.has(e.id));
 }
-function XJ(e) {
-  return e.smart_section_max_apps || IJ;
+function ZJ(e) {
+  return e.smart_section_max_apps || LJ;
 }
-function ZJ(e, t, n) {
-  if (n) return n[lq(t, e).nSectionIndex] ?? null;
+function QJ(e, t, n) {
+  if (n) return n[uq(t, e).nSectionIndex] ?? null;
 }
-function QJ(e, t) {
-  let n = WJ(e, t) === `personalized_carousel`;
-  return $J(e, aq(e) ?? t, n);
+function $J(e, t) {
+  let n = GJ(e, t) === `personalized_carousel`;
+  return eY(e, oq(e) ?? t, n);
 }
-function $J(e, t, n) {
+function eY(e, t, n) {
   let r = Aa(),
     i = h(),
     { storeBrowseContext: a } = ya(),
-    o = Fq(e),
-    [s] = Gq(e),
-    c = t ? zq(e, t, o, s) : void 0,
+    o = Iq(e),
+    [s] = Kq(e),
+    c = t ? Bq(e, t, o, s) : void 0,
     { data: l, isSuccess: u } = p({
       ...re(e.clanSteamID.GetAccountID(), i),
       enabled: n,
     }),
     { data: d } = p({
-      ...sq(r, a, e, dq(e, l), Wi.accountid, c),
+      ...cq(r, a, e, fq(e, l), Wi.accountid, c),
       enabled: n && u,
     });
   return d;
 }
-function eY(e, t, n, r, i) {
+function tY(e, t, n, r, i) {
   if (!t || !r) return;
   let a = new Set(e.smart_section_exclude_appids);
-  return $K(t, n, (e) => r.has(e) || a.has(e), i);
+  return eq(t, n, (e) => r.has(e) || a.has(e), i);
 }
-function tY(e, t, n) {
+function nY(e, t, n) {
   let r = !n,
     i = HH(),
-    a = vK(),
-    o = WJ(e, t),
+    a = yK(),
+    o = GJ(e, t),
     s = Aa(),
     c = h(),
     { storeBrowseContext: l, dataLoader: u } = ya(),
-    d = Jq(e, t),
-    f = zJ(t),
-    m = (0, z.useMemo)(() => yJ(e, d), [e, d]),
+    d = Yq(e, t),
+    f = BJ(t),
+    m = (0, z.useMemo)(() => bJ(e, d), [e, d]),
     g = o === `discount_reason` ? m.listStoreFilter : d,
-    { data: _ } = p({ ...xc(pq(t)), enabled: r && o === `popularity` }),
+    { data: _ } = p({ ...xc(mq(t)), enabled: r && o === `popularity` }),
     { data: v } = p({ ...Fi(s, Wi.accountid), enabled: r && o === `wishlist` }),
     { data: y } = p({
-      ...CK(s, Wi.accountid),
+      ...wK(s, Wi.accountid),
       enabled: r && o === `interactive_recommender`,
     }),
     { data: b } = p({
@@ -28692,7 +28695,7 @@ function tY(e, t, n) {
       enabled: r && o === `wishlist_onsale`,
     }),
     { data: x } = p({
-      ...EK(c, s, u, Wi.accountid, f),
+      ...DK(c, s, u, Wi.accountid, f),
       enabled: r && o === `interactive_recommender_onsale`,
     }),
     { data: S } = p({
@@ -28704,16 +28707,16 @@ function tY(e, t, n) {
       enabled: r && o === `dlc_music_onsale`,
     }),
     { data: w } = p({
-      ...HJ(s, l, t, d),
+      ...UJ(s, l, t, d),
       enabled: r && (o === `tag` || o === `top_n` || o === `all_discounted`),
     }),
-    { data: T } = p({ ...UJ(s, l, t, d), enabled: r && o === `topwishlisted` }),
-    E = QJ(e, t),
+    { data: T } = p({ ...WJ(s, l, t, d), enabled: r && o === `topwishlisted` }),
+    E = $J(e, t),
     { data: D } = p({
-      ...gJ(s, l, Wi.accountid, m.contentHub),
+      ..._J(s, l, Wi.accountid, m.contentHub),
       enabled: r && o === `discount_reason`,
     }),
-    { data: k } = p({ ...O(s, Wi.accountid), enabled: r && BJ(o) }),
+    { data: k } = p({ ...O(s, Wi.accountid), enabled: r && VJ(o) }),
     A = (0, z.useMemo)(
       () => ({
         compatAppList: _,
@@ -28732,50 +28735,50 @@ function tY(e, t, n) {
       }),
       [_, v, y, b, x, S, C, w, T, E, D, k, g],
     ),
-    ee = !!g && VJ(o),
-    j = (0, z.useMemo)(() => (ee ? JJ(e, t, A, 1 / 0) : void 0), [ee, e, t, A]),
+    ee = !!g && HJ(o),
+    j = (0, z.useMemo)(() => (ee ? YJ(e, t, A, 1 / 0) : void 0), [ee, e, t, A]),
     { data: M } = p({
-      ...Zq(c, u, j, g, XJ(t)),
+      ...Qq(c, u, j, g, ZJ(t)),
       enabled: r && ee && j !== void 0,
     }),
     te = !!d && o === `manual`,
-    ne = (0, z.useMemo)(() => (te ? KJ(e, t, i) : void 0), [te, e, t, i]),
+    ne = (0, z.useMemo)(() => (te ? qJ(e, t, i) : void 0), [te, e, t, i]),
     { data: re } = p({
-      ...Qq(c, u, ne, d, ne?.length ?? 0),
+      ...$q(c, u, ne, d, ne?.length ?? 0),
       enabled: r && te && ne !== void 0,
     });
   return (0, z.useMemo)(() => {
-    let n = qJ(
+    let n = JJ(
       e,
       t,
       i,
       { ...A, tabFilteredAppIDs: M, tabFilteredItems: re },
       a,
     );
-    return n && yK(e, t, n, a);
+    return n && bK(e, t, n, a);
   }, [e, t, i, A, M, re, a]);
 }
-function nY(e) {
-  return (tY(e.event, e.section), null);
+function rY(e) {
+  return (nY(e.event, e.section), null);
 }
-function rY(e, t) {
+function iY(e, t) {
   let n = Er(),
     r = l({
       queries: e.map((e) => {
         let r = Vt(n, e);
         return t ? { ...r, enabled: !1 } : r;
       }),
-      combine: iY,
+      combine: aY,
     });
   return (0, z.useMemo)(() => {
     if (t || !r.some((e) => e === void 0))
-      return e.filter((e, t) => !kJ(r[t], !1));
+      return e.filter((e, t) => !AJ(r[t], !1));
   }, [e, r, t]);
 }
-function iY(e) {
+function aY(e) {
   return e.map((e) => e.data);
 }
-function aY(e) {
+function oY(e) {
   let {
       className: t,
       url: n,
@@ -28786,7 +28789,7 @@ function aY(e) {
       bFocusable: s = !0,
       fnCanTakeFocus: c,
     } = e,
-    l = a ? n : n ? oY(n, L.STORE_BASE_URL) : void 0,
+    l = a ? n : n ? sY(n, L.STORE_BASE_URL) : void 0,
     u = ai(l);
   return u
     ? (0, R.jsx)($r, {
@@ -28801,7 +28804,7 @@ function aY(e) {
       })
     : (0, R.jsx)(`span`, { style: r, className: t, children: i });
 }
-function oY(e, t) {
+function sY(e, t) {
   try {
     let n = new URL(t),
       r = new URL(e);
@@ -28810,36 +28813,36 @@ function oY(e, t) {
     return ``;
   }
 }
-function sY(e) {
+function cY(e) {
   let { section: t } = e;
   return !t.label_link || t.label_link_style
     ? null
     : (0, R.jsx)(`div`, {
         className: $H,
-        children: (0, R.jsx)(aY, {
+        children: (0, R.jsx)(oY, {
           url: t.label_link,
           children: N.Localize(`#btn_live_streams_all`),
         }),
       });
 }
-var cY = `KDJh8Ln6DTA-`,
-  lY = `cwU-YKIjBO4-`,
-  uY = {
+var lY = `KDJh8Ln6DTA-`,
+  uY = `cwU-YKIjBO4-`,
+  dY = {
     bFitToWindow: !0,
     bOverlapHorizontal: !0,
     bMatchWidth: !1,
     bShiftToFitWindow: !0,
     bDisablePopTop: !0,
   };
-function dY(e) {
+function fY(e) {
   let { setRemoteClientID: t, rgSessions: n } = e,
     r = (0, z.useCallback)(
       (e) => {
         n?.length &&
           Bt(
-            (0, R.jsx)(fY, { sessions: n, setRemoteDownloadClientId: t }),
+            (0, R.jsx)(pY, { sessions: n, setRemoteDownloadClientId: t }),
             e,
-            uY,
+            dY,
           );
       },
       [t, n],
@@ -28847,14 +28850,14 @@ function dY(e) {
   return n?.length
     ? (0, R.jsx)(`button`, {
         onClick: r,
-        className: cY,
-        children: (0, R.jsx)(mY, {}),
+        className: lY,
+        children: (0, R.jsx)(hY, {}),
       })
     : null;
 }
-function fY({ sessions: e, setRemoteDownloadClientId: t }) {
+function pY({ sessions: e, setRemoteDownloadClientId: t }) {
   return (0, R.jsx)(`ul`, {
-    className: lY,
+    className: uY,
     children: e.map((e) =>
       (0, R.jsx)(
         Bn,
@@ -28864,7 +28867,7 @@ function fY({ sessions: e, setRemoteDownloadClientId: t }) {
           },
           children: I(
             `#GamesList_Client_Indicator`,
-            pY(e.device_type) ?? ``,
+            mY(e.device_type) ?? ``,
             e.machine_name,
           ),
         },
@@ -28873,7 +28876,7 @@ function fY({ sessions: e, setRemoteDownloadClientId: t }) {
     ),
   });
 }
-function pY(e) {
+function mY(e) {
   switch (e) {
     case 1:
       return I(`#Library_DeviceType_PC`);
@@ -28887,7 +28890,7 @@ function pY(e) {
       return;
   }
 }
-function mY(e) {
+function hY(e) {
   return (0, R.jsx)(`svg`, {
     xmlns: `http://www.w3.org/2000/svg`,
     viewBox: `0 0 13 8`,
@@ -28899,15 +28902,15 @@ function mY(e) {
     }),
   });
 }
-var hY = `O2hPihu9CRE-`,
-  gY = `QhSrcq93V7k-`,
-  _Y = `_7MjE60RYT0Q-`,
-  vY = `UlZXEOyFPCE-`,
-  yY = `_8wO4Yx-lIIo-`,
-  bY = `FA82eVIC918-`,
-  xY = `_0sgpZmAY-zs-`,
-  SY = `RLntJ4QtQLU-`;
-function CY(e) {
+var gY = `O2hPihu9CRE-`,
+  _Y = `QhSrcq93V7k-`,
+  vY = `_7MjE60RYT0Q-`,
+  yY = `UlZXEOyFPCE-`,
+  bY = `_8wO4Yx-lIIo-`,
+  xY = `FA82eVIC918-`,
+  SY = `_0sgpZmAY-zs-`,
+  CY = `RLntJ4QtQLU-`;
+function wY(e) {
   let { appid: t } = e,
     n = A(t),
     { data: r } = Wn(n),
@@ -28943,18 +28946,18 @@ function CY(e) {
                 strTitle: I(`#Sale_AddedToLibrary`),
                 strDescription: _i(
                   `#Sale_AddToLibrary_DialogDesc`,
-                  (0, R.jsx)(`span`, { className: _Y, children: r.name || `` }),
+                  (0, R.jsx)(`span`, { className: vY, children: r.name || `` }),
                 ),
                 closeModal: o,
                 bAlertDialog: !0,
-                children: (0, R.jsx)(wY, { id: n }),
+                children: (0, R.jsx)(TY, { id: n }),
               }),
             }),
           }),
         ],
       });
 }
-function wY(e) {
+function TY(e) {
   let { id: t } = e,
     n = Ae(),
     [r, i] = (0, z.useState)(0),
@@ -28984,19 +28987,19 @@ function wY(e) {
   if (c && c?.length > 0) {
     let e = c[r];
     return (0, R.jsx)(`div`, {
-      className: hY,
+      className: gY,
       children: a
-        ? (0, R.jsx)(EY, { session: e })
+        ? (0, R.jsx)(DY, { session: e })
         : (0, R.jsxs)(R.Fragment, {
             children: [
-              (0, R.jsx)(TY, {
+              (0, R.jsx)(EY, {
                 rgAcceptableSession: c,
                 session: e,
                 setSessionIndex: i,
               }),
               (0, R.jsx)(`div`, {
-                className: bY,
-                children: (0, R.jsx)(DY, {
+                className: xY,
+                children: (0, R.jsx)(OY, {
                   appid: t.appid,
                   session: e,
                   setRemoteDownloadRequested: o,
@@ -29008,16 +29011,16 @@ function wY(e) {
   }
   return null;
 }
-function TY(e) {
+function EY(e) {
   let { rgAcceptableSession: t, session: n, setSessionIndex: r } = e;
   return (0, R.jsxs)(R.Fragment, {
     children: [
       (0, R.jsx)(`div`, { children: I(`#Sale_AddToLibrary_RemoteDownload`) }),
       (0, R.jsxs)(`div`, {
-        className: xY,
+        className: SY,
         children: [
-          (0, R.jsx)(`span`, { className: SY, children: n.machine_name }),
-          (0, R.jsx)(dY, {
+          (0, R.jsx)(`span`, { className: CY, children: n.machine_name }),
+          (0, R.jsx)(fY, {
             rgSessions: t,
             setRemoteClientID: (e) => {
               let n = t.findIndex((t) => t.client_instanceid === e);
@@ -29029,10 +29032,10 @@ function TY(e) {
     ],
   });
 }
-function EY(e) {
+function DY(e) {
   let { session: t } = e;
   return (0, R.jsxs)(`div`, {
-    className: vY,
+    className: yY,
     children: [
       I(`#Sale_AddToLibrary_DownloadStarted`),
       (0, R.jsx)(`br`, {}),
@@ -29043,7 +29046,7 @@ function EY(e) {
     ],
   });
 }
-function DY(e) {
+function OY(e) {
   let { appid: t, session: n, setRemoteDownloadRequested: r } = e,
     i = ke(t, n.client_instanceid);
   return (0, R.jsxs)(R.Fragment, {
@@ -29055,17 +29058,17 @@ function DY(e) {
         children: [(0, R.jsx)(Qt, {}), I(`#Button_StartDownload`)],
       }),
       (0, R.jsx)(`div`, {
-        className: yY,
+        className: bY,
         children: (0, R.jsx)(`a`, {
           href: `https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409`,
-          className: gY,
+          className: _Y,
           children: I(`#Button_Learn`),
         }),
       }),
     ],
   });
 }
-function OY(e) {
+function kY(e) {
   let {
     rgTagIDs: t,
     bShowEvenIfNoTags: n,
@@ -29086,7 +29089,7 @@ function OY(e) {
             ? (0, R.jsx)(`div`, {
                 className: F(Go, `TagBox`),
                 children: t.map((e) =>
-                  (0, R.jsx)(AY, { tagid: e, bNoStoreLinks: a }, e),
+                  (0, R.jsx)(jY, { tagid: e, bNoStoreLinks: a }, e),
                 ),
               })
             : (0, R.jsx)(`div`, { children: N.Localize(`#Broadcast_None`) }),
@@ -29094,19 +29097,19 @@ function OY(e) {
       })
     : null;
 }
-function kY(e) {
+function AY(e) {
   let { tagid: t, className: n } = e,
     r = ct(t, L.LANGUAGE);
   if (!r) return null;
   let i = tt(Be(L.LANGUAGE)),
     a = `${L.STORE_BASE_URL}tags/${i}/${r}`;
-  return (0, R.jsx)(aY, {
+  return (0, R.jsx)(oY, {
     url: a,
     className: F(Ko, `WidgetTag`, n),
     children: r,
   });
 }
-function AY(e) {
+function jY(e) {
   let { tagid: t, className: n, bNoStoreLinks: r } = e,
     i = tt(Be(L.LANGUAGE)),
     a = ct(t, L.LANGUAGE),
@@ -29114,7 +29117,7 @@ function AY(e) {
   return a
     ? r
       ? (0, R.jsx)(`div`, { className: F(Ko, `WidgetTag`, n), children: a })
-      : (0, R.jsx)(aY, {
+      : (0, R.jsx)(oY, {
           url: o,
           className: F(Ko, `WidgetTag`, n),
           children: a,
@@ -29122,421 +29125,422 @@ function AY(e) {
     : null;
 }
 export {
-  JK as $,
-  Ps as $a,
-  Dm as $i,
-  cH as $n,
-  Ws as $o,
-  uk as $r,
-  DW as $t,
-  mq as A,
-  il as Aa,
-  hx as Ai,
+  YK as $,
+  Ns as $a,
+  R_ as $i,
+  lH as $n,
+  Po as $o,
+  Zj as $r,
+  OW as $t,
+  hq as A,
+  al as Aa,
+  CD as Ai,
   JH as An,
-  Cs as Ao,
-  yL as Ar,
-  Ds as As,
-  uG as At,
-  FK as B,
-  _c as Ba,
-  Cy as Bi,
-  RH as Bn,
-  tc as Bo,
-  fF as Br,
-  qW as Bt,
-  xq as C,
-  Lu as Ca,
-  yO as Ci,
-  vU as Cn,
-  fs as Co,
-  _B as Cr,
-  Bo as Cs,
-  AG as Ct,
-  Oq as D,
-  rl as Da,
-  aO as Di,
+  Os as Ao,
+  zL as Ar,
+  wo as As,
+  dG as At,
+  IK as B,
+  vc as Ba,
+  xy as Bi,
+  BH as Bn,
+  co as Bo,
+  LF as Br,
+  Fa as Bs,
+  JW as Bt,
+  Sq as C,
+  Wu as Ca,
+  fO as Ci,
+  yU as Cn,
+  Ys as Co,
+  vB as Cr,
+  Ks as Cs,
+  jG as Ct,
+  kq as D,
+  eu as Da,
+  xO as Di,
   KH as Dn,
-  zs as Do,
-  bz as Dr,
-  fo as Ds,
-  vG as Dt,
-  Eq as E,
-  eu as Ea,
-  xO as Ei,
-  yU as En,
-  Bs as Eo,
-  jz as Er,
-  Vo as Es,
-  yG as Et,
-  rq as F,
-  V as Fa,
-  Oy as Fi,
-  AU as Fn,
-  As as Fo,
-  VF as Fr,
-  eo as Fs,
-  ZW as Ft,
-  jK as G,
-  cc as Ga,
-  _v as Gi,
-  EH as Gn,
-  Zs as Go,
-  YP as Gr,
-  LW as Gt,
-  ZK as H,
-  dc as Ha,
-  Vv as Hi,
-  TH as Hn,
-  ms as Ho,
-  iF as Hr,
-  VW as Ht,
-  sq as I,
-  Qc as Ia,
-  Dy as Ii,
-  UH as In,
-  _s as Io,
-  BF as Ir,
-  Ga as Is,
-  UW as It,
-  AK as J,
-  $o as Ja,
-  tv as Ji,
-  vH as Jn,
-  Qs as Jo,
-  IN as Jr,
-  FW as Jt,
-  BK as K,
-  ic as Ka,
-  yv as Ki,
-  xH as Kn,
-  Js as Ko,
-  RP as Kr,
-  MW as Kt,
-  tq as L,
-  Xc as La,
-  X as Li,
-  EU as Ln,
-  $s as Lo,
-  RF as Lr,
-  qa as Ls,
-  WW as Lt,
-  dq as M,
-  Ll as Ma,
-  Ab as Mi,
+  Bs as Do,
+  jz as Dr,
+  Vo as Ds,
+  yG as Dt,
+  Dq as E,
+  tu as Ea,
+  pO as Ei,
+  bU as En,
+  Fs as Eo,
+  iB as Er,
+  Uo as Es,
+  bG as Et,
+  iq as F,
+  sl as Fa,
+  Qy as Fi,
+  mU as Fn,
+  Is as Fo,
+  WF as Fr,
+  $a as Fs,
+  QW as Ft,
+  MK as G,
+  lc as Ga,
+  kv as Gi,
+  wH as Gn,
+  so as Go,
+  $P as Gr,
+  RW as Gt,
+  QK as H,
+  hc as Ha,
+  Gv as Hi,
+  FH as Hn,
+  Es as Ho,
+  rF as Hr,
+  HW as Ht,
+  cq as I,
+  V as Ia,
+  Oy as Ii,
+  jU as In,
+  As as Io,
+  VF as Ir,
+  eo as Is,
+  WW as It,
+  jK as J,
+  nc as Ja,
+  Q_ as Ji,
+  bH as Jn,
+  cs as Jo,
+  lP as Jr,
+  IW as Jt,
+  VK as K,
+  cc as Ka,
+  _v as Ki,
+  EH as Kn,
+  Zs as Ko,
+  YP as Kr,
+  NW as Kt,
+  nq as L,
+  Qc as La,
+  Dy as Li,
+  UH as Ln,
+  _s as Lo,
+  BF as Lr,
+  Ga as Ls,
+  GW as Lt,
+  fq as M,
+  Ml as Ma,
+  mx as Mi,
   eU as Mn,
-  io as Mo,
-  rI as Mr,
-  ts as Ms,
-  aG as Mt,
-  lq as N,
-  Il as Na,
-  fb as Ni,
-  PU as Nn,
-  Mo as No,
-  JF as Nr,
-  Qa as Ns,
-  sG as Nt,
-  Tq as O,
-  ol as Oa,
-  eO as Oi,
-  ZU as On,
-  No as Oo,
-  lz as Or,
-  Go as Os,
-  MG as Ot,
-  aq as P,
-  sl as Pa,
-  Qy as Pi,
-  xU as Pn,
-  Is as Po,
-  WF as Pr,
-  $a as Ps,
-  eG as Pt,
-  YK as Q,
-  Ns as Qa,
-  R_ as Qi,
-  lH as Qn,
-  Po as Qo,
-  Zj as Qr,
-  OW as Qt,
-  eq as R,
-  xc as Ra,
-  Sy as Ri,
-  HH as Rn,
-  ws as Ro,
-  zF as Rr,
-  Wa as Rs,
-  GW as Rt,
-  bq as S,
-  Wu as Sa,
-  fO as Si,
-  WU as Sn,
-  Ys as So,
-  vB as Sr,
-  Ks as Ss,
-  jG as St,
-  Dq as T,
-  tu as Ta,
-  pO as Ti,
-  hU as Tn,
-  Fs as To,
-  iB as Tr,
-  Uo as Ts,
-  IG as Tt,
-  XK as U,
-  pc as Ua,
-  Av as Ui,
-  OH as Un,
-  Ms as Uo,
-  qP as Ur,
-  BW as Ut,
-  MK as V,
-  hc as Va,
-  Gv as Vi,
-  FH as Vn,
-  Es as Vo,
-  rF as Vr,
-  zW as Vt,
-  PK as W,
-  lc as Wa,
-  kv as Wi,
-  wH as Wn,
-  so as Wo,
-  $P as Wr,
-  RW as Wt,
-  LK as X,
-  Ss as Xa,
-  z_ as Xi,
-  _H as Xn,
-  zo as Xo,
-  vN as Xr,
-  jW as Xt,
-  NK as Y,
-  xs as Ya,
-  I_ as Yi,
-  gH as Yn,
-  Xo as Yo,
-  yN as Yr,
-  PW as Yt,
-  GK as Z,
-  Ho as Za,
-  G_ as Zi,
-  fH as Zn,
-  ao as Zo,
-  BM as Zr,
-  wW as Zt,
-  gJ as _,
-  $u as _a,
-  wk as _i,
+  Ts as Mo,
+  bI as Mr,
+  Ro as Ms,
+  oG as Mt,
+  uq as N,
+  Ll as Na,
+  Ab as Ni,
+  FU as Nn,
+  io as No,
+  rI as Nr,
+  ts as Ns,
+  cG as Nt,
+  Eq as O,
+  rl as Oa,
+  aO as Oi,
+  QU as On,
+  zs as Oo,
+  bz as Or,
+  fo as Os,
+  NG as Ot,
+  oq as P,
+  Il as Pa,
+  fb as Pi,
+  SU as Pn,
+  Mo as Po,
+  JF as Pr,
+  Qa as Ps,
+  tG as Pt,
+  XK as Q,
+  Ho as Qa,
+  G_ as Qi,
+  fH as Qn,
+  ao as Qo,
+  BM as Qr,
+  kW as Qt,
+  tq as R,
+  Xc as Ra,
+  X as Ri,
+  DU as Rn,
+  $s as Ro,
+  RF as Rr,
+  qa as Rs,
+  KW as Rt,
+  xq as S,
+  W as Sa,
+  CO as Si,
+  GU as Sn,
+  bs as So,
+  GB as Sr,
+  po as Ss,
+  MG as St,
+  Oq as T,
+  iu as Ta,
+  SO as Ti,
+  gU as Tn,
+  es as To,
+  gB as Tr,
+  lo as Ts,
+  LG as Tt,
+  ZK as U,
+  dc as Ua,
+  Vv as Ui,
+  TH as Un,
+  ms as Uo,
+  iF as Ur,
+  VW as Ut,
+  NK as V,
+  _c as Va,
+  Cy as Vi,
+  RH as Vn,
+  tc as Vo,
+  fF as Vr,
+  BW as Vt,
+  FK as W,
+  pc as Wa,
+  Av as Wi,
+  OH as Wn,
+  Ms as Wo,
+  qP as Wr,
+  zW as Wt,
+  RK as X,
+  xs as Xa,
+  I_ as Xi,
+  gH as Xn,
+  Xo,
+  yN as Xr,
+  MW as Xt,
+  PK as Y,
+  $o as Ya,
+  tv as Yi,
+  vH as Yn,
+  Qs as Yo,
+  IN as Yr,
+  FW as Yt,
+  KK as Z,
+  Ss as Za,
+  z_ as Zi,
+  _H as Zn,
+  zo as Zo,
+  vN as Zr,
+  TW as Zt,
+  _J as _,
+  ad as _a,
+  Ck as _i,
   iU as _n,
-  Yo as _o,
-  _V as _r,
-  To as _s,
-  SG as _t,
-  ZJ as a,
-  gp as aa,
-  kk as ai,
+  Jo as _o,
+  yV as _r,
+  yo as _s,
+  CG as _t,
+  QJ as a,
+  qp as aa,
+  ck as ai,
   dU as an,
-  Hs as ao,
-  UV as ar,
-  is as as,
-  SK as at,
-  Mq as b,
-  Qu as ba,
-  wO as bi,
-  bU as bn,
-  ys as bo,
-  JB as br,
-  mo as bs,
-  bG as bt,
-  QJ as c,
-  Yf as ca,
-  tk as ci,
+  oo as ao,
+  KV as ar,
+  ho as as,
+  CK as at,
+  Nq as b,
+  Zu as ba,
+  Qk as bi,
+  xU as bn,
+  qs as bo,
+  iV as br,
+  _o as bs,
+  xG as bt,
+  $J as c,
+  hp as ca,
+  ok as ci,
   qH as cn,
-  Xs as co,
-  zV as cr,
-  Co as cs,
-  zG as ct,
-  kJ as d,
-  K as da,
-  eA as di,
+  Us as co,
+  RV as cr,
+  xo as cs,
+  BG as ct,
+  AJ as d,
+  $f as da,
+  Kk as di,
   pU as dn,
-  Ls as do,
-  LV as dr,
-  ns as ds,
-  wG as dt,
-  Tm as ea,
-  Yk as ei,
-  gW as en,
-  hs as eo,
-  YV as er,
-  ko as es,
-  HK as et,
-  OJ as f,
-  Uf as fa,
-  QO as fi,
+  gs as do,
+  FV as dr,
+  Qo as ds,
+  TG as dt,
+  Dm as ea,
+  uk as ei,
+  _W as en,
+  Ps as eo,
+  cH as er,
+  Ws as es,
+  UK as et,
+  kJ as f,
+  K as fa,
+  eA as fi,
   ZH as fn,
-  ks as fo,
-  PV as fr,
-  Ao as fs,
-  CG as ft,
-  vJ as g,
-  ad as ga,
-  Ck as gi,
+  Ls as fo,
+  LV as fr,
+  ns as fs,
+  wG as ft,
+  yJ as g,
+  ud as ga,
+  JO as gi,
   oU as gn,
-  Jo as go,
-  yV as gr,
-  yo as gs,
-  EG as gt,
-  CJ as h,
-  ud as ha,
-  JO as hi,
+  qo as go,
+  OV as gr,
+  ro as gs,
+  DG as gt,
+  wJ as h,
+  fd as ha,
+  XO as hi,
   rU as hn,
-  qo as ho,
-  OV as hr,
-  ro as hs,
-  OG as ht,
-  aY as i,
-  qp as ia,
-  ck as ii,
-  aW as in,
-  oo as io,
-  KV as ir,
-  ho as is,
-  WK as it,
-  pq as j,
-  Ml as ja,
-  mx as ji,
+  js as ho,
+  DV as hr,
+  Fo as hs,
+  kG as ht,
+  oY as i,
+  J as ia,
+  NA as ii,
+  oW as in,
+  Gs as io,
+  JV as ir,
+  Zo as is,
+  GK as it,
+  mq as j,
+  il as ja,
+  hx as ji,
   nU as jn,
-  Ts as jo,
-  bI as jr,
-  Ro as js,
-  lG as jt,
-  wq as k,
-  al as ka,
-  CD as ki,
-  CU as kn,
-  Os as ko,
-  zL as kr,
-  wo as ks,
-  kG as kt,
-  tY as l,
-  Zf as la,
-  tA as li,
-  GU as ln,
-  Eo as lo,
-  IV as lr,
-  Io as ls,
-  LG as lt,
-  MJ as m,
-  fd as ma,
-  XO as mi,
-  XU as mn,
-  js as mo,
-  DV as mr,
-  Fo as ms,
-  DG as mt,
-  OY as n,
-  q as na,
-  IA as ni,
-  dW as nn,
-  Lo as no,
-  qV as nr,
-  as as ns,
-  RK as nt,
-  WJ as o,
-  vp as oa,
-  RA as oi,
+  Cs as jo,
+  yL as jr,
+  Ds as js,
+  uG as jt,
+  Tq as k,
+  ol as ka,
+  eO as ki,
+  wU as kn,
+  No as ko,
+  lz as kr,
+  Go as ks,
+  AG as kt,
+  nY as l,
+  Yf as la,
+  tk as li,
+  KU as ln,
+  Xs as lo,
+  zV as lr,
+  Co as ls,
+  RG as lt,
+  NJ as m,
+  Vf as ma,
+  Ek as mi,
+  ZU as mn,
+  ec as mo,
+  xV as mr,
+  jo as ms,
+  OG as mt,
+  kY as n,
+  Y as na,
+  rA as ni,
+  fW as nn,
+  vs as no,
+  XV as nr,
+  bo as ns,
+  zK as nt,
+  GJ as o,
+  gp as oa,
+  kk as oi,
   uU as on,
-  Rs as oo,
-  HV as or,
-  So as os,
-  VG as ot,
-  NJ as p,
-  Vf as pa,
-  Ek as pi,
-  DU as pn,
-  ec as po,
-  xV as pr,
-  jo as ps,
-  _G as pt,
-  kK as q,
-  nc as qa,
-  Q_ as qi,
-  bH as qn,
-  cs as qo,
-  lP as qr,
-  NW as qt,
-  sY as r,
-  J as ra,
-  NA as ri,
-  lW as rn,
-  Gs as ro,
-  JV as rr,
-  Zo as rs,
-  DK as rt,
-  nY as s,
-  hp as sa,
-  ok as si,
+  Hs as oo,
+  UV as or,
+  is as os,
+  HG as ot,
+  PJ as p,
+  Uf as pa,
+  QO as pi,
+  OU as pn,
+  ks as po,
+  PV as pr,
+  Ao as ps,
+  vG as pt,
+  AK as q,
+  ic as qa,
+  yv as qi,
+  xH as qn,
+  Js as qo,
+  RP as qr,
+  PW as qt,
+  cY as r,
+  q as ra,
+  IA as ri,
+  uW as rn,
+  Lo as ro,
+  qV as rr,
+  as as rs,
+  OK as rt,
+  rY as s,
+  vp as sa,
+  RA as si,
   lU as sn,
-  Us as so,
-  RV as sr,
-  xo as ss,
-  BG as st,
-  kY as t,
-  Y as ta,
-  rA as ti,
-  vW as tn,
-  vs as to,
-  XV as tr,
-  bo as ts,
-  OK as tt,
-  rY as u,
-  $f as ua,
-  Kk as ui,
+  Rs as so,
+  HV as sr,
+  So as ss,
+  VG as st,
+  AY as t,
+  Tm as ta,
+  Yk as ti,
+  yW as tn,
+  hs as to,
+  YV as tr,
+  ko as ts,
+  kK as tt,
+  iY as u,
+  Zf as ua,
+  tA as ui,
   fU as un,
-  gs as uo,
-  FV as ur,
-  Qo as us,
-  TG as ut,
-  Hq as v,
-  ed as va,
-  MA as vi,
-  OU as vn,
-  Vs as vo,
-  SV as vr,
-  uo as vs,
-  xG as vt,
-  Sq as w,
-  iu as wa,
-  SO as wi,
-  gU as wn,
-  es as wo,
-  gB as wr,
-  lo as ws,
-  gG as wt,
-  Cq as x,
-  W as xa,
-  CO as xi,
-  mU as xn,
-  bs as xo,
-  GB as xr,
-  po as xs,
-  NG as xt,
-  Vq as y,
-  Zu as ya,
-  Qk as yi,
+  Eo as uo,
+  IV as ur,
+  Io as us,
+  EG as ut,
+  Uq as v,
+  $u as va,
+  wk as vi,
+  kU as vn,
+  Yo as vo,
+  _V as vr,
+  To as vs,
+  SG as vt,
+  Cq as w,
+  Lu as wa,
+  yO as wi,
+  _U as wn,
+  fs as wo,
+  _B as wr,
+  Bo as ws,
+  _G as wt,
+  wq as x,
+  Qu as xa,
+  wO as xi,
+  hU as xn,
+  ys as xo,
+  JB as xr,
+  mo as xs,
+  PG as xt,
+  Hq as y,
+  ed as ya,
+  MA as yi,
   YH as yn,
-  qs as yo,
-  iV as yr,
-  _o as ys,
-  hG as yt,
-  $K as z,
-  vc as za,
-  xy as zi,
-  BH as zn,
-  co as zo,
-  LF as zr,
-  Fa as zs,
-  KW as zt,
+  Vs as yo,
+  SV as yr,
+  uo as ys,
+  gG as yt,
+  eq as z,
+  xc as za,
+  Sy as zi,
+  HH as zn,
+  ws as zo,
+  zF as zr,
+  Wa as zs,
+  qW as zt,
 };

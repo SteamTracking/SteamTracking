@@ -4,35 +4,35 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { It as t, c as n, dt as r, r as i } from "./chunk~01cfc309bf.js";
 import {
-  $o as a,
-  Do as o,
-  Eo as s,
-  Ia as c,
-  Ka as l,
-  La as u,
-  Mo as d,
-  Zn as f,
-  _s as p,
-  ao as m,
-  bs as h,
-  cs as ee,
-  gs as te,
-  hs as ne,
-  lo as g,
-  lr as _,
+  Do as a,
+  La as o,
+  No as s,
+  Oo as c,
+  Qn as l,
+  Ra as u,
+  Ss as ee,
+  _s as d,
+  bs as f,
+  co as p,
+  cs as te,
+  es as m,
+  gs as h,
+  hs as g,
+  io as _,
   ls as v,
   ms as y,
-  n as re,
-  oo as b,
-  or as x,
-  ps as S,
-  ro as C,
-  so as w,
-  ss as T,
-  ts as E,
-  vo as D,
+  n as b,
+  ns as x,
+  oo as S,
+  qa as ne,
+  so as C,
+  sr as re,
+  uo as w,
+  ur as T,
+  us as E,
+  vs as D,
   xs as O,
-  ys as k,
+  yo as k,
 } from "./chunk~6b8ddcaac8.js";
 import { O as A, p as j } from "./chunk~4eed35ad1f.js";
 import { d as M, n as N, p as P, r as F } from "./chunk~cbbb6ae37c.js";
@@ -58,38 +58,38 @@ function ae(e) {
       id: t,
       bPurchaseOptionsExpanded: n,
       fnCollapseOptions: r,
-      bPreferAssetWithoutOverride: c,
+      bPreferAssetWithoutOverride: o,
     } = e,
-    { data: l } = H(t),
-    u = (0, X.useRef)(null);
-  if (!l) return null;
-  let d = l.purchase_options;
-  return d
+    { data: s } = H(t),
+    l = (0, X.useRef)(null);
+  if (!s) return null;
+  let u = s.purchase_options;
+  return u
     ? (0, Z.jsx)(i, {
-        nodeRef: u,
+        nodeRef: l,
         in: n,
         mountOnEnter: !0,
         unmountOnExit: !0,
         timeout: 2e3,
-        classNames: { enterActive: o, enterDone: s, exit: s, exitActive: D },
+        classNames: { enterActive: c, enterDone: a, exit: a, exitActive: k },
         children: (0, Z.jsxs)(`div`, {
-          ref: u,
-          className: b,
+          ref: l,
+          className: C,
           children: [
             (0, Z.jsx)(`div`, {
-              className: m,
-              children: d
+              className: S,
+              children: u
                 .filter((e) => !!e.packageid)
                 .map((e) =>
                   (0, Z.jsx)(
                     `div`,
                     {
-                      className: C,
+                      className: _,
                       children: (0, Z.jsx)(R, {
                         id: e.packageid || 0,
                         type: `sub`,
                         bForceSmallCapsuleArt: !0,
-                        bPreferAssetWithoutOverride: c,
+                        bPreferAssetWithoutOverride: o,
                       }),
                     },
                     `purchaseitem_` + K(t) + `_` + e.packageid,
@@ -98,9 +98,9 @@ function ae(e) {
             }),
             (0, Z.jsx)(`div`, {
               onClick: r,
-              className: w,
+              className: p,
               children: (0, Z.jsx)(`button`, {
-                className: a,
+                className: m,
                 children: B.Localize(`#Button_Close`),
               }),
             }),
@@ -111,17 +111,17 @@ function ae(e) {
 }
 var Q = n((e) => {
   let { id: t, type: n } = e,
-    r = _(t, n),
+    r = T(t, n),
     {
       bHidePrice: i,
       bShowDemoButton: a,
-      bPreferDemoStorePage: o,
-      bShowPurchaseOptionsButton: s,
+      bPreferDemoStorePage: c,
+      bShowPurchaseOptionsButton: p,
       bUseSubscriptionLayout: m,
-      bPreferAssetWithoutOverride: b,
+      bPreferAssetWithoutOverride: _,
     } = e,
-    [C, w] = X.useState(!1),
-    D = () => w(!C),
+    [S, C] = X.useState(!1),
+    k = () => C(!S),
     { data: R } = W(r),
     { data: H } = U(r),
     { data: K } = G(r),
@@ -133,26 +133,26 @@ var Q = n((e) => {
   let ce = J(se),
     $ = R.item_type == 0;
   return (0, Z.jsx)(`div`, {
-    className: V(ne, d, `LibraryAssetExpandedDisplay`),
+    className: V(h, s, `LibraryAssetExpandedDisplay`),
     children: (0, Z.jsxs)(j, {
       appid: $ ? R.appid : void 0,
       children: [
         (0, Z.jsxs)(`div`, {
-          className: O,
+          className: ee,
           children: [
             (0, Z.jsx)(`div`, {
-              className: V(h),
+              className: V(O),
               children: (0, Z.jsx)(ie, {
                 id: r,
-                bPreferDemoStorePage: o,
+                bPreferDemoStorePage: c,
                 children: (0, Z.jsxs)(`div`, {
-                  className: k,
+                  className: f,
                   children: [
                     (0, Z.jsx)(F, { appids: oe }),
                     (0, Z.jsx)(P, {
                       id: r,
                       imageType: `library`,
-                      bPreferAssetWithoutOverride: b,
+                      bPreferAssetWithoutOverride: _,
                     }),
                     (0, Z.jsx)(M, { id: r }),
                   ],
@@ -160,19 +160,19 @@ var Q = n((e) => {
               }),
             }),
             (0, Z.jsxs)(`div`, {
-              className: p,
+              className: D,
               children: [
                 $ &&
-                  (0, Z.jsx)(c, {
+                  (0, Z.jsx)(o, {
                     id: r,
                     classOverride: V(`x33TRfA9NLE-`, `WishlistButton`),
                     snr: ce,
                   }),
                 (0, Z.jsxs)(`div`, {
-                  className: te,
+                  className: d,
                   children: [
                     (0, Z.jsxs)(`div`, {
-                      className: y,
+                      className: g,
                       children: [
                         H.short_description &&
                           H.short_description.length > 0 &&
@@ -183,7 +183,7 @@ var Q = n((e) => {
                             ),
                             children: H.short_description,
                           }),
-                        (0, Z.jsx)(re, {
+                        (0, Z.jsx)(b, {
                           rgTagIDs: Q
                             ? Q.slice(0, 10).map((e) => e.tagid || 0)
                             : [],
@@ -191,13 +191,13 @@ var Q = n((e) => {
                           bNoStoreLinks: !1,
                         }),
                         (0, Z.jsxs)(`div`, {
-                          className: E,
+                          className: x,
                           children: [
                             (0, Z.jsx)(`div`, {
-                              className: T,
+                              className: te,
                               children: B.LocalizeReact(
                                 `#Sale_ReleaseDate`,
-                                (0, Z.jsx)(`span`, { children: l(K) }),
+                                (0, Z.jsx)(`span`, { children: ne(K) }),
                               ),
                             }),
                             H.developers &&
@@ -227,7 +227,7 @@ var Q = n((e) => {
                       ],
                     }),
                     (0, Z.jsx)(`div`, {
-                      className: v,
+                      className: E,
                       children: (0, Z.jsx)(z, {
                         id: r,
                         bPopOutTrailerPlayback: !0,
@@ -236,32 +236,32 @@ var Q = n((e) => {
                   ],
                 }),
                 (0, Z.jsx)(`div`, {
-                  className: ee,
+                  className: v,
                   children: (0, Z.jsx)(u, { id: r }),
                 }),
                 (0, Z.jsx)(`div`, {
-                  className: g,
+                  className: w,
                   children:
                     m && $
-                      ? (0, Z.jsx)(f, { appid: R.appid, bIsMuted: !1 })
+                      ? (0, Z.jsx)(l, { appid: R.appid, bIsMuted: !1 })
                       : (0, Z.jsxs)(Z.Fragment, {
                           children: [
-                            (0, Z.jsx)(x, { id: r }),
+                            (0, Z.jsx)(re, { id: r }),
                             (0, Z.jsx)(I, {
                               id: r,
                               bShowDemoButton: a,
                               bHidePrice: i,
-                              bShowPurchaseOptionsButton: s,
-                              fnOnPurchaseOptionsClick: D,
+                              bShowPurchaseOptionsButton: p,
+                              fnOnPurchaseOptionsClick: k,
                               bHideWishlistButton: R.is_coming_soon,
                             }),
                           ],
                         }),
                 }),
                 (0, Z.jsxs)(`div`, {
-                  className: S,
+                  className: y,
                   children: [
-                    (0, Z.jsx)(N, { id: r, bPreferAssetWithoutOverride: b }),
+                    (0, Z.jsx)(N, { id: r, bPreferAssetWithoutOverride: _ }),
                     (0, Z.jsx)(M, { id: r }),
                   ],
                 }),
@@ -271,9 +271,9 @@ var Q = n((e) => {
         }),
         (0, Z.jsx)(ae, {
           id: r,
-          bPurchaseOptionsExpanded: C,
-          fnCollapseOptions: D,
-          bPreferAssetWithoutOverride: b,
+          bPurchaseOptionsExpanded: S,
+          fnCollapseOptions: k,
+          bPreferAssetWithoutOverride: _,
         }),
       ],
     }),

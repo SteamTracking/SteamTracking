@@ -5,12 +5,12 @@ import { o as e } from "./chunk~f025431ab0.js";
 import { It as t, dt as n, ot as r, ut as i } from "./chunk~01cfc309bf.js";
 import {
   M as a,
-  Rs as o,
-  Xn as s,
-  Yn as c,
-  dr as l,
-  in as u,
-  lr as d,
+  Xn as o,
+  Zn as s,
+  fr as c,
+  in as l,
+  ur as u,
+  zs as d,
 } from "./chunk~6b8ddcaac8.js";
 import { at as f, ct as p } from "./chunk~f57d770d64.js";
 import { k as m, l as h } from "./chunk~4eed35ad1f.js";
@@ -177,7 +177,7 @@ var Ct = class extends S {
                 break;
               }
           }
-          (i || super.AppendNode(c(r)),
+          (i || super.AppendNode(o(r)),
             (n = e.input.substring(e.index + r.length)),
             (e = this.m_LinkFilter.exec(n)));
         }
@@ -238,7 +238,7 @@ var At = `NiXfRuagfO4-`;
 function jt(e) {
   let { inputType: t, id: n, bApplyUserContentPref: r } = e,
     i = t == `bundle` ? `bundle` : t == `sub` ? `sub` : `game`,
-    a = d(n, i),
+    a = u(n, i),
     { data: o } = k(a),
     { data: s, isPending: c } = dt(r ? a : void 0);
   if (!o) return null;
@@ -339,13 +339,13 @@ function It({ clanSteamID: e, strVanity: t, strGroupVanity: n }) {
 function Lt(e) {
   let { appid: t, announcementGID: n, eventGID: r, strURL: i } = e,
     a = It(e),
-    o = a === null,
+    s = a === null,
     {
-      data: s,
-      isPending: l,
+      data: c,
+      isPending: u,
       isError: d,
-    } = u(
-      o
+    } = l(
+      s
         ? void 0
         : {
             clanAccountID: a ?? void 0,
@@ -354,29 +354,29 @@ function Lt(e) {
             announcementGID: n,
           },
     ),
-    f = m(t || s?.appid || void 0),
+    f = m(t || c?.appid || void 0),
     { data: p } = k(f);
-  if (o || d || s === null) return c(i);
-  if (l || !s) return (0, z.jsx)(oe, {});
+  if (s || d || c === null) return o(i);
+  if (u || !c) return (0, z.jsx)(oe, {});
   let h = D(L.LANGUAGE),
-    g = s.GetNameWithFallback(h),
-    _ = s.GetSubTitleWithSummaryFallback(h),
+    g = c.GetNameWithFallback(h),
+    _ = c.GetSubTitleWithSummaryFallback(h),
     v = p?.name,
-    ne = lt(s.GetStartTimeAndDateUnixSeconds());
+    ne = lt(c.GetStartTimeAndDateUnixSeconds());
   return (0, z.jsxs)(te, {
-    eventModel: s,
+    eventModel: c,
     route: ee.k_eView,
     className: y.Box,
     "data-modal-content-sizetofit": !0,
     "data-appid": t,
     children: [
-      (0, z.jsx)(Rt, { ...e, event: s }),
+      (0, z.jsx)(Rt, { ...e, event: c }),
       (0, z.jsxs)(b, {
         children: [
           (0, z.jsxs)(ge, {
             children: [
               F(
-                s.type == 28
+                c.type == 28
                   ? `#EventDisplay_Share_Announcement`
                   : `#EventDisplay_Share_Event`,
                 v ?? ``,
@@ -455,9 +455,9 @@ function Gt(e) {
   let t = Wt(e),
     n = t ? e.clanSteamID.GetAccountID() : void 0,
     { data: r, isLoading: i } = _(n),
-    { data: s, isLoading: c } = o(n);
+    { data: o, isLoading: s } = d(n);
   if (!t) return null;
-  if (!(i || c)) return !s || !r || !a(e, r) ? null : (s.appids ?? []);
+  if (!(i || s)) return !o || !r || !a(e, r) ? null : (o.appids ?? []);
 }
 function Kt(e, t) {
   return e === null || (t.length > 0 && t.every((t) => e.includes(t)));
@@ -471,7 +471,7 @@ function qt(e, t) {
 function Jt({ link: e, strURL: t, eventModel: n, bAnnouncement: r }) {
   let i = qt(e, n);
   if (i === void 0) return null;
-  if (!i) return c(t, n);
+  if (!i) return o(t, n);
   let a =
     e.strClanSteamID64 === void 0
       ? e.clanAccountID === void 0
@@ -499,7 +499,7 @@ function J(e, t, n, r = !1) {
         bAnnouncement: r,
       });
   }
-  return c(t, n?.event);
+  return o(t, n?.event);
 }
 function Y(e, t) {
   return J(H, e, t);
@@ -731,7 +731,7 @@ function Dn(e, t) {
       });
     }
   }
-  return c(e, t?.event);
+  return o(e, t?.event);
 }
 function On(e, t) {
   let n = new RegExp(sn).exec(e);
@@ -739,11 +739,11 @@ function On(e, t) {
     let e = n[1];
     if (e && e.length > 1) return (0, z.jsx)(fn, { modelID: e });
   }
-  return c(e, t?.event);
+  return o(e, t?.event);
 }
 function kn(e, t) {
   let n = Qt(e);
-  return n === void 0 ? c(e, t?.event) : (0, z.jsx)($t, { sharedFileID: n });
+  return n === void 0 ? o(e, t?.event) : (0, z.jsx)($t, { sharedFileID: n });
 }
 function An(e, t) {
   let n = Ht(e);
@@ -754,23 +754,23 @@ function An(e, t) {
         inputType: n.strItemType,
         fallbackUrl: e,
       })
-    : c(e, t?.event);
+    : o(e, t?.event);
 }
 function jn(e) {
   let { inputID: t, inputType: n, eventModel: r, fallbackUrl: i } = e,
-    a = l(t, n),
-    { data: o } = k(a),
-    s = Gt(r),
+    a = c(t, n),
+    { data: s } = k(a),
+    l = Gt(r),
     u;
   return (
-    s === null
+    l === null
       ? (u = !0)
-      : s && o && (u = Kt(s, o.appid ? [o.appid] : (o.included_appids ?? []))),
+      : l && s && (u = Kt(l, s.appid ? [s.appid] : (s.included_appids ?? []))),
     u === void 0
       ? null
       : u
         ? (0, z.jsx)(jt, { id: t, inputType: n, bApplyUserContentPref: !0 })
-        : c(i, r)
+        : o(i, r)
   );
 }
 function Mn(e, t) {
@@ -780,7 +780,7 @@ function Mn(e, t) {
         className: O(ze),
         children: (0, z.jsx)(_n, { defid: n, url: e }),
       })
-    : c(e, t?.event);
+    : o(e, t?.event);
 }
 function Nn(e, t) {
   return X() ? null : Z(e, (0, z.jsx)(P, {}), `@`, t);
@@ -797,13 +797,13 @@ function In(e, t) {
 function Z(e, t, n, r) {
   let i,
     a = e.endsWith(`/`) ? e.length - 1 : e.length,
-    o = e.lastIndexOf(`/`, a - 1);
-  (o != -1 && o + 1 < e.length && (i = e.substring(o + 1, a)),
+    s = e.lastIndexOf(`/`, a - 1);
+  (s != -1 && s + 1 < e.length && (i = e.substring(s + 1, a)),
     n && i && (i = n + i));
-  let s = c(e, r?.event, i ?? e);
+  let c = o(e, r?.event, i ?? e);
   return (0, z.jsxs)(`div`, {
     className: Le,
-    children: [(0, z.jsx)(`div`, { className: Be, children: t }), s],
+    children: [(0, z.jsx)(`div`, { className: Be, children: t }), c],
   });
 }
 function Ln(e) {

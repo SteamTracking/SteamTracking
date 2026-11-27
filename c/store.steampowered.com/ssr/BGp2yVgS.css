@@ -333,6 +333,54 @@ html.responsive.touch:not(.GamepadMode) .-Zy1ltcQDkE- {
 .ScrollSnapCarousel > :has(> ._5-G1qgRPcWw-:empty) {
   display: none;
 }
+.ReB2--x-C4I- {
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 12px;
+  display: flex;
+}
+.carousel__inner-slide:has(.ReB2--x-C4I-),
+.ScrollSnapCarousel > :has(> .ReB2--x-C4I-) {
+  flex-direction: column;
+  display: flex;
+}
+.carousel__inner-slide > :has(> .ReB2--x-C4I-) {
+  flex-direction: column;
+  flex-grow: 1;
+  display: flex;
+}
+.ScrollSnapCarousel .ReB2--x-C4I- {
+  flex-shrink: 0;
+  width: 180px;
+}
+@container pill-scroll-row (width>=0) {
+  .ScrollSnapCarousel .ReB2--x-C4I- {
+    --pill-row-capsule-width: calc(
+      100cqi /
+        (
+          var(--pill-row-capsules-override, var(--pill-row-capsules)) +
+            var(--pill-row-peek, 0.3)
+        )
+    );
+    width: var(--pill-row-capsule-width);
+    --pill-row-capsules: 2;
+  }
+}
+@container pill-scroll-row (width>=495px) {
+  .ScrollSnapCarousel .ReB2--x-C4I- {
+    --pill-row-capsules: 3;
+  }
+}
+@container pill-scroll-row (width>=710px) {
+  .ScrollSnapCarousel .ReB2--x-C4I- {
+    --pill-row-capsules: 4;
+  }
+}
+.ScrollSnapCarousel .ReB2--x-C4I- ._5-G1qgRPcWw- {
+  width: 100%;
+  min-width: 0;
+}
 .t3zlb7Lbrro- {
   z-index: 4;
   width: 100%;

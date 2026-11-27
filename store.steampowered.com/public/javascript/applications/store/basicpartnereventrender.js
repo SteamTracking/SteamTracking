@@ -133,12 +133,12 @@ import {
 import {
   Bt as g,
   Gt as _,
-  Rn as v,
-  ct as y,
-  fr as b,
-  in as x,
-  lt as S,
-  st as C,
+  ct as v,
+  in as y,
+  lt as b,
+  pr as x,
+  st as S,
+  zn as C,
   zt as w,
 } from "./chunk~6b8ddcaac8.js";
 import {
@@ -533,7 +533,7 @@ var Ar = c((e) => {
     let { startDateAndTime: t, endDateAndTime: n = 0 } = e,
       r = e.stylesmodule ? { ...Y, ...e.stylesmodule } : Y,
       i = Cn(),
-      a = v(),
+      a = C(),
       o = e.bHideEndTime || e.endDateAndTime == null || e.endDateAndTime < 1;
     if (t == null || t == 0)
       return (0, J.jsxs)(`div`, {
@@ -623,7 +623,7 @@ var Ar = c((e) => {
     let { startDateAndTime: t, endDateAndTime: n, bHideEndTime: r } = e,
       i = e.stylesmodule ? { ...Y, ...e.stylesmodule } : Y,
       a = Cn(),
-      o = v();
+      o = C();
     if (t == null || t == 0)
       return (0, J.jsxs)(`div`, {
         className: i.DateAndTime,
@@ -1770,7 +1770,7 @@ async function ha(e, t, n) {
 }
 function ga(e) {
   let { eventModel: t, bOnlyShowIcon: n, onTrack: r } = e,
-    i = v(),
+    i = C(),
     a = fa(t.clanSteamID.GetAccountID(), t.GID),
     { elDialogElement: o, fnShowLogonDialog: s } = _();
   return (0, J.jsxs)(J.Fragment, {
@@ -2134,7 +2134,7 @@ function Ya(e) {
 }
 function Xa() {
   return ln.logged_in
-    ? !ln.is_limited || (Ct((0, J.jsx)(S, {}), window), !1)
+    ? !ln.is_limited || (Ct((0, J.jsx)(b, {}), window), !1)
     : (W.IN_CLIENT
         ? console.log(
             `EventDiscussionWidget: In Client: Cannot use login widget. We expect to be already logged in.`,
@@ -2192,7 +2192,7 @@ function $a(e) {
     { event: n, showErrorInfo: r } = e.context,
     i = O(e.args),
     a = !!i && i != n?.GID,
-    { data: o, isPending: s } = x(
+    { data: o, isPending: s } = y(
       a && n
         ? { clanAccountID: n.clanSteamID.GetAccountID(), eventGID: i }
         : void 0,
@@ -4499,7 +4499,7 @@ function Oc(e) {
 }
 function kc(e) {
   let { userPollDef: t, lang: n, eventModel: r, children: i } = e,
-    a = v(),
+    a = C(),
     [o, s] = p(() => [
       k.GetWithFallback(t.localized_poll_description, n),
       t.user_poll_background,
@@ -5370,7 +5370,7 @@ function td(e) {
 function nd(e) {
   let { event: t, previewMode: n } = e,
     [r, i] = p(() => [t.GetSteamAwardCategory(), t.appid]),
-    a = nu(t, v()),
+    a = nu(t, C()),
     { widgets: o, bLoading: s } = Qu([r], Zu, a),
     { widgetStyle: c, bLoading: l } = $u(!!o?.nomination),
     u = Xu(td(n));
@@ -5473,7 +5473,7 @@ function zd(e) {
             children: [
               s
                 ? t
-                  ? (0, J.jsx)(b, {
+                  ? (0, J.jsx)(x, {
                       id: c,
                       className: _d,
                       hoverProps: {
@@ -5657,8 +5657,8 @@ var Hd = c((e) => {
         (0, J.jsx)(`div`, {
           className: bd,
           children: t
-            ? (0, J.jsx)(C, { appid: t, className: yd })
-            : (0, J.jsx)(y, { clanAccountID: n, className: yd }),
+            ? (0, J.jsx)(S, { appid: t, className: yd })
+            : (0, J.jsx)(v, { clanAccountID: n, className: yd }),
         }),
         (0, J.jsx)(Vd, { ...e }),
       ],

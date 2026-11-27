@@ -3920,6 +3920,54 @@ html.responsive.touch:not(.GamepadMode) ._5uN-ZG0AdmQ- {
 .ScrollSnapCarousel > :has(> .FolDBzXMW2I-:empty) {
   display: none;
 }
+.NubQWsrpIbw- {
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 12px;
+  display: flex;
+}
+.carousel__inner-slide:has(.NubQWsrpIbw-),
+.ScrollSnapCarousel > :has(> .NubQWsrpIbw-) {
+  flex-direction: column;
+  display: flex;
+}
+.carousel__inner-slide > :has(> .NubQWsrpIbw-) {
+  flex-direction: column;
+  flex-grow: 1;
+  display: flex;
+}
+.ScrollSnapCarousel .NubQWsrpIbw- {
+  flex-shrink: 0;
+  width: 180px;
+}
+@container pill-scroll-row (width>=0) {
+  .ScrollSnapCarousel .NubQWsrpIbw- {
+    --pill-row-capsule-width: calc(
+      100cqi /
+        (
+          var(--pill-row-capsules-override, var(--pill-row-capsules)) +
+            var(--pill-row-peek, 0.3)
+        )
+    );
+    width: var(--pill-row-capsule-width);
+    --pill-row-capsules: 2;
+  }
+}
+@container pill-scroll-row (width>=495px) {
+  .ScrollSnapCarousel .NubQWsrpIbw- {
+    --pill-row-capsules: 3;
+  }
+}
+@container pill-scroll-row (width>=710px) {
+  .ScrollSnapCarousel .NubQWsrpIbw- {
+    --pill-row-capsules: 4;
+  }
+}
+.ScrollSnapCarousel .NubQWsrpIbw- .FolDBzXMW2I- {
+  width: 100%;
+  min-width: 0;
+}
 ._0pSO3K-0Hs4- {
   z-index: 4;
   width: 100%;

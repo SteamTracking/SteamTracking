@@ -17,7 +17,7 @@ import {
   vt as f,
   z as p,
 } from "./chunk~01cfc309bf.js";
-import { $n as m, Ca as h, fr as g } from "./chunk~6b8ddcaac8.js";
+import { er as m, pr as h, wa as g } from "./chunk~6b8ddcaac8.js";
 import { k as _ } from "./chunk~4eed35ad1f.js";
 import { t as v } from "./chunk~8681f5c764.js";
 import { t as y } from "./chunk~eefd71512b.js";
@@ -3410,32 +3410,32 @@ function Cs(e) {
     f = _(n.appid),
     { data: p } = Je(f),
     m = n.exclude_reason == 0 || n.exclude_reason == 3,
-    h = n.owner_steamids.some((e) => e == c),
+    g = n.owner_steamids.some((e) => e == c),
     v = R.IN_CLIENT,
     y = p && p.visible,
     b = Y.useCallback(
       (e) => {
-        (Ne((0, X.jsx)(Ss, { item: n, bOwnsGame: h, familyContext: l }), e),
+        (Ne((0, X.jsx)(Ss, { item: n, bOwnsGame: g, familyContext: l }), e),
           e.stopPropagation(),
           e.preventDefault());
       },
-      [n, h, l],
+      [n, g, l],
     ),
-    ee = (v && (m || h)) || y,
+    ee = (v && (m || g)) || y,
     x = Y.useCallback(
       (e) => {
-        v && (m || h)
+        v && (m || g)
           ? hs(Ee(e), t.appid)
           : y && gs(Ee(e), `${R.STORE_BASE_URL}${p.store_url_path}`);
       },
-      [t.appid, m, h, p, y, v],
+      [t.appid, m, g, p, y, v],
     );
-  return (0, X.jsx)(g, {
+  return (0, X.jsx)(h, {
     id: f,
     name: n.name,
-    bPreventNavigation: h || m,
-    bHidePrice: h,
-    bShowWishlistButton: !h,
+    bPreventNavigation: g || m,
+    bHidePrice: g,
+    bShowWishlistButton: !g,
     hoverProps: d,
     className: as,
     elElementToAppend: u,
@@ -5182,7 +5182,7 @@ function Tc(e) {
       ],
       [t, n, r],
     );
-  return (0, X.jsx)(h, { tabs: i, classNameCtn: Ni, classNameTab: Pi });
+  return (0, X.jsx)(g, { tabs: i, classNameCtn: Ni, classNameTab: Pi });
 }
 function Ec(e) {
   let { steamid: t, settings: n } = e;
@@ -5663,7 +5663,7 @@ function Vc(e) {
     );
   return t
     ? (t.GetStoreItemType(),
-      (0, X.jsx)(g, {
+      (0, X.jsx)(h, {
         id: r,
         name: t.GetName(),
         bPreventNavigation: !0,
@@ -6178,7 +6178,7 @@ function Cl(e) {
       contents: e.children,
     },
   ];
-  return (0, X.jsx)(h, { tabs: t, classNameCtn: Ni });
+  return (0, X.jsx)(g, { tabs: t, classNameCtn: Ni });
 }
 function wl(e) {
   let t = [
@@ -6188,7 +6188,7 @@ function wl(e) {
       contents: e.children,
     },
   ];
-  return (0, X.jsx)(h, { tabs: t, classNameCtn: Ni });
+  return (0, X.jsx)(g, { tabs: t, classNameCtn: Ni });
 }
 function Tl(e) {
   let { familyGroupID: t } = e,
@@ -6690,7 +6690,7 @@ function Il(e) {
     (0, X.jsx)(M, {
       autoFocus: !0,
       focusableIfEmpty: !0,
-      children: (0, X.jsx)(h, {
+      children: (0, X.jsx)(g, {
         tabs: i,
         classNameCtn: Ni,
         classNameTab: Pi,

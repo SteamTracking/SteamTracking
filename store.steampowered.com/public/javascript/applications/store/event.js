@@ -106,12 +106,12 @@ import {
 import {
   At as g,
   Gt as _,
-  Ls as v,
-  Nt as y,
-  Rn as b,
-  Rs as ee,
-  ct as te,
-  jt as ne,
+  Nt as v,
+  Rs as y,
+  ct as b,
+  jt as ee,
+  zn as te,
+  zs as ne,
   zt as re,
 } from "./chunk~6b8ddcaac8.js";
 import {
@@ -1182,7 +1182,7 @@ function si(e) {
 }
 var ci = d(function (e) {
     let { event: t, bIsOGG: n, summary: r } = e,
-      i = b();
+      i = te();
     return (0, K.jsxs)(z, {
       children: [
         (0, K.jsxs)(`div`, {
@@ -1242,7 +1242,7 @@ var ci = d(function (e) {
         editorInfo: o,
         meetSteamInfo: s,
       } = e,
-      c = b(),
+      c = te(),
       l = t.appid,
       u = t.clanSteamID,
       d = r || t.GetStartTimeAndDateUnixSeconds(),
@@ -1327,10 +1327,10 @@ function di(e) {
   let { clanSteamID: t } = e,
     n = t.GetAccountID(),
     { data: r } = Ee(n),
-    { data: i } = ee(n);
+    { data: i } = ne(n);
   if (!r) return null;
   let a = i
-    ? v(i, `developer`)
+    ? y(i, `developer`)
     : Cr.COMMUNITY_BASE_URL +
       (r.vanity_url
         ? `groups/` + r.vanity_url
@@ -1439,7 +1439,7 @@ var hi = G.lazy(() =>
       l = t.appid,
       u = t.clanSteamID.GetAccountID(),
       d = re(),
-      f = b(),
+      f = te(),
       { data: p, isPending: m } = Yn(l ? { appid: l } : void 0),
       { data: h, isPending: g } = Ee(u);
     if (
@@ -1462,7 +1462,7 @@ var hi = G.lazy(() =>
         children: (0, K.jsx)(D, { size: `medium`, string: R(`#Loading`) }),
       });
     let y = p?.name || h?.group_name,
-      ee = t.GetDescriptionWithFallback(n);
+      b = t.GetDescriptionWithFallback(n);
     return (0, K.jsx)(Kr, {
       event: t,
       lang: n,
@@ -1527,7 +1527,7 @@ var hi = G.lazy(() =>
                       className: j(`EventDetailsBody`, _t),
                       children: [
                         (0, K.jsx)(wt, {
-                          text: ee || ``,
+                          text: b || ``,
                           showErrorInfo: d,
                           event: t,
                           languageOverride: n,
@@ -1595,7 +1595,7 @@ var hi = G.lazy(() =>
   });
 function _i(e) {
   let { event: t, bIsOGG: n } = e,
-    r = b(),
+    r = te(),
     { data: i } = Ae(t.clanSteamID.GetAccountID()),
     a = !!i?.can_edit,
     o = t.clanSteamID,
@@ -2437,7 +2437,7 @@ var qi = (e) =>
         (0, K.jsx)(`div`, { onClick: () => n(!0), children: c }),
         (0, K.jsx)(`div`, {
           className: j(Zt, Vi),
-          children: (0, K.jsx)(te, {
+          children: (0, K.jsx)(b, {
             clanAccountID: a.clanAccountID,
             className: Ui,
             fnSuccessCallback: Ki,
@@ -2887,7 +2887,7 @@ var Lo = class extends G.Component {
                     children: this.RenderGameSourceCheckbox(S.k_ERecent, !e),
                   }),
                   this.RenderGameSourceCheckbox(S.k_EWishlist, !e),
-                  ne() && this.RenderGameSourceCheckbox(S.k_EFollowing, !e),
+                  ee() && this.RenderGameSourceCheckbox(S.k_EFollowing, !e),
                   this.RenderGameSourceCheckbox(S.k_ERecommended, !e),
                   this.RenderGameSourceCheckbox(S.k_ESteam),
                   en.bIncludeFeaturedAsGameSource &&
@@ -3807,7 +3807,7 @@ var os = t({
   });
 function kc(e) {
   let { eventModel: t, calendarEvent: n } = e,
-    r = y(t.clanSteamID.GetAccountID()),
+    r = v(t.clanSteamID.GetAccountID()),
     { elDialogElement: i, fnShowLogonDialog: a } = _(),
     o = G.useCallback(async () => {
       I.logged_in
@@ -4684,7 +4684,7 @@ var vl = `_8cquMQJOr-c-`,
           i &&
             (0, K.jsx)(`div`, {
               className: `C9sbbTu0HGw-`,
-              children: (0, K.jsx)(te, { clanAccountID: r.clanid }),
+              children: (0, K.jsx)(b, { clanAccountID: r.clanid }),
             }),
         ],
       });

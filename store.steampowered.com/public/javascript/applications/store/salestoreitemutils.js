@@ -11,35 +11,35 @@ import {
   ut as o,
 } from "./chunk~01cfc309bf.js";
 import {
-  Ao as s,
-  As as c,
-  No as l,
-  Oo as u,
-  Qa as d,
-  Ro as f,
-  To as p,
-  Vo as m,
-  do as h,
-  fo as g,
-  jo as _,
-  ko as ee,
+  $a as s,
+  Ao as c,
+  Eo as l,
+  Ho as u,
+  Mo as d,
+  Po as f,
+  fo as p,
+  jo as m,
+  js as h,
+  ko as g,
+  po as _,
+  zo as v,
 } from "./chunk~6b8ddcaac8.js";
-import { C as v } from "./chunk~4eed35ad1f.js";
-import { n as y } from "./chunk~5adf866415.js";
-import { t as b } from "./chunk~034b02d99f.js";
+import { C as y } from "./chunk~4eed35ad1f.js";
+import { n as b } from "./chunk~5adf866415.js";
+import { t as x } from "./chunk~034b02d99f.js";
 import {
-  Ev as x,
-  Ib as S,
-  Ic as C,
-  Oc as w,
-  Pc as T,
-  Wv as E,
-  an as D,
-  bv as O,
-  ex as te,
-  ib as ne,
-  mn as re,
-  nx as k,
+  Ev as S,
+  Ib as C,
+  Ic as w,
+  Oc as T,
+  Pc as E,
+  Wv as D,
+  an as O,
+  bv as k,
+  ex as ee,
+  ib as te,
+  mn as ne,
+  nx as re,
   qb as A,
   rx as ie,
   uS as ae,
@@ -48,7 +48,7 @@ import {
 } from "./main.js";
 var M = e(t(), 1),
   N = r();
-function P(e) {
+function se(e) {
   let {
       id: t,
       imageType: n,
@@ -56,73 +56,73 @@ function P(e) {
       strAdditionalClassName: i,
       bNoShadow: a,
     } = e,
-    { storeItemAsset: o, storeItemDefaultInfo: c } = Q(t, n, r);
+    { storeItemAsset: o, storeItemDefaultInfo: s } = Q(t, n, r);
   if (n === `library` || n == `vertical`)
     return (0, N.jsx)(Z, {
       id: t,
       bPreferAssetWithoutOverride: r,
       bNoShadow: a,
     });
-  let l = ``;
+  let c = ``;
   switch (n) {
     case `main`:
-      l = f;
+      c = v;
       break;
     default:
-      l = s;
+      c = m;
   }
-  if (o === void 0 || !c)
-    return (0, N.jsx)(`div`, { className: T(l, `CapsuleImageCtn`, i) });
+  if (o === void 0 || !s)
+    return (0, N.jsx)(`div`, { className: E(c, `CapsuleImageCtn`, i) });
   if (o == null) return null;
-  let u = F(o, n === `header`);
+  let l = P(o, n === `header`);
   return (0, N.jsx)(`div`, {
-    className: T(l, `CapsuleImageCtn`, i),
-    children: (0, N.jsx)(y, {
+    className: E(c, `CapsuleImageCtn`, i),
+    children: (0, N.jsx)(b, {
       lazyLoad: !0,
-      srcs: u,
-      className: T(g),
-      alt: c.name,
+      srcs: l,
+      className: E(_),
+      alt: s.name,
     }),
   });
 }
-function F(e, t) {
+function P(e, t) {
   let n = [];
-  return (e && L(n, e, t), n.filter((e) => !!e));
+  return (e && I(n, e, t), n.filter((e) => !!e));
 }
-function I(e, t) {
+function F(e, t) {
   return {
-    strStoreVerticalURL: C(e, `hero_capsule`),
-    strLibraryVerticalURL: C(e, `library_capsule`),
+    strStoreVerticalURL: w(e, `hero_capsule`),
+    strLibraryVerticalURL: w(e, `library_capsule`),
   };
 }
-function L(e, t, n) {
-  let r = C(t, `header_2x`) ?? C(t, `header`),
-    i = C(t, `main_capsule_2x`) ?? C(t, `main_capsule`);
+function I(e, t, n) {
+  let r = w(t, `header_2x`) ?? w(t, `header`),
+    i = w(t, `main_capsule_2x`) ?? w(t, `main_capsule`);
   n ? e.push(r, i) : e.push(i, r);
 }
-var R = `K2BGbCx37Cg-`,
-  z = `wnVw5QEjvtw-`;
-function B(e) {
+var L = `K2BGbCx37Cg-`,
+  R = `wnVw5QEjvtw-`;
+function z(e) {
   let { bAllowOutsideOfDeck: t } = e;
-  return !te() && !t ? null : (0, N.jsx)(V, { ...e });
+  return !ee() && !t ? null : (0, N.jsx)(B, { ...e });
 }
-function V(e) {
+function B(e) {
   let { className: t, id: n } = e,
-    [r, i] = re(),
+    [r, i] = ne(),
     a = i;
   if ((i == 0 && (a = 1), !n)) return null;
   let o;
   return (
-    i == 4 && (o = z),
+    i == 4 && (o = R),
     (0, N.jsx)(`div`, {
-      className: T(R, o, t),
-      children: (0, N.jsx)(b, { id: n, eHWCompat: a }),
+      className: E(L, o, t),
+      children: (0, N.jsx)(x, { id: n, eHWCompat: a }),
     })
   );
 }
-async function H() {
+async function V() {
   let e = oe(`broadcast_available_for_page`, `application_config`);
-  if (q(e)) {
+  if (K(e)) {
     let t = new Set();
     return (
       e.filtered.forEach((e) => {
@@ -133,7 +133,7 @@ async function H() {
   }
   return [];
 }
-var U = class {
+var H = class {
   constructor() {
     n(this);
   }
@@ -158,15 +158,15 @@ var U = class {
   default_selection_priority = 0;
   current_selection_priority = 0;
 };
-(A([i], U.prototype, `title`, void 0),
-  A([i], U.prototype, `viewer_count`, void 0),
-  A([i], U.prototype, `gamedata_subtitle`, void 0),
-  A([i], U.prototype, `current_selection_priority`, void 0));
-var W = `primary`,
-  G = `featured`,
-  K = `default_featured`,
-  se = `general`,
-  ce = (function (e) {
+(A([i], H.prototype, `title`, void 0),
+  A([i], H.prototype, `viewer_count`, void 0),
+  A([i], H.prototype, `gamedata_subtitle`, void 0),
+  A([i], H.prototype, `current_selection_priority`, void 0));
+var U = `primary`,
+  W = `featured`,
+  G = `default_featured`,
+  ce = `general`,
+  le = (function (e) {
     return (
       (e[(e.k_ePrimary = 3)] = `k_ePrimary`),
       (e[(e.k_eFeatured = 2)] = `k_eFeatured`),
@@ -175,20 +175,20 @@ var W = `primary`,
       e
     );
   })({});
-function le(e) {
+function ue(e) {
   switch (e) {
-    case W:
+    case U:
       return 3;
-    case G:
+    case W:
       return 2;
-    case K:
+    case G:
       return 1;
-    case se:
+    case ce:
     default:
       return 0;
   }
 }
-function q(e) {
+function K(e) {
   let t = e;
   return t &&
     typeof t.success == `number` &&
@@ -198,20 +198,20 @@ function q(e) {
     ? t.filtered.length == 0 || typeof t.filtered[0].accountid == `string`
     : !1;
 }
-function ue() {
-  return a(J());
+function de() {
+  return a(q());
 }
-function de(e) {
-  let { data: t } = ue(),
+function fe(e) {
+  let { data: t } = de(),
     [n, r] = (0, M.useState)(!1),
     i = o(),
-    a = O();
+    a = k();
   return (
     (0, M.useEffect)(() => {
       if (!e || e.length == 0 || !t) return r(!1);
       (async () => {
         let n = await Promise.all(
-          e.filter((e) => !!e).map((e) => i.fetchQuery(x(a, { appid: e }))),
+          e.filter((e) => !!e).map((e) => i.fetchQuery(S(a, { appid: e }))),
         );
         r(
           n.some(
@@ -226,71 +226,71 @@ function de(e) {
     n
   );
 }
-function J() {
+function q() {
   return {
-    queryKey: fe(),
+    queryKey: pe(),
     queryFn: async () => {
-      let e = await H();
+      let e = await V();
       return new Set(e);
     },
   };
 }
-function fe() {
+function pe() {
   return [`BroadcastApps`];
 }
-var pe = `hRwhHwwKlgI-`;
+var J = `hRwhHwwKlgI-`;
 function Y() {
   return (0, N.jsx)(`div`, {
-    className: pe,
-    children: ne(`#home_page_live_broadcast`),
+    className: J,
+    children: te(`#home_page_live_broadcast`),
   });
 }
 var me = M.createContext(void 0),
   X = M.createContext(void 0);
 function he(e) {
   let { appids: t, hide_status_banners: n, show_early_access: r } = e,
-    { data: i } = v(),
-    { data: a } = D(),
+    { data: i } = y(),
+    { data: a } = O(),
     o = t.length > 0 && t.every((e) => i && i.has(e)),
     s = t.length > 0 && t.every((e) => a && a.has(e)),
-    c = de(t),
+    c = fe(t),
     l = M.useContext(me),
     u = M.useContext(X),
     d = l && u ? l(u, t) : void 0,
     f = o && !n,
-    p = s && !n && !d?.bReplacesWishlistBanner,
-    m = !n && r;
+    m = s && !n && !d?.bReplacesWishlistBanner,
+    h = !n && r;
   return (0, N.jsxs)(`div`, {
-    className: T(h, `CapsuleDecorators`, d && `HasReasonBanner`),
+    className: E(p, `CapsuleDecorators`, d && `HasReasonBanner`),
     children: [
       d &&
         (0, N.jsx)(`span`, {
-          className: T(`LCYi5cxHqgI-`, d.strClassName),
+          className: E(`LCYi5cxHqgI-`, d.strClassName),
           children: d.strLabel,
         }),
       f &&
         (0, N.jsxs)(`span`, {
-          className: T(`LCYi5cxHqgI-`, `ZuMhm9DQqbw-`),
+          className: E(`LCYi5cxHqgI-`, `ZuMhm9DQqbw-`),
           children: [
             (0, N.jsx)(`img`, {
-              src: k(
+              src: re(
                 `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC`,
               ),
               className: `ppO76q5Y-Zg-`,
-              alt: S.Localize(`#Sale_InLibrary`),
+              alt: C.Localize(`#Sale_InLibrary`),
             }),
-            S.Localize(`#Sale_InLibrary`),
+            C.Localize(`#Sale_InLibrary`),
           ],
         }),
-      p &&
+      m &&
         (0, N.jsxs)(`span`, {
           className: `LCYi5cxHqgI-`,
           children: [
-            (0, N.jsx)(w, { className: `ppO76q5Y-Zg-` }),
-            S.Localize(`#Sale_OnWishlist`),
+            (0, N.jsx)(T, { className: `ppO76q5Y-Zg-` }),
+            C.Localize(`#Sale_OnWishlist`),
           ],
         }),
-      m && !f && !s && (0, N.jsx)(ge, { appids: t }),
+      h && !f && !s && (0, N.jsx)(ge, { appids: t }),
       c && (0, N.jsx)(Y, {}),
     ],
   });
@@ -299,21 +299,21 @@ function ge(e) {
   let { appids: t } = e;
   return _e(t)
     ? (0, N.jsx)(`span`, {
-        className: T(d, p),
-        children: S.Localize(`#Sale_EarlyAccess`),
+        className: E(s, l),
+        children: C.Localize(`#Sale_EarlyAccess`),
       })
     : null;
 }
 function _e(e) {
   let [t, n] = (0, M.useState)(!1),
     r = o(),
-    i = O();
+    i = k();
   return (
     (0, M.useEffect)(() => {
       if (!e || e.length == 0) return n(!1);
       (async () => {
         let t = await Promise.all(
-          e.map((e) => r.fetchQuery(x(i, { appid: e }))),
+          e.map((e) => r.fetchQuery(S(i, { appid: e }))),
         );
         n(t.some((e) => e && e.is_early_access));
       })();
@@ -328,16 +328,16 @@ function Z(e) {
       bPreferAssetWithoutOverride: r,
       bNoShadow: i,
     } = e,
-    a = i ? m : ``,
+    a = i ? u : ``,
     { storeItemDefaultInfo: o, storeItemAsset: s } = Q(t, `vertical`, r),
-    [d, f] = M.useState(0);
-  if (!o || !s) return (0, N.jsx)(`div`, { className: _ });
-  let { strStoreVerticalURL: p, strLibraryVerticalURL: h } = I(s, o);
-  if (p && (!n || !h))
+    [l, p] = M.useState(0);
+  if (!o || !s) return (0, N.jsx)(`div`, { className: d });
+  let { strStoreVerticalURL: m, strLibraryVerticalURL: v } = F(s, o);
+  if (m && (!n || !v))
     return (0, N.jsxs)(`div`, {
-      className: T(_, `HeroCapsuleImageContainer`),
+      className: E(d, `HeroCapsuleImageContainer`),
       children: [
-        (0, N.jsx)(`img`, { src: p, className: g, alt: o.name }),
+        (0, N.jsx)(`img`, { src: m, className: _, alt: o.name }),
         o.type == 4 &&
           (0, N.jsx)(`img`, {
             className: `eEjnmAoA07c-`,
@@ -346,49 +346,49 @@ function Z(e) {
           }),
       ],
     });
-  if (h)
+  if (v)
     return (0, N.jsxs)(`div`, {
-      className: T(l, c, n ? ee : ``, a),
+      className: E(f, h, n ? c : ``, a),
       children: [
         (0, N.jsx)(`div`, {
-          className: u,
-          style: { backgroundImage: `url(${h})` },
+          className: g,
+          style: { backgroundImage: `url(${v})` },
         }),
-        (0, N.jsx)(`img`, { src: h, className: g, alt: o.name }),
+        (0, N.jsx)(`img`, { src: v, className: _, alt: o.name }),
       ],
     });
-  let v = F(s, !0),
-    b = v.length - 1,
-    x = (e) => {
-      let t = v.indexOf(e);
-      t >= b && t < v.length - 1 && f(t + 1);
+  let y = P(s, !0),
+    x = y.length - 1,
+    S = (e) => {
+      let t = y.indexOf(e);
+      t >= x && t < y.length - 1 && p(t + 1);
     };
-  if (d < v.length) {
-    let e = v[d];
+  if (l < y.length) {
+    let e = y[l];
     return (0, N.jsxs)(`div`, {
-      className: T(l, a),
+      className: E(f, a),
       children: [
         (0, N.jsx)(`div`, {
-          className: u,
+          className: g,
           style: { backgroundImage: `url(${e})` },
         }),
-        (0, N.jsx)(y, {
+        (0, N.jsx)(b, {
           lazyLoad: !0,
-          srcs: v,
-          className: g,
+          srcs: y,
+          className: _,
           alt: o.name,
-          onImageError: x,
+          onImageError: S,
         }),
       ],
     });
   }
-  return (0, N.jsx)(`div`, { className: _ });
+  return (0, N.jsx)(`div`, { className: d });
 }
 function Q(e, t, n = !1) {
-  let { data: r } = E(e),
+  let { data: r } = D(e),
     { data: i } = j(e, n),
     a = $(r, i, t),
-    { data: o } = E(a),
+    { data: o } = D(a),
     { data: s } = j(a, n),
     c = o?.visible ? o : r;
   return { storeItemAsset: o?.visible ? s : i, storeItemDefaultInfo: c };
@@ -419,16 +419,16 @@ function ve(e, t) {
 }
 export {
   Y as a,
-  ce as c,
-  B as d,
-  F as f,
+  le as c,
+  z as d,
+  P as f,
   X as i,
-  U as l,
+  H as l,
   Z as n,
-  J as o,
-  P as p,
+  q as o,
+  se as p,
   he as r,
-  le as s,
+  ue as s,
   $ as t,
-  q as u,
+  K as u,
 };

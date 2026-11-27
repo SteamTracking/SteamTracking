@@ -236,6 +236,7 @@ function _(_) {
     _ = _.useMemo(() => _(_, _?.length), [_, _?.length]),
     _ = _(_, _),
     _ = _(_, _),
+    _ = _(_, _),
     [_, _] = _.useState(0),
     _ = _(_, _),
     _ = _ && !_ && !_ && _(_),
@@ -268,7 +269,10 @@ function _(_) {
         bPaginationPills: _,
         bDropShortLastCarouselPage: _,
       }),
-      { content: _, bAdditionalContent: _ } = _(_);
+      { content: _, bAdditionalContent: _ } = _({
+        ..._,
+        fnBCapsuleHasNoTallArt: _,
+      });
     if (((_ = _), !_ && !_)) return null;
     _ &&
       _ &&
@@ -310,6 +314,28 @@ function _(_) {
       ],
     }),
   });
+}
+function _(_, _) {
+  let _ = _(),
+    _ = _.prefer_assets_without_overrides ? _ : _,
+    _ = _.fallback_tall_half_capsule
+      ? (_ ?? []).filter((_) => `appid` in (_(_) ?? {}))
+      : [],
+    _ = _({
+      queries: _.map((_) => _(_, _(_))),
+    }),
+    _ = _.fallback_tall_half_capsule === `no_store_vertical`,
+    _ = new Set(
+      _.filter((_, _) => {
+        let _ = _[_].data;
+        return !!_ && (_ ? !_.hero_capsule : !_(_));
+      }),
+    );
+  return (_) => _.has(_);
+}
+var _ = `portrait.png`;
+function _(_) {
+  return !!_.hero_capsule || (!!_.library_capsule && _.library_capsule !== _);
 }
 function _(_, _, _) {
   return _[0] === 1

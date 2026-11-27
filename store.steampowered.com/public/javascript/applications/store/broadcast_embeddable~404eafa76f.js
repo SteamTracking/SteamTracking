@@ -13,7 +13,7 @@ import {
   kt as c,
   l,
 } from "./chunk~01cfc309bf.js";
-import { Ds as u, Ka as d, rs as f } from "./chunk~6b8ddcaac8.js";
+import { Os as u, is as d, qa as f } from "./chunk~6b8ddcaac8.js";
 import { st as p } from "./chunk~f57d770d64.js";
 import { n as m, t as h } from "./chunk~a0dd05a569.js";
 import { k as g } from "./chunk~4eed35ad1f.js";
@@ -6439,7 +6439,7 @@ var si = `_7FIE12jcFio-`,
           }),
         }),
         (0, Y.jsxs)(`div`, {
-          className: f,
+          className: d,
           children: [
             (0, Y.jsx)(`a`, {
               href: ne,
@@ -6453,7 +6453,7 @@ var si = `_7FIE12jcFio-`,
               }),
             }),
             s &&
-              (0, Y.jsx)(`div`, { className: `A8oyzoRvWQ8-`, children: d(s) }),
+              (0, Y.jsx)(`div`, { className: `A8oyzoRvWQ8-`, children: f(s) }),
             !!te && (0, Y.jsx)(ie, { id: i, bShowDemoButton: !0 }),
           ],
         }),

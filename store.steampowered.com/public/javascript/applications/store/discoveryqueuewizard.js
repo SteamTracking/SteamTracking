@@ -4,14 +4,14 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { It as t, dt as n, ot as r } from "./chunk~01cfc309bf.js";
 import {
-  Bn as i,
+  Da as i,
   Ea as a,
-  Fa as o,
-  La as s,
+  Ia as o,
+  Ra as s,
   Ta as c,
-  er as l,
-  fr as u,
-  wa as d,
+  Vn as l,
+  pr as u,
+  tr as d,
 } from "./chunk~6b8ddcaac8.js";
 import { k as f } from "./chunk~4eed35ad1f.js";
 import { t as p } from "./chunk~684e72ad45.js";
@@ -565,10 +565,10 @@ function Gt(e) {
       appID: t,
       nItemHeight: n,
       nItemWidth: r,
-      selected: i,
-      fnFocused: s,
-      eStoreDiscoveryQueueType: l,
-      storePageFilter: u,
+      selected: s,
+      fnFocused: l,
+      eStoreDiscoveryQueueType: u,
+      storePageFilter: d,
       bPreferDemoStorePage: f,
       elVideo: p,
       elDetails: m,
@@ -577,14 +577,14 @@ function Gt(e) {
     [g] = C(t, I),
     _ = W(),
     y = R()?.ownerWindow || window,
-    b = Kt(g, l, u, f),
+    b = Kt(g, u, d, f),
     { bIsIgnored: x, fnUpdateIgnored: S } = ke(t),
     { bIsWishlisted: w, fnUpdateWishlist: T } = D(t),
     E = X.useRef(null);
   if (
     (X.useEffect(() => {
-      i && E.current && E.current.focus({ preventScroll: !0 });
-    }, [i]),
+      s && E.current && E.current.focus({ preventScroll: !0 });
+    }, [s]),
     !g)
   )
     return (console.warn(`Error: missing store item for appid `, t), null);
@@ -599,7 +599,7 @@ function Gt(e) {
     ),
     ref: E,
     style: O,
-    className: V(Ke, i && `vyD3DBFIFUc-`),
+    className: V(Ke, s && `vyD3DBFIFUc-`),
     onOptionsActionDescription: K(
       w
         ? `#DiscoveryQueue_RemoveFromWishlist`
@@ -614,7 +614,7 @@ function Gt(e) {
       x ? `#DiscoveryQueue_Undo` : `#DiscoveryQueue_IgnoreLink`,
     ),
     onSecondaryButton: S,
-    fnScrollIntoViewHandler: () => (s(), !0),
+    fnScrollIntoViewHandler: () => (l(), !0),
     children: [
       (0, Z.jsx)(`div`, {
         className: V(k, x && `_3ZYr-Efwvg8-`),
@@ -634,7 +634,7 @@ function Gt(e) {
               onClick: S,
               children: [
                 _ &&
-                  (0, Z.jsx)(d, { button: o.X, type: a.Light, size: c.Medium }),
+                  (0, Z.jsx)(c, { button: o.X, type: i.Light, size: a.Medium }),
                 K(`#DiscoveryQueue_Undo`),
               ],
             }),
@@ -699,7 +699,7 @@ function qt(e) {
                 href: x,
                 children: h.GetName(),
               }),
-              (0, Z.jsx)(l, { bSingleLineMode: !0, id: g }),
+              (0, Z.jsx)(d, { bSingleLineMode: !0, id: g }),
             ],
           }),
           (0, Z.jsx)(Jt, { rgTagIDs: h.GetTagIDs(), ariaLabelID: m.tagsId }),
@@ -734,7 +734,7 @@ function qt(e) {
               className: `kjR6Qum8rRo-`,
               children: [
                 h.BHasDemo() &&
-                  (0, Z.jsx)(i, {
+                  (0, Z.jsx)(l, {
                     id: g,
                     className: V(
                       `BxLuFJsRaUQ-`,
@@ -747,10 +747,10 @@ function qt(e) {
                   href: x,
                   children: [
                     w &&
-                      (0, Z.jsx)(d, {
+                      (0, Z.jsx)(c, {
                         button: o.Y,
-                        type: a.Light,
-                        size: c.Medium,
+                        type: i.Light,
+                        size: a.Medium,
                         additionalClassName: `a-wHbIOxF8U-`,
                       }),
                     ` `,
@@ -770,10 +770,10 @@ function qt(e) {
                     onClick: b,
                     children: [
                       w &&
-                        (0, Z.jsx)(d, {
+                        (0, Z.jsx)(c, {
                           button: o.Y,
-                          type: a.Light,
-                          size: c.Medium,
+                          type: i.Light,
+                          size: a.Medium,
                           additionalClassName: `a-wHbIOxF8U-`,
                         }),
                       y ? (0, Z.jsx)(Qe, {}) : (0, Z.jsx)(pt, {}),

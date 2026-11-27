@@ -3,7 +3,7 @@
 
 import { o as e } from "./chunk~f025431ab0.js";
 import { It as t, c as n, dt as r, et as i } from "./chunk~01cfc309bf.js";
-import { fr as a, ur as o } from "./chunk~6b8ddcaac8.js";
+import { dr as a, pr as o } from "./chunk~6b8ddcaac8.js";
 import { f as s, s as c } from "./chunk~961c06e93e.js";
 import { i as l } from "./chunk~2f085f1384.js";
 import { t as u } from "./chunk~92931c6310.js";
@@ -422,7 +422,7 @@ function Q(e) {
 var ze = n((e) => {
   let { item: t, listDetails: n, bAutoFocus: r } = e,
     i = parseInt(N(`curator_account_id`, `application_config`)),
-    a = I(i),
+    o = I(i),
     [s] = ee(t?.recommended_app?.appid, {
       include_assets: !0,
       include_release: !0,
@@ -434,8 +434,8 @@ var ze = n((e) => {
       }),
       [s],
     ),
-    l = o(c);
-  if (!a || !s) return null;
+    l = a(c);
+  if (!o || !s) return null;
   let {
       appid: u,
       link_url: d,
@@ -443,15 +443,15 @@ var ze = n((e) => {
       time_recommended: m,
       recommendation_state: g,
     } = t.recommended_app,
-    _ = a.is_creator_home && !a.is_ogg,
+    _ = o.is_creator_home && !o.is_ogg,
     v = n.list_jsondata.app_data?.[u],
     y = d && p(d),
     b = d && q(d),
     x = f != `0` && f,
     S = s.BHasDemo(),
     C = v?.img_url,
-    w = `curator_clanid=${a.clanAccountID}&curator_listid=${n.listid}`,
-    T = s.GetStorePageURL() + `/?curator_clanid=` + a.clanAccountID;
+    w = `curator_clanid=${o.clanAccountID}&curator_listid=${n.listid}`,
+    T = s.GetStorePageURL() + `/?curator_clanid=` + o.clanAccountID;
   return (0, K.jsxs)(O, {
     className: ge,
     autoFocus: r,
@@ -514,7 +514,7 @@ function Be(e) {
       nStartSeconds: n,
       id: r,
       strImgOverrideUrl: i,
-      bShowDemoButton: o,
+      bShowDemoButton: a,
       strExtraParams: s,
       bTwitchVideo: c,
     } = e,
@@ -549,9 +549,9 @@ function Be(e) {
         children: [
           (0, K.jsx)(`div`, {
             className: xe,
-            children: (0, K.jsx)(a, {
+            children: (0, K.jsx)(o, {
               id: r,
-              bShowDemoButton: o,
+              bShowDemoButton: a,
               nDelayShowMs: 300,
               strExtraParams: s,
               hoverProps: {

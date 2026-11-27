@@ -17,64 +17,72 @@ function l(e) {
       placeholderWidth: t,
       placeholderHeight: n,
       holdGamepadFocus: c = !1,
-      onRender: l,
-      style: u,
-      mode: d = `JustLoad`,
-      children: f,
-      ...p
+      releaseGamepadFocusWhenEmpty: l = !1,
+      onRender: d,
+      style: f,
+      mode: p = `JustLoad`,
+      children: m,
+      ...h
     } = e,
-    m = a.useContext(s),
-    [h, g] = a.useState(() => ({
-      bRenderChildren: !m.enabled,
+    g = a.useContext(s),
+    [_, v] = a.useState(() => ({
+      bRenderChildren: !g.enabled,
       nPrevRenderHeight: 0,
       nPrevRenderWidth: 0,
     })),
-    _ = a.useRef(null),
-    v = d === `LoadAndUnload` && m.enabled,
-    y = a.useCallback(
+    y = a.useRef(null),
+    b = p === `LoadAndUnload` && g.enabled,
+    x = a.useCallback(
       (e) => {
-        g((t) => {
-          if (t.bRenderChildren === e || (t.bRenderChildren && !v)) return t;
+        v((t) => {
+          if (t.bRenderChildren === e || (t.bRenderChildren && !b)) return t;
           let n = 0,
             r = 0;
-          if (_.current) {
-            let e = _.current.getBoundingClientRect();
+          if (y.current) {
+            let e = y.current.getBoundingClientRect();
             e && ((n = e.width), (r = e.height));
           }
           return (
-            e && l && l(),
+            e && d && d(),
             { bRenderChildren: e, nPrevRenderWidth: n, nPrevRenderHeight: r }
           );
         });
       },
-      [v, l],
+      [b, d],
     );
   a.useEffect(() => {
-    m.enabled || y(!0);
-  }, [m.enabled, y]);
-  let b = u;
-  if (!h.bRenderChildren) {
-    let e = h.nPrevRenderWidth || t,
-      r = h.nPrevRenderHeight || n;
-    (r !== void 0 || e !== void 0) && (b = { ...u, minHeight: r, minWidth: e });
+    g.enabled || x(!0);
+  }, [g.enabled, x]);
+  let S = f;
+  if (!_.bRenderChildren) {
+    let e = _.nPrevRenderWidth || t,
+      r = _.nPrevRenderHeight || n;
+    (r !== void 0 || e !== void 0) && (S = { ...f, minHeight: r, minWidth: e });
   }
-  let x = v ? `repeated` : `once`,
-    S = (0, o.jsx)(i, {
-      containerRef: _,
-      style: b,
-      ...p,
-      onVisibilityChange: y,
-      trigger: x,
-      children: h.bRenderChildren && f,
+  let C = b ? `repeated` : `once`,
+    w = (0, o.jsx)(i, {
+      containerRef: y,
+      style: S,
+      ...h,
+      onVisibilityChange: x,
+      trigger: C,
+      children: _.bRenderChildren && m,
     });
   return (
     c &&
-      (S = (0, o.jsx)(r, {
+      (w = (0, o.jsx)(r, {
         focusableIfEmpty: !0,
         style: { height: `100%` },
-        children: S,
+        fnCanTakeFocus: l && _.bRenderChildren ? u : void 0,
+        children: w,
       })),
-    S
+    w
   );
+}
+function u(e) {
+  return e.m_rgChildren.some((e) => {
+    let t = e.GetFocusable();
+    return t === `self` || (t === `children` && u(e));
+  });
 }
 export { l as n, c as t };

@@ -17,19 +17,19 @@ import {
   Z as h,
   a as g,
   c as _,
-  d as v,
-  et as y,
-  f as b,
-  i as x,
-  it as S,
+  cr as v,
+  d as y,
+  et as b,
+  f as x,
+  i as S,
+  it as C,
   l as ee,
   m as te,
-  nt as C,
+  nt as w,
   o as ne,
   p as re,
-  rt as w,
+  rt as T,
   s as ie,
-  sr as T,
   tt as E,
   v as D,
   y as ae,
@@ -43,61 +43,61 @@ import {
   s as A,
   u as ue,
 } from "./chunk~4eed35ad1f.js";
-import { f as j, i as de, o as fe, t as pe } from "./chunk~cbbb6ae37c.js";
-import { r as M } from "./chunk~f4c928a27a.js";
+import { f as j, i as M, o as de, t as fe } from "./chunk~cbbb6ae37c.js";
+import { r as N } from "./chunk~f4c928a27a.js";
 import "./chunk~21cdc464a1.js";
-import { n as me, t as he } from "./chunk~710e3cfd2f.js";
+import { n as pe, t as me } from "./chunk~710e3cfd2f.js";
 import {
-  C as ge,
-  T as N,
-  a as _e,
-  c as ve,
-  d as ye,
-  f as be,
-  h as xe,
-  i as Se,
-  l as Ce,
-  o as we,
-  p as P,
-  r as Te,
-  s as Ee,
-  t as De,
-  u as Oe,
+  C as he,
+  T as P,
+  a as ge,
+  c as _e,
+  d as ve,
+  f as ye,
+  h as be,
+  i as xe,
+  l as Se,
+  o as Ce,
+  p as F,
+  r as we,
+  s as Te,
+  t as Ee,
+  u as De,
 } from "./chunk~b8ca037aae.js";
 import {
-  c as ke,
-  f as Ae,
-  g as je,
-  h as F,
-  n as Me,
-  p as Ne,
-  r as Pe,
-  s as Fe,
-  t as Ie,
-  u as Le,
+  c as Oe,
+  f as ke,
+  g as Ae,
+  h as I,
+  n as je,
+  p as Me,
+  r as Ne,
+  s as Pe,
+  t as Fe,
+  u as Ie,
 } from "./chunk~3720b337f3.js";
-import { t as Re } from "./chunk~379edc388d.js";
+import { t as Le } from "./chunk~379edc388d.js";
 import {
-  AS as ze,
-  Av as Be,
-  Cv as I,
-  Ev as L,
-  Fv as Ve,
-  Lv as He,
-  Pc as R,
-  Pv as Ue,
-  Tv as We,
-  bv as Ge,
-  ex as z,
-  gt as Ke,
-  ib as B,
-  jv as qe,
-  lb as Je,
-  ox as V,
-  rx as Ye,
-  wv as H,
+  AS as Re,
+  Av as ze,
+  Cv as L,
+  Ev as R,
+  Fv as Be,
+  Lv as z,
+  Pc as B,
+  Pv as Ve,
+  Tv as He,
+  bv as V,
+  ex as H,
+  gt as Ue,
+  ib as U,
+  jv as We,
+  lb as Ge,
+  ox as W,
+  rx as Ke,
+  wv as G,
 } from "./main.js";
-async function U(e, t = 1e3) {
+async function K(e, t = 1e3) {
   return await new Promise((n, r) => {
     let i = new Image();
     ((i.src = e),
@@ -106,29 +106,29 @@ async function U(e, t = 1e3) {
       t > 0 && window.setTimeout(() => n(`timeout`), t));
   });
 }
-var W = e(t(), 1);
-async function G(e, t, n, r, i) {
+var q = e(t(), 1);
+async function J(e, t, n, r, i) {
   let { queryClient: a, storeItemLoader: o } = e,
-    s = b(t, n),
-    c = n.prefer_assets_without_overrides ? H : I,
+    s = x(t, n),
+    c = n.prefer_assets_without_overrides ? G : L,
     l = r.flatMap((e) => {
-      let t = T(e);
+      let t = v(e);
       return t ? [t] : [];
     }),
     u = await Promise.all(
       l.map(async (e) => {
         try {
           let [t, n, r] = await Promise.all([
-            a.fetchQuery(He(o, e)),
-            a.fetchQuery(L(o, e)),
+            a.fetchQuery(z(o, e)),
+            a.fetchQuery(R(o, e)),
             a.fetchQuery(c(o, e)),
           ]);
-          if (!n?.visible || v(t, s)) return;
+          if (!n?.visible || y(t, s)) return;
           let i = r,
-            l = pe(n, r, `header`);
+            l = fe(n, r, `header`);
           if (l) {
             let [e, t] = await Promise.all([
-              a.fetchQuery(L(o, l)),
+              a.fetchQuery(R(o, l)),
               a.fetchQuery(c(o, l)),
             ]);
             e?.visible && (i = t);
@@ -139,48 +139,48 @@ async function G(e, t, n, r, i) {
         }
       }),
     );
-  for (let e of u.filter((e) => !!e).slice(0, i)) U(e, 0);
+  for (let e of u.filter((e) => !!e).slice(0, i)) K(e, 0);
 }
-async function K(e, t, n, r = Xe(t, n)) {
+async function Y(e, t, n, r = qe(t, n)) {
   let { queryClient: i, storeItemLoader: a } = e,
-    o = t.prefer_assets_without_overrides ? H : I,
+    o = t.prefer_assets_without_overrides ? G : L,
     s = n.flatMap((e) => {
-      let t = T(e);
+      let t = v(e);
       return t ? [t] : [];
     });
   if (
     (await Promise.all([
-      i.ensureQueryData(fe()).catch(() => void 0),
+      i.ensureQueryData(de()).catch(() => void 0),
       ...s.flatMap((e) => [
-        i.prefetchQuery(L(a, e)),
+        i.prefetchQuery(R(a, e)),
         i.prefetchQuery(o(a, e)),
+        i.prefetchQuery(ze(a, e)),
         i.prefetchQuery(Be(a, e)),
         i.prefetchQuery(Ve(a, e)),
-        i.prefetchQuery(Ue(a, e)),
-        i.prefetchQuery(He(a, e)),
-        ...(r ? [i.prefetchQuery(We(a, e)), i.prefetchQuery(qe(a, e))] : []),
+        i.prefetchQuery(z(a, e)),
+        ...(r ? [i.prefetchQuery(He(a, e)), i.prefetchQuery(We(a, e))] : []),
       ]),
     ]),
-    !Ce(t))
+    !Se(t))
   )
     return;
   let c = new Set();
   for (let e of s) {
-    let t = i.getQueryData(L(a, e).queryKey)?.related_items?.parent_appid;
+    let t = i.getQueryData(R(a, e).queryKey)?.related_items?.parent_appid;
     t && c.add(t);
   }
-  await Promise.all(Array.from(c, (e) => i.prefetchQuery(L(a, { appid: e }))));
+  await Promise.all(Array.from(c, (e) => i.prefetchQuery(R(a, { appid: e }))));
 }
-function Xe(e, t) {
+function qe(e, t) {
   return t.length === 1
     ? !0
     : e.capsule_style_per_row_array
       ? e.capsule_style_per_row_array.includes(`fullrow`)
-      : Oe(e, !1);
+      : De(e, !1);
 }
-var Ze = W.createContext(void 0),
-  Qe = W.createContext(void 0);
-function $e(e) {
+var Je = q.createContext(void 0),
+  Ye = q.createContext(void 0);
+function Xe(e) {
   return (
     (O(e) || !!e.sale_tag_filter) &&
     !e.enable_faceted_browsing &&
@@ -188,27 +188,27 @@ function $e(e) {
     e.section_type !== `trailercarousel`
   );
 }
-function et(e, t, n, r) {
+function Ze(e, t, n, r) {
   let i = [],
     a = [];
   for (let n of e) (t(n) ? a : i).push(n);
   return a.length ? (r && i.length < n ? i : i.concat(a)) : e;
 }
-function tt(e, t, n, r) {
-  let i = W.useContext(Ze),
-    a = W.useContext(de),
-    o = W.useContext(Qe),
-    s = W.useMemo(
+function Qe(e, t, n, r) {
+  let i = q.useContext(Je),
+    a = q.useContext(M),
+    o = q.useContext(Ye),
+    s = q.useMemo(
       () =>
         o ?? (a ? e.GetSaleSectionIncludingFooterSections().indexOf(a) : -1),
       [e, a, o],
     ),
-    c = W.useId(),
-    l = ye(t, 0, r) || n?.length || 0,
-    u = W.useMemo(() => {
+    c = q.useId(),
+    l = ve(t, 0, r) || n?.length || 0,
+    u = q.useMemo(() => {
       if (!i || !n || s < 0) return n;
-      let e = $e(t)
-        ? et(
+      let e = Xe(t)
+        ? Ze(
             n,
             (e) => i.BSeenAbove(e, s),
             l,
@@ -218,50 +218,51 @@ function tt(e, t, n, r) {
       return (i.SetFirstPage(c, s, e.slice(0, l)), e);
     }, [i, n, s, t, l, c]);
   return (
-    W.useEffect(() => {
+    q.useEffect(() => {
       if (!(!i || !u || s < 0))
         return (i.SetFirstPage(c, s, u.slice(0, l)), () => i.Remove(c));
     }, [i, u, s, l, c]),
     u
   );
 }
-var q = r(),
-  J = 250;
-function Y(e) {
+var X = r(),
+  $e = 250;
+function Z(e) {
   let {
       event: t,
       section: n,
       language: r,
       promotedSaleEvent: i,
-      Frame: a = ve,
+      Frame: a = _e,
       nMaxCapsules: o,
     } = e,
-    s = z(),
+    s = H(),
     l = oe(),
     { nMaxCapsulesPerRow: u, bScreenIsWide: d } = ue(n.section_type),
-    f = W.useContext(le),
-    p = W.useContext(ce),
+    f = q.useContext(le),
+    p = q.useContext(ce),
     m = ee(t, n, !0),
-    h = tt(t, n, m, s),
+    h = Qe(t, n, m, s),
     { capsules: v, nHiddenCapsules: y } = te(t, n, h, void 0, !0),
     b = o ? v?.slice(0, o) : v,
-    x = W.useMemo(() => ge(n, b?.length), [n, b?.length]),
-    S = _(t, n),
-    C = ae(t, n),
-    [w, T] = W.useState(0),
-    E = P(x, s),
-    D = f && !d && !s && se(n),
-    O = D ? nt(x, E, s) : void 0;
+    x = q.useMemo(() => he(n, b?.length), [n, b?.length]),
+    S = et(x, b),
+    C = _(t, n),
+    w = ae(t, n),
+    [T, E] = q.useState(0),
+    D = F(x, s),
+    O = f && !d && !s && se(n),
+    k = O ? rt(x, D, s) : void 0;
   if (ne(t, n) === `personalized_carousel`) {
-    let e = g(t, n, S);
+    let e = g(t, n, C);
     if (e === void 0)
-      return (0, q.jsx)(M, { capsules_per_row: E, swipe_row: O });
+      return (0, X.jsx)(N, { capsules_per_row: D, swipe_row: k });
     if (e === null || (v && v.length < c(n) && !l)) return null;
   }
-  let k;
-  if (!b) k = (0, q.jsx)(M, { capsules_per_row: E, swipe_row: O });
+  let A;
+  if (!b) A = (0, X.jsx)(N, { capsules_per_row: D, swipe_row: k });
   else {
-    let e = Ee({
+    let e = Te({
         saleEvent: t,
         section: x,
         capsules: b,
@@ -269,76 +270,99 @@ function Y(e) {
         bInGamepadUI: s,
         nMaxCapsulesPerRow: u,
         bScreenIsWide: d,
-        nShowAdditionalRows: w,
+        nShowAdditionalRows: T,
         bPaginationPills: f,
         bDropShortLastCarouselPage: p,
       }),
-      { content: i, bAdditionalContent: a } = xe(e);
-    if (((k = i), !k && !l)) return null;
-    k &&
+      { content: i, bAdditionalContent: a } = be({
+        ...e,
+        fnBCapsuleHasNoTallArt: S,
+      });
+    if (((A = i), !A && !l)) return null;
+    A &&
       a &&
-      (k = (0, q.jsxs)(q.Fragment, {
+      (A = (0, X.jsxs)(X.Fragment, {
         children: [
-          k,
-          (0, q.jsx)(we, {
+          A,
+          (0, X.jsx)(Ce, {
             section: x,
-            nRowsWithNext: N(x, w) + 1,
+            nRowsWithNext: P(x, T) + 1,
             nCapsules: b.length,
-            rgRowSizes: E,
-            onShowMore: () => T(w + _e(n)),
+            rgRowSizes: D,
+            onShowMore: () => E(T + ge(n)),
           }),
         ],
       }));
   }
-  let { feature: A, depth: j } = Se(n, t, C);
-  return (0, q.jsx)(Ke, {
-    feature: A,
-    depth: j,
-    children: (0, q.jsxs)(a, {
+  let { feature: j, depth: M } = xe(n, t, w);
+  return (0, X.jsx)(Ue, {
+    feature: j,
+    depth: M,
+    children: (0, X.jsxs)(a, {
       event: t,
       section: n,
       language: r,
       bInGamepadUI: s,
-      placeholderHeight: (D ? J : rt(x, b?.length ?? 0, E)) + `px`,
+      placeholderHeight: (O ? $e : it(x, b?.length ?? 0, D)) + `px`,
       nHiddenCapsules: y,
-      personalizedCarousels: S,
+      personalizedCarousels: C,
       promotedSaleEvent: i,
       children: [
-        (0, q.jsx)(ie, { event: t, section: n }),
-        (0, q.jsx)(re, { capsules: m }),
-        k,
+        (0, X.jsx)(ie, { event: t, section: n }),
+        (0, X.jsx)(re, { capsules: m }),
+        A,
       ],
     }),
   });
 }
-function nt(e, t, n) {
+function et(e, t) {
+  let r = V(),
+    i = e.prefer_assets_without_overrides ? G : L,
+    a = e.fallback_tall_half_capsule
+      ? (t ?? []).filter((e) => `appid` in (v(e) ?? {}))
+      : [],
+    o = n({ queries: a.map((e) => i(r, v(e))) }),
+    s = e.fallback_tall_half_capsule === `no_store_vertical`,
+    c = new Set(
+      a.filter((e, t) => {
+        let n = o[t].data;
+        return !!n && (s ? !n.hero_capsule : !nt(n));
+      }),
+    );
+  return (e) => c.has(e);
+}
+var tt = `portrait.png`;
+function nt(e) {
+  return !!e.hero_capsule || (!!e.library_capsule && e.library_capsule !== tt);
+}
+function rt(e, t, n) {
   return t[0] === 1
     ? { width: `80vw`, height: `320px` }
-    : be(e, n)[0] === `tall`
+    : ye(e, n)[0] === `tall`
       ? `tall_capsule`
       : `capsule`;
 }
-function rt(e, t, n) {
+function it(e, t, n) {
   let r = 0;
   if (n.length > 0) for (let e = t; e > 0; r++) e -= n[r % n.length];
-  let i = Math.min(r, N(e, 0));
-  return Math.max(1, i) * J;
+  let i = Math.min(r, P(e, 0));
+  return Math.max(1, i) * $e;
 }
-function it(e) {
+function at(e) {
   let { bLoadNow: t = !1, ...r } = e,
     { event: i, section: a } = r,
-    o = ze(Ye.LANGUAGE),
-    c = W.useMemo(() => E(a), [a]),
-    [l] = D(S),
-    u = n({ queries: c.map((e) => ({ ...Z(e, o), enabled: !1 })) }),
-    d = F(c, !0),
+    o = Re(Ke.LANGUAGE),
+    c = q.useMemo(() => E(a), [a]),
+    [l] = D(C),
+    u = n({ queries: c.map((e) => ({ ...st(e, o), enabled: !1 })) }),
+    d = I(c, !0),
     f = c.map((e, t) => (p(e) ? d[t].data : u[t].data)),
-    g = c.some((e, t) => (X(e) && u[t].isPending) || d[t].bPending),
-    [_] = W.useState(g);
-  if (w(a).length <= 1 || g) {
+    g = c.some((e, t) => (ot(e) && u[t].isPending) || d[t].bPending),
+    [_] = q.useState(g);
+  if (T(a).length <= 1 || g) {
     let e = c[0] ?? a,
       n = f[0],
-      s = (0, q.jsx)($, {
+      s = (0, X.jsx)($, {
         ...r,
         section: e,
         bPageItems: !m(a),
@@ -347,8 +371,8 @@ function it(e) {
         strForcedLayout: null,
         bDrawAtOnce: _,
       }),
-      l = m(a) ? (0, q.jsx)(ot, { section: e, children: s }) : s,
-      u = (0, q.jsx)(at, {
+      l = m(a) ? (0, X.jsx)(ut, { section: e, children: s }) : s,
+      u = (0, X.jsx)(ct, {
         event: i,
         rgSlideSections: c,
         eLanguage: o,
@@ -356,28 +380,28 @@ function it(e) {
         bSideBySide: m(a),
       }),
       d = g
-        ? (0, q.jsxs)(q.Fragment, {
+        ? (0, X.jsxs)(X.Fragment, {
             children: [
               l,
-              t ? u : (0, q.jsx)(me, { rootMargin: A, children: u }),
+              t ? u : (0, X.jsx)(pe, { rootMargin: A, children: u }),
             ],
           })
         : l;
-    return !g && C(e, n) !== null
+    return !g && w(e, n) !== null
       ? d
-      : (0, q.jsx)(st, {
+      : (0, X.jsx)(dt, {
           ...r,
           rgLayouts: [h(e, n, null)],
-          strHeading: Q([n]),
+          strHeading: lt([n]),
           children: d,
         });
   }
   let v = c.flatMap((e, t) => {
     let n = f[t];
-    return C(e, n) === null ? [{ slide: e, promotedSaleEvent: n }] : [];
+    return w(e, n) === null ? [{ slide: e, promotedSaleEvent: n }] : [];
   });
   if (v.length === 0)
-    return (0, q.jsx)($, {
+    return (0, X.jsx)($, {
       ...r,
       section: c[0],
       promotedSaleEvent: f[0],
@@ -386,7 +410,7 @@ function it(e) {
       bDrawAtOnce: _,
     });
   let y = v.map(({ slide: e, promotedSaleEvent: t }, n) =>
-      (0, q.jsx)(
+      (0, X.jsx)(
         $,
         {
           ...r,
@@ -400,39 +424,39 @@ function it(e) {
       ),
     ),
     b = m(a);
-  return (0, q.jsx)(st, {
+  return (0, X.jsx)(dt, {
     ...r,
     rgLayouts: v.map(({ slide: e, promotedSaleEvent: t }) => h(e, t, null)),
-    strHeading: Q(v.map(({ promotedSaleEvent: e }) => e)),
+    strHeading: lt(v.map(({ promotedSaleEvent: e }) => e)),
     children: b
-      ? (0, q.jsx)(`div`, {
-          className: R(s, Ne),
+      ? (0, X.jsx)(`div`, {
+          className: B(s, Me),
           children: y.map((e, t) =>
-            (0, q.jsx)(ot, { section: v[t].slide, children: e }, t),
+            (0, X.jsx)(ut, { section: v[t].slide, children: e }, t),
           ),
         })
-      : (0, q.jsx)(De, { event: i, section: a, rgSlides: y }),
+      : (0, X.jsx)(Ee, { event: i, section: a, rgSlides: y }),
   });
 }
-function X(e) {
-  let t = w(e)[0];
+function ot(e) {
+  let t = T(e)[0];
   return !!t?.event_gid && !!t.clan_account_id;
 }
-function Z(e, t) {
-  let n = w(e)[0];
+function st(e, t) {
+  let n = T(e)[0];
   return {
-    ...Te(
+    ...we(
       {
         clanAccountID: n?.clan_account_id ?? 0,
         strEventGID: n?.event_gid ?? ``,
         eLanguage: t,
       },
-      je,
+      Ae,
     ),
-    enabled: X(e),
+    enabled: ot(e),
   };
 }
-function at(e) {
+function ct(e) {
   let {
     event: t,
     rgSlideSections: r,
@@ -440,73 +464,73 @@ function at(e) {
     strForcedLayout: o,
     bSideBySide: s,
   } = e;
-  (n({ queries: r.map((e) => Z(e, a)) }), F(r));
+  (n({ queries: r.map((e) => st(e, a)) }), I(r));
   let c = i(),
-    l = Ge();
+    l = V();
   return (
-    W.useEffect(() => {
+    q.useEffect(() => {
       let e = { queryClient: c, storeItemLoader: l };
       r.forEach((n, r) => {
         let i = n.capsules ?? [];
-        if (i.length && (K(e, n, i), r === 0 || s)) {
+        if (i.length && (Y(e, n, i), r === 0 || s)) {
           let r = d(h(n, void 0, o));
-          G(e, t, n, i, r);
+          J(e, t, n, i, r);
         }
       });
     }, [t, r, o, s, c, l]),
     null
   );
 }
-function Q(e) {
+function lt(e) {
   let t = e[0];
   if (!t?.eCreatorRole || !e.every((e) => !!e?.eCreatorRole)) return;
-  let n = V.logged_in ? `Recommended_` : ``;
-  if (e.length > 1) return B(`#Sale_CrossPromoCreator_Heading_${n}Several`);
+  let n = W.logged_in ? `Recommended_` : ``;
+  if (e.length > 1) return U(`#Sale_CrossPromoCreator_Heading_${n}Several`);
   let r = t.strSaleURL
-    ? (0, q.jsx)(x, {
+    ? (0, X.jsx)(S, {
         url: t.strSaleURL,
-        className: ke,
+        className: Oe,
         bFocusable: !1,
         children: t.strName,
       })
     : t.strName;
-  return (0, q.jsx)(`div`, {
-    children: Je(`#Sale_CrossPromoCreator_Heading_${n}${t.eCreatorRole}`, r),
+  return (0, X.jsx)(`div`, {
+    children: Ge(`#Sale_CrossPromoCreator_Heading_${n}${t.eCreatorRole}`, r),
   });
 }
-function ot(e) {
+function ut(e) {
   let { section: t, children: n } = e,
-    r = w(t)[0]?.comparison_label;
-  return (0, q.jsxs)(`div`, {
-    className: Le,
+    r = T(t)[0]?.comparison_label;
+  return (0, X.jsxs)(`div`, {
+    className: Ie,
     children: [
-      r && (0, q.jsx)(`div`, { className: `P1C9O-r-7FI-`, children: r }),
+      r && (0, X.jsx)(`div`, { className: `P1C9O-r-7FI-`, children: r }),
       n,
     ],
   });
 }
-function st(e) {
+function dt(e) {
   let { section: t, language: n, rgLayouts: r, strHeading: i, children: a } = e,
-    s = W.useContext(Pe),
-    c = y(t, n);
+    s = q.useContext(Ne),
+    c = b(t, n);
   if (o(t) || (!c && (!r.some(l) || (s && !i))))
-    return (0, q.jsx)(q.Fragment, { children: a });
+    return (0, X.jsx)(X.Fragment, { children: a });
   let u = i;
   return (
     c
       ? (u = c)
       : u == null &&
-        V.logged_in &&
-        (u = B(`#Sale_CrossPromoSale_EventCapsuleHeading_Recommended`)),
-    (0, q.jsx)(ct, {
+        W.logged_in &&
+        (u = U(`#Sale_CrossPromoSale_EventCapsuleHeading_Recommended`)),
+    (0, X.jsx)(Q, {
       ...e,
       strHeading: u,
       bOneSlide: r.length === 1,
-      children: (0, q.jsx)(Me, { value: !0, children: a }),
+      children: (0, X.jsx)(je, { value: !0, children: a }),
     })
   );
 }
-function ct(e) {
+function Q(e) {
   let {
       event: t,
       section: n,
@@ -515,27 +539,27 @@ function ct(e) {
       bOneSlide: o,
       children: c,
     } = e,
-    l = z(),
-    [d, f] = W.useState(null);
-  return (0, q.jsxs)(`div`, {
-    className: R(s, Ae),
+    l = H(),
+    [d, f] = q.useState(null);
+  return (0, X.jsxs)(`div`, {
+    className: B(s, ke),
     children: [
-      (0, q.jsxs)(`div`, {
+      (0, X.jsxs)(`div`, {
         className: u,
         children: [
-          (0, q.jsx)(a, {
+          (0, X.jsx)(a, {
             section: n,
             event: t,
             language: r,
             promotedSale: null,
-            title: i || B(`#Sale_CrossPromoSale_EventCapsuleHeading`),
+            title: i || U(`#Sale_CrossPromoSale_EventCapsuleHeading`),
           }),
           l &&
             d &&
-            (0, q.jsx)(k, { label: d.strLabel, shown: d.bShown, button: `X` }),
+            (0, X.jsx)(k, { label: d.strLabel, shown: d.bShown, button: `X` }),
         ],
       }),
-      (0, q.jsx)(Ie, { value: o ? f : null, children: c }),
+      (0, X.jsx)(Fe, { value: o ? f : null, children: c }),
     ],
   });
 }
@@ -550,12 +574,12 @@ function $(e) {
       bPageItems: s = !1,
       ...c
     } = e,
-    l = z(),
+    l = H(),
     u = h(t, r, a),
     p = d(u),
     m = l ? 2 : p,
     g = f(u),
-    _ = W.useMemo(
+    _ = q.useMemo(
       () => ({
         ...t,
         capsules_per_row_array: [m],
@@ -564,21 +588,21 @@ function $(e) {
       }),
       [t, m, g],
     );
-  if (i) return (0, q.jsx)(M, { capsules_per_row: P(_, l) });
-  if (C(t, r) !== null) return null;
-  let v = (0, q.jsx)(Y, {
+  if (i) return (0, X.jsx)(N, { capsules_per_row: F(_, l) });
+  if (w(t, r) !== null) return null;
+  let v = (0, X.jsx)(Z, {
     ...c,
     section: _,
     language: n,
     promotedSaleEvent: r ?? void 0,
-    Frame: Fe[u],
+    Frame: Pe[u],
     nMaxCapsules: g ? (s ? 12 : p) : void 0,
   });
-  return o ? (0, q.jsx)(he, { enabled: !1, children: v }) : v;
+  return o ? (0, X.jsx)(me, { enabled: !1, children: v }) : v;
 }
-function lt(e, t) {
+function ft(e, t) {
   return {
-    ...Re(`crosspromotesalepage`, ``),
+    ...Le(`crosspromotesalepage`, ``),
     sale_page_cross_promo_sales: e,
     use_random_order: !1,
     show_as_carousel: !0,
@@ -587,4 +611,4 @@ function lt(e, t) {
     carousel_rows: 1,
   };
 }
-export { K as a, Y as i, ct as n, G as o, it as r, U as s, lt as t };
+export { Y as a, Z as i, Q as n, J as o, at as r, K as s, ft as t };

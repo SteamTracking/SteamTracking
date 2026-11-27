@@ -4,13 +4,13 @@
 import { o as e } from "./chunk~f025431ab0.js";
 import { It as t, U as n, dt as r, ot as i } from "./chunk~01cfc309bf.js";
 import {
-  Ba as a,
-  Ft as o,
+  Ft as a,
+  Gn as o,
   Gt as s,
-  Ia as c,
+  La as c,
   Lt as l,
   Pt as u,
-  Wn as d,
+  Va as d,
   ot as f,
 } from "./chunk~6b8ddcaac8.js";
 import {
@@ -65,7 +65,7 @@ import {
 import { a as _e } from "./chunk~7401689b78.js";
 import { t as ve } from "./chunk~383ae316bd.js";
 async function ye() {
-  let e = await a(`ajaxgetuserdeckcompatcounts`, new URLSearchParams());
+  let e = await d(`ajaxgetuserdeckcompatcounts`, new URLSearchParams());
   if (!e.counts)
     throw Error(`ajaxgetuserdeckcompatcounts answered without counts`);
   return e.counts;
@@ -131,13 +131,13 @@ function Te(e) {
       bIsPreview: r,
       psuLessPackageID: i,
       strOutOfStockOverride: a,
-      strDeliveryOverride: o,
-      bDeliveryOverrideOnlyIfOutOfStock: s,
-      section: c,
-      PreviewActions: l,
+      strDeliveryOverride: s,
+      bDeliveryOverrideOnlyIfOutOfStock: c,
+      section: l,
+      PreviewActions: u,
     } = e,
-    { data: u } = d(t),
-    { data: f } = d(i),
+    { data: d } = o(t),
+    { data: f } = o(i),
     p = (0, G.useMemo)(
       () => [
         {
@@ -146,46 +146,46 @@ function Te(e) {
           deposit_package: n,
           localized_reservation_desc: U([], 32, null),
           localized_out_of_stock_override: U([a || null], 32, null),
-          localized_delivery_override_desc: U([o || null], 32, null),
-          override_delivery_only_out_of_stock: !!s,
+          localized_delivery_override_desc: U([s || null], 32, null),
+          override_delivery_only_out_of_stock: !!c,
           psu_less_package: i,
         },
       ],
-      [t, n, a, o, s, i],
+      [t, n, a, s, c, i],
     );
-  if (!u || (i && !f))
+  if (!d || (i && !f))
     return (0, K.jsx)(w, {
       string: B(`#Loading`),
       size: `small`,
       position: `center`,
     });
-  let m = !fe.logged_in || !u.account_restricted_from_purchasing,
+  let m = !fe.logged_in || !d.account_restricted_from_purchasing,
     h =
-      u.reservation_state == te.k_EPurchaseReservationState_Reserved
-        ? u
+      d.reservation_state == te.k_EPurchaseReservationState_Reserved
+        ? d
         : void 0;
   return (0, K.jsxs)(H, {
     children: [
-      l &&
+      u &&
         (0, K.jsx)(G.Suspense, {
           fallback: null,
-          children: (0, K.jsx)(l, { bIsPreview: !!r, rgReservationDef: p }),
+          children: (0, K.jsx)(u, { bIsPreview: !!r, rgReservationDef: p }),
         }),
-      !!u.allow_purchase_in_country &&
+      !!d.allow_purchase_in_country &&
         (0, K.jsxs)(`div`, {
           className: p[0].unique_id,
           children: [
             (0, K.jsx)(y, {
               reservationDef: p[0],
-              hardwareDetail: u,
+              hardwareDetail: d,
               bPSULessModel: !1,
               reservedHardwareDetail: h,
             }),
             m &&
               (0, K.jsx)(ne, {
-                section: c,
+                section: l,
                 reservationDef: p[0],
-                hardwareDetail: u,
+                hardwareDetail: d,
                 reservedHardwareDetail: h,
               }),
             f &&
@@ -205,17 +205,17 @@ var Ee = `wKSQT4ZMQNA-`,
   De = `NQcSXUQ7jyY-`;
 function Oe(e) {
   let { appID: t, classOverride: n, styleOverride: r } = e,
-    [i, a] = (0, G.useState)(!1),
+    [i, o] = (0, G.useState)(!1),
     c = oe(`GameHoverFollowButton`),
     { elDialogElement: l, fnShowLogonDialog: d } = s(),
-    f = o(t),
+    f = a(t),
     { mutateAsync: p } = u(t, !f, void 0);
   return (0, K.jsxs)(F, {
     className: N(Ee, n),
     onClick: async (e) => {
       (e.preventDefault(),
         e.stopPropagation(),
-        R.logged_in ? (a(!0), await p(), c.token.reason || a(!1)) : d());
+        R.logged_in ? (o(!0), await p(), c.token.reason || o(!1)) : d());
     },
     style: r,
     children: [

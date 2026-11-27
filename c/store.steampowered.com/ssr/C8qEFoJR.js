@@ -21,6 +21,7 @@ function _(_) {
       placeholderWidth: _,
       placeholderHeight: _,
       holdGamepadFocus: _ = !1,
+      releaseGamepadFocusWhenEmpty: _ = !1,
       onRender: _,
       style: _,
       mode: _ = `JustLoad`,
@@ -87,10 +88,17 @@ function _(_) {
         style: {
           height: `100%`,
         },
+        fnCanTakeFocus: _ && _.bRenderChildren ? _ : void 0,
         children: _,
       })),
     _
   );
+}
+function _(_) {
+  return _.m_rgChildren.some((_) => {
+    let _ = _.GetFocusable();
+    return _ === `self` || (_ === `children` && _(_));
+  });
 }
 function _(_, _) {
   var _ = Object.keys(_);
