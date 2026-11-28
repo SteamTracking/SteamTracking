@@ -136,13 +136,18 @@ function _(_, _) {
         : (_ / 100).toFixed(2);
 }
 function _(_, _, _) {
-  return _ === _
-    ? 1 / 0
-    : _ === ``
-      ? _
-      : _
-        ? parseInt(_) * 100
-        : Math.round(parseFloat(_) * 100);
+  if (_ === _) return 1 / 0;
+  if (_ === ``) return _;
+  let _ = _(_);
+  return _ ? parseInt(_) * 100 : Math.round(parseFloat(_) * 100);
+}
+function _(_) {
+  let _ = _.replace(/ /g, ``).replace(/,/g, `.`).split(`.`);
+  if (_.length === 1) return _[0];
+  let _ = _[_.length - 1];
+  return /^\d{3}$/.test(_) && _[_.length - 2] !== `0`
+    ? _.join(``)
+    : `${_.slice(0, -1).join(``)}.${_}`;
 }
 function _() {
   return (
@@ -1231,7 +1236,7 @@ function _(_) {
           legendPayload: _(_),
         }),
         _.createElement(_, {
-          _,
+          _: _,
           args: _,
         }),
         _.createElement(_, {

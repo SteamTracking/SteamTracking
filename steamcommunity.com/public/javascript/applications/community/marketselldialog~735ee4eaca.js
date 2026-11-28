@@ -145,17 +145,22 @@ function xt(e, t) {
         : (e / 100).toFixed(2);
 }
 function St(e, t, n) {
-  return e === bt
-    ? 1 / 0
-    : e === ``
-      ? t
-      : n
-        ? parseInt(e) * 100
-        : Math.round(parseFloat(e) * 100);
+  if (e === bt) return 1 / 0;
+  if (e === ``) return t;
+  let r = Ct(e);
+  return n ? parseInt(r) * 100 : Math.round(parseFloat(r) * 100);
 }
-function Ct() {
+function Ct(e) {
+  let t = e.replace(/ /g, ``).replace(/,/g, `.`).split(`.`);
+  if (t.length === 1) return t[0];
+  let n = t[t.length - 1];
+  return /^\d{3}$/.test(n) && t[t.length - 2] !== `0`
+    ? t.join(``)
+    : `${t.slice(0, -1).join(``)}.${n}`;
+}
+function wt() {
   return (
-    (Ct = Object.assign
+    (wt = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -164,20 +169,20 @@ function Ct() {
           }
           return e;
         }),
-    Ct.apply(null, arguments)
+    wt.apply(null, arguments)
   );
 }
-var wt = (e) => {
+var Tt = (e) => {
   var { cx: t, cy: n, r, className: i } = e,
     a = $e(`recharts-dot`, i);
   return t === +t && n === +n && r === +r
     ? G.createElement(
         `circle`,
-        Ct({}, k(e), ve(e), { className: a, cx: t, cy: n, r }),
+        wt({}, k(e), ve(e), { className: a, cx: t, cy: n, r }),
       )
     : null;
 };
-function Tt(e, t) {
+function Et(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -189,24 +194,24 @@ function Tt(e, t) {
   }
   return n;
 }
-function Et(e) {
+function Dt(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? Tt(Object(n), !0).forEach(function (t) {
-          Dt(e, t, n[t]);
+      ? Et(Object(n), !0).forEach(function (t) {
+          Ot(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : Tt(Object(n)).forEach(function (t) {
+        : Et(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function Dt(e, t, n) {
+function Ot(e, t, n) {
   return (
-    (t = Ot(t)) in e
+    (t = kt(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -217,11 +222,11 @@ function Dt(e, t, n) {
     e
   );
 }
-function Ot(e) {
-  var t = kt(e, `string`);
+function kt(e) {
+  var t = At(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function kt(e, t) {
+function At(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -231,11 +236,11 @@ function kt(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-var At = (e) => {
+var jt = (e) => {
   var { point: t, childIndex: n, mainColor: r, activeDot: i, dataKey: a } = e;
   if (i === !1 || t.x == null || t.y == null) return null;
-  var o = Et(
-      Et(
+  var o = Dt(
+      Dt(
         {
           index: n,
           dataKey: a,
@@ -256,10 +261,10 @@ var At = (e) => {
       ? (0, G.cloneElement)(i, o)
       : typeof i == `function`
         ? i(o)
-        : G.createElement(wt, o);
+        : G.createElement(Tt, o);
   return G.createElement(j, { className: `recharts-active-dot` }, s);
 };
-function jt(e) {
+function Mt(e) {
   var { points: t, mainColor: n, activeDot: r, itemDataKey: i } = e,
     a = Ue(ae),
     o = Je();
@@ -267,7 +272,7 @@ function jt(e) {
   var s = t.find((e) => o.includes(e.payload));
   return be(s)
     ? null
-    : At({
+    : jt({
         point: s,
         childIndex: Number(a),
         mainColor: n,
@@ -275,7 +280,7 @@ function jt(e) {
         activeDot: r,
       });
 }
-function Mt(e, t) {
+function Nt(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -287,24 +292,24 @@ function Mt(e, t) {
   }
   return n;
 }
-function Nt(e) {
+function Pt(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? Mt(Object(n), !0).forEach(function (t) {
-          Pt(e, t, n[t]);
+      ? Nt(Object(n), !0).forEach(function (t) {
+          Ft(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : Mt(Object(n)).forEach(function (t) {
+        : Nt(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function Pt(e, t, n) {
+function Ft(e, t, n) {
   return (
-    (t = Ft(t)) in e
+    (t = It(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -315,11 +320,11 @@ function Pt(e, t, n) {
     e
   );
 }
-function Ft(e) {
-  var t = It(e, `string`);
+function It(e) {
+  var t = Lt(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function It(e, t) {
+function Lt(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -329,9 +334,9 @@ function It(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-function Lt() {
+function Rt() {
   return (
-    (Lt = Object.assign
+    (Rt = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -340,10 +345,10 @@ function Lt() {
           }
           return e;
         }),
-    Lt.apply(null, arguments)
+    Rt.apply(null, arguments)
   );
 }
-var Rt = (e, t, n, r, i, a, o) => {
+var zt = (e, t, n, r, i, a, o) => {
     var { x1: s, x2: c, y1: l, y2: u } = o;
     if (i == null || a == null) return null;
     var d = Se({ x: i, y: a }),
@@ -359,16 +364,16 @@ var Rt = (e, t, n, r, i, a, o) => {
       ? null
       : Le(f, p);
   },
-  zt = (e, t) =>
+  Bt = (e, t) =>
     G.isValidElement(e)
       ? G.cloneElement(e, t)
       : typeof e == `function`
         ? e(t)
         : G.createElement(
             T,
-            Lt({}, t, { className: `recharts-reference-area-rect` }),
+            Rt({}, t, { className: `recharts-reference-area-rect` }),
           );
-function Bt(e) {
+function Vt(e) {
   var t = Ie();
   return (
     (0, G.useEffect)(
@@ -382,7 +387,7 @@ function Bt(e) {
     null
   );
 }
-function Vt(e) {
+function Ht(e) {
   var {
       x1: t,
       x2: n,
@@ -403,21 +408,21 @@ function Vt(e) {
     h = Ce(r),
     g = Ce(i);
   if (!p && !m && !h && !g && !o) return null;
-  var _ = Rt(p, m, h, g, d, f, e);
+  var _ = zt(p, m, h, g, d, f, e);
   if (!_ && !o) return null;
   var v = e.ifOverflow === `hidden` ? `url(#${l})` : void 0;
   return G.createElement(
     j,
     { className: $e(`recharts-reference-area`, a) },
-    zt(o, Nt(Nt({ clipPath: v }, De(e)), _)),
+    Bt(o, Pt(Pt({ clipPath: v }, De(e)), _)),
     G.createElement(x, _, G.createElement(ie, { label: e.label }), e.children),
   );
 }
-function Ht(e) {
+function Ut(e) {
   return G.createElement(
     G.Fragment,
     null,
-    G.createElement(Bt, {
+    G.createElement(Vt, {
       yAxisId: e.yAxisId,
       xAxisId: e.xAxisId,
       ifOverflow: e.ifOverflow,
@@ -426,16 +431,16 @@ function Ht(e) {
       y1: e.y1,
       y2: e.y2,
     }),
-    G.createElement(Vt, e),
+    G.createElement(Ht, e),
   );
 }
-var Ut = class extends G.Component {
+var Wt = class extends G.Component {
   render() {
-    return G.createElement(Ht, this.props);
+    return G.createElement(Ut, this.props);
   }
 };
-(Pt(Ut, `displayName`, `ReferenceArea`),
-  Pt(Ut, `defaultProps`, {
+(Ft(Wt, `displayName`, `ReferenceArea`),
+  Ft(Wt, `defaultProps`, {
     ifOverflow: `discard`,
     xAxisId: 0,
     yAxisId: 0,
@@ -445,19 +450,19 @@ var Ut = class extends G.Component {
     stroke: `none`,
     strokeWidth: 1,
   }));
-var Wt = (e, t, n, r) => E(e, `xAxis`, t, r),
-  Gt = (e, t, n, r) => se(e, `xAxis`, t, r),
-  Kt = (e, t, n, r) => E(e, `yAxis`, n, r),
-  qt = (e, t, n, r) => se(e, `yAxis`, n, r),
-  Jt = he([D, Wt, Kt, Gt, qt], (e, t, n, r, i) =>
+var Gt = (e, t, n, r) => E(e, `xAxis`, t, r),
+  Kt = (e, t, n, r) => se(e, `xAxis`, t, r),
+  qt = (e, t, n, r) => E(e, `yAxis`, n, r),
+  Jt = (e, t, n, r) => se(e, `yAxis`, n, r),
+  Yt = he([D, Gt, qt, Kt, Jt], (e, t, n, r, i) =>
     ke(e, `xAxis`) ? _(t, r, !1) : _(n, i, !1),
   ),
-  Yt = (e, t, n, r, i) => i;
-function Xt(e) {
+  Xt = (e, t, n, r, i) => i;
+function Zt(e) {
   return e.type === `line`;
 }
-var Zt = he([et, Yt], (e, t) => e.filter(Xt).find((e) => e.id === t)),
-  Qt = he([D, Wt, Kt, Gt, qt, Zt, Jt, ue], (e, t, n, r, i, a, o, s) => {
+var Qt = he([et, Xt], (e, t) => e.filter(Zt).find((e) => e.id === t)),
+  $t = he([D, Gt, qt, Kt, Jt, Qt, Yt, ue], (e, t, n, r, i, a, o, s) => {
     var { chartData: c, dataStartIndex: l, dataEndIndex: u } = s;
     if (
       a != null &&
@@ -472,7 +477,7 @@ var Zt = he([et, Yt], (e, t) => e.filter(Xt).find((e) => e.id === t)),
       var { dataKey: d, data: f } = a,
         p = f != null && f.length > 0 ? f : c?.slice(l, u + 1);
       if (p != null)
-        return On({
+        return kn({
           layout: e,
           xAxis: t,
           yAxis: n,
@@ -484,7 +489,7 @@ var Zt = he([et, Yt], (e, t) => e.filter(Xt).find((e) => e.id === t)),
         });
     }
   });
-function $t(e) {
+function en(e) {
   var t = Ye(e),
     n = 3,
     r = 2;
@@ -500,9 +505,9 @@ function $t(e) {
   }
   return { r: n, strokeWidth: r };
 }
-var en = [`id`],
-  tn = [`type`, `layout`, `connectNulls`, `needClip`],
-  nn = [
+var tn = [`id`],
+  nn = [`type`, `layout`, `connectNulls`, `needClip`],
+  rn = [
     `activeDot`,
     `animateNewValues`,
     `animationBegin`,
@@ -518,7 +523,7 @@ var en = [`id`],
     `yAxisId`,
     `id`,
   ];
-function rn(e, t) {
+function an(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -534,20 +539,20 @@ function q(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? rn(Object(n), !0).forEach(function (t) {
-          an(e, t, n[t]);
+      ? an(Object(n), !0).forEach(function (t) {
+          on(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : rn(Object(n)).forEach(function (t) {
+        : an(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function an(e, t, n) {
+function on(e, t, n) {
   return (
-    (t = on(t)) in e
+    (t = sn(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -558,11 +563,11 @@ function an(e, t, n) {
     e
   );
 }
-function on(e) {
-  var t = sn(e, `string`);
+function sn(e) {
+  var t = cn(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function sn(e, t) {
+function cn(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -572,11 +577,11 @@ function sn(e, t) {
   }
   return (t === `string` ? String : Number)(e);
 }
-function cn(e, t) {
+function ln(e, t) {
   if (e == null) return {};
   var n,
     r,
-    i = ln(e, t);
+    i = un(e, t);
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
     for (r = 0; r < a.length; r++)
@@ -587,7 +592,7 @@ function cn(e, t) {
   }
   return i;
 }
-function ln(e, t) {
+function un(e, t) {
   if (e == null) return {};
   var n = {};
   for (var r in e)
@@ -597,9 +602,9 @@ function ln(e, t) {
     }
   return n;
 }
-function un() {
+function dn() {
   return (
-    (un = Object.assign
+    (dn = Object.assign
       ? Object.assign.bind()
       : function (e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -608,16 +613,16 @@ function un() {
           }
           return e;
         }),
-    un.apply(null, arguments)
+    dn.apply(null, arguments)
   );
 }
-var dn = (e) => {
+var fn = (e) => {
   var { dataKey: t, name: n, stroke: r, legendType: i, hide: a } = e;
   return [
     { inactive: a, dataKey: t, type: i, color: r, value: Pe(n, t), payload: e },
   ];
 };
-function fn(e) {
+function pn(e) {
   var {
     dataKey: t,
     data: n,
@@ -645,15 +650,15 @@ function fn(e) {
     },
   };
 }
-var pn = (e, t) => `${t}px ${e - t}px`;
-function mn(e, t) {
+var mn = (e, t) => `${t}px ${e - t}px`;
+function hn(e, t) {
   for (var n = e.length % 2 == 0 ? e : [...e, 0], r = [], i = 0; i < t; ++i)
     r = [...r, ...n];
   return r;
 }
-var hn = (e, t, n) => {
+var gn = (e, t, n) => {
   var r = n.reduce((e, t) => e + t);
-  if (!r) return pn(t, e);
+  if (!r) return mn(t, e);
   for (
     var i = Math.floor(e / r), a = e % r, o = t - e, s = [], c = 0, l = 0;
     c < n.length;
@@ -664,32 +669,32 @@ var hn = (e, t, n) => {
       break;
     }
   var u = s.length % 2 == 0 ? [0, o] : [o];
-  return [...mn(n, i), ...s, ...u].map((e) => `${e}px`).join(`, `);
+  return [...hn(n, i), ...s, ...u].map((e) => `${e}px`).join(`, `);
 };
-function gn(e, t) {
+function _n(e, t) {
   var n;
   if (G.isValidElement(e)) n = G.cloneElement(e, t);
   else if (typeof e == `function`) n = e(t);
   else {
     var r = $e(`recharts-line-dot`, typeof e == `boolean` ? `` : e.className);
-    n = G.createElement(wt, un({}, t, { className: r }));
+    n = G.createElement(Tt, dn({}, t, { className: r }));
   }
   return n;
 }
-function _n(e, t) {
+function vn(e, t) {
   return e == null ? !1 : t ? !0 : e.length === 1;
 }
-function vn(e) {
+function yn(e) {
   var { clipPathId: t, points: n, props: r } = e,
     { dot: i, dataKey: a, needClip: o } = r;
-  if (!_n(n, i)) return null;
+  if (!vn(n, i)) return null;
   var { id: s } = r,
-    c = cn(r, en),
+    c = ln(r, tn),
     l = Xe(i),
     u = k(c),
     d = Te(i),
     f = n.map((e, t) =>
-      gn(
+      _n(
         i,
         q(
           q(q({ key: `dot-${t}`, r: 3 }, u), d),
@@ -709,11 +714,11 @@ function vn(e) {
     p = { clipPath: o ? `url(#clipPath-${l ? `` : `dots-`}${t})` : void 0 };
   return G.createElement(
     j,
-    un({ className: `recharts-line-dots`, key: `dots` }, p),
+    dn({ className: `recharts-line-dots`, key: `dots` }, p),
     f,
   );
 }
-function yn(e) {
+function bn(e) {
   var { showLabels: t, children: n, points: r } = e,
     i = (0, G.useMemo)(
       () =>
@@ -735,7 +740,7 @@ function yn(e) {
     );
   return G.createElement(ce, { value: t ? i : null }, n);
 }
-function bn(e) {
+function xn(e) {
   var {
       clipPathId: t,
       pathRef: n,
@@ -744,7 +749,7 @@ function bn(e) {
       props: a,
     } = e,
     { type: o, layout: s, connectNulls: c, needClip: l } = a,
-    u = cn(a, tn),
+    u = ln(a, nn),
     d = q(
       q({}, De(u)),
       {},
@@ -762,18 +767,18 @@ function bn(e) {
   return G.createElement(
     G.Fragment,
     null,
-    r?.length > 1 && G.createElement(ee, un({}, d, { pathRef: n })),
-    G.createElement(vn, { points: r, clipPathId: t, props: a }),
+    r?.length > 1 && G.createElement(ee, dn({}, d, { pathRef: n })),
+    G.createElement(yn, { points: r, clipPathId: t, props: a }),
   );
 }
-function xn(e) {
+function Sn(e) {
   try {
     return (e && e.getTotalLength && e.getTotalLength()) || 0;
   } catch {
     return 0;
   }
 }
-function Sn(e) {
+function Cn(e) {
   var {
       clipPathId: t,
       props: n,
@@ -804,10 +809,10 @@ function Sn(e) {
     w = (0, G.useCallback)(() => {
       (typeof g == `function` && g(), b(!0));
     }, [g]),
-    T = xn(r.current),
+    T = Sn(r.current),
     E = a.current;
   return G.createElement(
-    yn,
+    bn,
     { points: o, showLabels: x },
     n.children,
     G.createElement(
@@ -827,12 +832,12 @@ function Sn(e) {
           u = Math.min(l, T),
           d = c
             ? s
-              ? hn(
+              ? gn(
                   u,
                   T,
                   `${s}`.split(/[,\s]+/gim).map((e) => parseFloat(e)),
                 )
-              : pn(T, u)
+              : mn(T, u)
             : s == null
               ? void 0
               : String(s);
@@ -861,7 +866,7 @@ function Sn(e) {
                   });
           return (
             (i.current = g),
-            G.createElement(bn, {
+            G.createElement(xn, {
               props: n,
               points: g,
               clipPathId: t,
@@ -872,7 +877,7 @@ function Sn(e) {
         }
         return (
           e > 0 && T > 0 && ((i.current = o), (a.current = u)),
-          G.createElement(bn, {
+          G.createElement(xn, {
             props: n,
             points: o,
             clipPathId: t,
@@ -885,12 +890,12 @@ function Sn(e) {
     G.createElement(S, { label: n.label }),
   );
 }
-function Cn(e) {
+function wn(e) {
   var { clipPathId: t, props: n } = e,
     r = (0, G.useRef)(null),
     i = (0, G.useRef)(0),
     a = (0, G.useRef)(null);
-  return G.createElement(Sn, {
+  return G.createElement(Cn, {
     props: n,
     clipPathId: t,
     previousPointsRef: r,
@@ -898,13 +903,13 @@ function Cn(e) {
     pathRef: a,
   });
 }
-var wn = (e, t) => ({
+var Tn = (e, t) => ({
     x: e.x,
     y: e.y,
     value: e.value,
     errorVal: Ve(e.payload, t),
   }),
-  Tn = class extends G.Component {
+  En = class extends G.Component {
     render() {
       var {
         hide: e,
@@ -923,7 +928,7 @@ var wn = (e, t) => ({
       if (e) return null;
       var f = $e(`recharts-line`, r),
         p = u,
-        { r: m, strokeWidth: h } = $t(t),
+        { r: m, strokeWidth: h } = en(t),
         g = Xe(t),
         _ = m * 2 + h;
       return G.createElement(
@@ -955,13 +960,13 @@ var wn = (e, t) => ({
               xAxisId: i,
               yAxisId: a,
               data: n,
-              dataPointFormatter: wn,
+              dataPointFormatter: Tn,
               errorBarOffset: 0,
             },
-            G.createElement(Cn, { props: this.props, clipPathId: p }),
+            G.createElement(wn, { props: this.props, clipPathId: p }),
           ),
         ),
-        G.createElement(jt, {
+        G.createElement(Mt, {
           activeDot: this.props.activeDot,
           points: n,
           mainColor: this.props.stroke,
@@ -970,7 +975,7 @@ var wn = (e, t) => ({
       );
     }
   },
-  En = {
+  Dn = {
     activeDot: !0,
     animateNewValues: !0,
     animationBegin: 0,
@@ -988,8 +993,8 @@ var wn = (e, t) => ({
     xAxisId: 0,
     yAxisId: 0,
   };
-function Dn(e) {
-  var t = w(e, En),
+function On(e) {
+  var t = w(e, Dn),
     {
       activeDot: n,
       animateNewValues: r,
@@ -1006,18 +1011,18 @@ function Dn(e) {
       yAxisId: m,
       id: h,
     } = t,
-    g = cn(t, nn),
+    g = ln(t, rn),
     { needClip: _ } = we(p, m),
     v = Qe(),
     y = fe(),
     b = oe(),
-    x = Ue((e) => Qt(e, p, m, b, h));
+    x = Ue((e) => $t(e, p, m, b, h));
   if ((y !== `horizontal` && y !== `vertical`) || x == null || v == null)
     return null;
   var { height: S, width: C, x: T, y: E } = v;
   return G.createElement(
-    Tn,
-    un({}, g, {
+    En,
+    dn({}, g, {
       id: h,
       connectNulls: s,
       dot: c,
@@ -1042,7 +1047,7 @@ function Dn(e) {
     }),
   );
 }
-function On(e) {
+function kn(e) {
   var {
     layout: t,
     xAxis: n,
@@ -1071,15 +1076,15 @@ function On(e) {
     })
     .filter(Boolean);
 }
-function kn(e) {
-  var t = w(e, En),
+function An(e) {
+  var t = w(e, Dn),
     n = oe();
   return G.createElement(Ze, { id: t.id, type: `line` }, (e) =>
     G.createElement(
       G.Fragment,
       null,
-      G.createElement(O, { legendPayload: dn(t) }),
-      G.createElement(b, { fn, args: t }),
+      G.createElement(O, { legendPayload: fn(t) }),
+      G.createElement(b, { fn: pn, args: t }),
       G.createElement(ge, {
         type: `line`,
         id: e,
@@ -1091,31 +1096,31 @@ function kn(e) {
         hide: t.hide,
         isPanorama: n,
       }),
-      G.createElement(Dn, un({}, t, { id: e })),
+      G.createElement(On, dn({}, t, { id: e })),
     ),
   );
 }
-var An = G.memo(kn);
-An.displayName = `Line`;
-var jn = (e, t, n, r) => E(e, `xAxis`, t, r),
-  Mn = (e, t, n, r) => se(e, `xAxis`, t, r),
-  Nn = (e, t, n, r) => E(e, `yAxis`, n, r),
-  Pn = (e, t, n, r) => se(e, `yAxis`, n, r),
-  Fn = he([D, jn, Nn, Mn, Pn], (e, t, n, r, i) =>
+var jn = G.memo(An);
+jn.displayName = `Line`;
+var Mn = (e, t, n, r) => E(e, `xAxis`, t, r),
+  Nn = (e, t, n, r) => se(e, `xAxis`, t, r),
+  Pn = (e, t, n, r) => E(e, `yAxis`, n, r),
+  Fn = (e, t, n, r) => se(e, `yAxis`, n, r),
+  In = he([D, Mn, Pn, Nn, Fn], (e, t, n, r, i) =>
     ke(e, `xAxis`) ? _(t, r, !1) : _(n, i, !1),
   ),
-  In = he([et, (e, t, n, r, i) => i], (e, t) =>
+  Ln = he([et, (e, t, n, r, i) => i], (e, t) =>
     e.filter((e) => e.type === `area`).find((e) => e.id === t),
   ),
-  Ln = he(
+  Rn = he(
     [
       D,
-      jn,
-      Nn,
       Mn,
       Pn,
+      Nn,
+      Fn,
       (e, t, n, r, i) => {
-        var a = In(e, t, n, r, i);
+        var a = Ln(e, t, n, r, i);
         if (a != null) {
           var o = D(e),
             s = ke(o, `xAxis`) ? te(e, `yAxis`, n, r) : te(e, `xAxis`, t, r);
@@ -1128,8 +1133,8 @@ var jn = (e, t, n, r) => E(e, `xAxis`, t, r),
         }
       },
       ue,
-      Fn,
       In,
+      Ln,
     ],
     (e, t, n, r, i, a, o, s, c) => {
       var { chartData: l, dataStartIndex: u, dataEndIndex: d } = o;
@@ -1149,7 +1154,7 @@ var jn = (e, t, n, r) => E(e, `xAxis`, t, r),
         var { data: f } = c,
           p = f && f.length > 0 ? f : l?.slice(u, d + 1);
         if (p != null)
-          return lr({
+          return ur({
             layout: e,
             xAxis: t,
             yAxis: n,
@@ -1165,8 +1170,8 @@ var jn = (e, t, n, r) => E(e, `xAxis`, t, r),
       }
     },
   ),
-  Rn = [`id`],
-  zn = [
+  zn = [`id`],
+  Bn = [
     `activeDot`,
     `animationBegin`,
     `animationDuration`,
@@ -1182,11 +1187,11 @@ var jn = (e, t, n, r) => E(e, `xAxis`, t, r),
     `xAxisId`,
     `yAxisId`,
   ];
-function Bn(e, t) {
+function Vn(e, t) {
   if (e == null) return {};
   var n,
     r,
-    i = Vn(e, t);
+    i = Hn(e, t);
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
     for (r = 0; r < a.length; r++)
@@ -1197,7 +1202,7 @@ function Bn(e, t) {
   }
   return i;
 }
-function Vn(e, t) {
+function Hn(e, t) {
   if (e == null) return {};
   var n = {};
   for (var r in e)
@@ -1207,7 +1212,7 @@ function Vn(e, t) {
     }
   return n;
 }
-function Hn(e, t) {
+function Un(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -1223,20 +1228,20 @@ function J(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = arguments[t] == null ? {} : arguments[t];
     t % 2
-      ? Hn(Object(n), !0).forEach(function (t) {
-          Un(e, t, n[t]);
+      ? Un(Object(n), !0).forEach(function (t) {
+          Wn(e, t, n[t]);
         })
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-        : Hn(Object(n)).forEach(function (t) {
+        : Un(Object(n)).forEach(function (t) {
             Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
           });
   }
   return e;
 }
-function Un(e, t, n) {
+function Wn(e, t, n) {
   return (
-    (t = Wn(t)) in e
+    (t = Gn(t)) in e
       ? Object.defineProperty(e, t, {
           value: n,
           enumerable: !0,
@@ -1247,11 +1252,11 @@ function Un(e, t, n) {
     e
   );
 }
-function Wn(e) {
-  var t = Gn(e, `string`);
+function Gn(e) {
+  var t = Kn(e, `string`);
   return typeof t == `symbol` ? t : t + ``;
 }
-function Gn(e, t) {
+function Kn(e, t) {
   if (typeof e != `object` || !e) return e;
   var n = e[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -1275,23 +1280,23 @@ function Y() {
     Y.apply(null, arguments)
   );
 }
-function Kn(e, t) {
+function qn(e, t) {
   return e && e !== `none` ? e : t;
 }
-var qn = (e) => {
+var Jn = (e) => {
   var { dataKey: t, name: n, stroke: r, fill: i, legendType: a, hide: o } = e;
   return [
     {
       inactive: o,
       dataKey: t,
       type: a,
-      color: Kn(r, i),
+      color: qn(r, i),
       value: Pe(n, t),
       payload: e,
     },
   ];
 };
-function Jn(e) {
+function Yn(e) {
   var {
     dataKey: t,
     data: n,
@@ -1314,33 +1319,33 @@ function Jn(e) {
       name: Pe(o, t),
       hide: s,
       type: e.tooltipType,
-      color: Kn(r, a),
+      color: qn(r, a),
       unit: c,
     },
   };
 }
-var Yn = (e, t) => {
+var Xn = (e, t) => {
   var n;
   if (G.isValidElement(e)) n = G.cloneElement(e, t);
   else if (typeof e == `function`) n = e(t);
   else {
     var r = $e(`recharts-area-dot`, typeof e == `boolean` ? `` : e.className);
-    n = G.createElement(wt, Y({}, t, { className: r }));
+    n = G.createElement(Tt, Y({}, t, { className: r }));
   }
   return n;
 };
-function Xn(e, t) {
+function Zn(e, t) {
   return e == null ? !1 : t ? !0 : e.length === 1;
 }
-function Zn(e) {
+function Qn(e) {
   var { clipPathId: t, points: n, props: r } = e,
     { needClip: i, dot: a, dataKey: o } = r;
-  if (!Xn(n, a)) return null;
+  if (!Zn(n, a)) return null;
   var s = Xe(a),
     c = k(r),
     l = Te(a),
     u = n.map((e, t) =>
-      Yn(
+      Xn(
         a,
         J(
           J(J({ key: `dot-${t}`, r: 3 }, c), l),
@@ -1360,7 +1365,7 @@ function Zn(e) {
     d = { clipPath: i ? `url(#clipPath-${s ? `` : `dots-`}${t})` : void 0 };
   return G.createElement(j, Y({ className: `recharts-area-dots` }, d), u);
 }
-function Qn(e) {
+function $n(e) {
   var { showLabels: t, children: n, points: r } = e,
     i = r.map((e) => {
       var t = { x: e.x, y: e.y, width: 0, height: 0 };
@@ -1378,11 +1383,11 @@ function Qn(e) {
     });
   return G.createElement(ce, { value: t ? i : null }, n);
 }
-function $n(e) {
+function er(e) {
   var { points: t, baseLine: n, needClip: r, clipPathId: i, props: a } = e,
     { layout: o, type: s, stroke: c, connectNulls: l, isRange: u } = a,
     { id: d } = a,
-    f = Bn(a, Rn),
+    f = Vn(a, zn),
     p = k(f);
   return G.createElement(
     G.Fragment,
@@ -1430,10 +1435,10 @@ function $n(e) {
             }),
           ),
       ),
-    G.createElement(Zn, { points: t, props: f, clipPathId: i }),
+    G.createElement(Qn, { points: t, props: f, clipPathId: i }),
   );
 }
-function er(e) {
+function tr(e) {
   var { alpha: t, baseLine: n, points: r, strokeWidth: i } = e,
     a = r[0].y,
     o = r[r.length - 1].y;
@@ -1457,7 +1462,7 @@ function er(e) {
       : null
   );
 }
-function tr(e) {
+function nr(e) {
   var { alpha: t, baseLine: n, points: r, strokeWidth: i } = e,
     a = r[0].x,
     o = r[r.length - 1].x;
@@ -1481,13 +1486,13 @@ function tr(e) {
       : null
   );
 }
-function nr(e) {
+function rr(e) {
   var { alpha: t, layout: n, points: r, baseLine: i, strokeWidth: a } = e;
   return n === `vertical`
-    ? G.createElement(er, { alpha: t, points: r, baseLine: i, strokeWidth: a })
-    : G.createElement(tr, { alpha: t, points: r, baseLine: i, strokeWidth: a });
+    ? G.createElement(tr, { alpha: t, points: r, baseLine: i, strokeWidth: a })
+    : G.createElement(nr, { alpha: t, points: r, baseLine: i, strokeWidth: a });
 }
-function rr(e) {
+function ir(e) {
   var {
       needClip: t,
       clipPathId: n,
@@ -1517,7 +1522,7 @@ function rr(e) {
     b = i.current,
     x = a.current;
   return G.createElement(
-    Qn,
+    $n,
     { showLabels: _, points: o },
     r.children,
     G.createElement(
@@ -1568,7 +1573,7 @@ function rr(e) {
                   });
           return (
             e > 0 && ((i.current = u), (a.current = d)),
-            G.createElement($n, {
+            G.createElement(er, {
               points: u,
               baseLine: d,
               needClip: t,
@@ -1589,7 +1594,7 @@ function rr(e) {
                 G.createElement(
                   `clipPath`,
                   { id: `animationClipPath-${n}` },
-                  G.createElement(nr, {
+                  G.createElement(rr, {
                     alpha: e,
                     points: o,
                     baseLine: s,
@@ -1601,7 +1606,7 @@ function rr(e) {
             G.createElement(
               j,
               { clipPath: `url(#animationClipPath-${n})` },
-              G.createElement($n, {
+              G.createElement(er, {
                 points: o,
                 baseLine: s,
                 needClip: t,
@@ -1616,11 +1621,11 @@ function rr(e) {
     G.createElement(S, { label: r.label }),
   );
 }
-function ir(e) {
+function ar(e) {
   var { needClip: t, clipPathId: n, props: r } = e,
     i = (0, G.useRef)(null),
     a = (0, G.useRef)();
-  return G.createElement(rr, {
+  return G.createElement(ir, {
     needClip: t,
     clipPathId: n,
     props: r,
@@ -1628,7 +1633,7 @@ function ir(e) {
     previousBaselineRef: a,
   });
 }
-var ar = class extends G.PureComponent {
+var or = class extends G.PureComponent {
     render() {
       var {
         hide: e,
@@ -1648,7 +1653,7 @@ var ar = class extends G.PureComponent {
       if (e) return null;
       var p = $e(`recharts-area`, r),
         m = d,
-        { r: h, strokeWidth: g } = $t(t),
+        { r: h, strokeWidth: g } = en(t),
         _ = Xe(t),
         v = h * 2 + g;
       return G.createElement(
@@ -1674,30 +1679,30 @@ var ar = class extends G.PureComponent {
                   }),
                 ),
             ),
-          G.createElement(ir, {
+          G.createElement(ar, {
             needClip: o,
             clipPathId: m,
             props: this.props,
           }),
         ),
-        G.createElement(jt, {
+        G.createElement(Mt, {
           points: n,
-          mainColor: Kn(this.props.stroke, this.props.fill),
+          mainColor: qn(this.props.stroke, this.props.fill),
           itemDataKey: this.props.dataKey,
           activeDot: this.props.activeDot,
         }),
         this.props.isRange &&
           Array.isArray(f) &&
-          G.createElement(jt, {
+          G.createElement(Mt, {
             points: f,
-            mainColor: Kn(this.props.stroke, this.props.fill),
+            mainColor: qn(this.props.stroke, this.props.fill),
             itemDataKey: this.props.dataKey,
             activeDot: this.props.activeDot,
           }),
       );
     }
   },
-  or = {
+  sr = {
     activeDot: !0,
     animationBegin: 0,
     animationDuration: 1500,
@@ -1713,8 +1718,8 @@ var ar = class extends G.PureComponent {
     xAxisId: 0,
     yAxisId: 0,
   };
-function sr(e) {
-  var t = w(e, or),
+function cr(e) {
+  var t = w(e, sr),
     {
       activeDot: n,
       animationBegin: r,
@@ -1731,7 +1736,7 @@ function sr(e) {
       xAxisId: m,
       yAxisId: h,
     } = t,
-    g = Bn(t, zn),
+    g = Vn(t, Bn),
     _ = fe(),
     v = re(),
     { needClip: y } = we(m, h),
@@ -1740,7 +1745,7 @@ function sr(e) {
       points: x,
       isRange: S,
       baseLine: C,
-    } = Ue((t) => Ln(t, m, h, b, e.id)) ?? {},
+    } = Ue((t) => Rn(t, m, h, b, e.id)) ?? {},
     T = Qe();
   if (
     (_ !== `horizontal` && _ !== `vertical`) ||
@@ -1752,7 +1757,7 @@ function sr(e) {
   return !x || !x.length
     ? null
     : G.createElement(
-        ar,
+        or,
         Y({}, g, {
           activeDot: n,
           animationBegin: r,
@@ -1780,7 +1785,7 @@ function sr(e) {
         }),
       );
 }
-var cr = (e, t, n, r, i) => {
+var lr = (e, t, n, r, i) => {
   var a = n ?? t;
   if (Re(a)) return a;
   var o = e === `horizontal` ? i : r,
@@ -1796,7 +1801,7 @@ var cr = (e, t, n, r, i) => {
   }
   return a === `dataMin` ? s[0] : a === `dataMax` ? s[1] : s[0];
 };
-function lr(e) {
+function ur(e) {
   var {
       areaSettings: { connectNulls: t, baseValue: n, dataKey: r },
       stackedData: i,
@@ -1811,7 +1816,7 @@ function lr(e) {
       bandSize: p,
     } = e,
     m = i && i.length,
-    h = cr(a, o, n, s, c),
+    h = lr(a, o, n, s, c),
     g = a === `horizontal`,
     _ = !1,
     v = l.map((e, n) => {
@@ -1858,15 +1863,15 @@ function lr(e) {
     isRange: _,
   };
 }
-function ur(e) {
-  var t = w(e, or),
+function dr(e) {
+  var t = w(e, sr),
     n = oe();
   return G.createElement(Ze, { id: t.id, type: `area` }, (e) =>
     G.createElement(
       G.Fragment,
       null,
-      G.createElement(O, { legendPayload: qn(t) }),
-      G.createElement(b, { fn: Jn, args: t }),
+      G.createElement(O, { legendPayload: Jn(t) }),
+      G.createElement(b, { fn: Yn, args: t }),
       G.createElement(ge, {
         type: `area`,
         id: e,
@@ -1882,31 +1887,31 @@ function ur(e) {
         isPanorama: n,
         connectNulls: t.connectNulls,
       }),
-      G.createElement(sr, Y({}, t, { id: e })),
+      G.createElement(cr, Y({}, t, { id: e })),
     ),
   );
 }
-var dr = G.memo(ur);
-dr.displayName = `Area`;
-var fr = [`axis`],
-  pr = (0, G.forwardRef)((e, t) =>
+var fr = G.memo(dr);
+fr.displayName = `Area`;
+var pr = [`axis`],
+  mr = (0, G.forwardRef)((e, t) =>
     G.createElement(Oe, {
       chartName: `ComposedChart`,
       defaultTooltipEventType: `axis`,
-      validateTooltipEventTypes: fr,
+      validateTooltipEventTypes: pr,
       tooltipPayloadSearcher: ne,
       categoricalChartProps: e,
       ref: t,
     }),
   );
-function mr(e, t, n = NaN) {
+function hr(e, t, n = NaN) {
   let { strSymbol: r, strDecimalSymbol: i, strThousandsSeparator: a } = Be(t);
   ((e = e
     .replace(r, ``)
     .replace(`.--`, `.00`)
     .replace(/ /g, ``)
-    .replace(hr(a), ``)),
-    i !== `.` && (e = e.replace(hr(i), `.`)));
+    .replace(gr(a), ``)),
+    i !== `.` && (e = e.replace(gr(i), `.`)));
   let o = e.indexOf(`.`),
     s = e.lastIndexOf(`.`);
   if (o !== -1 && o !== s) {
@@ -1917,10 +1922,10 @@ function mr(e, t, n = NaN) {
   let c = parseFloat(e) * 100;
   return isNaN(c) ? n : Math.floor(c + 1e-6);
 }
-function hr(e) {
+function gr(e) {
   return e === `.` ? /\./g : new RegExp(e, `g`);
 }
-function gr(e) {
+function _r(e) {
   let { children: t } = e;
   return (0, K.jsx)(Ae, {
     isAnimationActive: !1,
@@ -1941,7 +1946,7 @@ function gr(e) {
 G.memo(function () {
   return (0, K.jsx)(_e, { stroke: `#FFFFFF10`, fill: `var(--color-dull-5)` });
 });
-function _r(e) {
+function vr(e) {
   let [t, n] = (0, G.useState)(null);
   return {
     props: {
@@ -1967,7 +1972,7 @@ function _r(e) {
     activeDrag: t,
   };
 }
-function vr(e) {
+function yr(e) {
   let {
     id: t,
     color: n,
@@ -1989,9 +1994,9 @@ function vr(e) {
     ),
   });
 }
-function yr(e) {
+function br(e) {
   let { dataKey: t, color: n, numPoints: r, ...i } = e;
-  return (0, K.jsx)(An, {
+  return (0, K.jsx)(jn, {
     dataKey: t,
     stroke: n,
     dot: r === 1,
@@ -2002,7 +2007,7 @@ function yr(e) {
     ...i,
   });
 }
-function br(e) {
+function xr(e) {
   let { scale: t, dataKey: n } = e,
     r = (0, G.useId)(),
     i = {
@@ -2014,7 +2019,7 @@ function br(e) {
   return (0, K.jsxs)(K.Fragment, {
     children: [
       (0, K.jsx)(`defs`, {
-        children: (0, K.jsx)(vr, {
+        children: (0, K.jsx)(yr, {
           id: r,
           color: `var(--color-blue-9)`,
           stops: [
@@ -2029,12 +2034,12 @@ function br(e) {
         }),
       }),
       t === `lifetime`
-        ? (0, K.jsx)(dr, { ...i, strokeOpacity: 0.25, connectNulls: !0 })
+        ? (0, K.jsx)(fr, { ...i, strokeOpacity: 0.25, connectNulls: !0 })
         : (0, K.jsx)(Ne, { ...i }),
     ],
   });
 }
-function xr() {
+function Sr() {
   typeof v == `function`
     ? v({
         measureText: (e, t) => {
@@ -2048,7 +2053,7 @@ function xr() {
       );
 }
 var X = e(t(), 1),
-  Sr = class e extends X.Message {
+  Cr = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -2101,7 +2106,7 @@ var X = e(t(), 1),
       return `CEconMarket_IsMarketplaceAllowed_Request`;
     }
   },
-  Cr = class e extends X.Message {
+  wr = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -2174,39 +2179,39 @@ var X = e(t(), 1),
       return `CEconMarket_IsMarketplaceAllowed_Response`;
     }
   },
-  wr;
+  Tr;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`EconMarket.IsMarketplaceAllowed#1`, U(Sr, t, n), Cr, {
+    return e.SendMsg(`EconMarket.IsMarketplaceAllowed#1`, U(Cr, t, n), wr, {
       ePrivilege: 1,
     });
   }
   e.IsMarketplaceAllowed = t;
-})((wr ||= {}));
-var Tr = { resultsView: `grid`, priceTimeScale: `month`, searchSort: 0 },
-  Er = (0, G.createContext)({
-    prefs: Tr,
+})((Tr ||= {}));
+var Er = { resultsView: `grid`, priceTimeScale: `month`, searchSort: 0 },
+  Dr = (0, G.createContext)({
+    prefs: Er,
     onChange: () =>
       console.error(
         `Cannot update market display preferences. Missing provider.`,
       ),
   });
-function Dr(e) {
+function Or(e) {
   let { prefs: t, onChange: n, children: r } = e,
     i = (0, G.useRef)(t);
   i.current = t;
-  let a = (0, G.useMemo)(() => ({ ...Tr, ...t }), [t]),
+  let a = (0, G.useMemo)(() => ({ ...Er, ...t }), [t]),
     o = (0, G.useCallback)(
       (e) => {
         let t = (e) => {
           let t = { ...e };
-          for (let [e, n] of Object.entries(Tr)) t[e] === n && delete t[e];
+          for (let [e, n] of Object.entries(Er)) t[e] === n && delete t[e];
           return t;
         };
         n(
           typeof e == `function`
             ? (n) => {
-                let r = e({ ...Tr, ...n });
+                let r = e({ ...Er, ...n });
                 return t(r);
               }
             : e,
@@ -2215,14 +2220,14 @@ function Dr(e) {
       [n],
     ),
     s = (0, G.useMemo)(() => ({ prefs: a, onChange: o }), [a, o]);
-  return (0, K.jsx)(Er, { value: s, children: r });
+  return (0, K.jsx)(Dr, { value: s, children: r });
 }
-function Or() {
-  let { prefs: e, onChange: t } = (0, G.useContext)(Er);
+function kr() {
+  let { prefs: e, onChange: t } = (0, G.useContext)(Dr);
   return [e, t];
 }
-function kr(e) {
-  let [t, n] = Or();
+function Ar(e) {
+  let [t, n] = kr();
   return [
     t[e],
     (0, G.useCallback)((t) => n((n) => ({ ...n, [e]: t })), [n, e]),
@@ -2293,17 +2298,17 @@ var Z = {};
     z(() => import(`./chunk~7eaca1a6b4.js`), [], import.meta.url)),
   (Z.vietnamese = () =>
     z(() => import(`./chunk~9efd690e22.js`), [], import.meta.url)));
-async function Ar(e) {
+async function jr(e) {
   if (Z[e]) return await Z[e]();
 }
-var Q = vt(Ar),
-  jr = `VJlhvA2sWGg-`,
-  Mr = 86400,
-  Nr = 604800;
-xr();
-var Pr = { week: Mr / 4, month: Mr, year: Nr, lifetime: Nr },
-  Fr = { week: Mr / 48, month: Mr / 48, year: Mr / 2, lifetime: Mr / 2 };
-function Ir(e, t) {
+var Q = vt(jr),
+  Mr = `VJlhvA2sWGg-`,
+  Nr = 86400,
+  Pr = 604800;
+Sr();
+var Fr = { week: Nr / 4, month: Nr, year: Pr, lifetime: Pr },
+  Ir = { week: Nr / 48, month: Nr / 48, year: Nr / 2, lifetime: Nr / 2 };
+function Lr(e, t) {
   let n = new Date(e * 1e3);
   switch (t) {
     case `week`:
@@ -2321,16 +2326,16 @@ function Ir(e, t) {
   }
   return Math.floor(n.getTime() / 1e3);
 }
-function Lr(e) {
+function Rr(e) {
   let { priceHistory: t, height: n } = e,
-    [r, i] = kr(`priceTimeScale`),
-    a = Wr(t, r),
+    [r, i] = Ar(`priceTimeScale`),
+    a = Gr(t, r),
     o = (0, G.useMemo)(
       () => a.reduce((e, t) => e + +(t.purchases > 0), 0),
       [a],
     ),
     s = (0, G.useId)();
-  return (0, K.jsxs)(Rr, {
+  return (0, K.jsxs)(zr, {
     currency: t.ecurrency,
     data: a,
     scale: r,
@@ -2345,7 +2350,7 @@ function Lr(e) {
       }),
       (0, K.jsxs)(`defs`, {
         children: [
-          (0, K.jsx)(vr, {
+          (0, K.jsx)(yr, {
             id: `${s}price`,
             color: `var(--color-green-7)`,
             stops: [
@@ -2381,8 +2386,8 @@ function Lr(e) {
           }),
         ],
       }),
-      (0, K.jsx)(br, { dataKey: `purchases`, scale: r }),
-      (0, K.jsx)(dr, {
+      (0, K.jsx)(xr, { dataKey: `purchases`, scale: r }),
+      (0, K.jsx)(fr, {
         dataKey: `price`,
         yAxisId: `price`,
         stroke: `none`,
@@ -2394,12 +2399,12 @@ function Lr(e) {
         isAnimationActive: !1,
         connectNulls: !0,
       }),
-      (0, K.jsx)(yr, {
+      (0, K.jsx)(br, {
         dataKey: `price`,
         color: `var(--color-green-7)`,
         numPoints: o,
         strokeWidth: 1.5,
-        className: jr,
+        className: Mr,
       }),
       a.length === 0 &&
         (0, K.jsx)(je, {
@@ -2409,7 +2414,7 @@ function Lr(e) {
     ],
   });
 }
-function Rr(e) {
+function zr(e) {
   let {
       children: t,
       currency: n,
@@ -2427,7 +2432,7 @@ function Rr(e) {
       hour: l ? `numeric` : void 0,
     }),
     [d, f] = (0, G.useState)(null),
-    { props: p, activeDrag: m } = _r({
+    { props: p, activeDrag: m } = vr({
       onSelection: (e, t) =>
         e.activeLabel && t.activeLabel && f([e.activeLabel, t.activeLabel]),
     }),
@@ -2442,7 +2447,7 @@ function Rr(e) {
         value: d ? null : i,
         onValueChange: _,
         options: [`week`, `month`, `year`, `lifetime`],
-        getOptionLabel: Ur,
+        getOptionLabel: Wr,
         radius: `sm`,
         variant: `dim`,
       });
@@ -2489,7 +2494,7 @@ function Rr(e) {
         background: `dull-6`,
         padding: { initial: `1`, sm: `4` },
         paddingTop: `5`,
-        children: (0, K.jsxs)(pr, {
+        children: (0, K.jsxs)(mr, {
           style: {
             width: `100%`,
             ...(c
@@ -2502,14 +2507,14 @@ function Rr(e) {
           ...p,
           margin: { left: 20, right: 20 },
           children: [
-            (0, K.jsx)(zr, {
+            (0, K.jsx)(Br, {
               currency: n,
               scale: i,
               customDomain: d,
               tooltipComponent: s,
             }),
             m &&
-              (0, K.jsx)(Ut, {
+              (0, K.jsx)(Wt, {
                 x1: m[0].activeLabel,
                 x2: m[1].activeLabel,
                 fill: `#FFFFFF`,
@@ -2525,7 +2530,7 @@ function Rr(e) {
     ],
   });
 }
-var zr = G.memo(function (e) {
+var Br = G.memo(function (e) {
     let { scale: t, currency: n, customDomain: r, tooltipComponent: i } = e,
       [
         {
@@ -2550,13 +2555,13 @@ var zr = G.memo(function (e) {
         }),
         numberFormatter: new Intl.NumberFormat(gt()),
       })),
-      l = i || Vr,
+      l = i || Hr,
       u = t === `week` || t === `month` ? s : o,
       d = (0, G.useCallback)((e) => c.format(e), [c]),
       f = (0, G.useCallback)((e) => We(Math.round(e * 100), n), [n]);
     return (0, K.jsxs)(K.Fragment, {
       children: [
-        (0, K.jsx)(Br, {
+        (0, K.jsx)(Vr, {
           dateFormatter: u,
           mountTime: a,
           scale: t,
@@ -2594,12 +2599,12 @@ var zr = G.memo(function (e) {
       ],
     });
   }),
-  Br = G.memo(function (e) {
+  Vr = G.memo(function (e) {
     let { dateFormatter: t, mountTime: n, scale: r, customDomain: i } = e,
       a = (0, G.useMemo)(
         () => [
-          (e) => Math.min(e - Fr[r], Ir(n, r)),
-          (e) => Math.max(e + Fr[r], n),
+          (e) => Math.min(e - Ir[r], Lr(n, r)),
+          (e) => Math.max(e + Ir[r], n),
         ],
         [n, r],
       ),
@@ -2616,7 +2621,7 @@ var zr = G.memo(function (e) {
       allowDataOverflow: !0,
     });
   });
-function Vr(e) {
+function Hr(e) {
   let {
       dateFormatter: t,
       currency: n,
@@ -2624,7 +2629,7 @@ function Vr(e) {
       purchasesKey: i = `purchases`,
     } = e,
     a = new Intl.NumberFormat();
-  return (0, K.jsx)(gr, {
+  return (0, K.jsx)(_r, {
     children: (e) => {
       if (!e.active || !e.payload?.length || !e.payload[0].payload) return null;
       let o = e.payload[0].payload,
@@ -2647,20 +2652,20 @@ function Vr(e) {
     },
   });
 }
-var Hr = {
+var Ur = {
   week: `#Graph_TimeScale_Week`,
   month: `#Graph_TimeScale_Month`,
   year: `#Graph_TimeScale_Year`,
   lifetime: `#Graph_TimeScale_Lifetime`,
 };
-function Ur(e) {
-  return Q.Localize(Hr[e]);
-}
-function Wr(e, t) {
-  let [n] = (0, G.useState)(() => Math.floor(Date.now() / 1e3));
-  return (0, G.useMemo)(() => Gr(e, n), [e, n])[t];
+function Wr(e) {
+  return Q.Localize(Ur[e]);
 }
 function Gr(e, t) {
+  let [n] = (0, G.useState)(() => Math.floor(Date.now() / 1e3));
+  return (0, G.useMemo)(() => Kr(e, n), [e, n])[t];
+}
+function Kr(e, t) {
   let n = { week: [], month: [], year: [], lifetime: [] },
     r,
     i = new Date();
@@ -2673,9 +2678,9 @@ function Gr(e, t) {
   c.setFullYear(c.getFullYear() - 1);
   let l = Math.floor(c.getTime() / 1e3);
   for (let t of e.prices || []) {
-    let e = Qr(t);
+    let e = $r(t);
     (t.time >= a && n.week.push(e), t.time >= s && n.month.push(e));
-    let i = !!r && Xr(r.time, e.time);
+    let i = !!r && Zr(r.time, e.time);
     if (t.time >= l) {
       if (!i) n.year.push(e);
       else {
@@ -2694,8 +2699,8 @@ function Gr(e, t) {
   }
   let u = (e, n) => {
     if (n.length === 0) return [];
-    let r = n.map((e) => (Array.isArray(e) ? $r(e) : e));
-    return [...qr(e, t, r), ...Kr(e, r), ...Jr(e, t, r)];
+    let r = n.map((e) => (Array.isArray(e) ? ei(e) : e));
+    return [...Jr(e, t, r), ...qr(e, r), ...Yr(e, t, r)];
   };
   return {
     week: u(`week`, n.week),
@@ -2704,50 +2709,50 @@ function Gr(e, t) {
     lifetime: u(`lifetime`, n.lifetime),
   };
 }
-function Kr(e, t) {
+function qr(e, t) {
   if (t.length <= 1) return t;
   let n = [t[0]];
   for (let r = 1; r < t.length; r++) {
     let i = t[r - 1],
       a = t[r],
-      o = i.time + Pr[e];
-    for (; o < a.time && !Yr(o, a.time, e);)
-      (n.push({ time: o, price: void 0, purchases: 0 }), (o += Pr[e]));
+      o = i.time + Fr[e];
+    for (; o < a.time && !Xr(o, a.time, e);)
+      (n.push({ time: o, price: void 0, purchases: 0 }), (o += Fr[e]));
     n.push(a);
   }
   return n;
 }
-function qr(e, t, n) {
-  let r = Ir(t, e);
-  if (!n.length || Yr(r, n[0].time, e)) return [];
-  let i = n[0].time - Pr[e],
+function Jr(e, t, n) {
+  let r = Lr(t, e);
+  if (!n.length || Xr(r, n[0].time, e)) return [];
+  let i = n[0].time - Fr[e],
     a = [];
   for (; i >= r;)
-    (a.push({ time: i, price: void 0, purchases: 0 }), (i -= Pr[e]));
+    (a.push({ time: i, price: void 0, purchases: 0 }), (i -= Fr[e]));
   return a.reverse();
 }
-function Jr(e, t, n) {
-  if (!n.length || Yr(t, n[n.length - 1].time, e)) return [];
+function Yr(e, t, n) {
+  if (!n.length || Xr(t, n[n.length - 1].time, e)) return [];
   let r = t,
     i = [],
     a = n[n.length - 1].time;
-  for (; r > a && !Yr(r, a, e);)
-    (i.push({ time: r, price: void 0, purchases: 0 }), (r -= Pr[e]));
+  for (; r > a && !Xr(r, a, e);)
+    (i.push({ time: r, price: void 0, purchases: 0 }), (r -= Fr[e]));
   return i.reverse();
 }
-function Yr(e, t, n) {
+function Xr(e, t, n) {
   switch (n) {
     case `lifetime`:
     case `year`:
-      return Xr(e, t);
+      return Zr(e, t);
     case `month`:
     case `week`:
-      return Zr(e, t);
+      return Qr(e, t);
     default:
       return (lt(n, `Unhandled time scale "${n}"`), !1);
   }
 }
-function Xr(e, t) {
+function Zr(e, t) {
   let n = new Date(e * 1e3),
     r = new Date(t * 1e3);
   return (
@@ -2756,15 +2761,15 @@ function Xr(e, t) {
     n.getDate() === r.getDate()
   );
 }
-function Zr(e, t) {
+function Qr(e, t) {
   return (
-    Xr(e, t) && new Date(e * 1e3).getHours() === new Date(t * 1e3).getHours()
+    Zr(e, t) && new Date(e * 1e3).getHours() === new Date(t * 1e3).getHours()
   );
 }
-function Qr(e) {
+function $r(e) {
   return { time: e.time, price: e.price_median, purchases: e.purchases };
 }
-function $r(e) {
+function ei(e) {
   if (
     (nt(e.length, `Cannot merge a list of zero data points!`), e.length === 1)
   )
@@ -2781,14 +2786,14 @@ function $r(e) {
     r = t / n;
   return { time: e[0].time, price: r, purchases: n };
 }
-var ei = 1e-5;
-function ti(e) {
+var ti = 1e-5;
+function ni(e) {
   return {
     nFloor: parseInt(e.wallet_market_minimum) || 1,
     nIncrement: parseInt(e.wallet_currency_increment) || 1,
   };
 }
-function ni(e, t, n) {
+function ri(e, t, n) {
   let r = e;
   if (t > 1) {
     let i = e / t,
@@ -2798,21 +2803,21 @@ function ni(e, t, n) {
   }
   return Math.max(r, t);
 }
-function ri(e, t, n, r) {
-  return e <= t ? t : ni(e, n, r);
+function ii(e, t, n, r) {
+  return e <= t ? t : ri(e, n, r);
 }
-function ii(e, t) {
-  let { nFloor: n, nIncrement: r } = ti(t);
-  return ri(e, n, r, !0);
+function ai(e, t) {
+  let { nFloor: n, nIncrement: r } = ni(t);
+  return ii(e, n, r, !0);
 }
-function ai(e, t, n, r) {
+function oi(e, t, n, r) {
   let i = t.fee_rate ?? 0;
-  if (i <= ei) return { nFee: 0, bCapped: !1 };
-  let a = ri(Math.trunc(e * i), n, r, !1),
+  if (i <= ti) return { nFee: 0, bCapped: !1 };
+  let a = ii(Math.trunc(e * i), n, r, !1),
     o = t.fee_cap ? parseInt(t.fee_cap) : 0;
   return o > 0 && a >= o ? { nFee: o, bCapped: !0 } : { nFee: a, bCapped: !1 };
 }
-function oi(e) {
+function si(e) {
   return !!e?.steam_fee && !!e?.publisher_fee;
 }
 function $(e, t, n) {
@@ -2825,10 +2830,10 @@ function $(e, t, n) {
       bSteamFeeCapped: !1,
       bPublisherFeeCapped: !1,
     };
-  let { nFloor: r, nIncrement: i } = ti(n),
-    a = ri(e, r, i, !0),
-    o = ai(a, t.publisher_fee ?? {}, r, i),
-    s = ai(a, t.steam_fee ?? {}, r, i);
+  let { nFloor: r, nIncrement: i } = ni(n),
+    a = ii(e, r, i, !0),
+    o = oi(a, t.publisher_fee ?? {}, r, i),
+    s = oi(a, t.steam_fee ?? {}, r, i);
   return {
     nBasePrice: a,
     nSteamFee: s.nFee,
@@ -2838,8 +2843,8 @@ function $(e, t, n) {
     bPublisherFeeCapped: o.bCapped,
   };
 }
-function si(e, t, n) {
-  let { nFloor: r, nIncrement: i } = ti(n),
+function ci(e, t, n) {
+  let { nFloor: r, nIncrement: i } = ni(n),
     a = t.publisher_fee?.fee_rate ?? 0,
     o = t.steam_fee?.fee_rate ?? 0,
     s = e - 2 * r,
@@ -2860,14 +2865,14 @@ function si(e, t, n) {
     }
   return l.nBasePrice < r ? $(r, t, n) : l;
 }
-function ci(e, t, n) {
+function li(e, t, n) {
   return $(e, t, n).nTotal;
 }
-function li(e, t, n) {
-  return si(e, t, n).nBasePrice;
+function ui(e, t, n) {
+  return ci(e, t, n).nBasePrice;
 }
-var ui = `_37rzH4CvbMw-`;
-function di(e) {
+var di = `_37rzH4CvbMw-`;
+function fi(e) {
   let {
       value: t,
       defaultValue: n,
@@ -2887,7 +2892,7 @@ function di(e) {
     p = i || l,
     m = p ? `calc( ${f}ch + 2 * var(--spacing-2) )` : `${f}ch`;
   return (0, K.jsx)(N, {
-    className: st(ui, !p && `YVYRIADuxks-`),
+    className: st(di, !p && `YVYRIADuxks-`),
     width: l ? { initial: `100%`, sm: m } : m,
     children: (0, K.jsx)(yt, {
       size: `2`,
@@ -2905,7 +2910,7 @@ function di(e) {
     }),
   });
 }
-function fi(e) {
+function pi(e) {
   let { children: t, type: n } = e;
   return n == `warning`
     ? (0, K.jsx)(N, {
@@ -2945,10 +2950,10 @@ function fi(e) {
           children: t,
         });
 }
-var pi = `Xice-lU-2-8-`,
-  mi = `Pv3PuwbbHSo-`,
-  hi = `oZO2DSFoyy4-`;
-function gi(e) {
+var mi = `Xice-lU-2-8-`,
+  hi = `Pv3PuwbbHSo-`,
+  gi = `oZO2DSFoyy4-`;
+function _i(e) {
   let {
       onClose: t,
       children: n,
@@ -2958,7 +2963,7 @@ function gi(e) {
       ...o
     } = e,
     s = st(
-      pi,
+      mi,
       i && `wr8reWdSeMQ-`,
       r && `_5ODqSmieNFc-`,
       `noOpinionatedGlobalStyles`,
@@ -2968,14 +2973,14 @@ function gi(e) {
     className: s,
     children: [
       (0, K.jsx)(`div`, {
-        className: hi,
+        className: gi,
         children: (0, K.jsx)(ut, { size: `5`, onClick: t }),
       }),
       (0, K.jsx)(`form`, {
         onSubmit: (e) => {
           (e.preventDefault(), a && a());
         },
-        className: st(mi, r && `ELsvkQVzGqY-`),
+        className: st(hi, r && `ELsvkQVzGqY-`),
         children: (0, K.jsx)(W, {
           direction: `column`,
           gap: `4`,
@@ -2989,7 +2994,7 @@ function gi(e) {
     ],
   });
 }
-function _i(e) {
+function vi(e) {
   let { lastUpdate: t, agreed: n, onAgreeChange: r, disabled: i } = e,
     a = ft(t),
     o = `${mt.STORE_BASE_URL}subscriber_agreement`;
@@ -3013,14 +3018,14 @@ function _i(e) {
     }),
   });
 }
-function vi(e) {
+function yi(e) {
   let { selling: t } = e;
   return (0, K.jsx)(V, {
     size: `3`,
     children: Q.Localize(t ? `#SellDialog_EU_SSA` : `#PurchaseDialog_EU_SSA`),
   });
 }
-function yi(e, t) {
+function bi(e, t) {
   if (typeof window > `u`) return;
   let n = Reflect.get(window, `ReactNativeWebView`);
   typeof n?.postMessage == `function` &&
@@ -3028,7 +3033,7 @@ function yi(e, t) {
       JSON.stringify({ event_name: `marketconfirm`, type: e, creator_id: t }),
     );
 }
-var bi = class e extends X.Message {
+var xi = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
       (super(), X.Message.initialize(this, e, 0, -1, void 0, null));
@@ -3063,7 +3068,7 @@ var bi = class e extends X.Message {
       return `CMobilePerAccount_GetSettings_Request`;
     }
   },
-  xi = class e extends X.Message {
+  Si = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -3128,7 +3133,7 @@ var bi = class e extends X.Message {
       return `CMobilePerAccount_GetSettings_Response`;
     }
   },
-  Si = class e extends X.Message {
+  Ci = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -3192,7 +3197,7 @@ var bi = class e extends X.Message {
       return `CMobilePerAccount_SetSettings_Request`;
     }
   },
-  Ci = class e extends X.Message {
+  wi = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(e = null) {
       (super(), X.Message.initialize(this, e, 0, -1, void 0, null));
@@ -3227,7 +3232,7 @@ var bi = class e extends X.Message {
       return `CMobilePerAccount_SetSettings_Response`;
     }
   },
-  wi = class e extends X.Message {
+  Ti = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -3293,7 +3298,7 @@ var bi = class e extends X.Message {
       return `CMobileDevice_RegisterMobileDevice_Request`;
     }
   },
-  Ti = class e extends X.Message {
+  Ei = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -3348,7 +3353,7 @@ var bi = class e extends X.Message {
       return `CMobileDevice_RegisterMobileDevice_Response`;
     }
   },
-  Ei = class e extends X.Message {
+  Di = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -3401,7 +3406,7 @@ var bi = class e extends X.Message {
       return `CMobileDevice_DeregisterMobileDevice_Notification`;
     }
   },
-  Di = class e extends X.Message {
+  Oi = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -3463,7 +3468,7 @@ var bi = class e extends X.Message {
       return `CMobileDevice_HasMobileDevice_Request`;
     }
   },
-  Oi = class e extends X.Message {
+  ki = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -3520,7 +3525,7 @@ var bi = class e extends X.Message {
       return `CMobileDevice_HasMobileDevice_Response`;
     }
   },
-  ki = class e extends X.Message {
+  Ai = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -3580,7 +3585,7 @@ var bi = class e extends X.Message {
       return `CMobileApp_GetMobileSummary_Request`;
     }
   },
-  Ai = class e extends X.Message {
+  ji = class e extends X.Message {
     static ImplementsStaticInterface() {}
     constructor(t = null) {
       (super(),
@@ -3640,25 +3645,25 @@ var bi = class e extends X.Message {
       return `CMobileApp_GetMobileSummary_Response`;
     }
   },
-  ji;
+  Mi;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`MobilePerAccount.GetSettings#1`, U(bi, t, n), xi, {
+    return e.SendMsg(`MobilePerAccount.GetSettings#1`, U(xi, t, n), Si, {
       ePrivilege: 1,
     });
   }
   e.GetSettings = t;
   function n(e, t, n) {
-    return e.SendMsg(`MobilePerAccount.SetSettings#1`, U(Si, t, n), Ci, {
+    return e.SendMsg(`MobilePerAccount.SetSettings#1`, U(Ci, t, n), wi, {
       ePrivilege: 1,
     });
   }
   e.SetSettings = n;
-})((ji ||= {}));
-var Mi;
+})((Mi ||= {}));
+var Ni;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`MobileDevice.RegisterMobileDevice#1`, U(wi, t, n), Ti, {
+    return e.SendMsg(`MobileDevice.RegisterMobileDevice#1`, U(Ti, t, n), Ei, {
       ePrivilege: 1,
       eWebAPIKeyRequirement: 2,
     });
@@ -3667,29 +3672,29 @@ var Mi;
   function n(e, t) {
     return e.SendNotification(
       `MobileDevice.DeregisterMobileDevice#1`,
-      U(Ei, t),
+      U(Di, t),
       { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
     );
   }
   e.DeregisterMobileDevice = n;
   function r(e, t, n) {
-    return e.SendMsg(`MobileDevice.HasMobileDevice#1`, U(Di, t, n), Oi, {
+    return e.SendMsg(`MobileDevice.HasMobileDevice#1`, U(Oi, t, n), ki, {
       bConstMethod: !0,
       ePrivilege: 1,
     });
   }
   e.HasMobileDevice = r;
-})((Mi ||= {}));
-var Ni;
+})((Ni ||= {}));
+var Pi;
 (function (e) {
   function t(e, t, n) {
-    return e.SendMsg(`MobileApp.GetMobileSummary#1`, U(ki, t, n), Ai, {
+    return e.SendMsg(`MobileApp.GetMobileSummary#1`, U(Ai, t, n), ji, {
       ePrivilege: 1,
     });
   }
   e.GetMobileSummary = t;
-})((Ni ||= {}));
-function Pi(e) {
+})((Pi ||= {}));
+function Fi(e) {
   let [t, n] = (0, G.useState)(null);
   (0, G.useEffect)(() => {
     let e = window;
@@ -3708,12 +3713,12 @@ function Pi(e) {
   return t
     ? (0, K.jsx)(p, {
         steamidOwner: dt.steamid,
-        children: (0, K.jsx)(Dr, {
+        children: (0, K.jsx)(Or, {
           prefs: r,
           onChange: i,
           children: (0, K.jsx)(rt, {
             children: (0, K.jsx)(
-              Fi,
+              Ii,
               {
                 ...e,
                 item: t.item,
@@ -3728,7 +3733,7 @@ function Pi(e) {
       })
     : null;
 }
-function Fi(e) {
+function Ii(e) {
   let {
       item: t,
       appContext: n,
@@ -3745,7 +3750,7 @@ function Fi(e) {
     { description: m } = t,
     h = r.wallet_currency,
     g = t.appid,
-    _ = Ii(m),
+    _ = Li(m),
     v = parseInt(String(t.amount)) || 1,
     y = (0, G.useMemo)(
       () => ({
@@ -3754,37 +3759,37 @@ function Fi(e) {
       }),
       [r],
     ),
-    b = Ri(g, a, r, n),
-    x = Hi(h, g, _),
-    S = oi(b.data) ? b.data : void 0,
+    b = zi(g, a, r, n),
+    x = Ui(h, g, _),
+    S = si(b.data) ? b.data : void 0,
     [C, w] = (0, G.useState)(`edit`),
     [T, E] = (0, G.useState)(void 0),
     [D, ee] = (0, G.useState)(1),
     [te, ne] = (0, G.useState)(!1),
     [re, ie] = (0, G.useState)(null),
-    ae = S && T ? ci(T, S, y) : void 0,
+    ae = S && T ? li(T, S, y) : void 0,
     oe = parseInt(y.wallet_market_minimum) || 1,
     se = (0, G.useRef)(!1);
   (0, G.useEffect)(() => {
     if (se.current || !S || !x) return;
     se.current = !0;
-    let e = mr(x, h);
-    T === void 0 && e > 0 && E(li(e, S, y));
+    let e = hr(x, h);
+    T === void 0 && e > 0 && E(ui(e, S, y));
   }, [S, x, h, y, T]);
   let O = i({
-      mutationFn: qi,
+      mutationFn: Ji,
       onSuccess: (e, t) => {
         if (!e.success) return;
         let n = !!e.requires_confirmation;
         (f({ quantity: t.amount, requires_confirmation: n }),
           n
-            ? (e.needs_mobile_confirmation && e.listingid && yi(3, e.listingid),
+            ? (e.needs_mobile_confirmation && e.listingid && bi(3, e.listingid),
               w(`confirm`))
             : p());
       },
     }),
     ce = () => {
-      let e = Li({
+      let e = Ri({
         bAgreedSSA: te,
         nQuantity: D,
         nAvailable: v,
@@ -3804,7 +3809,7 @@ function Fi(e) {
           contextid: t.contextid,
           assetid: t.assetid,
           amount: D,
-          price: ii(T, y),
+          price: ai(T, y),
         });
     },
     ue = () => {
@@ -3825,21 +3830,21 @@ function Fi(e) {
     k = null;
   return (
     C === `confirm` && O.data
-      ? (k = (0, K.jsx)(Wi, { result: O.data }))
+      ? (k = (0, K.jsx)(Gi, { result: O.data }))
       : O.isError || (O.isSuccess && !O.data.success)
-        ? (k = (0, K.jsx)(fi, {
+        ? (k = (0, K.jsx)(pi, {
             type: `error`,
             children:
               O.data?.message || Q.Localize(`#SellDialog_Error_Generic`),
           }))
         : re
-          ? (k = (0, K.jsx)(fi, { type: `error`, children: re }))
+          ? (k = (0, K.jsx)(pi, { type: `error`, children: re }))
           : (b.isError || (b.isSuccess && !S)) &&
-            (k = (0, K.jsx)(fi, {
+            (k = (0, K.jsx)(pi, {
               type: `error`,
               children: Q.Localize(`#SellDialog_PriceEntryUnavailable`),
             })),
-    (0, K.jsxs)(gi, {
+    (0, K.jsxs)(_i, {
       onClose: p,
       fitContent: !0,
       onSubmit: () => {
@@ -3847,10 +3852,10 @@ function Fi(e) {
       },
       children: [
         (0, K.jsx)(o, { size: `6`, weight: `heavy`, children: me }),
-        (0, K.jsx)(zi, { item: t }),
+        (0, K.jsx)(Bi, { item: t }),
         (0, K.jsxs)(N, {
           children: [
-            (0, K.jsx)(Bi, {
+            (0, K.jsx)(Vi, {
               inPlace: s && !!n?.inplace_listing,
               holdDays: c,
               holdReason: l,
@@ -3860,7 +3865,7 @@ function Fi(e) {
               keepMounted: !0,
               children: (0, K.jsx)(N, {
                 paddingTop: `4`,
-                children: (0, K.jsx)(Vi, {
+                children: (0, K.jsx)(Hi, {
                   appid: g,
                   hashName: _,
                   currency: h,
@@ -3869,15 +3874,15 @@ function Fi(e) {
             }),
           ],
         }),
-        (0, K.jsx)(Gi, {
+        (0, K.jsx)(Ki, {
           message: k,
-          prices: (0, K.jsx)(Ki, {
+          prices: (0, K.jsx)(qi, {
             currency: h,
             marketLow: C === `confirm` ? void 0 : x,
             buyerPrice: ae,
             sellerPrice: T,
             onBuyerPriceChange:
-              de && S ? (e) => E(e ? li(e, S, y) : void 0) : void 0,
+              de && S ? (e) => E(e ? ui(e, S, y) : void 0) : void 0,
             onSellerPriceChange: de ? (e) => E(e || void 0) : void 0,
             sellerPriceStatus: T !== void 0 && T < oe ? `error` : void 0,
             sellerInputRef: fe,
@@ -3893,7 +3898,7 @@ function Fi(e) {
               }),
             children:
               v > 1 &&
-              (0, K.jsx)(Ui, {
+              (0, K.jsx)(Wi, {
                 value: D,
                 available: v,
                 editable: C === `edit`,
@@ -3912,13 +3917,13 @@ function Fi(e) {
                   direction: `column`,
                   gap: `2`,
                   children: [
-                    (0, K.jsx)(_i, {
+                    (0, K.jsx)(vi, {
                       lastUpdate: u,
                       agreed: te,
                       onAgreeChange: ne,
                       disabled: C !== `edit`,
                     }),
-                    d && (0, K.jsx)(vi, { selling: !0 }),
+                    d && (0, K.jsx)(yi, { selling: !0 }),
                   ],
                 }),
               }),
@@ -3967,10 +3972,10 @@ function Fi(e) {
     })
   );
 }
-function Ii(e) {
+function Li(e) {
   return e.market_hash_name || e.market_name || e.name || ``;
 }
-function Li(e) {
+function Ri(e) {
   let {
     bAgreedSSA: t,
     nQuantity: n,
@@ -3991,7 +3996,7 @@ function Li(e) {
           : null
     : Q.Localize(`#SellDialog_Error_SSA`);
 }
-function Ri(e, t, r, i) {
+function zi(e, t, r, i) {
   return n({
     queryKey: [`inventory`, `sellfees`, e, t],
     queryFn: async () => {
@@ -4032,7 +4037,7 @@ function Ri(e, t, r, i) {
     staleTime: 1 / 0,
   });
 }
-function zi(e) {
+function Bi(e) {
   let { item: t } = e,
     { description: n } = t,
     r = (0, G.useMemo)(
@@ -4084,7 +4089,7 @@ function zi(e) {
     }),
   });
 }
-function Bi(e) {
+function Vi(e) {
   let { inPlace: t, holdDays: n, holdReason: r } = e,
     i = () => window.ShowEscrowExplanationDialog?.(!0),
     a = null;
@@ -4135,7 +4140,7 @@ function Bi(e) {
     })
   );
 }
-function Vi(e) {
+function Hi(e) {
   let { appid: t, hashName: r, currency: i } = e,
     a = pt({ initial: `200px`, sm: `240px` }),
     o = n({
@@ -4166,13 +4171,13 @@ function Vi(e) {
       children: (0, K.jsx)(it, { size: `5` }),
     });
   let s = o.data ?? { ecurrency: i, prices: [] };
-  return (0, K.jsx)(Lr, { priceHistory: s, height: a });
+  return (0, K.jsx)(Rr, { priceHistory: s, height: a });
 }
-function Hi(e, t, r) {
+function Ui(e, t, r) {
   let { data: i } = n(f(e, t, r));
   return i?.lowest_price || void 0;
 }
-function Ui(e) {
+function Wi(e) {
   let { value: t, available: n, editable: r, onChange: i } = e;
   return (0, K.jsxs)(W, {
     align: `center`,
@@ -4206,14 +4211,14 @@ function Ui(e) {
     ],
   });
 }
-function Wi(e) {
+function Gi(e) {
   let { result: t } = e,
     n = t.needs_mobile_confirmation
       ? `${Q.Localize(`#SellDialog_MobileConfirmation`)}\n\n${Q.Localize(`#SellDialog_MobileConfirmation_CheckVersion`)}`
       : Q.Localize(`#SellDialog_EmailConfirmation`, t.email_domain ?? ``);
-  return (0, K.jsx)(fi, { type: `warning`, children: n });
+  return (0, K.jsx)(pi, { type: `warning`, children: n });
 }
-function Gi(e) {
+function Ki(e) {
   let { message: t, prices: n, children: r } = e,
     i = (0, G.useRef)(t);
   return (
@@ -4236,7 +4241,7 @@ function Gi(e) {
     })
   );
 }
-function Ki(e) {
+function qi(e) {
   let {
       currency: t,
       marketLow: n,
@@ -4259,7 +4264,7 @@ function Ki(e) {
       whiteSpace: `nowrap`,
       children: Q.Localize(`#RepriceListing_Dialog_BuyerPays`),
     }),
-    h = (0, K.jsx)(di, {
+    h = (0, K.jsx)(fi, {
       currency: d,
       value: r,
       defaultValue: 0,
@@ -4274,7 +4279,7 @@ function Ki(e) {
       whiteSpace: `nowrap`,
       children: Q.Localize(`#RepriceListing_Dialog_YouReceive`),
     }),
-    v = (0, K.jsx)(di, {
+    v = (0, K.jsx)(fi, {
       currency: d,
       value: i,
       defaultValue: 0,
@@ -4349,7 +4354,7 @@ function Ki(e) {
     ],
   });
 }
-async function qi(e) {
+async function Ji(e) {
   let t = new URLSearchParams({
       sessionid: ct(),
       appid: e.appid.toString(),
@@ -4369,4 +4374,4 @@ async function qi(e) {
     return { success: !1 };
   }
 }
-export { Pi as default };
+export { Fi as default };
